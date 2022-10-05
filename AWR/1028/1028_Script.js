@@ -80,8 +80,7 @@ function loadTest() {
       jQuery("head").append(
         '\
             <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />\
-            <link id="slick-lib" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />\
-            // <script  src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js" integrity="sha512-XtmMtDEcNz2j7ekrtHvOVR4iwwaD6o/FUJe6+Zq+HgcCsk3kj4uSQQR8weQ2QVj1o0Pk6PwYLohm206ZzNfubg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>'
+            <link id="slick-lib" rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />'
       );
     }
     if (!$("body").hasClass("spz-1028")) {
@@ -227,36 +226,37 @@ function loadTest() {
     <div>\
 </section>'
         ).insertAfter("#category-section");
-        slickList.onload = function () {
-          jQuery(".review_slider").slick({
-            arrow: true,
-            dots: false,
-            infinite: false,
-            speed: 1500,
-            slidesToShow: 4,
-            slidesToScroll: 4,
-            prevArrow:
-              '<button class="slide_arrow prev-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="17.5" stroke="#AAAAAA"/><path d="M20.0079 21.2887C20.2641 21.0514 20.2644 20.6463 20.0084 20.4088L17.8873 18.4398C17.6315 18.2024 17.6315 17.7977 17.8873 17.5603L20.0084 15.5913C20.2644 15.3537 20.2641 14.9486 20.0079 14.7113L19.9455 14.6535C19.7155 14.4404 19.3601 14.4404 19.1301 14.6535L15.9924 17.5598C15.736 17.7973 15.736 18.2027 15.9924 18.4402L19.1301 21.3465C19.3601 21.5596 19.7155 21.5596 19.9455 21.3465L20.0079 21.2887Z" fill="#757575"/></svg></button>',
-            nextArrow:
-              '<button class="slide_arrow next-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="17.5" transform="matrix(-1 0 0 1 18 18)" stroke="#AAAAAA"/><path d="M15.9919 21.2887C15.7357 21.0514 15.7355 20.6463 15.9914 20.4087L18.1126 18.4397C18.3683 18.2024 18.3683 17.7977 18.1126 17.5603L15.9914 15.5913C15.7355 15.3537 15.7357 14.9486 15.9919 14.7113L16.0543 14.6535C16.2844 14.4404 16.6397 14.4404 16.8698 14.6535L20.0075 17.5598C20.2639 17.7973 20.2639 18.2027 20.0075 18.4402L16.8698 21.3465C16.6397 21.5596 16.2844 21.5596 16.0543 21.3465L15.9919 21.2887Z" fill="#757575"/></svg></button>',
-            responsive: [
-              {
-                breakpoint: 992,
-                settings: {
-                  slidesToShow: 2,
-                  slidesToScroll: 2,
-                },
-              },
-              {
-                breakpoint: 600,
-                settings: {
-                  slidesToShow: 1,
-                  slidesToScroll: 1,
-                },
-              },
-            ],
-          });
-        };
+        // slickList.onload = function () {
+        //   console.log('google slider 2....');
+        //   jQuery(".review_slider").slick({
+        //     arrow: true,
+        //     dots: false,
+        //     infinite: false,
+        //     speed: 1500,
+        //     slidesToShow: 4,
+        //     slidesToScroll: 4,
+        //     prevArrow:
+        //       '<button class="slide_arrow prev-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="17.5" stroke="#AAAAAA"/><path d="M20.0079 21.2887C20.2641 21.0514 20.2644 20.6463 20.0084 20.4088L17.8873 18.4398C17.6315 18.2024 17.6315 17.7977 17.8873 17.5603L20.0084 15.5913C20.2644 15.3537 20.2641 14.9486 20.0079 14.7113L19.9455 14.6535C19.7155 14.4404 19.3601 14.4404 19.1301 14.6535L15.9924 17.5598C15.736 17.7973 15.736 18.2027 15.9924 18.4402L19.1301 21.3465C19.3601 21.5596 19.7155 21.5596 19.9455 21.3465L20.0079 21.2887Z" fill="#757575"/></svg></button>',
+        //     nextArrow:
+        //       '<button class="slide_arrow next-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="17.5" transform="matrix(-1 0 0 1 18 18)" stroke="#AAAAAA"/><path d="M15.9919 21.2887C15.7357 21.0514 15.7355 20.6463 15.9914 20.4087L18.1126 18.4397C18.3683 18.2024 18.3683 17.7977 18.1126 17.5603L15.9914 15.5913C15.7355 15.3537 15.7357 14.9486 15.9919 14.7113L16.0543 14.6535C16.2844 14.4404 16.6397 14.4404 16.8698 14.6535L20.0075 17.5598C20.2639 17.7973 20.2639 18.2027 20.0075 18.4402L16.8698 21.3465C16.6397 21.5596 16.2844 21.5596 16.0543 21.3465L15.9919 21.2887Z" fill="#757575"/></svg></button>',
+        //     responsive: [
+        //       {
+        //         breakpoint: 992,
+        //         settings: {
+        //           slidesToShow: 2,
+        //           slidesToScroll: 2,
+        //         },
+        //       },
+        //       {
+        //         breakpoint: 600,
+        //         settings: {
+        //           slidesToShow: 1,
+        //           slidesToScroll: 1,
+        //         },
+        //       },
+        //     ],
+        //   });
+        // };
       } else {
         return false;
       }
@@ -266,19 +266,19 @@ function loadTest() {
 
 jQuery(document).ready(function () {
   jQuery("body").addClass("spz-1028");
-  setInterval(function () {
-    if (!document.querySelector(".feedback-container.slick-initialized")) {
-      slickList.onload = function () {
-        jQuery(".feedback-container").slick({
-          arrows: false,
-          dots: true,
-          infinite: true,
-          autoplay: true,
-          speed: 1000,
-        });
-      };
-    }
-  });
+  // setInterval(function () {
+  //   if (!document.querySelector(".feedback-container.slick-initialized")) {
+  //     slickList.onload = function () {
+  //       jQuery(".feedback-container").slick({
+  //         arrows: false,
+  //         dots: true,
+  //         infinite: true,
+  //         autoplay: true,
+  //         speed: 1000,
+  //       });
+  //     };
+  //   }
+  // });
   var reviewsLoaded = setInterval(function () {
     if (
       jQuery("main.content hos-category").length > 0 &&
@@ -390,6 +390,16 @@ jQuery(document).ready(function () {
                 </div>\
         </div>'
       );
+
+      slickList.onload = function () {
+        jQuery(".feedback-container").slick({
+          arrows: false,
+          dots: true,
+          infinite: true,
+          autoplay: true,
+          speed: 1000,
+        });
+      };
 
       if (
         jQuery(".spz-protection-section").length > 0 &&
@@ -612,3 +622,28 @@ function changeSubHeadAndPrice(
     ".spz-protection-section .plans-wrap .plan-item:nth-child(2) .plan-price"
   ).html(priceTriage3);
 }
+
+// Generic
+history.pushState = (function (f) {
+  return function pushState() {
+      let ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+      return ret;
+  };
+})(history.pushState);
+history.replaceState = (function (f) {
+  return function replaceState() {
+      let ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+      return ret;
+  };
+})(history.replaceState);
+
+window.addEventListener('popstate', function () {
+  window.dispatchEvent(new Event('locationchange'));
+});
+window.addEventListener('locationchange', function () {
+  location.reload(true);
+});
