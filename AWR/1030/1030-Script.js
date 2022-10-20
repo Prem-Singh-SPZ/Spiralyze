@@ -531,14 +531,13 @@ jQuery(document).ready(function () {
                 <div class="spz-step step-3">\
                     <div class="step-heading">What is your zip code?</div>\
                     <div class="input-wrap">\
-                        <input id="spz-input" placeholder="Enter Your Zip Code" maxlength="5" value='${
-                          JSON.parse(localStorage.getItem("selectedAddress"))
-                            .zipcode
-                            ? JSON.parse(
-                                localStorage.getItem("selectedAddress")
-                              ).zipcode
-                            : ""
-                        }' onkeypress="validate(event)"/>\
+                        <input id="spz-input" placeholder="Enter Your Zip Code" maxlength="5" value='${JSON.parse(localStorage.getItem("selectedAddress"))
+          .zipcode
+          ? JSON.parse(
+            localStorage.getItem("selectedAddress")
+          ).zipcode
+          : ""
+        }' onkeypress="validate(event)"/>\
                         <div class="spz-error-message">Please enter valid zip code</div>\
                         <div class="spz-button-submit get-started step1">Get Started <img src="https://res.cloudinary.com/spiralyze/image/upload/v1657768226/AWR/1014/chevron-right.svg" /></div>\
                     </div>\
@@ -645,7 +644,6 @@ jQuery(document).ready(function () {
                             <div class="form-heading">With Us, Your Home\'s Protected</div>\
                             <div class="form-subheading">Find Your Protection Plan</div>\
                             <div class="input-wrap">\
-                                <input maxlength="5" name="spz-zip-code" type="text" placeholder="Enter Your Zip Code">\
                                 <div class="spz-button-submit triage">Get Started</div>\
                             </div>\
                         </div>\
@@ -710,16 +708,30 @@ jQuery(document).ready(function () {
         window.location.href = "https://www.awrusa.com/user/register";
       });
       jQuery(".spz-button-submit.triage").click(function () {
-        console.log("123");
-        localStorage.setItem(
-          "spzZip",
-          jQuery('.popup-form input[name="spz-zip-code"]').val()
-        );
-        jQuery("body").css("overflow", "");
-        redirectUserToProduct(
-          localStorage.getItem("spzProductToShow"),
-          jQuery('.popup-form input[name="spz-zip-code"]').val()
-        );
+        jQuery(".search-bar .search .get-started-btn").click();
+        var errorMoved = setInterval(function () {
+          if (
+            jQuery(".spz-popup").hasClass("popup-visible") &&
+            jQuery(".error-zipcode.invalid-error").length
+          ) {
+            clearInterval(errorMoved);
+            jQuery(".error-zipcode.invalid-error").insertBefore(
+              ".spz-button-submit.triage"
+            );
+          }
+          else {
+            localStorage.setItem(
+              "spzZip",
+              jQuery('.popup-form input[name="spz-zip-code"]').val()
+            );
+            jQuery("body").css("overflow", "");
+            redirectUserToProduct(
+              localStorage.getItem("spzProductToShow"),
+              jQuery('.popup-form input[name="spz-zip-code"]').val()
+            );
+          }
+        });
+
       });
       jQuery(".plan-button").click(function () {
         if (jQuery(this).hasClass("combo"))
@@ -728,7 +740,7 @@ jQuery(document).ready(function () {
           localStorage.setItem("spzProductToShow", "water");
         if (jQuery(this).hasClass("sewer"))
           localStorage.setItem("spzProductToShow", "sewer");
-        //jQuery('.hero-slider hos-google-places .search-bar .search-zipcode').insertBefore('.popup-form .spz-button-submit')
+        jQuery('.hero-slider hos-google-places .search-bar .search-zipcode').insertBefore('.popup-form .spz-button-submit')
         jQuery(".spz-popup").addClass("popup-visible");
         jQuery("body").css("overflow", "hidden");
       });
@@ -916,16 +928,16 @@ function addHeroSection() {
                     <div class="hero-price-wrap">\
                         <div class="hero-price"></div>\
                         <div class="change-zip-link">Based on your location ' +
-      JSON.parse(localStorage.getItem("selectedAddress")).zipcode +
-      '. <span class="change-link">Change</span></div>\
+    JSON.parse(localStorage.getItem("selectedAddress")).zipcode +
+    '. <span class="change-link">Change</span></div>\
                         <div class="change-zip-wrap">\
                         <img src="https://res.cloudinary.com/spiralyze/image/upload/v1658326787/AWR/1014/close-change-zip.svg" class="close-change-zip" />\
                         <div class="input-wrap-heading">Enter your ZIP to see your monthly payment.</div>\
                         <div class="input-label">Your ZIP code:</div>\
                             <div class="hero-input-wrap">\
                                 <input id="spz-input-step2" class="second-step-input-change" value=' +
-      JSON.parse(localStorage.getItem("selectedAddress")).zipcode +
-      ' maxlength="5" onkeypress="validate(event)">\
+    JSON.parse(localStorage.getItem("selectedAddress")).zipcode +
+    ' maxlength="5" onkeypress="validate(event)">\
                                 <div class="spz-button-submit get-started step2">Get Started</div>\
                                 <div class="spz-error-message">Please enter valid zip code</div>\
                             </div>\
@@ -997,13 +1009,15 @@ function addHeroSection() {
       jQuery(".hero-left .hero-copy").text(heroCopy[1]);
       jQuery(".hero-price-wrap .hero-price").html(
         jQuery(".Water_Line_Protection_Program span.price").text() +
-          " <span>per month</span>"
+        " <span>per month</span>"
       );
       jQuery(".hero-left .hero-copy").append(
         '<span class="learn-more-link">Learn More</span>'
       );
       jQuery(document).on("click", ".learn-more-link", function () {
-        jQuery(`[data-targettitle="Water Line Protection Program"] .product-image`).trigger("click");
+        jQuery(
+          `[data-targettitle="Water Line Protection Program"] .product-image`
+        ).trigger("click");
       });
       jQuery(".hero-right").html(`<picture>\
             <source media="(min-width:992px)" srcset="${heroImage[1].desktop}">\
@@ -1035,17 +1049,19 @@ function addHeroSection() {
         '<span class="learn-more-link">Learn More</span>'
       );
       jQuery(document).on("click", ".learn-more-link", function () {
-        jQuery(`[data-targettitle="Water Line and Sewer Line Protection Program"] .product-image`).trigger("click");
+        jQuery(
+          `[data-targettitle="Water Line and Sewer Line Protection Program"] .product-image`
+        ).trigger("click");
       });
       jQuery(".hero-price-wrap .hero-price").html(
         jQuery(
           ".Water_Line_and_Sewer_Line_Protection_Program span.price"
         ).text() +
-          ' <span>per month</span><div class="comb-discount">' +
-          jQuery(
-            ".Water_Line_and_Sewer_Line_Protection_Program #savetext"
-          ).text() +
-          "</div>"
+        ' <span>per month</span><div class="comb-discount">' +
+        jQuery(
+          ".Water_Line_and_Sewer_Line_Protection_Program #savetext"
+        ).text() +
+        "</div>"
       );
       jQuery(".hero-right").html(`<picture>\
         <source media="(min-width:992px)" srcset="${heroImage[0].desktop}">\
@@ -1073,11 +1089,13 @@ function addHeroSection() {
         '<span class="learn-more-link">Learn More</span>'
       );
       jQuery(document).on("click", ".learn-more-link", function () {
-        jQuery(`[data-targettitle="Sewer Line Protection Program"] .product-image`).trigger("click");
+        jQuery(
+          `[data-targettitle="Sewer Line Protection Program"] .product-image`
+        ).trigger("click");
       });
       jQuery(".hero-price-wrap .hero-price").html(
         jQuery(".Sewer_Line_Protection_Program span.price").text() +
-          " <span>per month</span>"
+        " <span>per month</span>"
       );
       jQuery(".hero-right").html(`<picture>\
         <source media="(min-width:992px)" srcset="${heroImage[2].desktop}">\
@@ -1188,22 +1206,22 @@ async function createTest() {
         let ind = index + 1;
         jQuery(".products-wrapper .products-boxes").append(
           '<div data-targettitle="' +
-            value.target +
-            '" class="products-single-box ' +
-            value.productclass +
-            '"><div class="product-image" data-pid="product_' +
-            ind +
-            '" style="background-image:url(' +
-            value.image +
-            ')"><div class="product-icon" style="background-image:url(' +
-            value.icon +
-            ')"> </div></div> <div class="product-text"><h1 data-pid="product_' +
-            ind +
-            '">' +
-            value.name +
-            '</h1><div class="product-cart-info"><div class="product-pricing">' +
-            value.pricetoshow +
-            '</div> <button>Enroll Now <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 9L5.5 5L1.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>'
+          value.target +
+          '" class="products-single-box ' +
+          value.productclass +
+          '"><div class="product-image" data-pid="product_' +
+          ind +
+          '" style="background-image:url(' +
+          value.image +
+          ')"><div class="product-icon" style="background-image:url(' +
+          value.icon +
+          ')"> </div></div> <div class="product-text"><h1 data-pid="product_' +
+          ind +
+          '">' +
+          value.name +
+          '</h1><div class="product-cart-info"><div class="product-pricing">' +
+          value.pricetoshow +
+          '</div> <button>Enroll Now <svg width="7" height="10" viewBox="0 0 7 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M1.5 9L5.5 5L1.5 1" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/></svg></button></div></div></div>'
         );
 
         jQuery(document).on(
@@ -1245,14 +1263,14 @@ async function createTest() {
         if (
           document.querySelector(
             'div[data-targettitle="' +
-              cmbo.comboName +
-              '"] .product-pricing > span:first-child'
+            cmbo.comboName +
+            '"] .product-pricing > span:first-child'
           )
         ) {
           comboPrice = document.querySelector(
             'div[data-targettitle="' +
-              cmbo.comboName +
-              '"] .product-pricing > span:first-child'
+            cmbo.comboName +
+            '"] .product-pricing > span:first-child'
           ).innerHTML;
           comboPrice = Number(comboPrice.replaceAll("$", ""));
         }
@@ -1260,27 +1278,27 @@ async function createTest() {
           if (
             document.querySelector(
               'div[data-targettitle="' +
-                intProduct +
-                '"] .product-pricing > span:first-child'
+              intProduct +
+              '"] .product-pricing > span:first-child'
             )
           ) {
             const singlePrice = document.querySelector(
               'div[data-targettitle="' +
-                intProduct +
-                '"] .product-pricing > span:first-child'
+              intProduct +
+              '"] .product-pricing > span:first-child'
             ).innerHTML;
             totalprice += Number(singlePrice.replaceAll("$", ""));
             const finalprice = (totalprice - comboPrice).toFixed(2);
             if (comboPrice > 0 && finalprice >= 1) {
               jQuery(
                 'div[data-targettitle="' +
-                  cmbo.comboName +
-                  '"] .product-pricing span#savetext'
+                cmbo.comboName +
+                '"] .product-pricing span#savetext'
               ).html("(save $" + finalprice + ")");
               jQuery(
                 'div[data-targettitle="' +
-                  cmbo.comboName +
-                  '"] .product-pricing span#savetext'
+                cmbo.comboName +
+                '"] .product-pricing span#savetext'
               ).addClass("show-save");
               jQuery('div[data-targettitle="' + cmbo.comboName + '"]').addClass(
                 "amount-save"
@@ -1292,7 +1310,7 @@ async function createTest() {
       document.querySelectorAll(".products-single-box").forEach((element) => {
         if (
           element.dataset.targettitle ===
-            "Water Line and Sewer Line Protection Program" ||
+          "Water Line and Sewer Line Protection Program" ||
           element.dataset.targettitle === "Water Line Protection Program" ||
           element.dataset.targettitle === "Sewer Line Protection Program"
         ) {

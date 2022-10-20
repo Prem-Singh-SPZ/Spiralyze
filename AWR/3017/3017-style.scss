@@ -1,0 +1,539 @@
+@import "./3007-tc-style.css";
+
+body.spz-3017 {
+  #general-section {
+    .selected-zipcode-area[class] {
+      .program-content[class] {
+        display: flex;
+        flex-direction: column;
+
+        // Zip code sec Starts
+        &.change-zip-grid-spz {
+          display: grid;
+          display: grid;
+          grid-template-columns: repeat(12, 1fr);
+          grid-template-rows: repeat(4, 1fr);
+          grid-column-gap: 0px;
+          grid-row-gap: 0px;
+          max-height: 480px;
+
+          .spz-product-price {
+            display: inline;
+          }
+        }
+
+        .spz-product-price {
+          grid-area: 1/1/2/6;
+          display: none;
+        }
+
+        .no-zipcode-search,
+        .zipcode-searched {
+          grid-area: 1/6/2/13;
+          display: flex;
+          align-items: center;
+          justify-content: flex-end;
+          margin-top: 0;
+        }
+
+        .no-zipcode-search {
+          width: auto;
+        }
+
+        .zipcode-searched {
+          .unavailable-block {
+            display: flex;
+            align-items: center;
+            margin-top: 0 !important;
+
+            .product-check {
+              margin: 0 12px 0 0;
+              font-size: 12px;
+
+              .spinner {
+                font-size: 16px;
+              }
+            }
+
+            .address-text {
+              span {
+                font-size: 12px;
+              }
+            }
+          }
+        }
+
+        .description-heading-text-content {
+          order: 1;
+          grid-area: 2/1/3/13;
+          margin: 17px 2px;
+
+          h1 {
+            display: none;
+          }
+        }
+
+        .zipcode-searched {
+          order: 0;
+          display: flex;
+          flex-direction: row;
+          justify-content: space-between;
+
+          &.mobile-screen-only {
+            display: none;
+          }
+
+          .selected-location-box {
+            span,
+            .selected-area-text {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 24px;
+              color: #757575;
+            }
+
+            .selected-area-text {
+              color: #ec7923;
+              text-decoration: underline;
+              cursor: pointer;
+              pointer-events: all;
+
+              &:hover {
+                color: #c8661d;
+              }
+            }
+
+            .change-area-link {
+              display: none !important;
+            }
+          }
+        }
+        // Zip code sec Ends
+
+        .pricing-box {
+          .pricing-not-leak[class] {
+            label.pricing-text,
+            small[class] {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 500;
+              font-size: 24px;
+              line-height: 36px;
+              display: flex;
+              align-items: center;
+              color: #000000;
+            }
+
+            small[class] {
+              margin-left: 8px;
+              text-transform: lowercase;
+            }
+          }
+        }
+
+        .covered-repair-section {
+          grid-area: 3/1/4/13;
+          border-top: 1px solid #b6b6b6;
+          margin-top: 20px;
+          padding-top: 0;
+
+          .terms-cond-link-spz {
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 26px;
+            text-align: right;
+            padding-right: 0;
+            text-decoration-line: underline;
+            color: #ec7923;
+
+            &:hover {
+              color: #c8661d;
+            }
+          }
+        }
+
+        .enroll-now-box {
+          order: 2;
+          grid-area: 4/1/5/13;
+        }
+
+        .search-bar {
+          .search-field {
+            width: auto !important;
+            margin-right: 8px;
+          }
+          button.product-page-search[class] {
+            padding: 0px 15px;
+            width: 78px !important;
+            height: 36px !important;
+            background: #ec7923;
+            border-radius: 5px;
+
+            .desktop-only.text-visible {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 20px;
+              color: #fff;
+            }
+          }
+        }
+
+        .details-zip-text-mobile[class] {
+          display: inline;
+        }
+
+        .product-details-zip-text,
+        .fa-times {
+          display: none !important;
+        }
+      }
+    }
+
+    .detail-header-section {
+      .program-name .rating-average .rating-label {
+        font-family: "Roboto";
+        font-style: normal;
+        font-weight: 600;
+        font-size: 16px;
+        line-height: 24px;
+
+        .rl-rev {
+          font-weight: 400;
+        }
+      }
+    }
+  }
+
+  // FAQ Section Starts
+  #tab-faq-section {
+    background: #f8f8f8;
+    section {
+      background: #f8f8f8;
+      padding-top: 100px !important;
+      max-width: 1100px;
+      margin-left: auto;
+      margin-right: auto;
+      @media (max-width: 576px) {
+        padding-top: 36px !important;
+      }
+      article {
+        max-width: 100%;
+        padding: 0;
+        margin: 0;
+        > div {
+          max-width: 100%;
+          padding: 0;
+          margin: 0;
+
+          @media (max-width: 1199.98px) {
+            padding: 0 29px;
+          }
+          @media (max-width: 576px) {
+            padding: 0 20px;
+          }
+        }
+      }
+    }
+  }
+  .faq-section[class] {
+    .section-head-title[class] {
+      font-family: Roboto;
+      font-style: normal;
+      font-weight: 700 !important;
+      font-size: 32px !important;
+      line-height: 40px;
+      color: #000;
+      padding-bottom: 0 !important;
+      margin-bottom: 49px;
+      @media (max-width: 576px) {
+        font-size: 24px !important;
+        line-height: 32px;
+        margin-bottom: 35px;
+      }
+    }
+    .accordion[class] {
+      .card[class] {
+        background: rgba(6, 179, 228, 3%);
+        margin: 0 0 16px !important;
+        .card-header[class] {
+          padding: 0;
+          border-left: 5px solid #0d3d64;
+          display: flex;
+          align-items: center;
+          border-radius: 0;
+          h5[class] {
+            flex-grow: 1;
+            padding: 5px 30px 0px 40px;
+            @media (max-width: 1199.98px) {
+              padding: 10px 20px 0px 2px;
+            }
+            @media (max-width: 576px) {
+              padding: 4px 20px 0px 2px;
+            }
+            a[href] {
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px !important;
+              line-height: 36px;
+              &::after {
+                top: -5px;
+              }
+              &.collapsed {
+                &:after {
+                  content: url("//res.cloudinary.com/spiralyze/image/upload/v1665060363/AWR/3017/assets/faq_card_opened.svg") !important;
+                  width: 45px;
+                  height: 45px;
+                  @media (max-width: 576px) {
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    top: 27px;
+                    right: 16px;
+                  }
+                }
+              }
+              &:not(.collapsed) {
+                &:after {
+                  content: url("//res.cloudinary.com/spiralyze/image/upload/v1665060364/AWR/3017/assets/faq_card_closed.svg") !important;
+                  width: 45px;
+                  height: 45px;
+                  @media (max-width: 576px) {
+                    width: 32px;
+                    height: 32px;
+                    position: absolute;
+                    top: 27px;
+                    right: 16px;
+                  }
+                }
+              }
+
+              @media (max-width: 576px) {
+                font-size: 16px !important;
+                line-height: 24px;
+                padding: 0;
+              }
+              .faq-text[class] {
+                width: auto;
+                @media (max-width: 576px) {
+                  padding: 6px 30px 6px 10px;
+                }
+              }
+            }
+          }
+
+          &::before {
+            content: "Q.";
+            position: relative;
+            width: 89px;
+            min-width: 89px;
+            height: 80px;
+            padding: 20px 0;
+            text-align: center;
+            font-weight: 700;
+            font-size: 28px;
+            line-height: 36px;
+            color: #0d3d64;
+            background: rgba(6, 179, 228, 3%);
+            @media (max-width: 1199.98px) {
+              width: 80px;
+              min-width: 80px;
+              padding: 23px 0;
+            }
+            @media (max-width: 576px) {
+              min-width: 48px;
+              width: 48px;
+              font-size: 24px;
+              line-height: 32px;
+            }
+          }
+        }
+
+        div[role="tabpanel"] {
+          padding: 0;
+          background: #f8f8f8;
+          border-left: 5px solid #06b3e4;
+
+          .card-block {
+            padding: 0;
+            display: grid;
+            grid-template-columns: repeat(10, 1fr);
+            grid-template-rows: 1fr;
+            grid-column-gap: 0px;
+            grid-row-gap: 0px;
+            .ans-div {
+              grid-area: 1 / 1 / 2 / 2;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              width: 89px;
+              height: 100%;
+              text-align: center;
+              position: relative;
+              font-weight: 700;
+              font-size: 28px;
+              line-height: 36px;
+              color: #06b3e4;
+              background: linear-gradient(
+                90deg,
+                rgb(6 179 228 / 20%) -20.1%,
+                rgba(6, 179, 228, 0) 107.51%
+              );
+
+              @media (max-width: 576px) {
+                min-width: 48px;
+                width: 48px;
+                font-size: 24px;
+                line-height: 32px;
+              }
+            }
+
+            p {
+              grid-area: 1 / 2 / 2 / 11;
+              @media (max-width: 576px) {
+                padding: 20px 16px 16px 12px;
+              }
+            }
+          }
+
+          &.show {
+            display: flex;
+            // align-items: center;
+          }
+        }
+
+        .card-block {
+          p {
+            font-family: Roboto;
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            color: #000 !important;
+            padding: 30px 96px 16px 20px;
+          }
+        }
+
+        &.toggle-bg[class] {
+          .card-header[class] {
+            a[href] {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+  // .faq-section[_ngcontent-c12] {
+  //   .accordion[_ngcontent-c12] {
+  //     .card.toggle-bg {
+  //       .card-header[_ngcontent-c12] {
+  //         a {
+  //           font-weight: 700;
+  //         }
+  //       }
+  //     }
+  //   }
+  // }
+  // FAQ Section Ends
+
+  //Related Product Section Starts
+  .neighbourhood-service[class] {
+    .page-wrap[class] {
+      .category-tile[class] {
+        .ngucarousel-inner[class] {
+          .ngucarousel-items[class] {
+            .item[class] {
+              .card[class] {
+                .related-item-desc[class] {
+                  display: none;
+                }
+                .program-name[class] {
+                  position: relative;
+                  margin-top: 18px !important;
+                  &.is-best-value {
+                    &::before {
+                      content: url("//res.cloudinary.com/spiralyze/image/upload/v1665128911/AWR/3017/assets/Best-Value.png");
+                      display: block;
+                      width: 142px;
+                      height: 47px;
+                      position: absolute;
+                      right: -7px;
+                      top: -40px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //Related Product Section Ends
+
+  //Protection and Coverage Section Starts
+  .comp-protection-and-coverage {
+    .comp-protection {
+      .comp-protection-title,
+      .comp-protection-content {
+        text-align: center;
+        font-family: "Roboto";
+        font-style: normal;
+        
+        h5 {
+          color: #000;
+          font-weight: 600;
+          font-size: 40px;
+          line-height: 40px;
+        }
+        p {
+          font-weight: 400;
+          font-size: 20px;
+          line-height: 140%;
+          color: #757575;
+        }
+      }
+      .image-container {
+        max-width: 1200px;
+        margin: 32px auto;
+        @media (max-width: 1248px) {
+          max-width: 708px;
+        }
+        @media (max-width: 767px) {
+          max-width: 312px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+    .coverage-commitment {
+      .banner-container {
+        max-width: 1200px;
+        margin: 32px auto;
+        @media (max-width: 1248px) {
+          max-width: 708px;
+        }
+        @media (max-width: 767px) {
+          max-width: 312px;
+        }
+        img {
+          width: 100%;
+          height: auto;
+        }
+      }
+    }
+  }
+}
+
+[data-lastpass-icon-root] {
+  display: none !important;
+}

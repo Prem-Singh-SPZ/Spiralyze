@@ -330,7 +330,7 @@
   margin: 47px auto 0;
   color: #ffffff;
   cursor: pointer;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   @media (min-width: 1199.98px) {
     margin-bottom: 8px;
     padding-left: 10px;
@@ -405,7 +405,7 @@
 
   &.plans-wrap-nyc {
     @media (max-width: 599.98px) {
-        margin-top: 43px;
+      margin-top: 43px;
     }
     @media (min-width: 599.98px) and (max-width: 1199.98px) {
       margin-top: 55px;
@@ -684,7 +684,7 @@
   margin: 16px auto 36px;
   color: #ffffff;
   cursor: pointer;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
   @media (min-width: 599.98px) and (max-width: 1199.98px) {
     width: auto;
     margin: 16px 29px 29px 28px;
@@ -1027,7 +1027,7 @@
   background: linear-gradient(180deg, #ffb600 0%, #f0ae0a 100%);
   border-radius: 12px;
   text-decoration: none;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 .spz-1028 .companies-section .call-us a:hover {
   opacity: 0.85;
@@ -1140,7 +1140,7 @@
   background: #ec7923;
   border-radius: 0px 5px 5px 0px;
   cursor: pointer;
-  transition: .3s ease-in;
+  transition: 0.3s ease-in;
 }
 @media (max-width: 767px) {
   .spz-1028 .spz-popup .popup-form .form-heading {
@@ -1198,12 +1198,64 @@
 
 // 1028 Custom css
 
+@mixin replace-banner-img($imageDesk, $imageTab, $imageMob) {
+  background: $imageMob;
+  @media (min-width: 576px) {
+    background: $imageTab;
+  }
+  @media (min-width: 1199px) {
+    background: $imageDesk;
+  }
+}
+
 .spz-1028 {
   hos-hero-banner .hero-slider[class] {
     .slider[class] {
       max-height: 456px;
       .item[class] {
         max-height: 456px;
+
+        .bannerStyle {
+          img {
+            display: none;
+          }
+
+          &.PH {
+            @include replace-banner-img(
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Philadelphia.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/PH-Tablet.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/PH-Mobile.jpg")
+            );
+          }
+          &.DT {
+            @include replace-banner-img(
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Detroit.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/DT-Tablet.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/DT-Mobile.jpg")
+            );
+          }
+          &.Nash {
+            @include replace-banner-img(
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Nashville.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Nash-Tablet.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Nash-Mobile.jpg")
+            );
+          }
+          &.TX {
+            @include replace-banner-img(
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Texas.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/TX-Tablet.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/TX-Mobile.jpg")
+            );
+          }
+          &.NYC {
+            @include replace-banner-img(
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/NYC.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/NYC-Tablet.jpg"),
+              url("//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/NYC-Mobile.jpg")
+            );
+          }
+        }
       }
       @media only screen and (min-width: 767.98px) and (max-width: 991.98px) {
         height: 409px;

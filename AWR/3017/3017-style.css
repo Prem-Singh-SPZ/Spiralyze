@@ -1,0 +1,455 @@
+@import "./3007-tc-style.css";
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] {
+  display: flex;
+  flex-direction: column;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class].change-zip-grid-spz {
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(4, 1fr);
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+  max-height: 480px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class].change-zip-grid-spz .spz-product-price {
+  display: inline;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .spz-product-price {
+  grid-area: 1/1/2/6;
+  display: none;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .no-zipcode-search,
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched {
+  grid-area: 1/6/2/13;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-top: 0;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .no-zipcode-search {
+  width: auto;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .unavailable-block {
+  display: flex;
+  align-items: center;
+  margin-top: 0 !important;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .unavailable-block .product-check {
+  margin: 0 12px 0 0;
+  font-size: 12px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .unavailable-block .product-check .spinner {
+  font-size: 16px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .unavailable-block .address-text span {
+  font-size: 12px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .description-heading-text-content {
+  order: 1;
+  grid-area: 2/1/3/13;
+  margin: 17px 2px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .description-heading-text-content h1 {
+  display: none;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched {
+  order: 0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched.mobile-screen-only {
+  display: none;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .selected-location-box span,
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .selected-location-box .selected-area-text {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 24px;
+  color: #757575;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .selected-location-box .selected-area-text {
+  color: #ec7923;
+  text-decoration: underline;
+  cursor: pointer;
+  pointer-events: all;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .selected-location-box .selected-area-text:hover {
+  color: #c8661d;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .zipcode-searched .selected-location-box .change-area-link {
+  display: none !important;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .pricing-box .pricing-not-leak[class] label.pricing-text,
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .pricing-box .pricing-not-leak[class] small[class] {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 24px;
+  line-height: 36px;
+  display: flex;
+  align-items: center;
+  color: #000000;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .pricing-box .pricing-not-leak[class] small[class] {
+  margin-left: 8px;
+  text-transform: lowercase;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .covered-repair-section {
+  grid-area: 3/1/4/13;
+  border-top: 1px solid #b6b6b6;
+  margin-top: 20px;
+  padding-top: 0;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .covered-repair-section .terms-cond-link-spz {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 26px;
+  text-align: right;
+  padding-right: 0;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
+  color: #ec7923;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .covered-repair-section .terms-cond-link-spz:hover {
+  color: #c8661d;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .enroll-now-box {
+  order: 2;
+  grid-area: 4/1/5/13;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .search-bar .search-field {
+  width: auto !important;
+  margin-right: 8px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .search-bar button.product-page-search[class] {
+  padding: 0px 15px;
+  width: 78px !important;
+  height: 36px !important;
+  background: #ec7923;
+  border-radius: 5px;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .search-bar button.product-page-search[class] .desktop-only.text-visible {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 20px;
+  color: #fff;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .details-zip-text-mobile[class] {
+  display: inline;
+}
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .product-details-zip-text,
+body.spz-3017 #general-section .selected-zipcode-area[class] .program-content[class] .fa-times {
+  display: none !important;
+}
+body.spz-3017 #general-section .detail-header-section .program-name .rating-average .rating-label {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 24px;
+}
+body.spz-3017 #general-section .detail-header-section .program-name .rating-average .rating-label .rl-rev {
+  font-weight: 400;
+}
+body.spz-3017 #tab-faq-section {
+  background: #f8f8f8;
+}
+body.spz-3017 #tab-faq-section section {
+  background: #f8f8f8;
+  padding-top: 100px !important;
+  max-width: 1100px;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (max-width: 576px) {
+  body.spz-3017 #tab-faq-section section {
+    padding-top: 36px !important;
+  }
+}
+body.spz-3017 #tab-faq-section section article {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+body.spz-3017 #tab-faq-section section article > div {
+  max-width: 100%;
+  padding: 0;
+  margin: 0;
+}
+@media (max-width: 1199.98px) {
+  body.spz-3017 #tab-faq-section section article > div {
+    padding: 0 29px;
+  }
+}
+@media (max-width: 576px) {
+  body.spz-3017 #tab-faq-section section article > div {
+    padding: 0 20px;
+  }
+}
+body.spz-3017 .faq-section[class] .section-head-title[class] {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 700 !important;
+  font-size: 32px !important;
+  line-height: 40px;
+  color: #000;
+  padding-bottom: 0 !important;
+  margin-bottom: 49px;
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .section-head-title[class] {
+    font-size: 24px !important;
+    line-height: 32px;
+    margin-bottom: 35px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] {
+  background: rgba(6, 179, 228, 0.03);
+  margin: 0 0 16px !important;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] {
+  padding: 0;
+  border-left: 5px solid #0d3d64;
+  display: flex;
+  align-items: center;
+  border-radius: 0;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] {
+  flex-grow: 1;
+  padding: 5px 30px 0px 40px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] {
+    padding: 10px 20px 0px 2px;
+  }
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] {
+    padding: 4px 20px 0px 2px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href] {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px !important;
+  line-height: 36px;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href]::after {
+  top: -5px;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href].collapsed:after {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1665060363/AWR/3017/assets/faq_card_opened.svg") !important;
+  width: 45px;
+  height: 45px;
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href].collapsed:after {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 27px;
+    right: 16px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href]:not(.collapsed):after {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1665060364/AWR/3017/assets/faq_card_closed.svg") !important;
+  width: 45px;
+  height: 45px;
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href]:not(.collapsed):after {
+    width: 32px;
+    height: 32px;
+    position: absolute;
+    top: 27px;
+    right: 16px;
+  }
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href] {
+    font-size: 16px !important;
+    line-height: 24px;
+    padding: 0;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href] .faq-text[class] {
+  width: auto;
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class] h5[class] a[href] .faq-text[class] {
+    padding: 6px 30px 6px 10px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class]::before {
+  content: "Q.";
+  position: relative;
+  width: 89px;
+  min-width: 89px;
+  height: 80px;
+  padding: 20px 0;
+  text-align: center;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #0d3d64;
+  background: rgba(6, 179, 228, 0.03);
+}
+@media (max-width: 1199.98px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class]::before {
+    width: 80px;
+    min-width: 80px;
+    padding: 23px 0;
+  }
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-header[class]::before {
+    min-width: 48px;
+    width: 48px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel] {
+  padding: 0;
+  background: #f8f8f8;
+  border-left: 5px solid #06b3e4;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel] .card-block {
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  grid-template-rows: 1fr;
+  grid-column-gap: 0px;
+  grid-row-gap: 0px;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel] .card-block .ans-div {
+  grid-area: 1/1/2/2;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 89px;
+  height: 100%;
+  text-align: center;
+  position: relative;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 36px;
+  color: #06b3e4;
+  background: linear-gradient(90deg, rgba(6, 179, 228, 0.2) -20.1%, rgba(6, 179, 228, 0) 107.51%);
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel] .card-block .ans-div {
+    min-width: 48px;
+    width: 48px;
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel] .card-block p {
+  grid-area: 1/2/2/11;
+}
+@media (max-width: 576px) {
+  body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel] .card-block p {
+    padding: 20px 16px 16px 12px;
+  }
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] div[role=tabpanel].show {
+  display: flex;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class] .card-block p {
+  font-family: Roboto;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000 !important;
+  padding: 30px 96px 16px 20px;
+}
+body.spz-3017 .faq-section[class] .accordion[class] .card[class].toggle-bg[class] .card-header[class] a[href] {
+  font-weight: 700;
+}
+body.spz-3017 .neighbourhood-service[class] .page-wrap[class] .category-tile[class] .ngucarousel-inner[class] .ngucarousel-items[class] .item[class] .card[class] .related-item-desc[class] {
+  display: none;
+}
+body.spz-3017 .neighbourhood-service[class] .page-wrap[class] .category-tile[class] .ngucarousel-inner[class] .ngucarousel-items[class] .item[class] .card[class] .program-name[class] {
+  position: relative;
+  margin-top: 18px !important;
+}
+body.spz-3017 .neighbourhood-service[class] .page-wrap[class] .category-tile[class] .ngucarousel-inner[class] .ngucarousel-items[class] .item[class] .card[class] .program-name[class].is-best-value::before {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1665128911/AWR/3017/assets/Best-Value.png");
+  display: block;
+  width: 142px;
+  height: 47px;
+  position: absolute;
+  right: -7px;
+  top: -40px;
+}
+body.spz-3017 .comp-protection-and-coverage .comp-protection .comp-protection-title,
+body.spz-3017 .comp-protection-and-coverage .comp-protection .comp-protection-content {
+  text-align: center;
+  font-family: "Roboto";
+  font-style: normal;
+}
+body.spz-3017 .comp-protection-and-coverage .comp-protection .comp-protection-title h5,
+body.spz-3017 .comp-protection-and-coverage .comp-protection .comp-protection-content h5 {
+  color: #000;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 40px;
+}
+body.spz-3017 .comp-protection-and-coverage .comp-protection .comp-protection-title p,
+body.spz-3017 .comp-protection-and-coverage .comp-protection .comp-protection-content p {
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 140%;
+  color: #757575;
+}
+body.spz-3017 .comp-protection-and-coverage .comp-protection .image-container {
+  max-width: 1200px;
+  margin: 32px auto;
+}
+@media (max-width: 1248px) {
+  body.spz-3017 .comp-protection-and-coverage .comp-protection .image-container {
+    max-width: 708px;
+  }
+}
+@media (max-width: 767px) {
+  body.spz-3017 .comp-protection-and-coverage .comp-protection .image-container {
+    max-width: 312px;
+  }
+}
+body.spz-3017 .comp-protection-and-coverage .comp-protection .image-container img {
+  width: 100%;
+  height: auto;
+}
+body.spz-3017 .comp-protection-and-coverage .coverage-commitment .banner-container {
+  max-width: 1200px;
+  margin: 32px auto;
+}
+@media (max-width: 1248px) {
+  body.spz-3017 .comp-protection-and-coverage .coverage-commitment .banner-container {
+    max-width: 708px;
+  }
+}
+@media (max-width: 767px) {
+  body.spz-3017 .comp-protection-and-coverage .coverage-commitment .banner-container {
+    max-width: 312px;
+  }
+}
+body.spz-3017 .comp-protection-and-coverage .coverage-commitment .banner-container img {
+  width: 100%;
+  height: auto;
+}
+
+[data-lastpass-icon-root] {
+  display: none !important;
+}/*# sourceMappingURL=3017-style.css.map */
