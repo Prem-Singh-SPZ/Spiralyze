@@ -1,12 +1,9 @@
-const cookieName = "#2025_AWR_Product_List_Popup";
-const cookieValue = "1";
-const myDate = new Date();
-const imgURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/2027';
-const baseUrl = 'https://scpprd.prod.apimanagement.us10.hana.ondemand.com/api/hos/api';
-const apiKey = 'Ng0glnSyFyARBd7AGghwnAAjV1ORz5Vp';
-
+var cookieName = "#2026_AWR_Product_List_Different_Size_Tile";
+var cookieValue = "1";
+var myDate = new Date();
 myDate.setDate(myDate.getDate() + 30);
 document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+var imgURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/2027';
 
 const comboManagement = [{
     comboName: "Water Line and Sewer Line Protection Program",
@@ -25,12 +22,12 @@ const comboManagement = [{
     comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy"]
 },
 {
-    comboName: "Water Line, Sewer Line and In Home Plumbing Insurance Policy",
-    comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In Home Plumbing Insurance Policy"]
+    comboName: "Water Line, Sewer Line and In-Home Plumbing Insurance Policy",
+    comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In-Home Plumbing Insurance Policy"]
 },
 {
-    comboName: "Water Line, Sewer Line & In Home Plumbing Insurance Policy",
-    comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In Home Plumbing Insurance Policy"]
+    comboName: "Water Line, Sewer Line & In-Home Plumbing Insurance Policy",
+    comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In-Home Plumbing Insurance Policy"]
 },
 {
     comboName: "Heating and Cooling System Repair Program",
@@ -41,8 +38,8 @@ const comboManagement = [{
     comboProducts: ["Heating System Repair Program", "Cooling System Repair Program"]
 },
 {
-    comboName: "Water Line, Sewer Line and In Home Plumbing Emergency Program",
-    comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program", "In Home Plumbing Emergency Program"]
+    comboName: "Water Line, Sewer Line and In-Home Plumbing Emergency Program",
+    comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program", "In-Home Plumbing Emergency Program"]
 }
 ];
 const relatedProducts = [{
@@ -81,7 +78,7 @@ const relatedProducts = [{
     popularProduct: 'popular'
 },
 {
-    productFilterName: 'Water Line, Sewer Line and In Home Plumbing Emergency Program',
+    productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Emergency Program',
     productImage: imgURL + '/products/Water_Line_Sewer_Line_and_In-Home_Emergency_Plumbing_Repair_Plan.png',
     productNewName: 'Water Line, Sewer Line  and In-Home Emergency Plumbing Repair Plan',
     coverSubheading: 'Protect 3 service lines in 1 plan and save on your monthly cost - and get protection for water line, sewer line, or in-home plumbing.',
@@ -95,14 +92,14 @@ const relatedProducts = [{
     popularProduct: ''
 },
 {
-    productFilterName: 'In Home Plumbing Emergency Program',
+    productFilterName: 'In-Home Plumbing Emergency Program',
     productImage: imgURL + '/products/In-Home_Plumbing_Emergency_Repair_Plan.png',
-    productNewName: 'In Home Plumbing Emergency Repair Plan',
+    productNewName: 'In-Home Plumbing Emergency Repair Plan',
     coverSubheading: 'Cover your home\'s interior water and sewer pipes including overflowing toilet, broken water pipe under your sink or behind the walls.',
     popularProduct: ''
 },
 {
-    productFilterName: 'In-Home Plumbing Emergency Program',
+    productFilterName: 'In Home Plumbing Emergency  Repair Plan',
     productImage: imgURL + '/products/In-Home_Plumbing_Emergency_Repair_Plan.png',
     productNewName: 'In-Home Plumbing Emergency Repair Plan',
     coverSubheading: 'Cover your home\'s interior water and sewer pipes including overflowing toilet, broken water pipe under your sink or behind the walls.',
@@ -164,9 +161,9 @@ const relatedProducts = [{
     popularProduct: ''
 },
 {
-    productFilterName: 'In Home Plumbing Plus Program',
+    productFilterName: 'In-Home Plumbing Plus Program',
     productImage: imgURL + '/products/In-Home_Plumbing_Plus_Repair_Plan.png',
-    productNewName: 'In Home Plumbing Plus Repair Plan',
+    productNewName: 'In-Home Plumbing Plus Repair Plan',
     coverSubheading: 'Protect your home\'s interior water supply and wastewater drainage systems. Think overflowing toilet, broken water pipe under your sink (or behind the walls).',
     popularProduct: ''
 },
@@ -274,9 +271,9 @@ const relatedProducts = [{
     popularProduct: 'popular'
 },
 {
-    productFilterName: 'Water Line, Sewer Line and In Home Plumbing Insurance Policy',
+    productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Insurance Policy',
     productImage: imgURL + '/products/Water_Line_Sewer_Line_and_In-Home_Emergency_Plumbing_Repair_Plan.png',
-    productNewName: 'Water Line, Sewer Line and In Home Plumbing Insurance Policy',
+    productNewName: 'Water Line, Sewer Line and In-Home Plumbing Insurance Policy',
     coverSubheading: 'Protect 3 service lines in 1 plan and save on your monthly cost - and get protection for water line, sewer line, or in-home plumbing.',
     popularProduct: 'popular'
 },
@@ -288,16 +285,16 @@ const relatedProducts = [{
     popularProduct: ''
 },
 {
-    productFilterName: 'In Home Plumbing Insurance Policy',
+    productFilterName: 'In-Home Plumbing Insurance Policy',
     productImage: imgURL + '/products/In-Home_Plumbing_Emergency_Repair_Plan.png',
     productNewName: 'In-Home Plumbing Insurance Policy',
     coverSubheading: 'Cover your home\'s interior water and sewer pipes including overflowing toilet, broken water pipe under your sink or behind the walls.',
     popularProduct: ''
 },
 {
-    productFilterName: 'Water Line, Sewer Line and In Home Plumbing Protection Program',
+    productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Protection Program',
     productImage: imgURL + '/products/Water_Line_Sewer_Line_and_In-Home_Emergency_Plumbing_Repair_Plan.png',
-    productNewName: 'Water Line, Sewer Line and In Home Plumbing Protection',
+    productNewName: 'Water Line, Sewer Line and In-Home Plumbing Protection',
     coverSubheading: 'Protect 3 service lines in 1 plan and save on your monthly cost - and get protection for water line, sewer line, or in-home plumbing.',
     popularProduct: 'popular'
 },
@@ -350,17 +347,19 @@ function noProducts() {
 async function getImage(title) {
     // let imagename = title.replace(" &amp; ", " ").replace(/[^\w\s]/gi, '_').replaceAll(" ", "_").replaceAll("-", "_");
     // return "//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/PRODUCTPAGE/" + imagename + ".jpg";
-    for (let i = 0; i < relatedProducts.length; i++) {
-        let text = relatedProducts[i].productFilterName;
+    for (var i = 0; i < relatedProducts.length; i++) {
+        var text = relatedProducts[i].productFilterName;
+        console.log(text);
+        console.log(title);
         if (text == title) {
             return relatedProducts[i].productImage;
         }
     }
 }
-async function getPopular(title) {
-    for (let i = 0; i < relatedProducts.length; i++) {
-        const text = relatedProducts[i].productFilterName;
-        const popular = relatedProducts[i].popularProduct;
+async function getpopular(title) {
+    for (var i = 0; i < relatedProducts.length; i++) {
+        var text = relatedProducts[i].productFilterName;
+        var popular = relatedProducts[i].popularProduct;
         if (text == title) {
             if (popular != undefined) {
                 return relatedProducts[i].popularProduct;
@@ -378,91 +377,79 @@ setInterval(function () {
         jQuery(".noproducts-wrapper").remove();
     }
 }, 1000);
-function createTest() {
-    jQuery("body").addClass("spz-2025");
-    // let productsList = null;
-    // let titlesToCheck = ["water line protection program", "sewer line protection program", "water line and sewer line protection program", "water service line protection program", "sewer service line protection program"];
-    let ourProducts = [];
-    const productsCheck = setInterval(async function () {
-        if (jQuery(".page-wrap.product-list .product-item .card").length != 0) {
+async function createTest() {
+    jQuery("body").addClass("list_different_SPZ");
+
+
+    //If you made silde then Use this Swiper slider
+    var script = document.createElement('script');
+    script.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
+    script.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(script);
+    var link = document.createElement('link');
+    link.rel = 'stylesheet';
+    link.type = 'text/css';
+    link.href = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.9/slick.min.css';
+    document.getElementsByTagName('head')[0].appendChild(link);
+    //Starting your code from here.
+
+
+    var productslist = null;
+    var titlestocheck = ["water line protection program", "sewer line protection program", "water line and sewer line protection program", "water service line protection program", "sewer service line protection program"];
+    let ourproducts = [];
+    var productscheck = setInterval(async function () {
+        if (jQuery(".page-wrap.product-list .product-item .card").length !== 0) {
+            clearInterval(productscheck);
             await jQuery(".products-wrapper").remove();
             //.product-list-area.content-section
             jQuery("header").after('<div class="products-wrapper"><div class="products-inner"><div class="products-title"><h2>Protection Plans</h2></div> <div class="products-boxes"> </div></div></div>');
             await jQuery(".products-wrapper .products-boxes").html("");
-            const products = await jQuery(".page-wrap.product-list .product-item .card");
+            var products = await jQuery(".page-wrap.product-list .product-item .card");
             if (document.querySelector('.products-wrapper')) {
                 document.querySelector('.products-wrapper').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
             }
             let priority = 10;
             for await (product of products) {
-                const singleProduct = {};
+                const singleproduct = {};
                 let name = jQuery(product).find(".program-name").html().trim();
                 let price = jQuery(product).find(".price-cls .notranslate").html().trim();
                 // let icon = jQuery(product).find(".product-icon").attr('src');
-                let priceToShow = await getPrice(name.replace(/[^\w\s]/gi, '_').replaceAll(" ", "_"), price);
+                let pricetoshow = await getPrice(name.replace(/[^\w\s]/gi, '_').replaceAll(" ", "_"), price);
                 let image = await getImage(name.replaceAll("&amp;", "&"));
-                let popularItem = await getPopular(name);
-                singleProduct["target"] = name.replaceAll("&amp;", "&");
-                // let newName = name.replaceAll("Protection Program", "").replace("Program", "").replaceAll("Repair", "");
-                // if (newName.indexOf("Policy") > -1) {
-                //     newName = newName;
-                // } else {
-                //     newName = newName + " Repair Plan"
-                // }
-                // singleProduct["name"] = newName;
-                let newName = name.replaceAll("Emergency Plumbing", "Plumbing Emergency").replaceAll("and In Home", "and In-Home").replaceAll("In Home", "In-Home");
-                singleProduct["name"] = newName;
-                //singleProduct["name"] = name;
-                singleProduct["productClass"] = name.replace(/[^\w\s]/gi, '_').replaceAll(" ", "_");
-                singleProduct["price"] = price;
-                // singleProduct["icon"] = icon;
-                singleProduct["priceToShow"] = priceToShow;
-                singleProduct["image"] = image;
-                singleProduct["popularItem"] = popularItem;
-                if (name.toLowerCase() === "water line and sewer line protection program" || name.toLowerCase() === "water line and sewer line insurance policy") {
-                    singleProduct["priority"] = 0;
+                let popularitem = await getpopular(name);
+                singleproduct["target"] = name.replaceAll("&amp;", "&");
+                let newName = name.replaceAll("Protection Program", "").replace("Program", "").replaceAll("Repair", "").replace("In Home", "In-Home").replace("Emergency Plumbing", "Plumbing Emergency");
+                if (newName.indexOf("Policy") > -1) {
+                    newName = newName;
                 } else {
-                    singleProduct["priority"] = priority;
+                    newName = newName + " Repair Plan"
+                }
+                // singleproduct["name"] = newName;
+                // let newName = name.replaceAll("Emergency Plumbing", "Plumbing Emergency").replaceAll("and In Home", "and In-Home").replaceAll("In Home", "In-Home");
+                singleproduct["name"] = newName;
+                //singleproduct["name"] = name;
+                singleproduct["productclass"] = name.replace(/[^\w\s]/gi, '_').replaceAll(" ", "_");
+                singleproduct["price"] = price;
+                // singleproduct["icon"] = icon;
+                singleproduct["pricetoshow"] = pricetoshow;
+                singleproduct["image"] = image;
+                singleproduct["popularitem"] = popularitem;
+                if (name.toLowerCase() === "water line and sewer line protection program" || name.toLowerCase() === "water line and sewer line insurance policy") {
+                    singleproduct["priority"] = 0;
+                } else {
+                    singleproduct["priority"] = priority;
                 }
                 priority += 1;
-                ourProducts.push(singleProduct);
+                ourproducts.push(singleproduct);
             }
             jQuery(".product-list-header .zipcode-box button.change-link").text("Change");
-            jQuery(".spz-2025 .product-list-area > .page-wrap.set-pad > .product-list-header .zipcode-box button.product-page-search > span:first-child").text("Search");
-            const sortedProducts = ourProducts.slice().sort(function (a, b) { return a.priority - b.priority });
-            if (sortedProducts.length < 3) {
+            jQuery(".list_different_SPZ .product-list-area > .page-wrap.set-pad > .product-list-header .zipcode-box button.product-page-search > span:first-child").text("Search");
+            const sortedproducts = ourproducts.slice().sort(function (a, b) { return a.priority - b.priority });
+            if (sortedproducts.length < 3) {
                 jQuery(".products-boxes").addClass("justify-content-center");
             }
-            jQuery.each(sortedProducts, function (index, value) {
-                jQuery(".products-wrapper .products-boxes").append(`
-                    <div data-targettitle="${value.target}" class="products-single-box product-card-spz ${value.productClass} ${value.popularItem}">
-                        <div class="product-text prod-card active">
-                        <div class="product-title">
-                            <h1>${value.name}</h1>
-                            <div class="product-image" style="background-image:url(${value.image})"></div></div>
-                            <div class="product-cart-info">
-                            <div class="prod-info">(!)</div>
-                                <div class="product-pricing">${value.priceToShow}</div>
-                                <button>Enroll Now 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/>
-                                    </svg>
-                                    </button></div></div>
-
-                                    <div class="product-text prod-feature">
-                        <div class="product-feature">
-                        <ul class="product-feature-list"></ul>
-                            </div>
-                            <div class="product-cart-info">
-                            <div class="prod-cross">(X)</div>
-                                <div class="product-pricing">${value.priceToShow}</div>
-                                <button>Enroll Now 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/>
-                                    </svg>
-                                    </button></div></div>
-                                    `);
-
+            jQuery.each(sortedproducts, function (index, value) {
+                jQuery(".products-wrapper .products-boxes").append('<div data-targettitle="' + value.target + '" class="products-single-box ' + value.productclass + ' ' + value.popularitem + '"><div class="product-text"><h1>' + value.name + '</h1><div class="product-image" style="background-image:url(' + value.image + ')"></div><div class="product-cart-info"><div class="product-pricing">' + value.pricetoshow + '</div> <button>Enroll Now <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none"><path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/></svg>');
             });
             jQuery.each(comboManagement, function (index, cmbo) {
                 let totalprice = 0;
@@ -496,32 +483,79 @@ function createTest() {
                 }
             });
 
-            jQuery(".products-single-box .prod-card .prod-info").on("click mouseover", function (e) {
-                jQuery(this).closest(".products-single-box").addClass('active');
 
-            });
+            // Detect mac or windows
 
-            jQuery(".products-single-box .prod-feature .prod-cross").on("click mouseover", function (e) {
-                jQuery(this).closest(".products-single-box").removeClass('active');
-
-            });
-
-            clearInterval(productsCheck);
-            if (document.querySelector('.product-card-spz') && document.querySelectorAll('.product-card-spz[data-program-id]').length == 0) {
-                console.log('clicked clicked');
-                await getProducts();
+            if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+                $("body").addClass("mac");
+            } else {
+                $("body").addClass("pc");
             }
+
+            // Add browser class in body
+
+            var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+            var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+            var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+            var is_explorer = typeof document !== 'undefined' && !!document.documentMode && !is_Edge;
+            var is_firefox = typeof window.InstallTrigger !== 'undefined';
+            var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+            if (is_chrome) {
+                $('body').addClass('chrome');
+            } else if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+                $('body').addClass('safari');
+            } else if (is_firefox) {
+                $('body').addClass('firefox');
+            }
+
+
+            // if ($(window).width() > 320) {
+            jQuery("<div class='products-boxes products_slider'></div>").insertBefore(".list_different_SPZ .products-boxes");
+            jQuery(".list_different_SPZ .Water_Line_and_Sewer_Line_Protection_Program").appendTo(".products_slider")
+            jQuery(".list_different_SPZ .products-single-box.Water_Line_Protection_Program").appendTo(".products_slider")
+            jQuery(".list_different_SPZ .products-single-box.Sewer_Line_Protection_Program").appendTo(".products_slider")
+
+            if ($(window).width() > 767) {
+                $(".list_different_SPZ .products_slider").slick({
+                    slidesToShow: 3,
+                    infinite: false,
+                    slidesToScroll: 1,
+                    autoplay: false,
+                    arrows: true,
+                    centerMode: false,
+
+                    responsive: [
+                        {
+                            breakpoint: 1025,
+                            settings: {
+                                slidesToShow: 1.5,
+                                slidesToScroll: 1,
+                                dots: false,
+                                centerMode: true,
+                                centerPadding: '20%'
+                            }
+                        },
+                        {
+                            breakpoint: 992,
+                            settings: {
+                                slidesToShow: 1.5,
+                                slidesToScroll: 1,
+                                dots: false,
+                                centerMode: true,
+                                centerPadding: '11%'
+                            }
+                        }]
+                });
+            }
+            else {
+                $(".products-boxes.products_slider").removeClass('products_slider');
+            }
+            // } 
         }
     }, 100);
 }
-
-// // Open PDP on card click
-jQuery("body").on("click", ".products-single-box .product-image, .products-single-box .product-text > a, .products-single-box .product-text .product-title > h1", async function (e) {
+jQuery("body").on("click", ".products-single-box .product-image, .products-single-box .product-text > a, .products-single-box .product-text > h1", async function (e) {
     e.preventDefault();
-
-    // const programId = jQuery(this).parents('.product-card-spz').data("program-id");
-    // console.log('Clicked: ', programId);
-    // console.log(await getProductDetails(programId));
     const linksControl = await jQuery(".page-wrap.product-list .product-item .card");
     for await (const link of linksControl) {
         if (jQuery(this).closest(".products-single-box").attr("data-targettitle") === jQuery(link).find(".program-name").html().trim().replaceAll("&amp;", "&")) {
@@ -531,15 +565,17 @@ jQuery("body").on("click", ".products-single-box .product-image, .products-singl
     }
 });
 
-async function removeTest() {
-    jQuery("body").removeClass("spz-2025");
+
+
+async function removetest() {
+    jQuery("body").removeClass("list_different_SPZ");
     jQuery(".products-wrapper").remove();
     jQuery(".noproducts-wrapper").remove();
 }
 
 history.pushState = (function (f) {
     return function pushState() {
-        const ret = f.apply(this, arguments);
+        var ret = f.apply(this, arguments);
         window.dispatchEvent(new Event("pushstate"));
         window.dispatchEvent(new Event("locationchange"));
         return ret;
@@ -547,7 +583,7 @@ history.pushState = (function (f) {
 })(history.pushState);
 history.replaceState = (function (f) {
     return function replaceState() {
-        const ret = f.apply(this, arguments);
+        var ret = f.apply(this, arguments);
         window.dispatchEvent(new Event("replacestate"));
         window.dispatchEvent(new Event("locationchange"));
         return ret;
@@ -562,8 +598,8 @@ window.addEventListener("locationchange", function () {
 });
 
 
-let something = (function () {
-    let executed = false;
+var something = (function () {
+    var executed = false;
     return function () {
         if (!executed) {
             executed = true;
@@ -572,9 +608,14 @@ let something = (function () {
     };
 })();
 
-// jQuery(document).on('DOMSubtreeModified', "article.page-wrap.product-list.row", function () {
+// jQuery(document).on('DOMSubtreeModified', "article.page-wrap.product-list.row", function() {
 //     createTest();
 // });
+
+window.addEventListener('resize', function (event) {
+    url = location.href;
+    urlCheck(url);
+}, true);
 
 url = location.href;
 urlCheck(url);
@@ -584,14 +625,14 @@ jQuery(document).on('click', '.product-page-search', function () {
 });
 
 function urlCheck(url) {
-    let allBlogsUrlString = "";
+    var allblogsurlstring = "";
     if (window.location.pathname.indexOf("/products/") > -1) {
-        allBlogsUrlString = window.location.href;
+        allblogsurlstring = window.location.href;
     }
-    if (isSameUrl(url, allBlogsUrlString, true)) {
+    if (isSameUrl(url, allblogsurlstring, true)) {
         createTest();
     } else {
-        removeTest();
+        removetest();
     }
 }
 
@@ -609,82 +650,4 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
         return true;
     return false;
-}
-
-// Functions regarding API calls
-async function getProducts() {
-    const zipCode = JSON.parse(localStorage.getItem('selectedAddress')).zipcode;
-
-    try {
-        const zipResult = await getZipCode(zipCode);
-        // const locResult = await getLocationCode(zipResult.locationCodeId);
-        // const microSiteResult = await getMicroSite(locResult.locationCode);
-        const defaultCodes = await getDefaultCodes(
-            zipResult.locationCodeId,
-            zipResult.syncSource
-        );
-
-        console.log(defaultCodes);
-
-        defaultCodes.result.forEach((prodList, k) => {
-
-            document.querySelectorAll(".products-wrapper .products-boxes .product-card-spz").forEach((viewProd, i) => {
-                let prName = viewProd.getAttribute('data-targettitle');
-                if (prodList.customerProgramName == prName && viewProd.querySelectorAll('.product-feature-list li').length < 1) {
-                    console.log('viewProd: ', viewProd.getAttribute('data-targettitle'))
-                    prodList.coveredRepairs.forEach((feature) => {
-                        viewProd.querySelector('.product-feature-list').insertAdjacentHTML('beforeend', '<li>' + feature.value + '</li>');
-                    });
-                }
-
-            });
-        });
-    } catch (error) {
-        if (error.status === 404) {
-            return { status: 'error', error: 'Zipcode not found' };
-        } else if (error.status === 500) {
-            return { status: 'error', error: 'No marketing codes found' };
-        } else {
-            return;
-        }
-    }
-}
-
-async function getZipCode(zipCode) {
-    const result = await fetch(`${baseUrl}/location/zip_codes/${zipCode}?APIKey=${apiKey}`);
-    if (result.status === 404) {
-        throw { status: 404 };
-    }
-
-    return result.json();
-}
-
-async function getLocationCode(locationId) {
-    const result = await fetch(
-        `${baseUrl}/location/location_codes/${locationId}?APIKey=${apiKey}`
-    );
-    return result.json();
-}
-
-async function getDefaultCodes(locationId, syncSource) {
-    const result = await fetch(`${baseUrl}/product/marketing-codes/default-codes?location_code=${locationId}&allProducts=true&APIKey=${apiKey}`,
-        {
-            headers: {
-                'Migrated-To-Oracle': syncSource === 'oracle' ? 'true' : 'false',
-            },
-            method: 'GET',
-        }
-    );
-    if (result.status === 500) {
-        throw { status: 500 };
-    }
-    return result.json();
-}
-
-async function getProductDetails(programId) {
-    const result = await fetch(`${baseUrl}/product/product-review/averageRatingByProgramId?programId=${programId}&APIKey=${apiKey}`);
-    if (result.status === 404) {
-        throw { status: 404 };
-    }
-    return result.json();
 }

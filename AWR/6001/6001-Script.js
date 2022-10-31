@@ -1,0 +1,238 @@
+'use strict'
+const TEST_ENV = {
+    name: 'spz-6001',
+    date: '27-10-22',
+    base_url: 'https://www.yourhomesolutions.com/', // control domain url
+    main_class: 'body', // parent class where test is going to be applied
+}
+
+// If you need to load any external libs or content
+const content = document.createElement('script');
+content.src = 'https://res.cloudinary.com/spiralyze/raw/upload/f_auto/AWR/PHS/6001/src/product.js';
+document.head.appendChild(content);
+content.onload = function () {
+    loadTest();
+};
+
+
+function loadTest() {
+    var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
+    var cookieValue = "1";
+    var myDate = new Date();
+    myDate.setDate(myDate.getDate() + 30);
+    document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+    // Set test class
+    document.body.classList.add('spz-6001');
+
+    //Header Changes
+    jQuery('#top-nav-container').removeClass('hidden-sm');
+
+    if (document.querySelectorAll('#top-nav-container .header__link').length < 1) {
+        cloneElement('.header .header__wrapper .container.no-p .row:last-child div:first-child', '#top-nav-container .container');
+        document.querySelector('#top-nav-container .col-lg-12').classList.add('header-logo');
+        document.querySelector('#top-nav-container .col-lg-12').classList.remove('col-md-6', 'col-xs-10', 'col-lg-12');
+        document.querySelector('.header .header__wrapper .container.no-p .row:first-child .zip-col').classList.remove('col-md-6', 'col-md-push-6', 'col-sm-12', 'col-xs-12');
+
+        document.querySelector('#top-nav-container .container').insertAdjacentHTML('beforeend', `<div class="header-menu-options"> <div class="contact-wrapper"><svg width="14" height="14">    <image xlink:href="https://res.cloudinary.com/spiralyze/image/upload/v1667199587/AWR/PHS/6001/src/Vector.svg" width="14" height="14"/>  </svg> <span>888-801-5057</span></div></div>`);
+        moveElement('#top-nav-container .container > a', '#top-nav-container .header-menu-options');
+        moveElement('#top-nav-container .container > span', '#top-nav-container .header-menu-options');
+    }
+
+    //Insert add to cart button inside product card
+    if (jQuery('.related-plans .collection__grid > .collection__grid-item .cart-btn-spz').length < 1) {
+        jQuery('.related-plans .collection__grid > .collection__grid-item').append(`<div class="cart-btn-spz">
+        <button class="add-to-cart">Enroll Now <img src="https://res.cloudinary.com/spiralyze/image/upload/v1667224513/AWR/PHS/6001/src/right_arrow.png"></img></button>
+        </div>`);
+
+        // let productCards = document.querySelectorAll('section.page__content .related-plans .related-plans .collection__grid .collection__grid-item');
+        // for (var i = 0; i < productCards.length; ++i) {
+        //     let oldVerb = document.querySelector(`.collection__grid-item:nth-child(${i}) .collection__product-price`).innerText;
+        //     console.log(oldVerb);
+        // }
+        
+    }
+    document.querySelectorAll('.collection__grid-item .collection__product-price').forEach(function(v ,i) {
+        v.innerHTML = v.innerHTML.replace(' / ', ' Per ')
+    });
+
+    //Add to cart button Functionality
+    jQuery(".related-plans .collection__grid > .collection__grid-item .cart-btn-spz .add-to-cart").unbind().click(function () {
+        let prodId = jQuery(this).closest('.collection__grid-item').find('.related-overlay a').attr('href');
+        let parts = prodId.split("="),
+            last_part = parts[parts.length - 1];
+        CartJS.addItem(last_part, 1, {}, {
+
+            // Define a success callback to display a success message.
+            "success": function (data, textStatus, jqXHR) {
+                // alert('Successfully added to cart.');
+                jQuery('.drawers .mini-cart__content .mini-cart__items').prepend('<li class="mini-cart__notification">Your product has been added!</li>');
+            },
+
+            // Define an error callback to display an error message.
+            "error": function (jqXHR, textStatus, errorThrown) {
+                // alert('There was a problem adding to the cart!');
+            }
+
+        });
+        setTimeout(function () {
+            jQuery('.header__link[data-action="open-mini-cart"]').trigger('click');
+        }, 500);
+
+        setTimeout(function () {
+            jQuery('.drawers .mini-cart__content .mini-cart__items .mini-cart__notification').fadeOut();
+        }, 2000);
+    });
+
+    //Product image update
+    if (jQuery('.related-plans .collection__grid > .collection__grid-item .collection__product-image').length > 1) {
+        jQuery('.related-plans .collection__grid > .collection__grid-item').each(function () {
+            let prodTitle = jQuery(this).find('.collection__product-title a').text();
+            const prodImage = jQuery(this).find('.collection__product-image');
+            if (allProducts.length > 0) {
+                allProducts.some(function (prod, i) {
+                    if (prodTitle == prod.productName) {
+                        prodImage.attr('src', prod.productImage);
+                    }
+                });
+            }
+        });
+    }
+
+
+    document.body.classList.add("loaded");
+}
+
+// Generic
+history.pushState = (function (f) {
+    return function pushState() {
+        let ret = f.apply(this, arguments);
+        window.dispatchEvent(new Event('pushstate'));
+        window.dispatchEvent(new Event('locationchange'));
+        return ret;
+    };
+})(history.pushState);
+history.replaceState = (function (f) {
+    return function replaceState() {
+        let ret = f.apply(this, arguments);
+        window.dispatchEvent(new Event('replacestate'));
+        window.dispatchEvent(new Event('locationchange'));
+        return ret;
+    };
+})(history.replaceState);
+
+window.addEventListener('popstate', function () {
+    window.dispatchEvent(new Event('locationchange'));
+});
+window.addEventListener('locationchange', function () {
+    url = location.href;
+    urlCheck(url);
+});
+
+let url = location.href;
+urlCheck(url);
+function urlCheck(url) {
+    let testURL = TEST_ENV.base_url;
+    if (window.location.pathname.indexOf("/pages/") > -1) {
+        testURL = window.location.href;
+    }
+    if (isSameUrl(url, testURL, true)) {
+        // waitForElement(TEST_ENV.main_class).then(function () {
+        //     loadTest();
+        // });
+        loadTest();
+        setTimeout(function () {
+            document.body.classList.add("loaded");
+
+            window.addEventListener("resize", function () {
+                loadTest();
+            });
+        }, 5000);
+        if (document.querySelectorAll(TEST_ENV.main_class).length > 0) {
+            loadTest();
+        }
+    } else {
+        removeTest();
+    }
+}
+
+function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
+    currentUrl = currentUrl.includes("#") ?
+        currentUrl.slice(0, currentUrl.indexOf("#")) :
+        currentUrl;
+    specifiedUrl = specifiedUrl.includes("#") ?
+        specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
+        specifiedUrl;
+    if (!includeQueryParams)
+        currentUrl = currentUrl.includes("?") ?
+            currentUrl.slice(0, currentUrl.indexOf("?")) :
+            currentUrl;
+    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+        return true;
+    return false;
+}
+
+function removeTest() {
+    document.body.classList.remove('spz-6001');
+}
+
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+}
+
+// Set text, image etc.
+// elm: Element where we have to set content
+// value: Value to be set
+// type: Pass content type - TEXT / IMAGE etc.
+function setContent(elm, value, type = 'STRING') {
+    if (document.querySelector(elm)) {
+        const tg = document.querySelector(elm);
+        if (type == 'IMAGE') {
+            tg.src = value;
+        } else {
+            tg.innerText = value;
+        }
+    }
+}
+
+// Clone element
+// source: Element which we have to copy
+// target: New location of an element 
+function cloneElement(source, target) {
+    if (document.querySelector(source) && document.querySelector(target)) {
+        const sc = document.querySelector(source);
+        const clone = sc.cloneNode(true);
+        document.querySelector(target).appendChild(clone);
+    }
+}
+
+// Move element
+// sourceElm: Element which we have to move
+// targetLoc: New location of an element 
+function moveElement(sourceElm, targetLoc) {
+    const f = document.createDocumentFragment();
+    if (document.querySelector(sourceElm) != null) {
+        f.appendChild(document.querySelector(sourceElm));
+        document.querySelector(targetLoc).appendChild(f);
+    }
+}
+
+
+content.onload = function () {
+    loadTest();
+}
+
+// Add class 'safari' (used for cart scrollbar)
+if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+    document.body.classList.add('safari')
+}

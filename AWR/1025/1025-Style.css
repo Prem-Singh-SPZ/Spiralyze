@@ -1,0 +1,32 @@
+
+body .loader-wrapper-spz {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0;
+  background-color: #fff;
+  z-index: 999;
+}
+body .loader-wrapper-spz .loader-lot-spz {
+  width: 921px;
+  margin: 24px auto 0;
+}
+@media (max-width: 1023.98px) {
+  body .loader-wrapper-spz .loader-lot-spz {
+    width: 100%;
+  }
+}
+body.spz-1025.active {
+  overflow-y: hidden;
+}
+body.spz-1025.active .loader-wrapper-spz {
+  display: block;
+}
+body.spz-1025 .pace.pace-active ~ .loader-wrapper-spz {
+  display: block;
+}
+body .loading {
+  display: none !important;
+}

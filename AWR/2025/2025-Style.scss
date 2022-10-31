@@ -2,11 +2,11 @@
   display: none;
 }
 
-body.spz-2031 .product-list-area.fixed-nav-product {
+body.spz-2025 .product-list-area.fixed-nav-product {
   margin-top: 33px !important;
 }
 
-.spz-2031 {
+.spz-2025 {
   footer,
   .product-list-area.content-section {
     margin: 0 !important;
@@ -64,12 +64,12 @@ body.spz-2031 .product-list-area.fixed-nav-product {
       flex-wrap: wrap;
       max-width: calc(25% - 20px);
       width: 100%;
-      background: #fff;
-      box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
+      // background: #fff;
+      // box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
       border-radius: 12px;
       margin-bottom: 40px;
 
-      &.popular {
+      &.popular .product-text{
         &::after {
           content: "MOST POPULAR";
           position: absolute;
@@ -132,8 +132,11 @@ body.spz-2031 .product-list-area.fixed-nav-product {
 
       .product-text {
         padding: 0;
+        background: #fff;
+        box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
+        border-radius: 12px;
 
-        > h1 {
+        .product-title > h1 {
           font-family: Roboto;
           font-style: normal;
           font-weight: 700;
@@ -172,11 +175,42 @@ body.spz-2031 .product-list-area.fixed-nav-product {
             cursor: pointer;
           }
         }
+        &.prod-card,
+        &.prod-feature {
+          display: block;
+          transition-duration: 1s;
+          transition-property: transform, opacity;
+          cursor: pointer;
+        }
+        &.prod-card {
+          opacity: 1;
+          transform: rotateY(0deg);
+        }
+        &.prod-feature {
+          position: absolute;
+          top: 0px;
+          left: 0px;
+          right: 0;
+          bottom: 0;
+          opacity: 0;
+          transform: rotateY(180deg);
+          pointer-events: none;
+
+          .product-feature-list{
+            height: 276px;
+            overflow: auto;
+          }
+        }
+
       }
     }
   }
 
-  .product-list-area > .page-wrap.set-pad > .product-list-header .zipcode-box button {
+  .product-list-area
+    > .page-wrap.set-pad
+    > .product-list-header
+    .zipcode-box
+    button {
     transition: all 0.2s ease;
 
     &:hover {
@@ -185,8 +219,21 @@ body.spz-2031 .product-list-area.fixed-nav-product {
   }
 
   .products-boxes .products-single-box {
-    .product-image, .product-text > a {
+    .product-image,
+    .product-text > a {
       transition: all 0.2s ease;
+    }
+    &.active {
+      & > .prod-card {
+        opacity: 0;
+        transform: rotateY(180deg);
+      }
+  
+      & > .prod-feature {
+        opacity: 1;
+        transform: rotateY(0deg);
+        pointer-events: all;
+      }
     }
   }
 
@@ -456,7 +503,9 @@ body.spz-2031 .product-list-area.fixed-nav-product {
     position: relative;
   }
 
-  .products-boxes .products-single-box.Exterior_Electric_Line_Protection_Program .product-image {
+  .products-boxes
+    .products-single-box.Exterior_Electric_Line_Protection_Program
+    .product-image {
     background-position: right;
   }
 
@@ -466,7 +515,7 @@ body.spz-2031 .product-list-area.fixed-nav-product {
 }
 
 @media (max-width: 1199.98px) {
-  .spz-2031 {
+  .spz-2025 {
     .noproducts-inner,
     .products-inner {
       max-width: 900.1px;
@@ -479,7 +528,7 @@ body.spz-2031 .product-list-area.fixed-nav-product {
 }
 
 @media (max-width: 1023.98px) {
-  .spz-2031 {
+  .spz-2025 {
     .noproducts-wrapper,
     .products-wrapper {
       padding: 80px 0 76px;
@@ -524,7 +573,7 @@ body.spz-2031 .product-list-area.fixed-nav-product {
 }
 
 @media (max-width: 599.98px) {
-  .spz-2031 {
+  .spz-2025 {
     .noproducts-wrapper,
     .products-wrapper {
       padding: 43px 0 59px;
@@ -586,7 +635,7 @@ body.spz-2031 .product-list-area.fixed-nav-product {
 }
 
 @media (max-width: 359.98px) {
-  .spz-2031 .products-boxes .products-single-box {
+  .spz-2025 .products-boxes .products-single-box {
     .product-text .product-pricing {
       font-size: 20px;
 
@@ -603,7 +652,7 @@ body.spz-2031 .product-list-area.fixed-nav-product {
 }
 
 @media only screen and (min-width: 768px) and (max-width: 1024px) {
-  .spz-2031 .banner-box .banner {
+  .spz-2025 .banner-box .banner {
     height: 350px !important;
   }
 }
