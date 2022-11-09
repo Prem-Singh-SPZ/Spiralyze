@@ -25,7 +25,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
     font-size: 48px;
     line-height: 56px;
     text-align: center;
-    margin-bottom: 42px;
+    margin-bottom: 60px;
     margin-top: 0;
     color: #000;
   }
@@ -62,14 +62,14 @@ body.spz-2025 .product-list-area.fixed-nav-product {
       position: relative;
       margin: 0 10px;
       flex-wrap: wrap;
-      max-width: calc(25% - 20px);
-      width: 100%;
+      // max-width: calc(25% - 20px);
+      width: 280px;
       // background: #fff;
       // box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
       border-radius: 12px;
-      margin-bottom: 40px;
+      margin-bottom: 60px;
 
-      &.popular .product-text {
+      &.popular{
         &::after {
           content: "MOST POPULAR";
           position: absolute;
@@ -108,6 +108,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
     }
 
     .products-single-box {
+      display: flex;
       .product-image {
         height: 170px;
         position: relative;
@@ -136,6 +137,11 @@ body.spz-2025 .product-list-area.fixed-nav-product {
         box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
         border-radius: 12px;
 
+        .product-title{
+          display: flex;
+          flex-direction: column;
+          flex-grow: 1;
+        }
         .product-title > h1 {
           font-family: Roboto;
           font-style: normal;
@@ -146,18 +152,18 @@ body.spz-2025 .product-list-area.fixed-nav-product {
           cursor: pointer;
           padding: 30px 20px 20px;
           margin: 0;
-          min-height: 122px;
+         flex-grow: 1;
         }
 
         .product-cart-info {
-          padding: 25px 20px 24px;
+          padding: 19px 20px 24px;
           position: relative;
           cursor: default;
 
           .prod-info {
             cursor: pointer;
             position: absolute;
-            top: -27px;
+            top: -33px;
             right: 20px;
             .info-blue {
               display: block;
@@ -177,7 +183,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
           .prod-cross {
             cursor: pointer;
             position: absolute;
-            top: -25px;
+            top: -30px;
             right: 22px;
             img {
               width: 40px;
@@ -210,7 +216,9 @@ body.spz-2025 .product-list-area.fixed-nav-product {
         }
         &.prod-card,
         &.prod-feature {
-          display: block;
+          flex-grow: 1;
+          display: flex;
+          flex-direction: column;      
           transition-duration: 1s;
           transition-property: transform, opacity;
           cursor: pointer;
@@ -232,7 +240,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
             background-color: #0d3d64;
             padding-right: 28px;
             padding-bottom: 20px;
-            height: 292px;
+            height: 296px;
             padding-top: 32px;
             border-radius: 12px 12px 0 0;
             cursor: default;
@@ -336,7 +344,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
         font-size: 24px;
         line-height: 100%;
         color: #0d3d64;
-        margin-bottom: 22px;
+        margin-bottom: 24px;
         display: flex;
         align-items: center;
 
@@ -403,7 +411,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
 
   .noproducts-wrapper,
   .products-wrapper {
-    padding: 48px 0 40px;
+    padding: 80px 0 40px;
   }
 
   .noproducts-inner p {
@@ -602,9 +610,9 @@ body.spz-2025 .product-list-area.fixed-nav-product {
       max-width: 900.1px;
     }
 
-    .products-boxes .products-single-box {
-      max-width: calc(33.33% - 20px);
-    }
+    // .products-boxes .products-single-box {
+    //   max-width: calc(33.33% - 20px);
+    // }
   }
 }
 
@@ -612,7 +620,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
   .spz-2025 {
     .noproducts-wrapper,
     .products-wrapper {
-      padding: 80px 0 76px;
+      padding: 60px 0 76px;
     }
 
     .products-boxes {
@@ -621,17 +629,17 @@ body.spz-2025 .product-list-area.fixed-nav-product {
 
     .noproducts-inner,
     .products-inner {
-      max-width: 602px;
+      max-width: 604px;
     }
 
     .products-title h2 {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
     }
 
     .products-boxes {
       .products-single-box {
-        margin: 0 11px;
-        max-width: calc(50% - 22px);
+        margin: 0 10px;
+        // max-width: calc(50% - 22px);
         margin-bottom: 22px;
       }
 

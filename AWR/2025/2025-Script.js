@@ -72,7 +72,7 @@ const relatedProducts = [{
 },
 {
     productFilterName: 'Sewer Line Protection Program',
-    productImage: imgURL + '/products/Sewer_Line_Insurance_Policy.png',
+    productImage: imgURL + '/products/Sewer_Line_Repair_Plan.png',
     productNewName: 'Sewer Line Repair Plan',
     coverSubheading: 'Cover your repairs to clogs and blockages of a covered sewer line caused by normal wear and tear.',
     popularProduct: ''
@@ -218,7 +218,7 @@ const relatedProducts = [{
 },
 {
     productFilterName: 'Sewer Line Unlimited Protection Program',
-    productImage: imgURL + '/products/Sewer_Line_Insurance_Policy.png',
+    productImage: imgURL + '/products/Sewer_Line_Repair_Plan.png',
     productNewName: 'Sewer Line Unlimited Repair Plan',
     coverSubheading: 'Cover your repairs to a clogged, blocked, or leaking sewer pipe.',
     popularProduct: ''
