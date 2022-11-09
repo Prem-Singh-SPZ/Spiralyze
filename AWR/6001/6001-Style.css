@@ -1,35 +1,92 @@
+img.collection__product-image[class] {
+  opacity: 0;
+  transition: linear 150ms;
+}
+
 .spz-6001 > .page__container[class] > header.header[class] .navigation-horizontal[class] {
   display: none;
 }
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] {
   background-color: #fff;
 }
+@media (max-width: 767px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] {
   text-align: center;
 }
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] {
   text-align: center;
-  text-align: center;
   font-size: 16px;
   line-height: 24px;
   font-weight: 400;
   font-style: normal;
-  margin-top: 14px;
+  margin-top: 20px;
   padding: 0;
 }
+@media (min-width: 767px) and (max-width: 991px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] {
+    margin-top: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] {
+    font-size: 14px;
+    line-height: 20px;
+    margin-top: 21px;
+    margin-bottom: 18px;
+  }
+}
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .zip-code-selector[class] {
-  margin-left: 4px;
+  margin-left: 6px;
+}
+@media (min-width: 767px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .zip-code-selector[class] {
+    margin-left: 8px;
+  }
 }
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .change-zip[class] {
-  margin-right: 3px;
+  margin-right: 6px;
 }
-.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .fa-shopping-cart[class] {
-  margin-top: 1px;
+@media (min-width: 767px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .change-zip[class] {
+    margin-right: 4px;
+  }
+}
+.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .header__link[class] {
+  vertical-align: middle;
+}
+.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .header__link[class] .fa-shopping-cart[class] {
+  padding-left: 0px;
+  margin-top: -2px;
+}
+@media (max-width: 767px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .header__link[class] .fa-shopping-cart[class] {
+    margin-top: -1px;
+  }
+}
+.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .header__link[class] .fa-shopping-cart[class]::before {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1667293690/AWR/PHS/6001/src/Cart_icon.svg");
 }
 @media (min-width: 767px) {
   .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child {
     display: none;
   }
+}
+.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__link[class] .header__logo-image[class] {
+  margin-top: 23px;
+  margin-left: 16px;
+  width: 190px;
+}
+.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__item.header__item-toggle[class] {
+  background-color: #fff;
+  padding: 17px 24px;
+}
+.spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__item.header__item-toggle[class] .header__link[class] .icon-hamburger[class]::before {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1667278834/AWR/PHS/6001/src/menu.jpg");
 }
 .spz-6001 > .page__container[class] > main[role=main] {
   background-color: #eaeaea;
@@ -41,12 +98,18 @@
 .spz-6001 > .page__container[class] > main[role=main] .page__header[class] .breadcrumb[class] {
   margin-top: 0;
   margin-bottom: 0;
-  padding-top: 50px;
+  padding-top: 48px;
 }
 @media (min-width: 767px) and (max-width: 991px) {
   .spz-6001 > .page__container[class] > main[role=main] .page__header[class] .breadcrumb[class] {
     padding-top: 36px;
-    padding-bottom: 20px;
+    padding-bottom: 18px;
+  }
+}
+@media (max-width: 767px) {
+  .spz-6001 > .page__container[class] > main[role=main] .page__header[class] .breadcrumb[class] {
+    padding-top: 24px;
+    padding-bottom: 7px;
   }
 }
 .spz-6001 > .page__container[class] > main[role=main] .page__header[class] .breadcrumb[class] .inner[class] .breadcrumb__list[class] .breadcrumb__item--active[class] {
@@ -59,6 +122,11 @@
   color: #4f4f4f;
   text-transform: none;
   padding-left: 14px;
+}
+@media (max-width: 767px) {
+  .spz-6001 > .page__container[class] > main[role=main] .page__header[class] .breadcrumb[class] .inner[class] .breadcrumb__list[class] .breadcrumb__item--active[class] {
+    font-size: 20px;
+  }
 }
 @media (min-width: 767px) and (max-width: 991px) {
   .spz-6001 > .page__container[class] > main[role=main] .page__header[class] .breadcrumb[class] .inner[class] .breadcrumb__list[class] .breadcrumb__item--active[class] {
@@ -74,24 +142,40 @@
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] {
   background-color: #eaeaea;
 }
+@media (min-width: 991px) {
+  .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] {
+    padding-top: 1.9em;
+  }
+}
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] {
   max-width: 1216px;
   width: 100%;
 }
-@media (min-width: 767px) and (max-width: 991px) {
+@media (min-width: 607.98px) and (max-width: 991px) {
   .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] {
     max-width: 608px;
+  }
+}
+@media (min-width: 991px) and (max-width: 1224px) {
+  .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] {
+    max-width: 912px;
   }
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] {
   background-color: #eaeaea;
   padding-top: 0;
+  padding-bottom: 54px;
+}
+@media (min-width: 991px) {
+  .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] {
+    padding-bottom: 24px;
+  }
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] {
   padding-top: 0;
   margin: 0 auto;
 }
-@media (min-width: 991px) and (max-width: 1224px) {
+@media (max-width: 607.98px) {
   .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] {
     justify-content: center;
   }
@@ -99,22 +183,17 @@
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] {
   display: flex;
   max-width: 280px;
-  width: 23.49%;
+  width: 280px;
   margin: 0 12px 24px 12px;
   padding: 0;
   border: none;
   background-color: #fff;
 }
-@media (min-width: 767px) and (max-width: 991px) {
-  .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] {
-    width: 48.49%;
-  }
-}
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .collection__product-title[class] {
   order: -1;
   text-align: left;
   height: auto;
-  padding: 28px 20px;
+  padding: 30px 20px 26px;
   flex-grow: 1;
   margin-bottom: -6px;
 }
@@ -137,7 +216,7 @@
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .collection__product-info[class] {
   margin: 0;
   background: none;
-  padding: 1em 0 1.2em;
+  padding: 14px 0 18px;
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .collection__product-info[class] .collection__product-price[class] {
   font-weight: 400;
@@ -157,7 +236,7 @@
   margin-right: 6px;
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .cart-btn-spz {
-  margin: 7px 20px 24px;
+  margin: 6px 20px 24px;
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .cart-btn-spz .add-to-cart {
   width: 100%;
@@ -170,9 +249,15 @@
   text-align: center;
   color: #ffffff;
   border: none;
+  cursor: pointer;
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .cart-btn-spz .add-to-cart img {
-  padding-left: 10px;
+  padding-left: 12px;
+}
+@media (max-width: 991px) {
+  .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .cart-btn-spz .add-to-cart {
+    padding-right: 10px;
+  }
 }
 .spz-6001 > .page__container[class] > main[role=main] > section.page__content[class] > .related-plans[class] .container.p-0[class] .related-plans[class] ul.collection__grid[class] li.collection__grid-item[class] .cart-btn-spz .add-to-cart:hover {
   background-color: #bc1016;
@@ -197,7 +282,7 @@
   }
 }
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-logo[class] .header__link[class] {
-  padding-left: 0;
+  padding: 0;
 }
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-logo[class] .header__link[class] .header__logo-image[class] {
   max-width: 237px;
@@ -230,6 +315,17 @@
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] .contact-wrapper svg {
   margin-right: 9px;
 }
+.spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] .contact-wrapper span {
+  color: #757575;
+}
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class]::after, .spz-6001 > .page__container[class] #top-nav-container[id] .container[class]::before {
   display: none;
+}
+.spz-6001 .footer[class] {
+  margin-top: 0;
+}
+@media (max-width: 359px) {
+  .spz-6001 .footer[class] .inner[class] .ccpa-updates-link[class] .btn[class] {
+    white-space: initial;
+  }
 }/*# sourceMappingURL=6001-Style.css.map */

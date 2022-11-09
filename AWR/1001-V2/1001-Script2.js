@@ -1,11 +1,12 @@
 jQuery(document).ready(function () {
-    jQuery('body').addClass('spz-1001')
-    //jQuery('<script id="google-slide-script" src="https://res.cloudinary.com/spiralyze/raw/upload/v1651267335/AWR/1001/google_slider.js"></script>').appendTo('head')
-    jQuery('<link id="google-slide-css" rel="stylesheet" type="text/css" href="https://res.cloudinary.com/spiralyze/raw/upload/v1651267335/AWR/1001/google_slider.css">').appendTo('body')
-    setInterval(function(){
-    if(!document.querySelector('.feedback-container.slick-initialized')){
-              console.log('123')
-              jQuery('.feedback-container').slick({
+    if (window.location.href === "https://www.awrusa.com/") {
+        jQuery('body').addClass('spz-1001')
+        //jQuery('<script id="google-slide-script" src="https://res.cloudinary.com/spiralyze/raw/upload/v1651267335/AWR/1001/google_slider.js"></script>').appendTo('head')
+        jQuery('<link id="google-slide-css" rel="stylesheet" type="text/css" href="https://res.cloudinary.com/spiralyze/raw/upload/v1651267335/AWR/1001/google_slider.css">').appendTo('body')
+        setInterval(function () {
+            if (!document.querySelector('.feedback-container.slick-initialized')) {
+                //   console.log('123')
+                jQuery('.feedback-container').slick({
                     arrows: false,
                     dots: true,
                     infinite: true,
@@ -13,10 +14,10 @@ jQuery(document).ready(function () {
                     speed: 1000,
                 })
             }
-    })
-    var reviewsLoaded = setInterval(function () {
-        if (jQuery('main.content hos-category').length > 0 && window.location.href === "https://www.awrusa.com/" && !jQuery('.spz-protection-section').length>0) {
-            jQuery('main.content hos-category').append('<div class="spz-protection-section">\
+        })
+        var reviewsLoaded = setInterval(function () {
+            if (jQuery('main.content hos-category').length > 0 && window.location.href === "https://www.awrusa.com/" && !jQuery('.spz-protection-section').length > 0) {
+                jQuery('main.content hos-category').append('<div class="spz-protection-section">\
             <div class="protection-heading">Protection Plans</div>\
             <div class="protection-subheading">Starting from $5.49 per month</div>\
             <div class="plans-wrap">\
@@ -129,45 +130,46 @@ jQuery(document).ready(function () {
                     </div>\
                 </div>\
         </div>')//.insertAfter('.google_review')
-            jQuery('.spz-button-submit').click(function () {
-                jQuery('.search-bar .search .get-started-btn').click()
-                var errorMoved = setInterval(function () {
-                    if (jQuery('.spz-popup').hasClass('popup-visible') && jQuery('.error-zipcode.invalid-error')) {
-                        clearInterval(errorMoved)
-                        jQuery('.error-zipcode.invalid-error').insertBefore('.spz-button-submit')
-                    }
+                jQuery('.spz-button-submit').click(function () {
+                    jQuery('.search-bar .search .get-started-btn').click()
+                    var errorMoved = setInterval(function () {
+                        if (jQuery('.spz-popup').hasClass('popup-visible') && jQuery('.error-zipcode.invalid-error')) {
+                            clearInterval(errorMoved)
+                            jQuery('.error-zipcode.invalid-error').insertBefore('.spz-button-submit')
+                        }
+                    })
                 })
-            })
-            jQuery('.spz-get-started-btn').click(function () {
-                window.location.href = 'https://www.awrusa.com/user/register'
-            })
-            jQuery('.plan-button').click(function () {
-                jQuery('.hero-slider hos-google-places .search-bar .search-zipcode').insertBefore('.spz-button-submit')
-                jQuery('.spz-popup').addClass('popup-visible')
-                jQuery('body').css('overflow', 'hidden')
-            })
-            jQuery('body').on("click", ".spz-popup .popup-form .input-wrap .spz-button-submit", function(){
-                const oldLocation = window.location.pathname;
-                const _overflow = setInterval(function(){
-                    var newLocation = window.location.pathname;
-                    if(oldLocation !== newLocation){
-                        clearInterval(_overflow);
-                        jQuery('body').css('overflow', ''); 
-                    }
-                    
-                },100);
-            })
-            jQuery('.spz-overlay, .close-button').click(function () {
-                jQuery('.form-inline .form-group').append(jQuery('.popup-form .search-zipcode'))
-                jQuery('.spz-popup').removeClass('popup-visible')
-                jQuery('body').css('overflow', '')
-                var errorMovedBack = setInterval(function () {
-                    if (!jQuery('.spz-popup').hasClass('popup-visible') && jQuery('.spz-popup .error-zipcode')) {
-                        clearInterval(errorMovedBack)
-                        jQuery('.spz-popup .error-zipcode.invalid-error').insertAfter('.search-bar form.search')
-                    }
+                jQuery('.spz-get-started-btn').click(function () {
+                    window.location.href = 'https://www.awrusa.com/user/register'
                 })
-            })
-        }
-    })
+                jQuery('.plan-button').click(function () {
+                    jQuery('.hero-slider hos-google-places .search-bar .search-zipcode').insertBefore('.spz-button-submit')
+                    jQuery('.spz-popup').addClass('popup-visible')
+                    jQuery('body').css('overflow', 'hidden')
+                })
+                jQuery('body').on("click", ".spz-popup .popup-form .input-wrap .spz-button-submit", function () {
+                    const oldLocation = window.location.pathname;
+                    const _overflow = setInterval(function () {
+                        var newLocation = window.location.pathname;
+                        if (oldLocation !== newLocation) {
+                            clearInterval(_overflow);
+                            jQuery('body').css('overflow', '');
+                        }
+
+                    }, 100);
+                })
+                jQuery('.spz-overlay, .close-button').click(function () {
+                    jQuery('.form-inline .form-group').append(jQuery('.popup-form .search-zipcode'))
+                    jQuery('.spz-popup').removeClass('popup-visible')
+                    jQuery('body').css('overflow', '')
+                    var errorMovedBack = setInterval(function () {
+                        if (!jQuery('.spz-popup').hasClass('popup-visible') && jQuery('.spz-popup .error-zipcode')) {
+                            clearInterval(errorMovedBack)
+                            jQuery('.spz-popup .error-zipcode.invalid-error').insertAfter('.search-bar form.search')
+                        }
+                    })
+                })
+            }
+        })
+    }
 })

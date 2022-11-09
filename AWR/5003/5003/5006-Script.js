@@ -178,6 +178,7 @@ function relatedProdSection() {
             }
             renewModal();
             scrollShadow();
+            progressiveForm();
         }
 
         if (document.querySelectorAll('hos-quick-checkout-payment-box').length > 0) {
@@ -235,6 +236,7 @@ function renewModal() {
             window.addEventListener('click', function (e) {
                 if (e.target.classList.contains('edit-button-spz') && document.querySelectorAll('.card-title-spz').length == 0) {
                     document.querySelector('.modal .modal-dialog').classList.add('edit-renew-modal-spz', 'modal-dialog-centered');
+                    document.body.classList.add('modal-open');
                     document.querySelector('.modal-custom-header .modal-header').insertAdjacentHTML('afterbegin', `<div class="card-title-spz">With Us, Your Home's Protected</div>`);
                     document.querySelector('.modal-custom-header .modal-header button.close').innerHTML = `<img class="btn-close-spz" src="//res.cloudinary.com/spiralyze/image/upload/v1660636546/AWR/5001/close-dark.svg" />`;
                     document.querySelector('.modal-custom-header .auto-renew').classList.add('col-12');
@@ -243,6 +245,9 @@ function renewModal() {
                     jQuery('.modal-custom-header .auto-renew label').append(`<span><img class="ccb-spz" src="//res.cloudinary.com/spiralyze/image/upload/v1660025774/AWR/5001/check.svg" /></span>`);
                     jQuery('.edit-renew-modal-spz .card-body-box .product-details').removeClass('col-md-8').addClass('col-12');
                     jQuery('.edit-renew-modal-spz .card-body-box .col-10 .col-md-4').removeClass('col-md-4').addClass('col-12');
+                    jQuery(".btn-close-spz").click(function () {
+                        jQuery("body").removeClass("modal-open");
+                    });
                 }
             });
         }
@@ -277,12 +282,12 @@ function formFields() {
     });
 
     // Add error icon after inputs
-    if(document.querySelectorAll('.error-ico-spz').length < 1){
+    if (document.querySelectorAll('.error-ico-spz').length < 1) {
         jQuery(`<a href="javascript:void(0)" class="error-ico-spz" tabindex="-1" data-toggle="tooltip" style="display: none;">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1660111008/AWR/5001/error.svg" />
     </a>`).insertAfter(jQuery(selector), jQuery('.ng-select'));
     }
-    
+
 
     // Add error icon after ng-select
     // jQuery(`<a href="javascript:void(0)" class="error-ico-spz" tabindex="-1" data-toggle="tooltip" style="display: none;">
@@ -339,7 +344,7 @@ function formFields() {
             //         console.log('event logged00');
             //     }
             // }, 1);
-            
+
         }
 
         moveElement('.form-content-spz .row:nth-of-type(3) .form-group:nth-of-type(2) label', '.form-content-spz .row:nth-of-type(3) .form-group:nth-of-type(2)');
@@ -393,7 +398,6 @@ function formFields() {
             }
         });
         document.querySelector('input[name="streetNumber"]').parentElement.parentElement.classList.add('progress-step');
-        progressiveForm();
     }
 
     jQuery('input.form-control').each(function (i) {
@@ -413,8 +417,9 @@ function formFields() {
             clearInterval(snInt);
         }, 1000);
     })
-progressiveForm();
+    progressiveForm();
 }
+
 
 //Progress form
 function progressiveForm() {
@@ -675,6 +680,7 @@ function scrollShadow() {
 
 content.onload = function () {
     loadTest();
+    progressiveForm();
 }
 
 // Add class 'safari' (used for cart scrollbar)

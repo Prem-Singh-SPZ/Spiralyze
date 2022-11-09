@@ -69,7 +69,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
       border-radius: 12px;
       margin-bottom: 40px;
 
-      &.popular .product-text{
+      &.popular .product-text {
         &::after {
           content: "MOST POPULAR";
           position: absolute;
@@ -151,6 +151,39 @@ body.spz-2025 .product-list-area.fixed-nav-product {
 
         .product-cart-info {
           padding: 25px 20px 24px;
+          position: relative;
+          cursor: default;
+
+          .prod-info {
+            cursor: pointer;
+            position: absolute;
+            top: -27px;
+            right: 20px;
+            .info-blue {
+              display: block;
+            }
+            .info-hover {
+              display: none;
+            }
+            &:hover {
+              .info-blue {
+                display: none;
+              }
+              .info-hover {
+                display: block;
+              }
+            }
+          }
+          .prod-cross {
+            cursor: pointer;
+            position: absolute;
+            top: -25px;
+            right: 22px;
+            img {
+              width: 40px;
+              height: 40px;
+            }
+          }
         }
 
         > {
@@ -195,13 +228,60 @@ body.spz-2025 .product-list-area.fixed-nav-product {
           opacity: 0;
           transform: rotateY(180deg);
           pointer-events: none;
+          .product-feature {
+            background-color: #0d3d64;
+            padding-right: 28px;
+            padding-bottom: 20px;
+            height: 292px;
+            padding-top: 32px;
+            border-radius: 12px 12px 0 0;
+            cursor: default;
+            .product-feature-list {
+              height: 100%;
+              overflow: auto;
+              color: #fff;
+              list-style: none;
+              padding-left: 30px;
+              padding-right: 4px;
 
-          .product-feature-list{
-            height: 276px;
-            overflow: auto;
+              p {
+                font-weight: 700;
+                font-size: 18px;
+                line-height: 26px;
+              }
+              li {
+                display: flex;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                margin-bottom: 8px;
+                &::before {
+                  content: url("//res.cloudinary.com/spiralyze/image/upload/v1667969299/AWR/2025/src/check.svg");
+                  padding-right: 10px;
+                }
+              }
+
+              &::-webkit-scrollbar {
+                width: 2px;
+              }
+
+              /* Track */
+              &::-webkit-scrollbar-track {
+                background: #757575;
+              }
+
+              /* Handle */
+              &::-webkit-scrollbar-thumb {
+                background: #78c653;
+              }
+
+              /* Handle on hover */
+              &::-webkit-scrollbar-thumb:hover {
+                background: #78c653;
+              }
+            }
           }
         }
-
       }
     }
   }
@@ -224,11 +304,12 @@ body.spz-2025 .product-list-area.fixed-nav-product {
       transition: all 0.2s ease;
     }
     &.active {
+      pointer-events: none;
       & > .prod-card {
         opacity: 0;
         transform: rotateY(180deg);
       }
-  
+
       & > .prod-feature {
         opacity: 1;
         transform: rotateY(0deg);

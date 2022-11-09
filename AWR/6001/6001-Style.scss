@@ -1,3 +1,8 @@
+img.collection__product-image[class] {
+  opacity: 0;
+  transition: linear 150ms;
+}
+
 .spz-6001 {
   > .page__container[class] {
     > header.header[class] {
@@ -9,27 +14,54 @@
         background-color: #fff;
 
         .container.no-p[class] {
+          @media (max-width: 767px) {
+            display: flex;
+            flex-direction: column-reverse;
+          }
           .row:first-child {
             .zip-col[class] {
               text-align: center;
               .zip_code_current[class] {
                 text-align: center;
-                text-align: center;
                 font-size: 16px;
                 line-height: 24px;
                 font-weight: 400;
                 font-style: normal;
-                margin-top: 14px;
+                margin-top: 20px;
                 padding: 0;
-
+                @media (min-width: 767px) and (max-width: 991px) {
+                  margin-top: 18px;
+                }
+                @media (max-width: 767px) {
+                  font-size: 14px;
+                  line-height: 20px;
+                  margin-top: 21px;
+                  margin-bottom: 18px;
+                }
                 .zip-code-selector[class] {
-                  margin-left: 4px;
+                  margin-left: 6px;
+                  @media (min-width: 767px) {
+                    margin-left: 8px;
+                  }
                 }
                 .change-zip[class] {
-                  margin-right: 3px;
+                  margin-right: 6px;
+                  @media (min-width: 767px) {
+                    margin-right: 4px;
+                  }
                 }
-                .fa-shopping-cart[class] {
-                  margin-top: 1px;
+                .header__link[class] {
+                  vertical-align: middle;
+                  .fa-shopping-cart[class] {
+                    padding-left: 0px;
+                    margin-top: -2px;
+                    @media (max-width: 767px) {
+                      margin-top: -1px;
+                    }
+                    &::before {
+                      content: url("//res.cloudinary.com/spiralyze/image/upload/v1667293690/AWR/PHS/6001/src/Cart_icon.svg");
+                    }
+                  }
                 }
               }
             }
@@ -37,6 +69,23 @@
           .row:last-child {
             @media (min-width: 767px) {
               display: none;
+            }
+            .header__link[class] {
+              .header__logo-image[class] {
+                margin-top: 23px;
+                margin-left: 16px;
+                width: 190px;
+              }
+            }
+
+            .header__item.header__item-toggle[class] {
+              background-color: #fff;
+              padding: 17px 24px;
+              .header__link[class] {
+                .icon-hamburger[class]::before {
+                  content: url("//res.cloudinary.com/spiralyze/image/upload/v1667278834/AWR/PHS/6001/src/menu.jpg");
+                }
+              }
             }
           }
         }
@@ -52,10 +101,14 @@
         .breadcrumb[class] {
           margin-top: 0;
           margin-bottom: 0;
-          padding-top: 50px;
+          padding-top: 48px;
           @media (min-width: 767px) and (max-width: 991px) {
             padding-top: 36px;
-            padding-bottom: 20px;
+            padding-bottom: 18px;
+          }
+          @media (max-width: 767px) {
+            padding-top: 24px;
+            padding-bottom: 7px;
           }
           .inner[class] {
             .breadcrumb__list[class] {
@@ -70,6 +123,9 @@
                 text-transform: none;
                 padding-left: 14px;
 
+                @media (max-width: 767px) {
+                  font-size: 20px;
+                }
                 @media (min-width: 767px) and (max-width: 991px) {
                   font-size: 28px;
                 }
@@ -89,41 +145,54 @@
 
         > .related-plans[class] {
           background-color: #eaeaea;
-
+          @media (min-width: 991px) {
+            padding-top: 1.9em;
+          }
           .container.p-0[class] {
             max-width: 1216px;
             width: 100%;
-            @media (min-width: 767px) and (max-width: 991px) {
+            @media (min-width: 607.98px) and (max-width: 991px) {
               max-width: 608px;
+            }
+            @media (min-width: 991px) and (max-width: 1224px) {
+              max-width: 912px;
             }
             .related-plans[class] {
               background-color: #eaeaea;
               padding-top: 0;
-
+              padding-bottom: 54px;
+              @media (min-width: 991px) {
+                padding-bottom: 24px;
+              }
               ul.collection__grid[class] {
                 padding-top: 0;
                 margin: 0 auto;
-                @media (min-width: 991px) and (max-width: 1224px) {
-                 justify-content: center;
+                // @media (min-width: 991px) and (max-width: 1224px) {
+                //   justify-content: center;
+                // }
+                @media (max-width: 607.98px) {
+                  justify-content: center;
                 }
                 li.collection__grid-item[class] {
                   display: flex;
                   max-width: 280px;
-                  width: 23.49%;
+                  width: 280px;
                   margin: 0 12px 24px 12px;
                   padding: 0;
                   border: none;
                   background-color: #fff;
 
-                  @media (min-width: 767px) and (max-width: 991px) {
-                    width: 48.49%;
-                  }
-
+                  // @media (min-width: 767px) and (max-width: 991px) {
+                  //   width: 48.49%;
+                  // }
+                  // @media (max-width: 767px) {
+                  //   width: auto;
+                  // }
                   .collection__product-title[class] {
                     order: -1;
                     text-align: left;
                     height: auto;
-                    padding: 28px 20px;
+                    padding: 30px 20px 26px;
                     flex-grow: 1;
                     margin-bottom: -6px;
                     a {
@@ -148,7 +217,7 @@
                   .collection__product-info[class] {
                     margin: 0;
                     background: none;
-                    padding: 1em 0 1.2em;
+                    padding: 14px 0 18px;
                     .collection__product-price[class] {
                       font-weight: 400;
                       font-size: 14px;
@@ -169,7 +238,7 @@
                   }
 
                   .cart-btn-spz {
-                    margin: 7px 20px 24px;
+                    margin: 6px 20px 24px;
                     .add-to-cart {
                       width: 100%;
                       background-color: #ec1c24;
@@ -181,9 +250,13 @@
                       text-align: center;
                       color: #ffffff;
                       border: none;
+                      cursor: pointer;
 
-                      img{
-                        padding-left: 10px;
+                      img {
+                        padding-left: 12px;
+                      }
+                      @media (max-width: 991px) {
+                        padding-right: 10px;
                       }
 
                       &:hover {
@@ -219,7 +292,7 @@
 
         .header-logo[class] {
           .header__link[class] {
-            padding-left: 0;
+            padding: 0;
             .header__logo-image[class] {
               max-width: 237px;
               margin-top: 14px;
@@ -251,6 +324,9 @@
             svg {
               margin-right: 9px;
             }
+            span {
+              color: #757575;
+            }
           }
         }
         &::after,
@@ -260,4 +336,18 @@
       }
     }
   }
+
+  .footer[class] {
+    margin-top: 0;
+    @media (max-width: 359px) {
+      .inner[class] .ccpa-updates-link[class] .btn[class] {
+        white-space: initial;
+      }
+    }
+  }
+  // &.loaded {
+  //   // img.collection__product-image[class] {
+  //   //   opacity: 1;
+  //   // }
+  // }
 }

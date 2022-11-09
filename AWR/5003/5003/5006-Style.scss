@@ -329,6 +329,7 @@ $ngContentSel2: _ngcontent-c12;
             color: #000000;
             text-align: left;
             padding-left: 38px;
+            pointer-events: none;
 
             @media (max-width: 767.98px) {
               font-size: 14px;
@@ -338,6 +339,7 @@ $ngContentSel2: _ngcontent-c12;
 
             &:before,
             &::after {
+              pointer-events: all;
               width: 21px;
               height: 21px;
               border-radius: 3.5px;
@@ -582,7 +584,7 @@ $ngContentSel2: _ngcontent-c12;
 
   @media (max-width: 767.98px) {
     .pg-checkout-wrapper-spz[class] {
-      margin-bottom: 8px!important;
+      margin-bottom: 8px !important;
     }
   }
   .noteTextEnroll[class] {
@@ -857,7 +859,7 @@ $ngContentSel2: _ngcontent-c12;
       }
     }
 
-    .card-body-box {
+    .card-body-box[class] {
       border-width: 1px 0;
       border-color: #dadada;
       max-height: 360px;
@@ -1443,7 +1445,7 @@ $ngContentSel2: _ngcontent-c12;
     background-color: rgba(6, 179, 228, 0.3) !important;
     backdrop-filter: blur(4px);
   }
-  .modal .edit-renew-modal-spz {
+  .modal[class] .edit-renew-modal-spz[class] {
     max-width: 706px !important;
     width: 100% !important;
 
@@ -1451,14 +1453,14 @@ $ngContentSel2: _ngcontent-c12;
       max-width: 94.25% !important;
     }
 
-    .modal-content {
+    .modal-content[class] {
       border: none;
-      .modal-header,
-      .modal-body,
-      .modal-footer {
+      .modal-header[class],
+      .modal-body[class],
+      .modal-footer[class] {
         background-color: #0d3d64 !important;
       }
-      .modal-header {
+      .modal-header[class] {
         background-color: #0d3d64 !important;
         border-bottom: none;
         align-items: center;
@@ -1467,7 +1469,7 @@ $ngContentSel2: _ngcontent-c12;
           padding: 30px 14px;
         }
 
-        .card-title-spz {
+        .card-title-spz[class] {
           font-family: "Roboto";
           font-style: normal;
           font-weight: 700;
@@ -1477,7 +1479,7 @@ $ngContentSel2: _ngcontent-c12;
           color: #fff;
           width: 100%;
         }
-        .close {
+        .close[class] {
           position: absolute;
           top: 10px;
           right: 20px;
@@ -1487,32 +1489,32 @@ $ngContentSel2: _ngcontent-c12;
             right: 12px;
           }
 
-          .btn-close-spz {
+          .btn-close-spz[class] {
           }
         }
-        .close-text {
+        .close-text[class] {
           display: none;
         }
       }
 
-      .modal-body {
+      .modal-body[class] {
         padding: 0 40px 0;
-        .card-body-box {
+        .card-body-box[class] {
           border: none;
           box-shadow: none;
           background-color: rgba(6, 179, 228, 0.2) !important;
           padding: 17px 27px !important;
 
-          .card-body {
+          .card-body[class] {
             @media (max-width: 767.98px) {
               padding-top: 10px !important;
               padding-bottom: 10px !important;
             }
-            .cart-image {
+            .cart-image[class] {
               width: 70px !important;
               height: 70px !important;
             }
-            .product-details {
+            .product-details[class] {
               margin-bottom: 13px;
               padding-left: 14px;
 
@@ -1520,14 +1522,14 @@ $ngContentSel2: _ngcontent-c12;
                 margin-top: 4px;
               }
 
-              .product-currently-en {
+              .product-currently-en[class] {
                 font-style: normal;
                 font-size: 13px;
                 line-height: 19px;
                 color: #fff;
                 margin-bottom: 6px;
               }
-              .product-name {
+              .product-name[class] {
                 font-family: "Roboto";
                 font-style: normal;
                 font-weight: 700;
@@ -1536,7 +1538,7 @@ $ngContentSel2: _ngcontent-c12;
                 color: #fff;
                 margin-bottom: 6px;
               }
-              .product-desc {
+              .product-desc[class] {
                 font-family: "Roboto";
                 font-style: normal;
                 font-weight: 400;
@@ -1546,7 +1548,7 @@ $ngContentSel2: _ngcontent-c12;
                 opacity: 0.5;
               }
             }
-            .auto-renew {
+            .auto-renew[class] {
               font-family: "Roboto";
               font-style: normal;
               font-weight: 400;
@@ -1602,7 +1604,7 @@ $ngContentSel2: _ngcontent-c12;
           }
         }
       }
-      .modal-footer {
+      .modal-footer[class] {
         padding: 20px 40px !important;
         p {
           font-family: "Roboto";
@@ -1624,6 +1626,11 @@ $ngContentSel2: _ngcontent-c12;
       margin-top: 20px;
     }
   }
+
+  &.modal-open {
+    touch-action: none;
+    -ms-touch-action: none;
+  }
 }
 
 // .form-content-spz .row:nth-of-type(3) .form-group:nth-of-type(3)
@@ -1633,7 +1640,7 @@ div[data-lastpass-icon-root] {
   display: none;
 }
 
-.modal-dialog-centered {
+.modal-dialog-centered[class] {
   display: -ms-flexbox;
   display: flex;
   -ms-flex-align: center;
@@ -1646,11 +1653,11 @@ div[data-lastpass-icon-root] {
   content: "";
 }
 @media (min-width: 576px) {
-  .modal-dialog {
+  .modal-dialog[class] {
     max-width: 500px;
     margin: 1.75rem auto;
   }
-  .modal-dialog-centered {
+  .modal-dialog-centered[class] {
     min-height: calc(100% - 3.5rem);
   }
   .modal-dialog-centered::before {
@@ -1658,7 +1665,7 @@ div[data-lastpass-icon-root] {
   }
 }
 
-.checkout-plans {
+.checkout-plans[class] {
   form > #service-address {
     display: none;
   }
