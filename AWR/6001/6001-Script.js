@@ -16,7 +16,33 @@ content.onload = function () {
     urlCheck(url);
 }
 
+// let lottie = document.createElement("script");
+// lottie.type = "text/javascript";
+// lottie.src = "https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js";
+// document.head.appendChild(lottie);
+
+// let SPZLoader = document.createElement('div');
+// SPZLoader.className = 'spz-loader';
+// SPZLoader.innerHTML = '<lottie-player src="https://res.cloudinary.com/spiralyze/raw/upload/v1659516330/AWR/4002-AWR-PHS-Home-Redesign/awr-phs-loader.json" background="transparent"  speed="1"  style="width: 300px; height: 300px;" loop autoplay></lottie-player>';
+// document.querySelector('body').appendChild(SPZLoader);
+
 function loadTest() {
+
+    // if (jQuery('body #zip_modal').is(':visible')) {
+    //     jQuery('#zip_modal').submit(function (e) {
+    //         if (e.result === undefined)
+    //             window.onbeforeunload = function () {
+    //                 document.querySelector('.spz-loader').classList.add('active');
+    //                 setTimeout(() => {
+    //                     this.reset();
+    //                 },
+    //                     5000
+    //                 );
+
+    //             }
+    //     });
+    // }
+
     if (!jQuery('body #zip_modal').is(':visible')) {
         var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
         var cookieValue = "1";
@@ -24,6 +50,7 @@ function loadTest() {
         myDate.setDate(myDate.getDate() + 30);
         document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
         // Set test class
+        // document.querySelector('.spz-loader').classList.add('active');
         document.body.classList.add('spz-6001');
 
         //Header Changes
@@ -35,7 +62,7 @@ function loadTest() {
             document.querySelector('#top-nav-container .col-lg-12').classList.remove('col-md-6', 'col-xs-10', 'col-lg-12');
             document.querySelector('.header .header__wrapper .container.no-p .row:first-child .zip-col').classList.remove('col-md-6', 'col-md-push-6', 'col-sm-12', 'col-xs-12');
 
-            document.querySelector('#top-nav-container .container').insertAdjacentHTML('beforeend', `<div class="header-menu-options"> <div class="contact-wrapper"><svg width="14" height="14">    <image xlink:href="https://res.cloudinary.com/spiralyze/image/upload/v1667199587/AWR/PHS/6001/src/Vector.svg" width="14" height="14"/>  </svg> <span>888-801-5057</span></div></div>`);
+            document.querySelector('#top-nav-container .container').insertAdjacentHTML('beforeend', `<div class="header-menu-options"> <div class="contact-wrapper"><svg width="14" height="14">    <image xlink:href="https://res.cloudinary.com/spiralyze/image/upload/v1667199587/AWR/PHS/6001/src/Vector.svg" width="14" height="14"/ alt="phone">  </svg> <span>888-801-5057</span></div></div>`);
             moveElement('#top-nav-container .container > a', '#top-nav-container .header-menu-options');
             moveElement('#top-nav-container .container > span', '#top-nav-container .header-menu-options');
 
@@ -108,6 +135,12 @@ function loadTest() {
         document.querySelector('.navigation-sidebar__list .navigation-sidebar__item:nth-child(7) a span').innerText = 'Login';
 
         document.body.classList.add("loaded");
+        // setTimeout(() => {
+        //     document.querySelector('.spz-loader').classList.remove('active');
+        // },
+        //     2000
+        // );
+
     }
 }
 
@@ -150,8 +183,6 @@ function urlCheck(url) {
         // });
         loadTest();
         setTimeout(function () {
-            document.body.classList.add("loaded");
-
             window.addEventListener("resize", function () {
                 loadTest();
             });

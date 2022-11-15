@@ -428,14 +428,14 @@ function createTest() {
                 let image = await getImage(name.replaceAll("&amp;", "&"));
                 let popularItem = await getPopular(name);
                 singleProduct["target"] = name.replaceAll("&amp;", "&");
-                let newName = name.replaceAll("Protection Program", "").replace("Program", "").replaceAll("Repair", "");
-                if (newName.indexOf("Policy") > -1) {
-                    newName = newName;
-                } else {
-                    newName = newName + " Repair Plan"
-                }
+                // let newName = name.replaceAll("Protection Program", "").replace("Program", "").replaceAll("Repair", "");
+                // if (newName.indexOf("Policy") > -1) {
+                //     newName = newName;
+                // } else {
+                //     newName = newName + " Repair Plan"
+                // }
                 // singleProduct["name"] = newName;
-                // let newName = name.replaceAll("Emergency Plumbing", "Plumbing Emergency").replaceAll("and In Home", "and In-Home").replaceAll("In Home", "In-Home");
+                let newName = name.replaceAll("Emergency Plumbing", "Plumbing Emergency").replaceAll("and In Home", "and In-Home").replaceAll("In Home", "In-Home");
                 singleProduct["name"] = newName;
                 //singleProduct["name"] = name;
                 singleProduct["productClass"] = name.replace(/[^\w\s]/gi, '_').replaceAll(" ", "_");
@@ -461,7 +461,7 @@ function createTest() {
             jQuery.each(sortedProducts, function (index, value) {
                 jQuery(".products-wrapper .products-boxes").append(`
                     <div data-targettitle="${value.target}" class="products-single-box product-card-spz ${value.productClass} ${value.popularItem}">
-                        <div class="product-text prod-card active">
+                        <div class="product-text prod-card">
                         <div class="product-title">
                             <h1>${value.name}</h1>
                             <div class="product-image" style="background-image:url(${value.image})"></div></div>
@@ -522,14 +522,24 @@ function createTest() {
             });
 
             if (jQuery(window).width() > 1023) {
-                jQuery(".products-single-box .prod-card .prod-info").on("click mouseover", function (e) {
-                    jQuery(this).closest(".products-single-box").addClass('active');
-                    e.stopPropagation();
+                jQuery(".products-single-box .prod-card .prod-info").on("click mouseenter", function (e) {
+                    setTimeout(() => {
+                        jQuery(this).closest(".products-single-box").addClass('active');
+                        e.stopPropagation();
+                    },
+                        100
+                    );
+
                 });
 
-                jQuery(".products-single-box .prod-feature .prod-cross").on("click mouseover", function (e) {
-                    jQuery(this).closest(".products-single-box").removeClass('active');
-                    e.stopPropagation();
+                jQuery(".products-single-box .prod-feature .prod-cross").on("click mouseenter", function (e) {
+                    setTimeout(() => {
+                        jQuery(this).closest(".products-single-box").removeClass('active');
+                        e.stopPropagation();
+                    },
+                    100
+                );
+                   
                 });
             }
             else {
@@ -668,7 +678,7 @@ async function getProducts() {
             zipResult.syncSource
         );
 
-        console.log(defaultCodes);
+        // console.log(defaultCodes);
 
         defaultCodes.result.forEach((prodList, k) => {
 
@@ -705,12 +715,12 @@ async function getZipCode(zipCode) {
     return result.json();
 }
 
-async function getLocationCode(locationId) {
-    const result = await fetch(
-        `${baseUrl}/location/location_codes/${locationId}?APIKey=${apiKey}`
-    );
-    return result.json();
-}
+// async function getLocationCode(locationId) {
+//     const result = await fetch(
+//         `${baseUrl}/location/location_codes/${locationId}?APIKey=${apiKey}`
+//     );
+//     return result.json();
+// }
 
 // async function getDefaultCodes(locationId, syncSource) {
 
@@ -739,7 +749,7 @@ async function getLocationCode(locationId) {
 async function getDefaultCodes(locationId, syncSource) {
     const urlSplit = location.href.split('/');
     const proSelDetail = JSON.parse(localStorage.getItem('providerSelectionDetails'));
-    const isProSel = (undefined != proSelDetail.providerValue && proSelDetail.providerValue == 'no');
+    const isProSel = proSelDetail && (undefined != proSelDetail.providerValue && proSelDetail.providerValue == 'no');
     let migrateToOracle = syncSource === 'oracle' ? 'true' : 'false';
     let dcUrl = `${baseUrl}/product/marketing-codes/default-codes?location_code=${locationId}&allProducts=true&APIKey=${apiKey}`;
 
@@ -765,10 +775,10 @@ async function getDefaultCodes(locationId, syncSource) {
     return result.json();
 }
 
-async function getProductDetails(programId) {
-    const result = await fetch(`${baseUrl}/product/product-review/averageRatingByProgramId?programId=${programId}&APIKey=${apiKey}`);
-    if (result.status === 404) {
-        throw { status: 404 };
-    }
-    return result.json();
-}
+// async function getProductDetails(programId) {
+//     const result = await fetch(`${baseUrl}/product/product-review/averageRatingByProgramId?programId=${programId}&APIKey=${apiKey}`);
+//     if (result.status === 404) {
+//         throw { status: 404 };
+//     }
+//     return result.json();
+// }
