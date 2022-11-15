@@ -1,0 +1,121 @@
+$color_1: white;
+$color_2: #a7a9ac;
+$font-family_1: "Sohne,Sans-Serif";
+
+.spz-8001 {
+  display: flex;
+  justify-content: center;
+  margin: 12px 0;
+  .spz-8001-parent {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1668501903/LaunchDarkly/8001_Blog/particles-red-desktop.png");
+    background-repeat: no-repeat;
+    background-position: right;
+    background-size: 268px;
+    height: 268px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 794px;
+    margin-left: 24px;
+    margin-right: 24px;
+    @media (max-width: 991.98px) {
+      width: 720px;
+    }
+    @media (max-width: 424.98px) {
+      background-position: center;
+    }
+    @media (max-width: 767.98px) {
+      height: auto;
+      width: 100%;
+    }
+    .free-ebook-section {
+      width: 100%;
+      height: auto;
+      display: flex;
+      padding: 24px 40px;
+      flex-wrap: wrap;
+      margin: auto;
+      justify-content: space-between;
+      align-items: center;
+      background: rgba(88, 89, 91, 0.3);
+      backdrop-filter: blur(10px);
+      @media (max-width: 767.98px) {
+        justify-content: center;
+        margin-top: 57px;
+        padding: 24px;
+      }
+      .free-ebook {
+        @media (max-width: 767.98px) {
+          display: flex;
+          flex-direction: column;
+          text-align: center;
+        }
+        h6 {
+          font-family: $font-family_1;
+          font-size: 18px;
+          line-height: 140%;
+          margin: 0;
+          color: $color_1;
+          margin-bottom: 12px;
+        }
+        p {
+          color: $color_2;
+          font-family: $font-family_1;
+          font-size: 14px;
+          line-height: 140%;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+        .brand-image {
+          img {
+            width: 256px;
+            height: 22px;
+          }
+        }
+      }
+      .free-ebook-cta {
+        background: #405bff;
+
+        @media (max-width: 767.98px) {
+          margin-top: 32px;
+        }
+        &:hover {
+          background: #364dd9;
+        }
+        a {
+          background: linear-gradient(
+              180deg,
+              #ffffff 0%,
+              rgba(255, 255, 255, 0) 100%
+            ),
+            #ffffff;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
+          background-clip: text;
+          text-fill-color: transparent;
+          display: flex;
+          flex-direction: row;
+          justify-content: center;
+          align-items: center;
+          padding: 11px 24px;
+          gap: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .free-ebook {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+  .free-ebook-section {
+    justify-content: center;
+    margin-top: 24px;
+  }
+  .free-ebook-cta {
+    margin-top: 32px;
+  }
+}

@@ -1,0 +1,192 @@
+/*google reviews*/
+
+.spz-1031 {
+    section {
+      &#category-section {
+        display: none;
+      }
+  
+      &.google_review .review_inner {
+        width: 100%;
+        max-width: 1316px;
+        margin: 0 auto;
+        padding: 64px 20px 66px;
+      }
+    }
+  
+    .google_review {
+      .review_header {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        height: 40px;
+        margin: 0 0 24px 56px;
+  
+        .logo_block,
+        .rating_block {
+          display: flex;
+          height: 100%;
+          align-items: center;
+        }
+  
+        .google_logo {
+          width: 100%;
+          max-width: 73px;
+          object-fit: contain;
+        }
+      }
+  
+      img {
+        image-rendering: -webkit-optimize-contrast;
+      }
+  
+      .review_header {
+        h4 {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #000000;
+          padding: 0 12px 0 11px;
+          margin: 0;
+          height: 100%;
+          align-items: center;
+          display: flex;
+          border-right: 1px solid #dadada;
+        }
+  
+        .avg_rating_star {
+          width: 100%;
+          max-width: 92px;
+          object-fit: contain;
+          margin: 0 12px 0 9px;
+        }
+  
+        .rating_number {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 26px;
+          color: #757575;
+          margin: 0;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+          pointer-events: none;
+  
+          &:hover {
+            color: #ec7923;
+          }
+        }
+      }
+  
+      .review_slider {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: space-between;
+        margin: 0 -10px;
+  
+        .slick-list {
+          margin: 0 56px;
+        }
+  
+        .review_box {
+          margin: 0 10px;
+          outline: none;
+  
+          .review_content {
+            width: 100% !important;
+            max-width: 276px;
+            padding: 16px 20px 14px;
+            margin: 0 auto;
+            background: #f8f8f8;
+            border-radius: 8px;
+          }
+        }
+      }
+  
+      .review_box {
+        .reviewer_name {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 22px;
+          color: #333333;
+          margin-top: 1px;
+          margin-bottom: 3px;
+        }
+  
+        .review_rating {
+          width: 100%;
+          max-width: 80.5px;
+          object-fit: contain;
+        }
+  
+        .review_text {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #333333;
+          margin-top: 6px;
+          margin-bottom: 0px;
+          display: -webkit-box;
+          -webkit-line-clamp: 3;
+          -webkit-box-orient: vertical;
+          overflow: hidden;
+        }
+  
+        .review_link {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 22px;
+          color: #aaaaaa;
+          cursor: pointer;
+          text-decoration: none;
+          transition: all 0.3s ease-in-out;
+  
+          &:hover {
+            color: #ec7923;
+          }
+        }
+      }
+  
+      button.slide_arrow {
+        padding: 0;
+        border: none;
+        background: transparent;
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+  
+        &.slick-disabled {
+          pointer-events: none;
+        }
+  
+        &:hover svg {
+          circle {
+            stroke: #ec7923;
+          }
+  
+          path {
+            fill: #ec7923;
+          }
+        }
+  
+        &.prev-arrow {
+          left: 10px;
+        }
+  
+        &.next-arrow {
+          right: 10px;
+        }
+      }
+    }
+  }
+  
