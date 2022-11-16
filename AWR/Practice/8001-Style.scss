@@ -1,32 +1,40 @@
 $color_1: white;
 $color_2: #a7a9ac;
-$font-family_1: "Sohne,Sans-Serif";
+$font-family_1: inherit;
 
 .spz-8001 {
   display: flex;
   justify-content: center;
   margin: 12px 0;
+  width: 794px;
+  margin-left: -40px;
+  @media (max-width: 991.98px) {
+    width: auto;
+    margin-left: 0;
+  }
   .spz-8001-parent {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1668501903/LaunchDarkly/8001_Blog/particles-red-desktop.png");
     background-repeat: no-repeat;
-    background-position: right;
-    background-size: 268px;
-    height: 268px;
+    background-position: 96% 0;
+    background-size: 268px 222px;
+    height: 222px;
     display: flex;
     justify-content: center;
     align-items: center;
-    width: 794px;
-    margin-left: 24px;
-    margin-right: 24px;
+    width: 100%;
+    // margin-left: 24px;
+    // margin-right: 24px;
     @media (max-width: 991.98px) {
-      width: 720px;
+      background-size: 272px;
+      height: 272px;
     }
     @media (max-width: 424.98px) {
-      background-position: center;
+      background-position: center top;
     }
     @media (max-width: 767.98px) {
       height: auto;
       width: 100%;
+      margin-top: 22px;
     }
     .free-ebook-section {
       width: 100%;
@@ -41,7 +49,10 @@ $font-family_1: "Sohne,Sans-Serif";
       backdrop-filter: blur(10px);
       @media (max-width: 767.98px) {
         justify-content: center;
-        margin-top: 57px;
+        margin-top: 56px;
+        margin-bottom: 60px;
+      }
+      @media (max-width: 991.98px) {
         padding: 24px;
       }
       .free-ebook {
@@ -98,7 +109,6 @@ $font-family_1: "Sohne,Sans-Serif";
           justify-content: center;
           align-items: center;
           padding: 11px 24px;
-          gap: 10px;
         }
       }
     }

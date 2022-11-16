@@ -24,12 +24,25 @@ function createTest() {
 
     // Set test class
     document.body.classList.add(ENV_1031.class);
-    loadTest1031();
-    
-    waitForElm(ENV_1031.main_class).then(function (elm) {
-        loadTest1001();
-        loadTest1030();
-    });
+
+    //Cart email auto fill
+    if (window.location.pathname.indexOf('checkout') > -1) {
+        let uname = getEmailCookie("userEmail");
+        if (uname) {
+            document.querySelector('.general-information .form-group input[name="email"]').value = uname;
+            document.querySelector('.general-information .form-group input[name="email"]').readOnly = true;
+            document.querySelector('.general-information .form-group input[name="email"]').style.pointerEvents = "none";
+            document.querySelector('.general-information .form-group input[name="email"]').style.backgroundColor = "#f9f9f9";
+        }
+    }
+    else {
+        //Homepage changes
+        loadTest1031();
+        waitForElm(ENV_1031.main_class).then(function (elm) {
+            loadTest1001();
+            loadTest1030();
+        });
+    }
 
     document.body.classList.add("loaded");
 }
@@ -207,7 +220,7 @@ function loadTest1001() {
     slickLib.onload = feedbackSlick;
 
     setTimeout(() => {
-        if (document.querySelectorAll('.feedback-container.slick-initialized').length > 0 && document.querySelectorAll('.spz-protection-section').length > 0){
+        if (document.querySelectorAll('.feedback-container.slick-initialized').length > 0 && document.querySelectorAll('.spz-protection-section').length > 0) {
             clearInterval(triageInt);
         }
     }, 5000);
@@ -439,15 +452,80 @@ function loadTest1030() {
 
 function loadTest1031() {
     if (document.querySelectorAll('.email-field-spz').length == 0) {
-        document.querySelector('hos-hero-banner .zip-code-search-box .search-field').insertAdjacentHTML('beforebegin', `
-            <input class="email-field-spz ng-untouched ng-pristine ng-valid" name="email" type="email" placeholder="Email">`)
-        
+        document.querySelector('hos-hero-banner .zip-code-search-box .search-field').insertAdjacentHTML('beforebegin', `<div>
+            <input class="email-field-spz ng-untouched ng-pristine ng-valid" name="email" type="email" placeholder="Email"> <span id="error-field" class="text-danger" style="display:none;position: absolute;font-weight: 700;
+            font-size: 12px;">Please enter valid email address.</span>`)
+
         document.querySelector('[name="zipcode"]').setAttribute('placeholder', 'Zip Code');
 
         document.querySelector('.error-zipcode').style.marginLeft = (document.querySelector('.search-field').offsetLeft - 16) + 'px';
     }
+
+    //Email error logic
+    let emailbox = document.querySelector('.email-field-spz');
+    let error_field = document.querySelector('#error-field');
+    emailbox.addEventListener('blur', function () {
+        var inputValue = this.value;
+        if (validateEmail(inputValue)) {
+            error_field.style.display = "none";
+            emailbox.removeAttribute('style');
+        } else {
+            error_field.style.display = "block";
+            emailbox.style.border = '2px solid red';
+        }
+    });
+
+    //Email validation function
+    const validateEmail = (email) => {
+        var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        return regex.test(String(email).toLowerCase());
+    }
+
+    //Create email cookie
+    function createEmailCookie(value) {
+        today = new Date();
+        var expire = new Date();
+        expire.setTime(today.getTime() + 3600000 * 24 * 30);
+        document.cookie = "userEmail=" + value + ";path=/" + ";expires=" + expire.toUTCString();
+    }
+
+    //Submit button logic
+    document.querySelector('.product-page-search').addEventListener("click", function (e) {
+        let emailBox = document.querySelector('.email-field-spz');
+        let emailBoxValue = document.querySelector('.email-field-spz').value;
+        let error_field = document.querySelector('#error-field');
+        validateEmail(emailBoxValue);
+        if (!validateEmail(emailBoxValue)) {
+            e.preventDefault();
+            console.log('button clicked');
+            error_field.style.display = "block";
+            emailBox.style.border = '2px solid red';
+        }
+        else {
+            createEmailCookie(emailBoxValue);
+            console.log('cookie created');
+            emailbox.removeAttribute('style');
+        }
+    });
 }
 
+
+//Fetch email cookie
+function getEmailCookie(userEmail) {
+    let name = userEmail + "=";
+    let decodedCookie = decodeURIComponent(document.cookie);
+    let ca = decodedCookie.split(';');
+    for (let i = 0; i < ca.length; i++) {
+        let c = ca[i];
+        while (c.charAt(0) == ' ') {
+            c = c.substring(1);
+        }
+        if (c.indexOf(name) == 0) {
+            return c.substring(name.length, c.length);
+        }
+    }
+    return "";
+}
 // Generic
 history.pushState = (function (f) {
     return function pushState() {
@@ -478,10 +556,11 @@ var url = location.href;
 urlCheck(url);
 function urlCheck(url) {
     let testURL = ENV_1031.test_url;
-    if (window.location.pathname.indexOf(ENV_1031.test_url) > -1) {
+    if (window.location.pathname.indexOf(ENV_1031.test_url) > -1 || window.location.pathname.indexOf('checkout') > -1) {
         testURL = window.location.href;
     }
-    if (isSameUrl(url, testURL, false)) {
+    if (isSameUrl(url, testURL, true)) {
+
         waitForElm(ENV_1031.main_class).then(function () {
             createTest();
         });
