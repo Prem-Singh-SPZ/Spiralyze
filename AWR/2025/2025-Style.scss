@@ -282,33 +282,40 @@ body.spz-2025 .product-list-area.fixed-nav-product {
               }
               li {
                 display: flex;
+                align-items: center;
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
-                margin-bottom: 8px;
+                margin-bottom: 10px;
                 &::before {
                   content: url("//res.cloudinary.com/spiralyze/image/upload/v1667969299/AWR/2025/src/check.svg");
-                  padding-right: 10px;
+                  height: 20px;
+                  margin-right: 10px;
                 }
               }
 
               &::-webkit-scrollbar {
+                -webkit-appearance: none;
                 width: 2px;
               }
 
               /* Track */
               &::-webkit-scrollbar-track {
                 background: #757575;
+                -webkit-box-shadow: inset 0 0 2px rgba(117, 117, 117, 1);
               }
 
               /* Handle */
               &::-webkit-scrollbar-thumb {
-                background: #78c653;
+                border-radius: 2px;
+                background-color: #78c653;
+                -webkit-box-shadow: inset 0 0 2px rgba(120, 198, 93, 1);
               }
 
               /* Handle on hover */
               &::-webkit-scrollbar-thumb:hover {
                 background: #78c653;
+                -webkit-box-shadow: inset 0 0 2px rgba(120, 198, 93, 1);
               }
             }
           }

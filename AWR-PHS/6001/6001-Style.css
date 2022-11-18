@@ -20,7 +20,7 @@ img.collection__product-image[class] {
   align-items: center;
   justify-content: center;
   z-index: 9999;
-  background: #FFFFFF;
+  background: #ffffff;
   transition: 0.2s ease;
 }
 
@@ -91,6 +91,12 @@ img.collection__product-image[class] {
 }
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:first-child .zip-col[class] .zip_code_current[class] .header__link[class] .fa-shopping-cart[class]::before {
   content: url("//res.cloudinary.com/spiralyze/image/upload/v1667293690/AWR/PHS/6001/src/Cart_icon.svg");
+}
+@media (max-width: 767px) {
+  .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child {
+    display: flex;
+    align-items: center;
+  }
 }
 @media (min-width: 767px) {
   .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child {

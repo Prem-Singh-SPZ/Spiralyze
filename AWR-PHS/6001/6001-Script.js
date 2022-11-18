@@ -66,8 +66,8 @@ function loadTest() {
             moveElement('#top-nav-container .container > a', '#top-nav-container .header-menu-options');
             moveElement('#top-nav-container .container > span', '#top-nav-container .header-menu-options');
 
-            document.querySelector('#top-nav-container .header__logo-image').setAttribute('src', 'https://cdn.shopify.com/s/files/1/1463/6228/files/logo-georgia.png?v=11565918611729204973');
-            document.querySelector('.header__wrapper .container.no-p .header__logo-image').setAttribute('src', 'https://cdn.shopify.com/s/files/1/1463/6228/files/logo-georgia.png?v=11565918611729204973');
+            // document.querySelector('#top-nav-container .header__logo-image').setAttribute('src', 'https://cdn.shopify.com/s/files/1/1463/6228/files/logo-georgia.png?v=11565918611729204973');
+            // document.querySelector('.header__wrapper .container.no-p .header__logo-image').setAttribute('src', 'https://cdn.shopify.com/s/files/1/1463/6228/files/logo-georgia.png?v=11565918611729204973');
 
         }
 
@@ -132,7 +132,7 @@ function loadTest() {
             });
         }
         document.querySelector('.navigation-sidebar__list .navigation-sidebar__item #registerb span').innerText = 'Create Account';
-        document.querySelector('.navigation-sidebar__list .navigation-sidebar__item:nth-child(7) a span').innerText = 'Login';
+        document.querySelector('.navigation-sidebar__list .navigation-sidebar__item:nth-last-child(2) a span').innerText = 'Login';
 
         document.body.classList.add("loaded");
         // setTimeout(() => {

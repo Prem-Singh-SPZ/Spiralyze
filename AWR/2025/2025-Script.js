@@ -362,7 +362,7 @@ const relatedProducts = [{
     popularProduct: ''
 }
 ];
-async function getPrice(title, price) {
+async function getPrice(price) {
     return '<span class="price">' + price + '</span> <span>per month<span id="savetext"></span></span>';
 }
 
@@ -424,7 +424,7 @@ function createTest() {
                 let name = jQuery(product).find(".program-name").html().trim();
                 let price = jQuery(product).find(".price-cls .notranslate").html().trim();
                 // let icon = jQuery(product).find(".product-icon").attr('src');
-                let priceToShow = await getPrice(name.replace(/[^\w\s]/gi, '_').replaceAll(" ", "_"), price);
+                let priceToShow = await getPrice(price);
                 let image = await getImage(name.replaceAll("&amp;", "&"));
                 let popularItem = await getPopular(name);
                 singleProduct["target"] = name.replaceAll("&amp;", "&");
