@@ -1,6 +1,6 @@
 @import "google-reviews";
 
-.spz-1031 {
+.spz-1032 {
   .customer-box,
   hos-how-it-works,
   hos-stories,
@@ -10,85 +10,147 @@
   }
 
   hos-hero-banner .hero-slider[class] {
-    .hero-content[class] .head-content[class] {
-      h3 {
-        font-weight: 800;
-        font-size: 42px;
-        line-height: 50px;
-        padding-top: 51px;
-        letter-spacing: 0;
-      }
-
-      h5 {
-        font-weight: 500;
-        padding-top: 8px;
-        line-height: 34px;
+    .slider[class],
+    .slider[class] .item[class] {
+      height: 460px;
+      @media (max-width: 767.98px) {
+        height: 498px;
       }
     }
+    .hero-content[class] {
+      display: none;
+    }
     .search-box-content {
-      top: 228px;
+      top: 128px;
+      @media (max-width: 767.98px) {
+        top: 107px;
+      }
     }
     .zip-code-search-box {
       display: flex;
       align-items: center;
       justify-content: center;
       flex-wrap: wrap;
-      width: 592px;
-      height: 154px;
+      width: 640px;
+      height: 214px;
+      background: rgba(0, 0, 0, 0.2);
+      backdrop-filter: blur(2.5px);
       border-radius: 8px;
-      padding-top: 13px;
-      padding-bottom: 14px;
+      border: 1px solid;
+      border-image: linear-gradient(
+          to bottom,
+          rgba(255, 255, 255, 0.3),
+          rgba(25, 56, 74, 0.5)
+        )
+        0.5;
+      padding: 36px;
 
+      @media (max-width: 767.98px) {
+        width: 327px;
+        height: 246px;
+      }
       .zip-code-text[class] {
         font-family: Roboto;
         font-style: normal;
-        font-weight: 800;
-        font-size: 28px;
-        line-height: 34px;
-        color: #373d46;
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        color: #ffffff;
         width: 100%;
-        margin-left: 4px;
-        margin-bottom: 0 !important;
+        margin: 0px 0px 30px 14px !important;
+        @media (max-width: 767.98px) {
+          font-family: "Roboto";
+          font-style: normal;
+          font-weight: 700;
+          font-size: 32px;
+          line-height: 40px;
+          display: flex;
+          align-items: center;
+          text-align: center;
+          margin: 0px 0px 29px 0px !important;
+        }
       }
 
-      hos-google-places[class] {
-        .email-field-spz,
+      /* Label style after Input feild is in focus. Can also use input:focus ~ label to select sibling. */
+
+      //   input:focus + label,
+      //   input:valid + label {
+      //     font-family: "Roboto";
+      //     font-style: normal;
+      //     font-weight: 400;
+      //     font-size: 14px;
+      //     line-height: 20px;
+      //     color: #aaaaaa;
+      //     top: -5px;
+      //     left: 10px;
+      //     background: #ffffff;
+      //     padding: 0px 5px 0px 5px;
+      //   }
+
+      //   .search-field {
+      //     position: relative;
+      //   }
+
+      //   .search-field label {
+      //     font-family: "Roboto";
+      //     font-style: normal;
+      //     font-weight: 400;
+      //     font-size: 18px;
+      //     line-height: 26px;
+      //     padding: 19px 16px;
+      //     color: #757575;
+      //     position: absolute;
+      //     top: 0;
+      //     left: 0;
+      //     transition: 0.2s ease all;
+      //     -moz-transition: 0.2s ease all;
+      //     -webkit-transition: 0.2s ease all;
+      //     pointer-events: none;
+      //   }
+
+      //   input[type="text"]:focus {
+      //     outline: none;
+      //   }
+
+      hos-google-places {
         .search-zipcode {
-          color: #333;
           font-family: Roboto;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 26px;
-          background: #fff;
-          border: 1px solid #ccc !important;
-          border-radius: 4px;
+          background: #ffffff;
+          border: 1px solid #aaaaaa;
           box-shadow: none;
-          height: 56px !important;
-          padding: 0 16px !important;
-          transition-duration: 150ms;
+          height: 64px !important;
+          padding: 0 15px !important;
+          border-radius: 5px 0px 0px 5px;
+          width: 386px !important;
+          font-weight: 400;
+          font-size: 18px !important;
+          line-height: 26px;
+          color: #757575;
+
+          @media (max-width: 767.98px) {
+            width: 152px !important;
+          }
 
           &::-webkit-input-placeholder {
-            font-weight: 500;
+            font-weight: 400;
             color: #757575;
           }
           &::-moz-placeholder {
-            font-weight: 500;
+            font-weight: 400;
             color: #757575;
           }
           &:-ms-input-placeholder {
-            font-weight: 500;
+            font-weight: 400;
             color: #757575;
           }
           &:-moz-placeholder {
-            font-weight: 500;
+            font-weight: 400;
             color: #757575;
           }
-        }
 
-        .search-field {
-          .search-zipcode {
-            width: 120px !important;
+          &:focus{
+            border: 1px solid #005494!important;
+            border-right: 1px solid #aaaaaa!important;
           }
         }
 
@@ -97,11 +159,20 @@
           margin-right: 8px !important;
         }
         .get-started-btn {
-          height: 56px;
+          height: 64px;
+          border-radius: 0px 5px 5px 0px;
           line-height: 18px;
-          margin-left: 8px !important;
+          margin-left: 0px !important;
           padding: 0 22.5px !important;
-          box-shadow: none;
+          width: 182px !important;
+          @media (max-width: 767px) {
+            margin-top: -16px !important;
+          }
+          @media (max-width: 767.98px) {
+            width: 127px !important;
+            height: 64px !important;
+            padding: 0 10px !important;
+          }
 
           ~ [data-lastpass-icon-root] {
             display: none;
@@ -113,93 +184,12 @@
             line-height: 18px;
           }
         }
-
-        .is-invalid[class] {
-          border: none;
-
-          label {
-            color: #b83436;
-          }
-
-          .search-zipcode,
-          .email-field-spz {
-            border: 1px solid #b83436 !important;
-          }
-
-          .email-error-spz {
-            display: block;
-          }
-        }
-
-        .email-error-spz,
-        .error-text {
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 14px;
-          line-height: 20px;
-          color: #b83436 !important;
-        }
-
-        .email-error-spz {
-          display: none;
-          position: absolute;
-          top: 100%;
-          left: 0;
-        }
-
-        .error-zipcode {
-          left: 283px;
-          margin-top: -4px;
-        }
-      }
-
-      // Floating inputs
-      .field-wrap-spz,
-      .search-field.form-group {
-        position: relative;
-        width: auto;
-        height: auto;
-        position: relative;
-
-        input:focus + label,
-        input:valid + label {
-          font-size: 14px;
-          font-weight: 400;
-          line-height: 20px;
-          color: #aaa;
-          top: -10px;
-          left: 10px;
-          background: #fff;
-          padding: 1px 5px;
-        }
-
-        label {
-          font-family: Roboto;
-          font-style: normal;
-          font-weight: 400;
-          font-size: 18px;
-          line-height: 26px;
-          color: #757575;
-          padding: 15px 16px;
-          position: absolute;
-          top: 0;
-          left: 0;
-          transition: 0.2s ease all;
-          -moz-transition: 0.2s ease all;
-          -webkit-transition: 0.2s ease all;
-          pointer-events: none;
-        }
-
-        input[type="text"]:focus {
-          outline: none;
-        }
-
-        input[type="text"]:valid {
-          background-color: #fff;
-        }
       }
     }
+  }
+
+  .search.form-inline {
+    flex-wrap: nowrap;
   }
 
   .spz-protection-section {
@@ -770,37 +760,37 @@
 }
 
 @media (max-width: 1264px) {
-  .spz-1031 .feedback-slider .feedback-container {
+  .spz-1032 .feedback-slider .feedback-container {
     max-width: 100%;
     margin-left: 32px;
     margin-right: 32px;
   }
 }
 @media (max-width: 1148px) {
-  .spz-1031 .plans-wrap {
+  .spz-1032 .plans-wrap {
     max-width: 100%;
     padding: 0 32px;
   }
 }
 @media (max-width: 1146px) {
-  .spz-1031 .companies-section .companies-wrap {
+  .spz-1032 .companies-section .companies-wrap {
     max-width: 100%;
     padding: 0;
   }
 }
 @media (max-width: 1104px) {
-  .spz-1031 .spz-how-it-works .how-wrap {
+  .spz-1032 .spz-how-it-works .how-wrap {
     max-width: 100%;
     padding: 0 32px;
   }
 }
 @media (min-width: 1084px) {
-  .spz-1031 .plans-wrap .plan-item .plan-name {
+  .spz-1032 .plans-wrap .plan-item .plan-name {
     min-height: 108px;
   }
 }
 @media (max-width: 1083px) {
-  .spz-1031 .plans-wrap {
+  .spz-1032 .plans-wrap {
     justify-content: space-between;
     margin-top: 42px;
     max-width: 704px;
@@ -808,7 +798,7 @@
     margin-right: auto;
     padding: 0;
   }
-  .spz-1031 .plans-wrap .plan-item {
+  .spz-1032 .plans-wrap .plan-item {
     margin-left: auto;
     margin-right: auto;
     margin-top: 32px;
@@ -821,44 +811,38 @@
       margin-left: 0;
     }
   }
-  .spz-1031 .plans-wrap .plan-item .plan-name {
+  .spz-1032 .plans-wrap .plan-item .plan-name {
     padding: 0 34px;
   }
 }
 @media (max-width: 1040px) {
-  .spz-1031 .companies-section .companies-subheading {
+  .spz-1032 .companies-section .companies-subheading {
     max-width: 100%;
     padding: 0 32px;
   }
 }
-@media (max-width: 1024px) {
-  .spz-1031 hos-hero-banner .hero-slider[class] {
+@media (min-width: 767.98px) and (max-width: 1024px) {
+  .spz-1032 hos-hero-banner .hero-slider[class] {
     .zip-code-search-box[class] hos-google-places .get-started-btn[class] {
-      height: 56px;
+      height: 64px;
     }
 
     .slider[class],
     .slider[class] .item[class] {
-      height: 614px;
+      height: 414px;
     }
 
-    .hero-content[class] .head-content[class] {
-      h3 {
-        padding-top: 117px;
-      }
-
-      h5 {
-        font-size: 28px;
-      }
+    .hero-content[class] {
+      display: none;
     }
 
     .search-box-content {
-      top: 303px;
+      top: 100px;
     }
   }
 }
 @media (max-width: 991.98px) {
-  .spz-1031 {
+  .spz-1032 {
     .spz-how-it-works {
       padding: 65px 0 64px 0;
       .how-heading {
@@ -929,58 +913,7 @@
   }
 }
 @media (max-width: 767px) {
-  body.spz-1031 {
-    hos-hero-banner {
-      .hero-slider[class] {
-        .hero-content[class] {
-          .head-content[class] {
-            h3 {
-              font-weight: 700;
-              font-size: 32px;
-              line-height: 40px;
-              padding-top: 9px;
-            }
-
-            h5 {
-              font-weight: 700;
-              font-size: 18px;
-              line-height: 26px;
-            }
-          }
-        }
-
-        .search-box-content {
-          top: 218px;
-        }
-
-        .zip-code-search-box {
-          padding: 20px 24px;
-          min-height: 316px;
-          height: auto;
-          max-width: 328px;
-
-          .zip-code-text[class] {
-            margin-left: 0;
-          }
-
-          .field-wrap-spz,
-          .search-field.form-group {
-            width: 100%;
-
-            .search-zipcode, .email-field-spz {
-              width: 100% !important;
-              margin-bottom: 8px;
-            }
-          }
-
-          .get-started-btn[class] {
-            width: 100% !important;
-            height: 56px !important;
-            margin-left: 0 !important;
-          }
-        }
-      }
-    }
+  .spz-1032 {
     .protection-subheading {
       font-size: 18px;
       line-height: 26px;
@@ -1149,7 +1082,7 @@
   }
 }
 @media (max-width: 599.98px) {
-  .spz-1031 {
+  .spz-1032 {
     section.google_review .review_inner {
       max-width: 360px;
       padding: 32px 8px 52px;
@@ -1191,21 +1124,11 @@
   }
 }
 @media (min-width: 992px) and (max-width: 1199px) {
-  .spz-1031
+  .spz-1032
     .feedback-slider
     .feedback-container
     .feedback-item
     .feedback-image {
     margin-right: 30px;
-  }
-}
-
-.spz-1031 {
-  input:-webkit-autofill,
-  input:-webkit-autofill:hover,
-  input:-webkit-autofill:focus,
-  input:-webkit-autofill:active {
-    transition: background-color 5000s !important;
-    -webkit-text-fill-color: #333 !important;
   }
 }

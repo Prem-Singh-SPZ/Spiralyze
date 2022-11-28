@@ -105,6 +105,7 @@ img.collection__product-image[class] {
             .header__item.header__item-toggle[class] {
               background-color: #fff;
               padding: 17px 24px;
+              padding-left: 2px;
               .header__link[class] {
                 .icon-hamburger[class]::before {
                   content: url("//res.cloudinary.com/spiralyze/image/upload/v1667278834/AWR/PHS/6001/src/menu.jpg");
@@ -302,6 +303,43 @@ img.collection__product-image[class] {
       background-color: #fff;
       color: #333333;
 
+      &.ONE-GAS {
+        .container[class]
+          .header-logo[class]
+          .header__link[class]
+          .header__logo-image[class] {
+          max-width: 750px;
+          width: 100%;
+        }
+      }
+      &.AMERICANHS {
+        .container[class]
+          .header-logo[class]
+          .header__link[class]
+          .header__logo-image[class] {
+          max-width: 314px;
+          @media (max-width: 520px) {
+            max-width: 213px;
+          }
+        }
+      }
+      &.CRS {
+        .container[class]
+          .header-logo[class]
+          .header__link[class]
+          .header__logo-image[class] {
+          width: 128px;
+        }
+      }
+      &.NHS {
+        .container[class]
+          .header-logo[class]
+          .header__link[class]
+          .header__logo-image[class] {
+          max-width: 257px;
+        }
+      }
+
       .container[class] {
         display: flex;
         justify-content: space-between;
@@ -330,12 +368,16 @@ img.collection__product-image[class] {
           font-size: 12px;
           line-height: 16px;
           font-weight: 400;
+          .acc-info-links{
+            white-space: nowrap;
+          }
           .acc-info-links a,
           > a {
             color: #333333;
             font-size: 12px;
             line-height: 16px;
             font-weight: 400;
+            white-space: nowrap;
           }
           > a {
             margin-right: 24px;
@@ -344,6 +386,7 @@ img.collection__product-image[class] {
             margin-right: 23px;
             display: flex;
             align-items: center;
+            white-space: nowrap;
             svg {
               margin-right: 9px;
             }
@@ -373,4 +416,15 @@ img.collection__product-image[class] {
   //   //   opacity: 1;
   //   // }
   // }
+}
+
+.spz-6001 > .page__container[class] > header#AMERICANHS.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__link[class] .header__logo-image[class]{
+  width: 314px;
+  @media (max-width: 520px) {
+    width: 213px;
+  }
+}
+.spz-6001 > .page__container[class] > header#ONE-GAS.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__link[class] .header__logo-image[class]{
+  width: 100%;
+  max-width: 750px;
 }

@@ -6,50 +6,40 @@ const slickLib = document.createElement('script');
 slickLib.src = 'https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js';
 document.head.appendChild(slickLib);
 
-const ENV_1031 = {
-    name: '1031_homepage_email',
-    class: 'spz-1031',
-    date: '08-11-2022',
+const ENV_1032 = {
+    name: '1032_homepage_zipAreaUpdate',
+    class: 'spz-1032',
+    date: '23-11-2022',
     base_url: 'https://www.awrusa.com/',
     test_url: 'https://www.awrusa.com/',
     main_class: 'hos-category',
 }
 
 function createTest() {
-    var cookieName = ENV_1031.name + "-" + ENV_1031.date;
+    var cookieName = ENV_1032.name + "-" + ENV_1032.date;
     var cookieValue = "1";
     var myDate = new Date();
     myDate.setDate(myDate.getDate() + 30);
     document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
 
     // Set test class
-    document.body.classList.add(ENV_1031.class);
+    document.body.classList.add(ENV_1032.class);
 
-    //Cart email auto fill
-    if (window.location.pathname.indexOf('checkout') > -1) {
-        let uname = getEmailCookie("userEmail");
-        if (uname) {
-            document.querySelector('.general-information .form-group input[name="email"]').value = uname;
-            document.querySelector('.general-information .form-group input[name="email"]').readOnly = true;
-            document.querySelector('.general-information .form-group input[name="email"]').style.pointerEvents = "none";
-            document.querySelector('.general-information .form-group input[name="email"]').style.backgroundColor = "#f9f9f9";
-        }
-    }
-    else {
-        //Homepage changes
-        loadTest1031();
-        waitForElm(ENV_1031.main_class).then(function (elm) {
-            loadTest1001();
-            loadTest1030();
-        });
-    }
 
+    //Homepage changes
+    loadTest1032();
+    waitForElm(ENV_1032.main_class).then(function (elm) {
+        loadTest1001();
+        loadTest1030();
+    });
+
+    slickLib.onload = googleSliderSlick;
     document.body.classList.add("loaded");
 }
 
 function loadTest1001() {
     var triageInt = setInterval(function () {
-        if (jQuery('main.content hos-category').length > 0 && window.location.href == "https://www.awrusa.com/" && jQuery('.spz-protection-section').length == 0) {
+        if (jQuery('main.content hos-category').length > 0 && jQuery('.spz-protection-section').length == 0) {
             jQuery('main.content hos-category').append('<div class="spz-protection-section">\
                 <div class="protection-heading">Protection Plans</div>\
                 <div class="protection-subheading">Starting from $5.49 per month</div>\
@@ -219,6 +209,7 @@ function loadTest1001() {
 
     slickLib.onload = feedbackSlick;
 
+
     setTimeout(() => {
         if (document.querySelectorAll('.feedback-container.slick-initialized').length > 0 && document.querySelectorAll('.spz-protection-section').length > 0) {
             clearInterval(triageInt);
@@ -226,44 +217,7 @@ function loadTest1001() {
     }, 5000);
 }
 
-function googleSlick() {
-    const gInt = setInterval(() => {
-        if (document.querySelector('.review_slider') && !document.querySelector('.review_slider.slick-initialized')) {
-            $('.review_slider').slick({
-                arrow: true,
-                dots: false,
-                infinite: false,
-                speed: 1500,
-                slidesToShow: 4,
-                slidesToScroll: 4,
-                prevArrow: '<button class="slide_arrow prev-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="17.5" stroke="#AAAAAA"/><path d="M20.0079 21.2887C20.2641 21.0514 20.2644 20.6463 20.0084 20.4088L17.8873 18.4398C17.6315 18.2024 17.6315 17.7977 17.8873 17.5603L20.0084 15.5913C20.2644 15.3537 20.2641 14.9486 20.0079 14.7113L19.9455 14.6535C19.7155 14.4404 19.3601 14.4404 19.1301 14.6535L15.9924 17.5598C15.736 17.7973 15.736 18.2027 15.9924 18.4402L19.1301 21.3465C19.3601 21.5596 19.7155 21.5596 19.9455 21.3465L20.0079 21.2887Z" fill="#757575"/></svg></button>',
-                nextArrow: '<button class="slide_arrow next-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="17.5" transform="matrix(-1 0 0 1 18 18)" stroke="#AAAAAA"/><path d="M15.9919 21.2887C15.7357 21.0514 15.7355 20.6463 15.9914 20.4087L18.1126 18.4397C18.3683 18.2024 18.3683 17.7977 18.1126 17.5603L15.9914 15.5913C15.7355 15.3537 15.7357 14.9486 15.9919 14.7113L16.0543 14.6535C16.2844 14.4404 16.6397 14.4404 16.8698 14.6535L20.0075 17.5598C20.2639 17.7973 20.2639 18.2027 20.0075 18.4402L16.8698 21.3465C16.6397 21.5596 16.2844 21.5596 16.0543 21.3465L15.9919 21.2887Z" fill="#757575"/></svg></button>',
-                responsive: [{
-                    breakpoint: 992,
-                    settings: {
-                        slidesToShow: 2,
-                        slidesToScroll: 2
-                    }
-                },
-                {
-                    breakpoint: 600,
-                    settings: {
-                        slidesToShow: 1,
-                        slidesToScroll: 1
-                    }
-                }
-                ]
-            });
-        }
-
-        if (document.querySelector('.review_slider.slick-initialized')) {
-            clearInterval(gInt);
-        }
-    }, 200);
-};
-
 function feedbackSlick() {
-    googleSlick();
     if (document.querySelectorAll('.spz-protection-section').length > 0 && !document.querySelector('.feedback-container.slick-initialized')) {
         jQuery('.feedback-container').slick({
             arrows: false,
@@ -273,7 +227,46 @@ function feedbackSlick() {
             speed: 1000,
         });
     }
+    googleSliderSlick();
 }
+
+// let intr = setInterval(function () {
+//     if (typeof $ != 'undefined' && window.location.href === "https://www.awrusa.com/") {
+//         clearInterval(intr);
+//         loadTest1030();
+//     } else { $('body').removeClass(ENV_1032.main_class) }
+// }, 100);
+
+function googleSliderSlick() {
+    if (document.querySelector('.review_slider') && !document.querySelector('.review_slider.slick-initialized')) {
+        $('.review_slider').slick({
+            arrow: true,
+            dots: false,
+            infinite: false,
+            speed: 1500,
+            slidesToShow: 4,
+            slidesToScroll: 4,
+            prevArrow: '<button class="slide_arrow prev-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="17.5" stroke="#AAAAAA"/><path d="M20.0079 21.2887C20.2641 21.0514 20.2644 20.6463 20.0084 20.4088L17.8873 18.4398C17.6315 18.2024 17.6315 17.7977 17.8873 17.5603L20.0084 15.5913C20.2644 15.3537 20.2641 14.9486 20.0079 14.7113L19.9455 14.6535C19.7155 14.4404 19.3601 14.4404 19.1301 14.6535L15.9924 17.5598C15.736 17.7973 15.736 18.2027 15.9924 18.4402L19.1301 21.3465C19.3601 21.5596 19.7155 21.5596 19.9455 21.3465L20.0079 21.2887Z" fill="#757575"/></svg></button>',
+            nextArrow: '<button class="slide_arrow next-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="17.5" transform="matrix(-1 0 0 1 18 18)" stroke="#AAAAAA"/><path d="M15.9919 21.2887C15.7357 21.0514 15.7355 20.6463 15.9914 20.4087L18.1126 18.4397C18.3683 18.2024 18.3683 17.7977 18.1126 17.5603L15.9914 15.5913C15.7355 15.3537 15.7357 14.9486 15.9919 14.7113L16.0543 14.6535C16.2844 14.4404 16.6397 14.4404 16.8698 14.6535L20.0075 17.5598C20.2639 17.7973 20.2639 18.2027 20.0075 18.4402L16.8698 21.3465C16.6397 21.5596 16.2844 21.5596 16.0543 21.3465L15.9919 21.2887Z" fill="#757575"/></svg></button>',
+            responsive: [{
+                breakpoint: 992,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 2
+                }
+            },
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1
+                }
+            }
+            ]
+        });
+    }
+}
+
 
 function loadTest1030() {
     setTimeout(function () {
@@ -282,44 +275,44 @@ function loadTest1030() {
             mutations.forEach(function (mutation) {
                 if (mutation.attributeName === "class") {
                     var attributeValue = $(mutation.target).prop(mutation.attributeName);
-                    if (!$('body').hasClass(ENV_1031.main_class)) {
-                        $('body').addClass(ENV_1031.main_class);
+                    if (!$('body').hasClass(ENV_1032.main_class)) {
+                        $('body').addClass(ENV_1032.main_class);
                     }
                 }
             });
         });
         observer.observe($div[0], { attributes: true });
     }, 500);
-    $(document).ready(function () {
-        if (navigator.userAgent.indexOf('Mac OS X') != -1) {
-            $("body").addClass("mac");
-        } else {
-            $("body").addClass("pc");
-        }
-        var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
-        var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
-        var is_chrome = !!window.chrome && !is_opera && !is_Edge;
-        var is_firefox = typeof window.InstallTrigger !== 'undefined';
-        if (is_chrome) {
-            $('body').addClass('chrome');
-        } else if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
-            $('body').addClass('safari');
-        } else if (is_firefox) {
-            $('body').addClass('firefox');
-        }
-        var $div = $("body");
-        var observer = new MutationObserver(function (mutations) {
-            mutations.forEach(function (mutation) {
-                if (mutation.attributeName === "class") {
-                    var attributeValue = $(mutation.target).prop(mutation.attributeName);
-                    Google_review();
-                }
-            });
+    // $(document).ready(function () {
+    if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+        $("body").addClass("mac");
+    } else {
+        $("body").addClass("pc");
+    }
+    var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+    var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+    var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+    var is_firefox = typeof window.InstallTrigger !== 'undefined';
+    if (is_chrome) {
+        $('body').addClass('chrome');
+    } else if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        $('body').addClass('safari');
+    } else if (is_firefox) {
+        $('body').addClass('firefox');
+    }
+    var $div = $("body");
+    var observer = new MutationObserver(function (mutations) {
+        mutations.forEach(function (mutation) {
+            if (mutation.attributeName === "class") {
+                var attributeValue = $(mutation.target).prop(mutation.attributeName);
+                Google_review();
+            }
         });
-        observer.observe($div[0], { attributes: true });
-        function Google_review() {
-            if ($('.google_review').length < 1) {
-                $('<section class="google_review">\
+    });
+    observer.observe($div[0], { attributes: true });
+    function Google_review() {
+        if ($('.google_review').length < 1) {
+            $('<section class="google_review">\
                         <div class="review_inner">\
                             <div class="review_header">\
                             <div class="logo_block">\
@@ -419,129 +412,71 @@ function loadTest1030() {
                             </div>\
                         <div>\
                     </section>').insertAfter('#category-section');
-                // jQuery('.review_slider').slick({
-                //     arrow: true,
-                //     dots: false,
-                //     infinite: false,
-                //     speed: 1500,
-                //     slidesToShow: 4,
-                //     slidesToScroll: 4,
-                //     prevArrow: '<button class="slide_arrow prev-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="17.5" stroke="#AAAAAA"/><path d="M20.0079 21.2887C20.2641 21.0514 20.2644 20.6463 20.0084 20.4088L17.8873 18.4398C17.6315 18.2024 17.6315 17.7977 17.8873 17.5603L20.0084 15.5913C20.2644 15.3537 20.2641 14.9486 20.0079 14.7113L19.9455 14.6535C19.7155 14.4404 19.3601 14.4404 19.1301 14.6535L15.9924 17.5598C15.736 17.7973 15.736 18.2027 15.9924 18.4402L19.1301 21.3465C19.3601 21.5596 19.7155 21.5596 19.9455 21.3465L20.0079 21.2887Z" fill="#757575"/></svg></button>',
-                //     nextArrow: '<button class="slide_arrow next-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="17.5" transform="matrix(-1 0 0 1 18 18)" stroke="#AAAAAA"/><path d="M15.9919 21.2887C15.7357 21.0514 15.7355 20.6463 15.9914 20.4087L18.1126 18.4397C18.3683 18.2024 18.3683 17.7977 18.1126 17.5603L15.9914 15.5913C15.7355 15.3537 15.7357 14.9486 15.9919 14.7113L16.0543 14.6535C16.2844 14.4404 16.6397 14.4404 16.8698 14.6535L20.0075 17.5598C20.2639 17.7973 20.2639 18.2027 20.0075 18.4402L16.8698 21.3465C16.6397 21.5596 16.2844 21.5596 16.0543 21.3465L15.9919 21.2887Z" fill="#757575"/></svg></button>',
-                //     responsive: [{
-                //         breakpoint: 992,
-                //         settings: {
-                //             slidesToShow: 2,
-                //             slidesToScroll: 2
-                //         }
-                //     },
-                //     {
-                //         breakpoint: 600,
-                //         settings: {
-                //             slidesToShow: 1,
-                //             slidesToScroll: 1
-                //         }
-                //     }
-                //     ]
-                // });
-            } else {
-                return false;
-            }
+            // jQuery('.review_slider').slick({
+            //     arrow: true,
+            //     dots: false,
+            //     infinite: false,
+            //     speed: 1500,
+            //     slidesToShow: 4,
+            //     slidesToScroll: 4,
+            //     prevArrow: '<button class="slide_arrow prev-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle cx="18" cy="18" r="17.5" stroke="#AAAAAA"/><path d="M20.0079 21.2887C20.2641 21.0514 20.2644 20.6463 20.0084 20.4088L17.8873 18.4398C17.6315 18.2024 17.6315 17.7977 17.8873 17.5603L20.0084 15.5913C20.2644 15.3537 20.2641 14.9486 20.0079 14.7113L19.9455 14.6535C19.7155 14.4404 19.3601 14.4404 19.1301 14.6535L15.9924 17.5598C15.736 17.7973 15.736 18.2027 15.9924 18.4402L19.1301 21.3465C19.3601 21.5596 19.7155 21.5596 19.9455 21.3465L20.0079 21.2887Z" fill="#757575"/></svg></button>',
+            //     nextArrow: '<button class="slide_arrow next-arrow"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg"><circle r="17.5" transform="matrix(-1 0 0 1 18 18)" stroke="#AAAAAA"/><path d="M15.9919 21.2887C15.7357 21.0514 15.7355 20.6463 15.9914 20.4087L18.1126 18.4397C18.3683 18.2024 18.3683 17.7977 18.1126 17.5603L15.9914 15.5913C15.7355 15.3537 15.7357 14.9486 15.9919 14.7113L16.0543 14.6535C16.2844 14.4404 16.6397 14.4404 16.8698 14.6535L20.0075 17.5598C20.2639 17.7973 20.2639 18.2027 20.0075 18.4402L16.8698 21.3465C16.6397 21.5596 16.2844 21.5596 16.0543 21.3465L15.9919 21.2887Z" fill="#757575"/></svg></button>',
+            //     responsive: [{
+            //         breakpoint: 992,
+            //         settings: {
+            //             slidesToShow: 2,
+            //             slidesToScroll: 2
+            //         }
+            //     },
+            //     {
+            //         breakpoint: 600,
+            //         settings: {
+            //             slidesToShow: 1,
+            //             slidesToScroll: 1
+            //         }
+            //     }
+            //     ]
+            // });
+        } else {
+            return false;
         }
-    });
+    }
+    // });
+    slickLib.onload = googleSliderSlick;
 };
 
-// 1031 Starts
-function loadTest1031() {
-    if (document.querySelectorAll('.email-field-spz').length == 0) {
-        document.querySelector('hos-hero-banner .zip-code-search-box .search-field').insertAdjacentHTML('beforebegin', `
-        <div class="field-wrap-spz">
-            <input type="text" name="email" class="email-field-spz ng-untouched ng-pristine" required>
-            <span id="email-error-spz" class="email-error-spz">
-                Please enter valid email address.
-            </span>
-        </div>`);
-
+function loadTest1032() {
+    if (document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img')) {
+        document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').alt = 'Hero background';
+        // if (window.innerWidth >= 1025) {
+        //     document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-desktop.jpg')
+        // }
+        // else 
+        if(window.innerWidth >= 567 && window.innerWidth < 1024){
+            document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-tab.jpg')
+        }
+        else if(window.innerWidth < 567){
+            document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-mobile.jpg')
+        }
+    }
+    if (document.querySelector('.zip-code-search-box')) {
+        document.querySelector('.zip-code-search-box .zip-code-text').textContent = 'See Protection Plans & Prices';
         document.querySelector('[name="zipcode"]').setAttribute('placeholder', 'Zip Code');
-
-        document.querySelector('.error-zipcode').style.marginLeft = (document.querySelector('.search-field').offsetLeft - 16) + 'px';
     }
-
-    if (!document.querySelector('.gt-started-btn')) {
-        // Email validations
-        const emailBox = document.querySelector('.email-field-spz');
-
-        emailBox.addEventListener('blur', function (e) {
-            isValidEmail(e, emailBox);
-        });
-
-        // Check if form is valid and then submit
-        document.querySelector('.product-page-search').addEventListener("click", function (e) {
-            isValidEmail(e, emailBox);
-        });
-    }
-    document.querySelector('.product-page-search').classList.add('gt-started-btn');
-
-    floatingLabels();
+    // floatingLabels();
 }
 
-function floatingLabels() {
-    jQuery('.search-zipcode').attr('required', '');
-    jQuery('.search-zipcode').removeAttr('placeholder');
+// function floatingLabels() {
+//     jQuery('.search-zipcode').attr('required', '');
+//     jQuery('.search-zipcode').removeAttr('placeholder');
+//     console.log('inside floating labels');
+//     const zipElm = document.querySelector('.search-zipcode');
 
-    const emailElm = document.querySelector('.email-field-spz');
-    const zipElm = document.querySelector('.search-zipcode');
-
-    if (document.querySelectorAll('.field-wrap-spz').length == 1) {
-        emailElm.insertAdjacentHTML('afterend', `<label>Email</label>`);
-        zipElm.insertAdjacentHTML('afterend', `<label>Zip Code</label>`);
-        zipElm.classList.add('field-wrap-spz');
-    }
-}
-
-function isValidEmail(e, email) {
-    // const error_field = document.querySelector('#email-error-spz');
-
-    if (validateEmail(email.value)) {
-        createEmailCookie(email.value);
-        email.parentElement.classList.remove('is-invalid');
-    } else {
-        e.preventDefault();
-        email.parentElement.classList.add('is-invalid');
-    }
-}
-
-// Email validation function
-function validateEmail(email) {
-    var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    return regex.test(String(email).toLowerCase());
-}
-
-// Create email cookie
-function createEmailCookie(value) {
-    today = new Date();
-    var expire = new Date();
-    expire.setTime(today.getTime() + 3600000 * 24 * 30); //  Save for 30 days
-    document.cookie = "userEmail=" + value + ";path=/" + ";expires=" + expire.toUTCString();
-}
-
-// Fetch email cookie
-function getEmailCookie(userEmail) {
-    let name = userEmail + "=";
-    let decodedCookie = decodeURIComponent(document.cookie);
-    let ca = decodedCookie.split(';');
-    for (let i = 0; i < ca.length; i++) {
-        let c = ca[i];
-        while (c.charAt(0) == ' ') {
-            c = c.substring(1);
-        }
-        if (c.indexOf(name) == 0) {
-            return c.substring(name.length, c.length);
-        }
-    }
-    return "";
-}
-// 1031 Ends
+//     if (document.querySelectorAll('.field-wrap-spz').length == 0) {
+//         zipElm.insertAdjacentHTML('afterend', `<label>Zip Code</label>`);
+//         zipElm.classList.add('field-wrap-spz');
+//     }
+// }
 
 // Generic
 history.pushState = (function (f) {
@@ -572,28 +507,25 @@ window.addEventListener('locationchange', function () {
 var url = location.href;
 urlCheck(url);
 function urlCheck(url) {
-    let testURL = ENV_1031.test_url;
-    if (window.location.pathname.indexOf(ENV_1031.test_url) > -1 || window.location.pathname.indexOf('checkout') > -1) {
+    let testURL = ENV_1032.test_url;
+    if (window.location.pathname.indexOf(ENV_1032.test_url) > -1) {
         testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
 
-        if (document.querySelector('button[angularticscategory="Header-Login"]')) {
-            waitForElm(ENV_1031.main_class).then(function () {
-                createTest();
-            });
-            window.addEventListener("resize", function () {
-                createTest();
-            });
-            if (document.querySelectorAll(ENV_1031.main_class).length > 0) {
-                createTest();
-            }
-            waitForElm('.pace-inactive').then(function () {
-                createTest()
-                feedbackSlick()
-            });
+        waitForElm(ENV_1032.main_class).then(function () {
+            createTest();
+        });
+        window.addEventListener("resize", function () {
+            createTest();
+        });
+        if (document.querySelectorAll(ENV_1032.main_class).length > 0) {
+            createTest();
         }
-
+        waitForElm('.pace-inactive').then(function () {
+            createTest()
+            feedbackSlick()
+        });
     } else {
         removeTest();
     }
@@ -606,7 +538,7 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     specifiedUrl = specifiedUrl.includes("#") ?
         specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
         specifiedUrl;
-    if (!includeQueryParams)
+    if (includeQueryParams)
         currentUrl = currentUrl.includes("?") ?
             currentUrl.slice(0, currentUrl.indexOf("?")) :
             currentUrl;
@@ -616,7 +548,7 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
 }
 
 function removeTest() {
-    document.body.classList.remove(ENV_1031.class);
+    document.body.classList.remove(ENV_1032.class);
 }
 
 function waitForElm(selector) {

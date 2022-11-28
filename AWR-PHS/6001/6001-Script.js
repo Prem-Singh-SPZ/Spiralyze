@@ -69,6 +69,8 @@ function loadTest() {
             // document.querySelector('#top-nav-container .header__logo-image').setAttribute('src', 'https://cdn.shopify.com/s/files/1/1463/6228/files/logo-georgia.png?v=11565918611729204973');
             // document.querySelector('.header__wrapper .container.no-p .header__logo-image').setAttribute('src', 'https://cdn.shopify.com/s/files/1/1463/6228/files/logo-georgia.png?v=11565918611729204973');
 
+            let locID = document.querySelector('body .page__container > header').getAttribute('id');
+            document.querySelector('body .page__container > #top-nav-container').classList.add(locID);
         }
 
         //Insert add to cart button inside product card

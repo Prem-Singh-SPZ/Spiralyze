@@ -33,6 +33,10 @@ const comboManagement = [{
     comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In-Home Plumbing Insurance Policy"]
 },
 {
+    comboName: "Water Line, Sewer Line and In Home Plumbing Insurance Policy",
+    comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In Home Plumbing Insurance Policy"]
+},
+{
     comboName: "Water Line, Sewer Line & In-Home Plumbing Insurance Policy",
     comboProducts: ["Water Line Insurance Policy", "Sewer Line Insurance Policy", "In-Home Plumbing Insurance Policy"]
 },
@@ -47,6 +51,18 @@ const comboManagement = [{
 {
     comboName: "Water Line, Sewer Line and In-Home Plumbing Emergency Program",
     comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program", "In-Home Plumbing Emergency Program"]
+},
+{
+    comboName: "Water Line, Sewer Line and In Home Plumbing Emergency Program",
+    comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program", "In Home Plumbing Emergency Program"]
+},
+{
+    comboName: "Water Line, Sewer Line and In-Home Plumbing Protection Program",
+    comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program", "In-Home Plumbing Emergency Program"]
+},
+{
+    comboName: "Water Line, Sewer Line and In Home Plumbing Protection Program",
+    comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program", "In Home Plumbing Protection Program"]
 }
 ];
 const relatedProducts = [{
@@ -103,7 +119,7 @@ const relatedProducts = [{
     productImage: imgURL + '/products/Water_Line___Sewer_Line_Repair_Plan.png',
     productNewName: 'Water Line & Sewer Line Repair Plan',
     coverSubheading: 'Cover your repairs to leaks and breaks of a covered water line, or repairs to leaks, clogs and blockages of a covered sewer line caused by normal wear and tear.',
-    popularProduct: 'popular'
+    popularProduct: ''
 },
 {
     productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Emergency Program',
@@ -113,10 +129,24 @@ const relatedProducts = [{
     popularProduct: 'popular'
 },
 {
-    productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Emergency Program',
+    productFilterName: 'Water Line, Sewer Line and In Home Plumbing Protection Program',
     productImage: imgURL + '/products/Water_Line_Sewer_Line_and_In-Home_Emergency_Plumbing_Repair_Plan.png',
     productNewName: 'Water Line, Sewer Line  and In-Home Emergency Plumbing Repair Plan',
     coverSubheading: 'Protect 3 service lines in 1 plan and save on your monthly cost - and get protection for water line, sewer line, or in-home plumbing.',
+    popularProduct: ''
+},
+{
+    productFilterName: 'Water Line, Sewer Line and In Home Plumbing Emergency Program',
+    productImage: imgURL + '/products/Water_Line_Sewer_Line_and_In-Home_Emergency_Plumbing_Repair_Plan.png',
+    productNewName: 'Water Line, Sewer Line  and In-Home Emergency Plumbing Repair Plan',
+    coverSubheading: 'Protect 3 service lines in 1 plan and save on your monthly cost - and get protection for water line, sewer line, or in-home plumbing.',
+    popularProduct: ''
+},
+{
+    productFilterName: 'In Home Plumbing Protection Program',
+    productImage: imgURL + '/products/In-Home_Plumbing_Emergency_Repair_Plan.png',
+    productNewName: 'In-Home Plumbing Emergency Repair Plan',
+    coverSubheading: 'Cover your home\'s interior water and sewer pipes including overflowing toilet, broken water pipe under your sink or behind the walls.',
     popularProduct: ''
 },
 {
@@ -127,7 +157,7 @@ const relatedProducts = [{
     popularProduct: ''
 },
 {
-    productFilterName: 'In-Home Plumbing Emergency Program',
+    productFilterName: 'In Home Plumbing Emergency Program',
     productImage: imgURL + '/products/In-Home_Plumbing_Emergency_Repair_Plan.png',
     productNewName: 'In-Home Plumbing Emergency Repair Plan',
     coverSubheading: 'Cover your home\'s interior water and sewer pipes including overflowing toilet, broken water pipe under your sink or behind the walls.',
@@ -299,7 +329,7 @@ const relatedProducts = [{
     popularProduct: 'popular'
 },
 {
-    productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Insurance Policy',
+    productFilterName: 'Water Line, Sewer Line and In Home Plumbing Insurance Policy',
     productImage: imgURL + '/products/Water_Line_Sewer_Line_and_In-Home_Emergency_Plumbing_Repair_Plan.png',
     productNewName: 'Water Line, Sewer Line and In-Home Plumbing Insurance Policy',
     coverSubheading: 'Protect 3 service lines in 1 plan and save on your monthly cost - and get protection for water line, sewer line, or in-home plumbing.',
@@ -313,7 +343,7 @@ const relatedProducts = [{
     popularProduct: ''
 },
 {
-    productFilterName: 'In-Home Plumbing Insurance Policy',
+    productFilterName: 'In Home Plumbing Insurance Policy',
     productImage: imgURL + '/products/In-Home_Plumbing_Emergency_Repair_Plan.png',
     productNewName: 'In-Home Plumbing Insurance Policy',
     coverSubheading: 'Cover your home\'s interior water and sewer pipes including overflowing toilet, broken water pipe under your sink or behind the walls.',
@@ -466,9 +496,9 @@ function createTest() {
                             <h1>${value.name}</h1>
                             <div class="product-image" style="background-image:url(${value.image})"></div></div>
                             <div class="product-cart-info">
-                            <div class="prod-info"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1667969299/AWR/2025/src/info-icon.svg" class="info-blue" alt="get-coverage"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1667981336/AWR/2025/src/info_hover.svg" class="info-hover" alt="get-coverage"></img></div>
+                            <button class="prod-info"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1667969299/AWR/2025/src/info-icon.svg" class="info-blue" alt="get-coverage"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1667981336/AWR/2025/src/info_hover.svg" class="info-hover" alt="get-coverage"></img></button>
                                 <div class="product-pricing">${value.priceToShow}</div>
-                                <button>Enroll Now 
+                                <button class="enroll-now-spz">Enroll Now 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/>
                                     </svg>
@@ -479,9 +509,9 @@ function createTest() {
                         <ul class="product-feature-list"><p>What's Covered</p></ul>
                             </div>
                             <div class="product-cart-info">
-                            <div class="prod-cross"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1667969299/AWR/2025/src/cross-icon.svg" alt="get-card"></img></div>
+                            <button class="prod-cross"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1667969299/AWR/2025/src/cross-icon.svg" alt="get-card"></img></button>
                                 <div class="product-pricing">${value.priceToShow}</div>
-                                <button>Enroll Now 
+                                <button class="enroll-now-spz">Enroll Now 
                                     <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
                                         <path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/>
                                     </svg>
@@ -510,7 +540,7 @@ function createTest() {
 
                 })
             })
-            jQuery(".products-single-box .product-text button").on("click", async function (e) {
+            jQuery(".products-single-box .product-text button.enroll-now-spz").on("click", async function (e) {
                 e.preventDefault();
                 const linksControl = await jQuery(".page-wrap.product-list .product-item .card");
                 for await (const link of linksControl) {
@@ -523,23 +553,15 @@ function createTest() {
 
             if (jQuery(window).width() > 1023) {
                 jQuery(".products-single-box .prod-card .prod-info").on("click mouseenter", function (e) {
+                    e.stopPropagation();
                     setTimeout(() => {
                         jQuery(this).closest(".products-single-box").addClass('active');
-                        e.stopPropagation();
-                    },
-                        100
-                    );
-
+                    }, 500);
                 });
 
-                jQuery(".products-single-box .prod-feature .prod-cross").on("click mouseenter", function (e) {
-                    setTimeout(() => {
-                        jQuery(this).closest(".products-single-box").removeClass('active');
-                        e.stopPropagation();
-                    },
-                    100
-                );
-                   
+                jQuery(".products-single-box .prod-feature .prod-cross").on("click", function (e) {
+                    e.stopPropagation();
+                    jQuery(this).closest(".products-single-box").removeClass('active');
                 });
             }
             else {
@@ -579,10 +601,10 @@ jQuery("body").on("click", ".products-single-box .product-image, .products-singl
     }
 });
 
-jQuery(window).on('resize', function () {
-    url = location.href;
-    urlCheck(url);
-});
+// jQuery(window).on('resize', function () {
+//     url = location.href;
+//     urlCheck(url);
+// });
 
 async function removeTest() {
     jQuery("body").removeClass("spz-2025");
@@ -678,15 +700,16 @@ async function getProducts() {
             zipResult.syncSource
         );
 
-        // console.log(defaultCodes);
+        //  console.log(defaultCodes);
 
         defaultCodes.result.forEach((prodList, k) => {
 
             document.querySelectorAll(".products-wrapper .products-boxes .product-card-spz").forEach((viewProd, i) => {
                 let prName = viewProd.getAttribute('data-targettitle');
-                // console.log('prodList.customerProgramName: ', prodList.customerProgramName);
+                // prodList.customerProgramName = prodList.customerProgramName.replaceAll("-", "");
+                // console.log(prName, '=' + prodList.webProgramName);
                 // console.log('prName: ', prName);
-                if (prodList.customerProgramName == prName && viewProd.querySelectorAll('.product-feature-list li').length < 1) {
+                if (prodList.webProgramName == prName && viewProd.querySelectorAll('.product-feature-list li').length < 1) {
                     // console.log('viewProd: ', viewProd.getAttribute('data-targettitle'))
                     prodList.coveredRepairs.forEach((feature) => {
                         viewProd.querySelector('.product-feature-list').insertAdjacentHTML('beforeend', '<li>' + feature.value + '</li>');

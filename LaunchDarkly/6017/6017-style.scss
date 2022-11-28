@@ -1,0 +1,154 @@
+$color_1: #fff;
+$color_2: #000;
+$font-family_1: "Oswald";
+
+.modal-6017 {
+  text-align: center;
+  background-color: #393a3b;
+  max-width: 840px;
+  .styles-module--title {
+    position: relative;
+    text-transform: uppercase;
+    background: linear-gradient(
+      to right,
+      rgba(245, 253, 178, 1),
+      rgba(122, 141, 255, 1) 100%
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    h1 {
+      font-size: 32px;
+      line-height: 120%;
+      font-family: inherit;
+    }
+    .close-modal {
+      position: absolute;
+      right: 18px;
+      top: -6px;
+    }
+  }
+  .styles-module--subtitle {
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 150%;
+    color: #bcbec0;
+  }
+
+  .hero-with-centered-text {
+    padding-top: 2px;
+  }
+  .styles-module--logoCardContainer {
+    padding-bottom: 2px;
+  }
+}
+
+.tab-menu {
+  margin-top: 34px;
+  ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    max-width: 792px;
+    li {
+      -ms-flex-preferred-size: 0;
+      flex-basis: 0;
+      -ms-flex-positive: 1;
+      flex-grow: 1;
+      max-width: 100%;
+      text-align: center;
+      background: #282828;
+      a {
+        background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+        font-family: inherit;
+        font-size: 16px;
+        line-height: 140%;
+        padding: 18px 26px;
+        display: block;
+        text-decoration: none;
+        transition: 0.2s all;
+        
+        border-bottom: 0;
+        &:hover {
+          background: #212121;
+          background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+          text-decoration: none;
+          box-shadow: inset 0px -2px 0px #405bff;
+        }
+      }
+      a.active {
+        background: #212121;
+        background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        text-decoration: none;
+        box-shadow: inset 0px -2px 0px #405bff;
+      }
+    }
+  }
+}
+.tab-box {
+  display: none;
+}
+.tab-teaser {
+  max-width: 800px;
+  width: 100%;
+  margin: 0 auto;
+  font-family: $font-family_1;
+}
+.tab-main-box {
+  .styles-module--card {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 20px -10px;
+    a {
+      background: #282828;
+      width: 142px;
+      height: 146px;
+      margin: 10px;
+      .gatsby-image {
+        padding: 1.5rem 1.5rem 0;
+        img {
+          width: 56px;
+          height: auto;
+        }
+      }
+      p {
+        background: linear-gradient(
+            180deg,
+            #ffffff 0%,
+            rgba(255, 255, 255, 0) 100%
+          ),
+          #ffffff;
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        background-clip: text;
+        text-fill-color: transparent;
+      }
+    }
+  }
+}

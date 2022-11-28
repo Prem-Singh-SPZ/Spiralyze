@@ -111,6 +111,7 @@ img.collection__product-image[class] {
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__item.header__item-toggle[class] {
   background-color: #fff;
   padding: 17px 24px;
+  padding-left: 2px;
 }
 .spz-6001 > .page__container[class] > header.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__item.header__item-toggle[class] .header__link[class] .icon-hamburger[class]::before {
   content: url("//res.cloudinary.com/spiralyze/image/upload/v1667278834/AWR/PHS/6001/src/menu.jpg");
@@ -295,6 +296,24 @@ img.collection__product-image[class] {
   background-color: #fff;
   color: #333333;
 }
+.spz-6001 > .page__container[class] #top-nav-container[id].ONE-GAS .container[class] .header-logo[class] .header__link[class] .header__logo-image[class] {
+  max-width: 750px;
+  width: 100%;
+}
+.spz-6001 > .page__container[class] #top-nav-container[id].AMERICANHS .container[class] .header-logo[class] .header__link[class] .header__logo-image[class] {
+  max-width: 314px;
+}
+@media (max-width: 520px) {
+  .spz-6001 > .page__container[class] #top-nav-container[id].AMERICANHS .container[class] .header-logo[class] .header__link[class] .header__logo-image[class] {
+    max-width: 213px;
+  }
+}
+.spz-6001 > .page__container[class] #top-nav-container[id].CRS .container[class] .header-logo[class] .header__link[class] .header__logo-image[class] {
+  width: 128px;
+}
+.spz-6001 > .page__container[class] #top-nav-container[id].NHS .container[class] .header-logo[class] .header__link[class] .header__logo-image[class] {
+  max-width: 257px;
+}
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] {
   display: flex;
   justify-content: space-between;
@@ -323,12 +342,16 @@ img.collection__product-image[class] {
   line-height: 16px;
   font-weight: 400;
 }
+.spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] .acc-info-links {
+  white-space: nowrap;
+}
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] .acc-info-links a,
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] > a {
   color: #333333;
   font-size: 12px;
   line-height: 16px;
   font-weight: 400;
+  white-space: nowrap;
 }
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] > a {
   margin-right: 24px;
@@ -337,6 +360,7 @@ img.collection__product-image[class] {
   margin-right: 23px;
   display: flex;
   align-items: center;
+  white-space: nowrap;
 }
 .spz-6001 > .page__container[class] #top-nav-container[id] .container[class] .header-menu-options[class] .contact-wrapper svg {
   margin-right: 9px;
@@ -354,4 +378,18 @@ img.collection__product-image[class] {
   .spz-6001 .footer[class] .inner[class] .ccpa-updates-link[class] .btn[class] {
     white-space: initial;
   }
+}
+
+.spz-6001 > .page__container[class] > header#AMERICANHS.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__link[class] .header__logo-image[class] {
+  width: 314px;
+}
+@media (max-width: 520px) {
+  .spz-6001 > .page__container[class] > header#AMERICANHS.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__link[class] .header__logo-image[class] {
+    width: 213px;
+  }
+}
+
+.spz-6001 > .page__container[class] > header#ONE-GAS.header[class] .header__wrapper[class] .container.no-p[class] .row:last-child .header__link[class] .header__logo-image[class] {
+  width: 100%;
+  max-width: 750px;
 }/*# sourceMappingURL=6001-Style.css.map */

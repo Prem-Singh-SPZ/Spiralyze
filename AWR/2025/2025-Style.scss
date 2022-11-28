@@ -11,7 +11,9 @@ body.spz-2025 .product-list-area.fixed-nav-product {
   .product-list-area.content-section {
     margin: 0 !important;
   }
-
+  hos-navigation-bar, hos-navigation-bar .branding, hos-navigation-bar .branding .logo, hos-navigation-bar .branding .logo img {
+    z-index: 99;
+  }
   .noproducts-inner,
   .products-inner {
     max-width: 1200px;
@@ -73,6 +75,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
       // box-shadow: 0 4px 35px rgba(0, 0, 0, 0.2);
       border-radius: 12px;
       margin-bottom: 40px;
+      z-index: 1;
 
       &.popular {
         &::after {
@@ -172,6 +175,8 @@ body.spz-2025 .product-list-area.fixed-nav-product {
             padding: 22px 20px 24px;
           }
           .prod-info {
+            width: 44px;
+            height: 44px;
             cursor: pointer;
             position: absolute;
             top: -30px;
@@ -195,6 +200,8 @@ body.spz-2025 .product-list-area.fixed-nav-product {
             }
           }
           .prod-cross {
+            width: 44px;
+            height: 44px;
             cursor: pointer;
             position: absolute;
             top: -30px;
@@ -229,7 +236,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
         }
         &.prod-card,
         &.prod-feature {
-          flex-grow: 1;
+          // flex-grow: 1;
           display: flex;
           flex-direction: column;
           transition-duration: 1000ms;
@@ -256,7 +263,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
             background-color: #0d3d64;
             padding-right: 28px;
             padding-bottom: 20px;
-            height: calc(100% - 141px);
+            height: 292px;
             padding-top: 32px;
             border-radius: 12px 12px 0 0;
             cursor: default;
@@ -272,6 +279,8 @@ body.spz-2025 .product-list-area.fixed-nav-product {
               list-style: none;
               padding-left: 28px;
               padding-right: 4px;
+              scrollbar-width: thin;
+              scrollbar-color: #78c653 #757575;
               @media (max-width: 991px) {
                 padding-left: 28px;
               }
