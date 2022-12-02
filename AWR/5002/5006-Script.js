@@ -272,14 +272,17 @@ function formFields() {
     });
 
     // Add error icon after inputs
-    jQuery(`<a href="javascript:void(0)" class="error-ico-spz" tabindex="-1" data-toggle="tooltip" style="display: none;">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/v1660111008/AWR/5001/error.svg" />
-            </a>`).insertAfter(jQuery(selector), jQuery('.ng-select'));
+    if (jQuery('.error-ico-spz').length < 1) {
+
+        jQuery(`<a href="javascript:void(0)" class="error-ico-spz" tabindex="-1" data-toggle="tooltip" style="display: none;">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1660111008/AWR/5001/error.svg" />
+        </a>`).insertAfter(jQuery(selector), jQuery('.ng-select'));
+    }
 
     // Add error icon after ng-select
-    jQuery(`<a href="javascript:void(0)" class="error-ico-spz" tabindex="-1" data-toggle="tooltip" style="display: none;">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/v1660111008/AWR/5001/error.svg" />
-        </a>`).insertAfter(jQuery('.ng-select'));
+    // jQuery(`<a href="javascript:void(0)" class="error-ico-spz" tabindex="-1" data-toggle="tooltip" style="display: none;">
+    //         <img src="//res.cloudinary.com/spiralyze/image/upload/v1660111008/AWR/5001/error.svg" />
+    //     </a>`).insertAfter(jQuery('.ng-select'));
 
     if (document.querySelectorAll('.error-msg-spn-spz').length == 0 && document.querySelector('[name="firstName"] ~ .error-ico-spz')) {
         document.querySelector('[name="firstName"] ~ .error-ico-spz').insertAdjacentHTML('afterend', `<small _ngcontent-c7="" class="form-text text-danger error-msg-spn-spz" id="emailHelp">First name is required</small>`);
@@ -404,7 +407,7 @@ function formFields() {
 function progressiveForm() {
     if (document.querySelectorAll('.form-content-spz .form-group.filled:not(.error)').length > 5) {
         document.querySelector('.progress-step').classList.add('active');
-        document.querySelector('.pad-btn-checkout').classList.remove('disable-cls');
+        document.querySelector('.pad-btn-checkout').classList.add('look-active');
         document.querySelector('.pad-btn-checkout .enroll-now').classList.remove('pointer-events-none');
     }
 }
@@ -472,7 +475,7 @@ function urlCheck(url) {
     if (isSameUrl(url, testURL, true)) {
         waitForElement('.checkout-plans').then(function (element) {
             loadTest();
-console.log('test loaded');
+            // console.log('test loaded');
         });
         setTimeout(function () {
             const pgInt = setInterval(() => {

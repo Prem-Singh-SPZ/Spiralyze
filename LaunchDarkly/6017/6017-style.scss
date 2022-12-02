@@ -1,14 +1,51 @@
 $color_1: #fff;
 $color_2: #000;
-$font-family_1: "Oswald";
+$font-family_1: inherit;
+body {
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
 
 .modal-6017 {
   text-align: center;
   background-color: #393a3b;
   max-width: 840px;
+  scrollbar-width: thin;
+  max-height: 90vh;
+  overflow-y: auto;
+  scrollbar-color: #939598 #393a3b;
+  padding: 24px;
+
+  @media (max-width: 991px) {
+    max-width: 634px;
+  }
+  &::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 6px;
+  }
+
+  /* Track */
+  &::-webkit-scrollbar-track {
+    background: #393a3b;
+    -webkit-box-shadow: inset 0 0 2px #393a3b;
+  }
+
+  /* Handle */
+  &::-webkit-scrollbar-thumb {
+    border-radius: 8px;
+    background-color: #939598;
+    -webkit-box-shadow: inset 0 0 2px #939598;
+  }
+
+  /* Handle on hover */
+  &::-webkit-scrollbar-thumb:hover {
+    background: #939598;
+    -webkit-box-shadow: inset 0 0 2px #939598;
+  }
   .styles-module--title {
     position: relative;
-    text-transform: uppercase;
     background: linear-gradient(
       to right,
       rgba(245, 253, 178, 1),
@@ -23,8 +60,12 @@ $font-family_1: "Oswald";
     }
     .close-modal {
       position: absolute;
-      right: 18px;
+      right: 0;
       top: -6px;
+      @media (max-width: 599px) {
+        right: -16px;
+        top: -32px;
+      }
     }
   }
   .styles-module--subtitle {
@@ -52,7 +93,7 @@ $font-family_1: "Oswald";
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
-    max-width: 792px;
+
     li {
       -ms-flex-preferred-size: 0;
       flex-basis: 0;
@@ -79,18 +120,21 @@ $font-family_1: "Oswald";
         display: block;
         text-decoration: none;
         transition: 0.2s all;
-        
+        @media (max-width: 599px) {
+          padding: 21px 14px;
+        }
+
         border-bottom: 0;
         &:hover {
           background: #212121;
           background: linear-gradient(
-            180deg,
-            #ffffff 0%,
-            rgba(255, 255, 255, 0) 100%
-          ),
-          #ffffff;
-        -webkit-background-clip: text;
-        -webkit-text-fill-color: transparent;
+              180deg,
+              #ffffff 0%,
+              rgba(255, 255, 255, 0) 100%
+            ),
+            #ffffff;
+          -webkit-background-clip: text;
+          -webkit-text-fill-color: transparent;
           text-decoration: none;
           box-shadow: inset 0px -2px 0px #405bff;
         }
@@ -115,7 +159,7 @@ $font-family_1: "Oswald";
   display: none;
 }
 .tab-teaser {
-  max-width: 800px;
+  max-width: 792px;
   width: 100%;
   margin: 0 auto;
   font-family: $font-family_1;
@@ -124,6 +168,7 @@ $font-family_1: "Oswald";
   .styles-module--card {
     display: flex;
     flex-wrap: wrap;
+    justify-content: center;
     margin: 20px -10px;
     a {
       background: #282828;
@@ -148,6 +193,10 @@ $font-family_1: "Oswald";
         -webkit-text-fill-color: transparent;
         background-clip: text;
         text-fill-color: transparent;
+      }
+
+      &:hover {
+        box-shadow: 0 7px 10px rgb(0 0 0 / 70%);
       }
     }
   }

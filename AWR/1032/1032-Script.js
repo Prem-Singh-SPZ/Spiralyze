@@ -452,20 +452,44 @@ function loadTest1032() {
         //     document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-desktop.jpg')
         // }
         // else 
-        if(window.innerWidth >= 567 && window.innerWidth < 1024){
+        if (window.innerWidth >= 567 && window.innerWidth < 1024) {
             document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-tab.jpg')
         }
-        else if(window.innerWidth < 567){
-            document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-mobile.jpg')
+        if (window.innerWidth < 567) {
+            document.querySelector('hos-hero-banner .hero-slider .ngucarousel-items .bannerStyle img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1032/hero-mobile-new.jpg')
         }
     }
     if (document.querySelector('.zip-code-search-box')) {
         document.querySelector('.zip-code-search-box .zip-code-text').textContent = 'See Protection Plans & Prices';
         document.querySelector('[name="zipcode"]').setAttribute('placeholder', 'Zip Code');
     }
+
+
+    // const checkIfError = setInterval(function () {
+    //     if (jQuery('.error-zipcode.invalid-error .form-text').length) {
+    //         jQuery('.search-box-content .zip-code-search-box').addClass('invalid-zip-box');
+    //     }
+    //     else {
+    //         jQuery('.search-box-content .zip-code-search-box').removeClass('invalid-zip-box');
+    //     }
+    // }, 100);
+
+    jQuery('.search-field.search-zipcode').on('blur click', checkIfError);
+    jQuery('.get-started-btn.product-page-search').on('click', checkIfError);
+   
     // floatingLabels();
 }
 
+function checkIfError() {
+    const zipError = setInterval(function () {
+        if (jQuery('.error-zipcode.invalid-error .form-text').length > 0) {
+            jQuery('.search-box-content .zip-code-search-box').addClass('invalid-zip-box');
+        }
+        else {
+            jQuery('.search-box-content .zip-code-search-box').removeClass('invalid-zip-box');
+        }
+    }, 100);
+}
 // function floatingLabels() {
 //     jQuery('.search-zipcode').attr('required', '');
 //     jQuery('.search-zipcode').removeAttr('placeholder');

@@ -156,6 +156,9 @@
   right: 10px;
 }
 
+.spz-1032 .LPMcontainer.LPMoverlay {
+  margin-top: 150px !important;
+}
 .spz-1032 .customer-box,
 .spz-1032 hos-how-it-works,
 .spz-1032 hos-stories,
@@ -195,16 +198,19 @@
   -webkit-backdrop-filter: blur(2.5px);
           backdrop-filter: blur(2.5px);
   border-radius: 8px;
-  border: 1px solid;
-  -o-border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(25, 56, 74, 0.5)) 0.5;
-     border-image: linear-gradient(to bottom, rgba(255, 255, 255, 0.3), rgba(25, 56, 74, 0.5)) 0.5;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  border-bottom: transparent;
   padding: 36px;
   /* Label style after Input feild is in focus. Can also use input:focus ~ label to select sibling. */
 }
 @media (max-width: 767.98px) {
   .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box {
     width: 327px;
-    height: 246px;
+    height: 320px;
+    transition-duration: 200ms;
+  }
+  .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box.invalid-zip-box[class] {
+    height: 352px;
   }
 }
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box .zip-code-text[class] {
@@ -242,31 +248,56 @@
   font-weight: 400;
   font-size: 18px !important;
   line-height: 26px;
-  color: #757575;
 }
 @media (max-width: 767.98px) {
   .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode {
-    width: 152px !important;
+    text-align: center !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode {
+    width: 279px !important;
+    border-radius: 5px;
   }
 }
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode::-webkit-input-placeholder {
   font-weight: 400;
   color: #757575;
 }
+@media (max-width: 767.98px) {
+  .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode::-webkit-input-placeholder {
+    text-align: center !important;
+  }
+}
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode::-moz-placeholder {
   font-weight: 400;
   color: #757575;
+}
+@media (max-width: 767.98px) {
+  .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode::-moz-placeholder {
+    text-align: center !important;
+  }
 }
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode:-ms-input-placeholder {
   font-weight: 400;
   color: #757575;
 }
+@media (max-width: 767.98px) {
+  .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode:-ms-input-placeholder {
+    text-align: center !important;
+  }
+}
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode:-moz-placeholder {
   font-weight: 400;
   color: #757575;
 }
+@media (max-width: 767.98px) {
+  .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode:-moz-placeholder {
+    text-align: center !important;
+  }
+}
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-zipcode:focus {
-  border: 1px solid #005494 !important;
+  border: 1px solid #ec7923 !important;
   border-right: 1px solid #aaaaaa !important;
 }
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .email-field-spz {
@@ -283,14 +314,15 @@
 }
 @media (max-width: 767px) {
   .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .get-started-btn {
-    margin-top: -16px !important;
+    margin-top: 0px !important;
   }
 }
 @media (max-width: 767.98px) {
   .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .get-started-btn {
-    width: 127px !important;
+    width: 279px !important;
     height: 64px !important;
     padding: 0 10px !important;
+    border-radius: 5px;
   }
 }
 .spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .get-started-btn ~ [data-lastpass-icon-root] {
@@ -301,8 +333,51 @@
   font-size: 16px;
   line-height: 18px;
 }
-.spz-1032 .search.form-inline {
+.spz-1032 .search.form-inline[class] {
   flex-wrap: nowrap;
+}
+@media (max-width: 767.98px) {
+  .spz-1032 .search.form-inline[class] {
+    justify-content: center;
+    flex-wrap: wrap;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1032 .search.form-inline[class] > .search-field[class] {
+    margin-bottom: 10px;
+  }
+  .spz-1032 .search.form-inline[class] > .search-field[class].is-invalid[class] {
+    margin-bottom: 40px;
+  }
+}
+.spz-1032 .error-zipcode.invalid-error[class] {
+  margin-top: -2px;
+}
+.spz-1032 .error-zipcode.invalid-error[class] .form-text[class] {
+  font-weight: 700;
+  background: #b83436 !important;
+  color: #ffffff !important;
+  font-weight: 400;
+  padding: 4px 6px;
+}
+@media (max-width: 767.98px) {
+  .spz-1032 .error-zipcode.invalid-error[class] {
+    margin-top: -96px;
+    width: 100%;
+  }
+  .spz-1032 .error-zipcode.invalid-error[class] .form-text[class] {
+    width: -webkit-fit-content;
+    width: -moz-fit-content;
+    width: fit-content;
+    background: #b83436 !important;
+    color: #ffffff !important;
+    font-weight: 400;
+    padding: 4px 6px;
+    text-align: center;
+    margin: auto;
+    font-size: 12px;
+    line-height: 120%;
+  }
 }
 .spz-1032 .spz-protection-section {
   padding: 34px 0 100px 0;
@@ -514,7 +589,7 @@
   margin-left: auto;
   margin-right: auto;
 }
-.spz-1032 .spz-how-it-works .spz-get-started-btn {
+.spz-1032 .spz-how-it-works .spz-get-started-btn[class] {
   max-width: 240px;
   width: 100%;
   height: 56px;
@@ -529,7 +604,7 @@
   color: #ffffff;
   cursor: pointer;
 }
-.spz-1032 .spz-how-it-works .spz-get-started-btn:hover {
+.spz-1032 .spz-how-it-works .spz-get-started-btn[class]:hover {
   background: #c8661d;
 }
 .spz-1032 .feedback-slider {

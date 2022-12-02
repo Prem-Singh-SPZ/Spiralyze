@@ -434,6 +434,9 @@ setInterval(function () {
     }
 }, 1000);
 function createTest() {
+    if (navigator.userAgent.indexOf('Mac OS X') != -1) {
+        jQuery("body").addClass("mac");
+    }
     jQuery("body").addClass("spz-2025");
     // let productsList = null;
     // let titlesToCheck = ["water line protection program", "sewer line protection program", "water line and sewer line protection program", "water service line protection program", "sewer service line protection program"];

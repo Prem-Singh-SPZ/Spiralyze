@@ -7,11 +7,18 @@ body.spz-2025 .product-list-area.fixed-nav-product {
 }
 
 .spz-2025 {
+  &.mac .products-wrapper[class] .products-boxes[class] {
+    perspective: 500000;
+    -webkit-perspective: 500000;
+  }
   footer,
   .product-list-area.content-section {
     margin: 0 !important;
   }
-  hos-navigation-bar, hos-navigation-bar .branding, hos-navigation-bar .branding .logo, hos-navigation-bar .branding .logo img {
+  hos-navigation-bar,
+  hos-navigation-bar .branding,
+  hos-navigation-bar .branding .logo,
+  hos-navigation-bar .branding .logo img {
     z-index: 99;
   }
   .noproducts-inner,
