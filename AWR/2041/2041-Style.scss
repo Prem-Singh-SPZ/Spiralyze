@@ -1,8 +1,112 @@
 body.spz-2041[class] {
   hos-products {
     section.product-list-area[class] {
+      margin-top: 0 !important;
+
+      .set-pad.page-wrap[class] {
+        max-width: 100%;
+        text-align: center;
+        border-bottom: 1px solid #dadada;
+
+        .product-list-header[class] {
+          background: #fff;
+
+          .zipcode-box[class] {
+            padding: 20px 0 18px 0;
+            @media (max-width: 767.98px) {
+              padding: 20px 0 12px;
+            }
+            @media (min-width: 1023.98px) {
+              padding: 22px 0 18px 0;
+            }
+            label[class] {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              line-height: 24px;
+              color: #000000;
+
+              &.search-label[class] {
+                margin: 0 5px 0 16px;
+                display: inline-block !important;
+                @media (max-width: 767.98px) {
+                  font-size: 14px;
+                  margin: 0;
+                }
+              }
+              &.dark-text[class] {
+                display: none !important;
+              }
+            }
+            .location-box[class] {
+              margin-left: 32px;
+
+              @media (max-width: 767.98px) {
+                margin-left: 20px;
+                margin-top: 4px;
+              }
+              .current-location[class] {
+                color: #000000;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                i.fa-map-marker[class] {
+                  padding-right: 8px;
+
+                  &::before {
+                    content: url("//res.cloudinary.com/spiralyze/image/upload/v1670322786/AWR/2041/src/location.svg") !important;
+                  }
+                }
+              }
+              button.change-link[class] {
+                font-weight: 400;
+                font-size: 16px;
+                line-height: 24px;
+                text-transform: capitalize;
+                padding: 3px 16px 3px 4px;
+              }
+            }
+          }
+        }
+      }
+
       article.product-list[class] {
+        max-width: 1256px;
+        padding-top: 60px;
+        padding-bottom: 84px;
+        @media (max-width: 767.98px) {
+          max-width: 320px;
+          padding-top: 36px;
+          padding-bottom: 15px;
+        }
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          max-width: 672px;
+          padding-top: 49px;
+          padding-bottom: 36px;
+        }
+        @media (min-width: 1023.98px) and (max-width: 1299.98px) {
+          max-width: 972px;
+        }
         .product-item[class] {
+          padding: 0;
+          margin-bottom: 36px;
+          @media (min-width: 1023.98px) and (max-width: 1299.98px) {
+            &.col-xl-3[class] {
+              -ms-flex: 0 0 33.33%;
+              flex: 0 0 33.33%;
+              max-width: 33.33%;
+            }
+          }
+          @media (min-width: 1299.98px) {
+            &.col-xl-3[class] {
+              -ms-flex: 0 0 25%;
+              flex: 0 0 25%;
+              max-width: 25%;
+            }
+          }
+
           hos-product-card {
             //product card css
             .card[class] {
@@ -12,6 +116,26 @@ body.spz-2041[class] {
               width: 280px;
               height: 332px;
               display: flex;
+              margin: 0 12px 0 12px;
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                margin: 0 18px 0 18px;
+              }
+              //most popular tag
+              &.is-popular::before {
+                content: url("//res.cloudinary.com/spiralyze/image/upload/v1670215067/AWR/2041/src/most-popular-tag.svg");
+                display: block;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+              }
+
+              &.is-best-value::before {
+                content: url("//res.cloudinary.com/spiralyze/image/upload/v1670307275/AWR/2041/src/best-value-tag.svg");
+                display: block;
+                position: absolute;
+                top: 12px;
+                left: 12px;
+              }
 
               //product card image css
               .card-img[class] {
@@ -31,12 +155,87 @@ body.spz-2041[class] {
                 line-height: 140%;
                 letter-spacing: -0.01em;
                 color: #333333;
+                padding: 24px 16px;
+
+                text-overflow: ellipsis;
+                overflow: hidden;
+                display: -webkit-box !important;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                white-space: normal;
+                height: 72px;
               }
 
               //price section starts
-              .card-body[class]{
-                .row:first-child .col-3{
+              .card-body[class] {
+                display: flex;
+                align-items: center;
+                padding: 25px 16px 23px;
+                justify-content: space-between;
+                .row:first-child {
+                  flex-grow: 1;
+                  .col-9 {
+                    display: flex;
+                    flex-direction: column;
+                    height: 40px;
+                    justify-content: center;
+
+                    .price-cls[class] {
+                      display: flex;
+                      align-items: center;
+                      .notranslate[class] {
+                        font-weight: 600;
+                        font-size: 18px;
+                        line-height: 100%;
+                        color: #333333;
+                      }
+                      .small-txt[class] {
+                        color: #757575;
+                        font-weight: 400;
+                        font-size: 12px;
+                        line-height: 16px;
+                        padding: 4px 2px;
+                        margin: 1px;
+                      }
+                    }
+
+                    .save-price-spz {
+                      font-family: "Roboto";
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 12px;
+                      line-height: 16px;
+                      color: #b83436;
+                      text-transform: uppercase;
+                      text-align: left;
+                    }
+                  }
+
+                  .col-3 {
                     display: none;
+                  }
+                }
+
+                .row:nth-child(2) {
+                  margin-top: 0 !important;
+                  button.enroll-now[class] {
+                    width: 100px !important;
+                    background: #ec7923;
+                    border-radius: 4px;
+                    color: #ffffff;
+                    font-weight: 600;
+                    font-size: 14px;
+                    line-height: 20px;
+                    transition: background-color 0.15s ease-in-out,
+                      border-color 0.15s ease-in-out,
+                      box-shadow 0.15s ease-in-out;
+
+                    &:hover {
+                      background-color: #c8661d;
+                      -webkit-transition: 0.3s ease-in;
+                      transition: 0.3s ease-in;
+                    }
+                  }
                 }
               }
             }
