@@ -8,6 +8,7 @@
 
     myDate.setDate(myDate.getDate() + 30);
     document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+    var datalayerFlag = false;
 
     const comboManagement = [{
         comboName: "Water Line and Sewer Line Protection Program",
@@ -467,9 +468,16 @@
         jQuery("body").addClass("spz-2025");
         // let productsList = null;
         // let titlesToCheck = ["water line protection program", "sewer line protection program", "water line and sewer line protection program", "water service line protection program", "sewer service line protection program"];
+
+
         let ourProducts = [];
         const productsCheck = setInterval(async function () {
             if (jQuery(".page-wrap.product-list .product-item .card").length != 0) {
+                if (datalayerFlag == false) {
+                    dataLayer.push({ 'event': 'experiment2025.activated' });
+                    datalayerFlag = true;
+                }
+
                 await jQuery(".products-wrapper").remove();
                 //.product-list-area.content-section
                 jQuery("header").after('<div class="products-wrapper"><div class="products-inner"><div class="products-title"><h2>Protection Plans</h2></div> <div class="products-boxes"> </div></div></div>');
@@ -614,7 +622,9 @@
                     await getProducts();
                 }
             }
+
         }, 100);
+
     }
 
     // // Open PDP on card click

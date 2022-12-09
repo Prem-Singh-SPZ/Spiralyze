@@ -208,7 +208,7 @@ function loadTest1001() {
     }, 100);
 
     slickLib.onload = feedbackSlick;
-    slickLib.onload = googleSlick();
+    slickLib.onload = googleSlick;
 
     setTimeout(() => {
         if (document.querySelectorAll('.feedback-container.slick-initialized').length > 0 && document.querySelectorAll('.spz-protection-section').length > 0) {
@@ -327,7 +327,7 @@ function loadTest1030() {
                                     <div class="review_content">\
                                         <h2 class="reviewer_name">Hugo Dominguez</h2>\
                                         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1005_AWR_Home_Show_Social_Reviews/5_rating_star.png" class="review_rating" alt="Rating Star" title="Rating Star">\
-                                        <p class="review_text">American Water Resources is prompt in providing assistance to oneâ€™s sewage related issues.</p>\
+                                        <p class="review_text">American Water Resources is prompt in providing assistance to one\'s sewage related issues.</p>\
                                     </div>\
                                 </div>\
                                 <div class="review_box">\
