@@ -1,8 +1,244 @@
+.spz_5003 header.header[class] .header__main-container[class] {
+  border-bottom: 0;
+}
+.spz_5003 header.header[class] .header__main[class] {
+  height: 70px;
+}
+@media (max-width: 599.98px) {
+  .spz_5003 header.header[class] .header__main[class] {
+    height: 72px;
+  }
+}
+@media (min-width: 599.98px) and (max-width: 991.98px) {
+  .spz_5003 header.header[class] .header__main[class] {
+    height: 68px;
+  }
+}
+.spz_5003 .vms-results[class] {
+  padding-top: 0;
+}
 .spz_5003 .vms-results__title[class] {
-  margin-top: calc(9.8rem - 73px);
+  margin-top: calc(9.8rem - 84px);
 }
 .spz_5003 .vms-filter[class] {
-  top: 0 !important;
+  transition-duration: 150ms;
+  border-bottom: 1px solid #dce0e0;
   position: -webkit-sticky;
   position: sticky;
+  top: 0 !important;
+}
+.spz_5003 .vms-filter__container[class] {
+  height: 72px;
+}
+@media (max-width: 991.98px) {
+  .spz_5003 .vms-filter__container[class] {
+    height: 64px;
+  }
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] {
+  height: 40px;
+}
+@media (max-width: 599.98px) {
+  .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-dropdown.vms-filter-dropdown--dates[class] {
+    top: 54px;
+    left: -128px;
+  }
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] {
+  order: -4;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] {
+  background-color: #e16e38;
+  border-radius: 8px;
+  margin-right: 24px;
+  padding: 6px 10px 4px 22px;
+  height: 40px;
+  border: 0;
+}
+@media (max-width: 599.98px) {
+  .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] {
+    padding: 6px 2px 8px 14px;
+    border-radius: 4px;
+    margin-right: 0;
+  }
+}
+@media (min-width: 599.98px) and (max-width: 991.98px) {
+  .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] {
+    padding: 6px 10px 8px 20px;
+    border-radius: 4px;
+    margin-right: 24px;
+  }
+  .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] img.vms-filter-item-all__filter {
+    width: 20px;
+  }
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class]:hover, .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class]:active {
+  background-color: #eb6b2f;
+  border: 0;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] img {
+  height: 16px;
+  width: 18px;
+  margin-right: 10px;
+  vertical-align: middle;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] span[class] {
+  font-family: "Arial";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  color: #ffffff;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class] svg {
+  display: none;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class]::after {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1670908208/SmokyMountains/5003/Divider.svg");
+  width: 1px;
+  height: 20px;
+  pointer-events: none;
+  position: absolute;
+  right: 8px;
+}
+@media (max-width: 599px) {
+  .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--all[class] button[class]::after {
+    display: none;
+  }
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-filter-item--dates[class] {
+  order: -3;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class]:nth-child(5) {
+  order: -2;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class]:nth-child(6) {
+  order: -1;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class] {
+  height: 40px;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class].active {
+  border: 1px solid #0a8446;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:hover, .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:focus, .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:active, .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class].js-active {
+  background: #086c39;
+  border: 1px solid #086c39;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:hover .vms-filter-item-btn__title[class], .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:focus .vms-filter-item-btn__title[class], .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:active .vms-filter-item-btn__title[class], .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class].js-active .vms-filter-item-btn__title[class] {
+  color: #ffffff;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:hover .vms-filter-item-btn__title[class] .spz-filter-value, .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:focus .vms-filter-item-btn__title[class] .spz-filter-value, .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class]:active .vms-filter-item-btn__title[class] .spz-filter-value, .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class].js-active .vms-filter-item-btn__title[class] .spz-filter-value {
+  color: #ffffff;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class] .vms-filter-item-btn__title[class] {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #6d6f73;
+}
+@media (max-width: 599.98px) {
+  .spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class] .vms-filter-item-btn__title[class] {
+    margin-bottom: 2px;
+  }
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class] .vms-filter-item-btn__title[class] .spz-filter-value {
+  color: rgb(29, 29, 31);
+  font-weight: 500;
+  letter-spacing: 0.35px;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class] .vms-filter-item-btn[class] .spz-filter-value-index {
+  position: absolute;
+  background: #0a8446;
+  border: 1px solid #ffffff;
+  border-radius: 1000px;
+  width: 18px;
+  height: 18px;
+  right: -4px;
+  top: -4px;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 10px;
+  line-height: 15px;
+  color: #ffffff;
+  padding: 1px;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all {
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all::before {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1670908208/SmokyMountains/5003/Divider.svg");
+  width: 1px;
+  height: 20px;
+  position: absolute;
+  left: -20px;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a {
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a span.vms-filter-item-all__title[class] {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+  color: #454545;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a img {
+  width: 9px;
+  height: 9px;
+  margin-right: 6px;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a .vms-filter-item-all__cross-hover {
+  display: none;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a .vms-filter-item-all__cross-normal {
+  display: block;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a:hover {
+  color: #0a8446;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a:hover .vms-filter-item-all__cross-hover {
+  display: block;
+}
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a:hover .vms-filter-item-all__cross-normal {
+  display: none;
+}
+.spz_5003 .vms-filter-sort[class] .vms-filter-sort__label[class] {
+  color: #6d6f73;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+.spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] {
+  width: 85px;
+}
+.spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] .vms-filter-sort__select[class] {
+  max-width: 100%;
+  color: #1d1d1f;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 18px;
+}
+@media (max-width: 599px) {
+  .spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] {
+    width: 87px;
+  }
+}
+.spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] svg.vms-filter-sort__arrow[class] {
+  fill: #6d6f73;
+}
+.spz_5003 .vms-filter-item--amenities[class],
+.spz_5003 .vms-filter-item--bedrooms[class],
+.spz_5003 .vms-filter-item--location[class] {
+  display: block;
+}
+@media (max-width: 1288.98px) {
+  .spz_5003 .vms-filter-item--amenities[class],
+.spz_5003 .vms-filter-item--bedrooms[class],
+.spz_5003 .vms-filter-item--location[class] {
+    display: none;
+  }
 }/*# sourceMappingURL=5003-Style.css.map */
