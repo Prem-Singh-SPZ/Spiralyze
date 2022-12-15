@@ -1,5 +1,6 @@
 (function () {
     var jQueryInterval = setInterval(function () {
+        checkAvailable();
         if (typeof jQuery != 'undefined') {
             clearInterval(jQueryInterval);
             checkAvailable();
@@ -13,14 +14,17 @@
     });
     function checkAvailable() {
         var checkLoad = setInterval(function () {
-            if (jQuery(".vms-filter__container").length > 0) {
+            if (document.querySelectorAll(".vms-filter__container").length > 0 && document.querySelectorAll('.vms-filter-item-all__filter').length < 1) {
                 clearInterval(checkLoad);
-                jQuery("body").addClass("spz_5003");
+                document.body.classList.add("spz_5003");
 
                 //Header scroll changes
                 document.querySelector("#main .header.header--fluid").classList.remove('header--sticky');
                 headerScrolled();
-                jQuery(window).scroll(function () {
+                // jQuery(window).scroll(function () {
+                //     headerScrolled();
+                // });
+                window.addEventListener("scroll", () => {
                     headerScrolled();
                 });
 
@@ -44,15 +48,16 @@
                 if (window.innerWidth > 1288) {
 
                     if (params.smc) {
-                        var locations = params.smc.split('|').length;
-                        addValue(locations, '.vms-filter__container .vms-filter-item:nth-child(5) button');
+                        var locations = params.smc.split('|');
+                        addValue(removeDuplicates(locations).length, '.vms-filter__container .vms-filter-item:nth-child(5) button');
                     }
                     if (params.sma) {
-                        var amenities = params.sma.split('|').length;
-                        addValue(amenities, '.vms-filter__container .vms-filter-item:nth-child(4) button');
+                        var amenities = params.sma.split('|');
+                        addValue(removeDuplicates(amenities).length, '.vms-filter__container .vms-filter-item:nth-child(4) button');
                     }
                     if (params.smt) {
-                        var type = params.smt.split('|').length;
+                        var typeArr = params.smt.split('|');
+                        var type = removeDuplicates(typeArr).length;
                         if (type == 1) {
                             document.querySelector('.vms-filter__container .vms-filter-item:nth-child(6) button span').innerHTML = document.querySelector('.vms-filter__container .vms-filter-item:nth-child(6) button span').textContent + ':<span class="spz-filter-value"> ' + params.smt + '</span>';
                         }
@@ -89,7 +94,12 @@
                         document.querySelector('.vms-filter-item--dates button').classList.add('active');
                     }
                 }
+                document.querySelector('#vms-filter-all-m-actions-reset').onclick = function () {
+                    location.href = "https://smokymountains.com/search/";
+                };
+
                 document.querySelector('#vms-filter-item-all').insertAdjacentHTML('afterbegin', '<img class=" vms-filter-item-all__filter" src="//res.cloudinary.com/spiralyze/image/upload/v1670854655/SmokyMountains/5003/white-filter.svg" alt="All-filter">')
+
             }
         });
     }
@@ -101,12 +111,16 @@
         const url = location.href;
         if (url !== lastUrl) {
             lastUrl = url;
-            jQuery("body").removeClass("spz_5003");
+            document.body.classList.remove("spz_5003");
             checkAvailable();
         }
     }).observe(document, { subtree: true, childList: true });
 
     //Input fields updates
+    function removeDuplicates(param) {
+        return param.filter((item,
+            index) => param.indexOf(item) === index);
+    }
     function addValue(field, el) {
         document.querySelector(el).insertAdjacentHTML('beforeend', '<span class="spz-filter-value-index"> ' + field + '</span>');
         document.querySelector(el).classList.add('active');
@@ -136,13 +150,13 @@
 
     //Lower header scroll
     function headerScrolled() {
-        let upperHeader = document.querySelector("#main .header.header--fluid");
-        var scroll = jQuery(window).scrollTop();
+        const upperHeader = document.querySelector("#main .header.header--fluid");
+        const scrollPosition = window.scrollY;
         isInViewport(upperHeader);
-        if (scroll >= 72) {
-            jQuery(".vms-filter").addClass("darkHeader");
+        if (scrollPosition >= 72) {
+            document.querySelector(".vms-filter").classList.add("darkHeader");
         } else {
-            jQuery(".vms-filter").removeClass("darkHeader");
+            document.querySelector(".vms-filter").classList.remove("darkHeader");
         }
     }
 })()

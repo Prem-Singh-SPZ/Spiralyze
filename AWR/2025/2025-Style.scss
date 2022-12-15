@@ -664,10 +664,17 @@ body.spz-2025 .product-list-area.fixed-nav-product {
     display: none;
   }
 
-  .error-zipcode.invalid-error {
+  .error-zipcode.invalid-error[class] {
     text-align: center;
     margin: 0 auto;
     position: relative;
+    left: 0;
+
+    @media (max-width:766.98px) {
+      small.error-text[class]{
+        margin-top: 0.5rem;
+      }
+    }
   }
 
   .products-boxes

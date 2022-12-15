@@ -25,7 +25,7 @@
     border-bottom: 1px solid #dce0e0;
 
     position: sticky;
-    top: 0 !important;
+    top: -0.5px !important;
     // @media (max-width: 1023.98px) {
     // }
     // &.darkHeader {
@@ -71,7 +71,8 @@
             }
           }
           border: 0;
-          &:hover, &:active {
+          &:hover,
+          &:active {
             background-color: #eb6b2f;
             border: 0;
           }
@@ -133,7 +134,7 @@
 
           .vms-filter-item-btn__title[class] {
             color: #ffffff;
-            
+
             .spz-filter-value {
               color: #ffffff;
             }
@@ -145,8 +146,8 @@
           line-height: 18px;
           color: #6d6f73;
           @media (max-width: 599.98px) {
-              margin-bottom: 2px;
-            }
+            margin-bottom: 2px;
+          }
           .spz-filter-value {
             color: rgba(29, 29, 31, 1);
             font-weight: 500;
@@ -211,6 +212,9 @@
 
           &:hover {
             color: #0a8446;
+            span.vms-filter-item-all__title[class] {
+              color: #0a8446;
+            }
             .vms-filter-item-all__cross-hover {
               display: block;
             }
@@ -229,15 +233,22 @@
       font-weight: 400;
       font-size: 14px;
       line-height: 18px;
+      // @media (max-width: 991.98px) {
+      margin-right: 4px;
+      // }
     }
     .vms-filter-sort__select-wrapper[class] {
-      width: 85px;
+      width: 90px;
       .vms-filter-sort__select[class] {
         max-width: 100%;
         color: #1d1d1f;
         font-weight: 400;
         font-size: 14px;
         line-height: 18px;
+        padding-right: 18px;
+        &:hover{
+          color: #0a8446;
+        }
       }
       @media (max-width: 599px) {
         width: 87px;
@@ -245,6 +256,7 @@
 
       svg.vms-filter-sort__arrow[class] {
         fill: #6d6f73;
+        right: 7px;
       }
     }
   }

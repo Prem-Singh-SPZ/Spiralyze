@@ -15,13 +15,23 @@ body.spz-1033 .hero-slider .search-bar[class] .search[class] .get-started-btn[cl
 body.spz-1033 .search-box-content .justify-content-center .spz-toll-no{font-family: 'Roboto';font-weight: 400;font-size: 20px;line-height: 28px;
      color: #FFFFFF;display: inline-flex;}
 body.spz-1033 .search-box-content .justify-content-center .spz-toll-no p{color: #FFB600;padding-left: 7px;}
-@media (min-width: 768px) and (max-width: 819.98px) {
-
+@media (max-width: 767px){
+  body.spz-1033 .header-icon[class]{
+    margin-left: 5px!important;
+  }
+}
+@media (max-width: 767px){
+  body.spz-1033 ul.menu[class]{
+    display: flex!important;
+  }
 }
 @media (min-width: 822px) and (max-width: 991px) {
 body.spz-1033 .hero-slider{background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1667297521/AWR/1033/Tablet.png); background-position:calc(100% - -200px) !important}
 }
 @media (max-width: 1024px) {
+  body.spz-1033.sidebar-open[class]{
+    position: relative!important;
+  }
 body.spz-1033 .hero-slider{background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1667297521/AWR/1033/Tablet.png); background-position:calc(100% - 0px)}
 }
 @media (max-width: 821px) {
@@ -463,6 +473,12 @@ body.spz-1033 hos-hero-banner {background-color: #0D3D64;  display: block;}
   line-height: 18px;
   margin-left: 8px !important;
   padding: 0 22.5px !important;
+}
+@media (max-width: 340.98px) {
+  body.spz-1001.spz-1033 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .get-started-btn[class] {
+    width: 55%!important;
+    padding: 0 1.5px !important;
+  }
 }
 .spz-1001 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .get-started-btn ~ [data-lastpass-icon-root] {
   display: none;

@@ -25,7 +25,7 @@
   border-bottom: 1px solid #dce0e0;
   position: -webkit-sticky;
   position: sticky;
-  top: 0 !important;
+  top: -0.5px !important;
 }
 .spz_5003 .vms-filter__container[class] {
   height: 72px;
@@ -200,6 +200,9 @@
 .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a:hover {
   color: #0a8446;
 }
+.spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a:hover span.vms-filter-item-all__title[class] {
+  color: #0a8446;
+}
 .spz_5003 .vms-filter__container[class] .vms-filter-item[class].vms-reset-all a:hover .vms-filter-item-all__cross-hover {
   display: block;
 }
@@ -211,9 +214,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  margin-right: 4px;
 }
 .spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] {
-  width: 85px;
+  width: 90px;
 }
 .spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] .vms-filter-sort__select[class] {
   max-width: 100%;
@@ -221,6 +225,10 @@
   font-weight: 400;
   font-size: 14px;
   line-height: 18px;
+  padding-right: 18px;
+}
+.spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] .vms-filter-sort__select[class]:hover {
+  color: #0a8446;
 }
 @media (max-width: 599px) {
   .spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] {
@@ -229,6 +237,7 @@
 }
 .spz_5003 .vms-filter-sort[class] .vms-filter-sort__select-wrapper[class] svg.vms-filter-sort__arrow[class] {
   fill: #6d6f73;
+  right: 7px;
 }
 .spz_5003 .vms-filter-item--amenities[class],
 .spz_5003 .vms-filter-item--bedrooms[class],

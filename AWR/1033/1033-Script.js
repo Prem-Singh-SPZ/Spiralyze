@@ -536,7 +536,7 @@ function loadTest1033() {
         if (document.querySelectorAll('.hero-slider').length > 0  && document.querySelector('button[angularticscategory="Header-Login"]')) {
             jQuery('body').addClass(ENV_1033.class)
             if (document.querySelectorAll('.hc-spz').length == 0) {
-                jQuery('.search-box-content .justify-content-center').prepend(`<div class="head-content hc-spz"> <h3 _ngcontent-c8="">With Us, Your Home's Protected</h3><h5 _ngcontent-c8="">Make the Smart Choice</h5></div>`)
+                jQuery('.search-box-content .justify-content-center').prepend(`<div class="head-content hc-spz"> <h3 _ngcontent-c8="">With Us, Your Home&#8217;s Protected</h3><h5 _ngcontent-c8="">Make the Smart Choice</h5></div>`)
                 jQuery('.search-box-content').after('<div class="mobile-spz-img"><img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1033/Mobile.jpg" alt="Hero Image" title="Hero Image"/></div>')
                 jQuery('.zip-code-search-box').after('<div class="spz-toll-no">or call <p>855-800-5195</p></div>')
                 jQuery('input.search-zipcode').each(function (index, value) { jQuery(this).attr('placeholder', '') })
