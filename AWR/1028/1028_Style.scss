@@ -98,7 +98,6 @@
   margin: 0 auto;
   background: #f8f8f8;
   border-radius: 8px;
-  max-width: 100%;
   margin-bottom: 7px;
 }
 
@@ -1209,6 +1208,17 @@
 }
 
 .spz-1028 {
+  @media (max-width: 1265px) {
+    &.sidebar-open[class] {
+      position: relative !important;
+    }
+  }
+
+  hos-navigation-bar .branding[class] .partner-logo[class]::before {
+    @media (max-width: 1024.98px) {
+      margin-top: 10px;
+    }
+  }
   hos-hero-banner .hero-slider[class] {
     .slider[class] {
       max-height: 456px;
@@ -1335,6 +1345,7 @@
                 line-height: 24px;
                 display: flex;
                 align-items: flex-start;
+                white-space: nowrap;
 
                 &::after {
                   content: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1001/chevron-right.svg");

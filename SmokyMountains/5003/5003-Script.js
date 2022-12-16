@@ -100,6 +100,10 @@
 
                 document.querySelector('#vms-filter-item-all').insertAdjacentHTML('afterbegin', '<img class=" vms-filter-item-all__filter" src="//res.cloudinary.com/spiralyze/image/upload/v1670854655/SmokyMountains/5003/white-filter.svg" alt="All-filter">')
 
+                if (document.body.classList.contains('safari')) {
+                    document.querySelector('#vms-filter-item-all').addEventListener("click", function () { document.body.scrollTop = 0; });
+                }
+
             }
         });
     }

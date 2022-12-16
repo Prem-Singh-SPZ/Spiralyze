@@ -9,9 +9,10 @@ function loadTest1028() {
       mutations.forEach(function (mutation) {
         if (mutation.attributeName === "class") {
           // var attributeValue = $(mutation.target).prop(mutation.attributeName);
-          if (!document.body.classList.contains("spz-1028")) {
-            document.body.classList.add("spz-1028");
+          if (document.body.classList.contains("spz-1028")) {
             load_1028_Test();
+            Google_review();
+            loadedSlick
           }
         }
       });
