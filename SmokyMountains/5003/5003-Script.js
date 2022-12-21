@@ -104,6 +104,16 @@
                     document.querySelector('#vms-filter-item-all').addEventListener("click", function () { document.body.scrollTop = 0; });
                 }
 
+                document.querySelectorAll('.vms-filter-dropdown.vms-filter-dropdown--amenities .vms-filter-dropdown-checkboxes  .vms-filter-dropdown-checkboxes__item').forEach(function (v, i) {
+                    checkBox = v.querySelector('label').addEventListener('click', event => {
+                        if (v.querySelector('input').checked && !v.classList.contains('check-spz')) {
+                            v.classList.add('check-spz');
+                            if(v.querySelector('input[data-ft=sma]')){
+                                v.querySelector('input[data-ft=sma]').click();
+                            }
+                        }
+                    }, {once : true});
+                });
             }
         });
     }

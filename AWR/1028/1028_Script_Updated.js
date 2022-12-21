@@ -41,6 +41,8 @@
     }
 
     function loadTest1001() {
+        load_1028_Test();
+
         var triageInt = setInterval(function () {
             if (jQuery('main.content hos-category').length > 0 && jQuery('.spz-protection-section').length == 0) {
                 jQuery('main.content hos-category').append('<div class="spz-protection-section">\
@@ -101,14 +103,6 @@
                         </div>\
                     </div>\
                     <div class="feedback-item">\
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1001/carol-m.png" alt="Carol M." class="feedback-image"/>\
-                        <div class="feedback-info">\
-                            <div class="feedback-copy">My neighbors spent thousands for the same work.</div>\
-                            <div class="person-name">Carol M.</div>\
-                            <div class="person-location">Oklahoma - Sewer Line Blockage</div>\
-                        </div>\
-                    </div>\
-                    <div class="feedback-item">\
                         <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1001/theodora-d.png" alt="Theodora D." class="feedback-image"/>\
                         <div class="feedback-info">\
                             <div class="feedback-copy">You saved us thousands!</div>\
@@ -116,6 +110,14 @@
                             <div class="person-location">Iowa - Leaking Valve</div>\
                         </div>\
                     </div>\
+                    <div class="feedback-item">\
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1001/carol-m.png" alt="Carol M." class="feedback-image"/>\
+                    <div class="feedback-info">\
+                        <div class="feedback-copy">My neighbors spent thousands for the same work.</div>\
+                        <div class="person-name">Carol M.</div>\
+                        <div class="person-location">Oklahoma - Sewer Line Blockage</div>\
+                    </div>\
+                </div>\
                 </div>\
             </div>\
             <div class="companies-section">\
@@ -177,8 +179,6 @@
                                 '
                         ;
                 }
-                load_1028_Test();
-
                 jQuery('.spz-button-submit').click(function () {
                     jQuery('.search-bar .search .get-started-btn').click()
                     var errorMoved = setInterval(function () {
@@ -218,9 +218,10 @@
                         }
                     })
                 });
-
+                load_1028_Test();
             }
         }, 100);
+        load_1028_Test();
 
         slickLib.onload = feedbackSlick;
 
@@ -318,6 +319,7 @@
                     if (mutation.attributeName === "class") {
                         var attributeValue = $(mutation.target).prop(mutation.attributeName);
                         Google_review();
+                        // load_1028_Test();
                     }
                 });
             });
@@ -504,14 +506,16 @@
                     break;
                 case "https://www.awrusa.com/philadelphia/":
                     document.querySelector("hos-hero-banner ngu-item .bannerStyle").classList.add('PH');
-                    document.querySelector(".plans-wrap").classList.add('plans-wrap-phil');
+                    if (document.querySelectorAll(".plans-wrap").length > 0) {
+                        document.querySelector(".plans-wrap").classList.add('plans-wrap-phil');
+                    }
                     break;
             }
         }
 
 
         if (document.querySelectorAll("hos-partner-detail .partner-section section.page-wrap .partner-card .card header img").length > 0) {
-            if (document.querySelectorAll("#partner-detail-spz").length == 0) {
+            if (document.querySelectorAll("#partner-detail-spz").length == 0 && document.querySelectorAll(".spz-protection-section").length > 0) {
                 document.querySelector(".spz-protection-section").insertAdjacentHTML("afterend", '<div id="partner-detail-spz"></div>');
                 moveElement('hos-partner-detail', '#partner-detail-spz');
             }
@@ -519,13 +523,25 @@
                 "hos-partner-detail .partner-section section.page-wrap .partner-card:first-child .card header img"
             ).setAttribute(
                 "src",
-                "https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Group_20109.svg"
+                "https://res.cloudinary.com/spiralyze/image/upload/v1663566290/AWR/1028/Assets/Normal/Group_20109.svg"
+            );
+            document.querySelector(
+                "hos-partner-detail .partner-section section.page-wrap .partner-card:first-child .card header img"
+            ).setAttribute(
+                "alt",
+                "Call"
             );
             document.querySelector(
                 "hos-partner-detail .partner-section section.page-wrap .partner-card:last-child .card header img"
             ).setAttribute(
                 "src",
-                "https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1028/Assets/Compressed/Group_20110.svg"
+                "https://res.cloudinary.com/spiralyze/image/upload/v1663566289/AWR/1028/Assets/Normal/Group_20110.svg"
+            );
+            document.querySelector(
+                "hos-partner-detail .partner-section section.page-wrap .partner-card:last-child .card header img"
+            ).setAttribute(
+                "alt",
+                "Homeowner Hub"
             );
             const liElements = document.querySelectorAll("hos-partner-detail .partner-section section.page-wrap .partner-card");
 
