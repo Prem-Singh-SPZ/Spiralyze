@@ -3,6 +3,13 @@ body.spz_5004[class] {
     display: none;
   }
 
+  #search-modal-wrapper {
+    #modal-background,
+    .vms-filter-all {
+      z-index: 1;
+    }
+  }
+
   .vms-results__title[class] {
     margin-top: 28px;
     @media (min-width: 1023.98px) {
@@ -12,7 +19,14 @@ body.spz_5004[class] {
       margin-top: 24px;
     }
   }
-
+  .vms-filter-sort__select[class]{
+    z-index: 1;
+  }
+  // #results-container.vms-results__container[class] {
+  //   @media (min-width: 1023.98px) {
+  //     display: flex!important;
+  //   }
+  // }
   .top-ranked[class] {
     h6 {
       color: #454545;
@@ -88,6 +102,7 @@ body.spz_5004[class] {
           margin: 16px;
           display: flex;
           flex-direction: column;
+          flex-grow: 1;
           @media (max-width: 599.98px) {
             margin: 16px 12px;
             flex-grow: 1;
@@ -165,6 +180,7 @@ body.spz_5004[class] {
               font-weight: 400;
               font-size: 16px;
               line-height: 20px;
+              // text-transform: lowercase;
               strong {
                 color: #2474de;
                 font-weight: 700;
@@ -307,7 +323,10 @@ body.spz_5004[class] {
           bottom: -30px;
           @media (max-width: 599.98px) {
             bottom: -26px;
-            margin-left: 0px;
+            margin-left: 4px;
+          }
+          @media (min-width: 599.98px) and (max-width: 999.98px) {
+            margin-left: 8px;
           }
 
           li[role] {
@@ -315,8 +334,11 @@ body.spz_5004[class] {
             height: 2px;
             margin: 0;
             padding: 5px 0;
-            @media (max-width: 999.98px) {
+            @media (max-width: 599.98px) {
               width: 9.3%;
+            }
+            @media (min-width: 599.98px) and (max-width: 999.98px) {
+              width: 9.8%;
             }
             button[role] {
               width: 100%;
@@ -330,10 +352,16 @@ body.spz_5004[class] {
               }
             }
 
-            &.slick-active[class],
-            &:hover {
+            &.slick-active[class] {
               button[role] {
                 background: #0a8446;
+              }
+            }
+            @media (min-width: 1023.98px) {
+              &:hover {
+                button[role] {
+                  background: #0a8446;
+                }
               }
             }
           }

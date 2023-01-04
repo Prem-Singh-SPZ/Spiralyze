@@ -28,7 +28,9 @@
         var checkLoad = setInterval(function () {
             if (jQuery("#results-container").find('.vms-results-item') && propCardHTML.innerHTML != undefined) {
                 jQuery("body").addClass("spz_5004");
-                document.querySelector('#results-container').insertAdjacentHTML('beforebegin', `<div class="featured-products-dummy" style="display:none;"></div>`);
+                if (document.querySelectorAll('.featured-products-dummy').length < 1) {
+                    document.querySelector('#results-container').insertAdjacentHTML('beforebegin', `<div class="featured-products-dummy" style="display:none;"></div>`);
+                }
                 if (document.querySelectorAll('.featured-products-dummy .vms-results-item').length < 1) {
                     document.querySelector('.featured-products-dummy').insertAdjacentHTML('afterbegin', propCardHTML.innerHTML);
                 }
@@ -55,9 +57,11 @@
                             meta.remove();
                         })
                         document.querySelectorAll('.featured-products-spz .spz-prop-card').forEach(function (v, i) {
-                            v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item__price').innerHTML = v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item__price').innerHTML.replace('/Night ', ' night');
-                            let ratings = v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item-rating .vms-results-item-rating__title').textContent.split('/');
-                            v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item-rating .vms-results-item-rating__title').textContent = ratings[0];
+                            // v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item__price').innerHTML = v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item__price').innerHTML.replace('/Night ', '/night');
+                            if (v.querySelectorAll('.spz-card-content .vms-results-item__meta .vms-results-item-rating .vms-results-item-rating__title').length > 0) {
+                                let ratings = v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item-rating .vms-results-item-rating__title').textContent.split('/');
+                                v.querySelector('.spz-card-content .vms-results-item__meta .vms-results-item-rating .vms-results-item-rating__title').textContent = ratings[0];
+                            }
 
                             v.addEventListener('click', event => {
                                 v.querySelector('.spz-card-img a').click();
@@ -66,32 +70,13 @@
                         if (document.querySelector('.featured-products-spz .spz-prop-card')) {
                             clearInterval(checkLoad);
                             initSlider();
+
                         }
-                        waitForElm('.featured-products-spz.slick-initialized .next-arrow').then(function () {
-                            var observer = new MutationObserver(function (mutations) {
-                                mutations.forEach(function (mutation) {
-                                    if (mutation.attributeName === 'class') {
-                                        if (document.querySelector('.featured-products-spz.slick-initialized .next-arrow').classList.contains('slick-disabled')) {
-                                            document.querySelector('.featured-products-spz.slick-initialized .slick-list').classList.add('right-shadow-disable');
-                                        }
-                                        else {
-                                            document.querySelector('.featured-products-spz.slick-initialized .slick-list').classList.remove('right-shadow-disable');
-                                        }
-                                    }
-                                });
-                            });
-
-                            // Notify me of style changes
-                            var observerConfig = {
-                                attributes: true,
-                                attributeFilter: ["class"]
-                            };
-
-                            var targetNode = document.querySelector('.featured-products-spz.slick-initialized .next-arrow');
-                            observer.observe(targetNode, observerConfig);
-                        });
                     }
                 }
+                document.querySelector('#vms-filter-all-m-actions-reset').onclick = function () {
+                    location.href = "https://smokymountains.com/search/";
+                };
             }
         }, 100);
     }
@@ -145,6 +130,29 @@
             document.querySelector('.featured-products-spz').style.opacity = 1;
             document.querySelector('.featured-products-spz').style.height = 'auto';
         }
+        waitForElm('.featured-products-spz.slick-initialized .next-arrow').then(function () {
+            var observer = new MutationObserver(function (mutations) {
+                mutations.forEach(function (mutation) {
+                    if (mutation.attributeName === 'class') {
+                        if (document.querySelector('.featured-products-spz.slick-initialized .next-arrow').classList.contains('slick-disabled')) {
+                            document.querySelector('.featured-products-spz.slick-initialized .slick-list').classList.add('right-shadow-disable');
+                        }
+                        else {
+                            document.querySelector('.featured-products-spz.slick-initialized .slick-list').classList.remove('right-shadow-disable');
+                        }
+                    }
+                });
+            });
+
+            // Notify me of style changes
+            var observerConfig = {
+                attributes: true,
+                attributeFilter: ["class"]
+            };
+
+            var targetNode = document.querySelector('.featured-products-spz.slick-initialized .next-arrow');
+            observer.observe(targetNode, observerConfig);
+        });
     }
     async function getData() {
         let url = 'https://smokymountains.com/search/?srt=RHF';

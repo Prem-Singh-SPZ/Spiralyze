@@ -1,0 +1,200 @@
+.spz-2014-v1 {
+  .vl-book {
+    bottom: -300px;
+    transition: all 0.5s cubic-bezier(0.55, 0.09, 0.68, 0.53) !important;
+  }
+  &:not(.form-sticky-spz) {
+    .cal-ico-spz {
+      display: none;
+    }
+    .spz_container.spz_header {
+      display: none;
+    }
+  }
+  &.form-sticky-spz {
+    #main {
+      .vl-main.sticky-footer-spz {
+        .vl-book {
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          position: fixed;
+          background: #fff;
+          left: 0;
+          bottom: 0;
+          margin-bottom: 0;
+          width: 100%;
+          height: 88px;
+          z-index: 999;
+
+          .vl-book__header {
+            padding: 0;
+
+            .vl-book__title {
+              display: none !important;
+            }
+
+            .vl-book__price {
+              display: none !important;
+              flex-direction: column;
+              font-family: "Segoe UI", sans-serif;
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 26px;
+              color: #0a8446;
+              text-align: center;
+              margin-right: 0;
+
+              span {
+                font-family: "Segoe UI", sans-serif;
+                font-style: normal;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 24px;
+
+                color: #515365;
+              }
+            }
+          }
+
+          .vl-book__content {
+            display: flex;
+
+            .vl-book__form {
+              display: flex;
+              align-items: center;
+              margin-bottom: 0;
+
+              .vl-book-field {
+                position: relative;
+                width: 240px;
+                height: 42px;
+                margin-bottom: 0;
+
+                label,
+                .vl-book-field__label {
+                  display: none;
+                }
+
+                .vl-book-field__input,
+                .vl-book-field__select {
+                  width: 240px;
+                  height: 42px;
+                  border: 1px solid #dce0e0;
+                  box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
+                  border-radius: 8px;
+                }
+                #book-form-arrival {
+                  border-radius: 8px 0px 0px 8px;
+                }
+                #book-form-departure {
+                  border-radius: 0px 8px 8px 0px;
+                }
+
+                .vl-book-field__input {
+                  padding-left: 34px;
+
+                  ::placeholder {
+                    color: #a2a3a8;
+                    opacity: 1;
+                  }
+
+                  :-ms-input-placeholder {
+                    color: #a2a3a8;
+                  }
+
+                  ::-ms-input-placeholder {
+                    color: #a2a3a8;
+                  }
+                }
+
+                .vl-book-field__select {
+                  padding-left: 34px;
+                }
+
+                .cal-ico-spz {
+                  display: inline;
+                  position: absolute;
+                  top: 13.5px;
+                  left: 14px;
+                }
+              }
+
+              .vl-book__submit.bttn {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 156px;
+                height: 42px;
+                background: #0a8446;
+                border-radius: 8px;
+
+                #submit-button-text {
+                  font-family: "Segoe UI", sans-serif;
+                  font-weight: 400;
+                  font-size: 18px;
+                  line-height: 24px;
+                }
+
+                .arrow-ico-spz {
+                  width: 21px;
+                  height: 21px;
+                  margin-left: 11px;
+                }
+
+                &:hover,
+                &:focus,
+                &:active {
+                  background: #086c39;
+                }
+              }
+
+              > .vl-book-field {
+                margin-left: 24px;
+                margin-right: 24px;
+              }
+            }
+
+            // MSG: Enter dates to check availability.
+            .vl-book__notice {
+              display: none !important;
+            }
+          }
+
+          #total-details-wrapper {
+            display: none !important;
+          }
+
+          .spz_container.spz_header {
+            display: block;
+            .review_container {
+              display: flex;
+              flex-direction: column;
+              align-items: center;
+
+              .vl-overview-rating__stars {
+                margin-right: 0;
+                .vms-results-item-rating__star {
+                  margin: 0;
+                  width: 24px;
+                  height: 24px;
+                }
+              }
+              .spz-review-text {
+                font-style: normal;
+                font-size: 14px;
+                line-height: 18px;
+                color: #454545;
+                strong {
+                  color: #0a8446;
+                  margin-right: 4px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
