@@ -18,6 +18,7 @@ body.spz-3025 {
     }
     .spz-pname {
       padding: 20px;
+      padding-bottom: 4px;
 
       .left-box.tab-width-100[class] {
         .program-head {
@@ -29,6 +30,7 @@ body.spz-3025 {
               font-weight: 700;
               font-size: 28px;
               line-height: 36px;
+              margin-bottom: 2px;
             }
           }
         }
@@ -37,6 +39,7 @@ body.spz-3025 {
           .program-name {
             flex-direction: row;
             justify-content: space-between;
+            margin-top: 0;
             div:first-child {
               display: none;
             }
@@ -55,12 +58,15 @@ body.spz-3025 {
                 span {
                   font-weight: 900;
                   font-size: 14px;
+                  padding-left: 2px;
+                  padding-right: 6px;
                 }
               }
             }
 
             .rating-average[class] .rating-star[class] {
               color: #ffb600;
+              display: none;
             }
 
             .terms-btn {
@@ -70,6 +76,7 @@ body.spz-3025 {
               font-weight: 400;
               font-size: 11px;
               line-height: 20px;
+              padding-right: 0;
             }
           }
         }
@@ -77,9 +84,25 @@ body.spz-3025 {
     }
   }
 
+  .padding-testimonial[class] {
+    padding-top: 0;
+  }
   //Price section before scroll-spy-id
   #general-section.content-block.content-section.shaded-white.general-section.general-desc-section.fs-restrict-dead-clicks[class] {
+    margin-bottom: 0 !important;
+    .banner-image-div[class] {
+      height: 254px !important;
+
+      img.banner-img[class] {
+        height: 246px;
+        padding-right: 20px;
+      }
+    }
+
     .page-wrap.justify-content-gen-sec.image-mobile-overlay[class] {
+      > .content-box[class] {
+        padding-bottom: 18px;
+      }
       .content-section.detail-header-section[class] {
         display: none;
       }
@@ -98,10 +121,19 @@ body.spz-3025 {
           #f5f5f5;
         border-top: 1px solid rgba(13, 61, 100, 0.97);
         padding: 10px 20px 20px;
+
+        > div[class] {
+          max-width: 320px;
+          margin: auto;
+        }
       }
       .enroll-box.enroll-now-box[class] {
         .enroll-now-btn[class] {
-          margin-top: 0;
+          margin-top: 5px;
+          padding-right: 24px;
+          &::after {
+            margin-left: 16px;
+          }
         }
       }
 
@@ -122,11 +154,11 @@ body.spz-3025 {
           bottom: -40px;
           background-color: transparent !important;
           border: none !important;
-          left: 0;
+          left: -18px;
           &::before {
             content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
             left: -24px;
-            top: -6px;
+            top: -8px;
           }
         }
         .search-zipcode-area[class] {
@@ -135,11 +167,19 @@ body.spz-3025 {
             justify-content: left !important;
             // margin-bottom: 12px;
             .search-field[class] {
-              margin-left: 0 !important;
-              max-width: 60%;
+              max-width: 179px;
+              margin: 0 24px 18px 0 !important;
+
               input.search-zipcode[class] {
                 height: 56px !important;
-                border-radius: 0 !important;
+                border-radius: 3px !important;
+                border: 1px solid #aaaaaa;
+                text-align: left !important;
+                color: #757575;
+                font-weight: 400 !important;
+                font-size: 18px !important;
+                line-height: 26px;
+                padding: 0 15px !important;
               }
             }
 
@@ -159,6 +199,10 @@ body.spz-3025 {
                 width: 100%;
                 height: 100%;
               }
+
+              &:focus {
+                box-shadow: none;
+              }
             }
           }
         }
@@ -173,15 +217,28 @@ body.spz-3025 {
               font-size: 28px;
               line-height: 36px;
               color: #ffffff;
+              padding-top: 4px;
+              small[class] {
+                font-size: 24px;
+              }
             }
           }
         }
 
         .selected-location-box[class] {
+          padding-top: 4px;
           label[class],
           span.selected-area-text[class] {
             color: #ffffff;
           }
+
+          span.change-zip[class] {
+            margin-left: 1px;
+          }
+        }
+
+        .unavailable-block.MT-15[class] {
+          margin-top: 5px !important;
         }
       }
     }
@@ -192,6 +249,8 @@ body.spz-3025 {
     .page-wrap.program-content[class] {
       .spz-desc-title {
         border-bottom: 1px dashed #dadada;
+        margin-bottom: 20px;
+        padding-bottom: 12px;
         h6 {
           font-family: "Roboto";
           font-style: normal;
@@ -204,15 +263,27 @@ body.spz-3025 {
 
       .description-heading-text-content[class] {
         border-bottom: 1px solid #dadada;
+        padding-bottom: 18px;
+
+        h1 {
+          line-height: 26px;
+        }
       }
 
       hos-product-covered-repairs .covered-repair-section[class] {
         div.bg-covered-repair-cls[class] {
           border-bottom: 1px solid #dadada;
+          padding-top: 2px;
+
+          .covered-repairs[class] {
+            padding-top: 10px;
+            padding-bottom: 6px;
+          }
         }
         article[class] {
           h2.section-head-title {
             border-bottom: 1px dashed #dadada;
+            padding-bottom: 22px;
           }
         }
       }
@@ -239,20 +310,207 @@ body.spz-3025 {
             rgba(13, 61, 100, 0.97)
           ),
           #f5f5f5;
+        padding: 20px;
+        > div[class],
+        > button[class] {
+          max-width: 320px;
+          margin: auto;
+          display: block !important;
+          margin-left: auto !important;
+        }
       }
 
-      .zipcode-searched-mobile[class]{
-        .pricing-box[class]{
-          flex-direction: column;
-          width: 100%;
-          padding: 20px;
+      .no-zipcode-search-mobile[class] {
+        .search-zipcode-area[class] {
+          .PD-0[class] {
+            display: none;
+          }
+          hos-google-places form.search[class] {
+            flex-wrap: nowrap;
+            justify-content: left !important;
+            width: 100%;
+            // margin-bottom: 12px;
+            .search-field[class] {
+              margin-left: 0 !important;
+              margin-bottom: 20px;
+              margin-right: 24px !important;
+              max-width: 179px;
+              width: 100%;
+              border: 0;
+              // margin: 0 24px 18px 0 !important;
 
-          .pricing-not-leak[class]{
+              input.search-zipcode[class] {
+                height: 56px !important;
+                border-radius: 3px !important;
+                border: 1px solid #aaaaaa;
+                text-align: left !important;
+                color: #757575;
+                font-weight: 400 !important;
+                font-size: 18px !important;
+                line-height: 26px;
+                padding: 0 15px !important;
+                width: 100% !important;
+              }
+            }
 
+            .product-dtls-zip-err-text[class] {
+              left: -8px;
+              margin-top: 52px;
+            }
+
+            button.product-page-search[class] {
+              width: 45px !important;
+              height: 34px !important;
+              background: transparent;
+              padding: 0 !important;
+              outline: none !important;
+
+              img.get-started-btn-icon {
+                width: 100%;
+                height: 100%;
+              }
+
+              &:focus {
+                box-shadow: none;
+              }
+            }
           }
 
-          .MR-15[class]{
+          .div-top[class] {
+            justify-content: flex-start !important;
+            top: -2px;
+            .search-bar[class] {
+              left: 5px !important;
+            }
+            > i.fa-times[class] {
+              bottom: -1px;
+              background-color: transparent !important;
+              border: none !important;
+              left: 21px;
+              &::before {
+                content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
+                left: -24px;
+                top: -6px;
+              }
+            }
+          }
+        }
+
+        .ga-track-enroll-now.enroll-now-btn[class] {
+          padding-right: 24px;
+          margin-top: 11px;
+          &::after {
+            margin-left: 16px;
+          }
+        }
+      }
+
+      .zipcode-searched-mobile[class] {
+        .pricing-box[class] {
+          flex-direction: column;
+          width: 100%;
+          // padding: 20px;
+
+          .pricing-not-leak[class] {
             width: 100%;
+            margin: 0;
+
+            .pricing-text[class] {
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 28px;
+              line-height: 36px;
+              color: #ffffff;
+              padding-top: 4px;
+              small[class] {
+                font-weight: 700;
+                font-size: 24px;
+                line-height: 36px;
+              }
+            }
+
+            div:last-child {
+              padding-top: 4px;
+              .pricing-section-label,
+              span.selected-area-text[class] {
+                font-family: "Roboto";
+                font-style: normal;
+                font-weight: 400 !important;
+                font-size: 16px !important;
+                line-height: 24px;
+                color: #ffffff;
+              }
+
+              span.change-zip[class] {
+                font-size: 16px !important;
+                margin-left: 1px;
+              }
+            }
+          }
+
+          .MR-15[class] {
+            width: 100%;
+            margin-right: 0 !important;
+            margin-top: 8px;
+
+            button[class] {
+              height: 56px;
+              width: 100%;
+              background: #ec7923;
+              border-radius: 5px;
+              font-family: "Roboto";
+              font-style: normal;
+              font-weight: 700;
+              font-size: 18px;
+              line-height: 26px;
+              padding-right: 16px;
+              &::after {
+                content: "\f054";
+                font-family: FontAwesome;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 1;
+                font-size: 11px;
+                margin-left: 16px;
+              }
+            }
+          }
+        }
+
+        .unavailable-block[class] {
+          margin-top: 0 !important;
+          label.error-text[class] {
+            text-align: left;
+            width: 100%;
+            margin-top: 0px;
+            margin-left: 4px;
+            margin-bottom: 8px !important;
+          }
+          .address-text[class] {
+            text-align: left;
+            margin-left: 4px;
+            margin-bottom: 8px;
+
+            label[class],
+            span.selected-area-text[class] {
+              font-family: Roboto;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 16px;
+              color: #757575;
+            }
+
+            span.change-area-link[class] {
+              text-decoration: underline;
+            }
+          }
+          .ga-track-enroll-now.enroll-now-btn[class] {
+            padding-right: 24px;
+            margin-top: 2px;
+            &::after {
+              margin-left: 16px;
+            }
           }
         }
       }

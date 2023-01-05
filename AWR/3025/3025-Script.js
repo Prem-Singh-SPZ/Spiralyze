@@ -10,15 +10,24 @@ const TEST_ENV = {
 
 
 function loadTest() {
-    var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
-    var cookieValue = "1";
-    var myDate = new Date();
-    myDate.setDate(myDate.getDate() + 30);
-    document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+    console.log(window.innerWidth);
+    if (window.innerWidth <= 766) {
 
-    console.log('Test is running...')
-    // Set test class
-    document.body.classList.add(TEST_ENV.class);
+        var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
+        var cookieValue = "1";
+        var myDate = new Date();
+        myDate.setDate(myDate.getDate() + 30);
+        document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+
+        // console.log('Test is running...')
+        // Set test class
+        document.body.classList.add(TEST_ENV.class);
+        staticChanges();
+        document.body.classList.add("loaded");
+    }
+}
+
+function staticChanges() {
     waitForElm('.mob-gen-section .program-head .program-name').then(function (elm) {
         if (document.querySelectorAll('.spz-pname').length == 0) {
             document.querySelector('hos-breadcrumb.detail-header-breadcrum').insertAdjacentHTML('beforeend', `<div class='spz-pname'> <div>`);
@@ -29,48 +38,90 @@ function loadTest() {
             window.onscroll = function (e) {
                 contentScroll();
             }
-
-            // document.body.addEventListener('click', contentScroll);
+            setTimeout(() => {
+                clearInterval(contentInt);
+            }, 5000);
         }
     });
     waitForElm('.spz-pname .rating-link .rating-average span.rating-label').then(function (elm) {
         if (document.querySelectorAll('.spz-pname .rating-link .rating-average span.rating-label.changed').length == 0) {
             document.querySelector('.spz-pname .rating-link .rating-average span.rating-label').innerHTML = '<span>4.9</span>' + document.querySelector('.spz-pname .rating-link .rating-average span.rating-label').innerHTML.split(')')[0] + ' reviews)';
+            document.querySelector('.spz-pname .rating-link .rating-average').insertAdjacentHTML('afterbegin','<img class="star-rating-icon" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1672927987/AWR/3025/assets/Star-rating.svg" alt="Ratings">');
             document.querySelector('.spz-pname .rating-link .rating-average span.rating-label').classList.add('changed');
         }
     });
-    document.body.classList.add("loaded");
 }
 
 function contentScroll() {
-    console.log('Interval is running...')
+    if (window.innerWidth <= 766) {
 
-    if (document.querySelectorAll('.spz-desc-title').length > 0) {
-        clearInterval(contentInt);
-    }
+        console.log('Interval is running...')
 
-    if (document.querySelectorAll('.spz-desc-title').length == 0 && document.querySelectorAll('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').length > 0) {
-        document.querySelector('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').insertAdjacentHTML('afterbegin', `<div class='spz-desc-title'> <h6>Product Description</h6> <div>`);
+        if (document.querySelectorAll('.spz-desc-title').length > 0) {
+            clearInterval(contentInt);
+            console.log('Interval is stopped...')
+        }
 
-        document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content').insertAdjacentHTML('beforeend', `<div class='spz-pricing-parent'> <div>`);
-        clearInterval(contentInt);
+        if (document.querySelectorAll('.spz-desc-title').length == 0 && document.querySelectorAll('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').length > 0) {
+            document.querySelector('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').insertAdjacentHTML('afterbegin', `<div class='spz-desc-title'> <h6>Product Description</h6> <div>`);
 
-    }
-    if (document.querySelectorAll('.general-section .selected-zipcode-area > .page-wrap.program-content .zipcode-searched').length > 0) {
-        moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .zipcode-searched', '.spz-pricing-parent');
-    }
-    if (document.querySelectorAll('.general-section .selected-zipcode-area > .page-wrap.program-content .no-zipcode-search').length > 0) {
-        moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .no-zipcode-search', '.spz-pricing-parent');
-        document.querySelector('.no-zipcode-search .search-zipcode-area form button').innerHTML = '<img class="get-started-btn-icon" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Get-started-icon.svg" alt="Get Started">';
-    }
-    if (document.querySelectorAll('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-box.enroll-now-box').length > 0) {
-        moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-box.enroll-now-box', '.spz-pricing-parent');
-    }
+            document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content').insertAdjacentHTML('beforeend', `<div class='spz-pricing-parent'> <div>`);
+            clearInterval(contentInt);
 
-    if (document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0').length > 0 && document.querySelectorAll('.pricing-section-label').length == 0) {
-        document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0').insertAdjacentHTML('afterbegin', '<label class="pricing-section-label">Based on your location</label>');
+            document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn').innerText = 'Get Started';
+            document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn').setAttribute('title', 'Get Started');
+        }
+        if (document.querySelectorAll('.general-section .selected-zipcode-area > .page-wrap.program-content .zipcode-searched').length > 0) {
+            moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .zipcode-searched', '.spz-pricing-parent');
+        }
+        if (document.querySelectorAll('.general-section .selected-zipcode-area > .page-wrap.program-content .no-zipcode-search').length > 0) {
+            moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .no-zipcode-search', '.spz-pricing-parent');
+            document.querySelector('.no-zipcode-search .search-zipcode-area form button').innerHTML = '<img class="get-started-btn-icon" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Get-started-icon.svg" alt="Get Started">';
+        }
+        if (document.querySelectorAll('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-box.enroll-now-box').length > 0) {
+            moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-box.enroll-now-box', '.spz-pricing-parent');
+        }
+
+        if (document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0').length > 0 && document.querySelectorAll('.pricing-section-label').length == 0) {
+            document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0').insertAdjacentHTML('afterbegin', '<label class="pricing-section-label">Based on your location</label>');
+            document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0 .selected-area-text').innerText = document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0 .selected-area-text').innerText + '.';
+
+            document.querySelector('.selected-zipcode-area > .page-wrap.program-content .enroll-now-btn-mob').innerText = 'Get Started';
+            document.querySelector(' .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn-mob').setAttribute('title', 'Get Started');
+        }
+
+        if (document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content > .no-zipcode-search-mobile').length > 0 && document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content > .no-zipcode-search-mobile .ga-track-enroll-now').length == 0) {
+            document.querySelector(' .selected-zipcode-area  .page-wrap.program-content > .no-zipcode-search-mobile').insertAdjacentHTML('beforeend', `<button _ngcontent-c9="" class="btn ga-track-enroll-now enroll-now-btn skiptranslate ng-tns-c9-0 disabled-btn ng-star-inserted" title="Get Started" disabled="">Get Started</button>`);
+            document.querySelector('.no-zipcode-search-mobile .search-zipcode-area form button').innerHTML = '<img class="get-started-btn-icon" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Get-started-icon.svg" alt="Get Started">';
+        }
+        if (document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content  .unavailable-block').length > 0 && document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content  .unavailable-block .ga-track-enroll-now').length == 0 && document.querySelectorAll('.spz-pricing-parent').length == 0 && document.querySelectorAll('.pricing-section-label').length == 0) {
+            document.querySelector(' .selected-zipcode-area  .page-wrap.program-content  .unavailable-block').insertAdjacentHTML('beforeend', `<button _ngcontent-c9="" class="btn ga-track-enroll-now enroll-now-btn skiptranslate ng-tns-c9-0 disabled-btn ng-star-inserted" title="Get Started" disabled="">Get Started</button>`);
+            document.querySelector('.selected-zipcode-area  .page-wrap.program-content  .unavailable-block .address-text').insertAdjacentHTML('afterbegin', '<label class="pricing-section-label">Based on your location</label>');
+        }
     }
 };
+
+
+window.addEventListener("click", function (e) {
+    if (e.target.classList.contains("fa-times") || e.target.classList.contains("change-zip") || e.target.classList.contains("change-area-link")) {
+        contentScroll();
+    }
+    console.log('inside click validate == ', e.target.classList)
+
+    if (e.target.classList.contains("get-started-btn-icon")) {
+        loadTest();
+        waitForElm('.zipcode-searched').then(function (elm) {
+            contentScroll();
+        });
+        waitForElm('.zipcode-searched-mobile').then(function (elm) {
+            contentScroll();
+        });
+        waitForElm('.unavailable-block').then(function (elm) {
+            contentScroll();
+        });
+    }
+});
+
 
 // Generic
 history.pushState = (function (f) {
@@ -110,7 +161,7 @@ function urlCheck(url) {
 
         if (myCookie == null) {
             console.log('coockie not found..');
-            if (document.querySelector('#_evidon-decline-button')) {
+            if (document.querySelectorAll('#_evidon-decline-button').length > 0) {
                 document.getElementById("_evidon-decline-button").addEventListener("click", function () {
                     let url = location.href;
                     urlCheck(url);
@@ -118,7 +169,7 @@ function urlCheck(url) {
             }
         }
         else {
-            if (window.innerWidth <= 767) {
+            if (window.innerWidth <= 766) {
                 waitForElm(TEST_ENV.main_class).then(function () {
                     loadTest();
                 });
@@ -133,12 +184,22 @@ function urlCheck(url) {
                     loadTest();
                 }
             }
+            else {
+                removeTest();
+            }
         }
 
     } else {
         removeTest();
     }
 }
+
+
+window.addEventListener("resize", function () {
+    let url = location.href;
+    urlCheck(url);
+});
+
 
 function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     currentUrl = currentUrl.includes("#") ?
@@ -158,6 +219,10 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
 
 function removeTest() {
     document.body.classList.remove(TEST_ENV.class);
+    document.body.classList.remove('loaded');
+    if (document.querySelectorAll('.spz-pname').length > 0) {
+        document.querySelector('.spz-pname').remove();
+    }
 }
 
 function waitForElm(selector) {
