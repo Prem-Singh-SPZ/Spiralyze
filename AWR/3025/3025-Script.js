@@ -7,66 +7,61 @@ const TEST_ENV = {
     main_class: 'body', // parent class where test is going to be applied
 }
 
-
-
 function loadTest() {
-    console.log(window.innerWidth);
     if (window.innerWidth <= 766) {
-
         var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
         var cookieValue = "1";
         var myDate = new Date();
         myDate.setDate(myDate.getDate() + 30);
         document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
 
-        // console.log('Test is running...')
-        // Set test class
         document.body.classList.add(TEST_ENV.class);
         staticChanges();
+        document.addEventListener("DOMContentLoaded", () => {
+            contentScroll();
+        });
         document.body.classList.add("loaded");
     }
 }
 
 function staticChanges() {
+    // contentInt = setInterval(contentScroll, 100);
+    contentScroll();
+
+    window.onscroll = function (e) {
+        contentScroll();
+    }
+    setTimeout(() => {
+        // clearInterval(contentInt);
+    }, 5000);
     waitForElm('.mob-gen-section .program-head .program-name').then(function (elm) {
         if (document.querySelectorAll('.spz-pname').length == 0) {
             document.querySelector('hos-breadcrumb.detail-header-breadcrum').insertAdjacentHTML('beforeend', `<div class='spz-pname'> <div>`);
-            moveElement('.content-section .page-wrap .left-box', '.spz-pname');
-
-
-            contentInt = setInterval(contentScroll, 100);
-            window.onscroll = function (e) {
-                contentScroll();
-            }
-            setTimeout(() => {
-                clearInterval(contentInt);
-            }, 5000);
+            moveElement('.content-section .page-wrap .left-box.tab-width-100', '.spz-pname');
         }
+        contentScroll();
     });
     waitForElm('.spz-pname .rating-link .rating-average span.rating-label').then(function (elm) {
         if (document.querySelectorAll('.spz-pname .rating-link .rating-average span.rating-label.changed').length == 0) {
             document.querySelector('.spz-pname .rating-link .rating-average span.rating-label').innerHTML = '<span>4.9</span>' + document.querySelector('.spz-pname .rating-link .rating-average span.rating-label').innerHTML.split(')')[0] + ' reviews)';
-            document.querySelector('.spz-pname .rating-link .rating-average').insertAdjacentHTML('afterbegin','<img class="star-rating-icon" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1672927987/AWR/3025/assets/Star-rating.svg" alt="Ratings">');
+            document.querySelector('.spz-pname .rating-link .rating-average').insertAdjacentHTML('afterbegin', '<img class="star-rating-icon" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1672927987/AWR/3025/assets/Star-rating.svg" alt="Ratings">');
             document.querySelector('.spz-pname .rating-link .rating-average span.rating-label').classList.add('changed');
         }
+        contentScroll();
     });
 }
 
 function contentScroll() {
     if (window.innerWidth <= 766) {
-
-        console.log('Interval is running...')
-
         if (document.querySelectorAll('.spz-desc-title').length > 0) {
-            clearInterval(contentInt);
-            console.log('Interval is stopped...')
+            // clearInterval(contentInt);
         }
 
         if (document.querySelectorAll('.spz-desc-title').length == 0 && document.querySelectorAll('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').length > 0) {
             document.querySelector('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').insertAdjacentHTML('afterbegin', `<div class='spz-desc-title'> <h6>Product Description</h6> <div>`);
 
             document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content').insertAdjacentHTML('beforeend', `<div class='spz-pricing-parent'> <div>`);
-            clearInterval(contentInt);
+            // clearInterval(contentInt);
 
             document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn').innerText = 'Get Started';
             document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn').setAttribute('title', 'Get Started');
@@ -106,8 +101,7 @@ window.addEventListener("click", function (e) {
     if (e.target.classList.contains("fa-times") || e.target.classList.contains("change-zip") || e.target.classList.contains("change-area-link")) {
         contentScroll();
     }
-    console.log('inside click validate == ', e.target.classList)
-
+    // console.log('inside click validate == ', e.target.classList)
     if (e.target.classList.contains("get-started-btn-icon")) {
         loadTest();
         waitForElm('.zipcode-searched').then(function (elm) {
@@ -152,7 +146,7 @@ window.addEventListener('locationchange', function () {
 let url = location.href;
 urlCheck(url);
 function urlCheck(url) {
-    let testURL = TEST_ENV.base_url;
+    let testURL = '';
     if (window.location.pathname.indexOf(TEST_ENV.test_url) > -1) {
         testURL = window.location.href;
     }
@@ -160,13 +154,12 @@ function urlCheck(url) {
         var myCookie = getCookie("_evidon_suppress_notification_cookie");
 
         if (myCookie == null) {
-            console.log('coockie not found..');
-            if (document.querySelectorAll('#_evidon-decline-button').length > 0) {
-                document.getElementById("_evidon-decline-button").addEventListener("click", function () {
+            waitForElm('#_evidon-decline-button').then(function (elm) {
+                document.getElementById("_evidon-decline-button").addEventListener("click", function (e) {
                     let url = location.href;
                     urlCheck(url);
                 });
-            }
+            });
         }
         else {
             if (window.innerWidth <= 766) {
@@ -240,35 +233,6 @@ function waitForElm(selector) {
     });
 }
 
-// Set text, image etc.
-// elm: Element where we have to set content
-// value: Value to be set
-// type: Pass content type - TEXT / IMAGE etc.
-function setContent(elm, value, type = 'STRING') {
-    if (document.querySelector(elm)) {
-        const tg = document.querySelector(elm);
-        if (type == 'IMAGE') {
-            tg.src = value;
-        } else {
-            tg.innerText = value;
-        }
-    }
-}
-
-// Clone element
-// source: Element which we have to copy
-// target: New location of an element 
-function cloneElement(source, target) {
-    if (document.querySelector(source) && document.querySelector(target)) {
-        const sc = document.querySelector(source);
-        const clone = sc.cloneNode(true);
-        document.querySelector(target).appendChild(clone);
-    }
-}
-
-// Move element
-// sourceElm: Element which we have to move
-// targetLoc: New location of an element 
 function moveElement(sourceElm, targetLoc) {
     const f = document.createDocumentFragment();
     if (document.querySelector(sourceElm) != null) {

@@ -20,6 +20,10 @@ body.spz-3025 {
       padding: 20px;
       padding-bottom: 4px;
 
+      .program-head img.icon[class] {
+        display: none;
+      }
+
       .left-box.tab-width-100[class] {
         .program-head {
           .program-name {
@@ -155,6 +159,10 @@ body.spz-3025 {
           background-color: transparent !important;
           border: none !important;
           left: -18px;
+
+          @media (max-width: 360px) {
+            left: 5%;
+          }
           &::before {
             content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
             left: -24px;
@@ -267,6 +275,11 @@ body.spz-3025 {
 
         h1 {
           line-height: 26px;
+        }
+
+        p,
+        p > span {
+          font-family: "Roboto" !important;
         }
       }
 

@@ -14,6 +14,9 @@ body.spz-3025 .detail-header-breadcrum[class] .spz-pname {
   padding: 20px;
   padding-bottom: 4px;
 }
+body.spz-3025 .detail-header-breadcrum[class] .spz-pname .program-head img.icon[class] {
+  display: none;
+}
 body.spz-3025 .detail-header-breadcrum[class] .spz-pname .left-box.tab-width-100[class] .program-head .program-name h3[class] {
   color: #000000;
   font-family: "Roboto";
@@ -122,6 +125,11 @@ body.spz-3025 #general-section.content-block.content-section.shaded-white.genera
   border: none !important;
   left: -18px;
 }
+@media (max-width: 360px) {
+  body.spz-3025 #general-section.content-block.content-section.shaded-white.general-section.general-desc-section.fs-restrict-dead-clicks[class] .page-wrap.justify-content-gen-sec.image-mobile-overlay[class] .no-zipcode-search[class] > i.fa-times[class] {
+    left: 5%;
+  }
+}
 body.spz-3025 #general-section.content-block.content-section.shaded-white.general-section.general-desc-section.fs-restrict-dead-clicks[class] .page-wrap.justify-content-gen-sec.image-mobile-overlay[class] .no-zipcode-search[class] > i.fa-times[class]::before {
   content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
   left: -24px;
@@ -208,6 +216,10 @@ body.spz-3025 .selected-zipcode-area[class] .page-wrap.program-content[class] .d
 }
 body.spz-3025 .selected-zipcode-area[class] .page-wrap.program-content[class] .description-heading-text-content[class] h1 {
   line-height: 26px;
+}
+body.spz-3025 .selected-zipcode-area[class] .page-wrap.program-content[class] .description-heading-text-content[class] p,
+body.spz-3025 .selected-zipcode-area[class] .page-wrap.program-content[class] .description-heading-text-content[class] p > span {
+  font-family: "Roboto" !important;
 }
 body.spz-3025 .selected-zipcode-area[class] .page-wrap.program-content[class] hos-product-covered-repairs .covered-repair-section[class] div.bg-covered-repair-cls[class] {
   border-bottom: 1px solid #dadada;
