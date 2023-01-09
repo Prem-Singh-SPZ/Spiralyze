@@ -1,3 +1,4 @@
+// (function () {
 'use strict'
 const TEST_ENV = {
     name: 'spz-2036',
@@ -9,7 +10,7 @@ var comboManagement = [];
 var singleProduct = [];
 // If you need to load any external libs or content
 const content = document.createElement('script');
-content.src = 'https://res.cloudinary.com/spiralyze/raw/upload/f_auto/AWR/2041/2041-product.js';
+content.src = 'https://res.cloudinary.com/spiralyze/raw/upload/f_auto/AWR/2036/Assets/products-data.js';
 document.head.appendChild(content);
 content.onload = function () {
     let url = location.href;
@@ -17,7 +18,6 @@ content.onload = function () {
 }
 
 function loadTest() {
-
     //Create cookie
     var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
     var cookieValue = "1";
@@ -33,91 +33,102 @@ function loadTest() {
 
 function loadTest_2036() {
     waitForElm('.product-list .product-item .card-body .price-cls .small-txt').then(function () {
-        // document.querySelector('hos-product .product-list-area').classList.add('prod-card-2036');
-        document.querySelectorAll('.product-list .product-item .card').forEach(function (v, i) {
-            v.querySelector('.card-body .price-cls .small-txt').innerText = ' / Month';
-            // v.querySelector('.card-body[class] .row:nth-child(2) button.enroll-now[class]').innerText = 'Enroll Now';
-            // v.parentElement.parentElement.classList.remove('col-sm-6', 'col-md-3');
-            // v.parentElement.parentElement.classList.add('col-xl-3', 'col-md-6', 'prod-card-2036');
-            v.parentElement.parentElement.classList.add('prod-card-2036');
-            if (v.querySelectorAll('.spz-product-details').length == 0) {
-                console.log(v);
-                v.insertAdjacentHTML('afterbegin', '<div class="spz-product-details"><div class="spz-product-name"></div><div class="spz-product-price"></div></div>');
-                v.insertAdjacentHTML('afterbegin', '<div class="spz-product-image"></div>');
-                moveElement('.card-img', '.spz-product-image');
-                moveElement('.program-name', '.spz-product-details .spz-product-name');
-                // moveElement('.card-body div:first-child div:first-child', '.spz-product-details .spz-product-price');
-            }
-
-
-            //Update image of cards
-            let prodTitle = v.querySelector('.program-name').textContent.trim();
-            let prodImage = v.querySelector('.card-img');
-
-            if (undefined != singleProduct) {
-                singleProduct.some(function (prod, i) {
-                    if (prodTitle == prod.productName) {
-                        if (prod.productImage) {
-                            // prodImage.setAttribute('src', prod.productImage);
-                            prodImage.src = prod.productImage;
-                            setTimeout(function () {
-                                prodImage.style.opacity = 1;
-                            }, 500);
-                        }
-
-                        //Add Popular tag
-                        if ('popular' == prod.isPopular) {
-                            v.classList.add('is-popular');
-                        }
-                        if ('yes' == prod.isBestValue) {
-                            v.classList.add('is-best-value');
-                        }
-                    }
-                });
-            }
-        });
-
-        //Add save tag to product cards
-        // const allProducts = document.querySelectorAll('.product-list .product-item .program-name');
-        // comboManagement.forEach(function (cmbo, i) {
-        //     let totalprice = 0;
-        //     let comboPrice = 0;
-        //     allProducts.forEach(function (v, i) {
-        //         if (v.innerText == cmbo.comboName) {
-        //             comboPrice = v.parentElement.querySelector('.card-body .price-cls .notranslate').innerHTML;
-        //             comboPrice = Number(comboPrice.replaceAll("$", ""));
-        //         }
-        //     });
-
-        //     cmbo.comboProducts.forEach(function (ind, intProduct) {
-        //         allProducts.forEach(function (v, i) {
-        //             if (v.innerText == ind) {
-        //                 const singlePrice = v.parentElement.querySelector('.card-body .price-cls .notranslate').innerHTML;
-        //                 totalprice += Number(singlePrice.replaceAll("$", ""));
-        //                 var finalprice = (totalprice - comboPrice).toFixed(2);
-        //                 if (comboPrice > 0 && finalprice >= 1) {
-        //                     allProducts.forEach(function (u, p) {
-        //                         if (u.innerText == cmbo.comboName) {
-
-        //                             if (!u.parentElement.querySelector('.card-body.amount-save .save-price-spz')) {
-        //                                 u.parentElement.querySelector('.card-body .price-cls').insertAdjacentHTML('afterend', `<div class="save-price-spz">save $` + finalprice + `</div>`);
-        //                                 u.parentElement.querySelector('.card-body').classList.add('amount-save');
-        //                             }
-        //                         }
-        //                     });
-        //                 }
-
-        //             }
-        //         });
-        //     })
-        // });
-
-        //Update Change link
-        document.querySelector('.product-list-header .location-box button.change-link').innerText = 'Change';
-
+        saveTag();
+        updateCardContent();
     });
 }
 
+function updateCardContent() {
+    document.querySelectorAll('.product-list .product-item .card').forEach(function (v, i) {
+        if (v.parentElement.querySelectorAll('.card-body .price-cls .small-txt').length > 0) {
+            v.querySelector('.card-body .price-cls .small-txt').innerText = ' / Month';
+        }
+        v.parentElement.parentElement.classList.add('prod-card-2036');
+        if (!v.querySelector('.spz-product-details')) {
+            v.insertAdjacentHTML('afterbegin', '<div class="spz-product-content"><div class="spz-product-arrow"> <img alt="Product Icon" class="spz-product-arrow" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1673244234/AWR/2036/Assets/chevron-right.svg"> </div></div>');
+            v.querySelector('.spz-product-content').insertAdjacentHTML('afterbegin', '<div class="spz-product-details"><div class="spz-product-name"></div><div class="spz-product-price"></div></div>');
+            v.insertAdjacentHTML('afterbegin', '<div class="spz-product-image"></div>');
+            customMoveElement(v.querySelector('.card-img'), v.querySelector('.spz-product-image'));
+            customMoveElement(v.querySelector('.program-name'), v.querySelector('.spz-product-name'));
+            customMoveElement(v.querySelector('.card-body div:first-child div:first-child'), v.querySelector('.spz-product-details .spz-product-price'));
+
+            v.addEventListener('click', function () {
+                console.log('card is clicked  ' + v.classList);
+                v.querySelector('.card-body .enroll-now').click();
+            })
+        }
+        console.log('this is update content');
+
+        //Update image of cards
+        let prodTitle = v.querySelector('.program-name').textContent.trim();
+        let prodImage = v.querySelector('.card-img');
+
+        if (undefined != singleProduct) {
+            singleProduct.some(function (prod, i) {
+                if (prodTitle == prod.productName) {
+                    if (prod.productImage) {
+                        // prodImage.setAttribute('src', prod.productImage);
+                        prodImage.src = prod.productImage;
+                        setTimeout(function () {
+                            prodImage.style.opacity = 1;
+                        }, 500);
+                    }
+
+                    //Add Popular tag
+                    if ('popular' == prod.isPopular) {
+                        v.classList.add('is-popular');
+                    }
+                    if ('yes' == prod.isBestValue) {
+                        v.classList.add('is-best-value');
+                    }
+                }
+            });
+        }
+    });
+}
+
+function saveTag() {
+    // Add save tag to product cards
+    console.log('this is save tag function');
+    const allProducts = document.querySelectorAll('.product-list .product-item .program-name');
+    comboManagement.forEach(function (cmbo, i) {
+        let totalprice = 0;
+        let comboPrice = 0;
+        allProducts.forEach(function (v, i) {
+            console.log('this is combo price for each');
+
+            if (v.innerText == cmbo.comboName) {
+                if (v.parentElement.querySelectorAll('.card-body .price-cls .notranslate').length > 0) {
+                    comboPrice = v.parentElement.querySelector('.card-body .price-cls .notranslate').innerHTML;
+                    comboPrice = Number(comboPrice.replaceAll("$", ""));
+                }
+            }
+        });
+
+        cmbo.comboProducts.forEach(function (ind, intProduct) {
+            allProducts.forEach(function (v, i) {
+                if (v.innerText == ind && v.parentElement.querySelectorAll('.card-body .price-cls .notranslate').length > 0) {
+                    const singlePrice = v.parentElement.querySelector('.card-body .price-cls .notranslate').innerHTML;
+                    totalprice += Number(singlePrice.replaceAll("$", ""));
+                    var finalprice = (totalprice - comboPrice).toFixed(2);
+                    if (comboPrice > 0 && finalprice >= 1) {
+                        allProducts.forEach(function (u, p) {
+                            if (u.innerText == cmbo.comboName) {
+                                console.log('this is combo price save tag');
+
+                                if (!u.parentElement.querySelector('.card-body.amount-save .save-price-spz')) {
+                                    u.parentElement.querySelector('.card-body .price-cls').insertAdjacentHTML('afterend', `<span class="save-price-spz">save $` + finalprice + `</span>`);
+                                    // u.parentElement.parentElement.querySelector('.card').classList.add('amount-save');
+                                }
+                            }
+                        });
+                    }
+
+                }
+            });
+        })
+    });
+}
 
 // Generic
 history.pushState = (function (f) {
@@ -144,7 +155,7 @@ window.addEventListener('locationchange', function () {
     url = location.href;
     urlCheck(url);
     // if (window.location.pathname.indexOf("/products/") > -1) {
-    if (window.location.pathname.indexOf("/products/") > -1) {
+    if (window.location.pathname.indexOf("/products/") > -1 && window.innerWidth <= 766) {
         // if (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il") == -1) {
         const ltInt = setInterval(function () {
             if (document.querySelectorAll('.product-list').length > 0 && document.querySelectorAll('.prod-card-2036').length == 0 && (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il")) == -1) {
@@ -165,13 +176,14 @@ let url = location.href;
 urlCheck(url);
 function urlCheck(url) {
     let testURL = '';
-    if (window.location.pathname.indexOf("/products/") > -1 && (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il")) == -1) {
+    if (window.location.pathname.indexOf("/products/") > -1 && window.innerWidth <= 766 && (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il")) == -1) {
         testURL = window.location.href;
     }
     else {
         removeTest();
+        console.log('removing test 1');
     }
-    if (isSameUrl(url, testURL, true)) {
+    if (isSameUrl(url, testURL, true) && window.innerWidth <= 766) {
         loadTest();
         setTimeout(function () {
             window.addEventListener("resize", function () {
@@ -180,6 +192,7 @@ function urlCheck(url) {
         }, 2000);
     } else {
         removeTest();
+        console.log('removing test 2');
     }
 }
 
@@ -218,11 +231,11 @@ function waitForElm(selector) {
     });
 }
 
-function moveElement(sourceElm, targetLoc) {
-    const f = document.createDocumentFragment();
-    if (document.querySelector(sourceElm) != null) {
-        f.appendChild(document.querySelector(sourceElm));
-        document.querySelector(targetLoc).appendChild(f);
+function customMoveElement(sourceElm, targetLoc) {
+    if (sourceElm && targetLoc) {
+        const sc = sourceElm;
+        const clone = sc.cloneNode(true);
+        targetLoc.appendChild(clone);
     }
 }
 
@@ -230,3 +243,4 @@ function moveElement(sourceElm, targetLoc) {
 if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
     document.body.classList.add('safari')
 }
+// })()

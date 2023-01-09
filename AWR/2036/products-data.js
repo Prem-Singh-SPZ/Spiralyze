@@ -1,5 +1,4 @@
-var imgURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/2041/Product_Images/';
-
+var imgURL = '//res.cloudinary.com/spiralyze/image/upload/';
 var comboManagement = [{
     comboName: "Water Line and Sewer Line Protection Program",
     comboProducts: ["Water Line Protection Program", "Sewer Line Protection Program"]
@@ -65,233 +64,233 @@ var comboManagement = [{
 var singleProduct = [
     {
         productName: 'Water Line and Sewer Line Protection Program',
-        productImage: imgURL+'Water_Line___Sewer_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269123/AWR/2036/Assets/product-icons/Water_Line___Sewer_Line_Protection_Program.svg',
         isPopular: 'popular',
     },
     {
         productName: 'Unlimited Water Line and Sewer Line Protection Program',
-        productImage: imgURL+'Water_Line___Sewer_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269123/AWR/2036/Assets/product-icons/Water_Line___Sewer_Line_Protection_Program.svg',
     },
     {
         productName: 'Water Line, Sewer Line and In-Home Plumbing Emergency Program',
-        productImage: imgURL+'Water_Line_Sewer_Line_and_In-Home_Plumbing.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Line_Sewer_Line_and_In-Home_Plumbing_Emergency_Program.svg',
         isBestValue: 'yes',
     }, 
     {
         productName: 'Water Line, Sewer Line and In Home Plumbing Emergency Program',
-        productImage: imgURL+'Water_Line_Sewer_Line_and_In-Home_Plumbing.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Line_Sewer_Line_and_In-Home_Plumbing_Emergency_Program.svg',
         isBestValue: 'yes',
     }, 
     {
         productName: 'Water Line, Sewer Line and In-Home Plumbing Protection Program',
-        productImage: imgURL+'Water_Line_Sewer_Line_and_In-Home_Plumbing.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Line_Sewer_Line_and_In-Home_Plumbing_Emergency_Program.svg',
         isBestValue: 'yes',
     },
     {
         productName: 'Water Line, Sewer Line and In Home Plumbing Protection Program',
-        productImage: imgURL+'Water_Line_Sewer_Line_and_In-Home_Plumbing.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Line_Sewer_Line_and_In-Home_Plumbing_Emergency_Program.svg',
         isBestValue: 'yes',
     },
     {
         productName: 'Water Line, Sewer Line and In Home Plumbing Insurance Policy',
-        productImage: imgURL+'Water_Line_Sewer_Line_and_In-Home_Plumbing.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Line_Sewer_Line_and_In-Home_Plumbing_Emergency_Program.svg',
         isBestValue: 'yes',
     }, 
     {
         productName: 'Water Line, Sewer Line and In-Home Plumbing Insurance Policy',
-        productImage: imgURL+'Water_Line_Sewer_Line_and_In-Home_Plumbing.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Line_Sewer_Line_and_In-Home_Plumbing_Emergency_Program.svg',
         isBestValue: 'yes',
     }, 
     {
         productName: 'Water Line Protection Program',
-        productImage: imgURL+'Water_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269124/AWR/2036/Assets/product-icons/Water_Line_Protection_Program.svg',
     },
     {
         productName: 'Unlimited Water Line Protection Program',
-        productImage: imgURL+'Water_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269124/AWR/2036/Assets/product-icons/Water_Line_Protection_Program.svg',
     },
     {
         productName: 'Sewer Line Protection Program',
-        productImage: imgURL+'Sewer_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Sewer_Line_Protection_Program.svg',
     },
     {
         productName: 'Unlimited Sewer Line Protection Program',
-        productImage: imgURL+'Sewer_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Sewer_Line_Protection_Program.svg',
     },
     {
         productName: 'In-Home Plumbing Emergency Program',
-        productImage: imgURL+'In-Home_Plumbing_Emergency_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Emergency_Program.svg',
     },
     {
         productName: 'In Home Plumbing Emergency Program',
-        productImage: imgURL+'In-Home_Plumbing_Emergency_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Emergency_Program.svg',
     },
     {
         productName: 'Heating and Cooling System Repair Program',
-        productImage: imgURL+'Heating_and_Cooling_System_Repair_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/Heating_and_Cooling_System_Repair_Program.svg',
     },
     {
         productName: 'Heating System Repair Program',
-        productImage: imgURL+'Heating_System_Repair_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/Heating_System_Repair_Program.svg',
     },
     {
         productName: 'Cooling System Repair Program',
-        productImage: imgURL+'Cooling_System_Repair_Program.png',
+        productImage: imgURL+'v1673269127/AWR/2036/Assets/product-icons/Cooling_System_Repair_Program.svg',
     },
     {
         productName: 'Water Heater Repair and Replacement Program',
-        productImage: imgURL+'Water_Heater_Repair_and_Replacement_Program.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Water_Heater_Repair_and_Replacement_Program.svg',
     },
     {
         productName: 'Gas Line Protection Program',
-        productImage: imgURL+'Gas_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/Gas_Line_Protection_Program.svg',
     },
     {
         productName: 'Interior Electric Line Protection Program',
-        productImage: imgURL+'Interior_Electric_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Interior_Electric_Line_Protection_Program.svg',
     },
     {
         productName: 'Exterior Electric Line Protection Program',
-        productImage: imgURL+'Exterior_Electric_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269128/AWR/2036/Assets/product-icons/Exterior_Electric_Line_Protection_Program.svg',
     },
     {
         productName: 'In-Home Plumbing Plus Program',
-        productImage: imgURL+'In-Home_Plumbing_Plus_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Plus_Program.svg',
     },
     {
         productName: 'In Home Plumbing Plus Program',
-        productImage: imgURL+'In-Home_Plumbing_Plus_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Plus_Program.svg',
     },
     {
         productName: 'Water Line and Sewer Line Unlimited Protection Program',
-        productImage: imgURL+'Water_Line_and_Sewer_Line_Unlimited_Protection....png',
+        productImage: imgURL+'v1673269123/AWR/2036/Assets/product-icons/Water_Line_and_Sewer_Line_Unlimited_Protection_Program.svg',
     },
     {
         productName: 'Water Line Unlimited Protection Program',
-        productImage: imgURL+'Water_Line_Unlimited_Protection_Program.png',
+        productImage: imgURL+'v1673269124/AWR/2036/Assets/product-icons/Water_Line_Unlimited_Protection_Program.svg',
     },
     {
         productName: 'Sewer Line Unlimited Protection Program',
-        productImage: imgURL+'Sewer_Line_Unlimited_Protection_Program.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Sewer_Line_Unlimited_Protection_Program.svg',
     },
     {
         productName: 'Surge Protection Program',
-        productImage: imgURL+'Surge_Protection_Program.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Surge_Protection_Program.svg',
     },
     {
         productName: 'Power Surge Protection Program',
-        productImage: imgURL+'Power_Surge_Protection_Program.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Power_Surge_Protection_Program.svg',
     },
     {
         productName: 'Preferred Home Protection Plan',
-        productImage: imgURL+'Product%20Images/Preferred_Home_Protection_Plan.png',
+        productImage: imgURL+'Product%20Images/Preferred_Home_Protection_Plan.svg',
     },
     {
         productName: 'In-Home Plumbing Clog Protection Program',
-        productImage: imgURL+'In-Home_Plumbing_Clog_Protection_Program.png',
+        productImage: imgURL+'In-Home_Plumbing_Clog_Protection_Program.svg',
     },
     {
         productName: 'In Home Plumbing Clog Protection Program',
-        productImage: imgURL+'In-Home_Plumbing_Clog_Protection_Program.png',
+        productImage: imgURL+'In-Home_Plumbing_Clog_Protection_Program.svg',
     },
     {
         productName: 'Preferred Exterior Electric Line Protection',
-        productImage: imgURL+'Product%20Images/Preferred_Exterior_Electric_Line_Protection.png',
+        productImage: imgURL+'v1673269128/AWR/2036/Assets/product-icons/Exterior_Electric_Line_Protection_Program.svg',
     },
     {
         productName: 'Energy Essentials Protection Program',
-        productImage: imgURL+'Energy_Essentials_Protection_Program.png',
+        productImage: imgURL+'Energy_Essentials_Protection_Program.svg',
     },
     {
         productName: 'Well System and Septic Line Protection',
-        productImage: imgURL+'Well_System_and_Septic_Line_Protection.png',
+        productImage: imgURL+'v1673269126/AWR/2036/Assets/product-icons/Well_System_and_Septic_Line_Protection_Program.svg',
     },
     {
         productName: 'Well Line and Pump Protection Program',
-        productImage: imgURL+'Well_System_and_Septic_Line_Protection.png',
+        productImage: imgURL+'v1673269126/AWR/2036/Assets/product-icons/Well_Line_and_Pump_Protection_Program.svg',
     },
     {
         productName: 'Well System and Septic Line Protection Program',
-        productImage: imgURL+'Well_System_and_Septic_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269126/AWR/2036/Assets/product-icons/Well_System_and_Septic_Line_Protection_Program.svg',
     },
     {
         productName: 'Septic Line Protection Program',
-        productImage: imgURL+'Septic_Line_Protection.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Septic_Line_Protection_Program.svg',
     },
     {
         productName: 'Septic Line Protection',
-        productImage: imgURL+'Septic_Line_Protection.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Septic_Line_Protection_Program.svg',
     },
     {
         productName: 'Water Line Insurance Policy',
-        productImage: imgURL+'Water_Line_Insurance_Policy.png',
+        productImage: imgURL+'v1673269123/AWR/2036/Assets/product-icons/Water_Line_Insurance_Policy.svg',
     },
     {
         productName: 'Sewer Line Insurance Policy',
-        productImage: imgURL+'Sewer_Line_Insurance_Policy.png',
+        productImage: imgURL+'v1673269121/AWR/2036/Assets/product-icons/Sewer_Line_Insurance_Policy.svg',
     },
     {
         productName: 'Water Line & Sewer Line Insurance Policy',
-        productImage: imgURL+'Water_Line___Sewer_Line_Insurance_Policy.png',
+        productImage: imgURL+'v1673269123/AWR/2036/Assets/product-icons/Water_Line___Sewer_Line_Insurance_Policy.svg',
         isPopular: 'popular',
     },
     {
         productName: 'Water Line and Sewer Line Insurance Policy',
-        productImage: imgURL+'Water_Line___Sewer_Line_Insurance_Policy.png',
+        productImage: imgURL+'v1673269123/AWR/2036/Assets/product-icons/Water_Line___Sewer_Line_Insurance_Policy.svg',
         isPopular: 'popular',
     },
     {
         productName: 'In Home Plumbing Insurance Policy',
-        productImage: imgURL+'In-Home_Plumbing_Plus_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Plus_Program.svg',
     },
     {
         productName: 'In-Home Plumbing Insurance Policy',
-        productImage: imgURL+'In-Home_Plumbing_Plus_Program.png',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Plus_Program.svg',
     },
     {
         productName: 'Cooling - Primary Repair Plan',
-        productImage: imgURL+'Cooling_-_Primary_Repair_Plan.png',
+        productImage: imgURL+'v1673269126/AWR/2036/Assets/product-icons/Cooling_Repair_Plan_-_Primary_System.svg',
     },
     {
         productName: 'Cooling Repair Plan - Primary System',
-        productImage: imgURL+'Cooling_-_Primary_Repair_Plan.png',
+        productImage: imgURL+'v1673269126/AWR/2036/Assets/product-icons/Cooling_Repair_Plan_-_Primary_System.svg',
     },
     {
         productName: 'Cooling - Secondary Repair Plan',
-        productImage: imgURL+'Cooling_-_Secondary_Repair_Plan.png',
+        productImage: imgURL+'v1673269127/AWR/2036/Assets/product-icons/Cooling_Repair_Plan_-_Secondary_System.svg',
     },
     {
         productName: 'Cooling Repair Plan - Secondary System',
-        productImage: imgURL+'Cooling_-_Secondary_Repair_Plan.png',
+        productImage: imgURL+'v1673269127/AWR/2036/Assets/product-icons/Cooling_Repair_Plan_-_Secondary_System.svg',
     },
     {
         productName: 'Preferred Cooling - Primary System Protection Plan',
-        productImage: imgURL+'Preferred_Cooling_-_Primary_System_Protection_Plan.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Preferred_Cooling_Protection_Plan_-_Primary_System.svg',
     },
     {
         productName: 'Preferred Cooling Protection Plan - Primary System',
-        productImage: imgURL+'Preferred_Cooling_-_Primary_System_Protection_Plan.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Preferred_Cooling_Protection_Plan_-_Primary_System.svg',
     },
     {
         productName: 'Water Service Line Protection Program',
-        productImage: imgURL+'Water_Service_Line_Protection_Program.png',
+        productImage: imgURL+'v1673269125/AWR/2036/Assets/product-icons/Water_Service_Line_Protection_Program.svg',
     },
     {
         productName: 'Sewer Service Line Repair Plan',
-        productImage: imgURL+'Sewer_Service_Line_Repair_Plan.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Sewer_Service_Line_Protection_Program.svg',
     },
     {
         productName: 'Sewer Service Line Protection Program',
-        productImage: imgURL+'Sewer_Service_Line_Repair_Plan.png',
+        productImage: imgURL+'v1673269122/AWR/2036/Assets/product-icons/Sewer_Service_Line_Protection_Program.svg',
     },
     {
         productName: 'Preferred Cooling - Secondary System Protection Plan',
-        productImage: imgURL+'Preferred_Cooling_-_Secondary_System.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Preferred_Cooling_Protection_Plan_-_Secondary_System.svg',
         isPopular: 'popular',
     },
     {
         productName: 'Preferred Cooling Protection Plan - Secondary System',
-        productImage: imgURL+'Preferred_Cooling_-_Secondary_System.png',
+        productImage: imgURL+'v1673269120/AWR/2036/Assets/product-icons/Preferred_Cooling_Protection_Plan_-_Secondary_System.svg',
         isPopular: 'popular',
     }
 ]

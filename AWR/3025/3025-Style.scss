@@ -158,10 +158,11 @@ body.spz-3025 {
           bottom: -40px;
           background-color: transparent !important;
           border: none !important;
-          left: -18px;
+          left: 269px;
+          float: initial;
 
-          @media (max-width: 360px) {
-            left: 5%;
+          @media (max-width: 331px) {
+          left: 262px;
           }
           &::before {
             content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
@@ -173,6 +174,7 @@ body.spz-3025 {
           hos-google-places form.search[class] {
             flex-wrap: nowrap;
             justify-content: left !important;
+            align-items: flex-start;
             // margin-bottom: 12px;
             .search-field[class] {
               max-width: 179px;
@@ -192,8 +194,8 @@ body.spz-3025 {
             }
 
             .product-dtls-zip-err-text[class] {
-              left: -8px;
-              margin-top: 52px;
+              left: 24px;
+              margin-top: 56px;
             }
 
             button.product-page-search[class] {
@@ -202,6 +204,7 @@ body.spz-3025 {
               background: transparent;
               padding: 0 !important;
               outline: none !important;
+              margin: 13px 0 0 0 !important;
 
               img.get-started-btn-icon {
                 width: 100%;
@@ -342,6 +345,8 @@ body.spz-3025 {
             flex-wrap: nowrap;
             justify-content: left !important;
             width: 100%;
+            align-items: flex-start;
+
             // margin-bottom: 12px;
             .search-field[class] {
               margin-left: 0 !important;
@@ -377,6 +382,8 @@ body.spz-3025 {
               background: transparent;
               padding: 0 !important;
               outline: none !important;
+              margin: 13px 0 0 0 ;
+
 
               img.get-started-btn-icon {
                 width: 100%;
@@ -392,11 +399,20 @@ body.spz-3025 {
           .div-top[class] {
             justify-content: flex-start !important;
             top: -2px;
+            align-items: flex-start !important;
             .search-bar[class] {
               left: 5px !important;
+              .invalid-error.error-zipcode[class] {
+                position: absolute;
+                top: 75px !important;
+              }
+              .search[class] .search-field.is-invalid[class] {
+                border: 2px solid red;
+                border-radius: 5px;
+              }
             }
             > i.fa-times[class] {
-              bottom: -1px;
+              bottom: -30px;
               background-color: transparent !important;
               border: none !important;
               left: 21px;
@@ -419,6 +435,7 @@ body.spz-3025 {
       }
 
       .zipcode-searched-mobile[class] {
+        border-bottom: 0;
         .pricing-box[class] {
           flex-direction: column;
           width: 100%;
