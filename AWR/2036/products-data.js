@@ -183,15 +183,15 @@ var singleProduct = [
     },
     {
         productName: 'Preferred Home Protection Plan',
-        productImage: imgURL+'Product%20Images/Preferred_Home_Protection_Plan.svg',
+        productImage: imgURL+'v1673269127/AWR/2036/Assets/product-icons/Energy_Essentials_Protection_Program.svg',
     },
     {
         productName: 'In-Home Plumbing Clog Protection Program',
-        productImage: imgURL+'In-Home_Plumbing_Clog_Protection_Program.svg',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Plus_Program.svg',
     },
     {
         productName: 'In Home Plumbing Clog Protection Program',
-        productImage: imgURL+'In-Home_Plumbing_Clog_Protection_Program.svg',
+        productImage: imgURL+'v1673269118/AWR/2036/Assets/product-icons/In-Home_Plumbing_Plus_Program.svg',
     },
     {
         productName: 'Preferred Exterior Electric Line Protection',
@@ -199,7 +199,7 @@ var singleProduct = [
     },
     {
         productName: 'Energy Essentials Protection Program',
-        productImage: imgURL+'Energy_Essentials_Protection_Program.svg',
+        productImage: imgURL+'v1673269127/AWR/2036/Assets/product-icons/Energy_Essentials_Protection_Program.svg',
     },
     {
         productName: 'Well System and Septic Line Protection',

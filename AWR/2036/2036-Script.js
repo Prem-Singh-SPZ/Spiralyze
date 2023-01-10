@@ -45,19 +45,21 @@ function updateCardContent() {
         }
         v.parentElement.parentElement.classList.add('prod-card-2036');
         if (!v.querySelector('.spz-product-details')) {
-            v.insertAdjacentHTML('afterbegin', '<div class="spz-product-content"><div class="spz-product-arrow"> <img alt="Product Icon" class="spz-product-arrow" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1673244234/AWR/2036/Assets/chevron-right.svg"> </div></div>');
+            v.insertAdjacentHTML('afterbegin', '<div class="spz-product-content"><div class="spz-product-arrow"> <img alt="Product Icon" class="spz-card-arrow" loading="lazy" src="https://res.cloudinary.com/spiralyze/image/upload/v1673244234/AWR/2036/Assets/chevron-right.svg"> </div></div>');
             v.querySelector('.spz-product-content').insertAdjacentHTML('afterbegin', '<div class="spz-product-details"><div class="spz-product-name"></div><div class="spz-product-price"></div></div>');
             v.insertAdjacentHTML('afterbegin', '<div class="spz-product-image"></div>');
             customMoveElement(v.querySelector('.card-img'), v.querySelector('.spz-product-image'));
             customMoveElement(v.querySelector('.program-name'), v.querySelector('.spz-product-name'));
+            v.querySelector('.card-body div:first-child div:first-child').classList.remove('col-9', 'p-0');
+            v.querySelector('.card-body div:first-child div:first-child').classList.add('price-section');
             customMoveElement(v.querySelector('.card-body div:first-child div:first-child'), v.querySelector('.spz-product-details .spz-product-price'));
 
             v.addEventListener('click', function () {
-                console.log('card is clicked  ' + v.classList);
+                // console.log('card is clicked  ' + v.classList);
                 v.querySelector('.card-body .enroll-now').click();
             })
         }
-        console.log('this is update content');
+        // console.log('this is update content');
 
         //Update image of cards
         let prodTitle = v.querySelector('.program-name').textContent.trim();
@@ -75,12 +77,12 @@ function updateCardContent() {
                     }
 
                     //Add Popular tag
-                    if ('popular' == prod.isPopular) {
-                        v.classList.add('is-popular');
-                    }
-                    if ('yes' == prod.isBestValue) {
-                        v.classList.add('is-best-value');
-                    }
+                    // if ('popular' == prod.isPopular) {
+                    //     v.classList.add('is-popular');
+                    // }
+                    // if ('yes' == prod.isBestValue) {
+                    //     v.classList.add('is-best-value');
+                    // }
                 }
             });
         }
@@ -89,13 +91,13 @@ function updateCardContent() {
 
 function saveTag() {
     // Add save tag to product cards
-    console.log('this is save tag function');
+    // console.log('this is save tag function');
     const allProducts = document.querySelectorAll('.product-list .product-item .program-name');
     comboManagement.forEach(function (cmbo, i) {
         let totalprice = 0;
         let comboPrice = 0;
         allProducts.forEach(function (v, i) {
-            console.log('this is combo price for each');
+            // console.log('this is combo price for each');
 
             if (v.innerText == cmbo.comboName) {
                 if (v.parentElement.querySelectorAll('.card-body .price-cls .notranslate').length > 0) {
@@ -114,7 +116,7 @@ function saveTag() {
                     if (comboPrice > 0 && finalprice >= 1) {
                         allProducts.forEach(function (u, p) {
                             if (u.innerText == cmbo.comboName) {
-                                console.log('this is combo price save tag');
+                                // console.log('this is combo price save tag');
 
                                 if (!u.parentElement.querySelector('.card-body.amount-save .save-price-spz')) {
                                     u.parentElement.querySelector('.card-body .price-cls').insertAdjacentHTML('afterend', `<span class="save-price-spz">save $` + finalprice + `</span>`);
@@ -155,7 +157,7 @@ window.addEventListener('locationchange', function () {
     url = location.href;
     urlCheck(url);
     // if (window.location.pathname.indexOf("/products/") > -1) {
-    if (window.location.pathname.indexOf("/products/") > -1 && window.innerWidth <= 766) {
+    if (window.location.pathname.indexOf("/products/") > -1 && window.innerWidth <= 767) {
         // if (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il") == -1) {
         const ltInt = setInterval(function () {
             if (document.querySelectorAll('.product-list').length > 0 && document.querySelectorAll('.prod-card-2036').length == 0 && (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il")) == -1) {
@@ -172,27 +174,32 @@ window.addEventListener('locationchange', function () {
     // }
 });
 
+window.addEventListener("resize", function () {
+    let url = location.href;
+    urlCheck(url);
+});
+
 let url = location.href;
 urlCheck(url);
 function urlCheck(url) {
     let testURL = '';
-    if (window.location.pathname.indexOf("/products/") > -1 && window.innerWidth <= 766 && (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il")) == -1) {
+    if (window.location.pathname.indexOf("/products/") > -1 && window.innerWidth <= 767 && (window.location.pathname.indexOf("/nj") || window.location.pathname.indexOf("/pa") || window.location.pathname.indexOf("/il")) == -1) {
         testURL = window.location.href;
     }
     else {
         removeTest();
-        console.log('removing test 1');
+        // console.log('removing test 1');
     }
-    if (isSameUrl(url, testURL, true) && window.innerWidth <= 766) {
+    if (isSameUrl(url, testURL, true) && window.innerWidth <= 767) {
         loadTest();
-        setTimeout(function () {
-            window.addEventListener("resize", function () {
-                loadTest();
-            });
-        }, 2000);
+        // setTimeout(function () {
+        //     window.addEventListener("resize", function () {
+        //         loadTest();
+        //     });
+        // }, 2000);
     } else {
         removeTest();
-        console.log('removing test 2');
+        // console.log('removing test 2');
     }
 }
 

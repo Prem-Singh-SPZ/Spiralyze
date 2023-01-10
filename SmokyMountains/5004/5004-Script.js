@@ -11,23 +11,24 @@
 
     var jQueryInterval = setInterval(function () {
         if (typeof jQuery != 'undefined') {
+            checkAvailable();
             clearInterval(jQueryInterval);
             document.head.appendChild(slickLib);
             jQuery(document).ready(function () {
-                if (!jQuery("body").hasClass("spz_5004")) {
-                    var cookieName = "5004-Featured-Properties"; var cookieValue = "1"; var myDate = new Date(); myDate.setDate(myDate.getDate() + 30);
-                    document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
-                    checkAvailable();
-                }
+                // if (!jQuery("body").hasClass("spz_5004")) {
+                checkAvailable();
+                // }
             });
         }
     });
     slickLib.onload = checkAvailable;
     slickLib.onload = initSlider;
     function checkAvailable() {
+        var cookieName = "5004-Featured-Properties"; var cookieValue = "1"; var myDate = new Date(); myDate.setDate(myDate.getDate() + 30);
+        document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
         var checkLoad = setInterval(function () {
-            if (jQuery("#results-container").find('.vms-results-item') && propCardHTML.innerHTML != undefined) {
-                jQuery("body").addClass("spz_5004");
+            if (document.querySelectorAll("#results-container .vms-results-item").length > 0 && propCardHTML.innerHTML != undefined) {
+                document.body.classList.add("spz_5004");
                 if (document.querySelectorAll('.featured-products-dummy').length < 1) {
                     document.querySelector('#results-container').insertAdjacentHTML('beforebegin', `<div class="featured-products-dummy" style="display:none;"></div>`);
                 }
@@ -85,7 +86,7 @@
         const url = location.href;
         if (url !== lastUrl) {
             lastUrl = url;
-            jQuery("body").removeClass("spz_5004");
+            document.body.classList.remove("spz_5004");
             checkAvailable();
         }
     }).observe(document, { subtree: true, childList: true });
