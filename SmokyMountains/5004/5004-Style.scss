@@ -9,7 +9,19 @@ body.spz_5004[class] {
       z-index: 1;
     }
   }
-
+  @media (min-width: 1023.98px){
+    #results-container {
+      display: block !important;
+    }
+  }
+ 
+  &.modal-is-visible {
+    @media (min-width: 1023.98px){
+      #modal-background {
+        display: block !important;
+      }
+    }
+  }
   .vms-results__title[class] {
     margin-top: 28px;
     @media (min-width: 1023.98px) {
@@ -174,7 +186,8 @@ body.spz_5004[class] {
                 font-size: 16px;
                 line-height: 20px;
                 color: #0a8446;
-                width: 25px;
+                // width: 25px;
+                margin-right: 2px;
               }
             }
 
@@ -259,6 +272,7 @@ body.spz_5004[class] {
           z-index: 1;
           cursor: pointer;
           opacity: 1;
+          padding: 0;
           // transition-delay: 200ms;
           img {
             width: 48px;
@@ -298,6 +312,7 @@ body.spz_5004[class] {
           cursor: pointer;
           z-index: 1;
           opacity: 1;
+          padding: 0;
           // transition-delay: 200ms;
           img {
             width: 48px;

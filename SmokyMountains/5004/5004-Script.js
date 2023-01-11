@@ -78,6 +78,14 @@
                 document.querySelector('#vms-filter-all-m-actions-reset').onclick = function () {
                     location.href = "https://smokymountains.com/search/";
                 };
+                if (window.innerWidth <= 1023) {
+                    if (document.querySelector('#vms-filter-all').offsetHeight > 0) {
+                        document.querySelector('.top-ranked').style.display = 'none';
+                    }
+                    else {
+                        document.querySelector('.top-ranked').style.display = 'block';
+                    }
+                }
             }
         }, 100);
     }

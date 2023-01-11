@@ -92,6 +92,7 @@ body.spz-2036[class] {
                 flex-grow: 1;
                 align-items: center;
                 justify-content: space-between;
+                padding-bottom: 3px;
                 .spz-product-details {
                   flex-grow: 1;
                   .spz-product-name {
@@ -100,13 +101,13 @@ body.spz-2036[class] {
                       font-style: normal;
                       font-weight: 700;
                       font-size: 14px;
-                      line-height: 130%;
+                      line-height: 18.55px;
                       color: #333333;
                       letter-spacing: -0.03em;
                       background: none;
                       padding: 0;
                       height: auto;
-                      padding-bottom: 11px;
+                      padding-bottom: 8px;
                       justify-content: flex-start !important;
                     }
                   }
@@ -115,6 +116,7 @@ body.spz-2036[class] {
                     .price-section[class] {
                       .price-cls[class] {
                         height: 20px;
+                        margin-right: 4px;
                         span.notranslate[class] {
                           color: #0d3d64;
                           letter-spacing: -0.02em;
@@ -143,6 +145,10 @@ body.spz-2036[class] {
                         border-radius: 4px;
                         text-transform: uppercase;
                         float: right;
+                        @media (min-width: 576px) and (max-width: 622px) {
+                          float: left;
+                          margin-top: 4px;
+                        }
                       }
                     }
                   }
