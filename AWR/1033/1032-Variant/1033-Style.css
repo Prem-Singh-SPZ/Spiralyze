@@ -1,4 +1,3 @@
-/*# sourceMappingURL=1033-Style.css.map */
 body.spz-1032 .row.search-box-content {
   max-width: 1280px;
   position: unset;
@@ -17,6 +16,11 @@ body.spz-1032 .row.search-box-content .head-content h3 {
   color: #ffffff;
   margin-bottom: 34px;
   display: flex;
+}
+@media (min-width: 767px) and (max-width: 1023px) {
+  body.spz-1032 .row.search-box-content .head-content h3 {
+    margin-bottom: 35px;
+  }
 }
 body.spz-1032 .row.search-box-content .head-content h5 {
   font-family: "Roboto";
@@ -57,6 +61,11 @@ body.spz-1032 .search-box-content .justify-content-center {
   max-width: 612px;
   padding-left: 10px;
 }
+@media (min-width: 767px) and (max-width: 1023px) {
+  body.spz-1032 .search-box-content .justify-content-center {
+    padding-left: 2px;
+  }
+}
 body.spz-1032 .search-box-content .justify-content-center .spz-toll-no {
   font-family: "Roboto";
   font-weight: 400;
@@ -78,7 +87,7 @@ body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box {
   height: 136px;
   background: rgba(0, 0, 0, 0.2);
   -webkit-backdrop-filter: blur(2.5px);
-  backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
   padding: 20px 31px 26px;
   margin-bottom: 36px;
   padding: 36px 24px;
@@ -93,16 +102,15 @@ body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box {
   border: 1px solid rgba(255, 255, 255, 0.3);
   border-bottom: transparent;
 }
+@media (min-width: 767px) and (max-width: 1023px) {
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box {
+    margin-bottom: 37px;
+  }
+}
 body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box .zip-code-text[class] {
   display: none !important;
 }
-body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field[class].is-invalid[class] {
-  border: 0 !important;
-}
-body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field[class].is-invalid[class] input.search-zipcode[class] {
-  border: 1px solid #b83436 !important;
-}
-body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field[class] .search-zipcode {
+body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode {
   width: 160px !important;
   height: 64px !important;
   background: #fff;
@@ -119,21 +127,21 @@ body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-googl
   -ms-border-radius: 5px 0px 0px 5px;
   -o-border-radius: 5px 0px 0px 5px;
 }
-body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field[class] .search-zipcode.disabled + label {
+body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode.disabled + label {
   font-size: 14px !important;
   line-height: 20px !important;
   background: #fff !important;
   top: -11px !important;
   color: #aaa !important;
 }
-body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field[class] .search-zipcode[readonly] + label {
+body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode[readonly] + label {
   font-size: 14px !important;
   line-height: 20px !important;
   background: #fff !important;
   top: -11px !important;
   color: #aaa !important;
 }
-body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field[class] label {
+body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field label {
   font-family: Roboto;
   font-style: normal;
   font-size: 18px;
@@ -153,17 +161,23 @@ body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-googl
   z-index: 2;
 }
 body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-bar .error-zipcode {
-  background: #b83436;
-  border-radius: 2px;
-  margin-top: 5px;
+  background: #fff;
+  border-radius: 3px;
+  margin-top: 4px;
 }
 body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-bar .error-zipcode .text-danger {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 120%;
-  color: #fff !important;
-  padding: 4px 6px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #b83436 !important;
+  font-weight: 700;
+  padding: 2px;
   margin-top: 0px;
+}
+body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.error .is-invalid ~ label {
+  color: #b83436 !important;
+}
+body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.error label {
+  color: #b83436 !important;
 }
 body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.error .typing input {
   border-color: #b83436 !important;
@@ -208,23 +222,17 @@ body.spz-1032 .hero-slider[class] hos-google-places .search-bar .form-group.typi
   color: #333;
 }
 body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] {
+  border: 1px solid #b83436;
   border-radius: 3px;
   -webkit-border-radius: 3px;
   -moz-border-radius: 3px;
   -ms-border-radius: 3px;
   -o-border-radius: 3px;
 }
-@media (min-width: 767px) and (max-width: 1023px) {
-  body.spz-1032 .row.search-box-content .head-content h3 {
-    margin-bottom: 35px;
-  }
-  body.spz-1032 .search-box-content .justify-content-center {
-    padding-left: 2px;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box {
-    margin-bottom: 37px;
-  }
+body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] label {
+  color: #b83436 !important;
 }
+
 @media (max-width: 767px) {
   body.spz-1032 .header-icon[class] {
     margin-left: 5px !important;
@@ -256,21 +264,6 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box {
     max-width: 440px;
     display: block;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode.disabled + label {
-    top: -10px !important;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode[readonly] + label {
-    top: -10px !important;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .ng-valid ~ label {
-    top: -10px !important;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.filled label {
-    top: -10px !important;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.typing label {
-    top: -10px !important;
   }
   body.spz-1032 .row.search-box-content .head-content {
     margin-top: 98px;
@@ -399,15 +392,11 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .search-field[class] .search-zipcode[class] {
     width: 100% !important;
     border-radius: 5px;
-    text-align: center !important;
   }
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .search-field[class].is-invalid[class] {
     margin-bottom: 40px;
   }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .search-field[class].typing[class] label[for] {
-    left: 11px !important;
-  }
-  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .search-field[class].filled[class] label[for] {
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .search-field[class].typing[class] label[for], body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .search-field[class].filled[class] label[for] {
     left: 11px !important;
   }
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .get-started-btn[class] span {
@@ -417,16 +406,15 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
   }
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .error-zipcode[class] {
     margin-top: 0;
-    top: 74px;
-    background: #b83436;
-    left: calc(50% - 64px);
-    border-radius: 2px;
+    top: 72px;
+    background: #fff;
+    left: calc(50% - 76px);
+    border-radius: 3px;
   }
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] hos-google-places .error-zipcode[class] small.text-danger[class] {
-    font-weight: 400;
-    font-size: 12px;
-    line-height: 120%;
-    padding: 4px 6px;
+    font-weight: 700;
+    margin-top: 0;
+    padding: 2px;
   }
   body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box[class] .zip-code-text[class] {
     font-size: 18px !important;
@@ -440,6 +428,13 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
     min-height: 560px;
     background: #0d3d64 !important;
   }
+}
+@media (max-width: 767.98px) and (min-width: 461.98px) {
+  body.spz-1032 .hero-slider {
+    min-height: 524px;
+  }
+}
+@media (max-width: 767.98px) {
   body.spz-1032 .hero-slider .mobile-spz-img {
     display: block !important;
   }
@@ -448,15 +443,19 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
     max-width: 100%;
     max-height: 149px;
     -o-object-fit: cover;
-    object-fit: cover;
+       object-fit: cover;
     width: 100%;
   }
+}
+@media (max-width: 767.98px) {
   body.spz-1032 .hero-slider .search-bar[class] .search[class] .get-started-btn[class] {
     max-width: 279px;
     height: 64px !important;
     width: 279px !important;
     border-radius: 5px;
   }
+}
+@media (max-width: 767.98px) {
   body.spz-1032 .row.search-box-content .head-content {
     margin-top: 28px;
     text-align: center;
@@ -467,13 +466,14 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
     line-height: 40px;
     margin-bottom: 23px;
     font-weight: 700;
-    text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.05);
   }
   body.spz-1032 .row.search-box-content .head-content h5 {
     font-size: 20px;
     line-height: 26px;
     margin-bottom: 24px;
   }
+}
+@media (max-width: 767.98px) {
   body.spz-1032 .search-box-content .justify-content-center {
     padding: 0px;
     max-width: 100%;
@@ -490,12 +490,26 @@ body.spz-1032 .search-bar[class] .search[class] .search-field.is-invalid[class] 
     margin-bottom: 22px;
     padding-left: 1px;
   }
+}
+@media (max-width: 767.98px) {
   body.spz-1032 .hero-slider[class] hos-google-places .search-bar .form-inline {
     flex-wrap: wrap;
   }
 }
-@media (max-width: 767.98px) and (min-width: 461.98px) {
-  body.spz-1032 .hero-slider {
-    min-height: 524px;
+@media (max-width: 1024px) {
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode.disabled + label {
+    top: -10px !important;
+  }
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .search-zipcode[readonly] + label {
+    top: -10px !important;
+  }
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field .ng-valid ~ label {
+    top: -10px !important;
+  }
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.filled label {
+    top: -10px !important;
+  }
+  body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field.typing label {
+    top: -10px !important;
   }
 }/*# sourceMappingURL=1033-Style.css.map */

@@ -645,10 +645,12 @@ body.spz-3007-tc[class] .covered-repair-section[class] {
 }
 body.spz-3007-tc[class] .covered-repair-section[class] .covered-repairs-list[class] {
   padding-left: 0;
-  column-count: 1;
+  -moz-column-count: 1;
+       column-count: 1;
   display: flex;
   flex-wrap: wrap;
-  column-gap: 28px;
+  -moz-column-gap: 28px;
+       column-gap: 28px;
 }
 body.spz-3007-tc[class] .covered-repair-section[class] .section-head-title.font-unbounce-title[class] {
   font-family: Roboto;
@@ -930,6 +932,7 @@ body.spz-3007-tc[class] #tab-neighbourhood-service-id[id] .card[class] .related-
   font-weight: 600;
   font-size: 16px;
   line-height: 24px;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #ec7923;
 }
@@ -1065,7 +1068,8 @@ body.spz-3007-tc[class] .rating-average[class] .rating-label[class] {
     padding: 0.25rem 0.3rem;
   }
   body.spz-3007-tc[class] .covered-repair-section[class] .covered-repairs-list[class] {
-    column-gap: 14px;
+    -moz-column-gap: 14px;
+         column-gap: 14px;
   }
   body.spz-3007-tc[class] #tab-review-section {
     padding-left: 32px;
@@ -1087,7 +1091,8 @@ body.spz-3007-tc[class] .rating-average[class] .rating-label[class] {
 }
 @media (max-width: 1200px) {
   body.spz-3007-tc[class] .covered-repair-section[class] .covered-repairs-list[class] {
-    column-gap: 30px;
+    -moz-column-gap: 30px;
+         column-gap: 30px;
   }
 }
 @media (max-width: 1024px) {
@@ -1186,7 +1191,8 @@ body.spz-3007-tc[class] .rating-average[class] .rating-label[class] {
     padding: 0 !important;
   }
   body.spz-3007-tc[class] .covered-repair-section[class] .covered-repairs-list[class] {
-    column-gap: 4px;
+    -moz-column-gap: 4px;
+         column-gap: 4px;
   }
   body.spz-3007-tc[class] .bg-covered-repair-cls[class] {
     padding: 20px 0 0 0;
@@ -1637,7 +1643,7 @@ body.spz-3029[class] .general-section[class] .selected-zipcode-area[class] .prog
 }
 @media (min-width: 1265px) {
   body.spz-3029[class] .general-section[class] .selected-zipcode-area[class] .program-content[class].change-zip-grid-spz[class] {
-    max-height: 463px;
+    max-height: 330px;
   }
 }
 @media (max-width: 767px) {
@@ -1850,7 +1856,8 @@ body.spz-3029[class] .general-section[class] .selected-zipcode-area[class] .prog
   line-height: 26px;
   text-align: right;
   padding-right: 0;
-  text-decoration-line: underline;
+  -webkit-text-decoration-line: underline;
+          text-decoration-line: underline;
   color: #ec7923;
 }
 body.spz-3029[class] .general-section[class] .selected-zipcode-area[class] .program-content[class] .covered-repair-section .terms-cond-link-spz:hover {
@@ -2474,7 +2481,8 @@ body:not(.spz-3029) .faq-section[class] .card-block .fa-spz[class]::before {
 .spz-3029 .google_review .review_header .google_logo {
   width: 100%;
   max-width: 73px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .spz-3029 .google_review .review_header h4 {
   font-family: Roboto;
@@ -2493,7 +2501,8 @@ body:not(.spz-3029) .faq-section[class] .card-block .fa-spz[class]::before {
 .spz-3029 .google_review .review_header .avg_rating_star {
   width: 100%;
   max-width: 92px;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
   margin: 0 12px 0 9px;
 }
 .spz-3029 .google_review .review_header .rating_number {
@@ -2546,7 +2555,8 @@ body:not(.spz-3029) .faq-section[class] .card-block .fa-spz[class]::before {
   width: 100%;
   max-width: 80.5px;
   margin: 15.5px 0;
-  object-fit: contain;
+  -o-object-fit: contain;
+     object-fit: contain;
 }
 .spz-3029 .google_review .review_box .review_text {
   font-family: Roboto;
@@ -2661,4 +2671,4 @@ body:not(.spz-3029) .faq-section[class] .card-block .fa-spz[class]::before {
     right: 22px;
   }
 }
-/*Google reviews*/
+/*Google reviews*//*# sourceMappingURL=3029-style.css.map */

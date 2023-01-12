@@ -1,8 +1,8 @@
 
 
-const ENV_1032 = {
-    name: '1032_Homepage_redesign',
-    class: 'spz-1032',
+const ENV_1033 = {
+    name: '1033_Homepage_redesign',
+    class: 'spz-1033',
     date: '15-11-2022',
     base_url: 'https://www.awrusa.com/',
     test_url: 'https://www.awrusa.com/',
@@ -10,18 +10,18 @@ const ENV_1032 = {
 }
 
 function loadTest() {
-    var cookieName = ENV_1032.name + "-" + ENV_1032.date;
+    var cookieName = ENV_1033.name + "-" + ENV_1033.date;
     var cookieValue = "1";
     var myDate = new Date();
     myDate.setDate(myDate.getDate() + 30);
     document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
 
     // Set test class
-    document.body.classList.add(ENV_1032.class);
+    document.body.classList.add(ENV_1033.class);
 
-    waitForElm(ENV_1032.main_class).then(function (elm) {
+    waitForElm(ENV_1033.main_class).then(function (elm) {
         inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
-        loadTest1032();
+        loadTest1033();
         formFields();
     });
 
@@ -58,18 +58,18 @@ window.addEventListener('locationchange', function () {
 var url = location.href;
 urlCheck(url);
 function urlCheck(url) {
-    let testURL = ENV_1032.test_url;
-    if (window.location.pathname.indexOf(ENV_1032.test_url) > -1) {
+    let testURL = ENV_1033.test_url;
+    if (window.location.pathname.indexOf(ENV_1033.test_url) > -1) {
         testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, false)) {
-        waitForElm('ENV_1032.main_class').then(function () {
+        waitForElm('ENV_1033.main_class').then(function () {
             loadTest();
         });
         window.addEventListener("resize", function () {
             loadTest();
         });
-        if (document.querySelectorAll(ENV_1032.main_class).length > 0) {
+        if (document.querySelectorAll(ENV_1033.main_class).length > 0) {
             loadTest();
         }
         waitForElm('.pace-inactive').then(function () {
@@ -97,7 +97,7 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
 }
 
 function removeTest() {
-    document.body.classList.remove(ENV_1032.class);
+    document.body.classList.remove(ENV_1033.class);
 }
 
 function waitForElm(selector) {
@@ -116,39 +116,27 @@ function waitForElm(selector) {
 }
 
 
-function loadTest1032() {
+function loadTest1033() {
     var heroSection = setInterval(function () {
         if (document.querySelectorAll('.hero-slider').length > 0 && document.querySelector('button[angularticscategory="Header-Login"]')) {
-            jQuery('body').addClass(ENV_1032.class)
+            jQuery('body').addClass(ENV_1033.class)
             if (document.querySelectorAll('.hc-spz').length == 0) {
-                jQuery('.search-box-content .justify-content-center').prepend(`<div class="head-content hc-spz"> <h3 _ngcontent-c8="">See Protection Plans & Prices</h3></div>`)
+                jQuery('.search-box-content .justify-content-center').prepend(`<div class="head-content hc-spz"> <h3 _ngcontent-c8="">With Us, Your Home&#8217;s Protected</h3><h5 _ngcontent-c8="">Make the Smart Choice</h5></div>`)
                 jQuery('.search-box-content').after('<div class="mobile-spz-img"><img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1033/Mobile.jpg" alt="Hero Image" title="Hero Image"/></div>')
                 jQuery('.zip-code-search-box').after('<div class="spz-toll-no">or call <p>855-800-5195</p></div>')
                 jQuery('input.search-zipcode').each(function (index, value) { jQuery(this).attr('placeholder', '') })
                 jQuery('.hero-slider[class] hos-google-places .search-bar .search-field').prepend('<label _ngcontent-c7="" for="selectType">Zip Code</label>')
-                // clearInterval(heroSection);
-                jQuery('.search-field.search-zipcode').on('blur click', checkIfError);
-                jQuery('.get-started-btn.product-page-search').on('click', checkIfError);
             }
         }
     });
 }
-function checkIfError() {
-    const zipError = setInterval(function () {
-        if (jQuery('.error-zipcode.invalid-error .form-text').length > 0) {
-            jQuery('.search-box-content .zip-code-search-box').addClass('invalid-zip-box');
-        }
-        else {
-            jQuery('.search-box-content .zip-code-search-box').removeClass('invalid-zip-box');
-        }
-    }, 100);
-}
+
 
 
 // Related to Form Starts
 // Floating label for form fields
 function formFields() {
-    const selector = 'body.spz-1032 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode';
+    const selector = 'body.spz-1033 hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode';
     jQuery(document).on('focus', selector, function () {
         jQuery(this).closest('.form-group').addClass('active typing');
     });
