@@ -29,12 +29,24 @@
         // contentInt = setInterval(contentScroll, 100);
         contentScroll();
 
-        window.onscroll = function (e) {
-            contentScroll();
-        }
-        setTimeout(() => {
-            // clearInterval(contentInt);
-        }, 5000);
+        // window.onscroll = function (e) {
+        //     if (window.scrollY > (+localStorage.getItem('divHeightScrollFromEmitter') - 500)) {
+        //         console.log('i am scrolled  ' + (window.scrollY  + (+localStorage.getItem('divHeightScrollFromEmitter') - 100)))
+        //         contentScroll();
+        //     }
+        // }
+
+        waitForElm('#tabs').then(function () {
+            const observer = new MutationObserver(function (mutations) {
+                contentScroll();
+            });
+            observer.observe(document.getElementById('tabs'), { attributes: true, childList: true });
+        });
+
+        // setTimeout(() => {
+        //     // clearInterval(contentInt);
+        // }, 3000);
+
         waitForElm('.mob-gen-section .program-head .program-name').then(function (elm) {
             if (document.querySelectorAll('.spz-pname').length == 0) {
                 document.querySelector('hos-breadcrumb.detail-header-breadcrum').insertAdjacentHTML('beforeend', `<div class='spz-pname'> <div>`);
@@ -111,6 +123,9 @@
             waitForElm('.zipcode-searched-mobile').then(function (elm) {
                 contentScroll();
             });
+            waitForElm('.zipcode-searched-mobile .pricing-text').then(function (elm) {
+                contentScroll();
+            });
             waitForElm('.unavailable-block').then(function (elm) {
                 contentScroll();
             });
@@ -170,9 +185,15 @@
                     setTimeout(function () {
                         document.body.classList.add("loaded");
 
-                        window.addEventListener("resize", function () {
-                            loadTest();
-                        });
+                        window.onorientationchange = function () {
+                            var orientation = window.orientation;
+                            switch (orientation) {
+                                case 0:
+                                case 90:
+                                case -90: loadTest();
+                                    break;
+                            }
+                        };
                     }, 5000);
                     if (document.querySelectorAll(TEST_ENV.main_class).length > 0) {
                         loadTest();
@@ -187,12 +208,6 @@
             removeTest();
         }
     }
-
-
-    window.addEventListener("resize", function () {
-        let url = location.href;
-        urlCheck(url);
-    });
 
 
     function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {

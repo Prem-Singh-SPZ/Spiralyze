@@ -1,4 +1,7 @@
 body.spz-3025 {
+  .page-wrap.footer-wrap[class] {
+    margin-bottom: 148px;
+  }
   hos-product-detail-header {
     .detail-header-section.fixed-header[class] {
       display: none;
@@ -155,14 +158,18 @@ body.spz-3025 {
           margin-top: 0;
         }
         > i.fa-times[class] {
+          display: none !important;
           bottom: -40px;
           background-color: transparent !important;
           border: none !important;
-          left: 269px;
-          float: initial;
+          // left: 269px;
+          left: -18px;
 
-          @media (max-width: 331px) {
-          left: 262px;
+          // float: initial;
+
+          @media (max-width: 351px) {
+            // left: 262px;
+            left: 16px;
           }
           &::before {
             content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
@@ -171,15 +178,39 @@ body.spz-3025 {
           }
         }
         .search-zipcode-area[class] {
+          > i.fa-times[class] {
+            display: block !important;
+            top: -36px;
+            background-color: transparent !important;
+            border: none !important;
+            // left: 269px;
+            left: -18px;
+
+            // float: initial;
+
+            @media (max-width: 351px) {
+              // left: 262px;
+              left: 16px;
+            }
+            &::before {
+              content: url("//res.cloudinary.com/spiralyze/image/upload/v1672815320/AWR/3025/assets/Cancel.svg");
+              left: -24px;
+              top: -8px;
+            }
+          }
+
+          hos-google-places .search-bar[class] {
+            margin-top: 18px;
+          }
           hos-google-places form.search[class] {
             flex-wrap: nowrap;
             justify-content: left !important;
-            align-items: flex-start;
+            align-items: center;
             position: relative;
             // margin-bottom: 12px;
             .search-field[class] {
               max-width: 179px;
-              margin: 0 24px 18px 0 !important;
+              margin: 0 24px 0 0 !important;
 
               input.search-zipcode[class] {
                 height: 56px !important;
@@ -196,7 +227,7 @@ body.spz-3025 {
 
             .product-dtls-zip-err-text[class] {
               left: 0;
-              margin-top: 56px;
+              margin-top: 72px;
               margin-left: 0;
             }
 
@@ -206,7 +237,7 @@ body.spz-3025 {
               background: transparent;
               padding: 0 !important;
               outline: none !important;
-              margin: 13px 0 0 0 !important;
+              margin: 0 !important;
 
               img.get-started-btn-icon {
                 width: 100%;
@@ -384,8 +415,7 @@ body.spz-3025 {
               background: transparent;
               padding: 0 !important;
               outline: none !important;
-              margin: 13px 0 0 0 ;
-
+              margin: 11px 0 0 0;
 
               img.get-started-btn-icon {
                 width: 100%;
@@ -414,7 +444,7 @@ body.spz-3025 {
               }
             }
             > i.fa-times[class] {
-              bottom: -30px;
+              bottom: -28px;
               background-color: transparent !important;
               border: none !important;
               left: 21px;
