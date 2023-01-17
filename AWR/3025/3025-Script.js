@@ -26,26 +26,13 @@
     }
 
     function staticChanges() {
-        // contentInt = setInterval(contentScroll, 100);
         contentScroll();
-
-        // window.onscroll = function (e) {
-        //     if (window.scrollY > (+localStorage.getItem('divHeightScrollFromEmitter') - 500)) {
-        //         console.log('i am scrolled  ' + (window.scrollY  + (+localStorage.getItem('divHeightScrollFromEmitter') - 100)))
-        //         contentScroll();
-        //     }
-        // }
-
         waitForElm('#tabs').then(function () {
             const observer = new MutationObserver(function (mutations) {
                 contentScroll();
             });
             observer.observe(document.getElementById('tabs'), { attributes: true, childList: true });
         });
-
-        // setTimeout(() => {
-        //     // clearInterval(contentInt);
-        // }, 3000);
 
         waitForElm('.mob-gen-section .program-head .program-name').then(function (elm) {
             if (document.querySelectorAll('.spz-pname').length == 0) {
@@ -66,15 +53,10 @@
 
     function contentScroll() {
         if (window.innerWidth <= 766) {
-            if (document.querySelectorAll('.spz-desc-title').length > 0) {
-                // clearInterval(contentInt);
-            }
-
             if (document.querySelectorAll('.spz-desc-title').length == 0 && document.querySelectorAll('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').length > 0) {
                 document.querySelector('.general-section .page-wrap .selected-zipcode-area .page-wrap.program-content').insertAdjacentHTML('afterbegin', `<div class='spz-desc-title'> <h6>Product Description</h6> <div>`);
 
                 document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content').insertAdjacentHTML('beforeend', `<div class='spz-pricing-parent'> <div>`);
-                // clearInterval(contentInt);
 
                 document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn').innerText = 'Get Started';
                 document.querySelector('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn').setAttribute('title', 'Get Started');
@@ -90,9 +72,9 @@
                 moveElement('.general-section .selected-zipcode-area > .page-wrap.program-content .enroll-box.enroll-now-box', '.spz-pricing-parent');
             }
 
-            if (document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0').length > 0 && document.querySelectorAll('.pricing-section-label').length == 0) {
-                document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0').insertAdjacentHTML('afterbegin', '<label class="pricing-section-label">Based on your location</label>');
-                document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0 .selected-area-text').innerText = document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > .ng-tns-c9-0 .selected-area-text').innerText + '.';
+            if (document.querySelectorAll(' .selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > div[class]').length > 0 && document.querySelectorAll('.pricing-section-label').length == 0) {
+                document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > div[class]:nth-child(2)').insertAdjacentHTML('afterbegin', '<label class="pricing-section-label">Based on your location</label>');
+                document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > div[class] .selected-area-text').innerText = document.querySelector('.selected-zipcode-area  .page-wrap.program-content > .zipcode-searched-mobile .pricing-not-leak > div[class] .selected-area-text').innerText + '.';
 
                 document.querySelector('.selected-zipcode-area > .page-wrap.program-content .enroll-now-btn-mob').innerText = 'Get Started';
                 document.querySelector(' .selected-zipcode-area > .page-wrap.program-content .enroll-now-btn-mob').setAttribute('title', 'Get Started');
@@ -111,11 +93,14 @@
 
 
     window.addEventListener("click", function (e) {
+        moveElement('.content-section .page-wrap .left-box.tab-width-100', '.spz-pname');
+
         if (e.target.classList.contains("fa-times") || e.target.classList.contains("change-zip") || e.target.classList.contains("change-area-link")) {
             contentScroll();
         }
         // console.log('inside click validate == ', e.target.classList)
         if (e.target.classList.contains("get-started-btn-icon")) {
+            e.target.parentElement.click();
             loadTest();
             waitForElm('.zipcode-searched').then(function (elm) {
                 contentScroll();
@@ -155,6 +140,9 @@
         window.dispatchEvent(new Event('locationchange'));
     });
     window.addEventListener('locationchange', function () {
+        if (document.querySelectorAll('.spz-pname').length > 0) {
+            document.querySelector('.spz-pname').remove();
+        }
         url = location.href;
         urlCheck(url);
     });
