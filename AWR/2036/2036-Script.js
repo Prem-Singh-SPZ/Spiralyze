@@ -174,10 +174,10 @@ window.addEventListener('locationchange', function () {
     // }
 });
 
-window.addEventListener("resize", function () {
-    let url = location.href;
-    urlCheck(url);
-});
+// window.addEventListener("resize", function () {
+//     let url = location.href;
+//     urlCheck(url);
+// });
 
 let url = location.href;
 urlCheck(url);

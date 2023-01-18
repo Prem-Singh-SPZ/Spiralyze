@@ -9,16 +9,17 @@
         test_url: 'https://www.awrusa.com/',
         main_class: 'body',
     }
-    var datalayerFlag = false;
+    // var datalayerFlag = false;
+    // if (datalayerFlag == false) {
+    //     console.log('1032 datalayer pushed')
+    //     dataLayer.push({
+    //         'experimentID': 1032
+    //     })
+    //     datalayerFlag = true;
+    // }
+
 
     function loadTest() {
-        if (datalayerFlag == false) {
-            dataLayer = [{
-                'experimentID': 1032
-            }];
-            datalayerFlag = true;
-        }
-
         var cookieName = ENV_1032.name + "-" + ENV_1032.date;
         var cookieValue = "1";
         var myDate = new Date();
@@ -130,6 +131,7 @@
             if (document.querySelectorAll('.hero-slider').length > 0 && document.querySelector('button[angularticscategory="Header-Login"]')) {
                 jQuery('body').addClass(ENV_1032.class)
                 if (document.querySelectorAll('.hc-spz').length == 0) {
+                    // clearInterval(heroSection);
                     jQuery('.search-box-content .justify-content-center').prepend(`<div class="head-content hc-spz"> <h3 _ngcontent-c8="">See Protection Plans & Prices</h3></div>`)
                     jQuery('.search-box-content').after('<div class="mobile-spz-img"><img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1033/Mobile.jpg" alt="Hero Image" title="Hero Image"/></div>')
                     jQuery('.zip-code-search-box').after('<div class="spz-toll-no">or call <p>855-800-5195</p></div>')

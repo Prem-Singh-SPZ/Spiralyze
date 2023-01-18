@@ -9,15 +9,15 @@
         test_url: 'https://www.awrusa.com/',
         main_class: 'body',
     }
-    var datalayerFlag = false;
+    // var datalayerFlag = false;
 
     function loadTest() {
-        if (datalayerFlag == false) {
-            dataLayer = [{
-                'experimentID': 1032
-            }];
-            datalayerFlag = true;
-        }
+        // if (datalayerFlag == false) {
+        //     dataLayer.push({
+        //         'experimentID': 1032
+        //     })
+        //     datalayerFlag = true;
+        // }
         var cookieName = ENV_1033.name + "-" + ENV_1033.date;
         var cookieValue = "1";
         var myDate = new Date();
@@ -126,7 +126,10 @@
 
     function loadTest1033() {
         var heroSection = setInterval(function () {
+            console.log('outside setinterval');
             if (document.querySelectorAll('.hero-slider').length > 0 && document.querySelector('button[angularticscategory="Header-Login"]')) {
+                console.log('inside setinterval');
+
                 jQuery('body').addClass(ENV_1033.class)
                 if (document.querySelectorAll('.hc-spz').length == 0) {
                     jQuery('.search-box-content .justify-content-center').prepend(`<div class="head-content hc-spz"> <h3 _ngcontent-c8="">With Us, Your Home&#8217;s Protected</h3><h5 _ngcontent-c8="">Make the Smart Choice</h5></div>`)
