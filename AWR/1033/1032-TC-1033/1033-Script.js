@@ -126,9 +126,7 @@
 
     function loadTest1033() {
         var heroSection = setInterval(function () {
-            console.log('outside setinterval');
             if (document.querySelectorAll('.hero-slider').length > 0 && document.querySelector('button[angularticscategory="Header-Login"]')) {
-                console.log('inside setinterval');
 
                 jQuery('body').addClass(ENV_1033.class)
                 if (document.querySelectorAll('.hc-spz').length == 0) {

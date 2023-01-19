@@ -731,8 +731,12 @@
 
     // Functions regarding API calls
     async function getProducts() {
-        const zipCode = JSON.parse(localStorage.getItem('selectedAddress')).zipcode;
-
+        let zipCode;
+        if (window.location.pathname.indexOf("/30309/") > -1 && JSON.parse(localStorage.getItem('selectedAddress')) == null) {
+            zipCode = 30309;
+        } else {
+            zipCode = JSON.parse(localStorage.getItem('selectedAddress')).zipcode;
+        }
         try {
             const zipResult = await getZipCode(zipCode);
             // const locResult = await getLocationCode(zipResult.locationCodeId);
