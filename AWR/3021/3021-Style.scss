@@ -70,16 +70,29 @@
 .spz-3021 .spz-awr-3021-additional-tab {
   height: 60px;
 }
+body.spz-3021[class] .testimonial-div-container[class] {
+  position: relative;
+}
+@media (min-width: 1023px) and (max-width: 1024px) {
+  .spz-3021 .general-desc-section .spz-awr-3021-additional-tab {
+    height: 100px;
+    display: flex;
+  }
+  .spz-3021 .general-desc-section.set-top-tabfix .spz-awr-3021-additional-tab {
+    height: 60px;
+  }
+}
 .spz-3021 .spz-awr-3021-additional-tab .tablinks {
   background: transparent;
   display: block;
   width: 100%;
 }
 body.spz-3021
-  .product-detail-body[_ngcontent-c7]
-  .spz-no-active-tabs.tab[_ngcontent-c7]
-  .active[_ngcontent-c7]:not(.spz-awr-3021-additional-tab) {
+  .product-detail-body[class]
+  .spz-no-active-tabs.tab[class]
+  .active[class]:not(.spz-awr-3021-additional-tab) {
   border-bottom: 6px solid #f5f5f5 !important;
+  //transition-delay: 300ms;
 }
 body.spz-3021
   .product-detail-body
@@ -87,12 +100,14 @@ body.spz-3021
   .active:not(.spz-awr-3021-additional-tab)
   button {
   color: #aaa !important;
+  //   //transition-delay: 300ms;
 }
 body.spz-3021
   .product-detail-body
   .tab
   .spz-awr-3021-additional-tab.tab-div.active {
   border-bottom: 6px solid #06b3e4 !important;
+  //transition-delay: 300ms;
 }
 body.spz-3021 .product-detail-body #tabs.tab .tab-div {
   width: 25% !important;
@@ -112,19 +127,21 @@ body.spz-3021 .product-detail-body .tab .spz-awr-3021-additional-tab {
 }
 /*body.spz-3021 #scroll-spy-id > div:not(.spz-awr-3021-why) { display: none; }*/
 body.spz-3021
-  .product-detail-body[_ngcontent-c7]
-  .spz-no-active-tabs.tab[_ngcontent-c7]
-  .active[_ngcontent-c7]
-  button[_ngcontent-c7] {
+  .product-detail-body[class]
+  .spz-no-active-tabs.tab[class]
+  .active[class]
+  button[class] {
+  //   //transition-delay: 300ms;
   font-weight: 400 !important;
 }
-body.spz-3021
-  .product-detail-body
-  .tab
-  .spz-awr-3021-additional-tab.active
-  button {
+body.spz-3021[class]
+  .product-detail-body[class]
+  .tab[class]
+  .spz-awr-3021-additional-tab.active[class]
+  button[class] {
   font-weight: 700 !important;
   color: #06b3e4;
+  //   //transition-delay: 300ms;
 }
 body.spz-3021 .product-detail-body .tab .spz-awr-3021-additional-tab button {
   color: #aaaaaa;
@@ -152,12 +169,32 @@ body.spz-3021 #review-section {
   body.spz-3021 .general-section {
     margin-bottom: 44px !important;
   }
-  html body.spz-3021 .product-detail-body .tab .tab-div button {
-    font-size: 20px !important;
-  }
+
   .spz-3021 .spz-awr-3021-why-wrapper {
     row-gap: 36px;
   }
+}
+html
+  body.spz-3021[class]
+  .product-detail-body[class]
+  .tab[class]
+  .tab-div[class]
+  button {
+  font-size: 24px !important;
+  line-height: 32px !important;
+}
+@media (min-width: 1023px) and (max-width: 1027px) {
+  html
+    body.spz-3021[class]
+    .product-detail-body[class]
+    .tab.set-top-tabfix[class]
+    .tab-div[class]
+    button {
+    font-size: 20px !important;
+  }
+}
+.set-top-tabfix + #scroll-spy-id #tab-review-section {
+  padding-top: 0 !important;
 }
 @media (min-width: 768px) and (max-width: 1024px) {
   .spz-3021 .spz-awr-3021-why-wrapper {
@@ -171,17 +208,21 @@ body.spz-3021 #review-section {
   }
   body.spz-3021 .set-top-tabfix[class] {
     height: 93px;
+    @media (min-width: 1024px) {
+      height: 60px;
+    }
   }
   body.spz-3021[class] .product-detail-body[class] .tab[class] {
     margin-top: 84px;
+    margin-bottom: 48px;
   }
 }
 @media (max-width: 1023px) {
   .spz-3021 .spz-awr-3021-why {
-    padding-top: 48px;
+    padding-top: 0;
   }
   .spz-3021 .spz-awr-3021-why-wrapper-main {
-    max-width: 668px;
+    max-width: 708px;
   }
   .spz-3021 .spz-awr-3021-why-item:nth-of-type(2n) + hr {
     display: none;
@@ -193,7 +234,7 @@ body.spz-3021 #review-section {
     display: none;
   }
 }
-@media only screen and (max-width: 767px) {
+@media only screen and (max-width: 767.98px) {
   .spz-3021 .spz-awr-3021-why .spz-awr-3021-why-title {
     font-family: "Roboto";
     font-style: normal;
@@ -211,6 +252,9 @@ body.spz-3021 #review-section {
   body.spz-3021 #scroll-spy-id > div {
     display: block !important;
     padding-top: 20px;
+  }
+  body.spz-3021 #tabs {
+    display: none !important;
   }
   // .spz-3021 .spz-awr-3021-why {
   //   order: 1;
@@ -234,6 +278,7 @@ body.spz-3021 #review-section {
     padding-bottom: 36px;
     .spz-awr-3021-why-wrapper {
       padding: 0 4px;
+      justify-content: center;
     }
   }
   .spz-3021 .spz-awr-3021-why-wrapper-main {
@@ -289,7 +334,7 @@ body.spz-3021 .product-detail-body .tab .tab-div button {
     height: 93px !important;
   }
   body.spz-3021 .product-detail-body .tab .tab-div button {
-    padding: 0 30px;
+    padding: 0 20px;
     height: auto !important;
   }
 }
@@ -300,24 +345,44 @@ body.spz-3021 .product-detail-body .tab .tab-div button {
     display: inline-block;
   }
 }
-body.spz-3021
-  .product-detail-body[_ngcontent-c7]
-  .tab[_ngcontent-c7]
-  .active[_ngcontent-c7] {
+body.spz-3021 .product-detail-body[class] .tab[class] .active[class] {
   border-bottom: 6px solid #06b3e4 !important;
+  //transition-delay: 300ms;
 }
 body.spz-3021 .product-detail-body .tab .active button {
+  //transition-delay: 300ms;
   color: #06b3e4 !important;
 }
+body.spz-3021 .product-detail-body[class] .tab[class] .active[class] a,
 body.spz-3021
-  .product-detail-body[_ngcontent-c7]
-  .tab[_ngcontent-c7]
-  .active[_ngcontent-c7]
-  a[_ngcontent-c7],
-body.spz-3021
-  .product-detail-body[_ngcontent-c7]
-  .tab[_ngcontent-c7]
-  .active[_ngcontent-c7]
-  button[_ngcontent-c7] {
+  .product-detail-body[class]
+  .tab[class]
+  .active[class]
+  button[class] {
+  //transition-delay: 300ms;
   font-weight: 700 !important;
+}
+@media (min-width: 1299px) {
+  body.spz-3021 .product-detail-body[class] .tab[class] {
+    max-width: 1200px;
+    margin-top: 100px;
+
+    // .tab-div[class] {
+    //   padding-bottom: 58px;
+    //     //transition-delay: 300ms;
+    // }
+
+    // &.set-top-tabfix[class] .tab-div[class] {
+    //   padding-bottom: 25px;
+    //     //transition-delay: 300ms;
+    // }
+  }
+  body.spz-3021 .spz-awr-3021-why {
+    padding-top: 12px;
+    padding-bottom: 120px;
+  }
+  .spz-awr-3021-why-wrapper-main[class] {
+    max-width: 1186px;
+    padding: 0 20px 0 36px;
+  }
 }
