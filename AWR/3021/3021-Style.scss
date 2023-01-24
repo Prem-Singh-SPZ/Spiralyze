@@ -1,5 +1,5 @@
 .spz-3021 .spz-awr-3021-why {
-  padding-top: 64px;
+  padding-top: 12px;
   padding-bottom: 36px;
   display: block;
   width: 100%;
@@ -13,6 +13,9 @@
   padding: 0 20px;
   width: 100%;
   margin: auto;
+  @media (min-width: 991px) and (max-width: 1024px) {
+    max-width: 968px;
+  }
 }
 .spz-3021 .spz-awr-3021-why-wrapper {
   display: flex;
@@ -51,7 +54,7 @@
   font-weight: 700;
   font-size: 18px;
   line-height: 26px;
-  color: #000000;
+  color: #333333;
   margin: 0;
   margin-bottom: 16px;
 }
@@ -80,6 +83,11 @@ body.spz-3021[class] .testimonial-div-container[class] {
   }
   .spz-3021 .general-desc-section.set-top-tabfix .spz-awr-3021-additional-tab {
     height: 60px;
+  }
+}
+@media (min-width: 1023px) {
+  .spz-3021 .general-desc-section .spz-awr-3021-additional-tab {
+    display: flex;
   }
 }
 .spz-3021 .spz-awr-3021-additional-tab .tablinks {
@@ -193,9 +201,6 @@ html
     font-size: 20px !important;
   }
 }
-.set-top-tabfix + #scroll-spy-id #tab-review-section {
-  padding-top: 0 !important;
-}
 @media (min-width: 768px) and (max-width: 1024px) {
   .spz-3021 .spz-awr-3021-why-wrapper {
     row-gap: 0;
@@ -207,7 +212,7 @@ html
     padding-bottom: 0;
   }
   body.spz-3021 .set-top-tabfix[class] {
-    height: 93px;
+    height: 76px;
     @media (min-width: 1024px) {
       height: 60px;
     }
@@ -215,6 +220,9 @@ html
   body.spz-3021[class] .product-detail-body[class] .tab[class] {
     margin-top: 84px;
     margin-bottom: 48px;
+    @media (min-width: 991px) {
+      padding: 0 40px;
+    }
   }
 }
 @media (max-width: 1023px) {
@@ -316,6 +324,9 @@ body.spz-3021 .product-detail-body .tab .tab-div {
   padding-bottom: 25px;
   border-bottom: 6px solid #f5f5f5 !important;
 }
+body.spz-3021 .product-detail-body .tab.set-top-tabfix .tab-div {
+  padding-bottom: inherit;
+}
 
 body.spz-3021 .product-detail-body .tab .tab-div button {
   font-family: Roboto;
@@ -332,6 +343,9 @@ body.spz-3021 .product-detail-body .tab .tab-div button {
   body.spz-3021 .product-detail-body .tab .tab-div {
     padding-bottom: 20px;
     height: 93px !important;
+  }
+  body.spz-3021 .product-detail-body .tab.set-top-tabfix[class] .tab-div {
+    height: 76px !important;
   }
   body.spz-3021 .product-detail-body .tab .tab-div button {
     padding: 0 20px;
@@ -377,6 +391,9 @@ body.spz-3021
     //     //transition-delay: 300ms;
     // }
   }
+  body.spz-3021 .product-detail-body[class] .set-top-tabfix.tab[class] {
+    max-width: 1314px;
+  }
   body.spz-3021 .spz-awr-3021-why {
     padding-top: 12px;
     padding-bottom: 120px;
@@ -384,5 +401,14 @@ body.spz-3021
   .spz-awr-3021-why-wrapper-main[class] {
     max-width: 1186px;
     padding: 0 20px 0 36px;
+  }
+}
+@media only screen and (min-width: 768px) and (max-width: 950px) {
+  body.spz-3021
+    .search-zipcode-area[class]
+    hos-google-places
+    .search-bar
+    .product-details-zip-text {
+    margin: 0;
   }
 }
