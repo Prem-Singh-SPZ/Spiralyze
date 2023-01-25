@@ -149,8 +149,14 @@ body.spz-3021[class]
   button[class] {
   font-weight: 700 !important;
   color: #06b3e4;
-  //   //transition-delay: 300ms;
 }
+// body.spz-3021[class]
+//   .product-detail-body[class]
+//   .tab.set-top-tabfix[class]
+//   .active[class]
+//   button[class] {
+//   transition-delay: 300ms;
+// }
 body.spz-3021 .product-detail-body .tab .spz-awr-3021-additional-tab button {
   color: #aaaaaa;
   font-weight: 400;
@@ -212,7 +218,7 @@ html
     padding-bottom: 0;
   }
   body.spz-3021 .set-top-tabfix[class] {
-    height: 76px;
+    height: 90px;
     @media (min-width: 1024px) {
       height: 60px;
     }
@@ -345,7 +351,10 @@ body.spz-3021 .product-detail-body .tab .tab-div button {
     height: 93px !important;
   }
   body.spz-3021 .product-detail-body .tab.set-top-tabfix[class] .tab-div {
-    height: 76px !important;
+    height: 90px !important;
+    @media (min-width: 767.98px) and (max-width: 1022.98px) {
+      padding-top: 12px;
+    }
   }
   body.spz-3021 .product-detail-body .tab .tab-div button {
     padding: 0 20px;
@@ -361,8 +370,10 @@ body.spz-3021 .product-detail-body .tab .tab-div button {
 }
 body.spz-3021 .product-detail-body[class] .tab[class] .active[class] {
   border-bottom: 6px solid #06b3e4 !important;
-  //transition-delay: 300ms;
 }
+// body.spz-3021 .product-detail-body[class] .tab.set-top-tabfix[class] .active[class] {
+//   transition-delay: 300ms;
+// }
 body.spz-3021 .product-detail-body .tab .active button {
   //transition-delay: 300ms;
   color: #06b3e4 !important;
@@ -403,12 +414,59 @@ body.spz-3021
     padding: 0 20px 0 36px;
   }
 }
-@media only screen and (min-width: 768px) and (max-width: 950px) {
+@media only screen and (min-width: 768px) and (max-width: 1299px) {
   body.spz-3021
     .search-zipcode-area[class]
     hos-google-places
     .search-bar
     .product-details-zip-text {
     margin: 0;
+    white-space: nowrap;
   }
+}
+@media only screen and (min-width: 1024px) {
+  body.spz-3021.safari
+    .spz-awr-3021-why
+    .spz-awr-3021-why-wrapper
+    .spz-awr-3021-why-item {
+    margin-bottom: 56px;
+  }
+}
+@media only screen and (min-width: 670px) and (max-width: 767px) {
+  body.spz-3021.safari
+    .spz-awr-3021-why
+    .spz-awr-3021-why-wrapper
+    .spz-awr-3021-why-item {
+    margin-bottom: 36px;
+  }
+}
+body.spz-3021 {
+  @media (max-width: 766.98px) {
+    .header-icon[class] {
+      margin-left: 5px !important;
+    }
+    ul.menu[class] {
+      display: flex !important;
+    }
+
+    .card[class] {
+      height: auto;
+      .top-section[class] {
+        padding-bottom: 8px;
+      }
+    }
+  }
+}
+@media (min-width: 374px) and (max-width: 424px) {
+  body.spz-3021 .detail-header-section[class] .program-name[class] h3[class] {
+    font-size: 20px !important;
+  }
+}
+body.spz-3021
+  .product-detail-body[class]
+  .general-section[class]
+  .enroll-now-btn[class] {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }

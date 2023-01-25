@@ -24,6 +24,9 @@
         }
 
         window.scrollTo(0, 0);
+        if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+            document.body.classList.add('safari')
+        }
     }
 
     function addWhyAwr() {
@@ -44,10 +47,10 @@
             // if (faqTitle && faqTitle.innerText !== 'Frequently Asked Questions') {
             //     faqTitle.innerText = 'Frequently Asked Questions'
             // }
-            // if (document.querySelector('.enroll-now-btn') && document.querySelector('.enroll-now-btn').innerText !== 'Get Started') {
-            //     document.querySelector('.enroll-now-btn').innerText = 'Get Started'
-            //     document.querySelector('.enroll-now-btn').setAttribute('title', 'Get Started')
-            // }
+            if (document.querySelector('.enroll-now-btn') && document.querySelector('.enroll-now-btn').innerText !== 'Get Started') {
+                document.querySelector('.enroll-now-btn').innerText = 'Get Started'
+                document.querySelector('.enroll-now-btn').setAttribute('title', 'Get Started')
+            }
 
             if (document.querySelectorAll('.product-detail-body #tabs .tab-div').length === 3) {
                 // document.querySelectorAll('.product-detail-body #tabs .tab-div')[0].remove()
@@ -63,23 +66,23 @@
             }
             jQuery('.testimonial-blockquote').appendTo('.testimonial-div-container');
 
-            // document.querySelectorAll('.card .card-body .enroll-now').forEach(item => {
-            //     if (item.innerText !== 'Get Started') {
-            //         item.innerText = 'Get Started'
-            //         item.setAttribute('title', 'Get Started')
-            //     }
-            // })
+            document.querySelectorAll('.card .bottom-section .enroll-now').forEach(item => {
+                if (item.innerText !== 'Get Started') {
+                    item.innerText = 'Get Started'
+                    item.setAttribute('title', 'Get Started')
+                }
+            })
             if (document.querySelector('.rating-btn')) {
                 document.querySelector('.rating-btn').parentElement.parentElement.classList.add('reviews-wrapper-spz');
             }
-            // if (document.querySelector('.detail-header-section .enroll-btn') && document.querySelector('.detail-header-section .enroll-btn').innerText !== 'Get Started') {
-            //     document.querySelector('.detail-header-section .enroll-btn').innerText = 'Get Started'
-            //     document.querySelector('.detail-header-section .enroll-btn').setAttribute('title', 'Get Started')
-            // }
-            // if (document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob') && document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob').innerText !== 'Get Started') {
-            //     document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob').innerText = 'Get Started'
-            //     document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob').setAttribute('title', 'Get Started')
-            // }
+            if (document.querySelector('.detail-header-section .enroll-btn') && document.querySelector('.detail-header-section .enroll-btn').innerText !== 'Get Started') {
+                document.querySelector('.detail-header-section .enroll-btn').innerText = 'Get Started'
+                document.querySelector('.detail-header-section .enroll-btn').setAttribute('title', 'Get Started')
+            }
+            if (document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob') && document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob').innerText !== 'Get Started') {
+                document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob').innerText = 'Get Started'
+                document.querySelector('.selected-zipcode-area.mobile-screen-only.fixed-header .program-content .zipcode-searched-mobile .pricing-box .enroll-now-btn-mob').setAttribute('title', 'Get Started')
+            }
 
             // Add Why section
             let checkjQ = setInterval(function () {
@@ -118,9 +121,7 @@
                         let whySection = jQuery('.spz-awr-3021-why').position().top;
                         let whySectionHeight = jQuery('.spz-awr-3021-why').outerHeight();
                         let totalWhyScroll = (whySection + whySectionHeight) - 100;
-                        console.log('windowScroll ' + windowScroll);
-                        console.log('sectionScroll ' + sectionScroll);
-                        console.log('totalWhyScroll ' + totalWhyScroll);
+
                         if (windowScroll > sectionScroll) {
                             jQuery('.spz-why-awr-cta').parent().parent().removeClass('spz-no-active-tabs');
                             jQuery('.spz-why-awr-cta').parent().removeClass('active');
