@@ -1,5 +1,21 @@
 
 (function () {
+    // Add Slick
+    var isSlickLoad = 0;
+    var slickStyle = document.createElement('link');
+    slickStyle.rel = 'stylesheet';
+    slickStyle.type = 'text/css';
+    slickStyle.href = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
+    document.getElementsByTagName('HEAD')[0].appendChild(slickStyle);
+
+    var slickScript = document.createElement('script');
+    slickScript.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
+    slickScript.type = 'text/javascript';
+    document.getElementsByTagName('head')[0].appendChild(slickScript);
+
+    slickScript.onload = function () {
+        isSlickLoad = 1;
+    };
 
     const ENV_1034_V1 = {
         name: '1034_V1_Homepage_redesign',
@@ -25,254 +41,172 @@
             loadTest1034_V1();
             formFields();
 
-            setInterval(() => {
-                waitForElm('.zip-code-search-box input[name="zipcode"]').then(function () {
-                    document.querySelector('.zip-code-search-box [name="zipcode"]').removeAttribute('placeholder');
-                });
-            }, 200);
             // Check jquery
             let checkJq = setInterval(function () {
+                waitForElm('.zip-code-search-box input[name="zipcode"]').then(function () {
+                    document.querySelector('.zip-code-search-box [name="zipcode"]').removeAttribute('placeholder');
+                    if (document.querySelector('.zip-code-search-box [name="zipcode"]').classList.contains('ng-pristine')) {
+                        inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
+                    }
+                    replaceHeaderLogo();
+                });
                 if (jQuery.fn) {
                     clearInterval(checkJq);
-
-                    // Replace header logo
-                    // let checkHeader = setInterval(function () {
-                    if (jQuery('.logo.base-logo').length > 0) {
-                        clearInterval(checkHeader);
-                        let checkIfLogoUpdate = setInterval(function () {
-                            if (jQuery('.logo.base-logo img:not(.spz-1034_V1-mobile-logo)').attr('src').indexOf('AW_Logo_02.svg') != -1) {
-                                jQuery('.logo.base-logo img:not(.spz-1034_V1-mobile-logo)').attr({ src: '//res.cloudinary.com/spiralyze/image/upload/v1669783657/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/Logo.svg', alt: 'AWR Logo' });
-                            }
-                        });
-
-                        if (jQuery('.spz-1034_V1-mobile-logo').length == 0) {
-                            jQuery('.logo.base-logo').append('<img src="//res.cloudinary.com/spiralyze/image/upload/v1670216808/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/Logo-short.svg" alt="AWR Logo" class="spz-1034_V1-mobile-logo">');
-                        }
-                        jQuery('.logo.base-logo img').css('opacity', 1);
-                    }
-                    // }, 500);
-
                     // Append Custom sections
-                    let checkBody = setInterval(function () {
-                        if (jQuery('hos-body').length > 0) {
-                            clearInterval(checkBody);
-                            if (jQuery('.spz-1034_V1-main').length == 0) {
-                                jQuery('hos-body').after('<div class="spz-1034_V1-main"></div>');
-                            }
+                    waitForElm('hos-body').then(() => {
+                        // if (jQuery('hos-body').length > 0) {
+                        if (jQuery('.spz-1034_V1-main').length == 0) {
+                            jQuery('hos-body').after('<div class="spz-1034_V1-main"></div>');
+                        }
 
-                            // Add contact in side menu
-                            let checkSideMenu = setInterval(function () {
-                                if (jQuery('hos-right-navigation-menu').length > 0) {
-                                    clearInterval(checkSideMenu);
-                                    let menuHtml = '\
+                        replaceHeaderLogo();
+                        // Add contact in side menu
+                        waitForElm('hos-right-navigation-menu').then(() => {
+                            // if (jQuery('hos-right-navigation-menu').length > 0) {
+                            let menuHtml = '\
 								<div class="spz-1034_V1-menu-contact">\
 								    <div class="spz-1034_V1-menu-contact-wrapper">\
 								        <a href="tel:18558005195" class="spz-1034_V1-menu-contact-cta"><hr>Contact Us 24/7<hr><strong>1.855.800.5195</strong></a>\
 								    </div>\
 								</div>\
 							';
-                                    if (jQuery('hos-right-navigation-menu .spz-1034_V1-menu-contact').length == 0) {
-                                        jQuery('hos-right-navigation-menu .head-box').after(menuHtml);
+                            if (jQuery('hos-right-navigation-menu .spz-1034_V1-menu-contact').length == 0) {
+                                jQuery('hos-right-navigation-menu .head-box').after(menuHtml);
+                            }
+                        });
+
+                        // Check zipcode form
+                        waitForElm('.spz-1034_V1-main').then((elm) => {
+                            // Hero Section
+                            if (jQuery('.spz-1034_V1-reviews').length == 0) {
+
+
+                                // Reviews
+                                jQuery(elm).append(initReviewSlider());
+
+                                // Protection Plans
+                                jQuery(elm).append(initPlans());
+                                // Trigger Popup
+                                jQuery(document).on('click', '.spz-1034_V1-plans-cta', function () {
+                                    if (jQuery('.spz-1034_V1-popup-overlay').length > 0) {
+                                        jQuery('.spz-1034_V1-popup-overlay').fadeIn();
+                                        jQuery('body').addClass('spz-popup-visible');
+                                        if (jQuery('.spz-1034_V1-popup-form hos-google-places').length == 0) {
+                                            jQuery('.spz-1034_V1-popup-form').append(jQuery('hos-google-places'));
+                                            document.querySelector('.spz-1034_V1-popup-form [name="zipcode"]').setAttribute('placeholder', 'Enter Your Zip Code');
+                                        }
                                     }
-                                }
-                            });
-
-                            // Check zipcode form
-                            waitForElm('.spz-1034_V1-main').then((elm) => {
-                                // Hero Section
-                                if (jQuery('.spz-1034_V1-reviews').length == 0) {
-                                    // Hero
-                                    // jQuery(elm).append(initHero());
-                                    // Append Form
-                                    // waitForElm('hos-google-places').then((elm) => {
-                                    //     if (jQuery('.zip-code-search-box hos-google-places').length == 0) {
-                                    //         jQuery('.zip-code-search-box').append(jQuery(elm));
-                                    //     }
-                                    // });
-                                    // Init Animation
-                                    // let checkLotteiMobile = setInterval(function () {
-                                    //     if (lotteMobileConfigLoad == 1 && lotteLoad == 1) {
-                                    //         clearInterval(checkLotteiMobile);
-                                    //         var paramsMobile = {
-                                    //             container: document.getElementById('lottie-mobile'),
-                                    //             renderer: 'svg',
-                                    //             loop: true,
-                                    //             autoplay: true,
-                                    //             animationData: mobileAnimation
-                                    //         };
-
-                                    //         var animMobile;
-
-                                    //         animMobile = lottie.loadAnimation(paramsMobile);
-                                    //     }
-                                    // }, 500);
-                                    // let checkLottei = setInterval(function () {
-                                    //     if (lotteLoad == 1 && lotteConfigLoad == 1) {
-                                    //         clearInterval(checkLottei);
-                                    //         var params = {
-                                    //             container: document.getElementById('lottie'),
-                                    //             renderer: 'svg',
-                                    //             loop: true,
-                                    //             autoplay: true,
-                                    //             animationData: animationData
-                                    //         };
-
-                                    //         var anim;
-
-                                    //         anim = lottie.loadAnimation(params);
-                                    //     }
-                                    // }, 500);
-
-                                    // Reviews
-                                    jQuery(elm).append(initReviewSlider());
-                                    // Init Slick
-                                    let checkSlick = setInterval(function () {
-                                        if (isSlickLoad == 1) {
-                                            clearInterval(checkSlick);
-                                            jQuery('.spz-1034_V1-review-slider').slick({
-                                                infinite: true,
-                                                arrows: false,
-                                                dots: false,
-                                                slidesToShow: 7,
-                                                slidesToScroll: 1,
-                                                autoplay: true,
-                                                autoplaySpeed: 3500,
-                                                centerMode: true,
-                                                // speed: 50000,
-                                                variableWidth: true,
-                                                focusOnSelect: false,
-                                                cssEase: "linear"
-                                            });
+                                });
+                                jQuery(document).on('click', '.spz-1034_V1-popup-close', function () {
+                                    jQuery('.spz-1034_V1-popup-overlay').fadeOut('fast');
+                                    jQuery('body').removeClass('spz-popup-visible');
+                                    setTimeout(function () {
+                                        if (jQuery('.zip-code-search-box hos-google-places').length == 0) {
+                                            jQuery('.zip-code-search-box').append(jQuery('hos-google-places'));
+                                            inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
                                         }
-                                    }, 500);
-
-                                    // Protection Plans
-                                    jQuery(elm).append(initPlans());
-                                    // Trigger Popup
-                                    jQuery(document).on('click', '.spz-1034_V1-plans-cta', function () {
-                                        if (jQuery('.spz-1034_V1-popup-overlay').length > 0) {
-                                            jQuery('.spz-1034_V1-popup-overlay').fadeIn();
-                                            jQuery('body').addClass('spz-popup-visible');
-                                            if (jQuery('.spz-1034_V1-popup-form hos-google-places').length == 0) {
-                                                jQuery('.spz-1034_V1-popup-form').append(jQuery('hos-google-places'));
-                                                document.querySelector('.spz-1034_V1-popup-form [name="zipcode"]').setAttribute('placeholder', 'Enter Your Zip Code');
-                                            }
-                                        }
-                                    });
-                                    jQuery(document).on('click', '.spz-1034_V1-popup-close', function () {
-                                        if (document.querySelector('[name="zipcode"]').value) {
-                                            setTimeout(function () {
-                                                if (jQuery('.zip-code-search-box hos-google-places').length == 1) {
-                                                    jQuery('.zip-code-search-box hos-google-places .search-field.form-group').addClass('filled active');
-                                                }
-                                            }, 150);
-                                        }
+                                    }, 100);
+                                });
+                                jQuery('body').click(function (e) {
+                                    if (e.target.classList.contains('spz-1034_V1-popup')) {
                                         jQuery('.spz-1034_V1-popup-overlay').fadeOut('fast');
                                         jQuery('body').removeClass('spz-popup-visible');
                                         setTimeout(function () {
                                             if (jQuery('.zip-code-search-box hos-google-places').length == 0) {
                                                 jQuery('.zip-code-search-box').append(jQuery('hos-google-places'));
+                                                inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
                                             }
                                         }, 100);
-                                    });
-                                    jQuery('body').click(function (e) {
-                                        if (e.target.classList.contains('spz-1034_V1-popup')) {
-                                            if (document.querySelector('[name="zipcode"]').value) {
-                                                setTimeout(function () {
-                                                    if (jQuery('.zip-code-search-box hos-google-places').length == 1) {
-                                                        jQuery('.zip-code-search-box hos-google-places .search-field.form-group').addClass('filled active');
-                                                    }
-                                                }, 150);
-                                            }
-                                            jQuery('.spz-1034_V1-popup-overlay').fadeOut('fast');
-                                            jQuery('body').removeClass('spz-popup-visible');
-                                            setTimeout(function () {
-                                                if (jQuery('.zip-code-search-box hos-google-places').length == 0) {
-                                                    jQuery('.zip-code-search-box').append(jQuery('hos-google-places'));
-                                                    // document.querySelector('[name="zipcode"]').value = '';
-                                                }
-                                            }, 100);
-                                        }
-                                    });
-                                    // How it works
-                                    jQuery(elm).append(initHowItWorks());
-                                    // Testimonials
-                                    jQuery(elm).append(initTestimonial());
-                                    // Add Partners
-                                    jQuery(elm).append(initPartner());
-                                    // Init Slick
-                                    let checkPartnerSlick = setInterval(function () {
-                                        if (isSlickLoad == 1) {
-                                            clearInterval(checkPartnerSlick);
-                                            jQuery('.spz-1034_V1-partner-logos').slick({
-                                                infinite: true,
-                                                arrows: false,
-                                                dots: false,
-                                                slidesToShow: 7,
-                                                slidesToScroll: 7,
-                                                autoplay: true,
-                                                autoplaySpeed: 0,
-                                                centerMode: true,
-                                                speed: 8000,
-                                                variableWidth: true,
-                                                focusOnSelect: false,
-                                                cssEase: "linear",
-                                                draggable: false
-                                            });
-                                        }
-                                    }, 500);
-                                    // Learn More
-                                    jQuery(elm).append(initLearnMore());
-                                    // Google Ratings
-                                    jQuery(elm).append(initGoogleRating());
-                                    // Footer
-                                    jQuery(elm).append(initFooter());
-                                    // Zipcode Popup
-                                    jQuery(elm).append(initPopup());
+                                    }
+                                });
+                                // How it works
+                                jQuery(elm).append(initHowItWorks());
+                                // Testimonials
+                                jQuery(elm).append(initTestimonial());
+                                // Add Partners
+                                jQuery(elm).append(initPartner());
+                                // Init Slick
+                                let checkPartnerSlick = setInterval(function () {
+                                    replaceHeaderLogo();
 
-                                    // Update Menu Position
-                                    // let checkMenuLogin = setInterval(function(){
-                                    // 	if(jQuery('.spz-1034_V1 hos-right-navigation-menu .login-box').length > 0)
-                                    // 	{
-                                    // 		clearInterval(checkMenuLogin);
-                                    // 		jQuery('.spz-1034_V1 hos-right-navigation-menu .link-box').after(jQuery('.spz-1034_V1 hos-right-navigation-menu .login-box'));
-                                    // 	}
-                                    // }, 500);
-                                    // Toggle Menu
-                                    jQuery('.spz-1034_V1 #navTrigger a').unbind('click').click(function () {
-                                        if (jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu.spz-menu-active').length > 0) {
-                                            jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').removeClass('active spz-menu-active');
-                                            jQuery('.spz-1034_V1 #backdrop-sidemenu').hide();
-                                            jQuery('body').removeClass('sidebar-open');
-                                            jQuery('header').removeClass('spz-menu-open');
-                                            jQuery('.spz-active-parent-menu [aria-expanded="true"]').attr('aria-expanded', false);
-                                            jQuery('.spz-active-parent-menu').removeClass('spz-active-parent-menu');
-                                        }
-                                        else {
-                                            jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').addClass('spz-menu-active');
-                                            jQuery('header').addClass('spz-menu-open');
-                                        }
-                                    });
-                                    jQuery(document).on('click', '.spz-1034_V1 .accordmenucls', function () {
-                                        let $thisMenu = jQuery(this);
+                                    if (isSlickLoad == 1) {
+                                        clearInterval(checkPartnerSlick);
+                                        jQuery('.spz-1034_V1-partner-logos').slick({
+                                            infinite: true,
+                                            arrows: false,
+                                            dots: false,
+                                            slidesToShow: 7,
+                                            slidesToScroll: 7,
+                                            autoplay: true,
+                                            autoplaySpeed: 0,
+                                            centerMode: true,
+                                            speed: 8000,
+                                            variableWidth: true,
+                                            focusOnSelect: false,
+                                            cssEase: "linear",
+                                            draggable: false
+                                        });
+                                        jQuery('.spz-1034_V1-review-slider').slick({
+                                            infinite: true,
+                                            arrows: false,
+                                            dots: false,
+                                            slidesToShow: 7,
+                                            slidesToScroll: 1,
+                                            autoplay: true,
+                                            autoplaySpeed: 3500,
+                                            centerMode: true,
+                                            // speed: 50000,
+                                            variableWidth: true,
+                                            focusOnSelect: false,
+                                            cssEase: "linear"
+                                        });
+                                    }
+                                }, 500);
+                                // Learn More
+                                jQuery(elm).append(initLearnMore());
+                                // Google Ratings
+                                jQuery(elm).append(initGoogleRating());
+                                // Footer
+                                jQuery(elm).append(initFooter());
+                                // Zipcode Popup
+                                jQuery(elm).append(initPopup());
+
+
+                                // Toggle Menu
+                                jQuery('.spz-1034_V1 #navTrigger a').unbind('click').click(function () {
+                                    if (jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu.spz-menu-active').length > 0) {
+                                        jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').removeClass('active spz-menu-active');
+                                        jQuery('.spz-1034_V1 #backdrop-sidemenu').hide();
+                                        jQuery('body').removeClass('sidebar-open');
+                                        jQuery('header').removeClass('spz-menu-open');
+                                        jQuery('.spz-active-parent-menu [aria-expanded="true"]').attr('aria-expanded', false);
                                         jQuery('.spz-active-parent-menu').removeClass('spz-active-parent-menu');
-                                        if (jQuery(this).hasClass('accordmenucls') && !(jQuery(this).hasClass('collapsed'))) {
-                                            $thisMenu.parent().addClass('spz-active-parent-menu');
-                                        }
-                                        else {
-                                            $thisMenu.parent().removeClass('spz-active-parent-menu');
-                                        }
-                                    });
-                                    jQuery('body').click(function (e) {
-                                        if (e.target.classList.contains('backdrop-sidemenu') == true) {
-                                            jQuery('.spz-active-parent-menu').removeClass('spz-active-parent-menu');
-                                            jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').removeClass('active spz-menu-active');
-                                        }
-                                    });
-                                }
-                            });
-                        }
-                    }, 500);
+                                    }
+                                    else {
+                                        jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').addClass('spz-menu-active');
+                                        jQuery('header').addClass('spz-menu-open');
+                                    }
+                                });
+                                jQuery(document).on('click', '.spz-1034_V1 .accordmenucls', function () {
+                                    let $thisMenu = jQuery(this);
+                                    jQuery('.spz-active-parent-menu').removeClass('spz-active-parent-menu');
+                                    if (jQuery(this).hasClass('accordmenucls') && !(jQuery(this).hasClass('collapsed'))) {
+                                        $thisMenu.parent().addClass('spz-active-parent-menu');
+                                    }
+                                    else {
+                                        $thisMenu.parent().removeClass('spz-active-parent-menu');
+                                    }
+                                });
+                                jQuery('body').click(function (e) {
+                                    if (e.target.classList.contains('backdrop-sidemenu') == true) {
+                                        jQuery('.spz-active-parent-menu').removeClass('spz-active-parent-menu');
+                                        jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').removeClass('active spz-menu-active');
+                                    }
+                                });
+                                console.log('main test is called')
+                            }
+                        });
+                    });
                 }
             }, 500);
         });
@@ -280,6 +214,18 @@
         document.body.classList.add("loaded");
     }
 
+    function replaceHeaderLogo() {
+        // Replace header logo
+        waitForElm('.spz-1034_V1 .logo.base-logo').then((elm) => {
+            console.log('logo change functio')
+            jQuery('.logo.base-logo img:not(.spz-1034_V1-mobile-logo)').attr({ src: '//res.cloudinary.com/spiralyze/image/upload/v1669783657/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/Logo.svg', alt: 'AWR Logo' });
+
+            if (jQuery('.spz-1034_V1-mobile-logo').length == 0) {
+                jQuery('.logo.base-logo').append('<img src="//res.cloudinary.com/spiralyze/image/upload/v1670216808/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/Logo-short.svg" alt="AWR Logo" class="spz-1034_V1-mobile-logo">');
+            }
+            jQuery('.logo.base-logo img').css('opacity', 1);
+        });
+    }
 
     // Generic
     history.pushState = (function (f) {
@@ -309,27 +255,39 @@
 
     var url = location.href;
     urlCheck(url);
-    function urlCheck(url) {
-        console.log(url);
-        let testURL = ENV_1034_V1.test_url;
-        if (window.location.pathname.indexOf(ENV_1034_V1.test_url) > -1) {
-            testURL = window.location.href;
-        }
-        console.log(testURL);
+    // function urlCheck(url) {
+    //     console.log(url);
+    //     let testURL = ENV_1034_V1.test_url;
+    //     if (window.location.pathname.indexOf(ENV_1034_V1.test_url) > -1) {
+    //         testURL = window.location.href;
+    //     }
+    //     console.log(testURL);
 
-        if (isSameUrl(url, testURL, true)) {
-            waitForElm('ENV_1034_V1.main_class').then(function () {
-                loadTest();
-            });
-            window.addEventListener("resize", function () {
-                loadTest();
-            });
-            if (document.querySelectorAll(ENV_1034_V1.main_class).length > 0) {
-                loadTest();
-            }
-            waitForElm('.pace-inactive').then(function () {
-                loadTest()
-            });
+    //     if (isSameUrl(url, testURL, true)) {
+    //         waitForElm('ENV_1034_V1.main_class').then(function () {
+    //             loadTest();
+    //         });
+    //         window.addEventListener("resize", function () {
+    //             loadTest();
+    //         });
+    //         if (document.querySelectorAll(ENV_1034_V1.main_class).length > 0) {
+    //             loadTest();
+    //         }
+    //         waitForElm('.pace-inactive').then(function () {
+    //             loadTest()
+    //         });
+    //     } else {
+    //         removeTest();
+    //     }
+    // }
+
+    function urlCheck(url) {
+        var allblogsurlstring = "https://www.awrusa.com";
+        if (window.location.pathname.indexOf("https://www.awrusa.com") > -1) { // Add " / " to run on all urls
+            allblogsurlstring = window.location.href;
+        }
+        if (isSameUrl(url, allblogsurlstring, false)) {
+            loadTest();
         } else {
             removeTest();
         }
@@ -357,7 +315,13 @@
         if (document.body.classList.contains('spz-popup-visible')) {
             document.body.classList.remove('spz-popup-visible');
         }
-        document.querySelector('.spz-1034_V1-main').remove();
+        if (document.querySelector('.spz-1034_V1-main')) {
+            document.querySelector('.spz-1034_V1-main').remove();
+        }
+        // Site Logo Reset
+        const logo_url = localStorage.getItem('logoURL');
+        const logo = document.querySelector('hos-navigation-bar .logo.base-logo img');
+        logo.src = logo_url;
     }
 
     function waitForElm(selector) {
@@ -375,9 +339,9 @@
         });
     }
 
-
     function loadTest1034_V1() {
         var heroSection = setInterval(function () {
+            console.log('i am getting called')
             if (document.querySelectorAll('.hero-slider').length > 0) {
                 jQuery('body').addClass(ENV_1034_V1.class)
                 if (document.querySelectorAll('.hc-spz').length == 0) {
@@ -386,6 +350,9 @@
                     jQuery('.zip-code-search-box').after('<div class="spz-toll-no">or call <p>855-800-5195</p></div>')
                     jQuery('input.search-zipcode').each(function (index, value) { jQuery(this).attr('placeholder', '') })
                     jQuery('.hero-slider[class] hos-google-places .search-bar .search-field').prepend('<label _ngcontent-c7="" for="selectType">Zip Code</label>')
+                    clearInterval(heroSection);
+                }
+                if (document.querySelectorAll('.hc-spz').length > 0) {
                     clearInterval(heroSection);
                 }
             }
@@ -452,23 +419,7 @@
     }
 })();
 
-// Add Slick
-var isSlickLoad = 0;
-var isMenuOpen = 0;
-var slickStyle = document.createElement('link');
-slickStyle.rel = 'stylesheet';
-slickStyle.type = 'text/css';
-slickStyle.href = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css';
-document.getElementsByTagName('HEAD')[0].appendChild(slickStyle);
 
-var slickScript = document.createElement('script');
-slickScript.src = '//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js';
-slickScript.type = 'text/javascript';
-document.getElementsByTagName('head')[0].appendChild(slickScript);
-
-slickScript.onload = function () {
-    isSlickLoad = 1;
-};
 
 // function initHero()
 // {
