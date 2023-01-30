@@ -56,7 +56,7 @@ body.spz-1034_V1 {
       .search[class] {
         .get-started-btn[class] {
           margin: 0 0 0 8px !important;
-          height: 48px;
+          height: 48px !important;
           max-width: 248px;
           width: 100% !important;
           border: none;
@@ -115,7 +115,7 @@ body.spz-1034_V1 {
           .search-field {
             .search-zipcode {
               width: 160px !important;
-              height: 46px !important;
+              height: 48px !important;
               background: #fff;
               border: none !important;
               border-radius: 3px;
@@ -326,7 +326,7 @@ body.spz-1034_V1 {
                 top: 10px !important;
               }
               .search-zipcode {
-                width: 139px !important;
+                width: 140px !important;
               }
             }
           }
@@ -471,7 +471,7 @@ body.spz-1034_V1 {
                 top: 10px !important;
               }
               .search-zipcode {
-                width: 119px !important;
+                width: 120px !important;
               }
             }
             .get-started-btn {
@@ -486,7 +486,7 @@ body.spz-1034_V1 {
             line-height: 26px !important;
             font-weight: 700;
           }
-          padding: 21px 16px!important;
+          padding: 21px 16px !important;
           height: 138px;
           margin: 0 auto;
           margin-bottom: 24px;
@@ -651,6 +651,11 @@ body.spz-1034_V1 {
           }
         }
       }
+      @media (min-width:766.98px) and (max-width:1024px) {
+        li.contact-area[class], li.login-area[class]{
+          display: none;
+        }
+      }
     }
   }
 }
@@ -811,7 +816,7 @@ body.spz-1034_V1 {
           }
           .cart-count {
             position: absolute;
-            top: -3px;
+            top: -1px;
             right: -2px;
             margin: 0;
             font-size: 13px;
@@ -852,7 +857,7 @@ body.spz-1034_V1 {
           }
           .cart-count {
             position: absolute;
-            top: -3px;
+            top: -1px;
             right: -2px;
             margin: 0;
             font-size: 13px;
@@ -1529,6 +1534,9 @@ body.spz-1034_V1 {
           color: $color_5;
           margin: 0;
           margin-bottom: 24px;
+          > span {
+            padding-right: 5px;
+          }
         }
         p {
           font-family: $font_family_1;
@@ -2124,6 +2132,10 @@ body.spz-1034_V1 {
           height: 40px;
           border-left: 1px solid #dadada;
           margin: 0 11px;
+          padding-top: 1px;
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            padding-top: 2px;
+          }
         }
       }
       .spz-1034_V1-google-review-mobile-rating {
@@ -2739,6 +2751,9 @@ body.spz-1034_V1.spz-popup-visible {
 
         .spz-1034_V1-how-it-works-list-item-info-sub {
           padding-left: 10px;
+          @media (min-width:767.98px) and (max-width:1023.98px) {      
+            padding-left: 12px;
+          }
           width: calc(100% - 44px);
         }
         &:nth-child(1) {
@@ -2751,7 +2766,12 @@ body.spz-1034_V1.spz-popup-visible {
               background-repeat: no-repeat;
             }
             .spz-1034_V1-how-it-works-list-item-info-sub {
-              padding-left: 4px;
+              @media (min-width:767.98px) {      
+                padding-left: 5px;
+              }
+              @media (min-width:1023.98px) {      
+                padding-left: 4px;
+              }
             }
           }
         }
@@ -2952,7 +2972,7 @@ body.spz-1034_V1.spz-popup-visible {
       }
     }
     .spz-1034_V1-testimonial {
-      padding:97px 0px 100px;
+      padding: 97px 0px 100px;
       .spz-1034_V1-testimonial-wrapper {
         max-width: 736px;
       }
@@ -3344,7 +3364,7 @@ body.spz-1034_V1.spz-popup-visible {
       }
     }
     .spz-1034_V1-how-it-works {
-      padding: 64px 0 62px;
+      padding: 64px 0;
       .spz-1034_V1-how-it-works-list-item {
         max-width: initial;
         width: 100%;
@@ -3477,7 +3497,7 @@ body.spz-1034_V1.spz-popup-visible {
         }
         margin-bottom: 64px;
       }
-      padding-top: 64px;
+      padding-top: 62px;
       padding-bottom: 100px;
       .spz-1034_V1-partner-logos {
         .spz-1034_V1-partner-logo-item-wrapper {

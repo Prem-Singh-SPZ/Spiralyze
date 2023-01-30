@@ -20,20 +20,32 @@
 
         // Cart email auto fill
         if (window.location.pathname.indexOf('checkout') > -1) {
-            const uname = getEmailCookie("userEmail");
-            const emailElm = document.querySelector('.general-information .form-group input[name="email"]');
-            if (uname && emailElm) {
-                emailElm.value = uname;
-                emailElm.readOnly = true;
-                emailElm.style.pointerEvents = "none";
-                emailElm.style.backgroundColor = "#f9f9f9";
-            }
+            waitForElm('.general-information .form-group input[name="email"]').then(function () {
+                const uname = getEmailCookie("userEmail");
+                const emailElm = document.querySelector('.general-information .form-group input[name="email"]');
+                console.log('we are on checkout');
+                console.log(uname);
+                console.log(emailElm);
+    
+                if (uname && emailElm) {
+                    emailElm.value = uname;
+                    emailElm.readOnly = true;
+                    emailElm.style.pointerEvents = "none";
+                    emailElm.style.backgroundColor = "#f9f9f9";
+                }
+            });
         }
         else {
             // Homepage changes
             if (document.querySelector('button[angularticscategory="Header-Login"]')) {
                 loadTest1033();
                 loadTest1031();
+                waitForElm('.spz-1031 .email-field-spz').then(function () {
+                    document.querySelector('.email-field-spz').value = getEmailCookie("userEmail");
+                });
+                if (document.querySelectorAll('.spz-1031 hos-root dialog-holder dialog-wrapper .modal.fade.show.in').length == 0 && document.querySelectorAll('style[data-debug="Injected by WindowScrolling service."]').length > 0) {
+                    document.querySelector('style[data-debug="Injected by WindowScrolling service."]').remove();
+                }
             }
         }
 

@@ -48,7 +48,6 @@
                     if (document.querySelector('.zip-code-search-box [name="zipcode"]').classList.contains('ng-pristine')) {
                         inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
                     }
-                    replaceHeaderLogo();
                 });
                 if (jQuery.fn) {
                     clearInterval(checkJq);
@@ -59,7 +58,6 @@
                             jQuery('hos-body').after('<div class="spz-1034_V1-main"></div>');
                         }
 
-                        replaceHeaderLogo();
                         // Add contact in side menu
                         waitForElm('hos-right-navigation-menu').then(() => {
                             // if (jQuery('hos-right-navigation-menu').length > 0) {
@@ -104,8 +102,10 @@
                                         if (jQuery('.zip-code-search-box hos-google-places').length == 0) {
                                             jQuery('.zip-code-search-box').append(jQuery('hos-google-places'));
                                             inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
+                                            document.querySelector('.zip-code-search-box [name="zipcode"]').removeAttribute('placeholder');
+
                                         }
-                                    }, 100);
+                                    }, 200);
                                 });
                                 jQuery('body').click(function (e) {
                                     if (e.target.classList.contains('spz-1034_V1-popup')) {
@@ -115,8 +115,10 @@
                                             if (jQuery('.zip-code-search-box hos-google-places').length == 0) {
                                                 jQuery('.zip-code-search-box').append(jQuery('hos-google-places'));
                                                 inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
+                                                document.querySelector('.zip-code-search-box [name="zipcode"]').removeAttribute('placeholder');
+
                                             }
-                                        }, 100);
+                                        }, 200);
                                     }
                                 });
                                 // How it works
@@ -127,7 +129,6 @@
                                 jQuery(elm).append(initPartner());
                                 // Init Slick
                                 let checkPartnerSlick = setInterval(function () {
-                                    replaceHeaderLogo();
 
                                     if (isSlickLoad == 1) {
                                         clearInterval(checkPartnerSlick);
@@ -203,7 +204,10 @@
                                         jQuery('.spz-1034_V1 hos-right-navigation-menu .sidebar-menu').removeClass('active spz-menu-active');
                                     }
                                 });
-                                console.log('main test is called')
+                                // console.log('main test is called')
+                                if (window.innerWidth < 767 && document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img')) {
+                                    document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675070298/AWR/1034/assets/BBB_Accredited_Business.svg';
+                                }
                             }
                         });
                     });
@@ -211,13 +215,19 @@
             }, 500);
         });
 
+        let headerChanged = setInterval(() => {
+            replaceHeaderLogo();
+        }, 200);
+        setTimeout(() => {
+            clearInterval(headerChanged);
+        }, 3000);
         document.body.classList.add("loaded");
     }
 
     function replaceHeaderLogo() {
         // Replace header logo
         waitForElm('.spz-1034_V1 .logo.base-logo').then((elm) => {
-            console.log('logo change functio')
+            // console.log('logo change functio')
             jQuery('.logo.base-logo img:not(.spz-1034_V1-mobile-logo)').attr({ src: '//res.cloudinary.com/spiralyze/image/upload/v1669783657/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/Logo.svg', alt: 'AWR Logo' });
 
             if (jQuery('.spz-1034_V1-mobile-logo').length == 0) {
@@ -341,7 +351,7 @@
 
     function loadTest1034_V1() {
         var heroSection = setInterval(function () {
-            console.log('i am getting called')
+            // console.log('i am getting called')
             if (document.querySelectorAll('.hero-slider').length > 0) {
                 jQuery('body').addClass(ENV_1034_V1.class)
                 if (document.querySelectorAll('.hc-spz').length == 0) {
@@ -518,7 +528,7 @@ function initPlans() {
 									<img src="//res.cloudinary.com/spiralyze/image/upload/v1669807659/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/water-line-and-sewer-lLine-protection-program.svg" alt="Water Line and Sewer Line Protection Program">\
 								</div>\
 								<div class="spz-1034_V1-plans-list-item-info">\
-									<h2>Water Line and Sewer<br> Line Protection Program</h2>\
+									<h2><span>Water Line and Sewer</span><br> Line Protection Program</h2>\
 									<p>Cover your repairs to leaks and breaks of a covered water line, or repairs to leaks.</p>\
 									<label>Starts at <span class="spz-price">$12.49</span> / month <strong>(save $2.00)</strong></label>\
 								</div>\
@@ -534,7 +544,7 @@ function initPlans() {
 									<img src="//res.cloudinary.com/spiralyze/image/upload/v1669807659/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/water-line-protection-program.svg" alt="Water Line Protection Program">\
 								</div>\
 								<div class="spz-1034_V1-plans-list-item-info">\
-									<h2>Water Line<br> Protection Program</h2>\
+									<h2><span>Water Line</span><br> Protection Program</h2>\
 									<p>Cover your repairs to leaks and breaks of a covered water line caused by normal wear and tear.</p>\
 									<label>Starts at <span class="spz-price">$5.49</span> / month</label>\
 								</div>\
@@ -550,7 +560,7 @@ function initPlans() {
 									<img src="//res.cloudinary.com/spiralyze/image/upload/v1669807659/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/sewer-line-protection-program.svg" alt="Sewer Line Protection Program">\
 								</div>\
 								<div class="spz-1034_V1-plans-list-item-info">\
-									<h2>Sewer Line<br> Protection Program</h2>\
+									<h2><span>Sewer Line</span><br> Protection Program</h2>\
 									<p>Cover your repairs to clogs and blockages of a covered sewer line caused by normal wear and tear.</p>\
 									<label>Starts at <span class="spz-price">$9.00</span> / month</label>\
 								</div>\

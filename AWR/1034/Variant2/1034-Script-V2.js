@@ -173,6 +173,27 @@ function initTest() {
                             if (jQuery('.spz-1034-V2-hero-sticky-form-append hos-google-places').length == 0) {
                                 jQuery('.spz-1034-V2-hero-sticky-form-append').append(jQuery(elm));
                                 jQuery('.search-zipcode').attr('placeholder', 'Zip Code');
+                                if (document.querySelectorAll('.search-bar .search-field.form-group .spz-error-icon').length == 0) {
+                                    document.querySelector('.search-bar .search-field.form-group').insertAdjacentHTML('beforeend', `<img src="https://res.cloudinary.com/spiralyze/image/upload/v1675063706/AWR/1034/assets/warning_1.svg" alt="Error Icon" class="spz-error-icon">`);
+                                }
+
+                                waitForElm('.search-bar.search-panel .get-started-btn').then((elm) => {
+                                    document.querySelector('.search-bar.search-panel .get-started-btn').addEventListener('click', function () {
+                                        console.log('heelo')
+                                        waitForElm('.search-field.form-group.is-invalid').then((elm) => {
+                                            document.querySelector('.search-field.form-group.is-invalid .spz-error-icon').addEventListener('click', function () {
+                                                document.querySelector('.search-bar.search-panel .error-zipcode.invalid-error').style.display = 'block';
+                                            })
+                                        });
+                                    })
+                                    document.querySelector('.search-bar.search-panel input.search-zipcode').addEventListener('click', function () {
+                                        console.log('heelo')
+                                        waitForElm('.search-field.form-group:not(.is-invalid)').then((elm) => {
+                                            document.querySelector('.search-bar.search-panel .error-zipcode:last-child').style.display = 'none';
+                                        });
+                                    })
+                                });
+
                             }
                         });
                         // Init Animation
@@ -243,6 +264,13 @@ function initTest() {
             });
         }
     }, 500);
+
+    let headerChanged = setInterval(() => {
+        replaceHeaderLogo();
+    }, 200);
+    setTimeout(() => {
+        clearInterval(headerChanged);
+    }, 3000);
 }
 function initHero() {
     let htmlD = '\
