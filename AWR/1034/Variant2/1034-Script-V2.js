@@ -270,7 +270,7 @@ function initTest() {
     }, 200);
     setTimeout(() => {
         clearInterval(headerChanged);
-    }, 3000);
+    }, 5000);
 }
 function initHero() {
     let htmlD = '\

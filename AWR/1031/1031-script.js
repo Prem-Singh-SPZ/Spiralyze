@@ -26,7 +26,7 @@
                 console.log('we are on checkout');
                 console.log(uname);
                 console.log(emailElm);
-    
+
                 if (uname && emailElm) {
                     emailElm.value = uname;
                     emailElm.readOnly = true;
@@ -37,16 +37,19 @@
         }
         else {
             // Homepage changes
-            if (document.querySelector('button[angularticscategory="Header-Login"]')) {
-                loadTest1033();
-                loadTest1031();
-                waitForElm('.spz-1031 .email-field-spz').then(function () {
-                    document.querySelector('.email-field-spz').value = getEmailCookie("userEmail");
-                });
-                if (document.querySelectorAll('.spz-1031 hos-root dialog-holder dialog-wrapper .modal.fade.show.in').length == 0 && document.querySelectorAll('style[data-debug="Injected by WindowScrolling service."]').length > 0) {
-                    document.querySelector('style[data-debug="Injected by WindowScrolling service."]').remove();
+            waitForElm('button[angularticscategory="Header-Login"]').then(function () {
+                if (document.querySelector('button[angularticscategory="Header-Login"]')) {
+                    loadTest1033();
+                    loadTest1031();
+                    waitForElm('.spz-1031 .email-field-spz').then(function () {
+                        document.querySelector('.email-field-spz').value = getEmailCookie("userEmail");
+                    });
+                    if (document.querySelectorAll('.spz-1031 hos-root dialog-holder dialog-wrapper .modal.fade.show.in').length == 0 && document.querySelectorAll('style[data-debug="Injected by WindowScrolling service."]').length > 0) {
+                        document.querySelector('style[data-debug="Injected by WindowScrolling service."]').remove();
+                    }
                 }
-            }
+            });
+
         }
 
         document.body.classList.add("loaded");
