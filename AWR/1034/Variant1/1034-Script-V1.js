@@ -40,7 +40,11 @@
             inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
             loadTest1034_V1();
             formFields();
-
+            if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+                document.body.classList.add('safari');
+                let headerHeight = document.querySelector('.safari header.top-bar').offsetHeight;
+                document.querySelector('.safari hos-body hos-hero-banner').style.marginTop = headerHeight + "px";
+            }
             // Check jquery
             let checkJq = setInterval(function () {
                 waitForElm('.zip-code-search-box input[name="zipcode"]').then(function () {
@@ -292,15 +296,26 @@
     // }
 
     window.addEventListener("resize", function () {
-        if (window.innerWidth < 767 && document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img')) {
-            document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675070298/AWR/1034/assets/BBB_Accredited_Business.svg';
+        if (document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img')) {
+            if (window.innerWidth < 767) {
+                document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675070298/AWR/1034/assets/BBB_Accredited_Business.svg';
+            }
+            else {
+                document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = '//res.cloudinary.com/spiralyze/image/upload/v1669897074/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/bbb-logo.svg';
+            }
+        }
+        if (document.body.classList.contains('safari')) {
+            let headerHeight = document.querySelector('.safari header.top-bar').offsetHeight;
+            document.querySelector('.safari hos-body hos-hero-banner').style.marginTop = headerHeight + "px";
         }
     });
 
     function urlCheck(url) {
         var allblogsurlstring = "https://www.awrusa.com";
         if (window.location.pathname.indexOf("https://www.awrusa.com") > -1) { // Add " / " to run on all urls
-            allblogsurlstring = window.location.href;
+            allblogsurlstring = window.locadocument.body.classList.add('safari');
+            let headerHeight = document.querySelector('.safari header.top-bar').offsetHeight;
+            document.querySelector('.safari hos-body hos-hero-banner').style.marginTop = headerHeight + "px"; tion.href;
         }
         if (isSameUrl(url, allblogsurlstring, false)) {
             loadTest();
@@ -595,7 +610,7 @@ function initHowItWorks() {
 					<div class="spz-1034_V1-how-it-works-list-item">\
 						<div class="spz-1034_V1-how-it-works-list-item-wrapper">\
 							<div class="spz-1034_V1-how-it-works-list-item-img">\
-								<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/sign-up-online.png" alt="Sign Up Online">\
+								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1034/assets/sign-up-online.png" alt="Sign Up Online">\
 							</div>\
 							<div class="spz-1034_V1-how-it-works-list-item-info">\
 								<label>1.</label>\
@@ -609,7 +624,7 @@ function initHowItWorks() {
 					<div class="spz-1034_V1-how-it-works-list-item">\
 						<div class="spz-1034_V1-how-it-works-list-item-wrapper">\
 							<div class="spz-1034_V1-how-it-works-list-item-img">\
-								<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/relax.png" alt="Relax">\
+								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1034/assets/relax.png" alt="Relax">\
 							</div>\
 							<div class="spz-1034_V1-how-it-works-list-item-info">\
 								<label>2.</label>\
@@ -624,7 +639,7 @@ function initHowItWorks() {
 						<div class="spz-1034_V1-how-it-works-list-item-wrapper">\
 							<div class="spz-1034_V1-how-it-works-list-item-img">\
 								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/call-for-help-1.jpg" alt="Call For Help" class="spz-1034_V1-desktop-only">\
-								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/call-for-help-1440.jpg" alt="Call For Help" class="spz-1034_V1-desktop-hide">\
+								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1034/assets/call-for-help-1440.png" alt="Call For Help" class="spz-1034_V1-desktop-hide">\
 							</div>\
 							<div class="spz-1034_V1-how-it-works-list-item-info">\
 								<label>3.</label>\

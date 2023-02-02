@@ -16,21 +16,35 @@ body.spz-1031 {
     inset: 85% -6px auto auto !important;
   }
 
-  .card[class] {
-    // @media (max-width: 767px) {
-    //   min-height: 550px;
-    // }
-    .product-card-details-footer[class] {
-      padding: 0 20px !important;
-      .enroll-now[class] {
-        width: 100% !important;
+  .multi-product-card .ngucarousel-items .item {
+    .card[class] {
+      min-height: 526px;
+      @media (min-width: 768px) and (max-width: 1024px) {
+        min-height: 564px;
+      }
+      @media (max-width: 767px) {
+        min-height: 540px;
+      }
+
+      .product-card-details-footer[class] {
+        padding: 0 !important;
+        position: relative !important;
+        bottom: auto !important;
+        .enroll-now[class] {
+          width: 100% !important;
+        }
+      }
+      .description-heading-text-content[class] {
+        flex-grow: 1;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 0 !important;
+        > div:nth-last-child(2) {
+          margin-top: auto;
+          margin-bottom: 4px;
+        }
       }
     }
-    // .description-heading-text-content[class] {
-    //   > div:nth-child(5) {
-    //     display: none;
-    //   }
-    // }
   }
   .row.search-box-content {
     max-width: 1280px;

@@ -48,17 +48,27 @@
                         document.querySelector('style[data-debug="Injected by WindowScrolling service."]').remove();
                     }
 
-                    // waitForElm('.multi-product-card .ngucarousel-items .card .description-heading-text-content div:last-child br').then(function () {
-                    //     document.querySelectorAll('.multi-product-card .ngucarousel-items ngu-tile').forEach(function (v, i) {
-                    //         if(v.querySelectorAll('.card .description-heading-text-content div:last-child br').length > 0)
-                    //         {
-                    //             v.querySelector('.card .description-heading-text-content div:last-child br').remove();
-                    //         }
-                    //     });
-                    // });
+                    waitForElm('.multi-product-card .ngucarousel-items .card .description-heading-text-content div:last-child br').then(function () {
+                        document.querySelectorAll('.multi-product-card .ngucarousel-items ngu-tile').forEach(function (v, i) {
+                            if (v.querySelectorAll('.card .description-heading-text-content div:last-child br').length > 0) {
+                                v.querySelector('.card .description-heading-text-content div:last-child br').remove();
+                            }
+                            jQuery("div.description-heading-text-content > div:contains(\u00a0)").each(function () {
+                                jQuery(this).html(jQuery(this).html().replace(/&nbsp;/gi, ""));
+                            });
+                            v.querySelectorAll("div.description-heading-text-content > div").forEach(function (k, j) {
+                                if (k.innerHTML === '') {
+                                    k.remove();
+                                }
+                            });
+                            var source = v.querySelector(".product-card-details-footer");
+                            v.querySelector(".description-heading-text-content").appendChild(source);
+                            var source1 = v.querySelector(".description-heading-text-content");
+                            v.querySelector(".card").appendChild(source1);
+                        });
+                    });
                 }
             });
-
         }
 
         document.body.classList.add("loaded");

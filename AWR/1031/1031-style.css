@@ -1,11 +1,36 @@
 body.spz-1031 .LPMcontainer.LPMoverlay[class] {
   inset: 85% -6px auto auto !important;
 }
-body.spz-1031 .card[class] .product-card-details-footer[class] {
-  padding: 0 20px !important;
+body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] {
+  min-height: 526px;
 }
-body.spz-1031 .card[class] .product-card-details-footer[class] .enroll-now[class] {
+@media (min-width: 768px) and (max-width: 1024px) {
+  body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] {
+    min-height: 564px;
+  }
+}
+@media (max-width: 767px) {
+  body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] {
+    min-height: 540px;
+  }
+}
+body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] .product-card-details-footer[class] {
+  padding: 0 !important;
+  position: relative !important;
+  bottom: auto !important;
+}
+body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] .product-card-details-footer[class] .enroll-now[class] {
   width: 100% !important;
+}
+body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] .description-heading-text-content[class] {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  padding-bottom: 0 !important;
+}
+body.spz-1031 .multi-product-card .ngucarousel-items .item .card[class] .description-heading-text-content[class] > div:nth-last-child(2) {
+  margin-top: auto;
+  margin-bottom: 4px;
 }
 body.spz-1031 .row.search-box-content {
   max-width: 1280px;
