@@ -47,6 +47,15 @@
                     if (document.querySelectorAll('.spz-1031 hos-root dialog-holder dialog-wrapper .modal.fade.show.in').length == 0 && document.querySelectorAll('style[data-debug="Injected by WindowScrolling service."]').length > 0) {
                         document.querySelector('style[data-debug="Injected by WindowScrolling service."]').remove();
                     }
+
+                    // waitForElm('.multi-product-card .ngucarousel-items .card .description-heading-text-content div:last-child br').then(function () {
+                    //     document.querySelectorAll('.multi-product-card .ngucarousel-items ngu-tile').forEach(function (v, i) {
+                    //         if(v.querySelectorAll('.card .description-heading-text-content div:last-child br').length > 0)
+                    //         {
+                    //             v.querySelector('.card .description-heading-text-content div:last-child br').remove();
+                    //         }
+                    //     });
+                    // });
                 }
             });
 

@@ -468,6 +468,9 @@ body.spz-1034_V1 {
       .hero-slider[class] {
         .zip-code-search-box {
           hos-google-places {
+            form.search[class]{
+              width: 100%;
+            }
             .search-field {
               label {
                 font-size: 18px !important;
@@ -514,7 +517,7 @@ body.spz-1034_V1 {
       .search-bar[class] {
         .search[class] {
           .get-started-btn[class] {
-            max-width: 150px;
+            max-width: calc(100% - 130px);
             height: 48px !important;
             margin-left: 7px !important;
           }
@@ -1469,8 +1472,8 @@ body.spz-1034_V1 {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        -webkit-filter: drop-shadow(0px 42px 84px rgba(0, 0, 0, 0.08));
-        filter: drop-shadow(0px 42px 84px rgba(0, 0, 0, 0.08));
+        -webkit-filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.02)) drop-shadow(0px 42px 84px rgba(0, 0, 0, 0.08));
+        filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.02)) drop-shadow(0px 42px 84px rgba(0, 0, 0, 0.08));
         .spz-1034_V1-plans-list-item {
           &:first-child {
             border-top-left-radius: 20px;
@@ -1682,7 +1685,7 @@ body.spz-1034_V1 {
           min-height: 260px;
           object-fit: cover;
           object-position: left;
-          border-radius: 20px;
+          border-radius: 12px;
         }
       }
       .spz-1034_V1-how-it-works-list-item-info {
@@ -2771,7 +2774,7 @@ body.spz-1034_V1.spz-popup-visible {
             }
             .spz-1034_V1-how-it-works-list-item-info-sub {
               @media (min-width:767.98px) {      
-                padding-left: 5px;
+                padding-left: 14px;
               }
               @media (min-width:1023.98px) {      
                 padding-left: 4px;
@@ -3205,6 +3208,7 @@ body.spz-1034_V1.spz-popup-visible {
           img {
             min-height: 208px;
             border-radius: 12px;
+            max-height: 208px;
           }
         }
         .spz-1034_V1-how-it-works-list-item-info {

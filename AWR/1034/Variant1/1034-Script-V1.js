@@ -291,6 +291,12 @@
     //     }
     // }
 
+    window.addEventListener("resize", function () {
+        if (window.innerWidth < 767 && document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img')) {
+            document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675070298/AWR/1034/assets/BBB_Accredited_Business.svg';
+        }
+    });
+
     function urlCheck(url) {
         var allblogsurlstring = "https://www.awrusa.com";
         if (window.location.pathname.indexOf("https://www.awrusa.com") > -1) { // Add " / " to run on all urls

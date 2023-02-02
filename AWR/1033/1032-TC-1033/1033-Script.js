@@ -31,6 +31,7 @@
             inputFilled('hos-hero-banner .hero-slider[class] .zip-code-search-box hos-google-places .search-field input.search-zipcode');
             loadTest1033();
             formFields();
+            
         });
 
         document.body.classList.add("loaded");
