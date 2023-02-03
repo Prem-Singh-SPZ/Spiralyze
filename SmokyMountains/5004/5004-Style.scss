@@ -120,12 +120,12 @@ body.spz_5004[class] {
         }
 
         .spz-card-content[class] {
-          margin: 16px;
+          padding: 16px;
           display: flex;
           flex-direction: column;
           flex-grow: 1;
           @media (max-width: 599.98px) {
-            margin: 16px 12px;
+            padding: 16px 12px;
             flex-grow: 1;
           }
 
@@ -149,6 +149,7 @@ body.spz_5004[class] {
               line-height: 20px;
               color: #1d1d1f;
               padding-top: 0;
+              pointer-events: none;
             }
           }
           .vms-results-item__summary[class] {
