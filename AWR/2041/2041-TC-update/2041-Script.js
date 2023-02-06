@@ -304,7 +304,7 @@
         },
     ];
     async function getPrice(price) {
-        return '<span class="price">' + price + '</span> <span>per month<span id="savetext"></span></span>';
+        return '<div class="price">' + price + '<span class="per-month"> / Month</span></div> <span id="savetext"></span>';
     }
 
     function noProducts() {
@@ -359,7 +359,7 @@
             jQuery("body").addClass("mac");
         }
         jQuery("body").addClass("spz-2041");
-    
+
         let ourProducts = [];
         const productsCheck = setInterval(async function () {
             if (jQuery(".page-wrap.product-list .product-item .card").length != 0) {
@@ -369,7 +369,7 @@
                 await jQuery(".products-wrapper .products-boxes").html("");
                 const products = await jQuery(".page-wrap.product-list .product-item .card");
                 if (document.querySelector('.products-wrapper')) {
-                    document.querySelector('.products-wrapper').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
+                    document.querySelector('.product-list-area.content-section').scrollIntoView({ behavior: "smooth", block: "end", inline: "nearest" });
                 }
                 let priority = 10;
                 for await (product of products) {
@@ -408,7 +408,7 @@
                     ourProducts.push(singleProduct);
                 }
                 jQuery(".product-list-header .zipcode-box button.change-link").text("Change");
-                jQuery(".spz-2041 .product-list-area > .page-wrap.set-pad > .product-list-header .zipcode-box button.product-page-search > span:first-child").text("Search");
+                jQuery(".spz-2041 .product-list-area > .page-wrap.set-pad > .product-list-header .zipcode-box button.product-page-search > div.price").text("Search");
                 const sortedProducts = ourProducts.slice().sort(function (a, b) { return a.priority - b.priority });
                 if (sortedProducts.length < 3) {
                     jQuery(".products-boxes").addClass("justify-content-center");
@@ -417,48 +417,41 @@
                     jQuery(".products-wrapper .products-boxes").append(`
                     <div data-targettitle="${value.target}" class="products-single-box product-card-spz ${value.productClass} ${value.popularItem} ${value.bestProductItem}">
                         <div class="product-text prod-card">
-                        <div class="product-title">
-                            <h1>${value.name}</h1>
-                            <div class="product-image" style="background-image:url(${value.image})"></div></div>
-                            <div class="product-cart-info">
-                            <button class="prod-info"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407979/AWR/2041/2041-After-Control-Update/assets/info-icon.svg" class="info-blue" alt="get-coverage"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675420458/AWR/2041/2041-After-Control-Update/assets/info_hover.svg" class="info-hover" alt="get-coverage"></img></button>
-                                <div class="product-pricing">${value.priceToShow}</div>
-                                <button class="enroll-now-spz">Enroll Now 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/>
-                                    </svg>
-                                    </button></div></div>
-
-                                    <div class="product-text prod-feature">
+                        <div class="product-image" style="background-image:url(${value.image})"> <button class="prod-info"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407979/AWR/2041/2041-After-Control-Update/assets/info-icon.svg" class="info-blue" alt="get-coverage"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675420458/AWR/2041/2041-After-Control-Update/assets/info_hover.svg" class="info-hover" alt="get-coverage"></img></button></div>
+                        <div class=" prod-feature">
+                        <button class="prod-cross"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407994/AWR/2041/2041-After-Control-Update/assets/cross-icon.svg" alt="get-card"></img></button>
                         <div class="product-feature">
                         <ul class="product-feature-list"><p>What's Covered</p></ul>
                             </div>
+                           </div>
+                        <div class="product-title">
+                        <h1>${value.name}</h1>
+                        </div>
                             <div class="product-cart-info">
-                            <button class="prod-cross"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407994/AWR/2041/2041-After-Control-Update/assets/cross-icon.svg" alt="get-card"></img></button>
                                 <div class="product-pricing">${value.priceToShow}</div>
                                 <button class="enroll-now-spz">Enroll Now 
-                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                                        <path d="M7.80304 12.803C7.51015 13.0959 7.51015 13.5708 7.80304 13.8637C8.09594 14.1565 8.57081 14.1565 8.8637 13.8637L7.80304 12.803ZM11.6667 9.99999L12.197 10.5303C12.3377 10.3897 12.4167 10.1989 12.4167 9.99999C12.4167 9.80108 12.3377 9.61031 12.197 9.46966L11.6667 9.99999ZM8.8637 6.13633C8.57081 5.84343 8.09594 5.84343 7.80304 6.13633C7.51015 6.42922 7.51015 6.90409 7.80304 7.19699L8.8637 6.13633ZM8.8637 13.8637L12.197 10.5303L11.1364 9.46966L7.80304 12.803L8.8637 13.8637ZM12.197 9.46966L8.8637 6.13633L7.80304 7.19699L11.1364 10.5303L12.197 9.46966Z" fill="white"/>
-                                    </svg>
                                     </button></div></div>
+
+                                    
                                     `);
 
                 });
                 jQuery.each(comboManagement, function (index, cmbo) {
                     let totalprice = 0;
                     let comboPrice = 0;
-                    if (document.querySelector('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing > span:first-child')) {
-                        comboPrice = document.querySelector('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing > span:first-child').innerHTML;
-                        comboPrice = Number(comboPrice.replaceAll("$", ""));
+                    if (document.querySelector('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing > div.price')) {
+                        comboPrice = document.querySelector('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing > div.price').innerText;
+                        comboPrice = Number(comboPrice.replaceAll("$", "").replace(" / Month",""));
                     }
                     jQuery.each(cmbo.comboProducts, function (ind, intProduct) {
-                        if (document.querySelector('div[data-targettitle="' + intProduct + '"] .product-pricing > span:first-child')) {
-                            const singlePrice = document.querySelector('div[data-targettitle="' + intProduct + '"] .product-pricing > span:first-child').innerHTML;
-                            totalprice += Number(singlePrice.replaceAll("$", ""));
+                        if (document.querySelector('div[data-targettitle="' + intProduct + '"] .product-pricing > div.price')) {
+                            const singlePrice = document.querySelector('div[data-targettitle="' + intProduct + '"] .product-pricing > div.price').innerText;
+                            totalprice += Number(singlePrice.replaceAll("$", "").replace(" / Month",""));
                             const finalprice = (totalprice - comboPrice).toFixed(2);
                             if (comboPrice > 0 && finalprice >= 1) {
-                                jQuery('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing span#savetext').html('save $' + finalprice + '');
-                                jQuery('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing span#savetext').addClass('show-save');
+                                // console.log(finalprice)
+                                jQuery('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing #savetext').html('save $' + finalprice + '');
+                                jQuery('div[data-targettitle="' + cmbo.comboName + '"] .product-pricing #savetext').addClass('show-save');
                                 jQuery('div[data-targettitle="' + cmbo.comboName + '"]').addClass('amount-save');
                             }
                         }
@@ -503,6 +496,7 @@
 
 
                 clearInterval(productsCheck);
+                console.log('interval removed')
                 if (document.querySelector('.product-card-spz') && document.querySelectorAll('.product-card-spz[data-program-id]').length == 0) {
                     await getProducts();
                 }
@@ -579,7 +573,9 @@
     urlCheck(url);
 
     jQuery(document).on('click', '.product-page-search', function () {
-        something();
+        if (jQuery('hos-google-places .search-field.is-invalid').length == 0 && jQuery('hos-google-places .search-zipcode').val().length > 4) {
+            something();
+        }
     });
 
     function urlCheck(url) {
@@ -613,8 +609,9 @@
     // Functions regarding API calls
     async function getProducts() {
         let zipCode;
-        if (window.location.pathname.indexOf("/30309/") > -1 && JSON.parse(localStorage.getItem('selectedAddress')) == null) {
-            zipCode = 30309;
+        if (JSON.parse(localStorage.getItem('selectedAddress')) == null || JSON.parse(localStorage.getItem('selectedAddress')) == '') {
+            let getPinLength = location.href.split('/').indexOf('products') + 1;
+            zipCode = +location.href.split('/')[getPinLength];
         } else {
             zipCode = JSON.parse(localStorage.getItem('selectedAddress')).zipcode;
         }
@@ -674,7 +671,7 @@
 
         if (isProSel) {
             const locCode = proSelDetail.locationCodeId || localStorage.getItem('location_code');
-            if (urlSplit[3] == 'products' && urlSplit[5].includes('ny')) {
+            if ((urlSplit.indexOf('products') > -1) && (location.href.indexOf('150') > -1)) {
                 migrateToOracle = true;
             }
             dcUrl = `${baseUrl}/product/marketing-codes/default-codes?contact_type=1&allProducts=true&location_code=${locCode}&APIKey=${apiKey}`;

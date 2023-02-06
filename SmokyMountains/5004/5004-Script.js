@@ -25,7 +25,6 @@
     slickLib.onload = function name(params) {
         initSlider();
         slickLoaded = true;
-        console.log(slickLoaded);
     };
     function checkAvailable() {
         var cookieName = "5004-Featured-Properties"; var cookieValue = "1"; var myDate = new Date(); myDate.setDate(myDate.getDate() + 30);
@@ -50,7 +49,7 @@
                     }
                 })
 
-                if (document.querySelectorAll('.featured-products-dummy .vms-results-item').length >= 10 && document.querySelectorAll('.featured-products-dummy .vms-results-item .vms-results-item-rating .vms-results-item-rating__title').length > 3) {
+                if (document.querySelectorAll('.featured-products-dummy .vms-results-item .vms-results-item-rating .vms-results-item-rating__title').length > 3) {
                     if (document.querySelectorAll('.featured-products-spz').length < 1) {
                         document.querySelector('#results-container').insertAdjacentHTML('beforebegin', `<div class="top-ranked"><h6>Top Ranked Properties</h6><div class="featured-products-spz vms-results__container"></div></div>`);
                         document.querySelectorAll('.featured-products-dummy .vms-results-item').forEach(function (element, index) {
@@ -85,9 +84,16 @@
                         });
 
                     }
+                    let sliderAdded = setInterval(() => {
+                        initSlider();
+                        waitForElm(".top-ranked .featured-products-spz .slick-list").then(function (elm) {
+                            clearInterval(sliderAdded);
+                        });
+                    }, 100);
                 }
                 else {
                     clearInterval(checkLoad);
+                    document.body.classList.remove("spz_5004");
                 }
                 document.querySelector('#vms-filter-all-m-actions-reset').onclick = function () {
                     location.href = "https://smokymountains.com/search/";
@@ -103,15 +109,7 @@
                 waitForElm(".top-ranked .featured-products-spz").then(function (elm) {
                     clearInterval(checkLoad);
                 });
-                let sliderAdded = setInterval(() => {
-                    initSlider();
-                    console.log('slick calling')
 
-                    waitForElm(".top-ranked .featured-products-spz .slick-list").then(function (elm) {
-                        clearInterval(sliderAdded);
-                        console.log('slick added')
-                    });
-                }, 100);
             }
         }, 100);
     }
