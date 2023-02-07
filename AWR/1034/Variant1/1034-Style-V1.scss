@@ -60,6 +60,7 @@ body.spz-1034_V1 {
           max-width: 248px;
           width: 100% !important;
           border: none;
+          padding: 0px 30px !important;
 
           &:hover,
           &:focus {
@@ -261,10 +262,20 @@ body.spz-1034_V1 {
         -moz-border-radius: 3px;
         -ms-border-radius: 3px;
         -o-border-radius: 3px;
+        @media (max-width: 767.98px) {
+          margin-bottom: 16px;
+        }
         label {
           color: $color_5 !important;
         }
       }
+    }
+  }
+  @media (max-width: 767.98px) {
+    .spz-1034_V1-popup-form-wrapper .error-zipcode[class] {
+      margin-top: 0;
+      top: 64px;
+      font-size: 14px;
     }
   }
 }
@@ -278,7 +289,7 @@ body.spz-1034_V1 {
     }
   }
 }
-@media (min-width: 822px) and (max-width: 991px) {
+@media (min-width: 821px) and (max-width: 991px) {
   body.spz-1034_V1 {
     .hero-slider {
       background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1667297521/AWR/1033/Tablet.png);
@@ -291,6 +302,9 @@ body.spz-1034_V1 {
     position: relative !important;
   }
   body.spz-1034_V1 {
+    .LPMcontainer.LPMoverlay[class]{
+      inset: 80% 0px auto auto!important;
+    }
     .hero-slider {
       background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1667297521/AWR/1033/Tablet.png);
       background-position: calc(100% - 0px);
@@ -694,10 +708,9 @@ body.spz-1034_V1 {
       display: none;
     }
     padding: 0 !important;
-    width: 100% !important;
     img {
       opacity: 0;
-      width: 70% !important;
+      width: 100% !important;
       //   height: initial !important;
     }
   }
@@ -1025,15 +1038,15 @@ body.spz-1034_V1 {
         }
       }
     }
-    .sidebar-menu[_ngcontent-c4] {
-      .link-box[_ngcontent-c4] {
-        .nav[_ngcontent-c4] {
-          li[_ngcontent-c4] {
+    .sidebar-menu[class] {
+      .link-box[class] {
+        .nav[class] {
+          li {
             padding: 0;
             margin-left: 24px;
             background: transparent;
             border-left: 1px solid #ec7923;
-            a[_ngcontent-c4] {
+            a[href] {
               font-family: $font_family_1;
               font-style: normal;
               font-weight: 400;
@@ -1048,14 +1061,17 @@ body.spz-1034_V1 {
                 color: $color_1;
               }
             }
+            &:hover {
+              background-color: transparent;
+            }
           }
         }
         .panel-collapse {
           > .panel-body {
             &:last-child {
-              .nav[_ngcontent-c4] {
-                li[_ngcontent-c4] {
-                  a[_ngcontent-c4] {
+              .nav[class] {
+                li {
+                  a[href] {
                     margin-bottom: 0;
                   }
                 }
@@ -1134,10 +1150,10 @@ body.spz-1034_V1 {
       }
     }
   }
-  .backdrop-sidemenu[_ngcontent-c0] {
+  .backdrop-sidemenu[class] {
     background-color: $background_color_1;
   }
-  .spz-1034_V1-hero {
+  .spz-1034_V1-hero[class] {
     overflow: hidden;
     .spz-1034_V1-hero-wrapper {
       position: relative;
@@ -1190,7 +1206,7 @@ body.spz-1034_V1 {
     hos-google-places {
       form {
         justify-content: center;
-        .search-field.form-group {
+        .search-field.form-group[class] {
           max-width: 306px;
           width: 100%;
           margin: 0 !important;
@@ -1482,12 +1498,12 @@ body.spz-1034_V1 {
           &:first-child {
             border-top-left-radius: 20px;
             border-bottom-left-radius: 20px;
-            border-right: 1px solid #f5f5f5;
+            border-right: 2px solid #f5f5f5;
           }
           &:last-child {
             border-top-right-radius: 20px;
             border-bottom-right-radius: 20px;
-            border-left: 1px solid #f5f5f5;
+            border-left: 2px solid #f5f5f5;
           }
         }
       }
@@ -2402,6 +2418,11 @@ body.spz-1034_V1 {
         display: block;
         margin: 0;
         margin-bottom: 16px;
+        @media (max-width: 767.98px) {
+          &[for="selectType"] {
+            display: none;
+          }
+        }
       }
     }
     .spz-1034_V1-popup-form[class] {
@@ -2572,14 +2593,14 @@ body.spz-1034_V1 {
       }
     }
   }
-  .sidebar-menu[_ngcontent-c4] {
-    .link-box[_ngcontent-c4] {
-      .nav[_ngcontent-c4] {
+  .sidebar-menu[class] {
+    .link-box[class] {
+      .nav[class] {
         background: transparent;
       }
-      .panel-default[_ngcontent-c4] {
-        > .panel-heading[_ngcontent-c4] {
-          a[aria-expanded="false"][_ngcontent-c4] {
+      .panel-default[class] {
+        > .panel-heading[class] {
+          a[aria-expanded="false"][href] {
             &:after {
               content: "";
               background-color: $background_color_3;
@@ -2594,7 +2615,7 @@ body.spz-1034_V1 {
               background-repeat: no-repeat;
             }
           }
-          a[aria-expanded="true"][_ngcontent-c4] {
+          a[aria-expanded="true"][href] {
             &:after {
               content: "";
               background-color: $background_color_3;
@@ -2609,8 +2630,8 @@ body.spz-1034_V1 {
         }
       }
     }
-    .login-box[_ngcontent-c4] {
-      .nav-btn[_ngcontent-c4] {
+    .login-box[class] {
+      .nav-btn[class] {
         margin: 0 auto;
         max-width: 336px;
         width: 100%;
@@ -2678,7 +2699,7 @@ body.spz-1034_V1.spz-popup-visible {
   }
 }
 body.spz-1034_V1.safari header.top-bar {
-    position: fixed;
+  position: fixed;
 }
 @media (min-width: 1441px) {
   .spz-1034_V1 {
@@ -3074,7 +3095,7 @@ body.spz-1034_V1.safari header.top-bar {
         padding: 0 36px;
       }
     }
-    .spz-1034_V1-popup {
+    .spz-1034_V1-popup[class] {
       padding-left: 24px;
       padding-right: 24px;
       .spz-1034_V1-popup-info {
@@ -3229,7 +3250,7 @@ body.spz-1034_V1.safari header.top-bar {
   }
 }
 @media (max-width: 767px) {
-  .spz-1034_V1 {
+  body.spz-1034_V1 {
     hos-navigation-bar {
       > div[class] {
         padding: 0 16px;
@@ -3645,7 +3666,7 @@ body.spz-1034_V1.safari header.top-bar {
         padding: 0 16px;
       }
     }
-    .spz-1034_V1-popup {
+    .spz-1034_V1-popup[class] {
       hos-google-places {
         form {
           .get-started-btn {
@@ -3659,9 +3680,9 @@ body.spz-1034_V1.safari header.top-bar {
             margin-bottom: 10px;
           }
         }
-        .search-field.form-group {
+        .search-field.form-group[class] {
           width: 100%;
-          margin: 0 !important;
+          margin: 0;
           max-width: initial;
         }
       }
@@ -3701,7 +3722,7 @@ body.spz-1034_V1.safari header.top-bar {
       z-index: 99999999;
     }
   }
-  .spz-1034_V1-popup {
+  body.spz-1034_V1-popup {
     hos-google-places {
       .search-bar[class] {
         left: 0;

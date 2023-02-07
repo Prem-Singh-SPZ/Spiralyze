@@ -638,8 +638,8 @@ function initHowItWorks() {
 					<div class="spz-1034_V1-how-it-works-list-item">\
 						<div class="spz-1034_V1-how-it-works-list-item-wrapper">\
 							<div class="spz-1034_V1-how-it-works-list-item-img">\
-								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/call-for-help-1.jpg" alt="Call For Help" class="spz-1034_V1-desktop-only">\
-								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1034/assets/call-for-help-1440.png" alt="Call For Help" class="spz-1034_V1-desktop-hide">\
+								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/call-for-help-1.jpg" alt="Call For Help" class="spz-1034_V1-desktop-hide">\
+								<img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1034/assets/call-for-help-1440.png" alt="Call For Help" class="spz-1034_V1-desktop-only">\
 							</div>\
 							<div class="spz-1034_V1-how-it-works-list-item-info">\
 								<label>3.</label>\

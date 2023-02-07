@@ -399,12 +399,12 @@ body.spz-1034-V2 {
     .sidebar-menu[class] {
       .link-box[class] {
         .nav[class] {
-          li[class] {
+          li {
             padding: 0;
             margin-left: 24px;
             background: transparent;
             border-left: 1px solid #ec7923;
-            a[class] {
+            a[href] {
               font-family: $font_family_1;
               font-style: normal;
               font-weight: 400;
@@ -419,14 +419,17 @@ body.spz-1034-V2 {
                 color: $color_1;
               }
             }
+            &:hover {
+              background-color: transparent;
+            }
           }
         }
         .panel-collapse {
           > .panel-body {
             &:last-child {
               .nav[class] {
-                li[class] {
-                  a[class] {
+                li {
+                  a[href] {
                     margin-bottom: 0;
                   }
                 }
@@ -779,7 +782,7 @@ body.spz-1034-V2 {
       }
       .panel-default[class] {
         > .panel-heading[class] {
-          a[aria-expanded="false"][class] {
+          a[aria-expanded="false"][href] {
             &:after {
               content: "";
               background-color: $background_color_3;
@@ -794,7 +797,7 @@ body.spz-1034-V2 {
               background-repeat: no-repeat;
             }
           }
-          a[aria-expanded="true"][class] {
+          a[aria-expanded="true"][href] {
             &:after {
               content: "";
               background-color: $background_color_3;

@@ -350,13 +350,13 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
 .spz-1034-V2 hos-right-navigation-menu #box .link-box #accordionMenu {
   float: none;
 }
-.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li[class] {
+.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li {
   padding: 0;
   margin-left: 24px;
   background: transparent;
   border-left: 1px solid #ec7923;
 }
-.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li[class] a[class] {
+.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li a[href] {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
@@ -368,10 +368,13 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   margin-bottom: 16px;
   text-decoration: none;
 }
-.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li[class] a[class]:hover {
+.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li a[href]:hover {
   color: #c8661d;
 }
-.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .panel-collapse > .panel-body:last-child .nav[class] li[class] a[class] {
+.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .nav[class] li:hover {
+  background-color: transparent;
+}
+.spz-1034-V2 hos-right-navigation-menu .sidebar-menu[class] .link-box[class] .panel-collapse > .panel-body:last-child .nav[class] li a[href] {
   margin-bottom: 0;
 }
 .spz-1034-V2 hos-right-navigation-menu #accordionMenu .panel .panel-title {
@@ -684,7 +687,7 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
 .spz-1034-V2 .sidebar-menu[class] .link-box[class] .nav[class] {
   background: transparent;
 }
-.spz-1034-V2 .sidebar-menu[class] .link-box[class] .panel-default[class] > .panel-heading[class] a[aria-expanded=false][class]:after {
+.spz-1034-V2 .sidebar-menu[class] .link-box[class] .panel-default[class] > .panel-heading[class] a[aria-expanded=false][href]:after {
   content: "";
   background-color: transparent;
   margin: 0;
@@ -697,7 +700,7 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   background-position: center;
   background-repeat: no-repeat;
 }
-.spz-1034-V2 .sidebar-menu[class] .link-box[class] .panel-default[class] > .panel-heading[class] a[aria-expanded=true][class]:after {
+.spz-1034-V2 .sidebar-menu[class] .link-box[class] .panel-default[class] > .panel-heading[class] a[aria-expanded=true][href]:after {
   content: "";
   background-color: transparent;
   margin: 0;
@@ -982,4 +985,4 @@ body.spz-1034-V2.spz-popup-visible {
     padding-left: 5px;
     padding-right: 5px;
   }
-}/*# sourceMappingURL=1034-Style-V2.css.map */
+}

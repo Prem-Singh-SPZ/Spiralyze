@@ -3,6 +3,7 @@
     const cookieValue = "1";
     const myDate = new Date();
     const imgURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/2041/Product_Images/';
+    // const imgURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/2041/2041-After-Control-Update/assets/prod-images/';
     const baseUrl = 'https://scpprd.prod.apimanagement.us10.hana.ondemand.com/api/hos/api';
     const apiKey = 'Ng0glnSyFyARBd7AGghwnAAjV1ORz5Vp';
 
@@ -73,12 +74,12 @@
     const relatedProducts = [
         {
             productFilterName: 'Water Line and Sewer Line Protection Program',
-            productImage: imgURL + 'Water_Line___Sewer_Line_Protection_Program.png',
+            productImage: imgURL + 'Water_Line_Sewer_Line_Protection_Program.png',
             popularProduct: 'popular',
         },
         {
             productFilterName: 'Unlimited Water Line and Sewer Line Protection Program',
-            productImage: imgURL + 'Water_Line___Sewer_Line_Protection_Program.png',
+            productImage: imgURL + 'Water_Line_Sewer_Line_Protection_Program.png',
         },
         {
             productFilterName: 'Water Line, Sewer Line and In-Home Plumbing Emergency Program',
@@ -365,7 +366,7 @@
             if (jQuery(".page-wrap.product-list .product-item .card").length != 0) {
                 await jQuery(".products-wrapper").remove();
                 //.product-list-area.content-section
-                jQuery("hos-products .product-list-area.content-section").after('<div class="products-wrapper"><div class="products-inner"> <div class="products-boxes"> </div></div></div>');
+                jQuery("hos-products .product-list-area.content-section").after('<div class="products-wrapper"><div class="products-inner"><div class="products-title"><h2>Protection Plans</h2></div> <div class="products-boxes"> </div></div></div>');
                 await jQuery(".products-wrapper .products-boxes").html("");
                 const products = await jQuery(".page-wrap.product-list .product-item .card");
                 if (document.querySelector('.products-wrapper')) {
@@ -417,9 +418,9 @@
                     jQuery(".products-wrapper .products-boxes").append(`
                     <div data-targettitle="${value.target}" class="products-single-box product-card-spz ${value.productClass} ${value.popularItem} ${value.bestProductItem}">
                         <div class="product-text prod-card">
-                        <div class="product-image" style="background-image:url(${value.image})"> <button class="prod-info"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407979/AWR/2041/2041-After-Control-Update/assets/info-icon.svg" class="info-blue" alt="get-coverage"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675420458/AWR/2041/2041-After-Control-Update/assets/info_hover.svg" class="info-hover" alt="get-coverage"></img></button></div>
+                        <div class="product-image" style="background-image:url(${value.image})"> <div class="prod-info"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407979/AWR/2041/2041-After-Control-Update/assets/info-icon.svg" class="info-blue" alt="get-coverage"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675420458/AWR/2041/2041-After-Control-Update/assets/info_hover.svg" class="info-hover" alt="get-coverage"></img></div></div>
                         <div class=" prod-feature">
-                        <button class="prod-cross"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407994/AWR/2041/2041-After-Control-Update/assets/cross-icon.svg" alt="get-card"></img></button>
+                        <div class="prod-cross"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1675407994/AWR/2041/2041-After-Control-Update/assets/cross-icon.svg" alt="get-card"></img></div>
                         <div class="product-feature">
                         <ul class="product-feature-list"><p>What's Covered</p></ul>
                             </div>
@@ -496,7 +497,6 @@
 
 
                 clearInterval(productsCheck);
-                console.log('interval removed')
                 if (document.querySelector('.product-card-spz') && document.querySelectorAll('.product-card-spz[data-program-id]').length == 0) {
                     await getProducts();
                 }
@@ -609,12 +609,12 @@
     // Functions regarding API calls
     async function getProducts() {
         let zipCode;
-        if (JSON.parse(localStorage.getItem('selectedAddress')) == null || JSON.parse(localStorage.getItem('selectedAddress')) == '') {
+        // if (JSON.parse(localStorage.getItem('selectedAddress')) == null || JSON.parse(localStorage.getItem('selectedAddress')) == '') {
             let getPinLength = location.href.split('/').indexOf('products') + 1;
             zipCode = +location.href.split('/')[getPinLength];
-        } else {
-            zipCode = JSON.parse(localStorage.getItem('selectedAddress')).zipcode;
-        }
+        // } else {
+        //     zipCode = JSON.parse(localStorage.getItem('selectedAddress')).zipcode;
+        // }
         try {
             const zipResult = await getZipCode(zipCode);
             // const locResult = await getLocationCode(zipResult.locationCodeId);
