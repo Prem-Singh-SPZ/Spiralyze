@@ -519,7 +519,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
 }
 @media (min-width: 766.98px) and (max-width: 1024px) {
   body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area[class],
-body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
+  body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
     display: none;
   }
 }
@@ -557,9 +557,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
 .spz-1034_V1 img {
   image-rendering: auto;
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: pixelated;
+  image-rendering: pixelated;
   image-rendering: -webkit-optimize-contrast;
 }
 .spz-1034_V1 .spz-1034_V1-menu-contact {
@@ -608,7 +606,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
   height: initial !important;
   padding: 20px 0;
   background: #ffffff;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   box-shadow: 0 1px 0 0 #e3e3e3;
@@ -1047,15 +1044,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
   width: 100% !important;
   padding: 19px 20px !important;
 }
-.spz-1034_V1 .spz-1034_V1-hero[class] form .search-zipcode:-ms-input-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
-  color: #757575;
-  opacity: 1;
-}
 .spz-1034_V1 .spz-1034_V1-hero[class] form .search-zipcode::-moz-placeholder {
   font-family: "Roboto";
   font-style: normal;
@@ -1099,9 +1087,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
   line-height: 26px;
   text-align: center;
   color: #ffffff;
-}
-.spz-1034_V1 .spz-1034_V1-hero[class] form .search-field.is-invalid .search-zipcode:-ms-input-placeholder {
-  color: #b83436;
 }
 .spz-1034_V1 .spz-1034_V1-hero[class] form .search-field.is-invalid .search-zipcode::-moz-placeholder {
   color: #b83436;
@@ -1260,7 +1245,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.02)) drop-shadow(0px 42px 84px rgba(0, 0, 0, 0.08));
 }
 .spz-1034_V1 .spz-1034_V1-plans .spz-1034_V1-plans-list .spz-1034_V1-plans-list-wrapper .spz-1034_V1-plans-list-item:first-child {
   border-top-left-radius: 20px;
@@ -2176,14 +2160,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
   border-bottom-left-radius: 5px;
   padding: 19px 20px;
 }
-.spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form[class] input[name=spz-1034_V1-zipcode]:-ms-input-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 1;
-  color: #757575;
-}
 .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form[class] input[name=spz-1034_V1-zipcode]::-moz-placeholder {
   font-family: "Roboto";
   font-style: normal;
@@ -2258,14 +2234,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
   width: 100% !important;
   padding: 19px 20px !important;
 }
-.spz-1034_V1 .spz-1034_V1-popup[class] hos-google-places form[class] .search-zipcode:-ms-input-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
-  color: #757575;
-}
 .spz-1034_V1 .spz-1034_V1-popup[class] hos-google-places form[class] .search-zipcode::-moz-placeholder {
   font-family: "Roboto";
   font-style: normal;
@@ -2310,9 +2278,6 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.login-area[class] {
 .spz-1034_V1 .spz-1034_V1-popup[class] .search-field {
   max-width: 306px;
   width: 100%;
-}
-.spz-1034_V1 .spz-1034_V1-popup[class] form .search-field.is-invalid .search-zipcode:-ms-input-placeholder {
-  color: #b83436;
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] form .search-field.is-invalid .search-zipcode::-moz-placeholder {
   color: #b83436;
@@ -3266,12 +3231,6 @@ body.spz-1034_V1.safari header.top-bar {
   body.spz-1034_V1 #lottie {
     display: none;
   }
-  body.spz-1034_V1 .LPMcontainer.LPMoverlay {
-    display: none !important;
-    opacity: 0 !important;
-    visibility: hidden !important;
-    pointer-events: none !important;
-  }
 }
 @media (max-width: 359px) {
   .spz-1034_V1 .spz-1034_V1-menu-contact .spz-1034_V1-menu-contact-cta hr {
@@ -3288,4 +3247,4 @@ body.spz-1034_V1.safari header.top-bar {
     padding-left: 5px;
     padding-right: 5px;
   }
-}/*# sourceMappingURL=1034-Style-V1.css.map */
+}

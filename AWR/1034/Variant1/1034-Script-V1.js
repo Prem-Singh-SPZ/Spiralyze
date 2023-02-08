@@ -210,7 +210,7 @@
                                 });
                                 // console.log('main test is called')
                                 if (window.innerWidth < 767 && document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img')) {
-                                    document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675070298/AWR/1034/assets/BBB_Accredited_Business.svg';
+                                    document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675832042/AWR/1034/Variant-1/BBB_Accredited_Business_Mob.svg';
                                 }
                             }
                         });
@@ -298,10 +298,10 @@
     window.addEventListener("resize", function () {
         if (document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img')) {
             if (window.innerWidth < 767) {
-                document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675070298/AWR/1034/assets/BBB_Accredited_Business.svg';
+                document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = 'https://res.cloudinary.com/spiralyze/image/upload/v1675832042/AWR/1034/Variant-1/BBB_Accredited_Business_Mob.svg';
             }
             else {
-                document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = '//res.cloudinary.com/spiralyze/image/upload/v1669897074/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/bbb-logo.svg';
+                document.querySelector('.spz-1034_V1-footer .spz-1034_V1-footer-top a:last-child img').src = '//res.cloudinary.com/spiralyze/image/upload/v1675832042/AWR/1034/Variant-1/BBB_Accredited_Business_Desk.svg';
             }
         }
         if (document.body.classList.contains('safari')) {
@@ -735,11 +735,11 @@ function initPartner() {
 function partnerLoop() {
     let partnerData = [
         { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/city-of-yonkers.svg', alt: 'City of Yonkers', title: 'City of Yonkers' },
-        { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/nyc-dept.-of-environmental-p.svg', alt: 'NYC Dept. of Environmental P.', title: 'NYC Dept. of Environmental P.' },
-        { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/orlando-utilities-commission.svg', alt: 'Orlando Utilities Commission', title: 'Orlando Utilities Commission' },
+        { img: '//res.cloudinary.com/spiralyze/image/upload/v1675832865/AWR/1034/Variant-1/nyc_environmental.svg', alt: 'NYC Dept. of Environmental P.', title: 'NYC Dept. of Environmental P.' },
+        { img: '//res.cloudinary.com/spiralyze/image/upload/v1675832865/AWR/1034/Variant-1/OUC.svg', alt: 'Orlando Utilities Commission', title: 'Orlando Utilities Commission' },
         { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/city-of-wilmington.svg', alt: 'City of Wilmington', title: 'City of Wilmington' },
-        { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/philadelphia-energy-authority.svg', alt: 'Philadelphia Energy Authority', title: 'Philadelphia Energy Authority' },
-        { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878548/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/metro-water-services.svg', alt: 'Metro Water Services', title: 'Metro Water Services' },
+        { img: '//res.cloudinary.com/spiralyze/image/upload/v1675832865/AWR/1034/Variant-1/Philledelphia.svg', alt: 'Philadelphia Energy Authority', title: 'Philadelphia Energy Authority' },
+        { img: '//res.cloudinary.com/spiralyze/image/upload/v1675832865/AWR/1034/Variant-1/metro-water-service.svg', alt: 'Metro Water Services', title: 'Metro Water Services' },
         { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/san-francisco.svg', alt: 'San Francisco', title: 'San Francisco' },
         { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/city-of-yonkers.svg', alt: 'City of Yonkers', title: 'City of Yonkers' },
         { img: '//res.cloudinary.com/spiralyze/image/upload/v1669878546/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/partner-logos/nyc-dept.-of-environmental-p.svg', alt: 'NYC Dept. of Environmental P.', title: 'NYC Dept. of Environmental P.' },
@@ -806,7 +806,7 @@ function initFooter() {
 			<div class="spz-1034_V1-footer-wrapper">\
 				<div class="spz-1034_V1-footer-top">\
 					<a href="/"><img src="//res.cloudinary.com/spiralyze/image/upload/v1669894597/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/footer-site-logo.svg" alt="AWR Logo"></a>\
-					<a href="/"><img src="//res.cloudinary.com/spiralyze/image/upload/v1669897074/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/bbb-logo.svg" alt="Accredited Business"></a>\
+					<a href="/"><img src="//res.cloudinary.com/spiralyze/image/upload/v1675832042/AWR/1034/Variant-1/BBB_Accredited_Business_Desk.svg" alt="Accredited Business"></a>\
 				</div>\
 				<div class="spz-1034_V1-footer-mid">\
 					<p>American Water Resources offers service line protection contracts to homeowners in 43 states and Washington, D.C., and currently services more than 2 million contracts. The company has been providing protection contracts since the year 2000 with more than 9 out of 10 customers satisfied and an A+ Rating from the Better Business Bureau. American Water Resources also provides its protection contracts to homeowners through municipal partnerships with the New York City Department of Environmental Protection, Orlando Utilities Commission, Nashville Metro Water Services and others. American Water Resources is an independent third-party provider of optional home protection programs. American Water Resources is a trademark of American Water and used under license. AWR&#8217;s optional programs are not provided by American Water or its affiliates. American Water Resources conducts business in California as American Water Resources Insurance Services and administers home protection contracts, provided by Virginia Surety Company, Inc., CA Lic. No. 0F65279. In Virginia, American Water Resources administers insurance policies, underwritten by Virginia Surety Company, Inc., VA Lic. No. 109751.</p>\

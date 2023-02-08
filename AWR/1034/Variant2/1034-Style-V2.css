@@ -20,6 +20,11 @@ body.spz-1034-V2 #lottie-mobile {
 body.spz-1034-V2 .spz-1034-V2-plans-sub-title.spz-1034-V2-plans-sub-title-only-mobile {
   display: none;
 }
+@media (max-width: 767px) {
+  body.spz-1034-V2 .modal.fade.show.in[class] .modal-dialog.get-started-modal-container[class] {
+    margin-top: 116px !important;
+  }
+}
 body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:hover {
   color: #c8661d !important;
 }
@@ -46,9 +51,7 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
 .spz-1034-V2 img {
   image-rendering: auto;
   image-rendering: crisp-edges;
-  -ms-interpolation-mode: nearest-neighbor;
-      image-rendering: -moz-crisp-edges;
-      image-rendering: pixelated;
+  image-rendering: pixelated;
   image-rendering: -webkit-optimize-contrast;
 }
 .spz-1034-V2 .spz-1034-V2-menu-contact {
@@ -97,7 +100,6 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   height: initial !important;
   padding: 20px 0;
   background: #ffffff;
-  position: -webkit-sticky;
   position: sticky;
   top: 0;
   box-shadow: 0 1px 0 0 #e3e3e3;
@@ -545,15 +547,6 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   width: 100% !important;
   padding: 19px 20px !important;
 }
-.spz-1034-V2 .spz-1034-V2-hero form .search-zipcode:-ms-input-placeholder {
-  font-family: "Roboto";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 26px;
-  color: #757575;
-  opacity: 1;
-}
 .spz-1034-V2 .spz-1034-V2-hero form .search-zipcode::-moz-placeholder {
   font-family: "Roboto";
   font-style: normal;
@@ -597,9 +590,6 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   line-height: 26px;
   text-align: center;
   color: #ffffff;
-}
-.spz-1034-V2 .spz-1034-V2-hero form .search-field.is-invalid .search-zipcode:-ms-input-placeholder {
-  color: #b83436;
 }
 .spz-1034-V2 .spz-1034-V2-hero form .search-field.is-invalid .search-zipcode::-moz-placeholder {
   color: #b83436;
@@ -663,7 +653,6 @@ body.spz-1034-V2 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   line-height: 24px;
   color: #fff !important;
   padding: 10px 16px;
-  width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   transition-duration: 100ms;

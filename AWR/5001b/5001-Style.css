@@ -258,9 +258,9 @@
 }
 @media (max-width: 1024px) {
   .spz-5006 .register-section[class] .general-information[class] .form-group.typing label, .spz-5006 .register-section[class] .general-information[class] .form-group.filled label,
-.spz-5006 .register-section[class] .general-information[class] .form-group .ng-valid ~ label,
-.spz-5006 .register-section[class] .general-information[class] .form-group .form-control.disabled + label,
-.spz-5006 .register-section[class] .general-information[class] .form-group .form-control[readonly] + label {
+  .spz-5006 .register-section[class] .general-information[class] .form-group .ng-valid ~ label,
+  .spz-5006 .register-section[class] .general-information[class] .form-group .form-control.disabled + label,
+  .spz-5006 .register-section[class] .general-information[class] .form-group .form-control[readonly] + label {
     top: -12px;
   }
 }
@@ -505,8 +505,7 @@
 }
 .spz-5006 .register-section[class] .form-content-spz .progress-step.active {
   display: flex;
-  -webkit-animation: slideDown 0.3s ease;
-          animation: slideDown 0.3s ease;
+  animation: slideDown 0.3s ease;
 }
 @keyframes slideDown {
   0% {
@@ -516,14 +515,6 @@
   100% {
     transform: translateY(0%);
     opacity: 1;
-  }
-}
-@-webkit-keyframes slideDown {
-  0% {
-    -webkit-transform: translateY(-100%);
-  }
-  100% {
-    -webkit-transform: translateY(0%);
   }
 }
 .spz-5006 .noteTextEnroll {
@@ -1096,7 +1087,7 @@
 }
 @media (max-width: 767.98px) {
   .spz-5006 .other-services-spz .cart-link-div > div.col-12,
-.spz-5006 .other-services-spz .cart-link-div .cart-other-link {
+  .spz-5006 .other-services-spz .cart-link-div .cart-other-link {
     margin-bottom: 0;
     padding-bottom: 8px;
   }
@@ -1109,14 +1100,14 @@
 }
 @media (max-width: 1200px) {
   .spz-5006 .other-services-spz .cart-link-div > div:nth-of-type(2),
-.spz-5006 .other-services-spz .cart-link-div > div:nth-of-type(3) {
+  .spz-5006 .other-services-spz .cart-link-div > div:nth-of-type(3) {
     max-width: 289px;
     margin: 0 16px;
   }
 }
 @media (max-width: 767.98px) {
   .spz-5006 .other-services-spz .cart-link-div > div:nth-of-type(2),
-.spz-5006 .other-services-spz .cart-link-div > div:nth-of-type(3) {
+  .spz-5006 .other-services-spz .cart-link-div > div:nth-of-type(3) {
     flex: 0 0 100%;
     width: 100%;
     max-width: 289px;
