@@ -57,7 +57,7 @@ window.addEventListener('locationchange', function () {
 let url = location.href;
 urlCheck(url);
 function urlCheck(url) {
-    let testURL = TEST_ENV.base_url;
+    let testURL = '';
     if (window.location.pathname.indexOf(TEST_ENV.test_url) > -1) {
         testURL = window.location.href;
     }
@@ -103,28 +103,6 @@ function waitForElm(selector) {
         });
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
-}
-
-// Clone element
-// source: Element which we have to copy
-// target: New location of an element 
-function cloneElement(source, target) {
-    if (document.querySelector(source) && document.querySelector(target)) {
-        const sc = document.querySelector(source);
-        const clone = sc.cloneNode(true);
-        document.querySelector(target).appendChild(clone);
-    }
-}
-
-// Move element
-// sourceElm: Element which we have to move
-// targetLoc: New location of an element 
-function moveElement(sourceElm, targetLoc) {
-    const f = document.createDocumentFragment();
-    if (document.querySelector(sourceElm) != null) {
-        f.appendChild(document.querySelector(sourceElm));
-        document.querySelector(targetLoc).appendChild(f);
-    }
 }
 
 // Add class 'safari' (used for cart scrollbar)
