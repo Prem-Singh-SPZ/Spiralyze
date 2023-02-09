@@ -3,12 +3,18 @@ body.spz-4001 {
     .product-section[class] {
       #review-order[id] {
         .logo.text-center[class] {
+          @media (min-width: 1599px) {
+            position: relative;
+          }
           .spz-close[class] {
             position: absolute;
             width: 64px;
             height: 64px;
             right: 24px;
             top: -7px;
+            @media (min-width: 1599px) {
+              right: 0;
+            }
             @media (max-width: 991.98px) {
               width: 54px;
               height: 54px;
@@ -24,6 +30,11 @@ body.spz-4001 {
             img {
               width: 100%;
               cursor: pointer;
+              &:hover,
+              &:active,
+              &:focus {
+                opacity: 0.9;
+              }
             }
           }
         }
@@ -93,6 +104,11 @@ body.spz-4001 {
               text-decoration-skip-ink: none;
               @media (max-width: 991.98px) {
                 padding-left: 0;
+              }
+              &:hover,
+              &:active,
+              &:focus {
+                opacity: 0.9;
               }
             }
           }
