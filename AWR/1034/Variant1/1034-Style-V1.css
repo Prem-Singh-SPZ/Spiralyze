@@ -1001,7 +1001,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   justify-content: center;
 }
 .spz-1034_V1 .spz-1034_V1-hero[class] hos-google-places form .search-field.form-group[class] {
-  max-width: 306px;
+  max-width: 220px;
   width: 100%;
   margin: 0 !important;
 }
@@ -1071,7 +1071,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   font-size: 0;
   outline: none !important;
   box-shadow: none !important;
-  width: calc(100% - 306px);
+  width: calc(100% - 220px);
   text-align: center;
 }
 .spz-1034_V1 .spz-1034_V1-hero[class] form .get-started-btn:hover {
@@ -2085,7 +2085,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-wrapper {
   display: block;
-  max-width: 928px;
+  max-width: 780px;
   width: 100%;
   background: rgba(255, 255, 255, 0.96);
   padding: 40px 48px;
@@ -2139,9 +2139,13 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   margin: 0;
   margin-bottom: 16px;
 }
+.spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form-wrapper label[for=selectType] {
+  display: none;
+}
 @media (max-width: 767.98px) {
-  .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form-wrapper label[for=selectType] {
-    display: none;
+  .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form-wrapper label {
+    font-size: 22px;
+    line-height: 30px;
   }
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form[class] {
@@ -2152,7 +2156,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form[class] input[name=spz-1034_V1-zipcode] {
   display: block;
-  max-width: 306px;
+  max-width: 220px;
   width: 100%;
   height: 64px;
   border: none;
@@ -2178,7 +2182,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   color: #757575;
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form[class] .spz-1034_V1-popup-cta {
-  width: calc(100% - 306px);
+  width: calc(100% - 220px);
   height: 64px;
   border: none;
   box-shadow: none;
@@ -2260,7 +2264,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   font-size: 0;
   outline: none !important;
   box-shadow: none !important;
-  width: calc(100% - 306px);
+  width: calc(100% - 220px);
   text-align: center;
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] hos-google-places form[class] .get-started-btn:before {
@@ -2277,7 +2281,7 @@ body.spz-1034_V1 hos-navigation-bar ul.menu li.contact-area > a p.number-txt a:h
   left: 0;
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] .search-field {
-  max-width: 306px;
+  max-width: 220px;
   width: 100%;
 }
 .spz-1034_V1 .spz-1034_V1-popup[class] form .search-field.is-invalid .search-zipcode::-moz-placeholder {
@@ -2596,7 +2600,7 @@ body.spz-1034_V1.safari header.top-bar {
   }
   .spz-1034_V1 .spz-1034_V1-hero form .get-started-btn {
     height: 64px !important;
-    width: calc(100% - 306px) !important;
+    width: calc(100% - 220px) !important;
   }
   .spz-1034_V1 .spz-1034_V1-hero form .get-started-btn .mobile-only.serach-wrap {
     display: none !important;
@@ -2699,6 +2703,9 @@ body.spz-1034_V1.safari header.top-bar {
     padding-left: 24px;
     padding-right: 24px;
   }
+  .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-wrapper[class] {
+    max-width: 720px;
+  }
   .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-info h2 {
     font-size: 40px;
     line-height: 48px;
@@ -2706,16 +2713,8 @@ body.spz-1034_V1.safari header.top-bar {
   .spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form-wrapper {
     max-width: initial;
   }
-  .spz-1034_V1 .spz-1034_V1-popup[class] .search-field {
-    width: calc(100% - 164px);
-    max-width: initial;
-  }
-  .spz-1034_V1 .spz-1034_V1-popup[class] hos-google-places form .get-started-btn {
-    max-width: 164px;
-    width: 100%;
-  }
   .spz-1034_V1-popup hos-google-places form .get-started-btn {
-    width: calc(100% - 306px) !important;
+    width: calc(100% - 220px) !important;
     height: 64px !important;
   }
   .spz-1034_V1-popup hos-google-places form .get-started-btn .mobile-only.serach-wrap {
@@ -3184,18 +3183,14 @@ body.spz-1034_V1.safari header.top-bar {
     max-width: initial;
   }
   body.spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-wrapper {
-    height: 100%;
-    border-radius: 0;
     padding: 16px;
+    margin: 0 12px;
     display: flex;
     flex-wrap: wrap;
     align-items: initial;
-    padding-top: 109px;
+    padding-top: 50px;
+    max-width: 550px !important;
     justify-content: center;
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/popup-house.png);
-    background-position: bottom center;
-    background-repeat: no-repeat;
-    background-size: 100%;
     background-color: #ffffff;
   }
   body.spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-info h2 {
@@ -3205,11 +3200,6 @@ body.spz-1034_V1.safari header.top-bar {
   body.spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-form-wrapper {
     padding: 28px 16px;
     padding-top: 14px;
-  }
-  body.spz-1034_V1 .spz-1034_V1-popup[class] .spz-1034_V1-popup-close {
-    width: 36px;
-    height: 36px;
-    background-size: contain;
   }
   body.spz-1034_V1 .spz-1034_V1-popup-overlay {
     z-index: 99999999;
@@ -3248,4 +3238,4 @@ body.spz-1034_V1.safari header.top-bar {
     padding-left: 5px;
     padding-right: 5px;
   }
-}/*# sourceMappingURL=1034-Style-V1.css.map */
+}

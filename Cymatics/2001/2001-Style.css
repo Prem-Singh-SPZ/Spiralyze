@@ -19,7 +19,7 @@ body.spz-2001 #MainContent[id] .review-section .product-review .review-header[cl
 }
 @media (max-width: 599.98px) {
   body.spz-2001 #MainContent[id] .review-section .product-review .review-header[class] {
-    padding-top: 40px;
+    padding-top: 38px;
     margin-bottom: 30px;
   }
 }
@@ -88,7 +88,7 @@ body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[cl
   width: 52px;
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container {
-  padding-top: 16px;
+  padding-top: 18px;
   margin-bottom: 36px;
 }
 @media (max-width: 991.98px) {
@@ -105,11 +105,26 @@ body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[cl
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev {
   border-top: 1px solid #eee;
   padding-top: 15px;
-  padding-bottom: 14px;
+  padding-bottom: 15px;
+}
+@media (min-width: 599.98px) and (max-width: 991.98px) {
+  body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev {
+    padding-bottom: 15.4px;
+  }
+}
+@media (max-width: 599.98px) {
+  body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev {
+    padding-bottom: 14.2px;
+  }
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__header {
   display: flex;
-  margin-bottom: 10px;
+  margin-bottom: 7px;
+}
+@media (max-width: 599.98px) {
+  body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__header {
+    margin-bottom: 8px;
+  }
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__header .jdgm-rev__icon {
   position: relative;
@@ -142,11 +157,11 @@ body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[cl
   padding-left: 4px;
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__header .jdgm-rev__location .jdgm-rev__buyer-badge-wrapper {
-  margin-top: -1px;
+  margin-top: -2px;
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__header .jdgm-rev__location .jdgm-rev__buyer-badge-wrapper .jdgm-rev__author {
   font-weight: 600;
-  font-size: 14px;
+  font-size: 15px;
   line-height: 22px;
   color: #ffffff;
   font-family: "cfm-regular";
@@ -156,10 +171,9 @@ body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[cl
   font-size: 18px;
   line-height: 26px;
   color: #ffffff;
-  letter-spacing: 0.6px;
-  margin-top: -1px;
+  letter-spacing: 0.7px;
   font-family: "cfm-regular";
-  margin-bottom: 4px;
+  margin-bottom: 5px;
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__content .jdgm-rev__body p {
   font-weight: 400;
@@ -168,19 +182,46 @@ body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[cl
   color: #b5b5b6;
   font-family: "cfm-regular";
 }
+@media (max-width: 599.98px) {
+  body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev .jdgm-rev__content .jdgm-rev__body p {
+    padding-right: 4px;
+  }
+}
+body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container .jdgm-rev:nth-child(1n+9) {
+  display: none;
+}
+body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container.show-12 .jdgm-rev:nth-child(1n+9) {
+  display: block;
+}
+body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container.show-12 .jdgm-rev:nth-child(1n+13) {
+  display: none;
+}
+body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .user-reviews-container.show-all .jdgm-rev:nth-child(1n+9) {
+  display: block;
+}
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .load-more-container {
   width: 100%;
-  padding-top: 16px;
+  padding-top: 14px;
   padding-bottom: 58px;
   text-align: center;
+}
+@media (min-width: 599.98px) and (max-width: 991.98px) {
+  body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .load-more-container {
+    padding-top: 12px;
+    padding-bottom: 56px;
+  }
 }
 body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .load-more-container a {
   cursor: pointer;
   border: 1px solid #eee;
-  padding: 4px 14px;
+  padding: 4px 12px;
+  font-size: 17px;
   text-align: center;
   display: inline-block;
   opacity: 0.7;
   color: #fff;
   background-color: transparent;
-}/*# sourceMappingURL=2001-Style.css.map */
+}
+body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .load-more-container a:hover, body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .load-more-container a:active, body.spz-2001 #MainContent[id] .review-section .product-review .jdgm-rev-widg[class] .load-more-container a:focus {
+  opacity: 0.9;
+}

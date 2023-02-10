@@ -16,7 +16,6 @@ function loadTest() {
     myDate.setDate(myDate.getDate() + 30);
     document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
 
-    console.log('text loading')
     // Set test class
     document.body.classList.add(TEST_ENV.class);
     waitForElm('#MainContent .shop-collection .shop-main-content .grid__item.small--one-half .product-box-link').then(function () {
@@ -24,13 +23,15 @@ function loadTest() {
             document.querySelector('#MainContent > .page-width').insertAdjacentHTML('afterend', initReviewSlider());
         }
         document.querySelector('.load-more-container .jdgm-paginate__load-more').addEventListener("click", function (e) {
-
-            document.querySelectorAll('.review-section .user-reviews-container .jdgm-rev').forEach(function (el, index) {
-                if (el.classList.contains('d-none')) {
-                    el.classList.remove('d-none');
+            document.querySelector('.review-section .user-reviews-container').classList.add('show-12');
+            document.querySelector('.load-more-container .jdgm-paginate__load-more').classList.add('loaded-12');
+            document.querySelector('.load-more-container .jdgm-paginate__load-more.loaded-12').addEventListener("click", function (e) {
+                if (document.querySelector('.review-section .user-reviews-container').classList.contains('show-12')) {
+                    document.querySelector('.review-section .user-reviews-container').classList.add('show-all');
+                    document.querySelector('.review-section .user-reviews-container').classList.remove('show-12');
                     document.querySelector('.load-more-container .jdgm-paginate__load-more').classList.add('d-none');
                 }
-            });
+            })
         })
     });
 
@@ -81,7 +82,7 @@ function loopReviewData() {
         {
             name: 'K.S.S.',
             letters: 'K',
-            heading: 'Nothing but... Amazing!!',
+            heading: 'Nothing but...Amazing!!',
             review: 'have downloaded waves midi and python sample pack and they had very amazing sounds and midi.Gives you Better value than some paid pack.',
             date: '01/09/2023',
             review_rating: bigFiveStar,
@@ -212,15 +213,15 @@ function loopReviewData() {
 
     if (reviewData.length > 0) {
         for (let i = 0; i < reviewData.length; i++) {
-            let hideClass = i > 7 ? ' d-none' : '';
-            htmlD += `<div class="jdgm-rev ` + hideClass + `">
+            // let hideClass = i > 7 ? ' d-none' : '';
+            htmlD += `<div class="jdgm-rev ">
             <div class="jdgm-rev__header">
               <div class="jdgm-rev__icon"> ${reviewData[i].letters} </div>
               <div class="jdgm-rev__location">
-              <div class="jdgm-rev__br"> <span class="jdgm-rev__rating" data-score="5" tabindex="0" aria-label="5 star review" role="img">  
-              <img src="${reviewData[i].review_rating}" />     
+              <div class="jdgm-rev__br"> <span class="jdgm-rev__rating"  role="img">  
+              <img alt="star-rating" src="${reviewData[i].review_rating}"  />     
               </span>
-              <span class="jdgm-rev__timestamp" data-content="2023-01-17 20:31:50 UTC">${reviewData[i].date}</span></div>
+              <span class="jdgm-rev__timestamp" >${reviewData[i].date}</span></div>
               <div class="jdgm-rev__buyer-badge-wrapper">
                 <span class="jdgm-rev__author">${reviewData[i].name}</span>
                 </div>

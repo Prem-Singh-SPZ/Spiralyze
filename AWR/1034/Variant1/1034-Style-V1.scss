@@ -302,8 +302,8 @@ body.spz-1034_V1 {
     position: relative !important;
   }
   body.spz-1034_V1 {
-    .LPMcontainer.LPMoverlay[class]{
-      inset: 80% 0px auto auto!important;
+    .LPMcontainer.LPMoverlay[class] {
+      inset: 80% 0px auto auto !important;
     }
     .hero-slider {
       background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1667297521/AWR/1033/Tablet.png);
@@ -1207,7 +1207,7 @@ body.spz-1034_V1 {
       form {
         justify-content: center;
         .search-field.form-group[class] {
-          max-width: 306px;
+          max-width: 220px;
           width: 100%;
           margin: 0 !important;
           label {
@@ -1289,7 +1289,7 @@ body.spz-1034_V1 {
         font-size: 0;
         outline: none !important;
         box-shadow: none !important;
-        width: calc(100% - 306px);
+        width: calc(100% - 220px);
         text-align: center;
         &:hover {
           background: #c8661d;
@@ -1490,7 +1490,8 @@ body.spz-1034_V1 {
         display: flex;
         flex-wrap: wrap;
         width: 100%;
-        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.02), 0px 42px 84px rgba(0, 0, 0, 0.08);
+        box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.02),
+          0px 42px 84px rgba(0, 0, 0, 0.08);
         // -webkit-filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.02))
         //   drop-shadow(0px 42px 84px rgba(0, 0, 0, 0.08));
         // filter: drop-shadow(0px 8px 16px rgba(0, 0, 0, 0.02))
@@ -2360,7 +2361,7 @@ body.spz-1034_V1 {
     overflow: auto;
     .spz-1034_V1-popup-wrapper {
       display: block;
-      max-width: 928px;
+      max-width: 780px;
       width: 100%;
       background: rgba(255, 255, 255, 0.96);
       padding: 40px 48px;
@@ -2419,10 +2420,14 @@ body.spz-1034_V1 {
         display: block;
         margin: 0;
         margin-bottom: 16px;
+        // @media (max-width: 767.98px) {
+        &[for="selectType"] {
+          display: none;
+        }
+        // }
         @media (max-width: 767.98px) {
-          &[for="selectType"] {
-            display: none;
-          }
+          font-size: 22px;
+          line-height: 30px;
         }
       }
     }
@@ -2433,7 +2438,7 @@ body.spz-1034_V1 {
       justify-content: center;
       input[name="spz-1034_V1-zipcode"] {
         display: block;
-        max-width: 306px;
+        max-width: 220px;
         width: 100%;
         height: 64px;
         border: none;
@@ -2467,7 +2472,7 @@ body.spz-1034_V1 {
         }
       }
       .spz-1034_V1-popup-cta {
-        width: calc(100% - 306px);
+        width: calc(100% - 220px);
         height: 64px;
         border: none;
         box-shadow: none;
@@ -2556,7 +2561,7 @@ body.spz-1034_V1 {
           font-size: 0;
           outline: none !important;
           box-shadow: none !important;
-          width: calc(100% - 306px);
+          width: calc(100% - 220px);
           text-align: center;
           &:before {
             content: "Get Started";
@@ -2575,7 +2580,7 @@ body.spz-1034_V1 {
       left: 0;
     }
     .search-field {
-      max-width: 306px;
+      max-width: 220px;
       width: 100%;
     }
     form {
@@ -2983,7 +2988,7 @@ body.spz-1034_V1.safari header.top-bar {
       form {
         .get-started-btn {
           height: 64px !important;
-          width: calc(100% - 306px) !important;
+          width: calc(100% - 220px) !important;
           .mobile-only.serach-wrap {
             display: none !important;
           }
@@ -3099,6 +3104,9 @@ body.spz-1034_V1.safari header.top-bar {
     .spz-1034_V1-popup[class] {
       padding-left: 24px;
       padding-right: 24px;
+      .spz-1034_V1-popup-wrapper[class] {
+        max-width: 720px;
+      }
       .spz-1034_V1-popup-info {
         h2 {
           font-size: 40px;
@@ -3109,14 +3117,14 @@ body.spz-1034_V1.safari header.top-bar {
         max-width: initial;
       }
       .search-field {
-        width: calc(100% - 164px);
-        max-width: initial;
+        // width: calc(100% - 164px);
+        // max-width: initial;
       }
       hos-google-places {
         form {
           .get-started-btn {
-            max-width: 164px;
-            width: 100%;
+            // max-width: 164px;
+            // width: 100%;
           }
         }
       }
@@ -3126,7 +3134,7 @@ body.spz-1034_V1.safari header.top-bar {
     hos-google-places {
       form {
         .get-started-btn {
-          width: calc(100% - 306px) !important;
+          width: calc(100% - 220px) !important;
           height: 64px !important;
           .mobile-only.serach-wrap {
             display: none !important;
@@ -3689,18 +3697,21 @@ body.spz-1034_V1.safari header.top-bar {
       }
       padding: 0;
       .spz-1034_V1-popup-wrapper {
-        height: 100%;
-        border-radius: 0;
+        // height: 100%;
+        // border-radius: 0;
         padding: 16px;
+        margin: 0 12px;
         display: flex;
         flex-wrap: wrap;
         align-items: initial;
-        padding-top: 109px;
+        padding-top: 50px;
+        max-width: 550px !important;
+        // padding-top: 109px;
         justify-content: center;
-        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/popup-house.png);
-        background-position: bottom center;
-        background-repeat: no-repeat;
-        background-size: 100%;
+        // background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/AWR/1018%20%7C%20AWR%20%7C%20Home%20%7C%20Redesign%20V3/popup-house.png);
+        // background-position: bottom center;
+        // background-repeat: no-repeat;
+        // background-size: 100%;
         background-color: $background_color_5;
       }
       .spz-1034_V1-popup-info {
@@ -3714,9 +3725,9 @@ body.spz-1034_V1.safari header.top-bar {
         padding-top: 14px;
       }
       .spz-1034_V1-popup-close {
-        width: 36px;
-        height: 36px;
-        background-size: contain;
+        // width: 36px;
+        // height: 36px;
+        // background-size: contain;
       }
     }
     .spz-1034_V1-popup-overlay {
