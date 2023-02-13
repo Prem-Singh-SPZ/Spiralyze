@@ -1,0 +1,160 @@
+body.spz-1001[class] .spz-sticky-footer {
+  display: flex;
+  justify-content: space-between;
+  background: #151414;
+  align-items: center;
+  padding: 20px 20px 20px 32px;
+  border: 1px solid #095274;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  max-width: 1140px;
+  z-index: 2;
+  opacity: 0;
+  visibility: hidden;
+  transition-delay: 200ms;
+  height: 98px;
+}
+body.spz-1001[class] .spz-sticky-footer.active {
+  transition-delay: 200ms;
+  opacity: 1;
+  visibility: visible;
+}
+@media (max-width: 1023.98px) {
+  body.spz-1001[class] .spz-sticky-footer {
+    padding: 20px;
+    height: 88px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-1001[class] .spz-sticky-footer {
+    justify-content: center;
+    padding: 16px;
+    height: 80px;
+  }
+}
+@media (max-width: 1023.98px) {
+  body.spz-1001[class] .spz-sticky-footer .footer-logo {
+    max-height: 48px;
+    max-width: 190px;
+  }
+}
+body.spz-1001[class] .spz-sticky-footer .footer-logo img {
+  width: 100%;
+  height: 100%;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content {
+  padding: 0 8px;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content .step-header.main-header[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content .main-header[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content .h1-header.new-header[class] p,
+body.spz-1001[class] .spz-sticky-footer .footer-content del,
+body.spz-1001[class] .spz-sticky-footer .footer-content span,
+body.spz-1001[class] .spz-sticky-footer .footer-content h1,
+body.spz-1001[class] .spz-sticky-footer .footer-content .header-specs {
+  margin: 0;
+  padding: 0;
+  opacity: 1;
+  font-weight: 700;
+  font-size: 24px !important;
+  line-height: 32px !important;
+  color: #b5b5b6 !important;
+  white-space: break-spaces;
+}
+@media (max-width: 1023.98px) {
+  body.spz-1001[class] .spz-sticky-footer .footer-content .step-header.main-header[class],
+  body.spz-1001[class] .spz-sticky-footer .footer-content .main-header[class],
+  body.spz-1001[class] .spz-sticky-footer .footer-content .h1-header.new-header[class] p,
+  body.spz-1001[class] .spz-sticky-footer .footer-content del,
+  body.spz-1001[class] .spz-sticky-footer .footer-content span,
+  body.spz-1001[class] .spz-sticky-footer .footer-content h1,
+  body.spz-1001[class] .spz-sticky-footer .footer-content .header-specs {
+    font-weight: 700;
+    font-size: 18px !important;
+    line-height: 26px !important;
+  }
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content .step-header.main-header[class] .accent-color[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content .main-header[class] .accent-color[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content .h1-header.new-header[class] p .accent-color[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content del .accent-color[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content span .accent-color[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content h1 .accent-color[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content .header-specs .accent-color[class] {
+  color: #b5b5b6;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content .step-header.main-header[class] br,
+body.spz-1001[class] .spz-sticky-footer .footer-content .main-header[class] br,
+body.spz-1001[class] .spz-sticky-footer .footer-content .h1-header.new-header[class] p br,
+body.spz-1001[class] .spz-sticky-footer .footer-content del br,
+body.spz-1001[class] .spz-sticky-footer .footer-content span br,
+body.spz-1001[class] .spz-sticky-footer .footer-content h1 br,
+body.spz-1001[class] .spz-sticky-footer .footer-content .header-specs br {
+  display: none !important;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content > .step-header {
+  letter-spacing: 0.17px;
+}
+@media (max-width: 1023.98px) {
+  body.spz-1001[class] .spz-sticky-footer .footer-content > .step-header {
+    padding-right: 13px !important;
+  }
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content > .h1-header:not(.new-header),
+body.spz-1001[class] .spz-sticky-footer .footer-content > .main-header:not(.step-header) {
+  display: flex !important;
+  align-items: center;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-content > .h1-header:not(.new-header) > del,
+body.spz-1001[class] .spz-sticky-footer .footer-content > .main-header:not(.step-header) > del {
+  margin-right: 5px;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-cta .text-center {
+  margin: 0;
+  padding: 0;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-cta .text-center a {
+  white-space: nowrap;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-cta .text-center .glow-btn {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px !important;
+  line-height: 24px;
+  letter-spacing: 0.05em !important;
+  text-transform: uppercase;
+  padding: 14.4px 24px;
+}
+@media (max-width: 767.98px) {
+  body.spz-1001[class] .spz-sticky-footer .footer-cta .text-center .glow-btn {
+    padding: 12px 60px 12px 60px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-1001[class] .spz-sticky-footer .footer-cta {
+    width: 100%;
+  }
+}
+body.spz-1001[class] .spz-sticky-footer .footer-cta > .glow-btn {
+  margin-bottom: 0;
+  padding: 7px 40px 7px 40px;
+  width: 100%;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-cta > .btn.gold-btn[class] {
+  margin: 0 !important;
+  padding: 10px 40px;
+}
+body.spz-1001[class] .spz-sticky-footer .footer-cta > .ss-button {
+  margin: 0 !important;
+}
+@media (max-width: 767.98px) {
+  body.spz-1001[class] .spz-sticky-footer .footer-cta > .ss-button > .glow-btn {
+    width: 100%;
+  }
+}
+body.spz-1001[class] .luxbar.luxbar-fixed[class] {
+  display: none !important;
+}/*# sourceMappingURL=1001-Style.css.map */
