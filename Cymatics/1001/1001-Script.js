@@ -32,7 +32,7 @@ function loadTest() {
 
         }
         if (location.pathname.includes('7th-anniversary-mystery-pack')) {
-            cloneElement(".order-1.order-md-2 .header-specs", ".spz-sticky-footer .footer-content");
+            cloneElement(".h1-header.new-header", ".spz-sticky-footer .footer-content");
             cloneElement(".order-1.order-md-2 .btn.gold-btn", ".spz-sticky-footer .footer-cta");
         }
         document.querySelector(".spz-sticky-footer .footer-logo").insertAdjacentHTML("afterbegin", `<img alt="Cymatics" src="https://res.cloudinary.com/spiralyze/image/upload/v1676269950/Cymatics/1001/assets/image_2.svg" >`);
@@ -46,7 +46,7 @@ function loadTest() {
 }
 
 function showSticky() {
-    if (350 < document.documentElement.scrollTop) {
+    if (300 < document.documentElement.scrollTop) {
         document.querySelector(".spz-sticky-footer").classList.add('active');
         document.querySelector('.site-footer').style.paddingBottom = document.querySelector('.spz-sticky-footer').offsetHeight + "px";
     } else {
