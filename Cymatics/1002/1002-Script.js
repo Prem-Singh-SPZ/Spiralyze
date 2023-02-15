@@ -88,9 +88,9 @@ window.addEventListener("click", function (e) {
 
 function initIconSection() {
     return `
-    <div class="icon-title">Works with</div><div class="spz-icons-section"><div class="spz-icons">
+    <div class="spz-icons-section"><div class="spz-icon-container"><div class="icon-title">Works with</div><div class="spz-icons">
     `+ loopIconData() + `
-    </div></div>
+    </div></div></div>
 `
         ;
 }
@@ -98,51 +98,51 @@ function loopIconData() {
     let reviewData = [
         {
             title: "FL Studio",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356364/Cymatics/1002/other_logos.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/FL_Studio.jpg",
         },
         {
             title: "Ableton",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356360/Cymatics/1002/Ableton_logo.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Ableton_logo.svg",
         },
         {
             title: "Garageband",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356364/Cymatics/1002/other_logos-1.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Garageband.jpg",
         },
         {
             title: "Garageband ",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356364/Cymatics/1002/other_logos-2.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Garageband2.jpg",
         },
         {
             title: "Logic Pro X",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356364/Cymatics/1002/other_logos-3.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Logic_Pro_X.jpg",
         },
         {
             title: "Ableton ",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356363/Cymatics/1002/other_logos-4.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Ableton_Live.jpg",
         },
         {
             title: "Bitwig Studio",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356364/Cymatics/1002/other_logos-5.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Bitwig_Studio.jpg",
         },
         {
             title: "Reasons Studio",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356362/Cymatics/1002/other_logos-6.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Reasons_Studio.jpg",
         },
         {
             title: "Studio One",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356362/Cymatics/1002/other_logos-7.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439861/Cymatics/1002/Icons/Studio_One.jpg",
         },
         {
             title: "Cubasis",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356362/Cymatics/1002/other_logos-8.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Cubasis.jpg",
         },
         {
             title: "Cockos",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356362/Cymatics/1002/other_logos-9.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Cockos.jpg",
         },
         {
             title: "Pro Tools",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676356362/Cymatics/1002/other_logos-10.svg",
+            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Pro_Tools.jpg",
         },
     ];
     let htmlD = '';

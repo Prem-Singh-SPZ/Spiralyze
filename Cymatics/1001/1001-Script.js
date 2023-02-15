@@ -46,7 +46,17 @@ function loadTest() {
 }
 
 function showSticky() {
-    if (300 < document.documentElement.scrollTop) {
+    let scrollPosition = (document.documentElement && document.documentElement.scrollTop) || 
+    document.body.scrollTop;
+    if (document.querySelectorAll('.glow-btn').length > 0 && document.querySelectorAll('.glow-btn')[1].offsetTop != 0) {
+        var glowBtn = document.querySelectorAll('.glow-btn')[1].offsetTop + 116;
+    }
+    else {
+        glowBtn = scrollPosition + 1;
+    }
+    // console.log(glowBtn);
+    // console.log(document.body.scrollTop);
+    if ((380 < scrollPosition) || (glowBtn < scrollPosition)) {
         document.querySelector(".spz-sticky-footer").classList.add('active');
         document.querySelector('.site-footer').style.paddingBottom = document.querySelector('.spz-sticky-footer').offsetHeight + "px";
     } else {
