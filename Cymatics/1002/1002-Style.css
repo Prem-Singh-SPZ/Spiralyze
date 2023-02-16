@@ -54,18 +54,6 @@ body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-secti
     margin-bottom: 12px;
   }
 }
-@media (max-width: 1023.98px) {
-  body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons.icon-active,
-  body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons.icon-active {
-    margin-top: 0;
-  }
-}
-@media (max-width: 374.98px) {
-  body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons.icon-active,
-  body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons.icon-active {
-    min-width: 314px;
-  }
-}
 body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item,
 body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item {
   margin-right: 12px;
@@ -92,35 +80,34 @@ body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-secti
   height: 32px;
   width: auto;
 }
-body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item.active,
-body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item.active {
-  transition-duration: 200ms;
+body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover,
+body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
   background: #000000;
   box-shadow: 0px 0px 24px rgba(91, 202, 255, 0.35);
-  padding: 12px 8px 8px;
+  padding: 12px 8px 4px;
   text-align: center;
   margin-top: -12px;
 }
 @media (min-width: 1023.98px) {
-  body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item.active,
-  body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item.active {
+  body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover,
+  body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
     margin-left: -8px;
     margin-right: 4px;
   }
 }
 @media (max-width: 1023.98px) {
-  body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item.active,
-  body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item.active {
+  body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover,
+  body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
     margin-top: 0;
     padding: 8px;
   }
 }
-body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item.active img,
-body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item.active img {
+body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover img,
+body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover img {
   margin-bottom: 4px;
 }
-body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item.active p,
-body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item.active p {
+body.spz-1002[class] .shopify-section[class] .ss-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover p,
+body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .spz-icons .icon-item:hover p {
   display: block;
   margin: 0;
   letter-spacing: 0.7px;
@@ -143,6 +130,7 @@ body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-secti
   body.spz-1002[class] .shopify-section[class] .cta-button[class] .spz-icons-section[class] .glow-btn[class] {
     padding: 16px 0px 16px 0px;
     width: 100%;
+    margin-right: 0;
   }
 }
 body.spz-1002[class] .shopify-section[class] .ss-button[class].overview-txt[class],
@@ -170,21 +158,16 @@ body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[c
   flex-wrap: wrap;
   justify-content: center;
   margin-bottom: 12px;
-  padding: 30px 0 20px 0;
+  padding: 48px 0 20px 0;
 }
 @media (min-width: 1023.98px) {
   body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons {
-    min-width: 360px;
+    min-width: 320px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 1023.98px) {
+@media (max-width: 767.98px) {
   body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons {
-    min-width: 336px;
-  }
-}
-@media (max-width: 1023.98px) {
-  body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons.icon-active {
-    margin-top: 0;
+    max-width: 296px;
   }
 }
 body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item {
@@ -209,29 +192,29 @@ body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[c
   height: 32px;
   width: auto;
 }
-body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item.active {
-  transition-duration: 200ms;
+body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
   background: #000000;
   box-shadow: 0px 0px 24px rgba(91, 202, 255, 0.35);
-  padding: 12px 8px 8px;
+  padding: 12px 8px 4px;
   text-align: center;
   margin-top: -12px;
 }
 @media (min-width: 1023.98px) {
-  body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item.active {
+  body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
     margin-left: -8px;
     margin-right: 4px;
   }
 }
 @media (max-width: 1023.98px) {
-  body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item.active {
+  body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
     margin-top: 0;
+    padding: 8px;
   }
 }
-body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item.active img {
+body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item:hover img {
   margin-bottom: 4px;
 }
-body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item.active p {
+body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[class] .spz-icons .icon-item:hover p {
   display: block;
   margin: 0;
   letter-spacing: 0.7px;
@@ -241,7 +224,11 @@ body.spz-1002[class] #MainContent[id] .mystery-specs[class] .spz-icons-section[c
   margin-top: 0;
 }
 body.spz-1002[class] #MainContent[id] .mystery-specs[class].standard-edition[class] {
-  min-height: 780.4px;
+  min-height: 798.4px;
+}
+body.spz-1002[class] .cta-btns[class] > .h1-header[class] {
+  margin-top: 10px;
+  margin-bottom: 0;
 }
 body.spz-1002[class] .cta-btns[class] .icon-title[class] {
   display: none;
@@ -262,6 +249,11 @@ body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] {
     justify-content: center;
   }
 }
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icon-container {
+    max-width: 320px;
+  }
+}
 body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons {
   display: flex;
   margin-bottom: 24px;
@@ -275,11 +267,6 @@ body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons {
   body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons {
     justify-content: center;
     margin-bottom: 16px;
-  }
-}
-@media (max-width: 1023.98px) {
-  body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons.icon-active {
-    margin-top: 0;
   }
 }
 body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item {
@@ -299,29 +286,29 @@ body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon
   height: 32px;
   width: auto;
 }
-body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item.active {
-  transition-duration: 200ms;
+body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
   background: #000000;
   box-shadow: 0px 0px 24px rgba(91, 202, 255, 0.35);
-  padding: 12px 8px 8px;
+  padding: 12px 8px 4px;
   text-align: center;
   margin-top: -12px;
 }
 @media (min-width: 1023.98px) {
-  body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item.active {
+  body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
     margin-left: -8px;
     margin-right: 4px;
   }
 }
 @media (max-width: 1023.98px) {
-  body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item.active {
+  body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item:hover {
     margin-top: 0;
+    padding: 8px;
   }
 }
-body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item.active img {
+body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item:hover img {
   margin-bottom: 4px;
 }
-body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item.active p {
+body.spz-1002[class] .cta-btns[class] .spz-icons-section[class] .spz-icons .icon-item:hover p {
   display: block;
   margin: 0;
   letter-spacing: 0.7px;

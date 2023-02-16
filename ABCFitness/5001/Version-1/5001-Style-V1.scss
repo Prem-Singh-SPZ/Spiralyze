@@ -1,0 +1,153 @@
+body.home.spz-5001-V1[class] {
+  header#header[id] {
+    //Tablet/desk CSS
+    .l-header__inner {
+      .l-header__container {
+        .l-header__action-links-wrapper--top.c-header-action-links__wrapper {
+          display: flex;
+          @media (max-width: 767.98px) {
+            display: none;
+          }
+          @media (max-width: 991.98px) {
+            .c-header-action-links__search-input-wrapper {
+              display: none;
+            }
+          }
+          .spz-btn-container {
+            @media (min-width: 1023.98px) {
+              margin-left: 64px;
+              margin-right: 2px;
+            }
+            .c-header-action-links__item--first {
+              display: none;
+            }
+            .c-header-action-links__item--second {
+              width: 180px;
+              height: 46px;
+              background: #ffffff;
+              border: 1px solid #ff6f30;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 130%;
+              text-transform: uppercase;
+              color: #ff6f30;
+              margin-top: 0;
+              margin-right: 10px;
+              padding: 6px 20px 0;
+              @media (max-width: 991.98px) {
+                width: 170px;
+                margin-top: 3px;
+                padding: 8px 16px 0;
+              }
+            }
+            .book-a-demo-btn {
+              width: 180px;
+              height: 46px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 130%;
+              color: #ffffff;
+              background: #ff6f30;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              padding-top: 8px;
+              @media (max-width: 991.98px) {
+                margin-right: 22px;
+                width: 170px;
+                margin-top: 3px;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Mobile CSS
+    > .spz-btn-container {
+      flex-direction: column;
+      padding: 5px 20px 15px 20px;
+      border-bottom: 2px solid #0073ba;
+      @media (min-width: 767.98px) {
+        display: none;
+      }
+      .c-header-action-links__item--first {
+        display: none;
+      }
+      .c-header-action-links__item--second {
+        height: 46px;
+        background: #ffffff;
+        border: 1px solid #ff6f30;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        text-transform: uppercase;
+        color: #ff6f30;
+        padding: 6px 20px 0;
+        width: 100%;
+        align-items: center;
+        display: flex;
+        justify-content: center;
+        margin: 0 0 9px 0;
+      }
+      .book-a-demo-btn {
+        width: 100%;
+        height: 46px;
+        font-weight: 500;
+        font-size: 14px;
+        line-height: 130%;
+        color: #ffffff;
+        background: #ff6f30;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding-top: 8px;
+      }
+    }
+
+    &.l-header--has-pinned-menu[class] {
+      > .spz-btn-container {
+        .c-header-action-links__item--second {
+          @media (max-width: 767.98px) {
+            z-index: -1;
+          }
+        }
+      }
+    }
+
+    &.l-header--has-megamenu .l-header__container-inner[class] {
+      border: 0;
+    }
+  }
+  //hero demo button
+  .c-hero .c-hero__content .c-hero__info-wrapper {
+    .c-hero__subtitle.c-subtitle {
+      h3.p1[class] {
+        margin-bottom: 4px;
+        @media (min-width: 767.98px) and (max-width: 991.98px) {
+          padding-bottom: 28px;
+        }
+        @media (max-width: 767.98px) {
+          margin-bottom: 0;
+        }
+      }
+      .book-a-demo-btn {
+        padding: 21px 24px 0;
+        white-space: nowrap;
+        width: 166px;
+        height: 52px;
+        background: #ff6f30;
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 130%;
+        letter-spacing: 0.14em;
+        text-transform: uppercase;
+        color: #ffffff;
+        background-image: none;
+        @media (max-width: 767.98px) {
+          margin: -3px 2px;
+        }
+      }
+    }
+  }
+}

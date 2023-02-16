@@ -1,6 +1,6 @@
 const TEST_ENV = {
     name: 'spz-ABC-Additional-CTA',
-    class: 'spz-5001', // class will be used in body ex. spz-1001
+    class: 'spz-5001-V1', // class will be used in body ex. spz-1001
     date: '15-02-23',
     base_url: 'https://abcfitness.com/', // control domain url
     main_class: '.home', // parent class where test is going to be applied
@@ -26,23 +26,21 @@ function loadTest() {
 }
 
 function headerChange() {
-    document.querySelector('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper').insertAdjacentHTML('beforeend', `<div class="spz-header-cta-container"><div class="spz-header-cta-primary"><a class="c-header-action-links__item c-header-action-links__item--first spz-login-btn" target="">
-    LogIn / Support
-</a> </div><div class="spz-header-cta-secondary"><a class="c-header-action-links__item c-header-action-links__item--second " target="_blank" href="">
-    Book A Demo
-</a> </div></div>`);
-    waitForElm('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .spz-header-cta-container').then(function () {
-        moveElement('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .c-header-action-links__items-wrapper', '.spz-header-cta-container .spz-header-cta-primary');
+    waitForElm('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .c-header-action-links__items-wrapper').then(function () {
+        document.querySelector('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .c-header-action-links__items-wrapper').insertAdjacentHTML('beforeend', `<a class="book-a-demo-btn" href="https://abcfitness.com/solutions/">
+        BOOK A DEMO
+    </a>`);
+        document.querySelector('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .c-header-action-links__items-wrapper').classList.add('spz-btn-container');
     });
 
-    waitForElm('.spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
-        cloneElement('.spz-header-cta-container', 'header#header');
+    waitForElm('header#header .l-header__action-links-wrapper--top.c-header-action-links__wrapper .spz-btn-container').then(function () {
+        cloneElement('.spz-btn-container', 'header#header');
     });
-    waitForElm('header#header > .spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
-        document.querySelectorAll('.c-header-action-links__items-wrapper').forEach(function (v, i) {
-            v.insertAdjacentHTML('afterbegin', `<p>Your Account</p>`);
-        });
-    });
+    // waitForElm('header#header > .spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
+    //     document.querySelectorAll('.c-header-action-links__items-wrapper').forEach(function (v, i) {
+    //         v.insertAdjacentHTML('afterbegin', `<p>Your Account</p>`);
+    //     });
+    // });
 }
 
 

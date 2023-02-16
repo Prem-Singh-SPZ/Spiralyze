@@ -64,27 +64,27 @@ function loadTest() {
     document.body.classList.add("loaded");
 }
 
-function iconToolTip(elem) {
-    waitForElm('.spz-icons-section .icon-item').then(function () {
-        document.querySelectorAll('.spz-icons-section .icon-item').forEach(function (v, i) {
-            if (v.classList.contains('active') && v.querySelector('.icon-img').getAttribute('alt') != elem) {
-                v.classList.remove('active');
-                v.parentElement.classList.remove('icon-active');
-            }
-        });
-    });
-}
-window.addEventListener("click", function (e) {
-    if (e.target.classList.contains("icon-img")) {
-        iconToolTip(e.target.getAttribute('alt'));
-        setTimeout(() => {
-            e.target.parentElement.classList.add('active');
-            e.target.parentElement.parentElement.classList.add('icon-active');
-        }, 200);
-    } else {
-        iconToolTip();
-    }
-});
+// function iconToolTip(elem) {
+//     waitForElm('.spz-icons-section .icon-item').then(function () {
+//         document.querySelectorAll('.spz-icons-section .icon-item').forEach(function (v, i) {
+//             if (v.classList.contains('active') && v.querySelector('.icon-img').getAttribute('alt') != elem) {
+//                 v.classList.remove('active');
+//                 v.parentElement.classList.remove('icon-active');
+//             }
+//         });
+//     });
+// }
+// window.addEventListener("click", function (e) {
+//     if (e.target.classList.contains("icon-img")) {
+//         iconToolTip(e.target.getAttribute('alt'));
+//         setTimeout(() => {
+//             e.target.parentElement.classList.add('active');
+//             e.target.parentElement.parentElement.classList.add('icon-active');
+//         }, 200);
+//     } else {
+//         iconToolTip('null');
+//     }
+// });
 
 function initIconSection() {
     return `
@@ -98,51 +98,51 @@ function loopIconData() {
     let reviewData = [
         {
             title: "FL Studio",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/FL_Studio.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/FL_Studio.jpg",
         },
         {
             title: "Ableton",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Ableton_logo.svg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Ableton_logo.svg",
         },
         {
             title: "Garageband",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Garageband.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Garageband.jpg",
         },
         {
             title: "Garageband ",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Garageband2.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Garageband2.jpg",
         },
         {
             title: "Logic Pro X",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Logic_Pro_X.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Logic_Pro_X.jpg",
         },
         {
             title: "Ableton ",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Ableton_Live.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Ableton_Live.jpg",
         },
         {
             title: "Bitwig Studio",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Bitwig_Studio.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Bitwig_Studio.jpg",
         },
         {
             title: "Reasons Studio",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Reasons_Studio.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Reasons_Studio.jpg",
         },
         {
             title: "Studio One",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439861/Cymatics/1002/Icons/Studio_One.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Studio_One.jpg",
         },
         {
             title: "Cubasis",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Cubasis.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Cubasis.jpg",
         },
         {
             title: "Cockos",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439859/Cymatics/1002/Icons/Cockos.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Cockos.jpg",
         },
         {
             title: "Pro Tools",
-            src: "https://res.cloudinary.com/spiralyze/image/upload/v1676439860/Cymatics/1002/Icons/Pro_Tools.jpg",
+            src: "//res.cloudinary.com/spiralyze/image/upload/f_auto/Cymatics/1002/Icons/Pro_Tools.jpg",
         },
     ];
     let htmlD = '';

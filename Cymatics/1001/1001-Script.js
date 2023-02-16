@@ -56,7 +56,7 @@ function showSticky() {
     }
     // console.log(glowBtn);
     // console.log(document.body.scrollTop);
-    if ((380 < scrollPosition) || (glowBtn < scrollPosition)) {
+    if ((380 < scrollPosition) || (glowBtn < scrollPosition) || ((window.innerHeight + window.scrollY + 5) >= document.body.offsetHeight)) {
         document.querySelector(".spz-sticky-footer").classList.add('active');
         document.querySelector('.site-footer').style.paddingBottom = document.querySelector('.spz-sticky-footer').offsetHeight + "px";
     } else {
