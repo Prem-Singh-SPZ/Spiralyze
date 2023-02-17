@@ -1,4 +1,4 @@
-body.home.spz-5001-V1[class] {
+body.spz-5001-V1[class] {
   header#header[id] {
     //Tablet/desk CSS
     .l-header__inner {
@@ -33,7 +33,7 @@ body.home.spz-5001-V1[class] {
               color: #ff6f30;
               margin-top: 0;
               margin-right: 10px;
-              padding: 6px 20px 0;
+              padding: 8px 20px 4px;
               @media (max-width: 991.98px) {
                 width: 170px;
                 margin-top: 3px;
@@ -51,7 +51,7 @@ body.home.spz-5001-V1[class] {
               display: flex;
               align-items: center;
               justify-content: center;
-              padding-top: 8px;
+              padding: 8px 0 4px;
               @media (max-width: 991.98px) {
                 margin-right: 22px;
                 width: 170px;
@@ -83,7 +83,7 @@ body.home.spz-5001-V1[class] {
         line-height: 130%;
         text-transform: uppercase;
         color: #ff6f30;
-        padding: 6px 20px 0;
+        padding: 8px 20px 4px;
         width: 100%;
         align-items: center;
         display: flex;
@@ -101,7 +101,7 @@ body.home.spz-5001-V1[class] {
         display: flex;
         align-items: center;
         justify-content: center;
-        padding-top: 8px;
+        padding-top: 8px 0 4px;
       }
     }
 
@@ -116,7 +116,10 @@ body.home.spz-5001-V1[class] {
     }
 
     &.l-header--has-megamenu .l-header__container-inner[class] {
-      border: 0;
+      @media (max-width: 767.98px) {
+        border: 0;
+        z-index: 1;
+      }
     }
   }
   //hero demo button
@@ -132,7 +135,7 @@ body.home.spz-5001-V1[class] {
         }
       }
       .book-a-demo-btn {
-        padding: 21px 24px 0;
+        padding: 18px 24px;
         white-space: nowrap;
         width: 166px;
         height: 52px;
@@ -147,6 +150,28 @@ body.home.spz-5001-V1[class] {
         @media (max-width: 767.98px) {
           margin: -3px 2px;
         }
+      }
+    }
+  }
+  .l-header__container.l-header__container--bottom[class] {
+    .l-header__container-inner {
+      .l-header__action-links-wrapper--not-top {
+        > .c-header-action-links__items-wrapper {
+          .c-header-action-links__item--second {
+            margin-right: 10px;
+          }
+          .c-header-action-links__item.c-header-action-links__item--first {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    header#header.l-header--hamburger-active {
+      > .spz-btn-container {
+        display: none;
       }
     }
   }

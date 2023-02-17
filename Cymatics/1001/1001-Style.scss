@@ -33,6 +33,8 @@ body.spz-1001[class] {
     }
 
     .footer-logo {
+      width: 237px;
+      height: 58px;
       @media (max-width: 1023.98px) {
         max-height: 48px;
         max-width: 190px;
@@ -45,8 +47,9 @@ body.spz-1001[class] {
 
     .footer-content {
       padding-right: 12px;
-      .main-header[class] {
-        text-align: left;
+      > .main-header[class],
+      > h1.h1-header {
+        text-align: left !important;
         padding-left: 24px !important;
       }
       .step-header.main-header[class],

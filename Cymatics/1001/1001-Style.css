@@ -35,6 +35,10 @@ body.spz-1001[class] .spz-sticky-footer.active {
     height: 80px;
   }
 }
+body.spz-1001[class] .spz-sticky-footer .footer-logo {
+  width: 237px;
+  height: 58px;
+}
 @media (max-width: 1023.98px) {
   body.spz-1001[class] .spz-sticky-footer .footer-logo {
     max-height: 48px;
@@ -48,8 +52,9 @@ body.spz-1001[class] .spz-sticky-footer .footer-logo img {
 body.spz-1001[class] .spz-sticky-footer .footer-content {
   padding-right: 12px;
 }
-body.spz-1001[class] .spz-sticky-footer .footer-content .main-header[class] {
-  text-align: left;
+body.spz-1001[class] .spz-sticky-footer .footer-content > .main-header[class],
+body.spz-1001[class] .spz-sticky-footer .footer-content > h1.h1-header {
+  text-align: left !important;
   padding-left: 24px !important;
 }
 body.spz-1001[class] .spz-sticky-footer .footer-content .step-header.main-header[class],

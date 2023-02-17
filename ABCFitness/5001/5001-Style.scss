@@ -1,4 +1,4 @@
-body.home.spz-5001[class] {
+body.spz-5001[class] {
   header#header[id] {
     //Tab and above
     .l-header__inner[class] {
@@ -55,7 +55,7 @@ body.home.spz-5001[class] {
                 0px 21px 42px rgba(0, 0, 0, 0.1);
               width: 240px;
               left: auto;
-              right: -8px;
+              right: -14px;
               align-items: flex-start;
               padding: 23px 21px 19px 19px;
 
@@ -121,6 +121,97 @@ body.home.spz-5001[class] {
           }
         }
       }
+
+      .l-header__container.l-header__container--bottom[class] {
+        .l-header__container-inner {
+          .l-header__action-links-wrapper--not-top {
+            > .c-header-action-links__items-wrapper {
+              display: none;
+            }
+            .spz-header-cta-container {
+              display: flex;
+              .spz-header-cta-primary {
+                position: relative;
+                padding: 16px 0;
+                .spz-login-btn {
+                  cursor: pointer;
+                }
+                .c-header-action-links__items-wrapper[class] {
+                  display: none;
+                  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.04),
+                    0px 21px 42px rgba(0, 0, 0, 0.1);
+                  width: 240px;
+                  left: auto;
+                  right: -8px;
+                  top: 36px;
+                  align-items: flex-start;
+                  padding: 23px 21px 19px 19px;
+
+                  &::before {
+                    content: url("https://res.cloudinary.com/spiralyze/image/upload/v1676483425/ABCFitnessSolutions/5001/assets/Polygon_1.svg");
+                    position: absolute;
+                    right: 30px;
+                    top: -16px;
+                  }
+
+                  p {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 130%;
+                    letter-spacing: -0.01em;
+                    color: #797979;
+                    margin-bottom: 5px;
+                    order: -1;
+                  }
+                  .c-header-action-links__item.c-header-action-links__item--first[class] {
+                    height: 46px;
+                    width: 100%;
+                    justify-content: center;
+                    border: 1px solid #ff6f30;
+                    color: #000000;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 130%;
+                    padding-left: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    &::before,
+                    &::after {
+                      display: none;
+                    }
+                  }
+
+                  .c-header-action-links__item.c-header-action-links__item--second[class] {
+                    order: -1;
+                    margin: 4px 0 8px 0;
+                    width: 100%;
+                    height: 46px;
+                    border: 1px solid #ff6f30;
+                    color: #000000;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 130%;
+                    background-color: #ffffff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    &::before,
+                    &::after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+              .spz-header-cta-secondary {
+                padding: 16px 0;
+              }
+            }
+          }
+        }
+      }
     }
 
     //Mobile css
@@ -130,7 +221,8 @@ body.home.spz-5001[class] {
       align-items: center;
       border-bottom: 2px solid #0073ba;
       padding: 5px 20px;
-
+      background-color: #fff;
+      transition-duration: 200ms;
       @media (min-width: 767.98px) {
         display: none;
       }
@@ -154,13 +246,14 @@ body.home.spz-5001[class] {
           font-size: 14px;
           width: 100%;
           justify-content: center;
-          z-index: -1;
+          // z-index: -1;
         }
       }
       .spz-header-cta-primary {
         position: relative;
         width: 100%;
         text-align: center;
+        background: #fff;
 
         .spz-login-btn {
           padding: 4px 18px 0 0px;
@@ -178,7 +271,7 @@ body.home.spz-5001[class] {
           font-weight: 500;
           font-size: 14px;
           line-height: 130%;
-          z-index: -1;
+          // z-index: -1;
 
           &::before {
             content: url("https://res.cloudinary.com/spiralyze/image/upload/v1676480559/ABCFitnessSolutions/5001/assets/drop-arrow.svg");
@@ -250,6 +343,7 @@ body.home.spz-5001[class] {
     .l-header__inner .l-header__container .l-header__container-inner {
       @media (max-width: 767.98px) {
         border: 0;
+        z-index: 1;
       }
     }
 
@@ -264,7 +358,7 @@ body.home.spz-5001[class] {
           &::before {
             transform: rotate(180deg);
             right: 2px !important;
-            top: 16px !important;
+            top: 18px !important;
 
             @media (max-width: 767.98px) {
               right: -1px !important;
@@ -297,38 +391,70 @@ body.home.spz-5001[class] {
     }
   }
 
-  .c-hero .c-hero__content .c-hero__info-wrapper {
-    .c-hero__subtitle.c-subtitle {
-      h3.p1[class] {
-        margin-bottom: 0;
-        @media (min-width: 767.98px) and (max-width: 991.98px) {
-          padding-bottom: 32px;
+  .c-hero .c-hero__content {
+    @media (min-width: 991.98px) {
+      padding: 0 6px;
+      padding-top: 150px;
+      padding-bottom: 134px;
+    }
+    @media (min-width: 767.98px) and (max-width: 991.98px) {
+      padding-bottom: 116px;
+    }
+    @media (max-width: 767.98px) {
+      padding-bottom: 94px;
+    }
+    .c-hero__info-wrapper {
+      .c-hero__subtitle.c-subtitle {
+        h3.p1[class] {
+          margin-bottom: 4px;
+          @media (min-width: 767.98px) and (max-width: 991.98px) {
+            padding-bottom: 32px;
+            margin-bottom: 0px;
+          }
+          @media (max-width: 767.98px) {
+            margin-bottom: 0px;
+          }
         }
-      }
-      .book-a-demo-btn {
-        padding: 21px 24px 0;
-        white-space: nowrap;
-        width: 166px;
-        height: 52px;
-        background: #ff6f30;
-        font-weight: 700;
-        font-size: 14px;
-        line-height: 130%;
-        letter-spacing: 0.14em;
-        text-transform: uppercase;
-        color: #ffffff;
-        background-image: none;
-        @media (max-width: 767.98px) {
-          margin: -3px 2px;
+        .book-a-demo-btn {
+          padding: 18px 24px;
+          white-space: nowrap;
+          width: 166px;
+          height: 52px;
+          background: #ff6f30;
+          font-weight: 700;
+          font-size: 14px;
+          line-height: 130%;
+          letter-spacing: 0.14em;
+          text-transform: uppercase;
+          color: #ffffff;
+          background-image: none;
+          @media (max-width: 767.98px) {
+            margin: -3px 2px;
+          }
         }
       }
     }
   }
+
+  .c-slide-out.js-slide-out {
+    .c-slide-out__container {
+      .c-slide-out__action-links-wrapper.c-header-action-links__wrapper {
+        .c-header-action-links__items-wrapper {
+          > p {
+            display: none;
+          }
+          .c-header-action-links__item--first {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
   @media (max-width: 767.98px) {
-    .c-slide-out--active {
-      top: 142px !important;
-      @media (max-width: 384.98px) {
-        top: 162px !important;
+    header#header.l-header--hamburger-active {
+      > .spz-header-cta-container {
+        display: none;
       }
     }
   }
