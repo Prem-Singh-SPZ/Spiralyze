@@ -51,7 +51,9 @@ body.spz-1002[class] {
 
         .spz-icons {
           display: flex;
-          flex-wrap: wrap;
+          @media (max-width: 1365.98px) {
+            flex-wrap: wrap;
+          }
           @media (min-width: 767.98px) {
             margin-right: 24px;
           }
@@ -72,6 +74,8 @@ body.spz-1002[class] {
             margin-right: 12px;
             margin-bottom: 12px;
             transition-duration: 200ms;
+            cursor: pointer;
+
             @media (max-width: 1023.98px) {
               margin-right: 8px;
             }
@@ -83,7 +87,6 @@ body.spz-1002[class] {
               color: #fff;
             }
             img {
-              cursor: pointer;
               height: 32px;
               width: auto;
             }
@@ -180,7 +183,10 @@ body.spz-1002[class] {
         align-items: center;
         flex-wrap: wrap;
         justify-content: center;
-
+        // @media (min-width: 767.98px) and (max-width: 991.98px) {
+        //   max-width: 272px;
+        //   justify-content: flex-start;
+        // }
         .spz-icons {
           display: flex;
           flex-wrap: wrap;
@@ -193,6 +199,7 @@ body.spz-1002[class] {
           @media (max-width: 767.98px) {
             max-width: 296px;
           }
+         
           // &.icon-active {
           //   // margin-top: 12px;
           //   @media (max-width: 1023.98px) {
@@ -203,6 +210,8 @@ body.spz-1002[class] {
             margin-right: 12px;
             margin-bottom: 16px;
             transition-duration: 200ms;
+            cursor: pointer;
+
             @media (max-width: 1023.98px) {
               margin-right: 8px;
             }
@@ -214,7 +223,6 @@ body.spz-1002[class] {
               color: #fff;
             }
             img {
-              cursor: pointer;
               height: 32px;
               width: auto;
             }
@@ -274,6 +282,9 @@ body.spz-1002[class] {
         }
       }
 
+      .blank-div {
+        height: 73px;
+      }
       &.standard-edition[class] {
         min-height: 798.4px;
       }
@@ -327,6 +338,8 @@ body.spz-1002[class] {
           margin-right: 12px;
           margin-bottom: 12px;
           transition-duration: 200ms;
+          cursor: pointer;
+
           // @media (max-width: 1023.98px) {
           //   margin-right: 8px;
           // }
@@ -338,7 +351,6 @@ body.spz-1002[class] {
             color: #fff;
           }
           img {
-            cursor: pointer;
             height: 32px;
             width: auto;
           }
@@ -404,5 +416,9 @@ body.spz-1002[class] {
         }
       }
     }
+  }
+
+  .daw-image {
+    display: none !important;
   }
 }

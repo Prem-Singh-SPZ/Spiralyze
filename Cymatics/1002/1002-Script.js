@@ -46,7 +46,7 @@ function loadTest() {
     }
     if (location.pathname.includes('7th-anniversary-mystery-pack')) {
         waitForElm('#MainContent .btn.gold-btn').then(function () {
-            console.log('lll')
+            document.querySelector('.mystery-specs.standard-edition').insertAdjacentHTML('beforeend', `<div class='blank-div'></div>`);
             document.querySelector('.mystery-specs.standard-edition').insertAdjacentHTML('beforeend', initIconSection());
             moveElement(".mystery-specs .btn.gray-btn", ".mystery-specs.standard-edition .spz-icons-section");
             document.querySelector('.mystery-specs.gold-edition').insertAdjacentHTML('beforeend', initIconSection());

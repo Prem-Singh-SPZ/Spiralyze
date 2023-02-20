@@ -316,8 +316,8 @@ body.spz-5001[class] header#header[id] .spz-header-cta-container .spz-header-cta
 }
 body.spz-5001[class] header#header[id] .spz-header-cta-container .spz-header-cta-primary:hover .spz-login-btn::before {
   transform: rotate(180deg);
-  right: 2px !important;
-  top: 18px !important;
+  right: -2px !important;
+  top: 16px !important;
 }
 @media (max-width: 767.98px) {
   body.spz-5001[class] header#header[id] .spz-header-cta-container .spz-header-cta-primary:hover .spz-login-btn::before {
@@ -336,6 +336,11 @@ body.spz-5001[class] header#header[id] .spz-header-cta-container .spz-header-cta
 @media (max-width: 767.98px) {
   body.spz-5001[class] header#header[id].l-header--has-pinned-menu[class] .spz-header-cta-container .spz-header-cta-primary:hover .c-header-action-links__items-wrapper {
     z-index: -1;
+  }
+}
+@media (min-width: 767.98px) {
+  body.spz-5001[class].safari header#header[id] .spz-header-cta-container[class] .spz-header-cta-primary:hover .spz-login-btn::before {
+    top: 16px !important;
   }
 }
 @media (min-width: 991.98px) {
@@ -374,7 +379,7 @@ body.spz-5001[class] .c-hero .c-hero__content .c-hero__info-wrapper .c-hero__sub
   white-space: nowrap;
   width: 166px;
   height: 52px;
-  background: #ff6f30;
+  background: #f26122;
   font-weight: 700;
   font-size: 14px;
   line-height: 130%;

@@ -19,7 +19,7 @@
         document.body.classList.add(TEST_ENV.class);
         if (document.body.classList.contains('home')) {
             waitForElm('.l-body-wrapper .c-hero__content').then(function () {
-                document.querySelector('.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle.c-subtitle').insertAdjacentHTML('beforeend', `<a class="book-a-demo-btn c-grid-simple__btn c-btn--internal-type  c-btn c-btn--primary " target="_blank" href="https://abcfitness.com/request-a-demo/">
+                document.querySelector('.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle.c-subtitle').insertAdjacentHTML('beforeend', `<a class="book-a-demo-btn c-grid-simple__btn c-btn--internal-type  c-btn c-btn--primary "  href="https://abcfitness.com/request-a-demo/">
         BOOK A DEMO
     </a>`);
             });
@@ -31,7 +31,7 @@
     function headerChange() {
         document.querySelector('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper').insertAdjacentHTML('beforeend', `<div class="spz-header-cta-container"><div class="spz-header-cta-primary"><a class="c-header-action-links__item c-header-action-links__item--first spz-login-btn" target="">
     LogIn / Support
-</a> </div><div class="spz-header-cta-secondary"><a class="c-header-action-links__item c-header-action-links__item--second " target="_blank" href="https://abcfitness.com/request-a-demo/">
+</a> </div><div class="spz-header-cta-secondary"><a class="c-header-action-links__item c-header-action-links__item--second "  href="https://abcfitness.com/request-a-demo/">
     Book A Demo
 </a> </div></div>`);
         waitForElm('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .spz-header-cta-container').then(function () {

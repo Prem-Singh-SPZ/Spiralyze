@@ -1,0 +1,112 @@
+body.spz-2001[class] {
+  main {
+    &::before {
+      content: url("//res.cloudinary.com/spiralyze/image/upload/v1676917220/ABCFitnessSolutions/2001/assets/BG-1440.png");
+      left: 0;
+      position: absolute;
+    }
+    .section.section-relative:first-child {
+      .section-block {
+        .section-inner[class] {
+          @media (min-width: 1199.98px) {
+            max-width: 1180px;
+          }
+          .hidden-mobile {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    .section.section-relative:nth-child(2) {
+      min-height: 1796px;
+      > .section-block[class] {
+        .section-inner.section-fit.section-relative[class] {
+          @media (min-width: 1199.98px) {
+            max-width: 1180px;
+          }
+          .widget[class] {
+            display: none;
+          }
+
+          .spz-hero-container[class] {
+            padding: 20px;
+            .hero-top-content[class] {
+              display: flex;
+              @media (max-width: 1199.98px) {
+                flex-wrap: wrap;
+              }
+
+              .hero-left-summary {
+                > p {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 100%;
+                  letter-spacing: 0.04em;
+                  text-transform: uppercase;
+                  color: #37465a;
+                }
+
+                > h6 {
+                  font-weight: 800;
+                  font-size: 48px;
+                  line-height: 130%;
+                  letter-spacing: -0.01em;
+                  color: #37465a;
+                  @media (max-width: 767.98px) {
+                    font-size: 28px;
+                    line-height: 130%;
+                  }
+                }
+
+                > ul {
+                  list-style: none;
+                  li {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: #37465a;
+                    @media (max-width: 767.98px) {
+                        font-size: 16px;
+                      }
+                    span {
+                      font-weight: 700;
+                    }
+                    &::before {
+                      content: url("//res.cloudinary.com/spiralyze/image/upload/v1676916035/ABCFitnessSolutions/2001/assets/check_icon.svg");
+                      left: 0;
+                      position: absolute;
+                    }
+                  }
+                }
+              }
+
+              .hero-right-form {
+                picture {
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+
+            .hero-bottom-content[class] {
+              > p {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                text-align: center;
+                color: #151515;
+              }
+              picture {
+                img {
+                  width: 100%;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
