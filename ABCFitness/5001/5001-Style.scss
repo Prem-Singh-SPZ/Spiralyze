@@ -42,7 +42,7 @@ body.spz-5001[class] {
                 background: none;
                 position: absolute;
                 right: -7px;
-                top: 20px;
+                top: 18px;
                 @media (max-width: 991.98px) {
                   right: -12px;
                   top: 18px;
@@ -55,7 +55,10 @@ body.spz-5001[class] {
                 0px 21px 42px rgba(0, 0, 0, 0.1);
               width: 240px;
               left: auto;
-              right: -14px;
+              right: -8px;
+              @media (max-width: 1023.98px) {
+                right: -14px;
+              }
               align-items: flex-start;
               padding: 23px 21px 19px 19px;
 
@@ -357,9 +360,13 @@ body.spz-5001[class] {
           }
           &::before {
             transform: rotate(180deg);
-            right: -2px !important;
+            right: 2px !important;
             top: 16px !important;
 
+            @media (max-width: 1023.98px) {
+              right: -2px !important;
+              top: 16px !important;
+            }
             @media (max-width: 767.98px) {
               right: -1px !important;
               top: 28px !important;
@@ -391,13 +398,13 @@ body.spz-5001[class] {
     }
   }
 
-  &.safari {  header#header[id] 
-    .spz-header-cta-container[class] {
+  &.safari {
+    header#header[id] .spz-header-cta-container[class] {
       .spz-header-cta-primary:hover {
         .spz-login-btn {
           &::before {
             @media (min-width: 767.98px) {
-              top: 16px !important;
+              top: 14px !important;
             }
           }
         }

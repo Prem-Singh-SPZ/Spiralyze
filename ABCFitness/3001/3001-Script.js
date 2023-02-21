@@ -1,9 +1,9 @@
 (function () {
     const TEST_ENV = {
-        name: 'spz-ABC-Gym-Management-software',
-        class: 'spz-2001', // class will be used in body ex. spz-1001
-        date: '20-02-23',
-        base_url: 'https://learn.abcfitness.com/switch/gym-management-software/', // control domain url
+        name: 'spz-ABC-Club-Management-software',
+        class: 'spz-3001', // class will be used in body ex. spz-1001
+        date: '21-02-23',
+        base_url: 'https://learn.abcfitness.com/club-management-software', // control domain url
         main_class: 'body', // parent class where test is going to be applied
     }
 
@@ -29,10 +29,10 @@
         <div class="hero-top-content">
         <div class="hero-left-summary">
         <p>CLUB MANAGEMENT SOFTWARE</p>
-<h6>Switch to ABC Fitness. Grow your gym and streamline operations.</h6>
+<h6>Grow your club and streamline operations.</h6>
 <ul><li> <span>Sales Automation.</span> Send text and email reminders based on incomplete registrations, trials, and other sales triggers.</li><li>
 <span>CRM.</span> Track and manage members, leads, check-ins, classes, payments, and more, in one place.
- </li><li> <span>Billing.</span> Automate billing & payment collection. Accept family & group subscriptions. Increase collections 7%.</li> </ul>
+ </li><li> <span>Operations.</span> Let members scan for entry. Manage orders, vendors, and products. Automate billing & payment collection.</li> </ul>
         </div>
         <div class="hero-right-form">
         <picture>

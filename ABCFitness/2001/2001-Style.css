@@ -1,29 +1,127 @@
 body.spz-2001[class] main::before {
-  content: url("//res.cloudinary.com/spiralyze/image/upload/v1676917220/ABCFitnessSolutions/2001/assets/BG-1440.png");
-  left: 0;
+  content: "";
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-1440.png");
+  left: auto;
+  right: 0;
+  background-repeat: no-repeat;
+  height: 1249px;
+  width: 1249px;
+  top: 0;
+  background-size: 100%;
+  z-index: 1;
   position: absolute;
+}
+@media (min-width: 1919.98px) {
+  body.spz-2001[class] main::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-4K.png");
+    right: 85px;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Tablet-right.png");
+    height: 487px;
+    width: 440px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-right.png");
+    height: 400px;
+    width: 310px;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main::after {
+    content: "";
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload//ABCFitnessSolutions/2001/assets/Tablet-left.png");
+    width: 273px;
+    height: 715px;
+    right: auto;
+    left: 0;
+    background-repeat: no-repeat;
+    top: 597px;
+    background-size: 100%;
+    z-index: 1;
+    position: absolute;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main::after {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-left.png");
+    top: 520px;
+    width: 332px;
+    height: 850px;
+  }
 }
 @media (min-width: 1199.98px) {
   body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] {
     max-width: 1180px;
   }
 }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] {
+    max-width: 628px;
+  }
+}
 body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .hidden-mobile {
   display: none !important;
 }
+body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget {
+  top: auto !important;
+  bottom: 16px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget {
+    bottom: -10px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget {
+    bottom: 0;
+    left: 20px !important;
+  }
+}
+body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget .contents .url-link {
+  width: auto;
+}
+body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget .contents .url-link .image {
+  width: 137.5px;
+  height: 60px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget .contents .url-link {
+    width: 100%;
+    height: auto;
+  }
+}
 body.spz-2001[class] main .section.section-relative:nth-child(2) {
-  min-height: 1796px;
+  min-height: 1722px;
+}
+@media (min-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) {
+    min-height: 820px;
+    height: 820px !important;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) {
+    height: 1435px;
+    min-height: 1435px;
+  }
 }
 @media (min-width: 1199.98px) {
   body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] {
     max-width: 1180px;
   }
 }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] {
+    max-width: 628px;
+  }
+}
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .widget[class] {
   display: none;
-}
-body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] {
-  padding: 20px;
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] {
   display: flex;
@@ -31,6 +129,26 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
 @media (max-width: 1199.98px) {
   body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] {
     flex-wrap: wrap;
+    justify-content: center;
+  }
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
+  padding-top: 66px;
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
+    padding: 20px;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
+    padding-top: 82px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
+    padding-top: 56px;
+    padding-bottom: 0;
   }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > p {
@@ -40,6 +158,8 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   letter-spacing: 0.04em;
   text-transform: uppercase;
   color: #37465a;
+  margin-bottom: 18px;
+  z-index: 2;
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > h6 {
   font-weight: 800;
@@ -47,25 +167,39 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   line-height: 130%;
   letter-spacing: -0.01em;
   color: #37465a;
+  margin-bottom: 40px;
+  z-index: 2;
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > h6 {
+    margin-bottom: 42px;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > h6 {
     font-size: 28px;
     line-height: 130%;
+    margin-bottom: 18px;
   }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul {
   list-style: none;
+  padding-left: 32px;
+  padding-right: 2px;
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul li {
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
   color: #37465a;
+  margin-bottom: 24px;
+  z-index: 2;
+  position: relative;
 }
 @media (max-width: 767.98px) {
   body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul li {
     font-size: 16px;
+    margin-bottom: 20px;
   }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul li span {
@@ -73,11 +207,48 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul li::before {
   content: url("//res.cloudinary.com/spiralyze/image/upload/v1676916035/ABCFitnessSolutions/2001/assets/check_icon.svg");
-  left: 0;
+  left: -32px;
+  top: -2px;
   position: absolute;
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-right-form {
+  min-width: 638px;
+  margin-right: -48px;
+  margin-top: -4px;
+  z-index: 2;
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-right-form {
+    min-width: 726px;
+    max-width: 726px;
+    margin-right: 0px;
+    margin-top: -5px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-right-form {
+    width: 100%;
+    max-width: 375px;
+    margin-top: -12px;
+    min-width: auto;
+  }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-right-form picture img {
   width: 100%;
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] {
+  margin-top: 20px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] {
+    margin-top: 0px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] {
+    padding: 0 20px 20px;
+    margin-top: -12px;
+  }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] > p {
   font-weight: 600;
@@ -86,6 +257,13 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   text-align: center;
   color: #151515;
 }
-body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] picture img {
-  width: 100%;
-}/*# sourceMappingURL=2001-Style.css.map */
+@media (max-width: 767.98px) {
+  body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] > p {
+    font-size: 18px;
+  }
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] picture {
+  display: flex;
+  justify-content: center;
+  margin-top: 28px;
+}
