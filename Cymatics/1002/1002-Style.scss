@@ -47,6 +47,27 @@ body.spz-1002[class] {
         }
         @media (max-width: 1023.98px) {
           align-items: flex-end;
+          &:not(.mock-class) {
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            .spz-icon-container[class]{
+              margin-bottom: 30px;
+              .icon-title{
+                text-align: center;
+              }
+              .spz-icons{
+                margin-left: 10px;
+                margin-right: 0;
+                .icon-item{
+                  margin-right: 12px;
+                }
+              }
+            }
+            .glow-btn[class]{
+              padding: 16px 100px 16px 100px;
+            }
+          }
         }
 
         .spz-icons {
@@ -199,7 +220,7 @@ body.spz-1002[class] {
           @media (max-width: 767.98px) {
             max-width: 296px;
           }
-         
+
           // &.icon-active {
           //   // margin-top: 12px;
           //   @media (max-width: 1023.98px) {

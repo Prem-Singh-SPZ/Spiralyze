@@ -22,6 +22,8 @@ function loadTest() {
                 document.querySelector('.product-section .ss-button').classList.add('overview-txt');
                 document.querySelector('.product-section .ss-button').insertAdjacentHTML('afterbegin', initIconSection());
                 moveElement(".product-section .ss-button .glow-btn", ".spz-icons-section");
+                document.querySelector('.spz-icons-section').classList.add('mock-class');
+
             });
         }
         else {

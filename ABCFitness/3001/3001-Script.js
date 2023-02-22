@@ -23,8 +23,8 @@
     }
 
     function heroContentUpdate() {
-        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
-        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('srcset','//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
+        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1677052478/ABCFitnessSolutions/3001/assets/ABC-logo.svg');
+        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('srcset','//res.cloudinary.com/spiralyze/image/upload/v1677052478/ABCFitnessSolutions/3001/assets/ABC-logo.svg');
         document.querySelector('#landing-page > main section.section:nth-child(2) .section-block .section-inner').insertAdjacentHTML('afterbegin', `<div class="spz-hero-container">
         <div class="hero-top-content">
         <div class="hero-left-summary">
@@ -36,18 +36,18 @@
         </div>
         <div class="hero-right-form">
         <picture>
-            <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Form-desk.png">
-            <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/form-tab.png">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Form-mobile.png" alt="Form">
+            <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Form-desk.png">
+            <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/form-tab.png">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Form-mobile.png" alt="Form">
             </picture>
         </div>
         </div>
         <div class="hero-bottom-content">
         <p>Join 20,000+ gyms & studios using ABC Fitness Solutions</p>
         <picture>
-        <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/logos-desktop.svg">
-        <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/logos-tablet.svg">
-        <img src="//res.cloudinary.com/spiralyze/image/upload/v1676883934/ABCFitnessSolutions/2001/assets/logos-mobile.svg" alt="Social Icons">
+        <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1677052480/ABCFitnessSolutions/3001/assets/logos-desktop.svg">
+        <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1677052480/ABCFitnessSolutions/3001/assets/logos-tablet.svg">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1677052480/ABCFitnessSolutions/3001/assets/logos-mobile.svg" alt="Social Icons">
         </picture>
         </div>
         </div>`);

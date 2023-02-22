@@ -2,7 +2,7 @@ body.spz-3001[class] {
     main {
       &::before {
         content: "";
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-1440.png");
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/BG-1440.png");
         left: auto;
         right: 0;
         background-repeat: no-repeat;
@@ -12,17 +12,17 @@ body.spz-3001[class] {
         background-size: 100%;
         z-index: 1;
         position: absolute;
-        @media (min-width: 1919.98px) {
-          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-4K.png");
-          right: 85px;
-        }
+        // @media (min-width: 1919.98px) {
+        //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/BG-4K.png");
+        //   right: 85px;
+        // }
         @media (max-width: 1199.98px) {
-          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Tablet-right.png");
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Tablet-right.png");
           height: 487px;
           width: 440px;
         }
         @media (max-width: 767.98px) {
-          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-right.png");
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Mobile-right.png");
           height: 400px;
           width: 310px;
         }
@@ -30,7 +30,7 @@ body.spz-3001[class] {
       &::after {
         @media (max-width: 1199.98px) {
           content: "";
-          background-image: url("//res.cloudinary.com/spiralyze/image/upload//ABCFitnessSolutions/2001/assets/Tablet-left.png");
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Tablet-left.png");
           width: 273px;
           height: 715px;
           right: auto;
@@ -42,7 +42,7 @@ body.spz-3001[class] {
           position: absolute;
         }
         @media (max-width: 767.98px) {
-          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-left.png");
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Mobile-left.png");
           top: 520px;
           width: 332px;
           height: 850px;
@@ -69,8 +69,9 @@ body.spz-3001[class] {
                 // left: -8px!important;
               }
               @media (max-width: 767.98px) {
-                bottom: 0;
+                bottom: auto;
                 left: 20px !important;
+                top: 30px!important;
               }
               .contents {
                 .url-link {
@@ -91,14 +92,14 @@ body.spz-3001[class] {
       }
   
       .section.section-relative:nth-child(2) {
-        min-height: 1722px;
+        min-height: 1634px;
         @media (min-width: 1199.98px) {
           min-height: 820px;
           height: 820px !important;
         }
         @media (min-width: 767.98px) and (max-width: 1199.98px){
-          height: 1435px;
-          min-height: 1435px;
+          height: 1384px;
+          min-height: 1384px;
         }
         > .section-block[class] {
           .section-inner.section-fit.section-relative[class] {
@@ -124,12 +125,12 @@ body.spz-3001[class] {
                   @media (max-width: 767.98px) {
                     padding: 20px;
                   }
-                  padding-top: 66px;
+                  padding-top: 97px;
                   @media (max-width: 1199.98px) {
                     padding-top: 82px;
                   }
                   @media (max-width: 767.98px) {
-                    padding-top: 56px;
+                    padding-top: 6px;
                     padding-bottom: 0;
                   }
                   > p {
@@ -165,6 +166,9 @@ body.spz-3001[class] {
                     list-style: none;
                     padding-left: 32px;
                     padding-right: 2px;
+                    @media (min-width: 1199.98px) {
+                      padding-right: 20px;
+                    }
                     li {
                       font-weight: 400;
                       font-size: 18px;
@@ -182,7 +186,7 @@ body.spz-3001[class] {
                         font-weight: 700;
                       }
                       &::before {
-                        content: url("//res.cloudinary.com/spiralyze/image/upload/v1676916035/ABCFitnessSolutions/2001/assets/check_icon.svg");
+                        content: url("//res.cloudinary.com/spiralyze/image/upload/v1677052478/ABCFitnessSolutions/3001/assets/check_icon.svg");
                         left: -32px;
                         top: -2px;
                         position: absolute;

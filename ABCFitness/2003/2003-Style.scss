@@ -1,0 +1,443 @@
+body.spz-2003[class] {
+  main {
+    &::before {
+      content: "";
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/BG-1440.png");
+      left: auto;
+      right: 0;
+      background-repeat: no-repeat;
+      height: 1249px;
+      width: 1249px;
+      top: 0;
+      background-size: 100%;
+      z-index: 1;
+      position: absolute;
+      // @media (min-width: 1919.98px) {
+      //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/BG-4K.png");
+      //   right: 85px;
+      // }
+      @media (max-width: 1199.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/Tablet-right.png");
+        height: 487px;
+        width: 440px;
+      }
+      @media (max-width: 767.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/Mobile-right.png");
+        height: 400px;
+        width: 310px;
+      }
+    }
+    &::after {
+      @media (max-width: 1199.98px) {
+        content: "";
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/Tablet-left.png");
+        width: 273px;
+        height: 715px;
+        right: auto;
+        left: 0;
+        background-repeat: no-repeat;
+        top: 597px;
+        background-size: 100%;
+        z-index: 1;
+        position: absolute;
+      }
+      @media (max-width: 767.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/Mobile-left.png");
+        top: 520px;
+        width: 332px;
+        height: 850px;
+      }
+    }
+    .section.section-relative:first-child {
+      .section-block {
+        .section-inner[class] {
+          @media (min-width: 1199.98px) {
+            max-width: 1180px;
+          }
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            max-width: 628px;
+          }
+          .hidden-mobile,
+          #element-508 {
+            display: none !important;
+          }
+
+          .widget {
+            top: auto !important;
+            bottom: 16px;
+            @media (max-width: 1199.98px) {
+              bottom: -10px;
+              // left: -8px!important;
+            }
+            @media (max-width: 767.98px) {
+              bottom: auto;
+              left: 20px !important;
+              top: 30px !important;
+            }
+            .contents {
+              .url-link {
+                width: auto;
+                .image {
+                  width: 137.5px;
+                  height: 60px;
+                }
+                @media (max-width: 1199.98px) {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .section.section-relative:nth-child(2) {
+      min-height: 2218px;
+      @media (min-width: 1199.98px) {
+        min-height: 1314px;
+        height: 1314px !important;
+      }
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        height: 1920px;
+        min-height: 1920px;
+      }
+      > .section-block[class] {
+        .section-inner.section-fit.section-relative[class] {
+          @media (min-width: 1199.98px) {
+            max-width: 1180px;
+          }
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            max-width: 628px;
+          }
+          .widget[class] {
+            display: none;
+          }
+
+          .spz-hero-container[class] {
+            .hero-top-content[class] {
+              display: flex;
+              @media (max-width: 1199.98px) {
+                flex-wrap: wrap;
+                justify-content: center;
+              }
+
+              .hero-left-summary {
+                @media (max-width: 767.98px) {
+                  padding: 20px;
+                }
+                padding-top: 53px;
+                @media (max-width: 1199.98px) {
+                  padding-top: 82px;
+                }
+                @media (max-width: 767.98px) {
+                  padding-top: 56px;
+                  padding-bottom: 0;
+                }
+                > p {
+                  font-weight: 500;
+                  font-size: 14px;
+                  line-height: 100%;
+                  letter-spacing: 0.04em;
+                  text-transform: uppercase;
+                  color: #37465a;
+                  margin-bottom: 18px;
+                  z-index: 2;
+                }
+
+                > h6 {
+                  font-weight: 800;
+                  font-size: 48px;
+                  line-height: 130%;
+                  letter-spacing: -0.01em;
+                  color: #37465a;
+                  margin-bottom: 40px;
+                  z-index: 2;
+                  @media (max-width: 1199.98px) {
+                    margin-bottom: 42px;
+                  }
+                  @media (max-width: 767.98px) {
+                    font-size: 28px;
+                    line-height: 130%;
+                    margin-bottom: 18px;
+                  }
+                }
+
+                > ul {
+                  list-style: none;
+                  padding-left: 32px;
+                  padding-right: 2px;
+                  @media (min-width: 1199.98px) {
+                    padding-right: 40px;
+                  }
+                  li {
+                    font-weight: 400;
+                    font-size: 18px;
+                    line-height: 26px;
+                    color: #37465a;
+                    margin-bottom: 24px;
+                    z-index: 2;
+                    position: relative;
+
+                    @media (max-width: 767.98px) {
+                      font-size: 16px;
+                      margin-bottom: 20px;
+                    }
+                    span {
+                      font-weight: 700;
+                    }
+                    &::before {
+                      content: url("//res.cloudinary.com/spiralyze/image/upload/v1677053803/ABCFitnessSolutions/2003/assets/check_icon.svg");
+                      left: -32px;
+                      top: -2px;
+                      position: absolute;
+                    }
+                  }
+                }
+              }
+
+              .hero-right-form {
+                min-width: 638px;
+                margin-right: -48px;
+                margin-top: -4px;
+                z-index: 2;
+                @media (max-width: 1199.98px) {
+                  min-width: 726px;
+                  max-width: 726px;
+                  margin-right: 0px;
+                  margin-top: -5px;
+                }
+                @media (max-width: 767.98px) {
+                  width: 100%;
+                  max-width: 375px;
+                  margin-top: -12px;
+                  min-width: auto;
+                }
+                picture {
+                  img {
+                    width: 100%;
+                  }
+                }
+              }
+            }
+
+            .hero-bottom-content[class] {
+              margin-top: 20px;
+              @media (max-width: 1199.98px) {
+                margin-top: 0px;
+              }
+              @media (max-width: 767.98px) {
+                padding: 0 20px 20px;
+                margin-top: -12px;
+              }
+              > p {
+                font-weight: 600;
+                font-size: 20px;
+                line-height: 130%;
+                text-align: center;
+                color: #151515;
+                @media (max-width: 767.98px) {
+                  font-size: 18px;
+                }
+              }
+              picture {
+                display: flex;
+                justify-content: center;
+                margin-top: 28px;
+                img {
+                  // width: 100%;
+                }
+              }
+            }
+
+            //Review slider code
+            .spz-review-slider {
+              position: relative;
+              margin-top: 90px;
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                margin-top: 62px;
+              }
+              @media (max-width: 767.98px) {
+                margin-top: 32px;
+              }
+              &::before {
+                content: "";
+                position: absolute;
+                width: 800px;
+                height: 261px;
+                left: calc(50% - 800px / 2);
+                background: linear-gradient(
+                  90deg,
+                  #00aeef -0.55%,
+                  #046096 48.36%,
+                  #ff7335 99.34%
+                );
+                opacity: 0.3;
+                filter: blur(90px);
+              }
+
+              .review-slider-container {
+                z-index: 2;
+                padding: 0 168px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  padding: 0 103px;
+                }
+                @media (max-width: 767.98px) {
+                  padding: 0 50px;
+                }
+                .review-slider-item {
+                  &:nth-child(even) {
+                    border-radius: 0px 10px 10px 0px;
+                  }
+                  &:nth-child(odd) {
+                    border-radius: 10px 0px 0px 10px;
+                  }
+                  padding: 36px 41px;
+                  background: #ffffff;
+                  border: 1px solid #e4e4e7;
+                  max-width: 422px;
+                  min-height: 378px;
+                  display: flex;
+                  flex-direction: column;
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    min-width: 422px;
+                  }
+                  @media (max-width: 767.98px) {
+                    min-width: 275px;
+                    padding: 24px 20px;
+                  }
+
+                  > img {
+                    width: 128px;
+                    height: 24px;
+                    margin-bottom: 12px;
+                  }
+
+                  > h6 {
+                    font-weight: 700;
+                    font-size: 24px;
+                    line-height: 140%;
+                    color: #18181b;
+                    margin-bottom: 40px;
+                    @media (max-width: 767.98px) {
+                      font-size: 20px;
+                      line-height: 140%;
+                      margin-bottom: 20px;
+                    }
+                  }
+
+                  > p.card-content {
+                    color: #37465a;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 28px;
+                    min-height: 140px;
+                    @media (max-width: 767.98px) {
+                      font-size: 14px;
+                      line-height: 24px;
+                    }
+                  }
+
+                  > p:last-child {
+                    font-weight: 700;
+                    font-size: 14px;
+                    line-height: 24px;
+                    text-transform: uppercase;
+                    color: #6b7179;
+                    margin-top: auto;
+                    span {
+                      color: #ff7335;
+                    }
+                  }
+                }
+
+                &.slick-slider {
+                  .slide_arrow {
+                    background: transparent;
+                    outline: none;
+                    border: 0;
+                    .orange-arrow {
+                      display: none;
+                    }
+                    &:hover {
+                      > .grey-arrow {
+                        display: none;
+                      }
+                      > .orange-arrow {
+                        display: block;
+                      }
+                    }
+                  }
+                  .prev-arrow {
+                    position: absolute;
+                    left: 6%;
+                    top: calc(50% - 36px);
+                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                      left: 1%;
+                    }
+                    @media (max-width: 767.98px) {
+                      left: 3%;
+                      top: calc(50% - 34px);
+                      img {
+                        width: 20px;
+                      }
+                    }
+                  }
+                  .next-arrow {
+                    position: absolute;
+                    right: 6%;
+                    top: calc(50% - 36px);
+                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                      right: 1%;
+                    }
+                    @media (max-width: 767.98px) {
+                      top: calc(50% - 34px);
+                      right: 3%;
+                      img {
+                        width: 20px;
+                      }
+                    }
+                  }
+
+                  .slick-dots {
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    list-style: disc;
+                    padding-left: 60px;
+                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                      padding-left: 54px;
+                      padding-top: 6px;
+                    }
+                    @media (max-width: 1199.98px) {
+                      padding-left: 52px;
+                      padding-top: 10px;
+                    }
+
+                    li {
+                      font-size: 30px;
+                      color: #c2c2c2;
+                      @media (max-width: 1199.98px) {
+                        width: 8px;
+                        margin-right: 10px;
+                      }
+                      button {
+                        opacity: 0;
+                        visibility: hidden;
+                      }
+
+                      &.slick-active {
+                        color: #ff7335;
+                        font-size: 32px;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
