@@ -44,7 +44,7 @@ body.spz-3001[class] {
         @media (max-width: 767.98px) {
           background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/3001/assets/Mobile-left.png");
           top: 520px;
-          width: 332px;
+          width: 310px;
           height: 850px;
         }
       }
@@ -142,6 +142,7 @@ body.spz-3001[class] {
                     color: #37465a;
                     margin-bottom: 18px;
                     z-index: 2;
+                    position: relative;
                   }
   
                   > h6 {
@@ -152,6 +153,7 @@ body.spz-3001[class] {
                     color: #37465a;
                     margin-bottom: 40px;
                     z-index: 2;
+                    position: relative;
                     @media (max-width: 1199.98px) {
                       margin-bottom: 42px;
                     }
@@ -235,6 +237,8 @@ body.spz-3001[class] {
                   line-height: 130%;
                   text-align: center;
                   color: #151515;
+                  z-index: 2;
+                  position: relative;
                   @media (max-width: 767.98px) {
                     font-size: 18px;
                   }
@@ -244,7 +248,9 @@ body.spz-3001[class] {
                   justify-content: center;
                   margin-top: 28px;
                   img {
-                    // width: 100%;
+                    @media (max-width: 767.98px) {
+                      width: 100%;
+                    }
                   }
                 }
               }

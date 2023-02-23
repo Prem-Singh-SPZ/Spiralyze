@@ -26,7 +26,7 @@
         document.getElementsByTagName('head')[0].appendChild(slickScript);
 
         slickScript.onload = function () {
-            console.log('jquery enabled');
+            // console.log('jquery enabled');
             isSlickLoad = 1;
         };
     };
@@ -53,7 +53,7 @@
         document.querySelector('#landing-page > main section.section:nth-child(2) .section-block .section-inner').insertAdjacentHTML('afterbegin', `<div class="spz-hero-container">
         <div class="hero-top-content">
         <div class="hero-left-summary">
-        <p>CLUB MANAGEMENT SOFTWARE</p>
+        <p>GYM MANAGEMENT SOFTWARE</p>
 <h6>Switch to ABC Fitness. Grow your gym and streamline operations.</h6>
 <ul><li> <span>Sales Automation.</span> Send text and email reminders based on incomplete registrations, trials, and other sales triggers.</li><li>
 <span>CRM.</span> Track and manage members, leads, check-ins, classes, payments, and more, in one place.
@@ -81,25 +81,25 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1677054735/ABCFitnessSolutions/2003/assets/Five-star.svg" alt="Rating"/>
         <h6>“Fantastic for running a gym!”</h6>
         <p class="card-content">“We&apos;ve solved nearly every club management issue with ABC. From creating memberships, managing employee timesheets, tracking trainer sessions, monitoring door access, and more we could not function without it!”</p>
-        <p><span>&#8212;</span>MIKAELA g.</p>
+        <p><span>&#8212; </span> MIKAELA g.</p>
         </div>
         <div class="review-slider-item">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1677054735/ABCFitnessSolutions/2003/assets/Five-star.svg" alt="Rating"/>
         <h6>“Awesome software!”</h6>
         <p class="card-content">“This is by far one of the best softwares. Holds so much info on members, their training, payment and more.”</p>
-        <p><span>&#8212;</span>kristen s.</p>
+        <p><span>&#8212; </span> kristen s.</p>
         </div>
         <div class="review-slider-item">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1677054735/ABCFitnessSolutions/2003/assets/Five-star.svg" alt="Rating"/>
         <h6>“It&apos;s fantastic!”</h6>
         <p class="card-content">IGNITE allows me to track all my leads, trials, and sales easily. Leads never get lost!</p>
-        <p><span>&#8212;</span>DANIEL HAYES</p>
+        <p><span>&#8212; </span> DANIEL HAYES</p>
         </div>
         <div class="review-slider-item">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1677054735/ABCFitnessSolutions/2003/assets/Five-star.svg" alt="Rating"/>
         <h6>“We were able to add new locations”</h6>
         <p class="card-content">“With ABC, we were able to add new locations, strengthening our foothold in our market. We have also doubled the size of several existing facilities.”</p>
-        <p><span>&#8212;</span>ERIC SCHREIMANN</p>
+        <p><span>&#8212; </span> ERIC SCHREIMANN</p>
         </div>
         </div>
         </div>
@@ -109,7 +109,7 @@
     function initSlider() {
         let sliderEnabled = setInterval(() => {
             if (isSlickLoad == 1) {
-                console.log('slick enabled')
+                // console.log('slick enabled')
                 clearInterval(sliderEnabled);
                 jQuery('.review-slider-container').slick({
                     arrows: true,

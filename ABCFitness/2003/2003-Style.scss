@@ -44,7 +44,7 @@ body.spz-2003[class] {
       @media (max-width: 767.98px) {
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2003/assets/Mobile-left.png");
         top: 520px;
-        width: 332px;
+        width: 310px;
         height: 850px;
       }
     }
@@ -143,6 +143,7 @@ body.spz-2003[class] {
                   color: #37465a;
                   margin-bottom: 18px;
                   z-index: 2;
+                  position: relative;
                 }
 
                 > h6 {
@@ -153,6 +154,7 @@ body.spz-2003[class] {
                   color: #37465a;
                   margin-bottom: 40px;
                   z-index: 2;
+                  position: relative;
                   @media (max-width: 1199.98px) {
                     margin-bottom: 42px;
                   }
@@ -236,6 +238,8 @@ body.spz-2003[class] {
                 line-height: 130%;
                 text-align: center;
                 color: #151515;
+                z-index: 2;
+                position: relative;
                 @media (max-width: 767.98px) {
                   font-size: 18px;
                 }
@@ -244,8 +248,12 @@ body.spz-2003[class] {
                 display: flex;
                 justify-content: center;
                 margin-top: 28px;
+                z-index: 2;
+                position: relative;
                 img {
-                  // width: 100%;
+                  @media (max-width: 767.98px) {
+                    width: 100%;
+                  }
                 }
               }
             }
@@ -258,7 +266,7 @@ body.spz-2003[class] {
                 margin-top: 62px;
               }
               @media (max-width: 767.98px) {
-                margin-top: 32px;
+                margin-top: 30px;
               }
               &::before {
                 content: "";
@@ -274,6 +282,14 @@ body.spz-2003[class] {
                 );
                 opacity: 0.3;
                 filter: blur(90px);
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  width: 422px;
+                  left: calc(50% - 422px / 2);
+                }
+                @media (max-width: 767.98px) {
+                  width: 315px;
+                  left: calc(50% - 315px / 2);
+                }
               }
 
               .review-slider-container {
@@ -292,25 +308,26 @@ body.spz-2003[class] {
                   &:nth-child(odd) {
                     border-radius: 10px 0px 0px 10px;
                   }
-                  padding: 36px 41px;
+                  padding: 35px 40px;
                   background: #ffffff;
                   border: 1px solid #e4e4e7;
                   max-width: 422px;
-                  min-height: 378px;
+                  min-height: 376px;
                   display: flex;
                   flex-direction: column;
                   @media (min-width: 767.98px) and (max-width: 1199.98px) {
                     min-width: 422px;
                   }
                   @media (max-width: 767.98px) {
-                    min-width: 275px;
-                    padding: 24px 20px;
+                    // min-width: 275px;
+                    min-height: 384px;
+                    padding: 23px 19px;
                   }
 
                   > img {
                     width: 128px;
                     height: 24px;
-                    margin-bottom: 12px;
+                    margin-bottom: 14px;
                   }
 
                   > h6 {
@@ -332,6 +349,7 @@ body.spz-2003[class] {
                     font-size: 16px;
                     line-height: 28px;
                     min-height: 140px;
+                    padding-right: 10px;
                     @media (max-width: 767.98px) {
                       font-size: 14px;
                       line-height: 24px;
@@ -354,8 +372,9 @@ body.spz-2003[class] {
                 &.slick-slider {
                   .slide_arrow {
                     background: transparent;
-                    outline: none;
+                    outline-color: transparent;
                     border: 0;
+                    padding: 0;
                     .orange-arrow {
                       display: none;
                     }
@@ -370,31 +389,35 @@ body.spz-2003[class] {
                   }
                   .prev-arrow {
                     position: absolute;
-                    left: 6%;
+                    cursor: pointer;
+                    left: 6.62%;
                     top: calc(50% - 36px);
                     @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                      left: 1%;
+                      left: 2.1%;
+                      top: calc(50% - 38px);
                     }
                     @media (max-width: 767.98px) {
-                      left: 3%;
-                      top: calc(50% - 34px);
+                      top: calc(50% - 30px);
+                      left: 5.3%;
                       img {
-                        width: 20px;
+                        width: 22px;
                       }
                     }
                   }
                   .next-arrow {
                     position: absolute;
-                    right: 6%;
+                    cursor: pointer;
+                    right: 6.62%;
                     top: calc(50% - 36px);
                     @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                      right: 1%;
+                      right: 2.1%;
+                      top: calc(50% - 38px);
                     }
                     @media (max-width: 767.98px) {
-                      top: calc(50% - 34px);
-                      right: 3%;
+                      top: calc(50% - 30px);
+                      right: 5.3%;
                       img {
-                        width: 20px;
+                        width: 22px;
                       }
                     }
                   }
@@ -404,23 +427,24 @@ body.spz-2003[class] {
                     justify-content: center;
                     align-items: center;
                     list-style: disc;
-                    padding-left: 60px;
+                    padding-top: 2px;
+                    padding-left: 55px;
                     @media (min-width: 767.98px) and (max-width: 1199.98px) {
                       padding-left: 54px;
                       padding-top: 6px;
                     }
                     @media (max-width: 1199.98px) {
                       padding-left: 52px;
-                      padding-top: 10px;
+                      padding-top: 5px;
                     }
 
                     li {
                       font-size: 30px;
                       color: #c2c2c2;
-                      @media (max-width: 1199.98px) {
-                        width: 8px;
-                        margin-right: 10px;
-                      }
+                      // @media (max-width: 1199.98px) {
+                      width: 8px;
+                      margin-right: 10px;
+                      // }
                       button {
                         opacity: 0;
                         visibility: hidden;

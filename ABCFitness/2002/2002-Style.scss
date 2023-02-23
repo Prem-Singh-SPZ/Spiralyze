@@ -1,10 +1,10 @@
-body.spz-2001[class] {
+body.spz-2002[class] {
   main {
     &::before {
       content: "";
-      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-1440.png");
-      left: auto;
-      right: 0;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2002/assets/Hero-desk-bg.png");
+      left: 0;
+      right: auto;
       background-repeat: no-repeat;
       height: 1249px;
       width: 1249px;
@@ -12,43 +12,43 @@ body.spz-2001[class] {
       background-size: 100%;
       z-index: 1;
       position: absolute;
-      @media (min-width: 1919.98px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-4K.png");
-        right: 85px;
-      }
+      // @media (min-width: 1919.98px) {
+      //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/BG-4K.png");
+      //   right: 85px;
+      // }
       @media (max-width: 1199.98px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Tablet-right.png");
-        height: 487px;
-        width: 440px;
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2002/assets/Hero-tab-bg.png");
+        height: 935px;
+        width: 768px;
       }
       @media (max-width: 767.98px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-right.png");
-        height: 400px;
-        width: 310px;
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2002/assets/Hero-mobile-bg.png");
+        height: 713px;
+        width: 320px;
       }
     }
-    &::after {
-      @media (max-width: 1199.98px) {
-        content: "";
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Tablet-left.png");
-        width: 273px;
-        height: 715px;
-        right: auto;
-        left: 0;
-        background-repeat: no-repeat;
-        top: 597px;
-        background-size: 100%;
-        z-index: 1;
-        position: absolute;
-      }
-      @media (max-width: 767.98px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-left.png");
-        top: 520px;
-        width: 310px;
-        height: 850px;
-        overflow: hidden;
-      }
-    }
+    //   &::after {
+    //     @media (max-width: 1199.98px) {
+    //       content: "";
+    //       background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Tablet-left.png");
+    //       width: 273px;
+    //       height: 715px;
+    //       right: auto;
+    //       left: 0;
+    //       background-repeat: no-repeat;
+    //       top: 597px;
+    //       background-size: 100%;
+    //       z-index: 1;
+    //       position: absolute;
+    //     }
+    //     @media (max-width: 767.98px) {
+    //       background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-left.png");
+    //       top: 520px;
+    //       width: 310px;
+    //       height: 850px;
+    //       overflow: hidden;
+    //     }
+    //   }
     .section.section-relative:first-child {
       .section-block {
         .section-inner[class] {
@@ -64,21 +64,22 @@ body.spz-2001[class] {
 
           .widget {
             top: auto !important;
-            bottom: 16px;
+            bottom: 24px;
+            left: -10px !important;
             @media (max-width: 1199.98px) {
-              bottom: -10px;
-              // left: -8px!important;
+              bottom: 0px;
+              left: 0px !important;
             }
             @media (max-width: 767.98px) {
-              bottom: 0;
+              bottom: -10px;
               left: 20px !important;
             }
             .contents {
               .url-link {
                 width: auto;
                 .image {
-                  width: 137.5px;
-                  height: 60px;
+                  width: 133px;
+                  height: 58px;
                 }
                 @media (max-width: 1199.98px) {
                   width: 100%;
@@ -98,8 +99,8 @@ body.spz-2001[class] {
         height: 820px !important;
       }
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
-        height: 1435px;
-        min-height: 1435px;
+        height: 1446px;
+        min-height: 1446px;
       }
       > .section-block[class] {
         .section-inner.section-fit.section-relative[class] {
@@ -125,13 +126,18 @@ body.spz-2001[class] {
                 @media (max-width: 767.98px) {
                   padding: 20px;
                 }
-                padding-top: 66px;
+                padding-top: 38px;
+                padding-left: 42px;
+                padding-right: 8px;
                 @media (max-width: 1199.98px) {
-                  padding-top: 82px;
+                  padding-top: 2px;
+                  padding-left: 0;
+                  margin-bottom: 36px;
                 }
                 @media (max-width: 767.98px) {
-                  padding-top: 56px;
-                  padding-bottom: 0;
+                  padding: 0px 20px;
+                  margin-top: -12px;
+                  margin-bottom: 15px;
                 }
                 > p {
                   font-weight: 500;
@@ -196,19 +202,19 @@ body.spz-2001[class] {
 
               .hero-right-form {
                 min-width: 638px;
-                margin-right: -48px;
+                margin-left: -60px;
                 margin-top: -4px;
                 z-index: 2;
                 @media (max-width: 1199.98px) {
                   min-width: 726px;
                   max-width: 726px;
-                  margin-right: 0px;
-                  margin-top: -5px;
+                  margin-left: 0px;
+                  margin-top: 40px;
                 }
                 @media (max-width: 767.98px) {
                   width: 100%;
                   max-width: 375px;
-                  margin-top: -12px;
+                  margin-top: 15px;
                   min-width: auto;
                 }
                 picture {
