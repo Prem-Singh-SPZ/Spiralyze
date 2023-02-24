@@ -5,7 +5,7 @@ body.spz-2002[class] main::before {
   right: auto;
   background-repeat: no-repeat;
   height: 1249px;
-  width: 1249px;
+  width: 1200px;
   top: 0;
   background-size: 100%;
   z-index: 1;
@@ -42,6 +42,11 @@ body.spz-2002[class] main .section.section-relative:first-child .section-block .
   top: auto !important;
   bottom: 24px;
   left: -10px !important;
+}
+@media (min-width: 1199.98px) and (max-width: 1259.98px) {
+  body.spz-2002[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget {
+    left: 50px !important;
+  }
 }
 @media (max-width: 1199.98px) {
   body.spz-2002[class] main .section.section-relative:first-child .section-block .section-inner[class] .widget {
@@ -197,6 +202,11 @@ body.spz-2002[class] main .section.section-relative:nth-child(2) > .section-bloc
   margin-top: -4px;
   z-index: 2;
 }
+@media (min-width: 1199.98px) and (max-width: 1259.98px) {
+  body.spz-2002[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-right-form {
+    margin-left: 0;
+  }
+}
 @media (max-width: 1199.98px) {
   body.spz-2002[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-right-form {
     min-width: 726px;
@@ -255,4 +265,4 @@ body.spz-2002[class] main .section.section-relative:nth-child(2) > .section-bloc
   body.spz-2002[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] picture img {
     width: 100%;
   }
-}/*# sourceMappingURL=2002-Style.css.map */
+}
