@@ -221,9 +221,11 @@ function test3002_init() {
 
 function ctaEnable() {
     if (jQuery('#fname').val() && jQuery('#lname').val() && jQuery('#email').val() && jQuery('#email2').val() && jQuery('#phone').val() && jQuery('#card-num').val() && jQuery('#book-form-card-name').val() && jQuery('#exp-month').val() && jQuery('#exp-year').val() && jQuery('#sec-code').val() && jQuery('#street-address').val() && jQuery('#postal').val() && jQuery('#city').val() && jQuery('#state').val()) {
-        jQuery('.hc-agree').addClass('active')
+        jQuery('.hc-agree').addClass('active');
+        jQuery('#checkout-submit').attr('disabled', false);
     }
     else {
+        // jQuery('#checkout-submit').attr('disabled', true);
         if (jQuery('.hc-agree').hasClass('active')) {
             jQuery('.hc-agree').removeClass('active')
         }

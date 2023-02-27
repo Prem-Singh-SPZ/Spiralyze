@@ -1,0 +1,125 @@
+body.spz-5003 {
+  main.l-body-wrapper {
+    .c-hero__content {
+      .c-hero__info-wrapper {
+        .c-hero__subtitle {
+          h3.p1 {
+            margin-bottom: 0px;
+            padding-bottom: 12px;
+            @media (min-width: 767.98px) and (max-width: 1032.98px) {
+              margin-bottom: 24px;
+            }
+            @media (max-width: 767.98px) {
+              margin-bottom: 14px;
+              padding-bottom: 20px;
+            }
+          }
+          #userEmailForm {
+            display: flex;
+            background-color: #005a8e;
+            padding: 16px;
+            margin-left: -10px;
+            margin-right: 10px;
+            @media (min-width: 767.98px) and (max-width: 1032.98px) {
+              margin-left: -6px;
+              margin-right: 6px;
+            }
+            @media (max-width: 767.98px) {
+              margin-left: -14px;
+              margin-right: -14px;
+              flex-wrap: wrap;
+            }
+            .emailBox {
+              margin-right: 10px;
+              @media (max-width: 767.98px) {
+                width: 100%;
+                margin-right: 0;
+                margin-bottom: 11px;
+              }
+              > input {
+                max-width: 348px;
+                height: 52px;
+                background: #ffffff;
+                font-weight: 400;
+                font-size: 18px;
+                line-height: 26px;
+                color: #636363;
+                padding: 16px 20px 10px;
+                margin-bottom: 0;
+                border: 1.5px solid transparent;
+
+                &:focus {
+                  border: 1.5px solid #ff7335;
+                }
+                @media (max-width: 767.98px) {
+                  max-width: 100%;
+                }
+              }
+
+              .error-msg {
+                font-weight: 450;
+                font-size: 14px;
+                line-height: 20px;
+                color: #ffffff;
+                display: none;
+                margin-top: 8px;
+                margin-bottom: 0;
+              }
+              ::placeholder {
+                /* Chrome, Firefox, Opera, Safari 10.1+ */
+                color: #636363;
+                opacity: 1; /* Firefox */
+              }
+
+              :-ms-input-placeholder {
+                /* Internet Explorer 10-11 */
+                color: #636363;
+              }
+
+              ::-ms-input-placeholder {
+                /* Microsoft Edge */
+                color: #636363;
+              }
+
+              &.have-error {
+                > input {
+                  border: 1px solid #dc251c;
+                }
+                ::placeholder {
+                  color: #dc251c;
+                  opacity: 1; /* Firefox */
+                }
+
+                :-ms-input-placeholder {
+                  color: #dc251c;
+                }
+
+                ::-ms-input-placeholder {
+                  color: #dc251c;
+                }
+              }
+            }
+            .submit-btn {
+              width: 175px;
+              height: 52px;
+              background: #ff6f30;
+              font-weight: 700;
+              font-size: 14px;
+              line-height: 130%;
+              letter-spacing: 0.14em;
+              text-transform: uppercase;
+              color: #ffffff;
+              padding-top: 4px;
+              @media (min-width: 767.98px) and (max-width: 1032.98px) {
+                padding-top: 7px;
+              }
+              @media (max-width: 767.98px) {
+                width: 100%;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
