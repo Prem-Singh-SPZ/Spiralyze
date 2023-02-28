@@ -43,7 +43,7 @@ body.spz-5003 {
                 font-weight: 400;
                 font-size: 18px;
                 line-height: 26px;
-                color: #636363;
+                color: #000000;
                 padding: 16px 20px 10px;
                 margin-bottom: 0;
                 border: 1.5px solid transparent;
@@ -109,17 +109,30 @@ body.spz-5003 {
               letter-spacing: 0.14em;
               text-transform: uppercase;
               color: #ffffff;
-              padding-top: 4px;
+              padding-top: 8px;
               @media (min-width: 767.98px) and (max-width: 1032.98px) {
                 padding-top: 7px;
               }
               @media (max-width: 767.98px) {
                 width: 100%;
+                padding-top: 6px;
               }
             }
           }
         }
       }
+    }
+  }
+
+  &.safari {
+    main.l-body-wrapper
+      .c-hero__content
+      .c-hero__info-wrapper
+      .c-hero__subtitle
+      #userEmailForm
+      .emailBox
+      > input {
+      padding-top: 24px;
     }
   }
 }

@@ -225,13 +225,13 @@ function ctaEnable() {
         jQuery('#checkout-submit').attr('disabled', false);
     }
     else {
-        // jQuery('#checkout-submit').attr('disabled', true);
-        if (jQuery('.hc-agree').hasClass('active')) {
-            jQuery('.hc-agree').removeClass('active')
-        }
-        if (jQuery('.hc-agree').hasClass('data_filled')) {
-            jQuery('.hc-agree').removeClass('data_filled')
-        }
+        jQuery('#checkout-submit').attr('disabled', true);
+        // if (jQuery('.hc-agree').hasClass('active')) {
+        //     jQuery('.hc-agree').removeClass('active')
+        // }
+        // if (jQuery('.hc-agree').hasClass('data_filled')) {
+        //     jQuery('.hc-agree').removeClass('data_filled')
+        // }
     }
 }
 
