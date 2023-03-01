@@ -675,7 +675,10 @@
     });
     window.addEventListener("locationchange", function () {
         url = location.href;
-        urlCheck(url);
+        waitForElm('.pace.pace-inactive').then(function () {
+            console.log('run test now')
+            urlCheck(url);
+        });
     });
 
 
@@ -851,4 +854,19 @@
     //     }
     //     return result.json();
     // }
+
+    function waitForElm(selector) {
+        return new Promise(function (resolve) {
+            if (document.querySelector(selector)) {
+                return resolve(document.querySelector(selector));
+            }
+            const observer = new MutationObserver(function (mutations) {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+        });
+    }
 })();
