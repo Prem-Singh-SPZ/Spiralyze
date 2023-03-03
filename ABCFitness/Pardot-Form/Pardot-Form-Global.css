@@ -1,5 +1,85 @@
-input{
-    background-color: #fff;
-    border: 1px solid #eee;
-    border-radius: 3px;
+body {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
 }
+body form.form[class] {
+  padding: 40px;
+}
+body form.form[class] h6.form-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #37465a;
+  margin-bottom: 20px;
+  margin-top: 0;
+}
+body form.form[class] .form-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+body form.form[class] .form-container .form-field-item {
+  width: 50%;
+}
+body form.form[class] .form-container .form-field-item .form-field {
+  padding: 0;
+}
+body form.form[class] .form-container .form-field-item .form-field .field-label {
+  display: none;
+}
+body form.form[class] .form-container .form-field-item .form-field input.text {
+  width: 100%;
+  padding: 14px;
+}
+body form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
+  margin-left: 4px;
+  margin-right: 0;
+}
+body form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
+  margin-right: 4px;
+  margin-left: 0;
+}
+body form.form[class] p.submit {
+  width: 100%;
+  height: 60px;
+  background: #ff7335;
+  margin: 6px 0;
+  position: relative;
+}
+body form.form[class] p.submit input {
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+  width: 100%;
+  text-transform: none;
+}
+body form.form[class] p.submit::after {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+  display: block;
+  width: 30px;
+  height: 15px;
+  position: absolute;
+  top: 22px;
+  right: 12%;
+}
+body form.form[class] .privacy-policy p,
+body form.form[class] .privacy-policy a {
+  text-align: center;
+  color: #888888;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+}
+body form.form[class] .privacy-policy a {
+  text-decoration: underline;
+}/*# sourceMappingURL=Pardot-Form-Global.css.map */
