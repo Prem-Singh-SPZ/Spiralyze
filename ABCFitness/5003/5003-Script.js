@@ -32,12 +32,29 @@
                 <button class="submit-btn" value="GET A DEMO">GET A DEMO</button>
               </div>`);
                 document.querySelector(".submit-btn").addEventListener("click", emailFormSUbmit);
+                document.querySelector("#emailAddress").addEventListener("blur", checkValidEmail);
+                // document.querySelector("#emailAddress").addEventListener("focus", checkValidEmail);
+                document.querySelector("#emailAddress").addEventListener("input", checkValidEmail);
             });
         }
 
         document.body.classList.add("loaded");
     }
 
+    function checkValidEmail() {
+        let uEmail = document.querySelector('#userEmailForm #emailAddress').value;
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(String(uEmail).toLowerCase())) {
+            document.querySelector('#userEmailForm .error-msg').style.display = 'none';
+            if (document.querySelector('#userEmailForm .emailBox').classList.contains('have-error')) {
+                document.querySelector('#userEmailForm .emailBox').classList.remove('have-error');
+            }
+        }
+        else {
+            document.querySelector('#userEmailForm .emailBox').classList.add('have-error');
+            document.querySelector('#userEmailForm .error-msg').style.display = 'block';
+        }
+    }
     function emailFormSUbmit() {
         let uEmail = document.querySelector('#userEmailForm #emailAddress').value;
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

@@ -12,9 +12,9 @@ body form.form[class] h6.form-title {
   font-size: 32px;
   line-height: 36px;
   text-align: center;
-  letter-spacing: -0.02em;
+  letter-spacing: -1.7px;
   color: #37465a;
-  margin-bottom: 20px;
+  margin-bottom: 28px;
   margin-top: 0;
 }
 body form.form[class] .form-container {
@@ -23,30 +23,89 @@ body form.form[class] .form-container {
 }
 body form.form[class] .form-container .form-field-item {
   width: 50%;
+  position: relative;
+}
+@media (max-width: 424px) {
+  body form.form[class] .form-container .form-field-item {
+    width: 100%;
+  }
+}
+body form.form[class] .form-container .form-field-item p.error.no-label {
+  margin: 0;
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #dc251c;
+  margin-top: -12px;
 }
 body form.form[class] .form-container .form-field-item .form-field {
+  margin-bottom: 16px;
   padding: 0;
 }
 body form.form[class] .form-container .form-field-item .form-field .field-label {
-  display: none;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #8d8994;
+  top: 18px;
+  left: 16px;
+  z-index: 1;
+  position: absolute;
+  width: -moz-max-content;
+  width: max-content;
+  text-transform: capitalize;
+  transition-delay: 200ms;
+}
+body form.form[class] .form-container .form-field-item .form-field.error input.text {
+  border-color: #dc251c;
 }
 body form.form[class] .form-container .form-field-item .form-field input.text {
   width: 100%;
-  padding: 14px;
+  padding: 20px 20px;
+  font-size: 18px;
+}
+body form.form[class] .form-container .form-field-item .form-field select.select {
+  padding: 20px 20px;
+  font-size: 18px;
+}
+body form.form[class] .form-container .form-field-item .form-field select.select:focus {
+  border: 1px solid #ff7335;
+}
+body form.form[class] .form-container .form-field-item .form-field input.text:focus {
+  border-color: #ff7335;
+}
+body form.form[class] .form-container .form-field-item .form-field.typing label.field-label {
+  top: -11px;
+  left: 11px;
+  background: #fff;
+  padding: 1px 5px;
+  font-size: 14px;
+  line-height: 20px;
+  color: #ff7335;
 }
 body form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
-  margin-left: 4px;
+  margin-left: 10px;
   margin-right: 0;
 }
+@media (max-width: 424px) {
+  body form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
+    margin-left: 0px;
+  }
+}
 body form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
-  margin-right: 4px;
+  margin-right: 8px;
   margin-left: 0;
+}
+@media (max-width: 424px) {
+  body form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
+    margin-right: 0px;
+  }
 }
 body form.form[class] p.submit {
   width: 100%;
   height: 60px;
   background: #ff7335;
-  margin: 6px 0;
+  margin: 10px 1px 21px;
   position: relative;
 }
 body form.form[class] p.submit input {
@@ -62,6 +121,8 @@ body form.form[class] p.submit input {
   height: 100%;
   width: 100%;
   text-transform: none;
+  padding-right: 26px;
+  letter-spacing: 0;
 }
 body form.form[class] p.submit::after {
   content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
@@ -70,7 +131,10 @@ body form.form[class] p.submit::after {
   height: 15px;
   position: absolute;
   top: 22px;
-  right: 12%;
+  left: calc(50% + 52px);
+}
+body form.form[class] p.submit:hover, body form.form[class] p.submit:active, body form.form[class] p.submit:focus {
+  background: #00aeef;
 }
 body form.form[class] .privacy-policy p,
 body form.form[class] .privacy-policy a {
@@ -82,4 +146,7 @@ body form.form[class] .privacy-policy a {
 }
 body form.form[class] .privacy-policy a {
   text-decoration: underline;
+}
+body form.form[class] .privacy-policy a:hover, body form.form[class] .privacy-policy a:active, body form.form[class] .privacy-policy a:focus {
+  color: #ff7335;
 }/*# sourceMappingURL=Pardot-Form-Global.css.map */

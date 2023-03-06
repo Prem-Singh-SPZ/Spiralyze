@@ -10,9 +10,9 @@ body {
       font-size: 32px;
       line-height: 36px;
       text-align: center;
-      letter-spacing: -0.02em;
+      letter-spacing: -1.7px;
       color: #37465a;
-      margin-bottom: 20px;
+      margin-bottom: 28px;
       margin-top: 0;
     }
 
@@ -22,29 +22,84 @@ body {
 
       .form-field-item {
         width: 50%;
+        position: relative;
+        @media (max-width: 424px) {
+          width: 100%;
+        }
 
+        p.error.no-label {
+          margin: 0;
+          font-weight: 450;
+          font-size: 14px;
+          line-height: 20px;
+          color: #dc251c;
+          margin-top: -12px;
+        }
         .form-field {
+          margin-bottom: 16px;
           padding: 0;
           .field-label {
-            display: none;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #8d8994;
+            top: 18px;
+            left: 16px;
+            z-index: 1;
+            position: absolute;
+            width: max-content;
+            text-transform: capitalize;
+            transition-delay: 200ms;
           }
 
+          &.error {
+            input.text {
+              border-color: #dc251c;
+            }
+          }
           input.text {
             width: 100%;
-            padding: 14px;
+            padding: 20px 20px;
+            font-size: 18px;
+          }
+          select.select {
+            padding: 20px 20px;
+            font-size: 18px;
+
+            &:focus {
+              border: 1px solid #ff7335;
+            }
+          }
+          input.text:focus {
+            border-color: #ff7335;
+          }
+          &.typing label.field-label {
+            top: -11px;
+            left: 11px;
+            background: #fff;
+            padding: 1px 5px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #ff7335;
           }
         }
 
         &:nth-child(even) {
           .form-field {
-            margin-left: 4px;
+            margin-left: 10px;
             margin-right: 0;
+            @media (max-width: 424px) {
+              margin-left: 0px;
+            }
           }
         }
         &:nth-child(odd) {
           .form-field {
-            margin-right: 4px;
+            margin-right: 8px;
             margin-left: 0;
+            @media (max-width: 424px) {
+              margin-right: 0px;
+            }
           }
         }
       }
@@ -54,7 +109,7 @@ body {
       width: 100%;
       height: 60px;
       background: #ff7335;
-      margin: 6px 0;
+      margin: 10px 1px 21px;
       position: relative;
 
       input {
@@ -70,6 +125,8 @@ body {
         height: 100%;
         width: 100%;
         text-transform: none;
+        padding-right: 26px;
+        letter-spacing: 0;
       }
       &::after {
         content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
@@ -78,7 +135,12 @@ body {
         height: 15px;
         position: absolute;
         top: 22px;
-        right: 12%;
+        left: calc(50% + 52px);
+      }
+      &:hover,
+      &:active,
+      &:focus {
+        background: #00aeef;
       }
     }
 
@@ -93,6 +155,11 @@ body {
       }
       a {
         text-decoration: underline;
+        &:hover,
+        &:active,
+        &:focus {
+          color: #ff7335;
+        }
       }
     }
   }
