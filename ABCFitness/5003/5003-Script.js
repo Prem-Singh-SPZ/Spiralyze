@@ -3,7 +3,7 @@
         name: 'spz-ABC-Email-In-Hero',
         class: 'spz-5003', // class will be used in body ex. spz-1001
         date: '27-02-23',
-        base_url: 'https://abcfitness.com/', // control domain url
+        base_url: 'https://abcfitness.com', // control domain url
         main_class: 'body', // parent class where test is going to be applied
     }
 
@@ -75,7 +75,7 @@
     }
 
     // Generic
-    let url = location.href;
+    let url = location.origin;
     urlCheck(url);
 
     function urlCheck(url) {

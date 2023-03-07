@@ -1,13 +1,21 @@
-body {
+body.custom-spz {
   overflow: hidden;
   width: 100%;
   height: 100%;
   margin: 0;
 }
-body form.form[class] {
+body.custom-spz form.form[class] {
   padding: 40px;
 }
-body form.form[class] h6.form-title {
+@media (max-width: 424px) {
+  body.custom-spz form.form[class] {
+    padding: 20px;
+  }
+}
+body.custom-spz form.form[class] > p.errors {
+  display: none;
+}
+body.custom-spz form.form[class] h6.form-title {
   font-weight: 700;
   font-size: 32px;
   line-height: 36px;
@@ -17,38 +25,44 @@ body form.form[class] h6.form-title {
   margin-bottom: 28px;
   margin-top: 0;
 }
-body form.form[class] .form-container {
+@media (max-width: 424px) {
+  body.custom-spz form.form[class] h6.form-title {
+    margin-top: 11px;
+  }
+}
+body.custom-spz form.form[class] .form-container {
   display: flex;
   flex-wrap: wrap;
 }
-body form.form[class] .form-container .form-field-item {
+body.custom-spz form.form[class] .form-container .form-field-item {
   width: 50%;
   position: relative;
 }
 @media (max-width: 424px) {
-  body form.form[class] .form-container .form-field-item {
+  body.custom-spz form.form[class] .form-container .form-field-item {
     width: 100%;
   }
 }
-body form.form[class] .form-container .form-field-item p.error.no-label {
+body.custom-spz form.form[class] .form-container .form-field-item p.error.no-label {
   margin: 0;
   font-weight: 450;
   font-size: 14px;
   line-height: 20px;
   color: #dc251c;
   margin-top: -12px;
+  margin-bottom: 12px;
 }
-body form.form[class] .form-container .form-field-item .form-field {
-  margin-bottom: 16px;
+body.custom-spz form.form[class] .form-container .form-field-item .form-field {
+  margin-bottom: 17px;
   padding: 0;
 }
-body form.form[class] .form-container .form-field-item .form-field .field-label {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field .field-label {
   font-weight: 400;
-  font-size: 18px;
+  font-size: 16px;
   line-height: 26px;
   color: #8d8994;
-  top: 18px;
-  left: 16px;
+  top: 19px;
+  left: 21px;
   z-index: 1;
   position: absolute;
   width: -moz-max-content;
@@ -56,25 +70,28 @@ body form.form[class] .form-container .form-field-item .form-field .field-label 
   text-transform: capitalize;
   transition-delay: 200ms;
 }
-body form.form[class] .form-container .form-field-item .form-field.error input.text {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.error input.text {
   border-color: #dc251c;
 }
-body form.form[class] .form-container .form-field-item .form-field input.text {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.error .field-label {
+  top: 14px;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field input.text {
   width: 100%;
   padding: 20px 20px;
   font-size: 18px;
 }
-body form.form[class] .form-container .form-field-item .form-field select.select {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select {
   padding: 20px 20px;
   font-size: 18px;
 }
-body form.form[class] .form-container .form-field-item .form-field select.select:focus {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select:focus {
   border: 1px solid #ff7335;
 }
-body form.form[class] .form-container .form-field-item .form-field input.text:focus {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field input.text:focus {
   border-color: #ff7335;
 }
-body form.form[class] .form-container .form-field-item .form-field.typing label.field-label {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.typing label.field-label {
   top: -11px;
   left: 11px;
   background: #fff;
@@ -83,32 +100,76 @@ body form.form[class] .form-container .form-field-item .form-field.typing label.
   line-height: 20px;
   color: #ff7335;
 }
-body form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
   margin-left: 10px;
   margin-right: 0;
 }
 @media (max-width: 424px) {
-  body form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
     margin-left: 0px;
   }
 }
-body form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
+@media (min-width: 424px) {
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field .field-label {
+    left: 32px;
+  }
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field.typing label.field-label {
+    left: 22px;
+  }
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field.error .field-label {
+    left: 21px;
+  }
+}
+@media (min-width: 424px) {
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) p.error.no-label {
+    margin-left: 11px;
+  }
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
   margin-right: 8px;
   margin-left: 0;
 }
 @media (max-width: 424px) {
-  body form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(odd) .form-field {
     margin-right: 0px;
   }
 }
-body form.form[class] p.submit {
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(1) {
+  order: 0;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(2) {
+  order: 1;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(3) {
+  order: 4;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(4) {
+  order: 3;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(5) {
+  order: 2;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(6) {
+  order: 5;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(7) {
+  order: 6;
+  width: 100%;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(7) .form-field.state {
+  margin-right: 0;
+}
+body.custom-spz form.form[class] .form-container .form-field-item:nth-child(n+8) {
+  order: 20;
+}
+body.custom-spz form.form[class] p.submit {
   width: 100%;
   height: 60px;
   background: #ff7335;
-  margin: 10px 1px 21px;
+  margin: 8px 1px 21px;
   position: relative;
 }
-body form.form[class] p.submit input {
+body.custom-spz form.form[class] p.submit input {
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
@@ -124,7 +185,10 @@ body form.form[class] p.submit input {
   padding-right: 26px;
   letter-spacing: 0;
 }
-body form.form[class] p.submit::after {
+body.custom-spz form.form[class] p.submit input:hover, body.custom-spz form.form[class] p.submit input:active, body.custom-spz form.form[class] p.submit input:focus {
+  background: #00aeef;
+}
+body.custom-spz form.form[class] p.submit::after {
   content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
   display: block;
   width: 30px;
@@ -133,20 +197,17 @@ body form.form[class] p.submit::after {
   top: 22px;
   left: calc(50% + 52px);
 }
-body form.form[class] p.submit:hover, body form.form[class] p.submit:active, body form.form[class] p.submit:focus {
-  background: #00aeef;
-}
-body form.form[class] .privacy-policy p,
-body form.form[class] .privacy-policy a {
+body.custom-spz form.form[class] .privacy-policy p,
+body.custom-spz form.form[class] .privacy-policy a {
   text-align: center;
   color: #888888;
   font-weight: 400;
   font-size: 13px;
   line-height: 20px;
 }
-body form.form[class] .privacy-policy a {
+body.custom-spz form.form[class] .privacy-policy a {
   text-decoration: underline;
 }
-body form.form[class] .privacy-policy a:hover, body form.form[class] .privacy-policy a:active, body form.form[class] .privacy-policy a:focus {
+body.custom-spz form.form[class] .privacy-policy a:hover, body.custom-spz form.form[class] .privacy-policy a:active, body.custom-spz form.form[class] .privacy-policy a:focus {
   color: #ff7335;
-}/*# sourceMappingURL=Pardot-Form-Global.css.map */
+}

@@ -1,3 +1,2 @@
-window.addEventListener('resize', function (event) {
-    console.log('counter');
-}, true);
+let returnValue = true;
+export { returnValue };
