@@ -1,0 +1,198 @@
+.pardot-form-spz .spz-form {
+  padding: 30px;
+  width: 540px;
+  height: auto;
+  background: #ffffff;
+  box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+}
+@media (max-width: 767.98px) {
+  .pardot-form-spz .spz-form {
+    width: 100%;
+    max-width: 335px;
+  }
+}
+.pardot-form-spz .spz-form h6.form-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 36px;
+  text-align: center;
+  letter-spacing: -0.02em;
+  color: #37465a;
+  margin: 10px 0 0;
+  text-transform: inherit;
+}
+.pardot-form-spz .spz-form .form-container {
+  display: flex;
+  flex-wrap: wrap;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item {
+  width: 50%;
+}
+@media (max-width: 767.98px) {
+  .pardot-form-spz .spz-form .form-container .form-field-item {
+    width: 100%;
+  }
+}
+.pardot-form-spz .spz-form .form-container .form-field-item.hidden {
+  display: none !important;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field {
+  margin: 10px;
+  position: relative;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field.hidden {
+  display: none !important;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field label {
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #a5a5a5;
+  padding: 18px 20px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.2s ease all;
+  -moz-transition: 0.2s ease all;
+  -webkit-transition: 0.2s ease all;
+  pointer-events: none;
+  width: -moz-max-content;
+  width: max-content;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .text,
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .select {
+  height: 62px;
+  width: 100%;
+  background: #ffffff;
+  border: 1px solid #a5a5a5;
+  outline-color: transparent;
+  padding: 18px 20px;
+  color: #110f14;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .text option,
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .select option {
+  color: #110f14;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .text:focus,
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .select:focus {
+  border: 1px solid #ff7335;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .text:focus + label,
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .select:focus + label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #ff7335;
+  top: -11px;
+  left: 11px;
+  background: #fff;
+  padding: 1px 5px;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field.typing label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  color: #8d8994;
+  top: -11px;
+  left: 11px;
+  background: #fff;
+  padding: 1px 5px;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field .error-field {
+  font-weight: 450;
+  font-size: 14px;
+  line-height: 20px;
+  color: #dc251c;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field.has-error .text,
+.pardot-form-spz .spz-form .form-container .form-field-item .form-field.has-error .select {
+  border: 1px solid #dc251c;
+}
+.pardot-form-spz .spz-form .form-container .form-field-item .dependentField {
+  display: none;
+}
+.pardot-form-spz .spz-form .submit {
+  margin: 10px;
+}
+.pardot-form-spz .spz-form .submit .submit-btn {
+  position: relative;
+}
+.pardot-form-spz .spz-form .submit .submit-btn input {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 16px 32px;
+  width: 100%;
+  height: 60px;
+  background: #ff7335;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #ffffff;
+  border: 0;
+  outline-color: transparent;
+  cursor: pointer;
+}
+.pardot-form-spz .spz-form .submit .submit-btn input:hover {
+  background: #00aeef;
+}
+.pardot-form-spz .spz-form .submit .submit-btn::after {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+  display: block;
+  width: 30px;
+  height: 15px;
+  position: absolute;
+  top: 16px;
+  left: calc(50% + 62px);
+}
+.pardot-form-spz .spz-form .privacy-policy {
+  margin: 10px;
+}
+.pardot-form-spz .spz-form .privacy-policy p {
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 20px;
+  text-align: center;
+  color: #888888;
+}
+.pardot-form-spz .spz-form .privacy-policy p a {
+  text-decoration-line: underline;
+  color: #888888;
+}
+.pardot-form-spz .spz-form .privacy-policy p a:hover {
+  color: #ff7335;
+}
+
+.internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] {
+  max-width: 1220px;
+}
+@media (max-width: 767px) {
+  .internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] > .c-hero__info-wrapper > .c-hero__repeater {
+    justify-content: center;
+  }
+}
+@media (min-width: 767px) and (max-width: 1250px) {
+  .internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] > .c-hero__info-wrapper > .c-hero__repeater > .c-hero__column {
+    width: 100%;
+    align-items: center;
+  }
+}
+.internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] > .c-hero__info-wrapper > .c-hero__repeater > .c-hero__column:last-child {
+  padding-right: 4px;
+  padding-left: 48px;
+}
+@media (max-width: 767px) {
+  .internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] > .c-hero__info-wrapper > .c-hero__repeater > .c-hero__column:last-child {
+    padding: 0;
+    border: 0;
+    margin-left: -14px;
+  }
+}
+.internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] > .c-hero__info-wrapper > .c-hero__repeater > .c-hero__column:last-child > .c-hero__column-content,
+.internal-form-testing[class] main.l-body-wrapper[class] .l-container[class] > .c-hero__info-wrapper > .c-hero__repeater > .c-hero__column:last-child .c-hero__column-title {
+  display: none !important;
+}/*# sourceMappingURL=Form.css.map */
