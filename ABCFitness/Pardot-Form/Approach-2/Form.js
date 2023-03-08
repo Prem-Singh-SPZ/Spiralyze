@@ -1,7 +1,7 @@
 
 waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child .c-hero__column-content iframe").then(function () {
     document.body.classList.add('custom-spz-form');
-    document.querySelector("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child").insertAdjacentHTML('afterbegin',`<div class="pardot-form-spz">
+    document.querySelector("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child").insertAdjacentHTML('afterbegin', `<div class="pardot-form-spz">
     <form accept-charset="UTF-8" method="post" action="http://go.abcfitness.com/l/570002/2023-03-07/v2m6rc"
         class="spz-form" id="pardot-form">
         <h6 class="form-title">Get a Demo</h6>
@@ -446,7 +446,153 @@ waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .
                     href="/privacy-policy" target="_top">Privacy Policy.</a></p>
         </div>
     </form>
-</div>`)
+</div>`);
+
+    waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child .pardot-form-spz").then(function () {
+        formAnimation();
+
+        document.querySelector('#pardot-form .submit .submit-btn input').addEventListener('click', function (e) {
+            console.log('button clicked');
+            document.querySelectorAll(".form-container .form-field-item:not(.hidden)").forEach(function (v, i) {
+                if (v.querySelectorAll('select.select').length > 0) {
+                    dropdownValidation(v);
+                }
+                else {
+                    inputValidation(v);
+                }
+            })
+            if (document.querySelectorAll('#pardot-form .form-container .has-error').length > 0) {
+                e.preventDefault();
+            }
+            else {
+            }
+        });
+
+        function formAnimation() {
+            document
+                .querySelectorAll(".form-container .form-field-item")
+                .forEach(function (v, i) {
+                    if (
+                        v.querySelectorAll("input").length > 0 &&
+                        v.querySelectorAll(".field-label").length > 0
+                    ) {
+                        v.querySelector("input").addEventListener('focus', () => {
+                            v.querySelector(".form-field").classList.add('typing');
+                        });
+                        v.querySelector("input").addEventListener('blur', () => {
+                            inputLabelAnimation(v);
+                            inputValidation(v);
+                        });
+                        v.querySelector("input").addEventListener('change', () => {
+                            inputLabelAnimation(v);
+                            inputValidation(v);
+                        });
+                        inputLabelAnimation(v);
+                    } else if (
+                        v.querySelectorAll("select").length > 0 &&
+                        v.querySelectorAll(".field-label").length > 0
+                    ) {
+                        v.querySelector("select").addEventListener('focus', () => {
+                            v.querySelector(".form-field").classList.add('typing');
+                        });
+                        v.querySelector("select").addEventListener('blur', () => {
+                            dropdownLabelAnimation(v);
+                            dropdownValidation(v);
+                        });
+                        v.querySelector("select").addEventListener('change', () => {
+                            dropdownLabelAnimation(v);
+                            dropdownValidation(v);
+                        });
+                        dropdownLabelAnimation(v);
+                    }
+                });
+        }
+        function inputValidation(v) {
+            if (v.querySelector("input").value) {
+                v.querySelector(".form-field .error-field").style.display = 'none';
+                if (v.querySelector(".form-field").classList.contains('has-error')) {
+                    v.querySelector(".form-field").classList.remove('has-error')
+                }
+            }
+            else {
+                v.querySelector(".form-field .error-field").style.display = 'block';
+                v.querySelector(".form-field").classList.add('has-error');
+                v.querySelector(".form-field").classList.add('valid');
+            }
+        }
+        function dropdownValidation(v) {
+            if (v.querySelector('.country')) {
+                if (v.querySelector(".country select.select").value != '1214035') {
+                    v.querySelector(".form-field .error-field").style.display = 'none';
+                    if (v.querySelector(".form-field").classList.contains('has-error')) {
+                        v.querySelector(".form-field").classList.remove('has-error')
+                    }
+                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
+                        if (document.querySelector('.dependentFieldSlave').classList.contains('dependentField')) {
+                            document.querySelector('.dependentFieldSlave').classList.remove('dependentField');
+                        }
+                    }
+                    else {
+                        document.querySelector('.dependentFieldSlave').classList.add('dependentField');
+                    }
+
+                    v.querySelector(".form-field").classList.add('valid');
+                } else {
+                    v.querySelector(".form-field .error-field").style.display = 'block';
+                    v.querySelector(".form-field").classList.add('has-error');
+                    document.querySelector('.dependentFieldSlave').classList.add('dependentField');
+                }
+            }
+            if (v.querySelector('.state')) {
+                if (document.querySelector(".country select.select").value == '1214038' || document.querySelector(".country select.select").value == '1214041') {
+                    if (v.querySelector(".state select.select").value != '1214764') {
+                        v.querySelector(".form-field .error-field").style.display = 'none';
+                        if (v.querySelector(".form-field").classList.contains('has-error')) {
+                            v.querySelector(".form-field").classList.remove('has-error')
+                        }
+                        v.querySelector(".form-field").classList.add('valid');
+                    } else {
+                        v.querySelector(".form-field .error-field").style.display = 'block';
+                        v.querySelector(".form-field").classList.add('has-error');
+                    }
+                }
+                else {
+                    if (v.querySelector(".form-field").classList.contains('has-error')) {
+                        v.querySelector(".form-field").classList.remove('has-error')
+                    }
+                }
+            }
+        }
+        function inputLabelAnimation(v) {
+            if (v.querySelector("input").value) {
+                v.querySelector(".form-field").classList.add('typing');
+            } else {
+                if (v.querySelector(".form-field").classList.contains('typing')) {
+                    v.querySelector(".form-field").classList.remove('typing');
+                }
+            }
+        }
+        function dropdownLabelAnimation(v) {
+            if (v.querySelector('.country')) {
+                if (v.querySelector(".country select.select").value != '1214035') {
+                    v.querySelector(".form-field").classList.add('typing');
+                } else {
+                    if (v.querySelector(".form-field").classList.contains('typing')) {
+                        v.querySelector(".form-field").classList.remove('typing');
+                    }
+                }
+            }
+            if (v.querySelector('.state')) {
+                if (v.querySelector(".state select.select").value != '1214764') {
+                    v.querySelector(".form-field").classList.add('typing');
+                } else {
+                    if (v.querySelector(".form-field").classList.contains('typing')) {
+                        v.querySelector(".form-field").classList.remove('typing');
+                    }
+                }
+            }
+        }
+    });
 });
 
 //Generic Code
