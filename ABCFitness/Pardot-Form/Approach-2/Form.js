@@ -2,8 +2,8 @@
 waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child .c-hero__column-content iframe").then(function () {
     document.body.classList.add('custom-spz-form');
     document.querySelector("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child").insertAdjacentHTML('afterbegin', `<div class="pardot-form-spz">
-    <form accept-charset="UTF-8" method="post" action="http://go.abcfitness.com/l/570002/2023-03-07/v2m6rc"
-        class="spz-form" id="pardot-form">
+    <form accept-charset="UTF-8" method="POST" action="https://go.abcfitness.com/l/570002/2023-03-07/v2m6rc"
+        class="spz-form" id="pardot-form-spz" >
         <h6 class="form-title">Get a Demo</h6>
         <div class="form-container">
             <div class="form-field-item">
@@ -438,7 +438,7 @@ waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .
 
         <div class="submit">
             <div class="submit-btn">
-                <input type="submit" accesskey="s" value="Get a Demo">
+                <button type="button" accesskey="s">Get a Demo</button
             </div>
         </div>
         <div class="privacy-policy">
@@ -451,8 +451,10 @@ waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .
     waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .c-hero__column:last-child .pardot-form-spz").then(function () {
         formAnimation();
 
-        document.querySelector('#pardot-form .submit .submit-btn input').addEventListener('click', function (e) {
-            console.log('button clicked');
+        document.querySelector('#pardot-form-spz .submit .submit-btn button').addEventListener('click', function (e) {
+            // console.log('button clicked');
+            e.preventDefault();
+
             document.querySelectorAll(".form-container .form-field-item:not(.hidden)").forEach(function (v, i) {
                 if (v.querySelectorAll('select.select').length > 0) {
                     dropdownValidation(v);
@@ -461,10 +463,15 @@ waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .
                     inputValidation(v);
                 }
             })
-            if (document.querySelectorAll('#pardot-form .form-container .has-error').length > 0) {
+            if (document.querySelectorAll('#pardot-form-spz .form-container .has-error').length > 0) {
                 e.preventDefault();
             }
             else {
+                document.querySelector('form#pardot-form-spz').submit();
+                setTimeout(() => {
+                    window.location = 'https://abcfitness.com/resources/webinars-and-videos/sales-strategies-to-boost-gym-revenue-thank-you/';
+                }, 100);
+                // console.log('button clicked again');
             }
         });
 
@@ -518,6 +525,22 @@ waitForElm("main.l-body-wrapper .c-hero__content.l-container .c-hero__repeater .
                 v.querySelector(".form-field .error-field").style.display = 'block';
                 v.querySelector(".form-field").classList.add('has-error');
                 v.querySelector(".form-field").classList.add('valid');
+            }
+
+            if (v.querySelectorAll('.email').length > 0) {
+                let uEmail = v.querySelector(".email input").value;
+                const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+                if (re.test(String(uEmail).toLowerCase())) {
+                    v.querySelector(".form-field .error-field").style.display = 'none';
+                    if (v.querySelector(".form-field").classList.contains('has-error')) {
+                        v.querySelector(".form-field").classList.remove('has-error')
+                    }
+                }
+                else {
+                    v.querySelector(".form-field .error-field").style.display = 'block';
+                    v.querySelector(".form-field").classList.add('has-error');
+                    v.querySelector(".form-field").classList.add('valid');
+                }
             }
         }
         function dropdownValidation(v) {
