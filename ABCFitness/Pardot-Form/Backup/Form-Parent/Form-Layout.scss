@@ -1,0 +1,48 @@
+.internal-form-testing[class] {
+  main.l-body-wrapper[class] {
+    .l-container[class] {
+      max-width: 1220px;
+      > .c-hero__info-wrapper {
+        > .c-hero__repeater {
+          @media (max-width: 767px) {
+            justify-content: center;
+          }
+          > .c-hero__column {
+            @media (min-width: 767px) and (max-width: 1250px) {
+              width: 100%;
+              align-items: center;
+            }
+          }
+          > .c-hero__column:last-child {
+            padding-right: 4px;
+            padding-left: 48px;
+            @media (max-width: 767px) {
+              padding: 0;
+              // margin: auto;
+              border: 0;
+              margin-left: -14px;
+            }
+            > .c-hero__column-content {
+              > p {
+                width: 540px;
+                height: 622px;
+                margin: 0;
+                @media (max-width: 767px) {
+                  min-height: 896px;
+                  width: auto;
+                  @media (min-width: 374px) {
+                    min-width: 335px;
+                  }
+                }
+                iframe {
+                  height: 100%;
+                  border-radius: 12px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,5 +1,3 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
 function getCookie(name) {
     var dc = document.cookie;
     var prefix = name + "=";
@@ -163,5 +161,3 @@ if (getCookie('COOKIE_NAME') && location.href == 'https://go.abcfitness.com/l/57
         });
     }
 }
-/******/ })()
-;

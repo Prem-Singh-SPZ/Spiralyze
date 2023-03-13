@@ -1,30 +1,32 @@
-/******/ (function() { // webpackBootstrap
-var __webpack_exports__ = {};
-function getCookie(name) {
-    var dc = document.cookie;
-    var prefix = name + "=";
-    var begin = dc.indexOf("; " + prefix);
-    if (begin == -1) {
-        begin = dc.indexOf(prefix);
-        if (begin != 0) return null;
-    }
-    else {
-        begin += 2;
-        var end = document.cookie.indexOf(";", begin);
-        if (end == -1) {
-            end = dc.length;
-        }
-    }
-    // because unescape has been deprecated, replaced with decodeURI
-    //return unescape(dc.substring(begin + prefix.length, end));
-    return decodeURI(dc.substring(begin + prefix.length, end));
-}
 
-getCookie('COOKIE_NAME');
-console.log(getCookie('COOKIE_NAME'));
+// const getVariantFile = document.createElement('script');
+// getVariantFile.src = 'https://res.cloudinary.com/spiralyze/raw/upload/v1678686664/ABCFitnessSolutions/Pardot-Form-Global/Form%20Layout/Form-Layout.js';
+// document.head.appendChild(getVariantFile);
 
-if (getCookie('COOKIE_NAME') && location.href == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc') {
-    console.log('inside main function');
+
+const seamlessFS = document.createElement('script');
+seamlessFS.src = 'https://res.cloudinary.com/spiralyze/raw/upload/v1678688502/ABCFitnessSolutions/Pardot-Form-Global/lib/seamless.child.min.js';
+document.head.appendChild(seamlessFS);
+
+seamlessFS.onload = function () {
+    var PERMITTED_DOMAIN = "https://go.abcfitness.com/";
+
+    // Connect to the parent page.
+    var toParent = window.seamless.connect();
+
+    // Enable cookie for Safari
+    window.seamless.options.requireCookies = true;
+
+
+    // Receive a message
+    toParent.receive(function (data, event) {
+
+        console.log(data);
+        return {
+            myresponse: "Loaded"
+        };
+    });
+
 
     waitForElm("p.submit").then(function () {
         if (document.querySelector('form#pardot-form').getAttribute('action') == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc') {
@@ -163,5 +165,3 @@ if (getCookie('COOKIE_NAME') && location.href == 'https://go.abcfitness.com/l/57
         });
     }
 }
-/******/ })()
-;

@@ -1,0 +1,230 @@
+body.custom-spz {
+  overflow: hidden;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  form.form[class] {
+    padding: 40px;
+    @media (max-width: 424px) {
+      padding: 20px;
+    }
+
+    > p.errors {
+      display: none;
+    }
+    h6.form-title {
+      font-weight: 700;
+      font-size: 32px;
+      line-height: 36px;
+      text-align: center;
+      letter-spacing: -1.7px;
+      color: #37465a;
+      margin-bottom: 28px;
+      margin-top: 0;
+      @media (max-width: 424px) {
+        margin-top: 11px;
+      }
+    }
+
+    .form-container {
+      display: flex;
+      flex-wrap: wrap;
+
+      .form-field-item {
+        width: 50%;
+        position: relative;
+        @media (max-width: 424px) {
+          width: 100%;
+        }
+
+        p.error.no-label {
+          margin: 0;
+          font-weight: 450;
+          font-size: 14px;
+          line-height: 20px;
+          color: #dc251c;
+          margin-top: -12px;
+          margin-bottom: 12px;
+        }
+        .form-field {
+          margin-bottom: 17px;
+          padding: 0;
+          .field-label {
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 26px;
+            color: #8d8994;
+            top: 19px;
+            left: 21px;
+            z-index: 1;
+            position: absolute;
+            width: max-content;
+            text-transform: capitalize;
+            transition-delay: 200ms;
+          }
+
+          &.error {
+            input.text {
+              border-color: #dc251c;
+            }
+            .field-label {
+              top: 14px;
+            }
+          }
+          input.text {
+            width: 100%;
+            padding: 20px 20px;
+            font-size: 18px;
+          }
+          select.select {
+            padding: 20px 20px;
+            font-size: 18px;
+            height: 62px;
+            background-color: #fff;
+            -webkit-appearance: none;
+
+            &:focus {
+              border: 1px solid #ff7335;
+            }
+          }
+          input.text:focus {
+            border-color: #ff7335;
+          }
+          &.typing label.field-label {
+            top: -11px;
+            left: 11px;
+            background: #fff;
+            padding: 1px 5px;
+            font-size: 14px;
+            line-height: 20px;
+            color: #ff7335;
+          }
+        }
+
+        &:nth-child(even) {
+          .form-field {
+            margin-left: 10px;
+            margin-right: 0;
+            @media (max-width: 424px) {
+              margin-left: 0px;
+            }
+            @media (min-width: 424px) {
+              .field-label {
+                left: 32px;
+              }
+              &.typing label.field-label {
+                left: 22px;
+              }
+              &.error {
+                .field-label {
+                  left: 21px;
+                }
+              }
+            }
+          }
+          p.error.no-label {
+            @media (min-width: 424px) {
+              margin-left: 11px;
+            }
+          }
+        }
+        &:nth-child(odd) {
+          .form-field {
+            margin-right: 8px;
+            margin-left: 0;
+            @media (max-width: 424px) {
+              margin-right: 0px;
+            }
+          }
+        }
+
+        &:nth-child(1) {
+          order: 0;
+        }
+        &:nth-child(2) {
+          order: 1;
+        }
+        &:nth-child(3) {
+          order: 4;
+        }
+        &:nth-child(4) {
+          order: 3;
+        }
+        &:nth-child(5) {
+          order: 2;
+        }
+        &:nth-child(6) {
+          order: 5;
+        }
+        &:nth-child(7) {
+          order: 6;
+          width: 100%;
+          .form-field.state{
+            margin-right: 0;
+          }
+        }
+        &:nth-child(n + 8) {
+          order: 20;
+        }
+      }
+    }
+
+    p.submit {
+      width: 100%;
+      height: 60px;
+      background: #ff7335;
+      margin: 8px 1px 21px;
+      position: relative;
+
+      input {
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 28px;
+        color: #ffffff;
+        display: flex;
+        margin: 0;
+        padding: 0;
+        align-items: center;
+        justify-content: center;
+        height: 100%;
+        width: 100%;
+        text-transform: none;
+        padding-right: 26px;
+        letter-spacing: 0;
+        &:hover,
+        &:active,
+        &:focus {
+          background: #00aeef;
+        }
+      }
+      &::after {
+        content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+        display: block;
+        width: 30px;
+        height: 15px;
+        position: absolute;
+        top: 22px;
+        left: calc(50% + 52px);
+      }
+    }
+
+    .privacy-policy {
+      p,
+      a {
+        text-align: center;
+        color: #888888;
+        font-weight: 400;
+        font-size: 13px;
+        line-height: 20px;
+      }
+      a {
+        text-decoration: underline;
+        &:hover,
+        &:active,
+        &:focus {
+          color: #ff7335;
+        }
+      }
+    }
+  }
+}
