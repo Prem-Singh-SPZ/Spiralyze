@@ -95,14 +95,6 @@
         }
     }
 
-    function moveElement(sourceElm, targetLoc) {
-        const f = document.createDocumentFragment();
-        if (document.querySelector(sourceElm) != null) {
-            f.appendChild(document.querySelector(sourceElm));
-            document.querySelector(targetLoc).appendChild(f);
-        }
-    }
-
     // Add class 'safari' (used for cart scrollbar)
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
         document.body.classList.add('safari')

@@ -1,0 +1,81 @@
+body.spz-7003a[class] {
+  main.l-body-wrapper {
+    section.c-hero {
+      .c-hero__content.l-container {
+        padding-top: 82px;
+        .c-hero__info-wrapper {
+          .__title-wrapper.c-hero__title-wrapper {
+            display: none !important;
+          }
+
+          .c-hero__repeater {
+            flex-direction: row-reverse;
+            @media (max-width: 1200px) {
+              flex-direction: column-reverse;
+            }
+
+            .c-hero__column {
+              border: none;
+              @media (max-width: 1200px) {
+                width: 100%;
+                padding-right: 60px;
+              }
+              &:first-child {
+                padding-bottom: 0;
+                padding-left: 50px;
+                padding-right: 6px;
+                .spz-subtitle {
+                  text-transform: none;
+                  font-weight: normal;
+                  display: flex;
+                  flex-wrap: wrap;
+                  padding-bottom: 16px;
+                  letter-spacing: -0.02em;
+                  line-height: 134%;
+                  strong {
+                    letter-spacing: 0;
+                  }
+                }
+
+                h3.c-hero__column-title {
+                  font-weight: 700;
+                  font-size: 32px;
+                  line-height: 120%;
+                  letter-spacing: -0.015em;
+                }
+
+                .c-hero__column-content {
+                  p {
+                    font-size: 20px;
+                    line-height: 134%;
+                    letter-spacing: -0.045em;
+                  }
+                }
+              }
+
+              &:last-child {
+                padding: 0;
+                padding-bottom: 30px;
+
+                .c-hero__column-content {
+                  p {
+                    display: none !important;
+                  }
+
+                  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1678798093/ABCFitnessSolutions/7003a/assets/Form-Desktop.svg");
+                  height: 540px;
+                  background-repeat: no-repeat;
+                  background-position: top;
+                  background-size: contain;
+                  @media (max-width: 768px) {
+                    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1678798093/ABCFitnessSolutions/7003a/assets/Form-Mobile.svg");
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
