@@ -32,12 +32,6 @@
     };
 
     function loadTest() {
-        var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
-        var cookieValue = "1";
-        var myDate = new Date();
-        myDate.setDate(myDate.getDate() + 30);
-        document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
-
         // Set test class
         document.body.classList.add(TEST_ENV.class);
         waitForElm('#landing-page > main section.section .widget').then(function () {

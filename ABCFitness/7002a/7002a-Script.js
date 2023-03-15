@@ -1,7 +1,7 @@
 (function () {
     const TEST_ENV = {
-        name: 'spz-ABC-Webinars-Progressive Form',
-        class: 'spz-7003a', // class will be used in body ex. spz-1001
+        name: 'spz-ABC-Webinars-Form-In-Left',
+        class: 'spz-7002a', // class will be used in body ex. spz-1001
         date: '14-03-23',
         base_url: 'https://abcfitness.com/resources/webinars-and-videos/state-of-the-industry-whats-next-in-fitness/', // control domain url
         main_class: 'body', // parent class where test is going to be applied
