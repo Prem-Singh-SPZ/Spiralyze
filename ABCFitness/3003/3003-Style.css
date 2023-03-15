@@ -50,7 +50,7 @@ body.spz-3003[class] main::before {
 }
 @media (min-width: 1199.98px) {
   body.spz-3003[class] main .section.section-relative:first-child .section-block .section-inner[class] {
-    max-width: 1180px;
+    max-width: 1200px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -96,8 +96,7 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) {
 }
 @media (min-width: 1199.98px) {
   body.spz-3003[class] main .section.section-relative:nth-child(2) {
-    min-height: 1680px;
-    height: 1680px !important;
+    min-height: 1668px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -108,7 +107,7 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) {
 }
 @media (min-width: 1199.98px) {
   body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] {
-    max-width: 1180px;
+    max-width: 1200px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -129,7 +128,7 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-bloc
   }
 }
 body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
-  padding-top: 97px;
+  padding-top: 58px;
 }
 @media (max-width: 767.98px) {
   body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
@@ -187,7 +186,7 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-bloc
 }
 @media (min-width: 1199.98px) {
   body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul {
-    padding-right: 20px;
+    padding-right: 40px;
   }
 }
 body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary > ul li {
@@ -278,7 +277,6 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-bloc
   }
 }
 body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-accordion-section[class] {
-  padding: 20px;
   padding-top: 124px;
   position: relative;
   z-index: 2;
@@ -332,7 +330,7 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-bloc
   width: 14px;
   height: 9px;
   right: 0;
-  top: 28px;
+  top: 32px;
 }
 body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-accordion-section[class] .accordion-content .accordion-left-section .accordion .accordion-item.active::before {
   content: "";
@@ -353,8 +351,18 @@ body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-bloc
   text-decoration: none;
 }
 body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-accordion-section[class] .accordion-content .accordion-left-section .accordion .accordion-item .accordion-header.active .accordion-button {
-  border-top: 1px solid #00aeef;
-  padding-top: 28px;
+  position: relative;
+}
+body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-accordion-section[class] .accordion-content .accordion-left-section .accordion .accordion-item .accordion-header.active .accordion-button::before {
+  content: "";
+  width: 240px;
+  height: 1px;
+  background-color: #00aeef;
+  top: -28px;
+  left: 0;
+  right: 0;
+  display: block;
+  position: absolute;
 }
 body.spz-3003[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-accordion-section[class] .accordion-content .accordion-left-section .accordion .accordion-item .accordion-collapse .accordion-body {
   font-weight: 400;

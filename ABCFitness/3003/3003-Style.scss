@@ -52,7 +52,7 @@ body.spz-3003[class] {
       .section-block {
         .section-inner[class] {
           @media (min-width: 1199.98px) {
-            max-width: 1180px;
+            max-width: 1200px;
           }
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 628px;
@@ -95,8 +95,8 @@ body.spz-3003[class] {
     .section.section-relative:nth-child(2) {
       min-height: 3034px;
       @media (min-width: 1199.98px) {
-        min-height: 1680px;
-        height: 1680px !important;
+        min-height: 1668px;
+        // height: 1680px !important;
       }
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
         height: 2800px;
@@ -105,7 +105,7 @@ body.spz-3003[class] {
       > .section-block[class] {
         .section-inner.section-fit.section-relative[class] {
           @media (min-width: 1199.98px) {
-            max-width: 1180px;
+            max-width: 1200px;
           }
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 628px;
@@ -126,7 +126,7 @@ body.spz-3003[class] {
                 @media (max-width: 767.98px) {
                   padding: 20px;
                 }
-                padding-top: 97px;
+                padding-top: 58px;
                 @media (max-width: 1199.98px) {
                   padding-top: 82px;
                 }
@@ -170,7 +170,7 @@ body.spz-3003[class] {
                   padding-left: 32px;
                   padding-right: 2px;
                   @media (min-width: 1199.98px) {
-                    padding-right: 20px;
+                    padding-right: 40px;
                   }
                   li {
                     font-weight: 400;
@@ -258,7 +258,7 @@ body.spz-3003[class] {
           }
 
           .spz-accordion-section[class] {
-            padding: 20px;
+            // padding: 20px;
             padding-top: 124px;
             position: relative;
             z-index: 2;
@@ -310,7 +310,7 @@ body.spz-3003[class] {
                       width: 14px;
                       height: 9px;
                       right: 0;
-                      top: 28px;
+                      top: 32px;
                     }
                     &.active {
                       &::before {
@@ -335,8 +335,20 @@ body.spz-3003[class] {
 
                       &.active {
                         .accordion-button {
-                          border-top: 1px solid #00aeef;
-                          padding-top: 28px;
+                          position: relative;
+                          &::before{
+                            content: '';
+                            width: 240px;
+                            height: 1px;
+                            background-color: #00aeef;
+                            top: -28px;
+                            left: 0;
+                            right: 0;
+                            display: block;
+                            position: absolute;
+                          }
+                          // border-top: 1px solid #00aeef;
+                          // padding-top: 28px;
                         }
                       }
                     }

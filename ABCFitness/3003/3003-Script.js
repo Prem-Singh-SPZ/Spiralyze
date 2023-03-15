@@ -157,7 +157,6 @@
                     accHD[i].parentNode.classList.remove('active');
                 }
             }
-            console.log('yha tak aa gya mai')
             // if (itemClass == 'accordion-collapse collapse') {
             this.parentNode.querySelector('.accordion-collapse').className = 'accordion-collapse collapse show';
             this.classList.add('active');
