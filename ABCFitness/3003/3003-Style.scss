@@ -55,7 +55,7 @@ body.spz-3003[class] {
             max-width: 1200px;
           }
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            max-width: 628px;
+            max-width: 664px;
           }
           .hidden-mobile,
           #element-508 {
@@ -72,7 +72,7 @@ body.spz-3003[class] {
             @media (max-width: 767.98px) {
               bottom: auto;
               left: 20px !important;
-              top: 30px !important;
+              top: 36px !important;
             }
             .contents {
               .url-link {
@@ -80,6 +80,10 @@ body.spz-3003[class] {
                 .image {
                   width: 137.5px;
                   height: 60px;
+                  @media (max-width: 767.98px) {
+                    width: 82px;
+                    height: 36px;
+                  }
                 }
                 @media (max-width: 1199.98px) {
                   width: 100%;
@@ -92,15 +96,21 @@ body.spz-3003[class] {
       }
     }
 
+    #page-block-kqwi5daqrim {
+      @media (max-width: 767.98px) {
+        height: 5.5rem;
+      }
+    }
+
     .section.section-relative:nth-child(2) {
-      min-height: 3034px;
+      min-height: 2942px;
       @media (min-width: 1199.98px) {
         min-height: 1668px;
         // height: 1680px !important;
       }
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
-        height: 2800px;
-        min-height: 2800px;
+        height: 2752px;
+        min-height: 2752px;
       }
       > .section-block[class] {
         .section-inner.section-fit.section-relative[class] {
@@ -108,7 +118,7 @@ body.spz-3003[class] {
             max-width: 1200px;
           }
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            max-width: 628px;
+            max-width: 664px;
           }
           .widget[class] {
             display: none;
@@ -118,8 +128,12 @@ body.spz-3003[class] {
             .hero-top-content[class] {
               display: flex;
               @media (max-width: 1199.98px) {
-                flex-wrap: wrap;
+                flex-wrap: wrap-reverse;
                 justify-content: center;
+                padding-top: 46px;
+              }
+              @media (max-width: 767.98px) {
+                padding-top: 0px;
               }
 
               .hero-left-summary {
@@ -128,7 +142,8 @@ body.spz-3003[class] {
                 }
                 padding-top: 58px;
                 @media (max-width: 1199.98px) {
-                  padding-top: 82px;
+                  padding-top: 0;
+                  margin-top: -10px;
                 }
                 @media (max-width: 767.98px) {
                   padding-top: 6px;
@@ -159,7 +174,7 @@ body.spz-3003[class] {
                     margin-bottom: 42px;
                   }
                   @media (max-width: 767.98px) {
-                    font-size: 28px;
+                    font-size: 36px;
                     line-height: 130%;
                     margin-bottom: 18px;
                   }
@@ -168,7 +183,7 @@ body.spz-3003[class] {
                 > ul {
                   list-style: none;
                   padding-left: 32px;
-                  padding-right: 2px;
+                  padding-right: 1px;
                   @media (min-width: 1199.98px) {
                     padding-right: 40px;
                   }
@@ -182,8 +197,8 @@ body.spz-3003[class] {
                     position: relative;
 
                     @media (max-width: 767.98px) {
-                      font-size: 16px;
-                      margin-bottom: 20px;
+                      // font-size: 16px;
+                      // margin-bottom: 20px;
                     }
                     span {
                       font-weight: 700;
@@ -226,11 +241,11 @@ body.spz-3003[class] {
             .hero-bottom-content[class] {
               margin-top: 20px;
               @media (max-width: 1199.98px) {
-                margin-top: 0px;
+                margin-top: 54px;
               }
               @media (max-width: 767.98px) {
-                padding: 0 20px 20px;
-                margin-top: -12px;
+                padding: 0;
+                margin-top: 40px;
               }
               > p {
                 font-weight: 600;
@@ -241,7 +256,8 @@ body.spz-3003[class] {
                 z-index: 2;
                 position: relative;
                 @media (max-width: 767.98px) {
-                  font-size: 18px;
+                  // font-size: 18px;
+                  padding: 0 20px;
                 }
               }
               picture {
@@ -262,6 +278,12 @@ body.spz-3003[class] {
             padding-top: 124px;
             position: relative;
             z-index: 2;
+            @media (max-width: 1199.98px) {
+              padding-top: 84px;
+            }
+            @media (max-width: 767.98px) {
+              padding-top: 50px;
+            }
             .accordion-title {
               h6 {
                 font-weight: 800;
@@ -269,6 +291,10 @@ body.spz-3003[class] {
                 line-height: 120%;
                 text-align: center;
                 color: #37465a;
+                @media (max-width: 767.98px) {
+                  font-size: 36px;
+                  padding: 0 20px;
+                }
               }
             }
 
@@ -276,6 +302,10 @@ body.spz-3003[class] {
               display: flex;
               @media (max-width: 1199.98px) {
                 flex-wrap: wrap;
+                padding-top: 20px;
+              }
+              @media (max-width: 767.98px) {
+               padding: 10px 20px 20px;
               }
               align-items: self-start;
               justify-content: flex-start;
@@ -285,7 +315,7 @@ body.spz-3003[class] {
                 padding-top: 24px;
                 max-width: 550px;
                 @media (max-width: 1199.98px) {
-                  width: 100%;
+                  max-width: 100%;
                 }
                 .accordion {
                   .accordion-item {
@@ -336,8 +366,8 @@ body.spz-3003[class] {
                       &.active {
                         .accordion-button {
                           position: relative;
-                          &::before{
-                            content: '';
+                          &::before {
+                            content: "";
                             width: 240px;
                             height: 1px;
                             background-color: #00aeef;
@@ -372,6 +402,8 @@ body.spz-3003[class] {
                 margin-left: auto;
                 @media (max-width: 1199.98px) {
                   width: 100%;
+                  margin: auto;
+                  padding-top: 32px;
                 }
                 picture {
                   width: 100%;
