@@ -23,7 +23,7 @@
     getCookie('COOKIE_NAME');
     console.log(getCookie('COOKIE_NAME'));
 
-    if (true) {
+    if (getCookie('COOKIE_NAME') && location.href == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc?') {
         // console.log('inside main function');
         console.log(location.href); waitForElm("p.submit").then(function () {
             if (document.querySelector('form#pardot-form').getAttribute('action') == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc') {
