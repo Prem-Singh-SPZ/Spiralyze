@@ -17,6 +17,7 @@ body.custom-spz {
       font-size: 32px;
       line-height: 36px;
       text-align: center;
+      font-family: aktiv-grotesk, sans-serif;
       letter-spacing: -1.7px;
       color: #37465a;
       margin-bottom: 28px;
@@ -50,6 +51,7 @@ body.custom-spz {
           margin-bottom: 17px;
           padding: 0;
           .field-label {
+            font-family: aktiv-grotesk, sans-serif;
             font-weight: 400;
             font-size: 16px;
             line-height: 26px;
@@ -64,23 +66,48 @@ body.custom-spz {
           }
 
           &.error {
-            input.text {
+            input.text,
+            select.select {
               border-color: #dc251c;
             }
             .field-label {
               top: 14px;
             }
           }
+
+          &.pd-select {
+            &::after {
+              content: url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+              display: block;
+              position: absolute;
+              top: 26px;
+              right: 20px;
+              left: auto;
+            }
+            &.error {
+              &::after {
+                top: 22px;
+              }
+            }
+          }
+
           input.text {
             width: 100%;
             padding: 20px 20px;
             font-size: 18px;
+            font-family: aktiv-grotesk, sans-serif;
+            border-radius: 0;
           }
           select.select {
             padding: 20px 20px;
             font-size: 18px;
             height: 62px;
+            white-space: nowrap;
+            font-family: aktiv-grotesk, sans-serif;
             background-color: #fff;
+            position: relative;
+            border-radius: 0;
+
             -webkit-appearance: none;
 
             &:focus {
@@ -99,6 +126,24 @@ body.custom-spz {
             line-height: 20px;
             color: #ff7335;
           }
+          // &.typing.error label.field-label {
+          //   color: #dc251c;
+          // }
+          &.filled {
+            label.field-label {
+              top: -11px;
+              left: 11px;
+              background: #fff;
+              padding: 1px 5px;
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            input.text,
+            select.select {
+              border-color: #75707d;
+            }
+          }
         }
 
         &:nth-child(even) {
@@ -110,14 +155,16 @@ body.custom-spz {
             }
             @media (min-width: 424px) {
               .field-label {
-                left: 32px;
+                // left: 32px;
               }
-              &.typing label.field-label {
-                left: 22px;
+              &.typing label.field-label,
+              &.filled label.field-label {
+                // left: 22px;
               }
+
               &.error {
                 .field-label {
-                  left: 21px;
+                  // left: 21px;
                 }
               }
             }
@@ -159,7 +206,7 @@ body.custom-spz {
         &:nth-child(7) {
           order: 6;
           width: 100%;
-          .form-field.state{
+          .form-field.state {
             margin-right: 0;
           }
         }
@@ -216,6 +263,7 @@ body.custom-spz {
         font-weight: 400;
         font-size: 13px;
         line-height: 20px;
+        font-family: aktiv-grotesk, sans-serif;
       }
       a {
         text-decoration: underline;

@@ -10,5 +10,11 @@ function setCrossSubdomainCookie(name, value, days) {
   }
   
   
-//   setCrossSubdomainCookie('COOKIE_NAME', 'true', 10);
+  setCrossSubdomainCookie('COOKIE_NAME', 'true', 10);
   console.log('Test should run now');
+  document
+  .querySelector(".internal-form-testing main.l-body-wrapper .c-hero__content .c-hero__repeater .c-hero__column:last-child .c-hero__column-content > p")
+  .insertAdjacentHTML(
+	  "beforeend",
+	  `<div class="privacy-policy"><p>By completing the form and submitting your information above, you are agreeing to our </a> <a href="/privacy-policy">Privacy Policy.</a></div>`
+  );

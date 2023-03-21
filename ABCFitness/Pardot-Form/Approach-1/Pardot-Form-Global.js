@@ -1,5 +1,4 @@
-/******/ (function () { // webpackBootstrap
-    var __webpack_exports__ = {};
+(function () {
     function getCookie(name) {
         var dc = document.cookie;
         var prefix = name + "=";
@@ -21,11 +20,12 @@
     }
 
     getCookie('COOKIE_NAME');
-    console.log(getCookie('COOKIE_NAME'));
+    // console.log(getCookie('COOKIE_NAME'));
 
     if (getCookie('COOKIE_NAME') && location.href.indexOf('v11qsc') > -1) {
         // console.log('inside main function');
-        console.log(location.href); waitForElm("p.submit").then(function () {
+        // console.log(location.href);
+        waitForElm("p.submit").then(function () {
             if (document.querySelector('form#pardot-form').getAttribute('action') == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc') {
                 document.body.classList.add('custom-spz');
                 document.querySelector("p.submit input").setAttribute("value", "Get a Demo");
@@ -70,19 +70,15 @@
                         });
                         v.querySelector("input").addEventListener('blur', () => {
                             if (v.querySelector("input").value) {
-                                v.querySelector(".form-field").classList.add('typing');
+                                removeTypingAddFilled(v);
                             } else {
-                                if (v.querySelector(".form-field").classList.contains('typing')) {
-                                    v.querySelector(".form-field").classList.remove('typing');
-                                }
+                                removeTypingAndFilled(v);
                             }
                         });
                         if (v.querySelector("input").value) {
-                            v.querySelector(".form-field").classList.add('typing');
+                            removeTypingAddFilled(v);
                         } else {
-                            if (v.querySelector(".form-field").classList.contains('typing')) {
-                                v.querySelector(".form-field").classList.remove('typing');
-                            }
+                            removeTypingAndFilled(v);
                         }
                     } else if (
                         v.querySelectorAll("select").length > 0 &&
@@ -103,39 +99,65 @@
                         v.querySelector("select").addEventListener('blur', () => {
                             if (v.querySelector('.country')) {
                                 if (v.querySelector(".country select.select").value != '1214035') {
-                                    v.querySelector(".form-field").classList.add('typing');
-                                } else {
-                                    if (v.querySelector(".form-field").classList.contains('typing')) {
-                                        v.querySelector(".form-field").classList.remove('typing');
+                                    removeTypingAddFilled(v);
+                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
+                                        document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                     }
+                                    else {
+                                        document.querySelector(".state.pd-select").parentElement.style.display = 'none';
+                                    }
+                                } else {
+                                    removeTypingAndFilled(v);
                                 }
                             }
                             if (v.querySelector('.state')) {
                                 if (v.querySelector(".state select.select").value != '1214764') {
-                                    v.querySelector(".form-field").classList.add('typing');
+                                    removeTypingAddFilled(v);
                                 } else {
-                                    if (v.querySelector(".form-field").classList.contains('typing')) {
-                                        v.querySelector(".form-field").classList.remove('typing');
+                                    removeTypingAndFilled(v);
+                                }
+                            }
+                        });
+                        v.querySelector("select").addEventListener('change', () => {
+                            if (v.querySelector('.country')) {
+                                if (v.querySelector(".country select.select").value != '1214035') {
+                                    removeTypingAddFilled(v);
+                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
+                                        document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                     }
+                                    else {
+                                        document.querySelector(".state.pd-select").parentElement.style.display = 'none';
+                                    }
+                                } else {
+                                    removeTypingAndFilled(v);
+                                }
+                            }
+                            if (v.querySelector('.state')) {
+                                if (v.querySelector(".state select.select").value != '1214764') {
+                                    removeTypingAddFilled(v);
+                                } else {
+                                    removeTypingAndFilled(v);
                                 }
                             }
                         });
                         if (v.querySelector('.country')) {
                             if (v.querySelector(".country select.select").value != '1214035') {
-                                v.querySelector(".form-field").classList.add('typing');
-                            } else {
-                                if (v.querySelector(".form-field").classList.contains('typing')) {
-                                    v.querySelector(".form-field").classList.remove('typing');
+                                removeTypingAddFilled(v);
+                                if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
+                                    document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                 }
+                                else {
+                                    document.querySelector(".state.pd-select").parentElement.style.display = 'none';
+                                }
+                            } else {
+                                removeTypingAndFilled(v);
                             }
                         }
                         if (v.querySelector('.state')) {
                             if (v.querySelector(".state select.select").value != '1214764') {
-                                v.querySelector(".form-field").classList.add('typing');
+                                removeTypingAddFilled(v);
                             } else {
-                                if (v.querySelector(".form-field").classList.contains('typing')) {
-                                    v.querySelector(".form-field").classList.remove('typing');
-                                }
+                                removeTypingAndFilled(v);
                             }
                         }
                     }
@@ -162,6 +184,21 @@
             });
         }
     }
-    /******/
+
+    function removeTypingAndFilled(elem) {
+        if (elem.querySelector(".form-field").classList.contains('typing')) {
+            elem.querySelector(".form-field").classList.remove('typing');
+        }
+        if (elem.querySelector(".form-field").classList.contains('filled')) {
+            elem.querySelector(".form-field").classList.remove('filled');
+        }
+    }
+
+    function removeTypingAddFilled(elem) {
+        elem.querySelector(".form-field").classList.add('filled');
+        if (elem.querySelector(".form-field").classList.contains('typing')) {
+            elem.querySelector(".form-field").classList.remove('typing');
+        }
+    }
 })()
     ;
