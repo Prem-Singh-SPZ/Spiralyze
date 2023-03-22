@@ -40,6 +40,7 @@ body.custom-spz {
 
         p.error.no-label {
           margin: 0;
+          font-family: 'Circular Std';
           font-weight: 450;
           font-size: 14px;
           line-height: 20px;
@@ -53,7 +54,7 @@ body.custom-spz {
           .field-label {
             font-family: aktiv-grotesk, sans-serif;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 26px;
             color: #8d8994;
             top: 19px;
@@ -63,6 +64,21 @@ body.custom-spz {
             width: max-content;
             text-transform: capitalize;
             transition-delay: 200ms;
+          }
+          &.country,
+          &.state {
+            .field-label {
+              display: none;
+            }
+            select.select {
+              color: #a5a5a5;
+            }
+
+            &.filled {
+              select.select {
+                color: #110f14;
+              }
+            }
           }
 
           &.error {
@@ -75,15 +91,20 @@ body.custom-spz {
             }
           }
 
-          &.pd-select {
-            &::after {
-              content: url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
-              display: block;
-              position: absolute;
-              top: 26px;
-              right: 20px;
-              left: auto;
-            }
+          &.pd-select select.select {
+            background-image: #ffffff
+              url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+            background-repeat: no-repeat;
+            background-position-x: 95%;
+            background-position-y: center;
+            // &::after {
+            //   content: url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+            //   display: block;
+            //   position: absolute;
+            //   top: 26px;
+            //   right: 20px;
+            //   left: auto;
+            // }
             &.error {
               &::after {
                 top: 22px;
@@ -97,9 +118,12 @@ body.custom-spz {
             font-size: 18px;
             font-family: aktiv-grotesk, sans-serif;
             border-radius: 0;
+            border-color: #a5a5a5;
+            color: #110f14;
           }
           select.select {
             padding: 20px 20px;
+            padding-right: 30px;
             font-size: 18px;
             height: 62px;
             white-space: nowrap;
@@ -107,6 +131,8 @@ body.custom-spz {
             background-color: #fff;
             position: relative;
             border-radius: 0;
+            border-color: #a5a5a5;
+            color: #110f14;
 
             -webkit-appearance: none;
 
@@ -118,6 +144,7 @@ body.custom-spz {
             border-color: #ff7335;
           }
           &.typing label.field-label {
+            display: block;
             top: -11px;
             left: 11px;
             background: #fff;
@@ -131,6 +158,7 @@ body.custom-spz {
           // }
           &.filled {
             label.field-label {
+              display: block;
               top: -11px;
               left: 11px;
               background: #fff;
@@ -141,7 +169,7 @@ body.custom-spz {
 
             input.text,
             select.select {
-              border-color: #75707d;
+              border-color: #B6B3BA;
             }
           }
         }
@@ -155,16 +183,16 @@ body.custom-spz {
             }
             @media (min-width: 424px) {
               .field-label {
-                // left: 32px;
+                left: 32px;
               }
               &.typing label.field-label,
               &.filled label.field-label {
-                // left: 22px;
+                left: 22px;
               }
 
               &.error {
                 .field-label {
-                  // left: 21px;
+                  left: 21px;
                 }
               }
             }
@@ -223,7 +251,7 @@ body.custom-spz {
       margin: 8px 1px 21px;
       position: relative;
 
-      input {
+      .spz-submit-btn {
         font-weight: 700;
         font-size: 20px;
         line-height: 28px;
@@ -238,21 +266,27 @@ body.custom-spz {
         text-transform: none;
         padding-right: 26px;
         letter-spacing: 0;
+        outline-color: transparent;
+        cursor: pointer;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+        background-repeat: no-repeat;
+        background-position-x: calc(50% + 58px);
+        background-position-y: center;
         &:hover,
         &:active,
         &:focus {
-          background: #00aeef;
+          background-color: #00aeef;
         }
       }
-      &::after {
-        content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
-        display: block;
-        width: 30px;
-        height: 15px;
-        position: absolute;
-        top: 22px;
-        left: calc(50% + 52px);
-      }
+      // &::after {
+      //   content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+      //   display: block;
+      //   width: 30px;
+      //   height: 15px;
+      //   position: absolute;
+      //   top: 22px;
+      //   left: calc(50% + 52px);
+      // }
     }
 
     .privacy-policy {

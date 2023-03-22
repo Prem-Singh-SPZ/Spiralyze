@@ -32,6 +32,7 @@
                 if (document.querySelector("#pardot-form > p > span > span").textContent == "*Required") {
                     document.querySelector("#pardot-form > p").style.display = 'none';
                 }
+                document.querySelector('p.submit').innerHTML = `<button type="submit" accesskey="s" value="Get a Demo" class="spz-submit-btn">Get a Demo</button>`
                 document
                     .querySelector("p.submit")
                     .insertAdjacentHTML(
@@ -51,6 +52,9 @@
         });
 
         function adjustForm() {
+
+            document.querySelector('.country.pd-select select.select option:first-child').textContent = "Country";
+            document.querySelector('.state.pd-select select.select option:first-child').textContent = "State/Province";
             document
                 .querySelectorAll(".form-container .form-field-item")
                 .forEach(function (v, i) {
@@ -69,6 +73,9 @@
                             v.querySelector(".form-field").classList.add('typing');
                         });
                         v.querySelector("input").addEventListener('blur', () => {
+                            if (v.querySelector(".form-field").classList.contains('typing')) {
+                                v.querySelector(".form-field").classList.remove('typing');
+                            }
                             if (v.querySelector("input").value) {
                                 removeTypingAddFilled(v);
                             } else {
@@ -97,10 +104,13 @@
                             v.querySelector(".form-field").classList.add('typing');
                         });
                         v.querySelector("select").addEventListener('blur', () => {
+                            if (v.querySelector(".form-field").classList.contains('typing')) {
+                                v.querySelector(".form-field").classList.remove('typing');
+                            }
                             if (v.querySelector('.country')) {
                                 if (v.querySelector(".country select.select").value != '1214035') {
                                     removeTypingAddFilled(v);
-                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
+                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041' || v.querySelector(".country select.select").value == '1214035') {
                                         document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                     }
                                     else {
@@ -122,7 +132,7 @@
                             if (v.querySelector('.country')) {
                                 if (v.querySelector(".country select.select").value != '1214035') {
                                     removeTypingAddFilled(v);
-                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
+                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041' || v.querySelector(".country select.select").value == '1214035') {
                                         document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                     }
                                     else {
@@ -186,9 +196,6 @@
     }
 
     function removeTypingAndFilled(elem) {
-        if (elem.querySelector(".form-field").classList.contains('typing')) {
-            elem.querySelector(".form-field").classList.remove('typing');
-        }
         if (elem.querySelector(".form-field").classList.contains('filled')) {
             elem.querySelector(".form-field").classList.remove('filled');
         }
@@ -196,9 +203,6 @@
 
     function removeTypingAddFilled(elem) {
         elem.querySelector(".form-field").classList.add('filled');
-        if (elem.querySelector(".form-field").classList.contains('typing')) {
-            elem.querySelector(".form-field").classList.remove('typing');
-        }
     }
 })()
     ;

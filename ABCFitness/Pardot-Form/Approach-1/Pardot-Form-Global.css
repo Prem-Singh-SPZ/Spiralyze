@@ -46,6 +46,7 @@ body.custom-spz form.form[class] .form-container .form-field-item {
 }
 body.custom-spz form.form[class] .form-container .form-field-item p.error.no-label {
   margin: 0;
+  font-family: "Circular Std";
   font-weight: 450;
   font-size: 14px;
   line-height: 20px;
@@ -60,7 +61,7 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field {
 body.custom-spz form.form[class] .form-container .form-field-item .form-field .field-label {
   font-family: aktiv-grotesk, sans-serif;
   font-weight: 400;
-  font-size: 16px;
+  font-size: 18px;
   line-height: 26px;
   color: #8d8994;
   top: 19px;
@@ -72,6 +73,15 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field .f
   text-transform: capitalize;
   transition-delay: 200ms;
 }
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.country .field-label, body.custom-spz form.form[class] .form-container .form-field-item .form-field.state .field-label {
+  display: none;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.country select.select, body.custom-spz form.form[class] .form-container .form-field-item .form-field.state select.select {
+  color: #a5a5a5;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.country.filled select.select, body.custom-spz form.form[class] .form-container .form-field-item .form-field.state.filled select.select {
+  color: #110f14;
+}
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.error input.text,
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.error select.select {
   border-color: #dc251c;
@@ -79,15 +89,13 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.er
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.error .field-label {
   top: 14px;
 }
-body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select::after {
-  content: url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
-  display: block;
-  position: absolute;
-  top: 26px;
-  right: 20px;
-  left: auto;
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select select.select {
+  background-image: #ffffff url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+  background-repeat: no-repeat;
+  background-position-x: 95%;
+  background-position-y: center;
 }
-body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select.error::after {
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select select.select.error::after {
   top: 22px;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field input.text {
@@ -96,9 +104,12 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field in
   font-size: 18px;
   font-family: aktiv-grotesk, sans-serif;
   border-radius: 0;
+  border-color: #a5a5a5;
+  color: #110f14;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select {
   padding: 20px 20px;
+  padding-right: 30px;
   font-size: 18px;
   height: 62px;
   white-space: nowrap;
@@ -106,6 +117,8 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field se
   background-color: #fff;
   position: relative;
   border-radius: 0;
+  border-color: #a5a5a5;
+  color: #110f14;
   -webkit-appearance: none;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select:focus {
@@ -115,6 +128,7 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field in
   border-color: #ff7335;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.typing label.field-label {
+  display: block;
   top: -11px;
   left: 11px;
   background: #fff;
@@ -124,6 +138,7 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.ty
   color: #ff7335;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled label.field-label {
+  display: block;
   top: -11px;
   left: 11px;
   background: #fff;
@@ -133,7 +148,7 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.fi
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled input.text,
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled select.select {
-  border-color: #75707d;
+  border-color: #B6B3BA;
 }
 body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
   margin-left: 10px;
@@ -142,6 +157,17 @@ body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even
 @media (max-width: 424px) {
   body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
     margin-left: 0px;
+  }
+}
+@media (min-width: 424px) {
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field .field-label {
+    left: 32px;
+  }
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field.typing label.field-label, body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field.filled label.field-label {
+    left: 22px;
+  }
+  body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field.error .field-label {
+    left: 21px;
   }
 }
 @media (min-width: 424px) {
@@ -193,7 +219,7 @@ body.custom-spz form.form[class] p.submit {
   margin: 8px 1px 21px;
   position: relative;
 }
-body.custom-spz form.form[class] p.submit input {
+body.custom-spz form.form[class] p.submit .spz-submit-btn {
   font-weight: 700;
   font-size: 20px;
   line-height: 28px;
@@ -208,18 +234,15 @@ body.custom-spz form.form[class] p.submit input {
   text-transform: none;
   padding-right: 26px;
   letter-spacing: 0;
+  outline-color: transparent;
+  cursor: pointer;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+  background-repeat: no-repeat;
+  background-position-x: calc(50% + 58px);
+  background-position-y: center;
 }
-body.custom-spz form.form[class] p.submit input:hover, body.custom-spz form.form[class] p.submit input:active, body.custom-spz form.form[class] p.submit input:focus {
-  background: #00aeef;
-}
-body.custom-spz form.form[class] p.submit::after {
-  content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
-  display: block;
-  width: 30px;
-  height: 15px;
-  position: absolute;
-  top: 22px;
-  left: calc(50% + 52px);
+body.custom-spz form.form[class] p.submit .spz-submit-btn:hover, body.custom-spz form.form[class] p.submit .spz-submit-btn:active, body.custom-spz form.form[class] p.submit .spz-submit-btn:focus {
+  background-color: #00aeef;
 }
 body.custom-spz form.form[class] .privacy-policy p,
 body.custom-spz form.form[class] .privacy-policy a {
@@ -235,4 +258,4 @@ body.custom-spz form.form[class] .privacy-policy a {
 }
 body.custom-spz form.form[class] .privacy-policy a:hover, body.custom-spz form.form[class] .privacy-policy a:active, body.custom-spz form.form[class] .privacy-policy a:focus {
   color: #ff7335;
-}
+}/*# sourceMappingURL=Pardot-Form-Global.css.map */
