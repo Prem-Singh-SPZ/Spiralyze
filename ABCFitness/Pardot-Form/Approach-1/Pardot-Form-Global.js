@@ -28,7 +28,6 @@
         waitForElm("p.submit").then(function () {
             if (document.querySelector('form#pardot-form').getAttribute('action') == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc') {
                 document.body.classList.add('custom-spz');
-                document.querySelector("p.submit input").setAttribute("value", "Get a Demo");
                 if (document.querySelector("#pardot-form > p > span > span").textContent == "*Required") {
                     document.querySelector("#pardot-form > p").style.display = 'none';
                 }
@@ -40,7 +39,7 @@
                         `<div class="privacy-policy"><p>By completing the form and submitting your information above, you are agreeing to our </a> <a href="/privacy-policy">Privacy Policy.</a></div>`
                     );
                 adjustForm();
-                document.querySelector("p.submit input").addEventListener('click', function () {
+                document.querySelector("p.submit button").addEventListener('click', function () {
                     let isFormUpdate = setInterval(() => {
                         adjustForm();
                     }, 100);
@@ -110,7 +109,7 @@
                             if (v.querySelector('.country')) {
                                 if (v.querySelector(".country select.select").value != '1214035') {
                                     removeTypingAddFilled(v);
-                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041' || v.querySelector(".country select.select").value == '1214035') {
+                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
                                         document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                     }
                                     else {
@@ -118,6 +117,7 @@
                                     }
                                 } else {
                                     removeTypingAndFilled(v);
+                                    document.querySelector(".state.pd-select").parentElement.style.display = 'none';
                                 }
                             }
                             if (v.querySelector('.state')) {
@@ -132,7 +132,7 @@
                             if (v.querySelector('.country')) {
                                 if (v.querySelector(".country select.select").value != '1214035') {
                                     removeTypingAddFilled(v);
-                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041' || v.querySelector(".country select.select").value == '1214035') {
+                                    if (v.querySelector(".country select.select").value == '1214038' || v.querySelector(".country select.select").value == '1214041') {
                                         document.querySelector(".state.pd-select").parentElement.style.display = 'block';
                                     }
                                     else {
@@ -140,6 +140,7 @@
                                     }
                                 } else {
                                     removeTypingAndFilled(v);
+                                    document.querySelector(".state.pd-select").parentElement.style.display = 'none';
                                 }
                             }
                             if (v.querySelector('.state')) {
@@ -161,6 +162,7 @@
                                 }
                             } else {
                                 removeTypingAndFilled(v);
+                                document.querySelector(".state.pd-select").parentElement.style.display = 'none';
                             }
                         }
                         if (v.querySelector('.state')) {

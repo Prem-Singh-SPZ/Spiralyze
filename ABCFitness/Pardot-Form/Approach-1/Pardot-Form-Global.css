@@ -63,7 +63,7 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field .f
   font-weight: 400;
   font-size: 18px;
   line-height: 26px;
-  color: #8d8994;
+  color: #a5a5a5;
   top: 19px;
   left: 21px;
   z-index: 1;
@@ -79,6 +79,9 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.co
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.country select.select, body.custom-spz form.form[class] .form-container .form-field-item .form-field.state select.select {
   color: #a5a5a5;
 }
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.country select.select option, body.custom-spz form.form[class] .form-container .form-field-item .form-field.state select.select option {
+  color: #a5a5a5;
+}
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.country.filled select.select, body.custom-spz form.form[class] .form-container .form-field-item .form-field.state.filled select.select {
   color: #110f14;
 }
@@ -90,13 +93,16 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.er
   top: 14px;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select select.select {
-  background-image: #ffffff url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+  background: #ffffff url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
   background-repeat: no-repeat;
   background-position-x: 95%;
   background-position-y: center;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select select.select.error::after {
   top: 22px;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.pd-select.state select.select {
+  background-position-x: 97.5%;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field input.text {
   width: 100%;
@@ -109,7 +115,7 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field in
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select {
   padding: 20px 20px;
-  padding-right: 30px;
+  padding-right: 28px;
   font-size: 18px;
   height: 62px;
   white-space: nowrap;
@@ -122,10 +128,10 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field se
   -webkit-appearance: none;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select:focus {
-  border: 1px solid #ff7335;
+  border: 1px solid #ff7335 !important;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field input.text:focus {
-  border-color: #ff7335;
+  border-color: #ff7335 !important;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.typing label.field-label {
   display: block;
@@ -148,7 +154,10 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.fi
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled input.text,
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled select.select {
-  border-color: #B6B3BA;
+  border-color: #b6b3ba;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.typing select.select {
+  border-color: #ff7335;
 }
 body.custom-spz form.form[class] .form-container .form-field-item:nth-child(even) .form-field {
   margin-left: 10px;
@@ -258,4 +267,4 @@ body.custom-spz form.form[class] .privacy-policy a {
 }
 body.custom-spz form.form[class] .privacy-policy a:hover, body.custom-spz form.form[class] .privacy-policy a:active, body.custom-spz form.form[class] .privacy-policy a:focus {
   color: #ff7335;
-}/*# sourceMappingURL=Pardot-Form-Global.css.map */
+}

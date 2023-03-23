@@ -40,7 +40,7 @@ body.custom-spz {
 
         p.error.no-label {
           margin: 0;
-          font-family: 'Circular Std';
+          font-family: "Circular Std";
           font-weight: 450;
           font-size: 14px;
           line-height: 20px;
@@ -56,7 +56,7 @@ body.custom-spz {
             font-weight: 400;
             font-size: 18px;
             line-height: 26px;
-            color: #8d8994;
+            color: #a5a5a5;
             top: 19px;
             left: 21px;
             z-index: 1;
@@ -72,6 +72,9 @@ body.custom-spz {
             }
             select.select {
               color: #a5a5a5;
+              option {
+                color: #a5a5a5;
+              }
             }
 
             &.filled {
@@ -88,27 +91,26 @@ body.custom-spz {
             }
             .field-label {
               top: 14px;
+              // color: #dc251c!important;
             }
           }
 
-          &.pd-select select.select {
-            background-image: #ffffff
-              url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
-            background-repeat: no-repeat;
-            background-position-x: 95%;
-            background-position-y: center;
-            // &::after {
-            //   content: url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
-            //   display: block;
-            //   position: absolute;
-            //   top: 26px;
-            //   right: 20px;
-            //   left: auto;
-            // }
-            &.error {
-              &::after {
-                top: 22px;
+          &.pd-select {
+            select.select {
+              background: #ffffff
+                url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+              background-repeat: no-repeat;
+              background-position-x: 95%;
+              background-position-y: center;
+              &.error {
+                &::after {
+                  top: 22px;
+                }
               }
+            }
+
+            &.state select.select {
+              background-position-x: 97.5%;
             }
           }
 
@@ -123,7 +125,7 @@ body.custom-spz {
           }
           select.select {
             padding: 20px 20px;
-            padding-right: 30px;
+            padding-right: 28px;
             font-size: 18px;
             height: 62px;
             white-space: nowrap;
@@ -137,11 +139,11 @@ body.custom-spz {
             -webkit-appearance: none;
 
             &:focus {
-              border: 1px solid #ff7335;
+              border: 1px solid #ff7335 !important;
             }
           }
           input.text:focus {
-            border-color: #ff7335;
+            border-color: #ff7335 !important;
           }
           &.typing label.field-label {
             display: block;
@@ -153,7 +155,8 @@ body.custom-spz {
             line-height: 20px;
             color: #ff7335;
           }
-          // &.typing.error label.field-label {
+          // &.typing.error label.field-label,
+          // &.filled.error label.field-label {
           //   color: #dc251c;
           // }
           &.filled {
@@ -169,7 +172,12 @@ body.custom-spz {
 
             input.text,
             select.select {
-              border-color: #B6B3BA;
+              border-color: #b6b3ba;
+            }
+          }
+          &.filled.typing {
+            select.select {
+              border-color: #ff7335;
             }
           }
         }
