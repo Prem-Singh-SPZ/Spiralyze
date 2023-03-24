@@ -151,6 +151,18 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.ty
   line-height: 20px;
   color: #ff7335;
 }
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.typing.error.email label.field-label {
+  color: #ff7335 !important;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.valid-email.error.email label.field-label {
+  color: #a5a5a5 !important;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.valid-email.error.email.typing label.field-label {
+  color: #ff7335 !important;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.error.email label.field-label {
+  color: #dc251c;
+}
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled label.field-label {
   display: block;
   top: -11px;
@@ -163,6 +175,14 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field.fi
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled input.text,
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled select.select {
   border-color: #b6b3ba;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.error.email input.text,
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.error.email select.select {
+  border-color: #dc251c;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.error.email.valid-email input.text,
+body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.error.email.valid-email select.select {
+  border-color: #a5a5a5;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field.filled.typing select.select {
   border-color: #ff7335;

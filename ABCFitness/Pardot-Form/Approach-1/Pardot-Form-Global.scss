@@ -166,10 +166,18 @@ body.custom-spz {
             line-height: 20px;
             color: #ff7335;
           }
-          // &.typing.error label.field-label,
-          // &.filled.error label.field-label {
-          //   color: #dc251c;
-          // }
+          &.typing.error.email label.field-label{
+            color: #ff7335!important;
+          }
+          &.valid-email.error.email label.field-label{
+            color: #a5a5a5!important;
+          }
+          &.valid-email.error.email.typing label.field-label{
+            color: #ff7335!important;
+          }
+          &.filled.error.email label.field-label {
+            color: #dc251c;
+          }
           &.filled {
             label.field-label {
               display: block;
@@ -184,6 +192,18 @@ body.custom-spz {
             input.text,
             select.select {
               border-color: #b6b3ba;
+            }
+          }
+          &.filled.error.email {
+            input.text,
+            select.select {
+              border-color: #dc251c;
+            }
+          }
+          &.filled.error.email.valid-email {
+            input.text,
+            select.select {
+              border-color: #a5a5a5;
             }
           }
           &.filled.typing {

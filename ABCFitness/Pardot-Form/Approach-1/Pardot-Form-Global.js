@@ -224,10 +224,12 @@
         const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
         if (re.test(String(uEmail).toLowerCase())) {
             document.querySelector('.form-field.email').parentElement.classList.add('input-filled');
+            document.querySelector('.form-field.email').classList.add('valid-email');
         }
         else {
             if (document.querySelector('.form-field.email').parentElement.classList.contains('input-filled')) {
-                document.querySelector('.form-field.email').parentElement.classList.remove('input-filled');
+            document.querySelector('.form-field.email').classList.remove('valid-email');
+            document.querySelector('.form-field.email').parentElement.classList.remove('input-filled');
             }
         }
     }
