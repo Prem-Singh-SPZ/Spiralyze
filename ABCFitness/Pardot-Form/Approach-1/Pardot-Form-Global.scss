@@ -38,6 +38,11 @@ body.custom-spz {
           width: 100%;
         }
 
+        &.input-filled {
+          p.error.no-label {
+            display: none;
+          }
+        }
         p.error.no-label {
           margin: 0;
           font-family: "Circular Std";
@@ -140,6 +145,12 @@ body.custom-spz {
 
             &:focus {
               border: 1px solid #ff7335 !important;
+            }
+
+            /* Change Autocomplete styles in Chrome*/
+            input:-webkit-autofill,
+            select:-webkit-autofill {
+              -webkit-box-shadow: 0 0 0 30px white inset !important;
             }
           }
           input.text:focus {

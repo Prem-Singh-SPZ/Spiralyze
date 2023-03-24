@@ -200,11 +200,36 @@
     function removeTypingAndFilled(elem) {
         if (elem.querySelector(".form-field").classList.contains('filled')) {
             elem.querySelector(".form-field").classList.remove('filled');
+            if (elem.querySelector(".form-field").classList.contains('email')) {
+                checkValidEmail();
+            }
+            else {
+                elem.classList.remove('input-filled');
+            }
         }
     }
 
     function removeTypingAddFilled(elem) {
         elem.querySelector(".form-field").classList.add('filled');
+        if (elem.querySelector(".form-field").classList.contains('email')) {
+            checkValidEmail();
+        }
+        else {
+            elem.classList.add('input-filled');
+        }
+    }
+
+    function checkValidEmail() {
+        let uEmail = document.querySelector('.form-field.email input.text').value;
+        const re = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+        if (re.test(String(uEmail).toLowerCase())) {
+            document.querySelector('.form-field.email').parentElement.classList.add('input-filled');
+        }
+        else {
+            if (document.querySelector('.form-field.email').parentElement.classList.contains('input-filled')) {
+                document.querySelector('.form-field.email').parentElement.classList.remove('input-filled');
+            }
+        }
     }
 })()
     ;

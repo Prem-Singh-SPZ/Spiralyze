@@ -44,6 +44,9 @@ body.custom-spz form.form[class] .form-container .form-field-item {
     width: 100%;
   }
 }
+body.custom-spz form.form[class] .form-container .form-field-item.input-filled p.error.no-label {
+  display: none;
+}
 body.custom-spz form.form[class] .form-container .form-field-item p.error.no-label {
   margin: 0;
   font-family: "Circular Std";
@@ -126,9 +129,14 @@ body.custom-spz form.form[class] .form-container .form-field-item .form-field se
   border-color: #a5a5a5;
   color: #110f14;
   -webkit-appearance: none;
+  /* Change Autocomplete styles in Chrome*/
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select:focus {
   border: 1px solid #ff7335 !important;
+}
+body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select input:-webkit-autofill,
+body.custom-spz form.form[class] .form-container .form-field-item .form-field select.select select:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 body.custom-spz form.form[class] .form-container .form-field-item .form-field input.text:focus {
   border-color: #ff7335 !important;
