@@ -1,53 +1,16 @@
-const reviewSection = () => {
-    return `<section class=review-section-2602>
-                <div class=container>
-                    <div class=item-wrapper>
-                        <div class=comment-wrapper>
-                            <img class="br-logo" alt="TechValidate" src="//res.cloudinary.com/spiralyze/image/upload/v1677576105/RAPID7/2602%20%7C%20Rapid7%20%7C%20ThreatCommand%20PDP%20%7C%20TechValidate%20Reviews/techvalidate-logo.svg">
-                        </div>
-                    </div>
-                    <div class=item-wrapper>
-                        <div class=comment-wrapper>
-                            <p class=comment>
-                            Threat Command is invaluable in identifying otherwise unknown internet security exposure and adversaries directly targeting our organization. Without Threat Command, my team would not be able to expand our cyber intel beyond the perimeter and immediately close critical security gaps.
-                            <h5 class=profession>John Breen</h5>
-                            <span class=profession-desc>Global Head of Cybersecurity, <br/>Flowserve Corporation</span>
-                        </div>
-                    </div>
-                    <div class=item-wrapper>
-                        <div class=comment-wrapper>
-                            <p class=comment>
-                            Threat Command by Rapid7 is a wonderful application because it offers threat intelligence faster than competitive solutions. 
-                            <h5 class=profession>Alex Rodriguez</h5>
-                            <span class=profession-desc>Cyber/Threat Intelligence Analyst, <br/>First American Financial Corporation</span>
-                        </div>
-                    </div>
-                    <div class=item-wrapper>
-                        <div class=comment-wrapper>
-                            <p class=comment>
-                            Threat Command significantly improves our visibility of external threats. 
-                            <h5 class=profession>Alex Vavassori</h5>
-                            <span class=profession-desc>SOC Manager, Sorint.Sec</span>
-                        </div>
-                    </div>
-                </div>
-            </section>`;
-}
-
-var intr = setInterval(function () {
-    if (document.querySelector('body .productOverview') && !document.querySelector('body').classList.contains('spz-2602')) {
-        clearInterval(intr);
-        var cookieName = 'rapid7-validate_28022023';
-        var cookieValue = '1';
-        var myDate = new Date();
-        myDate.setDate(myDate.getDate() + 30);
-        document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
-        document.body.classList.add('spz-2602');
+var jQueryInterval = setInterval(function() {
+    if (typeof jQuery != 'undefined') {
+        clearInterval(jQueryInterval);
+        jQuery(document).ready(function() {
+            if (!jQuery('body').hasClass('insight-pdp-410-review')) {
+                var cookieName = 'insightvm_pdpreview_28032023';
+                var cookieValue = '1';
+                var myDate = new Date();
+                myDate.setDate(myDate.getDate() + 30);
+                document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+                jQuery('body').addClass('insight-pdp-410-review');
+            }
+          jQuery('.insight-pdp-410-review .productOverview').append(` <section class=review-section><div class=container><div class=item-wraper><div class=comment-wraper><img class="gartner" alt="Gartner peerinsights" src="https://res.cloudinary.com/spiralyze/image/upload/v1655804171/RAPID7/Gartner.png"><div class=review-rate><span>4.5</span>/5</div><img class="star" alt="4.5 star"src=https://res.cloudinary.com/spiralyze/image/upload/v1655111835/RAPID7/2601-review/5star.svg><h5 class="rating-numbers">208 Ratings</h5></div></div><div class=item-wraper><div class=comment-wraper><div class=review-title>A Great Product For Vulnerability Insight And Management</div><p class=comment>InsightVM really gave us a good insight into the security status of our workstations and servers. Both on-premise and in the field. It made it really easy to prioritize and address vulnerabilities.<h5 class=profession>Infrastructre Manager</h5></div></div><div class=item-wraper><div class=comment-wraper><div class=review-title>InsightVM Is Intuitive And Efficient</div><p class=comment>The combination of network scanning and agent-based assessment was invaluable, particularly during the pandemic where we rapidly adapted to the requirements posed by remote work.<h5 class=profession>Ethical Hacking Manager</h5></div></div><div class=item-wraper><div class=comment-wraper><div class=review-title>Easy To Use Vulnerability Management Tool With Great Reporting Capabilities</div><p class=comment>Easiest to configure and use vulnerability management tool on the market. It poses a big variety of the scanning templates which allows different types of scans from initial scans of the systems before they go live in production to the continual scans of sensitive systems.<h5 class=profession>IT Security Specialist</h5></div></div></div></section>`);
+       });
     }
-
-    // Reviews Section
-    if (document.querySelectorAll('.spz-2602 .productOverview > .grid-container').length > 0) {
-        document.querySelector('.spz-2602 .productOverview  > .grid-container').insertAdjacentHTML('afterend', reviewSection());
-    }
-
-}, 100);
+});

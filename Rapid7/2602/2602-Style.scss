@@ -1,238 +1,197 @@
-$primary: #3b454a;
-$secondary: #595959;
-$tertiary: #82939c;
-$color_4: #dee5e8;
-$roboto: "Roboto";
-$mulish: "Mulish";
+@import url("https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+.insight-pdp-509-review .review-section {
+  padding: 34px 15px 16px;
+}
+.insight-pdp-509-review .review-section .container {
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 56px 0 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  border-top: 1px solid #dee5e8;
+  border-bottom: 1px solid #dee5e8;
+}
+.insight-pdp-509-review .review-section .item-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  min-height: 175px;
+  max-width: 282px;
+  width: 100%;
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+.insight-pdp-509-review
+  .review-section
+  .item-wraper:nth-child(1)
+  .comment-wraper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 0 auto;
+  margin-top: 17px;
+}
 
-@import "https://fonts.googleapis.com/css2?family=Mulish:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap";
-.spz-2602 {
-  .review-section-2602 {
-    padding: 22px 15px 16px;
-    .container {
-      max-width: 1200px;
-      width: 100%;
-      margin: 0 auto;
-      padding: 41px 0 21px;
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      // border-top: 1px solid $color_4;
-      // border-bottom: 1px solid $color_4;
-    }
-    .item-wrapper {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      min-height: 175px;
-      max-width: 302.67px;
-      width: 100%;
-      -webkit-box-sizing: border-box;
-      box-sizing: border-box;
-      &:nth-child(1) {
-        max-width: 220px;
-
-        @media (max-width: 1199.98px) {
-          max-width: 296px;
-        }
-
-        @media (max-width: 767.98px) {
-          min-height: 60px;
-        }
-
-        .comment-wrapper {
-          display: -webkit-box;
-          display: -ms-flexbox;
-          display: flex;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-direction: column;
-          flex-direction: column;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
-          align-items: center;
-          margin: 0 auto;
-        }
-      }
-      &:nth-child(4) {
-        @media (max-width: 599.98px) {
-          min-height: auto;
-        }
-      }
-      .br-logo {
-        max-width: 161px;
-        margin-top: 15px;
-      }
-      .star {
-        max-width: 123px;
-        width: 100%;
-        margin: 0 auto;
-      }
-      .review-rate {
-        font-family: $roboto;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 22px;
-        line-height: 30px;
-        color: $tertiary;
-        margin-top: 24px;
-        margin-bottom: 17px;
-        text-align: center;
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
-        align-items: center;
-        margin: 24px 24px 17px;
-        span {
-          font-family: $mulish;
-          font-style: normal;
-          font-weight: 900;
-          font-size: 56px;
-          line-height: 64px;
-          color: $primary;
-          padding-right: 10px;
-        }
-      }
-      .comment {
-        font-family: $roboto;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-        color: $secondary;
-        // min-height: 96px;
-        margin-bottom: 16px;
-        letter-spacing: 0;
-      }
-      .profession,
-      .profession-desc {
-        font-family: $roboto;
-        font-style: normal;
-        font-weight: 400;
-        font-size: 16px;
-        line-height: 24px;
-      }
-      .profession {
-        color: $primary;
-        font-weight: 900;
-        margin-bottom: 4px;
-      }
-      .profession-desc {
-        color: $tertiary;
-      }
-    }
-  }
+.insight-pdp-509-review .review-section .item-wraper .gartner {
+  max-width: 161px;
+  margin-top: 14px;
+}
+.insight-pdp-509-review .review-section .item-wraper .star {
+  max-width: 123px;
+  width: 100%;
+  margin-left: 13px;
+}
+.insight-pdp-509-review .review-section .item-wraper .rating-numbers {
+  color: #3b454a;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 16px;
+  font-family: "Mulish";
+  font-style: normal;
+  margin-top: 8px;
+}
+.insight-pdp-509-review .review-section .item-wraper .review-rate {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 22px;
+  line-height: 30px;
+  color: #82939c;
+  margin-top: 24px;
+  margin-bottom: 17px;
+  text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 24px 24px 17px;
+}
+.insight-pdp-509-review .review-section .item-wraper .review-rate span {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 900;
+  font-size: 56px;
+  line-height: 64px;
+  color: #3b454a;
+  padding-right: 10px;
+}
+.insight-pdp-509-review .review-section .item-wraper .review-title {
+  font-family: "Mulish";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 18px;
+  line-height: 23px;
+  color: #3b454a;
+  margin-bottom: 16px;
+}
+.insight-pdp-509-review .review-section .item-wraper .comment-wraper {
+  display: flex;
+  flex-direction: column;
+}
+.insight-pdp-509-review .review-section .item-wraper .comment {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #595959;
+  min-height: 96px;
+  margin-bottom: 16px;
+  letter-spacing: 0;
+  margin-top: 0;
+}
+.insight-pdp-509-review .review-section .item-wraper .profession {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  color: #82939c;
+  margin-top: auto;
 }
 @media (max-width: 1199.98px) {
-  .spz-2602 {
-    .review-section-2602 {
-      padding: 0 0 30px;
-      .container {
-        max-width: 624px;
-        -ms-flex-flow: wrap;
-        flex-flow: wrap;
-        padding: 44px 0 9px;
-        justify-content: space-between;
-      }
-      .item-wrapper {
-        .br-logo {
-          margin-top: 8px;
-        }
-        margin-bottom: 17px;
-        max-width: 296px;
+  .insight-pdp-509-review .review-section {
+    padding: 22px 0 56px;
+  }
+  .insight-pdp-509-review .review-section .container {
+    max-width: 704px;
+    -ms-flex-flow: wrap;
+    flex-flow: wrap;
+    padding: 48px 0 16px;
+    justify-content: space-between;
+  }
 
-        .comment-wrapper {
-          margin: 0;
-        }
+  .insight-pdp-509-review .review-section .item-wraper .gartner {
+    margin-top: 8px;
+  }
+  .insight-pdp-509-review .review-section .item-wraper {
+    margin-bottom: 24px;
+    max-width: 336px;
+  }
 
-        &:nth-child(1) {
-          order: 1;
-
-          .comment-wrapper {
-            justify-content: center;
-            padding-top: 5px;
-          }
-        }
-        &:nth-child(2) {
-          order: 3;
-        }
-        &:nth-child(3) {
-          order: 2;
-        }
-        &:nth-child(4) {
-          order: 4;
-        }
-      }
-    }
+  .insight-pdp-509-review .review-section .item-wraper .comment-wraper {
+    margin: 0;
+  }
+  .insight-pdp-509-review
+    .review-section
+    .item-wraper:nth-child(1)
+    .comment-wraper {
+      margin-top: 12px;
+  }
+  .insight-pdp-509-review .review-section .item-wraper .review-rate{
+    margin: 22px 24px 16px;
+  }
+  .insight-pdp-509-review .review-section .item-wraper .comment{
+    padding-right: 24px;
   }
 }
 @media (max-width: 767.98px) {
-  .spz-2602 {
-    .review-section-2602 {
-      padding: 75px 0 10px;
-      .container {
-        max-width: 320px;
-        padding: 0 0 20px;
-      }
-      .item-wrapper {
-        max-width: 328px;
-        margin-bottom: 11px;
-
-        .comment-wrapper {
-          margin: 0 auto;
-        }
-
-        .comment {
-          margin-bottom: 11px;
-        }
-
-        &:nth-child(1) {
-          justify-content: flex-start;
-          margin-bottom: 23px;
-
-          .comment-wrapper {
-            margin: 0;
-            align-items: flex-start;
-          }
-          .comment {
-            padding-right: 1px;
-          }
-        }
-
-        &:nth-child(2) {
-          order: 2;
-        }
-        &:nth-child(3) {
-          order: 3;
-        }
-        &:nth-child(4) {
-          order: 4;
-        }
-      }
-    }
-
-    .review-section {
-      padding-top: 0;
-    //   .container {
-    //     padding-top: 21px;
-    //   }
-    }
+  .insight-pdp-509-review .review-section {
+    padding: 7px 0 40px;
   }
+  .insight-pdp-509-review .review-section .container {
+    max-width: 328px;
+    padding: 65px 0 10px;
+  }
+  .insight-pdp-509-review .review-section .item-wraper .review-rate{
+    margin: 20px 24px 16px;
+  }
+  .insight-pdp-509-review .review-section .item-wraper {
+    max-width: 328px;
+    margin-bottom: 24px;
+  }
+  .insight-pdp-509-review .review-section .item-wraper .comment-wraper {
+    margin: 0 auto;
+  }
+  .insight-pdp-509-review
+  .review-section
+  .item-wraper:nth-child(1)
+  .comment-wraper {
+    margin-bottom: 43px;
+}
+.insight-pdp-509-review .review-section .item-wraper .comment{
+  padding-right: 18px;
+}
 }
 @media (max-width: 359.98px) {
-  .spz-2602 {
-    .review-section-2602 {
-      .container {
-        max-width: 275px;
-      }
-    }
+  .insight-pdp-509-review .review-section .container {
+    max-width: 275px;
   }
 }
