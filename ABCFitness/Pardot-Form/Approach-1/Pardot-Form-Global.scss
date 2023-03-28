@@ -17,6 +17,7 @@ body.custom-spz {
       font-size: 32px;
       line-height: 36px;
       text-align: center;
+      font-family: aktiv-grotesk, sans-serif;
       letter-spacing: -1.7px;
       color: #37465a;
       margin-bottom: 28px;
@@ -37,8 +38,14 @@ body.custom-spz {
           width: 100%;
         }
 
+        &.input-filled {
+          p.error.no-label {
+            display: none;
+          }
+        }
         p.error.no-label {
           margin: 0;
+          font-family: "Circular Std";
           font-weight: 450;
           font-size: 14px;
           line-height: 20px;
@@ -50,10 +57,11 @@ body.custom-spz {
           margin-bottom: 17px;
           padding: 0;
           .field-label {
+            font-family: aktiv-grotesk, sans-serif;
             font-weight: 400;
-            font-size: 16px;
+            font-size: 18px;
             line-height: 26px;
-            color: #8d8994;
+            color: #a5a5a5;
             top: 19px;
             left: 21px;
             z-index: 1;
@@ -62,35 +70,94 @@ body.custom-spz {
             text-transform: capitalize;
             transition-delay: 200ms;
           }
+          &.country,
+          &.state {
+            .field-label {
+              display: none;
+            }
+            select.select {
+              color: #a5a5a5;
+              option {
+                color: #a5a5a5;
+              }
+            }
+
+            &.filled {
+              select.select {
+                color: #110f14;
+              }
+            }
+          }
 
           &.error {
-            input.text {
+            input.text,
+            select.select {
               border-color: #dc251c;
             }
             .field-label {
               top: 14px;
+              // color: #dc251c!important;
             }
           }
+
+          &.pd-select {
+            select.select {
+              background: #ffffff
+                url("//res.cloudinary.com/spiralyze/image/upload/v1679403028/ABCFitnessSolutions/Pardot-Form-Global/dropdown-arrow.svg");
+              background-repeat: no-repeat;
+              background-position-x: 95%;
+              background-position-y: center;
+              &.error {
+                &::after {
+                  top: 22px;
+                }
+              }
+            }
+
+            &.state select.select {
+              background-position-x: 97.5%;
+            }
+          }
+
           input.text {
             width: 100%;
             padding: 20px 20px;
             font-size: 18px;
+            font-family: aktiv-grotesk, sans-serif;
+            border-radius: 0;
+            border-color: #a5a5a5;
+            color: #110f14;
           }
           select.select {
             padding: 20px 20px;
+            padding-right: 28px;
             font-size: 18px;
             height: 62px;
+            white-space: nowrap;
+            font-family: aktiv-grotesk, sans-serif;
             background-color: #fff;
+            position: relative;
+            border-radius: 0;
+            border-color: #a5a5a5;
+            color: #110f14;
+
             -webkit-appearance: none;
 
             &:focus {
-              border: 1px solid #ff7335;
+              border: 1px solid #ff7335 !important;
+            }
+
+            /* Change Autocomplete styles in Chrome*/
+            input:-webkit-autofill,
+            select:-webkit-autofill {
+              -webkit-box-shadow: 0 0 0 30px white inset !important;
             }
           }
           input.text:focus {
-            border-color: #ff7335;
+            border-color: #ff7335 !important;
           }
           &.typing label.field-label {
+            display: block;
             top: -11px;
             left: 11px;
             background: #fff;
@@ -98,6 +165,51 @@ body.custom-spz {
             font-size: 14px;
             line-height: 20px;
             color: #ff7335;
+          }
+          &.typing.error.email label.field-label{
+            color: #ff7335!important;
+          }
+          &.valid-email.error.email label.field-label{
+            color: #a5a5a5!important;
+          }
+          &.valid-email.error.email.typing label.field-label{
+            color: #ff7335!important;
+          }
+          &.filled.error.email label.field-label {
+            color: #dc251c;
+          }
+          &.filled {
+            label.field-label {
+              display: block;
+              top: -11px;
+              left: 11px;
+              background: #fff;
+              padding: 1px 5px;
+              font-size: 14px;
+              line-height: 20px;
+            }
+
+            input.text,
+            select.select {
+              border-color: #b6b3ba;
+            }
+          }
+          &.filled.error.email {
+            input.text,
+            select.select {
+              border-color: #dc251c;
+            }
+          }
+          &.filled.error.email.valid-email {
+            input.text,
+            select.select {
+              border-color: #a5a5a5;
+            }
+          }
+          &.filled.typing {
+            select.select {
+              border-color: #ff7335;
+            }
           }
         }
 
@@ -112,9 +224,11 @@ body.custom-spz {
               .field-label {
                 left: 32px;
               }
-              &.typing label.field-label {
+              &.typing label.field-label,
+              &.filled label.field-label {
                 left: 22px;
               }
+
               &.error {
                 .field-label {
                   left: 21px;
@@ -159,7 +273,7 @@ body.custom-spz {
         &:nth-child(7) {
           order: 6;
           width: 100%;
-          .form-field.state{
+          .form-field.state {
             margin-right: 0;
           }
         }
@@ -176,7 +290,7 @@ body.custom-spz {
       margin: 8px 1px 21px;
       position: relative;
 
-      input {
+      .spz-submit-btn {
         font-weight: 700;
         font-size: 20px;
         line-height: 28px;
@@ -191,21 +305,27 @@ body.custom-spz {
         text-transform: none;
         padding-right: 26px;
         letter-spacing: 0;
+        outline-color: transparent;
+        cursor: pointer;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+        background-repeat: no-repeat;
+        background-position-x: calc(50% + 58px);
+        background-position-y: center;
         &:hover,
         &:active,
         &:focus {
-          background: #00aeef;
+          background-color: #00aeef;
         }
       }
-      &::after {
-        content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
-        display: block;
-        width: 30px;
-        height: 15px;
-        position: absolute;
-        top: 22px;
-        left: calc(50% + 52px);
-      }
+      // &::after {
+      //   content: url("//res.cloudinary.com/spiralyze/image/upload/v1677844102/ABCFitnessSolutions/Pardot-Form-Global/Arrow_2_Stroke.svg");
+      //   display: block;
+      //   width: 30px;
+      //   height: 15px;
+      //   position: absolute;
+      //   top: 22px;
+      //   left: calc(50% + 52px);
+      // }
     }
 
     .privacy-policy {
@@ -216,6 +336,7 @@ body.custom-spz {
         font-weight: 400;
         font-size: 13px;
         line-height: 20px;
+        font-family: aktiv-grotesk, sans-serif;
       }
       a {
         text-decoration: underline;
