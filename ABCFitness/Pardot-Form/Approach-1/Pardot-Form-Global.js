@@ -20,11 +20,15 @@
     }
 
     getCookie('COOKIE_NAME');
-    // console.log(getCookie('COOKIE_NAME'));
+    console.log(getCookie('COOKIE_NAME').split(';')[0] == 'true');
 
     if (getCookie('COOKIE_NAME') && location.href.indexOf('v11qsc') > -1) {
         // console.log('inside main function');
         // console.log(location.href);
+        const slickLib = document.createElement('script');
+        slickLib.src = 'https://res.cloudinary.com/spiralyze/raw/upload/v1678368768/ABCFitnessSolutions/Pardot-Form-Global/Approach%202%20%28Form%20Builder%29/Form.js';
+        document.head.appendChild(slickLib);
+    
         waitForElm("p.submit").then(function () {
             if (document.querySelector('form#pardot-form').getAttribute('action') == 'https://go.abcfitness.com/l/570002/2023-03-02/v11qsc') {
                 document.body.classList.add('custom-spz');
