@@ -1,58 +1,22 @@
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-
-<body>
-    <style>
-        body {
-            background-color: #191919;
-            margin: 0;
-            padding: 0;
-        }
-    </style>
-
-    <div class="spz-8001">
-        <div class="spz-8001-parent">
-            <div class="free-ebook-section">
-                <div class="free-ebook">
-                    <h6>Learn how to ship more, risk less, and improve performance.</h6>
-                    <p>Get your copy of the O’Reilly Effective Feature Management Ebook.</p>
-                    <div class="brand-image">
-                        <img alt="LaunchDarkly"
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1668501901/LaunchDarkly/8001_Blog/branding-desktop.png">
-                    </div>
-                </div>
-                <div class="free-ebook-cta">
-                    <a target="_blank" href="https://learn.launchdarkly.com/effective-feature-management">Get Free
-                        Ebook</a>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <script>
-        (function () {
-            // Include CSS file
-            function addCSS(filename) {
-                var head = document.getElementsByTagName('head')[0];
-                var style = document.createElement('link');
-                style.href = filename;
-                style.type = 'text/css';
-                style.rel = 'stylesheet';
-                head.append(style);
-            }
-
-            const v = new Date().getMilliseconds();
-            // Loading files
-            addCSS('https://res.cloudinary.com/spiralyze/raw/upload/f_auto/LaunchDarkly/8001_Blog/8001-Style.css?v=' + v);
-        })()
-    </script>
-
-</body>
-</html>
+<script>
+    $('.modal-6017 .tab-menu li a').on('click', function () {
+         var target = $(this).attr('data-rel');
+         $('.tab-menu li a, .tab-menu li').removeClass('active');
+         $(this).addClass('active');
+         $(this).parent('li').addClass('active');
+         $("#" + target).fadeIn('slow').siblings(".tab-box").hide();
+         return false;
+     });
+   
+   $('#lp-pom-box-473 #lp-code-478 .styles-module--secondaryCta').on('click', function () {
+         $('#lp-code-480').fadeIn('slow')
+     $('body').css('overflow','hidden');
+     });
+    $('.modal-6017 .close-modal').on('click', function () {
+         $('#lp-code-480').fadeOut('slow');
+      $('body').css('overflow','visible')
+     });
+   $(document).ready(function() {
+     if($('#lp-pom-image-479 img').length){$('#lp-pom-image-479 img').attr('alt','Integration tech stack');}
+ });
+ </script>
