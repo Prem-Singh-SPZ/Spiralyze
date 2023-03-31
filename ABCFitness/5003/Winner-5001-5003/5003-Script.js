@@ -16,7 +16,9 @@
 
         // Set test class
         document.body.classList.add(TEST_ENV.class);
-        headerChange();
+        if (document.querySelectorAll('.spz-login-btn').length == 0) {
+            headerChange();
+        }
         if (document.body.classList.contains('home')) {
             waitForElm('.l-body-wrapper .c-hero__content').then(function () {
                 document.querySelector('.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle.c-subtitle').insertAdjacentHTML('beforeend', `<div id="userEmailForm"">

@@ -24,7 +24,9 @@
     </a>`);
             });
         }
-        headerChange();
+        if (document.querySelectorAll('.spz-login-btn').length == 0) {
+            headerChange();
+        }
         document.body.classList.add("loaded");
     }
 
