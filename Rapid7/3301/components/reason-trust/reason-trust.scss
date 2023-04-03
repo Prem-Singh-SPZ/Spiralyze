@@ -1,0 +1,190 @@
+.spz-3301 {
+  .reason-trust-section {
+    margin-top: 1.5px;
+
+    .grid-x.wrapper {
+      @media (min-width: 1200px) {
+        padding-bottom: 37px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding-bottom: 29px;
+      }
+
+      justify-content: center;
+      .medium-10.large-8.cell.pageBlock__content {
+        max-width: 800px;
+
+        @media (max-width: 1199.98px) {
+          width: 624px;
+        }
+
+        @media (max-width: 767.98px) {
+          max-width: 320px;
+        }
+
+        @media (max-width: 340px) {
+          max-width: 290px;
+        }
+      }
+
+      h1 {
+        font-family: "Mulish";
+        font-style: normal;
+        font-weight: 900;
+        font-size: 64px;
+        line-height: 72px;
+        color: #3b454a;
+
+        strong {
+          font-weight: 900;
+          line-height: 72px;
+        }
+
+        @media (max-width: 1199.98px) {
+          font-size: 36px;
+          line-height: 44px;
+          max-width: 440px;
+          max-height: 86px;
+
+          strong {
+            line-height: 44px;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          max-width: 320px;
+          max-height: 132px;
+        }
+
+        @media (max-width: 340px) {
+          max-height: 162px;
+        }
+      }
+
+      ol {
+        max-width: 664px;
+        margin-left: auto;
+        counter-reset: listCounter;
+        margin-top: -3px;
+        list-style: none !important;
+
+        @media (max-width: 1199.98px) {
+          max-width: 488px;
+        }
+
+        @media (max-width: 767.98px) {
+          max-width: 320px;
+          margin-top: -35px;
+        }
+
+        li {
+          font-family: "Roboto";
+          counter-increment: listCounter;
+          margin-bottom: 57px;
+          position: relative;
+
+          @media (max-width: 1199.98px) {
+            margin-bottom: 41px;
+          }
+
+          @media (max-width: 767.98px) {
+            margin-top: 89px;
+          }
+
+          h3 {
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 30px;
+            color: #e85e26;
+            padding-left: 25px;
+            margin-bottom: 15px;
+
+            strong {
+              font-weight: 900;
+            }
+          }
+
+          span {
+            display: flex;
+            font-family: "Roboto";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 18px;
+            line-height: 26px;
+            color: #3b454a;
+
+            @media (max-width: 1199.98px) {
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            br {
+              display: none;
+            }
+          }
+
+          &::marker {
+            content: "";
+          }
+
+          &::before {
+            content: counter(listCounter) ".";
+            position: absolute;
+            font-style: normal;
+            font-weight: 900;
+            font-size: 22px;
+            line-height: 30px;
+            color: #e85e26;
+          }
+
+          &::after {
+            position: absolute;
+            height: 120px;
+            width: 120px;
+            left: -136px;
+            bottom: 0;
+
+            @media (max-width: 1199.98px) {
+              bottom: auto;
+              top: 0;
+            }
+
+            @media (max-width: 767.98px) {
+              top: -97px;
+              left: -40px;
+              transform: scale(0.33);
+            }
+          }
+
+          &:nth-child(2)::after {
+            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1675332645/RAPID7/3301%20%7C%20Rapid7%20%7C%20XDR%20vs%20Comp%20%7C%20TechValidate%20Reviews/threat-engine.svg");
+          }
+          
+          &:nth-child(1)::after {
+            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1675332645/RAPID7/3301%20%7C%20Rapid7%20%7C%20XDR%20vs%20Comp%20%7C%20TechValidate%20Reviews/time-to-value.svg");
+          }
+          
+          &:nth-child(3)::after {
+            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1675332645/RAPID7/3301%20%7C%20Rapid7%20%7C%20XDR%20vs%20Comp%20%7C%20TechValidate%20Reviews/cloud-ir.svg");
+          }
+
+        }
+      }
+
+      .spz-cta-section {
+        margin-top: -7px;
+
+        @media (max-width: 1199.98px) {
+          margin-top: 51px;
+          margin-bottom: 8px;
+        }
+
+        @media (max-width: 767.98px) {
+          margin-top: 57px;
+        }
+      }
+    }
+  }
+}
