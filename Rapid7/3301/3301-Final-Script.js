@@ -28,6 +28,7 @@ var intr = setInterval(function () {
 
     }
     moveElement('.pageContent .customerLogos', '.off-canvas-wrapper .off-canvas-content .longHero');
+    jQuery('.productOverview .grid-x .large-order-1').attr('id','main-form-spz');
 
 }, 100);
 
@@ -45,7 +46,7 @@ const ctaButtonsSection = () => {
     return `<div class="spz-cta-section">
                 <div class="button-container">
                 <div class="second-cta">
-                <a href="#mktoForm_2857" class="button btn-primary mdBtn spz-demo-btn" data-element-block="Product Wheel Block"
+                <a href="#main-form-spz" class="button btn-primary mdBtn spz-demo-btn" data-element-block="Product Wheel Block"
                     data-element-location="hero" data-element-label="watch demo">
                     WATCH DEMO
                 </a>
@@ -187,6 +188,25 @@ function formLoad() {
         });
         checkInputform();
         checkFilled();
+        jQuery('body').on("change", '#mktoForm_2857 select', function (event) {
+            checkInputform();
+            // enabledisableform(event);
+            // jQuery(".main-form .mktoForm .mktoFormRow #State option:nth-child(1)").text('State');
+            jQuery('.mktoFormRow[input-name = parent-State] .mktoFormCol .mktoFieldWrap').append("<span class='error-message'> </span>");
+            if (jQuery(this).val() != '') {
+                jQuery(this).addClass('blackText');
+            } else {
+                jQuery(this).removeClass('blackText');
+            }
+        });
+        jQuery("body").on("focus", '#mktoForm_2857 input , #mktoForm_2857 select', function () {
+            jQuery(this).closest('div').addClass('focused');
+        }).on("blur", '#mktoForm_2857 input , #mktoForm_2857 select', function () {
+            checkFilled();
+            if (jQuery(this).val() == "" || jQuery(this).val() == null) {
+                jQuery(this).closest('div').removeClass('focused').addClass('invalid-field');
+            }
+        });
 
         if (document.querySelectorAll('#mktoForm_2857 .mktoButtonRow').length > 0) {
             document.querySelector('#mktoForm_2857 .mktoButtonRow').insertAdjacentHTML('beforebegin', '<div class="text-link">Please refer to our <a href="/privacy-policy/" target="_blank" class="customer-btn">Privacy Policy</a> or contact us at <a href="mailto:info@rapid7.com">info@rapid7.com</a> for more details.</div>');
@@ -243,22 +263,3 @@ function checkFilled() {
 }
 
 
-jQuery('body').on("change", '#mktoForm_2857 select', function (event) {
-    checkInputform();
-    // enabledisableform(event);
-    jQuery(".main-form .mktoForm .mktoFormRow #State option:nth-child(1)").text('State');
-    jQuery('.mktoFormRow[input-name = parent-State] .mktoFormCol .mktoFieldWrap').append("<span class='error-message'> </span>");
-    if (jQuery(this).val() != '') {
-        jQuery(this).addClass('blackText');
-    } else {
-        jQuery(this).removeClass('blackText');
-    }
-});
-jQuery("body").on("focus", '#mktoForm_2857 input , #mktoForm_2857 select', function () {
-    jQuery(this).closest('div').addClass('focused').removeClass('invalid-field');
-}).on("blur", '#mktoForm_2857 input , #mktoForm_2857 select', function () {
-    checkFilled();
-    if (jQuery(this).val() == "" || jQuery(this).val() == null) {
-        jQuery(this).closest('div').removeClass('focused').addClass('invalid-field');
-    }
-});
