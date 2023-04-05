@@ -25,11 +25,9 @@ var intr = setInterval(function () {
         if (document.querySelectorAll('.spz-3302 .reason-trust-section .grid-x.wrapper').length > 0) {
             document.querySelector('.spz-3302 .reason-trust-section .grid-x.wrapper').insertAdjacentHTML('afterend', reviewSection());
         }
-
     }
     moveElement('.pageContent .customerLogos', '.off-canvas-wrapper .off-canvas-content .longHero');
-    jQuery('.productOverview .grid-x .large-order-1').attr('id','main-form-spz');
-
+    jQuery('.productOverview .grid-x .large-order-1').attr('id', 'main-form-spz');
 }, 100);
 
 
@@ -40,13 +38,19 @@ document.head.appendChild(content);
 
 content.onload = function () {
     formLoad();
+    jQuery('.spz-demo-btn').click(function () {
+        let scrollOffset = window.innerWidth > 992 ? 100 : 120;
+        jQuery("html, body").animate({
+            scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
+        }, 700);
+    });
 };
 
 const ctaButtonsSection = () => {
     return `<div class="spz-cta-section">
                 <div class="button-container">
                 <div class="second-cta">
-                <a href="#main-form-spz" class="button btn-primary mdBtn spz-demo-btn" data-element-block="Product Wheel Block"
+                <a href="javascript:void(0);" class="button btn-primary mdBtn spz-demo-btn" data-element-block="Product Wheel Block"
                     data-element-location="hero" data-element-label="watch demo">
                     WATCH DEMO
                 </a>
@@ -99,7 +103,7 @@ function formLoad() {
     var isValidCompanyEmail = false;
     MktoForms2.loadForm("//information.rapid7.com", "411-NAK-970", 2857);
     MktoForms2.whenReady(function (form) {
-        console.log('form ready');
+        // console.log('form ready');
         var thankYouWindow;
         var allowFreemail = false;
         var hasSubmitMessage = false;
@@ -110,7 +114,7 @@ function formLoad() {
         mktoForm.onValidate(function (form) {
             // Validates company email if freemail class present
             if ((!isValidCompanyEmail) && (!allowFreemail)) {
-                console.log('invalid? isValidCompanyEmail: ' + isValidCompanyEmail);
+                // console.log('invalid? isValidCompanyEmail: ' + isValidCompanyEmail);
                 mktoForm.submittable(false);
                 var email = jQuery('#Email').val();
                 var emailRequest =
@@ -132,7 +136,7 @@ function formLoad() {
 
                         // If all three checks are true, email is valid and lets move to the next validation state
                         if (ips_val == 'true' && eme_val == 'true' && emdf_val == 'true') {
-                            console.log('valid');
+                            // console.log('valid');
                             isValidCompanyEmail = true;
                             mktoForm.submit();
                             return true;
@@ -140,7 +144,7 @@ function formLoad() {
                         }
                         // If all three checks are NOT met, throw a validation error message for the user to try again...
                         else {
-                            console.log('invalid');
+                            // console.log('invalid');
                             // Show error message, pointed at VehicleSize element
                             var emailElem = mktoForm.getFormElem().find("#Email");
                             mktoForm.showErrorMessage("Must be valid company email.", emailElem);
@@ -149,7 +153,7 @@ function formLoad() {
                     }
                 });
             } else {
-                console.log('valid? isValidCompanyEmail: ' + isValidCompanyEmail);
+                // console.log('valid? isValidCompanyEmail: ' + isValidCompanyEmail);
                 mktoForm.submittable(true);
             }
         });
@@ -191,7 +195,6 @@ function formLoad() {
         jQuery('body').on("change", '#mktoForm_2857 select', function (event) {
             checkInputform();
             // enabledisableform(event);
-            // jQuery(".main-form .mktoForm .mktoFormRow #State option:nth-child(1)").text('State');
             jQuery('.mktoFormRow[input-name = parent-State] .mktoFormCol .mktoFieldWrap').append("<span class='error-message'> </span>");
             if (jQuery(this).val() != '') {
                 jQuery(this).addClass('blackText');
@@ -209,7 +212,7 @@ function formLoad() {
         });
 
         if (document.querySelectorAll('#mktoForm_2857 .mktoButtonRow').length > 0) {
-            document.querySelector('#mktoForm_2857 .mktoButtonRow').insertAdjacentHTML('beforebegin', '<div class="text-link">Please refer to our <a href="/privacy-policy/" target="_blank" class="customer-btn">Privacy Policy</a> or contact us at <a href="mailto:info@rapid7.com">info@rapid7.com</a> for more details.</div>');
+            document.querySelector('#mktoForm_2857 .mktoButtonRow').insertAdjacentHTML('beforebegin', '<div class="text-link">Please refer to our <a href="/privacy-policy/" class="customer-btn">Privacy Policy</a> or contact us at <a href="mailto:info@rapid7.com">info@rapid7.com</a> for more details.</div>');
         }
 
         var targetNodes = document.querySelectorAll('.mktoFieldWrap');
@@ -223,7 +226,6 @@ function formLoad() {
                     jQuery(this).find('.mktoFieldWrap').removeClass('invalid-field');
                 }
             });
-            checkInputform();
             checkFilled();
         };
         var observer = new MutationObserver(callback);
@@ -241,11 +243,22 @@ function moveElement(sourceElm, targetLoc) {
     }
 }
 function checkInputform() {
+    jQuery(".main-form .mktoForm .mktoFormRow #Country option:nth-child(1)").text('');
+    jQuery(".main-form .mktoForm .mktoFormRow #State option:nth-child(1)").text('');
+
     jQuery('form#mktoForm_2857 .mktoFormRow').each(function () {
         jQuery(this).removeAttr('input-name');
         if (jQuery(this).find('input,select,textarea').length > 0) {
             var currentID = jQuery(this).find('input,select,textarea').attr('name');
             jQuery(this).attr('input-name', 'parent-' + currentID);
+            if (jQuery(this).find('input').length) {
+                let labelName = jQuery(this).find('input').attr('placeholder');
+                jQuery(this).find('label').text(labelName);
+            }
+            else if (jQuery(this).find('select').length) {
+                let labelName = jQuery(this).find('select').attr('name');
+                jQuery(this).find('label').text(labelName);
+            }
         } else {
             jQuery(this).attr('input-name', 'parent-noinput');
         }
