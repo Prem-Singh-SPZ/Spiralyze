@@ -32,15 +32,15 @@ $font-family_5: Muli;
   }
   .medium-10.large-order-3 {
     padding-top: 16px;
+    padding-bottom: 32px;
     @media (min-width: 767.98px) and (max-width: 1023.98px) {
       padding-top: 277px;
+      padding-bottom: 25px;
       width: 85%;
       margin-left: 7.5%;
     }
     @media (max-width: 767.98px) {
-      padding-top: 242px;
-      padding-left: 0;
-      padding-right: 0;
+      padding: 242px 0 0 0;
     }
     > .offers-box {
       display: none !important;
@@ -113,6 +113,10 @@ $font-family_5: Muli;
           height: auto;
           width: auto;
           margin-bottom: 20px;
+
+          &.error-field {
+            margin-bottom: 10px;
+          }
           @media (max-width: 767.98px) {
             max-width: 100%;
           }
@@ -211,7 +215,7 @@ $font-family_5: Muli;
               border: 1px solid #dee5e8 !important;
               -webkit-box-sizing: border-box;
               box-sizing: border-box;
-              border-radius: 5px !important;
+              border-radius: 4px !important;
               font-family: "Roboto";
               font-style: normal;
               font-weight: 400;
@@ -219,7 +223,7 @@ $font-family_5: Muli;
               line-height: 24px !important;
               color: #3b454a !important;
               margin: 0;
-              padding: 7px 32px 6px 14px !important;
+              padding: 7px 14px 6px 14px !important;
             }
             &:hover {
               border: 1px solid #cacaca !important;
@@ -233,7 +237,7 @@ $font-family_5: Muli;
             border: 1px solid #dfdfdf !important;
             -webkit-box-sizing: border-box;
             box-sizing: border-box;
-            border-radius: 5px !important;
+            border-radius: 4px !important;
             font-style: normal;
             font-weight: 400;
             font-size: 16px !important;
@@ -253,7 +257,7 @@ $font-family_5: Muli;
             white-space: nowrap;
             -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
-            padding: 6px 48px 6px 14px !important;
+            padding: 6px 25px 6px 14px !important;
             &:hover {
               border: 1px solid #cacaca !important;
             }
@@ -425,6 +429,8 @@ $font-family_5: Muli;
         }
       }
       @media (max-width: 1023.98px) {
+        margin-left: auto;
+        margin-right: auto;
         > p {
           font-weight: 300;
         }
@@ -458,6 +464,7 @@ $font-family_5: Muli;
       @media (max-width: 767.98px) {
         padding: 32px 24px;
         margin: auto;
+        max-width: 321.34px;
         h2 {
           font-weight: 900;
           font-size: 28px;
@@ -474,15 +481,16 @@ $font-family_5: Muli;
             select {
               background: #fff
                 url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg)
-                no-repeat center right 12px;
+                no-repeat center right 16px;
+              background-size: 10px;
             }
           }
-          .mktoButtonWrap.mktoSimple {
-            .mktoButton {
-              max-width: 280px !important;
-              margin-top: 5px !important;
-            }
-          }
+          // .mktoButtonWrap.mktoSimple {
+          //   .mktoButton {
+          //     max-width: 280px !important;
+          //     margin-top: 5px !important;
+          //   }
+          // }
         }
         .form-bottom-text {
           margin-top: 20px;
@@ -565,7 +573,7 @@ $font-family_5: Muli;
     .mktoForm {
       .mktoFormRow[input-name="parent-ExplicitOptOut__c"] {
         display: block !important;
-        max-width: 100%;
+        max-width: 100% !important;
         width: 100%;
         height: auto;
         margin-bottom: 0;
@@ -640,6 +648,20 @@ $font-family_5: Muli;
       height: auto !important;
       margin-top: 4px !important;
     }
+
+    .mktoTemplateBox {
+      > br {
+        display: none;
+      }
+
+      > .mktoButtonWrap.mktoSimple {
+        display: none;
+      }
+
+      > a.mktoNotYou {
+        padding-left: 10px;
+      }
+    }
   }
   .text-link {
     display: inline-block;
@@ -653,11 +675,11 @@ $font-family_5: Muli;
     color: #3b454a;
     margin-top: 4px;
     margin-left: -3px;
-    // @media (min-width: 767.98px) and (max-width: 1023.98px) {
+    // @media (min-width: 1023.98px) {
     //   margin-top: 4px;
     // }
     @media (max-width: 767.98px) {
-      margin-top: 3px;
+      margin-top: 5px;
       text-align: left;
       margin-left: 0;
     }

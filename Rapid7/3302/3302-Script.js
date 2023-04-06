@@ -27,7 +27,6 @@ var intr = setInterval(function () {
         }
     }
     moveElement('.pageContent .customerLogos', '.off-canvas-wrapper .off-canvas-content .longHero');
-    jQuery('.productOverview .grid-x .large-order-1').attr('id', 'main-form-spz');
 }, 100);
 
 
@@ -37,6 +36,7 @@ content.src = '//information.rapid7.com/js/forms2/js/forms2.min.js';
 document.head.appendChild(content);
 
 content.onload = function () {
+    jQuery('.productOverview .grid-x .large-order-1').attr('id', 'main-form-spz');
     formLoad();
     jQuery('.spz-demo-btn').click(function () {
         let scrollOffset = window.innerWidth > 992 ? 100 : 120;
@@ -221,9 +221,11 @@ function formLoad() {
             jQuery('.mktoFormCol').each(function () {
                 if (jQuery(this).find('.mktoError').length > 0 && jQuery(this).find('.mktoError').attr('style').indexOf('none') == -1) {
                     jQuery(this).find('.mktoFieldWrap').addClass('invalid-field');
+                    jQuery(this).parent().addClass('error-field');
                 } else {
-                    //jQuery('#mktoForm_2857 input, #mktoForm_2857 select').closest('div').removeClass('invalid-field');
+                    //jQuery('#mktoForm_6065 input, #mktoForm_6065 select').closest('div').removeClass('invalid-field');
                     jQuery(this).find('.mktoFieldWrap').removeClass('invalid-field');
+                    jQuery(this).parent().removeClass('error-field');
                 }
             });
             checkFilled();
