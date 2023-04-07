@@ -22,16 +22,98 @@ body.spz-5001 {
             max-width: 1248px !important;
 
             .span6.dnd-column:first-child {
+              position: relative;
               .row-depth-1.row-number-2 {
                 .widget-type-custom_widget {
                   .hs_cos_wrapper_type_rich_text {
-                    h3:nth-child()
+                    > h3 {
+                      margin-bottom: 45px;
+                    }
+                    .spz-hero-sub-title {
+                      border-left: 8px solid #000;
+                      padding-left: 16px;
+                      > h3:first-child {
+                        margin-bottom: 3px;
+                      }
+                      h3:last-child {
+                        font-family: "Darker Grotesque";
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 48px;
+                        line-height: 44px !important;
+                        letter-spacing: -1px;
+                      }
+                    }
+
+                    > p {
+                      padding-left: 24px;
+                      padding-top: 8px;
+
+                      span {
+                        font-family: "Darker Grotesque";
+                        font-style: normal;
+                        font-weight: 800;
+                        font-size: 24px;
+                        line-height: 24px;
+                        letter-spacing: -0.48px;
+                        padding-right: 5px;
+                      }
+                    }
+                    > .container {
+                      padding-left: 18px;
+                      margin-top: 28px;
+                      ul {
+                        list-style-type: none !important;
+                        li {
+                          position: relative;
+                          padding-bottom: 4px;
+                          span {
+                            font-family: "Inter";
+                            font-style: normal;
+                            font-weight: 400;
+                            font-size: 18px;
+                            line-height: 28px;
+                            strong {
+                              font-family: "Darker Grotesque";
+                              font-style: normal;
+                              font-weight: 800;
+                              font-size: 24px;
+                              line-height: 24px;
+                              letter-spacing: -0.24px;
+                            }
+                          }
+
+                          &::before {
+                            content: "";
+                            background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275032/drata/5001/bullet-arrow.svg");
+                            width: 16px;
+                            height: 16px;
+                            position: absolute;
+                            left: -24px;
+                            top: 8px;
+                          }
+                        }
+                      }
+
+                      .bg {
+                        img[alt="ornament_1"] {
+                          position: absolute;
+                          left: -496px;
+                        }
+                        img[alt="ornament_2"] {
+                          position: absolute;
+                          right: -196px;
+                          bottom: -16px;
+                        }
+                      }
+                    }
                   }
                 }
               }
             }
 
             .span6.dnd-column:last-child {
+              margin-left: 16px;
               .widget-type-form {
                 .hs_cos_wrapper_type_form {
                   form.hs-form-private {
@@ -41,6 +123,9 @@ body.spz-5001 {
                     border: none;
                     display: flex;
                     flex-wrap: wrap;
+                    min-width: 624px;
+                    z-index: 1;
+                    position: relative;
                     .spz-demo-form-title {
                       font-family: "Darker Grotesque";
                       font-style: normal;
@@ -55,6 +140,9 @@ body.spz-5001 {
 
                     > fieldset {
                       .field.hs-form-field:not(.hs-fieldtype-checkbox) {
+                        > label {
+                          display: none;
+                        }
                         input,
                         select {
                           width: 271px;
