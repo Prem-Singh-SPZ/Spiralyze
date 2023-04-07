@@ -698,8 +698,11 @@ $font-family_5: Muli;
             line-height: 1;
             float: none;
           }
-          label {
-            // display: none !important;
+          &[input-name="parent-AnonymousIP"],
+          &[input-name="parent-browseLang"],
+          &[input-name="parent-ClickSource"],
+          &[input-name="parent-InferredCountry"] {
+            margin-right: 0 !important;
           }
           .mktoFormCol {
             .mktoFieldWrap {
@@ -1105,7 +1108,7 @@ $font-family_5: Muli;
     .mktoForm {
       .mktoFormRow[input-name="parent-ExplicitOptOut__c"] {
         display: block !important;
-        max-width: 100%!important;
+        max-width: 100% !important;
         width: 100%;
         height: auto;
         margin-bottom: 0;
@@ -1168,7 +1171,7 @@ $font-family_5: Muli;
                 color: #3b454a;
                 margin: 0 !important;
                 float: none;
-                white-space: nowrap;
+                // white-space: nowrap;
                 width: calc(100% - 14px);
               }
             }
