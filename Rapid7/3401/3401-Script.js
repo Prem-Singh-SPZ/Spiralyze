@@ -11,7 +11,7 @@
 
     // form append //
     function formLoad() {
-        jQuery('.longHero .hub-hero-block .large-order-3').append('<div class="main-form"><div data-block="marketo"><div class="clearfix marketoForm"><div id="intro"><h2>Let&rsquo;s start the conversation</h2><p id="fieldInstruction" class="instructions">All fields are mandatory.</p></div><form id="mktoForm_6065"></form></div></div></div></div>');
+        jQuery('.longHero .hub-hero-block .large-order-3').append('<div class="main-form"><div data-block="marketo"><div class="clearfix marketoForm"><div id="intro"><h2>Let&rsquo;s start the conversation</h2><p id="fieldInstruction" class="instructions">All fields are mandatory.</p></div><form id="mktoForm_6065"></form><div id="thankyouText" style="display:none;" class="messageBox green"><h3>Thank you for your interest in Threat Complete and Rapid7. A member of our team will be reaching out to you.</h3></div></div></div></div></div>');
         var mktoForm;
         var isValidCompanyEmail = false;
         MktoForms2.loadForm("//information.rapid7.com", "411-NAK-970", 6065);
@@ -19,7 +19,7 @@
             // console.log('form ready');
             var thankYouWindow;
             var allowFreemail = false;
-            var hasSubmitMessage = false;
+            var hasSubmitMessage = true;
             var hasUrlOverride = false;
             var opensNewWindow = false;
             mktoForm = form;
@@ -27,7 +27,7 @@
             mktoForm.onValidate(function (form) {
                 // Validates company email if freemail class present
                 if ((!isValidCompanyEmail) && (!allowFreemail)) {
-                    // console.log('invalid? isValidCompanyEmail: ' + isValidCompanyEmail);
+                    console.log('invalid? isValidCompanyEmail: ' + isValidCompanyEmail);
                     mktoForm.submittable(false);
                     var email = jQuery('#Email').val();
                     var emailRequest =
@@ -49,7 +49,7 @@
 
                             // If all three checks are true, email is valid and lets move to the next validation state
                             if (ips_val == 'true' && eme_val == 'true' && emdf_val == 'true') {
-                                // console.log('valid');
+                                console.log('valid');
                                 isValidCompanyEmail = true;
                                 mktoForm.submit();
                                 return true;
@@ -66,17 +66,20 @@
                         }
                     });
                 } else {
-                    // console.log('valid? isValidCompanyEmail: ' + isValidCompanyEmail);
+                    console.log('valid? isValidCompanyEmail: ' + isValidCompanyEmail);
                     mktoForm.submittable(true);
                 }
+                debugger
             });
             mktoForm.onSubmit(function (form) {
+                debugger
                 if (opensNewWindow) {
                     thankYouWindow = window.open('');
                 }
             });
 
             mktoForm.onSuccess(function (values, followUpUrl) {
+                debugger
                 window.dataLayer.push({ 'event': 'form_submit_success' });
                 var overrideUrl = '';
                 if (opensNewWindow) {
@@ -97,6 +100,7 @@
                     //hides form after submit, replaces with thank you message
                     form.getFormElem().hide();
                     document.getElementById('thankyouText').style.display = 'block';
+                    document.getElementById('fieldInstruction').style.display = 'none';
                     return false;
                 } else {
                     // inherits marketo settings

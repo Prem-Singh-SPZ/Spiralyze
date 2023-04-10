@@ -28,7 +28,7 @@ body.spz-2001[class] {
       }
     }
     &::after {
-      @media (max-width: 1199.98px) {
+      @media (max-width: 991.98px) {
         content: "";
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Tablet-left.png");
         width: 273px;
@@ -36,14 +36,14 @@ body.spz-2001[class] {
         right: auto;
         left: 0;
         background-repeat: no-repeat;
-        top: 597px;
+        top: 807px;
         background-size: 100%;
         z-index: 1;
         position: absolute;
       }
       @media (max-width: 767.98px) {
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Mobile-left.png");
-        top: 520px;
+        top: 820px;
         width: 310px;
         height: 850px;
         overflow: hidden;
@@ -55,16 +55,17 @@ body.spz-2001[class] {
           @media (min-width: 1199.98px) {
             max-width: 1180px;
           }
-          @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            max-width: 628px;
-          }
+          // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          //   max-width: 628px;
+          // }
           .hidden-mobile {
             display: none !important;
           }
 
-          .widget {
+          > .widget#element-552 {
             top: auto !important;
             bottom: 16px;
+            left: 0 !important;
             @media (max-width: 1199.98px) {
               bottom: -10px;
               // left: -8px!important;
@@ -94,23 +95,79 @@ body.spz-2001[class] {
     .section.section-relative:nth-child(2) {
       min-height: 1722px;
       @media (min-width: 1199.98px) {
-        min-height: 820px;
-        height: 820px !important;
+        min-height: 834px;
+        height: 834px !important;
       }
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
         height: 1435px;
         min-height: 1435px;
       }
       > .section-block[class] {
+        background: transparent !important;
         .section-inner.section-fit.section-relative[class] {
           @media (min-width: 1199.98px) {
             max-width: 1180px;
           }
-          @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            max-width: 628px;
-          }
+          // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          //   max-width: 628px;
+          // }
           .widget[class] {
             display: none;
+            &#element-641,
+            &#element-612,
+            &#element-555,
+            &#element-556 {
+              display: block;
+            }
+            &#element-556 {
+              left: 0;
+              max-width: 52.55%;
+              width: 100%;
+              @media (max-width: 991.98px) {
+                max-width: 100%;
+              }
+              > .contents {
+                display: none;
+              }
+            }
+
+            &#element-641 {
+              right: 0;
+              left: auto;
+              top: 34px;
+              box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25),
+                0px 2px 30px rgba(0, 0, 0, 0.15);
+              border-radius: 10px;
+
+              @media (max-width: 991.98px) {
+                right: 0;
+                left: 0;
+                top: 811px;
+                margin: auto;
+              }
+            }
+            &#element-555 {
+              right: 12px;
+              left: auto;
+              top: 94px;
+              @media (min-width: 767.98px) and (max-width: 991.98px) {
+                right: 0;
+                left: 0;
+                top: 811px;
+                margin: auto;
+              }
+            }
+            &#element-612 {
+              right: 12px;
+              left: auto;
+              top: 54px;
+              @media (min-width: 767.98px) and (max-width: 991.98px) {
+                right: 0;
+                left: 0;
+                top: 811px;
+                margin: auto;
+              }
+            }
           }
 
           .spz-hero-container[class] {
@@ -125,7 +182,7 @@ body.spz-2001[class] {
                 @media (max-width: 767.98px) {
                   padding: 20px;
                 }
-                padding-top: 66px;
+                padding-top: 6px;
                 @media (max-width: 1199.98px) {
                   padding-top: 82px;
                 }
@@ -193,30 +250,6 @@ body.spz-2001[class] {
                   }
                 }
               }
-
-              .hero-right-form {
-                min-width: 638px;
-                margin-right: -48px;
-                margin-top: -4px;
-                z-index: 2;
-                @media (max-width: 1199.98px) {
-                  min-width: 726px;
-                  max-width: 726px;
-                  margin-right: 0px;
-                  margin-top: -5px;
-                }
-                @media (max-width: 767.98px) {
-                  width: 100%;
-                  max-width: 375px;
-                  margin-top: -12px;
-                  min-width: auto;
-                }
-                picture {
-                  img {
-                    width: 100%;
-                  }
-                }
-              }
             }
 
             .hero-bottom-content[class] {
@@ -240,16 +273,44 @@ body.spz-2001[class] {
                   font-size: 18px;
                 }
               }
-              picture {
-                display: flex;
-                justify-content: center;
-                margin-top: 28px;
+              .partner-img-container {
                 position: relative;
-                z-index: 2;
-                img {
-                  @media (max-width: 767.98px) {
-                    width: 100%;
+                &::after {
+                  content: "";
+                  background: linear-gradient(
+                    90deg,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 100%
+                  );
+                  position: absolute;
+                  width: 40px;
+                  height: 58px;
+                  left: 0px;
+                  top: 0px;
+                }
+                marquee {
+                  img {
+                    width: auto;
+                    max-height: 58px;
+                    padding-right: 70px;
                   }
+                }
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  width: 40px;
+                  height: 58px;
+                  left: auto;
+                  top: 0px;
+                  right: 0;
+                  z-index: 1;
+                  background: linear-gradient(
+                    90deg,
+                    #ffffff 0%,
+                    rgba(255, 255, 255, 0) 100%
+                  );
+                  transform: matrix(-1, 0, 0, 1, 0, 0);
                 }
               }
             }

@@ -33,6 +33,7 @@
       .button.mdBtn {
         padding: 17px 47.5px;
         margin-bottom: 11px;
+        font-weight: 900;
         // @media (max-width: 1024px) {
         //   padding: 0.71rem 0.85rem;
         // }
@@ -46,7 +47,7 @@
         display: block;
         font-family: "Roboto";
         font-style: normal;
-        font-weight: 300;
+        font-weight: 400;
         font-size: 13px;
         line-height: 15px;
         color: #3b4549;
@@ -506,6 +507,11 @@ $mulish: "Mulish";
   }
 
   .off-canvas-wrapper {
+    .r7-nav .sub-nav__title a {
+      @media (max-width: 767.98px) {
+        white-space: normal;
+      }
+    }
     .productOverview {
       .grid-container > .grid-x > .large-5.cell span {
         @media (max-width: 1023.98px) {
@@ -769,10 +775,10 @@ $font-family_5: Muli;
                 top: 45px;
               }
               input {
-                border: 1px solid #ed1c24 !important;
+                border: 1px solid #e85e26 !important;
               }
               select {
-                border: 1px solid #ed1c24 !important;
+                border: 1px solid #e85e26 !important;
               }
             }
           }
@@ -810,7 +816,7 @@ $font-family_5: Muli;
             font-weight: 400;
             font-size: 16px !important;
             line-height: 24px !important;
-            color: #3b454a !important;
+            // color: #3b454a !important;
             margin: 0;
             color: $color_10 !important;
             background: #fff
@@ -833,6 +839,9 @@ $font-family_5: Muli;
               border: 1px solid #3b454a !important;
             }
             &::-ms-expand {
+              display: none;
+            }
+            option:first-child {
               display: none;
             }
           }
@@ -1109,7 +1118,7 @@ $font-family_5: Muli;
       .mktoFormRow[input-name="parent-ExplicitOptOut__c"] {
         display: block !important;
         max-width: 100% !important;
-        width: 100%;
+        width: 100% !important;
         height: auto;
         margin-bottom: 0;
         .mktoFormCol {

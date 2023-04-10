@@ -19,7 +19,7 @@
     function heroContentUpdate() {
         document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
         document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('srcset','//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
-        document.querySelector('#landing-page > main section.section:nth-child(2) .section-block .section-inner').insertAdjacentHTML('afterbegin', `<div class="spz-hero-container">
+        document.querySelector('#landing-page > main section.section:nth-child(2) .section-block .section-inner #element-556').insertAdjacentHTML('afterbegin', `<div class="spz-hero-container">
         <div class="hero-top-content">
         <div class="hero-left-summary">
         <p>GYM MANAGEMENT SOFTWARE</p>
@@ -28,21 +28,18 @@
 <span>CRM.</span> Track and manage members, leads, check-ins, classes, payments, and more, in one place.
  </li><li> <span>Billing.</span> Automate billing & payment collection. Accept family & group subscriptions. Increase collections 7%.</li> </ul>
         </div>
-        <div class="hero-right-form">
-        <picture>
-            <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Form-desk.png">
-            <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/form-tab.png">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/2001/assets/Form-mobile.png" alt="Form">
-            </picture>
-        </div>
         </div>
         <div class="hero-bottom-content">
         <p>Join 20,000+ gyms & studios using ABC Fitness Solutions</p>
-        <picture>
-        <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/logos-desktop.svg">
-        <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/logos-tablet.svg">
-        <img src="//res.cloudinary.com/spiralyze/image/upload/v1676883934/ABCFitnessSolutions/2001/assets/logos-mobile.svg" alt="Social Icons">
-        </picture>
+        <div class="partner-img-container">
+        <marquee>
+                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920096/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.webp" alt="ClubFitness">
+                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.webp" alt="Hidden Gym">
+                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.webp" alt="ABC Fitness">
+                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920098/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.webp" alt="Gold's Gym">
+                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="Work Anytime">
+                 </marquee>
+        </div>
         </div>
         </div>`);
     }

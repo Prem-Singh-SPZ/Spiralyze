@@ -1,0 +1,100 @@
+.cutomer-review {
+  padding: 128px 0;
+  background: #f2f2f2;
+  .cr-wrapper {
+    max-width: 1248px;
+    margin: auto;
+    .cr-title {
+      font-family: "Darker Grotesque";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 40px;
+      line-height: 40px;
+      letter-spacing: -0.48px;
+      color: #000000;
+    }
+
+    .cr-card-wrapper {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      .cr-card {
+        display: flex;
+        flex-direction: column;
+        background: #ffffff;
+        box-shadow: 0px 12px 32px rgba(1, 18, 32, 0.08);
+        border-radius: 8px;
+        width: 294px;
+        height: 259px;
+        padding: 24px 20px 20px;
+        margin-right: 24px;
+
+        &:last-child {
+          margin-right: 0;
+        }
+
+        .rating-div {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          > span {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 13px;
+            line-height: 16px;
+            text-align: right;
+            color: #a3a3a3;
+          }
+        }
+
+        .card-content {
+          margin-bottom: auto;
+          p {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #727272;
+          }
+        }
+
+        .card-footer {
+          p {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 20px;
+            color: #000000;
+          }
+        }
+
+        &.cr-first-card {
+          align-items: center;
+          justify-content: center;
+
+          .cr-rating {
+            font-family: "Darker Grotesque";
+            font-style: normal;
+            font-weight: 800;
+            font-size: 28px;
+            line-height: 28px;
+            letter-spacing: -0.48px;
+            color: #000000;
+          }
+          .cr-comment {
+            font-family: "Inter";
+            font-style: normal;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 24px;
+            text-align: center;
+            color: #000000;
+          }
+        }
+      }
+    }
+  }
+}

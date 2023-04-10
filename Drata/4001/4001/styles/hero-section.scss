@@ -1,0 +1,155 @@
+.hero-section {
+  position: relative;
+  background: #0580e8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    right: 37px;
+    height: 208px;
+    width: 229px;
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
+      no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: -83.5px;
+    height: 208px;
+    width: 229px;
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
+      no-repeat;
+  }
+
+  > .container::before {
+    content: "";
+    position: absolute;
+    bottom: 46px;
+    right: 0;
+    height: 104px;
+    width: 273px;
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261210/drata/4001/dots__v2.svg")
+      no-repeat;
+  }
+
+  .hero-content {
+    max-width: 506px;
+    padding: 20px 0;
+
+    .hc-title {
+      font-family: $ff-darker;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 52px;
+      line-height: 52px;
+      display: flex;
+      align-items: center;
+      color: #fff;
+      margin: 0 0 24px;
+    }
+
+    .star-rating {
+      margin-bottom: 35px;
+
+      .sr-img {
+        width: 279px;
+      }
+    }
+  }
+
+  .list-grp-wrapper {
+    .list-group {
+      list-style: none;
+      padding-left: 52px;
+
+      .list-item {
+        position: relative;
+        margin-bottom: 28px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          top: 0;
+          left: -52px;
+          height: 32px;
+          width: 32px;
+        }
+
+        &:nth-child(1)::before {
+          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260803/drata/4001/customize_your_security_page_2.svg")
+            no-repeat;
+        }
+
+        &:nth-child(2)::before {
+          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260803/drata/4001/security_reports_2.svg")
+            no-repeat;
+        }
+
+        &:nth-child(3)::before {
+          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260803/drata/4001/support_and_real-time_answers_2.svg")
+            no-repeat;
+        }
+
+        .ls-title {
+          font-family: $ff-darker;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          margin-bottom: 12px;
+        }
+
+        .ls-desc {
+          font-family: $ff-inter;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .dir-arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -42px;
+    left: -35px;
+    transform: rotate(-8deg);
+  }
+
+  // temp
+  min-height: 838px;
+}
+
+// Common
+.container {
+  margin: 0 auto;
+  max-width: 1248px;
+}
+
+@media (min-width: 1600px) {
+  .hero-section {
+    &::before {
+      top: 88px;
+      right: 224px;
+      height: 208px;
+      width: 229px;
+    }
+    .dir-arrow {
+      top: -40px;
+      left: -51px;
+    }
+  }
+}

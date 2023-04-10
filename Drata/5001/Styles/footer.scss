@@ -1,0 +1,41 @@
+.footer-sec {
+  background-color: #000;
+
+  .footer-container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    max-width: 1248px;
+    min-height: 76px;
+    margin: 0 auto;
+  }
+
+  .footer-links {
+    .fl-link {
+      font-family: $ff-inter;
+      font-style: normal;
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 20px;
+      color: #fff;
+      margin-right: 25px;
+      text-decoration: none;
+      transition-duration: .15s;
+
+      &:hover {
+        color: #0580E8;
+      }
+
+    }
+  }
+
+  .footer-logo {
+    width: 140px;
+    margin-top: 5px;
+
+    img {
+      max-width: 140px;
+    }
+  }
+}

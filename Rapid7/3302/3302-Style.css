@@ -36,13 +36,14 @@
 .spz-3302 .spz-cta-section .second-cta .button.mdBtn {
   padding: 17px 47.5px;
   margin-bottom: 11px;
+  font-weight: 900;
 }
 .spz-3302 .spz-cta-section .first-cta > span,
 .spz-3302 .spz-cta-section .second-cta > span {
   display: block;
   font-family: "Roboto";
   font-style: normal;
-  font-weight: 300;
+  font-weight: 400;
   font-size: 13px;
   line-height: 15px;
   color: #3b4549;
@@ -457,6 +458,11 @@
 .spz-3302 .pageContent > .data-table-block .grid-padding-y.grid-padding-y {
   margin-bottom: -44px;
 }
+@media (max-width: 767.98px) {
+  .spz-3302 .off-canvas-wrapper .r7-nav .sub-nav__title a {
+    white-space: normal;
+  }
+}
 @media (max-width: 1023.98px) {
   .spz-3302 .off-canvas-wrapper .productOverview .grid-container > .grid-x > .large-5.cell span {
     margin-bottom: 0;
@@ -697,10 +703,10 @@
   top: 45px;
 }
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.invalid-field input {
-  border: 1px solid #ed1c24 !important;
+  border: 1px solid #e85e26 !important;
 }
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.invalid-field select {
-  border: 1px solid #ed1c24 !important;
+  border: 1px solid #e85e26 !important;
 }
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow input:not([type=checkbox]) {
   height: 44px !important;
@@ -732,7 +738,6 @@
   font-weight: 400;
   font-size: 16px !important;
   line-height: 24px !important;
-  color: #3b454a !important;
   margin: 0;
   color: #7e7e7e !important;
   background: #fff url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg) no-repeat center right 16px;
@@ -753,6 +758,9 @@
   border: 1px solid #3b454a !important;
 }
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow select::-ms-expand {
+  display: none;
+}
+.spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow select option:first-child {
   display: none;
 }
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow select.blackText {
@@ -891,7 +899,7 @@
 .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow[input-name=parent-ExplicitOptOut__c] {
   display: block !important;
   max-width: 100% !important;
-  width: 100%;
+  width: 100% !important;
   height: auto;
   margin-bottom: 0;
 }

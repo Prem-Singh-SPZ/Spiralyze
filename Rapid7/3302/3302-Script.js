@@ -36,13 +36,20 @@ content.src = '//information.rapid7.com/js/forms2/js/forms2.min.js';
 document.head.appendChild(content);
 
 content.onload = function () {
-    jQuery('.productOverview .grid-x .large-order-1').attr('id', 'main-form-spz');
-    formLoad();
-    jQuery('.spz-demo-btn').click(function () {
-        let scrollOffset = window.innerWidth > 992 ? 100 : 120;
-        jQuery("html, body").animate({
-            scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
-        }, 700);
+    waitForElm('.productOverview .grid-x .large-order-1').then(function () {
+        document.querySelector('.productOverview .grid-x .large-order-1').setAttribute('id', 'main-form-spz');
+        formLoad();
+        waitForElm('#main-form-spz').then(function () {
+            waitForElm('.spz-demo-btn').then(function () {
+                jQuery('.spz-demo-btn').click(function () {
+                    let scrollOffset = window.innerWidth > 992 ? 100 : 120;
+                    // jQuery("html, body").animate({
+                    //     scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
+                    // }, 700);
+                    scrollToElement('#main-form-spz', scrollOffset);
+                });
+            });
+        });
     });
 };
 
@@ -94,6 +101,18 @@ const reviewSection = () => {
                     </div>
                 </div>
             </section>`;
+}
+
+// Function to Scroll to position using smooth scroll vanilla JS
+// target: Element to scroll to
+// offset: Offset from the top of the element
+function scrollToElement(target, offset) {
+    const targetElm = document.querySelector(target);
+    const targetElmOffset = targetElm.offsetTop - offset;
+    window.scrollTo({
+        top: targetElmOffset,
+        behavior: 'smooth'
+    });
 }
 
 // form append //
@@ -277,4 +296,17 @@ function checkFilled() {
     });
 }
 
-
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+}

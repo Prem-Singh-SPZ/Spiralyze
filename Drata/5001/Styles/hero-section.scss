@@ -1,0 +1,160 @@
+.hero-section {
+  position: relative;
+  background: #0580e8;
+
+  &::before {
+    content: "";
+    position: absolute;
+    top: 64px;
+    right: 37px;
+    height: 208px;
+    width: 229px;
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
+      no-repeat;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -6px;
+    left: -83.5px;
+    height: 208px;
+    width: 229px;
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
+      no-repeat;
+  }
+
+  > .container::before {
+    content: "";
+    position: absolute;
+    bottom: 46px;
+    right: 0;
+    height: 104px;
+    width: 273px;
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261210/drata/4001/dots__v2.svg")
+      no-repeat;
+  }
+
+  .hero-content {
+    max-width: 506px;
+    padding: 20px 0;
+
+    .hero-content-subtitle {
+      padding-left: 16px;
+      border-left: 8px solid #000;
+      .hc-subtitle {
+        font-family: "Darker Grotesque";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.24px;
+        color: #000000;
+        margin: 0 0;
+      }
+      .hc-title {
+        font-family: "Darker Grotesque";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 44px;
+        letter-spacing: -1px;
+        color: #ffffff;
+        margin: 0 0 24px;
+      }
+    }
+
+    .hero-features {
+      p span {
+        font-family: "Darker Grotesque";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.48px;
+        color: #ffffff;
+        border-right: 1px solid #000000;
+        padding: 0 16px;
+      }
+    }
+  }
+
+  .list-grp-wrapper {
+    .list-group {
+      list-style: none;
+      padding-left: 52px;
+
+      .list-item {
+        position: relative;
+        margin-bottom: 28px;
+
+        &::before {
+          content: "";
+          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275032/drata/5001/bullet-arrow.svg");
+          width: 16px;
+          height: 16px;
+          position: absolute;
+          left: -24px;
+          top: 8px;
+        }
+
+        .ls-title {
+          font-family: $ff-darker;
+          font-style: normal;
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: #fff;
+          margin-bottom: 12px;
+        }
+
+        .ls-desc {
+          font-family: $ff-inter;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          display: flex;
+          align-items: center;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .dir-arrow {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: -42px;
+    left: -35px;
+    transform: rotate(-8deg);
+  }
+
+  // temp
+  min-height: 838px;
+}
+
+// Common
+.container {
+  margin: 0 auto;
+  max-width: 1248px;
+}
+
+@media (min-width: 1600px) {
+  .hero-section {
+    &::before {
+      top: 88px;
+      right: 224px;
+      height: 208px;
+      width: 229px;
+    }
+    .dir-arrow {
+      top: -40px;
+      left: -51px;
+    }
+  }
+}
