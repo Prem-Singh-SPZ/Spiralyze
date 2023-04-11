@@ -47,6 +47,7 @@ content.onload = function () {
                     //     scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
                     // }, 700);
                     scrollToElement('#main-form-spz', scrollOffset);
+                    jQuery(this).blur();
                 });
             });
         });

@@ -12,17 +12,20 @@
         document.body.classList.add(TEST_ENV.class);
         waitForElm('#landing-page > main section.section .widget').then(function () {
             heroContentUpdate();
+            // setInterval(() => {
+            //     document.querySelector('#element-641').style.height = document.querySelector('iframe').height;
+            // }, 100);
         });
         document.body.classList.add("loaded");
     }
 
     function heroContentUpdate() {
-        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
-        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('srcset','//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
+        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
+        document.querySelector('#landing-page > main section.section:first-child .section-block .section-inner a.url-link .item-content-box').setAttribute('srcset', '//res.cloudinary.com/spiralyze/image/upload/v1676883933/ABCFitnessSolutions/2001/assets/ABC-logo.svg');
         document.querySelector('#landing-page > main section.section:nth-child(2) .section-block .section-inner #element-556').insertAdjacentHTML('afterbegin', `<div class="spz-hero-container">
         <div class="hero-top-content">
         <div class="hero-left-summary">
-        <p>GYM MANAGEMENT SOFTWARE</p>
+        <p>CLUB MANAGEMENT SOFTWARE</p>
 <h6>Switch to ABC Fitness. Grow your gym and streamline operations.</h6>
 <ul><li> <span>Sales Automation.</span> Send text and email reminders based on incomplete registrations, trials, and other sales triggers.</li><li>
 <span>CRM.</span> Track and manage members, leads, check-ins, classes, payments, and more, in one place.

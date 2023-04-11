@@ -1,9 +1,18 @@
 .cutomer-review {
   padding: 128px 0;
   background: #f2f2f2;
+  overflow: hidden;
+
   .cr-wrapper {
     max-width: 1248px;
     margin: auto;
+    position: relative;
+    &::before {
+      content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_3.svg");
+      position: absolute;
+      top: -184px;
+      right: -175px;
+    }
     .cr-title {
       font-family: "Darker Grotesque";
       font-style: normal;
@@ -12,6 +21,19 @@
       line-height: 40px;
       letter-spacing: -0.48px;
       color: #000000;
+      position: relative;
+      margin-bottom: 56px;
+      margin-top: 16px;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        top: -15px;
+        height: 8px;
+        width: 115px;
+        background: #007aff;
+      }
     }
 
     .cr-card-wrapper {
@@ -25,7 +47,7 @@
         box-shadow: 0px 12px 32px rgba(1, 18, 32, 0.08);
         border-radius: 8px;
         width: 294px;
-        height: 259px;
+        height: 216px;
         padding: 24px 20px 20px;
         margin-right: 24px;
 
@@ -46,9 +68,14 @@
             text-align: right;
             color: #a3a3a3;
           }
+
+          .star-rating {
+            padding-top: 1px;
+          }
         }
 
         .card-content {
+          padding-top: 4px;
           margin-bottom: auto;
           p {
             font-family: "Inter";
@@ -61,6 +88,7 @@
         }
 
         .card-footer {
+          position: relative;
           p {
             font-family: "Inter";
             font-style: normal;
@@ -68,12 +96,22 @@
             font-size: 14px;
             line-height: 20px;
             color: #000000;
+            margin: 0;
+          }
+          &::before {
+            content: "";
+            width: 60px;
+            height: 1px;
+            background: #d6d6d6;
+            position: absolute;
+            left: 0;
+            top: -16px;
           }
         }
 
         &.cr-first-card {
           align-items: center;
-          justify-content: center;
+          // justify-content: center;
 
           .cr-rating {
             font-family: "Darker Grotesque";
@@ -83,6 +121,7 @@
             line-height: 28px;
             letter-spacing: -0.48px;
             color: #000000;
+            margin: 22px 0 14px;
           }
           .cr-comment {
             font-family: "Inter";
@@ -92,6 +131,9 @@
             line-height: 24px;
             text-align: center;
             color: #000000;
+            span {
+              font-weight: 500;
+            }
           }
         }
       }

@@ -18,12 +18,11 @@
       content: "";
       position: absolute;
       bottom: -6px;
-      left: -80px;
+      left: -83.5px;
       height: 208px;
       width: 229px;
       background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
         no-repeat;
-      background-size: 226px 208px;
     }
 
     > .container::before {
@@ -147,10 +146,9 @@
   .hero-section {
     &::before {
       top: 88px;
-      right: 221px;
+      right: 224px;
       height: 208px;
       width: 229px;
-      background-size: 226px 208px;
     }
     .dir-arrow {
       top: -40px;
@@ -169,7 +167,9 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  padding: 40px 0 39.5px;
+  // justify-content: center;
+  // height: 504px;
+  padding: 40px 0;
   background: #ffffff;
   border: 1px solid #bdbdbd;
   border-radius: 12px;
@@ -205,10 +205,6 @@
   max-width: 1248px;
 }
 
-img {
-  image-rendering: -webkit-optimize-contrast;
-}
-
 @media screen and (max-width: 1280px) {
   .hero-section {
     &::before {
@@ -233,7 +229,6 @@ img {
 
     .hero-container {
       justify-content: center;
-      flex-direction: column;
     }
 
     .list-grp-wrapper .list-group .list-item .ls-desc {
@@ -260,7 +255,6 @@ img {
       background: url(https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg)
         no-repeat;
       background-size: 224px 208px;
-      overflow: hidden;
     }
   }
 
@@ -273,54 +267,5 @@ img {
     .form-title {
       margin-bottom: 40.5px;
     }
-  }
-}
-
-@media screen and (max-width: 767px) {
-  .hero-section {
-    .hero-content {
-      max-width: 312px;
-      padding: 0 0 24px 0;
-    }
-
-    .list-grp-wrapper {
-      .list-group {
-        margin-bottom: 0;
-        .list-item {
-          &:last-child {
-            margin-bottom: 0;
-          }
-        }
-      }
-    }
-  }
-
-  .form-wrapper-spz {
-    padding: 31px 0 31.5px 0;
-
-    .form-title {
-      font-size: 32px;
-      line-height: 32px;
-      max-width: 272px;
-      margin-bottom: 32px;
-    }
-  }
-
-  .hero-right-section {
-    width: 312px;
-    margin-bottom: 40px;
-
-    &::before {
-      top: -16px;
-      right: -16px;
-      width: 150px;
-      height: 208px;
-    }
-  }
-}
-
-@media screen and (max-width: 345px) {
-  .hero-right-section::before {
-    right: -1.25%;
   }
 }

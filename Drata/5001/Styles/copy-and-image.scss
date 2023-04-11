@@ -1,14 +1,15 @@
 .copy-and-image {
-  max-width: 1148px;
+  max-width: 1248px;
   margin: auto;
-  padding: 196px 196px 48px;
+  padding: 96px;
 
-  .image-in-left, .image-in-right {
+  .image-in-left,
+  .image-in-right {
     display: flex;
     justify-content: center;
-    align-items: center;
+    // align-items: center;
     .ci-image {
-      margin-right: 40px;
+      margin-right: 64px;
       img {
         width: 604px;
         height: auto;
@@ -23,6 +24,11 @@
         line-height: 40px;
         letter-spacing: -0.48px;
         color: #00030b;
+        border-left: 8px solid #007aff;
+        margin-left: -24px;
+        padding-left: 16px;
+        margin-top: 74px;
+        margin-bottom: 26px;
       }
       .copy-content {
         p {
@@ -32,11 +38,18 @@
           font-size: 18px;
           line-height: 28px;
           color: #2f2f2f;
+          &:first-child {
+            margin-bottom: 12px;
+          }
+          &:last-child {
+            margin-bottom: 30px;
+            margin-top: 0;
+          }
         }
       }
       .copy-cta {
         button {
-        //   padding: 16px 24px;
+          //   padding: 16px 24px;
           width: 148px;
           height: 44px;
           background: #0580e8;
@@ -48,8 +61,49 @@
           line-height: 24px;
           text-align: center;
           color: #ffffff;
+          outline: transparent;
+          border: none;
+          cursor: pointer;
+
+          &:hover {
+            border: 3px solid #000000;
+          }
+
+          &:active {
+            background: #097dcc;
+            border: 2px solid #000000;
+          }
         }
       }
+    }
+  }
+
+  .image-in-left:last-child {
+    .ci-copy {
+      // padding-left: 24px;
+      .copy-title {
+        margin-top: 84px;
+      }
+    }
+
+    .ci-image {
+      margin-top: -4px;
+    }
+  }
+  .image-in-right {
+    padding: 96px 0;
+
+    .ci-copy {
+      padding-left: 24px;
+      .copy-title {
+        margin-top: 84px;
+      }
+    }
+
+    .ci-image {
+      margin-left: 40px;
+      margin-right: 0;
+      margin-top: -4px;
     }
   }
 }

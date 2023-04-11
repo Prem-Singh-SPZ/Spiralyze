@@ -2,42 +2,22 @@
   position: relative;
   background: #0580e8;
 
-  &::before {
-    content: "";
-    position: absolute;
-    top: 64px;
-    right: 37px;
-    height: 208px;
-    width: 229px;
-    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
-      no-repeat;
-  }
-
-  &::after {
-    content: "";
-    position: absolute;
-    bottom: -6px;
-    left: -83.5px;
-    height: 208px;
-    width: 229px;
-    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
-      no-repeat;
-  }
-
-  > .container::before {
-    content: "";
-    position: absolute;
-    bottom: 46px;
-    right: 0;
-    height: 104px;
-    width: 273px;
-    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261210/drata/4001/dots__v2.svg")
-      no-repeat;
-  }
-
   .hero-content {
-    max-width: 506px;
-    padding: 20px 0;
+    max-width: 604px;
+    padding: 22px 0;
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 21px;
+      right: auto;
+      left: -496px;
+      height: 100px;
+      width: 440px;
+      background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_1.svg")
+        no-repeat;
+    }
 
     .hero-content-subtitle {
       padding-left: 16px;
@@ -60,33 +40,53 @@
         line-height: 44px;
         letter-spacing: -1px;
         color: #ffffff;
-        margin: 0 0 24px;
+        margin: 8px 0 24px;
       }
     }
 
     .hero-features {
-      p span {
-        font-family: "Darker Grotesque";
-        font-style: normal;
-        font-weight: 800;
-        font-size: 24px;
-        line-height: 24px;
-        letter-spacing: -0.48px;
-        color: #ffffff;
-        border-right: 1px solid #000000;
-        padding: 0 16px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      p {
+        margin: 0;
+        span {
+          font-family: "Darker Grotesque";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: -0.48px;
+          color: #ffffff;
+          border-right: 1px solid #00000033;
+          padding: 0 14px;
+
+          &:first-child {
+            padding-left: 24px;
+          }
+          &:last-child {
+            border: 0;
+          }
+        }
       }
     }
+  }
+
+  .hero-container {
+    display: flex;
+    flex-wrap: wrap;
+    // align-items: center;
+    justify-content: space-between;
   }
 
   .list-grp-wrapper {
     .list-group {
       list-style: none;
-      padding-left: 52px;
+      padding-left: 48px;
+      margin: 34px 0;
 
       .list-item {
         position: relative;
-        margin-bottom: 28px;
+        margin-bottom: 16px;
 
         &::before {
           content: "";
@@ -95,47 +95,95 @@
           height: 16px;
           position: absolute;
           left: -24px;
-          top: 8px;
+          top: 6px;
         }
 
         .ls-title {
-          font-family: $ff-darker;
+          font-family: "Darker Grotesque";
           font-style: normal;
           font-weight: 800;
           font-size: 24px;
           line-height: 24px;
-          display: flex;
-          align-items: center;
-          color: #fff;
-          margin-bottom: 12px;
+          letter-spacing: -0.24px;
+          color: #ffffff;
+          margin-bottom: 4px;
         }
 
         .ls-desc {
-          font-family: $ff-inter;
+          font-family: "Inter";
           font-style: normal;
           font-weight: 400;
-          font-size: 16px;
-          line-height: 24px;
-          display: flex;
-          align-items: center;
-          color: #fff;
+          font-size: 18px;
+          line-height: 28px;
+          color: #ffffff;
         }
       }
     }
   }
 
-  .dir-arrow {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: -42px;
-    left: -35px;
-    transform: rotate(-8deg);
+  // temp
+  min-height: 828px;
+}
+
+.hero-right-section {
+  width: 624px;
+  margin-bottom: 100px;
+  position: relative;
+  &::before {
+    content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_1.svg");
+    position: absolute;
+    top: -50px;
+    left: 224px;
+    right: auto;
+  }
+  &::after {
+    content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_2.svg");
+    position: absolute;
+    bottom: -74px;
+    /* left: auto; */
+    left: -20px;
+    z-index: 0;
+  }
+}
+
+// Form Section/Cart Styles
+.form-wrapper-spz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  // justify-content: center;
+  // height: 504px;
+  padding: 40px 32px;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  margin-top: 21px;
+  position: relative;
+  z-index: 1;
+
+  .form-title {
+    font-family: "Darker Grotesque";
+    font-style: normal;
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 44px;
+    text-align: center;
+    letter-spacing: -1px;
+    color: #000000;
+    max-width: 428px;
+    margin: 0 auto 24px auto;
   }
 
-  // temp
-  min-height: 838px;
+  form {
+    display: flex;
+    flex-wrap: wrap;
+
+    // hide fields\
+    // .hs_demo_product_of_interest,
+    .form-columns-0 .hs-richtext.hs-main-font-element {
+      display: none;
+    }
+  }
 }
 
 // Common
@@ -144,17 +192,31 @@
   max-width: 1248px;
 }
 
-@media (min-width: 1600px) {
+@media screen and (max-width: 1280px) {
   .hero-section {
-    &::before {
-      top: 88px;
-      right: 224px;
-      height: 208px;
-      width: 229px;
+    .hero-container {
+      justify-content: center;
     }
-    .dir-arrow {
-      top: -40px;
-      left: -51px;
+
+    .list-grp-wrapper .list-group .list-item .ls-desc {
+      text-align: left;
+    }
+  }
+
+  .hero-right-section {
+    width: 688px;
+    position: relative;
+    margin-bottom: 64.5px;
+  }
+
+  .form-wrapper-spz {
+    position: relative;
+    margin-top: 16.5px;
+    padding: 38.5px 0 39px 0;
+    z-index: 2;
+
+    .form-title {
+      margin-bottom: 40.5px;
     }
   }
 }

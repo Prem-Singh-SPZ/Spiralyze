@@ -1,120 +1,95 @@
-const TEST_ENV = {
-    class: 'spz-5001', // class will be used in body ex. spz-1001
-    base_url: 'https://try.drata.com/drata-vs-vanta', // control domain url
-    main_class: 'body', // parent class where test is going to be applied
-}
 
-function loadTest() {
-    // Set test class
-    document.body.classList.add(TEST_ENV.class);
-    waitForElm('.hs-form-3d064146-843f-404a-97b0-6515b61c518b').then(function (elm) {
-        formUpdates();
-    });
-    document.body.classList.add("loaded");
-}
-
-function formUpdates() {
-    document.querySelector('.hs-form-3d064146-843f-404a-97b0-6515b61c518b').insertAdjacentHTML('afterbegin', '<h3 class="spz-demo-form-title">Get a Demo</h3>');
-    document.querySelector('.hs-form-3d064146-843f-404a-97b0-6515b61c518b .hs_submit.hs-submit .actions .hs-button').setAttribute('value', 'Get Started');
-}
-
-// Generic
-history.pushState = (function (f) {
-    return function pushState() {
-        let ret = f.apply(this, arguments);
-        window.dispatchEvent(new Event('pushstate'));
-        window.dispatchEvent(new Event('locationchange'));
-        return ret;
-    };
-})(history.pushState);
-history.replaceState = (function (f) {
-    return function replaceState() {
-        let ret = f.apply(this, arguments);
-        window.dispatchEvent(new Event('replacestate'));
-        window.dispatchEvent(new Event('locationchange'));
-        return ret;
-    };
-})(history.replaceState);
-
-window.addEventListener('popstate', function () {
-    window.dispatchEvent(new Event('locationchange'));
-});
-window.addEventListener('locationchange', function () {
-    url = location.href;
-    urlCheck(url);
-});
-
-let url = location.href;
-urlCheck(url);
-function urlCheck(url) {
-    let testURL = TEST_ENV.base_url;
-    if (isSameUrl(url, testURL, true) || location.pathname.indexOf('drata-vs-vanta') > -1) {
-        loadTest();
-    } else {
-        removeTest();
+window.addEventListener("click", function (e) {
+    if (e.target.classList.contains("goto-hero-form")) {
+        let scrollOffset = window.innerWidth > 992 ? 100 : 120;
+        scrollToElement('.form-wrapper-spz', scrollOffset);
     }
+});
+
+// Function to Scroll to position using smooth scroll vanilla JS
+// target: Element to scroll to
+// offset: Offset from the top of the element
+function scrollToElement(target, offset) {
+    const targetElm = document.querySelector(target);
+    const targetElmOffset = targetElm.offsetTop - offset;
+    window.scrollTo({
+        top: targetElmOffset,
+        behavior: 'smooth'
+    });
 }
 
-function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-    currentUrl = currentUrl.includes("#") ?
-        currentUrl.slice(0, currentUrl.indexOf("#")) :
-        currentUrl;
-    specifiedUrl = specifiedUrl.includes("#") ?
-        specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
-        specifiedUrl;
-    if (!includeQueryParams)
-        currentUrl = currentUrl.includes("?") ?
-            currentUrl.slice(0, currentUrl.indexOf("?")) :
-            currentUrl;
-    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-        return true;
-    return false;
-}
+const formInt = setInterval(() => {
+    if (document.querySelectorAll('.hbspt-form form').length > 0) {
+        clearInterval(formInt);
 
-function removeTest() {
-    document.body.classList.remove(TEST_ENV.class);
-    document.body.classList.remove('loaded');
-}
+        appendInputLabel();
 
-function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
+        // Set input label
+        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
+
+        // Set chekbox label
+        document.querySelector('.hs_demo_product_of_interest >  legend.hs-field-desc').innerHTML = 'What product(s) are you interested in?';
+
+        // Set SOC-2 checkbox checked
+        document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
+
+        // Set button label
+        document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
+        document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
+
+        // hs-button
+        document.querySelector('.hs-button').addEventListener('click', function () {
+            const err = setInterval(() => {
+                checkError();
+                clearInterval(err);
+            }, 100);
         });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+
+        moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1');
+
+        // Set focus on input
+        focusFields();
+    }
+}, 100);
+
+
+// Create input label with placeholder text
+function appendInputLabel() {
+    document.querySelectorAll('.hs-input').forEach(function (el) {
+        const label = document.createElement("label");
+        label.innerHTML = el.placeholder;
+        if (!el.hasAttribute('type') && el.options.length > 0) {
+            label.innerHTML = el.options[0].text;
+        }
+        label.setAttribute('for', el.id);
+        label.classList.add('hs-label-spz');
+        el.parentNode.insertBefore(label, el.nextSibling);
     });
 }
 
-// Set text, image etc.
-// elm: Element where we have to set content
-// value: Value to be set
-// type: Pass content type - TEXT / IMAGE etc.
-function setContent(elm, value, type = 'STRING') {
-    if (document.querySelector(elm)) {
-        const tg = document.querySelector(elm);
-        if (type == 'IMAGE') {
-            tg.src = value;
-        } else {
-            tg.innerText = value;
-        }
-    }
+
+// On input focus add class on closest parent .field class
+function focusFields() {
+    document.querySelectorAll('.hs-input').forEach(function (el) {
+        el.addEventListener('focus', function () {
+            el.closest('.field').classList.add('field-focus');
+        });
+        el.addEventListener('blur', function () {
+            el.closest('.field').classList.remove('field-focus');
+            checkError();
+        });
+    });
 }
 
-// Clone element
-// source: Element which we have to copy
-// target: New location of an element 
-function cloneElement(source, target) {
-    if (document.querySelector(source) && document.querySelector(target)) {
-        const sc = document.querySelector(source);
-        const clone = sc.cloneNode(true);
-        document.querySelector(target).appendChild(clone);
-    }
+// Function to add .field-error class on closest parent .field class if .error is exist on .hs-input
+function checkError() {
+    document.querySelectorAll('.hs-input').forEach(function (el) {
+        if (el.closest('.field').querySelector('.error') != null) {
+            el.closest('.field').classList.add('field-error');
+        } else {
+            el.closest('.field').classList.remove('field-error');
+        }
+    });
 }
 
 // Move element
