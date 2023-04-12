@@ -331,6 +331,12 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   margin: 0 auto;
   max-width: 1248px;
 }
+@media (max-width: 1280.98px) {
+  .header-nav {
+    max-width: 100%;
+    padding: 50px 16px 24px;
+  }
+}
 .header-nav .nav-section .brand-logo .logo-img {
   width: 156px;
 }
@@ -338,6 +344,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .hero-section {
   position: relative;
   background: #0580e8;
+  overflow: hidden;
   min-height: 828px;
 }
 .hero-section .hero-content {
@@ -1010,6 +1017,13 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-left,
+.copy-and-image .image-in-right {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
 .copy-and-image .image-in-left .ci-image,
 .copy-and-image .image-in-right .ci-image {
   margin-right: 64px;
@@ -1097,6 +1111,13 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   margin-left: 40px;
   margin-right: 0;
   margin-top: -4px;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-right .ci-image {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
 }
 
 .social-proof-sec {
@@ -1451,6 +1472,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 }
 .footer-sec {
   background-color: #000;
+  overflow: hidden;
 }
 .footer-sec .top-footer .footer-cta-section {
   display: -webkit-box;
@@ -1467,6 +1489,21 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
       -ms-flex-align: center;
           align-items: center;
   padding: 128px 96px;
+  position: relative;
+  max-width: 1248px;
+  margin: auto;
+}
+.footer-sec .top-footer .footer-cta-section::before {
+  content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg");
+  position: absolute;
+  left: -364px;
+  top: -332px;
+}
+.footer-sec .top-footer .footer-cta-section::after {
+  content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_5.svg");
+  position: absolute;
+  right: -304px;
+  top: -192px;
 }
 .footer-sec .top-footer .footer-cta-section .footer-subtitle {
   font-family: "Darker Grotesque";
@@ -1478,6 +1515,8 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   letter-spacing: -0.48px;
   color: #ffffff;
   position: relative;
+  margin-top: 20px;
+  margin-bottom: 40px;
 }
 .footer-sec .top-footer .footer-cta-section .footer-subtitle::before {
   content: "";
@@ -1485,7 +1524,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   left: 0;
   right: 0;
   margin: auto;
-  top: -16px;
+  top: -20px;
   height: 8px;
   width: 115px;
   background: #fff;
@@ -1497,9 +1536,9 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   border-radius: 4px;
   font-family: "Inter";
   font-style: normal;
-  font-weight: 500;
-  font-size: 18px;
-  line-height: 24px;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 32px;
   text-align: center;
   color: #ffffff;
   outline: transparent;
@@ -1515,12 +1554,50 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
       -ms-flex-pack: center;
           justify-content: center;
 }
+.footer-sec .top-footer .footer-cta-section .footer-cta button img {
+  padding-left: 8px;
+}
 .footer-sec .top-footer .footer-cta-section .footer-cta button:hover {
   color: #bfff60;
 }
 .footer-sec .top-footer .footer-cta-section .footer-cta button:active {
-  background: #097DCC;
+  background: #097dcc;
   color: #bfff60;
+}
+.footer-sec .top-footer .gradiant-border {
+  border-bottom: 1px solid transparent;
+  -o-border-image: linear-gradient(90deg, #444444 0.8%, rgba(68, 68, 68, 0) 100.49%);
+     border-image: -webkit-gradient(linear, left top, right top, color-stop(0.8%, #444444), color-stop(100.49%, rgba(68, 68, 68, 0)));
+     border-image: linear-gradient(90deg, #444444 0.8%, rgba(68, 68, 68, 0) 100.49%);
+  border-image-slice: 1;
+}
+.footer-sec .top-footer .footer-copy {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 1248px;
+  margin: 40px auto;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+}
+.footer-sec .top-footer .footer-copy .copy-and-logo {
+  max-width: 682px;
+}
+.footer-sec .top-footer .footer-copy .copy-and-logo .footer-copy {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+  margin: 36px 0 4px;
+}
+.footer-sec .top-footer .footer-copy .social-icons a {
+  margin-left: 22px;
 }
 .footer-sec .footer-container {
   display: -webkit-box;
@@ -1532,21 +1609,64 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  max-width: 1248px;
+  margin: 0 auto;
+  padding-bottom: 2px;
+}
+.footer-sec .footer-container > p {
+  font-family: "Inter", sans-serif;
+  font-size: 13px;
+  line-height: 18px;
+  font-weight: 300;
+  font-style: normal;
+  letter-spacing: initial;
+  -webkit-font-feature-settings: "pnum" on, "lnum" on;
+          font-feature-settings: "pnum" on, "lnum" on;
+  color: #fff;
+  margin-left: -2px;
+}
+.footer-sec .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  max-width: 1248px;
-  min-height: 76px;
-  margin: 0 auto;
+  gap: 16px;
 }
 .footer-sec .footer-links .fl-link {
+  margin: 0;
+  color: #fff;
+  -webkit-text-decoration: underline;
+  text-decoration: underline;
+  text-decoration-color: rgba(255, 255, 255, 0.4);
+  position: relative;
+  -webkit-tap-highlight-color: transparent;
+  background-color: transparent;
+  outline: 0;
+  border: 0;
+  margin: 0;
+  border-radius: 0;
+  padding: 0;
+  cursor: pointer;
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  vertical-align: middle;
+  -moz-appearance: none;
+  -webkit-appearance: none;
+  color: #097dcc;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  -webkit-text-decoration: none;
+  text-decoration: none;
+  border-left: 2px solid #0580e8;
+  padding-left: 4px;
+  color: #fff;
   font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #fff;
-  margin-right: 25px;
-  text-decoration: none;
   -webkit-transition-duration: 0.15s;
           transition-duration: 0.15s;
 }

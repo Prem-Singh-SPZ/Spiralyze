@@ -368,6 +368,8 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container {
   position: relative;
   margin-top: 28px;
+  width: 100%;
+  overflow: hidden;
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container::after {
   content: "";
@@ -383,6 +385,18 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   width: auto;
   max-height: 58px;
   padding-right: 70px;
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container .swiper-wrapper {
+  z-index: 0;
+  opacity: 0;
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container .swiper-wrapper > div {
+  max-width: 164.87px;
+  text-align: center;
+}
+body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container .swiper-wrapper > div img {
+  width: auto;
+  max-height: 58px;
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container::before {
   content: "";

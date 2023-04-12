@@ -69,17 +69,14 @@
                     console.log('valid? isValidCompanyEmail: ' + isValidCompanyEmail);
                     mktoForm.submittable(true);
                 }
-                debugger
             });
             mktoForm.onSubmit(function (form) {
-                debugger
                 if (opensNewWindow) {
                     thankYouWindow = window.open('');
                 }
             });
 
             mktoForm.onSuccess(function (values, followUpUrl) {
-                debugger
                 window.dataLayer.push({ 'event': 'form_submit_success' });
                 var overrideUrl = '';
                 if (opensNewWindow) {

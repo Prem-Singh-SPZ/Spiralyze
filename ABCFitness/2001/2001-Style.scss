@@ -332,6 +332,8 @@ body.spz-2001[class] {
               .partner-img-container {
                 position: relative;
                 margin-top: 28px;
+                width: 100%;
+                overflow: hidden;
                 &::after {
                   content: "";
                   background: linear-gradient(
@@ -350,6 +352,19 @@ body.spz-2001[class] {
                     width: auto;
                     max-height: 58px;
                     padding-right: 70px;
+                  }
+                }
+                .swiper-wrapper {
+                  // max-width: 100%;
+                  z-index: 0;
+                  opacity: 0;
+                  > div {
+                    max-width: 164.87px;
+                    text-align: center;
+                    img {
+                      width: auto;
+                      max-height: 58px;
+                    }
                   }
                 }
 

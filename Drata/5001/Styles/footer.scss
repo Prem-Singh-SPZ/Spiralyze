@@ -1,5 +1,6 @@
 .footer-sec {
   background-color: #000;
+  overflow: hidden;
 
   .top-footer {
     .footer-cta-section {
@@ -8,7 +9,22 @@
       justify-content: center;
       align-items: center;
       padding: 128px 96px;
+      position: relative;
+      max-width: 1248px;
+      margin: auto;
 
+      &::before {
+        content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg");
+        position: absolute;
+        left: -364px;
+        top: -332px;
+      }
+      &::after {
+        content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_5.svg");
+        position: absolute;
+        right: -304px;
+        top: -192px;
+      }
       .footer-subtitle {
         font-family: "Darker Grotesque";
         font-style: normal;
@@ -19,6 +35,8 @@
         letter-spacing: -0.48px;
         color: #ffffff;
         position: relative;
+        margin-top: 20px;
+        margin-bottom: 40px;
 
         &::before {
           content: "";
@@ -26,7 +44,7 @@
           left: 0;
           right: 0;
           margin: auto;
-          top: -16px;
+          top: -20px;
           height: 8px;
           width: 115px;
           background: #fff;
@@ -41,9 +59,9 @@
           border-radius: 4px;
           font-family: "Inter";
           font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
-          line-height: 24px;
+          font-weight: 700;
+          font-size: 20px;
+          line-height: 32px;
           text-align: center;
           color: #ffffff;
           outline: transparent;
@@ -53,14 +71,53 @@
           align-items: center;
           justify-content: center;
 
+          img {
+            padding-left: 8px;
+          }
           &:hover {
             color: #bfff60;
           }
 
           &:active {
-            background: #097DCC;
+            background: #097dcc;
             color: #bfff60;
           }
+        }
+      }
+    }
+    
+    .gradiant-border {
+      border-bottom: 1px solid transparent;
+      border-image: linear-gradient(
+        90deg,
+        #444444 0.8%,
+        rgba(68, 68, 68, 0) 100.49%
+      );
+      border-image-slice: 1;
+    }
+
+    .footer-copy {
+      display: flex;
+      max-width: 1248px;
+      margin: 40px auto;
+      justify-content: space-between;
+      align-items: end;
+
+      .copy-and-logo {
+        max-width: 682px;
+        .footer-copy {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 18px;
+          line-height: 28px;
+          color: #ffffff;
+          margin: 36px 0 4px;
+        }
+      }
+      .social-icons {
+        a {
+          margin-left: 22px;
         }
       }
     }
@@ -70,22 +127,63 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    flex-wrap: wrap;
+    // flex-wrap: wrap;
     max-width: 1248px;
-    min-height: 76px;
+    // min-height: 76px;
     margin: 0 auto;
+    padding-bottom: 2px;
+
+    > p {
+      font-family: "Inter", sans-serif;
+      font-size: 13px;
+      line-height: 18px;
+      font-weight: 300;
+      font-style: normal;
+      letter-spacing: initial;
+      font-feature-settings: "pnum" on, "lnum" on;
+      color: #fff;
+      margin-left: -2px;
+    }
   }
 
   .footer-links {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 16px;
     .fl-link {
-      font-family: $ff-inter;
-      font-style: normal;
-      font-weight: 400;
+      margin: 0;
+      color: #fff;
+      -webkit-text-decoration: underline;
+      text-decoration: underline;
+      text-decoration-color: rgba(255, 255, 255, 0.4);
+      position: relative;
+      -webkit-tap-highlight-color: transparent;
+      background-color: transparent;
+      outline: 0;
+      border: 0;
+      margin: 0;
+      border-radius: 0;
+      padding: 0;
+      cursor: pointer;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      vertical-align: middle;
+      -moz-appearance: none;
+      -webkit-appearance: none;
+      color: #097dcc;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      -webkit-text-decoration: none;
+      text-decoration: none;
+      border-left: 2px solid #0580e8;
+      padding-left: 4px;
+      color: #fff;
+      font-family: "Inter", sans-serif;
+      font-weight: 600;
       font-size: 14px;
       line-height: 20px;
-      color: #fff;
-      margin-right: 25px;
-      text-decoration: none;
       transition-duration: 0.15s;
 
       &:hover {

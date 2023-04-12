@@ -7,16 +7,56 @@
         main_class: 'body', // parent class where test is going to be applied
     }
 
+    var content = document.createElement("script");
+    content.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js";
+    document.head.appendChild(content);
+    document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.css" />`)
     function loadTest() {
         // Set test class
         document.body.classList.add(TEST_ENV.class);
         waitForElm('#landing-page > main section.section .widget').then(function () {
-            heroContentUpdate();
-            // setInterval(() => {
-            //     document.querySelector('#element-641').style.height = document.querySelector('iframe').height;
-            // }, 100);
+            if (document.querySelectorAll('.spz-hero-container').length == 0) {
+                heroContentUpdate();
+            }
+            content.onload = function () {
+                initSlider();
+            };
         });
         document.body.classList.add("loaded");
+    }
+
+
+    function initSlider() {
+        if (document.querySelectorAll('.swiper-container').length > 0) {
+            let sliderInt = setInterval(() => {
+                if (document.querySelectorAll('.swiper-container.swiper-initialized').length > 0) {
+                    clearInterval(sliderInt);
+                    document.querySelector('.swiper-wrapper').style.opacity = 1;
+                }
+                var mySwiper = new Swiper('.swiper-container', {
+                    slidesPerView: 3,
+                    autoplay: { delay: 1000 },
+                    spaceBetween: 70,
+                    loop: true,
+                    speed: 1000,
+                    breakpoints: {
+                        // when window width is >= 320px
+                        320: {
+                            slidesPerView: 2,
+                        },
+                        599: {
+                            slidesPerView: 3,
+                        },
+                        991: {
+                            slidesPerView: 2,
+                        },
+                        1199: {
+                            slidesPerView: 3,
+                        }
+                    }
+                });
+            }, 200);
+        }
     }
 
     function heroContentUpdate() {
@@ -34,14 +74,71 @@
         </div>
         <div class="hero-bottom-content">
         <p>Join 20,000+ gyms & studios using ABC Fitness Solutions</p>
-        <div class="partner-img-container">
-        <marquee>
-                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920096/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.webp" alt="ClubFitness">
-                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.webp" alt="Hidden Gym">
-                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.webp" alt="ABC Fitness">
-                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920098/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.webp" alt="Gold's Gym">
-                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="Work Anytime">
-                 </marquee>
+        <div class="partner-img-container swiper-container">
+        <div class="swiper-wrapper">
+        <div class="swiper-slide">
+        <picture>
+        <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920096/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.webp" type="image/webp">
+        <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.png" type="image/png"> 
+        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920096/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.webp" alt="ClubFitness">
+      </picture>
+      </div> <div class="swiper-slide">
+      <picture>
+      <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.webp" type="image/webp">
+      <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.png" type="image/png"> 
+      <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.webp" alt="Hidden Gym">
+    </picture>
+    </div> <div class="swiper-slide">
+    <picture>
+    <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.webp" type="image/webp">
+    <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.png" type="image/png"> 
+    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.webp" alt="ABC Fitness">
+  </picture>
+  </div> <div class="swiper-slide">
+  <picture>
+  <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920098/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.webp" type="image/webp">
+  <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.png" type="image/png"> 
+  <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920098/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.webp" alt="Gold's Gym">
+</picture>
+</div> <div class="swiper-slide">
+<picture>
+<source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" type="image/webp">
+<source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.png" type="image/png"> 
+<img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="Work Anytime">
+</picture>
+                 </div>
+                 <div class="swiper-slide">
+        <picture>
+        <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920096/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.webp" type="image/webp">
+        <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.png" type="image/png"> 
+        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920096/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3789.webp" alt="ClubFitness">
+      </picture>
+      </div> <div class="swiper-slide">
+      <picture>
+      <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.webp" type="image/webp">
+      <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.png" type="image/png"> 
+      <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3788_1.webp" alt="Hidden Gym">
+    </picture>
+    </div> <div class="swiper-slide">
+    <picture>
+    <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.webp" type="image/webp">
+    <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.png" type="image/png"> 
+    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920097/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/61a7e523d773b974b9560af5_ATC-Fitness_LogoHorizontal1.webp" alt="ABC Fitness">
+  </picture>
+  </div> <div class="swiper-slide">
+  <picture>
+  <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920098/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.webp" type="image/webp">
+  <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.png" type="image/png"> 
+  <img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920098/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame3790.webp" alt="Gold's Gym">
+</picture>
+</div> <div class="swiper-slide">
+<picture>
+<source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" type="image/webp">
+<source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.png" type="image/png"> 
+<img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="Work Anytime">
+</picture>
+                 </div>
+                 </div>
         </div>
         </div>
         </div>`);
