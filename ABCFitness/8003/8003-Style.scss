@@ -1,0 +1,771 @@
+$aktive-font: aktiv-grotesk, aktiv-grotesk-1, aktiv-grotesk-2, aktiv-grotesk-web,
+  aktiv-grotesk-web-1, aktiv-grotesk-web-2;
+
+body.spz-8003[class] {
+  &.modal-open {
+    overflow: hidden;
+  }
+  > main.l-body-wrapper {
+    > section.c-hero {
+      > .c-hero__bg-image-wrapper {
+        display: none !important;
+      }
+
+      > .c-hero__gradient.c-hero__gradient--bottom-blue {
+        background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361838/ABCFitnessSolutions/8003/assets/Desktop.png") !important;
+        opacity: 1;
+        //   background-size: 1079px;
+        //   background-position: top right;
+        //   background-repeat: no-repeat;
+        //   background-color: #1a3144;
+
+        @media (min-width: 599.98px) and (max-width: 991.98px) {
+          background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361836/ABCFitnessSolutions/8003/assets/Tablet.png") !important;
+          //   background-size: 768px;
+        }
+
+        @media (max-width: 599.98px) {
+          background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361841/ABCFitnessSolutions/8003/assets/Mobile.png") !important;
+          //   background-size: 375px;
+        }
+      }
+
+      > .c-hero__content.l-container {
+        padding: 84px 0 12px;
+        max-width: 885px;
+        @media (max-width: 991px) {
+          padding: 86px 0 12px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 51px 0 14px;
+        }
+        .c-hero__info-wrapper {
+          display: none !important;
+        }
+
+        .spx-hero-cards {
+          @media (max-width: 991px) {
+            margin: auto;
+          }
+          .hero-cards-title {
+            margin-bottom: 16px;
+            h6 {
+              font-family: $aktive-font;
+              font-style: normal;
+              font-weight: 400;
+              font-size: 18px;
+              line-height: 23px;
+              text-align: center;
+              color: #ffffff;
+              padding: 0 0 0 2px;
+            }
+          }
+          .hero-cards-subtitle {
+            h4 {
+              font-family: $aktive-font;
+              font-style: normal;
+              font-weight: 600;
+              font-size: 44px;
+              line-height: 56px;
+              text-align: center;
+              color: #ffffff;
+              padding: 0;
+              letter-spacing: -0.25px;
+              //   padding-left: 8px;
+
+              @media (min-width: 767.98px) and (max-width: 991px) {
+                font-weight: 600;
+                font-size: 32px;
+                line-height: 41px;
+              }
+              @media (max-width: 767.98px) {
+                font-weight: 600;
+                font-size: 28px;
+                line-height: 36px;
+              }
+            }
+          }
+
+          .cards-section {
+            padding: 56px 24px;
+            @media (min-width: 767.98px) and (max-width: 991px) {
+              padding: 56px 0;
+              min-width: 664px;
+            }
+            @media (max-width: 767.98px) {
+              padding: 32px 0px;
+            }
+            .cards-container {
+              display: flex;
+              justify-content: space-between;
+              align-items: stretch;
+              flex-wrap: wrap;
+              @media (max-width: 767.98px) {
+                justify-content: center;
+              }
+
+              .spz-card {
+                display: flex;
+                flex-direction: column;
+                max-width: 388px;
+                height: 512px;
+
+                @media (max-width: 991px) {
+                  max-width: 320px;
+                }
+
+                @media (min-width: 599.98px) and (max-width: 767.98px) {
+                  margin: 11px;
+                }
+
+                &:first-child {
+                  .card-image {
+                    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/8003/assets/Left-card.png");
+                  }
+                  @media (max-width: 599.98px) {
+                    margin-bottom: 24px;
+                  }
+                }
+                &:last-child {
+                  .card-image {
+                    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/8003/assets/Right-card.png");
+                  }
+                }
+                // }
+
+                .card-image {
+                  height: 190px;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  border-radius: 8px 8px 0px 0px;
+                  img {
+                    display: none;
+                  }
+                }
+
+                .card-content {
+                  display: flex;
+                  flex-direction: column;
+                  justify-content: space-between;
+                  align-items: center;
+                  padding: 41px 16px 18px;
+                  background: #ffffff;
+                  box-shadow: 0px 4px 40px rgba(0, 0, 0, 0.15);
+                  border-radius: 0px 0px 8px 8px;
+                  flex-grow: 1;
+
+                  .card-title {
+                    font-family: $aktive-font;
+                    font-style: normal;
+                    font-weight: 300;
+                    font-size: 32px;
+                    line-height: 41px;
+                    text-align: center;
+                    color: #000000;
+                  }
+
+                  .card-desc {
+                    font-style: normal;
+                    font-weight: 400;
+                    font-size: 16px;
+                    line-height: 140%;
+                    font-family: $aktive-font;
+                    text-align: center;
+                    color: #000000;
+                    margin-bottom: 32px;
+                  }
+
+                  .card-cta {
+                    width: 100%;
+                    max-width: 320px;
+                    button {
+                      display: flex;
+                      flex-direction: row;
+                      justify-content: center;
+                      align-items: center;
+                      padding: 12px 12px 6px;
+                      width: 100%;
+                      height: 61px;
+                      background-color: #ff7335;
+                      font-style: normal;
+                      font-weight: 700;
+                      font-size: 18px;
+                      line-height: 160%;
+                      font-family: $aktive-font;
+                      color: #ffffff;
+                      @media (max-width: 359.98px) {
+                        font-size: 14px;
+                      }
+
+                      a {
+                        font-weight: 700;
+                        font-size: 18px;
+                        line-height: 160%;
+                        font-family: $aktive-font;
+                        color: #ffffff;
+                        @media (max-width: 359.98px) {
+                          font-size: 14px;
+                        }
+                      }
+                      img {
+                        margin-left: 8px;
+                      }
+                      > img {
+                        margin-bottom: 4px;
+                      }
+
+                      &:hover {
+                        background-color: #00aeef;
+                      }
+                    }
+                  }
+                  .card-info {
+                    flex-grow: 1;
+                    margin-top: 22px;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    p {
+                      font-family: $aktive-font;
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: 13px;
+                      line-height: 15px;
+                      text-align: center;
+                      color: #818181;
+                      margin-bottom: 6px;
+                      letter-spacing: -0.2px;
+
+                      a {
+                        color: #ff7335;
+
+                        &:hover {
+                          text-decoration: underline;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Modal code
+    > #request-a-demo {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      // bottom: 0;
+      background: rgba(28, 28, 28, 0.8);
+      z-index: 100;
+      overflow: auto;
+      height: 100vh;
+
+      padding: 192px 0;
+      .l-container.c-tabs-form__container {
+        .c-dbm__title-wrapper.c-tabs-form__title-wrapper {
+          display: none !important;
+        }
+
+        .c-tabs-form.c-tabs-form--top {
+          .c-tabs-form__positions-group {
+            display: none !important;
+          }
+
+          .c-tabs-form__tabs-content-container {
+            #c-tabs-form-tab-1 {
+              max-width: 684px;
+              .c-tabs-form__content-wrapper {
+                background: #ffffff;
+                box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+                border-radius: 12px;
+                padding: 32px;
+                position: relative;
+                @media (max-width: 599.98px) {
+                  padding: 32px 8px;
+                }
+
+                > p {
+                  > strong {
+                    margin: 4px 0 0;
+                    display: block;
+                  }
+
+                  > br {
+                    display: none;
+                  }
+                }
+                .close-modal {
+                  position: absolute;
+                  right: 16px;
+                  top: 12px;
+
+                  img {
+                    cursor: pointer;
+                    opacity: 0.7;
+
+                    &:hover {
+                      opacity: 1;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  header#header[id] {
+    //Tab and above
+    .l-header__inner[class] {
+      .l-header__action-links-wrapper--top.c-header-action-links__wrapper[class] {
+        display: flex;
+        @media (max-width: 991.98px) {
+          .c-header-action-links__search-input-wrapper {
+            display: none;
+          }
+        }
+        .spz-header-cta-container[class] {
+          @media (max-width: 767.98px) {
+            display: none;
+          }
+          display: flex;
+          margin-left: 66px;
+          @media (max-width: 1023.98px) {
+            margin-left: 30px;
+          }
+          .spz-header-cta-primary[class] {
+            position: relative;
+            .spz-login-btn {
+              cursor: pointer;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 130%;
+              text-transform: uppercase;
+              // color: #ff6f30;
+              width: 180px;
+              justify-content: center;
+              height: 46px;
+              margin-right: 4px;
+              // padding: 0;
+              padding-top: 8px;
+              border: 1px solid #ff6f30;
+              color: #000000;
+
+              @media (max-width: 991.98px) {
+                width: 170px;
+              }
+
+              &::before {
+                // display: none;
+                content: url("https://res.cloudinary.com/spiralyze/image/upload/v1676480559/ABCFitnessSolutions/5001/assets/drop-arrow.svg");
+                background: none;
+                position: absolute;
+                right: -7px;
+                top: 18px;
+                @media (max-width: 991.98px) {
+                  right: -12px;
+                  top: 18px;
+                }
+              }
+            }
+            .c-header-action-links__items-wrapper[class] {
+              display: none;
+              box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.04),
+                0px 21px 42px rgba(0, 0, 0, 0.1);
+              width: 240px;
+              left: auto;
+              right: -8px;
+              @media (max-width: 1023.98px) {
+                right: -14px;
+              }
+              align-items: flex-start;
+              padding: 23px 21px 19px 19px;
+
+              &::before {
+                content: url("https://res.cloudinary.com/spiralyze/image/upload/v1676483425/ABCFitnessSolutions/5001/assets/Polygon_1.svg");
+                position: absolute;
+                right: 30px;
+                top: -16px;
+              }
+
+              p {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 130%;
+                letter-spacing: -0.01em;
+                color: #797979;
+                margin-bottom: 5px;
+                order: -1;
+              }
+              .c-header-action-links__item.c-header-action-links__item--first[class] {
+                height: 46px;
+                width: 100%;
+                justify-content: center;
+                border: 1px solid #ff6f30;
+                color: #000000;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 130%;
+                padding-left: 24px;
+                &::before {
+                  display: none;
+                }
+              }
+
+              .c-header-action-links__item.c-header-action-links__item--second[class] {
+                order: -1;
+                margin: 4px 0 8px 0;
+                width: 100%;
+                height: 46px;
+                border: 1px solid #ff6f30;
+                color: #000000;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 130%;
+                background-color: #ffffff;
+              }
+            }
+          }
+
+          .spz-header-cta-secondary[class] {
+            .c-header-action-links__item.c-header-action-links__item--second[class] {
+              width: 180px;
+              height: 46px;
+              margin-left: 10px;
+              justify-content: center;
+              margin-right: 0;
+
+              @media (max-width: 991.98px) {
+                margin-right: 22px;
+                width: 170px;
+              }
+            }
+          }
+        }
+      }
+
+      .l-header__container.l-header__container--bottom[class] {
+        .l-header__container-inner {
+          .l-header__action-links-wrapper--not-top {
+            > .c-header-action-links__items-wrapper {
+              display: none;
+            }
+            .spz-header-cta-container {
+              display: flex;
+              .spz-header-cta-primary {
+                position: relative;
+                padding: 16px 0;
+                .spz-login-btn {
+                  cursor: pointer;
+                }
+                .c-header-action-links__items-wrapper[class] {
+                  display: none;
+                  box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.04),
+                    0px 21px 42px rgba(0, 0, 0, 0.1);
+                  width: 240px;
+                  left: auto;
+                  right: -8px;
+                  top: 36px;
+                  align-items: flex-start;
+                  padding: 23px 21px 19px 19px;
+
+                  &::before {
+                    content: url("https://res.cloudinary.com/spiralyze/image/upload/v1676483425/ABCFitnessSolutions/5001/assets/Polygon_1.svg");
+                    position: absolute;
+                    right: 30px;
+                    top: -16px;
+                  }
+
+                  p {
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 130%;
+                    letter-spacing: -0.01em;
+                    color: #797979;
+                    margin-bottom: 5px;
+                    order: -1;
+                  }
+                  .c-header-action-links__item.c-header-action-links__item--first[class] {
+                    height: 46px;
+                    width: 100%;
+                    justify-content: center;
+                    border: 1px solid #ff6f30;
+                    color: #000000;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 130%;
+                    padding-left: 24px;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    &::before,
+                    &::after {
+                      display: none;
+                    }
+                  }
+
+                  .c-header-action-links__item.c-header-action-links__item--second[class] {
+                    order: -1;
+                    margin: 4px 0 8px 0;
+                    width: 100%;
+                    height: 46px;
+                    border: 1px solid #ff6f30;
+                    color: #000000;
+                    font-weight: 500;
+                    font-size: 14px;
+                    line-height: 130%;
+                    background-color: #ffffff;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    padding: 0;
+                    &::before,
+                    &::after {
+                      display: none;
+                    }
+                  }
+                }
+              }
+              .spz-header-cta-secondary {
+                padding: 16px 0;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Mobile css
+    > .spz-header-cta-container {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: center;
+      border-bottom: 2px solid #0073ba;
+      padding: 5px 20px;
+      background-color: #fff;
+      transition-duration: 200ms;
+      @media (min-width: 767.98px) {
+        display: none;
+      }
+      .spz-header-cta-secondary {
+        width: 100%;
+        text-align: center;
+        .c-header-action-links__item.c-header-action-links__item--second {
+          background-color: #f26122;
+          padding: 5px 30px 0;
+          margin: 0px;
+          height: 46px;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          text-transform: uppercase;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          letter-spacing: 0.014em;
+          font-weight: 500;
+          font-size: 14px;
+          width: 100%;
+          justify-content: center;
+          // z-index: -1;
+        }
+      }
+      .spz-header-cta-primary {
+        position: relative;
+        width: 100%;
+        text-align: center;
+        background: #fff;
+
+        .spz-login-btn {
+          padding: 6px 0px 0 0px;
+          margin: 0px;
+          // color: #f26122;
+          height: 46px;
+          display: -webkit-inline-box;
+          display: -ms-inline-flexbox;
+          display: inline-flex;
+          text-transform: uppercase;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          letter-spacing: 0.014em;
+          font-weight: 500;
+          font-size: 14px;
+          line-height: 130%;
+          border: 1px solid #ff6f30;
+          color: #000000;
+          width: 100%;
+          justify-content: center;
+          margin-top: 4px;
+          // z-index: -1;
+
+          &::before {
+            // display: none;
+            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1676480559/ABCFitnessSolutions/5001/assets/drop-arrow.svg");
+            background: none;
+            position: absolute;
+            left: calc(50% + 66px);
+            top: 12px;
+          }
+        }
+
+        .c-header-action-links__items-wrapper[class] {
+          display: none;
+          right: -20px;
+          left: -20px;
+          padding: 9px 20px 13px;
+
+          p {
+            font-weight: 500;
+            font-size: 14px;
+            line-height: 130%;
+            letter-spacing: -0.01em;
+            color: #797979;
+            margin-bottom: 5px;
+            order: -1;
+          }
+          .c-header-action-links__item.c-header-action-links__item--first {
+            padding: 4px 16px 0 16px;
+            border: 1px solid #ff6f30;
+            color: #000;
+            height: 46px;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            letter-spacing: 0.014em;
+            font-weight: 500;
+            font-size: 14px;
+            justify-content: center;
+            width: 100%;
+            line-height: 130%;
+            text-transform: uppercase;
+          }
+          .c-header-action-links__item.c-header-action-links__item--second {
+            padding: 4px 16px 0 16px;
+            border: 1px solid #f26122;
+            color: #000;
+            height: 46px;
+            display: -webkit-inline-box;
+            display: -ms-inline-flexbox;
+            display: inline-flex;
+            text-transform: uppercase;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            letter-spacing: 0.014em;
+            font-weight: 500;
+            font-size: 14px;
+            justify-content: center;
+            width: 100%;
+            order: -1;
+            margin: 4px 0 8px 0;
+          }
+        }
+      }
+    }
+
+    .l-header__inner .l-header__container .l-header__container-inner {
+      @media (max-width: 767.98px) {
+        border: 0;
+        z-index: 1;
+      }
+    }
+
+    //Active class css
+    .spz-header-cta-container {
+      .spz-header-cta-primary:hover {
+        .spz-login-btn {
+          // text-decoration: underline;
+          @media (max-width: 767.98px) {
+            text-decoration: none;
+          }
+          &::before {
+            transform: rotate(180deg);
+            right: 2px !important;
+            top: 16px !important;
+
+            @media (max-width: 1023.98px) {
+              right: -2px !important;
+              top: 16px !important;
+            }
+            @media (max-width: 767.98px) {
+              left: calc(50% + 66px);
+              top: 28px !important;
+              right: auto !important;
+            }
+          }
+        }
+
+        .c-header-action-links__items-wrapper {
+          display: flex !important;
+          position: absolute;
+          flex-direction: column;
+          z-index: 2;
+          background: #fff;
+          margin-left: 0;
+        }
+      }
+    }
+
+    &.l-header--has-pinned-menu[class] {
+      .spz-header-cta-container {
+        .spz-header-cta-primary:hover {
+          .c-header-action-links__items-wrapper {
+            @media (max-width: 767.98px) {
+              z-index: -1;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.safari {
+    header#header[id] .spz-header-cta-container[class] {
+      .spz-header-cta-primary:hover {
+        .spz-login-btn {
+          &::before {
+            @media (min-width: 767.98px) {
+              top: 12px !important;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .c-slide-out.js-slide-out {
+    .c-slide-out__container {
+      .c-slide-out__action-links-wrapper.c-header-action-links__wrapper {
+        .c-header-action-links__items-wrapper {
+          > p {
+            display: none;
+          }
+          .c-header-action-links__item--first {
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    header#header.l-header--hamburger-active {
+      > .spz-header-cta-container {
+        display: none;
+      }
+    }
+  }
+}

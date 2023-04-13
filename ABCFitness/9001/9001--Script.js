@@ -19,7 +19,8 @@
     }
 
     function heroContentUpdate() {
-        document.querySelector('.l-body-wrapper .c-hero > .c-hero__content.l-container').insertAdjacentHTML('afterbegin', `<div class="spz-header"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1681281097/ABCFitnessSolutions/9001/assets/Header-Logo.svg" alt="ABC Fitness" class="header-logo"></div>`);
+        document.querySelector('.l-body-wrapper .c-hero > .c-hero__content.l-container').insertAdjacentHTML('afterbegin', `<div class="spz-header">
+        <a href="https://abcfitness.com"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1681281097/ABCFitnessSolutions/9001/assets/Header-Logo.svg" alt="ABC Fitness" class="header-logo"> </a> </div>`);
 
         document.querySelector('.l-body-wrapper .c-hero > .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child').insertAdjacentHTML('afterbegin', `<div class="spz-hero-container">
         <div class="hero-top-content">

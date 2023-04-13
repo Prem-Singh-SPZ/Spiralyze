@@ -39,15 +39,27 @@ content.onload = function () {
     waitForElm('.productOverview .grid-x .large-order-1').then(function () {
         document.querySelector('.productOverview .grid-x .large-order-1').setAttribute('id', 'main-form-spz');
         formLoad();
-        waitForElm('#main-form-spz').then(function () {
-            waitForElm('.spz-demo-btn').then(function () {
-                jQuery('.spz-demo-btn').click(function () {
-                    let scrollOffset = window.innerWidth > 992 ? 100 : 120;
-                    // jQuery("html, body").animate({
-                    //     scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
-                    // }, 700);
-                    scrollToElement('#main-form-spz', scrollOffset);
-                    jQuery(this).blur();
+        waitForElm('#r7-global-nav header nav.sub-nav .button.button--primary').then(function () {
+            waitForElm('#main-form-spz').then(function () {
+                waitForElm('.spz-demo-btn').then(function () {
+                    jQuery('.spz-demo-btn, #r7-global-nav header nav.sub-nav .button.button--primary').click(function (e) {
+                        let scrollOffset = window.innerWidth > 992 ? 100 : 120;
+                        // jQuery("html, body").animate({
+                        //     scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
+                        // }, 700);
+                        scrollToElement('#main-form-spz', scrollOffset);
+                        jQuery(this).blur();
+                        e.preventDefault();
+                    });
+                    // jQuery(document).on('click', '#r7-global-nav header nav.sub-nav .button.button--primary', function (e) {
+                    //     let scrollOffset = window.innerWidth > 992 ? 100 : 120;
+                    //     // jQuery("html, body").animate({
+                    //     //     scrollTop: jQuery('#main-form-spz').offset().top - scrollOffset
+                    //     // }, 700);
+                    //     scrollToElement('#main-form-spz', scrollOffset);
+                    //     jQuery(this).blur();
+                    //     e.preventDefault();
+                    // });
                 });
             });
         });

@@ -36,7 +36,7 @@
                 var mySwiper = new Swiper('.swiper-container', {
                     slidesPerView: 3,
                     autoplay: { delay: 1000 },
-                    spaceBetween: 70,
+                    spaceBetween: 51,
                     loop: true,
                     speed: 1000,
                     breakpoints: {
@@ -104,7 +104,7 @@
 <picture>
 <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" type="image/webp">
 <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.png" type="image/png"> 
-<img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="Work Anytime">
+<img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="24-7 Workout Anytime">
 </picture>
                  </div>
                  <div class="swiper-slide">
@@ -135,7 +135,7 @@
 <picture>
 <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" type="image/webp">
 <source srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.png" type="image/png"> 
-<img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="Work Anytime">
+<img src="https://res.cloudinary.com/spiralyze/image/upload/v1679920099/ABCFitnessIgnite/2001ABCGymMngtSoftwareSPZBaseline/Frame.webp" alt="24-7 Workout Anytime">
 </picture>
                  </div>
                  </div>
@@ -150,7 +150,7 @@
 
     function urlCheck(url) {
         let testURL = TEST_ENV.base_url;
-        if (url == testURL) {
+        if (url == testURL || location.href.indexOf('gym-management-software') > -1) {
             waitForElm(TEST_ENV.main_class).then(function () {
                 loadTest();
             });
@@ -176,14 +176,6 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    function cloneElement(source, target) {
-        if (document.querySelector(source) && document.querySelector(target)) {
-            const sc = document.querySelector(source);
-            const clone = sc.cloneNode(true);
-            document.querySelector(target).appendChild(clone);
-        }
     }
 
     // Add class 'safari' (used for cart scrollbar)
