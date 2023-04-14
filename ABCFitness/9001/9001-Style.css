@@ -185,16 +185,6 @@ body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
 body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child > .c-hero__column-content > p {
   margin: 0;
 }
-@media (max-width: 1599px) {
-  body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child > .c-hero__column-content > p iframe {
-    max-height: 788px;
-  }
-}
-@media (max-width: 1023.98px) {
-  body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child > .c-hero__column-content > p iframe {
-    max-height: 772px;
-  }
-}
 @media (max-width: 1023.98px) {
   body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child {
     width: 100%;
@@ -205,6 +195,15 @@ body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
   body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child {
     width: 100%;
     padding: 18px;
+  }
+}
+@media (max-width: 599.98px) {
+  body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child {
+    max-width: 298px;
+    margin: auto;
+  }
+  body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child.android {
+    max-width: 284px;
   }
 }
 body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper .hero-bottom-content {
@@ -244,7 +243,7 @@ body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
   max-width: 940px;
   margin-top: 6px;
 }
-@media (max-width: 767.98px) {
+@media (min-width: 360.98px) and (max-width: 767.98px) {
   body.spz-9001[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper .hero-bottom-content .partner-img-container img {
     max-width: 335px;
   }

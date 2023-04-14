@@ -16,6 +16,12 @@
             }
         });
         document.body.classList.add("loaded");
+
+        var ua = navigator.userAgent.toLowerCase();
+        var isAndroid = ua.indexOf("android") > -1; //&& ua.indexOf("mobile");
+        if (isAndroid) {
+            document.querySelector('body > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container > .c-hero__info-wrapper > .c-hero__repeater .c-hero__column:last-child').classList.add('android');
+        }
     }
 
     function heroContentUpdate() {
@@ -26,7 +32,7 @@
         <div class="hero-top-content">
         <div class="hero-left-summary">
         <p>#1 CLUB & GYM MANAGEMENT SOFTWARE</p>
-        <h6>Automate sales, operations, and member management.<br><span> Grow your gym 30%.</span></h6>
+        <h6>Automate sales, operations, and member management.<br><span> Grow your gym by 30%.</span></h6>
         <ul><li> <span>Operations.</span> Enable scan for entry. Process new joins and product sales via POS. Automate billing & payment collection.</li><li>
         <span>Sales Automation.</span> Send text & email reminders based on incomplete registrations, trials, and other sales triggers. Let members book classes via mobile app.
         </li><li> <span>CRM.</span> Track & manage members, leads, check-ins, classes, payments, and more. Let members update their billing info.</li> </ul>

@@ -1,108 +1,99 @@
-@media print,
-screen and (min-width: 64em) {
-    .rapid7-insightvm-spz .productOverview .grid-x.smpad-btm {
-        padding-bottom: 0.6rem !important;
-    }
+.customerLogos {
+    padding-top: 2rem;
+    padding-bottom: 2rem
 }
 
-.rapid7-insightvm-spz .productOverview .grid-x.smpad-btm {
-    padding-bottom: 4px !important;
+.customerLogos.blueBackground {
+    background-color: #002746;
+    background-image: linear-gradient(#002746,#006ec5);
+    color: #fff
 }
 
-.rapid7-insightvm-spz .social-proof {
-    padding: 67px 0 72px;
-    text-align: center;
+.customerLogos.blueBackground a,.customerLogos.blueBackground h3,.customerLogos.blueBackground p {
+    color: #fff
+}
+
+.customerLogos.whiteBackground {
+    background-color: #fff;
+    color: #242b2e
+}
+
+.customerLogos.greyBackground {
+    background-color: #242b2e;
+    color: #fff
+}
+
+.customerLogos.greyBackground a,.customerLogos.greyBackground h3,.customerLogos.greyBackground p {
+    color: #fff
+}
+
+.customerLogos__title {
+    margin-bottom: 48px
+}
+
+.customerLogos__subheadline a,.customerLogos__subheadline h3 {
+    font-family: Mulish,Mulish-local,sans-serif;
+    font-weight: 800;
+    font-size: 1.125rem;
+    color: #242b2e;
+    line-height: 1.375rem
+}
+
+.customerLogos__subheadline a {
+    text-decoration: underline
+}
+
+.customerLogos__grid {
     position: relative;
     z-index: 1;
+    display: -ms-flexbox;
+    display: flex;
+    gap: 5px;
+    -ms-flex-pack: center;
+    justify-content: center;
+    margin: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding-bottom: .9375rem
 }
 
-.rapid7-insightvm-spz .featuresList.has-background::before {
-    top: 0;
-}
-
-@media(min-width:1024px) {
-    .rapid7-insightvm-spz .productOverview::before {
-        content: "";
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        background-image: url(/includes/img/backgrounds/pattern-curved-gray-lines.png);
-        background-size: 1200px 1042px;
-        background-position: right -390px bottom -300px;
-        background-repeat: no-repeat;
-    }
-
-    .desktop-only {
-        display: block;
-    }
-
-    .tab-only,
-    .mobile-only {
-        display: none;
+@media print,screen and (min-width: 40em) {
+    .customerLogos__grid {
+        padding-bottom:1.875rem
     }
 }
 
-.rapid7-insightvm-spz#products_detail_new .productOverview>.grid-container {
-    position: relative;
+.customerLogos__logo {
+    -ms-flex: 0 1 100%;
+    flex: 0 1 100%;
+    min-height: 100px;
+    max-width: 80% px;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-align: center;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    background-color: #fff;
+    border-radius: 5px;
+    padding: 15px
 }
 
-.rapid7-insightvm-spz .social-proof h2 {
-    font-style: normal;
-    font-weight: 800;
-    font-size: 28px;
-    line-height: 35px;
-    text-align: center;
-    color: #3B454A;
-    letter-spacing: -0.3px;
-    margin-bottom: 40px;
-}
-
-.rapid7-insightvm-spz .social-proof img {
-    max-width: 851px;
-    margin-left: auto;
-    margin-right: auto;
-}
-
-@media(max-width:1024px) {
-    .rapid7-insightvm-spz .social-proof img {
-        max-width: 671px;
-    }
-
-    .rapid7-insightvm-spz .social-proof {
-        padding: 76px 0 72px;
-        text-align: center;
-    }
-
-    .tab-only {
-        display: block;
-    }
-
-    .desktop-only,
-    .mobile-only {
-        display: none;
+@media print,screen and (min-width: 40em) {
+    .customerLogos__logo {
+        -ms-flex:0 1 auto;
+        flex: 0 1 auto;
+        max-width: 220px;
+        padding: 30px
     }
 }
 
-@media(max-width:767px) {
-    .rapid7-insightvm-spz .social-proof img {
-        max-width: 298px;
-    }
+.customerLogos__logo img {
+    width: 100%
+}
 
-    .rapid7-insightvm-spz .social-proof h2 {
-        font-size: 24px;
-        line-height: 30px;
-        padding-left: 12px;
-        padding-right: 12px;
-    }
-
-    .mobile-only {
-        display: block;
-    }
-
-    .desktop-only,
-    .tab-only {
-        display: none;
+@media screen and (max-width: 63.99875em) {
+    .customerLogos__logo img {
+        max-width:180px
     }
 }

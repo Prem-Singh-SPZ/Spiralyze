@@ -1,7 +1,11 @@
+.spz-6002.modal-open {
+  overflow: hidden;
+}
 .spz-6002 img {
   image-rendering: -webkit-optimize-contrast;
 }
 .spz-6002 main .c-hero {
+  background: -webkit-gradient(linear, left top, right top, from(#02588d), to(#29a9e1));
   background: linear-gradient(90deg, #02588d 0%, #29a9e1 100%);
 }
 .spz-6002 main .c-hero .c-hero__bg-image-wrapper {
@@ -25,8 +29,12 @@
   }
 }
 .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
   max-width: 1120px;
 }
@@ -37,7 +45,10 @@
 }
 @media (max-width: 1024px) {
   .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
     max-width: 568px;
   }
 }
@@ -52,14 +63,23 @@
   }
 }
 .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz .hs-content-spz {
+  -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-animation-delay: 0.1s;
   animation-delay: 0.1s;
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
   max-width: 540px;
 }
 @media (max-width: 1024px) {
@@ -134,9 +154,15 @@
   }
 }
 .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz .hs-content-spz .hs-cta-wrapper .hs-cta-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   color: #fff;
   font-weight: 700;
   font-size: 14px;
@@ -147,7 +173,8 @@
   width: 196px;
   height: 52px;
   background: #ff6f30;
-  transition-duration: 100ms;
+  -webkit-transition-duration: 100ms;
+          transition-duration: 100ms;
 }
 .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz .hs-content-spz .hs-cta-wrapper .hs-cta-primary:hover {
   color: #000;
@@ -161,12 +188,19 @@
   }
 }
 .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz .hs-image-spz {
+  -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-animation-delay: 0.2s;
   animation-delay: 0.2s;
 }
 .spz-6002 main .c-hero .hero-section-solutions-spz .hs-flex-spz .hs-image-spz .hs-img {
@@ -188,12 +222,19 @@
 .spz-6002 main .c-hero .hs-social-proofs-spz {
   max-width: 940.69px;
   margin: 70px auto 83px auto;
+  -webkit-animation-name: fadeInUp;
   animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1;
   animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
   animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
   animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
   animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
   backface-visibility: hidden;
+  -webkit-animation-delay: 0.3s;
   animation-delay: 0.3s;
 }
 .spz-6002 main .c-hero .hs-social-proofs-spz .hs-sp-title {
@@ -205,9 +246,15 @@
   color: #fff;
 }
 .spz-6002 main .c-hero .hs-social-proofs-spz .hs-sp-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin-top: 7px;
 }
 .spz-6002 main .c-hero .hs-social-proofs-spz .hs-sp-img-tab {
@@ -245,4 +292,70 @@
   .spz-6002 main .c-hero .hs-social-proofs-spz {
     max-width: 300px;
   }
-}/*# sourceMappingURL=6002-Style.css.map */
+}
+.spz-6002 main > #get-in-contact {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: rgba(28, 28, 28, 0.8);
+  z-index: 100;
+  overflow: auto;
+  height: 100vh;
+  padding: 192px 0;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  .spz-6002 main > #get-in-contact .l-container.c-tabs-form__container {
+    padding: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-6002 main > #get-in-contact .l-container.c-tabs-form__container {
+    padding: 0 2px;
+  }
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-dbm__title-wrapper.c-tabs-form__title-wrapper {
+  display: none !important;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__positions-group {
+  display: none !important;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 {
+  max-width: 684px;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper {
+  background: #ffffff;
+  -webkit-box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+  border-radius: 12px;
+  padding: 32px;
+  position: relative;
+}
+@media (max-width: 599.98px) {
+  .spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper {
+    padding: 32px 12px;
+  }
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper > p > strong {
+  margin: 5px 0 0;
+  display: block;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper > p > br {
+  display: none;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper > p iframe {
+  height: 1000px;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper .close-modal {
+  position: absolute;
+  right: 16px;
+  top: 12px;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper .close-modal img {
+  cursor: pointer;
+  opacity: 0.3;
+}
+.spz-6002 main > #get-in-contact .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper .close-modal img:hover {
+  opacity: 0.6;
+}

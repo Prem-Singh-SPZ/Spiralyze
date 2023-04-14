@@ -189,14 +189,14 @@ body.spz-9001[class] {
                 > p {
                   margin: 0;
 
-                  iframe {
-                    @media (max-width: 1599px) {
-                      max-height: 788px;
-                    }
-                    @media (max-width: 1023.98px) {
-                      max-height: 772px;
-                    }
-                  }
+                  // iframe {
+                  //   @media (max-width: 1599px) {
+                  //     max-height: 788px;
+                  //   }
+                  //   @media (max-width: 1023.98px) {
+                  //     max-height: 772px;
+                  //   }
+                  // }
                 }
               }
 
@@ -207,6 +207,13 @@ body.spz-9001[class] {
               @media (max-width: 767.98px) {
                 width: 100%;
                 padding: 18px;
+              }
+              @media (max-width: 599.98px) {
+                max-width: 298px;
+                margin: auto;
+                &.android {
+                  max-width: 284px;
+                }
               }
             }
           }
@@ -239,7 +246,7 @@ body.spz-9001[class] {
               max-width: 940px;
               margin-top: 6px;
               img {
-                @media (max-width: 767.98px) {
+                @media (min-width: 360.98px) and (max-width: 767.98px) {
                   max-width: 335px;
                 }
                 @media (min-width: 767.98px) and (max-width: 1023.98px) {

@@ -16,6 +16,9 @@ $aktiv: "aktiv-grotesk", sans-serif;
 }
 
 .spz-6002 {
+  &.modal-open {
+    overflow: hidden;
+  }
   img {
     image-rendering: -webkit-optimize-contrast;
   }
@@ -266,6 +269,84 @@ $aktiv: "aktiv-grotesk", sans-serif;
 
         @media (max-width: 340px) {
           max-width: 300px;
+        }
+      }
+    }
+
+    //Modal code
+    > #get-in-contact {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      // bottom: 0;
+      background: rgba(28, 28, 28, 0.8);
+      z-index: 100;
+      overflow: auto;
+      height: 100vh;
+
+      padding: 192px 0;
+      .l-container.c-tabs-form__container {
+        @media (min-width: 767.98px) and (max-width: 991.98px) {
+          padding: 0;
+        }
+        @media (max-width: 767.98px) {
+          padding: 0 2px;
+        }
+        .c-dbm__title-wrapper.c-tabs-form__title-wrapper {
+          display: none !important;
+        }
+
+        .c-tabs-form.c-tabs-form--top {
+          .c-tabs-form__positions-group {
+            display: none !important;
+          }
+
+          .c-tabs-form__tabs-content-container {
+            #c-tabs-form-tab-1 {
+              max-width: 684px;
+              .c-tabs-form__content-wrapper {
+                background: #ffffff;
+                box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+                border-radius: 12px;
+                padding: 32px;
+                position: relative;
+                @media (max-width: 599.98px) {
+                  padding: 32px 12px;
+                }
+
+                > p {
+                  > strong {
+                    margin: 5px 0 0;
+                    display: block;
+                  }
+
+                  > br {
+                    display: none;
+                  }
+
+                  iframe {
+                    height: 1000px;
+                  }
+                }
+                .close-modal {
+                  position: absolute;
+                  right: 16px;
+                  top: 12px;
+
+                  img {
+                    cursor: pointer;
+                    opacity: 0.3;
+
+                    &:hover {
+                      opacity: 0.6;
+                    }
+                  }
+                }
+              }
+            }
+          }
         }
       }
     }
