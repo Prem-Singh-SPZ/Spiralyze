@@ -14,6 +14,7 @@ body.spz-8003[class] {
       > .c-hero__gradient.c-hero__gradient--bottom-blue {
         background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361838/ABCFitnessSolutions/8003/assets/Desktop.png") !important;
         opacity: 1;
+        image-rendering: -webkit-optimize-contrast;
         //   background-size: 1079px;
         //   background-position: top right;
         //   background-repeat: no-repeat;
@@ -22,11 +23,13 @@ body.spz-8003[class] {
         @media (min-width: 599.98px) and (max-width: 991.98px) {
           background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361836/ABCFitnessSolutions/8003/assets/Tablet.png") !important;
           //   background-size: 768px;
+          image-rendering: -webkit-optimize-contrast;
         }
 
         @media (max-width: 599.98px) {
           background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361841/ABCFitnessSolutions/8003/assets/Mobile.png") !important;
           //   background-size: 375px;
+          image-rendering: -webkit-optimize-contrast;
         }
       }
 
@@ -108,7 +111,7 @@ body.spz-8003[class] {
                 display: flex;
                 flex-direction: column;
                 max-width: 388px;
-                height: 512px;
+                min-height: 512px;
 
                 @media (max-width: 991px) {
                   max-width: 320px;
@@ -121,6 +124,7 @@ body.spz-8003[class] {
                 &:first-child {
                   .card-image {
                     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/8003/assets/Left-card.png");
+                    image-rendering: -webkit-optimize-contrast;
                   }
                   @media (max-width: 599.98px) {
                     margin-bottom: 24px;
@@ -129,6 +133,7 @@ body.spz-8003[class] {
                 &:last-child {
                   .card-image {
                     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/8003/assets/Right-card.png");
+                    image-rendering: -webkit-optimize-contrast;
                   }
                 }
                 // }
@@ -182,7 +187,8 @@ body.spz-8003[class] {
                   .card-cta {
                     width: 100%;
                     max-width: 320px;
-                    button {
+                    > button,
+                    > a {
                       display: flex;
                       flex-direction: row;
                       justify-content: center;
@@ -201,7 +207,8 @@ body.spz-8003[class] {
                         font-size: 14px;
                       }
 
-                      a {
+                      > a,
+                      > button {
                         font-weight: 700;
                         font-size: 18px;
                         line-height: 160%;
@@ -222,6 +229,13 @@ body.spz-8003[class] {
                         background-color: #00aeef;
                       }
                     }
+
+                    > button {
+                      &:active,
+                      &:focus {
+                        background-color: #00aeef;
+                      }
+                    }
                   }
                   .card-info {
                     flex-grow: 1;
@@ -233,12 +247,12 @@ body.spz-8003[class] {
                       font-family: $aktive-font;
                       font-style: normal;
                       font-weight: 400;
-                      font-size: 13px;
+                      font-size: 12px;
                       line-height: 15px;
                       text-align: center;
                       color: #818181;
                       margin-bottom: 6px;
-                      letter-spacing: -0.2px;
+                      // letter-spacing: -0.2px;
 
                       a {
                         color: #ff7335;
@@ -270,7 +284,7 @@ body.spz-8003[class] {
       overflow: auto;
       height: 100vh;
 
-      padding: 192px 0;
+      padding: 24px 0;
       .l-container.c-tabs-form__container {
         @media (min-width: 767.98px) and (max-width: 991.98px) {
           padding: 0;
@@ -310,8 +324,11 @@ body.spz-8003[class] {
                     display: none;
                   }
 
-                  iframe{
-                    height: 1000px;
+                  iframe {
+                    height: 666.34px;
+                    @media (max-width: 599.98px) {
+                      height: 665.34px;
+                    }
                   }
                 }
                 .close-modal {

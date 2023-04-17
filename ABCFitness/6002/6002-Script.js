@@ -13,7 +13,9 @@ function loadTest() {
     document.body.classList.add(TEST_ENV.class);
     waitForElm('main .c-hero--size-default .c-hero__content').then(function () {
         heroContent();
-        modalUpdate()
+        if (document.querySelectorAll('.spz-form-title').length == 0) {
+            modalUpdate();
+        }
     });
     document.body.classList.add("loaded");
 }
@@ -71,7 +73,7 @@ function heroContent() {
 }
 
 function modalUpdate() {
-    document.querySelector('#get-in-contact .l-container.c-form__container .c-dbm__content c-form__content c-content ').insertAdjacentHTML('afterbegin', `<div class='close-modal'><img src="https://res.cloudinary.com/spiralyze/image/upload/v1681367535/ABCFitnessSolutions/8003/assets/Close-icon.svg" class='close-modal-icon' alt="close-icon"></div><div class="spz-form-title">Schedule a Demo</div>"`)
+    document.querySelector('#get-in-contact .l-container.c-form__container .c-dbm__content.c-form__content.c-content ').insertAdjacentHTML('afterbegin', `<div class='close-modal'><img src="https://res.cloudinary.com/spiralyze/image/upload/v1681367535/ABCFitnessSolutions/8003/assets/Close-icon.svg" class='close-modal-icon' alt="close-icon"></div><div class="spz-form-title">Schedule a Demo</div>`)
 
 }
 //perform click actions

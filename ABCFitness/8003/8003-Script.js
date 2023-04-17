@@ -11,15 +11,15 @@
         // Set test class
         document.body.classList.add(TEST_ENV.class);
         waitForElm('main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__repeater').then(function () {
-            if (document.querySelectorAll('.spz-login-btn').length == 0) {
-                headerChange();
-            }
             if (location.href.indexOf('contact') > - 1) {
                 heroContentUpdate();
                 modalUpdate();
             }
         });
         document.body.classList.add("loaded");
+        if (document.querySelectorAll('.spz-login-btn').length == 0) {
+            headerChange();
+        }
     }
 
     function heroContentUpdate() {
@@ -49,7 +49,7 @@
                         <div class="card-info">
                             <p>Current customer? Need support?</p>
                             <p>Call <a href="tel:+18772225767">877-222-5767</a> or email <a
-                                    href="mailto:customercare@abcfitness.com">help@abcfitness.com</a></p>
+                                    href="mailto:help@abcfitness.com">help@abcfitness.com</a></p>
                         </div>
                     </div>
                 </div>

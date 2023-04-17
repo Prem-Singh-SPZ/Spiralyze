@@ -167,11 +167,12 @@ $aktiv: "aktiv-grotesk", sans-serif;
                 height: 52px;
                 background: #ff6f30;
                 transition-duration: 100ms;
+                cursor: pointer;
 
-                &:hover {
-                  color: #000;
-                  background: #fff;
-                  border: 1px solid #ff6f30;
+                &:hover,
+                &:active,
+                &:focus {
+                  background: #00aeef;
                 }
 
                 @media (max-width: 767px) {
@@ -281,74 +282,79 @@ $aktiv: "aktiv-grotesk", sans-serif;
       left: 0;
       right: 0;
       // bottom: 0;
-      background: rgba(28, 28, 28, 0.8);
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
       z-index: 100;
       overflow: auto;
       height: 100vh;
 
       padding: 192px 0;
-      .l-container.c-tabs-form__container {
+      .l-container.c-form__container {
         @media (min-width: 767.98px) and (max-width: 991.98px) {
           padding: 0;
         }
         @media (max-width: 767.98px) {
           padding: 0 2px;
         }
-        .c-dbm__title-wrapper.c-tabs-form__title-wrapper {
+        .c-dbm__title-wrapper.c-form__title-wrapper {
           display: none !important;
         }
 
-        .c-tabs-form.c-tabs-form--top {
-          .c-tabs-form__positions-group {
-            display: none !important;
+        max-width: 684px;
+        .c-dbm__content.c-form__content.c-content {
+          // background: #ffffff;
+          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+          border-radius: 12px;
+          padding: 32px;
+          position: relative;
+          @media (max-width: 599.98px) {
+            padding: 32px 12px;
           }
 
-          .c-tabs-form__tabs-content-container {
-            #c-tabs-form-tab-1 {
-              max-width: 684px;
-              .c-tabs-form__content-wrapper {
-                background: #ffffff;
-                box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
-                border-radius: 12px;
-                padding: 32px;
-                position: relative;
-                @media (max-width: 599.98px) {
-                  padding: 32px 12px;
-                }
+          > p {
+            > strong {
+              margin: 5px 0 0;
+              display: block;
+            }
 
-                > p {
-                  > strong {
-                    margin: 5px 0 0;
-                    display: block;
-                  }
+            > br {
+              display: none;
+            }
 
-                  > br {
-                    display: none;
-                  }
+            iframe {
+              height: 1000px;
+            }
+          }
 
-                  iframe {
-                    height: 1000px;
-                  }
-                }
-                .close-modal {
-                  position: absolute;
-                  right: 16px;
-                  top: 12px;
+          .spz-form-title {
+            font-size: 18px;
+            font-family: $aktiv;
+            font-weight: 700;
+            line-height: 27px;
+            color: #fff;
+          }
+          .close-modal {
+            position: absolute;
+            right: 16px;
+            top: 12px;
 
-                  img {
-                    cursor: pointer;
-                    opacity: 0.3;
+            img {
+              cursor: pointer;
+              opacity: 0.3;
 
-                    &:hover {
-                      opacity: 0.6;
-                    }
-                  }
-                }
+              &:hover {
+                opacity: 0.6;
               }
             }
           }
         }
       }
+    }
+  }
+
+  .c-cta-about__explore-list {
+    @media (min-width: 991px) {
+      padding-top: 146px;
     }
   }
 }

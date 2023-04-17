@@ -7,15 +7,18 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__bg-image-
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__gradient.c-hero__gradient--bottom-blue {
   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361838/ABCFitnessSolutions/8003/assets/Desktop.png") !important;
   opacity: 1;
+  image-rendering: -webkit-optimize-contrast;
 }
 @media (min-width: 599.98px) and (max-width: 991.98px) {
   body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__gradient.c-hero__gradient--bottom-blue {
     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361836/ABCFitnessSolutions/8003/assets/Tablet.png") !important;
+    image-rendering: -webkit-optimize-contrast;
   }
 }
 @media (max-width: 599.98px) {
   body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__gradient.c-hero__gradient--bottom-blue {
     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1681361841/ABCFitnessSolutions/8003/assets/Mobile.png") !important;
+    image-rendering: -webkit-optimize-contrast;
   }
 }
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container {
@@ -116,7 +119,7 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
       -ms-flex-direction: column;
           flex-direction: column;
   max-width: 388px;
-  height: 512px;
+  min-height: 512px;
 }
 @media (max-width: 991px) {
   body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card {
@@ -130,6 +133,7 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
 }
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card:first-child .card-image {
   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/8003/assets/Left-card.png");
+  image-rendering: -webkit-optimize-contrast;
 }
 @media (max-width: 599.98px) {
   body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card:first-child {
@@ -138,6 +142,7 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
 }
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card:last-child .card-image {
   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/8003/assets/Right-card.png");
+  image-rendering: -webkit-optimize-contrast;
 }
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-image {
   min-height: 190px;
@@ -200,7 +205,8 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
   width: 100%;
   max-width: 320px;
 }
-body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button {
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -226,11 +232,15 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
   color: #ffffff;
 }
 @media (max-width: 359.98px) {
-  body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button {
+  body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a {
     font-size: 14px;
   }
 }
-body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button a {
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button > a,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button > button,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a > a,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a > button {
   font-weight: 700;
   font-size: 18px;
   line-height: 160%;
@@ -238,17 +248,26 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
   color: #ffffff;
 }
 @media (max-width: 359.98px) {
-  body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button a {
+  body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button > a,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button > button,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a > a,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a > button {
     font-size: 14px;
   }
 }
-body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button img {
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button img,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a img {
   margin-left: 8px;
 }
-body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button > img {
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button > img,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a > img {
   margin-bottom: 4px;
 }
-body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta button:hover {
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button:hover,
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > a:hover {
+  background-color: #00aeef;
+}
+body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button:active, body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-cta > button:focus {
   background-color: #00aeef;
 }
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-info {
@@ -271,12 +290,11 @@ body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l
   font-family: aktiv-grotesk, aktiv-grotesk-1, aktiv-grotesk-2, aktiv-grotesk-web, aktiv-grotesk-web-1, aktiv-grotesk-web-2;
   font-style: normal;
   font-weight: 400;
-  font-size: 13px;
+  font-size: 12px;
   line-height: 15px;
   text-align: center;
   color: #818181;
   margin-bottom: 6px;
-  letter-spacing: -0.2px;
 }
 body.spz-8003[class] > main.l-body-wrapper > section.c-hero > .c-hero__content.l-container .spx-hero-cards .cards-section .cards-container .spz-card .card-content .card-info p a {
   color: #ff7335;
@@ -294,7 +312,7 @@ body.spz-8003[class] > main.l-body-wrapper > #request-a-demo {
   z-index: 100;
   overflow: auto;
   height: 100vh;
-  padding: 192px 0;
+  padding: 24px 0;
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   body.spz-8003[class] > main.l-body-wrapper > #request-a-demo .l-container.c-tabs-form__container {
@@ -336,7 +354,12 @@ body.spz-8003[class] > main.l-body-wrapper > #request-a-demo .l-container.c-tabs
   display: none;
 }
 body.spz-8003[class] > main.l-body-wrapper > #request-a-demo .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper > p iframe {
-  height: 1000px;
+  height: 666.34px;
+}
+@media (max-width: 599.98px) {
+  body.spz-8003[class] > main.l-body-wrapper > #request-a-demo .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper > p iframe {
+    height: 665.34px;
+  }
 }
 body.spz-8003[class] > main.l-body-wrapper > #request-a-demo .l-container.c-tabs-form__container .c-tabs-form.c-tabs-form--top .c-tabs-form__tabs-content-container #c-tabs-form-tab-1 .c-tabs-form__content-wrapper .close-modal {
   position: absolute;
