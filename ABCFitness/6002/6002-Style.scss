@@ -265,6 +265,7 @@ $aktiv: "aktiv-grotesk", sans-serif;
           .hs-sp-title {
             font-size: 18px;
             line-height: 23px;
+            font-weight: 600;
           }
         }
 
@@ -282,13 +283,13 @@ $aktiv: "aktiv-grotesk", sans-serif;
       left: 0;
       right: 0;
       // bottom: 0;
-      background: rgba(0, 0, 0, 0.4);
+      background: rgba(0, 0, 0, 0.9);
       backdrop-filter: blur(5px);
       z-index: 100;
       overflow: auto;
       height: 100vh;
 
-      padding: 192px 0;
+      padding: 24px 0;
       .l-container.c-form__container {
         @media (min-width: 767.98px) and (max-width: 991.98px) {
           padding: 0;
@@ -307,11 +308,29 @@ $aktiv: "aktiv-grotesk", sans-serif;
           border-radius: 12px;
           padding: 32px;
           position: relative;
+          max-width: 420px;
+          padding-bottom: 17px;
+          background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(1%, #1c99d6),
+            to(#263870)
+          );
+          background-image: -o-linear-gradient(
+            bottom,
+            #1c99d6 1%,
+            #263870 100%
+          );
+          background-image: linear-gradient(0deg, #1c99d6 1%, #263870);
           @media (max-width: 599.98px) {
-            padding: 32px 12px;
+            padding: 40px 12px;
+            max-width: 320px;
+            // padding-bottom: 48px;
           }
 
           > p {
+            margin: 0;
             > strong {
               margin: 5px 0 0;
               display: block;
@@ -322,7 +341,7 @@ $aktiv: "aktiv-grotesk", sans-serif;
             }
 
             iframe {
-              height: 1000px;
+              height: 704.34px;
             }
           }
 
@@ -338,12 +357,18 @@ $aktiv: "aktiv-grotesk", sans-serif;
             right: 16px;
             top: 12px;
 
-            img {
+            svg {
               cursor: pointer;
-              opacity: 0.3;
+              opacity: 1;
 
               &:hover {
-                opacity: 0.6;
+                g {
+                  opacity: 0.6;
+                }
+              }
+              g {
+                pointer-events: none;
+                opacity: 1;
               }
             }
           }

@@ -56,7 +56,7 @@ function heroContent() {
                             <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1676981589/ABCFitnessSolutions/6001/assets/hidden-gym-logo.svg" alt="Hidden Gym" title="Hidden Gym" />
                             <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1676981589/ABCFitnessSolutions/6001/assets/atc-fitness-logo.svg" alt="ATC Fitness" title="ATC Fitness" />
                             <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1676981590/ABCFitnessSolutions/6001/assets/golds-gym-logo.svg" alt="Gold's Gym" title="Gold's Gym" />
-                            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1676981590/ABCFitnessSolutions/6001/assets/workout-time-logo.svg" alt="Workout Time" title="Workout Time" />
+                            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1676981590/ABCFitnessSolutions/6001/assets/workout-time-logo.svg" alt="24-7 Workout Anytime" title="24-7 Workout Anytime" />
                         </div>
 
                         <div class="hs-sp-img-tab">
@@ -73,7 +73,16 @@ function heroContent() {
 }
 
 function modalUpdate() {
-    document.querySelector('#get-in-contact .l-container.c-form__container .c-dbm__content.c-form__content.c-content ').insertAdjacentHTML('afterbegin', `<div class='close-modal'><img src="https://res.cloudinary.com/spiralyze/image/upload/v1681367535/ABCFitnessSolutions/8003/assets/Close-icon.svg" class='close-modal-icon' alt="close-icon"></div><div class="spz-form-title">Schedule a Demo</div>`)
+    document.querySelector('#get-in-contact .l-container.c-form__container .c-dbm__content.c-form__content.c-content ').insertAdjacentHTML('afterbegin', `<div class='close-modal'><svg class='close-modal-icon' xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+    <g opacity="0.3" clip-path="url(#clip0_4068_69)">
+    <path d="M7.09938 6.00973L11.7719 1.33703C12.076 1.03309 12.076 0.541661 11.7719 0.237721C11.468 -0.0662194 10.9766 -0.0662194 10.6726 0.237721L5.99993 4.91043L1.32737 0.237721C1.02329 -0.0662194 0.532002 -0.0662194 0.228062 0.237721C-0.0760206 0.541661 -0.0760206 1.03309 0.228062 1.33703L4.90062 6.00973L0.228062 10.6824C-0.0760206 10.9864 -0.0760206 11.4778 0.228062 11.7817C0.379534 11.9334 0.578696 12.0095 0.777716 12.0095C0.976736 12.0095 1.17576 11.9334 1.32737 11.7817L5.99993 7.10904L10.6726 11.7817C10.8243 11.9334 11.0233 12.0095 11.2223 12.0095C11.4213 12.0095 11.6203 11.9334 11.7719 11.7817C12.076 11.4778 12.076 10.9864 11.7719 10.6824L7.09938 6.00973Z" fill="white"/>
+    </g>
+    <defs>
+    <clipPath id="clip0_4068_69">
+    <rect width="12" height="12" fill="white"/>
+    </clipPath>
+    </defs>
+    </svg></div><div class="spz-form-title">Schedule a Demo</div>`)
 
 }
 //perform click actions
@@ -82,6 +91,7 @@ window.addEventListener("click", function (e) {
         this.document.querySelector('#get-in-contact').style.display = 'block';
         this.document.body.classList.add('modal-open');
     }
+    // console.log(e.target.classList)
     if (e.target.classList.contains("close-modal-icon")) {
         this.document.querySelector('#get-in-contact').style.display = 'none';
         if (this.document.body.classList.contains('modal-open')) {
