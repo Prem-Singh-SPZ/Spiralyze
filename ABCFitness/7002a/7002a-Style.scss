@@ -1,6 +1,46 @@
+$aktiv: "aktiv-grotesk", sans-serif;
+
+@mixin fadeInUp {
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+}
+
 body.spz-7002a[class] {
   main.l-body-wrapper {
     section.c-hero {
+      > .c-hero__bg-image-wrapper {
+        display: none !important;
+      }
+
+      > .c-hero__gradient.c-hero__gradient--default {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906779/ABCFitnessSolutions/7002a/assets/BG-Desktop-min.png") !important;
+        opacity: 1;
+        background-size: 1079px;
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-color: #1a3144;
+
+        @media (min-width: 599.98px) and (max-width: 991.98px) {
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906778/ABCFitnessSolutions/7002a/assets/BG-Tablet-min.png") !important;
+          background-size: 768px;
+        }
+
+        @media (max-width: 599.98px) {
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906778/ABCFitnessSolutions/7002a/assets/BG-Mobile-min.png") !important;
+          background-size: 375px;
+        }
+      }
+
       .c-hero__content.l-container {
         padding-top: 82px;
         .c-hero__info-wrapper {
@@ -61,20 +101,94 @@ body.spz-7002a[class] {
                 padding-bottom: 30px;
 
                 .c-hero__column-content {
+                  background: rgba(255, 255, 255, 0.2);
+                  border-radius: 12px;
                   p {
-                    display: none !important;
-                  }
+                    // display: none !important;
+                    .spz-form-title {
+                      h6 {
+                        font-family: $aktiv;
+                        font-style: normal;
+                        font-weight: 500;
+                        font-size: 20px;
+                        line-height: 36px;
+                        text-align: center;
+                        color: #000;
+                        text-transform: initial;
+                        margin: 0;
+                        padding: 0;
+                      }
+                    }
 
-                  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1678798093/ABCFitnessSolutions/7003a/assets/Form-Desktop.svg");
-                  height: 540px;
-                  background-repeat: no-repeat;
-                  background-position: top;
-                  background-size: contain;
-                  @media (max-width: 768px) {
-                    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1678798093/ABCFitnessSolutions/7003a/assets/Form-Mobile.svg");
+                    iframe {
+                      height: 760px;
+                    }
                   }
                 }
               }
+            }
+          }
+
+          .hs-social-proofs-spz {
+            width: 100%;
+            margin: 70px auto 83px auto;
+
+            @include fadeInUp();
+            -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+
+            .hs-sp-title {
+              font-style: normal;
+              font-weight: 700;
+              font-size: 20px;
+              line-height: 26px;
+              text-align: center;
+              color: #fff;
+            }
+            .hs-sp-wrapper {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: 7px;
+
+              .sp-img {
+              }
+            }
+
+            .hs-sp-img-tab {
+              display: none;
+            }
+
+            @media (min-width: 1025px) and (max-width: 1199px) {
+              width: 95%;
+            }
+
+            @media (max-width: 1024px) {
+              margin: 43px auto 60px auto;
+
+              .hs-sp-wrapper {
+                display: none;
+              }
+              .hs-sp-img-tab {
+                display: block;
+                max-width: 568px;
+                margin: 7.5px auto;
+              }
+            }
+
+            @media (max-width: 767px) {
+              max-width: 335px;
+              margin: 43px auto 40.5px auto;
+
+              .hs-sp-title {
+                font-size: 18px;
+                line-height: 23px;
+                font-weight: 600;
+              }
+            }
+
+            @media (max-width: 340px) {
+              max-width: 300px;
             }
           }
         }

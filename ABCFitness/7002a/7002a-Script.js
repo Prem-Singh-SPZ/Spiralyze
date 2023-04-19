@@ -17,7 +17,26 @@
     }
 
     function heroContentUpdate() {
-        document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child').insertAdjacentHTML('afterbegin', `<h6 class="spz-subtitle">State of the Industry:<br><strong>What’s Next in Fitness</strong></h6>`);
+        document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child').insertAdjacentHTML('afterbegin', `<h6 class="spz-subtitle">State of the Industry:<br><strong>What&#8217;s Next in Fitness</strong></h6>`);
+        document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content > p').insertAdjacentHTML('afterbegin',`<div class="spz-form-title"><h6>Get instant access to the webinar</h6></div>`);
+        document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater').insertAdjacentHTML('afterend',`           <div class="hs-social-proofs-spz">
+        <h4 class="hs-sp-title">Join 20,000+ gyms & studios using ABC Fitness Solutions</h4>
+        <div class="hs-sp-wrapper">
+            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1681908006/ABCFitnessSolutions/7002a/assets/Club-fitness.svg" alt="Club Fitness" title="Club Fitness" />
+            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1681908005/ABCFitnessSolutions/7002a/assets/Hidden-gym.svg" alt="Hidden Gym" title="Hidden Gym" />
+            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1681908005/ABCFitnessSolutions/7002a/assets/ATC-fitness.svg" alt="ATC Fitness" title="ATC Fitness" />
+            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1681908005/ABCFitnessSolutions/7002a/assets/Golds-gym.svg" alt="Gold's Gym" title="Gold's Gym" />
+            <img class="sp-img" src="https://res.cloudinary.com/spiralyze/image/upload/v1681908006/ABCFitnessSolutions/7002a/assets/Workout-anytime.svg" alt="24-7 Workout Anytime" title="24-7 Workout Anytime" />
+        </div>
+
+        <div class="hs-sp-img-tab">
+            <picture>
+                <source media="(min-width:767px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/6001/assets/abc-solution-social-proof-tab.png">
+                <source media="(min-width:280px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/6001/assets/abc-solution-social-proof-mobile.png">
+                <img class="sp-group-img" src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/6001/assets/abc-solution-social-proof-mobile.png" alt="Club manage hero">
+            </picture>
+        </div>
+    </div>`);
     }
 
     // Generic

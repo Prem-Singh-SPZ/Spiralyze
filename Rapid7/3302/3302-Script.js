@@ -14,8 +14,10 @@ var intr = setInterval(function () {
     if (document.querySelectorAll('.spz-3302 .pageContent > .richTextBlockWrap').length > 0) {
         document.querySelector('.spz-3302 .pageContent > .richTextBlockWrap').classList.add('reason-trust-section');
 
-        document.querySelector('.spz-3302 .pageContent > .richTextBlockWrap .medium-10.medium-offset-1.large-8.large-offset-2.cell.pageBlock__content').classList.remove('medium-offset-1');
-        document.querySelector('.spz-3302 .pageContent > .richTextBlockWrap .medium-10.large-8.large-offset-2.cell.pageBlock__content').classList.remove('large-offset-2');
+        if (document.querySelectorAll('.spz-3302 .pageContent > .richTextBlockWrap .medium-10.medium-offset-1.large-8.large-offset-2.cell.pageBlock__content').length > 0) {
+            document.querySelector('.spz-3302 .pageContent > .richTextBlockWrap .medium-10.medium-offset-1.large-8.large-offset-2.cell.pageBlock__content').classList.remove('medium-offset-1');
+            document.querySelector('.spz-3302 .pageContent > .richTextBlockWrap .medium-10.large-8.large-offset-2.cell.pageBlock__content').classList.remove('large-offset-2');
+        }
 
         if (document.querySelector('.spz-3302 .reason-trust-section .grid-x.wrapper ol')) {
             document.querySelector('.spz-3302 .reason-trust-section .grid-x.wrapper ol').insertAdjacentHTML('afterend', ctaSectionHtml);

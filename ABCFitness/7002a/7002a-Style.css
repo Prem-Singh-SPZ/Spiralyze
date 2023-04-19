@@ -1,3 +1,26 @@
+body.spz-7002a[class] main.l-body-wrapper section.c-hero > .c-hero__bg-image-wrapper {
+  display: none !important;
+}
+body.spz-7002a[class] main.l-body-wrapper section.c-hero > .c-hero__gradient.c-hero__gradient--default {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906779/ABCFitnessSolutions/7002a/assets/BG-Desktop-min.png") !important;
+  opacity: 1;
+  background-size: 1079px;
+  background-position: top right;
+  background-repeat: no-repeat;
+  background-color: #1a3144;
+}
+@media (min-width: 599.98px) and (max-width: 991.98px) {
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero > .c-hero__gradient.c-hero__gradient--default {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906778/ABCFitnessSolutions/7002a/assets/BG-Tablet-min.png") !important;
+    background-size: 768px;
+  }
+}
+@media (max-width: 599.98px) {
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero > .c-hero__gradient.c-hero__gradient--default {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906778/ABCFitnessSolutions/7002a/assets/BG-Mobile-min.png") !important;
+    background-size: 375px;
+  }
+}
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container {
   padding-top: 82px;
 }
@@ -5,11 +28,17 @@ body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-cont
   display: none !important;
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater {
-  flex-direction: row-reverse;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-direction: row-reverse;
+          flex-direction: row-reverse;
 }
 @media (max-width: 1200px) {
   body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater {
-    flex-direction: column-reverse;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
   }
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column {
@@ -34,8 +63,11 @@ body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-cont
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child .spz-subtitle {
   text-transform: none;
   font-weight: normal;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   padding-bottom: 16px;
   letter-spacing: -0.02em;
   line-height: 134%;
@@ -59,17 +91,96 @@ body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-cont
   padding-bottom: 30px;
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1678798093/ABCFitnessSolutions/7003a/assets/Form-Desktop.svg");
-  height: 540px;
-  background-repeat: no-repeat;
-  background-position: top;
-  background-size: contain;
+  background: rgba(255, 255, 255, 0.2);
+  border-radius: 12px;
 }
-body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content p {
-  display: none !important;
+body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content p .spz-form-title h6 {
+  font-family: "aktiv-grotesk", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 36px;
+  text-align: center;
+  color: #000;
+  text-transform: initial;
+  margin: 0;
+  padding: 0;
 }
-@media (max-width: 768px) {
-  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1678798093/ABCFitnessSolutions/7003a/assets/Form-Mobile.svg");
+body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content p iframe {
+  height: 760px;
+}
+body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz {
+  width: 100%;
+  margin: 70px auto 83px auto;
+  -webkit-animation-name: fadeInUp;
+  animation-name: fadeInUp;
+  -webkit-animation-iteration-count: 1;
+  animation-iteration-count: 1;
+  -webkit-animation-duration: 1s;
+  animation-duration: 1s;
+  -webkit-animation-timing-function: ease;
+  animation-timing-function: ease;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+  -webkit-backface-visibility: hidden;
+  backface-visibility: hidden;
+  -webkit-animation-delay: 0.3s;
+  animation-delay: 0.3s;
+}
+body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-title {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 26px;
+  text-align: center;
+  color: #fff;
+}
+body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 7px;
+}
+body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-img-tab {
+  display: none;
+}
+@media (min-width: 1025px) and (max-width: 1199px) {
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz {
+    width: 95%;
   }
-}/*# sourceMappingURL=7002a-Style.css.map */
+}
+@media (max-width: 1024px) {
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz {
+    margin: 43px auto 60px auto;
+  }
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-wrapper {
+    display: none;
+  }
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-img-tab {
+    display: block;
+    max-width: 568px;
+    margin: 7.5px auto;
+  }
+}
+@media (max-width: 767px) {
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz {
+    max-width: 335px;
+    margin: 43px auto 40.5px auto;
+  }
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-title {
+    font-size: 18px;
+    line-height: 23px;
+    font-weight: 600;
+  }
+}
+@media (max-width: 340px) {
+  body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz {
+    max-width: 300px;
+  }
+}
