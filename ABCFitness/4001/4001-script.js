@@ -23,7 +23,7 @@
     }
 
     function heroContentUpdate() {
-        if (document.querySelectorAll('.spz-login-btn').length == 0) {
+        if (document.querySelectorAll('.spz-hero-container').length == 0) {
 
             document.querySelector('body > main.l-body-wrapper section.c-hero .c-hero__content .c-hero__info-wrapper').insertAdjacentHTML('beforeend', `
                 <div class="spz-hero-container">

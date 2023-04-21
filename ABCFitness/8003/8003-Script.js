@@ -39,7 +39,7 @@
                     </div>
                     <div class="card-content">
                         <h5 class="card-title">Gym Owner</h5>
-                        <p class="card-desc">I&#8217;m a gym owner or manager, and I&#8217;m considering ABC Fitness for my
+                        <p class="card-desc">I&#8217;m a gym owner or manager, and I&#8217;m considering ABC IGNITE for my
                             facility.</p>
                         <div class="card-cta">
                             <button id="trigger-demo-modal" class="trigger-demo-modal">REQUEST YOUR DEMO<img

@@ -177,7 +177,8 @@ body.spz-9001[class] {
 
             .c-hero__column:last-child {
               border: 0;
-              padding: 59px 112px 8px 98px;
+              padding: 28px 91px 8px 80px;
+              // padding: 59px 112px 8px 98px;
               @media (max-width: 1224px) {
                 padding: 40px;
               }
@@ -188,15 +189,25 @@ body.spz-9001[class] {
               > .c-hero__column-content {
                 > p {
                   margin: 0;
+                  background: #fff;
+                  // filter: drop-shadow(0px 10px 50px rgba(0, 0, 0, 0.15));
+                  border-radius: 12px;
+                  padding: 30px 22px 0 18px;
+                  @media (max-width: 599.98px) {
+                    padding: 20px 8px 0 6px;
+                  }
+                  iframe {
+                    @media (max-width: 1919.98px) {
+                      max-height: 788px;
+                    }
+                    @media (max-width: 1023.98px) {
+                      max-height: 772px;
+                    }
+                  }
 
-                  // iframe {
-                  //   @media (max-width: 1599px) {
-                  //     max-height: 788px;
-                  //   }
-                  //   @media (max-width: 1023.98px) {
-                  //     max-height: 772px;
-                  //   }
-                  // }
+                  > strong {
+                    color: #38465a;
+                  }
                 }
               }
 
@@ -209,11 +220,12 @@ body.spz-9001[class] {
                 padding: 18px;
               }
               @media (max-width: 599.98px) {
-                max-width: 298px;
+                max-width: 100%;
                 margin: auto;
-                &.android {
-                  max-width: 284px;
-                }
+                padding: 0;
+                // &.android {
+                //   max-width: 284px;
+                // }
               }
             }
           }
@@ -225,6 +237,7 @@ body.spz-9001[class] {
             align-items: center;
             width: 100%;
             margin-bottom: 54px;
+            margin-top: 16px;
 
             > p {
               font-family: aktiv-grotesk, aktiv-grotesk-1, aktiv-grotesk-2,
