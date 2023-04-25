@@ -283,7 +283,7 @@ $aktiv: "aktiv-grotesk", sans-serif;
       left: 0;
       right: 0;
       // bottom: 0;
-      background: rgba(0, 0, 0, 0.9);
+      background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(5px);
       z-index: 100;
       overflow: auto;
@@ -310,19 +310,20 @@ $aktiv: "aktiv-grotesk", sans-serif;
           position: relative;
           max-width: 420px;
           padding-bottom: 17px;
-          background-image: -webkit-gradient(
-            linear,
-            left bottom,
-            left top,
-            color-stop(1%, #1c99d6),
-            to(#263870)
-          );
-          background-image: -o-linear-gradient(
-            bottom,
-            #1c99d6 1%,
-            #263870 100%
-          );
-          background-image: linear-gradient(0deg, #1c99d6 1%, #263870);
+          background-color: #fff;
+          // background-image: -webkit-gradient(
+          //   linear,
+          //   left bottom,
+          //   left top,
+          //   color-stop(1%, #1c99d6),
+          //   to(#263870)
+          // );
+          // background-image: -o-linear-gradient(
+          //   bottom,
+          //   #1c99d6 1%,
+          //   #263870 100%
+          // );
+          // background-image: linear-gradient(0deg, #1c99d6 1%, #263870);
           @media (max-width: 599.98px) {
             padding: 40px 12px;
             max-width: 320px;
@@ -350,25 +351,21 @@ $aktiv: "aktiv-grotesk", sans-serif;
             font-family: $aktiv;
             font-weight: 700;
             line-height: 27px;
-            color: #fff;
+            color: #445264;
           }
           .close-modal {
             position: absolute;
             right: 16px;
-            top: 12px;
+            top: 16px;
+            width: 12px;
+            height: 12px;
 
-            svg {
+            img {
               cursor: pointer;
-              opacity: 1;
+              opacity: 0.6;
 
               &:hover {
-                g {
-                  opacity: 0.6;
-                }
-              }
-              g {
-                pointer-events: none;
-                opacity: 1;
+                opacity: 0.9;
               }
             }
           }
