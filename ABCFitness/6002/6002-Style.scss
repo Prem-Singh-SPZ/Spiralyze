@@ -277,7 +277,8 @@ $aktiv: "aktiv-grotesk", sans-serif;
 
     //Modal code
     > #get-in-contact {
-      display: none;
+      opacity: 0;
+      visibility: hidden;
       position: fixed;
       top: 0;
       left: 0;
@@ -285,9 +286,16 @@ $aktiv: "aktiv-grotesk", sans-serif;
       // bottom: 0;
       background: rgba(0, 0, 0, 0.4);
       backdrop-filter: blur(5px);
-      z-index: 100;
       overflow: auto;
-      height: 100vh;
+      height: 0;
+      // transition-delay: 200ms;
+
+      &.show-modal {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+        z-index: 100;
+      }
 
       padding: 24px 0;
       .l-container.c-form__container {
@@ -376,7 +384,7 @@ $aktiv: "aktiv-grotesk", sans-serif;
 
   .c-cta-about__explore-list {
     @media (min-width: 991px) {
-      padding-top: 146px;
+      padding-top: 16px;
     }
   }
 

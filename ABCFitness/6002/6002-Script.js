@@ -107,12 +107,16 @@ function modalUpdate() {
 //perform click actions
 window.addEventListener("click", function (e) {
     if (e.target.classList.contains("trigger-demo-modal")) {
-        this.document.querySelector('#get-in-contact').style.display = 'block';
+        // this.document.querySelector('#get-in-contact').style.display = 'block';
+        this.document.querySelector('#get-in-contact').classList.add('show-modal');
         this.document.body.classList.add('modal-open');
     }
     // console.log(e.target.classList)
     if (e.target.classList.contains("close-modal-icon")) {
-        this.document.querySelector('#get-in-contact').style.display = 'none';
+        // this.document.querySelector('#get-in-contact').style.display = 'none';
+        if (this.document.querySelector('#get-in-contact').classList.contains('show-modal')) {
+            this.document.querySelector('#get-in-contact').classList.remove('show-modal');
+        }
         if (this.document.body.classList.contains('modal-open')) {
             this.document.body.classList.remove('modal-open');
         }

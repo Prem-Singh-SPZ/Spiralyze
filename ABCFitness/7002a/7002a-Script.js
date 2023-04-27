@@ -20,6 +20,7 @@
 
     function heroContentUpdate() {
         document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child').insertAdjacentHTML('afterbegin', `<h6 class="spz-subtitle">State of the Industry:<br><strong>What&#8217;s Next in Fitness</strong></h6>`);
+        document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child .c-hero__column-content p:last-child').textContent = `...and more!`;
         document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:last-child .c-hero__column-content > p').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><h6>Get instant access to the webinar</h6></div>`);
         document.querySelector('.state-of-the-industry-whats-next-in-fitness > main.l-body-wrapper .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater').insertAdjacentHTML('afterend', `           <div class="hs-social-proofs-spz">
         <h4 class="hs-sp-title">Join 20,000+ gyms & studios using ABC Fitness Solutions</h4>
@@ -47,7 +48,7 @@
 
     function urlCheck(url) {
         let testURL = TEST_ENV.base_url;
-        if (url == testURL) {
+        if (url == testURL || location.href.indexOf('state-of-the-industry-whats-next-in-fitness') > -1) {
             waitForElm(TEST_ENV.main_class).then(function () {
                 loadTest();
             });

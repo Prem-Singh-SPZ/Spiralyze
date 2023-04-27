@@ -273,16 +273,23 @@ body.spz-8003[class] {
 
     //Modal code
     > #request-a-demo {
-      display: none;
+      // display: none;
+      opacity: 0;
+      visibility: hidden;
       position: fixed;
       top: 0;
       left: 0;
       right: 0;
       // bottom: 0;
       background: rgba(28, 28, 28, 0.8);
-      z-index: 100;
       overflow: auto;
-      height: 100vh;
+      height: 0;
+      &.show-modal {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+        z-index: 100;
+      }
 
       padding: 24px 0;
       .l-container.c-tabs-form__container {

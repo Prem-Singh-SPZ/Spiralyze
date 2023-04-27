@@ -107,11 +107,15 @@
     //perform click actions
     window.addEventListener("click", function (e) {
         if (e.target.classList.contains("trigger-demo-modal")) {
-            this.document.querySelector('#request-a-demo').style.display = 'block';
+            // this.document.querySelector('#request-a-demo').style.display = 'block';
+            this.document.querySelector('#request-a-demo').classList.add('show-modal');
             this.document.body.classList.add('modal-open');
         }
         if (e.target.classList.contains("close-modal-icon")) {
-            this.document.querySelector('#request-a-demo').style.display = 'none';
+            // this.document.querySelector('#request-a-demo').style.display = 'none';
+            if (this.document.querySelector('#request-a-demo').classList.contains('show-modal')) {
+                this.document.querySelector('#request-a-demo').classList.remove('show-modal');
+            }
             if (this.document.body.classList.contains('modal-open')) {
                 this.document.body.classList.remove('modal-open');
             }
