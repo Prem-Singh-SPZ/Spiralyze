@@ -18,6 +18,24 @@ $aktiv: "aktiv-grotesk", sans-serif;
 body.spz-7002a[class] {
   main.l-body-wrapper {
     section.c-hero {
+      &.spz-custom-bg {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906779/ABCFitnessSolutions/7002a/assets/BG-Desktop-min.png") !important;
+        opacity: 1;
+        background-size: 1079px;
+        background-position: top right;
+        background-repeat: no-repeat;
+        background-color: #1a3144;
+
+        @media (min-width: 599.98px) and (max-width: 991.98px) {
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906778/ABCFitnessSolutions/7002a/assets/BG-Tablet-min.png") !important;
+          background-size: 768px;
+        }
+
+        @media (max-width: 599.98px) {
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1681906778/ABCFitnessSolutions/7002a/assets/BG-Mobile-min.png") !important;
+          background-size: 375px;
+        }
+      }
       > .c-hero__bg-image-wrapper {
         display: none !important;
       }
@@ -54,6 +72,19 @@ body.spz-7002a[class] {
         .c-hero__info-wrapper {
           .__title-wrapper.c-hero__title-wrapper {
             display: none !important;
+          }
+
+          .c-hero__subtitle.c-subtitle {
+            > p {
+              display: none;
+              &:first-child {
+                display: block;
+                color: #fff !important;
+                span {
+                  color: #fff !important;
+                }
+              }
+            }
           }
 
           .c-hero__repeater {
@@ -111,6 +142,7 @@ body.spz-7002a[class] {
                   letter-spacing: -0.015em;
                   margin-top: -3px;
                   margin-bottom: 18px;
+                  color: #fff !important;
                   @media (max-width: 599.98px) {
                     margin-bottom: 0;
                     padding-bottom: 11px;
@@ -125,6 +157,10 @@ body.spz-7002a[class] {
                     font-size: 20px;
                     line-height: 134%;
                     letter-spacing: -0.045em;
+                    span {
+                      color: #fff !important;
+                    }
+
                     @media (max-width: 767.98px) {
                       font-weight: 400;
                       font-size: 16px;
@@ -161,6 +197,7 @@ body.spz-7002a[class] {
                         font-size: 16px;
                         line-height: 134%;
                         letter-spacing: -0.025em;
+
                         @media (min-width: 767.98px) {
                           font-size: 19px;
                         }
@@ -174,6 +211,9 @@ body.spz-7002a[class] {
                       font-weight: 500;
                       font-size: 14px;
                       line-height: 150%;
+                      span {
+                        color: #fff !important;
+                      }
                       @media (min-width: 767.98px) {
                         font-size: 18px;
                         // letter-spacing: -0.012em;
@@ -228,6 +268,24 @@ body.spz-7002a[class] {
 
                     iframe {
                       height: 666px;
+                    }
+                  }
+
+                  &.invert-form-color {
+                    p {
+                      background: transparent;
+                      @media (min-width: 1199.98px) {
+                        padding-top: 0;
+                        margin-top: -10px;
+                      }
+                      .spz-form-title {
+                        h6 {
+                          color: #fff;
+                        }
+                      }
+                      iframe {
+                        height: 704px;
+                      }
                     }
                   }
                 }
