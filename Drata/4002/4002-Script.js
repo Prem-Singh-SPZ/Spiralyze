@@ -1,9 +1,9 @@
 const pageInt = setInterval(() => {
     if (document.querySelectorAll('.hbspt-form form').length > 0) {
         clearInterval(pageInt);
+        moveElement('.hero-section', '#main-content');
         appendSections();
         appendInputLabel();
-        // moveElement('.hero-section', '#main-content');
 
         document.querySelector('.footer-cookie').addEventListener("click", function (e) {
             document.querySelector('.osano-cm-window__widget').click();
@@ -19,11 +19,12 @@ const pageInt = setInterval(() => {
 
 //function to add all the sections
 function appendSections() {
-    document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', footerSection());
-    document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', reviewCard());
-    document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', integrationSection());
-    document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', logoSection());
-    document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', featureSection());
+    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', footerSection());
+    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCard());
+    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', integrationSection());
+    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', logoSection());
+    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', featureSection());
+    // document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', heroSection());
 }
 
 function appendFavicon() {
@@ -127,13 +128,13 @@ window.onorientationchange = function () {
     }
 };
 
-// function moveElement(sourceElm, targetLoc) {
-//     const f = document.createDocumentFragment();
-//     if (document.querySelector(sourceElm) != null) {
-//         f.appendChild(document.querySelector(sourceElm));
-//         document.querySelector(targetLoc).appendChild(f);
-//     }
-// }
+function moveElement(sourceElm, targetLoc) {
+    const f = document.createDocumentFragment();
+    if (document.querySelector(sourceElm) != null) {
+        f.appendChild(document.querySelector(sourceElm));
+        document.querySelector(targetLoc).appendChild(f);
+    }
+}
 
 function footerSection() {
     return `<section class="footer">
@@ -1171,6 +1172,70 @@ function featureSection() {
     <h6>24/7 Monitoring</h6>
     <p>Continuous compliance monitoring to identify issues early and stay in compliance.</p></div>
 </div>
+        </div>
+    </div>
+</section>`
+}
+
+function heroSection() {
+    return `<section class="hero-section">
+    <div class="header-nav">
+        <div class="nav-section container">
+            <a href="https://drata.com/">
+                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_drata.svg"
+                    class="brand-logo" alt="Drata" title="Drata" draggable="false">
+            </a>
+        </div>
+    </div>
+    <div class="container hero-container">
+        <div class="hero-content">
+            <h1 class="hc-title">Automate <br class="break-desk" /> and Accelerate Compliance</h1>
+            <div class="star-rating dis-flex align-items-center">
+                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1682086337/drata/6002/rating-4_9.svg"
+                    class="sr-img" alt="Ratings" title="Ratings" draggable="false">
+                <span class="sr-number"><strong>4.9</strong> (385 reviews)</span>
+            </div>
+
+            <div class="list-grp-wrapper">
+                <ul class="list-group">
+                    <li class="list-item">
+                        <div class="ls-title">Automate Evidence Collection</div>
+                        <div class="ls-desc">Collect documentation from your tech stack. 75+ integrations and an
+                            open API.</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="ls-title">Frameworks</div>
+                        <div class="ls-desc">Automate compliance for 16+ products and frameworks including SOC 2,
+                            HIPAA, PCI, GDPR, and more.</div>
+                    </li>
+                    <li class="list-item">
+                        <div class="ls-title">Integrations</div>
+                        <div class="ls-desc">20+ customizable, auditor approved policies. Streamlined employee
+                            signing & documentation.</div>
+                    </li>
+                </ul>
+            </div>
+
+        </div>
+
+        <div class="hero-right-section">
+            <div class="form-wrapper-spz">
+                <h2 class="form-title-spz">Get a Demo</h2>
+                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
+                <script>
+                    hbspt.forms.create({
+                        region: "na1",
+                        portalId: "7817592",
+                        formId: "429140d2-bd90-4a8b-a561-5d732c9bd514",
+                        cssClass: "hs-form-spz",
+                        css: "",
+                        submitText: "Get Started",
+                        onFormReady: function ($form) { },
+                        onFormSubmit: function ($form) { },
+                        onFormSubmitted: function ($form) { }
+                    });
+                </script>
+            </div>
         </div>
     </div>
 </section>`
