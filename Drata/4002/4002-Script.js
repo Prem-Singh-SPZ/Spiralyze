@@ -53,7 +53,7 @@ function focusFields() {
         el.addEventListener('focus', function () {
             el.closest('.field').classList.add('field-focus');
         });
-        el.addEventListener('blu+r+', function () {
+        el.addEventListener('blur', function () {
             el.closest('.field').classList.remove('field-focus');
             checkError();
         });
