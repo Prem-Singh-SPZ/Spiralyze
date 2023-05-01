@@ -1,18 +1,16 @@
 const pageInt = setInterval(() => {
-    if (document.querySelectorAll('.hbspt-form form').length > 0) {
+    if (document.querySelectorAll('.hbspt-form form .hs-label-spz').length > 0) {
         clearInterval(pageInt);
         moveElement('.hero-section', '#main-content');
         appendSections();
-        appendInputLabel();
 
         document.querySelector('.footer-cookie').addEventListener("click", function (e) {
             document.querySelector('.osano-cm-window__widget').click();
         });
 
         document.body.classList.add('spz-4002');
-        // if (document.body.classList.contains('spz-4001')) {
-        //     document.body.classList.remove('spz-4001');
-        // }
+        updateHeroContents();
+        updateInputLabel();
     }
 }, 100);
 
@@ -40,31 +38,12 @@ function appendFavicon() {
 
 appendFavicon();
 
-// Remove all style tags without id in header
-// function removeStyleTags() {
-//     document.querySelectorAll('style:not([id])').forEach(function (el) {
-//         el.remove();
-//     });
-
-//     // Remove link tag which contains main.min.css or Social_follow.min.css in href attribute
-//     document.querySelectorAll('link').forEach(function (el) {
-//         if (el.href.indexOf('main.min.css') > -1 || el.href.indexOf('Social_follow.min.css') > -1) {
-//             el.remove();
-//         }
-//     });
-// }
 
 // Create input label with placeholder text
-function appendInputLabel() {
+function updateInputLabel() {
     document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
-        const label = document.createElement("label");
-        label.innerHTML = el.placeholder;
-        if (!el.hasAttribute('type') && el.options.length > 0) {
-            label.innerHTML = el.options[0].text;
-        }
-        label.setAttribute('for', el.id);
-        label.classList.add('hs-label-spz');
-        el.parentNode.insertBefore(label, el.nextSibling);
+        const label = el.parentElement.querySelector("label");
+        label.innerHTML = (label.textContent.split('*')[0] + '&nbsp;*');
     });
 }
 
@@ -148,7 +127,7 @@ function footerSection() {
                     src="https://res.cloudinary.com/spiralyze/image/upload/v1682676285/drata/4002/custom_assets/Drata-full-wordmark.svg"
                     class="brand-logo" alt="Drata" title="Drata" draggable="false"></a>
             <p class="brand-desc">Drata is a security and compliance automation platform that continuously monitors and
-                collects evidence of a company&sbquo;s security controls, while streamlining workflows to ensure
+                collects evidence of a company&rsquo;s security controls, while streamlining workflows to ensure
                 audit-readiness.</p>
         </div>
         <div class="brand-social-links dis-flex justify-content-between flex-wrap">
@@ -187,7 +166,7 @@ function footerSection() {
 function reviewCard() {
     return `<section class="review-section">
 <div class="container">
-    <h2 class="sec-title border-title">See What Out Customers Say About Drata</h2>
+    <h2 class="sec-title border-title">See What Our Customers Say About Drata</h2>
 </div>
 <div class="review-slider dis-flex justify-content-between container">
     <div class="review-item-box review-info-box">
@@ -1138,37 +1117,37 @@ function featureSection() {
         <div class="fs-card-group">
         <div class="fs-card-item"><div class="img-container"><img
         src="https://res.cloudinary.com/spiralyze/image/upload/v1682075793/drata/4002/features-multi_framework.svg" class="ls-img"
-        alt="Abnormal" title="Abnormal"></div><div class="content-container">
+        alt="Multi Framework" title="Multi Framework"></div><div class="content-container">
     <h6>Multi-Framework</h6>
     <p>Automated compliance for 16+ products and frameworks including SOC 2, ISO 27001, HIPAA, GDPR, & PCI. </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
         src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-automated_evidence.svg" class="ls-img"
-        alt="Abnormal" title="Abnormal"></div><div class="content-container">
+        alt="Automated Evidence" title="Automated Evidence"></div><div class="content-container">
     <h6>Automated Evidence Collection</h6>
     <p>Collection documentation from your tech stack. Powered by 75+ integrations and an open API.  </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
         src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-security_policies.svg" class="ls-img"
-        alt="Abnormal" title="Abnormal"></div><div class="content-container">
+        alt="Security Policies" title="Security Policies"></div><div class="content-container">
     <h6>Security Policies</h6>
     <p>20+ customizable, auditor-approved policies. Streamline employee signing & documentation.</p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
         src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-vendor_management.svg" class="ls-img"
-        alt="Abnormal" title="Abnormal"></div><div class="content-container">
+        alt="Vendor Management" title="Vendor Management"></div><div class="content-container">
     <h6>Vendor Management</h6>
     <p>Streamline vendor security questionnaires. Store, send, and review answers.   </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
         src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-expert_assistance.svg" class="ls-img"
-        alt="Abnormal" title="Abnormal"></div><div class="content-container">
+        alt="Experts Assistance" title="Experts Assistance"></div><div class="content-container">
     <h6>Experts Assistance</h6>
     <p>Step-by-step guidance from our team of compliance experts. 24/5.</p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
         src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-24_7_monitoring.svg" class="ls-img"
-        alt="Abnormal" title="Abnormal"></div><div class="content-container">
+        alt="24/7 Monitoring" title="24/7 Monitoring"></div><div class="content-container">
     <h6>24/7 Monitoring</h6>
     <p>Continuous compliance monitoring to identify issues early and stay in compliance.</p></div>
 </div>
@@ -1177,66 +1156,31 @@ function featureSection() {
 </section>`
 }
 
-function heroSection() {
-    return `<section class="hero-section">
-    <div class="header-nav">
-        <div class="nav-section container">
-            <a href="https://drata.com/">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_drata.svg"
-                    class="brand-logo" alt="Drata" title="Drata" draggable="false">
-            </a>
-        </div>
-    </div>
-    <div class="container hero-container">
-        <div class="hero-content">
-            <h1 class="hc-title">Automate <br class="break-desk" /> and Accelerate Compliance</h1>
-            <div class="star-rating dis-flex align-items-center">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1682086337/drata/6002/rating-4_9.svg"
-                    class="sr-img" alt="Ratings" title="Ratings" draggable="false">
-                <span class="sr-number"><strong>4.9</strong> (385 reviews)</span>
-            </div>
-
-            <div class="list-grp-wrapper">
-                <ul class="list-group">
-                    <li class="list-item">
-                        <div class="ls-title">Automate Evidence Collection</div>
-                        <div class="ls-desc">Collect documentation from your tech stack. 75+ integrations and an
-                            open API.</div>
-                    </li>
-                    <li class="list-item">
-                        <div class="ls-title">Frameworks</div>
-                        <div class="ls-desc">Automate compliance for 16+ products and frameworks including SOC 2,
-                            HIPAA, PCI, GDPR, and more.</div>
-                    </li>
-                    <li class="list-item">
-                        <div class="ls-title">Integrations</div>
-                        <div class="ls-desc">20+ customizable, auditor approved policies. Streamlined employee
-                            signing & documentation.</div>
-                    </li>
-                </ul>
-            </div>
-
-        </div>
-
-        <div class="hero-right-section">
-            <div class="form-wrapper-spz">
-                <h2 class="form-title-spz">Get a Demo</h2>
-                <script charset="utf-8" type="text/javascript" src="//js.hsforms.net/forms/embed/v2.js"></script>
-                <script>
-                    hbspt.forms.create({
-                        region: "na1",
-                        portalId: "7817592",
-                        formId: "429140d2-bd90-4a8b-a561-5d732c9bd514",
-                        cssClass: "hs-form-spz",
-                        css: "",
-                        submitText: "Get Started",
-                        onFormReady: function ($form) { },
-                        onFormSubmit: function ($form) { },
-                        onFormSubmitted: function ($form) { }
-                    });
-                </script>
-            </div>
-        </div>
-    </div>
-</section>`
+function updateHeroContents() {
+    if (document.querySelectorAll('#main-content > .hero-section').length > 0) {
+        document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
+        document.querySelector('#main-content > .hero-section .header-nav .nav-section').classList.add('container');
+        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
+        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > .hs-label-spz').textContent = `How did you hear about Drata?*`;
+        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest > legend.hs-field-desc').textContent = `What product(s) are you interested in?`;
+        document.querySelector('#main-content > .hero-section .form-wrapper-spz .form-title-spz').textContent = `Get a Demo`;
+        document.querySelector('#main-content > .hero-section .hero-content .hc-title').textContent = `Automate SOC 2 compliance. Reduce
+        compliance time and cost by 50%.`;
+        document.querySelector('#main-content > .hero-section .hero-content .list-grp-wrapper .list-group').innerHTML = `<ul class="list-group">
+        <li class="list-item">
+        <div class="ls-title">Reduce Time Up to 80%</div>
+        <div class="ls-desc">Automate documentation and evidence collection. Integrates with your tech stack out of the box.</div>
+        </li>
+        <li class="list-item">
+        <div class="ls-title">Scalable Compliance</div>
+        <div class="ls-desc">Maintain compliance as you add products and tech. Easily add new compliance frameworks.</div>
+        </li>
+        <li class="list-item">
+        <div class="ls-title">Ongoing Compliance</div>
+        <div class="ls-desc">Achieve peace of mind, knowing Drata is automating ongoing security and compliance monitoring.</div>
+        </li>
+        </ul>`;
+        document.querySelector('#main-content > .hero-section .hero-content .star-rating').innerHTML = `<img src="https://res.cloudinary.com/spiralyze/image/upload/v1682075790/drata/4002/rating-49.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <div class="rating"><span>4.9</span> (398 reviews) </div>`;
+        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_submit.hs-submit .actions .hs-button').setAttribute('value', 'Get Started');
+    }
 }
