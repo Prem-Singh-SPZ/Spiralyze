@@ -53,6 +53,13 @@ $border-color_6: #5b5b5b;
 }
 
 body.spz-4002 {
+  /* Reset HubSpot */
+  header,
+  footer {
+    display: none !important;
+  }
+
+  
   padding: 0;
   margin: 0;
   overflow-x: hidden;
@@ -75,25 +82,7 @@ body.spz-4002 {
   .hero-section {
     position: relative;
     background: #f3f3f3;
-
-    &::before {
-      content: url("https://res.cloudinary.com/spiralyze/image/upload/v1682941351/drata/4002/custom_assets/Dots-square-1920.svg");
-      position: absolute;
-      bottom: -6px;
-      left: 40px;
-      top: auto;
-      right: auto;
-      height: auto;
-      width: auto;
-      background: none;
-      @media screen and (max-width: 1600px) {
-        left: -200px;
-        @media screen and (max-width: 1200px) {
-          display: none;
-        }
-      }
-    }
-
+    overflow: hidden;
     &::after {
       content: url("https://res.cloudinary.com/spiralyze/image/upload/v1682941351/drata/4002/custom_assets/Dots-rectangle-1920.svg");
       position: absolute;
@@ -107,6 +96,9 @@ body.spz-4002 {
       @media screen and (max-width: 1600px) {
         display: none;
       }
+    }
+    &::before {
+      display: none;
     }
     @media screen and (min-width: 1600px) {
       > .container::before {
@@ -126,6 +118,23 @@ body.spz-4002 {
       max-width: 520px;
       padding: 45px 0;
 
+      &::before {
+        content: url("https://res.cloudinary.com/spiralyze/image/upload/v1682941351/drata/4002/custom_assets/Dots-square-1920.svg");
+        position: absolute;
+        bottom: -6px;
+        left: -256px;
+        top: auto;
+        right: auto;
+        height: auto;
+        width: auto;
+        background: none;
+        // @media screen and (max-width: 1600px) {
+        //   left: -256px;
+        @media screen and (max-width: 1200px) {
+          display: none;
+        }
+        // }
+      }
       .hc-title {
         position: relative;
         font-family: "Darker Grotesque", sans-serif;
@@ -198,7 +207,9 @@ body.spz-4002 {
       justify-content: space-between;
       padding-bottom: 30px;
       margin-top: 50px;
-      overflow: hidden;
+      @media (max-width: 991.98px) {
+        overflow: hidden;
+      }
     }
 
     .list-grp-wrapper {
@@ -680,9 +691,9 @@ body.spz-4002 {
               background: #fff;
               border: 1px solid #d7d7d7;
               border-radius: 4px;
-              // outline: none;
-              outline-width: 2px;
-              outline-color: #3799ed;
+              outline: transparent;
+              // outline-width: 2px;
+              // outline-color: #3799ed;
               transition: all 0.3s ease-in-out;
 
               &::placeholder {
@@ -692,7 +703,7 @@ body.spz-4002 {
             }
 
             &:hover {
-              // box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 
               ~ label {
                 color: #454545 !important;
@@ -812,13 +823,13 @@ body.spz-4002 {
           &.field-focus {
             .input {
               .hs-input {
-                border: 2px solid #0466ba;
+                border: 1px solid #0466ba;
                 box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-                outline-width: 2px;
-                outline-color: #3799ed;
+                // outline-width: 2px;
+                // outline-color: #3799ed;
 
                 ~ .hs-label-spz {
-                  color: #0580e8;
+                  color: #0580e8 !important;
                   // font-weight: 500;
                 }
 
@@ -837,8 +848,8 @@ body.spz-4002 {
 
             &.hs-fieldtype-select {
               select {
-                background: url("//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg")
-                  #fff no-repeat right 15px center !important;
+                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1682086278/drata/6002/dropdown_arrow.svg")
+                  #fff no-repeat right 16px center !important;
               }
             }
           }
@@ -1060,6 +1071,7 @@ body.spz-4002 {
         }
 
         &:nth-child(2n + 1) {
+          display: none;
           margin-top: 4px;
 
           &::before {
@@ -1332,6 +1344,7 @@ body.spz-4002 {
     }
     .sec-title {
       max-width: 820px;
+      padding-top: 19px;
       @media (max-width: 991.98px) {
         max-width: 700px;
       }
@@ -1630,7 +1643,7 @@ body.spz-4002 {
     animation-direction: normal;
   }
   .review-section {
-    padding: 130px 0 127px;
+    padding: 130px 0 128.5px;
     background: -webkit-gradient(
       linear,
       left top,
@@ -1642,6 +1655,16 @@ body.spz-4002 {
     background: linear-gradient(180deg, #f2f2f2 0%, #f2f2f2 100%);
     position: relative;
     overflow: hidden;
+    .container.review-slider {
+      @media (min-width: 991.98px) {
+        &::before {
+          position: absolute;
+          bottom: -132px;
+          left: -230px;
+          content: url("https://res.cloudinary.com/spiralyze/image/upload/v1682075791/drata/4002/dots-square.svg");
+        }
+      }
+    }
     .sec-title {
       @media (min-width: 991.98px) {
         &::after {
@@ -1689,6 +1712,7 @@ body.spz-4002 {
         .star-rating {
           max-width: 108px;
           height: 20px;
+          padding-top: 1px;
         }
         span {
           font-family: "Inter";
@@ -1728,6 +1752,10 @@ body.spz-4002 {
         //   height: 1px;
         //   background: #d6d6d6;
         // }
+        @media (max-width: 767.98px) {
+          font-size: 15px;
+          line-height: 22px;
+        }
       }
       .review-author {
         font-family: $font-family_4;
@@ -1737,22 +1765,34 @@ body.spz-4002 {
         line-height: 24px;
         color: #8b8b8b;
         margin: 0;
-        // position: absolute;
-        // bottom: 20px;
-        // left: 20px;
+        @media (max-width: 767.98px) {
+          font-size: 15px;
+          line-height: 22px;
+        }
       }
     }
     .review-item-box.review-info-box {
       max-width: 264px;
       min-width: 264px;
       padding: 0;
+
+      @media (max-width: 767.98px) {
+        max-width: 240px;
+        min-width: 240px;
+      }
       .review-content {
         text-align: center;
         padding: 30px 20px 27px;
+        @media (max-width: 767.98px) {
+          padding: 16px 32px;
+        }
 
         .g2-logo {
           width: 54px;
           padding-top: 22px;
+          @media (max-width: 767.98px) {
+            padding-top: 31px;
+          }
         }
       }
     }
@@ -1767,6 +1807,13 @@ body.spz-4002 {
         letter-spacing: -0.48px;
         color: $color_1;
         margin: 28px 0 16px;
+        @media (max-width: 767.98px) {
+          font-weight: 800;
+          font-size: 20px;
+          line-height: 20px;
+          letter-spacing: -0.24px;
+          margin: 13px 0 10px;
+        }
       }
       .r-numbers {
         font-family: "Inter";
@@ -1779,6 +1826,11 @@ body.spz-4002 {
         margin: 10px 0 16px;
         span {
           font-weight: 600;
+        }
+        @media (max-width: 767.98px) {
+          font-size: 15px;
+          line-height: 22px;
+          margin: 10px 0 12px;
         }
       }
     }
@@ -1801,7 +1853,7 @@ body.spz-4002 {
     &::after {
       position: absolute;
       content: "";
-      top: -238px;
+      top: -240px;
       right: -410px;
       width: 720px;
       height: 720px;
@@ -1957,7 +2009,7 @@ body.spz-4002 {
       font-size: 17px;
       line-height: 24px;
       color: $color_4;
-      margin: 28px 0 0;
+      margin: 26.5px 0 0;
     }
     .brand-social-links {
       width: 20%;
@@ -1966,7 +2018,7 @@ body.spz-4002 {
     }
   }
   .footer-bottom {
-    .copiright-text {
+    .copyright-text {
       font-family: $font-family_5;
       font-size: 13px;
       line-height: 18px;
@@ -1975,6 +2027,9 @@ body.spz-4002 {
       letter-spacing: initial;
       color: $color_10;
       margin: 0;
+      @media (min-width: 1199.98px) {
+        margin-left: -4px;
+      }
     }
     .footer-legalLinks {
       -ms-flex-order: 1;
@@ -2134,6 +2189,11 @@ body.spz-4002 {
         max-width: 304px !important;
         min-height: 259px;
         padding: 0 12px;
+        @media (max-width: 767.98px) {
+          padding: 0 8px;
+          min-height: 264px;
+          height: 264px;
+        }
         .review-content {
           -webkit-box-shadow: 0px 12px 32px rgba(1, 18, 32, 0.08);
           box-shadow: 0px 12px 32px rgba(1, 18, 32, 0.08);
@@ -2157,6 +2217,9 @@ body.spz-4002 {
         padding-right: 12px;
         //   min-width: 322px;
         //   max-width: 322px !important;
+        @media (max-width: 767.98px) {
+          padding-right: 8px;
+        }
       }
     }
     .footer-top {
@@ -2222,7 +2285,7 @@ body.spz-4002 {
       }
     }
     .footer-bottom {
-      .copiright-text {
+      .copyright-text {
         margin: 24px 0 0;
       }
     }
@@ -2313,7 +2376,7 @@ body.spz-4002 {
       padding: 96px 0 55px;
     }
     .review-section {
-      padding: 79px 0 48px;
+      padding: 79px 0 40px;
       .sec-title {
         padding-top: 16px;
         &::after {
@@ -2326,13 +2389,13 @@ body.spz-4002 {
         }
       }
       .review-slider {
-        padding: 32px 0px;
+        padding: 40px 0px;
       }
     }
     .review-slider {
       .review-item-box {
-        min-width: 304px;
-        max-width: 304px !important;
+        min-width: 280px;
+        max-width: 280px !important;
       }
       // .review-item-box.review-info-box {
       //   min-width: 277px;
@@ -2413,7 +2476,7 @@ body.spz-4002 {
       }
     }
     .footer-bottom {
-      .copiright-text {
+      .copyright-text {
         max-width: 40%;
       }
     }
@@ -2421,7 +2484,7 @@ body.spz-4002 {
 
   /* Integrations Section */
   .integrations-section {
-    padding: 111px 0 128px;
+    padding: 111px 0 126px;
 
     /*! CSS Used from: Embedded */
     .container {
@@ -3103,7 +3166,7 @@ body.spz-4002 {
   }
   .integrations-logo-slider {
     padding: 0 24px;
-    margin-top: 58px;
+    margin-top: 60px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;

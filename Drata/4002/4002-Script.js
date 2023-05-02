@@ -1,122 +1,135 @@
-const pageInt = setInterval(() => {
-    if (document.querySelectorAll('.hbspt-form form .hs-label-spz').length > 0) {
-        clearInterval(pageInt);
-        moveElement('.hero-section', '#main-content');
-        appendSections();
+(function () {
 
-        document.querySelector('.footer-cookie').addEventListener("click", function (e) {
-            document.querySelector('.osano-cm-window__widget').click();
-        });
+    const pageInt = setInterval(() => {
+        if (document.querySelectorAll('.hbspt-form form .hs-label-spz').length > 0) {
+            clearInterval(pageInt);
+            moveElement('.hero-section', '#main-content');
+            appendSections();
 
-        document.body.classList.add('spz-4002');
-        updateHeroContents();
-        updateInputLabel();
+            document.querySelector('.footer-cookie').addEventListener("click", function (e) {
+                document.querySelector('.osano-cm-window__widget').click();
+            });
+
+            document.body.classList.add('spz-4002');
+            updateHeroContents();
+            updateInputLabel();
+            focusFields();
+            removeStyleTags();
+        }
+    }, 100);
+
+
+    //function to add all the sections
+    function appendSections() {
+        document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', footerSection());
+        document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCard());
+        document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', integrationSection());
+        document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', logoSection());
+        document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', featureSection());
+        // document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', heroSection());
     }
-}, 100);
 
-
-//function to add all the sections
-function appendSections() {
-    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', footerSection());
-    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCard());
-    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', integrationSection());
-    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', logoSection());
-    document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', featureSection());
-    // document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', heroSection());
-}
-
-function appendFavicon() {
-    document.querySelector('head').insertAdjacentHTML("afterbegin", `
+    function appendFavicon() {
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `
         <link rel="shortcut icon" href="https://drata.com/images/favicon.ico">
         <link rel="icon" type="image/png" sizes="256x256" href="https://drata.com/images/favicon-256x256.png">
         <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
         <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">`
-    );
-}
+        );
+    }
 
-appendFavicon();
+    appendFavicon();
 
-
-// Create input label with placeholder text
-function updateInputLabel() {
-    document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
-        const label = el.parentElement.querySelector("label");
-        label.innerHTML = (label.textContent.split('*')[0] + '&nbsp;*');
-    });
-}
-
-// On input focus add class on closest parent .field class
-function focusFields() {
-    document.querySelectorAll('.hs-input').forEach(function (el) {
-        el.addEventListener('focus', function () {
-            el.closest('.field').classList.add('field-focus');
+    // Remove all style tags without id in header
+    function removeStyleTags() {
+        // Remove link tag which contains main.min.css or Social_follow.min.css in href attribute
+        document.querySelectorAll('link').forEach(function (el) {
+            if (el.href.indexOf('4001-style.min.css') > -1) {
+                el.remove();
+            }
         });
-        el.addEventListener('blur', function () {
-            el.closest('.field').classList.remove('field-focus');
-            checkError();
-        });
-    });
-}
+    }
 
-// Function to add .field-error class on closest parent .field class if .error is exist on .hs-input
-function checkError() {
-    document.querySelectorAll('.hs-input').forEach(function (el) {
-        if (el.closest('.field').querySelector('.error') != null) {
-            el.closest('.field').classList.add('field-error');
-        } else {
-            el.closest('.field').classList.remove('field-error');
+    // Create input label with placeholder text
+    function updateInputLabel() {
+        document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
+            const label = el.parentElement.querySelector("label");
+            label.innerHTML = (label.textContent.split('*')[0] + '&nbsp;*');
+        });
+    }
+
+    // On input focus add class on closest parent .field class
+    function focusFields() {
+        document.querySelectorAll('.hs-input').forEach(function (el) {
+            el.addEventListener('focus', function () {
+                el.closest('.field').classList.add('field-focus');
+            });
+            el.addEventListener('blur', function () {
+                el.closest('.field').classList.remove('field-focus');
+                checkError();
+            });
+        });
+    }
+
+    // Function to add .field-error class on closest parent .field class if .error is exist on .hs-input
+    function checkError() {
+        document.querySelectorAll('.hs-input').forEach(function (el) {
+            if (el.closest('.field').querySelector('.error') != null) {
+                el.closest('.field').classList.add('field-error');
+            } else {
+                el.closest('.field').classList.remove('field-error');
+            }
+        });
+    }
+
+    // Scroll to element on click
+    window.addEventListener("click", function (e) {
+        if (e.target.classList.contains("get-started-btn")) {
+            let scrollOffset = window.innerWidth > 1199 ? 100 : 120;
+            if (window.innerWidth > 1199) {
+                scrollToElement('.form-wrapper-spz', scrollOffset);
+            } else {
+                document.querySelector('.form-wrapper-spz').scrollIntoView({ behavior: "smooth" });
+            }
+
         }
     });
-}
 
-// Scroll to element on click
-window.addEventListener("click", function (e) {
-    if (e.target.classList.contains("get-started-btn")) {
-        let scrollOffset = window.innerWidth > 1199 ? 100 : 120;
-        if (window.innerWidth > 1199) {
-            scrollToElement('.form-wrapper-spz', scrollOffset);
-        } else {
-            document.querySelector('.form-wrapper-spz').scrollIntoView({ behavior: "smooth" });
+    // Function to Scroll to position using smooth scroll vanilla JS
+    // target: Element to scroll to
+    // offset: Offset from the top of the element
+    function scrollToElement(target, offset) {
+        const targetElm = document.querySelector(target);
+        const targetElmOffset = targetElm.offsetTop - offset;
+        window.scrollTo({
+            top: targetElmOffset,
+            behavior: 'smooth'
+        });
+    }
+
+    // Load again if device rotate 
+    window.onorientationchange = function () {
+        var orientation = window.orientation;
+        switch (orientation) {
+            case 0:
+            case 90:
+            case -90: initSwiper();
+                break;
         }
+    };
 
+    function moveElement(sourceElm, targetLoc) {
+        const f = document.createDocumentFragment();
+        if (document.querySelector(sourceElm) != null) {
+            f.appendChild(document.querySelector(sourceElm));
+            document.querySelector(targetLoc).appendChild(f);
+        }
     }
-});
 
-// Function to Scroll to position using smooth scroll vanilla JS
-// target: Element to scroll to
-// offset: Offset from the top of the element
-function scrollToElement(target, offset) {
-    const targetElm = document.querySelector(target);
-    const targetElmOffset = targetElm.offsetTop - offset;
-    window.scrollTo({
-        top: targetElmOffset,
-        behavior: 'smooth'
-    });
-}
-
-// Load again if device rotate 
-window.onorientationchange = function () {
-    var orientation = window.orientation;
-    switch (orientation) {
-        case 0:
-        case 90:
-        case -90: initSwiper();
-            break;
-    }
-};
-
-function moveElement(sourceElm, targetLoc) {
-    const f = document.createDocumentFragment();
-    if (document.querySelector(sourceElm) != null) {
-        f.appendChild(document.querySelector(sourceElm));
-        document.querySelector(targetLoc).appendChild(f);
-    }
-}
-
-function footerSection() {
-    return `<section class="footer">
+    function footerSection() {
+        return `<section class="footer">
     <div class="footer-top">
         <h2 class="sec-title border-title">Ready to Put Compliance on Autopilot?</h2>
         <button class="get-started-btn">Get Started</button>
@@ -148,7 +161,7 @@ function footerSection() {
     </div>
     <hr>
     <div class="footer-bottom container dis-flex justify-content-between">
-        <p class="copiright-text">© 2023 Drata Inc. All rights reserved.</p>
+        <p class="copyright-text">© 2023 Drata Inc. All rights reserved.</p>
         <div class="footer-legalLinks">
             <a href="https://drata.com/privacy">Privacy Policy</a>
             <a href="https://drata.com/gdprdrata">GDPR</a>
@@ -161,10 +174,10 @@ function footerSection() {
         </div>
     </div>
 </section>`
-}
+    }
 
-function reviewCard() {
-    return `<section class="review-section">
+    function reviewCard() {
+        return `<section class="review-section">
 <div class="container">
     <h2 class="sec-title border-title">See What Our Customers Say About Drata</h2>
 </div>
@@ -208,10 +221,10 @@ function reviewCard() {
     </div>
 </div>
 </section>`
-}
+    }
 
-function integrationSection() {
-    return `<section class="integrations-section">
+    function integrationSection() {
+        return `<section class="integrations-section">
     <div class="container">
     <div class="MuiGrid-root MuiGrid-item MuiGrid-grid-xs-true css-1yqq5sj-MuiGrid-root-Section-gridItem" data-testid="Section-ContentItem">
 	<div class="MuiBox-root css-dwssr9-Collection-root" data-testid="Collection-integrations" id="4O2EqkfZkMR1kQlDwDjIlT" gutterwidth="default" data-csk-entry-id="4O2EqkfZkMR1kQlDwDjIlT" data-csk-entry-type="collection" data-csk-entry-display-text="Collection">
@@ -1059,10 +1072,10 @@ function integrationSection() {
     </div>
     <div class="btn"><a href="https://drata.com/platform/integrations" class="view-all-btn">View All</a></div>
 </section>`
-}
+    }
 
-function logoSection() {
-    return `<section class="logo-section">
+    function logoSection() {
+        return `<section class="logo-section">
     <div class="container">
         <h2 class="sec-title border-title">Join 2,000+ Companies from Small Business to Enterprise That Have Become SOC 2 Compliant with Drata
         </h2>
@@ -1106,10 +1119,10 @@ function logoSection() {
         </div>
     </div>
 </section>`
-}
+    }
 
-function featureSection() {
-    return `<section class="feature-section">
+    function featureSection() {
+        return `<section class="feature-section">
     <div class="container">
     <div class="feature-title-container">  <h2 class="feature-title border-title">Features</h2>
     <p>Everything you need to achieve compliance faster and more cost-effectively. </p>
@@ -1154,19 +1167,19 @@ function featureSection() {
         </div>
     </div>
 </section>`
-}
+    }
 
-function updateHeroContents() {
-    if (document.querySelectorAll('#main-content > .hero-section').length > 0) {
-        document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
-        document.querySelector('#main-content > .hero-section .header-nav .nav-section').classList.add('container');
-        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
-        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > .hs-label-spz').textContent = `How did you hear about Drata?*`;
-        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest > legend.hs-field-desc').textContent = `What product(s) are you interested in?`;
-        document.querySelector('#main-content > .hero-section .form-wrapper-spz .form-title-spz').textContent = `Get a Demo`;
-        document.querySelector('#main-content > .hero-section .hero-content .hc-title').textContent = `Automate SOC 2 compliance. Reduce
+    function updateHeroContents() {
+        if (document.querySelectorAll('#main-content > .hero-section').length > 0) {
+            document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
+            document.querySelector('#main-content > .hero-section .header-nav .nav-section').classList.add('container');
+            document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
+            document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > .hs-label-spz').textContent = `How did you hear about Drata?*`;
+            document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest > legend.hs-field-desc').textContent = `What product(s) are you interested in?`;
+            document.querySelector('#main-content > .hero-section .form-wrapper-spz .form-title-spz').textContent = `Get a Demo`;
+            document.querySelector('#main-content > .hero-section .hero-content .hc-title').textContent = `Automate SOC 2 compliance. Reduce
         compliance time and cost by 50%.`;
-        document.querySelector('#main-content > .hero-section .hero-content .list-grp-wrapper .list-group').innerHTML = `<ul class="list-group">
+            document.querySelector('#main-content > .hero-section .hero-content .list-grp-wrapper .list-group').innerHTML = `<ul class="list-group">
         <li class="list-item">
         <div class="ls-title">Reduce Time Up to 80%</div>
         <div class="ls-desc">Automate documentation and evidence collection. Integrates with your tech stack out of the box.</div>
@@ -1180,7 +1193,8 @@ function updateHeroContents() {
         <div class="ls-desc">Achieve peace of mind, knowing Drata is automating ongoing security and compliance monitoring.</div>
         </li>
         </ul>`;
-        document.querySelector('#main-content > .hero-section .hero-content .star-rating').innerHTML = `<img src="https://res.cloudinary.com/spiralyze/image/upload/v1682075790/drata/4002/rating-49.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <div class="rating"><span>4.9</span> (398 reviews) </div>`;
-        document.querySelector('#main-content > .hero-section .hbspt-form form .hs_submit.hs-submit .actions .hs-button').setAttribute('value', 'Get Started');
+            document.querySelector('#main-content > .hero-section .hero-content .star-rating').innerHTML = `<img src="https://res.cloudinary.com/spiralyze/image/upload/v1682075790/drata/4002/rating-49.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <div class="rating"><span>4.9</span> (398 reviews) </div>`;
+            document.querySelector('#main-content > .hero-section .hbspt-form form .hs_submit.hs-submit .actions .hs-button').setAttribute('value', 'Get Started');
+        }
     }
-}
+})();

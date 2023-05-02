@@ -212,7 +212,8 @@ body.spz-9001[class] {
                       z-index: 0;
                       opacity: 0;
                       > div {
-                        max-width: 164.87px;
+                        // max-width: 164.87px;
+                        width: fit-content !important;
                         text-align: center;
                         img {
                           width: auto;
@@ -281,7 +282,7 @@ body.spz-9001[class] {
                   }
                   iframe {
                     // @media (max-width: 1919.98px) {
-                      max-height: 792px;
+                    max-height: 792px;
                     // }
                     // @media (max-width: 1023.98px) {
                     //   max-height: 776px;
@@ -323,9 +324,10 @@ body.spz-9001[class] {
             align-items: center;
             width: 100%;
             margin-bottom: 54px;
-            margin-top: 16px;
+            margin-top: 59px;
             @media (max-width: 599.98px) {
               margin-bottom: 38px;
+              margin-top: 52px;
             }
             > p {
               font-family: aktiv-grotesk, aktiv-grotesk-1, aktiv-grotesk-2,
@@ -378,7 +380,12 @@ body.spz-9001[class] {
         align-items: center;
         padding: 32px 0px 28px;
         background: #0d2436;
-
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          padding: 29px 0 32px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 29px 0 28px;
+        }
         .footer-container {
           display: flex;
           justify-content: space-between;
@@ -386,7 +393,7 @@ body.spz-9001[class] {
           max-width: 1180px;
           width: 100%;
           @media (max-width: 1224px) {
-            padding: 0px 98.63px;
+            padding: 0px 100px;
             max-width: 100%;
           }
           @media (max-width: 767.98px) {
@@ -407,6 +414,9 @@ body.spz-9001[class] {
             line-height: 120%;
             color: #ffffff;
             margin: 0;
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              padding-top: 4px;
+            }
             @media (max-width: 767.98px) {
               margin-top: 32px;
               margin-left: -4px;

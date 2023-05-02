@@ -125,9 +125,9 @@
                     document.querySelector('.swiper-wrapper').style.opacity = 1;
                 }
                 var mySwiper = new Swiper('.swiper-container', {
-                    slidesPerView: 3,
+                    slidesPerView: 'auto',
                     autoplay: { delay: 1000 },
-                    spaceBetween: 51,
+                    spaceBetween: 61,
                     loop: true,
                     speed: 1000,
                     breakpoints: {
