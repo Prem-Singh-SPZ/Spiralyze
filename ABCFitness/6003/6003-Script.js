@@ -109,10 +109,12 @@ function checkScrollPosition() {
     var totalHeight = headerHeight + heroHeight + 56;
     if (scrollTop > totalHeight) {
         document.querySelector('body .spz-sticky-footer').classList.add('show-sticky');
+        document.querySelector('body .c-scroll-to-top.js-scroll-to-top').classList.add('show-sticky');
     }
     else {
         if (document.querySelector('body .spz-sticky-footer').classList.contains('show-sticky')) {
             document.querySelector('body .spz-sticky-footer').classList.remove('show-sticky');
+            document.querySelector('body .c-scroll-to-top.js-scroll-to-top').classList.remove('show-sticky');
         }
     }
 }
