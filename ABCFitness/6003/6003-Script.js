@@ -22,6 +22,9 @@ function loadTest() {
             checkScrollPosition();
         };
     });
+    if (document.querySelectorAll('.spz-login-btn').length == 0) {
+        headerChange();
+    }
 }
 
 function heroContent() {
@@ -114,6 +117,28 @@ function checkScrollPosition() {
     }
 }
 
+function headerChange() {
+    document.querySelector('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper').insertAdjacentHTML('beforeend', `<div class="spz-header-cta-container"><div class="spz-header-cta-primary"><a class="c-header-action-links__item c-header-action-links__item--first spz-login-btn" target="">
+Login / Support
+</a> </div><div class="spz-header-cta-secondary"><a class="c-header-action-links__item c-header-action-links__item--second "  href="https://abcfitness.com/request-a-demo/">
+Book A Demo
+</a> </div></div>`);
+    waitForElm('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .spz-header-cta-container').then(function () {
+        moveElement('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .c-header-action-links__items-wrapper', '.spz-header-cta-container .spz-header-cta-primary');
+    });
+
+    waitForElm('.spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
+        cloneElement('.spz-header-cta-container', 'header#header');
+        cloneElement('.spz-header-cta-container', 'header#header .l-header__inner .l-header__container.l-header__container--bottom .l-header__action-links-wrapper--not-top');
+
+
+    });
+    waitForElm('header#header > .spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
+        document.querySelectorAll('.c-header-action-links__items-wrapper').forEach(function (v, i) {
+            v.insertAdjacentHTML('afterbegin', `<p>Your Account</p>`);
+        });
+    });
+}
 
 // Generic
 history.pushState = (function (f) {
@@ -209,6 +234,22 @@ function waitForElm(selector) {
         });
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
+}
+
+function cloneElement(source, target) {
+    if (document.querySelector(source) && document.querySelector(target)) {
+        const sc = document.querySelector(source);
+        const clone = sc.cloneNode(true);
+        document.querySelector(target).appendChild(clone);
+    }
+}
+
+function moveElement(sourceElm, targetLoc) {
+    const f = document.createDocumentFragment();
+    if (document.querySelector(sourceElm) != null) {
+        f.appendChild(document.querySelector(sourceElm));
+        document.querySelector(targetLoc).appendChild(f);
+    }
 }
 
 // Add class 'safari' (used for cart scrollbar)
