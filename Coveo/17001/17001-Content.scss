@@ -1,0 +1,207 @@
+$gibson: canada-type-gibson, sans-serif !important;
+
+body.lp-pom-body {
+  //Hero right bg
+  #lp-pom-block-8 {
+    &::after {
+      content: "";
+      display: block;
+      // background: rgba(255, 255, 255, 0);
+      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1682598894/coveo/17001/desktop__main_section__1441.png);
+      background-repeat: no-repeat;
+      background-position: -352px center;
+      background-size: cover;
+      width: 1088px;
+      height: 789px;
+      position: absolute;
+      top: 0;
+      right: 0;
+    }
+
+    &::before {
+      content: "";
+      display: block;
+      // background: rgba(255, 255, 255, 0);
+      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1682599893/coveo/17001/diamond_gray.svg);
+      background-repeat: no-repeat;
+      background-position: center center;
+      background-size: cover;
+      width: 499px;
+      height: 499px;
+      position: absolute;
+      bottom: -279px;
+      left: -145px;
+    }
+  }
+
+  //Hero Left Copy
+  #lp-pom-text-673 {
+    h2 span {
+      //   font-family: $gibson;
+      font-style: normal;
+      font-weight: 300 !important;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      color: rgba(40, 40, 41, 0.5) !important;
+    }
+  }
+
+  #lp-pom-text-651 {
+    h1 span {
+      //   font-family: $gibson;
+      //   font-style: normal;
+      font-weight: 500 !important;
+      line-height: 40px !important;
+      letter-spacing: 0.01em;
+      strong {
+        font-weight: 500;
+      }
+    }
+  }
+
+  #lp-pom-text-884 {
+    p span {
+      font-weight: 300 !important;
+      line-height: 28px !important;
+    }
+  }
+
+  //Hero Form
+  #lp-pom-box-827 {
+    box-shadow: 0px 30px 40px rgba(72, 72, 72, 0.32);
+    border-radius: 8px;
+    padding: 56px;
+
+    //Form title
+    #lp-pom-text-830 {
+      margin: 0 !important;
+      margin-bottom: 26px !important;
+      > p span {
+        font-family: $gibson;
+        font-style: normal;
+        font-weight: 500 !important;
+        font-size: 32px;
+        line-height: 32px;
+      }
+    }
+
+    #lp-pom-form-828 {
+      margin: 0;
+
+      form {
+        .fields {
+          flex-direction: row;
+          flex-wrap: wrap;
+          .lp-pom-form-field {
+            position: relative;
+            margin-bottom: 6.5px;
+
+            .lp-form-label {
+              position: absolute;
+              top: 13px;
+              left: 16px;
+              width: max-content;
+              pointer-events: none;
+              transition: all 0.2s ease-in-out;
+              span {
+                font-family: $gibson;
+                color: #565b66;
+                font-style: normal;
+                font-weight: 300;
+                font-size: 16px;
+                line-height: 24px;
+                letter-spacing: 0.003em;
+              }
+            }
+            .ub-input-item {
+              height: 48px;
+              border-radius: 8px;
+              border-color: #e5e8e8;
+              transition: all 0.2s ease-in-out;
+            }
+
+            &#container_first_name {
+              order: 0;
+              //   width: 49%;
+              max-width: 216px;
+              .ub-input-item {
+                height: 48px;
+                border-radius: 8px;
+              }
+            }
+            &#container_last_name {
+              //   order: 1;
+              //   width: 49%;
+              max-width: 216px;
+              margin-left: 16px;
+              .ub-input-item {
+              }
+            }
+            &#container_business_email {
+              order: 2;
+            }
+            &#container_company_name {
+              //   width: 49%;
+              order: 3;
+              max-width: 216px;
+              .ub-input-item {
+              }
+            }
+            &#container_job_title {
+              //   width: 49%;
+              order: 4;
+              max-width: 216px;
+              margin-left: 16px;
+              .ub-input-item {
+              }
+            }
+            &#container_country {
+              order: 5;
+            }
+            &#container_stateprovince {
+              order: 6;
+            }
+            &#container_consent {
+              order: 7;
+            }
+
+            //Input field states
+            &.hovered {
+              .ub-input-item {
+                border-color: #d6dcdd;
+              }
+            }
+            &.focus {
+              .lp-form-label {
+                top: 4px;
+                span {
+                  font-weight: 300;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+              .ub-input-item {
+                border-color: #1a50ad;
+                box-shadow: 0px 0px 0px 4px #1372ec;
+              }
+            }
+            &.filled {
+              .lp-form-label {
+                top: 4px;
+                span {
+                  font-weight: 300;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+              .ub-input-item {
+                border-color: #e5e8e8;
+                color: #282829;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

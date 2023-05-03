@@ -159,7 +159,7 @@
             </a>
         </div>
     </div>
-    <hr>
+
     <div class="footer-bottom container dis-flex justify-content-between">
         <p class="copyright-text">© 2023 Drata Inc. All rights reserved.</p>
         <div class="footer-legalLinks">
