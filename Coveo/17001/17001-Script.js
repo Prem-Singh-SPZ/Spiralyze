@@ -22,4 +22,8 @@ jQuery(function ($) {
         }
         // console.log($(this).val());
     });
+
+    $(document).ready(function () {
+        $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('')
+    });
 });

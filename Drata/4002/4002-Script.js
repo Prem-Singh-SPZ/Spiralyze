@@ -31,12 +31,16 @@
 
     function appendFavicon() {
         document.querySelector('head').insertAdjacentHTML("afterbegin", `
-        <link rel="shortcut icon" href="https://drata.com/images/favicon.ico">
-        <link rel="icon" type="image/png" sizes="256x256" href="https://drata.com/images/favicon-256x256.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">`
+            <link rel="shortcut icon" href="https://drata.com/images/favicon.ico">
+            <link rel="icon" type="image/png" sizes="256x256" href="https://drata.com/images/favicon-256x256.png">
+            <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
+            <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
+            <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
+    
+            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
+            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-blank.svg" as="image">
+            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601858/drata/6002/Checkmark-hover.svg" as="image">
+            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-bg.svg" as="image">`
         );
     }
 
@@ -65,6 +69,7 @@
         document.querySelectorAll('.hs-input').forEach(function (el) {
             el.addEventListener('focus', function () {
                 el.closest('.field').classList.add('field-focus');
+                checkError();
             });
             el.addEventListener('blur', function () {
                 el.closest('.field').classList.remove('field-focus');
@@ -78,6 +83,7 @@
         document.querySelectorAll('.hs-input').forEach(function (el) {
             if (el.closest('.field').querySelector('.error') != null) {
                 el.closest('.field').classList.add('field-error');
+                console.log('error is therw')
             } else {
                 el.closest('.field').classList.remove('field-error');
             }
