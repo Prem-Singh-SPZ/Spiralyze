@@ -57,19 +57,18 @@
     }
 
     // Create input label with placeholder text
-    function updateInputLabel() {
-        document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
-            const label = el.parentElement.querySelector("label");
-            label.innerHTML = (label.textContent.split('*')[0] + '&nbsp;*');
-        });
-    }
+    // function updateInputLabel() {
+    //     document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
+    //         const label = el.parentElement.querySelector("label");
+    //         label.innerHTML = (label.textContent.split('*')[0] + '&nbsp;*');
+    //     });
+    // }
 
     // On input focus add class on closest parent .field class
     function focusFields() {
         document.querySelectorAll('.hs-input').forEach(function (el) {
             el.addEventListener('focus', function () {
                 el.closest('.field').classList.add('field-focus');
-                checkError();
             });
             el.addEventListener('blur', function () {
                 el.closest('.field').classList.remove('field-focus');
@@ -83,7 +82,6 @@
         document.querySelectorAll('.hs-input').forEach(function (el) {
             if (el.closest('.field').querySelector('.error') != null) {
                 el.closest('.field').classList.add('field-error');
-                console.log('error is therw')
             } else {
                 el.closest('.field').classList.remove('field-error');
             }
@@ -116,15 +114,20 @@
     }
 
     // Load again if device rotate 
-    window.onorientationchange = function () {
-        var orientation = window.orientation;
-        switch (orientation) {
-            case 0:
-            case 90:
-            case -90: initSwiper();
-                break;
-        }
-    };
+    // window.onorientationchange = function () {
+    //     var orientation = window.orientation;
+    //     switch (orientation) {
+    //         case 0:
+    //         case 90:
+    //         case -90: initSwiper();
+    //             break;
+    //     }
+    // };
+
+    // Add class 'safari' (used for cart scrollbar)
+    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+        document.querySelector('.actions').classList.add('safari');
+    }
 
     function moveElement(sourceElm, targetLoc) {
         const f = document.createDocumentFragment();
@@ -1180,6 +1183,7 @@
             document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
             document.querySelector('#main-content > .hero-section .header-nav .nav-section').classList.add('container');
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
+            document.querySelector('#main-content > .hero-section .hbspt-form form .hs-input[name="number_of_employees"] option:first-child').textContent = `Number of Employees*`;
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > .hs-label-spz').textContent = `How did you hear about Drata?*`;
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest > legend.hs-field-desc').textContent = `What product(s) are you interested in?`;
             document.querySelector('#main-content > .hero-section .form-wrapper-spz .form-title-spz').textContent = `Get a Demo`;

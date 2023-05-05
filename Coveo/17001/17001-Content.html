@@ -80,7 +80,9 @@
 <script>
     $(document).ready(function () {
         let aSwitch = accordionSwitch();
+        aSwitch.init();
         aSwitch.start();
+
 
         $('li').hover(function () {
             aSwitch.stop();
@@ -110,16 +112,16 @@
 
     function accordionSwitch() {
         let intervalId;
+        let counter = 0;
         return {
+            init() {
+                switchClass();
+            },
             start() {
-                let counter = 0
+                console.log('loop in')
+
                 intervalId = window.setInterval(function () {
-                    var c = counter % $("li").length;
-                    $("li").removeClass('show');
-                    $("li").removeClass('active');
-                    $("li").eq(c).addClass('show');
-                    $("li").eq(c).addClass('active');
-                    ++counter
+                    switchClass();
                 }, 10000);
             },
             stop() {
@@ -127,5 +129,14 @@
                 $("li").removeClass('active');
             }
         }
+    }
+
+    //Switch active and show classes
+    function switchClass() {
+        console.log('loop ' + counter)
+        var c = counter % $("li").length;
+        $("li").removeClass('show active');
+        $("li").eq(c).addClass('show active');
+        ++counter
     }
 </script>

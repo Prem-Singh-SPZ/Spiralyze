@@ -11,7 +11,7 @@ $color_7: #000;
 $color_8: #f97f70;
 $color_9: #727272;
 $color_10: #fff;
-$color_11: #C0FF60;
+$color_11: #c0ff60;
 $color_12: #444444;
 $color_13: rgb(0, 3, 11);
 $color_14: #a3a3a3;
@@ -690,7 +690,7 @@ body.spz-4002 {
               background: #fff;
               border: 1px solid #d7d7d7;
               border-radius: 4px;
-              outline: transparent;
+              outline: none;
               // outline-width: 2px;
               // outline-color: #3799ed;
               transition: all 0.3s ease-in-out;
@@ -821,9 +821,11 @@ body.spz-4002 {
 
           &.field-focus {
             .input {
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
               .hs-input {
                 border: 1px solid #0466ba;
-                box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                box-shadow: 0px 0px 0px 2px #3799ed;
                 // outline-width: 2px;
                 // outline-color: #3799ed;
 
@@ -1237,6 +1239,11 @@ body.spz-4002 {
               width: 20px;
               background-size: 20px;
             }
+            &.safari {
+              &::before {
+                right: 78px;
+              }
+            }
 
             .hs-button {
               font-size: 17px;
@@ -1247,7 +1254,7 @@ body.spz-4002 {
           }
 
           .hs_error_rollup {
-            text-align: left;
+            // text-align: left;
             padding: 0 20px;
           }
         }
@@ -1945,7 +1952,7 @@ body.spz-4002 {
         color: $color_11;
       }
       &:active {
-        background: #0466BA;
+        background: #0466ba;
         color: $color_11;
       }
       &::before {
