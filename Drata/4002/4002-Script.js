@@ -12,7 +12,7 @@
 
             document.body.classList.add('spz-4002');
             updateHeroContents();
-            updateInputLabel();
+            // updateInputLabel();
             focusFields();
             removeStyleTags();
         }
@@ -37,7 +37,7 @@
             <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
     
-            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
+            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1683277555/drata/4002/custom_assets/dropdown_arrow.svg" as="image">
             <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-blank.svg" as="image">
             <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601858/drata/6002/Checkmark-hover.svg" as="image">
             <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-bg.svg" as="image">`
@@ -1185,7 +1185,8 @@
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs-input[name="number_of_employees"] option:first-child').textContent = `Number of Employees*`;
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > .hs-label-spz').textContent = `How did you hear about Drata?*`;
-            document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest > legend.hs-field-desc').textContent = `What product(s) are you interested in?`;
+            // document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest > legend.hs-field-desc').textContent = `What product(s) are you interested in?`;
+            document.querySelector('#main-content > .hero-section .hbspt-form form .hs_demo_product_of_interest').parentElement.classList.add('hidden');
             document.querySelector('#main-content > .hero-section .form-wrapper-spz .form-title-spz').textContent = `Get a Demo`;
             document.querySelector('#main-content > .hero-section .hero-content .hc-title').textContent = `Automate SOC 2 compliance. Reduce
         compliance time and cost by 50%.`;
