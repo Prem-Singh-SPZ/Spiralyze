@@ -47,14 +47,14 @@
     appendFavicon();
 
     // Remove all style tags without id in header
-    function removeStyleTags() {
-        // Remove link tag which contains main.min.css or Social_follow.min.css in href attribute
-        document.querySelectorAll('link').forEach(function (el) {
-            if (el.href.indexOf('4001-style.min.css') > -1) {
-                el.remove();
-            }
-        });
-    }
+    // function removeStyleTags() {
+    //     // Remove link tag which contains main.min.css or Social_follow.min.css in href attribute
+    //     document.querySelectorAll('link').forEach(function (el) {
+    //         if (el.href.indexOf('4001-style.min.css') > -1) {
+    //             el.remove();
+    //         }
+    //     });
+    // }
 
     // Create input label with placeholder text
     // function updateInputLabel() {

@@ -1079,7 +1079,13 @@ body.spz-4002 {
 
         &:nth-child(2n + 1) {
           display: none;
-          margin-top: 4px;
+          margin-top: 46px;
+          @media (min-width: 767.98px) and (max-width: 1280px) {
+            margin-top: 34px;
+          }
+          @media (max-width: 767.98px) {
+            margin-top: 38px;
+          }
 
           &::before {
             display: none;
@@ -1169,6 +1175,11 @@ body.spz-4002 {
               top: 19px;
               right: 38.75%;
             }
+            &.safari {
+              &::before {
+                right: 37.25%;
+              }
+            }
           }
         }
       }
@@ -1244,7 +1255,7 @@ body.spz-4002 {
             }
             &.safari {
               &::before {
-                right: 84px;
+                right: 78px;
               }
             }
 
@@ -2489,9 +2500,9 @@ body.spz-4002 {
       }
     }
     .footer-bottom {
-      .copyright-text {
-        max-width: 40%;
-      }
+      // .copyright-text {
+      //   max-width: 40%;
+      // }
     }
   }
 

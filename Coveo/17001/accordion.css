@@ -9,9 +9,6 @@ ul .inner {
   display: none;
 }
 
-ul li {
-  margin: 16px 0;
-}
 ul li.show .inner {
   display: block;
 }
@@ -51,14 +48,14 @@ ul li a.toggle:hover {
   line-height: 48px;
   letter-spacing: 0.01em;
   color: #ffffff;
-  margin-bottom: 72px;
+  margin-bottom: 56px;
+  padding-top: 13px;
 }
 .interactive_section .accordion-container .accordion li .toggle {
   position: relative;
   color: #fff;
 }
 .interactive_section .accordion-container .accordion li .toggle span {
-  height: 68px;
   padding: 16px 12px;
   font-style: normal;
   font-weight: 500;
@@ -66,6 +63,8 @@ ul li a.toggle:hover {
   line-height: 36px;
   letter-spacing: 0.01em;
   cursor: default;
+  display: block;
+  height: 38px;
 }
 .interactive_section .accordion-container .accordion li .toggle .prog-bar {
   width: 100%;
@@ -78,14 +77,14 @@ ul li a.toggle:hover {
 .interactive_section .accordion-container .accordion li .toggle .open {
   display: none;
   position: absolute;
-  top: 0;
-  right: 4px;
+  top: 24px;
+  right: 12px;
 }
 .interactive_section .accordion-container .accordion li .toggle .close {
   display: block;
   position: absolute;
-  top: 0;
-  right: 4px;
+  top: 24px;
+  right: 12px;
 }
 .interactive_section .accordion-container .accordion li.active .toggle .prog-bar {
   -webkit-animation: progress-forward 10s infinite;
@@ -119,6 +118,8 @@ ul li a.toggle:hover {
 }
 .interactive_section .accordion-container .accordion li .inner {
   cursor: default;
+  padding-left: 12px;
+  padding-right: 46px;
 }
 .interactive_section .accordion-container .accordion li .inner > p {
   font-style: normal;
@@ -127,6 +128,7 @@ ul li a.toggle:hover {
   line-height: 28px;
   color: #fff;
   padding-top: 12px;
+  padding-bottom: 22px;
 }
 .interactive_section .accordion-container .accordion li .inner .img-container {
   pointer-events: none;

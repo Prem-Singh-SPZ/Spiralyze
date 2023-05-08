@@ -916,7 +916,17 @@ body.spz-4002 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list::bef
 }
 body.spz-4002 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list:nth-child(2n+1) {
   display: none;
-  margin-top: 4px;
+  margin-top: 46px;
+}
+@media (min-width: 767.98px) and (max-width: 1280px) {
+  body.spz-4002 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list:nth-child(2n+1) {
+    margin-top: 34px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-4002 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list:nth-child(2n+1) {
+    margin-top: 38px;
+  }
 }
 body.spz-4002 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list:nth-child(2n+1)::before {
   display: none;
@@ -978,6 +988,9 @@ body.spz-4002 .hbspt-form .submitted-message {
     top: 19px;
     right: 38.75%;
   }
+  body.spz-4002 .form-wrapper-spz .hbspt-form form .actions.safari::before {
+    right: 37.25%;
+  }
 }
 @media screen and (max-width: 767px) {
   body.spz-4002 .form-wrapper-spz {
@@ -1035,7 +1048,7 @@ body.spz-4002 .hbspt-form .submitted-message {
     background-size: 20px;
   }
   body.spz-4002 .form-wrapper-spz .hbspt-form form .actions.safari::before {
-    right: 84px;
+    right: 78px;
   }
   body.spz-4002 .form-wrapper-spz .hbspt-form form .actions .hs-button {
     font-size: 17px;
@@ -2187,11 +2200,6 @@ body.spz-4002 .footer-bottom .footer-legalLinks a:hover {
   }
   body.spz-4002 .brand-footer .brand-social-links .social-item {
     margin: 0 24px 0 0;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4002 .footer-bottom .copyright-text {
-    max-width: 40%;
   }
 }
 body.spz-4002 .integrations-section {
