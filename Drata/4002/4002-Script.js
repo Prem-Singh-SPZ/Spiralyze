@@ -31,16 +31,17 @@
 
     function appendFavicon() {
         document.querySelector('head').insertAdjacentHTML("afterbegin", `
+        <meta name="description" content="Drata automates the SOC 2 process so you can close deals faster, drive revenue, and build customer trust through continuous monitoring and assurance.">
             <link rel="shortcut icon" href="https://drata.com/images/favicon.ico">
             <link rel="icon" type="image/png" sizes="256x256" href="https://drata.com/images/favicon-256x256.png">
             <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
             <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
             <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
     
-            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1683277555/drata/4002/custom_assets/dropdown_arrow.svg" as="image">
-            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-blank.svg" as="image">
-            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601858/drata/6002/Checkmark-hover.svg" as="image">
-            <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-bg.svg" as="image">`
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1683277555/drata/4002/custom_assets/dropdown_arrow.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-blank.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601858/drata/6002/Checkmark-hover.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-bg.svg" as="image">`
         );
     }
 
@@ -146,7 +147,7 @@
     <div class="brand-footer container dis-flex flex-wrap justify-content-between">
         <div class="footer-brand-info">
             <a href="https://drata.com/"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1682676285/drata/4002/custom_assets/Drata-full-wordmark.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682676285/drata/4002/custom_assets/Drata-full-wordmark.svg"
                     class="brand-logo" alt="Drata" title="Drata" draggable="false"></a>
             <p class="brand-desc">Drata is a security and compliance automation platform that continuously monitors and
                 collects evidence of a company&rsquo;s security controls, while streamlining workflows to ensure
@@ -155,15 +156,15 @@
         <div class="brand-social-links dis-flex justify-content-between flex-wrap">
             <a href="https://www.youtube.com/channel/UCL7xTQRHuxO3M5dHHOjhfMA" target="_blank" class="social-item"
                 rel="noopener">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/social_media_-_youtube.svg"
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/social_media_-_youtube.svg"
                     alt="youtube" title="youtube" class="social-icon">
             </a>
             <a href="https://www.linkedin.com/company/drata/" target="_blank" class="social-item" rel="noopener">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678528/drata/6001/social_media_-_linkedin.svg"
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678528/drata/6001/social_media_-_linkedin.svg"
                     alt="linkedin" title="linkedin" class="social-icon">
             </a>
             <a href="https://twitter.com/dratahq" target="_blank" class="social-item" rel="noopener">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678530/drata/6001/social_media_-_twitter.svg"
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678530/drata/6001/social_media_-_twitter.svg"
                     alt="twitter" title="twitter" class="social-icon">
             </a>
         </div>
@@ -193,18 +194,18 @@
 <div class="review-slider dis-flex justify-content-between container">
     <div class="review-item-box review-info-box">
         <div class="review-content">
-        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
         alt="G2" title="G2" class="g2-logo">
         <h4 class="r-title">Excellent</h4>
         <p class="r-numbers">Based on <span>398 reviews</span></p>
-        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
         </div>
     </div>
     <div class="review-item-box">
         <div class="review-content">
             <div class="rating dis-flex"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"> <span>5.0/5</span></div>
             <p class="review">“Drata's platform simplifies compliance. In our case, we used Drata for SOC2 and for GDPR. It literally saved us hundreds of hours and many dollars in consulting fees.”</p>
             <h6 class="review-author">Lav C.</h6>
@@ -213,7 +214,7 @@
     <div class="review-item-box">
         <div class="review-content">
             <div class="rating dis-flex"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5.0/5</span></div>
             <p class="review">“I would never want to go through SOC2 again without Drata. Even now that we are done with our first SOC2, Drata continuously monitors our controls and alerts us to issues.”</p>
             <h6 class="review-author">Angela S.</h6>
@@ -222,7 +223,7 @@
     <div class="review-item-box">
         <div class="review-content">
             <div class="rating dis-flex"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5.0/5</span></div>
             <p class="review">“Drata allowed our startup to get a huge head start on SOC2 and PCI compliance. Drata saved us months of reinventing the wheel of what they provide out of the box.“</p>
             <h6 class="review-author">Matt R. </h6>
@@ -295,13 +296,13 @@
         <div class="logo-slider slider-1">
             <div class="marquee">
                 <div class="logo-item"><a href="https://azure.microsoft.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
                             alt="Microsoft Azure Icon" title="Microsoft Azure Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://zenefits.com"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/5HEz4y1udEGYnO0eibspYk/fbb47801b6a3cd023a57cf2b2cd1e051/Zenefits.svg"
                             alt="Zenefits Icon" title="Zenefits Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://slack.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
                             alt="Slack Icon" title="Slack Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.vmware.com"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/6ghWRvTfUjV2flZvxovptR/312d823d4429ce594c8afc2827a70a8d/VMWare.svg"
@@ -398,7 +399,7 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/5yUJZdVNKbLo3AGJWFN6gR/517e8f24323002ddee25b9fb23314860/Keycloak.svg"
                             alt="Keycloak Icon" title="Keycloak Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.idmobile.co.uk/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
                             alt="ID Mobile Icon" title="ID Mobile Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.oracle.com/cloud"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/3HFGxQBF3smp9CZf2vpGvI/7e70fab8fc11370a82a620dbece09116/Oracle.svg"
@@ -407,10 +408,10 @@
                         <img src="https://images.ctfassets.net/x3hoqyjm3c27/78jxiiurk8VxZmOGPJkT5i/21cd094590a99033c7c9d8443512642d/NetIQ.svg"
                             alt="NetIQ Icon" title="NetIQ Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.okta.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-06.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-06.svg"
                             alt="Octa Icon" title="Octa Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://slack.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
                             alt="Slack Icon" title="Slack Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.cloudflare.com"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/mWJNtbGYfotV84jbwWexJ/8bf2f96e13b9c95dae9d32d26abe9b28/Cloudflare.svg"
@@ -418,13 +419,13 @@
             </div>
             <div class="marquee">
                 <div class="logo-item"><a href="https://azure.microsoft.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
                             alt="Microsoft Azure Icon" title="Microsoft Azure Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://zenefits.com"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/5HEz4y1udEGYnO0eibspYk/fbb47801b6a3cd023a57cf2b2cd1e051/Zenefits.svg"
                             alt="Zenefits Icon" title="Zenefits Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://slack.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
                             alt="Slack Icon" title="Slack Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.vmware.com"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/6ghWRvTfUjV2flZvxovptR/312d823d4429ce594c8afc2827a70a8d/VMWare.svg"
@@ -521,7 +522,7 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/5yUJZdVNKbLo3AGJWFN6gR/517e8f24323002ddee25b9fb23314860/Keycloak.svg"
                             alt="Keycloak Icon" title="Keycloak Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.idmobile.co.uk/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
                             alt="ID Mobile Icon" title="ID Mobile Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.oracle.com/cloud"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/3HFGxQBF3smp9CZf2vpGvI/7e70fab8fc11370a82a620dbece09116/Oracle.svg"
@@ -530,10 +531,10 @@
                         <img src="https://images.ctfassets.net/x3hoqyjm3c27/78jxiiurk8VxZmOGPJkT5i/21cd094590a99033c7c9d8443512642d/NetIQ.svg"
                             alt="NetIQ Icon" title="NetIQ Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.okta.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-06.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-06.svg"
                             alt="Octa Icon" title="Octa Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://slack.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-03.svg"
                             alt="Slack Icon" title="Slack Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.cloudflare.com"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/mWJNtbGYfotV84jbwWexJ/8bf2f96e13b9c95dae9d32d26abe9b28/Cloudflare.svg"
@@ -561,10 +562,10 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/6Yp68cE1DWONMFujzRpDS7/ef9c94f72a78b1981b0d247dede0fe3d/KnowBe4.svg"
                             alt="KnowBe4 Icon" title="KnowBe4 Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.idmobile.co.uk/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
                             alt="ID Mobile Icon" title="ID Mobile Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://asana.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
                             alt="Asana Icon" title="Asana Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://aws.amazon.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/2PLTU1dIjdttcowa2vximY/fd2d3b006dc7352e72dc4f2eda03a429/AWS.svg"
@@ -573,10 +574,10 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/7F75j5NuQNUiyaUf3jp2uA/59a6c87062bec3144d1034119c71465f/Office365.svg"
                             alt="Office365 Icon" title="Office365 Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://cloud.google.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-01.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-01.svg"
                             alt="Google Cloud Icon" title="Google Cloud Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.atlassian.com/software/jira"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-02.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-02.svg"
                             alt="Jira Cloud Icon" title="Jira Cloud Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.heroku.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/5tV8ZcXcsy0znbf9o49tr3/26c77c96cfdead9b454232768b200d9b/Heroku.svg"
@@ -651,7 +652,7 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/46l8F2OYzzieehKBFbh0iF/c4f13fe0f926448644d2164916cdbb4b/Onelogin.svg"
                             alt="Onelogin Icon" title="Onelogin Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://azure.microsoft.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
                             alt="Microsoft Azure Icon" title="Microsoft Azure Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://shortcut.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/4bgLwZHGFLGcSnfcZ4LNO8/062526c303724042e5b45815c3bbf95f/Shortcut-1.svg"
@@ -683,10 +684,10 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/6Yp68cE1DWONMFujzRpDS7/ef9c94f72a78b1981b0d247dede0fe3d/KnowBe4.svg"
                             alt="KnowBe4 Icon" title="KnowBe4 Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.idmobile.co.uk/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
                             alt="ID Mobile Icon" title="ID Mobile Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://asana.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
                             alt="Asana Icon" title="Asana Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://aws.amazon.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/2PLTU1dIjdttcowa2vximY/fd2d3b006dc7352e72dc4f2eda03a429/AWS.svg"
@@ -695,10 +696,10 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/7F75j5NuQNUiyaUf3jp2uA/59a6c87062bec3144d1034119c71465f/Office365.svg"
                             alt="Office365 Icon" title="Office365 Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://cloud.google.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-01.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-01.svg"
                             alt="Google Cloud Icon" title="Google Cloud Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.atlassian.com/software/jira"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-02.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384452/drata/6001/Logo-New-02.svg"
                             alt="Jira Cloud Icon" title="Jira Cloud Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.heroku.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/5tV8ZcXcsy0znbf9o49tr3/26c77c96cfdead9b454232768b200d9b/Heroku.svg"
@@ -773,7 +774,7 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/46l8F2OYzzieehKBFbh0iF/c4f13fe0f926448644d2164916cdbb4b/Onelogin.svg"
                             alt="Onelogin Icon" title="Onelogin Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://azure.microsoft.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-05.svg"
                             alt="Microsoft Azure Icon" title="Microsoft Azure Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://shortcut.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/4bgLwZHGFLGcSnfcZ4LNO8/062526c303724042e5b45815c3bbf95f/Shortcut-1.svg"
@@ -807,10 +808,10 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/6Yp68cE1DWONMFujzRpDS7/ef9c94f72a78b1981b0d247dede0fe3d/KnowBe4.svg"
                             alt="KnowBe4 Icon" title="KnowBe4 Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.idmobile.co.uk/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
                             alt="ID Mobile Icon" title="ID Mobile Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://asana.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
                             alt="Asana Icon" title="Asana Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://aws.amazon.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/2PLTU1dIjdttcowa2vximY/fd2d3b006dc7352e72dc4f2eda03a429/AWS.svg"
@@ -871,10 +872,10 @@
                             src="https://images.ctfassets.net/x3hoqyjm3c27/6Yp68cE1DWONMFujzRpDS7/ef9c94f72a78b1981b0d247dede0fe3d/KnowBe4.svg"
                             alt="KnowBe4 Icon" title="KnowBe4 Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://www.idmobile.co.uk/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384450/drata/6001/Logo-New-07.svg"
                             alt="ID Mobile Icon" title="ID Mobile Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://asana.com/"> <img
-                            src="https://res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
+                            src="//res.cloudinary.com/spiralyze/image/upload/v1681384451/drata/6001/Logo-New-08.svg"
                             alt="Asana Icon" title="Asana Icon" class="logo-media"> </a></div>
                 <div class="logo-item"><a href="https://aws.amazon.com/"> <img
                             src="https://images.ctfassets.net/x3hoqyjm3c27/2PLTU1dIjdttcowa2vximY/fd2d3b006dc7352e72dc4f2eda03a429/AWS.svg"
@@ -1090,40 +1091,40 @@
         </h2>
         <div class="ls-logo-group dis-flex flex-wrap justify-content-between">
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/abnormal.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/abnormal.svg"
                     class="ls-img" alt="Abnormal" title="Abnormal"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/aribase.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/aribase.svg"
                     class="ls-img" alt="Airbase" title="Airbase"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/big_id.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/big_id.svg"
                     class="ls-img" alt="BigID" title="BigID"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/clearbit.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678533/drata/6001/clearbit.svg"
                     class="ls-img" alt="Clearbit" title="Clearbit"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678534/drata/6001/baboor_hr.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678534/drata/6001/baboor_hr.svg"
                     class="ls-img" alt="bamboo HR" title="bamboo HR"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678534/drata/6001/notion.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678534/drata/6001/notion.svg"
                     class="ls-img" alt="Notion" title="Notion"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678535/drata/6001/postman.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678535/drata/6001/postman.svg"
                     class="ls-img" alt="Postman" title="Postman"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/vercel.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/vercel.svg"
                     class="ls-img" alt="Vercel" title="Vercel"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/lemonade.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/lemonade.svg"
                     class="ls-img" alt="Lemonade" title="Lemonade"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/fivetran.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/fivetran.svg"
                     class="ls-img" alt="Fivetran" title="Fivetran"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/w_vip.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678536/drata/6001/w_vip.svg"
                     class="ls-img" alt="Wvip" title="Wvip"></div>
             <div class="ls-logo-item"><img
-                    src="https://res.cloudinary.com/spiralyze/image/upload/v1680678537/drata/6001/clearco.svg"
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1680678537/drata/6001/clearco.svg"
                     class="ls-img" alt="Clearco" title="Clearco"></div>
         </div>
     </div>
@@ -1138,37 +1139,37 @@
     </div>
         <div class="fs-card-group">
         <div class="fs-card-item"><div class="img-container"><img
-        src="https://res.cloudinary.com/spiralyze/image/upload/v1682075793/drata/4002/features-multi_framework.svg" class="ls-img"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1682075793/drata/4002/features-multi_framework.svg" class="ls-img"
         alt="Multi Framework" title="Multi Framework"></div><div class="content-container">
     <h6>Multi-Framework</h6>
     <p>Automated compliance for 16+ products and frameworks including SOC 2, ISO 27001, HIPAA, GDPR, & PCI. </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
-        src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-automated_evidence.svg" class="ls-img"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-automated_evidence.svg" class="ls-img"
         alt="Automated Evidence" title="Automated Evidence"></div><div class="content-container">
     <h6>Automated Evidence Collection</h6>
     <p>Collection documentation from your tech stack. Powered by 75+ integrations and an open API.  </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
-        src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-security_policies.svg" class="ls-img"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-security_policies.svg" class="ls-img"
         alt="Security Policies" title="Security Policies"></div><div class="content-container">
     <h6>Security Policies</h6>
     <p>20+ customizable, auditor-approved policies. Streamline employee signing & documentation.</p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
-        src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-vendor_management.svg" class="ls-img"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-vendor_management.svg" class="ls-img"
         alt="Vendor Management" title="Vendor Management"></div><div class="content-container">
     <h6>Vendor Management</h6>
     <p>Streamline vendor security questionnaires. Store, send, and review answers.   </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
-        src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-expert_assistance.svg" class="ls-img"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-expert_assistance.svg" class="ls-img"
         alt="Experts Assistance" title="Experts Assistance"></div><div class="content-container">
     <h6>Experts Assistance</h6>
     <p>Step-by-step guidance from our team of compliance experts. 24/5.</p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
-        src="https://res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-24_7_monitoring.svg" class="ls-img"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-24_7_monitoring.svg" class="ls-img"
         alt="24/7 Monitoring" title="24/7 Monitoring"></div><div class="content-container">
     <h6>24/7 Monitoring</h6>
     <p>Continuous compliance monitoring to identify issues early and stay in compliance.</p></div>
@@ -1180,7 +1181,7 @@
 
     function updateHeroContents() {
         if (document.querySelectorAll('#main-content > .hero-section').length > 0) {
-            document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
+            document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
             document.querySelector('#main-content > .hero-section .header-nav .nav-section').classList.add('container');
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs-input[name="number_of_employees"] option:first-child').textContent = `Number of Employees*`;
@@ -1192,19 +1193,19 @@
         compliance time and cost by 50%.`;
             document.querySelector('#main-content > .hero-section .hero-content .list-grp-wrapper .list-group').innerHTML = `<ul class="list-group">
         <li class="list-item">
-        <div class="ls-title">Reduce Time Up to 80%</div>
+        <div class="ls-title">Reduce Time by Up to 80%</div>
         <div class="ls-desc">Automate documentation and evidence collection. Integrates with your tech stack out of the box.</div>
-        </li>
-        <li class="list-item">
-        <div class="ls-title">Scalable Compliance</div>
-        <div class="ls-desc">Maintain compliance as you add products and tech. Easily add new compliance frameworks.</div>
         </li>
         <li class="list-item">
         <div class="ls-title">Ongoing Compliance</div>
         <div class="ls-desc">Achieve peace of mind, knowing Drata is automating ongoing security and compliance monitoring.</div>
         </li>
+        <li class="list-item">
+        <div class="ls-title">Scalable Compliance</div>
+        <div class="ls-desc">Maintain compliance as your business grows and your tech stack expands. Easily add new compliance frameworks.</div>
+        </li>
         </ul>`;
-            document.querySelector('#main-content > .hero-section .hero-content .star-rating').innerHTML = `<img src="https://res.cloudinary.com/spiralyze/image/upload/v1682075790/drata/4002/rating-49.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <div class="rating"><span>4.9</span> (398 reviews) </div>`;
+            document.querySelector('#main-content > .hero-section .hero-content .star-rating').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/v1682075790/drata/4002/rating-49.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <div class="rating"><span>4.9</span> (398 reviews) </div>`;
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_submit.hs-submit .actions .hs-button').setAttribute('value', 'Get Started');
         }
     }

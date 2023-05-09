@@ -114,7 +114,7 @@ body.spz-4002 {
     }
 
     .hero-content {
-      max-width: 520px;
+      max-width: 592px;
       padding: 45px 0;
 
       &::before {
@@ -215,9 +215,15 @@ body.spz-4002 {
       .list-group {
         list-style: none;
         padding-left: 36px;
-        @media (min-width: 767.98px) and (max-width: 1023.98px) {
-          padding-right: 70px;
+
+        @media (min-width: 1599.98px) {
+          padding-right: 15px;
         }
+
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          padding-right: 26px;
+        }
+
 
         .list-item {
           position: relative;
@@ -237,12 +243,12 @@ body.spz-4002 {
               no-repeat;
           }
 
-          &:nth-child(2)::before {
+          &:nth-child(3)::before {
             background: url("https://res.cloudinary.com/spiralyze/image/upload/v1682075791/drata/4002/hero_icons-scalable_compliance.svg")
               no-repeat;
           }
 
-          &:nth-child(3)::before {
+          &:nth-child(2)::before {
             background: url("https://res.cloudinary.com/spiralyze/image/upload/v1682075791/drata/4002/hero_icons-ongoing_compliance.svg")
               no-repeat;
           }
@@ -383,7 +389,7 @@ body.spz-4002 {
   //   }
   // }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1296px) {
     .hero-section {
       &::before,
       &::after {
@@ -441,6 +447,7 @@ body.spz-4002 {
         right: -40px;
         width: auto;
         height: auto;
+        background: none;
       }
     }
 
@@ -1080,7 +1087,7 @@ body.spz-4002 {
         &:nth-child(2n + 1) {
           display: none;
           margin-top: 46px;
-          @media (min-width: 767.98px) and (max-width: 1280px) {
+          @media (min-width: 767.98px) and (max-width: 1296px) {
             margin-top: 34px;
           }
           @media (max-width: 767.98px) {
@@ -1140,7 +1147,7 @@ body.spz-4002 {
     text-align: center;
   }
 
-  @media screen and (max-width: 1280px) {
+  @media screen and (max-width: 1296px) {
     .form-wrapper-spz {
       .hbspt-form {
         form {
@@ -1379,6 +1386,10 @@ body.spz-4002 {
     .ls-logo-item {
       margin-bottom: 48px;
       height: 48px;
+      img{
+        width: 100%;
+        height: auto;
+      }
     }
   }
 

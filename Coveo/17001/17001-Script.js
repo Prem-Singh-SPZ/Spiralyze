@@ -24,21 +24,35 @@ jQuery(function ($) {
     });
 
     $(document).ready(function () {
-        $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('')
+        $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
+
+        // $("#lp-pom-button-905").attr('onclick',`resetScrollpoint('##lp-pom-box-827')`);
+        // function resetScrollpoint(selector) {
+        //     if (!selector) return false;
+        //     window.scroll(0, jQuery(selector).offset().top - 20);
+        // }
+
+        // $("#lp-pom-button-905").click(function () {
+        //     $('body').animate({
+        //         scrollTop: $("#lp-pom-box-827").offset().top - 30
+        //     },
+        //         'slow');
+        // });
     });
+
 });
 
 
 
 
 
-var coveoTestIDInterval = setInterval(function () {
-    var coveotid = document.querySelector('input[name=coveoTestID]');
-    if (coveotid.value == '') {
-        clearInterval(coveoTestIDInterval);
-        coveotid.value = '16001_Get_Coveo_Case_Study_Redesign_Variant';
-    }
-});
+// var coveoTestIDInterval = setInterval(function () {
+//     var coveotid = document.querySelector('input[name=coveoTestID]');
+//     if (coveotid.value == '') {
+//         clearInterval(coveoTestIDInterval);
+//         coveotid.value = '16001_Get_Coveo_Case_Study_Redesign_Variant';
+//     }
+// });
 
 navigator.sayswho = (function () {
     var ua = navigator.userAgent;
