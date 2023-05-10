@@ -12,32 +12,37 @@ ul .inner {
 ul li {
   &.show .inner {
     display: block;
+    > p {
+      animation: fadeInDown 0.5s;
+    }
   }
-  @media (max-width: 600px) {
+  @media (max-width: 1199.98px) {
     border-bottom: 1px solid #525296;
     margin: 0;
+  }
+  @media (min-width: 1919.98px) {
+    border-bottom: 1px solid #525296;
+    margin: 0;
+    .inner > p {
+      padding-bottom: 29.5px !important;
+    }
   }
 }
 
 ul li a.toggle {
   width: 100%;
   display: block;
-  background: rgba(0, 0, 0, 0.78);
-  color: #fefefe;
   padding: 0.75em;
-  border-radius: 0.15em;
-  transition: background 0.3s ease;
-}
-
-ul li a.toggle:hover {
-  background: rgba(0, 0, 0, 0.9);
 }
 
 .interactive_section {
   height: 100%;
   padding-top: 80px;
-  @media (max-width: 600px) {
+  @media (max-width: 600.98px) {
     padding-top: 16px;
+  }
+  @media (min-width: 600.98px) and (max-width: 1199.98px) {
+    padding-top: 49px;
   }
   .accordion-container {
     width: 100%;
@@ -46,7 +51,7 @@ ul li a.toggle:hover {
       width: 100%;
       max-width: 480px;
       margin-right: auto;
-      @media (min-width: 600px) and (max-width: 1023px) {
+      @media (min-width: 600.98px) and (max-width: 1199.98px) {
         max-width: 704px;
       }
 
@@ -58,12 +63,15 @@ ul li a.toggle:hover {
         letter-spacing: 0.01em;
         color: #ffffff;
         margin-bottom: 56px;
-        padding-top: 13px;
-        @media (max-width: 600px) {
+        padding-top: 14px;
+        @media (max-width: 600.98px) {
           font-size: 32px;
           line-height: 40px;
           margin-bottom: 18px;
           padding-top: 24px;
+        }
+        @media (min-width: 600.98px) and (max-width: 1199.98px) {
+          margin-bottom: 21px;
         }
       }
 
@@ -82,10 +90,13 @@ ul li a.toggle:hover {
             cursor: default;
             display: block;
             height: 38px;
-            @media (max-width: 600px) {
+            @media (max-width: 600.98px) {
               font-size: 24px;
               line-height: 34px;
               padding-bottom: 12px;
+            }
+            @media (min-width: 600.98px) and (max-width: 1199.98px) {
+              padding-bottom: 11px;
             }
           }
           .prog-bar {
@@ -95,7 +106,7 @@ ul li a.toggle:hover {
             height: 1px;
             width: 100%;
             background: #525296;
-            @media (max-width: 600px) {
+            @media (max-width: 1199.98px) {
               height: 0;
             }
           }
@@ -112,10 +123,12 @@ ul li a.toggle:hover {
             right: 12px;
           }
         }
-        &.active .toggle .prog-bar {
-          animation: progress-forward 10s infinite;
-          width: 0%;
-          height: 4px;
+        &.active {
+          .toggle .prog-bar {
+            animation: progress-forward 10s infinite;
+            width: 0%;
+            height: 4px;
+          }
         }
         &.show .toggle {
           .open {
@@ -129,6 +142,12 @@ ul li a.toggle:hover {
         &:nth-child(2) {
           .inner {
             border-top: 4px solid #335495;
+
+            .img-container {
+              @media (min-width: 600.98px) and (max-width: 1199.98px) {
+                bottom: -142.5%;
+              }
+            }
           }
           &.active .toggle .prog-bar {
             background: #4573d1;
@@ -164,12 +183,17 @@ ul li a.toggle:hover {
             font-size: 18px;
             line-height: 28px;
             color: #fff;
-            padding-top: 12px;
+            padding-top: 11px;
             padding-bottom: 22px;
-            @media (max-width: 600px) {
+            @media (max-width: 600.98px) {
               padding-top: 14px;
               padding-right: 8px;
               padding-bottom: 29px;
+            }
+            @media (min-width: 600.98px) and (max-width: 1199.98px) {
+              padding-top: 15px;
+              padding-bottom: 29px;
+              padding-right: 6px;
             }
           }
 
@@ -178,24 +202,24 @@ ul li a.toggle:hover {
             img {
               width: 100%;
               height: auto;
+              animation: fadeInDown 300ms;
             }
             position: absolute;
             width: 632px;
             height: auto;
             top: 0;
             left: calc(100% + 168px);
-            // animation: fadeMediaOutAndSlideDown 100ms;
-            transition: all 0.3s ease-in-out;
-            @media (max-width: 600px) {
+            // transition: all 0.3s ease-in-out;
+            @media (max-width: 600.98px) {
               width: 100%;
               left: 0;
               top: calc(100% + 57px);
             }
-            @media (min-width: 600px) and (max-width: 1023px) {
+            @media (min-width: 600.98px) and (max-width: 1199.98px) {
               width: 600px;
               height: auto;
               top: auto;
-              bottom: -100%;
+              bottom: -126%;
               left: 52px;
             }
           }
@@ -208,12 +232,13 @@ ul li a.toggle:hover {
 @keyframes fadeMediaOutAndSlideDown {
   0% {
     opacity: 0;
-  }
-  80% {
-    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 @keyframes progress-forward {
@@ -222,5 +247,17 @@ ul li a.toggle:hover {
   }
   100% {
     width: 100%;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }

@@ -12,35 +12,44 @@ ul .inner {
 ul li.show .inner {
   display: block;
 }
-@media (max-width: 600px) {
+ul li.show .inner > p {
+  -webkit-animation: fadeInDown 0.5s;
+          animation: fadeInDown 0.5s;
+}
+@media (max-width: 1199.98px) {
   ul li {
     border-bottom: 1px solid #525296;
     margin: 0;
+  }
+}
+@media (min-width: 1919.98px) {
+  ul li {
+    border-bottom: 1px solid #525296;
+    margin: 0;
+  }
+  ul li .inner > p {
+    padding-bottom: 29.5px !important;
   }
 }
 
 ul li a.toggle {
   width: 100%;
   display: block;
-  background: rgba(0, 0, 0, 0.78);
-  color: #fefefe;
   padding: 0.75em;
-  border-radius: 0.15em;
-  -webkit-transition: background 0.3s ease;
-  transition: background 0.3s ease;
-}
-
-ul li a.toggle:hover {
-  background: rgba(0, 0, 0, 0.9);
 }
 
 .interactive_section {
   height: 100%;
   padding-top: 80px;
 }
-@media (max-width: 600px) {
+@media (max-width: 600.98px) {
   .interactive_section {
     padding-top: 16px;
+  }
+}
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
+  .interactive_section {
+    padding-top: 49px;
   }
 }
 .interactive_section .accordion-container {
@@ -52,7 +61,7 @@ ul li a.toggle:hover {
   max-width: 480px;
   margin-right: auto;
 }
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
   .interactive_section .accordion-container .accordion {
     max-width: 704px;
   }
@@ -65,14 +74,19 @@ ul li a.toggle:hover {
   letter-spacing: 0.01em;
   color: #ffffff;
   margin-bottom: 56px;
-  padding-top: 13px;
+  padding-top: 14px;
 }
-@media (max-width: 600px) {
+@media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion > h1 {
     font-size: 32px;
     line-height: 40px;
     margin-bottom: 18px;
     padding-top: 24px;
+  }
+}
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
+  .interactive_section .accordion-container .accordion > h1 {
+    margin-bottom: 21px;
   }
 }
 .interactive_section .accordion-container .accordion li .toggle {
@@ -90,11 +104,16 @@ ul li a.toggle:hover {
   display: block;
   height: 38px;
 }
-@media (max-width: 600px) {
+@media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion li .toggle span {
     font-size: 24px;
     line-height: 34px;
     padding-bottom: 12px;
+  }
+}
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
+  .interactive_section .accordion-container .accordion li .toggle span {
+    padding-bottom: 11px;
   }
 }
 .interactive_section .accordion-container .accordion li .toggle .prog-bar {
@@ -105,7 +124,7 @@ ul li a.toggle:hover {
   width: 100%;
   background: #525296;
 }
-@media (max-width: 600px) {
+@media (max-width: 1199.98px) {
   .interactive_section .accordion-container .accordion li .toggle .prog-bar {
     height: 0;
   }
@@ -137,6 +156,11 @@ ul li a.toggle:hover {
 .interactive_section .accordion-container .accordion li:nth-child(2) .inner {
   border-top: 4px solid #335495;
 }
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
+  .interactive_section .accordion-container .accordion li:nth-child(2) .inner .img-container {
+    bottom: -142.5%;
+  }
+}
 .interactive_section .accordion-container .accordion li:nth-child(2).active .toggle .prog-bar {
   background: #4573d1;
 }
@@ -163,14 +187,21 @@ ul li a.toggle:hover {
   font-size: 18px;
   line-height: 28px;
   color: #fff;
-  padding-top: 12px;
+  padding-top: 11px;
   padding-bottom: 22px;
 }
-@media (max-width: 600px) {
+@media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion li .inner > p {
     padding-top: 14px;
     padding-right: 8px;
     padding-bottom: 29px;
+  }
+}
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
+  .interactive_section .accordion-container .accordion li .inner > p {
+    padding-top: 15px;
+    padding-bottom: 29px;
+    padding-right: 6px;
   }
 }
 .interactive_section .accordion-container .accordion li .inner .img-container {
@@ -180,26 +211,26 @@ ul li a.toggle:hover {
   height: auto;
   top: 0;
   left: calc(100% + 168px);
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
 }
 .interactive_section .accordion-container .accordion li .inner .img-container img {
   width: 100%;
   height: auto;
+  -webkit-animation: fadeInDown 300ms;
+          animation: fadeInDown 300ms;
 }
-@media (max-width: 600px) {
+@media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion li .inner .img-container {
     width: 100%;
     left: 0;
     top: calc(100% + 57px);
   }
 }
-@media (min-width: 600px) and (max-width: 1023px) {
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
   .interactive_section .accordion-container .accordion li .inner .img-container {
     width: 600px;
     height: auto;
     top: auto;
-    bottom: -100%;
+    bottom: -126%;
     left: 52px;
   }
 }
@@ -207,24 +238,26 @@ ul li a.toggle:hover {
 @-webkit-keyframes fadeMediaOutAndSlideDown {
   0% {
     opacity: 0;
-  }
-  80% {
-    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
 @keyframes fadeMediaOutAndSlideDown {
   0% {
     opacity: 0;
-  }
-  80% {
-    opacity: 0;
+    -webkit-transform: translate3d(0, 20px, 0);
+    transform: translate3d(0, 20px, 0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 @-webkit-keyframes progress-forward {
@@ -241,5 +274,29 @@ ul li a.toggle:hover {
   }
   100% {
     width: 100%;
+  }
+}
+@-webkit-keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
