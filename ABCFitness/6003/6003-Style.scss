@@ -389,6 +389,7 @@ $aktiv: "aktiv-grotesk", sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
+            transition: none;
 
             @media (max-width: 767.98px) {
               max-width: 100%;
@@ -402,8 +403,10 @@ $aktiv: "aktiv-grotesk", sans-serif;
               padding-bottom: 5px;
             }
             &:hover,
-            &:focus {
+            &:focus, &:active, &:visited {
               background: #00aeef;
+              -webkit-appearance: none;
+              opacity: 1;
             }
           }
         }

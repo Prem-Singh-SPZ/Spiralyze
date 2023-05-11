@@ -1,0 +1,144 @@
+<script src="https://code.jquery.com/jquery-3.6.4.min.js"
+    integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
+<link rel="stylesheet" href="/Coveo/17001-B/accordion.css">
+
+<div class="interactive_section">
+    <div class="accordion-container">
+        <ul class="accordion">
+            <h1>Key takeaways</h1>
+
+            <li class=" l1">
+                <div class="toggle "><span>How to pick the best solution</span>
+                    <div class="prog-bar"></div>
+                    <img class="open"
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1683204866/Coveo/17001/custom_assets/up-arrow.svg"
+                        alt="Arrow Up">
+                    <img class="close"
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1683204866/Coveo/17001/custom_assets/down-arrow.svg"
+                        alt="Arrow Down">
+                </div>
+                <div class="inner ">
+                    <p>When it comes to choosing a site search tool for an ecommerce platform, evaluating options is far from simple. So how can you choose the right site search solution for your ecommerce site?
+                    </p>
+                    <div class="img-container">
+                        <picture>
+                            <source
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.webp"
+                                type="image/webp">
+                            <source
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.png"
+                                type="image/png">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.webp"
+                                alt="Best Ecom Solution">
+                        </picture>
+                    </div>
+                </div>
+            </li>
+
+            <li class="l2">
+                <div class="toggle"><span>Six questions</span>
+                    <div class="prog-bar"></div>
+                    <img class="open"
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1683204866/Coveo/17001/custom_assets/up-arrow.svg"
+                        alt="Arrow Up">
+                    <img class="close"
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1683204866/Coveo/17001/custom_assets/down-arrow.svg"
+                        alt="Arrow Down">
+                </div>
+                <div class="inner">
+                    <p>Six questions you should ask yourself (and vendors as well!) when evaluating options on the market.
+                    </p>
+                    <div class="img-container">
+                        <picture>
+                            <source
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.webp"
+                                type="image/webp">
+                            <source
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.png"
+                                type="image/png">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.webp"
+                                alt="Six Questions">
+                        </picture>
+                    </div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<script>
+    $(document).ready(function () {
+        let aSwitch = accordionSwitch();
+        aSwitch.init();
+        aSwitch.start();
+
+        if (window.innerWidth > 1023) {
+            $('li').hover(function () {
+                aSwitch.stop();
+            }, function () {
+                aSwitch.start();
+                $('li.show').addClass('active');
+            });
+        }
+
+        $('.toggle').click(function (e) {
+            e.preventDefault();
+            aSwitch.stop();
+
+            let $this = $(this);
+            if ($this.parent().hasClass('show active')) {
+                $this.parent().removeClass('show active');
+            } else {
+                $this.parent().parent().find('li').removeClass('show active');
+                $this.parent().addClass('show active');
+            }
+        });
+    });
+
+
+    function accordionSwitch() {
+        let intervalId;
+        let counter = 0;
+        return {
+            init() {
+                switchClass();
+            },
+            start() {
+                intervalId = window.setInterval(function () {
+                    switchClass();
+                }, 10000);
+            },
+            stop() {
+                clearInterval(intervalId);
+                $("li").removeClass('active');
+            }
+        }
+
+        //Switch active and show class
+        function switchClass() {
+            // console.log('loop ' + counter)
+            // var c = counter % $("li").length;
+            // $("li").removeClass('show active');
+            // $("li").eq(c).addClass('show active');
+            // ++counter
+
+            if ($('.l1').hasClass('show')) {
+                $('.l1').removeClass('show active');
+                $('.l2').addClass('show active');
+            }
+            // else if ($('.l2').hasClass('show')) {
+            //     $('.l2').removeClass('show active');
+            //     $('.l3').addClass('show active');
+            // }
+
+            // else if ($('.l3').hasClass('show')) {
+            //     $('.l3').removeClass('show active');
+            //     $('.l1').addClass('show active');
+            // }
+            else {
+                $('.l1').addClass('show active');
+                $('.l2').removeClass('show active');
+            }
+        }
+    }
+</script>

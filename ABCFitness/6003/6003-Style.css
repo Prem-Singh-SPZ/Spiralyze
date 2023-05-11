@@ -431,6 +431,8 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-transition: none;
+  transition: none;
 }
 @media (max-width: 767.98px) {
   .spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary {
@@ -445,8 +447,10 @@
   padding-left: 10px;
   padding-bottom: 5px;
 }
-.spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary:hover, .spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary:focus {
+.spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary:hover, .spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary:focus, .spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary:active, .spz-6003 main .spz-sticky-footer .sticky-container .sticky-cta .hs-cta-primary:visited {
   background: #00aeef;
+  -webkit-appearance: none;
+  opacity: 1;
 }
 .spz-6003 .c-scroll-to-top--active.show-sticky {
   bottom: 100px;

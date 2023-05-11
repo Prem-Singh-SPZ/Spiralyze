@@ -132,6 +132,10 @@
                 $this.parent().addClass('show active');
             }
         });
+
+        $(".ai-section-cta").click(function () {
+            $('html, body').animate({ scrollTop: $($('.form-container-white')).offset().top, }, 500, 'linear');
+        });
     });
 
 

@@ -85,12 +85,12 @@ function stickyFooter() {
         <div class="sticky-container">
         <div class="desktop-only-image">
         <picture>
-        <source srcset="https://res.cloudinary.com/spiralyze/image/upload/v1682313727/abc_fitness_ignite/6003/image.webp"
+        <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1683782485/abc_fitness_ignite/6003/image_3.webp"
             type="image/webp">
         <source
-            srcset="https://res.cloudinary.com/spiralyze/image/upload/v1682313727/abc_fitness_ignite/6003/image.png"
+            srcset="//res.cloudinary.com/spiralyze/image/upload/v1683782485/abc_fitness_ignite/6003/image_3.png"
             type="image/png">
-        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1682313727/abc_fitness_ignite/6003/image.webp"
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1683782485/abc_fitness_ignite/6003/image_3.webp"
             alt="Trending" title="Trending">
     </picture>
         </div>
