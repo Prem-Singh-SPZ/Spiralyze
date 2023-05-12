@@ -1,0 +1,109 @@
+.copy-and-image {
+  max-width: 1248px;
+  margin: auto;
+  padding: 96px;
+}
+.copy-and-image .image-in-left,
+.copy-and-image .image-in-right {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-left,
+  .copy-and-image .image-in-right {
+    flex-wrap: wrap;
+  }
+}
+.copy-and-image .image-in-left .ci-image,
+.copy-and-image .image-in-right .ci-image {
+  margin-right: 64px;
+}
+.copy-and-image .image-in-left .ci-image img,
+.copy-and-image .image-in-right .ci-image img {
+  width: 604px;
+  height: auto;
+}
+.copy-and-image .image-in-left .ci-copy .copy-title,
+.copy-and-image .image-in-right .ci-copy .copy-title {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 40px;
+  line-height: 40px;
+  letter-spacing: -0.48px;
+  color: #00030b;
+  border-left: 8px solid #007aff;
+  margin-left: -24px;
+  padding-left: 16px;
+  margin-top: 74px;
+  margin-bottom: 26px;
+}
+.copy-and-image .image-in-left .ci-copy .copy-content p,
+.copy-and-image .image-in-right .ci-copy .copy-content p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #2f2f2f;
+}
+.copy-and-image .image-in-left .ci-copy .copy-content p:first-child,
+.copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
+  margin-bottom: 12px;
+}
+.copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+.copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+.copy-and-image .image-in-left .ci-copy .copy-cta button,
+.copy-and-image .image-in-right .ci-copy .copy-cta button {
+  width: 148px;
+  height: 44px;
+  background: #0580e8;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+}
+.copy-and-image .image-in-left .ci-copy .copy-cta button:hover,
+.copy-and-image .image-in-right .ci-copy .copy-cta button:hover {
+  border: 3px solid #000000;
+}
+.copy-and-image .image-in-left .ci-copy .copy-cta button:active,
+.copy-and-image .image-in-right .ci-copy .copy-cta button:active {
+  background: #097dcc;
+  border: 2px solid #000000;
+}
+.copy-and-image .image-in-left:last-child .ci-copy .copy-title {
+  margin-top: 84px;
+}
+.copy-and-image .image-in-left:last-child .ci-image {
+  margin-top: -4px;
+}
+.copy-and-image .image-in-right {
+  padding: 96px 0;
+}
+.copy-and-image .image-in-right .ci-copy {
+  padding-left: 24px;
+}
+.copy-and-image .image-in-right .ci-copy .copy-title {
+  margin-top: 84px;
+}
+.copy-and-image .image-in-right .ci-image {
+  margin-left: 40px;
+  margin-right: 0;
+  margin-top: -4px;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-right .ci-image {
+    order: -1;
+  }
+}/*# sourceMappingURL=copy-and-image.css.map */

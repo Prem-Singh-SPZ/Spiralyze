@@ -1,0 +1,191 @@
+.hero-section {
+  position: relative;
+  background: #0580e8;
+  overflow: hidden;
+  min-height: 828px;
+}
+.hero-section .hero-content {
+  max-width: 604px;
+  padding: 22px 0;
+  position: relative;
+}
+.hero-section .hero-content::before {
+  content: "";
+  position: absolute;
+  bottom: 21px;
+  right: auto;
+  left: -496px;
+  height: 100px;
+  width: 440px;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_1.svg") no-repeat;
+}
+.hero-section .hero-content .hero-content-subtitle {
+  padding-left: 16px;
+  border-left: 8px solid #000;
+}
+.hero-section .hero-content .hero-content-subtitle .hc-subtitle {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: #000000;
+  margin: 0 0;
+}
+.hero-section .hero-content .hero-content-subtitle .hc-title {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 44px;
+  letter-spacing: -1px;
+  color: #ffffff;
+  margin: 8px 0 24px;
+}
+.hero-section .hero-content .hero-features {
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
+.hero-section .hero-content .hero-features p {
+  margin: 0;
+}
+.hero-section .hero-content .hero-features p span {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.48px;
+  color: #ffffff;
+  border-right: 1px solid rgba(0, 0, 0, 0.2);
+  padding: 0 14px;
+}
+.hero-section .hero-content .hero-features p span:first-child {
+  padding-left: 24px;
+}
+.hero-section .hero-content .hero-features p span:last-child {
+  border: 0;
+}
+.hero-section .hero-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.hero-section .list-grp-wrapper .list-group {
+  list-style: none;
+  padding-left: 48px;
+  margin: 34px 0;
+}
+.hero-section .list-grp-wrapper .list-group .list-item {
+  position: relative;
+  margin-bottom: 16px;
+}
+.hero-section .list-grp-wrapper .list-group .list-item::before {
+  content: "";
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275032/drata/5001/bullet-arrow.svg");
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: -24px;
+  top: 6px;
+}
+.hero-section .list-grp-wrapper .list-group .list-item .ls-title {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 24px;
+  line-height: 24px;
+  letter-spacing: -0.24px;
+  color: #ffffff;
+  margin-bottom: 4px;
+}
+.hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 28px;
+  color: #ffffff;
+}
+
+.hero-right-section {
+  width: 624px;
+  margin-bottom: 100px;
+  position: relative;
+}
+.hero-right-section::before {
+  content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_1.svg");
+  position: absolute;
+  top: -50px;
+  left: 224px;
+  right: auto;
+}
+.hero-right-section::after {
+  content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_2.svg");
+  position: absolute;
+  bottom: -74px;
+  /* left: auto; */
+  left: -20px;
+  z-index: 0;
+}
+
+.form-wrapper-spz {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 40px 32px;
+  background: #ffffff;
+  border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  margin-top: 21px;
+  position: relative;
+  z-index: 1;
+}
+.form-wrapper-spz .form-title {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 44px;
+  text-align: center;
+  letter-spacing: -1px;
+  color: #000000;
+  max-width: 428px;
+  margin: 0 auto 24px auto;
+}
+.form-wrapper-spz form {
+  display: flex;
+  flex-wrap: wrap;
+}
+.form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-font-element {
+  display: none;
+}
+
+.container {
+  margin: 0 auto;
+  max-width: 1248px;
+}
+
+@media screen and (max-width: 1280px) {
+  .hero-section .hero-container {
+    justify-content: center;
+  }
+  .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
+    text-align: left;
+  }
+  .hero-right-section {
+    width: 688px;
+    position: relative;
+    margin-bottom: 64.5px;
+  }
+  .form-wrapper-spz {
+    position: relative;
+    margin-top: 16.5px;
+    padding: 38.5px 0 39px 0;
+    z-index: 2;
+  }
+  .form-wrapper-spz .form-title {
+    margin-bottom: 40.5px;
+  }
+}/*# sourceMappingURL=hero-section.css.map */
