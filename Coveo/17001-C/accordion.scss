@@ -53,6 +53,7 @@ ul li a.toggle {
       margin-right: auto;
       @media (min-width: 600.98px) and (max-width: 1199.98px) {
         max-width: 704px;
+        height: 394px !important;
       }
 
       > h1 {
@@ -71,6 +72,7 @@ ul li a.toggle {
           padding-top: 24px;
         }
         @media (min-width: 600.98px) and (max-width: 1199.98px) {
+          padding-top: 61px;
           margin-bottom: 21px;
         }
       }
@@ -81,7 +83,7 @@ ul li a.toggle {
           position: relative;
           color: #fff;
           span {
-            padding: 16px 12px;
+            padding: 18px 70px 12px 12px;
             font-style: normal;
             font-weight: 500;
             font-size: 26px;
@@ -89,10 +91,10 @@ ul li a.toggle {
             letter-spacing: 0.01em;
             cursor: default;
             display: block;
-            height: 38px;
+            // height: 38px;
             @media (max-width: 600.98px) {
-              font-size: 24px;
-              line-height: 34px;
+              font-size: 26px;
+              line-height: 36px;
               padding-bottom: 12px;
             }
             @media (min-width: 600.98px) and (max-width: 1199.98px) {
@@ -113,13 +115,13 @@ ul li a.toggle {
           .open {
             display: none;
             position: absolute;
-            top: 24px;
+            top: calc(50% - 12px);
             right: 12px;
           }
           .close {
             display: block;
             position: absolute;
-            top: 24px;
+            top: calc(50% - 12px);
             right: 12px;
           }
         }
@@ -143,11 +145,11 @@ ul li a.toggle {
           .inner {
             border-top: 4px solid #335495;
 
-            .img-container {
-              @media (min-width: 600.98px) and (max-width: 1199.98px) {
-                bottom: -142.5%;
-              }
-            }
+            // .img-container {
+            //   @media (min-width: 600.98px) and (max-width: 1199.98px) {
+            //     bottom: -142.5%;
+            //   }
+            // }
           }
           &.active .toggle .prog-bar {
             background: #4573d1;
@@ -176,7 +178,9 @@ ul li a.toggle {
           cursor: default;
           padding-left: 12px;
           padding-right: 46px;
-
+          @media (min-width: 600.98px) and (max-width: 1199.98px) {
+            padding-right: 50px;
+          }
           > p {
             font-style: normal;
             font-weight: 300;
@@ -193,7 +197,7 @@ ul li a.toggle {
             @media (min-width: 600.98px) and (max-width: 1199.98px) {
               padding-top: 15px;
               padding-bottom: 29px;
-              padding-right: 6px;
+              // padding-right: 6px;
             }
           }
 
@@ -202,7 +206,7 @@ ul li a.toggle {
             img {
               width: 100%;
               height: auto;
-              animation: fadeInDown 300ms;
+              animation: fadeMediaOutAndSlideDown 300ms;
             }
             position: absolute;
             width: 632px;
@@ -213,13 +217,13 @@ ul li a.toggle {
             @media (max-width: 600.98px) {
               width: 100%;
               left: 0;
-              top: calc(100% + 57px);
+              top: calc(100% + 60px);
             }
             @media (min-width: 600.98px) and (max-width: 1199.98px) {
               width: 600px;
               height: auto;
               top: auto;
-              bottom: -126%;
+              bottom: -138%;
               left: 52px;
             }
           }
@@ -232,8 +236,8 @@ ul li a.toggle {
 @keyframes fadeMediaOutAndSlideDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 20px, 0);
-    transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
   }
   100% {
     opacity: 1;

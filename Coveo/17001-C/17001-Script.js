@@ -59,7 +59,7 @@ navigator.sayswho = (function () {
         }
         else {
             document.getElementById("country").selectedIndex = "0";
-            $('#lp-pom-form-828 .lp-pom-form-field input').each(function () {
+            $('.form-inner-fields.has-axis .lp-pom-form-field input').each(function () {
                 var inputvalues = $(this).val();
                 if (inputvalues == null || inputvalues == '') {
                     $(this).closest('.lp-pom-form-field').removeClass('filled');
@@ -71,7 +71,7 @@ navigator.sayswho = (function () {
             localStorage.removeItem('firstLoad');
         }
     }
-    $('body').addClass('spz-17001-B');
+    $('body').addClass('spz-17001-C');
 })();
 
 //document.getElementById("country").selectedIndex = "0";

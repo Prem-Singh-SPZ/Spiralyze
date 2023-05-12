@@ -13,7 +13,8 @@ ul li.show .inner {
   display: block;
 }
 ul li.show .inner > p {
-  animation: fadeInDown 0.5s;
+  -webkit-animation: fadeInDown 0.5s;
+          animation: fadeInDown 0.5s;
 }
 @media (max-width: 1199.98px) {
   ul li {
@@ -63,6 +64,7 @@ ul li a.toggle {
 @media (min-width: 600.98px) and (max-width: 1199.98px) {
   .interactive_section .accordion-container .accordion {
     max-width: 704px;
+    height: 394px !important;
   }
 }
 .interactive_section .accordion-container .accordion > h1 {
@@ -85,6 +87,7 @@ ul li a.toggle {
 }
 @media (min-width: 600.98px) and (max-width: 1199.98px) {
   .interactive_section .accordion-container .accordion > h1 {
+    padding-top: 61px;
     margin-bottom: 21px;
   }
 }
@@ -93,7 +96,7 @@ ul li a.toggle {
   color: #fff;
 }
 .interactive_section .accordion-container .accordion li .toggle span {
-  padding: 16px 12px;
+  padding: 18px 70px 12px 12px;
   font-style: normal;
   font-weight: 500;
   font-size: 26px;
@@ -101,12 +104,11 @@ ul li a.toggle {
   letter-spacing: 0.01em;
   cursor: default;
   display: block;
-  height: 38px;
 }
 @media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion li .toggle span {
-    font-size: 24px;
-    line-height: 34px;
+    font-size: 26px;
+    line-height: 36px;
     padding-bottom: 12px;
   }
 }
@@ -131,17 +133,18 @@ ul li a.toggle {
 .interactive_section .accordion-container .accordion li .toggle .open {
   display: none;
   position: absolute;
-  top: 24px;
+  top: calc(50% - 12px);
   right: 12px;
 }
 .interactive_section .accordion-container .accordion li .toggle .close {
   display: block;
   position: absolute;
-  top: 24px;
+  top: calc(50% - 12px);
   right: 12px;
 }
 .interactive_section .accordion-container .accordion li.active .toggle .prog-bar {
-  animation: progress-forward 10s infinite;
+  -webkit-animation: progress-forward 10s infinite;
+          animation: progress-forward 10s infinite;
   width: 0%;
   height: 4px;
 }
@@ -153,11 +156,6 @@ ul li a.toggle {
 }
 .interactive_section .accordion-container .accordion li:nth-child(2) .inner {
   border-top: 4px solid #335495;
-}
-@media (min-width: 600.98px) and (max-width: 1199.98px) {
-  .interactive_section .accordion-container .accordion li:nth-child(2) .inner .img-container {
-    bottom: -142.5%;
-  }
 }
 .interactive_section .accordion-container .accordion li:nth-child(2).active .toggle .prog-bar {
   background: #4573d1;
@@ -179,6 +177,11 @@ ul li a.toggle {
   padding-left: 12px;
   padding-right: 46px;
 }
+@media (min-width: 600.98px) and (max-width: 1199.98px) {
+  .interactive_section .accordion-container .accordion li .inner {
+    padding-right: 50px;
+  }
+}
 .interactive_section .accordion-container .accordion li .inner > p {
   font-style: normal;
   font-weight: 300;
@@ -199,7 +202,6 @@ ul li a.toggle {
   .interactive_section .accordion-container .accordion li .inner > p {
     padding-top: 15px;
     padding-bottom: 29px;
-    padding-right: 6px;
   }
 }
 .interactive_section .accordion-container .accordion li .inner .img-container {
@@ -213,13 +215,14 @@ ul li a.toggle {
 .interactive_section .accordion-container .accordion li .inner .img-container img {
   width: 100%;
   height: auto;
-  animation: fadeInDown 300ms;
+  -webkit-animation: fadeMediaOutAndSlideDown 300ms;
+          animation: fadeMediaOutAndSlideDown 300ms;
 }
 @media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion li .inner .img-container {
     width: 100%;
     left: 0;
-    top: calc(100% + 57px);
+    top: calc(100% + 60px);
   }
 }
 @media (min-width: 600.98px) and (max-width: 1199.98px) {
@@ -227,19 +230,42 @@ ul li a.toggle {
     width: 600px;
     height: auto;
     top: auto;
-    bottom: -126%;
+    bottom: -138%;
     left: 52px;
+  }
+}
+
+@-webkit-keyframes fadeMediaOutAndSlideDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
   }
 }
 
 @keyframes fadeMediaOutAndSlideDown {
   0% {
     opacity: 0;
-    transform: translate3d(0, 20px, 0);
+    -webkit-transform: translate3d(0, -20px, 0);
+    transform: translate3d(0, -20px, 0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: none;
     transform: none;
+  }
+}
+@-webkit-keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }
 @keyframes progress-forward {
@@ -250,13 +276,27 @@ ul li a.toggle {
     width: 100%;
   }
 }
-@keyframes fadeInDown {
+@-webkit-keyframes fadeInDown {
   0% {
     opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
   100% {
     opacity: 1;
+    -webkit-transform: none;
     transform: none;
   }
-}/*# sourceMappingURL=accordion.css.map */
+}
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 10px, 0);
+    transform: translate3d(0, 10px, 0);
+  }
+  100% {
+    opacity: 1;
+    -webkit-transform: none;
+    transform: none;
+  }
+}

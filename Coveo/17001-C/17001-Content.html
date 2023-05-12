@@ -1,6 +1,6 @@
 <script src="https://code.jquery.com/jquery-3.6.4.min.js"
     integrity="sha256-oP6HI9z1XaZNBrJURtCoUT5SUnxFr8s3BzRl+cbzUq8=" crossorigin="anonymous"></script>
-<link rel="stylesheet" href="/Coveo/17001-B/accordion.css">
+<link rel="stylesheet" href="/Coveo/17001/accordion.css">
 
 <div class="interactive_section">
     <div class="accordion-container">
@@ -18,8 +18,8 @@
                         alt="Arrow Down">
                 </div>
                 <div class="inner ">
-                    <p>When it comes to choosing a site search tool for an ecommerce platform, evaluating options is far from simple. So how can you choose the right site search solution for your ecommerce site?
-                    </p>
+                    <p>When it comes to choosing a site search tool for an ecommerce platform, evaluating options is far
+                        from simple. So how can you choose the right site search solution for your ecommerce site?</p>
                     <div class="img-container">
                         <picture>
                             <source
@@ -29,7 +29,7 @@
                                 srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.png"
                                 type="image/png">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.webp"
-                                alt="Best Ecom Solution">
+                                alt="Best Solution">
                         </picture>
                     </div>
                 </div>
@@ -46,8 +46,8 @@
                         alt="Arrow Down">
                 </div>
                 <div class="inner">
-                    <p>Six questions you should ask yourself (and vendors as well!) when evaluating options on the market.
-                    </p>
+                    <p>Six questions you should ask yourself (and vendors as well!) when evaluating options on the
+                        market.</p>
                     <div class="img-container">
                         <picture>
                             <source
@@ -57,7 +57,7 @@
                                 srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.png"
                                 type="image/png">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.webp"
-                                alt="Six Questions">
+                                alt="Six key questions">
                         </picture>
                     </div>
                 </div>
@@ -93,6 +93,10 @@
                 $this.parent().addClass('show active');
             }
         });
+
+        $(".ai-section-cta").click(function () {
+            $('html, body').animate({ scrollTop: $($('.form-container-white')).offset().top, }, 500, 'linear');
+        });
     });
 
 
@@ -116,25 +120,10 @@
 
         //Switch active and show class
         function switchClass() {
-            // console.log('loop ' + counter)
-            // var c = counter % $("li").length;
-            // $("li").removeClass('show active');
-            // $("li").eq(c).addClass('show active');
-            // ++counter
-
             if ($('.l1').hasClass('show')) {
                 $('.l1').removeClass('show active');
                 $('.l2').addClass('show active');
             }
-            // else if ($('.l2').hasClass('show')) {
-            //     $('.l2').removeClass('show active');
-            //     $('.l3').addClass('show active');
-            // }
-
-            // else if ($('.l3').hasClass('show')) {
-            //     $('.l3').removeClass('show active');
-            //     $('.l1').addClass('show active');
-            // }
             else {
                 $('.l1').addClass('show active');
                 $('.l2').removeClass('show active');
@@ -142,3 +131,4 @@
         }
     }
 </script>
+
