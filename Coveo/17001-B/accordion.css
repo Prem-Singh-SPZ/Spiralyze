@@ -13,8 +13,7 @@ ul li.show .inner {
   display: block;
 }
 ul li.show .inner > p {
-  -webkit-animation: fadeInDown 0.5s;
-          animation: fadeInDown 0.5s;
+  animation: fadeInDown 0.5s;
 }
 @media (max-width: 1199.98px) {
   ul li {
@@ -143,8 +142,7 @@ ul li a.toggle {
   right: 12px;
 }
 .interactive_section .accordion-container .accordion li.active .toggle .prog-bar {
-  -webkit-animation: progress-forward 10s infinite;
-          animation: progress-forward 10s infinite;
+  animation: progress-forward 10s infinite;
   width: 0%;
   height: 4px;
 }
@@ -210,8 +208,7 @@ ul li a.toggle {
 .interactive_section .accordion-container .accordion li .inner .img-container img {
   width: 100%;
   height: auto;
-  -webkit-animation: fadeMediaOutAndSlideDown 300ms;
-          animation: fadeMediaOutAndSlideDown 300ms;
+  animation: fadeMediaOutAndSlideDown 300ms;
 }
 @media (max-width: 600.98px) {
   .interactive_section .accordion-container .accordion li .inner .img-container {
@@ -230,37 +227,14 @@ ul li a.toggle {
   }
 }
 
-@-webkit-keyframes fadeMediaOutAndSlideDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, -20px, 0);
-    transform: translate3d(0, -20px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
-
 @keyframes fadeMediaOutAndSlideDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, -20px, 0);
     transform: translate3d(0, -20px, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
-  }
-}
-@-webkit-keyframes progress-forward {
-  0% {
-    width: 0%;
-  }
-  100% {
-    width: 100%;
   }
 }
 @keyframes progress-forward {
@@ -271,27 +245,13 @@ ul li a.toggle {
     width: 100%;
   }
 }
-@-webkit-keyframes fadeInDown {
-  0% {
-    opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
-    transform: translate3d(0, 10px, 0);
-  }
-  100% {
-    opacity: 1;
-    -webkit-transform: none;
-    transform: none;
-  }
-}
 @keyframes fadeInDown {
   0% {
     opacity: 0;
-    -webkit-transform: translate3d(0, 10px, 0);
     transform: translate3d(0, 10px, 0);
   }
   100% {
     opacity: 1;
-    -webkit-transform: none;
     transform: none;
   }
-}
+}/*# sourceMappingURL=accordion.css.map */

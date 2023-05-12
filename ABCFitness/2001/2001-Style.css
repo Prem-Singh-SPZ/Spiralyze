@@ -166,8 +166,7 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   right: 0;
   left: auto;
   top: 34px;
-  -webkit-box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 30px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 30px rgba(0, 0, 0, 0.15);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25), 0px 2px 30px rgba(0, 0, 0, 0.15);
   border-radius: 10px;
   height: 710px;
 }
@@ -234,17 +233,12 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 @media (max-width: 1199.98px) {
   body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    justify-content: center;
   }
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-top-content[class] .hero-left-summary {
@@ -372,7 +366,6 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
 }
 body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-block[class] .section-inner.section-fit.section-relative[class] .spz-hero-container[class] .hero-bottom-content[class] .partner-img-container::after {
   content: "";
-  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
   position: absolute;
   width: 40px;
@@ -406,8 +399,6 @@ body.spz-2001[class] main .section.section-relative:nth-child(2) > .section-bloc
   top: 0px;
   right: 0;
   z-index: 1;
-  background: -webkit-gradient(linear, left top, right top, from(#ffffff), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(90deg, #ffffff 0%, rgba(255, 255, 255, 0) 100%);
-  -webkit-transform: matrix(-1, 0, 0, 1, 0, 0);
-          transform: matrix(-1, 0, 0, 1, 0, 0);
-}
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}/*# sourceMappingURL=2001-Style.css.map */
