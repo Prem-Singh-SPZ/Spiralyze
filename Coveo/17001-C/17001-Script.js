@@ -158,6 +158,27 @@ function validateEmail($email) {
     var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailReg.test($email);
 }
+$(".form-container-white .lp-pom-form-field input").keyup(function(){
+	$(this).closest('.lp-pom-form-field').removeClass('active typing');
+	var inputvalues = $(this).val(); 
+	if (inputvalues == null || inputvalues == '') {
+      	$(this).closest('.lp-pom-form-field').removeClass('email_error');
+		$(this).closest('.lp-pom-form-field').addClass('error v_blank');
+	} else {
+		$(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
+	}
+  
+
+	if(inputvalues != null && inputvalues != '' && $(this).attr('id') == 'business_email'){
+        //console.log('filled-validate email');
+		valid = validateEmail($(this).val());
+		if(valid == true){
+			$(this).closest('.lp-pom-form-field').removeClass('error email_error').addClass('filled');
+		}else{
+			$(this).closest('.lp-pom-form-field').addClass('error email_error');
+		}
+	}
+});
 
 
 var allFields = document.querySelectorAll('.form-container-white .single-line-text, .form-container-white .drop-down, .form-container-white .email');
@@ -212,4 +233,51 @@ submitBtn.addEventListener("click", function (event) {
         console.log('Error Triggered');
     }
 
+});
+
+
+$(document).ready(function () {
+    var accordionHeight = $('.lp-pom-form form').height();
+    var acc_wrapper = $('.lp-pom-form').closest('.lp-element');
+    var acc_wrap_height = acc_wrapper.height();
+    var acc_top = acc_wrapper.position().top;
+    // Search blocks with top > acc_top;
+    var blocks1 = [], acc_block;
+    $('.lp-positioned-content>.lp-element').each(function (index, element) {
+        if (!$(element).is(acc_wrapper) && ($(element).position().top > acc_top)) {
+            blocks1.push(element);
+        }
+    });
+    $('#lp-pom-root>.lp-element').each(function (index, element) {
+        var el_top = $(element).position().top;
+        if ((el_top < acc_top) && (el_top + $(element).height() > acc_top)) {
+            acc_block = $(element);
+            return false;
+        }
+    });
+    var collapse_page = function (event, ui) {
+        var currAccHeight = $('.lp-pom-form form').height();
+        var diff = currAccHeight - accordionHeight;
+        accordionHeight = currAccHeight;
+        if (acc_wrap_height < currAccHeight) {
+            acc_wrapper.height(currAccHeight);
+        } else {
+            acc_wrapper.height(acc_wrap_height);
+        }
+        // Change height
+        acc_block.height(acc_block.height() + diff);
+        acc_block.find('div').each(function (index, el_div) {
+            $(el_div).height($(el_div).height() + diff);
+        });
+
+        $.each(blocks1, function (index, element) {
+            var el_top = $(element).position().top;
+            var new_top = el_top + diff;
+            if ($(element).hasClass('form-container-white') || $(element).hasClass('left-copy-title') || $(element).hasClass('left-copy-bold-title') || $(element).hasClass('left-copy-content')) { }
+            else {
+                $(element).css('top', new_top + "px");
+            }
+        });
+    }
+    $('#country').change(collapse_page);
 });

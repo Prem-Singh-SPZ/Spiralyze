@@ -8,22 +8,38 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
-      padding: 128px 96px 127px;
+      padding: 96px;
       position: relative;
       max-width: 1248px;
       margin: auto;
 
       &::before {
-        content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg");
+        content: "";
         position: absolute;
-        left: -364px;
-        top: -332px;
+        width: 720px;
+        height: 720px;
+        left: -412px;
+        top: -412px;
+        background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg")
+          no-repeat;
+        opacity: 0.72;
+        @media (min-width: 1600px) {
+          left: -654px;
+        }
       }
       &::after {
-        content: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_5.svg");
+        content: "";
         position: absolute;
-        right: -304px;
-        top: -192px;
+        width: 720px;
+        height: 720px;
+        right: -412px;
+        top: -236px;
+        background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg")
+          no-repeat;
+        opacity: 0.72;
+        @media (min-width: 1600px) {
+          right: -654px;
+        }
       }
       .footer-subtitle {
         font-family: "Darker Grotesque";
@@ -46,22 +62,22 @@
           margin: auto;
           top: -20px;
           height: 8px;
-          width: 115px;
-          background: #fff;
+          width: 112px;
+          background: #c0ff60;
         }
       }
 
       .footer-cta {
         button {
-          width: 226px;
+          width: 209px;
           height: 64px;
           background: #0580e8;
           border-radius: 4px;
           font-family: "Inter";
           font-style: normal;
-          font-weight: 700;
+          font-weight: 600;
           font-size: 20px;
-          line-height: 32px;
+          line-height: 28px;
           text-align: center;
           color: #ffffff;
           outline: transparent;
@@ -101,12 +117,12 @@
     .footer-copy {
       display: flex;
       max-width: 1248px;
-      margin: 40px auto 34px auto;
+      margin: 40px auto 36px auto;
       justify-content: space-between;
       align-items: flex-end;
 
       .copy-and-logo {
-        max-width: 682px;
+        max-width: 640px;
 
         .footer-logo {
           color: transparent;
@@ -114,21 +130,22 @@
             color: transparent;
           }
         }
-        
+
         .footer-copy {
           font-family: "Inter";
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 28px;
+          font-size: 17px;
+          line-height: 24px;
           color: #ffffff;
-          margin: 36px 0 4px;
+          margin: 27px 0 4px;
         }
       }
       .social-icons {
+        margin-bottom: -1px;
         a {
           display: inline-block;
-          margin-left: 22px;
+          margin-left: 20px;
           color: transparent;
 
           &:visited {
@@ -220,11 +237,11 @@
 
   .footer-logo {
     display: inline-block;
-    width: 160px;
+    width: 135px;
     // margin-top: 5px;
 
     img {
-      max-width: 160px;
+      max-width: 135px;
     }
   }
 }
@@ -233,7 +250,7 @@
   .footer-sec {
     .top-footer {
       .footer-cta-section {
-        padding: 96px 90px 95px;
+        padding: 96px 86px 96px;
 
         &::before {
           z-index: 1;
@@ -242,13 +259,14 @@
 
         &::after {
           z-index: 1;
-          right: -438px;
+          right: -538px;
+          top: -210px;
         }
 
         .footer-subtitle {
           position: relative;
           font-size: 40px;
-          line-height: 40px;
+          line-height: 36px;
           z-index: 5;
         }
 
@@ -270,7 +288,7 @@
         margin-bottom: 34.5px;
 
         .footer-copy {
-          max-width: 508px;
+          max-width: 506px;
         }
       }
     }
@@ -278,7 +296,7 @@
     .footer-container {
       max-width: 96%;
       margin-top: 0;
-      margin-bottom: 32px;
+      margin-bottom: 16px;
     }
   }
 }
@@ -366,6 +384,9 @@
   grid-template-columns: repeat(2, 1fr);
   gap: 24px;
   margin-top: 64px;
+  @media (max-width: 991.98px) {
+    margin-top: 20px;
+  }
 }
 .css-1u4tlvk-Text-rootWrapper-GlobalFooter-copyrightDisclaimer {
   /*white-space:pre-wrap;*/

@@ -10,12 +10,13 @@
     font-family: "Darker Grotesque";
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 40px;
+    font-size: 48px;
+    line-height: 44px;
     letter-spacing: -0.48px;
     color: #000;
     position: relative;
     margin-bottom: 55px;
+    max-width: 824px;
 
     @media (min-width: 1600px) {
       margin-bottom: 56px;
@@ -27,8 +28,8 @@
       left: 0;
       top: -20px;
       height: 8px;
-      width: 115px;
-      background: #007aff;
+      width: 112px;
+      background: #0580e8;
     }
   }
 
@@ -102,17 +103,16 @@
   }
 }
 
-
 @media screen and (max-width: 1280px) {
   .social-proof-sec {
-    max-width: 736px;
-    margin-top: 112px;
-    margin-bottom: 48px;
+    max-width: 728px;
+    margin-top: 18px;
+    margin-bottom: 55px;
 
     .sp-title {
-      font-size: 32px;
-      line-height: 32px;
-      max-width: 100%;
+      font-size: 40px;
+      line-height: 36px;
+      max-width: 96%;
       margin-bottom: 40px;
 
       &::before {
@@ -127,7 +127,7 @@
 
       .sp-logo {
         width: 200px;
-        margin-bottom: 43.5px;
+        margin-bottom: 36px;
       }
     }
   }
@@ -168,14 +168,17 @@
 
 @media screen and (max-width: 767px) {
   .social-proof-sec {
-    max-width: 328px;
+    max-width: 320px;
     margin-top: 0;
     margin-bottom: 33px;
 
     .sp-title {
       font-size: 32px;
-      line-height: 32px;
+      line-height: 28px;
       // text-indent: -8px;
+      &::before {
+        width: 80px;
+      }
     }
 
     .sp-logos-wrapper {

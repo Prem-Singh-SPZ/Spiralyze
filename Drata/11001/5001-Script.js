@@ -5,7 +5,7 @@ const formInt = setInterval(() => {
         appendInputLabel();
 
         // Set input label
-        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
+        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about Drata?*';
 
         // Set checkbox label
         document.querySelector('.hs_demo_product_of_interest >  legend.hs-field-desc').innerHTML = 'What product(s) are you interested in?';

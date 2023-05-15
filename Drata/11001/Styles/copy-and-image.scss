@@ -27,15 +27,15 @@
         font-family: "Darker Grotesque";
         font-style: normal;
         font-weight: 800;
-        font-size: 40px;
-        line-height: 40px;
+        font-size: 48px;
+        line-height: 44px;
         letter-spacing: -0.48px;
-        color: #00030b;
-        border-left: 8px solid #007aff;
+        color: #000;
+        border-left: 8px solid #0580e8;
         margin-left: -24px;
         padding-left: 16px;
-        margin-top: 88px;
-        margin-bottom: 26px;
+        margin-top: 74px;
+        margin-bottom: 24px;
 
         @media (max-width: 1280.98px) {
           margin-top: 73.5px;
@@ -46,9 +46,9 @@
           font-family: "Inter";
           font-style: normal;
           font-weight: 400;
-          font-size: 18px;
-          line-height: 28px;
-          color: #2f2f2f;
+          font-size: 17px;
+          line-height: 24px;
+          color: #303030;
           &:first-child {
             margin-bottom: 12px;
           }
@@ -63,16 +63,19 @@
         }
       }
       .copy-cta {
+        @media (min-width: 1280.98px) {
+          margin-top: 32px;
+        }
         button {
           //   padding: 16px 24px;
-          width: 148px;
+          width: 134px;
           height: 44px;
           background: #0580e8;
           border-radius: 4px;
           font-family: "Inter";
           font-style: normal;
-          font-weight: 500;
-          font-size: 18px;
+          font-weight: 400;
+          font-size: 17px;
           line-height: 24px;
           text-align: center;
           color: #ffffff;
@@ -97,7 +100,7 @@
     .ci-copy {
       // padding-left: 24px;
       .copy-title {
-        margin-top: 82.5px;
+        margin-top: 91px;
       }
     }
 
@@ -111,7 +114,7 @@
     .ci-copy {
       padding-left: 24px;
       .copy-title {
-        margin-top: 98px;
+        margin-top: 104px;
       }
     }
 
@@ -146,8 +149,8 @@
         flex-direction: column;
 
         .copy-title {
-          font-size: 32px;
-          line-height: 32px;
+          font-size: 40px;
+          line-height: 36px;
           margin: 35.5px 0 0 0;
           padding-left: 0;
           border-left: none;
@@ -196,11 +199,16 @@
           margin: 19.5px 0 0 0;
           max-width: 300px;
           text-align: center;
+          font-size: 32px;
+          line-height: 28px;
         }
         .copy-content {
           max-width: 328px;
 
           p {
+            font-size: 15px;
+            line-height: 22px;
+            /* or 147% */
             &:first-child {
               margin-top: 17px;
             }
@@ -232,7 +240,6 @@
     }
   }
 }
-
 
 @media (max-width: 340px) {
   .copy-and-image {

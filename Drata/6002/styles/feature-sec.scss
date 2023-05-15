@@ -1,0 +1,190 @@
+.feature-section {
+  position: relative;
+  padding: 89px 0 71.5px;
+  overflow: hidden;
+
+  @media (min-width: 1600px) {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 40px;
+      left: -87px;
+      width: 326px;
+      height: 79px;
+      background: url("//res.cloudinary.com/spiralyze/image/upload/v1682937879/drata/6002/Dots-rectangle-gray.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+
+  @media (max-width: 1280px) {
+    padding: 88px 0 40.5px;
+
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      height: 1px;
+      width: 100%;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        right top,
+        from(#d7d7d7),
+        to(rgba(215, 215, 215, 0))
+      );
+      background: -o-linear-gradient(
+        left,
+        #d7d7d7 0%,
+        rgba(215, 215, 215, 0) 100%
+      );
+      background: linear-gradient(
+        90deg,
+        #d7d7d7 0%,
+        rgba(215, 215, 215, 0) 100%
+      );
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 53.5px 0 48.5px;
+  }
+
+  .feature-title-container {
+    position: relative;
+    margin-bottom: 56px;
+
+    @media (max-width: 767.98px) {
+      margin-bottom: 40px;
+    }
+
+    .feature-title {
+      font-family: "Darker Grotesque";
+      font-style: normal;
+      font-weight: 800;
+      font-size: 48px;
+      line-height: 44px;
+      letter-spacing: -0.48px;
+      color: #000000;
+      padding-top: 20px;
+      margin-bottom: 0;
+
+      @media (min-width: 768px) and (max-width: 991.98px) {
+        font-size: 40px;
+        line-height: 36px;
+        margin-top: 8px;
+      }
+
+      @media (max-width: 767.98px) {
+        font-size: 32px;
+        line-height: 28px;
+        padding-top: 20px;
+
+        &::before {
+          margin: 0;
+        }
+      }
+    }
+
+    > p {
+      font-family: "Inter";
+      font-style: normal;
+      font-weight: 400;
+      font-size: 20px;
+      line-height: 28px;
+      color: #303030;
+      margin-top: 13px;
+      margin-bottom: 18px;
+
+      @media (max-width: 991.98px) {
+        margin-top: 15px;
+      }
+      @media (max-width: 767.98px) {
+        font-weight: 400;
+        font-size: 17px;
+        line-height: 24px;
+      }
+    }
+    @media (min-width: 991.98px) {
+      &::before {
+        position: absolute;
+        content: url("//res.cloudinary.com/spiralyze/image/upload/v1682677229/drata/4002/custom_assets/Features-Dots-square.svg");
+        top: 0px;
+        right: -174px;
+      }
+    }
+  }
+
+  .fs-card-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    .fs-card-item {
+      max-width: 373.33px;
+      margin-bottom: 38.5px;
+
+      @media (max-width: 991.98px) {
+        margin-bottom: 35.5px;
+      }
+      @media (max-width: 767.98px) {
+        margin-bottom: 23px;
+      }
+
+      @media (min-width: 767.98px) and (max-width: 1280px) {
+        max-width: 336px;
+      }
+      @media (max-width: 767.98px) {
+        display: flex;
+      }
+      .img-container {
+        @media (max-width: 767.98px) {
+          padding-right: 16px;
+        }
+        .ls-img {
+          width: 80px;
+
+          @media (max-width: 767.98px) {
+            width: 64px;
+            margin-bottom: 16px;
+          }
+        }
+      }
+
+      .content-container {
+        > h6 {
+          font-family: "Darker Grotesque";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: -0.24px;
+          color: #000000;
+          margin: 20px 0 0 0;
+          @media (max-width: 767.98px) {
+            font-size: 20px;
+            line-height: 20px;
+            margin-top: 1px;
+          }
+        }
+
+        > p {
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 24px;
+          color: #303030;
+          margin-top: 12px;
+          @media (max-width: 991.98px) {
+            margin-bottom: 20px;
+          }
+          @media (max-width: 767.98px) {
+            font-size: 15px;
+            line-height: 22px;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+  }
+}
