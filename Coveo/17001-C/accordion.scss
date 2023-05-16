@@ -89,7 +89,7 @@ ul li a.toggle {
             font-size: 26px;
             line-height: 36px;
             letter-spacing: 0.01em;
-            cursor: default;
+            cursor: pointer;
             display: block;
             // height: 38px;
             @media (max-width: 600.98px) {
@@ -103,7 +103,7 @@ ul li a.toggle {
           }
           .prog-bar {
             width: 100%;
-            height: 5px;
+            height: 4px;
             position: absolute;
             height: 1px;
             width: 100%;
@@ -140,7 +140,6 @@ ul li a.toggle {
             display: none;
           }
         }
-
         &:nth-child(2) {
           .inner {
             border-top: 4px solid #335495;
@@ -151,28 +150,44 @@ ul li a.toggle {
             //   }
             // }
           }
+          &.hover {
+            .inner {
+              border-color: #a0a0f5;
+            }
+            .toggle .prog-bar {
+              height: 0;
+            }
+          }
           &.active .toggle .prog-bar {
-            background: #4573d1;
+            background: #a0a0f5;
           }
         }
 
-        &:nth-child(3) {
+        &:last-child {
           .inner {
             border-top: 4px solid #685434;
+          }
+          &.hover {
+            .inner {
+              border-color: #f0bd6c;
+            }
+            .toggle .prog-bar {
+              height: 0;
+            }
           }
           &.active .toggle .prog-bar {
             background: #f0bd6c;
           }
         }
 
-        &:last-child {
-          .inner {
-            border-top: 4px solid #ab4f50;
-          }
-          &.active .toggle .prog-bar {
-            background: #ef6a6a;
-          }
-        }
+        // &:last-child {
+        //   .inner {
+        //     border-top: 4px solid #ab4f50;
+        //   }
+        //   &.active .toggle .prog-bar {
+        //     background: #ef6a6a;
+        //   }
+        // }
 
         .inner {
           cursor: default;

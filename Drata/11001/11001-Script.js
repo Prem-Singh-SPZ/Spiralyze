@@ -37,7 +37,7 @@ const formInt = setInterval(() => {
 
         // initSwiper();
 
-        document.body.classList.add('spz-5001');
+        document.body.classList.add('spz-11001');
     }
 }, 100);
 
@@ -51,7 +51,10 @@ function appendFavicon() {
 
         <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
         <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682065639/drata/5001/Checkmark-hover.svg" as="image">
-        <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682065639/drata/5001/Checkmark-bg.svg" as="image">`
+        <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1682065639/drata/5001/Checkmark-bg.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-blank.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601858/drata/6002/Checkmark-hover.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-bg.svg" as="image">`
     );
 }
 

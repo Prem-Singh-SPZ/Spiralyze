@@ -591,8 +591,6 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
   .hero-section .list-grp-wrapper .list-group .list-item::before {
     top: 7px;
-    width: 12px;
-    height: 12px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
     text-align: left;
@@ -641,7 +639,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     line-height: 36px;
   }
   .hero-section .hero-content .hero-features {
-    margin-top: 0;
+    margin-top: 25px;
     margin-bottom: 10px;
   }
   .hero-section .hero-content .hero-features p {
@@ -701,6 +699,11 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     margin-bottom: 10px;
     padding-right: 5px;
     padding-left: 48px;
+  }
+  .hero-section .list-grp-wrapper .list-group .list-item::before {
+    content: url(//res.cloudinary.com/spiralyze/image/upload/v1684225755/drata/11001/custom_assets/hero-bullet-arrow.svg);
+    top: 6px;
+    left: -24px;
   }
   .hero-section .list-grp-wrapper .list-group .list-item .ls-title {
     font-size: 20px;
@@ -812,8 +815,8 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   background: #fff;
   border: 1px solid #d7d7d7;
   border-radius: 4px;
-  outline-width: 2px;
-  outline-color: #3799ed;
+  outline-width: 3px;
+  outline-color: #0580e8;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
@@ -900,9 +903,6 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 }
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input {
   border: 1px solid #d53641;
-  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-  color: #444;
 }
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input ~ .hs-label-spz {
   color: #727272;
@@ -920,14 +920,10 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   width: calc(100% - 60px);
   height: 30px;
 }
-.form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input {
-  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-}
 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input .hs-input {
   border: 1px solid #0466ba;
-  -webkit-box-shadow: 0px 0px 0px 2px #3799ed;
-          box-shadow: 0px 0px 0px 2px #3799ed;
+  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input .hs-input ~ .hs-label-spz {
   color: #0580e8 !important;
@@ -1086,7 +1082,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   display: inline-block;
   font-family: "Inter", sans-serif;
   font-style: normal;
-  font-weight: 500;
+  font-weight: 600;
   font-size: 12px;
   line-height: 16px;
   background-color: #d53641;
@@ -1190,7 +1186,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 @media screen and (max-width: 767.98px) {
   .form-wrapper-spz {
     padding: 24px 0;
-    margin-top: 15px;
+    margin-top: 14px;
   }
   .form-wrapper-spz .form-title-spz {
     font-size: 40px;
@@ -1229,10 +1225,10 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox > .input ul li {
     margin-bottom: 12px;
+    margin-right: 22px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox > .input ul li:nth-child(2) {
     margin-right: 0;
-    min-width: initial;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox > .input ul li:nth-child(4) {
     min-width: 74px;
@@ -1605,6 +1601,12 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
   margin-bottom: 12px;
 }
+@media (max-width: 767.98px) {
+  .copy-and-image .image-in-left .ci-copy .copy-content p:first-child,
+.copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
+    margin-bottom: 8px;
+  }
+}
 .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
 .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
   margin-bottom: 30px;
@@ -1641,11 +1643,11 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 }
 .copy-and-image .image-in-left .ci-copy .copy-cta button:hover,
 .copy-and-image .image-in-right .ci-copy .copy-cta button:hover {
-  border: 3px solid #000000;
+  border: 2px solid #000000;
 }
 .copy-and-image .image-in-left .ci-copy .copy-cta button:active,
 .copy-and-image .image-in-right .ci-copy .copy-cta button:active {
-  background: #097dcc;
+  background: #0466BA;
   border: 2px solid #000000;
 }
 .copy-and-image .image-in-left:last-child .ci-copy .copy-title {
@@ -1678,7 +1680,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 
 @media (max-width: 1280px) {
   .copy-and-image {
-    padding: 72px 10px 100px 10px;
+    padding: 72px 10px 98px 10px;
   }
   .copy-and-image .image-in-left .ci-image,
 .copy-and-image .image-in-right .ci-image {
@@ -1716,7 +1718,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
   .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
 .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
-    margin-bottom: 22px;
+    margin-bottom: 23px;
   }
   .copy-and-image .image-in-right {
     padding-bottom: 100px;
@@ -1729,13 +1731,16 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
 }
 @media (max-width: 767px) {
+  .copy-and-image {
+    padding: 72px 10px 100px 10px;
+  }
   .copy-and-image .image-in-left .ci-image img,
 .copy-and-image .image-in-right .ci-image img {
     max-width: 328px;
   }
   .copy-and-image .image-in-left .ci-copy .copy-title,
 .copy-and-image .image-in-right .ci-copy .copy-title {
-    margin: 19.5px 0 0 0;
+    margin: 20px 0 0 0;
     max-width: 300px;
     text-align: center;
     font-size: 32px;
@@ -2029,7 +2034,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   .social-proof-sec {
     max-width: 728px;
     margin-top: 18px;
-    margin-bottom: 55px;
+    margin-bottom: 54px;
   }
   .social-proof-sec .sp-title {
     font-size: 40px;
@@ -2085,7 +2090,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   .social-proof-sec {
     max-width: 320px;
     margin-top: 0;
-    margin-bottom: 33px;
+    margin-bottom: 41px;
   }
   .social-proof-sec .sp-title {
     font-size: 32px;
@@ -2096,7 +2101,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
   .social-proof-sec .sp-logos-wrapper .sp-logo {
     width: 150px;
-    margin-bottom: 43.5px;
+    margin-bottom: 35.5px;
   }
   .social-proof-sec .sp-logos-wrapper .sp-logo img {
     width: 150px;
@@ -2217,11 +2222,11 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   pointer-events: none;
 }
 .footer-sec .top-footer .footer-cta-section .footer-cta button:hover {
-  color: #bfff60;
+  color: #c0ff60;
 }
 .footer-sec .top-footer .footer-cta-section .footer-cta button:active {
-  background: #097dcc;
-  color: #bfff60;
+  background: #0466ba;
+  color: #c0ff60;
 }
 .footer-sec .top-footer .gradient-border {
   border-bottom: 1px solid transparent;
@@ -2390,6 +2395,13 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   .footer-sec .top-footer .footer-cta-section::before, .footer-sec .top-footer .footer-cta-section::after {
     display: none;
   }
+  .footer-sec .top-footer .footer-cta-section .footer-cta button {
+    width: 172px;
+    height: 56px;
+    font-weight: 600;
+    font-size: 17px;
+    line-height: 24px;
+  }
   .footer-sec .top-footer .footer-copy {
     max-width: 328px;
     -webkit-box-orient: vertical;
@@ -2404,9 +2416,10 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     max-width: 133px;
   }
   .footer-sec .top-footer .footer-copy .copy-and-logo .footer-copy {
-    font-size: 16px;
-    line-height: 24px;
-    margin-top: 20px;
+    font-size: 15px;
+    line-height: 22px;
+    margin-top: 28px;
+    margin-bottom: 14px;
   }
   .footer-sec .top-footer .footer-copy .social-icons {
     position: relative;
@@ -2414,7 +2427,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     z-index: 5;
   }
   .footer-sec .top-footer .footer-copy .social-icons a {
-    margin: 0 22px 0 0;
+    margin: 0 20px 0 0;
   }
   .footer-sec .footer-container {
     max-width: 91%;

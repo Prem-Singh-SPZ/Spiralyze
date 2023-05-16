@@ -158,58 +158,31 @@ function validateEmail($email) {
     var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailReg.test($email);
 }
+$(".form-container-white .lp-pom-form-field input").keyup(function(){
+	$(this).closest('.lp-pom-form-field').removeClass('active typing');
+	var inputvalues = $(this).val(); 
+	if (inputvalues == null || inputvalues == '') {
+      	$(this).closest('.lp-pom-form-field').removeClass('email_error');
+		$(this).closest('.lp-pom-form-field').addClass('error v_blank');
+	} else {
+		$(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
+	}
+  
 
+	if(inputvalues != null && inputvalues != '' && $(this).attr('id') == 'business_email'){
+        //console.log('filled-validate email');
+		valid = validateEmail($(this).val());
+		if(valid == true){
+			$(this).closest('.lp-pom-form-field').removeClass('error email_error').addClass('filled');
+		}else{
+			$(this).closest('.lp-pom-form-field').addClass('error email_error');
+		}
+	}
+});
 
 var allFields = document.querySelectorAll('.form-container-white .single-line-text, .form-container-white .drop-down, .form-container-white .email');
 
 allFields.forEach(function (inputfield) {
     //console.log(inputfield);
     //inputfield.insertAdjacentHTML("beforeend", '<div class="errorline"></div>');
-});
-
-
-/* Submit Button Event */
-
-var submitBtn = document.querySelector('.form-container-white .lp-pom-button[type=submit]');
-submitBtn.addEventListener("click", function (event) {
-    //console.log('submit');
-
-    var allFields = document.querySelectorAll('.form-container-white input.single[required], .form-container-white select.single[required]');
-    //console.log(allFields.length);
-    var errorstate = 0;
-    for (var i = 0; i < allFields.length; i++) {
-        var thisInput = allFields[i];
-        if (thisInput.value == '') {
-            thisInput.closest('.lp-pom-form-field').classList.add('error');
-            thisInput.focus();
-            errorstate = 1;
-            break;
-        }
-        else if (thisInput.value != '' && thisInput.classList.contains('form_elem_business_email')) {
-            var valid = validateEmail(thisInput.value);
-            //console.log(valid);
-            if (valid == true) {
-                thisInput.closest('.lp-pom-form-field').classList.remove('error');
-                thisInput.closest('.lp-pom-form-field').classList.remove('email_error');
-                thisInput.closest('.lp-pom-form-field').classList.add('filled');
-
-            } else {
-                thisInput.closest('.lp-pom-form-field').classList.add('error');
-                thisInput.closest('.lp-pom-form-field').classList.add('email_error');
-                thisInput.focus();
-                errorstate = 1;
-                break;
-            }
-        }
-        //console.log(thisInput);
-    }
-
-    if (errorstate == 0) {
-        submitBtn.closest('form').submit();
-    }
-    else {
-        // event.preventDefault();
-        console.log('Error Triggered');
-    }
-
 });

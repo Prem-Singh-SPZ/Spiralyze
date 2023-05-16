@@ -51,6 +51,9 @@
           color: #303030;
           &:first-child {
             margin-bottom: 12px;
+            @media (max-width: 767.98px) {
+              margin-bottom: 8px;
+            }
           }
           &:last-child {
             margin-bottom: 30px;
@@ -84,11 +87,11 @@
           cursor: pointer;
 
           &:hover {
-            border: 3px solid #000000;
+            border: 2px solid #000000;
           }
 
           &:active {
-            background: #097dcc;
+            background: #0466BA;
             border: 2px solid #000000;
           }
         }
@@ -131,7 +134,7 @@
 
 @media (max-width: 1280px) {
   .copy-and-image {
-    padding: 72px 10px 100px 10px;
+    padding: 72px 10px 98px 10px;
 
     .image-in-left,
     .image-in-right {
@@ -160,7 +163,7 @@
           max-width: 736px;
 
           p:last-child {
-            margin-bottom: 22px;
+            margin-bottom: 23px;
           }
         }
       }
@@ -186,6 +189,8 @@
 
 @media (max-width: 767px) {
   .copy-and-image {
+    padding: 72px 10px 100px 10px;
+
     .image-in-left,
     .image-in-right {
       .ci-image {
@@ -196,7 +201,7 @@
 
       .ci-copy {
         .copy-title {
-          margin: 19.5px 0 0 0;
+          margin: 20px 0 0 0;
           max-width: 300px;
           text-align: center;
           font-size: 32px;

@@ -114,22 +114,23 @@
         if (window.innerWidth > 1023) {
             $('li').hover(function () {
                 aSwitch.stop();
+                $('li.show').addClass('hover');
             }, function () {
                 aSwitch.start();
                 $('li.show').addClass('active');
+                $('li').removeClass('hover');
             });
         }
 
         $('.toggle').click(function (e) {
-            e.preventDefault();
             aSwitch.stop();
-
             let $this = $(this);
-            if ($this.parent().hasClass('show active')) {
-                $this.parent().removeClass('show active');
+            if ($this.parent().hasClass('show')) {
+                //$this.parent().addClass('show active');
+                //e.preventDefault();
             } else {
                 $this.parent().parent().find('li').removeClass('show active');
-                $this.parent().addClass('show active');
+                $this.parent().addClass('show ');
             }
         });
 
@@ -137,7 +138,6 @@
             $('html, body').animate({ scrollTop: $($('.form-container-white')).offset().top, }, 500, 'linear');
         });
     });
-
 
     function accordionSwitch() {
         let intervalId;
@@ -159,12 +159,6 @@
 
         //Switch active and show class
         function switchClass() {
-            // console.log('loop ' + counter)
-            // var c = counter % $("li").length;
-            // $("li").removeClass('show active');
-            // $("li").eq(c).addClass('show active');
-            // ++counter
-
             if ($('.l1').hasClass('show')) {
                 $('.l1').removeClass('show active');
                 $('.l2').addClass('show active');

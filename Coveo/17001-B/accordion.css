@@ -101,7 +101,7 @@ ul li a.toggle {
   font-size: 26px;
   line-height: 36px;
   letter-spacing: 0.01em;
-  cursor: default;
+  cursor: pointer;
   display: block;
   height: 38px;
 }
@@ -119,7 +119,7 @@ ul li a.toggle {
 }
 .interactive_section .accordion-container .accordion li .toggle .prog-bar {
   width: 100%;
-  height: 5px;
+  height: 4px;
   position: absolute;
   height: 1px;
   width: 100%;
@@ -157,25 +157,36 @@ ul li a.toggle {
 .interactive_section .accordion-container .accordion li:nth-child(2) .inner {
   border-top: 4px solid #335495;
 }
+.interactive_section .accordion-container .accordion li:nth-child(2).hover .inner {
+  border-color: #A0A0F5;
+}
+.interactive_section .accordion-container .accordion li:nth-child(2).hover .toggle .prog-bar {
+  height: 0;
+}
 .interactive_section .accordion-container .accordion li:nth-child(2).active .toggle .prog-bar {
-  background: #4573d1;
-}
-.interactive_section .accordion-container .accordion li:nth-child(3) .inner {
-  border-top: 4px solid #685434;
-}
-.interactive_section .accordion-container .accordion li:nth-child(3).active .toggle .prog-bar {
-  background: #f0bd6c;
+  background: #A0A0F5;
 }
 .interactive_section .accordion-container .accordion li:last-child .inner {
-  border-top: 4px solid #ab4f50;
+  border-top: 4px solid #685434;
+}
+.interactive_section .accordion-container .accordion li:last-child.hover .inner {
+  border-color: #f0bd6c;
+}
+.interactive_section .accordion-container .accordion li:last-child.hover .toggle .prog-bar {
+  height: 0;
 }
 .interactive_section .accordion-container .accordion li:last-child.active .toggle .prog-bar {
-  background: #ef6a6a;
+  background: #f0bd6c;
 }
 .interactive_section .accordion-container .accordion li .inner {
   cursor: default;
   padding-left: 12px;
-  padding-right: 50px;
+  padding-right: 58px;
+}
+@media (max-width: 1199.98px) {
+  .interactive_section .accordion-container .accordion li .inner {
+    padding-right: 50px;
+  }
 }
 .interactive_section .accordion-container .accordion li .inner > p {
   font-style: normal;

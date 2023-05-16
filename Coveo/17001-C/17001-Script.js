@@ -26,6 +26,7 @@ jQuery(function ($) {
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
     });
+
 });
 
 
@@ -158,26 +159,26 @@ function validateEmail($email) {
     var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailReg.test($email);
 }
-$(".form-container-white .lp-pom-form-field input").keyup(function(){
-	$(this).closest('.lp-pom-form-field').removeClass('active typing');
-	var inputvalues = $(this).val(); 
-	if (inputvalues == null || inputvalues == '') {
-      	$(this).closest('.lp-pom-form-field').removeClass('email_error');
-		$(this).closest('.lp-pom-form-field').addClass('error v_blank');
-	} else {
-		$(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
-	}
-  
+$(".form-container-white .lp-pom-form-field input").keyup(function () {
+    $(this).closest('.lp-pom-form-field').removeClass('active typing');
+    var inputvalues = $(this).val();
+    if (inputvalues == null || inputvalues == '') {
+        $(this).closest('.lp-pom-form-field').removeClass('email_error');
+        $(this).closest('.lp-pom-form-field').addClass('error v_blank');
+    } else {
+        $(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
+    }
 
-	if(inputvalues != null && inputvalues != '' && $(this).attr('id') == 'business_email'){
+
+    if (inputvalues != null && inputvalues != '' && $(this).attr('id') == 'business_email') {
         //console.log('filled-validate email');
-		valid = validateEmail($(this).val());
-		if(valid == true){
-			$(this).closest('.lp-pom-form-field').removeClass('error email_error').addClass('filled');
-		}else{
-			$(this).closest('.lp-pom-form-field').addClass('error email_error');
-		}
-	}
+        valid = validateEmail($(this).val());
+        if (valid == true) {
+            $(this).closest('.lp-pom-form-field').removeClass('error email_error').addClass('filled');
+        } else {
+            $(this).closest('.lp-pom-form-field').addClass('error email_error');
+        }
+    }
 });
 
 
@@ -186,98 +187,4 @@ var allFields = document.querySelectorAll('.form-container-white .single-line-te
 allFields.forEach(function (inputfield) {
     //console.log(inputfield);
     //inputfield.insertAdjacentHTML("beforeend", '<div class="errorline"></div>');
-});
-
-
-/* Submit Button Event */
-
-var submitBtn = document.querySelector('.form-container-white .lp-pom-button[type=submit]');
-submitBtn.addEventListener("click", function (event) {
-    //console.log('submit');
-
-    var allFields = document.querySelectorAll('.form-container-white input.single[required], .form-container-white select.single[required]');
-    //console.log(allFields.length);
-    var errorstate = 0;
-    for (var i = 0; i < allFields.length; i++) {
-        var thisInput = allFields[i];
-        if (thisInput.value == '') {
-            thisInput.closest('.lp-pom-form-field').classList.add('error');
-            thisInput.focus();
-            errorstate = 1;
-            break;
-        }
-        else if (thisInput.value != '' && thisInput.classList.contains('form_elem_business_email')) {
-            var valid = validateEmail(thisInput.value);
-            //console.log(valid);
-            if (valid == true) {
-                thisInput.closest('.lp-pom-form-field').classList.remove('error');
-                thisInput.closest('.lp-pom-form-field').classList.remove('email_error');
-                thisInput.closest('.lp-pom-form-field').classList.add('filled');
-
-            } else {
-                thisInput.closest('.lp-pom-form-field').classList.add('error');
-                thisInput.closest('.lp-pom-form-field').classList.add('email_error');
-                thisInput.focus();
-                errorstate = 1;
-                break;
-            }
-        }
-        //console.log(thisInput);
-    }
-
-    if (errorstate == 0) {
-        submitBtn.closest('form').submit();
-    }
-    else {
-        // event.preventDefault();
-        console.log('Error Triggered');
-    }
-
-});
-
-
-$(document).ready(function () {
-    var accordionHeight = $('.lp-pom-form form').height();
-    var acc_wrapper = $('.lp-pom-form').closest('.lp-element');
-    var acc_wrap_height = acc_wrapper.height();
-    var acc_top = acc_wrapper.position().top;
-    // Search blocks with top > acc_top;
-    var blocks1 = [], acc_block;
-    $('.lp-positioned-content>.lp-element').each(function (index, element) {
-        if (!$(element).is(acc_wrapper) && ($(element).position().top > acc_top)) {
-            blocks1.push(element);
-        }
-    });
-    $('#lp-pom-root>.lp-element').each(function (index, element) {
-        var el_top = $(element).position().top;
-        if ((el_top < acc_top) && (el_top + $(element).height() > acc_top)) {
-            acc_block = $(element);
-            return false;
-        }
-    });
-    var collapse_page = function (event, ui) {
-        var currAccHeight = $('.lp-pom-form form').height();
-        var diff = currAccHeight - accordionHeight;
-        accordionHeight = currAccHeight;
-        if (acc_wrap_height < currAccHeight) {
-            acc_wrapper.height(currAccHeight);
-        } else {
-            acc_wrapper.height(acc_wrap_height);
-        }
-        // Change height
-        acc_block.height(acc_block.height() + diff);
-        acc_block.find('div').each(function (index, el_div) {
-            $(el_div).height($(el_div).height() + diff);
-        });
-
-        $.each(blocks1, function (index, element) {
-            var el_top = $(element).position().top;
-            var new_top = el_top + diff;
-            if ($(element).hasClass('form-container-white') || $(element).hasClass('left-copy-title') || $(element).hasClass('left-copy-bold-title') || $(element).hasClass('left-copy-content')) { }
-            else {
-                $(element).css('top', new_top + "px");
-            }
-        });
-    }
-    $('#country').change(collapse_page);
 });
