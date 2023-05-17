@@ -17,7 +17,7 @@
       left: -296px;
       width: 240px;
       height: 240px;
-      background: url("https://res.cloudinary.com/spiralyze/image/upload/v1684143056/drata/11001/custom_assets/Dots-rectangle_grey.svg")
+      background: url("//res.cloudinary.com/spiralyze/image/upload/v1684143056/drata/11001/custom_assets/Dots-rectangle_grey.svg")
         no-repeat;
     }
 
@@ -104,7 +104,7 @@
         margin-bottom: 18px;
 
         &::before {
-          content: url("https://res.cloudinary.com/spiralyze/image/upload/v1683719218/drata/11001/hero-bullet-arrow.svg");
+          content: url("//res.cloudinary.com/spiralyze/image/upload/v1683719218/drata/11001/hero-bullet-arrow.svg");
           width: 16px;
           height: 16px;
           position: absolute;
@@ -148,7 +148,7 @@
     right: -40px;
     width: 326px;
     height: 79px;
-    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-blue.svg")
+    background: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-blue.svg")
       no-repeat;
   }
   &::after {
@@ -160,7 +160,7 @@
     width: 174px;
     height: 174px;
     z-index: 0;
-    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-square-grey.svg")
+    background: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-square-grey.svg")
       no-repeat;
   }
 
@@ -313,7 +313,7 @@
         right: -142px;
         width: 326px;
         height: 79px;
-        background: url("https://res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-blue.svg")
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-blue.svg")
           no-repeat;
       }
 
@@ -326,7 +326,7 @@
 
       .hero-features {
         margin-top: 25px;
-        margin-bottom: 10px;
+        margin-bottom: 16px;
 
         p {
           margin: 0 auto;
@@ -341,7 +341,7 @@
             line-height: 20px;
             border-right: none;
             padding: 0 6px 0 14px;
-            margin-bottom: 11px;
+            margin-bottom: 8px;
 
             &::after {
               content: "";
@@ -360,19 +360,26 @@
 
             &:nth-child(2) {
               min-width: 100px;
+              padding-left: 16px;
+              padding-right: 4px;
             }
 
             &:nth-child(3) {
               min-width: 64px;
+              &::after {
+                display: none;
+              }
             }
 
             &:nth-child(4) {
               min-width: 60px;
               padding-left: 24px;
+              padding-right: 4px;
+
             }
 
             &:nth-child(5) {
-              min-width: 33px;
+              min-width: 42px;
             }
 
             &:nth-child(6) {

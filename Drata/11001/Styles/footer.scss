@@ -18,10 +18,11 @@
         position: absolute;
         width: 720px;
         height: 720px;
-        left: -412px;
-        top: -412px;
-        background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg")
+        left: -420px;
+        top: -420px;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1683719276/drata/11001/square-security.svg")
           no-repeat;
+        background-size: cover;
         opacity: 0.72;
         @media (min-width: 1600px) {
           left: -654px;
@@ -33,10 +34,11 @@
         width: 720px;
         height: 720px;
         right: -412px;
-        top: -236px;
-        background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680275026/drata/5001/ornament_4.svg")
+        top: -240px;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1683719276/drata/11001/square-security.svg")
           no-repeat;
         opacity: 0.72;
+        background-size: cover;
         @media (min-width: 1600px) {
           right: -654px;
         }
@@ -254,13 +256,14 @@
 
         &::before {
           z-index: 1;
-          left: -588px;
+          left: -620px;
+          top: -420px;
         }
 
         &::after {
           z-index: 1;
-          right: -538px;
-          top: -210px;
+          right: -560px;
+          top: -240px;
         }
 
         .footer-subtitle {
@@ -307,9 +310,17 @@
       .footer-cta-section {
         padding: 80px 50px 78.5px;
 
-        &::before,
+        &::before {
+          width: 400px;
+          height: 400px;
+          left: -320px;
+          top: -240px;
+        }
         &::after {
-          display: none;
+          width: 400px;
+          height: 400px;
+          right: -320px;
+          top: 123px;
         }
 
         .footer-cta {

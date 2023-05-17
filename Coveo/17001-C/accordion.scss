@@ -16,15 +16,17 @@ ul li {
       animation: fadeInDown 0.5s;
     }
   }
-  @media (max-width: 1199.98px) {
-    border-bottom: 1px solid #525296;
-    margin: 0;
-  }
-  @media (min-width: 1919.98px) {
-    border-bottom: 1px solid #525296;
-    margin: 0;
-    .inner > p {
-      padding-bottom: 29.5px !important;
+  &:not(:last-child) {
+    @media (max-width: 1199.98px) {
+      border-bottom: 1px solid #525296;
+      margin: 0;
+    }
+    @media (min-width: 1199.98px) {
+      border-bottom: 1px solid #525296;
+      margin: 0;
+      .inner > p {
+        padding-bottom: 29.5px !important;
+      }
     }
   }
 }
@@ -108,9 +110,9 @@ ul li a.toggle {
             height: 1px;
             width: 100%;
             background: #525296;
-            @media (max-width: 1199.98px) {
-              height: 0;
-            }
+            // @media (max-width: 1199.98px) {
+            //   height: 0;
+            // }
           }
           .open {
             display: none;

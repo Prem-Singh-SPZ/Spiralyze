@@ -45,7 +45,7 @@ var jQueryInterval = setInterval(function () {
                 errorCheck();
             });
             MktoForms2.whenReady(function (form) {
-                var mktoForm = form;
+                var mktoForm = form || $('.mktoForm');
                 checkInputform();
                 errorCheck();
                 jQuery('.rapid-form select option:first-child').text('');
@@ -65,6 +65,19 @@ var jQueryInterval = setInterval(function () {
     }
 });
 
+document.addEventListener("DOMContentLoaded", function () {
+    if (document.querySelector('.mktoForm')) {
+        document.querySelector('.mktoForm').addEventListener('submit', function () {
+            setTimeout(function () {
+                window['optimizelyEdge'] = window['optimizelyEdge'] || [];
+                window['optimizelyEdge'].push({
+                    type: "event",
+                    eventName: "insightcloudsec-contact-form-submission-spz",
+                });
+            }, 100);
+        });
+    }
+});
 
 window.onload = function () {
     jQuery('body').addClass('loaded');

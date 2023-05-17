@@ -17,17 +17,17 @@ ul li.show .inner > p {
           animation: fadeInDown 0.5s;
 }
 @media (max-width: 1199.98px) {
-  ul li {
+  ul li:not(:last-child) {
     border-bottom: 1px solid #525296;
     margin: 0;
   }
 }
-@media (min-width: 1919.98px) {
-  ul li {
+@media (min-width: 1199.98px) {
+  ul li:not(:last-child) {
     border-bottom: 1px solid #525296;
     margin: 0;
   }
-  ul li .inner > p {
+  ul li:not(:last-child) .inner > p {
     padding-bottom: 29.5px !important;
   }
 }
@@ -124,11 +124,6 @@ ul li a.toggle {
   height: 1px;
   width: 100%;
   background: #525296;
-}
-@media (max-width: 1199.98px) {
-  .interactive_section .accordion-container .accordion li .toggle .prog-bar {
-    height: 0;
-  }
 }
 .interactive_section .accordion-container .accordion li .toggle .open {
   display: none;

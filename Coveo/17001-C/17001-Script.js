@@ -25,6 +25,10 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
+        if ($(window).width() > 1199) {
+            $('.partner-logos-sections').width($('body').innerWidth());
+            $('.partner-logos-sections').css('left', "-"+$(".partner-logos-sections").offset().left+"px");
+        }
     });
 
 });

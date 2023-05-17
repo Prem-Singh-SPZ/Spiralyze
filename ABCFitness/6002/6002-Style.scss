@@ -318,20 +318,20 @@ $aktiv: "aktiv-grotesk", sans-serif;
           position: relative;
           max-width: 420px;
           padding-bottom: 17px;
-          background-color: #fff;
-          // background-image: -webkit-gradient(
-          //   linear,
-          //   left bottom,
-          //   left top,
-          //   color-stop(1%, #1c99d6),
-          //   to(#263870)
-          // );
-          // background-image: -o-linear-gradient(
-          //   bottom,
-          //   #1c99d6 1%,
-          //   #263870 100%
-          // );
-          // background-image: linear-gradient(0deg, #1c99d6 1%, #263870);
+          // background-color: #fff;
+          background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(1%, #1c99d6),
+            to(#263870)
+          );
+          background-image: -o-linear-gradient(
+            bottom,
+            #1c99d6 1%,
+            #263870 100%
+          );
+          background-image: linear-gradient(0deg, #1c99d6 1%, #263870);
           @media (max-width: 599.98px) {
             padding: 40px 12px;
             max-width: 320px;
@@ -359,7 +359,8 @@ $aktiv: "aktiv-grotesk", sans-serif;
             font-family: $aktiv;
             font-weight: 700;
             line-height: 27px;
-            color: #445264;
+            color: #fff;
+            // color: #445264;
           }
           .close-modal {
             position: absolute;
@@ -370,10 +371,10 @@ $aktiv: "aktiv-grotesk", sans-serif;
 
             img {
               cursor: pointer;
-              opacity: 0.6;
+              // opacity: 0.6;
 
               &:hover {
-                opacity: 0.9;
+                opacity: 0.8;
               }
             }
           }

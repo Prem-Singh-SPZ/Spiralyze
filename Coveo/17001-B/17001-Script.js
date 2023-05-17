@@ -25,6 +25,10 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
+        if ($(window).width() > 1199) {
+            $('.partner-logos-sections').width($('body').innerWidth());
+            $('.partner-logos-sections').css('left', "-"+$(".partner-logos-sections").offset().left+"px");
+        }
     });
 });
 
@@ -158,26 +162,26 @@ function validateEmail($email) {
     var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
     return emailReg.test($email);
 }
-$(".form-container-white .lp-pom-form-field input").keyup(function(){
-	$(this).closest('.lp-pom-form-field').removeClass('active typing');
-	var inputvalues = $(this).val(); 
-	if (inputvalues == null || inputvalues == '') {
-      	$(this).closest('.lp-pom-form-field').removeClass('email_error');
-		$(this).closest('.lp-pom-form-field').addClass('error v_blank');
-	} else {
-		$(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
-	}
-  
+$(".form-container-white .lp-pom-form-field input").keyup(function () {
+    $(this).closest('.lp-pom-form-field').removeClass('active typing');
+    var inputvalues = $(this).val();
+    if (inputvalues == null || inputvalues == '') {
+        $(this).closest('.lp-pom-form-field').removeClass('email_error');
+        $(this).closest('.lp-pom-form-field').addClass('error v_blank');
+    } else {
+        $(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
+    }
 
-	if(inputvalues != null && inputvalues != '' && $(this).attr('id') == 'business_email'){
+
+    if (inputvalues != null && inputvalues != '' && $(this).attr('id') == 'business_email') {
         //console.log('filled-validate email');
-		valid = validateEmail($(this).val());
-		if(valid == true){
-			$(this).closest('.lp-pom-form-field').removeClass('error email_error').addClass('filled');
-		}else{
-			$(this).closest('.lp-pom-form-field').addClass('error email_error');
-		}
-	}
+        valid = validateEmail($(this).val());
+        if (valid == true) {
+            $(this).closest('.lp-pom-form-field').removeClass('error email_error').addClass('filled');
+        } else {
+            $(this).closest('.lp-pom-form-field').addClass('error email_error');
+        }
+    }
 });
 
 var allFields = document.querySelectorAll('.form-container-white .single-line-text, .form-container-white .drop-down, .form-container-white .email');

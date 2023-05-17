@@ -12,7 +12,7 @@
     }
 
     &::before {
-      content: url("https://res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-grey.svg");
+      content: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-grey.svg");
       position: absolute;
       top: -148px;
       right: -336px;
@@ -23,7 +23,7 @@
       // }
     }
     &::after {
-      content: url("https://res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-square-grey.svg");
+      content: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-square-grey.svg");
       position: absolute;
       bottom: -132px;
       left: -270px;
@@ -39,6 +39,7 @@
       position: relative;
       margin-bottom: 56px;
       margin-top: 18px;
+      max-width: 824px;
 
       &::before {
         content: "";
@@ -49,9 +50,9 @@
         width: 112px;
         background: #0580e8;
 
-        @media (min-width: 1600px) {
-          top: -16px;
-        }
+        // @media (min-width: 1600px) {
+        //   top: -16px;
+        // }
 
         @media (max-width: 767.98px) {
           width: 80px;
@@ -64,110 +65,129 @@
       justify-content: space-between;
       align-items: center;
       .cr-card {
-        display: flex;
-        flex-direction: column;
-        background: #ffffff;
-        box-shadow: 0px 12px 32px rgba(1, 18, 32, 0.08);
-        border-radius: 8px;
-        min-width: 256px;
-        max-width: 304px;
-        height: 278px;
-        padding: 24px;
-        margin-right: 24px;
+        padding: 0 12px;
+        @media (max-width: 767.98px) {
+          padding: 0 8px;
+        }
+        // margin-right: 24px;
 
+        &:first-child {
+          // margin-right: 0;
+          padding-left: 0;
+          @media (max-width: 1199.98px) {
+            padding-right: 22px;
+          }
+          @media (max-width: 767.98px) {
+            padding-right: 8px;
+          }
+        }
         &:last-child {
-          margin-right: 0;
+          @media (max-width: 1199.98px) {
+            padding-right: 16px;
+          }
         }
-
-        .rating-div {
+        .cr-content {
           display: flex;
-          // justify-content: space-between;
-          align-items: center;
-          > span {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 600;
-            font-size: 15px;
-            line-height: 22px;
-            text-align: right;
-            color: #000;
-            padding-left: 8px;
+          flex-direction: column;
+          background: #ffffff;
+          box-shadow: 0px 12px 32px rgba(1, 18, 32, 0.08);
+          border-radius: 8px;
+          min-width: 256px;
+          max-width: 304px;
+          height: 278px;
+          padding: 24px;
+          .rating-div {
+            display: flex;
+            // justify-content: space-between;
+            align-items: center;
+            > span {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 600;
+              font-size: 15px;
+              line-height: 22px;
+              text-align: right;
+              color: #000;
+              padding-left: 8px;
+            }
+
+            .star-rating {
+              padding-top: 1px;
+              width: 108px;
+            }
           }
 
-          .star-rating {
-            padding-top: 1px;
-            width: 108px;
+          .card-content {
+            padding-top: 4px;
+            margin-bottom: auto;
+            p {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 24px;
+              color: #000;
+            }
           }
-        }
 
-        .card-content {
-          padding-top: 4px;
-          margin-bottom: auto;
-          p {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 24px;
-            color: #000;
+          .card-footer {
+            position: relative;
+            p {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 24px;
+              color: #8b8b8b;
+              margin: 0;
+            }
+            // &::before {
+            //   content: "";
+            //   width: 60px;
+            //   height: 1px;
+            //   background: #d6d6d6;
+            //   position: absolute;
+            //   left: 0;
+            //   top: -16px;
+            // }
           }
-        }
-
-        .card-footer {
-          position: relative;
-          p {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 24px;
-            color: #8b8b8b;
-            margin: 0;
-          }
-          // &::before {
-          //   content: "";
-          //   width: 60px;
-          //   height: 1px;
-          //   background: #d6d6d6;
-          //   position: absolute;
-          //   left: 0;
-          //   top: -16px;
-          // }
         }
 
         &.cr-first-card {
-          align-items: center;
-          // justify-content: center;
-          min-width: 216px;
-          max-width: 264px;
+          .cr-content {
+            align-items: center;
+            // justify-content: center;
+            min-width: 216px;
+            max-width: 264px;
 
-          .g2 {
-            height: 64px;
-            padding-top: 39px;
-            // padding-right: 4px;
-          }
+            .g2 {
+              height: 64px;
+              padding-top: 39px;
+              // padding-right: 4px;
+            }
 
-          .cr-rating {
-            font-family: "Darker Grotesque";
-            font-style: normal;
-            font-weight: 800;
-            font-size: 28px;
-            line-height: 24px;
-            letter-spacing: -0.48px;
-            color: #000000;
-            margin: 32px 0px 2px 0;
-          }
-          .cr-comment {
-            font-family: "Inter";
-            font-style: normal;
-            font-weight: 400;
-            font-size: 17px;
-            line-height: 24px;
-            text-align: center;
-            color: #000000;
-            margin: 14px 0px 16px 0;
-            span {
-              font-weight: 600;
+            .cr-rating {
+              font-family: "Darker Grotesque";
+              font-style: normal;
+              font-weight: 800;
+              font-size: 28px;
+              line-height: 24px;
+              letter-spacing: -0.48px;
+              color: #000000;
+              margin: 32px 0px 2px 0;
+            }
+            .cr-comment {
+              font-family: "Inter";
+              font-style: normal;
+              font-weight: 400;
+              font-size: 17px;
+              line-height: 24px;
+              text-align: center;
+              color: #000000;
+              margin: 14px 0px 16px 0;
+              span {
+                font-weight: 600;
+              }
             }
           }
         }
@@ -178,10 +198,11 @@
 
 @media (max-width: 1280px) {
   .customer-reviews {
-    padding: 98px 0 84px 0;
+    padding: 98px 0 44px 0;
 
     .cr-wrapper {
       .cr-card-wrapper {
+        padding-bottom: 40px;
         padding-left: 15.5px;
         min-height: 350px;
         overflow-x: scroll;
@@ -194,7 +215,7 @@
           width: 0 !important;
         }
 
-        .cr-first-card {
+        .cr-first-card .cr-content {
           min-width: 254px;
         }
 
@@ -202,7 +223,7 @@
           // min-width: 254px;
 
           &:last-child {
-            margin-right: 24px;
+            // margin-right: 24px;
           }
         }
       }
@@ -227,14 +248,14 @@
 
 @media (max-width: 767px) {
   .customer-reviews {
-    padding: 79.5px 0 72.5px 0;
+    padding: 79.5px 0 32.5px 0;
 
     .cr-wrapper {
       max-width: 100%;
 
       .cr-title {
         max-width: 328px;
-        margin-bottom: 32px;
+        margin-bottom: 0px;
         margin-top: 20px;
         font-size: 32px;
         line-height: 28px;
@@ -242,9 +263,9 @@
 
       .cr-card-wrapper {
         min-height: 323px;
-
-        .cr-card {
-          margin-right: 16px;
+        padding-top: 32px;
+        .cr-card .cr-content {
+          // margin-right: 16px;
           height: 260px;
           .card-content {
             p {
@@ -259,7 +280,7 @@
             }
           }
         }
-        .cr-card.cr-first-card {
+        .cr-card.cr-first-card .cr-content {
           min-width: 192px;
           .g2 {
             padding-top: 46px;
@@ -277,11 +298,11 @@
           }
         }
 
-        .cr-card:not(.cr-first-card) {
+        .cr-card:not(.cr-first-card) .cr-content {
           min-width: 232px;
 
           &:last-child {
-            margin-right: 24px;
+            // margin-right: 24px;
           }
         }
 
@@ -300,15 +321,15 @@
   }
 
   .customer-reviews .cr-wrapper .cr-card-wrapper {
-    .cr-first-card {
+    .cr-first-card .cr-content {
       min-width: 209px;
     }
 
-    .cr-card:not(.cr-first-card) {
+    .cr-card:not(.cr-first-card) .cr-content {
       min-width: 254px;
 
       &:last-child {
-        margin-right: 14px;
+        // margin-right: 14px;
       }
     }
   }

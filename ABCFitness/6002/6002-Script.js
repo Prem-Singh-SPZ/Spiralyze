@@ -100,7 +100,7 @@ Book A Demo
 
 function modalUpdate() {
     document.querySelector('#get-in-contact .l-container.c-form__container .c-dbm__content.c-form__content.c-content ').insertAdjacentHTML('afterbegin', `<div class='close-modal'>
-    <img src="//res.cloudinary.com/spiralyze/image/upload/v1682421645/ABCFitnessSolutions/6002/assets/Close.svg" class='close-modal-icon' alt="Close">
+    <img src="//res.cloudinary.com/spiralyze/image/upload/v1681809630/ABCFitnessSolutions/6002/assets/close_1.svg" class='close-modal-icon' alt="Close">
    </div><div class="spz-form-title">Schedule a Demo</div>`)
 
 }
