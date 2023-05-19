@@ -27,6 +27,7 @@ const formInt = setInterval(() => {
                 el.closest('.field').classList.add('field-untouched');
             }
         });
+        moveElement('.hs_company_name', '.form-wrapper-spz .hbspt-form form fieldset:nth-child(2)');
 
         moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1');
 
