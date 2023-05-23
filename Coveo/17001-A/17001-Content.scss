@@ -5,7 +5,7 @@ body.lp-pom-body {
   .hero-section {
     background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/ebook_workplace__images__1440.webp) !important;
     background-repeat: no-repeat !important;
-    background-position: top right !important;
+    background-position: 0 0 !important;
     background-size: cover !important;
 
     @media (max-width: 600.98px) {
@@ -246,6 +246,13 @@ body.lp-pom-body {
       color: #fff !important;
     }
   }
+  .customer-agreement,
+  .privacy-policy,
+  .cookie-preferences {
+    > .label {
+      padding: 0;
+    }
+  }
 }
 
 @keyframes scroll {
@@ -279,16 +286,19 @@ body.lp-pom-body {
   .customer-agreement,
   .privacy-policy,
   .cookie-preferences {
-    top: 2224px !important;
+    top: 2232px !important;
     > .label > strong {
       font-size: 15px !important;
     }
   }
   .customer-agreement {
-    left: 385px !important;
+    left: 394px !important;
   }
   .cookie-preferences {
-    left: 751px !important;
+    left: 758px !important;
+  }
+  .privacy-policy {
+    left: 600px !important;
   }
 }
 .footer-logo {
@@ -324,7 +334,7 @@ body.lp-pom-body {
     padding: 0;
     strong {
       font-weight: 300 !important;
-      font-size: 12px;
+      font-size: 11px;
       line-height: 18px !important;
     }
   }
@@ -483,7 +493,7 @@ $color_4: #565b66;
       }
     }
     .single {
-      padding: 20px 0 0px 16px !important;
+      padding: 20px 0 2px 16px !important;
       border: none !important;
       color: $color_3;
       -webkit-appearance: none;
@@ -638,7 +648,7 @@ $color_4: #565b66;
       }
     }
     .single {
-      padding: 20px 0 0px 16px !important;
+      padding: 20px 0 2px 16px !important;
       border: none !important;
       color: $color_3;
       -webkit-appearance: none;
@@ -988,16 +998,16 @@ a.spz_primary_button#lp-pom-button-1094 {
     .customer-agreement,
     .privacy-policy,
     .cookie-preferences {
-      top: 2837px !important;
+      top: 2846px !important;
     }
     .customer-agreement {
-      left: 440px !important;
+      left: 460px !important;
     }
     .privacy-policy {
-      left: 596px !important;
+      left: 610px !important;
     }
     .cookie-preferences {
-      left: 698px !important;
+      left: 716px !important;
     }
   }
 }
