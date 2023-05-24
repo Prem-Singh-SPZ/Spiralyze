@@ -18,17 +18,17 @@
                         alt="Arrow Down">
                 </div>
                 <div class="inner ">
-                    <p>When it comes to choosing a site search tool for an ecommerce platform, evaluating options is far
-                        from simple. So how can you choose the right site search solution for your ecommerce site?</p>
+                    <p>When it comes to choosing a site search tool for an e-commerce platform, evaluating options is far
+                        from simple. So how can you choose the right site search solution for your e-commerce site?</p>
                     <div class="img-container">
                         <picture>
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.webp"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684920071/coveo/17001/desktop_1440__how_to_7.webp"
                                 type="image/webp">
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.png"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684920071/coveo/17001/desktop_1440__how_to_7.png"
                                 type="image/png">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554168/coveo/17001/mobile_360__how_to.webp"
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1684920071/coveo/17001/desktop_1440__how_to_7.webp"
                                 alt="Best Solution">
                         </picture>
                     </div>
@@ -51,12 +51,12 @@
                     <div class="img-container">
                         <picture>
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.webp"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684920118/coveo/17001/desktop_1440__six_questions_6.webp"
                                 type="image/webp">
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.png"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684920118/coveo/17001/desktop_1440__six_questions_6.png"
                                 type="image/png">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554169/coveo/17001/mobile_360__6_q.webp"
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1684920118/coveo/17001/desktop_1440__six_questions_6.webp"
                                 alt="Six key questions">
                         </picture>
                     </div>
@@ -90,8 +90,12 @@
                 //$this.parent().addClass('show active');
                 //e.preventDefault();
             } else {
-                $this.parent().parent().find('li').removeClass('show active');
+                $this.parent().parent().find('li').removeClass('show active hover');
                 $this.parent().addClass('show ');
+                if (window.innerWidth < 1023) {
+                    aSwitch.start();
+                    $this.parent().addClass('active');
+                }
             }
         });
 

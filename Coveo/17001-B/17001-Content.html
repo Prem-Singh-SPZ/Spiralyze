@@ -23,12 +23,12 @@
                     <div class="img-container">
                         <picture>
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554152/coveo/17001/desktop_1440__considerations.webp"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684914263/coveo/17001/desktop_1440__considerations_2.webp"
                                 type="image/webp">
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554152/coveo/17001/desktop_1440__considerations.png"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684914263/coveo/17001/desktop_1440__considerations_2.png"
                                 type="image/png">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554152/coveo/17001/desktop_1440__considerations.webp"
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1684914263/coveo/17001/desktop_1440__considerations_2.webp"
                                 alt="Considerations">
                         </picture>
                     </div>
@@ -51,12 +51,12 @@
                     <div class="img-container">
                         <picture>
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554153/coveo/17001/desktop_1440__six_key_q.webp"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684914262/coveo/17001/desktop_1440__six_key_q_2.webp"
                                 type="image/webp">
                             <source
-                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1683554153/coveo/17001/desktop_1440__six_key_q.png"
+                                srcset="//res.cloudinary.com/spiralyze/image/upload/v1684914262/coveo/17001/desktop_1440__six_key_q_2.png"
                                 type="image/png">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1683554153/coveo/17001/desktop_1440__six_key_q.webp"
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1684914262/coveo/17001/desktop_1440__six_key_q_2.webp"
                                 alt="Six key questions">
                         </picture>
                     </div>
@@ -90,8 +90,12 @@
                 //$this.parent().addClass('show active');
                 //e.preventDefault();
             } else {
-                $this.parent().parent().find('li').removeClass('show active');
+                $this.parent().parent().find('li').removeClass('show active hover');
                 $this.parent().addClass('show ');
+                if (window.innerWidth < 1023) {
+                    aSwitch.start();
+                    $this.parent().addClass('active');
+                }
             }
         });
 

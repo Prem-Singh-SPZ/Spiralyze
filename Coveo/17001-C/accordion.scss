@@ -134,12 +134,21 @@ ul li a.toggle {
             height: 4px;
           }
         }
-        &.show .toggle {
-          .open {
-            display: block;
+        &.show {
+          .toggle {
+            .open {
+              display: block;
+            }
+            .close {
+              display: none;
+            }
           }
-          .close {
-            display: none;
+          &:not(.active) {
+            .toggle {
+              .prog-bar {
+                height: 0px;
+              }
+            }
           }
         }
         &:nth-child(2) {
@@ -194,9 +203,12 @@ ul li a.toggle {
         .inner {
           cursor: default;
           padding-left: 12px;
-          padding-right: 46px;
+          padding-right: 74px;
           @media (min-width: 600.98px) and (max-width: 1199.98px) {
             padding-right: 50px;
+          }
+          @media (max-width: 600.98px) {
+            padding-right: 48px;
           }
           > p {
             font-style: normal;

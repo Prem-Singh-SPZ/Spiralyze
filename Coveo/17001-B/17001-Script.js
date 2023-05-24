@@ -25,10 +25,10 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
-        if ($(window).width() > 1199) {
+        // if ($(window).width() > 1199) {
             $('.partner-logos-sections').width($('body').innerWidth());
             $('.partner-logos-sections').css('left', "-"+$(".partner-logos-sections").offset().left+"px");
-        }
+        // }
     });
 });
 
@@ -64,14 +64,8 @@ navigator.sayswho = (function () {
         else {
             document.getElementById("country").selectedIndex = "0";
             $('.form-inner-fields.has-axis .lp-pom-form-field input').each(function () {
-                var inputvalues = $(this).val();
-                if (inputvalues == null || inputvalues == '') {
-                    $(this).closest('.lp-pom-form-field').removeClass('filled');
-                } else {
-                    $(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
-                }
-
-            });
+                $(this).val('');
+             });
             localStorage.removeItem('firstLoad');
         }
     }

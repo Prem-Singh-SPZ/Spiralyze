@@ -132,12 +132,21 @@ ul li a.toggle {
             height: 4px;
           }
         }
-        &.show .toggle {
-          .open {
-            display: block;
+        &.show {
+          .toggle {
+            .open {
+              display: block;
+            }
+            .close {
+              display: none;
+            }
           }
-          .close {
-            display: none;
+          &:not(.active) {
+            .toggle {
+              .prog-bar {
+                height: 0px;
+              }
+            }
           }
         }
 

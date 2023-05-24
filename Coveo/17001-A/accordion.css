@@ -148,6 +148,9 @@ ul li a.toggle {
 .interactive_section .accordion-container .accordion li.show .toggle .close {
   display: none;
 }
+.interactive_section .accordion-container .accordion li.show:not(.active) .toggle .prog-bar {
+  height: 0px;
+}
 .interactive_section .accordion-container .accordion li:nth-child(2) .inner {
   border-top: 4px solid #335495;
 }

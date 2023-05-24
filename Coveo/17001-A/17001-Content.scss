@@ -28,13 +28,13 @@ body.lp-pom-body {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/ebook_workplace__images__1920.webp) !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
-      background-position: right top !important;
+      background-position: 0 0 !important;
     }
     @media (min-width: 2500.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/ebook_workplace__images__1921.webp) !important;
       background-size: cover !important;
       background-repeat: no-repeat !important;
-      background-position: right top !important;
+      background-position: 0 0 !important;
     }
 
     &::before {
@@ -163,41 +163,59 @@ body.lp-pom-body {
   .partner-logos-sections {
     filter: drop-shadow(0px 8px 32px rgba(72, 72, 72, 0.14));
     -webkit-filter: drop-shadow(0px 8px 32px rgba(72, 72, 72, 0.14));
-    @media (max-width: 600.98px) {
-      width: 360px !important;
-      left: -22px !important;
-    }
+    // @media (max-width: 600.98px) {
+    //   width: 360px !important;
+    //   left: -22px !important;
+    // }
     .static-card-slider {
       display: flex;
       align-items: center;
       margin: 44px 0;
+      pointer-events: none;
+      @media (min-width: 1199.98px) {
+        .review-item-box.slick-slide {
+          margin: 0px 4px;
+          width: max-content;
+        }
+      }
       @media (max-width: 1199.98px) {
-        animation: scroll 25s linear infinite;
-        width: 1290px;
+        // animation: scroll 25s linear infinite;
+        // width: 1290px;
         margin: 70px 0;
-      }
-      .review-item-box {
-        width: 300px;
-        margin: 0 8px;
-
-        img {
-          width: auto;
-          // max-width: 100%;
-          height: 106px;
+        display: block;
+        @media (max-width: 600.98px) {
+          margin: 52px 0;
         }
-        @media (min-width: 600.98px) {
-          &:first-child {
-            margin-left: -5px;
-          }
-          &:last-child {
-            margin-right: 0;
+        .slick-track {
+          display: flex;
+          .review-item-box.slick-slide {
+            margin: 0px 4px;
+            width: max-content;
           }
         }
-
-        &:nth-child(3) {
-          width: 332px;
-        }
       }
+      // .review-item-box {
+      //   width: 300px;
+      //   margin: 0 8px;
+
+      //   img {
+      //     width: auto;
+      //     // max-width: 100%;
+      //     height: 106px;
+      //   }
+      //   @media (min-width: 600.98px) {
+      //     &:first-child {
+      //       margin-left: -5px;
+      //     }
+      //     &:last-child {
+      //       margin-right: 0;
+      //     }
+      //   }
+
+      //   &:nth-child(3) {
+      //     width: 332px;
+      //   }
+      // }
     }
   }
 
@@ -249,8 +267,14 @@ body.lp-pom-body {
   .customer-agreement,
   .privacy-policy,
   .cookie-preferences {
+    width: min-content !important;
+    height: auto !important;
     > .label {
       padding: 0;
+    }
+    &:active {
+      background-color: rgba(245, 245, 245, 0);
+      color: #1279fd !important;
     }
   }
 }
@@ -286,7 +310,7 @@ body.lp-pom-body {
   .customer-agreement,
   .privacy-policy,
   .cookie-preferences {
-    top: 2232px !important;
+    top: 2244px !important;
     > .label > strong {
       font-size: 15px !important;
     }
@@ -485,6 +509,8 @@ $color_4: #565b66;
       }
       > input {
         cursor: pointer;
+        top: 2px;
+        position: relative;
       }
     }
     &:not(.error) {
@@ -546,27 +572,27 @@ $color_4: #565b66;
       left: 0;
       width: 100%;
     }
-    &:before {
-      content: "";
-      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1683633665/Coveo/17001/custom_assets/Critical.svg);
-      position: absolute;
-      bottom: -24px;
-      left: 16px;
-      width: 16px;
-      height: 16px;
-      background-size: contain;
-    }
-    &:after {
-      content: "This field is required.";
-      position: absolute;
-      left: 36px;
-      bottom: -27px;
-      color: $color_2;
-      font-weight: 300;
-      font-size: 12px;
-      line-height: 16px;
-      letter-spacing: 0.003em;
-    }
+    // &:before {
+    //   content: "";
+    //   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1683633665/Coveo/17001/custom_assets/Critical.svg);
+    //   position: absolute;
+    //   bottom: -24px;
+    //   left: 16px;
+    //   width: 16px;
+    //   height: 16px;
+    //   background-size: contain;
+    // }
+    // &:after {
+    //   content: "This field is required.";
+    //   position: absolute;
+    //   left: 36px;
+    //   bottom: -27px;
+    //   color: $color_2;
+    //   font-weight: 300;
+    //   font-size: 12px;
+    //   line-height: 16px;
+    //   letter-spacing: 0.003em;
+    // }
     select {
       border-bottom: 2px solid #cd2113 !important;
     }
@@ -575,14 +601,14 @@ $color_4: #565b66;
     }
   }
   .lp-pom-form-field.email.error {
-    margin-bottom: 32px !important;
+    // margin-bottom: 32px !important;
   }
   .lp-pom-form-field.single-line-text.error {
-    margin-bottom: 32px !important;
+    // margin-bottom: 32px !important;
     border-color: transparent;
   }
   .lp-pom-form-field.drop-down.error {
-    margin-bottom: 32px !important;
+    // margin-bottom: 32px !important;
     .errorline {
       width: calc(100% - 49px);
     }
@@ -945,8 +971,8 @@ a.spz_primary_button#lp-pom-button-1094 {
     }
     .partner-logos-sections {
       top: 1170px !important;
-      width: 768px !important;
-      left: 256px !important;
+      // width: 768px !important;
+      // left: 256px !important;
     }
     .key-takeaways {
       top: 1387px !important;
@@ -998,16 +1024,16 @@ a.spz_primary_button#lp-pom-button-1094 {
     .customer-agreement,
     .privacy-policy,
     .cookie-preferences {
-      top: 2846px !important;
+      top: 2856px !important;
     }
     .customer-agreement {
-      left: 460px !important;
+      left: 466px !important;
     }
     .privacy-policy {
-      left: 610px !important;
+      left: 614px !important;
     }
     .cookie-preferences {
-      left: 716px !important;
+      left: 720px !important;
     }
   }
 }

@@ -25,6 +25,8 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
+        $('.partner-logos-sections').width($('body').innerWidth());
+        $('.partner-logos-sections').css('left', "-"+$(".partner-logos-sections").offset().left+"px");
     });
 });
 
@@ -59,15 +61,11 @@ navigator.sayswho = (function () {
         }
         else {
             document.getElementById("country").selectedIndex = "0";
+            document.getElementById("country").attr('autocomplete', 'dont');
             $('.form-inner-fields.has-axis .lp-pom-form-field input').each(function () {
-                var inputvalues = $(this).val();
-                if (inputvalues == null || inputvalues == '') {
-                    $(this).closest('.lp-pom-form-field').removeClass('filled');
-                } else {
-                    $(this).closest('.lp-pom-form-field').removeClass('error v_blank').addClass('filled');
-                }
-
-            });
+                $(this).val('');
+                $(this).attr('autocomplete', 'dont');
+             });
             localStorage.removeItem('firstLoad');
         }
     }
@@ -133,6 +131,7 @@ $(".form-container-white .lp-pom-form-field select").click(function () {
     }else{
         $(this).closest('.lp-pom-form-field').removeClass('error').addClass('filled');
     }*/
+    validateState();
 });
 $(".form-container-white .lp-pom-form-field select").change(function () {
     $(this).closest('.lp-pom-form-field').removeClass('active typing');
@@ -141,9 +140,11 @@ $(".form-container-white .lp-pom-form-field select").change(function () {
     } else {
         $(this).closest('.lp-pom-form-field').removeClass('error').addClass('filled');
     }
+    validateState();
 });
 $(".form-container-white .lp-pom-form-field select").focus(function () {
     $(this).closest('.lp-pom-form-field').addClass('active typing');
+    validateState();
 });
 $(".form-container-white .lp-pom-form-field select").focusout(function () {
     $(this).closest('.lp-pom-form-field').removeClass('active typing');
@@ -152,7 +153,14 @@ $(".form-container-white .lp-pom-form-field select").focusout(function () {
     } else {
         $(this).closest('.lp-pom-form-field').removeClass('error').addClass('filled');
     }
+    validateState();
 });
+
+function validateState() {
+    if (document.getElementById("country").selectedIndex == 1 || document.getElementById("country").selectedIndex == 2){
+        document.getElementById("stateprovince").setAttribute('required', 'required');
+    }
+}
 function validateEmail($email) {
     //var emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
