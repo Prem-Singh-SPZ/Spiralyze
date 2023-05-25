@@ -25,8 +25,35 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
-        $('.partner-logos-sections').width($('body').innerWidth());
-        $('.partner-logos-sections').css('left', "-"+$(".partner-logos-sections").offset().left+"px");
+
+        document.querySelector('.ai-section-cta').addEventListener('click', function () {
+            document.querySelector('.form-container-white').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        if (window.innerWidth < 768) {
+            $('.partner-logos-sections').width($('body').innerWidth());
+            $('.partner-logos-sections').css('left', "-" + $(".partner-logos-sections").offset().left + "px");
+        }
+
+        if (window.innerWidth < 1201) {
+            $('.static-card-slider').slick({
+                speed: 5000,
+                autoplay: true,
+                autoplaySpeed: 0,
+                centerMode: true,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: true,
+                infinite: true,
+                initialSlide: 1,
+                arrows: false,
+                buttons: false,
+                loop: true
+            });
+        }
     });
 });
 
@@ -61,11 +88,9 @@ navigator.sayswho = (function () {
         }
         else {
             document.getElementById("country").selectedIndex = "0";
-            document.getElementById("country").attr('autocomplete', 'dont');
             $('.form-inner-fields.has-axis .lp-pom-form-field input').each(function () {
                 $(this).val('');
-                $(this).attr('autocomplete', 'dont');
-             });
+            });
             localStorage.removeItem('firstLoad');
         }
     }
@@ -157,7 +182,7 @@ $(".form-container-white .lp-pom-form-field select").focusout(function () {
 });
 
 function validateState() {
-    if (document.getElementById("country").selectedIndex == 1 || document.getElementById("country").selectedIndex == 2){
+    if (document.getElementById("country").selectedIndex == 1 || document.getElementById("country").selectedIndex == 2) {
         document.getElementById("stateprovince").setAttribute('required', 'required');
     }
 }
@@ -190,7 +215,4 @@ $(".form-container-white .lp-pom-form-field input").keyup(function () {
 
 var allFields = document.querySelectorAll('.form-container-white .single-line-text, .form-container-white .drop-down, .form-container-white .email');
 
-allFields.forEach(function (inputfield) {
-    //console.log(inputfield);
-    //inputfield.insertAdjacentHTML("beforeend", '<div class="errorline"></div>');
-});
+

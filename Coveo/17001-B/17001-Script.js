@@ -25,10 +25,43 @@ jQuery(function ($) {
 
     $(document).ready(function () {
         $(".ub-input-item#country, .ub-input-item#stateprovince").find('option:first-child').text('');
-        // if ($(window).width() > 1199) {
-            $('.partner-logos-sections').width($('body').innerWidth());
-            $('.partner-logos-sections').css('left', "-"+$(".partner-logos-sections").offset().left+"px");
-        // }
+
+        document.querySelector('.ai-section-cta').addEventListener('click', function () {
+            document.querySelector('.form-container-white').scrollIntoView({
+                behavior: 'smooth'
+            });
+        });
+
+        $('.partner-logos-sections').width($('body').innerWidth());
+        let diff = convert_positive($(".partner-logos-sections").offset().left);
+        $('.partner-logos-sections').css('left', diff);
+        function convert_positive(a) {
+            a = a * -1;
+            return a;
+        }
+
+        var content = document.createElement("script");
+        content.src = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js";
+        document.head.appendChild(content);
+        content.onload = function () {
+            $('.static-card-slider').slick({
+                speed: 5000,
+                autoplay: true,
+                autoplaySpeed: 0,
+                cssEase: 'linear',
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                variableWidth: true,
+                infinite: true,
+                initialSlide: 1,
+                arrows: false,
+                buttons: false,
+                loop: true
+            });
+            setTimeout(() => {
+                $('.partner-logos-sections').css('opacity', 1);
+            }, 100);
+        }
     });
 });
 
@@ -65,7 +98,7 @@ navigator.sayswho = (function () {
             document.getElementById("country").selectedIndex = "0";
             $('.form-inner-fields.has-axis .lp-pom-form-field input').each(function () {
                 $(this).val('');
-             });
+            });
             localStorage.removeItem('firstLoad');
         }
     }
@@ -131,6 +164,7 @@ $(".form-container-white .lp-pom-form-field select").click(function () {
     }else{
         $(this).closest('.lp-pom-form-field').removeClass('error').addClass('filled');
     }*/
+    validateState();
 });
 $(".form-container-white .lp-pom-form-field select").change(function () {
     $(this).closest('.lp-pom-form-field').removeClass('active typing');
@@ -139,9 +173,11 @@ $(".form-container-white .lp-pom-form-field select").change(function () {
     } else {
         $(this).closest('.lp-pom-form-field').removeClass('error').addClass('filled');
     }
+    validateState();
 });
 $(".form-container-white .lp-pom-form-field select").focus(function () {
     $(this).closest('.lp-pom-form-field').addClass('active typing');
+    validateState();
 });
 $(".form-container-white .lp-pom-form-field select").focusout(function () {
     $(this).closest('.lp-pom-form-field').removeClass('active typing');
@@ -150,7 +186,13 @@ $(".form-container-white .lp-pom-form-field select").focusout(function () {
     } else {
         $(this).closest('.lp-pom-form-field').removeClass('error').addClass('filled');
     }
+    validateState();
 });
+function validateState() {
+    if (document.getElementById("country").selectedIndex == 1 || document.getElementById("country").selectedIndex == 2) {
+        document.getElementById("stateprovince").setAttribute('required', 'required');
+    }
+}
 function validateEmail($email) {
     //var emailReg = /^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/;
     var emailReg = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;

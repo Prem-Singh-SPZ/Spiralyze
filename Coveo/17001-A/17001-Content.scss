@@ -1,5 +1,14 @@
 @import url(/Coveo/17001-A/accordion.css);
 $gibson: canada-type-gibson, sans-serif !important;
+
+#lp-pom-text-830.form-container-heading {
+  height: auto !important;
+  position: static !important;
+  margin: 54px 24px 25px !important;
+  width: auto !important;
+  order: 1 !important;
+}
+
 body.lp-pom-body {
   //Hero right bg
   .hero-section {
@@ -10,13 +19,13 @@ body.lp-pom-body {
 
     @media (max-width: 600.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/17001/custom_assets/V1/Hero_Section_360_WORKPLACE-min.png) !important;
-      background-size: contain !important;
+      background-size: cover !important;
       background-position: right bottom !important;
       background-repeat: no-repeat !important;
     }
     @media (min-width: 600.98px) and (max-width: 1199.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/17001/custom_assets/V1/Tablet___Hero_Section___768-min.png) !important;
-      background-size: contain !important;
+      background-size: cover !important;
       background-repeat: no-repeat !important;
       background-position: right bottom !important;
 
@@ -75,6 +84,14 @@ body.lp-pom-body {
         // right: -100%;
       }
     }
+  }
+
+  .hero-logo .coveo-logo {
+    width: 100%;
+    display: block;
+    height: 100%;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1685008546/coveo/17001/horizontal_logos.svg);
+    background-repeat: no-repeat;
   }
 
   //Hero Left Copy
@@ -139,10 +156,7 @@ body.lp-pom-body {
     // }
 
     //Form title
-    .form-container-heading {
-      // margin: 0 !important;
-      margin-top: 54px !important;
-      margin-bottom: 25px !important;
+    #lp-pom-text-830.form-container-heading {
       @media (min-width: 600.98px) and (max-width: 1199.98px) {
         margin-bottom: 26px !important;
       }
@@ -172,6 +186,14 @@ body.lp-pom-body {
       align-items: center;
       margin: 44px 0;
       pointer-events: none;
+      .review-item-box.slick-slide {
+        margin: 0px 4px;
+        width: max-content;
+        height: 217px;
+        img {
+          height: 96px;
+        }
+      }
       @media (min-width: 1199.98px) {
         .review-item-box.slick-slide {
           margin: 0px 4px;
@@ -511,6 +533,9 @@ $color_4: #565b66;
         cursor: pointer;
         top: 2px;
         position: relative;
+        @media (max-width: 600.98px) {
+          top: 4px;
+        }
       }
     }
     &:not(.error) {
@@ -613,11 +638,11 @@ $color_4: #565b66;
       width: calc(100% - 49px);
     }
   }
-  .lp-pom-form-field.email.error.email_error {
-    &:after {
-      content: "Please enter a valid email address.";
-    }
-  }
+  // .lp-pom-form-field.email.error.email_error {
+  //   &:after {
+  //     content: "Please enter a valid email address.";
+  //   }
+  // }
   .lp-pom-form-field.error.drop-down {
     .errorline {
       z-index: 2;

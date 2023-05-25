@@ -1,4 +1,14 @@
 @import url(/Coveo/17001-A/accordion.css);
+#lp-pom-text-830.form-container-heading {
+  height: auto !important;
+  position: static !important;
+  margin: 54px 24px 25px !important;
+  width: auto !important;
+  -webkit-box-ordinal-group: 2 !important;
+      -ms-flex-order: 1 !important;
+          order: 1 !important;
+}
+
 body.lp-pom-body .hero-section {
   background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/ebook_workplace__images__1440.webp) !important;
   background-repeat: no-repeat !important;
@@ -8,7 +18,7 @@ body.lp-pom-body .hero-section {
 @media (max-width: 600.98px) {
   body.lp-pom-body .hero-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/17001/custom_assets/V1/Hero_Section_360_WORKPLACE-min.png) !important;
-    background-size: contain !important;
+    background-size: cover !important;
     background-position: right bottom !important;
     background-repeat: no-repeat !important;
   }
@@ -16,7 +26,7 @@ body.lp-pom-body .hero-section {
 @media (min-width: 600.98px) and (max-width: 1199.98px) {
   body.lp-pom-body .hero-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/17001/custom_assets/V1/Tablet___Hero_Section___768-min.png) !important;
-    background-size: contain !important;
+    background-size: cover !important;
     background-repeat: no-repeat !important;
     background-position: right bottom !important;
   }
@@ -84,6 +94,13 @@ body.lp-pom-body .hero-section::before {
     left: 95px !important;
   }
 }
+body.lp-pom-body .hero-logo .coveo-logo {
+  width: 100%;
+  display: block;
+  height: 100%;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1685008546/coveo/17001/horizontal_logos.svg);
+  background-repeat: no-repeat;
+}
 body.lp-pom-body .left-copy-title h2 span {
   font-style: normal;
   font-weight: 300 !important;
@@ -133,21 +150,17 @@ body.lp-pom-body .form-container-white {
     left: -20px !important;
   }
 }
-body.lp-pom-body .form-container-white .form-container-heading {
-  margin-top: 54px !important;
-  margin-bottom: 25px !important;
-}
 @media (min-width: 600.98px) and (max-width: 1199.98px) {
-  body.lp-pom-body .form-container-white .form-container-heading {
+  body.lp-pom-body .form-container-white #lp-pom-text-830.form-container-heading {
     margin-bottom: 26px !important;
   }
 }
 @media (max-width: 600.98px) {
-  body.lp-pom-body .form-container-white .form-container-heading {
+  body.lp-pom-body .form-container-white #lp-pom-text-830.form-container-heading {
     margin-top: 38px !important;
   }
 }
-body.lp-pom-body .form-container-white .form-container-heading > p span {
+body.lp-pom-body .form-container-white #lp-pom-text-830.form-container-heading > p span {
   font-family: canada-type-gibson, sans-serif !important;
   font-style: normal;
   font-weight: 500 !important;
@@ -167,6 +180,16 @@ body.lp-pom-body .partner-logos-sections .static-card-slider {
           align-items: center;
   margin: 44px 0;
   pointer-events: none;
+}
+body.lp-pom-body .partner-logos-sections .static-card-slider .review-item-box.slick-slide {
+  margin: 0px 4px;
+  width: -webkit-max-content;
+  width: -moz-max-content;
+  width: max-content;
+  height: 217px;
+}
+body.lp-pom-body .partner-logos-sections .static-card-slider .review-item-box.slick-slide img {
+  height: 96px;
 }
 @media (min-width: 1199.98px) {
   body.lp-pom-body .partner-logos-sections .static-card-slider .review-item-box.slick-slide {
@@ -515,6 +538,11 @@ body.lp-pom-body .cookie-preferences:active {
   top: 2px;
   position: relative;
 }
+@media (max-width: 600.98px) {
+  .form-container-white .lp-pom-form-field > .optionsList > .option > input {
+    top: 4px;
+  }
+}
 .form-container-white .lp-pom-form-field:not(.error) .errorline {
   display: none;
 }
@@ -582,9 +610,6 @@ body.lp-pom-body .cookie-preferences:active {
 }
 .form-container-white .lp-pom-form-field.drop-down.error .errorline {
   width: calc(100% - 49px);
-}
-.form-container-white .lp-pom-form-field.email.error.email_error:after {
-  content: "Please enter a valid email address.";
 }
 .form-container-white .lp-pom-form-field.error.drop-down .errorline {
   z-index: 2;

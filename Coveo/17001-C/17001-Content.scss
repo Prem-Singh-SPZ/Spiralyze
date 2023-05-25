@@ -1,5 +1,13 @@
 @import url(/Coveo/17001-C/accordion.css);
 $gibson: canada-type-gibson, sans-serif !important;
+
+#lp-pom-text-1107.form-container-heading {
+  height: auto !important;
+  position: static !important;
+  margin: 54px 24px 25px !important;
+  width: auto !important;
+  order: 1 !important;
+}
 body.lp-pom-body {
   //Hero right bg
   .hero-section {
@@ -10,19 +18,15 @@ body.lp-pom-body {
 
     @media (max-width: 600.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/hero_section_360_ecom_2.webp) !important;
-      background-size: contain !important;
+      background-size: cover !important;
       background-position: right bottom !important;
       background-repeat: no-repeat !important;
     }
     @media (min-width: 600.98px) and (max-width: 1199.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/hero_section_768_ecom_2.webp) !important;
-      background-size: contain !important;
+      background-size: cover !important;
       background-repeat: no-repeat !important;
       background-position: right bottom !important;
-
-      @media (min-width: 991.98px) {
-        background-size: cover !important;
-      }
     }
     @media (min-width: 1919.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/17001/ebook_ecom__images__1922.webp) !important;
@@ -77,6 +81,15 @@ body.lp-pom-body {
     }
   }
 
+  .hero-logo .coveo-logo {
+    width: 100%;
+    display: block;
+    height: 100%;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1685008546/coveo/17001/horizontal_logos.svg);
+    background-repeat: no-repeat;
+  }
+
+  
   //Hero Left Copy
   .left-copy-title {
     h2 span {
@@ -139,10 +152,7 @@ body.lp-pom-body {
     // }
 
     //Form title
-    .form-container-heading {
-      // margin: 0 !important;
-      margin-top: 54px !important;
-      margin-bottom: 25px !important;
+    #lp-pom-text-1107.form-container-heading {
       @media (min-width: 600.98px) and (max-width: 1199.98px) {
         margin-bottom: 26px !important;
       }
@@ -581,6 +591,9 @@ $color_4: #565b66;
         cursor: pointer;
         top: 2px;
         position: relative;
+        @media (max-width: 600.98px) {
+          top: 4px;
+        }
       }
     }
     &:not(.error) {
@@ -683,11 +696,11 @@ $color_4: #565b66;
       width: calc(100% - 49px);
     }
   }
-  .lp-pom-form-field.email.error.email_error {
-    &:after {
-      content: "Please enter a valid email address.";
-    }
-  }
+  // .lp-pom-form-field.email.error.email_error {
+  //   &:after {
+  //     content: "Please enter a valid email address.";
+  //   }
+  // }
   .lp-pom-form-field.error.drop-down {
     .errorline {
       z-index: 2;
@@ -1002,7 +1015,7 @@ a.spz_primary_button#lp-pom-button-1094 {
   //   left: -320px !important;
   // }
   @media (min-width: 600.98px) and (max-width: 1199.98px) {
-    width: 768px !important;
+    // width: 768px !important;
     // left: -80px !important;
   }
 }
