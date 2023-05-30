@@ -1,0 +1,128 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&display=swap");
+body.spz-111[class] {
+  .off-canvas-wrapper[class] {
+    .container-spz[class] {
+      .form-wrap #formBlock {
+        > fieldset {
+          padding: 39px 40px 25px;
+        }
+        #fieldInstruction {
+          margin-bottom: 32px;
+        }
+
+        dl:not(.bottomtext) {
+          margin-bottom: 27px;
+        }
+
+        dl:not(.ignoreLabel) {
+          input,
+          select {
+            font-family: "Mulish";
+            font-style: normal;
+            border: 0;
+            border-bottom: 1px solid #dee5e8;
+            height: 36px;
+            // margin-bottom: 28px;
+            border-radius: 0;
+            padding: 0 32px 0 4px;
+            color: #3b454a;
+            @media (max-width: 767.98px) {
+              height: 34px;
+              margin-bottom: 20px;
+            }
+          }
+          label:not([for="consultantField"]):not([for="explicitOptOut"]) {
+            position: relative;
+            font-family: "Mulish";
+            font-style: normal;
+            font-size: 12px;
+            color: #595959;
+            transition: none;
+            top: 3px;
+            left: 3px;
+            padding: 0;
+            @media (max-width: 767.98px) {
+              top: 8px;
+              left: 0;
+            }
+          }
+
+          &.focus {
+            input,
+            select {
+              border-color: #e85e26;
+            }
+            label:not([for="consultantField"]):not([for="explicitOptOut"]) {
+              color: #e85e26;
+            }
+          }
+
+          &.error {
+            input,
+            select {
+              border-color: #ff2b2b;
+              color: #ff2b2b;
+            }
+            .errormsg {
+              color: #ff2b2b;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 18px;
+              top: -24px;
+            }
+          }
+
+          &.filled:not(
+              #howDidYouHearParent
+            ):not(#consultant):not(#optout) {
+            position: relative;
+            input,
+            select {
+              border-color: #1cbb98;
+            }
+            label:not([for="consultantField"]):not([for="explicitOptOut"]) {
+              color: #1cbb98;
+            }
+            &::after {
+              position: absolute;
+              content: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
+              top: 32px;
+              right: 10px;
+              width: 12px;
+              height: 12px;
+              z-index: 10;
+              pointer-events: none;
+              // @media (max-width: 767.98px) {
+              //   top: 22px;
+              // }
+              // @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              //   top: 26px;
+              // }
+            }
+          }
+
+          &[input-name="parent-jobLevel"],
+          &[input-name="parent-country"],
+          &[input-name="parent-state"],
+          &[input-name="parent-contactType"], &#contactTypeSecondaryParent {
+            &.filled::after {
+              right: 34px !important;
+            }
+          }
+        }
+        .intl-phone .flag-container {
+          top: 13px;
+          border: 0;
+          .selected-flag {
+            padding-left: 3px;
+          }
+        }
+
+        .fieldInfo {
+          right: 8px;
+          top: 28px;
+        }
+      }
+    }
+  }
+}

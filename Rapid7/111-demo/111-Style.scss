@@ -1,0 +1,141 @@
+body.spz-111[class] {
+  .hero-sec .hero-section .main-form {
+    @media (min-width: 1199.98px) {
+      padding: 45px 40px;
+    }
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      max-width: 572px;
+    }
+    .mktoFormRow:not([input-name="parent-ExplicitOptOut__c"]) {
+      @media (min-width: 1199.98px) {
+        max-width: 235px;
+      }
+      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+        max-width: calc(100% / 2 - 10px);
+      }
+      margin-bottom: 35px;
+      @media (max-width: 767.98px) {
+        margin-bottom: 32px;
+      }
+      .mktoFormCol .mktoFieldWrap {
+        label.mktoLabel {
+          display: block !important;
+          font-size: 12px;
+          color: #b2babd;
+          position: relative;
+          left: 6px;
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            left: 4px;
+          }
+        }
+        input,
+        select {
+          height: 32px !important;
+          border: 0 !important;
+          border-bottom: 1px solid #82939c !important;
+          background: transparent;
+          border-radius: 0 !important;
+          line-height: 20px;
+          color: #ffffff !important;
+          padding: 3px 25px 6px 5px !important;
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            padding-left: 1px !important;
+          }
+          @media (max-width: 767.98px) {
+            height: 26px !important;
+          }
+          &:focus {
+            border-color: #e85e26 !important;
+          }
+        }
+
+        select {
+          background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg);
+          background-repeat: no-repeat;
+          background-position: 98% center;
+          option {
+            background: #3b454a;
+          }
+        }
+        &.focus {
+          label {
+            color: #e85e26 !important;
+          }
+        }
+        &.invalid-field {
+          input {
+            border-color: #ff2b2b !important;
+            color: #ff2b2b !important;
+          }
+          .mktoErrorMsg,
+          .error-message {
+            color: #ff2b2b !important;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 18px;
+            top: -24px;
+          }
+        }
+
+        &.filled:not(.invalid-field) {
+          input {
+            border-color: #1cbb98 !important;
+          }
+          label {
+            color: #1cbb98 !important;
+          }
+          &::after {
+            position: absolute;
+            content: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
+            top: 26px;
+            right: 10px;
+            width: 12px;
+            height: 12px;
+            z-index: 10;
+            pointer-events: none;
+            @media (max-width: 767.98px) {
+              top: 22px;
+            }
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              top: 26px;
+            }
+          }
+        }
+      }
+      &[input-name="parent-Country"],
+      &[input-name="parent-State"] {
+        .mktoFormCol .mktoFieldWrap.filled:not(.invalid-field)::after {
+          right: 30px;
+        }
+      }
+      &[input-name="parent-ExplicitOptOut__c"],
+      &[input-name="parent-noinput"] {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+::-webkit-input-placeholder {
+  /* WebKit browsers */
+  color: transparent;
+  opacity: 0;
+}
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+  opacity: 0;
+}
+::-moz-placeholder {
+  /* Mozilla Firefox 19+ */
+  opacity: 0;
+  color: transparent;
+}
+:-ms-input-placeholder {
+  /* Internet Explorer 10+ */
+  opacity: 0;
+  color: transparent;
+}
+input::placeholder {
+  opacity: 0;
+  color: transparent;
+}
