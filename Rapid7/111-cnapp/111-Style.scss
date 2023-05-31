@@ -2,162 +2,166 @@
 
 body.spz-111[class] {
   .off-canvas-wrapper[class] {
-    .longHero[class]
-      .overlayText.hero-two-column-block[class]
-      .right-side-form[class]
-      .form-wrapper[class] {
-      .marketoForm {
-        .mktoForm {
-          margin-top: 36px;
-          padding: 0 10px !important;
+    .longHero[class] .overlayText.hero-two-column-block[class] {
+      .medium-6.small-12.cell.medium-order-1 {
+        @media (max-width: 767.98px) {
+          padding-left: 8px;
+          padding-right: 8px;
+        }
+      }
+      .right-side-form[class] .form-wrapper[class] {
+        .marketoForm {
+          .mktoForm {
+            margin-top: 36px;
+            padding: 0 10px !important;
 
-          .mktoFormRow[input-name="parent-noinput"] {
-            max-width: 100%;
-            .mktoFieldWrap .mktoHtmlText {
-              padding-left: 0;
+            .mktoFormRow[input-name="parent-noinput"] {
+              max-width: 100%;
+              .mktoFieldWrap .mktoHtmlText {
+                padding-left: 0;
+              }
             }
-          }
-          .mktoFormRow:not([input-name="parent-ExplicitOptOut__c"]):not(
-              [input-name="parent-noinput"]
-            ) {
-            margin-bottom: 41px;
-            @media (min-width: 767.98px) and (max-width: 991.98px) {
-              margin-bottom: 32px;
-            }
-            &:nth-child(odd):not(.input-hidden) {
-              @media (min-width: 1307px) {
-                padding-left: 10px;
+            .mktoFormRow:not([input-name="parent-ExplicitOptOut__c"]):not(
+                [input-name="parent-noinput"]
+              ) {
+              margin-bottom: 41px;
+              @media (max-width: 991.98px) {
+                margin-bottom: 32px;
+              }
+              &:nth-child(odd):not(.input-hidden) {
+                @media (min-width: 1307px) {
+                  padding-left: 10px;
+                }
+                .mktoFieldWrap {
+                  label {
+                    // left: 14px !important;
+                  }
+                }
+              }
+              &:nth-child(even):not(.input-hidden) {
+                .mktoFormCol {
+                  @media (min-width: 1307px) {
+                    padding-right: 12px;
+                  }
+                }
+              }
+
+              &[input-name="parent-JobLevel"],
+              &[input-name="parent-Country"],
+              &[input-name="parent-State"] {
+                .mktoFieldWrap.valid::after {
+                  right: 34px !important;
+                }
+              }
+              &[input-name="parent-State"] {
+                .mktoFieldDescriptor.mktoFormCol {
+                  padding-right: 0;
+                }
               }
               .mktoFieldWrap {
-                label {
-                  // left: 14px !important;
-                }
-              }
-            }
-            &:nth-child(even):not(.input-hidden) {
-              .mktoFormCol {
-                @media (min-width: 1307px) {
-                  padding-right: 12px;
-                }
-              }
-            }
-
-            &[input-name="parent-JobLevel"],
-            &[input-name="parent-Country"],
-            &[input-name="parent-State"] {
-              .mktoFieldWrap.valid::after {
-                right: 34px !important;
-              }
-            }
-            &[input-name="parent-State"] {
-              .mktoFieldDescriptor.mktoFormCol {
-                padding-right: 0;
-              }
-            }
-            .mktoFieldWrap {
-              input,
-              select {
-                border: 0;
-                border-bottom: 1px solid #dee5e8;
-                height: 40px !important;
-                margin-bottom: 2px !important;
-                border-radius: 0 !important;
-                padding: 0 32px 0 4px;
-                padding-left: 2px !important;
-                color: #3b454a !important;
-                background: transparent !important;
-                @media (max-width: 767.98px) {
-                  height: 34px;
-                  margin-bottom: 20px;
-                }
-                @media (min-width: 767.98px) and (max-width: 991.98px) {
-                  height: 32px !important;
-                }
-              }
-              select {
-                background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
-                  no-repeat center right 6px !important;
-              }
-              label {
-                position: relative !important;
-                font-size: 12px !important;
-                color: #3b454a !important;
-                transition: none !important;
-                top: 3px !important;
-                left: 3px !important;
-                padding: 0 !important;
-                font-family: "Mulish" !important;
-                font-size: 12px !important;
-                line-height: 100% !important;
-                @media (max-width: 767.98px) {
-                  top: 8px;
-                  left: 0;
-                }
-              }
-
-              &.focus {
                 input,
                 select {
-                  border-color: #e85e26;
+                  border: 0;
+                  border-bottom: 1px solid #dee5e8;
+                  height: 40px !important;
+                  margin-bottom: 2px !important;
+                  border-radius: 0 !important;
+                  padding: 0 32px 0 4px;
+                  padding-left: 2px !important;
+                  color: #3b454a !important;
+                  background: transparent !important;
+                  @media (max-width: 767.98px) {
+                    margin-bottom: 20px;
+                  }
+                  @media (max-width: 991.98px) {
+                    height: 32px !important;
+                  }
+                }
+                select {
+                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
+                    no-repeat center right 6px !important;
                 }
                 label {
-                  color: #e85e26 !important;
+                  position: relative !important;
+                  font-size: 12px !important;
+                  color: #3b454a !important;
+                  transition: none !important;
+                  top: 3px !important;
+                  left: 3px !important;
+                  padding: 0 !important;
+                  font-family: "Mulish" !important;
+                  font-size: 12px !important;
+                  line-height: 100% !important;
+                  @media (max-width: 767.98px) {
+                    top: 8px;
+                    left: 0;
+                  }
                 }
-              }
 
-              &.invalidValidation {
-                input,
-                select {
-                  border-color: #ff2b2b;
-                  color: #ff2b2b;
+                &.focus {
+                  input,
+                  select {
+                    border-color: #e85e26;
+                  }
+                  label {
+                    color: #e85e26 !important;
+                  }
                 }
-                .mktoErrorMsg {
-                  color: #ff2b2b;
-                  font-weight: 400;
-                  font-size: 12px;
-                  line-height: 18px;
-                  top: -24px;
-                }
-              }
 
-              &.valid {
-                input,
-                select {
-                  border-color: #1cbb98;
+                &.invalidValidation {
+                  input,
+                  select {
+                    border-color: #ff2b2b;
+                    color: #ff2b2b;
+                  }
+                  .mktoErrorMsg {
+                    color: #ff2b2b;
+                    font-weight: 400;
+                    font-size: 12px;
+                    line-height: 18px;
+                    top: -24px;
+                  }
                 }
-                label {
-                  color: #1cbb98;
-                }
-                &::after {
-                  position: absolute;
-                  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
-                  top: 24px;
-                  right: 10px;
-                  width: 12px;
-                  height: 12px;
-                  z-index: 10;
-                  pointer-events: none;
-                  // @media (max-width: 767.98px) {
-                  //   top: 22px;
-                  // }
-                  // @media (min-width: 767.98px) and (max-width: 1023.98px) {
-                  //   top: 26px;
-                  // }
+
+                &.valid {
+                  input,
+                  select {
+                    border-color: #1cbb98;
+                  }
+                  label {
+                    color: #1cbb98;
+                  }
+                  &::after {
+                    position: absolute;
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
+                    top: 24px;
+                    right: 10px;
+                    width: 12px;
+                    height: 12px;
+                    z-index: 10;
+                    pointer-events: none;
+                    // @media (max-width: 767.98px) {
+                    //   top: 22px;
+                    // }
+                    // @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                    //   top: 26px;
+                    // }
+                  }
                 }
               }
             }
-          }
-          .intl-phone .flag-container {
-            top: 13px;
-            border: 0;
-            .selected-flag {
-              padding-left: 3px;
+            .intl-phone .flag-container {
+              top: 13px;
+              border: 0;
+              .selected-flag {
+                padding-left: 3px;
+              }
             }
-          }
 
-          .fieldInfo {
-            right: 8px;
-            top: 28px;
+            .fieldInfo {
+              right: 8px;
+              top: 28px;
+            }
           }
         }
       }
