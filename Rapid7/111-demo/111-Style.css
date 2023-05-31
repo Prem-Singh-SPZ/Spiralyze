@@ -1,12 +1,22 @@
+body.spz-111[class] .hero-sec .hero-section .main-form {
+  background: #fff;
+  border: 1px solid #dee5e8;
+  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+  padding: 39px;
+}
 @media (min-width: 1199.98px) {
   body.spz-111[class] .hero-sec .hero-section .main-form {
-    padding: 45px 40px;
+    padding: 39px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body.spz-111[class] .hero-sec .hero-section .main-form {
     max-width: 572px;
   }
+}
+body.spz-111[class] .hero-sec .hero-section .main-form #intro h2, body.spz-111[class] .hero-sec .hero-section .main-form #intro p {
+  color: #3b454a;
 }
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) {
   margin-bottom: 35px;
@@ -29,8 +39,9 @@ body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-n
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap label.mktoLabel {
   display: block !important;
   font-size: 12px;
-  color: #b2babd;
+  color: #3B454A;
   position: relative;
+  font-family: "Mulish";
   left: 6px;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -41,12 +52,13 @@ body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-n
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap input,
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap select {
   height: 32px !important;
+  font-family: "Mulish";
   border: 0 !important;
-  border-bottom: 1px solid #82939c !important;
+  border-bottom: 1px solid #DEE5E8 !important;
   background: transparent;
   border-radius: 0 !important;
   line-height: 20px;
-  color: #ffffff !important;
+  color: #3B454A !important;
   padding: 3px 25px 6px 5px !important;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -69,9 +81,6 @@ body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-n
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg);
   background-repeat: no-repeat;
   background-position: 98% center;
-}
-body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap select option {
-  background: #3b454a;
 }
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap.focus label {
   color: #e85e26 !important;
