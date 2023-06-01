@@ -104,7 +104,7 @@
             <div class="sticky-container">
             <div class="desktop-only-image">
             <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/4007/New-joins.png"
-            alt="New Joins" title="New Joins">
+            alt="New Joins">
             </div>
             <div class="sticky-content"><p><span>Grow your gym 30%</span> with an all-in-one sales, operations, and member management platform.</p></div>
             <div class="sticky-cta"><a class="hs-cta-primary" href="https://abcfitness.com/request-a-demo/">Get a demo</a></div>

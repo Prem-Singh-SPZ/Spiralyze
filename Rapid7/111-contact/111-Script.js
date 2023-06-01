@@ -238,11 +238,11 @@ function contact111() {
         jQuery(this).closest('dl').removeClass('focus');
     });
 
-    // $("#formBlock").find('[input-name="parent-jobLevel"], [input-name="parent-contactType"], #contactTypeSecondaryParent').removeClass('filled');
-    // $("#contactType").find('option:first-child').val('');
-    $("#contactType").find('option:first-child').text('Select a reason');
-    // $("#jobLevel").find('option:first-child').val('');
-    // $("#contactTypeSecondary").find('option:first-child').val('');
+    // jQuery("#formBlock").find('[input-name="parent-jobLevel"], [input-name="parent-contactType"], #contactTypeSecondaryParent').removeClass('filled');
+    // jQuery("#contactType").find('option:first-child').val('');
+    jQuery("#contactType").find('option:first-child').text('Select a reason');
+    // jQuery("#jobLevel").find('option:first-child').val('');
+    // jQuery("#contactTypeSecondary").find('option:first-child').val('');
 
     jQuery("body").on("blur", '#formBlock select', function () {
         if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
@@ -250,5 +250,3 @@ function contact111() {
         } else { jQuery(this).closest('dl').addClass('filled'); }
     });
 }
-
-

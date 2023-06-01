@@ -10,6 +10,8 @@ var jQueryInterval = setInterval(function () {
             }).on("blur", '#formBlock input , #formBlock select', function () {
                 jQuery(this).closest('dl').removeClass('focus');
             });
+            jQuery('.infoTxt.has-tip img').attr('src','//res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/icon-info.svg');
+            jQuery('.infoTxt.has-tip img').attr('data-src','//res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/icon-info.svg');
         });
     }
 });

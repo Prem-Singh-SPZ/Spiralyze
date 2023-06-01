@@ -24,11 +24,12 @@
 
     });
     document.body.classList.add("loaded");
-
+    
     document.querySelector('head').insertAdjacentHTML('beforeend', `
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">`);
+        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow-hovered.svg" as="image">`);
   }
 
   function initSlider() {

@@ -340,6 +340,8 @@
           @media (max-width: 767.98px) {
             padding: 0 20px;
             margin-top: 16px;
+            padding-bottom: 69px;
+            max-width: 500px;
           }
           .webinar-slide {
             display: flex;
@@ -372,6 +374,9 @@
                 max-width: 476px;
                 margin-left: 0;
               }
+              @media (max-width: 767.98px) {
+                margin-top: 3px;
+              }
 
               h6 {
                 font-family: "Inter";
@@ -396,10 +401,17 @@
                 line-height: 28px;
                 letter-spacing: -0.012em;
                 color: #ffffff;
+                @media (max-width: 767.98px) {
+                  font-size: 18px;
+                  letter-spacing: -0.012em;
+                }
               }
 
               .slider-cta {
                 margin-top: 40px;
+                @media (max-width: 767.98px) {
+                  margin-top: 39.5px;
+                }
                 a {
                   display: flex;
                   flex-direction: row;
@@ -418,6 +430,9 @@
                   color: #ffffff;
                   &:hover {
                     background: #f1976e;
+                  }
+                  @media (max-width: 767.98px) {
+                    width: 100%;
                   }
                 }
               }
@@ -446,7 +461,8 @@
             }
             @media (max-width: 767.98px) {
               top: auto;
-              bottom: 0;
+              bottom: 13px;
+              left: calc(50% - 57px);
             }
           }
           .swiper-button-next {
@@ -469,7 +485,8 @@
             }
             @media (max-width: 767.98px) {
               top: auto;
-              bottom: 0;
+              bottom: 10px;
+              right: calc(50% - 57px);
             }
           }
         }

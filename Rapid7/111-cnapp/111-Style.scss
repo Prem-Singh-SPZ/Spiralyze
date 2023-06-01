@@ -21,6 +21,10 @@ body.spz-111[class] {
                 padding-left: 0;
               }
             }
+            .mktoFormRow[input-name="parent-ExplicitOptOut__c"] {
+              max-width: 100%;
+              margin-bottom: 0;
+            }
             .mktoFormRow:not([input-name="parent-ExplicitOptOut__c"]):not(
                 [input-name="parent-noinput"]
               ) {
@@ -80,11 +84,12 @@ body.spz-111[class] {
                 select {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
                     no-repeat center right 6px !important;
+                  padding: 7px 40px 6px 2px!important;
                 }
                 label {
                   position: relative !important;
                   font-size: 12px !important;
-                  color: #3b454a !important;
+                  color: #595959 !important;
                   transition: none !important;
                   top: 3px !important;
                   left: 3px !important;
@@ -115,11 +120,12 @@ body.spz-111[class] {
                     color: #ff2b2b;
                   }
                   .mktoErrorMsg {
-                    color: #ff2b2b;
+                    color: #ff2b2b !important;
                     font-weight: 400;
                     font-size: 12px;
-                    line-height: 18px;
+                    line-height: 12px;
                     top: -24px;
+                    position: absolute;
                   }
                 }
 
@@ -129,7 +135,7 @@ body.spz-111[class] {
                     border-color: #1cbb98;
                   }
                   label {
-                    color: #1cbb98;
+                    color: #1cbb98 !important;
                   }
                   &::after {
                     position: absolute;

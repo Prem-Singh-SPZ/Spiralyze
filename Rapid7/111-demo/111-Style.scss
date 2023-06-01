@@ -13,9 +13,17 @@ body.spz-111[class] {
     }
 
     #intro {
-      h2, p {
+      h2,
+      p {
         color: #3b454a;
       }
+    }
+    .mktoFormRow[class]
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth
+      > label {
+      color: #3b454a;
     }
     .mktoFormRow:not([input-name="parent-ExplicitOptOut__c"]) {
       @media (min-width: 1199.98px) {
@@ -29,12 +37,17 @@ body.spz-111[class] {
         margin-bottom: 32px;
       }
       .mktoFormCol .mktoFieldWrap {
+        min-height: 59px;
+        @media (max-width: 767.98px) {
+          min-height: 56px;
+        }
+
         label.mktoLabel {
           display: block !important;
           font-size: 12px;
-          color: #3B454A;
+          color: #595959;
           position: relative;
-          font-family: 'Mulish';
+          font-family: "Mulish";
           left: 6px;
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             left: 4px;
@@ -43,13 +56,13 @@ body.spz-111[class] {
         input,
         select {
           height: 32px !important;
-          font-family: 'Mulish';
+          font-family: "Mulish";
           border: 0 !important;
-          border-bottom: 1px solid #DEE5E8 !important;
+          border-bottom: 1px solid #dee5e8 !important;
           background: transparent;
           border-radius: 0 !important;
           line-height: 20px;
-          color: #3B454A !important;
+          color: #3b454a !important;
           padding: 3px 25px 6px 5px !important;
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             padding-left: 1px !important;
@@ -66,6 +79,8 @@ body.spz-111[class] {
           background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg);
           background-repeat: no-repeat;
           background-position: 98% center;
+          padding: 3px 42px 6px 5px !important;
+
           // option {
           //   background: #3b454a;
           // }
@@ -76,22 +91,25 @@ body.spz-111[class] {
           }
         }
         &.invalid-field {
-          input {
+          input,
+          select {
             border-color: #ff2b2b !important;
             color: #ff2b2b !important;
           }
           .mktoErrorMsg,
           .error-message {
+            top: -22px;
             color: #ff2b2b !important;
-            font-weight: 400;
-            font-size: 12px;
-            line-height: 18px;
-            top: -24px;
+            // font-weight: 400;
+            // font-size: 12px;
+            // line-height: 18px;
+            // top: -24px;
           }
         }
 
         &.filled:not(.invalid-field) {
-          input {
+          input,
+          select {
             border-color: #1cbb98 !important;
           }
           label {
