@@ -1,63 +1,86 @@
 .hero-section {
   position: relative;
-  background: #0580e8;
-
-  &::before {
-    content: "";
-    position: absolute;
-    top: 64px;
-    right: 37px;
-    height: 208px;
-    width: 229px;
-    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
-      no-repeat;
-  }
-
-  @media screen and (min-width: 1600px) {
-    &::after {
-      content: "";
-      position: absolute;
-      bottom: -6px;
-      left: -83.5px;
-      height: 208px;
-      width: 229px;
-      background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg")
-        no-repeat;
-    }
-
-    > .container::before {
-      content: "";
-      position: absolute;
-      bottom: 46px;
-      right: 0;
-      height: 104px;
-      width: 273px;
-      background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680261210/drata/4001/dots__v2.svg")
-        no-repeat;
-    }
-  }
+  background: #fff;
+  overflow: hidden;
+  padding-bottom: 35px;
 
   .hero-content {
-    max-width: 506px;
-    padding: 20px 0;
+    max-width: 604px;
+    padding: 96px 0 24px;
+    position: relative;
 
-    .hc-title {
-      font-family: $ff-darker;
-      font-style: normal;
-      font-weight: 800;
-      font-size: 52px;
-      line-height: 52px;
-      display: flex;
-      align-items: center;
-      color: #fff;
-      margin: 0 0 24px;
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: -236px;
+      right: auto;
+      left: -296px;
+      width: 240px;
+      height: 240px;
+      background: url("//res.cloudinary.com/spiralyze/image/upload/v1684143056/drata/11001/custom_assets/Dots-rectangle_grey.svg")
+        no-repeat;
     }
 
-    .star-rating {
-      margin-bottom: 35px;
+    .hero-content-subtitle {
+      padding-left: 16px;
+      border-left: 8px solid #0580e8;
+      .hc-subtitle {
+        font-family: "Darker Grotesque";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 24px;
+        line-height: 24px;
+        letter-spacing: -0.24px;
+        color: #0580e8;
+        margin: 0 0;
+        @media (max-width: 767.98px) {
+          font-size: 20px;
+          line-height: 20px;
+        }
+      }
+      .hc-title {
+        font-family: "Darker Grotesque";
+        font-style: normal;
+        font-weight: 800;
+        font-size: 48px;
+        line-height: 44px;
+        letter-spacing: -0.48px;
+        color: #000000;
+        margin: 8px 0 24px;
 
-      .sr-img {
-        width: 279px;
+        @media (min-width: 1600px) {
+          margin-top: 7.5px;
+        }
+        // @media (max-width: 767.98px) {
+        //   font-size: 40px;
+        //   line-height: 36px;
+        // }
+      }
+    }
+
+    .hero-features {
+      margin-top: 24px;
+      margin-bottom: 24px;
+      p {
+        margin: 0;
+        span {
+          font-family: "Darker Grotesque";
+          font-style: normal;
+          font-weight: 800;
+          font-size: 24px;
+          line-height: 24px;
+          letter-spacing: -0.24px;
+          color: #000000;
+          border-right: 1px solid #d7d7d7;
+          padding: 0 13.6px;
+
+          &:first-child {
+            padding-left: 24px;
+          }
+          &:last-child {
+            border: 0;
+          }
+        }
       }
     }
   }
@@ -65,7 +88,7 @@
   .hero-container {
     display: flex;
     flex-wrap: wrap;
-    align-items: center;
+    // align-items: center;
     justify-content: space-between;
   }
 
@@ -73,93 +96,83 @@
     .list-group {
       list-style: none;
       padding-left: 52px;
+      padding-right: 64px;
+      margin: 16px 0;
 
       .list-item {
         position: relative;
-        margin-bottom: 28px;
+        margin-bottom: 18px;
 
         &::before {
-          content: "";
+          content: url("//res.cloudinary.com/spiralyze/image/upload/v1683719218/drata/11001/hero-bullet-arrow.svg");
+          width: 16px;
+          height: 16px;
           position: absolute;
-          top: 0;
-          left: -52px;
-          height: 32px;
-          width: 32px;
-        }
-
-        &:nth-child(1)::before {
-          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260803/drata/4001/customize_your_security_page_2.svg")
-            no-repeat;
-        }
-
-        &:nth-child(2)::before {
-          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260803/drata/4001/security_reports_2.svg")
-            no-repeat;
-        }
-
-        &:nth-child(3)::before {
-          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260803/drata/4001/support_and_real-time_answers_2.svg")
-            no-repeat;
+          left: -28px;
+          top: 7.5px;
         }
 
         .ls-title {
-          font-family: $ff-darker;
+          font-family: "Darker Grotesque";
           font-style: normal;
           font-weight: 800;
           font-size: 24px;
           line-height: 24px;
-          display: flex;
-          align-items: center;
-          color: #fff;
-          margin-bottom: 12px;
+          letter-spacing: -0.24px;
+          color: #000000;
+          margin-bottom: 6px;
         }
 
         .ls-desc {
           font-family: $ff-inter;
           font-style: normal;
           font-weight: 400;
-          font-size: 16px;
+          font-size: 17px;
           line-height: 24px;
-          display: flex;
-          align-items: center;
-          color: #fff;
+          color: #303030;
         }
       }
-    }
-  }
-
-  .dir-arrow {
-    position: relative;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    top: -42px;
-    left: -35px;
-    transform: rotate(-8deg);
-  }
-
-  // temp
-  min-height: 838px;
-}
-
-@media (min-width: 1600px) {
-  .hero-section {
-    &::before {
-      top: 88px;
-      right: 224px;
-      height: 208px;
-      width: 229px;
-    }
-    .dir-arrow {
-      top: -40px;
-      left: -51px;
     }
   }
 }
 
 .hero-right-section {
-  width: 678px;
-  margin-bottom: 100px;
+  width: 624px;
+  margin-bottom: 72px;
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 69px;
+    /* left: 338px; */
+    right: -40px;
+    width: 326px;
+    height: 79px;
+    background: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-blue.svg")
+      no-repeat;
+  }
+  &::after {
+    content: "";
+    position: absolute;
+    bottom: -32px;
+    /* left: auto; */
+    left: -32px;
+    width: 174px;
+    height: 174px;
+    z-index: 0;
+    background: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-square-grey.svg")
+      no-repeat;
+  }
+
+  @media (min-width: 1600px) {
+    &::before {
+      top: 117px;
+    }
+
+    &::after {
+      bottom: -80px;
+    }
+  }
 }
 
 // Form Section/Cart Styles
@@ -169,22 +182,25 @@
   align-items: center;
   // justify-content: center;
   // height: 504px;
-  padding: 40px 0;
-  background: #ffffff;
-  border: 1px solid #bdbdbd;
-  border-radius: 12px;
-  margin-top: 19.5px;
+  padding: 32px 40px 39px 40px;
+  background: #0580e8;
+  // border: 1px solid #bdbdbd;
+  border-radius: 8px;
+  margin-top: 109px;
+  position: relative;
+  z-index: 1;
 
-  .form-title {
-    font-family: $ff-darker;
+  .form-title-spz {
+    font-family: "Darker Grotesque";
     font-style: normal;
     font-weight: 800;
-    font-size: 40px;
-    line-height: 40px;
-    color: #000;
+    font-size: 48px;
+    line-height: 44px;
     text-align: center;
+    letter-spacing: -0.48px;
+    color: #fff;
     max-width: 428px;
-    margin: 0 auto 40px auto;
+    margin: 0 auto 32px auto;
   }
 
   form {
@@ -192,7 +208,7 @@
     flex-wrap: wrap;
 
     // hide fields\
-    .hs_demo_product_of_interest,
+    // .hs_demo_product_of_interest,
     .form-columns-0 .hs-richtext.hs-main-font-element {
       display: none;
     }
@@ -207,65 +223,200 @@
 
 @media screen and (max-width: 1280px) {
   .hero-section {
-    &::before {
-      display: none;
-    }
+    padding-bottom: 0;
 
     .hero-content {
-      text-align: center;
-      max-width: 688px;
-
-      .hc-title {
-        font-size: 48px;
-        line-height: 48px;
-        // max-width: 500px;
-        // margin: 0 auto;
+      max-width: 736px;
+      padding: 65px 0 8px 0;
+      &::before {
+        display: none;
       }
+      // &::before {
+      //   top: 3.5px;
+      //   left: auto;
+      //   right: -28px;
+      //   bottom: auto;
+      //   width: 68px;
+      // }
 
-      .star-rating {
-        margin-bottom: 36px;
+      .hero-features {
+        margin-top: 32px;
+
+        // p span {
+        //   padding: 0 13.8px;
+        // }
       }
     }
-
     .hero-container {
       justify-content: center;
     }
 
-    .list-grp-wrapper .list-group .list-item .ls-desc {
-      text-align: left;
-    }
-
-    .dir-arrow {
-      display: none;
+    .list-grp-wrapper .list-group {
+      margin: 31px 0;
+      padding-right: 0;
+      .list-item {
+        &::before {
+          top: 7px;
+        }
+        .ls-desc {
+          text-align: left;
+        }
+      }
     }
   }
 
   .hero-right-section {
-    width: 688px;
+    width: 736px;
     position: relative;
-    margin-bottom: 64.5px;
+    margin-bottom: 96.5px;
 
     &::before {
-      content: "";
-      position: absolute;
-      top: -8px;
-      right: -24.5px;
-      width: 229px;
-      height: 208px;
-      background: url(https://res.cloudinary.com/spiralyze/image/upload/v1680261199/drata/4001/dots__v1_1.svg)
-        no-repeat;
-      background-size: 224px 208px;
+      top: 34px;
+      // left: auto;
+      // right: 5px;
+      // width: 363px;
     }
+
+    // &:after {
+    //   bottom: -93px;
+    // }
   }
 
   .form-wrapper-spz {
     position: relative;
-    margin-top: 16.5px;
-    padding: 38.5px 0 39px 0;
+    margin-top: 26px;
+    // padding: 40px 0 39px 0;
     z-index: 2;
 
-    .form-title {
-      margin-bottom: 40.5px;
+    // .form-title-spz {
+    //   margin-bottom: 24px;
+    // }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .hero-section {
+    .hero-container {
+      flex-direction: column;
+      align-items: center;
+      overflow: hidden;
+    }
+
+    .hero-content {
+      max-width: 328px;
+      padding: 64px 0 8px 0;
+      &::after {
+        content: "";
+        position: absolute;
+        top: -48px;
+        /* left: 338px; */
+        right: -142px;
+        width: 326px;
+        height: 79px;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1684142184/drata/11001/custom_assets/Dots-rectangle-blue.svg")
+          no-repeat;
+      }
+
+      .hero-content-subtitle {
+        .hc-title {
+          font-size: 40px;
+          line-height: 36px;
+        }
+      }
+
+      .hero-features {
+        margin-top: 25px;
+        margin-bottom: 16px;
+
+        p {
+          margin: 0 auto;
+          max-width: 328px;
+          display: flex;
+          flex-wrap: wrap;
+
+          span {
+            display: flex;
+            position: relative;
+            font-size: 20px;
+            line-height: 20px;
+            border-right: none;
+            padding: 0 6px 0 14px;
+            margin-bottom: 8px;
+
+            &::after {
+              content: "";
+              display: inline-block;
+              position: absolute;
+              top: 2px;
+              right: 0;
+              height: 20px;
+              border-right: 1px solid rgba(0, 0, 0, 0.2);
+            }
+
+            &:nth-child(1) {
+              min-width: 60px;
+              padding-left: 24px;
+            }
+
+            &:nth-child(2) {
+              min-width: 100px;
+              padding-left: 16px;
+              padding-right: 4px;
+            }
+
+            &:nth-child(3) {
+              min-width: 64px;
+              &::after {
+                display: none;
+              }
+            }
+
+            &:nth-child(4) {
+              min-width: 60px;
+              padding-left: 24px;
+              padding-right: 4px;
+
+            }
+
+            &:nth-child(5) {
+              min-width: 42px;
+            }
+
+            &:nth-child(6) {
+              min-width: 80px;
+              &::after {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .list-grp-wrapper {
+      .list-group {
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-right: 5px;
+        padding-left: 48px;
+
+        .list-item {
+          &::before {
+            content: url(//res.cloudinary.com/spiralyze/image/upload/v1684225755/drata/11001/custom_assets/hero-bullet-arrow.svg);
+            top: 6px;
+            left: -24px;
+          }
+          .ls-title {
+            font-size: 20px;
+            line-height: 20px;
+          }
+
+          .ls-desc {
+            font-size: 15px;
+            line-height: 22px;
+          }
+        }
+      }
     }
   }
 }

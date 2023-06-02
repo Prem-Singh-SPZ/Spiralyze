@@ -1,0 +1,376 @@
+.form-wrapper-spz .hbspt-form {
+  width: 100%;
+
+  form {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    // Set of multiple fields
+    fieldset {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      max-width: 614px;
+      margin: 0 auto;
+
+      .input {
+        margin-right: 0;
+      }
+
+      // Input, select, label and error message wrapper
+      .field {
+        width: 299px;
+        max-width: 299px;
+        margin-bottom: 10px;
+
+        > label {
+          display: none;
+        }
+
+        // Input and label wrapper
+        .input {
+          position: relative;
+          margin-bottom: 6px;
+          border-radius: 4px;
+          width: 299px;
+          max-width: 299px;
+        }
+
+        // Custom label
+        label.hs-label-spz {
+          position: absolute;
+          top: 16px;
+          left: 16px;
+          padding: 0;
+          font-family: $ff-inter;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #a3a3a3;
+          transition: all 0.3s ease-in-out;
+          pointer-events: none;
+        }
+
+        // Input field
+        .hs-input {
+          font-family: $ff-inter;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 16px;
+          line-height: 24px;
+          color: #000;
+          border-radius: 4px;
+          border: 1px solid #d6d6d6;
+
+          &:not([type="checkbox"]):not([type="radio"]) {
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            padding: 14px 16px 0;
+            height: 56px;
+            width: 100%;
+            background: #fff;
+            // border: none;
+            border-radius: 4px;
+            outline: none;
+            transition: all 0.3s ease-in-out;
+
+            &::placeholder {
+              display: none;
+              color: transparent;
+            }
+          }
+
+          &:hover {
+            border: 1px solid #a3a3a3;
+          }
+
+          &:focus ~ label,
+          &:not([value=""]) ~ label {
+            top: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #f97f70;
+          }
+
+          &:focus ~ label,
+          &:not(:placeholder-shown) ~ label {
+            top: 5px;
+            font-size: 12px;
+            font-weight: 500;
+            color: #727272;
+          }
+        }
+
+        select {
+          appearance: none;
+          -webkit-appearance: none;
+          // set custom icon on select
+          background: url("//res.cloudinary.com/spiralyze/image/upload/v1681219562/System_Icons.svg")
+            #fff no-repeat right 15px center !important;
+
+          option {
+            &:hover {
+              background: rgba(5, 128, 232, 0.06);
+            }
+          }
+        }
+
+        // Hide option if empty
+        select option[value=""] {
+          display: none;
+        }
+
+        &.field-untouched {
+          .input {
+            .hs-label-spz {
+              top: 16px;
+              left: 16px;
+              color: #a3a3a3;
+              font-size: 16px;
+              font-weight: 400;
+              background-color: #fff;
+              width: calc(100% - 60px);
+              height: 30px;
+            }
+          }
+        }
+
+        &.field-error {
+          .input {
+            .hs-input {
+              border: 1px solid #f97f70;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+              color: #444;
+
+              ~ .hs-label-spz {
+                color: #a3a3a3;
+              }
+
+              &:not([value=""]):not(select) {
+                ~ .hs-label-spz {
+                  color: #f97f70;
+                }
+              }
+            }
+
+            // .hs-label-spz {
+            //   color: #a3a3a3;
+            // }
+          }
+
+          &.hs-fieldtype-select {
+            .input .hs-label-spz {
+              top: 16px;
+              left: 16px;
+              color: #a3a3a3;
+              font-size: 16px;
+              font-weight: 400;
+              background-color: #fff;
+              width: calc(100% - 60px);
+              height: 30px;
+            }
+          }
+        }
+
+        &.field-focus {
+          .input {
+            .hs-input {
+              border: 1px solid #0580e8;
+              box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
+              ~ .hs-label-spz {
+                color: #0580e8;
+                font-weight: 500;
+              }
+
+              &:not([value=""]) {
+                ~ .hs-label-spz {
+                  color: #0580e8;
+                }
+              }
+            }
+
+            // .hs-label-spz {
+            //   color: #0580e8;
+            //   font-weight: 500;
+            // }
+          }
+
+          &.hs-fieldtype-select {
+            select {
+              background: url("//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg")
+                #fff no-repeat right 15px center !important;
+            }
+          }
+        }
+      }
+    }
+
+    // CTA button in form
+    .actions {
+      position: relative;
+      max-width: initial;
+      width: 209px;
+      height: 64px;
+      margin: 23.5px auto 0;
+
+      .hs-button {
+        font-family: $ff-inter;
+        font-style: normal;
+        font-weight: 700;
+        font-size: 20px;
+        line-height: 32px;
+        text-align: center;
+        color: #fff;
+        width: 100%;
+        height: 64px;
+        padding: 15px 62px 16px 30px;
+        background: #000;
+        border: 1px solid #000;
+        border-radius: 4px;
+        position: relative;
+        cursor: pointer;
+
+        &:hover {
+          background: #2f2f2f;
+        }
+      }
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: 20px;
+        right: 32px;
+        width: 24px;
+        height: 24px;
+        background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260806/drata/4001/system_icons_4.svg")
+          no-repeat;
+        z-index: 3;
+        pointer-events: none;
+      }
+    }
+
+    // Error messages Starts
+    .hs-error-msgs.inputs-list {
+      font-family: $ff-inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 12px;
+      line-height: 14px;
+      color: #f97f70;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+
+      label > a {
+        cursor: pointer;
+      }
+    }
+
+    .hs_error_rollup {
+      text-align: center;
+    }
+    // Error messages Ends
+
+    // Change autocomplete styles in WebKit browsers
+    input:-webkit-autofill,
+    input:-webkit-autofill:hover,
+    input:-webkit-autofill:focus,
+    textarea:-webkit-autofill,
+    textarea:-webkit-autofill:hover,
+    textarea:-webkit-autofill:focus,
+    select:-webkit-autofill,
+    select:-webkit-autofill:hover,
+    select:-webkit-autofill:focus {
+      background-color: #fff;
+      -webkit-text-fill-color: #000;
+      -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+      transition: background-color 5000s ease-in-out 0s;
+    }
+
+    .hs-input:-webkit-autofill,
+    .hs-input:-webkit-autofill:hover,
+    .hs-input:-webkit-autofill:focus,
+    .hs-input:-webkit-autofill:active {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #000 !important;
+    }
+  }
+}
+
+.hbspt-form .submitted-message {
+  font-size: 32px;
+  font-family: $ff-inter;
+  text-align: center;
+}
+
+@media screen and (max-width: 1280px) {
+  .form-wrapper-spz {
+    .hbspt-form {
+      form {
+        fieldset {
+          max-width: 624px;
+
+          .field {
+            width: 304px;
+            max-width: 304px;
+
+            .input {
+              width: 304px;
+              max-width: 304px;
+            }
+
+            select {
+              background-position: calc(100% - 17px) 18px !important;
+            }
+          }
+        }
+
+        .actions {
+          margin-top: 24px;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .form-wrapper-spz {
+    .hbspt-form {
+      form {
+        fieldset {
+          flex-wrap: wrap;
+          justify-content: center;
+
+          .field {
+            width: 272px !important;
+            .input {
+              width: 272px;
+            }
+          }
+        }
+
+        .actions {
+          margin-top: 16px;
+          width: 272px;
+
+          &::before {
+            right: 64px;
+          }
+        }
+
+        .hs_error_rollup {
+          text-align: left;
+          padding: 0 20px;
+        }
+      }
+    }
+  }
+  .hero-right-section {
+    width: 312px;
+  }
+}

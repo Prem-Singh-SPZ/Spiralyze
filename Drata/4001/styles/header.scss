@@ -1,12 +1,16 @@
 .header-nav {
-  padding: 40px 0;
-  margin: 0 auto;
-  max-width: 1248px;
-
+  padding: 40px 0 35px;
+  border-bottom: 1px solid #d7d7d7;
+  @media (max-width: 1280.98px) {
+    max-width: 100%;
+    padding: 40px 20px 34px;
+  }
   .nav-section {
+    margin: 0 auto;
+    max-width: 1248px;
     .brand-logo {
       .logo-img {
-        width: 160px;
+        width: 157px;
       }
     }
   }
@@ -14,10 +18,19 @@
 
 @media screen and (max-width: 1280px) {
   .header-nav {
-    padding-bottom: 15px;
-    
+    // padding-top: 48px;
     .nav-section {
-      text-align: center;
+      max-width: 736px;
+    }
+  }
+}
+
+@media screen and (max-width: 767px) {
+  .header-nav {
+    padding: 24px 16px 19px;
+
+    .nav-section .brand-logo .logo-img {
+      width: 112px;
     }
   }
 }

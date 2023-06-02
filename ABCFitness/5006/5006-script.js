@@ -62,7 +62,7 @@
           <div class="swiper-slide webinar-slide">
             <div class="slider-img">
               <img
-                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/5006IgniteHomeWebinareBooksSection/Frame3796.webp"
+                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5006/assets/New_Member_Onboarding_Guide-min.png"
                 alt="New Member Onboarding Guide"
               />
             </div>
@@ -84,7 +84,7 @@
           <div class="swiper-slide webinar-slide">
             <div class="slider-img">
               <img
-                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/5006IgniteHomeWebinareBooksSection/Frame3799.webp"
+                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5006/assets/Recession-Proof_Your_Business-min.png"
                 alt="Recession-Proof Your Business"
               />
             </div>
@@ -106,7 +106,7 @@
           <div class="swiper-slide webinar-slide">
             <div class="slider-img">
               <img
-                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/5006IgniteHomeWebinareBooksSection/Frame3798.webp"
+                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5006/assets/Increasing_New_Joins_Retention_During_Summer-min.png"
                 alt="Increasing New Joins & Retention During Summer"
               />
             </div>
@@ -127,7 +127,7 @@
           <div class="swiper-slide webinar-slide">
             <div class="slider-img">
               <img
-                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/5006IgniteHomeWebinareBooksSection/Frame3800.webp"
+                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5006/assets/Building_Engagement_with_Automation-min.png"
                 alt="Building Engagement with Automation"
               />
             </div>
@@ -148,7 +148,7 @@
           <div class="swiper-slide webinar-slide">
             <div class="slider-img">
               <img
-                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessIgnite/5006IgniteHomeWebinareBooksSection/Frame3801.webp"
+                src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5006/assets/ABC_Ignite_Product_Tour-min.png"
                 alt="ABC Ignite Product Tour"
               />
             </div>
