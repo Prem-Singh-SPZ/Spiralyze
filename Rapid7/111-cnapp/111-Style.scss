@@ -11,9 +11,27 @@ body.spz-111[class] {
       }
       .right-side-form[class] .form-wrapper[class] {
         .marketoForm {
+          background-color: #fff;
+          border: 1px solid #dee5e8;
+          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+
+          #intro {
+            h2,
+            p {
+              color: #3b454a;
+            }
+          }
           .mktoForm {
             margin-top: 36px;
             padding: 0 10px !important;
+
+            .mktoFieldWrap {
+              background-color: transparent;
+            }
+            .mktoFormRow[input-name="parent-noinput"]
+              .mktoHtmlText.mktoHasWidth, .mktoFormRow[input-name=parent-ExplicitOptOut__c] label {
+              color: #3b454a;
+            }
 
             .mktoFormRow[input-name="parent-noinput"] {
               max-width: 100%;
@@ -74,6 +92,8 @@ body.spz-111[class] {
                   padding-left: 2px !important;
                   color: #3b454a !important;
                   background: transparent !important;
+                  font-weight: 500 !important;
+
                   @media (max-width: 767.98px) {
                     margin-bottom: 20px;
                   }
@@ -84,7 +104,7 @@ body.spz-111[class] {
                 select {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
                     no-repeat center right 6px !important;
-                  padding: 7px 40px 6px 2px!important;
+                  padding: 7px 40px 6px 2px !important;
                 }
                 label {
                   position: relative !important;
@@ -97,6 +117,7 @@ body.spz-111[class] {
                   font-family: "Mulish" !important;
                   font-size: 12px !important;
                   line-height: 100% !important;
+                  display: block !important;
                   @media (max-width: 767.98px) {
                     top: 8px;
                     left: 0;

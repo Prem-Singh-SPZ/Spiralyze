@@ -6,16 +6,9 @@ var jQueryInterval = setInterval(function () {
                 jQuery('body').addClass('spz-111');
             }
 
-            // let setLabel = setInterval(() => {
-            //     addOption();
-            // }, 100);
-            // setTimeout(() => {
-            //     clearInterval(setLabel);
-            // }, 5000);
             removeColumn();
             jQuery("body").on("focus", '#mktoForm_6455 input , #mktoForm_6455 select', function () {
                 jQuery(this).closest('div').addClass('focus');
-                removeColumn();
             }).on("blur", '#mktoForm_6455 input , #mktoForm_6455 select', function () {
                 jQuery(this).closest('div').removeClass('focus');
                 if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
@@ -26,11 +19,13 @@ var jQueryInterval = setInterval(function () {
                     jQuery(this).closest('div').removeClass('invalidValidation');
                     jQuery(this).closest('div').addClass('valid');
                 }
-                removeColumn();
             });
             // jQuery("#mktoForm_6455 select").change(function () {
             //     addOption();
             // });
+            waitForElm('[input-name="parent-State"]').then(function (elm) {
+                removeColumn();
+            });
         });
     }
 });
@@ -45,6 +40,26 @@ function removeColumn() {
         clearInterval(column);
     }, 1000);
     // addOption();
+}
+
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            characterData: true,
+        });
+    });
 }
 
 // function addOption() {

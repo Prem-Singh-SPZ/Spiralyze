@@ -6,6 +6,7 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   border-radius: 0;
   padding: 0 32px 0 4px;
   color: #3b454a;
+  font-weight: 500;
 }
 @media (max-width: 767.98px) {
   body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) input {
@@ -47,7 +48,9 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   font-weight: 400;
   font-size: 12px;
   line-height: 18px;
-  top: -24px;
+  top: auto;
+  position: absolute;
+  bottom: 10px;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).valid input {
   border-color: #1cbb98;
@@ -59,8 +62,11 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
   top: 32px;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).valid .fieldInfo {
-  display: none;
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel):nth-child(5).valid input {
+  padding-right: 46px;
+}
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel):nth-child(5).valid::after {
+  right: 32px;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock .intl-phone .flag-container {
   top: 13px;

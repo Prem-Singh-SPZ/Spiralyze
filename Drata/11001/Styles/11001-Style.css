@@ -1952,6 +1952,12 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .social-proof-sec .sp-logos-wrapper .sp-logo {
   width: 213.5px;
   margin-bottom: 44px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .social-proof-sec .sp-logos-wrapper .sp-logo:nth-child(1) {
   -ms-grid-row: 1;
@@ -2036,6 +2042,11 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   -ms-grid-column: 6;
   -ms-grid-column-span: 1;
   grid-area: 2/6/3/7;
+}
+.social-proof-sec .sp-logos-wrapper .sp-logo img {
+  width: 100%;
+  height: auto;
+  max-width: 180px;
 }
 
 .mobile-only {

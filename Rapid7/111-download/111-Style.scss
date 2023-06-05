@@ -11,10 +11,11 @@ body.spz-111[class] {
             border-radius: 0;
             padding: 0 32px 0 4px;
             color: #3b454a;
+            font-weight: 500;
             @media (max-width: 767.98px) {
               height: 34px;
               margin-bottom: 24px;
-              &#phone{
+              &#phone {
                 height: 42px;
               }
             }
@@ -52,7 +53,9 @@ body.spz-111[class] {
               font-weight: 400;
               font-size: 12px;
               line-height: 18px;
-              top: -24px;
+              top: auto;
+              position: absolute;
+              bottom: 10px;
             }
           }
 
@@ -67,8 +70,17 @@ body.spz-111[class] {
               content: url(//res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
               top: 32px;
             }
-            .fieldInfo {
-              display: none;
+            // .fieldInfo {
+            //   display: none;
+            // }
+          }
+
+          &:nth-child(5).valid {
+            input {
+              padding-right: 46px;
+            }
+            &::after {
+              right: 32px;
             }
           }
         }

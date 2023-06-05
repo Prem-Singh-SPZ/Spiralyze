@@ -213,6 +213,11 @@ footer {
 .hero-section .hero-content .hc-tag span:last-child::after {
   display: none;
 }
+@media (max-width: 767.98px) {
+  .hero-section .hero-content .hc-tag span:nth-child(3)::after {
+    display: none;
+  }
+}
 .hero-section .hero-content .g2-img {
   margin-right: 12px;
 }
@@ -637,6 +642,7 @@ footer {
 }
 .form-wrapper-spz .hbspt-form form .hs-error-msgs li {
   margin: 0;
+  line-height: 14px;
 }
 .form-wrapper-spz .hbspt-form form .hs-error-msgs label.hs-error-msg {
   font-family: "Inter", sans-serif;
@@ -776,6 +782,17 @@ footer {
 .logo-section .ls-logo-item {
   margin-bottom: 48px;
   height: 48px;
+  max-width: 180px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.logo-section .ls-logo-item img {
+  width: 100%;
+  height: auto;
 }
 
 @media (max-width: 1199.98px) {
@@ -1009,7 +1026,7 @@ form fieldset {
 }
 
 body.spz-4001 #__next > header.MuiPaper-root[data-csk-entry-type=header],
-body.spz-4001 #__next > div.MuiBox-root[data-testid=HeroSubpage],
+body.spz-4001 #__next > div.MuiBox-root:not([data-csk-entry-type=globalFooter]),
 body.spz-4001 #__next > main[data-csk-entry-field=contents] {
   display: none !important;
 }

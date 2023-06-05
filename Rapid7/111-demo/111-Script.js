@@ -14,9 +14,17 @@ var jQueryInterval = setInterval(function () {
 
             jQuery("body").on("focus", '#mktoForm_4818 input , #mktoForm_4818 select', function () {
                 jQuery(this).closest('div').addClass('focus');
-                removeColumn();
             }).on("blur", '#mktoForm_4818 input , #mktoForm_4818 select', function () {
                 jQuery(this).closest('div').removeClass('focus');
+                if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+                }
+                else {
+                    jQuery(this).closest('div').removeClass('invalid-field');
+                    jQuery(this).closest('div').addClass('valid');
+                }
+            });
+
+            waitForElm('[input-name="parent-State"]').then(function (elm) {
                 removeColumn();
             });
         });
@@ -34,6 +42,25 @@ function removeColumn() {
     }, 2000);
 }
 
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, {
+            attributes: true,
+            childList: true,
+            subtree: true,
+            characterData: true,
+        });
+    });
+}
 window.onload = function () {
     jQuery('body').addClass('loaded');
 };
