@@ -1,3 +1,8 @@
+@media (max-width: 767.98px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) {
+    max-width: 100%;
+  }
+}
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) input {
   border: 0;
   border-bottom: 1px solid #dee5e8;
@@ -12,6 +17,7 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) input {
     height: 34px;
     margin-bottom: 24px;
+    padding-left: 0;
   }
   body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) input#phone {
     height: 42px;
@@ -52,6 +58,11 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   position: absolute;
   bottom: 10px;
 }
+@media (max-width: 767.98px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).invalidValidation .errormsg {
+    bottom: 6px;
+  }
+}
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).valid input {
   border-color: #1cbb98;
 }
@@ -67,6 +78,9 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel):nth-child(5).valid::after {
   right: 32px;
+}
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl#optout .disc a:last-child {
+  padding-right: 5px !important;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock .intl-phone .flag-container {
   top: 13px;

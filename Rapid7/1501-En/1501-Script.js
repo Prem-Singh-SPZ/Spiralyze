@@ -2,8 +2,13 @@ var jQueryInterval = setInterval(function () {
     if (typeof jQuery != 'undefined') {
         clearInterval(jQueryInterval);
         jQuery(document).ready(function () {
-            if (!jQuery('body').hasClass('rapid-contact-spz spz-111')) {
-                jQuery('body').addClass('rapid-contact-spz spz-111');
+            if (!jQuery('body').hasClass('rapid-contact-spz')) {
+                var cookieName = 'rapid_contact_24062022';
+                var cookieValue = '1';
+                var myDate = new Date();
+                myDate.setDate(myDate.getDate() + 30);
+                document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+                jQuery('body').addClass('rapid-contact-spz');
             }
             jQuery('meta[name="viewport"]').attr("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0");
             var heroSec = '<section class="hero-section"><div class="container-spz"><div class="form-wrap"><h2 class="form-heading">Contact Us</h2><div class="form-container"></div></div></div></section>';
@@ -132,13 +137,12 @@ var jQueryInterval = setInterval(function () {
                 }
                 checkFilled();
             });
-            contact111();
-
             /*Submission Event*/
-            window['optimizely'] = window['optimizely'] || [];
+
+            window['optimizelyEdge'] = window['optimizelyEdge'] || [];
             jQuery('body').on('click', '.form-wrap .form-container form#formBlock dl.expand button.submit', function () {
                 if (jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl.error').length == 0) {
-                    window['optimizely'].push({
+                    window['optimizelyEdge'].push({
                         type: "event",
                         eventName: "ContactFormSubmissionSPZ",
                     });
@@ -222,34 +226,11 @@ function checkFilled() {
             jQuery(this).closest('dl').removeClass('filled');
         }
     });
-    jQuery("body").find('#formBlock #contactType, #formBlock #jobLevel, #formBlock #contactTypeSecondary').each(function () {
-        if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
-            jQuery(this).closest('dl').removeClass('focused filled');
+    jQuery("body").find('#formBlock #contactType, #formBlock #jobLevel').each(function () {
+        if (jQuery(this).val() == "" || jQuery(this).val() == null) {
+            jQuery(this).closest('dl').removeClass('focused');
         } else {
             jQuery(this).closest('dl').removeClass('focused').addClass('filled');
         }
-    });
-}
-
-function contact111() {
-    addEventListener("popstate", (event) => { window.location.reload(true) });
-
-
-    jQuery("body").on("focus", '#formBlock input , #formBlock select', function () {
-        jQuery(this).closest('dl').addClass('focus');
-    }).on("blur", '#formBlock input , #formBlock select', function () {
-        jQuery(this).closest('dl').removeClass('focus');
-    });
-
-    // jQuery("#formBlock").find('[input-name="parent-jobLevel"], [input-name="parent-contactType"], #contactTypeSecondaryParent').removeClass('filled');
-    // jQuery("#contactType").find('option:first-child').val('');
-    jQuery("#contactType").find('option:first-child').text('Select a reason');
-    // jQuery("#jobLevel").find('option:first-child').val('');
-    // jQuery("#contactTypeSecondary").find('option:first-child').val('');
-
-    jQuery("body").on("blur", '#formBlock select', function () {
-        if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
-            jQuery(this).closest('dl').removeClass('filled');
-        } else { jQuery(this).closest('dl').addClass('filled'); }
     });
 }

@@ -10,6 +10,8 @@ var jQueryInterval = setInterval(function () {
                 jQuery("#Country").find('option:first-child').text('Choose a country');
                 jQuery("#LblEmail").text('Company Email');
                 removeColumn();
+                jQuery('.mktoForm  input').removeAttr('placeholder');
+                addEventListener("popstate", (event) => { window.location.reload(true) });
             });
 
             jQuery("body").on("focus", '#mktoForm_4818 input , #mktoForm_4818 select', function () {
@@ -27,6 +29,7 @@ var jQueryInterval = setInterval(function () {
             waitForElm('[input-name="parent-State"]').then(function (elm) {
                 removeColumn();
             });
+
         });
     }
 });

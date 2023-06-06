@@ -29,7 +29,8 @@ body.spz-111[class] {
               background-color: transparent;
             }
             .mktoFormRow[input-name="parent-noinput"]
-              .mktoHtmlText.mktoHasWidth, .mktoFormRow[input-name=parent-ExplicitOptOut__c] label {
+              .mktoHtmlText.mktoHasWidth,
+            .mktoFormRow[input-name="parent-ExplicitOptOut__c"] label {
               color: #3b454a;
             }
 
@@ -40,6 +41,7 @@ body.spz-111[class] {
               }
             }
             .mktoFormRow[input-name="parent-ExplicitOptOut__c"] {
+              margin-top: -12px;
               max-width: 100%;
               margin-bottom: 0;
             }
@@ -104,7 +106,10 @@ body.spz-111[class] {
                 select {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
                     no-repeat center right 6px !important;
-                  padding: 7px 40px 6px 2px !important;
+                  padding: 7px 40px 6px 4px !important;
+                }
+                #Email {
+                  padding: 7px 26px 6px 4px !important;
                 }
                 label {
                   position: relative !important;

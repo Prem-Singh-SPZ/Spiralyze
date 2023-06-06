@@ -54,7 +54,8 @@ function appendFavicon() {
         <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">`
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
+        <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1681206084/drata/6001/Checkmark.svg" as="image">`
   );
 }
 
@@ -86,7 +87,7 @@ function removeStyleTags() {
 
 // Create input label with placeholder text
 function appendInputLabel() {
-  document.querySelectorAll('.hs-input').forEach(function (el) {
+  document.querySelectorAll('.hbspt-form form .hs-input').forEach(function (el) {
     const label = document.createElement("label");
     label.innerHTML = el.placeholder;
     if (!el.hasAttribute('type') && el.options.length > 0) {
@@ -181,7 +182,6 @@ function moveElement(sourceElm, targetLoc) {
 // Add class 'safari' on body if browser is safari
 if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
   document.body.classList.add('safari');
-  document.querySelector('.actions').classList.add('safari');
 }
 
 function pageContent() {
@@ -375,9 +375,9 @@ function pageContent() {
   `;
 }
 
-if (location.href.indexOf('demo') > -1 && document.querySelectorAll('.spz-4001 .hero-section').length == 0) {
+// if (location.href.indexOf('demo') > -1 && document.querySelectorAll('.spz-4001 .hero-section').length == 0) {
   document.body.insertAdjacentHTML("afterbegin", pageContent());
-}
+// }
 // else {
 //   if (document.body.classList.contains('spz-4001')) {
 //     document.body.classList.remove('spz-4001');

@@ -1021,6 +1021,7 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) input,
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) select {
+  font-family: "Mulish";
   font-style: normal;
   border: 0;
   border-bottom: 1px solid #dee5e8;
@@ -1038,7 +1039,12 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) select {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg) no-repeat center right 6px !important;
-  padding: 0 48px 0 4px;
+  padding: 0 48px 0 2px;
+}
+@media (max-width: 767.98px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel) select {
+    padding-left: 4px;
+  }
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)[input-name=parent-phone] input {
   padding-left: 60px;
@@ -1085,32 +1091,50 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   line-height: 18px;
   top: -24px;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout) {
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error) {
   position: relative;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout) input,
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout) select {
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error) input,
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error) select {
   border-color: #1cbb98;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout) label:not([for=consultantField]):not([for=explicitOptOut]) {
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error) label:not([for=consultantField]):not([for=explicitOptOut]) {
   color: #1cbb98;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout)::after {
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error)::after {
   position: absolute;
   content: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
   top: 32px;
   right: 10px;
   width: 12px;
   height: 12px;
-  z-index: 10;
+  z-index: 4;
   pointer-events: none;
+}
+@media (max-width: 767.98px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error)::after {
+    top: 24px;
+  }
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)[input-name=parent-jobLevel].filled::after, body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)[input-name=parent-country].filled::after, body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)[input-name=parent-state].filled::after, body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)[input-name=parent-contactType].filled::after, body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)#contactTypeSecondaryParent.filled::after {
   right: 34px !important;
 }
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)#optout label[for=explicitOptOut]::before, body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel)#optout label[for=explicitOptOut]::after {
+  top: 1px;
+}
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock .intl-phone .flag-container {
   top: 16px;
   border: 0;
+}
+@media (max-width: 767px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock .intl-phone .flag-container {
+    top: 12px;
+  }
+}
+@media (max-width: 767px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock .intl-phone .flag-container ul.country-list {
+    left: 0;
+  }
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock .intl-phone .flag-container .selected-flag {
   padding-left: 3px;

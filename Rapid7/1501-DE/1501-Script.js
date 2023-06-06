@@ -2,109 +2,115 @@ var jQueryInterval = setInterval(function () {
     if (typeof jQuery != 'undefined') {
         clearInterval(jQueryInterval);
         jQuery(document).ready(function () {
-            if (!jQuery('body').hasClass('rapid-contact-spz spz-111')) {
-                jQuery('body').addClass('rapid-contact-spz spz-111');
+            if (!jQuery('body').hasClass('rapid-contact-spz')) {
+                var cookieName = 'rapid_contact_10052021';
+                var cookieValue = '1';
+                var myDate = new Date();
+                myDate.setDate(myDate.getDate() + 30);
+                document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
+                jQuery('body').addClass('rapid-contact-spz');
             }
             jQuery('meta[name="viewport"]').attr("content", "width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0");
-            var heroSec = '<section class="hero-section"><div class="container-spz"><div class="form-wrap"><h2 class="form-heading">Contact Us</h2><div class="form-container"></div></div></div></section>';
+            var heroSec = '<section class="hero-section"><div class="container-spz"><div class="form-wrap"><h2 class="form-heading">Kontaktieren Sie uns</h2><div class="form-container"></div></div></div></section>';
             jQuery(heroSec).insertBefore('.rapid-contact-spz .pageContent');
             jQuery('.rapid-contact-spz .hero-section .form-wrap .form-container').append(jQuery('#formBlock'));
             wrappingEle();
             classAllocation();
+
             var cardtitle1, cardsubtitle1, cardimg1, cardurl1, cardtitle2, cardsubtitle2, cardimg2, cardurl2, dropValue, cardWrapper;
             var imgpath = '//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/1504:%20Contact%20Page%20-%20Related%20Resources';
-            jQuery('body').find('#thankyouText').html('<div class="inner-wrapper"><div class="img-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="white"/><path d="M22.4 12L13.6 20.8L9.59998 16.8" stroke="#3B454A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4 class="title">Thank you for contacting us.</h4><h5 class="sub-title">We will be in touch shortly.</h5></div>');
+            jQuery('body').find('#thankyouText').html('<div class="inner-wrapper"><div class="img-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="white"/><path d="M22.4 12L13.6 20.8L9.59998 16.8" stroke="#3B454A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4 class="title">Vielen Dank für Ihr Interesse!</h4><h5 class="sub-title">Wir melden uns in Kürze bei Ihnen</h5></div>');
             jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock').append('<div class="card-inner-wrapper"></div>');
             jQuery('form#formBlock #contactType').on('click change', function () {
                 dropValue = jQuery(this).val();
                 if (dropValue == '20437') {
-                    cardtitle1 = "Whitepaper: The Four Pillars of Modern Vulnerability Management";
+                    cardtitle1 = "Was ist Cybersecurity-Risikomanagement?";
                     cardsubtitle1 = "WHITEPAPER / GUIDE";
                     cardimg1 = imgpath + "/The-four-pillars.jpg";
-                    cardurl1 = "/info/whitepaper-the-four-pillars-of-modern-vulnerability-management/";
-                    cardtitle2 = "Solution Guide: Modern Vulnerability Management with Rapid7";
+                    cardurl1 = "/de/cybersecurity-grundlagen/what-is-cybersecurity-risk-management/";
+                    cardtitle2 = "Kundenratgeber: Auswahl einer SchwachstellenManagement-Lösung";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
                     cardimg2 = imgpath + "/Modern-vulnerability-management.jpg";
-                    cardurl2 = "/c/modern-vm/2/";
+                    cardurl2 = "/de/info/vm-buyers-guide/";
                 } else if (dropValue == '20440') {
-                    cardtitle1 = "Solution Brief: 3 Ways to Power DevSecOps with InsightAppSec";
+                    cardtitle1 = "DevSecOps: Definition und weitere Informationen";
                     cardsubtitle1 = "BRIEF / DATASHEET";
                     cardimg1 = imgpath + "/Ways-to-power.jpg";
-                    cardurl1 = "/globalassets/_pdfs/product-and-service-briefs/rapid7-solution-brief-devsecops-insightappsec.pdf";
-                    cardtitle2 = "Application Security Buyer's Guide";
+                    cardurl1 = "/de/cybersecurity-grundlagen/devsecops/";
+                    cardtitle2 = "Sicherheit und Scannen von Webanwendungen: Erläuterung und weitere Informationen";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
                     cardimg2 = imgpath + "/Application-Security.jpg";
-                    cardurl2 = "/info/application-security-buyers-guide/";
+                    cardurl2 = "/de/cybersecurity-grundlagen/web-application-security/";
                 } else if (dropValue == '20443') {
-                    cardtitle1 = "Case Study: Auden";
+                    cardtitle1 = "Ransomware-Playbook: So senken Sie das Angriffsrisiko und reduzieren die Auswirkungen";
                     cardsubtitle1 = "CUSTOMER STORY";
                     cardimg1 = imgpath + "/Case-Study-Auden.jpg";
-                    cardurl1 = "/about/customers/auden/";
-                    cardtitle2 = "Solution Brief: Detection and Response for the Mobile Workforce";
+                    cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/Ransomware_Playbook_DE.pdf";
+                    cardtitle2 = "Kundenratgeber: Auswahl einer Security Information and Event Management-Lösung (SIEM)";
                     cardsubtitle2 = "BRIEF / DATASHEET";
                     cardimg2 = imgpath + "/Detection-and_response.jpg";
-                    cardurl2 = "/globalassets/_pdfs/product-and-service-briefs/rapid7-insightidr-remote-workers-solution-brief.pdf";
+                    cardurl2 = "/de/info/siem-buyers-guide/";
                 } else if (dropValue == '20433') {
-                    cardtitle1 = "InsightCloudSec: Continuous Security and Compliance in the Cloud";
+                    cardtitle1 = "Forschungbericht: Vertrauen in der Cloud";
                     cardsubtitle1 = "BRIEF / DATASHEET";
                     cardimg1 = imgpath + "/Mobile-orkforce.jpg";
-                    cardurl1 = "/globalassets/_pdfs/rapid7-insightcloudsec-continuous-security-and-compliance-for-the-cloud-brief.pdf";
-                    cardtitle2 = "Fundamentals: Cloud Network Security Best Practices";
+                    cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/Rapid7_Trust_in_the_Cloud.DE.pdf";
+                    cardtitle2 = "Cloud Security für Einsteiger";
                     cardsubtitle2 = "SECURITY FUNDAMENTALS";
                     cardimg2 = imgpath + "/Cloud-Network-Security.jpg";
-                    cardurl2 = "/fundamentals/cloud-network-security/";
+                    cardurl2 = "/de/info/cloud-security-fuer-einsteiger/";
                 } else if (dropValue == '20448') {
-                    cardtitle1 = "Service Brief: Managed Services";
+                    cardtitle1 = "Kundenratgeber: Managed Detection and Response (MDR)";
                     cardsubtitle1 = "BRIEF / DATASHEET";
                     cardimg1 = imgpath + "/Managed-services.jpg";
-                    cardurl1 = "/globalassets/_pdfs/product-and-service-briefs/rapid7-managed-services-brief.pdf";
-                    cardtitle2 = "Under the Hoodie: Ask a Penetration Tester";
+                    cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/MDR_Buyers_Guide_DE.pdf";
+                    cardtitle2 = "Gartner®-Report: Fragen, die Sie sich bei der Auswahl eines MDR-Anbieters stellen sollten";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
                     cardimg2 = imgpath + "/Under-the-hoodie.jpg";
-                    cardurl2 = "/resources/testing-user-credentials-in-metasploit/";
+                    cardurl2 = "/de/about/dach-blog-news/gartner-report-fragen-die-sie-sich-bei-der-auswahl-eines-mdr-anbieters-stellen-sollten/";
                 } else if (dropValue == '20450') {
-                    cardtitle1 = "VM Automation";
+                    cardtitle1 = "Automatisierung von Vulnerability Management";
                     cardsubtitle1 = "USE CASE";
                     cardimg1 = imgpath + "/VM-Automation.jpg";
-                    cardurl1 = "/products/insightconnect/use-cases/patching-remediation/";
-                    cardtitle2 = "Accelerate Incident Response";
+                    cardurl1 = "/de/products/insightconnect/use-cases/patching-remediation/";
+                    cardtitle2 = " Incident Response beschleunigen";
                     cardsubtitle2 = "USE CASE";
                     cardimg2 = imgpath + "/Accelerate-Incident-Response.jpg";
-                    cardurl2 = "/products/insightconnect/use-cases/threat-hunting/";
+                    cardurl2 = "/de/products/insightconnect/use-cases/threat-hunting/";
                 } else if (dropValue == '20434') {
-                    cardtitle1 = "Rapid7 Overview brochure";
+                    cardtitle1 = "Grundlagen des Cybersecurity-Programms";
                     cardsubtitle1 = "BRIEF / DATASHEET";
                     cardimg1 = imgpath + "/Overview-brochure.jpg";
-                    cardurl1 = "/globalassets/_pdfs/product-and-service-briefs/rapid7-overview-brochure-2021-digital.pdf";
-                    cardtitle2 = "Planning tools for 2022";
+                    cardurl1 = "/de/cybersecurity-grundlagen/security-program-basics/";
+                    cardtitle2 = "Was bedeutet Risikomanagement für die Informationssicherheit?";
                     cardsubtitle2 = "TEMPLATE";
                     cardimg2 = imgpath + "/Planning-tools.jpg";
-                    cardurl2 = "/info/planning-tool-for-2022/";
+                    cardurl2 = "/de/cybersecurity-grundlagen/information-security-risk-management/";
                 } else if (dropValue == '21019') {
-                    cardtitle1 = "Video: Threat Command";
+                    cardtitle1 = "Ransomware eine Ständig neue Bedrohung";
                     cardsubtitle1 = "PRODUCT VIDEO";
                     cardimg1 = imgpath + "/Threat-command.jpg";
-                    cardurl1 = "https://share.vidyard.com/watch/2PvsNR753HfRV5pj3RYBDT";
-                    cardtitle2 = "Blog: Demystifying XDR: A Forrester Analyst Lays the Foundation";
+                    cardurl1 = "/globalassets/_pdfs/whitepaperguide/rapid7-the-evolving-ransomware-threat_de.pdf";
+                    cardtitle2 = "Extended Detection and Response (XDR)";
                     cardsubtitle2 = "BLOG";
                     cardimg2 = imgpath + "/Demystifying-xdr.jpg";
-                    cardurl2 = "/blog/post/2021/12/08/demystifying-xdr-a-forrester-analyst-lays-the-foundation/";
+                    cardurl2 = "/de/cybersecurity-grundlagen/extended-detection-response-xdr/";
                 }
             });
+
             var intervalSet = setInterval(function () {
                 if (jQuery(".rapid-contact-spz #formBlock #firstName").length > 0) {
                     clearInterval(intervalSet);
                     checkInputform();
-                    jQuery('<p id="formTitle">Let\'s Start the Conversation</p>').insertBefore('.rapid-contact-spz #fieldInstruction');
-                    jQuery('.rapid-contact-spz #fieldInstruction').text('All fields are mandatory.');
+                    jQuery('<p id="formTitle">Kontakt aufnehmen</p>').insertBefore('.rapid-contact-spz #fieldInstruction');
+                    jQuery('.rapid-contact-spz #fieldInstruction').text('Alle Felder sind Pflichtfelder.');
                     /*jQuery(".rapid-contact-spz #formBlock #jobLevel option:nth-child(1)").attr('value','').text('').hide();
                     jQuery(".rapid-contact-spz #formBlock #contactType option:nth-child(1)").attr('value','').text('').hide();
                     jQuery(".rapid-contact-spz #formBlock #contactTypeSecondary option:nth-child(1)").attr('value','').text('').hide();*/
                     jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-email"]').insertAfter('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-lastName"]');
                     jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-parent-companyName"]').insertAfter('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-email"]');
                     jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-companyName"]').insertAfter('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-email"]');
-                    jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-email"] label').text('Company Email');
-                    //jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-howDidYouHear"]').removeClass('hide');
+                    //jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl[input-name="parent-email"] label').text('Company Email');
                     jQuery('#consultant, #optout, dl[input-name="parent-noinput"]').addClass('bottomtext');
                     jQuery('#firstName').attr('tabindex', '1');
                     jQuery('#lastName').attr('tabindex', '2');
@@ -117,7 +123,7 @@ var jQueryInterval = setInterval(function () {
                     jQuery('#state').attr('tabindex', '9');
                     jQuery('#contactType').attr('tabindex', '10');
                     jQuery('#contactTypeSecondary').attr('tabindex', '11');
-                    jQuery('<label for="contactTypeSecondary">Select</label>').insertBefore('.rapid-contact-spz #contactTypeSecondary');
+                    jQuery('<label for="contactTypeSecondary">Auswählen</label>').insertBefore('.rapid-contact-spz #contactTypeSecondary');
                     checkFilled();
 
                     jQuery('body').addClass('load');
@@ -132,17 +138,15 @@ var jQueryInterval = setInterval(function () {
                 }
                 checkFilled();
             });
-            contact111();
-
             /*Submission Event*/
-            window['optimizely'] = window['optimizely'] || [];
+            window['optimizelyEdge'] = window['optimizelyEdge'] || [];
             jQuery('body').on('click', '.form-wrap .form-container form#formBlock dl.expand button.submit', function () {
                 if (jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock dl.error').length == 0) {
-                    window['optimizely'].push({
+                    window['optimizelyEdge'].push({
                         type: "event",
                         eventName: "ContactFormSubmissionSPZ",
                     });
-                    cardWrapper = '<h4 class="title">Recommended Resources</h4>\
+                    cardWrapper = '<h4 class="title">Empfohlene Ressourcen</h4>\
 					    <div class="card-wrapper">\
 					        <a class="card-item item-1" href="' + cardurl1 + '">\
 					            <img src="' + cardimg1 + '" alt="' + cardtitle1 + '">\
@@ -169,7 +173,6 @@ var jQueryInterval = setInterval(function () {
         });
     }
 });
-
 function wrappingEle() {
     var copyEle = jQuery(".rapid-contact-spz .contact__general .contactField__other").html();
     jQuery('.rapid-contact-spz .contact__general .contactContainer__item').each(function () {
@@ -181,19 +184,20 @@ function wrappingEle() {
 			    <h2 class="inquiries">Other</h2>\
 			</div>\
 			<div class="contactField__info">\
-				<h4>Partners: <a href="mailto:partners@rapid7.com"> partners@rapid7.com</a></h4>\
-				<h4>Press: <a href="mailto:press@rapid7.com"> press@rapid7.com</a></h4>\
-				<h4>Analyst Relations: <a href="mailto:analysts@rapid7.com"> analysts@rapid7.com</a></h4>\
-				<h4>Careers: <a href="mailto:careers@rapid7.com"> careers@rapid7.com</a></h4>\
-				<h4>US Employment Verification: <a href="http://empinfo.com/" target="_blank" rel="noopener" class="external"> empinfo.com</a> or <a href="tel:+1-800-274-9694">+1-800-274-9694</a></h4>\
-				<h4>Fax: Sales & Other Inquiries <a href="tel:+1-617-457-7929"> +1-617-457-7929</a></h4>\
-				<h4>Legal: <a href="mailto:notices@rapid7.com"> notices@rapid7.com</a></h4>\
-				<h4>Investor Relations: <a href="mailto:investors@rapid7.com"> investors@rapid7.com</a></h4>\
+			<h4>Partners: <a href="mailto:partners@rapid7.com"> partners@rapid7.com</a></h4>\
+			<h4>Press: <a href="mailto:press@rapid7.com"> press@rapid7.com</a></h4>\
+			<h4>Karriere: <a href="mailto:careers@rapid7.com"> careers@rapid7.com</a></h4>\
+			<h4>Investor Relations: <a href="mailto:investors@rapid7.com"> investors@rapid7.com</a></h4>\
+			<h4>Employment Verification: <a href="mailto:verifyemployment@rapid7.com"> verifyemployment@rapid7.com</a> or <a href="tel:+1-857-990-4600">+1-857-990-4600</a></h4>\
+			<h4>Fax: Legal & Administration <a href="tel:+1-617-904-1913"> +1-617-904-1913</a></h4>\
+			<h4>Sales & Other Inquiries: <a href="tel:+1-617-457-7929"> +1-617-457-7929</a></h4>\
 			</div>\
 		</div>');
     });
+    jQuery('.rapid-contact-spz .contact__general .contactContainer__item .first-row .contactField:last-child .contactField__title h2').text('Kundensupport');
+    jQuery('.rapid-contact-spz .contact__general .contactContainer__item .second-row .contactField:first-child .contactField__title h2').text('Vertrieb & Allgemeine Info');
+    jQuery('.rapid-contact-spz .contact__general .contactContainer__item .second-row .contactField:last-child .contactField__title h2').text('Sonstiges');
 }
-
 function classAllocation() {
     var dataIndex = 1;
     jQuery('.rapid-contact-spz .contact__general .contactContainer .contactField__other p > a').each(function () {
@@ -201,7 +205,6 @@ function classAllocation() {
         dataIndex++;
     });
 }
-
 function checkInputform() {
     jQuery('form#formBlock fieldset dl').each(function () {
         jQuery(this).removeAttr('input-name');
@@ -213,7 +216,6 @@ function checkInputform() {
         }
     });
 }
-
 function checkFilled() {
     jQuery("body").find('#formBlock input').each(function () {
         if (jQuery(this).val().length > 0) {
@@ -222,34 +224,11 @@ function checkFilled() {
             jQuery(this).closest('dl').removeClass('filled');
         }
     });
-    jQuery("body").find('#formBlock #contactType, #formBlock #jobLevel, #formBlock #contactTypeSecondary').each(function () {
-        if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
-            jQuery(this).closest('dl').removeClass('focused filled');
+    jQuery("body").find('#formBlock #contactType, #formBlock #jobLevel').each(function () {
+        if (jQuery(this).val() == "" || jQuery(this).val() == null) {
+            jQuery(this).closest('dl').removeClass('focused');
         } else {
             jQuery(this).closest('dl').removeClass('focused').addClass('filled');
         }
-    });
-}
-
-function contact111() {
-    addEventListener("popstate", (event) => { window.location.reload(true) });
-
-
-    jQuery("body").on("focus", '#formBlock input , #formBlock select', function () {
-        jQuery(this).closest('dl').addClass('focus');
-    }).on("blur", '#formBlock input , #formBlock select', function () {
-        jQuery(this).closest('dl').removeClass('focus');
-    });
-
-    // jQuery("#formBlock").find('[input-name="parent-jobLevel"], [input-name="parent-contactType"], #contactTypeSecondaryParent').removeClass('filled');
-    // jQuery("#contactType").find('option:first-child').val('');
-    jQuery("#contactType").find('option:first-child').text('Select a reason');
-    // jQuery("#jobLevel").find('option:first-child').val('');
-    // jQuery("#contactTypeSecondary").find('option:first-child').val('');
-
-    jQuery("body").on("blur", '#formBlock select', function () {
-        if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
-            jQuery(this).closest('dl').removeClass('filled');
-        } else { jQuery(this).closest('dl').addClass('filled'); }
     });
 }

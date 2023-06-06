@@ -6,7 +6,22 @@ var jQueryInterval = setInterval(function () {
                 jQuery('body').addClass('spz-111');
             }
 
-            removeColumn();
+            waitForElm('#mktoForm_6455 [input-name="parent-LastName"]').then(function (elm) {
+                removeColumn();
+
+                jQuery(".mktoButton").click(function () {
+                    let elem = jQuery('#mktoForm_6455 input, #mktoForm_6455 select')
+                    if (jQuery(elem).val() == "" || jQuery(elem).val() == null || jQuery(elem).val() == '0') {
+                        jQuery(elem).closest('div').addClass('invalidValidation');
+                        jQuery(elem).closest('div').removeClass('valid');
+                    }
+                    else {
+                        jQuery(elem).closest('div').removeClass('invalidValidation');
+                        jQuery(elem).closest('div').addClass('valid');
+                    }
+                });
+            });
+
             jQuery("body").on("focus", '#mktoForm_6455 input , #mktoForm_6455 select', function () {
                 jQuery(this).closest('div').addClass('focus');
             }).on("blur", '#mktoForm_6455 input , #mktoForm_6455 select', function () {
@@ -38,7 +53,7 @@ function removeColumn() {
     }, 100);
     setTimeout(() => {
         clearInterval(column);
-    }, 1000);
+    }, 3000);
     // addOption();
 }
 
@@ -62,16 +77,6 @@ function waitForElm(selector) {
     });
 }
 
-// function addOption() {
-//     let column = setInterval(() => {
-//         jQuery("#Country").find('option:first-child').text('Country');
-//         jQuery("#JobLevel").find('option:first-child').text('Job Level');
-//         jQuery("#State").find('option:first-child').text('State/Province');
-//     }, 50);
-//     setTimeout(() => {
-//         clearInterval(column);
-//     }, 300);
-// }
 
 window.onload = function () {
     jQuery('body').addClass('loaded');

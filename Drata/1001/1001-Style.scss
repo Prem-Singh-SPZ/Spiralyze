@@ -731,6 +731,8 @@ footer {
           border-radius: 4px;
           position: relative;
           cursor: pointer;
+          -webkit-border-radius: 4px;
+          -webkit-appearance: none;
           &:hover {
             color: $color_11;
           }
@@ -750,7 +752,13 @@ footer {
           background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260806/drata/4001/system_icons_4.svg")
             no-repeat;
           z-index: 3;
+          pointer-events: none;
         }
+        // &.safari{
+        //   &::before{
+        //     right: 32px;
+        //   }
+        // }
       }
     }
   }

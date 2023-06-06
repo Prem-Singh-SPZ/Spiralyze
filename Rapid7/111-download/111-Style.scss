@@ -3,6 +3,9 @@ body.spz-111[class] {
     .container-spz[class] {
       .form-wrap #formBlock {
         dl:not(.ignoreLabel) {
+          @media (max-width: 767.98px) {
+            max-width: 100%;
+          }
           input {
             border: 0;
             border-bottom: 1px solid #dee5e8;
@@ -15,6 +18,7 @@ body.spz-111[class] {
             @media (max-width: 767.98px) {
               height: 34px;
               margin-bottom: 24px;
+              padding-left: 0;
               &#phone {
                 height: 42px;
               }
@@ -56,6 +60,9 @@ body.spz-111[class] {
               top: auto;
               position: absolute;
               bottom: 10px;
+              @media (max-width: 767.98px) {
+                bottom: 6px;
+              }
             }
           }
 
@@ -81,6 +88,14 @@ body.spz-111[class] {
             }
             &::after {
               right: 32px;
+            }
+          }
+        }
+
+        dl {
+          &#optout {
+            .disc a:last-child {
+              padding-right: 5px !important;
             }
           }
         }
