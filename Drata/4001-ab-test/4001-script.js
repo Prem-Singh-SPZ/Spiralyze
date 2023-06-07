@@ -207,23 +207,22 @@ function pageContent() {
           /><span class="sr-number"><strong>4.9</strong> (398 reviews)</span>
         </div>
         <div class="list-grp-wrapper">
-          <ul class="list-group">
-            <li class="list-item">
-              <strong>Reduce Time Up to 80%</strong>Automate documentation and
-              evidence collection. Integrates with your tech stack out of the
-              box.
-            </li>
-            <li class="list-item">
-              <strong>Ongoing Compliance</strong>Achieve peace of mind,
-              knowing Drata is automating ongoing security and compliance
-              monitoring.
-            </li>
-            <li class="list-item">
-              <strong>Continuous Compliance</strong>Maintain compliance as
-              your business grows and your tech stack expands. Easily add new
-              compliance frameworks.
-            </li>
-          </ul>
+        <ul class="list-group">
+        <li class="list-item">
+          <strong>Reduce Time Up to 80%</strong>Automate evidence
+          collection with a comprehensive suite of 75+ integrations.
+        </li>
+        <li class="list-item">
+          <strong>Robust Pre-Mapped Controls</strong>Save time and take
+          advantage of existing pre-mapped controls to comply with
+          multiple frameworks.
+        </li>
+        <li class="list-item">
+          <strong>Continuous Control Monitoring</strong>Gain full
+          visibility into your security posture and maintain compliance as
+          your business and tech stack expand.
+        </li>
+      </ul>
         </div>
       </div>
       <div class="hero-right-section">

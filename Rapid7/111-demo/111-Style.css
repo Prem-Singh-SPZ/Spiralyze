@@ -22,6 +22,12 @@ body.spz-111[class] .hero-sec .hero-section .main-form #intro p {
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow[class] .mktoFormCol .mktoFieldWrap .mktoLogicalField.mktoCheckboxList.mktoHasWidth > label {
   color: #3b454a;
 }
+body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow[input-name=parent-Email] .mktoFormCol[class] .mktoFieldWrap[class] .mktoError .mktoErrorMsg,
+body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow[input-name=parent-Email] .mktoFormCol[class] .mktoFieldWrap[class] .mktoError .error-message,
+body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow[input-name=parent-Phone] .mktoFormCol[class] .mktoFieldWrap[class] .mktoError .mktoErrorMsg,
+body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow[input-name=parent-Phone] .mktoFormCol[class] .mktoFieldWrap[class] .mktoError .error-message {
+  left: 12px;
+}
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) {
   margin-bottom: 35px;
 }
@@ -103,10 +109,11 @@ body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-n
   border-color: #ff2b2b !important;
   color: #ff2b2b !important;
 }
-body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap.invalid-field .mktoErrorMsg,
-body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap.invalid-field .error-message {
+body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap .mktoErrorMsg,
+body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap .error-message {
   top: -22px;
   color: #ff2b2b !important;
+  left: 10px;
 }
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap.filled:not(.invalid-field) input,
 body.spz-111[class] .hero-sec .hero-section .main-form .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]) .mktoFormCol .mktoFieldWrap.filled:not(.invalid-field) select {

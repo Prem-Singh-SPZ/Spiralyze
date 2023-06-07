@@ -106,7 +106,7 @@ body.spz-111[class] {
                 select {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
                     no-repeat center right 6px !important;
-                  padding: 7px 40px 6px 4px !important;
+                  padding: 7px 40px 6px 2px !important;
                 }
                 #Email {
                   padding: 7px 26px 6px 4px !important;
@@ -145,14 +145,15 @@ body.spz-111[class] {
                     border-color: #ff2b2b;
                     color: #ff2b2b;
                   }
-                  .mktoErrorMsg {
-                    color: #ff2b2b !important;
-                    font-weight: 400;
-                    font-size: 12px;
-                    line-height: 12px;
-                    top: -24px;
-                    position: absolute;
-                  }
+                }
+                .mktoErrorMsg {
+                  color: #ff2b2b !important;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 12px;
+                  top: -24px;
+                  left: 2px;
+                  position: absolute;
                 }
 
                 &.valid {
@@ -172,9 +173,9 @@ body.spz-111[class] {
                     height: 12px;
                     z-index: 10;
                     pointer-events: none;
-                    // @media (max-width: 767.98px) {
-                    //   top: 22px;
-                    // }
+                    @media (max-width: 991.98px) {
+                      top: 18px;
+                    }
                     // @media (min-width: 767.98px) and (max-width: 1023.98px) {
                     //   top: 26px;
                     // }

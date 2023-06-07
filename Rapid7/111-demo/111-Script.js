@@ -11,18 +11,30 @@ var jQueryInterval = setInterval(function () {
                 jQuery("#LblEmail").text('Company Email');
                 removeColumn();
                 jQuery('.mktoForm  input').removeAttr('placeholder');
-                addEventListener("popstate", (event) => { window.location.reload(true) });
             });
 
             jQuery("body").on("focus", '#mktoForm_4818 input , #mktoForm_4818 select', function () {
                 jQuery(this).closest('div').addClass('focus');
             }).on("blur", '#mktoForm_4818 input , #mktoForm_4818 select', function () {
                 jQuery(this).closest('div').removeClass('focus');
-                if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+
+                if (jQuery(this).attr('id') == 'Email' || jQuery(this).attr('id') == 'Phone') {
+                    if (jQuery(this).hasClass('mktoValid') && !jQuery(this).parent().find('.mktoError').is(':visible')) {
+                        jQuery(this).closest('div').removeClass('invalid-field');
+                        jQuery(this).closest('div').addClass('filled');
+                    }
+                    else {
+                        jQuery(this).closest('div').addClass('invalid-field');
+                        jQuery(this).closest('div').removeClass('filled');
+                    }
                 }
                 else {
-                    jQuery(this).closest('div').removeClass('invalid-field');
-                    jQuery(this).closest('div').addClass('valid');
+                    if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+                    }
+                    else {
+                        jQuery(this).closest('div').removeClass('invalid-field');
+                        jQuery(this).closest('div').addClass('filled');
+                    }
                 }
             });
 

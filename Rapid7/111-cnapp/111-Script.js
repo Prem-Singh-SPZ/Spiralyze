@@ -10,15 +10,31 @@ var jQueryInterval = setInterval(function () {
                 removeColumn();
 
                 jQuery(".mktoButton").click(function () {
-                    let elem = jQuery('#mktoForm_6455 input, #mktoForm_6455 select')
-                    if (jQuery(elem).val() == "" || jQuery(elem).val() == null || jQuery(elem).val() == '0') {
-                        jQuery(elem).closest('div').addClass('invalidValidation');
-                        jQuery(elem).closest('div').removeClass('valid');
-                    }
-                    else {
-                        jQuery(elem).closest('div').removeClass('invalidValidation');
-                        jQuery(elem).closest('div').addClass('valid');
-                    }
+                    jQuery('#mktoForm_6455 input, #mktoForm_6455 select').each(function (index, value) {
+                        if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+                            jQuery(this).closest('div').addClass('invalidValidation');
+                            jQuery(this).closest('div').removeClass('valid');
+                        }
+                        else {
+                            jQuery(this).closest('div').removeClass('invalidValidation');
+                            jQuery(this).closest('div').addClass('valid');
+                        }
+                    });
+
+                    let checkEmailError = setInterval(() => {   
+                        if (jQuery('#Email').hasClass('mktoValid') && !jQuery('#Email').parent().find('.mktoError').is(':visible')) {
+                            jQuery('#Email').closest('div').removeClass('invalidValidation');
+                            jQuery('#Email').closest('div').addClass('valid');
+                        }
+                        else {
+                            jQuery('#Email').closest('div').addClass('invalidValidation');
+                            jQuery('#Email').closest('div').removeClass('valid');
+                        }
+                    }, 50);
+
+                    setTimeout(() => {
+                        clearInterval(checkEmailError);
+                    }, 3000);
                 });
             });
 
@@ -26,13 +42,26 @@ var jQueryInterval = setInterval(function () {
                 jQuery(this).closest('div').addClass('focus');
             }).on("blur", '#mktoForm_6455 input , #mktoForm_6455 select', function () {
                 jQuery(this).closest('div').removeClass('focus');
-                if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
-                    jQuery(this).closest('div').addClass('invalidValidation');
-                    jQuery(this).closest('div').removeClass('valid');
+
+                if (jQuery(this).attr('id') == 'Email') {
+                    if (jQuery(this).hasClass('mktoValid') && !jQuery(this).parent().find('.mktoError').is(':visible')) {
+                        jQuery(this).closest('div').removeClass('invalidValidation');
+                        jQuery(this).closest('div').addClass('valid');
+                    }
+                    else {
+                        jQuery(this).closest('div').addClass('invalidValidation');
+                        jQuery(this).closest('div').removeClass('valid');
+                    }
                 }
                 else {
-                    jQuery(this).closest('div').removeClass('invalidValidation');
-                    jQuery(this).closest('div').addClass('valid');
+                    if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+                        jQuery(this).closest('div').addClass('invalidValidation');
+                        jQuery(this).closest('div').removeClass('valid');
+                    }
+                    else {
+                        jQuery(this).closest('div').removeClass('invalidValidation');
+                        jQuery(this).closest('div').addClass('valid');
+                    }
                 }
             });
             // jQuery("#mktoForm_6455 select").change(function () {
@@ -76,7 +105,6 @@ function waitForElm(selector) {
         });
     });
 }
-
 
 window.onload = function () {
     jQuery('body').addClass('loaded');

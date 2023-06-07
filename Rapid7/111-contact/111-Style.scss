@@ -1431,7 +1431,7 @@ body.spz-111[class] {
           select {
             background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg)
               no-repeat center right 6px !important;
-            padding: 0 48px 0 2px;
+            padding: 0 48px 0 4px;
             @media (max-width: 767.98px) {
               padding-left: 4px;
             }
@@ -1486,7 +1486,9 @@ body.spz-111[class] {
             }
           }
 
-          &.filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(.error) {
+          &.filled:not(#howDidYouHearParent):not(#consultant):not(#optout):not(
+              .error
+            ) {
             position: relative;
             input,
             select {
@@ -1530,6 +1532,10 @@ body.spz-111[class] {
                 top: 1px;
               }
             }
+          }
+
+          .errorMsg {
+            left: 4px;
           }
         }
         .intl-phone .flag-container {

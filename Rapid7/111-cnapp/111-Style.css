@@ -88,7 +88,7 @@ body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.her
 }
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]):not([input-name=parent-noinput]) .mktoFieldWrap select {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1685111269/rapid7/111/arrow-back-ios.svg) no-repeat center right 6px !important;
-  padding: 7px 40px 6px 4px !important;
+  padding: 7px 40px 6px 2px !important;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]):not([input-name=parent-noinput]) .mktoFieldWrap #Email {
   padding: 7px 26px 6px 4px !important;
@@ -125,12 +125,13 @@ body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.her
   border-color: #ff2b2b;
   color: #ff2b2b;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]):not([input-name=parent-noinput]) .mktoFieldWrap.invalidValidation .mktoErrorMsg {
+body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]):not([input-name=parent-noinput]) .mktoFieldWrap .mktoErrorMsg {
   color: #ff2b2b !important;
   font-weight: 400;
   font-size: 12px;
   line-height: 12px;
   top: -24px;
+  left: 2px;
   position: absolute;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]):not([input-name=parent-noinput]) .mktoFieldWrap.valid input,
@@ -149,6 +150,11 @@ body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.her
   height: 12px;
   z-index: 10;
   pointer-events: none;
+}
+@media (max-width: 991.98px) {
+  body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .mktoFormRow:not([input-name=parent-ExplicitOptOut__c]):not([input-name=parent-noinput]) .mktoFieldWrap.valid::after {
+    top: 18px;
+  }
 }
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm .mktoForm .intl-phone .flag-container {
   top: 13px;

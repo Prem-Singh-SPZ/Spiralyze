@@ -232,21 +232,18 @@ function checkFilled() {
 }
 
 function contact111() {
-    addEventListener("popstate", (event) => { window.location.reload(true) });
-
-
     jQuery("body").on("focus", '#formBlock input , #formBlock select', function () {
         jQuery(this).closest('dl').addClass('focus');
     }).on("blur", '#formBlock input , #formBlock select', function () {
         jQuery(this).closest('dl').removeClass('focus');
+        if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+            jQuery(this).closest('dl').removeClass('filled');
+        } else {
+            jQuery(this).closest('dl').addClass('filled');
+        }
     });
 
-    // jQuery("#formBlock").find('[input-name="parent-jobLevel"], [input-name="parent-contactType"], #contactTypeSecondaryParent').removeClass('filled');
-    // jQuery("#contactType").find('option:first-child').val('');
     jQuery("#contactType").find('option:first-child').text('Select a reason');
-    // jQuery("#jobLevel").find('option:first-child').val('');
-    // jQuery("#contactTypeSecondary").find('option:first-child').val('');
-
     jQuery("body").on("blur", '#formBlock select', function () {
         if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
             jQuery(this).closest('dl').removeClass('filled');

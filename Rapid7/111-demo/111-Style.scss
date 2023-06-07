@@ -25,6 +25,17 @@ body.spz-111[class] {
       > label {
       color: #3b454a;
     }
+
+    .mktoFormRow[input-name="parent-Email"],
+    .mktoFormRow[input-name="parent-Phone"] {
+      .mktoFormCol[class] .mktoFieldWrap[class] .mktoError {
+        .mktoErrorMsg,
+        .error-message {
+          left: 12px;
+        }
+      }
+    }
+
     .mktoFormRow:not([input-name="parent-ExplicitOptOut__c"]) {
       @media (min-width: 1199.98px) {
         max-width: 235px;
@@ -97,15 +108,16 @@ body.spz-111[class] {
             border-color: #ff2b2b !important;
             color: #ff2b2b !important;
           }
-          .mktoErrorMsg,
-          .error-message {
-            top: -22px;
-            color: #ff2b2b !important;
-            // font-weight: 400;
-            // font-size: 12px;
-            // line-height: 18px;
-            // top: -24px;
-          }
+        }
+        .mktoErrorMsg,
+        .error-message {
+          top: -22px;
+          color: #ff2b2b !important;
+          left: 10px;
+          // font-weight: 400;
+          // font-size: 12px;
+          // line-height: 18px;
+          // top: -24px;
         }
 
         &.filled:not(.invalid-field) {
