@@ -46,50 +46,54 @@ jQuery(function ($) {
         content.onload = function () {
             $('.static-card-slider .slider-1').slick({
                 speed: 5000,
-                autoplay: true,
+                draggable: false,
                 autoplaySpeed: 0,
                 cssEase: 'linear',
-                slidesToShow: 1,
-                slidesToScroll: 1,
                 variableWidth: true,
                 infinite: true,
-                initialSlide: 1,
                 arrows: false,
                 buttons: false,
+                swipe: false,
                 loop: true
             });
             $('.static-card-slider .slider-3').slick({
                 speed: 5000,
-                autoplay: true,
+                draggable: false,
                 autoplaySpeed: 0,
                 cssEase: 'linear',
-                slidesToShow: 1,
-                slidesToScroll: 1,
                 variableWidth: true,
                 infinite: true,
-                initialSlide: 1,
                 arrows: false,
                 buttons: false,
+                swipe: false,
                 loop: true
             });
             $('.static-card-slider .slider-2').slick({
                 speed: 5000,
-                autoplay: true,
+                draggable: false,
                 autoplaySpeed: 0,
                 cssEase: 'linear',
-                slidesToShow: 1,
-                slidesToScroll: 1,
                 variableWidth: true,
                 infinite: true,
-                initialSlide: 1,
                 arrows: false,
                 buttons: false,
                 loop: true,
+                swipe: false,
                 rtl: true
             });
             setTimeout(() => {
                 $('.partner-logos-sections').css('opacity', 1);
             }, 100);
+
+            $(document).on('touchstart touchend', '.slider-1, .slider-2, .slider-3', function () {
+                $(this).slick('play');
+            });
+
+            $('.slider-1, .slider-2, .slider-3').hover(function () {
+                $(this).slick('play');
+            }, function () {
+                $(this).slick('pause');
+            });
         }
     });
 

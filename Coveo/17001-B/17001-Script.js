@@ -46,21 +46,23 @@ jQuery(function ($) {
         content.onload = function () {
             $('.static-card-slider').slick({
                 speed: 5000,
-                autoplay: true,
-                autoplaySpeed: 0,
+                draggable: false,
                 cssEase: 'linear',
-                slidesToShow: 1,
-                slidesToScroll: 1,
+                autoplaySpeed: 0,
                 variableWidth: true,
                 infinite: true,
-                initialSlide: 1,
                 arrows: false,
                 buttons: false,
+                swipe: false,
                 loop: true
             });
             setTimeout(() => {
                 $('.partner-logos-sections').css('opacity', 1);
             }, 100);
+
+            $(document).on('touchstart touchend', '.static-card-slider', function () {
+                $('.static-card-slider').slick('play');
+            });
         }
     });
 });

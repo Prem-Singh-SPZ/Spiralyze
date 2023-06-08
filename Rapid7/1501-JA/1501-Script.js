@@ -18,7 +18,7 @@ var jQueryInterval = setInterval(function () {
             classAllocation();
 
             var cardtitle1, cardsubtitle1, cardimg1, cardurl1, cardtitle2, cardsubtitle2, cardimg2, cardurl2, dropValue, cardWrapper;
-            var imgpath = '//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/1504:%20Contact%20Page%20-%20Related%20Resources';
+            var imgpath = '//res.cloudinary.com/spiralyze/image/upload/';
             jQuery('body').find('#thankyouText').html('<div class="inner-wrapper"><div class="img-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="white"/><path d="M22.4 12L13.6 20.8L9.59998 16.8" stroke="#3B454A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4 class="title">ご連絡いただきありがとうございます。</h4><h5 class="sub-title">すぐに折り返しご連絡いたします。</h5></div>');
             jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock').append('<div class="card-inner-wrapper"></div>');
             jQuery('form#formBlock #contactType').on('click change', function () {
@@ -26,74 +26,74 @@ var jQueryInterval = setInterval(function () {
                 if (dropValue == '20437') {
                     cardtitle1 = "サイバーセキュリティリスク管理とは";
                     cardsubtitle1 = "WHITEPAPER / GUIDE";
-                    cardimg1 = imgpath + "/The-four-pillars.jpg";
+                    cardimg1 = imgpath + "f_auto/RAPID7/1504/%E3%82%B5%E3%82%A4%E3%83%8F%E3%82%99%E3%83%BC%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86%E3%81%A8%E3%81%AF_2x.jpg";
                     cardurl1 = "/ja/fundamentals/what-is-cybersecurity-risk-management/";
                     cardtitle2 = "プレスリリース＆ブログ";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
-                    cardimg2 = imgpath + "/Modern-vulnerability-management.jpg";
+                    cardimg2 = imgpath + "f_auto/RAPID7/1504/%E3%83%95%E3%82%9A%E3%83%AC%E3%82%B9%E3%83%AA%E3%83%AA%E3%83%BC%E3%82%B9_%E3%83%95%E3%82%99%E3%83%AD%E3%82%AF%E3%82%99_2x.jpg";
                     cardurl2 = "/ja/about/japan-blog-news/";
                 } else if (dropValue == '20440') {
                     cardtitle1 = "Webアプリケーションに対するリスクの把握とコントロール";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Ways-to-power.jpg";
+                    cardimg1 = imgpath + "v1686223626/rapid7/1504/_.webp";
                     cardurl1 = "https://www.brighttalk.com/webcast/19011/549577?utm_source=brighttalk-portal&utm_medium=web&utm_campaign=channel-page&utm_content=recorded";
                     cardtitle2 = "「Web アプリケーション/サービスの脆弱性を可能な限りシンプルに」";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
-                    cardimg2 = imgpath + "/Application-Security.jpg";
+                    cardimg2 = imgpath + "v1686223627/rapid7/1504/__1.webp";
                     cardurl2 = "https://www.brighttalk.com/webcast/19011/561612?utm_source=brighttalk-portal&utm_medium=web&utm_campaign=channel-page&utm_content=recorded";
                 } else if (dropValue == '20443') {
                     cardtitle1 = "侵害発生！その時SOCでは何が？ ";
                     cardsubtitle1 = "CUSTOMER STORY";
-                    cardimg1 = imgpath + "/Case-Study-Auden.jpg";
+                    cardimg1 = imgpath + "v1686223626/rapid7/1504/soc.webp";
                     cardurl1 = "/ja/c/soc-timeline-of-attacks/";
                     cardtitle2 = "年MDRバイヤーズガイド";
                     cardsubtitle2 = "BRIEF / DATASHEET";
-                    cardimg2 = imgpath + "/Detection-and_response.jpg";
+                    cardimg2 = imgpath + "v1686223626/rapid7/1504/mdr.webp";
                     cardurl2 = "https://information.rapid7.com/rs/411-NAK-970/images/MDR_Buyers_Guide_ja.pdf";
                 } else if (dropValue == '20433') {
                     cardtitle1 = "クラウドセキュリティとは?";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Mobile-orkforce.jpg";
+                    cardimg1 = imgpath + "f_auto/RAPID7/1504/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%88%E3%82%99%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%81%A8%E3%81%AF__2x.jpg";
                     cardurl1 = "/ja/fundamentals/cloud-security/";
                     cardtitle2 = "クラウドネットワークセキュリティのベストプラクティス";
                     cardsubtitle2 = "SECURITY FUNDAMENTALS";
-                    cardimg2 = imgpath + "/Cloud-Network-Security.jpg";
+                    cardimg2 = imgpath + "f_auto/RAPID7/1504/%E3%82%AF%E3%83%A9%E3%82%A6%E3%83%88%E3%82%99%E3%83%8D%E3%83%83%E3%83%88%E3%83%AF%E3%83%BC%E3%82%AF%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AE%E3%83%98%E3%82%99%E3%82%B9%E3%83%88%E3%83%95%E3%82%9A%E3%83%A9%E3%82%AF%E3%83%86%E3%82%A3%E3%82%B9_2x.jpg";
                     cardurl2 = "/ja/fundamentals/cloud-network-security/";
                 } else if (dropValue == '20448') {
                     cardtitle1 = "年MDRバイヤーズガイド";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Managed-services.jpg";
+                    cardimg1 = imgpath + "v1686223627/rapid7/1504/mdr_1.webp";
                     cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/MDR_Buyers_Guide_ja.pdf";
                     cardtitle2 = "侵害発生！その時SOCでは何が？";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
-                    cardimg2 = imgpath + "/Under-the-hoodie.jpg";
+                    cardimg2 = imgpath + "v1686223628/rapid7/1504/soc_1.webp";
                     cardurl2 = "/ja/c/soc-timeline-of-attacks/";
                 } else if (dropValue == '20450') {
                     cardtitle1 = "パッチの適用と問題の修正の効率化 ";
                     cardsubtitle1 = "USE CASE";
-                    cardimg1 = imgpath + "/VM-Automation.jpg";
+                    cardimg1 = imgpath + "f_auto/RAPID7/1504/%E3%83%8F%E3%82%9A%E3%83%83%E3%83%81%E3%81%AE%E9%81%A9%E7%94%A8%E3%81%A8%E5%95%8F%E9%A1%8C%E3%81%AE%E4%BF%AE%E6%AD%A3%E3%81%AE%E5%8A%B9%E7%8E%87%E5%8C%96_2x.jpg";
                     cardurl1 = "/ja/products/insightconnect/use-cases/streamline-patching-and-remediation/";
                     cardtitle2 = "脅威の検出の迅速化";
                     cardsubtitle2 = "USE CASE";
-                    cardimg2 = imgpath + "/Accelerate-Incident-Response.jpg";
+                    cardimg2 = imgpath + "f_auto/RAPID7/1504/%E8%84%85%E5%A8%81%E3%81%AE%E6%A4%9C%E5%87%BA%E3%81%AE%E8%BF%85%E9%80%9F%E5%8C%96_2x.jpg";
                     cardurl2 = "/ja/products/insightconnect/use-cases/accelerate-threat-hunting/";
                 } else if (dropValue == '20434') {
                     cardtitle1 = "セキュリティプログラムの基本 ";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Overview-brochure.jpg";
+                    cardimg1 = imgpath + "f_auto/RAPID7/1504/%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%83%95%E3%82%9A%E3%83%AD%E3%82%AF%E3%82%99%E3%83%A9%E3%83%A0%E3%81%AE%E5%9F%BA%E6%9C%AC_2x.jpg";
                     cardurl1 = "/ja/fundamentals/security-program-basics/";
                     cardtitle2 = "情報セキュリティにおけるリスク管理";
                     cardsubtitle2 = "TEMPLATE";
-                    cardimg2 = imgpath + "/Planning-tools.jpg";
+                    cardimg2 = imgpath + "f_auto/RAPID7/1504/%E6%83%85%E5%A0%B1%E3%82%BB%E3%82%AD%E3%83%A5%E3%83%AA%E3%83%86%E3%82%A3%E3%81%AB%E3%81%8A%E3%81%91%E3%82%8B%E3%83%AA%E3%82%B9%E3%82%AF%E7%AE%A1%E7%90%86_2x.jpg";
                     cardurl2 = "/ja/fundamentals/information-security-risk-management/";
                 } else if (dropValue == '21019') {
                     cardtitle1 = "【15分でわかる！シリーズ】8割超が満足したMDRのサービスとは？";
                     cardsubtitle1 = "PRODUCT VIDEO";
-                    cardimg1 = imgpath + "/Threat-command.jpg";
+                    cardimg1 = imgpath + "v1686223628/rapid7/1504/158mdr_.webp";
                     cardurl1 = "https://www.brighttalk.com/webcast/19011/568603?utm_source=brighttalk-portal&utm_medium=web&utm_campaign=channel-page&utm_content=featured";
                     cardtitle2 = "XDR (Extended Detection and Response) とは何ですか?";
                     cardsubtitle2 = "BLOG";
-                    cardimg2 = imgpath + "/Demystifying-xdr.jpg";
+                    cardimg2 = imgpath + "v1686223628/rapid7/1504/xdr_extended_detection_and_response_.webp";
                     cardurl2 = "/ja/fundamentals/extended-detection-response/";
                 }
             });

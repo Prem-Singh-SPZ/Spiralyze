@@ -18,7 +18,7 @@ var jQueryInterval = setInterval(function () {
             classAllocation();
 
             var cardtitle1, cardsubtitle1, cardimg1, cardurl1, cardtitle2, cardsubtitle2, cardimg2, cardurl2, dropValue, cardWrapper;
-            var imgpath = '//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/1504:%20Contact%20Page%20-%20Related%20Resources';
+            var imgpath = '//res.cloudinary.com/spiralyze/image/upload/';
             jQuery('body').find('#thankyouText').html('<div class="inner-wrapper"><div class="img-wrapper"><svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none"><circle cx="16" cy="16" r="16" fill="white"/><path d="M22.4 12L13.6 20.8L9.59998 16.8" stroke="#3B454A" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/></svg></div><h4 class="title">Vielen Dank für Ihr Interesse!</h4><h5 class="sub-title">Wir melden uns in Kürze bei Ihnen</h5></div>');
             jQuery('.rapid-contact-spz .form-wrap .form-container form#formBlock').append('<div class="card-inner-wrapper"></div>');
             jQuery('form#formBlock #contactType').on('click change', function () {
@@ -26,74 +26,74 @@ var jQueryInterval = setInterval(function () {
                 if (dropValue == '20437') {
                     cardtitle1 = "Was ist Cybersecurity-Risikomanagement?";
                     cardsubtitle1 = "WHITEPAPER / GUIDE";
-                    cardimg1 = imgpath + "/The-four-pillars.jpg";
+                    cardimg1 = imgpath + "v1686223621/rapid7/1504/was_ist_cybersecurity-risikomanagement.webp";
                     cardurl1 = "/de/cybersecurity-grundlagen/what-is-cybersecurity-risk-management/";
                     cardtitle2 = "Kundenratgeber: Auswahl einer SchwachstellenManagement-Lösung";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
-                    cardimg2 = imgpath + "/Modern-vulnerability-management.jpg";
+                    cardimg2 = imgpath + "v1686223621/rapid7/1504/auswahl_einer_schwachstellen-_management-losung.webp";
                     cardurl2 = "/de/info/vm-buyers-guide/";
                 } else if (dropValue == '20440') {
                     cardtitle1 = "DevSecOps: Definition und weitere Informationen";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Ways-to-power.jpg";
+                    cardimg1 = imgpath + "v1686223622/rapid7/1504/definition_und_weitere_informationen.webp";
                     cardurl1 = "/de/cybersecurity-grundlagen/devsecops/";
                     cardtitle2 = "Sicherheit und Scannen von Webanwendungen: Erläuterung und weitere Informationen";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
-                    cardimg2 = imgpath + "/Application-Security.jpg";
+                    cardimg2 = imgpath + "v1686223622/rapid7/1504/erlauterung_und_weitere_informationen.webp";
                     cardurl2 = "/de/cybersecurity-grundlagen/web-application-security/";
                 } else if (dropValue == '20443') {
                     cardtitle1 = "Ransomware-Playbook: So senken Sie das Angriffsrisiko und reduzieren die Auswirkungen";
                     cardsubtitle1 = "CUSTOMER STORY";
-                    cardimg1 = imgpath + "/Case-Study-Auden.jpg";
+                    cardimg1 = imgpath + "v1686223622/rapid7/1504/so_senken_sie_das_angriffsrisiko_und_reduzieren_die_auswirkungen.webp";
                     cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/Ransomware_Playbook_DE.pdf";
                     cardtitle2 = "Kundenratgeber: Auswahl einer Security Information and Event Management-Lösung (SIEM)";
                     cardsubtitle2 = "BRIEF / DATASHEET";
-                    cardimg2 = imgpath + "/Detection-and_response.jpg";
+                    cardimg2 = imgpath + "v1686223623/rapid7/1504/auswahl_einer_security_information_and_event_management-losung_siem.webp";
                     cardurl2 = "/de/info/siem-buyers-guide/";
                 } else if (dropValue == '20433') {
                     cardtitle1 = "Forschungbericht: Vertrauen in der Cloud";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Mobile-orkforce.jpg";
+                    cardimg1 = imgpath + "v1686223623/rapid7/1504/vertrauen_in_der_cloud.webp";
                     cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/Rapid7_Trust_in_the_Cloud.DE.pdf";
                     cardtitle2 = "Cloud Security für Einsteiger";
                     cardsubtitle2 = "SECURITY FUNDAMENTALS";
-                    cardimg2 = imgpath + "/Cloud-Network-Security.jpg";
+                    cardimg2 = imgpath + "v1686223623/rapid7/1504/cloud_security_fur_einsteiger.webp";
                     cardurl2 = "/de/info/cloud-security-fuer-einsteiger/";
                 } else if (dropValue == '20448') {
                     cardtitle1 = "Kundenratgeber: Managed Detection and Response (MDR)";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Managed-services.jpg";
+                    cardimg1 = imgpath + "v1686223624/rapid7/1504/managed_detection_and_response_mdr.webp";
                     cardurl1 = "https://information.rapid7.com/rs/411-NAK-970/images/MDR_Buyers_Guide_DE.pdf";
                     cardtitle2 = "Gartner®-Report: Fragen, die Sie sich bei der Auswahl eines MDR-Anbieters stellen sollten";
                     cardsubtitle2 = "WHITEPAPER / GUIDE";
-                    cardimg2 = imgpath + "/Under-the-hoodie.jpg";
+                    cardimg2 = imgpath + "v1686223624/rapid7/1504/fragen_die_sie_sich_bei_der_auswahl_eines_mdr-anbieters_stellen_sollten.webp";
                     cardurl2 = "/de/about/dach-blog-news/gartner-report-fragen-die-sie-sich-bei-der-auswahl-eines-mdr-anbieters-stellen-sollten/";
                 } else if (dropValue == '20450') {
                     cardtitle1 = "Automatisierung von Vulnerability Management";
                     cardsubtitle1 = "USE CASE";
-                    cardimg1 = imgpath + "/VM-Automation.jpg";
+                    cardimg1 = imgpath + "v1686223624/rapid7/1504/automatisierung_von_vulnerability_management.webp";
                     cardurl1 = "/de/products/insightconnect/use-cases/patching-remediation/";
                     cardtitle2 = " Incident Response beschleunigen";
                     cardsubtitle2 = "USE CASE";
-                    cardimg2 = imgpath + "/Accelerate-Incident-Response.jpg";
+                    cardimg2 = imgpath + "v1686223624/rapid7/1504/incident_response_beschleunigen.webp";
                     cardurl2 = "/de/products/insightconnect/use-cases/threat-hunting/";
                 } else if (dropValue == '20434') {
                     cardtitle1 = "Grundlagen des Cybersecurity-Programms";
                     cardsubtitle1 = "BRIEF / DATASHEET";
-                    cardimg1 = imgpath + "/Overview-brochure.jpg";
+                    cardimg1 = imgpath + "v1686223624/rapid7/1504/grundlagen_des_cybersecurity-programms.webp";
                     cardurl1 = "/de/cybersecurity-grundlagen/security-program-basics/";
                     cardtitle2 = "Was bedeutet Risikomanagement für die Informationssicherheit?";
                     cardsubtitle2 = "TEMPLATE";
-                    cardimg2 = imgpath + "/Planning-tools.jpg";
+                    cardimg2 = imgpath + "v1686223625/rapid7/1504/was_bedeutet_risikomanagement_fur_die_informationssicherheit.webp";
                     cardurl2 = "/de/cybersecurity-grundlagen/information-security-risk-management/";
                 } else if (dropValue == '21019') {
                     cardtitle1 = "Ransomware eine Ständig neue Bedrohung";
                     cardsubtitle1 = "PRODUCT VIDEO";
-                    cardimg1 = imgpath + "/Threat-command.jpg";
+                    cardimg1 = imgpath + "v1686223625/rapid7/1504/ransomware_eine_standig_neue_bedrohung.webp";
                     cardurl1 = "/globalassets/_pdfs/whitepaperguide/rapid7-the-evolving-ransomware-threat_de.pdf";
                     cardtitle2 = "Extended Detection and Response (XDR)";
                     cardsubtitle2 = "BLOG";
-                    cardimg2 = imgpath + "/Demystifying-xdr.jpg";
+                    cardimg2 = imgpath + "v1686223625/rapid7/1504/extended_detection_and_response_xdr.webp";
                     cardurl2 = "/de/cybersecurity-grundlagen/extended-detection-response-xdr/";
                 }
             });
