@@ -343,7 +343,7 @@
   <section class="logo-section">
     <div class="container">
       <h2 class="sec-title border-title">
-        Join Over <span>2,500</span> Companies Using Drata to Automate Compliance
+        Join Over <span>2,800</span> Companies Using Drata to Automate Compliance
       </h2>
       <div class="ls-logo-group dis-flex flex-wrap justify-content-between">
         <div class="ls-logo-item">
