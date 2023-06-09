@@ -1079,12 +1079,12 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).focus label:not([for=consultantField]):not([for=explicitOptOut]) {
   color: #e85e26;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).error input,
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).error select {
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).error:not(.filled) input,
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).error:not(.filled) select {
   border-color: #ff2b2b;
   color: #ff2b2b;
 }
-body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).error .errormsg {
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).error:not(.filled) .errormsg {
   color: #ff2b2b;
   font-weight: 400;
   font-size: 12px;

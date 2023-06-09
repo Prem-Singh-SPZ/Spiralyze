@@ -28,14 +28,14 @@ var jQueryInterval = setInterval(function () {
                         jQuery(this).closest('div').removeClass('filled');
                     }
                 }
-                else {
-                    if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
-                    }
-                    else {
-                        jQuery(this).closest('div').removeClass('invalid-field');
-                        jQuery(this).closest('div').addClass('filled');
-                    }
-                }
+                // else {
+                //     if (jQuery(this).val() == "" || jQuery(this).val() == null || jQuery(this).val() == '0') {
+                //     }
+                //     else {
+                //         jQuery(this).closest('div').removeClass('invalid-field');
+                //         jQuery(this).closest('div').addClass('filled');
+                //     }
+                // }
             });
 
             waitForElm('[input-name="parent-State"]').then(function (elm) {

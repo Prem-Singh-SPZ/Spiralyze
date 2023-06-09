@@ -49,6 +49,9 @@
         });
 
         // moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1:nth-child(2)');
+        document.querySelector('#header-logo-url').addEventListener('click', function () {
+          document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiTypography-root.MuiTypography-link').click();
+        });
 
         // Set focus on input
         focusFields();
@@ -261,7 +264,7 @@
     return `<section class="hero-section">
     <div class="header-nav">
       <div class="nav-section container">
-        <a href="https://drata.com/"
+        <a href="Javascript:void(0);" id="header-logo-url"
           ><img
             src="https://res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_drata.svg"
             class="brand-logo"

@@ -42,6 +42,11 @@
         var mySwiper = new Swiper('.swiper', {
           slidesPerView: 1,
           loop: true,
+          autoplay: {
+            delay: 3000,
+            disableOnInteraction: false,
+            pauseOnMouseEnter: true,
+          },
           spaceBetween: 110,
           navigation: {
             prevEl: document.querySelector(".swiper-button-prev"),
@@ -74,7 +79,7 @@
                 recession.
               </p>
               <div class="slider-cta">
-                <a
+                <a class="lg-cta"
                   href="https://abcfitness.com/resources/ebooks-and-articles/new-gym-member-onboarding-guide/"
                   >Download Free</a
                 >
@@ -96,7 +101,7 @@
                 recession.
               </p>
               <div class="slider-cta">
-                <a
+                <a class="lg-cta"
                   href="https://abcfitness.com/resources/ebooks-and-articles/recession-proof-your-fitness-business/"
                   >Download Free</a
                 >
@@ -117,7 +122,7 @@
                 simple tactics for generating free publicity.
               </p>
               <div class="slider-cta">
-                <a
+                <a class="lg-cta"
                   href="https://abcfitness.com/resources/ebooks-and-articles/ten-summer-activations-to-grow-gym-membership/"
                   >Download Free</a
                 >
@@ -138,9 +143,9 @@
                 apps that can increase member participation from 20% to 50%.
               </p>
               <div class="slider-cta">
-                <a
+                <a class="sm-cta"
                   href="https://abcfitness.com/resources/webinars-and-videos/2023-ihrsa-recap/"
-                  >Download Free</a
+                  >Watch Now</a
                 >
               </div>
             </div>
@@ -158,9 +163,9 @@
                 See how gym owners use ABC Ignite to grow sales 30%, streamline member management, and automate operations. 
               </p>
               <div class="slider-cta">
-                <a
+                <a class="sm-cta"
                   href="https://abcfitness.com/resources/webinars-and-videos/abc-ignite-product-tour/"
-                  >Download Free</a
+                  >Watch Now</a
                 >
               </div>
             </div>

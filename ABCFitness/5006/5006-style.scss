@@ -330,6 +330,8 @@
             margin: auto;
             @media (max-width: 767.98px) {
               font-size: 32px;
+              padding-left: 16px;
+              padding-right: 16px;
             }
           }
         }
@@ -338,7 +340,7 @@
           margin-top: 52px;
           padding: 0 110px;
           @media (max-width: 767.98px) {
-            padding: 0 20px;
+            padding: 0 19px;
             margin-top: 16px;
             padding-bottom: 69px;
             max-width: 500px;
@@ -369,13 +371,16 @@
               max-width: 470px;
               margin-left: auto;
               min-height: 244px;
+              padding-right: 11px;
 
               @media (min-width: 767.98px) and (max-width: 991.98px) {
                 max-width: 476px;
                 margin-left: 0;
+                padding-right: 17px;
               }
               @media (max-width: 767.98px) {
                 margin-top: 3px;
+                padding-right: 2px;
               }
 
               h6 {
@@ -417,7 +422,7 @@
                   flex-direction: row;
                   justify-content: center;
                   align-items: center;
-                  width: 193px;
+                  padding: 16px 24px;
                   height: 52px;
                   background: #ff6f30;
                   font-family: "Inter";
@@ -428,11 +433,20 @@
                   letter-spacing: 0.14em;
                   text-transform: uppercase;
                   color: #ffffff;
+                  white-space: nowrap;
                   &:hover {
                     background: #f1976e;
                   }
                   @media (max-width: 767.98px) {
                     width: 100%;
+                  }
+                  @media (min-width: 767.98px) {
+                    &.lg-cta {
+                      width: 193px;
+                    }
+                    &.sm-cta {
+                      width: 154px;
+                    }
                   }
                 }
               }
