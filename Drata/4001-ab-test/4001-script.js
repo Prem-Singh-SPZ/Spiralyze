@@ -402,7 +402,7 @@ function appendHubspotScript() {
     // script.setAttribute('type', 'text/javascript');
     // script.setAttribute('src', '//js.hsforms.net/forms/embed/v2.js');
 
-    script.innerHTML = 'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "429140d2-bd90-4a8b-a561-5d732c9bd514", cssClass: "hs-form-spz", css: "", submitText: "Get a Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
+    script.innerHTML = 'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "429140d2-bd90-4a8b-a561-5d732c9bd514", cssClass: "hs-form-spz", css: "", submitText: "Get Started", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
 
     document.querySelector('.form-wrapper-spz').appendChild(script);
 }

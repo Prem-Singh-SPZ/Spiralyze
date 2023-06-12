@@ -7,9 +7,14 @@
     main_class: 'body',
   }
   var content = document.createElement("script");
-  content.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.min.js";
+  content.src = "https://code.jquery.com/jquery-3.7.0.min.js";
   document.head.appendChild(content);
-  document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/9.2.0/swiper-bundle.css" />`)
+  var slickCDN = document.createElement("script");
+  content.onload = function () {
+    slickCDN.src = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js";
+    document.head.appendChild(slickCDN);
+    document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />`)
+  };
 
   function loadTest() {
     // Set test class
@@ -18,13 +23,13 @@
       heroContentUpdate();
       webinarSlider();
 
-      content.onload = function () {
+      slickCDN.onload = function () {
         initSlider();
       };
 
     });
     document.body.classList.add("loaded");
-    
+
     document.querySelector('head').insertAdjacentHTML('beforeend', `
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -35,24 +40,21 @@
   function initSlider() {
     if (document.querySelectorAll('.swiper-wrapper').length > 0) {
       let sliderInt = setInterval(() => {
-        if (document.querySelectorAll('.swiper.swiper-initialized').length > 0) {
+        if (document.querySelectorAll('.swiper-wrapper.slick-initialized').length > 0) {
           clearInterval(sliderInt);
           document.querySelector('.swiper-wrapper').style.opacity = 1;
         }
-        var mySwiper = new Swiper('.swiper', {
-          slidesPerView: 1,
-          loop: true,
-          autoplay: {
-            delay: 3000,
-            disableOnInteraction: false,
-            pauseOnMouseEnter: true,
-          },
-          spaceBetween: 110,
-          navigation: {
-            prevEl: document.querySelector(".swiper-button-prev"),
-            nextEl: document.querySelector(".swiper-button-next")
-          },
-        });
+        else {
+          $('.swiper-wrapper').slick({
+            slidesToShow: 1,
+            slidesToScroll: 1,
+            autoplay: true,
+            autoplaySpeed: 3000,
+          });
+          $('.slick-arrow').on('click', function () {
+            $('.swiper-wrapper').slick('slickPlay');
+          });
+        }
       }, 200);
     }
   }
@@ -171,8 +173,6 @@
             </div>
           </div>
         </div>
-        <div class="swiper-button-prev"></div>
-        <div class="swiper-button-next"></div>
       </div>
     </div>`);
   }

@@ -234,7 +234,7 @@
   background: -webkit-gradient(linear, left top, right top, from(rgba(2, 88, 141, 0.95)), to(rgba(41, 169, 225, 0.9)));
   background: linear-gradient(90deg, rgba(2, 88, 141, 0.95) 0%, rgba(41, 169, 225, 0.9) 100%);
   padding-top: 80px;
-  padding-bottom: 31px;
+  padding-bottom: 41px;
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   .spz-5006 main.l-body-wrapper .c-text-image-repeater {
@@ -278,11 +278,15 @@
 }
 @media (max-width: 767.98px) {
   .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent {
+    margin: auto;
     padding: 0 19px;
     margin-top: 16px;
-    padding-bottom: 69px;
+    padding-bottom: 59px;
     max-width: 500px;
   }
+}
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .webinar-slider-container {
+  opacity: 0;
 }
 .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .webinar-slide {
   display: -webkit-box;
@@ -321,17 +325,19 @@
   margin-left: auto;
   min-height: 244px;
   padding-right: 11px;
+  padding-top: 5px;
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .webinar-slide .slider-content {
     max-width: 476px;
     margin-left: 0;
     padding-right: 17px;
+    padding-top: 9px;
   }
 }
 @media (max-width: 767.98px) {
   .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .webinar-slide .slider-content {
-    margin-top: 3px;
+    margin-top: 6px;
     padding-right: 2px;
   }
 }
@@ -417,64 +423,66 @@
     width: 154px;
   }
 }
-.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-prev {
-  left: 4px;
-  top: calc(50% - 24px);
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-prev {
+  left: -96px;
+  top: calc(50% - 20px);
   outline: transparent;
-}
-.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-prev::after {
-  content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow.svg);
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
 }
-.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-prev:hover::after {
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-prev::before {
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow.svg);
+  opacity: 1;
+}
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-prev:hover::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow-hovered.svg);
 }
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
-  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-prev {
-    left: 30px;
+@media (min-width: 991.98px) and (max-width: 1224.98px) {
+  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-prev {
+    left: -30px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
-  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-prev {
-    left: 67px;
+  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-prev {
+    left: -32px;
     top: calc(50% - 33px);
   }
 }
 @media (max-width: 767.98px) {
-  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-prev {
+  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-prev {
     top: auto;
-    bottom: 13px;
-    left: calc(50% - 57px);
+    bottom: -54px;
+    left: calc(50% - 47px);
   }
 }
-.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-next {
-  right: 4px;
-  top: calc(50% - 21px);
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-next {
+  right: -96px;
+  top: calc(50% - 26px);
   outline: transparent;
 }
-.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-next::after {
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-next::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow.svg);
+  opacity: 1;
 }
-.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-next:hover::after {
+.spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-next:hover::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow-hovered.svg);
 }
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
-  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-next {
-    right: 30px;
+@media (min-width: 991.98px) and (max-width: 1224.98px) {
+  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-next {
+    right: -30px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
-  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-next {
-    right: 72px;
-    top: calc(50% - 30px);
+  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-next {
+    right: -26px;
+    top: calc(50% - 39px);
   }
 }
 @media (max-width: 767.98px) {
-  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .swiper-button-next {
+  .spz-5006 main.l-body-wrapper .c-text-image-repeater .spz-webinar-slider-section .webinar-slider-parent .slick-next {
     top: auto;
-    bottom: 10px;
-    right: calc(50% - 57px);
+    bottom: -48px;
+    right: calc(50% - 46px);
   }
 }
 

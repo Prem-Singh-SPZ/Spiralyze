@@ -300,7 +300,7 @@
         rgba(41, 169, 225, 0.9) 100%
       );
       padding-top: 80px;
-      padding-bottom: 31px;
+      padding-bottom: 41px;
       @media (min-width: 767.98px) and (max-width: 991.98px) {
         padding-bottom: 47px;
       }
@@ -340,10 +340,15 @@
           margin-top: 52px;
           padding: 0 110px;
           @media (max-width: 767.98px) {
+            margin: auto;
             padding: 0 19px;
             margin-top: 16px;
-            padding-bottom: 69px;
+            padding-bottom: 59px;
             max-width: 500px;
+          }
+
+          .webinar-slider-container {
+            opacity: 0;
           }
           .webinar-slide {
             display: flex;
@@ -372,14 +377,16 @@
               margin-left: auto;
               min-height: 244px;
               padding-right: 11px;
+              padding-top: 5px;
 
               @media (min-width: 767.98px) and (max-width: 991.98px) {
                 max-width: 476px;
                 margin-left: 0;
                 padding-right: 17px;
+                padding-top: 9px;
               }
               @media (max-width: 767.98px) {
-                margin-top: 3px;
+                margin-top: 6px;
                 padding-right: 2px;
               }
 
@@ -453,57 +460,59 @@
             }
           }
 
-          .swiper-button-prev {
-            left: 4px;
-            top: calc(50% - 24px);
+          .slick-prev {
+            left: -96px;
+            top: calc(50% - 20px);
             outline: transparent;
+            transform: rotate(180deg);
 
-            &::after {
+            &::before {
               content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow.svg);
-              transform: rotate(180deg);
+              opacity: 1;
             }
             &:hover {
-              &::after {
+              &::before {
                 content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow-hovered.svg);
               }
             }
 
-            @media (min-width: 991.98px) and (max-width: 1199.98px) {
-              left: 30px;
+            @media (min-width: 991.98px) and (max-width: 1224.98px) {
+              left: -30px;
             }
             @media (min-width: 767.98px) and (max-width: 991.98px) {
-              left: 67px;
+              left: -32px;
               top: calc(50% - 33px);
             }
             @media (max-width: 767.98px) {
               top: auto;
-              bottom: 13px;
-              left: calc(50% - 57px);
+              bottom: -54px;
+              left: calc(50% - 47px);
             }
           }
-          .swiper-button-next {
-            right: 4px;
-            top: calc(50% - 21px);
+          .slick-next {
+            right: -96px;
+            top: calc(50% - 26px);
             outline: transparent;
-            &::after {
+            &::before {
               content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow.svg);
+              opacity: 1;
             }
             &:hover {
-              &::after {
+              &::before {
                 content: url(//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow-hovered.svg);
               }
             }
-            @media (min-width: 991.98px) and (max-width: 1199.98px) {
-              right: 30px;
+            @media (min-width: 991.98px) and (max-width: 1224.98px) {
+              right: -30px;
             }
             @media (min-width: 767.98px) and (max-width: 991.98px) {
-              right: 72px;
-              top: calc(50% - 30px);
+              right: -26px;
+              top: calc(50% - 39px);
             }
             @media (max-width: 767.98px) {
               top: auto;
-              bottom: 10px;
-              right: calc(50% - 57px);
+              bottom: -48px;
+              right: calc(50% - 46px);          
             }
           }
         }

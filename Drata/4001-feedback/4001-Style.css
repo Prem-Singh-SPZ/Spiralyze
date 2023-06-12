@@ -329,10 +329,12 @@ footer {
   font-weight: 400;
   font-size: 15px;
   line-height: 22px;
-  color: #000000;
-  color: transparent !important;
   color: #000 !important;
-  color: #000 !important;
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  .hero-section form fieldset .field input {
+    padding-left: 12px;
+  }
 }
 .hero-section form fieldset .field input:hover {
   -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
@@ -359,6 +361,11 @@ footer {
   -moz-appearance: none;
   appearance: none;
   background: #fff url(//res.cloudinary.com/spiralyze/image/upload/v1683867771/drata/7001/dropdown_arrow.svg) no-repeat calc(100% - 16px) 50%;
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  .hero-section form fieldset .field select {
+    padding-left: 12px;
+  }
 }
 .hero-section form fieldset .field select:hover {
   -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
@@ -524,6 +531,11 @@ footer {
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-spz {
+    left: 12px;
+  }
 }
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
   display: none;
@@ -706,9 +718,14 @@ footer {
   z-index: 3;
   pointer-events: none;
 }
-@media (min-width: 1199.98px) {
+@media (min-width: 1216.98px) {
   .form-wrapper-spz .hbspt-form form .actions::before {
     right: 37.5%;
+  }
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  .form-wrapper-spz .hbspt-form form .actions::before {
+    right: 36.5%;
   }
 }
 
