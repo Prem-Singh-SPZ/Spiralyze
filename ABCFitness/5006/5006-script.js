@@ -54,6 +54,9 @@
           $('.slick-arrow').on('click', function () {
             $('.swiper-wrapper').slick('slickPlay');
           });
+          $('.swiper-wrapper').on('afterChange', function () {
+            $('.swiper-wrapper').slick('slickPlay');
+          });
         }
       }, 200);
     }

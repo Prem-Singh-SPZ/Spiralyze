@@ -5,12 +5,17 @@ const formInt = setInterval(() => {
       appendInputLabel();
   
       // Set input label
-      document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about Drata?*';
+      document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
+      document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
   
       // Change Email Field Position
       let email_el = document.querySelector('.hs_email');
       let company_el = document.querySelector('.hs_company_name');
       company_el.before(email_el);
+  
+      // Set button label
+      // document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
+      // document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
   
       // hs-button
       document.querySelector('.hs-button').addEventListener('click', function () {
@@ -22,7 +27,7 @@ const formInt = setInterval(() => {
   
       // Set focus on input
       focusFields();
-      document.body.classList.add('spz-10002');
+      document.body.classList.add('spz-7001');
     }
   }, 100);
   
@@ -33,7 +38,8 @@ const formInt = setInterval(() => {
         <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">`
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681206084/drata/6001/Checkmark.svg" as="image">`
     );
   }
   

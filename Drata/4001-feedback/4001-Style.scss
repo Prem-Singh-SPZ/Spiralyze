@@ -225,8 +225,10 @@ footer {
         background: url("//res.cloudinary.com/spiralyze/image/upload/v1683717803/drata/7001/arrow.svg");
         background-size: contain;
         background-repeat: no-repeat;
-        right: -206px;
-        bottom: -42px;
+        // right: -206px;
+        // bottom: -42px;
+        right: 12px;
+        bottom: -84px;
       }
       .list-item {
         &::before {
@@ -320,7 +322,11 @@ footer {
       max-width: unset;
       width: calc(50% - 8px);
       &:nth-child(5) {
-        display: none;
+        // display: none;
+        width: 100%;
+        .hs-fieldtype-checkbox .input {
+          margin: 0;
+        }
       }
       .field {
         position: relative;
@@ -411,6 +417,10 @@ footer {
       }
       .hs-fieldtype-checkbox {
         max-width: 368px;
+
+        .input{
+          margin: 0;
+        }
         .hs-field-desc {
           font-family: $font-family_3;
           font-style: normal;
@@ -489,6 +499,7 @@ footer {
             color: $color_3;
             padding-left: 24px;
             position: relative;
+            cursor: pointer;
             &::before {
               position: absolute;
               content: "";
@@ -508,7 +519,17 @@ footer {
       }
     }
     fieldset.form-columns-0 {
-      display: none;
+      // display: none;
+      width: 100%;
+      .hs-richtext.hs-main-font-element {
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 400;
+        font-size: 12px;
+        line-height: 24px;
+        color: #ffffff;
+        margin-bottom: 24px;
+      }
     }
     fieldset.form-columns-2 {
       width: 100%;
@@ -1236,8 +1257,8 @@ footer {
     .list-grp-wrapper {
       .list-group {
         &::after {
-          right: -186px;
-          bottom: -46px;
+          // right: -186px;
+          // bottom: -46px;
         }
       }
     }

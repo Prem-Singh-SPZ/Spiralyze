@@ -18,11 +18,16 @@
       if (document.querySelectorAll('.hbspt-form form').length > 0) {
         clearInterval(formInt);
 
+
+        document.querySelector('.form-wrapper-spz').style.opacity = 1;
+        document.querySelector('#__next > main').remove();
+        document.querySelector('#__next > header').remove();
+
         appendInputLabel();
 
         // Set input label
-        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
-        document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about us?*');
+        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about Drata?*';
+        document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about Drata?*');
         document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
         // Set SOC-2 checkbox checked
         document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
@@ -67,7 +72,7 @@
         <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
         <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
-        <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1681206084/drata/6001/Checkmark.svg" as="image">`
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1686657672/drata/1005/Checkbox.svg" as="image">`
     );
   }
 
@@ -257,7 +262,7 @@
   function pageContent() {
     return `<section class="hero-section">
     <div
-      class="hero-content container dis-flex flex-wrap justify-content-between"
+      class="hero-content container dis-flex"
     >
       <div class="hero-right-section">
         <div class="form-wrapper-spz">

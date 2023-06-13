@@ -211,8 +211,8 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     background: url("//res.cloudinary.com/spiralyze/image/upload/v1683717803/drata/7001/arrow.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    right: -140px;
-    bottom: -67px;
+    right: 16px;
+    bottom: -94px;
 }
 
 .hero-section .list-grp-wrapper .list-group .list-item::before {
@@ -312,11 +312,21 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 }
 
 .hero-section form fieldset.form-columns-0 {
-    display: none;
-}
-
+    width: 100%;
+  }
+  
+  .hero-section form fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
+    font-family: "Inter", sans-serif;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 12px;
+    line-height: 24px;
+    color: #FFFFFF;
+    margin-bottom: 24px;
+  }
+  
 .hero-section form fieldset:nth-child(5) {
-    display: none;
+    width: 100%;
 }
 
 .hero-section form fieldset.form-columns-2 {
@@ -428,7 +438,9 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .hero-section form fieldset .hs-fieldtype-checkbox {
     max-width: 368px;
 }
-
+.hero-section form fieldset .hs-fieldtype-checkbox .input {
+   margin: 0;
+}
 .hero-section form fieldset .hs-fieldtype-checkbox .hs-field-desc {
     font-family: 'Inter', sans-serif;
     font-style: normal;
@@ -505,6 +517,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     color: #FFFFFF;
     padding-left: 24px;
     position: relative;
+    cursor: pointer;
 }
 
 .hero-section form fieldset .hs-fieldtype-checkbox ul.inputs-list span::before {
@@ -754,8 +767,8 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
     }
 
     .hero-section .list-grp-wrapper .list-group::after {
-        right: -142px;
-        bottom: -76px;
+        /* right: -142px;
+        bottom: -76px; */
     }
 }
 
@@ -1047,6 +1060,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 
     .logo-section .ls-logo-item {
         margin: 0 49px 48px;
+        max-width: 180px;
     }
 }
 
