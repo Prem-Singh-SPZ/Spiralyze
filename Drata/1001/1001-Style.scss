@@ -115,7 +115,7 @@ sup {
 img {
   border-style: none;
 }
-body.spz-4001{
+body.spz-4001 {
   .container {
     margin: 0 auto;
     padding: 0 40px;
@@ -413,6 +413,10 @@ body.spz-4001{
         }
         .hs-fieldtype-checkbox {
           max-width: 368px;
+
+          > .input {
+            margin: 0;
+          }
           .hs-field-desc {
             font-family: $font-family_3;
             font-style: normal;
@@ -510,7 +514,18 @@ body.spz-4001{
         }
       }
       fieldset.form-columns-0 {
-        display: none;
+        // display: none;
+        width: 100%;
+
+        .hs-richtext.hs-main-font-element {
+          font-family: $font-family_5;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 24px;
+          color: #ffffff;
+          margin-bottom: 32px;
+        }
       }
       fieldset.form-columns-2 {
         width: 100%;
@@ -1130,7 +1145,6 @@ body.spz-4001{
     max-width: 100% !important;
   }
 }
-
 
 body.spz-4001 {
   #__next {

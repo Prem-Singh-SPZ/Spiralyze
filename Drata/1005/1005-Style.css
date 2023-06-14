@@ -131,6 +131,10 @@ img {
   align-items: center;
 }
 
+body.spz-1005 {
+  min-height: 800px;
+  height: 100vh;
+}
 body.spz-1005 .osano-cm-widget[title="Cookie Preferences"] {
   display: none !important;
 }
@@ -148,8 +152,12 @@ body.spz-1005 .hero-content {
 body.spz-1005 .hero-content .hero-right-section {
   max-width: 633px;
 }
+body.spz-1005.safari .hero-section {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1685529353/drata/6004/image_1.png);
+  background-size: cover;
+}
 body.spz-1005 .hero-section {
-  min-height: 1200px;
+  height: 100%;
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1685529353/drata/6004/image_1.webp);
   background-size: cover;
   display: -webkit-box;
@@ -472,7 +480,7 @@ body.spz-1005 .hero-section form fieldset .hs-fieldtype-checkbox ul.inputs-list 
   left: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #0466BA;
+  background: #0466ba;
   border: 1px solid transparent;
   border-radius: 4px;
 }
@@ -485,7 +493,7 @@ body.spz-1005 .hero-section form fieldset .hs-fieldtype-checkbox ul.inputs-list 
   left: 0;
   -webkit-transform: translateY(-50%);
   transform: translateY(-50%);
-  background: #0466BA;
+  background: #0466ba;
   border: 1px solid rgb(255, 255, 255);
   border-radius: 4px;
 }

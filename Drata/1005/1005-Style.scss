@@ -154,6 +154,8 @@ img {
 }
 
 body.spz-1005 {
+  min-height: 800px;
+  height: 100vh;
   .osano-cm-widget[title="Cookie Preferences"] {
     display: none !important;
   }
@@ -165,8 +167,14 @@ body.spz-1005 {
       max-width: 633px;
     }
   }
+  &.safari {
+    .hero-section {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/v1685529353/drata/6004/image_1.png);
+      background-size: cover;
+    }
+  }
   .hero-section {
-    min-height: 1200px;
+    height: 100%;
     background: url(//res.cloudinary.com/spiralyze/image/upload/v1685529353/drata/6004/image_1.webp);
     background-size: cover;
     display: flex;
@@ -485,12 +493,12 @@ body.spz-1005 {
                 -webkit-transform: translateY(-50%);
                 -ms-transform: translateY(-50%);
                 transform: translateY(-50%);
-                background:  #0466BA;
+                background: #0466ba;
                 border: 1px solid transparent;
                 border-radius: 4px;
               }
 
-              &:hover{
+              &:hover {
                 &::before {
                   position: absolute;
                   content: "";
@@ -501,7 +509,7 @@ body.spz-1005 {
                   -webkit-transform: translateY(-50%);
                   -ms-transform: translateY(-50%);
                   transform: translateY(-50%);
-                  background:  #0466BA;
+                  background: #0466ba;
                   border: 1px solid rgba(255, 255, 255, 1);
                   border-radius: 4px;
                 }
@@ -971,6 +979,10 @@ body.spz-1005 {
 }
 
 // Safari css
-body.spz-1005.safari .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list{
+body.spz-1005.safari
+  .form-wrapper-spz
+  .hbspt-form
+  form
+  .hs-error-msgs.inputs-list {
   padding: 4px 12px;
 }
