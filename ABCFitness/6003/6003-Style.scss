@@ -167,11 +167,12 @@ $aktiv: "aktiv-grotesk", sans-serif;
                 height: 52px;
                 background: #ff6f30;
                 transition-duration: 100ms;
+                cursor: pointer;
 
                 &:hover {
-                  color: #000;
-                  background: #fff;
-                  border: 1px solid #ff6f30;
+                  background: #00aeef;
+                  -webkit-appearance: none;
+                  opacity: 1;
                 }
 
                 @media (max-width: 767px) {
@@ -269,6 +270,113 @@ $aktiv: "aktiv-grotesk", sans-serif;
 
         @media (max-width: 340px) {
           max-width: 300px;
+        }
+      }
+    }
+
+    //Modal code
+    > #get-in-contact {
+      opacity: 0;
+      visibility: hidden;
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      // bottom: 0;
+      background: rgba(0, 0, 0, 0.4);
+      backdrop-filter: blur(5px);
+      overflow: auto;
+      height: 0;
+      // transition-delay: 200ms;
+
+      &.show-modal {
+        opacity: 1;
+        visibility: visible;
+        height: 100vh;
+        z-index: 100;
+      }
+
+      padding: 24px 0;
+      .l-container.c-form__container {
+        @media (min-width: 767.98px) and (max-width: 991.98px) {
+          padding: 0;
+        }
+        @media (max-width: 767.98px) {
+          padding: 0 2px;
+        }
+        .c-dbm__title-wrapper.c-form__title-wrapper {
+          display: none !important;
+        }
+
+        max-width: 684px;
+        .c-dbm__content.c-form__content.c-content {
+          // background: #ffffff;
+          box-shadow: 0px 10px 50px rgba(0, 0, 0, 0.15);
+          border-radius: 12px;
+          padding: 32px;
+          position: relative;
+          max-width: 420px;
+          padding-bottom: 17px;
+          // background-color: #fff;
+          background-image: -webkit-gradient(
+            linear,
+            left bottom,
+            left top,
+            color-stop(1%, #1c99d6),
+            to(#263870)
+          );
+          background-image: -o-linear-gradient(
+            bottom,
+            #1c99d6 1%,
+            #263870 100%
+          );
+          background-image: linear-gradient(0deg, #1c99d6 1%, #263870);
+          @media (max-width: 599.98px) {
+            padding: 40px 12px;
+            max-width: 320px;
+            // padding-bottom: 48px;
+          }
+
+          > p {
+            margin: 0;
+            > strong {
+              margin: 5px 0 0;
+              display: block;
+            }
+
+            > br {
+              display: none;
+            }
+
+            iframe {
+              height: 704.34px;
+            }
+          }
+
+          .spz-form-title {
+            font-size: 18px;
+            font-family: $aktiv;
+            font-weight: 700;
+            line-height: 27px;
+            color: #fff;
+            // color: #445264;
+          }
+          .close-modal {
+            position: absolute;
+            right: 16px;
+            top: 16px;
+            width: 12px;
+            height: 12px;
+            cursor: pointer;
+
+            img {
+              // opacity: 0.6;
+
+              &:hover {
+                opacity: 0.8;
+              }
+            }
+          }
         }
       }
     }
@@ -390,6 +498,7 @@ $aktiv: "aktiv-grotesk", sans-serif;
             align-items: center;
             justify-content: center;
             transition: none;
+            cursor: pointer;
 
             @media (max-width: 767.98px) {
               max-width: 100%;
@@ -403,7 +512,9 @@ $aktiv: "aktiv-grotesk", sans-serif;
               padding-bottom: 5px;
             }
             &:hover,
-            &:focus, &:active, &:visited {
+            &:focus,
+            &:active,
+            &:visited {
               background: #00aeef;
               -webkit-appearance: none;
               opacity: 1;

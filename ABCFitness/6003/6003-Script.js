@@ -14,7 +14,11 @@ function loadTest() {
     heroContent();
     waitForElm('body.page-parent.solutions main.l-body-wrapper footer.l-footer').then(function () {
         stickyFooter();
+        if (document.querySelectorAll('.spz-form-title').length == 0) {
+            modalUpdate();
+        }
     });
+
     document.body.classList.add("loaded");
     waitForElm('body.page-parent.solutions main.l-body-wrapper .spz-sticky-footer').then(function () {
         window.onload = checkScrollPosition();
@@ -26,6 +30,33 @@ function loadTest() {
         headerChange();
     }
 }
+
+function modalUpdate() {
+    document.querySelector('#get-in-contact .l-container.c-form__container .c-dbm__content.c-form__content.c-content ').insertAdjacentHTML('afterbegin', `<div class='close-modal'>
+    <img src="//res.cloudinary.com/spiralyze/image/upload/v1681809630/ABCFitnessSolutions/6002/assets/close_1.svg" class='close-modal-icon' alt="Close">
+   </div><div class="spz-form-title">Schedule a Demo</div>`)
+
+}
+
+//perform click actions
+window.addEventListener("click", function (e) {
+    if (e.target.classList.contains("trigger-demo-modal")) {
+        // this.document.querySelector('#get-in-contact').style.display = 'block';
+        this.document.querySelector('#get-in-contact').classList.add('show-modal');
+        this.document.body.classList.add('modal-open');
+    }
+    // console.log(e.target.classList)
+    if (e.target.classList.contains("close-modal-icon")) {
+        // this.document.querySelector('#get-in-contact').style.display = 'none';
+        if (this.document.querySelector('#get-in-contact').classList.contains('show-modal')) {
+            this.document.querySelector('#get-in-contact').classList.remove('show-modal');
+        }
+        if (this.document.body.classList.contains('modal-open')) {
+            this.document.body.classList.remove('modal-open');
+        }
+    }
+});
+
 
 function heroContent() {
     if (document.querySelectorAll('.hero-section-solutions-spz').length == 0) {
@@ -45,7 +76,7 @@ function heroContent() {
                             </ul>
 
                             <div class="hs-cta-wrapper">
-                                <a class="hs-cta-primary" href="https://abcfitness.com/request-a-demo/">Request a demo</a>
+                                <a class="hs-cta-primary trigger-demo-modal" id="trigger-demo-modal">Request a demo</a>
                             </div>
                         </div>
                         <div class="hs-image-spz">
@@ -95,7 +126,7 @@ function stickyFooter() {
     </picture>
         </div>
         <div class="sticky-content"><p>Grow revenue <span>30%</span> by automating <custom>operations, sales, and member management.</custom></p></div>
-        <div class="sticky-cta"><a class="hs-cta-primary" href="https://abcfitness.com/request-a-demo/">Request a demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1683032144/ABCFitnessSolutions/6003/src/Arrow.svg"
+        <div class="sticky-cta"><a class="hs-cta-primary trigger-demo-modal">Request a demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1683032144/ABCFitnessSolutions/6003/src/Arrow.svg"
         alt="Arrow"></a></div>
         </div>
         </div>`)

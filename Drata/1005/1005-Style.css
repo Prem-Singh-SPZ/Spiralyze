@@ -377,9 +377,6 @@ body.spz-1005 .hero-section form fieldset .field select.is-placeholder {
 body.spz-1005 .hero-section form fieldset .field select.is-placeholder:focus {
   color: #000 !important;
 }
-body.spz-1005 .hero-section form fieldset .hs-fieldtype-checkbox .input {
-  margin-bottom: 0px;
-}
 body.spz-1005 .hero-section form fieldset .hs-fieldtype-checkbox .hs-field-desc {
   font-family: "Darker Grotesque", sans-serif;
   font-style: normal;
@@ -499,10 +496,17 @@ body.spz-1005 .hero-section form fieldset.form-columns-0 .hs-richtext.hs-main-fo
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 400;
-  font-size: 12px;
-  line-height: 24px;
+  font-size: 15px;
+  line-height: 22px;
   color: #ffffff;
-  margin-bottom: 24px;
+  margin-bottom: 8px;
+  margin-top: 8px;
+}
+@media (max-width: 767.98px) {
+  body.spz-1005 .hero-section form fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
+    margin-top: -4px;
+    margin-bottom: 18px;
+  }
 }
 body.spz-1005 .hero-section form fieldset.form-columns-2 {
   width: 100%;
