@@ -124,6 +124,14 @@ window.addEventListener("click", function (e) {
 });
 
 
+window.onbeforeunload = function () {
+    if (document.querySelector('#get-in-contact').classList.contains('show-modal')) {
+        document.querySelector('#get-in-contact').classList.remove('show-modal');
+        document.body.classList.remove('modal-open');
+    }
+}
+
+
 // Generic
 history.pushState = (function (f) {
     return function pushState() {

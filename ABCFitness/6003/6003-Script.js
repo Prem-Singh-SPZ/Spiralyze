@@ -199,6 +199,14 @@ window.addEventListener('locationchange', function () {
     urlCheck(url);
 });
 
+window.onbeforeunload = function () {
+    if (document.querySelector('#get-in-contact').classList.contains('show-modal')) {
+        document.querySelector('#get-in-contact').classList.remove('show-modal');
+        document.body.classList.remove('modal-open');
+    }
+}
+
+
 let url = location.href;
 urlCheck(url);
 function urlCheck(url) {
