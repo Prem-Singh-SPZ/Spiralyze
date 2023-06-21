@@ -9,10 +9,8 @@ function createtest() {
     document.querySelector("body").classList.add("loading-spz_test");
     document.querySelector("body").classList.add("spz-14001");
     document.querySelector("body").classList.remove("remove-spz-14001-test");
-    console.log('step 2');
 
     waitForElm('body.spz-14001 header + div[data-testid="HeroFramework"] > .MuiContainer-root').then(function () {
-        console.log('step 3');
         if (document.querySelectorAll('body header + div > .MuiContainer-root .hero-section').length == 0) {
             document.querySelector('body header + div > .MuiContainer-root').insertAdjacentHTML("afterbegin", '<section class="hero-section">\
             <div class="hero-content dis-flex flex-wrap justify-content-between">\
@@ -123,10 +121,7 @@ function urlCheck(url) {
         allblogsurlstring = window.location.href;
     }
     if (isSameUrl(url, allblogsurlstring, false)) {
-        console.log('step 1');
-
-        createtest();
-        
+        createtest();   
     } else {
         removetest();
     }
