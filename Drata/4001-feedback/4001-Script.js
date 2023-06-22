@@ -12,7 +12,7 @@ const formInt = setInterval(() => {
         // Change Email Field Position
         let email_el = document.querySelector('.hs_email');
         let company_el = document.querySelector('.hs_company_name');
-        company_el.before(email_el);
+        // company_el.before(email_el);
 
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {

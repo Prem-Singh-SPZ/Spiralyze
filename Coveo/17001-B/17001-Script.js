@@ -63,6 +63,11 @@ jQuery(function ($) {
             $(document).on('touchstart touchend', '.static-card-slider', function () {
                 $('.static-card-slider').slick('play');
             });
+            $('.static-card-slider').hover(function () {
+                $(this).slick('play');
+            }, function () {
+                $(this).slick('pause');
+            });
         }
     });
 });

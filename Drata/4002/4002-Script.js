@@ -10,6 +10,15 @@
                 document.querySelector('.osano-cm-window__widget').click();
             });
 
+            // moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1');
+
+            // Add field-untouched class on select element
+            document.querySelectorAll('select.hs-input').forEach(function (el) {
+                if (el.options.length > 0) {
+                    el.closest('.field').classList.add('field-untouched');
+                }
+            });
+
             document.body.classList.add('spz-4002');
             updateHeroContents();
             // updateInputLabel();
@@ -29,52 +38,39 @@
         // document.querySelector('.body-wrapper.hs-page #main-content').insertAdjacentHTML('afterbegin', heroSection());
     }
 
-    function appendFavicon() {
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `
-        <meta name="description" content="Drata automates the SOC 2 process so you can close deals faster, drive revenue, and build customer trust through continuous monitoring and assurance.">
-            <link rel="shortcut icon" href="https://drata.com/images/favicon.ico">
-            <link rel="icon" type="image/png" sizes="256x256" href="https://drata.com/images/favicon-256x256.png">
-            <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
-            <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
-            <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
-    
-            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1683277555/drata/4002/custom_assets/dropdown_arrow.svg" as="image">
-            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-blank.svg" as="image">
-            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601858/drata/6002/Checkmark-hover.svg" as="image">
-            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1682601857/drata/6002/Checkmark-bg.svg" as="image">`
-        );
-    }
-
-    appendFavicon();
-
-    // Remove all style tags without id in header
-    // function removeStyleTags() {
-    //     // Remove link tag which contains main.min.css or Social_follow.min.css in href attribute
-    //     document.querySelectorAll('link').forEach(function (el) {
-    //         if (el.href.indexOf('4001-style.min.css') > -1) {
-    //             el.remove();
-    //         }
-    //     });
-    // }
-
-    // Create input label with placeholder text
-    // function updateInputLabel() {
-    //     document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
-    //         const label = el.parentElement.querySelector("label");
-    //         label.innerHTML = (label.textContent.split('*')[0] + '&nbsp;*');
-    //     });
-    // }
-
     // On input focus add class on closest parent .field class
     function focusFields() {
         document.querySelectorAll('.hs-input').forEach(function (el) {
+            // On input focus add .field-focus class on closest parent .field class
             el.addEventListener('focus', function () {
                 el.closest('.field').classList.add('field-focus');
+                setTimeout(function () {
+                    el.closest('.field').classList.remove('field-error');
+                    el.closest('.field').classList.remove('field-untouched');
+                }, 100);
             });
+
+            // On input blur remove .field-focus class on closest parent .field class
             el.addEventListener('blur', function () {
                 el.closest('.field').classList.remove('field-focus');
-                checkError();
+                setTimeout(function () {
+                    checkError();
+                }, 100);
             });
+
+            // On select element change remove .field-error class on closest parent .field class
+            if (el.tagName == 'SELECT') {
+                el.addEventListener('change', function () {
+                    el.closest('.field').classList.remove('field-error');
+                });
+
+                // el.addEventListener('focus', function () {
+                //     el.closest('.field').classList.add('field-focus');
+                //     setTimeout(function () {
+                //         el.closest('.field').classList.remove('field-untouched');
+                //     }, 100);
+                // });
+            }
         });
     }
 
@@ -114,16 +110,6 @@
         });
     }
 
-    // Load again if device rotate 
-    // window.onorientationchange = function () {
-    //     var orientation = window.orientation;
-    //     switch (orientation) {
-    //         case 0:
-    //         case 90:
-    //         case -90: initSwiper();
-    //             break;
-    //     }
-    // };
 
     // Add class 'safari' (used for cart scrollbar)
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -240,7 +226,7 @@
 	<div class="MuiBox-root css-dwssr9-Collection-root" data-testid="Collection-integrations" id="4O2EqkfZkMR1kQlDwDjIlT" gutterwidth="default" data-csk-entry-id="4O2EqkfZkMR1kQlDwDjIlT" data-csk-entry-type="collection" data-csk-entry-display-text="Collection">
 		<div class="MuiContainer-root MuiContainer-maxWidthLg css-1o00hxm-MuiContainer-root-Collection-contentContainer">
 			<div class="MuiBox-root css-op7sus-Text-rootWrapper-Collection-introText">
-				<h2 class="MuiTypography-root MuiTypography-body1 MuiTypography-alignDefault css-17jd2ru-MuiTypography-root-Text-title">75+ Native <br>Integrations</h2></div>
+				<h2 class="MuiTypography-root MuiTypography-body1 MuiTypography-alignDefault css-17jd2ru-MuiTypography-root-Text-title">80+ Native <br>Integrations</h2></div>
 			<div class="MuiBox-root css-8z2x31-Collection-itemsContainer" id="items">
 				<div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-ipcq2m-MuiPaper-root-MuiCard-root-Card-root-Collection-item" data-testid="Card" data-csk-entry-id="4os0JTuIzzw7sCEeodZe45" data-csk-entry-type="card" data-csk-entry-display-text="Card" position="1">
 					<div class="MuiCardContent-root css-15t3sex-MuiCardContent-root-Card-cardContent">
@@ -1181,7 +1167,7 @@
 
     function updateHeroContents() {
         if (document.querySelectorAll('#main-content > .hero-section').length > 0) {
-            document.querySelector('#main-content > .hero-section .header-nav .nav-section a .logo-img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
+            document.querySelector('#main-content > .hero-section .header-nav .nav-section a .brand-logo').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1682075797/drata/4002/drata-full-wordmark.svg');
             document.querySelector('#main-content > .hero-section .header-nav .nav-section').classList.add('container');
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs_source__inbound_demo_ .input > input').setAttribute('placeholder', 'How did you hear about Drata?*');
             document.querySelector('#main-content > .hero-section .hbspt-form form .hs-input[name="number_of_employees"] option:first-child').textContent = `Number of Employees*`;
@@ -1191,7 +1177,7 @@
             document.querySelector('#main-content > .hero-section .form-wrapper-spz .form-title-spz').textContent = `Get a Demo`;
             document.querySelector('#main-content > .hero-section .hero-content .hc-title').textContent = `Automate SOC 2 compliance. Reduce
         compliance time and cost by 50%.`;
-            document.querySelector('#main-content > .hero-section .hero-content .list-grp-wrapper .list-group').innerHTML = `<ul class="list-group">
+            document.querySelector('#main-content > .hero-section .hero-content .list-grp-wrapper .list-group').outerHTML = `<ul class="list-group">
         <li class="list-item">
         <div class="ls-title">Reduce Time by Up to 80%</div>
         <div class="ls-desc">Automate documentation and evidence collection. Integrates with your tech stack out of the box.</div>
