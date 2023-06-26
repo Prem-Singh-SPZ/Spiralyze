@@ -79,7 +79,7 @@ function createtest() {
 
         document.querySelector('#hero-copy-url').addEventListener('click', function () {
             document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiList-root .MuiButton-cta1').click();
-          });
+        });
     });
 }
 
@@ -116,12 +116,12 @@ var url = location.href;
 urlCheck(url);
 
 function urlCheck(url) {
-    var allblogsurlstring = '';
-    if (window.location.href.indexOf("/product/") > -1) {
-        allblogsurlstring = window.location.href;
+    let testURL = '';
+    if (window.location.pathname.indexOf("/product/") > -1) {
+        testURL = window.location.href;
     }
-    if (isSameUrl(url, allblogsurlstring, false)) {
-        createtest();   
+    if (isSameUrl(url, testURL, true)) {
+        createtest();
     } else {
         removetest();
     }
