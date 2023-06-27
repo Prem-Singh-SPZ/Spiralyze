@@ -71,10 +71,12 @@ const formInt6002 = setInterval(() => {
         });
 
         // Changing field sequence
-        moveElement('.hs_company_name', '.form-wrapper-spz .hbspt-form form fieldset:nth-child(2)');
+        let email_el = document.querySelector('.hs_email').closest('fieldset');
+        let company_el = document.querySelector('.hs_company').closest('fieldset');
+        company_el.before(email_el);
 
         // Making fields into two columns
-        moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1');
+        // moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1');
 
         document.querySelector('.footer-cookie').addEventListener("click", function (e) {
             document.querySelector('.osano-cm-window__widget').click();
@@ -161,6 +163,7 @@ function appendInputLabel() {
         }
         label.setAttribute('for', el.id);
         label.classList.add('hs-label-spz');
+        forClearBitForms()
         el.parentNode.insertBefore(label, el.nextSibling);
     });
 }
@@ -212,6 +215,7 @@ function checkError() {
             el.closest('.field').classList.remove('field-error');
         }
     });
+    forClearBitForms();
 }
 
 // Scroll to element on click
@@ -274,14 +278,14 @@ function heroSection() {
                     <img src="//res.cloudinary.com/spiralyze/image/upload/v1685524763/drata/6002/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
                     <img src="//res.cloudinary.com/spiralyze/image/upload/v1685694030/drata/6002/star-orange.svg"
                         class="sr-img" alt="Ratings" title="Ratings" draggable="false">
-                    <span class="sr-number"><strong>4.9</strong> (398 reviews)</span>
+                    <span class="sr-number"><strong>4.9</strong> (461 reviews)</span>
                 </div>
 
                 <div class="list-grp-wrapper">
                     <ul class="list-group">
                         <li class="list-item">
                             <div class="ls-title">Automate Evidence Collection</div>
-                            <div class="ls-desc">Collect documentation from your tech stack. 75+ integrations and an
+                            <div class="ls-desc">Collect documentation from your tech stack. 80+ integrations and an
                                 open API.</div>
                         </li>
                         <li class="list-item">
@@ -290,7 +294,7 @@ function heroSection() {
                                 HIPAA, PCI, GDPR, and more.</div>
                         </li>
                         <li class="list-item">
-                            <div class="ls-title">Integrations</div>
+                            <div class="ls-title">Security Policies</div>
                             <div class="ls-desc">20+ customizable, auditor-approved policies. Streamlined employee
                                 signing & documentation.</div>
                         </li>
@@ -373,7 +377,7 @@ function howItWorksSection() {
                             <div class="step-content">
                                 <span class="step-number">STEP 1</span>
                                 <h6 class="step-title">Connect to Your Tech Stack</h6>
-                                <p class="step-info">Drata natively connects to 75+ tools in your tech stack so you can start collecting evidence in minutes.</p>
+                                <p class="step-info">Drata natively connects to 80+ tools in your tech stack so you can start collecting evidence in minutes.</p>
                             </div>
                         </div>
                         <div class="work-step-item">
@@ -426,7 +430,7 @@ function featuresSection() {
                             </div>
                             <div class="content-container">
                                 <h6>Evidence Collection</h6>
-                                <p>Collection documentation from your tech stack. Powered by 75+ integrations and an open API.</p>
+                                <p>Collection documentation from your tech stack. Powered by 80+ integrations and an open API.</p>
                             </div>
                         </div>
                         <div class="fs-card-item">
@@ -519,7 +523,7 @@ function reviewsSection() {
                     <h4 class="r-title">Excellent</h4>
                     <img src="https://res.cloudinary.com/spiralyze/image/upload/v1681291120/drata/6001/review_star.svg"
                         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
-                    <p class="r-numbers">Based on <span>385</span> reviews</p>
+                    <p class="r-numbers">Based on <span>461</span> reviews</p>
                     <img src="https://res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg" alt="G2"
                         title="G2" class="g2-logo">
                     </div>
@@ -614,3 +618,29 @@ function integrationsSection() {
 if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
     document.body.classList.add('safari')
 }
+
+
+// Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
+function forClearBitForms() {
+    document.querySelectorAll('.hs-input').forEach(function (el) {
+        if (el.closest('.hs-form-field[style*="display: none"]')) {
+            el.closest('fieldset').classList.add('field-hidden');
+        } else {
+            el.closest('fieldset').classList.remove('field-hidden');
+        }
+    });
+}
+
+const cbInt6002 = setInterval(function () {
+  if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
+    // clearInterval(cbInt);
+    forClearBitForms();
+  }
+}, 500);
+
+// on user type in .hs-input run forClearBitForms() function
+// document.addEventListener('keyup', function (e) {
+//   if (e.target.classList.contains('hs-input')) {
+//     forClearBitForms();
+//   }
+// });
