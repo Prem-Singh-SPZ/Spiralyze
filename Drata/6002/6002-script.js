@@ -574,7 +574,7 @@ function footerSection() {
                         <a href="https://drata.com/"><img
                                 src="//res.cloudinary.com/spiralyze/image/upload/v1682676285/drata/4002/custom_assets/Drata-full-wordmark.svg"
                                 class="brand-logo" alt="Drata" title="Drata" draggable="false"></a>
-                        <p class="brand-desc">Drata is a security and compliance automation platform that continuously monitors and collects evidence of a companyâ€™s security controls, while streamlining workflows to ensure audit-readiness.</p>
+                        <p class="brand-desc">Drata is a security and compliance automation platform that continuously monitors and collects evidence of a company&#8217;s security controls, while streamlining workflows to ensure audit-readiness.</p>
                     </div>
                     <div class="brand-social-links dis-flex justify-content-between flex-wrap">
                         <a href="https://www.youtube.com/channel/UCL7xTQRHuxO3M5dHHOjhfMA" target="_blank" class="social-item"
@@ -594,7 +594,7 @@ function footerSection() {
                 </div>
                 <hr>
                 <div class="footer-bottom container dis-flex justify-content-between">
-                    <p class="copyright-text">Â© 2023 Drata Inc. All rights reserved.</p>
+                    <p class="copyright-text">&copy; 2023 Drata Inc. All rights reserved.</p>
                     <div class="footer-legalLinks">
                         <a href="https://drata.com/privacy">Privacy Policy</a>
                         <a href="https://drata.com/gdprdrata">GDPR</a>

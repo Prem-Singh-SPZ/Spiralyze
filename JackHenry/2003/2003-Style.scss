@@ -1,0 +1,61 @@
+body.spz-2003 {
+  .hs_cos_wrapper_type_form form.hs-form-private {
+    @media (min-width: 767.98px) {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+    }
+
+    .hs-form-field {
+      &:not(.hs-fieldtype-checkbox):not(.hs-fieldtype-textarea):not(
+          .hs-connecting_possibilities_newsletter
+        ) {
+        margin-bottom: 24px;
+        @media (min-width: 767.98px) {
+          width: 47.335%;
+        }
+      }
+      &.hs-fieldtype-textarea,
+      &.hs-fieldtype-checkbox {
+        width: 100%;
+      }
+    }
+
+    .hs-dependent-field {
+      width: 100%;
+      margin-top: 8px;
+    }
+
+    //Hide fields
+    .hidden-spz,
+    .sub-hidden-spz {
+      display: none;
+    }
+
+    //add comments div
+    .add-comments-div {
+      margin: 8px 0 18px 0;
+      .addcomment {
+        color: #06185f;
+        font-size: 15px;
+        font-weight: 500;
+        line-height: 27px;
+        text-decoration: none;
+      }
+    }
+
+    .hs-capability_types.hs-fieldtype-checkbox {
+      .input {
+        //Split checkboxes in 2 column
+        ul.inputs-list.multi-container {
+          @media (min-width: 767.98px) {
+            columns: 2;
+            -webkit-columns: 2;
+            -moz-columns: 2;
+            column-gap: 32px;
+          }
+        }
+      }
+    }
+  }
+}
