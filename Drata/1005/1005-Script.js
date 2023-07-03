@@ -20,8 +20,8 @@
 
 
         document.querySelector('.form-wrapper-spz').style.opacity = 1;
-        document.querySelector('#__next > main').remove();
-        document.querySelector('#__next > header').remove();
+        // document.querySelector('#__next > main').remove();
+        // document.querySelector('#__next > header').remove();
 
         appendInputLabel();
 
@@ -60,8 +60,26 @@
         document.body.classList.add('spz-1005');
       }
     }, 100);
-  }
 
+    // Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
+    function forClearBitForms() {
+      document.querySelectorAll('.hs-input').forEach(function (el) {
+        // console.log(el)
+        if (el.closest('.hs-form-field[style*="display: none"]')) {
+          el.closest('fieldset').classList.add('field-hidden');
+        } else {
+          el.closest('fieldset').classList.remove('field-hidden');
+        }
+      });
+    }
+
+    const cbIntaa = setInterval(function () {
+      if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
+        // clearInterval(cbInt);
+        forClearBitForms();
+      }
+    }, 500);
+  }
 
 
   function appendFavicon() {
@@ -226,9 +244,8 @@
     if (document.body.classList.contains('spz-1005')) {
       document.body.classList.remove('spz-1005');
     }
-    if (document.querySelectorAll('.logo-section').length > 0) {
+    if (document.querySelectorAll('.hero-section').length > 0) {
       document.querySelector('.hero-section').remove();
-      document.querySelector('.logo-section').remove();
     }
   }
 

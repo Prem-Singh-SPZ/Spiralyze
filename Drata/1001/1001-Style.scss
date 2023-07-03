@@ -342,7 +342,7 @@ body.spz-4001 {
       fieldset {
         max-width: unset;
         width: calc(50% - 9px);
-        &:nth-child(5) {
+        &:nth-child(8) {
           width: 100%;
         }
         .field {
@@ -808,6 +808,7 @@ body.spz-4001 {
         font-family: $font-family_4;
         text-align: center;
         color: $color_10;
+        line-height: 36px;
       }
     }
   }
@@ -1153,5 +1154,16 @@ body.spz-4001 {
     > main[data-csk-entry-field="contents"] {
       display: none !important;
     }
+  }
+  .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
+    display: none;
+  }
+
+  // .hs-form-field[style="display: block;"] {
+  //   display: flex !important;
+  // }
+
+  .field-hidden {
+    display: none !important;
   }
 }

@@ -285,7 +285,7 @@ body.spz-1005 .hero-section form fieldset {
   max-width: unset;
   width: calc(50% - 10px);
 }
-body.spz-1005 .hero-section form fieldset:nth-child(5) {
+body.spz-1005 .hero-section form fieldset:nth-child(8) {
   width: 100%;
 }
 body.spz-1005 .hero-section form fieldset .field {
@@ -888,8 +888,19 @@ body.spz-1005 #__next {
   display: none !important;
 }
 body.spz-1005 #__next > header.MuiPaper-root[data-csk-entry-type=header],
-body.spz-1005 #__next > div.MuiBox-root,
+body.spz-1005 #__next > div.MuiBox-root[data-testid=HeroSubpage],
 body.spz-1005 #__next > main[data-csk-entry-field=contents] {
+  display: none !important;
+}
+body.spz-1005 .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
+  display: none;
+}
+body.spz-1005 .hs-form-field[style="display: block;"] {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+}
+body.spz-1005 .field-hidden {
   display: none !important;
 }
 

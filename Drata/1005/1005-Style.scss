@@ -307,7 +307,7 @@ body.spz-1005 {
       fieldset {
         max-width: unset;
         width: calc(50% - 10px);
-        &:nth-child(5) {
+        &:nth-child(8) {
           // display: none;
           width: 100%;
         }
@@ -988,10 +988,21 @@ body.spz-1005 {
   #__next {
     display: none !important;
     > header.MuiPaper-root[data-csk-entry-type="header"],
-    > div.MuiBox-root,
+    > div.MuiBox-root[data-testid="HeroSubpage"],
     > main[data-csk-entry-field="contents"] {
       display: none !important;
     }
+  }
+  .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
+    display: none;
+  }
+
+  .hs-form-field[style="display: block;"] {
+    display: flex !important;
+  }
+
+  .field-hidden {
+    display: none !important;
   }
 }
 

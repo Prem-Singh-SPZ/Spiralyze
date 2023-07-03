@@ -120,7 +120,9 @@ body.spz-4010 {
   .logo-section {
     padding: 130px 0 8px 0;
     position: relative;
-
+    @media (min-width: 1199.98px) and (max-width: 1600px) {
+      padding: 122px 0 0px 0;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -180,7 +182,7 @@ body.spz-4010 {
       padding: 62px 0 74px;
     }
     @media (max-width: 767.98px) {
-      padding: 53px 0 72px;
+      padding: 58px 0 72px;
     }
     .feature-title-container {
       position: relative;
@@ -499,7 +501,7 @@ body.spz-4010 {
       // padding: 0 1.5px;
       width: 25%;
       max-width: 304px;
-      height: 304px;
+      height: 326px;
       display: flex;
       &:not(.review-info-box) {
         .review-content {
@@ -588,12 +590,13 @@ body.spz-4010 {
     }
     .review-item-box.review-info-box {
       max-width: 264px;
-      min-width: 264px;
+      min-width: 292px;
       padding: 0;
 
       @media (max-width: 767.98px) {
         max-width: 240px;
-        min-width: 240px;
+        min-width: 264px;
+        height: 308px;
       }
       .review-content {
         text-align: center;
@@ -604,12 +607,12 @@ body.spz-4010 {
 
         .g2-logo {
           width: 54px;
-          padding-top: 21px;
-          @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            padding-top: 22px;
-          }
+          padding-top: 33px;
+          // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          //   padding-top: 22px;
+          // }
           @media (max-width: 767.98px) {
-            padding-top: 31px;
+            padding-top: 53px;
           }
         }
       }
@@ -1011,7 +1014,7 @@ body.spz-4010 {
         width: auto;
         min-width: 328px;
         max-width: 328px !important;
-        height: 302px;
+        // height: 302px;
         padding: 0 12px;
         @media (max-width: 767.98px) {
           padding: 0 8px;
@@ -1071,7 +1074,7 @@ body.spz-4010 {
         display: none;
       }
       .footer-bottom {
-        padding: 20px 16px 32px;
+        padding: 20px 16px 16px;
         -webkit-box-orient: vertical;
         -webkit-box-direction: reverse;
         -ms-flex-direction: column-reverse;
@@ -1122,7 +1125,7 @@ body.spz-4010 {
   }
   @media (max-width: 767.98px) {
     .container {
-    //   max-width: 328px;
+      //   max-width: 328px;
       @media (max-width: 359.98px) {
         max-width: 312px;
       }
@@ -1139,7 +1142,7 @@ body.spz-4010 {
       line-height: 28px;
     }
     section.logo-section {
-      padding: 79px 0 7px;
+      padding: 80px 0 12px;
     }
     .logo-section {
       .border-title {
@@ -1207,7 +1210,7 @@ body.spz-4010 {
       padding: 96px 0 55px;
     }
     .review-section {
-      padding: 79px 0 40.5px;
+      padding: 84px 0 40.5px;
       .sec-title {
         padding-top: 16px;
         &::after {
@@ -1227,6 +1230,7 @@ body.spz-4010 {
       .review-item-box {
         min-width: 280px;
         max-width: 280px !important;
+        height: 308px;
       }
       // .review-item-box.review-info-box {
       //   min-width: 277px;

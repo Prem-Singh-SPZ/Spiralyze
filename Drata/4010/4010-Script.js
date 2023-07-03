@@ -193,7 +193,7 @@
         <div class="review-content">
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
-                    alt="Rating Stars" title="Rating Stars" class="star-rating"> <span>5/5</span></div>
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"> <span>5.0/5</span></div>
             <p class="review">“The tool and the team  have been amazingly helpful as we begin our SOC2 & HIPAA compliance process. This is critical for us to shorten deal cycles and win customers who need to see our security posture.”</p>
             <h6 class="review-author">Kevin K.</h6>
         </div>
@@ -202,7 +202,7 @@
         <div class="review-content">
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
-                    alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5/5</span></div>
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5.0/5</span></div>
             <p class="review">“With powerful automation and clean design, Drata is helping us become HIPAA, GDPR and NIST compliant. It guides us along the steps needed,  preventing us from missing anything important along the way.”</p>
             <h6 class="review-author">Matthew J.</h6>
         </div>
@@ -211,7 +211,7 @@
         <div class="review-content">
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
-                    alt="Rating Stars" title="Rating Stars" class="star-rating"><span>4.5/5</span></div>
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5.0/5</span></div>
             <p class="review">"Solid compliance software, excellent compliance guidance. We chose Drata over other automated SOC 2 monitoring solutions because they also offer FEDRAMP and HIPAA monitoring as well.”</p>
             <h6 class="review-author">Sebastian M.</h6>
         </div>
@@ -1074,7 +1074,7 @@
     function logoSection() {
         return `<section class="logo-section">
     <div class="container">
-        <h2 class="sec-title border-title">Join over <span>3,000</span> Companies Using Drata to Automate Compliance
+        <h2 class="sec-title border-title">Join Over <span>3,000</span> Companies Using Drata to Automate Compliance
         </h2>
         <div class="ls-logo-group dis-flex flex-wrap justify-content-between">
             <div class="ls-logo-item"><img

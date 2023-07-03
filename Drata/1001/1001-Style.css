@@ -319,7 +319,7 @@ body.spz-4001 .hero-section form fieldset {
   max-width: unset;
   width: calc(50% - 9px);
 }
-body.spz-4001 .hero-section form fieldset:nth-child(5) {
+body.spz-4001 .hero-section form fieldset:nth-child(8) {
   width: 100%;
 }
 body.spz-4001 .hero-section form fieldset .field {
@@ -739,6 +739,7 @@ body.spz-4001 .hbspt-form .submitted-message p {
   font-family: "Inter", sans-serif;
   text-align: center;
   color: #fff;
+  line-height: 36px;
 }
 body.spz-4001 .sec-title {
   font-family: "Darker Grotesque", sans-serif;
@@ -1025,5 +1026,11 @@ body.spz-4001 form fieldset {
 body.spz-4001 #__next > header.MuiPaper-root[data-csk-entry-type=header],
 body.spz-4001 #__next > div.MuiBox-root:not([data-csk-entry-type=globalFooter]),
 body.spz-4001 #__next > main[data-csk-entry-field=contents] {
+  display: none !important;
+}
+body.spz-4001 .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
+  display: none;
+}
+body.spz-4001 .field-hidden {
   display: none !important;
 }

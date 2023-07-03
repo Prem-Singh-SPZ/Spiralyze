@@ -1,7 +1,7 @@
 (function () {
-  
-  
-  
+
+
+
   function loadTest() {
     // Load Hubspot libs
     const hubSpotJS = document.createElement('script');
@@ -61,6 +61,25 @@
         document.body.classList.add('spz-4001');
       }
     }, 100);
+
+    // Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
+    function forClearBitForms() {
+      document.querySelectorAll('.hs-input').forEach(function (el) {
+        // console.log(el)
+        if (el.closest('.hs-form-field[style*="display: none"]')) {
+          el.closest('fieldset').classList.add('field-hidden');
+        } else {
+          el.closest('fieldset').classList.remove('field-hidden');
+        }
+      });
+    }
+
+    const cbIntaa = setInterval(function () {
+      if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
+        // clearInterval(cbInt);
+        forClearBitForms();
+      }
+    }, 500);
   }
 
 
