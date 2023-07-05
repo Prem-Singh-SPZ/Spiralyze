@@ -38,7 +38,9 @@
             window.addEventListener("click", function (e) {
                 if (e.target.classList.contains("addcomment")) {
                     e.target.remove();
-                    document.querySelector('.sub-hidden-spz').classList.remove('sub-hidden-spz');
+                    if (document.querySelector('.sub-hidden-spz')) {
+                        document.querySelector('.sub-hidden-spz').classList.remove('sub-hidden-spz');
+                    }
                 }
             });
 
