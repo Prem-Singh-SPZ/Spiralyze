@@ -94,7 +94,7 @@ function forClearBitForms() {
 
         // Make 'How did you hear about us?' field full width if hidden fields count is odd
         const hiddenFields = document.querySelectorAll('fieldset:not(.form-columns-2).field-hidden').length;
-        if (hiddenFields % 1 == 0) {
+        if (hiddenFields % 2 == 1) {
             document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.add('full-width');
         } else {
             document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.remove('full-width');
