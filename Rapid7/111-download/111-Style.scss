@@ -40,10 +40,10 @@ body.spz-111[class] {
 
           &.focus {
             input {
-              border-color: #242B2E;
+              border-color: #242b2e;
             }
             label {
-              color: #242B2E;
+              color: #242b2e;
             }
           }
 
@@ -53,6 +53,7 @@ body.spz-111[class] {
               color: #ff2b2b;
             }
             .errormsg {
+              // display: none;
               color: #ff2b2b;
               font-weight: 400;
               font-size: 12px;
@@ -81,6 +82,12 @@ body.spz-111[class] {
             // .fieldInfo {
             //   display: none;
             // }
+          }
+
+          &.untouched {
+            .errormsg {
+              display: none;
+            }
           }
 
           &:nth-child(5).valid {

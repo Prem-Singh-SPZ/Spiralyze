@@ -31,7 +31,9 @@
             });
 
             el.addEventListener('blur', function () {
-                checkValid();
+                setTimeout(() => {       
+                    checkValid();
+                }, 1000);
             });
 
             //comment field logic

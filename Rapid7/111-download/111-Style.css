@@ -40,10 +40,10 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
   }
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).focus input {
-  border-color: #242B2E;
+  border-color: #242b2e;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).focus label {
-  color: #242B2E;
+  color: #242b2e;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).invalidValidation input {
   border-color: #ff2b2b;
@@ -73,6 +73,9 @@ body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap 
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).valid::after {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1685111284/rapid7/111/check.svg);
   top: 32px;
+}
+body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel).untouched .errormsg {
+  display: none;
 }
 body.spz-111[class] .off-canvas-wrapper[class] .container-spz[class] .form-wrap #formBlock dl:not(.ignoreLabel):nth-child(5).valid input {
   padding-right: 46px;
