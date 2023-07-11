@@ -5,20 +5,57 @@
             clearInterval(bodyInterval);
             bodyEle.classList.add('spz-2003');
 
-            waitForElm('.hs-content-path-contact-us form.hs-form-private .hs-form-field').then(function (elm) {
-                //swap fields
-                document.querySelector('.hs_company').after(document.querySelector('.hs_phone'));
+            if (location.href.indexOf('support') > -1) {
+                waitForElm('.hs-content-path-contact-us-support form.hs-form-private .hs-form-field').then(function (elm) {
+                    //swap fields
+                    document.querySelector('.field:nth-child(5)').after(document.querySelector('.hs_phone'));
 
-                document.querySelector('.hs_capability_types.hs-fieldtype-checkbox').insertAdjacentHTML('afterend', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
+                    document.querySelector('.hs_how_would_you_like_to_be_contacted_').insertAdjacentHTML('afterend', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
 
-                document.querySelector('.hs_zip').classList.add('hidden-spz');
-                document.querySelector('.hs_phone').classList.add('hidden-spz');
-                document.querySelector('.hs_capability_types').classList.add('hidden-spz');
-                document.querySelector('.add-comments-div').classList.add('hidden-spz');
-                document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
+                    document.querySelector('.hs_zip').classList.add('hidden-spz');
+                    document.querySelector('.hs_phone').classList.add('hidden-spz');
+                    document.querySelector('.hs_product_name').classList.add('hidden-spz');
+                    document.querySelector('.hs_i_am_a_current_customer').classList.add('hidden-spz');
+                    document.querySelector('.hs_how_would_you_like_to_be_contacted_').classList.add('hidden-spz');
+                    document.querySelector('.add-comments-div').classList.add('hidden-spz');
+                    document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
 
-                focusFields();
-            });
+                    focusFields();
+                });
+            }
+
+            else if (location.href.indexOf('other') > -1) {
+                waitForElm('.hs-content-path-contact-us-other form.hs-form-private .hs-form-field').then(function (elm) {
+                    //swap fields
+                    // document.querySelector('.field:nth-child(5)').after(document.querySelector('.hs_phone'));
+
+                    document.querySelector('.hs_reasons_for_reaching_out').insertAdjacentHTML('afterend', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
+
+                    document.querySelector('.hs_zip').classList.add('hidden-spz');
+                    document.querySelector('.hs_reasons_for_reaching_out').classList.add('hidden-spz');
+                    document.querySelector('.add-comments-div').classList.add('hidden-spz');
+                    document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
+
+                    focusFields();
+                });
+            }
+
+            else {
+                waitForElm('.hs-content-path-contact-us form.hs-form-private .hs-form-field').then(function (elm) {
+                    //swap fields
+                    document.querySelector('.hs_company').after(document.querySelector('.hs_phone'));
+
+                    document.querySelector('.hs_capability_types.hs-fieldtype-checkbox').insertAdjacentHTML('afterend', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
+
+                    document.querySelector('.hs_zip').classList.add('hidden-spz');
+                    document.querySelector('.hs_phone').classList.add('hidden-spz');
+                    document.querySelector('.hs_capability_types').classList.add('hidden-spz');
+                    document.querySelector('.add-comments-div').classList.add('hidden-spz');
+                    document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
+
+                    focusFields();
+                });
+            }
         }
     });
 
@@ -31,7 +68,7 @@
             });
 
             el.addEventListener('blur', function () {
-                setTimeout(() => {       
+                setTimeout(() => {
                     checkValid();
                 }, 1000);
             });
@@ -39,7 +76,7 @@
             //comment field logic
             window.addEventListener("click", function (e) {
                 if (e.target.classList.contains("addcomment")) {
-                    e.target.remove();
+                    e.target.parentElement.remove();
                     if (document.querySelector('.sub-hidden-spz')) {
                         document.querySelector('.sub-hidden-spz').classList.remove('sub-hidden-spz');
                     }

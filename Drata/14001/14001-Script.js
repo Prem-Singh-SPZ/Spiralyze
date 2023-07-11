@@ -8,11 +8,17 @@ function httpGet(theUrl) {
 function createtest() {
     document.querySelector("body").classList.add("loading-spz_test");
     document.querySelector("body").classList.add("spz-14001");
-    document.querySelector("body").classList.remove("remove-spz-14001-test");
+    // document.querySelector("body").classList.remove("remove-spz-14001-test");
 
-    waitForElm('body.spz-14001 header + div[data-testid="HeroFramework"] > .MuiContainer-root').then(function () {
-        if (document.querySelectorAll('body header + div > .MuiContainer-root .hero-section').length == 0) {
-            document.querySelector('body header + div > .MuiContainer-root').insertAdjacentHTML("afterbegin", '<section class="hero-section">\
+    waitForElm('body.spz-14001 header + div[data-csk-entry-type="hero"] > .MuiContainer-root').then(function () {
+        if (document.querySelector('body header + div > .MuiContainer-root .hero-section')) {
+            document.querySelector('body header + div > .MuiContainer-root .hero-section').remove();
+            document.querySelector('body header + div > .MuiContainer-root .logo-section').remove();
+        }
+        let appendHero = setInterval(() => {
+            if (document.querySelector('body header + div[data-csk-entry-type="hero"] > .MuiContainer-root')) {
+                if (document.querySelectorAll('body header + div[data-csk-entry-type="hero"] > .MuiContainer-root .hero-section').length == 0) {
+                    document.querySelector('body header + div[data-csk-entry-type="hero"] > .MuiContainer-root').insertAdjacentHTML("afterbegin", '<section class="hero-section">\
             <div class="hero-content dis-flex flex-wrap justify-content-between">\
             <div class="hero-left-section">\
             <h1 class="hc-title">Accelerate <span class="dynamic-product-name">SOC 2</span> Compliance. Reduce Time and Cost by 50%.</h1>\
@@ -52,41 +58,49 @@ function createtest() {
             <div class="ls-logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011155/drata/14001/clearco_logo_1.svg" class="ls-img" alt="Clearco" title="Clearco"></div>\
             </div>\
             </section>');
-        }
+                    if (window.location.href.indexOf("iso-27001") > -1) {
+                        document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
+                            v.textContent = "ISO 27001";
+                        });
+                    }
+                    if (window.location.href.indexOf("hipaa") > -1) {
+                        document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
+                            v.textContent = "HIPAA";
+                        });
+                    }
+                    if (window.location.href.indexOf("gdpr") > -1) {
+                        document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
+                            v.textContent = "GDPR";
+                        });
+                    }
+                    if (window.location.href.indexOf("soc-2") > -1) {
+                        document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
+                            v.textContent = "SOC 2";
+                        });
+                    }
 
-        if (window.location.href.indexOf("iso-27001") > -1) {
-            document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
-                v.textContent = "ISO 27001";
-            });
-            // document.querySelector('.hero-right-section .hero-img').setAttribute('alt', 'Accelerate ISO 27001 Compliance. Reduce Time and Cost by 50%.');
-            // document.querySelector('.hero-right-section .hero-img').setAttribute('title', 'Accelerate ISO 27001 Compliance. Reduce Time and Cost by 50%.');
-        }
-        if (window.location.href.indexOf("hipaa") > -1) {
-            document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
-                v.textContent = "HIPAA";
-            });
-        }
-        if (window.location.href.indexOf("gdpr") > -1) {
-            document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
-                v.textContent = "GDPR";
-            });
-        }
-        if (window.location.href.indexOf("soc-2") > -1) {
-            document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
-                v.textContent = "SOC 2";
-            });
-        }
+                }
+            }
+        }, 100);
 
-        document.querySelector('#hero-copy-url').addEventListener('click', function () {
-            document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiList-root .MuiButton-cta1').click();
-        });
+        setTimeout(() => {
+            clearInterval(appendHero);
+            document.querySelector('#hero-copy-url').addEventListener('click', function () {
+                document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiList-root .MuiButton-cta1').click();
+            });
+        }, 500);
+
     });
 }
 
 function removetest() {
     document.querySelector("body").classList.remove("loading-spz_test");
     document.querySelector("body").classList.remove("spz-14001");
-    document.querySelector("body").classList.add("remove-spz-14001-test");
+    if (document.querySelector('body header + div > .MuiContainer-root .hero-section')) {
+        document.querySelector('body header + div > .MuiContainer-root .hero-section').remove();
+        document.querySelector('body header + div > .MuiContainer-root .logo-section').remove();
+    }
+    // document.querySelector("body").classList.add("remove-spz-14001-test");
 }
 
 history.pushState = (function (f) {
