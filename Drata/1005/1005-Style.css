@@ -285,7 +285,7 @@ body.spz-1005 .hero-section form fieldset {
   max-width: unset;
   width: calc(50% - 10px);
 }
-body.spz-1005 .hero-section form fieldset:nth-child(8) {
+body.spz-1005 .hero-section form fieldset:nth-child(1n+8), body.spz-1005 .hero-section form fieldset.full-width {
   width: 100%;
 }
 body.spz-1005 .hero-section form fieldset .field {
@@ -906,4 +906,19 @@ body.spz-1005 .field-hidden {
 
 body.spz-1005.safari .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list {
   padding: 4px 12px;
+}
+
+.hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
+  display: none;
+}
+
+.field-hidden {
+  display: none !important;
+}
+
+.hero-section form fieldset .field select {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 30px;
 }

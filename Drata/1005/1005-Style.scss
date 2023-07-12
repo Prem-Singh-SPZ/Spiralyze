@@ -307,7 +307,7 @@ body.spz-1005 {
       fieldset {
         max-width: unset;
         width: calc(50% - 10px);
-        &:nth-child(8) {
+        &:nth-child(1n + 8), &.full-width {
           // display: none;
           width: 100%;
         }
@@ -1013,4 +1013,19 @@ body.spz-1005.safari
   form
   .hs-error-msgs.inputs-list {
   padding: 4px 12px;
+}
+
+.hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
+  display: none;
+}
+
+.field-hidden {
+  display: none !important;
+}
+
+.hero-section form fieldset .field select {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  padding-right: 30px;
 }

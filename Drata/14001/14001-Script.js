@@ -22,7 +22,7 @@ function createtest() {
             <div class="hero-content dis-flex flex-wrap justify-content-between">\
             <div class="hero-left-section">\
             <h1 class="hc-title">Accelerate <span class="dynamic-product-name">SOC 2</span> Compliance. Reduce Time and Cost by 50%.</h1>\
-            <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (398 reviews)</span></div>\
+            <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (461 reviews)</span></div>\
             <div class="list-grp-wrapper">\
             <ul class="list-group">\
             <li class="list-item"><strong>Evidence Collection.</strong> Create <span class="dynamic-product-name">SOC 2</span> documentation in minutes via integrations with your tech stack.</li>\
@@ -30,7 +30,7 @@ function createtest() {
             <li class="list-item"><strong>Compliance Experts.</strong> Never get stuck. Our compliance experts can walk you through the entire process.</li>\
             </ul>\
             </div>\
-            <a href="Javascript:void(0);" id="hero-copy-url" class="hero-btn">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1685011157/drata/14001/cta_arrow.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>\
+            <a href="/demo" id="hero-copy-url" class="hero-btn">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1685011157/drata/14001/cta_arrow.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>\
             </div>\
             <div class="hero-right-section">\
             <picture>\
@@ -85,9 +85,9 @@ function createtest() {
 
         setTimeout(() => {
             clearInterval(appendHero);
-            document.querySelector('#hero-copy-url').addEventListener('click', function () {
-                document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiList-root .MuiButton-cta1').click();
-            });
+            // document.querySelector('#hero-copy-url').addEventListener('click', function () {
+            //     document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiList-root .MuiButton-cta1').click();
+            // });
         }, 500);
 
     });
@@ -131,7 +131,7 @@ urlCheck(url);
 
 function urlCheck(url) {
     let testURL = '';
-    if (window.location.pathname.indexOf("/product/") > -1) {
+    if (window.location.pathname.indexOf("/product/iso-27001") > -1 || window.location.pathname.indexOf("/product/soc-2") > -1 || window.location.pathname.indexOf("/product/hipaa") > -1 || window.location.pathname.indexOf("/product/gdpr") > -1) {
         testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {

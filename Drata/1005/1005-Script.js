@@ -62,23 +62,47 @@
     }, 100);
 
     // Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
+    // function forClearBitForms() {
+    //   document.querySelectorAll('.hs-input').forEach(function (el) {
+    //     // console.log(el)
+    //     if (el.closest('.hs-form-field[style*="display: none"]')) {
+    //       el.closest('fieldset').classList.add('field-hidden');
+    //     } else {
+    //       el.closest('fieldset').classList.remove('field-hidden');
+    //     }
+    //   });
+    // }
     function forClearBitForms() {
-      document.querySelectorAll('.hs-input').forEach(function (el) {
-        // console.log(el)
+      document.querySelectorAll('.form-wrapper-spz .hs-input').forEach(function (el) {
         if (el.closest('.hs-form-field[style*="display: none"]')) {
           el.closest('fieldset').classList.add('field-hidden');
         } else {
           el.closest('fieldset').classList.remove('field-hidden');
         }
+
+        // Make 'How did you hear about us?' field full width if hidden fields count is odd
+        const hiddenFields = document.querySelectorAll('fieldset:not(.form-columns-3).field-hidden').length;
+        if (hiddenFields % 2 == 0) {
+          document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.add('full-width');
+        } else {
+          document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.remove('full-width');
+        }
       });
     }
 
-    const cbIntaa = setInterval(function () {
-      if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
-        // clearInterval(cbInt);
+    setInterval(function () {
+      // if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
+      // clearInterval(cbInt);
+      forClearBitForms();
+      // }
+    }, 500);
+
+    // on user type in .hs-input run forClearBitForms() function
+    document.addEventListener('keyup', function (e) {
+      if (e.target.classList.contains('hs-input')) {
         forClearBitForms();
       }
-    }, 500);
+    });
   }
 
 
