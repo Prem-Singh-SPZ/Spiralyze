@@ -1985,7 +1985,7 @@ video[poster] {
         width: 230px;
    }
     #element-647 .form-btn-geometry {
-        top: 308px;
+        top: 360px;
         width: 100%;
         height: 64px;
    }
@@ -1995,7 +1995,7 @@ video[poster] {
         margin: 0 auto;
    }
     #page-block-z6muioltf6f.section, #page-block-z6muioltf6f .section-block {
-        height: 592px;
+        height: 628px;
    }
     #page-block-95u5028waa {
         height: 748px;
@@ -3819,4 +3819,104 @@ video[poster] {
         height: 36px;
         width: 36px;
    }
+}
+
+
+/* if .field-3 has active class then its sibling .ao-clicar should be display none */
+#element-647 .field-3.invalid_phone ~ .ao-clicar {
+    display: none;
+}
+
+#element-647 .input_field.field-3.filled .form-input {
+    color: #333 !important;
+    border-color: #004B7A !important;
+}
+
+#element-647 .field-3.filled:not(.invalid_phone) input {
+    color: #333 !important;
+    border-color: #004B7A !important;
+}
+
+#element-647 .field-3.filled:not(.invalid_phone) ~ .ao-clicar {
+    display: block;
+}
+
+#element-647 .field-3.invalid_phone ~ .form-btn-geometry {
+    top: 20rem;
+}
+
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+    #element-647 .field-3.invalid_phone ~ .form-btn-geometry {
+        top: 440px;
+    }
+}
+
+@media (max-width: 1023.98px) {
+    #element-647 .field-3.invalid_phone ~ .form-btn-geometry {
+        top: 425px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #element-647 .field-3.invalid_phone ~ .form-btn-geometry {
+        top: 765px;
+    }
+}
+.form-checkable-field, .ao-clicar {
+    display: table;
+    width: 100%;
+    position: absolute;
+    top: 316px;
+    left: 25px;
+}
+.form-checkable-field.ao-clicar {
+    top: 296px;
+    left: 25px;
+    max-width: 95%;
+}
+
+.ao-clicar .form-multiple-label:before {
+    top: 1px;
+}
+
+.ao-clicar .form-checkbox-label:after {
+    top: 0.25rem !important;
+}
+
+#element-647 .ao-clicar .form-multiple-label {
+    line-height: 20px;
+    letter-spacing: 0.1px;
+}
+@media (min-width: 1023.98px) and (max-width: 1199.98px) {
+    .ao-clicar .form-checkbox-label:after {
+        top: 4px !important;
+    }
+}
+
+@media (max-width: 1023.98px){
+    .form-checkable-field.ao-clicar {
+        top: 397px;
+    }
+
+    .ao-clicar .form-multiple-label:before {
+        top: 0;
+    }
+    .form-checkable-field.Iamnot-ips {
+        top: 348px;
+    }
+}
+@media (max-width: 767.98px){
+    .form-checkable-field.ao-clicar {
+        top: 737px;
+    }
+
+    #element-647 .form .ao-clicar .form-label.form-checkbox-label {
+        letter-spacing: 0.025px;
+    }
+    .form-checkable-field.Iamnot-ips  {
+        top: 668px;
+    }
+}
+.form-checkable-field.Iamnot-ips {
+    top: 266px;
 }
