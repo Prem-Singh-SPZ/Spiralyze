@@ -156,6 +156,9 @@ img {
 body.spz-1005 {
   min-height: 800px;
   height: 100vh;
+  @media (max-width: 767.98px) {
+    min-height: 1000px;
+  }
   .osano-cm-widget[title="Cookie Preferences"] {
     display: none !important;
   }
@@ -307,7 +310,8 @@ body.spz-1005 {
       fieldset {
         max-width: unset;
         width: calc(50% - 10px);
-        &:nth-child(1n + 8), &.full-width {
+        &:nth-child(1n + 8),
+        &.full-width {
           // display: none;
           width: 100%;
         }

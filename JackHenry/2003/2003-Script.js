@@ -54,6 +54,8 @@
                 document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
 
                 focusFields();
+
+                submitTestDetails();
             });
             // }
         }
@@ -113,6 +115,13 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
+    }
+
+    function submitTestDetails() {
+        if (document.querySelector('form.hs-form-private .hs_spz1 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_spz1 .input .hs-input').setAttribute('value', '#2003_Contact_Us_Progressive_Form');
+            document.querySelector('form.hs-form-private .hs_spz2 .input .hs-input').setAttribute('value', 'Variant');
+        }
     }
 
     // Add class 'safari' (used for cart scrollbar)

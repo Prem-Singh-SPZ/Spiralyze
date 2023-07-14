@@ -332,11 +332,11 @@ $(`input#${formInputId}-26-0`).change(function () {
 });
 
 $(`#${formInputId}-27-0`).parents('.form-checkable-field').addClass('ao-clicar');
-// on change checkbox element `input#${formInputId}-9-0` add 'user-invalid' class on itself
-// on change checkbox element `input#${formInputId}-9-0` remove 'user-invalid' class on itself
+// on change checkbox element `input#${formInputId}-27-0` add 'user-invalid' class on itself
+// on change checkbox element `input#${formInputId}-27-0` remove 'user-invalid' class on itself
 // For phone number consent checkbox enable/disable form button
 setTimeout(() => {
-    document.querySelector(`input#${formInputId}-9-0`).addEventListener('change', function (e) {
+    document.querySelector(`input#${formInputId}-27-0`).addEventListener('change', function (e) {
         if (e.target.checked) {
             e.target.classList.remove('user-invalid');
             formButton.removeAttribute('disabled', '');
