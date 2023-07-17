@@ -32,7 +32,20 @@
     //function to add all the sections
     function appendSections() {
         document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', footerSection());
-        document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCard());
+
+        if (window.location.pathname.indexOf("/hipaa") > -1) {
+            document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCardHipaa());
+        }
+        else if (window.location.pathname.indexOf("/soc-2") > -1) {
+            document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCardSOC());
+        }
+        else if (window.location.pathname.indexOf("/iso-27001") > -1) {
+            document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCardIso());
+        }
+        else if (window.location.pathname.indexOf("gdpr") > -1) {
+            document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', reviewCardGdpr());
+        }
+
         document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', integrationSection());
         document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', logoSection());
         document.querySelector('.body-wrapper.hs-page #main-content .hero-section').insertAdjacentHTML('afterend', featureSection());
@@ -173,18 +186,65 @@
 </section>`
     }
 
-    function reviewCard() {
+    function reviewCardHipaa() {
         return `<section class="review-section">
 <div class="container">
     <h2 class="sec-title border-title">See What Our Customers Say About Drata</h2>
 </div>
 <div class="review-slider dis-flex justify-content-between container">
-    <div class="review-item-box review-info-box">
+    <div class="review-item-box review-info-box hipaa">
         <div class="review-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
         alt="G2" title="G2" class="g2-logo">
         <h4 class="r-title">Excellent</h4>
-        <p class="r-numbers">Based on <span>398 reviews</span></p>
+        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+        alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
+        </div>
+    </div>
+    <div class="review-item-box hipaa">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
+            <p class="review">“The tool and the team  have been amazingly helpful as we begin our SOC2 & HIPAA compliance process. This is critical for us to shorten deal cycles and win customers who need to see our security posture.”</p>
+            <h6 class="review-author">Kevin K.</h6>
+        </div>
+    </div>
+    <div class="review-item-box hipaa">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">“With powerful automation and clean design, Drata is helping us become HIPAA, GDPR and NIST compliant. It guides us along the steps needed,  preventing us from missing anything important along the way.”</p>
+            <h6 class="review-author">Matthew J.</h6>
+        </div>
+    </div>
+    <div class="review-item-box hipaa">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">"Solid compliance software, excellent compliance guidance. We chose Drata over other automated SOC 2 monitoring solutions because they also offer FEDRAMP and HIPAA monitoring as well.”</p>
+            <h6 class="review-author">Sebastian M.</h6>
+        </div>
+    </div>
+</div>
+</section>`
+    }
+
+    function reviewCardIso() {
+        return `<section class="review-section">
+<div class="container">
+    <h2 class="sec-title border-title">See What Our Customers Say About Drata</h2>
+</div>
+<div class="review-slider dis-flex justify-content-between container">
+    <div class="review-item-box review-info-box iso">
+        <div class="review-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
+        alt="G2" title="G2" class="g2-logo">
+        <h4 class="r-title">Excellent</h4>
+        <p class="r-numbers">Based on <span>461 reviews</span></p>
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
         </div>
@@ -193,27 +253,121 @@
         <div class="review-content">
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
-                    alt="Rating Stars" title="Rating Stars" class="star-rating"> <span>5.0/5</span></div>
-            <p class="review">“The tool and the team  have been amazingly helpful as we begin our SOC2 & HIPAA compliance process. This is critical for us to shorten deal cycles and win customers who need to see our security posture.”</p>
-            <h6 class="review-author">Kevin K.</h6>
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
+            <p class="review">“Drata was holding our hands in the ISO and SOC certification path. We have a small team and we are wear many hats, Drata logically guides us to the path of certification”</p>
+            <h6 class="review-author">Nathan T.</h6>
         </div>
     </div>
     <div class="review-item-box">
         <div class="review-content">
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
-                    alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5.0/5</span></div>
-            <p class="review">“With powerful automation and clean design, Drata is helping us become HIPAA, GDPR and NIST compliant. It guides us along the steps needed,  preventing us from missing anything important along the way.”</p>
-            <h6 class="review-author">Matthew J.</h6>
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">“I recently used Drata for my company's ISO27001 and SOC2 audits, and I couldn't be more impressed with their service. Drata provided everything we needed to complete our audits quickly and efficiently.”</p>
+            <h6 class="review-author">Matthieu K.</h6>
         </div>
     </div>
     <div class="review-item-box">
         <div class="review-content">
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
-                    alt="Rating Stars" title="Rating Stars" class="star-rating"><span>5.0/5</span></div>
-            <p class="review">"Solid compliance software, excellent compliance guidance. We chose Drata over other automated SOC 2 monitoring solutions because they also offer FEDRAMP and HIPAA monitoring as well.”</p>
-            <h6 class="review-author">Sebastian M.</h6>
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">We came across DRATA for ISO 27001 audits and love it! For us, it is useful for finding audit evidence and demonstrating compliance to ISO 27001 when we are doing an internal audit.</p>
+            <h6 class="review-author">Steve C.</h6>
+        </div>
+    </div>
+</div>
+</section>`
+    }
+
+    function reviewCardGdpr() {
+        return `<section class="review-section">
+<div class="container">
+    <h2 class="sec-title border-title">See What Our Customers Say About Drata</h2>
+</div>
+<div class="review-slider dis-flex justify-content-between container">
+    <div class="review-item-box review-info-box gdpr">
+        <div class="review-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
+        alt="G2" title="G2" class="g2-logo">
+        <h4 class="r-title">Excellent</h4>
+        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+        alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
+        </div>
+    </div>
+    <div class="review-item-box gdpr">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
+            <p class="review">“The best thing about Drata is their knowledgeable team. Out of all the options we evaluated, Drata's team was by far the one providing the most information not just about their product, but also about the SOC2 and GDPR processes.”</p>
+            <h6 class="review-author">Lav C.</h6>
+        </div>
+    </div>
+    <div class="review-item-box gdpr">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">Drata helped us becoming and remaining compliant with applicable information security regulations such as HIPAA, GDPR, and NIST. Additionally, the platform has been instrumental in helping prepare us for audits.</p>
+            <h6 class="review-author">Kevin B.</h6>
+        </div>
+    </div>
+    <div class="review-item-box gdpr">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">It's not just a tool for tracking compliance, in a way, it's a framework and a guide for what all falls under SOC2,  GDPR, etc. So it was very helpful to use their templates and premade controls.</p>
+            <h6 class="review-author">Dushan N.</h6>
+        </div>
+    </div>
+</div>
+</section>`
+    }
+
+    function reviewCardSOC() {
+        return `<section class="review-section">
+<div class="container">
+    <h2 class="sec-title border-title">See What Our Customers Say About Drata</h2>
+</div>
+<div class="review-slider dis-flex justify-content-between container">
+    <div class="review-item-box review-info-box soc">
+        <div class="review-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
+        alt="G2" title="G2" class="g2-logo">
+        <h4 class="r-title">Excellent</h4>
+        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+        alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
+        </div>
+    </div>
+    <div class="review-item-box soc">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
+            <p class="review">“Drata's platform simplifies compliance. In our case, we used Drata for SOC2 and for GDPR. It literally saved us hundreds of hours and many dollars in consulting fees.”</p>
+            <h6 class="review-author">Lav C.</h6>
+        </div>
+    </div>
+    <div class="review-item-box soc">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">“I would never want to go through SOC2 again without Drata. Even now that we are done with our first SOC2, Drata continuously monitors our controls and alerts us to issues.”</p>
+            <h6 class="review-author">Angela S.</h6>
+        </div>
+    </div>
+    <div class="review-item-box soc">
+        <div class="review-content">
+            <div class="rating dis-flex"><img
+                    src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
+                    alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
+            <p class="review">“Drata allowed our startup to get a huge head start on SOC2 and PCI compliance. Drata saved us months of reinventing the wheel of what they provide out of the box.“</p>
+            <h6 class="review-author">Matt R.</h6>
         </div>
     </div>
 </div>
@@ -227,7 +381,7 @@
 	<div class="MuiBox-root css-dwssr9-Collection-root" gutterwidth="default">
 		<div class="MuiContainer-root MuiContainer-maxWidthLg css-1o00hxm-MuiContainer-root-Collection-contentContainer">
 			<div class="MuiBox-root css-op7sus-Text-rootWrapper-Collection-introText">
-				<h2 class="MuiTypography-root MuiTypography-body1 MuiTypography-alignDefault css-17jd2ru-MuiTypography-root-Text-title">75+ Native <br>Integrations</h2></div>
+				<h2 class="MuiTypography-root MuiTypography-body1 MuiTypography-alignDefault css-17jd2ru-MuiTypography-root-Text-title">80+ Native <br>Integrations</h2></div>
 			<div class="MuiBox-root css-8z2x31-Collection-itemsContainer">
 				<div class="MuiPaper-root MuiPaper-elevation MuiPaper-rounded MuiPaper-elevation1 MuiCard-root css-ipcq2m-MuiPaper-root-MuiCard-root-Card-root-Collection-item" position="1">
 					<div class="MuiCardContent-root css-15t3sex-MuiCardContent-root-Card-cardContent">
@@ -1133,7 +1287,7 @@
         src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-automated_evidence.svg" class="ls-img"
         alt="Automated Evidence" title="Automated Evidence"></div><div class="content-container">
     <h6>Automated Evidence Collection</h6>
-    <p>Collection documentation from your tech stack. Powered by 75+ integrations and an open API.  </p></div>
+    <p>Collection documentation from your tech stack. Powered by 80+ integrations and an open API.  </p></div>
 </div>
 <div class="fs-card-item"><div class="img-container"><img
         src="//res.cloudinary.com/spiralyze/image/upload/v1682075794/drata/4002/features-security_policies.svg" class="ls-img"
@@ -1194,7 +1348,7 @@
     urlCheck(url);
     function urlCheck(url) {
         let testURL = '';
-        if (window.location.pathname.indexOf("/iso-27001") > -1 || window.location.pathname.indexOf("/hipaa") > -1 || window.location.pathname.indexOf("/gdpr") > -1) {
+        if (window.location.pathname.indexOf("/soc-2") > -1 || window.location.pathname.indexOf("/iso-27001") > -1 || window.location.pathname.indexOf("/hipaa") > -1 || window.location.pathname.indexOf("/gdpr") > -1) {
             testURL = window.location.href;
         }
         if (isSameUrl(url, testURL, true)) {

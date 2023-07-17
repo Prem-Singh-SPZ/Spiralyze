@@ -421,7 +421,6 @@ body.spz-4010 .review-section .review-slider {
 body.spz-4010 .review-slider .review-item-box {
   width: 25%;
   max-width: 304px;
-  height: 326px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -479,12 +478,6 @@ body.spz-4010 .review-slider .review-item-box .review {
   padding: 20px 0 18px;
   position: relative;
 }
-@media (max-width: 767.98px) {
-  body.spz-4010 .review-slider .review-item-box .review {
-    font-size: 15px;
-    line-height: 22px;
-  }
-}
 body.spz-4010 .review-slider .review-item-box .review-author {
   font-family: "Inter", sans-serif;
   font-style: normal;
@@ -494,22 +487,20 @@ body.spz-4010 .review-slider .review-item-box .review-author {
   color: #8b8b8b;
   margin: 0;
 }
-@media (max-width: 767.98px) {
-  body.spz-4010 .review-slider .review-item-box .review-author {
-    font-size: 15px;
-    line-height: 22px;
-  }
-}
 body.spz-4010 .review-slider .review-item-box.review-info-box {
   max-width: 264px;
-  min-width: 292px;
+  min-width: 264px;
   padding: 0;
+}
+@media (max-width: 1199.98px) {
+  body.spz-4010 .review-slider .review-item-box.review-info-box {
+    min-width: 292px;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-4010 .review-slider .review-item-box.review-info-box {
     max-width: 240px;
     min-width: 264px;
-    height: 308px;
   }
 }
 body.spz-4010 .review-slider .review-item-box.review-info-box .review-content {
@@ -523,11 +514,27 @@ body.spz-4010 .review-slider .review-item-box.review-info-box .review-content {
 }
 body.spz-4010 .review-slider .review-item-box.review-info-box .review-content .g2-logo {
   width: 54px;
-  padding-top: 33px;
+  padding-top: 20px;
 }
 @media (max-width: 767.98px) {
   body.spz-4010 .review-slider .review-item-box.review-info-box .review-content .g2-logo {
+    padding-top: 62px;
+  }
+}
+body.spz-4010 .review-slider .review-item-box.review-info-box.hipaa .g2-logo, body.spz-4010 .review-slider .review-item-box.review-info-box.gdpr .g2-logo {
+  padding-top: 32px;
+}
+@media (max-width: 767.98px) {
+  body.spz-4010 .review-slider .review-item-box.review-info-box.hipaa .g2-logo, body.spz-4010 .review-slider .review-item-box.review-info-box.gdpr .g2-logo {
     padding-top: 53px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-4010 .review-slider .review-item-box.review-info-box.gdpr[class] {
+    min-width: 264px;
+  }
+  body.spz-4010 .review-slider .review-item-box.review-info-box.gdpr[class] .g2-logo {
+    padding-top: 74px;
   }
 }
 body.spz-4010 .review-slider .review-info-box .r-title {
@@ -876,7 +883,6 @@ body.spz-4010 .footer-bottom .footer-legalLinks a:hover {
   body.spz-4010 .review-slider .review-item-box {
     padding: 0 8px;
     min-height: 264px;
-    height: 264px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -890,8 +896,33 @@ body.spz-4010 .footer-bottom .footer-legalLinks a:hover {
     max-width: 322px !important;
   }
   body.spz-4010 .review-slider .review-item-box .review {
-    padding: 19px 0 17px;
+    padding: 20px 0 22px;
   }
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  body.spz-4010 .review-slider .review-item-box .review {
+    padding: 22px 0 20px;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-4010 .review-slider .review-item-box.hipaa .review {
+    padding: 20px 0 22px;
+  }
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  body.spz-4010 .review-slider .review-item-box.hipaa .review {
+    padding: 22px 0 19px;
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  body.spz-4010 .review-slider .review-item-box.hipaa h6.review-author {
+    font-size: 15px;
+    line-height: 22px;
+  }
+}
+@media (max-width: 1199.98px) {
   body.spz-4010 .review-slider .review-item-box.review-info-box {
     padding-left: 16px;
     padding-right: 12px;
@@ -1072,9 +1103,11 @@ body.spz-4010 .footer-bottom .footer-legalLinks a:hover {
     padding: 41px 0px 39.5px;
   }
   body.spz-4010 .review-slider .review-item-box {
-    min-width: 280px;
+    min-width: 294px;
     max-width: 280px !important;
-    height: 308px;
+  }
+  body.spz-4010 .review-slider .review-item-box.gdpr {
+    min-width: 296px;
   }
   body.spz-4010 .footer::after {
     top: 124px;

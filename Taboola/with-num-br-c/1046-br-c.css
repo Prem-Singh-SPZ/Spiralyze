@@ -280,7 +280,7 @@ div#element-497 p {
     display: flex;
 }
 
-.error_msg .error_text.email {
+.error_msg .error_text.email, .error_msg .error_text.phone {
     display: none;
 }
 
@@ -317,7 +317,8 @@ div#element-497 p {
     bottom: -29px;
     left: 50%;
     transform: translateX(-50%);
-    width: 100%;
+    /* width: 100%; */
+    width: fit-content;
     display: none;
     justify-content: center;
     z-index: 9;
