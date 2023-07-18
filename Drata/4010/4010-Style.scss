@@ -631,8 +631,8 @@ body.spz-4010 {
       }
       &.gdpr[class] {
         @media (max-width: 767.98px) {
-        min-width: 264px;
-        .g2-logo {
+          min-width: 264px;
+          .g2-logo {
             padding-top: 74px;
           }
         }
@@ -1039,7 +1039,7 @@ body.spz-4010 {
         padding: 0 12px;
         @media (max-width: 767.98px) {
           padding: 0 8px;
-          min-height: 264px;
+          // min-height: 264px;
           // height: 264px;
         }
         .review-content {
@@ -1068,6 +1068,27 @@ body.spz-4010 {
             }
           }
 
+          h6.review-author {
+            @media (max-width: 767.98px) {
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+        }
+        &.soc {
+          .review {
+            // padding: 20px 0 0px;
+            @media (max-width: 767.98px) {
+              padding: 22px 0 19px;
+              font-size: 15px;
+              line-height: 22px;
+            }
+          }
+          .review-content .g2-logo {
+            @media (max-width: 767.98px) {
+              padding-top: 31px;
+            }
+          }
           h6.review-author {
             @media (max-width: 767.98px) {
               font-size: 15px;
@@ -1174,7 +1195,7 @@ body.spz-4010 {
     }
     .border-title {
       &::before {
-        height: 4px;
+        // height: 4px;
         width: 80px;
         right: auto;
       }
@@ -1369,7 +1390,6 @@ body.spz-4010 {
   .integrations-section {
     padding: 112px 0 126px;
 
-    /*! CSS Used from: Embedded */
     .container {
       .css-1o00hxm-MuiContainer-root-Collection-contentContainer {
         width: 100%;
@@ -1442,7 +1462,7 @@ body.spz-4010 {
         @media (max-width: 767.98px) {
           top: 20px;
           width: 80px;
-          height: 4px;
+          // height: 4px;
         }
       }
       .css-op7sus-Text-rootWrapper-Collection-introText [class$="Text-title"] {
@@ -1740,7 +1760,6 @@ body.spz-4010 {
         font-style: normal;
         letter-spacing: -0.03em;
       }
-      /*! CSS Used from: Embedded */
       .css-8je8zh-MuiTouchRipple-root {
         overflow: hidden;
         pointer-events: none;
@@ -1749,7 +1768,6 @@ body.spz-4010 {
         inset: 0px;
         border-radius: inherit;
       }
-      /*! CSS Used from: Embedded */
       *,
       ::before,
       ::after {
@@ -1771,7 +1789,6 @@ body.spz-4010 {
         --tw-shadow: 0 0 #0000;
         --tw-shadow-colored: 0 0 #0000;
       }
-      /*! CSS Used fontfaces */
       @font-face {
         font-family: "Darker Grotesque";
         font-style: normal;
@@ -2319,6 +2336,10 @@ body.spz-4010 {
   // }
   .osano-cm-widget[title="Cookie Preferences"] {
     display: none !important;
+  }
+  .form-wrapper-spz .hbspt-form form .actions .hs-button {
+    -webkit-border-radius: 4px;
+    -webkit-appearance: none;
   }
 }
 
