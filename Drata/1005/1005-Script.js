@@ -236,11 +236,11 @@
   urlCheck(url);
   function urlCheck(url) {
     let testURL = '';
-    if (window.location.pathname.indexOf("/demo") > -1) {
+    if (window.location.href.indexOf('https://drata.com/demo') > -1) {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
-      if (document.querySelectorAll('.hero-section').length == 0) {
+      if (document.querySelectorAll('.hero-section').length == 0 && document.querySelectorAll('.hs-form').length == 2) {
         loadTest();
       }
     } else {

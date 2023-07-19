@@ -1,4 +1,10 @@
 (function () {
+
+    const swiperJS = document.createElement('script');
+    swiperJS.src = '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js';
+    swiperJS.type = 'text/javascript';
+    document.head.appendChild(swiperJS);
+
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
         if (!bodyEle.classList.contains('spz-2003')) {
@@ -32,26 +38,42 @@
                         </div>
                     </div>
                     </div>
-                    <div class="social-proof" >
+                    <div class="social-proof desktop" >
                     <div class="proud-to-be-recognized-as-an-industry-leader" >
                     Proud to Be Recognized as an Industry Leader
                     </div>
                     <div class="awards" >
                     <div class="badge" >
-                    <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-1.webp" />
+                    <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-1.webp" alt="Linkedin top companies 2022"/>
                     </div>
                     <div class="badge" >
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-2.webp" />
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-2.webp" alt="IDC Fintech rankings 2022"/>
                     </div>
                     <div class="badge" >
-                    <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-3.webp" />
+                    <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-3.webp" alt="Fintech breakthrough award 2022"/>
                     </div>
                     </div> </div>
                 </div>
                 <div class="spz-form-wrapper"></div>
+                <div class="social-proof mobile" >
+                <div class="proud-to-be-recognized-as-an-industry-leader" >
+                Proud to Be Recognized as an Industry Leader
+                </div>
+                <div class="awards" >
+                <div class="badge" >
+                <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-1.webp" />
+                </div>
+                <div class="badge" >
+                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-2.webp" />
+                </div>
+                <div class="badge" >
+                <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-3.webp" />
+                </div>
+                </div>
             </div>
             `);
 
+                appendFavicon();
                 appendInputLabel();
                 focusFields();
                 checkboxDropdown();
@@ -61,20 +83,24 @@
                 document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs_comment .hs-label-spz span').textContent = 'Comment (Optional)';
                 document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox span').textContent = 'Subscribe to Jack Henry™ news and updates.';
 
-                document.querySelector('form.hs-form-private .hs_capability_types legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button" ></button>`);
+                document.querySelector('form.hs-form-private .hs_capability_types legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span></button>`);
                 if (document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column')) {
+                    document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(2) .contact-card-inner h5.mb-3').textContent = 'Join Jack Henry';
+                    document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(1) .contact-card-inner div:last-child p span').innerHTML = 'Give us a call. Our corporate call center is open 24 hours a day: <span>1-800-299-4222.</span>';
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column').classList.add('four-cards-container');
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column').classList.remove('col-12', 'col-lg-4', 'd-flex', 'flex-column', 'pt-4');
                 }
                 //Moving form and card elements
                 document.querySelector('#hs_cos_wrapper_flexible_column').insertAdjacentHTML('afterend', `<div class="spz-four-cards"></div>
-                <div class="spz-two-card-slider">
-                    <div class="two-card-slider">
+                <div class="spz-two-card-slider ">
+                    <div class="two-card-slider swiper-container ">
                         <div class="two-card-title">
                             <h5>don't just take our word for it</h5></div>
-                        <div class="testimonials">
-                            <div class="testimonials_card">
+                        <div class="testimonials swiper-wrapper">
+                            <div class="testimonials_card swiper-slide">
+                            <div>
                                 <div class="quote-testimonial">
+                                <div class="quote"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
                                     <div class="quote-text"> The technology has helped position us to compete and level the playing field. We don&#8217;t have to hire more staff. It&#8217;s made our teams&#8217; jobs so much easier.
                                         <br/> </div>
                                 </div>
@@ -83,9 +109,12 @@
                                     <div class="auther-name"> Cindy Blackstone </div>
                                     <div class="auther-title"> Chief Retail Officer, Southside Bank </div>
                                 </div>
+                                </div>
                             </div>
-                            <div class="testimonials_card">
+                            <div class="testimonials_card swiper-slide">
+                            <div>
                                 <div class="quote-testimonial">
+                                <div class="quote"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
                                     <div class="quote-text"> Having all accounts on one core system makes everyone&#8217;s lives easier and provides a better member experience. Integrating home banking and automated transfers is easier to manage. </div>
                                 </div>
                                 <div class="divider"> </div>
@@ -93,8 +122,11 @@
                                     <div class="auther-name"> Mark Schuiling </div>
                                     <div class="auther-title"> Chief Technology Officer, Wildfire Credit Union </div>
                                 </div>
+                                </div>
                             </div>
                         </div>
+                        <div class="swiper-button-next"></div>
+                        <div class="swiper-button-prev"></div>
                     </div>
                 </div>
                 `);
@@ -111,19 +143,53 @@
                             checkError();
                         }
                     });
+
                 });
             });
         }
     });
 
+    swiperJS.onload = function () {
+        if (window.innerWidth < 990) {
+            let intSlider = setInterval(() => {
+                if (document.querySelector('.two-card-slider.swiper-container.swiper-container-horizontal')) {
+                    clearInterval(intSlider);
+                }
+                init_Slider();
+            }, 100);
+        }
+        window.addEventListener('resize', function (event) {
+            init_Slider();
+        }, true);
+    }
+
+    function init_Slider() {
+        var Swipes = new Swiper('.swiper-container', {
+            // loop: true,
+            // autoplay: true,
+            centeredSlides: true,
+            slidesPerView: 1,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+        });
+
+        if (window.innerWidth > 990) {
+            if (Swipes !== undefined) {
+                Swipes.destroy(true, true);
+            }
+        }
+    }
+
     function checkboxDropdown() {
         document.querySelectorAll('.hs-form-checkbox').forEach(function (elem, i) {
             elem.querySelector('.hs-input').addEventListener("click", function () {
-                var title = elem.querySelector('span').textContent + ",";
+                var title = elem.querySelector('span').textContent + ";";
 
                 if (elem.querySelector('input[type="checkbox"]').checked) {
                     var html = '<span title="' + title + '">' + title + '</span>';
-                    document.querySelector('.spz-btn').insertAdjacentHTML('beforeend', html);
+                    document.querySelector('.spz-btn .value-container').insertAdjacentHTML('beforeend', html);
                 }
                 else {
                     document.querySelector('span[title="' + title + '"]').remove();
@@ -134,7 +200,7 @@
 
     function dropdownFunctionality() {
         if (!document.querySelector('.hs_capability_types').classList.contains('field-focus')) {
-            if (document.querySelector(".spz-btn > span")) {
+            if (document.querySelector(".spz-btn > .value-container > span")) {
                 document.querySelector('.hs_capability_types').classList.add('input-filled');
             }
             else {
@@ -143,28 +209,15 @@
         }
     }
 
-    // $('.hs-form-checkbox .hs-input').on('click', function () {
-    //     var title = $(this).closest('.hs-form-checkbox').find('span').text(),
-    //         title = $(this).closest('.hs-form-checkbox').find('span').text() + ",";
-    //     console.log('hello')
-    //     if ($(this).closest('.hs-form-checkbox').find('input[type="checkbox"]').is(':checked')) {
-    //         var html = '<span title="' + title + '">' + title + '</span>';
-    //         $('.spz-btn').append(html);
-    //         $(".dropdown-text").hide();
-    //     } else {
-    //         $('span[title="' + title + '"]').remove();
-    //         var ret = $(".dropdown-text");
-    //         $('.spz-btn').append(ret);
-    //     }
-    //     showLabel();
-    // });
-
-    // function showLabel() {
-    //     if (!$('.hs_capability_types .input .hs-form-checkbox input').is(':checked')) {
-    //         $(".dropdown-text").show();
-    //     }
-    // }
-
+    function appendFavicon() {
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1689675252/Jack%20Henry/2001/assets/Dropdown_red.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1689754317/Jack%20Henry/2001/assets/Filled-checkbox.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1689754169/Jack%20Henry/2001/assets/Arrow-left-hover.svg" as="image">
+            <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1689754169/Jack%20Henry/2001/assets/Arrow-right-hover.svg" as="image">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css">`
+        );
+    }
 
     // Generic Code
     function waitForElm(selector) {
