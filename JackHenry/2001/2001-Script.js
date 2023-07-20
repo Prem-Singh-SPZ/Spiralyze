@@ -1,5 +1,4 @@
 (function () {
-
     const swiperJS = document.createElement('script');
     swiperJS.src = '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js';
     swiperJS.type = 'text/javascript';
@@ -44,13 +43,13 @@
                     </div>
                     <div class="awards" >
                     <div class="badge" >
-                    <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-1.webp" alt="Linkedin top companies 2022"/>
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-1.png" alt="Linkedin top companies 2022"/>
                     </div>
                     <div class="badge" >
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-2.webp" alt="IDC Fintech rankings 2022"/>
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-2.png" alt="IDC Fintech rankings 2022"/>
                     </div>
                     <div class="badge" >
-                    <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-3.webp" alt="Fintech breakthrough award 2022"/>
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-3.png" alt="Fintech breakthrough award 2022"/>
                     </div>
                     </div> </div>
                 </div>
@@ -61,13 +60,13 @@
                 </div>
                 <div class="awards" >
                 <div class="badge" >
-                <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-1.webp" />
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-1.png" alt="Linkedin top companies 2022"/>
                 </div>
                 <div class="badge" >
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-2.webp" />
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-2.png" alt="IDC Fintech rankings 2022"/>
                 </div>
                 <div class="badge" >
-                <img  src="https://res.cloudinary.com/spiralyze/image/upload/v1689088597/jackhenry/2001/badge-3.webp" />
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-3.png" alt="Fintech breakthrough award 2022"/>
                 </div>
                 </div>
             </div>
@@ -100,7 +99,7 @@
                             <div class="testimonials_card swiper-slide">
                             <div>
                                 <div class="quote-testimonial">
-                                <div class="quote"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
+                                <div class="quote"><img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
                                     <div class="quote-text"> The technology has helped position us to compete and level the playing field. We don&#8217;t have to hire more staff. It&#8217;s made our teams&#8217; jobs so much easier.
                                         <br/> </div>
                                 </div>
@@ -114,7 +113,7 @@
                             <div class="testimonials_card swiper-slide">
                             <div>
                                 <div class="quote-testimonial">
-                                <div class="quote"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
+                                <div class="quote"><img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
                                     <div class="quote-text"> Having all accounts on one core system makes everyone&#8217;s lives easier and provides a better member experience. Integrating home banking and automated transfers is easier to manage. </div>
                                 </div>
                                 <div class="divider"> </div>
@@ -144,6 +143,20 @@
                         }
                     });
 
+                    var jQueryInterval = setInterval(function () {
+                        if (typeof jQuery != 'undefined') {
+                            clearInterval(jQueryInterval);
+
+                            jQuery('body').click(function (evt) {
+                                if (!jQuery(evt.target).hasClass("hs_capability_types") && jQuery(evt.target).closest('.hs_capability_types').length == 0) {
+                                    if (jQuery(".hs_capability_types").hasClass('field-focus')) {
+                                        jQuery(".hs_capability_types").removeClass('field-focus');
+                                        dropdownFunctionality();
+                                    }
+                                }
+                            });
+                        }
+                    });
                 });
             });
         }
@@ -276,7 +289,7 @@
                     el.closest('.field').classList.remove('field-error');
                 }
             });
-            document.querySelectorAll('.hs-input:not(.hs-fieldtype-textarea):not([type="checkbox"])').forEach(function (el) {
+            document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
                 if (el && el.value) {
                     el.closest('.field').classList.add('input-filled');
                 } else {

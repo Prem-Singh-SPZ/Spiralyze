@@ -1,0 +1,121 @@
+body.spz-6005 {
+  .hs-landing-page.hs-page #main-content {
+    .review-section {
+      padding: 0px 96px 120px 96px;
+      background: #fff;
+
+      > .container {
+        > .sec-title.border-title {
+          display: none !important;
+        }
+      }
+
+      .review-slider {
+        // margin-top: 0;
+        padding: 0;
+      }
+    }
+
+    .logo-section {
+      background: linear-gradient(180deg, #f2f2f2 0%, #f2f2f2 100%);
+      padding: 128px 96px 0;
+      overflow: hidden;
+      .container {
+        padding: 0;
+        .sec-title.border-title {
+          font-size: 48px;
+          font-weight: 800;
+          line-height: 44px; /* 91.667% */
+          letter-spacing: -0.48px;
+          &::after {
+            content: url(https://res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/dots__v2.svg);
+            position: absolute;
+            top: -169px;
+            right: -108px;
+            @media (max-width: 1199.98px) {
+              display: none;
+            }
+          }
+
+          &::before {
+            width: 112px;
+            top: -6px;
+          }
+        }
+
+        .testimonial {
+          margin: 56px 0 48px;
+          .testimonial-card {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            .testimonial-img {
+              margin-right: 64px;
+              img {
+                min-width: 403px;
+                height: auto;
+                border-radius: 16px;
+              }
+            }
+
+            .testimonial-content {
+              padding-left: 72px;
+              .auth-name {
+                position: relative;
+                margin-bottom: 20px;
+
+                h3 {
+                  font-family: "Darker Grotesque", sans-serif;
+                  color: var(--neutrals-black-000, #000);
+                  font-size: 48px;
+                  font-style: normal;
+                  font-weight: 800;
+                  line-height: 44px; /* 91.667% */
+                  letter-spacing: -0.48px;
+                  margin: 0 0 8px 0;
+                }
+                h6 {
+                  color: var(--neutrals-black-000, #000);
+                  font-family: "Darker Grotesque", sans-serif;
+                  margin: 0;
+                  font-size: 24px;
+                  font-style: normal;
+                  font-weight: 800;
+                  line-height: 24px; /* 100% */
+                  letter-spacing: -0.24px;
+                }
+
+                &::before {
+                  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/quote.svg);
+                  height: 48px;
+                  width: 48px;
+                  position: absolute;
+                  left: -72px;
+                  top: 0;
+                }
+              }
+
+              .auth-review {
+                margin-bottom: 6px;
+                p {
+                  color: var(--neutrals-gray-700, #5b5b5b);
+                  margin: 0;
+                  font-family: Inter;
+                  font-size: 17px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 24px; /* 141.176% */
+                }
+              }
+            }
+          }
+        }
+
+        .ls-logo-group {
+          margin: 0 auto 74px;
+        }
+      }
+    }
+  }
+}

@@ -461,7 +461,7 @@ body.spz-4010 {
   }
   .review-section {
     padding: 130px 0 128px;
-    background: #F3F3F3;
+    background: #f3f3f3;
     position: relative;
     overflow: hidden;
     .container.review-slider {
@@ -2329,9 +2329,16 @@ body.spz-4010 {
   .osano-cm-widget[title="Cookie Preferences"] {
     display: none !important;
   }
-  .form-wrapper-spz .hbspt-form form .actions .hs-button {
-    -webkit-border-radius: 4px;
-    -webkit-appearance: none;
+  .form-wrapper-spz .hbspt-form form {
+    .actions .hs-button {
+      -webkit-border-radius: 4px;
+      -webkit-appearance: none;
+    }
+
+    .hs-error-msgs.inputs-list label,
+    .hs-error-msgs.inputs-list label a {
+      line-height: 12px;
+    }
   }
 }
 

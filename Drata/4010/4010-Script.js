@@ -23,7 +23,6 @@
                 document.body.classList.add('spz-4010');
                 // updateInputLabel();
                 focusFields();
-                removeStyleTags();
             }
         }, 100);
     }
