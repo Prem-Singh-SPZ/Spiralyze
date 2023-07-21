@@ -206,7 +206,7 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
-            <p class="review">“The tool and the team have been amazingly helpful as we begin our SOC2 & HIPAA compliance process. This is critical for us to shorten deal cycles and win customers who need to see our security posture.”</p>
+            <p class="review">The tool and the team have been amazingly helpful as we begin our SOC2 & HIPAA compliance process. This is critical for us to shorten deal cycles and win customers who need to see our security posture.</p>
             <h6 class="review-author">Kevin K.</h6>
         </div>
     </div>
@@ -215,7 +215,7 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
-            <p class="review">“With powerful automation and clean design, Drata is helping us become HIPAA, GDPR and NIST compliant. It guides us along the steps needed, preventing us from missing anything important along the way.”</p>
+            <p class="review">With powerful automation and clean design, Drata is helping us become HIPAA, GDPR and NIST compliant. It guides us along the steps needed, preventing us from missing anything important along the way.</p>
             <h6 class="review-author">Matthew J.</h6>
         </div>
     </div>
@@ -224,7 +224,7 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
-            <p class="review">"Solid compliance software, excellent compliance guidance. We chose Drata over other automated SOC 2 monitoring solutions because they also offer FEDRAMP and HIPAA monitoring as well.”</p>
+            <p class="review">Solid compliance software, excellent compliance guidance. We chose Drata over other automated SOC 2 monitoring solutions because they also offer FEDRAMP and HIPAA monitoring as well.</p>
             <h6 class="review-author">Sebastian M.</h6>
         </div>
     </div>
@@ -253,7 +253,7 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
-            <p class="review">“Drata was holding our hands in the ISO and SOC certification path. We have a small team and we are wear many hats, Drata logically guides us to the path of certification”</p>
+            <p class="review">Drata was holding our hands in the ISO and SOC certification path. We have a small team and we are wear many hats, Drata logically guides us to the path of certification.</p>
             <h6 class="review-author">Nathan T.</h6>
         </div>
     </div>
@@ -262,7 +262,7 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
-            <p class="review">“I recently used Drata for my company's ISO27001 and SOC2 audits, and I couldn't be more impressed with their service. Drata provided everything we needed to complete our audits quickly and efficiently.”</p>
+            <p class="review">I recently used Drata for my company's ISO27001 and SOC2 audits, and I couldn't be more impressed with their service. Drata provided everything we needed to complete our audits quickly and efficiently.</p>
             <h6 class="review-author">Matthieu K.</h6>
         </div>
     </div>
@@ -300,7 +300,7 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
-            <p class="review">“The best thing about Drata is their knowledgeable team. Out of all the options we evaluated, Drata's team was by far the one providing the most information not just about their product, but also about the SOC2 and GDPR processes.”</p>
+            <p class="review">The best thing about Drata is their knowledgeable team. Out of all the options we evaluated, Drata's team was by far the one providing the most information not just about their product, but also about the SOC2 and GDPR processes.</p>
             <h6 class="review-author">Lav C.</h6>
         </div>
     </div>
@@ -347,8 +347,8 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"> </div>
-            <p class="review">“Drata's platform simplifies compliance. In our case, we used Drata for SOC2 and for GDPR. It literally saved us hundreds of hours and many dollars in consulting fees.”</p>
-            <h6 class="review-author">Lav C.</h6>
+            <p class="review">Drata's platform simplifies compliance. In our case, we used Drata for SOC2 and for GDPR. It literally saved us hundreds of hours and many dollars in consulting fees.</p>
+            <h6 class="review-author">Nathan T.</h6>
         </div>
     </div>
     <div class="review-item-box soc">
@@ -356,8 +356,8 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
-            <p class="review">“I would never want to go through SOC2 again without Drata. Even now that we are done with our first SOC2, Drata continuously monitors our controls and alerts us to issues.”</p>
-            <h6 class="review-author">Angela S.</h6>
+            <p class="review">I would never want to go through SOC2 again without Drata. Even now that we are done with our first SOC2, Drata continuously monitors our controls and alerts us to issues.</p>
+            <h6 class="review-author">Matthieu K.</h6>
         </div>
     </div>
     <div class="review-item-box soc">
@@ -365,8 +365,8 @@
             <div class="rating dis-flex"><img
                     src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
                     alt="Rating Stars" title="Rating Stars" class="star-rating"></div>
-            <p class="review">“Drata allowed our startup to get a huge head start on SOC2 and PCI compliance. Drata saved us months of reinventing the wheel of what they provide out of the box.“</p>
-            <h6 class="review-author">Matt R.</h6>
+            <p class="review">Drata allowed our startup to get a huge head start on SOC2 and PCI compliance. Drata saved us months of reinventing the wheel of what they provide out of the box.</p>
+            <h6 class="review-author">Steve C.</h6>
         </div>
     </div>
 </div>

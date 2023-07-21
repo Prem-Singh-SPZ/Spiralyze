@@ -35,16 +35,35 @@ body.spz-6005 {
       .review-slider {
         margin-top: 55px;
         // padding: 0;
-        @media  (min-width: 767.98px) and (max-width: 1199.98px) {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
           margin-top: 0;
           padding: 48px 0 70px;
         }
         @media (max-width: 767.98px) {
           margin-top: 0;
-
           padding: 12px 0px 60px;
         }
         .review-item-box {
+          .r-title {
+            line-height: 16px;
+            margin-top: 9px;
+            margin-bottom: 17px;
+            @media (max-width: 1199.98px) {
+              margin-top: 18px;
+              margin-bottom: 15px;
+            }
+          }
+
+          .review-author {
+            font-weight: 500;
+          }
+
+          .review {
+            @media (min-width: 1199.98px) and (max-width: 1234.98px) {
+              padding-bottom: 8px;
+            }
+          }
+
           &:not(.review-info-box) .review-content {
             @media (min-width: 1199.98px) {
               padding: 26px 19px 20px 21px;
@@ -112,6 +131,7 @@ body.spz-6005 {
           &::before {
             width: 112px;
             top: -6px;
+            background: #0580E8;
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               top: -2px;
             }
@@ -166,7 +186,7 @@ body.spz-6005 {
 
             .testimonial-content {
               padding-left: 72px;
-              @media  (max-width: 1199.98px) {
+              @media (max-width: 1199.98px) {
                 padding-left: 0;
               }
               @media (max-width: 767.98px) {
@@ -219,7 +239,7 @@ body.spz-6005 {
                   position: absolute;
                   left: -72px;
                   top: 0;
-                  @media  (max-width: 1199.98px) {
+                  @media (max-width: 1199.98px) {
                     height: 36px;
                     width: 36px;
                     left: 0;
@@ -238,11 +258,10 @@ body.spz-6005 {
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px; /* 141.176% */
-                  @media  (max-width: 1199.98px) {
+                  @media (max-width: 1199.98px) {
                     font-size: 15px;
                     line-height: 22px;
                   }
-                  
                 }
               }
             }
