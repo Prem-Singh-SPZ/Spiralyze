@@ -122,4 +122,66 @@ body.spz-2003 {
   //     }
   //   }
   // }
+
+  &.hs-content-path-contact-us-sales {
+    .hs_cos_wrapper_type_form form.hs-form-private {
+      .hs-form-field[class] {
+        &.hs-zip[class],
+        &.hs-fieldtype-booleancheckbox {
+          width: 100%;
+        }
+
+        &.hs_phone + .hs-zip[class] {
+          width: 47.335%;
+        }
+        &.field.hs-fieldtype-checkbox {
+          .input {
+            //Split checkboxes in 2 column
+            ul.inputs-list.multi-container {
+              @media (min-width: 767.98px) {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: space-between;
+                align-items: flex-start;
+
+                > li.hs-form-checkbox {
+                  width: 47%;
+                  &:nth-child(1) {
+                    order: 0;
+                  }
+                  &:nth-child(2) {
+                    order: 2;
+                  }
+                  &:nth-child(3) {
+                    order: 4;
+                  }
+                  &:nth-child(4) {
+                    order: 6;
+                  }
+                  &:nth-child(5) {
+                    order: 8;
+                  }
+                  &:nth-child(6) {
+                    order: 1;
+                  }
+                  &:nth-child(7) {
+                    order: 3;
+                  }
+                  &:nth-child(8) {
+                    order: 5;
+                  }
+                  &:nth-child(9) {
+                    order: 7;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .add-comments-div {
+        margin: 0px 0 18px 0;
+      }
+    }
+  }
 }

@@ -40,24 +40,44 @@
             // });
             // }
 
-            // else {
-            waitForElm('.hs-content-path-contact-us form.hs-form-private .hs-form-field').then(function (elm) {
-                //swap fields
-                document.querySelector('.hs_company').after(document.querySelector('.hs_phone'));
+            if (location.href.indexOf('sales') > -1) {
+                waitForElm('.hs-content-path-contact-us-sales form.hs-form-private .hs-form-field').then(function (elm) {
+                    //swap fields
+                    if (document.querySelector('form.hs-form-private .hs-form-field.hs_phone ')) {
+                        document.querySelector('.field.hs_email').after(document.querySelector('.field.hs_company'));
+                        document.querySelector('.hs_phone').classList.add('hidden-spz');
+                    }
 
-                document.querySelector('.hs_capability_types.hs-fieldtype-checkbox').insertAdjacentHTML('afterend', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
+                    document.querySelector('.hs_comment').insertAdjacentHTML('beforebegin', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
 
-                document.querySelector('.hs_zip').classList.add('hidden-spz');
-                document.querySelector('.hs_phone').classList.add('hidden-spz');
-                document.querySelector('.hs_capability_types').classList.add('hidden-spz');
-                document.querySelector('.add-comments-div').classList.add('hidden-spz');
-                document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
+                    document.querySelector('.hs_zip').classList.add('hidden-spz');
+                    document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.add('hidden-spz');
+                    // document.querySelector('.hs_i_am_a_current_customer').classList.add('hidden-spz');
+                    // document.querySelector('.hs_how_would_you_like_to_be_contacted_').classList.add('hidden-spz');
+                    document.querySelector('.add-comments-div').classList.add('hidden-spz');
+                    document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
 
-                focusFields();
+                    focusFields();
+                });
+            }
+            else {
+                waitForElm('.hs-content-path-contact-us form.hs-form-private .hs-form-field').then(function (elm) {
+                    //swap fields
+                    document.querySelector('.hs_company').after(document.querySelector('.hs_phone'));
 
-                submitTestDetails();
-            });
-            // }
+                    document.querySelector('.hs_capability_types.hs-fieldtype-checkbox').insertAdjacentHTML('afterend', `<div class="add-comments-div"><a href="javascript:void(0)" class="addcomment">+ Add Comments</a> </div>`);
+
+                    document.querySelector('.hs_zip').classList.add('hidden-spz');
+                    document.querySelector('.hs_phone').classList.add('hidden-spz');
+                    document.querySelector('.hs_capability_types').classList.add('hidden-spz');
+                    document.querySelector('.add-comments-div').classList.add('hidden-spz');
+                    document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
+
+                    focusFields();
+
+                    submitTestDetails();
+                });
+            }
         }
     });
 

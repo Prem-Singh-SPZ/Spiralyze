@@ -15,7 +15,9 @@
                 document.querySelector('#hs_cos_wrapper_flexible_column .contact-form-section .container').insertAdjacentHTML('beforeend', `<div class="spz-hero-section d-flex justify-content-between">
                 <div class="spz-hero-content">
                     <div class="logo-section">
+                    <a href="/">
                         <img src="//res.cloudinary.com/spiralyze/image/upload/v1689088504/jackhenry/2001/jack-henry-logo_2.svg" alt="Jack Henry">
+                        </a>
                     </div>
             
                     <div class="overhead">
@@ -196,16 +198,40 @@
     }
 
     function checkboxDropdown() {
+        let counter = 0;
         document.querySelectorAll('.hs-form-checkbox').forEach(function (elem, i) {
             elem.querySelector('.hs-input').addEventListener("click", function () {
-                var title = elem.querySelector('span').textContent + ";";
+                var title = elem.querySelector('span').textContent;
 
                 if (elem.querySelector('input[type="checkbox"]').checked) {
                     var html = '<span title="' + title + '">' + title + '</span>';
                     document.querySelector('.spz-btn .value-container').insertAdjacentHTML('beforeend', html);
+                    counter++;
                 }
                 else {
                     document.querySelector('span[title="' + title + '"]').remove();
+                    counter--;
+                }
+
+                if (counter == 1) {
+                    document.querySelector('.hs_capability_types .spz-btn').classList.add('single-value');
+                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('multiple-value')) {
+                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('multiple-value');
+                    }
+                }
+                else if (counter == 0) {
+                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('single-value')) {
+                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('single-value');
+                    }
+                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('multiple-value')) {
+                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('multiple-value');
+                    }
+                }
+                else {
+                    document.querySelector('.hs_capability_types .spz-btn').classList.add('multiple-value');
+                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('single-value')) {
+                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('single-value');
+                    }
                 }
             });
         })
@@ -219,6 +245,11 @@
             else {
                 document.querySelector('.hs_capability_types').classList.remove('input-filled');
             }
+        }
+        if (document.querySelector('.hs_capability_types .error') != null) {
+            document.querySelector('.hs_capability_types').classList.add('field-error');
+        } else {
+            document.querySelector('.hs_capability_types').classList.remove('field-error');
         }
     }
 
@@ -275,6 +306,22 @@
             el.addEventListener('blur', function () {
                 el.closest('.field').classList.remove('field-focus');
                 checkError();
+            });
+
+            // add event listeners to the input element
+            el.addEventListener('keypress', () => {
+                checkError();
+                dropdownFunctionality();
+            });
+
+            el.addEventListener('keydown', () => {
+                checkError();
+                dropdownFunctionality();
+            });
+
+            el.addEventListener('keyup', () => {
+                checkError();
+                dropdownFunctionality();
             });
         });
     }
