@@ -271,6 +271,12 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   width: 108px;
   height: 96px;
 }
+@media (max-width: 991.98px) {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper {
+    width: 100%;
+    text-align: center;
+  }
+}
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form {
   background: #fefdf8;
   border-radius: 30px;
@@ -411,9 +417,13 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field:not(.hs-connecting_possibilities_newsletter):not(.hs_fintalk_blog_subscription) ul.hs-error-msgs {
   margin: 4px 0 0;
+  text-align: left;
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field:not(.hs-connecting_possibilities_newsletter):not(.hs_fintalk_blog_subscription) ul.hs-error-msgs li label.hs-error-msg {
   line-height: 20px;
+  opacity: 1;
+}
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field:not(.hs-connecting_possibilities_newsletter):not(.hs_fintalk_blog_subscription) ul.hs-error-msgs li label {
   opacity: 1;
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field:not(.hs-connecting_possibilities_newsletter):not(.hs_fintalk_blog_subscription).input-filled .hs-label-spz {
@@ -465,14 +475,17 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-textarea, body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox {
   width: 100% !important;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field {
   position: relative;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .input {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .input {
   position: absolute;
   display: none;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .input .inputs-list.multi-container li.hs-form-checkbox {
+  text-align: left;
+}
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn {
   width: 100%;
   height: 56px;
   background: var(--primary-warm-ivary-bg, #fefdf8);
@@ -487,7 +500,7 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   white-space: nowrap;
   overflow: hidden;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn::before {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1689089281/jackhenry/2001/dropdown.svg);
   position: absolute;
   top: 0;
@@ -498,18 +511,18 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   z-index: 1;
 }
 @media (max-width: 767.98px) {
-  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn::before {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn::before {
     padding: 10px 16px 7px;
   }
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn > .value-container {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn > .value-container {
   pointer-events: none;
   position: absolute;
   width: 95%;
   overflow: hidden;
   top: 14px;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn > .value-container > span {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn > .value-container > span {
   overflow: hidden;
   color: var(--primary-legacy-navy-base, #06185f);
   font-size: 16px;
@@ -519,19 +532,19 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   padding-right: 2px;
   position: relative;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn > .value-container > span::after {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn > .value-container > span::after {
   content: ";";
   position: relative;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn.single-value > .value-container > span:first-child::after {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn.single-value > .value-container > span:first-child::after {
   display: none;
 }
 @media (max-width: 767.98px) {
-  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types .custom-input-btn {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn {
     height: 50px;
   }
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-focus .input {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .input {
   width: 100%;
   background: -webkit-gradient(linear, right top, left top, from(rgba(232, 247, 247, 0.3)), to(rgba(232, 247, 247, 0.3))), -webkit-gradient(linear, right top, left top, from(#fefdf8), to(#fefdf8));
   background: linear-gradient(to left, rgba(232, 247, 247, 0.3), rgba(232, 247, 247, 0.3)), linear-gradient(to left, #fefdf8, #fefdf8);
@@ -555,58 +568,65 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
           justify-content: flex-start;
   -ms-flex-negative: 0;
       flex-shrink: 0;
-  height: 190px;
+  max-height: 190px;
   overflow: auto;
   z-index: 2;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-focus .input::-webkit-scrollbar {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .input::-webkit-scrollbar {
   width: 6px;
   background: lightgray;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-focus .input::-webkit-scrollbar-track {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .input::-webkit-scrollbar-track {
   -webkit-box-shadow: inset 0 0 6px #b0b8ca;
   border-radius: 6px;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-focus .input::-webkit-scrollbar-thumb {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .input::-webkit-scrollbar-thumb {
   border-radius: 6px;
   -webkit-box-shadow: inset 0 0 6px #06185f;
   background: #06185f;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-focus .custom-input-btn {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .custom-input-btn {
   border-radius: 5px 5px 0px 0px !important;
   border: 1px solid var(--primary-vibrant-cobalt-base-blue, #085ce5);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(232, 247, 247, 0.3)), to(rgba(232, 247, 247, 0.3))), #fefdf8;
   background: linear-gradient(0deg, rgba(232, 247, 247, 0.3) 0%, rgba(232, 247, 247, 0.3) 100%), #fefdf8;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-focus .custom-input-btn::before {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .custom-input-btn::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1689089281/jackhenry/2001/dropdown.svg);
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
-  padding: 11px 19px;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-error .custom-input-btn {
+@media (min-width: 767.98px) {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-focus .custom-input-btn::before {
+    padding: 11px 19px;
+  }
+}
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-error .custom-input-btn {
   border-radius: 5px;
   border: 1px solid var(--supporting-error, #e02020);
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(249, 195, 195, 0.1)), to(rgba(249, 195, 195, 0.1))), #fefdf8;
   background: linear-gradient(0deg, rgba(249, 195, 195, 0.1) 0%, rgba(249, 195, 195, 0.1) 100%), #fefdf8;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs_capability_types.field-error .custom-input-btn::before {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-error .custom-input-btn::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1689675252/Jack%20Henry/2001/assets/Dropdown_red.svg);
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs_error_rollup .no-list.hs-error-msgs li label.hs-main-font-element {
   opacity: 1;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-field {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-field,
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs_connecting_possibilities_newsletter .hs-form-field {
   margin-bottom: 20px;
 }
-body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox label span {
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox label span,
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs_connecting_possibilities_newsletter .hs-form-booleancheckbox label span {
   color: var(--primary-legacy-navy-base, #06185f);
   text-align: left;
   font: var(--additional-i-input-16-medium, 500 16px/24px "Gellix", sans-serif);
   padding-left: 32px;
 }
 @media (max-width: 767.98px) {
-  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox label span {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox label span,
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs_connecting_possibilities_newsletter .hs-form-booleancheckbox label span {
     font-size: 15px;
   }
 }
@@ -914,15 +934,17 @@ body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .con
   }
 }
 body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner p,
-body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner span {
+body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner span,
+body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner a {
   color: var(--primary-legacy-navy-base, #06185f);
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 160% */
 }
-body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner p > span > span {
+body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner p > a {
   white-space: nowrap;
+  text-decoration: none;
 }
 body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper:first-child .contact-card-inner > div > a {
   margin-top: -3px;
@@ -1308,6 +1330,9 @@ body.spz-2001 > #hs_cos_wrapper_standard_footer #subfooter .container div.row .c
     padding: 18px 0 0 0px;
   }
 }
+body.spz-2001 > #hs_cos_wrapper_standard_footer #subfooter .container div.row .col > .text-15 {
+  color: #fefdf8;
+}
 @media (max-width: 767.98px) {
   body.spz-2001 > #hs_cos_wrapper_standard_footer #subfooter .container div.row .col > .text-15 {
     font-size: 15px !important;
@@ -1381,5 +1406,16 @@ body.spz-2001 > #hs_cos_wrapper_standard_footer #subfooter .container div.row .c
   }
   body.spz-2001 > #hs_cos_wrapper_standard_footer #subfooter .container div.row .col-auto div.d-flex a:nth-child(7), body.spz-2001 > #hs_cos_wrapper_standard_footer #subfooter .container div.row .col-auto div.d-flex a:nth-child(5) {
     margin-top: 16px !important;
+  }
+}
+body.spz-2001.hs-content-path-contact-us-sales .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field[class].hs-zip[class], body.spz-2001.hs-content-path-contact-us-sales .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field[class].hs-fieldtype-booleancheckbox {
+  width: 100% !important;
+}
+body.spz-2001.hs-content-path-contact-us-sales .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field[class].hs-zip[class] .hs-form-booleancheckbox, body.spz-2001.hs-content-path-contact-us-sales .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field[class].hs-fieldtype-booleancheckbox .hs-form-booleancheckbox {
+  text-align: left;
+}
+@media (min-width: 767.98px) {
+  body.spz-2001.hs-content-path-contact-us-sales .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field[class].hs_phone + .hs-zip[class] {
+    width: 48.024% !important;
   }
 }

@@ -11,7 +11,7 @@
             bodyEle.classList.add('spz-2001');
 
             //Hero section content feeding
-            waitForElm('.hs-content-path-contact-us form.hs-form-private .hs-form-field').then(function (elm) {
+            waitForElm(' form.hs-form-private .hs-form-field').then(function (elm) {
                 document.querySelector('#hs_cos_wrapper_flexible_column .contact-form-section .container').insertAdjacentHTML('beforeend', `<div class="spz-hero-section d-flex justify-content-between">
                 <div class="spz-hero-content">
                     <div class="logo-section">
@@ -85,11 +85,14 @@
                 if (document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox span')) {
                     document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox span').textContent = 'Subscribe to Jack Henry™ news and updates.';
                 }
+                else if (document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs_connecting_possibilities_newsletter .hs-form-booleancheckbox span')) {
+                    document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs_connecting_possibilities_newsletter .hs-form-booleancheckbox span').textContent = 'Subscribe to Jack Henry™ news and updates.';
+                }
 
-                document.querySelector('form.hs-form-private .hs_capability_types legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span></button>`);
+                document.querySelector('form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span></button>`);
                 if (document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column')) {
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(2) .contact-card-inner h5.mb-3').textContent = 'Join Jack Henry';
-                    document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(1) .contact-card-inner div:last-child p span').innerHTML = 'Give us a call. Our corporate call center is open 24 hours a day: <span>1-800-299-4222.</span>';
+                    document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(1) .contact-card-inner div:last-child p').innerHTML = '<span>Give us a call. Our corporate call center is open 24 hours a day:</span> <a href="tel:+1800-299-4222" rel="noopener" target="_blank"><span>1-800-299-4222</span></a>';
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column').classList.add('four-cards-container');
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column').classList.remove('col-12', 'col-lg-4', 'd-flex', 'flex-column', 'pt-4');
                 }
@@ -133,7 +136,7 @@
                     </div>
                 </div>
                 `);
-                waitForElm('.hs-content-path-contact-us .spz-hero-section .spz-form-wrapper').then(function (elm) {
+                waitForElm(' .spz-hero-section .spz-form-wrapper').then(function (elm) {
                     moveElement('.contact-form-section .container .row.mt-5 .col-lg-6.pe-lg-5 .hs_cos_wrapper_type_form', '.spz-hero-section .spz-form-wrapper');
                     moveElement('.contact-form-section .container .row.mt-5 .four-cards-container ', '.spz-four-cards');
 
@@ -152,9 +155,9 @@
                             clearInterval(jQueryInterval);
 
                             jQuery('body').click(function (evt) {
-                                if (!jQuery(evt.target).hasClass("hs_capability_types") && jQuery(evt.target).closest('.hs_capability_types').length == 0) {
-                                    if (jQuery(".hs_capability_types").hasClass('field-focus')) {
-                                        jQuery(".hs_capability_types").removeClass('field-focus');
+                                if (!jQuery(evt.target).hasClass("hs_capability_types") && jQuery(evt.target).closest('.hs-fieldtype-checkbox.field.hs-form-field').length == 0) {
+                                    if (jQuery(".hs-fieldtype-checkbox.field.hs-form-field").hasClass('field-focus')) {
+                                        jQuery(".hs-fieldtype-checkbox.field.hs-form-field").removeClass('field-focus');
                                         dropdownFunctionality();
                                     }
                                 }
@@ -216,23 +219,23 @@
                 }
 
                 if (counter == 1) {
-                    document.querySelector('.hs_capability_types .spz-btn').classList.add('single-value');
-                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('multiple-value')) {
-                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('multiple-value');
+                    document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.add('single-value');
+                    if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('multiple-value')) {
+                        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('multiple-value');
                     }
                 }
                 else if (counter == 0) {
-                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('single-value')) {
-                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('single-value');
+                    if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('single-value')) {
+                        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('single-value');
                     }
-                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('multiple-value')) {
-                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('multiple-value');
+                    if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('multiple-value')) {
+                        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('multiple-value');
                     }
                 }
                 else {
-                    document.querySelector('.hs_capability_types .spz-btn').classList.add('multiple-value');
-                    if (document.querySelector('.hs_capability_types .spz-btn').classList.contains('single-value')) {
-                        document.querySelector('.hs_capability_types .spz-btn').classList.remove('single-value');
+                    document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.add('multiple-value');
+                    if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('single-value')) {
+                        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('single-value');
                     }
                 }
             });
@@ -240,18 +243,18 @@
     }
 
     function dropdownFunctionality() {
-        if (!document.querySelector('.hs_capability_types').classList.contains('field-focus')) {
+        if (!document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.contains('field-focus')) {
             if (document.querySelector(".spz-btn > .value-container > span")) {
-                document.querySelector('.hs_capability_types').classList.add('input-filled');
+                document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.add('input-filled');
             }
             else {
-                document.querySelector('.hs_capability_types').classList.remove('input-filled');
+                document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.remove('input-filled');
             }
         }
-        if (document.querySelector('.hs_capability_types .error') != null) {
-            document.querySelector('.hs_capability_types').classList.add('field-error');
+        if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .error') != null) {
+            document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.add('field-error');
         } else {
-            document.querySelector('.hs_capability_types').classList.remove('field-error');
+            document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.remove('field-error');
         }
     }
 
