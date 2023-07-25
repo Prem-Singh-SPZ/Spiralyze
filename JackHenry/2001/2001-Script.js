@@ -82,7 +82,9 @@
                 //Form title set
                 document.querySelector('.hs_cos_wrapper_type_form > h3.form-title').textContent = 'contact sales';
                 document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs_comment .hs-label-spz span').textContent = 'Comment (Optional)';
-                document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox span').textContent = 'Subscribe to Jack Henry™ news and updates.';
+                if (document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox span')) {
+                    document.querySelector('.hs_cos_wrapper_type_form form.hs-form-private .hs-dependent-field .hs-form-booleancheckbox span').textContent = 'Subscribe to Jack Henry™ news and updates.';
+                }
 
                 document.querySelector('form.hs-form-private .hs_capability_types legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span></button>`);
                 if (document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column')) {
