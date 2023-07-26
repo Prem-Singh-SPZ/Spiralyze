@@ -95,6 +95,9 @@ body.spz-2001 {
           }
 
           .overhead {
+            @media (min-width: 990.98px) {
+              margin: 40px 0;
+            }
             .financial-services-solutions {
               margin-bottom: 8px;
               color: var(--primary-legacy-navy-base, #06185f);
@@ -362,6 +365,11 @@ body.spz-2001 {
                     text-transform: capitalize;
                     z-index: 1;
                     letter-spacing: 0.015px;
+                    white-space: nowrap;
+                    max-width: calc(100% - 70px);
+                    text-overflow: ellipsis;
+                    overflow: hidden;
+                    text-align: left;
 
                     > .hs-form-required {
                       display: none !important;
@@ -489,6 +497,11 @@ body.spz-2001 {
                     position: relative;
                     white-space: nowrap;
                     overflow: hidden;
+
+                    @media (max-width: 767.98px) {
+                      padding: 14px 40px 18px 14px;
+                    }
+
                     &::before {
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1689089281/jackhenry/2001/dropdown.svg);
                       position: absolute;
@@ -509,6 +522,9 @@ body.spz-2001 {
                       width: 95%;
                       overflow: hidden;
                       top: 14px;
+                      @media (max-width: 767.98px) {
+                        top: 10px;
+                      }
 
                       > span {
                         overflow: hidden;
@@ -626,8 +642,11 @@ body.spz-2001 {
               //Global error msg
               .hs_error_rollup {
                 .no-list.hs-error-msgs {
-                  li label.hs-main-font-element {
-                    opacity: 1;
+                  li {
+                    text-align: left;
+                    label.hs-main-font-element {
+                      opacity: 1;
+                    }
                   }
                 }
               }
@@ -862,7 +881,8 @@ body.spz-2001 {
           }
         }
         .contact-card-inner {
-          box-shadow: 0px 12px 80px 0px rgba(10, 56, 133, 0.12);
+          // box-shadow: 0px 12px 80px 0px rgba(10, 56, 133, 0.12);
+          box-shadow: 0px 8px 32px 0px rgba(10, 56, 133, 0.12);
           display: flex;
           flex-direction: column;
           border-radius: 16px;
@@ -922,7 +942,7 @@ body.spz-2001 {
 
           p,
           span,
-          a {
+          a.spz-tel {
             color: var(--primary-legacy-navy-base, #06185f);
             font-size: 15px;
             font-style: normal;
@@ -933,7 +953,7 @@ body.spz-2001 {
             // > span > span {
             //   white-space: nowrap;
             // }
-            > a {
+            > a.spz-tel {
               white-space: nowrap;
               text-decoration: none;
             }

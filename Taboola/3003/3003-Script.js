@@ -12,15 +12,21 @@ var jQueryInterval = setInterval(function () {
                 $('#element-558 .contents.cropped.item-block').html(`
                 <div class="hero-video-poster">
             <div class="hero-poster-container">
-                <picture>
-                    <source media="(max-width: 599px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/f_auto/Taboola/3003/custom/assets/poster-mobile-min.png"> <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/Taboola/3003/custom/assets/poster-desktop-min.png" alt="Find right audience at low CPA" draggable="false" class="hero-poster-video-bg"> </picture>
+            <picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1689944076/taboola/3003/preview-desk_1.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1689944076/taboola/3003/preview-desk_1.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1689944076/taboola/3003/preview-desk_1.webp" alt="Find right audience at low CPA" draggable="false" class="hero-poster-video-bg">
+                </picture>
                 <a href="javascript:void(0)" id="play-btn-hero" class="play-btn-hero"> <img class="play-btn-spz-hero" src="https://res.cloudinary.com/spiralyze/image/upload/v1690277730/Taboola/3003/custom/assets/play-button.svg" alt="Play" /> </a>
             </div>
         </div>`);
                 $('#element-558').after(`<div id="spz-hero-modal" class="spz-hero-modal">
             <div class="hero-modal-content">
               <div class="modal-container">
-                <span class="modal-close-button modal-display-topright">&times;</span>
+                <div class="modal-close-button modal-display-topright">
+                <img class="close-modal" src="https://res.cloudinary.com/spiralyze/image/upload/v1690361425/Taboola/3003/custom/assets/icon-close.svg" alt="Close" />
+                <img class="close-modal-hover" src="https://res.cloudinary.com/spiralyze/image/upload/v1690361425/Taboola/3003/custom/assets/icon-close-hover.svg" alt="Close" />
+                </div>
                 <video id="hero-video-spz"  width="100%" height="100%" controls poster="https://res.cloudinary.com/spiralyze/image/upload/f_auto/Taboola/2022%20%7C%20Landing%20Page/assets/hero-desktop.jpg">
             <source src="https://res.cloudinary.com/spiralyze/video/upload/v1671108710/Taboola/2022%20%7C%20Landing%20Page/assets/video/Taboola_Intro-2022-v02.mp4" type="video/mp4"> Your browser does not support the video tag. </video>
               </div>

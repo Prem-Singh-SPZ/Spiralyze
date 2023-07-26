@@ -41,7 +41,7 @@
                     </div>
                     <div class="social-proof desktop" >
                     <div class="proud-to-be-recognized-as-an-industry-leader" >
-                    Proud to Be Recognized as an Industry Leader
+                    proud to be recognized as an industry leader
                     </div>
                     <div class="awards" >
                     <div class="badge" >
@@ -58,7 +58,7 @@
                 <div class="spz-form-wrapper"></div>
                 <div class="social-proof mobile" >
                 <div class="proud-to-be-recognized-as-an-industry-leader" >
-                Proud to Be Recognized as an Industry Leader
+                proud to be recognized as an industry leader
                 </div>
                 <div class="awards" >
                 <div class="badge" >
@@ -92,7 +92,7 @@
                 document.querySelector('form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span></button>`);
                 if (document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column')) {
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(2) .contact-card-inner h5.mb-3').textContent = 'Join Jack Henry';
-                    document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(1) .contact-card-inner div:last-child p').innerHTML = '<span>Give us a call. Our corporate call center is open 24 hours a day:</span> <a href="tel:+1800-299-4222" rel="noopener" target="_blank"><span>1-800-299-4222</span></a>';
+                    document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column .contact-card-wrapper:nth-child(1) .contact-card-inner div:last-child p').innerHTML = '<span>Give us a call. Our corporate call center is open 24 hours a day:</span> <a href="tel:+1800-299-4222" rel="noopener" target="_blank" class="spz-tel"><span>1-800-299-4222.</span></a>';
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column').classList.add('four-cards-container');
                     document.querySelector('.contact-form-section .container .row.mt-5 .col-lg-4.pt-4.flex-column').classList.remove('col-12', 'col-lg-4', 'd-flex', 'flex-column', 'pt-4');
                 }

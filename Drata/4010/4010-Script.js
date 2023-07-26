@@ -23,10 +23,18 @@
                 document.body.classList.add('spz-4010');
                 // updateInputLabel();
                 focusFields();
+                submitTestDetails();
             }
         }, 100);
     }
 
+    //Passing test details to hidden fields
+    function submitTestDetails() {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#4010__Product(Paid)_SPZ_Baseline_Long_Page');
+            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
+        }
+    }
 
     //function to add all the sections
     function appendSections() {

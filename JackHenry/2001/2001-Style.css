@@ -123,6 +123,11 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
     height: 20px;
   }
 }
+@media (min-width: 990.98px) {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-hero-content .overhead {
+    margin: 40px 0;
+  }
+}
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-hero-content .overhead .financial-services-solutions {
   margin-bottom: 8px;
   color: var(--primary-legacy-navy-base, #06185f);
@@ -403,6 +408,11 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   text-transform: capitalize;
   z-index: 1;
   letter-spacing: 0.015px;
+  white-space: nowrap;
+  max-width: calc(100% - 70px);
+  text-overflow: ellipsis;
+  overflow: hidden;
+  text-align: left;
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field:not(.hs-connecting_possibilities_newsletter):not(.hs_fintalk_blog_subscription) .hs-label-spz > .hs-form-required {
   display: none !important;
@@ -500,6 +510,11 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   white-space: nowrap;
   overflow: hidden;
 }
+@media (max-width: 767.98px) {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn {
+    padding: 14px 40px 18px 14px;
+  }
+}
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1689089281/jackhenry/2001/dropdown.svg);
   position: absolute;
@@ -521,6 +536,11 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   width: 95%;
   overflow: hidden;
   top: 14px;
+}
+@media (max-width: 767.98px) {
+  body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn > .value-container {
+    top: 10px;
+  }
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field .custom-input-btn > .value-container > span {
   overflow: hidden;
@@ -609,6 +629,9 @@ body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs-form-field.hs-fieldtype-checkbox.field.hs-form-field.field-error .custom-input-btn::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1689675252/Jack%20Henry/2001/assets/Dropdown_red.svg);
+}
+body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs_error_rollup .no-list.hs-error-msgs li {
+  text-align: left;
 }
 body.spz-2001 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .spz-form-wrapper .hs_cos_wrapper_type_form form.hs-form-private .hs_error_rollup .no-list.hs-error-msgs li label.hs-main-font-element {
   opacity: 1;
@@ -869,8 +892,8 @@ body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-
   }
 }
 body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner {
-  -webkit-box-shadow: 0px 12px 80px 0px rgba(10, 56, 133, 0.12);
-          box-shadow: 0px 12px 80px 0px rgba(10, 56, 133, 0.12);
+  -webkit-box-shadow: 0px 8px 32px 0px rgba(10, 56, 133, 0.12);
+          box-shadow: 0px 8px 32px 0px rgba(10, 56, 133, 0.12);
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -935,14 +958,14 @@ body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .con
 }
 body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner p,
 body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner span,
-body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner a {
+body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner a.spz-tel {
   color: var(--primary-legacy-navy-base, #06185f);
   font-size: 15px;
   font-style: normal;
   font-weight: 500;
   line-height: 24px; /* 160% */
 }
-body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner p > a {
+body.spz-2001 > .spz-four-cards .four-cards-container .contact-card-wrapper .contact-card-inner p > a.spz-tel {
   white-space: nowrap;
   text-decoration: none;
 }

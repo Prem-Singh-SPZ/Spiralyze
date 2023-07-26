@@ -57,6 +57,10 @@
                     document.querySelector('.add-comments-div').classList.add('hidden-spz');
                     document.querySelector('.hs_comment').classList.add('sub-hidden-spz');
 
+                    if (document.querySelectorAll('.hs-fieldtype-checkbox.field.hs-form-field .input .hs-form-checkbox').length == 1) {
+                        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .input').classList.add('single-input');
+                    }
+
                     focusFields();
                 });
             }
