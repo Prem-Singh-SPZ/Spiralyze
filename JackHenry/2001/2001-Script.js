@@ -148,6 +148,11 @@
                         if (e.target.classList.contains("hs-button")) {
                             checkError();
                         }
+                        if (e.target.closest('ul')) {
+                            if (e.target.closest('ul').classList.contains('hs-error-msgs')) {
+                                checkError();
+                            }
+                        }
                     });
 
                     var jQueryInterval = setInterval(function () {

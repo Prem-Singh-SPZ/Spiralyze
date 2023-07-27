@@ -5,6 +5,7 @@
 
     function loadTest() {
         document.body.classList.add('spz-704');
+        heroUpdate();
 
         document.querySelector('.off-canvas-wrapper .off-canvas-content .bgBlueGreenGradientDesign div[data-block="logos"]').insertAdjacentHTML('afterend', `<div class="spz-key-features">
             <div class="key-features-wrapper grid-container">
@@ -53,15 +54,60 @@
                 </div>
             </div>
         </div>
-    </section>`)
+        </section>`)
 
         formCustomization();
     }
 
+    function heroUpdate() {
+        document.querySelector('.off-canvas-wrapper .off-canvas-content .new-logo .logo-link img').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/rapid7_logo_1.svg');
+
+        document.querySelector('.off-canvas-wrapper .off-canvas-content .hero-section .hero-text .spz-hero-description').insertAdjacentHTML('beforebegin',`<div class="review-and-rating"><div class="review-hero">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/group.svg" alt="Peer insights">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/peerinsights-stars.svg" alt="Ratings">
+        </div>
+        <div class="rating-hero"><span>4.3</span> (572 reviews)</div>
+        </div>`)
+    }
+
     function formCustomization() {
         document.querySelector("#Country option:first-child").textContent = '';
+        trimLabel();
 
+        document.querySelector('#mktoForm_2856 #LblEmail').textContent = 'Company Email';
+
+        waitForElm('.off-canvas-wrapper .hero-section .marketoForm #State option:first-child').then(function (elm) {
+            document.querySelector("#State option:first-child").textContent = '';
+            trimLabel();
+        });
+
+        document.querySelectorAll('#mktoForm_2856 .mktoFormRow').forEach(function (elem, i) {
+            if (elem.querySelector('input')) {
+                elem.querySelector('input').addEventListener('change', function () {
+                });
+            }
+
+            if (elem.querySelector('select')) {
+                elem.querySelector('select').addEventListener('change', function () {
+                    if (document.querySelector("#State option:first-child").textContent) {
+                        document.querySelector("#State option:first-child").textContent = '';
+                    }
+                    trimLabel();
+                });
+            }
+        });
     }
+
+    function trimLabel() {
+        document.querySelectorAll('#mktoForm_2856 .mktoFormRow').forEach(function (elem, i) {
+            if (elem.querySelector('.mktoFieldWrap .mktoLabel')) {
+                let currentLabel = elem.querySelector('.mktoFieldWrap .mktoLabel').textContent;
+                let updatedLabel = currentLabel.replace(":", "").replace("*", "");
+                elem.querySelector('.mktoFieldWrap .mktoLabel').textContent = updatedLabel;
+            }
+        });
+    }
+
     // Generic
     function waitForElm(selector) {
         return new Promise(function (resolve) {
@@ -76,17 +122,6 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    // Move element
-    // sourceElm: Element which we have to move
-    // targetLoc: New location of an element 
-    function moveElement(sourceElm, targetLoc) {
-        const f = document.createDocumentFragment();
-        if (document.querySelector(sourceElm) != null) {
-            f.appendChild(document.querySelector(sourceElm));
-            document.querySelector(targetLoc).appendChild(f);
-        }
     }
 
     // Add class 'safari' (used for cart scrollbar)
