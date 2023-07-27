@@ -39,6 +39,524 @@ body.spz-704 {
           }
         }
       }
+
+      .bgBlueGreenGradientDesign {
+        .spz-key-features {
+          .key-features-wrapper {
+            .key-features-title {
+              h6 {
+                color: var(--primary, #3b454a);
+                text-align: center;
+                font-family: Mulish, Mulish-local, sans-serif;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 36px; /* 128.571% */
+              }
+            }
+
+            .key-features-content {
+              display: flex;
+              flex-wrap: wrap;
+              justify-content: space-between;
+              max-width: 1148px;
+              margin: auto;
+
+              .key-card {
+                width: 356px;
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                > p {
+                  color: var(--primary, #3b454a);
+                  font-family: Mulish, Mulish-local, sans-serif;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 900;
+                  line-height: 28px; /* 140% */
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  ::-webkit-input-placeholder {
+    /* WebKit browsers */
+    color: transparent;
+    opacity: 0;
+  }
+  :-moz-placeholder {
+    /* Mozilla Firefox 4 to 18 */
+    color: #fff;
+    opacity: 0;
+  }
+  ::-moz-placeholder {
+    /* Mozilla Firefox 19+ */
+    opacity: 0;
+    color: #fff;
+  }
+  :-ms-input-placeholder {
+    /* Internet Explorer 10+ */
+    opacity: 0;
+    color: transparent;
+  }
+  input::placeholder {
+    opacity: 0;
+    color: transparent;
+  }
+  input:-webkit-autofill,
+  input[type="date"]:-webkit-autofill,
+  input[type="date"]:-webkit-autofill:focus,
+  input[type="email"]:-webkit-autofill,
+  input[type="email"]:-webkit-autofill:focus,
+  input[type="number"]:-webkit-autofill,
+  input[type="number"]:-webkit-autofill:focus,
+  input[type="tel"]:-webkit-autofill,
+  input[type="tel"]:-webkit-autofill:focus,
+  input[type="text"]:-webkit-autofill,
+  input[type="text"]:-webkit-autofill:focus,
+  input[type="url"]:-webkit-autofill:focus,
+  select:-webkit-autofill,
+  textarea:-webkit-autofill {
+    outline: 0;
+    -webkit-box-shadow: 0 0 0 1000px #fff inset !important;
+    -webkit-text-fill-color: #000 !important;
+  }
+  input::-ms-clear {
+    display: none;
+  }
+
+  .mktoForm {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+  }
+
+  .mktoForm .mktoFormRow {
+    max-width: calc(50% - 10px) !important;
+    height: auto;
+    width: 100%;
+    margin: 0;
+    padding: 0 !important;
+  }
+
+  .mktoForm .mktoFormRow .mktoFormCol {
+    margin-bottom: 0 !important;
+  }
+
+  .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
+    margin-bottom: 20px;
+  }
+
+  .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.invalid-field {
+    margin-bottom: 0 !important;
+  }
+
+  .mktoForm .mktoFormRow[input-name="parent-AnonymousIP"],
+  .mktoForm .mktoFormRow[input-name="parent-ClickSource"],
+  .mktoForm .mktoFormRow[input-name="parent-InferredCountry"],
+  .mktoForm .mktoFormRow[input-name="parent-LeadSource"],
+  .mktoForm .mktoFormRow[input-name="parent-Roadshow_Location"],
+  .mktoForm .mktoFormRow[input-name="parent-browseLang"],
+  .mktoForm .mktoFormRow[input-name="parent-canadaExplicitOptInDate"],
+  .mktoForm .mktoFormRow[input-name="parent-eventDateCode"],
+  .mktoForm .mktoFormRow[input-name="parent-noinput"] {
+    width: auto;
+  }
+
+  .mktoForm .mktoFormRow[input-name="parent-ExplicitOptOut__c"],
+  .mktoForm .mktoFormRow[input-name="parent-noinput"] {
+    display: none;
+  }
+
+  .mlp-form .mktoFormRow .mktoFormCol .mktoFieldWrap label.mktoLabel {
+    width: auto !important;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    color: #82939c;
+    position: absolute;
+    z-index: 1;
+    top: 13px;
+    left: 16px;
+    margin-bottom: 0 !important;
+    -webkit-transition: all 0.2s;
+    -o-transition: all 0.2s;
+    transition: all 0.2s;
+    pointer-events: none;
+    display: block !important;
+  }
+
+  .mlp-form .mktoFormRow .mktoFormCol .mktoFieldWrap.focused label.mktoLabel {
+    top: -9px;
+    left: 12px;
+    font-weight: 400;
+    font-size: 13px;
+    padding: 0 3px;
+    background: #fff;
+    color: #3b454a;
+  }
+
+  .mlp-form
+    .mktoFormRow
+    .mktoFormCol
+    .mktoFieldWrap.focused.invalid-field
+    label.mktoLabel {
+    color: #e85e26;
+  }
+
+  .mktoForm .mktoRequiredField .mktoAsterix {
+    display: none !important;
+  }
+
+  .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
+    position: relative;
+    bottom: 2px !important;
+  }
+
+  .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+    font-family: "Roboto";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 100%;
+    color: #e85e26 !important;
+  }
+
+  .mktoForm .mktoFormRow input,
+  .mktoForm .mktoFormRow select {
+    height: 44px !important;
+    background: #fff;
+    border: 1px solid #dfdfdf !important;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+    border-radius: 4px !important;
+    padding: 7px 16px 6px 16px !important;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400 !important;
+    font-size: 16px !important;
+    line-height: 24px !important;
+    color: #3b454a !important;
+    -webkit-border-radius: 4px !important;
+    -moz-border-radius: 4px !important;
+    -ms-border-radius: 4px !important;
+    -o-border-radius: 4px !important;
+  }
+
+  .mktoForm .mktoFormRow input[type="checkbox"] {
+    height: auto !important;
+  }
+
+  .mktoForm .mktoFormRow select {
+    color: #7e7e7e !important;
+    line-height: 18px !important;
+  }
+
+  .mktoForm .mktoFormRow select.blackText {
+    color: #3b454a !important;
+  }
+
+  .mktoForm .mktoFormRow input:hover,
+  .mktoForm .mktoFormRow select:hover {
+    border: 1px solid #cacaca !important;
+  }
+
+  .mktoForm .mktoFormRow .mktoFieldWrap.focused input,
+  .mktoForm .mktoFormRow .mktoFieldWrap.focused select {
+    border: 1px solid #3b454a !important;
+  }
+
+  .mktoForm .mktoFormRow .mktoFieldWrap.focused.invalid-field input,
+  .mktoForm .mktoFormRow .mktoFieldWrap.focused.invalid-field select,
+  .mktoForm .mktoFormRow .mktoFieldWrap.invalid-field input,
+  .mktoForm .mktoFormRow .mktoFieldWrap.invalid-field select {
+    border: 1px solid #e85e26 !important;
+  }
+
+  .mktoForm .mktoFormRow select {
+    background: #fff
+      url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg)
+      no-repeat center right 15px;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    appearance: none;
+    overflow: hidden;
+    white-space: nowrap;
+    -o-text-overflow: ellipsis;
+    text-overflow: ellipsis;
+    padding: 6px 25px 6px 14px !important;
+  }
+
+  .mktoForm .mktoFormRow select::-ms-expand {
+    display: none;
+  }
+
+  .mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+    max-width: 100% !important;
+    width: 100%;
+    height: 52px;
+    background: #e85e26 !important;
+    border-radius: 52px !important;
+    font-family: Muli, sans-serif;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 12px;
+    line-height: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    color: #fff;
+    margin-top: 5px !important;
+    letter-spacing: 3px;
+    -webkit-transition: none !important;
+    -o-transition: none !important;
+    transition: none !important;
+    -webkit-border-radius: 52px !important;
+    -moz-border-radius: 52px !important;
+    -ms-border-radius: 52px !important;
+    -o-border-radius: 52px !important;
+    -moz-transition: none !important;
+    -ms-transition: none !important;
+  }
+
+  .mktoForm .mktoButtonWrap.mktoSimple .mktoButton:hover {
+    background: #c64815 !important;
+    -webkit-box-shadow: none;
+    box-shadow: none;
+  }
+
+  .mktoForm .mktoButtonWrap.mktoSimple .mktoButton:active,
+  .mktoForm .mktoButtonWrap.mktoSimple .mktoButton:focus {
+    background: #c64815 !important;
+  }
+
+  .mktoForm .mktoFormRow[input-name="parent-ExplicitOptOut__c"],
+  .mktoForm .mktoFormRow[input-name="parent-noinput"] {
+    display: block !important;
+    max-width: 100% !important;
+    width: 100%;
+    height: auto;
+    margin-bottom: 0;
+  }
+
+  .mktoForm .mktoFormRow[input-name="parent-ExplicitOptOut__c"],
+  .mktoForm
+    .mktoFormRow[input-name="parent-ExplicitOptOut__c"]
+    .mktoFormCol
+    .mktoFieldWrap
+    .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+    max-width: 100% !important;
+    margin-bottom: 0;
+  }
+
+  .mktoForm .mktoFormRow[input-name="parent-ExplicitOptOut__c"] .mktoFormCol,
+  .mktoForm .mktoFormRow[input-name="parent-noinput"] .mktoFormCol {
+    margin-bottom: 0 !important;
+  }
+
+  #mktoCheckbox_162303_0 {
+    height: auto !important;
+    margin-top: 0 !important;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3b454a;
+    padding: 0 !important;
+  }
+
+  .mktoForm
+    .mktoFormRow
+    .mktoFormCol
+    .mktoFieldWrap
+    .mktoLogicalField.mktoCheckboxList.mktoHasWidth
+    > label {
+    position: relative;
+    top: 0;
+    left: 0;
+    padding-left: 15px !important;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px !important;
+    line-height: 100% !important;
+    color: #3b454a;
+    margin: 0;
+  }
+
+  .mktoForm
+    .mktoFormRow[input-name="parent-noinput"]
+    .mktoFieldWrap
+    .mktoHtmlText.mktoHasWidth {
+    padding: 0;
+    margin-bottom: 0;
+    font-family: Roboto;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 14px;
+    line-height: 20px;
+    color: #3b454a;
+  }
+
+  .mktoForm .mktoFormRow[input-name="parent-State"] {
+    max-width: 100% !important;
+    width: 100%;
+  }
+
+  .mktoForm
+    .mktoFormRow
+    .mktoFormCol
+    .mktoFieldWrap
+    .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    max-width: 100%;
+    margin-bottom: 20px;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+  }
+
+  @media only screen and (max-width: 480px),
+    only screen and (max-device-width: 480px),
+    only screen and (max-device-height: 480px) {
+    .mktoForm
+      .mktoFormRow[input-name="parent-noinput"]
+      .mktoFieldWrap
+      .mktoHtmlText.mktoHasWidth
+      > a {
+      padding: 0;
+    }
+  }
+
+  @media (max-width: 1199.98px) {
+    .mktoForm .mktoFormRow {
+      max-width: calc(100% / 2 - 6px);
+    }
+
+    .mktoForm .mktoFormRow[input-name="parent-ExplicitOptOut__c"],
+    .mktoForm
+      .mktoFormRow[input-name="parent-ExplicitOptOut__c"]
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+      max-width: 100% !important;
+      margin-bottom: 0;
+    }
+  }
+
+  @media (max-width: 1023.98px) {
+    .mktoForm .mktoButtonRow {
+      margin-top: 0;
+    }
+
+    .mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+      max-width: initial !important;
+      margin-top: 4px !important;
+    }
+  }
+
+  @media (max-width: 767.98px) {
+    .mktoForm .mktoFormRow {
+      max-width: 100% !important;
+      margin-bottom: 0;
+    }
+
+    .mktoForm .mktoButtonWrap.mktoSimple .mktoButton {
+      max-width: 280px !important;
+      margin-top: 5px !important;
+      padding: 0 !important;
+    }
+
+    .mktoForm .mktoButtonWrap.mktoSimple .mktoButton img {
+      padding: 0 !important;
+    }
+
+    .mktoForm .mktoFormRow select {
+      background: #fff
+        url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg)
+        no-repeat center right 15px;
+    }
+
+    .mktoForm
+      .mktoFormRow
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+    }
+  }
+
+  @media (min-width: 1023.98px) and (max-width: 1168.98px) {
+    .mktoForm
+      .mktoFormRow
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+      -webkit-box-align: start;
+      -ms-flex-align: start;
+      align-items: flex-start;
+    }
+  }
+
+  @media (min-width: 1023.98px) and (min-height: 1800px) {
+    .mktoForm .mktoFormRow[input-name="parent-noinput"] {
+      display: none !important;
+    }
+
+    .mktoForm
+      .mktoFormRow
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth,
+    .mktoForm
+      .mktoFormRow[input-name="parent-noinput"]
+      .mktoFieldWrap
+      .mktoHtmlText.mktoHasWidth {
+      display: block !important;
+    }
+
+    .mktoForm
+      .mktoFormRow
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth
+      label {
+      display: block !important;
+    }
+
+    .mktoForm
+      .mktoFormRow
+      .mktoFormCol
+      .mktoFieldWrap
+      .mktoLogicalField.mktoCheckboxList.mktoHasWidth
+      > label {
+      left: 7px;
+      padding-left: 14px;
+      font-family: Roboto;
+      font-weight: 300;
+      font-size: 12px;
+      /*color: #fff*/
     }
   }
 
@@ -50,21 +568,21 @@ body.spz-704 {
     margin-left: auto;
     margin-right: auto;
   }
-  
+
   @media print, screen and (min-width: 40em) {
     .grid-container {
       padding-right: 1.875rem;
       padding-left: 1.875rem;
     }
   }
-  
+
   .grid-x {
     display: -ms-flexbox;
     display: flex;
     -ms-flex-flow: row wrap;
     flex-flow: row wrap;
   }
-  
+
   .cell {
     -ms-flex: 0 0 auto;
     flex: 0 0 auto;
@@ -72,7 +590,7 @@ body.spz-704 {
     min-width: 0;
     width: 100%;
   }
-  
+
   .grid-x > .small-12 {
     -ms-flex-preferred-size: auto;
     flex-basis: auto;
@@ -80,21 +598,21 @@ body.spz-704 {
     flex: 0 0 auto;
     width: 100%;
   }
-  
+
   @media print, screen and (min-width: 40em) {
     .grid-x > .medium-10 {
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .grid-x > .large-8 {
       -ms-flex-preferred-size: auto;
       flex-basis: auto;
     }
   }
-  
+
   @media print, screen and (min-width: 40em) {
     .grid-x > .medium-10 {
       -ms-flex: 0 0 auto;
@@ -102,7 +620,7 @@ body.spz-704 {
       width: 83.3333333333%;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .grid-x > .large-8 {
       -ms-flex: 0 0 auto;
@@ -110,26 +628,26 @@ body.spz-704 {
       width: 66.6666666667%;
     }
   }
-  
+
   .align-center {
     -ms-flex-pack: center;
     justify-content: center;
   }
-  
+
   .font-size-h3 {
     font-size: 1.375rem;
     line-height: 1.75rem;
     font-weight: 900;
     font-family: Mulish, Mulish-local, sans-serif;
   }
-  
+
   @media print, screen and (min-width: 40em) {
     .font-size-h3 {
       font-size: 1.75rem;
       line-height: 2.25rem;
     }
   }
-  
+
   .font-size-p {
     font-size: 1rem;
     line-height: 1.5rem;
@@ -137,45 +655,45 @@ body.spz-704 {
     letter-spacing: 0.33px;
     font-family: Roboto, Roboto-local, sans-serif;
   }
-  
+
   @media print, screen and (min-width: 40em) {
     .font-size-p {
       font-size: 1.125rem;
       line-height: 1.75rem;
     }
   }
-  
+
   .grid-x.wrapper {
     padding-top: 2rem;
     padding-bottom: 2rem;
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .grid-x.wrapper {
       padding-top: 5rem;
       padding-bottom: 5rem;
     }
   }
-  
+
   .cerberus .pageContent section {
     background: 0 0;
   }
-  
+
   /*! CSS Used from: https://www.rapid7.com/includes/css/bundles/blocks/block.quoteblock.min.css?cb=1689792193537 */
-  
+
   .quoteBlock {
     background-image: url(https://www.rapid7.com/includes/img/backgrounds/quote-background.jpg);
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center center;
   }
-  
+
   .quoteBlock__item {
     text-align: center;
     margin: 0 auto 50px auto;
     max-width: 350px;
   }
-  
+
   @media screen and (min-width: 64em) {
     .quoteBlock__item {
       -ms-flex: 1;
@@ -185,7 +703,7 @@ body.spz-704 {
       padding: 0 20px;
     }
   }
-  
+
   .quoteBlock__item-icon {
     width: 59px;
     height: 48px;
@@ -195,7 +713,7 @@ body.spz-704 {
     background-position: center;
     margin: 0 auto 32px auto;
   }
-  
+
   .quoteBlock__item-content {
     display: -ms-flexbox;
     display: flex;
@@ -208,46 +726,46 @@ body.spz-704 {
     margin-bottom: 32px;
     background-color: rgba(255, 255, 255, 0.6);
     border-radius: 5px;
-  
+
     span {
       font-weight: 800;
-  
+
       &:before {
         content: "“";
       }
-  
+
       &:after {
         content: "”";
       }
     }
   }
-  
+
   .quoteBlock__item-author {
     font-weight: 700;
     margin-bottom: 20px;
   }
-  
+
   .cerberus .quoteBlock__item-author {
     color: #002746;
   }
-  
+
   .quoteBlock.orange-quote {
     padding: 0;
     background-image: none;
-  
+
     .wrapper {
       padding: 0;
     }
-  
+
     .quoteBlock__item {
       max-width: initial;
       padding: 0 1.1875rem;
     }
-  
+
     .quoteBlock__item-icon {
       display: none;
     }
-  
+
     .quoteBlock__item-content {
       display: -ms-flexbox;
       display: flex;
@@ -261,14 +779,14 @@ body.spz-704 {
       background-color: initial;
       border-radius: 0;
       box-shadow: none;
-  
+
       span {
         font-weight: 900;
         position: relative;
         padding-top: 61px;
         display: block;
         text-align: left;
-  
+
         &:before {
           content: "“";
           color: #e85e26;
@@ -278,13 +796,13 @@ body.spz-704 {
           top: 44px;
           left: -5px;
         }
-  
+
         &:after {
           display: none;
         }
       }
     }
-  
+
     .quoteBlock__item-author {
       font-weight: 400;
       margin-top: 27px;
@@ -292,42 +810,41 @@ body.spz-704 {
       text-align: left;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .quoteBlock.orange-quote {
       padding: 20px 0;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .quoteBlock.orange-quote .grid-container {
       padding-left: 0;
       padding-right: 0;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .quoteBlock.orange-quote .wrapper {
       padding: 1rem 0 2rem 0;
     }
   }
-  
+
   @media print, screen and (min-width: 40em) {
     .quoteBlock.orange-quote .quoteBlock__item {
       padding: 0 0.25rem;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .quoteBlock.orange-quote .quoteBlock__item {
       padding: 0;
     }
   }
-  
+
   @media print, screen and (min-width: 64em) {
     .quoteBlock.orange-quote .quoteBlock__item-content span:before {
       font-size: 8rem;
     }
   }
-  
 }

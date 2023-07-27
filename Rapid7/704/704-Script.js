@@ -1,5 +1,5 @@
 (function () {
-    waitForElm('.off-canvas-wrapper .hero-section .marketoForm').then(function (elm) {
+    waitForElm('.off-canvas-wrapper .hero-section .marketoForm #Country option:first-child').then(function (elm) {
         loadTest();
     });
 
@@ -8,7 +8,7 @@
 
         document.querySelector('.off-canvas-wrapper .off-canvas-content .bgBlueGreenGradientDesign div[data-block="logos"]').insertAdjacentHTML('afterend', `<div class="spz-key-features">
             <div class="key-features-wrapper grid-container">
-                <div class="key-features-title grid-x" >
+                <div class="key-features-title" >
                     <h6>Key Features</h6>
                 </div>
                 <div class="key-features-content grid-x">
@@ -54,8 +54,14 @@
             </div>
         </div>
     </section>`)
+
+        formCustomization();
     }
 
+    function formCustomization() {
+        document.querySelector("#Country option:first-child").textContent = '';
+
+    }
     // Generic
     function waitForElm(selector) {
         return new Promise(function (resolve) {
