@@ -57,6 +57,15 @@
         </section>`);
 
         formCustomization();
+        headerChanges();
+
+    }
+
+    function headerChanges() {
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `
+        <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1690558496/RAPID7/704/custom/unchecked.svg" as="image">
+        <link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1690558496/RAPID7/704/custom/checked.svg" as="image">`
+        );
 
         // Add class 'safari' (used for cart scrollbar)
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -93,10 +102,15 @@
 
             if (elem.querySelector('select')) {
                 elem.querySelector('select').addEventListener('change', function () {
-                    if (document.querySelector("#State option:first-child").textContent) {
+                    if (document.querySelector("#State") && document.querySelector("#State option:first-child").textContent) {
                         document.querySelector("#State option:first-child").textContent = '';
                     }
                     trimLabel();
+                    if (window.innerWidth < 768) {
+                        setTimeout(() => {
+                            detectHeightChange();
+                        }, 100);
+                    }
                 });
             }
         });
@@ -110,6 +124,15 @@
                 elem.querySelector('.mktoFieldWrap .mktoLabel').textContent = updatedLabel;
             }
         });
+    }
+
+    function detectHeightChange() {
+        if (document.querySelector('.hero-sec #mktoForm_2856 .mktoFormRow[input-name="parent-State"]')) {
+            document.querySelector('.hero-sec').style.marginBottom = "100px";
+        }
+        else {
+            document.querySelector('.hero-sec').style.marginBottom = "0px";
+        }
     }
 
     // Generic

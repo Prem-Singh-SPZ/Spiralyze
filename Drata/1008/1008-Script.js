@@ -26,8 +26,10 @@
         appendInputLabel();
 
         // Set input label
-        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
-        document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about us?*');
+        if (document.querySelector('[name="source__inbound_demo_"]')) {
+          document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
+          document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about us?*');
+        }
         document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
         // Set SOC-2 checkbox checked
         // document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
@@ -51,6 +53,7 @@
         });
 
         // moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1:nth-child(2)');
+        moveElement('.form-wrapper-spz .hbspt-form .form-columns-0', '.form-wrapper-spz .hbspt-form');
 
         // Set focus on input
         focusFields();
