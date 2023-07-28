@@ -10,15 +10,46 @@ body.spz-704 {
         background-repeat: no-repeat;
         max-height: 750px;
         background-size: cover;
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451380/rapid7/704/bgrd_768.webp");
+          max-height: 780px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        @media (max-width: 767.98px) {
+          background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451365/rapid7/704/brgd_360.webp");
+          max-height: 1021px;
+          background-position: center center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
 
         .hero-wrap {
           .new-header {
             padding-top: 39px;
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              padding-bottom: 28px;
+            }
+            @media (max-width: 767.98px) {
+              padding-top: 18px;
+              padding-bottom: 41px;
+            }
+
             .new-logo {
               text-align: center;
 
               .logo-link {
                 margin-right: 34px;
+                @media (max-width: 1023.98px) {
+                  margin-right: 0;
+                }
+                @media (max-width: 767.98px) {
+                  img {
+                    width: 106px;
+                    height: 18px;
+                  }
+                }
               }
             }
           }
@@ -44,6 +75,14 @@ body.spz-704 {
                     font-weight: 900;
                     line-height: 56px; /* 116.667% */
                     margin-bottom: 16px;
+                    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                      padding-left: 0;
+                    }
+                    @media (max-width: 767.98px) {
+                      text-align: center;
+                      font-size: 28px;
+                      line-height: 36px; /* 128.571% */
+                    }
                   }
 
                   > h4,
@@ -54,6 +93,9 @@ body.spz-704 {
                   .spz-hero-description {
                     margin: auto;
                     max-width: 760px;
+                    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                      max-width: 648px;
+                    }
 
                     p {
                       color: #fff;
@@ -63,6 +105,9 @@ body.spz-704 {
                       font-style: normal;
                       font-weight: 400;
                       line-height: 26px; /* 144.444% */
+                      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                        padding-left: 0;
+                      }
                     }
                   }
 
@@ -71,8 +116,16 @@ body.spz-704 {
                     align-items: center;
                     justify-content: center;
                     margin-bottom: 16px;
+                    @media (max-width: 767.98px) {
+                      flex-wrap: wrap;
+                      margin-top: 20px;
+                      margin-bottom: 24px;
+                    }
 
                     .review-hero {
+                      @media (max-width: 767.98px) {
+                        margin-bottom: 10px;
+                      }
                       img {
                         &:first-child {
                           width: 104px;
@@ -81,6 +134,10 @@ body.spz-704 {
                           margin: 0 14px 0 12px;
                           margin-top: -4px;
                           margin-left: 7px;
+                          @media (max-width: 767.98px) {
+                            margin: 0;
+                            margin-left: 8px;
+                          }
                         }
                       }
                     }
@@ -101,9 +158,19 @@ body.spz-704 {
 
                 &.form-col {
                   margin-top: 48px;
+                  @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                    margin-top: 28px;
+                  }
+                  @media (max-width: 767.98px) {
+                    margin-top: 43px;
+                  }
+
                   .hero-col-wrapper {
                     max-width: 590px;
                     margin: auto;
+                    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                      max-width: 648px;
+                    }
 
                     > h5,
                     > .dashboard-img {
@@ -118,6 +185,9 @@ body.spz-704 {
                       max-width: 100%;
                       padding: 39px;
                       position: relative;
+                      @media (max-width: 767.98px) {
+                        padding: 39px 15px;
+                      }
 
                       .marketoForm {
                         #intro {
@@ -132,6 +202,10 @@ body.spz-704 {
                             font-weight: 900;
                             line-height: 40px; /* 125% */
                             margin-bottom: 12px;
+                            @media (max-width: 767.98px) {
+                              font-size: 20px;
+                              line-height: 28px;
+                            }
                           }
 
                           > p.instructions {
@@ -169,6 +243,9 @@ body.spz-704 {
 
                             .mktoFieldWrap {
                               margin-bottom: 20px !important;
+                              @media (max-width: 767.98px) {
+                                margin-bottom: 16px !important;
+                              }
 
                               &.invalid-field {
                                 margin-bottom: 0 !important;
@@ -337,6 +414,7 @@ body.spz-704 {
                             white-space: nowrap;
                             -o-text-overflow: ellipsis;
                             text-overflow: ellipsis;
+                            background-size: 10px;
                             padding: 6px 25px 6px 14px !important;
 
                             &::-ms-expand {
@@ -521,7 +599,7 @@ body.spz-704 {
 
                           .mktoButtonWrap.mktoSimple .mktoButton {
                             max-width: initial !important;
-                            margin-top: 4px !important;
+                            margin-top: 9px !important;
                           }
                         }
                       }
@@ -534,8 +612,7 @@ body.spz-704 {
                           }
 
                           .mktoButtonWrap.mktoSimple .mktoButton {
-                            max-width: 280px !important;
-                            margin-top: 5px !important;
+                            margin-top: 13px !important;
                             padding: 0 !important;
 
                             img {
@@ -544,11 +621,11 @@ body.spz-704 {
                           }
 
                           .mktoFormRow {
-                            select {
-                              background: #fff
-                                url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg)
-                                no-repeat center right 15px;
-                            }
+                            // select {
+                            //   background: #fff
+                            //     url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg)
+                            //     no-repeat center right 15px;
+                            // }
 
                             .mktoFormCol
                               .mktoFieldWrap
@@ -618,9 +695,21 @@ body.spz-704 {
 
       .bgBlueGreenGradientDesign {
         padding-top: 160px;
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          padding-top: 127px;
+        }
+        @media (max-width: 767.98px) {
+          padding-top: 125px;
+        }
 
         .spz-key-features {
           padding: 38px 0;
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            padding-top: 2px;
+          }
+          @media (max-width: 767.98px) {
+            padding: 28px 0;
+          }
 
           .key-features-wrapper {
             .key-features-title {
@@ -641,6 +730,14 @@ body.spz-704 {
               justify-content: center;
               max-width: 1188px;
               margin: 48px auto;
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                margin-top: 24px;
+                margin-bottom: 61px;
+              }
+              @media (max-width: 767.98px) {
+                margin-top: 24px;
+                margin-bottom: 41px;
+              }
 
               .key-card {
                 width: 100%;
@@ -649,6 +746,10 @@ body.spz-704 {
                 flex-direction: column;
                 align-items: center;
                 margin: 32px 20px;
+                @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                  max-width: 320px;
+                  margin: 32px 12px;
+                }
 
                 > p {
                   color: var(--primary, #3b454a);
@@ -849,6 +950,12 @@ body.spz-704 {
     text-align: center;
     margin: 0 auto 50px auto;
     max-width: 350px;
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      margin: 0 auto 66px auto;
+    }
+    @media (max-width: 767.98px) {
+      margin: 0 auto 57px auto;
+    }
   }
 
   @media screen and (min-width: 64em) {
