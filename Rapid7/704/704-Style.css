@@ -1,4 +1,29 @@
 @charset "UTF-8";
+body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451392/rapid7/704/bgrd_1440.png");
+  background-position: center center;
+  background-repeat: no-repeat;
+  max-height: 750px;
+  background-size: cover;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451380/rapid7/704/bgrd_768.png");
+    max-height: 780px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451365/rapid7/704/brgd_360.png");
+    max-height: 1021px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451392/rapid7/704/bgrd_1440.webp");
   background-position: center center;
@@ -260,6 +285,11 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
     margin-bottom: 11px !important;
   }
 }
+@media (max-width: 767.98px) {
+  body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.invalid-field {
+    margin-bottom: 16px !important;
+  }
+}
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-AnonymousIP], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-ClickSource], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-InferredCountry], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-LeadSource], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-Roadshow_Location], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-browseLang], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-canadaExplicitOptInDate], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-eventDateCode], body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-noinput] {
   width: auto;
 }
@@ -312,15 +342,16 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-Phone] .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgEmail.mktoErrorMsg,
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-Phone] .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgPhone.mktoErrorMsg, body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-Email] .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgEmail.mktoErrorMsg,
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-Email] .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgPhone.mktoErrorMsg {
-  top: -22px;
+  top: -21px;
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
   font-family: "Roboto";
   font-style: normal;
   font-weight: 400;
-  font-size: 14px;
-  line-height: 20px;
+  font-size: 10px;
+  line-height: 9px;
   color: #e85e26 !important;
+  top: -21.5px;
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow input,
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow select {

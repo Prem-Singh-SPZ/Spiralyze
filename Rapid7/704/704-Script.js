@@ -57,12 +57,17 @@
         </section>`);
 
         formCustomization();
+
+        // Add class 'safari' (used for cart scrollbar)
+        if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+            document.body.classList.add('safari');
+        }
     }
 
     function heroUpdate() {
-        document.querySelector('.off-canvas-wrapper .off-canvas-content .new-logo .logo-link img').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/rapid7_logo_1.svg');
+        document.querySelector('.off-canvas-wrapper .off-canvas-content .new-logo .logo-link img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/rapid7_logo_1.svg');
 
-        document.querySelector('.off-canvas-wrapper .off-canvas-content .hero-section .hero-text .spz-hero-description').insertAdjacentHTML('beforebegin',`<div class="review-and-rating"><div class="review-hero">
+        document.querySelector('.off-canvas-wrapper .off-canvas-content .hero-section .hero-text .spz-hero-description').insertAdjacentHTML('beforebegin', `<div class="review-and-rating"><div class="review-hero">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/group.svg" alt="Peer insights">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/peerinsights-stars.svg" alt="Ratings">
         </div>
@@ -83,7 +88,7 @@
 
         document.querySelectorAll('#mktoForm_2856 .mktoFormRow').forEach(function (elem, i) {
             if (elem.querySelector('input')) {
-                elem.querySelector('input').setAttribute('placeholder','');
+                elem.querySelector('input').setAttribute('placeholder', '');
             }
 
             if (elem.querySelector('select')) {
@@ -121,10 +126,5 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    // Add class 'safari' (used for cart scrollbar)
-    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-        document.body.classList.add('safari');
     }
 })();
