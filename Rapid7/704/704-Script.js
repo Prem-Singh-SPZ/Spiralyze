@@ -54,7 +54,7 @@
                 </div>
             </div>
         </div>
-        </section>`)
+        </section>`);
 
         formCustomization();
     }
@@ -67,7 +67,7 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1690279480/rapid7/704/peerinsights-stars.svg" alt="Ratings">
         </div>
         <div class="rating-hero"><span>4.3</span> (572 reviews)</div>
-        </div>`)
+        </div>`);
     }
 
     function formCustomization() {
@@ -126,6 +126,6 @@
 
     // Add class 'safari' (used for cart scrollbar)
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-        document.body.classList.add('safari')
+        document.body.classList.add('safari');
     }
 })();

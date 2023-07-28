@@ -431,7 +431,7 @@ body.spz-704 {
                           border-radius: 52px !important;
                           font-family: $mulish;
                           font-style: normal;
-                          font-weight: 700;
+                          font-weight: 900;
                           font-size: 12px;
                           line-height: 100%;
                           text-align: center;
@@ -506,6 +506,7 @@ body.spz-704 {
                       #mktoCheckbox_197422_0 {
                         height: 16px !important;
                         width: 16px !important;
+                        accent-color: #519BC8;
                       }
 
                       .mktoForm .mktoFormRow {
@@ -1116,6 +1117,9 @@ body.spz-704 {
   .landingFooter {
     .footer__legal {
       height: 118px;
+      @media (max-width: 767.98px) {
+        height: 143px;
+      }
     }
   }
 }

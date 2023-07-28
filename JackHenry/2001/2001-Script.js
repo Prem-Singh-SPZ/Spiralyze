@@ -6,7 +6,7 @@
 
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-2003')) {
+        if (!bodyEle.classList.contains('spz-2001')) {
             clearInterval(bodyInterval);
             bodyEle.classList.add('spz-2001');
 
