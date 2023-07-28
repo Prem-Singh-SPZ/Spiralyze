@@ -235,20 +235,21 @@ body.spz-704 {
                           max-width: calc(50% - 10px) !important;
                           height: auto;
                           width: 100%;
-                          margin: 0;
+                          // margin: 0;
                           padding: 0 !important;
+                          // margin-bottom: 20px;
 
                           .mktoFormCol {
-                            margin-bottom: 0 !important;
+                            // margin-bottom: 0 !important;
 
                             .mktoFieldWrap {
-                              margin-bottom: 20px !important;
+                              // margin-bottom: 20px !important;
                               @media (max-width: 767.98px) {
-                                margin-bottom: 16px !important;
+                                margin-bottom: 11px !important;
                               }
 
                               &.invalid-field {
-                                margin-bottom: 0 !important;
+                                // margin-bottom: 0 !important;
                               }
                             }
                           }
@@ -327,9 +328,23 @@ body.spz-704 {
                             margin-bottom: 0;
                           }
 
+                          &[input-name="parent-Phone"],
+                          &[input-name="parent-Email"] {
+                            .mktoFormCol {
+                              .mktoFieldWrap {
+                                .mktoError {
+                                  #ValidMsgEmail.mktoErrorMsg,
+                                  #ValidMsgPhone.mktoErrorMsg {
+                                    top: -22px;
+                                  }
+                                }
+                              }
+                            }
+                          }
+
                           .mktoFormCol .mktoFieldWrap .mktoError {
-                            position: relative;
-                            bottom: -8px !important;
+                            // position: relative;
+                            // bottom: -8px !important;
 
                             .mktoErrorMsg {
                               font-family: "Roboto";
@@ -360,6 +375,7 @@ body.spz-704 {
                             -moz-border-radius: 4px !important;
                             -ms-border-radius: 4px !important;
                             -o-border-radius: 4px !important;
+                            margin-bottom: 5px !important;
                           }
 
                           // input[type="checkbox"] {
@@ -406,7 +422,7 @@ body.spz-704 {
                           select {
                             background: #fff
                               url(//res.cloudinary.com/spiralyze/image/upload/v1627044048/RAPID7/702%20InsightVM%20Demo%20-%20Redesign%20v2/Dropdown.svg)
-                              no-repeat center right 15px;
+                              no-repeat center right 16px;
                             -moz-appearance: none;
                             -webkit-appearance: none;
                             appearance: none;
@@ -506,7 +522,7 @@ body.spz-704 {
                       #mktoCheckbox_197422_0 {
                         height: 16px !important;
                         width: 16px !important;
-                        accent-color: #519BC8;
+                        accent-color: #519bc8;
                       }
 
                       .mktoForm .mktoFormRow {
@@ -762,6 +778,7 @@ body.spz-704 {
                   margin-top: 32px;
                   letter-spacing: 0;
                   margin-bottom: 0;
+                  white-space: nowrap;
                 }
               }
             }
@@ -786,6 +803,7 @@ body.spz-704 {
     /* Mozilla Firefox 19+ */
     opacity: 0;
     color: #fff;
+    display: none;
   }
   :-ms-input-placeholder {
     /* Internet Explorer 10+ */

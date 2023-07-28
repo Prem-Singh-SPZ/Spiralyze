@@ -83,8 +83,7 @@
 
         document.querySelectorAll('#mktoForm_2856 .mktoFormRow').forEach(function (elem, i) {
             if (elem.querySelector('input')) {
-                elem.querySelector('input').addEventListener('change', function () {
-                });
+                elem.querySelector('input').setAttribute('placeholder','');
             }
 
             if (elem.querySelector('select')) {
