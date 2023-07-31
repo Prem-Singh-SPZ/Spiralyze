@@ -68,8 +68,10 @@ body.spz-1008 {
       > fieldset.form-columns-0 {
         border: 0;
         padding: 0;
-        margin: 12px 0 0 0;
-
+        margin: 10px 0 0 0;
+        @media (max-width: 767.98px) {
+          margin: 16px 0 0 0;
+        }
         .hs-richtext.hs-main-font-element {
           color: var(--neutrals-white-fff, #fff);
           font-family: Inter;
@@ -83,7 +85,10 @@ body.spz-1008 {
 
     .spz-review-badge {
       .review-badge-title {
-        margin: 40px 0 32px;
+        margin: 38px 0 32px;
+        @media (max-width: 767.98px) {
+          margin: 38px 0 20px;
+        }
         h6 {
           color: var(--greys-grey-000, #fff);
           text-align: center;
@@ -101,6 +106,23 @@ body.spz-1008 {
         display: flex;
         justify-content: space-between;
         align-items: center;
+
+        .review-badge {
+          height: 96px;
+          @media (max-width: 767.98px) {
+            height: 68px;
+            > img {
+              height: 100%;
+              width: auto;
+            }
+          }
+
+          @media (max-width: 767.98px) {
+            &:last-child {
+              display: none;
+            }
+          }
+        }
       }
     }
   }

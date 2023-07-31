@@ -1,0 +1,133 @@
+body.spz-24001 {
+  #lp-pom-root {
+    #lp-pom-text-1577 {
+      h1 {
+        line-height: 1 !important; /* 125% */
+        span {
+          letter-spacing: 0.32px;
+          line-height: 40px !important; /* 125% */
+        }
+      }
+    }
+
+    .spz-bullet-container {
+      .spz-bullet-list {
+        padding-left: 32px;
+
+        .bullet-item {
+          position: relative;
+          margin-bottom: 14px;
+
+          &::before {
+            position: absolute;
+            content: url(https://res.cloudinary.com/spiralyze/image/upload/v1690787883/Coveo/24001/bullet-icon-green.svg);
+            left: -32px;
+            top: 5px;
+          }
+
+          .container {
+            color: var(--text-color-white, #fff);
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px;
+
+            span {
+              font-weight: 500;
+            }
+          }
+        }
+      }
+    }
+
+    //Forms CSS Starts here
+    .custom-form-container {
+      .form-container-heading {
+        margin: 38px 40px 0 !important;
+        h4 {
+          line-height: 1 !important;
+          span {
+            line-height: 40px !important;
+          }
+        }
+      }
+
+      .form-two-columns.has-axis {
+        margin: 40px !important;
+
+        form {
+          .fields {
+            #container_email,
+            #container_country,
+            #container_stateprovince {
+              width: 100% !important;
+            }
+
+            .lp-pom-form-field:not(.checkbox-group) {
+              height: 48px;
+              margin-bottom: 20px;
+              padding: 0 9px;
+
+              .lp-form-label {
+                position: relative !important;
+                height: 0 !important;
+                width: max-content !important;
+                top: 18px;
+                left: 20px;
+                margin: 0;
+                transition: all 0.2s;
+
+                > .label-style {
+                  color: rgba(40, 40, 41, 0.5);
+                  font-size: 16px;
+                  font-weight: 300;
+                }
+              }
+
+              input.ub-input-item,
+              select.ub-input-item {
+                color: #282829;
+                font-size: 16px;
+                font-weight: 300;
+                border-radius: 8px;
+                height: 48px;
+              }
+
+              &.typing {
+                .lp-form-label {
+                  top: -6px;
+                  left: 18px;
+                  > .label-style {
+                    background: #fff;
+                    font-size: 12px;
+                    font-weight: 300;
+                    padding: 0 2px;
+                  }
+                }
+
+                input.ub-input-item,
+                select.ub-input-item {
+                  border: 1px solid var(--cta-color-1, #1372ec);
+                }
+              }
+
+              &.filled {
+                .lp-form-label {
+                  top: -6px;
+                  left: 18px;
+
+                  > .label-style {
+                    background: #fff;
+                    font-size: 12px;
+                    font-weight: 300;
+                    padding: 0 2px;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

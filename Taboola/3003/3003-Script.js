@@ -35,6 +35,7 @@ var jQueryInterval = setInterval(function () {
         </div>`);
 
                 $('#play-btn-hero').click(function () {
+                    $('#hero-video-spz').prop('muted', false);
                     $('.spz-hero-modal').addClass('fade-in');
                     $('body').addClass('hero-modal-open');
                     // $('#brand-video-spz').removeAttr('style');
@@ -42,11 +43,12 @@ var jQueryInterval = setInterval(function () {
                     // $("#audio-control").trigger('click');
                 });
 
-                $('.modal-close-button').click(function () {
+                $('.modal-close-button').click(function () {        
                     $('.spz-hero-modal').removeClass('fade-in');
                     $('body').removeClass('hero-modal-open');
                     // $('#brand-video-spz').removeAttr('style');
                     $('#hero-video-spz').get(0).pause();
+                    $('#hero-video-spz').prop('muted', true);
                     // $("#audio-control").trigger('click');
                 });
 

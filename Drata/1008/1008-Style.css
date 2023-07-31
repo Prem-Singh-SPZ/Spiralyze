@@ -29,7 +29,12 @@ body.spz-1008 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus .in
 body.spz-1008 .form-wrapper-spz .hbspt-form > fieldset.form-columns-0 {
   border: 0;
   padding: 0;
-  margin: 12px 0 0 0;
+  margin: 10px 0 0 0;
+}
+@media (max-width: 767.98px) {
+  body.spz-1008 .form-wrapper-spz .hbspt-form > fieldset.form-columns-0 {
+    margin: 16px 0 0 0;
+  }
 }
 body.spz-1008 .form-wrapper-spz .hbspt-form > fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
   color: var(--neutrals-white-fff, #fff);
@@ -40,7 +45,12 @@ body.spz-1008 .form-wrapper-spz .hbspt-form > fieldset.form-columns-0 .hs-richte
   line-height: 22px; /* 146.667% */
 }
 body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-title {
-  margin: 40px 0 32px;
+  margin: 38px 0 32px;
+}
+@media (max-width: 767.98px) {
+  body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-title {
+    margin: 38px 0 20px;
+  }
 }
 body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-title h6 {
   color: var(--greys-grey-000, #fff);
@@ -63,6 +73,23 @@ body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge {
+  height: 96px;
+}
+@media (max-width: 767.98px) {
+  body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge {
+    height: 68px;
+  }
+  body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge > img {
+    height: 100%;
+    width: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge:last-child {
+    display: none;
+  }
 }
 
 main {

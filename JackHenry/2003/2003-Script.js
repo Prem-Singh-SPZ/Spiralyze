@@ -1,9 +1,9 @@
 (function () {
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-2003')) {
+        if (!bodyEle.classList.contains('spz-2003a')) {
             clearInterval(bodyInterval);
-            bodyEle.classList.add('spz-2003');
+            bodyEle.classList.add('spz-2003a');
 
             // if (location.href.indexOf('support') > -1) {
             // waitForElm('.hs-content-path-contact-us-support form.hs-form-private .hs-form-field').then(function (elm) {
@@ -62,6 +62,7 @@
                     }
 
                     focusFields();
+                    submitTestDetails();
                 });
             }
             else {
