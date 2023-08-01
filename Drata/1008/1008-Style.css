@@ -75,15 +75,17 @@ body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section {
           align-items: center;
 }
 body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge {
-  height: 96px;
+  height: 95px;
+  width: 84px;
+}
+body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge img {
+  height: 100%;
+  width: 100%;
 }
 @media (max-width: 767.98px) {
   body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge {
     height: 68px;
-  }
-  body.spz-1008 .form-wrapper-spz .spz-review-badge .review-badge-section .review-badge > img {
-    height: 100%;
-    width: auto;
+    width: 60px;
   }
 }
 @media (max-width: 767.98px) {
@@ -197,12 +199,12 @@ img {
 }
 
 body.spz-1008 {
-  min-height: 800px;
+  min-height: 1060px;
   height: 100vh;
 }
 @media (max-width: 767.98px) {
   body.spz-1008 {
-    min-height: 1000px;
+    min-height: 1200px;
   }
 }
 body.spz-1008 .osano-cm-widget[title="Cookie Preferences"] {
@@ -561,6 +563,9 @@ body.spz-1008 .hero-section form fieldset .hs-fieldtype-checkbox ul.inputs-list 
 }
 body.spz-1008 .hero-section form fieldset.form-columns-0 {
   width: 100%;
+  -webkit-box-ordinal-group: 20;
+      -ms-flex-order: 19;
+          order: 19;
 }
 body.spz-1008 .hero-section form fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
   font-family: "Inter", sans-serif;

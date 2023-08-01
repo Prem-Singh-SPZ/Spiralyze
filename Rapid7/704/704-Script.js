@@ -30,8 +30,8 @@
                         <p>Goals and SLAs</p>
                     </div>
                     <div class="key-card">
-                        <img alt="Real Risk Priortization" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/copy-clipboard.svg">
-                        <p>Real Risk Priortization</p>
+                        <img alt="Real Risk Prioritization" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/copy-clipboard.svg">
+                        <p>Real Risk Prioritization</p>
                     </div>
                     <div class="key-card">
                         <img alt="Easy-to-Use RESTful API" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/html-template.svg">
@@ -90,6 +90,8 @@
 
         document.querySelector('#mktoForm_2856 #LblEmail').textContent = 'Company Email';
 
+        document.querySelector('#mktoForm_2856 .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="spz-privacy-policy"><h5>Please refer to our <a href="/privacy-policy">Privacy Policy</a> or contact us at <a href="mailto:info@rapid7.com">info@rapid7.com</a> for more details.</h5></div>`)
+
         waitForElm('.off-canvas-wrapper .hero-section .marketoForm #State option:first-child').then(function (elm) {
             document.querySelector("#State option:first-child").textContent = '';
             trimLabel();
@@ -129,6 +131,9 @@
     function detectHeightChange() {
         if (document.querySelector('.hero-sec #mktoForm_2856 .mktoFormRow[input-name="parent-State"]')) {
             document.querySelector('.hero-sec').style.marginBottom = "100px";
+        }
+        else if (document.querySelector('.hero-sec #mktoForm_2856 .mktoFormRow[input-name="parent-Country"] .mktoValid')) {
+            document.querySelector('.hero-sec').style.marginBottom = "32px";
         }
         else {
             document.querySelector('.hero-sec').style.marginBottom = "0px";

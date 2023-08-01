@@ -201,108 +201,108 @@ submitBtn.addEventListener("click", function (event) {
 
 
 $(document).ready(function () {
-	var accordionHeight = $('.lp-pom-form form').height();
-	var acc_wrapper = $('.lp-pom-form').closest('.lp-element');
-	var acc_wrap_height = acc_wrapper.height();
-	var acc_top = acc_wrapper.position().top;
-	// Search blocks with top > acc_top;
-	var blocks1 = [], blocks2 = [], acc_block;
-	$('.lp-positioned-content>.lp-element').each(function(index, element) {
-		if (!$(element).is(acc_wrapper) && ($(element).position().top > acc_top)){
-			blocks1.push(element);			
-			ele_top = $(element).position().top;
-			ele_id = $(element).attr('id');
-		}
-	});
-	
-	$('.lp-positioned-content #lp-pom-box-1574 .lp-element').each(function(index, element) {		
-		blocks2.push(element);			
-		ele_top2 = $(element).position().top;
-		ele_id2 = $(element).attr('id');
-	});
-	$('#lp-pom-root>.lp-element').each(function(index, element) {
-		var el_top = $(element).position().top;
-		if ((el_top < acc_top) && (el_top + $(element).height() > acc_top)) {
-			acc_block = $(element);
-			return false;
-		}
-	});
-	var accordionHeight = 394;
-	var existCondition = setInterval(function() {
-		if ($('.lp-pom-form form').length) {
-			accordionHeight = $('.lp-pom-form.has-axis form').height();
-			clearInterval(existCondition);
-		}
-	}, 100);
-	var rootHeight = $('#lp-pom-root').height();
-	var hero_sec_height = $('.hero-sec').height();
-	if(($(window).width() > 599) && ($(window).width() < 1200)){
-		$('.lp-pom-body').addClass('tablet_only');
-	}
-	
-	function collapse_page(){
-		var currAccHeight = $('.lp-pom-form form').height();
-		var diff = currAccHeight - accordionHeight;
-		accordionHeight = currAccHeight;
-		if (acc_wrap_height < currAccHeight) {
-			acc_wrapper.height(currAccHeight);
-		} else {
-			acc_wrapper.height(acc_wrap_height);
-		}
-		// Change height
-		acc_block = $('.hero-sec');
-		diff2 = Math.abs(diff);
-		if(diff2 > 0){
-			acc_block.height(acc_block.height()+diff);
-			acc_block.find('div').each(function(index, el_div) {
-				$(el_div).height($(el_div).height()+diff);
-			});
-			
-			window_width = $(window).width();
-			$.each(blocks1, function(index, element) {
-				var el_top = $(element).position().top;
-				var new_top = el_top + diff;
-				cur_id = $(element).attr('id');
-				
-				if((cur_id == 'lp-pom-box-1574') || (cur_id == 'lp-pom-box-1509') || (cur_id == 'lp-pom-image-1024')){
-					if((window_width > 1199) && (cur_id != 'lp-pom-image-1520') ){
-						var new_top = el_top + diff/2;
-						//extra = new_top/2;//extra = new_top - 67;
-						$(element).css('top', new_top+"px");
-					}
-				}else{
-					$(element).css('top', new_top+"px");
-				}
-			});
-			diff3 = acc_block.height() - hero_sec_height;
-			if((window_width > 599) && (window_width < 1200)){
-			//if(window_width < 1199){
-				rootHeight = 5301;
-				$.each(blocks2, function(index, element) {
-					var el_top2 = $(element).position().top;
-					var new_top2 = el_top2 + diff;
-					cur_id2 = $(element).attr('id');
-					if((cur_id2 == 'lp-pom-text-991') || (cur_id2 == 'lp-pom-text-992') || (cur_id2 == 'lp-pom-text-993')){}else{
-						$(element).css('top', new_top2+"px");
-					}
-				});
-				diff3 = acc_block.height() - 1170;
-			}else if(window_width < 600){
-				$.each(blocks2, function(index, element) {
-					var el_top2 = $(element).position().top;
-					var new_top2 = el_top2 + diff;
-					cur_id2 = $(element).attr('id');
-					if((cur_id2 == 'lp-pom-text-991') || (cur_id2 == 'lp-pom-text-992') || (cur_id2 == 'lp-pom-text-993')){}else{
-						$(element).css('top', new_top2+"px");
-					}
-				});
-			}else{
-				
-			}
-			
-			$('#lp-pom-root').height(rootHeight+diff3);
-		}
-	}
-	//$('#country').click(collapse_page);
-	$('#container_country').on('change', '#country', collapse_page);
+    var accordionHeight = $('.lp-pom-form form').height();
+    var acc_wrapper = $('.lp-pom-form').closest('.lp-element');
+    var acc_wrap_height = acc_wrapper.height();
+    var acc_top = acc_wrapper.position().top;
+    // Search blocks with top > acc_top;
+    var blocks1 = [], blocks2 = [], acc_block;
+    $('.lp-positioned-content>.lp-element').each(function (index, element) {
+        if (!$(element).is(acc_wrapper) && ($(element).position().top > acc_top)) {
+            blocks1.push(element);
+            ele_top = $(element).position().top;
+            ele_id = $(element).attr('id');
+        }
+    });
+
+    $('.lp-positioned-content #lp-pom-box-1574 .lp-element').each(function (index, element) {
+        blocks2.push(element);
+        ele_top2 = $(element).position().top;
+        ele_id2 = $(element).attr('id');
+    });
+    $('#lp-pom-root>.lp-element').each(function (index, element) {
+        var el_top = $(element).position().top;
+        if ((el_top < acc_top) && (el_top + $(element).height() > acc_top)) {
+            acc_block = $(element);
+            return false;
+        }
+    });
+    var accordionHeight = 394;
+    var existCondition = setInterval(function () {
+        if ($('.lp-pom-form form').length) {
+            accordionHeight = $('.lp-pom-form.has-axis form').height();
+            clearInterval(existCondition);
+        }
+    }, 100);
+    var rootHeight = $('#lp-pom-root').height();
+    var hero_sec_height = $('.hero-sec').height();
+    if (($(window).width() > 599) && ($(window).width() < 1200)) {
+        $('.lp-pom-body').addClass('tablet_only');
+    }
+
+    function collapse_page() {
+        var currAccHeight = $('.lp-pom-form form').height();
+        var diff = currAccHeight - accordionHeight;
+        accordionHeight = currAccHeight;
+        if (acc_wrap_height < currAccHeight) {
+            acc_wrapper.height(currAccHeight);
+        } else {
+            acc_wrapper.height(acc_wrap_height);
+        }
+        // Change height
+        acc_block = $('.hero-sec');
+        diff2 = Math.abs(diff);
+        if (diff2 > 0) {
+            acc_block.height(acc_block.height() + diff);
+            acc_block.find('div').each(function (index, el_div) {
+                $(el_div).height($(el_div).height() + diff);
+            });
+
+            window_width = $(window).width();
+            $.each(blocks1, function (index, element) {
+                var el_top = $(element).position().top;
+                var new_top = el_top + diff;
+                cur_id = $(element).attr('id');
+
+                if ((cur_id == 'lp-pom-box-1574') || (cur_id == 'lp-pom-box-1509') || (cur_id == 'lp-pom-image-1024')) {
+                    if ((window_width > 1199) && (cur_id != 'lp-pom-box-1509')) {
+                        var new_top = el_top + diff / 2;
+                        //extra = new_top/2;//extra = new_top - 67;
+                        $(element).css('top', new_top + "px");
+                    }
+                } else {
+                    $(element).css('top', new_top + "px");
+                }
+            });
+            diff3 = acc_block.height() - hero_sec_height;
+            if ((window_width > 599) && (window_width < 1200)) {
+                //if(window_width < 1199){
+                rootHeight = 5301;
+                $.each(blocks2, function (index, element) {
+                    var el_top2 = $(element).position().top;
+                    var new_top2 = el_top2 + diff;
+                    cur_id2 = $(element).attr('id');
+                    if ((cur_id2 == 'lp-pom-text-991') || (cur_id2 == 'lp-pom-text-992') || (cur_id2 == 'lp-pom-text-993')) { } else {
+                        $(element).css('top', new_top2 + "px");
+                    }
+                });
+                diff3 = acc_block.height() - 1170;
+            } else if (window_width < 600) {
+                $.each(blocks2, function (index, element) {
+                    var el_top2 = $(element).position().top;
+                    var new_top2 = el_top2 + diff;
+                    cur_id2 = $(element).attr('id');
+                    if ((cur_id2 == 'lp-pom-text-1575') || (cur_id2 == 'lp-pom-text-1577') || (cur_id2 == 'lp-code-1579')) { } else {
+                        $(element).css('top', new_top2 + "px");
+                    }
+                });
+            } else {
+
+            }
+
+            $('#lp-pom-root').height(rootHeight + diff3);
+        }
+    }
+    //$('#country').click(collapse_page);
+    $('#container_country').on('change', '#country', collapse_page);
 });

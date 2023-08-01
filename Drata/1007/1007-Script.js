@@ -8,7 +8,7 @@
     document.head.appendChild(hubSpotJS);
 
     document.body.insertAdjacentHTML("afterbegin", pageContent());
-    document.body.classList.add('spz-1008');
+    document.body.classList.add('spz-1007');
 
     hubSpotJS.onload = function () {
       appendHubspotScript();
@@ -19,18 +19,18 @@
         clearInterval(formInt);
 
 
-        document.querySelector('.form-wrapper-spz').style.opacity = 1;
+        document.querySelector('.hero-content').style.opacity = 1;
         // document.querySelector('#__next > main').remove();
         // document.querySelector('#__next > header').remove();
 
         appendInputLabel();
 
         // Set input label
-        // if (document.querySelector('[name="source__inbound_demo_"]  + .hs-label-spz')) {
         document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
         document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about us?*');
-        document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
-        // }
+        document.querySelector('[name="number_of_employees"] + .hs-label-spz').innerHTML = 'No. of Employees*';
+        document.querySelector('[name="number_of_employees"]').setAttribute('placeholder', 'No. of Employees*');
+        document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What are you interested in?';
         // Set SOC-2 checkbox checked
         // document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
 
@@ -52,6 +52,10 @@
           }
         });
 
+        document.querySelector('#header-logo-url').addEventListener('click', function () {
+          document.querySelector('header > .MuiContainer-root > .MuiToolbar-root > .MuiTypography-root.MuiTypography-link').click();
+        });
+
         // moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1:nth-child(2)');
         moveElement('.form-wrapper-spz .hbspt-form .form-columns-0', '.form-wrapper-spz .hbspt-form');
 
@@ -59,36 +63,22 @@
         focusFields();
 
         // removeStyleTags();
-        appendReviewBadges();
-        hideReviewBadges();
-        document.body.classList.add('spz-1008');
+
+        document.body.classList.add('spz-1007');
       }
     }, 100);
 
-
-    function hideReviewBadges() {
-      waitForElm('.form-wrapper-spz .hbspt-form .submitted-message').then(function () {
-        document.querySelector('.form-wrapper-spz .spz-review-badge').style.display = 'none';
-        document.querySelector('.form-wrapper-spz fieldset.form-columns-0').style.display = 'none';
-      });
-    }
-
-    function waitForElm(selector) {
-      return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-          return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-          if (document.querySelector(selector)) {
-            resolve(document.querySelector(selector));
-            observer.disconnect();
-          }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
-      });
-    }
-
-
+    // Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
+    // function forClearBitForms() {
+    //   document.querySelectorAll('.hs-input').forEach(function (el) {
+    //     // console.log(el)
+    //     if (el.closest('.hs-form-field[style*="display: none"]')) {
+    //       el.closest('fieldset').classList.add('field-hidden');
+    //     } else {
+    //       el.closest('fieldset').classList.remove('field-hidden');
+    //     }
+    //   });
+    // }
     function forClearBitForms() {
       document.querySelectorAll('.form-wrapper-spz .hs-input').forEach(function (el) {
         if (el.closest('.hs-form-field[style*="display: none"]')) {
@@ -114,8 +104,6 @@
       // }
     }, 500);
 
-    // appendReviewBadges();
-
     // on user type in .hs-input run forClearBitForms() function
     document.addEventListener('keyup', function (e) {
       if (e.target.classList.contains('hs-input')) {
@@ -124,10 +112,6 @@
     });
   }
 
-
-  function appendReviewBadges() {
-    document.querySelector('.hero-section .form-wrapper-spz .hbspt-form').insertAdjacentHTML('afterend', `<div class="spz-review-badge"><div class="review-badge-title"><h6>The Highest-Rated Cloud Compliance Platform</h6> </div> <div class="review-badge-section"><div class="review-badge"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690382184/drata/1008/cloudfilestorage_leader_leader.svg" alt="Cloud File Storage Leader"></div><div class="review-badge"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690382184/drata/1008/cloudfilestorage_bestresults_total_1.svg" alt="Cloud File Storage Best Results"></div><div class="review-badge"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690382184/drata/1008/cloudfilestorage_bestusability_total.svg" alt="Cloud File Storage Best Usability"></div><div class="review-badge"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690382184/drata/1008/cloudfilestorage_bestrelationship_total.svg" alt="Cloud File Storage Best Relationship"></div><div class="review-badge"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690890711/drata/1008/cloudfilestorage_leader_leader_1.svg" alt="Cloud File Storage Momentum Leader"></div> </div></div>`);
-  }
 
   function appendFavicon() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
@@ -261,7 +245,6 @@
     let testURL = '';
     if (window.location.href.indexOf('https://drata.com/demo') > -1) {
       testURL = window.location.href;
-
     }
     if (isSameUrl(url, testURL, true)) {
       if (document.querySelectorAll('.hero-section').length == 0) {
@@ -289,8 +272,8 @@
   }
 
   function removeTest() {
-    if (document.body.classList.contains('spz-1008')) {
-      document.body.classList.remove('spz-1008');
+    if (document.body.classList.contains('spz-1007')) {
+      document.body.classList.remove('spz-1007');
     }
     if (document.querySelectorAll('.hero-section').length > 0) {
       document.querySelector('.hero-section').remove();
@@ -326,9 +309,9 @@
 
   function pageContent() {
     return `<section class="hero-section">
-    <div
-      class="hero-content container dis-flex"
-    >
+    <div class="hero-content container dis-flex">
+    <div class="spz-header"><a href="Javascript:void(0);" id="header-logo-url"
+     class="drata-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690373470/drata/1007/drata-wordmark.svg" alt="Drata"></a></div>
       <div class="hero-right-section">
         <div class="form-wrapper-spz">
           <h2 class="form-title-spz">Get a Demo</h2>
@@ -352,7 +335,8 @@
           </script>
         </div>
       </div>
-    </div>
+      </div>
+      <div class="analytics-bg-section"></div>
   </section>
   `;
   }
