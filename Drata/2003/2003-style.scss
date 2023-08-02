@@ -1,0 +1,348 @@
+.spz-2002 {
+  .review-sum-wrapper {
+    display: flex;
+
+    .htw-link {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      margin-right: 8px;
+      border-radius: 999px;
+      overflow-y: hidden;
+
+      ::selection {
+        background-color: transparent;
+      }
+
+      &.g2-rvw {
+        cursor: default;
+        pointer-events: none;
+        
+        .htw-img-wrap {
+          width: 318px;
+          height: 48px;
+        }
+      }
+      &.lead-spring {
+        .htw-img-wrap {
+          width: 340px;
+          height: 48px;
+        }
+      }
+      .htw-img-wrap {
+        border-radius: 999px;
+
+        .htw-img {
+          width: 100%;
+
+          &.hover {
+            display: none;
+          }
+        }
+      }
+
+      &:hover {
+        .htw-img-wrap .htw-img {
+          &.default {
+            display: none;
+          }
+          &.hover {
+            display: inline;
+          }
+        }
+      }
+    }
+  }
+
+  .css-yqonbz-HeroHomepage-hero {
+    padding: 170px 24px 107px 24px;
+
+    .css-aclrcr-MuiTypography-root-HeroHomepage-title {
+      margin-top: 20px;
+    }
+
+    .css-mc5inp-MuiTypography-root-HeroHomepage-subtitle {
+      margin-top: 33px;
+    }
+
+    .css-1pj9xab-HeroHomepage-actions {
+      margin-top: 64px;
+      gap: 0;
+
+      .form-group-spz {
+        position: relative;
+
+        .form-label-spz {
+          position: absolute;
+          top: 13px;
+          font-size: 12px;
+          line-height: 16px;
+          font-family: "Inter";
+          font-style: normal;
+          font-weight: 400;
+          color: #727272;
+          pointer-events: none;
+          transition-duration: 150ms;
+        }
+
+        .form-field-spz {
+          width: 320px;
+          height: 64px;
+          padding: 17px 20px 0 20px;
+          background: #fff;
+          border: 1px solid #d7d7d7;
+          border-radius: 4px;
+          font-family: "Inter", sans-serif;
+          font-style: normal;
+          font-weight: 400;
+          font-size: 17px;
+          line-height: 24px;
+          color: #000;
+          outline: none;
+          transition-duration: 150ms;
+
+          &:hover {
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
+            ~ .form-label-spz {
+              color: #454545 !important;
+            }
+          }
+
+          &:not(.is-placeholder) {
+            &:not(:placeholder-shown) {
+              ~ {
+                label {
+                  top: 9px;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+            }
+            &:not(:-moz-placeholder-shown) {
+              ~ {
+                label {
+                  top: 9px;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+            }
+            &:not(:-ms-input-placeholder) {
+              ~ {
+                label {
+                  top: 9px;
+                  font-weight: 400;
+                  font-size: 12px;
+                  line-height: 16px;
+                }
+              }
+            }
+          }
+
+          &:not([value=""]) ~ .form-label-spz {
+            color: #727272;
+            top: calc(50% - 12px);
+            left: 20px;
+            font-size: 17px;
+            line-height: 24px;
+          }
+
+          &:focus {
+            border: 1px solid #0466ba;
+            box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+            border-radius: 4px;
+            outline: 2px solid #3799ed;
+
+            ~ .form-label-spz {
+              color: #0580e8 !important;
+              top: 9px;
+              font-weight: 400;
+              font-size: 12px;
+              line-height: 16px;
+            }
+          }
+
+          &:not(:placeholder-shown) ~ .form-label-spz {
+            color: #727272;
+          }
+
+          // Change autocomplete styles in WebKit browsers
+          input:-webkit-autofill,
+          input:-webkit-autofill:hover,
+          input:-webkit-autofill:focus,
+          textarea:-webkit-autofill,
+          textarea:-webkit-autofill:hover,
+          textarea:-webkit-autofill:focus,
+          select:-webkit-autofill,
+          select:-webkit-autofill:hover,
+          select:-webkit-autofill:focus {
+            background-color: #fff;
+            -webkit-text-fill-color: #000;
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+            transition: background-color 5000s ease-in-out 0s;
+          }
+
+          .hs-input:-webkit-autofill,
+          .hs-input:-webkit-autofill:hover,
+          .hs-input:-webkit-autofill:focus,
+          .hs-input:-webkit-autofill:active {
+            -webkit-box-shadow: 0 0 0 56px white inset !important;
+            -webkit-text-fill-color: #000 !important;
+          }
+        }
+      }
+      .css-19j52vc-MuiButtonBase-root-MuiButton-root-Link-root {
+        width: 209px;
+        height: 64px;
+        // background: #000;
+        border-radius: 4px;
+        font-family: "Inter", sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        font-size: 20px;
+        line-height: 28px;
+        text-align: center;
+        // color: #fff;
+        display: inline-flex;
+        margin-left: 8px;
+
+        .MuiSvgIcon-root {
+          height: 20px;
+          width: 20px;
+          margin-left: 11.5px;
+        }
+      }
+    }
+  }
+
+  // Tablet
+  @media (max-width: 1280px) {
+    .review-sum-wrapper {
+      .htw-link {
+        &.g2-rvw,
+        .htw-img-wrap {
+          width: 243px;
+          height: 40px !important;
+        }
+        &.lead-spring,
+        .htw-img-wrap {
+          width: 245px;
+          height: 40px !important;
+        }
+      }
+    }
+
+    .css-yqonbz-HeroHomepage-hero {
+      padding: 64px 16px 0 16px;
+
+      .css-aclrcr-MuiTypography-root-HeroHomepage-title {
+        margin-top: 19px;
+      }
+
+      .css-mc5inp-MuiTypography-root-HeroHomepage-subtitle {
+        margin-top: 14px;
+      }
+
+      .css-1pj9xab-HeroHomepage-actions {
+        margin-top: 31.5px;
+
+        .form-group-spz .form-field-spz {
+          height: 56px;
+          padding: 16px 16px 0 16px;
+
+          &:not([value=""]) ~ .form-label-spz {
+            left: 16px;
+          }
+        }
+
+        .css-19j52vc-MuiButtonBase-root-MuiButton-root-Link-root {
+          width: 172px;
+          height: 56px;
+          font-weight: 600;
+          font-size: 17px;
+          line-height: 24px;
+
+          .MuiSvgIcon-root {
+            height: 16px;
+            width: 16px;
+            margin-left: 11.5px;
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile
+  @media (max-width: 767px) {
+    .review-sum-wrapper {
+      flex-direction: column;
+
+      .htw-link {
+        &.g2-rvw,
+        .htw-img-wrap,
+        &.lead-spring,
+        .htw-img-wrap {
+          width: 243px;
+          height: 40px !important;
+        }
+        &.g2-rvw {
+          margin-bottom: 4px;
+        }
+      }
+
+      // .htw-link.lead-spring .htw-img-wrap {
+      //   margin-top: -8px;
+      // }
+    }
+
+    .css-yqonbz-HeroHomepage-hero {
+      padding: 48px 16px 1px 16px;
+
+      .css-aclrcr-MuiTypography-root-HeroHomepage-title {
+        font-weight: 800;
+        font-size: 60px;
+        line-height: 56px;
+        letter-spacing: -1.8px;
+        margin-top: 21px;
+      }
+
+      .css-mc5inp-MuiTypography-root-HeroHomepage-subtitle {
+        margin-top: 15px;
+      }
+
+      .css-1pj9xab-HeroHomepage-actions {
+        margin-top: 32px;
+        display: flex;
+        flex-direction: column;
+        gap: 0;
+
+        .form-group-spz {
+          width: 100%;
+          .form-field-spz {
+            width: 100%;
+          }
+        }
+
+        .css-19j52vc-MuiButtonBase-root-MuiButton-root-Link-root {
+          width: 100%;
+          // max-width: 328px;
+          margin-top: 8px;
+          margin-left: 0;
+        }
+      }
+    }
+
+    .css-1iw1esp-TabsQuotes-mainSwiper.swiper {
+      padding: 47px 0px 64px 0px;
+    }
+  }
+
+  @media (min-width: 871px) and (max-width: 1280px) {
+    .css-yqonbz-HeroHomepage-hero {
+      padding: 100px 40px 50px 40px;
+    }
+  }
+}

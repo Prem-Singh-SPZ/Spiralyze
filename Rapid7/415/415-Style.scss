@@ -184,138 +184,6 @@ body.spz-415 {
       color: $color_8;
     }
   }
-//   * {
-//     box-sizing: inherit;
-//   }
-//   &::after {
-//     box-sizing: inherit;
-//   }
-//   &::before {
-//     box-sizing: inherit;
-//   }
-//   &::placeholder {
-//     color: $color_1;
-//   }
-//   div {
-//     margin: 0;
-//     padding: 0;
-//   }
-//   h2 {
-//     margin: 0;
-//     padding: 0;
-//     font-family: $font-family_2;
-//     font-style: normal;
-//     font-weight: 400;
-//     color: $color_2;
-//     text-rendering: optimizeLegibility;
-//     font-size: 1.25rem;
-//     line-height: 1.4;
-//     margin-top: 0;
-//     margin-bottom: 0.5rem;
-//     font-size: 1.75rem;
-//     line-height: 2.25rem;
-//     font-weight: 900;
-//     font-family: $font-family_4;
-//     color: $color_7;
-//   }
-//   h4 {
-//     margin: 0;
-//     padding: 0;
-//     font-family: $font-family_2;
-//     font-style: normal;
-//     font-weight: 400;
-//     color: $color_2;
-//     text-rendering: optimizeLegibility;
-//     font-size: 1.125rem;
-//     line-height: 1.4;
-//     margin-top: 0;
-//     margin-bottom: 0.5rem;
-//     font-size: 1.125rem;
-//     line-height: 1.5rem;
-//     font-weight: 900;
-//     font-family: $font-family_4;
-//     color: $color_7;
-//   }
-//   .text-center {
-//     text-align: center;
-//   }
-//   .grid-container {
-//     padding-right: 0.9375rem;
-//     padding-left: 0.9375rem;
-//     max-width: 90rem;
-//     margin-left: auto;
-//     margin-right: auto;
-//     &:not(.full) {
-//       > .grid-padding-x {
-//         margin-right: -0.9375rem;
-//         margin-left: -0.9375rem;
-//       }
-//     }
-//   }
-//   .grid-x {
-//     display: -ms-flexbox;
-//     display: flex;
-//     -ms-flex-flow: row wrap;
-//     flex-flow: row wrap;
-//     > .small-12 {
-//       -ms-flex-preferred-size: auto;
-//       flex-basis: auto;
-//       -ms-flex: 0 0 auto;
-//       flex: 0 0 auto;
-//       width: 100%;
-//     }
-//   }
-//   .cell {
-//     -ms-flex: 0 0 auto;
-//     flex: 0 0 auto;
-//     min-height: 0;
-//     min-width: 0;
-//     width: 100%;
-//   }
-//   .grid-padding-x {
-//     > .cell {
-//       padding-right: 0.9375rem;
-//       padding-left: 0.9375rem;
-//     }
-//   }
-//   .grid-padding-y {
-//     > .cell {
-//       padding-top: 0.9375rem;
-//       padding-bottom: 0.9375rem;
-//     }
-//   }
-//   .button {
-//     display: inline-block;
-//     vertical-align: middle;
-//     margin: 0 0 1rem 0;
-//     padding: 0.85em 1em;
-//     border: 1px solid transparent;
-//     border-radius: 100px;
-//     transition: background-color 0.25s ease-out, color 0.25s ease-out;
-//     font-family: $font-family_3;
-//     font-size: 0.9rem;
-//     -webkit-appearance: none;
-//     line-height: 1;
-//     text-align: center;
-//     cursor: pointer;
-//     background-color: #1779ba;
-//     color: $color_6;
-//     &:focus {
-//       background-color: #14679e;
-//       color: $color_6;
-//     }
-//     &:hover {
-//       background-color: #14679e;
-//       color: $color_6;
-//     }
-//   }
-//   .cerberus {
-//     .pageContent {
-//       section {
-//         background: 0 0;
-//       }
-//     }
-//   }
   span.button.btn-tertiary {
     background: 0 0;
     border-color: #fff;
@@ -512,6 +380,7 @@ body.spz-415 {
     }
   }
   .multi-feature-card-block__carousel {
+    opacity: 0;
     h2 {
       &:not(.center) {
         position: relative;
@@ -562,71 +431,6 @@ body.spz-415 {
     }
   }
   @media print {
-    // h2 {
-    //   font-size: 2.5rem;
-    //   orphans: 3;
-    //   widows: 3;
-    //   page-break-after: avoid;
-    //   font-size: 2.25rem;
-    //   line-height: 2.8125rem;
-    // }
-    // h4 {
-    //   font-size: 1.5625rem;
-    //   font-size: 1.375rem;
-    //   line-height: 1.75rem;
-    // }
-    // * {
-    //   background: 0 0 !important;
-    //   box-shadow: none !important;
-    //   color: $color_5 !important;
-    //   text-shadow: none !important;
-    // }
-    // a {
-    //   text-decoration: underline;
-    //   font-size: inherit;
-    //   &:visited {
-    //     text-decoration: underline;
-    //   }
-    // }
-    // a[href] {
-    //   &:after {
-    //     content: " (" attr(href) ")";
-    //   }
-    // }
-    // .grid-container {
-    //   padding-right: 1.875rem;
-    //   padding-left: 1.875rem;
-    //   &:not(.full) {
-    //     > .grid-padding-x {
-    //       margin-right: -1.875rem;
-    //       margin-left: -1.875rem;
-    //     }
-    //   }
-    // }
-    // .grid-x {
-    //   > .medium-10 {
-    //     -ms-flex-preferred-size: auto;
-    //     flex-basis: auto;
-    //     -ms-flex: 0 0 auto;
-    //     flex: 0 0 auto;
-    //     width: 83.3333333333%;
-    //   }
-    // }
-    // .grid-padding-x {
-    //   > .cell {
-    //     padding-right: 1.875rem;
-    //     padding-left: 1.875rem;
-    //   }
-    // }
-    // .medium-offset-1 {
-    //   margin-left: 8.3333333333%;
-    // }
-    // .grid-padding-y {
-    //   > .cell {
-    //     padding-top: 1.875rem;
-    //     padding-bottom: 1.875rem;
-    //   }
-    // }
     .card__standard.slick-slide {
       width: 100%;
     }
@@ -677,53 +481,6 @@ body.spz-415 {
     }
   }
   @media screen and (min-width: 40em) {
-    // h2 {
-    //   font-size: 2.5rem;
-    //   font-size: 2.25rem;
-    //   line-height: 2.8125rem;
-    // }
-    // h4 {
-    //   font-size: 1.5625rem;
-    //   font-size: 1.375rem;
-    //   line-height: 1.75rem;
-    // }
-    // .grid-container {
-    //   padding-right: 1.875rem;
-    //   padding-left: 1.875rem;
-    //   &:not(.full) {
-    //     > .grid-padding-x {
-    //       margin-right: -1.875rem;
-    //       margin-left: -1.875rem;
-    //     }
-    //   }
-    // }
-    // .grid-x {
-    //   > .medium-10 {
-    //     -ms-flex-preferred-size: auto;
-    //     flex-basis: auto;
-    //     -ms-flex: 0 0 auto;
-    //     flex: 0 0 auto;
-    //     width: 83.3333333333%;
-    //   }
-    // }
-    // .grid-padding-x {
-    //   > .cell {
-    //     padding-right: 1.875rem;
-    //     padding-left: 1.875rem;
-    //   }
-    // }
-    // .medium-offset-1 {
-    //   margin-left: 8.3333333333%;
-    // }
-    // .grid-padding-y {
-    //   > .cell {
-    //     padding-top: 1.875rem;
-    //     padding-bottom: 1.875rem;
-    //   }
-    // }
-    // a {
-    //   font-size: inherit;
-    // }
     .card__standard.slick-slide {
       width: 100%;
     }
