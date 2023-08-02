@@ -67,6 +67,11 @@ function appendHomeHeroContent() {
 
             storeEmail()
         }
+
+        //insert section for right image
+        if (document.querySelectorAll('.hero-interface-wrapper').length == 0) {
+            document.querySelector('.MuiBox-root.css-psqvk8-HeroHomepage-gradientOverlay').insertAdjacentHTML('afterend', `<div class="hero-interface-wrapper"></div>`)
+        }
     });
 }
 

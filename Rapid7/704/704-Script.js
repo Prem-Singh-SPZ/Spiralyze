@@ -82,6 +82,8 @@
         </div>
         <div class="rating-hero"><span>4.3</span> (572 reviews)</div>
         </div>`);
+
+        document.querySelector('.hero-sec').insertAdjacentHTML('afterbegin',`<div class="hero-bg-spz"></div>`);
     }
 
     function formCustomization() {
@@ -90,7 +92,7 @@
 
         document.querySelector('#mktoForm_2856 #LblEmail').textContent = 'Company Email';
 
-        document.querySelector('#mktoForm_2856 .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="spz-privacy-policy"><h5>Please refer to our <a href="/privacy-policy">Privacy Policy</a> or contact us at <a href="mailto:info@rapid7.com">info@rapid7.com</a> for more details.</h5></div>`)
+        // document.querySelector('#mktoForm_2856 .mktoButtonRow').insertAdjacentHTML('beforebegin', `<div class="spz-privacy-policy"><h5>Please refer to our <a href="/privacy-policy">Privacy Policy</a> or contact us at <a href="mailto:info@rapid7.com">info@rapid7.com</a> for more details.</h5></div>`)
 
         waitForElm('.off-canvas-wrapper .hero-section .marketoForm #State option:first-child').then(function (elm) {
             document.querySelector("#State option:first-child").textContent = '';
@@ -108,11 +110,11 @@
                         document.querySelector("#State option:first-child").textContent = '';
                     }
                     trimLabel();
-                    if (window.innerWidth < 768) {
-                        setTimeout(() => {
-                            detectHeightChange();
-                        }, 100);
-                    }
+                    // if (window.innerWidth < 768) {
+                    //     setTimeout(() => {
+                    //         detectHeightChange();
+                    //     }, 100);
+                    // }
                 });
             }
         });

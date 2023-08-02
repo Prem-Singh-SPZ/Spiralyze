@@ -10,6 +10,10 @@
       border-radius: 999px;
       overflow-y: hidden;
 
+      &.lead-spring {
+        margin: 0;
+      }
+
       ::selection {
         background-color: transparent;
       }
@@ -17,7 +21,7 @@
       &.g2-rvw {
         cursor: default;
         pointer-events: none;
-        
+
         .htw-img-wrap {
           width: 318px;
           height: 48px;
@@ -54,15 +58,92 @@
     }
   }
 
+  //Css for hero interface starts
+  .MuiBox-root.css-gdxc1a-HeroHomepage-root {
+    .MuiBox-root.css-yqonbz-HeroHomepage-hero {
+      .MuiBox-root.css-1buoy6w-HeroHomepage-ellipses {
+        .css-12ujoca-HeroHomepage-ellipseCss,
+        .css-1x5gf45-HeroHomepage-ellipseCss,
+        .css-ioag2k-HeroHomepage-ellipseCss {
+          display: none !important;
+        }
+
+        .css-1p3q1am-HeroHomepage-ellipseCss {
+          z-index: 3;
+          @media (min-width: 1200px) {
+            width: 1800px;
+          }
+          &::after {
+            border-radius: 0%;
+            mask: none;
+            background: url(https://res.cloudinary.com/spiralyze/image/upload/v1690986175/drata/2003/custom/Desktop_image-min.png);
+            background-position: calc(100% + 101px) 436px;
+            background-repeat: no-repeat;
+            background-size: 1029px 1029px;
+          }
+        }
+      }
+
+      .MuiBox-root.css-e4l3ux-HeroHomepage-tags {
+        .MuiTypography-inherit.MuiLink-root.MuiLink-underlineAlways {
+          &:nth-child(1) {
+            transform: rotate(324.1deg) translate(487.5px) rotate(-324deg)
+              scale(1);
+          }
+          &:nth-child(2) {
+            transform: rotate(317deg) translate(301px) rotate(-317deg) scale(1);
+          }
+          &:nth-child(3) {
+            transform: rotate(333.3deg) translate(130px) rotate(-333deg)
+              scale(1);
+          }
+          &:nth-child(4) {
+            transform: rotate(418deg) translate(171px) rotate(-418deg) scale(1);
+          }
+          &:nth-child(5) {
+            transform: rotate(425.8deg) translate(381px) rotate(-426deg)
+              scale(1);
+          }
+        }
+      }
+    }
+
+    .hero-interface-wrapper {
+      // background: url(https://res.cloudinary.com/spiralyze/image/upload/v1690986175/drata/2003/custom/Desktop_image-min.png);
+      // background-position: calc(100% + 281px) -39px;
+      // background-repeat: no-repeat;
+      // background-size: 1029px 1029px;
+      // width: 100%;
+      // height: 100%;
+      // position: absolute;
+      // z-index: 3;
+    }
+
+    .MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container[class] {
+      display: flex;
+
+      .MuiBox-root.css-1vsa5xp-HeroHomepage-content {
+        max-width: 53.4%;
+
+        h1.MuiTypography-heroTitle.css-aclrcr-MuiTypography-root-HeroHomepage-title {
+          font-size: 96px;
+          font-weight: 800;
+          line-height: 88px; /* 91.667% */
+          letter-spacing: -2px;
+        }
+      }
+    }
+  }
+
   .css-yqonbz-HeroHomepage-hero {
-    padding: 170px 24px 107px 24px;
+    padding: 180px 24px 77px 24px;
 
     .css-aclrcr-MuiTypography-root-HeroHomepage-title {
       margin-top: 20px;
     }
 
     .css-mc5inp-MuiTypography-root-HeroHomepage-subtitle {
-      margin-top: 33px;
+      margin-top: 32px;
     }
 
     .css-1pj9xab-HeroHomepage-actions {
@@ -227,6 +308,7 @@
           width: 243px;
           height: 40px !important;
         }
+
         &.lead-spring,
         .htw-img-wrap {
           width: 245px;

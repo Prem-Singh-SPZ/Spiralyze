@@ -1,5 +1,5 @@
 @charset "UTF-8";
-body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-bg-spz {
   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451392/rapid7/704/bgrd_1440.png");
   background-position: center center;
   background-repeat: no-repeat;
@@ -7,7 +7,7 @@ body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
   background-size: cover;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
-  body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+  body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-bg-spz {
     background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451380/rapid7/704/bgrd_768.png");
     max-height: 780px;
     background-position: center center;
@@ -16,7 +16,7 @@ body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+  body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-bg-spz {
     background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451365/rapid7/704/brgd_360.png");
     max-height: 1021px;
     background-position: center center;
@@ -24,7 +24,14 @@ body.spz-704.safari .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
     background-size: cover;
   }
 }
-body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-bg-spz {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451392/rapid7/704/bgrd_1440.webp");
   background-position: center center;
   background-repeat: no-repeat;
@@ -32,7 +39,7 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
   background-size: cover;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
-  body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+  body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-bg-spz {
     background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451380/rapid7/704/bgrd_768.webp");
     max-height: 780px;
     background-position: center center;
@@ -41,13 +48,16 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec {
+  body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-bg-spz {
     background: url("https://res.cloudinary.com/spiralyze/image/upload/v1690451365/rapid7/704/brgd_360.webp");
     max-height: 1021px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: cover;
   }
+}
+body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap {
+  position: relative;
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .new-header {
   padding-top: 39px;
@@ -216,7 +226,6 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
     max-width: 648px;
   }
 }
-body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper > h5,
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper > .dashboard-img {
   display: none !important;
 }
@@ -638,16 +647,16 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   }
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientDesign {
-  padding-top: 160px;
+  padding-top: 30px;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientDesign {
-    padding-top: 127px;
+    padding-top: 0;
   }
 }
 @media (max-width: 767.98px) {
   body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientDesign {
-    padding-top: 176px;
+    padding-top: 0;
   }
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientDesign .spz-key-features {
