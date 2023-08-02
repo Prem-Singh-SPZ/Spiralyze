@@ -29,7 +29,7 @@
         document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
         document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about us?*');
         document.querySelector('[name="number_of_employees"] + .hs-label-spz').innerHTML = 'No. of Employees*';
-        document.querySelector('[name="number_of_employees"]').setAttribute('placeholder', 'No. of Employees*');
+        document.querySelector('[name="number_of_employees"] option:first-child').innerHTML = 'No. of Employees*';
         document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What are you interested in?';
         // Set SOC-2 checkbox checked
         // document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
@@ -61,24 +61,34 @@
 
         // Set focus on input
         focusFields();
-
+        hideReviewBadges();
         // removeStyleTags();
 
         document.body.classList.add('spz-1007');
       }
     }, 100);
 
-    // Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
-    // function forClearBitForms() {
-    //   document.querySelectorAll('.hs-input').forEach(function (el) {
-    //     // console.log(el)
-    //     if (el.closest('.hs-form-field[style*="display: none"]')) {
-    //       el.closest('fieldset').classList.add('field-hidden');
-    //     } else {
-    //       el.closest('fieldset').classList.remove('field-hidden');
-    //     }
-    //   });
-    // }
+    function hideReviewBadges() {
+      waitForElm('.form-wrapper-spz .hbspt-form .submitted-message').then(function () {
+        document.querySelector('.form-wrapper-spz fieldset.form-columns-0').style.display = 'none';
+      });
+    }
+
+    function waitForElm(selector) {
+      return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+          return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+          if (document.querySelector(selector)) {
+            resolve(document.querySelector(selector));
+            observer.disconnect();
+          }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+      });
+    }
+
     function forClearBitForms() {
       document.querySelectorAll('.form-wrapper-spz .hs-input').forEach(function (el) {
         if (el.closest('.hs-form-field[style*="display: none"]')) {

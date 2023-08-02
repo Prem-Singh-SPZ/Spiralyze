@@ -1,3 +1,6 @@
+body.spz-24001 #lp-pom-root {
+  /* Form Styling */
+}
 @media (max-width: 600.98px) {
   body.spz-24001 #lp-pom-root #lp-pom-box-1574 #lp-pom-text-1575 span {
     font-size: 16px;
@@ -35,6 +38,10 @@ body.spz-24001 #lp-pom-root .spz-bullet-container .spz-bullet-list .bullet-item 
 body.spz-24001 #lp-pom-root .spz-bullet-container .spz-bullet-list .bullet-item .container span {
   font-weight: 500;
 }
+body.spz-24001 #lp-pom-root .custom-form-container {
+  -webkit-box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.12);
+          box-shadow: 0px 16px 32px 0px rgba(0, 0, 0, 0.12);
+}
 body.spz-24001 #lp-pom-root .custom-form-container .form-container-heading {
   margin: 38px 40px 0 !important;
 }
@@ -44,65 +51,298 @@ body.spz-24001 #lp-pom-root .custom-form-container .form-container-heading h4 {
 body.spz-24001 #lp-pom-root .custom-form-container .form-container-heading h4 span {
   line-height: 40px !important;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis {
-  margin: 40px !important;
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button:focus {
+  background: rgb(19, 114, 236);
+  color: #ffffff;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields #container_email,
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields #container_country,
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields #container_stateprovince {
-  width: 100% !important;
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button:active {
+  background: #062d70;
+  color: #ffffff;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group) {
-  height: 48px;
-  margin-bottom: 20px;
-  padding: 0 9px;
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field:not(.error) .errorline {
+  display: none;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group) .lp-form-label {
-  position: relative !important;
-  height: 0 !important;
-  width: -webkit-max-content !important;
-  width: -moz-max-content !important;
-  width: max-content !important;
-  top: 18px;
-  left: 20px;
-  margin: 0;
-  -webkit-transition: all 0.2s;
-  transition: all 0.2s;
-}
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group) .lp-form-label > .label-style {
-  color: rgba(40, 40, 41, 0.5);
-  font-size: 16px;
-  font-weight: 300;
-}
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group) input.ub-input-item,
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group) select.ub-input-item {
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field .single {
+  padding: 16px 0 0px 15px !important;
+  border: none !important;
   color: #282829;
-  font-size: 16px;
+  -webkit-appearance: none;
   font-weight: 300;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.003em;
+  border-radius: 8px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field .single:-webkit-autofill {
+  -webkit-text-fill-color: #282829;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field .single:-webkit-autofill:focus {
+  -webkit-text-fill-color: #282829;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field .single:-webkit-autofill:hover {
+  -webkit-text-fill-color: #282829;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field input.single {
+  width: 480px !important;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field:not(.checkbox-group) {
+  padding: 0;
+  margin-bottom: 18px;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field:not(.checkbox-group) .lp-form-label {
+  font-weight: 300 !important;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.003em;
+  color: #565b66 !important;
+  position: absolute !important;
+  top: 12px !important;
+  left: 15px !important;
+  width: calc(100% - 32px) !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.error .errorline {
+  position: absolute;
+  bottom: 0;
+  height: 2px;
+  background: #cd2113;
+  left: 0;
+  width: 100%;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.error select {
+  border-bottom: 2px solid #cd2113 !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.error input {
+  border-bottom: 2px solid #cd2113 !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.drop-down.error .errorline {
+  width: calc(100% - 49px);
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.email.error.email_error:after {
+  content: "Please enter a valid email address.";
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.error.drop-down .errorline {
+  z-index: 2;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .email {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  border: 1px solid #e5e8e8;
   border-radius: 8px;
-  height: 48px;
+  height: 48px !important;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group).typing .lp-form-label {
-  top: -6px;
-  left: 18px;
+body.spz-24001 #lp-pom-root .custom-form-container .email .lp-form-label {
+  margin-bottom: 0 !important;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group).typing .lp-form-label > .label-style {
-  background: #fff;
-  font-size: 12px;
+body.spz-24001 #lp-pom-root .custom-form-container .email .lp-form-label .label-style {
+  width: 200px;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .single-line-text {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  border: 1px solid #e5e8e8;
+  border-radius: 8px;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .single-line-text .lp-form-label {
+  margin-bottom: 0 !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .single-line-text .lp-form-label .label-style {
+  width: 200px;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down {
+  position: relative !important;
+  top: 0 !important;
+  left: 0 !important;
+  border: 1px solid #e5e8e8;
+  border-radius: 8px;
+  height: 48px !important;
+  width: 482px !important;
+  height: 50px !important;
+  cursor: pointer;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down .lp-form-label {
+  margin-bottom: 0 !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down .lp-form-label .label-style {
+  width: 200px;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down .single {
+  padding: 20px 0 0px 16px !important;
+  border: none !important;
+  color: #282829;
+  -webkit-appearance: none;
   font-weight: 300;
-  padding: 0 2px;
+  font-size: 16px !important;
+  line-height: 24px !important;
+  letter-spacing: 0.003em;
+  border-radius: 8px !important;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group).typing input.ub-input-item,
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group).typing select.ub-input-item {
-  border: 1px solid var(--cta-color-1, #1372ec);
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down .single:-webkit-autofill {
+  -webkit-text-fill-color: #282829;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group).filled .lp-form-label {
-  top: -6px;
-  left: 18px;
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down .single:-webkit-autofill:focus {
+  -webkit-text-fill-color: #282829;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
 }
-body.spz-24001 #lp-pom-root .custom-form-container .form-two-columns.has-axis form .fields .lp-pom-form-field:not(.checkbox-group).filled .lp-form-label > .label-style {
-  background: #fff;
-  font-size: 12px;
-  font-weight: 300;
-  padding: 0 2px;
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down .single:-webkit-autofill:hover {
+  -webkit-text-fill-color: #282829;
+  -webkit-box-shadow: 0 0 0px 1000px #ffffff inset;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down select.single {
+  width: 480px !important;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down select {
+  cursor: pointer;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/9001/assets/select_tag_dropdown.png) no-repeat calc(100% + 1px);
+  background-size: 48px 50px;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down select:hover {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/9001/assets/select_tag_dropdown_active.png) !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down:not(.filled) .lp-form-label {
+  z-index: -1;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down:before {
+  content: "";
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/9001/assets/select_tag_dropdown_active.png);
+}
+body.spz-24001 #lp-pom-root .custom-form-container .email.active {
+  border: 1px solid #1372ec;
+  -webkit-box-shadow: 0px 0px 0px 4px #c7e4ff;
+          box-shadow: 0px 0px 0px 4px #c7e4ff;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .single-line-text.active {
+  border: 1px solid #1372ec;
+  -webkit-box-shadow: 0px 0px 0px 4px #c7e4ff;
+          box-shadow: 0px 0px 0px 4px #c7e4ff;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .drop-down.active {
+  border: 1px solid #1372ec;
+  -webkit-box-shadow: 0px 0px 0px 4px #c7e4ff;
+          box-shadow: 0px 0px 0px 4px #c7e4ff;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.single-line-text {
+  width: 482px !important;
+  height: 50px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.email {
+  width: 482px !important;
+  height: 50px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_first_name {
+  width: 232px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_first_name input {
+  width: 232px !important;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_last_name {
+  width: 232px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_last_name input {
+  width: 232px !important;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_job_title {
+  width: 232px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_job_title input {
+  width: 232px !important;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_company_name {
+  width: 232px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container #container_company_name input {
+  width: 232px !important;
+  height: 48px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .fields {
+  -webkit-box-orient: initial !important;
+  -webkit-box-direction: initial !important;
+      -ms-flex-direction: initial !important;
+          flex-direction: initial !important;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify !important;
+      -ms-flex-pack: justify !important;
+          justify-content: space-between !important;
+  margin: 0 !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.typing:not(.checkbox-group) .lp-form-label {
+  top: 4px !important;
+  z-index: 4;
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-form-field.filled:not(.checkbox-group) .lp-form-label {
+  top: 4px !important;
+  z-index: 4;
+  font-size: 12px !important;
+  line-height: 16px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .has-axis {
+  margin: 34px 40px 40px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button#lp-pom-button-1511 {
+  background: #1372ec;
+  border: none !important;
+  border-radius: 8px !important;
+  height: 48px !important;
+  width: 480px !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button#lp-pom-button-1511 span.label {
+  font-size: 16px;
+  font-weight: 500;
+  padding-bottom: 1px;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button#lp-pom-button-1511:focus {
+  background: rgb(19, 114, 236);
+  color: #ffffff;
+  border: none !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button#lp-pom-button-1511:hover {
+  background: #1a50ad;
+  color: #ffffff;
+  border: none !important;
+}
+body.spz-24001 #lp-pom-root .custom-form-container .lp-pom-button#lp-pom-button-1511:active {
+  background: #062d70;
+  color: #ffffff;
+  border: none !important;
+}
+body.spz-24001 #lp-pom-root #container_country:not(.filled) ~ #container_consent {
+  margin-bottom: 12px !important;
+}
+body.spz-24001 #lp-pom-root #container_country:not(.filled) ~ #container_consent * {
+  display: none;
+}
+body.spz-24001 #lp-pom-root #container_country:not(.filled) ~ #container_stateprovince {
+  display: none;
+}
+body.spz-24001 #lp-pom-root a.spz_primary_button#lp-pom-button-1094:focus {
+  background: rgb(19, 114, 236);
+  color: #ffffff;
+  border: none !important;
+}
+body.spz-24001 #lp-pom-root a.spz_primary_button#lp-pom-button-1094:hover {
+  background: #1a50ad;
+  color: #ffffff;
+  border: none !important;
+}
+body.spz-24001 #lp-pom-root a.spz_primary_button#lp-pom-button-1094:active {
+  background: #062d70;
+  color: #ffffff;
+  border: none !important;
 }
