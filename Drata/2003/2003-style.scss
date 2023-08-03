@@ -1,4 +1,4 @@
-.spz-2002 {
+.spz-2003 {
   .review-sum-wrapper {
     display: flex;
 
@@ -61,7 +61,16 @@
   //Css for hero interface starts
   .MuiBox-root.css-gdxc1a-HeroHomepage-root {
     .MuiBox-root.css-yqonbz-HeroHomepage-hero {
+      .css-e4l3ux-HeroHomepage-tags {
+        @media (max-width: 1199.98px) {
+          display: block !important;
+        }
+      }
+
       .MuiBox-root.css-1buoy6w-HeroHomepage-ellipses {
+        @media (max-width: 1199.98px) {
+          display: block !important;
+        }
         .css-12ujoca-HeroHomepage-ellipseCss,
         .css-1x5gf45-HeroHomepage-ellipseCss,
         .css-ioag2k-HeroHomepage-ellipseCss {
@@ -80,56 +89,169 @@
             background-position: calc(100% + 101px) 436px;
             background-repeat: no-repeat;
             background-size: 1029px 1029px;
+            @media (min-width: 1600.98px) {
+              background-position: calc(100% + 65px) 435px;
+            }
+            @media (max-width: 1199.98px) {
+              background: url(https://res.cloudinary.com/spiralyze/image/upload/v1690986175/drata/2003/custom/Tablet_aand_mobile_image-min.png);
+              background-size: 768px 807px;
+              background-repeat: no-repeat;
+              background-position: center calc(100% + 99px);
+            }
+            @media (max-width: 767.98px) {
+              background-size: 360px 379px;
+              background-position: center calc(100% - 28px);
+            }
           }
         }
       }
 
       .MuiBox-root.css-e4l3ux-HeroHomepage-tags {
         .MuiTypography-inherit.MuiLink-root.MuiLink-underlineAlways {
+          width: 80px;
+          height: 80px;
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            width: 72px;
+            height: 72px;
+            .css-t8r31q-HeroHomepage-tagInnerWrapper {
+              font-size: 13px;
+              font-weight: 600;
+              line-height: 20px;
+            }
+          }
+          @media (max-width: 767.98px) {
+            width: 40px;
+            height: 40px;
+            .css-t8r31q-HeroHomepage-tagInnerWrapper {
+              font-size: 8px;
+              font-weight: 600;
+              line-height: 12px;
+            }
+          }
+
           &:nth-child(1) {
             transform: rotate(324.1deg) translate(487.5px) rotate(-324deg)
               scale(1);
+            @media (min-width: 1600.98px) {
+              transform: rotate(321.4deg) translate(459px) rotate(-321deg)
+                scale(1);
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              transform: rotate(362deg) translate(296px) rotate(-362deg)
+                scale(1);
+            }
+            @media (max-width: 767.98px) {
+              transform: rotate(236deg) translate(-271.5px) rotate(-236deg)
+                scale(1);
+            }
           }
           &:nth-child(2) {
             transform: rotate(317deg) translate(301px) rotate(-317deg) scale(1);
+            @media (min-width: 1600.98px) {
+              transform: rotate(311.8deg) translate(276px) rotate(-312deg)
+                scale(1);
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              transform: rotate(-31deg) translate(208px) rotate(31deg) scale(1);
+            }
+            @media (max-width: 767.98px) {
+              transform: rotate(420.3deg) translate(196px) rotate(-60deg)
+                scale(1);
+            }
           }
           &:nth-child(3) {
             transform: rotate(333.3deg) translate(130px) rotate(-333deg)
               scale(1);
+            @media (min-width: 1600.98px) {
+              transform: rotate(324deg) translate(99px) rotate(-324deg) scale(1);
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              transform: rotate(268deg) translate(153px) rotate(-268deg)
+                scale(1);
+            }
+            @media (max-width: 767.98px) {
+              transform: rotate(86deg) translate(149px) rotate(-86deg) scale(1);
+            }
           }
           &:nth-child(4) {
             transform: rotate(418deg) translate(171px) rotate(-418deg) scale(1);
+            @media (min-width: 1600.98px) {
+              transform: rotate(429deg) translate(154px) rotate(-429deg)
+                scale(1);
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              transform: rotate(568deg) translate(230px) rotate(-208deg)
+                scale(1);
+            }
+            @media (max-width: 767.98px) {
+              transform: rotate(475.5deg) translate(189px) rotate(-115.5deg)
+                scale(1);
+            }
           }
           &:nth-child(5) {
             transform: rotate(425.8deg) translate(381px) rotate(-426deg)
               scale(1);
+            @media (min-width: 1600.98px) {
+              transform: rotate(431deg) translate(367px) rotate(-431deg)
+                scale(1);
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              transform: rotate(538deg) translate(326px) rotate(-178deg)
+                scale(1);
+            }
+            @media (max-width: 767.98px) {
+              transform: rotate(121.8deg) translate(266px) rotate(-122deg)
+                scale(1);
+            }
           }
         }
       }
     }
 
-    .hero-interface-wrapper {
-      // background: url(https://res.cloudinary.com/spiralyze/image/upload/v1690986175/drata/2003/custom/Desktop_image-min.png);
-      // background-position: calc(100% + 281px) -39px;
-      // background-repeat: no-repeat;
-      // background-size: 1029px 1029px;
-      // width: 100%;
-      // height: 100%;
-      // position: absolute;
-      // z-index: 3;
-    }
-
     .MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container[class] {
       display: flex;
+      @media (max-width: 1199.98px) {
+        flex-wrap: wrap;
+      }
 
       .MuiBox-root.css-1vsa5xp-HeroHomepage-content {
         max-width: 53.4%;
+        @media (max-width: 1199.98px) {
+          max-width: 100%;
+        }
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          height: 260.5px;
+          @media (min-width: 775.98px) {
+            height: 320.5px;
+          }
+        }
 
         h1.MuiTypography-heroTitle.css-aclrcr-MuiTypography-root-HeroHomepage-title {
           font-size: 96px;
           font-weight: 800;
           line-height: 88px; /* 91.667% */
-          letter-spacing: -2px;
+          letter-spacing: -2.1px;
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            font-size: 60px;
+            font-style: normal;
+            line-height: 56px; /* 93.333% */
+            letter-spacing: -1.8px;
+          }
+          @media (max-width: 767.98px) {
+            font-size: 60px;
+            line-height: 56px; /* 93.333% */
+            letter-spacing: -1.8px;
+          }
+        }
+      }
+
+      .hero-interface-wrapper {
+        width: 100%;
+        @media (max-width: 1199.98px) {
+          height: 755px;
+        }
+        @media (max-width: 767.98px) {
+          height: 368px;
         }
       }
     }
@@ -305,7 +427,7 @@
       .htw-link {
         &.g2-rvw,
         .htw-img-wrap {
-          width: 243px;
+          width: 241px;
           height: 40px !important;
         }
 
@@ -318,18 +440,18 @@
     }
 
     .css-yqonbz-HeroHomepage-hero {
-      padding: 64px 16px 0 16px;
+      padding: 64px 16px 20px 16px;
 
-      .css-aclrcr-MuiTypography-root-HeroHomepage-title {
-        margin-top: 19px;
-      }
+      // .css-aclrcr-MuiTypography-root-HeroHomepage-title {
+      //   margin-top: 19px;
+      // }
 
       .css-mc5inp-MuiTypography-root-HeroHomepage-subtitle {
-        margin-top: 14px;
+        margin-top: 16px;
       }
 
       .css-1pj9xab-HeroHomepage-actions {
-        margin-top: 31.5px;
+        margin-top: 32.5px;
 
         .form-group-spz .form-field-spz {
           height: 56px;
@@ -357,6 +479,13 @@
     }
   }
 
+  // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+  //   .css-yqonbz-HeroHomepage-hero {
+  //     // max-width: 768px;
+  //     // margin: auto;
+  //   }
+  // }
+
   // Mobile
   @media (max-width: 767px) {
     .review-sum-wrapper {
@@ -367,7 +496,7 @@
         .htw-img-wrap,
         &.lead-spring,
         .htw-img-wrap {
-          width: 243px;
+          width: 241px;
           height: 40px !important;
         }
         &.g2-rvw {
@@ -382,6 +511,8 @@
 
     .css-yqonbz-HeroHomepage-hero {
       padding: 48px 16px 1px 16px;
+      max-width: 360px;
+      margin: auto;
 
       .css-aclrcr-MuiTypography-root-HeroHomepage-title {
         font-weight: 800;
@@ -427,4 +558,18 @@
       padding: 100px 40px 50px 40px;
     }
   }
+
+  // &.safari {
+  //   .MuiBox-root.css-gdxc1a-HeroHomepage-root {
+  //     .MuiBox-root.css-yqonbz-HeroHomepage-hero {
+  //       @media (min-width: 767.98px) and (max-width: 1199.98px) {
+  //         padding-bottom: 200px;
+  //       }
+
+  //       @media (max-width: 767.98px) {
+  //         padding-bottom: 120px;
+  //       }
+  //     }
+  //   }
+  // }
 }

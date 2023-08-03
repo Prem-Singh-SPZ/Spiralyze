@@ -1,15 +1,20 @@
 function createTest2002() {
     if (window.location.pathname === "/") {
         // home page
-        document.body.classList.add('spz-2002');
+        document.body.classList.add('spz-2003');
         // window.addEventListener("load", (event) => {
         waitForElm('.css-1pj9xab-HeroHomepage-actions').then(function () {
             appendHomeHeroContent();
+
+            // Add class 'safari' on body if browser is safari
+            if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+                document.body.classList.add('safari');
+            }
         });
         // });
     } else {
         // demo page
-        document.body.classList.add('spz-2002');
+        document.body.classList.add('spz-2003');
         waitForElm('.hs-form-private').then(function () {
             insertEmailInField();
         });
@@ -70,7 +75,7 @@ function appendHomeHeroContent() {
 
         //insert section for right image
         if (document.querySelectorAll('.hero-interface-wrapper').length == 0) {
-            document.querySelector('.MuiBox-root.css-psqvk8-HeroHomepage-gradientOverlay').insertAdjacentHTML('afterend', `<div class="hero-interface-wrapper"></div>`)
+            document.querySelector('.MuiBox-root.css-1vsa5xp-HeroHomepage-content').insertAdjacentHTML('afterend', `<div class="hero-interface-wrapper"></div>`)
         }
     });
 }
@@ -116,7 +121,7 @@ function insertEmailInField() {
 }
 
 function removeTest() {
-    document.body.classList.remove("spz-2002");
+    document.body.classList.remove("spz-2003");
 }
 
 history.pushState = (function (f) {

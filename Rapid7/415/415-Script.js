@@ -10,7 +10,7 @@ var jQueryInterval = setInterval(function () {
         }
 
         if (document.querySelectorAll('body .multi-feature-card-block__carousel').length > 0) {
-            jQuery((function () { $(".multi-feature-card-block__carousel-slider").each((function (r) { $(this).attr("data-slider-id", "mfcb-slider" + r), jQuery(".multi-feature-card-block__carousel-slider").slick({ dots: !1, arrows: !0, prevArrow: '<div class="r7-icon r7-icon-arrow-chevron-left"></div>', nextArrow: '<div class="r7-icon r7-icon-arrow-chevron-right"></div>', infinite: !0, speed: 300, centerMode: !0, centerPadding: "50px", variableWidth: !0, slidesToShow: 2, slidesToScroll: 1, responsive: [{ breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: !1, swipe: !0, draggable: !0 } }] }) })) }));
+            jQuery((function () { jQuery(".multi-feature-card-block__carousel-slider").each((function (r) { jQuery(this).attr("data-slider-id", "mfcb-slider" + r), jQuery(".multi-feature-card-block__carousel-slider").slick({ dots: !1, arrows: !0, prevArrow: '<div class="r7-icon r7-icon-arrow-chevron-left"></div>', nextArrow: '<div class="r7-icon r7-icon-arrow-chevron-right"></div>', infinite: !0, speed: 300, centerMode: !0, centerPadding: "50px", variableWidth: !0, slidesToShow: 2, slidesToScroll: 1, responsive: [{ breakpoint: 640, settings: { slidesToShow: 1, slidesToScroll: 1, arrows: !1, swipe: !0, draggable: !0 } }] }) })) }));
         }
 
         if (document.querySelectorAll('body .multi-feature-card-block__carousel').length == 0) {
