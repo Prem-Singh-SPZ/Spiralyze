@@ -203,28 +203,14 @@ body.spz-3001 {
                           }
                         }
                       }
-
-                      .show-comment-dynamic {
-                        overflow: hidden;
-                        color: var(
-                          --primary-neutrals-n-2,
-                          rgba(13, 18, 46, 0.8)
-                        );
-                        text-overflow: ellipsis;
-                        font-size: 16px;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: 24px;
-                        margin-bottom: 18px;
-                        display: block;
-                        margin-top: 2px;
-                        span {
-                          padding-right: 5px;
+                      &[spz_fname="LastName"],
+                      &[spz_fname="Phone"],
+                      &[spz_fname="Country"],
+                      &[spz_fname="I_am__c"] {
+                        .mktoFieldWrap {
+                          max-width: 224px;
+                          float: right;
                         }
-                      }
-
-                      .spz-hidden {
-                        display: none !important;
                       }
 
                       &.field-focus {
@@ -274,6 +260,26 @@ body.spz-3001 {
                           //   margin-bottom: 28px !important;
                         }
                       }
+                    }
+
+                    .show-comment-dynamic {
+                      overflow: hidden;
+                      color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+                      text-overflow: ellipsis;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 24px;
+                      margin-bottom: 18px;
+                      display: inline-block;
+                      margin-top: 2px;
+                      width: 100%;
+                      span {
+                        padding-right: 5px;
+                      }
+                    }
+                    .spz-hidden {
+                      display: none !important;
                     }
                   }
 

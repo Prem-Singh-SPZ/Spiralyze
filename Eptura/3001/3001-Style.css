@@ -158,23 +158,9 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   line-height: 20px; /* 142.857% */
   border: 0;
 }
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .show-comment-dynamic {
-  overflow: hidden;
-  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
-  text-overflow: ellipsis;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 24px;
-  margin-bottom: 18px;
-  display: block;
-  margin-top: 2px;
-}
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .show-comment-dynamic span {
-  padding-right: 5px;
-}
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .spz-hidden {
-  display: none !important;
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap {
+  max-width: 224px;
+  float: right;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -8px;
@@ -198,6 +184,25 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #f83a59 !important;
+}
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .show-comment-dynamic {
+  overflow: hidden;
+  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 18px;
+  display: inline-block;
+  margin-top: 2px;
+  width: 100%;
+}
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .show-comment-dynamic span {
+  padding-right: 5px;
+}
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
+  display: none !important;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow {
   text-align: center;
