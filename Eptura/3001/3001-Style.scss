@@ -71,7 +71,13 @@ body.spz-3001 {
 
               #FooterBottom {
                 li a {
+                  color: #d6d7f5;
                   text-transform: capitalize;
+                  line-height: 20px;
+
+                  &:hover {
+                    color: #ffffff;
+                  }
                   @media (max-width: 767.98px) {
                     font-size: 12px;
                     line-height: 18px;
@@ -172,6 +178,9 @@ body.spz-3001 {
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
               box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+              @media (min-width: 767.98px) {
+                min-width: 556px;
+              }
               @media (min-width: 767.98px) and (max-width: 1314.98px) {
                 margin: auto;
               }
@@ -244,6 +253,7 @@ body.spz-3001 {
                           padding: 0 !important;
                           transition: all 0.3s ease-in-out;
                           pointer-events: none;
+                          max-width: calc(100% - 40px);
                         }
 
                         .mktoField:not([type="checkbox"]) {
@@ -272,6 +282,9 @@ body.spz-3001 {
                             height: 48px !important;
                             @media (min-width: 767.98px) and (max-width: 1314.98px) {
                               max-width: 218px;
+                            }
+                            @media (min-width: 1314.98px) and (max-width: 1359.98px) {
+                              max-width: 210px;
                             }
                           }
 
@@ -305,13 +318,22 @@ body.spz-3001 {
 
                             a {
                               padding: 0;
+                              color: #1b4bc5;
+                              &:hover {
+                                color: #0d122e;
+                              }
                             }
                           }
                         }
 
                         .mktoCheckboxList {
                           margin-top: 7px;
+                          cursor: pointer;
+                          display: inline-block;
+                          position: relative;
+                          padding-left: 25px;
                           .mktoField {
+                            border: 1px solid #d6d7f5;
                             height: 16px !important;
                             width: 16px !important;
                             cursor: pointer;
@@ -328,39 +350,70 @@ body.spz-3001 {
                             line-height: 20px !important; /* 142.857% */
                             margin-left: 19px;
                             cursor: pointer;
+                            &:before {
+                              content: "";
+                              width: 16px;
+                              height: 16px;
+                              position: absolute;
+                              left: 0;
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg")
+                                left center no-repeat;
+                              margin-top: 2px;
+                            }
+
+                            &:hover {
+                              &::before {
+                                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg")
+                                  left center no-repeat;
+                              }
+                            }
+                          }
+                          input[type="checkbox"] {
+                            display: none !important;
+
+                            &:checked + label:before {
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg")
+                                left center no-repeat;
+                            }
                           }
                         }
 
                         .mktoError {
-                          margin-top: 42px !important;
+                          margin-top: 48px !important;
 
                           .mktoErrorArrowWrap {
-                            display: none;
+                            // display: none;
                           }
 
                           .mktoErrorMsg {
-                            background-color: transparent;
-                            background-image: none;
-                            border-radius: 0;
-                            box-shadow: none;
-                            max-width: 100%;
-                            padding: 0;
-                            text-shadow: none;
-                            color: var(--accents-a-9, #f83a59);
-                            font-size: 14px;
-                            font-style: normal;
-                            font-weight: 300;
-                            line-height: 20px; /* 142.857% */
-                            border: 0;
-                            padding-left: 16px;
-                            position: relative;
-                            &::before {
-                              content: url(https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg);
-                              display: block;
-                              position: absolute;
-                              left: 0px;
-                              top: 1px;
-                            }
+                            // background-color: transparent;
+                            // background-image: none;
+                            // border-radius: 0;
+                            // box-shadow: none;
+                            // max-width: 100%;
+                            // padding: 0;
+                            // text-shadow: none;
+                            // color: var(--accents-a-9, #f83a59);
+                            // font-size: 10px;
+                            // font-style: normal;
+                            // font-weight: 300;
+                            // line-height: 14px; /* 142.857% */
+                            // border: 0;
+                            // padding-left: 16px;
+                            // display: flex;
+                            // position: relative;
+                            // &::before {
+                            //   content: '';
+                            //   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg);
+                            //   display: block;
+                            //   position: absolute;
+                            //   width: 10px;
+                            //   height: 10px;
+                            //   background-size: 10px;
+                            //   background-repeat: no-repeat;
+                            //   left: 0px;
+                            //   top: 1px;
+                            // }
                           }
                         }
                       }
@@ -412,7 +465,7 @@ body.spz-3001 {
 
                       &.field-error {
                         .mktoFieldWrap {
-                          margin-bottom: 8px !important;
+                          // margin-bottom: 8px !important;
                         }
                         &.field-focus {
                           .mktoFieldWrap {
@@ -453,10 +506,39 @@ body.spz-3001 {
                           padding: 0;
                           margin-bottom: 26px;
                         }
+
+                        &:hover {
+                          color: #904ab0;
+                        }
                       }
                     }
                     .spz-hidden {
                       display: none !important;
+                    }
+                  }
+
+                  &.all-fields {
+                    .mktoFormRow {
+                      .mktoFormCol {
+                        &[spz_fname="Company"] {
+                          .mktoFieldWrap {
+                            @media (min-width: 767.98px) {
+                              max-width: 224px;
+                              float: right;
+                            }
+                            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                              max-width: 218px;
+                            }
+                          }
+                        }
+
+                        &[spz_fname="Country"],
+                        &[spz_fname="NumberOfEmployees"] {
+                          .mktoFieldWrap {
+                            float: left;
+                          }
+                        }
+                      }
                     }
                   }
 
@@ -486,6 +568,8 @@ body.spz-3001 {
 
                         &:hover,
                         &:focus {
+                          transform: translate(0, -1px);
+
                           background: var(
                             --interactive-colors-a-3,
                             #456ed6
@@ -496,6 +580,7 @@ body.spz-3001 {
                           height: 56px !important;
                           padding: 0px 32px;
                           width: 300px !important;
+                          max-width: 300px !important;
                         }
                       }
                     }
@@ -518,6 +603,10 @@ body.spz-3001 {
                             color: var(--interactive-colors-a-1, #1b4bc5);
                             font-weight: 500;
                             padding: 0;
+
+                            &:hover {
+                              color: #0d122e;
+                            }
                           }
                         }
                       }

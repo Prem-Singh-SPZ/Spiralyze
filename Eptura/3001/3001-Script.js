@@ -31,8 +31,8 @@
                 });
             }
         });
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg" as="image">`
-    );
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
+        );
     }
 
     //Marketo form update
@@ -138,14 +138,19 @@
                 // elem.closest('.mktoFormCol').classList.add('field-error');
             }
 
-            if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
+
+            if (document.querySelector('[spz_fname="Company"][data-zi-field-enriched="false"]')) {
+                document.querySelector('#mktoForm_1225').classList.add('all-fields');
+            }
+            else if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
                 document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
             }
-        }, 50);
+
+        }, 10);
 
         setTimeout(() => {
             clearInterval(timeBuffer);
-        }, 500);
+        }, 1000);
     }
 
     //Hero image update
