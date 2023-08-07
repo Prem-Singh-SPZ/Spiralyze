@@ -18,8 +18,8 @@
                         <p>Lightweight Endpoint Agent </p>
                     </div>
                     <div class="key-card">
-                        <img alt="Integrated Threat Feeds" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/puzzle-piece-fit.svg">
-                        <p>Integrated Threat Feeds</p>
+                        <img alt="Remediation Projects" src="https://res.cloudinary.com/spiralyze/image/upload/v1691406975/RAPID7/704/applications_1.svg">
+                        <p>Remediation Projects</p>
                     </div>
                     <div class="key-card">
                         <img alt="Live Dashboards" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/dashboard.svg">
@@ -30,12 +30,12 @@
                         <p>Goals and SLAs</p>
                     </div>
                     <div class="key-card">
-                        <img alt="Real Risk Prioritization" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/copy-clipboard.svg">
-                        <p>Real Risk Prioritization</p>
+                        <img alt="Vulnerability Risk Prioritization" src="https://res.cloudinary.com/spiralyze/image/upload/v1691406975/RAPID7/704/vulnerability-hunting_1.svg">
+                        <p>Vulnerability Risk Prioritization</p>
                     </div>
                     <div class="key-card">
-                        <img alt="Easy-to-Use RESTful API" src="https://res.cloudinary.com/spiralyze/image/upload/v1690279481/rapid7/704/html-template.svg">
-                        <p>Easy-to-Use RESTful API</p>
+                        <img alt="Secure Configuration Assessment" src="https://res.cloudinary.com/spiralyze/image/upload/v1691406976/RAPID7/704/password-protect-key-lock_1.svg">
+                        <p>Secure Configuration<br> Assessment</p>
                     </div>
                 </div>
             </div>
