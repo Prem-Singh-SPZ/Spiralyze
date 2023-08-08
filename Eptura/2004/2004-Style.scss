@@ -1,0 +1,443 @@
+$eptura-font: "Eptura Flexible", Arial, sans-serif;
+
+body.spz-2004 {
+  &.modal-open {
+    overflow: hidden;
+  }
+
+  .body-wrapper {
+    #twocol_form {
+      padding: 0 !important;
+      .page_padding {
+        .mktoText {
+          display: none !important;
+        }
+
+        .order-1.order-md-2 {
+          position: fixed;
+          top: 0;
+          bottom: 0;
+          left: 0;
+          right: 0;
+          background: rgba(13, 18, 46, 0.7);
+          backdrop-filter: blur(4px);
+          z-index: 4;
+          align-items: center;
+          justify-content: center;
+          display: none !important;
+          &.show-modal {
+            display: flex !important;
+          }
+
+          #form {
+            .MQL__Contact_Us {
+              .formSpan {
+                display: flex;
+                width: 568px;
+                padding: 0px 56px 44px 56px;
+                flex-direction: column;
+                align-items: center;
+                gap: 20px;
+                border-radius: 8px;
+                background: var(--primary-neutrals-w, #fff);
+                box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+              }
+            }
+          }
+        }
+      }
+      //Form Css starts here
+      form.mktoForm {
+        .mktoFormRow {
+          .mktoFormCol {
+            min-height: auto;
+            margin: 0 !important;
+            padding: 0 !important;
+            &[spz_fname="FirstName"],
+            &[spz_fname="LastName"] {
+              display: block !important;
+            }
+
+            .mktoFieldWrap {
+              position: relative;
+              .mktoLabel {
+                position: absolute;
+                overflow: hidden;
+                color: var(
+                  --primary-neutrals-n-2,
+                  rgba(13, 18, 46, 0.8)
+                ) !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: $eptura-font;
+                font-size: 16px !important;
+                font-style: normal;
+                font-weight: 300 !important;
+                line-height: 24px; /* 150% */
+                top: 11px;
+                left: 16px;
+                padding: 0 !important;
+                transition: all 0.3s ease-in-out;
+                pointer-events: none;
+                max-width: calc(100% - 40px);
+              }
+
+              .mktoField:not([type="checkbox"]) {
+                border-radius: 4px;
+                border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+                width: 280px;
+                padding: 11px 16px 10px 16px !important;
+                overflow: hidden;
+                color: var(--primary-neutrals-n-1, #0d122e) !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: $eptura-font;
+                font-size: 16px !important;
+                font-style: normal;
+                font-weight: 300 !important;
+                line-height: 24px !important; /* 150% */
+                margin-bottom: 20px !important;
+
+                &:not(#Lead_Notes__c) {
+                  @media (min-width: 767.98px) {
+                    max-width: 224px;
+                  }
+                  height: 48px !important;
+                  @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                    max-width: 218px;
+                  }
+                  @media (min-width: 1314.98px) and (max-width: 1359.98px) {
+                    max-width: 210px;
+                  }
+                }
+
+                &#I_am__c,
+                &#Country {
+                  outline: transparent;
+                  appearance: none !important;
+                  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                  background-repeat: no-repeat !important;
+                  background-position: right 14px center !important;
+                  background-size: 24px !important;
+                  padding-right: 32px !important;
+                }
+
+                &#Lead_Notes__c ~ .mktoError {
+                  margin-top: 0 !important;
+                  .mktoErrorArrowWrap {
+                    top: -27px;
+                  }
+                  .mktoErrorMsg {
+                    margin-top: -20px;
+                  }
+                }
+              }
+
+              .mktoHtmlText.mktoHasWidth {
+                margin: 0 !important;
+                span {
+                  color: var(--primary-neutrals-n-1, #0d122e);
+                  font-size: 10px !important;
+                  font-family: $eptura-font;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 16px; /* 160% */
+
+                  a {
+                    padding: 0;
+                    color: #1b4bc5;
+                    &:hover {
+                      color: #0d122e;
+                    }
+                  }
+                }
+              }
+
+              .mktoCheckboxList {
+                margin-top: 7px;
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                padding-left: 25px;
+                .mktoField {
+                  border: 1px solid #d6d7f5;
+                  height: 16px !important;
+                  width: 16px !important;
+                  cursor: pointer;
+                  @media (max-width: 767.98px) {
+                    margin-top: 7px;
+                  }
+                }
+
+                label {
+                  font-family: $eptura-font !important;
+                  color: var(--primary-neutrals-n-1, #0d122e);
+                  font-size: 14px !important;
+                  font-style: normal !important;
+                  font-weight: 300 !important;
+                  line-height: 20px !important; /* 142.857% */
+                  margin-left: 19px;
+                  cursor: pointer;
+                  &:before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    left: 0;
+                    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg")
+                      left center no-repeat;
+                    margin-top: 2px;
+                  }
+
+                  &:hover {
+                    &::before {
+                      background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg")
+                        left center no-repeat;
+                    }
+                  }
+                }
+                input[type="checkbox"] {
+                  display: none !important;
+
+                  &:checked + label:before {
+                    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg")
+                      left center no-repeat;
+                  }
+                }
+              }
+
+              .mktoError {
+                margin-top: 48px !important;
+
+                .mktoErrorArrowWrap {
+                  // display: none;
+                }
+
+                .mktoErrorMsg {
+                  // background-color: transparent;
+                  // background-image: none;
+                  // border-radius: 0;
+                  // box-shadow: none;
+                  // max-width: 100%;
+                  // padding: 0;
+                  // text-shadow: none;
+                  // color: var(--accents-a-9, #f83a59);
+                  // font-size: 10px;
+                  // font-style: normal;
+                  // font-weight: 300;
+                  // line-height: 14px; /* 142.857% */
+                  // border: 0;
+                  // padding-left: 16px;
+                  // display: flex;
+                  // position: relative;
+                  // &::before {
+                  //   content: '';
+                  //   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg);
+                  //   display: block;
+                  //   position: absolute;
+                  //   width: 10px;
+                  //   height: 10px;
+                  //   background-size: 10px;
+                  //   background-repeat: no-repeat;
+                  //   left: 0px;
+                  //   top: 1px;
+                  // }
+                }
+              }
+            }
+            &[spz_fname="LastName"],
+            &[spz_fname="Phone"],
+            &[spz_fname="Country"],
+            &[spz_fname="I_am__c"],
+            &[spz_fname="NumberOfEmployees"] {
+              .mktoFieldWrap {
+                @media (min-width: 767.98px) {
+                  max-width: 224px;
+                  float: right;
+                }
+                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                  max-width: 218px;
+                }
+              }
+            }
+
+            &.field-focus {
+              .mktoFieldWrap {
+                .mktoLabel {
+                  top: -8px;
+                  left: 11px;
+                  padding: 0 5px !important;
+                  font-family: $eptura-font;
+                  color: var(--accents-a-5, #904ab0) !important;
+                  font-size: 13px !important;
+                  line-height: 18px !important; /* 138.462% */
+                  background: #fff;
+                }
+              }
+              .mktoField:not([type="checkbox"]) {
+                border-color: #904ab0 !important;
+              }
+            }
+
+            &.input-filled {
+              .mktoFieldWrap {
+                .mktoLabel {
+                  top: -8px;
+                  left: 11px;
+                  font-family: $eptura-font;
+                  padding: 0 5px !important;
+                  font-size: 13px !important;
+                  line-height: 18px !important; /* 138.462% */
+                  background: #fff;
+                }
+              }
+            }
+
+            &.field-error {
+              .mktoFieldWrap {
+                // margin-bottom: 8px !important;
+              }
+              &.field-focus {
+                .mktoFieldWrap {
+                  .mktoLabel {
+                    color: var(--accents-a-5, #f83a59) !important;
+                  }
+                }
+              }
+
+              .mktoField:not([type="checkbox"]) {
+                border-color: #f83a59 !important;
+              }
+            }
+          }
+
+          .spz-anchor {
+            display: flex;
+            width: 100%;
+
+            .show-comment-dynamic {
+              overflow: hidden;
+              color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+              font-family: $eptura-font;
+              text-overflow: ellipsis;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 24px;
+              margin-bottom: 18px;
+              display: inline-block;
+              margin-top: 2px;
+              span {
+                padding-right: 5px;
+              }
+              @media (max-width: 767.98px) {
+                padding: 0;
+                margin-bottom: 26px;
+              }
+
+              &:hover {
+                color: #904ab0;
+              }
+            }
+          }
+          .spz-hidden {
+            display: none !important;
+          }
+        }
+
+        &.all-fields {
+          .mktoFormRow {
+            .mktoFormCol {
+              &[spz_fname="Company"] {
+                .mktoFieldWrap {
+                  @media (min-width: 767.98px) {
+                    max-width: 224px;
+                    float: right;
+                  }
+                  @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                    max-width: 218px;
+                  }
+                }
+              }
+
+              &[spz_fname="Country"],
+              &[spz_fname="NumberOfEmployees"] {
+                .mktoFieldWrap {
+                  float: left;
+                }
+              }
+            }
+          }
+        }
+
+        //submit button css
+        .mktoButtonRow {
+          text-align: center;
+          .mktoButtonWrap {
+            button.mktoButton {
+              display: flex;
+              width: 140px !important;
+              height: 50px !important;
+              padding: 0px 32px !important;
+              justify-content: center;
+              align-items: center;
+              border-radius: 3px !important;
+              background: var(--interactive-colors-a-1, #1b4bc5) !important;
+              color: var(--primary-neutrals-w, #fff) !important;
+              text-align: center;
+              font-family: $eptura-font;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px !important; /* 150% */
+              margin-top: 22px !important;
+
+              &:hover,
+              &:focus {
+                background: var(--interactive-colors-a-3, #456ed6) !important;
+              }
+              &:focus {
+                transform: translate(0, 1px);
+              }
+
+              @media (max-width: 767.98px) {
+                height: 56px !important;
+                padding: 0px 32px;
+                width: 300px !important;
+                max-width: 300px !important;
+              }
+            }
+          }
+        }
+
+        //email line form
+        .spz-email {
+          .mktoFieldWrap {
+            margin-top: 18px;
+            .mktoHtmlText.mktoHasWidth {
+              text-align: center;
+              em {
+                color: var(--primary-neutrals-n-1, #0d122e);
+                font-family: $eptura-font;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 20px; /* 142.857% */
+
+                a {
+                  color: var(--interactive-colors-a-1, #1b4bc5);
+                  font-weight: 500;
+                  padding: 0;
+
+                  &:hover {
+                    color: #0d122e;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

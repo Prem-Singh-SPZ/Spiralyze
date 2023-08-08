@@ -1,9 +1,9 @@
 (function () {
-    waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
-        document.body.classList.add('spz-3001');
+    waitForElm('#bodyId #twocol_form .mktoForm .mktoFormRow .mktoField').then(function () {
+        document.body.classList.add('spz-2004');
 
         // Hide form initially
-        // document.querySelector('#HeroForm').style.opacity = 0;
+        // document.querySelector('#twocol_form').style.opacity = 0;
 
         //main function call
         loadTest();
@@ -12,12 +12,12 @@
     function loadTest() {
         // show form once loaded
         // waitForElm('[spz_fname="Country"][style*="display"]').then(function () {
-        //     document.querySelector('#HeroForm').style.opacity = 1;
+        //     document.querySelector('#twocol_form').style.opacity = 1;
         // });
 
-        updateHeroImage();
         formUpdate();
         focusFields();
+        modalSpecific();
 
         window.addEventListener("click", function (e) {
             if (e.target.classList.contains("show-comment-dynamic")) {
@@ -26,13 +26,28 @@
                 this.document.querySelector('#Lead_Notes__c').focus();
             }
             if (e.target.classList.contains("mktoButton")) {
-                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+                document.querySelectorAll('#twocol_form .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
                     checkError(el);
                 });
+            }
+            if (e.target.classList.contains("spz-trigger-modal")) {
+                document.querySelector('#twocol_form .col-md.order-1.order-md-2').classList.add('show-modal');
+                this.document.body.classList.add('modal-open');
             }
         });
         document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
         );
+    }
+
+    function modalSpecific() {
+        document.querySelector('#NavButton .btn.btn-primary').setAttribute('href', 'javascript:void(0)');
+        document.querySelector('#NavButton .btn.btn-primary').classList.add('spz-trigger-modal');
+        document.querySelector('#HeroBtn .btn.btn-primary').setAttribute('href', 'javascript:void(0)');
+        document.querySelector('#HeroBtn .btn.btn-primary').removeAttribute('target');
+        document.querySelector('#HeroBtn .btn.btn-primary').classList.add('spz-trigger-modal');
+
+        document.querySelector('#twocol_form .lpContentsItem.formSpan').insertAdjacentHTML('afterbegin', '<div class="form-close"><a href="javascript:void(0)" id="close-modal"></a></div><div class="spz-form-title"><h6>Contact us <span>today</span></h6></div>');
+
     }
 
     //Marketo form update
@@ -41,12 +56,8 @@
         document.querySelector('#Country option:first-child').textContent = '';
         document.querySelector('#I_am__c option:first-child').textContent = '';
 
-        if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
-            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
-        }
-
-        document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
-        document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
+        document.querySelector('#twocol_form .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
+        document.querySelector('#twocol_form .mktoForm .spz-email').before(document.querySelector('#twocol_form .mktoForm .mktoButtonRow'));
 
         document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').classList.add('spz-hidden');
         document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic"> <span>+ </span>Comment</a></div>`);
@@ -93,7 +104,7 @@
 
     // On input focus add class on closest parent field class
     function focusFields() {
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        document.querySelectorAll('#twocol_form .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
 
             let fieldName = el.getAttribute('name');
             el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
@@ -151,54 +162,6 @@
         setTimeout(() => {
             clearInterval(timeBuffer);
         }, 1000);
-    }
-
-    //Hero image update
-    function updateHeroImage() {
-        waitForElm('#nav #NavLogo #logo-img').then(function () {
-
-            //Footer logo updates for all URLs
-            document.querySelector('#FooterLogo a img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg');
-
-            document.querySelector('#FooterSocial a:nth-child(1) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_twitter_footer.svg');
-
-            document.querySelector('#FooterSocial a:nth-child(2) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_facebook_footer.svg');
-
-            document.querySelector('#FooterSocial a:nth-child(3) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_linkedin_footer.svg');
-
-
-            //URL specific image updates
-            if (window.location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visitors') > -1) {
-                document.querySelector('#hero #HeroText img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/proxyclick-ui.webp');
-                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Simplify visitor check-in');
-                document.body.classList.add('ppc-proxyclick');
-            }
-
-            else if (window.location.href.indexOf('ppc-condeco-make-your-flexible-office-work-better') > -1) {
-                document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/condeco-ui.webp');
-                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Make hybrid work, work');
-                document.body.classList.add('ppc-condeco');
-            }
-
-            else if (window.location.href.indexOf('ppc-archibus-maintenance-software') > -1) {
-                document.querySelector('#hero #HeroText').insertAdjacentHTML('beforeend', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/archibus-ui.webp" alt="optimize your maintenance operation" width= "488px"
-                height="260px">`);
-                document.body.classList.add('ppc-archibus');
-            }
-            else if (window.location.href.indexOf('ppc-eptura') > -1) {
-                document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
-                document.querySelector('#hero #HeroText img').setAttribute('alt', 'one platform to bring together');
-                document.body.classList.add('ppc-eptura');
-            }
-
-            // let logoUpdate = setInterval(() => {    
-            //     document.querySelector('#nav #NavLogo #logo-img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_1.webp');
-            // }, 20);
-
-            // setTimeout(() => {
-            //     clearInterval(logoUpdate);
-            // }, 500);
-        });
     }
 
     // Generic Code

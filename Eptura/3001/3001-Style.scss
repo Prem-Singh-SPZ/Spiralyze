@@ -9,7 +9,7 @@ body.spz-3001 {
     //Hiding half of the footer here
     > footer {
       .page_padding {
-        @media (min-width: 767.98px) and (max-width: 1314.98px) {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
           padding: 0 40px;
           max-width: 768px;
         }
@@ -30,7 +30,7 @@ body.spz-3001 {
           }
 
           .d-md-flex.justify-content-md-between {
-            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
               align-items: end;
             }
             .desktopHide {
@@ -43,18 +43,18 @@ body.spz-3001 {
             }
           }
           .left {
-            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
               flex-direction: column;
               width: 548px;
             }
             #FooterLogo {
-              @media (min-width: 767.98px) and (max-width: 1314.98px) {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 margin-bottom: 20px;
               }
               img {
                 min-width: 85.12px;
                 height: 64px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   min-width: 53.2px;
                   height: 40px;
                 }
@@ -68,7 +68,7 @@ body.spz-3001 {
             .links {
               max-width: 756px;
               padding-left: 64px !important;
-              @media (max-width: 1314.98px) {
+              @media (max-width: 1199.98px) {
                 padding-left: 0px !important;
               }
 
@@ -101,7 +101,7 @@ body.spz-3001 {
               img {
                 width: auto;
                 height: 20px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   width: 16px;
                   height: 16px;
                 }
@@ -112,14 +112,14 @@ body.spz-3001 {
               &:nth-child(2) {
                 order: 2;
                 padding-left: 20px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   padding-left: 16px;
                 }
               }
               &:last-child {
                 order: 1;
                 padding-left: 21px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   padding-left: 17px;
                 }
               }
@@ -143,7 +143,7 @@ body.spz-3001 {
     #hero {
       .hero_container {
         padding-top: 40px !important;
-        padding-bottom: 48px !important;
+        padding-bottom: 30px !important;
         overflow: hidden;
         @media (max-width: 767.98px) {
           padding: 0;
@@ -156,18 +156,18 @@ body.spz-3001 {
               padding: 0 10vw;
             }
             img[imagepreview="false"] {
-              width: 529px;
-              height: 280px;
-              margin-top: 2px;
-              @media (max-width: 1314.98px) {
-                width: 536px;
-                height: 284px;
+              width: 543.455px;
+              height: 305.019px;
+              margin-top: 1px;
+              @media (max-width: 1199.98px) {
+                width: 544px;
+                height: 306px;
               }
             }
           }
 
           #HeroFormCol {
-            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
               padding-top: 5px;
               padding-bottom: 8px !important;
             }
@@ -182,10 +182,12 @@ body.spz-3001 {
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
               box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+              margin-top: 7px;
+              
               @media (min-width: 767.98px) {
-                min-width: 556px;
+                min-width: 434px;
               }
-              @media (min-width: 767.98px) and (max-width: 1314.98px) {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 margin: auto;
               }
               @media (max-width: 767.98px) {
@@ -197,13 +199,13 @@ body.spz-3001 {
 
               #HeroFormTitleText h6 {
                 color: var(--primary-neutrals-n-1, #0d122e);
-                font-family: $eptura-font;
+                // font-family: $eptura-font;
                 text-align: center;
                 font-size: 26px;
                 font-style: normal;
                 font-weight: 300;
                 line-height: 34px; /* 130.769% */
-                white-space: nowrap;
+                // white-space: nowrap;
                 letter-spacing: initial;
                 margin: -4px -6px 24px 0;
                 span {
@@ -275,7 +277,7 @@ body.spz-3001 {
                           ) !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
-                          font-family: $eptura-font;
+                          font-family: $eptura-font !important;
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
@@ -284,15 +286,15 @@ body.spz-3001 {
 
                           &:not(#Lead_Notes__c) {
                             @media (min-width: 767.98px) {
-                              max-width: 224px;
+                              max-width: calc(100% - 10px);
                             }
                             height: 48px !important;
-                            @media (min-width: 767.98px) and (max-width: 1314.98px) {
-                              max-width: 218px;
-                            }
-                            @media (min-width: 1314.98px) and (max-width: 1359.98px) {
-                              max-width: 210px;
-                            }
+                            // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                            //   max-width: 218px;
+                            // }
+                            // @media (min-width: 1199.98px) and (max-width: 1359.98px) {
+                            //   max-width: 210px;
+                            // }
                           }
 
                           &#I_am__c,
@@ -322,14 +324,16 @@ body.spz-3001 {
                           span {
                             color: var(--primary-neutrals-n-1, #0d122e);
                             font-size: 10px !important;
-                            font-family: $eptura-font;
+                            // font-family: $eptura-font;
                             font-style: normal;
                             font-weight: 300;
                             line-height: 16px; /* 160% */
 
                             a {
+                              // font-family: $eptura-font;
                               padding: 0;
                               color: #1b4bc5;
+                              // font-weight: 500;
                               &:hover {
                                 color: #0d122e;
                               }
@@ -338,7 +342,7 @@ body.spz-3001 {
                         }
 
                         .mktoCheckboxList {
-                          margin-top: 7px;
+                          margin-top: 3px;
                           cursor: pointer;
                           display: inline-block;
                           position: relative;
@@ -356,11 +360,12 @@ body.spz-3001 {
                           label {
                             font-family: $eptura-font !important;
                             color: var(--primary-neutrals-n-1, #0d122e);
-                            font-size: 14px !important;
+                            font-size: 12px !important;
                             font-style: normal !important;
                             font-weight: 300 !important;
-                            line-height: 20px !important; /* 142.857% */
+                            line-height: 18px !important; /* 142.857% */
                             margin-left: 19px;
+                            letter-spacing: -0.1px;
                             cursor: pointer;
                             &:before {
                               content: "";
@@ -436,10 +441,14 @@ body.spz-3001 {
                       &[spz_fname="NumberOfEmployees"] {
                         .mktoFieldWrap {
                           @media (min-width: 767.98px) {
-                            max-width: 224px;
+                            max-width: calc(100% - 10px);
                             float: right;
+
+                            .mktoField {
+                              max-width: 100% !important;
+                            }
                           }
-                          @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                          @media (min-width: 767.98px) and (max-width: 1199.98px) {
                             max-width: 218px;
                           }
                         }
@@ -538,10 +547,13 @@ body.spz-3001 {
                         &[spz_fname="Company"] {
                           .mktoFieldWrap {
                             @media (min-width: 767.98px) {
-                              max-width: 224px;
+                              max-width: calc(100% - 10px);
                               float: right;
+                              .mktoField {
+                                max-width: 100% !important;
+                              }
                             }
-                            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                            @media (min-width: 767.98px) and (max-width: 1199.98px) {
                               max-width: 218px;
                             }
                           }
@@ -632,6 +644,21 @@ body.spz-3001 {
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Page specific CSS
+  &.ppc-eptura {
+    .body-wrapper {
+      #hero {
+        #HeroText {
+          > p {
+            @media (min-width: 1400px) {
+              min-width: 607px;
             }
           }
         }
