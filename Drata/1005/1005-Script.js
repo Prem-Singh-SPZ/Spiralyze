@@ -1,6 +1,7 @@
 (function () {
   function loadTest() {
     // Load Hubspot libs
+    document.body.classList.add('spz-1005');
     const hubSpotJS = document.createElement('script');
     hubSpotJS.src = '//js.hsforms.net/forms/embed/v2.js';
     hubSpotJS.type = 'text/javascript';
@@ -8,16 +9,15 @@
     document.head.appendChild(hubSpotJS);
 
     document.body.insertAdjacentHTML("afterbegin", pageContent());
-    document.body.classList.add('spz-1005');
 
     hubSpotJS.onload = function () {
       appendHubspotScript();
     }
 
     const formInt = setInterval(() => {
-      if (document.querySelectorAll('.hbspt-form form').length > 0) {
+      if (document.querySelectorAll('.hbspt-form form').length > 0 && document.querySelectorAll('.hs-form').length == 2) {
         clearInterval(formInt);
-
+        document.body.classList.add('spz-1005');
 
         document.querySelector('.form-wrapper-spz').style.opacity = 1;
         // document.querySelector('#__next > main').remove();
@@ -33,8 +33,8 @@
         // document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
 
         // Set button label
-        document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
-        document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
+        // document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
+        // document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
           const err = setInterval(() => {
@@ -57,7 +57,6 @@
 
         // removeStyleTags();
 
-        document.body.classList.add('spz-1005');
       }
     }, 100);
 
@@ -236,11 +235,12 @@
   urlCheck(url);
   function urlCheck(url) {
     let testURL = '';
+
     if (window.location.href.indexOf('https://drata.com/demo') > -1) {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
-      if (document.querySelectorAll('.hero-section').length == 0 && document.querySelectorAll('.hs-form').length == 2) {
+      if (document.querySelectorAll('.hero-section').length == 0) {
         loadTest();
       }
     } else {
@@ -337,7 +337,7 @@
   function appendHubspotScript() {
     const script = document.createElement('script');
 
-    script.innerHTML = 'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "429140d2-bd90-4a8b-a561-5d732c9bd514", cssClass: "hs-form-spz", css: "", submitText: "Get a Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
+    script.innerHTML = 'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "429140d2-bd90-4a8b-a561-5d732c9bd514", cssClass: "hs-form-spz", css: "", submitText: "Get Started", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
     if (document.querySelector('.form-wrapper-spz')) {
       document.querySelector('.form-wrapper-spz').appendChild(script);
     }

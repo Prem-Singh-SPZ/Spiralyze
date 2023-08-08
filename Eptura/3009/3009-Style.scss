@@ -1,5 +1,3 @@
-$eptura-font: "Eptura Flexible", Arial, sans-serif;
-
 body.spz-3001 {
   #HeaderScripts.mktoText {
     display: none !important;
@@ -35,7 +33,6 @@ body.spz-3001 {
             }
             .desktopHide {
               @media (max-width: 767.98px) {
-                font-family: $eptura-font;
                 font-size: 12px;
                 line-height: 18px;
                 padding-top: 14px !important;
@@ -74,7 +71,6 @@ body.spz-3001 {
 
               #FooterBottom {
                 li a {
-                  font-family: $eptura-font;
                   color: #d6d7f5;
                   text-transform: capitalize;
                   line-height: 20px;
@@ -99,7 +95,7 @@ body.spz-3001 {
 
             a {
               img {
-                width: auto;
+                width: 20px;
                 height: 20px;
                 @media (min-width: 767.98px) and (max-width: 1314.98px) {
                   width: 16px;
@@ -195,27 +191,74 @@ body.spz-3001 {
                 margin: auto;
               }
 
-              #HeroFormTitleText h6 {
-                color: var(--primary-neutrals-n-1, #0d122e);
-                font-family: $eptura-font;
-                text-align: center;
-                font-size: 26px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 34px; /* 130.769% */
-                white-space: nowrap;
-                letter-spacing: initial;
-                margin: -4px -6px 24px 0;
-                span {
-                  color: var(--accents-a-5, #904ab0);
-                }
+              #HeroFormTitleText {
+                h6 {
+                  color: var(--primary-neutrals-n-1, #0d122e);
+                  text-align: center;
+                  font-size: 26px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 34px; /* 130.769% */
+                  white-space: nowrap;
+                  letter-spacing: initial;
+                  margin: -4px -6px 24px 0;
+                  span {
+                    color: var(--accents-a-5, #904ab0);
+                  }
 
-                @media (max-width: 767.98px) {
-                  white-space: normal;
-                  max-width: 244px;
-                  margin: auto;
-                  margin-bottom: 20px;
+                  @media (max-width: 767.98px) {
+                    white-space: normal;
+                    max-width: 244px;
+                    margin: auto;
+                    margin-bottom: 20px;
+                  }
                 }
+                //3009 Review summary CSS starts
+                .spz-review-summary {
+                  display: flex;
+                  align-items: center;
+                  justify-content: center;
+
+                  .capterra-review-summary,
+                  .g2-review-summary {
+                    display: flex;
+                    align-items: center;
+                    .capterra-logo {
+                      width: 24px;
+                      height: auto;
+                    }
+                    .reviews {
+                      width: 88px;
+                      height: auto;
+                      margin: 0 6px;
+                      @media (max-width: 767.98px) {
+                        display: none;
+                      }
+                    }
+
+                    .g2-review {
+                      color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+                      font-size: 12px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 18px;
+                      white-space: nowrap;
+                      span {
+                        font-weight: 500;
+                      }
+                    }
+                  }
+
+                  .capterra-review-summary {
+                    height: 26px;
+                    padding-right: 20px;
+                    border-right: 1px solid #d6d7f5;
+                  }
+                  .g2-review-summary {
+                    padding-left: 20px;
+                  }
+                }
+                //3009 Review summary CSS ends
               }
 
               #HeroForm {
@@ -249,7 +292,6 @@ body.spz-3001 {
                           ) !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
-                          font-family: $eptura-font;
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
@@ -275,7 +317,6 @@ body.spz-3001 {
                           ) !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
-                          font-family: $eptura-font;
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
@@ -322,7 +363,6 @@ body.spz-3001 {
                           span {
                             color: var(--primary-neutrals-n-1, #0d122e);
                             font-size: 10px !important;
-                            font-family: $eptura-font;
                             font-style: normal;
                             font-weight: 300;
                             line-height: 16px; /* 160% */
@@ -354,7 +394,6 @@ body.spz-3001 {
                           }
 
                           label {
-                            font-family: $eptura-font !important;
                             color: var(--primary-neutrals-n-1, #0d122e);
                             font-size: 14px !important;
                             font-style: normal !important;
@@ -451,7 +490,6 @@ body.spz-3001 {
                             top: -8px;
                             left: 11px;
                             padding: 0 5px !important;
-                            font-family: $eptura-font;
                             color: var(--accents-a-5, #904ab0) !important;
                             font-size: 13px !important;
                             line-height: 18px !important; /* 138.462% */
@@ -468,7 +506,6 @@ body.spz-3001 {
                           .mktoLabel {
                             top: -8px;
                             left: 11px;
-                            font-family: $eptura-font;
                             padding: 0 5px !important;
                             font-size: 13px !important;
                             line-height: 18px !important; /* 138.462% */
@@ -505,7 +542,6 @@ body.spz-3001 {
                           --primary-neutrals-n-2,
                           rgba(13, 18, 46, 0.8)
                         );
-                        font-family: $eptura-font;
                         text-overflow: ellipsis;
                         font-size: 16px;
                         font-style: normal;
@@ -575,7 +611,6 @@ body.spz-3001 {
                         ) !important;
                         color: var(--primary-neutrals-w, #fff) !important;
                         text-align: center;
-                        font-family: $eptura-font;
                         font-size: 16px !important;
                         font-style: normal;
                         font-weight: 500;
@@ -584,13 +619,12 @@ body.spz-3001 {
 
                         &:hover,
                         &:focus {
+                          transform: translate(0, -1px);
+
                           background: var(
                             --interactive-colors-a-3,
                             #456ed6
                           ) !important;
-                        }
-                        &:focus {
-                          transform: translate(0, 1px);
                         }
 
                         @media (max-width: 767.98px) {
@@ -611,7 +645,6 @@ body.spz-3001 {
                         text-align: center;
                         em {
                           color: var(--primary-neutrals-n-1, #0d122e);
-                          font-family: $eptura-font;
                           font-size: 14px;
                           font-style: normal;
                           font-weight: 300;
