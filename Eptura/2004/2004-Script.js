@@ -34,6 +34,10 @@
                 document.querySelector('#twocol_form .col-md.order-1.order-md-2').classList.add('show-modal');
                 this.document.body.classList.add('modal-open');
             }
+            if (e.target.classList.contains("close-modal")) {
+                document.querySelector('#twocol_form .col-md.order-1.order-md-2').classList.remove('show-modal');
+                this.document.body.classList.remove('modal-open');
+            }
         });
         document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
         );
@@ -46,7 +50,7 @@
         document.querySelector('#HeroBtn .btn.btn-primary').removeAttribute('target');
         document.querySelector('#HeroBtn .btn.btn-primary').classList.add('spz-trigger-modal');
 
-        document.querySelector('#twocol_form .lpContentsItem.formSpan').insertAdjacentHTML('afterbegin', '<div class="form-close"><a href="javascript:void(0)" id="close-modal"></a></div><div class="spz-form-title"><h6>Contact us <span>today</span></h6></div>');
+        document.querySelector('#twocol_form .lpContentsItem.formSpan').insertAdjacentHTML('afterbegin', '<div class="form-close"><a href="javascript:void(0)" class="close-modal"></a></div><div class="spz-form-title"><h6>Contact us <span>today</span></h6></div>');
 
     }
 

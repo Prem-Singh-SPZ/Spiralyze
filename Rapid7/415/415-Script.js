@@ -28,16 +28,7 @@ const caseStudies = `<section class="multi-feature-card-block__carousel" data-bl
     </div>
     <div class="grid-x grid-padding-x">
         <div class="small-12 medium-10 medium-offset-1 cell">
-            <div class="multi-feature-card-block__carousel-slider" data-slider-id="mfcb-slider0"> <a href="/customers/acme-brick/" class="card__standard w-image" data-card-height="large" style="
-              background-image: url('https://www.rapid7.com/globalassets/_images/customers/acme_brick_spring.jpg');
-            " data-element-block="Multi-Feature Card Block" data-element-location="body" data-element-label="/customers/acme-brick/">
-                    <div class="inner-content">
-                        <div class="inner-content__txt">
-                            <h4>Acme Brick</h4> <span class="card-separator"></span>
-                            <div class="subtext">Manufacturing</div>
-                        </div> <span class="btn-tertiary button smBtn">Read Story</span>
-                    </div>
-                </a> <a class="card__standard w-image" data-card-height="large" href="/customers/alpina-group/" style="
+            <div class="multi-feature-card-block__carousel-slider" data-slider-id="mfcb-slider0"> <a class="card__standard w-image" data-card-height="large" href="/customers/alpina-group/" style="
               background-image: url('https://www.rapid7.com/globalassets/_images/customers/voogd-and-voogd-verzekeringen-bg.jpg');
             " data-element-block="Multi-Feature Card Block" data-element-location="body" data-element-label="/customers/alpina-group/">
                     <div class="inner-content">
@@ -82,7 +73,16 @@ const caseStudies = `<section class="multi-feature-card-block__carousel" data-bl
                             <div class="subtext">Healthcare</div>
                         </div> <span class="btn-tertiary button smBtn">Read Story</span>
                     </div>
-                </a> </div>
+                </a> <a href="/customers/acme-brick/" class="card__standard w-image" data-card-height="large" style="
+                background-image: url('https://www.rapid7.com/globalassets/_images/customers/acme_brick_spring.jpg');
+              " data-element-block="Multi-Feature Card Block" data-element-location="body" data-element-label="/customers/acme-brick/">
+                      <div class="inner-content">
+                          <div class="inner-content__txt">
+                              <h4>Acme Brick</h4> <span class="card-separator"></span>
+                              <div class="subtext">Manufacturing</div>
+                          </div> <span class="btn-tertiary button smBtn">Read Story</span>
+                      </div>
+                  </a></div>
         </div>
     </div>
     <div class="grid-x grid-padding-x grid-padding-y text-center block-cta">

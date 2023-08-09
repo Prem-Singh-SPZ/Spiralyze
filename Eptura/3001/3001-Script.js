@@ -169,23 +169,27 @@
 
             //URL specific image updates
             if (window.location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visitors') > -1) {
+                document.querySelector('#nav #NavLogo > a').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_1.webp" alt="Proxyclick" class="logo-img">`;
                 document.querySelector('#hero #HeroText img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/proxyclick-ui.webp');
                 document.querySelector('#hero #HeroText img').setAttribute('alt', 'Simplify visitor check-in');
                 document.body.classList.add('ppc-proxyclick');
             }
 
             else if (window.location.href.indexOf('ppc-condeco-make-your-flexible-office-work-better') > -1) {
+                document.querySelector('#nav #NavLogo > a').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_2.webp" alt="Condeco" class="logo-img">`;
                 document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/condeco-ui.webp');
                 document.querySelector('#hero #HeroText img').setAttribute('alt', 'Make hybrid work, work');
                 document.body.classList.add('ppc-condeco');
             }
 
             else if (window.location.href.indexOf('ppc-archibus-maintenance-software') > -1) {
+                document.querySelector('#nav #NavLogo > a').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_3.webp" alt="Archibus" class="logo-img">`;
                 document.querySelector('#hero #HeroText').insertAdjacentHTML('beforeend', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/archibus-ui.webp" alt="optimize your maintenance operation" width= "488px"
                 height="260px">`);
                 document.body.classList.add('ppc-archibus');
             }
             else if (window.location.href.indexOf('ppc-eptura') > -1) {
+                document.querySelector('#nav #NavLogo > a').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`;
                 document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
                 document.querySelector('#hero #HeroText img').setAttribute('alt', 'one platform to bring together');
                 document.body.classList.add('ppc-eptura');
