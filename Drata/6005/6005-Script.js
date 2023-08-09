@@ -14,7 +14,7 @@
             }, 50);
 
             waitForElm('.hero-section + .review-section').then(function () {
-                document.querySelector('.review-slider .avg-star-rating').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/frame.svg');
+                document.querySelector('.review-slider .avg-star-rating').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1691579562/drata/6005/stars.svg');
                 document.querySelectorAll('.review-slider .star-rating').forEach(function (elem, i) {
                     elem.setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/frame.svg');
                 })

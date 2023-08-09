@@ -1,6 +1,9 @@
 body.spz-3001 #HeaderScripts.mktoText {
   display: none !important;
 }
+body.spz-3001 .body-wrapper::before {
+  display: none;
+}
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-3001 .body-wrapper > footer .page_padding {
     padding: 0 40px;
@@ -82,12 +85,8 @@ body.spz-3001 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links {
 }
 body.spz-3001 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links #FooterBottom li a {
   font-family: "Eptura Flexible", Arial, sans-serif;
-  color: #d6d7f5;
   text-transform: capitalize;
   line-height: 20px;
-}
-body.spz-3001 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links #FooterBottom li a:hover {
-  color: #ffffff;
 }
 @media (max-width: 767.98px) {
   body.spz-3001 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links #FooterBottom li a {
@@ -143,19 +142,27 @@ body.spz-3001 .body-wrapper #nav.sticky-top {
 }
 body.spz-3001 .body-wrapper #nav.sticky-top.nav-scrolled {
   background: transparent !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  -webkit-filter: none;
+          filter: none;
 }
 body.spz-3001 .body-wrapper #nav nav {
   margin-top: 16px;
 }
-body.spz-3001 .body-wrapper #nav nav #NavLogo #logo-img {
+body.spz-3001 .body-wrapper #nav nav #NavLogo .logo-img {
   max-width: 104px;
+}
+body.spz-3001 .body-wrapper #nav nav #NavLogo #logo-img {
+  display: none !important;
 }
 body.spz-3001 .body-wrapper #hero .hero_container {
   padding-top: 40px !important;
-  padding-bottom: 30px !important;
+  padding-bottom: 78px !important;
   overflow: hidden;
+}
+@media (max-width: 1199.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container {
+    padding-bottom: 48px !important;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container {
@@ -167,10 +174,34 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row {
   -webkit-box-direction: reverse;
       -ms-flex-direction: row-reverse;
           flex-direction: row-reverse;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 0 !important;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 28px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 24px !important;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroText {
     padding: 0 10vw;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroText {
+    max-width: 658px;
+    margin: auto;
   }
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroText img[imagepreview=false] {
@@ -184,10 +215,24 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroText img[imageprev
     height: 306px;
   }
 }
+@media (max-width: 767.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroText img[imagepreview=false] {
+    height: 295px;
+    width: 526px;
+    margin-top: -2px;
+    margin-left: -1px;
+  }
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol {
+    padding-bottom: 22px !important;
+  }
+}
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol {
     padding-top: 5px;
     padding-bottom: 8px !important;
+    margin-right: 6px;
   }
 }
 @media (max-width: 767.98px) {
@@ -203,16 +248,16 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   background: var(--primary-neutrals-w, #fff);
   -webkit-box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
-  margin-top: 7px;
 }
 @media (min-width: 767.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
-    min-width: 434px;
+    min-width: 426px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
     margin: auto;
+    min-width: 580px;
   }
 }
 @media (max-width: 767.98px) {
@@ -269,7 +314,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 44px);
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   border-radius: 4px;
@@ -295,7 +340,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
     max-width: calc(100% - 10px);
   }
 }
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country {
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
   outline: transparent;
   -webkit-appearance: none !important;
      -moz-appearance: none !important;
@@ -319,7 +364,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   margin: 0 !important;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
-  color: var(--primary-neutrals-n-1, #0d122e);
+  color: #848995;
   font-size: 10px !important;
   font-style: normal;
   font-weight: 300;
@@ -382,18 +427,21 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
   margin-top: 48px !important;
 }
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+  font-size: 14px;
+}
 @media (min-width: 767.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap {
     max-width: calc(100% - 10px);
     float: right;
   }
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap .mktoField {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap .mktoField {
     max-width: 100% !important;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap {
-    max-width: 218px;
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap {
+    max-width: calc(100% - 10px);
   }
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
@@ -531,6 +579,11 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   font-weight: 300;
   line-height: 20px; /* 142.857% */
 }
+@media (max-width: 767.98px) {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+    padding: 0;
+  }
+}
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
   color: var(--interactive-colors-a-1, #1b4bc5);
   font-weight: 500;
@@ -539,8 +592,115 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
   color: #0d122e;
 }
+body.spz-3001.ppc-condeco .body-wrapper #nav nav #NavLogo .logo-img {
+  max-width: 113px;
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001.ppc-condeco .body-wrapper #hero .hero_container {
+    padding-top: 42px !important;
+    padding-bottom: 92px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3001.ppc-condeco .body-wrapper #hero .hero_container {
+    padding-bottom: 38px !important;
+  }
+}
+body.spz-3001.ppc-condeco .body-wrapper #hero .hero_container > .row #HeroText img[imagepreview=false] {
+  width: 531.29px;
+  height: 270px;
+}
+body.spz-3001.ppc-condeco .body-wrapper #hero .hero_container > .row #HeroFormCol {
+  padding-bottom: 8px !important;
+}
+@media (max-width: 1199.98px) {
+  body.spz-3001.ppc-condeco .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 44px !important;
+  }
+}
+body.spz-3001.ppc-archibus .body-wrapper #nav nav #NavLogo .logo-img {
+  max-width: 82.137px;
+  height: 36px;
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container {
+    padding-bottom: 100px !important;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroText > h6 {
+    font-family: "Eptura Flexible", Arial, sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.2px; /* 120% */
+  }
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroText > h1 {
+    color: #fff;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 44px; /* 122.222% */
+    letter-spacing: 1px;
+  }
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroText > p {
+    color: #fff;
+    font-size: 20px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 28px;
+  }
+}
+body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroText > img {
+  width: 506.769px;
+  height: 270px;
+  margin-top: 24px;
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroFormCol {
+    padding-bottom: 0px !important;
+  }
+}
+body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
+  padding-top: 64px;
+}
+@media (max-width: 767.98px) {
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
+    padding-top: 40px !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-3001.ppc-archibus .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 52px !important;
+  }
+}
 @media (min-width: 1400px) {
   body.spz-3001.ppc-eptura .body-wrapper #hero #HeroText > p {
     min-width: 607px;
+  }
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001.ppc-eptura .body-wrapper #hero .hero_container {
+    padding-bottom: 92px !important;
+  }
+}
+body.spz-3001.ppc-eptura .body-wrapper #hero .hero_container > .row #HeroText img[imagepreview=false] {
+  width: 488px;
+  height: 230px;
+  margin-top: 27px;
+}
+@media (min-width: 1199.98px) {
+  body.spz-3001.ppc-eptura .body-wrapper #hero .hero_container > .row #HeroFormCol {
+    padding-bottom: 8px !important;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-3001.ppc-eptura .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 44px !important;
+  }
+}
+@media (min-width: 1399.98px) {
+  body.spz-3001.ppc-eptura .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
+    min-width: 652px;
   }
 }

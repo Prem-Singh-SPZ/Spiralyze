@@ -6,6 +6,9 @@ body.spz-3001 {
   }
 
   .body-wrapper {
+    &::before {
+      display: none;
+    }
     //Hiding half of the footer here
     > footer {
       .page_padding {
@@ -75,13 +78,13 @@ body.spz-3001 {
               #FooterBottom {
                 li a {
                   font-family: $eptura-font;
-                  color: #d6d7f5;
+                  // color: #d6d7f5;
                   text-transform: capitalize;
                   line-height: 20px;
 
-                  &:hover {
-                    color: #ffffff;
-                  }
+                  // &:hover {
+                  //   color: #ffffff;
+                  // }
                   @media (max-width: 767.98px) {
                     font-size: 12px;
                     line-height: 18px;
@@ -134,15 +137,18 @@ body.spz-3001 {
         position: relative !important;
         &.nav-scrolled {
           background: transparent !important;
-          box-shadow: none;
+          filter: none;
         }
       }
       nav {
         margin-top: 16px;
 
         #NavLogo {
-          #logo-img {
+          .logo-img {
             max-width: 104px;
+          }
+          #logo-img {
+            display: none !important;
           }
         }
       }
@@ -152,18 +158,39 @@ body.spz-3001 {
     #hero {
       .hero_container {
         padding-top: 40px !important;
-        padding-bottom: 30px !important;
+        padding-bottom: 78px !important;
         overflow: hidden;
+        @media (max-width: 1199.98px) {
+          padding-bottom: 48px !important;
+        }
         @media (max-width: 767.98px) {
           padding: 0;
         }
         > .row {
           flex-direction: row-reverse;
+          align-items: center;
+
+          > .col-md.pb-5 {
+            @media (min-width: 1199.98px) {
+              padding-bottom: 0 !important;
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              padding-bottom: 28px !important;
+            }
+            @media (max-width: 767.98px) {
+              padding-bottom: 24px !important;
+            }
+          }
 
           #HeroText {
             @media (max-width: 767.98px) {
               padding: 0 10vw;
             }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              max-width: 658px;
+              margin: auto;
+            }
+
             img[imagepreview="false"] {
               width: 543.455px;
               height: 305.019px;
@@ -172,13 +199,23 @@ body.spz-3001 {
                 width: 544px;
                 height: 306px;
               }
+              @media (max-width: 767.98px) {
+                height: 295px;
+                width: 526px;
+                margin-top: -2px;
+                margin-left: -1px;
+              }
             }
           }
 
           #HeroFormCol {
+            @media (min-width: 1199.98px) {
+              padding-bottom: 22px !important;
+            }
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               padding-top: 5px;
               padding-bottom: 8px !important;
+              margin-right: 6px;
             }
             @media (max-width: 767.98px) {
               padding: 0 !important;
@@ -191,13 +228,14 @@ body.spz-3001 {
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
               box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
-              margin-top: 7px;
 
               @media (min-width: 767.98px) {
-                min-width: 434px;
+                min-width: 426px;
               }
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 margin: auto;
+                min-width: 580px;
+                // margin-left: -6px;
               }
               @media (max-width: 767.98px) {
                 width: 360px;
@@ -270,7 +308,7 @@ body.spz-3001 {
                           padding: 0 !important;
                           transition: all 0.3s ease-in-out;
                           pointer-events: none;
-                          max-width: calc(100% - 40px);
+                          max-width: calc(100% - 44px);
                         }
 
                         .mktoField:not([type="checkbox"]) {
@@ -307,7 +345,8 @@ body.spz-3001 {
                           }
 
                           &#I_am__c,
-                          &#Country {
+                          &#Country,
+                          &#Solution_Type__c {
                             outline: transparent;
                             appearance: none !important;
                             background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
@@ -331,7 +370,7 @@ body.spz-3001 {
                         .mktoHtmlText.mktoHasWidth {
                           margin: 0 !important;
                           span {
-                            color: var(--primary-neutrals-n-1, #0d122e);
+                            color: #848995;
                             font-size: 10px !important;
                             // font-family: $eptura-font;
                             font-style: normal;
@@ -420,7 +459,7 @@ body.spz-3001 {
                             // padding: 0;
                             // text-shadow: none;
                             // color: var(--accents-a-9, #f83a59);
-                            // font-size: 10px;
+                            font-size: 14px;
                             // font-style: normal;
                             // font-weight: 300;
                             // line-height: 14px; /* 142.857% */
@@ -447,7 +486,8 @@ body.spz-3001 {
                       &[spz_fname="Phone"],
                       &[spz_fname="Country"],
                       &[spz_fname="I_am__c"],
-                      &[spz_fname="NumberOfEmployees"] {
+                      &[spz_fname="NumberOfEmployees"],
+                      &[spz_fname="Solution_Type__c"] {
                         .mktoFieldWrap {
                           @media (min-width: 767.98px) {
                             max-width: calc(100% - 10px);
@@ -458,7 +498,7 @@ body.spz-3001 {
                             }
                           }
                           @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                            max-width: 218px;
+                            max-width: calc(100% - 10px);
                           }
                         }
                       }
@@ -637,6 +677,9 @@ body.spz-3001 {
                           font-style: normal;
                           font-weight: 300;
                           line-height: 20px; /* 142.857% */
+                          @media (max-width: 767.98px) {
+                            padding: 0;
+                          }
 
                           a {
                             color: var(--interactive-colors-a-1, #1b4bc5);
@@ -661,6 +704,117 @@ body.spz-3001 {
   }
 
   //Page specific CSS
+  &.ppc-condeco {
+    .body-wrapper {
+      #nav {
+        nav {
+          #NavLogo {
+            .logo-img {
+              max-width: 113px;
+            }
+          }
+        }
+      }
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-top: 42px !important;
+            padding-bottom: 92px !important;
+          }
+          @media (max-width: 767.98px) {
+            padding-bottom: 38px !important;
+          }
+          > .row {
+            #HeroText img[imagepreview="false"] {
+              width: 531.29px;
+              height: 270px;
+            }
+            #HeroFormCol {
+              padding-bottom: 8px !important;
+            }
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ppc-archibus {
+    .body-wrapper {
+      #nav {
+        nav {
+          #NavLogo {
+            .logo-img {
+              max-width: 82.137px;
+              height: 36px;
+            }
+          }
+        }
+      }
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-bottom: 100px !important;
+          }
+          > .row {
+            #HeroText {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                > h6 {
+                  font-family: $eptura-font;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 19.2px; /* 120% */
+                }
+
+                > h1 {
+                  color: #fff;
+                  font-size: 36px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 44px; /* 122.222% */
+                  letter-spacing: 1px;
+                }
+                > p {
+                  color: #fff;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 28px;
+                }
+              }
+              > img {
+                width: 506.769px;
+                height: 270px;
+                margin-top: 24px;
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 0px !important;
+              }
+              #HeroFormPanel {
+                padding-top: 64px;
+                @media (max-width: 767.98px) {
+                  padding-top: 40px !important;
+                }
+              }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 52px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
   &.ppc-eptura {
     .body-wrapper {
       #hero {
@@ -668,6 +822,41 @@ body.spz-3001 {
           > p {
             @media (min-width: 1400px) {
               min-width: 607px;
+            }
+          }
+        }
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-bottom: 92px !important;
+          }
+          > .row {
+            #HeroText {
+              img[imagepreview="false"] {
+                width: 488px;
+                height: 230px;
+                margin-top: 27px;
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 8px !important;
+              }
+              #HeroFormPanel {
+                // padding-top: 64px;
+                @media (max-width: 767.98px) {
+                  // padding-top: 40px !important;
+                }
+              }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+              }
+              @media (min-width: 1399.98px) {
+                min-width: 652px;
+              }
             }
           }
         }
