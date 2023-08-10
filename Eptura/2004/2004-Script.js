@@ -170,9 +170,9 @@
             if (document.querySelector('[spz_fname="Company"][data-zi-field-enriched="false"]')) {
                 document.querySelector('#mktoForm_1002').classList.add('all-fields');
             }
-             if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
+            if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
                 document.querySelector('#mktoForm_1002').classList.add('all-fields');
-                document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
+                // document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
             }
 
         }, 100);

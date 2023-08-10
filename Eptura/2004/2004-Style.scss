@@ -22,19 +22,23 @@ body.spz-2004 {
           background: rgba(13, 18, 46, 0.7);
           backdrop-filter: blur(4px);
           z-index: 4;
-          align-items: center;
-          justify-content: center;
+          // align-items: center;
+          // justify-content: center;
           display: none !important;
+          overflow-y: auto;
+          align-items: flex-start;
+          justify-content: flex-start;
+          padding-top: 3rem;
           @media (max-width: 767.95px) {
-            align-items: flex-start;
-            justify-content: flex-start;
-            overflow-y: auto;
+            padding-top: 0rem;
+            margin-top: 16px;
           }
           &.show-modal {
             display: flex !important;
           }
 
           #form {
+            margin: auto;
             .MQL__Contact_Us {
               .formSpan {
                 display: flex;
@@ -129,7 +133,10 @@ body.spz-2004 {
                 padding: 0 !important;
                 transition: all 0.3s ease-in-out;
                 pointer-events: none;
-                max-width: calc(100% - 44px);
+                max-width: calc(100% - 58px);
+                @media (max-width: 767.98px) {
+                  max-width: calc(100% - 48px);
+                }
               }
 
               .mktoField:not([type="checkbox"]) {
@@ -300,10 +307,11 @@ body.spz-2004 {
               }
             }
             &[spz_fname="LastName"],
-            &[spz_fname="Title"],
-            &[spz_fname="Country"],
-            &[spz_fname="I_am__c"],
-            &[spz_fname="NumberOfEmployees"] {
+            &[spz_fname="Phone"],
+            // &[spz_fname="Country"],
+            &[spz_fname="I_am__c"]
+            // &[spz_fname="NumberOfEmployees"]
+            {
               .mktoFieldWrap {
                 @media (min-width: 767.98px) {
                   max-width: calc(100% - 10px);
@@ -434,16 +442,16 @@ body.spz-2004 {
               &[spz_fname="Solution_Type__c"] {
                 .mktoFieldWrap {
                   @media (min-width: 767.98px) {
-                    max-width: calc(100% - 10px);
-                    float: right;
-
+                    // max-width: calc(100% - 10px);
+                    // float: right;
+                    max-width: 100%;
                     .mktoField {
                       max-width: 100% !important;
                     }
                   }
-                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                    max-width: calc(100% - 10px);
-                  }
+                  // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  //   max-width: calc(100% - 10px);
+                  // }
                 }
               }
             }
@@ -523,18 +531,22 @@ body.spz-2004 {
       }
 
       //2004specific Css starts here
-      .mktoFormRow .mktoFormCol {
+      .mktoFormRow .mktoFormCol[class] {
         &[spz_fname="FirstName"],
         &[spz_fname="LastName"] {
           display: block !important;
         }
-        &[spz_fname="Solution_Type__c"] {
-          @media (min-width: 767.98px) {
-            width: 50% !important;
-          }
-        }
+        // &[spz_fname="Solution_Type__c"] {
+        //   @media (min-width: 767.98px) {
+        //     width: 50% !important;
+        //   }
+        // }
+        &[spz_fname="Solution_Type__c"],
         &[spz_fname="NumberOfEmployees"] {
-          max-width: 100%;
+          .mktoFieldWrap[class]
+            .mktoField:not([type="checkbox"]):not(#Lead_Notes__c) {
+            max-width: 100%;
+          }
         }
       }
     }
