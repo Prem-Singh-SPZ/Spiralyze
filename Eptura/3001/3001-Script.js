@@ -156,6 +156,9 @@
             else if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
                 document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
             }
+            // if (document.querySelector('#Solution_Type__c') && document.querySelector('#Solution_Type__c').closest('.mktoFormRow[data-zi-field-enriched="false"]')) {
+            //     document.querySelector('#Solution_Type__c').closest('.mktoFormCol').removeAttribute('spz_fname');
+            // }
 
         }, 100);
 

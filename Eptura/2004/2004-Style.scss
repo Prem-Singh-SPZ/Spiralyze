@@ -40,6 +40,9 @@ body.spz-2004 {
           #form {
             margin: auto;
             .MQL__Contact_Us {
+              @media (max-width: 767.95px) {
+                margin-left: -15px;
+              }
               .formSpan {
                 display: flex;
                 width: 568px;
@@ -75,6 +78,7 @@ body.spz-2004 {
                 }
 
                 .spz-form-title {
+                  margin-top: 36px;
                   h6 {
                     color: var(--primary-neutrals-n-1, #0d122e);
                     text-align: center;
@@ -83,6 +87,7 @@ body.spz-2004 {
                     font-style: normal;
                     font-weight: 300;
                     line-height: 44px; /* 122.222% */
+                    margin-bottom: 11px !important;
                     span {
                       color: #904ab0;
                     }
@@ -219,6 +224,7 @@ body.spz-2004 {
                 display: inline-block;
                 position: relative;
                 padding-left: 25px;
+                margin-bottom: 10px;
                 .mktoField {
                   border: 1px solid #d6d7f5;
                   height: 16px !important;
@@ -393,8 +399,8 @@ body.spz-2004 {
               font-size: 16px;
               font-style: normal;
               font-weight: 300;
-              line-height: 24px;
-              margin-bottom: 18px;
+              line-height: 28px;
+              margin-bottom: 22px;
               display: inline-block;
               margin-top: 2px;
               transition: all 0.3s ease;
@@ -466,7 +472,7 @@ body.spz-2004 {
               display: flex;
               width: 140px !important;
               height: 50px !important;
-              padding: 0px 32px !important;
+              padding: 0px 8px !important;
               justify-content: center;
               align-items: center;
               border-radius: 3px !important;
@@ -477,8 +483,9 @@ body.spz-2004 {
               font-size: 16px !important;
               font-style: normal;
               font-weight: 500;
-              line-height: 24px !important; /* 150% */
-              margin-top: 22px !important;
+              line-height: 22px !important; /* 150% */
+              margin-top: 20px !important;
+              white-space: nowrap;
 
               &:hover,
               &:focus {
