@@ -25,7 +25,6 @@
         window.addEventListener("click", function (e) {
             if (e.target.classList.contains("show-comment-dynamic")) {
                 e.target.parentElement.classList.add('spz-hidden');
-                this.document.querySelector('.mktoFormCol.spz-hidden').classList.remove('spz-hidden');
                 this.document.querySelector('#Lead_Notes__c').focus();
             }
             if (e.target.classList.contains("mktoButton")) {
@@ -43,11 +42,6 @@
         //Remove first options from dropdown
         document.querySelector('#Country option:first-child').textContent = '';
         document.querySelector('#I_am__c option:first-child').textContent = '';
-        waitForElm('#Solution_Type__c').then(function () {
-            document.querySelector('#Solution_Type__c option:first-child').textContent = '';
-            let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
-            document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
-        });
 
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
             document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
@@ -56,8 +50,7 @@
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
         document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
 
-        document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').classList.add('spz-hidden');
-        document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic"> <span>+ </span>Comment</a></div>`);
+        document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic">+ Comment</a></div>`);
 
         document.querySelector('#I_am__c').addEventListener('change', function () {
             dropdownFunctionality(this.value);
@@ -77,39 +70,39 @@
     function dropdownFunctionality(val) {
         let setBuffer = setInterval(() => {
             if (document.querySelector('#Lead_Notes__c')) {
-                if (!document.querySelector('.spz-anchor').classList.contains('spz-hidden')) {
-                    document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').classList.add('spz-hidden');
-                }
-
                 if (document.querySelector('.spz-anchor').classList.contains('spz-hidden')) {
                     document.querySelector('.spz-anchor').classList.remove('spz-hidden');
-                    document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').classList.add('spz-hidden');
                 }
-                // if (document.querySelectorAll('.show-comment-dynamic').length == 0) {
-                //     document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic"> <span>+ </span>Comment</a></div>`);
-                // }
             }
             else {
                 document.querySelector('.spz-anchor').classList.add('spz-hidden');
             }
 
             if (val == 'Other' || val == 'A current client' || val == 'A current Partner') {
-                document.querySelector('.show-comment-dynamic').innerHTML = '<span>+ </span>Please let us know how we may assist you';
+                document.querySelector('.show-comment-dynamic').textContent = '+ Please let us know how we may assist you';
             }
             else {
-                document.querySelector('.show-comment-dynamic').innerHTML = '<span>+ </span>Comment';
+                document.querySelector('.show-comment-dynamic').textContent = '+ Comment';
             }
             focusFields();
-        }, 50);
+        }, 5);
 
         setTimeout(() => {
             clearInterval(setBuffer);
-        }, 100);
+        }, 50);
+
+        waitForElm('#Solution_Type__c').then(function () {
+            document.querySelector('#Solution_Type__c option:first-child').textContent = '';
+            let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
+            document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
+        });
     }
 
     // On input focus add class on closest parent field class
     function focusFields() {
         document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+
+            blockChar();
 
             el.addEventListener('focus', function () {
                 el.closest('.mktoFormCol').classList.add('field-focus');
@@ -121,6 +114,10 @@
 
             // add event listeners to the input element
             el.addEventListener('keypress', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('change', () => {
                 checkError(el);
             });
 
@@ -142,7 +139,7 @@
             } else {
                 elem.closest('.mktoFormCol').classList.remove('field-error');
             }
-            if (elem && elem.value) {
+            if (elem && elem.value && (elem.value != '')) {
                 // console.log(elem.value)
                 elem.closest('.mktoFormCol').classList.add('input-filled');
                 // elem.closest('.mktoFormCol').classList.remove('field-error');
@@ -152,6 +149,7 @@
             }
 
 
+
             if (document.querySelector('[spz_fname="Company"][data-zi-field-enriched="false"]')) {
                 document.querySelector('#mktoForm_1225').classList.add('all-fields');
             }
@@ -159,11 +157,28 @@
                 document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
             }
 
-        }, 10);
+        }, 100);
 
         setTimeout(() => {
             clearInterval(timeBuffer);
         }, 1000);
+    }
+
+    //Block "e" from number of employees field
+    function blockChar() {
+        var inputBox = document.getElementById("NumberOfEmployees");
+
+        var invalidChars = ["e",];
+
+        inputBox.addEventListener("input", function () {
+            this.value = this.value.replace(/[e\+\-]/gi, "");
+        });
+
+        inputBox.addEventListener("keydown", function (e) {
+            if (invalidChars.includes(e.key)) {
+                e.preventDefault();
+            }
+        });
     }
 
     //Hero image update
@@ -221,20 +236,12 @@
                 document.body.classList.add('ppc-archibus');
             }
             else if (window.location.href.indexOf('ppc-eptura') > -1) {
-                document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
+                document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
 
                 document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
                 document.querySelector('#hero #HeroText img').setAttribute('alt', 'one platform to bring together');
                 document.body.classList.add('ppc-eptura');
             }
-
-            // let logoUpdate = setInterval(() => {    
-            //     document.querySelector('#nav #NavLogo #logo-img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_1.webp');
-            // }, 20);
-
-            // setTimeout(() => {
-            //     clearInterval(logoUpdate);
-            // }, 500);
         });
     }
 

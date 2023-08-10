@@ -472,13 +472,16 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #f83a59 !important;
 }
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor {
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor .show-comment-dynamic {
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) + .mktoFieldDescriptor.mktoFormCol {
+  display: none !important;
+}
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
   overflow: hidden;
   color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
   font-family: "Eptura Flexible", Arial, sans-serif;
@@ -490,21 +493,23 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   margin-bottom: 18px;
   display: inline-block;
   margin-top: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor .show-comment-dynamic span {
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
   padding-right: 5px;
 }
 @media (max-width: 767.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor .show-comment-dynamic {
+  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
     padding: 0;
     margin-bottom: 26px;
   }
 }
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor .show-comment-dynamic:hover {
+body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
   color: #904ab0;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
-  display: none !important;
+  display: none;
 }
 @media (min-width: 767.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap {

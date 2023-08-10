@@ -25,6 +25,11 @@ body.spz-2004 {
           align-items: center;
           justify-content: center;
           display: none !important;
+          @media (max-width: 767.95px) {
+            align-items: flex-start;
+            justify-content: flex-start;
+            overflow-y: auto;
+          }
           &.show-modal {
             display: flex !important;
           }
@@ -91,9 +96,16 @@ body.spz-2004 {
             min-height: auto;
             margin: 0 !important;
             padding: 0 !important;
-            &[spz_fname="FirstName"],
-            &[spz_fname="LastName"] {
-              display: block !important;
+            &:first-child {
+              // margin-right: auto;
+            }
+
+            &:nth-child(2) {
+              // .mktoFieldWrap {
+              //   display: flex;
+              //   justify-content: flex-end;
+              //   margin-left: auto;
+              // }
             }
 
             .mktoFieldWrap {
@@ -117,7 +129,7 @@ body.spz-2004 {
                 padding: 0 !important;
                 transition: all 0.3s ease-in-out;
                 pointer-events: none;
-                max-width: calc(100% - 40px);
+                max-width: calc(100% - 44px);
               }
 
               .mktoField:not([type="checkbox"]) {
@@ -129,7 +141,7 @@ body.spz-2004 {
                 color: var(--primary-neutrals-n-1, #0d122e) !important;
                 text-overflow: ellipsis;
                 white-space: nowrap;
-                font-family: $eptura-font;
+                font-family: $eptura-font !important;
                 font-size: 16px !important;
                 font-style: normal;
                 font-weight: 300 !important;
@@ -138,19 +150,20 @@ body.spz-2004 {
 
                 &:not(#Lead_Notes__c) {
                   @media (min-width: 767.98px) {
-                    max-width: 224px;
+                    max-width: calc(100% - 10px);
                   }
                   height: 48px !important;
-                  @media (min-width: 767.98px) and (max-width: 1314.98px) {
-                    max-width: 218px;
-                  }
-                  @media (min-width: 1314.98px) and (max-width: 1359.98px) {
-                    max-width: 210px;
-                  }
+                  // @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  //   max-width: 218px;
+                  // }
+                  // @media (min-width: 1199.98px) and (max-width: 1359.98px) {
+                  //   max-width: 210px;
+                  // }
                 }
 
                 &#I_am__c,
-                &#Country {
+                &#Country,
+                &#Solution_Type__c {
                   outline: transparent;
                   appearance: none !important;
                   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
@@ -174,16 +187,18 @@ body.spz-2004 {
               .mktoHtmlText.mktoHasWidth {
                 margin: 0 !important;
                 span {
-                  color: var(--primary-neutrals-n-1, #0d122e);
+                  color: #848995;
                   font-size: 10px !important;
-                  font-family: $eptura-font;
+                  // font-family: $eptura-font;
                   font-style: normal;
                   font-weight: 300;
                   line-height: 16px; /* 160% */
 
                   a {
+                    // font-family: $eptura-font;
                     padding: 0;
                     color: #1b4bc5;
+                    // font-weight: 500;
                     &:hover {
                       color: #0d122e;
                     }
@@ -192,7 +207,7 @@ body.spz-2004 {
               }
 
               .mktoCheckboxList {
-                margin-top: 7px;
+                margin-top: 3px;
                 cursor: pointer;
                 display: inline-block;
                 position: relative;
@@ -210,11 +225,12 @@ body.spz-2004 {
                 label {
                   font-family: $eptura-font !important;
                   color: var(--primary-neutrals-n-1, #0d122e);
-                  font-size: 14px !important;
+                  font-size: 12px !important;
                   font-style: normal !important;
                   font-weight: 300 !important;
-                  line-height: 20px !important; /* 142.857% */
+                  line-height: 18px !important; /* 142.857% */
                   margin-left: 19px;
+                  letter-spacing: -0.1px;
                   cursor: pointer;
                   &:before {
                     content: "";
@@ -260,7 +276,7 @@ body.spz-2004 {
                   // padding: 0;
                   // text-shadow: none;
                   // color: var(--accents-a-9, #f83a59);
-                  // font-size: 10px;
+                  font-size: 14px;
                   // font-style: normal;
                   // font-weight: 300;
                   // line-height: 14px; /* 142.857% */
@@ -284,17 +300,21 @@ body.spz-2004 {
               }
             }
             &[spz_fname="LastName"],
-            &[spz_fname="Phone"],
+            &[spz_fname="Title"],
             &[spz_fname="Country"],
             &[spz_fname="I_am__c"],
             &[spz_fname="NumberOfEmployees"] {
               .mktoFieldWrap {
                 @media (min-width: 767.98px) {
-                  max-width: 224px;
+                  max-width: calc(100% - 10px);
                   float: right;
+
+                  .mktoField {
+                    max-width: 100% !important;
+                  }
                 }
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
-                  max-width: 218px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  max-width: calc(100% - 10px);
                 }
               }
             }
@@ -349,9 +369,13 @@ body.spz-2004 {
             }
           }
 
-          .spz-anchor {
+          .spz-anchor:not(.spz-hidden) {
             display: flex;
             width: 100%;
+
+            + .mktoFieldDescriptor.mktoFormCol {
+              display: none !important;
+            }
 
             .show-comment-dynamic {
               overflow: hidden;
@@ -365,6 +389,7 @@ body.spz-2004 {
               margin-bottom: 18px;
               display: inline-block;
               margin-top: 2px;
+              transition: all 0.3s ease;
               span {
                 padding-right: 5px;
               }
@@ -379,7 +404,7 @@ body.spz-2004 {
             }
           }
           .spz-hidden {
-            display: none !important;
+            display: none;
           }
         }
 
@@ -389,19 +414,36 @@ body.spz-2004 {
               &[spz_fname="Company"] {
                 .mktoFieldWrap {
                   @media (min-width: 767.98px) {
-                    max-width: 224px;
+                    max-width: calc(100% - 10px);
                     float: right;
+                    .mktoField {
+                      max-width: 100% !important;
+                    }
                   }
-                  @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
                     max-width: 218px;
                   }
                 }
               }
 
-              &[spz_fname="Country"],
               &[spz_fname="NumberOfEmployees"] {
                 .mktoFieldWrap {
                   float: left;
+                }
+              }
+              &[spz_fname="Solution_Type__c"] {
+                .mktoFieldWrap {
+                  @media (min-width: 767.98px) {
+                    max-width: calc(100% - 10px);
+                    float: right;
+
+                    .mktoField {
+                      max-width: 100% !important;
+                    }
+                  }
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    max-width: calc(100% - 10px);
+                  }
                 }
               }
             }
@@ -461,6 +503,9 @@ body.spz-2004 {
                 font-style: normal;
                 font-weight: 300;
                 line-height: 20px; /* 142.857% */
+                @media (max-width: 767.98px) {
+                  padding: 0;
+                }
 
                 a {
                   color: var(--interactive-colors-a-1, #1b4bc5);
@@ -474,6 +519,22 @@ body.spz-2004 {
               }
             }
           }
+        }
+      }
+
+      //2004specific Css starts here
+      .mktoFormRow .mktoFormCol {
+        &[spz_fname="FirstName"],
+        &[spz_fname="LastName"] {
+          display: block !important;
+        }
+        &[spz_fname="Solution_Type__c"] {
+          @media (min-width: 767.98px) {
+            width: 50% !important;
+          }
+        }
+        &[spz_fname="NumberOfEmployees"] {
+          max-width: 100%;
         }
       }
     }

@@ -211,15 +211,19 @@ body.spz-1007 .hero-content .hero-right-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+}
+@media (min-width: 767.98px) {
+  body.spz-1007 .hero-content .hero-right-section {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-flex: 1;
+        -ms-flex-positive: 1;
+            flex-grow: 1;
+  }
 }
 body.spz-1007 .analytics-bg-section {
   width: calc(100% - 480px);
@@ -287,10 +291,12 @@ body.spz-1007 .hero-section {
 }
 @media (max-width: 767.98px) {
   body.spz-1007 .hero-section {
-    min-height: 1120px;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    min-height: 880px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-1007 .hero-section .hero-content {
+    margin: 48px auto;
   }
 }
 body.spz-1007 .hero-section .hero-content .hc-title {
@@ -830,7 +836,7 @@ body.spz-1007 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list labe
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 14px;
   color: #fff;
 }
@@ -838,7 +844,7 @@ body.spz-1007 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list labe
   font-family: "Inter", sans-serif;
   font-style: normal;
   font-weight: 600;
-  font-size: 10px;
+  font-size: 9px;
   line-height: 14px;
   color: #fff;
   word-break: break-word;
@@ -1039,8 +1045,9 @@ body.spz-1007 .hbspt-form .submitted-message p {
     top: calc(80% + 10px);
   }
   body.spz-1007 .form-wrapper-spz .hbspt-form form .hs-error-msgs.inputs-list label {
-    font-size: 11px;
-    line-height: 15px;
+    font-size: 9px;
+    line-height: 14px;
+    font-weight: 500;
   }
   body.spz-1007 .hbspt-form .submitted-message {
     font-size: 20px;
