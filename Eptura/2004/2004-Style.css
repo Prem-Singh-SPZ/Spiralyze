@@ -51,7 +51,7 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
   display: -ms-flexbox;
   display: flex;
   width: 568px;
-  padding: 0px 56px 44px 56px;
+  padding: 36px 56px 42px 56px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -69,13 +69,19 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
 @media (max-width: 767.98px) {
   body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan {
     max-width: 360px;
-    padding: 0px 30px 32px 30px;
+    padding: 32px 30px 32px 30px;
   }
 }
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .form-close {
   position: absolute;
   top: 20px;
   right: 20px;
+}
+@media (max-width: 767.98px) {
+  body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .form-close {
+    top: 12px;
+    right: 12px;
+  }
 }
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .form-close .close-modal {
   display: block;
@@ -86,9 +92,6 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .form-close .close-modal:hover {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691500370/eptura/2004/assets/close-icon-hovered.svg);
 }
-body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .spz-form-title {
-  margin-top: 36px;
-}
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .spz-form-title h6 {
   color: var(--primary-neutrals-n-1, #0d122e);
   text-align: center;
@@ -97,7 +100,15 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
   font-style: normal;
   font-weight: 300;
   line-height: 44px; /* 122.222% */
-  margin-bottom: 11px !important;
+  margin-bottom: 14px !important;
+}
+@media (max-width: 767.98px) {
+  body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .spz-form-title h6 {
+    line-height: 34px; /* 130.769% */
+    font-size: 26px;
+    padding: 0;
+    margin-bottom: 8px !important;
+  }
 }
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .spz-form-title h6 span {
   color: #904ab0;
@@ -196,12 +207,17 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol
   color: #0d122e;
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
-  margin-top: 3px;
+  margin-top: 4px;
   cursor: pointer;
   display: inline-block;
   position: relative;
   padding-left: 25px;
   margin-bottom: 10px;
+}
+@media (max-width: 767.98px) {
+  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
+    margin-top: 1px;
+  }
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
   border: 1px solid #d6d7f5;
@@ -311,7 +327,6 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .spz-anchor:
   line-height: 28px;
   margin-bottom: 22px;
   display: inline-block;
-  margin-top: 2px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -380,7 +395,7 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow .mktoButto
   font-style: normal;
   font-weight: 500;
   line-height: 22px !important; /* 150% */
-  margin-top: 20px !important;
+  margin-top: 21px !important;
   white-space: nowrap;
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
@@ -392,7 +407,6 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow .mktoButto
 }
 @media (max-width: 767.98px) {
   body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
-    height: 56px !important;
     padding: 0px 32px;
     width: 300px !important;
     max-width: 300px !important;
