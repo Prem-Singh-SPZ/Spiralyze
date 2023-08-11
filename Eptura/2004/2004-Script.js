@@ -15,6 +15,7 @@
         //     document.querySelector('#twocol_form').style.opacity = 1;
         // });
 
+        testimonials();
         formUpdate();
         focusFields();
         modalSpecific();
@@ -43,10 +44,16 @@
                 this.document.body.classList.remove('modal-open');
             }
         });
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691500370/eptura/2004/assets/close-icon-hovered.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
         );
     }
 
+    //controls testimonial section
+    function testimonials() {
+        document.querySelector('#testimonials .testimonial_container#TestimonialImg').innerHTML = `<img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-1.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-2.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-3.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-4.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-5.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-6.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-7.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-8.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-9.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-10.png" alt="">`;
+    }
+
+    //Modal specific code
     function modalSpecific() {
         document.querySelector('#NavButton .btn.btn-primary').setAttribute('href', 'javascript:void(0)');
         document.querySelector('#NavButton .btn.btn-primary').classList.add('spz-trigger-modal');
