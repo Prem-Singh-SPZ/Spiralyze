@@ -224,7 +224,7 @@ body.spz-3001 {
 
             #HeroFormPanel {
               max-width: 580px;
-              padding: 56px 56px 50px 56px;
+              padding: 56px 46px 50px 46px;
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
               box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
@@ -240,7 +240,7 @@ body.spz-3001 {
               @media (max-width: 767.98px) {
                 width: 360px;
                 max-width: 360px;
-                padding: 32px 30px 24px 30px;
+                padding: 32px 20px 24px 20px;
                 margin: auto;
               }
 
@@ -274,21 +274,11 @@ body.spz-3001 {
                     .mktoFormCol {
                       min-height: auto;
                       margin: 0 !important;
-                      padding: 0 !important;
-                      &:first-child {
-                        // margin-right: auto;
-                      }
-
-                      &:nth-child(2) {
-                        // .mktoFieldWrap {
-                        //   display: flex;
-                        //   justify-content: flex-end;
-                        //   margin-left: auto;
-                        // }
-                      }
+                      padding: 0 10px !important;
 
                       .mktoFieldWrap {
                         position: relative;
+                        float: none !important;
                         .mktoLabel {
                           position: absolute;
                           overflow: hidden;
@@ -332,16 +322,11 @@ body.spz-3001 {
                           margin-bottom: 20px !important;
 
                           &:not(#Lead_Notes__c) {
-                            @media (min-width: 767.98px) {
-                              max-width: calc(100% - 10px);
-                            }
                             height: 48px !important;
-                            // @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                            //   max-width: 218px;
-                            // }
-                            // @media (min-width: 1199.98px) and (max-width: 1359.98px) {
-                            //   max-width: 210px;
-                            // }
+                            @media (min-width: 767.98px) {
+                              // max-width: calc(100% - 10px);
+                              max-width: 100%;
+                            }
                           }
 
                           &#I_am__c,
@@ -446,59 +431,8 @@ body.spz-3001 {
                         .mktoError {
                           margin-top: 48px !important;
 
-                          .mktoErrorArrowWrap {
-                            // display: none;
-                          }
-
                           .mktoErrorMsg {
-                            // background-color: transparent;
-                            // background-image: none;
-                            // border-radius: 0;
-                            // box-shadow: none;
-                            // max-width: 100%;
-                            // padding: 0;
-                            // text-shadow: none;
-                            // color: var(--accents-a-9, #f83a59);
                             font-size: 14px;
-                            // font-style: normal;
-                            // font-weight: 300;
-                            // line-height: 14px; /* 142.857% */
-                            // border: 0;
-                            // padding-left: 16px;
-                            // display: flex;
-                            // position: relative;
-                            // &::before {
-                            //   content: '';
-                            //   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg);
-                            //   display: block;
-                            //   position: absolute;
-                            //   width: 10px;
-                            //   height: 10px;
-                            //   background-size: 10px;
-                            //   background-repeat: no-repeat;
-                            //   left: 0px;
-                            //   top: 1px;
-                            // }
-                          }
-                        }
-                      }
-                      &[spz_fname="LastName"],
-                      &[spz_fname="Phone"],
-                      &[spz_fname="Country"],
-                      &[spz_fname="I_am__c"],
-                      &[spz_fname="NumberOfEmployees"],
-                      &[spz_fname="Solution_Type__c"] {
-                        .mktoFieldWrap {
-                          @media (min-width: 767.98px) {
-                            max-width: calc(100% - 10px);
-                            float: right;
-
-                            .mktoField {
-                              max-width: 100% !important;
-                            }
-                          }
-                          @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                            max-width: calc(100% - 10px);
                           }
                         }
                       }
@@ -536,9 +470,6 @@ body.spz-3001 {
                       }
 
                       &.field-error {
-                        .mktoFieldWrap {
-                          // margin-bottom: 8px !important;
-                        }
                         &.field-focus {
                           .mktoFieldWrap {
                             .mktoLabel {
@@ -577,6 +508,7 @@ body.spz-3001 {
                         display: inline-block;
                         margin-top: 2px;
                         transition: all 0.3s ease;
+                        margin-left: 10px;
                         span {
                           padding-right: 5px;
                         }
@@ -592,34 +524,6 @@ body.spz-3001 {
                     }
                     .spz-hidden {
                       display: none;
-                    }
-                  }
-
-                  &.all-fields {
-                    .mktoFormRow {
-                      .mktoFormCol {
-                        &[spz_fname="Company"] {
-                          .mktoFieldWrap {
-                            @media (min-width: 767.98px) {
-                              max-width: calc(100% - 10px);
-                              float: right;
-                              .mktoField {
-                                max-width: 100% !important;
-                              }
-                            }
-                            @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                              max-width: 218px;
-                            }
-                          }
-                        }
-
-                        &[spz_fname="Country"],
-                        &[spz_fname="NumberOfEmployees"] {
-                          .mktoFieldWrap {
-                            float: left;
-                          }
-                        }
-                      }
                     }
                   }
 

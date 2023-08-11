@@ -51,7 +51,7 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
   display: -ms-flexbox;
   display: flex;
   width: 568px;
-  padding: 36px 56px 42px 56px;
+  padding: 36px 46px 42px 46px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -69,7 +69,7 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
 @media (max-width: 767.98px) {
   body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan {
     max-width: 360px;
-    padding: 32px 30px 32px 30px;
+    padding: 32px 20px 32px 20px;
   }
 }
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .form-close {
@@ -95,7 +95,6 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
 body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form .MQL__Contact_Us .formSpan .spz-form-title h6 {
   color: var(--primary-neutrals-n-1, #0d122e);
   text-align: center;
-  font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 36px;
   font-style: normal;
   font-weight: 300;
@@ -116,10 +115,11 @@ body.spz-2004 .body-wrapper #twocol_form .page_padding .order-1.order-md-2 #form
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol {
   min-height: auto;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 10px !important;
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
   position: relative;
+  float: none !important;
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
   position: absolute;
@@ -139,11 +139,6 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol
   transition: all 0.3s ease-in-out;
   pointer-events: none;
   max-width: calc(100% - 58px);
-}
-@media (max-width: 767.98px) {
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
-    max-width: calc(100% - 48px);
-  }
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   border-radius: 4px;
@@ -166,7 +161,7 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol
 }
 @media (min-width: 767.98px) {
   body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
-    max-width: calc(100% - 10px);
+    max-width: 100%;
   }
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
@@ -265,20 +260,6 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
   font-size: 14px;
 }
-@media (min-width: 767.98px) {
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap {
-    max-width: calc(100% - 10px);
-    float: right;
-  }
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap .mktoField, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap .mktoField, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap .mktoField {
-    max-width: 100% !important;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap {
-    max-width: calc(100% - 10px);
-  }
-}
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -8px;
   left: 11px;
@@ -327,6 +308,7 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .spz-anchor:
   line-height: 28px;
   margin-bottom: 22px;
   display: inline-block;
+  margin-left: 10px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
@@ -344,31 +326,6 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .spz-anchor:
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoFormRow .spz-hidden {
   display: none;
-}
-@media (min-width: 767.98px) {
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap {
-    max-width: calc(100% - 10px);
-    float: right;
-  }
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap .mktoField {
-    max-width: 100% !important;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap {
-    max-width: 218px;
-  }
-}
-body.spz-2004 .body-wrapper #twocol_form form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap {
-  float: left;
-}
-@media (min-width: 767.98px) {
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap {
-    max-width: 100%;
-  }
-  body.spz-2004 .body-wrapper #twocol_form form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap .mktoField {
-    max-width: 100% !important;
-  }
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow {
   text-align: center;
@@ -415,12 +372,21 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .mktoButtonRow .mktoButto
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap {
   margin-top: 18px;
 }
+@media (max-width: 767.98px) {
+  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap {
+    margin-top: 24px;
+  }
+}
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   text-align: center;
 }
+@media (max-width: 767.98px) {
+  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+    line-height: 0;
+  }
+}
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
   color: var(--primary-neutrals-n-1, #0d122e);
-  font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
@@ -432,16 +398,20 @@ body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap
   }
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
+  font-family: "Eptura Flexible", Arial, sans-serif;
   color: var(--interactive-colors-a-1, #1b4bc5);
   font-weight: 500;
   padding: 0;
+  padding-left: 2px;
 }
 body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
   color: #0d122e;
 }
+@media (min-width: 767.98px) {
+  body.spz-2004 .body-wrapper #twocol_form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
+    display: none;
+  }
+}
 body.spz-2004 .body-wrapper #twocol_form .mktoFormRow .mktoFormCol[class][spz_fname=FirstName], body.spz-2004 .body-wrapper #twocol_form .mktoFormRow .mktoFormCol[class][spz_fname=LastName] {
   display: block !important;
-}
-body.spz-2004 .body-wrapper #twocol_form .mktoFormRow .mktoFormCol[class][spz_fname=Solution_Type__c] .mktoFieldWrap[class] .mktoField:not([type=checkbox]):not(#Lead_Notes__c), body.spz-2004 .body-wrapper #twocol_form .mktoFormRow .mktoFormCol[class][spz_fname=NumberOfEmployees] .mktoFieldWrap[class] .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
-  max-width: 100%;
 }

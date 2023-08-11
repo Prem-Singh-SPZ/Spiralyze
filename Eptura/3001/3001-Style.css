@@ -243,7 +243,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroText img[imageprev
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
   max-width: 580px;
-  padding: 56px 56px 50px 56px;
+  padding: 56px 46px 50px 46px;
   border-radius: 8px;
   background: var(--primary-neutrals-w, #fff);
   -webkit-box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
@@ -264,7 +264,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
     width: 360px;
     max-width: 360px;
-    padding: 32px 30px 24px 30px;
+    padding: 32px 20px 24px 20px;
     margin: auto;
   }
 }
@@ -292,10 +292,11 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
   min-height: auto;
   margin: 0 !important;
-  padding: 0 !important;
+  padding: 0 10px !important;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
   position: relative;
+  float: none !important;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
   position: absolute;
@@ -337,7 +338,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 @media (min-width: 767.98px) {
   body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
-    max-width: calc(100% - 10px);
+    max-width: 100%;
   }
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
@@ -430,20 +431,6 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
   font-size: 14px;
 }
-@media (min-width: 767.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap {
-    max-width: calc(100% - 10px);
-    float: right;
-  }
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap .mktoField, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap .mktoField {
-    max-width: 100% !important;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=LastName] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Phone] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=I_am__c] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[spz_fname=Solution_Type__c] .mktoFieldWrap {
-    max-width: calc(100% - 10px);
-  }
-}
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -8px;
   left: 11px;
@@ -495,6 +482,7 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   margin-top: 2px;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  margin-left: 10px;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
   padding-right: 5px;
@@ -510,23 +498,6 @@ body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
   display: none;
-}
-@media (min-width: 767.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap {
-    max-width: calc(100% - 10px);
-    float: right;
-  }
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap .mktoField {
-    max-width: 100% !important;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Company] .mktoFieldWrap {
-    max-width: 218px;
-  }
-}
-body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=Country] .mktoFieldWrap, body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm.all-fields .mktoFormRow .mktoFormCol[spz_fname=NumberOfEmployees] .mktoFieldWrap {
-  float: left;
 }
 body.spz-3001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow {
   text-align: center;

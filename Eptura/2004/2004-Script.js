@@ -65,6 +65,8 @@
         document.querySelector('#I_am__c option:first-child').textContent = '';
 
         document.querySelector('#twocol_form .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
+        document.querySelector('#twocol_form .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
+
         document.querySelector('#twocol_form .mktoForm .spz-email').before(document.querySelector('#twocol_form .mktoForm .mktoButtonRow'));
 
         document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic">+ Comment</a></div>`);
@@ -164,17 +166,6 @@
                 elem.closest('.mktoFormCol').classList.remove('input-filled');
                 // elem.closest('.mktoFormCol').classList.add('field-error');
             }
-
-
-
-            if (document.querySelector('[spz_fname="Company"][data-zi-field-enriched="false"]')) {
-                document.querySelector('#mktoForm_1002').classList.add('all-fields');
-            }
-            if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
-                document.querySelector('#mktoForm_1002').classList.add('all-fields');
-                // document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
-            }
-
         }, 100);
 
         setTimeout(() => {
@@ -213,16 +204,5 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    // Move element
-    // sourceElm: Element which we have to move
-    // targetLoc: New location of an element 
-    function moveElement(sourceElm, targetLoc) {
-        const f = document.createDocumentFragment();
-        if (document.querySelector(sourceElm) != null) {
-            f.appendChild(document.querySelector(sourceElm));
-            document.querySelector(targetLoc).appendChild(f);
-        }
     }
 })();

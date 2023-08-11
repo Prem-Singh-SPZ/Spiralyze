@@ -148,18 +148,6 @@
                 // elem.closest('.mktoFormCol').classList.add('field-error');
             }
 
-
-
-            if (document.querySelector('[spz_fname="Company"][data-zi-field-enriched="false"]')) {
-                document.querySelector('#mktoForm_1225').classList.add('all-fields');
-            }
-            else if (!document.querySelector('[spz_fname="Country"][style*="display"]')) {
-                document.querySelector('#I_am__c').closest('.mktoFormCol').removeAttribute('spz_fname');
-            }
-            // if (document.querySelector('#Solution_Type__c') && document.querySelector('#Solution_Type__c').closest('.mktoFormRow[data-zi-field-enriched="false"]')) {
-            //     document.querySelector('#Solution_Type__c').closest('.mktoFormCol').removeAttribute('spz_fname');
-            // }
-
         }, 100);
 
         setTimeout(() => {
@@ -262,16 +250,5 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    // Move element
-    // sourceElm: Element which we have to move
-    // targetLoc: New location of an element 
-    function moveElement(sourceElm, targetLoc) {
-        const f = document.createDocumentFragment();
-        if (document.querySelector(sourceElm) != null) {
-            f.appendChild(document.querySelector(sourceElm));
-            document.querySelector(targetLoc).appendChild(f);
-        }
     }
 })();
