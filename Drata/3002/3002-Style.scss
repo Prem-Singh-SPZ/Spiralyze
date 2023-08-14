@@ -1,0 +1,105 @@
+body.spz-3002 {
+  #__next {
+    .spz-sticky-footer {
+      position: sticky;
+      bottom: 0;
+      z-index: 1;
+      .sticky-footer {
+        border-top: 1px solid var(--brand-drata-blue-1-darker, #0466ba);
+        background: var(--brand-drata-blue, #0580e8);
+        position: relative;
+        width: 100%;
+
+        .sticky-container {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+          position: relative;
+          max-width: 1248px;
+          margin: auto;
+          padding: 12px 0;
+
+          .left-content {
+            display: flex;
+            align-items: center;
+            img {
+              width: 24px;
+              height: 24px;
+            }
+            span {
+              color: var(--neutrals-white-fff, #fff);
+              font-family: Darker Grotesque;
+              font-size: 28px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 24px; /* 85.714% */
+              letter-spacing: -0.48px;
+            }
+          }
+
+          .center-content {
+            display: flex;
+            align-items: center;
+            .g2-logo {
+              width: 32px;
+              height: 32px;
+            }
+            .star-ratings {
+              width: 108px;
+              height: 20px;
+            }
+            .ratings {
+              color: var(--neutrals-white-fff, #fff);
+              font-family: Inter;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px; /* 146.667% */
+              span {
+                font-weight: 600;
+              }
+            }
+          }
+
+          .right-content {
+            .hs-cta-primary {
+              border-radius: 4px;
+              background: var(--neutrals-black-000, #000);
+              padding: 13px 32px;
+              color: var(--neutrals-white-fff, #fff);
+              text-align: center;
+              font-family: Inter;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 22px; /* 146.667% */
+              text-decoration: none;
+            }
+          }
+        }
+
+        .close-sticky {
+          position: absolute;
+          right: 20px;
+          top: calc(50% - 16px);
+
+          .sticky-close-btn {
+            img {
+              border-radius: 999px;
+              border: 1px solid var(--brand-drata-blue-1-darker, #0466ba);
+              background: var(--brand-drata-blue, #0580e8);
+              padding: 8px;
+            }
+
+            &:hover,
+            &:focus {
+              img {
+                background: var(--brand-drata-blue-1-darker, #0466ba);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

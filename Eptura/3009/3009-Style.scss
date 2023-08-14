@@ -1,13 +1,18 @@
-body.spz-3001 {
+$eptura-font: "Eptura Flexible", Arial, sans-serif;
+
+body.spz-3009 {
   #HeaderScripts.mktoText {
     display: none !important;
   }
 
   .body-wrapper {
+    &::before {
+      display: none;
+    }
     //Hiding half of the footer here
     > footer {
       .page_padding {
-        @media (min-width: 767.98px) and (max-width: 1314.98px) {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
           padding: 0 40px;
           max-width: 768px;
         }
@@ -24,15 +29,16 @@ body.spz-3001 {
           padding-top: 40px;
           padding-bottom: 40px !important;
           @media (max-width: 767.98px) {
-            padding-top: 38px !important;
+            padding-top: 40px !important;
           }
 
           .d-md-flex.justify-content-md-between {
-            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
               align-items: end;
             }
             .desktopHide {
               @media (max-width: 767.98px) {
+                font-family: $eptura-font;
                 font-size: 12px;
                 line-height: 18px;
                 padding-top: 14px !important;
@@ -40,18 +46,18 @@ body.spz-3001 {
             }
           }
           .left {
-            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
               flex-direction: column;
               width: 548px;
             }
             #FooterLogo {
-              @media (min-width: 767.98px) and (max-width: 1314.98px) {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 margin-bottom: 20px;
               }
               img {
                 min-width: 85.12px;
                 height: 64px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   min-width: 53.2px;
                   height: 40px;
                 }
@@ -65,19 +71,20 @@ body.spz-3001 {
             .links {
               max-width: 756px;
               padding-left: 64px !important;
-              @media (max-width: 1314.98px) {
+              @media (max-width: 1199.98px) {
                 padding-left: 0px !important;
               }
 
               #FooterBottom {
                 li a {
-                  color: #d6d7f5;
+                  font-family: $eptura-font;
+                  // color: #d6d7f5;
                   text-transform: capitalize;
                   line-height: 20px;
 
-                  &:hover {
-                    color: #ffffff;
-                  }
+                  // &:hover {
+                  //   color: #ffffff;
+                  // }
                   @media (max-width: 767.98px) {
                     font-size: 12px;
                     line-height: 18px;
@@ -95,9 +102,9 @@ body.spz-3001 {
 
             a {
               img {
-                width: 20px;
+                width: auto;
                 height: 20px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   width: 16px;
                   height: 16px;
                 }
@@ -108,14 +115,14 @@ body.spz-3001 {
               &:nth-child(2) {
                 order: 2;
                 padding-left: 20px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   padding-left: 16px;
                 }
               }
               &:last-child {
                 order: 1;
                 padding-left: 21px;
-                @media (min-width: 767.98px) and (max-width: 1314.98px) {
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   padding-left: 17px;
                 }
               }
@@ -125,12 +132,24 @@ body.spz-3001 {
       }
     }
 
-    #nav nav {
-      margin-top: 16px;
+    #nav {
+      &.sticky-top {
+        position: relative !important;
+        &.nav-scrolled {
+          background: transparent !important;
+          filter: none;
+        }
+      }
+      nav {
+        margin-top: 16px;
 
-      #NavLogo {
-        #logo-img {
-          max-width: 104px;
+        #NavLogo {
+          .logo-img {
+            max-width: 104px;
+          }
+          #logo-img {
+            display: none !important;
+          }
         }
       }
     }
@@ -139,31 +158,68 @@ body.spz-3001 {
     #hero {
       .hero_container {
         padding-top: 40px !important;
-        padding-bottom: 48px !important;
+        padding-bottom: 78px !important;
         overflow: hidden;
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          padding-bottom: 48px !important;
+        }
         @media (max-width: 767.98px) {
           padding: 0;
+          padding-bottom: 6px !important;
         }
         > .row {
-          flex-direction: row-reverse;
+          // flex-direction: row-reverse;
+          align-items: center;
+          @media (max-width: 1199.98px) {
+            flex-direction: column;
+          }
+
+          > .col-md.pb-5 {
+            @media (min-width: 1199.98px) {
+              padding-bottom: 0 !important;
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              padding-bottom: 28px !important;
+            }
+            @media (max-width: 767.98px) {
+              padding-bottom: 26px !important;
+            }
+          }
 
           #HeroText {
             @media (max-width: 767.98px) {
               padding: 0 10vw;
             }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              max-width: 658px;
+              margin: auto;
+            }
+
             img[imagepreview="false"] {
-              width: 529px;
-              height: 280px;
-              margin-top: 2px;
-              @media (max-width: 1314.98px) {
-                width: 536px;
-                height: 284px;
+              width: 100%;
+              height: auto;
+              max-width: 543.455px;
+              max-height: 305.019px;
+              margin-top: 1px;
+              @media (max-width: 1199.98px) {
+                width: 544px;
+                height: 306px;
+              }
+              @media (max-width: 767.98px) {
+                height: 307px;
+                width: 538px;
+                margin-top: 3px;
+                margin-left: 1px;
               }
             }
           }
 
           #HeroFormCol {
-            @media (min-width: 767.98px) and (max-width: 1314.98px) {
+            @media (min-width: 1199.98px) {
+              padding-bottom: 22px !important;
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              padding: 9px;
               padding-top: 5px;
               padding-bottom: 8px !important;
             }
@@ -174,32 +230,39 @@ body.spz-3001 {
 
             #HeroFormPanel {
               max-width: 580px;
-              padding: 56px 56px 50px 56px;
+              padding: 56px 46px 50px 46px;
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
               box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+
               @media (min-width: 767.98px) {
-                min-width: 556px;
+                min-width: 426px;
+                margin-left: auto;
               }
-              @media (min-width: 767.98px) and (max-width: 1314.98px) {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 margin: auto;
+                min-width: 580px;
+                // margin-left: -6px;
               }
               @media (max-width: 767.98px) {
                 width: 360px;
                 max-width: 360px;
-                padding: 32px 30px 24px 30px;
+                padding: 32px 20px 31px 20px;
                 margin: auto;
               }
 
               #HeroFormTitleText {
+                display: block !important;
+                //Form Title CSS
                 h6 {
                   color: var(--primary-neutrals-n-1, #0d122e);
+                  // font-family: $eptura-font;
                   text-align: center;
                   font-size: 26px;
                   font-style: normal;
                   font-weight: 300;
                   line-height: 34px; /* 130.769% */
-                  white-space: nowrap;
+                  // white-space: nowrap;
                   letter-spacing: initial;
                   margin: -4px -6px 24px 0;
                   span {
@@ -210,14 +273,19 @@ body.spz-3001 {
                     white-space: normal;
                     max-width: 244px;
                     margin: auto;
-                    margin-bottom: 20px;
+                    margin-bottom: 24px;
                   }
                 }
+
                 //3009 Review summary CSS starts
                 .spz-review-summary {
                   display: flex;
                   align-items: center;
                   justify-content: center;
+                  margin-bottom: 24px;
+                  @media (max-width: 767.98px) {
+                    margin-bottom: 21px;
+                  }
 
                   .capterra-review-summary,
                   .g2-review-summary {
@@ -239,12 +307,17 @@ body.spz-3001 {
                     .g2-review {
                       color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
                       font-size: 12px;
+                      font-family: $eptura-font;
                       font-style: normal;
                       font-weight: 300;
                       line-height: 18px;
                       white-space: nowrap;
                       span {
-                        font-weight: 500;
+                        font-weight: 600;
+                        font-family: $eptura-font;
+                      }
+                      @media (max-width: 767.98px) {
+                        margin-left: 6px;
                       }
                     }
                   }
@@ -268,21 +341,11 @@ body.spz-3001 {
                     .mktoFormCol {
                       min-height: auto;
                       margin: 0 !important;
-                      padding: 0 !important;
-                      &:first-child {
-                        // margin-right: auto;
-                      }
-
-                      &:nth-child(2) {
-                        // .mktoFieldWrap {
-                        //   display: flex;
-                        //   justify-content: flex-end;
-                        //   margin-left: auto;
-                        // }
-                      }
+                      padding: 0 10px !important;
 
                       .mktoFieldWrap {
                         position: relative;
+                        float: none !important;
                         .mktoLabel {
                           position: absolute;
                           overflow: hidden;
@@ -292,6 +355,7 @@ body.spz-3001 {
                           ) !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
+                          font-family: $eptura-font;
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
@@ -301,7 +365,7 @@ body.spz-3001 {
                           padding: 0 !important;
                           transition: all 0.3s ease-in-out;
                           pointer-events: none;
-                          max-width: calc(100% - 40px);
+                          max-width: calc(100% - 58px);
                         }
 
                         .mktoField:not([type="checkbox"]) {
@@ -317,6 +381,7 @@ body.spz-3001 {
                           ) !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
+                          font-family: $eptura-font !important;
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
@@ -324,20 +389,16 @@ body.spz-3001 {
                           margin-bottom: 20px !important;
 
                           &:not(#Lead_Notes__c) {
-                            @media (min-width: 767.98px) {
-                              max-width: 224px;
-                            }
                             height: 48px !important;
-                            @media (min-width: 767.98px) and (max-width: 1314.98px) {
-                              max-width: 218px;
-                            }
-                            @media (min-width: 1314.98px) and (max-width: 1359.98px) {
-                              max-width: 210px;
+                            @media (min-width: 767.98px) {
+                              // max-width: calc(100% - 10px);
+                              max-width: 100%;
                             }
                           }
 
                           &#I_am__c,
-                          &#Country {
+                          &#Country,
+                          &#Solution_Type__c {
                             outline: transparent;
                             appearance: none !important;
                             background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
@@ -361,15 +422,18 @@ body.spz-3001 {
                         .mktoHtmlText.mktoHasWidth {
                           margin: 0 !important;
                           span {
-                            color: var(--primary-neutrals-n-1, #0d122e);
+                            color: #848995;
                             font-size: 10px !important;
+                            // font-family: $eptura-font;
                             font-style: normal;
                             font-weight: 300;
                             line-height: 16px; /* 160% */
 
                             a {
+                              // font-family: $eptura-font;
                               padding: 0;
                               color: #1b4bc5;
+                              // font-weight: 500;
                               &:hover {
                                 color: #0d122e;
                               }
@@ -378,7 +442,7 @@ body.spz-3001 {
                         }
 
                         .mktoCheckboxList {
-                          margin-top: 7px;
+                          margin-top: 3px;
                           cursor: pointer;
                           display: inline-block;
                           position: relative;
@@ -394,12 +458,14 @@ body.spz-3001 {
                           }
 
                           label {
+                            font-family: $eptura-font !important;
                             color: var(--primary-neutrals-n-1, #0d122e);
-                            font-size: 14px !important;
+                            font-size: 12px !important;
                             font-style: normal !important;
                             font-weight: 300 !important;
-                            line-height: 20px !important; /* 142.857% */
+                            line-height: 18px !important; /* 142.857% */
                             margin-left: 19px;
+                            letter-spacing: -0.1px;
                             cursor: pointer;
                             &:before {
                               content: "";
@@ -432,54 +498,8 @@ body.spz-3001 {
                         .mktoError {
                           margin-top: 48px !important;
 
-                          .mktoErrorArrowWrap {
-                            // display: none;
-                          }
-
                           .mktoErrorMsg {
-                            // background-color: transparent;
-                            // background-image: none;
-                            // border-radius: 0;
-                            // box-shadow: none;
-                            // max-width: 100%;
-                            // padding: 0;
-                            // text-shadow: none;
-                            // color: var(--accents-a-9, #f83a59);
-                            // font-size: 10px;
-                            // font-style: normal;
-                            // font-weight: 300;
-                            // line-height: 14px; /* 142.857% */
-                            // border: 0;
-                            // padding-left: 16px;
-                            // display: flex;
-                            // position: relative;
-                            // &::before {
-                            //   content: '';
-                            //   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg);
-                            //   display: block;
-                            //   position: absolute;
-                            //   width: 10px;
-                            //   height: 10px;
-                            //   background-size: 10px;
-                            //   background-repeat: no-repeat;
-                            //   left: 0px;
-                            //   top: 1px;
-                            // }
-                          }
-                        }
-                      }
-                      &[spz_fname="LastName"],
-                      &[spz_fname="Phone"],
-                      &[spz_fname="Country"],
-                      &[spz_fname="I_am__c"],
-                      &[spz_fname="NumberOfEmployees"] {
-                        .mktoFieldWrap {
-                          @media (min-width: 767.98px) {
-                            max-width: 224px;
-                            float: right;
-                          }
-                          @media (min-width: 767.98px) and (max-width: 1314.98px) {
-                            max-width: 218px;
+                            font-size: 14px;
                           }
                         }
                       }
@@ -490,6 +510,7 @@ body.spz-3001 {
                             top: -8px;
                             left: 11px;
                             padding: 0 5px !important;
+                            font-family: $eptura-font;
                             color: var(--accents-a-5, #904ab0) !important;
                             font-size: 13px !important;
                             line-height: 18px !important; /* 138.462% */
@@ -506,6 +527,7 @@ body.spz-3001 {
                           .mktoLabel {
                             top: -8px;
                             left: 11px;
+                            font-family: $eptura-font;
                             padding: 0 5px !important;
                             font-size: 13px !important;
                             line-height: 18px !important; /* 138.462% */
@@ -515,9 +537,6 @@ body.spz-3001 {
                       }
 
                       &.field-error {
-                        .mktoFieldWrap {
-                          // margin-bottom: 8px !important;
-                        }
                         &.field-focus {
                           .mktoFieldWrap {
                             .mktoLabel {
@@ -532,9 +551,13 @@ body.spz-3001 {
                       }
                     }
 
-                    .spz-anchor {
+                    .spz-anchor:not(.spz-hidden) {
                       display: flex;
                       width: 100%;
+
+                      + .mktoFieldDescriptor.mktoFormCol {
+                        display: none !important;
+                      }
 
                       .show-comment-dynamic {
                         overflow: hidden;
@@ -542,6 +565,7 @@ body.spz-3001 {
                           --primary-neutrals-n-2,
                           rgba(13, 18, 46, 0.8)
                         );
+                        font-family: $eptura-font;
                         text-overflow: ellipsis;
                         font-size: 16px;
                         font-style: normal;
@@ -550,6 +574,8 @@ body.spz-3001 {
                         margin-bottom: 18px;
                         display: inline-block;
                         margin-top: 2px;
+                        transition: all 0.3s ease;
+                        margin-left: 10px;
                         span {
                           padding-right: 5px;
                         }
@@ -564,32 +590,7 @@ body.spz-3001 {
                       }
                     }
                     .spz-hidden {
-                      display: none !important;
-                    }
-                  }
-
-                  &.all-fields {
-                    .mktoFormRow {
-                      .mktoFormCol {
-                        &[spz_fname="Company"] {
-                          .mktoFieldWrap {
-                            @media (min-width: 767.98px) {
-                              max-width: 224px;
-                              float: right;
-                            }
-                            @media (min-width: 767.98px) and (max-width: 1314.98px) {
-                              max-width: 218px;
-                            }
-                          }
-                        }
-
-                        &[spz_fname="Country"],
-                        &[spz_fname="NumberOfEmployees"] {
-                          .mktoFieldWrap {
-                            float: left;
-                          }
-                        }
-                      }
+                      display: none;
                     }
                   }
 
@@ -601,7 +602,7 @@ body.spz-3001 {
                         display: flex;
                         width: 140px !important;
                         height: 50px !important;
-                        padding: 0px 32px !important;
+                        padding: 0px 8px !important;
                         justify-content: center;
                         align-items: center;
                         border-radius: 3px !important;
@@ -611,20 +612,23 @@ body.spz-3001 {
                         ) !important;
                         color: var(--primary-neutrals-w, #fff) !important;
                         text-align: center;
+                        font-family: $eptura-font;
                         font-size: 16px !important;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 24px !important; /* 150% */
                         margin-top: 22px !important;
+                        white-space: nowrap;
 
                         &:hover,
                         &:focus {
-                          transform: translate(0, -1px);
-
                           background: var(
                             --interactive-colors-a-3,
                             #456ed6
                           ) !important;
+                        }
+                        &:focus {
+                          transform: translate(0, 1px);
                         }
 
                         @media (max-width: 767.98px) {
@@ -641,19 +645,36 @@ body.spz-3001 {
                   .spz-email {
                     .mktoFieldWrap {
                       margin-top: 18px;
+                      @media (max-width: 767.98px) {
+                        margin-top: 24px;
+                      }
                       .mktoHtmlText.mktoHasWidth {
                         text-align: center;
+                        @media (max-width: 767.98px) {
+                          line-height: 0;
+                        }
                         em {
                           color: var(--primary-neutrals-n-1, #0d122e);
                           font-size: 14px;
                           font-style: normal;
                           font-weight: 300;
                           line-height: 20px; /* 142.857% */
+                          @media (max-width: 767.98px) {
+                            padding: 0;
+                          }
+
+                          .mobile-only {
+                            @media (min-width: 767.98px) {
+                              display: none;
+                            }
+                          }
 
                           a {
                             color: var(--interactive-colors-a-1, #1b4bc5);
                             font-weight: 500;
                             padding: 0;
+                            font-family: $eptura-font;
+                            padding-left: 2px;
 
                             &:hover {
                               color: #0d122e;
@@ -664,6 +685,252 @@ body.spz-3001 {
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Page specific CSS
+  &.ppc-condeco {
+    .body-wrapper {
+      #nav {
+        nav {
+          #NavLogo {
+            .logo-img {
+              max-width: 113px;
+            }
+          }
+        }
+      }
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-top: 40px !important;
+            padding-bottom: 92px !important;
+          }
+          @media (max-width: 767.98px) {
+            padding-bottom: 0px !important;
+          }
+          > .row {
+            #HeroText img[imagepreview="false"] {
+              width: 100%;
+              height: auto;
+              max-width: 488.29px;
+              max-height: 248px;
+              @media (max-width: 767.98px) {
+                margin-top: 1px;
+                margin-left: 0px;
+                width: 488.29px;
+                height: 248px;
+              }
+            }
+            #HeroFormCol {
+              padding-bottom: 8px !important;
+              @media (max-width: 767.98px) {
+                padding-bottom: 6px !important;
+              }
+            }
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+                @media (max-width: 767.98px) {
+                  padding-bottom: 42px !important;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ppc-archibus {
+    .body-wrapper {
+      #nav {
+        nav {
+          #NavLogo {
+            .logo-img {
+              max-width: 82.137px;
+              height: 36px;
+            }
+          }
+        }
+      }
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-bottom: 100px !important;
+          }
+          > .row {
+            #HeroText {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                > h6 {
+                  font-family: $eptura-font;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 19.2px; /* 120% */
+                }
+
+                > h1 {
+                  color: #fff;
+                  font-size: 36px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 44px; /* 122.222% */
+                  letter-spacing: 1px;
+                }
+                > p {
+                  color: #fff;
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 28px;
+                }
+              }
+              > img {
+                width: 100%;
+                height: auto;
+                max-width: 487.769px;
+                max-height: 260px;
+                margin-top: 26px;
+                @media (max-width: 767.98px) {
+                  width: 488px;
+                  height: 260px;
+                }
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 0px !important;
+              }
+              // #HeroFormPanel {
+              //   // padding-top: 64px;
+              //   @media (max-width: 767.98px) {
+              //     padding-top: 40px !important;
+              //   }
+              // }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 52px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ppc-archibus-demo {
+    .body-wrapper {
+      #nav {
+        nav {
+          #NavLogo {
+            .logo-img {
+              max-width: 82.137px;
+              height: 36px;
+            }
+          }
+        }
+      }
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-bottom: 100px !important;
+          }
+          > .row {
+            #HeroText {
+              h1.pt-4 {
+                > img {
+                  width: 100%;
+                  height: auto;
+
+                  max-width: 487.769px;
+                  max-height: 260px;
+                  margin-top: 17px;
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    margin-top: 4px;
+                    margin-left: -6px;
+                  }
+                  @media (max-width: 767.98px) {
+                    margin-top: 9px;
+                    width: 487.769px;
+                    height: 260px;
+                  }
+                }
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 0px !important;
+              }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ppc-eptura {
+    .body-wrapper {
+      #hero {
+        #HeroText {
+          > p {
+            @media (min-width: 1400px) {
+              min-width: 607px;
+            }
+          }
+        }
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-bottom: 92px !important;
+          }
+          > .row {
+            #HeroText {
+              img[imagepreview="false"] {
+                width: 100%;
+                height: auto;
+                max-width: 488px;
+                max-height: 230px;
+                margin-top: 24px;
+                @media (max-width: 767.98px) {
+                  width: 488px;
+                  height: 230px;
+                }
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 8px !important;
+              }
+              #HeroFormPanel {
+                // padding-top: 64px;
+                @media (max-width: 767.98px) {
+                  // padding-top: 40px !important;
+                }
+              }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+              }
+              @media (max-width: 767.98px) {
+                padding-bottom: 51px !important;
+              }
+              @media (min-width: 1399.98px) {
+                min-width: 652px;
               }
             }
           }
