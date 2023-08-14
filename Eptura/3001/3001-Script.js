@@ -1,3 +1,5 @@
+// Adding class initially
+document.body.classList.add('spz-3001');
 (function () {
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
         document.body.classList.add('spz-3001');

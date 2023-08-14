@@ -13,8 +13,21 @@ function createTest3002() {
     });
 }
 
+//perform click actions
+window.addEventListener("click", function (e) {
+    // console.log(e.target)
+    if (e.target.classList.contains("sticky-close-btn")) {
+        this.document.querySelector('.spz-sticky-footer').remove();
+        document.querySelector('#__next').style.paddingBottom = "0px";
+    }
+    // console.log(e.target.classList)
+    if (e.target.classList.contains("trigger-demo-btn")) {
+        document.querySelector('a[href="/demo"]').click();
+    }
+});
+
+
 function insertStickySection() {
-    console.log('ffffff')
     if (document.querySelectorAll('#__next .spz-sticky-footer').length == 0) {
         document.querySelector('#__next').insertAdjacentHTML('beforeend', `<div class="spz-sticky-footer"><div class="sticky-footer">
         <div class="sticky-container">
@@ -41,23 +54,34 @@ function insertStickySection() {
 }
 
 function checkScrollPosition() {
-    var scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
-    var headerHeight = document.querySelector('header#header').offsetHeight;
-    var heroHeight = document.querySelector('main.l-body-wrapper section.c-hero').offsetHeight;
-    var totalHeight = headerHeight + heroHeight + 56;
-    if (scrollTop > totalHeight) {
-        document.querySelector('body .spz-sticky-footer').classList.add('show-sticky');
-        document.querySelector('body .c-scroll-to-top.js-scroll-to-top').classList.add('show-sticky');
-    }
-    else {
-        if (document.querySelector('body .spz-sticky-footer').classList.contains('show-sticky')) {
-            document.querySelector('body .spz-sticky-footer').classList.remove('show-sticky');
-            document.querySelector('body .c-scroll-to-top.js-scroll-to-top').classList.remove('show-sticky');
+    waitForElm('#__next header.MuiAppBar-positionFixed').then(function () {
+        let scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
+        let headerHeight = document.querySelector('#__next header.MuiAppBar-positionFixed').offsetHeight;
+        // var heroHeight = document.querySelector('header.mui-fixed + div').offsetHeight;
+        var totalHeight = headerHeight + 506;
+        if (document.querySelector('body .spz-sticky-footer')) {
+            let stickyHeight = document.querySelector('#__next .spz-sticky-footer').offsetHeight;
+
+            if (scrollTop > totalHeight) {
+                document.querySelector('body .spz-sticky-footer').classList.add('show-sticky');
+                document.querySelector('#__next').style.paddingBottom = stickyHeight + "px";
+            }
+            else {
+                if (document.querySelector('body .spz-sticky-footer').classList.contains('show-sticky')) {
+                    document.querySelector('body .spz-sticky-footer').classList.remove('show-sticky');
+                    document.querySelector('#__next').style.paddingBottom = "0px";
+                }
+            }
         }
-    }
+    });
+
 }
 
 function removeTest() {
+    if (document.querySelector('.spz-sticky-footer')) {
+        document.querySelector('.spz-sticky-footer').remove();
+        document.querySelector('#__next').style.paddingBottom = "0px";
+    }
     document.body.classList.remove("spz-3002");
 }
 
@@ -96,7 +120,6 @@ function urlCheck(url) {
     }
     if (isSameUrl(url, testURL, true)) {
         createTest3002();
-        console.log('dddddddd')
     } else {
         removeTest();
     }
