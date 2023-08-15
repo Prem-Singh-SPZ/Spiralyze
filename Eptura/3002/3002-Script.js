@@ -44,6 +44,9 @@
         document.querySelector('#Country option:first-child').textContent = '';
         document.querySelector('#I_am__c option:first-child').textContent = '';
 
+        document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
+
+
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
             document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
         }
@@ -228,6 +231,10 @@
                     document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_3.webp" alt="Archibus" class="logo-img">`);
                 }
 
+                if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
+                    document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Fill in your details and <span>let&#x2019;s get started <span></span></span></h6>';
+                }
+
                 document.body.classList.add('ppc-archibus');
 
                 document.querySelector('#hero #HeroText').innerHTML = `<h6>Next-Gen Maintenance Management Software</h6><h1>Automate preventive maintenance and repair. Reduce costs by 30%.</h1><ul class="hero-list-copy"><li class="list-item"><span>Work orders.</span> Automatically generate detailed work orders when assets are due for maintenance. </li><li class="list-item"><span>Repair management.</span> Auto-send requests to relevant workers via the mobile app. See repair status and track orders.</li><li class="list-item"><span>Budgeting.</span> Get analytics on cost, labor, and performance of operations. Easily generate plans and budgets.</li></ul><div class="hero-img"><picture>
@@ -240,10 +247,10 @@
 
                 document.body.classList.add('ppc-eptura');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>WORKPLACE AND ASSET MANAGEMENT SOFTWARE</h6><h1>Automate operations with one platform for workplace and asset management</h1><ul class="hero-list-copy"><li class="list-item"><span>Workplace solutions.</span> Desk and meeting room bookings, visitor management, and space planning. </li><li class="list-item"><span>Repair management.</span> Auto-send requests to relevant workers via the mobile app. See repair status and track orders.</li><li class="list-item"><span>Budgeting.</span> Get analytics on cost, labor, and performance of operations. Easily generate plans and budgets.</li></ul><div class="hero-img"><picture>
-                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579942/eptura/3002/archibus-ui_2.webp" type="image/webp">
-                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579942/eptura/3002/archibus-ui_2.png" type="image/png"> 
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/archibus-ui_2.webp" alt="Archibus"></div></picture>`;
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>WORKPLACE AND ASSET MANAGEMENT SOFTWARE</h6><h1>Automate operations with one platform for workplace and asset management</h1><ul class="hero-list-copy"><li class="list-item"><span>Workplace solutions.</span> Desk and meeting room bookings, visitor management, and space planning. </li><li class="list-item"><span>Asset visibility.</span> See asset inventory, lifecycles, and compliance details. Get a complete view of facilities and spaces. </li><li class="list-item"><span>Maintenance.</span> Automate preventive maintenance, view cost history, and schedule repairs for all your assets.</li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579973/eptura/3002/eptura-demo-ui_2.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579973/eptura/3002/eptura-demo-ui_2.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/eptura-demo-ui_2.webp" alt="Eptura"></div></picture>`;
             }
         });
     }
