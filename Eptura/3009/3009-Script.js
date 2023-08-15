@@ -1,4 +1,6 @@
 (function () {
+    document.body.classList.add('spz-3009');
+
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
         document.body.classList.add('spz-3009');
 

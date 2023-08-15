@@ -1,7 +1,7 @@
 (function () {
-    document.body.classList.add('spz-3001');
+    document.body.classList.add('spz-3002');
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
-        document.body.classList.add('spz-3001');
+        document.body.classList.add('spz-3002');
 
         // Hide form initially
         // document.querySelector('#HeroFormPanel').style.opacity = 0;
@@ -196,9 +196,12 @@
                     document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_1.webp" alt="Proxyclick" class="logo-img">`);
                 }
 
-                document.querySelector('#hero #HeroText img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/proxyclick-ui.webp');
-                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Simplify visitor check-in');
                 document.body.classList.add('ppc-proxyclick');
+
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>VISITOR&nbsp;MANAGEMENT SOFTWARE</h6><h1>Make the visitor check-in experience 50% faster while improving security.</h1><ul class="hero-list-copy"><li class="list-item"><span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.</li><li class="list-item"><span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.</li><li class="list-item"><span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications.</li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579849/eptura/3002/proxyclick-ui_3.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579849/eptura/3002/proxyclick-ui_3.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/proxyclick-ui_3.webp" alt="Proxyclick"></div></picture>`;
             }
 
             else if (window.location.href.indexOf('ppc-condeco-make-your-flexible-office-work-better') > -1) {
@@ -209,9 +212,12 @@
                     document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_2.webp" alt="Condeco" class="logo-img">`);
                 }
 
-                document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/condeco-ui.webp');
-                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Make hybrid work, work');
                 document.body.classList.add('ppc-condeco');
+
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Workspace Scheduling software</h6><h1>Streamline desk and meeting room scheduling. Simplify hybrid work.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. </li><li class="list-item"><span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579900/eptura/3002/condeco-ui_2.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579900/eptura/3002/condeco-ui_2.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/condeco-ui_2.webp" alt="Condeco"></div></picture>`;
             }
 
             else if (window.location.href.indexOf('ppc-archibus-maintenance-software') > -1) {
@@ -222,17 +228,22 @@
                     document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_3.webp" alt="Archibus" class="logo-img">`);
                 }
 
-
-                document.querySelector('#hero #HeroText').insertAdjacentHTML('beforeend', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/archibus-ui.webp" alt="optimize your maintenance operation" width= "488px"
-                height="260px">`);
                 document.body.classList.add('ppc-archibus');
+
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Next-Gen Maintenance Management Software</h6><h1>Automate preventive maintenance and repair. Reduce costs by 30%.</h1><ul class="hero-list-copy"><li class="list-item"><span>Work orders.</span> Automatically generate detailed work orders when assets are due for maintenance. </li><li class="list-item"><span>Repair management.</span> Auto-send requests to relevant workers via the mobile app. See repair status and track orders.</li><li class="list-item"><span>Budgeting.</span> Get analytics on cost, labor, and performance of operations. Easily generate plans and budgets.</li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579942/eptura/3002/archibus-ui_2.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579942/eptura/3002/archibus-ui_2.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/archibus-ui_2.webp" alt="Archibus"></div></picture>`;
             }
             else if (window.location.href.indexOf('ppc-eptura') > -1) {
                 document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
 
-                document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
-                document.querySelector('#hero #HeroText img').setAttribute('alt', 'one platform to bring together');
                 document.body.classList.add('ppc-eptura');
+
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>WORKPLACE AND ASSET MANAGEMENT SOFTWARE</h6><h1>Automate operations with one platform for workplace and asset management</h1><ul class="hero-list-copy"><li class="list-item"><span>Workplace solutions.</span> Desk and meeting room bookings, visitor management, and space planning. </li><li class="list-item"><span>Repair management.</span> Auto-send requests to relevant workers via the mobile app. See repair status and track orders.</li><li class="list-item"><span>Budgeting.</span> Get analytics on cost, labor, and performance of operations. Easily generate plans and budgets.</li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579942/eptura/3002/archibus-ui_2.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579942/eptura/3002/archibus-ui_2.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/archibus-ui_2.webp" alt="Archibus"></div></picture>`;
             }
         });
     }
