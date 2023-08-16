@@ -1,24 +1,16 @@
 
 (function () {
     let isFormSubmitted = false;
-    console.log("isFormSubmitted == " + isFormSubmitted);
 
     function createTest3001() {
         document.body.classList.add('spz-3001');
 
-        if (window.location.href.indexOf("/demo") > -1) {
-            waitForElm('#reactHubspotForm1 .hs-form-private').then(function () {
-                checkFormSubmission();
-            });
-        }
-        else {
-            console.log("is Form Submitted == " + isFormSubmitted);
-            if (!isFormSubmitted) {
-                appendPopup();
-                console.log("pop up function called...");
-            }
-        }
+        checkFormSubmission();
 
+        if (!isFormSubmitted) {
+            appendPopup();
+            exitIntentPopup();
+        }
     }
 
     // Check if hubspot form is successfully submitted and store value in local storage
@@ -33,12 +25,11 @@
     //perform click actions
     window.addEventListener("click", function (e) {
         // console.log(e.target)
-        if (e.target.classList.contains("sticky-close-btn")) {
-            this.document.querySelector('.spz-sticky-footer').remove();
-            document.querySelector('#__next').style.paddingBottom = "0px";
+        if (e.target.classList.contains("drata-logo")) {
+            document.querySelector('a[href="/"]').click();
         }
         // console.log(e.target.classList)
-        if (e.target.classList.contains("trigger-demo-btn")) {
+        if (e.target.classList.contains("get-a-demo")) {
             document.querySelector('a[href="/demo"]').click();
         }
     });
@@ -74,13 +65,12 @@
 
     function urlCheck(url) {
 
-        let testURL = 'https://drata.com/';
-        if ((window.location.href.indexOf("/demo") > -1 ||
-            window.location.href.indexOf("/product") > -1 ||
+        let testURL = '';
+        if (window.location.href.indexOf("/product") > -1 ||
             window.location.href.indexOf("/platform") > -1 ||
             window.location.href.indexOf("/blog") > -1 ||
-            window.location.href.indexOf("/resources/reports") > -1) &&
-            window.location.href.indexOf("https://drata.com/") > -1) {
+            window.location.href.indexOf("/resources/reports") > -1 ||
+            window.location.href == "https://drata.com/") {
             testURL = window.location.href;
         }
         if (isSameUrl(url, testURL, true)) {
@@ -91,10 +81,14 @@
     }
 
     function removeTest() {
-        if (document.querySelector('.spz-sticky-footer')) {
-            document.querySelector('.spz-sticky-footer').remove();
-            document.querySelector('#__next').style.paddingBottom = "0px";
+        if (document.querySelector('body.active')) {
+            document.body.classList.remove('active');
         }
+        if (document.querySelector('.exit-modal-sec-spz')) {
+            document.querySelector('.exit-modal-sec-spz').remove();
+        }
+        exitIntentPopup(false);
+
         document.body.classList.remove("spz-3001");
     }
 
@@ -221,14 +215,13 @@
             }
         }, false);
     }
-    exitIntentPopup();
 
     // Show popup after {coolDownTime} seconds in tablet and mobile
-    if (window.innerWidth < 1280) {
-        setTimeout(() => {
-            showExitPopup(true);
-            coolDown = true;
-        }, coolDownTime * 1000);
-    }
+    // if (window.innerWidth < 1280) {
+    //     setTimeout(() => {
+    //         showExitPopup(true);
+    //         coolDown = true;
+    //     }, coolDownTime * 1000);
+    // }
 })();
 

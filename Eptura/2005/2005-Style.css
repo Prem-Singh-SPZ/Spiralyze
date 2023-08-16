@@ -295,6 +295,12 @@ body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoF
 body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorMsg {
   margin-top: -20px;
 }
+body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
 body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   margin: 0 !important;
 }
@@ -442,12 +448,13 @@ body.spz-2005 .body-wrapper #hero form.mktoForm .mktoButtonRow {
   text-align: center;
 }
 body.spz-2005 .body-wrapper #hero form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+  all: initial;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 140px !important;
   height: 50px !important;
-  padding: 0px 8px !important;
+  padding: 0px !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;

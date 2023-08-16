@@ -40,6 +40,10 @@ body.spz-3001 {
             .drata-logo {
               max-width: 136px;
               height: auto;
+
+              img {
+                pointer-events: none;
+              }
             }
           }
 
@@ -49,6 +53,12 @@ body.spz-3001 {
             right: 30px;
             height: 24px;
             width: 24px;
+            background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691053194/drata/3001/close.svg)
+              no-repeat center;
+            opacity: 0.5;
+            &:hover {
+              opacity: 0.8;
+            }
           }
         }
 
@@ -65,7 +75,7 @@ body.spz-3001 {
             align-items: center;
 
             .g2-logo {
-              width: 28px;
+              width: 32px;
               height: 32px;
               margin-right: 12px;
             }
@@ -131,6 +141,7 @@ body.spz-3001 {
               img {
                 width: 24px;
                 height: 24px;
+                pointer-events: none;
               }
 
               &:hover {

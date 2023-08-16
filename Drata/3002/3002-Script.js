@@ -21,9 +21,9 @@ window.addEventListener("click", function (e) {
         document.querySelector('#__next').style.paddingBottom = "0px";
     }
     // console.log(e.target.classList)
-    if (e.target.classList.contains("trigger-demo-btn")) {
-        document.querySelector('a[href="/demo"]').click();
-    }
+    // if (e.target.classList.contains("trigger-demo-btn")) {
+    //     document.querySelector('a[href="/demo"]').click();
+    // }
 });
 
 
@@ -41,7 +41,7 @@ function insertStickySection() {
                 <div class="ratings"><span>4.9 </span> (461 reviews)</div>
             </div>
             <div class="right-content">
-                <a href="javascript:void(0)" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" /></a>
+                <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" /></a>
             </div>
             </div>
             <div class="close-sticky">

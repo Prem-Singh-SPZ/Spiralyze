@@ -46,12 +46,20 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-
   max-width: 136px;
   height: auto;
 }
+body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-drata-logo .drata-logo img {
+  pointer-events: none;
+}
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-close-btn {
   position: absolute;
   top: 24px;
   right: 30px;
   height: 24px;
   width: 24px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691053194/drata/3001/close.svg) no-repeat center;
+  opacity: 0.5;
+}
+body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-close-btn:hover {
+  opacity: 0.8;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner {
   padding: 40px 64px 64px;
@@ -81,7 +89,7 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ratin
           align-items: center;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ratings-section .g2-logo {
-  width: 28px;
+  width: 32px;
   height: 32px;
   margin-right: 12px;
 }
@@ -146,6 +154,7 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-c
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo img {
   width: 24px;
   height: 24px;
+  pointer-events: none;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo:hover {
   color: #c0ff60;
