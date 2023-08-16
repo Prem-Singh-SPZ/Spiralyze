@@ -1,0 +1,159 @@
+body.spz-3001 {
+  //Exit intent pop up Css starts here
+  #__next {
+    .exit-modal-sec-spz {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: linear-gradient(
+          0deg,
+          rgba(4, 102, 186, 0.08) 0%,
+          rgba(4, 102, 186, 0.08) 100%
+        ),
+        rgba(0, 0, 0, 0.6);
+      z-index: 99;
+      display: none;
+      justify-content: center;
+      align-items: flex-start;
+      overflow: auto;
+      @media (min-height: 550px) {
+        align-items: center;
+      }
+
+      .ems-content {
+        border-radius: 8px;
+        background: #0580e8;
+        box-shadow: 0px 32px 120px 0px rgba(0, 0, 0, 0.32);
+        max-width: 740px;
+        margin: 32px 0;
+
+        .ems-content-header {
+          padding: 24px 0px;
+          border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+          position: relative;
+          display: flex;
+          justify-content: center;
+
+          .ems-drata-logo {
+            .drata-logo {
+              max-width: 136px;
+              height: auto;
+            }
+          }
+
+          .ems-close-btn {
+            position: absolute;
+            top: 24px;
+            right: 30px;
+            height: 24px;
+            width: 24px;
+          }
+        }
+
+        .ems-content-inner {
+          padding: 40px 64px 64px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          flex-direction: column;
+
+          .ratings-section {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .g2-logo {
+              width: 28px;
+              height: 32px;
+              margin-right: 12px;
+            }
+
+            .star-rating {
+              width: 108px;
+              height: 20px;
+              margin-right: 12px;
+            }
+
+            .rating-no {
+              color: var(--neutrals-white-fff, #fff);
+              font-family: Inter;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px; /* 146.667% */
+              span {
+                font-weight: 600;
+              }
+            }
+          }
+
+          h6 {
+            color: var(--neutrals-white-fff, #fff);
+            text-align: center;
+            font-family: Darker Grotesque;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 48px; /* 85.714% */
+            letter-spacing: -0.48px;
+            margin: 4px 0;
+          }
+
+          p {
+            color: var(--neutrals-white-fff, #fff);
+            text-align: center;
+            font-family: Inter;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 28px; /* 140% */
+          }
+
+          .ems-cta {
+            .get-a-demo {
+              border-radius: 4px;
+              background: var(--neutrals-black-000, #000);
+              display: flex;
+              padding: 18px 40px;
+              justify-content: center;
+              align-items: center;
+              color: var(--neutrals-white-fff, #fff);
+              text-align: center;
+              font-family: Inter;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 28px; /* 140% */
+              text-decoration: none;
+
+              img {
+                width: 24px;
+                height: 24px;
+              }
+
+              &:hover {
+                color: #c0ff60;
+              }
+
+              &:focus {
+                color: #c0ff60;
+                background: var(--neutrals-gray-900, #303030);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    overflow: hidden;
+    #__next {
+      .exit-modal-sec-spz {
+        display: flex;
+      }
+    }
+  }
+}

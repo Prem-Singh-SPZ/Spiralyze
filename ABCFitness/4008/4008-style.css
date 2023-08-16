@@ -1,0 +1,350 @@
+.exit-modal-sec-spz {
+  display: none;
+}
+
+.spz-4008.active {
+  overflow: hidden;
+  animation: fadeIn 0.5s;
+}
+.spz-4008.active::before {
+  content: "";
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  opacity: 0.6;
+  z-index: 90000;
+}
+.spz-4008.active .exit-modal-sec-spz {
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  left: 0;
+  top: 0;
+  overflow-x: hidden;
+  overflow-y: auto;
+  border-radius: 0;
+  z-index: 900009;
+  display: block;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content {
+  position: relative;
+  width: 1130px;
+  height: 760px;
+  left: calc(50% - 565px);
+  top: calc(50% - 380px);
+  border-radius: 16px;
+  background: #fff;
+  overflow: hidden;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn {
+  position: absolute;
+  top: 23px;
+  right: 23px;
+  width: 18px;
+  height: 18px;
+  cursor: pointer;
+  outline: none !important;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn .close-ico.active {
+  display: none;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn:hover .default {
+  display: none;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn:hover .active {
+  display: inline-block;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn:hover .tab-only {
+  display: none;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn:hover .desk-xl-only {
+  display: inline-block;
+}
+@media (max-width: 1280px) {
+  .spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn:hover .tab-only {
+    display: inline-block;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn:hover .desk-xl-only {
+    display: none;
+  }
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner {
+  display: flex;
+  flex-wrap: wrap;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left {
+  width: 690px;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary {
+  padding: 96px 70px 0;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > p {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 100%;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #37465a;
+  margin-bottom: 18px;
+  z-index: 2;
+  position: relative;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > h1 {
+  position: relative;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 42px;
+  letter-spacing: -0.01em;
+  color: #37465a;
+  margin-bottom: 13.5px;
+  z-index: 2;
+  max-width: 540px;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > h1 strong {
+  font-weight: 700;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul {
+  list-style: none;
+  padding-left: 12px;
+  padding-right: 2px;
+  margin-bottom: 32.5px;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul li {
+  position: relative;
+  font-weight: 400;
+  font-size: 18px;
+  line-height: 26px;
+  color: #37465a;
+  margin-bottom: 16px;
+  z-index: 2;
+  padding-left: 0;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul li span {
+  font-weight: 700;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul li::before {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1683892196/ABCFitnessSolutions/4008/check_icon.svg");
+  top: -3.5px;
+  left: -32px;
+  position: absolute;
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-right {
+  width: 440px;
+  height: 760px;
+  background: linear-gradient(90deg, #134a99 0%, #29a9e1 100%);
+}
+.spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-right .ems-img {
+  width: calc(100% + 0.5px);
+  height: auto;
+  max-width: calc(100% + 0.5px);
+}
+.spz-4008.active .exit-modal-sec-spz .btn-hero-spz {
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  line-height: 28px;
+  color: #fff;
+  background: #ff7335;
+  padding: 20px 32.5px 12px 32.5px;
+  margin-bottom: 64px;
+  letter-spacing: 0;
+}
+.spz-4008.active .exit-modal-sec-spz .btn-hero-spz::after {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1683890902/ABCFitnessSolutions/4008/arrow-right.svg");
+  display: inline-block;
+  width: 17px;
+  height: 12px;
+  margin-left: 10px;
+}
+@media (max-width: 767px) {
+  .spz-4008.active .exit-modal-sec-spz .btn-hero-spz {
+    width: 100%;
+    max-width: 320px;
+  }
+}
+.spz-4008.active .exit-modal-sec-spz .btn-hero-spz:hover {
+  background-color: #00aeef !important;
+}
+.spz-4008.active .hero-logo-slider > p {
+  font-family: "aktiv-grotesk", "aktiv-grotesk-web", sans-serif;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 23px;
+  color: #151515;
+  letter-spacing: -0.1px;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container {
+  position: relative;
+  margin-top: 30px;
+  width: 100%;
+  overflow: hidden;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container::after {
+  content: "";
+  background: linear-gradient(90deg, #d9d9d9 0%, #ffffff 0.01%, rgba(255, 255, 255, 0) 100%);
+  position: absolute;
+  width: 40px;
+  height: 58px;
+  left: 0px;
+  top: 0px;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container marquee img {
+  width: auto;
+  max-height: 58px;
+  padding-right: 70px;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container .swiper-wrapper {
+  align-items: center;
+  z-index: 0;
+  animation: scroll 25s linear infinite;
+  display: flex;
+  width: 1866px;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container .swiper-wrapper > div {
+  text-align: center;
+  width: auto;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container .swiper-wrapper > div img {
+  padding: 0 30px;
+  width: auto;
+  max-height: 58px;
+}
+.spz-4008.active .hero-logo-slider .partner-img-container::before {
+  content: "";
+  position: absolute;
+  width: 40px;
+  height: 58px;
+  left: auto;
+  top: 0px;
+  right: 0;
+  z-index: 1;
+  background: linear-gradient(90deg, #d9d9d9 0%, #ffffff 0.01%, rgba(255, 255, 255, 0) 100%);
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+@media (max-width: 1280px) {
+  .spz-4008.active .exit-modal-sec-spz {
+    width: 100%;
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    overflow-x: hidden;
+    overflow-y: auto;
+    border-radius: 0;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content {
+    position: absolute;
+    top: 80px;
+    left: calc(50% - 345px);
+    width: 690px;
+    height: auto;
+    border-radius: 16px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .btn-hero-spz {
+    padding: 20px 32px 12px 32.5px;
+    margin-left: -0.5px;
+    margin-bottom: 63.5px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner {
+    flex-direction: column;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left {
+    width: 100%;
+    margin-bottom: 81.5px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul {
+    margin-bottom: 33px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul li::before {
+    top: -3px;
+    left: -32.5px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-right {
+    width: 100%;
+    height: 479px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-tab-spacer {
+    height: 100px;
+    margin-top: 1300px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-4008.active .exit-modal-sec-spz .ems-content {
+    top: 25.5px;
+    left: calc(50% - 160px);
+    width: 320px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content .ems-close-btn {
+    top: 16px;
+    right: 16px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .btn-hero-spz {
+    margin-left: 0;
+    max-width: 280px;
+    margin-bottom: 38.5px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left {
+    margin-bottom: 0;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary {
+    padding: 40px 19.5px 28px 20px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > h1 {
+    font-size: 24px;
+    line-height: 31px;
+    margin-bottom: 2px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul {
+    margin-bottom: 21.5px;
+    padding-right: 0;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul li {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-left .hero-left-summary > ul li::before {
+    top: -2px;
+    left: -32px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-content-inner .ems-content-inner-right {
+    height: 440px;
+  }
+  .spz-4008.active .exit-modal-sec-spz .ems-tab-spacer {
+    height: 100px;
+    margin-top: 1120px;
+  }
+  .spz-4008.active .hero-logo-slider > p {
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 21px;
+    text-align: center;
+  }
+  .spz-4008.active .hero-logo-slider .partner-img-container {
+    margin-top: 32px;
+  }
+  .spz-4008.active .hero-logo-slider .partner-img-container .swiper-wrapper > div img {
+    max-height: 34.45px;
+    padding: 0 20px;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-933px);
+  }
+}
