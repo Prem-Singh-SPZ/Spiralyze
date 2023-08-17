@@ -414,7 +414,6 @@ body.spz-3002 {
                             #0d122e
                           ) !important;
                           text-overflow: ellipsis;
-                          white-space: nowrap;
                           font-family: $eptura-font !important;
                           font-size: 16px !important;
                           font-style: normal;
@@ -424,6 +423,7 @@ body.spz-3002 {
 
                           &:not(#Lead_Notes__c) {
                             height: 48px !important;
+                            white-space: nowrap;
                             @media (min-width: 767.98px) {
                               // max-width: calc(100% - 10px);
                               max-width: 100%;
@@ -450,6 +450,13 @@ body.spz-3002 {
                             .mktoErrorMsg {
                               margin-top: -20px;
                             }
+                          }
+
+                          &:-webkit-autofill {
+                            -webkit-box-shadow: 0 0 0 30px white inset !important;
+                          }
+                          &:autofill {
+                            -webkit-box-shadow: 0 0 0 30px white inset !important;
                           }
                         }
 

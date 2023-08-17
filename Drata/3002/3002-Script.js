@@ -1,7 +1,7 @@
 function createTest3002() {
     document.body.classList.add('spz-3002');
 
-    waitForElm('#__next #reactHubspotForm0 .hs-form-private').then(function () {
+    waitForElm('#__next .hs-form-private').then(function () {
         insertStickySection();
     });
 

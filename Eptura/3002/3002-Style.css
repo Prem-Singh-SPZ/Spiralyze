@@ -433,7 +433,6 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   overflow: hidden;
   color: var(--primary-neutrals-n-1, #0d122e) !important;
   text-overflow: ellipsis;
-  white-space: nowrap;
   font-family: "Eptura Flexible", Arial, sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
@@ -443,6 +442,7 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
   height: 48px !important;
+  white-space: nowrap;
 }
 @media (min-width: 767.98px) {
   body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
@@ -468,6 +468,12 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorMsg {
   margin-top: -20px;
+}
+body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   margin: 0 !important;

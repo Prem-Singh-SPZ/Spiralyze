@@ -6,21 +6,17 @@
     test_url: 'https://abcfitness.com/',
     main_class: 'body',
   }
-  var content = document.createElement("script");
-  content.src = "https://code.jquery.com/jquery-3.7.0.min.js";
-  document.head.appendChild(content);
+
   var slickCDN = document.createElement("script");
-  content.onload = function () {
-    slickCDN.src = "https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js";
-    document.head.appendChild(slickCDN);
-    document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" />`)
-  };
+  slickCDN.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js";
+  document.head.appendChild(slickCDN);
+  document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />`)
 
   function loadTest() {
     // Set test class
     document.body.classList.add(TEST_ENV.class);
-    waitForElm('main').then(function () {
-      heroContentUpdate();
+    waitForElm('#main').then(function () {
+      // heroContentUpdate();
       webinarSlider();
 
       slickCDN.onload = function () {
@@ -28,7 +24,7 @@
       };
 
     });
-    document.body.classList.add("loaded");
+    // document.body.classList.add("loaded");
 
     document.querySelector('head').insertAdjacentHTML('beforeend', `
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -40,30 +36,50 @@
   function initSlider() {
     if (document.querySelectorAll('.swiper-wrapper').length > 0) {
       let sliderInt = setInterval(() => {
-        if (document.querySelectorAll('.swiper-wrapper.slick-initialized').length > 0) {
+        if (document.querySelectorAll('.swiper.swiper-initialized ').length > 0) {
           clearInterval(sliderInt);
           document.querySelector('.swiper-wrapper').style.opacity = 1;
         }
         else {
-          $('.swiper-wrapper').slick({
-            slidesToShow: 1,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 3000,
+          const swiper = new Swiper('.swiper', {
+            // Optional parameters
+            direction: 'horizontal',
+            slidesPerView: 1,
+            loop: true,
+            centeredSlides: true,
+            // autoplay: {
+            //   delay: 3000,
+            //   disableOnInteraction: false
+            // },
+
+
+            // Navigation arrows
+            navigation: {
+              nextEl: '.swiper-next',
+              prevEl: '.swiper-prev',
+            },
+
+           
           });
-          $('.slick-arrow').on('click', function () {
-            $('.swiper-wrapper').slick('slickPlay');
-          });
-          $('.swiper-wrapper').on('afterChange', function () {
-            $('.swiper-wrapper').slick('slickPlay');
-          });
+          // jQuery('.swiper-wrapper').slick({
+          //   slidesToShow: 1,
+          //   slidesToScroll: 1,
+          //   autoplay: true,
+          //   autoplaySpeed: 3000,
+          // });
+          // jQuery('.slick-arrow').on('click', function () {
+          //   jQuery('.swiper-wrapper').slick('slickPlay');
+          // });
+          // jQuery('.swiper-wrapper').on('afterChange', function () {
+          //   jQuery('.swiper-wrapper').slick('slickPlay');
+          // });
         }
       }, 200);
     }
   }
 
   function webinarSlider() {
-    document.querySelector('body > main.l-body-wrapper .c-text-image-repeater.c-text-image-repeater--default').insertAdjacentHTML('beforeend', `<div class="spz-webinar-slider-section">
+    document.querySelector('#primary #main .entry-content > .wp-block-genesis-blocks-gb-columns:nth-child(4)').insertAdjacentHTML('afterend', `<div class="spz-webinar-slider-section">
         <div class="webinar-section-title">
             <h3>Get free resources to grow your gym and streamline operations</h3>
         </div>
@@ -79,9 +95,7 @@
             <div class="slider-content">
               <h6>New Member Onboarding Guide</h6>
               <p>
-                Top 5 factors that drive retention for every gym type. Pricing
-                strategies that actually increase retention, even during a
-                recession.
+              Get our step-by-step playbook to attracting, onboarding, and retaining more members. Includes 5 loyalty-boosting email templates and when to send them.
               </p>
               <div class="slider-cta">
                 <a class="lg-cta"
@@ -176,80 +190,19 @@
             </div>
           </div>
         </div>
-      </div>
+        </div>
+        <div class="swiper-prev"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1691559726/abcfitnessignite/5006/arrow_10.svg" alt="left arrow" class="unhovered" /><img src="//res.cloudinary.com/spiralyze/image/upload/v1691559726/abcfitnessignite/5006/arrow_11.svg" alt="left arrow" class="hovered" /></div>
+        <div class="swiper-next"><img src="//res.cloudinary.com/spiralyze/image/upload/v1691559726/abcfitnessignite/5006/arrow_9.svg" alt="right arrow" class="unhovered" /><img src="//res.cloudinary.com/spiralyze/image/upload/v1691559726/abcfitnessignite/5006/arrow_12.svg" alt="right arrow" class="hovered" /></div>
     </div>`);
   }
 
-  function heroContentUpdate() {
-    document.querySelector('body > main.l-body-wrapper section.c-hero .c-hero__content .c-hero__info-wrapper').insertAdjacentHTML('afterend', `
-        <div class="interface-hero-spz">
-            <picture>
-                <source media="(min-width:1200px)"
-                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5002/hero-interface.png">
-                <source media="(min-width:768px)"
-                    srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5002/hero-interface.png">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5002/hero-interface-mob.png"
-                    alt="Interface hero" title="Interface hero">
-            </picture>
-        </div>`);
-
-    document.querySelector('body > main.l-body-wrapper section.c-hero .c-hero__content .c-hero__info-wrapper').insertAdjacentHTML('beforeend', `
-            <div class="spz-hero-container">
-                <a href="https://abcfitness.com/request-a-demo/" class="c-btn c-btn--primary btn-hero-spz">Request a demo</a>
-                <div class="hero-bottom-content">
-                    <p>Join 20,000+ gyms & studios using ABC Fitness Solutions</p>
-                    <picture>
-                        <source media="(min-width:1200px)"
-                            srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5002/social-proof.png">
-                        <source media="(min-width:768px)"
-                            srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5002/social-proof-tab.png">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/ABCFitnessSolutions/5002/social-proof-mob.png"
-                            alt="Social Icons" title="Social Icons">
-                    </picture>
-                </div>
-            </div>
-
-            <div class="border-rainbow-spz">
-                <div class="rainbow-bg-spz"></div>
-            </div>`);
-  }
-
-  function headerNavChange() {
-    document.body.classList.add('spz-5001-header');
-    document.querySelector('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper').insertAdjacentHTML('beforeend', `
-            <div class="spz-header-cta-container">
-                <div class="spz-header-cta-primary">
-                    <a class="c-header-action-links__item c-header-action-links__item--first spz-login-btn" target="">LogIn / Support </a>
-                </div>
-                <div class="spz-header-cta-secondary">
-                    <a class="c-header-action-links__item c-header-action-links__item--second" href="https://abcfitness.com/request-a-demo/">Book A Demo</a>
-                </div>
-            </div>`);
-
-    waitForElm('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .spz-header-cta-container').then(function () {
-      moveElement('header#header .l-header__inner .l-header__action-links-wrapper--top.c-header-action-links__wrapper .c-header-action-links__items-wrapper', '.spz-header-cta-container .spz-header-cta-primary');
-    });
-
-    waitForElm('.spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
-      cloneElement('.spz-header-cta-container', 'header#header');
-      cloneElement('.spz-header-cta-container', 'header#header .l-header__inner .l-header__container.l-header__container--bottom .l-header__action-links-wrapper--not-top');
-
-
-    });
-
-    waitForElm('header#header > .spz-header-cta-container .c-header-action-links__items-wrapper').then(function () {
-      document.querySelectorAll('.c-header-action-links__items-wrapper').forEach(function (v, i) {
-        v.insertAdjacentHTML('afterbegin', `<p>Your Account</p>`);
-      });
-    });
-  }
 
   // Generic
   let url = location.href;
   urlCheck(url);
 
   function urlCheck(url) {
-    let testURL = TEST_ENV.test_url;
+    let testURL = location.href;
     if (url == testURL) {
       waitForElm(TEST_ENV.main_class).then(function () {
         loadTest();
@@ -258,9 +211,9 @@
       removeTest();
     }
 
-    if (document.querySelectorAll('.spz-login-btn').length == 0) {
-      headerNavChange();
-    }
+    // if (document.querySelectorAll('.spz-login-btn').length == 0) {
+    //   headerNavChange();
+    // }
   }
 
   function removeTest() {
