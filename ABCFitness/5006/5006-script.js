@@ -2,14 +2,14 @@
   const TEST_ENV = {
     name: 'spz-home-hero-5006',
     class: 'spz-5006',
-    date: '31-05-23',
+    date: '17-08-23',
     test_url: 'https://abcfitness.com/',
     main_class: 'body',
   }
 
-  var slickCDN = document.createElement("script");
-  slickCDN.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js";
-  document.head.appendChild(slickCDN);
+  var swiperCDN = document.createElement("script");
+  swiperCDN.src = "https://cdnjs.cloudflare.com/ajax/libs/Swiper/10.1.0/swiper-bundle.min.js";
+  document.head.appendChild(swiperCDN);
   document.head.insertAdjacentHTML('beforeend', `<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />`)
 
   function loadTest() {
@@ -19,18 +19,11 @@
       // heroContentUpdate();
       webinarSlider();
 
-      slickCDN.onload = function () {
+      swiperCDN.onload = function () {
         initSlider();
       };
 
     });
-    // document.body.classList.add("loaded");
-
-    document.querySelector('head').insertAdjacentHTML('beforeend', `
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;700&display=swap" rel="stylesheet">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1685534659/ABCFitnessSolutions/5006/assets/arrow-hovered.svg" as="image">`);
   }
 
   function initSlider() {
@@ -47,10 +40,11 @@
             slidesPerView: 1,
             loop: true,
             centeredSlides: true,
-            // autoplay: {
-            //   delay: 3000,
-            //   disableOnInteraction: false
-            // },
+            autoplay: {
+              delay: 3000,
+              disableOnInteraction: false,
+              pauseOnMouseEnter: true
+            },
 
 
             // Navigation arrows
@@ -59,20 +53,8 @@
               prevEl: '.swiper-prev',
             },
 
-           
+
           });
-          // jQuery('.swiper-wrapper').slick({
-          //   slidesToShow: 1,
-          //   slidesToScroll: 1,
-          //   autoplay: true,
-          //   autoplaySpeed: 3000,
-          // });
-          // jQuery('.slick-arrow').on('click', function () {
-          //   jQuery('.swiper-wrapper').slick('slickPlay');
-          // });
-          // jQuery('.swiper-wrapper').on('afterChange', function () {
-          //   jQuery('.swiper-wrapper').slick('slickPlay');
-          // });
         }
       }, 200);
     }
@@ -202,18 +184,13 @@
   urlCheck(url);
 
   function urlCheck(url) {
-    let testURL = location.href;
-    if (url == testURL) {
+    if (url.indexOf("https://abcfitness.com/") > -1) {
       waitForElm(TEST_ENV.main_class).then(function () {
         loadTest();
       });
     } else {
       removeTest();
     }
-
-    // if (document.querySelectorAll('.spz-login-btn').length == 0) {
-    //   headerNavChange();
-    // }
   }
 
   function removeTest() {
@@ -233,22 +210,6 @@
       });
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
-  }
-
-  function cloneElement(source, target) {
-    if (document.querySelector(source) && document.querySelector(target)) {
-      const sc = document.querySelector(source);
-      const clone = sc.cloneNode(true);
-      document.querySelector(target).appendChild(clone);
-    }
-  }
-
-  function moveElement(sourceElm, targetLoc) {
-    const f = document.createDocumentFragment();
-    if (document.querySelector(sourceElm) != null) {
-      f.appendChild(document.querySelector(sourceElm));
-      document.querySelector(targetLoc).appendChild(f);
-    }
   }
 
   // Add class 'safari' (used for cart scrollbar)
