@@ -115,10 +115,11 @@ urlCheck(url);
 
 function urlCheck(url) {
     let testURL = '';
-    if (window.location.href.indexOf("https://drata.com/blog") > -1) {
+    if (window.location.href.indexOf("/blog") > -1) {
         testURL = window.location.href;
     }
-    if (isSameUrl(url, testURL, true)) {
+
+    if (isSameUrl(url, testURL, false)) {
         createTest3002();
     } else {
         removeTest();

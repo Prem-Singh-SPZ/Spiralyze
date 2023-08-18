@@ -9,6 +9,9 @@ body.spz-2005 #HeaderScripts > div {
 body.spz-2005 .body-wrapper #twocol_form {
   display: none !important;
 }
+body.spz-2005 .body-wrapper #nav {
+  z-index: 9;
+}
 @media (max-width: 1199.98px) {
   body.spz-2005 .body-wrapper #nav nav {
     padding: 0 40px;
@@ -372,6 +375,7 @@ body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoF
   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg") left center no-repeat;
 }
 body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
+  z-index: 1;
   margin-top: 48px !important;
 }
 body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
@@ -422,7 +426,7 @@ body.spz-2005 .body-wrapper #hero form.mktoForm .mktoFormRow .spz-anchor:not(.sp
   font-size: 16px;
   font-style: normal;
   font-weight: 300;
-  line-height: 28px;
+  line-height: 24px;
   margin-bottom: 23px;
   display: inline-block;
   margin-left: 10px;
@@ -469,7 +473,7 @@ body.spz-2005 .body-wrapper #hero form.mktoForm .mktoButtonRow .mktoButtonWrap b
   font-size: 16px !important;
   font-style: normal;
   font-weight: 500;
-  line-height: 22px !important; /* 150% */
+  line-height: 24px !important; /* 150% */
   margin-top: 21px !important;
   white-space: nowrap;
 }

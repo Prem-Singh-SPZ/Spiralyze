@@ -31,6 +31,7 @@
             if (e.target.classList.contains("mktoButton")) {
                 document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
                     checkError(el);
+                    showGlobalError();
                 });
             }
         });
@@ -38,11 +39,29 @@
         );
     }
 
+    //Global Error msg custom
+    function showGlobalError() {
+        if (document.querySelector('#Lead_Notes__c') && !document.querySelector('#Lead_Notes__c').value) {
+            if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
+                document.querySelector('#Lead_Notes__c').value = ".";
+            }
+        }
+
+        if (document.querySelectorAll('.mktoForm .mktoInvalid').length > 0 && document.querySelectorAll('.mktoForm .mktoButtonRow .spz-cstm-error').length == 0) {
+            document.querySelector('.mktoForm .mktoButtonRow').insertAdjacentHTML('afterbegin', `<p class="spz-cstm-error">Please complete all fields.</p>`);
+        }
+        else {
+            if (document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error')) {
+                document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error').remove();
+            }
+        }
+    }
+
     //Marketo form update
     function formUpdate() {
         //Remove first options from dropdown
-        document.querySelector('#Country option:first-child').textContent = '';
-        document.querySelector('#I_am__c option:first-child').textContent = '';
+        // document.querySelector('#Country option:first-child').textContent = '';
+        // document.querySelector('#I_am__c option:first-child').textContent = '';
 
         document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
@@ -96,7 +115,7 @@
         }, 50);
 
         waitForElm('#Solution_Type__c').then(function () {
-            document.querySelector('#Solution_Type__c option:first-child').textContent = '';
+            // document.querySelector('#Solution_Type__c option:first-child').textContent = '';
             let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
             document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
         });

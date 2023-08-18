@@ -424,13 +424,14 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   transition: all 0.3s ease-in-out;
   pointer-events: none;
   max-width: calc(100% - 58px);
+  background: #fff;
+  right: 0;
 }
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   border-radius: 4px;
   border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
   width: 280px;
   padding: 11px 16px 10px 16px !important;
-  overflow: hidden;
   color: var(--primary-neutrals-n-1, #0d122e) !important;
   text-overflow: ellipsis;
   font-family: "Eptura Flexible", Arial, sans-serif !important;
@@ -441,6 +442,7 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   margin-bottom: 20px !important;
 }
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+  overflow: hidden;
   height: 48px !important;
   white-space: nowrap;
 }
@@ -548,6 +550,7 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -8px;
   left: 11px;
+  right: auto;
   padding: 0 5px !important;
   font-family: "Eptura Flexible", Arial, sans-serif;
   color: var(--accents-a-5, #904ab0) !important;
@@ -561,6 +564,7 @@ body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3002 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
   top: -8px;
   left: 11px;
+  right: auto;
   font-family: "Eptura Flexible", Arial, sans-serif;
   padding: 0 5px !important;
   font-size: 13px !important;

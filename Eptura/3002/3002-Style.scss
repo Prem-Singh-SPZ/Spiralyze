@@ -400,6 +400,8 @@ body.spz-3002 {
                           transition: all 0.3s ease-in-out;
                           pointer-events: none;
                           max-width: calc(100% - 58px);
+                          background: #fff;
+                          right: 0;
                         }
 
                         .mktoField:not([type="checkbox"]) {
@@ -408,7 +410,6 @@ body.spz-3002 {
                             var(--interactive-colors-a-4, #d6d7f5) !important;
                           width: 280px;
                           padding: 11px 16px 10px 16px !important;
-                          overflow: hidden;
                           color: var(
                             --primary-neutrals-n-1,
                             #0d122e
@@ -422,6 +423,7 @@ body.spz-3002 {
                           margin-bottom: 20px !important;
 
                           &:not(#Lead_Notes__c) {
+                            overflow: hidden;
                             height: 48px !important;
                             white-space: nowrap;
                             @media (min-width: 767.98px) {
@@ -550,6 +552,7 @@ body.spz-3002 {
                           .mktoLabel {
                             top: -8px;
                             left: 11px;
+                            right: auto;
                             padding: 0 5px !important;
                             font-family: $eptura-font;
                             color: var(--accents-a-5, #904ab0) !important;
@@ -568,6 +571,8 @@ body.spz-3002 {
                           .mktoLabel {
                             top: -8px;
                             left: 11px;
+                            right: auto;
+
                             font-family: $eptura-font;
                             padding: 0 5px !important;
                             font-size: 13px !important;
