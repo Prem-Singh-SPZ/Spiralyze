@@ -51,8 +51,8 @@
     //Marketo form update
     function formUpdate() {
         //Remove first options from dropdown
-        document.querySelector('#Country option:first-child').textContent = '';
-        document.querySelector('#I_am__c option:first-child').textContent = '';
+        // document.querySelector('#Country option:first-child').textContent = '';
+        // document.querySelector('#I_am__c option:first-child').textContent = '';
 
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
             document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
@@ -105,7 +105,7 @@
         }, 50);
 
         waitForElm('#Solution_Type__c').then(function () {
-            document.querySelector('#Solution_Type__c option:first-child').textContent = '';
+            // document.querySelector('#Solution_Type__c option:first-child').textContent = '';
             let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
             document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
         });
@@ -258,6 +258,22 @@
                 document.querySelector('#hero #HeroText > h1.pt-4').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/archibus-ui.webp" alt="optimize your maintenance operation" width= "488px"
                 height="260px">`;
                 document.body.classList.add('ppc-archibus-demo');
+            }
+
+            else if (window.location.href.indexOf('ppc-eptura-room-management') > -1) {
+                document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
+
+                // document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
+                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Make hybrid work, work');
+                document.body.classList.add('ppc-eptura-room');
+            }
+
+            else if (window.location.href.indexOf('ppc-eptura-asset-management') > -1) {
+                document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
+
+                // document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
+                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Maximize the performance');
+                document.body.classList.add('ppc-eptura-asset');
             }
 
             else if (window.location.href.indexOf('ppc-eptura') > -1) {

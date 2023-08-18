@@ -41,20 +41,28 @@
 
     //Global Error msg custom
     function showGlobalError() {
-        if (document.querySelector('#Lead_Notes__c') && !document.querySelector('#Lead_Notes__c').value) {
-            if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
-                document.querySelector('#Lead_Notes__c').value = ".";
+        let timeBuffer = setInterval(() => {
+            if (document.querySelector('#Lead_Notes__c') && !document.querySelector('#Lead_Notes__c').value) {
+                if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
+                    document.querySelector('#Lead_Notes__c').value = ".";
+                }
             }
-        }
 
-        if (document.querySelectorAll('.mktoForm .mktoInvalid').length > 0 && document.querySelectorAll('.mktoForm .mktoButtonRow .spz-cstm-error').length == 0) {
-            document.querySelector('.mktoForm .mktoButtonRow').insertAdjacentHTML('afterbegin', `<p class="spz-cstm-error">Please complete all fields.</p>`);
-        }
-        else {
-            if (document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error')) {
-                document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error').remove();
+            if (document.querySelectorAll('.mktoForm .mktoInvalid').length > 0) {
+                if (document.querySelectorAll('.mktoForm .mktoButtonRow .spz-cstm-error').length == 0) {
+                    document.querySelector('.mktoForm .mktoButtonRow').insertAdjacentHTML('afterbegin', `<p class="spz-cstm-error">Please complete all required fields.</p>`);
+                }
             }
-        }
+            else {
+                if (document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error')) {
+                    document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error').remove();
+                }
+            }
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(timeBuffer);
+        }, 1000);
     }
 
     //Marketo form update
