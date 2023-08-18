@@ -263,6 +263,11 @@
             else if (window.location.href.indexOf('ppc-eptura-room-management') > -1) {
                 document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
 
+                // document.querySelector('#hero #HeroText').insertAdjacentHTML('afterbegin', `<div class="spz-wrapper-div"></div>`);
+                // document.querySelector('.spz-wrapper-div').insertAdjacentElement('afterbegin', document.querySelector('#hero #HeroText > p'));
+                // document.querySelector('.spz-wrapper-div').insertAdjacentElement('afterbegin', document.querySelector('#hero #HeroText > h6'));
+                // document.querySelector('.spz-wrapper-div').insertAdjacentElement('afterbegin', document.querySelector('#hero #HeroText > h1'));
+
                 // document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
                 document.querySelector('#hero #HeroText img').setAttribute('alt', 'Make hybrid work, work');
                 document.body.classList.add('ppc-eptura-room');
@@ -270,6 +275,11 @@
 
             else if (window.location.href.indexOf('ppc-eptura-asset-management') > -1) {
                 document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
+
+                // document.querySelector('#hero #HeroText').insertAdjacentHTML('afterbegin', `<div class="spz-wrapper-div"></div>`);
+                // document.querySelector('.spz-wrapper-div').insertAdjacentElement('afterbegin', document.querySelector('#hero #HeroText > p'));
+                // document.querySelector('.spz-wrapper-div').insertAdjacentElement('afterbegin', document.querySelector('#hero #HeroText > h1'));
+                // document.querySelector('.spz-wrapper-div').insertAdjacentElement('afterbegin', document.querySelector('#hero #HeroText > h6'));
 
                 // document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp');
                 document.querySelector('#hero #HeroText img').setAttribute('alt', 'Maximize the performance');
@@ -301,4 +311,9 @@
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
     }
+
+    function insertAfter(referenceNode, newNode) {
+        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
+    }
+
 })();
