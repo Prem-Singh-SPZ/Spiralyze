@@ -37,6 +37,7 @@ body.spz-3001 {
           justify-content: center;
 
           .ems-drata-logo {
+            max-height: 24px;
             .drata-logo {
               max-width: 136px;
               height: auto;
@@ -50,7 +51,7 @@ body.spz-3001 {
           .ems-close-btn {
             position: absolute;
             top: 24px;
-            right: 30px;
+            right: 24px;
             height: 24px;
             width: 24px;
             background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691053194/drata/3001/close.svg)
@@ -88,7 +89,7 @@ body.spz-3001 {
 
             .rating-no {
               color: var(--neutrals-white-fff, #fff);
-              font-family:"Inter",sans-serif;
+              font-family: "Inter", sans-serif;
               font-size: 15px;
               font-style: normal;
               font-weight: 400;
@@ -102,46 +103,52 @@ body.spz-3001 {
           h6 {
             color: var(--neutrals-white-fff, #fff);
             text-align: center;
-            font-family: "Darker Grotesque",sans-serif;
+            font-family: "Darker Grotesque", sans-serif;
             font-size: 56px;
             font-style: normal;
             font-weight: 800;
             line-height: 48px; /* 85.714% */
             letter-spacing: -0.48px;
-            margin: 4px 0;
+            margin: 16px 0 4px;
           }
 
           p {
             color: var(--neutrals-white-fff, #fff);
             text-align: center;
-            font-family:"Inter",sans-serif;
+            font-family: "Inter", sans-serif;
             font-size: 20px;
             font-style: normal;
             font-weight: 400;
             line-height: 28px; /* 140% */
+            padding: 0 10px;
           }
 
           .ems-cta {
+            margin-top: 12px;
             .get-a-demo {
               border-radius: 4px;
               background: var(--neutrals-black-000, #000);
               display: flex;
-              padding: 18px 40px;
+              padding: 18px 36px 18px 36px;
               justify-content: center;
               align-items: center;
               color: var(--neutrals-white-fff, #fff);
               text-align: center;
-              font-family:"Inter",sans-serif;
+              font-family: "Inter", sans-serif;
               font-size: 20px;
               font-style: normal;
               font-weight: 600;
               line-height: 28px; /* 140% */
               text-decoration: none;
+              width: 225px;
+              height: 64px;
+              -webkit-appearance: none;
 
               img {
                 width: 24px;
                 height: 24px;
                 pointer-events: none;
+                margin-left: 8px;
               }
 
               &:hover {

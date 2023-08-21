@@ -412,10 +412,8 @@ body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
   width: 280px;
   padding: 11px 16px 10px 16px !important;
-  overflow: hidden;
   color: var(--primary-neutrals-n-1, #0d122e) !important;
   text-overflow: ellipsis;
-  white-space: nowrap;
   font-family: "Eptura Flexible", Arial, sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
@@ -424,6 +422,8 @@ body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   margin-bottom: 20px !important;
 }
 body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+  white-space: nowrap;
+  overflow: hidden;
   height: 48px !important;
 }
 @media (min-width: 767.98px) {
@@ -450,6 +450,12 @@ body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorMsg {
   margin-top: -20px;
+}
+body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
 body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   margin: 0 !important;
@@ -960,11 +966,6 @@ body.spz-3009.ppc-eptura-asset .body-wrapper #hero .hero_container > .row #HeroT
 }
 @media (max-width: 1199.98px) {
   body.spz-3009.ppc-eptura-asset .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
-    padding-bottom: 44px !important;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-3009.ppc-eptura-asset .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
     padding-bottom: 43px !important;
   }
 }
@@ -996,7 +997,7 @@ body.spz-3009.ppc-eptura-asset .body-wrapper #hero .hero_container > .row #HeroT
 }
 @media (max-width: 767.98px) {
   body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container {
-    padding-top: 8px !important;
+    padding-top: 12px !important;
   }
 }
 @media (min-width: 1199.98px) {
@@ -1015,7 +1016,7 @@ body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroTe
   height: initial;
   max-width: initial;
   max-height: initial;
-  margin-top: 9px;
+  margin-top: -6px;
 }
 @media (max-width: 1199.98px) {
   body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroText img[imagepreview=false] {
@@ -1028,7 +1029,7 @@ body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroTe
   body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroText img[imagepreview=false] {
     width: initial;
     height: initial;
-    margin-top: -8px;
+    margin-top: -4px;
     margin-left: 0;
   }
 }
@@ -1042,6 +1043,13 @@ body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroTe
     font-family: "Eptura Flexible", Arial, sans-serif;
     margin-bottom: 12px;
   }
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroText > h6 {
+    padding-right: 16px;
+  }
+}
+@media (max-width: 1199.98px) {
   body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroText > h1 {
     letter-spacing: 0;
     font-size: 36px;
@@ -1062,7 +1070,7 @@ body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroTe
 }
 @media (min-width: 1199.98px) {
   body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroFormCol {
-    padding-bottom: 118px !important;
+    padding-bottom: 8px !important;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -1072,11 +1080,6 @@ body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row #HeroTe
   }
 }
 @media (max-width: 1199.98px) {
-  body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
-    padding-bottom: 44px !important;
-  }
-}
-@media (max-width: 767.98px) {
   body.spz-3009.ppc-eptura-room .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
     padding-bottom: 43px !important;
   }

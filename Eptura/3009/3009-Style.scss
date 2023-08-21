@@ -383,13 +383,11 @@ body.spz-3009 {
                             var(--interactive-colors-a-4, #d6d7f5) !important;
                           width: 280px;
                           padding: 11px 16px 10px 16px !important;
-                          overflow: hidden;
                           color: var(
                             --primary-neutrals-n-1,
                             #0d122e
                           ) !important;
                           text-overflow: ellipsis;
-                          white-space: nowrap;
                           font-family: $eptura-font !important;
                           font-size: 16px !important;
                           font-style: normal;
@@ -398,6 +396,8 @@ body.spz-3009 {
                           margin-bottom: 20px !important;
 
                           &:not(#Lead_Notes__c) {
+                            white-space: nowrap;
+                            overflow: hidden;
                             height: 48px !important;
                             @media (min-width: 767.98px) {
                               // max-width: calc(100% - 10px);
@@ -425,6 +425,13 @@ body.spz-3009 {
                             .mktoErrorMsg {
                               margin-top: -20px;
                             }
+                          }
+
+                          &:-webkit-autofill {
+                            -webkit-box-shadow: 0 0 0 30px white inset !important;
+                          }
+                          &:autofill {
+                            -webkit-box-shadow: 0 0 0 30px white inset !important;
                           }
                         }
 
@@ -1056,10 +1063,10 @@ body.spz-3009 {
             }
 
             > .col-md.pb-5 {
+              // @media (max-width: 1199.98px) {
+              //   padding-bottom: 44px !important;
+              // }
               @media (max-width: 1199.98px) {
-                padding-bottom: 44px !important;
-              }
-              @media (max-width: 767.98px) {
                 padding-bottom: 43px !important;
               }
               @media (min-width: 1399.98px) {
@@ -1097,7 +1104,7 @@ body.spz-3009 {
             padding-top: 32px !important;
           }
           @media (max-width: 767.98px) {
-            padding-top: 8px !important;
+            padding-top: 12px !important;
           }
           @media (min-width: 1199.98px) {
             padding-bottom: 92px !important;
@@ -1113,7 +1120,7 @@ body.spz-3009 {
                 height: initial;
                 max-width: initial;
                 max-height: initial;
-                margin-top: 9px;
+                margin-top: -6px;
 
                 @media (max-width: 1199.98px) {
                   width: 568px;
@@ -1124,7 +1131,7 @@ body.spz-3009 {
                 @media (max-width: 767.98px) {
                   width: initial;
                   height: initial;
-                  margin-top: -8px;
+                  margin-top: -4px;
                   margin-left: 0;
                 }
               }
@@ -1138,6 +1145,9 @@ body.spz-3009 {
                   letter-spacing: 1.1px;
                   font-family: $eptura-font;
                   margin-bottom: 12px;
+                  @media (max-width: 767.98px) {
+                    padding-right: 16px;
+                  }
                 }
 
                 > h1 {
@@ -1163,7 +1173,7 @@ body.spz-3009 {
 
             #HeroFormCol {
               @media (min-width: 1199.98px) {
-                padding-bottom: 118px !important;
+                padding-bottom: 8px !important;
               }
               #HeroFormPanel {
                 // padding-top: 64px;
@@ -1178,10 +1188,10 @@ body.spz-3009 {
             }
 
             > .col-md.pb-5 {
+              // @media (max-width: 1199.98px) {
+              //   padding-bottom: 44px !important;
+              // }
               @media (max-width: 1199.98px) {
-                padding-bottom: 44px !important;
-              }
-              @media (max-width: 767.98px) {
                 padding-bottom: 43px !important;
               }
               @media (min-width: 1399.98px) {

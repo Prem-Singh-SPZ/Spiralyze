@@ -42,6 +42,9 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header {
       -ms-flex-pack: center;
           justify-content: center;
 }
+body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-drata-logo {
+  max-height: 24px;
+}
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-drata-logo .drata-logo {
   max-width: 136px;
   height: auto;
@@ -52,7 +55,7 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-header .ems-close-btn {
   position: absolute;
   top: 24px;
-  right: 30px;
+  right: 24px;
   height: 24px;
   width: 24px;
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1691053194/drata/3001/close.svg) no-repeat center;
@@ -118,7 +121,7 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner h6 {
   font-weight: 800;
   line-height: 48px; /* 85.714% */
   letter-spacing: -0.48px;
-  margin: 4px 0;
+  margin: 16px 0 4px;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner p {
   color: var(--neutrals-white-fff, #fff);
@@ -128,6 +131,10 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner p {
   font-style: normal;
   font-weight: 400;
   line-height: 28px; /* 140% */
+  padding: 0 10px;
+}
+body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta {
+  margin-top: 12px;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo {
   border-radius: 4px;
@@ -135,7 +142,7 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-c
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 18px 40px;
+  padding: 18px 36px 18px 36px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -150,11 +157,15 @@ body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-c
   font-weight: 600;
   line-height: 28px; /* 140% */
   text-decoration: none;
+  width: 225px;
+  height: 64px;
+  -webkit-appearance: none;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo img {
   width: 24px;
   height: 24px;
   pointer-events: none;
+  margin-left: 8px;
 }
 body.spz-3001 #__next .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo:hover {
   color: #c0ff60;

@@ -207,7 +207,7 @@
                 count = parseInt(getCookie('spz_existing_user')) + 1;
                 setCookieForTimer('spz_existing_user', count, (30 * 24));
             }
-            setCookieForTimer('spz_ee_timer', "active", 0.01);
+            setCookieForTimer('spz_ee_timer', "active", 0.1);
         });
     }
 
