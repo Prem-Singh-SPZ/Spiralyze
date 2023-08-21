@@ -6,6 +6,12 @@ body.spz-3009 {
   }
 
   .body-wrapper {
+    .transparent-toggle.spacer.spacer-bottom {
+      @media (max-width: 1199.98px) {
+        padding: 0;
+      }
+    }
+
     &::before {
       display: none;
     }
@@ -230,7 +236,7 @@ body.spz-3009 {
 
             #HeroFormPanel {
               max-width: 580px;
-              padding: 56px 46px 50px 46px;
+              padding: 52px 38px 50px 38px;
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
               box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
@@ -247,8 +253,9 @@ body.spz-3009 {
               @media (max-width: 767.98px) {
                 width: 360px;
                 max-width: 360px;
-                padding: 32px 20px 31px 20px;
+                padding: 48px 20px 24px 20px;
                 margin: auto;
+                border-radius: 20px 20px 0px 0px;
               }
 
               #HeroFormTitleText {
@@ -264,16 +271,16 @@ body.spz-3009 {
                   line-height: 34px; /* 130.769% */
                   // white-space: nowrap;
                   letter-spacing: initial;
-                  margin: -4px -6px 24px 0;
+                  margin: -4px -6px 12px 0;
                   span {
                     color: var(--accents-a-5, #904ab0);
                   }
 
                   @media (max-width: 767.98px) {
                     white-space: normal;
-                    max-width: 244px;
+                    // max-width: 244px;
                     margin: auto;
-                    margin-bottom: 24px;
+                    margin-bottom: 12px;
                   }
                 }
 
@@ -282,9 +289,9 @@ body.spz-3009 {
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  margin-bottom: 24px;
+                  margin-bottom: 32px;
                   @media (max-width: 767.98px) {
-                    margin-bottom: 21px;
+                    margin-bottom: 28px;
                   }
 
                   .capterra-review-summary,
@@ -425,11 +432,11 @@ body.spz-3009 {
                           margin: 0 !important;
                           span {
                             color: #848995;
-                            font-size: 10px !important;
+                            font-size: 12px !important;
                             // font-family: $eptura-font;
                             font-style: normal;
                             font-weight: 300;
-                            line-height: 16px; /* 160% */
+                            line-height: 18px; /* 160% */
 
                             a {
                               // font-family: $eptura-font;
@@ -444,7 +451,7 @@ body.spz-3009 {
                         }
 
                         .mktoCheckboxList {
-                          margin-top: 3px;
+                          margin-top: 10px;
                           cursor: pointer;
                           display: inline-block;
                           position: relative;
@@ -462,10 +469,10 @@ body.spz-3009 {
                           label {
                             font-family: $eptura-font !important;
                             color: var(--primary-neutrals-n-1, #0d122e);
-                            font-size: 12px !important;
+                            font-size: 14px !important;
                             font-style: normal !important;
                             font-weight: 300 !important;
-                            line-height: 18px !important; /* 142.857% */
+                            line-height: 20px !important; /* 142.857% */
                             margin-left: 19px;
                             letter-spacing: -0.1px;
                             cursor: pointer;
@@ -575,7 +582,7 @@ body.spz-3009 {
                         font-style: normal;
                         font-weight: 300;
                         line-height: 24px;
-                        margin-bottom: 18px;
+                        margin-bottom: 32px;
                         display: inline-block;
                         margin-top: 2px;
                         transition: all 0.3s ease;
@@ -585,7 +592,7 @@ body.spz-3009 {
                         }
                         @media (max-width: 767.98px) {
                           padding: 0;
-                          margin-bottom: 26px;
+                          margin-bottom: 32px;
                         }
 
                         &:hover {
@@ -621,7 +628,7 @@ body.spz-3009 {
                         font-style: normal;
                         font-weight: 500;
                         line-height: 24px !important; /* 150% */
-                        margin-top: 22px !important;
+                        margin-top: 12px !important;
                         white-space: nowrap;
 
                         &:hover,
@@ -636,7 +643,7 @@ body.spz-3009 {
                         }
 
                         @media (max-width: 767.98px) {
-                          height: 56px !important;
+                          // height: 56px !important;
                           padding: 0px 32px;
                           width: 300px !important;
                           max-width: 300px !important;
@@ -648,9 +655,9 @@ body.spz-3009 {
                   //email line form
                   .spz-email {
                     .mktoFieldWrap {
-                      margin-top: 18px;
+                      margin-top: 11px;
                       @media (max-width: 767.98px) {
-                        margin-top: 24px;
+                        margin-top: 16px;
                       }
                       .mktoHtmlText.mktoHasWidth {
                         text-align: center;
@@ -932,6 +939,250 @@ body.spz-3009 {
               }
               @media (max-width: 767.98px) {
                 padding-bottom: 51px !important;
+              }
+              @media (min-width: 1399.98px) {
+                min-width: 652px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ppc-eptura-asset {
+    .body-wrapper {
+      #nav {
+        nav {
+          @media (max-width: 1199.98px) {
+            margin-top: 0;
+          }
+          @media (max-width: 767.98px) {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+        }
+      }
+      #hero {
+        #HeroText {
+          > p {
+            @media (min-width: 1400px) {
+              max-width: 602px;
+            }
+          }
+        }
+        .hero_container {
+          @media (max-width: 1199.98px) {
+            padding-top: 32px !important;
+          }
+          @media (max-width: 767.98px) {
+            padding-top: 8px !important;
+          }
+          @media (min-width: 1199.98px) {
+            padding-bottom: 92px !important;
+          }
+          > .row {
+            #HeroText {
+              @media (max-width: 767.98px) {
+                padding-left: 30px;
+                padding-right: 30px;
+              }
+              img[imagepreview="false"] {
+                width: initial;
+                height: initial;
+                max-width: initial;
+                max-height: initial;
+                margin-top: 9px;
+
+                @media (max-width: 1199.98px) {
+                  width: 568px;
+                  height: 327px;
+                  margin-top: 16px;
+                }
+
+                @media (max-width: 767.98px) {
+                  width: initial;
+                  height: initial;
+                  margin-top: -8px;
+                  margin-left: 0;
+                }
+              }
+
+              @media (max-width: 1199.98px) {
+                > h6 {
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 18px; /* 128.571% */
+                  letter-spacing: 1.1px;
+                  font-family: $eptura-font;
+                  margin-bottom: 12px;
+                }
+
+                > h1 {
+                  letter-spacing: 0;
+                  font-size: 36px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 44px; /* 122.222% */
+                  br {
+                    display: none;
+                  }
+                }
+
+                > p.pt-4 {
+                  padding-top: 4px !important;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 20px; /* 142.857% */
+                }
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 118px !important;
+              }
+              #HeroFormPanel {
+                // padding-top: 64px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  max-width: 568px;
+                  min-width: 568px;
+                }
+                @media (max-width: 767.98px) {
+                  // padding-top: 40px !important;
+                }
+              }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+              }
+              @media (max-width: 767.98px) {
+                padding-bottom: 43px !important;
+              }
+              @media (min-width: 1399.98px) {
+                min-width: 652px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  &.ppc-eptura-room {
+    .body-wrapper {
+      #nav {
+        nav {
+          @media (max-width: 1199.98px) {
+            margin-top: 0;
+          }
+          @media (max-width: 767.98px) {
+            padding-left: 30px;
+            padding-right: 30px;
+          }
+        }
+      }
+      #hero {
+        #HeroText {
+          > p {
+            @media (min-width: 1400px) {
+              max-width: 602px;
+            }
+          }
+        }
+        .hero_container {
+          @media (max-width: 1199.98px) {
+            padding-top: 32px !important;
+          }
+          @media (max-width: 767.98px) {
+            padding-top: 8px !important;
+          }
+          @media (min-width: 1199.98px) {
+            padding-bottom: 92px !important;
+          }
+          > .row {
+            #HeroText {
+              @media (max-width: 767.98px) {
+                padding-left: 30px;
+                padding-right: 30px;
+              }
+              img[imagepreview="false"] {
+                width: initial;
+                height: initial;
+                max-width: initial;
+                max-height: initial;
+                margin-top: 9px;
+
+                @media (max-width: 1199.98px) {
+                  width: 568px;
+                  height: 340.8px;
+                  margin-top: 16px;
+                }
+
+                @media (max-width: 767.98px) {
+                  width: initial;
+                  height: initial;
+                  margin-top: -8px;
+                  margin-left: 0;
+                }
+              }
+
+              @media (max-width: 1199.98px) {
+                > h6 {
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 18px; /* 128.571% */
+                  letter-spacing: 1.1px;
+                  font-family: $eptura-font;
+                  margin-bottom: 12px;
+                }
+
+                > h1 {
+                  letter-spacing: 0;
+                  font-size: 36px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 44px; /* 122.222% */
+                  br {
+                    display: none;
+                  }
+                }
+
+                > p.pt-4 {
+                  padding-top: 4px !important;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 20px; /* 142.857% */
+                }
+              }
+            }
+
+            #HeroFormCol {
+              @media (min-width: 1199.98px) {
+                padding-bottom: 118px !important;
+              }
+              #HeroFormPanel {
+                // padding-top: 64px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  max-width: 568px;
+                  min-width: 568px;
+                }
+                @media (max-width: 767.98px) {
+                  // padding-top: 40px !important;
+                }
+              }
+            }
+
+            > .col-md.pb-5 {
+              @media (max-width: 1199.98px) {
+                padding-bottom: 44px !important;
+              }
+              @media (max-width: 767.98px) {
+                padding-bottom: 43px !important;
               }
               @media (min-width: 1399.98px) {
                 min-width: 652px;

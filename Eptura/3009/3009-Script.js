@@ -198,6 +198,9 @@
 
             document.querySelector('#FooterSocial a:nth-child(3) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_linkedin_footer.svg');
 
+            document.querySelector('#HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').innerHTML = `If you consent to us contacting you, please tick below to confirm you would like us to contact you: You can unsubscribe from these communications at any time. For more information our privacy practices, please review our <a href="https://eptura.com/terms/privacy-policy/" target="_blank" id="">Privacy Policy</a>.`;
+            document.querySelectorAll('#HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span')[1].style.display = "none";
+
 
             //URL specific image updates
             if (window.location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visitors') > -1) {

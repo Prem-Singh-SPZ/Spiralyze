@@ -1,15 +1,19 @@
 
 (function () {
     let isFormSubmitted = false;
+    let init_timer = 1;
 
     function createTest3001() {
         document.body.classList.add('spz-3001');
-
         checkFormSubmission();
 
-        if (!isFormSubmitted) {
+        if (!getCookie('spz_existing_user')) {
+            setCookieForTimer('spz_existing_user', init_timer, (30 * 24));
+        }
+
+
+        if (getCookie('spz_existing_user') && !isFormSubmitted) {
             appendPopup();
-            exitIntentPopup();
         }
     }
 
@@ -17,7 +21,6 @@
     function checkFormSubmission() {
         if (sessionStorage.getItem("query.utm_form") == "book_meeting" || sessionStorage.getItem("utm_form") == "book_meeting") {
             isFormSubmitted = true;
-            console.log("isFormSubmitted = " + isFormSubmitted);
         }
     }
 
@@ -58,6 +61,7 @@
         removeTest();
         url = location.href;
         urlCheck(url);
+        exitIntentPopup(false);
     });
 
     var url = location.href;
@@ -75,6 +79,7 @@
         }
         if (isSameUrl(url, testURL, true)) {
             createTest3001();
+            exitIntentPopup(false);
         } else {
             removeTest();
         }
@@ -88,7 +93,6 @@
             document.querySelector('.exit-modal-sec-spz').remove();
         }
         exitIntentPopup(false);
-
         document.body.classList.remove("spz-3001");
     }
 
@@ -130,9 +134,28 @@
 
 
     // #4008 Exit popup 
-    let coolDown = false;
-    let count = 0;
-    const coolDownTime = 30; // in seconds
+    let count = 1;
+
+    // Set a Cookie
+    function setCookieForTimer(cName, cValue, expHours) {
+        let date = new Date();
+        date.setTime(date.getTime() + (expHours * 60 * 60 * 1000));
+        const expires = "expires=" + date.toUTCString();
+        document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+    }
+
+    //Get a cookie
+    function getCookie(cName) {
+        const name = cName + "=";
+        const cDecoded = decodeURIComponent(document.cookie); //to be careful
+        const cArr = cDecoded.split('; ');
+        let res;
+        cArr.forEach(val => {
+            if (val.indexOf(name) === 0) res = val.substring(name.length);
+        })
+        return res;
+    }
+
 
     // Append popup content to body
     function appendPopup() {
@@ -172,19 +195,19 @@
                 </div>`);
         }
 
+        exitIntentPopup();
+
         // Add class to body
         document.body.classList.add('spz-3001');
 
         // Close popup
         document.querySelector('.ems-close-btn').addEventListener('click', function () {
             showExitPopup(false);
-            coolDown = true;
-
-            count = count + 1;
-
-            setTimeout(() => {
-                coolDown = false;
-            }, coolDownTime * 1000);
+            if (getCookie('spz_existing_user')) {
+                count = parseInt(getCookie('spz_existing_user')) + 1;
+                setCookieForTimer('spz_existing_user', count, (30 * 24));
+            }
+            setCookieForTimer('spz_ee_timer', "active", 0.01);
         });
     }
 
@@ -192,12 +215,6 @@
     function showExitPopup(isVisible = false) {
         if (isVisible) {
             document.body.classList.add('active');
-
-            // if window height is less than 768px, add top: 3px to .exit-modal-sec-spz .ems-content
-            // Added this because the popup was not visible from top and close icon was getting cut off
-            if (window.innerHeight < 768 && window.innerWidth > 1280) {
-                document.querySelector('.exit-modal-sec-spz .ems-content').style.top = '3px';
-            }
         } else if (!isVisible) {
             document.body.classList.remove('active');
         }
@@ -209,19 +226,12 @@
         var topValue = 10;
         window.addEventListener("mouseout", function (e) {
             mouseY = e.clientY;
+            let isTimerActive = !getCookie('spz_ee_timer');
 
-            if (mouseY <= topValue && !coolDown && count < 3) {
+            if (mouseY <= topValue && isTimerActive && count < 4) {
                 showExitPopup(true);
             }
         }, false);
     }
-
-    // Show popup after {coolDownTime} seconds in tablet and mobile
-    // if (window.innerWidth < 1280) {
-    //     setTimeout(() => {
-    //         showExitPopup(true);
-    //         coolDown = true;
-    //     }, coolDownTime * 1000);
-    // }
 })();
 
