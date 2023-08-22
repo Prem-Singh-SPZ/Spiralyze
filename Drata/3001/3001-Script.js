@@ -132,10 +132,6 @@
         document.body.classList.add('safari')
     }
 
-
-    // #4008 Exit popup 
-    let count = 1;
-
     // Set a Cookie
     function setCookieForTimer(cName, cValue, expHours) {
         let date = new Date();
@@ -202,12 +198,14 @@
 
         // Close popup
         document.querySelector('.ems-close-btn').addEventListener('click', function () {
+            let count = +(getCookie('spz_existing_user'));
+
             showExitPopup(false);
             if (getCookie('spz_existing_user')) {
                 count = parseInt(getCookie('spz_existing_user')) + 1;
                 setCookieForTimer('spz_existing_user', count, (30 * 24));
             }
-            setCookieForTimer('spz_ee_timer', "active", 0.1);
+            setCookieForTimer('spz_ee_timer', "active", 2);
         });
     }
 
@@ -227,6 +225,7 @@
         window.addEventListener("mouseout", function (e) {
             mouseY = e.clientY;
             let isTimerActive = !getCookie('spz_ee_timer');
+            let count = +(getCookie('spz_existing_user'));
 
             if (mouseY <= topValue && isTimerActive && count < 4) {
                 showExitPopup(true);

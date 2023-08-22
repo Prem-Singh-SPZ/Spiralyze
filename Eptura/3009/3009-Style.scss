@@ -7,9 +7,7 @@ body.spz-3009 {
 
   .body-wrapper {
     .transparent-toggle.spacer.spacer-bottom {
-      @media (max-width: 1199.98px) {
-        padding: 0;
-      }
+      padding: 0;
     }
 
     &::before {
@@ -171,7 +169,7 @@ body.spz-3009 {
         }
         @media (max-width: 767.98px) {
           padding: 0;
-          padding-bottom: 6px !important;
+          padding-bottom: 0px !important;
         }
         > .row {
           // flex-direction: row-reverse;
@@ -521,11 +519,12 @@ body.spz-3009 {
 
                         //custom error for checkbox field
                         &.spz-cstm-error {
-                          .mktoCheckboxList  label {
+                          .mktoCheckboxList label {
                             color: #e51b00 !important;
 
-                            &::before{
-                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg") left center no-repeat;
+                            &::before {
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg")
+                                left center no-repeat;
                             }
                           }
                         }
@@ -631,7 +630,7 @@ body.spz-3009 {
                         display: flex;
                         width: 140px !important;
                         height: 50px !important;
-                        padding: 0px 8px !important;
+                        padding: 0px !important;
                         justify-content: center;
                         align-items: center;
                         border-radius: 3px !important;
@@ -648,6 +647,7 @@ body.spz-3009 {
                         line-height: 24px !important; /* 150% */
                         margin-top: 12px !important;
                         white-space: nowrap;
+                        all: initial;
 
                         &:hover,
                         &:focus {
@@ -759,7 +759,7 @@ body.spz-3009 {
             #HeroFormCol {
               padding-bottom: 8px !important;
               @media (max-width: 767.98px) {
-                padding-bottom: 6px !important;
+                padding-bottom: 0px !important;
               }
             }
             > .col-md.pb-5 {

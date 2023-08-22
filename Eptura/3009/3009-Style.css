@@ -1,10 +1,8 @@
 body.spz-3009 #HeaderScripts.mktoText {
   display: none !important;
 }
-@media (max-width: 1199.98px) {
-  body.spz-3009 .body-wrapper .transparent-toggle.spacer.spacer-bottom {
-    padding: 0;
-  }
+body.spz-3009 .body-wrapper .transparent-toggle.spacer.spacer-bottom {
+  padding: 0;
 }
 body.spz-3009 .body-wrapper::before {
   display: none;
@@ -172,7 +170,7 @@ body.spz-3009 .body-wrapper #hero .hero_container {
 @media (max-width: 767.98px) {
   body.spz-3009 .body-wrapper #hero .hero_container {
     padding: 0;
-    padding-bottom: 6px !important;
+    padding-bottom: 0px !important;
   }
 }
 body.spz-3009 .body-wrapper #hero .hero_container > .row {
@@ -612,7 +610,7 @@ body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   display: flex;
   width: 140px !important;
   height: 50px !important;
-  padding: 0px 8px !important;
+  padding: 0px !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -630,6 +628,7 @@ body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   line-height: 24px !important; /* 150% */
   margin-top: 12px !important;
   white-space: nowrap;
+  all: initial;
 }
 body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-3009 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
   background: var(--interactive-colors-a-3, #456ed6) !important;
@@ -721,7 +720,7 @@ body.spz-3009.ppc-condeco .body-wrapper #hero .hero_container > .row #HeroFormCo
 }
 @media (max-width: 767.98px) {
   body.spz-3009.ppc-condeco .body-wrapper #hero .hero_container > .row #HeroFormCol {
-    padding-bottom: 6px !important;
+    padding-bottom: 0px !important;
   }
 }
 @media (max-width: 1199.98px) {
