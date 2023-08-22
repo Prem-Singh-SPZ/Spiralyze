@@ -518,6 +518,17 @@ body.spz-3009 {
                             font-size: 14px;
                           }
                         }
+
+                        //custom error for checkbox field
+                        &.spz-cstm-error {
+                          .mktoCheckboxList  label {
+                            color: #e51b00 !important;
+
+                            &::before{
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg") left center no-repeat;
+                            }
+                          }
+                        }
                       }
 
                       &.field-focus {

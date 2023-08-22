@@ -2,20 +2,10 @@
     document.body.classList.add('spz-3002');
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
         document.body.classList.add('spz-3002');
-
-        // Hide form initially
-        // document.querySelector('#HeroFormPanel').style.opacity = 0;
-
-        //main function call
         loadTest();
     });
 
     function loadTest() {
-        // show form once loaded
-        // waitForElm('[spz_fname="Country"][style*="display"]').then(function () {
-        //     document.querySelector('#HeroFormPanel').style.opacity = 1;
-        // });
-
         updateHeroImage();
         formUpdate();
         focusFields();
@@ -28,6 +18,11 @@
                 e.target.parentElement.classList.add('spz-hidden');
                 this.document.querySelector('#Lead_Notes__c').focus();
             }
+
+            if (e.target.classList.contains("mktoField")) {
+                showGlobalError();
+            }
+
             if (e.target.classList.contains("mktoButton")) {
                 document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
                     checkError(el);
@@ -35,51 +30,34 @@
                 });
             }
         });
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691410616/eptura/3001/custom/icon-info.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
         );
     }
 
-    //Global Error msg custom
+    //custom error for checkbox field
     function showGlobalError() {
-        debugger
         if (document.querySelector('#Lead_Notes__c') && document.querySelector('#Lead_Notes__c').value == '') {
-            // let timeBuffer = setInterval(() => {
-                console.log('step 2')
-                if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
-                    document.querySelector('#Lead_Notes__c').value = ".";
-                    console.log('step 3')
-                }
-            // }, 100);
-
-            // if (document.querySelectorAll('.mktoForm .mktoInvalid').length == 0) {
-            //     clearInterval(timeBuffer);
-            // }
+            if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
+                document.querySelector('#Lead_Notes__c').value = ".";
+            }
         }
 
-        // if (document.querySelectorAll('.mktoForm .mktoInvalid').length > 0) {
-        //     if (document.querySelectorAll('.mktoForm .mktoButtonRow .spz-cstm-error').length == 0) {
-        //         document.querySelector('.mktoForm .mktoButtonRow').insertAdjacentHTML('afterbegin', `<p class="spz-cstm-error">Please complete all required fields.</p>`);
-        //     }
-        // }
-        // else {
-        //     if (document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error')) {
-        //         document.querySelector('.mktoForm .mktoButtonRow .spz-cstm-error').remove();
-        //     }
-        // }
+        let checkErrorforCheckBox = setInterval(() => {
+            if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {
+                document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.add('spz-cstm-error');
+            }
+            else {
+                document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.remove('spz-cstm-error');
+            }
+        }, 50);
 
-
-
-        // setTimeout(() => {
-        //     clearInterval(timeBuffer);
-        // }, 1000);
+        setTimeout(() => {
+            clearInterval(checkErrorforCheckBox);
+        }, 1000);
     }
 
     //Marketo form update
     function formUpdate() {
-        //Remove first options from dropdown
-        // document.querySelector('#Country option:first-child').textContent = '';
-        // document.querySelector('#I_am__c option:first-child').textContent = '';
-
         document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
 

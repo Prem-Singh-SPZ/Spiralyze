@@ -542,7 +542,22 @@ body.spz-3002 {
                           margin-top: 48px !important;
 
                           .mktoErrorMsg {
-                            font-size: 14px;
+                            color: #f3f3f3;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 16px; /* 123.077% */
+                          }
+                        }
+
+                        //custom error for checkbox field
+                        &.spz-cstm-error {
+                          .mktoCheckboxList  label {
+                            color: #e51b00 !important;
+
+                            &::before{
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg") left center no-repeat;
+                            }
                           }
                         }
                       }
@@ -643,17 +658,6 @@ body.spz-3002 {
                   //submit button css
                   .mktoButtonRow {
                     text-align: center;
-
-                    // .spz-cstm-error {
-                    //   padding: 0;
-                    //   text-align: center;
-                    //   margin-bottom: -8px;
-                    //   margin-top: 16px;
-                    //   color: #f83a59;
-                    //   font-size: 14px;
-                    //   line-height: 14px;
-                    //   font-family: $eptura-font;
-                    // }
 
                     .mktoButtonWrap {
                       button.mktoButton {
