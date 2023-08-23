@@ -211,10 +211,13 @@
             document.querySelector('#FooterLogo a img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg');
 
             document.querySelector('#FooterSocial a:nth-child(1) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_twitter_footer.svg');
+            document.querySelector('#FooterSocial a:nth-child(1) img').setAttribute('alt', 'Twitter');
 
             document.querySelector('#FooterSocial a:nth-child(2) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_facebook_footer.svg');
+            document.querySelector('#FooterSocial a:nth-child(2) img').setAttribute('alt', 'Facebook');
 
             document.querySelector('#FooterSocial a:nth-child(3) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_linkedin_footer.svg');
+            document.querySelector('#FooterSocial a:nth-child(3) img').setAttribute('alt', 'Linkedin');
 
             document.querySelector('#HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').innerHTML = `If you consent to us contacting you, please tick below to confirm you would like us to contact you: You can unsubscribe from these communications at any time. For more information our privacy practices, please review our <a href="https://eptura.com/terms/privacy-policy/" target="_blank" id="">Privacy Policy</a>.`;
             document.querySelectorAll('#HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span')[1].style.display = "none";
