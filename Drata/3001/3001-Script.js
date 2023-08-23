@@ -227,7 +227,7 @@
             let isTimerActive = !getCookie('spz_ee_timer');
             let count = +(getCookie('spz_existing_user'));
 
-            if (mouseY <= topValue && isTimerActive && count < 4) {
+            if (mouseY <= topValue && isTimerActive && count < 4 && !isFormSubmitted) {
                 showExitPopup(true);
             }
         }, false);
