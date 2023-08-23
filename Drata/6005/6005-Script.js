@@ -19,9 +19,20 @@
                     elem.setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/frame.svg');
                 })
 
-                document.querySelector('.logo-section .ls-logo-group').insertAdjacentHTML('beforebegin',`<div class="testimonial"><div class="testimonial-card"><div class="testimonial-img"><picture><source srcset="//res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/image.webp" type="image/webp"><source srcset="//res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/image.png" type="image/png"><img src="//res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/image.webp" alt="Jonathan Jaffe" title="Jonathan Jaffe"></picture></div><div class="testimonial-content"><div class="auth-name"><h3>Jonathan Jaffe</h3><h6>CISO, Lemonade</h6></div><div class="auth-review"><p>“We saved 80% of time using Drata&#8217;s continuous compliance automation. I&#8217;ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I&#8217;m able to make my own control framework.” </p></div></div></div></div>`)
+                document.querySelector('.logo-section .ls-logo-group').insertAdjacentHTML('beforebegin', `<div class="testimonial"><div class="testimonial-card"><div class="testimonial-img"><picture><source srcset="//res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/image.webp" type="image/webp"><source srcset="//res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/image.png" type="image/png"><img src="//res.cloudinary.com/spiralyze/image/upload/v1687342816/drata/6005/image.webp" alt="Jonathan Jaffe" title="Jonathan Jaffe"></picture></div><div class="testimonial-content"><div class="auth-name"><h3>Jonathan Jaffe</h3><h6>CISO, Lemonade</h6></div><div class="auth-review"><p>“We saved 80% of time using Drata&#8217;s continuous compliance automation. I&#8217;ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I&#8217;m able to make my own control framework.” </p></div></div></div></div>`)
             });
+
+            submitTestDetails();
         });
+    }
+
+
+    //Passing test details to hidden fields
+    function submitTestDetails() {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#6005__Demo(Paid)_Testimonial');
+            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
+        }
     }
 
     // Generic

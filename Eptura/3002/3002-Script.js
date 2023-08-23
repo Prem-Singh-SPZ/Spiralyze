@@ -62,7 +62,7 @@
 
 
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
-            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
+            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = '<span>Let&#8217;s get started <span>';
         }
 
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
@@ -249,7 +249,7 @@
                 }
 
                 if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
-                    document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Fill in your details and <span>let&#x2019;s get started <span></span></span></h6>';
+                    document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6><span>Let&#x2019;s get started</span></h6>';
                 }
 
                 document.body.classList.add('ppc-archibus');
@@ -265,7 +265,7 @@
 
                 document.body.classList.add('ppc-eptura-asset-management');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>Asset Management Software</h6><h1>Automate equipment maintenance. Reduce costs. Increase performance.</h1><ul class="hero-list-copy"><li class="list-item"><span>Work orders. </span>View all work orders in one portal. Easily provide technicians with schedules, locations, and task descriptions.</li><li class="list-item"><span>Lifecycle tracking.</span> See your cost history, repair schedules, and upcoming preventive maintenance for all your assets.</li><li class="list-item"><span>Cost forecasting.</span> Track expenses and cost comparisons. Create monthly budgets based on historical data.</li></ul><div class="hero-img"><img src="https://lp.eptura.com/rs/267-JUP-120/images/eptura-asset-management-ui.png" alt="" width="511" height="294" constrain="true" imagepreview="false" border=""></div>`;
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Asset Management Software</h6><h1>Automate equipment maintenance. Reduce costs. Increase performance.</h1><ul class="hero-list-copy"><li class="list-item"><span>Work orders. </span> View all work orders in one portal. Easily provide technicians with schedules, locations, and task descriptions.</li><li class="list-item"><span>Lifecycle tracking.</span> See your cost history, repair schedules, and upcoming preventive maintenance for all your assets.</li><li class="list-item"><span>Cost forecasting.</span> Track expenses and cost comparisons. Create monthly budgets based on historical data.</li></ul><div class="hero-img"><img src="https://lp.eptura.com/rs/267-JUP-120/images/eptura-asset-management-ui.png" alt="" width="511" height="294" constrain="true" imagepreview="false" border=""></div>`;
             }
 
             else if (window.location.href.indexOf('ppc-eptura-room-management') > -1) {
