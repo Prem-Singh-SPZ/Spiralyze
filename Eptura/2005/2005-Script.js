@@ -55,11 +55,11 @@
 
     //custom error for checkbox field
     function showGlobalError() {
-        if (document.querySelector('#Lead_Notes__c') && document.querySelector('#Lead_Notes__c').value == '') {
-            if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
-                document.querySelector('#Lead_Notes__c').value = ".";
-            }
-        }
+        // if (document.querySelector('#Lead_Notes__c') && document.querySelector('#Lead_Notes__c').value == '') {
+        //     if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
+        //         document.querySelector('#Lead_Notes__c').value = ".";
+        //     }
+        // }
 
         let checkErrorforCheckBox = setInterval(() => {
             if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {

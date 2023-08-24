@@ -46,11 +46,11 @@
 
     //custom error for checkbox field
     function showGlobalError() {
-        if (document.querySelector('#Lead_Notes__c') && document.querySelector('#Lead_Notes__c').value == '') {
-            if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
-                document.querySelector('#Lead_Notes__c').value = ".";
-            }
-        }
+        // if (document.querySelector('#Lead_Notes__c') && document.querySelector('#Lead_Notes__c').value == '') {
+        //     if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
+        //         document.querySelector('#Lead_Notes__c').value = ".";
+        //     }
+        // }
 
         let checkErrorforCheckBox = setInterval(() => {
             if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {
@@ -68,10 +68,6 @@
 
     //Marketo form update
     function formUpdate() {
-        //Remove first options from dropdown
-        // document.querySelector('#Country option:first-child').textContent = '';
-        // document.querySelector('#I_am__c option:first-child').textContent = '';
-
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
             document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
         }
