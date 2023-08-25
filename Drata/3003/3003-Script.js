@@ -4,29 +4,29 @@ function createTest3003() {
     waitForElm('#__next .hs-form-private').then(function () {
         insertStickySection();
     });
+
+    waitForElm('#__next .spz-sticky-blog-section').then(function () {
+        window.onload = checkScrollPosition();
+        window.onscroll = function () {
+            checkScrollPosition();
+        };
+    });
 }
 
 //perform click actions
 window.addEventListener("click", function (e) {
-    // console.log(e.target)
-    if (e.target.classList.contains("sticky-close-btn")) {
-        this.document.querySelector('.spz-sticky-blog-section').remove();
-        document.querySelector('#__next').style.paddingBottom = "0px";
+    if (e.target.classList.contains("trigger-demo-btn")) {
+        document.querySelector('a[href="/demo"]').click();
     }
-    // console.log(e.target.classList)
-    // if (e.target.classList.contains("trigger-demo-btn")) {
-    //     document.querySelector('a[href="/demo"]').click();
-    // }
 });
 
 
 function insertStickySection() {
-    if (document.querySelectorAll('#__next .spz-sticky-blog-section').length == 0) {
+    if (document.querySelectorAll('#__next .spz-sticky-blog-section').length == 0 && document.querySelector('#__next main .css-1d27wf-MuiContainer-root-Blog-contentContainer .css-1h9xxvu-Blog-relatedItemsWrapper')) {
         document.querySelector('#__next main .css-1d27wf-MuiContainer-root-Blog-contentContainer .css-1h9xxvu-Blog-relatedItemsWrapper').insertAdjacentHTML('beforeend', `<div class="spz-sticky-blog-section for-desktop">` + blogHTML + `</div>`);
         document.querySelector('#__next main .css-14lvbd4-Blog-relatedResources ').insertAdjacentHTML('beforebegin', `<div class="spz-sticky-blog-section for-mobile">` + blogHTML + `</div>`);
     }
 }
-
 
 //Blog section html content
 const blogHTML = `<div class="sticky-blog-section">
@@ -36,19 +36,33 @@ const blogHTML = `<div class="sticky-blog-section">
         <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1690989369/drata/3003/img.png" type="image/png"> <img src="https://res.cloudinary.com/spiralyze/image/upload/f_auto/drata/3003/img.webp" alt="Get Compliant 80% Faster With Drata"> </picture>
 </div>
 <div class="blog-container">
-    <h6 class="blog-title">Get Compliant 80% Faster With Drata</h6>
+    <h6 class="blog-title">Get Compliant 80% Faster<br> With Drata</h6>
     <div class="blog-rating"> <img class="g2-logo" src="https://res.cloudinary.com/spiralyze/image/upload/v1690989370/drata/3003/logo-g2.svg" alt="G2 Logo" /> <img class="star-ratings" src="https://res.cloudinary.com/spiralyze/image/upload/v1690989369/drata/3003/rating-4_9.svg" alt="Ratings" />
         <div class="ratings"> <span>4.9 </span> (461 reviews) </div>
     </div>
-    <div class="blog-cta"> <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" />
+    <div class="blog-cta"> <a href="Javascript:void(0)" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" />
             </a> </div>
 </div>
 </div>`;
 
+function checkScrollPosition() {
+    waitForElm('#__next header.MuiAppBar-positionFixed').then(function () {
+        if(document.querySelector('.spz-sticky-blog-section')){
+            if (document.querySelector('header.MuiAppBar-positionFixed.css-qqlydz-MuiPaper-root-MuiAppBar-root-Header-root')) {
+                document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "98px";
+            }
+            else if (document.querySelector('header.MuiAppBar-positionFixed.css-1p0wz3u-MuiPaper-root-MuiAppBar-root-Header-root')) {
+                document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "24px";
+            }
+        }
+    });
+}
+
 function removeTest() {
     if (document.querySelector('.spz-sticky-blog-section')) {
-        document.querySelector('.spz-sticky-blog-section').remove();
-        document.querySelector('#__next').style.paddingBottom = "0px";
+        document.querySelectorAll('.spz-sticky-blog-section').forEach(function (elem) {
+            elem.remove();
+        })
     }
     document.body.classList.remove("spz-3003");
 }
@@ -83,7 +97,7 @@ urlCheck(url);
 
 function urlCheck(url) {
     let testURL = '';
-    if (window.location.href.indexOf("/blog") > -1) {
+    if (window.location.href.indexOf("/blog/") > -1) {
         testURL = window.location.href;
     }
 
@@ -94,10 +108,6 @@ function urlCheck(url) {
     }
 }
 
-// isSameUrl Parameters
-// currentUrl = current page url
-// specifiedUrl = url on which we have to run test
-// includeQueryParams = set true, if query params are allowed
 function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     currentUrl = currentUrl.includes("#") ?
         currentUrl.slice(0, currentUrl.indexOf("#")) :
