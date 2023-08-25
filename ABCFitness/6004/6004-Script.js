@@ -51,7 +51,7 @@ let bodyLoaded = setInterval(function () {
                     alt="Trending" title="Trending">
             </picture>
                 </div>
-                <div class="sticky-content"><p><span>Grow revenue 30%</span> by automating<br class="for-tab"> operations,<br class="for-mob"> sales, and member management.</p></div>
+                <div class="sticky-content"><p><span>Grow revenue 30%</span> by automating<br class="for-tab"> operations,<br class="for-mob"> sales, and member management with ABC Ignite.</p></div>
                 <div class="sticky-cta"><a class="hs-cta-primary trigger-demo-modal">Request a demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1683032144/ABCFitnessSolutions/6003/src/Arrow.svg"
                 alt="Arrow"></a></div>
                 </div>
