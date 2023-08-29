@@ -12,7 +12,7 @@
         formUpdate();
         focusFields();
 
-        waitForElm('#HeroFormCol #HeroFormTitleText h6').then(function () {
+        waitForElm('#HeroFormCol #HeroFormTitleText').then(function () {
             reviewSummary_3009();
         });
 
@@ -1229,6 +1229,7 @@
                     pagination: true,
                     gap: '56px',
                     arrows: false,
+                    type   : 'loop',
                     breakpoints: {
                         1360: {
                             gap: '35',
