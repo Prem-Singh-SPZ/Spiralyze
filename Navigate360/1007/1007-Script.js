@@ -44,6 +44,7 @@ function load1007() {
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.hero-body').textContent = `Safety training, services, and solutions for K12 schools, healthcare, workplaces and public safety agencies. `;
 
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').textContent = `get a demo`;
+                document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').setAttribute('title',`Get a Demo`);
             });
 
         }

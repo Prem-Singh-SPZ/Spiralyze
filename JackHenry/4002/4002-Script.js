@@ -5,9 +5,20 @@
             clearInterval(bodyInterval);
             bodyEle.classList.add('spz-4002');
 
-            waitForElm('body.hs-blog-post #hs_cos_wrapper_blog_individual #hs_cos_wrapper_post_body').then(function (elm) {
-                loadTest4002();
-            });
+            if (location.href.indexOf('resources/articles/elevate-your-website-for-the-digital-age') > -1) {
+                waitForElm('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section').then(function (elm) {
+                    document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content h4')[1].insertAdjacentHTML('beforebegin', blogBannerSection);
+                    document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content p')[23].insertAdjacentHTML('beforebegin', blogBannerSection);
+                    document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content .blog-banner-section')[1].classList.add('spz-second');
+                    
+                });
+            }
+
+            else {
+                waitForElm('body.hs-blog-post #hs_cos_wrapper_blog_individual #hs_cos_wrapper_post_body').then(function (elm) {
+                    loadTest4002();
+                });
+            }
         }
     });
 
