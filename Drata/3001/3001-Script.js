@@ -28,9 +28,9 @@
     //perform click actions
     window.addEventListener("click", function (e) {
         // console.log(e.target)
-        if (e.target.classList.contains("drata-logo")) {
-            document.querySelector('a[href="/"]').click();
-        }
+        // if (e.target.classList.contains("drata-logo")) {
+        //     document.querySelector('a[href="/"]').click();
+        // }
         // console.log(e.target.classList)
         if (e.target.classList.contains("get-a-demo")) {
             document.querySelector('a[href="/demo"]').click();

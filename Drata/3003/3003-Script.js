@@ -14,11 +14,11 @@ function createTest3003() {
 }
 
 //perform click actions
-window.addEventListener("click", function (e) {
-    if (e.target.classList.contains("trigger-demo-btn")) {
-        document.querySelector('a[href="/demo"]').click();
-    }
-});
+// window.addEventListener("click", function (e) {
+//     if (e.target.classList.contains("trigger-demo-btn")) {
+//         document.querySelector('a[href="/demo"]').click();
+//     }
+// });
 
 
 function insertStickySection() {
@@ -40,14 +40,14 @@ const blogHTML = `<div class="sticky-blog-section">
     <div class="blog-rating"> <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1690989370/drata/3003/logo-g2.svg" alt="G2 Logo" /> <img class="star-ratings" src="//res.cloudinary.com/spiralyze/image/upload/v1690989369/drata/3003/rating-4_9.svg" alt="Ratings" />
         <div class="ratings"> <span>4.9 </span> (461 reviews) </div>
     </div>
-    <div class="blog-cta"> <a href="Javascript:void(0)" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" />
+    <div class="blog-cta"> <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" />
             </a> </div>
 </div>
 </div>`;
 
 function checkScrollPosition() {
     waitForElm('#__next header.MuiAppBar-positionFixed').then(function () {
-        if(document.querySelector('.spz-sticky-blog-section')){
+        if (document.querySelector('.spz-sticky-blog-section')) {
             if (document.querySelector('header.MuiAppBar-positionFixed.css-qqlydz-MuiPaper-root-MuiAppBar-root-Header-root')) {
                 document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "98px";
             }
