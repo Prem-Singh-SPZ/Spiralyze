@@ -291,7 +291,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">The <b>notifications</b> in Proxyclick have<br> <b>changed our lives.</b> It’s much easier for the front desk to notify people when they have packages than it used to be, when they were calling each person individually.</p>
+                                                    <p class="quotes">The <b>notifications</b> in Proxyclick have<br> <b>changed our lives.</b> It&#8217;s much easier for the front desk to notify people when they have packages than it used to be, when they were calling each person individually.</p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -313,7 +313,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">It’s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it’s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
+                                                    <p class="quotes">It&#8217;s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it&#8217;s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -442,7 +442,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">Employees wanted to start returning to the office, but <b>we didn’t have any measures in place to manage this</b> and ensure social distancing was adhered to in our workplace. We <b>needed a booking system to manage <br class="som-text">this successfully.</b></p>
+                                                    <p class="quotes">Employees wanted to start returning to the office, but <b>we didn&#8217;t have any measures in place to manage this</b> and ensure social distancing was adhered to in our workplace. We <b>needed a booking system to manage <br class="som-text">this successfully.</b></p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -508,7 +508,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">I’m used to organizations that book everything through Microsoft Outlook. There’s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
+                                                    <p class="quotes">I&#8217;m used to organizations that book everything through Microsoft Outlook. There&#8217;s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -619,7 +619,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">Archibus is <b>one of the more interactive systems I have used,</b> and I’ve used some really robust systems. If someone were coming into my job, <b>I’d be confident in showing them how to use Archibus.</b> It’s a <br>nice one to navigate.</p>
+                                                    <p class="quotes">Archibus is <b>one of the more interactive systems I have used,</b> and I&#8217;ve used some really robust systems. If someone were coming into my job, <b>I&#8217;d be confident in showing them how to use Archibus.</b> It&#8217;s a <br>nice one to navigate.</p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -663,7 +663,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson’s hands. <b>Now it takes three days.</b></p>
+                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson&#8217;s hands. <b>Now it takes three days.</b></p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -695,10 +695,10 @@
             else if (window.location.href.indexOf('ppc-eptura-room-management') > -1) {
                 document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1691056843/eptura/3006/main_logo_2.svg" alt="Eptura" class="logo-img">`);
 
-                document.body.classList.add('ppc-eptura-asset-management');
+                document.body.classList.add('ppc-eptura-room-management');
 
                 const image3 = document.querySelector("body.spz-3006 .body-wrapper #hero .hero_container > .row #HeroText > h1.pt-4 span img");
-                image3.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/image_3.webp";
+                // image3.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/image_3.webp";
                 image3.setAttribute("alt", "Make hybrid work");
 
                 document.querySelector('section#testimonials').insertAdjacentHTML('beforebegin', `<div class="testimonial-section eptura-testimonial">
@@ -745,7 +745,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson’s hands. <b>Now it takes three days.</b></p>
+                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson&#8217;s hands. <b>Now it takes three days.</b></p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -789,7 +789,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">It’s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it’s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
+                                                    <p class="quotes">It&#8217;s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it&#8217;s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -811,7 +811,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">I’m used to organizations that book everything through Microsoft Outlook. There’s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
+                                                    <p class="quotes">I&#8217;m used to organizations that book everything through Microsoft Outlook. There&#8217;s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -915,7 +915,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson’s hands. <b>Now it takes three days.</b></p>
+                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson&#8217;s hands. <b>Now it takes three days.</b></p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -959,7 +959,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">It’s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it’s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
+                                                    <p class="quotes">It&#8217;s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it&#8217;s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -981,7 +981,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">I’m used to organizations that book everything through Microsoft Outlook. There’s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
+                                                    <p class="quotes">I&#8217;m used to organizations that book everything through Microsoft Outlook. There&#8217;s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -1035,7 +1035,7 @@
             else if (window.location.href.indexOf('ppc-eptura') > -1) {
                 document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1691056843/eptura/3006/main_logo_2.svg" alt="Eptura" class="logo-img">`);
 
-                document.body.classList.add('ppc-eptura-asset-management');
+                document.body.classList.add('ppc-eptura');
 
                 const image2 = document.querySelector("body.spz-3006 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 div#HeroText p + h1 img");
                 image2.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/eptura-demo-ui.webp";
@@ -1085,7 +1085,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson’s hands. <b>Now it takes three days.</b></p>
+                                                    <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson&#8217;s hands. <b>Now it takes three days.</b></p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -1129,7 +1129,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">It’s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it’s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
+                                                    <p class="quotes">It&#8217;s <b>user-friendly,</b> allows us to configure <b>different access levels</b> for different users, and it&#8217;s <b>cloud-based,</b> so we can retrieve information remotely and easily. </p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -1151,7 +1151,7 @@
                                             </li>
                                             <li class="testimonial-item splide__slide">
                                                 <div class="testimonial-item-inner">
-                                                    <p class="quotes">I’m used to organizations that book everything through Microsoft Outlook. There’s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
+                                                    <p class="quotes">I&#8217;m used to organizations that book everything through Microsoft Outlook. There&#8217;s a <b>number of challenges in terms of clashes and having to manage a calendar</b> for every single space. <b>Having a unified system removes that</b> and it basically becomes automated.</p>
                                                     <div class="testimonial-info">
                                                         <div class="testimonials-item">
                                                             <div class="img-wrapper">
@@ -1225,7 +1225,7 @@
             getScript("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.0.1/dist/js/splide.min.js", function () {
                 new Splide("#reviews-sec", {
                     perPage: 2,
-                    height: '254px',
+                    // height: '254px',
                     pagination: true,
                     gap: '56px',
                     arrows: false,
@@ -1233,10 +1233,10 @@
                     breakpoints: {
                         1360: {
                             gap: '35',
-                            height: '310px',
+                            // height: '310px',
                         },
                         1199: {
-                            height: '230px',
+                            // height: '230px',
                             gap: '56px',
                         },
                         767: {
@@ -1249,8 +1249,6 @@
         }
         loadSlider();
     }
-
-
 
     // Generic Code
     function waitForElm(selector) {

@@ -240,17 +240,33 @@ body.spz-3006 .body-wrapper #hero .hero_container>.row {
         padding-bottom: 0 !important;
         max-width: 695px;
     }
+
+    body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+        padding-bottom: 42px !important;
+    }
 }
 
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
     body.spz-3006 .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
         padding-bottom: 36px !important;
     }
+
+    body.spz-3006.ppc-eptura .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+        padding-bottom: 50px !important;
+    }
 }
 
 @media (max-width: 767.98px) {
     body.spz-3006 .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
         padding: 0 0px 37px !important;
+    }
+
+    body.spz-3006.ppc-eptura .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+        padding: 0 0px 52px !important;
+    }
+
+    body.spz-3006.ppc-eptura-room-management .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+        padding: 0 0px 30px !important;
     }
 
     body.spz-3006 .body-wrapper #nav nav #NavLogo .logo-img {
@@ -352,6 +368,10 @@ body.spz-3006 .body-wrapper #hero .hero_container>.row #HeroText .hero-img img {
 @media (min-width: 1199.98px) {
     body.spz-3006 .body-wrapper #hero .hero_container>.row #HeroFormCol {
         padding-bottom: 20px !important;
+    }
+
+    body.spz-3006.ppc-eptura .body-wrapper #hero .hero_container>.row #HeroFormCol,  body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container>.row #HeroFormCol {
+        padding-bottom: 0px !important;
     }
 }
 
@@ -810,6 +830,11 @@ body.spz-3006 .body-wrapper #hero .hero_container>.row #HeroText>h1.pt-4 img {
     max-height: 305.019px;
 }
 
+body.spz-3006.ppc-eptura-room-management .body-wrapper #hero .hero_container>.row #HeroText>h1.pt-4 img {
+    max-width: 438.455px;
+    margin-top: 80px;
+}
+
 body.spz-3006 .body-wrapper #hero .hero_container>.row #HeroText>h1.pt-4 {
     margin: 0px;
 }
@@ -982,6 +1007,14 @@ body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container>.r
     background: rgba(13, 18, 46, 0.40);
     top: 0;
 }
+
+.spz-3006 .testimonial-main-section .testimonial-item {
+    min-height: 254px;
+}
+
+/* .spz-3006.ppc-eptura .testimonial-main-section .right-box:before {
+    height: 320px;
+} */
 
 .spz-3006 .testimonial-main-section .testimonial-item-inner {
     position: relative;
@@ -1161,7 +1194,7 @@ body.spz-3006 .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPan
 
 body.spz-3006.ppc-condeco-make-your-flexible-office-work-better #hero .hero_container {
     padding-top: 46px !important;
-    padding-bottom: 99px !important;
+    padding-bottom: 80px !important;
 }
 
 body.spz-3006.ppc-condeco-make-your-flexible-office-work-better #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
@@ -1190,11 +1223,13 @@ body.spz-3006.ppc-archibus .body-wrapper #hero .hero_container>.row #HeroText>im
     margin-top: 27px;
 }
 
-body.spz-3006.ppc-archibus .testimonial-item {
+body.spz-3006.ppc-archibus .testimonial-item,
+body.spz-3006.ppc-eptura-room-management .testimonial-item {
     height: 322px !important;
 }
 
-.spz-3006.ppc-archibus .testimonial-main-section .right-box:before {
+.spz-3006.ppc-archibus .testimonial-main-section .right-box:before,
+.spz-3006.ppc-eptura-room-management .testimonial-main-section .right-box:before {
     height: 322px;
 }
 
@@ -1247,7 +1282,8 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row #HeroFormCo
 }
 
 body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container {
-    padding-bottom: 100px !important;
+    padding-bottom: 58px !important;
+    padding-top: 40px !important;
 }
 
 .ppc-eptura-asset-management #threecol_icons .text_content {
@@ -1305,6 +1341,7 @@ body.spz-3006.ppc-eptura.ppc-eptura-asset-management #hero .hero_container>.row 
 
 body.spz-3006.ppc-eptura.ppc-eptura-asset-management .body-wrapper #hero .hero_container {
     padding-bottom: 99px !important;
+    padding-top: 39px !important;
 }
 
 .ppc-eptura.ppc-eptura-asset-management #threecol_icons .text_content {
@@ -1348,6 +1385,12 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
         width: 544px;
         height: 306px;
         max-height: 100%;
+    }
+
+    body.spz-3006.ppc-eptura-room-management .body-wrapper #hero .hero_container>.row #HeroText>h1.pt-4 img {
+        max-width: 503.455px;
+        height: 303px;
+        margin-top: 0;
     }
 
     .spz-3006 .testimonial-section .container {
@@ -1412,6 +1455,14 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
         margin-top: 32px
     }
 
+    .spz-3006.ppc-eptura .splide__pagination {
+        bottom: 26px;
+    }
+
+    /* .spz-3006.ppc-eptura-room-management .splide__pagination {
+        bottom: 5px;
+    } */
+
     body.spz-3006 .body-wrapper #nav nav {
         margin-top: 72px;
         padding: 0px 100px !important;
@@ -1457,6 +1508,10 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
         padding: 48px 0px 69px;
     }
 
+    .spz-3006.ppc-eptura .testimonial-section {
+        padding: 48px 0px 46px;
+    }
+
     .spz-3006 .testimonial-item-inner p.quotes br.som-text {
         display: block;
     }
@@ -1495,12 +1550,12 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
     }
 
     /* 3 */
-    body.spz-3006.ppc-archibus .testimonial-item {
+    body.spz-3006.ppc-archibus .testimonial-item, body.spz-3006.ppc-eptura-room-management .testimonial-item {
         height: auto !important;
     }
 
     body.spz-3006.ppc-archibus .body-wrapper #hero .hero_container>.row #HeroText>img {
-        margin-top: 23px;
+        margin-top: 19px;
     }
 
     body.spz-3006.ppc-archibus #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
@@ -1576,6 +1631,10 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
     .ppc-eptura.ppc-eptura-asset-management #threecol_icons .text_content {
         padding-top: 45px !important;
     }
+
+    .spz-3006.ppc-eptura .splide__pagination {
+        bottom: -16px;
+    }
 }
 
 @media (max-width:900.98px) {
@@ -1600,9 +1659,17 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
         margin-left: 1px;
     }
 
+    body.spz-3006.ppc-eptura-room-management .body-wrapper #hero .hero_container>.row #HeroText>h1.pt-4 img {
+        margin-top: -6px;
+    }
+
     body.spz-3006 .body-wrapper #nav nav {
         padding: 0 10vw !important;
     }
+
+    /* .spz-3006.ppc-eptura .testimonial-section {
+        padding: 48px 0px 20px;
+    } */
 
     .spz-3006 .testimonial-main-section .right-box:after {
         display: none;
@@ -1665,6 +1732,11 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
         width: 100%;
         padding: 16px 0 0;
         text-align: right;
+    }
+
+
+    .spz-3006.ppc-eptura .testimonials-logo.mobile-sec, .spz-3006.ppc-eptura-room-management .testimonials-logo.mobile-sec {
+        padding: 3px 0 0;
     }
 
     .spz-3006 .testimonial-item-inner p.quotes br {
@@ -1752,13 +1824,15 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
     body.spz-3006.ppc-eptura.ppc-eptura-asset-management .testimonial-wrapper {
         margin-top: 33px;
     }
+
     .spz-3006.ppc-archibus .testimonial-section {
         padding: 48px 0px 84px;
     }
+
     .spz-3006.ppc-archibus .splide__pagination {
-        bottom: -38px;
+        bottom: -36px;
     }
-    
+
 }
 
 @media (max-width:330.98px) {
