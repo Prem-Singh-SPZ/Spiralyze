@@ -8,7 +8,7 @@
             if (location.href.indexOf('resources/articles/elevate-your-website-for-the-digital-age') > -1) {
                 waitForElm('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section').then(function (elm) {
                     document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content h4')[1].insertAdjacentHTML('beforebegin', blogBannerSection);
-                    document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content p')[23].insertAdjacentHTML('beforebegin', blogBannerSection);
+                    document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content p')[24].insertAdjacentHTML('beforebegin', blogBannerSection);
                     document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content .blog-banner-section')[1].classList.add('spz-second');
                     
                 });
@@ -49,7 +49,7 @@
     }
 
     const blogBannerSection = `<div class="blog-banner-section"><div class="blog-banner-container"><div class="blog-banner-content"><h6>See how 8,000+ banks and credit unions use Jack Henry to modernize operations</h6><div class="blog-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/v1692709279/jackhenry/4002/frame_5595.svg" alt="rating"><div class="reviews">
-    <span>4.5</span> (246 Reviews)</div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
+    <span>4.5/5</span> (246 Reviews)</div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
 
     function waitForElm(selector) {
         return new Promise(function (resolve) {
