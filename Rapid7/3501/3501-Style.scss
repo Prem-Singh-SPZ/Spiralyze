@@ -1,0 +1,183 @@
+body.spz-3501 {
+  .off-canvas-wrapper {
+    .off-canvas-wrapper-inner {
+      > .grid-container > .grid-x > .medium-offset-1 {
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          padding-top: 10px;
+        }
+
+        @media (max-width: 767.98px) {
+          display: flex;
+          flex-direction: column;
+
+          > a {
+            img {
+              margin-top: 7px;
+              max-width: 91px;
+            }
+          }
+
+          > img {
+            margin-top: 18px;
+            margin-left: 0;
+            max-width: 186px;
+          }
+        }
+      }
+
+      .aws-logo {
+        margin-top: 30px;
+        margin-left: 36px;
+        max-width: 300px;
+      }
+
+      .off-canvas-content {
+        .longHero {
+          .grid-container .grid-x .medium-offset-1.large-5 {
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              padding-top: 10px;
+            }
+
+            @media (max-width: 767.98px) {
+              &:not(.medium-order-1) {
+                padding-top: 0px;
+                padding-bottom: 32px;
+              }
+            }
+          }
+          #hero {
+            .html-block {
+              margin-top: 36px;
+              @media (max-width: 1023.98px) {
+                margin-top: 0;
+              }
+
+              h2 {
+                color: #242b2e;
+                font-family: Mulish, Mulish-local, sans-serif;
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 48px; /* 120% */
+                margin-bottom: 32px;
+
+                @media (max-width: 767.98px) {
+                  font-size: 32px;
+                  line-height: 40px;
+                }
+              }
+
+              p {
+                color: #000;
+                font-family: Roboto, Roboto-local, sans-serif;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px; /* 144.444% */
+                letter-spacing: 0;
+                margin-bottom: 32px;
+                padding-right: 8px;
+                @media (max-width: 767.98px) {
+                  padding-right: 0;
+                }
+              }
+
+              ul.orange-check {
+                padding-right: 2px;
+
+                li {
+                  padding-left: 26px;
+                  color: #242b2e;
+                  font-family: Roboto, Roboto-local, sans-serif;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 26px;
+                  margin-bottom: 12px;
+
+                  span {
+                    font-weight: 900;
+                  }
+
+                  &::before {
+                    background: transparent;
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1692871562/rapid7/3501/tick-orange_1.svg);
+                    background-image: none;
+                    top: -2px;
+                  }
+                }
+              }
+            }
+          }
+
+          .right-side-form {
+            margin-left: 22px;
+            @media (max-width: 1023.98px) {
+              margin-left: 0;
+            }
+
+            .marketoForm {
+              #intro {
+                > h2 {
+                  color: #fff;
+                  text-align: center;
+                  font-family: Mulish, Mulish-local, sans-serif;
+                  font-size: 36px;
+                  font-style: normal;
+                  font-weight: 900;
+                  line-height: 44px; /* 122.222% */
+                  
+                @media (max-width: 767.98px) {
+                    font-size: 28px;
+                    margin-top: 12px;
+                    line-height: 36px;
+                    margin-bottom: 27px;
+                  }
+                }
+              }
+
+              form.mktoForm {
+                .mktoButtonRow {
+                  margin-top: 4px;
+
+                  @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                    margin-top: 3px;
+                  }
+                  @media (max-width: 767.98px) {
+                    margin-top: 1px;
+
+                  }
+
+                  button.mktoButton {
+                    width: 100%;
+                    max-width: 321px;
+                    height: 52px;
+                    color: #fff;
+                    font-family: Mulish, Mulish-local, sans-serif;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 100%; /* 12px */
+                    letter-spacing: 3px;
+
+                    @media (max-width: 1023.98px) {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .pageContent {
+          .pageBlock.bgWhite {
+            .customerLogos.pageBlock {
+              padding-top: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
