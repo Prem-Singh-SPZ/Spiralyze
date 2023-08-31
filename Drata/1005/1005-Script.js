@@ -54,6 +54,7 @@
 
         // Set focus on input
         focusFields();
+        submitTestDetails();
 
         // removeStyleTags();
 
@@ -142,6 +143,13 @@
     });
   }
 
+//Passing test details to hidden fields
+function submitTestDetails() {
+  if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
+    document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Control');
+  }
+}
 
   // Create input label with placeholder text
   function appendInputLabel() {

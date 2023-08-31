@@ -63,6 +63,7 @@
         focusFields();
         hideReviewBadges();
         // removeStyleTags();
+        submitTestDetails();
 
         document.body.classList.add('spz-1007');
       }
@@ -177,6 +178,13 @@
     });
   }
 
+  //Passing test details to hidden fields
+  function submitTestDetails() {
+    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+      document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
+      document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
+    }
+  }
 
   // On input focus add class on closest parent .field class
   function focusFields() {
