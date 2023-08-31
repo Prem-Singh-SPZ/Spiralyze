@@ -10,7 +10,9 @@
                     document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content h4')[1].insertAdjacentHTML('beforebegin', blogBannerSection);
                     document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content p')[24].insertAdjacentHTML('beforebegin', blogBannerSection);
                     document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content .blog-banner-section')[1].classList.add('spz-second');
-                    
+                    document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content .blog-banner-section .btn.spz-btn').forEach(function name(elem) {
+                        elem.setAttribute('href', '/contact-us/sales?form=outcomes-improving-financial-health');
+                    })
                 });
             }
 
