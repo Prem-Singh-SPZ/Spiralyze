@@ -1,0 +1,516 @@
+$eptura-font: "Eptura Flexible", Arial, sans-serif;
+
+body.spz-4003 {
+  background: none;
+  #HeaderScripts {
+    display: none !important;
+  }
+
+  .body-wrapper {
+    height: 100vh;
+    &::before,
+    > section:not(#hero),
+    > div,
+    > footer {
+      display: none !important;
+    }
+
+    // Hero changes starts
+    #hero {
+      height: 100%;
+      .hero_container.page_padding {
+        padding: 0 15px !important;
+        max-width: 100% !important;
+        height: 100%;
+
+        > .row {
+          flex-direction: row-reverse;
+          height: 100%;
+
+          //Hero form content
+          #HeroFormCol {
+            max-width: 604px;
+            padding: 32px 40px 0px 40px;
+            background: var(--primary-neutrals-n-3, #f6fafa);
+          }
+
+          //Hero text content
+          > .col-md.pb-5 {
+            max-width: calc(100% - 604px);
+            padding: 56px 70px 40px !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            background: #20253f;
+
+            #HeroText,
+            #HeroBtn {
+              display: none !important;
+            }
+
+            .spz-copy {
+              display: flex;
+              height: 100%;
+              .wrap {
+                display: flex;
+                flex-direction: column;
+
+                .main {
+                  .hero-title {
+                    color: var(--primary-neutrals-w, #fff);
+                    text-align: center;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 54px;
+                    margin-bottom: 32px;
+
+                    span {
+                      //   font-family: $eptura-font;
+                      color: #904ab0;
+                    }
+                  }
+
+                  .hero-banner-img {
+                    margin-bottom: 32px;
+
+                    img {
+                      max-width: 100%;
+                    }
+                  }
+
+                  .bullets {
+                    padding-left: 40px;
+                    margin-top: 8px;
+                    .bullet {
+                      color: var(--primary-neutrals-w, #fff);
+                      font-size: 20px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 28px;
+                      position: relative;
+                      margin-bottom: 20px;
+
+                      span {
+                        font-family: $eptura-font;
+                        font-weight: 500;
+                      }
+
+                      &::before {
+                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/checkmark-icon.svg);
+                        position: absolute;
+                        left: -40px;
+                        top: 0;
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                      }
+                    }
+                  }
+                }
+
+                .spz-simplified-footer {
+                  flex-grow: 1;
+                  .footer-container {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    .links {
+                      a {
+                        color: var(--primary-neutrals-n-3, #f6fafa);
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 18px;
+
+                        &:hover {
+                          color: #d6d7f5;
+                        }
+                      }
+                    }
+
+                    .saas-privacy-policy {
+                      color: var(--primary-neutrals-n-3, #f6fafa);
+                      font-size: 12px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 18px; /* 150% */
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  #HeroForm {
+    //Form Css starts here
+    form.mktoForm {
+      .mktoFormRow {
+        .mktoFormCol {
+          min-height: auto;
+          margin: 0 !important;
+          padding: 0 10px !important;
+
+          .mktoFieldWrap {
+            position: relative;
+            float: none !important;
+            .mktoLabel {
+              position: absolute;
+              overflow: hidden;
+              color: var(
+                --primary-neutrals-n-2,
+                rgba(13, 18, 46, 0.8)
+              ) !important;
+              text-overflow: ellipsis;
+              white-space: nowrap;
+              font-family: $eptura-font;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 300 !important;
+              line-height: 24px; /* 150% */
+              top: 11px;
+              left: 16px;
+              padding: 0 !important;
+              transition: all 0.3s ease-in-out;
+              pointer-events: none;
+              max-width: calc(100% - 58px);
+              background: #fff;
+              right: 0;
+            }
+
+            .mktoField:not([type="checkbox"]) {
+              border-radius: 4px;
+              border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+              width: 280px;
+              padding: 11px 16px 10px 16px !important;
+              color: var(--primary-neutrals-n-1, #0d122e) !important;
+              text-overflow: ellipsis;
+              font-family: $eptura-font !important;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 300 !important;
+              line-height: 24px !important; /* 150% */
+              margin-bottom: 20px !important;
+
+              &:not(#Lead_Notes__c) {
+                white-space: nowrap;
+                overflow: hidden;
+                height: 48px !important;
+                @media (min-width: 767.98px) {
+                  // max-width: calc(100% - 10px);
+                  max-width: 100%;
+                }
+              }
+
+              &#I_am__c,
+              &#Country,
+              &#Solution_Type__c {
+                outline: transparent;
+                appearance: none !important;
+                background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                background-repeat: no-repeat !important;
+                background-position: right 14px center !important;
+                background-size: 24px !important;
+                padding-right: 32px !important;
+              }
+
+              &#Lead_Notes__c ~ .mktoError {
+                margin-top: 0 !important;
+                .mktoErrorArrowWrap {
+                  top: -27px;
+                }
+                .mktoErrorMsg {
+                  margin-top: -20px;
+                }
+              }
+
+              &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 30px white inset !important;
+              }
+              &:autofill {
+                -webkit-box-shadow: 0 0 0 30px white inset !important;
+              }
+            }
+
+            .mktoHtmlText.mktoHasWidth {
+              margin: 0 !important;
+              span {
+                color: #848995;
+                font-size: 12px !important;
+                // font-family: $eptura-font;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 18px; /* 160% */
+
+                a {
+                  // font-family: $eptura-font;
+                  padding: 0;
+                  color: #1b4bc5;
+                  // font-weight: 500;
+                  &:hover {
+                    color: #0d122e;
+                  }
+                }
+              }
+            }
+
+            .mktoCheckboxList {
+              margin-top: 10px;
+              cursor: pointer;
+              display: inline-block;
+              position: relative;
+              padding-left: 25px;
+              .mktoField {
+                border: 1px solid #d6d7f5;
+                height: 16px !important;
+                width: 16px !important;
+                cursor: pointer;
+                @media (max-width: 767.98px) {
+                  margin-top: 7px;
+                }
+              }
+
+              label {
+                font-family: $eptura-font !important;
+                color: var(--primary-neutrals-n-1, #0d122e);
+                font-size: 14px !important;
+                font-style: normal !important;
+                font-weight: 300 !important;
+                line-height: 20px !important; /* 142.857% */
+                margin-left: 19px;
+                letter-spacing: -0.1px;
+                cursor: pointer;
+                &:before {
+                  content: "";
+                  width: 16px;
+                  height: 16px;
+                  position: absolute;
+                  left: 0;
+                  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg")
+                    left center no-repeat;
+                  margin-top: 2px;
+                }
+
+                &:hover {
+                  &::before {
+                    background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg")
+                      left center no-repeat;
+                  }
+                }
+              }
+              input[type="checkbox"] {
+                display: none !important;
+
+                &:checked + label:before {
+                  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg")
+                    left center no-repeat;
+                }
+              }
+            }
+
+            .mktoError {
+              margin-top: 48px !important;
+
+              .mktoErrorMsg {
+                font-size: 14px;
+              }
+            }
+
+            //custom error for checkbox field
+            &.spz-cstm-error {
+              .mktoCheckboxList label {
+                color: #e51b00 !important;
+
+                &::before {
+                  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg")
+                    left center no-repeat;
+                }
+              }
+            }
+          }
+
+          &.field-focus {
+            .mktoFieldWrap {
+              .mktoLabel {
+                top: -8px;
+                left: 11px;
+                right: auto;
+                padding: 0 5px !important;
+                font-family: $eptura-font;
+                color: var(--accents-a-5, #904ab0) !important;
+                font-size: 13px !important;
+                line-height: 18px !important; /* 138.462% */
+                background: #fff;
+              }
+            }
+            .mktoField:not([type="checkbox"]) {
+              border-color: #904ab0 !important;
+            }
+          }
+
+          &.input-filled {
+            .mktoFieldWrap {
+              .mktoLabel {
+                top: -8px;
+                right: auto;
+                left: 11px;
+                font-family: $eptura-font;
+                padding: 0 5px !important;
+                font-size: 13px !important;
+                line-height: 18px !important; /* 138.462% */
+                background: #fff;
+              }
+            }
+          }
+
+          &.field-error {
+            &.field-focus {
+              .mktoFieldWrap {
+                .mktoLabel {
+                  color: var(--accents-a-5, #f83a59) !important;
+                }
+              }
+            }
+
+            .mktoField:not([type="checkbox"]) {
+              border-color: #f83a59 !important;
+            }
+          }
+        }
+
+        &[data-zi-field-enriched="true"] {
+          display: inline !important;
+        }
+
+        .spz-anchor:not(.spz-hidden) {
+          display: flex;
+          width: 100%;
+
+          + .mktoFieldDescriptor.mktoFormCol {
+            display: none !important;
+          }
+
+          .show-comment-dynamic {
+            overflow: hidden;
+            color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+            font-family: $eptura-font;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 32px;
+            display: inline-block;
+            margin-top: 2px;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+            span {
+              padding-right: 5px;
+            }
+            @media (max-width: 767.98px) {
+              padding: 0;
+              margin-bottom: 32px;
+            }
+
+            &:hover {
+              color: #904ab0;
+            }
+          }
+        }
+        .spz-hidden {
+          display: none;
+        }
+      }
+
+      //submit button css
+      .mktoButtonRow {
+        text-align: center;
+        .mktoButtonWrap {
+          button.mktoButton {
+            display: flex;
+            width: 140px !important;
+            height: 50px !important;
+            padding: 0px !important;
+            justify-content: center;
+            align-items: center;
+            border-radius: 3px !important;
+            background: var(--interactive-colors-a-1, #1b4bc5) !important;
+            color: var(--primary-neutrals-w, #fff) !important;
+            text-align: center;
+            font-family: $eptura-font;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px !important; /* 150% */
+            margin-top: 12px !important;
+            white-space: nowrap;
+            all: initial;
+
+            &:hover,
+            &:focus {
+              background: var(--interactive-colors-a-3, #456ed6) !important;
+            }
+            &:focus {
+              transform: translate(0, 1px);
+            }
+
+            @media (max-width: 767.98px) {
+              // height: 56px !important;
+              padding: 0px 32px;
+              width: 300px !important;
+              max-width: 300px !important;
+            }
+          }
+        }
+      }
+
+      //email line form
+      .spz-email {
+        .mktoFieldWrap {
+          margin-top: 11px;
+          @media (max-width: 767.98px) {
+            margin-top: 16px;
+          }
+          .mktoHtmlText.mktoHasWidth {
+            text-align: center;
+            @media (max-width: 767.98px) {
+              line-height: 0;
+            }
+            em {
+              color: var(--primary-neutrals-n-1, #0d122e);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 20px; /* 142.857% */
+              @media (max-width: 767.98px) {
+                padding: 0;
+              }
+
+              .mobile-only {
+                @media (min-width: 767.98px) {
+                  display: none;
+                }
+              }
+
+              a {
+                color: var(--interactive-colors-a-1, #1b4bc5);
+                font-weight: 500;
+                padding: 0;
+                font-family: $eptura-font;
+                padding-left: 2px;
+
+                &:hover {
+                  color: #0d122e;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
