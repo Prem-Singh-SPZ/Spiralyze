@@ -38,7 +38,7 @@ function insertStickySection() {
             <div class="center-content">
                 <img class="g2-logo" src="https://res.cloudinary.com/spiralyze/image/upload/v1690986738/drata/3002/hero_logo-g2.svg" alt="G2 Logo" />
                 <img class="star-ratings" src="https://res.cloudinary.com/spiralyze/image/upload/v1690986738/drata/3002/rating-4_9.svg" alt="Ratings" />
-                <div class="ratings"><span>4.9 </span> (461 reviews)</div>
+                <div class="ratings"><span>4.9 </span> (516 reviews)</div>
             </div>
             <div class="right-content">
                 <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" /></a>
