@@ -42,14 +42,14 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
     width: 384px;
-    padding: 24px 24px 16px;
+    padding: 24px 14px 16px;
   }
 }
 @media (max-width: 767.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
     max-width: 100%;
     width: 100%;
-    padding: 24px 30px;
+    padding: 24px 20px;
     -webkit-box-ordinal-group: 0;
         -ms-flex-order: -1;
             order: -1;
@@ -61,6 +61,16 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
   background-color: transparent !important;
   padding: 64px 0;
+}
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
+    padding: 24px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
+    padding: 20px 0;
+  }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
   display: block !important;
@@ -79,6 +89,11 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   min-height: auto;
   margin: 0 !important;
   padding: 0 10px !important;
+}
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
+    line-height: 0;
+  }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
   position: relative;
@@ -101,9 +116,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-  max-width: calc(100% - 58px);
+  max-width: calc(100% - 30px);
   background: #f6fafa;
   right: 0;
+}
+body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.select .mktoLabel {
+  max-width: calc(100% - 58px);
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   border-radius: 4px;
@@ -165,6 +183,11 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   font-weight: 300;
   line-height: 16px; /* 160% */
 }
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
+    margin-bottom: 4px;
+  }
+}
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
   padding: 0;
   color: #904ab0;
@@ -179,6 +202,11 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   display: inline-block;
   position: relative;
   padding-left: 25px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
+    margin-top: 14px;
+  }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
   border: 1px solid #d6d7f5;
@@ -299,6 +327,11 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
   color: #904ab0;
 }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+    margin-bottom: 26px;
+  }
+}
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
   display: none;
 }
@@ -340,7 +373,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
-  margin-top: 6px;
+  margin-top: 12px;
+}
+@media (min-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+    margin-top: 6px;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
@@ -393,6 +431,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   margin-bottom: 24px;
   text-align: center;
 }
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title {
+    padding-top: 8px;
+    margin-bottom: 12px;
+  }
+}
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -405,15 +449,16 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
           align-items: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-@media (min-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
-    padding: 0 20px;
-  }
+  padding: 0 20px;
 }
 @media (min-width: 1600px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
     padding: 0 36px;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
+    padding: 0 22px;
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img {
@@ -422,8 +467,19 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   text-align: center;
   margin-bottom: 10px;
 }
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img {
+    padding: 0 12px;
+    margin-bottom: 0px;
+  }
+}
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img img {
   height: auto;
+}
+@media (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img img {
+    max-width: 100%;
+  }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
   max-width: calc(100% - 604px);
@@ -439,7 +495,7 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
     max-width: calc(100% - 384px);
-    padding: 26px 24px 16px !important;
+    padding: 36px 24px 24px !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -486,6 +542,9 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
     font-size: 26px;
     line-height: 34px;
+    max-width: 294px;
+    margin-left: auto;
+    margin-right: auto;
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-banner-img {
@@ -497,6 +556,11 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
   padding-left: 40px;
   margin-top: 8px;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
+    margin-left: -5px;
+  }
 }
 @media (min-width: 1600px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
@@ -590,7 +654,8 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.
 @media (max-width: 1199.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links {
     max-width: 100%;
-    margin-bottom: 12px;
+    margin-bottom: 8px;
+    padding: 0 14px;
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .saas-privacy-policy {

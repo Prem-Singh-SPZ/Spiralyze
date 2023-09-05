@@ -40,13 +40,13 @@ body.spz-4003 {
 
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               width: 384px;
-              padding: 24px 24px 16px;
+              padding: 24px 14px 16px;
             }
 
             @media (max-width: 767.98px) {
               max-width: 100%;
               width: 100%;
-              padding: 24px 30px;
+              padding: 24px 20px;
               order: -1;
             }
 
@@ -57,6 +57,14 @@ body.spz-4003 {
             #HeroFormPanel {
               background-color: transparent !important;
               padding: 64px 0;
+
+              @media (max-width: 1199.98px) {
+                padding: 24px 0;
+              }
+
+              @media (max-width: 767.98px) {
+                padding: 20px 0;
+              }
 
               #HeroFormTitleText {
                 display: block !important;
@@ -83,6 +91,10 @@ body.spz-4003 {
                       margin: 0 !important;
                       padding: 0 10px !important;
 
+                      @media (max-width: 1199.98px) {
+                        line-height: 0;
+                      }
+
                       .mktoFieldWrap {
                         position: relative;
                         float: none !important;
@@ -105,9 +117,13 @@ body.spz-4003 {
                           padding: 0 !important;
                           transition: all 0.3s ease-in-out;
                           pointer-events: none;
-                          max-width: calc(100% - 58px);
+                          max-width: calc(100% - 30px);
                           background: #f6fafa;
                           right: 0;
+                        }
+
+                        &.select .mktoLabel{
+                          max-width: calc(100% - 58px);
                         }
 
                         .mktoField:not([type="checkbox"]) {
@@ -178,6 +194,10 @@ body.spz-4003 {
                             font-weight: 300;
                             line-height: 16px; /* 160% */
 
+                            @media (max-width: 1199.98px) {
+                              margin-bottom: 4px;
+                            }
+
                             a {
                               // font-family: $eptura-font;
                               padding: 0;
@@ -197,6 +217,9 @@ body.spz-4003 {
                           display: inline-block;
                           position: relative;
                           padding-left: 25px;
+                          @media (max-width: 1199.98px) {
+                            margin-top: 14px;
+                          }
                           .mktoField {
                             border: 1px solid #d6d7f5;
                             height: 16px !important;
@@ -355,6 +378,10 @@ body.spz-4003 {
                         &:hover {
                           color: #904ab0;
                         }
+
+                        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                          margin-bottom: 26px;
+                        }
                       }
                     }
                     .spz-hidden {
@@ -411,7 +438,10 @@ body.spz-4003 {
                   //email line form
                   .spz-email {
                     .mktoFieldWrap {
-                      margin-top: 6px;
+                      margin-top: 12px;
+                      @media (min-width: 1199.98px) {
+                        margin-top: 6px;
+                      }
                       @media (max-width: 767.98px) {
                         margin-top: 16px;
                       }
@@ -467,6 +497,11 @@ body.spz-4003 {
                 padding-top: 38px;
                 margin-bottom: 24px;
                 text-align: center;
+
+                @media (max-width: 1199.98px) {
+                  padding-top: 8px;
+                  margin-bottom: 12px;
+                }
               }
             }
 
@@ -475,12 +510,14 @@ body.spz-4003 {
               justify-content: space-between;
               align-items: center;
               flex-wrap: wrap;
-              @media (min-width: 1199.98px) {
-                padding: 0 20px;
-              }
+              padding: 0 20px;
 
               @media (min-width: 1600px) {
                 padding: 0 36px;
+              }
+
+              @media (max-width: 1199.98px) {
+                padding: 0 22px;
               }
 
               > .logo-img {
@@ -488,9 +525,19 @@ body.spz-4003 {
                 padding: 0 16px;
                 text-align: center;
                 margin-bottom: 10px;
+
+                @media (max-width: 1199.98px) {
+                  padding: 0 12px;
+                  margin-bottom: 0px;
+                }
+
                 img {
                   // max-width: 100px;
                   height: auto;
+
+                  @media (max-width: 1199.98px) {
+                    max-width: 100%;
+                  }
                 }
               }
             }
@@ -509,7 +556,7 @@ body.spz-4003 {
 
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               max-width: calc(100% - 384px);
-              padding: 26px 24px 16px !important;
+              padding: 36px 24px 24px !important;
             }
 
             @media (max-width: 767.98px) {
@@ -550,6 +597,9 @@ body.spz-4003 {
                     @media (max-width: 1199.98px) {
                       font-size: 26px;
                       line-height: 34px;
+                      max-width: 294px;
+                      margin-left: auto;
+                      margin-right: auto;
                     }
                   }
 
@@ -564,6 +614,10 @@ body.spz-4003 {
                   .bullets {
                     padding-left: 40px;
                     margin-top: 8px;
+
+                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                      margin-left: -5px;
+                    }
 
                     @media (min-width: 1600px) {
                       padding-right: 6px;
@@ -637,7 +691,8 @@ body.spz-4003 {
 
                       @media (max-width: 1199.98px) {
                         max-width: 100%;
-                        margin-bottom: 12px;
+                        margin-bottom: 8px;
+                        padding: 0 14px;
                       }
                     }
 
