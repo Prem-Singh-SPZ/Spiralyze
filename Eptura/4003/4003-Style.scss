@@ -46,7 +46,7 @@ body.spz-4003 {
             @media (max-width: 767.98px) {
               max-width: 100%;
               width: 100%;
-              padding: 24px 20px;
+              padding: 24px 20px 23px !important;
               order: -1;
             }
 
@@ -63,6 +63,8 @@ body.spz-4003 {
               }
 
               @media (max-width: 767.98px) {
+                max-width: 424px;
+                margin: auto;
                 padding: 20px 0;
               }
 
@@ -101,10 +103,7 @@ body.spz-4003 {
                         .mktoLabel {
                           position: absolute;
                           overflow: hidden;
-                          color: var(
-                            --primary-neutrals-n-2,
-                            rgba(13, 18, 46, 0.8)
-                          ) !important;
+                          color: #0D122E !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
                           font-family: $eptura-font;
@@ -122,7 +121,7 @@ body.spz-4003 {
                           right: 0;
                         }
 
-                        &.select .mktoLabel{
+                        &.select .mktoLabel {
                           max-width: calc(100% - 58px);
                         }
 
@@ -177,10 +176,10 @@ body.spz-4003 {
                           }
 
                           &:-webkit-autofill {
-                            -webkit-box-shadow: 0 0 0 30px white inset !important;
+                            -webkit-box-shadow: 0 0 0 30px #f6fafa inset !important;
                           }
                           &:autofill {
-                            -webkit-box-shadow: 0 0 0 30px white inset !important;
+                            -webkit-box-shadow: 0 0 0 30px #f6fafa inset !important;
                           }
                         }
 
@@ -220,6 +219,10 @@ body.spz-4003 {
                           @media (max-width: 1199.98px) {
                             margin-top: 14px;
                           }
+                          @media (max-width: 767.98px) {
+                            margin-top: 1px;
+                          }
+
                           .mktoField {
                             border: 1px solid #d6d7f5;
                             height: 16px !important;
@@ -240,6 +243,12 @@ body.spz-4003 {
                             margin-left: 19px;
                             letter-spacing: -0.1px;
                             cursor: pointer;
+
+                            @media (max-width: 767.98px) {
+                              font-size: 12px !important;
+                              line-height: 18px !important;
+                            }
+
                             &:before {
                               content: "";
                               width: 16px;
@@ -300,7 +309,7 @@ body.spz-4003 {
                             color: var(--accents-a-5, #904ab0) !important;
                             font-size: 13px !important;
                             line-height: 18px !important; /* 138.462% */
-                            background: #fff;
+                            background: #f6fafa;
                           }
                         }
                         .mktoField:not([type="checkbox"]) {
@@ -318,7 +327,7 @@ body.spz-4003 {
                             padding: 0 5px !important;
                             font-size: 13px !important;
                             line-height: 18px !important; /* 138.462% */
-                            background: #fff;
+                            background: #f6fafa;
                           }
                         }
                       }
@@ -352,10 +361,7 @@ body.spz-4003 {
 
                       .show-comment-dynamic {
                         overflow: hidden;
-                        color: var(
-                          --primary-neutrals-n-2,
-                          rgba(13, 18, 46, 0.8)
-                        );
+                        color: #0D122E;
                         font-family: $eptura-font;
                         text-overflow: ellipsis;
                         font-size: 16px;
@@ -372,7 +378,7 @@ body.spz-4003 {
                         }
                         @media (max-width: 767.98px) {
                           padding: 0;
-                          margin-bottom: 32px;
+                          margin-bottom: 26px;
                         }
 
                         &:hover {
@@ -403,7 +409,7 @@ body.spz-4003 {
                         background: #904ab0 !important;
                         color: var(--primary-neutrals-w, #fff) !important;
                         text-align: center;
-                        font-family: $eptura-font;
+                        font-family: $eptura-font !important;
                         font-size: 16px !important;
                         font-style: normal;
                         font-weight: 500;
@@ -442,9 +448,9 @@ body.spz-4003 {
                       @media (min-width: 1199.98px) {
                         margin-top: 6px;
                       }
-                      @media (max-width: 767.98px) {
-                        margin-top: 16px;
-                      }
+                      // @media (max-width: 767.98px) {
+                      //   margin-top: 16px;
+                      // }
                       .mktoHtmlText.mktoHasWidth {
                         text-align: center;
                         @media (max-width: 767.98px) {
@@ -519,6 +525,9 @@ body.spz-4003 {
               @media (max-width: 1199.98px) {
                 padding: 0 22px;
               }
+              @media (max-width: 767.98px) {
+                padding: 0 4px;
+              }
 
               > .logo-img {
                 width: 33.33%;
@@ -562,7 +571,7 @@ body.spz-4003 {
             @media (max-width: 767.98px) {
               max-width: 100%;
               width: 100%;
-              padding: 40px 30px 24px 30px !important;
+              padding: 40px 12px 24px 12px !important;
             }
 
             #HeroText,
@@ -623,6 +632,11 @@ body.spz-4003 {
                       padding-right: 6px;
                     }
 
+                    @media (max-width: 767.98px) {
+                      margin: 8px 12px 0;
+                      padding-right: 8px;
+                    }
+
                     .bullet {
                       color: var(--primary-neutrals-w, #fff);
                       font-size: 20px;
@@ -660,12 +674,20 @@ body.spz-4003 {
 
                 .spz-simplified-footer {
                   flex-grow: 1;
+
+                  @media (max-width: 767.98px) {
+                    margin-top: 20px;
+                  }
+
                   .footer-container {
                     display: flex;
                     align-items: flex-end;
                     justify-content: space-between;
                     height: 100%;
-
+                    // @media (max-width: 767.98px) {
+                    //   margin: 8px 12px 0;
+                    //   padding-right: 8px;
+                    // }
                     @media (max-width: 1199.98px) {
                       flex-direction: column;
                       align-items: center;
@@ -693,6 +715,11 @@ body.spz-4003 {
                         max-width: 100%;
                         margin-bottom: 8px;
                         padding: 0 14px;
+                      }
+
+                      @media (max-width: 767.98px) {
+                        padding: 0 18px;
+                        margin-bottom: 12px;
                       }
                     }
 

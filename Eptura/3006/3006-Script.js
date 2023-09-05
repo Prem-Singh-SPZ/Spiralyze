@@ -68,7 +68,7 @@
 
 
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
-            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
+            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = '<span>Get started <span>';
         }
 
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
@@ -570,7 +570,7 @@
                 document.body.classList.add('ppc-archibus');
 
                 if (document.querySelector('.ppc-archibus #HeroFormCol #HeroFormTitleText h2')) {
-                    document.querySelector('.ppc-archibus #HeroFormCol #HeroFormTitleText h2').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
+                    document.querySelector('.ppc-archibus #HeroFormCol #HeroFormTitleText h2').innerHTML = '<span>Get started <span>';
                 }
 
                 document.querySelector('body.spz-3006 .body-wrapper #hero .hero_container > .row #HeroText > p.pt-4').insertAdjacentHTML('afterend', `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/archibus-ui.webp" alt="optimize your maintenance operation">`);
@@ -698,7 +698,7 @@
                 document.body.classList.add('ppc-eptura-room-management');
 
                 const image3 = document.querySelector("body.spz-3006 .body-wrapper #hero .hero_container > .row #HeroText > h1.pt-4 span img");
-                // image3.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/image_3.webp";
+                image3.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/room-management-ui_2.webp";
                 image3.setAttribute("alt", "Make hybrid work");
 
                 document.querySelector('section#testimonials').insertAdjacentHTML('beforebegin', `<div class="testimonial-section eptura-testimonial">
@@ -868,7 +868,7 @@
                 document.body.classList.add('ppc-eptura-asset-management');
 
                 const image4 = document.querySelector("body.spz-3006 .body-wrapper #hero .hero_container > .row #HeroText > h1.pt-4 img");
-                image4.src = "//res.cloudinary.com/spiralyze/image/upload/v1692349840/eptura/3006/image_4.webp";
+                image4.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/asset-management-ui_1.webp";
                 image4.setAttribute("alt", "Maximize the performance of your assets");
 
                 document.querySelector('section#testimonials').insertAdjacentHTML('beforebegin', `<div class="testimonial-section eptura-testimonial">
