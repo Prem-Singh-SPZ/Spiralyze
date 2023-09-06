@@ -41,6 +41,8 @@ body.spz-4003 {
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               width: 384px;
               padding: 24px 14px 16px;
+              display: flex !important;
+              flex-direction: column;
             }
 
             @media (max-width: 767.98px) {
@@ -278,7 +280,16 @@ body.spz-4003 {
                         }
 
                         .mktoError {
-                          margin-top: 48px !important;
+                          margin-top: 54px !important;
+                          @media (min-width: 767.98px) and (max-width: 877.98px) {
+                            margin-top: 74px !important;
+                          }
+                          @media (max-width: 767.98px) {
+                            margin-top: 40px !important;
+                          }
+                          @media (max-width: 388.98px) {
+                            margin-top: 56px !important;
+                          }
 
                           .mktoErrorMsg {
                             font-size: 14px;
@@ -509,6 +520,10 @@ body.spz-4003 {
                   margin-bottom: 12px;
                 }
               }
+
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                margin-top: auto;
+              }
             }
 
             .social-logo-section {
@@ -676,7 +691,7 @@ body.spz-4003 {
                 }
 
                 .spz-simplified-footer {
-                  flex-grow: 1;
+                  margin-top: auto;
 
                   @media (max-width: 767.98px) {
                     margin-top: 20px;
