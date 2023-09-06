@@ -20,7 +20,7 @@
         pageName: "website-managerplus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575720/eptura/4003/managerplus-eptura-logo-1.svg",
         logoAlt: "Managerplus Demo",
-        rightTitle: "Reduce asset downtime <span>by 50%.</span> Streamline inventory and maintenance.",
+        rightTitle: "Reduce asset downtime <span>by&nbsp;</span><span> 50%.</span> Streamline inventory and maintenance.",
         rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.webp",
         rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.png",
         heroImgAlt: "Managerplus UI Image",
