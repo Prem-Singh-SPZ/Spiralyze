@@ -8,41 +8,61 @@
         pageName: "website-proxyclick-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575703/eptura/4003/proxyclick_logo.svg",
         logoAlt: "Proxyclick Demo",
+        rightTitle: "Make the visitor check-in experience <span>50% faster</span> while improving security.",
         rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_6.webp",
         rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_6.png",
         heroImgAlt: "Proxyclick UI Image",
+        listItem1: "<span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
+        listItem2: "<span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
+        listItem3: "<span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications."
     },
     {
         pageName: "website-managerplus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575720/eptura/4003/managerplus-eptura-logo-1.svg",
         logoAlt: "Managerplus Demo",
+        rightTitle: "Reduce asset downtime <span>by 50%.</span> Streamline inventory and maintenance.",
         rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.webp",
         rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.png",
-        heroImgAlt: "Managerplus UI Image"
+        heroImgAlt: "Managerplus UI Image",
+        listItem1: "<span>Asset management.</span> Track and manage all assets. Service history, maintenance, budgeting, and more.",
+        listItem2: "<span>Maintenance workflows.</span> Automatically trigger work orders at set intervals or when a usage threshold is met.",
+        listItem3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low."
     },
     {
         pageName: "website-archibus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575732/eptura/4003/archibus-eptura-logo-color_1.svg",
         logoAlt: "Archibus Demo",
+        rightTitle: "Reduce costs <span>by 30%</span> by automating space and facility management.",
         rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_23.webp",
         rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_23.png",
-        heroImgAlt: "Archibus UI Image"
+        heroImgAlt: "Archibus UI Image",
+        listItem1: "<span>Space planning.</span> Sort office desks, tables, and rooms. Plan for moves and occupancy changes.",
+        listItem2: "<span>Work orders.</span> Automatically generate detailed work orders when assets are due for maintenance. See repair status.",
+        listItem3: "<span>Scheduling.</span> Reserve desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting."
     },
     {
         pageName: "website-spaceiq-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575752/eptura/4003/spaceiq-eptura-logo-color_1.svg",
         logoAlt: "SpaceIQ Demo",
+        rightTitle: "Automate space planning and management. Reduce costs <span>by 30%.</span>",
         rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_29.webp",
         rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_29.png",
-        heroImgAlt: "SpaceIQ UI Image"
+        heroImgAlt: "SpaceIQ UI Image",
+        listItem1: "<span>Space planning.</span> Track spaces, people, furniture, and assets in one place. Sort office desks, tables, and rooms. ",
+        listItem2: "<span>Move management.</span> Plan for moves using drag-and-drop. Auto-update floor plans once you&#8217;ve relocated.",
+        listItem3: "<span>Real estate portfolio.</span> Track your real estate for all your locations. Lease costs, utilization rates, and occupancies."
     },
     {
         pageName: "website-ioffice-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575766/eptura/4003/ioffice-eptura-logo-color_1.svg",
         logoAlt: "IOffice Demo",
+        rightTitle: "Plan, optimize, and manage your entire facility <span>in 87%</span> less time.",
         rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_31.webp",
         rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_31.png",
-        heroImgAlt: "IOffice UI Image"
+        heroImgAlt: "IOffice UI Image",
+        listItem1: "<span>Space planning.</span> Get a digital floor plan of your facilities. Drag-and-drop teams, desks, assets, amenities, and more.",
+        listItem2: "<span>Assets.</span> Track asset costs, service requests, and repair history. Auto-create preventive maintenance work orders. ",
+        listItem3: "<span>Employee services.</span> Book meeting rooms and desks. Notify hosts of visitors. Request catering. Reduce turnover 59%."
     },
 
     ];
@@ -91,14 +111,15 @@
             pageContent.forEach(function (url) {
                 if (identifyPage == url.pageName) {
 
-                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a href="https://eptura.com/" target="_blank"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></a></div>`);
 
                     document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `<div class="spz-social-section"><div class="social-section-title">Trusted by 16,000+ customers worldwide</div><div class="social-logo-section"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-zoom.svg" alt="Zoom"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-comcast.svg" alt="Comcast"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-nasdaq.svg" alt="Nasdaq"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693906373/eptura/4003/logo-slack_1.svg" alt="Slack"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-johnson.svg" alt="Johnson"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-pepsico.svg" alt="Pepsico"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-starbucks.svg" alt="Starbucks coffee"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-generalelectric.svg" alt="General Electric"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-unilever.svg" alt="Unilever"></div></div></div>`);
 
                     document.querySelector('#hero > .hero_container > .row > .col-md.pb-5').insertAdjacentHTML('beforeend', `<div class="spz-copy">
                     <div class="wrap">
                         <div class="main">
-                            <div class="hero-title">Make the visitor check-in experience <span>50% faster</span> while improving security.</div>
+                            <div class="hero-title">`+ url.rightTitle + `
+                            </div>
                             <div class="hero-banner-img"><picture>
                                 <source srcset="`+ url.rightHeroImgWEBP + `" type="image/webp">
                                     <source srcset="`+ url.rightHeroImgPNG + `" type="image/png">
@@ -106,9 +127,15 @@
                                         </picture>
                                     </div>
                                     <div class="bullets">
-                                        <div class="bullet"><span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.</div>
-                                        <div class="bullet"><span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.</div>
-                                        <div class="bullet"><span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications.</div>
+                                        <div class="bullet">
+                                        `+ url.listItem1 + `
+                                        </div>
+                                        <div class="bullet">
+                                            `+ url.listItem2 + `
+                                        </div>
+                                        <div class="bullet">
+                                            `+ url.listItem3 + `
+                                        </div>
                                     </div>
                                 </div>
                                 <div class="spz-simplified-footer">

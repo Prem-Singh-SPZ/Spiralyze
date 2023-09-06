@@ -59,7 +59,7 @@ body.spz-4003 {
               padding: 64px 0;
 
               @media (max-width: 1199.98px) {
-                padding: 24px 0;
+                padding: 22px 0;
               }
 
               @media (max-width: 767.98px) {
@@ -103,7 +103,7 @@ body.spz-4003 {
                         .mktoLabel {
                           position: absolute;
                           overflow: hidden;
-                          color: #0D122E !important;
+                          color: #0d122e !important;
                           text-overflow: ellipsis;
                           white-space: nowrap;
                           font-family: $eptura-font;
@@ -361,7 +361,7 @@ body.spz-4003 {
 
                       .show-comment-dynamic {
                         overflow: hidden;
-                        color: #0D122E;
+                        color: #0d122e;
                         font-family: $eptura-font;
                         text-overflow: ellipsis;
                         font-size: 16px;
@@ -606,9 +606,12 @@ body.spz-4003 {
                     @media (max-width: 1199.98px) {
                       font-size: 26px;
                       line-height: 34px;
-                      max-width: 294px;
+                      // max-width: 294px;
                       margin-left: auto;
                       margin-right: auto;
+                    }
+                    @media (max-width: 767.98px) {
+                      max-width: 294px;
                     }
                   }
 
@@ -629,7 +632,7 @@ body.spz-4003 {
                     }
 
                     @media (min-width: 1600px) {
-                      padding-right: 6px;
+                      // padding-right: 6px;
                     }
 
                     @media (max-width: 767.98px) {
@@ -737,6 +740,86 @@ body.spz-4003 {
           }
         }
       }
+    }
+  }
+}
+
+//Page specific css
+//SpaceIQ and Archibus css
+body.spz-4003.website-spaceiq-demo,
+body.spz-4003.website-archibus-demo {
+  .body-wrapper #hero .hero_container.page_padding > .row {
+    > .col-md.pb-5 .spz-copy .wrap .main {
+      .hero-title {
+        @media (max-width: 1600px) {
+          max-width: 548px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (max-width: 1199.98px) {
+          max-width: 310px;
+        }
+        @media (max-width: 767.98px) {
+          max-width: 300px;
+        }
+      }
+
+      .bullets {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          padding-right: 2px;
+        }
+      }
+    }
+
+    #HeroFormCol #HeroFormPanel {
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        padding: 24px 0;
+      }
+    }
+  }
+}
+
+//Managerplus Css
+body.spz-4003.website-managerplus-demo
+  .body-wrapper
+  #hero
+  .hero_container.page_padding
+  > .row {
+  > .col-md.pb-5 {
+    .spz-copy {
+      max-width: 816px;
+      .hero-banner-img,
+      .bullets {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .bullets {
+        @media (min-width: 1600.98px) {
+          padding-right: 2px;
+        }
+      }
+
+      .spz-simplified-footer {
+        @media (min-width: 1600.98px) {
+          padding: 0 8px;
+        }
+      }
+
+      .wrap .main {
+        .hero-title {
+          @media (max-width: 767.98px) {
+            max-width: 278px;
+          }
+        }
+      }
+    }
+  }
+
+  #HeroFormCol #HeroFormPanel {
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      padding: 24px 0;
     }
   }
 }
