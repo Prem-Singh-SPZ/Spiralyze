@@ -1,3 +1,4 @@
+
 $eptura-font: "Eptura Flexible", Arial, sans-serif;
 
 body.spz-4003 {
@@ -514,10 +515,61 @@ body.spz-4003 {
                 padding-top: 38px;
                 margin-bottom: 24px;
                 text-align: center;
+                position: relative;
 
                 @media (max-width: 1199.98px) {
                   padding-top: 8px;
                   margin-bottom: 12px;
+                }
+
+                &::before {
+                  content: "";
+                  width: 131px;
+                  height: 1px;
+                  opacity: 0.3;
+                  background: #babfcb;
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  bottom: 9px;
+
+                  @media (max-width: 1600px) {
+                    width: 103px;
+                  }
+
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    width: calc(50% - 149px);
+                  }
+
+                  @media (max-width: 767.98px) {
+                    width: 0;
+                    display: none;
+                  }
+                }
+
+                &::after {
+                  content: "";
+                  width: 131px;
+                  height: 1px;
+                  opacity: 0.3;
+                  background: #babfcb;
+                  display: block;
+                  position: absolute;
+                  right: 0;
+                  bottom: 9px;
+
+                  @media (max-width: 1600px) {
+                    width: 103px;
+                  }
+
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    width: calc(50% - 149px);
+                  }
+
+                  @media (max-width: 767.98px) {
+                    width: 0;
+                    display: none;
+                  }
                 }
               }
 
@@ -532,6 +584,7 @@ body.spz-4003 {
               align-items: center;
               flex-wrap: wrap;
               padding: 0 20px;
+              opacity: 0.7;
 
               @media (min-width: 1600px) {
                 padding: 0 36px;

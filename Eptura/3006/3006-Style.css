@@ -19,6 +19,7 @@ body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroF
     body.spz-3006 .testimonial-main-section .testimonial-item {
         min-height: 294px;
     }
+
     body.spz-3006.ppc-proxyclick-discover-a-better-way-to-check-in-visitors .testimonial-main-section .testimonial-item {
         min-height: 266px;
     }
@@ -1089,7 +1090,8 @@ body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container>.r
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
+    /* align-items: center; */
+    align-items: flex-start;
 }
 
 .spz-3006 .testimonials-item .img-wrapper img {
@@ -1121,6 +1123,9 @@ body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container>.r
 .spz-3006 .testimonials-logo {
     padding-left: 12px;
     border-left: 1px solid var(--interactive-colors-a-4, #D6D7F5);
+    display: flex;
+    align-items: center;
+    align-self: stretch;
 }
 
 .spz-3006 .testimonials-logo img {
