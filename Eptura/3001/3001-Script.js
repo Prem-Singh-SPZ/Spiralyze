@@ -241,6 +241,25 @@
                 height="260px">`);
                 document.body.classList.add('ppc-archibus');
             }
+
+            else if (window.location.href.indexOf('ppc-eptura-asset-management') > -1) {
+                document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
+
+                document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/asset-management-ui_1.webp');
+                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Maximize the performance of your assets');
+
+                document.body.classList.add('ppc-eptura-asset-management');
+            }
+
+            else if (window.location.href.indexOf('ppc-eptura-room-management') > -1) {
+                document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
+
+                document.querySelector('#hero #HeroText img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp');
+                document.querySelector('#hero #HeroText img').setAttribute('alt', 'Make hybrid work, work');
+
+                document.body.classList.add('ppc-eptura-room-management');
+            }
+
             else if (window.location.href.indexOf('ppc-eptura') > -1) {
                 document.querySelector('#nav #NavLogo > a').insertAdjacentHTML('afterbegin', `<img src="//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg" alt="Eptura" class="logo-img">`);
 
