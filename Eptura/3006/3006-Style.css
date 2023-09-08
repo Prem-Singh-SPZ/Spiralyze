@@ -1040,12 +1040,18 @@ body.spz-3006.ppc-eptura-asset-management .body-wrapper #hero .hero_container>.r
     min-height: 254px;
 }
 
+@media (min-width: 1199.98px) and (max-width: 1421.98px) {
+    .spz-3006:not(.ppc-archibus-maintenance-software) .testimonial-main-section .testimonial-item {
+        margin-bottom: 36px;
+    }
+}
+
 .spz-3006.ppc-eptura .testimonial-main-section .right-box:before {
     height: 320px;
 }
 
 .spz-3006.ppc-eptura .testimonial-main-section .testimonial-item {
-    height: 320px;
+    min-height: 320px;
 }
 
 .spz-3006 .testimonial-main-section .testimonial-item-inner {
@@ -1262,7 +1268,7 @@ body.spz-3006.ppc-archibus .body-wrapper #hero .hero_container>.row #HeroText>im
 
 body.spz-3006.ppc-archibus .testimonial-item,
 body.spz-3006.ppc-eptura-room-management .testimonial-item {
-    height: 322px !important;
+    min-height: 322px !important;
 }
 
 .spz-3006.ppc-archibus .testimonial-main-section .right-box:before,
@@ -1308,7 +1314,8 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row #HeroText>h
 }
 
 body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row #HeroText>h1.pt-4 img {
-    width: 488px;
+    max-width: 488px;
+    width: 100%;
     height: 256px;
     margin-top: 16px;
     max-height: 100%;
@@ -1358,7 +1365,7 @@ body.spz-3006.ppc-eptura-room-management.ppc-eptura-asset-management #hero .hero
     padding-top: 24px !important;
 }
 
-@media (min-width: 767.98px) {
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
     body.spz-3006.ppc-eptura .body-wrapper #hero .hero_container>.row>.col-md.pb-5 div#HeroText {
         margin-top: -16px;
         min-width: 622px;
@@ -1370,7 +1377,7 @@ body.spz-3006.ppc-eptura #hero .hero_container>.row>.col-md.pb-5 div#HeroText p 
 }
 
 body.spz-3006.ppc-eptura #hero .hero_container>.row>.col-md.pb-5 div#HeroText p+h1 img {
-    width: 488px;
+    width: 100%;
     height: 230px;
     max-width: 488px;
     margin-top: 28px;
@@ -1418,7 +1425,7 @@ body.spz-3006.ppc-eptura-asset-management #hero .hero_container>.row>.col-md.pb-
     }
 
     .spz-3006.ppc-eptura-asset-management .testimonial-item {
-        height: 370px !important;
+        min-height: 370px !important;
     }
 }
 
