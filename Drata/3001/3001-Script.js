@@ -25,13 +25,16 @@
     }
 
 
+    //Passing test details to hidden fields
+    function submitTestDetails() {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#3001__Blog_Exit_Promoter');
+            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
+        }
+    }
+
     //perform click actions
     window.addEventListener("click", function (e) {
-        // console.log(e.target)
-        // if (e.target.classList.contains("drata-logo")) {
-        //     document.querySelector('a[href="/"]').click();
-        // }
-        // console.log(e.target.classList)
         if (e.target.classList.contains("get-a-demo")) {
             document.querySelector('a[href="/demo"]').click();
         }
@@ -77,6 +80,13 @@
             window.location.href == "https://drata.com/") {
             testURL = window.location.href;
         }
+
+        else if (window.location.href.indexOf("/demo") > -1) {
+            waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function (elm) {
+                submitTestDetails();
+            });
+        }
+
         if (isSameUrl(url, testURL, true)) {
             createTest3001();
             exitIntentPopup(false);
@@ -233,4 +243,3 @@
         }, false);
     }
 })();
-
