@@ -98,6 +98,7 @@
     function removeTest() {
         if (document.querySelector('body.active')) {
             document.body.classList.remove('active');
+            document.querySelector('html').classList.remove('active');
         }
         if (document.querySelector('.exit-modal-sec-spz')) {
             document.querySelector('.exit-modal-sec-spz').remove();
@@ -223,8 +224,10 @@
     function showExitPopup(isVisible = false) {
         if (isVisible) {
             document.body.classList.add('active');
+            document.querySelector('html').classList.add('active');
         } else if (!isVisible) {
             document.body.classList.remove('active');
+            document.querySelector('html').classList.remove('active');
         }
     }
 
