@@ -26,6 +26,7 @@ const formInt = setInterval(() => {
 
     // Set focus on input
     focusFields();
+    validateEmailFieldReview();
     document.body.classList.add('spz-6012');
   }
 }, 100);
@@ -157,13 +158,70 @@ function scrollToElement(target, offset) {
 
 setInterval(function () {
   // if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
-    forClearBitForms();
+  forClearBitForms();
   // }
 }, 500);
 
 // on user type in .hs-input run forClearBitForms() function
 document.addEventListener('keyup', function (e) {
   if (e.target.classList.contains('hs-input')) {
-      forClearBitForms();
+    forClearBitForms();
   }
 });
+
+// Open modal on click of 'btn-demo-spz'
+function validateEmailFieldReview() {
+  // Open modal and add class 'modal-open' on body
+  const mainEmail = document.querySelector('.hbspt-form form .hs-form-field .input input[name="email"]');
+  const secondaryEmail = document.querySelector('#company_email_spz');
+
+  document.querySelector('.btn-demo-spz').addEventListener('click', function () {
+    if (validateEmailField()) {
+      mainEmail.focus();
+      mainEmail.value = secondaryEmail.value;
+    }
+  });
+
+  secondaryEmail.addEventListener('keypress', () => {
+    validateEmailField();
+  });
+
+  secondaryEmail.addEventListener('change', () => {
+    validateEmailField();
+  });
+
+  secondaryEmail.addEventListener('keydown', () => {
+    validateEmailField();
+  });
+
+  secondaryEmail.addEventListener('keyup', () => {
+    validateEmailField();
+  });
+}
+
+// Validate email field
+function validateEmailField() {
+  // Get email value
+  const email = document.querySelector('#company_email_spz');
+  // Check if email is valid
+  if (email.value != '' && email.value != null && email.value != undefined) {
+    email.closest('.get-started-input').classList.add('input-filled');
+  }
+  else {
+    email.closest('.get-started-input').classList.remove('input-filled');
+  }
+
+  if (!validateEmail(email.value)) {
+    email.closest('.get-started-input').classList.add('input-error');
+    return false;
+  } else {
+    email.closest('.get-started-input').classList.remove('input-error');
+    return true;
+  }
+}
+
+// Email validation function
+function validateEmail(email) {
+  var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
+  return regex.test(String(email).toLowerCase());
+}

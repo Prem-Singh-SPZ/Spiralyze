@@ -2,7 +2,7 @@
   background: #0c131a;
   position: relative;
   overflow: hidden;
-  padding: 46px 0px 80px;
+  padding: 56px 0px 80px;
 
   .footer-bottom {
     padding: 17px 24px;
@@ -88,6 +88,32 @@
       &:hover {
         color: #0580e8;
       }
+
+      &:first-child {
+        @media (min-width: 767.98px) {
+          border: 0;
+        }
+      }
+
+      @media (min-width: 767.98px) and (max-width: 1200px) {
+        &:first-child {
+          padding-left: 0;
+        }
+        &:nth-child(7) {
+          padding-left: 0;
+          border: 0;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        border-right: 1px solid rgba(5, 128, 232, 1);
+        border-left: 0;
+        padding-right: 17px;
+        padding-left: 0;
+        &:last-child {
+          border: 0;
+        }
+      }
     }
   }
 }
@@ -101,30 +127,27 @@
 
 @media (max-width: 1200px) {
   .brand-footer {
-    padding: 40px 16px 39px;
+    padding: 24px 32px 39px;
 
     .footer-brand-info {
-      width: 70%;
-      max-width: 500px;
+      width: 75%;
+      max-width: 526px;
     }
 
     .brand-social-links {
-      width: 30%;
+      width: 25%;
     }
   }
 
   .footer .footer-bottom {
-    padding: 18px 16px 16px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
+    padding: 32px 32px 0px;
+    flex-direction: column;
     -webkit-box-align: start;
     -ms-flex-align: start;
     align-items: flex-start;
 
     .copyright-text {
-      margin: 24px 0 0;
+      margin: 0 0 20px 0;
     }
   }
 }
@@ -137,35 +160,35 @@
 
   .footer {
     .footer-bottom {
-      padding: 17px 8px 16px 8px;
+      padding: 32px 24px 0 24px;
 
-      .copyright-text {
-        max-width: 40%;
-      }
+      // .copyright-text {
+      //   max-width: 40%;
+      // }
     }
   }
 
   .brand-footer {
-    padding: 40.5px 8px 35px;
+    padding: 24px 24px 35px;
 
     .footer-brand-info {
       width: 100%;
     }
     .brand-desc {
       margin: 27px 0 0;
-      font-size: 15px;
-      line-height: 22px;
+      // font-size: 15px;
+      // line-height: 22px;
     }
     .brand-social-links {
       width: 100%;
       max-width: 100%;
-      margin: 32px 0 0;
+      margin: 33px 0 0;
       -webkit-box-pack: start;
       -ms-flex-pack: start;
       justify-content: flex-start;
 
       .social-item {
-        margin: 0 24px 0 0;
+        margin: 0 16px 0 0;
       }
     }
   }
