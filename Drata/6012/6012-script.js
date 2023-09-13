@@ -6,11 +6,9 @@ const formInt = setInterval(() => {
 
     // Set input label
     document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
-    document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
 
-    // Set button label
-    // document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
-    // document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
+    // Set checkbox label
+    document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
 
     // hs-button
     document.querySelector('.hs-button').addEventListener('click', function () {
@@ -20,13 +18,15 @@ const formInt = setInterval(() => {
       }, 100);
     });
 
-    document.querySelector('.footer-cookie').addEventListener("click", function (e) {
-      document.querySelector('.osano-cm-window__widget').click();
+    // Add field-untouched class on select element
+    document.querySelectorAll('select.hs-input').forEach(function (el) {
+      if (el.options.length > 0) {
+        el.closest('.field').classList.add('field-untouched');
+      }
     });
 
     // Set focus on input
     focusFields();
-    validateEmailFieldReview();
     document.body.classList.add('spz-6012');
   }
 }, 100);
@@ -38,8 +38,9 @@ function appendFavicon() {
         <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
         <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
         <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681206084/drata/6001/Checkmark.svg" as="image">`
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_hover.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694522988/drata/6012/checkbox_check.svg" as="image">`
   );
 }
 
@@ -106,13 +107,36 @@ function forClearBitForms() {
 // On input focus add class on closest parent .field class
 function focusFields() {
   document.querySelectorAll('.hs-input').forEach(function (el) {
+    // On input focus add .field-focus class on closest parent .field class
     el.addEventListener('focus', function () {
       el.closest('.field').classList.add('field-focus');
+      setTimeout(function () {
+        el.closest('.field').classList.remove('field-error');
+        el.closest('.field').classList.remove('field-untouched');
+      }, 100);
     });
+
+    // On input blur remove .field-focus class on closest parent .field class
     el.addEventListener('blur', function () {
       el.closest('.field').classList.remove('field-focus');
-      checkError();
+      setTimeout(function () {
+        checkError();
+      }, 100);
     });
+
+    // On select element change remove .field-error class on closest parent .field class
+    if (el.tagName == 'SELECT') {
+      el.addEventListener('change', function () {
+        el.closest('.field').classList.remove('field-error');
+      });
+
+      // el.addEventListener('focus', function () {
+      //     el.closest('.field').classList.add('field-focus');
+      //     setTimeout(function () {
+      //         el.closest('.field').classList.remove('field-untouched');
+      //     }, 100);
+      // });
+    }
   });
 }
 
@@ -131,14 +155,15 @@ function checkError() {
 
 // Scroll to element on click
 window.addEventListener("click", function (e) {
-  if (e.target.classList.contains("get-started-btn")) {
-    let scrollOffset = window.innerWidth > 1199 ? 100 : 120;
-    if (window.innerWidth > 1199) {
-      scrollToElement('.form-wrapper-spz', scrollOffset);
-    } else {
-      document.querySelector('.form-wrapper-spz').scrollIntoView({ behavior: "smooth" });
-    }
+  if (e.target.classList.contains("goto-hero-form")) {
+    let scrollOffset = window.innerWidth > 992 ? 80 : 25;
+    scrollToElement('.hero-right-section', scrollOffset);
+  }
 
+  if (e.target.classList.contains("cookie-preferences-button")) {
+    if (document.querySelectorAll('.osano-cm-widget').length > 0) {
+      document.querySelector('.osano-cm-widget').click();
+    }
   }
 });
 
@@ -168,60 +193,3 @@ document.addEventListener('keyup', function (e) {
     forClearBitForms();
   }
 });
-
-// Open modal on click of 'btn-demo-spz'
-function validateEmailFieldReview() {
-  // Open modal and add class 'modal-open' on body
-  const mainEmail = document.querySelector('.hbspt-form form .hs-form-field .input input[name="email"]');
-  const secondaryEmail = document.querySelector('#company_email_spz');
-
-  document.querySelector('.btn-demo-spz').addEventListener('click', function () {
-    if (validateEmailField()) {
-      mainEmail.focus();
-      mainEmail.value = secondaryEmail.value;
-    }
-  });
-
-  secondaryEmail.addEventListener('keypress', () => {
-    validateEmailField();
-  });
-
-  secondaryEmail.addEventListener('change', () => {
-    validateEmailField();
-  });
-
-  secondaryEmail.addEventListener('keydown', () => {
-    validateEmailField();
-  });
-
-  secondaryEmail.addEventListener('keyup', () => {
-    validateEmailField();
-  });
-}
-
-// Validate email field
-function validateEmailField() {
-  // Get email value
-  const email = document.querySelector('#company_email_spz');
-  // Check if email is valid
-  if (email.value != '' && email.value != null && email.value != undefined) {
-    email.closest('.get-started-input').classList.add('input-filled');
-  }
-  else {
-    email.closest('.get-started-input').classList.remove('input-filled');
-  }
-
-  if (!validateEmail(email.value)) {
-    email.closest('.get-started-input').classList.add('input-error');
-    return false;
-  } else {
-    email.closest('.get-started-input').classList.remove('input-error');
-    return true;
-  }
-}
-
-// Email validation function
-function validateEmail(email) {
-  var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  return regex.test(String(email).toLowerCase());
-}
