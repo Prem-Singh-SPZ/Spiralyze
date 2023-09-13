@@ -53,7 +53,7 @@
         listItem1: "<span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
         listItem2: "<span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
         listItem3: "<span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications.",
-        featureLogo1: "//res.cloudinary.com/spiralyze/image/upload/v1694013397/eptura/4001/hand_icon.webp",
+        featureLogo1: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Hand_icon.png",
         featureAltTag1: "Visitor check-in",
         featureCopy1: "Check visitors in electronically. Create badges, control access, and get real-time alerts. Pre-screen. Self check-in kiosks.",
         featureLogo2: "//res.cloudinary.com/spiralyze/image/upload/v1694013397/eptura/4001/hand_icon.webp",

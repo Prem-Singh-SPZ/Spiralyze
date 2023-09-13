@@ -276,7 +276,10 @@
 
                 document.body.classList.add('ppc-eptura-asset-management');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>Asset Management Software</h6><h1>Automate equipment maintenance. Reduce costs. Increase performance.</h1><ul class="hero-list-copy"><li class="list-item"><span>Work orders. </span> View all work orders in one portal. Easily provide technicians with schedules, locations, and task descriptions.</li><li class="list-item"><span>Lifecycle tracking.</span> See your cost history, repair schedules, and upcoming preventive maintenance for all your assets.</li><li class="list-item"><span>Cost forecasting.</span> Track expenses and cost comparisons. Create monthly budgets based on historical data.</li></ul><div class="hero-img"><img src="https://lp.eptura.com/rs/267-JUP-120/images/eptura-asset-management-ui.png" alt="Asset Management Software" width="511" height="294" constrain="true" imagepreview="false" border=""></div>`;
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Asset Management Software</h6><h1>Automate equipment maintenance. Reduce costs. Increase performance.</h1><ul class="hero-list-copy"><li class="list-item"><span>Work orders. </span> View all work orders in one portal. Easily provide technicians with schedules, locations, and task descriptions.</li><li class="list-item"><span>Lifecycle tracking.</span> See your cost history, repair schedules, and upcoming preventive maintenance for all your assets.</li><li class="list-item"><span>Cost forecasting.</span> Track expenses and cost comparisons. Create monthly budgets based on historical data.</li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/asset-management-ui_1.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/asset-management-ui_1.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/asset-management-ui_1.webp" alt="Eptura Asset Management"></picture></div>`;
             }
 
             else if (window.location.href.indexOf('ppc-eptura-room-management') > -1) {
@@ -284,7 +287,10 @@
 
                 document.body.classList.add('ppc-eptura-room-management');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>Desk and Meeting Room Booking Software</h6><h1>Streamline workspace bookings. Boost hybrid collaboration.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting. </li><li class="list-item"><span>Navigation.</span> Digital floor plans make it easy to find the right room or locate the one you’ve booked upon arrival.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><img src="https://lp.eptura.com/rs/267-JUP-120/images/Room-booking.png" alt="Desk and Meeting Room Booking Software" width="503" height="302" constrain="true" imagepreview="false" border=""></div>`;
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Desk and Meeting Room Booking Software</h6><h1>Streamline workspace bookings. Boost hybrid collaboration.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting. </li><li class="list-item"><span>Navigation.</span> Digital floor plans make it easy to find the right room or locate the one you’ve booked upon arrival.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp" type="image/webp">
+                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.png" type="image/png"> 
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp" alt="Eptura Room Management"></picture></div>`;
             }
 
             else if (window.location.href.indexOf('ppc-eptura') > -1) {
