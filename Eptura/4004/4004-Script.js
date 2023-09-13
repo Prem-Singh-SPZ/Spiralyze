@@ -6,7 +6,7 @@
 
     const pageContent = [{
         pageName: "website-proxyclick-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575703/eptura/4003/proxyclick_logo.svg",
+        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694619471/eptura/4004/logo-proxyclick.svg",
         logoAlt: "Proxyclick Demo",
     },
     {
@@ -248,11 +248,6 @@
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
     }
-
-    function insertAfter(referenceNode, newNode) {
-        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-    }
-
 })();
 
 

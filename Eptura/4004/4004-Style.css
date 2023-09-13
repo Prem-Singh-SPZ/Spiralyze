@@ -1,17 +1,35 @@
 body.spz-4003 {
-  background: none;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+  height: 100vh;
+}
+@media (max-height: 670px) {
+  body.spz-4003 {
+    height: 100%;
+  }
 }
 body.spz-4003 #HeaderScripts {
   display: none !important;
 }
 body.spz-4003 .body-wrapper {
-  height: 100vh;
+  height: 100%;
 }
 body.spz-4003 .body-wrapper::before,
 body.spz-4003 .body-wrapper > section:not(#hero),
 body.spz-4003 .body-wrapper > div,
 body.spz-4003 .body-wrapper > footer {
   display: none !important;
+}
+body.spz-4003 .body-wrapper #hero {
+  height: 100%;
+  background-color: transparent;
+}
+body.spz-4003 .body-wrapper #hero .hero_container.page_padding {
+  height: 100%;
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row {
   -webkit-box-align: center;
@@ -22,9 +40,16 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row {
           justify-content: center;
   height: 100%;
 }
+@media (max-height: 670px) {
+  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
   max-width: 568px;
-  padding: 16px 56px 52px 56px !important;
+  padding: 16px 46px 52px 46px !important;
   border-radius: 8px;
   background: var(--primary-neutrals-w, #fff);
   -webkit-box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
@@ -158,10 +183,10 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
   color: #848995;
-  font-size: 12px !important;
+  font-size: 10px !important;
   font-style: normal;
   font-weight: 300;
-  line-height: 18px; /* 160% */
+  line-height: 16px; /* 160% */
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
   padding: 0;
