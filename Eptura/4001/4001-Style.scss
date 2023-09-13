@@ -1,0 +1,1291 @@
+$eptura-font: "Eptura Flexible", Arial, sans-serif;
+
+body.spz-4001 {
+  background-color: #fff;
+
+  #HeaderScripts.mktoText {
+    display: none !important;
+  }
+
+  .body-wrapper {
+    &::before,
+    > section:not(#hero):not(.spz-rest-all-section),
+    > div > section:not(#testimonials),
+    > footer {
+      display: none !important;
+    }
+
+    #nav {
+      &.sticky-top {
+        position: relative !important;
+        &.nav-scrolled {
+          background: transparent !important;
+          filter: none;
+        }
+      }
+      nav {
+        margin-top: 16px;
+        @media (max-width: 1199.98px) {
+          margin-top: 0;
+          padding: 0 40px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 0 30px;
+        }
+
+        #NavLogo {
+          .logo-img {
+            max-width: 104px;
+            @media (max-width: 1199.98px) {
+              max-width: 81px;
+            }
+          }
+          #logo-img {
+            display: none !important;
+          }
+        }
+      }
+    }
+
+    //Hero Css starts here
+    #hero {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-2560-min.jpg);
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
+
+      .hero_container {
+        padding-top: 40px !important;
+        padding-bottom: 100px !important;
+        overflow: hidden;
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          padding: 24px 40px 48px !important;
+        }
+        @media (max-width: 767.98px) {
+          padding: 24px 0 48px !important;
+        }
+        > .row {
+          // align-items: center;
+          @media (max-width: 1199.98px) {
+            flex-direction: column;
+          }
+
+          > .col-md.pb-5 {
+            @media (min-width: 1199.98px) {
+              padding-bottom: 0 !important;
+              max-width: 685px;
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              padding: 0 0 52px !important;
+            }
+            @media (max-width: 767.98px) {
+              padding: 0 44px 37px !important;
+            }
+          }
+
+          #HeroText {
+            > h6 {
+              color: var(--accents-a-6, #26a199);
+              font-family: "Eptura Flexible", Arial, sans-serif;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 13px;
+              letter-spacing: 2.7px;
+              text-transform: uppercase;
+              margin-bottom: 12px;
+              @media (max-width: 767.98px) {
+                font-size: 12px;
+                line-height: 16px;
+                letter-spacing: 1.1px;
+              }
+            }
+
+            > h1 {
+              color: var(--primary-neutrals-n-3, #f6fafa);
+              font-size: 46px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 54px;
+              letter-spacing: 0;
+              max-width: 572px;
+              margin-bottom: 32px;
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                max-width: 574px;
+              }
+              @media (max-width: 767.98px) {
+                font-size: 26px;
+                line-height: 34px;
+                margin-bottom: 16px;
+              }
+            }
+
+            > .spz-review-summary {
+              display: flex;
+              align-items: center;
+              margin-bottom: 32px;
+              @media (max-width: 767.98px) {
+                margin-bottom: 28px;
+              }
+
+              .capterra-review-summary,
+              .g2-review-summary {
+                display: flex;
+                align-items: center;
+                .capterra-logo {
+                  width: 24px;
+                  height: auto;
+                }
+                .reviews {
+                  width: 88px;
+                  height: auto;
+                  margin: 0 6px;
+                  @media (max-width: 767.98px) {
+                    display: none;
+                  }
+                }
+
+                .g2-review {
+                  color: rgba(255, 255, 255, 0.8);
+                  font-size: 12px;
+                  font-family: $eptura-font;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 18px;
+                  white-space: nowrap;
+                  span {
+                    font-weight: 500;
+                    font-family: $eptura-font;
+                    color: rgba(255, 255, 255, 1);
+                  }
+                  @media (max-width: 767.98px) {
+                    margin-left: 6px;
+                  }
+                }
+              }
+
+              .capterra-review-summary {
+                height: 26px;
+                padding-right: 20px;
+                border-right: 1px solid #d6d7f5;
+              }
+              .g2-review-summary {
+                padding-left: 20px;
+              }
+            }
+
+            .hero-list-copy {
+              list-style: none;
+              padding-left: 40px;
+              margin-bottom: 16px;
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                padding-right: 4px;
+              }
+              @media (max-width: 767.98px) {
+                padding-left: 41px;
+              }
+
+              .list-item {
+                color: var(--primary-neutrals-n-3, #f6fafa);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px;
+                margin-bottom: 24px;
+                position: relative;
+
+                @media (max-width: 767.98px) {
+                  font-size: 16px;
+                  line-height: 24px; /* 130.769% */
+                  margin-bottom: 16px;
+                }
+
+                span {
+                  font-weight: 500;
+                  letter-spacing: 0.2px;
+                  font-family: "Eptura Flexible", Arial, sans-serif;
+                }
+
+                &::before {
+                  content: "";
+                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1690976851/eptura/3002/checkmark-icon.svg);
+                  background-repeat: no-repeat;
+                  width: 24px;
+                  height: 24px;
+                  display: block;
+                  position: absolute;
+                  left: -40px;
+                  top: 0;
+                  @media (max-width: 767.98px) {
+                    left: -40px;
+                  }
+                }
+              }
+            }
+
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              max-width: 688px;
+              margin: auto;
+            }
+          }
+
+          #HeroFormCol {
+            @media (min-width: 1199.98px) {
+              padding-bottom: 0px !important;
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              padding-top: 5px;
+              padding-bottom: 8px !important;
+              margin-right: 6px;
+            }
+            @media (max-width: 767.98px) {
+              padding: 0 !important;
+              margin-top: -3px;
+            }
+
+            #HeroFormPanel {
+              max-width: 580px;
+              padding: 40px 46px 50px 46px;
+              border-radius: 8px;
+              background: var(--primary-neutrals-w, #fff);
+              box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+
+              @media (min-width: 767.98px) {
+                margin-left: auto;
+                min-width: 426px;
+              }
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                margin: auto;
+                min-width: 580px;
+                max-width: 718px;
+              }
+              @media (max-width: 767.98px) {
+                width: 360px;
+                max-width: 360px;
+                padding: 32px 20px 32px 20px;
+                margin: auto;
+              }
+
+              #HeroFormTitleText {
+                display: block !important;
+                h6 {
+                  color: var(--primary-neutrals-n-1, #0d122e);
+                  font-family: $eptura-font !important;
+                  text-align: center;
+                  font-size: 26px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 34px; /* 130.769% */
+                  // white-space: nowrap;
+                  letter-spacing: initial;
+                  margin: -4px -6px 24px 0;
+                  span {
+                    color: var(--accents-a-5, #904ab0);
+                  }
+
+                  @media (max-width: 767.98px) {
+                    white-space: normal;
+                    max-width: 244px;
+                    margin: auto;
+                    margin-bottom: 20px;
+                    padding-left: 6px;
+                  }
+                }
+              }
+
+              #HeroForm {
+                //Form Css starts here
+                form.mktoForm {
+                  .mktoFormRow {
+                    .mktoFormCol {
+                      min-height: auto;
+                      margin: 0 !important;
+                      padding: 0 10px !important;
+
+                      .mktoFieldWrap {
+                        position: relative;
+                        float: none !important;
+                        .mktoLabel {
+                          position: absolute;
+                          overflow: hidden;
+                          color: var(
+                            --primary-neutrals-n-2,
+                            rgba(13, 18, 46, 0.8)
+                          ) !important;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                          font-family: $eptura-font;
+                          font-size: 16px !important;
+                          font-style: normal;
+                          font-weight: 300 !important;
+                          line-height: 24px; /* 150% */
+                          top: 11px;
+                          left: 16px;
+                          padding: 0 !important;
+                          transition: all 0.3s ease-in-out;
+                          pointer-events: none;
+                          max-width: calc(100% - 58px);
+                          background: #fff;
+                          right: 0;
+                        }
+
+                        .mktoField:not([type="checkbox"]) {
+                          border-radius: 4px;
+                          border: 1px solid
+                            var(--interactive-colors-a-4, #d6d7f5) !important;
+                          width: 280px;
+                          padding: 11px 16px 10px 16px !important;
+                          color: var(
+                            --primary-neutrals-n-1,
+                            #0d122e
+                          ) !important;
+                          text-overflow: ellipsis;
+                          font-family: $eptura-font !important;
+                          font-size: 16px !important;
+                          font-style: normal;
+                          font-weight: 300 !important;
+                          line-height: 24px !important; /* 150% */
+                          margin-bottom: 20px !important;
+
+                          &:not(#Lead_Notes__c) {
+                            overflow: hidden;
+                            height: 48px !important;
+                            white-space: nowrap;
+                            @media (min-width: 767.98px) {
+                              // max-width: calc(100% - 10px);
+                              max-width: 100%;
+                            }
+                          }
+
+                          &#I_am__c,
+                          &#Country,
+                          &#Solution_Type__c {
+                            outline: transparent;
+                            appearance: none !important;
+                            background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                            background-repeat: no-repeat !important;
+                            background-position: right 14px center !important;
+                            background-size: 24px !important;
+                            padding-right: 32px !important;
+                          }
+
+                          &#Lead_Notes__c ~ .mktoError {
+                            margin-top: 0 !important;
+                            .mktoErrorArrowWrap {
+                              top: -27px;
+                            }
+                            .mktoErrorMsg {
+                              margin-top: -20px;
+                            }
+                          }
+
+                          &:-webkit-autofill {
+                            -webkit-box-shadow: 0 0 0 30px white inset !important;
+                          }
+                          &:autofill {
+                            -webkit-box-shadow: 0 0 0 30px white inset !important;
+                          }
+                        }
+
+                        .mktoHtmlText.mktoHasWidth {
+                          margin: 0 !important;
+                          span {
+                            color: #848995;
+                            font-size: 10px !important;
+                            // font-family: $eptura-font;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 16px; /* 160% */
+
+                            a {
+                              // font-family: $eptura-font;
+                              padding: 0;
+                              color: #1b4bc5;
+                              // font-weight: 500;
+                              &:hover {
+                                color: #0d122e;
+                              }
+                            }
+                          }
+                        }
+
+                        .mktoCheckboxList {
+                          margin-top: 3px;
+                          cursor: pointer;
+                          display: inline-block;
+                          position: relative;
+                          padding-left: 25px;
+                          .mktoField {
+                            border: 1px solid #d6d7f5;
+                            height: 16px !important;
+                            width: 16px !important;
+                            cursor: pointer;
+                            @media (max-width: 767.98px) {
+                              margin-top: 7px;
+                            }
+                          }
+
+                          label {
+                            font-family: $eptura-font !important;
+                            color: var(--primary-neutrals-n-1, #0d122e);
+                            font-size: 12px !important;
+                            font-style: normal !important;
+                            font-weight: 300 !important;
+                            line-height: 18px !important; /* 142.857% */
+                            margin-left: 19px;
+                            letter-spacing: -0.1px;
+                            cursor: pointer;
+                            &:before {
+                              content: "";
+                              width: 16px;
+                              height: 16px;
+                              position: absolute;
+                              left: 0;
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg")
+                                left center no-repeat;
+                              margin-top: 2px;
+                            }
+
+                            &:hover {
+                              &::before {
+                                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg")
+                                  left center no-repeat;
+                              }
+                            }
+                          }
+                          input[type="checkbox"] {
+                            display: none !important;
+
+                            &:checked + label:before {
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg")
+                                left center no-repeat;
+                            }
+                          }
+                        }
+
+                        .mktoError {
+                          margin-top: 48px !important;
+
+                          .mktoErrorMsg {
+                            color: #f3f3f3;
+                            font-size: 13px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 16px; /* 123.077% */
+                          }
+                        }
+
+                        //custom error for checkbox field
+                        &.spz-cstm-error {
+                          .mktoCheckboxList label {
+                            color: #e51b00 !important;
+
+                            &::before {
+                              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg")
+                                left center no-repeat;
+                            }
+                          }
+                        }
+                      }
+
+                      &.field-focus {
+                        .mktoFieldWrap {
+                          .mktoLabel {
+                            top: -8px;
+                            left: 11px;
+                            right: auto;
+                            padding: 0 5px !important;
+                            font-family: $eptura-font;
+                            color: var(--accents-a-5, #904ab0) !important;
+                            font-size: 13px !important;
+                            line-height: 18px !important; /* 138.462% */
+                            background: #fff;
+                          }
+                        }
+                        .mktoField:not([type="checkbox"]) {
+                          border-color: #904ab0 !important;
+                        }
+                      }
+
+                      &.input-filled {
+                        .mktoFieldWrap {
+                          .mktoLabel {
+                            top: -8px;
+                            left: 11px;
+                            right: auto;
+
+                            font-family: $eptura-font;
+                            padding: 0 5px !important;
+                            font-size: 13px !important;
+                            line-height: 18px !important; /* 138.462% */
+                            background: #fff;
+                          }
+                        }
+                      }
+
+                      &.field-error {
+                        &.field-focus {
+                          .mktoFieldWrap {
+                            .mktoLabel {
+                              color: var(--accents-a-5, #f83a59) !important;
+                            }
+                          }
+                        }
+
+                        .mktoField:not([type="checkbox"]) {
+                          border-color: #f83a59 !important;
+                        }
+                      }
+                    }
+
+                    &[data-zi-field-enriched="true"] {
+                      display: inline !important;
+                    }
+
+                    .spz-anchor:not(.spz-hidden) {
+                      display: flex;
+                      width: 100%;
+
+                      + .mktoFieldDescriptor.mktoFormCol {
+                        display: none !important;
+                      }
+
+                      .show-comment-dynamic {
+                        overflow: hidden;
+                        color: var(
+                          --primary-neutrals-n-2,
+                          rgba(13, 18, 46, 0.8)
+                        );
+                        font-family: $eptura-font;
+                        text-overflow: ellipsis;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 24px;
+                        margin-bottom: 18px;
+                        display: inline-block;
+                        margin-top: 2px;
+                        transition: all 0.3s ease;
+                        margin-left: 10px;
+                        span {
+                          padding-right: 5px;
+                        }
+                        @media (max-width: 767.98px) {
+                          padding: 0;
+                          margin-bottom: 26px;
+                        }
+
+                        &:hover {
+                          color: #904ab0;
+                        }
+                      }
+                    }
+                    .spz-hidden {
+                      display: none;
+                    }
+                  }
+
+                  //submit button css
+                  .mktoButtonRow {
+                    text-align: center;
+
+                    .mktoButtonWrap {
+                      button.mktoButton {
+                        display: flex;
+                        width: 140px !important;
+                        height: 50px !important;
+                        padding: 0px 8px !important;
+                        justify-content: center;
+                        align-items: center;
+                        border-radius: 3px !important;
+                        background: var(
+                          --interactive-colors-a-1,
+                          #1b4bc5
+                        ) !important;
+                        color: var(--primary-neutrals-w, #fff) !important;
+                        text-align: center;
+                        font-family: $eptura-font !important;
+                        font-size: 16px !important;
+                        font-style: normal;
+                        font-weight: 500 !important;
+                        line-height: 24px !important; /* 150% */
+                        margin-top: 22px !important;
+                        white-space: nowrap;
+
+                        &:hover,
+                        &:focus {
+                          background: var(
+                            --interactive-colors-a-3,
+                            #456ed6
+                          ) !important;
+                        }
+                        &:focus {
+                          transform: translate(0, 1px);
+                        }
+
+                        @media (max-width: 767.98px) {
+                          height: 56px !important;
+                          padding: 0px 32px;
+                          width: 300px !important;
+                          max-width: 300px !important;
+                        }
+                      }
+                    }
+                  }
+
+                  //email line form
+                  .spz-email {
+                    .mktoFieldWrap {
+                      margin-top: 18px;
+                      @media (max-width: 767.98px) {
+                        margin-top: 24px;
+                      }
+
+                      .mktoHtmlText.mktoHasWidth {
+                        text-align: center;
+                        @media (max-width: 767.98px) {
+                          line-height: 0;
+                        }
+                        em {
+                          color: var(--primary-neutrals-n-1, #0d122e);
+                          font-size: 14px;
+                          font-style: normal;
+                          font-weight: 300;
+                          line-height: 20px; /* 142.857% */
+                          @media (max-width: 767.98px) {
+                            padding: 0;
+                          }
+
+                          .mobile-only {
+                            @media (min-width: 767.98px) {
+                              display: none;
+                            }
+                          }
+
+                          a {
+                            color: var(--interactive-colors-a-1, #1b4bc5);
+                            font-weight: 500;
+                            padding: 0;
+                            font-family: $eptura-font;
+                            padding-left: 2px;
+
+                            &:hover {
+                              color: #0d122e;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //Testimonial logo section css
+    #testimonials {
+      #TestimonialImg {
+        .logo-item {
+          width: auto;
+        }
+      }
+    }
+
+    //Rest all section css starts
+    .spz-rest-all-section {
+      //Reviews slider
+      .spz-testimonial-slider {
+        .testimonial-section {
+          background: rgba(214, 215, 245, 0.6);
+          padding: 48px 0px;
+        }
+
+        .testimonial-section .container {
+          padding: 0 100px;
+          max-width: 1600px;
+          margin: auto;
+        }
+
+        .testimonial-section .testimonial-main-section {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .testimonial-main-section .left-box {
+          max-width: 234px;
+          width: 100%;
+          margin-right: 60px;
+        }
+
+        .testimonial-main-section .right-box {
+          width: calc(100% - 294px);
+          position: relative;
+        }
+
+        .testimonial-wrapper {
+          padding-left: 60px;
+        }
+
+        .testimonial-main-section .star-img {
+          margin: 13px auto 8px;
+          text-align: center;
+          max-width: 126px;
+        }
+
+        .testimonial-main-section .reviews-box {
+          font-weight: 300;
+          font-size: 16px;
+          line-height: 24px;
+          color: var(--primary-neutrals-n-1, #0d122e);
+          text-align: center;
+          margin-left: 28px;
+        }
+
+        .testimonial-main-section .reviews-box b {
+          font-weight: 500;
+          font-family: "Eptura Flexible", Arial, sans-serif;
+          margin-right: 2px;
+        }
+
+        .testimonial-main-section .right-box:before {
+          content: "";
+          position: absolute;
+          width: 1px;
+          height: 254px;
+          background: rgba(214, 215, 245, 0.6);
+          top: 0;
+        }
+
+        .testimonial-main-section .testimonial-item {
+          min-height: 254px;
+        }
+
+        @media (min-width: 1199.98px) and (max-width: 1421.98px) {
+          :not(.ppc-archibus-maintenance-software)
+            .testimonial-main-section
+            .testimonial-item {
+            margin-bottom: 36px;
+          }
+        }
+
+        .ppc-eptura .testimonial-main-section .right-box:before {
+          height: 320px;
+        }
+
+        .ppc-eptura .testimonial-main-section .testimonial-item {
+          min-height: 320px;
+        }
+
+        .testimonial-main-section .testimonial-item-inner {
+          position: relative;
+          padding-left: 50px;
+          margin: 13px 0px 0px;
+        }
+
+        .testimonial-main-section .testimonial-item-inner:before {
+          content: "";
+          position: absolute;
+          width: 42px;
+          height: 30px;
+          background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1691056844/eptura/3006/quotemark_1.svg);
+          background-size: cover;
+          background-repeat: no-repeat;
+          left: 0;
+          top: -12px;
+        }
+
+        .testimonial-item-inner p.quotes {
+          font-weight: 300;
+          font-size: 18px;
+          line-height: 26px;
+          color: var(--primary-neutrals-n-1, #0d122e);
+          margin-bottom: 24px;
+          text-indent: 1px;
+        }
+
+        .testimonial-item-inner p.quotes b {
+          font-weight: 500;
+          font-family: "Eptura Flexible", Arial, sans-serif;
+        }
+
+        .testimonial-item-inner .testimonial-info {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+
+        .testimonial-info .testimonials-item {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          /* align-items: center; */
+          align-items: flex-start;
+        }
+
+        .testimonials-item .img-wrapper img {
+          width: 48px;
+          height: 48px;
+          border-radius: 48px;
+          margin-right: 12px;
+        }
+
+        .testimonials-item .testimonial-details h3 {
+          font-weight: 700;
+          font-size: 16px;
+          line-height: 24px;
+          font-family: "Eptura Flexible", Arial, sans-serif;
+          color: var(--primary-neutrals-n-1, #0d122e);
+          margin: 0px;
+          text-indent: 1px;
+        }
+
+        .testimonials-item .testimonial-details p {
+          font-weight: 300;
+          font-size: 14px;
+          line-height: 20px;
+          color: var(--primary-neutrals-n-1, #0d122e);
+          margin: 0px;
+          padding-right: 16px;
+        }
+
+        .testimonials-logo {
+          padding-left: 12px;
+          border-left: 1px solid var(--interactive-colors-a-4, #d6d7f5);
+          display: flex;
+          align-items: center;
+          align-self: stretch;
+        }
+
+        .testimonials-logo img {
+          width: 100%;
+          max-width: 104px;
+        }
+
+        .splide__pagination {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          align-items: center;
+          list-style: none;
+          justify-content: flex-start;
+          padding-left: 53px;
+          bottom: 0;
+          padding-top: 52px;
+        }
+
+        .splide__pagination li button.splide__pagination__page {
+          width: 10px;
+          height: 10px;
+          margin: 0px 8px;
+          background-color: #d9dce2;
+          opacity: 1;
+        }
+
+        .splide__pagination li button.splide__pagination__page.is-active {
+          width: 14px;
+          height: 14px;
+          background-color: rgba(13, 18, 46, 0.7);
+          transform: unset;
+        }
+
+        .splide__pagination li button.splide__pagination__page:hover,
+        .splide__pagination li button.splide__pagination__page:focus {
+          opacity: 1;
+          background-color: #545965;
+        }
+
+        .splide__pagination li {
+          line-height: 0;
+        }
+
+        .testimonials-logo.kfc-logo img {
+          max-width: 48px;
+        }
+
+        .testimonials-logo.kfc-logo,
+        .testimonials-logo.dnv-logo,
+        .testimonials-logo.green-logo {
+          padding-left: 16px;
+        }
+
+        .testimonials-logo.dnv-logo img {
+          max-width: 56.53px;
+        }
+
+        .testimonials-logo.green-logo img {
+          max-width: 76px;
+        }
+
+        .testimonial-main-section .star-img img {
+          margin-left: 14px;
+        }
+
+        .testimonial-item-inner p.quotes br {
+          display: none;
+        }
+
+        .testimonial-item-inner p.quotes br.som-text {
+          display: none;
+        }
+        .testimonials-logo.mobile-sec {
+          display: none;
+        }
+
+        /* 2 page */
+        .testimonials-logo.kelloggs-sec img {
+          max-width: 74px;
+        }
+
+        .testimonials-logo.aston-logo img {
+          max-width: 48px;
+        }
+
+        .condeco-testimonial .testimonial-main-section .right-box:before {
+          height: 306px;
+        }
+
+        .condeco-testimonial .testimonial-item {
+          height: 306px !important;
+        }
+        .ppc-archibus .testimonial-item,
+        .ppc-eptura-room-management .testimonial-item {
+          min-height: 322px !important;
+        }
+
+        .ppc-archibus .testimonial-main-section .right-box:before,
+        .ppc-eptura-room-management
+          .testimonial-main-section
+          .right-box:before {
+          height: 322px;
+        }
+
+        .testimonials-logo.hamilton-sec img {
+          max-width: 48px;
+        }
+
+        .testimonials-logo.john-sec img {
+          max-width: 51px;
+        }
+
+        .testimonials-logo.board-sec img {
+          max-width: 67px;
+        }
+        .ppc-eptura-asset-management
+          .testimonial-main-section
+          .right-box:before {
+          height: 322px;
+        }
+
+        .ppc-eptura-asset-management .testimonial-item {
+          height: 322px !important;
+        }
+        @media (max-width: 1455.98px) {
+          .testimonial-item-inner p.quotes br {
+            display: block;
+          }
+        }
+        @media (max-width: 1360.98px) {
+          .testimonial-wrapper {
+            padding-left: 50px;
+          }
+
+          .condeco-testimonial .testimonial-item {
+            height: auto !important;
+          }
+
+          .ppc-archibus .testimonial-item {
+            height: 400px !important;
+          }
+
+          .ppc-eptura-asset-management .testimonial-item {
+            min-height: 370px !important;
+          }
+        }
+
+        @media (max-width: 1199.98px) {
+          .testimonial-section .container {
+            padding: 0px;
+            max-width: 768px;
+          }
+
+          .testimonial-main-section .left-box {
+            max-width: 100%;
+            margin-right: 0px;
+          }
+
+          .testimonial-main-section .right-box {
+            width: 100%;
+          }
+
+          .testimonial-section .testimonial-main-section {
+            display: block;
+          }
+
+          .capterra-img {
+            text-align: center;
+            margin-left: -4px;
+          }
+
+          .capterra-img img {
+            max-width: 180px;
+            text-align: center;
+            margin: 0 auto;
+            width: 100%;
+          }
+
+          .testimonial-wrapper {
+            padding-left: 0px;
+            margin-top: 34px;
+          }
+
+          .testimonial-main-section .right-box:before {
+            display: none;
+          }
+
+          .testimonial-item {
+            width: 422px !important;
+          }
+
+          .testimonial-main-section .right-box:after {
+            content: "";
+            position: absolute;
+            top: 0;
+            right: 0;
+            background: linear-gradient(
+              270deg,
+              #fff 8.87%,
+              rgba(255, 255, 255, 0) 100%,
+              rgba(255, 255, 255, 0) 100%
+            );
+            width: 253px;
+            height: 100%;
+          }
+
+          .splide__pagination {
+            justify-content: center;
+            padding-left: 0;
+            padding-right: 0px;
+            bottom: -20px;
+            padding-top: 0;
+            margin-top: 32px;
+          }
+
+          .ppc-eptura .splide__pagination {
+            bottom: 26px;
+          }
+          .testimonial-main-section .star-img img {
+            margin-left: 10px;
+            width: 100%;
+          }
+
+          .testimonial-main-section .star-img {
+            margin: 7px auto 6px;
+            max-width: 116px;
+          }
+
+          .testimonial-main-section .reviews-box b {
+            margin-right: 4px;
+          }
+
+          .testimonial-main-section .reviews-box {
+            margin-left: 18px;
+          }
+
+          .testimonial-item-inner .testimonial-info {
+            padding-right: 7px;
+          }
+
+          .testimonial-section {
+            padding: 48px 0px 69px;
+          }
+
+          .ppc-eptura .testimonial-section {
+            padding: 48px 0px 46px;
+          }
+
+          .testimonial-item-inner p.quotes br.som-text {
+            display: block;
+          }
+          .ppc-condeco-make-your-flexible-office-work-better
+            .testimonial-wrapper {
+            margin-top: 33px;
+          }
+          .ppc-condeco-make-your-flexible-office-work-better
+            .testimonial-section {
+            padding: 48px 0px 82px;
+          }
+
+          /* 3 */
+          .ppc-archibus .testimonial-item,
+          .ppc-eptura-room-management .testimonial-item {
+            height: auto !important;
+          }
+          .ppc-archibus .testimonial-wrapper {
+            margin-top: 33px;
+          }
+
+          .ppc-archibus .splide__pagination {
+            bottom: -61px;
+          }
+
+          .ppc-archibus .testimonial-section {
+            padding: 48px 0px 107px;
+          }
+
+          /* 4 */
+          .ppc-eptura-asset-management .testimonial-item {
+            height: auto !important;
+          }
+          .ppc-eptura-asset-management .testimonial-wrapper {
+            margin-top: 31px;
+          }
+
+          .ppc-eptura-asset-management .splide__pagination {
+            bottom: -52px;
+          }
+
+          .ppc-eptura-asset-management .testimonial-section {
+            padding: 46px 0px 100px;
+          }
+          .ppc-eptura.ppc-eptura-asset-management .testimonial-wrapper {
+            margin-top: 32px;
+          }
+
+          .ppc-eptura.ppc-eptura-asset-management
+            #threecol_icons
+            .text_content {
+            padding-top: 45px !important;
+          }
+
+          .ppc-eptura .splide__pagination {
+            bottom: 2px;
+          }
+        }
+        @media (max-width: 900.98px) {
+          .testimonial-wrapper {
+            padding-left: 100px;
+          }
+        }
+        @media (max-width: 767.98px) {
+          .ppc-eptura .testimonial-section {
+            padding: 48px 0px 76px;
+          }
+
+          .ppc-eptura .splide__pagination {
+            bottom: -30px;
+          }
+          .testimonial-main-section .right-box:after {
+            display: none;
+          }
+
+          .testimonial-wrapper {
+            padding-left: 0;
+            margin-top: 33px;
+          }
+
+          .testimonial-section .container {
+            max-width: 300px;
+          }
+
+          .testimonial-main-section .testimonial-item-inner:before {
+            display: none;
+          }
+
+          .testimonial-main-section .testimonial-item-inner {
+            padding-left: 0;
+            margin: 0;
+            display: flex;
+            flex-wrap: wrap;
+          }
+
+          .testimonial-item {
+            width: 300px !important;
+            height: auto !important;
+            margin-right: 20px !important;
+          }
+
+          .testimonials-logo.mobile-sec {
+            display: block;
+          }
+
+          .testimonials-logo {
+            display: none;
+          }
+
+          .testimonial-item-inner p.quotes {
+            margin-bottom: 14px;
+            order: 2;
+          }
+
+          .testimonial-item-inner .testimonial-info {
+            padding-right: 0;
+            order: 1;
+            margin-bottom: 16px;
+          }
+
+          .testimonials-logo.mobile-sec {
+            display: block;
+            order: 3;
+            border-top: 1px solid #d6d7f5;
+            border-left: none;
+            width: 100%;
+            padding: 16px 0 0;
+            text-align: right;
+          }
+
+          .ppc-eptura .testimonials-logo.mobile-sec,
+          .ppc-eptura-room-management .testimonials-logo.mobile-sec {
+            padding: 3px 0 0;
+          }
+
+          .testimonial-item-inner p.quotes br {
+            display: none;
+          }
+
+          .testimonial-item-inner p.quotes br.som-text {
+            display: none;
+          }
+
+          .splide__pagination {
+            bottom: -46px;
+          }
+          .testimonial-section {
+            box-shadow: inset 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+            padding: 48px 0px 94px;
+          }
+          .ppc-eptura-asset-management .testimonial-wrapper {
+            margin-top: 33px;
+          }
+
+          .ppc-eptura-asset-management .testimonials-logo.mobile-sec {
+            padding: 5px 0 0;
+          }
+          .ppc-eptura.ppc-eptura-asset-management .testimonial-wrapper {
+            margin-top: 33px;
+          }
+
+          .ppc-archibus .testimonial-section {
+            padding: 48px 0px 84px;
+          }
+          .ppc-archibus .splide__pagination {
+            bottom: -36px;
+          }
+        }
+      }
+
+      //Footer Css
+      .spz-footer-section {
+        background: var(--primary-neutrals-n-1, #0d122e);
+        .simplified-footer {
+          display: flex;
+          align-items: center;
+          justify-content: space-between;
+        }
+      }
+    }
+  }
+}

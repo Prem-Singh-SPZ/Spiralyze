@@ -186,11 +186,11 @@
                                 <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1691053160/drata/3001/logo-g2.svg" alt="G2 Logo" />
                                 <img class="star-rating" src="//res.cloudinary.com/spiralyze/image/upload/v1691053160/drata/3001/rating-4_9.svg" alt="Star Ratings" />
                                 <div class="rating-no">
-                                <span>4.9 </span>(461 reviews)
+                                <span>4.9 </span>(500+ reviews)
                                 </div>
                             </div>
                             <h6>Put Compliance on Autopilot</h6>
-                            <p>Automate compliance for 16+ security frameworks including SOC 2, ISO 27001, HIPPA, GDPR, and PCI.  Get certified faster at a fraction of the cost.</p>
+                            <p>Automate compliance for 16+ security frameworks including SOC 2, ISO 27001, HIPPA, GDPR, and PCI.  Achieve compliance faster at a fraction of the cost.</p>
                             <div class="ems-cta">
                                 <a href="javascript:void(0)" class="get-a-demo">Get a Demo
                                 <img class="close-ico default" src="//res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" />
