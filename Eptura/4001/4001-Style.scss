@@ -55,17 +55,16 @@ body.spz-4001 {
       background-size: cover;
 
       .hero_container {
-        padding-top: 40px !important;
-        padding-bottom: 100px !important;
         overflow: hidden;
-        @media (min-width: 767.98px) and (max-width: 1199.98px) {
-          padding: 24px 40px 48px !important;
+
+        .spz-logo {
+          padding: 6px 0;
         }
-        @media (max-width: 767.98px) {
-          padding: 24px 0 48px !important;
-        }
+
         > .row {
           // align-items: center;
+          padding-top: 49px;
+          padding-bottom: 48px;
           @media (max-width: 1199.98px) {
             flex-direction: column;
           }
@@ -109,7 +108,7 @@ body.spz-4001 {
               line-height: 54px;
               letter-spacing: 0;
               max-width: 572px;
-              margin-bottom: 32px;
+              margin-bottom: 20px;
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 max-width: 574px;
               }
@@ -123,7 +122,7 @@ body.spz-4001 {
             > .spz-review-summary {
               display: flex;
               align-items: center;
-              margin-bottom: 32px;
+              margin-bottom: 40px;
               @media (max-width: 767.98px) {
                 margin-bottom: 28px;
               }
@@ -166,7 +165,7 @@ body.spz-4001 {
 
               .capterra-review-summary {
                 height: 26px;
-                padding-right: 20px;
+                padding-right: 18px;
                 border-right: 1px solid #d6d7f5;
               }
               .g2-review-summary {
@@ -178,6 +177,8 @@ body.spz-4001 {
               list-style: none;
               padding-left: 40px;
               margin-bottom: 16px;
+              max-width: 570px;
+
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 padding-right: 4px;
               }
@@ -244,7 +245,7 @@ body.spz-4001 {
             }
 
             #HeroFormPanel {
-              max-width: 580px;
+              max-width: 568px;
               padding: 40px 46px 50px 46px;
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
@@ -272,13 +273,13 @@ body.spz-4001 {
                   color: var(--primary-neutrals-n-1, #0d122e);
                   font-family: $eptura-font !important;
                   text-align: center;
-                  font-size: 26px;
+                  font-size: 36px;
                   font-style: normal;
                   font-weight: 300;
-                  line-height: 34px; /* 130.769% */
+                  line-height: 44px; /* 130.769% */
                   // white-space: nowrap;
                   letter-spacing: initial;
-                  margin: -4px -6px 24px 0;
+                  margin: -1px -9px 24px 0;
                   span {
                     color: var(--accents-a-5, #904ab0);
                   }
@@ -696,6 +697,81 @@ body.spz-4001 {
 
     //Rest all section css starts
     .spz-rest-all-section {
+      //Feature section
+      .spz-features-section {
+        .features-3-col-icon {
+          padding: 80px 100px;
+          max-width: 1600px;
+          margin: auto;
+
+          .features-title {
+            color: var(--primary-neutrals-n-1, #0d122e);
+            text-align: center;
+            font-size: 46px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 54px;
+            margin-bottom: 64px;
+          }
+
+          .feature3-itemsillustration-parent {
+            .feature3-itemsillustration {
+              display: flex;
+              justify-content: space-between;
+              margin-bottom: 48px;
+
+              .feature-card {
+                display: flex;
+                flex-direction: column;
+                width: 33.33%;
+                max-width: 347px;
+
+                .card-icon {
+                  .vector-icon {
+                    max-width: 80px;
+                    width: 100%;
+                    height: auto;
+                  }
+                }
+
+                .card-content {
+                  position: relative;
+
+                  &::before {
+                    content: url(//res.cloudinary.com/spiralyze/image/upload/v1694611010/eptura/4001/Tilted-border-feature.svg);
+                    position: absolute;
+                    left: -16px;
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+
+          .button-wrapper {
+            .button {
+              .get-started-cta {
+                height: 50px;
+                padding: 0px 32px;
+                border-radius: 3px;
+                background: var(--interactive-colors-a-1, #1b4bc5);
+                width: 150px;
+                color: var(--primary-neutrals-w, #fff);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+              }
+            }
+          }
+        }
+      }
+
       //Reviews slider
       .spz-testimonial-slider {
         .testimonial-section {
@@ -1057,9 +1133,9 @@ body.spz-4001 {
             right: 0;
             background: linear-gradient(
               270deg,
-              #fff 8.87%,
-              rgba(255, 255, 255, 0) 100%,
-              rgba(255, 255, 255, 0) 100%
+              #e6e7f9 8.87%,
+              rgba(230, 231, 249, 0) 100%,
+              rgba(230, 231, 249, 0) 100%
             );
             width: 253px;
             height: 100%;
@@ -1284,6 +1360,9 @@ body.spz-4001 {
           display: flex;
           align-items: center;
           justify-content: space-between;
+          padding: 0 100px;
+          max-width: 1600px;
+          margin: auto;
         }
       }
     }

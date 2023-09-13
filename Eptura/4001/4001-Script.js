@@ -56,12 +56,30 @@
         featureLogo1: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Hand_icon.png",
         featureAltTag1: "Visitor check-in",
         featureCopy1: "Check visitors in electronically. Create badges, control access, and get real-time alerts. Pre-screen. Self check-in kiosks.",
-        featureLogo2: "//res.cloudinary.com/spiralyze/image/upload/v1694013397/eptura/4001/hand_icon.webp",
+        featureLogo2: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Mobile_icon.png",
         featureAltTag2: "Integrations",
         featureCopy2: "30+ integrations for access control, notifications, SSO, and more. Includes Slack, Microsoft Teams, and Cisco.",
-        featureLogo3: "//res.cloudinary.com/spiralyze/image/upload/v1694013397/eptura/4001/hand_icon.webp",
+        featureLogo3: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Chat_icon.png",
         featureAltTag3: "Notifications",
         featureCopy3: "Automatically notify hosts of visitor arrivals via Slack, email, text message, and other platforms.",
+        featureLogo4: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/workplace-icon.png",
+        featureAltTag4: "Pre check-in",
+        featureCopy4: "Send check-in info, legal documents, and questionnaires to guests via email before arrival. Save time at check-in.",
+        featureLogo5: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Security_icon.png",
+        featureAltTag5: "Security",
+        featureCopy5: "Visit approvals. Automatic ID verification using facial recognition. Internal and external watchlist screening.",
+        featureLogo6: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
+        featureAltTag6: "Employee bookings",
+        featureCopy6: "Let employees book desks, check-in and out, answer health/security questionnaires, and more.",
+        featureLogo7: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Calendar_icon.png",
+        featureAltTag7: "Logbook",
+        featureCopy7: "Access visitor, employee, and delivery logbooks from a single dashboard. Automate GDPR and CCPA compliance.",
+        featureLogo8: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Internet_icon.png",
+        featureAltTag8: "Guest Wi-Fi accounts",
+        featureCopy8: "Automatically create time-constrained, one-time guest Wi-Fi credentials upon check-in.",
+        featureLogo9: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Book_icon.png",
+        featureAltTag9: "Questionnaires",
+        featureCopy9: "Customize check-in questionnaires and guidelines. Approve, escalate, or deny visitors based on responses.",
         sliderContent: `<div class="splide testimonial-wrapper" id="reviews-sec" aria-label="Splide Basic HTML Example">
         <div class="splide__track">
             <ul class="splide__list">
@@ -466,127 +484,140 @@
                     document.querySelector('#testimonials #TestimonialImg').insertAdjacentHTML('afterend', `<div class=" d-flex justify-content-center align-items-center load-more"><a href="javascript:void(0);" id="load-more-btn">Learn more <img src="//res.cloudinary.com/spiralyze/image/upload/v1693571571/eptura/4001/arrow-right-chevron_2.svg" alt="Arrow down"></a></div>`)
 
                     //Rest of the page
-                    document.querySelector('body > .body-wrapper').insertAdjacentHTML('beforeend', `<section class="spz-rest-all-section"><div class="spz-features-section">
-                    <div class="features-3-col-icon">
-                        <div class="features-title">Features</div>
-                        <div class="feature3-itemsillustration-parent">
-                            <div class="feature3-itemsillustration">
-                                <div class="feature-card">
-                                    <div class="card-icon">
-                                        <img class="vector-icon" alt="` + url.featureAltTag1 + `" src="` + url.featureLogo1 + `" />
+                    document.querySelector('body > .body-wrapper').insertAdjacentHTML('beforeend', `<section class="spz-rest-all-section">
+                    <div class="spz-features-section">
+                        <div class="features-3-col-icon">
+                            <div class="features-title">Features</div>
+                            <div class="feature3-itemsillustration-parent">
+                                <div class="feature3-itemsillustration">
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag1 + `" src="` + url.featureLogo1 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag1 + `</div>
+                                            <div class="card-copy">` + url.featureCopy1 + `</div>
+                                        </div>
                                     </div>
-                                    <div class="card-copy">
-                                        <div class="card-subtitle">` + url.featureAltTag1 + `</div>
-                                        <div class="card-copy">` + url.featureCopy1 + `</div>
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag2 + `" src="` + url.featureLogo2 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag2 + `</div>
+                                            <div class="card-copy">` + url.featureCopy2 + `</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag3 + `" src="` + url.featureLogo3 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag3 + `</div>
+                                            <div class="card-copy">` + url.featureCopy3 + `</div>
+                                        </div>
                                     </div>
                                 </div>
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag2 + `" src="` + url.featureLogo2 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag2 + `</div>
-                                <div class="card-copy">` + url.featureCopy2 + `</div>
-                            </div>
+                                <div class="feature3-itemsillustration">
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag4 + `" src="` + url.featureLogo4 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag4 + `</div>
+                                            <div class="card-copy">` + url.featureCopy4 + `</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag5 + `" src="` + url.featureLogo5 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag5 + `</div>
+                                            <div class="card-copy">` + url.featureCopy5 + `</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag6 + `" src="` + url.featureLogo6 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag6 + `</div>
+                                            <div class="card-copy">` + url.featureCopy6 + `</div>
+                                        </div>
+                                    </div>
                                 </div>
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag3 + `" src="` + url.featureLogo3 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag3 + `</div>
-                                <div class="card-copy">` + url.featureCopy3 + `</div>
-                            </div>
+                                <div class="feature3-itemsillustration">
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag7 + `" src="` + url.featureLogo7 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag7 + `</div>
+                                            <div class="card-copy">` + url.featureCopy7 + `</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag8 + `" src="` + url.featureLogo8 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag8 + `</div>
+                                            <div class="card-copy">` + url.featureCopy8 + `</div>
+                                        </div>
+                                    </div>
+                                    <div class="feature-card">
+                                        <div class="card-icon">
+                                            <img class="vector-icon" alt="` + url.featureAltTag9 + `" src="` + url.featureLogo9 + `" />
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-subtitle">` + url.featureAltTag9 + `</div>
+                                            <div class="card-copy">` + url.featureCopy9 + `</div>
+                                        </div>
+                                    </div>
                                 </div>
                             </div>
-                            <div class="feature3-itemsillustration">
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag4 + `" src="` + url.featureLogo4 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag4 + `</div>
-                                <div class="card-copy">` + url.featureCopy4 + `</div>
-                            </div>
+                            <div class="button-wrapper">
+                                <div class="button">
+                                    <a href="javascript:void(0);" class="get-started-cta">Get started</a>
                                 </div>
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag5 + `" src="` + url.featureLogo5 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag5 + `</div>
-                                <div class="card-copy">` + url.featureCopy5 + `</div>
-                            </div>
-                                </div>
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag6 + `" src="` + url.featureLogo6 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag6 + `</div>
-                                <div class="card-copy">` + url.featureCopy6 + `</div>
-                            </div>
-                                </div>
-                            </div>
-                            <div class="feature3-itemsillustration">
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag7 + `" src="` + url.featureLogo7 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag7 + `</div>
-                                <div class="card-copy">` + url.featureCopy7 + `</div>
-                            </div>
-                                </div>
-                                <div class="feature-card">
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag8 + `" src="` + url.featureLogo8 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag8 + `</div>
-                                <div class="card-copy">` + url.featureCopy8 + `</div>
-                            </div>
-                                </div>
-                                <div class="card-icon">
-                                <img class="vector-icon" alt="` + url.featureAltTag9 + `" src="` + url.featureLogo9 + `" />
-                            </div>
-                            <div class="card-copy">
-                                <div class="card-subtitle">` + url.featureAltTag9 + `</div>
-                                <div class="card-copy">` + url.featureCopy9 + `</div>
-                            </div>
-                            </div>
-                        </div>
-                        <div class="button-wrapper">
-                            <div class="button">
-                                <div class="call-to-action">Get started</div>
                             </div>
                         </div>
                     </div>
-                </div>                        
-                    </div><div class="spz-testimonial-slider"><div class="testimonial-section">
-                    <div class="container">
-                        <div class="testimonial-main-section">
-                            <div class="left-box">
-                                <div class="reviews-main-box">
-                                    <div class="reviews-img-box">
-                                        <div class="capterra-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1691056843/eptura/3006/capterra_logo.svg" alt="Capterra" title="Capterra">
-                                        </div>
-                                        <div class="star-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1691056843/eptura/3006/stars.svg" alt="Capterra Stars">
+                    <div class="spz-testimonial-slider">
+                        <div class="testimonial-section">
+                            <div class="container">
+                                <div class="testimonial-main-section">
+                                    <div class="left-box">
+                                        <div class="reviews-main-box">
+                                            <div class="reviews-img-box">
+                                                <div class="capterra-img">
+                                                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1691056843/eptura/3006/capterra_logo.svg" alt="Capterra" title="Capterra" />
+                                                </div>
+                                                <div class="star-img">
+                                                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1691056843/eptura/3006/stars.svg" alt="Capterra Stars" />
+                                                </div>
+                                            </div>
+                                            <div class="reviews-box"><b>4.4</b>(973 reviews)</div>
                                         </div>
                                     </div>
-                                    <div class="reviews-box"><b>4.4</b>(973 reviews)</div>
+                                    <div class="right-box">
+                                        ` + url.sliderContent + `
+                                    </div>
                                 </div>
-                            </div>
-                            <div class="right-box">
-                            ` + url.sliderContent + `
                             </div>
                         </div>
                     </div>
-                </div></div><div class="spz-footer-section"><div class="simplified-footer container"><div class="links">
-                <a href="https://eptura.com/terms/saas-privacy-policy/">SaaS Privacy Policy</a><a href="https://eptura.com/terms/privacy-policy/">Privacy Policy</a><a href="https://eptura.com/terms/modern-slavery/">Modern Slavery</a></div>
-                <div class="copyright-section"><p>All Rights Reserved © Eptura™</p></div></div></div></section>`);
+                    <div class="spz-footer-section">
+                        <div class="simplified-footer">
+                            <div class="links">
+                                <a href="https://eptura.com/terms/saas-privacy-policy/">SaaS Privacy Policy</a><a href="https://eptura.com/terms/privacy-policy/">Privacy Policy</a><a href="https://eptura.com/terms/modern-slavery/">Modern Slavery</a>
+                            </div>
+                            <div class="copyright-section"><p>All Rights Reserved © Eptura™</p></div>
+                        </div>
+                    </div>
+                </section>
+                `);
 
                     loadSlider();
                 }
