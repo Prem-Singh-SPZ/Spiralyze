@@ -1,11 +1,8 @@
 $eptura-font: "Eptura Flexible", Arial, sans-serif;
 
 body.spz-4003 {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.webp);
-  background-repeat: no-repeat;
-  background-position: left top;
-  background-size: cover;
   height: 100vh;
+
   @media (max-height: 670px) {
     height: 100%;
   }
@@ -34,6 +31,9 @@ body.spz-4003 {
         height: 100%;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        @media (max-width: 767.98px) {
+          padding: 0 15px;
+        }
 
         > .row {
           align-items: center;
@@ -42,21 +42,23 @@ body.spz-4003 {
           @media (max-height: 670px) {
             align-items: flex-start;
           }
+          @media (max-width: 767.98px) {
+            align-items: flex-start;
+          }
 
           //Hero form content
           #HeroFormCol {
             max-width: 568px;
-            padding: 16px 46px 52px 46px !important;
+            padding: 16px 46px 50px 46px !important;
             border-radius: 8px;
             background: var(--primary-neutrals-w, #fff);
             box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
-            margin: 16px 0;
+            margin: 24px 0;
 
             @media (max-width: 767.98px) {
-              max-width: 100%;
+              max-width: 330px;
               width: 100%;
-              padding: 24px 20px 23px !important;
-              order: -1;
+              padding: 16px 20px 31px !important;
             }
 
             .spz-logo {
@@ -67,14 +69,10 @@ body.spz-4003 {
               background-color: transparent !important;
               padding: 40px 0 0 0;
 
-              @media (max-width: 1199.98px) {
-                padding: 22px 0;
-              }
-
               @media (max-width: 767.98px) {
                 max-width: 424px;
                 margin: auto;
-                padding: 20px 0;
+                padding: 32px 0 0 0;
               }
 
               #HeroFormTitleText {
@@ -83,12 +81,18 @@ body.spz-4003 {
                 h6 {
                   color: var(--accents-a-5, #904ab0);
                   text-align: center;
-                  font-size: 26px;
+                  font-size: 36px;
                   font-style: normal;
                   font-weight: 300;
-                  line-height: 34px; /* 130.769% */
+                  line-height: 44px; /* 130.769% */
                   letter-spacing: 0;
-                  margin-bottom: 16px;
+                  margin-bottom: 24px;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 26px;
+                    line-height: 34px;
+                    margin-bottom: 20px;
+                  }
                 }
               }
 
@@ -210,7 +214,7 @@ body.spz-4003 {
                         }
 
                         .mktoCheckboxList {
-                          margin-top: 10px;
+                          margin-top: 4px;
                           cursor: pointer;
                           display: inline-block;
                           position: relative;
@@ -228,10 +232,10 @@ body.spz-4003 {
                           label {
                             font-family: $eptura-font !important;
                             color: var(--primary-neutrals-n-1, #0d122e);
-                            font-size: 14px !important;
+                            font-size: 12px !important;
                             font-style: normal !important;
                             font-weight: 300 !important;
-                            line-height: 20px !important; /* 142.857% */
+                            line-height: 18px !important; /* 142.857% */
                             margin-left: 19px;
                             letter-spacing: -0.1px;
                             cursor: pointer;
@@ -357,7 +361,7 @@ body.spz-4003 {
                         font-style: normal;
                         font-weight: 300;
                         line-height: 24px;
-                        margin-bottom: 32px;
+                        margin-bottom: 18px;
                         display: inline-block;
                         margin-top: 2px;
                         transition: all 0.3s ease;
@@ -367,7 +371,7 @@ body.spz-4003 {
                         }
                         @media (max-width: 767.98px) {
                           padding: 0;
-                          margin-bottom: 32px;
+                          margin-bottom: 26px;
                         }
 
                         &:hover {
@@ -403,7 +407,7 @@ body.spz-4003 {
                         font-style: normal;
                         font-weight: 500;
                         line-height: 24px !important; /* 150% */
-                        margin-top: 12px !important;
+                        margin-top: 21px !important;
                         white-space: nowrap;
                         all: initial;
 
@@ -419,10 +423,11 @@ body.spz-4003 {
                         }
 
                         @media (max-width: 767.98px) {
-                          // height: 56px !important;
+                          margin-top: 22px !important;
+                          height: 56px !important;
                           padding: 0px 32px;
-                          width: 300px !important;
-                          max-width: 300px !important;
+                          width: 270px !important;
+                          max-width: 270px !important;
                         }
                       }
                     }
@@ -431,9 +436,9 @@ body.spz-4003 {
                   //email line form
                   .spz-email {
                     .mktoFieldWrap {
-                      margin-top: 11px;
+                      margin-top: 19px;
                       @media (max-width: 767.98px) {
-                        margin-top: 16px;
+                        margin-top: 24px;
                       }
                       .mktoHtmlText.mktoHasWidth {
                         text-align: center;
@@ -599,279 +604,140 @@ body.spz-4003 {
             #HeroBtn {
               display: none !important;
             }
-
-            .spz-copy {
-              display: flex;
-              height: 100%;
-              max-width: 800px;
-              margin: auto;
-              .wrap {
-                display: flex;
-                flex-direction: column;
-
-                .main {
-                  .hero-title {
-                    color: #f6fafa;
-                    text-align: center;
-                    font-size: 46px;
-                    font-style: normal;
-                    font-weight: 300;
-                    line-height: 54px;
-                    margin-bottom: 32px;
-
-                    span {
-                      //   font-family: $eptura-font;
-                      color: #904ab0;
-                    }
-
-                    @media (max-width: 1199.98px) {
-                      font-size: 26px;
-                      line-height: 34px;
-                      // max-width: 294px;
-                      margin-left: auto;
-                      margin-right: auto;
-                    }
-                    @media (max-width: 767.98px) {
-                      max-width: 294px;
-                    }
-                  }
-
-                  .hero-banner-img {
-                    margin-bottom: 40px;
-
-                    img {
-                      max-width: 100%;
-                    }
-                  }
-
-                  .bullets {
-                    padding-left: 40px;
-                    margin-top: 8px;
-
-                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                      margin-left: -5px;
-                    }
-
-                    @media (min-width: 1600px) {
-                      // padding-right: 6px;
-                    }
-
-                    @media (max-width: 767.98px) {
-                      margin: 8px 12px 0;
-                      padding-right: 8px;
-                    }
-
-                    .bullet {
-                      color: #f6fafa;
-                      font-size: 20px;
-                      font-style: normal;
-                      font-weight: 300;
-                      line-height: 28px;
-                      position: relative;
-                      margin-bottom: 20px;
-
-                      span {
-                        font-family: $eptura-font;
-                        font-weight: 500;
-                      }
-
-                      @media (max-width: 1199.98px) {
-                        font-size: 16px;
-                        line-height: 24px;
-                      }
-
-                      &::before {
-                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/checkmark-icon.svg);
-                        position: absolute;
-                        left: -40px;
-                        top: 0;
-                        width: 24px;
-                        height: 24px;
-                        display: block;
-                        @media (max-width: 1199.98px) {
-                          left: -36px;
-                        }
-                      }
-                    }
-                  }
-                }
-
-                .spz-simplified-footer {
-                  margin-top: auto;
-
-                  @media (max-width: 767.98px) {
-                    margin-top: 20px;
-                  }
-
-                  .footer-container {
-                    display: flex;
-                    align-items: flex-end;
-                    justify-content: space-between;
-                    height: 100%;
-                    // @media (max-width: 767.98px) {
-                    //   margin: 8px 12px 0;
-                    //   padding-right: 8px;
-                    // }
-                    @media (max-width: 1199.98px) {
-                      flex-direction: column;
-                      align-items: center;
-                      justify-content: flex-end;
-                    }
-
-                    .links {
-                      display: flex;
-                      justify-content: space-between;
-                      width: 100%;
-                      max-width: 305px;
-                      a {
-                        color: var(--primary-neutrals-n-3, #f6fafa);
-                        font-size: 12px;
-                        font-style: normal;
-                        font-weight: 300;
-                        line-height: 18px;
-
-                        &:hover {
-                          color: #d6d7f5;
-                        }
-                      }
-
-                      @media (max-width: 1199.98px) {
-                        max-width: 100%;
-                        margin-bottom: 8px;
-                        padding: 0 14px;
-                      }
-
-                      @media (max-width: 767.98px) {
-                        padding: 0 18px;
-                        margin-bottom: 12px;
-                      }
-                    }
-
-                    .saas-privacy-policy {
-                      color: var(--primary-neutrals-n-3, #f6fafa);
-                      font-size: 12px;
-                      font-style: normal;
-                      font-weight: 300;
-                      line-height: 18px; /* 150% */
-                    }
-                  }
-                }
-              }
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
-//Page specific css
-//SpaceIQ and Archibus css
-body.spz-4003.website-spaceiq-demo,
-body.spz-4003.website-archibus-demo {
-  .body-wrapper #hero .hero_container.page_padding > .row {
-    > .col-md.pb-5 .spz-copy .wrap .main {
-      .hero-title {
-        @media (max-width: 1600px) {
-          max-width: 548px;
-          margin-left: auto;
-          margin-right: auto;
-        }
-        @media (max-width: 1199.98px) {
-          max-width: 310px;
-        }
-        @media (max-width: 767.98px) {
-          max-width: 300px;
-        }
-      }
-
-      .bullets {
-        @media (min-width: 767.98px) and (max-width: 1199.98px) {
-          padding-right: 2px;
-        }
-      }
-    }
-
-    #HeroFormCol #HeroFormPanel {
-      @media (min-width: 767.98px) and (max-width: 1199.98px) {
-        padding: 24px 0;
-      }
-    }
-  }
-}
-
-//Managerplus Css
-body.spz-4003.website-managerplus-demo
-  .body-wrapper
-  #hero
-  .hero_container.page_padding
-  > .row {
-  > .col-md.pb-5 {
-    .spz-copy {
-      max-width: 816px;
-      .hero-banner-img,
-      .bullets {
-        max-width: 800px;
-        margin-left: auto;
-        margin-right: auto;
-      }
-
-      .bullets {
-        @media (min-width: 1600.98px) {
-          padding-right: 2px;
-        }
-      }
-
-      .spz-simplified-footer {
-        @media (min-width: 1600.98px) {
-          padding: 0 8px;
-        }
-      }
-
-      .wrap .main {
-        .hero-title {
-          @media (max-width: 767.98px) {
-            max-width: 278px;
           }
         }
       }
     }
   }
 
-  #HeroFormCol #HeroFormPanel {
-    @media (min-width: 767.98px) and (max-width: 1199.98px) {
-      padding: 24px 0;
+  // Page Specific Css
+  &.website-proxyclick-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.webp);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    @media (max-width: 574.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.webp);
+      background-position: bottom;
+      background-size: cover;
     }
-  }
-}
 
-//Proxyclick Css
-body.spz-4003.website-proxyclick-demo
-  .body-wrapper
-  #hero
-  .hero_container.page_padding
-  > .row {
-  > .col-md.pb-5 {
-    .spz-copy {
-      .bullets {
-        @media (min-width: 1600.98px) {
-          padding-right: 4px;
-        }
-      }
+    &.safari {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
 
-      .wrap .main {
-        .hero-title {
-          @media (max-width: 767.98px) {
-            max-width: 306px;
-          }
-        }
+      @media (max-width: 574.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.png);
+        background-position: bottom;
+        background-size: cover;
       }
     }
   }
 
-  #HeroFormCol #HeroFormPanel {
-    @media (min-width: 767.98px) and (max-width: 1199.98px) {
-      padding: 24px 0;
+  &.website-managerplus-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.webp);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    @media (max-width: 574.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.webp);
+      background-position: bottom;
+      background-size: cover;
+    }
+
+    &.safari {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+
+      @media (max-width: 574.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.png);
+        background-position: bottom;
+        background-size: cover;
+      }
+    }
+  }
+
+  &.website-archibus-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.webp);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    @media (max-width: 574.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.webp);
+      background-position: bottom;
+      background-size: cover;
+    }
+
+    &.safari {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+
+      @media (max-width: 574.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.png);
+        background-position: bottom;
+        background-size: cover;
+      }
+    }
+  }
+
+  &.website-spaceiq-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.webp);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    @media (max-width: 574.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.webp);
+      background-position: bottom;
+      background-size: cover;
+    }
+
+    &.safari {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+
+      @media (max-width: 574.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.png);
+        background-position: bottom;
+        background-size: cover;
+      }
+    }
+  }
+
+  &.website-ioffice-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.webp);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    @media (max-width: 574.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.webp);
+      background-position: bottom;
+      background-size: cover;
+    }
+
+    &.safari {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+
+      @media (max-width: 574.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.png);
+        background-position: bottom;
+        background-size: cover;
+      }
     }
   }
 }
