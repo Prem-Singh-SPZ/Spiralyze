@@ -1,5 +1,5 @@
 (function () {
-    document.body.classList.add('spz-4003');
+    document.body.classList.add('spz-4004');
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.querySelector('body').classList.add(identifyPage);
 
@@ -33,7 +33,7 @@
     ];
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
-        document.body.classList.add('spz-4003');
+        document.body.classList.add('spz-4004');
         loadTest();
     });
 

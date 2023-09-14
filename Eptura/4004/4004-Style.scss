@@ -1,18 +1,13 @@
 $eptura-font: "Eptura Flexible", Arial, sans-serif;
 
-body.spz-4003 {
-  height: 100vh;
-
-  @media (max-height: 670px) {
-    height: 100%;
-  }
+body.spz-4004 {
+  min-height: 100vh;
 
   #HeaderScripts {
     display: none !important;
   }
 
   .body-wrapper {
-    height: 100%;
     &::before,
     > section:not(#hero),
     > div,
@@ -22,13 +17,9 @@ body.spz-4003 {
 
     // Hero changes starts
     #hero {
-      height: 100%;
       background-color: transparent;
 
       .hero_container.page_padding {
-        // padding: 0 15px !important;
-        // max-width: 100% !important;
-        height: 100%;
         padding-top: 0 !important;
         padding-bottom: 0 !important;
         @media (max-width: 767.98px) {
@@ -38,7 +29,8 @@ body.spz-4003 {
         > .row {
           align-items: center;
           justify-content: center;
-          height: 100%;
+          min-height: 100vh;
+
           @media (max-height: 670px) {
             align-items: flex-start;
           }
