@@ -1,5 +1,4 @@
 (function () {
-
     // Add unique classes to body
     document.body.classList.add('spz-4001');
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
@@ -274,6 +273,8 @@
         loadTest();
     });
 
+
+    //4001 specific code
     //Clear form fields
     function clearFormFields() {
         document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
@@ -288,6 +289,11 @@
         updatePageContent();
         formUpdate();
         focusFields();
+
+        waitForElm('.spz-rest-all-section .spz-testimonial-slider .splide.testimonial-wrapper.is-initialized').then(function () {
+            document.querySelector('.spz-rest-all-section').classList.add('hidden-secttion');
+        });
+
         // Add class 'safari' (used for cart scrollbar)
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.querySelector('body').classList.add('safari')
@@ -307,6 +313,11 @@
                     checkError(el);
                     showGlobalError();
                 });
+            }
+
+            if (e.target.classList.contains("load-more-btn")) {
+                e.target.classList.add('d-none');
+                this.document.querySelector('.spz-rest-all-section').classList.remove('hidden-secttion');
             }
         });
         document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
@@ -479,9 +490,13 @@
                     document.querySelector('#hero #HeroText').innerHTML = `<h6>VISITOR&nbsp;MANAGEMENT SOFTWARE</h6><h1>Make the visitor check-in experience 50% faster while improving security.</h1><div class="spz-review-summary"><div class="capterra-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_capterra_sign.svg" alt="Capterra" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989402/eptura/3009/stars_1.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.4</span> (973 reviews)</div></div><div class="g2-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_g2_logo.svg" alt="G2 Logo" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/stars.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.3</span> (745 reviews)</div></div></div><ul class="hero-list-copy"><li class="list-item">` + url.listItem1 + `</li><li class="list-item">` + url.listItem2 + `</li><li class="list-item">` + url.listItem3 + `</li></ul>`;
 
                     //Testimonials section update
-                    document.querySelector('#testimonials #TestimonialImg').innerHTML = `<div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-comcast.svg" alt="Comcast"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-generalelectric.svg" alt="General Electric"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-nbcuniversal.svg" alt="NBC Universal"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-zoom.svg" alt="Zoom"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-pepsico.svg" alt="Pepsico"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-slack.svg" alt="Slack"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-nasdaq.svg" alt="Nasdaq"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-johnson.svg" alt="Johnson"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-starbucks.svg" alt="Starbucks"></div><div class="logo-item"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/logo-unilever.svg" alt="Unilever"></div>`;
+                    document.querySelector('#testimonials #TestimonialImg').innerHTML = `<div class="logos-img"><picture>
+                    <source media="(max-width:767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/Logo_Set_-_Mobile.png">
+                     <source media="(max-width:1199px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/Logo_Set_Tablet.png">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/Logo_Set.png" alt="Our customers">
+                  </picture></div>`;
 
-                    document.querySelector('#testimonials #TestimonialImg').insertAdjacentHTML('afterend', `<div class=" d-flex justify-content-center align-items-center load-more"><a href="javascript:void(0);" id="load-more-btn">Learn more <img src="//res.cloudinary.com/spiralyze/image/upload/v1693571571/eptura/4001/arrow-right-chevron_2.svg" alt="Arrow down"></a></div>`)
+                    document.querySelector('#testimonials #TestimonialImg').insertAdjacentHTML('afterend', `<div class=" d-flex justify-content-center align-items-center load-more"><a href="javascript:void(0);" class="load-more-btn">Learn more <img src="//res.cloudinary.com/spiralyze/image/upload/v1693571571/eptura/4001/arrow-right-chevron_2.svg" alt="Arrow down"></a></div>`)
 
                     //Rest of the page
                     document.querySelector('body > .body-wrapper').insertAdjacentHTML('beforeend', `<section class="spz-rest-all-section">
@@ -495,7 +510,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag1 + `" src="` + url.featureLogo1 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag1 + `</div>
+                                            <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag1 + `" src="` + url.featureLogo1 + `" /><span>` + url.featureAltTag1 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy1 + `</div>
                                         </div>
                                     </div>
@@ -504,7 +519,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag2 + `" src="` + url.featureLogo2 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag2 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag2 + `" src="` + url.featureLogo2 + `" /><span>` + url.featureAltTag2 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy2 + `</div>
                                         </div>
                                     </div>
@@ -513,7 +528,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag3 + `" src="` + url.featureLogo3 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag3 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag3 + `" src="` + url.featureLogo3 + `" /><span>` + url.featureAltTag3 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy3 + `</div>
                                         </div>
                                     </div>
@@ -524,7 +539,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag4 + `" src="` + url.featureLogo4 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag4 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag4 + `" src="` + url.featureLogo4 + `" /><span>` + url.featureAltTag4 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy4 + `</div>
                                         </div>
                                     </div>
@@ -533,7 +548,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag5 + `" src="` + url.featureLogo5 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag5 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag5 + `" src="` + url.featureLogo5 + `" /><span>` + url.featureAltTag5 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy5 + `</div>
                                         </div>
                                     </div>
@@ -542,7 +557,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag6 + `" src="` + url.featureLogo6 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag6 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag6 + `" src="` + url.featureLogo6 + `" /><span>` + url.featureAltTag6 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy6 + `</div>
                                         </div>
                                     </div>
@@ -553,7 +568,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag7 + `" src="` + url.featureLogo7 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag7 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag7 + `" src="` + url.featureLogo7 + `" /><span>` + url.featureAltTag7 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy7 + `</div>
                                         </div>
                                     </div>
@@ -562,7 +577,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag8 + `" src="` + url.featureLogo8 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag8 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag8 + `" src="` + url.featureLogo8 + `" /><span>` + url.featureAltTag8 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy8 + `</div>
                                         </div>
                                     </div>
@@ -571,7 +586,7 @@
                                             <img class="vector-icon" alt="` + url.featureAltTag9 + `" src="` + url.featureLogo9 + `" />
                                         </div>
                                         <div class="card-content">
-                                            <div class="card-subtitle">` + url.featureAltTag9 + `</div>
+                                        <div class="card-subtitle"><img class="vector-icon" alt="` + url.featureAltTag9 + `" src="` + url.featureLogo9 + `" /><span>` + url.featureAltTag9 + `</span></div>
                                             <div class="card-copy">` + url.featureCopy9 + `</div>
                                         </div>
                                     </div>

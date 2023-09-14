@@ -86,7 +86,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 8px 12px 0;
+            padding: 1px 12px 0;
             height: 64px;
             width: 100%;
             background: #fff;
@@ -128,7 +128,7 @@
 
           &:focus ~ label,
           &:not(:placeholder-shown) ~ label {
-            top: 8px;
+            top: 4px;
             font-size: 12px;
             font-weight: 500;
             line-height: 18px;
@@ -161,7 +161,7 @@
               border: 1px solid var(--Neutrals-700, #293642);
 
               ~ label {
-                top: 8px;
+                top: 4px;
                 font-size: 12px;
                 line-height: 18px;
                 // font-weight: 500;
@@ -172,7 +172,7 @@
               border: 1px solid var(--Neutrals-700, #293642);
 
               ~ label {
-                top: 8px;
+                top: 4px;
                 font-size: 12px;
                 line-height: 18px;
                 // font-weight: 500;
@@ -183,7 +183,7 @@
               border: 1px solid var(--Neutrals-700, #293642);
 
               ~ label {
-                top: 8px;
+                top: 4px;
                 font-size: 12px;
                 line-height: 18px;
                 // font-weight: 500;
@@ -198,7 +198,7 @@
           -webkit-appearance: none;
           // set custom icon on select
           background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg")
-            #fff no-repeat right 16px center !important;
+            #fff no-repeat right 11px center !important;
           white-space: nowrap;
           overflow: hidden;
           text-overflow: ellipsis;
@@ -255,7 +255,7 @@
                 &:not(:placeholder-shown) {
                   ~ {
                     label {
-                      top: 8px;
+                      top: 4px;
                       font-size: 12px;
                       line-height: 18px;
                       // font-weight: 500;
@@ -266,7 +266,7 @@
                 &:not(:-moz-placeholder-shown) {
                   ~ {
                     label {
-                      top: 8px;
+                      top: 4px;
                       font-size: 12px;
                       line-height: 18px;
                       // font-weight: 500;
@@ -277,7 +277,7 @@
                 &:not(:-ms-input-placeholder) {
                   ~ {
                     label {
-                      top: 8px;
+                      top: 4px;
                       font-size: 12px;
                       line-height: 18px;
                       // font-weight: 500;
@@ -295,11 +295,12 @@
 
           &.hs-fieldtype-select {
             .input .hs-label-spz {
-              top: 16px;
-              left: 16px;
-              color: #293642;
-              font-size: 15px;
-              font-weight: 400;
+              top: 20px;
+              left: 12px;
+              color: #697586;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
               background-color: #fff;
               width: calc(100% - 60px);
               height: 30px;
@@ -335,8 +336,8 @@
 
           &.hs-fieldtype-select {
             select {
-              background: url("//res.cloudinary.com/spiralyze/image/upload/v1683613303/drata/6002/dropdown_arrow-up.svg")
-                #fff no-repeat right 16px center !important;
+              background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg")
+                #fff no-repeat right 11px center !important;
             }
           }
         }
@@ -555,7 +556,8 @@
       margin: 0;
       padding: 8px 12px;
       border-radius: 4px;
-      box-shadow: 0px 10px 40px -5px rgba(129, 24, 24, 0.16), 0px 2px 8px -5px rgba(129, 24, 24, 0.24);
+      box-shadow: 0px 10px 40px -5px rgba(129, 24, 24, 0.16),
+        0px 2px 8px -5px rgba(129, 24, 24, 0.24);
       z-index: 1;
 
       // @media (max-width: 767.98px) {
@@ -627,6 +629,10 @@
   }
 }
 
+.form-wrapper-spz .hbspt-form form fieldset .field select.hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
+  opacity: 0;
+}
+
 .hbspt-form .submitted-message {
   font-size: 32px;
   font-family: $ff-inter;
@@ -637,6 +643,8 @@
 @media screen and (max-width: 1280px) {
   .form-wrapper-spz {
     .hbspt-form {
+      max-width: 628px;
+
       form {
         fieldset {
           max-width: 672px;
@@ -650,9 +658,9 @@
               max-width: 306px;
             }
 
-            select {
-              background-position: calc(100% - 16px) 19.5px !important;
-            }
+            // select {
+            //   background-position: calc(100% - 16px) 19.5px !important;
+            // }
 
             // &.hs-fieldtype-checkbox {
             //   > .input ul {
@@ -750,10 +758,10 @@
           }
 
           // .hs-button {
-            // font-size: 17px;
-            // line-height: 24px;
-            // height: 56px;
-            // padding: 15px 58px 16px 30px;
+          // font-size: 17px;
+          // line-height: 24px;
+          // height: 56px;
+          // padding: 15px 58px 16px 30px;
           // }
         }
 

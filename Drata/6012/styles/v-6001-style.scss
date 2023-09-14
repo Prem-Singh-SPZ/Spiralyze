@@ -1,5 +1,5 @@
-@import url('https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap");
 
 * {
   -webkit-box-sizing: border-box;
@@ -88,66 +88,54 @@ img {
   position: relative;
 }
 
-header,
-footer,
-.osano-cm-widget[title="Cookie Preferences"] {
-  display: none !important;
-}
-
-body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering {
-  padding: 0;
-}
-
-body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering .row-fluid {
-  width: initial !important;
-  max-width: initial !important;
-}
-
-
 /* Common Css */
 .sec-title {
-  font-family: 'Darker Grotesque', sans-serif;
+  color: var(--neutral-900, #0c131a);
+  font-family: $ff-inter;
+  font-size: 42px;
   font-style: normal;
-  font-weight: 800;
-  font-size: 48px;
-  line-height: 40px;
-  color: #000000;
-  margin: 0;
+  font-weight: 900;
+  line-height: 48px;
+  letter-spacing: -0.84px;
+  text-align: center;
+  margin-bottom: 21px;
 }
 
 .sec-title span {
-  color: #0580E8;
+  color: #0580e8;
 }
 
-.border-title {
-  padding-top: 14px;
-  position: relative;
-}
+// .border-title {
+//   padding-top: 14px;
+//   position: relative;
+// }
 
-.border-title::before {
-  position: absolute;
-  content: "";
-  top: 0;
-  left: 0;
-  width: 115px;
-  height: 8px;
-  background: #007AFF;
-}
+// .border-title::before {
+//   position: absolute;
+//   content: "";
+//   top: 0;
+//   left: 0;
+//   width: 115px;
+//   height: 8px;
+//   background: #007AFF;
+// }
 
 .sec-sub_title {
-  font-family: "Inter", sans-serif;
+  color: var(--Neutrals-600, #485665);
+  font-family: $ff-inter;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 32px;
-  color: #444444;
+  font-weight: 500;
+  line-height: 26px;
+  text-align: center;
   margin: 5px 0 0;
 }
 
-@media(max-width: 1199.98px) {
+@media (max-width: 1199.98px) {
   .sec-title {
-    font-size: 32px;
-    line-height: 24px;
+    font-size: 42px;
+    font-style: normal;
+    font-weight: 900;
   }
 
   .border-title {
@@ -159,7 +147,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
 }
 
-@media(max-width: 767.98px) {
+@media (max-width: 767.98px) {
   .border-title::before {
     right: 0;
     margin: 0 auto;
@@ -170,223 +158,172 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   }
 }
 
-/* Common Css */
-
-// /* Logo Section */
-// .logo-section .ls-logo-group {
-//   margin: 53px auto 72px;
+/* How it Works Section */
+// .how-works-section {
+//   background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#F2F2F2));
+//   background: -o-linear-gradient(top, #F2F2F2 0%, #F2F2F2 100%);
+//   background: linear-gradient(180deg, #F2F2F2 0%, #F2F2F2 100%);
+//   padding: 120px 0 119px;
+//   position: relative;
+//   overflow: hidden;
 // }
 
-// .logo-section .ls-logo-item {
-//   margin-bottom: 48px;
-//   height: 48px;
-//   max-width: 180px;
-//   display: flex;
-//   align-items: center;
+// .how-works-section .container::before {
+//   position: absolute;
+//   content: "";
+//   top: -168px;
+//   left: -97px;
+//   width: 546px;
+//   height: 129px;
+//   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1681282189/drata/6001/how-work-ornament.svg");
+//   background-size: contain;
+//   background-repeat: no-repeat;
+// }
+
+// .how-works-section .work-steps {
+//   margin-top: 56px;
+// }
+
+// .how-works-section .work-steps .work-step-item {
+//   width: 33.33%;
+//   max-width: 320px;
+// }
+
+// .how-works-section .work-step-item .step-img {
+//   width: 100%;
+// }
+
+// .how-works-section .work-step-item .step-number {
+//   font-family: "Inter", sans-serif;
+//   font-style: normal;
+//   font-weight: 700;
+//   font-size: 14px;
+//   line-height: 20px;
+//   color: #0580E8;
+//   margin: 18px 0 3px;
+//   display: block;
+//   width: 100%;
+//   letter-spacing: 0.02em;
+//   text-transform: uppercase;
+// }
+
+// .how-works-section .work-step-item .step-title {
+//   font-family: 'Darker Grotesque', sans-serif;
+//   font-style: normal;
+//   font-weight: 800;
+//   font-size: 24px;
+//   line-height: 24px;
+//   color: #000000;
+//   margin: 0;
+// }
+
+// .how-works-section .work-step-item .step-info {
+//   font-family: "Inter", sans-serif;
+//   font-style: normal;
+//   font-weight: 400;
+//   font-size: 18px;
+//   line-height: 28px;
+//   color: #444444;
+//   margin: 11px 0 0;
 // }
 
 // @media(max-width: 1199.98px) {
-//   .logo-section .ls-logo-group {
-//     margin: 40px -49px 48px;
+//   .how-works-section {
+//     padding: 96px 0 71px;
 //   }
 
-//   .logo-section .ls-logo-item {
-//     margin: 0 49px 48px;
+//   .how-works-section .container::before {
+//     display: none;
+//   }
+
+//   .how-works-section .work-steps {
+//     margin-top: 41px;
+//   }
+
+//   .how-works-section .work-steps .work-step-item {
+//     width: 100%;
+//     max-width: unset;
+//     display: -webkit-box;
+//     display: -ms-flexbox;
+//     display: flex;
+//     -ms-flex-wrap: wrap;
+//     flex-wrap: wrap;
+//     -webkit-box-align: center;
+//     -ms-flex-align: center;
+//     align-items: center;
+//     -webkit-box-pack: justify;
+//     -ms-flex-pack: justify;
+//     justify-content: space-between;
+//     margin-bottom: 24px;
+//   }
+
+//   .how-works-section .work-steps .work-step-item:nth-child(even) {
+//     -webkit-box-orient: horizontal;
+//     -webkit-box-direction: reverse;
+//     -ms-flex-flow: row-reverse;
+//     flex-flow: row-reverse;
+//   }
+
+//   .how-works-section .work-step-item .step-img {
+//     max-width: 280px;
+//     -o-object-fit: contain;
+//     object-fit: contain;
+//   }
+
+//   .how-works-section .work-step-item .step-content {
+//     width: calc(100% - 320px);
+//   }
+
+//   .how-works-section .work-step-item .step-number {
+//     margin: 0 0 3px;
 //   }
 // }
 
 // @media(max-width: 767.98px) {
-//   section.logo-section {
-//     padding: 24px 0 0;
+//   .how-works-section .container::before {
+//     display: block;
+//     top: -117px;
+//     left: 159px;
+//     width: 273px;
+//     height: 64.5px;
 //   }
 
-//   .logo-section .border-title::before {
-//     right: auto;
+//   .how-works-section .sec-title,
+//   .how-works-section h6 {
+//     text-align: center;
 //   }
 
-//   .logo-section .ls-logo-item img {
+//   .how-works-section .work-step-item .step-content {
 //     width: 100%;
+//     text-align: center;
+//     margin-top: 24px;
+//     padding: 0 1px;
 //   }
 
-//   .logo-section .ls-logo-item {
-//     margin: 0 0 40px;
-//     width: 50%;
-//     max-width: 150px;
+//   .how-works-section .work-step-item .step-number {
+//     margin: 0 auto 3px;
+//     text-align: center;
+//     display: table;
 //   }
 
-//   .logo-section .ls-logo-group {
-//     margin: 40px 0 32px;
+//   .how-works-section .work-steps .work-step-item:nth-child(even) {
+//     -webkit-box-orient: vertical;
+//     -webkit-box-direction: normal;
+//     -ms-flex-flow: inherit;
+//     flex-flow: inherit;
+//   }
+
+//   .how-works-section .work-steps .work-step-item {
+//     margin-bottom: 40px;
+//     -webkit-box-pack: center;
+//     -ms-flex-pack: center;
+//     justify-content: center;
+//   }
+
+//   .how-works-section {
+//     padding: 96px 0 55px;
 //   }
 // }
-
-/* Logo Section */
-
-/* How it Works Section */
-.how-works-section {
-  background: -webkit-gradient(linear, left top, left bottom, from(#F2F2F2), to(#F2F2F2));
-  background: -o-linear-gradient(top, #F2F2F2 0%, #F2F2F2 100%);
-  background: linear-gradient(180deg, #F2F2F2 0%, #F2F2F2 100%);
-  padding: 120px 0 119px;
-  position: relative;
-  overflow: hidden;
-}
-
-.how-works-section .container::before {
-  position: absolute;
-  content: "";
-  top: -168px;
-  left: -97px;
-  width: 546px;
-  height: 129px;
-  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1681282189/drata/6001/how-work-ornament.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
-.how-works-section .work-steps {
-  margin-top: 56px;
-}
-
-.how-works-section .work-steps .work-step-item {
-  width: 33.33%;
-  max-width: 320px;
-}
-
-.how-works-section .work-step-item .step-img {
-  width: 100%;
-}
-
-.how-works-section .work-step-item .step-number {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 700;
-  font-size: 14px;
-  line-height: 20px;
-  color: #0580E8;
-  margin: 18px 0 3px;
-  display: block;
-  width: 100%;
-  letter-spacing: 0.02em;
-  text-transform: uppercase;
-}
-
-.how-works-section .work-step-item .step-title {
-  font-family: 'Darker Grotesque', sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 24px;
-  color: #000000;
-  margin: 0;
-}
-
-.how-works-section .work-step-item .step-info {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 18px;
-  line-height: 28px;
-  color: #444444;
-  margin: 11px 0 0;
-}
-
-@media(max-width: 1199.98px) {
-  .how-works-section {
-    padding: 96px 0 71px;
-  }
-
-  .how-works-section .container::before {
-    display: none;
-  }
-
-  .how-works-section .work-steps {
-    margin-top: 41px;
-  }
-
-  .how-works-section .work-steps .work-step-item {
-    width: 100%;
-    max-width: unset;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex-wrap: wrap;
-    flex-wrap: wrap;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    margin-bottom: 24px;
-  }
-
-  .how-works-section .work-steps .work-step-item:nth-child(even) {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: reverse;
-    -ms-flex-flow: row-reverse;
-    flex-flow: row-reverse;
-  }
-
-  .how-works-section .work-step-item .step-img {
-    max-width: 280px;
-    -o-object-fit: contain;
-    object-fit: contain;
-  }
-
-  .how-works-section .work-step-item .step-content {
-    width: calc(100% - 320px);
-  }
-
-  .how-works-section .work-step-item .step-number {
-    margin: 0 0 3px;
-  }
-}
-
-@media(max-width: 767.98px) {
-  .how-works-section .container::before {
-    display: block;
-    top: -117px;
-    left: 159px;
-    width: 273px;
-    height: 64.5px;
-  }
-
-  .how-works-section .sec-title,
-  .how-works-section h6 {
-    text-align: center;
-  }
-
-  .how-works-section .work-step-item .step-content {
-    width: 100%;
-    text-align: center;
-    margin-top: 24px;
-    padding: 0 1px;
-  }
-
-  .how-works-section .work-step-item .step-number {
-    margin: 0 auto 3px;
-    text-align: center;
-    display: table;
-  }
-
-  .how-works-section .work-steps .work-step-item:nth-child(even) {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-    -ms-flex-flow: inherit;
-    flex-flow: inherit;
-  }
-
-  .how-works-section .work-steps .work-step-item {
-    margin-bottom: 40px;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .how-works-section {
-    padding: 96px 0 55px;
-  }
-}
 
 .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
   display: none;

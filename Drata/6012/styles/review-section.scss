@@ -51,7 +51,7 @@
     .rating-section {
       display: flex;
       align-items: center;
-      padding: 4px;
+      padding: 4px 3.5px;
       border-radius: 60px;
       border: 1px solid var(--white-10, rgba(255, 255, 255, 0.1));
       background: var(--white-30, rgba(255, 255, 255, 0.3));
@@ -135,13 +135,12 @@
     display: flex;
 
     .review-content {
-      // position: relative;
+      display: flex;
+      flex-direction: column;
       width: 100%;
       border-radius: 12px;
       border: 1px solid var(--white-30, rgba(255, 255, 255, 0.3));
-      padding: 27px;
-      display: flex;
-      flex-direction: column;
+      padding: 28px 27px 27px;
     }
     .rating {
       align-items: flex-end;
@@ -208,7 +207,7 @@
   border-radius: 20px;
   background: var(--neutral-900, #0c131a);
 
-  @media (max-width: 1280.98px) {
+  @media (max-width: 1280px) {
     flex-direction: column;
   }
 
@@ -232,7 +231,7 @@
         color: #1793ff;
       }
 
-      @media (max-width: 1280.98px) {
+      @media (max-width: 1280px) {
         text-align: center;
         margin-bottom: 32px;
       }
@@ -385,6 +384,7 @@
         cursor: pointer;
         width: 182px;
         white-space: nowrap;
+        transition-duration: 150ms;
 
         @media (max-width: 767.98px) {
           width: 100%;
@@ -464,7 +464,7 @@
 
 @media (max-width: 767.98px) {
   .review-section {
-    padding: 64px 0 64px;
+    padding: 65px 0 64px;
 
     .review-slider {
       padding: 32px 16px 40px;

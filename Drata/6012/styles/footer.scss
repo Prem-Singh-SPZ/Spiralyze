@@ -23,7 +23,7 @@
     width: 60%;
     max-width: 764px;
     .brand-logo {
-      // margin-left: -10px;
+      width: 156px;
     }
   }
   .brand-desc {
@@ -75,34 +75,35 @@
     gap: 16px;
     a {
       text-decoration: none;
-      border-left: 1px solid rgba(5, 128, 232, 1);
-      padding-left: 4px;
+      border-right: 1px solid rgba(5, 128, 232, 1);
       color: rgba(105, 117, 134, 1);
       font-family: $ff-inter;
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
       cursor: pointer;
-      padding-left: 17px;
+      padding-right: 17px;
+      transition-duration: 150ms;
 
       &:hover {
         color: #0580e8;
       }
 
-      &:first-child {
+      &:last-child {
+        padding-right: 0;
         @media (min-width: 767.98px) {
           border: 0;
         }
       }
 
-      @media (min-width: 767.98px) and (max-width: 1200px) {
-        &:first-child {
-          padding-left: 0;
-        }
-        &:nth-child(7) {
-          padding-left: 0;
-          border: 0;
-        }
+      @media (min-width: 767.98px) and (max-width: 1280px) {
+        // &:first-child {
+        //   padding-left: 0;
+        // }
+        // &:nth-child(7) {
+          // padding-left: 0;
+          // border: 0;
+        // }
       }
 
       @media (max-width: 767.98px) {
@@ -125,7 +126,7 @@
   }
 }
 
-@media (max-width: 1200px) {
+@media (max-width: 1280px) {
   .brand-footer {
     padding: 24px 32px 39px;
 
@@ -147,7 +148,7 @@
     align-items: flex-start;
 
     .copyright-text {
-      margin: 0 0 20px 0;
+      margin: 0 0 21px 0;
     }
   }
 }

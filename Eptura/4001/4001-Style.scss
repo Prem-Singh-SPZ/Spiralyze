@@ -49,33 +49,52 @@ body.spz-4001 {
 
     //Hero Css starts here
     #hero {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-2560-min.jpg);
-      background-position: center;
-      background-repeat: no-repeat;
-      background-size: cover;
-
       .hero_container {
         overflow: hidden;
+        max-width: 1440px;
+
+        @media (max-width: 1199.98px) {
+          padding: 0 40px;
+        }
 
         .spz-logo {
           padding: 6px 0;
+
+          @media (max-width: 1199.98px) {
+            padding: 0px 0 8px;
+          }
         }
 
         > .row {
           // align-items: center;
-          padding-top: 49px;
+          padding-top: 48px;
           padding-bottom: 48px;
           @media (max-width: 1199.98px) {
             flex-direction: column;
+            padding-bottom: 24px;
           }
 
           > .col-md.pb-5 {
+            position: relative;
+
+            &::after {
+              content: url(//res.cloudinary.com/spiralyze/image/upload/v1693570420/eptura/4001/arrow.svg);
+              position: absolute;
+              bottom: -8px;
+              right: -12px;
+              @media (max-width: 1347.98px) {
+                bottom: -24px;
+              }
+              @media (max-width: 1199.98px) {
+                display: none;
+              }
+            }
             @media (min-width: 1199.98px) {
               padding-bottom: 0 !important;
               max-width: 685px;
             }
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
-              padding: 0 0 52px !important;
+              padding: 0 0 35px !important;
             }
             @media (max-width: 767.98px) {
               padding: 0 44px 37px !important;
@@ -93,6 +112,7 @@ body.spz-4001 {
               letter-spacing: 2.7px;
               text-transform: uppercase;
               margin-bottom: 12px;
+              margin-top: 1px;
               @media (max-width: 767.98px) {
                 font-size: 12px;
                 line-height: 16px;
@@ -123,6 +143,11 @@ body.spz-4001 {
               display: flex;
               align-items: center;
               margin-bottom: 40px;
+
+              @media (max-width: 1199.98px) {
+                margin-bottom: 32px;
+              }
+
               @media (max-width: 767.98px) {
                 margin-bottom: 28px;
               }
@@ -178,9 +203,11 @@ body.spz-4001 {
               padding-left: 40px;
               margin-bottom: 16px;
               max-width: 570px;
+              position: relative;
 
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 padding-right: 4px;
+                max-width: 100%;
               }
               @media (max-width: 767.98px) {
                 padding-left: 41px;
@@ -220,6 +247,10 @@ body.spz-4001 {
                   @media (max-width: 767.98px) {
                     left: -40px;
                   }
+                }
+
+                @media (max-width: 1199.98px) {
+                  margin-bottom: 16px;
                 }
               }
             }
@@ -279,7 +310,7 @@ body.spz-4001 {
                   line-height: 44px; /* 130.769% */
                   // white-space: nowrap;
                   letter-spacing: initial;
-                  margin: -1px -9px 24px 0;
+                  margin: 0 -9px 24px 0;
                   span {
                     color: var(--accents-a-5, #904ab0);
                   }
@@ -688,9 +719,59 @@ body.spz-4001 {
 
     //Testimonial logo section css
     #testimonials {
-      #TestimonialImg {
-        .logo-item {
-          width: auto;
+      .page_padding {
+        max-width: 1440px;
+        @media (max-width: 1199.98px) {
+          padding: 0 40px;
+        }
+
+        #TestimonialTxt {
+          padding-top: 17px !important;
+          padding-bottom: 7px;
+          h3 {
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 26px;
+          }
+        }
+
+        #TestimonialImg {
+          padding-bottom: 16px !important;
+
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            padding-top: 4px;
+            padding-top: 4px;
+            max-width: 688px;
+          }
+
+          .logos-img {
+            width: 100%;
+            img {
+              max-width: 100%;
+            }
+          }
+        }
+
+        .load-more {
+          .load-more-btn {
+            padding-top: 16px;
+            color: var(--interactive-colors-a-1, #1b4bc5);
+            text-align: center;
+            font-family: $eptura-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+
+            img {
+              padding-bottom: 3px;
+            }
+
+            &:hover {
+              opacity: 0.8;
+            }
+          }
         }
       }
     }
@@ -698,11 +779,20 @@ body.spz-4001 {
     //Rest all section css starts
     .spz-rest-all-section {
       //Feature section
+
+      &.hidden-secttion {
+        height: 0;
+        overflow: hidden;
+      }
       .spz-features-section {
         .features-3-col-icon {
           padding: 80px 100px;
-          max-width: 1600px;
+          max-width: 1440px;
           margin: auto;
+
+          @media (max-width: 1199.98px) {
+            padding: 72px 40px;
+          }
 
           .features-title {
             color: var(--primary-neutrals-n-1, #0d122e);
@@ -712,6 +802,12 @@ body.spz-4001 {
             font-weight: 300;
             line-height: 54px;
             margin-bottom: 64px;
+
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              font-size: 36px;
+              line-height: 44px;
+              margin-bottom: 32px;
+            }
           }
 
           .feature3-itemsillustration-parent {
@@ -719,16 +815,26 @@ body.spz-4001 {
               display: flex;
               justify-content: space-between;
               margin-bottom: 48px;
+              @media (max-width: 1199.98px) {
+                margin-bottom: 24px;
+              }
 
               .feature-card {
                 display: flex;
                 flex-direction: column;
                 width: 33.33%;
                 max-width: 347px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  max-width: 197px;
+                  position: relative;
+                }
 
                 .card-icon {
+                  @media (max-width: 1199.98px) {
+                    display: none;
+                  }
                   .vector-icon {
-                    max-width: 80px;
+                    max-width: 72px;
                     width: 100%;
                     height: auto;
                   }
@@ -736,12 +842,69 @@ body.spz-4001 {
 
                 .card-content {
                   position: relative;
+                  padding-left: 24px;
+                  padding-top: 30px;
+
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    padding-left: 0;
+                    padding-top: 18px;
+                  }
 
                   &::before {
                     content: url(//res.cloudinary.com/spiralyze/image/upload/v1694611010/eptura/4001/Tilted-border-feature.svg);
                     position: absolute;
-                    left: -16px;
-                    display: block;
+                    left: 0px;
+                    top: 6px;
+
+                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1694694030/eptura/4001/Tilted-border-feature-tablet.svg);
+                      top: 64px;
+                    }
+                  }
+
+                  .card-subtitle {
+                    margin: 0;
+                    @media (max-width: 1199.98px) {
+                      display: flex;
+                      align-items: center;
+                      margin-bottom: 14px;
+                    }
+
+                    .vector-icon {
+                      @media (min-width: 1199.98px) {
+                        display: none;
+                      }
+                      max-width: 40px;
+                      width: 100%;
+                      height: auto;
+                    }
+
+                    span {
+                      color: var(--primary-neutrals-n-1, #0d122e);
+                      font-size: 20px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 28px;
+                      margin-bottom: 12px;
+
+                      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                        padding-left: 8px;
+                        font-size: 18px;
+                        line-height: 22px;
+                        margin-bottom: 0;
+                      }
+                    }
+                  }
+
+                  .card-copy {
+                    color: var(--primary-neutrals-n-1, #0d122e);
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 24px;
+                    @media (max-width: 1199.98px) {
+                      padding-left: 16px;
+                    }
                   }
                 }
               }
@@ -749,6 +912,7 @@ body.spz-4001 {
           }
 
           .button-wrapper {
+            margin-top: 64px;
             .button {
               .get-started-cta {
                 height: 50px;
@@ -766,6 +930,7 @@ body.spz-4001 {
                 justify-content: center;
                 align-items: center;
                 margin: auto;
+                font-family: $eptura-font;
               }
             }
           }
@@ -781,7 +946,7 @@ body.spz-4001 {
 
         .testimonial-section .container {
           padding: 0 100px;
-          max-width: 1600px;
+          max-width: 1440px;
           margin: auto;
         }
 
@@ -886,6 +1051,7 @@ body.spz-4001 {
         .testimonial-item-inner p.quotes b {
           font-weight: 500;
           font-family: "Eptura Flexible", Arial, sans-serif;
+          letter-spacing: 0.1px;
         }
 
         .testimonial-item-inner .testimonial-info {
@@ -1360,9 +1526,64 @@ body.spz-4001 {
           display: flex;
           align-items: center;
           justify-content: space-between;
-          padding: 0 100px;
-          max-width: 1600px;
+          padding: 16px 100px;
+          max-width: 1440px;
           margin: auto;
+
+          @media (max-width: 1199.98px) {
+            padding: 24px 40px;
+          }
+
+          .links {
+            max-width: 436px;
+            width: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+
+            a {
+              color: var(--primary-neutrals-n-3, #f6fafa);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 20px;
+
+              &:hover {
+                text-decoration: none;
+                color: #d6d7f5;
+              }
+            }
+          }
+
+          .copyright-section {
+            p {
+              margin: 0;
+              color: var(--primary-neutrals-n-3, #f6fafa);
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 20px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //Page specific css
+  &.website-proxyclick-demo {
+    .body-wrapper {
+      #hero {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-2560-min.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-768-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
         }
       }
     }

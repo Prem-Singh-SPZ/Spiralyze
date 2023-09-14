@@ -1,0 +1,186 @@
+.how-works-section {
+  background: var(--neutral-200, #eef2f6);
+  padding: 62px 0 95px;
+  position: relative;
+  overflow: hidden;
+  .container {
+    padding: 0 24px;
+    //     &::before {
+    //       position: absolute;
+    //       content: "";
+    //       top: -168px;
+    //       left: -97px;
+    //       width: 546px;
+    //       height: 129px;
+    //       background: url("https://res.cloudinary.com/spiralyze/image/upload/v1681282189/drata/6001/how-work-ornament.svg");
+    //       background-size: contain;
+    //       background-repeat: no-repeat;
+    //     }
+  }
+  .work-steps {
+    margin-top: 63px;
+    .work-step-item {
+      width: 33.33%;
+      max-width: 405px;
+      border-radius: 12px;
+      background: var(--white-100, #fff);
+      padding: 32px;
+    }
+  }
+  .work-step-item {
+    .step-img {
+      width: 100%;
+      max-width: 320px;
+    }
+    .step-number {
+      font-family: $ff-inter;
+      font-style: normal;
+      font-weight: 800;
+      font-size: 16px;
+      line-height: 24px;
+      color: #0580e8;
+      margin: 28px 0 12px;
+      display: block;
+      width: 100%;
+    }
+    .step-title {
+      font-family: $ff-inter;
+      font-style: normal;
+      font-weight: 700;
+      font-size: 18px;
+      line-height: 26px;
+      color: #0c131a;
+      margin: 0;
+    }
+    .step-info {
+      font-family: $ff-inter;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 26px;
+      color: #485665;
+      margin: 12px 0 0;
+    }
+  }
+}
+
+@media (max-width: 1280px) {
+  .how-works-section {
+    padding: 28px 0 48px;
+    .container {
+      padding: 0 32px;
+      //   &::before {
+      //     display: none;
+      //   }
+    }
+
+    .work-steps {
+      margin-top: 39px;
+      .work-step-item {
+        width: 100%;
+        max-width: unset;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        margin-bottom: 32px;
+
+        &:nth-child(even) {
+          -webkit-box-orient: horizontal;
+          -webkit-box-direction: reverse;
+          -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
+        }
+      }
+    }
+    .work-step-item {
+      .step-title {
+        margin: 12px 0;
+      }
+      .step-img {
+        max-width: 282px;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+      .step-content {
+        width: calc(100% - 314px);
+      }
+      .step-number {
+        margin: 0 0 3px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .how-works-section {
+    padding: 20.5px 0 33px;
+    .container {
+      padding: 0 16px;
+      //   &::before {
+      //     display: block;
+      //     top: -117px;
+      //     left: 159px;
+      //     width: 273px;
+      //     height: 64.5px;
+      //   }
+    }
+    .sec-title {
+      font-size: 32px;
+      line-height: 40px;
+      letter-spacing: -0.64px;
+      margin-bottom: 20px;
+
+    }
+    .sec-sub_title {
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 24px;
+    }
+    .work-step-item {
+      .step-content {
+        width: 100%;
+        margin-top: 32px;
+      }
+      .step-number {
+        color: var(--primary-600, #0580E8);
+        font-size: 14px;
+        line-height: 20px;
+        margin: 0 auto 3px;
+      }
+      .step-img {
+        max-width: 288px;
+      }
+      .step-title {
+        font-size: 16px;
+        line-height: 24px;
+      }
+      .step-info {
+        font-size: 16px;
+        line-height: 24px;
+      }
+    }
+    .work-steps {
+      .work-step-item {
+        &:nth-child(even) {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+          -ms-flex-flow: inherit;
+          flex-flow: inherit;
+        }
+        padding: 20px;
+        margin-bottom: 32px;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+    }
+  }
+}
