@@ -204,7 +204,7 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
         alt="G2" title="G2" class="g2-logo">
         <h4 class="r-title">Excellent</h4>
-        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <p class="r-numbers">Based on <span>500+ reviews</span></p>
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
         </div>
@@ -251,7 +251,7 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
         alt="G2" title="G2" class="g2-logo">
         <h4 class="r-title">Excellent</h4>
-        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <p class="r-numbers">Based on <span>500+ reviews</span></p>
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
         </div>
@@ -298,7 +298,7 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
         alt="G2" title="G2" class="g2-logo">
         <h4 class="r-title">Excellent</h4>
-        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <p class="r-numbers">Based on <span>500+ reviews</span></p>
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
         </div>
@@ -345,7 +345,7 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1680678527/drata/6001/logo_-_g2.svg"
         alt="G2" title="G2" class="g2-logo">
         <h4 class="r-title">Excellent</h4>
-        <p class="r-numbers">Based on <span>461 reviews</span></p>
+        <p class="r-numbers">Based on <span>500+ reviews</span></p>
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1682075796/drata/4002/rating-50.svg"
         alt="Rating Stars" title="Rating Stars" class="avg-star-rating">
         </div>
