@@ -79,7 +79,7 @@
         featureLogo9: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Book_icon.png",
         featureAltTag9: "Questionnaires",
         featureCopy9: "Customize check-in questionnaires and guidelines. Approve, escalate, or deny visitors based on responses.",
-        sliderContent: `<div class="splide testimonial-wrapper" id="reviews-sec" aria-label="Splide Basic HTML Example">
+        sliderContent: `<div class="splide testimonial-wrapper" id="reviews-sec">
         <div class="splide__track">
             <ul class="splide__list">
                 <li class="testimonial-item splide__slide">
