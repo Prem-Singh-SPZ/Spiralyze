@@ -20,8 +20,6 @@
         document.body.classList.add('spz-1005');
 
         document.querySelector('.form-wrapper-spz').style.opacity = 1;
-        // document.querySelector('#__next > main').remove();
-        // document.querySelector('#__next > header').remove();
 
         appendInputLabel();
 
@@ -33,9 +31,6 @@
         // document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
 
         // Set button label
-        // document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
-        // document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
-        // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
           const err = setInterval(() => {
             checkError();
@@ -61,17 +56,6 @@
       }
     }, 100);
 
-    // Check if nearest parent .hs-form-field has style attribute with display: none (for ClearBit)
-    // function forClearBitForms() {
-    //   document.querySelectorAll('.hs-input').forEach(function (el) {
-    //     // console.log(el)
-    //     if (el.closest('.hs-form-field[style*="display: none"]')) {
-    //       el.closest('fieldset').classList.add('field-hidden');
-    //     } else {
-    //       el.closest('fieldset').classList.remove('field-hidden');
-    //     }
-    //   });
-    // }
     function forClearBitForms() {
       document.querySelectorAll('.form-wrapper-spz .hs-input').forEach(function (el) {
         if (el.closest('.hs-form-field[style*="display: none"]')) {
@@ -143,13 +127,13 @@
     });
   }
 
-//Passing test details to hidden fields
-function submitTestDetails() {
-  if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
-    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
-    document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Control');
+  //Passing test details to hidden fields
+  function submitTestDetails() {
+    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+      document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
+      document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Control');
+    }
   }
-}
 
   // Create input label with placeholder text
   function appendInputLabel() {
@@ -248,7 +232,7 @@ function submitTestDetails() {
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
-      if (document.querySelectorAll('.hero-section').length == 0) {
+      if (document.querySelectorAll('.hero-section-1005').length == 0) {
         loadTest();
       }
     } else {
@@ -276,8 +260,8 @@ function submitTestDetails() {
     if (document.body.classList.contains('spz-1005')) {
       document.body.classList.remove('spz-1005');
     }
-    if (document.querySelectorAll('.hero-section').length > 0) {
-      document.querySelector('.hero-section').remove();
+    if (document.querySelectorAll('.hero-section-1005').length > 0) {
+      document.querySelector('.hero-section-1005').remove();
     }
   }
 
@@ -309,7 +293,7 @@ function submitTestDetails() {
   }
 
   function pageContent() {
-    return `<section class="hero-section">
+    return `<section class="hero-section-1005">
     <div
       class="hero-content container dis-flex"
     >
