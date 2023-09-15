@@ -743,6 +743,7 @@ body.spz-4001 {
             padding-top: 4px;
             padding-top: 4px;
             max-width: 688px;
+            margin: auto;
           }
 
           .logos-img {
@@ -792,6 +793,8 @@ body.spz-4001 {
 
           @media (max-width: 1199.98px) {
             padding: 72px 40px;
+            max-width: 768px;
+            margin: auto;
           }
 
           .features-title {
@@ -814,7 +817,7 @@ body.spz-4001 {
             .feature3-itemsillustration {
               display: flex;
               justify-content: space-between;
-              margin-bottom: 48px;
+              flex-wrap: wrap;
               @media (max-width: 1199.98px) {
                 margin-bottom: 24px;
               }
@@ -824,9 +827,12 @@ body.spz-4001 {
                 flex-direction: column;
                 width: 33.33%;
                 max-width: 347px;
+                margin-bottom: 48px;
+
                 @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                  max-width: 197px;
+                  max-width: 205px;
                   position: relative;
+                  margin-bottom: 24px;
                 }
 
                 .card-icon {
@@ -856,18 +862,21 @@ body.spz-4001 {
                     left: 0px;
                     top: 6px;
 
-                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    @media (max-width: 1199.98px) {
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1694694030/eptura/4001/Tilted-border-feature-tablet.svg);
                       top: 64px;
+                      display: none;
                     }
                   }
 
                   .card-subtitle {
                     margin: 0;
+
                     @media (max-width: 1199.98px) {
                       display: flex;
                       align-items: center;
-                      margin-bottom: 14px;
+                      margin-bottom: 22px;
+                      padding: 0 12px;
                     }
 
                     .vector-icon {
@@ -877,6 +886,7 @@ body.spz-4001 {
                       max-width: 40px;
                       width: 100%;
                       height: auto;
+                      margin-right: 8px;
                     }
 
                     span {
@@ -888,7 +898,6 @@ body.spz-4001 {
                       margin-bottom: 12px;
 
                       @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                        padding-left: 8px;
                         font-size: 18px;
                         line-height: 22px;
                         margin-bottom: 0;
@@ -902,8 +911,17 @@ body.spz-4001 {
                     font-style: normal;
                     font-weight: 300;
                     line-height: 24px;
+                    position: relative;
+
                     @media (max-width: 1199.98px) {
-                      padding-left: 16px;
+                      // padding-left: 16px;
+                      &::before {
+                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1694774055/eptura/4001/feature-content-border-tablet.svg);
+                        position: absolute;
+                        left: 0px;
+                        top: -26px;
+                        width: 100%;
+                      }
                     }
                   }
                 }
@@ -912,7 +930,7 @@ body.spz-4001 {
           }
 
           .button-wrapper {
-            margin-top: 64px;
+            margin-top: 16px;
             .button {
               .get-started-cta {
                 height: 50px;
@@ -1540,6 +1558,10 @@ body.spz-4001 {
             display: flex;
             align-items: center;
             justify-content: space-between;
+
+            @media (max-width: 1199.98px) {
+              max-width: 356px;
+            }
 
             a {
               color: var(--primary-neutrals-n-3, #f6fafa);

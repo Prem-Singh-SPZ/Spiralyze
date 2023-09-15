@@ -708,6 +708,7 @@ body.spz-4001 .body-wrapper #testimonials .page_padding #TestimonialImg {
     padding-top: 4px;
     padding-top: 4px;
     max-width: 688px;
+    margin: auto;
   }
 }
 body.spz-4001 .body-wrapper #testimonials .page_padding #TestimonialImg .logos-img {
@@ -744,6 +745,8 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
 @media (max-width: 1199.98px) {
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon {
     padding: 72px 40px;
+    max-width: 768px;
+    margin: auto;
   }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .features-title {
@@ -769,7 +772,8 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  margin-bottom: 48px;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 @media (max-width: 1199.98px) {
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration {
@@ -786,11 +790,13 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
           flex-direction: column;
   width: 33.33%;
   max-width: 347px;
+  margin-bottom: 48px;
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card {
-    max-width: 197px;
+    max-width: 205px;
     position: relative;
+    margin-bottom: 24px;
   }
 }
 @media (max-width: 1199.98px) {
@@ -820,10 +826,11 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
   left: 0px;
   top: 6px;
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
+@media (max-width: 1199.98px) {
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content::before {
     content: url(//res.cloudinary.com/spiralyze/image/upload/v1694694030/eptura/4001/Tilted-border-feature-tablet.svg);
     top: 64px;
+    display: none;
   }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle {
@@ -837,13 +844,15 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    margin-bottom: 14px;
+    margin-bottom: 22px;
+    padding: 0 12px;
   }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle .vector-icon {
   max-width: 40px;
   width: 100%;
   height: auto;
+  margin-right: 8px;
 }
 @media (min-width: 1199.98px) {
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle .vector-icon {
@@ -860,7 +869,6 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle span {
-    padding-left: 8px;
     font-size: 18px;
     line-height: 22px;
     margin-bottom: 0;
@@ -872,14 +880,19 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
+  position: relative;
 }
 @media (max-width: 1199.98px) {
-  body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-copy {
-    padding-left: 16px;
+  body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-copy::before {
+    content: url(//res.cloudinary.com/spiralyze/image/upload/v1694774055/eptura/4001/feature-content-border-tablet.svg);
+    position: absolute;
+    left: 0px;
+    top: -26px;
+    width: 100%;
   }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .button-wrapper {
-  margin-top: 64px;
+  margin-top: 16px;
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .button-wrapper .button .get-started-cta {
   height: 50px;
@@ -1452,6 +1465,11 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-footer-section .simplifie
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 1199.98px) {
+  body.spz-4001 .body-wrapper .spz-rest-all-section .spz-footer-section .simplified-footer .links {
+    max-width: 356px;
+  }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-footer-section .simplified-footer .links a {
   color: var(--primary-neutrals-n-3, #f6fafa);
