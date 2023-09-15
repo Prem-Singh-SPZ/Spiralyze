@@ -336,6 +336,14 @@
                 e.target.classList.add('d-none');
                 this.document.querySelector('.spz-rest-all-section').classList.remove('hidden-secttion');
             }
+
+            if (e.target.classList.contains("get-started-cta")) {
+                scrollToElement('#HeroFormPanel', 50);
+                this.document.querySelector('#HeroFormPanel').classList.add('angry-shake');
+                setTimeout(() => {
+                    this.document.querySelector('#HeroFormPanel').classList.remove('angry-shake');
+                }, 1500);
+            }
         });
 
         document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
@@ -588,6 +596,7 @@
         });
     }
 
+    //Creating feature content
     function featureSec(page) {
         let thisPage = page;
         //search index by page name
@@ -609,6 +618,18 @@
         featureEl += '</div>';
 
         return featureEl;
+    }
+
+    // Function to Scroll to position using smooth scroll vanilla JS
+    // target: Element to scroll to
+    // offset: Offset from the top of the element
+    function scrollToElement(target, offset) {
+        const targetElm = document.querySelector(target);
+        const targetElmOffset = targetElm.getBoundingClientRect().top + window.scrollY - offset;
+        window.scrollTo({
+            top: targetElmOffset,
+            behavior: 'smooth'
+        });
     }
 })();
 
