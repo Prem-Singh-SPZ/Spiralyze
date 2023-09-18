@@ -116,11 +116,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1692103284/eptura/3006/logo_-_dimension_data.webp" alt="Dimension Data">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_dimension_data.webp" alt="Dimension Data">
                     </div>
                 </div>
                 <div class="testimonials-logo mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1692103284/eptura/3006/logo_-_dimension_data.webp" alt="Dimension Data">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_dimension_data.webp" alt="Dimension Data">
                 </div>
             </div>
         </li>
@@ -246,47 +246,47 @@
             listItem3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low.",
             features: [
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
                     featureAltTag: "Asset management",
                     featureCopy: "View the specs, availability, cost history, and maintenance schedules of all your assets in one place.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
                     featureAltTag: "Preventive maintenance",
                     featureCopy: "Auto-generate work orders when assets reach time, usage, or mileage intervals. Track maintenance schedules.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
                     featureAltTag: "Work orders",
                     featureCopy: "Approve, schedule, and close service requests. Auto-assign to technicians based on location and priority.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
                     featureAltTag: "Technician mobile app",
                     featureCopy: "Instantly request maintenance via mobile app. Provide technicians with schedules, locations, and task descriptions.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
                     featureAltTag: "Inspections",
                     featureCopy: "See a detailed list of all inspections including status and associated assets. Auto-trigger work orders when inspections fail.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
                     featureAltTag: "Inventory",
                     featureCopy: "Track inventory across locations. Automatically update inventory when parts are assigned to work orders.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/Invoices-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/Invoices-icon.png",
                     featureAltTag: "Invoices",
                     featureCopy: "Automatically generate invoices from completed work orders. Include parts, services, or other cost items.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605015/eptura/4001/Feature_Icons/Vendor-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605015/eptura/4001/Feature_Icons/Vendor-icon.png",
                     featureAltTag: "Vendor management",
                     featureCopy: "Store all suppliers’ information and lead times. Customize PAR levels. Complete purchases. All in one place.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605002/eptura/4001/Feature_Icons/Cost-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605002/eptura/4001/Feature_Icons/Cost-icon.png",
                     featureAltTag: "Cost forecasting",
                     featureCopy: "Track year-to-date and lifetime expenses. View cost comparisons. Create monthly budgets based on historical data.",
                 }
@@ -297,7 +297,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/AH.svg" alt="Alissa Hall">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/AH.svg" alt="Alissa Hall">
                         </div>
                         <div class="testimonial-details">
                             <h3>Alissa Hall</h3>
@@ -305,11 +305,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo kfc-logo">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-deer_valley_resort.webp" alt="Deer Valley">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo-deer_valley_resort.webp" alt="Deer Valley">
                     </div>
                 </div>
                 <div class="testimonials-logo mobile-sec kfc-logo">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-deer_valley_resort.webp" alt="Deer Valley">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo-deer_valley_resort.webp" alt="Deer Valley">
                 </div>
             </div>
         </li>
@@ -319,19 +319,19 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/TH.svg" alt="Tim Haley">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/TH.svg" alt="Tim Haley">
                         </div>
                         <div class="testimonial-details">
                             <h3>Tim Haley</h3>
                             <p>Project Analyst</p>
                         </div>
                     </div>
-                    <div class="testimonials-logo kfc-logo">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-gas_field_specialists.webp" alt="Gas Field Specialists">
+                    <div class="testimonials-logo gas-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo-gas_field_specialists.webp" alt="Gas Field Specialists">
                     </div>
                 </div>
-                <div class="testimonials-logo kfc-logo mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-gas_field_specialists.webp" alt="Gas Field Specialists">
+                <div class="testimonials-logo gas-logo mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo-gas_field_specialists.webp" alt="Gas Field Specialists">
                 </div>
             </div>
         </li>
@@ -341,7 +341,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/PB.svg" alt="Paul Beauchamp">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/PB.svg" alt="Paul Beauchamp">
                         </div>
                         <div class="testimonial-details">
                             <h3>Paul Beauchamp</h3>
@@ -349,11 +349,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_salvation.webp" alt="Salvation">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_salvation.webp" alt="Salvation">
                     </div>
                 </div>
                 <div class="testimonials-logo mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_salvation.webp" alt="Salvation">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_salvation.webp" alt="Salvation">
                 </div>
             </div>
         </li>
@@ -363,7 +363,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/MS.svg" alt="Matt Steigmeier">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/MS.svg" alt="Matt Steigmeier">
                         </div>
                         <div class="testimonial-details">
                             <h3>Matt Steigmeier</h3>
@@ -371,18 +371,18 @@
                         </div>
                     </div>
                     <div class="testimonials-logo dnv-logo">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_dnv.webp" alt="Dnv">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_dnv.webp" alt="Dnv">
                     </div>
                 </div>
                 <div class="testimonials-logo dnv-logo mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_dnv.webp" alt="Dnv">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_dnv.webp" alt="Dnv">
                 </div>
             </div>
         </li>`
         },
         {
             pageName: "website-archibus-demo",
-            pageLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1693582380/eptura/4001/archibus-eptura-logo-color_1.svg",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693582380/eptura/4001/archibus-eptura-logo-color_1.svg",
             logoAlt: "Archibus Demo",
             subTitle: "Next-gen Space and Facility MANAGEMENT SOFTWARE",
             rightTitle: "Reduce costs by 30% by automating space and facility management.",
@@ -391,47 +391,47 @@
             listItem3: "<span>Scheduling.</span> Reserve desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting.",
             features: [
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605014/eptura/4001/Feature_Icons/Space_planning-icon-1.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605014/eptura/4001/Feature_Icons/Space_planning-icon-1.png",
                     featureAltTag: "Space planning",
                     featureCopy: "Drag-and-drop floor plans to sort desks, rooms, and amenities. Plan moves. Track real estate. Identify occupancy patterns.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
                     featureAltTag: "Work order management",
                     featureCopy: "Let managers approve, schedule, and close service requests. Communicate with technicians via mobile app. Send feedback.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
                     featureAltTag: "Preventive maintenance",
                     featureCopy: "Automatically send work orders at set intervals or usage thresholds. See upcoming asset service and inspection dates.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
                     featureAltTag: "Service requests",
                     featureCopy: "Instantly request maintenance via the mobile app. Easily provide technicians with schedules, locations, and task descriptions.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
                     featureAltTag: "Reservations",
                     featureCopy: "Schedule desks, meeting rooms, and parking. Auto-book rooms with the right equipment. All via the app.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605000/eptura/4001/Feature_Icons/collaboration-icon-1.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605000/eptura/4001/Feature_Icons/collaboration-icon-1.png",
                     featureAltTag: "Hybrid collaboration",
                     featureCopy: "Set your in-office schedule and status, see where your team is working, and schedule time with co-workers.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
                     featureAltTag: "Asset inventory",
                     featureCopy: "Get a complete view of all your asset specs, maintenance status, lifecycle history, and availability in one place.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
                     featureAltTag: "Budgeting",
                     featureCopy: "Get analytics on asset costs and performance of operations. Create monthly budgets based on historical data.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_icon-1.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_icon-1.png",
                     featureAltTag: "Compliance",
                     featureCopy: "Automatically schedule inspections and generate checklists. Maintain OSHA and CCOHS compliance.",
                 }
@@ -527,7 +527,7 @@
         },
         {
             pageName: "website-spaceiq-demo",
-            pageLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1693585113/eptura/4001/spaceiq-eptura-logo-color_1.svg",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693585113/eptura/4001/spaceiq-eptura-logo-color_1.svg",
             logoAlt: "SpaceIQ Demo",
             subTitle: "Workplace operations SOFTWARE",
             rightTitle: "Automate space planning and management. Reduce costs by 30%.",
@@ -536,47 +536,47 @@
             listItem3: "<span>Real estate portfolio.</span> Track your real estate for all your locations. Lease costs, utilization rates, and occupancies.",
             features: [
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605011/eptura/4001/Feature_Icons/plans-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605011/eptura/4001/Feature_Icons/plans-icon.png",
                     featureAltTag: "Digital floor plans",
-                    featureCopy: "Digitally replicate your facilities. Drag-and-drop desks, tables, equipment, mechanical structures, and interior/exterior features.",
+                    featureCopy: "Digitally replicate your facilities. Drag-and-drop desks, tables, equipment, mechanical structures, and interior/<br>exterior features.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Move-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Move-icon.png",
                     featureAltTag: "Move planning",
                     featureCopy: "Track and plan for new staff, relocations, and equipment across your space. View reports on the status of individual or group moves.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605012/eptura/4001/Feature_Icons/requests-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605012/eptura/4001/Feature_Icons/requests-icon.png",
                     featureAltTag: "Service and move requests",
                     featureCopy: "Make and track maintenance and personal moves. Let employees include descriptions, photos, and location details.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605011/eptura/4001/Feature_Icons/portfoli-_icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605011/eptura/4001/Feature_Icons/portfoli-_icon.png",
                     featureAltTag: "Real estate portfolio",
                     featureCopy: "Track and evaluate your company&#8217;s real estate for all your locations. Compare lease costs, utilization rates, and capacity. ",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604999/eptura/4001/Feature_Icons/Calendar_icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604999/eptura/4001/Feature_Icons/Calendar_icon.png",
                     featureAltTag: "Scheduling",
                     featureCopy: "Reserve desks, meeting rooms, and parking. Auto-book rooms with the right equipment. Notify attendees of any meeting changes.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605000/eptura/4001/Feature_Icons/collaboration-icon-1.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605000/eptura/4001/Feature_Icons/collaboration-icon-1.png",
                     featureAltTag: "Hybrid collaboration",
                     featureCopy: "Set your in-office schedule and status, see an overview of where your team is working, and schedule time with co-workers.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605009/eptura/4001/Feature_Icons/Navigation-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605009/eptura/4001/Feature_Icons/Navigation-icon.png",
                     featureAltTag: "Navigation",
                     featureCopy: "Help employees and visitors find the right room with digital floor plans and kiosks. Show technicians exact work order location.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/IoT_sensors-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/IoT_sensors-icon.png",
                     featureAltTag: "IoT sensors",
                     featureCopy: "See which spaces are actively utilized and available. Identify underutilized or congested space and optimize it for better use.",
                 },
                 {
-                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
                     featureAltTag: "Cleaning & safety",
                     featureCopy: "Automatically inform your cleaning crew when a space needs to be sanitized. Notify employees when their desk is clean.",
                 }
@@ -587,7 +587,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/nadia_wong.webp" alt="Nadia Wong">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/nadia_wong.webp" alt="Nadia Wong">
                         </div>
                         <div class="testimonial-details">
                             <h3>Nadia Wong</h3>
@@ -595,11 +595,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo hamilton-sec">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_hamilton_county_1.webp" alt="Hamilton County">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county_1.webp" alt="Hamilton County">
                     </div>
                 </div>
                 <div class="testimonials-logo hamilton-sec mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_hamilton_county_1.webp" alt="Hamilton County">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county_1.webp" alt="Hamilton County">
                 </div>
             </div>
         </li>
@@ -609,7 +609,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/chase_palmer.webp" alt="Chase Palmer">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/chase_palmer.webp" alt="Chase Palmer">
                         </div>
                         <div class="testimonial-details">
                             <h3>Chase Palmer</h3>
@@ -617,11 +617,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo john-sec">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_york_st_john_university_1.webp" alt="York St John University">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_york_st_john_university_1.webp" alt="York St John University">
                     </div>
                 </div>
                 <div class="testimonials-logo john-sec mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_york_st_john_university_1.webp" alt="York St John University">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_york_st_john_university_1.webp" alt="York St John University">
                 </div>
             </div>
         </li>
@@ -631,7 +631,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/jay_momet.webp" alt="Jay Momet">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/jay_momet.webp" alt="Jay Momet">
                         </div>
                         <div class="testimonial-details">
                             <h3>Jay Momet</h3>
@@ -639,11 +639,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo hamilton-sec">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_duke_1.webp" alt="Duke">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Duke">
                     </div>
                 </div>
                 <div class="testimonials-logo hamilton-sec mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_duke_1.webp" alt="Duke">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Duke">
                 </div>
             </div>
         </li>
@@ -653,7 +653,7 @@
                 <div class="testimonial-info">
                     <div class="testimonials-item">
                         <div class="img-wrapper">
-                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/benjamin_lane.webp" alt="Benjamin Lane">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/benjamin_lane.webp" alt="Benjamin Lane">
                         </div>
                         <div class="testimonial-details">
                             <h3>Benjamin Lane</h3>
@@ -661,26 +661,203 @@
                         </div>
                     </div>
                     <div class="testimonials-logo board-sec">
-                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
                     </div>
                 </div>
                 <div class="testimonials-logo board-sec mobile-sec">
-                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
                 </div>
             </div>
         </li>`
         },
         {
             pageName: "website-ioffice-demo",
-            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575766/eptura/4003/ioffice-eptura-logo-color_1.svg",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693586162/eptura/4001/ioffice-eptura-logo-color_1.svg",
             logoAlt: "IOffice Demo",
-            rightTitle: "Plan, optimize, and manage your entire facility <span>in 87%</span> less time.",
-            rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_31.webp",
-            rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_31.png",
-            heroImgAlt: "IOffice UI Image",
+            subTitle: "Facility MANAGEMENT SOFTWARE",
+            rightTitle: "Plan, optimize, and manage your entire facility in 87% less time.",
             listItem1: "<span>Space planning.</span> Get a digital floor plan of your facilities. Drag-and-drop teams, desks, assets, amenities, and more.",
             listItem2: "<span>Assets.</span> Track asset costs, service requests, and repair history. Auto-create preventive maintenance work orders. ",
-            listItem3: "<span>Employee services.</span> Book meeting rooms and desks. Notify hosts of visitors. Request catering. Reduce turnover 59%."
+            listItem3: "<span>Employee services.</span> Book meeting rooms and desks. Notify hosts of visitors. Request catering. Reduce turnover by 59%.",
+            features: [
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605014/eptura/4001/Feature_Icons/Space_planning-icon.png",
+                    featureAltTag: "Space planning",
+                    featureCopy: "Drag-and-drop floor plans to sort desks, rooms, and amenities. Instantly share digital floor plans with employees.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Move-icon.png",
+                    featureAltTag: "Move management",
+                    featureCopy: "Plan moves for individuals, teams, or offices. View calendars. Create and track move tickets, labels, and more.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
+                    featureAltTag: "Asset management",
+                    featureCopy: "Track and manage all assets. Service history, maintenance, budgeting, and status. View warranty information.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
+                    featureAltTag: "Work orders",
+                    featureCopy: "Auto-send work orders when assets reach performance thresholds. Let managers approve, schedule, and close requests.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
+                    featureAltTag: "Workspace booking",
+                    featureCopy: "Reserve desks, meeting rooms, and parking. Auto-book rooms with the right equipment. Notify attendees of any meeting changes.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605009/eptura/4001/Feature_Icons/Navigation-icon.png",
+                    featureAltTag: "Navigation",
+                    featureCopy: "Help employees and visitors find the right room with digital floor plans and kiosks. Show technicians exact work order location.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/Hand_icon.png",
+                    featureAltTag: "Visitor management",
+                    featureCopy: "Auto-send invites with the meeting details. Let visitors check-in and submit documents electronically. Maintain visitor logs.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605010/eptura/4001/Feature_Icons/Office_services-icon.png",
+                    featureAltTag: "Office services",
+                    featureCopy: "Let employees receive mail and get notified of new packages. Request catering. Instantly submit print and copy jobs.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605002/eptura/4001/Feature_Icons/Cost-icon.png",
+                    featureAltTag: "Analytics",
+                    featureCopy: "Get analytics on space utilization, service requests, assets, inventory, visitors, and more. Optimize facilities.",
+                }
+            ],
+            slider: `<li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">For Sephora, the greatest benefits of working with iOFFICE are <b>creating organized and clear floor maps,</b> ease of moves, and increased productivity of the FM team.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/edgar_sanchez.webp" alt="Edgar Sanchez">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Edgar Sanchez</h3>
+                            <p>Director of Country Facilities </p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo kfc-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Hamilton County">
+                    </div>
+                </div>
+                <div class="testimonials-logo mobile-sec kfc-logo">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Hamilton County">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">iOFFICE enabled the Under Armour facilities and operations team to <b>improve how they respond to the changing needs</b> of their workforce now and into the future.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/brendan_robinson.webp" alt="Brendan Robinson">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Brendan Robinson</h3>
+                            <p>Director of Facilities and Operations</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo kfc-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_york_st_john_university.webp" alt="John University">
+                    </div>
+                </div>
+                <div class="testimonials-logo kfc-logo mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_york_st_john_university.webp" alt="John University">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">HR can use this for headcount planning, Risk Management can better look at our assets, and we can send work orders to our 3rd party service providers. <b>iOFFICE has allowed us to be more efficient</b> and collaborate across the board.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/sarah_baldi.webp" alt="Sarah Baldi">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Sarah Baldi</h3>
+                            <p>VP of Global Workplace</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo kfc-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke.webp" alt="Duke">
+                    </div>
+                </div>
+                <div class="testimonials-logo kfc-logo mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke.webp" alt="Duke">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Within 24 hours, we knew where everyone was and should be, even our remote and outsourced workers. Thanks to iOFFICE's integration with WORKDAY, we have <b>real-time location and occupancy intelligence.</b></p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/jeff_mackay.webp" alt="Jeff MacKay">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Jeff MacKay</h3>
+                            <p>Senior Director of Global Operations</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo dnv-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education.webp" alt="Calgary Board of Education">
+                    </div>
+                </div>
+                <div class="testimonials-logo dnv-logo mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education.webp" alt="Calgary Board of Education">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">This is no longer an exercise in complexity. I don&#8217;t have to actively corral the process manually to get results. <b>iOFFICE is really on the cutting edge; it just makes sense.</b></p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/luis_prado.webp" alt="Luis Prado">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Luis Prado</h3>
+                            <p>Facilities Manager</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo dnv-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="Calgary Board of Education">
+                    </div>
+                </div>
+                <div class="testimonials-logo dnv-logo mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="Calgary Board of Education">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Out of all the IWMS products on the planet, my team chose iOFFICE not only for ourselves but also for our customers. That's how much faith we have in this solution. <b>iOFFICE is without a doubt our biggest asset.</b></p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/johan_nilsson.webp" alt="Johan Nilsson">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Johan Nilsson</h3>
+                            <p>Head of Deployment and Planning</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo kfc-logo">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_2.webp" alt="Calgary Board of Education">
+                    </div>
+                </div>
+                <div class="testimonials-logo kfc-logo mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_2.webp" alt="Calgary Board of Education">
+                </div>
+            </div>
+        </li>`
         }
     ];
 
@@ -708,7 +885,7 @@
         focusFields();
 
         waitForElm('.spz-rest-all-section .spz-testimonial-slider .splide.testimonial-wrapper.is-initialized').then(function () {
-            // document.querySelector('.spz-rest-all-section').classList.add('hidden-secttion');
+            document.querySelector('.spz-rest-all-section').classList.add('hidden-secttion');
         });
 
         // Add class 'safari' (used for cart scrollbar)
@@ -747,7 +924,7 @@
             }
         });
 
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
         );
     }
 
@@ -912,7 +1089,7 @@
                     document.querySelector('#hero > .hero_container > .row ').insertAdjacentHTML('beforebegin', `<div class="spz-logo"><a href="https://eptura.com/" target="_blank"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></a></div>`);
 
                     //Hero Left content copy update
-                    document.querySelector('#hero #HeroText').innerHTML = `<h6>` + url.subTitle + `</h6><h1>` + url.rightTitle + `</h1><div class="spz-review-summary"><div class="capterra-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_capterra_sign.svg" alt="Capterra" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989402/eptura/3009/stars_1.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.4</span> (973 reviews)</div></div><div class="g2-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_g2_logo.svg" alt="G2 Logo" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/stars.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.3</span> (745 reviews)</div></div></div><ul class="hero-list-copy"><li class="list-item">` + url.listItem1 + `</li><li class="list-item">` + url.listItem2 + `</li><li class="list-item">` + url.listItem3 + `</li></ul>`;
+                    document.querySelector('#hero #HeroText').innerHTML = `<h6>` + url.subTitle + `</h6><h1>` + url.rightTitle + `</h1><div class="spz-review-summary"><div class="capterra-review-summary"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_capterra_sign.svg" alt="Capterra" class="capterra-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690989402/eptura/3009/stars_1.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.4</span> (973 reviews)</div></div><div class="g2-review-summary"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_g2_logo.svg" alt="G2 Logo" class="capterra-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/stars.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.3</span> (745 reviews)</div></div></div><ul class="hero-list-copy"><li class="list-item">` + url.listItem1 + `</li><li class="list-item">` + url.listItem2 + `</li><li class="list-item">` + url.listItem3 + `</li></ul>`;
 
                     //Testimonials section update
                     document.querySelector('#testimonials #TestimonialImg').innerHTML = `<div class="logos-img"><picture>

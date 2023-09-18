@@ -338,7 +338,7 @@ body.spz-4001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
     max-width: 360px;
     padding: 32px 20px 32px 20px;
     margin: auto;
-    border-radius: 8px 8px 0px 0px;
+    border-radius: 20px 20px 0px 0px;
   }
 }
 body.spz-4001 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
@@ -762,7 +762,7 @@ body.spz-4001 .body-wrapper #testimonials .page_padding .load-more .load-more-bt
   padding-bottom: 3px;
 }
 body.spz-4001 .body-wrapper #testimonials .page_padding .load-more .load-more-btn:hover {
-  opacity: 0.8;
+  text-decoration: underline;
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section.hidden-secttion {
   height: 0;
@@ -905,6 +905,12 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .feature
             align-items: center;
     margin-bottom: 22px;
     padding: 0 12px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle {
+    margin-bottom: 18px;
+    height: 44px;
   }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle .vector-icon {
@@ -1190,10 +1196,13 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .splid
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonials-logo.kfc-logo img {
   max-width: 48px;
 }
+body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonials-logo.gas-logo img {
+  max-width: 63px;
+}
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonials-logo.kfc-logo,
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonials-logo.dnv-logo,
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonials-logo.green-logo {
-  padding-left: 16px;
+  padding-left: 12px;
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonials-logo.dnv-logo img {
   max-width: 56.53px;
@@ -1471,8 +1480,6 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .ppc-e
     bottom: -46px;
   }
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonial-section {
-    -webkit-box-shadow: inset 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
-            box-shadow: inset 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
     padding: 48px 0px 94px;
   }
   body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .ppc-eptura-asset-management .testimonial-wrapper {
@@ -1734,11 +1741,6 @@ body.spz-4001.website-managerplus-demo .body-wrapper #hero .hero_container .spz-
     height: 28px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4001.website-managerplus-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-wrapper {
-    margin-top: 24px;
-  }
-}
 body.spz-4001.website-managerplus-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .right-box:before {
   height: 300px;
 }
@@ -1750,10 +1752,9 @@ body.spz-4001.website-managerplus-demo .spz-rest-all-section .spz-testimonial-sl
     padding-right: 6px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4001.website-managerplus-demo .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle {
-    margin-bottom: 18px;
-    height: 44px;
+@media (min-width: 1199.98px) {
+  body.spz-4001.website-managerplus-demo .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content {
+    padding-right: 1px;
   }
 }
 body.spz-4001.website-archibus-demo .body-wrapper #hero {
@@ -1782,6 +1783,12 @@ body.spz-4001.website-archibus-demo .body-wrapper #hero {
   body.spz-4001.website-archibus-demo .body-wrapper #hero .hero_container .spz-logo a img {
     max-width: 66px;
   }
+}
+body.spz-4001.website-archibus-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .right-box:before {
+  height: 300px;
+}
+body.spz-4001.website-archibus-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .testimonial-item {
+  min-height: 300px;
 }
 body.spz-4001.website-spaceiq-demo .body-wrapper #hero {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1694594419/eptura/4001/BG_Images/BG-IMG-SpaceIQ-2560-min.jpg);
@@ -1834,9 +1841,46 @@ body.spz-4001.website-spaceiq-demo .spz-rest-all-section .spz-testimonial-slider
     padding-right: 6px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4001.website-spaceiq-demo .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-subtitle {
-    margin-bottom: 18px;
-    height: 44px;
+@media (min-width: 767.98px) {
+  body.spz-4001.website-spaceiq-demo .spz-rest-all-section .spz-features-section .features-3-col-icon .feature3-itemsillustration-parent .feature3-itemsillustration .feature-card .card-content .card-copy br {
+    display: none;
   }
+}
+body.spz-4001.website-ioffice-demo .body-wrapper #hero {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-IOffice-2560-min.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body.spz-4001.website-ioffice-demo .body-wrapper #hero {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-IOffice-768-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-4001.website-ioffice-demo .body-wrapper #hero {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-IOffice-360-min.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-4001.website-ioffice-demo .body-wrapper #hero .hero_container .spz-logo a img {
+    max-width: 45.474px;
+  }
+}
+@media (min-width: 767.98px) {
+  body.spz-4001.website-ioffice-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .testimonial-item-inner {
+    padding-left: 49px;
+  }
+}
+body.spz-4001.website-ioffice-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .right-box:before {
+  height: 280px;
+}
+body.spz-4001.website-ioffice-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .testimonial-item {
+  min-height: 280px;
 }
