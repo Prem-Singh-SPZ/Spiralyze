@@ -628,7 +628,7 @@ body.spz-4001 {
                         display: flex;
                         width: 140px !important;
                         height: 50px !important;
-                        padding: 0px 8px !important;
+                        padding: 0px !important;
                         justify-content: center;
                         align-items: center;
                         border-radius: 3px !important;
@@ -645,6 +645,7 @@ body.spz-4001 {
                         line-height: 24px !important; /* 150% */
                         margin-top: 22px !important;
                         white-space: nowrap;
+                        all: initial;
 
                         &:hover,
                         &:focus {
@@ -1005,9 +1006,17 @@ body.spz-4001 {
                 align-items: center;
                 margin: auto;
                 font-family: $eptura-font;
+                transition: all 0.1s ease-in-out !important;
 
                 @media (max-width: 767.98px) {
                   width: 100%;
+                }
+                &:hover {
+                  background: #456ed6;
+                }
+                &:focus {
+                  background: #456ed6;
+                  transform: translate(0, 1px);
                 }
               }
             }
