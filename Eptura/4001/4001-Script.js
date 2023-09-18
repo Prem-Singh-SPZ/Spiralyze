@@ -50,6 +50,8 @@
             pageName: "website-proxyclick-demo",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693576037/eptura/4001/proxyclick_logo.svg",
             logoAlt: "Proxyclick Demo",
+            subTitle: "VISiTOR MANAGEMENT SOFTWARE",
+            rightTitle: "Make the visitor check-in experience 50% faster while improving security.",
             listItem1: "<span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
             listItem2: "<span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
             listItem3: "<span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications.",
@@ -235,39 +237,438 @@
         },
         {
             pageName: "website-managerplus-demo",
-            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575720/eptura/4003/managerplus-eptura-logo-1.svg",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693581180/eptura/4001/managerplus-eptura-logo-1.svg",
             logoAlt: "Managerplus Demo",
-            rightTitle: "Reduce asset downtime <span>by&nbsp;</span><span> 50%.</span> Streamline inventory and maintenance.",
-            rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.webp",
-            rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.png",
-            heroImgAlt: "Managerplus UI Image",
-            listItem1: "<span>Asset management.</span> Track and manage all assets. Service history, maintenance, budgeting, and more.",
+            subTitle: "All-in-one Asset MANAGEMENT SOFTWARE",
+            rightTitle: "Reduce asset downtime by 50%. Streamline inventory and maintenance.",
+            listItem1: "<span>Asset management.</span> Track and manage all assets.<br> Service history, maintenance, budgeting, and more.",
             listItem2: "<span>Maintenance workflows.</span> Automatically trigger work orders at set intervals or when a usage threshold is met.",
-            listItem3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low."
+            listItem3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low.",
+            features: [
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
+                    featureAltTag: "Asset management",
+                    featureCopy: "View the specs, availability, cost history, and maintenance schedules of all your assets in one place.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
+                    featureAltTag: "Preventive maintenance",
+                    featureCopy: "Auto-generate work orders when assets reach time, usage, or mileage intervals. Track maintenance schedules.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
+                    featureAltTag: "Work orders",
+                    featureCopy: "Approve, schedule, and close service requests. Auto-assign to technicians based on location and priority.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
+                    featureAltTag: "Technician mobile app",
+                    featureCopy: "Instantly request maintenance via mobile app. Provide technicians with schedules, locations, and task descriptions.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
+                    featureAltTag: "Inspections",
+                    featureCopy: "See a detailed list of all inspections including status and associated assets. Auto-trigger work orders when inspections fail.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
+                    featureAltTag: "Inventory",
+                    featureCopy: "Track inventory across locations. Automatically update inventory when parts are assigned to work orders.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/Invoices-icon.png",
+                    featureAltTag: "Invoices",
+                    featureCopy: "Automatically generate invoices from completed work orders. Include parts, services, or other cost items.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605015/eptura/4001/Feature_Icons/Vendor-icon.png",
+                    featureAltTag: "Vendor management",
+                    featureCopy: "Store all suppliers’ information and lead times. Customize PAR levels. Complete purchases. All in one place.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605002/eptura/4001/Feature_Icons/Cost-icon.png",
+                    featureAltTag: "Cost forecasting",
+                    featureCopy: "Track year-to-date and lifetime expenses. View cost comparisons. Create monthly budgets based on historical data.",
+                }
+            ],
+            slider: `<li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Before using ManagerPlus, we weren&#8217;t able to keep a solid track of who was where, and who did what. But now we have a <b>better understanding of our labor</b> and the time being spent on maintenance.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/AH.svg" alt="Alissa Hall">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Alissa Hall</h3>
+                            <p>Maintenance Administrative</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo kfc-logo">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-deer_valley_resort.webp" alt="Deer Valley">
+                    </div>
+                </div>
+                <div class="testimonials-logo mobile-sec kfc-logo">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-deer_valley_resort.webp" alt="Deer Valley">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">We have 6,700 schedules in there, and it just purrs. It runs really, really well. <b>It&#8217;s the life force of our entire maintenance company here.</b></p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/TH.svg" alt="Tim Haley">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Tim Haley</h3>
+                            <p>Project Analyst</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo kfc-logo">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-gas_field_specialists.webp" alt="Gas Field Specialists">
+                    </div>
+                </div>
+                <div class="testimonials-logo kfc-logo mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo-gas_field_specialists.webp" alt="Gas Field Specialists">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">For us, the main purpose of ManagerPlus is about <b>being able to determine what we own and where it is.</b> We need to be able to pull work history on trucks and say, &#8217;this truck was used for this many hours and it cost us this.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/PB.svg" alt="Paul Beauchamp">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Paul Beauchamp</h3>
+                            <p>Regional Maintenance Manager</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_salvation.webp" alt="Salvation">
+                    </div>
+                </div>
+                <div class="testimonials-logo mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_salvation.webp" alt="Salvation">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Now <b>I'm not seeing downtime due to preventive maintenance.</b> I can tell a job supervisor in advance when a piece of equipment will need service. If I have any equipment that comes in for an unforeseen issue, we can check to see when the next scheduled service is.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1695015410/eptura/4001/slider_icons/MS.svg" alt="Matt Steigmeier">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Matt Steigmeier</h3>
+                            <p>Shop/Fleet Manager</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo dnv-logo">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_dnv.webp" alt="Dnv">
+                    </div>
+                </div>
+                <div class="testimonials-logo dnv-logo mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188668/eptura/4001/logo_-_dnv.webp" alt="Dnv">
+                </div>
+            </div>
+        </li>`
         },
         {
             pageName: "website-archibus-demo",
-            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575732/eptura/4003/archibus-eptura-logo-color_1.svg",
+            pageLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1693582380/eptura/4001/archibus-eptura-logo-color_1.svg",
             logoAlt: "Archibus Demo",
-            rightTitle: "Reduce costs <span>by 30%</span> by automating space and facility management.",
-            rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_23.webp",
-            rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_23.png",
-            heroImgAlt: "Archibus UI Image",
+            subTitle: "Next-gen Space and Facility MANAGEMENT SOFTWARE",
+            rightTitle: "Reduce costs by 30% by automating space and facility management.",
             listItem1: "<span>Space planning.</span> Sort office desks, tables, and rooms. Plan for moves and occupancy changes.",
             listItem2: "<span>Work orders.</span> Automatically generate detailed work orders when assets are due for maintenance. See repair status.",
-            listItem3: "<span>Scheduling.</span> Reserve desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting."
+            listItem3: "<span>Scheduling.</span> Reserve desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting.",
+            features: [
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605014/eptura/4001/Feature_Icons/Space_planning-icon-1.png",
+                    featureAltTag: "Space planning",
+                    featureCopy: "Drag-and-drop floor plans to sort desks, rooms, and amenities. Plan moves. Track real estate. Identify occupancy patterns.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
+                    featureAltTag: "Work order management",
+                    featureCopy: "Let managers approve, schedule, and close service requests. Communicate with technicians via mobile app. Send feedback.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
+                    featureAltTag: "Preventive maintenance",
+                    featureCopy: "Automatically send work orders at set intervals or usage thresholds. See upcoming asset service and inspection dates.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
+                    featureAltTag: "Service requests",
+                    featureCopy: "Instantly request maintenance via the mobile app. Easily provide technicians with schedules, locations, and task descriptions.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
+                    featureAltTag: "Reservations",
+                    featureCopy: "Schedule desks, meeting rooms, and parking. Auto-book rooms with the right equipment. All via the app.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605000/eptura/4001/Feature_Icons/collaboration-icon-1.png",
+                    featureAltTag: "Hybrid collaboration",
+                    featureCopy: "Set your in-office schedule and status, see where your team is working, and schedule time with co-workers.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
+                    featureAltTag: "Asset inventory",
+                    featureCopy: "Get a complete view of all your asset specs, maintenance status, lifecycle history, and availability in one place.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
+                    featureAltTag: "Budgeting",
+                    featureCopy: "Get analytics on asset costs and performance of operations. Create monthly budgets based on historical data.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/Book_icon-1.png",
+                    featureAltTag: "Compliance",
+                    featureCopy: "Automatically schedule inspections and generate checklists. Maintain OSHA and CCOHS compliance.",
+                }
+            ],
+            slider: `<li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Archibus is <b>saving money</b> for us <b>in many ways,</b> by more accurately <b>tracking our <br>assets</b> as well as their condition and costs, <b>identifying surplus space,</b> improving <b>management of our fleet of vehicles,</b> and aiding safety and business continuity.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/photo_-_ralph_linne.webp" alt="Ralph Linne">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Ralph Linne</h3>
+                            <p>Director of Country Facilities</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo hamilton-sec">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_hamilton_county.webp" alt="Hamilton County">
+                    </div>
+                </div>
+                <div class="testimonials-logo hamilton-sec mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_hamilton_county.webp" alt="Hamilton County">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Archibus is <b>one of the more interactive systems I have used,</b> and I&#8217;ve used some really robust systems. If someone were coming into my job, <b>I&#8217;d be confident in showing them how to use Archibus.</b> It&#8217;s a <br>nice one to navigate.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/photo_-_charlotte_amess.webp" alt="Charlotte Amess">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Charlotte Amess</h3>
+                            <p>System Developer and Space Coordinator</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo john-sec">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_york_st_john_university.webp" alt="York St John University">
+                    </div>
+                </div>
+                <div class="testimonials-logo john-sec mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_york_st_john_university.webp" alt="York St John University">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">The biggest win for us is that <b>everyone is working with the same numbers.</b> Before, when we had multiple systems, we had multiple sets of numbers, which could sometimes cause trouble.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/photo_-_julia_trimmer.webp" alt="Julia Trimmer">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Julia Trimmer</h3>
+                            <p>Senior IT Analyst</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo hamilton-sec">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_duke.webp" alt="Duke">
+                    </div>
+                </div>
+                <div class="testimonials-logo hamilton-sec mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_duke.webp" alt="Duke">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">We once had a very paper-driven work order process where a <b>work request could take up to three and a half weeks</b> from the initial request to getting that work order into a tradesperson&#8217;s hands. <b>Now it takes three days.</b></p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/photo_-_murray_hunt.webp" alt="Murray Hunt">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Murray Hunt</h3>
+                            <p>Manager of Integrated Workplace Management Systems</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo board-sec">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_calgary_board_of_education.webp" alt="Calgary Board Of Education">
+                    </div>
+                </div>
+                <div class="testimonials-logo board-sec mobile-sec">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_calgary_board_of_education.webp" alt="Calgary Board Of Education">
+                </div>
+            </div>
+        </li>`
         },
         {
             pageName: "website-spaceiq-demo",
-            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575752/eptura/4003/spaceiq-eptura-logo-color_1.svg",
+            pageLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1693585113/eptura/4001/spaceiq-eptura-logo-color_1.svg",
             logoAlt: "SpaceIQ Demo",
-            rightTitle: "Automate space planning and management. Reduce costs <span>by 30%.</span>",
-            rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_29.webp",
-            rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_29.png",
-            heroImgAlt: "SpaceIQ UI Image",
+            subTitle: "Workplace operations SOFTWARE",
+            rightTitle: "Automate space planning and management. Reduce costs by 30%.",
             listItem1: "<span>Space planning.</span> Track spaces, people, furniture, and assets in one place. Sort office desks, tables, and rooms. ",
             listItem2: "<span>Move management.</span> Plan for moves using drag-and-drop. Auto-update floor plans once you&#8217;ve relocated.",
-            listItem3: "<span>Real estate portfolio.</span> Track your real estate for all your locations. Lease costs, utilization rates, and occupancies."
+            listItem3: "<span>Real estate portfolio.</span> Track your real estate for all your locations. Lease costs, utilization rates, and occupancies.",
+            features: [
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605011/eptura/4001/Feature_Icons/plans-icon.png",
+                    featureAltTag: "Digital floor plans",
+                    featureCopy: "Digitally replicate your facilities. Drag-and-drop desks, tables, equipment, mechanical structures, and interior/exterior features.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Move-icon.png",
+                    featureAltTag: "Move planning",
+                    featureCopy: "Track and plan for new staff, relocations, and equipment across your space. View reports on the status of individual or group moves.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605012/eptura/4001/Feature_Icons/requests-icon.png",
+                    featureAltTag: "Service and move requests",
+                    featureCopy: "Make and track maintenance and personal moves. Let employees include descriptions, photos, and location details.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605011/eptura/4001/Feature_Icons/portfoli-_icon.png",
+                    featureAltTag: "Real estate portfolio",
+                    featureCopy: "Track and evaluate your company&#8217;s real estate for all your locations. Compare lease costs, utilization rates, and capacity. ",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694604999/eptura/4001/Feature_Icons/Calendar_icon.png",
+                    featureAltTag: "Scheduling",
+                    featureCopy: "Reserve desks, meeting rooms, and parking. Auto-book rooms with the right equipment. Notify attendees of any meeting changes.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605000/eptura/4001/Feature_Icons/collaboration-icon-1.png",
+                    featureAltTag: "Hybrid collaboration",
+                    featureCopy: "Set your in-office schedule and status, see an overview of where your team is working, and schedule time with co-workers.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605009/eptura/4001/Feature_Icons/Navigation-icon.png",
+                    featureAltTag: "Navigation",
+                    featureCopy: "Help employees and visitors find the right room with digital floor plans and kiosks. Show technicians exact work order location.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/IoT_sensors-icon.png",
+                    featureAltTag: "IoT sensors",
+                    featureCopy: "See which spaces are actively utilized and available. Identify underutilized or congested space and optimize it for better use.",
+                },
+                {
+                    featureLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
+                    featureAltTag: "Cleaning & safety",
+                    featureCopy: "Automatically inform your cleaning crew when a space needs to be sanitized. Notify employees when their desk is clean.",
+                }
+            ],
+            slider: `<li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">Before SpaceIQ, everything was very manual. <b>Space IQ makes our space management really quick and easy.</b> I am no longer having to print out floor plans. Everything is all in one place. Space IQ has eliminated a lot of the time that was wasted.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/nadia_wong.webp" alt="Nadia Wong">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Nadia Wong</h3>
+                            <p>Senior Facilities Manager</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo hamilton-sec">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_hamilton_county_1.webp" alt="Hamilton County">
+                    </div>
+                </div>
+                <div class="testimonials-logo hamilton-sec mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_hamilton_county_1.webp" alt="Hamilton County">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">With multiple offices, hundreds of conference rooms, and constantly growing teams, being able to quickly find people and places is invaluable. <b>SpaceIQ makes this very easy</b> with both its web application and its mobile application.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/chase_palmer.webp" alt="Chase Palmer">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Chase Palmer</h3>
+                            <p>Senior Security Analyst</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo john-sec">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_york_st_john_university_1.webp" alt="York St John University">
+                    </div>
+                </div>
+                <div class="testimonials-logo john-sec mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/logo_-_york_st_john_university_1.webp" alt="York St John University">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes">I can't even begin to think about the amount of time that was wasted trying to manage space the old-fashioned way. With SpaceIQ, it's just all right there, <b>easy to see, easy to present, easy to use.</b></p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/jay_momet.webp" alt="Jay Momet">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Jay Momet</h3>
+                            <p>Director of Real Estate & Facilities</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo hamilton-sec">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_duke_1.webp" alt="Duke">
+                    </div>
+                </div>
+                <div class="testimonials-logo hamilton-sec mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_duke_1.webp" alt="Duke">
+                </div>
+            </div>
+        </li>
+        <li class="testimonial-item splide__slide">
+            <div class="testimonial-item-inner">
+                <p class="quotes"><b>SpaceIQ has been saving me approximately 4-8 hours per week</b> by providing solutions for what I used to have to do manually. It has allowed me to focus so much more on getting out in front of and forecasting for the challenges of our growing company as well as finding creative solutions.</p>
+                <div class="testimonial-info">
+                    <div class="testimonials-item">
+                        <div class="img-wrapper">
+                            <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188882/eptura/4001/benjamin_lane.webp" alt="Benjamin Lane">
+                        </div>
+                        <div class="testimonial-details">
+                            <h3>Benjamin Lane</h3>
+                            <p>Manager, Facilities & Business Services</p>
+                        </div>
+                    </div>
+                    <div class="testimonials-logo board-sec">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
+                    </div>
+                </div>
+                <div class="testimonials-logo board-sec mobile-sec">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1694188883/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
+                </div>
+            </div>
+        </li>`
         },
         {
             pageName: "website-ioffice-demo",
@@ -511,7 +912,7 @@
                     document.querySelector('#hero > .hero_container > .row ').insertAdjacentHTML('beforebegin', `<div class="spz-logo"><a href="https://eptura.com/" target="_blank"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></a></div>`);
 
                     //Hero Left content copy update
-                    document.querySelector('#hero #HeroText').innerHTML = `<h6>VISITOR&nbsp;MANAGEMENT SOFTWARE</h6><h1>Make the visitor check-in experience 50% faster while improving security.</h1><div class="spz-review-summary"><div class="capterra-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_capterra_sign.svg" alt="Capterra" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989402/eptura/3009/stars_1.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.4</span> (973 reviews)</div></div><div class="g2-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_g2_logo.svg" alt="G2 Logo" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/stars.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.3</span> (745 reviews)</div></div></div><ul class="hero-list-copy"><li class="list-item">` + url.listItem1 + `</li><li class="list-item">` + url.listItem2 + `</li><li class="list-item">` + url.listItem3 + `</li></ul>`;
+                    document.querySelector('#hero #HeroText').innerHTML = `<h6>` + url.subTitle + `</h6><h1>` + url.rightTitle + `</h1><div class="spz-review-summary"><div class="capterra-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_capterra_sign.svg" alt="Capterra" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989402/eptura/3009/stars_1.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.4</span> (973 reviews)</div></div><div class="g2-review-summary"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/social_proof_g2_logo.svg" alt="G2 Logo" class="capterra-logo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690989400/eptura/3009/stars.svg" alt="Star Rating" class="reviews"><div class="g2-review"><span>4.3</span> (745 reviews)</div></div></div><ul class="hero-list-copy"><li class="list-item">` + url.listItem1 + `</li><li class="list-item">` + url.listItem2 + `</li><li class="list-item">` + url.listItem3 + `</li></ul>`;
 
                     //Testimonials section update
                     document.querySelector('#testimonials #TestimonialImg').innerHTML = `<div class="logos-img"><picture>

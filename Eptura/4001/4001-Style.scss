@@ -122,7 +122,7 @@ body.spz-4001 {
               max-width: 572px;
               margin-bottom: 20px;
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                max-width: 574px;
+                max-width: 100%;
               }
               @media (max-width: 767.98px) {
                 font-size: 26px;
@@ -200,8 +200,9 @@ body.spz-4001 {
               list-style: none;
               padding-left: 40px;
               margin-bottom: 16px;
-              max-width: 570px;
+              max-width: 572px;
               position: relative;
+              z-index: 1;
 
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 padding-right: 4px;
@@ -859,7 +860,7 @@ body.spz-4001 {
                 display: flex;
                 flex-direction: column;
                 width: 33.33%;
-                max-width: 347px;
+                max-width: 346.66px;
                 margin-bottom: 48px;
 
                 @media (max-width: 1199.98px) {
@@ -975,10 +976,10 @@ body.spz-4001 {
           }
 
           .button-wrapper {
-            margin-top: 24px;
+            margin-top: 16px;
 
-            @media (max-width: 767.98px) {
-              margin-top: 16px;
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              margin-top: 24px;
             }
 
             .button {
@@ -1083,14 +1084,6 @@ body.spz-4001 {
             .testimonial-item {
             margin-bottom: 36px;
           }
-        }
-
-        .ppc-eptura .testimonial-main-section .right-box:before {
-          height: 320px;
-        }
-
-        .ppc-eptura .testimonial-main-section .testimonial-item {
-          min-height: 320px;
         }
 
         .testimonial-main-section .testimonial-item-inner {
@@ -1264,17 +1257,6 @@ body.spz-4001 {
 
         .condeco-testimonial .testimonial-item {
           height: 306px !important;
-        }
-        .ppc-archibus .testimonial-item,
-        .ppc-eptura-room-management .testimonial-item {
-          min-height: 322px !important;
-        }
-
-        .ppc-archibus .testimonial-main-section .right-box:before,
-        .ppc-eptura-room-management
-          .testimonial-main-section
-          .right-box:before {
-          height: 322px;
         }
 
         .testimonials-logo.hamilton-sec img {
@@ -1731,6 +1713,184 @@ body.spz-4001 {
           background-position: center;
           background-repeat: no-repeat;
           background-size: cover;
+        }
+      }
+    }
+  }
+
+  &.website-managerplus-demo {
+    .body-wrapper {
+      #hero {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-ManagerPlus-2560-min.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-ManagerPlus-768-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-ManagerPlus-360-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        .hero_container .spz-logo a img {
+          max-width: 112px;
+          height: 36px;
+
+          @media (max-width: 767.98px) {
+            max-width: 86.593px;
+            height: 28px;
+          }
+        }
+      }
+    }
+    .spz-rest-all-section {
+      .spz-testimonial-slider {
+        .testimonial-wrapper {
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            margin-top: 24px;
+          }
+        }
+        .testimonial-main-section .right-box:before {
+          height: 300px;
+        }
+
+        .testimonial-main-section .testimonial-item {
+          min-height: 300px;
+        }
+
+        .testimonial-item-inner p.quotes {
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            padding-right: 6px;
+          }
+        }
+      }
+      .spz-features-section
+        .features-3-col-icon
+        .feature3-itemsillustration-parent
+        .feature3-itemsillustration
+        .feature-card
+        .card-content
+        .card-subtitle {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          margin-bottom: 18px;
+          height: 44px;
+        }
+      }
+    }
+  }
+
+  &.website-archibus-demo {
+    .body-wrapper {
+      #hero {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Archibus-2560-min.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          background: url(https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Archibus-768-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Archibus-360-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .hero_container .spz-logo a img {
+          @media (max-width: 767.98px) {
+            max-width: 66px;
+          }
+        }
+      }
+    }
+  }
+
+  &.website-spaceiq-demo {
+    .body-wrapper {
+      #hero {
+        background: url(https://res.cloudinary.com/spiralyze/image/upload/v1694594419/eptura/4001/BG_Images/BG-IMG-SpaceIQ-2560-min.jpg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          background: url(https://res.cloudinary.com/spiralyze/image/upload/v1694594421/eptura/4001/BG_Images/BG-IMG-SpaceIQ-768-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(https://res.cloudinary.com/spiralyze/image/upload/v1694594420/eptura/4001/BG_Images/BG-IMG-SpaceIQ-360-min.jpg);
+          background-position: center;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+        .hero_container {
+          .spz-logo a img {
+            @media (max-width: 767.98px) {
+              max-width: 57.4px;
+            }
+          }
+          > .row #HeroText {
+            > h1 {
+              max-width: 548px;
+              @media (max-width: 1199.98px) {
+                max-width: 628px;
+              }
+            }
+            .hero-list-copy {
+              @media (max-width: 1199.98px) {
+                padding-right: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+    .spz-rest-all-section {
+      .spz-testimonial-slider {
+        // .testimonial-wrapper {
+        //   @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        //     margin-top: 24px;
+        //   }
+        // }
+        .testimonial-main-section .right-box:before {
+          height: 340px;
+        }
+
+        .testimonial-main-section .testimonial-item {
+          min-height: 340px;
+        }
+
+        .testimonial-item-inner p.quotes {
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            padding-right: 6px;
+          }
+        }
+      }
+      .spz-features-section
+        .features-3-col-icon
+        .feature3-itemsillustration-parent
+        .feature3-itemsillustration
+        .feature-card
+        .card-content
+        .card-subtitle {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          margin-bottom: 18px;
+          height: 44px;
         }
       }
     }
