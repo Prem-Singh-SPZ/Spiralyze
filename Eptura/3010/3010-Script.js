@@ -15,7 +15,7 @@
                 {
                     featureTitle: "Check-in",
                     featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in",
-                    title: "Automate guest check-in.",
+                    title: "Automate guest <hyph>check-in.</hyph>",
                     subTitle: "Reduce front desk admin by 50%.",
                     featuresList: {
                         list1: "<span>Check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
@@ -49,7 +49,7 @@
                     featureTitle: "Guest experience",
                     featureImg: "https://res.cloudinary.com/spiralyze/image/upload/v1694442196/eptura/3010/img-guest_experience",
                     title: "Boost guest experience",
-                    subTitle: "while streamlining check-in.",
+                    subTitle: "while streamlining <hyph>check-in.</hyph>",
                     featuresList: {
                         list1: "<span>Wi-Fi.</span> Automatically create time-constrained, one-time guest Wi-Fi credentials upon check-in.",
                         list2: "<span>Kiosk languages.</span> Let visitors choose from 33+ languages. Spanish, French, German, Chinese, and more.",
@@ -201,7 +201,7 @@
 
     //Marketo form update
     function formUpdate() {
-        document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
+        // document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
 
         if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
@@ -441,7 +441,7 @@
             <img src="${element.featureImg}.webp" alt="${element.title}">
             </picture></div><div class="content-wrapper"><div class="copy">
             <div class="heading">
-                <div class="independent-title">${element.title}</div>
+                <div class="independent-title">${element.title}<span> ${element.subTitle}</span></div>
                 <div class="indent-title">
                     <div>${element.subTitle}</div>
                 </div>
