@@ -122,6 +122,134 @@
                 }
             ]
         },
+        {
+            pageName: "ppc-eptura",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg",
+            logoAlt: "Eptura Logo",
+            heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp",
+            heroImgAlt: "Eptura UI Image",
+            features: [
+                {
+                    featureTitle: "Workplace Scheduling",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_3",
+                    title: "Streamline workplace bookings",
+                    subTitle: "and hybrid collaboration.",
+                    featuresList: {
+                        list1: "<span>Meeting scheduling.</span> Find and book the perfect meeting rooms. Including equipment, room size, and more.",
+                        list2: "<span>Navigation.</span> Help employees and visitors find the right room upon arrival with digital floor plans.",
+                        list3: "<span>Rescheduling.</span> Automatically book new rooms with the same size and equipment if meetings are rescheduled.",
+                    }
+                },
+                {
+                    featureTitle: "Asset Management",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_3",
+                    title: "Manage assets in one place.",
+                    subTitle: "Reduce downtime by 50%.",
+                    featuresList: {
+                        list1: "<span>Asset management.</span> View all asset details in one place. Including specs, availability, and digital floor plans.",
+                        list2: "<span>Service requests.</span> Request maintenance via mobile app. Provide technicians with locations and descriptions.",
+                        list3: "<span>Lifecycle tracking.</span> See cost history, repair schedules, and upcoming maintenance. Create monthly budgets.",
+                    }
+                },
+                {
+                    featureTitle: "Maintenance",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_3",
+                    title: "Reduce costs by 30% by",
+                    subTitle: "automating maintenance.",
+                    featuresList: {
+                        list1: "<span>Work order management.</span> Let managers approve, schedule, and close service requests in a few clicks.",
+                        list2: "<span>Preventive maintenance.</span> Automatically send work orders at set intervals or based on usage thresholds.",
+                        list3: "<span>Handover reports.</span> Complete inspection checklists via the mobile app before returning equipment.",
+                    }
+                },
+                {
+                    featureTitle: "Space planning",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_4",
+                    title: "Plan office spaces and moves in",
+                    subTitle: "87% less time.",
+                    featuresList: {
+                        list1: "<span>Space planning.</span> Get a digital floor plan of rooms, desks, and tables. Drag-and-drop to optimize room capacity.",
+                        list2: "<span>Move management.</span> Plan moves for individuals, teams, or offices. Create and track tickets, labels, and more.",
+                        list3: "<span>Usage monitoring.</span> Track office usage patterns. Adjust space as utilization, occupancy, and visitors change.",
+                    }
+                },
+                {
+                    featureTitle: "Visitor management",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin_2",
+                    title: "Streamline visitor check-in",
+                    subTitle: "while increasing security.",
+                    featuresList: {
+                        list1: "<span>Visitor check-in.</span> Check visitors in electronically. Create badges. Control access. Pre-screen. Self-check in kiosks.",
+                        list2: "<span>Notifications.</span> Automatically notify hosts of visitor arrivals via Slack, email, text, and other platforms.",
+                        list3: "<span>Security.</span> Visit approvals. Automatic ID verification using facial recognition. Watchlist screening.",
+                    }
+                }
+            ]
+        },
+        {
+            pageName: "ppc-condeco-make-your-flexible-office-work-better",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_2.webp",
+            logoAlt: "Condeco Logo",
+            heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/condeco-ui_1.webp",
+            heroImgAlt: "Condeco UI Image",
+            features: [
+                {
+                    featureTitle: "Schedule meetings",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_1",
+                    title: "Book and manage in-person and",
+                    subTitle: "hybrid meetings from one place.",
+                    featuresList: {
+                        list1: "<span>Meetings.</span> Instantly book meetings from the app. Move, edit, or extend meetings with a single click.",
+                        list2: "<span>Recurring meetings.</span> Set repeat meetings that automatically reserve the right equipment and space.",
+                        list3: "<span>Rescheduling.</span> Automatically book rooms with similar equipment when meetings change. Notify all attendees. ",
+                    }
+                },
+                {
+                    featureTitle: "Book Spaces",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_1",
+                    title: "Streamline in-office desk, room, and",
+                    subTitle: "equipment scheduling.",
+                    featuresList: {
+                        list1: "<span>Group bookings.</span> Book meeting and conference rooms with the right size and tech equipment for your group.",
+                        list2: "<span>Individual bookings.</span> Schedule desks, parking spaces, and lockers for in-office days directly from the app. ",
+                        list3: "<span>Room services.</span> Order refreshments like sandwiches and coffee in advance. Submit audio-visual service requests.",
+                    }
+                },
+                {
+                    featureTitle: "Visitor management",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_1",
+                    title: "Boost visitor experience",
+                    subTitle: "while maintaining security.",
+                    featuresList: {
+                        list1: "<span>Meetings.</span> Automatically send meeting invites to guests with the time, location, and pre-arrival instructions.",
+                        list2: "<span>Check-in.</span> Let visitors check in electronically. Send unique QR codes for building access. Print badges.",
+                        list3: "<span>Management.</span> Customize pre-arrival questionnaires. Approve or deny visitors. Maintain logbooks.",
+                    }
+                },
+                {
+                    featureTitle: "Hybrid collaboration",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_1",
+                    title: "Automate hybrid collaboration.",
+                    subTitle: "37% increase in productivity.",
+                    featuresList: {
+                        list1: "<span>In-office planning.</span> Set your in-office schedule and status. Workspaces professionally cleaned before arrival.",
+                        list2: "<span>Collaborating.</span> See a weekly overview of where your team is working and schedule time with co-workers.",
+                        list3: "<span>Hybrid services.</span> Schedule in-person, virtual, or hybrid meetings. Add Zoom or Teams calls to booked spaces. ",
+                    }
+                },
+                {
+                    featureTitle: "Operations and admin",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin_1",
+                    title: "Streamline workspace operations.",
+                    subTitle: "Reduce costs by 25%.",
+                    featuresList: {
+                        list1: "<span>Office planning.</span> Organize desks, tables, and equipment. Control occupancy levels. Restrict room capacity. ",
+                        list2: "<span>Usage reports.</span> Track equipment usage, room utilization, and total occupancy. Adjust spaces as changes occur.",
+                        list3: "<span>Integrations.</span> Integrate with Outlook, Okta, Teams, Zoom, Azure, Proxyclick, and more. Plus, custom APIs. ",
+                    }
+                }
+            ]
+        },
     ];
 
 
