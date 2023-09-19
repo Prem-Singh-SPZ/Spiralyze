@@ -227,6 +227,7 @@ body.spz-3002 {
                 font-family: $eptura-font;
                 margin-bottom: 12px;
                 letter-spacing: 1.1px;
+                text-transform: uppercase;
               }
 
               > h1 {
@@ -1057,4 +1058,22 @@ body.spz-3002 {
   }
 
   //Page specific CSS
+  &.ppc-archibus-maintenance-software {
+    .body-wrapper {
+      #hero {
+        .hero_container {
+          > .row {
+            #HeroText {
+              img {
+                @media (max-width: 767.98px) {
+                  margin-top: 0;
+                  max-width: 488px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }

@@ -25,7 +25,7 @@
                 },
                 {
                     featureTitle: "Security",
-                    featureImg: "https://res.cloudinary.com/spiralyze/image/upload/v1694686605/eptura/3010/img-security_8",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_8",
                     title: "Increase security with visitor",
                     subTitle: "screenings, approvals, and more.",
                     featuresList: {
@@ -36,7 +36,7 @@
                 },
                 {
                     featureTitle: "Integrations",
-                    featureImg: "https://res.cloudinary.com/spiralyze/image/upload/v1694442190/eptura/3010/img-integrations",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations",
                     title: "Streamline your entire visitor flow.",
                     subTitle: "39+ integrations.",
                     featuresList: {
@@ -47,7 +47,7 @@
                 },
                 {
                     featureTitle: "Guest experience",
-                    featureImg: "https://res.cloudinary.com/spiralyze/image/upload/v1694442196/eptura/3010/img-guest_experience",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience",
                     title: "Boost guest experience",
                     subTitle: "while streamlining <hyph>check-in.</hyph>",
                     featuresList: {
@@ -58,7 +58,7 @@
                 },
                 {
                     featureTitle: "Operations and admin",
-                    featureImg: "https://res.cloudinary.com/spiralyze/image/upload/v1694442204/eptura/3010/img-operations_and_admin",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin",
                     title: "Automate operations and admin",
                     subTitle: "across every location.",
                     featuresList: {
@@ -70,59 +70,55 @@
             ]
         },
         {
-            pageName: "website-managerplus-demo",
-            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693581180/eptura/4001/managerplus-eptura-logo-1.svg",
-            logoAlt: "Managerplus Demo",
-            subTitle: "All-in-one Asset MANAGEMENT SOFTWARE",
-            rightTitle: "Reduce asset downtime by 50%. Streamline inventory and maintenance.",
-            listItem1: "<span>Asset management.</span> Track and manage all assets.<br> Service history, maintenance, budgeting, and more.",
-            listItem2: "<span>Maintenance workflows.</span> Automatically trigger work orders at set intervals or when a usage threshold is met.",
-            listItem3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low.",
+            pageName: "ppc-archibus-maintenance-software",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_3.webp",
+            logoAlt: "Archibus Logo",
+            heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/archibus-ui_1.webp",
+            heroImgAlt: "Archibus UI Image",
             features: [
                 {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694604998/eptura/4001/Feature_Icons/asset-icon.png",
-                    featureAltTag: "Asset management",
-                    featureCopy: "View the specs, availability, cost history, and maintenance schedules of all your assets in one place.",
+                    featureTitle: "Service & work Orders",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_2",
+                    title: "Automate asset maintenance.",
+                    subTitle: "Reduce costs by 30%.",
+                    featuresList: {
+                        list1: "<span>Service requests.</span> Instantly submit maintenance requests on broken equipment across your facilities.",
+                        list2: "<span>Preventive maintenance.</span> Automatically send work orders based on time or usage intervals.",
+                        list3: "<span>Maintenance analysis.</span> See upcoming asset service and inspection dates. View lifecycle history.",
+                    }
                 },
                 {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605007/eptura/4001/Feature_Icons/maintenance-icon.png",
-                    featureAltTag: "Preventive maintenance",
-                    featureCopy: "Auto-generate work orders when assets reach time, usage, or mileage intervals. Track maintenance schedules.",
+                    featureTitle: "maintenance management",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_2",
+                    title: "View and manage all maintenance",
+                    subTitle: "from one platform.",
+                    featuresList: {
+                        list1: "<span>Asset details.</span> Get a complete view of all your assets, maintenance status, and open work orders in one place.",
+                        list2: "<span>Work orders.</span> Approve, schedule, and close requests. Auto-assign tasks based on technician availability.",
+                        list3: "<span>Communications.</span> Communicate directly with technicians via mobile app. Send feedback reports.",
+                    }
                 },
                 {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605016/eptura/4001/Feature_Icons/work-orders-icon.png",
-                    featureAltTag: "Work orders",
-                    featureCopy: "Approve, schedule, and close service requests. Auto-assign to technicians based on location and priority.",
+                    featureTitle: "Technician portal",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_7",
+                    title: "Enable technician self-serve",
+                    subTitle: "with an all-in-one online portal.",
+                    featuresList: {
+                        list1: "<span>Tasks.</span> Let technicians view task descriptions, status, and location. Log task completion. ",
+                        list2: "<span>Alerts.</span> Automatically send alerts to technicians when they&#8217;re assigned new work orders.",
+                        list3: "<span>Prioritization.</span> Automatically re-prioritize and move requests based on urgency, location, or trade.",
+                    }
                 },
                 {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605008/eptura/4001/Feature_Icons/Mobile_icon.png",
-                    featureAltTag: "Technician mobile app",
-                    featureCopy: "Instantly request maintenance via mobile app. Provide technicians with schedules, locations, and task descriptions.",
-                },
-                {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605003/eptura/4001/Feature_Icons/inspections-icon.png",
-                    featureAltTag: "Inspections",
-                    featureCopy: "See a detailed list of all inspections including status and associated assets. Auto-trigger work orders when inspections fail.",
-                },
-                {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605005/eptura/4001/Feature_Icons/inventory-icon.png",
-                    featureAltTag: "Inventory",
-                    featureCopy: "Track inventory across locations. Automatically update inventory when parts are assigned to work orders.",
-                },
-                {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605006/eptura/4001/Feature_Icons/Invoices-icon.png",
-                    featureAltTag: "Invoices",
-                    featureCopy: "Automatically generate invoices from completed work orders. Include parts, services, or other cost items.",
-                },
-                {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605015/eptura/4001/Feature_Icons/Vendor-icon.png",
-                    featureAltTag: "Vendor management",
-                    featureCopy: "Store all suppliers’ information and lead times. Customize PAR levels. Complete purchases. All in one place.",
-                },
-                {
-                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694605002/eptura/4001/Feature_Icons/Cost-icon.png",
-                    featureAltTag: "Cost forecasting",
-                    featureCopy: "Track year-to-date and lifetime expenses. View cost comparisons. Create monthly budgets based on historical data.",
+                    featureTitle: "Operations and admin",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_3",
+                    title: "Streamline manual maintenance ",
+                    subTitle: "operations and admin.",
+                    featuresList: {
+                        list1: "<span>Budgeting.</span> Get analytics on asset performance and costs. Create monthly budgets based on historical data.",
+                        list2: "<span>Vendor assignment.</span> Automatically assign tasks to third-party vendors. Track tasks and send invoice links.",
+                        list3: "<span>Inventory planner.</span> See how many parts you have and what you need. Set limits for automatic restocks.",
+                    }
                 }
             ]
         },
@@ -204,8 +200,8 @@
         // document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
 
-        if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
-            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Fill in your details and <span>let&#8217;s get started <span>';
+        if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
+            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Fill in your details and <span>let&#8217;s get started <span></h6>';
         }
 
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
@@ -364,7 +360,7 @@
                         document.querySelector('#HeroText img').setAttribute('alt', url.heroImgAlt);
                     }
                     else {
-                        document.querySelector('#HeroText').insertAdjacentHTML('beforeend', `<img src="` + updatedHeroImg + `" alt="` + url.heroImgAlt + `">`);
+                        document.querySelector('#HeroText').insertAdjacentHTML('beforeend', `<h1 class="pt-4"><img src="` + updatedHeroImg + `" alt="` + url.heroImgAlt + `"></h1>`);
                     }
 
                     document.querySelector('#HeroText').insertAdjacentHTML('afterend', `<div class="hero-img-tab"><img src="` + updatedHeroImg + `" alt="` + url.heroImgAlt + `"></div>`);
@@ -419,7 +415,7 @@
         pageData[searchIndex].features.forEach((element, index) => {
             const activeClass = index == 0 ? "active" : "";
 
-            featureEl += `<li class="nav-item" role="presentation"><button class="nav-link ` + activeClass + `" id="${element.featureTitle}-tab" data-toggle="tab" data-target="#${element.featureTitle.replace(/\s+/g, '')}" type="button" role="tab" aria-controls="${element.featureTitle}" aria-selected="true">${element.featureTitle}</button></li>`
+            featureEl += `<li class="nav-item" role="presentation"><button class="nav-link ` + activeClass + `" id="${element.featureTitle}-tab" data-toggle="tab" data-target="#${element.featureTitle.replace(/\s+/g, '').replace('&', '')}" type="button" role="tab" aria-controls="${element.featureTitle}" aria-selected="true">${element.featureTitle}</button></li>`
         });
         featureEl += '</ul>';
 
@@ -435,7 +431,7 @@
             const activeClass = index == 0 ? "show active" : "";
 
 
-            featureEl += `<div class="tab-pane fade ` + activeClass + `" id="${element.featureTitle.replace(/\s+/g, '')}" role="tabpanel" aria-labelledby="${element.featureTitle}-tab"><div class="feature-wrapper"><div class="img-wrapper"><picture>
+            featureEl += `<div class="tab-pane fade ` + activeClass + `" id="${element.featureTitle.replace(/\s+/g, '').replace('&', '')}" role="tabpanel" aria-labelledby="${element.featureTitle}-tab"><div class="feature-wrapper"><div class="img-wrapper"><picture>
             <source srcset="${element.featureImg}.webp" type="image/webp">
             <source srcset="${element.featureImg}.png" type="image/png"> 
             <img src="${element.featureImg}.webp" alt="${element.title}">
