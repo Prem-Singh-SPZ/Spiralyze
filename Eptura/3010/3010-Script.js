@@ -1,5 +1,5 @@
 (function () {
-    document.body.classList.add('spz-3002');
+    document.body.classList.add('spz-3010');
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.querySelector('body').classList.add(identifyPage);
 
@@ -36,7 +36,7 @@
                 },
                 {
                     featureTitle: "Integrations",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-integrations",
                     title: "Streamline your entire visitor flow.",
                     subTitle: "39+ integrations.",
                     featuresList: {
@@ -47,7 +47,7 @@
                 },
                 {
                     featureTitle: "Guest experience",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-guest_experience",
                     title: "Boost guest experience",
                     subTitle: "while streamlining <hyph>check-in.</hyph>",
                     featuresList: {
@@ -89,7 +89,7 @@
                 },
                 {
                     featureTitle: "maintenance management",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_2",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-maintenance_management",
                     title: "View and manage all maintenance",
                     subTitle: "from one platform.",
                     featuresList: {
@@ -131,7 +131,7 @@
             features: [
                 {
                     featureTitle: "Workplace Scheduling",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_3",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-workplace_scheduling",
                     title: "Streamline workplace bookings",
                     subTitle: "and hybrid collaboration.",
                     featuresList: {
@@ -164,7 +164,7 @@
                 },
                 {
                     featureTitle: "Space planning",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_4",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-space_planning",
                     title: "Plan office spaces and moves in",
                     subTitle: "87% less time.",
                     featuresList: {
@@ -196,7 +196,7 @@
                 {
                     featureTitle: "Schedule meetings",
                     featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_1",
-                    title: "Book and manage in-person and",
+                    title: "Book and manage <hyph>in-person</hyph> and",
                     subTitle: "hybrid meetings from one place.",
                     featuresList: {
                         list1: "<span>Meetings.</span> Instantly book meetings from the app. Move, edit, or extend meetings with a single click.",
@@ -227,7 +227,7 @@
                     }
                 },
                 {
-                    featureTitle: "Hybrid collaboration",
+                    featureTitle: "Collaboration",
                     featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_1",
                     title: "Automate hybrid collaboration.",
                     subTitle: "37% increase in productivity.",
@@ -259,7 +259,7 @@
             features: [
                 {
                     featureTitle: "Asset Management",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_5",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-asset_management_1",
                     title: "Streamline asset management.",
                     subTitle: "Reduce costs by 50%.",
                     featuresList: {
@@ -382,7 +382,7 @@
 
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
-        document.body.classList.add('spz-3002');
+        document.body.classList.add('spz-3010');
         clearFormFields();
         loadTest();
     });

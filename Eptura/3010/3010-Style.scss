@@ -1,6 +1,7 @@
 $eptura-font: "Eptura Flexible", Arial, sans-serif;
+$eptura-font-bold: "Eptura Flexible Bold", Arial, sans-serif;
 
-body.spz-3002 {
+body.spz-3010 {
   #HeaderScripts.mktoText {
     @media (min-width: 767.98px) {
       display: none !important;
@@ -295,7 +296,7 @@ body.spz-3002 {
             }
 
             #HeroFormPanel {
-              max-width: 568px;
+              max-width: 580px;
               padding: 52px 46px 50px 46px;
               border-radius: 8px;
               background: var(--primary-neutrals-w, #fff);
@@ -319,7 +320,7 @@ body.spz-3002 {
               }
 
               #HeroFormTitleText {
-                display: block !important;
+                // display: block !important;
                 h6 {
                   color: var(--primary-neutrals-n-1, #0d122e);
                   // font-family: $eptura-font;
@@ -848,7 +849,7 @@ body.spz-3002 {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 14px;
-                // font-family: $eptura-font;
+                font-family: $eptura-font;
                 letter-spacing: 2.6px;
                 text-transform: uppercase;
                 padding: 12px 16px;
@@ -978,8 +979,8 @@ body.spz-3002 {
                         margin-bottom: 16px;
 
                         span {
-                          font-family: $eptura-font;
-                          font-weight: 500;
+                          font-family: $eptura-font-bold;
+                          letter-spacing: -0.2px;
                         }
 
                         @media (max-width: 1199.98px) {
@@ -1058,17 +1059,62 @@ body.spz-3002 {
   }
 
   //Page specific CSS
-  &.ppc-archibus-maintenance-software {
+  &.ppc-condeco-make-your-flexible-office-work-better {
     .body-wrapper {
+      #nav nav #NavLogo {
+        .logo-img {
+          @media (min-width: 1199.98px) {
+            max-width: 113px;
+          }
+        }
+      }
+
       #hero {
         .hero_container {
           > .row {
             #HeroText {
               img {
+                max-width: 531px;
+                width: 100%;
+                @media (max-width: 767.98px) {
+                  width: 531px;
+                  margin-top: -2px;
+                }
+              }
+            }
+            .hero-img-tab img {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                width: 502.825px;
+                margin-left: 20px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ppc-archibus-maintenance-software {
+    .body-wrapper {
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-top: 30px !important;
+          }
+          > .row {
+            #HeroText {
+              img {
+                margin-top: 1px;
                 @media (max-width: 767.98px) {
                   margin-top: 0;
                   max-width: 488px;
                 }
+              }
+            }
+            #HeroFormCol #HeroFormPanel {
+              padding-top: 64px;
+              @media (max-width: 767.98px) {
+                padding-top: 40px;
               }
             }
           }
@@ -1107,6 +1153,41 @@ body.spz-3002 {
               img {
                 width: 543.165px;
                 height: 256px;
+              }
+            }
+          }
+        }
+      }
+
+      .spz-feature-section
+        .features-tabbed
+        .features-section
+        .tab-content
+        .tab-pane
+        .feature-wrapper
+        .content-wrapper
+        .copy
+        .bullets {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          padding-left: 39px;
+        }
+      }
+    }
+  }
+
+  &.ppc-eptura-asset-management {
+    .body-wrapper {
+      #hero {
+        .hero_container {
+          > .row {
+            #HeroText {
+              img {
+                max-width: 488px;
+                margin-top: -6px;
+                // @media (max-width: 767.98px) {
+                //   margin-top: 0;
+                //   max-width: 488px;
+                // }
               }
             }
           }

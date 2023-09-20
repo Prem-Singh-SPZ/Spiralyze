@@ -160,11 +160,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo kfc-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/v1692103304/eptura/3006/logo_-_salvation.webp" alt="Salvation">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1695201744/eptura/4001/logo_-_salvation.webp" alt="Salvation">
                     </div>
                 </div>
                 <div class="testimonials-logo kfc-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1692103304/eptura/3006/logo_-_salvation.webp" alt="Salvation">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1695201744/eptura/4001/logo_-_salvation.webp" alt="Salvation">
                 </div>
             </div>
         </li>
@@ -182,11 +182,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo dnv-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_dnv.webp" alt="Dnv">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1695201744/eptura/4001/logo_-_dnv.webp" alt="Dnv">
                     </div>
                 </div>
                 <div class="testimonials-logo dnv-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_dnv.webp" alt="Dnv">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1695201744/eptura/4001/logo_-_dnv.webp" alt="Dnv">
                 </div>
             </div>
         </li>
@@ -204,11 +204,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo green-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo-greencore.webp" alt="Greencore">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1695201745/eptura/4001/logo-greencore.webp" alt="Greencore">
                     </div>
                 </div>
                 <div class="testimonials-logo green-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo-greencore.webp" alt="Greencore">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1695201745/eptura/4001/logo-greencore.webp" alt="Greencore">
                 </div>
             </div>
         </li>
@@ -349,11 +349,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_salvation.webp" alt="Salvation">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_salvation.webp" alt="EnviroSystems">
                     </div>
                 </div>
                 <div class="testimonials-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_salvation.webp" alt="Salvation">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_salvation.webp" alt="EnviroSystems">
                 </div>
             </div>
         </li>
@@ -371,11 +371,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo dnv-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_dnv.webp" alt="Dnv">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_dnv.webp" alt="Defoe Corp">
                     </div>
                 </div>
                 <div class="testimonials-logo dnv-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_dnv.webp" alt="Dnv">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_dnv.webp" alt="Defoe Corp">
                 </div>
             </div>
         </li>`
@@ -639,11 +639,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo hamilton-sec">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Duke">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Leap Frog">
                     </div>
                 </div>
                 <div class="testimonials-logo hamilton-sec mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Duke">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Leap Frog">
                 </div>
             </div>
         </li>
@@ -661,11 +661,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo board-sec">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="NWEA">
                     </div>
                 </div>
                 <div class="testimonials-logo board-sec mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board Of Education">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="NWEA">
                 </div>
             </div>
         </li>`
@@ -740,11 +740,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo kfc-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Hamilton County">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Sephora">
                     </div>
                 </div>
                 <div class="testimonials-logo mobile-sec kfc-logo">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Hamilton County">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Sephora">
                 </div>
             </div>
         </li>
@@ -784,11 +784,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo kfc-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke.webp" alt="Duke">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke.webp" alt="M c">
                     </div>
                 </div>
                 <div class="testimonials-logo kfc-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke.webp" alt="Duke">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke.webp" alt="M c">
                 </div>
             </div>
         </li>
@@ -806,11 +806,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo dnv-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education.webp" alt="Calgary Board of Education">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education.webp" alt="Vertex">
                     </div>
                 </div>
                 <div class="testimonials-logo dnv-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education.webp" alt="Calgary Board of Education">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education.webp" alt="Vertex">
                 </div>
             </div>
         </li>
@@ -828,11 +828,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo dnv-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="Calgary Board of Education">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="ABB">
                     </div>
                 </div>
                 <div class="testimonials-logo dnv-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="Calgary Board of Education">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="ABB">
                 </div>
             </div>
         </li>

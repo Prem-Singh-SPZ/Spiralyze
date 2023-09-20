@@ -761,6 +761,7 @@ body.spz-4001 .body-wrapper #testimonials .page_padding .load-more .load-more-bt
 }
 body.spz-4001 .body-wrapper #testimonials .page_padding .load-more .load-more-btn img {
   padding-bottom: 3px;
+  pointer-events: none;
 }
 body.spz-4001 .body-wrapper #testimonials .page_padding .load-more .load-more-btn:hover {
   text-decoration: underline;
@@ -1067,7 +1068,7 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testi
   position: absolute;
   width: 1px;
   height: 254px;
-  background: rgba(214, 215, 245, 0.6);
+  background: rgba(13, 18, 46, 0.2);
   top: 0;
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .testimonial-item {
@@ -1510,6 +1511,7 @@ body.spz-4001 .body-wrapper .spz-rest-all-section .spz-testimonial-slider .ppc-e
   }
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-footer-section {
+  border-top: 1px solid rgba(246, 250, 250, 0.2);
   background: var(--primary-neutrals-n-1, #0d122e);
 }
 body.spz-4001 .body-wrapper .spz-rest-all-section .spz-footer-section .simplified-footer {
@@ -1714,10 +1716,10 @@ body.spz-4001.website-proxyclick-demo .body-wrapper #hero {
 }
 @media (max-width: 767.98px) {
   body.spz-4001.website-proxyclick-demo .body-wrapper #hero {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-360-min.jpg);
-    background-position: center;
+    background: #0d122e url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-360-min.jpg);
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
   }
 }
 body.spz-4001.website-managerplus-demo .body-wrapper #hero {
@@ -1736,10 +1738,10 @@ body.spz-4001.website-managerplus-demo .body-wrapper #hero {
 }
 @media (max-width: 767.98px) {
   body.spz-4001.website-managerplus-demo .body-wrapper #hero {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-ManagerPlus-360-min.jpg);
-    background-position: center;
+    background: #0d122e url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-ManagerPlus-360-min.jpg);
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
   }
 }
 body.spz-4001.website-managerplus-demo .body-wrapper #hero .hero_container .spz-logo a img {
@@ -1750,6 +1752,11 @@ body.spz-4001.website-managerplus-demo .body-wrapper #hero .hero_container .spz-
   body.spz-4001.website-managerplus-demo .body-wrapper #hero .hero_container .spz-logo a img {
     max-width: 86.593px;
     height: 28px;
+  }
+}
+@media (max-width: 472.98px) {
+  body.spz-4001.website-managerplus-demo .body-wrapper #hero .hero_container > .row #HeroText > h1 {
+    max-width: 278px;
   }
 }
 body.spz-4001.website-managerplus-demo .spz-rest-all-section .spz-testimonial-slider .testimonial-main-section .right-box:before {
@@ -1784,10 +1791,10 @@ body.spz-4001.website-archibus-demo .body-wrapper #hero {
 }
 @media (max-width: 767.98px) {
   body.spz-4001.website-archibus-demo .body-wrapper #hero {
-    background: url(https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Archibus-360-min.jpg);
-    background-position: center;
+    background: #0d122e url(https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Archibus-360-min.jpg);
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
   }
 }
 @media (max-width: 767.98px) {
@@ -1817,10 +1824,10 @@ body.spz-4001.website-spaceiq-demo .body-wrapper #hero {
 }
 @media (max-width: 767.98px) {
   body.spz-4001.website-spaceiq-demo .body-wrapper #hero {
-    background: url(https://res.cloudinary.com/spiralyze/image/upload/v1694594420/eptura/4001/BG_Images/BG-IMG-SpaceIQ-360-min.jpg);
-    background-position: center;
+    background: #0d122e url(https://res.cloudinary.com/spiralyze/image/upload/v1694594420/eptura/4001/BG_Images/BG-IMG-SpaceIQ-360-min.jpg);
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
   }
 }
 @media (max-width: 767.98px) {
@@ -1873,10 +1880,10 @@ body.spz-4001.website-ioffice-demo .body-wrapper #hero {
 }
 @media (max-width: 767.98px) {
   body.spz-4001.website-ioffice-demo .body-wrapper #hero {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-IOffice-360-min.jpg);
-    background-position: center;
+    background: #0d122e url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-IOffice-360-min.jpg);
+    background-position: top left;
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: 100%;
   }
 }
 @media (max-width: 767.98px) {
