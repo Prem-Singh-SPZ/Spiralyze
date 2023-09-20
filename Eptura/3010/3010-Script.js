@@ -250,6 +250,134 @@
                 }
             ]
         },
+        {
+            pageName: "ppc-eptura-asset-management",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg",
+            logoAlt: "Eptura Logo",
+            heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/asset-management-ui_1.webp",
+            heroImgAlt: "Asset management UI Image",
+            features: [
+                {
+                    featureTitle: "Asset Management",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_5",
+                    title: "Streamline asset management.",
+                    subTitle: "Reduce costs by 50%.",
+                    featuresList: {
+                        list1: "<span>Asset management.</span> View specs, availability, and digital floor plans for all your assets. Reduce asset downtime.",
+                        list2: "<span>Lifecycle tracking.</span> Manage asset cost history, repair schedules, and upcoming maintenance. ",
+                        list3: "<span>Tire tracking.</span> Track tire usage and lifespan. Auto-request replacements for damaged and worn tires.",
+                    }
+                },
+                {
+                    featureTitle: "Maintenance",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_6",
+                    title: "Reduce downtime by 30% by",
+                    subTitle: "automating maintenance.",
+                    featuresList: {
+                        list1: "<span>Preventive maintenance.</span> Automatically send service requests based on time or usage intervals. ",
+                        list2: "<span>Maintenance analysis.</span> Approve, schedule, and close service requests. See upcoming inspection dates.",
+                        list3: "<span>Service requests.</span> Request maintenance via the mobile app. Easily provide technicians with details.",
+                    }
+                },
+                {
+                    featureTitle: "Work orders",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_5",
+                    title: "Automate work order management.",
+                    subTitle: "Eliminate manual error.",
+                    featuresList: {
+                        list1: "<span>Work order management.</span> Automatically assign work orders to technicians based on location and priority.",
+                        list2: "<span>Prioritization.</span> Auto-trigger work orders when inspections fail. Re-prioritize requests based on urgency. ",
+                        list3: "<span>Invoices.</span> Auto-generate invoices from completed work orders. Include parts, services, or other cost items. ",
+                    }
+                },
+                {
+                    featureTitle: "Compliance and safety",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_6",
+                    title: "Increase safety while ",
+                    subTitle: "ensuring compliance.",
+                    featuresList: {
+                        list1: "<span>Compliance.</span> Automatically remain compliant with OSHA and CCOHS regulations.",
+                        list2: "<span>Safety alerts.</span> Send real-time safety alerts via mobile app. Keep workers compliant with regulations.",
+                        list3: "<span>Handover reports.</span> Complete inspection checklists from the app before returning equipment.",
+                    }
+                },
+                {
+                    featureTitle: "Operations and admin",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin_4",
+                    title: "Streamline asset management,",
+                    subTitle: "operations, and admin.",
+                    featuresList: {
+                        list1: "<span>Cost forecasting.</span> Track annual and lifetime expenses. Create monthly budgets based on historical data.",
+                        list2: "<span>Vendor management.</span> Store all suppliers&#8217; info and lead times. Customize PAR levels. Complete purchases.",
+                        list3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low.",
+                    }
+                }
+            ]
+        },
+        {
+            pageName: "ppc-eptura-room-management",
+            pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg",
+            logoAlt: "Eptura Logo",
+            heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp",
+            heroImgAlt: "Room management UI Image",
+            features: [
+                {
+                    featureTitle: "Meeting scheduling",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_5",
+                    title: "Streamline meeting scheduling.",
+                    subTitle: "Boost employee experience.",
+                    featuresList: {
+                        list1: "<span>Meetings.</span> Schedule in-person, virtual, or hybrid meetings. Add Zoom or Teams calls with a single click.",
+                        list2: "<span>Room services.</span> Submit audio-visual equipment requests. Order coffee, snacks, or lunch in advance.",
+                        list3: "<span>Web portal.</span> Manage all your meetings, space bookings, service requests, and more from a single platform.",
+                    }
+                },
+                {
+                    featureTitle: "Space booking",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_7",
+                    title: "Streamline workspace bookings.",
+                    subTitle: "Reduce costs by 30%.",
+                    featuresList: {
+                        list1: "<span>Desk bookings.</span> Schedule desks, parking spaces, and lockers for in-office work days directly via mobile app.",
+                        list2: "<span>Conference rooms.</span> Book meetings and conference rooms with the right equipment for your group.",
+                        list3: "<span>Rescheduling.</span> Automatically book new rooms with the same size and equipment if meetings are rescheduled.",
+                    }
+                },
+                {
+                    featureTitle: "Navigation",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_6",
+                    title: "Find the right room",
+                    subTitle: "in a fraction of the time.",
+                    featuresList: {
+                        list1: "<span>Navigation.</span> Help employees and visitors find the right room upon arrival with digital floor plans.",
+                        list2: "<span>Work orders.</span> Show technicians the exact work order location when a service request is placed.",
+                        list3: "<span>New bookings.</span> See which rooms are still available and book instantly. Filter by location & capacity.",
+                    }
+                },
+                {
+                    featureTitle: "Collaboration",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_7",
+                    title: "Simplify hybrid collaboration.",
+                    subTitle: "Increase productivity.",
+                    featuresList: {
+                        list1: "<span>Scheduling.</span> See which locations and desks your team is working at each day. Schedule time with coworkers.",
+                        list2: "<span>Teams integration.</span> Set up planned collaboration days and book workspaces directly in Microsoft Teams.",
+                        list3: "<span>Visitor management.</span> Add guests to bookings. Auto-send invites. Let visitors check in electronically.",
+                    }
+                },
+                {
+                    featureTitle: "Operations and admin",
+                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin_5",
+                    title: "Manage desk & meeting booking",
+                    subTitle: "operations in one place.",
+                    featuresList: {
+                        list1: "<span>Space planning.</span> Get a digital floor plan of rooms, desks, and tables. Drag-and-drop to optimize room capacity.",
+                        list2: "<span>Usage reports.</span> Track office usage. Adjust space as room utilization, occupancy, and expected visitors change.",
+                        list3: "<span>Service requests.</span> Let employees place service requests directly from the mobile app.",
+                    }
+                }
+            ]
+        }
     ];
 
 
