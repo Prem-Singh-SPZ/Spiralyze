@@ -244,11 +244,6 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .hero-section .hero-content .hc-tag span:last-child::after {
   display: none;
 }
-@media (max-width: 767.98px) {
-  .hero-section .hero-content .hc-tag span:nth-child(3)::after {
-    display: none;
-  }
-}
 .hero-section .hero-content .g2-img {
   margin-right: 12px;
 }
@@ -403,6 +398,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   text-align: left;
   margin-top: 8px;
   color: #fff;
+  margin-bottom: 11px;
 }
 @media (max-width: 767.98px) {
   .form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-font-element {
@@ -482,6 +478,17 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
+@media (min-width: 1281px) and (max-width: 1300px) {
+  .hero-section .hero-content {
+    max-width: 610px;
+  }
+  .hero-section .hero-content .hc-title {
+    font-size: 52px;
+  }
+  .hero-right-section {
+    max-width: 610px;
+  }
+}
 @media screen and (max-width: 1280px) {
   .hero-section .hero-content {
     text-align: center;
@@ -583,6 +590,10 @@ img {
   .hero-section .hero-container {
     position: relative;
     margin-top: 21px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   .hero-section .list-grp-wrapper .list-group {
     margin-bottom: 0;
@@ -1051,7 +1062,7 @@ img {
   position: relative;
   max-width: initial;
   width: 100%;
-  margin: 31.5px auto 0;
+  margin: 20.5px auto 0;
 }
 .form-wrapper-spz .hbspt-form form .actions .hs-button {
   font-family: "Inter", sans-serif;
@@ -1257,7 +1268,7 @@ img {
     min-width: initial;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox > .input ul li:nth-child(4) {
-    min-width: 70px;
+    min-width: 74px;
     margin-bottom: 8px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox > .input ul li:nth-child(5) {
@@ -1301,8 +1312,8 @@ img {
 }
 .social-pr-section .sp-logo-group {
   position: relative;
-  margin-top: 31px;
-  margin-bottom: 62px;
+  margin-top: 30px;
+  margin-bottom: 63px;
   width: 100%;
   height: 50px;
 }
@@ -2511,10 +2522,10 @@ img {
   font-family: "Inter", sans-serif;
   font-size: 12px;
   line-height: 18px;
-  font-weight: 300;
+  font-weight: 400;
   font-style: normal;
   letter-spacing: initial;
-  color: rgb(105, 117, 134);
+  color: #697586;
   margin: 0;
 }
 .footer-bottom .footer-legalLinks {
@@ -2535,7 +2546,7 @@ img {
 .footer-bottom .footer-legalLinks a {
   text-decoration: none;
   border-right: 1px solid rgb(5, 128, 232);
-  color: rgb(105, 117, 134);
+  color: #697586;
   font-family: "Inter", sans-serif;
   font-weight: 500;
   font-size: 14px;
@@ -2546,7 +2557,7 @@ img {
           transition-duration: 150ms;
 }
 .footer-bottom .footer-legalLinks a:hover {
-  color: #0580e8;
+  color: #96a1b2;
 }
 .footer-bottom .footer-legalLinks a:last-child {
   padding-right: 0;

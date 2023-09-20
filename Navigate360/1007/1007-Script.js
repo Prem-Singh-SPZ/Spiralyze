@@ -49,16 +49,23 @@ function load1007() {
             bodyEle.classList.add('spz-1007');
 
             waitForElm('#et-main-area #hero-section .hero-container').then(function (elm) {
-                document.querySelector('#et-main-area #hero-section .hero-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img"></div>`);
+                document.querySelector('#et-main-area #hero-section .hero-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img"></div><div class="tablet-btn-container"><a class="hero-cta spz-button" href="Javascript:void(0)" title="Get a Demo">get a demo</a></div>`);
 
-                document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.pre-header.small').textContent = `SCHOOL SAFETY SOLUTIONS`;
+                document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.pre-header.small').textContent = `SCHOOL SAFETY REDEFINED`;
 
-                document.querySelector('#et-main-area #hero-section .hero-container .hero-content h1.hero-title').innerHTML = `Navigate360 is the Leader <br>in School Safety Initiatives`;
+                document.querySelector('#et-main-area #hero-section .hero-container .hero-content h1.hero-title').innerHTML = `Navigate360 is the Leader in Comprehensive School Safety Solutions`;
 
-                document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.hero-body').textContent = `Safety training, services, and solutions for K12 schools, healthcare, workplaces and public safety agencies. `;
+                document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.hero-body').textContent = `Safety training, services, and software for K12 schools, healthcare, workplaces and public safety agencies.`;
 
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').textContent = `get a demo`;
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').setAttribute('title', `Get a Demo`);
+            });
+
+
+            window.addEventListener("click", function (e) {
+                if (e.target.classList.contains("spz-button")) {
+                    this.document.querySelector('.hero-cta.ga4_button').click();
+                }
             });
 
         }
@@ -82,7 +89,7 @@ function init1003() {
                                 <div class="splide__slide ">
                                     <div class="spz-reivew-slide">
                                         <div class="spz-review-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1008/Ashley_G.png" alt="Ashley G." />
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Ashley_G-min.png" alt="Ashley G." />
                                         </div>
                                         <div class="spz-review-content">
                                             <h4>"Keep Safety at the Forefront, Simply"</h4>
@@ -91,14 +98,17 @@ function init1003() {
                                                 <span>5.0</span>
                                             </div>
                                             <p>Navigate360 is a one-stop-shop. It is everything you need at your fingertips. Organized, transparent, easy to use.</p>
+                                            <div class="spz-review-author">
                                             <h6>Ashley G.</h6>
+                                            <p>Testimonial photo replaced upon request for privacy.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="splide__slide">
                                     <div class="spz-reivew-slide">
                                         <div class="spz-review-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1008/Bobbie_S.png" alt="Bobbie S." />
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Bobbie_s-min.png" alt="Bobbie S." />
                                         </div>
                                         <div class="spz-review-content">
                                             <h4>"One Central Location"</h4>
@@ -107,14 +117,17 @@ function init1003() {
                                                 <span>5.0</span>
                                             </div>
                                             <p>Navigate gives us one platform to compile all of our school safety documents, floor plans, policies, and all other pertinent info that would be needed during a crisis.</p>
+                                            <div class="spz-review-author">
                                             <h6>Bobbie S.</h6>
+                                            <p>Testimonial photo replaced upon request for privacy.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
                                 <div class="splide__slide">
                                     <div class="spz-reivew-slide">
                                         <div class="spz-review-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1008/Jim_J.png" alt="Jim J." />
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Jim_j-min.png" alt="Jim J." />
                                         </div>
                                         <div class="spz-review-content">
                                             <h4>"Best School Safety Software out there!"</h4>
@@ -123,7 +136,10 @@ function init1003() {
                                                 <span>5.0</span>
                                             </div>
                                             <p>I like the interface and what I can do with the data. I can manage all of my school safety information in one program and it auto loads all of my roster. The customer support is what brings it home! They host webinars, in-person conferences and is quick to call me personally to work on questions and deployment. They know me personally!</p>
+                                            <div class="spz-review-author">
                                             <h6>Jim J.</h6>
+                                            <p>Testimonial photo replaced upon request for privacy.</p>
+                                            </div>
                                         </div>
                                     </div>
                                 </div>
