@@ -1176,18 +1176,66 @@ body.spz-3010 {
   }
 
   &.ppc-eptura-asset-management {
+    #HeaderScripts.mktoText {
+      display: none !important;
+    }
     .body-wrapper {
+      #nav {
+        nav {
+          @media (max-width: 767.98px) {
+            padding: 0 30px;
+
+            #NavLogo .logo-img {
+              max-width: 86px;
+            }
+          }
+        }
+      }
       #hero {
         .hero_container {
+          @media (max-width: 767.98px) {
+            padding: 18px 0 0px !important;
+          }
           > .row {
+            > .col-md.pb-5 {
+              @media (max-width: 767.98px) {
+                padding: 0 45px 43px !important;
+              }
+            }
             #HeroText {
+              @media (max-width: 767.98px) {
+                > h6 {
+                  font-size: 14px;
+                  letter-spacing: 1.1px;
+                  line-height: 18px;
+                  margin-bottom: 12px;
+                }
+
+                > h1:not(.pt-4) {
+                  line-height: 44px;
+                  font-size: 32px;
+                  margin-bottom: 0;
+                }
+
+                > p.pt-4 {
+                  padding-top: 10px !important;
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+              }
               img {
                 max-width: 488px;
                 margin-top: -6px;
-                // @media (max-width: 767.98px) {
-                //   margin-top: 0;
-                //   max-width: 488px;
-                // }
+                @media (max-width: 767.98px) {
+                  max-width: 440px;
+                  margin-top: -1px;
+                }
+              }
+            }
+            .hero-img-tab img {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                width: 488px;
+                margin-left: 6px;
               }
             }
           }

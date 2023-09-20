@@ -49,7 +49,7 @@ function load1007() {
             bodyEle.classList.add('spz-1007');
 
             waitForElm('#et-main-area #hero-section .hero-container').then(function (elm) {
-                document.querySelector('#et-main-area #hero-section .hero-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img"></div><div class="tablet-btn-container"><a class="hero-cta spz-button" href="Javascript:void(0)" title="Get a Demo">get a demo</a></div>`);
+                document.querySelector('#et-main-area #hero-section .hero-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img"></div><div class="tablet-btn-container"><a class="hero-cta spz-button" href="Javascript:void(0)">get a demo</a></div>`);
 
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.pre-header.small').textContent = `SCHOOL SAFETY REDEFINED`;
 
@@ -58,7 +58,7 @@ function load1007() {
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content p.hero-body').textContent = `Safety training, services, and software for K12 schools, healthcare, workplaces and public safety agencies.`;
 
                 document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').textContent = `get a demo`;
-                document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').setAttribute('title', `Get a Demo`);
+                document.querySelector('#et-main-area #hero-section .hero-container .hero-content a.hero-cta.ga4_button').setAttribute('title', ``);
             });
 
 
