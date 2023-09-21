@@ -690,7 +690,7 @@
             featureEl += `<div class="tab-pane fade ` + activeClass + `" id="${element.featureTitle.replace(/\s+/g, '').replace('&', '')}" role="tabpanel" aria-labelledby="${element.featureTitle}-tab"><div class="feature-wrapper"><div class="img-wrapper"><picture>
             <source srcset="${element.featureImg}.webp" type="image/webp">
             <source srcset="${element.featureImg}.png" type="image/png"> 
-            <img src="${element.featureImg}.webp" alt="${element.title}">
+            <img src="${element.featureImg}.webp" alt="${element.title.replace('<hyph>', '').replace('</hyph>', '')} ${element.subTitle}">
             </picture></div><div class="content-wrapper"><div class="copy">
             <div class="heading">
                 <div class="independent-title">${element.title}<span> ${element.subTitle}</span></div>

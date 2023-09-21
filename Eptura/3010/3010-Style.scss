@@ -792,6 +792,7 @@ body.spz-3010 {
               width: 68px;
               height: 38px;
               z-index: 1;
+              pointer-events: none;
               @media (max-width: 767.98px) {
                 width: 30px;
               }
@@ -809,6 +810,7 @@ body.spz-3010 {
               width: 68px;
               height: 38px;
               z-index: 1;
+              pointer-events: none;
               @media (max-width: 767.98px) {
                 width: 30px;
               }
@@ -851,9 +853,9 @@ body.spz-3010 {
                 color: var(--primary-neutrals-n-1, #0d122e);
                 font-size: 13px;
                 font-style: normal;
-                font-weight: 400;
+                font-weight: 500;
                 line-height: 14px;
-                font-family: $eptura-font;
+                // font-family: $eptura-font;
                 letter-spacing: 2.6px;
                 text-transform: uppercase;
                 padding: 12px 16px;
@@ -896,6 +898,7 @@ body.spz-3010 {
 
                 .img-wrapper {
                   max-width: 556px;
+                  width: 100%;
 
                   img {
                     max-width: 100%;
@@ -985,6 +988,7 @@ body.spz-3010 {
                         span {
                           font-family: $eptura-font-bold;
                           letter-spacing: -0.2px;
+                          font-weight: 500;
                         }
 
                         @media (max-width: 1199.98px) {
@@ -1016,6 +1020,9 @@ body.spz-3010 {
                     .button-wrapper {
                       .button {
                         padding-left: 72px;
+                        @media (max-width: 1199.98px) {
+                          padding-left: 0;
+                        }
 
                         .get-started-cta {
                           height: 50px;

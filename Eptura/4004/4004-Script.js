@@ -74,7 +74,7 @@
         waitForElm('#nav #NavLogo #logo-img').then(function () {
             pageContent.forEach(function (url) {
                 if (identifyPage == url.pageName) {
-                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a href="https://eptura.com/" target="_blank"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></a></div>`);
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
                 }
             })
         });
