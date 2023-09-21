@@ -323,7 +323,7 @@
             features: [
                 {
                     featureTitle: "Meeting scheduling",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_5",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-meeting_scheduling",
                     title: "Streamline meeting scheduling.",
                     subTitle: "Boost employee experience.",
                     featuresList: {
@@ -345,7 +345,7 @@
                 },
                 {
                     featureTitle: "Navigation",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_6",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-navigation",
                     title: "Find the right room",
                     subTitle: "in a fraction of the time.",
                     featuresList: {
@@ -356,7 +356,7 @@
                 },
                 {
                     featureTitle: "Collaboration",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_7",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-collaboration",
                     title: "Simplify hybrid collaboration.",
                     subTitle: "Increase productivity.",
                     featuresList: {
@@ -367,7 +367,7 @@
                 },
                 {
                     featureTitle: "Operations and admin",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin_5",
+                    featureImg: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3010/img-operations_and_admin_4",
                     title: "Manage desk & meeting booking",
                     subTitle: "operations in one place.",
                     featuresList: {

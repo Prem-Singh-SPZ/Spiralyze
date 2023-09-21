@@ -248,6 +248,7 @@ body.spz-3010 {
                 line-height: 20px;
                 margin-bottom: 0;
                 padding-top: 0 !important;
+                padding-left: 0;
               }
             }
 
@@ -1236,6 +1237,92 @@ body.spz-3010 {
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 width: 488px;
                 margin-left: 6px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.ppc-eptura-room-management {
+    #HeaderScripts.mktoText {
+      display: none !important;
+    }
+    .body-wrapper {
+      #nav {
+        nav {
+          @media (max-width: 767.98px) {
+            padding: 0 30px;
+
+            #NavLogo .logo-img {
+              max-width: 86px;
+            }
+          }
+        }
+      }
+      #hero {
+        .hero_container {
+          @media (min-width: 1199.98px) {
+            padding-bottom: 97px !important;
+          }
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            padding: 24px 100px 48px !important;
+          }
+          @media (max-width: 767.98px) {
+            padding-top: 16px !important;
+          }
+          > .row {
+            > .col-md.pb-5 {
+              @media (min-width: 1199.98px) {
+                min-width: 621px;
+                max-width: 621px;
+              }
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                padding: 0 0 31px !important;
+              }
+              @media (max-width: 767.98px) {
+                padding: 0 45px 43px !important;
+              }
+            }
+            #HeroText {
+              @media (max-width: 767.98px) {
+                > h6 {
+                  font-size: 14px;
+                  letter-spacing: 1.1px;
+                  line-height: 18px;
+                  margin-bottom: 12px;
+                  @media (max-width: 423.98px) {
+                    max-width: 220px;
+                  }
+                }
+
+                > h1:not(.pt-4) {
+                  line-height: 44px;
+                  font-size: 32px;
+                  margin-bottom: 0;
+                }
+
+                > p.pt-4 {
+                  padding-top: 10px !important;
+                  font-size: 14px;
+                  line-height: 20px;
+                }
+              }
+              img {
+                max-width: 495px;
+                margin-top: 3px;
+
+                @media (max-width: 767.98px) {
+                  max-width: 422px;
+                  margin-top: 2px;
+                }
+              }
+            }
+            .hero-img-tab {
+              img {
+                width: 476px;
+                height: 256px;
               }
             }
           }
