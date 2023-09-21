@@ -167,6 +167,7 @@ body.spz-3010 {
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               height: 48px;
               max-width: initial;
+              width: auto;
             }
             @media (max-width: 767.98px) {
               max-width: 81px;
@@ -206,6 +207,7 @@ body.spz-3010 {
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               padding: 0 0 31px !important;
               display: flex;
+              display: -webkit-box;
               max-width: 768px;
               margin: auto;
               align-items: center;
@@ -645,10 +647,11 @@ body.spz-3010 {
 
                     .mktoButtonWrap {
                       button.mktoButton {
+                        all: initial;
                         display: flex;
                         width: 140px !important;
                         height: 50px !important;
-                        padding: 0px 8px !important;
+                        padding: 0px !important;
                         justify-content: center;
                         align-items: center;
                         border-radius: 3px !important;

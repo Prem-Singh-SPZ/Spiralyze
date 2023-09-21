@@ -171,6 +171,7 @@ body.spz-3010 .body-wrapper #nav nav #NavLogo .logo-img {
   body.spz-3010 .body-wrapper #nav nav #NavLogo .logo-img {
     height: 48px;
     max-width: initial;
+    width: auto;
   }
 }
 @media (max-width: 767.98px) {
@@ -219,9 +220,9 @@ body.spz-3010 .body-wrapper #hero .hero_container > .row {
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-3010 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
     padding: 0 0 31px !important;
-    display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    display: -webkit-box;
     max-width: 768px;
     margin: auto;
     -webkit-box-align: center;
@@ -609,12 +610,13 @@ body.spz-3010 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   text-align: center;
 }
 body.spz-3010 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+  all: initial;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 140px !important;
   height: 50px !important;
-  padding: 0px 8px !important;
+  padding: 0px !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
