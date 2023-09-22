@@ -32,13 +32,13 @@ body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container
 @media (max-width: 767.98px) {
   body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container {
     max-width: 328px;
-    padding: 48px 0px 209px 0px;
+    padding: 48px 0px 64px 0px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 991.98px) {
   body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container {
     max-width: 672px;
-    padding: 48px 0px 208px 0px;
+    padding: 48px 0px 80px 0px;
   }
 }
 @media (min-width: 991.98px) {
@@ -157,6 +157,11 @@ body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   position: relative;
   margin-bottom: 9px;
 }
+@media (max-width: 991.98px) {
+  body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .social-proof .rating {
+    margin-bottom: 16px;
+  }
+}
 body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .social-proof .rating .stars {
   height: 22px;
   margin-right: 8px;
@@ -177,6 +182,12 @@ body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   right: 53px;
   top: -7px;
 }
+@media (max-width: 767.98px) {
+  body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .social-proof .rating::before {
+    right: -1px;
+    top: -8px;
+  }
+}
 body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .social-proof .rating::after {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1695380482/Jack%20Henry/2002/faded-border.svg);
   position: absolute;
@@ -184,6 +195,12 @@ body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container
   top: 3px;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
+}
+@media (max-width: 767.98px) {
+  body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .social-proof .rating::after {
+    left: -1px;
+    top: 2px;
+  }
 }
 body.spz-2002 > #hs_cos_wrapper_flexible_column .contact-form-section .container .spz-hero-section .social-proof.desktop .proud-to-be-recognized-as-an-industry-leader {
   color: var(--primary-legacy-navy-base, #06185f);
@@ -737,6 +754,16 @@ body.spz-2002 > .spz-four-cards {
   position: relative;
   padding: 80px 0 28px;
 }
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-2002 > .spz-four-cards {
+    padding: 80px 0 5px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-2002 > .spz-four-cards {
+    padding: 64px 0 0;
+  }
+}
 body.spz-2002 > .spz-four-cards .four-cards-container {
   position: relative;
   display: -webkit-box;
@@ -807,6 +834,7 @@ body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-
 }
 @media (max-width: 991.98px) and (max-width: 767.98px) {
   body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-child(1), body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-child(2) {
+    height: 312px;
     min-height: 312px;
     max-width: 328px;
   }
@@ -818,6 +846,7 @@ body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-
 }
 @media (max-width: 991.98px) and (max-width: 767.98px) {
   body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-child(2) {
+    height: 196px;
     max-width: 328px;
     min-height: 196px;
   }
@@ -829,6 +858,7 @@ body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-
 }
 @media (max-width: 991.98px) and (max-width: 767.98px) {
   body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-child(3), body.spz-2002 > .spz-four-cards .four-cards-container .contact-card-wrapper:nth-child(4) {
+    height: 172px;
     max-width: 328px;
     min-height: 172px;
     margin-bottom: 16px !important;

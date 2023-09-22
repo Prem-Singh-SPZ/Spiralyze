@@ -32,12 +32,12 @@ body.spz-2002 {
 
       @media (max-width: 767.98px) {
         max-width: 328px;
-        padding: 48px 0px 209px 0px;
+        padding: 48px 0px 64px 0px;
       }
 
       @media (min-width: 767.98px) and (max-width: 991.98px) {
         max-width: 672px;
-        padding: 48px 0px 208px 0px;
+        padding: 48px 0px 80px 0px;
       }
       @media (min-width: 991.98px) {
         max-width: 94%;
@@ -124,6 +124,10 @@ body.spz-2002 {
             position: relative;
             margin-bottom: 9px;
 
+            @media (max-width: 991.98px) {
+              margin-bottom: 16px;
+            }
+
             .stars {
               height: 22px;
               margin-right: 8px;
@@ -145,6 +149,10 @@ body.spz-2002 {
               position: absolute;
               right: 53px;
               top: -7px;
+              @media (max-width: 767.98px) {
+                right: -1px;
+                top: -8px;
+              }
             }
             &::after {
               content: url(//res.cloudinary.com/spiralyze/image/upload/v1695380482/Jack%20Henry/2002/faded-border.svg);
@@ -152,6 +160,10 @@ body.spz-2002 {
               left: 53px;
               top: 3px;
               transform: rotate(180deg);
+              @media (max-width: 767.98px) {
+                left: -1px;
+                top: 2px;
+              }
             }
           }
 
@@ -789,7 +801,12 @@ body.spz-2002 {
     @media (min-width: 767.98px) and (max-width: 991.98px) {
       // height: 400px;
       // box-shadow: 0px 12px 80px 0px rgba(10, 56, 133, 0.04);
+      padding: 80px 0 5px;
     }
+    @media (max-width: 767.98px) {
+      padding: 64px 0 0;
+    }
+
     .four-cards-container {
       position: relative;
       // top: -172px;
@@ -839,6 +856,7 @@ body.spz-2002 {
             height: 324px;
             margin-bottom: 16px !important;
             @media (max-width: 767.98px) {
+              height: 312px;
               min-height: 312px;
               max-width: 328px;
             }
@@ -846,6 +864,7 @@ body.spz-2002 {
           &:nth-child(2) {
             margin-right: 0;
             @media (max-width: 767.98px) {
+              height: 196px;
               max-width: 328px;
               min-height: 196px;
             }
@@ -854,6 +873,8 @@ body.spz-2002 {
           &:nth-child(4) {
             height: 176px;
             @media (max-width: 767.98px) {
+              height: 172px;
+
               max-width: 328px;
               min-height: 172px;
               margin-bottom: 16px !important;
