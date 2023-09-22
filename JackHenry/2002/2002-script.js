@@ -46,7 +46,7 @@
                                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-2.png" alt="IDC Fintech rankings 2022"/>
                             </div>
                             <div class="badge">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-3.png" alt="Fintech breakthrough award 2022"/>
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Jack%20Henry/2001/assets/badge-3.png" alt="Fintech breakthrough award 2023"/>
                             </div>
                         </div>
                     </div>`);
