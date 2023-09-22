@@ -22,6 +22,12 @@ body {
       .hero_container.page_padding {
         padding-top: 0 !important;
         padding-bottom: 0 !important;
+        max-width: 1290px;
+
+        @media (max-width: 1199.98px) {
+          padding: 0 47px;
+        }
+
         @media (max-width: 767.98px) {
           padding: 0 15px;
         }
@@ -30,6 +36,7 @@ body {
           align-items: center;
           justify-content: center;
           min-height: 100vh;
+          flex-flow: row-reverse;
 
           @media (max-height: 670px) {
             align-items: flex-start;
@@ -40,26 +47,35 @@ body {
 
           //Hero form content
           #HeroFormCol {
-            max-width: 568px;
-            padding: 16px 46px 50px 46px !important;
+            display: flex !important;
+            align-items: center;
+            max-width: 100%;
+            padding: 0 !important;
             border-radius: 8px;
-            background: var(--primary-neutrals-w, #fff);
+            background: #0d122e;
             box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
             margin: 24px 0;
 
             @media (max-width: 767.98px) {
               max-width: 330px;
               width: 100%;
-              padding: 16px 20px 31px !important;
-            }
-
-            .spz-logo {
-              text-align: center;
+              // padding: 16px 20px 31px !important;
             }
 
             #HeroFormPanel {
-              background-color: transparent !important;
-              padding: 40px 0 0 0;
+              background-color: #fff !important;
+              padding: 16px 46px 52px 46px;
+              max-width: 573px;
+              border-radius: 8px 0 0 8px;
+
+              @media (max-width: 1199.98px) {
+                max-width: 51.137%;
+                padding: 16px 20px 32px 20px;
+              }
+
+              .spz-logo {
+                text-align: center;
+              }
 
               @media (max-width: 767.98px) {
                 max-width: 424px;
@@ -97,6 +113,10 @@ body {
                       min-height: auto;
                       margin: 0 !important;
                       padding: 0 10px !important;
+
+                      @media (max-width: 1199.98px) {
+                        width: 100% !important;
+                      }
 
                       .mktoFieldWrap {
                         position: relative;
@@ -473,115 +493,75 @@ body {
               //Form CSS ends here
             }
 
-            .spz-social-section {
-              .social-section-title {
-                color: var(--primary-neutrals-n-1, #0d122e);
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 20px; /* 142.857% */
-                padding-top: 38px;
-                margin-bottom: 24px;
-                text-align: center;
-                position: relative;
-
-                @media (max-width: 1199.98px) {
-                  padding-top: 8px;
-                  margin-bottom: 12px;
-                }
-
-                &::before {
-                  content: "";
-                  width: 131px;
-                  height: 1px;
-                  opacity: 0.3;
-                  background: #babfcb;
-                  display: block;
-                  position: absolute;
-                  left: 0;
-                  bottom: 9px;
-
-                  @media (max-width: 1600px) {
-                    width: 103px;
-                  }
-
-                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                    width: calc(50% - 149px);
-                  }
-
-                  @media (max-width: 767.98px) {
-                    width: 0;
-                    display: none;
-                  }
-                }
-
-                &::after {
-                  content: "";
-                  width: 131px;
-                  height: 1px;
-                  opacity: 0.3;
-                  background: #babfcb;
-                  display: block;
-                  position: absolute;
-                  right: 0;
-                  bottom: 9px;
-
-                  @media (max-width: 1600px) {
-                    width: 103px;
-                  }
-
-                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                    width: calc(50% - 149px);
-                  }
-
-                  @media (max-width: 767.98px) {
-                    width: 0;
-                    display: none;
-                  }
-                }
+            //right content css
+            .spz-left-content {
+              background: #0d122e;
+              @media (min-width: 1199.98px) {
+                min-width: 530px;
               }
 
-              @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                margin-top: auto;
-              }
-            }
-
-            .social-logo-section {
-              display: flex;
-              justify-content: space-between;
-              align-items: center;
-              flex-wrap: wrap;
-              padding: 0 20px;
-              opacity: 0.7;
-
-              @media (min-width: 1600px) {
-                padding: 0 36px;
-              }
-
-              @media (max-width: 1199.98px) {
-                padding: 0 22px;
-              }
-              @media (max-width: 767.98px) {
-                padding: 0 4px;
-              }
-
-              > .logo-img {
-                width: 33.33%;
-                padding: 0 16px;
-                text-align: center;
-                margin-bottom: 10px;
-
-                @media (max-width: 1199.98px) {
-                  padding: 0 12px;
-                  margin-bottom: 0px;
-                }
-
-                img {
-                  // max-width: 100px;
-                  height: auto;
+              .left-wrapper {
+                .copy {
+                  padding: 0px 56px;
 
                   @media (max-width: 1199.98px) {
-                    max-width: 100%;
+                    padding: 24px 30px;
+                  }
+
+                  .heading {
+                    margin-bottom: 24px;
+
+                    > div:not(.subtitle) {
+                      color: #26a199;
+                      // font-family: Eptura Flexible;
+                      font-size: 13px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: 14px;
+                      letter-spacing: 2.6px;
+                      text-transform: uppercase;
+                      margin-bottom: 12px;
+                    }
+
+                    .subtitle {
+                      color: #f6fafa;
+                      // font-family: Eptura Flexible;
+                      font-size: 32px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 40px;
+
+                      span {
+                        color: #26a199;
+                      }
+                    }
+                  }
+
+                  .bullets {
+                    padding-left: 40px;
+
+                    .bullet {
+                      margin-bottom: 16px;
+                      .bullet-title {
+                        color: #f6fafa;
+                        // font-family: Eptura Flexible;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 26px;
+                        margin-bottom: 4px;
+                      }
+
+                      .bullet-content {
+                        color: #f6fafa;
+                        // font-family: Eptura Flexible;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 26px;
+                        opacity: 0.9;
+                      }
+                    }
                   }
                 }
               }
@@ -603,26 +583,38 @@ body {
   }
 
   // Page Specific Css
-  &.website-proxyclick-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.webp);
+  &.ppc-proxyclick-discover-a-better-way-to-check-in-visitors {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_1440.webp);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 
-    @media (max-width: 574.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.webp);
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.webp);
+      background-position: bottom;
+      background-size: cover;
+    }
+
+    @media (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.webp);
       background-position: bottom;
       background-size: cover;
     }
 
     &.safari {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.png);
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_1440.png);
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
 
-      @media (max-width: 574.98px) {
-        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.png);
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.png);
+        background-position: bottom;
+        background-size: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.png);
         background-position: bottom;
         background-size: cover;
       }

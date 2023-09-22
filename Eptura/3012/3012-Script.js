@@ -1,13 +1,21 @@
 (function () {
-    document.body.classList.add('spz-4004');
+    document.body.classList.add('spz-3012');
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.querySelector('body').classList.add(identifyPage);
 
 
     const pageContent = [{
-        pageName: "website-proxyclick-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694619471/eptura/4004/logo-proxyclick.svg",
+        pageName: "ppc-proxyclick-discover-a-better-way-to-check-in-visitors",
+        pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293167/eptura/3012/endorsed_logos.svg",
         logoAlt: "Proxyclick Demo",
+        title: "VISiTOR MANAGEMENT SOFTWARE",
+        subtitle: "Make the visitor check-in experience <span>50% faster</span> while improving security",
+        lisTitle1: "Visitor check-in.",
+        listContent1: "Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
+        lisTitle2: "Security & compliance.",
+        listContent2: "Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
+        lisTitle3: "Integrations.",
+        listContent3: "Sync data with internal access and security systems. Automated email or Slack notifications.",
     },
     {
         pageName: "website-managerplus-demo",
@@ -34,7 +42,7 @@
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
         clearFormFields();
-        document.body.classList.add('spz-4004');
+        document.body.classList.add('spz-3012');
         loadTest();
     });
 
@@ -84,7 +92,29 @@
         waitForElm('#nav #NavLogo #logo-img').then(function () {
             pageContent.forEach(function (url) {
                 if (identifyPage == url.pageName) {
-                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol #HeroFormPanel').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
+
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `<div class="spz-left-content"><div class="left-wrapper"><div class="copy">
+                    <div class="heading">
+                    <div>`+ url.title + `</div>
+                    <div class="subtitle">
+                    `+ url.subtitle + `
+                    </div>
+                    </div>
+                    <div class="bullets">
+                    <div class="bullet">
+                    <div class="bullet-title">`+ url.lisTitle1 + `</div>
+                    <div class="bullet-content">`+ url.listContent1 + `</div>
+                    </div>
+                    <div class="bullet">
+                    <div class="bullet-title">`+ url.lisTitle2 + `</div>
+                    <div class="bullet-content">`+ url.listContent2 + `</div>
+                    </div>
+                    <div class="bullet">
+                    <div class="bullet-title">`+ url.lisTitle3 + `</div>
+                    <div class="bullet-content">`+ url.listContent3 + `</div>
+                    </div>
+                    </div></div>`);
                 }
             })
         });
@@ -113,8 +143,8 @@
             document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Request a demo</h6>';
         }
 
-        // document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
-        // document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
+        document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
+        document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
         // document.querySelector('body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').innerText = 'If you consent to us contacting you, please tick below to confirm you would like us to contact you:';
 
