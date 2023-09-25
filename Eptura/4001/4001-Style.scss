@@ -3,6 +3,18 @@ $eptura-font: "Eptura Flexible", Arial, sans-serif;
 body.spz-4001 {
   // background-color: #fff;
 
+  &.content-wrapped {
+    .body-wrapper {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+
+      & > .d-flex.flex-column {
+        margin-top: auto;
+      }
+    }
+  }
+
   #HeaderScripts.mktoText {
     display: none !important;
   }

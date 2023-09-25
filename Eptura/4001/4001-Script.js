@@ -866,6 +866,7 @@
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
         document.body.classList.add('spz-4001');
+        document.body.classList.add('content-wrapped');
         clearFormFields();
         loadTest();
     });
@@ -915,6 +916,7 @@
 
             if (e.target.classList.contains("load-more-btn")) {
                 e.target.classList.add('d-none');
+                document.body.classList.remove('content-wrapped');
                 this.document.querySelector('.spz-rest-all-section').classList.remove('hidden-secttion');
                 scrollToElement('.features-3-col-icon', 50);
             }

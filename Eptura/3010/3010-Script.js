@@ -7,6 +7,7 @@
     const pageData = [
         {
             pageName: "ppc-proxyclick-discover-a-better-way-to-check-in-visitors",
+            pageShortName: "Proxyclick",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/endorsed_logos.webp",
             logoAlt: "Proxyclick Logo",
             heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/proxyclick-ui_2.webp",
@@ -71,6 +72,7 @@
         },
         {
             pageName: "ppc-archibus-maintenance-software",
+            pageShortName: "Archibus",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_3.webp",
             logoAlt: "Archibus Logo",
             heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/archibus-ui_1.webp",
@@ -124,6 +126,7 @@
         },
         {
             pageName: "ppc-eptura",
+            pageShortName: "Eptura",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg",
             logoAlt: "Eptura Logo",
             heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/eptura-demo-ui.webp",
@@ -188,6 +191,7 @@
         },
         {
             pageName: "ppc-condeco-make-your-flexible-office-work-better",
+            pageShortName: "Condeco",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/endorsed_logos_2.webp",
             logoAlt: "Condeco Logo",
             heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3001/condeco-ui_1.webp",
@@ -252,6 +256,7 @@
         },
         {
             pageName: "ppc-eptura-asset-management",
+            pageShortName: "Asset Management",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg",
             logoAlt: "Eptura Logo",
             heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/asset-management-ui_1.webp",
@@ -316,6 +321,7 @@
         },
         {
             pageName: "ppc-eptura-room-management",
+            pageShortName: "Room Management",
             pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg",
             logoAlt: "Eptura Logo",
             heroImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp",
@@ -686,11 +692,10 @@
         pageData[searchIndex].features.forEach((element, index) => {
             const activeClass = index == 0 ? "show active" : "";
 
-
             featureEl += `<div class="tab-pane fade ` + activeClass + `" id="${element.featureTitle.replace(/\s+/g, '').replace('&', '')}" role="tabpanel" aria-labelledby="${element.featureTitle}-tab"><div class="feature-wrapper"><div class="img-wrapper"><picture>
             <source srcset="${element.featureImg}.webp" type="image/webp">
             <source srcset="${element.featureImg}.png" type="image/png"> 
-            <img src="${element.featureImg}.webp" alt="${element.title.replace('<hyph>', '').replace('</hyph>', '')} ${element.subTitle}">
+            <img src="${element.featureImg}.webp" alt="${pageData[searchIndex].pageShortName} ${element.featureTitle}">
             </picture></div><div class="content-wrapper"><div class="copy">
             <div class="heading">
                 <div class="independent-title">${element.title}<span> ${element.subTitle}</span></div>
