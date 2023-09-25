@@ -5,7 +5,10 @@
             if (document.querySelectorAll('.hbspt-form form .hs-label-spz').length > 0) {
                 clearInterval(pageInt);
                 moveElement('.hero-section', '#main-content');
-                appendSections();
+
+                if(document.querySelectorAll('.feature-section').length == 0){
+                    appendSections();
+                }
 
                 document.querySelector('.footer-cookie').addEventListener("click", function (e) {
                     document.querySelector('.osano-cm-window__widget').click();
