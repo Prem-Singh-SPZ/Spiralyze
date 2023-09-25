@@ -913,6 +913,7 @@
             if (e.target.classList.contains("load-more-btn")) {
                 e.target.classList.add('d-none');
                 this.document.querySelector('.spz-rest-all-section').classList.remove('hidden-secttion');
+                scrollToElement('.features-3-col-icon', 50);
             }
 
             if (e.target.classList.contains("get-started-cta")) {

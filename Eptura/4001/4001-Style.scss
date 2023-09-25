@@ -1,7 +1,7 @@
 $eptura-font: "Eptura Flexible", Arial, sans-serif;
 
 body.spz-4001 {
-  background-color: #fff;
+  // background-color: #fff;
 
   #HeaderScripts.mktoText {
     display: none !important;
@@ -56,6 +56,12 @@ body.spz-4001 {
           // align-items: center;
           padding-top: 48px;
           padding-bottom: 48px;
+
+          @media (min-width: 1900.98px) {
+            padding-top: 124px;
+            padding-bottom: 213px;
+          }
+
           @media (max-width: 1199.98px) {
             flex-direction: column;
             padding-bottom: 24px;
@@ -734,6 +740,11 @@ body.spz-4001 {
         #TestimonialTxt {
           padding-top: 17px !important;
           padding-bottom: 7px;
+
+          @media (min-width: 1900.98px) {
+            padding-top: 48px !important;
+          }
+
           h3 {
             font-size: 18px;
             font-style: normal;
@@ -750,6 +761,10 @@ body.spz-4001 {
 
         #TestimonialImg {
           padding-bottom: 16px !important;
+
+          @media (min-width: 1900.98px) {
+            padding-bottom: 48px !important;
+          }
 
           @media (max-width: 767.98px) {
             display: block !important;
@@ -803,6 +818,7 @@ body.spz-4001 {
     //Rest all section css starts
     .spz-rest-all-section {
       //Feature section
+      background-color: #fff;
 
       &.hidden-secttion {
         height: 0;
@@ -1720,6 +1736,11 @@ body.spz-4001 {
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+
+        @media (min-width: 1900.98px) {
+          background-position: top;
+          background-size: 100%;
+        }
 
         @media (min-width: 767.98px) and (max-width: 1023.98px) {
           background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/BG_Images/BG-IMG-Proxyclick-768-min.jpg);
