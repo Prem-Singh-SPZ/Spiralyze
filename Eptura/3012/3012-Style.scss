@@ -54,18 +54,19 @@ body {
             border-radius: 8px;
             background: #0d122e;
             box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
-            margin: 24px 0;
+            margin: 16px 0;
 
             @media (max-width: 767.98px) {
-              max-width: 330px;
+              flex-direction: column;
+              max-width: 328px;
               width: 100%;
               // padding: 16px 20px 31px !important;
             }
 
             #HeroFormPanel {
               background-color: #fff !important;
-              padding: 16px 46px 52px 46px;
-              max-width: 573px;
+              padding: 16px 46px 49px 46px;
+              max-width: 568px;
               border-radius: 8px 0 0 8px;
 
               @media (max-width: 1199.98px) {
@@ -75,12 +76,17 @@ body {
 
               .spz-logo {
                 text-align: center;
+                margin-bottom: 40px;
+                @media (max-width: 1199.98px) {
+                  margin-bottom: 32px;
+                }
               }
 
               @media (max-width: 767.98px) {
                 max-width: 424px;
                 margin: auto;
-                padding: 32px 0 0 0;
+                padding: 16px 14px 31px 14px;
+                border-radius: 8px 8px 0 0;
               }
 
               #HeroFormTitleText {
@@ -96,7 +102,7 @@ body {
                   letter-spacing: 0;
                   margin-bottom: 24px;
 
-                  @media (max-width: 767.98px) {
+                  @media (max-width: 1199.98px) {
                     font-size: 26px;
                     line-height: 34px;
                     margin-bottom: 20px;
@@ -381,7 +387,7 @@ body {
                         span {
                           padding-right: 5px;
                         }
-                        @media (max-width: 767.98px) {
+                        @media (max-width: 1199.98px) {
                           padding: 0;
                           margin-bottom: 26px;
                         }
@@ -434,12 +440,16 @@ body {
                           transform: translate(0, 1px);
                         }
 
-                        @media (max-width: 767.98px) {
+                        @media (max-width: 1199.98px) {
                           margin-top: 22px !important;
                           height: 56px !important;
                           padding: 0px 32px;
-                          width: 270px !important;
-                          max-width: 270px !important;
+                          width: 300px !important;
+                          max-width: 300px !important;
+                        }
+
+                        @media (max-width: 767.98px) {
+                          max-width: 280px !important;
                         }
                       }
                     }
@@ -449,12 +459,12 @@ body {
                   .spz-email {
                     .mktoFieldWrap {
                       margin-top: 19px;
-                      @media (max-width: 767.98px) {
+                      @media (max-width: 1023.98px) {
                         margin-top: 24px;
                       }
                       .mktoHtmlText.mktoHasWidth {
                         text-align: center;
-                        @media (max-width: 767.98px) {
+                        @media (max-width: 1023.98px) {
                           line-height: 0;
                         }
                         em {
@@ -468,7 +478,7 @@ body {
                           }
 
                           .mobile-only {
-                            @media (min-width: 767.98px) {
+                            @media (min-width: 1023.98px) {
                               display: none;
                             }
                           }
@@ -496,31 +506,54 @@ body {
             //right content css
             .spz-left-content {
               background: #0d122e;
+
+              @media (max-width: 767.98px) {
+                border-radius: 0 0 8px 8px;
+              }
+
               @media (min-width: 1199.98px) {
                 min-width: 530px;
               }
 
               .left-wrapper {
                 .copy {
-                  padding: 0px 56px;
+                  padding: 18px 56px 0;
 
                   @media (max-width: 1199.98px) {
-                    padding: 24px 30px;
+                    padding: 24px 30px 9px;
+                  }
+
+                  @media (max-width: 767.98px) {
+                    padding: 40px 24px 23px;
                   }
 
                   .heading {
                     margin-bottom: 24px;
 
+                    @media (max-width: 1199.98px) {
+                      margin-bottom: 33px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      margin-bottom: 25px;
+                    }
+
                     > div:not(.subtitle) {
                       color: #26a199;
-                      // font-family: Eptura Flexible;
+                      font-family: $eptura-font;
                       font-size: 13px;
                       font-style: normal;
                       font-weight: 500;
                       line-height: 14px;
-                      letter-spacing: 2.6px;
+                      letter-spacing: 2.7px;
                       text-transform: uppercase;
                       margin-bottom: 12px;
+
+                      @media (max-width: 1199.98px) {
+                        font-size: 12px;
+                        line-height: 13px;
+                        letter-spacing: 2.5px;
+                      }
                     }
 
                     .subtitle {
@@ -534,22 +567,55 @@ body {
                       span {
                         color: #26a199;
                       }
+
+                      hyph {
+                        white-space: nowrap;
+                      }
+
+                      .mob-tab {
+                        @media (min-width: 1199.98px) {
+                          display: none;
+                        }
+                      }
+
+                      @media (max-width: 1199.98px) {
+                        font-size: 26px;
+                        line-height: 34px;
+                      }
                     }
                   }
 
                   .bullets {
-                    padding-left: 40px;
+                    padding-left: 36px;
 
                     .bullet {
                       margin-bottom: 16px;
+                      position: relative;
+
+                      &::before {
+                        content: "";
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/v1690976851/eptura/3002/checkmark-icon.svg);
+                        background-repeat: no-repeat;
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        position: absolute;
+                        left: -36px;
+                        top: 0;
+                        @media (max-width: 767.98px) {
+                          left: -36px;
+                        }
+                      }
+
                       .bullet-title {
                         color: #f6fafa;
-                        // font-family: Eptura Flexible;
+                        font-family: $eptura-font;
                         font-size: 18px;
                         font-style: normal;
                         font-weight: 500;
                         line-height: 26px;
                         margin-bottom: 4px;
+                        letter-spacing: 0.15px;
                       }
 
                       .bullet-content {
@@ -591,13 +657,13 @@ body {
 
     @media (min-width: 767.98px) and (max-width: 1199.98px) {
       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.webp);
-      background-position: bottom;
+      background-position: top;
       background-size: cover;
     }
 
     @media (max-width: 767.98px) {
       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.webp);
-      background-position: bottom;
+      background-position: top;
       background-size: cover;
     }
 
@@ -609,118 +675,204 @@ body {
 
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
         background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.png);
-        background-position: bottom;
+        background-position: top;
         background-size: cover;
       }
 
       @media (max-width: 767.98px) {
         background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.png);
-        background-position: bottom;
+        background-position: top;
         background-size: cover;
       }
     }
   }
 
-  &.website-managerplus-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.webp);
+  &.ppc-archibus-maintenance-software {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_1440.webp);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 
-    @media (max-width: 574.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.webp);
-      background-position: bottom;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_768.webp);
+      background-position: top;
+      background-size: cover;
+    }
+
+    @media (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_360.webp);
+      background-position: top;
       background-size: cover;
     }
 
     &.safari {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.png);
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_1440.png);
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
 
-      @media (max-width: 574.98px) {
-        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.png);
-        background-position: bottom;
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_768.png);
+        background-position: top;
+        background-size: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_360.png);
+        background-position: top;
         background-size: cover;
       }
     }
   }
 
-  &.website-archibus-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.webp);
+  &.ppc-eptura {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_1440.webp);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 
-    @media (max-width: 574.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.webp);
-      background-position: bottom;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_768.webp);
+      background-position: top;
+      background-size: cover;
+    }
+
+    @media (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_360.webp);
+      background-position: top;
       background-size: cover;
     }
 
     &.safari {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.png);
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_1440.png);
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
 
-      @media (max-width: 574.98px) {
-        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.png);
-        background-position: bottom;
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_768.png);
+        background-position: top;
+        background-size: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_360.png);
+        background-position: top;
         background-size: cover;
       }
     }
   }
 
-  &.website-spaceiq-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.webp);
+  &.ppc-condeco-make-your-flexible-office-work-better {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_1440.webp);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 
-    @media (max-width: 574.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.webp);
-      background-position: bottom;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_768.webp);
+      background-position: top;
       background-size: cover;
     }
 
+    @media (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_360.webp);
+      background-position: top;
+      background-size: 100%;
+    }
+
     &.safari {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.png);
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_1440.png);
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
 
-      @media (max-width: 574.98px) {
-        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.png);
-        background-position: bottom;
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_768.png);
+        background-position: top;
         background-size: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_360.png);
+        background-position: top;
+        background-size: 100%;
       }
     }
   }
 
-  &.website-ioffice-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.webp);
+  &.ppc-eptura-asset-management {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_1440.webp);
     background-repeat: no-repeat;
     background-position: left top;
     background-size: cover;
 
-    @media (max-width: 574.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.webp);
-      background-position: bottom;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_768.webp);
+      background-position: top;
       background-size: cover;
     }
 
+    @media (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_360.webp);
+      background-position: top;
+      background-size: 100%;
+    }
+
     &.safari {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.png);
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_1440.png);
       background-repeat: no-repeat;
       background-position: left top;
       background-size: cover;
 
-      @media (max-width: 574.98px) {
-        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.png);
-        background-position: bottom;
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_768.png);
+        background-position: top;
         background-size: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_360.png);
+        background-position: top;
+        background-size: 100%;
+      }
+    }
+  }
+
+  &.ppc-eptura-room-management {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_1440.webp);
+    background-repeat: no-repeat;
+    background-position: left top;
+    background-size: cover;
+
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_768.webp);
+      background-position: top;
+      background-size: cover;
+    }
+
+    @media (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_360.webp);
+      background-position: top;
+      background-size: 100%;
+    }
+
+    &.safari {
+      background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_1440.png);
+      background-repeat: no-repeat;
+      background-position: left top;
+      background-size: cover;
+
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_768.png);
+        background-position: top;
+        background-size: cover;
+      }
+
+      @media (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_360.png);
+        background-position: top;
+        background-size: 100%;
       }
     }
   }

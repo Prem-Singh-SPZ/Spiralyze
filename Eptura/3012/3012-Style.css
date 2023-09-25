@@ -68,18 +68,22 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
   background: #0d122e;
   -webkit-box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
-  margin: 24px 0;
+  margin: 16px 0;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
-    max-width: 330px;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 328px;
     width: 100%;
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
   background-color: #fff !important;
-  padding: 16px 46px 52px 46px;
-  max-width: 573px;
+  padding: 16px 46px 49px 46px;
+  max-width: 568px;
   border-radius: 8px 0 0 8px;
 }
 @media (max-width: 1199.98px) {
@@ -90,12 +94,19 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel .spz-logo {
   text-align: center;
+  margin-bottom: 40px;
+}
+@media (max-width: 1199.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel .spz-logo {
+    margin-bottom: 32px;
+  }
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
     max-width: 424px;
     margin: auto;
-    padding: 32px 0 0 0;
+    padding: 16px 14px 31px 14px;
+    border-radius: 8px 8px 0 0;
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
@@ -111,7 +122,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   letter-spacing: 0;
   margin-bottom: 24px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
     font-size: 26px;
     line-height: 34px;
@@ -340,7 +351,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
   padding-right: 5px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
     padding: 0;
     margin-bottom: 26px;
@@ -388,19 +399,24 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   -webkit-transform: translate(0, 1px);
           transform: translate(0, 1px);
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1199.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
     margin-top: 22px !important;
     height: 56px !important;
     padding: 0px 32px;
-    width: 270px !important;
-    max-width: 270px !important;
+    width: 300px !important;
+    max-width: 300px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+    max-width: 280px !important;
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
   margin-top: 19px;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1023.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
     margin-top: 24px;
   }
@@ -408,7 +424,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   text-align: center;
 }
-@media (max-width: 767.98px) {
+@media (max-width: 1023.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
     line-height: 0;
   }
@@ -425,7 +441,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
     padding: 0;
   }
 }
-@media (min-width: 767.98px) {
+@media (min-width: 1023.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
     display: none;
   }
@@ -442,31 +458,59 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content {
   background: #0d122e;
 }
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content {
+    border-radius: 0 0 8px 8px;
+  }
+}
 @media (min-width: 1199.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content {
     min-width: 530px;
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy {
-  padding: 0px 56px;
+  padding: 18px 56px 0;
 }
 @media (max-width: 1199.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy {
-    padding: 24px 30px;
+    padding: 24px 30px 9px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy {
+    padding: 40px 24px 23px;
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading {
   margin-bottom: 24px;
 }
+@media (max-width: 1199.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading {
+    margin-bottom: 33px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading {
+    margin-bottom: 25px;
+  }
+}
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading > div:not(.subtitle) {
   color: #26a199;
+  font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 13px;
   font-style: normal;
   font-weight: 500;
   line-height: 14px;
-  letter-spacing: 2.6px;
+  letter-spacing: 2.7px;
   text-transform: uppercase;
   margin-bottom: 12px;
+}
+@media (max-width: 1199.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading > div:not(.subtitle) {
+    font-size: 12px;
+    line-height: 13px;
+    letter-spacing: 2.5px;
+  }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading .subtitle {
   color: #f6fafa;
@@ -478,19 +522,52 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-l
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading .subtitle span {
   color: #26a199;
 }
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading .subtitle hyph {
+  white-space: nowrap;
+}
+@media (min-width: 1199.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading .subtitle .mob-tab {
+    display: none;
+  }
+}
+@media (max-width: 1199.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .heading .subtitle {
+    font-size: 26px;
+    line-height: 34px;
+  }
+}
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .bullets {
-  padding-left: 40px;
+  padding-left: 36px;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .bullets .bullet {
   margin-bottom: 16px;
+  position: relative;
+}
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .bullets .bullet::before {
+  content: "";
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1690976851/eptura/3002/checkmark-icon.svg);
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: -36px;
+  top: 0;
+}
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .bullets .bullet::before {
+    left: -36px;
+  }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .bullets .bullet .bullet-title {
   color: #f6fafa;
+  font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
   margin-bottom: 4px;
+  letter-spacing: 0.15px;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-left-content .left-wrapper .copy .bullets .bullet .bullet-content {
   color: #f6fafa;
@@ -516,14 +593,14 @@ body.ppc-proxyclick-discover-a-better-way-to-check-in-visitors {
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.ppc-proxyclick-discover-a-better-way-to-check-in-visitors {
     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.webp);
-    background-position: bottom;
+    background-position: top;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   body.ppc-proxyclick-discover-a-better-way-to-check-in-visitors {
     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.webp);
-    background-position: bottom;
+    background-position: top;
     background-size: cover;
   }
 }
@@ -536,118 +613,214 @@ body.ppc-proxyclick-discover-a-better-way-to-check-in-visitors.safari {
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.ppc-proxyclick-discover-a-better-way-to-check-in-visitors.safari {
     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.png);
-    background-position: bottom;
+    background-position: top;
     background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   body.ppc-proxyclick-discover-a-better-way-to-check-in-visitors.safari {
     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.png);
-    background-position: bottom;
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-managerplus-demo {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.webp);
+body.ppc-archibus-maintenance-software {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_1440.webp);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-managerplus-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.webp);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-archibus-maintenance-software {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_768.webp);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-managerplus-demo.safari {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.png);
+@media (max-width: 767.98px) {
+  body.ppc-archibus-maintenance-software {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_360.webp);
+    background-position: top;
+    background-size: cover;
+  }
+}
+body.ppc-archibus-maintenance-software.safari {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_1440.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-managerplus-demo.safari {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.png);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-archibus-maintenance-software.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_768.png);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-archibus-demo {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.webp);
+@media (max-width: 767.98px) {
+  body.ppc-archibus-maintenance-software.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_360.png);
+    background-position: top;
+    background-size: cover;
+  }
+}
+body.ppc-eptura {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_1440.webp);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-archibus-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.webp);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-eptura {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_768.webp);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-archibus-demo.safari {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.png);
+@media (max-width: 767.98px) {
+  body.ppc-eptura {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_360.webp);
+    background-position: top;
+    background-size: cover;
+  }
+}
+body.ppc-eptura.safari {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_1440.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-archibus-demo.safari {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.png);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-eptura.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_768.png);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-spaceiq-demo {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.webp);
+@media (max-width: 767.98px) {
+  body.ppc-eptura.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_360.png);
+    background-position: top;
+    background-size: cover;
+  }
+}
+body.ppc-condeco-make-your-flexible-office-work-better {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_1440.webp);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-spaceiq-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.webp);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-condeco-make-your-flexible-office-work-better {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_768.webp);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-spaceiq-demo.safari {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.png);
+@media (max-width: 767.98px) {
+  body.ppc-condeco-make-your-flexible-office-work-better {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_360.webp);
+    background-position: top;
+    background-size: 100%;
+  }
+}
+body.ppc-condeco-make-your-flexible-office-work-better.safari {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_1440.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-spaceiq-demo.safari {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.png);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-condeco-make-your-flexible-office-work-better.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_768.png);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-ioffice-demo {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.webp);
+@media (max-width: 767.98px) {
+  body.ppc-condeco-make-your-flexible-office-work-better.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_360.png);
+    background-position: top;
+    background-size: 100%;
+  }
+}
+body.ppc-eptura-asset-management {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_1440.webp);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-ioffice-demo {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.webp);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-eptura-asset-management {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_768.webp);
+    background-position: top;
     background-size: cover;
   }
 }
-body.website-ioffice-demo.safari {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.png);
+@media (max-width: 767.98px) {
+  body.ppc-eptura-asset-management {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_360.webp);
+    background-position: top;
+    background-size: 100%;
+  }
+}
+body.ppc-eptura-asset-management.safari {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_1440.png);
   background-repeat: no-repeat;
   background-position: left top;
   background-size: cover;
 }
-@media (max-width: 574.98px) {
-  body.website-ioffice-demo.safari {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.png);
-    background-position: bottom;
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-eptura-asset-management.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_768.png);
+    background-position: top;
     background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.ppc-eptura-asset-management.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_360.png);
+    background-position: top;
+    background-size: 100%;
+  }
+}
+body.ppc-eptura-room-management {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_1440.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-eptura-room-management {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_768.webp);
+    background-position: top;
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.ppc-eptura-room-management {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_360.webp);
+    background-position: top;
+    background-size: 100%;
+  }
+}
+body.ppc-eptura-room-management.safari {
+  background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_1440.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.ppc-eptura-room-management.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_768.png);
+    background-position: top;
+    background-size: cover;
+  }
+}
+@media (max-width: 767.98px) {
+  body.ppc-eptura-room-management.safari {
+    background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_360.png);
+    background-position: top;
+    background-size: 100%;
   }
 }

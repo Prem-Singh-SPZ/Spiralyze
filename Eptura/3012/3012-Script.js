@@ -4,40 +4,85 @@
     document.querySelector('body').classList.add(identifyPage);
 
 
-    const pageContent = [{
-        pageName: "ppc-proxyclick-discover-a-better-way-to-check-in-visitors",
-        pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293167/eptura/3012/endorsed_logos.svg",
-        logoAlt: "Proxyclick Demo",
-        title: "VISiTOR MANAGEMENT SOFTWARE",
-        subtitle: "Make the visitor check-in experience <span>50% faster</span> while improving security",
-        lisTitle1: "Visitor check-in.",
-        listContent1: "Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
-        lisTitle2: "Security & compliance.",
-        listContent2: "Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
-        lisTitle3: "Integrations.",
-        listContent3: "Sync data with internal access and security systems. Automated email or Slack notifications.",
-    },
-    {
-        pageName: "website-managerplus-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575720/eptura/4003/managerplus-eptura-logo-1.svg",
-        logoAlt: "Managerplus Demo",
-    },
-    {
-        pageName: "website-archibus-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575732/eptura/4003/archibus-eptura-logo-color_1.svg",
-        logoAlt: "Archibus Demo",
-    },
-    {
-        pageName: "website-spaceiq-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575752/eptura/4003/spaceiq-eptura-logo-color_1.svg",
-        logoAlt: "SpaceIQ Demo",
-    },
-    {
-        pageName: "website-ioffice-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575766/eptura/4003/ioffice-eptura-logo-color_1.svg",
-        logoAlt: "IOffice Demo",
-    },
-
+    const pageContent = [
+        {
+            pageName: "ppc-proxyclick-discover-a-better-way-to-check-in-visitors",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293167/eptura/3012/endorsed_logos.svg",
+            logoAlt: "Proxyclick Logo",
+            title: "VISiTOR MANAGEMENT SOFTWARE",
+            subtitle: "Make the visitor <hyph>check-in</hyph> experience <span>50% faster</span> while improving security.",
+            lisTitle1: "Visitor check-in.",
+            listContent1: "Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
+            lisTitle2: "Security & compliance.",
+            listContent2: "Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
+            lisTitle3: "Integrations.",
+            listContent3: "Sync data with internal access and security systems. Automated email or Slack notifications.",
+        },
+        {
+            pageName: "ppc-archibus-maintenance-software",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293241/eptura/3012/endorsed_logos_2.svg",
+            logoAlt: "Archibus Logo",
+            title: "Next-Gen Maintenance Management Software",
+            subtitle: "Automate preventive maintenance and repair. Reduce costs <span>by 30%.</span>",
+            lisTitle1: "Work orders.",
+            listContent1: "Automatically generate detailed work orders when assets are due for maintenance.",
+            lisTitle2: "Repair management.",
+            listContent2: "Auto-send requests to relevant workers via the mobile app. See repair status and track orders.",
+            lisTitle3: "Budgeting.",
+            listContent3: "Get analytics on cost, labor, and performance of operations. Easily generate plans and budgets.",
+        },
+        {
+            pageName: "ppc-eptura",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293274/eptura/3012/eptura-logo.svg",
+            logoAlt: "Eptura logo",
+            title: "WORKPLACE AND ASSET MANAGEMENT SOFTWARE",
+            subtitle: "Automate operations with one platform for workplace and asset management",
+            lisTitle1: "Workplace solutions.",
+            listContent1: "Desk and meeting room bookings, visitor management, and space planning. ",
+            lisTitle2: "Asset visibility.",
+            listContent2: "See asset inventory, lifecycles, and compliance details. Get a complete view of facilities and spaces. ",
+            lisTitle3: "Maintenance.",
+            listContent3: "Automate preventive maintenance, view cost history, and schedule repairs for all your assets.",
+        },
+        {
+            pageName: "ppc-condeco-make-your-flexible-office-work-better",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293212/eptura/3012/endorsed_logos_1.svg",
+            logoAlt: "Condeco logo",
+            title: "Workspace Scheduling software",
+            subtitle: "Streamline desk and <br>meeting room scheduling. Simplify hybrid work.",
+            lisTitle1: "Bookings.",
+            listContent1: "Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes.",
+            lisTitle2: "Room selection.",
+            listContent2: "Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.",
+            lisTitle3: "Collaboration.",
+            listContent3: "See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule.",
+        },
+        {
+            pageName: "ppc-eptura-asset-management",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293294/eptura/3012/eptura-logo_1.svg",
+            logoAlt: "Eptura logo",
+            title: "Asset Management Software",
+            subtitle: `Automate equipment maintenance. <br class="mob-tab">Reduce costs. Increase performance.`,
+            lisTitle1: "Work orders.",
+            listContent1: "View all work orders in one portal. Easily provide technicians with schedules, locations, and task descriptions.",
+            lisTitle2: "Lifecycle tracking.",
+            listContent2: "See your cost history, repair schedules, and upcoming preventive maintenance for all your assets.",
+            lisTitle3: "Cost forecasting.",
+            listContent3: "Track expenses and cost comparisons. Create monthly budgets based on historical data.",
+        },
+        {
+            pageName: "ppc-eptura-room-management",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293294/eptura/3012/eptura-logo_1.svg",
+            logoAlt: "Eptura logo",
+            title: "Desk and Meeting Room Booking Software",
+            subtitle: `Streamline workspace bookings. Boost hybrid collaboration.`,
+            lisTitle1: "Bookings.",
+            listContent1: "Schedule desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting.",
+            lisTitle2: "Navigation.",
+            listContent2: "Digital floor plans make it easy to find the right room or locate the one you&#8217;ve booked upon arrival.",
+            lisTitle3: "Collaboration.",
+            listContent3: "See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule.",
+        }
     ];
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
@@ -146,7 +191,7 @@
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
         document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
-        // document.querySelector('body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').innerText = 'If you consent to us contacting you, please tick below to confirm you would like us to contact you:';
+        document.querySelector('body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').innerText = 'If you consent to us contacting you, please tick below to confirm you would like us to contact you:';
 
         document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
 
