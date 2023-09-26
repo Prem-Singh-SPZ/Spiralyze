@@ -231,7 +231,7 @@
                     }
                 },
                 {
-                    featureTitle: "Collaboration",
+                    featureTitle: "Hybrid Collaboration",
                     featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_1",
                     title: "Automate hybrid collaboration.",
                     subTitle: "37% increase in productivity.",

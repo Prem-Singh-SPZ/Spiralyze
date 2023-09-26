@@ -598,11 +598,16 @@
         let commentField = document.querySelector('form.hs-form-private .hs-fieldtype-textarea .input .hs-input');
         let commentFieldValue = document.querySelector('form.hs-form-private .hs-fieldtype-textarea .input .hs-input').value.trim();
         if (commentField && commentFieldValue != '' && commentFieldValue != null && commentFieldValue != undefined && commentFieldValue) {
-            // commentField.closest('.field').classList.remove('field-error');
+            commentField.closest('.field').classList.remove('field-error-cmnt');
         }
         else {
+            // eve.preventDefault();
+            commentField.closest('.field').classList.add('field-error-cmnt');
+        }
+
+        if (document.querySelectorAll('.field-error-cmnt:not(.hidden-spz)').length > 0  && document.querySelectorAll('.field-valid').length > 6) {
+            console.log('00')
             eve.preventDefault();
-            // commentField.closest('.field').classList.add('field-error');
         }
     }
 
