@@ -11,19 +11,19 @@ let bodyLoaded = setInterval(function () {
     // document.head.appendChild(cssElement);
 
     var intr = setInterval(function () {
-      if (document.querySelector('.spz-11001 .entry-content > div:first-child') && !document.querySelector('body').classList.contains('spz-11001')) {
+      if (document.querySelector('body .entry-content > div.block-visibility-hide-large-screen') && !document.querySelector('body').classList.contains('spz-11001')) {
         clearInterval(intr);
         document.body.classList.add('spz-11001');
+        code_inject();
       }
-      code_inject();
     }, 100);
 
     function code_inject() {
       document.body.classList.add('spz-11001');
 
-      if (document.querySelectorAll('.spz-11001 .entry-content > div:first-child').length > 0 && document.querySelectorAll('.features-block').length == 0) {
+      if (document.querySelectorAll('body .entry-content > div.block-visibility-hide-large-screen').length > 0 && document.querySelectorAll('.features-block').length == 0) {
         const img_path = "//res.cloudinary.com/spiralyze/image/upload/";
-        document.querySelector('.spz-11001 .entry-content > div.block-visibility-hide-large-screen').insertAdjacentHTML('afterend', `
+        document.querySelector('body .entry-content > div.block-visibility-hide-large-screen').insertAdjacentHTML('afterend', `
           <div class="features-block">
             <div class="spz-wrapper">
               <h2 class="heading">Features</h2>
@@ -143,18 +143,17 @@ let bodyLoaded = setInterval(function () {
                   </div>
                 </div>
               </div>
-              <div class="demo_main"><a href="javascript:void(0)" class="demo-btn popup">Request a demo</a></div>
+              <div class="demo_main"><a class="demo-btn" href="javascript:void(0)">Request a demo</a></div>
             </div>
           </div>`);
       }
 
       window.addEventListener("click", function (e) {
         if (e.target.classList.contains("demo-btn")) {
-          e.preventDefault();
-          document.querySelector('a.n2-ow[onclick="return false;"]').click();
-          return false;
+          document.querySelector('.n2-style-a70e9ae86ed8ec6c50f84ffc8026967f-heading').click();
         }
       });
+
     }
 
   }
