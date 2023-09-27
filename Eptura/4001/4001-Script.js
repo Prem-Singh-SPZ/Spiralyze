@@ -453,11 +453,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo hamilton-sec">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_hamilton_county.webp" alt="Hamilton County">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Hamilton County">
                     </div>
                 </div>
                 <div class="testimonials-logo hamilton-sec mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3006/logo_-_hamilton_county.webp" alt="Hamilton County">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_hamilton_county.webp" alt="Hamilton County">
                 </div>
             </div>
         </li>
@@ -642,11 +642,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo hamilton-sec">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Leap Frog">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Leap Frog">
                     </div>
                 </div>
                 <div class="testimonials-logo hamilton-sec mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Leap Frog">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_duke_1.webp" alt="Leap Frog">
                 </div>
             </div>
         </li>
@@ -831,11 +831,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo dnv-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="ABB">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="ABB">
                     </div>
                 </div>
                 <div class="testimonials-logo dnv-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="ABB">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_1.webp" alt="ABB">
                 </div>
             </div>
         </li>
@@ -853,11 +853,11 @@
                         </div>
                     </div>
                     <div class="testimonials-logo kfc-logo">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_2.webp" alt="Calgary Board of Education">
+                        <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board of Education">
                     </div>
                 </div>
                 <div class="testimonials-logo kfc-logo mobile-sec">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_2.webp" alt="Calgary Board of Education">
+                    <img src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4001/logo_-_calgary_board_of_education_3.webp" alt="Calgary Board of Education">
                 </div>
             </div>
         </li>`
