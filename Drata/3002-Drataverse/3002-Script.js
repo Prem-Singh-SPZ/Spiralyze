@@ -1,3 +1,6 @@
+// COntrol URL
+// https://drata.com/blog/supply-chain-security?mutiny_preview=eyJhbGciOiJIUzI1NiJ9.eyJrZXkiOiI2NDAzZWJlMC1lMGIwLTRmYTUtYWViOS1mNzYwODM0ZTkyZWIiLCJpc3MiOiI4NDFhMTYzYjg1ZWFhM2YxIiwiY29tcGFueV9pZCI6Ijg0MWExNjNiODVlYWEzZjEiLCJleHBlcmllbmNlX2lkIjoiZDRiM2RhYzAtYjE0Mi00MDIzLTlhNTgtMWQ3ZGJiZWEzZGUwIiwidmFyaWF0aW9uX2lkIjoiNDMxOTJiZGItOGEyNy00NzU4LWFiZTEtZDZlMmY2MzUzNmY2IiwiZXhwIjoxNzAxMTg2Mzg5LCJ2YXJpYWJsZV9vdmVycmlkZXMiOnt9fQ.HcOeFi_9lPiEXCrZDQfNfgYRlZCOT6V89UHyqbcrkEs
+
 function createTest3002() {
     document.body.classList.add('spz-3002-drataverse');
 
