@@ -34,14 +34,6 @@ body.spz-3013 .body-wrapper #nav nav {
     padding: 0 30px;
   }
 }
-body.spz-3013 .body-wrapper #nav nav #NavLogo .logo-img {
-  max-width: 104px;
-}
-@media (max-width: 1199.98px) {
-  body.spz-3013 .body-wrapper #nav nav #NavLogo .logo-img {
-    max-width: 81px;
-  }
-}
 body.spz-3013 .body-wrapper #nav nav #NavLogo #logo-img {
   display: none !important;
 }
@@ -146,11 +138,6 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle hyph {
   white-space: nowrap;
-}
-@media (min-width: 1199.98px) {
-  body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle .mob-tab {
-    display: none;
-  }
 }
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle {
@@ -557,7 +544,7 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   white-space: nowrap;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  background: #456ED6 !important;
+  background: #456ed6 !important;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
   -webkit-transform: translate(0, 1px);
@@ -778,4 +765,45 @@ body.spz-3013 .body-wrapper > footer .page_padding .bottom.pb-5 .right a:last-ch
       -ms-flex-order: 1;
           order: 1;
   padding-left: 16px;
+}
+@media (max-width: 767.98px) {
+  body.spz-3013.ppc-eptura .body-wrapper #nav #NavLogo .spz-logo {
+    width: 47.88px;
+    height: 36px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-3013.ppc-eptura .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle {
+    max-width: 600px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3013.ppc-eptura-asset-management .body-wrapper #nav #NavLogo .spz-logo {
+    width: 47.88px;
+    height: 36px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3013.ppc-eptura-asset-management .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy {
+    padding-right: 1px;
+  }
+}
+body.spz-3013.ppc-eptura-asset-management .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle {
+  padding-right: 28px;
+}
+@media (max-width: 767.98px) {
+  body.spz-3013.ppc-eptura-room-management .body-wrapper #nav #NavLogo .spz-logo {
+    width: 47.88px;
+    height: 36px;
+  }
+}
+@media (max-width: 424.98px) {
+  body.spz-3013.ppc-eptura-room-management .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading > div:not(.subtitle) {
+    max-width: 260px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-3013.ppc-eptura-room-management .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle {
+    padding-right: 0;
+  }
 }

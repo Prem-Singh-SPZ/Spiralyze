@@ -40,12 +40,12 @@ body.spz-3013 {
         }
 
         #NavLogo {
-          .logo-img {
-            max-width: 104px;
-            @media (max-width: 1199.98px) {
-              max-width: 81px;
-            }
-          }
+          // .logo-img {
+          //   max-width: 104px;
+          //   @media (max-width: 1199.98px) {
+          //     max-width: 81px;
+          //   }
+          // }
           #logo-img {
             display: none !important;
           }
@@ -141,12 +141,6 @@ body.spz-3013 {
 
                     hyph {
                       white-space: nowrap;
-                    }
-
-                    .mob-tab {
-                      @media (min-width: 1199.98px) {
-                        display: none;
-                      }
                     }
 
                     @media (max-width: 767.98px) {
@@ -604,7 +598,7 @@ body.spz-3013 {
 
                         &:hover,
                         &:focus {
-                          background:#456ED6!important;
+                          background: #456ed6 !important;
                         }
                         &:focus {
                           transform: translate(0, 1px);
@@ -843,4 +837,80 @@ body.spz-3013 {
   }
 
   //Page specific CSS
+  &.ppc-eptura .body-wrapper {
+    #nav {
+      #NavLogo {
+        .spz-logo {
+          @media (max-width: 767.98px) {
+            width: 47.88px;
+            height: 36px;
+          }
+        }
+      }
+    }
+    #hero
+      .hero_container
+      > .row
+      .spz-left-content
+      .left-wrapper
+      .copy
+      .heading
+      .subtitle {
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        max-width: 600px;
+      }
+    }
+  }
+
+  &.ppc-eptura-asset-management .body-wrapper {
+    #nav {
+      #NavLogo {
+        .spz-logo {
+          @media (max-width: 767.98px) {
+            width: 47.88px;
+            height: 36px;
+          }
+        }
+      }
+    }
+    #hero .hero_container > .row .spz-left-content .left-wrapper .copy {
+      @media (max-width: 767.98px) {
+        padding-right: 1px;
+      }
+      .heading .subtitle {
+        padding-right: 28px;
+      }
+    }
+  }
+
+  &.ppc-eptura-room-management .body-wrapper {
+    #nav {
+      #NavLogo {
+        .spz-logo {
+          @media (max-width: 767.98px) {
+            width: 47.88px;
+            height: 36px;
+          }
+        }
+      }
+    }
+    #hero
+      .hero_container
+      > .row
+      .spz-left-content
+      .left-wrapper
+      .copy
+      .heading {
+      > div:not(.subtitle) {
+        @media (max-width: 424.98px) {
+          max-width: 260px;
+        }
+      }
+      .subtitle {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          padding-right: 0;
+        }
+      }
+    }
+  }
 }
