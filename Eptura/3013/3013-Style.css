@@ -56,7 +56,7 @@ body.spz-3013 .body-wrapper #hero .hero_container {
 }
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper #hero .hero_container {
-    padding: 24px 0 48px !important;
+    padding: 24px 15px 48px !important;
   }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row {
@@ -88,7 +88,7 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row {
 }
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
-    padding: 0 44px 37px !important;
+    padding: 0 30px 51px !important;
   }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroText {
@@ -112,7 +112,7 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left
 }
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading {
-    margin-bottom: 25px;
+    margin-bottom: 24px;
   }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading > div:not(.subtitle) {
@@ -156,10 +156,16 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left
   body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .heading .subtitle {
     font-size: 26px;
     line-height: 34px;
+    padding-right: 0;
   }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .bullets {
   padding-left: 40px;
+}
+@media (max-width: 767.98px) {
+  body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .bullets {
+    padding-left: 36px;
+  }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .bullets .bullet {
   margin-bottom: 24px;
@@ -174,6 +180,13 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left
 @media (max-width: 1199.98px) {
   body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .bullets .bullet {
     margin-bottom: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .bullets .bullet {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 12px;
   }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row .spz-left-content .left-wrapper .copy .bullets .bullet span {
@@ -275,11 +288,10 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
-    white-space: normal;
-    max-width: 244px;
-    margin: auto;
+    font-size: 26px;
+    line-height: 34px;
     margin-bottom: 20px;
-    padding-left: 6px;
+    padding-right: 4px;
   }
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
@@ -434,7 +446,7 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
-  line-height: 16px; /* 123.077% */
+  line-height: 16px;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label {
   color: #e51b00 !important;
@@ -467,7 +479,7 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   background: #fff;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
-  color: var(--accents-a-5, #f83a59) !important;
+  color: #f83a59 !important;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #f83a59 !important;
@@ -486,7 +498,7 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
   overflow: hidden;
-  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+  color: rgba(13, 18, 46, 0.8);
   font-family: "Eptura Flexible", Arial, sans-serif;
   text-overflow: ellipsis;
   font-size: 16px;
@@ -519,12 +531,13 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   text-align: center;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+  all: initial;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 140px !important;
   height: 50px !important;
-  padding: 0px 8px !important;
+  padding: 0px !important;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -532,19 +545,19 @@ body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
       -ms-flex-align: center;
           align-items: center;
   border-radius: 3px !important;
-  background: var(--interactive-colors-a-1, #1b4bc5) !important;
-  color: var(--primary-neutrals-w, #fff) !important;
+  background: #1b4bc5 !important;
+  color: #fff !important;
   text-align: center;
   font-family: "Eptura Flexible", Arial, sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 500 !important;
-  line-height: 24px !important; /* 150% */
+  line-height: 24px !important;
   margin-top: 22px !important;
   white-space: nowrap;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  background: var(--interactive-colors-a-3, #456ed6) !important;
+  background: #456ED6 !important;
 }
 body.spz-3013 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
   -webkit-transform: translate(0, 1px);
@@ -612,6 +625,11 @@ body.spz-3013 .body-wrapper .spz-logo-section {
     padding: 64px 40px;
   }
 }
+@media (max-width: 767.98px) {
+  body.spz-3013 .body-wrapper .spz-logo-section {
+    padding: 64px 30px;
+  }
+}
 body.spz-3013 .body-wrapper .spz-logo-section .logo-title {
   color: #f6fafa;
   font-size: 20px;
@@ -621,9 +639,23 @@ body.spz-3013 .body-wrapper .spz-logo-section .logo-title {
   margin-bottom: 24px;
   text-align: center;
 }
+@media (max-width: 767.98px) {
+  body.spz-3013 .body-wrapper .spz-logo-section .logo-title {
+    max-width: 170px;
+    margin: auto auto 16px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-3013 .body-wrapper .spz-logo-section .img-logo-wrapper {
     max-width: 688px;
+    margin: auto;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3013 .body-wrapper .spz-logo-section .img-logo-wrapper {
+    max-width: 300px;
     margin: auto;
   }
 }
@@ -643,7 +675,7 @@ body.spz-3013 .body-wrapper > footer {
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper > footer .page_padding {
     max-width: 360px;
-    padding: 0 31px;
+    padding: 0 30px;
   }
 }
 body.spz-3013 .body-wrapper > footer .page_padding .top.pt-5,
@@ -673,10 +705,9 @@ body.spz-3013 .body-wrapper > footer .page_padding .bottom.pb-5 {
 }
 @media (max-width: 767.98px) {
   body.spz-3013 .body-wrapper > footer .page_padding .bottom.pb-5 .d-md-flex.justify-content-md-between .desktopHide {
-    font-family: "Eptura Flexible", Arial, sans-serif;
     font-size: 12px;
     line-height: 18px;
-    padding-top: 14px !important;
+    padding-top: 11px !important;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -706,8 +737,12 @@ body.spz-3013 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links {
     padding-left: 0px !important;
   }
 }
+@media (max-width: 767.98px) {
+  body.spz-3013 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links #FooterBottom {
+    padding-top: 3px;
+  }
+}
 body.spz-3013 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links #FooterBottom li a {
-  font-family: "Eptura Flexible", Arial, sans-serif;
   text-transform: capitalize;
   line-height: 20px;
 }

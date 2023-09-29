@@ -63,7 +63,7 @@ body.spz-3013 {
           padding: 32px 43px 56px !important;
         }
         @media (max-width: 767.98px) {
-          padding: 24px 0 48px !important;
+          padding: 24px 15px 48px !important;
         }
         > .row {
           align-items: center;
@@ -80,7 +80,7 @@ body.spz-3013 {
               padding: 0 0 51px !important;
             }
             @media (max-width: 767.98px) {
-              padding: 0 44px 37px !important;
+              padding: 0 30px 51px !important;
             }
           }
 
@@ -105,7 +105,7 @@ body.spz-3013 {
                   margin-bottom: 32px;
 
                   @media (max-width: 767.98px) {
-                    margin-bottom: 25px;
+                    margin-bottom: 24px;
                   }
 
                   > div:not(.subtitle) {
@@ -152,12 +152,17 @@ body.spz-3013 {
                     @media (max-width: 767.98px) {
                       font-size: 26px;
                       line-height: 34px;
+                      padding-right: 0;
                     }
                   }
                 }
 
                 .bullets {
                   padding-left: 40px;
+
+                  @media (max-width: 767.98px) {
+                    padding-left: 36px;
+                  }
 
                   .bullet {
                     margin-bottom: 24px;
@@ -172,6 +177,12 @@ body.spz-3013 {
 
                     @media (max-width: 1199.98px) {
                       margin-bottom: 16px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      font-size: 16px;
+                      line-height: 24px;
+                      margin-bottom: 12px;
                     }
 
                     span {
@@ -268,11 +279,10 @@ body.spz-3013 {
                   }
 
                   @media (max-width: 767.98px) {
-                    white-space: normal;
-                    max-width: 244px;
-                    margin: auto;
+                    font-size: 26px;
+                    line-height: 34px;
                     margin-bottom: 20px;
-                    padding-left: 6px;
+                    padding-right: 4px;
                   }
                 }
               }
@@ -455,7 +465,7 @@ body.spz-3013 {
                             font-size: 13px;
                             font-style: normal;
                             font-weight: 400;
-                            line-height: 16px; /* 123.077% */
+                            line-height: 16px;
                           }
                         }
 
@@ -511,7 +521,7 @@ body.spz-3013 {
                         &.field-focus {
                           .mktoFieldWrap {
                             .mktoLabel {
-                              color: var(--accents-a-5, #f83a59) !important;
+                              color: #f83a59 !important;
                             }
                           }
                         }
@@ -536,10 +546,7 @@ body.spz-3013 {
 
                       .show-comment-dynamic {
                         overflow: hidden;
-                        color: var(
-                          --primary-neutrals-n-2,
-                          rgba(13, 18, 46, 0.8)
-                        );
+                        color: rgba(13, 18, 46, 0.8);
                         font-family: $eptura-font;
                         text-overflow: ellipsis;
                         font-size: 16px;
@@ -576,33 +583,28 @@ body.spz-3013 {
 
                     .mktoButtonWrap {
                       button.mktoButton {
+                        all: initial;
                         display: flex;
                         width: 140px !important;
                         height: 50px !important;
-                        padding: 0px 8px !important;
+                        padding: 0px !important;
                         justify-content: center;
                         align-items: center;
                         border-radius: 3px !important;
-                        background: var(
-                          --interactive-colors-a-1,
-                          #1b4bc5
-                        ) !important;
-                        color: var(--primary-neutrals-w, #fff) !important;
+                        background: #1b4bc5 !important;
+                        color: #fff !important;
                         text-align: center;
                         font-family: $eptura-font !important;
                         font-size: 16px !important;
                         font-style: normal;
                         font-weight: 500 !important;
-                        line-height: 24px !important; /* 150% */
+                        line-height: 24px !important;
                         margin-top: 22px !important;
                         white-space: nowrap;
 
                         &:hover,
                         &:focus {
-                          background: var(
-                            --interactive-colors-a-3,
-                            #456ed6
-                          ) !important;
+                          background:#456ED6!important;
                         }
                         &:focus {
                           transform: translate(0, 1px);
@@ -687,6 +689,10 @@ body.spz-3013 {
         padding: 64px 40px;
       }
 
+      @media (max-width: 767.98px) {
+        padding: 64px 30px;
+      }
+
       .logo-title {
         color: #f6fafa;
         // font-family: $eptura-font;
@@ -696,6 +702,13 @@ body.spz-3013 {
         line-height: 28px;
         margin-bottom: 24px;
         text-align: center;
+
+        @media (max-width: 767.98px) {
+          max-width: 170px;
+          margin: auto auto 16px;
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
 
       .img-logo-wrapper {
@@ -703,6 +716,11 @@ body.spz-3013 {
           max-width: 688px;
           margin: auto;
         }
+        @media (max-width: 767.98px) {
+          max-width: 300px;
+          margin: auto;
+        }
+
         img {
           width: 100%;
           height: auto;
@@ -720,7 +738,7 @@ body.spz-3013 {
         }
         @media (max-width: 767.98px) {
           max-width: 360px;
-          padding: 0 31px;
+          padding: 0 30px;
         }
         .top.pt-5,
         .divider.py-3 {
@@ -745,10 +763,9 @@ body.spz-3013 {
             }
             .desktopHide {
               @media (max-width: 767.98px) {
-                font-family: $eptura-font;
                 font-size: 12px;
                 line-height: 18px;
-                padding-top: 14px !important;
+                padding-top: 11px !important;
               }
             }
           }
@@ -775,8 +792,11 @@ body.spz-3013 {
               }
 
               #FooterBottom {
+                @media (max-width: 767.98px) {
+                  padding-top: 3px;
+                }
                 li a {
-                  font-family: $eptura-font;
+                  // font-family: $eptura-font;
                   // color: #d6d7f5;
                   text-transform: capitalize;
                   line-height: 20px;

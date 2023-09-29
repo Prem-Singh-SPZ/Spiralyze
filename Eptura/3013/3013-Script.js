@@ -14,6 +14,7 @@
             list1: "<span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
             list2: "<span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
             list3: "<span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications.",
+            bannerImgHD: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/desktop__proxyclick__image-interfaces_1.webp",
             bannerImgDesk: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/desktop__proxyclick__image-interfaces.webp",
             bannerImgTab: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/tablet__proxyclick__image-interfaces.webp",
             bannerImgMob: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/mobile__proxyclick__image-interfaces.webp",
@@ -47,16 +48,18 @@
         },
         {
             pageName: "ppc-condeco-make-your-flexible-office-work-better",
-            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293212/eptura/3012/endorsed_logos_1.svg",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695975623/eptura/3013/endorsed_logos_2.svg",
             logoAlt: "Condeco logo",
             title: "Workspace Scheduling software",
             subtitle: "Streamline desk and <br>meeting room scheduling. Simplify hybrid work.",
-            lisTitle1: "Bookings.",
-            listContent1: "Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes.",
-            lisTitle2: "Room selection.",
-            listContent2: "Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.",
-            lisTitle3: "Collaboration.",
-            listContent3: "See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule.",
+            list1: "<span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. ",
+            list2: "<span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.",
+            list3: "<span>Collaboration.</span> See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule. ",
+            bannerImgHD: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/desktop__condeco__image-interfaces_1.webp",
+            bannerImgDesk: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/desktop__condeco__image-interfaces.webp",
+            bannerImgTab: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/tablet__condeco__image-interfaces.webp",
+            bannerImgMob: "//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3013/mobile__condeco__image-interfaces.webp",
+            bannerAlt: "Proxyclick Banner Image",
         },
         {
             pageName: "ppc-eptura-asset-management",
@@ -322,10 +325,12 @@
                     </div>
                     </div></div>`);
 
+                    let imgHD = checkIfSafari(url.bannerImgHD);
                     let imgDesk = checkIfSafari(url.bannerImgDesk);
                     let imgTab = checkIfSafari(url.bannerImgTab);
                     let imgMob = checkIfSafari(url.bannerImgMob);
                     document.querySelector("#hero").insertAdjacentHTML('afterend', `<div class="spz-banner-section"><div class="img-banner-wrapper"><picture>
+                    <source media="(min-width:1900px)" srcset="` + imgHD + `">
                     <source media="(min-width:1200px)" srcset="` + imgDesk + `">
                     <source media="(min-width:768px)" srcset="` + imgTab + `">
                     <img src="` + imgMob + `" alt="` + url.bannerAlt + `">
