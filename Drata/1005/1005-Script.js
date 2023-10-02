@@ -51,6 +51,9 @@
         focusFields();
         submitTestDetails();
 
+        document.querySelector('.form-wrapper-spz').insertAdjacentHTML('beforeend', `<div class="back-to-home">Back to
+        <a href="javascript:void(0)" class="drata-home">drata.com</a>
+        </div>`);
         // removeStyleTags();
 
       }
@@ -194,6 +197,10 @@
 
     if (target) {
       checkError();
+    }
+
+    if (e.target.classList.contains('drata-home')) {
+      document.querySelector('a[href="/"]').click();
     }
   });
 

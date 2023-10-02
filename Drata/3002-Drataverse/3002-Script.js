@@ -35,7 +35,7 @@ function insertStickySection() {
                 <span>Witness our biggest product updates yet at Drataverse Digital</span>
             </div>
             <div class="right-content">
-                <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Register Now <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" /></a>
+                <a href="https://drata.com/events/drataverse-oct-2023" target="_blank" class="hs-cta-primary trigger-demo-btn">Register Now <img src="https://res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" /></a>
             </div>
             </div>
             <div class="close-sticky">
