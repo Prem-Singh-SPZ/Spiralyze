@@ -51,9 +51,9 @@
         focusFields();
         submitTestDetails();
 
-        document.querySelector('.form-wrapper-spz').insertAdjacentHTML('beforeend', `<div class="back-to-home">Back to
-        <a href="javascript:void(0)" class="drata-home">drata.com</a>
-        </div>`);
+        // document.querySelector('.form-wrapper-spz').insertAdjacentHTML('beforeend', `<div class="back-to-home">Back to
+        // <a href="javascript:void(0)" class="drata-home">drata.com</a>
+        // </div>`);
         // removeStyleTags();
 
       }
@@ -70,9 +70,9 @@
         // Make 'How did you hear about us?' field full width if hidden fields count is odd
         const hiddenFields = document.querySelectorAll('fieldset:not(.form-columns-3).field-hidden').length;
         if (hiddenFields % 2 == 0) {
-          document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.add('full-width');
-        } else {
           document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.remove('full-width');
+        } else {
+          document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.add('full-width');
         }
       });
     }
