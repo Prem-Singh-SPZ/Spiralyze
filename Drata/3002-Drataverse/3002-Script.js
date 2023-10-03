@@ -109,7 +109,11 @@ urlCheck(url);
 
 function urlCheck(url) {
     let testURL = '';
-    if (window.location.href.indexOf("/blog") > -1) {
+    if (window.location.href.indexOf("/product") > -1 ||
+        window.location.href.indexOf("/platform") > -1 ||
+        window.location.href.indexOf("/blog") > -1 ||
+        window.location.href.indexOf("/resources/reports") > -1 ||
+        window.location.href == "https://drata.com/") {
         testURL = window.location.href;
     }
 
