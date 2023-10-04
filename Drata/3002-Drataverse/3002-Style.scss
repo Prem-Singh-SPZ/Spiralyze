@@ -185,4 +185,19 @@ body.spz-3002-drataverse {
       }
     }
   }
+
+  //chat button improvement
+  #hubspot-messages-iframe-container.widget-align-right {
+    bottom: 73px !important;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      bottom: 114px !important;
+    }
+    @media (max-width: 767.98px) {
+      bottom: 148px !important;
+    }
+
+    &[style*="height: 100%"] {
+      height: calc(100% - 148px) !important;
+    }
+  }
 }

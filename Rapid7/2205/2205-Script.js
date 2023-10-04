@@ -10,6 +10,27 @@
                 //Add email field
                 document.querySelector('.off-canvas-wrapper .off-canvas-content .overlayText .longHero__content .button-container').insertAdjacentHTML('beforebegin', '<div class="spz-custom-email"><input type="email" name="email" id="email" class="email-input"><label for="email" class="email-label">Enter Email Address</label><p class="spz-error-msg">Email Address is Required</p></div>');
 
+                document.querySelector('.off-canvas-wrapper .off-canvas-content .overlayText .longHero__content .button-container').insertAdjacentHTML('afterend', `<div class="spz-review-section" >
+                     <div class="gartner-peer" >
+                           <img class="peer-insights" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/Gartner.png" alt="Gartner Peer insights"/>
+                           <div class="rating" >
+                              <span>4.4</span>   
+                           <img class="star-rating" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/2205/G2-stars.png" alt="rating"/>
+                           </div>
+                     </div>
+                     <div class="g-2-logo" >
+                     <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/2205/G2-logo.png" alt="G2 Logo"/>
+                           <div class="rating" >
+                              <span>4.4</span>   
+                           <img class="star-rating" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/2205/G2-stars.png" alt="rating"/>
+                           </div>
+                     </div>
+               </div>`);
+
+                if (window.location.pathname.indexOf('redhat_linux-cve-2021-43267') > -1) {
+                    document.querySelector('.off-canvas-content .longHero .overlayText .longHero__content > h1').innerHTML = `<span>Red Hat:</span> <span>CVE-2021-43267:</span> Important: kpatch-patch security update (Multiple Advisories)`;
+                }
+
                 validateEmailFieldReview();
 
             });

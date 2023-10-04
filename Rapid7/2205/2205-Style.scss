@@ -6,13 +6,64 @@ body.spz-2205 {
     .off-canvas-content {
       .longHero {
         background: #fff
-          url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/rapid7/2205/image_134.webp)
-          no-repeat left top;
-        background-size: cover;
+          url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/rapid7/2205/image_133.webp)
+          no-repeat;
+        background-size: 100% 660px;
+        background-position: bottom left;
 
-        &::before,
-        .breadcrumbs__wrapper {
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          background: #fff
+            url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/rapid7/2205/image_131.webp)
+            no-repeat;
+          background-size: cover;
+          background-position: bottom left;
+          padding-top: 132px;
+        }
+
+        @media (max-width: 767.98px) {
+          background: #fff
+            url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/rapid7/2205/image_132.webp)
+            no-repeat;
+          background-size: cover;
+          background-position: bottom left;
+          padding-top: 140px;
+        }
+
+        &::before {
           display: none;
+        }
+
+        .breadcrumbs__wrapper {
+          .breadcrumbs__content {
+            .breadcrumbs {
+              margin-bottom: 27px;
+              li {
+                padding-top: 19px;
+                a {
+                  color: #82939c;
+                  font-family: $roboto;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 100%;
+                }
+
+                strong {
+                  color: #3b454a;
+                  font-family: $roboto;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 100%;
+                }
+
+                &::after {
+                  color: #82939c;
+                  margin: 0 9px;
+                }
+              }
+            }
+          }
         }
 
         .overlayText {
@@ -27,6 +78,18 @@ body.spz-2205 {
               letter-spacing: 0.8px;
               text-transform: uppercase;
               margin-bottom: 24px;
+
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                font-size: 16px;
+                letter-spacing: 0.64px;
+                margin-bottom: 16px;
+              }
+
+              @media (max-width: 767.98px) {
+                font-size: 12px;
+                letter-spacing: 0.48px;
+                margin-bottom: 16px;
+              }
             }
 
             > h1 {
@@ -37,6 +100,19 @@ body.spz-2205 {
               font-style: normal;
               font-weight: 900;
               line-height: 56px;
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                font-size: 32px;
+                line-height: 40px;
+              }
+
+              @media (max-width: 767.98px) {
+                font-size: 29px;
+                line-height: 36px;
+
+                span {
+                  white-space: nowrap;
+                }
+              }
             }
 
             .spz-custom-email {
@@ -45,6 +121,9 @@ body.spz-2205 {
               width: 100%;
               margin: 24px auto 0;
 
+              @media (max-width: 767.98px) {
+                margin: 32px auto 0;
+              }
               .spz-error-msg {
                 // color: #e85e26;
                 // font-family: $roboto;
@@ -133,7 +212,24 @@ body.spz-2205 {
             }
 
             .button-container {
+              margin: 4px 0 24px;
+              gap: 0;
+
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                margin: 4px 0 20px;
+              }
+
+              @media (max-width: 767.98px) {
+                margin: 4px 0 16px;
+                flex-direction: column;
+              }
+
               .hero-cta {
+                margin: 0 10px;
+                @media (max-width: 767.98px) {
+                  margin: 0 1px 4px;
+                }
+
                 .button.mdBtn {
                   color: #fff;
                   font-family: $mulish;
@@ -144,7 +240,12 @@ body.spz-2205 {
                   letter-spacing: 3px;
                   text-transform: uppercase;
                   height: 52px;
-                  padding: 18px 46px;
+                  padding: 20px 16px;
+                  width: 293px;
+
+                  @media (max-width: 574.98px) {
+                    width: 100%;
+                  }
                 }
 
                 &:nth-child(even) a.button.mdBtn,
@@ -158,6 +259,17 @@ body.spz-2205 {
                   line-height: 100%;
                   letter-spacing: 3px;
                   text-transform: uppercase;
+                  width: 206px;
+                  box-shadow: none;
+
+                  &:hover,
+                  &:active {
+                    background: linear-gradient(
+                      180deg,
+                      rgba(222, 229, 232, 0) 0%,
+                      #dee5e8 100%
+                    );
+                  }
                 }
 
                 .hero-cta-subtext {
@@ -168,6 +280,66 @@ body.spz-2205 {
                   font-style: normal;
                   font-weight: 400;
                   line-height: 100%;
+                  margin-top: 12px;
+                }
+              }
+            }
+
+            .spz-review-section {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: 32px 0 8px;
+
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                margin: 20px 0 0px;
+              }
+
+              @media (max-width: 767.98px) {
+                margin: 16px 0 0px;
+                flex-direction: column;
+              }
+
+              .gartner-peer,
+              .g-2-logo {
+                display: flex;
+                align-items: center;
+                margin: 0 20px;
+
+                .peer-insights {
+                  max-width: 100px;
+                  width: 100%;
+                  margin-right: 8px;
+                }
+
+                .g2-logo {
+                  width: 24px;
+                  height: 24px;
+                  margin-right: 8px;
+                }
+
+                .rating {
+                  display: flex;
+                  align-items: center;
+                  span {
+                    color: #3b454a;
+                    font-family: $roboto;
+                    font-size: 13px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 100%;
+                    margin-right: 6px;
+                  }
+                  .star-rating {
+                    width: 63px;
+                    height: 12px;
+                  }
+                }
+              }
+
+              .gartner-peer {
+                @media (max-width: 767.98px) {
+                  margin-bottom: 11px;
                 }
               }
             }
