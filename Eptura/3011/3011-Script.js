@@ -41,7 +41,7 @@
                 {
                     featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
                     featureAltTag: "Employee bookings",
-                    featureCopy: "Let employees book desks, check-in and out, answer health/security questionnaires, and more.",
+                    featureCopy: "Let employees book desks, check in and out, answer health/security questionnaires, and more.",
                 },
                 {
                     featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Calendar_icon.png",
@@ -58,7 +58,7 @@
                     featureAltTag: "Questionnaires",
                     featureCopy: "Customize check-in questionnaires and guidelines. Approve, escalate, or deny visitors based on responses.",
                 }
-            ],
+            ]
         },
         {
             pageName: "ppc-archibus-maintenance-software",
@@ -188,61 +188,51 @@
             heroImgAlt: "Condeco UI Image",
             features: [
                 {
-                    featureTitle: "Schedule meetings",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-check-in_1",
-                    title: "Book and manage <hyph>in-person</hyph> and",
-                    subTitle: "hybrid meetings from one place.",
-                    featuresList: {
-                        list1: "<span>Meetings.</span> Instantly book meetings from the app. Move, edit, or extend meetings with a single click.",
-                        list2: "<span>Recurring meetings.</span> Set repeat meetings that automatically reserve the right equipment and space.",
-                        list3: "<span>Rescheduling.</span> Automatically book rooms with similar equipment when meetings change. Notify all attendees. ",
-                    }
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Calendar_icon.png",
+                    featureAltTag: "Meeting scheduling",
+                    featureCopy: "Schedule in-person, virtual, or hybrid meetings. Add Teams or Zoom calls with a single click. Set up repeat meetings.",
                 },
                 {
-                    featureTitle: "Book Spaces",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-security_1",
-                    title: "Streamline in-office desk, room, and",
-                    subTitle: "equipment scheduling.",
-                    featuresList: {
-                        list1: "<span>Group bookings.</span> Book meeting and conference rooms with the right size and tech equipment for your group.",
-                        list2: "<span>Individual bookings.</span> Schedule desks, parking spaces, and lockers for in-office days directly from the app. ",
-                        list3: "<span>Room services.</span> Order refreshments like sandwiches and coffee in advance. Submit audio-visual service requests.",
-                    }
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Book_a_workspace_icon.png",
+                    featureAltTag: "Individual bookings",
+                    featureCopy: "Schedule desks, parking spaces, and lockers for in-office work days directly from the mobile app. ",
                 },
                 {
-                    featureTitle: "Visitor management",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-integrations_1",
-                    title: "Boost visitor experience",
-                    subTitle: "while maintaining security.",
-                    featuresList: {
-                        list1: "<span>Meetings.</span> Automatically send meeting invites to guests with the time, location, and pre-arrival instructions.",
-                        list2: "<span>Check-in.</span> Let visitors check in electronically. Send unique QR codes for building access. Print badges.",
-                        list3: "<span>Management.</span> Customize pre-arrival questionnaires. Approve or deny visitors. Maintain logbooks.",
-                    }
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Group_bookings.png",
+                    featureAltTag: "Group bookings",
+                    featureCopy: "Book meeting and conference rooms with the right size and equipment for your group. Order refreshments in advance.",
                 },
                 {
-                    featureTitle: "Hybrid Collaboration",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-guest_experience_1",
-                    title: "Automate hybrid collaboration.",
-                    subTitle: "37% increase in productivity.",
-                    featuresList: {
-                        list1: "<span>In-office planning.</span> Set your in-office schedule and status. Workspaces professionally cleaned before arrival.",
-                        list2: "<span>Collaborating.</span> See a weekly overview of where your team is working and schedule time with co-workers.",
-                        list3: "<span>Hybrid services.</span> Schedule in-person, virtual, or hybrid meetings. Add Zoom or Teams calls to booked spaces. ",
-                    }
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/collaboration-icon.png",
+                    featureAltTag: "Hybrid collaboration",
+                    featureCopy: "Set your in-office schedule and status, see a weekly overview of where your team is working, and schedule time with co-workers.",
                 },
                 {
-                    featureTitle: "Operations and admin",
-                    featureImg: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3010/img-operations_and_admin_1",
-                    title: "Streamline workspace operations.",
-                    subTitle: "Reduce costs by 25%.",
-                    featuresList: {
-                        list1: "<span>Office planning.</span> Organize desks, tables, and equipment. Control occupancy levels. Restrict room capacity. ",
-                        list2: "<span>Usage reports.</span> Track equipment usage, room utilization, and total occupancy. Adjust spaces as changes occur.",
-                        list3: "<span>Integrations.</span> Integrate with Outlook, Okta, Teams, Zoom, Azure, Proxyclick, and more. Plus, custom APIs. ",
-                    }
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Icon-Condeco-Rescheduling.png",
+                    featureAltTag: "Rescheduling",
+                    featureCopy: "Automatically book new rooms with the same size and equipment if meetings are rescheduled. Instantly notify all attendees. ",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Hand_icon.png",
+                    featureAltTag: "Visitor management",
+                    featureCopy: "Add guests to your booking. Auto-send invites with the meeting room location. Let visitors check in electronically.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Space_planning-icon-1.png",
+                    featureAltTag: "Space planning",
+                    featureCopy: "Sort your office desks, tables, and rooms. Restrict meeting room capacity. Track equipment, deliveries, and visitors. ",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Cost-icon.png",
+                    featureAltTag: "Usage reports",
+                    featureCopy: "Keep track of how employees use the office. Adjust space as room utilization, total occupancy, and expected visitors change.",
+                },
+                {
+                    featureLogo: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4001/Feature_Icons/Mobile_icon.png",
+                    featureAltTag: "Integrations",
+                    featureCopy: "Integrate with Microsoft 365, Outlook, Okta,  Teams, Zoom, Azure, Proxyclick, and more. Plus, custom APIs.",
                 }
-            ]
+            ],
         },
         {
             pageName: "ppc-eptura-asset-management",
