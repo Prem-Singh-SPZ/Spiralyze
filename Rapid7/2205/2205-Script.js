@@ -1,9 +1,19 @@
 (function () {
     console.log('2205 test ready..');
-    loadTest();
+    let bodyLoaded = setInterval(function () {
+        const body = document.querySelector('body');
+        if (body && !body.classList.contains('spz-2205')) {
+            clearInterval(bodyLoaded);
+            loadTest();
+        }
+    });
 
     function loadTest() {
         document.body.classList.add('spz-2205');
+
+        if (document.querySelector('.longHero__content .spz-custom-email input[name="email"]')) {
+            document.querySelector('.longHero__content .spz-custom-email input[name="email"]').value = '';
+        }
 
         if (window.location.pathname.indexOf('/db/vulnerabilities') > -1) {
             waitForElm('.off-canvas-wrapper .off-canvas-content .overlayText').then(function (elm) {
@@ -77,8 +87,6 @@
                 }
             });
         }
-
-
     }
 
     // Generic
@@ -106,12 +114,15 @@
                 validateEmailField();
             });
 
-            document.querySelectorAll('.button.mdBtn[data-element-location="hero"]').forEach(function (elem) {
-                elem.addEventListener("click", function (e) {
-                    createEmailCookie(secondaryEmail.value);
-                    console.log(secondaryEmail.value);
-                });
-            })
+            waitForElm('.button.mdBtn[data-element-location="hero"]').then(function () {
+                document.querySelectorAll('.button.mdBtn[data-element-location="hero"]').forEach(function (elem) {
+                    elem.addEventListener("click", function (e) {
+                        createEmailCookie(secondaryEmail.value);
+                        console.log(secondaryEmail.value);
+                    });
+                })
+            });
+
         });
     }
 
@@ -126,19 +137,11 @@
         else {
             email.closest('.spz-custom-email').classList.remove('input-filled');
         }
-
-        // if (!validateEmail(email.value)) {
-        //     email.closest('.spz-custom-email').classList.add('input-error');
-        //     return false;
-        // } else {
-        //     email.closest('.spz-custom-email').classList.remove('input-error');
-        //     return true;
-        // }
     }
 
     // Create email cookie
     function createEmailCookie(value) {
-        today = new Date();
+        const today = new Date();
         var expire = new Date();
         expire.setTime(today.getTime() + 3600000 * 24 * 30); //  Save for 30 days
         document.cookie = "userEmail=" + value + ";path=/" + ";expires=" + expire.toUTCString();
@@ -160,10 +163,4 @@
         }
         return "";
     }
-
-    // Email validation function
-    // function validateEmail(email) {
-    //     var regex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    //     return regex.test(String(email).toLowerCase());
-    // }
 })();
