@@ -62,7 +62,7 @@
                     setTimeout(() => {
                         clearInterval(addValue);
                         emailElm.focus();
-                    }, 2000);
+                    }, 1000);
                 }
             });
         }
@@ -83,7 +83,7 @@
                     setTimeout(() => {
                         clearInterval(addValue);
                         emailElm.focus();
-                    }, 2000);
+                    }, 3000);
                 }
             });
         }
