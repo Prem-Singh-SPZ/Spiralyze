@@ -1,5 +1,5 @@
 (function () {
-    console.log('2205 test ready..');
+    // console.log('2205 test ready..');
     let bodyLoaded = setInterval(function () {
         const body = document.querySelector('body');
         if (body && !body.classList.contains('spz-2205')) {
@@ -50,9 +50,9 @@
             waitForElm('.marketoForm .mktoForm #Email.mktoField.mktoEmailField').then(function () {
                 const uname = getEmailCookie("userEmail");
                 const emailElm = document.querySelector('.marketoForm .mktoForm #Email.mktoField.mktoEmailField');
-                console.log('we are on demo');
-                console.log(uname);
-                console.log(emailElm);
+                // console.log('we are on demo');
+                // console.log(uname);
+                // console.log(emailElm);
 
                 if (uname && emailElm) {
                     let addValue = setInterval(() => {
@@ -71,9 +71,9 @@
             waitForElm('#formBlock dl dd input#email').then(function () {
                 const uname = getEmailCookie("userEmail");
                 const emailElm = document.querySelector('#formBlock dl dd input#email');
-                console.log('we are on demo');
-                console.log(uname);
-                console.log(emailElm);
+                // console.log('we are on demo');
+                // console.log(uname);
+                // console.log(emailElm);
 
                 if (uname && emailElm) {
                     let addValue = setInterval(() => {
@@ -118,7 +118,7 @@
                 document.querySelectorAll('.button.mdBtn[data-element-location="hero"]').forEach(function (elem) {
                     elem.addEventListener("click", function (e) {
                         createEmailCookie(secondaryEmail.value);
-                        console.log(secondaryEmail.value);
+                        // console.log(secondaryEmail.value);
                     });
                 })
             });

@@ -51,9 +51,9 @@
         focusFields();
         submitTestDetails();
 
-        // document.querySelector('.form-wrapper-spz').insertAdjacentHTML('beforeend', `<div class="back-to-home">Back to
-        // <a href="javascript:void(0)" class="drata-home">drata.com</a>
-        // </div>`);
+        document.querySelector('.form-wrapper-spz').insertAdjacentHTML('beforeend', `<div class="back-to-home">Back to
+        <a href="javascript:void(0)" class="drata-home">drata.com</a>
+        </div>`);
         // removeStyleTags();
 
       }
