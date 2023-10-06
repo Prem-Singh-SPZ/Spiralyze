@@ -49,6 +49,7 @@ body.spz-4002 {
 
         .blog-rating {
           display: flex;
+          position: relative;
           @media (max-width: 767.98px) {
             align-items: center;
             justify-content: center;
@@ -67,8 +68,47 @@ body.spz-4002 {
             font-weight: 500;
             line-height: 20px;
             margin-left: 8px;
-            span {
+            white-space: nowrap;
+            display: flex;
+            .rating-number {
               font-weight: 700;
+            }
+
+            .info-icon {
+              display: block;
+              width: 18px;
+              height: 18px;
+              margin-left: 4px;
+              
+              img {
+                cursor: pointer;
+              }
+            }
+          }
+
+          .spz-tooltip {
+            min-width: 236px;
+            height: 67px;
+            background: url(//res.cloudinary.com/spiralyze/image/upload/v1696558645/Jack%20Henry/4002/tooltip_bg.svg);
+            position: absolute;
+            bottom: 20px;
+            left: calc(50% - 40px);
+            display: none;
+
+            &.show-tool-tip {
+              display: block;
+            }
+
+            span {
+              color: #06185f;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 20px;
+              width: 100%;
+              display: block;
+              padding-top: 14px;
+              text-align: center;
             }
           }
         }

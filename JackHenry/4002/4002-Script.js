@@ -21,6 +21,23 @@
                     loadTest4002();
                 });
             }
+
+            //On hover of .info-icon addclass show-tool-tip to .spz-tooltip
+            waitForElm('body .spz-tooltip').then(function (elm) {
+
+                document.querySelector('.info-icon img').addEventListener('mouseenter', function () {
+                    document.querySelector('.spz-tooltip').classList.add('show-tool-tip');
+                });
+                document.querySelector('.spz-tooltip').addEventListener('mouseenter', function () {
+                    document.querySelector('.spz-tooltip').classList.add('show-tool-tip');
+                });
+                document.querySelector('.info-icon img').addEventListener('mouseleave', function () {
+                    document.querySelector('.spz-tooltip').classList.remove('show-tool-tip');
+                });
+                document.querySelector('.spz-tooltip').addEventListener('mouseleave', function () {
+                    document.querySelector('.spz-tooltip').classList.remove('show-tool-tip');
+                });
+            });
         }
     });
 
@@ -51,7 +68,7 @@
     }
 
     const blogBannerSection = `<div class="blog-banner-section"><div class="blog-banner-container"><div class="blog-banner-content"><h6>See how 8,000+ banks and credit unions use Jack Henry to modernize operations</h6><div class="blog-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/v1692709279/jackhenry/4002/frame_5595.svg" alt="rating"><div class="reviews">
-    <span>4.5/5</span> (246 Reviews)</div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
+    <span class="rating-number">4.8</span> (246 Reviews) <span class="info-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1696558646/Jack%20Henry/4002/info-icon.svg" alt="info icon"></span></div><div class="spz-tooltip"><span>Ratings from featuredcustomers.com</span></div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
 
     function waitForElm(selector) {
         return new Promise(function (resolve) {

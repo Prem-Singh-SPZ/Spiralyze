@@ -63,6 +63,7 @@ body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  position: relative;
 }
 @media (max-width: 767.98px) {
   body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating {
@@ -86,9 +87,45 @@ body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .
   font-weight: 500;
   line-height: 20px;
   margin-left: 8px;
+  white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
-body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .reviews span {
+body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .reviews .rating-number {
   font-weight: 700;
+}
+body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .reviews .info-icon {
+  display: block;
+  width: 18px;
+  height: 18px;
+  margin-left: 4px;
+}
+body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .reviews .info-icon img {
+  cursor: pointer;
+}
+body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .spz-tooltip {
+  min-width: 236px;
+  height: 67px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1696558645/Jack%20Henry/4002/tooltip_bg.svg);
+  position: absolute;
+  bottom: 20px;
+  left: calc(50% - 40px);
+  display: none;
+}
+body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .spz-tooltip.show-tool-tip {
+  display: block;
+}
+body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-content .blog-rating .spz-tooltip span {
+  color: #06185f;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  width: 100%;
+  display: block;
+  padding-top: 14px;
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   body.spz-4002 .blog-banner-section .blog-banner-container .blog-banner-cta {
