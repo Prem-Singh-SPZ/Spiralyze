@@ -79,9 +79,13 @@ body.spz-4002 {
               width: 18px;
               height: 18px;
               margin-left: 4px;
-              
+
               img {
                 cursor: pointer;
+              }
+
+              @media (max-width: 1023.98px) {
+                display: none;
               }
             }
           }
@@ -92,7 +96,7 @@ body.spz-4002 {
             background: url(//res.cloudinary.com/spiralyze/image/upload/v1696558645/Jack%20Henry/4002/tooltip_bg.svg);
             position: absolute;
             bottom: 20px;
-            left: calc(50% - 40px);
+            left: calc(50% - 36px);
             display: none;
 
             &.show-tool-tip {
@@ -107,7 +111,7 @@ body.spz-4002 {
               line-height: 20px;
               width: 100%;
               display: block;
-              padding-top: 14px;
+              padding: 16px;
               text-align: center;
             }
           }

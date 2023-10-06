@@ -5,6 +5,10 @@
             clearInterval(bodyInterval);
             bodyEle.classList.add('spz-4002');
 
+            //preload an image in the <head>
+            document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696558645/Jack%20Henry/4002/tooltip_bg.svg" as="image">`
+            );
+
             if (location.href.indexOf('resources/articles/elevate-your-website-for-the-digital-age') > -1) {
                 waitForElm('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section').then(function (elm) {
                     document.querySelectorAll('body.hs-site-page #hs_cos_wrapper_resource_individual .resource-individual-section .body-content h4')[1].insertAdjacentHTML('beforebegin', blogBannerSection);
@@ -25,18 +29,23 @@
             //On hover of .info-icon addclass show-tool-tip to .spz-tooltip
             waitForElm('body .spz-tooltip').then(function (elm) {
 
-                document.querySelector('.info-icon img').addEventListener('mouseenter', function () {
-                    document.querySelector('.spz-tooltip').classList.add('show-tool-tip');
+                document.querySelectorAll('.info-icon img').forEach(function (elem) {
+                    elem.addEventListener('mouseenter', function () {
+                        elem.closest('.blog-rating').querySelector('.spz-tooltip').classList.add('show-tool-tip');
+                    });
+                    elem.addEventListener('mouseleave', function () {
+                        elem.closest('.blog-rating').querySelector('.spz-tooltip').classList.remove('show-tool-tip');
+                    });
                 });
-                document.querySelector('.spz-tooltip').addEventListener('mouseenter', function () {
-                    document.querySelector('.spz-tooltip').classList.add('show-tool-tip');
-                });
-                document.querySelector('.info-icon img').addEventListener('mouseleave', function () {
-                    document.querySelector('.spz-tooltip').classList.remove('show-tool-tip');
-                });
-                document.querySelector('.spz-tooltip').addEventListener('mouseleave', function () {
-                    document.querySelector('.spz-tooltip').classList.remove('show-tool-tip');
-                });
+
+                // document.querySelectorAll('.spz-tooltip').forEach(function (elem) {
+                //     elem.addEventListener('mouseenter', function () {
+                //         elem.classList.add('show-tool-tip');
+                //     });
+                //     elem.addEventListener('mouseleave', function () {
+                //         elem.classList.remove('show-tool-tip');
+                //     });
+                // });
             });
         }
     });
@@ -67,8 +76,8 @@
         }
     }
 
-    const blogBannerSection = `<div class="blog-banner-section"><div class="blog-banner-container"><div class="blog-banner-content"><h6>See how 8,000+ banks and credit unions use Jack Henry to modernize operations</h6><div class="blog-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/v1692709279/jackhenry/4002/frame_5595.svg" alt="rating"><div class="reviews">
-    <span class="rating-number">4.8</span> (246 Reviews) <span class="info-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1696558646/Jack%20Henry/4002/info-icon.svg" alt="info icon"></span></div><div class="spz-tooltip"><span>Ratings from featuredcustomers.com</span></div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
+    const blogBannerSection = `<div class="blog-banner-section"><div class="blog-banner-container"><div class="blog-banner-content"><h6>See how 7,500 banks and credit unions use Jack Henry to modernize operations</h6><div class="blog-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/v1692709279/jackhenry/4002/frame_5595.svg" alt="rating"><div class="reviews">
+    <span class="rating-number">4.8</span> (2596 Reviews) <span class="info-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1696558646/Jack%20Henry/4002/info-icon.svg" alt="info icon"></span></div><div class="spz-tooltip"><span>Ratings from <u>featuredcustomers.com</u></span></div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
 
     function waitForElm(selector) {
         return new Promise(function (resolve) {
