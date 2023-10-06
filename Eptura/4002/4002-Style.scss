@@ -1,0 +1,1100 @@
+$eptura-font: "Eptura Flexible", Arial, sans-serif;
+
+body.spz-4003 {
+  background: none;
+  #HeaderScripts {
+    display: none !important;
+  }
+
+  .body-wrapper {
+    height: 100vh;
+    &::before,
+    > section:not(#hero),
+    > div,
+    > footer {
+      display: none !important;
+    }
+
+    // Hero changes starts
+    #hero {
+      height: 100%;
+      .hero_container.page_padding {
+        padding: 0 15px !important;
+        max-width: 100% !important;
+        height: 100%;
+
+        > .row {
+          flex-direction: row-reverse;
+          height: 100%;
+
+          //Hero form content
+          #HeroFormCol {
+            max-width: 604px;
+            padding: 32px 30px 0px;
+            background: #fff;
+
+            @media (min-width: 1600px) {
+              max-width: 740px;
+              padding: 32px 70px 0px;
+            }
+
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              width: 384px;
+              padding: 24px 14px 16px;
+              display: flex !important;
+              flex-direction: column;
+            }
+
+            @media (max-width: 767.98px) {
+              max-width: 100%;
+              width: 100%;
+              padding: 24px 20px 23px !important;
+              order: -1;
+            }
+
+            .spz-logo {
+              text-align: center;
+            }
+
+            //Steps Section starts
+            .steps {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+
+              .step-11 {
+                position: relative;
+                font-size: 14px;
+                line-height: 20px;
+                font-weight: 300;
+                color: #0d122e;
+                text-align: center;
+              }
+            }
+
+            //Step questions
+            .step-ques-section-1 {
+              .step-ques-sub-title {
+                color: #904ab0;
+                text-align: center;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 13px;
+                letter-spacing: 2.4px;
+                text-transform: uppercase;
+                font-family: $eptura-font;
+              }
+
+              .step-ques-title {
+                color: #0d122e;
+                text-align: center;
+                font-family: $eptura-font;
+                font-size: 26px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 34px;
+              }
+
+              .step-ques-variant-question {
+                max-width: 412px;
+                margin: auto;
+
+                .form-checkboxes {
+                  .custom-checkbox-spz {
+                    display: inline-flex;
+                    width: 100%;
+                    max-width: 132px;
+                    height: 138px;
+                    padding: 24px 12px;
+                    border-radius: 8px;
+                    background: #f6fafa;
+                    overflow: hidden;
+                    flex-direction: column;
+                    align-items: center;
+                    // gap: 12px;
+                    margin-bottom: 8px;
+                    cursor: pointer;
+                    position: relative;
+
+                    @media (max-width: 991.98px) {
+                      height: 56px;
+                      padding-left: 16px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      width: 100%;
+                      margin-bottom: 16px;
+                    }
+
+                    &:hover {
+                      background: #d6d7f5;
+                      .ccs-checkbox .ccs-box::before {
+                        content: url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg");
+                        background: #d6d7f5;
+                      }
+                    }
+
+                    &.active {
+                      background: #d6d7f5;
+                    }
+
+                    &.full-width {
+                      width: 100%;
+                      max-width: 100%;
+
+                      .ccs-label {
+                        max-width: initial;
+                        margin-right: auto;
+                      }
+                    }
+
+                    .ccs-img {
+                      margin-bottom: 6px;
+                      img {
+                        width: 48px;
+                        height: 48px;
+                      }
+                    }
+
+                    .ccs-label {
+                      color: #0d122e;
+                      text-align: center;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 20px;
+
+                      @media (max-width: 1200px) {
+                        font-size: 16px;
+                        line-height: 22px;
+                      }
+                    }
+
+                    .ccs-checkbox {
+                      position: absolute;
+                      width: 20px;
+                      height: 20px;
+                      top: 12px;
+                      left: 12px;
+
+                      [type="checkbox"] {
+                        position: absolute;
+                        opacity: 0;
+                        cursor: pointer;
+                        height: 20px;
+                        width: 20px;
+                      }
+
+                      input {
+                        ~ .ccs-box::before {
+                          content: url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-default.svg");
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          background: #f6fafa;
+                          height: 20px;
+                          width: 20px;
+                        }
+
+                        &[checked] ~ .ccs-box::before {
+                          content: url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg");
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          background: #d6d7f5;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .step-ques-button {
+                button.call-to-action {
+                  display: flex;
+                  height: 50px;
+                  padding: 0px 28px 0px 32px;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 3px;
+                  background: #904ab0;
+                  color: #fff;
+                  text-align: center;
+                  font-family: Eptura Flexible;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 24px;
+                  outline: transparent;
+                  border: 0;
+                  margin: auto;
+                }
+              }
+            }
+
+            #HeroFormPanel {
+              background-color: transparent !important;
+              padding: 64px 0;
+
+              @media (max-width: 1199.98px) {
+                padding: 22px 0;
+              }
+
+              @media (max-width: 767.98px) {
+                max-width: 424px;
+                margin: auto;
+                padding: 20px 0;
+              }
+
+              #HeroFormTitleText {
+                display: block !important;
+
+                h6 {
+                  color: var(--accents-a-5, #904ab0);
+                  text-align: center;
+                  font-size: 26px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 34px; /* 130.769% */
+                  letter-spacing: 0;
+                  margin-bottom: 16px;
+                }
+              }
+
+              //Form CSS starts here
+              #HeroForm {
+                //Form Css starts here
+                form.mktoForm {
+                  .mktoFormRow {
+                    .mktoFormCol {
+                      min-height: auto;
+                      margin: 0 !important;
+                      padding: 0 10px !important;
+
+                      @media (max-width: 1199.98px) {
+                        line-height: 0;
+                      }
+
+                      .mktoFieldWrap {
+                        position: relative;
+                        float: none !important;
+                        .mktoLabel {
+                          position: absolute;
+                          overflow: hidden;
+                          color: #0d122e !important;
+                          text-overflow: ellipsis;
+                          white-space: nowrap;
+                          font-family: $eptura-font;
+                          font-size: 16px !important;
+                          font-style: normal;
+                          font-weight: 300 !important;
+                          line-height: 24px; /* 150% */
+                          top: 11px;
+                          left: 16px;
+                          padding: 0 !important;
+                          transition: all 0.3s ease-in-out;
+                          pointer-events: none;
+                          max-width: calc(100% - 30px);
+                          background: #f6fafa;
+                          right: 0;
+                        }
+
+                        &.select .mktoLabel {
+                          max-width: calc(100% - 58px);
+                        }
+
+                        .mktoField:not([type="checkbox"]) {
+                          border-radius: 4px;
+                          border: 1px solid
+                            var(--interactive-colors-a-4, #d6d7f5) !important;
+                          width: 280px;
+                          padding: 11px 16px 10px 16px !important;
+                          color: var(
+                            --primary-neutrals-n-1,
+                            #0d122e
+                          ) !important;
+                          text-overflow: ellipsis;
+                          font-family: $eptura-font !important;
+                          font-size: 16px !important;
+                          font-style: normal;
+                          font-weight: 300 !important;
+                          line-height: 24px !important; /* 150% */
+                          margin-bottom: 20px !important;
+
+                          &:not(#Lead_Notes__c) {
+                            white-space: nowrap;
+                            overflow: hidden;
+                            height: 48px !important;
+                            @media (min-width: 767.98px) {
+                              // max-width: calc(100% - 10px);
+                              max-width: 100%;
+                            }
+                          }
+
+                          &#I_am__c,
+                          &#Country,
+                          &#Solution_Type__c {
+                            outline: transparent;
+                            appearance: none !important;
+                            background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                            background-repeat: no-repeat !important;
+                            background-position: right 14px center !important;
+                            background-size: 24px !important;
+                            padding-right: 32px !important;
+                          }
+
+                          &#Lead_Notes__c ~ .mktoError {
+                            margin-top: 0 !important;
+                            .mktoErrorArrowWrap {
+                              top: -27px;
+                            }
+                            .mktoErrorMsg {
+                              margin-top: -20px;
+                            }
+                          }
+
+                          &:-webkit-autofill {
+                            -webkit-box-shadow: 0 0 0 30px #f6fafa inset !important;
+                          }
+                          &:autofill {
+                            -webkit-box-shadow: 0 0 0 30px #f6fafa inset !important;
+                          }
+                        }
+
+                        .mktoHtmlText.mktoHasWidth {
+                          margin: 0 !important;
+                          span {
+                            color: #0d122e;
+                            font-size: 10px !important;
+                            // font-family: $eptura-font;
+                            font-style: normal;
+                            font-weight: 300;
+                            line-height: 16px; /* 160% */
+
+                            @media (max-width: 1199.98px) {
+                              margin-bottom: 4px;
+                            }
+
+                            a {
+                              // font-family: $eptura-font;
+                              padding: 0;
+                              color: #904ab0;
+                              // font-weight: 500;
+                              &:hover {
+                                color: #0d122e;
+                                text-decoration: underline;
+                              }
+                            }
+                          }
+                        }
+
+                        .mktoCheckboxList {
+                          margin-top: 15px;
+                          cursor: pointer;
+                          display: inline-block;
+                          position: relative;
+                          padding-left: 25px;
+                          @media (max-width: 1199.98px) {
+                            margin-top: 14px;
+                          }
+                          @media (max-width: 767.98px) {
+                            margin-top: 1px;
+                          }
+
+                          .mktoField {
+                            border: 1px solid #d6d7f5;
+                            height: 16px !important;
+                            width: 16px !important;
+                            cursor: pointer;
+                            @media (max-width: 767.98px) {
+                              margin-top: 7px;
+                            }
+                          }
+
+                          label {
+                            font-family: $eptura-font !important;
+                            color: var(--primary-neutrals-n-1, #0d122e);
+                            font-size: 14px !important;
+                            font-style: normal !important;
+                            font-weight: 300 !important;
+                            line-height: 20px !important; /* 142.857% */
+                            margin-left: 19px;
+                            letter-spacing: -0.1px;
+                            cursor: pointer;
+
+                            @media (max-width: 767.98px) {
+                              font-size: 12px !important;
+                              line-height: 18px !important;
+                            }
+
+                            &:before {
+                              content: "";
+                              width: 16px;
+                              height: 16px;
+                              position: absolute;
+                              left: 0;
+                              background: url("//res.cloudinary.com/spiralyze/image/upload/v1693889243/eptura/4003/form-checkmark.svg")
+                                left center no-repeat;
+                              margin-top: 2px;
+                            }
+
+                            // &:hover {
+                            //   &::before {
+                            //     background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg")
+                            //       left center no-repeat;
+                            //   }
+                            // }
+                          }
+                          input[type="checkbox"] {
+                            display: none !important;
+
+                            &:checked + label:before {
+                              background: url("//res.cloudinary.com/spiralyze/image/upload/v1693889242/eptura/4003/form-checkmark-checked.svg")
+                                left center no-repeat;
+                            }
+                          }
+                        }
+
+                        .mktoError {
+                          margin-top: 54px !important;
+                          @media (min-width: 767.98px) and (max-width: 877.98px) {
+                            margin-top: 74px !important;
+                          }
+                          @media (max-width: 767.98px) {
+                            margin-top: 40px !important;
+                          }
+                          @media (max-width: 388.98px) {
+                            margin-top: 56px !important;
+                          }
+
+                          .mktoErrorMsg {
+                            font-size: 14px;
+                          }
+                        }
+
+                        //custom error for checkbox field
+                        &.spz-cstm-error {
+                          .mktoCheckboxList label {
+                            color: #e51b00 !important;
+
+                            &::before {
+                              background: url("//res.cloudinary.com/spiralyze/image/upload/v1693889244/eptura/4003/form-checkmark-errored.svg")
+                                left center no-repeat;
+                            }
+                          }
+                        }
+                      }
+
+                      &.field-focus {
+                        .mktoFieldWrap {
+                          .mktoLabel {
+                            top: -8px;
+                            left: 11px;
+                            right: auto;
+                            padding: 0 5px !important;
+                            font-family: $eptura-font;
+                            color: var(--accents-a-5, #904ab0) !important;
+                            font-size: 13px !important;
+                            line-height: 18px !important; /* 138.462% */
+                            background: #f6fafa;
+                          }
+                        }
+                        .mktoField:not([type="checkbox"]) {
+                          border-color: #904ab0 !important;
+                        }
+                      }
+
+                      &.input-filled {
+                        .mktoFieldWrap {
+                          .mktoLabel {
+                            top: -8px;
+                            right: auto;
+                            left: 11px;
+                            font-family: $eptura-font;
+                            padding: 0 5px !important;
+                            font-size: 13px !important;
+                            line-height: 18px !important; /* 138.462% */
+                            background: #f6fafa;
+                          }
+                        }
+                      }
+
+                      &.field-error {
+                        &.field-focus {
+                          .mktoFieldWrap {
+                            .mktoLabel {
+                              color: var(--accents-a-5, #f83a59) !important;
+                            }
+                          }
+                        }
+
+                        .mktoField:not([type="checkbox"]) {
+                          border-color: #f83a59 !important;
+                        }
+                      }
+                    }
+
+                    &[data-zi-field-enriched="true"] {
+                      display: inline !important;
+                    }
+
+                    .spz-anchor:not(.spz-hidden) {
+                      display: flex;
+                      width: 100%;
+
+                      + .mktoFieldDescriptor.mktoFormCol {
+                        display: none !important;
+                      }
+
+                      .show-comment-dynamic {
+                        overflow: hidden;
+                        color: #0d122e;
+                        font-family: $eptura-font;
+                        text-overflow: ellipsis;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 24px;
+                        margin-bottom: 18px;
+                        display: inline-block;
+                        margin-top: 2px;
+                        transition: all 0.3s ease;
+                        margin-left: 10px;
+                        span {
+                          padding-right: 5px;
+                        }
+                        @media (max-width: 767.98px) {
+                          padding: 0;
+                          margin-bottom: 26px;
+                        }
+
+                        &:hover {
+                          color: #904ab0;
+                        }
+
+                        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                          margin-bottom: 26px;
+                        }
+                      }
+                    }
+                    .spz-hidden {
+                      display: none;
+                    }
+                  }
+
+                  //submit button css
+                  .mktoButtonRow {
+                    text-align: center;
+                    .mktoButtonWrap {
+                      width: calc(100% - 20px);
+                      button.mktoButton {
+                        width: 100% !important;
+                        max-width: 100% !important;
+                        height: 50px !important;
+                        padding: 0px !important;
+                        border-radius: 3px !important;
+                        background: #904ab0 !important;
+                        color: var(--primary-neutrals-w, #fff) !important;
+                        text-align: center;
+                        font-family: $eptura-font !important;
+                        font-size: 16px !important;
+                        font-style: normal;
+                        font-weight: 500;
+                        line-height: 24px !important; /* 150% */
+                        margin-top: 22px !important;
+                        white-space: nowrap;
+                        all: initial;
+
+                        &:hover,
+                        &:focus {
+                          background: linear-gradient(
+                              0deg,
+                              rgba(255, 255, 255, 0.25) 0%,
+                              rgba(255, 255, 255, 0.25) 100%
+                            ),
+                            #904ab0 !important;
+                        }
+                        &:focus {
+                          transform: translate(0, 1px);
+                        }
+
+                        @media (max-width: 767.98px) {
+                          // height: 56px !important;
+                          padding: 0px 32px;
+                          // width: 300px !important;
+                          // max-width: 300px !important;
+                        }
+                      }
+                    }
+                  }
+
+                  //email line form
+                  .spz-email {
+                    .mktoFieldWrap {
+                      margin-top: 12px;
+                      @media (min-width: 1199.98px) {
+                        margin-top: 6px;
+                      }
+                      // @media (max-width: 767.98px) {
+                      //   margin-top: 16px;
+                      // }
+                      .mktoHtmlText.mktoHasWidth {
+                        text-align: center;
+                        @media (max-width: 767.98px) {
+                          line-height: 0;
+                        }
+                        em {
+                          color: #545965;
+                          font-size: 14px;
+                          font-style: normal;
+                          font-weight: 300;
+                          line-height: 20px; /* 142.857% */
+                          @media (max-width: 767.98px) {
+                            padding: 0;
+                          }
+
+                          .mobile-only {
+                            @media (min-width: 767.98px) {
+                              display: none;
+                            }
+                          }
+
+                          a {
+                            color: var(--interactive-colors-a-1, #904ab0);
+                            font-weight: 500;
+                            padding: 0;
+                            font-family: $eptura-font;
+                            padding-left: 2px;
+
+                            &:hover {
+                              color: #545965;
+                              text-decoration: underline;
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              //Form CSS ends here
+            }
+
+            .spz-social-section {
+              .social-section-title {
+                color: var(--primary-neutrals-n-1, #0d122e);
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 20px; /* 142.857% */
+                padding-top: 38px;
+                margin-bottom: 24px;
+                text-align: center;
+                position: relative;
+
+                @media (max-width: 1199.98px) {
+                  padding-top: 8px;
+                  margin-bottom: 12px;
+                }
+
+                &::before {
+                  content: "";
+                  width: 131px;
+                  height: 1px;
+                  opacity: 0.3;
+                  background: #babfcb;
+                  display: block;
+                  position: absolute;
+                  left: 0;
+                  bottom: 9px;
+
+                  @media (max-width: 1600px) {
+                    width: 103px;
+                  }
+
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    width: calc(50% - 149px);
+                  }
+
+                  @media (max-width: 767.98px) {
+                    width: 0;
+                    display: none;
+                  }
+                }
+
+                &::after {
+                  content: "";
+                  width: 131px;
+                  height: 1px;
+                  opacity: 0.3;
+                  background: #babfcb;
+                  display: block;
+                  position: absolute;
+                  right: 0;
+                  bottom: 9px;
+
+                  @media (max-width: 1600px) {
+                    width: 103px;
+                  }
+
+                  @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                    width: calc(50% - 149px);
+                  }
+
+                  @media (max-width: 767.98px) {
+                    width: 0;
+                    display: none;
+                  }
+                }
+              }
+
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                margin-top: auto;
+              }
+            }
+
+            .social-logo-section {
+              display: flex;
+              justify-content: space-between;
+              align-items: center;
+              flex-wrap: wrap;
+              padding: 0 20px;
+              opacity: 0.7;
+
+              @media (min-width: 1600px) {
+                padding: 0 36px;
+              }
+
+              @media (max-width: 1199.98px) {
+                padding: 0 22px;
+              }
+              @media (max-width: 767.98px) {
+                padding: 0 4px;
+              }
+
+              > .logo-img {
+                width: 33.33%;
+                padding: 0 16px;
+                text-align: center;
+                margin-bottom: 10px;
+
+                @media (max-width: 1199.98px) {
+                  padding: 0 12px;
+                  margin-bottom: 0px;
+                }
+
+                img {
+                  // max-width: 100px;
+                  height: auto;
+
+                  @media (max-width: 1199.98px) {
+                    max-width: 100%;
+                  }
+                }
+              }
+            }
+          }
+
+          //Hero text content
+          > .col-md.pb-5 {
+            max-width: calc(100% - 604px);
+            padding: 35px 70px !important;
+            border-left: 1px solid rgba(255, 255, 255, 0.1);
+            background: #20253f;
+
+            @media (min-width: 1600px) {
+              max-width: calc(100% - 740px);
+            }
+
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              max-width: calc(100% - 384px);
+              padding: 36px 24px 24px !important;
+            }
+
+            @media (max-width: 767.98px) {
+              max-width: 100%;
+              width: 100%;
+              padding: 40px 12px 24px 12px !important;
+            }
+
+            #HeroText,
+            #HeroBtn {
+              display: none !important;
+            }
+
+            .spz-copy {
+              display: flex;
+              height: 100%;
+              max-width: 800px;
+              margin: auto;
+              .wrap {
+                display: flex;
+                flex-direction: column;
+
+                .main {
+                  .hero-title {
+                    color: #f6fafa;
+                    text-align: center;
+                    font-size: 46px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 54px;
+                    margin-bottom: 32px;
+
+                    span {
+                      //   font-family: $eptura-font;
+                      color: #904ab0;
+                    }
+
+                    @media (max-width: 1199.98px) {
+                      font-size: 26px;
+                      line-height: 34px;
+                      // max-width: 294px;
+                      margin-left: auto;
+                      margin-right: auto;
+                    }
+                    @media (max-width: 767.98px) {
+                      max-width: 294px;
+                    }
+                  }
+
+                  .hero-banner-img {
+                    margin-bottom: 40px;
+
+                    img {
+                      max-width: 100%;
+                    }
+                  }
+
+                  .bullets {
+                    padding-left: 40px;
+                    margin-top: 8px;
+
+                    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                      margin-left: -5px;
+                    }
+
+                    @media (min-width: 1600px) {
+                      // padding-right: 6px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      margin: 8px 12px 0;
+                      padding-right: 8px;
+                    }
+
+                    .bullet {
+                      color: #f6fafa;
+                      font-size: 20px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 28px;
+                      position: relative;
+                      margin-bottom: 20px;
+
+                      span {
+                        font-family: $eptura-font;
+                        font-weight: 500;
+                      }
+
+                      @media (max-width: 1199.98px) {
+                        font-size: 16px;
+                        line-height: 24px;
+                      }
+
+                      &::before {
+                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/checkmark-icon.svg);
+                        position: absolute;
+                        left: -40px;
+                        top: 0;
+                        width: 24px;
+                        height: 24px;
+                        display: block;
+                        @media (max-width: 1199.98px) {
+                          left: -36px;
+                        }
+                      }
+                    }
+                  }
+                }
+
+                .spz-simplified-footer {
+                  margin-top: auto;
+
+                  @media (max-width: 767.98px) {
+                    margin-top: 20px;
+                  }
+
+                  .footer-container {
+                    display: flex;
+                    align-items: flex-end;
+                    justify-content: space-between;
+                    height: 100%;
+                    // @media (max-width: 767.98px) {
+                    //   margin: 8px 12px 0;
+                    //   padding-right: 8px;
+                    // }
+                    @media (max-width: 1199.98px) {
+                      flex-direction: column;
+                      align-items: center;
+                      justify-content: flex-end;
+                    }
+
+                    .links {
+                      display: flex;
+                      justify-content: space-between;
+                      width: 100%;
+                      max-width: 305px;
+                      a {
+                        color: var(--primary-neutrals-n-3, #f6fafa);
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 18px;
+
+                        &:hover {
+                          color: #d6d7f5;
+                        }
+                      }
+
+                      @media (max-width: 1199.98px) {
+                        max-width: 100%;
+                        margin-bottom: 8px;
+                        padding: 0 14px;
+                      }
+
+                      @media (max-width: 767.98px) {
+                        padding: 0 18px;
+                        margin-bottom: 12px;
+                      }
+                    }
+
+                    .saas-privacy-policy {
+                      color: var(--primary-neutrals-n-3, #f6fafa);
+                      font-size: 12px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 18px; /* 150% */
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+//Page specific css
+//SpaceIQ and Archibus css
+body.spz-4003.website-spaceiq-demo,
+body.spz-4003.website-archibus-demo {
+  .body-wrapper #hero .hero_container.page_padding > .row {
+    > .col-md.pb-5 .spz-copy .wrap .main {
+      .hero-title {
+        @media (max-width: 1600px) {
+          max-width: 548px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+        @media (max-width: 1199.98px) {
+          max-width: 310px;
+        }
+        @media (max-width: 767.98px) {
+          max-width: 300px;
+        }
+      }
+
+      .bullets {
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          padding-right: 2px;
+        }
+      }
+    }
+
+    #HeroFormCol #HeroFormPanel {
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        padding: 24px 0;
+      }
+    }
+  }
+}
+
+//Managerplus Css
+body.spz-4003.website-managerplus-demo
+  .body-wrapper
+  #hero
+  .hero_container.page_padding
+  > .row {
+  > .col-md.pb-5 {
+    .spz-copy {
+      max-width: 816px;
+      .hero-banner-img,
+      .bullets {
+        max-width: 800px;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .bullets {
+        @media (min-width: 1600.98px) {
+          padding-right: 2px;
+        }
+      }
+
+      .spz-simplified-footer {
+        @media (min-width: 1600.98px) {
+          padding: 0 8px;
+        }
+      }
+
+      .wrap .main {
+        .hero-title {
+          @media (max-width: 767.98px) {
+            max-width: 278px;
+          }
+        }
+      }
+    }
+  }
+
+  #HeroFormCol #HeroFormPanel {
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      padding: 24px 0;
+    }
+  }
+}
+
+//Proxyclick Css
+body.spz-4003.website-proxyclick-demo
+  .body-wrapper
+  #hero
+  .hero_container.page_padding
+  > .row {
+  > .col-md.pb-5 {
+    .spz-copy {
+      .bullets {
+        @media (min-width: 1600.98px) {
+          padding-right: 4px;
+        }
+      }
+
+      .wrap .main {
+        .hero-title {
+          @media (max-width: 767.98px) {
+            max-width: 306px;
+          }
+        }
+      }
+    }
+  }
+
+  #HeroFormCol #HeroFormPanel {
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      padding: 24px 0;
+    }
+  }
+}
