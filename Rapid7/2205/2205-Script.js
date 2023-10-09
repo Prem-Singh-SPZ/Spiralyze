@@ -11,14 +11,10 @@
     function loadTest() {
         document.body.classList.add('spz-2205');
 
-        if (document.querySelector('.longHero__content .spz-custom-email input[name="email"]')) {
-            document.querySelector('.longHero__content .spz-custom-email input[name="email"]').value = '';
-        }
-
         if (window.location.pathname.indexOf('/db/vulnerabilities') > -1) {
             waitForElm('.off-canvas-wrapper .off-canvas-content .overlayText').then(function (elm) {
                 //Add email field
-                document.querySelector('.off-canvas-wrapper .off-canvas-content .overlayText .longHero__content .button-container').insertAdjacentHTML('beforebegin', '<div class="spz-custom-email"><input type="email" name="email" id="email" class="email-input"><label for="email" class="email-label">Enter Email Address</label><p class="spz-error-msg">Email Address is Required</p></div>');
+                document.querySelector('.off-canvas-wrapper .off-canvas-content .overlayText .longHero__content .button-container').insertAdjacentHTML('beforebegin', '<div class="spz-custom-email"><input name="spz-email" id="spz-email" class="email-input" autocomplete="off"><label for="spz-email" class="email-label">Enter Email Address</label><p class="spz-error-msg">Email Address is Required</p></div>');
 
                 document.querySelector('.off-canvas-wrapper .off-canvas-content .overlayText .longHero__content .button-container').insertAdjacentHTML('afterend', `<div class="spz-review-section" >
                      <div class="gartner-peer" >
@@ -107,8 +103,17 @@
 
     // Open modal on click of 'btn-demo-spz'
     function validateEmailFieldReview() {
-        waitForElm('.longHero__content .spz-custom-email input[name="email"]').then(function () {
-            const secondaryEmail = document.querySelector('.longHero__content .spz-custom-email input[name="email"]');
+        waitForElm('.longHero__content .spz-custom-email input[name="spz-email"]').then(function () {
+            const secondaryEmail = document.querySelector('.longHero__content .spz-custom-email input[name="spz-email"]');
+
+            // let clearEmail = setInterval(() => {
+            //     console.log('tested');
+            //     secondaryEmail.value = '';
+            //     console.log(secondaryEmail.value);
+            // },10);
+            // setTimeout(() => {
+            //     clearInterval(clearEmail);
+            // }, 1000);
 
             secondaryEmail.addEventListener('blur', () => {
                 validateEmailField();
@@ -118,7 +123,6 @@
                 document.querySelectorAll('.button.mdBtn[data-element-location="hero"]').forEach(function (elem) {
                     elem.addEventListener("click", function (e) {
                         createEmailCookie(secondaryEmail.value);
-                        // console.log(secondaryEmail.value);
                     });
                 })
             });
@@ -129,7 +133,7 @@
     // Validate email field
     function validateEmailField() {
         // Get email value
-        const email = document.querySelector('.longHero__content .spz-custom-email input[name="email"]');
+        const email = document.querySelector('.longHero__content .spz-custom-email input[name="spz-email"]');
         // Check if email is valid
         if (email.value != '' && email.value != null && email.value != undefined) {
             email.closest('.spz-custom-email').classList.add('input-filled');

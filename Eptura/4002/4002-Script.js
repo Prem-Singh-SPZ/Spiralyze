@@ -483,13 +483,13 @@
                 e.stopPropagation();
                 e.preventDefault();
 
-                if (document.querySelector('.custom-checkbox-spz.active') && checkbox.classList.contains('active')) {
+                if (document.querySelector('.custom-checkbox-spz.active')) {
                     document.querySelector('.custom-checkbox-spz.active input').removeAttribute('checked');
                     document.querySelector('.custom-checkbox-spz.active').classList.remove('active');
                 }
 
                 // Add active class and checked attribute to clicked checkbox
-                else if (!checkbox.classList.contains('active')) {
+                if (!checkbox.classList.contains('active')) {
                     checkbox.classList.add('active');
                     checkbox.querySelector('input').setAttribute('checked', true);
                 }
