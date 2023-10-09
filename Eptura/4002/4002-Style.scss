@@ -32,6 +32,9 @@ body.spz-4003 {
             max-width: 604px;
             padding: 32px 30px 0px;
             background: #fff;
+            display: flex !important;
+            flex-direction: column;
+            justify-content: space-between;
 
             @media (min-width: 1600px) {
               max-width: 740px;
@@ -74,6 +77,7 @@ body.spz-4003 {
               }
 
               .step-1 {
+                display: flex;
                 .step-11 {
                   &::before {
                     content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-1_1.svg);
@@ -84,8 +88,41 @@ body.spz-4003 {
                     margin-right: 6px;
                   }
                 }
+                .line {
+                  width: 32px;
+                  height: 1px;
+                  opacity: 0.2;
+                  background: #0d122e;
+                  margin: 8px 8px 0;
+                }
+
+                &.active {
+                  .step-11 {
+                    opacity: 1;
+                    &::before {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-1-Active.svg);
+                    }
+                  }
+                  .line {
+                    opacity: 0.6;
+                  }
+                }
+
+                &.filled {
+                  .step-11 {
+                    opacity: 1;
+                    &::before {
+                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-1_5.svg);
+                    }
+                  }
+                  .line {
+                    opacity: 0.6;
+                  }
+                }
               }
               .step-2 {
+                display: flex;
+
                 .step-11 {
                   &::before {
                     content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-2_1.svg);
@@ -96,11 +133,41 @@ body.spz-4003 {
                     margin-right: 6px;
                   }
                 }
+                .line {
+                  width: 32px;
+                  height: 1px;
+                  opacity: 0.2;
+                  background: #0d122e;
+                  margin: 8px;
+                }
+
+                &.active {
+                  .step-11 {
+                    opacity: 1;
+                    &::before {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-2-Disabled.svg);
+                    }
+                  }
+                  .line {
+                    opacity: 0.6;
+                  }
+                }
+                &.filled {
+                  .step-11 {
+                    opacity: 1;
+                    &::before {
+                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-2_5.svg);
+                    }
+                  }
+                  .line {
+                    opacity: 0.6;
+                  }
+                }
               }
               .step-3 {
                 .step-11 {
                   &::before {
-                    content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-3_1.svg);
+                    content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696585948/eptura/4002/aura-3_4.svg);
                     position: relative;
                     display: block;
                     width: 20px;
@@ -108,11 +175,34 @@ body.spz-4003 {
                     margin-right: 6px;
                   }
                 }
+                &.active {
+                  .step-11 {
+                    opacity: 1;
+                    &::before {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-3-Disabled.svg);
+                    }
+                  }
+                  .line {
+                    opacity: 0.6;
+                  }
+                }
+                &.filled {
+                  .step-11 {
+                    opacity: 1;
+                    &::before {
+                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-3_5.svg);
+                    }
+                  }
+                  .line {
+                    opacity: 0.6;
+                  }
+                }
               }
             }
 
             //Step questions
-            .step-ques-section-1 {
+            .step-ques-section-1,
+            .step-ques-section-2 {
               .step-ques-sub-title {
                 color: #904ab0;
                 text-align: center;
@@ -156,9 +246,11 @@ body.spz-4003 {
                     cursor: pointer;
                     position: relative;
 
-                    @media (max-width: 991.98px) {
-                      height: 56px;
-                      padding-left: 16px;
+                    @media (max-width: 1198.98px) {
+                      flex-direction: row;
+                      max-width: 100%;
+                      padding: 8px 12px 8px 8px;
+                      height: 48px;
                     }
 
                     @media (max-width: 767.98px) {
@@ -169,8 +261,11 @@ body.spz-4003 {
                     &:hover {
                       background: #d6d7f5;
                       .ccs-checkbox .ccs-box::before {
-                        content: url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg");
-                        background: #d6d7f5;
+                        content: "";
+                        background: #d6d7f5
+                          url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg");
+                        background-repeat: no-repeat;
+                        background-size: 16px;
                       }
                     }
 
@@ -190,9 +285,17 @@ body.spz-4003 {
 
                     .ccs-img {
                       margin-bottom: 6px;
+                      @media (max-width: 1198.98px) {
+                        margin-bottom: 0;
+                        margin-right: 8px;
+                      }
                       img {
                         width: 48px;
                         height: 48px;
+                        @media (max-width: 1198.98px) {
+                          width: 32px;
+                          height: 32px;
+                        }
                       }
                     }
 
@@ -212,36 +315,48 @@ body.spz-4003 {
 
                     .ccs-checkbox {
                       position: absolute;
-                      width: 20px;
-                      height: 20px;
+                      width: 16px;
+                      height: 16px;
                       top: 12px;
                       left: 12px;
+
+                      @media (max-width: 1198.98px) {
+                        top: 14px;
+                        left: auto;
+                        right: 12px;
+                      }
 
                       [type="checkbox"] {
                         position: absolute;
                         opacity: 0;
                         cursor: pointer;
-                        height: 20px;
-                        width: 20px;
+                        height: 16px;
+                        width: 16px;
                       }
 
                       input {
                         ~ .ccs-box::before {
-                          content: url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-default.svg");
+                          content: "";
                           position: absolute;
                           top: 0;
                           left: 0;
-                          background: #f6fafa;
-                          height: 20px;
-                          width: 20px;
+                          background: #f6fafa
+                            url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-default.svg");
+                          background-repeat: no-repeat;
+                          background-size: 16px;
+                          height: 16px;
+                          width: 16px;
                         }
 
                         &[checked] ~ .ccs-box::before {
-                          content: url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg");
+                          content: "";
                           position: absolute;
                           top: 0;
                           left: 0;
-                          background: #d6d7f5;
+                          background: #d6d7f5
+                            url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg");
+                          background-repeat: no-repeat;
+                          background-size: 16px;
                         }
                       }
                     }
@@ -249,11 +364,36 @@ body.spz-4003 {
                 }
               }
 
+              .step-error-1,
+              .step-error-2 {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                margin: 4px 0 24px 0;
+
+                img {
+                  width: 12px;
+                  height: 12px;
+                  margin-right: 4px;
+                }
+                span {
+                  color: #f83a59;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 20px;
+                }
+              }
+
               .step-ques-button {
+                max-width: 412px;
+                margin: auto;
+
                 button.call-to-action {
                   display: flex;
                   height: 50px;
                   padding: 0px 28px 0px 32px;
+                  width: 124px;
                   justify-content: center;
                   align-items: center;
                   border-radius: 3px;
@@ -268,6 +408,20 @@ body.spz-4003 {
                   outline: transparent;
                   border: 0;
                   margin: auto;
+
+                  @media (max-width: 1198.98px) {
+                    width: 100%;
+                  }
+
+                  &:hover,
+                  &:active {
+                    background: linear-gradient(
+                        0deg,
+                        rgba(255, 255, 255, 0.25) 0%,
+                        rgba(255, 255, 255, 0.25) 100%
+                      ),
+                      #904ab0;
+                  }
                 }
               }
             }
@@ -832,6 +986,10 @@ body.spz-4003 {
                   }
                 }
               }
+            }
+
+            .spz-hidden {
+              display: none !important;
             }
           }
 

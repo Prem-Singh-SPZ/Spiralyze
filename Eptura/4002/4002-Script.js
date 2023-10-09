@@ -117,6 +117,7 @@
         formUpdate();
         focusFields();
         updatePageContent();
+        stepValidations();
 
         window.addEventListener("click", function (e) {
             if (e.target.classList.contains("show-comment-dynamic")) {
@@ -141,7 +142,15 @@
             document.querySelector('body').classList.add('safari')
         }
 
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1693889244/eptura/4003/form-checkmark-errored.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1693889242/eptura/4003/form-checkmark-checked.svg" as="image">`
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1693889244/eptura/4003/form-checkmark-errored.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1693889242/eptura/4003/form-checkmark-checked.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-1_5.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-2-Disabled.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-2_5.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-3-Disabled.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-3_5.svg" as="image">`
         );
     }
 
@@ -152,12 +161,15 @@
                 if (identifyPage == url.pageName) {
 
                     document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a href="https://eptura.com/" target="_blank"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></a></div>
+                    <div class="steps-container">
                     <div class="steps">
-                    <div class="step-1">
+                    <div class="step-1 active">
                         <span class="step-11">Step 1</span>
+                        <span class="line"></span>
                     </div>
                     <div class="step-2">
                         <span class="step-11">Step 2</span>
+                        <span class="line"></span>
                     </div>
                     <div class="step-3">
                         <span class="step-11">Step 3</span>
@@ -173,10 +185,11 @@
                         <!-- Custom checkbox ends -->
                         </div>
                     </div>
+                    <div class="step-error-1 spz-hidden"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696580574/eptura/4002/icon-info.svg" alt="info-icon"><span>Choose your answer</span></div>
                     <div class="step-ques-button">
                         <button class="call-to-action step-1">Next<img class="cta-arrow" alt="Arrow" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423223/eptura/4002/navigation__5_-_navigation_arrow_arrows_direction_right_icon.svg" /></button></div>
                     </div>
-                    <div class="step-ques-section-1">
+                    <div class="step-ques-section-2 spz-hidden">
                     <div class="step-ques-sub-title">Get a Demo</div>
                     <div class="step-ques-title">What is your employee range?</div>
                     <div class="step-ques-variant-question">
@@ -186,11 +199,16 @@
                         <!-- Custom checkbox ends -->
                         </div>
                     </div>
+                    <div class="step-error-2 spz-hidden"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696580574/eptura/4002/icon-info.svg" alt="info-icon"><span>Choose your answer</span></div>
                     <div class="step-ques-button">
                         <button class="call-to-action step-2">Next<img class="cta-arrow" alt="Arrow" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423223/eptura/4002/navigation__5_-_navigation_arrow_arrows_direction_right_icon.svg" /></button></div>
-                    </div>`);
+                    </div></div>`);
 
-                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `<div class="spz-social-section"><div class="social-section-title">Trusted by 16,000+ customers worldwide</div><div class="social-logo-section"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-zoom.svg" alt="Zoom"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-comcast.svg" alt="Comcast"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-nasdaq.svg" alt="Nasdaq"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693906373/eptura/4003/logo-slack_1.svg" alt="Slack"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-johnson.svg" alt="Johnson"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-pepsico.svg" alt="Pepsico"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-starbucks.svg" alt="Starbucks coffee"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-generalelectric.svg" alt="General Electric"></div><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/logo-unilever.svg" alt="Unilever"></div></div></div>`);
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `<div class="spz-social-section"><div class="social-section-title">Trusted by 16,000+ customers worldwide</div><div class="social-logo-section"><picture>
+                    <source media="(min-width:1200px)" srcset="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423278/eptura/4002/logo_set_2.svg">
+                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423502/eptura/4002/logo_set_mobile_2.svg">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1696847617/eptura/4002/Logo_Set_Mobile.png" alt="Customers logo">
+                  </picture></div></div>`);
 
                     document.querySelector('#hero > .hero_container > .row > .col-md.pb-5').insertAdjacentHTML('beforeend', `<div class="spz-copy">
                     <div class="wrap">
@@ -234,6 +252,39 @@
         });
     }
 
+    //Steps show hide logic
+    function stepValidations() {
+        document.querySelector('#HeroFormPanel').classList.add('spz-hidden');
+
+        waitForElm('.step-ques-section-1 .call-to-action.step-1').then(function () {
+             //move #HeroFormPanel inside .steps-container div
+        document.querySelector('.steps-container').appendChild(document.querySelector('#HeroFormPanel'));
+            //onclick of .call-to-action.step-1 check if at east one checkbox is checked and show .step-ques-section-2
+            document.querySelector('.step-ques-section-1 .call-to-action.step-1').addEventListener('click', function () {
+                if (document.querySelector('.step-ques-section-1 .form-checkboxes input:checked')) {
+                    document.querySelector('.step-ques-section-1').classList.add('spz-hidden');
+                    document.querySelector('.step-ques-section-2').classList.remove('spz-hidden');
+                    document.querySelector('.steps .step-1').classList.replace("active", "filled");
+                    document.querySelector('.steps .step-2').classList.add('active');
+                }
+                else {
+                    document.querySelector('.step-error-1').classList.remove('spz-hidden');
+                }
+            });
+
+            document.querySelector('.step-ques-section-2 .call-to-action.step-2').addEventListener('click', function () {
+                if (document.querySelector('.step-ques-section-2 .form-checkboxes input:checked')) {
+                    document.querySelector('.step-ques-section-2').classList.add('spz-hidden');
+                    document.querySelector('#HeroFormPanel').classList.remove('spz-hidden');
+                    document.querySelector('.steps .step-2').classList.replace("active", "filled");
+                    document.querySelector('.steps .step-3').classList.add('active');
+                }
+                else {
+                    document.querySelector('.step-error-2').classList.remove('spz-hidden');
+                }
+            });
+        })
+    }
 
     //custom error for checkbox field
     function showGlobalError() {

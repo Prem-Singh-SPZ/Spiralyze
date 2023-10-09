@@ -76,8 +76,8 @@
         }
     }
 
-    const blogBannerSection = `<div class="blog-banner-section"><div class="blog-banner-container"><div class="blog-banner-content"><h6>See how 7,500 banks and credit unions use Jack Henry to modernize operations</h6><div class="blog-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/v1692709279/jackhenry/4002/frame_5595.svg" alt="rating"><div class="reviews">
-    <span class="rating-number">4.8</span> (2596 Reviews) <span class="info-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1696558646/Jack%20Henry/4002/info-icon.svg" alt="info icon"></span></div><div class="spz-tooltip"><span>Ratings from <u>featuredcustomers.com</u></span></div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
+    const blogBannerSection = `<div class="blog-banner-section"><div class="blog-banner-container"><div class="blog-banner-content"><h6>See how 7,500 banks and credit unions use Jack Henry to modernize operations</h6><div class="blog-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/v1696836931/Jack%20Henry/4002/Frame_5599.svg" alt="rating"><div class="reviews">
+    <b>4.8</b> (2,596 Reviews) <icon class="info-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1696558646/Jack%20Henry/4002/info-icon.svg" alt="info icon"></icon></div><div class="spz-tooltip"><span>Ratings from <u>featuredcustomers.com</u></span></div></div></div><div class="blog-banner-cta"><a class="btn spz-btn" href="https://www.jackhenry.com/contact-us/other">Contact Us</a></div></div></div>`;
 
     function waitForElm(selector) {
         return new Promise(function (resolve) {
