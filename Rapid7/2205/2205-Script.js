@@ -21,14 +21,14 @@
                            <img class="peer-insights" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/Gartner.png" alt="Gartner Peer insights"/>
                            <div class="rating" >
                               <span>4.4</span>   
-                           <img class="star-rating" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/2205/G2-stars.png" alt="rating"/>
+                           <img class="star-rating" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696937764/rapid7/2205/g2-stars_1.svg" alt="rating"/>
                            </div>
                      </div>
                      <div class="g-2-logo" >
                      <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/2205/G2-logo.png" alt="G2 Logo"/>
                            <div class="rating" >
                               <span>4.4</span>   
-                           <img class="star-rating" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/2205/G2-stars.png" alt="rating"/>
+                           <img class="star-rating" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696937764/rapid7/2205/g2-stars_1.svg" alt="rating"/>
                            </div>
                      </div>
                </div>`);
@@ -106,15 +106,6 @@
         waitForElm('.longHero__content .spz-custom-email input[name="spz-email"]').then(function () {
             const secondaryEmail = document.querySelector('.longHero__content .spz-custom-email input[name="spz-email"]');
 
-            // let clearEmail = setInterval(() => {
-            //     console.log('tested');
-            //     secondaryEmail.value = '';
-            //     console.log(secondaryEmail.value);
-            // },10);
-            // setTimeout(() => {
-            //     clearInterval(clearEmail);
-            // }, 1000);
-
             secondaryEmail.addEventListener('blur', () => {
                 validateEmailField();
             });
@@ -145,10 +136,7 @@
 
     // Create email cookie
     function createEmailCookie(value) {
-        const today = new Date();
-        var expire = new Date();
-        expire.setTime(today.getTime() + 3600000 * 24 * 30); //  Save for 30 days
-        document.cookie = "userEmail=" + value + ";path=/" + ";expires=" + expire.toUTCString();
+        document.cookie = "userEmail=" + value + ";path=/";
     }
 
     // Fetch email cookie

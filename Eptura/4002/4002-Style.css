@@ -1,81 +1,70 @@
-body.spz-4003 {
-  background: none;
+body {
+  min-height: 100vh;
 }
-body.spz-4003 #HeaderScripts {
+body #HeaderScripts {
   display: none !important;
 }
-body.spz-4003 .body-wrapper {
-  height: 100vh;
-}
-body.spz-4003 .body-wrapper::before,
-body.spz-4003 .body-wrapper > section:not(#hero),
-body.spz-4003 .body-wrapper > div,
-body.spz-4003 .body-wrapper > footer {
+body .body-wrapper::before,
+body .body-wrapper > section:not(#hero),
+body .body-wrapper > div,
+body .body-wrapper > footer {
   display: none !important;
 }
-body.spz-4003 .body-wrapper #hero {
-  height: 100%;
+body .body-wrapper #hero {
+  background-color: transparent;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding {
-  padding: 0 15px !important;
-  max-width: 100% !important;
-  height: 100%;
+body .body-wrapper #hero .hero_container.page_padding {
+  padding-top: 0 !important;
+  padding-bottom: 0 !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
-  height: 100%;
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
-  max-width: 604px;
-  padding: 32px 30px 0px;
-  background: #fff;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
-  display: flex !important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-@media (min-width: 1600px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
-    max-width: 740px;
-    padding: 32px 70px 0px;
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding {
+    padding: 0 15px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
-    width: 384px;
-    padding: 24px 14px 16px;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
-    display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+body .body-wrapper #hero .hero_container.page_padding > .row {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 100vh;
+}
+@media (max-height: 670px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
-    max-width: 100%;
-    width: 100%;
-    padding: 24px 20px 23px !important;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+  body .body-wrapper #hero .hero_container.page_padding > .row {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-logo {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+  max-width: 568px;
+  padding: 16px 46px 50px 46px !important;
+  border-radius: 8px;
+  background: var(--primary-neutrals-w, #fff);
+  -webkit-box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
+          box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
+  margin: 24px 0;
+}
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+    max-width: 330px;
+    width: 100%;
+    padding: 16px 20px 31px !important;
+  }
+}
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-logo {
   text-align: center;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,7 +75,7 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
       -ms-flex-pack: center;
           justify-content: center;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-11 {
   position: relative;
   font-size: 14px;
   line-height: 20px;
@@ -98,12 +87,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   display: flex;
   opacity: 0.4;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 .step-11::before {
   content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-1_1.svg);
   position: relative;
   display: block;
@@ -111,37 +100,37 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   height: 20px;
   margin-right: 6px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 .line {
   width: 32px;
   height: 1px;
   opacity: 0.2;
   background: #0d122e;
   margin: 8px 8px 0;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.active .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.active .step-11 {
   opacity: 1;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.active .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.active .step-11::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-1-Active.svg);
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.active .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.active .line {
   opacity: 0.6;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.filled .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.filled .step-11 {
   opacity: 1;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.filled .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.filled .step-11::before {
   content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-1_5.svg);
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.filled .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1.filled .line {
   opacity: 0.6;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 .step-11::before {
   content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-2_1.svg);
   position: relative;
   display: block;
@@ -149,32 +138,32 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   height: 20px;
   margin-right: 6px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 .line {
   width: 32px;
   height: 1px;
   opacity: 0.2;
   background: #0d122e;
   margin: 8px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.active .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.active .step-11 {
   opacity: 1;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.active .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.active .step-11::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-2-Disabled.svg);
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.active .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.active .line {
   opacity: 0.6;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.filled .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.filled .step-11 {
   opacity: 1;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.filled .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.filled .step-11::before {
   content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-2_5.svg);
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.filled .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2.filled .line {
   opacity: 0.6;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3 .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3 .step-11::before {
   content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696585948/eptura/4002/aura-3_4.svg);
   position: relative;
   display: block;
@@ -182,26 +171,26 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   height: 20px;
   margin-right: 6px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.active .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.active .step-11 {
   opacity: 1;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.active .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.active .step-11::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-3-Disabled.svg);
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.active .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.active .line {
   opacity: 0.6;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.filled .step-11 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.filled .step-11 {
   opacity: 1;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.filled .step-11::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.filled .step-11::before {
   content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-3_5.svg);
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.filled .line {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-3.filled .line {
   opacity: 0.6;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-sub-title,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-sub-title {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-sub-title,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-sub-title {
   color: #904ab0;
   text-align: center;
   font-size: 12px;
@@ -212,8 +201,8 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   text-transform: uppercase;
   font-family: "Eptura Flexible", Arial, sans-serif;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-title,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-title {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-title,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-title {
   color: #0d122e;
   text-align: center;
   font-family: "Eptura Flexible", Arial, sans-serif;
@@ -222,13 +211,13 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   font-weight: 300;
   line-height: 34px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question {
   max-width: 412px;
   margin: auto;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -251,8 +240,8 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   position: relative;
 }
 @media (max-width: 1198.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
     -webkit-box-orient: horizontal;
     -webkit-box-direction: normal;
         -ms-flex-direction: row;
@@ -263,62 +252,62 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
     width: 100%;
     margin-bottom: 16px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover {
   background: #d6d7f5;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover .ccs-checkbox .ccs-box::before,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover .ccs-checkbox .ccs-box::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover .ccs-checkbox .ccs-box::before,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz:hover .ccs-checkbox .ccs-box::before {
   content: "";
   background: #d6d7f5 url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg");
   background-repeat: no-repeat;
   background-size: 16px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.active,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.active {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.active,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.active {
   background: #d6d7f5;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width {
   width: 100%;
   max-width: 100%;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width .ccs-label,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width .ccs-label {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width .ccs-label,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz.full-width .ccs-label {
   max-width: initial;
   margin-right: auto;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img {
   margin-bottom: 6px;
 }
 @media (max-width: 1198.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img {
     margin-bottom: 0;
     margin-right: 8px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img {
   width: 48px;
   height: 48px;
 }
 @media (max-width: 1198.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img {
     width: 32px;
     height: 32px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label {
   color: #0d122e;
   text-align: center;
   font-size: 14px;
@@ -327,14 +316,14 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   line-height: 20px;
 }
 @media (max-width: 1200px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-label {
     font-size: 16px;
     line-height: 22px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox {
   position: absolute;
   width: 16px;
   height: 16px;
@@ -342,23 +331,23 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   left: 12px;
 }
 @media (max-width: 1198.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox {
     top: 14px;
     left: auto;
     right: 12px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox [type=checkbox],
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox [type=checkbox] {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox [type=checkbox],
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox [type=checkbox] {
   position: absolute;
   opacity: 0;
   cursor: pointer;
   height: 16px;
   width: 16px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input ~ .ccs-box::before,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input ~ .ccs-box::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input ~ .ccs-box::before,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input ~ .ccs-box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -369,8 +358,8 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   height: 16px;
   width: 16px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input[checked] ~ .ccs-box::before,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input[checked] ~ .ccs-box::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input[checked] ~ .ccs-box::before,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox input[checked] ~ .ccs-box::before {
   content: "";
   position: absolute;
   top: 0;
@@ -379,10 +368,10 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   background-repeat: no-repeat;
   background-size: 16px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -394,31 +383,31 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
           justify-content: center;
   margin: 4px 0 24px 0;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1 img,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2 img,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1 img,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 img {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1 img,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2 img,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1 img,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 img {
   width: 12px;
   height: 12px;
   margin-right: 4px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1 span,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2 span,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1 span,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 span {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1 span,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2 span,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1 span,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 span {
   color: #f83a59;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 20px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button {
   max-width: 412px;
   margin: auto;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -445,64 +434,64 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   margin: auto;
 }
 @media (max-width: 1198.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action,
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action {
     width: 100%;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action:hover, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action:active,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action:hover,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action:active {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action:hover, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action:active,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action:hover,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action:active {
   background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0.25))), #904ab0;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), #904ab0;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
-  background-color: transparent !important;
-  padding: 64px 0;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-hidden {
+  display: none !important;
 }
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
-    padding: 22px 0;
-  }
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
+  background-color: transparent !important;
+  padding: 40px 0 0 0;
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
     max-width: 424px;
     margin: auto;
-    padding: 20px 0;
+    padding: 32px 0 0 0;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
   display: block !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
   color: var(--accents-a-5, #904ab0);
   text-align: center;
-  font-size: 26px;
+  font-size: 36px;
   font-style: normal;
   font-weight: 300;
-  line-height: 34px; /* 130.769% */
+  line-height: 44px; /* 130.769% */
   letter-spacing: 0;
-  margin-bottom: 16px;
+  margin-bottom: 24px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
+    font-size: 26px;
+    line-height: 34px;
+    margin-bottom: 20px;
+  }
+}
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
   min-height: auto;
   margin: 0 !important;
   padding: 0 10px !important;
 }
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
-    line-height: 0;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
   position: relative;
   float: none !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
   position: absolute;
   overflow: hidden;
-  color: #0d122e !important;
+  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8)) !important;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-family: "Eptura Flexible", Arial, sans-serif;
@@ -516,14 +505,11 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
-  max-width: calc(100% - 30px);
-  background: #f6fafa;
+  max-width: calc(100% - 58px);
+  background: #fff;
   right: 0;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.select .mktoLabel {
-  max-width: calc(100% - 58px);
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   border-radius: 4px;
   border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
   width: 280px;
@@ -537,17 +523,17 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   line-height: 24px !important; /* 150% */
   margin-bottom: 20px !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
   white-space: nowrap;
   overflow: hidden;
   height: 48px !important;
 }
 @media (min-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
     max-width: 100%;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
   outline: transparent;
   -webkit-appearance: none !important;
      -moz-appearance: none !important;
@@ -558,132 +544,98 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   background-size: 24px !important;
   padding-right: 32px !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError {
   margin-top: 0 !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorArrowWrap {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorArrowWrap {
   top: -27px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorMsg {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError .mktoErrorMsg {
   margin-top: -20px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 30px #f6fafa inset !important;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
-  -webkit-box-shadow: 0 0 0 30px #f6fafa inset !important;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   margin: 0 !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
-  color: #0d122e;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
+  color: #848995;
   font-size: 10px !important;
   font-style: normal;
   font-weight: 300;
   line-height: 16px; /* 160% */
 }
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
-    margin-bottom: 4px;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
   padding: 0;
-  color: #904ab0;
+  color: #1b4bc5;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a:hover {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a:hover {
   color: #0d122e;
-  text-decoration: underline;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
-  margin-top: 15px;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
+  margin-top: 4px;
   cursor: pointer;
   display: inline-block;
   position: relative;
   padding-left: 25px;
 }
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
-    margin-top: 14px;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
-    margin-top: 1px;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
   border: 1px solid #d6d7f5;
   height: 16px !important;
   width: 16px !important;
   cursor: pointer;
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
     margin-top: 7px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
   font-family: "Eptura Flexible", Arial, sans-serif !important;
   color: var(--primary-neutrals-n-1, #0d122e);
-  font-size: 14px !important;
+  font-size: 12px !important;
   font-style: normal !important;
   font-weight: 300 !important;
-  line-height: 20px !important; /* 142.857% */
+  line-height: 18px !important; /* 142.857% */
   margin-left: 19px;
   letter-spacing: -0.1px;
   cursor: pointer;
 }
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
-    font-size: 12px !important;
-    line-height: 18px !important;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
   content: "";
   width: 16px;
   height: 16px;
   position: absolute;
   left: 0;
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1693889243/eptura/4003/form-checkmark.svg") left center no-repeat;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg") left center no-repeat;
   margin-top: 2px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox] {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:hover::before {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg") left center no-repeat;
+}
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox] {
   display: none !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox]:checked + label:before {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1693889242/eptura/4003/form-checkmark-checked.svg") left center no-repeat;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox]:checked + label:before {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg") left center no-repeat;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
-  margin-top: 54px !important;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
+  margin-top: 48px !important;
 }
-@media (min-width: 767.98px) and (max-width: 877.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
-    margin-top: 74px !important;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
-    margin-top: 40px !important;
-  }
-}
-@media (max-width: 388.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
-    margin-top: 56px !important;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
   font-size: 14px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label {
   color: #e51b00 !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label::before {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1693889244/eptura/4003/form-checkmark-errored.svg") left center no-repeat;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label::before {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg") left center no-repeat;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -8px;
   left: 11px;
   right: auto;
@@ -692,12 +644,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   color: var(--accents-a-5, #904ab0) !important;
   font-size: 13px !important;
   line-height: 18px !important; /* 138.462% */
-  background: #f6fafa;
+  background: #fff;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
   border-color: #904ab0 !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
   top: -8px;
   right: auto;
   left: 11px;
@@ -705,29 +657,29 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   padding: 0 5px !important;
   font-size: 13px !important;
   line-height: 18px !important; /* 138.462% */
-  background: #f6fafa;
+  background: #fff;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
   color: var(--accents-a-5, #f83a59) !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #f83a59 !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow[data-zi-field-enriched=true] {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow[data-zi-field-enriched=true] {
   display: inline !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) + .mktoFieldDescriptor.mktoFormCol {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) + .mktoFieldDescriptor.mktoFormCol {
   display: none !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
   overflow: hidden;
-  color: #0d122e;
+  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
   font-family: "Eptura Flexible", Arial, sans-serif;
   text-overflow: ellipsis;
   font-size: 16px;
@@ -741,108 +693,109 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   transition: all 0.3s ease;
   margin-left: 10px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
   padding-right: 5px;
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
     padding: 0;
     margin-bottom: 26px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
   color: #904ab0;
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
-    margin-bottom: 26px;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
   display: none;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow {
   text-align: center;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap {
-  width: calc(100% - 20px);
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
-  width: 100% !important;
-  max-width: 100% !important;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 140px !important;
   height: 50px !important;
   padding: 0px !important;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   border-radius: 3px !important;
-  background: #904ab0 !important;
+  background: var(--interactive-colors-a-1, #1b4bc5) !important;
   color: var(--primary-neutrals-w, #fff) !important;
   text-align: center;
-  font-family: "Eptura Flexible", Arial, sans-serif !important;
+  font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 500;
   line-height: 24px !important; /* 150% */
-  margin-top: 22px !important;
+  margin-top: 21px !important;
   white-space: nowrap;
   all: initial;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0.25))), #904ab0 !important;
-  background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), #904ab0 !important;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+  background: var(--interactive-colors-a-3, #456ed6) !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
   -webkit-transform: translate(0, 1px);
           transform: translate(0, 1px);
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+    margin-top: 22px !important;
+    height: 56px !important;
     padding: 0px 32px;
+    width: 270px !important;
+    max-width: 270px !important;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
-  margin-top: 12px;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+  margin-top: 19px;
 }
-@media (min-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
-    margin-top: 6px;
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+    margin-top: 24px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   text-align: center;
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
     line-height: 0;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
-  color: #545965;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+  color: var(--primary-neutrals-n-1, #0d122e);
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 20px; /* 142.857% */
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
     padding: 0;
   }
 }
 @media (min-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
     display: none;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
-  color: var(--interactive-colors-a-1, #904ab0);
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
+  color: var(--interactive-colors-a-1, #1b4bc5);
   font-weight: 500;
   padding: 0;
   font-family: "Eptura Flexible", Arial, sans-serif;
-  padding-left: 2px;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
-  color: #545965;
-  text-decoration: underline;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
+  color: #0d122e;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title {
   color: var(--primary-neutrals-n-1, #0d122e);
   font-size: 14px;
   font-style: normal;
@@ -854,12 +807,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   position: relative;
 }
 @media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title {
     padding-top: 8px;
     margin-bottom: 12px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
   content: "";
   width: 131px;
   height: 1px;
@@ -871,22 +824,22 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   bottom: 9px;
 }
 @media (max-width: 1600px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
     width: 103px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
     width: calc(50% - 149px);
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::before {
     width: 0;
     display: none;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
   content: "";
   width: 131px;
   height: 1px;
@@ -898,27 +851,27 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   bottom: 9px;
 }
 @media (max-width: 1600px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
     width: 103px;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
     width: calc(50% - 149px);
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section .social-section-title::after {
     width: 0;
     display: none;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-social-section {
     margin-top: auto;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -934,317 +887,174 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   opacity: 0.7;
 }
 @media (min-width: 1600px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
     padding: 0 36px;
   }
 }
 @media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
     padding: 0 22px;
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
     padding: 0 4px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img {
   width: 33.33%;
   padding: 0 16px;
   text-align: center;
   margin-bottom: 10px;
 }
 @media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img {
     padding: 0 12px;
     margin-bottom: 0px;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img img {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img img {
   height: auto;
 }
 @media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img img {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section > .logo-img img {
     max-width: 100%;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-hidden {
+body .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
   display: none !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
-  max-width: calc(100% - 604px);
-  padding: 35px 70px !important;
-  border-left: 1px solid rgba(255, 255, 255, 0.1);
-  background: #20253f;
-}
-@media (min-width: 1600px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
-    max-width: calc(100% - 740px);
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
-    max-width: calc(100% - 384px);
-    padding: 36px 24px 24px !important;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 {
-    max-width: 100%;
-    width: 100%;
-    padding: 40px 12px 24px 12px !important;
-  }
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 #HeroText,
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 #HeroBtn {
+body .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 #HeroText,
+body .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 #HeroBtn {
   display: none !important;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 100%;
-  max-width: 800px;
-  margin: auto;
+body.website-proxyclick-demo {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-  color: #f6fafa;
-  text-align: center;
-  font-size: 46px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 54px;
-  margin-bottom: 32px;
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title span {
-  color: #904ab0;
-}
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    font-size: 26px;
-    line-height: 34px;
-    margin-left: auto;
-    margin-right: auto;
+@media (max-width: 574.98px) {
+  body.website-proxyclick-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.webp);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    max-width: 294px;
+body.website-proxyclick-demo.safari {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+@media (max-width: 574.98px) {
+  body.website-proxyclick-demo.safari {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.png);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-banner-img {
-  margin-bottom: 40px;
+body.website-managerplus-demo {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-banner-img img {
-  max-width: 100%;
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
-  padding-left: 40px;
-  margin-top: 8px;
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
-    margin-left: -5px;
+@media (max-width: 574.98px) {
+  body.website-managerplus-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.webp);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
-    margin: 8px 12px 0;
-    padding-right: 8px;
+body.website-managerplus-demo.safari {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
+}
+@media (max-width: 574.98px) {
+  body.website-managerplus-demo.safari {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.png);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets .bullet {
-  color: #f6fafa;
-  font-size: 20px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 28px;
-  position: relative;
-  margin-bottom: 20px;
+body.website-archibus-demo {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets .bullet span {
-  font-family: "Eptura Flexible", Arial, sans-serif;
-  font-weight: 500;
-}
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets .bullet {
-    font-size: 16px;
-    line-height: 24px;
+@media (max-width: 574.98px) {
+  body.website-archibus-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.webp);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets .bullet::before {
-  content: url(//res.cloudinary.com/spiralyze/image/upload/v1693481278/eptura/4003/checkmark-icon.svg);
-  position: absolute;
-  left: -40px;
-  top: 0;
-  width: 24px;
-  height: 24px;
-  display: block;
+body.website-archibus-demo.safari {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets .bullet::before {
-    left: -36px;
+@media (max-width: 574.98px) {
+  body.website-archibus-demo.safari {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.png);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer {
-  margin-top: auto;
+body.website-spaceiq-demo {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer {
-    margin-top: 20px;
+@media (max-width: 574.98px) {
+  body.website-spaceiq-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.webp);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  height: 100%;
+body.website-spaceiq-demo.safari {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+@media (max-width: 574.98px) {
+  body.website-spaceiq-demo.safari {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.png);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  width: 100%;
-  max-width: 305px;
+body.website-ioffice-demo {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.webp);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links a {
-  color: var(--primary-neutrals-n-3, #f6fafa);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 18px;
-}
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links a:hover {
-  color: #d6d7f5;
-}
-@media (max-width: 1199.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links {
-    max-width: 100%;
-    margin-bottom: 8px;
-    padding: 0 14px;
+@media (max-width: 574.98px) {
+  body.website-ioffice-demo {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.webp);
+    background-position: bottom;
+    background-size: cover;
   }
 }
-@media (max-width: 767.98px) {
-  body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links {
-    padding: 0 18px;
-    margin-bottom: 12px;
-  }
+body.website-ioffice-demo.safari {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.png);
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 }
-body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .saas-privacy-policy {
-  color: var(--primary-neutrals-n-3, #f6fafa);
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 18px; /* 150% */
-}
-
-@media (max-width: 1600px) {
-  body.spz-4003.website-spaceiq-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title,
-  body.spz-4003.website-archibus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    max-width: 548px;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-@media (max-width: 1199.98px) {
-  body.spz-4003.website-spaceiq-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title,
-  body.spz-4003.website-archibus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    max-width: 310px;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4003.website-spaceiq-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title,
-  body.spz-4003.website-archibus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    max-width: 300px;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003.website-spaceiq-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets,
-  body.spz-4003.website-archibus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .bullets {
-    padding-right: 2px;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003.website-spaceiq-demo .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel,
-  body.spz-4003.website-archibus-demo .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
-    padding: 24px 0;
-  }
-}
-
-body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy {
-  max-width: 816px;
-}
-body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .hero-banner-img,
-body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .bullets {
-  max-width: 800px;
-  margin-left: auto;
-  margin-right: auto;
-}
-@media (min-width: 1600.98px) {
-  body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .bullets {
-    padding-right: 2px;
-  }
-}
-@media (min-width: 1600.98px) {
-  body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .spz-simplified-footer {
-    padding: 0 8px;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    max-width: 278px;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003.website-managerplus-demo .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
-    padding: 24px 0;
-  }
-}
-
-@media (min-width: 1600.98px) {
-  body.spz-4003.website-proxyclick-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .bullets {
-    padding-right: 4px;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-4003.website-proxyclick-demo .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
-    max-width: 306px;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-4003.website-proxyclick-demo .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
-    padding: 24px 0;
+@media (max-width: 574.98px) {
+  body.website-ioffice-demo.safari {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.png);
+    background-position: bottom;
+    background-size: cover;
   }
 }

@@ -1,33 +1,68 @@
 (function () {
-    document.body.classList.add('spz-4004');
+    document.body.classList.add('spz-4003');
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.querySelector('body').classList.add(identifyPage);
 
 
     const pageContent = [{
         pageName: "website-proxyclick-demo",
-        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694619471/eptura/4004/logo-proxyclick.svg",
+        pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575703/eptura/4003/proxyclick_logo.svg",
         logoAlt: "Proxyclick Demo",
+        rightTitle: "Make the visitor check-in experience <span>50% faster</span> while improving security.",
+        rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_6.webp",
+        rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_6.png",
+        heroImgAlt: "Proxyclick UI Image",
+        listItem1: "<span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.",
+        listItem2: "<span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.",
+        listItem3: "<span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications."
     },
     {
         pageName: "website-managerplus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575720/eptura/4003/managerplus-eptura-logo-1.svg",
         logoAlt: "Managerplus Demo",
+        rightTitle: "Reduce asset downtime <span>by&nbsp;</span><span> 50%.</span> Streamline inventory and maintenance.",
+        rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.webp",
+        rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_21.png",
+        heroImgAlt: "Managerplus UI Image",
+        listItem1: "<span>Asset management.</span> Track and manage all assets. Service history, maintenance, budgeting, and more.",
+        listItem2: "<span>Maintenance workflows.</span> Automatically trigger work orders at set intervals or when a usage threshold is met.",
+        listItem3: "<span>Inventory.</span> See exactly how many parts you have and when it&#8217;s time to order more. Auto-reorder when low."
     },
     {
         pageName: "website-archibus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575732/eptura/4003/archibus-eptura-logo-color_1.svg",
         logoAlt: "Archibus Demo",
+        rightTitle: "Reduce costs <span>by 30%</span> by automating space and facility management.",
+        rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_23.webp",
+        rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_23.png",
+        heroImgAlt: "Archibus UI Image",
+        listItem1: "<span>Space planning.</span> Sort office desks, tables, and rooms. Plan for moves and occupancy changes.",
+        listItem2: "<span>Work orders.</span> Automatically generate detailed work orders when assets are due for maintenance. See repair status.",
+        listItem3: "<span>Scheduling.</span> Reserve desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting."
     },
     {
         pageName: "website-spaceiq-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575752/eptura/4003/spaceiq-eptura-logo-color_1.svg",
         logoAlt: "SpaceIQ Demo",
+        rightTitle: "Automate space planning and management. Reduce costs <span>by 30%.</span>",
+        rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_29.webp",
+        rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_29.png",
+        heroImgAlt: "SpaceIQ UI Image",
+        listItem1: "<span>Space planning.</span> Track spaces, people, furniture, and assets in one place. Sort office desks, tables, and rooms. ",
+        listItem2: "<span>Move management.</span> Plan for moves using drag-and-drop. Auto-update floor plans once you&#8217;ve relocated.",
+        listItem3: "<span>Real estate portfolio.</span> Track your real estate for all your locations. Lease costs, utilization rates, and occupancies."
     },
     {
         pageName: "website-ioffice-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575766/eptura/4003/ioffice-eptura-logo-color_1.svg",
         logoAlt: "IOffice Demo",
+        rightTitle: "Plan, optimize, and manage your entire facility <span>in 87%</span> less time.",
+        rightHeroImgWEBP: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_31.webp",
+        rightHeroImgPNG: "//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4003/img-1_31.png",
+        heroImgAlt: "IOffice UI Image",
+        listItem1: "<span>Space planning.</span> Get a digital floor plan of your facilities. Drag-and-drop teams, desks, assets, amenities, and more.",
+        listItem2: "<span>Assets.</span> Track asset costs, service requests, and repair history. Auto-create preventive maintenance work orders. ",
+        listItem3: "<span>Employee services.</span> Book meeting rooms and desks. Notify hosts of visitors. Request catering. Reduce turnover 59%."
     },
 
     ];
@@ -74,7 +109,7 @@
     ];
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
-        document.body.classList.add('spz-4004');
+        document.body.classList.add('spz-4003');
         loadTest();
     });
 
@@ -83,7 +118,6 @@
         focusFields();
         updatePageContent();
         stepValidations();
-
 
         window.addEventListener("click", function (e) {
             if (e.target.classList.contains("show-comment-dynamic")) {
@@ -108,7 +142,9 @@
             document.querySelector('body').classList.add('safari')
         }
 
-        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg" as="image">
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1693889244/eptura/4003/form-checkmark-errored.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1693889242/eptura/4003/form-checkmark-checked.svg" as="image">
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg" as="image">
         <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg" as="image">
         <link rel="preload" href="//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-1_5.svg" as="image">
         <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-2-Disabled.svg" as="image">
@@ -123,7 +159,8 @@
         waitForElm('#nav #NavLogo #logo-img').then(function () {
             pageContent.forEach(function (url) {
                 if (identifyPage == url.pageName) {
-                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>
+
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><a href="https://eptura.com/" target="_blank"> <img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></a></div>
                     <div class="steps-container">
                     <div class="steps">
                     <div class="step-1 active">
@@ -167,8 +204,49 @@
                         <button class="call-to-action step-2">Next<img class="cta-arrow" alt="Arrow" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423223/eptura/4002/navigation__5_-_navigation_arrow_arrows_direction_right_icon.svg" /></button></div>
                     </div></div>`);
 
-                    checkBoxEvents();
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `<div class="spz-social-section"><div class="social-section-title">Trusted by 16,000+ customers worldwide</div><div class="social-logo-section"><picture>
+                    <source media="(min-width:1200px)" srcset="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423278/eptura/4002/logo_set_2.svg">
+                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423502/eptura/4002/logo_set_mobile_2.svg">
+                    <img src="https://res.cloudinary.com/spiralyze/image/upload/v1696847617/eptura/4002/Logo_Set_Mobile.png" alt="Customers logo">
+                  </picture></div></div>`);
 
+                    document.querySelector('#hero > .hero_container > .row > .col-md.pb-5').insertAdjacentHTML('beforeend', `<div class="spz-copy">
+                    <div class="wrap">
+                        <div class="main">
+                            <div class="hero-title">`+ url.rightTitle + `
+                            </div>
+                            <div class="hero-banner-img"><picture>
+                                <source srcset="`+ url.rightHeroImgWEBP + `" type="image/webp">
+                                    <source srcset="`+ url.rightHeroImgPNG + `" type="image/png">
+                                        <img src="`+ url.rightHeroImgWEBP + `" alt="` + url.heroImgAlt + `">
+                                        </picture>
+                                    </div>
+                                    <div class="bullets">
+                                        <div class="bullet">
+                                        `+ url.listItem1 + `
+                                        </div>
+                                        <div class="bullet">
+                                            `+ url.listItem2 + `
+                                        </div>
+                                        <div class="bullet">
+                                            `+ url.listItem3 + `
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="spz-simplified-footer">
+                                    <div class="footer-container">
+                                        <div class="links">
+                                            <a href="https://eptura.com/terms/saas-privacy-policy">SaaS Privacy Policy</a>
+                                            <a href="https://eptura.com/terms/privacy-policy/">Privacy Policy</a>
+                                            <a href="https://eptura.com/terms/modern-slavery/">Modern Slavery</a>
+                                        </div>
+                                        <div class="saas-privacy-policy">All Rights Reserved © Eptura™</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>`);
+
+                    checkBoxEvents();
                 }
             })
         });
@@ -179,8 +257,8 @@
         document.querySelector('#HeroFormPanel').classList.add('spz-hidden');
 
         waitForElm('.step-ques-section-1 .call-to-action.step-1').then(function () {
-            //move #HeroFormPanel inside .steps-container div
-            document.querySelector('.steps-container').appendChild(document.querySelector('#HeroFormPanel'));
+             //move #HeroFormPanel inside .steps-container div
+        document.querySelector('.steps-container').appendChild(document.querySelector('#HeroFormPanel'));
             //onclick of .call-to-action.step-1 check if at east one checkbox is checked and show .step-ques-section-2
             document.querySelector('.step-ques-section-1 .call-to-action.step-1').addEventListener('click', function () {
                 if (document.querySelector('.step-ques-section-1 .form-checkboxes input:checked')) {
@@ -208,49 +286,6 @@
         })
     }
 
-    //custom html for checkbox
-    function checkBoxHTML(stepIdentify) {
-
-        let thisPage = stepIdentify;
-
-        let featureEl = ''
-        thisPage.forEach((element, index) => {
-            featureEl += `<label class="custom-checkbox-spz" for="${element.title.replace('<span>', '').replace('</span>', '')}"><div class="ccs-img">
-            <img src="${element.image}" alt="${element.title.replace('<span>', '').replace('</span>', '')}" />
-        </div>
-        <div class="ccs-label">${element.title}</div>
-        <div class="ccs-checkbox">
-            <input type="checkbox" id="${element.title.replace('<span>', '').replace('</span>', '')}" name="${element.title.replace('<span>', '').replace('</span>', '')}" />
-            <span class="ccs-box"></span>
-        </div> </label>`
-        });
-        featureEl += '';
-
-        return featureEl;
-    }
-
-    //checkbox events
-    function checkBoxEvents() {
-        document.querySelectorAll('.custom-checkbox-spz').forEach((checkbox) => {
-            checkbox.addEventListener('click', (e) => {
-                // Remove any active class and checked attribute from other checkboxes
-                e.stopPropagation();
-                e.preventDefault();
-
-                if (document.querySelector('.custom-checkbox-spz.active')) {
-                    document.querySelector('.custom-checkbox-spz.active input').removeAttribute('checked');
-                    document.querySelector('.custom-checkbox-spz.active').classList.remove('active');
-                }
-
-                // Add active class and checked attribute to clicked checkbox
-                if (!checkbox.classList.contains('active')) {
-                    checkbox.classList.add('active');
-                    checkbox.querySelector('input').setAttribute('checked', true);
-                }
-            });
-        });
-    }
-
     //custom error for checkbox field
     function showGlobalError() {
         let checkErrorforCheckBox = setInterval(() => {
@@ -270,13 +305,11 @@
     //Marketo form update
     function formUpdate() {
         if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
-            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Request a demo</h6>';
+            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Get a demo</h6>';
         }
 
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
-        document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
-
-        document.querySelector('body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').innerText = 'If you consent to us contacting you, please tick below to confirm you would like us to contact you:';
+        document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
         document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
 
@@ -418,6 +451,49 @@
                 }
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+        });
+    }
+
+    //custom html for checkbox
+    function checkBoxHTML(stepIdentify) {
+
+        let thisPage = stepIdentify;
+
+        let featureEl = ''
+        thisPage.forEach((element, index) => {
+            featureEl += `<label class="custom-checkbox-spz" for="${element.title.replace('<span>', '').replace('</span>', '')}"><div class="ccs-img">
+            <img src="${element.image}" alt="${element.title.replace('<span>', '').replace('</span>', '')}" />
+        </div>
+        <div class="ccs-label">${element.title}</div>
+        <div class="ccs-checkbox">
+            <input type="checkbox" id="${element.title.replace('<span>', '').replace('</span>', '')}" name="${element.title.replace('<span>', '').replace('</span>', '')}" />
+            <span class="ccs-box"></span>
+        </div> </label>`
+        });
+        featureEl += '';
+
+        return featureEl;
+    }
+
+    //checkbox events
+    function checkBoxEvents() {
+        document.querySelectorAll('.custom-checkbox-spz').forEach((checkbox) => {
+            checkbox.addEventListener('click', (e) => {
+                // Remove any active class and checked attribute from other checkboxes
+                e.stopPropagation();
+                e.preventDefault();
+
+                if (document.querySelector('.custom-checkbox-spz.active')) {
+                    document.querySelector('.custom-checkbox-spz.active input').removeAttribute('checked');
+                    document.querySelector('.custom-checkbox-spz.active').classList.remove('active');
+                }
+
+                // Add active class and checked attribute to clicked checkbox
+                if (!checkbox.classList.contains('active')) {
+                    checkbox.classList.add('active');
+                    checkbox.querySelector('input').setAttribute('checked', true);
+                }
+            });
         });
     }
 })();
