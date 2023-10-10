@@ -38,7 +38,7 @@ const blogHTML = `<div class="sticky-blog-section">
 <div class="blog-container">
     <h6 class="blog-title">Get Compliant 80% Faster<br> With Drata</h6>
     <div class="blog-rating"> <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1690989370/drata/3003/logo-g2.svg" alt="G2 Logo" /> <img class="star-ratings" src="//res.cloudinary.com/spiralyze/image/upload/v1690989369/drata/3003/rating-4_9.svg" alt="Ratings" />
-        <div class="ratings"> <span>4.9 </span> (461 reviews) </div>
+        <div class="ratings"> <span>4.9 </span> (500+ reviews) </div>
     </div>
     <div class="blog-cta"> <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Get a Demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1690987050/drata/3002/cta_arrow.svg" alt="Arrow" />
             </a> </div>
