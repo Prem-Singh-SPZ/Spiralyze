@@ -41,7 +41,7 @@ body {
           //Hero form content
           #HeroFormCol {
             max-width: 568px;
-            padding: 16px 46px 50px 46px !important;
+            padding: 16px 46px 48px 46px !important;
             border-radius: 8px;
             background: var(--primary-neutrals-w, #fff);
             box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
@@ -55,377 +55,460 @@ body {
 
             .spz-logo {
               text-align: center;
+              margin-bottom: 8px;
             }
 
             //Steps Section starts
-            .steps {
-              display: flex;
-              align-items: center;
-              justify-content: center;
-
-              .step-11 {
-                position: relative;
-                font-size: 14px;
-                line-height: 20px;
-                font-weight: 300;
-                color: #0d122e;
-                text-align: center;
-                display: flex;
-                opacity: 0.4;
+            .steps-container {
+              margin-top: 32px;
+              @media (max-width: 767.98px) {
+                margin-top: 28px;
               }
-
-              .step-1 {
+              .steps {
                 display: flex;
-                .step-11 {
-                  &::before {
-                    content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-1_1.svg);
-                    position: relative;
-                    display: block;
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 6px;
-                  }
-                }
-                .line {
-                  width: 32px;
-                  height: 1px;
-                  opacity: 0.2;
-                  background: #0d122e;
-                  margin: 8px 8px 0;
-                }
-
-                &.active {
-                  .step-11 {
-                    opacity: 1;
-                    &::before {
-                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-1-Active.svg);
-                    }
-                  }
-                  .line {
-                    opacity: 0.6;
-                  }
-                }
-
-                &.filled {
-                  .step-11 {
-                    opacity: 1;
-                    &::before {
-                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-1_5.svg);
-                    }
-                  }
-                  .line {
-                    opacity: 0.6;
-                  }
-                }
-              }
-              .step-2 {
-                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 8px;
 
                 .step-11 {
-                  &::before {
-                    content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-2_1.svg);
-                    position: relative;
-                    display: block;
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 6px;
-                  }
-                }
-                .line {
-                  width: 32px;
-                  height: 1px;
-                  opacity: 0.2;
-                  background: #0d122e;
-                  margin: 8px;
+                  position: relative;
+                  font-size: 14px;
+                  line-height: 20px;
+                  font-weight: 300;
+                  color: #0d122e;
+                  text-align: center;
+                  display: flex;
+                  opacity: 0.4;
                 }
 
-                &.active {
+                .step-1 {
+                  display: flex;
                   .step-11 {
-                    opacity: 1;
                     &::before {
-                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-2-Disabled.svg);
+                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-1_1.svg);
+                      position: relative;
+                      display: block;
+                      width: 20px;
+                      height: 20px;
+                      margin-right: 6px;
+                    }
+                  }
+
+                  &.active {
+                    .step-11 {
+                      opacity: 1;
+                      &::before {
+                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-1-Active.svg);
+                      }
+                    }
+                    .line {
+                      opacity: 0.6;
+                    }
+                  }
+
+                  &.filled {
+                    .step-11 {
+                      opacity: 1;
+                      &::before {
+                        content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-1_5.svg);
+                      }
+                    }
+                    .line {
+                      opacity: 0.6;
+                    }
+                  }
+                }
+                .step-2 {
+                  display: flex;
+
+                  .step-11 {
+                    &::before {
+                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696423167/eptura/4002/aura-2_1.svg);
+                      position: relative;
+                      display: block;
+                      width: 20px;
+                      height: 20px;
+                      margin-right: 6px;
                     }
                   }
                   .line {
-                    opacity: 0.6;
-                  }
-                }
-                &.filled {
-                  .step-11 {
-                    opacity: 1;
-                    &::before {
-                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-2_5.svg);
-                    }
-                  }
-                  .line {
-                    opacity: 0.6;
-                  }
-                }
-              }
-              .step-3 {
-                .step-11 {
-                  &::before {
-                    content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696585948/eptura/4002/aura-3_4.svg);
-                    position: relative;
-                    display: block;
-                    width: 20px;
-                    height: 20px;
-                    margin-right: 6px;
-                  }
-                }
-                &.active {
-                  .step-11 {
-                    opacity: 1;
-                    &::before {
-                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-3-Disabled.svg);
-                    }
-                  }
-                  .line {
-                    opacity: 0.6;
-                  }
-                }
-                &.filled {
-                  .step-11 {
-                    opacity: 1;
-                    &::before {
-                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-3_5.svg);
-                    }
-                  }
-                  .line {
-                    opacity: 0.6;
-                  }
-                }
-              }
-            }
-
-            //Step questions
-            .step-ques-section-1,
-            .step-ques-section-2 {
-              .step-ques-sub-title {
-                color: #904ab0;
-                text-align: center;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 500;
-                line-height: 13px;
-                letter-spacing: 2.4px;
-                text-transform: uppercase;
-                font-family: $eptura-font;
-              }
-
-              .step-ques-title {
-                color: #0d122e;
-                text-align: center;
-                font-family: $eptura-font;
-                font-size: 26px;
-                font-style: normal;
-                font-weight: 300;
-                line-height: 34px;
-              }
-
-              .step-ques-variant-question {
-                max-width: 412px;
-                margin: auto;
-
-                .form-checkboxes {
-                  .custom-checkbox-spz {
-                    display: inline-flex;
-                    width: 100%;
-                    max-width: 132px;
-                    height: 138px;
-                    padding: 24px 12px;
-                    border-radius: 8px;
-                    background: #f6fafa;
-                    overflow: hidden;
-                    flex-direction: column;
-                    align-items: center;
-                    // gap: 12px;
-                    margin-bottom: 8px;
-                    cursor: pointer;
-                    position: relative;
-
-                    @media (max-width: 1198.98px) {
-                      flex-direction: row;
-                      max-width: 100%;
-                      padding: 8px 12px 8px 8px;
-                      height: 48px;
-                    }
-
+                    width: 32px;
+                    height: 1px;
+                    opacity: 0.2;
+                    background: #0d122e;
+                    margin: 8px;
                     @media (max-width: 767.98px) {
+                      width: 20.5px;
+                    }
+                  }
+
+                  &.active {
+                    .step-11 {
+                      opacity: 1;
+                      &::before {
+                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-2-Disabled.svg);
+                      }
+                    }
+                    .line {
+                      opacity: 0.6;
+                    }
+                  }
+                  &.filled {
+                    .step-11 {
+                      opacity: 1;
+                      &::before {
+                        content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-2_5.svg);
+                      }
+                    }
+                    .line {
+                      opacity: 0.6;
+                    }
+                  }
+                }
+                .step-3 {
+                  display: flex;
+
+                  .step-11 {
+                    &::before {
+                      content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696585948/eptura/4002/aura-3_4.svg);
+                      position: relative;
+                      display: block;
+                      width: 20px;
+                      height: 20px;
+                      margin-right: 6px;
+                    }
+                  }
+
+                  .line {
+                    width: 32px;
+                    height: 1px;
+                    opacity: 0.2;
+                    background: #0d122e;
+                    margin: 8px 8px 0;
+                    @media (max-width: 767.98px) {
+                      width: 20.5px;
+                    }
+                  }
+
+                  &.active {
+                    .step-11 {
+                      opacity: 1;
+                      &::before {
+                        content: url(//res.cloudinary.com/spiralyze/image/upload/v1696843119/eptura/4002/Aura-3-Disabled.svg);
+                      }
+                    }
+                    .line {
+                      opacity: 0.6;
+                    }
+                  }
+                  &.filled {
+                    .step-11 {
+                      opacity: 1;
+                      &::before {
+                        content: url(//res.cloudinary.com/dxprfaxf3/image/upload/v1696586009/eptura/4002/aura-3_5.svg);
+                      }
+                    }
+                    .line {
+                      opacity: 0.6;
+                    }
+                  }
+                }
+              }
+
+              //Step questions
+              .step-ques-section-1,
+              .step-ques-section-2 {
+                margin-top: 24px;
+                .step-ques-sub-title {
+                  color: #904ab0;
+                  text-align: center;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 13px;
+                  letter-spacing: 2.4px;
+                  text-transform: uppercase;
+                  font-family: $eptura-font;
+                  margin-bottom: 4px;
+                }
+
+                .step-ques-title {
+                  color: #0d122e;
+                  text-align: center;
+                  // font-family: $eptura-font;
+                  font-size: 26px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 34px;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 24px;
+                    line-height: 32px;
+                  }
+                }
+
+                .step-ques-variant-question {
+                  margin: 32px auto 24px;
+                  @media (max-width: 767.98px) {
+                    max-width: 270px;
+                    margin: 28px auto 20px;
+                  }
+
+                  .form-checkboxes {
+                    .custom-checkbox-spz {
+                      display: inline-flex;
                       width: 100%;
-                      margin-bottom: 16px;
-                    }
+                      max-width: 132px;
+                      height: 138px;
+                      padding: 24px 12px;
+                      border-radius: 8px;
+                      background: #f6fafa;
+                      overflow: hidden;
+                      flex-direction: column;
+                      align-items: center;
+                      // gap: 12px;
+                      margin-bottom: 8px;
+                      cursor: pointer;
+                      position: relative;
 
-                    &:hover {
-                      background: #d6d7f5;
-                      .ccs-checkbox .ccs-box::before {
-                        content: "";
-                        background: #d6d7f5
-                          url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg");
-                        background-repeat: no-repeat;
-                        background-size: 16px;
-                      }
-                    }
-
-                    &.active {
-                      background: #d6d7f5;
-                    }
-
-                    &.full-width {
-                      width: 100%;
-                      max-width: 100%;
-
-                      .ccs-label {
-                        max-width: initial;
-                        margin-right: auto;
-                      }
-                    }
-
-                    .ccs-img {
-                      margin-bottom: 6px;
-                      @media (max-width: 1198.98px) {
-                        margin-bottom: 0;
-                        margin-right: 8px;
-                      }
-                      img {
-                        width: 48px;
+                      @media (max-width: 767.98px) {
+                        flex-direction: row;
+                        max-width: 100%;
+                        padding: 8px 12px 8px 8px;
                         height: 48px;
-                        @media (max-width: 1198.98px) {
-                          width: 32px;
-                          height: 32px;
-                        }
-                      }
-                    }
-
-                    .ccs-label {
-                      color: #0d122e;
-                      text-align: center;
-                      font-size: 14px;
-                      font-style: normal;
-                      font-weight: 300;
-                      line-height: 20px;
-
-                      @media (max-width: 1200px) {
-                        font-size: 16px;
-                        line-height: 22px;
-                      }
-                    }
-
-                    .ccs-checkbox {
-                      position: absolute;
-                      width: 16px;
-                      height: 16px;
-                      top: 12px;
-                      left: 12px;
-
-                      @media (max-width: 1198.98px) {
-                        top: 14px;
-                        left: auto;
-                        right: 12px;
                       }
 
-                      [type="checkbox"] {
-                        position: absolute;
-                        opacity: 0;
-                        cursor: pointer;
-                        height: 16px;
-                        width: 16px;
+                      @media (max-width: 767.98px) {
+                        width: 100%;
+                        margin-bottom: 8px;
                       }
 
-                      input {
-                        ~ .ccs-box::before {
+                      &:hover {
+                        background: #d6d7f5;
+                        .ccs-checkbox .ccs-box::before {
                           content: "";
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          background: #f6fafa
-                            url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-default.svg");
+                          background: #d6d7f5
+                            url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-hover.svg");
                           background-repeat: no-repeat;
                           background-size: 16px;
+                        }
+                      }
+
+                      &.active {
+                        background: #d6d7f5;
+                      }
+
+                      &.full-width {
+                        width: 100%;
+                        max-width: 100%;
+
+                        .ccs-label {
+                          max-width: initial;
+                          margin-right: auto;
+                        }
+                      }
+
+                      .ccs-img {
+                        margin-bottom: 6px;
+                        @media (max-width: 767.98px) {
+                          margin-bottom: 0;
+                          margin-right: 8px;
+                        }
+                        img {
+                          width: 48px;
+                          height: 48px;
+                          @media (max-width: 767.98px) {
+                            width: 32px;
+                            height: 32px;
+                          }
+                        }
+                      }
+
+                      .ccs-label {
+                        color: #0d122e;
+                        text-align: center;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 300;
+                        line-height: 20px;
+                        // font-family: $eptura-font;
+
+                        // @media (max-width: 1200px) {
+                        //   font-size: 16px;
+                        //   line-height: 22px;
+                        // }
+                      }
+
+                      .ccs-checkbox {
+                        position: absolute;
+                        width: 16px;
+                        height: 16px;
+                        top: 12px;
+                        left: 12px;
+
+                        @media (max-width: 767.98px) {
+                          top: 16px;
+                          left: auto;
+                          right: 12px;
+                        }
+
+                        [type="checkbox"] {
+                          position: absolute;
+                          opacity: 0;
+                          cursor: pointer;
                           height: 16px;
                           width: 16px;
                         }
 
-                        &[checked] ~ .ccs-box::before {
-                          content: "";
-                          position: absolute;
-                          top: 0;
-                          left: 0;
-                          background: #d6d7f5
-                            url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg");
-                          background-repeat: no-repeat;
-                          background-size: 16px;
+                        input {
+                          ~ .ccs-box::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: #f6fafa
+                              url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-default.svg");
+                            background-repeat: no-repeat;
+                            background-size: 16px;
+                            height: 16px;
+                            width: 16px;
+                          }
+
+                          &[checked] ~ .ccs-box::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            left: 0;
+                            background: #d6d7f5
+                              url("//res.cloudinary.com/spiralyze/image/upload/v1696578810/eptura/4002/Checkbox-filled.svg");
+                            background-repeat: no-repeat;
+                            background-size: 16px;
+                          }
                         }
                       }
                     }
                   }
                 }
-              }
 
-              .step-error-1,
-              .step-error-2 {
-                display: flex;
-                align-items: center;
-                justify-content: center;
-                margin: 4px 0 24px 0;
-
-                img {
-                  width: 12px;
-                  height: 12px;
-                  margin-right: 4px;
-                }
-                span {
-                  color: #f83a59;
-                  font-size: 14px;
-                  font-style: normal;
-                  font-weight: 300;
-                  line-height: 20px;
-                }
-              }
-
-              .step-ques-button {
-                max-width: 412px;
-                margin: auto;
-
-                button.call-to-action {
+                .step-error-1,
+                .step-error-2 {
                   display: flex;
-                  height: 50px;
-                  padding: 0px 28px 0px 32px;
-                  width: 124px;
-                  justify-content: center;
                   align-items: center;
-                  border-radius: 3px;
-                  background: #904ab0;
-                  color: #fff;
-                  text-align: center;
-                  font-family: Eptura Flexible;
-                  font-size: 16px;
-                  font-style: normal;
-                  font-weight: 500;
-                  line-height: 24px;
-                  outline: transparent;
-                  border: 0;
+                  justify-content: center;
+                  margin: 4px 0 24px 0;
+
+                  img {
+                    width: 12px;
+                    height: 12px;
+                    margin-right: 4px;
+                  }
+                  span {
+                    color: #f83a59;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 300;
+                    line-height: 20px;
+                  }
+                }
+
+                .step-ques-button {
+                  max-width: 270px;
                   margin: auto;
 
-                  @media (max-width: 1198.98px) {
-                    width: 100%;
-                  }
+                  button.call-to-action {
+                    display: flex;
+                    height: 50px;
+                    padding: 0px 28px 0px 32px;
+                    width: 124px;
+                    justify-content: center;
+                    align-items: center;
+                    border-radius: 3px;
+                    background: #1b4bc5;
+                    color: #fff;
+                    text-align: center;
+                    font-family: Eptura Flexible;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 24px;
+                    outline: transparent;
+                    border: 0;
+                    margin: auto;
 
-                  &:hover,
-                  &:active {
-                    background: linear-gradient(
-                        0deg,
-                        rgba(255, 255, 255, 0.25) 0%,
-                        rgba(255, 255, 255, 0.25) 100%
-                      ),
-                      #904ab0;
+                    .cta-arrow {
+                      margin-left: 8px;
+                    }
+                    @media (max-width: 767.98px) {
+                      width: 100%;
+                    }
+
+                    &:hover,
+                    &:active {
+                      background: #456ed6;
+                    }
                   }
                 }
               }
-            }
 
-            .spz-hidden {
-              display: none !important;
+              .step-ques-section-2 {
+                .step-ques-title {
+                  font-size: 24px;
+                  line-height: 32px;
+                  max-width: 204px;
+                  margin: auto;
+                }
+
+                .step-ques-variant-question {
+                  max-width: 456px;
+                  margin: 32px auto 24px;
+                  @media (max-width: 767.98px) {
+                    max-width: 270px;
+                    margin: 28px auto 20px;
+                  }
+
+                  .form-checkboxes {
+                    .custom-checkbox-spz {
+                      flex-direction: row;
+                      max-width: 100%;
+                      padding: 8px 12px 8px 8px;
+                      height: 48px;
+                      width: 100%;
+                      margin-bottom: 8px;
+
+                      .ccs-img {
+                        margin-bottom: 0;
+                        margin-right: 8px;
+                        img {
+                          width: 32px;
+                          height: 32px;
+                        }
+                      }
+
+                      .ccs-checkbox {
+                        top: 16px;
+                        left: auto;
+                        right: 12px;
+                      }
+                    }
+                  }
+                }
+
+                .step-ques-button {
+                  max-width: 456px;
+                  margin: auto;
+                  @media (max-width: 767.98px) {
+                    max-width: 270px;
+                  }
+
+                  button.call-to-action {
+                    width: 100%;
+                  }
+                }
+              }
+
+              .spz-hidden {
+                display: none !important;
+              }
             }
 
             #HeroFormPanel {
@@ -753,7 +836,8 @@ body {
                     .mktoButtonWrap {
                       button.mktoButton {
                         display: flex;
-                        width: 140px !important;
+                        width: 456px !important;
+                        max-width: 456px !important;
                         height: 50px !important;
                         padding: 0px !important;
                         justify-content: center;

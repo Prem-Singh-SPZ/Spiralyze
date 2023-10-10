@@ -128,13 +128,13 @@
                     <div class="steps">
                     <div class="step-1 active">
                         <span class="step-11">Step 1</span>
+                        </div>
+                        <div class="step-2">
                         <span class="line"></span>
-                    </div>
-                    <div class="step-2">
                         <span class="step-11">Step 2</span>
+                        </div>
+                        <div class="step-3">
                         <span class="line"></span>
-                    </div>
-                    <div class="step-3">
                         <span class="step-11">Step 3</span>
                     </div>
                     </div>

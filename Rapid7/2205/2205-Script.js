@@ -21,7 +21,7 @@
                            <img class="peer-insights" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/RAPID7/Gartner.png" alt="Gartner Peer insights"/>
                            <div class="rating" >
                               <span>4.4</span>   
-                           <img class="star-rating" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696937764/rapid7/2205/g2-stars_1.svg" alt="rating"/>
+                           <img class="star-rating" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696937764/rapid7/2205/g2-stars_1.svg" alt="Gartner Rating"/>
                            </div>
                      </div>
                      <div class="g-2-logo" >
