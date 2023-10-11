@@ -147,8 +147,8 @@
                         `+ checkBoxHTML(imageUrlsForStep1) + `
                         <!-- Custom checkbox ends -->
                         </div>
+                        <div class="step-error-1 spz-hidden"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696580574/eptura/4002/icon-info.svg" alt="info-icon"><span>Choose your answer</span></div>
                     </div>
-                    <div class="step-error-1 spz-hidden"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696580574/eptura/4002/icon-info.svg" alt="info-icon"><span>Choose your answer</span></div>
                     <div class="step-ques-button">
                         <button class="call-to-action step-1">Next<img class="cta-arrow" alt="Arrow" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423223/eptura/4002/navigation__5_-_navigation_arrow_arrows_direction_right_icon.svg" /></button></div>
                     </div>
@@ -161,8 +161,8 @@
                         `+ checkBoxHTML(imageUrlsForStep2) + `
                         <!-- Custom checkbox ends -->
                         </div>
+                        <div class="step-error-2 spz-hidden"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696580574/eptura/4002/icon-info.svg" alt="info-icon"><span>Choose your answer</span></div>
                     </div>
-                    <div class="step-error-2 spz-hidden"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696580574/eptura/4002/icon-info.svg" alt="info-icon"><span>Choose your answer</span></div>
                     <div class="step-ques-button">
                         <button class="call-to-action step-2">Next<img class="cta-arrow" alt="Arrow" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1696423223/eptura/4002/navigation__5_-_navigation_arrow_arrows_direction_right_icon.svg" /></button></div>
                     </div></div>`);
@@ -176,11 +176,14 @@
 
     //Steps show hide logic
     function stepValidations() {
-        document.querySelector('#HeroFormPanel').classList.add('spz-hidden');
 
         waitForElm('.step-ques-section-1 .call-to-action.step-1').then(function () {
+
+            document.querySelector('#HeroFormPanel').classList.add('spz-hidden');
             //move #HeroFormPanel inside .steps-container div
             document.querySelector('.steps-container').appendChild(document.querySelector('#HeroFormPanel'));
+
+
             //onclick of .call-to-action.step-1 check if at east one checkbox is checked and show .step-ques-section-2
             document.querySelector('.step-ques-section-1 .call-to-action.step-1').addEventListener('click', function () {
                 if (document.querySelector('.step-ques-section-1 .form-checkboxes input:checked')) {
@@ -270,7 +273,7 @@
     //Marketo form update
     function formUpdate() {
         if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
-            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Request a demo</h6>';
+            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Get a demo</h6>';
         }
 
         document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');

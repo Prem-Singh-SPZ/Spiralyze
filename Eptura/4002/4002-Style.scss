@@ -219,6 +219,10 @@ body {
               .step-ques-section-1,
               .step-ques-section-2 {
                 margin-top: 24px;
+                @media (max-width: 767.98px) {
+                  margin-bottom: 1px;
+                }
+
                 .step-ques-sub-title {
                   color: #904ab0;
                   text-align: center;
@@ -249,6 +253,7 @@ body {
 
                 .step-ques-variant-question {
                   margin: 32px auto 24px;
+                  max-width: 412px;
                   @media (max-width: 767.98px) {
                     max-width: 270px;
                     margin: 28px auto 20px;
@@ -395,7 +400,7 @@ body {
                   display: flex;
                   align-items: center;
                   justify-content: center;
-                  margin: 4px 0 24px 0;
+                  margin-top: 4px;
 
                   img {
                     width: 12px;
@@ -442,66 +447,34 @@ body {
                       width: 100%;
                     }
 
-                    &:hover,
+                    &:hover {
+                      background: #456ed6;
+                    }
                     &:active {
                       background: #456ed6;
+                      transform: translate(0, 1px);
                     }
                   }
                 }
               }
 
               .step-ques-section-2 {
-                .step-ques-title {
-                  font-size: 24px;
-                  line-height: 32px;
-                  max-width: 204px;
-                  margin: auto;
+                @media (max-width: 767.98px) {
+                  .step-ques-title {
+                    font-size: 24px;
+                    line-height: 32px;
+                    max-width: 204px;
+                    margin: auto;
+                  }
                 }
 
                 .step-ques-variant-question {
-                  max-width: 456px;
-                  margin: 32px auto 24px;
-                  @media (max-width: 767.98px) {
-                    max-width: 270px;
-                    margin: 28px auto 20px;
-                  }
-
                   .form-checkboxes {
                     .custom-checkbox-spz {
-                      flex-direction: row;
-                      max-width: 100%;
-                      padding: 8px 12px 8px 8px;
-                      height: 48px;
-                      width: 100%;
-                      margin-bottom: 8px;
-
-                      .ccs-img {
-                        margin-bottom: 0;
-                        margin-right: 8px;
-                        img {
-                          width: 32px;
-                          height: 32px;
-                        }
-                      }
-
-                      .ccs-checkbox {
-                        top: 16px;
-                        left: auto;
-                        right: 12px;
+                      @media (min-width: 767.98px) {
+                        height: 122px;
                       }
                     }
-                  }
-                }
-
-                .step-ques-button {
-                  max-width: 456px;
-                  margin: auto;
-                  @media (max-width: 767.98px) {
-                    max-width: 270px;
-                  }
-
-                  button.call-to-action {
-                    width: 100%;
                   }
                 }
               }
@@ -513,7 +486,7 @@ body {
 
             #HeroFormPanel {
               background-color: transparent !important;
-              padding: 40px 0 0 0;
+              padding: 24px 0 0 0;
 
               @media (max-width: 767.98px) {
                 max-width: 424px;
@@ -525,14 +498,14 @@ body {
                 display: block !important;
 
                 h6 {
-                  color: var(--accents-a-5, #904ab0);
+                  color: #904ab0;
                   text-align: center;
-                  font-size: 36px;
+                  font-size: 26px;
                   font-style: normal;
                   font-weight: 300;
-                  line-height: 44px; /* 130.769% */
+                  line-height: 34px;
                   letter-spacing: 0;
-                  margin-bottom: 24px;
+                  margin-bottom: 16px;
 
                   @media (max-width: 767.98px) {
                     font-size: 26px;
@@ -836,8 +809,7 @@ body {
                     .mktoButtonWrap {
                       button.mktoButton {
                         display: flex;
-                        width: 456px !important;
-                        max-width: 456px !important;
+                        width: 140px !important;
                         height: 50px !important;
                         padding: 0px !important;
                         justify-content: center;
@@ -883,7 +855,7 @@ body {
                   //email line form
                   .spz-email {
                     .mktoFieldWrap {
-                      margin-top: 19px;
+                      margin-top: 7px;
                       @media (max-width: 767.98px) {
                         margin-top: 24px;
                       }

@@ -218,6 +218,12 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 {
   margin-top: 24px;
 }
+@media (max-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1,
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 {
+    margin-bottom: 1px;
+  }
+}
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-sub-title,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-sub-title {
   color: #904ab0;
@@ -250,6 +256,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-variant-question,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question {
   margin: 32px auto 24px;
+  max-width: 412px;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-variant-question,
@@ -416,7 +423,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin: 4px 0 24px 0;
+  margin-top: 4px;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-error-1 img,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-error-2 img,
@@ -478,69 +485,35 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
     width: 100%;
   }
 }
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-button button.call-to-action:hover, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-button button.call-to-action:active,
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action:hover,
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action:active {
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-button button.call-to-action:hover,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action:hover {
   background: #456ed6;
 }
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-title {
-  font-size: 24px;
-  line-height: 32px;
-  max-width: 204px;
-  margin: auto;
-}
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question {
-  max-width: 456px;
-  margin: 32px auto 24px;
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-button button.call-to-action:active,
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action:active {
+  background: #456ed6;
+  -webkit-transform: translate(0, 1px);
+          transform: translate(0, 1px);
 }
 @media (max-width: 767.98px) {
-  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question {
-    max-width: 270px;
-    margin: 28px auto 20px;
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-title {
+    font-size: 24px;
+    line-height: 32px;
+    max-width: 204px;
+    margin: auto;
   }
 }
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  max-width: 100%;
-  padding: 8px 12px 8px 8px;
-  height: 48px;
-  width: 100%;
-  margin-bottom: 8px;
-}
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img {
-  margin-bottom: 0;
-  margin-right: 8px;
-}
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-img img {
-  width: 32px;
-  height: 32px;
-}
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz .ccs-checkbox {
-  top: 16px;
-  left: auto;
-  right: 12px;
-}
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button {
-  max-width: 456px;
-  margin: auto;
-}
-@media (max-width: 767.98px) {
-  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button {
-    max-width: 270px;
+@media (min-width: 767.98px) {
+  body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
+    height: 122px;
   }
-}
-body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action {
-  width: 100%;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .spz-hidden {
   display: none !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
   background-color: transparent !important;
-  padding: 40px 0 0 0;
+  padding: 24px 0 0 0;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
@@ -553,14 +526,14 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   display: block !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
-  color: var(--accents-a-5, #904ab0);
+  color: #904ab0;
   text-align: center;
-  font-size: 36px;
+  font-size: 26px;
   font-style: normal;
   font-weight: 300;
-  line-height: 44px; /* 130.769% */
+  line-height: 34px;
   letter-spacing: 0;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 {
@@ -805,8 +778,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  width: 456px !important;
-  max-width: 456px !important;
+  width: 140px !important;
   height: 50px !important;
   padding: 0px !important;
   -webkit-box-pack: center;
@@ -845,7 +817,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
-  margin-top: 19px;
+  margin-top: 7px;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
