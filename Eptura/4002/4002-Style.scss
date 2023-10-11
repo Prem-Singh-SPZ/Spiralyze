@@ -541,7 +541,7 @@ body {
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
-                          line-height: 24px; /* 150% */
+                          line-height: 24px;
                           top: 11px;
                           left: 16px;
                           padding: 0 !important;
@@ -554,20 +554,16 @@ body {
 
                         .mktoField:not([type="checkbox"]) {
                           border-radius: 4px;
-                          border: 1px solid
-                            var(--interactive-colors-a-4, #d6d7f5) !important;
+                          border: 1px solid #d6d7f5 !important;
                           width: 280px;
                           padding: 11px 16px 10px 16px !important;
-                          color: var(
-                            --primary-neutrals-n-1,
-                            #0d122e
-                          ) !important;
+                          color: #0d122e !important;
                           text-overflow: ellipsis;
                           font-family: $eptura-font !important;
                           font-size: 16px !important;
                           font-style: normal;
                           font-weight: 300 !important;
-                          line-height: 24px !important; /* 150% */
+                          line-height: 24px !important;
                           margin-bottom: 20px !important;
 
                           &:not(#Lead_Notes__c) {
@@ -612,13 +608,17 @@ body {
 
                         .mktoHtmlText.mktoHasWidth {
                           margin: 0 !important;
+                          &[style*="width: 255px"] {
+                            line-height: 26px;
+                          }
+
                           span {
                             color: #848995;
                             font-size: 10px !important;
                             // font-family: $eptura-font;
                             font-style: normal;
                             font-weight: 300;
-                            line-height: 16px; /* 160% */
+                            line-height: 16px;
 
                             a {
                               // font-family: $eptura-font;
@@ -650,11 +650,11 @@ body {
 
                           label {
                             font-family: $eptura-font !important;
-                            color: var(--primary-neutrals-n-1, #0d122e);
+                            color: #0d122e;
                             font-size: 12px !important;
                             font-style: normal !important;
                             font-weight: 300 !important;
-                            line-height: 18px !important; /* 142.857% */
+                            line-height: 18px !important;
                             margin-left: 19px;
                             letter-spacing: -0.1px;
                             cursor: pointer;
@@ -715,9 +715,9 @@ body {
                             right: auto;
                             padding: 0 5px !important;
                             font-family: $eptura-font;
-                            color: var(--accents-a-5, #904ab0) !important;
+                            color: #904ab0 !important;
                             font-size: 13px !important;
-                            line-height: 18px !important; /* 138.462% */
+                            line-height: 18px !important;
                             background: #fff;
                           }
                         }
@@ -735,7 +735,7 @@ body {
                             font-family: $eptura-font;
                             padding: 0 5px !important;
                             font-size: 13px !important;
-                            line-height: 18px !important; /* 138.462% */
+                            line-height: 18px !important;
                             background: #fff;
                           }
                         }
@@ -745,7 +745,7 @@ body {
                         &.field-focus {
                           .mktoFieldWrap {
                             .mktoLabel {
-                              color: var(--accents-a-5, #f83a59) !important;
+                              color: #f83a59 !important;
                             }
                           }
                         }
@@ -770,10 +770,7 @@ body {
 
                       .show-comment-dynamic {
                         overflow: hidden;
-                        color: var(
-                          --primary-neutrals-n-2,
-                          rgba(13, 18, 46, 0.8)
-                        );
+                        color: rgba(13, 18, 46, 0.8);
                         font-family: $eptura-font;
                         text-overflow: ellipsis;
                         font-size: 16px;
@@ -815,27 +812,21 @@ body {
                         justify-content: center;
                         align-items: center;
                         border-radius: 3px !important;
-                        background: var(
-                          --interactive-colors-a-1,
-                          #1b4bc5
-                        ) !important;
-                        color: var(--primary-neutrals-w, #fff) !important;
+                        background: #1b4bc5 !important;
+                        color: #fff !important;
                         text-align: center;
                         font-family: $eptura-font;
                         font-size: 16px !important;
                         font-style: normal;
                         font-weight: 500;
-                        line-height: 24px !important; /* 150% */
+                        line-height: 24px !important;
                         margin-top: 21px !important;
                         white-space: nowrap;
                         all: initial;
 
                         &:hover,
                         &:focus {
-                          background: var(
-                            --interactive-colors-a-3,
-                            #456ed6
-                          ) !important;
+                          background: #456ed6 !important;
                         }
                         &:focus {
                           transform: translate(0, 1px);
@@ -855,7 +846,7 @@ body {
                   //email line form
                   .spz-email {
                     .mktoFieldWrap {
-                      margin-top: 7px;
+                      margin-top: 6px;
                       @media (max-width: 767.98px) {
                         margin-top: 24px;
                       }
@@ -865,11 +856,11 @@ body {
                           line-height: 0;
                         }
                         em {
-                          color: var(--primary-neutrals-n-1, #0d122e);
+                          color: #0d122e;
                           font-size: 14px;
                           font-style: normal;
                           font-weight: 300;
-                          line-height: 20px; /* 142.857% */
+                          line-height: 20px;
                           @media (max-width: 767.98px) {
                             padding: 0;
                           }
@@ -881,7 +872,7 @@ body {
                           }
 
                           a {
-                            color: var(--interactive-colors-a-1, #1b4bc5);
+                            color: #1b4bc5;
                             font-weight: 500;
                             padding: 0;
                             font-family: $eptura-font;

@@ -561,7 +561,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   font-size: 16px !important;
   font-style: normal;
   font-weight: 300 !important;
-  line-height: 24px; /* 150% */
+  line-height: 24px;
   top: 11px;
   left: 16px;
   padding: 0 !important;
@@ -574,16 +574,16 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   border-radius: 4px;
-  border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+  border: 1px solid #d6d7f5 !important;
   width: 280px;
   padding: 11px 16px 10px 16px !important;
-  color: var(--primary-neutrals-n-1, #0d122e) !important;
+  color: #0d122e !important;
   text-overflow: ellipsis;
   font-family: "Eptura Flexible", Arial, sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 300 !important;
-  line-height: 24px !important; /* 150% */
+  line-height: 24px !important;
   margin-bottom: 20px !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
@@ -625,12 +625,15 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   margin: 0 !important;
 }
+body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth[style*="width: 255px"] {
+  line-height: 26px;
+}
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
   color: #848995;
   font-size: 10px !important;
   font-style: normal;
   font-weight: 300;
-  line-height: 16px; /* 160% */
+  line-height: 16px;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
   padding: 0;
@@ -659,11 +662,11 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
   font-family: "Eptura Flexible", Arial, sans-serif !important;
-  color: var(--primary-neutrals-n-1, #0d122e);
+  color: #0d122e;
   font-size: 12px !important;
   font-style: normal !important;
   font-weight: 300 !important;
-  line-height: 18px !important; /* 142.857% */
+  line-height: 18px !important;
   margin-left: 19px;
   letter-spacing: -0.1px;
   cursor: pointer;
@@ -704,9 +707,9 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   right: auto;
   padding: 0 5px !important;
   font-family: "Eptura Flexible", Arial, sans-serif;
-  color: var(--accents-a-5, #904ab0) !important;
+  color: #904ab0 !important;
   font-size: 13px !important;
-  line-height: 18px !important; /* 138.462% */
+  line-height: 18px !important;
   background: #fff;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
@@ -719,11 +722,11 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   font-family: "Eptura Flexible", Arial, sans-serif;
   padding: 0 5px !important;
   font-size: 13px !important;
-  line-height: 18px !important; /* 138.462% */
+  line-height: 18px !important;
   background: #fff;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
-  color: var(--accents-a-5, #f83a59) !important;
+  color: #f83a59 !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #f83a59 !important;
@@ -742,7 +745,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
   overflow: hidden;
-  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+  color: rgba(13, 18, 46, 0.8);
   font-family: "Eptura Flexible", Arial, sans-serif;
   text-overflow: ellipsis;
   font-size: 16px;
@@ -788,20 +791,20 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
       -ms-flex-align: center;
           align-items: center;
   border-radius: 3px !important;
-  background: var(--interactive-colors-a-1, #1b4bc5) !important;
-  color: var(--primary-neutrals-w, #fff) !important;
+  background: #1b4bc5 !important;
+  color: #fff !important;
   text-align: center;
   font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 500;
-  line-height: 24px !important; /* 150% */
+  line-height: 24px !important;
   margin-top: 21px !important;
   white-space: nowrap;
   all: initial;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  background: var(--interactive-colors-a-3, #456ed6) !important;
+  background: #456ed6 !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
   -webkit-transform: translate(0, 1px);
@@ -817,7 +820,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
-  margin-top: 7px;
+  margin-top: 6px;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
@@ -833,11 +836,11 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
-  color: var(--primary-neutrals-n-1, #0d122e);
+  color: #0d122e;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
-  line-height: 20px; /* 142.857% */
+  line-height: 20px;
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
@@ -850,7 +853,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
-  color: var(--interactive-colors-a-1, #1b4bc5);
+  color: #1b4bc5;
   font-weight: 500;
   padding: 0;
   font-family: "Eptura Flexible", Arial, sans-serif;
