@@ -91,8 +91,18 @@ function init5001() {
                     <p>GymSales</p>
                 </div>
             </div>
-        </div>
+            </div>
             </div>`;
+
+            let setTitle = setInterval(() => {
+                if (document.querySelectorAll('.modal-content .modal-body .spz-demo-title').length == 0) {
+                    document.querySelector('.modal-content .modal-body iframe').insertAdjacentHTML("beforebegin", `<div class="spz-demo-title">Get a Demo</div>`);
+                }
+            }, 10);
+
+            setTimeout(() => {
+                clearInterval(setTitle);
+            }, 2000);
 
             document.querySelector('.modal-content .modal-body').insertAdjacentHTML("beforebegin", bulltHtmlDesk);
 
