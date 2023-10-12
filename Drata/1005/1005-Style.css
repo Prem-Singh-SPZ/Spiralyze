@@ -16,25 +16,42 @@ body.spz-1005 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus .in
   color: #0580e8 !important;
 }
 body.spz-1005 .form-wrapper-spz .back-to-home {
-  position: relative;
-  font-size: 15px;
-  line-height: 22px;
-  font-family: "Inter", sans-serif;
-  color: #fff;
-  font-weight: 400;
-  text-align: left;
-  margin-top: 16px;
+  position: absolute;
+  left: 20px;
+  top: 20px;
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 767.98px) {
+  body.spz-1005 .form-wrapper-spz .back-to-home {
+    left: 12px;
+    top: 12px;
+    width: 28px;
+    height: 28px;
+  }
 }
 body.spz-1005 .form-wrapper-spz .back-to-home .drata-home {
-  text-decoration: underline;
-  font-size: 15px;
-  font-weight: 400;
-  line-height: 22px;
-  font-family: "Inter", sans-serif;
-  color: #fff;
+  display: block;
+  width: 32px;
+  height: 32px;
+}
+@media (max-width: 767.98px) {
+  body.spz-1005 .form-wrapper-spz .back-to-home .drata-home {
+    width: 28px;
+    height: 28px;
+  }
+}
+body.spz-1005 .form-wrapper-spz .back-to-home .drata-home img {
+  pointer-events: none;
+}
+@media (max-width: 767.98px) {
+  body.spz-1005 .form-wrapper-spz .back-to-home .drata-home img {
+    width: 28px;
+    height: 28px;
+  }
 }
 body.spz-1005 .form-wrapper-spz .back-to-home .drata-home:hover {
-  text-decoration: none;
+  opacity: 0.8;
 }
 body.spz-1005 .container {
   margin: 0 auto;

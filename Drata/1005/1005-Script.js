@@ -51,8 +51,7 @@
         focusFields();
         submitTestDetails();
 
-        document.querySelector('.form-wrapper-spz').insertAdjacentHTML('beforeend', `<div class="back-to-home">Back to
-        <a href="javascript:void(0)" class="drata-home">drata.com</a>
+        document.querySelector('.form-wrapper-spz .form-title-spz').insertAdjacentHTML('beforebegin', `<div class="back-to-home"><a href="javascript:void(0)" class="drata-home"><img src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697018085/drata/1005/frame.svg" alt="Back Arrow"></a>
         </div>`);
         // removeStyleTags();
 
