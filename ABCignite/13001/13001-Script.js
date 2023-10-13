@@ -102,7 +102,7 @@ function init5001() {
 
             setTimeout(() => {
                 clearInterval(setTitle);
-            }, 2000);
+            }, 10000);
 
             document.querySelector('.modal-content .modal-body').insertAdjacentHTML("beforebegin", bulltHtmlDesk);
 
