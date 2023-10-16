@@ -34,7 +34,7 @@ function urlCheck(url) {
         allblogsurlstring = window.location.href;
     }
     if (isSameUrl(url, allblogsurlstring, true)) {
-        init5001();
+        init_13001();
     } else {
         // Remove Test
     }
@@ -56,7 +56,7 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     return false;
 }
 
-function init5001() {
+function init_13001() {
     var bodyEle = document.querySelector('body');
     if (!bodyEle.classList.contains('spz-13001')) {
         bodyEle.classList.add('spz-13001');
@@ -94,17 +94,21 @@ function init5001() {
             </div>
             </div>`;
 
+            // let demoTitle = `<div class="spz-demo-title">Get a Demo</div>`;
+
             let setTitle = setInterval(() => {
                 if (document.querySelectorAll('.modal-content .modal-body .spz-demo-title').length == 0) {
-                    document.querySelector('.modal-content .modal-body iframe').insertAdjacentHTML("beforebegin", `<div class="spz-demo-title">Get a Demo</div>`);
+                    document.querySelector('.modal-content .modal-body').insertAdjacentHTML("afterbegin", `<div class="spz-demo-title">Get a Demo</div>`);
                 }
-            }, 10);
+                // console.log('test')
+            }, 200);
 
-            setTimeout(() => {
-                clearInterval(setTitle);
-            }, 10000);
+            // setTimeout(() => {
+            //     clearInterval(setTitle);
+            // }, 10000);
 
             document.querySelector('.modal-content .modal-body').insertAdjacentHTML("beforebegin", bulltHtmlDesk);
+            // document.querySelector('.modal-content .modal-body').insertAdjacentHTML("afterbegin", demoTitle);
 
             var closeBtn = document.querySelector(".modal-content .close-icon");
             var HeadercloseBtn = document.querySelector(".spz-13001 #popupModal .modal-header button.close");
