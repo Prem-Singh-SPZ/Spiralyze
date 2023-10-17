@@ -30,13 +30,11 @@ window.addEventListener("locationchange", function () {
 
 function urlCheck(url) {
     var allblogsurlstring = "https://abcfitness.com/";
-    if (window.location.pathname.indexOf("/") > -1) { // Add " / " to run on all urls
+    if (window.location.pathname.indexOf("/") > -1) {
         allblogsurlstring = window.location.href;
     }
     if (isSameUrl(url, allblogsurlstring, true)) {
         init_13001();
-    } else {
-        // Remove Test
     }
 }
 
@@ -94,21 +92,15 @@ function init_13001() {
             </div>
             </div>`;
 
-            // let demoTitle = `<div class="spz-demo-title">Get a Demo</div>`;
 
             let setTitle = setInterval(() => {
                 if (document.querySelectorAll('.modal-content .modal-body .spz-demo-title').length == 0) {
                     document.querySelector('.modal-content .modal-body').insertAdjacentHTML("afterbegin", `<div class="spz-demo-title">Get a Demo</div>`);
                 }
-                // console.log('test')
             }, 200);
 
-            // setTimeout(() => {
-            //     clearInterval(setTitle);
-            // }, 10000);
 
             document.querySelector('.modal-content .modal-body').insertAdjacentHTML("beforebegin", bulltHtmlDesk);
-            // document.querySelector('.modal-content .modal-body').insertAdjacentHTML("afterbegin", demoTitle);
 
             var closeBtn = document.querySelector(".modal-content .close-icon");
             var HeadercloseBtn = document.querySelector(".spz-13001 #popupModal .modal-header button.close");
