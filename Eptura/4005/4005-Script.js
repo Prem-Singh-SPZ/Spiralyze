@@ -19,22 +19,13 @@
     function loadSlider() {
         getScript("https://cdn.jsdelivr.net/npm/swiper@10.3.1/swiper-bundle.min.js", function () {
             const swiper = new Swiper('.swiper', {
-                slidesPerView: 4.421,
+                slidesPerView: "auto",
                 loop: true,
                 speed: 1200,
                 autoplay: {
                     delay: 1000,
                     disableOnInteraction: false,
                 },
-                breakpoints: {
-                    // when window width is >= 499px
-                    320: {
-                        slidesPerView: 2,
-                    },
-                    768: {
-                        slidesPerView: 4.421,
-                    },
-                }
             });
         });
     }
@@ -126,11 +117,38 @@
                     if (identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo") {
                         document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
                         <div class="ribbon-title">
-                            <h6>Connect to <span> 30+ </span> platforms</h6>
+                            <h6>Connect to <br><span> 30+ </span> platforms</h6>
                         </div>
                         <div class="logos-slider swiper mySwiper">
                             <div class="slider-wrapper swiper-wrapper">
                             <div class="swiper-slide">
+                                <img class="logo" alt="Microsoft" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_microsoft.svg" />
+                            </div>
+                            <div class="swiper-slide">
+                                 <img class="logo" alt="Okta" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_okta.svg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="logo" alt="Google" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_google.svg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="logo" alt="Amazon AWS" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_amazon_aws.svg" />
+                            </div>
+                            <div class="swiper-slide">
+                                 <img class="logo" alt="Slack" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_slack.svg" />
+                             </div>
+                            <div class="swiper-slide">
+                                <img class="logo" alt="Oracle" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_oracle.svg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="logo" alt="Azure Ad" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_azure_ad.svg" />
+                            </div>
+                            <div class="swiper-slide">
+                                <img class="logo" alt="Autodesk" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_autodesk.svg" />
+                             </div>
+                            <div class="swiper-slide">
+                                <img class="logo" alt="Salesforce" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_salesforce.svg" />
+                             </div>
+                             <div class="swiper-slide">
                                 <img class="logo" alt="Microsoft" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_microsoft.svg" />
                             </div>
                             <div class="swiper-slide">
@@ -164,7 +182,7 @@
                     else {
                         document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
                         <div class="ribbon-title">
-                            <h6>Connect to <span> 40+ </span> platforms</h6>
+                            <h6>Connect to <br><span> 40+ </span> platforms</h6>
                         </div>
                         <div class="logos-slider swiper mySwiper">
                             <div class="slider-wrapper swiper-wrapper">
@@ -381,6 +399,3 @@
         });
     }
 })();
-
-
-
