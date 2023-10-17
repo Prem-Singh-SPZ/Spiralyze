@@ -29,7 +29,13 @@
             });
         });
     }
-    loadSlider();
+
+    let isSlider_init = setInterval(() => {
+        if (document.querySelector('.logos-slider.swiper,mySwiper swiper-initialized')) {
+            clearInterval(isSlider_init);
+            loadSlider();
+        }
+    }, 100);
 
     const pageContent = [{
         pageName: "website-proxyclick-demo",
