@@ -1,6 +1,7 @@
 /* Integrations Section */
 .integrations-section {
   padding: 59px 0 97px;
+  background: var(--neutrals-neutrals-200, #EEF2F6);
 }
 
 .ing-sub-title {
@@ -105,7 +106,7 @@
 }
 
 .integrations-logo-slider {
-  padding: 0 24px;
+  padding: 0 ;
   margin-top: 56px;
   margin-bottom: 50px;
   display: -webkit-box;
@@ -131,51 +132,51 @@
   width: 100%;
 }
 
-.logo-slider::before,
-.logo-slider::after {
-  position: absolute;
-  content: "";
-  background: -webkit-gradient(
-    linear,
-    left top,
-    right top,
-    from(rgba(255, 255, 255, 1)),
-    to(rgba(255, 255, 255, 0))
-  );
-  background: -o-linear-gradient(
-    left,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-  background: linear-gradient(
-    to right,
-    rgba(255, 255, 255, 1),
-    rgba(255, 255, 255, 0)
-  );
-  height: 100%;
-  width: 200px;
-  z-index: 2;
-}
+// .logo-slider::before,
+// .logo-slider::after {
+//   position: absolute;
+//   content: "";
+//   background: -webkit-gradient(
+//     linear,
+//     left top,
+//     right top,
+//     from(rgba(255, 255, 255, 1)),
+//     to(rgba(255, 255, 255, 0))
+//   );
+//   background: -o-linear-gradient(
+//     left,
+//     rgba(255, 255, 255, 1),
+//     rgba(255, 255, 255, 0)
+//   );
+//   background: linear-gradient(
+//     to right,
+//     rgba(255, 255, 255, 1),
+//     rgba(255, 255, 255, 0)
+//   );
+//   height: 100%;
+//   width: 200px;
+//   z-index: 2;
+// }
 
-.logo-slider::before {
-  top: 0;
-  left: 0;
+// .logo-slider::before {
+//   top: 0;
+//   left: 0;
 
-  @media (max-width: 767.98px) {
-    display: none !important;
-  }
-}
+//   @media (max-width: 767.98px) {
+//     display: none !important;
+//   }
+// }
 
-.logo-slider::after {
-  right: 0;
-  top: 0;
-  -webkit-transform: rotateZ(180deg);
-  -ms-transform: rotate(180deg);
-  transform: rotateZ(180deg);
-  @media (max-width: 767.98px) {
-    display: none !important;
-  }
-}
+// .logo-slider::after {
+//   right: 0;
+//   top: 0;
+//   -webkit-transform: rotateZ(180deg);
+//   -ms-transform: rotate(180deg);
+//   transform: rotateZ(180deg);
+//   @media (max-width: 767.98px) {
+//     display: none !important;
+//   }
+// }
 
 .marquee {
   -webkit-box-flex: 0;
@@ -204,7 +205,7 @@
   -webkit-animation-direction: normal;
   animation-direction: normal;
   padding: 8px 0 14px;
-  background-color: #fff;
+  background-color: #EEF2F6;
 }
 
 .integrations-logo-slider .logo-slider.slider-1 .marquee,
@@ -278,7 +279,7 @@
 }
 
 .integrations-section .btn {
-  // display: none;
+  display: none;
   text-align: center;
 
   a {
