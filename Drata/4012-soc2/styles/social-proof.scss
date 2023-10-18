@@ -1,0 +1,116 @@
+.social-pr-section {
+  .sp-title {
+    font-family: $ff-inter;
+    color: #0c131a;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    text-align: center;
+    line-height: 24px;
+  }
+
+  .sp-logo-group {
+    position: relative;
+    margin-top: 30px;
+    margin-bottom: 63px;
+    width: 100%;
+    height: 50px;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      z-index: 2;
+      top: 0;
+      width: 293px;
+      height: 100%;
+    }
+
+    &::before {
+      left: 0;
+      background: linear-gradient(
+        90deg,
+        #fff 58.53%,
+        rgba(255, 255, 255, 0) 100%
+      );
+    }
+
+    &::after {
+      right: 0;
+      background: linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0) 4.32%,
+        #fff 48.3%
+      );
+    }
+
+    .sp-marquee {
+      height: 100%;
+      width: fit-content;
+      align-items: center;
+      display: flex;
+      position: relative;
+      animation: marquee 40s linear infinite; // 40s is used because the html is duplicated to create the marquee effect
+      will-change: transform;
+    }
+
+    .sp-logo-item {
+      width: 180px;
+      height: 48px;
+      margin: 0 24px;
+
+      .sp-img {
+        width: 100%;
+        height: auto;
+        object-fit: contain;
+      }
+    }
+  }
+}
+
+@media screen and (min-width: 1600px) {
+  .social-pr-section .sp-title {
+    letter-spacing: -0.16px;
+  }
+}
+
+@media screen and (max-width: 1280px) {
+  .social-pr-section {
+    .sp-logo-group {
+      &::before,
+      &::after {
+        width: 150px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 767.98px) {
+  .social-pr-section {
+    .sp-title {
+      max-width: 300px;
+      margin: 14px auto;
+    }
+
+    .sp-logo-group {
+      margin-top: 30px;
+      margin-bottom: 63px;
+
+      &::before,
+      &::after {
+        width: 64px;
+      }
+
+      .sp-logo-item {
+        margin: 0 16px;
+      }
+    }
+  }
+}
+
+// Animation keyframe to marquee
+@keyframes marquee {
+  to {
+    transform: translateX(-50%);
+  }
+}
