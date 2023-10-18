@@ -42,7 +42,7 @@
         title: "Software/<span>technology</span>"
     },
     {
-        image: "//res.cloudinary.com/dxprfaxf3/image/upload/v1696423194/eptura/4002/icon-03-desktop.svg",
+        image: "//res.cloudinary.com/spiralyze/image/upload/v1697629030/eptura/4002/icon-03-desktop_2.svg",
         title: "Government"
     },
     {
