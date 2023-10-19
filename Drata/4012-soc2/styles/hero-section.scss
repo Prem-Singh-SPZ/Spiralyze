@@ -47,7 +47,7 @@
 
   .hero-content {
     max-width: 636px;
-    padding: 45px 0;
+    padding: 39px 0;
 
     .hc-title {
       position: relative;
@@ -78,6 +78,8 @@
 
     .hc-tag {
       margin: 0 0 24.5px;
+      display: none !important;
+
       span {
         font-family: $ff-inter;
         font-style: normal;
@@ -123,7 +125,8 @@
       margin-bottom: 25px;
 
       .sr-img {
-        width: 116px;
+        width: 108px;
+        height: 20px;
       }
     }
 
@@ -131,13 +134,13 @@
       margin-left: 12px;
       font-family: $ff-inter;
       font-style: normal;
-      font-weight: 500;
-      font-size: 16px;
+      font-weight: 400;
+      font-size: 17px;
       line-height: 24px;
-      color: var(--Neutrals-900, #0c131a);
+      color: #000000;
       strong {
-        font-weight: 700;
-        color: var(--Neutrals-900, #0c131a);
+        font-weight: 600;
+        color: #000000;
       }
     }
   }
@@ -146,8 +149,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    margin-top: 10px;
-    max-width: 1360px;
+    margin-top: 75px;
+    padding-bottom: 54px;
+    // max-width: 1360px;
 
     .hero-left-section {
       display: none;
@@ -162,7 +166,7 @@
 
       .list-item {
         position: relative;
-        margin-bottom: 16px;
+        margin-bottom: 20px;
 
         &::before {
           content: "";
@@ -200,7 +204,7 @@
           display: inline;
           // align-items: center;
           margin-bottom: 9px;
-          letter-spacing: -0.1px;
+          // letter-spacing: -0.1px;
         }
 
         .ls-desc {
@@ -251,8 +255,8 @@
 .hero-right-section {
   position: relative;
   width: 604px;
-  margin-top: 24.5px;
-  margin-bottom: 83px;
+  // margin-top: 24.5px;
+  // margin-bottom: 83px;
 }
 
 // Form Section/Cart Styles
@@ -273,15 +277,15 @@
 
   .form-title-spz {
     font-family: $ff-inter;
+    font-size: 32px;
     font-style: normal;
     font-weight: 900;
-    font-size: 42px;
-    line-height: 48px;
-    text-align: center;
-    letter-spacing: -0.02em;
+    line-height: 40px;
+    letter-spacing: -0.64px;
     color: #fff;
-    max-width: 428px;
+    // max-width: 428px;
     margin: 0 auto 32px auto;
+    text-align: center;
   }
 
   form {
