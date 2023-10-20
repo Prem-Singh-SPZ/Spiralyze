@@ -89,7 +89,7 @@ function init1003() {
                                 <div class="splide__slide ">
                                     <div class="spz-reivew-slide">
                                         <div class="spz-review-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Ashley_G-min.png" alt="Ashley G." />
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Female-9..jpg" alt="Ashley G." />
                                         </div>
                                         <div class="spz-review-content">
                                             <h4>"Keep Safety at the Forefront, Simply"</h4>
@@ -108,7 +108,7 @@ function init1003() {
                                 <div class="splide__slide">
                                     <div class="spz-reivew-slide">
                                         <div class="spz-review-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Bobbie_s-min.png" alt="Bobbie S." />
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Female-2.jpg" alt="Bobbie S." />
                                         </div>
                                         <div class="spz-review-content">
                                             <h4>"One Central Location"</h4>
@@ -127,7 +127,7 @@ function init1003() {
                                 <div class="splide__slide">
                                     <div class="spz-reivew-slide">
                                         <div class="spz-review-img">
-                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Jim_j-min.png" alt="Jim J." />
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/navigate360/1007/test_update/Male-2.jpg" alt="Jim J." />
                                         </div>
                                         <div class="spz-review-content">
                                             <h4>"Best School Safety Software out there!"</h4>

@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Mulish&family=Poppins:wght@700&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Poppins:wght@700&display=swap");
 $color_1: var(--black, #140f10);
 $color_2: #140f10;
 
@@ -203,6 +203,11 @@ $color_2: #140f10;
           background: #ededed;
           margin-bottom: 10px;
           margin-right: 10px;
+
+          @media (min-width: 991.98px) and (max-width: 1199.98px) {
+            width: 98px;
+            height: 98px;
+          }
 
           .block-img {
             width: 40px;
