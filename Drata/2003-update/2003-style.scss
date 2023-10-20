@@ -9,6 +9,10 @@ $ff-inter: "Inter", sans-serif;
       padding-top: 15px;
     }
 
+    @media (max-width: 767.98px) {
+      padding-top: 18px;
+    }
+
     .sp-title {
       font-family: $ff-inter;
       color: var(--neutrals-white-fff, #fff);
@@ -152,6 +156,10 @@ $ff-inter: "Inter", sans-serif;
       bottom: 0;
       left: 0;
       right: 0;
+
+      @media (max-width: 1199.98px) {
+        display: none;
+      }
     }
 
     .container {
@@ -213,7 +221,7 @@ $ff-inter: "Inter", sans-serif;
           display: flex;
           align-items: center;
           @media (max-width: 767.98px) {
-            margin-bottom: 4px;
+            margin-bottom: 7px;
           }
         }
 
@@ -592,7 +600,7 @@ $ff-inter: "Inter", sans-serif;
     .review-slider {
       .review-item-box {
         width: auto;
-        min-width: 405px;
+        min-width: 438px;
         // margin-right: 32px;
         padding: 0 16px;
         // max-width: 350px !important;
@@ -627,13 +635,13 @@ $ff-inter: "Inter", sans-serif;
     }
     .review-slider {
       .review-item-box {
-        min-width: 300px;
+        min-width: 333px;
         // margin-right: 20px;
         padding: 0 10px;
 
-        // .review {
-        //   padding: 20px 0 17px;
-        // }
+        .review {
+          padding: 13px 0 22px;
+        }
 
         &:last-child {
           padding-right: 10px;
@@ -790,6 +798,7 @@ $ff-inter: "Inter", sans-serif;
             line-height: 36px;
             max-width: 550px;
             margin-top: 24px;
+            letter-spacing: -0.15px;
 
             @media (max-width: 1199.98px) {
               max-width: 100%;
@@ -801,11 +810,16 @@ $ff-inter: "Inter", sans-serif;
               font-weight: 500;
               line-height: 24px;
               margin-top: 16px;
+              letter-spacing: 0;
             }
           }
 
           .css-1x2nrz6-HeroHomepage-actions {
             margin-top: 23px;
+
+            @media (max-width: 767.98px) {
+              margin-top: 20px;
+            }
 
             a.MuiButton-ctaModulePrimary {
               height: 60px;
@@ -823,6 +837,12 @@ $ff-inter: "Inter", sans-serif;
                 width: 7px;
                 margin-left: 0;
               }
+
+              @media (max-width: 767.98px) {
+                height: 48px;
+                width: 174px;
+                padding: 10px 23px 10px 26px;
+              }
             }
           }
         }
@@ -833,7 +853,7 @@ $ff-inter: "Inter", sans-serif;
           }
 
           @media (max-width: 767.98px) {
-            height: 272px;
+            height: 266px;
           }
 
           &::before {
@@ -868,12 +888,12 @@ $ff-inter: "Inter", sans-serif;
             }
 
             @media (max-width: 767.98px) {
-              background-size: 328.254px 202.494px;
+              background-size: 327.254px 205.494px;
               width: 328.254px;
-              height: 202.494px;
-              right: 0;
+              height: 204.494px;
+              right: 0px;
               top: auto;
-              bottom: 1px;
+              bottom: 26px;
               left: 0;
             }
           }

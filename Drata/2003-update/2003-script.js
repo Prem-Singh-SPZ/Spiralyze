@@ -217,7 +217,7 @@ function appendHomeHeroContent() {
                 <h6 class="review-author">Derek E. </h6>
                 <p class="review">“Undergoing any audit is a massive lift for those being audited. The entire process is confusing if not done correctly. Drata has made the process simple, easy, and innovative.”</p>
                 <div class="rating dis-flex">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/v1697553109/drata/2003/frame_5598.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2003/custom/review_stars.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
                 </div>
               </div>
             </div>
@@ -226,7 +226,7 @@ function appendHomeHeroContent() {
                 <h6 class="review-author">Greg C.</h6>
                 <p class="review">“What really sets Drata apart is its ability to simplify and automate the often complex and time-consuming process of compliance.”</p>
                 <div class="rating dis-flex">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/v1697553109/drata/2003/frame_5598.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2003/custom/review_stars.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
                 </div>
               </div>
             </div>
@@ -235,7 +235,7 @@ function appendHomeHeroContent() {
                 <h6 class="review-author">Gabriel R.</h6>
                 <p class="review">“From day one, our experience with Drata was enjoyable. They have a very well thought product to help their clients achieve their compliance goals.”</p>
                 <div class="rating dis-flex">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1697553109/drata/2003/frame_5598.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2003/custom/review_stars.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
                 </div>
               </div>
             </div>
