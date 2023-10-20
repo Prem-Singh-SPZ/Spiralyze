@@ -1,21 +1,21 @@
 function createTest_2003() {
-    document.body.classList.add('spz-2003');
+  document.body.classList.add('spz-2003');
 
-    waitForElm('.MuiButtonBase-root.MuiButton-disableElevation').then(function () {
-        appendHomeHeroContent();
+  waitForElm('.MuiButtonBase-root.MuiButton-disableElevation').then(function () {
+    appendHomeHeroContent();
 
-        // Add class 'safari' on body if browser is safari
-        if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-            document.body.classList.add('safari');
-        }
-    });
+    // Add class 'safari' on body if browser is safari
+    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+      document.body.classList.add('safari');
+    }
+  });
 }
 
 function appendHomeHeroContent() {
-    waitForElm('.css-rdcx7j-HeroHomepage-featuredContent').then(function () {
-        // insert element anchors cta
-        if (document.querySelectorAll('.social-pr-section').length == 0) {
-            document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="social-pr-section">
+  waitForElm('.css-rdcx7j-HeroHomepage-featuredContent').then(function () {
+    // insert element anchors cta
+    if (document.querySelectorAll('.social-pr-section').length == 0) {
+      document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="social-pr-section">
             <!-- <div class="container"> -->
             <h2 class="sp-title">
               Join the thousands of companies that trust Drata
@@ -208,7 +208,7 @@ function appendHomeHeroContent() {
                 <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1697553107/drata/2003/g2_logo.svg" alt="G2 Logo" />
                 <img class="star-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1697553107/drata/2003/frame_5597.svg" alt="Rating Stars" />
               </div>
-              <p><span>Excellent</span> based on <span>+500</span> reviews</p>
+              <p><span>Excellent</span> based on <span>500+</span> reviews</p>
             </div>
           </div>
           <div class="review-slider container">
@@ -242,88 +242,90 @@ function appendHomeHeroContent() {
           </div>
             </section>`);
 
-            document.querySelector('.css-85beqj-Link-root-HeroHomepage-cTA').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/v1697553108/drata/2003/g2-leader_spring_1.svg" alt="Leader Spring" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
+      waitForElm('.css-85beqj-Link-root-HeroHomepage-cTA').then(function () {
+        document.querySelector('.css-85beqj-Link-root-HeroHomepage-cTA').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/v1697553108/drata/2003/g2-leader_spring_1.svg" alt="Leader Spring" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
+      });
 
-            document.querySelector('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').insertAdjacentHTML('beforeend',`<div class="spz-hero-img-wrapper"></div>`);
-        }
-    });
+      waitForElm('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').then(function () {
+        document.querySelector('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img-wrapper"></div>`);
+      });
+
+    }
+  });
 }
 
 function removeTest() {
-    document.body.classList.remove("spz-2003");
+  document.body.classList.remove("spz-2003");
 }
 
 history.pushState = (function (f) {
-    return function pushState() {
-        var ret = f.apply(this, arguments);
-        window.dispatchEvent(new Event('pushstate'));
-        window.dispatchEvent(new Event('locationchange'));
-        return ret;
-    };
+  return function pushState() {
+    var ret = f.apply(this, arguments);
+    window.dispatchEvent(new Event('pushstate'));
+    window.dispatchEvent(new Event('locationchange'));
+    return ret;
+  };
 })(history.pushState);
 history.replaceState = (function (f) {
-    return function replaceState() {
-        var ret = f.apply(this, arguments);
-        window.dispatchEvent(new Event('replacestate'));
-        window.dispatchEvent(new Event('locationchange'));
-        return ret;
-    };
+  return function replaceState() {
+    var ret = f.apply(this, arguments);
+    window.dispatchEvent(new Event('replacestate'));
+    window.dispatchEvent(new Event('locationchange'));
+    return ret;
+  };
 })(history.replaceState);
 window.addEventListener('popstate', function () {
-    window.dispatchEvent(new Event('locationchange'));
+  window.dispatchEvent(new Event('locationchange'));
 });
 window.addEventListener('locationchange', function () {
-    removeTest();
+  removeTest();
 
-    url = location.href;
-    urlCheck(url);
+  url = location.href;
+  urlCheck(url);
 });
 var url = location.href;
 urlCheck(url);
 
 function urlCheck(url) {
-    var targetTestURL = 'https://drata.com/';
-    if (window.location.pathname === "/") {
-        targetTestURL = window.location.href;
-    }
-    if (isSameUrl(url, targetTestURL, true)) {
-        createTest_2003();
-    } else {
-        removeTest();
-    }
+  var targetTestURL = 'https://drata.com/';
+  // if (window.location.pathname === "/") {
+  //     targetTestURL = window.location.href;
+  // }
+  if (isSameUrl(url, targetTestURL, true)) {
+    createTest_2003();
+  } else {
+    removeTest();
+  }
 }
 
 // isSameUrl Parameters
-// currentUrl = current page url
-// specifiedUrl = url on which we have to run test
-// includeQueryParams = set true, if query params are allowed
 function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-    currentUrl = currentUrl.includes("#") ?
-        currentUrl.slice(0, currentUrl.indexOf("#")) :
-        currentUrl;
-    specifiedUrl = specifiedUrl.includes("#") ?
-        specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
-        specifiedUrl;
-    if (includeQueryParams)
-        currentUrl = currentUrl.includes("?") ?
-            currentUrl.slice(0, currentUrl.indexOf("?")) :
-            currentUrl;
-    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-        return true;
-    return false;
+  currentUrl = currentUrl.includes("#") ?
+    currentUrl.slice(0, currentUrl.indexOf("#")) :
+    currentUrl;
+  specifiedUrl = specifiedUrl.includes("#") ?
+    specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
+    specifiedUrl;
+  if (includeQueryParams)
+    currentUrl = currentUrl.includes("?") ?
+      currentUrl.slice(0, currentUrl.indexOf("?")) :
+      currentUrl;
+  if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+    return true;
+  return false;
 }
 
 function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  return new Promise(function (resolve) {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(function (mutations) {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  });
 }
