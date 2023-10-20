@@ -242,8 +242,8 @@ function appendHomeHeroContent() {
           </div>
             </section>`);
 
-      waitForElm('.css-85beqj-Link-root-HeroHomepage-cTA').then(function () {
-        document.querySelector('.css-85beqj-Link-root-HeroHomepage-cTA').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/v1697553108/drata/2003/g2-leader_spring_1.svg" alt="Leader Spring" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
+      waitForElm('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').then(function () {
+        document.querySelector('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/v1697553108/drata/2003/g2-leader_spring_1.svg" alt="Leader Spring" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
       });
 
       waitForElm('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').then(function () {
