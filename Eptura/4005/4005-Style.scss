@@ -123,6 +123,12 @@ body {
                           max-width: calc(100% - 58px);
                           background: #fff;
                           right: 0;
+
+                          //4005 specific form fixes
+                          &#LblNumberOfEmployees,
+                          &#LblLead_Notes__c {
+                            max-width: calc(100% - 24px);
+                          }
                         }
 
                         .mktoField:not([type="checkbox"]) {
