@@ -7,12 +7,17 @@
   position: relative;
   margin-bottom: -64px;
 
-  @media (max-width: 1280.98px){
+  @media (max-width: 1280.98px) {
     max-width: 1088px;
   }
 
-  @media (max-width: 1199.98px){
+  @media (max-width: 1199.98px) {
     max-width: 704px;
+  }
+
+  @media (max-width: 767.98px) {
+    max-width: 328px;
+    height: 344px;
   }
 
   &::before {
@@ -39,6 +44,13 @@
       line-height: 48px;
       letter-spacing: -0.84px;
       margin: 64px 0 0;
+
+      @media (max-width: 767.98px) {
+        font-size: 32px;
+        line-height: 40px;
+        letter-spacing: -0.64px;
+        margin-top: 57px;
+      }
     }
 
     .auto-sub-title {
@@ -51,11 +63,20 @@
       line-height: 26px;
       max-width: 624px;
       margin: 26px 0;
+
+      @media (max-width: 767.98px) {
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 20px;
+        margin: 15px 0 16px;
+        padding: 0 8px;
+      }
     }
 
     .get-started-btn {
       height: 60px;
-      padding: 10px 20px 10px 32px;
+      padding: 10px 18px 10px 30px;
       border-radius: 12px;
       background: var(--neutral-900, #0c131a);
       color: #fff;
@@ -95,7 +116,12 @@
 .footer {
   background-color: rgba(255, 255, 255, 1);
   background-color: #000;
-  padding-top: 60px;
+  padding-top: 64px;
+
+  @media (max-width: 767.98px) {
+    padding-top: 68px;
+  }
+
   a {
     &:not(.button) {
       color: #231f20;
@@ -169,7 +195,7 @@
   .container {
     width: 100%;
     max-width: 768px;
-    padding: 0 16px;
+    padding: 0 32px;
   }
   .footer {
     .container {
@@ -202,6 +228,7 @@
 @media (max-width: 767.98px) {
   .container {
     max-width: 360px;
+    padding: 0 16px;
   }
   .footer {
     .footer-flex {

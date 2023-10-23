@@ -18,13 +18,14 @@
     //     }
   }
   .work-steps {
-    margin-top: 48px;
+    margin-top: 47px;
     .work-step-item {
       width: 33.33%;
       max-width: 395px;
       border-radius: 12px;
-      padding: 32px;
+      padding: 32px 32px 30px;
       margin-bottom: 32px;
+      min-height: 286px;
     }
   }
   .work-step-item {
@@ -32,11 +33,10 @@
     border: 1px solid var(--neutrals-neutrals-300, #dde3eb);
     background: var(--Neutrals-100, #f6f8fa);
     width: 395px;
-    min-height: 263px;
     .step-img {
       width: 100%;
       max-width: 52px;
-      margin-bottom: 32px;
+      margin-bottom: 28px;
     }
     .step-number {
       font-family: $ff-inter;
@@ -65,14 +65,14 @@
       font-weight: 600;
       line-height: 26px;
       color: #697586;
-      margin: 12px 0 0;
+      margin: 8px 0 0;
     }
   }
 }
 
 @media (max-width: 1280px) {
   .features-section {
-    padding: 28px 0 48px;
+    padding: 28px 0 71px;
     .container {
       padding: 0 32px;
       //   &::before {
@@ -81,7 +81,7 @@
     }
 
     .work-steps {
-      margin-top: 39px;
+      margin-top: 47px;
       max-width: 704px;
       margin-left: auto;
       margin-right: auto;
@@ -90,6 +90,12 @@
         width: 50%;
         max-width: 340px;
         padding: 24px;
+        min-height: 254px;
+        margin-bottom: 24px;
+
+        .step-img {
+          margin-bottom: 18px;
+        }
 
         .step-content {
           .step-info {
@@ -105,7 +111,7 @@
 
 @media (max-width: 767.98px) {
   .features-section {
-    padding: 20.5px 0 33px;
+    padding: 20.5px 0 50px;
     .container {
       padding: 0 16px;
       //   &::before {
@@ -115,12 +121,27 @@
       //     width: 273px;
       //     height: 64.5px;
       //   }
+
+      .work-steps {
+        margin-top: 32px;
+
+        .work-step-item {
+          width: 100%;
+          min-height: auto;
+          margin-bottom: 16px;
+          padding: 24px 24px 22px;
+
+          .step-img {
+            margin-bottom: 12px;
+          }
+        }
+      }
     }
     .sec-title {
       font-size: 32px;
       line-height: 40px;
       letter-spacing: -0.64px;
-      margin-bottom: 20px;
+      margin-bottom: 15px;
     }
     .sec-sub_title {
       font-size: 16px;

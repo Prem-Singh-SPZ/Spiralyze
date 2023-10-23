@@ -127,6 +127,10 @@
       .sr-img {
         width: 108px;
         height: 20px;
+
+        @media (max-width: 767.98px) {
+          width: 116px;
+        }
       }
     }
 
@@ -372,7 +376,7 @@
 }
 
 .break-desk {
-  @media screen and (max-width: 767.98px) {
+  @media screen and (max-width: 1199.98px) {
     display: none;
   }
 }
@@ -444,7 +448,7 @@ img {
       text-align: center;
       width: 100%;
       max-width: 704px;
-      padding: 12px 0;
+      padding: 4px 0 16px;
 
       .hc-title {
         font-family: $ff-inter;
@@ -498,7 +502,7 @@ img {
     width: 736px;
     position: relative;
     margin-top: 11px;
-    margin-bottom: 51px;
+    margin-bottom: 27px;
 
     // &::before {
     //   top: -31.5px;
@@ -529,14 +533,10 @@ img {
         font-weight: 900;
         line-height: 48px;
         margin-bottom: 24px;
-
+        padding-top: 42px;
         // &::before {
         // width: 4px;
         // }
-
-        .break-desk {
-          display: block;
-        }
       }
 
       .hc-tag {
@@ -558,8 +558,8 @@ img {
       }
 
       .sr-number {
-        font-size: 14px;
-        line-height: 20px;
+        font-size: 16px;
+        line-height: 24px;
       }
 
       .star-rating {
@@ -572,13 +572,14 @@ img {
       position: relative;
       margin-top: 21px;
       flex-direction: column;
+      padding-bottom: 13px;
     }
 
     .list-grp-wrapper {
       .list-group {
         margin-bottom: 0;
         .list-item {
-          margin-bottom: 16px;
+          margin-bottom: 20px;
 
           .ls-title {
             font-size: 16px;
@@ -587,6 +588,7 @@ img {
           }
 
           .ls-desc {
+            display: block;
             font-size: 16px;
             line-height: 24px;
           }
