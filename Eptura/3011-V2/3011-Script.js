@@ -624,7 +624,7 @@
                 <ul class="hero-list-copy">
                     <li class="list-item"><span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. </li>
                     <li class="list-item"><span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.</li>
-                    <li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li>
+                    <li class="list-item"><span>Collaboration.</span> See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule. </li>
                 </ul>`;
 
                 getInstantDemoCard();

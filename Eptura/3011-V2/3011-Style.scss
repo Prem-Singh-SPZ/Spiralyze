@@ -92,7 +92,8 @@ body.spz-3011 {
   }
 
   .body-wrapper {
-    &::before, > section.spacer  {
+    &::before,
+    > section.spacer {
       display: none;
     }
 
@@ -121,9 +122,9 @@ body.spz-3011 {
         .bottom.pb-5 {
           padding-top: 40px;
           padding-bottom: 40px !important;
-          @media (max-width: 767.98px) {
-            padding-top: 38px !important;
-          }
+          // @media (max-width: 767.98px) {
+          //   padding-top: 40px !important;
+          // }
 
           .d-md-flex.justify-content-md-between {
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -300,6 +301,11 @@ body.spz-3011 {
               letter-spacing: 2.6px;
               text-transform: uppercase;
               margin-bottom: 12px;
+
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                margin-bottom: 13px;
+              }
+
               @media (max-width: 767.98px) {
                 font-size: 12px;
                 line-height: 14px; /* 116.667% */
@@ -315,7 +321,7 @@ body.spz-3011 {
               line-height: 54px; /* 117.391% */
               letter-spacing: 0;
               max-width: 572px;
-              margin-bottom: 36px;
+              margin-bottom: 37px;
 
               @media (max-width: 1199.98px) {
                 max-width: 574px;
@@ -397,7 +403,7 @@ body.spz-3011 {
           .hero-img {
             position: absolute;
             top: 3px;
-            left: 38px;
+            left: 39px;
             padding: 0px 0.32px 0px 0.48px;
             height: auto;
             margin-top: 0;
@@ -1095,6 +1101,9 @@ body.spz-3011 {
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             margin-top: 24px;
           }
+          @media (max-width: 767.98px) {
+            margin-top: 17px;
+          }
 
           .button {
             .get-started-cta {
@@ -1152,7 +1161,7 @@ body.spz-3011 {
         }
         @media (max-width: 767.98px) {
           margin-bottom: 16px;
-          margin-top: 17.5px;
+          margin-top: 17px;
         }
 
         .capterra-review-summary {
@@ -1488,7 +1497,7 @@ body.spz-3011 {
             #HeroText {
               @media (max-width: 767.98px) {
                 h6 {
-                  line-height: 12px;
+                  line-height: 13px;
                 }
               }
             }
@@ -1515,7 +1524,7 @@ body.spz-3011 {
       #hero {
         .hero_container {
           @media (min-width: 1199.98px) {
-            padding-bottom: 100px !important;
+            padding-bottom: 48px !important;
           }
           > .row {
             #HeroText {
@@ -1529,7 +1538,7 @@ body.spz-3011 {
 
             .hero-img {
               top: 16px;
-              left: 17px;
+              // left: 17px;
 
               @media (max-width: 1199.98px) {
                 top: initial;
@@ -1559,10 +1568,8 @@ body.spz-3011 {
 
       #hero .hero_container > .row {
         #HeroText {
-          @media (max-width: 1199.98px) {
-            > h1 {
-              max-width: initial;
-            }
+          > h1 {
+            max-width: initial;
           }
           .hero-list-copy .list-item {
             &:nth-child(2) {
@@ -1587,7 +1594,7 @@ body.spz-3011 {
         }
 
         .hero-img {
-          top: 30px;
+          // top: 30px;
 
           @media (max-width: 1199.98px) {
             top: initial;
