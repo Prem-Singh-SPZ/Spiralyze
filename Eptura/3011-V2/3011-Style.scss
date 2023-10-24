@@ -12,7 +12,6 @@ body.spz-3011 {
 
     &::before {
       content: "";
-      background: #0d122eb2;
       display: block;
       position: fixed;
       z-index: 5;
@@ -20,6 +19,7 @@ body.spz-3011 {
       left: 0;
       right: 0;
       bottom: 0;
+      background: rgba(13, 18, 46, 0.7);
       backdrop-filter: blur(4px);
     }
   }
@@ -757,14 +757,14 @@ body.spz-3011 {
                         }
                       }
 
-                      // &[data-zi-field-enriched="true"] {
-                      //   display: inline !important;
-                      // }
+                      &[data-zi-field-enriched="true"] {
+                        display: inline !important;
+                      }
                     }
 
-                    &[data-zi-field-enriched="true"] {
-                      display: inline !important;
-                    }
+                    // &[data-zi-field-enriched="true"] {
+                    //   display: inline !important;
+                    // }
 
                     .spz-anchor:not(.spz-hidden) {
                       display: flex;

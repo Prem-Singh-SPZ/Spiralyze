@@ -6,7 +6,6 @@ body.spz-3011.modal-open {
 }
 body.spz-3011.modal-open::before {
   content: "";
-  background: rgba(13, 18, 46, 0.6980392157);
   display: block;
   position: fixed;
   z-index: 5;
@@ -14,6 +13,7 @@ body.spz-3011.modal-open::before {
   left: 0;
   right: 0;
   bottom: 0;
+  background: rgba(13, 18, 46, 0.7);
   -webkit-backdrop-filter: blur(4px);
           backdrop-filter: blur(4px);
 }
@@ -718,7 +718,7 @@ body.spz-3011 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 body.spz-3011 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #f83a59 !important;
 }
-body.spz-3011 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow[data-zi-field-enriched=true] {
+body.spz-3011 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol[data-zi-field-enriched=true] {
   display: inline !important;
 }
 body.spz-3011 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
