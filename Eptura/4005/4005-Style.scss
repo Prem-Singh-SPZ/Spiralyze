@@ -333,11 +333,15 @@ body {
                           border-color: #f83a59 !important;
                         }
                       }
+
+                      &[data-zi-field-enriched="true"] {
+                        display: inline !important;
+                      }
                     }
 
-                    &[data-zi-field-enriched="true"] {
-                      display: inline !important;
-                    }
+                    // &[data-zi-field-enriched="true"] {
+                    //   display: inline !important;
+                    // }
 
                     .spz-anchor:not(.spz-hidden) {
                       display: flex;
