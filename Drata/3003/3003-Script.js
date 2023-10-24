@@ -8,10 +8,11 @@
 
         waitForElm('#__next .spz-sticky-blog-section').then(function () {
             window.onload = checkScrollPosition();
-            window.onscroll = function () {
-                checkScrollPosition();
-            };
         });
+
+        window.onscroll = function () {
+            checkScrollPosition();
+        };
     }
 
     //perform click actions
@@ -47,16 +48,16 @@
 </div>`;
 
     function checkScrollPosition() {
-        waitForElm('#__next header.MuiAppBar-positionFixed').then(function () {
-            if (document.querySelector('.spz-sticky-blog-section')) {
-                if (document.querySelector('header.MuiAppBar-positionFixed.css-qqlydz-MuiPaper-root-MuiAppBar-root-Header-root')) {
-                    document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "98px";
-                }
-                else if (document.querySelector('header.MuiAppBar-positionFixed.css-1p0wz3u-MuiPaper-root-MuiAppBar-root-Header-root')) {
-                    document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "24px";
-                }
+        // waitForElm('#__next header.MuiAppBar-positionFixed').then(function () {
+        if (document.querySelector('.spz-sticky-blog-section')) {
+            if (document.querySelector('header.MuiAppBar-positionFixed.css-qqlydz-MuiPaper-root-MuiAppBar-root-Header-root')) {
+                document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "98px";
             }
-        });
+            else if (document.querySelector('header.MuiAppBar-positionFixed.css-1p0wz3u-MuiPaper-root-MuiAppBar-root-Header-root')) {
+                document.querySelector('.spz-sticky-blog-section.for-desktop').style.top = "24px";
+            }
+        }
+        // });
     }
 
     function removeTest() {
