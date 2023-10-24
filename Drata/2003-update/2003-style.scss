@@ -127,7 +127,7 @@ $ff-inter: "Inter", sans-serif;
         }
 
         .sp-logo-item {
-          margin: 0 16px;
+          margin: 0 8px;
         }
       }
     }
@@ -217,7 +217,7 @@ $ff-inter: "Inter", sans-serif;
         height: 40px;
         margin: auto auto 8px auto;
 
-        @media (min-width: 767.98px){
+        @media (min-width: 767.98px) {
           padding: 4px 2px;
         }
 
@@ -350,7 +350,6 @@ $ff-inter: "Inter", sans-serif;
 
         @media (min-width: 767.98px) and (max-width: 1199.98px) {
           padding: 23px 0 20px;
-
         }
       }
       .review-author {
@@ -749,7 +748,8 @@ $ff-inter: "Inter", sans-serif;
           }
 
           //hero sticker action link
-          a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"] {
+          a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]
+          {
             border-radius: 60px;
             border: 1px solid var(--neutrals-gray-300, #bebebe);
             background: var(--neutrals-white-fff, #fff);
@@ -829,7 +829,7 @@ $ff-inter: "Inter", sans-serif;
               margin-top: 20px;
             }
 
-            a.MuiButton-ctaModulePrimary {
+            a.css-1p71u0e-Link-root-MuiTypography-root-MuiLink-root-Link-root {
               height: 60px;
               width: 182px;
               padding: 10px 23px 10px 30px;
@@ -896,7 +896,7 @@ $ff-inter: "Inter", sans-serif;
             }
 
             @media (max-width: 767.98px) {
-              background-size: 327.254px 205.494px;
+              background-size: contain;
               width: 328.254px;
               height: 204.494px;
               right: 0px;
@@ -908,5 +908,10 @@ $ff-inter: "Inter", sans-serif;
         }
       }
     }
+  }
+
+  section[variant="collectionCustomerLogosSectionWrapper"],
+  section[id="3gtysPp0qKtRH2l8RRhVAq"] {
+    display: none !important;
   }
 }
