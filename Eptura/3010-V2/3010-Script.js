@@ -907,13 +907,6 @@
         return regex.test(String(email).toLowerCase());
     }
 
-    // move source element before target Element
-    // function moveElement(source, target) {
-    //     let sourceElement = document.querySelector(source);
-    //     let targetElement = document.querySelector(target);
-    //     targetElement.parentNode.insertBefore(sourceElement, targetElement);
-    // }
-
     // Generic Code
     function waitForElm(selector) {
         return new Promise(function (resolve) {
