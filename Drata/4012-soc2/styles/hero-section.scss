@@ -239,19 +239,13 @@
   // min-height: 771.5px;
 }
 
-@media (min-width: 1600px) {
+@media (min-width: 1199.98px) {
   .hero-section {
-    // &::before {
-    //   bottom: 0;
-    //   left: 40px;
-    //   height: 88px;
-    //   width: 240px;
-    //   background-size: 240px;
-    // }
-
-    .dir-arrow {
-      top: -40px;
-      left: -51px;
+    &::before {
+      content: url(//res.cloudinary.com/spiralyze/image/upload/v1698211745/drata/4012/custom/Dots-square.svg);
+      position: absolute;
+      bottom: -4px;
+      left: 0;
     }
   }
 }
