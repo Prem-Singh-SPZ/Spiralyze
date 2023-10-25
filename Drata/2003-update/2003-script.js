@@ -1,21 +1,23 @@
-function createTest_2003() {
-  document.body.classList.add('spz-2003');
+(function () {
 
-  waitForElm('.MuiButtonBase-root.MuiButton-disableElevation').then(function () {
-    appendHomeHeroContent();
+  function createTest_2003() {
+    document.body.classList.add('spz-2003');
 
-    // Add class 'safari' on body if browser is safari
-    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-      document.body.classList.add('safari');
-    }
-  });
-}
+    waitForElm('.MuiButtonBase-root.MuiButton-disableElevation').then(function () {
+      appendHomeHeroContent();
 
-function appendHomeHeroContent() {
-  waitForElm('.css-rdcx7j-HeroHomepage-featuredContent').then(function () {
-    // insert element anchors cta
-    if (document.querySelectorAll('.social-pr-section').length == 0) {
-      document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="social-pr-section">
+      // Add class 'safari' on body if browser is safari
+      if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+        document.body.classList.add('safari');
+      }
+    });
+  }
+
+  function appendHomeHeroContent() {
+    waitForElm('.css-rdcx7j-HeroHomepage-featuredContent').then(function () {
+      // insert element anchors cta
+      if (document.querySelectorAll('.social-pr-section').length == 0) {
+        document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="social-pr-section">
             <!-- <div class="container"> -->
             <h2 class="sp-title">
               Join the thousands of companies that trust Drata
@@ -242,90 +244,91 @@ function appendHomeHeroContent() {
           </div>
             </section>`);
 
-      waitForElm('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').then(function () {
-        document.querySelector('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/v1697553108/drata/2003/g2-leader_spring_1.svg" alt="Leader Spring" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
-      });
+        waitForElm('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').then(function () {
+          document.querySelector('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2003/image_1.webp" alt="Leader Fall" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
+        });
 
-      waitForElm('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').then(function () {
-        document.querySelector('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img-wrapper"></div>`);
-      });
+        waitForElm('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').then(function () {
+          document.querySelector('.MuiContainer-root.MuiContainer-maxWidthLg.css-qpah14-MuiContainer-root-HeroHomepage-container').insertAdjacentHTML('beforeend', `<div class="spz-hero-img-wrapper"></div>`);
+        });
 
-    }
-  });
-}
-
-function removeTest() {
-  document.body.classList.remove("spz-2003");
-}
-
-history.pushState = (function (f) {
-  return function pushState() {
-    var ret = f.apply(this, arguments);
-    window.dispatchEvent(new Event('pushstate'));
-    window.dispatchEvent(new Event('locationchange'));
-    return ret;
-  };
-})(history.pushState);
-history.replaceState = (function (f) {
-  return function replaceState() {
-    var ret = f.apply(this, arguments);
-    window.dispatchEvent(new Event('replacestate'));
-    window.dispatchEvent(new Event('locationchange'));
-    return ret;
-  };
-})(history.replaceState);
-window.addEventListener('popstate', function () {
-  window.dispatchEvent(new Event('locationchange'));
-});
-window.addEventListener('locationchange', function () {
-  removeTest();
-
-  url = location.href;
-  urlCheck(url);
-});
-var url = location.href;
-urlCheck(url);
-
-function urlCheck(url) {
-  var targetTestURL = 'https://drata.com/';
-  // if (window.location.pathname === "/") {
-  //     targetTestURL = window.location.href;
-  // }
-  if (isSameUrl(url, targetTestURL, true)) {
-    createTest_2003();
-  } else {
-    removeTest();
-  }
-}
-
-// isSameUrl Parameters
-function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-  currentUrl = currentUrl.includes("#") ?
-    currentUrl.slice(0, currentUrl.indexOf("#")) :
-    currentUrl;
-  specifiedUrl = specifiedUrl.includes("#") ?
-    specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
-    specifiedUrl;
-  if (includeQueryParams)
-    currentUrl = currentUrl.includes("?") ?
-      currentUrl.slice(0, currentUrl.indexOf("?")) :
-      currentUrl;
-  if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
-    return true;
-  return false;
-}
-
-function waitForElm(selector) {
-  return new Promise(function (resolve) {
-    if (document.querySelector(selector)) {
-      return resolve(document.querySelector(selector));
-    }
-    const observer = new MutationObserver(function (mutations) {
-      if (document.querySelector(selector)) {
-        resolve(document.querySelector(selector));
-        observer.disconnect();
       }
     });
-    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  }
+
+  function removeTest() {
+    document.body.classList.remove("spz-2003");
+  }
+
+  history.pushState = (function (f) {
+    return function pushState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event('pushstate'));
+      window.dispatchEvent(new Event('locationchange'));
+      return ret;
+    };
+  })(history.pushState);
+  history.replaceState = (function (f) {
+    return function replaceState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event('replacestate'));
+      window.dispatchEvent(new Event('locationchange'));
+      return ret;
+    };
+  })(history.replaceState);
+  window.addEventListener('popstate', function () {
+    window.dispatchEvent(new Event('locationchange'));
   });
-}
+  window.addEventListener('locationchange', function () {
+    removeTest();
+
+    url = location.href;
+    urlCheck(url);
+  });
+  var url = location.href;
+  urlCheck(url);
+
+  function urlCheck(url) {
+    var targetTestURL = 'https://drata.com/';
+    // if (window.location.pathname === "/") {
+    //     targetTestURL = window.location.href;
+    // }
+    if (isSameUrl(url, targetTestURL, true)) {
+      createTest_2003();
+    } else {
+      removeTest();
+    }
+  }
+
+  // isSameUrl Parameters
+  function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
+    currentUrl = currentUrl.includes("#") ?
+      currentUrl.slice(0, currentUrl.indexOf("#")) :
+      currentUrl;
+    specifiedUrl = specifiedUrl.includes("#") ?
+      specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
+      specifiedUrl;
+    if (includeQueryParams)
+      currentUrl = currentUrl.includes("?") ?
+        currentUrl.slice(0, currentUrl.indexOf("?")) :
+        currentUrl;
+    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+      return true;
+    return false;
+  }
+
+  function waitForElm(selector) {
+    return new Promise(function (resolve) {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+      const observer = new MutationObserver(function (mutations) {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+  }
+})();
