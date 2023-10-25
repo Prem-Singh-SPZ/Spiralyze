@@ -90,7 +90,7 @@
             display: flex;
             flex-direction: row;
             align-items: center;
-            padding: 1px 12px 0;
+            padding: 8px 12px 0;
             height: 64px;
             width: 100%;
             background: #fff;
@@ -166,7 +166,7 @@
 
           &:not(.is-placeholder) {
             &:not(:placeholder-shown) {
-              border: 1px solid var(--Neutrals-700, #293642);
+              border: 1px solid #DDE3EB;
 
               ~ label {
                 top: 4px;
@@ -178,7 +178,7 @@
               }
             }
             &:not(:-moz-placeholder-shown) {
-              border: 1px solid var(--Neutrals-700, #293642);
+              border: 1px solid #DDE3EB;
 
               ~ label {
                 top: 4px;
@@ -189,7 +189,7 @@
               }
             }
             &:not(:-ms-input-placeholder) {
-              border: 1px solid var(--Neutrals-700, #293642);
+              border: 1px solid #DDE3EB;
 
               ~ label {
                 top: 4px;
@@ -243,6 +243,10 @@
               background-color: #fff;
               width: calc(100% - 60px);
               height: 30px;
+
+              @media (max-width: 767.98px) {
+                top: 16px;
+              }
             }
           }
         }

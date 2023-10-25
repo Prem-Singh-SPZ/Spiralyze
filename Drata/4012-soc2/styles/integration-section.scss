@@ -1,7 +1,7 @@
 /* Integrations Section */
 .integrations-section {
   padding: 58px 0 33px;
-  background: var(--neutrals-neutrals-200, #EEF2F6);
+  background: var(--neutrals-neutrals-200, #eef2f6);
 }
 
 .ing-sub-title {
@@ -106,7 +106,7 @@
 }
 
 .integrations-logo-slider {
-  padding: 0 ;
+  padding: 0;
   margin-top: 56px;
   margin-bottom: 50px;
   display: -webkit-box;
@@ -205,7 +205,7 @@
   -webkit-animation-direction: normal;
   animation-direction: normal;
   padding: 8px 0 14px;
-  background-color: #EEF2F6;
+  background-color: #eef2f6;
 }
 
 .integrations-logo-slider .logo-slider.slider-1 .marquee,
@@ -238,13 +238,18 @@
 }
 
 .integrations-logo-slider .logo-item {
-  border-radius: 16px;
+  border-radius: 12px;
   background: var(--white-100, #fff);
   box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06),
     0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
   overflow: hidden;
   position: relative;
   margin-right: 32px;
+
+  @media (max-width: 767.98px) {
+    box-shadow: 0px 2.23404px 4.46808px -2.23404px rgba(16, 24, 40, 0.06),
+      0px 4.46808px 8.93617px -2.23404px rgba(16, 24, 40, 0.1);
+  }
 }
 
 .integrations-logo-slider .logo-item a {
