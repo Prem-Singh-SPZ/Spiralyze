@@ -180,17 +180,62 @@
 
 
   // Generic
-  let url = location.href;
+  var url = location.href;
   urlCheck(url);
 
+  history.pushState = (function (f) {
+    return function pushState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event("pushstate"));
+      window.dispatchEvent(new Event("locationchange"));
+      return ret;
+    };
+  })(history.pushState);
+
+  history.replaceState = (function (f) {
+    return function replaceState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event("replacestate"));
+      window.dispatchEvent(new Event("locationchange"));
+      return ret;
+    };
+  })(history.replaceState);
+
+  window.addEventListener("popstate", function () {
+    window.dispatchEvent(new Event("locationchange"));
+  });
+
+  window.addEventListener("locationchange", function () {
+    url = location.href;
+    urlCheck(url);
+  });
+
   function urlCheck(url) {
-    if (url.indexOf("https://abcfitness.com/") > -1) {
-      waitForElm(TEST_ENV.main_class).then(function () {
-        loadTest();
-      });
+    var allblogsurlstring = "https://abcfitness.com/";
+    // if (location.href.indexOf("https://abcfitness.com/") > -1) {
+    //   allblogsurlstring = window.location.href;
+    // }
+    if (isSameUrl(url, allblogsurlstring, false)) {
+      loadTest();
     } else {
       removeTest();
     }
+  }
+
+  function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
+    currentUrl = currentUrl.includes("#") ?
+      currentUrl.slice(0, currentUrl.indexOf("#")) :
+      currentUrl;
+    specifiedUrl = specifiedUrl.includes("#") ?
+      specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
+      specifiedUrl;
+    if (!includeQueryParams)
+      currentUrl = currentUrl.includes("?") ?
+        currentUrl.slice(0, currentUrl.indexOf("?")) :
+        currentUrl;
+    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+      return true;
+    return false;
   }
 
   function removeTest() {

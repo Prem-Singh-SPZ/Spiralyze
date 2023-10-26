@@ -1,0 +1,317 @@
+$color_1: #ffffff;
+$color_2: #390c53;
+
+/* Stop scroll when pop is visible */
+@-webkit-keyframes scaleIn {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@keyframes scaleIn {
+  0% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+  100% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+@-webkit-keyframes scaleOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+@keyframes scaleOut {
+  0% {
+    -webkit-transform: scale(1);
+    transform: scale(1);
+    opacity: 1;
+  }
+  100% {
+    -webkit-transform: scale(0.5);
+    transform: scale(0.5);
+    opacity: 0;
+  }
+}
+@-webkit-keyframes opIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@keyframes opIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+@-webkit-keyframes opOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes opOut {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.spz-coveo-28002 {
+  .spz-coveo-overlay {
+    display: none;
+    -webkit-backdrop-filter: blur(4px);
+    backdrop-filter: blur(4px);
+  }
+}
+@media (min-width:1024px) {
+  html.spz-coveo-28002-popup-visible {
+    overflow: hidden;
+  }
+  body.spz-coveo-28002.exitpopup28002displayed {
+    overflow: hidden;
+  }
+  .spz-coveo-28002 {
+    .spz-coveo-overlay {
+      overflow-x: hidden !important;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      z-index: 99999;
+      background-color: rgba(0, 0, 0, 0.64);
+      display: none;
+      flex-wrap: wrap;
+      align-items: center;
+      padding: 2rem 0;
+      overflow: auto;
+      opacity: 0;
+      -webkit-animation-name: opIn;
+      animation-name: opIn;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+      -webkit-animation-duration: 0.6s;
+      animation-duration: 0.6s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+    }
+    .spz-coveo-popup {
+      opacity: 0;
+      -webkit-animation-name: scaleIn;
+      animation-name: scaleIn;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+      -webkit-animation-duration: 0.6s;
+      animation-duration: 0.6s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      display: block;
+      max-width: 750px;
+      width: 100%;
+      margin: auto;
+      border-radius: 8px;
+      background: -o-linear-gradient(
+          bottom,
+          rgba(69, 28, 92, 0.45) 0%,
+          rgba(69, 28, 92, 0.45) 100%
+        ),
+        -o-linear-gradient(34deg, #41165a 4.04%, #620597 44.67%, #6900a4 55.21%, #650899
+              67.4%, #4f1d6b 89%);
+      background: linear-gradient(
+          0deg,
+          rgba(69, 28, 92, 0.45) 0%,
+          rgba(69, 28, 92, 0.45) 100%
+        ),
+        linear-gradient(
+          56deg,
+          #41165a 4.04%,
+          #620597 44.67%,
+          #6900a4 55.21%,
+          #650899 67.4%,
+          #4f1d6b 89%
+        );
+      padding-top: 58px;
+      padding-left: 52px;
+      padding-bottom: 72px;
+      padding-right: 52px;
+      -webkit-box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
+      -moz-box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
+      box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
+      position: relative;
+      .spz-close {
+        display: block;
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        line-height: 1;
+        cursor: pointer;
+        svg {
+          display: block;
+        }
+        &:hover {
+          svg {
+            path {
+              fill: #ffffff;
+            }
+          }
+        }
+      }
+      .spz-coveo-popup-logo {
+        img {
+          display: block;
+          max-width: 140px;
+          width: 100%;
+        }
+      }
+      .spz-coveo-popup-content-title {
+        font-size: 42px;
+        font-weight: 500;
+        line-height: 48px;
+        letter-spacing: 0.01em;
+        text-align: left;
+        color: $color_1;
+        margin: 0;
+        margin-top: 36px;
+        margin-bottom: 24px;
+      }
+      .spz-coveo-popup-content-description {
+        display: block;
+        max-width: 272px;
+        margin-bottom: 65px;
+        p {
+          font-size: 18px;
+          font-weight: 300;
+          line-height: 28px;
+          letter-spacing: 0em;
+          text-align: left;
+          color: $color_1;
+          margin: 0;
+        }
+      }
+      .spz-coveo-popup-greview {
+        display: block;
+        max-width: 243px;
+        width: 100%;
+      }
+      .spz-coveo-popup-cta {
+        font-size: 16px;
+        font-weight: 500;
+        line-height: 26px;
+        letter-spacing: 0.011em;
+        text-align: left;
+        color: $color_2;
+        height: 56px;
+        max-width: 168px;
+        width: 100%;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        margin-bottom: 32px;
+        padding: 5px;
+        background: var(
+          --CTA-gradient,
+          linear-gradient(262deg, #1cebcf -21.66%, #399ffe 118.19%),
+          linear-gradient(81deg, #1cebcf -2.38%, #399ffe 104.62%)
+        );
+        border-radius: 8px;
+        text-decoration: none !important;
+        &:hover {
+          background: linear-gradient(
+            262deg,
+            #1cebcf -186.32%,
+            #399ffe 118.13%
+          );
+        }
+      }
+      .spz-bg-diamond {
+        display: block;
+        max-width: 399px;
+        width: 100%;
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: auto;
+      }
+      .spz-result {
+        display: block;
+        position: absolute;
+        right: -138px;
+        bottom: 54px;
+        -webkit-filter: drop-shadow(0px 6px 14px rgba(0, 0, 0, 0.25));
+        filter: drop-shadow(0px 6px 14px rgba(0, 0, 0, 0.25));
+        -webkit-transform: rotate(-4deg);
+        -ms-transform: rotate(-4deg);
+        transform: rotate(-4deg);
+      }
+    }
+  }
+  .spz-coveo-28002.scaleoutpopup {
+    .spz-coveo-overlay {
+      -webkit-animation-name: opOut;
+      animation-name: opOut;
+      -webkit-animation-iteration-count: 1;
+      animation-iteration-count: 1;
+      -webkit-animation-direction: normal;
+      animation-direction: normal;
+      -webkit-animation-duration: 0.6s;
+      animation-duration: 0.6s;
+      -webkit-animation-fill-mode: forwards;
+      animation-fill-mode: forwards;
+      .spz-coveo-popup {
+        -webkit-animation-name: scaleOut;
+        animation-name: scaleOut;
+        -webkit-animation-iteration-count: 1;
+        animation-iteration-count: 1;
+        -webkit-animation-direction: normal;
+        animation-direction: normal;
+        -webkit-animation-duration: 0.6s;
+        animation-duration: 0.6s;
+        -webkit-animation-fill-mode: forwards;
+        animation-fill-mode: forwards;
+      }
+    }
+  }
+  .spz-coveo-28002.exitpopup28002displayed {
+    .spz-coveo-overlay {
+      display: flex;
+    }
+  }
+}
