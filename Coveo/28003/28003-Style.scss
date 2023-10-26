@@ -136,37 +136,16 @@ $color_2: #390c53;
       -webkit-animation-fill-mode: forwards;
       animation-fill-mode: forwards;
       display: block;
-      max-width: 750px;
+      max-width: 749px;
       width: 100%;
       margin: auto;
       border-radius: 8px;
-      background: -o-linear-gradient(
-          bottom,
-          rgba(69, 28, 92, 0.45) 0%,
-          rgba(69, 28, 92, 0.45) 100%
-        ),
-        -o-linear-gradient(34deg, #41165a 4.04%, #620597 44.67%, #6900a4 55.21%, #650899
-              67.4%, #4f1d6b 89%);
-      background: linear-gradient(
-          0deg,
-          rgba(69, 28, 92, 0.45) 0%,
-          rgba(69, 28, 92, 0.45) 100%
-        ),
-        linear-gradient(
-          56deg,
-          #41165a 4.04%,
-          #620597 44.67%,
-          #6900a4 55.21%,
-          #650899 67.4%,
-          #4f1d6b 89%
-        );
+      background: var(--popup-background, linear-gradient(0deg, rgba(69, 28, 92, 0.45) 0%, rgba(69, 28, 92, 0.45) 100%), linear-gradient(56deg, #41165A 4.04%, #620597 44.67%, #6900A4 55.21%, #650899 67.4%, #4F1D6B 89%));
+      box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
       padding-top: 58px;
       padding-left: 52px;
       padding-bottom: 72px;
       padding-right: 52px;
-      -webkit-box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
-      -moz-box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
-      box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
       position: relative;
       .spz-close {
         display: block;
@@ -236,7 +215,7 @@ $color_2: #390c53;
         text-align: left;
         color: $color_2;
         height: 56px;
-        max-width: 168px;
+        max-width: 203px;
         width: 100%;
         display: -webkit-box;
         display: -ms-flexbox;

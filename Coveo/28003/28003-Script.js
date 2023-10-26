@@ -2,8 +2,6 @@ let init_timer = 1;
 
 
 waitForElm('body').then((elm) => {
-
-    console.log('shiv')
     var bodyEle = document.querySelector('body');
     if (!bodyEle.classList.contains('spz-coveo-28002')) {
         bodyEle.classList.add('spz-coveo-28002');
@@ -13,7 +11,6 @@ waitForElm('body').then((elm) => {
             bodyEle.classList.add('spz-coveo-28002');
         }
     });
-    exitpopupconfig();
 
     if (!getCookie('spz_existing_user')) {
         setCookieForTimer('spz_existing_user', init_timer, (30 * 24));
@@ -38,6 +35,10 @@ waitForElm('body').then((elm) => {
         waitForElm('.form-container .card [data-cy="resource-cta"] [data-tracking="view-resource-cta"]').then((elm) => {
             setCookieForTimer('spz_form_submitted', 1, (30 * 24));
         });
+    }
+
+    else {
+        exitpopupconfig();
     }
 });
 
