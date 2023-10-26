@@ -72,22 +72,22 @@ function init_13001() {
             <div class="explore-platforms-parent">
             <div class="explore-our-other">Explore our other platforms:</div>
             <div class="explore-platforms">
-                <div class="frame-group">
+                <a class="frame-group" href="https://abcfitness.com/glofox/">
                     <img class="block-img" alt="Glofox" src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/abcfitness/13001/glofox.webp">
                     <p>Glofox</p>
-                </div>
-                <div class="frame-group">
+                </a>
+                <a class="frame-group" href="https://abcfitness.com/trainerize/">
                     <img class="block-img" alt="Trainerize" src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/abcfitness/13001/trainerize.webp">
                     <p>Trainerize</p>
-                </div>
-                <div class="frame-group">
+                </a>
+                <a class="frame-group" href="https://abcfitness.com/evo/">
                     <img class="block-img" alt="Evo" src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/abcfitness/13001/evo.webp">
                     <p>Evo</p>
-                </div>
-                <div class="frame-group">
+                </a>
+                <a class="frame-group" href="https://abcfitness.com/gymsales-software/">
                     <img class="block-img" alt="GymSales" src="//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/abcfitness/13001/gymsales.webp">
                     <p>GymSales</p>
-                </div>
+                </a>
             </div>
             </div>
             </div>`;
