@@ -76,7 +76,7 @@ function exitPopupInit() {
     let popup_html = `
         <div class="spz-coveo-overlay">
             <div class="spz-coveo-popup">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/Coveo/28002/diamond-shape.png" alt="Diamond" class="spz-bg-diamond">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1697516906/coveo/28003/shape__focus_6.svg" alt="Diamond" class="spz-bg-diamond">
                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/28003/genaiheadaches_cover_1440_-_without_shadow.webp" alt="Coveo Result" class="spz-result">
                 <!-- close popup icon -->
                 <a class="spz-close">

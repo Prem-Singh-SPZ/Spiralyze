@@ -165,6 +165,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .hero-section .hero-content {
   max-width: 636px;
   padding: 39px 0;
+  margin-right: 16px;
 }
 .hero-section .hero-content .hc-title {
   position: relative;
@@ -179,7 +180,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   margin: 0 0 22px;
 }
 .hero-section .hero-content .hc-title span {
-  color: #0580E8;
+  color: #0580e8;
 }
 .hero-section .hero-content .hc-tag {
   margin: 0 0 24.5px;
@@ -245,8 +246,6 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -321,7 +320,8 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 }
 .hero-right-section {
   position: relative;
-  width: 604px;
+  max-width: 604px;
+  width: 100%;
 }
 
 .form-wrapper-spz {
@@ -351,7 +351,7 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
   font-weight: 900;
   line-height: 40px;
   letter-spacing: -0.64px;
-  color: #EEF2F6;
+  color: #eef2f6;
   margin: 0 auto 32px auto;
   text-align: center;
 }
@@ -451,12 +451,10 @@ img {
   image-rendering: -webkit-optimize-contrast;
 }
 
-@media (min-width: 1281px) and (max-width: 1320px) {
+@media (max-width: 1199.98px) {
   .hero-section .hero-container {
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    gap: 0 8px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
   }
   .hero-section .hero-content {
     max-width: 610px;
@@ -468,7 +466,7 @@ img {
     max-width: 610px;
   }
 }
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1199.98px) {
   .hero-section .hero-content {
     text-align: center;
     width: 100%;
@@ -653,7 +651,7 @@ img {
 }
 .form-wrapper-spz .hbspt-form form fieldset .field {
   position: relative;
-  width: 256px;
+  width: 100%;
   max-width: 256px;
   margin-bottom: 10px;
   display: -webkit-box;
@@ -674,7 +672,7 @@ img {
   position: relative;
   margin-bottom: 2px;
   border-radius: 8px;
-  width: 256px;
+  width: 100%;
   max-width: 256px;
 }
 .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-spz {
@@ -907,6 +905,11 @@ img {
   width: calc(100% - 60px);
   height: 26px;
 }
+@media (max-width: 767.98px) {
+  .form-wrapper-spz .hbspt-form form fieldset .field.field-error.hs-fieldtype-select .input .hs-label-spz {
+    top: 16px;
+  }
+}
 .form-wrapper-spz .hbspt-form form fieldset .field.field-error .input .hs-input {
   border: 1px solid #d53641;
 }
@@ -942,19 +945,6 @@ img {
   font-size: 12px;
   line-height: 18px;
   height: 18px;
-}
-.form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input {
-  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-}
-.form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input .hs-input {
-  border: 1px solid var(--Neutrals-900, #0c131a);
-}
-.form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input .hs-input ~ .hs-label-spz {
-  color: #293642 !important;
-}
-.form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox) .input .hs-input:not([value=""]) ~ .hs-label-spz {
-  color: #293642;
 }
 .form-wrapper-spz .hbspt-form form fieldset .field.field-focus:not(.hs-fieldtype-checkbox).hs-fieldtype-select select {
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg") #fff no-repeat right 11px center !important;
@@ -1180,7 +1170,7 @@ img {
   color: #fff;
 }
 
-@media screen and (max-width: 1280px) {
+@media screen and (max-width: 1199.98px) {
   .form-wrapper-spz .hbspt-form {
     max-width: 628px;
   }
@@ -1188,11 +1178,11 @@ img {
     max-width: 672px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field {
-    width: 306px;
+    width: 100%;
     max-width: 306px;
   }
   .form-wrapper-spz .hbspt-form form fieldset .field .input {
-    width: 306px;
+    width: 100%;
     max-width: 306px;
   }
   .form-wrapper-spz .hbspt-form form .actions::before {

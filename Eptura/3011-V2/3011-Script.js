@@ -737,7 +737,7 @@
 
                 document.body.classList.add('ppc-eptura');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>WORKPLACE AND ASSET MANAGEMENT SOFTWARE</h6><h1>Automate operations with one platform for workplace and asset management</h1>
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>WORKPLACE AND ASSET MANAGEMENT SOFTWARE</h6><h1>Automate operations with one platform for workplace and asset management.</h1>
                 <ul class="hero-list-copy">
                     <li class="list-item"><span>Workplace solutions.</span> Desk and meeting room bookings, visitor management, and
                         space planning. </li>
