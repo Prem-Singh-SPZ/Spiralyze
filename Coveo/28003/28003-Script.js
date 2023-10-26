@@ -1,3 +1,6 @@
+let init_timer = 1;
+
+
 waitForElm('body').then((elm) => {
 
     console.log('shiv')
@@ -11,6 +14,10 @@ waitForElm('body').then((elm) => {
         }
     });
     exitpopupconfig();
+
+    if (!getCookie('spz_existing_user')) {
+        setCookieForTimer('spz_existing_user', init_timer, (30 * 24));
+    }
 
     // document.body.addEventListener('click', function(e){
     //     if(e.target.classList.contains('spz-coveo-overlay'))
@@ -32,13 +39,21 @@ function exitpopupconfig() {
     addEvent(document, 'mouseout', function (evt) {
         mouseY = evt.clientY;
         var myCookie = getCookie("spzcoveo28002exitpopup");
-        if (mouseY <= topValue && myCookie == null) {
+        let count = +(getCookie('spz_existing_user'));
+        if (mouseY <= topValue && myCookie == null && count < 4) {
             var bodyTag = document.querySelector('body');
             if (!bodyTag.classList.contains('exitpopup28002displayed')) {
                 bodyTag.classList.add('exitpopup28002displayed');
                 document.querySelectorAll('html')[0].classList.add('spz-coveo-28002-popup-visible');
                 if (myCookie == null) {
                     document.cookie = `spzcoveo28002exitpopup=1; expires=${new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 365).toGMTString()}; path=/`;
+                    
+                    let count = +(getCookie('spz_existing_user'));
+
+                    if (getCookie('spz_existing_user')) {
+                        count = parseInt(getCookie('spz_existing_user')) + 1;
+                        setCookieForTimer('spz_existing_user', count, (30 * 24));
+                    }
                 }
                 else { }
             }
@@ -129,4 +144,24 @@ function waitForElm(selector) {
             subtree: true
         });
     });
+}
+
+// Set a Cookie
+function setCookieForTimer(cName, cValue, expHours) {
+    let date = new Date();
+    date.setTime(date.getTime() + (expHours * 60 * 60 * 1000));
+    const expires = "expires=" + date.toUTCString();
+    document.cookie = cName + "=" + cValue + "; " + expires + "; path=/";
+}
+
+//Get a cookie
+function getCookie(cName) {
+    const name = cName + "=";
+    const cDecoded = decodeURIComponent(document.cookie); //to be careful
+    const cArr = cDecoded.split('; ');
+    let res;
+    cArr.forEach(val => {
+        if (val.indexOf(name) === 0) res = val.substring(name.length);
+    })
+    return res;
 }
