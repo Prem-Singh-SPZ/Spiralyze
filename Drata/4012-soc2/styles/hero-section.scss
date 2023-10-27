@@ -48,7 +48,9 @@
   .hero-content {
     max-width: 636px;
     padding: 39px 0;
-    margin-right: 16px;
+    @media (min-width: 1199.98px) {
+      margin-right: 16px;
+    }
 
     .hc-title {
       position: relative;

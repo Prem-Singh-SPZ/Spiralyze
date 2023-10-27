@@ -165,7 +165,11 @@ body #main-content .container-fluid .dnd_area-row-0-max-width-section-centering 
 .hero-section .hero-content {
   max-width: 636px;
   padding: 39px 0;
-  margin-right: 16px;
+}
+@media (min-width: 1199.98px) {
+  .hero-section .hero-content {
+    margin-right: 16px;
+  }
 }
 .hero-section .hero-content .hc-title {
   position: relative;
@@ -759,10 +763,10 @@ img {
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:hover {
   border: 1px solid #485665 !important;
 }
-.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus {
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus[class] {
   border: 1px solid #293642 !important;
 }
-.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus ~ label {
+.form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus[class] ~ label[class] {
   color: #0C131A;
 }
 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus ~ label, .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([value=""]) ~ label {
