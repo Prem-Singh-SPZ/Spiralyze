@@ -962,10 +962,15 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
   form#contactModal {
     #thankyouText {
       background: #fff;
-    //   padding: 32px;
+      //   padding: 32px;
       margin: 0;
       border: 0;
       border-radius: 10px 10px 0px 0px;
+
+      @media (max-width: 767.98px) {
+        padding: 0 0 24px;
+      }
+
       .img-wrapper {
         width: 40px;
         height: 40px;
@@ -980,6 +985,11 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
         text-align: center;
         color: #242b2e;
         margin: 16px auto;
+
+        @media (max-width: 767.98px) {
+          font-size: 20px;
+          line-height: 28px;
+        }
       }
       .sub-title {
         font-family: $font-family_3;
@@ -989,6 +999,10 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
         text-align: center;
         color: #3b454a;
         margin: 0 auto;
+        @media (max-width: 767.98px) {
+          font-size: 14px;
+          line-height: 22px;
+        }
       }
     }
     fieldset {
@@ -997,7 +1011,7 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
     .card-inner-wrapper {
       display: none;
       margin: 0;
-      padding: 24px;
+      padding: 0px;
       .title {
         font-family: $font-family_5;
         font-size: 24px;
@@ -1007,6 +1021,11 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
         text-align: center;
         color: $color_11;
         margin: 0 auto 15.5px;
+
+        @media (max-width: 767.98px) {
+          font-size: 18px;
+          line-height: 26px;
+        }
       }
     }
     .card-wrapper {
@@ -1095,50 +1114,6 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
 @media (max-width: 767.98px) {
   .rapid-contact-spz {
     form#contactModal {
-      p#formTitle {
-        font-size: 28px;
-        line-height: 32px;
-        max-width: 300px;
-        margin-bottom: 12px;
-      }
-      dl[input-name="parent-lastName"] {
-        margin-left: unset;
-      }
-      dl[input-name="parent-jobLevel"] {
-        margin-left: unset;
-      }
-      dl[input-name="parent-companyName"] {
-        margin-left: unset;
-      }
-      dl[input-name="parent-country"] {
-        margin-left: unset;
-      }
-      dl {
-        &:not(.bottomtext) {
-          max-width: 100%;
-          margin-bottom: 32px;
-        }
-      }
-      .instructions {
-        font-weight: 300 !important;
-        line-height: 16px;
-      }
-      [type="checkbox"].r7-check {
-        &:checked + label {
-          &:after {
-            font-size: 11px;
-            display: -webkit-box;
-            display: -ms-flexbox;
-            display: flex;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-          }
-        }
-      }
       .card-wrapper {
         max-width: 275px;
         justify-content: center;
@@ -1146,13 +1121,6 @@ $font-family_5: Mulish, Mulish-local, sans-serif;
         .card-item {
           margin-bottom: 16px;
         }
-      }
-    }
-    .formBlock {
-      p#fieldInstruction {
-        font-weight: 300 !important;
-        line-height: 16px;
-        color: $color_9 !important;
       }
     }
   }

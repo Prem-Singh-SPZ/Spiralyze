@@ -645,6 +645,11 @@
   border: 0;
   border-radius: 10px 10px 0px 0px;
 }
+@media (max-width: 767.98px) {
+  .rapid-contact-spz form#contactModal #thankyouText {
+    padding: 0 0 24px;
+  }
+}
 .rapid-contact-spz form#contactModal #thankyouText .img-wrapper {
   width: 40px;
   height: 40px;
@@ -660,6 +665,12 @@
   color: #242b2e;
   margin: 16px auto;
 }
+@media (max-width: 767.98px) {
+  .rapid-contact-spz form#contactModal #thankyouText .title {
+    font-size: 20px;
+    line-height: 28px;
+  }
+}
 .rapid-contact-spz form#contactModal #thankyouText .sub-title {
   font-family: "Roboto", sans-serif;
   font-size: 18px;
@@ -669,10 +680,16 @@
   color: #3b454a;
   margin: 0 auto;
 }
+@media (max-width: 767.98px) {
+  .rapid-contact-spz form#contactModal #thankyouText .sub-title {
+    font-size: 14px;
+    line-height: 22px;
+  }
+}
 .rapid-contact-spz form#contactModal .card-inner-wrapper {
   display: none;
   margin: 0;
-  padding: 24px;
+  padding: 0px;
 }
 .rapid-contact-spz form#contactModal .card-inner-wrapper .title {
   font-family: Mulish, Mulish-local, sans-serif;
@@ -683,6 +700,12 @@
   text-align: center;
   color: #242b2e;
   margin: 0 auto 15.5px;
+}
+@media (max-width: 767.98px) {
+  .rapid-contact-spz form#contactModal .card-inner-wrapper .title {
+    font-size: 18px;
+    line-height: 26px;
+  }
 }
 .rapid-contact-spz form#contactModal .card-wrapper {
   display: -webkit-box;
@@ -770,44 +793,6 @@
 }
 
 @media (max-width: 767.98px) {
-  .rapid-contact-spz form#contactModal p#formTitle {
-    font-size: 28px;
-    line-height: 32px;
-    max-width: 300px;
-    margin-bottom: 12px;
-  }
-  .rapid-contact-spz form#contactModal dl[input-name=parent-lastName] {
-    margin-left: unset;
-  }
-  .rapid-contact-spz form#contactModal dl[input-name=parent-jobLevel] {
-    margin-left: unset;
-  }
-  .rapid-contact-spz form#contactModal dl[input-name=parent-companyName] {
-    margin-left: unset;
-  }
-  .rapid-contact-spz form#contactModal dl[input-name=parent-country] {
-    margin-left: unset;
-  }
-  .rapid-contact-spz form#contactModal dl:not(.bottomtext) {
-    max-width: 100%;
-    margin-bottom: 32px;
-  }
-  .rapid-contact-spz form#contactModal .instructions {
-    font-weight: 300 !important;
-    line-height: 16px;
-  }
-  .rapid-contact-spz form#contactModal [type=checkbox].r7-check:checked + label:after {
-    font-size: 11px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
-  }
   .rapid-contact-spz form#contactModal .card-wrapper {
     max-width: 275px;
     -webkit-box-pack: center;
@@ -818,10 +803,5 @@
   }
   .rapid-contact-spz form#contactModal .card-wrapper .card-item {
     margin-bottom: 16px;
-  }
-  .rapid-contact-spz .formBlock p#fieldInstruction {
-    font-weight: 300 !important;
-    line-height: 16px;
-    color: #323b44 !important;
   }
 }
