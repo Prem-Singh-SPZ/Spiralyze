@@ -133,6 +133,12 @@
     max-width: 394.66px;
     height: auto;
     display: flex;
+    @media (min-width: 1280.98px) {
+      margin-right: 32px;
+      &:last-child{
+        margin-right: 0;
+      }
+    }
 
     .review-content {
       display: flex;

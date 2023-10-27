@@ -57,7 +57,7 @@ function exitpopupconfig() {
                 bodyTag.classList.add('exitpopup28003displayed');
                 document.querySelectorAll('html')[0].classList.add('spz-coveo-28003-popup-visible');
                 if (myCookie == null) {
-                    document.cookie = `spzcoveo28003exitpopup=1; expires=${new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 365).toGMTString()}; path=/`;
+                    document.cookie = `spzcoveo28003exitpopup=1; path=/`;
 
                     let count = +(getCookie('spz_existing_user'));
 
