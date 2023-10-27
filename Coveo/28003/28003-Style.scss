@@ -82,7 +82,7 @@ $color_2: #390c53;
     opacity: 0;
   }
 }
-.spz-coveo-28002 {
+.spz-coveo-28003 {
   .spz-coveo-overlay {
     display: none;
     -webkit-backdrop-filter: blur(4px);
@@ -90,13 +90,13 @@ $color_2: #390c53;
   }
 }
 @media (min-width:1024px) {
-  html.spz-coveo-28002-popup-visible {
+  html.spz-coveo-28003-popup-visible {
     overflow: hidden;
   }
-  body.spz-coveo-28002.exitpopup28002displayed {
+  body.spz-coveo-28003.exitpopup28003displayed {
     overflow: hidden;
   }
-  .spz-coveo-28002 {
+  .spz-coveo-28003 {
     .spz-coveo-overlay {
       overflow-x: hidden !important;
       position: fixed;
@@ -150,18 +150,20 @@ $color_2: #390c53;
       .spz-close {
         display: block;
         position: absolute;
-        top: 24px;
-        right: 24px;
+        top: 20px;
+        right: 20px;
         line-height: 1;
         cursor: pointer;
         svg {
           display: block;
+          opacity: 0.7;
         }
         &:hover {
           svg {
-            path {
-              fill: #ffffff;
-            }
+            opacity: 1;
+            // path {
+            //   fill: #ffffff;
+            // }
           }
         }
       }
@@ -211,7 +213,7 @@ $color_2: #390c53;
         font-size: 16px;
         font-weight: 500;
         line-height: 26px;
-        letter-spacing: 0.011em;
+        letter-spacing: 0.176px;
         text-align: left;
         color: $color_2;
         height: 56px;
@@ -230,19 +232,11 @@ $color_2: #390c53;
         justify-content: center;
         margin-bottom: 32px;
         padding: 5px;
-        background: var(
-          --CTA-gradient,
-          linear-gradient(262deg, #1cebcf -21.66%, #399ffe 118.19%),
-          linear-gradient(81deg, #1cebcf -2.38%, #399ffe 104.62%)
-        );
+        background: var(--CTA-gradient, linear-gradient(262deg, #1CEBCF -21.66%, #399FFE 118.19%), linear-gradient(81deg, #1CEBCF -2.38%, #399FFE 104.62%));
         border-radius: 8px;
         text-decoration: none !important;
         &:hover {
-          background: linear-gradient(
-            262deg,
-            #1cebcf -186.32%,
-            #399ffe 118.13%
-          );
+          background: linear-gradient(81deg, #1CEBCF -2.38%, #399FFE 104.62%);
         }
       }
       .spz-bg-diamond {
@@ -257,8 +251,8 @@ $color_2: #390c53;
       .spz-result {
         display: block;
         position: absolute;
-        right: -138px;
-        bottom: 54px;
+        right: -124px;
+        bottom: 58px;
         width: 549.524px;
         height: 343.284px;
         box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.25);
@@ -266,7 +260,7 @@ $color_2: #390c53;
       }
     }
   }
-  .spz-coveo-28002.scaleoutpopup {
+  .spz-coveo-28003.scaleoutpopup {
     .spz-coveo-overlay {
       -webkit-animation-name: opOut;
       animation-name: opOut;
@@ -292,7 +286,7 @@ $color_2: #390c53;
       }
     }
   }
-  .spz-coveo-28002.exitpopup28002displayed {
+  .spz-coveo-28003.exitpopup28003displayed {
     .spz-coveo-overlay {
       display: flex;
     }

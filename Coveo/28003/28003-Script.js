@@ -3,12 +3,12 @@ let init_timer = 1;
 
 waitForElm('body').then((elm) => {
     var bodyEle = document.querySelector('body');
-    if (!bodyEle.classList.contains('spz-coveo-28002')) {
-        bodyEle.classList.add('spz-coveo-28002');
+    if (!bodyEle.classList.contains('spz-coveo-28003')) {
+        bodyEle.classList.add('spz-coveo-28003');
     }
     document.body.addEventListener("mousemove", function () {
-        if (!bodyEle.classList.contains('spz-coveo-28002')) {
-            bodyEle.classList.add('spz-coveo-28002');
+        if (!bodyEle.classList.contains('spz-coveo-28003')) {
+            bodyEle.classList.add('spz-coveo-28003');
         }
     });
 
@@ -21,9 +21,9 @@ waitForElm('body').then((elm) => {
     //     {
     //         document.body.classList.add('scaleoutpopup');
     //         setTimeout(function() {
-    //             document.body.classList.remove('exitpopup28002displayed');
+    //             document.body.classList.remove('exitpopup28003displayed');
     //             document.body.classList.remove('scaleoutpopup');
-    //             document.querySelectorAll('html')[0].classList.remove('spz-coveo-28002-popup-visible');
+    //             document.querySelectorAll('html')[0].classList.remove('spz-coveo-28003-popup-visible');
     //         }, 1000);
     //     }
     // });
@@ -48,16 +48,16 @@ function exitpopupconfig() {
     var topValue = 10;
     addEvent(document, 'mouseout', function (evt) {
         mouseY = evt.clientY;
-        var myCookie = getCookie("spzcoveo28002exitpopup");
+        var myCookie = getCookie("spzcoveo28003exitpopup");
         let count = +(getCookie('spz_existing_user'));
         let isFormSubmitted = getCookie('spz_form_submitted')
         if (mouseY <= topValue && myCookie == null && count < 4 && isFormSubmitted == null) {
             var bodyTag = document.querySelector('body');
-            if (!bodyTag.classList.contains('exitpopup28002displayed')) {
-                bodyTag.classList.add('exitpopup28002displayed');
-                document.querySelectorAll('html')[0].classList.add('spz-coveo-28002-popup-visible');
+            if (!bodyTag.classList.contains('exitpopup28003displayed')) {
+                bodyTag.classList.add('exitpopup28003displayed');
+                document.querySelectorAll('html')[0].classList.add('spz-coveo-28003-popup-visible');
                 if (myCookie == null) {
-                    document.cookie = `spzcoveo28002exitpopup=1; expires=${new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 365).toGMTString()}; path=/`;
+                    document.cookie = `spzcoveo28003exitpopup=1; expires=${new Date(new Date().getTime() + 1000 * 60 * 60 * 24 * 365).toGMTString()}; path=/`;
 
                     let count = +(getCookie('spz_existing_user'));
 
@@ -77,10 +77,12 @@ function exitPopupInit() {
         <div class="spz-coveo-overlay">
             <div class="spz-coveo-popup">
                 <img src="//res.cloudinary.com/spiralyze/image/upload/v1697516906/coveo/28003/shape__focus_6.svg" alt="Diamond" class="spz-bg-diamond">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/28003/genaiheadaches_cover_1440_-_without_shadow.webp" alt="Coveo Result" class="spz-result">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/coveo/28003/genaiheadaches_cover_1440_-_without_shadow_3.webp" alt="Coveo Result" class="spz-result">
                 <!-- close popup icon -->
                 <a class="spz-close">
-                    <svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M11.8334 1.34166L10.6584 0.166656L6.00008 4.82499L1.34175 0.166656L0.166748 1.34166L4.82508 5.99999L0.166748 10.6583L1.34175 11.8333L6.00008 7.17499L10.6584 11.8333L11.8334 10.6583L7.17508 5.99999L11.8334 1.34166Z" fill="#C5CACF"/></svg>    
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                <path d="M15.8332 5.34166L14.6582 4.16666L9.99984 8.82499L5.3415 4.16666L4.1665 5.34166L8.82484 9.99999L4.1665 14.6583L5.3415 15.8333L9.99984 11.175L14.6582 15.8333L15.8332 14.6583L11.1748 9.99999L15.8332 5.34166Z" fill="#8E959D"/>
+              </svg>   
                 </a>
                 <div class="spz-coveo-popup-wrapper">
                     <div class="spz-coveo-popup-logo">
@@ -102,13 +104,13 @@ function exitPopupInit() {
     if (document.querySelectorAll('body .spz-coveo-popup').length == 0) {
         document.body.insertAdjacentHTML('beforeend', popup_html);
 
-        waitForElm('.spz-coveo-28002 .spz-close').then((elm) => {
-            document.querySelectorAll('.spz-coveo-28002 .spz-close')[0].addEventListener('click', function () {
+        waitForElm('.spz-coveo-28003 .spz-close').then((elm) => {
+            document.querySelectorAll('.spz-coveo-28003 .spz-close')[0].addEventListener('click', function () {
                 document.body.classList.add('scaleoutpopup');
                 setTimeout(function () {
-                    document.body.classList.remove('exitpopup28002displayed');
+                    document.body.classList.remove('exitpopup28003displayed');
                     document.body.classList.remove('scaleoutpopup');
-                    document.querySelectorAll('html')[0].classList.remove('spz-coveo-28002-popup-visible');
+                    document.querySelectorAll('html')[0].classList.remove('spz-coveo-28003-popup-visible');
                 }, 1000);
             });
         });
