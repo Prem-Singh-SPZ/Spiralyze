@@ -714,7 +714,7 @@
                 <ul class="hero-list-copy">
                     <li class="list-item"><span>Bookings. </span> Schedule desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting. </li>
                     <li class="list-item"><span>Navigation. </span> Digital floor plans make it easy to find the right room or locate the one you&#8217;ve booked upon arrival.</li>
-                    <li class="list-item"><span>Collaboration. </span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li>
+                    <li class="list-item"><span>Collaboration. </span> See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule. </li>
                 </ul>`;
 
                 getInstantDemoCard();

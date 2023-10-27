@@ -204,6 +204,7 @@ $color_2: #140f10;
           margin-bottom: 10px;
           margin-right: 10px;
           text-decoration: none;
+          transition: all 0.3s ease;
 
           @media (min-width: 991.98px) and (max-width: 1199.98px) {
             width: 98px;
@@ -226,6 +227,11 @@ $color_2: #140f10;
             margin: 0;
             padding: 0;
             word-break: initial;
+          }
+
+          &:hover {
+            box-shadow: 0px 8px 10px -5px rgba(0, 0, 0, 0.5);
+            transform: translateY(-2px);
           }
         }
       }
