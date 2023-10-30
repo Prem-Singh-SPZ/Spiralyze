@@ -89,7 +89,7 @@ $color_2: #390c53;
     backdrop-filter: blur(4px);
   }
 }
-@media (min-width:1024px) {
+@media (min-width: 1024px) {
   html.spz-coveo-28003-popup-visible {
     overflow: hidden;
   }
@@ -140,7 +140,22 @@ $color_2: #390c53;
       width: 100%;
       margin: auto;
       border-radius: 8px;
-      background: var(--popup-background, linear-gradient(0deg, rgba(69, 28, 92, 0.45) 0%, rgba(69, 28, 92, 0.45) 100%), linear-gradient(56deg, #41165A 4.04%, #620597 44.67%, #6900A4 55.21%, #650899 67.4%, #4F1D6B 89%));
+      background: var(
+        --popup-background,
+        linear-gradient(
+          0deg,
+          rgba(69, 28, 92, 0.45) 0%,
+          rgba(69, 28, 92, 0.45) 100%
+        ),
+        linear-gradient(
+          56deg,
+          #41165a 4.04%,
+          #620597 44.67%,
+          #6900a4 55.21%,
+          #650899 67.4%,
+          #4f1d6b 89%
+        )
+      );
       box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
       padding-top: 58px;
       padding-left: 52px;
@@ -186,8 +201,13 @@ $color_2: #390c53;
         margin-top: 36px;
         margin-bottom: 24px;
 
-        span{
-            color: #16DCC1;
+        span {
+          color: #16dcc1;
+          font-size: 42px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 48px;
+          letter-spacing: 0.42px;
         }
       }
       .spz-coveo-popup-content-description {
@@ -232,11 +252,15 @@ $color_2: #390c53;
         justify-content: center;
         margin-bottom: 32px;
         padding: 5px;
-        background: var(--CTA-gradient, linear-gradient(262deg, #1CEBCF -21.66%, #399FFE 118.19%), linear-gradient(81deg, #1CEBCF -2.38%, #399FFE 104.62%));
+        background: var(
+          --CTA-gradient,
+          linear-gradient(262deg, #1cebcf -21.66%, #399ffe 118.19%),
+          linear-gradient(81deg, #1cebcf -2.38%, #399ffe 104.62%)
+        );
         border-radius: 8px;
         text-decoration: none !important;
         &:hover {
-          background: linear-gradient(81deg, #1CEBCF -2.38%, #399FFE 104.62%);
+          background: linear-gradient(81deg, #1cebcf -2.38%, #399ffe 104.62%);
         }
       }
       .spz-bg-diamond {
