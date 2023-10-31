@@ -4,6 +4,10 @@
         document.body.classList.add('spz-3002');
         clearFormFields();
         loadTest();
+
+        document.querySelectorAll('a[href="#DemoRequest"]').forEach(function (el) {
+            el.setAttribute('href', '#HeroFormPanel');
+        });
     });
 
     //Clear form fields
