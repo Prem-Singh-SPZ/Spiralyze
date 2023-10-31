@@ -1,5 +1,6 @@
 (function () {
     document.body.classList.add('spz-3012');
+    //Adding page specific classes 
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.querySelector('body').classList.add(identifyPage);
 
@@ -85,6 +86,7 @@
         }
     ];
 
+    //Main test called here
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
         clearFormFields();
         document.body.classList.add('spz-3012');
@@ -107,7 +109,7 @@
             }
 
             if (e.target.classList.contains("mktoButton")) {
-                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
                     checkError(el);
                     showGlobalError();
                 });
@@ -125,7 +127,7 @@
 
     //Clear form fields
     function clearFormFields() {
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"]):not([type="hidden"])').forEach(function (el) {
             el.value = '';
             if (el.closest('.mktoFormCol').classList.contains('input-filled')) {
                 el.closest('.mktoFormCol').classList.remove('input-filled');
@@ -133,6 +135,7 @@
         });
     }
 
+    //Appending sections provided in mock
     function updatePageContent() {
         waitForElm('#nav #NavLogo #logo-img').then(function () {
             pageContent.forEach(function (url) {
@@ -166,7 +169,7 @@
     }
 
 
-    //custom error for checkbox field
+    //custom error logic for checkbox field in form
     function showGlobalError() {
         let checkErrorforCheckBox = setInterval(() => {
             if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {
@@ -182,7 +185,7 @@
         }, 1000);
     }
 
-    //Marketo form update
+    //Marketo form updates
     function formUpdate() {
         if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
             document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = '<h6>Request a demo</h6>';
@@ -203,7 +206,7 @@
 
         document.querySelector('#LblI_am__c').textContent = 'I am...*';
 
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
 
             let fieldName = el.getAttribute('name');
             el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
@@ -248,7 +251,7 @@
 
     // On input focus add class on closest parent field class
     function focusFields() {
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
 
             blockChar();
 
