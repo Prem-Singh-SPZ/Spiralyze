@@ -27,7 +27,7 @@ const formInt = setInterval(() => {
 
     // Set focus on input
     focusFields();
-    document.body.classList.add('spz-6012');
+    document.body.classList.add('spz-4012');
     removeStyleTags();
   }
 }, 100);
