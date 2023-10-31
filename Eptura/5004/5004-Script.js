@@ -19,7 +19,8 @@
     function loadTest() {
         formUpdate();
         focusFields();
-        
+        addPageContent();
+
         // Add class 'safari' (used for cart scrollbar)
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.querySelector('body').classList.add('safari')
@@ -67,7 +68,7 @@
 
 
         // if (document.querySelector('.get-form #HeroFormTitleText h6')) {
-            document.querySelector('.get-form').insertAdjacentHTML('afterbegin',`<h2 class="get-form-title">Get a demo</h2>`);
+        document.querySelector('.get-form').insertAdjacentHTML('afterbegin', `<h2 class="get-form-title">Get a demo</h2>`);
         // }
 
         document.querySelector('.get-form .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
@@ -210,4 +211,42 @@
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
     }
+
+    //adding page contents
+    function addPageContent() {
+        document.querySelector('.get-touch-form.og-contact-resources').insertAdjacentHTML('afterbegin', `<div class="spz-page-title"><h1>Get in touch</h1></div>`);
+
+        document.querySelector('.default-form.get-form').insertAdjacentHTML('afterend', `<div class="additional-section">
+                <div class="need-support">
+                    <div class="copy">
+                        <h6>Need support?</h6>
+                        <p>Visit our help center to speak to our support team & find helpful articles.</p>
+                        <a href="https://support.spiralyze.com/" class="visit-support">Support center  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M9 6.5L11.8 9.25L9 12" stroke="#7AA0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                    </div>
+                </div>
+                <div class="border-line">
+                    <img class="arrow-right-chevron-2-icon" alt="" src="//res.cloudinary.com/spiralyze/image/upload/v1698746612/eptura/5004/line_7.svg"></img>
+                </div>
+                <div class="need-support">
+                    <div class="copy">
+                        <h6>Trying to find us?</h6>
+                        <p>See our office locations and contact details.</p>
+                        <a href="https://support.spiralyze.com/" class="visit-support">Our offices <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+  <path d="M9 6.5L11.8 9.25L9 12" stroke="#7AA0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+</svg></a>
+                    </div>
+                </div>
+            </div>`);
+
+        document.querySelector('.get-touch-form.og-contact-resources').insertAdjacentHTML('afterend', `<section class="spz-trusted-logos"><div class="logo-title"><h6>Trusted by <span>16,000+</span> customers worldwide</h6></div><div class="logos-parent"><picture>
+        <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_set_2.svg">
+        <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1697646192/eptura/5004/logo_set_-_tablet.svg">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1697646201/eptura/5004/logo_set_-_mobile.svg" alt="Trusted Logos">
+      </picture></div></section>`);
+
+    }
 })();
+
+
