@@ -36,6 +36,14 @@ body.spz-5004 .site-content .get-touch-form .container {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 body.spz-5004 .site-content .get-touch-form .container .title-part {
   display: none !important;
 }
@@ -388,6 +396,14 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
 body.spz-5004 .site-content .get-touch-form .container .additional-section {
   max-width: 280px;
 }
+@media (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .additional-section {
+    max-width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
 body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy h6 {
   color: var(--primary-neutrals-n-3, #f6fafa);
   font-size: 20px;
@@ -432,6 +448,13 @@ body.spz-5004 .site-content .get-touch-form .container .additional-section .need
 body.spz-5004 .site-content .get-touch-form .container .additional-section .border-line {
   margin: 72px 0;
 }
+@media (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .additional-section .border-line {
+    margin: 0 56px;
+    -webkit-transform: rotate(90deg);
+            transform: rotate(90deg);
+  }
+}
 body.spz-5004 .site-content .spz-trusted-logos {
   max-width: 1440px;
   padding: 40px 100px 88px 100px;
@@ -448,6 +471,9 @@ body.spz-5004 .site-content .spz-trusted-logos .logo-title h6 {
 body.spz-5004 .site-content .spz-trusted-logos .logo-title h6 span {
   font-weight: 500;
   color: var(--primary-neutrals-n-3, #f6fafa);
+}
+body.spz-5004 .site-content .spz-trusted-logos .logos-parent {
+  text-align: center;
 }
 body.spz-5004 .keep-update.bg-purple {
   background-color: #0d122e;
@@ -515,8 +541,8 @@ body.spz-5004 .gradient-border-line::after {
   position: absolute;
   width: 100%;
   height: 1px;
-  background: -webkit-gradient(linear, right top, left top, color-stop(-0.04%, #F6FAFA), color-stop(103.77%, rgba(246, 250, 250, 0)));
-  background: linear-gradient(270deg, #F6FAFA -0.04%, rgba(246, 250, 250, 0) 103.77%);
+  background: -webkit-gradient(linear, right top, left top, color-stop(-0.04%, #f6fafa), color-stop(103.77%, rgba(246, 250, 250, 0)));
+  background: linear-gradient(270deg, #f6fafa -0.04%, rgba(246, 250, 250, 0) 103.77%);
   bottom: 0;
   opacity: 0.2;
 }

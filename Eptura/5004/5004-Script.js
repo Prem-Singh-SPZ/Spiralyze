@@ -218,7 +218,7 @@
                     </div>
                 </div>
                 <div class="border-line">
-                    <img class="arrow-right-chevron-2-icon" alt="" src="//res.cloudinary.com/spiralyze/image/upload/v1698746612/eptura/5004/line_7.svg"></img>
+                    <img class="border-img" alt="border-img" src="//res.cloudinary.com/spiralyze/image/upload/v1698746612/eptura/5004/line_7.svg"></img>
                 </div>
                 <div class="need-support">
                     <div class="copy">
