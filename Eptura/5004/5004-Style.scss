@@ -22,6 +22,10 @@ body.spz-5004 {
       max-width: 1240px;
       margin: auto;
 
+      @media (max-width: 1199.98px) {
+        padding: 40px 40px 64px;
+      }
+
       .spz-page-title {
         margin-bottom: 64px;
         h1 {
@@ -52,6 +56,10 @@ body.spz-5004 {
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
           max-width: 580px;
           padding: 0px 46px 52px 46px;
+
+          @media (max-width: 1199.98px) {
+            max-width: 688px;
+          }
 
           .get-form-title {
             color: var(--accents-a-5, #904ab0);
@@ -455,12 +463,17 @@ body.spz-5004 {
         .additional-section {
           max-width: 280px;
 
-          @media (max-width: 1199.98px) {
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 100%;
             display: flex;
+            justify-content: center;
+            margin-top: 40px;
           }
 
           .need-support {
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              max-width: 260px;
+            }
             .copy {
               h6 {
                 color: var(--primary-neutrals-n-3, #f6fafa);
@@ -469,6 +482,9 @@ body.spz-5004 {
                 font-weight: 300;
                 line-height: 28px;
                 margin-bottom: 16px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  text-align: center;
+                }
               }
 
               p {
@@ -479,6 +495,9 @@ body.spz-5004 {
                 line-height: 24px;
                 opacity: 0.8;
                 margin-bottom: 24px;
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  text-align: center;
+                }
               }
 
               .visit-support {
@@ -489,6 +508,11 @@ body.spz-5004 {
                 line-height: 24px;
                 display: flex;
                 align-items: end;
+
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  justify-content: center;
+                }
+
                 svg path {
                   stroke: #7aa0ff;
                   transition: 400ms;
@@ -507,12 +531,25 @@ body.spz-5004 {
 
           .border-line {
             margin: 72px 0;
-            @media (max-width: 1199.98px) {
+            width: 280px;
+            height: 1px;
+            opacity: 0.4;
+            background: linear-gradient(
+              270deg,
+              rgba(214, 215, 245, 0.1) 0%,
+              #d6d7f5 73.89%,
+              rgba(214, 215, 245, 0.1) 100%
+            );
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
               margin: 0 56px;
-              transform: rotate(90deg);
-              img{
-                
-              }
+              width: 1px;
+              height: 140px;
+              background: linear-gradient(
+                70deg,
+                rgba(214, 215, 245, 0.1) 0%,
+                #d6d7f5 73.89%,
+                rgba(214, 215, 245, 0.1) 100%
+              );
             }
           }
         }
@@ -554,6 +591,22 @@ body.spz-5004 {
       .row {
         max-width: 900px;
         margin: auto;
+
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          flex-direction: column;
+
+          > div {
+            width: 100%;
+            justify-content: center !important;
+
+            .title{
+              h3{
+                text-align: center;
+              }
+            }
+          }
+        }
+
         .title {
           h3 {
             color: var(--primary-neutrals-n-3, #f6fafa);

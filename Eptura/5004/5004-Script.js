@@ -212,19 +212,19 @@
                     <div class="copy">
                         <h6>Need support?</h6>
                         <p>Visit our help center to speak to our support team & find helpful articles.</p>
-                        <a href="https://support.spiralyze.com/" class="visit-support">Support center  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <a href="https://eptura.com/support/" class="visit-support">Support center  <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M9 6.5L11.8 9.25L9 12" stroke="#7AA0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
                     </div>
                 </div>
                 <div class="border-line">
-                    <img class="border-img" alt="border-img" src="//res.cloudinary.com/spiralyze/image/upload/v1698746612/eptura/5004/line_7.svg"></img>
+
                 </div>
                 <div class="need-support">
                     <div class="copy">
                         <h6>Trying to find us?</h6>
                         <p>See our office locations and contact details.</p>
-                        <a href="https://support.spiralyze.com/" class="visit-support">Our offices <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                        <a href="https://eptura.com/offices/" class="visit-support">Our offices <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
   <path d="M9 6.5L11.8 9.25L9 12" stroke="#7AA0FF" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
 </svg></a>
                     </div>

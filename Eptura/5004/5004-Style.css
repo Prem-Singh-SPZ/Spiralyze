@@ -14,6 +14,11 @@ body.spz-5004 .site-content .get-touch-form {
   max-width: 1240px;
   margin: auto;
 }
+@media (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form {
+    padding: 40px 40px 64px;
+  }
+}
 body.spz-5004 .site-content .get-touch-form .spz-page-title {
   margin-bottom: 64px;
 }
@@ -54,6 +59,11 @@ body.spz-5004 .site-content .get-touch-form .container .get-form {
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
   max-width: 580px;
   padding: 0px 46px 52px 46px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .get-form {
+    max-width: 688px;
+  }
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form .get-form-title {
   color: var(--accents-a-5, #904ab0);
@@ -396,12 +406,21 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
 body.spz-5004 .site-content .get-touch-form .container .additional-section {
   max-width: 280px;
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-5004 .site-content .get-touch-form .container .additional-section {
     max-width: 100%;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    margin-top: 40px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support {
+    max-width: 260px;
   }
 }
 body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy h6 {
@@ -412,6 +431,11 @@ body.spz-5004 .site-content .get-touch-form .container .additional-section .need
   line-height: 28px;
   margin-bottom: 16px;
 }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy h6 {
+    text-align: center;
+  }
+}
 body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy p {
   color: var(--primary-neutrals-n-3, #f6fafa);
   font-size: 16px;
@@ -420,6 +444,11 @@ body.spz-5004 .site-content .get-touch-form .container .additional-section .need
   line-height: 24px;
   opacity: 0.8;
   margin-bottom: 24px;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy p {
+    text-align: center;
+  }
 }
 body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy .visit-support {
   color: var(--interactive-colors-a-2, #7aa0ff);
@@ -434,6 +463,13 @@ body.spz-5004 .site-content .get-touch-form .container .additional-section .need
       -ms-flex-align: end;
           align-items: end;
 }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy .visit-support {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 body.spz-5004 .site-content .get-touch-form .container .additional-section .need-support .copy .visit-support svg path {
   stroke: #7aa0ff;
   -webkit-transition: 400ms;
@@ -447,12 +483,18 @@ body.spz-5004 .site-content .get-touch-form .container .additional-section .need
 }
 body.spz-5004 .site-content .get-touch-form .container .additional-section .border-line {
   margin: 72px 0;
+  width: 280px;
+  height: 1px;
+  opacity: 0.4;
+  background: -webkit-gradient(linear, right top, left top, from(rgba(214, 215, 245, 0.1)), color-stop(73.89%, #d6d7f5), to(rgba(214, 215, 245, 0.1)));
+  background: linear-gradient(270deg, rgba(214, 215, 245, 0.1) 0%, #d6d7f5 73.89%, rgba(214, 215, 245, 0.1) 100%);
 }
-@media (max-width: 1199.98px) {
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-5004 .site-content .get-touch-form .container .additional-section .border-line {
     margin: 0 56px;
-    -webkit-transform: rotate(90deg);
-            transform: rotate(90deg);
+    width: 1px;
+    height: 140px;
+    background: linear-gradient(70deg, rgba(214, 215, 245, 0.1) 0%, #d6d7f5 73.89%, rgba(214, 215, 245, 0.1) 100%);
   }
 }
 body.spz-5004 .site-content .spz-trusted-logos {
@@ -482,6 +524,23 @@ body.spz-5004 .keep-update.bg-purple {
 body.spz-5004 .keep-update.bg-purple .container .row {
   max-width: 900px;
   margin: auto;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-5004 .keep-update.bg-purple .container .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  body.spz-5004 .keep-update.bg-purple .container .row > div {
+    width: 100%;
+    -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+            justify-content: center !important;
+  }
+  body.spz-5004 .keep-update.bg-purple .container .row > div .title h3 {
+    text-align: center;
+  }
 }
 body.spz-5004 .keep-update.bg-purple .container .row .title h3 {
   color: var(--primary-neutrals-n-3, #f6fafa);
