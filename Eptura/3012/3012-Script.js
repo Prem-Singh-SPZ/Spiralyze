@@ -205,16 +205,6 @@
         });
 
         document.querySelector('#LblI_am__c').textContent = 'I am...*';
-
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
-
-            let fieldName = el.getAttribute('name');
-            el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
-            if (el.closest('select')) {
-                el.closest('.mktoFieldWrap').classList.add('select');
-            }
-
-        });
     }
 
     //On value change of "I am.." field switch label od comment button
@@ -241,12 +231,6 @@
         setTimeout(() => {
             clearInterval(setBuffer);
         }, 50);
-
-        waitForElm('#Solution_Type__c').then(function () {
-            // document.querySelector('#Solution_Type__c option:first-child').textContent = '';
-            let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
-            document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
-        });
     }
 
     // On input focus add class on closest parent field class
@@ -308,16 +292,8 @@
 
     //Block "e" from number of employees field
     function blockChar() {
-        var inputBox = document.getElementById("NumberOfEmployees");
-
-        var invalidChars = ["e",];
-
-        inputBox.addEventListener("input", function () {
-            this.value = this.value.replace(/[e\+\-]/gi, "");
-        });
-
-        inputBox.addEventListener("keydown", function (e) {
-            if (invalidChars.includes(e.key)) {
+        document.querySelector('#NumberOfEmployees').addEventListener("keydown", function (e) {
+            if (e.key == 'e') {
                 e.preventDefault();
             }
         });

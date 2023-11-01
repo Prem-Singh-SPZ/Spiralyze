@@ -19,7 +19,7 @@ body.spz-5004 {
 
     .get-touch-form {
       padding: 56px 100px 80px;
-      max-width: 1240px;
+      max-width: 1170px;
       margin: auto;
 
       @media (max-width: 1199.98px) {
@@ -41,6 +41,20 @@ body.spz-5004 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+        position: relative;
+
+        &::before {
+          content: "";
+          background: url(//res.cloudinary.com/spiralyze/image/upload/v1698234647/eptura/5004/star_2.svg)
+            no-repeat;
+          position: absolute;
+          background-size: 495px 731px;
+          background-position: center right;
+          width: 495px;
+          height: 731px;
+          right: 0;
+          top: -64px;
+        }
 
         @media (max-width: 1199.98px) {
           flex-direction: column;
@@ -55,7 +69,7 @@ body.spz-5004 {
           background: var(--primary-neutrals-w, #fff);
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
           max-width: 580px;
-          padding: 0px 46px 52px 46px;
+          padding: 24px 46px 52px 46px;
 
           @media (max-width: 1199.98px) {
             max-width: 688px;
@@ -68,6 +82,7 @@ body.spz-5004 {
             font-style: normal;
             font-weight: 300;
             line-height: 44px;
+            margin-bottom: 24px;
           }
 
           //Form Css starts here
@@ -167,7 +182,7 @@ body.spz-5004 {
                     span {
                       color: #848995;
                       font-size: 10px !important;
-                      // font-family: $eptura-font;
+                      font-family: $eptura-font;
                       font-style: normal;
                       font-weight: 300;
                       line-height: 16px; /* 160% */
@@ -273,8 +288,9 @@ body.spz-5004 {
                       font-family: $eptura-font;
                       color: var(--accents-a-5, #904ab0) !important;
                       font-size: 13px !important;
-                      line-height: 18px !important; /* 138.462% */
+                      line-height: 18px !important;
                       background: #fff;
+                      max-width: fit-content;
                     }
                   }
                   .mktoField:not([type="checkbox"]) {
@@ -288,12 +304,12 @@ body.spz-5004 {
                       top: -8px;
                       left: 11px;
                       right: auto;
-
                       font-family: $eptura-font;
                       padding: 0 5px !important;
                       font-size: 13px !important;
-                      line-height: 18px !important; /* 138.462% */
+                      line-height: 18px !important;
                       background: #fff;
+                      max-width: fit-content;
                     }
                   }
                 }
@@ -310,6 +326,10 @@ body.spz-5004 {
                   .mktoField:not([type="checkbox"]) {
                     border-color: #f83a59 !important;
                   }
+                }
+
+                &[data-zi-field-enriched="true"] {
+                  display: inline !important;
                 }
               }
 
@@ -358,7 +378,9 @@ body.spz-5004 {
 
               &[spz_row_num="19"],
               &[spz_row_num="20"],
-              &[spz_row_num="21"] {
+              &[spz_row_num="21"],
+              &[spz_row_num="7"] {
+                width: 100%;
                 .mktoFormCol {
                   width: 100% !important;
                 }
@@ -430,7 +452,8 @@ body.spz-5004 {
                     font-size: 14px;
                     font-style: normal;
                     font-weight: 300;
-                    line-height: 20px; /* 142.857% */
+                    line-height: 20px;
+                    font-family: $eptura-font;
                     @media (max-width: 767.98px) {
                       padding: 0;
                     }
@@ -462,6 +485,7 @@ body.spz-5004 {
         //right content
         .additional-section {
           max-width: 280px;
+          position: relative;
 
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 100%;
@@ -471,6 +495,10 @@ body.spz-5004 {
           }
 
           .need-support {
+            border-radius: 0px 16px 16px 0px;
+            backdrop-filter: blur(4px);
+            margin-left: 10px;
+            margin-right: 10px;
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
               max-width: 260px;
             }
@@ -558,7 +586,7 @@ body.spz-5004 {
 
     .spz-trusted-logos {
       max-width: 1440px;
-      padding: 40px 100px 88px 100px;
+      padding: 40px 100px 80px 100px;
       margin: auto;
 
       .logo-title {
@@ -569,6 +597,7 @@ body.spz-5004 {
           font-weight: 300;
           line-height: 32px;
           text-align: center;
+          margin-bottom: 23px;
 
           span {
             font-weight: 500;
@@ -585,11 +614,11 @@ body.spz-5004 {
 
   .keep-update.bg-purple {
     background-color: #0d122e;
-    padding: 64px 0px;
+    padding: 52px 0px;
 
     .container {
       .row {
-        max-width: 900px;
+        max-width: 832px;
         margin: auto;
 
         @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -599,8 +628,8 @@ body.spz-5004 {
             width: 100%;
             justify-content: center !important;
 
-            .title{
-              h3{
+            .title {
+              h3 {
                 text-align: center;
               }
             }
@@ -618,23 +647,33 @@ body.spz-5004 {
         }
 
         .btn-group {
-          .button-2 a {
-            border-radius: 3px;
-            background: var(--interactive-colors-a-2, #7aa0ff);
-            box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
-            color: var(--primary-neutrals-n-1, #0d122e);
-            text-align: center;
-            font-size: 16px;
-            font-style: normal;
-            font-weight: 500;
-            line-height: 24px;
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
 
-            &:hover {
-              background: var(--interactive-colors-a-4, #d6d7f5);
+          .button-2 {
+            margin: 0;
+            a {
+              border-radius: 3px;
+              background: var(--interactive-colors-a-2, #7aa0ff);
+              box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+              color: var(--primary-neutrals-n-1, #0d122e);
+              text-align: center;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
+              height: 50px;
+              width: 100%;
+
+              &:hover {
+                background: var(--interactive-colors-a-4, #d6d7f5);
+              }
             }
           }
 
           .link {
+            width: 200px;
             a {
               &::before {
                 background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg)
@@ -645,6 +684,7 @@ body.spz-5004 {
           }
 
           .facebook {
+            width: 133px;
             a {
               &::before {
                 background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_facebook.svg)
@@ -655,6 +695,7 @@ body.spz-5004 {
           }
 
           .twit {
+            width: 154px;
             a {
               &::before {
                 background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg)

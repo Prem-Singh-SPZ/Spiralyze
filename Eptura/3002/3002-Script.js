@@ -4,7 +4,7 @@
         document.body.classList.add('spz-3002');
         loadTest();
         clearFormFields();
-        
+
         document.querySelectorAll('a[href="#DemoRequest"]').forEach(function (el) {
             el.setAttribute('href', '#HeroFormPanel');
         });
@@ -24,6 +24,7 @@
         updateHeroImage();
         formUpdate();
         focusFields();
+        
         // Add class 'safari' (used for cart scrollbar)
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.querySelector('body').classList.add('safari')
@@ -51,12 +52,6 @@
 
     //custom error for checkbox field
     function showGlobalError() {
-        // if (document.querySelector('#Lead_Notes__c') && document.querySelector('#Lead_Notes__c').value == '') {
-        //     if (document.querySelector('#Lead_Notes__c').value == '' || document.querySelector('#Lead_Notes__c').value == undefined) {
-        //         document.querySelector('#Lead_Notes__c').value = ".";
-        //     }
-        // }
-
         let checkErrorforCheckBox = setInterval(() => {
             if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {
                 document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.add('spz-cstm-error');
@@ -90,13 +85,6 @@
         });
 
         document.querySelector('#LblI_am__c').textContent = 'I am...*';
-
-        // document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
-
-        //     let fieldName = el.getAttribute('name');
-        //     el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
-
-        // });
     }
 
     //On value change of "I am.." field switch label od comment button
@@ -123,12 +111,6 @@
         setTimeout(() => {
             clearInterval(setBuffer);
         }, 50);
-
-        // waitForElm('#Solution_Type__c').then(function () {
-        //     // document.querySelector('#Solution_Type__c option:first-child').textContent = '';
-        //     let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
-        //     document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
-        // });
     }
 
     // On input focus add class on closest parent field class
@@ -190,16 +172,8 @@
 
     //Block "e" from number of employees field
     function blockChar() {
-        var inputBox = document.getElementById("NumberOfEmployees");
-
-        var invalidChars = ["e",];
-
-        inputBox.addEventListener("input", function () {
-            this.value = this.value.replace(/[e\+\-]/gi, "");
-        });
-
-        inputBox.addEventListener("keydown", function (e) {
-            if (invalidChars.includes(e.key)) {
+        document.querySelector('#NumberOfEmployees').addEventListener("keydown", function (e) {
+            if (e.key == 'e') {
                 e.preventDefault();
             }
         });
