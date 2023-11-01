@@ -82,9 +82,7 @@
 
         document.querySelector('#LblI_am__c').textContent = 'I am...*';
 
-        document.querySelectorAll('.get-form .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el, index) {
-            let fieldName = el.getAttribute('name');
-            el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
+        document.querySelectorAll('.get-form .mktoForm .mktoFormRow').forEach(function (el, index) {
             el.closest('.mktoFormRow').setAttribute('spz_row_num', index);
         });
     }

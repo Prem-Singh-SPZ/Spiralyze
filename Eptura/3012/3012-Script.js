@@ -127,7 +127,7 @@
 
     //Clear form fields
     function clearFormFields() {
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"]):not([type="hidden"])').forEach(function (el) {
+        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
             el.value = '';
             if (el.closest('.mktoFormCol').classList.contains('input-filled')) {
                 el.closest('.mktoFormCol').classList.remove('input-filled');

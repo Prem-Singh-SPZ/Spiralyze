@@ -18,7 +18,9 @@ body.spz-5004 {
     }
 
     .get-touch-form {
-      padding: 56px 0 80px;
+      padding: 56px 100px 80px;
+      max-width: 1240px;
+      margin: auto;
 
       .spz-page-title {
         margin-bottom: 64px;
@@ -34,6 +36,7 @@ body.spz-5004 {
       .container {
         display: flex;
         align-items: center;
+        justify-content: space-between;
 
         .title-part {
           display: none !important;
@@ -340,14 +343,24 @@ body.spz-5004 {
               .spz-hidden {
                 display: none;
               }
+
+              &[spz_row_num="19"],
+              &[spz_row_num="20"],
+              &[spz_row_num="21"] {
+                .mktoFormCol {
+                  width: 100% !important;
+                }
+              }
             }
 
             //submit button css
             .mktoButtonRow {
               text-align: center;
+              width: 100%;
 
               .mktoButtonWrap {
                 button.mktoButton {
+                  margin: auto;
                   display: flex;
                   width: 140px !important;
                   height: 50px !important;
@@ -429,6 +442,146 @@ body.spz-5004 {
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+
+        //right content
+        .additional-section {
+          max-width: 280px;
+          .need-support {
+            .copy {
+              h6 {
+                color: var(--primary-neutrals-n-3, #f6fafa);
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 28px;
+                margin-bottom: 16px;
+              }
+
+              p {
+                color: var(--primary-neutrals-n-3, #f6fafa);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                opacity: 0.8;
+                margin-bottom: 24px;
+              }
+
+              .visit-support {
+                color: var(--interactive-colors-a-2, #7aa0ff);
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                display: flex;
+                align-items: end;
+                svg path {
+                  stroke: #7aa0ff;
+                  transition: 400ms;
+                }
+
+                &:hover {
+                  color: #ffffff;
+
+                  svg path {
+                    stroke: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+
+          .border-line {
+            margin: 72px 0;
+          }
+        }
+      }
+    }
+
+    .spz-trusted-logos {
+      max-width: 1440px;
+      padding: 40px 100px 88px 100px;
+      margin: auto;
+
+      .logo-title {
+        h6 {
+          color: var(--primary-neutrals-n-3, #f6fafa);
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 32px;
+          text-align: center;
+
+          span {
+            font-weight: 500;
+            color: var(--primary-neutrals-n-3, #f6fafa);
+          }
+        }
+      }
+    }
+  }
+
+  .keep-update.bg-purple {
+    background-color: #0d122e;
+    padding: 64px 0px;
+
+    .container {
+      .row {
+        max-width: 900px;
+        margin: auto;
+        .title {
+          h3 {
+            color: var(--primary-neutrals-n-3, #f6fafa);
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 36px;
+          }
+        }
+
+        .btn-group {
+          .button-2 a {
+            border-radius: 3px;
+            background: var(--interactive-colors-a-2, #7aa0ff);
+            box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+            color: var(--primary-neutrals-n-1, #0d122e);
+            text-align: center;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+          }
+
+          .link {
+            a {
+              &::before {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg)
+                  no-repeat center;
+                filter: none;
+              }
+            }
+          }
+
+          .facebook {
+            a {
+              &::before {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_facebook.svg)
+                  no-repeat center;
+                filter: none;
+              }
+            }
+          }
+
+          .twit {
+            a {
+              &::before {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg)
+                  no-repeat center;
+                filter: none;
               }
             }
           }
