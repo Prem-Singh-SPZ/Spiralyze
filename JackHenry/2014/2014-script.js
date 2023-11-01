@@ -558,7 +558,9 @@
             el.closest('.field').classList.add('field-valid');
         }
 
-        if (document.querySelectorAll('.field-valid').length >= 4) {
+        let count = document.querySelector('.hs_connecting_possibilities_newsletter') ? 4 : 3;
+
+        if (document.querySelectorAll('.field-valid').length >= count) {
             document.querySelectorAll('.hidden-spz').forEach(function (el) {
                 el.classList.remove('hidden-spz');
             });
@@ -605,7 +607,7 @@
             commentField.closest('.field').classList.add('field-error-cmnt');
         }
 
-        if (document.querySelectorAll('.field-error-cmnt:not(.hidden-spz)').length > 0  && document.querySelectorAll('.field-valid').length > 6) {
+        if (document.querySelectorAll('.field-error-cmnt:not(.hidden-spz)').length > 0 && document.querySelectorAll('.field-valid').length > 6) {
             console.log('00')
             eve.preventDefault();
         }

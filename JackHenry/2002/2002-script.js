@@ -553,7 +553,9 @@
             el.closest('.field').classList.add('field-valid');
         }
 
-        if (document.querySelectorAll('.field-valid').length >= 4) {
+        let count = document.querySelector('.hs_connecting_possibilities_newsletter') ? 4 : 3;
+
+        if (document.querySelectorAll('.field-valid').length >= count) {
             document.querySelectorAll('.hidden-spz').forEach(function (el) {
                 el.classList.remove('hidden-spz');
             });

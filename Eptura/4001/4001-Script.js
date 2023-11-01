@@ -1058,7 +1058,7 @@
     //Block "e" from number of employees field
     function blockChar() {
         document.querySelector('#NumberOfEmployees').addEventListener("keydown", function (e) {
-            if (e.key == 'e') {
+            if (e.key == 'e' || e.key == 'E') {
                 e.preventDefault();
             }
         });
