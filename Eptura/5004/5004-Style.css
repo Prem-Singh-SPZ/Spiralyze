@@ -476,6 +476,9 @@ body.spz-5004 .keep-update.bg-purple .container .row .btn-group .button-2 a {
   font-weight: 500;
   line-height: 24px;
 }
+body.spz-5004 .keep-update.bg-purple .container .row .btn-group .button-2 a:hover {
+  background: var(--interactive-colors-a-4, #d6d7f5);
+}
 body.spz-5004 .keep-update.bg-purple .container .row .btn-group .link a::before {
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg) no-repeat center;
   -webkit-filter: none;
@@ -490,4 +493,30 @@ body.spz-5004 .keep-update.bg-purple .container .row .btn-group .twit a::before 
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg) no-repeat center;
   -webkit-filter: none;
           filter: none;
+}
+body.spz-5004 .gradient-border-line {
+  height: 12px;
+  width: 100%;
+  position: relative;
+  background-color: #0d122e;
+}
+body.spz-5004 .gradient-border-line::before {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, left top, right top, color-stop(-0.04%, #f6fafa), color-stop(103.77%, rgba(246, 250, 250, 0)));
+  background: linear-gradient(90deg, #f6fafa -0.04%, rgba(246, 250, 250, 0) 103.77%);
+  top: 0;
+  opacity: 0.2;
+}
+body.spz-5004 .gradient-border-line::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  height: 1px;
+  background: -webkit-gradient(linear, right top, left top, color-stop(-0.04%, #F6FAFA), color-stop(103.77%, rgba(246, 250, 250, 0)));
+  background: linear-gradient(270deg, #F6FAFA -0.04%, rgba(246, 250, 250, 0) 103.77%);
+  bottom: 0;
+  opacity: 0.2;
 }

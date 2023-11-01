@@ -237,6 +237,9 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1697646201/eptura/5004/logo_set_-_mobile.svg" alt="Trusted Logos">
       </picture></div></section>`);
 
+      document.querySelector('.keep-update.bg-purple').insertAdjacentHTML('beforebegin',`<div class="gradient-border-line"></div>`);
+      document.querySelector('.keep-update.bg-purple').insertAdjacentHTML('afterend',`<div class="gradient-border-line"></div>`);
+
     }
 })();
 
