@@ -105,7 +105,7 @@
 
     //Clear form fields
     function clearFormFields() {
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
             el.value = '';
             if (el.closest('.mktoFormCol').classList.contains('input-filled')) {
                 el.closest('.mktoFormCol').classList.remove('input-filled');
@@ -132,7 +132,7 @@
             }
 
             if (e.target.classList.contains("mktoButton")) {
-                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
                     checkError(el);
                     showGlobalError();
                 });
@@ -178,12 +178,12 @@
 
         document.querySelector('#LblI_am__c').textContent = 'I am...*';
 
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        // document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
 
-            let fieldName = el.getAttribute('name');
-            el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
+        //     let fieldName = el.getAttribute('name');
+        //     el.closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
 
-        });
+        // });
     }
 
     //On value change of "I am.." field switch label od comment button
@@ -211,16 +211,16 @@
             clearInterval(setBuffer);
         }, 50);
 
-        waitForElm('#Solution_Type__c').then(function () {
-            // document.querySelector('#Solution_Type__c option:first-child').textContent = '';
-            let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
-            document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
-        });
+        // waitForElm('#Solution_Type__c').then(function () {
+        //     // document.querySelector('#Solution_Type__c option:first-child').textContent = '';
+        //     let fieldName = document.querySelector('#Solution_Type__c').getAttribute('name');
+        //     document.querySelector('#Solution_Type__c').closest('.mktoFormCol').setAttribute('spz_fname', fieldName);
+        // });
     }
 
     // On input focus add class on closest parent field class
     function focusFields() {
-        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+        document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
 
             blockChar();
 
