@@ -70,7 +70,7 @@ body.spz-5004 .site-content .get-touch-form .container .get-form {
   -webkit-box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
   max-width: 580px;
-  padding: 24px 46px 52px 46px;
+  padding: 40px 46px 52px 46px;
 }
 @media (max-width: 1199.98px) {
   body.spz-5004 .site-content .get-touch-form .container .get-form {
@@ -84,7 +84,7 @@ body.spz-5004 .site-content .get-touch-form .container .get-form .get-form-title
   font-style: normal;
   font-weight: 300;
   line-height: 44px;
-  margin-bottom: 24px;
+  margin-bottom: 32px;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm {
   -webkit-box-shadow: none;
@@ -191,11 +191,12 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
   color: #0d122e;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
-  margin-top: 3px;
+  margin-top: 7px;
+  margin-bottom: 9px;
   cursor: pointer;
   display: inline-block;
   position: relative;
-  padding-left: 25px;
+  padding-left: 14px;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
   border: 1px solid #d6d7f5;
@@ -216,7 +217,7 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
   font-weight: 300 !important;
   line-height: 18px !important; /* 142.857% */
   margin-left: 19px;
-  letter-spacing: -0.1px;
+  padding-right: 0;
   cursor: pointer;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
@@ -313,7 +314,7 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
   font-style: normal;
   font-weight: 300;
   line-height: 24px;
-  margin-bottom: 18px;
+  margin-bottom: 26px;
   display: inline-block;
   margin-top: 2px;
   -webkit-transition: all 0.3s ease;
@@ -339,6 +340,12 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
   width: 100%;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow[spz_row_num="19"] .mktoFormCol, body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow[spz_row_num="20"] .mktoFormCol, body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow[spz_row_num="21"] .mktoFormCol, body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow[spz_row_num="7"] .mktoFormCol {
+  width: 100% !important;
+}
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow[spz_row_num="5"] {
+  width: 100%;
+}
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoFormRow[spz_row_num="5"] .mktoFormCol {
   width: 100% !important;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoButtonRow {
@@ -368,7 +375,7 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
   font-style: normal;
   font-weight: 500 !important;
   line-height: 24px !important; /* 150% */
-  margin-top: 22px !important;
+  margin-top: 23px !important;
   white-space: nowrap;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
@@ -387,7 +394,7 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
   }
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .spz-email .mktoFieldWrap {
-  margin-top: 18px;
+  margin-top: 24px;
 }
 @media (max-width: 767.98px) {
   body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .spz-email .mktoFieldWrap {
@@ -429,6 +436,24 @@ body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
   color: #0d122e;
+}
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm.initial-load {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm.initial-load .mktoFormRow[spz_row_num="3"] {
+  display: none;
+}
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm.initial-load .mktoFormRow[spz_row_num="2"],
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm.initial-load .mktoFormRow[spz_row_num="4"] {
+  width: 50%;
+}
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm.initial-load .mktoFormRow[spz_row_num="2"] .mktoFieldDescriptor.mktoFormCol,
+body.spz-5004 .site-content .get-touch-form .container .get-form form.mktoForm.initial-load .mktoFormRow[spz_row_num="4"] .mktoFieldDescriptor.mktoFormCol {
+  width: 100% !important;
 }
 body.spz-5004 .site-content .get-touch-form .container .additional-section {
   max-width: 280px;
@@ -534,7 +559,7 @@ body.spz-5004 .site-content .get-touch-form .container .additional-section .bord
 }
 body.spz-5004 .site-content .spz-trusted-logos {
   max-width: 1440px;
-  padding: 40px 100px 80px 100px;
+  padding: 41px 100px 80px 100px;
   margin: auto;
 }
 body.spz-5004 .site-content .spz-trusted-logos .logo-title h6 {
@@ -585,7 +610,10 @@ body.spz-5004 .keep-update.bg-purple .container .row .title h3 {
   font-weight: 300;
   line-height: 36px;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 {
+  max-width: 542px;
+}
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -594,10 +622,10 @@ body.spz-5004 .keep-update.bg-purple .container .row .btn-group {
           justify-content: space-between;
   width: 100%;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .button-2 {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .button-2 {
   margin: 0;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .button-2 a {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .button-2 a {
   border-radius: 3px;
   background: var(--interactive-colors-a-2, #7aa0ff);
   -webkit-box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
@@ -610,30 +638,33 @@ body.spz-5004 .keep-update.bg-purple .container .row .btn-group .button-2 a {
   line-height: 24px;
   height: 50px;
   width: 100%;
+  padding-top: 13px;
+  white-space: nowrap;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .button-2 a:hover {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .button-2 a:hover {
   background: var(--interactive-colors-a-4, #d6d7f5);
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .link {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .link {
   width: 200px;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .link a::before {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .link a::before {
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg) no-repeat center;
   -webkit-filter: none;
           filter: none;
+  margin: -8px 8px 0 -10px;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .facebook {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .facebook {
   width: 133px;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .facebook a::before {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .facebook a::before {
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_facebook.svg) no-repeat center;
   -webkit-filter: none;
           filter: none;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .twit {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .twit {
   width: 154px;
 }
-body.spz-5004 .keep-update.bg-purple .container .row .btn-group .twit a::before {
+body.spz-5004 .keep-update.bg-purple .container .row .col-md-8.col-lg-8 .btn-group .twit a::before {
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg) no-repeat center;
   -webkit-filter: none;
           filter: none;

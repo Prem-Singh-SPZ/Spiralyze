@@ -69,7 +69,7 @@ body.spz-5004 {
           background: var(--primary-neutrals-w, #fff);
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
           max-width: 580px;
-          padding: 24px 46px 52px 46px;
+          padding: 40px 46px 52px 46px;
 
           @media (max-width: 1199.98px) {
             max-width: 688px;
@@ -82,7 +82,7 @@ body.spz-5004 {
             font-style: normal;
             font-weight: 300;
             line-height: 44px;
-            margin-bottom: 24px;
+            margin-bottom: 32px;
           }
 
           //Form Css starts here
@@ -200,11 +200,12 @@ body.spz-5004 {
                   }
 
                   .mktoCheckboxList {
-                    margin-top: 3px;
+                    margin-top: 7px;
+                    margin-bottom: 9px;
                     cursor: pointer;
                     display: inline-block;
                     position: relative;
-                    padding-left: 25px;
+                    padding-left: 14px;
                     .mktoField {
                       border: 1px solid #d6d7f5;
                       height: 16px !important;
@@ -223,7 +224,8 @@ body.spz-5004 {
                       font-weight: 300 !important;
                       line-height: 18px !important; /* 142.857% */
                       margin-left: 19px;
-                      letter-spacing: -0.1px;
+                      // letter-spacing: -0.1px;
+                      padding-right: 0;
                       cursor: pointer;
                       &:before {
                         content: "";
@@ -354,7 +356,7 @@ body.spz-5004 {
                   font-style: normal;
                   font-weight: 300;
                   line-height: 24px;
-                  margin-bottom: 18px;
+                  margin-bottom: 26px;
                   display: inline-block;
                   margin-top: 2px;
                   transition: all 0.3s ease;
@@ -385,6 +387,15 @@ body.spz-5004 {
                   width: 100% !important;
                 }
               }
+
+              //Css to match mock starts here
+              &[spz_row_num="5"] {
+                width: 100%;
+                .mktoFormCol {
+                  width: 100% !important;
+                }
+              }
+              //Css to match mock ends here
             }
 
             //submit button css
@@ -410,7 +421,7 @@ body.spz-5004 {
                   font-style: normal;
                   font-weight: 500 !important;
                   line-height: 24px !important; /* 150% */
-                  margin-top: 22px !important;
+                  margin-top: 23px !important;
                   white-space: nowrap;
 
                   &:hover,
@@ -437,7 +448,7 @@ body.spz-5004 {
             //email line form
             .spz-email {
               .mktoFieldWrap {
-                margin-top: 18px;
+                margin-top: 24px;
                 @media (max-width: 767.98px) {
                   margin-top: 24px;
                 }
@@ -479,6 +490,26 @@ body.spz-5004 {
                 }
               }
             }
+
+            //Css to match mock starts here
+            &.initial-load {
+              display: flex;
+              flex-wrap: wrap;
+
+              .mktoFormRow[spz_row_num="3"] {
+                display: none;
+              }
+
+              .mktoFormRow[spz_row_num="2"],
+              .mktoFormRow[spz_row_num="4"] {
+                width: 50%;
+
+                .mktoFieldDescriptor.mktoFormCol {
+                  width: 100% !important;
+                }
+              }
+            }
+            //Css to match mock ends here
           }
         }
 
@@ -586,7 +617,7 @@ body.spz-5004 {
 
     .spz-trusted-logos {
       max-width: 1440px;
-      padding: 40px 100px 80px 100px;
+      padding: 41px 100px 80px 100px;
       margin: auto;
 
       .logo-title {
@@ -646,61 +677,67 @@ body.spz-5004 {
           }
         }
 
-        .btn-group {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
+        .col-md-8.col-lg-8 {
+          max-width: 542px;
+          .btn-group {
+            display: flex;
+            justify-content: space-between;
+            width: 100%;
 
-          .button-2 {
-            margin: 0;
-            a {
-              border-radius: 3px;
-              background: var(--interactive-colors-a-2, #7aa0ff);
-              box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
-              color: var(--primary-neutrals-n-1, #0d122e);
-              text-align: center;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 500;
-              line-height: 24px;
-              height: 50px;
-              width: 100%;
+            .button-2 {
+              margin: 0;
+              a {
+                border-radius: 3px;
+                background: var(--interactive-colors-a-2, #7aa0ff);
+                box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+                color: var(--primary-neutrals-n-1, #0d122e);
+                text-align: center;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                height: 50px;
+                width: 100%;
+                padding-top: 13px;
+                white-space: nowrap;
 
-              &:hover {
-                background: var(--interactive-colors-a-4, #d6d7f5);
+                &:hover {
+                  background: var(--interactive-colors-a-4, #d6d7f5);
+                }
               }
             }
-          }
 
-          .link {
-            width: 200px;
-            a {
-              &::before {
-                background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg)
-                  no-repeat center;
-                filter: none;
+            .link {
+              width: 200px;
+              a {
+                &::before {
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg)
+                    no-repeat center;
+                  filter: none;
+                  margin: -8px 8px 0 -10px;
+                }
               }
             }
-          }
 
-          .facebook {
-            width: 133px;
-            a {
-              &::before {
-                background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_facebook.svg)
-                  no-repeat center;
-                filter: none;
+            .facebook {
+              width: 133px;
+              a {
+                &::before {
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_facebook.svg)
+                    no-repeat center;
+                  filter: none;
+                }
               }
             }
-          }
 
-          .twit {
-            width: 154px;
-            a {
-              &::before {
-                background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg)
-                  no-repeat center;
-                filter: none;
+            .twit {
+              width: 154px;
+              a {
+                &::before {
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg)
+                    no-repeat center;
+                  filter: none;
+                }
               }
             }
           }

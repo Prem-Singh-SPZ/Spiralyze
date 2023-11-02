@@ -20,6 +20,7 @@
         formUpdate();
         focusFields();
         addPageContent();
+        checkVisibleInputs();
 
         // Add class 'safari' (used for cart scrollbar)
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -163,11 +164,31 @@
                 // elem.closest('.mktoFormCol').classList.add('field-error');
             }
 
+            checkVisibleInputs();
         }, 100);
 
         setTimeout(() => {
             clearInterval(timeBuffer);
         }, 1000);
+    }
+
+    //5004 Specific form css where counting field and accordingly switching classes
+    function checkVisibleInputs() {
+        waitForElm('.mktoFormCol[style*="display: none"]').then(function () {
+            if (document.querySelectorAll('.mktoFormCol[style*="display: none"]').length == 6) {
+                document.querySelector('.get-form .mktoForm').classList.add('initial-load');
+            }
+
+            if (document.querySelectorAll('.mktoFormCol[style*="display: none"]').length == 1) {
+                document.querySelector('.get-form .mktoForm').classList.replace('initial-load','fully-load');
+            }
+        });
+
+        // waitForElm('#LblSolution_Type__c').then(function () {
+        //     if (document.querySelectorAll('.mktoFormCol[style*="display: none"]').length == 6) {
+        //         document.querySelector('.get-form .mktoForm').classList.replace('initial-load','partial-load');
+        //     }
+        // });
     }
 
     //Block "e" from number of employees field
@@ -237,8 +258,8 @@
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1697646201/eptura/5004/logo_set_-_mobile.svg" alt="Trusted Logos">
       </picture></div></section>`);
 
-      document.querySelector('.keep-update.bg-purple').insertAdjacentHTML('beforebegin',`<div class="gradient-border-line"></div>`);
-      document.querySelector('.keep-update.bg-purple').insertAdjacentHTML('afterend',`<div class="gradient-border-line"></div>`);
+        document.querySelector('.keep-update.bg-purple').insertAdjacentHTML('beforebegin', `<div class="gradient-border-line"></div>`);
+        document.querySelector('.keep-update.bg-purple').insertAdjacentHTML('afterend', `<div class="gradient-border-line"></div>`);
 
     }
 })();
