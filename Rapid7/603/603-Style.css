@@ -320,6 +320,22 @@
   max-width: 100%;
 }
 
+.contactform-redesign-spz.safari .reveal-overlay .contactForm.spz-new-form-section .grid-container .expand#consultant label[for=consultantField]::after,
+.contactform-redesign-spz.safari .reveal-overlay .contactForm.spz-new-form-section .grid-container .expand#optout label[for=explicitOptOut]::after {
+  width: 17px;
+  overflow: hidden;
+  height: 16px;
+  padding-top: 5px;
+  top: 2px;
+  left: 0px;
+  font-size: 9px;
+}
+@media (min-width: 767.98px) {
+  .contactform-redesign-spz.safari .reveal-overlay .contactForm.spz-new-form-section .grid-container .expand#optout label[for=explicitOptOut]::after {
+    top: -2px;
+  }
+}
+
 .contactform-redesign-spz #optout {
   padding-top: 0px;
   padding: 0 !important;

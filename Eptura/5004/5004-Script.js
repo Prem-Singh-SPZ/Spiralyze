@@ -81,7 +81,7 @@
             dropdownFunctionality(this.value);
         });
 
-        // document.querySelector('#LblI_am__c').textContent = 'I am*';
+        document.querySelector('#LblI_am__c').textContent = 'I am...*';
 
         document.querySelectorAll('.get-form .mktoForm .mktoFormRow').forEach(function (el, index) {
             el.closest('.mktoFormRow').setAttribute('spz_row_num', index);

@@ -3,6 +3,10 @@ var jQueryInterval = setInterval(function () {
         clearInterval(jQueryInterval);
         if (!jQuery('body').hasClass('contactform-redesign-spz')) {
             jQuery('body').addClass('contactform-redesign-spz');
+
+            if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+                document.body.classList.add('safari')
+            }
         }
         window['optimizely'] = window['optimizely'] || [];
 
@@ -165,19 +169,7 @@ var jQueryInterval = setInterval(function () {
                 cardurl2 = "/blog/post/2021/12/08/demystifying-xdr-a-forrester-analyst-lays-the-foundation/";
             }
         });
-        // var intervalSet = setInterval(function () {
-        //     if (jQuery(".rapid-contact-spz #contactModal #firstName").length > 0) {
-        //         clearInterval(intervalSet);
-        //         checkInputform();
 
-        //         jQuery('.rapid-contact-spz  form#contactModal dl[input-name="parent-email"]').insertAfter('.rapid-contact-spz  form#contactModal dl[input-name="parent-lastName"]');
-        //         jQuery('.rapid-contact-spz  form#contactModal dl[input-name="parent-parent-companyName"]').insertAfter('.rapid-contact-spz  form#contactModal dl[input-name="parent-email"]');
-        //         jQuery('.rapid-contact-spz  form#contactModal dl[input-name="parent-companyName"]').insertAfter('.rapid-contact-spz  form#contactModal dl[input-name="parent-email"]');
-        //         jQuery('.rapid-contact-spz  form#contactModal dl[input-name="parent-email"] label').text('Company Email');
-        //         jQuery('#consultant, #optout, dl[input-name="parent-noinput"]').addClass('bottomtext');
-        //     }
-        // }, 300);
-        
         /*Submission Event*/
 
         window['optimizelyEdge'] = window['optimizelyEdge'] || [];
