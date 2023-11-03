@@ -21,13 +21,25 @@ body.spz-5004 {
       padding: 56px 100px 80px;
       max-width: 1170px;
       margin: auto;
+      overflow: hidden;
 
-      @media (max-width: 1199.98px) {
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
         padding: 40px 40px 64px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 40px 40px 48px;
       }
 
       .spz-page-title {
         margin-bottom: 64px;
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+          margin-bottom: 48px;
+        }
+        @media (max-width: 767.98px) {
+          margin-bottom: 40px;
+        }
+
         h1 {
           color: #f6fafa;
           text-align: center;
@@ -35,6 +47,16 @@ body.spz-5004 {
           font-style: normal;
           font-weight: 300;
           line-height: 64px;
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            font-size: 46px;
+            line-height: 54px;
+            margin-top: 2px;
+          }
+          @media (max-width: 767.98px) {
+            font-size: 36px;
+            line-height: 44px;
+            margin-top: 2px;
+          }
         }
       }
       .container {
@@ -42,6 +64,10 @@ body.spz-5004 {
         align-items: center;
         justify-content: space-between;
         position: relative;
+        @media (max-width: 1199.98px) {
+          padding-left: 0;
+          padding-right: 0;
+        }
 
         &::before {
           content: "";
@@ -54,6 +80,34 @@ body.spz-5004 {
           height: 731px;
           right: 0;
           top: -64px;
+
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            background: url(//res.cloudinary.com/spiralyze/image/upload/v1698746644/eptura/5004/star_3.svg)
+              no-repeat;
+            background-size: 731px 495px;
+            background-position: center bottom;
+            width: 731px;
+            height: 495px;
+            top: auto;
+            bottom: -64px;
+            left: 0;
+            right: 0;
+            margin: auto;
+          }
+
+          @media (max-width: 767.98px) {
+            background: url(//res.cloudinary.com/spiralyze/image/upload/v1698746684/eptura/5004/star_5.svg)
+              no-repeat;
+            background-size: 261px 385px;
+            background-position: left bottom;
+            width: 261px;
+            height: 385px;
+            top: auto;
+            bottom: 0px;
+            left: -64px;
+            right: 0;
+            margin: auto;
+          }
         }
 
         @media (max-width: 1199.98px) {
@@ -70,9 +124,16 @@ body.spz-5004 {
           box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
           max-width: 580px;
           padding: 40px 46px 52px 46px;
+          z-index: 1;
 
-          @media (max-width: 1199.98px) {
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 688px;
+          }
+
+          @media (max-width: 767.98px) {
+            width: 328px;
+            padding: 32px 14px 32px 14px;
+            margin-bottom: 16px;
           }
 
           .get-form-title {
@@ -83,6 +144,11 @@ body.spz-5004 {
             font-weight: 300;
             line-height: 44px;
             margin-bottom: 32px;
+            @media (max-width: 767.98px) {
+              font-size: 26px;
+              line-height: 34px;
+              margin-bottom: 28px;
+            }
           }
 
           //Form Css starts here
@@ -120,6 +186,7 @@ body.spz-5004 {
                     max-width: calc(100% - 58px);
                     background: #fff;
                     right: 0;
+                    letter-spacing: 0;
                   }
 
                   .mktoField:not([type="checkbox"]) {
@@ -256,7 +323,10 @@ body.spz-5004 {
                   }
 
                   .mktoError {
-                    margin-top: 48px !important;
+                    left: 0;
+                    bottom: auto !important;
+                    right: auto !important;
+                    top: 50px;
 
                     .mktoErrorMsg {
                       color: #f3f3f3;
@@ -389,10 +459,12 @@ body.spz-5004 {
               }
 
               //Css to match mock starts here
-              &[spz_row_num="5"] {
-                width: 100%;
-                .mktoFormCol {
-                  width: 100% !important;
+              @media (min-width: 767.98px) {
+                &[spz_row_num="5"] {
+                  width: 100%;
+                  .mktoFormCol {
+                    width: 100% !important;
+                  }
                 }
               }
               //Css to match mock ends here
@@ -438,8 +510,8 @@ body.spz-5004 {
                   @media (max-width: 767.98px) {
                     height: 56px !important;
                     padding: 0px 32px;
-                    width: 300px !important;
-                    max-width: 300px !important;
+                    width: 280px !important;
+                    max-width: 280px !important;
                   }
                 }
               }
@@ -493,19 +565,21 @@ body.spz-5004 {
 
             //Css to match mock starts here
             &.initial-load {
-              display: flex;
-              flex-wrap: wrap;
+              @media (min-width: 767.98px) {
+                display: flex;
+                flex-wrap: wrap;
 
-              .mktoFormRow[spz_row_num="3"] {
-                display: none;
-              }
+                .mktoFormRow[spz_row_num="3"] {
+                  display: none;
+                }
 
-              .mktoFormRow[spz_row_num="2"],
-              .mktoFormRow[spz_row_num="4"] {
-                width: 50%;
+                .mktoFormRow[spz_row_num="2"],
+                .mktoFormRow[spz_row_num="4"] {
+                  width: 50%;
 
-                .mktoFieldDescriptor.mktoFormCol {
-                  width: 100% !important;
+                  .mktoFieldDescriptor.mktoFormCol {
+                    width: 100% !important;
+                  }
                 }
               }
             }
@@ -517,6 +591,10 @@ body.spz-5004 {
         .additional-section {
           max-width: 280px;
           position: relative;
+
+          @media (max-width: 767.98px) {
+            padding: 32px 0;
+          }
 
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 100%;
@@ -530,9 +608,16 @@ body.spz-5004 {
             backdrop-filter: blur(4px);
             margin-left: 10px;
             margin-right: 10px;
+
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
-              max-width: 260px;
+              width: 260px;
+              margin: 0;
             }
+
+            @media (max-width: 767.98px) {
+              margin: 0;
+            }
+
             .copy {
               h6 {
                 color: var(--primary-neutrals-n-3, #f6fafa);
@@ -610,6 +695,10 @@ body.spz-5004 {
                 rgba(214, 215, 245, 0.1) 100%
               );
             }
+
+            @media (max-width: 767.98px) {
+              margin: 40px 0;
+            }
           }
         }
       }
@@ -619,6 +708,13 @@ body.spz-5004 {
       max-width: 1440px;
       padding: 41px 100px 80px 100px;
       margin: auto;
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        padding: 8px 40px 32px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 8px 30px 32px;
+      }
 
       .logo-title {
         h6 {
@@ -629,6 +725,20 @@ body.spz-5004 {
           line-height: 32px;
           text-align: center;
           margin-bottom: 23px;
+
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            font-size: 20px;
+            line-height: 28px;
+            margin-bottom: 24px;
+          }
+
+          @media (max-width: 767.98px) {
+            max-width: 172px;
+            font-size: 18px;
+            line-height: 26px;
+            margin: auto;
+            margin-bottom: 15px;
+          }
 
           span {
             font-weight: 500;
@@ -646,6 +756,13 @@ body.spz-5004 {
   .keep-update.bg-purple {
     background-color: #0d122e;
     padding: 52px 0px;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      padding: 28px 0px 52px;
+    }
+
+    @media (max-width: 767.98px){
+      padding: 29px 0px 23px;
+    }
 
     .container {
       .row {
@@ -674,6 +791,21 @@ body.spz-5004 {
             font-style: normal;
             font-weight: 300;
             line-height: 36px;
+
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              font-size: 24px;
+              line-height: 32px;
+              margin-bottom: 24px;
+            }
+
+            @media (max-width: 767.98px) {
+              font-size: 20px;
+              line-height: 28px;
+              margin-bottom: 24px;
+            }
+          }
+          @media (max-width: 767.98px) {
+            padding: 0;
           }
         }
 
@@ -683,9 +815,16 @@ body.spz-5004 {
             display: flex;
             justify-content: space-between;
             width: 100%;
+            @media (max-width: 767.98px) {
+              flex-direction: column;
+              align-items: center;
+            }
 
             .button-2 {
               margin: 0;
+              @media (max-width: 767.98px) {
+                margin-bottom: 16px;
+              }
               a {
                 border-radius: 3px;
                 background: var(--interactive-colors-a-2, #7aa0ff);
@@ -721,22 +860,37 @@ body.spz-5004 {
 
             .facebook {
               width: 133px;
+              @media (max-width: 767.98px) {
+                width: 200px;
+              }
               a {
                 &::before {
                   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_facebook.svg)
                     no-repeat center;
                   filter: none;
+                  margin: -8px 7px 0 -10px;
+                  width: 18px;
+                  height: 18px;
                 }
               }
             }
 
             .twit {
               width: 154px;
+              @media (max-width: 767.98px) {
+                width: 200px;
+                a {
+                  margin: 0;
+                }
+              }
               a {
                 &::before {
                   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg)
                     no-repeat center;
                   filter: none;
+                  margin: -8px 8px 0 -10px;
+                  width: 22px;
+                  height: 18px;
                 }
               }
             }

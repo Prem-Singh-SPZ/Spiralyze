@@ -81,7 +81,7 @@
             dropdownFunctionality(this.value);
         });
 
-        document.querySelector('#LblI_am__c').textContent = 'I am...*';
+        // document.querySelector('#LblI_am__c').textContent = 'I am*';
 
         document.querySelectorAll('.get-form .mktoForm .mktoFormRow').forEach(function (el, index) {
             el.closest('.mktoFormRow').setAttribute('spz_row_num', index);
@@ -193,16 +193,8 @@
 
     //Block "e" from number of employees field
     function blockChar() {
-        var inputBox = document.getElementById("NumberOfEmployees");
-
-        var invalidChars = ["e",];
-
-        inputBox.addEventListener("input", function () {
-            this.value = this.value.replace(/[e\+\-]/gi, "");
-        });
-
-        inputBox.addEventListener("keydown", function (e) {
-            if (invalidChars.includes(e.key)) {
+        document.querySelector('#NumberOfEmployees').addEventListener("keydown", function (e) {
+            if (e.key == 'e' || e.key == 'E') {
                 e.preventDefault();
             }
         });
