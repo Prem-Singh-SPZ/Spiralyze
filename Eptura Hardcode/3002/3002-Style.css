@@ -1,107 +1,118 @@
 .body-wrapper::before {
-    display: none;
+  display: none;
+}
+.body-wrapper #nav .page_padding {
+  padding-top: 32px !important;
+}
+.body-wrapper #nav .page_padding #NavLogo #logo-img {
+  width: 187px;
+  max-width: 187px;
+  height: 71px;
 }
 
 #hero .hero_container {
-    padding-top: 40px !important;
-    padding-bottom: 100px !important;
-    overflow: hidden;
+  padding-top: 29px !important;
+  padding-bottom: 100px !important;
+  overflow: hidden;
 }
-
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-    #hero .hero_container {
-        padding: 24px 40px 48px !important;
-        max-width: 768px;
-        margin: auto;
-    }
+#hero .col-md.pb-5 {
+  margin-left: 1px;
 }
-
-@media (max-width: 767.98px) {
-    #hero .hero_container {
-        padding: 24px 0 48px !important;
-    }
+#hero #HeroText h6 span {
+  color: #26a199 !important;
+  font-size: 13px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 13px;
+  letter-spacing: 2.78px;
+  text-transform: uppercase;
+  margin-bottom: 4px;
 }
-
-@media (min-width: 1199.98px) {
-    #hero .hero_container>.row>.col-md.pb-5 {
-        padding-bottom: 0 !important;
-        max-width: 685px;
-    }
+#hero #HeroText h2 span {
+  color: #f6fafa !important;
+  font-size: 46px !important;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 54px;
+  max-width: 568px;
+  margin-bottom: 24px;
 }
-
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-    #hero .hero_container>.row>.col-md.pb-5 {
-        padding: 0 0 52px !important;
-    }
+#hero #HeroImg img {
+  margin-top: 16px;
 }
-
-@media (max-width: 767.98px) {
-    #hero .hero_container>.row>.col-md.pb-5 {
-        padding: 0 44px 37px !important;
-    }
-}
-
 
 #HeroFormCol #HeroFormPanel {
-    max-width: 580px;
-    padding: 40px 46px 50px 46px;
-    border-radius: 8px;
-    background: #fff !important;
-    -webkit-box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
-    box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+  margin-top: 4px;
+  max-width: 580px;
+  padding: 40px 46px 50px 46px;
+  border-radius: 8px;
+  background: #fff !important;
+  -webkit-box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
+  box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
 }
-
-@media (min-width: 767.98px) {
-    #HeroFormCol #HeroFormPanel {
-        margin-right: auto;
-        min-width: 418px;
-    }
+#HeroFormCol #HeroFormPanel #HeroFormTitleText {
+  display: block !important;
+}
+#HeroFormCol #HeroFormPanel #HeroFormTitleText h2 {
+  color: #0d122e;
+  font-family: "Eptura Flexible", Arial, sans-serif !important;
+  text-align: center;
+  font-size: 26px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 34px;
+  letter-spacing: initial;
+  margin: -4px -6px 24px 0;
+}
+#HeroFormCol #HeroFormPanel #HeroFormTitleText h2 span {
+  color: #904ab0;
 }
 
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
-    #HeroFormCol #HeroFormPanel {
-        margin: auto;
-        min-width: 580px;
-        max-width: 718px;
-    }
+  #hero .hero_container {
+    padding: 24px 40px 48px !important;
+    max-width: 768px;
+    margin: auto;
+  }
+  #hero .hero_container > .row > .col-md.pb-5 {
+    padding: 0 0 52px !important;
+  }
+  #HeroFormCol #HeroFormPanel {
+    margin: auto;
+    min-width: 580px;
+    max-width: 718px;
+  }
 }
-
 @media (max-width: 767.98px) {
-    #HeroFormCol #HeroFormPanel {
-        width: 360px;
-        max-width: 360px;
-        padding: 32px 20px 32px 20px;
-        margin: auto;
-    }
+  #hero .hero_container {
+    padding: 24px 0 48px !important;
+  }
+  #hero .hero_container > .row > .col-md.pb-5 {
+    padding: 0 44px 37px !important;
+  }
+  #HeroFormCol #HeroFormPanel {
+    width: 360px;
+    max-width: 360px;
+    padding: 32px 20px 32px 20px;
+    margin: auto;
+  }
+  #HeroFormCol #HeroFormPanel #HeroFormTitleText h2 {
+    white-space: normal;
+    max-width: 244px;
+    margin: auto;
+    margin-bottom: 20px;
+    padding-left: 6px;
+  }
 }
-
-#HeroFormCol #HeroFormPanel #HeroFormTitleText {
-    display: block !important;
+@media (min-width: 1199.98px) {
+  #hero .hero_container > .row > .col-md.pb-5 {
+    padding-bottom: 0 !important;
+    max-width: 685px;
+  }
 }
-
-#HeroFormCol #HeroFormPanel #HeroFormTitleText h2 {
-    color: var(--primary-neutrals-n-1, #0d122e);
-    font-family: "Eptura Flexible", Arial, sans-serif !important;
-    text-align: center;
-    font-size: 26px;
-    font-style: normal;
-    font-weight: 300;
-    line-height: 34px;
-    /* 130.769% */
-    letter-spacing: initial;
-    margin: -4px -6px 24px 0;
-}
-
-#HeroFormCol #HeroFormPanel #HeroFormTitleText h2 span {
-    color: var(--accents-a-5, #904ab0);
-}
-
-@media (max-width: 767.98px) {
-    #HeroFormCol #HeroFormPanel #HeroFormTitleText h2 {
-        white-space: normal;
-        max-width: 244px;
-        margin: auto;
-        margin-bottom: 20px;
-        padding-left: 6px;
-    }
+@media (min-width: 767.98px) {
+  #HeroFormCol #HeroFormPanel {
+    margin-right: auto;
+    min-width: 418px;
+  }
 }
