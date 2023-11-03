@@ -13,6 +13,10 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
         padding: 16px 41px 0 !important;
       }
+      @media (max-width: 767.98px) {
+        padding: 16px 31px 0 !important;
+      }
+
       #NavLogo {
         #logo-img {
           width: 187px;
@@ -165,6 +169,14 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
       letter-spacing: 2.78px;
       text-transform: uppercase;
       margin-bottom: 4px;
+
+      @media (max-width: 767.98px) {
+        font-size: 12px !important;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 16px;
+        letter-spacing: 1.2px;
+      }
     }
 
     h2 span {
@@ -177,6 +189,14 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
       margin-bottom: 24px;
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
         max-width: 100%;
+      }
+
+      @media (max-width: 767.98px) {
+        font-size: 26px !important;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 34px;
+        margin-bottom: 8px;
       }
     }
   }
@@ -239,10 +259,10 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
 @media (max-width: 767.98px) {
   #hero {
     .hero_container {
-      padding: 24px 0 48px !important;
+      padding: 38px 0 48px !important;
       > .row {
         > .col-md.pb-5 {
-          padding: 0 44px 37px !important;
+          padding: 0 45px 37px !important;
         }
       }
     }
