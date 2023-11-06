@@ -17,7 +17,27 @@
     waitForElm('.css-rdcx7j-HeroHomepage-featuredContent').then(function () {
       // insert element anchors cta
       if (document.querySelectorAll('.social-pr-section').length == 0) {
-        document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="hero-banner-section"><div class="hero-banner-container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> </div></div></section>
+        document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="hero-banner-section"><div class="hero-banner-container container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> <div class="checkboxes"> <div class="check-box">
+        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/soc_2.svg" alt="SOC 2"><p>SOC 2</p>
+        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <div class="check-box">
+        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/iso.svg" alt="ISO 27001"><p>ISO 27001</p>
+        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <div class="check-box">
+        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/pci_1.svg" alt="PCI DSS"><p>PCI DSS</p>
+        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <div class="check-box">
+        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/hipaa.svg" alt="HIPAA"><p>HIPAA</p>
+        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <div class="check-box">
+        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/gdpr.svg" alt="GDPR"><p>GDPR</p>
+        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <div class="check-box">
+        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/custom_frameworks.svg" alt="Other"><p>Other</p>
+        <input type="checkbox"><span class="checkmark"></span></label></div>
+        </div>
+        <div class="btn-section"><button class="get-started-cta">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
+        </div></div></section>
         <section class="hero-img-section"> <div class="img-container"><picture>
         <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1440.webp">
         <source media="(min-width: 1900px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1920.webp">
