@@ -3,6 +3,8 @@
   function createTest_2006() {
     document.body.classList.add('spz-2006');
 
+    console.log('there00');
+
     waitForElm('.MuiButtonBase-root.MuiButton-disableElevation').then(function () {
       appendHomeHeroContent();
 
@@ -19,22 +21,22 @@
       if (document.querySelectorAll('.social-pr-section').length == 0) {
         document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="hero-banner-section"><div class="hero-banner-container container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> <div class="checkboxes"> <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/soc_2.svg" alt="SOC 2"><p>SOC 2</p>
-        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <input type="checkbox" value="SOC 2"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/iso.svg" alt="ISO 27001"><p>ISO 27001</p>
-        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <input type="checkbox" value="ISO 27001"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/pci_1.svg" alt="PCI DSS"><p>PCI DSS</p>
-        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <input type="checkbox" value="PCI DSS"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/hipaa.svg" alt="HIPAA"><p>HIPAA</p>
-        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <input type="checkbox" value="HIPAA"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/gdpr.svg" alt="GDPR"><p>GDPR</p>
-        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <input type="checkbox" value="GDPR"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/custom_frameworks.svg" alt="Other"><p>Other</p>
-        <input type="checkbox"><span class="checkmark"></span></label></div>
+        <input type="checkbox" value="Other"><span class="checkmark"></span></label></div>
         </div>
         <div class="btn-section"><button class="get-started-cta">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
         </div></div></section>
@@ -370,4 +372,38 @@
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
   }
+
+  //set a cookie using js
+  function setCookie(cname, cvalue) {
+    document.cookie = cname + "=" + cvalue + ";" + "path=/";
+  }
+
+  //get a cookie using js
+  function getCookie(cname) {
+    var name = cname + "=";
+    var decodedCookie = decodeURIComponent(document.cookie);
+    var ca = decodedCookie.split(';');
+    for (var i = 0; i < ca.length; i++) {
+      var c = ca[i];
+      while (c.charAt(0) == ' ') {
+        c = c.substring(1);
+      }
+      if (c.indexOf(name) == 0) {
+        return c.substring(name.length, c.length);
+      }
+    }
+    return "";
+  }
+
+  //window onclick check target class
+  window.onclick = function (event) {
+    if (event.target.className == "get-started-cta") {
+      document.querySelectorAll('.checkboxes input:checked').forEach(function (elem) {
+        setCookie(elem.value, "active");
+      });
+
+      document.querySelector('a[href="/demo"]').click();
+    }
+  }
+
 })();
