@@ -252,15 +252,16 @@ $color_2: #390c53;
         justify-content: center;
         margin-bottom: 32px;
         padding: 5px;
-        background: var(
-          --CTA-gradient,
-          linear-gradient(262deg, #1cebcf -21.66%, #399ffe 118.19%),
-          linear-gradient(81deg, #1cebcf -2.38%, #399ffe 104.62%)
-        );
+        transition: all 0.2s ease-in-out;
+        background: linear-gradient(45deg, #399ffe, #11c3ab);
+        background-position: 100% 0;
+        background-size: 160% 100%;
+        background-repeat: no-repeat;
         border-radius: 8px;
         text-decoration: none !important;
         &:hover {
-          background: linear-gradient(81deg, #1cebcf -2.38%, #399ffe 104.62%);
+          transition: all 0.2s ease-in-out;
+          background-position: 0 0;
         }
       }
       .spz-bg-diamond {
