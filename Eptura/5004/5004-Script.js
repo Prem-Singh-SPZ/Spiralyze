@@ -1,6 +1,6 @@
 (function () {
     document.body.classList.add('spz-5004');
-    waitForElm('.page-id-768 .site-content .get-touch-form .get-form .mktoForm .mktoFormRow .mktoField').then(function () {
+    waitForElm('body .site-content .get-touch-form .get-form .mktoForm .mktoFormRow .mktoField').then(function () {
         document.body.classList.add('spz-5004');
         clearFormFields();
         loadTest();
