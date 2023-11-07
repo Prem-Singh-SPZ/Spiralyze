@@ -27,7 +27,7 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
     }
   }
 
-  > footer {
+  footer {
     .page_padding {
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
         padding: 0 40px;
@@ -238,11 +238,11 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   #hero {
     .hero_container {
-      padding: 37px 40px 48px !important;
+      padding: 37px 40px 32px !important;
       max-width: 768px;
       margin: auto;
-      > .row {
-        > .col-md.pb-5 {
+      .row {
+        .col-md.pb-5 {
           padding: 0 14px 56px !important;
         }
       }
@@ -259,9 +259,9 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
 @media (max-width: 767.98px) {
   #hero {
     .hero_container {
-      padding: 38px 0 48px !important;
-      > .row {
-        > .col-md.pb-5 {
+      padding: 38px 0 24px !important;
+      .row {
+        .col-md.pb-5 {
           padding: 0 45px 37px !important;
         }
       }
@@ -284,12 +284,20 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
       }
     }
   }
+
+  #HeroImg {
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+  }
 }
+
 @media (min-width: 1199.98px) {
   #hero {
     .hero_container {
-      > .row {
-        > .col-md.pb-5 {
+      .row {
+        .col-md.pb-5 {
           padding-bottom: 0 !important;
           max-width: 685px;
         }
@@ -297,6 +305,13 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
     }
   }
 }
+
+@media (max-width: 1199.98px) {
+  #cta_panel_bottom #BotCTAPanelTxt p {
+    font-size: 26px;
+  }
+}
+
 @media (min-width: 767.98px) {
   #HeroFormCol {
     #HeroFormPanel {
