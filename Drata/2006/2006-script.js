@@ -3,9 +3,11 @@
   function createTest_2006() {
     document.body.classList.add('spz-2006');
 
-    console.log('there00');
-
     waitForElm('.MuiButtonBase-root.MuiButton-disableElevation').then(function () {
+      if (document.querySelector('.social-pr-section')) {
+        document.querySelector('.social-pr-section').remove();
+      }
+
       appendHomeHeroContent();
 
       // Add class 'safari' on body if browser is safari
@@ -16,10 +18,10 @@
   }
 
   function appendHomeHeroContent() {
-    waitForElm('.css-rdcx7j-HeroHomepage-featuredContent').then(function () {
+    waitForElm('.css-3db0n2-HeroHomepage-hero').then(function () {
       // insert element anchors cta
       if (document.querySelectorAll('.social-pr-section').length == 0) {
-        document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="hero-banner-section"><div class="hero-banner-container container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> <div class="checkboxes"> <div class="check-box">
+        document.querySelector('.css-3db0n2-HeroHomepage-hero').insertAdjacentHTML('afterend', `<section class="hero-banner-section"><div class="hero-banner-container container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> <div class="checkboxes"> <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/soc_2.svg" alt="SOC 2"><p>SOC 2</p>
         <input class="spz-input" type="checkbox" value="SOC 2"><span class="checkmark"></span></label></div>
         <div class="check-box">
@@ -27,7 +29,7 @@
         <input class="spz-input" type="checkbox" value="ISO 27001"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/pci_1.svg" alt="PCI DSS"><p>PCI DSS</p>
-        <input class="spz-input" type="checkbox" value="PCI DSS"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/hipaa.svg" alt="HIPAA"><p>HIPAA</p>
         <input class="spz-input" type="checkbox" value="HIPAA"><span class="checkmark"></span></label></div>
@@ -247,59 +249,13 @@
                 </div>
               </div>
             </div>
-          </section> <section class="review-section">
-          <div class="container">
-            <h6 class="review-sub-title">Testimonials</h6>
-            <h2 class="review-sec-title">See Why Our Customers Love Drata</h2>
-            <div class="rating-section">
-              <div class="img-container">
-                <img class="g2-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1697553107/drata/2003/g2_logo.svg" alt="G2 Logo" />
-                <img class="star-logo" src="//res.cloudinary.com/spiralyze/image/upload/v1697553107/drata/2003/frame_5597.svg" alt="Rating Stars" />
-              </div>
-              <p><span>Excellent</span> based on <span>500+</span> reviews</p>
-            </div>
-          </div>
-          <div class="review-slider container">
-            <div class="review-item-box">
-              <div class="review-content">
-                <h6 class="review-author">Derek E. </h6>
-                <p class="review">“Undergoing any audit is a massive lift for those being audited. The entire process is confusing if not done correctly. Drata has made the process simple, easy, and innovative.”</p>
-                <div class="rating dis-flex">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/v1698049092/drata/2003/custom/review_stars.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
-                </div>
-              </div>
-            </div>
-            <div class="review-item-box">
-              <div class="review-content">
-                <h6 class="review-author">Greg C.</h6>
-                <p class="review">“What really sets Drata apart is its ability to simplify and automate the often complex and time-consuming process of compliance.”</p>
-                <div class="rating dis-flex">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/v1698049092/drata/2003/custom/review_stars.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
-                </div>
-              </div>
-            </div>
-            <div class="review-item-box">
-              <div class="review-content">
-                <h6 class="review-author">Gabriel R.</h6>
-                <p class="review">“From day one, our experience with Drata was enjoyable. They have a very well thought product to help their clients achieve their compliance goals.”</p>
-                <div class="rating dis-flex">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1698049092/drata/2003/custom/review_stars.svg" alt="Rating Stars" title="Rating Stars" class="star-rating"/>
-                </div>
-              </div>
-            </div>
-          </div>
-            </section>`);
-
-        waitForElm('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').then(function () {
-          document.querySelector('a.MuiBox-root[href="https://drata.com/blog/g2-fall-2023-report"]').innerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2003/image_1.webp" alt="Leader Fall" class="leader-icon"><span class="leader-text">Compliance Automation Leader</span>`;
-        });
+          `);
       }
     });
   }
 
   function demoChecked() {
     waitForElm('.hs_demo_product_of_interest .input .MuiFormControlLabel-label').then(function () {
-      console.log('checikbox available');
 
       if (document.querySelector('.MuiFormControlLabel-label')) {
         document.querySelectorAll('.hs_demo_product_of_interest .input .hs-form-checkbox-display').forEach(function (checkbox) {
