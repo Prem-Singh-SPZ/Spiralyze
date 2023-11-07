@@ -21,30 +21,31 @@
       if (document.querySelectorAll('.social-pr-section').length == 0) {
         document.querySelector('.css-rdcx7j-HeroHomepage-featuredContent').insertAdjacentHTML('beforebegin', `<section class="hero-banner-section"><div class="hero-banner-container container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> <div class="checkboxes"> <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/soc_2.svg" alt="SOC 2"><p>SOC 2</p>
-        <input type="checkbox" value="SOC 2"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="SOC 2"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/iso.svg" alt="ISO 27001"><p>ISO 27001</p>
-        <input type="checkbox" value="ISO 27001"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="ISO 27001"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/pci_1.svg" alt="PCI DSS"><p>PCI DSS</p>
-        <input type="checkbox" value="PCI DSS"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="PCI DSS"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/hipaa.svg" alt="HIPAA"><p>HIPAA</p>
-        <input type="checkbox" value="HIPAA"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="HIPAA"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/gdpr.svg" alt="GDPR"><p>GDPR</p>
-        <input type="checkbox" value="GDPR"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="GDPR"><span class="checkmark"></span></label></div>
         <div class="check-box">
         <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/custom_frameworks.svg" alt="Other"><p>Other</p>
-        <input type="checkbox" value="Other"><span class="checkmark"></span></label></div>
+        <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label></div>
         </div>
         <div class="btn-section"><button class="get-started-cta">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
         </div></div></section>
         <section class="hero-img-section"> <div class="img-container"><picture>
+        <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/360.webp">
         <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1440.webp">
         <source media="(min-width: 1900px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1920.webp">
         <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1440.png" type="image/png">
-        <img src="//res.cloudinary.com/spiralyze/image/upload/v1698933874/drata/2006/360.webp" alt="Drata Dashboard">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/360.webp" alt="Drata Dashboard">
       </picture></div></section>
         <section class="social-pr-section">
             <!-- <div class="container"> -->
@@ -296,6 +297,31 @@
     });
   }
 
+  function demoChecked() {
+    waitForElm('.hs_demo_product_of_interest .input .MuiFormControlLabel-label').then(function () {
+      console.log('checikbox available');
+
+      if (document.querySelector('.MuiFormControlLabel-label')) {
+        document.querySelectorAll('.hs_demo_product_of_interest .input .hs-form-checkbox-display').forEach(function (checkbox) {
+          let checkValue = checkbox.querySelector('span').textContent;
+          let isCookiePresent = getCookie(checkValue);
+
+          if (isCookiePresent) {
+            checkbox.querySelector('input').checked = true;
+
+            let secondCheck = checkbox.querySelector('input').getAttribute('id');
+
+            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + ' #' + secondCheck).checked = true;
+            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + ' #' + secondCheck).closest('label').click();
+
+            //delete cookie
+            deleteCookie(checkValue);
+          }
+        });
+      }
+    });
+  }
+
   function removeTest() {
     document.body.classList.remove("spz-2006");
   }
@@ -334,7 +360,7 @@
       createTest_2006();
     }
     else if (window.location.pathname.indexOf("/demo") > -1) {
-      createTest_2006();
+      demoChecked();
     }
     else {
       removeTest();
@@ -395,15 +421,30 @@
     return "";
   }
 
+  //delete cookie using js
+  function deleteCookie(cname) {
+    document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+  }
+
   //window onclick check target class
   window.onclick = function (event) {
+    if (event.target.className == "spz-input") {
+      if (event.target.checked) {
+        event.target.closest('.custom-check').classList.add('checked');
+      }
+      else {
+        event.target.closest('.custom-check').classList.remove('checked');
+      }
+    }
+
     if (event.target.className == "get-started-cta") {
-      document.querySelectorAll('.checkboxes input:checked').forEach(function (elem) {
-        setCookie(elem.value, "active");
+      document.querySelectorAll('.checkboxes input').forEach(function (elem) {
+        if (elem.checked) {
+          setCookie(elem.value, 1);
+        }
       });
 
       document.querySelector('a[href="/demo"]').click();
     }
   }
-
 })();

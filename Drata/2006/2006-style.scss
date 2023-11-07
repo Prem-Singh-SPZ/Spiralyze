@@ -665,7 +665,9 @@ $ff-inter: "Inter", sans-serif;
 
   .MuiBox-root.css-rdcx7j-HeroHomepage-featuredContent,
   .css-1buoy6w-HeroHomepage-ellipses,
-  .css-3db0n2-HeroHomepage-hero {
+  .css-3db0n2-HeroHomepage-hero,
+  .css-kfz1fl-MuiSvgIcon-root-Form-dotsSquarePrimaryIcon,
+  .css-1a8l7jt-MuiSvgIcon-root-Form-dotsSquareSecondaryIcon {
     display: none !important;
   }
 
@@ -687,10 +689,23 @@ $ff-inter: "Inter", sans-serif;
 
   .hero-banner-section {
     .hero-banner-container {
-      padding: 64px 80px 32px 80px;
+      padding: 19px 80px 32px 80px;
+
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        padding: 19px 32px 32px 32px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 4px 16px 40px;
+      }
+
       .hero-copy {
         max-width: 805px;
         margin: auto auto 40px;
+
+        @media (max-width: 767.98px) {
+          margin: auto auto 31px;
+        }
 
         h2 {
           color: #0c131a;
@@ -701,10 +716,17 @@ $ff-inter: "Inter", sans-serif;
           font-weight: 900;
           line-height: 64px;
           letter-spacing: -1.08px;
-          margin-bottom: 10px;
+          margin-bottom: 9px;
 
           span {
             color: #1793ff;
+          }
+
+          @media (max-width: 767.98px) {
+            font-size: 42px;
+            line-height: 48px;
+            letter-spacing: -0.84px;
+            margin-bottom: 11px;
           }
         }
 
@@ -717,6 +739,11 @@ $ff-inter: "Inter", sans-serif;
           font-weight: 600;
           line-height: 28px;
           margin: 0;
+
+          @media (max-width: 767.98px) {
+            font-size: 18px;
+            line-height: 26px;
+          }
         }
       }
 
@@ -730,6 +757,17 @@ $ff-inter: "Inter", sans-serif;
           font-weight: 700;
           line-height: 26px;
           margin-bottom: 24px;
+          margin-top: 0;
+
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            margin-bottom: 28px;
+          }
+
+          @media (max-width: 767.98px) {
+            font-size: 16px;
+            line-height: 24px;
+            margin-bottom: 29px;
+          }
         }
 
         .checkboxes {
@@ -740,12 +778,37 @@ $ff-inter: "Inter", sans-serif;
           margin: auto;
           margin-bottom: 40px;
 
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            max-width: 704px;
+            margin-bottom: 17px;
+          }
+
+          @media (max-width: 767.98px) {
+            max-width: 328px;
+            margin-bottom: 17px;
+          }
+
           .check-box {
             display: flex;
             flex-direction: column;
             align-items: center;
             width: 100%;
             max-width: 156px;
+
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              max-width: 218.66px;
+              margin-bottom: 24px;
+
+              &:nth-child(2),
+              &:nth-child(5) {
+                margin: 0 24px 24px;
+              }
+            }
+
+            @media (max-width: 767.98px) {
+              max-width: 156px;
+              margin-bottom: 16px;
+            }
 
             .custom-check {
               border-radius: 8px;
@@ -758,6 +821,11 @@ $ff-inter: "Inter", sans-serif;
               text-align: center;
               cursor: pointer;
 
+              @media (max-width: 767.98px) {
+                height: 140px;
+                padding: 20px;
+              }
+
               p {
                 color: #697586;
                 font-family: $ff-inter;
@@ -767,6 +835,12 @@ $ff-inter: "Inter", sans-serif;
                 line-height: 26px;
                 margin: 0;
                 cursor: pointer;
+                margin-top: 9px;
+
+                @media (max-width: 767.98px) {
+                  font-size: 16px;
+                  line-height: 24px;
+                }
               }
 
               input {
@@ -798,6 +872,13 @@ $ff-inter: "Inter", sans-serif;
                   color: #293642;
                 }
               }
+
+              &.checked {
+                border: 1px solid var(--primary-primary-500, #1793ff);
+                box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06),
+                  0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
+                transform: translate(0px, -5px);
+              }
             }
           }
         }
@@ -808,7 +889,7 @@ $ff-inter: "Inter", sans-serif;
             border-radius: 12px;
             background: #0c131a;
             height: 60px;
-            padding: 10px 20px;
+            padding: 10px 20px 10px 32px;
             color: #fff;
             font-family: $ff-inter;
             font-size: 16px;
@@ -820,9 +901,18 @@ $ff-inter: "Inter", sans-serif;
             max-width: 182px;
             display: inline-flex;
             align-items: center;
-            justify-content: space-around;
+            justify-content: center;
             border: 0;
             cursor: pointer;
+            white-space: nowrap;
+
+            @media (max-width: 767.98px) {
+              max-width: 328px;
+            }
+
+            img {
+              margin-left: 24px;
+            }
 
             &:hover {
               background: #293642;

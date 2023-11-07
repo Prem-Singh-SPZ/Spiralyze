@@ -643,7 +643,9 @@
 }
 .spz-2006 .MuiBox-root.css-rdcx7j-HeroHomepage-featuredContent,
 .spz-2006 .css-1buoy6w-HeroHomepage-ellipses,
-.spz-2006 .css-3db0n2-HeroHomepage-hero {
+.spz-2006 .css-3db0n2-HeroHomepage-hero,
+.spz-2006 .css-kfz1fl-MuiSvgIcon-root-Form-dotsSquarePrimaryIcon,
+.spz-2006 .css-1a8l7jt-MuiSvgIcon-root-Form-dotsSquareSecondaryIcon {
   display: none !important;
 }
 .spz-2006 .css-gdxc1a-HeroHomepage-root {
@@ -660,11 +662,26 @@
   display: none !important;
 }
 .spz-2006 .hero-banner-section .hero-banner-container {
-  padding: 64px 80px 32px 80px;
+  padding: 19px 80px 32px 80px;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container {
+    padding: 19px 32px 32px 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container {
+    padding: 4px 16px 40px;
+  }
 }
 .spz-2006 .hero-banner-section .hero-banner-container .hero-copy {
   max-width: 805px;
   margin: auto auto 40px;
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .hero-copy {
+    margin: auto auto 31px;
+  }
 }
 .spz-2006 .hero-banner-section .hero-banner-container .hero-copy h2 {
   color: #0c131a;
@@ -675,10 +692,18 @@
   font-weight: 900;
   line-height: 64px;
   letter-spacing: -1.08px;
-  margin-bottom: 10px;
+  margin-bottom: 9px;
 }
 .spz-2006 .hero-banner-section .hero-banner-container .hero-copy h2 span {
   color: #1793ff;
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .hero-copy h2 {
+    font-size: 42px;
+    line-height: 48px;
+    letter-spacing: -0.84px;
+    margin-bottom: 11px;
+  }
 }
 .spz-2006 .hero-banner-section .hero-banner-container .hero-copy p {
   color: #293642;
@@ -690,6 +715,12 @@
   line-height: 28px;
   margin: 0;
 }
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .hero-copy p {
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section h6 {
   color: #293642;
   text-align: center;
@@ -699,6 +730,19 @@
   font-weight: 700;
   line-height: 26px;
   margin-bottom: 24px;
+  margin-top: 0;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section h6 {
+    margin-bottom: 28px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section h6 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 29px;
+  }
 }
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes {
   display: -webkit-box;
@@ -712,6 +756,18 @@
   max-width: 1056px;
   margin: auto;
   margin-bottom: 40px;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes {
+    max-width: 704px;
+    margin-bottom: 17px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes {
+    max-width: 328px;
+    margin-bottom: 17px;
+  }
 }
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box {
   display: -webkit-box;
@@ -727,6 +783,21 @@
   width: 100%;
   max-width: 156px;
 }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box {
+    max-width: 218.66px;
+    margin-bottom: 24px;
+  }
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box:nth-child(2), .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box:nth-child(5) {
+    margin: 0 24px 24px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box {
+    max-width: 156px;
+    margin-bottom: 16px;
+  }
+}
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check {
   border-radius: 8px;
   border: 1px solid var(--Neutrals-300, #dde3eb);
@@ -738,6 +809,12 @@
   text-align: center;
   cursor: pointer;
 }
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check {
+    height: 140px;
+    padding: 20px;
+  }
+}
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check p {
   color: #697586;
   font-family: "Inter", sans-serif;
@@ -747,6 +824,13 @@
   line-height: 26px;
   margin: 0;
   cursor: pointer;
+  margin-top: 9px;
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check p {
+    font-size: 16px;
+    line-height: 24px;
+  }
 }
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check input {
   display: none;
@@ -773,6 +857,13 @@
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check:hover p {
   color: #293642;
 }
+.spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check.checked {
+  border: 1px solid var(--primary-primary-500, #1793ff);
+  -webkit-box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06), 0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
+          box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06), 0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
+  -webkit-transform: translate(0px, -5px);
+          transform: translate(0px, -5px);
+}
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .btn-section {
   text-align: center;
 }
@@ -780,7 +871,7 @@
   border-radius: 12px;
   background: #0c131a;
   height: 60px;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 32px;
   color: #fff;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -796,10 +887,20 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -ms-flex-pack: distribute;
-      justify-content: space-around;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: 0;
   cursor: pointer;
+  white-space: nowrap;
+}
+@media (max-width: 767.98px) {
+  .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .btn-section .get-started-cta {
+    max-width: 328px;
+  }
+}
+.spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .btn-section .get-started-cta img {
+  margin-left: 24px;
 }
 .spz-2006 .hero-banner-section .hero-banner-container .checkbox-section .btn-section .get-started-cta:hover {
   background: #293642;
