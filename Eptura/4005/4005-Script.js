@@ -41,28 +41,293 @@
         pageName: "website-proxyclick-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1694619471/eptura/4004/logo-proxyclick.svg",
         logoAlt: "Proxyclick demo",
+        sliders: [
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft.svg",
+                sAltTag: "Microsoft AD FS",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft_teams.svg",
+                sAltTag: "Microsoft Teams",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_outlook.svg",
+                sAltTag: "Microsoft Outlook",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349750/eptura/4005/logo_-_outlook_1.svg",
+                sAltTag: "Genetec Security Center",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349752/eptura/4005/logo_-_outlook_2.svg",
+                sAltTag: "Lenel OnGuard",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349753/eptura/4005/logo_-_outlook_3.svg",
+                sAltTag: "Openpath - Avigilon",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft.svg",
+                sAltTag: "Microsoft AD FS",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft_teams.svg",
+                sAltTag: "Microsoft Teams",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_outlook.svg",
+                sAltTag: "Microsoft Outlook",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349750/eptura/4005/logo_-_outlook_1.svg",
+                sAltTag: "Genetec Security Center",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349752/eptura/4005/logo_-_outlook_2.svg",
+                sAltTag: "Lenel OnGuard",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349753/eptura/4005/logo_-_outlook_3.svg",
+                sAltTag: "Openpath - Avigilon",
+            },
+        ],
     },
     {
         pageName: "website-managerplus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575720/eptura/4003/managerplus-eptura-logo-1.svg",
         logoAlt: "ManagerPlus demo",
+        sliders: [
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349780/eptura/4005/logo_-_okta.svg",
+                sAltTag: "ClearPath GPS",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349781/eptura/4005/logo_-_okta_1.svg",
+                sAltTag: "GEOTAB",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349784/eptura/4005/logo_-_okta_3.svg",
+                sAltTag: "GPS Insight",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349783/eptura/4005/logo_-_okta_2.svg",
+                sAltTag: "VisionLink",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349786/eptura/4005/logo_-_okta_4.svg",
+                sAltTag: "Zonar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349789/eptura/4005/logo_-_okta_5.svg",
+                sAltTag: "Okta",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349780/eptura/4005/logo_-_okta.svg",
+                sAltTag: "ClearPath GPS",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349781/eptura/4005/logo_-_okta_1.svg",
+                sAltTag: "GEOTAB",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349784/eptura/4005/logo_-_okta_3.svg",
+                sAltTag: "GPS Insight",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349783/eptura/4005/logo_-_okta_2.svg",
+                sAltTag: "VisionLink",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349786/eptura/4005/logo_-_okta_4.svg",
+                sAltTag: "Zonar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349789/eptura/4005/logo_-_okta_5.svg",
+                sAltTag: "Okta",
+            },
+        ],
     },
     {
         pageName: "website-archibus-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575732/eptura/4003/archibus-eptura-logo-color_1.svg",
         logoAlt: "Archibus demo",
+        sliders: [
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sAltTag: "Microsoft Outlook",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349848/eptura/4005/logo_-_outlook_4.svg",
+                sAltTag: "Microsoft Exchange",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349853/eptura/4005/logo_-_outlook_7.svg",
+                sAltTag: "AutoCAD",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349851/eptura/4005/logo_-_outlook_6.svg",
+                sAltTag: "Revit",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349855/eptura/4005/logo_-_outlook_8.svg",
+                sAltTag: "ESRI",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349856/eptura/4005/logo_-_outlook_9.svg",
+                sAltTag: "VergeSense",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sAltTag: "Microsoft Outlook",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349848/eptura/4005/logo_-_outlook_4.svg",
+                sAltTag: "Microsoft Exchange",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349853/eptura/4005/logo_-_outlook_7.svg",
+                sAltTag: "AutoCAD",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349851/eptura/4005/logo_-_outlook_6.svg",
+                sAltTag: "Revit",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349855/eptura/4005/logo_-_outlook_8.svg",
+                sAltTag: "ESRI",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349856/eptura/4005/logo_-_outlook_9.svg",
+                sAltTag: "VergeSense",
+            },
+        ],
     },
     {
         pageName: "website-spaceiq-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575752/eptura/4003/spaceiq-eptura-logo-color_1.svg",
         logoAlt: "SpaceIQ demo",
+        sliders: [
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349879/eptura/4005/logo_-_outlook_10.svg",
+                sAltTag: "Microsoft Exchange",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_outlook_11.svg",
+                sAltTag: "Office 365 Calendar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349929/eptura/4005/logo_-_google_drive_2.svg",
+                sAltTag: "Google Drive",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_google_drive.svg",
+                sAltTag: "Google Calendar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349935/eptura/4005/logo_-_slack_4.svg",
+                sAltTag: "Slack",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_slack_1.svg",
+                sAltTag: "Loseant",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_slack_3.svg",
+                sAltTag: "Namely",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_amazon_aws.svg",
+                sAltTag: "AWS",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349879/eptura/4005/logo_-_outlook_10.svg",
+                sAltTag: "Microsoft Exchange",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_outlook_11.svg",
+                sAltTag: "Office 365 Calendar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349929/eptura/4005/logo_-_google_drive_2.svg",
+                sAltTag: "Google Drive",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_google_drive.svg",
+                sAltTag: "Google Calendar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349935/eptura/4005/logo_-_slack_4.svg",
+                sAltTag: "Slack",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_slack_1.svg",
+                sAltTag: "Loseant",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_slack_3.svg",
+                sAltTag: "Namely",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_amazon_aws.svg",
+                sAltTag: "AWS",
+            },
+        ],
     },
     {
         pageName: "website-ioffice-demo",
         pageLogo: "//res.cloudinary.com/spiralyze/image/upload/v1693575766/eptura/4003/ioffice-eptura-logo-color_1.svg",
         logoAlt: "iOFFICE demo",
+        sliders: [
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sAltTag: "Microsoft Outlook",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_google_drive_3.svg",
+                sAltTag: "Google Calendar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_slack_5.svg",
+                sAltTag: "Slack",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349958/eptura/4005/logo_-_outlook_13.svg",
+                sAltTag: "AutoCAD",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349960/eptura/4005/logo_-_outlook_14.svg",
+                sAltTag: "VergeSense",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699938178/eptura/4005/Logo_-_SAML_2.0.svg",
+                sAltTag: "SAML 2.0",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sAltTag: "Microsoft Outlook",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_google_drive_3.svg",
+                sAltTag: "Google Calendar",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_slack_5.svg",
+                sAltTag: "Slack",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349958/eptura/4005/logo_-_outlook_13.svg",
+                sAltTag: "AutoCAD",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349960/eptura/4005/logo_-_outlook_14.svg",
+                sAltTag: "VergeSense",
+            },
+            {
+                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699938178/eptura/4005/Logo_-_SAML_2.0.svg",
+                sAltTag: "SAML 2.0",
+            },
+        ],
     },
-
     ];
 
     waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
@@ -131,115 +396,17 @@
                     document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
 
 
-                    if (identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo") {
-                        document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
+                    let count = identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo" ? "30+" : "40+";
+
+                    document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
                         <div class="ribbon-title">
-                            <h6>Connect to <br><span> 30+ </span> platforms</h6>
+                            <h6>Connect to <br><span> `+ count + ` </span> platforms</h6>
                         </div>
                         <div class="logos-slider swiper mySwiper">
-                            <div class="slider-wrapper swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Microsoft" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_microsoft.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                 <img class="logo" alt="Okta" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_okta.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Google" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_google.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Amazon AWS" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_amazon_aws.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                 <img class="logo" alt="Slack" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_slack.svg" />
-                             </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Oracle" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_oracle.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Azure Ad" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_azure_ad.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Autodesk" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_autodesk.svg" />
-                             </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Salesforce" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_salesforce.svg" />
-                             </div>
-                             <div class="swiper-slide">
-                                <img class="logo" alt="Microsoft" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_microsoft.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                 <img class="logo" alt="Okta" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_okta.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Google" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_google.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Amazon AWS" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_amazon_aws.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                 <img class="logo" alt="Slack" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_slack.svg" />
-                             </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Oracle" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_oracle.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Azure Ad" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_azure_ad.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Autodesk" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697021063/eptura/4005/logo_-_autodesk.svg" />
-                             </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Salesforce" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_salesforce.svg" />
-                             </div>
-                            </div>
+                        `+ sliderSec(url.pageName) + `
                         </div>
                         </div>`);
-                    }
-                    else {
-                        document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
-                        <div class="ribbon-title">
-                            <h6>Connect to <br><span> 40+ </span> platforms</h6>
-                        </div>
-                        <div class="logos-slider swiper mySwiper">
-                            <div class="slider-wrapper swiper-wrapper">
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Microsoft" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_microsoft.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Microsoft Teams" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_microsoft_teams.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Outlook" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_outlook.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Slack" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_slack.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Google" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_google.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Salesforce" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_salesforce.svg" />
-                             </div>
-                             <div class="swiper-slide">
-                                 <img class="logo" alt="Okta" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_okta.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Google Drive" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020744/eptura/4005/logo_-_google_drive.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Dropbox" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_dropbox.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Azure Ad" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_azure_ad.svg" />
-                            </div>
-                            <div class="swiper-slide">
-                                <img class="logo" alt="Cisco" src="//res.cloudinary.com/dxprfaxf3/image/upload/v1697020743/eptura/4005/logo_-_cisco.svg" />
-                            </div>
-                            </div>
-                        </div>
-                        </div>`);
-                    }
+
                 }
             })
         });
@@ -390,5 +557,21 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
+    }
+
+    //Creating Slider content
+    function sliderSec(page) {
+        let thisPage = page;
+        //search index by page name
+        const searchIndex = pageContent.findIndex(page => page.pageName === thisPage);
+        let sliderEl = '<div class="slider-wrapper swiper-wrapper">'
+        pageContent[searchIndex].sliders.forEach(element => {
+            sliderEl += ` <div class="swiper-slide">
+            <img class="logo" src="${element.sLogo}" alt="${element.sAltTag}" />
+        </div>`
+        });
+        sliderEl += '</div>';
+
+        return sliderEl;
     }
 })();
