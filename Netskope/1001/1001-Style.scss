@@ -311,6 +311,11 @@ body.netskope-1001-spz {
     border-radius: 24px;
     background: #fff;
 
+    @media (max-width: 767.98px) {
+      max-width: 400px;
+      margin: auto;
+    }
+
     form.mktoForm#mktoForm_8778 {
       position: relative;
       padding: 24px 26px 16px !important;
@@ -328,11 +333,29 @@ body.netskope-1001-spz {
         }
 
         &.row-netskope-fm {
-          order: 12;
+          order: 13;
+
+          .netskope-fm {
+            color: #7e8bba !important;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+          }
         }
 
         &.row-single_checkbox {
-          order: 13;
+          order: 12;
+
+          .mktoLabel {
+            p.p11 {
+              color: #081a59;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 20px;
+            }
+          }
         }
       }
 
@@ -421,6 +444,7 @@ body.netskope-1001-spz {
           }
           .mktoFieldWrap.visible {
             display: block;
+            float: left;
           }
         }
       }
@@ -446,6 +470,11 @@ body.netskope-1001-spz {
           @media (max-width: 1024.98px) {
             max-width: calc(100% - 12px);
           }
+
+          &:hover {
+            background-color: #fff !important;
+            border: 1px solid #081a59 !important;
+          }
         }
       }
 
@@ -456,6 +485,10 @@ body.netskope-1001-spz {
           border: 1px solid rgba(8, 26, 89, 0.2) !important;
           padding: 22px 20px 6px 16px !important;
           color: #7e8bba !important;
+
+          &.mktoValid {
+            color: #081a59 !important;
+          }
 
           &[aria-describedby="ValidMsgFirstName"],
           &[aria-describedby="ValidMsgLastName"],
@@ -493,6 +526,10 @@ body.netskope-1001-spz {
                 letter-spacing: 0.5px;
                 overflow: hidden;
                 text-overflow: ellipsis;
+                transition: all 0.3s ease;
+                position: absolute;
+                left: 16px;
+                top: 16px;
               }
             }
 
@@ -512,13 +549,11 @@ body.netskope-1001-spz {
               }
 
               span.hintText {
-                position: absolute;
                 font-size: 12px !important;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 20px !important;
                 top: 6px;
-                left: 16px;
               }
 
               .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
@@ -593,14 +628,15 @@ body.netskope-1001-spz {
               font-size: 25px;
               left: 2px;
               position: absolute;
-              transition: all 0.6s ease;
+              transition: all 0.3s ease;
             }
           }
         }
-        .frm-commt.close {
+        .frm-commt.close-cmnt {
           .commt-text {
             &:before {
               content: "-";
+              top: -2px;
             }
           }
         }

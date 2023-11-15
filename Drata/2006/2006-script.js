@@ -8,7 +8,9 @@
         document.querySelector('.social-pr-section').remove();
       }
 
-      appendHomeHeroContent();
+      waitForElm('.css-1a48d2a-TabsQuotes-outerContainer').then(function () {
+        appendHomeHeroContent();
+      });
 
       // Add class 'safari' on body if browser is safari
       if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -18,38 +20,54 @@
   }
 
   function appendHomeHeroContent() {
+    const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
     waitForElm('.css-3db0n2-HeroHomepage-hero').then(function () {
       // insert element anchors cta
-      if (document.querySelectorAll('.social-pr-section').length == 0) {
-        document.querySelector('.css-3db0n2-HeroHomepage-hero').insertAdjacentHTML('afterend', `<section class="hero-banner-section"><div class="hero-banner-container container"><div class="hero-copy"> <h2>Trust, <span>Automated</span></h2> <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> </div><div class="checkbox-section"> <h6>What frameworks are you interested in? </h6> <div class="checkboxes"> <div class="check-box">
-        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/soc_2.svg" alt="SOC 2"><p>SOC 2</p>
-        <input class="spz-input" type="checkbox" value="SOC 2"><span class="checkmark"></span></label></div>
-        <div class="check-box">
-        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/iso.svg" alt="ISO 27001"><p>ISO 27001</p>
-        <input class="spz-input" type="checkbox" value="ISO 27001"><span class="checkmark"></span></label></div>
-        <div class="check-box">
-        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/pci_1.svg" alt="PCI DSS"><p>PCI DSS</p>
-        <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label></div>
-        <div class="check-box">
-        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/hipaa.svg" alt="HIPAA"><p>HIPAA</p>
-        <input class="spz-input" type="checkbox" value="HIPAA"><span class="checkmark"></span></label></div>
-        <div class="check-box">
-        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/gdpr.svg" alt="GDPR"><p>GDPR</p>
-        <input class="spz-input" type="checkbox" value="GDPR"><span class="checkmark"></span></label></div>
-        <div class="check-box">
-        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/custom_frameworks.svg" alt="Other"><p>Other</p>
-        <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label></div>
-        </div>
-        <div class="btn-section"><button class="get-started-cta">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
-        </div></div></section>
-        <section class="hero-img-section"> <div class="img-container"><picture>
-        <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/360.webp">
-        <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1440.webp">
-        <source media="(min-width: 1900px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1920.webp">
-        <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/1440.png" type="image/png">
-        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/2006/360.webp" alt="Drata Dashboard">
-      </picture></div></section>
-        <section class="social-pr-section">
+      if (document.querySelectorAll('.hero-banner-section').length == 0) {
+        document.querySelector('.css-3db0n2-HeroHomepage-hero').insertAdjacentHTML('afterend', `
+        <div class="hero-banner-section">
+          <div class="hero-banner-container container">
+          <div class="hero-copy"> 
+            <h2><span>Automate</span> and <span>Accelerate</span> Compliance</h2> 
+            <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> 
+          </div>
+          <div class="checkbox-section">
+            <h6>What frameworks are you interested in? </h6> 
+            <div class="checkboxes"> 
+              <div class="check-box">
+                <label class="custom-check">
+                  <img src="${astUrl}/v1698933833/drata/2006/soc_2.svg" alt="SOC 2">
+                  <p>SOC 2</p>
+                  <input class="spz-input" type="checkbox" value="SOC 2">
+                  <span class="checkmark"></span>
+                </label>
+              </div>
+              <div class="check-box">
+              <label class="custom-check"><img src="${astUrl}/v1699516610/drata/2006/iso.svg" alt="ISO 27001"><p>ISO 27001</p>
+              <input class="spz-input" type="checkbox" value="ISO 27001"><span class="checkmark"></span></label></div>
+              <div class="check-box">
+              <label class="custom-check"><img src="${astUrl}/v1698933833/drata/2006/pci_1.svg" alt="PCI DSS"><p>PCI DSS</p>
+              <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label></div>
+              <div class="check-box">
+              <label class="custom-check"><img src="${astUrl}/v1698933833/drata/2006/hipaa.svg" alt="HIPAA"><p>HIPAA</p>
+              <input class="spz-input" type="checkbox" value="HIPAA"><span class="checkmark"></span></label></div>
+              <div class="check-box">
+              <label class="custom-check"><img src="${astUrl}/v1698933833/drata/2006/gdpr.svg" alt="GDPR"><p>GDPR</p>
+              <input class="spz-input" type="checkbox" value="GDPR"><span class="checkmark"></span></label></div>
+              <div class="check-box">
+              <label class="custom-check"><img src="${astUrl}/v1698933833/drata/2006/custom_frameworks.svg" alt="Other"><p>Other</p>
+              <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label></div>
+              </div>
+              <div class="btn-section"><button class="get-started-cta">Get Started <img src="${astUrl}/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
+              </div></div></div>
+              <div class="hero-img-section"> <div class="img-container"><picture>
+              <source media="(max-width: 767px)" srcset="${astUrl}/f_auto/drata/2006/360.webp">
+              <source media="(min-width: 768px)" srcset="${astUrl}/f_auto/drata/2006/1440.webp">
+              <source media="(min-width: 1900px)" srcset="${astUrl}/f_auto/drata/2006/1920.webp">
+              <source srcset="${astUrl}/f_auto/drata/2006/1440.png" type="image/png">
+              <img src="${astUrl}/f_auto/drata/2006/360.webp" alt="Drata Dashboard">
+            </picture></div></div>
+        <div class="social-pr-section">
             <!-- <div class="container"> -->
             <h2 class="sp-title">
               Join the thousands of companies that trust Drata
@@ -58,7 +76,7 @@
               <div class="sp-marquee">
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/abnormal.svg"
+                    src="${astUrl}/v1698933833/drata/2006/abnormal.svg"
                     class="sp-img"
                     alt="Abnormal"
                     title="Abnormal"
@@ -66,7 +84,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/airbase.svg"
+                    src="${astUrl}/v1698933833/drata/2006/airbase.svg"
                     class="sp-img"
                     alt="Airbase"
                     title="Airbase"
@@ -74,7 +92,7 @@
                 </div>
                 <div class="sp-logo-item">
                 <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/superhuman_1.svg"
+                  src="${astUrl}/v1698933833/drata/2006/superhuman_1.svg"
                   class="sp-img"
                   alt="Super Human"
                   title="Super Human"
@@ -82,7 +100,7 @@
               </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/clearbit.svg"
+                    src="${astUrl}/v1698933833/drata/2006/clearbit.svg"
                     class="sp-img"
                     alt="Clearbit"
                     title="Clearbit"
@@ -90,7 +108,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/bamboohr.svg"
+                    src="${astUrl}/v1698933833/drata/2006/bamboohr.svg"
                     class="sp-img"
                     alt="bamboo HR"
                     title="bamboo HR"
@@ -98,7 +116,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/notion.svg"
+                    src="${astUrl}/v1698933833/drata/2006/notion.svg"
                     class="sp-img"
                     alt="Notion"
                     title="Notion"
@@ -106,7 +124,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/postman.svg"
+                    src="${astUrl}/v1698933833/drata/2006/postman.svg"
                     class="sp-img"
                     alt="Postman"
                     title="Postman"
@@ -114,7 +132,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/vercel.svg"
+                    src="${astUrl}/v1698933833/drata/2006/vercel.svg"
                     class="sp-img"
                     alt="Vercel"
                     title="Vercel"
@@ -122,7 +140,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/lemonade.svg"
+                    src="${astUrl}/v1698933833/drata/2006/lemonade.svg"
                     class="sp-img"
                     alt="Lemonade"
                     title="Lemonade"
@@ -130,7 +148,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933834/drata/2006/fivetran.svg"
+                    src="${astUrl}/v1698933834/drata/2006/fivetran.svg"
                     class="sp-img"
                     alt="Fivetran"
                     title="Fivetran"
@@ -138,7 +156,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/vip.svg"
+                    src="${astUrl}/v1698933833/drata/2006/vip.svg"
                     class="sp-img"
                     alt="Wvip"
                     title="Wvip"
@@ -146,7 +164,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/clearco.svg"
+                    src="${astUrl}/v1698933833/drata/2006/clearco.svg"
                     class="sp-img"
                     alt="Clearco"
                     title="Clearco"
@@ -155,7 +173,7 @@
                 <!-- Repeat -->
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/abnormal.svg"
+                    src="${astUrl}/v1698933833/drata/2006/abnormal.svg"
                     class="sp-img"
                     alt="Abnormal"
                     title="Abnormal"
@@ -163,7 +181,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/airbase.svg"
+                    src="${astUrl}/v1698933833/drata/2006/airbase.svg"
                     class="sp-img"
                     alt="Airbase"
                     title="Airbase"
@@ -171,7 +189,7 @@
                 </div>
                 <div class="sp-logo-item">
                 <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/superhuman_1.svg"
+                  src="${astUrl}/v1698933833/drata/2006/superhuman_1.svg"
                   class="sp-img"
                   alt="Super Human"
                   title="Super Human"
@@ -179,7 +197,7 @@
               </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/clearbit.svg"
+                    src="${astUrl}/v1698933833/drata/2006/clearbit.svg"
                     class="sp-img"
                     alt="Clearbit"
                     title="Clearbit"
@@ -187,7 +205,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/bamboohr.svg"
+                    src="${astUrl}/v1698933833/drata/2006/bamboohr.svg"
                     class="sp-img"
                     alt="bamboo HR"
                     title="bamboo HR"
@@ -195,7 +213,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/notion.svg"
+                    src="${astUrl}/v1698933833/drata/2006/notion.svg"
                     class="sp-img"
                     alt="Notion"
                     title="Notion"
@@ -203,7 +221,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/postman.svg"
+                    src="${astUrl}/v1698933833/drata/2006/postman.svg"
                     class="sp-img"
                     alt="Postman"
                     title="Postman"
@@ -211,7 +229,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/vercel.svg"
+                    src="${astUrl}/v1698933833/drata/2006/vercel.svg"
                     class="sp-img"
                     alt="Vercel"
                     title="Vercel"
@@ -219,7 +237,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/lemonade.svg"
+                    src="${astUrl}/v1698933833/drata/2006/lemonade.svg"
                     class="sp-img"
                     alt="Lemonade"
                     title="Lemonade"
@@ -227,7 +245,7 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933834/drata/2006/fivetran.svg"
+                    src="${astUrl}/v1698933834/drata/2006/fivetran.svg"
                     class="sp-img"
                     alt="Fivetran"
                     title="Fivetran"
@@ -235,14 +253,14 @@
                 </div>
                 <div class="sp-logo-item">
                   <img
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/vip.svg"
+                    src="${astUrl}/v1698933833/drata/2006/vip.svg"
                     class="sp-img"
                     alt="Wvip"
                     title="Wvip"
                   />
                 </div>
                 <div class="sp-logo-item">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1698933833/drata/2006/clearco.svg"
+                  <img src="${astUrl}/v1698933833/drata/2006/clearco.svg"
                     class="sp-img"
                     alt="Clearco"
                     title="Clearco"/>
@@ -274,6 +292,11 @@
             deleteCookie(checkValue);
           }
         });
+
+        if (document.querySelector('.spz-2006 main') && document.querySelectorAll('.spz-2006 main input[name="cro_test_1"]').length == 0) {
+          document.querySelector('.spz-2006 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_1" value="#2006_Hero_Redesign">'); s
+          document.querySelector('.spz-2006 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_2" value="Variant">');
+        }
       }
     });
   }

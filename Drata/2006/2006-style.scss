@@ -2,14 +2,14 @@ $ff-inter: "Inter", sans-serif;
 
 .spz-2006 {
   .social-pr-section {
-    padding: 10px 0 1px;
+    padding: 13px 0 1px;
 
     @media (max-width: 1199.98px) {
-      padding-top: 15px;
+      padding-top: 12px;
     }
 
     @media (max-width: 767.98px) {
-      padding-top: 18px;
+      padding-top: 44px;
     }
 
     .sp-title {
@@ -28,10 +28,14 @@ $ff-inter: "Inter", sans-serif;
       margin-right: auto;
       overflow: hidden;
       position: relative;
-      margin-top: 32px;
-      margin-bottom: 61px;
+      margin-top: 30px;
+      margin-bottom: 39px;
       width: 100%;
       height: 50px;
+
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        margin-bottom: 133px;
+      }
 
       &::before,
       &::after {
@@ -74,7 +78,7 @@ $ff-inter: "Inter", sans-serif;
       .sp-logo-item {
         width: 180px;
         height: 48px;
-        margin: 0 24px;
+        margin: 0 32.75px;
 
         .sp-img {
           width: 100%;
@@ -111,13 +115,14 @@ $ff-inter: "Inter", sans-serif;
   @media screen and (max-width: 767.98px) {
     .social-pr-section {
       .sp-title {
+        font-weight: 700;
         max-width: 300px;
         margin: 14px auto;
       }
 
       .sp-logo-group {
         margin-top: 30px;
-        margin-bottom: 63px;
+        margin-bottom: 142px;
 
         &::before,
         &::after {
@@ -125,7 +130,7 @@ $ff-inter: "Inter", sans-serif;
         }
 
         .sp-logo-item {
-          margin: 0 8px;
+          margin: 0 16px;
         }
       }
     }
@@ -689,22 +694,22 @@ $ff-inter: "Inter", sans-serif;
 
   .hero-banner-section {
     .hero-banner-container {
-      padding: 19px 80px 32px 80px;
+      padding: 19px 80px 31.5px 80px;
 
       @media (min-width: 767.98px) and (max-width: 1199.98px) {
-        padding: 19px 32px 32px 32px;
+        padding: 20px 32px 32px 32px;
       }
 
       @media (max-width: 767.98px) {
-        padding: 4px 16px 40px;
+        padding: 5px 16px 40px;
       }
 
       .hero-copy {
         max-width: 805px;
-        margin: auto auto 40px;
+        margin: auto auto 41px;
 
         @media (max-width: 767.98px) {
-          margin: auto auto 31px;
+          margin: auto auto 32px;
         }
 
         h2 {
@@ -785,7 +790,7 @@ $ff-inter: "Inter", sans-serif;
 
           @media (max-width: 767.98px) {
             max-width: 328px;
-            margin-bottom: 17px;
+            margin-bottom: 15px;
           }
 
           .check-box {
@@ -807,14 +812,14 @@ $ff-inter: "Inter", sans-serif;
 
             @media (max-width: 767.98px) {
               max-width: 156px;
-              margin-bottom: 16px;
+              margin-bottom: 16.5px;
             }
 
             .custom-check {
               border-radius: 8px;
               border: 1px solid var(--Neutrals-300, #dde3eb);
               background: var(--neutrals-white-fff, #fff);
-              padding: 28px 20px 20px 20px;
+              padding: 27.5px 20px 20px;
               height: 154px;
               width: 100%;
               position: relative;
@@ -823,7 +828,7 @@ $ff-inter: "Inter", sans-serif;
 
               @media (max-width: 767.98px) {
                 height: 140px;
-                padding: 20px;
+                padding: 18.5px 20px;
               }
 
               p {
@@ -840,6 +845,7 @@ $ff-inter: "Inter", sans-serif;
                 @media (max-width: 767.98px) {
                   font-size: 16px;
                   line-height: 24px;
+                  margin-top: 10px;
                 }
               }
 
@@ -877,7 +883,24 @@ $ff-inter: "Inter", sans-serif;
                 border: 1px solid var(--primary-primary-500, #1793ff);
                 box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06),
                   0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
-                transform: translate(0px, -5px);
+                transform: translate(0px, -5.5px);
+
+                p {
+                  color: #293642;
+                }
+
+                .checkmark {
+                  top: 5.5px;
+                  left: 5px;
+                }
+
+                @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                  transform: translate(0px, -4.5px);
+                }
+
+                @media (max-width: 767.98px) {
+                  transform: translate(0px, -5.25px);
+                }
               }
             }
           }

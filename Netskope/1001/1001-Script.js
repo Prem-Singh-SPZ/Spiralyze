@@ -119,7 +119,7 @@ let bodyLoad = setInterval(function () {
               </div>`);
 
             document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
-                this.classList.toggle("close");
+                this.classList.toggle("close-cmnt");
                 var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
                 mktoFieldWrapList.forEach(function (element) {
                     element.classList.toggle("visible");
