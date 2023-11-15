@@ -164,22 +164,27 @@ let bodyLoad = setInterval(function () {
                         } else {
                             event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.add('active');
                             event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.add('filled');
-                            event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
+                            // event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
                         }
                     }
                 });
             }
 
             document.addEventListener('focusout', function (event) {
-                if (event.target.matches(selector)) {
-                    event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
-                }
+                // if (event.target.matches(selector)) {
+                //     event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
+                // }
+                document.querySelectorAll('body form.mktoForm  .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
+                    elem.classList.remove('typing');
+                })
+
             }, true);
         };
     }
 
     function checkValidFields() {
         let validFields = document.querySelectorAll('.mktoRequiredField.filled').length;
+        console.log(validFields);
         if (validFields >= 4) {
             document.querySelectorAll('.mktoFormCol.spz-hidden').forEach(function (elem) {
                 elem.classList.remove('spz-hidden');
