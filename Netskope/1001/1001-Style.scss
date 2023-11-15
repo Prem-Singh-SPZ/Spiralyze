@@ -607,6 +607,27 @@ body.netskope-1001-spz {
           color: #081a59 !important;
           border-color: rgba(8, 26, 89, 0.2) !important;
         }
+
+        input[type="checkbox"] + label:before,
+        input[type="radio"] + label:before,
+        .single_checkbox > label:before {
+          content: url(//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_base.svg);
+          width: 16px !important;
+          height: 16px !important;
+          border: 0 !important;
+          background: transparent !important;
+        }
+
+        input[type="checkbox"]:checked + label::before,
+        .single_checkbox > .single_checked:before {
+          content: url(//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg);
+        }
+
+        input[type="checkbox"] + label::after,
+        input[type="radio"] + label::after,
+        .single_checkbox > label::after {
+          display: none;
+        }
       }
 
       .mktoFormCol.Contact_Us_Form_Entry__c-row {
