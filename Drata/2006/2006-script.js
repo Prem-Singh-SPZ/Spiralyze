@@ -4,9 +4,9 @@
     document.body.classList.add('spz-2006');
 
     waitForElm('.css-nu3kba-MuiList-root-Header-headerMenuCtas').then(function () {
-      if (document.querySelector('.social-pr-section')) {
-        document.querySelector('.social-pr-section').remove();
-      }
+      // if (document.querySelector('.social-pr-section')) {
+      //   document.querySelector('.social-pr-section').remove();
+      // }
 
       waitForElm('.css-1a48d2a-TabsQuotes-outerContainer .swiper.swiper-3d').then(function () {
         appendHomeHeroContent();
