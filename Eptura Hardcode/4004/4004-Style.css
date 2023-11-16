@@ -170,6 +170,9 @@
 #bodyId .body-wrapper #form-over form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label::before {
   background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-errored.svg?version=0") left center no-repeat;
 }
+#bodyId .body-wrapper #form-over form.mktoForm .mktoFormRow .mktoFormCol.col-FirstName, #bodyId .body-wrapper #form-over form.mktoForm .mktoFormRow .mktoFormCol.col-LastName {
+  display: block !important;
+}
 #bodyId .body-wrapper #form-over form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -8px;
   left: 11px;
@@ -314,6 +317,17 @@
   }
 }
 @media (max-width: 767.98px) {
+  #bodyId .body-wrapper #form-over {
+    max-width: 330px;
+    padding: 16px 20px 31px 20px;
+  }
+  #bodyId .body-wrapper #form-over .form-heading {
+    font-size: 26px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 34px;
+    margin: 32px auto 28px;
+  }
   #bodyId .body-wrapper #form-over form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
     margin-top: 7px;
   }
@@ -324,8 +338,8 @@
   #bodyId .body-wrapper #form-over form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
     height: 56px !important;
     padding: 0px 32px;
-    width: 300px !important;
-    max-width: 300px !important;
+    width: 270px !important;
+    max-width: 270px !important;
   }
   #bodyId .body-wrapper #form-over form.mktoForm .spz-email .mktoFieldWrap {
     margin-top: 24px;

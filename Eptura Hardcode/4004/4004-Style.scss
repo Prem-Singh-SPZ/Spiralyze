@@ -210,6 +210,11 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
                 }
               }
             }
+
+            &.col-FirstName,
+            &.col-LastName {
+              display: block !important;
+            }
           }
           .mktoFormCol.field-focus {
             .mktoFieldWrap {
@@ -410,6 +415,17 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
   #bodyId {
     .body-wrapper {
       #form-over {
+        max-width: 330px;
+        padding: 16px 20px 31px 20px;
+
+        .form-heading {
+          font-size: 26px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 34px;
+          margin: 32px auto 28px;
+        }
+
         form.mktoForm {
           .mktoFormRow {
             .mktoFormCol {
@@ -435,8 +451,8 @@ $font-family_1: "Eptura Flexible", Arial, sans-serif;
               button.mktoButton {
                 height: 56px !important;
                 padding: 0px 32px;
-                width: 300px !important;
-                max-width: 300px !important;
+                width: 270px !important;
+                max-width: 270px !important;
               }
             }
           }
