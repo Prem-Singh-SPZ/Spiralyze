@@ -58,6 +58,9 @@ let bodyLoad = setInterval(function () {
                 textChng.innerText = 'Submit';
             }
 
+            document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image">`
+            );
+
             const mktoFormColElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow .mktoFormCol');
             mktoFormColElements.forEach(function (element) {
                 const mktoField = element.querySelector('.mktoField');
@@ -152,6 +155,7 @@ let bodyLoad = setInterval(function () {
                     event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
                 }
                 checkValidFields();
+                checkState();
             }, true);
 
             var eventList = ["blur", "focusout", "keyup"];
@@ -167,6 +171,7 @@ let bodyLoad = setInterval(function () {
                             // event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
                         }
                     }
+                    checkState();
                 });
             }
 
@@ -177,7 +182,7 @@ let bodyLoad = setInterval(function () {
                 document.querySelectorAll('body form.mktoForm  .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
                     elem.classList.remove('typing');
                 })
-
+                checkState();
             }, true);
         };
     }
@@ -211,6 +216,12 @@ let bodyLoad = setInterval(function () {
                 }
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+        });
+    }
+
+    function checkState() {
+        waitForElm('#PostalCode').then(function () {
+            document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
         });
     }
 });

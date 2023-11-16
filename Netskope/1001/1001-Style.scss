@@ -55,11 +55,15 @@ body.netskope-1001-spz {
   }
   .header__top-menu {
     position: relative;
-    margin-top: 4px;
+    margin-top: 1px;
 
     .header__top-menu-link-language {
       margin-right: 3px;
       display: block !important;
+
+      #locale_place_holder{
+        line-height: 24px;
+      }
     }
 
     .header__top-menu-link--support {
@@ -340,7 +344,7 @@ body.netskope-1001-spz {
         }
 
         &.row-netskope-fm {
-          order: 13;
+          order: 14;
 
           .netskope-fm {
             color: #7e8bba !important;
@@ -352,7 +356,7 @@ body.netskope-1001-spz {
         }
 
         &.row-single_checkbox {
-          order: 12;
+          order: 13;
 
           .mktoLabel {
             padding-left: 24px !important;
@@ -364,6 +368,11 @@ body.netskope-1001-spz {
               line-height: 20px;
             }
           }
+        }
+
+        &.row-PostalCode{
+          width: 100% !important;
+          order: 10;
         }
       }
 
@@ -434,11 +443,11 @@ body.netskope-1001-spz {
           order: 9;
         }
         &.mktoCheckbox_151456_0-row {
-          order: 10;
+          order: 11;
           max-width: 100%;
         }
         &.Contact_Us_Form_Entry__c-row {
-          order: 11;
+          order: 12;
           max-width: 100%;
 
           @media (max-width: 767.98px) {
@@ -457,7 +466,7 @@ body.netskope-1001-spz {
       }
 
       .mktoButtonRow {
-        order: 13;
+        order: 15;
         padding-top: 8px;
 
         @media (max-width: 767.98px) {
@@ -513,6 +522,7 @@ body.netskope-1001-spz {
 
         select.mktoField {
           background-position: right 19px center !important;
+          padding-right: 32px !important;
         }
 
         label#Lbltestfield {
