@@ -1,0 +1,461 @@
+$color_1: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+$color_2: var(--primary-neutrals-n-1, #0d122e);
+$color_3: #848995;
+$color_4: #1b4bc5;
+$color_5: #0d122e;
+$color_6: #f3f3f3;
+$color_7: #e51b00;
+$color_8: var(--accents-a-5, #904ab0);
+$color_9: var(--accents-a-5, #f83a59);
+$color_10: #904ab0;
+$color_11: var(--primary-neutrals-w, #fff);
+$color_12: var(--interactive-colors-a-1, #1b4bc5);
+$font-family_1: "Eptura Flexible", Arial, sans-serif;
+
+#bodyId {
+  .body-wrapper {
+    #form-over {
+      form.mktoForm {
+        .mktoFormRow {
+          .mktoFormCol {
+            min-height: auto;
+            margin: 0 !important;
+            padding: 0 10px !important;
+            .mktoFieldWrap {
+              position: relative;
+              float: none !important;
+              .mktoLabel {
+                position: absolute;
+                overflow: hidden;
+                color: $color_1 !important;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+                font-family: $font-family_1;
+                font-size: 16px !important;
+                font-style: normal;
+                font-weight: 300 !important;
+                line-height: 24px;
+                top: 11px;
+                left: 16px;
+                padding: 0 !important;
+                -webkit-transition: all 0.3s ease-in-out;
+                transition: all 0.3s ease-in-out;
+                pointer-events: none;
+                max-width: calc(100% - 58px);
+                background: #fff;
+                right: 0;
+              }
+              .mktoField {
+                &:not([type="checkbox"]) {
+                  border-radius: 4px;
+                  border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+                  width: 280px;
+                  padding: 11px 16px 10px 16px !important;
+                  color: $color_2 !important;
+                  text-overflow: ellipsis;
+                  font-family: $font-family_1 !important;
+                  font-size: 16px !important;
+                  font-style: normal;
+                  font-weight: 300 !important;
+                  line-height: 24px !important;
+                  margin-bottom: 20px !important;
+                  &:not(#Lead_Notes__c) {
+                    overflow: hidden;
+                    height: 48px !important;
+                    white-space: nowrap;
+                  }
+                  &:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0 30px white inset !important;
+                  }
+                  &:autofill {
+                    -webkit-box-shadow: 0 0 0 30px white inset !important;
+                  }
+                }
+                &:not([type="checkbox"])#I_am__c {
+                  outline: transparent;
+                  -webkit-appearance: none !important;
+                  -moz-appearance: none !important;
+                  appearance: none !important;
+                  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                  background-repeat: no-repeat !important;
+                  background-position: right 14px center !important;
+                  background-size: 24px !important;
+                  padding-right: 32px !important;
+                }
+                &:not([type="checkbox"])#Country {
+                  outline: transparent;
+                  -webkit-appearance: none !important;
+                  -moz-appearance: none !important;
+                  appearance: none !important;
+                  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                  background-repeat: no-repeat !important;
+                  background-position: right 14px center !important;
+                  background-size: 24px !important;
+                  padding-right: 32px !important;
+                }
+                &:not([type="checkbox"])#Solution_Type__c {
+                  outline: transparent;
+                  -webkit-appearance: none !important;
+                  -moz-appearance: none !important;
+                  appearance: none !important;
+                  background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+                  background-repeat: no-repeat !important;
+                  background-position: right 14px center !important;
+                  background-size: 24px !important;
+                  padding-right: 32px !important;
+                }
+                &:not([type="checkbox"])#Lead_Notes__c {
+                  ~ {
+                    .mktoError {
+                      margin-top: 0 !important;
+                      .mktoErrorArrowWrap {
+                        top: -27px;
+                      }
+                      .mktoErrorMsg {
+                        margin-top: -20px;
+                      }
+                    }
+                  }
+                }
+              }
+              .mktoHtmlText.mktoHasWidth {
+                margin: 0 !important;
+                span {
+                  color: $color_3;
+                  font-size: 10px !important;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 16px;
+                  a {
+                    padding: 0;
+                    color: $color_4;
+                    &:hover {
+                      color: $color_5;
+                    }
+                  }
+                }
+              }
+              .mktoCheckboxList {
+                margin-top: 3px;
+                cursor: pointer;
+                display: inline-block;
+                position: relative;
+                padding-left: 25px;
+                .mktoField {
+                  border: 1px solid #d6d7f5;
+                  height: 16px !important;
+                  width: 16px !important;
+                  cursor: pointer;
+                }
+                label {
+                  font-family: $font-family_1 !important;
+                  color: $color_5 !important;
+                  font-size: 12px !important;
+                  font-style: normal !important;
+                  font-weight: 300 !important;
+                  line-height: 18px !important;
+                  margin-left: 19px;
+                  letter-spacing: -0.1px;
+                  cursor: pointer;
+                  &:before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    left: 0;
+                    background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark.svg?version=0")
+                      left center no-repeat;
+                    margin-top: 2px;
+                  }
+                  &:hover {
+                    &::before {
+                      background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-hover.svg?version=0")
+                        left center no-repeat;
+                    }
+                  }
+                }
+                input[type="checkbox"] {
+                  display: none !important;
+                  &:checked {
+                    + {
+                      label {
+                        &:before {
+                          background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-checked.svg?version=0")
+                            left center no-repeat;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+              .mktoError {
+                margin-top: 48px !important;
+                .mktoErrorMsg {
+                  color: $color_6;
+                  font-size: 13px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 16px;
+                }
+              }
+            }
+            .mktoFieldWrap.spz-cstm-error {
+              .mktoCheckboxList {
+                label {
+                  color: $color_7 !important;
+                  &::before {
+                    background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-errored.svg?version=0")
+                      left center no-repeat;
+                  }
+                }
+              }
+            }
+          }
+          .mktoFormCol.field-focus {
+            .mktoFieldWrap {
+              .mktoLabel {
+                top: -8px;
+                left: 11px;
+                right: auto;
+                padding: 0 5px !important;
+                font-family: $font-family_1;
+                color: $color_8 !important;
+                font-size: 13px !important;
+                line-height: 18px !important;
+                background: #fff;
+              }
+            }
+            .mktoField {
+              &:not([type="checkbox"]) {
+                border-color: #904ab0 !important;
+              }
+            }
+          }
+          .mktoFormCol.input-filled {
+            .mktoFieldWrap {
+              .mktoLabel {
+                top: -8px;
+                left: 11px;
+                right: auto;
+                font-family: $font-family_1;
+                padding: 0 5px !important;
+                font-size: 13px !important;
+                line-height: 18px !important;
+                background: #fff;
+              }
+            }
+          }
+          .mktoFormCol.field-error.field-focus {
+            .mktoFieldWrap {
+              .mktoLabel {
+                color: $color_9 !important;
+              }
+            }
+          }
+          .mktoFormCol.field-error {
+            .mktoField {
+              &:not([type="checkbox"]) {
+                border-color: #f83a59 !important;
+              }
+            }
+          }
+          .mktoFormCol[data-zi-field-enriched="true"] {
+            display: inline !important;
+          }
+          .spz-anchor {
+            &:not(.spz-hidden) {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              width: 100%;
+              + {
+                .mktoFieldDescriptor.mktoFormCol {
+                  display: none !important;
+                }
+              }
+              .show-comment-dynamic {
+                overflow: hidden;
+                color: $color_1;
+                font-family: $font-family_1;
+                text-overflow: ellipsis;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+                margin-bottom: 18px;
+                display: inline-block;
+                margin-top: 2px;
+                -webkit-transition: all 0.3s ease;
+                transition: all 0.3s ease;
+                margin-left: 10px;
+                span {
+                  padding-right: 5px;
+                }
+                &:hover {
+                  color: $color_10;
+                }
+              }
+            }
+          }
+          .spz-hidden {
+            display: none;
+          }
+        }
+        .mktoFormRow[data-zi-field-enriched="true"] {
+          display: inline !important;
+        }
+        .mktoButtonRow {
+          text-align: center;
+          .mktoButtonWrap {
+            button.mktoButton {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              width: 140px !important;
+              height: 50px !important;
+              padding: 0px 8px !important;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              border-radius: 3px !important;
+              background: var(--interactive-colors-a-1, #1b4bc5) !important;
+              color: $color_11 !important;
+              text-align: center;
+              font-family: $font-family_1 !important;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 500 !important;
+              line-height: 24px !important;
+              margin-top: 22px !important;
+              white-space: nowrap;
+              &:hover {
+                background: var(--interactive-colors-a-3, #456ed6) !important;
+              }
+              &:focus {
+                background: var(--interactive-colors-a-3, #456ed6) !important;
+                -webkit-transform: translate(0, 1px);
+                transform: translate(0, 1px);
+              }
+            }
+          }
+        }
+        .spz-email {
+          display: flex;
+          .mktoFieldWrap {
+            margin-top: 18px;
+            .mktoHtmlText.mktoHasWidth {
+              text-align: center;
+              em {
+                color: $color_2;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 20px;
+                a {
+                  color: $color_12;
+                  font-weight: 500;
+                  padding: 0;
+                  font-family: $font-family_1;
+                  padding-left: 2px;
+                  &:hover {
+                    color: $color_5;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 767.98px) {
+  #bodyId {
+    .body-wrapper {
+      #form-over {
+        form.mktoForm {
+          .mktoFormRow {
+            .mktoFormCol {
+              .mktoFieldWrap {
+                .mktoField {
+                  &:not([type="checkbox"]) {
+                    &:not(#Lead_Notes__c) {
+                      max-width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+          .spz-email {
+            .mktoFieldWrap {
+              .mktoHtmlText.mktoHasWidth {
+                em {
+                  .mobile-only {
+                    display: none;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  #bodyId {
+    .body-wrapper {
+      #form-over {
+        form.mktoForm {
+          .mktoFormRow {
+            .mktoFormCol {
+              .mktoFieldWrap {
+                .mktoCheckboxList {
+                  .mktoField {
+                    margin-top: 7px;
+                  }
+                }
+              }
+            }
+            .spz-anchor {
+              &:not(.spz-hidden) {
+                .show-comment-dynamic {
+                  padding: 0;
+                  margin-bottom: 26px;
+                }
+              }
+            }
+          }
+          .mktoButtonRow {
+            .mktoButtonWrap {
+              button.mktoButton {
+                height: 56px !important;
+                padding: 0px 32px;
+                width: 300px !important;
+                max-width: 300px !important;
+              }
+            }
+          }
+          .spz-email {
+            .mktoFieldWrap {
+              margin-top: 24px;
+              .mktoHtmlText.mktoHasWidth {
+                line-height: 0;
+                > span {
+                  text-align: center;
+                }
+                em {
+                  padding: 0;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
