@@ -15,11 +15,7 @@ let bodyLoad = setInterval(function () {
                       <li><strong>Network.</strong> Deliver fast, high-performing connectivity between users, devices, and locations, complete with zero-trust security.</li>
                   </ul>
                   <div class="logo-sec">
-                      <img alt="Get Started Logos" width="300" height="84" data-srcset="https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials-300x84.png 300w, 
-                      https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials.png 500w" data-src="https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials-300x84.png" 
-                      data-sizes="(max-width: 300px) 100vw, 300px" class="alignnone size-medium wp-image-39648 ls-is-cached lazyloaded" src="https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials-300x84.png" 
-                      sizes="(max-width: 300px) 100vw, 300px" srcset="https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials-300x84.png 300w, 
-                      https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials.png 500w">
+                      <img alt="Get Started Logos" width="300" height="84"  src="https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials-300x84.png">
                   </div>
               </div>
           </div>`);
