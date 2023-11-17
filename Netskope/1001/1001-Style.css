@@ -448,12 +448,14 @@ body.netskope-1001-spz {
   line-height: 24px !important;
 }
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol .mktoFieldWrap:not(.single_checkbox) > label.labActive {
-  top: 6px;
+  top: 0.5px;
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400 !important;
   line-height: 20px !important;
   height: auto;
+  padding-top: 4px !important;
+  border-radius: 6px;
 }
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol .mktoFieldWrap:not(.single_checkbox) > label.labActive ~ textarea#Contact_Us_Form_Entry__c {
   border-color: #081a59 !important;
@@ -573,7 +575,8 @@ body.netskope-1001-spz {
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgFirstName], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgLastName], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgCompany], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgTitle], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgEmail], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgPhone], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgmOICustomField11], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgnumEmployeesRange], .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoField[aria-describedby=ValidMsgCountry] {
   border-color: #ff5b28 !important;
 }
-.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol select.mktoField {
+.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol select.mktoField,
+.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .customInput1 {
   background-position: right 18px center !important;
   padding-right: 32px !important;
   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg) !important;
@@ -631,17 +634,27 @@ body.netskope-1001-spz {
   line-height: 20px !important;
   top: 6px;
 }
+.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol label#Lbltestfield + div + .customInput.openBox .customInput1 {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
+}
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol label#Lbltestfield + div + .customInput.openBox .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
   overflow: auto;
 }
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol label#Lbltestfield + div + .customInput.openBox .mktoLogicalField.mktoCheckboxList.mktoHasWidth > label {
   padding-left: 24px !important;
+  padding-right: 10px !important;
 }
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol label#Lbltestfield + div + .customInput.hideHint > .customInput1 {
-  padding: 10px 20px 16px 16px !important;
+  padding: 10px 32px 16px 16px !important;
 }
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoError {
   top: 0;
+}
+@media (max-width: 480px) {
+  .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoError {
+    position: relative !important;
+    top: -8px;
+  }
 }
 .netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFieldDescriptor.mktoFormCol .mktoError .mktoErrorArrowWrap {
   display: none !important;
@@ -734,10 +747,19 @@ div#tech-support {
   padding: 0 3rem 97px;
   background-position: top right;
 }
-@media (min-width: 767.98px) and (max-width: 1024.98px) {
+@media (min-width: 767.98px) and (max-width: 991.98px) {
   .landing-page__container {
     padding: 0 2rem;
     background: url(//res.cloudinary.com/spiralyze/image/upload/v1699447145/netskope/1001/background_pattern_1.webp);
+    background-repeat: no-repeat;
+    background-size: 100% 639px;
+    background-position: top right;
+  }
+}
+@media (min-width: 991.98px) and (max-width: 1199.98px) {
+  .landing-page__container {
+    padding: 0 2rem;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1700219614/netskope/1001/background_pattern_3.webp);
     background-repeat: no-repeat;
     background-size: 100% 639px;
     background-position: top right;

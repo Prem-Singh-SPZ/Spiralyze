@@ -88,11 +88,14 @@ let bodyLoad = setInterval(function () {
                     let changeLabels = setInterval(() => {
                         textChng.innerText = 'Submit';
 
-                        document.querySelector('#mOICustomField11 option:first-child').textContent = "I would like to";
+                        document.querySelector('#mOICustomField11 option:first-child').textContent = "";
                         document.querySelector('#LblmOICustomField11').textContent = "I would like to";
 
-                        document.querySelector('#numEmployeesRange option:first-child').textContent = "# of Employees";
+                        document.querySelector('#numEmployeesRange option:first-child').textContent = "";
                         document.querySelector('#LblnumEmployeesRange').textContent = "# of Employees";
+
+                        document.querySelector('#Country option:first-child').textContent = "";
+
 
                         document.querySelector('#LblCountry').textContent = "Country";
 
