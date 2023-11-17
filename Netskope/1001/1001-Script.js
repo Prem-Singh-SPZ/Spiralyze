@@ -48,7 +48,7 @@ let bodyLoad = setInterval(function () {
 
             //form title update
             var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
-            if (formDiv) {
+            if (formDiv && document.querySelectorAll('.form_title').length == 0) {
                 formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Get Started</div>`);
             }
 
@@ -82,7 +82,7 @@ let bodyLoad = setInterval(function () {
                 document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow:not(.hideField)').forEach(function (elem) {
 
                     elem.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm) {
-                            document.querySelector('.mktoForm').insertAdjacentElement('beforeend', elm);
+                        document.querySelector('.mktoForm').insertAdjacentElement('beforeend', elm);
                     });
 
                     let changeLabels = setInterval(() => {
@@ -105,9 +105,19 @@ let bodyLoad = setInterval(function () {
 
                         waitForElm('.netskope-fm').then(function () {
                             document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
+                            if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+                                document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
+                            }
+                            document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
+
                         });
                         waitForElm('.single_checkbox').then(function () {
                             document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
+                            if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+                                document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
+                            }
+                            document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
+
                         });
 
 
@@ -117,6 +127,9 @@ let bodyLoad = setInterval(function () {
                         document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
                         document.querySelector('.mktoFormCol.numEmployeesRange-row').classList.add('spz-hidden');
                         document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
+
+                        document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+                        // document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Company-row'));
                     }, 50);
 
                     setTimeout(() => {
@@ -127,9 +140,12 @@ let bodyLoad = setInterval(function () {
                 document.querySelector('.landing-page__form-container.get-started-form__form').insertAdjacentHTML('afterbegin', `<div class="hero-title-tablet"><h1>Secure your entire <span>multi-cloud</span> environment</h1></div>`);
             });
 
-            document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
-                  <div class="commt-text">Comment</div>
-              </div>`);
+            if (document.querySelectorAll('.frm-commt').length == 0) {
+
+                document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
+                      <div class="commt-text">Comment</div>
+                  </div>`);
+            }
 
             document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
                 this.classList.toggle("close-cmnt");
@@ -149,6 +165,9 @@ let bodyLoad = setInterval(function () {
             document.getElementById("Phone").setAttribute('tabindex', '8');
             document.getElementById("Country").setAttribute('tabindex', '9');
             document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '11');
+            waitForElm('.mktoButton.g-recaptcha').then(function () {
+                document.querySelector(".mktoButton.g-recaptcha").setAttribute('tabindex', '14');
+            });
 
             // form state
             var selector = 'body form.mktoForm  .mktoFormCol .mktoFieldWrap input, body form.mktoForm  .mktoFormCol .mktoFieldWrap select';
@@ -191,21 +210,23 @@ let bodyLoad = setInterval(function () {
     }
 
     function checkValidFields() {
-        let validFields = document.querySelectorAll('.mktoRequiredField.filled').length;
+        let validFields = document.querySelectorAll('.mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
         if (validFields >= 4) {
             document.querySelectorAll('.mktoFormCol.spz-hidden').forEach(function (elem) {
                 elem.classList.remove('spz-hidden');
             })
+
+            if (document.querySelector('.mktoFormRow.spz-hidden')) {
+                document.querySelectorAll('.mktoFormRow.spz-hidden').forEach(function (elem) {
+                    elem.classList.remove('spz-hidden');
+                })
+            }
 
             document.querySelector('.get-started-form__container').classList.add('spz-full-form');
         }
     }
 
     // Generic Code
-    function insertAfter(referenceNode, newNode) {
-        referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-    }
-
     function waitForElm(selector) {
         return new Promise(function (resolve) {
             if (document.querySelector(selector)) {
@@ -224,6 +245,13 @@ let bodyLoad = setInterval(function () {
     function checkState() {
         waitForElm('#PostalCode').then(function () {
             document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
+            // document.querySelector('.Country-row').insertAdjacentElement('afterend', document.querySelector('#PostalCode').closest('.mktoFormRow'));
+            document.querySelector('#PostalCode').setAttribute('tabindex', '12');
+            if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+                document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('spz-hidden');
+            }
         });
     }
 });
+
+
