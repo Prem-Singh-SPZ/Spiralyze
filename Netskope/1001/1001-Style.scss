@@ -7,6 +7,9 @@ $font-family_1: Graphik;
 
 body.netskope-1001-spz {
   background-color: #081a59;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 .netskope-1001-spz {
   .header__superheader-promo-banner.ga__header,
@@ -61,7 +64,7 @@ body.netskope-1001-spz {
       margin-right: 3px;
       display: block !important;
 
-      #locale_place_holder{
+      #locale_place_holder {
         line-height: 24px;
       }
     }
@@ -258,6 +261,7 @@ body.netskope-1001-spz {
     }
   }
   .v3-footer {
+    margin-top: auto;
     @media (min-width: 1024.98px) {
       // margin-top: 80px;
     }
@@ -370,7 +374,7 @@ body.netskope-1001-spz {
           }
         }
 
-        &.row-PostalCode{
+        &.row-PostalCode {
           width: 100% !important;
           order: 10;
         }
@@ -411,6 +415,10 @@ body.netskope-1001-spz {
               font-weight: 400 !important;
               line-height: 20px !important;
               height: auto;
+
+              & ~ textarea#Contact_Us_Form_Entry__c {
+                border-color: #081a59 !important;
+              }
             }
           }
         }
@@ -477,7 +485,7 @@ body.netskope-1001-spz {
           width: 100% !important;
           background-color: #ff8200 !important;
           border-color: #ff8200 !important;
-          color: #081A59 !important;
+          color: #081a59 !important;
           height: 48px;
           max-width: 440px;
           margin-left: auto;
@@ -521,8 +529,10 @@ body.netskope-1001-spz {
         }
 
         select.mktoField {
-          background-position: right 19px center !important;
+          background-position: right 18px center !important;
           padding-right: 32px !important;
+          background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg) !important;
+          background-size: 16px !important;
         }
 
         label#Lbltestfield {
@@ -621,6 +631,10 @@ body.netskope-1001-spz {
         .mktoFieldWrap.typing {
           .mktoField {
             border-color: #081a59 !important;
+          }
+
+          select.mktoField {
+            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
           }
         }
 

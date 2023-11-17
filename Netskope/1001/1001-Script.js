@@ -58,7 +58,7 @@ let bodyLoad = setInterval(function () {
                 textChng.innerText = 'Submit';
             }
 
-            document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image">`
+            document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg" as="image">`
             );
 
             const mktoFormColElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow .mktoFormCol');
@@ -81,8 +81,8 @@ let bodyLoad = setInterval(function () {
             waitForElm('.mktoFormRow.hideField').then(function () {
                 document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow:not(.hideField)').forEach(function (elem) {
 
-                    elem.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (coleElem) {
-                        insertAfter(document.querySelector('form.mktoForm > style:first-child'), coleElem);
+                    elem.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm) {
+                            document.querySelector('.mktoForm').insertAdjacentElement('beforeend', elm);
                     });
 
                     let changeLabels = setInterval(() => {
@@ -189,7 +189,6 @@ let bodyLoad = setInterval(function () {
 
     function checkValidFields() {
         let validFields = document.querySelectorAll('.mktoRequiredField.filled').length;
-        console.log(validFields);
         if (validFields >= 4) {
             document.querySelectorAll('.mktoFormCol.spz-hidden').forEach(function (elem) {
                 elem.classList.remove('spz-hidden');
