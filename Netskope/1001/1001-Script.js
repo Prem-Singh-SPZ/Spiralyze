@@ -1,5 +1,7 @@
+//Control URL: https://www.netskope.com/get-started?mutiny_preview=eyJhbGciOiJIUzI1NiJ9.eyJrZXkiOiI2NDAzZWJlMC1lMGIwLTRmYTUtYWViOS1mNzYwODM0ZTkyZWIiLCJpc3MiOiIyOTc0NWQ2OWEzMGFlYzk0IiwiY29tcGFueV9pZCI6IjI5NzQ1ZDY5YTMwYWVjOTQiLCJleHBlcmllbmNlX2lkIjoiMThhODMxNTUtNzg2MC00ZmY0LTgzMjUtMThhNWIxNzBiMTk0IiwidmFyaWF0aW9uX2lkIjoiMzcwMjVhMTEtZGU5YS00YzcwLTk1Y2MtMzNiNzAwMGU4ZDYwIiwiZXhwIjoxNzA1NTQzMDkwLCJ2YXJpYWJsZV9vdmVycmlkZXMiOnt9fQ.aL0GRy7yT21F1W8pUU9rTpzU-tbOxLvY5UQYqb1EFdA
+
 let bodyLoad = setInterval(function () {
-    const body = document.createElement('body');
+    const body = document.querySelector('body');
     if (body) {
         document.body.classList.add('netskope-1001-spz');
         clearInterval(bodyLoad);
@@ -32,13 +34,19 @@ let bodyLoad = setInterval(function () {
         }
 
         //Form internal code
-        var check_Form = setInterval(() => {
-            const form_Elem = document.querySelector('.landing-page__container-inner .landing-page__form-container .landing-page__form-content .mktoForm');
-            if (form_Elem !== null) {
-                formModify();
-                clearInterval(check_Form);
-            }
-        }, 100);
+        // var check_Form = setInterval(() => {
+        //     const form_Elem = document.querySelector('.landing-page__container-inner .landing-page__form-container .landing-page__form-content .mktoForm');
+        //     console.log('1st console');
+        //     if (form_Elem !== null) {
+        //         formModify();
+        //         clearInterval(check_Form);
+        //         console.log('2nd console');
+        //     }
+        // }, 100);
+
+        waitForElm('.landing-page__form-container .landing-page__form-content .mktoForm').then(function () {
+            formModify();
+        });
 
         function formModify() {
 
@@ -83,73 +91,67 @@ let bodyLoad = setInterval(function () {
 
                     let changeLabels = setInterval(() => {
                         textChng.innerText = 'Submit';
-
                         document.querySelector('#mOICustomField11 option:first-child').textContent = "";
                         document.querySelector('#LblmOICustomField11').textContent = "I would like to";
-
                         document.querySelector('#numEmployeesRange option:first-child').textContent = "";
                         document.querySelector('#LblnumEmployeesRange').textContent = "# of Employees";
 
                         document.querySelector('#Country option:first-child').textContent = "";
-
-
                         document.querySelector('#LblCountry').textContent = "Country";
-
                         document.querySelector('#LblFirstName').textContent = "First Name";
-
                         document.querySelector('#LblLastName').textContent = "Last Name";
-
-                        waitForElm('.netskope-fm').then(function () {
-                            document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
-                            if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-                                document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
-                            }
-                            document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
-
-                        });
-                        waitForElm('.single_checkbox').then(function () {
-                            document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
-                            if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-                                document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
-                            }
-                            document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
-
-                        });
-
-
-                        document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
-                        document.querySelector('.mktoFormCol.mktoCheckbox_151456_0-row').classList.add('spz-hidden');
-                        document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden');
-                        document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
-                        document.querySelector('.mktoFormCol.numEmployeesRange-row').classList.add('spz-hidden');
-                        document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
-
-                        document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
-                        // document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Company-row'));
-                    }, 50);
-
+                    }, 100);
                     setTimeout(() => {
                         clearInterval(changeLabels);
                     }, 500);
+
+                    waitForElm('.netskope-fm').then(function () {
+                        document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
+                        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+                            document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
+                        }
+                        document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
+                    });
+                    waitForElm('.single_checkbox').then(function () {
+                        document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
+                        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+                            document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
+                        }
+                        document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
+                    });
+
+
+                    document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
+                    document.querySelector('.mktoFormCol.mktoCheckbox_151456_0-row').classList.add('spz-hidden');
+                    document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden');
+                    document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
+                    document.querySelector('.mktoFormCol.numEmployeesRange-row').classList.add('spz-hidden');
+                    document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
+
+                    document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+
+                    waitForElm('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
+
+                        if (document.querySelectorAll('.frm-commt').length == 0) {
+                            document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
+                              <div class="commt-text">Comment</div>
+                          </div>`);
+                        }
+                        document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
+                            this.classList.toggle("close-cmnt");
+                            var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
+                            mktoFieldWrapList.forEach(function (element) {
+                                element.classList.toggle("visible");
+                            });
+                        });
+                    });
+
                 });
 
                 document.querySelector('.landing-page__form-container.get-started-form__form').insertAdjacentHTML('afterbegin', `<div class="hero-title-tablet"><h1>Secure your entire <span>multi-cloud</span> environment</h1></div>`);
             });
 
-            if (document.querySelectorAll('.frm-commt').length == 0) {
 
-                document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
-                      <div class="commt-text">Comment</div>
-                  </div>`);
-            }
-
-            document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
-                this.classList.toggle("close-cmnt");
-                var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
-                mktoFieldWrapList.forEach(function (element) {
-                    element.classList.toggle("visible");
-                });
-            });
 
             document.getElementById("mOICustomField11").setAttribute('tabindex', '1');
             document.getElementById("FirstName").setAttribute('tabindex', '2');
@@ -249,5 +251,3 @@ let bodyLoad = setInterval(function () {
         });
     }
 });
-
-
