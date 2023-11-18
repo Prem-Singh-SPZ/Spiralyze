@@ -34,17 +34,7 @@ let bodyLoad = setInterval(function () {
         }
 
         //Form internal code
-        // var check_Form = setInterval(() => {
-        //     const form_Elem = document.querySelector('.landing-page__container-inner .landing-page__form-container .landing-page__form-content .mktoForm');
-        //     console.log('1st console');
-        //     if (form_Elem !== null) {
-        //         formModify();
-        //         clearInterval(check_Form);
-        //         console.log('2nd console');
-        //     }
-        // }, 100);
-
-        waitForElm('.landing-page__form-container .landing-page__form-content .mktoForm').then(function () {
+        waitForElm('body form.mktoForm  .mktoFormCol .mktoFieldWrap input').then(function () {
             formModify();
         });
 
@@ -129,23 +119,22 @@ let bodyLoad = setInterval(function () {
                     document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
 
                     document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+                });
 
-                    waitForElm('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
+                waitForElm('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
 
-                        if (document.querySelectorAll('.frm-commt').length == 0) {
-                            document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
-                              <div class="commt-text">Comment</div>
-                          </div>`);
-                        }
-                        document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
-                            this.classList.toggle("close-cmnt");
-                            var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
-                            mktoFieldWrapList.forEach(function (element) {
-                                element.classList.toggle("visible");
-                            });
+                    if (document.querySelectorAll('.frm-commt').length == 0) {
+                        document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
+                          <div class="commt-text">Comment</div>
+                      </div>`);
+                    }
+                    document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
+                        this.classList.toggle("close-cmnt");
+                        var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
+                        mktoFieldWrapList.forEach(function (element) {
+                            element.classList.toggle("visible");
                         });
                     });
-
                 });
 
                 document.querySelector('.landing-page__form-container.get-started-form__form').insertAdjacentHTML('afterbegin', `<div class="hero-title-tablet"><h1>Secure your entire <span>multi-cloud</span> environment</h1></div>`);
