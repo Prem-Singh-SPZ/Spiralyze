@@ -17,7 +17,11 @@ let bodyLoad = setInterval(function () {
                       <li><strong>Network.</strong> Deliver fast, high-performing connectivity between users, devices, and locations, complete with zero-trust security.</li>
                   </ul>
                   <div class="logo-sec">
-                      <img alt="Get Started Logos" width="300" height="84"  src="https://www.netskope.com/wp-content/uploads/2022/05/logos-credentials-300x84.png">
+                  <picture>
+                    <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.webp" type="image/webp">
+                    <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.png" type="image/png"> 
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.webp" alt="Get Started Logos" >
+                    </picture>
                   </div>
               </div>
           </div>`);
@@ -34,12 +38,12 @@ let bodyLoad = setInterval(function () {
         }
 
         //Form internal code
-        waitForElm('body form.mktoForm  .mktoFormCol .mktoFieldWrap input').then(function () {
+        waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
             formModify();
+            setHiddenFields();
         });
 
         function formModify() {
-
             //form title update
             var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
             if (formDiv && document.querySelectorAll('.form_title').length == 0) {
@@ -121,16 +125,16 @@ let bodyLoad = setInterval(function () {
                     document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
                 });
 
-                waitForElm('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
+                waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
 
                     if (document.querySelectorAll('.frm-commt').length == 0) {
-                        document.querySelector('body .netskope-component--request-demo-form form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
+                        document.querySelector('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
                           <div class="commt-text">Comment</div>
                       </div>`);
                     }
-                    document.querySelector('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
+                    document.querySelector('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
                         this.classList.toggle("close-cmnt");
-                        var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm  .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
+                        var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
                         mktoFieldWrapList.forEach(function (element) {
                             element.classList.toggle("visible");
                         });
@@ -157,11 +161,11 @@ let bodyLoad = setInterval(function () {
             });
 
             // form state
-            var selector = 'body form.mktoForm  .mktoFormCol .mktoFieldWrap input, body form.mktoForm  .mktoFormCol .mktoFieldWrap select';
+            var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap input, body form.mktoForm .mktoFormCol .mktoFieldWrap select';
 
             document.addEventListener('focus', function (event) {
                 if (event.target.matches(selector)) {
-                    event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+                    event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
                 }
                 checkValidFields();
                 checkState();
@@ -172,12 +176,12 @@ let bodyLoad = setInterval(function () {
                 document.addEventListener(s_event, function (event) {
                     if (event.target.matches(selector)) {
                         if (event.target.value == null || event.target.value == '') {
-                            event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('active');
-                            event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('filled');
+                            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active');
+                            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
                         } else {
-                            event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.add('active');
-                            event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.add('filled');
-                            // event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
+                            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active');
+                            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
+                           
                         }
                     }
                     checkState();
@@ -185,15 +189,28 @@ let bodyLoad = setInterval(function () {
             }
 
             document.addEventListener('focusout', function (event) {
-                // if (event.target.matches(selector)) {
-                //     event.target.closest('body form.mktoForm  .mktoFormCol .mktoFieldWrap').classList.remove('typing');
-                // }
-                document.querySelectorAll('body form.mktoForm  .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
+             
+                document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
                     elem.classList.remove('typing');
                 })
                 checkState();
             }, true);
         };
+
+        //Add hidden fields
+        function setHiddenFields() {
+            waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
+                const field_int = setInterval(function () {
+                    if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+                        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#1001_spzaa_variant") {
+                            clearInterval(field_int);
+                        }
+                        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#1001_spzaa_variant');
+                    }
+                }, 100);
+            });
+
+        }
     }
 
     function checkValidFields() {
