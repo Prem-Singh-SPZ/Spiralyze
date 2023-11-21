@@ -9,6 +9,45 @@ body {
       -ms-flex-direction: column;
           flex-direction: column;
 }
+body:not(.netskope-1001-spz) {
+  position: relative;
+}
+body:not(.netskope-1001-spz)::after {
+  position: absolute;
+  content: "";
+  left: 50%;
+  top: 50%;
+  width: 48px;
+  height: 48px;
+  border: 5px solid #fff;
+  border-bottom-color: transparent;
+  border-radius: 50%;
+  display: inline-block;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  -webkit-animation: rotation 1s linear infinite;
+          animation: rotation 1s linear infinite;
+}
+@-webkit-keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
+@keyframes rotation {
+  0% {
+    -webkit-transform: rotate(0deg);
+            transform: rotate(0deg);
+  }
+  100% {
+    -webkit-transform: rotate(360deg);
+            transform: rotate(360deg);
+  }
+}
 
 body .header__superheader-promo-banner.ga__header,
 body .header__nav,
@@ -57,29 +96,14 @@ body .header__container-inner {
   }
 }
 body .header__top-menu {
-  position: relative;
-  margin-top: 1px;
-}
-body .header__top-menu .header__top-menu-link-language {
-  margin-right: 3px;
-  display: block !important;
-}
-body .header__top-menu .header__top-menu-link-language #locale_place_holder {
-  line-height: 24px;
-}
-body .header__top-menu .header__top-menu-link--support {
-  display: block !important;
-}
-body .header__top-menu .header__mobile-toggle,
-body .header__top-menu .header__top-menu-link--search-mobile {
   display: none !important;
 }
 body .landing-page__logo {
-  height: 128px;
+  height: 126px;
 }
 @media (max-width: 1024.98px) {
   body .landing-page__logo {
-    height: 104px;
+    height: 102px;
   }
 }
 @media (max-width: 767.98px) {
@@ -742,79 +766,60 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFor
   content: "-";
   top: -2px;
 }
-
-div#tech-support {
-  display: none;
-}
-
-.landing-page__container {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/background_pattern_2.webp);
+body .landing-page__container {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1700551012/netskope/1001/desktop_background_pattern_2.svg);
   background-repeat: no-repeat;
-  background-size: 100% 639px;
+  background-size: 1440px 831px;
   padding: 0 3rem 97px;
   background-position: top right;
+  max-width: 1440px;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  height: 100%;
 }
-@media (min-width: 767.98px) and (max-width: 991.98px) {
-  .landing-page__container {
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .landing-page__container {
     padding: 0 2rem;
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/background_pattern_1.webp);
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1700551012/netskope/1001/tablet_background_pattern_2.svg);
     background-repeat: no-repeat;
-    background-size: 100% 639px;
-    background-position: top right;
-  }
-}
-@media (min-width: 991.98px) and (max-width: 1199.98px) {
-  .landing-page__container {
-    padding: 0 2rem;
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/background_pattern_3.webp);
-    background-repeat: no-repeat;
-    background-size: 100% 639px;
-    background-position: top right;
+    background-size: 1200px 831px;
+    background-position: top left;
   }
 }
 @media (min-width: 2400px) {
-  .landing-page__container {
+  body .landing-page__container {
     padding: 0 2rem;
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/Pattern-min.png);
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1700551012/netskope/1001/4_3.svg);
     background-repeat: no-repeat;
-    background-size: 40% 100%;
-    background-position: right 30px;
-    margin-left: 430px;
-    margin-right: 430px;
-  }
-}
-@media (min-width: 3000px) {
-  .landing-page__container {
-    padding: 0 2rem;
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/Pattern-min.png);
-    background-repeat: no-repeat;
-    background-size: 43% 104%;
-    background-position: right 40px;
-    /* max-width: 3000px; */
-    margin-left: 27%;
-    margin-right: 27%;
+    background-size: 848px 730px;
+    background-position: top right;
+    max-width: 1878px;
   }
 }
 @media (max-width: 767.98px) {
-  .landing-page__container {
+  body .landing-page__container {
     padding: 0;
     background: none;
   }
 }
 @media (min-width: 1024.98px) {
-  .landing-page__container.spz-full-form {
+  body .landing-page__container.spz-full-form {
     padding-bottom: 79px;
   }
 }
-.landing-page__container.spz-full-form .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoButtonRow {
+body .landing-page__container.spz-full-form .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoButtonRow {
   padding-top: 6px;
 }
 @media (max-width: 767.98px) {
-  .landing-page__container.spz-full-form .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoButtonRow {
+  body .landing-page__container.spz-full-form .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoButtonRow {
     padding-top: 14px;
   }
 }
+body .landing-page__content-container {
+  display: none;
+}
 
-.landing-page__content-container {
+div#tech-support {
   display: none;
 }
