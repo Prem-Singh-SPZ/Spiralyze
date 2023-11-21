@@ -60,13 +60,13 @@ if (bodyEle) {
         }
 
 
-        const mktoFormColElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow .mktoFormCol');
-        mktoFormColElements.forEach(function (element) {
-            const mktoField = element.querySelector('.mktoField');
-            if (mktoField) {
-                element.classList.add(mktoField.getAttribute('id') + '-row');
-            }
-        });
+        // const mktoFormColElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow .mktoFormCol');
+        // mktoFormColElements.forEach(function (element) {
+        //     const mktoField = element.querySelector('.mktoField');
+        //     if (mktoField) {
+        //         element.classList.add(mktoField.getAttribute('id') + '-row');
+        //     }
+        // });
 
         const mktoFormRowElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow');
         mktoFormRowElements.forEach(function (element) {
@@ -77,6 +77,7 @@ if (bodyEle) {
             }
             else {
                 element.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm) {
+                    elm.classList.add(elm.querySelector('.mktoField').getAttribute('id') + '-row');
                     document.querySelector('.mktoForm').insertAdjacentElement('beforeend', elm);
                 });
             }
@@ -84,16 +85,16 @@ if (bodyEle) {
 
         waitForElm('.mktoFormRow.hideField').then(function () {
             let changeLabels = setInterval(() => {
-            textChng.innerText = 'Submit';
-            document.querySelector('#mOICustomField11 option:first-child').textContent = "";
-            document.querySelector('#LblmOICustomField11').textContent = "I would like to";
-            document.querySelector('#numEmployeesRange option:first-child').textContent = "";
-            document.querySelector('#LblnumEmployeesRange').textContent = "# of Employees";
+                textChng.innerText = 'Submit';
+                document.querySelector('#mOICustomField11 option:first-child').textContent = "";
+                document.querySelector('#LblmOICustomField11').textContent = "I would like to";
+                document.querySelector('#numEmployeesRange option:first-child').textContent = "";
+                document.querySelector('#LblnumEmployeesRange').textContent = "# of Employees";
 
-            document.querySelector('#Country option:first-child').textContent = "";
-            document.querySelector('#LblCountry').textContent = "Country";
-            document.querySelector('#LblFirstName').textContent = "First Name";
-            document.querySelector('#LblLastName').textContent = "Last Name";
+                document.querySelector('#Country option:first-child').textContent = "";
+                document.querySelector('#LblCountry').textContent = "Country";
+                document.querySelector('#LblFirstName').textContent = "First Name";
+                document.querySelector('#LblLastName').textContent = "Last Name";
 
             }, 10);
             setTimeout(() => {
@@ -215,15 +216,15 @@ if (bodyEle) {
 function checkValidFields() {
     let validFields = document.querySelectorAll('.mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
     if (validFields >= 4) {
-        document.querySelectorAll('.mktoFormCol.spz-hidden').forEach(function (elem) {
+        document.querySelectorAll('.spz-hidden').forEach(function (elem) {
             elem.classList.remove('spz-hidden');
         })
 
-        if (document.querySelector('.mktoFormRow.spz-hidden')) {
-            document.querySelectorAll('.mktoFormRow.spz-hidden').forEach(function (elem) {
-                elem.classList.remove('spz-hidden');
-            })
-        }
+        // if (document.querySelector('.mktoFormRow.spz-hidden')) {
+        //     document.querySelectorAll('.mktoFormRow.spz-hidden').forEach(function (elem) {
+        //         elem.classList.remove('spz-hidden');
+        //     })
+        // }
 
         document.querySelector('.get-started-form__container').classList.add('spz-full-form');
     }
