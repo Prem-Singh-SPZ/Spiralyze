@@ -85,6 +85,7 @@ function formModify() {
 
 
     waitForElm('.mktoFormRow.hideField').then(function () {
+
         let changeLabels = setInterval(() => {
             textChng.textContent = 'Submit';
             document.querySelector('#mOICustomField11 option:first-child').textContent = "";
