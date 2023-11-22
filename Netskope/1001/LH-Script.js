@@ -10,25 +10,25 @@ document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="prel
 );
 
 //Updating left hero copy here
-waitForElm('body .landing-page__content-container').then(function () {
-    var formContain = document.querySelector('body .landing-page__content-container');
-    formContain.outerHTML = `<div class="hero_left">
-                          <div class="hero-wrap">
-                              <div class="hero-title"><h1>Secure your entire <span>multi-cloud</span> environment</h1></div>
-                              <ul>
-                                  <li><strong>Visibility.</strong> Get complete visibility into your cloud network. Web, SaaS, cloud, public and private apps, and more.</li>
-                                  <li><strong>Security.</strong> Manage security in one place. Granular web and cloud policy controls. Advanced access control. Threat protection.</li>
-                                  <li><strong>Network.</strong> Deliver fast, high-performing connectivity between users, devices, and locations, complete with zero-trust security.</li>
-                              </ul>
-                              <div class="logo-sec">
-                              <picture>
-                                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.webp" type="image/webp">
-                                <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.png" type="image/png"> 
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.webp" alt="Get Started Logos" >
-                                </picture>
-                              </div>
+waitForElm('body .landing-page__form-container').then(function () {
+var formContain = document.querySelector('body .landing-page__content-container');
+    formContain.outerHTML= `<div class="hero_left">
+                      <div class="hero-wrap">
+                          <div class="hero-title"><h1>Secure your entire <span>multi-cloud</span> environment</h1></div>
+                          <ul>
+                              <li><strong>Visibility.</strong> Get complete visibility into your cloud network. Web, SaaS, cloud, public and private apps, and more.</li>
+                              <li><strong>Security.</strong> Manage security in one place. Granular web and cloud policy controls. Advanced access control. Threat protection.</li>
+                              <li><strong>Network.</strong> Deliver fast, high-performing connectivity between users, devices, and locations, complete with zero-trust security.</li>
+                          </ul>
+                          <div class="logo-sec">
+                          <picture>
+                            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.webp" type="image/webp">
+                            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.png" type="image/png"> 
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/1001/logos_2.webp" alt="Get Started Logos" >
+                            </picture>
                           </div>
-                      </div>`;
+                      </div>
+                  </div>`;
 });
 
 //updating footer phon number here
@@ -43,9 +43,9 @@ if (footeRow) {
 }
 
 //Form internal code
-waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
-    formModify();
-});
+// waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
+//     formModify();
+// });
 
 function formModify() {
     const mktoFormRowElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow');
@@ -55,12 +55,12 @@ function formModify() {
         if (mktoField && mktoField.getAttribute('type') == 'hidden') {
             element.classList.add('hideField');
         }
-        else {
-            element.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm) {
-                elm.classList.add(elm.querySelector('.mktoField').getAttribute('id') + '-row');
-                document.querySelector('.mktoForm').insertAdjacentElement('beforeend', elm);
-            });
-        }
+        // else {
+        //     element.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm) {
+        //         elm.classList.add(elm.querySelector('.mktoField').getAttribute('id') + '-row');
+        //         document.querySelector('.mktoForm').insertAdjacentElement('beforeend', elm);
+        //     });
+        // }
     });
 
 
@@ -106,33 +106,49 @@ function formModify() {
             clearInterval(changeLabels);
         }, 100);
 
-        document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
-        document.querySelector('.mktoFormCol.mktoCheckbox_151456_0-row').classList.add('spz-hidden');
-        document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden');
-        document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
-        document.querySelector('.mktoFormCol.numEmployeesRange-row').classList.add('spz-hidden');
-        document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.mktoCheckbox_151456_0-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.numEmployeesRange-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
 
-        document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+        // document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
 
 
-        waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
-            if (document.querySelectorAll('.frm-commt').length == 0) {
-                document.querySelector('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
-                    <div class="commt-text">Comment</div>
-                    </div>`);
-            }
-            document.querySelector('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
-                this.classList.toggle("close-cmnt");
-                var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
-                mktoFieldWrapList.forEach(function (element) {
-                    element.classList.toggle("visible");
-                });
-            });
-        });
 
         document.querySelector('.landing-page__form-container.get-started-form__form').insertAdjacentHTML('afterbegin', `<div class="hero-title-tablet"><h1>Secure your entire <span>multi-cloud</span> environment</h1></div>`);
     });
+
+    // waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
+    //     if (document.querySelectorAll('.frm-commt').length == 0) {
+    //         document.querySelector('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
+    //             <div class="commt-text">Comment</div>
+    //             </div>`);
+    //     }
+    //     document.querySelector('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt').addEventListener('click', function () {
+    //         this.classList.toggle("close-cmnt");
+    //         var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
+    //         mktoFieldWrapList.forEach(function (element) {
+    //             element.classList.toggle("visible");
+    //         });
+    //     });
+    // });
+
+    // waitForElm('.netskope-fm').then(function () {
+    //     document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
+    //     if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+    //         document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
+    //     }
+    //     document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
+    // });
+    // waitForElm('.single_checkbox').then(function () {
+    //     document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
+    //     if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+    //         document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
+    //     }
+    //     document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
+    // });
 
 
     document.getElementById("mOICustomField11").setAttribute('tabindex', '1');
@@ -236,28 +252,14 @@ function waitForElm(selector) {
 }
 
 function checkState() {
-    waitForElm('#PostalCode').then(function () {
-        document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
-        // document.querySelector('.Country-row').insertAdjacentElement('afterend', document.querySelector('#PostalCode').closest('.mktoFormRow'));
-        document.querySelector('#PostalCode').setAttribute('tabindex', '12');
-        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-            document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('spz-hidden');
-        }
-    });
-    waitForElm('.netskope-fm').then(function () {
-        document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
-        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-            document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
-        }
-        document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
-    });
-    waitForElm('.single_checkbox').then(function () {
-        document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
-        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-            document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
-        }
-        document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
-    });
+    // waitForElm('#PostalCode').then(function () {
+    //     document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
+    //     // document.querySelector('.Country-row').insertAdjacentElement('afterend', document.querySelector('#PostalCode').closest('.mktoFormRow'));
+    //     document.querySelector('#PostalCode').setAttribute('tabindex', '12');
+    //     if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
+    //         document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('spz-hidden');
+    //     }
+    // });
 }
 // });
 

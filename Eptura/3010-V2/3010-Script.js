@@ -616,7 +616,7 @@
 
                 document.body.classList.add('ppc-condeco');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>Workspace Scheduling software</h6><h1>Streamline desk and meeting room scheduling. Simplify hybrid work.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. </li><li class="list-item"><span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Workspace Scheduling software</h6><h1>Streamline desk and meeting room scheduling. Simplify hybrid work.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. </li><li class="list-item"><span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
                 <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579900/eptura/3002/condeco-ui_2.webp" type="image/webp">
                 <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579900/eptura/3002/condeco-ui_2.png" type="image/png"> 
                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/condeco-ui_2.webp" alt="Condeco"></picture></div>`;
@@ -658,7 +658,7 @@
 
                 document.body.classList.add('ppc-eptura-room-management');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>Desk and Meeting Room Booking Software</h6><h1>Streamline workspace bookings. Boost hybrid collaboration.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting. </li><li class="list-item"><span>Navigation.</span> Digital floor plans make it easy to find the right room or locate the one you’ve booked upon arrival.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Desk and Meeting Room Booking Software</h6><h1>Streamline workspace bookings. Boost hybrid collaboration.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meeting rooms, and parking. Book rooms with the right equipment for any meeting. </li><li class="list-item"><span>Navigation.</span> Digital floor plans make it easy to find the right room or locate the one you&#8217;ve booked upon arrival.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
                 <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp" type="image/webp">
                 <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.png" type="image/png"> 
                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/room-management-ui_2.webp" alt="Eptura Room Management"></picture></div>`;
@@ -680,20 +680,6 @@
     //Hero image update
     function updatePageContent() {
         waitForElm('#nav #NavLogo #logo-img').then(function () {
-
-            //Footer logo updates for all URLs
-            document.querySelector('#FooterLogo a img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/main_logo_1.svg');
-
-            document.querySelector('#FooterSocial a:nth-child(1) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_twitter_footer.svg');
-            document.querySelector('#FooterSocial a:nth-child(1) img').setAttribute('alt', 'Twitter');
-
-            document.querySelector('#FooterSocial a:nth-child(2) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_facebook_footer.svg');
-            document.querySelector('#FooterSocial a:nth-child(2) img').setAttribute('alt', 'Facebook');
-
-            document.querySelector('#FooterSocial a:nth-child(3) img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1690979487/eptura/3001/eptura_linkedin_footer.svg');
-            document.querySelector('#FooterSocial a:nth-child(3) img').setAttribute('alt', 'Linkedin');
-
-
             //URL specific image updates
             pageData.forEach(function (url) {
                 if (identifyPage == url.pageName) {
@@ -726,16 +712,6 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    //Convert img for safari
-    function checkIfSafari(imgSrc) {
-        if (document.body.classList.contains('safari') && imgSrc.indexOf('webp') > -1) {
-            return imgSrc.replace(/webp/g, "png");
-        }
-        else {
-            return imgSrc;
-        }
     }
 
     //Creating feature content
