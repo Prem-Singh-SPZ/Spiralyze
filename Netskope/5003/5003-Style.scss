@@ -1,0 +1,153 @@
+body.spz-5003 {
+  //Exit intent pop up Css starts here
+  .exit-modal-sec-spz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    z-index: 999;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+
+    -webkit-transition-duration: 400ms;
+    -moz-transition-duration: 400ms;
+    -ms-transition-duration: 400ms;
+    transition-duration: 400ms;
+
+    @media (min-height: 550px) {
+      align-items: center;
+    }
+
+    .ems-content {
+      border-radius: 32px;
+      background: url(//res.cloudinary.com/spiralyze/image/upload/v1701079524/netskope/5003/image_desktop_4.webp)
+        no-repeat center;
+      max-width: 780px;
+      height: 538px;
+      background-size: 780px 538px;
+      width: 100%;
+      margin: 32px 0;
+      position: relative;
+
+      .ems-close-btn {
+        position: absolute;
+        top: 24px;
+        right: 24px;
+        height: 24px;
+        width: 24px;
+        background: url(//res.cloudinary.com/spiralyze/image/upload/v1700143366/netskope/5003/close__stroke.webp)
+          no-repeat center;
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
+      }
+
+      .ems-content-inner {
+        padding: 310px 64px 64px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        flex-direction: column;
+
+        h6 {
+          color: #fff;
+          text-align: center;
+          font-family: Graphik;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          margin: 16px 0 4px;
+        }
+
+        .ems-points {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          li {
+            color: var(--fonts-is-primary, #fff);
+            font-family: Graphik;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            margin-right: 24px;
+            position: relative;
+            display: flex;
+
+            &::before {
+              content: "";
+              background: url(//res.cloudinary.com/spiralyze/image/upload/v1700143366/netskope/5003/check_wrapper.webp)
+                no-repeat;
+              background-size: cover;
+              position: relative;
+              width: 24px;
+              height: 24px;
+              display: block;
+              margin-right: 4px;
+            }
+          }
+        }
+
+        .ems-cta {
+          margin-top: 12px;
+          .get-a-demo {
+            border-radius: var(--radius-absolute, 200px);
+            background: var(--buttons-is-main-default, #ff8200);
+            display: flex;
+            padding: 18px 36px 18px 36px;
+            justify-content: center;
+            align-items: center;
+            color: var(--buttons-on-main-default, #081a59);
+            font-family: Graphik;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            text-decoration: none;
+            width: 210px;
+            height: 48px;
+            -webkit-appearance: none;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+              border: 1px solid var(--blue-700, #081a59);
+              background: var(--buttons-is-secondary-hover, #fff);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    overflow: hidden;
+    .exit-modal-sec-spz {
+      display: flex;
+      animation: slideIn 0.5s;
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(0, -100vh);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+html.active {
+  overflow: hidden;
+}
