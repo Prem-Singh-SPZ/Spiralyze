@@ -144,10 +144,12 @@ body.spz-5003 {
   }
 
   &.active {
-    overflow: hidden;
-    .exit-modal-sec-spz {
-      display: flex;
-      animation: slideIn 0.5s;
+    @media (min-width: 1023.98px) {
+      overflow: hidden;
+      .exit-modal-sec-spz {
+        display: flex;
+        animation: slideIn 0.5s;
+      }
     }
   }
 }
@@ -164,5 +166,7 @@ body.spz-5003 {
 }
 
 html.active {
-  overflow: hidden;
+  @media (min-width: 1023.98px) {
+    overflow: hidden;
+  }
 }

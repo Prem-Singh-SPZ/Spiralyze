@@ -147,15 +147,17 @@ body.spz-5003 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-
   border: 1px solid var(--blue-700, #081a59);
   background: var(--buttons-is-secondary-hover, #fff);
 }
-body.spz-5003.active {
-  overflow: hidden;
-}
-body.spz-5003.active .exit-modal-sec-spz {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-animation: slideIn 0.5s;
-          animation: slideIn 0.5s;
+@media (min-width: 1023.98px) {
+  body.spz-5003.active {
+    overflow: hidden;
+  }
+  body.spz-5003.active .exit-modal-sec-spz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: slideIn 0.5s;
+            animation: slideIn 0.5s;
+  }
 }
 
 @-webkit-keyframes slideIn {
@@ -183,6 +185,8 @@ body.spz-5003.active .exit-modal-sec-spz {
             transform: translate(0, 0);
   }
 }
-html.active {
-  overflow: hidden;
+@media (min-width: 1023.98px) {
+  html.active {
+    overflow: hidden;
+  }
 }
