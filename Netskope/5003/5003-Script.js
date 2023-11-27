@@ -31,6 +31,9 @@
         appendPopup();
         // if (!getCookie('spz_existing_user')) {
         // }
+        // else {
+        //     showExitPopup(false);
+        // }
     }
 
     function waitForElm(selector) {
@@ -97,12 +100,11 @@
         }
 
         exitIntentPopup();
-        setCookieForTimer('spz_existing_user', init_timer);
 
         // Close popup
         document.querySelector('.ems-close-btn').addEventListener('click', function () {
             showExitPopup(false);
-            setCookieForTimer('spz_existing_user', '2');
+            // setCookieForTimer('spz_existing_user', '2');
         });
     }
 
@@ -111,6 +113,7 @@
         if (isVisible) {
             document.body.classList.add('active');
             document.querySelector('html').classList.add('active');
+            setCookieForTimer('spz_existing_user', init_timer);
         } else if (!isVisible) {
             document.body.classList.remove('active');
             document.querySelector('html').classList.remove('active');
@@ -123,14 +126,10 @@
         var topValue = 10;
         window.addEventListener("mouseout", function (e) {
             mouseY = e.clientY;
-            let count = +(getCookie('spz_existing_user'));
+            // let count = +(getCookie('spz_existing_user'));
 
-            console.log('hello');
-
-            console.log(count);
-            if (mouseY <= topValue && count < 2) {
+            if (mouseY <= topValue && (!getCookie('spz_existing_user'))) {
                 showExitPopup(true);
-
             }
         }, false);
     }
