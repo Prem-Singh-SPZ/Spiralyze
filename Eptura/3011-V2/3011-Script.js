@@ -421,7 +421,7 @@
 
 
             if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
-                document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = '<span>Get started</span>';
+                document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = '<span>Let&#x2019;s get started</span>';
             }
 
             document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
