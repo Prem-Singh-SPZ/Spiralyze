@@ -1,10 +1,6 @@
 //Control URL: https://www.netskope.com/get-started?mutiny_preview=eyJhbGciOiJIUzI1NiJ9.eyJrZXkiOiI2NDAzZWJlMC1lMGIwLTRmYTUtYWViOS1mNzYwODM0ZTkyZWIiLCJpc3MiOiIyOTc0NWQ2OWEzMGFlYzk0IiwiY29tcGFueV9pZCI6IjI5NzQ1ZDY5YTMwYWVjOTQiLCJleHBlcmllbmNlX2lkIjoiMThhODMxNTUtNzg2MC00ZmY0LTgzMjUtMThhNWIxNzBiMTk0IiwidmFyaWF0aW9uX2lkIjoiMzcwMjVhMTEtZGU5YS00YzcwLTk1Y2MtMzNiNzAwMGU4ZDYwIiwiZXhwIjoxNzA1NTQzMDkwLCJ2YXJpYWJsZV9vdmVycmlkZXMiOnt9fQ.aL0GRy7yT21F1W8pUU9rTpzU-tbOxLvY5UQYqb1EFdA
 
-// let bodyLoad = setInterval(function () {
-// const bodyEle = document.querySelector('body');
-// if (bodyEle) {
 document.body.classList.add('spz-1002');
-// clearInterval(bodyLoad);
 
 document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg" as="image">`
 );
