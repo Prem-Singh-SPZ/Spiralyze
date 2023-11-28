@@ -584,6 +584,10 @@ body.spz-3010 {
                           .mktoCheckboxList label {
                             color: #e51b00 !important;
 
+                            a {
+                              color: #e51b00;
+                            }
+
                             &::before {
                               background: url("//res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg")
                                 left center no-repeat;
@@ -650,9 +654,9 @@ body.spz-3010 {
                       }
                     }
 
-                    // &[data-zi-field-enriched="true"] {
-                    //   display: inline !important;
-                    // }
+                    &[data-zi-field-enriched="true"] {
+                      display: inline !important;
+                    }
 
                     .spz-anchor:not(.spz-hidden) {
                       display: flex;
