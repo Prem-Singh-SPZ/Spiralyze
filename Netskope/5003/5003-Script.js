@@ -16,14 +16,18 @@
 
     //Passing test details to hidden fields
     function submitTestDetails() {
-        const field_int = setInterval(function () {
-            if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#5003_spzaa_variant") {
-                    clearInterval(field_int);
-                }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#5003_spzaa_variant');
-            }
-        }, 100);
+        // const field_int = setInterval(function () {
+        //     if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+        //         if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#5003_spzaa_variant") {
+        //             clearInterval(field_int);
+        //         }
+        //         document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#5003_spzaa_variant');
+        //     }
+        // }, 100);
+
+        MktoForms2.whenReady(function (form) {
+            document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#5003_spzaa_variant');
+        });
     }
 
     function createTest5003() {
