@@ -387,7 +387,7 @@
             }
 
             if (e.target.classList.contains("get-started-cta")) {
-                scrollToElement('#HeroFormPanel', 50);
+                scrollToElement('#nav', 50);
             }
         });
         document.querySelector('head').insertAdjacentHTML("afterbegin", `
