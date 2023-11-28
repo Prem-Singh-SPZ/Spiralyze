@@ -387,7 +387,7 @@
             }
 
             if (e.target.classList.contains("get-started-cta")) {
-                scrollToElement('.get-demo-spz', 50);
+                scrollToElement('#HeroFormPanel', 50);
             }
         });
         document.querySelector('head').insertAdjacentHTML("afterbegin", `
@@ -575,7 +575,7 @@
 
                 document.body.classList.add('ppc-condeco');
 
-                document.querySelector('#hero #HeroText').innerHTML = `<h6>Workspace Scheduling software</h6><h1>Streamline desk and meeting room scheduling. Simplify hybrid work.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. </li><li class="list-item"><span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in-office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
+                document.querySelector('#hero #HeroText').innerHTML = `<h6>Workspace Scheduling software</h6><h1>Streamline desk and meeting room scheduling. Simplify hybrid work.</h1><ul class="hero-list-copy"><li class="list-item"><span>Bookings.</span> Schedule desks, meetings, and parking via the app or your calendar. Instantly notify attendees of any changes. </li><li class="list-item"><span>Room selection.</span> Find rooms with the equipment and space you need. Auto-book new rooms if you reschedule meetings.</li><li class="list-item"><span>Collaboration.</span> See when co-workers will be in the office and their desk location. Easily manage your hybrid work schedule. </li></ul><div class="hero-img"><picture>
                 <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579900/eptura/3002/condeco-ui_2.webp" type="image/webp">
                 <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1691579900/eptura/3002/condeco-ui_2.png" type="image/png"> 
                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3002/condeco-ui_2.webp" alt="Condeco"></picture></div>`;
