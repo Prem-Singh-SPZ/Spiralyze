@@ -9,6 +9,9 @@ body.spz-5004 .site-content {
 body.spz-5004 .site-content .inner-banner.style-three {
   display: none !important;
 }
+body.spz-5004 .site-content .inner-banner.dark-contact-hero {
+  display: none !important;
+}
 body.spz-5004 .site-content .get-touch-form {
   padding: 56px 100px 80px;
   max-width: 1170px;
@@ -117,16 +120,26 @@ body.spz-5004 .site-content .get-touch-form .container::before {
     margin: auto;
   }
 }
+body.spz-5004 .site-content .get-touch-form .container .title-part {
+  display: none !important;
+}
+body.spz-5004 .site-content .get-touch-form .container .form-container {
+  margin-top: 0;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 @media (max-width: 1199.98px) {
-  body.spz-5004 .site-content .get-touch-form .container {
+  body.spz-5004 .site-content .get-touch-form .container .form-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
   }
-}
-body.spz-5004 .site-content .get-touch-form .container .title-part {
-  display: none !important;
 }
 body.spz-5004 .site-content .get-touch-form .container .get-form {
   border-radius: 8px;

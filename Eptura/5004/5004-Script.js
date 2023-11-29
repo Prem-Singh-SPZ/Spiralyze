@@ -218,7 +218,7 @@
 
     //adding page contents
     function addPageContent() {
-        document.querySelector('.get-touch-form.og-contact-resources').insertAdjacentHTML('afterbegin', `<div class="spz-page-title"><h1>Get in touch</h1></div>`);
+        document.querySelector('.get-touch-form.dark_form_container').insertAdjacentHTML('afterbegin', `<div class="spz-page-title"><h1>Get in touch</h1></div>`);
 
         document.querySelector('.default-form.get-form').insertAdjacentHTML('afterend', `<div class="additional-section">
                 <div class="need-support">
@@ -244,7 +244,7 @@
                 </div>
             </div>`);
 
-        document.querySelector('.get-touch-form.og-contact-resources').insertAdjacentHTML('afterend', `<section class="spz-trusted-logos"><div class="logo-title"><h6>Trusted by <span>16,000+</span> customers worldwide</h6></div><div class="logos-parent"><picture>
+        document.querySelector('.get-touch-form.dark_form_container').insertAdjacentHTML('afterend', `<section class="spz-trusted-logos"><div class="logo-title"><h6>Trusted by <span>16,000+</span> customers worldwide</h6></div><div class="logos-parent"><picture>
         <source media="(min-width:1200px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_set_2.svg">
         <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1697646192/eptura/5004/logo_set_-_tablet.svg">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1697646201/eptura/5004/logo_set_-_mobile.svg" alt="Trusted Logos">
