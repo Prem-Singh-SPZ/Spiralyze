@@ -183,7 +183,7 @@ body.spz-3011 {
         padding-bottom: 100px !important;
         overflow: hidden;
         @media (min-width: 767.98px) and (max-width: 1199.98px) {
-          padding: 24px 40px 47px !important;
+          padding: 24px 40px 48px !important;
         }
         @media (max-width: 767.98px) {
           padding: 24px 0 47px !important;
@@ -201,7 +201,7 @@ body.spz-3011 {
               max-width: 685px;
             }
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
-              padding: 0 0 52px !important;
+              padding: 0 0 51px !important;
             }
             @media (max-width: 767.98px) {
               padding: 0 44px 37px !important;
@@ -646,12 +646,12 @@ body.spz-3011 {
                         }
                       }
 
-                      &[data-zi-field-enriched="true"] {
+                      &[data-zi-field-enriched="true"], &[data-zi-field-enriched="false"] {
                         display: inline !important;
                       }
                     }
 
-                    &[data-zi-field-enriched="true"] {
+                    &[data-zi-field-enriched="true"], &[data-zi-field-enriched="false"] {
                       display: inline !important;
                     }
 
@@ -1207,6 +1207,9 @@ body.spz-3011 {
           @media (min-width: 1199.98px) {
             padding-bottom: 100px !important;
           }
+          @media (max-width: 1199.98px) {
+            padding-bottom: 47px !important;
+          }
 
           > .row {
             #HeroText {
@@ -1237,9 +1240,7 @@ body.spz-3011 {
             }
 
             > .col-md.pb-5 {
-              @media (max-width: 1199.98px) {
-                padding-bottom: 52px !important;
-              }
+         
               @media (max-width: 767.98px) {
                 padding-bottom: 35px !important;
               }
