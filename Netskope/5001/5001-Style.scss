@@ -1,0 +1,120 @@
+body {
+  #wrapper {
+    position: sticky;
+    top: 0;
+    z-index: 9999;
+
+    .header.has-promo-banner {
+      &.homepage {
+        background-color: #081a59;
+        position: relative;
+        top: 0;
+
+        .header__container-inner {
+          .header__top.has-promo-banner {
+            .header__logo-image {
+              img {
+                width: 156px;
+              }
+            }
+
+            .header__nav {
+              #menu-main-menu-v3 {
+                li {
+                  margin-left: 12px;
+                  a {
+                    line-height: 24px;
+                  }
+                }
+              }
+            }
+
+            .header__top-menu {
+              .header__get-started {
+                display: flex;
+                align-items: center;
+
+                .spz-5001-email {
+                  input {
+                    border-radius: var(--radius-xl, 24px);
+                    border: 1px solid rgba(156, 157, 159, 0.6);
+                    background: rgba(204, 204, 205, 0.4);
+                    height: 40px;
+                    width: 279px;
+                    padding: 8px 48px 8px 16px;
+                    margin-right: -48px;
+                    outline: transparent;
+                    color: #fff;
+
+                    &::-webkit-input-placeholder {
+                      color: #fff;
+                    }
+                    &:-moz-placeholder {
+                      color: #fff;
+                      opacity: 1;
+                    }
+                    &::-moz-placeholder {
+                      color: #fff;
+                      opacity: 1;
+                    }
+                    &:-ms-input-placeholder {
+                      color: #fff;
+                    }
+                    &::-ms-input-placeholder {
+                      color: #fff;
+                    }
+
+                    &::placeholder {
+                      color: #fff;
+                    }
+                  }
+                }
+
+                .header__get-started-button.btn {
+                  height: 40px;
+                  font-weight: 600;
+                  padding: 8px 16px;
+                  letter-spacing: 0;
+                  line-height: 24px;
+                  width: 122px;
+                  white-space: nowrap;
+                }
+              }
+            }
+          }
+        }
+      }
+
+      &:not(.homepage) {
+        background-color: #e8fbff;
+        position: relative;
+        top: 0;
+
+        .header__container-inner {
+          .header__top.has-promo-banner {
+            .header__logo-image {
+              img {
+                width: 156px;
+              }
+            }
+
+            .header__nav {
+              #menu-main-menu-v3 {
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .v3__container {
+    #components__content {
+      .v3-hero-carousel.has-promo-banner {
+        .v3-hero-carousel__container.has-promo-banner {
+          padding-top: 62px;
+        }
+      }
+    }
+  }
+}
