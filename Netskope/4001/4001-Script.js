@@ -118,7 +118,7 @@ var bodyCheckInterval = setInterval(function () {
 function shiftButton() {
     document.querySelectorAll('#success-msg').forEach(function (element) {
         if (!element.querySelector('.gated-content__action')) {
-            element.querySelector('.thanksmsg > h2').insertAdjacentHTML('beforeend', document.querySelector('.gated-content__action').outerHTML);
+            element.querySelector('.thanksmsg > h2').insertAdjacentHTML('afterend', document.querySelector('.gated-content__action').outerHTML);
         }
     })
 }
