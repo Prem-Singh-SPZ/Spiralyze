@@ -129,6 +129,21 @@
   background-size: 100%;
   background-position: bottom center;
 }
+.netskope_4001 .hero_left .hero_form_wrap .gated-content__form.form_loaded .success-li {
+  text-align: center;
+}
+.netskope_4001 .hero_left .hero_form_wrap .gated-content__form.form_loaded .success-li > h2 {
+  margin-bottom: 20px;
+}
+.netskope_4001 .hero_left .hero_form_wrap .gated-content__form.form_loaded .success-li .gated-content__action {
+  margin: 0;
+}
+.netskope_4001 .hero_left .hero_form_wrap .gated-content__form.form_loaded .success-li .gated-content__action a {
+  border: 1px solid #ff8200;
+}
+.netskope_4001 .hero_left .hero_form_wrap .gated-content__form.form_loaded .success-li .gated-content__action a:hover {
+  border: 1px solid #081a59;
+}
 .netskope_4001 .hero_left .form_sub_title {
   max-width: 123px;
   width: 100%;
@@ -172,6 +187,10 @@
           justify-content: space-between;
   max-width: 440px;
 }
+.netskope_4001 .hero_left .mktoForm .mktoTemplateBox {
+  margin-left: auto;
+  margin-right: auto;
+}
 .netskope_4001 .hero_left .mktoForm .mktoFormRow .mktoFormCol {
   margin: 0 0 16px !important;
   padding: 0 !important;
@@ -200,6 +219,9 @@
 }
 .netskope_4001 .hero_left .mktoForm .mktoFieldDescriptor.mktoFormCol .single_checkbox > label p.p11 a {
   padding: 0;
+}
+.netskope_4001 .hero_left .mktoForm .mktoFieldDescriptor.mktoFormCol .single_checkbox > label p.p11 a:hover {
+  text-decoration: underline !important;
 }
 .netskope_4001 .hero_left .mktoForm .mktoFieldDescriptor.mktoFormCol .single_checkbox > .single_checked:before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg);
@@ -309,6 +331,7 @@
 }
 .netskope_4001 .hero_left .mktoForm .netskope-fm > a {
   padding: 0;
+  color: #7e8bba !important;
 }
 .netskope_4001 .hero_left .mktoForm .netskope-fm a:hover {
   text-decoration: underline !important;
@@ -443,6 +466,17 @@
 }
 .netskope_4001 .hero_left_image img {
   max-width: 100%;
+  border-radius: 24px;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  .netskope_4001 .hero_left_image img {
+    border-radius: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  .netskope_4001 .hero_left_image img {
+    border-radius: 12px;
+  }
 }
 .netskope_4001 .hero_right_image img {
   max-width: 100%;
@@ -612,6 +646,9 @@
   }
 }
 @media (max-width: 1023.98px) {
+  .netskope_4001 .netskope-component--custom-html {
+    overflow: hidden;
+  }
   .netskope_4001 .homepage .header__search-container-mobile .header__search {
     background-color: #081a59;
   }
@@ -712,7 +749,6 @@
   }
   .netskope_4001 .hero_left {
     max-width: 704px;
-    min-height: 760px;
   }
   .netskope_4001 .hero_left .hero_tags {
     display: none;
@@ -798,6 +834,9 @@
   .netskope_4001 .hero_right_no_desk_image {
     display: block;
     max-width: 352px;
+  }
+  .netskope_4001 .hero_right_no_desk_image img {
+    border-radius: 16px;
   }
   .netskope_4001 .hero_right_image {
     display: -webkit-box;
@@ -891,9 +930,6 @@
   .netskope_4001 .hero_inner {
     padding-top: 2px;
   }
-  .netskope_4001 .hero_left {
-    min-height: 772px;
-  }
   .netskope_4001 .hero_left .hero_form_wrap .gated-content__form {
     margin: 0;
     padding: 24px 24px 32px;
@@ -937,6 +973,9 @@
   }
   .netskope_4001 .hero_right_no_desk_image {
     margin-bottom: 24px;
+  }
+  .netskope_4001 .hero_right_no_desk_image img {
+    border-radius: 12px;
   }
   .netskope_4001 .hero_tags .gated-content__tags {
     margin-bottom: 14px;
