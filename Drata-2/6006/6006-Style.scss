@@ -5,43 +5,176 @@ body {
         display: none !important;
       }
 
+      .hero-right-section {
+        margin-bottom: 94px;
+        @media (min-width: 767.98px) and (max-width: 1280px) {
+          margin-bottom: 65px;
+        }
+        @media (max-width: 767.98px) {
+          margin-bottom: 70px;
+        }
+      }
+
       .review-section {
+        &.desk {
+          @media (max-width: 1280px) {
+            display: none !important;
+          }
+        }
+        &.tab {
+          @media (min-width: 1280.98px) {
+            display: none !important;
+          }
+        }
         background: #eef2f6;
         // overflow: initial;
 
         .container {
+          text-align: left;
           &:first-child {
             .review-sub-title {
               color: #0580e8;
+              text-align: center;
             }
             .review-sec-title {
               color: #0c131a;
+              text-align: center;
+              @media (max-width: 767.98px) {
+                margin-bottom: 19px;
+              }
             }
 
             .rating-section {
+              text-align: center;
+
               border-radius: 60px;
               border: 1px solid #dde3eb;
               background: #fff;
+              padding: 4px 1.5px;
+              @media (max-width: 767.98px) {
+                height: 84px;
+                padding: 11px 4px 13px;
+              }
+
               p {
                 color: #0c131a;
+              }
+
+              .img-container {
+                @media (max-width: 767.98px) {
+                  margin-bottom: 8px;
+                }
               }
             }
           }
         }
 
-        .review-slider {
-          .review-item-box {
-            .review-content {
-              background-color: #fff;
-              border-color: #dde3eb;
-              .review-author {
-                color: #0c131a;
+        .review-slider-container {
+          max-width: 1152px;
+          position: relative;
+          .review-slider {
+            margin-top: 56px;
+            @media (max-width: 1280px) {
+              margin-top: 8px;
+            }
+
+            .review-item-box {
+              @media (min-width: 767.98px) and (max-width: 1280px) {
+                &:first-child {
+                  padding-left: 16px;
+                }
+                min-width: 429px;
+                padding: 0 8px;
               }
-              .review {
-                color: #0c131a;
+              @media (max-width: 767.98px) {
+                &:first-child {
+                  padding-left: 10px;
+                }
+                min-width: 329px;
+                padding: 0 6px;
+              }
+
+              .review-content {
+                background-color: #fff;
+                border-color: #dde3eb;
+                padding: 27px 29px 27px 27px;
+
+                @media (min-width: 767.98px) and (max-width: 1280px) {
+                  height: 296px;
+                  padding: 27px 33px 27px 27px;
+                }
+
+                @media (max-width: 767.98px) {
+                  height: 332px;
+                  padding: 27px 32px 27px 27px;
+                }
+
+                .review-author {
+                  color: #0c131a;
+                }
+                .review {
+                  color: #0c131a;
+                  padding: 24px 0;
+                  @media (max-width: 1280px) {
+                    padding: 20px 0;
+                  }
+                }
               }
             }
           }
+        }
+        .swiper-next {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: calc(50% - 24px);
+          right: 40px;
+          z-index: 9;
+          background: #fff
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701245206/drata/6006/cta_arrow_1.svg)
+            no-repeat center;
+          padding: 12px;
+          border-radius: 999px;
+          border: 1px solid #dde3eb;
+          cursor: pointer;
+
+          &:hover {
+            background: #fff
+              url(//res.cloudinary.com/spiralyze/image/upload/v1701245204/drata/6006/cta_arrow.svg)
+              no-repeat center;
+            border-color: #96a1b2;
+          }
+        }
+
+        .swiper-prev {
+          width: 40px;
+          height: 40px;
+          position: absolute;
+          top: calc(50% - 24px);
+          left: 40px;
+          transform: rotate(180deg);
+          z-index: 9;
+          background: #fff
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701245206/drata/6006/cta_arrow_1.svg)
+            no-repeat center;
+          padding: 12px;
+          border-radius: 999px;
+          border: 1px solid #dde3eb;
+          cursor: pointer;
+
+          &:hover {
+            background: #fff
+              url(//res.cloudinary.com/spiralyze/image/upload/v1701245204/drata/6006/cta_arrow.svg)
+              no-repeat center;
+            border-color: #96a1b2;
+          }
+        }
+      }
+
+      .social-pr-section {
+        margin-top: 62px;
+        @media (max-width: 1280px) {
+          margin-top: 65px;
         }
       }
     }
