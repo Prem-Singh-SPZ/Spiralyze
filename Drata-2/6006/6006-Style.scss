@@ -70,8 +70,10 @@ body {
         }
 
         .review-slider-container {
-          max-width: 1152px;
-          position: relative;
+          @media (min-width: 1280.98px) {
+            max-width: 1152px;
+            position: relative;
+          }
           .review-slider {
             margin-top: 56px;
             @media (max-width: 1280px) {
@@ -83,12 +85,18 @@ body {
                 &:first-child {
                   padding-left: 16px;
                 }
+                &:last-child {
+                  padding-right: 16px;
+                }
                 min-width: 429px;
                 padding: 0 8px;
               }
               @media (max-width: 767.98px) {
                 &:first-child {
                   padding-left: 10px;
+                }
+                &:last-child {
+                  padding-right: 10px;
                 }
                 min-width: 329px;
                 padding: 0 6px;
@@ -111,6 +119,7 @@ body {
 
                 .review-author {
                   color: #0c131a;
+                  font-weight: 700;
                 }
                 .review {
                   color: #0c131a;

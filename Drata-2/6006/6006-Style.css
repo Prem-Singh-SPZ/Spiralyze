@@ -64,9 +64,11 @@ body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .contai
     margin-bottom: 8px;
   }
 }
-body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container {
-  max-width: 1152px;
-  position: relative;
+@media (min-width: 1280.98px) {
+  body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container {
+    max-width: 1152px;
+    position: relative;
+  }
 }
 body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider {
   margin-top: 56px;
@@ -84,6 +86,9 @@ body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review
   body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box:first-child {
     padding-left: 16px;
   }
+  body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box:last-child {
+    padding-right: 16px;
+  }
 }
 @media (max-width: 767.98px) {
   body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box {
@@ -92,6 +97,9 @@ body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review
   }
   body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box:first-child {
     padding-left: 10px;
+  }
+  body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box:last-child {
+    padding-right: 10px;
   }
 }
 body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box .review-content {
@@ -113,6 +121,7 @@ body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review
 }
 body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box .review-content .review-author {
   color: #0c131a;
+  font-weight: 700;
 }
 body #main-content .hs_cos_wrapper.hs_cos_wrapper_widget .review-section .review-slider-container .review-slider .review-item-box .review-content .review {
   color: #0c131a;
