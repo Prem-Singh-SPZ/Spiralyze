@@ -55,12 +55,16 @@ $font-family_3: "Graphik";
       top: 0;
       right: 0;
       pointer-events: none;
-    }
 
-    @media (min-width: 1920px) and (max-width: 3000px) {
-      overflow: hidden;
-      &::before {
-        right: -200px;
+      @media (min-width: 1900px) and (max-width: 2500px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+      @media (min-width: 2500px) and (max-width: 3500px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
       }
     }
 
@@ -685,7 +689,7 @@ $font-family_3: "Graphik";
     }
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 3500px) {
   .netskope_6001 {
     .landing-page-v3__container {
       &::before {

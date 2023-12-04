@@ -47,12 +47,18 @@
   right: 0;
   pointer-events: none;
 }
-@media (min-width: 1920px) and (max-width: 3000px) {
-  .netskope_6001 .landing-page-v3__container {
-    overflow: hidden;
-  }
+@media (min-width: 1900px) and (max-width: 2500px) {
   .netskope_6001 .landing-page-v3__container::before {
-    right: -200px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 2500px) and (max-width: 3500px) {
+  .netskope_6001 .landing-page-v3__container::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
   }
 }
 .netskope_6001 .landing-page-v3__container .landing-page-v3__logo {
@@ -592,7 +598,7 @@
     max-width: 548px;
   }
 }
-@media (min-width: 1920px) {
+@media (min-width: 3500px) {
   .netskope_6001 .landing-page-v3__container::before {
     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
   }
