@@ -1,0 +1,778 @@
+$color_1: #fff;
+$color_2: #081a59;
+$color_3: #7e8bba;
+$color_4: inherit;
+$color_5: #ff5b28;
+$font-family_1: Graphik;
+$font-family_2: "Lora";
+$font-family_3: "Graphik";
+
+/*--- Header CSS Start Here ---*/
+/*--- Header CSS End Here ---*/
+/*--- Hero Section CSS Start Here ---*/
+/*--- Hero Section CSS End Here ---*/
+/*--- Form CSS Start Here ---*/
+/* .netskope_6001 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.typing .mktoField.mktoInvalid, 
+.netskope_6001 .mktoForm .mktoFieldWrap.mktoRequiredField select#Country[aria-describedby="ValidMsgCountry"] */
+/*--- Form CSS End Here ---*/
+.netskope_6001 {
+  .header.has-promo-banner {
+    .header__container-inner {
+      max-width: 1238px;
+      padding: 0 24px;
+    }
+    top: 0;
+    .header__container {
+      padding: 32px 0;
+    }
+    .header__top {
+      padding: 0;
+    }
+    .header__logo {
+      padding: 0;
+    }
+    img {
+      width: 196px;
+    }
+  }
+  .landing-page-v3__container {
+    .landing-page-v3__container-inner {
+      max-width: 1238px;
+      padding: 0 24px;
+    }
+    padding: 142px 0 0 0;
+    background: #081a59 !important;
+    background-size: 100% !important;
+    position: relative;
+    &::before {
+      position: absolute;
+      content: "";
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6001/background_pattern_2.webp");
+      background-size: contain;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 100%;
+      top: 0;
+      right: 0;
+      pointer-events: none;
+    }
+
+    @media (min-width: 1920px) and (max-width: 3000px) {
+      overflow: hidden;
+      &::before {
+        right: -200px;
+      }
+    }
+
+    .landing-page-v3__logo {
+      display: none;
+    }
+    .plus-orange {
+      display: none;
+    }
+    .landing-page-v3__content-container {
+      display: none;
+    }
+    .landing-page-v3__form-container {
+      -webkit-box-ordinal-group: unset;
+      -ms-flex-order: unset;
+      order: unset;
+      padding: 0;
+      .landing-page-v3__form {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-orient: unset;
+        -webkit-box-direction: unset;
+        -ms-flex-direction: unset;
+        flex-direction: unset;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -webkit-box-align: start;
+        -ms-flex-align: start;
+        align-items: flex-start;
+      }
+    }
+    .landing-page-v3__content-container--bottom {
+      padding: 96px 0 49px;
+      -webkit-box-ordinal-group: unset;
+      -ms-flex-order: unset;
+      order: unset;
+    }
+  }
+  .landing-page-v3__form-container {
+    .landing-page-v3__form-image {
+      display: none;
+    }
+    .landing-page-v3__form-content {
+      + {
+        .form-content-heading {
+          display: none;
+          br {
+            display: none;
+          }
+          span {
+            font-family: $font-family_2;
+          }
+        }
+      }
+    }
+    .landing-page-v3__form {
+      .hero_left {
+        width: 46.5%;
+        max-width: 548px;
+      }
+      .landing-page-v3__form-content {
+        width: 42.5%;
+        max-width: 504px;
+        padding: 24px 32px 32px;
+        background: #ffffff;
+        border-radius: 24px;
+        position: relative;
+        &::after {
+          position: absolute;
+          content: "";
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700151751/netskope/6001/vector_9.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+          width: 260px;
+          height: 72px;
+          left: -125px;
+          bottom: -117px;
+        }
+      }
+    }
+  }
+  .hero_left {
+    .form-content-heading {
+      color: $color_1;
+      font-family: $font-family_1;
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+      margin: 0;
+      position: relative;
+      br {
+        display: none;
+      }
+      span {
+        font-family: $font-family_2;
+      }
+      &::before {
+        position: absolute;
+        content: "";
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701662318/netskope/6001/Union.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        width: 32px;
+        height: 32px;
+        top: -25px;
+        left: -64px;
+      }
+    }
+    h4 {
+      color: $color_1;
+      font-family: $font-family_1;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 24px;
+      margin: 20px 0 24px;
+      sup {
+        font-size: 8px;
+        top: -0.9em;
+      }
+    }
+    img {
+      width: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+      image-rendering: -webkit-optimize-contrast;
+    }
+  }
+  .landing-page-v3__form-content {
+    .form_title {
+      color: $color_2;
+      text-align: center;
+      font-family: $font-family_1;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 48px;
+      margin-bottom: 24px;
+    }
+    form.mktoForm {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 0 !important;
+      .mktoTemplateBox {
+        .welcomeback {
+          color: $color_2 !important;
+        }
+        a.mktoNotYou {
+          color: $color_2 !important;
+        }
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .mktoFormRow.field-2 {
+        display: none !important;
+      }
+      .mktoFormRow {
+        display: -webkit-inline-box !important;
+        display: -ms-inline-flexbox !important;
+        display: inline-flex !important;
+        margin: 0;
+        width: calc(50% - 6px) !important;
+        .mktoFormCol {
+          width: 100% !important;
+          padding: 0 !important;
+          margin: 0 !important;
+        }
+        .mktoFieldWrap {
+          position: relative;
+          margin-bottom: 16px;
+          &:not(.single_checkbox) {
+            label.mktoLabel {
+              position: absolute !important;
+              top: 16px;
+              left: 16px;
+              color: $color_3 !important;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 400 !important;
+              line-height: 24px !important;
+              width: auto !important;
+              height: auto;
+              pointer-events: none;
+              -webkit-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              font-family: $font-family_3 !important;
+            }
+            &:hover {
+              label.mktoLabel {
+                color: $color_2 !important;
+              }
+            }
+          }
+          .mktoField {
+            font-family: $font-family_3 !important;
+            height: 56px !important;
+            padding: 24px 15px 8px !important;
+            border-radius: 24px !important;
+            border: 1px solid rgba(8, 26, 89, 0.2) !important;
+            background: #fff !important;
+            color: $color_2 !important;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 400 !important;
+            line-height: 24px !important;
+            -webkit-box-shadow: none !important;
+            box-shadow: none !important;
+            outline: none !important;
+            &:focus {
+              border-color: #081a59 !important;
+            }
+          }
+          select.mktoField {
+            background-position: right 19px center !important;
+            padding-right: 36px !important;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg") !important;
+            background-size: 16px !important;
+            background-repeat: no-repeat !important;
+            white-space: nowrap;
+            overflow: hidden;
+            -o-text-overflow: ellipsis;
+            text-overflow: ellipsis;
+            option {
+              background: inherit;
+              color: $color_4;
+              border-bottom: inherit;
+              padding: inherit;
+            }
+          }
+          .mktoField.mktoInvalid {
+            border-color: #ff5b28 !important;
+          }
+          .mktoError {
+            top: initial;
+            bottom: initial !important;
+            left: initial !important;
+            right: initial !important;
+            display: inline-block;
+            .mktoErrorArrowWrap {
+              display: none !important;
+            }
+            .mktoErrorMsg {
+              margin: 2px 0 0 10px;
+              padding: 0;
+              color: $color_5;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 20px;
+              letter-spacing: 0em;
+              display: inline-block;
+            }
+          }
+        }
+        .mktoFieldWrap.active.typing {
+          &:not(.single_checkbox) {
+            label.mktoLabel {
+              top: 6px;
+              font-size: 12px !important;
+              line-height: 20px !important;
+              color: $color_3 !important;
+            }
+          }
+          .mktoField {
+            border-color: #081a59 !important;
+          }
+        }
+        .mktoFieldWrap.filled {
+          &:not(.single_checkbox) {
+            label.mktoLabel {
+              top: 6px;
+              font-size: 12px !important;
+              line-height: 20px !important;
+              color: $color_3 !important;
+            }
+          }
+        }
+        .mktoFieldWrap.typing {
+          select.mktoField {
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg") !important;
+          }
+        }
+        .mktoFieldWrap.single_checkbox {
+          margin: -4px 0 8px 0;
+          .mktoLabel {
+            padding: 0 0 0 24px !important;
+            &::after {
+              opacity: 0 !important;
+            }
+            &::before {
+              width: 16px !important;
+              height: 16px !important;
+              border: 1px solid #ff8200 !important;
+              border-radius: 4px !important;
+              background: #fff !important;
+              top: 2px !important;
+            }
+            p.p11 {
+              width: 100%;
+              font-family: $font-family_3 !important;
+            }
+            p {
+              color: $color_2 !important;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+              text-decoration: none !important;
+              a {
+                color: $color_2 !important;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                text-decoration: none !important;
+                &:hover {
+                  text-decoration: underline !important;
+                }
+              }
+            }
+          }
+          .mktoLabel.single_checked {
+            &::before {
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701250536/netskope/6001/Checkbox_base.svg") !important;
+              background-size: contain !important;
+              background-repeat: no-repeat !important;
+              border: none !important;
+            }
+          }
+        }
+        .mktoHtmlText {
+          .netskope-fm {
+            padding: 0 !important;
+            color: $color_3 !important;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+            font-family: $font-family_3 !important;
+            text-decoration: none !important;
+            a {
+              padding: 0 !important;
+              color: $color_3 !important;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px;
+              font-family: $font-family_3 !important;
+              text-decoration: none !important;
+              &:hover {
+                text-decoration: underline !important;
+              }
+            }
+          }
+        }
+      }
+      .mktoFormRow.field-3 {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .mktoFormRow.field-10 {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .mktoFormRow.field-11 {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .mktoFormRow.mktoZipRow {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .mktoButtonRow {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
+      }
+      .mktoButtonWrap {
+        margin-top: 6px !important;
+        .mktoButton {
+          display: -webkit-box !important;
+          display: -ms-flexbox !important;
+          display: flex !important;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          width: 100% !important;
+          height: 48px;
+          font-size: 16px !important;
+          font-weight: 400 !important;
+          line-height: 24px !important;
+          letter-spacing: 0em;
+          color: $color_2 !important;
+          background: #ff8200;
+          border: 1px solid #ff8200 !important;
+          border-radius: 200px !important;
+          &:hover {
+            background: #000;
+            border-color: #081a59 !important;
+          }
+        }
+      }
+    }
+  }
+  .landing-page-v3__content-container--bottom {
+    p {
+      color: $color_1;
+      font-family: $font-family_1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      strong {
+        font-weight: 600;
+      }
+      b {
+        font-weight: 600;
+      }
+    }
+    ul {
+      color: $color_1;
+      font-family: $font-family_1;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      margin: 0;
+      padding-left: 24px;
+      strong {
+        font-weight: 600;
+      }
+      b {
+        font-weight: 600;
+      }
+    }
+  }
+  .dark {
+    .mktoForm {
+      select#Country {
+        &:focus {
+          border: 1px solid #081a59 !important;
+        }
+      }
+    }
+    .landing-page-v3__form-content {
+      .mktoForm {
+        .mktoFormCol {
+          .mktoFieldWrap {
+            a {
+              text-underline-offset: 2px;
+              padding: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+.dark {
+  .landing-page-v3__form-content {
+    .mktoForm {
+      .mktoFormCol {
+        input {
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+            -webkit-text-fill-color: #081a59 !important;
+            &:hover {
+              -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+              -webkit-text-fill-color: #081a59 !important;
+            }
+            &:focus {
+              -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+              -webkit-text-fill-color: #081a59 !important;
+            }
+            &:active {
+              -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+              -webkit-text-fill-color: #081a59 !important;
+            }
+          }
+        }
+        select {
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+            -webkit-text-fill-color: #081a59 !important;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 1023.98px) {
+  .netskope_6001 {
+    .header.has-promo-banner {
+      .header__container-inner {
+        max-width: 752px;
+      }
+      .header__container {
+        padding: 24px 0;
+      }
+    }
+    .landing-page-v3__container {
+      .landing-page-v3__container-inner {
+        max-width: 752px;
+      }
+      padding: 102px 0 0 0;
+      overflow-x: hidden;
+      &::before {
+        width: 1440px;
+        height: 639px;
+        right: -107px;
+      }
+      .landing-page-v3__form-container {
+        .landing-page-v3__form {
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: reverse;
+          -ms-flex-direction: column-reverse;
+          flex-direction: column-reverse;
+        }
+      }
+      .landing-page-v3__content-container--bottom {
+        padding: 41px 0 39px;
+      }
+    }
+    .landing-page-v3__form-container {
+      .landing-page-v3__form-content {
+        + {
+          .form-content-heading {
+            display: block;
+            color: $color_1;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 56px;
+            margin: 0;
+            position: relative;
+          }
+        }
+      }
+      .landing-page-v3__form {
+        .landing-page-v3__form-content {
+          width: 100%;
+          max-width: unset;
+          margin: 28px 0 30px;
+          &::after {
+            display: none;
+          }
+        }
+        .hero_left {
+          width: 100%;
+          max-width: 100%;
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700151743/netskope/6001/vector_8.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            width: 201px;
+            height: 176px;
+            top: 84px;
+            right: 139px;
+          }
+        }
+      }
+    }
+    .hero_left {
+      .form-content-heading {
+        display: none;
+      }
+      h4 {
+        margin: 2px 0 32px;
+      }
+      img {
+        max-width: 320px;
+      }
+    }
+  }
+}
+@media (max-width: 1400px) {
+  .netskope_6001 {
+    .landing-page__footer-inner {
+      > .row {
+        margin: 0;
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .netskope_6001 {
+    .header.has-promo-banner {
+      img {
+        width: 136px;
+      }
+      .header__container {
+        padding: 18px 0;
+      }
+      .header__container-inner {
+        max-width: 548px;
+      }
+    }
+  }
+}
+@media (min-width: 1920px) {
+  .netskope_6001 {
+    .landing-page-v3__container {
+      &::before {
+        background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .netskope_6001 {
+    .landing-page-v3__form-container {
+      .landing-page-v3__form {
+        .landing-page-v3__form-content {
+          &::after {
+            bottom: -100px;
+          }
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .netskope_6001 {
+    .landing-page-v3__container {
+      padding: 76px 0 0 0;
+      .landing-page-v3__content-container--bottom {
+        padding: 32px 24px 40px;
+      }
+      &::before {
+        right: -347px;
+        top: -138px;
+      }
+    }
+    .landing-page-v3__form-container {
+      .landing-page-v3__form-content {
+        + {
+          .form-content-heading {
+            font-size: 40px;
+            line-height: 48px;
+            padding: 0 24px;
+            max-width: 450px;
+            br {
+              display: block;
+            }
+          }
+        }
+      }
+      .landing-page-v3__form {
+        .hero_left {
+          padding: 0 24px;
+          &::after {
+            display: none;
+          }
+        }
+        .landing-page-v3__form-content {
+          padding: 24px 24px 32px;
+          margin: 22px 0 23px;
+        }
+      }
+    }
+    .hero_left {
+      h4 {
+        font-size: 16px;
+        margin: 2px 0 23px;
+      }
+    }
+    .landing-page-v3__form-content {
+      form.mktoForm {
+        .mktoFormRow {
+          width: 100% !important;
+          .mktoFieldWrap {
+            margin-bottom: 8px;
+          }
+        }
+        .mktoFormRow.field-11 {
+          margin-top: 6px !important;
+          p.p11 {
+            margin-top: 3px;
+          }
+        }
+      }
+    }
+  }
+  #components__content {
+    .landing-page-v3__container-inner {
+      padding: 0;
+      max-width: 500px;
+    }
+  }
+}
