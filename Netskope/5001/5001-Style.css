@@ -1,6 +1,6 @@
 body #wrapper {
   position: sticky;
-  top: 0;
+  top: -46px;
   z-index: 9999;
 }
 body #wrapper .header.has-promo-banner.homepage {
@@ -24,33 +24,35 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  border-radius: 24px;
+  border: 1px solid rgba(156, 157, 159, 0.6);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .spz-5001-email input {
   border-radius: var(--radius-xl, 24px);
-  border: 1px solid rgba(156, 157, 159, 0.6);
+  border: 0;
   background: rgba(204, 204, 205, 0.4);
   height: 40px;
   width: 279px;
-  padding: 8px 48px 8px 16px;
-  margin-right: -48px;
+  padding: 8px 130px 8px 16px;
+  margin-right: -122px;
   outline: transparent;
   color: #fff;
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .spz-5001-email input::-webkit-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .spz-5001-email input::-moz-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
   opacity: 1;
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .spz-5001-email input:-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .spz-5001-email input::-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .spz-5001-email input::placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started .header__get-started-button.btn {
   height: 40px;
@@ -60,6 +62,12 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
   line-height: 24px;
   width: 122px;
   white-space: nowrap;
+}
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started.i-hover {
+  border: 1px solid #fff;
+}
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__get-started.i-focused {
+  border: 1px solid #fff;
 }
 body #wrapper .header.has-promo-banner:not(.homepage) {
   background-color: #e8fbff;

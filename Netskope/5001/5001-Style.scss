@@ -1,7 +1,8 @@
 body {
   #wrapper {
     position: sticky;
-    top: 0;
+    // top: 0;
+    top: -46px;
     z-index: 9999;
 
     .header.has-promo-banner {
@@ -33,39 +34,41 @@ body {
               .header__get-started {
                 display: flex;
                 align-items: center;
+                border-radius: 24px;
+                border: 1px solid rgba(156, 157, 159, 0.6);
 
                 .spz-5001-email {
                   input {
                     border-radius: var(--radius-xl, 24px);
-                    border: 1px solid rgba(156, 157, 159, 0.6);
+                    border: 0;
                     background: rgba(204, 204, 205, 0.4);
                     height: 40px;
                     width: 279px;
-                    padding: 8px 48px 8px 16px;
-                    margin-right: -48px;
+                    padding: 8px 130px 8px 16px;
+                    margin-right: -122px;
                     outline: transparent;
                     color: #fff;
 
                     &::-webkit-input-placeholder {
-                      color: #fff;
+                      color: rgba(255, 255, 255, 0.8);
                     }
                     &:-moz-placeholder {
-                      color: #fff;
+                      color: rgba(255, 255, 255, 0.8);
                       opacity: 1;
                     }
                     &::-moz-placeholder {
-                      color: #fff;
+                      color: rgba(255, 255, 255, 0.8);
                       opacity: 1;
                     }
                     &:-ms-input-placeholder {
-                      color: #fff;
+                      color: rgba(255, 255, 255, 0.8);
                     }
                     &::-ms-input-placeholder {
-                      color: #fff;
+                      color: rgba(255, 255, 255, 0.8);
                     }
 
                     &::placeholder {
-                      color: #fff;
+                      color: rgba(255, 255, 255, 0.8);
                     }
                   }
                 }
@@ -78,6 +81,14 @@ body {
                   line-height: 24px;
                   width: 122px;
                   white-space: nowrap;
+                }
+
+                &.i-hover {
+                  border: 1px solid #fff;
+                }
+
+                &.i-focused {
+                  border: 1px solid #fff;
                 }
               }
             }

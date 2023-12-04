@@ -21,7 +21,25 @@
     }
 
     function createTest5001() {
-        document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-5001-email"><input type="email" placeholder="Email"></div>');
+        document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-5001-email"><input class="spz-email" type="email" placeholder="Email"></div>');
+    }
+
+    //on focus of .spz-email addClass to .header__get-started
+    waitForElm('.spz-email').then(function (elm) {
+        document.querySelector('.spz-email').addEventListener('focus', function (event) {
+            document.querySelector('.header__get-started').classList.add('i-focused');
+        });
+
+        document.querySelector('.spz-email').addEventListener('blur', function (event) {
+            document.querySelector('.header__get-started').classList.remove('i-focused');
+        });
+
+        hover(document.querySelector('.spz-email'), "i-hover");
+    });
+
+    function hover(element, className) {
+        element.addEventListener('mouseenter', e => element.closest('.header__get-started').classList.add(className))
+        element.addEventListener('mouseleave', e => element.closest('.header__get-started').classList.remove(className))
     }
 
     function waitForElm(selector) {
