@@ -1,0 +1,49 @@
+body {
+  #main-content {
+    .hs_cos_wrapper.hs_cos_wrapper_widget {
+      .integrations-section + .review-section {
+        display: none !important;
+      }
+
+      .review-section {
+        background: #eef2f6;
+        // overflow: initial;
+
+        .container {
+          &:first-child {
+            .review-sub-title {
+              color: #0580e8;
+            }
+            .review-sec-title {
+              color: #0c131a;
+            }
+
+            .rating-section {
+              border-radius: 60px;
+              border: 1px solid #dde3eb;
+              background: #fff;
+              p {
+                color: #0c131a;
+              }
+            }
+          }
+        }
+
+        .review-slider {
+          .review-item-box {
+            .review-content {
+              background-color: #fff;
+              border-color: #dde3eb;
+              .review-author {
+                color: #0c131a;
+              }
+              .review {
+                color: #0c131a;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
