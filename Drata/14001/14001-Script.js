@@ -16,7 +16,7 @@
             <div class="hero-content dis-flex flex-wrap justify-content-between">\
             <div class="hero-left-section">\
             <h1 class="hc-title">Accelerate <span class="dynamic-product-name">SOC 2</span> Compliance. Reduce Time and Cost by 50%.</h1>\
-            <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (500+ reviews)</span></div>\
+            <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"><img src="//res.cloudinary.com/spiralyze/image/upload/v1685011156/drata/14001/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>\
             <div class="list-grp-wrapper">\
             <ul class="list-group">\
             <li class="list-item"><strong>Evidence Collection.</strong> Create <span class="dynamic-product-name">SOC 2</span> documentation in minutes via integrations with your tech stack.</li>\
