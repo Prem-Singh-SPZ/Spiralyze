@@ -1,4 +1,18 @@
 (function () {
+  var content = document.createElement("script");
+  content.src = "//cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js";
+  document.head.appendChild(content);
+
+  content.onload = function () {
+    var typed = new Typed(".typing", {
+      startDelay: 1000,
+      strings: ["","^1000 SOC2 Compliance", "^1000 ISO 27001 Certification", "^1000 HIPAA Compliance", "^1000 GDPR Compliance"],
+      typeSpeed: 50,
+      backSpeed: 50,
+      backDelay: 1000,
+      loop: true,
+    })
+  };
 
   function createTest_2006() {
     document.body.classList.add('spz-2007');
@@ -28,8 +42,7 @@
         <div class="hero-banner-section">
           <div class="hero-banner-container container">
           <div class="hero-copy"> 
-            <h2><span class="blue-text">Automate</span> and <span class="blue-text">Accelerate</span> <br>  <span href="" class="typewrite" data-period="2000" data-type='[ "Hi, Im Si.", "I am Creative.", "I Love Design.", "I Love to  Develop Develop." ]'>
-            <span class="wrap"></span>
+            <h2><span class="blue-text">Automate</span> and <span class="blue-text">Accelerate</span> <br>  <span class="typing">
           </span></h2> 
             <p>Drata automates your compliance journey from start to audit-ready and beyond and provides support from the security and compliance experts who built it.</p> 
           </div>
