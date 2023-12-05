@@ -24,7 +24,7 @@
             <li class="list-item"><strong>Compliance Experts.</strong> Never get stuck. Our compliance experts can walk you through the entire process.</li>\
             </ul>\
             </div>\
-            <a href="/demo" id="hero-copy-url" class="hero-btn">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1685011157/drata/14001/cta_arrow.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>\
+            <a href="/demo" id="hero-copy-url" class="hero-btn">Get Started <img src="//res.cloudinary.com/spiralyze/image/upload/v1701172106/drata/14004/Arrow-Icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>\
             </div>\
             <div class="hero-right-section">\
             <picture>\
