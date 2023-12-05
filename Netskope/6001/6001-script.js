@@ -1,4 +1,5 @@
-var css = ``;
+var css = `
+`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
 head.appendChild(style);

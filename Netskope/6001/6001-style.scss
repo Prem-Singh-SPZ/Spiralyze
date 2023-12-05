@@ -3,25 +3,17 @@ $color_2: #081a59;
 $color_3: #7e8bba;
 $color_4: inherit;
 $color_5: #ff5b28;
-$font-family_1: Graphik;
-$font-family_2: "Lora";
+$font-family_1: "Lora";
+$font-family_2: Graphik;
 $font-family_3: "Graphik";
 
-/*--- Header CSS Start Here ---*/
-/*--- Header CSS End Here ---*/
-/*--- Hero Section CSS Start Here ---*/
-/*--- Hero Section CSS End Here ---*/
-/*--- Form CSS Start Here ---*/
-/* .netskope_6001 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.typing .mktoField.mktoInvalid, 
-.netskope_6001 .mktoForm .mktoFieldWrap.mktoRequiredField select#Country[aria-describedby="ValidMsgCountry"] */
-/*--- Form CSS End Here ---*/
 .netskope_6001 {
   .header.has-promo-banner {
+    top: 0;
     .header__container-inner {
       max-width: 1238px;
       padding: 0 24px;
     }
-    top: 0;
     .header__container {
       padding: 32px 0;
     }
@@ -36,14 +28,14 @@ $font-family_3: "Graphik";
     }
   }
   .landing-page-v3__container {
-    .landing-page-v3__container-inner {
-      max-width: 1238px;
-      padding: 0 24px;
-    }
     padding: 142px 0 0 0;
     background: #081a59 !important;
     background-size: 100% !important;
     position: relative;
+    .landing-page-v3__container-inner {
+      max-width: 1238px;
+      padding: 0 24px;
+    }
     &::before {
       position: absolute;
       content: "";
@@ -55,19 +47,7 @@ $font-family_3: "Graphik";
       top: 0;
       right: 0;
       pointer-events: none;
-
-      @media (min-width: 1900px) and (max-width: 2500px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
-      @media (min-width: 2500px) and (max-width: 3500px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-      }
     }
-
     .landing-page-v3__logo {
       display: none;
     }
@@ -119,7 +99,7 @@ $font-family_3: "Graphik";
             display: none;
           }
           span {
-            font-family: $font-family_2;
+            font-family: $font-family_1;
           }
         }
       }
@@ -153,7 +133,7 @@ $font-family_3: "Graphik";
   .hero_left {
     .form-content-heading {
       color: $color_1;
-      font-family: $font-family_1;
+      font-family: $font-family_2;
       font-size: 48px;
       font-style: normal;
       font-weight: 400;
@@ -164,7 +144,7 @@ $font-family_3: "Graphik";
         display: none;
       }
       span {
-        font-family: $font-family_2;
+        font-family: $font-family_1;
       }
       &::before {
         position: absolute;
@@ -180,7 +160,7 @@ $font-family_3: "Graphik";
     }
     h4 {
       color: $color_1;
-      font-family: $font-family_1;
+      font-family: $font-family_2;
       font-size: 18px;
       font-style: normal;
       font-weight: 600;
@@ -202,7 +182,7 @@ $font-family_3: "Graphik";
     .form_title {
       color: $color_2;
       text-align: center;
-      font-family: $font-family_1;
+      font-family: $font-family_2;
       font-size: 40px;
       font-style: normal;
       font-weight: 400;
@@ -220,15 +200,15 @@ $font-family_3: "Graphik";
       justify-content: space-between;
       padding: 0 !important;
       .mktoTemplateBox {
+        width: 100% !important;
+        padding: 0 !important;
+        margin: 0 !important;
         .welcomeback {
           color: $color_2 !important;
         }
         a.mktoNotYou {
           color: $color_2 !important;
         }
-        width: 100% !important;
-        padding: 0 !important;
-        margin: 0 !important;
       }
       .mktoFormRow.field-2 {
         display: none !important;
@@ -261,7 +241,6 @@ $font-family_3: "Graphik";
               height: auto;
               pointer-events: none;
               -webkit-transition: all 0.3s ease-in-out;
-              -o-transition: all 0.3s ease-in-out;
               transition: all 0.3s ease-in-out;
               font-family: $font-family_3 !important;
             }
@@ -298,7 +277,6 @@ $font-family_3: "Graphik";
             background-repeat: no-repeat !important;
             white-space: nowrap;
             overflow: hidden;
-            -o-text-overflow: ellipsis;
             text-overflow: ellipsis;
             option {
               background: inherit;
@@ -328,6 +306,7 @@ $font-family_3: "Graphik";
               line-height: 20px;
               letter-spacing: 0em;
               display: inline-block;
+              bottom: auto;
             }
           }
         }
@@ -488,12 +467,54 @@ $font-family_3: "Graphik";
           }
         }
       }
+      + {
+        #landing-page-v3__asset {
+          .btn {
+            display: -webkit-box !important;
+            display: -ms-flexbox !important;
+            display: flex !important;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100% !important;
+            height: 48px;
+            font-size: 16px !important;
+            font-weight: 400 !important;
+            line-height: 24px !important;
+            letter-spacing: 0em;
+            color: $color_2 !important;
+            background: #ff8200;
+            border: 1px solid #ff8200 !important;
+            border-radius: 200px !important;
+            &:hover {
+              background: #fff;
+              border-color: #081a59 !important;
+            }
+          }
+          p {
+            color: $color_2;
+            display: block;
+            span {
+              color: $color_2;
+              display: block;
+            }
+            br {
+              display: none;
+            }
+          }
+        }
+      }
     }
   }
   .landing-page-v3__content-container--bottom {
     p {
       color: $color_1;
-      font-family: $font-family_1;
+      font-family: $font-family_2;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -508,7 +529,7 @@ $font-family_3: "Graphik";
     }
     ul {
       color: $color_1;
-      font-family: $font-family_1;
+      font-family: $font-family_2;
       font-size: 16px;
       font-style: normal;
       font-weight: 400;
@@ -577,6 +598,28 @@ $font-family_3: "Graphik";
     }
   }
 }
+@media (min-width: 1900px) and (max-width: 2500px) {
+  .netskope_6001 {
+    .landing-page-v3__container {
+      &::before {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
+@media (min-width: 2500px) and (max-width: 3500px) {
+  .netskope_6001 {
+    .landing-page-v3__container {
+      &::before {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+      }
+    }
+  }
+}
 @media (max-width: 1023.98px) {
   .netskope_6001 {
     .header.has-promo-banner {
@@ -588,11 +631,11 @@ $font-family_3: "Graphik";
       }
     }
     .landing-page-v3__container {
+      padding: 102px 0 0 0;
+      overflow-x: hidden;
       .landing-page-v3__container-inner {
         max-width: 752px;
       }
-      padding: 102px 0 0 0;
-      overflow-x: hidden;
       &::before {
         width: 1440px;
         height: 639px;
@@ -687,32 +730,6 @@ $font-family_3: "Graphik";
         max-width: 548px;
       }
     }
-  }
-}
-@media (min-width: 3500px) {
-  .netskope_6001 {
-    .landing-page-v3__container {
-      &::before {
-        background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
-      }
-    }
-  }
-}
-@media (max-width: 1199.98px) {
-  .netskope_6001 {
-    .landing-page-v3__form-container {
-      .landing-page-v3__form {
-        .landing-page-v3__form-content {
-          &::after {
-            bottom: -100px;
-          }
-        }
-      }
-    }
-  }
-}
-@media (max-width: 767.98px) {
-  .netskope_6001 {
     .landing-page-v3__container {
       padding: 76px 0 0 0;
       .landing-page-v3__content-container--bottom {
@@ -777,6 +794,28 @@ $font-family_3: "Graphik";
     .landing-page-v3__container-inner {
       padding: 0;
       max-width: 500px;
+    }
+  }
+}
+@media (min-width: 3500px) {
+  .netskope_6001 {
+    .landing-page-v3__container {
+      &::before {
+        background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
+      }
+    }
+  }
+}
+@media (max-width: 1199.98px) {
+  .netskope_6001 {
+    .landing-page-v3__form-container {
+      .landing-page-v3__form {
+        .landing-page-v3__form-content {
+          &::after {
+            bottom: -100px;
+          }
+        }
+      }
     }
   }
 }
