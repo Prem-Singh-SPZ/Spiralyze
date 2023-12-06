@@ -1,0 +1,126 @@
+$Mulish: Mulish, Mulish-local, sans-serif;
+$Roboto: Roboto, Roboto-local, sans-serif;
+
+body {
+  header {
+    &.stuck {
+      nav.sub-nav {
+        .sub-nav__links {
+          ul.flex-ai-c {
+            li.sub-nav__title {
+              display: none !important;
+            }
+          }
+        }
+
+        .sub-nav__utility {
+          display: none !important;
+        }
+      }
+    }
+
+    &.mobile {
+      nav.sub-nav {
+        a.button.button--primary {
+          display: none !important;
+        }
+      }
+    }
+  }
+
+  .off-canvas-content {
+    .pageContent {
+      .spz-step-section {
+        .spz-container {
+          width: 100%;
+          max-width: 920px;
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+
+      // Accordian section
+      .pageBlock.bgGrayLight {
+        background: #3b454a;
+
+        .grid-x.grid-padding-x {
+          .medium-4.large-3 {
+            display: none !important;
+          }
+
+          .medium-offset-1.medium-6.large-7 {
+            width: 100%;
+            max-width: 920px;
+            margin-left: auto;
+            margin-right: auto;
+
+            > *:not(.accordion) {
+              display: none !important;
+            }
+
+            > .accordion {
+              background: #3b454a;
+
+              > h2 {
+                color: #fff;
+                text-align: center;
+                font-family: $Mulish;
+                font-size: 36px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 44px;
+              }
+
+              ul.accordion {
+                background: #3b454a;
+                li.accordion-item {
+                  background: #3b454a;
+
+                  &:last-child {
+                    border-bottom: 1px solid #82939c;
+                  }
+
+                  a.accordion-title {
+                    background: #3b454a;
+                    border: 0;
+                    border-top: 1px solid #82939c;
+                    padding: 24px 32px;
+                    color: #fff;
+                    font-family: $Roboto;
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 900;
+                    line-height: 26px;
+
+                    &::before {
+                      display: none;
+                    }
+                  }
+                  .accordion-content {
+                    background: #3b454a;
+                    border: 0;
+                    padding: 16px 32px 24px;
+
+                    p {
+                      color: #fff;
+                      font-family: $Roboto;
+                      font-size: 18px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 26px;
+                      margin: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+
+      .quoteBlock {
+        display: none !important;
+      }
+    }
+  }
+}
