@@ -369,12 +369,6 @@ body .off-canvas-content .pageContent .spz-step-section .spz-container .spz-warn
   letter-spacing: 0;
   margin: 0;
 }
-@media (max-width: 767.98px) {
-  body .off-canvas-content .pageContent .spz-step-section .spz-container .spz-warning-msg .warning-text p {
-    font-size: 18px;
-    line-height: 26px;
-  }
-}
 body .off-canvas-content .pageContent .pageBlock.bgGrayLight {
   background: #3b454a;
 }
@@ -405,7 +399,12 @@ body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-paddin
 body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion {
   background: #3b454a;
   margin-top: 0;
-  padding-bottom: 2.05rem;
+  padding-bottom: 1.95rem;
+}
+@media (max-width: 1023.98px) {
+  body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion {
+    padding-bottom: 2.05rem;
+  }
 }
 @media (max-width: 767.98px) {
   body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion {
@@ -445,6 +444,11 @@ body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-paddin
 body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item:last-child {
   border-bottom: 1px solid #82939c;
 }
+@media (max-width: 767.98px) {
+  body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item:last-child a.accordion-title, body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item:nth-child(2) a.accordion-title {
+    padding-right: 100px;
+  }
+}
 body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item a.accordion-title {
   background: #3b454a;
   border: 0;
@@ -461,7 +465,7 @@ body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-paddin
 }
 @media (max-width: 767.98px) {
   body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item a.accordion-title {
-    padding: 15px 0;
+    padding: 15px 44px 16px 0;
     font-size: 16px;
     line-height: 24px;
   }
@@ -511,6 +515,7 @@ body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-paddin
 body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item .accordion-content p a {
   color: #fff;
   text-decoration: underline;
+  font-weight: 400;
 }
 body .off-canvas-content .pageContent .pageBlock.bgGrayLight .grid-x.grid-padding-x .medium-offset-1.medium-6.large-7 > .accordion ul.accordion li.accordion-item .accordion-content p a:hover {
   color: #e85e26;
@@ -762,7 +767,7 @@ body .off-canvas-content .pageContent .help-and-demo .help-container .row .col-1
 }
 @media (max-width: 767.98px) {
   body .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .help-center ul {
-    margin-bottom: 16px;
+    margin: 0 40px 16px 0;
   }
 }
 body .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .help-center ul li {
