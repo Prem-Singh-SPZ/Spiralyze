@@ -2,17 +2,17 @@ document.body.classList.add('spz-3701');
 document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="/res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`)
 
 waitForElm('#internal .off-canvas-wrapper .pageBlock.bgGrayLight .wrapper').then(function (elm) {
-    loadTest();
+  loadTest();
 });
 
 function loadTest() {
-    console.log('3701 ready');
-    // Hero text update
-    document.querySelector('.longHero .overlayText .longHero__content > h1').textContent = `InsightIDR 30-Day Free Trial`;
-    document.querySelector('.longHero .overlayText .longHero__content > h1').insertAdjacentHTML('afterend', '<p>Thank you for signing up for your free 30-day InsightIDR trial</p>');
+  console.log('3701 ready');
+  // Hero text update
+  document.querySelector('.longHero .overlayText .longHero__content > h1').textContent = `InsightIDR 30-Day Free Trial`;
+  document.querySelector('.longHero .overlayText .longHero__content > h1').insertAdjacentHTML('afterend', '<p>Thank you for signing up for your free 30-day InsightIDR trial</p>');
 
-    // Page content update
-    document.querySelector('.off-canvas-content .pageContent').insertAdjacentHTML('afterbegin', `<section class="spz-step-section">
+  // Page content update
+  document.querySelector('.off-canvas-content .pageContent').insertAdjacentHTML('afterbegin', `<section class="spz-step-section">
     <div class="grid-container">
       <div class="spz-container">
         <div class="step-overview">
@@ -101,13 +101,13 @@ function loadTest() {
     </div>
   </section>`);
 
-    document.querySelector('.off-canvas-content .pageContent .pageBlock.bgGrayLight').insertAdjacentHTML('afterend', `<section class="help-and-demo">
+  document.querySelector('.off-canvas-content .pageContent .pageBlock.bgGrayLight').insertAdjacentHTML('afterend', `<section class="help-and-demo">
     <div class="help-container">
       <div class="row">
         <div class="col-12 col-md-6">
           <div class="demo-video">
             <h3>Want a Demo?</h3>
-            <p>See how InsightDR works with this on-demand video</p>
+            <p>See how InsightDR works with this <span>on-demand</span> video</p>
             <div class="video-container">
               <a class="spz-video-btn" href="https://www.youtube.com/watch?v=nOMCp7bUS-A&amp;t=4s" target="_blank" data-element-location="body">
                 <img src="//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/play_button__primary_7.svg" alt="Play" class="not-hover">
@@ -135,22 +135,22 @@ function loadTest() {
     </div>
   </section>`)
 
-    //Accordion font update
-    document.querySelector('.accordion ul.accordion li.accordion-item a.accordion-title').textContent = `Will I have access to support or additional resources during the trial?`;
+  //Accordion font update
+  document.querySelector('.accordion ul.accordion li.accordion-item a.accordion-title').textContent = `Will I have access to support or additional resources during the trial?`;
 }
 
 // Generic
 function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  return new Promise(function (resolve) {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(function (mutations) {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  });
 }

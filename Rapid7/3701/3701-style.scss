@@ -197,7 +197,7 @@ body {
             }
             @media (max-width: 767.98px) {
               margin-top: 19px;
-              margin-bottom: 32px;
+              margin-bottom: 19px;
             }
 
             .step-card {
@@ -333,13 +333,22 @@ body {
             border-radius: 8px;
             border: 1px solid #000;
             display: flex;
-            padding: 16px 16px 14px 15px;
+            padding: 16px 16px 15px 15px;
             align-items: center;
+
+            @media (max-width: 767.98px) {
+              flex-direction: column;
+              align-items: flex-start;
+            }
 
             .warning-img {
               min-width: 48px;
               height: 48px;
               margin-right: 16px;
+
+              @media (max-width: 767.98px) {
+                margin-bottom: 12px;
+              }
 
               img {
                 width: 100%;
@@ -356,6 +365,11 @@ body {
                 line-height: 28px;
                 letter-spacing: 0;
                 margin: 0;
+
+                @media (max-width: 767.98px) {
+                  font-size: 18px;
+                  line-height: 26px;
+                }
               }
             }
           }
@@ -377,10 +391,14 @@ body {
             margin-left: auto;
             margin-right: auto;
             padding-top: 2.08rem;
-            padding-bottom: 2rem;
+            padding-bottom: 2.08rem;
 
             @media (max-width: 1023.98px) {
               padding: 0.55rem 1.5rem 0;
+            }
+
+            @media (max-width: 767.98px) {
+              padding: 0rem 1rem 0;
             }
 
             > *:not(.accordion) {
@@ -390,7 +408,11 @@ body {
             > .accordion {
               background: #3b454a;
               margin-top: 0;
-              padding-bottom: 1.95rem;
+              padding-bottom: 2.05rem;
+
+              @media (max-width: 767.98px) {
+                padding-top: 2.5rem;
+              }
 
               > h2 {
                 color: #fff;
@@ -404,13 +426,20 @@ body {
                 @media (max-width: 1023.98px) {
                   margin-bottom: 30px;
                 }
+
+                @media (max-width: 767.98px) {
+                  font-size: 32px;
+                  line-height: 40px;
+                  text-align: left;
+                  margin-bottom: 24px;
+                }
               }
 
               ul.accordion {
                 background: #3b454a;
                 li.accordion-item {
                   background: #3b454a;
-
+                  transition: all 0.3s ease;
                   &:last-child {
                     border-bottom: 1px solid #82939c;
                   }
@@ -426,6 +455,13 @@ body {
                     font-style: normal;
                     font-weight: 900;
                     line-height: 26px;
+                    transition: all 0.3s ease;
+
+                    @media (max-width: 767.98px) {
+                      padding: 15px 0;
+                      font-size: 16px;
+                      line-height: 24px;
+                    }
 
                     &::before {
                       display: none;
@@ -437,6 +473,11 @@ body {
                       right: 32px;
                       top: 23px;
                       height: 20px;
+
+                      @media (max-width: 767.98px) {
+                        right: 0;
+                        top: 16px;
+                      }
                     }
                   }
 
@@ -444,6 +485,10 @@ body {
                     background: #3b454a;
                     border: 0;
                     padding: 0px 32px 24px;
+
+                    @media (max-width: 767.98px) {
+                      padding: 0px 0px 16px;
+                    }
 
                     p {
                       color: #fff;
@@ -455,12 +500,20 @@ body {
                       margin: 0;
                       letter-spacing: 0;
 
+                      @media (max-width: 767.98px) {
+                        font-size: 16px;
+                        line-height: 24px;
+                      }
+
                       a {
                         color: #fff;
                         text-decoration: underline;
 
                         &:hover {
                           color: #e85e26;
+                          &::before {
+                            display: none;
+                          }
                         }
                       }
                     }
@@ -472,6 +525,10 @@ body {
                       &::after {
                         content: url(//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg);
                         top: 24px;
+                        @media (max-width: 767.98px) {
+                          right: 0;
+                          top: 15px;
+                        }
                       }
                     }
                   }
@@ -523,6 +580,10 @@ body {
                   padding: 40px 120px 32px;
                 }
 
+                @media (max-width: 767.98px) {
+                  padding: 32px 16px 40px 16px;
+                }
+
                 h3 {
                   color: #fff;
                   font-family: $Mulish;
@@ -534,6 +595,12 @@ body {
                   @media (min-width: 767.98px) and (max-width: 1023.98px) {
                     text-align: center;
                     width: 100%;
+                  }
+
+                  @media (max-width: 767.98px) {
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin-bottom: 12px;
                   }
                 }
 
@@ -549,6 +616,14 @@ body {
                   @media (min-width: 767.98px) and (max-width: 1023.98px) {
                     text-align: center;
                     width: 100%;
+                  }
+                  @media (max-width: 767.98px) {
+                    font-size: 16px;
+                    line-height: 24px;
+                  }
+
+                  span {
+                    white-space: nowrap;
                   }
                 }
 
@@ -570,6 +645,15 @@ body {
                     margin-right: auto;
                     height: 232px;
                   }
+                  @media (max-width: 767.98px) {
+                    background: url(//res.cloudinary.com/spiralyze/image/upload/v1701852604/rapid7/3701/image_mobile_1.webp)
+                      no-repeat;
+                    background-position: left top;
+                    background-size: contain;
+                    width: 328px;
+                    height: 184px;
+                    margin-top: 24px;
+                  }
 
                   a {
                     width: 100%;
@@ -586,6 +670,12 @@ body {
                       }
                       .hover {
                         display: block;
+                      }
+                    }
+
+                    @media (max-width: 767.98px) {
+                      img {
+                        width: 48px;
                       }
                     }
                   }
@@ -605,6 +695,10 @@ body {
                   padding: 40px 92px 46px;
                 }
 
+                @media (max-width: 767.98px) {
+                  padding: 32px 16px 40px 16px;
+                }
+
                 h3 {
                   color: #fff;
                   font-family: $Mulish;
@@ -617,6 +711,11 @@ body {
                     text-align: center;
                     width: 100%;
                   }
+                  @media (max-width: 767.98px) {
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin-bottom: 24px;
+                  }
                 }
 
                 p {
@@ -628,12 +727,21 @@ body {
                   line-height: 26px;
                   margin-bottom: 16px;
                   letter-spacing: 0;
+                  @media (max-width: 767.98px) {
+                    font-size: 16px;
+                    margin-bottom: 12px;
+                    line-height: 24px;
+                  }
                 }
 
                 ul {
                   padding-left: 28px;
                   list-style: none;
                   margin: 0 0 20px 0;
+                  @media (max-width: 767.98px) {
+                    margin-bottom: 16px;
+                  }
+
                   li {
                     color: #fff;
                     font-family: $Roboto;
@@ -643,6 +751,12 @@ body {
                     line-height: 26px;
                     margin-bottom: 12px;
                     position: relative;
+
+                    @media (max-width: 767.98px) {
+                      font-size: 16px;
+                      line-height: 24px;
+                      margin-bottom: 8px;
+                    }
 
                     &::before {
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1701852744/rapid7/3701/checkmarkempty_2.svg);
