@@ -1,12 +1,13 @@
 document.body.classList.add('spz-3701');
-document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="/res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`)
+document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`)
 
 waitForElm('#internal .off-canvas-wrapper .pageBlock.bgGrayLight .wrapper').then(function (elm) {
   loadTest();
 });
 
 function loadTest() {
-  console.log('3701 ready');
+  document.body.classList.add('spz-3701');
+
   // Hero text update
   document.querySelector('.longHero .overlayText .longHero__content > h1').textContent = `InsightIDR 30-Day Free Trial`;
   document.querySelector('.longHero .overlayText .longHero__content > h1').insertAdjacentHTML('afterend', '<p>Thank you for signing up for your free 30-day InsightIDR trial</p>');
