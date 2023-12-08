@@ -339,11 +339,6 @@
 
   function removeTest() {
     document.body.classList.remove("spz-2007");
-    if (document.querySelector('.typing')) {
-      document.querySelector('.hero-banner-section').remove();
-      document.querySelector('.hero-img-section').remove();
-      document.querySelector('.social-pr-section').remove();
-    }
   }
 
   history.pushState = (function (f) {
