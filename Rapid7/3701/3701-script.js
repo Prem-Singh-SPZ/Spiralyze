@@ -1,18 +1,21 @@
-waitForElm('#internal .off-canvas-wrapper .pageBlock.bgGrayLight .wrapper').then(function (elm) {
-  document.body.classList.add('spz-3701');
-  document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`);
-  loadTest();
-});
+(function () {
+  waitForElm('#internal .off-canvas-wrapper .pageBlock.bgGrayLight .wrapper').then(function (elm) {
+    if (location.href.indexOf('products/insightidr/try/thank-you') > -1) {
+      document.body.classList.add('spz-3701');
+      document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`);
+      loadTest();
+    }
+  });
 
-function loadTest() {
-  document.body.classList.add('spz-3701');
+  function loadTest() {
+    document.body.classList.add('spz-3701');
 
-  // Hero text update
-  document.querySelector('.longHero .overlayText .longHero__content > h1').textContent = `InsightIDR 30-Day Free Trial`;
-  document.querySelector('.longHero .overlayText .longHero__content > h1').insertAdjacentHTML('afterend', '<p>Thank you for signing up for your free 30-day InsightIDR trial</p>');
+    // Hero text update
+    document.querySelector('.longHero .overlayText .longHero__content > h1').textContent = `InsightIDR 30-Day Free Trial`;
+    document.querySelector('.longHero .overlayText .longHero__content > h1').insertAdjacentHTML('afterend', '<p>Thank you for signing up for your free 30-day InsightIDR trial</p>');
 
-  // Page content update
-  document.querySelector('.off-canvas-content .pageContent').insertAdjacentHTML('afterbegin', `<section class="spz-step-section">
+    // Page content update
+    document.querySelector('.off-canvas-content .pageContent').insertAdjacentHTML('afterbegin', `<section class="spz-step-section">
     <div class="grid-container">
       <div class="spz-container">
         <div class="step-overview">
@@ -101,7 +104,7 @@ function loadTest() {
     </div>
   </section>`);
 
-  document.querySelector('.off-canvas-content .pageContent .pageBlock.bgGrayLight').insertAdjacentHTML('afterend', `<section class="help-and-demo">
+    document.querySelector('.off-canvas-content .pageContent .pageBlock.bgGrayLight').insertAdjacentHTML('afterend', `<section class="help-and-demo">
     <div class="help-container">
       <div class="row">
         <div class="col-12 col-md-6">
@@ -135,26 +138,27 @@ function loadTest() {
     </div>
   </section>`);
 
-  //Accordion font update
-  document.querySelector('.accordion ul.accordion li.accordion-item a.accordion-title').textContent = `Will I have access to support or additional resources during the trial?`;
+    //Accordion font update
+    document.querySelector('.accordion ul.accordion li.accordion-item a.accordion-title').textContent = `Will I have access to support or additional resources during the trial?`;
 
-  if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-    document.body.classList.add('safari')
-  }
-}
-
-// Generic
-function waitForElm(selector) {
-  return new Promise(function (resolve) {
-    if (document.querySelector(selector)) {
-      return resolve(document.querySelector(selector));
+    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+      document.body.classList.add('safari')
     }
-    const observer = new MutationObserver(function (mutations) {
+  }
+
+  // Generic
+  function waitForElm(selector) {
+    return new Promise(function (resolve) {
       if (document.querySelector(selector)) {
-        resolve(document.querySelector(selector));
-        observer.disconnect();
+        return resolve(document.querySelector(selector));
       }
+      const observer = new MutationObserver(function (mutations) {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
-    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
-  });
-}
+  }
+})();

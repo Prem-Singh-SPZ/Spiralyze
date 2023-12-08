@@ -659,7 +659,7 @@ body .off-canvas-content .pageContent .help-and-demo .help-container .row .col-1
   background-size: contain;
   margin-top: 32px;
 }
-@media (min-width: 1023.98px) and (max-width: 1110px) {
+@media (min-width: 1023.98px) and (max-width: 1124px) {
   body .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .demo-video .video-container {
     width: 100%;
     height: 154px;
@@ -838,6 +838,12 @@ body.safari .off-canvas-content .pageContent .help-and-demo .help-container .row
   background-size: contain;
   margin-top: 32px;
 }
+@media (min-width: 1023.98px) and (max-width: 1124px) {
+  body.safari .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .demo-video .video-container {
+    width: 100%;
+    height: 154px;
+  }
+}
 @media (max-width: 767.98px) {
   body.safari .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .demo-video .video-container {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/rapid7/3701/image_mobile_1.png) no-repeat;
@@ -846,5 +852,28 @@ body.safari .off-canvas-content .pageContent .help-and-demo .help-container .row
     width: 328px;
     height: 184px;
     margin-top: 24px;
+  }
+}
+body.safari .off-canvas-content .longHero {
+  padding-top: 78px;
+  min-height: 22rem;
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/rapid7/3701/hero_background_desktop_1.png) !important;
+  background-position: left bottom;
+  background-size: contain;
+}
+@media (max-width: 1023.98px) {
+  body.safari .off-canvas-content .longHero {
+    padding-top: 66px;
+    min-height: 14rem;
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/rapid7/3701/hero_background_tablet_1.png) !important;
+    background-position: left bottom;
+    background-size: contain;
+  }
+}
+@media (max-width: 767.98px) {
+  body.safari .off-canvas-content .longHero {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/rapid7/3701/hero_background_mobile_1.png) !important;
+    background-position: left bottom;
+    background-size: contain;
   }
 }
