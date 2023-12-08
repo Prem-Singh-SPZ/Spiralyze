@@ -19,7 +19,8 @@ body.spz-1002 {
 }
 body.spz-1002 .header,
 body.spz-1002 .v3-footer,
-body.spz-1002 .landing-page__logo, body.spz-1002 #wrapper {
+body.spz-1002 .landing-page__logo,
+body.spz-1002 #wrapper {
   display: none;
 }
 body.spz-1002 .get-started-form__container {
@@ -115,9 +116,11 @@ body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778
   line-height: 20px;
 }
 body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-netskope-fm .netskope-fm a {
-  text-decoration: underline !important;
   color: #7e8bba !important;
   padding: 0;
+}
+body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-netskope-fm .netskope-fm a:hover {
+  text-decoration: underline !important;
 }
 body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-single_checkbox {
   -webkit-box-ordinal-group: 14;
@@ -145,6 +148,9 @@ body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778
 }
 body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-single_checkbox .mktoLabel p.p11 a {
   padding: 0;
+}
+body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-single_checkbox .mktoLabel p.p11 a:hover {
+  text-decoration: underline !important;
 }
 body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-PostalCode {
   width: 100% !important;
@@ -196,9 +202,10 @@ body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778
   height: auto;
 }
 body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol .mktoFieldWrap:not(.single_checkbox) > label.labActive#LblContact_Us_Form_Entry__c {
-  top: 1.1px;
-  padding-top: 4.9px !important;
-  border-radius: 8px;
+  top: 1px;
+  padding-top: 5px !important;
+  border-radius: 6px;
+  max-width: calc(100% - 30px);
 }
 body.spz-1002 .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol .mktoFieldWrap:not(.single_checkbox) > label.labActive ~ textarea#Contact_Us_Form_Entry__c {
   border-color: #081a59 !important;

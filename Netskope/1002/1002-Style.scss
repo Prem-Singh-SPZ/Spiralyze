@@ -30,7 +30,8 @@ body.spz-1002 {
 
   .header,
   .v3-footer,
-  .landing-page__logo, #wrapper {
+  .landing-page__logo,
+  #wrapper {
     display: none;
   }
 
@@ -112,9 +113,12 @@ body.spz-1002 {
             line-height: 20px;
 
             a {
-              text-decoration: underline !important;
               color: #7e8bba !important;
               padding: 0;
+
+              &:hover {
+                text-decoration: underline !important;
+              }
             }
           }
         }
@@ -141,6 +145,10 @@ body.spz-1002 {
 
               a {
                 padding: 0;
+
+                &:hover {
+                  text-decoration: underline !important;
+                }
               }
             }
           }
@@ -193,9 +201,13 @@ body.spz-1002 {
               height: auto;
 
               &#LblContact_Us_Form_Entry__c {
-                top: 1.1px;
-                padding-top: 4.9px !important;
-                border-radius: 8px;
+                // top: 1.1px;
+                // padding-top: 4.9px !important;
+                // border-radius: 8px;
+                top: 1px;
+                padding-top: 5px !important;
+                border-radius: 6px;
+                max-width: calc(100% - 30px);
               }
 
               & ~ textarea#Contact_Us_Form_Entry__c {
