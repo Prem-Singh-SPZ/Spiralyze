@@ -1,13 +1,6 @@
-//Code for typewriter effect
-
 (function () {
-  // var content = document.createElement("script");
-  // content.src = "//cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.12/typed.min.js";
-  // document.head.appendChild(content);
-
   function createTest_2006() {
     document.body.classList.add('spz-2007');
-
     waitForElm('.css-nu3kba-MuiList-root-Header-headerMenuCtas').then(function () {
       waitForElm('.css-1a48d2a-TabsQuotes-outerContainer .swiper.swiper-3d').then(function () {
         appendHomeHeroContent();
@@ -270,66 +263,49 @@
               </div>
             </div>
           `);
+
+        waitForElm('.typing').then(function () {
+          typingEffect();
+        });
       }
     });
+  }
 
-    waitForElm('.typing').then(function () {
-      let jqueryloaded = setInterval(() => {
-        if (window.jQuery) {
-          clearInterval(jqueryloaded);
-          const carouselText = [
-            { text: "SOC2 Compliance" },
-            { text: "ISO 27001 Certification" },
-            { text: "HIPAA Compliance" },
-            { text: "GDPR Compliance" }
-          ];
 
-          jQuery(document).ready(async function () {
-            carousel(carouselText, ".typing");
-          });
+  const words = [
+    "SOC2 Compliance", "ISO 27001 Certification", "HIPAA Compliance", "GDPR Compliance"
+  ]
 
-          async function typeSentence(sentence, eleRef, delay = 50) {
-            const letters = sentence.split("");
-            let i = 0;
-            while (i < letters.length) {
-              await waitForMs(delay);
-              jQuery(eleRef).append(letters[i]);
-              i++;
-            }
-            return;
-          }
+  // function for each character typing and deleting effect using javascript
+  function typingEffect() {
+    let wordIndex = 0;
+    let charIndex = 0;
 
-          async function deleteSentence(eleRef) {
-            const sentence = jQuery(eleRef).html();
-            const letters = sentence.split("");
-            let i = 0;
-            while (letters.length > 0) {
-              await waitForMs(50);
-              letters.pop();
-              jQuery(eleRef).html(letters.join(""));
-            }
-          }
+    const typing = document.querySelector(".typing");
 
-          async function carousel(carouselList, eleRef) {
-            var i = 0;
-            while (true) {
-              await typeSentence(carouselList[i].text, eleRef);
-              await waitForMs(1800);
-              await deleteSentence(eleRef);
-              await waitForMs(1800);
-              i++;
-              if (i >= carouselList.length) {
-                i = 0;
-              }
-            }
-          }
+    const type = () => {
+      if (charIndex < words[wordIndex].length) {
+        typing.textContent += words[wordIndex].charAt(charIndex);
+        charIndex++;
+        setTimeout(type, 100);
+      } else {
+        setTimeout(erase, 2000);
+      }
+    }
 
-          function waitForMs(ms) {
-            return new Promise((resolve) => setTimeout(resolve, ms));
-          }
-        }
-      }, 10);
-    });
+    const erase = () => {
+      if (charIndex > 0) {
+        typing.textContent = words[wordIndex].substring(0, charIndex - 1);
+        charIndex--;
+        setTimeout(erase, 100);
+      } else {
+        wordIndex++;
+        if (wordIndex >= words.length) wordIndex = 0;
+        setTimeout(type, 2000);
+      }
+    }
+
+    setTimeout(type, 200);
   }
 
   function demoChecked() {
@@ -363,6 +339,11 @@
 
   function removeTest() {
     document.body.classList.remove("spz-2007");
+    if (document.querySelector('.typing')) {
+      document.querySelector('.hero-banner-section').remove();
+      document.querySelector('.hero-img-section').remove();
+      document.querySelector('.social-pr-section').remove();
+    }
   }
 
   history.pushState = (function (f) {
@@ -388,12 +369,12 @@
     removeTest();
 
     url = location.href;
-    urlCheck(url);
+    urlNewCheck(url);
   });
   var url = location.href;
-  urlCheck(url);
+  urlNewCheck(url);
 
-  function urlCheck(url) {
+  function urlNewCheck(url) {
     var targetTestURL = 'https://drata.com/';
     if (isSameUrl(url, targetTestURL, true)) {
       createTest_2006();
