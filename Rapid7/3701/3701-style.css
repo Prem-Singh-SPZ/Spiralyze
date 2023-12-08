@@ -12,6 +12,9 @@ body header.stuck nav.sub-nav .sub-nav__utility {
 body header.mobile nav.sub-nav a.button.button--primary {
   display: none !important;
 }
+body a.r7-icon-external-link::after {
+  display: none !important;
+}
 body .off-canvas-content .longHero {
   padding-top: 78px;
   min-height: 22rem;
@@ -825,4 +828,23 @@ body .off-canvas-content .pageContent .help-and-demo .help-container .row .col-1
   line-height: 100%;
   letter-spacing: 3px;
   text-transform: uppercase;
+}
+
+body.safari .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .demo-video .video-container {
+  width: 384px;
+  height: 216px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/rapid7/3701/image_desktop_tablet_1.png) no-repeat;
+  background-position: left top;
+  background-size: contain;
+  margin-top: 32px;
+}
+@media (max-width: 767.98px) {
+  body.safari .off-canvas-content .pageContent .help-and-demo .help-container .row .col-12.col-md-6 .demo-video .video-container {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/rapid7/3701/image_mobile_1.png) no-repeat;
+    background-position: left top;
+    background-size: contain;
+    width: 328px;
+    height: 184px;
+    margin-top: 24px;
+  }
 }

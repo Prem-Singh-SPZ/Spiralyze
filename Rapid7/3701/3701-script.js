@@ -1,7 +1,6 @@
-document.body.classList.add('spz-3701');
-document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`)
-
 waitForElm('#internal .off-canvas-wrapper .pageBlock.bgGrayLight .wrapper').then(function (elm) {
+  document.body.classList.add('spz-3701');
+  document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1701852746/rapid7/3701/atom_7.svg" as="image">`);
   loadTest();
 });
 
@@ -134,10 +133,14 @@ function loadTest() {
         </div>
       </div>
     </div>
-  </section>`)
+  </section>`);
 
   //Accordion font update
   document.querySelector('.accordion ul.accordion li.accordion-item a.accordion-title').textContent = `Will I have access to support or additional resources during the trial?`;
+
+  if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+    document.body.classList.add('safari')
+  }
 }
 
 // Generic
