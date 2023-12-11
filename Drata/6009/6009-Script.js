@@ -4,7 +4,7 @@ const int6009 = setInterval(() => {
 
         createTest();
 
-        document.body.classList.add('spz-6011-TC');
+        document.body.classList.add('spz-6009');
         appendPreload();
     }
 }, 100);
@@ -21,7 +21,6 @@ function createTest() {
 
     // Add class '.form-step-2' on '.hbspt-form .hs-form-spz'
     document.querySelector('.hbspt-form .hs-form-spz').classList.add('form-step-2');
-    document.querySelector('.form-wrapper-spz').classList.add('step-1-active');
 
     // Append 'PCI DSS' after second '.hs_demo_product_of_interest .inputs-list.multi-container label'
     // FYI, this is added because the 'PCI DSS' checkbox is not available in the form
@@ -40,16 +39,6 @@ function createTest() {
 
     stepOneCheckboxes();
     openNextStep();
-
-    setTimeout(() => {
-        if (document.querySelector('.spz-6011-TC main') && document.querySelectorAll('.spz-6011-TC main input[name="cro_test_1"]').length == 0) {
-            document.querySelector('.spz-6011-TC main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_1" value="#6011__Demo(Internal)_Mobile_-_Form_On_Top">');
-            document.querySelector('.spz-6011-TC main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_2" value="Control">');
-        } else if (document.querySelector('.spz-6011-TC main') && document.querySelectorAll('.spz-6011-TC main input[name="cro_test_1"]').length == 1) {
-            document.querySelector('[name="cro_test_1"]').value = "#6011__Demo(Internal)_Mobile_-_Form_On_Top";
-            document.querySelector('[name="cro_test_2"]').value = "Control";
-        }
-    }, 1000);
 }
 
 function stepOneCheckboxes() {
@@ -96,7 +85,7 @@ function getIconByLabel(label) {
             label: 'SOC 2'
         },
         {
-            ico: 'v1692003824/drata/6009/iso_4.svg',
+            ico: 'v1690459081/drata/6009/iso_webp_1.webp',
             label: 'ISO 27001'
         },
         {
@@ -150,20 +139,15 @@ function openNextStep() {
         document.querySelector('.form-step-1').classList.remove('active');
         document.querySelector('.form-step-2').classList.add('active');
 
-        document.querySelector('.form-wrapper-spz').classList.remove('step-1-active');
-
         // smooth scroll to .contact-form-section
-        if (window.innerWidth < 768) {
-            document.querySelector('.hero-right-section').scrollIntoView({
-                behavior: 'smooth'
-            });
-        }
+        document.querySelector('.hero-right-section').scrollIntoView({
+            behavior: 'smooth'
+        });
     });
 }
 
 function appendPreload() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1695303591/drata/6009/Checkmark-hover.svg" as="image">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1695303590/drata/6009/Checkmark-checked.svg" as="image">`
+        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1690976787/drata/6009/checked_mark.svg" as="image">`
     );
 }
