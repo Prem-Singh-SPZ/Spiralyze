@@ -133,40 +133,79 @@ function pageContent() {
   </section>
   <section class="trusted-partners-section">
     <div class="spz-container">
-      <div class="two-card-slider swiper-container ">
-        <div class="two-card-title">
+      <div class="three-card-slider swiper-container ">
+        <div class="three-card-title">
           <h4 class="section-heading">Trusted by <strong>3,700+</strong> government contractor, architecture, engineer, and construction firms </h4>
+          <div class="ratings-container"><img class="capterra-logo" alt="Capterra Logo" src="//res.cloudinary.com/spiralyze/image/upload/v1702300351/unanet/3001/full_logo_svg.svg"><img class="star-rating" alt="Star Rating" src="//res.cloudinary.com/spiralyze/image/upload/v1702300351/unanet/3001/big_stars_svg.svg"><span>4.3</span></div>
         </div>
         <div class="testimonials swiper-wrapper">
           <div class="testimonials_card swiper-slide">
             <div>
-              <div class="quote-testimonial">
-                <div class="quote">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote">
+              <div class="testimonial-inner">
+                <div class="header-img">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1702300231/unanet/3001/stars_svg.svg" alt="Star Rating">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1702300275/unanet/3001/logo_svg.svg" alt="Capterra Logo">
                 </div>
-                <div class="quote-text"> The technology has helped position us to compete and level the playing field. We don&#8217;t have to hire more staff. It&#8217;s made our teams&#8217; jobs so much easier. <br />
+                <div class="review-content">
+                    <h6 class="card-title">"Essential capability for government contractors. Unanet has been key to our success."</h6>
+                    <p class="card-text">Integration. Unanet combines time/expense, project management, billing, and financials all in one system. No import/export of data between systems. DCAA Compliance. Calculates indirect rates and applies to billing.</p>
                 </div>
               </div>
-              <div class="divider"></div>
               <div class="author">
-                <div class="auther-name"> Cindy Blackstone </div>
-                <div class="auther-title"> Chief Retail Officer, Southside Bank </div>
+                <div class="author-img">
+                    <img class="author-logo" alt="Ed H." src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar1.webp">
+                </div>
+                <div class="author-name">
+                  <h6 class="auther-name">Ed H.</h6>
+                  <p class="auther-title">President</p>
+                </div>
               </div>
             </div>
           </div>
           <div class="testimonials_card swiper-slide">
+          <div>
+            <div class="testimonial-inner">
+              <div class="header-img">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1702300231/unanet/3001/stars_svg.svg" alt="Star Rating">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1702300275/unanet/3001/logo_svg.svg" alt="Capterra Logo">
+              </div>
+              <div class="review-content">
+                  <h6 class="card-title">"Unanet is a total project based accounting solution"</h6>
+                  <p class="card-text">Unanet's ease of use and flexibility has allowed me to be much more productive and timely in delivering reports, processing monthly billings, accounting reviews, month end close, and many more activities!</p>
+              </div>
+            </div>
+            <div class="author">
+              <div class="author-img">
+                  <img class="author-logo" alt="Lynn W" src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar_2.webp">
+              </div>
+              <div class="author-name">
+                <h6 class="auther-name">Lynn W</h6>
+                <p class="auther-title">Director of Business Resources</p>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="testimonials_card swiper-slide">
             <div>
-              <div class="quote-testimonial">
-                <div class="quote">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote">
-                </div>
-                <div class="quote-text"> Having all accounts on one core system makes everyone&#8217;s lives easier and provides a better member experience. Integrating home banking and automated transfers is easier to manage. </div>
-              </div>
-              <div class="divider"></div>
-              <div class="author">
-                <div class="auther-name"> Mark Schuiling </div>
-                <div class="auther-title"> Chief Technology Officer, Wildfire Credit Union </div>
-              </div>
+            <div class="testimonial-inner">
+            <div class="header-img">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1702300231/unanet/3001/stars_svg.svg" alt="Star Rating">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1702300275/unanet/3001/logo_svg.svg" alt="Capterra Logo">
+            </div>
+            <div class="review-content">
+                <h6 class="card-title">"Unanet is an innovative tool that looks like the future of financial softwares"</h6>
+                <p class="card-text">Unanet is an amazingly powerful software that is way ahead of its competitors in its user-friendliness and its intuitiveness.</p>
+            </div>
+          </div>
+          <div class="author">
+            <div class="author-img">
+                <img class="author-logo" alt="Nabeel C." src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar_3.webp">
+            </div>
+            <div class="author-name">
+              <h6 class="auther-name">Nabeel C.</h6>
+              <p class="auther-title">Finance Manager</p>
+            </div>
+          </div>
             </div>
           </div>
         </div>
@@ -241,7 +280,7 @@ function checkdata() {
 swiperJS.onload = function () {
   if (window.innerWidth < 991) {
     let intSlider = setInterval(() => {
-      if (document.querySelector('.two-card-slider.swiper-container.swiper-container-horizontal')) {
+      if (document.querySelector('.three-card-slider.swiper-container.swiper-container-horizontal')) {
         clearInterval(intSlider);
       }
       init_Slider();
