@@ -6,6 +6,13 @@ swiperJS.src = '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js';
 swiperJS.type = 'text/javascript';
 document.head.appendChild(swiperJS);
 
+appendPreload()
+function appendPreload() {
+  document.querySelector('head').insertAdjacentHTML("afterbegin", `
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css">`
+  );
+}
+
 const formInt = setInterval((() => {
   if (document.querySelectorAll('.hbspt-form form.hs-form-spz').length > 0) {
     clearInterval(formInt);
@@ -110,73 +117,86 @@ function checkError() {
 function pageContent() {
   document.body.classList.add('spz-3001_v1');
   return `<div class="spz-wrapper">
-    <section class="hero-section">
-      <div class="spz-container">
-        <div class="spz-header">
-          <a href="//unanet.com/" class="site-logo">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/v1699888668/unanet/2001/logo.svg" alt="Unanet Logo" title="Unanet Logo">
-          </a>
+  <section class="hero-section">
+    <div class="spz-container">
+      <div class="spz-header">
+        <a href="//unanet.com/" class="site-logo">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1699888668/unanet/2001/logo.svg" alt="Unanet Logo" title="Unanet Logo">
+        </a>
+      </div>
+      <div class="hero-content">
+        <div class="form-wrapper">
+          <h2 class="form-heading">Contact sales</h2>
         </div>
-        <div class="hero-content">
-          <div class="form-wrapper">
-            <h2 class="form-heading">Contact sales</h2>
+      </div>
+    </div>
+  </section>
+  <section class="trusted-partners-section">
+    <div class="spz-container">
+      <div class="two-card-slider swiper-container ">
+        <div class="two-card-title">
+          <h4 class="section-heading">Trusted by <strong>3,700+</strong> government contractor, architecture, engineer, and construction firms </h4>
+        </div>
+        <div class="testimonials swiper-wrapper">
+          <div class="testimonials_card swiper-slide">
+            <div>
+              <div class="quote-testimonial">
+                <div class="quote">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote">
+                </div>
+                <div class="quote-text"> The technology has helped position us to compete and level the playing field. We don&#8217;t have to hire more staff. It&#8217;s made our teams&#8217; jobs so much easier. <br />
+                </div>
+              </div>
+              <div class="divider"></div>
+              <div class="author">
+                <div class="auther-name"> Cindy Blackstone </div>
+                <div class="auther-title"> Chief Retail Officer, Southside Bank </div>
+              </div>
+            </div>
+          </div>
+          <div class="testimonials_card swiper-slide">
+            <div>
+              <div class="quote-testimonial">
+                <div class="quote">
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote">
+                </div>
+                <div class="quote-text"> Having all accounts on one core system makes everyone&#8217;s lives easier and provides a better member experience. Integrating home banking and automated transfers is easier to manage. </div>
+              </div>
+              <div class="divider"></div>
+              <div class="author">
+                <div class="auther-name"> Mark Schuiling </div>
+                <div class="auther-title"> Chief Technology Officer, Wildfire Credit Union </div>
+              </div>
+            </div>
           </div>
         </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-button-prev"></div>
       </div>
-    </section>
-    <section class="trusted-partners-section">
-      <div class="spz-container">
-                    <div class="two-card-slider swiper-container ">
-                        <div class="two-card-title">
-                        <h4 class="section-heading">Trusted by <strong>3,700+</strong> government contractor, architecture, engineer, and construction firms</h4></div>
-                        <div class="testimonials swiper-wrapper">
-                            <div class="testimonials_card swiper-slide">
-                            <div>
-                                <div class="quote-testimonial">
-                                <div class="quote"><img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
-                                    <div class="quote-text"> The technology has helped position us to compete and level the playing field. We don&#8217;t have to hire more staff. It&#8217;s made our teams&#8217; jobs so much easier.
-                                        <br/> </div>
-                                </div>
-                                <div class="divider"> </div>
-                                <div class="author">
-                                    <div class="auther-name"> Cindy Blackstone </div>
-                                    <div class="auther-title"> Chief Retail Officer, Southside Bank </div>
-                                </div>
-                                </div>
-                            </div>
-                            <div class="testimonials_card swiper-slide">
-                            <div>
-                                <div class="quote-testimonial">
-                                <div class="quote"><img src="//res.cloudinary.com/spiralyze/image/upload/v1689167488/jackhenry/2001/qoute_2.svg" alt="quote"> </div>
-                                    <div class="quote-text"> Having all accounts on one core system makes everyone&#8217;s lives easier and provides a better member experience. Integrating home banking and automated transfers is easier to manage. </div>
-                                </div>
-                                <div class="divider"> </div>
-                                <div class="author">
-                                    <div class="auther-name"> Mark Schuiling </div>
-                                    <div class="auther-title"> Chief Technology Officer, Wildfire Credit Union </div>
-                                </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="swiper-button-next"></div>
-                        <div class="swiper-button-prev"></div>
-                    </div>
+    </div>
+  </section>
+  <section class="spz-footer">
+    <div class="spz-container">
+      <div class="footer-wrapper">
+        <p class="copyright-content">© 2023 Unanet. All rights reserved.</p>
+        <ul class="footer-links">
+          <li>
+            <a rel="noopener" href="/website-terms">Terms</a>
+          </li>
+          <li>
+            <a rel="noopener" href="/copyright-policy">DMCA</a>
+          </li>
+          <li>
+            <a rel="noopener" href="/privacy-policy">Privacy Policy</a>
+          </li>
+          <li>
+            <a rel="noopener" onclick="(function(){ var _hsp = window._hsp = window._hsp || []; _hsp.push(['showBanner']); })()">Your Privacy Choices</a>
+          </li>
+        </ul>
       </div>
-    </section>
-    <section class="spz-footer">
-      <div class="spz-container">
-        <div class="footer-wrapper">
-          <p class="copyright-content">© 2023 Unanet. All rights reserved.</p>
-          <ul class="footer-links">
-            <li><a rel="noopener" href="/website-terms">Terms</a></li>
-            <li><a rel="noopener" href="/copyright-policy">DMCA</a></li>
-            <li><a rel="noopener" href="/privacy-policy">Privacy Policy</a></li>
-            <li><a rel="noopener" onclick="(function(){ var _hsp = window._hsp = window._hsp || []; _hsp.push(['showBanner']); })()">Your Privacy Choices</a></li>
-          </ul>
-        </div>
-      </div>
-    </section>
-  </div>`
+    </div>
+  </section>
+</div>`
 }
 
 function appendHubspotScript() {
@@ -219,7 +239,7 @@ function checkdata() {
 }
 
 swiperJS.onload = function () {
-  if (window.innerWidth < 1024) {
+  if (window.innerWidth < 991) {
     let intSlider = setInterval(() => {
       if (document.querySelector('.two-card-slider.swiper-container.swiper-container-horizontal')) {
         clearInterval(intSlider);
@@ -234,19 +254,19 @@ swiperJS.onload = function () {
 
 function init_Slider() {
   var Swipes = new Swiper('.swiper-container', {
-      // loop: true,
-      // autoplay: true,
-      centeredSlides: true,
-      slidesPerView: 1,
-      navigation: {
-          nextEl: '.swiper-button-next',
-          prevEl: '.swiper-button-prev',
-      },
+    // loop: true,
+    // autoplay: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
   });
 
-  if (window.innerWidth > 1023) {
-      if (Swipes !== undefined) {
-          Swipes.destroy(true, true);
-      }
+  if (window.innerWidth > 990) {
+    if (Swipes !== undefined) {
+      Swipes.destroy(true, true);
+    }
   }
 }
