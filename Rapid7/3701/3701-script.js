@@ -94,7 +94,7 @@
         </div>
         <div class="spz-warning-msg">
           <div class="warning-img">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/v1701852744/rapid7/3701/envelope-email-checked-okay_2.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1701852744/rapid7/3701/envelope-email-checked-okay_2.svg" alt="Emails">
           </div>
           <div class="warning-text">
             <p>Keep an eye out for emails from us throughout the next 30 days for tips and tricks on how to get the most out of your InsightIDR trial.</p>
@@ -144,6 +144,15 @@
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
       document.body.classList.add('safari')
     }
+
+    let checkClick = setInterval(() => {
+      if (document.querySelector('.textOnly.accordion .accordion-item.is-active')) {
+        clearInterval(checkClick);
+      }
+      else {
+        document.querySelector('.accordion-title').click();
+      }
+    }, 100);
   }
 
   // Generic
