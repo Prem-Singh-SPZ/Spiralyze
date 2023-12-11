@@ -1,0 +1,716 @@
+$color_1: #fff;
+$color_2: #ade83a;
+$color_3: #a2b3c3;
+$color_4: #363f44;
+$color_5: #6c7e89;
+$color_6: transparent;
+$color_7: #e30004;
+$color_8: #52d6ff;
+$color_9: #10365a;
+$font-family_1: Mona Sans, arial, sans-serif;
+
+/* Header CSS Start Here */
+/* Header CSS End Here */
+/* Hero Section CSS Start Here */
+/* Hero Section CSS End Here */
+/* Trusted Partners Section CSS Start Here */
+/* Trusted Partners Section CSS End Here */
+/* Footer CSS Start Here */
+/* Footer CSS End Here */
+/* Form CSS Start Here */
+/* Form CSS End Here */
+.spz-3001_v1 {
+  .body-wrapper {
+    > * {
+      &:not(.spz-wrapper) {
+        display: none;
+      }
+    }
+    .spz-wrapper {
+      min-height: 100vh;
+    }
+  }
+  .spz-container {
+    width: 100%;
+    max-width: 1260px;
+    padding: 0 20px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 9;
+  }
+  .spz-header {
+    padding: 31px 0;
+    .site-logo {
+      width: auto;
+      height: auto;
+      display: inline-block;
+      img {
+        width: 161px;
+        height: 24px;
+        -o-object-fit: contain;
+        object-fit: contain;
+      }
+    }
+  }
+  .hero-section {
+    position: relative;
+    background: #10365a;
+    &::before {
+      position: absolute;
+      content: "";
+      top: 0;
+      right: 0;
+      width: 363px;
+      height: 450px;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700118639/unanet/2001/hero-top-shape.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 517px;
+      height: 315px;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700118639/unanet/2001/hero-bottom-shape.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+    }
+  }
+  .spz-wrapper {
+    &::after {
+      position: absolute;
+      content: "";
+      bottom: 0;
+      left: 0;
+      width: 517px;
+      height: 315px;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700118639/unanet/2001/hero-bottom-shape.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      opacity: 0;
+    }
+  }
+  .hero-content {
+    padding: 33px 0 162px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+
+    .form-wrapper {
+      width: 44%;
+      max-width: 536px;
+      border-radius: 5px;
+      background: -webkit-gradient(
+        linear,
+        left top,
+        left bottom,
+        color-stop(68.91%, #fff),
+        to(rgba(255, 255, 255, 0.96))
+      );
+      background: -o-linear-gradient(
+        top,
+        #fff 68.91%,
+        rgba(255, 255, 255, 0.96) 100%
+      );
+      background: linear-gradient(
+        180deg,
+        #fff 68.91%,
+        rgba(255, 255, 255, 0.96) 100%
+      );
+      -webkit-box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.15);
+      box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.15);
+      padding: 33px 40px 40px;
+      .form-heading {
+        color: $color_4;
+        text-align: center;
+        font-size: 28px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 33.6px;
+        margin: 0;
+      }
+    }
+  }
+
+  .trusted-partners-section {
+    padding: 88px 0;
+    background: #1c4267;
+    text-align: center;
+    .spz-container {
+      max-width: 1197.5px;
+    }
+    .section-heading {
+      color: $color_1;
+      text-align: center;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 30px;
+      margin-bottom: 40px;
+      strong {
+        font-weight: 700;
+      }
+    }
+    img {
+      width: 100%;
+      -o-object-fit: contain;
+      object-fit: contain;
+    }
+  }
+  .spz-footer {
+    background: #0d2c49;
+    .spz-container {
+      max-width: 1320px;
+    }
+    .footer-wrapper {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      padding: 20.5px 0;
+    }
+  }
+  .footer-wrapper {
+    .copyright-content {
+      color: $color_1;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 0;
+    }
+    .footer-links {
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+      margin: 0;
+      padding: 0;
+      list-style: none;
+    }
+    li {
+      margin-right: 40px;
+      &:last-child {
+        margin-right: 0;
+      }
+      a {
+        color: $color_1 !important;
+        font-size: 13px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+      }
+    }
+  }
+  form.hs-form-spz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    padding-top: 23px;
+    fieldset {
+      width: 100%;
+      max-width: calc(50% - 10px) !important;
+      .hs-richtext {
+        margin: 25px 0 12px;
+        p {
+          color: $color_5;
+          text-align: center;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 19.5px;
+          letter-spacing: -0.02em;
+          margin: 0;
+          a {
+            color: $color_8;
+          }
+        }
+      }
+    }
+    fieldset.hdField {
+      max-width: 0 !important;
+      width: 0 !important;
+    }
+    fieldset.field-11 {
+      width: 100%;
+      max-width: 100% !important;
+      .field {
+        display: none;
+      }
+      .frm-commt {
+        display: inline-block;
+        margin-bottom: 18px;
+        position: relative;
+        top: -2px;
+        .commt-text {
+          position: relative;
+          padding-left: 28px;
+          color: $color_4;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          cursor: pointer;
+          span {
+            color: $color_5;
+          }
+          &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            left: 0;
+            top: 50%;
+            -webkit-transform: translateY(-50%);
+            -ms-transform: translateY(-50%);
+            transform: translateY(-50%);
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700202425/unanet/2001/plus-icon.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+    }
+    fieldset.field-21 {
+      width: 100%;
+      max-width: 100% !important;
+    }
+    fieldset.checkBox {
+      width: 100%;
+      max-width: 100% !important;
+    }
+    fieldset.field-20 {
+      display: none;
+    }
+    .field {
+      margin-bottom: 20px;
+      position: relative;
+      > label {
+        &:not(.hs-form-booleancheckbox-display) {
+          color: $color_5;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          margin: 0;
+          padding: 0 6px;
+          display: inline-block;
+          background: #fff;
+          position: absolute;
+          z-index: 9;
+          left: 10px;
+          top: 16px;
+          pointer-events: none;
+          -webkit-transition: all 0.3s ease-in-out;
+          -o-transition: all 0.3s ease-in-out;
+          transition: all 0.3s ease-in-out;
+        }
+        .hs-form-required {
+          display: none;
+        }
+      }
+      .input {
+        > .hs-input {
+          border-radius: 4px;
+          border: 1px solid #d1d6dc;
+          background: #fff;
+          margin: 0;
+          padding: 15px !important;
+          height: 56px;
+          color: $color_4;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          white-space: nowrap;
+          overflow: hidden;
+          -o-text-overflow: ellipsis;
+          text-overflow: ellipsis;
+          appearance: none;
+          -moz-appearance: none;
+          -webkit-appearance: none;
+        }
+        > select.hs-input {
+          color: $color_6;
+          padding-right: 30px !important;
+          option {
+            color: $color_5;
+            font-family: $font-family_1;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 22.5px;
+          }
+        }
+        > textarea.hs-input {
+          height: 120px;
+          min-height: 56px;
+          white-space: unset;
+        }
+      }
+      ul.hs-error-msgs {
+        li {
+          margin: 4px 0 0 0;
+          label.hs-error-msg {
+            color: $color_7;
+            font-size: 13px;
+            font-weight: 400;
+            line-height: 19.5px;
+            margin: 0;
+          }
+        }
+      }
+    }
+    .field.hs-fieldtype-select {
+      .input {
+        &::after {
+          content: "";
+          width: 24px;
+          height: 24px;
+          right: 14px;
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700472240/unanet/2001/Dropdown-down.svg");
+          background-size: contain;
+          background-repeat: no-repeat;
+        }
+      }
+    }
+    .field.hs-fieldtype-select.field-focus {
+      .input {
+        &::after {
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700472240/unanet/2001/Dropdown-up.svg");
+        }
+      }
+    }
+    .field.field-focus {
+      > label {
+        top: -10px;
+        color: $color_4;
+        font-size: 13px;
+        line-height: 19.5px;
+      }
+      .input {
+        > .hs-input {
+          border-color: #363f44;
+        }
+        > select.hs-input {
+          color: $color_4;
+        }
+      }
+    }
+    .field.field-filled {
+      > label {
+        top: -10px;
+        color: $color_4;
+        font-size: 13px;
+        line-height: 19.5px;
+      }
+      .input {
+        > select.hs-input {
+          color: $color_4;
+        }
+      }
+    }
+    .field.field-error {
+      > label {
+        color: $color_7;
+      }
+      .input {
+        > .hs-input {
+          border-color: #e30004;
+        }
+      }
+    }
+    .field.hs-fieldtype-booleancheckbox {
+      li {
+        margin: 0;
+      }
+      input {
+        display: none;
+      }
+      label {
+        span {
+          color: $color_4;
+          font-size: 16px;
+          font-weight: 400;
+          line-height: 24px;
+          margin: 0 !important;
+          padding-left: 28px;
+          position: relative;
+          cursor: pointer;
+          &::before {
+            position: absolute;
+            content: "";
+            width: 20px;
+            height: 20px;
+            top: 2px;
+            left: 0;
+            border-radius: 2px;
+            border: 2px solid #d1d6dc;
+          }
+        }
+        &:hover {
+          span {
+            &::before {
+              border: 2px solid #39c33a;
+            }
+          }
+        }
+        input {
+          &:checked {
+            + {
+              span {
+                &::before {
+                  border: 2px solid #39c33a;
+                  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700473852/unanet/2001/State_Selected.svg");
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  border: none;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .hs-submit {
+      width: 100%;
+      .actions {
+        width: 100%;
+      }
+      input.hs-button {
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-align: center;
+        -ms-flex-align: center;
+        align-items: center;
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+        width: 100%;
+        height: 56px;
+        border-radius: 3px;
+        background: #39c33a;
+        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
+        color: $color_9;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 27px;
+        &:hover {
+          background: #2d992e;
+        }
+        &:active {
+          background: #2d992e;
+        }
+      }
+    }
+  }
+}
+input {
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 56px white inset !important;
+    &:hover {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+    }
+    &:focus {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+    }
+    &:active {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+    }
+  }
+  &::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+  &::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+  }
+}
+input[type="number"] {
+  -moz-appearance: textfield !important;
+}
+@media (max-width: 1023.98px) {
+  .spz-3001_v1 {
+    .spz-container {
+      max-width: 728px !important;
+    }
+    .hero-section {
+      &::before {
+        display: none;
+      }
+      &::after {
+        display: none;
+      }
+    }
+    .spz-wrapper {
+      &::after {
+        display: none;
+      }
+    }
+
+    .hero-content {
+      -webkit-box-orient: vertical;
+      -webkit-box-direction: reverse;
+      -ms-flex-flow: column-reverse;
+      flex-flow: column-reverse;
+      padding-bottom: 80px;
+
+      .form-wrapper {
+        width: 100%;
+        max-width: 100%;
+      }
+    }
+    .trusted-partners-section {
+      padding: 64px 0;
+      .section-heading {
+        max-width: 627px;
+        margin: 0 auto 40px;
+      }
+    }
+  }
+}
+
+@media (max-width: 767.98px) {
+  .spz-3001_v1 {
+    .hero-content {
+      padding: 17px 0 32px;
+      .form-wrapper {
+        .form-heading {
+          font-size: 24px;
+          line-height: 28.8px;
+        }
+        padding: 33px 20px 40px;
+      }
+ 
+    }
+
+    .trusted-partners-section {
+      padding: 48px 0;
+      .section-heading {
+        letter-spacing: -0.25px;
+        margin-bottom: 24px;
+      }
+      img {
+        max-width: 320px;
+      }
+    }
+    .spz-footer {
+      .footer-wrapper {
+        padding: 16px 0 24px;
+        -webkit-box-orient: vertical;
+        -webkit-box-direction: reverse;
+        -ms-flex-flow: column-reverse;
+        flex-flow: column-reverse;
+      }
+    }
+    .footer-wrapper {
+      .footer-links {
+        -webkit-box-pack: center;
+        -ms-flex-pack: center;
+        justify-content: center;
+      }
+      li {
+        margin: 0;
+        padding: 8px 15px;
+        display: -webkit-inline-box;
+        display: -ms-inline-flexbox;
+        display: inline-flex;
+      }
+      .copyright-content {
+        margin-top: 8px;
+      }
+    }
+    form.hs-form-spz {
+      fieldset {
+        max-width: 100% !important;
+        .hs-richtext {
+          margin: 26px 0 12px;
+        }
+      }
+    }
+  }
+}
+@media screen and (min-width: 1024px) and (min-height: 1372px) {
+  .spz-3001_v1 {
+    .spz-wrapper {
+      position: relative;
+      padding-bottom: 68px;
+      background: #10365a;
+      &::after {
+        opacity: 1;
+        bottom: 68px;
+      }
+    }
+    .spz-footer {
+      background: #0d2c49;
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      margin: 0;
+    }
+    .hero-section {
+      &::after {
+        opacity: 0;
+      }
+    }
+  }
+}
+@media (min-width: 1024px) and (max-width: 1199.98px) {
+  .spz-3001_v1 {
+    form.hs-form-spz {
+      .field {
+        .input {
+          > .hs-input {
+            padding: 15px 10px !important;
+          }
+        }
+        > label {
+          &:not(.hs-form-booleancheckbox-display) {
+            left: 5px;
+            font-size: 13px;
+          }
+        }
+      }
+      .field.field-focus {
+        > label {
+          font-size: 12px;
+        }
+      }
+      .field.field-filled {
+        > label {
+          font-size: 12px;
+        }
+      }
+    }
+  }
+}
