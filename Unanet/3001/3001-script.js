@@ -47,6 +47,9 @@ const formInt = setInterval((() => {
       }
     });
 
+    //appending support link
+    document.querySelector('.form-wrapper').insertAdjacentHTML('beforeend', `<div class="spz-privacy-policy"><p>Existing customer? Go to <a href="https://unanet.com/support/customer-support">support</a>.</p></div>`);
+
     var checkBox = document.querySelector('input[name="LEGAL_CONSENT.subscription_type_3203618"]');
     checkBox.closest('fieldset').classList.add('checkBox');
     // Comment Toggle
@@ -89,7 +92,18 @@ function focusFields() {
     })), "SELECT" == e.tagName && e.addEventListener("change", (function () {
       e.closest(".field").classList.remove("field-error")
     }));
-  }))
+  }));
+
+  // Progressive starts
+  document.querySelector('.field-4').classList.add('hidden-spz');
+  document.querySelector('.field-6').classList.add('hidden-spz');
+  document.querySelector('.field-7').classList.add('hidden-spz');
+  document.querySelector('.field-8').classList.add('hidden-spz');
+  document.querySelector('.field-9').classList.add('hidden-spz');
+  document.querySelector('.field-10').classList.add('hidden-spz');
+  document.querySelector('.field-11').classList.add('hidden-spz');
+  document.querySelector('.field-24').classList.add('hidden-spz');
+  // Progressive ends
 }
 
 function checkvalue() {
@@ -111,7 +125,12 @@ function checkvalue() {
 function checkError() {
   document.querySelectorAll(".hs-input").forEach((function (e) {
     null != e.closest(".field").querySelector(".error") ? e.closest(".field").classList.add("field-error") : e.closest(".field").classList.remove("field-error");
-  }))
+  }));
+  if (document.querySelectorAll('.form-columns-1:not(.hdField) .field-filled:not(.field-error)').length >= 4) {
+    document.querySelectorAll('.hidden-spz').forEach(function (el) {
+      el.classList.remove('hidden-spz');
+    });
+  }
 }
 
 function pageContent() {
@@ -153,11 +172,11 @@ function pageContent() {
               </div>
               <div class="author">
                 <div class="author-img">
-                    <img class="author-logo" alt="Ed H." src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar1.webp">
+                    <img  alt="Ed H." src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar1.webp">
                 </div>
                 <div class="author-name">
-                  <h6 class="auther-name">Ed H.</h6>
-                  <p class="auther-title">President</p>
+                  <h6>Ed H.</h6>
+                  <p>President</p>
                 </div>
               </div>
             </div>
@@ -176,11 +195,11 @@ function pageContent() {
             </div>
             <div class="author">
               <div class="author-img">
-                  <img class="author-logo" alt="Lynn W" src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar_2.webp">
+                  <img  alt="Lynn W" src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar_2.webp">
               </div>
               <div class="author-name">
-                <h6 class="auther-name">Lynn W</h6>
-                <p class="auther-title">Director of Business Resources</p>
+                <h6>Lynn W</h6>
+                <p>Director of Business Resources</p>
               </div>
             </div>
           </div>
@@ -199,11 +218,11 @@ function pageContent() {
           </div>
           <div class="author">
             <div class="author-img">
-                <img class="author-logo" alt="Nabeel C." src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar_3.webp">
+                <img  alt="Nabeel C." src="//res.cloudinary.com/spiralyze/image/upload/v1702024742/unanet/3001/avatar_3.webp">
             </div>
             <div class="author-name">
-              <h6 class="auther-name">Nabeel C.</h6>
-              <p class="auther-title">Finance Manager</p>
+              <h6>Nabeel C.</h6>
+              <p>Finance Manager</p>
             </div>
           </div>
             </div>
@@ -212,6 +231,7 @@ function pageContent() {
         <div class="swiper-button-next"></div>
         <div class="swiper-button-prev"></div>
       </div>
+      <div class="notice"><p>*Image changed for privacy.</p></div>
     </div>
   </section>
   <section class="spz-footer">
@@ -235,7 +255,8 @@ function pageContent() {
       </div>
     </div>
   </section>
-</div>`
+          </div>`;
+
 }
 
 function appendHubspotScript() {
