@@ -18,6 +18,8 @@ let bodyLoad = setInterval(function () {
             };
         });
 
+        submitTestDetails();
+
         function loadTest() {
             document.querySelector('.hero-section').insertAdjacentHTML('afterend', `<section class="review-section desk">
                 <div class= "container">
@@ -155,12 +157,16 @@ let bodyLoad = setInterval(function () {
 
 
         //Passing test details to hidden fields
-        // function submitTestDetails() {
-        //     if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
-        //         document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#6005__Demo(Paid)_Testimonial');
-        //         document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
-        //     }
-        // }
+        function submitTestDetails() {
+            waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
+                let setValue = setInterval(() => {
+                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '#6006__Variant') {
+                        clearInterval(setValue);
+                    }
+                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#6006__Variant');
+                }, 100);
+            });
+        }
 
         function waitForElm(selector) {
             return new Promise(function (resolve) {
