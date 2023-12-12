@@ -321,7 +321,7 @@ function init_Slider() {
       el: ".swiper-pagination",
     },
     breakpoints: {
-      768: {
+      767: {
         slidesPerView: 1,
       },
     },

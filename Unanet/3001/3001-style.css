@@ -15,6 +15,11 @@
 .spz-3001_v1 .spz-header {
   padding: 31px 0;
 }
+@media (max-width: 1023.98px) {
+  .spz-3001_v1 .spz-header {
+    text-align: center;
+  }
+}
 .spz-3001_v1 .spz-header .site-logo {
   width: auto;
   height: auto;
@@ -147,7 +152,7 @@
 }
 @media (min-width: 767.98px) and (max-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider {
-    padding: 51px 0 112px 0;
+    padding: 56px 0 60px 0;
     overflow: hidden;
     margin: auto;
   }
@@ -158,11 +163,6 @@
 @media (max-width: 767.98px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .three-card-title {
     margin-bottom: 38px;
-  }
-}
-@media (min-width: 767.98px) and (max-width: 1023.28px) {
-  .spz-3001_v1 .trusted-partners-section .three-card-slider .three-card-title {
-    margin-bottom: 60px;
   }
 }
 .spz-3001_v1 .trusted-partners-section .three-card-slider .three-card-title h5 {
@@ -245,8 +245,6 @@
 }
 @media (min-width: 767.98px) and (max-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card > div {
-    padding: 48px 48px 46px 48px;
-    max-width: 672px;
     margin: auto;
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
@@ -301,11 +299,10 @@
   font-weight: 700;
   line-height: 20px;
   margin-bottom: 10px;
+  opacity: 0.9;
 }
 .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card .testimonial-inner .review-content .card-text {
-  overflow: hidden;
   color: #fff;
-  text-overflow: ellipsis;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -692,31 +689,29 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   width: 100%;
   height: 56px;
   border-radius: 3px;
-  background: #39c33a;
-  -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
-  box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
-  color: #10365a;
+  background: #47BA4A;
+  color: #10335A;
   font-size: 18px;
   font-style: normal;
   font-weight: 700;
-  line-height: 27px;
+  line-height: 26px;
   margin-top: 12px;
 }
 .spz-3001_v1 form.hs-form-spz .hs-submit input.hs-button:hover {
-  background: #2d992e;
+  background: #2E9231;
 }
 .spz-3001_v1 form.hs-form-spz .hs-submit input.hs-button:active {
-  background: #2d992e;
+  background: #2E9231;
 }
 .spz-3001_v1 .spz-privacy-policy {
   margin-top: 32px;
@@ -763,9 +758,6 @@ input[type=number] {
   .spz-3001_v1 .spz-container {
     max-width: 728px !important;
   }
-  .spz-3001_v1 .hero-section::before {
-    display: none;
-  }
   .spz-3001_v1 .hero-section::after {
     display: none;
   }
@@ -779,12 +771,8 @@ input[type=number] {
     width: 100%;
     max-width: 100%;
   }
-  .spz-3001_v1 .trusted-partners-section {
-    padding: 64px 0;
-  }
   .spz-3001_v1 .trusted-partners-section .section-heading {
-    max-width: 627px;
-    margin: 0 auto 40px;
+    margin: 0 auto 24px;
   }
 }
 @media (max-width: 767.98px) {

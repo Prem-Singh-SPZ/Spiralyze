@@ -30,6 +30,11 @@ $font-family_1: Mona Sans, arial, sans-serif;
   }
   .spz-header {
     padding: 31px 0;
+
+    @media (max-width: 1023.98px) {
+      text-align: center;
+    }
+
     .site-logo {
       width: auto;
       height: auto;
@@ -155,7 +160,7 @@ $font-family_1: Mona Sans, arial, sans-serif;
         padding-bottom: 65px;
       }
       @media (min-width: 767.98px) and (max-width: 1023.28px) {
-        padding: 51px 0 112px 0;
+        padding: 56px 0 60px 0;
         overflow: hidden;
         // max-width: 672px;
         margin: auto;
@@ -167,9 +172,7 @@ $font-family_1: Mona Sans, arial, sans-serif;
         @media (max-width: 767.98px) {
           margin-bottom: 38px;
         }
-        @media (min-width: 767.98px) and (max-width: 1023.28px) {
-          margin-bottom: 60px;
-        }
+
         h5 {
           color: var(--primary-legacy-navy-base, #06185f);
           text-align: center;
@@ -230,8 +233,6 @@ $font-family_1: Mona Sans, arial, sans-serif;
               justify-content: space-between;
             }
             @media (min-width: 767.98px) and (max-width: 1023.28px) {
-              padding: 48px 48px 46px 48px;
-              max-width: 672px;
               margin: auto;
               justify-content: space-between;
             }
@@ -266,16 +267,16 @@ $font-family_1: Mona Sans, arial, sans-serif;
                 font-weight: 700;
                 line-height: 20px;
                 margin-bottom: 10px;
+                opacity: 0.9;
               }
 
               .card-text {
-                overflow: hidden;
                 color: #fff;
-                text-overflow: ellipsis;
                 font-size: 14px;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 20px;
+                
               }
             }
           }
@@ -703,34 +704,25 @@ $font-family_1: Mona Sans, arial, sans-serif;
         width: 100%;
       }
       input.hs-button {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         width: 100%;
         height: 56px;
         border-radius: 3px;
-        background: #39c33a;
-        -webkit-box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
-        box-shadow: 0px 3px 5px 0px rgba(0, 0, 0, 0.12);
-        color: $color_9;
+        background: #47BA4A;
+        color: #10335A;
         font-size: 18px;
         font-style: normal;
         font-weight: 700;
-        line-height: 27px;
+        line-height: 26px;
         margin-top: 12px;
         &:hover {
-          background: #2d992e;
+          background: #2E9231;
         }
         &:active {
-          background: #2d992e;
+          background: #2E9231;
         }
       }
     }
@@ -784,9 +776,9 @@ input[type="number"] {
       max-width: 728px !important;
     }
     .hero-section {
-      &::before {
-        display: none;
-      }
+      // &::before {
+      //   display: none;
+      // }
       &::after {
         display: none;
       }
@@ -806,10 +798,8 @@ input[type="number"] {
       }
     }
     .trusted-partners-section {
-      padding: 64px 0;
       .section-heading {
-        max-width: 627px;
-        margin: 0 auto 40px;
+        margin: 0 auto 24px;
       }
     }
   }
