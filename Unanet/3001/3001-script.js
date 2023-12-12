@@ -145,7 +145,7 @@ function pageContent() {
       </div>
       <div class="hero-content">
         <div class="form-wrapper">
-          <h2 class="form-heading">Contact sales</h2>
+          <h2 class="form-heading">Get a demo</h2>
         </div>
       </div>
     </div>
@@ -154,7 +154,7 @@ function pageContent() {
     <div class="spz-container">
       <div class="three-card-slider swiper-container ">
         <div class="three-card-title">
-          <h4 class="section-heading">Trusted by <strong>3,700+</strong> government contractor, architecture, engineer, and construction firms </h4>
+          <h4 class="section-heading">Trusted by <strong>3,700+</strong> government contractor, architecture, engineering, and construction firms </h4>
           <div class="ratings-container"><img class="capterra-logo" alt="Capterra Logo" src="//res.cloudinary.com/spiralyze/image/upload/v1702300351/unanet/3001/full_logo_svg.svg"><img class="star-rating" alt="Star Rating" src="//res.cloudinary.com/spiralyze/image/upload/v1702300351/unanet/3001/big_stars_svg.svg"><span>4.3</span></div>
         </div>
         <div class="testimonials swiper-wrapper">
@@ -228,10 +228,9 @@ function pageContent() {
             </div>
           </div>
         </div>
-        <div class="swiper-button-next"></div>
-        <div class="swiper-button-prev"></div>
+        <div class="swiper-pagination"></div>
       </div>
-      <div class="notice"><p>*Image changed for privacy.</p></div>
+      <div class="notice"><i>*Image changed for privacy.</i></div>
     </div>
   </section>
   <section class="spz-footer">
@@ -299,7 +298,7 @@ function checkdata() {
 }
 
 swiperJS.onload = function () {
-  if (window.innerWidth < 991) {
+  if (window.innerWidth < 1024) {
     let intSlider = setInterval(() => {
       if (document.querySelector('.three-card-slider.swiper-container.swiper-container-horizontal')) {
         clearInterval(intSlider);
@@ -316,15 +315,19 @@ function init_Slider() {
   var Swipes = new Swiper('.swiper-container', {
     // loop: true,
     // autoplay: true,
-    centeredSlides: true,
-    slidesPerView: 1,
-    navigation: {
-      nextEl: '.swiper-button-next',
-      prevEl: '.swiper-button-prev',
+    slidesPerView: 2,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    breakpoints: {
+      768: {
+        slidesPerView: 1,
+      },
     },
   });
 
-  if (window.innerWidth > 990) {
+  if (window.innerWidth > 1023) {
     if (Swipes !== undefined) {
       Swipes.destroy(true, true);
     }

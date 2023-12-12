@@ -28,7 +28,7 @@
 }
 .spz-3001_v1 .hero-section {
   position: relative;
-  background: #10335A;
+  background: #10335a;
 }
 .spz-3001_v1 .hero-section::before {
   position: absolute;
@@ -47,8 +47,8 @@
   bottom: 0;
   left: 0;
   width: 517px;
-  height: 315px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700118639/unanet/2001/hero-bottom-shape.svg");
+  height: 345px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1702024996/unanet/3001/left.webp");
   background-size: contain;
   background-repeat: no-repeat;
 }
@@ -58,14 +58,14 @@
   bottom: 0;
   left: 0;
   width: 517px;
-  height: 315px;
+  height: 345px;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700118639/unanet/2001/hero-bottom-shape.svg");
   background-size: contain;
   background-repeat: no-repeat;
   opacity: 0;
 }
 .spz-3001_v1 .hero-content {
-  padding: 33px 0 162px;
+  padding: 33px 0 96px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -74,26 +74,25 @@
           justify-content: center;
 }
 .spz-3001_v1 .hero-content .form-wrapper {
-  width: 44%;
-  max-width: 536px;
+  width: 100%;
+  max-width: 560px;
   border-radius: 5px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(68.91%, #fff), to(rgba(255, 255, 255, 0.96)));
-  background: linear-gradient(180deg, #fff 68.91%, rgba(255, 255, 255, 0.96) 100%);
-  -webkit-box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.15);
-  box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.15);
-  padding: 33px 40px 40px;
+  background: #fff;
+  -webkit-box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 20px 60px 0px rgba(0, 0, 0, 0.15);
+  padding: 48px 40px;
 }
 .spz-3001_v1 .hero-content .form-wrapper .form-heading {
   color: #363f44;
   text-align: center;
-  font-size: 28px;
+  font-size: 32px;
   font-style: normal;
   font-weight: 700;
-  line-height: 33.6px;
+  line-height: 40px;
+  letter-spacing: -1px;
   margin: 0;
 }
 .spz-3001_v1 .trusted-partners-section {
-  padding: 88px 0;
   background: #1c4267;
   text-align: center;
 }
@@ -105,15 +104,40 @@
   text-align: center;
   font-size: 20px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 30px;
-  margin-bottom: 40px;
+  font-weight: 400;
+  line-height: 28px;
+  margin-bottom: 24px;
 }
 .spz-3001_v1 .trusted-partners-section .section-heading strong {
   font-weight: 700;
 }
+.spz-3001_v1 .trusted-partners-section .ratings-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+.spz-3001_v1 .trusted-partners-section .ratings-container .capterra-logo {
+  margin-right: 16px;
+}
+.spz-3001_v1 .trusted-partners-section .ratings-container .star-rating {
+  margin-right: 16px;
+}
+.spz-3001_v1 .trusted-partners-section .ratings-container span {
+  color: #f5f5f5;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: -1px;
+}
 .spz-3001_v1 .trusted-partners-section .three-card-slider {
-  padding: 52px 0 96px 0;
+  padding: 56px 0 26px 0;
 }
 @media (max-width: 767.98px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider {
@@ -121,7 +145,7 @@
     padding-bottom: 65px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+@media (min-width: 767.98px) and (max-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider {
     padding: 51px 0 112px 0;
     overflow: hidden;
@@ -129,14 +153,14 @@
   }
 }
 .spz-3001_v1 .trusted-partners-section .three-card-slider .three-card-title {
-  margin-bottom: 60px;
+  margin-bottom: 32px;
 }
 @media (max-width: 767.98px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .three-card-title {
     margin-bottom: 38px;
   }
 }
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+@media (min-width: 767.98px) and (max-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .three-card-title {
     margin-bottom: 60px;
   }
@@ -165,29 +189,31 @@
   margin: auto;
   max-width: 1224px;
 }
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+@media (min-width: 767.98px) and (max-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials {
     max-width: 100%;
   }
 }
-@media (min-width: 991.98px) and (max-width: 1260px) {
+@media (min-width: 1023.28px) and (max-width: 1260px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials {
     max-width: 94%;
   }
 }
-@media (min-width: 991.98px) {
+@media (min-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials {
     -webkit-box-pack: justify;
         -ms-flex-pack: justify;
             justify-content: space-between;
   }
 }
-@media (min-width: 991.98px) {
+.spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card {
+  height: auto;
+}
+@media (min-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card {
     -webkit-box-flex: 1;
         -ms-flex: 1;
             flex: 1;
-    height: auto;
     margin-right: 20px;
   }
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card:last-child {
@@ -212,13 +238,19 @@
     padding: 24px 24px 23px 24px;
     margin: auto;
     max-width: 328px;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+@media (min-width: 767.98px) and (max-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card > div {
     padding: 48px 48px 46px 48px;
     max-width: 672px;
     margin: auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
   }
 }
 .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card .testimonial-inner {
@@ -242,7 +274,7 @@
       flex-shrink: 0;
   position: relative;
 }
-@media (min-width: 991.98px) {
+@media (min-width: 1023.28px) {
   .spz-3001_v1 .trusted-partners-section .three-card-slider .testimonials .testimonials_card .testimonial-inner {
     -webkit-box-flex: 1;
         -ms-flex-positive: 1;
@@ -325,38 +357,22 @@
   line-height: 18px;
   margin: 0;
 }
-.spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-button-prev {
-  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1689754169/Jack%20Henry/2001/assets/Arrow-left.svg);
-  bottom: 0;
-  top: auto;
-  width: 48px;
-  height: 48px;
-  background-size: 48px;
-  left: calc(50% - 56px);
-  outline: 0;
-}
-@media (min-width: 991.98px) {
-  .spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-button-prev {
-    display: none;
+@media (min-width: 1023.98px) {
+  .spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-pagination {
+    display: none !important;
   }
 }
-.spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-button-next {
-  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1689754169/Jack%20Henry/2001/assets/Arrow-right.svg);
-  bottom: 0;
-  top: auto;
-  width: 48px;
-  height: 48px;
-  background-size: 48px;
-  right: calc(50% - 56px);
-  outline: 0;
+.spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-pagination .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  margin: 0 8px;
+  background: rgba(255, 255, 255, 0.2);
 }
-@media (min-width: 991.98px) {
-  .spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-button-next {
-    display: none;
-  }
+.spz-3001_v1 .trusted-partners-section .three-card-slider .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+  background: rgba(255, 255, 255, 0.8);
 }
 .spz-3001_v1 .spz-footer {
-  background: #10335A;
+  background: #10335a;
 }
 .spz-3001_v1 .spz-footer .spz-container {
   max-width: 1320px;
@@ -373,14 +389,14 @@
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
-  padding: 20.5px 0;
+  padding: 18px 0 21px;
 }
 .spz-3001_v1 .footer-wrapper .copyright-content {
   color: #fff;
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 18px;
   margin: 0;
 }
 .spz-3001_v1 .footer-wrapper .footer-links {
@@ -404,10 +420,21 @@
 }
 .spz-3001_v1 .footer-wrapper li a {
   color: #fff !important;
-  font-size: 13px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
-  line-height: 20px;
+  line-height: 18px;
+}
+.spz-3001_v1 .notice {
+  padding-bottom: 53px;
+}
+.spz-3001_v1 .notice i {
+  margin: 0;
+  color: #dceee2;
+  text-align: center;
+  font-size: 10px;
+  font-weight: 300;
+  line-height: 18px;
 }
 .spz-3001_v1 form.hs-form-spz {
   display: -webkit-box;
@@ -418,13 +445,18 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding-top: 23px;
+  padding-top: 32px;
 }
 .spz-3001_v1 form.hs-form-spz .hidden-spz {
-  /* display: none; */
   height: 0;
   opacity: 0;
   visibility: hidden;
+}
+.spz-3001_v1 form.hs-form-spz .hs_error_rollup ul li {
+  margin: 0;
+}
+.spz-3001_v1 form.hs-form-spz .hs_error_rollup ul li label {
+  color: #e30004;
 }
 .spz-3001_v1 form.hs-form-spz fieldset {
   width: 100%;
@@ -505,7 +537,7 @@
   position: relative;
 }
 .spz-3001_v1 form.hs-form-spz .field > label:not(.hs-form-booleancheckbox-display) {
-  color: #6c7e89;
+  color: #72797c;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -583,25 +615,28 @@
 .spz-3001_v1 form.hs-form-spz .field.hs-fieldtype-select.field-focus .input::after {
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700472240/unanet/2001/Dropdown-up.svg");
 }
-.spz-3001_v1 form.hs-form-spz .field.field-focus > label {
-  top: -10px;
-  color: #363f44;
-  font-size: 13px;
-  line-height: 19.5px;
-}
-.spz-3001_v1 form.hs-form-spz .field.field-focus .input > .hs-input {
-  border-color: #363f44;
-}
-.spz-3001_v1 form.hs-form-spz .field.field-focus .input > select.hs-input {
-  color: #363f44;
-}
 .spz-3001_v1 form.hs-form-spz .field.field-filled > label {
   top: -10px;
   color: #363f44;
-  font-size: 13px;
-  line-height: 19.5px;
+  font-size: 12px;
+  line-height: 18px;
+}
+.spz-3001_v1 form.hs-form-spz .field.field-filled .input > .hs-input {
+  border-color: #363f44;
 }
 .spz-3001_v1 form.hs-form-spz .field.field-filled .input > select.hs-input {
+  color: #363f44;
+}
+.spz-3001_v1 form.hs-form-spz .field.field-focus > label {
+  top: -10px;
+  color: #72797c;
+  font-size: 12px;
+  line-height: 18px;
+}
+.spz-3001_v1 form.hs-form-spz .field.field-focus .input > .hs-input {
+  border-color: #d1d6dc;
+}
+.spz-3001_v1 form.hs-form-spz .field.field-focus .input > select.hs-input {
   color: #363f44;
 }
 .spz-3001_v1 form.hs-form-spz .field.field-error > label {
@@ -675,12 +710,28 @@
   font-style: normal;
   font-weight: 700;
   line-height: 27px;
+  margin-top: 12px;
 }
 .spz-3001_v1 form.hs-form-spz .hs-submit input.hs-button:hover {
   background: #2d992e;
 }
 .spz-3001_v1 form.hs-form-spz .hs-submit input.hs-button:active {
   background: #2d992e;
+}
+.spz-3001_v1 .spz-privacy-policy {
+  margin-top: 32px;
+}
+.spz-3001_v1 .spz-privacy-policy p {
+  color: #363f44;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+.spz-3001_v1 .spz-privacy-policy p a {
+  color: #45c7c0;
 }
 
 input:-webkit-autofill {
