@@ -23,6 +23,10 @@ body {
             background-size: cover;
             width: 100%;
             background-repeat: no-repeat;
+
+            @media (max-width: 767.98px) {
+              bottom: 82px;
+            }
           }
         }
 
@@ -150,12 +154,16 @@ body {
               }
 
               .home-hero__image {
+                @media (max-width: 767.98px) {
+                  margin-top: 8px;
+                  margin-left: 5px;
+                }
                 img {
                   @media (min-width: 767.98px) and (max-width: 1023.98px) {
                     width: 633px;
-                    @media (max-width: 767.98px) {
-                      width: 314px;
-                    }
+                  }
+                  @media (max-width: 767.98px) {
+                    width: 314px;
                   }
                 }
               }
@@ -167,6 +175,11 @@ body {
       .home-partners {
         padding-top: 64px;
         padding-bottom: 94px;
+
+        @media (max-width: 767.98px) {
+          padding-top: 24px;
+          padding-bottom: 42px;
+        }
 
         @media (min-width: 767.98px) and (max-width: 1023.98px) {
           padding-top: 24px;
@@ -182,7 +195,7 @@ body {
           }
 
           @media (max-width: 767.98px) {
-            max-width: 335px;
+            max-width: 365px;
             margin: auto;
           }
 
