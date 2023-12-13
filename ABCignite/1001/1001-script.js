@@ -24,13 +24,22 @@ let bodyLoad = setInterval(function () {
 
             document.querySelector('.home-hero__inner .home-hero__col1 .home-hero__info .home-hero__desc.editor li:nth-child(3)').innerHTML = `Use data and make key business decisions.`;
 
+            document.querySelector('.home-partners .home-partners__inner .home-partners__title.subtitle').textContent = `Join 24,000+ gyms & studios using ABC Ignite `;
+
             //Hero right image update
             document.querySelector('.home-hero__inner .home-hero__col2 .home-hero__image').innerHTML = `<picture>
-            <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1702313823/abcignite/1001/frame_1171275455.webp" type="image/webp">
-            <source media="(max-width: 1023px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1702313476/abcignite/1001/frame_1171275454.webp" type="image/webp">
-            <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1702312329/abcignite/1001/frame_3772.webp" type="image/webp">
-            <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1702312329/abcignite/1001/frame_3772.png" type="image/png">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/v1702313823/abcignite/1001/frame_1171275455.webp" alt="graphics_d">
+            <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/frame_1171275455.webp" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/frame_1171275454.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/frame_3772.webp" type="image/webp">
+            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/frame_3772.png" type="image/png">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/frame_1171275455.webp" alt="Hero graphics image">
+           </picture>`;
+
+            document.querySelector('.home-partners .home-partners__inner .home-partners__list').innerHTML = `<picture>
+            <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/logos_m.webp" type="image/webp">
+            <source media="(max-width: 1023px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/logos_t.webp" type="image/webp">
+            <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/logos_d.webp" type="image/webp">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/1001/logos_m.webp" alt="Partners">
            </picture>`;
         }
 
