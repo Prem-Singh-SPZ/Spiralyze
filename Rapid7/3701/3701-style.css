@@ -1,8 +1,27 @@
+body header.stuck.show-main {
+  -webkit-animation: 0.3s ease-in-out forwards show-globalnav-full;
+          animation: 0.3s ease-in-out forwards show-globalnav-full;
+}
+body header.stuck.hide-main {
+  -webkit-animation: 0.3s ease-in-out forwards hide-globalnav-full;
+          animation: 0.3s ease-in-out forwards hide-globalnav-full;
+}
+body header.stuck nav.sub-nav {
+  display: none !important;
+}
 body header.stuck nav.sub-nav .sub-nav__links ul.flex-ai-c li.sub-nav__title {
   display: none !important;
 }
 body header.stuck nav.sub-nav .sub-nav__utility {
   display: none !important;
+}
+body header.mobile.show-main {
+  -webkit-animation: 0.3s ease-in-out forwards show-globalnav-full;
+          animation: 0.3s ease-in-out forwards show-globalnav-full;
+}
+body header.mobile.hide-main {
+  -webkit-animation: 0.3s ease-in-out forwards hide-globalnav-full;
+          animation: 0.3s ease-in-out forwards hide-globalnav-full;
 }
 @media (max-width: 1023.98px) {
   body header.mobile nav.sub-nav {

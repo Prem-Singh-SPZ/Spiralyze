@@ -4,7 +4,14 @@ $Roboto: Roboto, Roboto-local, sans-serif;
 body {
   header {
     &.stuck {
+      &.show-main {
+        animation: 0.3s ease-in-out forwards show-globalnav-full;
+      }
+      &.hide-main {
+        animation: 0.3s ease-in-out forwards hide-globalnav-full;
+      }
       nav.sub-nav {
+        display: none !important;
         .sub-nav__links {
           ul.flex-ai-c {
             li.sub-nav__title {
@@ -20,6 +27,13 @@ body {
     }
 
     &.mobile {
+      &.show-main {
+        animation: 0.3s ease-in-out forwards show-globalnav-full;
+      }
+      &.hide-main {
+        animation: 0.3s ease-in-out forwards hide-globalnav-full;
+      }
+
       nav.sub-nav {
         @media (max-width: 1023.98px) {
           display: none !important;
