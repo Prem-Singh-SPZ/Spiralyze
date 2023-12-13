@@ -2,48 +2,48 @@ $Mulish: Mulish, Mulish-local, sans-serif;
 $Roboto: Roboto, Roboto-local, sans-serif;
 
 body {
-  header {
-    &.stuck {
-      &.show-main {
-        animation: 0.3s ease-in-out forwards show-globalnav-full;
-      }
-      &.hide-main {
-        animation: 0.3s ease-in-out forwards hide-globalnav-full;
-      }
-      nav.sub-nav {
-        display: none !important;
-        .sub-nav__links {
-          ul.flex-ai-c {
-            li.sub-nav__title {
-              display: none !important;
-            }
-          }
-        }
+  // header {
+  //   &.stuck {
+  //     &.show-main {
+  //       animation: 0.3s ease-in-out forwards show-globalnav-full;
+  //     }
+  //     &.hide-main {
+  //       animation: 0.3s ease-in-out forwards hide-globalnav-full;
+  //     }
+  //     nav.sub-nav {
+  //       display: none !important;
+  //       .sub-nav__links {
+  //         ul.flex-ai-c {
+  //           li.sub-nav__title {
+  //             display: none !important;
+  //           }
+  //         }
+  //       }
 
-        .sub-nav__utility {
-          display: none !important;
-        }
-      }
-    }
+  //       .sub-nav__utility {
+  //         display: none !important;
+  //       }
+  //     }
+  //   }
 
-    &.mobile {
-      &.show-main {
-        animation: 0.3s ease-in-out forwards show-globalnav-full;
-      }
-      &.hide-main {
-        animation: 0.3s ease-in-out forwards hide-globalnav-full;
-      }
+  //   &.mobile {
+  //     &.show-main {
+  //       animation: 0.3s ease-in-out forwards show-globalnav-full;
+  //     }
+  //     &.hide-main {
+  //       animation: 0.3s ease-in-out forwards hide-globalnav-full;
+  //     }
 
-      nav.sub-nav {
-        @media (max-width: 1023.98px) {
-          display: none !important;
-        }
-        a.button.button--primary {
-          display: none !important;
-        }
-      }
-    }
-  }
+  //     nav.sub-nav {
+  //       @media (max-width: 1023.98px) {
+  //         display: none !important;
+  //       }
+  //       a.button.button--primary {
+  //         display: none !important;
+  //       }
+  //     }
+  //   }
+  // }
   a.r7-icon-external-link {
     &::after {
       display: none !important;
@@ -86,7 +86,7 @@ body {
         }
 
         @media (max-width: 767.98px) {
-          padding: 1rem 1px 1.4rem;
+          padding: 3.15rem 1px 1.4rem;
           .button-container {
             display: none !important;
           }

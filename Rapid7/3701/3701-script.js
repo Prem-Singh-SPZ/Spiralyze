@@ -138,9 +138,6 @@
     </div>
   </section>`);
 
-    //Accordion font update
-    document.querySelector('.accordion ul.accordion li.accordion-item a.accordion-title').textContent = `Will I have access to support or additional resources during the trial?`;
-
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
       document.body.classList.add('safari')
     }
