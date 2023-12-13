@@ -5,6 +5,9 @@
         clearFormFields();
         loadTest();
     });
+    waitForElm('body .site-content .get-touch-form .get-form').then(function () {
+        addPageContent();
+    });
 
     //Clear form fields
     function clearFormFields() {
@@ -19,7 +22,6 @@
     function loadTest() {
         formUpdate();
         focusFields();
-        addPageContent();
         checkVisibleInputs();
 
         // Add class 'safari' (used for cart scrollbar)
@@ -180,7 +182,7 @@
             }
 
             if (document.querySelectorAll('.mktoFormCol[style*="display: none"]').length == 1) {
-                document.querySelector('.get-form .mktoForm').classList.replace('initial-load','fully-load');
+                document.querySelector('.get-form .mktoForm').classList.replace('initial-load', 'fully-load');
             }
         });
 

@@ -426,7 +426,7 @@
                     showGlobalError();
                 });
             }
-          
+
 
             if (e.target.classList.contains("get-started-cta")) {
                 scrollToElement('#HeroFormCol', 50);
@@ -437,6 +437,21 @@
             <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image">
             <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">
             <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3008/close_icon_hover.svg" as="image">`);
+
+        var jQueryInterval = setInterval(function () {
+            if (typeof jQuery != 'undefined') {
+                clearInterval(jQueryInterval);
+
+                jQuery(".nav-link").hover(function (e) {
+                    e.preventDefault();
+                    jQuery(this).tab('show');
+                });
+                jQuery(".nav-link").on("show.bs.tab", function (e) {
+                    const tabPanelId = e.relatedTarget.getAttribute("data-target");
+                    jQuery(tabPanelId).removeClass("active");
+                });
+            }
+        });
     }
 
     //custom error for checkbox field

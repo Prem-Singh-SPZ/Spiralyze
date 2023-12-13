@@ -22,7 +22,7 @@ body.spz-5004 {
     }
 
     .get-touch-form {
-      padding: 56px 100px 80px;
+      padding: 57px 100px 80px;
       max-width: 1170px;
       margin: auto;
       overflow: hidden;
@@ -296,14 +296,31 @@ body.spz-5004 {
                     label {
                       font-family: $eptura-font !important;
                       color: var(--primary-neutrals-n-1, #0d122e);
-                      font-size: 12px !important;
+                      font-size: 14px !important;
                       font-style: normal !important;
                       font-weight: 300 !important;
-                      line-height: 18px !important; /* 142.857% */
+                      line-height: 20px !important; /* 142.857% */
                       margin-left: 19px;
                       // letter-spacing: -0.1px;
                       padding-right: 0;
                       cursor: pointer;
+
+                      a {
+                        color: #1b4bc5;
+                        padding: 0;
+
+                        &:hover,
+                        &:focus {
+                          color: #0d122e;
+                          text-decoration: underline;
+                        }
+                      }
+
+                      @media (max-width: 767.98px) {
+                        font-size: 12px !important;
+                        line-height: 18px !important;
+                      }
+
                       &:before {
                         content: "";
                         width: 16px;
@@ -436,7 +453,7 @@ body.spz-5004 {
                   font-style: normal;
                   font-weight: 300;
                   line-height: 24px;
-                  margin-bottom: 26px;
+                  margin-bottom: 14px;
                   display: inline-block;
                   margin-top: 2px;
                   transition: all 0.3s ease;
@@ -446,7 +463,7 @@ body.spz-5004 {
                   }
                   @media (max-width: 767.98px) {
                     padding: 0;
-                    margin-bottom: 26px;
+                    // margin-bottom: 26px;
                   }
 
                   &:hover {
@@ -503,7 +520,7 @@ body.spz-5004 {
                   font-style: normal;
                   font-weight: 500 !important;
                   line-height: 24px !important; /* 150% */
-                  margin-top: 23px !important;
+                  margin-top: 11px !important;
                   white-space: nowrap;
 
                   &:hover,
@@ -566,6 +583,7 @@ body.spz-5004 {
 
                       &:hover {
                         color: #0d122e;
+                        text-decoration: underline;
                       }
                     }
                   }
@@ -661,7 +679,7 @@ body.spz-5004 {
                 font-weight: 500;
                 line-height: 24px;
                 display: flex;
-                align-items: end;
+                align-items: flex-end;
 
                 @media (min-width: 767.98px) and (max-width: 1199.98px) {
                   justify-content: center;
@@ -776,8 +794,9 @@ body.spz-5004 {
 
     .container {
       .row {
-        max-width: 832px;
+        max-width: 1004px;
         margin: auto;
+        justify-content: flex-start !important;
 
         @media (min-width: 767.98px) and (max-width: 1199.98px) {
           flex-direction: column;
@@ -819,8 +838,19 @@ body.spz-5004 {
           }
         }
 
+        .col-md-4.col-lg-4 {
+          @media (min-width: 1199.98px) {
+            max-width: 260px;
+            margin-right: 14px;
+          }
+        }
+
         .col-md-8.col-lg-8 {
-          max-width: 542px;
+          max-width: 690px;
+          @media (max-width: 1199.98px) {
+            padding: 0 1px;
+          }
+
           .btn-group {
             display: flex;
             justify-content: space-between;
@@ -831,7 +861,11 @@ body.spz-5004 {
             }
 
             .button-2 {
-              margin: 0;
+              margin: 0 0 0 16px;
+              @media (max-width: 1199.98px) {
+                margin: 0;
+              }
+
               @media (max-width: 767.98px) {
                 margin-bottom: 16px;
               }
@@ -857,7 +891,8 @@ body.spz-5004 {
             }
 
             .link {
-              width: 200px;
+              min-width: 200px;
+              max-width: 200px;
               a {
                 &::before {
                   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_linked_in.svg)
@@ -869,7 +904,7 @@ body.spz-5004 {
             }
 
             .facebook {
-              width: 133px;
+              min-width: 133px;
               @media (max-width: 767.98px) {
                 width: 200px;
               }
@@ -886,7 +921,7 @@ body.spz-5004 {
             }
 
             .twit {
-              width: 154px;
+              min-width: 154px;
               @media (max-width: 767.98px) {
                 width: 200px;
                 a {
@@ -896,6 +931,26 @@ body.spz-5004 {
               a {
                 &::before {
                   background: url(//res.cloudinary.com/spiralyze/image/upload/v1697646155/eptura/5004/logo_-_twitter.svg)
+                    no-repeat center;
+                  filter: none;
+                  margin: -8px 8px 0 -10px;
+                  width: 22px;
+                  height: 18px;
+                }
+              }
+            }
+
+            .youtube {
+              min-width: 155px;
+              @media (max-width: 767.98px) {
+                width: 200px;
+                a {
+                  margin: 0;
+                }
+              }
+              a {
+                &::before {
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1702403835/eptura/5004/icon_-_subscribe.svg)
                     no-repeat center;
                   filter: none;
                   margin: -8px 8px 0 -10px;
