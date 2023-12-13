@@ -898,11 +898,14 @@ body.spz-3010 {
               display: none;
             }
 
-            @media (max-width: 1352.98px) {
-              justify-content: flex-start;
+            @media (min-width: 1023.98px) and (max-width: 1352.98px) {
+              justify-content: center;
+              gap: 8px;
+              flex-wrap: wrap;
             }
 
-            @media (max-width: 1199.98px) {
+            @media (max-width: 1023.98px) {
+              justify-content: flex-start;
               padding-left: 100px;
               padding-right: 100px;
             }
@@ -963,16 +966,16 @@ body.spz-3010 {
             }
 
             .tab-pane {
-              display: block;
-              opacity: 0;
-              visibility: hidden;
-              height: 0;
+              // display: block;
+              // opacity: 0;
+              // visibility: hidden;
+              // height: 0;
 
-              &.active {
-                opacity: 1;
-                visibility: visible;
-                height: auto;
-              }
+              // &.active {
+              //   opacity: 1;
+              //   visibility: visible;
+              //   height: auto;
+              // }
 
               .feature-wrapper {
                 display: flex;

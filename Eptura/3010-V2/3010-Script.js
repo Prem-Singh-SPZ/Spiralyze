@@ -443,8 +443,7 @@
                 clearInterval(jQueryInterval);
 
                 jQuery(".nav-link").hover(function (e) {
-                    e.preventDefault();
-                    jQuery(this).tab('show');
+                    jQuery(this).click();
                 });
                 jQuery(".nav-link").on("show.bs.tab", function (e) {
                     const tabPanelId = e.relatedTarget.getAttribute("data-target");
@@ -452,6 +451,8 @@
                 });
             }
         });
+
+
     }
 
     //custom error for checkbox field
@@ -710,6 +711,15 @@
                     </section>`);
                 }
             });
+        });
+
+        waitForElm('#myTabContent .feature-wrapper .img-wrapper img').then(function () {
+            setTimeout(() => {
+                document.querySelector('#myTabContent').style.minHeight = document.querySelector('#myTabContent').offsetHeight + 'px';
+            }, 500);
+            window.onresize = function (event) {
+                document.querySelector('#myTabContent').style.minHeight = document.querySelector('#myTabContent').offsetHeight + 'px';
+            };
         });
     }
 

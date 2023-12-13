@@ -9,6 +9,21 @@ body {
 
         @media (max-width: 1023.98px) {
           padding-top: 60px;
+          padding-bottom: 30px;
+          position: relative;
+          background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1702312227/abcignite/1001/bg_image.webp) !important;
+
+          &::before {
+            content: "";
+            position: absolute;
+            background: url(//res.cloudinary.com/spiralyze/image/upload/v1702312670/abcignite/1001/line.svg);
+            bottom: 148px;
+            height: 134px;
+            background-position: center center;
+            background-size: cover;
+            width: 100%;
+            background-repeat: no-repeat;
+          }
         }
 
         .home-hero__inner {
@@ -135,8 +150,13 @@ body {
               }
 
               .home-hero__image {
-                @media (max-width: 767.98px) {
-                  padding: 0 5px;
+                img {
+                  @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                    width: 633px;
+                    @media (max-width: 767.98px) {
+                      width: 314px;
+                    }
+                  }
                 }
               }
             }
@@ -147,8 +167,14 @@ body {
       .home-partners {
         padding-top: 64px;
         padding-bottom: 94px;
+
+        @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          padding-top: 24px;
+          padding-bottom: 66px;
+        }
+
         .home-partners__inner {
-          max-width: 1050px;
+          max-width: 1080px;
 
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             max-width: 698px;
@@ -172,6 +198,10 @@ body {
 
             @media (max-width: 767.98px) {
               font-size: 18px;
+            }
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              margin-bottom: 29px;
             }
           }
 
