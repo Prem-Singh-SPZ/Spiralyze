@@ -33,7 +33,7 @@
 
         //Hero section added here
         document.querySelector('#components__content').insertAdjacentHTML('afterbegin', `<div class="spz-hero-section">
-        <div class="hero-section-wrapper">
+        <div class="hero-section-wrapper container">
             <div class="hero-section-title">
                 <h2>Secure your entire<br>multi-cloud environment</h2>
                 <p>How can we help?</p>
@@ -97,7 +97,12 @@
         </div>
         </div></div>`);
 
+        //rearranging 1st slider position
         document.querySelector('.v3-promo .v3-promo__container').before(document.querySelector('.orange_line_off'));
+
+        //Updating search icon
+        document.querySelector('.header__top-menu-link--search img').setAttribute('src','https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
+        document.querySelector('.header__top-menu-link-language img').setAttribute('src','https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
 
         //case studies slider+tabs
         document.querySelector('#spacer').insertAdjacentHTML('beforebegin', `<div class="spz-case-studies">
