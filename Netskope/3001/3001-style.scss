@@ -12,6 +12,7 @@ body {
 
         .header__container-inner {
           .header__top.has-promo-banner {
+            padding: 24px 0px;
             .header__logo-image {
               img {
                 width: 156px;
@@ -108,11 +109,13 @@ body {
 
   .v3__container {
     #components__content {
-    //   display: flex;
-    //   flex-direction: column;
+      //   display: flex;
+      //   flex-direction: column;
       .v3-hero-carousel.has-promo-banner,
       .v3-resources,
-      .v3-two-column-image.no_bottom_padding, .v3-solution-plays  {
+      .v3-two-column-image.no_bottom_padding,
+      .v3-solution-plays,
+      .v3-stacked-tabs {
         display: none !important;
       }
 
@@ -153,6 +156,23 @@ body {
           max-width: 1440px;
           margin: auto;
           right: 0;
+        }
+      }
+
+      .v3-reports {
+        .container {
+          .plus-title {
+            display: none !important;
+          }
+
+          > .row .col-lg-6 {
+            flex: 0 0 100%;
+            max-width: 100%;
+
+            .v3-reports__top {
+              border: 0;
+            }
+          }
         }
       }
     }

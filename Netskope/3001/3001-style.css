@@ -8,6 +8,9 @@ body #wrapper .header.has-promo-banner.homepage {
   position: relative;
   top: 0;
 }
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner {
+  padding: 24px 0px;
+}
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__logo-image img {
   width: 156px;
 }
@@ -86,7 +89,9 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
 }
 body .v3__container #components__content .v3-hero-carousel.has-promo-banner,
 body .v3__container #components__content .v3-resources,
-body .v3__container #components__content .v3-two-column-image.no_bottom_padding, body .v3__container #components__content .v3-solution-plays {
+body .v3__container #components__content .v3-two-column-image.no_bottom_padding,
+body .v3__container #components__content .v3-solution-plays,
+body .v3__container #components__content .v3-stacked-tabs {
   display: none !important;
 }
 body .v3__container #components__content .spz-hero-section {
@@ -115,4 +120,16 @@ body .v3__container #components__content .netskope-component--video .wistia_embe
   max-width: 1440px;
   margin: auto;
   right: 0;
+}
+body .v3__container #components__content .v3-reports .container .plus-title {
+  display: none !important;
+}
+body .v3__container #components__content .v3-reports .container > .row .col-lg-6 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 100%;
+          flex: 0 0 100%;
+  max-width: 100%;
+}
+body .v3__container #components__content .v3-reports .container > .row .col-lg-6 .v3-reports__top {
+  border: 0;
 }
