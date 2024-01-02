@@ -13,6 +13,7 @@ body {
         .header__container-inner {
           .header__top.has-promo-banner {
             padding: 24px 0px;
+            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
             .header__logo-image {
               img {
                 width: 156px;
@@ -127,12 +128,122 @@ body {
         background: #081a59
           url(//res.cloudinary.com/spiralyze/image/upload/v1701451953/netskope/3001/hero_background_all_devices.webp)
           no-repeat;
+          background-position: center;
+          background-size: cover;
 
-          .hero-section-wrapper{
-            .hero-section-title{
-                
+        .hero-section-wrapper {
+          .hero-section-title {
+            h2 {
+              color: #fff;
+              text-align: center;
+              font-size: 56px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 56px;
+              text-align: center;
+
+              span {
+                font-family: Lora;
+              }
+            }
+
+            p {
+              color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
             }
           }
+
+          .hero-section-cards {
+            .checkboxes {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              .check-box .custom-check {
+                display: flex;
+                padding: 24px;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                width: 212px;
+                height: 156px;
+                border-radius: 16px;
+                background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_light.webp)
+                  no-repeat;
+                background-position: center;
+                background-size: cover;
+                position: relative;
+                cursor: pointer;
+                transition: all 0.15s ease-in-out;
+
+                margin: 0;
+                img {
+                  width: 56px;
+                  height: 56px;
+                  margin-bottom: 12px;
+                }
+
+                p {
+                  color: #081a59;
+                  text-align: center;
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 20px;
+                  margin: 0;
+                }
+
+                &:hover {
+                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp)
+                    no-repeat;
+                  background-position: center;
+                  background-size: cover;
+                  border: 1.5px solid #95fa97;
+
+                  .checkmark {
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg);
+                  }
+
+                  p {
+                    color: #ffffff;
+                    margin: 0;
+                  }
+                }
+
+                .spz-input {
+                  display: none;
+                }
+
+                .checkmark {
+                  position: absolute;
+                  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
+                  width: 20px;
+                  height: 20px;
+                  top: 4px;
+                  left: 4px;
+                }
+
+                &.checked {
+                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp)
+                    no-repeat;
+                  background-position: center;
+                  background-size: cover;
+                  border: 1.5px solid #95fa97;
+                  .checkmark {
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg);
+                  }
+
+                  p {
+                    color: #ffffff;
+                  }
+                }
+              }
+            }
+          }
+        }
       }
 
       .v3.v3-promo.homepage {

@@ -1,6 +1,8 @@
 
 
 (function () {
+    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp" as="image">`)
+
     //Main function call
     if (location.pathname.includes('/get-started')) {
         waitForElm('.mktoFormRow [name="utm_location__c"]').then(function (elm) {
@@ -35,10 +37,10 @@
         document.querySelector('#components__content').insertAdjacentHTML('afterbegin', `<div class="spz-hero-section">
         <div class="hero-section-wrapper container">
             <div class="hero-section-title">
-                <h2>Secure your entire<br>multi-cloud environment</h2>
+                <h2>Secure your entire<br><span>multi-cloud environment</span></h2>
                 <p>How can we help?</p>
             </div>
-            <div class="hero-section-title">
+            <div class="hero-section-cards">
                 <div class="checkboxes">
                     <div class="check-box">
                         <label class="custom-check"> <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198970/netskope/3001/icon_wrapper_14.svg" alt="Secure and Accelerate Web and Cloud Access">
@@ -101,8 +103,8 @@
         document.querySelector('.v3-promo .v3-promo__container').before(document.querySelector('.orange_line_off'));
 
         //Updating search icon
-        document.querySelector('.header__top-menu-link--search img').setAttribute('src','https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
-        document.querySelector('.header__top-menu-link-language img').setAttribute('src','https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
+        document.querySelector('.header__top-menu-link--search img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
+        document.querySelector('.header__top-menu-link-language img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
 
         //case studies slider+tabs
         document.querySelector('#spacer').insertAdjacentHTML('beforebegin', `<div class="spz-case-studies">
@@ -238,7 +240,7 @@
 
         document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br>leading authorities`;
 
-        document.querySelector('.v3-reports .v3-reports__reports').insertAdjacentElement('afterend',  document.querySelector('.v3-reports .v3-reports__cta'));
+        document.querySelector('.v3-reports .v3-reports__reports').insertAdjacentElement('afterend', document.querySelector('.v3-reports .v3-reports__cta'));
 
         //Product cards added
         document.querySelector('.v3-promo.homepage').insertAdjacentHTML('afterend', `<div class="v3 v3-reports v3-reports-6593cee681481 light">
@@ -339,6 +341,15 @@
         if (e.target.classList.contains('header__get-started-button')) {
             let emailValue = this.document.querySelector('.spz-email').value;
             setCookieForEmail('userEmailSPZ', emailValue);
+        }
+
+        if (e.target.className == "spz-input") {
+            if (e.target.checked) {
+                e.target.closest('.custom-check').classList.add('checked');
+            }
+            else {
+                e.target.closest('.custom-check').classList.remove('checked');
+            }
         }
     });
 
