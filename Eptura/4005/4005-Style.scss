@@ -88,21 +88,6 @@ body {
                 #0d122e;
             }
 
-            &::after {
-              content: "";
-              background-image: url("//res.cloudinary.com/dxprfaxf3/image/upload/v1696939370/eptura/4006/graphics-aura.svg");
-              position: absolute;
-              right: 0;
-              bottom: 0;
-              height: 340px;
-              width: 288px;
-
-              @media (max-width: 1023.98px) {
-                height: 322px;
-                width: 284px;
-              }
-            }
-
             @media (max-width: 767.98px) {
               flex-direction: column;
               max-width: 328px;
@@ -640,6 +625,24 @@ body {
                 .copy {
                   padding: 0 56px 0;
                   margin-top: 26px;
+                  position: relative;
+
+                  &::after {
+                    content: "";
+                    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1704275217/eptura/4005/graphics-aura.svg");
+                    background-repeat: no-repeat;
+                    background-size: contain;
+                    position: absolute;
+                    right: -130px;
+                    top: -260px;
+                    width: 416px;
+                    height: 440px;
+
+                    @media (max-width: 1023.98px) {
+                      height: 322px;
+                      width: 284px;
+                    }
+                  }
 
                   @media (max-width: 1023.98px) {
                     padding: 10px 24px 9px;
@@ -981,6 +984,27 @@ body {
       height: 217px;
       @media (max-width: 1023.98px) {
         height: 260px;
+      }
+      @media (max-width: 767.98px) {
+        height: 268px;
+      }
+    }
+  }
+
+  &.website-ioffice-demo {
+    .body-wrapper
+      #hero
+      .hero_container.page_padding
+      > .row
+      #HeroFormCol
+      .spz-left-content
+      .left-wrapper
+      .copy
+      .bullets
+      .dotted-bullet {
+      height: 240px;
+      @media (max-width: 1023.98px) {
+        height: 285px;
       }
       @media (max-width: 767.98px) {
         height: 268px;
