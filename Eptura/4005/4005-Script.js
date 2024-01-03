@@ -30,12 +30,109 @@
         });
     }
 
+
     let isSlider_init = setInterval(() => {
-        if (document.querySelector('.logos-slider.swiper,mySwiper swiper-initialized')) {
+        if (document.querySelector('.logos-slider.swiper.mySwiper.swiper-initialized')) {
             clearInterval(isSlider_init);
+            // loadSlider();
+            console.log('function stopped..');
+
+        }
+        else {
             loadSlider();
+            console.log('function called..');
         }
     }, 100);
+
+    const assetURL = 'https://res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4006/';
+
+    const rightBullets = [
+        {
+            pageName: "website-proxyclick-demo",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293167/eptura/3012/endorsed_logos.svg",
+            logoAlt: "Proxyclick Logo",
+            formSubTitle: "Make the visitor check-in experience 50% faster",
+            title: "VISiTOR MANAGEMENT SOFTWARE",
+            subtitle: "How does it work?",
+            lisTitle1: "Set up pre-screening process",
+            listContent1: "Upload pre-screening documents, like legal forms and questionnaires, to send to guests before arrival.",
+            lisTitle2: "Invite visitors",
+            listContent2: "Send invites that automatically include check-in requirements. Approve or deny based on responses.",
+            lisTitle3: "Enjoy streamlined check-in",
+            listContent3: "Check visitors in with a couple of clicks. Or let them scan for entry. Reduce front desk admin.",
+            bgDesktop: assetURL + "proxyclick_bg_1440.webp",
+            bgTablet: assetURL + "proxyclick_bg_1441.webp",
+            bgMobile: assetURL + "proxyclick_bg_1456.webp",
+        },
+        {
+            pageName: "website-managerplus-demo",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1696950672/eptura/4006/logo_-managerplus.svg",
+            logoAlt: "Manager Plus Logo",
+            formSubTitle: "Streamline asset maintenance",
+            title: "All-in-one Asset MANAGEMENT SOFTWARE",
+            subtitle: "How does it work?",
+            lisTitle1: "Set up asset details",
+            listContent1: "Upload maintenance history, equipment lists, and warranty information for all assets. ",
+            lisTitle2: "Schedule automated maintenance",
+            listContent2: "Auto-send work orders based on usage thresholds, or as needed. See asset status.",
+            lisTitle3: "Enjoy streamlined asset management",
+            listContent3: "Track progress. Auto-reorder inventory. Reduce time spent managing assets.",
+            bgDesktop: assetURL + "proxyclick_bg_1443.webp",
+            bgTablet: assetURL + "proxyclick_bg_1444.webp",
+            bgMobile: assetURL + "proxyclick_bg_1445.webp",
+        },
+        {
+            pageName: "website-archibus-demo",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1696950683/eptura/4006/archibus-eptura-logo-color_2.svg",
+            logoAlt: "Archibus Logo",
+            formSubTitle: "Automate facility management to reduce costs by 30%",
+            title: "Space and Facility MANAGEMENT SOFTWARE",
+            subtitle: "How does it work?",
+            lisTitle1: "Set up facility and asset info",
+            listContent1: "Upload your facility and asset details, such as condition, space usage, costs, and occupancy.",
+            lisTitle2: "Monitor your workplace",
+            listContent2: "Adjust floor plans. Track occupancy. Set asset maintenance schedules.",
+            lisTitle3: "Enjoy streamlined maintenance",
+            listContent3: "Optimize facilities and assets based on usage analytics. Track inventory and work orders in one place.",
+            bgDesktop: assetURL + "proxyclick_bg_1446.webp",
+            bgTablet: assetURL + "proxyclick_bg_1447.webp",
+            bgMobile: assetURL + "proxyclick_bg_1448.webp",
+        },
+        {
+            pageName: "website-spaceiq-demo",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1696950695/eptura/4006/spaceiq-eptura-logo-color_2.svg",
+            logoAlt: "SpaceIQ logo",
+            formSubTitle: "Plan facility moves in a fraction of the time",
+            title: "Workplace operations SOFTWARE",
+            subtitle: "How does it work?",
+            lisTitle1: "Set up your workspace environment",
+            listContent1: "Upload details about your space, like floor plans, equipment, and lease costs.",
+            lisTitle2: "Plan space and facility moves",
+            listContent2: "Drag-and-drop desks, equipment, structures, and more. Track your real estate portfolio.",
+            lisTitle3: "Enjoy streamlined operations",
+            listContent3: "Send updated floor plans in a few clicks. Streamline moves and real estate planning.",
+            bgDesktop: assetURL + "proxyclick_bg_1449.webp",
+            bgTablet: assetURL + "proxyclick_bg_1450.webp",
+            bgMobile: assetURL + "proxyclick_bg_1451.webp",
+        },
+        {
+            pageName: "website-ioffice-demo",
+            pageLogo: "https://res.cloudinary.com/dxprfaxf3/image/upload/v1696950704/eptura/4006/ioffice-eptura-logo-color_2.svg",
+            logoAlt: "iOffice Logo",
+            formSubTitle: "Plan and manage your entire facility in 87% less time",
+            title: "Facility MANAGEMENT SOFTWARE",
+            subtitle: "How does it work?",
+            lisTitle1: "Set up workplace details",
+            listContent1: "Add your floor plans, inventory, employee roles and locations, and additional details.",
+            lisTitle2: "Manage your workplace",
+            listContent2: "Drag-and-drop to plan spaces. Track assets and send work orders. Book spaces in <br class='mobile-only'/> 1-click.",
+            lisTitle3: "Enjoy a unified workplace strategy",
+            listContent3: "Optimize space usage, asset health, and employee services based on usage trends.",
+            bgDesktop: assetURL + "proxyclick_bg_1452.webp",
+            bgTablet: assetURL + "proxyclick_bg_1453.webp",
+            bgMobile: assetURL + "proxyclick_bg_1454.webp",
+        }
+    ];
 
     const pageContent = [{
         pageName: "website-proxyclick-demo",
@@ -362,7 +459,7 @@
             }
 
             if (e.target.classList.contains("mktoButton")) {
-                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"])').forEach(function (el) {
+                document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
                     checkError(el);
                     showGlobalError();
                 });
@@ -393,20 +490,66 @@
                         }
                     }
 
-                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
+                    // document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
 
+
+                    // let count = identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo" ? "30+" : "40+";
+
+                    // document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
+                    //     <div class="ribbon-title">
+                    //         <h6>Connect to <br><span> `+ count + ` </span> platforms</h6>
+                    //     </div>
+                    //     <div class="logos-slider swiper mySwiper">
+                    //     `+ sliderSec(url.pageName) + `
+                    //     </div>
+                    //     </div>`);
+
+                }
+            })
+
+            rightBullets.forEach(function (con) {
+                if (identifyPage == con.pageName) {
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol #HeroFormPanel').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + con.pageLogo + `" alt="` + con.logoAlt + `"></div>`);
+                    document.querySelector('#HeroFormCol #HeroFormTitleText').insertAdjacentHTML('afterend', `<div class="sub-title">${con.formSubTitle}</div>`);
 
                     let count = identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo" ? "30+" : "40+";
 
-                    document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
+                    document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `
+                    <div class="spz-left-content">
+                        <div class="left-wrapper">
+                            <div class="copy">
+                                <div class="heading">
+                                    <div>`+ con.title + `</div>
+                                    <div class="subtitle">`+ con.subtitle + `</div>
+                                </div>
+                                <div class="bullets">
+                                    <span class="dotted-bullet"></span>
+                                    <div class="bullet">
+                                        <div class="bullet-title">`+ con.lisTitle1 + `</div>
+                                        <div class="bullet-content">`+ con.listContent1 + `</div>
+                                    </div>
+                                    <div class="bullet">
+                                        <div class="bullet-title">`+ con.lisTitle2 + `</div>
+                                        <div class="bullet-content">`+ con.listContent2 + `</div>
+                                    </div>
+                                    <div class="bullet">
+                                        <div class="bullet-title">`+ con.lisTitle3 + `</div>
+                                        <div class="bullet-content">`+ con.listContent3 + `</div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="logos-ribbon">
                         <div class="ribbon-title">
                             <h6>Connect to <br><span> `+ count + ` </span> platforms</h6>
                         </div>
                         <div class="logos-slider swiper mySwiper">
-                        `+ sliderSec(url.pageName) + `
+                        `+ sliderSec(con.pageName) + `
                         </div>
-                        </div>`);
+                        </div>
+                    </div>`);
 
+                    setBgImage(con);
                 }
             })
         });
@@ -571,5 +714,22 @@
         sliderEl += '</div>';
 
         return sliderEl;
+    }
+
+    // Set background image on body according to screen size (1200px, 1024px, 768px)
+    function setBgImage(con) {
+        document.body.insertAdjacentHTML('afterbegin', `
+            <style>
+                body {
+                    background-image: url(${con.bgDesktop});
+                    @media (max-width: 1199.98px) {
+                        background-image: url(${con.bgTablet});
+                    }
+                    @media (max-width: 767.98px) {
+                        background-image: url(${con.bgMobile});
+                    }
+                }
+            </style>
+        `);
     }
 })();

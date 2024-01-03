@@ -2,9 +2,21 @@ $eptura-font: "Eptura Flexible", Arial, sans-serif;
 
 body {
   min-height: 100vh;
+  background-image: url("//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/4006/proxyclick_bg_1440.webp");
+  background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
 
   #HeaderScripts {
     display: none !important;
+  }
+
+  .mobile-only {
+    display: none;
+
+    @media (max-width: 767.98px) {
+      display: inline;
+    }
   }
 
   .body-wrapper {
@@ -191,6 +203,10 @@ body {
                       margin: 0 !important;
                       padding: 0 10px !important;
 
+                      @media (max-width: 1023.98px) {
+                        width: 100% !important;
+                      }
+
                       .mktoFieldWrap {
                         position: relative;
                         float: none !important;
@@ -217,10 +233,8 @@ body {
                           background: #fff;
                           right: 0;
 
-                          //4005 specific form fixes
-                          &#LblNumberOfEmployees,
                           &#LblLead_Notes__c {
-                            max-width: calc(100% - 24px);
+                            max-width: 90%;
                           }
                         }
 
@@ -305,11 +319,20 @@ body {
                         }
 
                         .mktoCheckboxList {
-                          margin-top: 4px;
+                          margin-top: 2px;
                           cursor: pointer;
                           display: inline-block;
                           position: relative;
                           padding-left: 25px;
+
+                          @media (max-width: 1023.98px) {
+                            margin-top: 3px;
+                          }
+
+                          @media (max-width: 767.98px) {
+                            margin-top: 3.5px;
+                          }
+
                           .mktoField {
                             border: 1px solid #d6d7f5;
                             height: 16px !important;
@@ -382,7 +405,7 @@ body {
                       &.field-focus {
                         .mktoFieldWrap {
                           .mktoLabel {
-                            top: -8px;
+                            top: -9px;
                             left: 11px;
                             right: auto;
                             padding: 0 5px !important;
@@ -401,7 +424,7 @@ body {
                       &.input-filled {
                         .mktoFieldWrap {
                           .mktoLabel {
-                            top: -8px;
+                            top: -9px;
                             right: auto;
                             left: 11px;
                             font-family: $eptura-font;
@@ -425,10 +448,6 @@ body {
                         .mktoField:not([type="checkbox"]) {
                           border-color: #f83a59 !important;
                         }
-                      }
-
-                      &[data-zi-field-enriched="true"] {
-                        display: inline !important;
                       }
                     }
 
@@ -456,17 +475,15 @@ body {
                         font-style: normal;
                         font-weight: 300;
                         line-height: 24px;
-                        margin-bottom: 18px;
                         display: inline-block;
-                        margin-top: 2px;
+                        margin: 3px 0 16px 10px;
                         transition: all 0.3s ease;
-                        margin-left: 10px;
                         span {
                           padding-right: 5px;
                         }
-                        @media (max-width: 767.98px) {
+                        @media (max-width: 1023.98px) {
                           padding: 0;
-                          margin-bottom: 26px;
+                          margin-bottom: 24px;
                         }
 
                         &:hover {
@@ -502,7 +519,7 @@ body {
                         font-style: normal;
                         font-weight: 500;
                         line-height: 24px !important; /* 150% */
-                        margin-top: 21px !important;
+                        margin-top: 23px !important;
                         white-space: nowrap;
                         all: initial;
 
@@ -517,12 +534,17 @@ body {
                           transform: translate(0, 1px);
                         }
 
-                        @media (max-width: 767.98px) {
+                        @media (max-width: 1023.98px) {
                           margin-top: 22px !important;
                           height: 56px !important;
                           padding: 0px 32px;
-                          width: 270px !important;
-                          max-width: 270px !important;
+                          width: 304px !important;
+                          max-width: 304px !important;
+                        }
+
+                        @media (max-width: 767.98px) {
+                          margin-top: 21.5px !important;
+                          max-width: 280px !important;
                         }
                       }
                     }
@@ -532,12 +554,12 @@ body {
                   .spz-email {
                     .mktoFieldWrap {
                       margin-top: 19px;
-                      @media (max-width: 767.98px) {
+                      @media (max-width: 1023.98px) {
                         margin-top: 24px;
                       }
                       .mktoHtmlText.mktoHasWidth {
                         text-align: center;
-                        @media (max-width: 767.98px) {
+                        @media (max-width: 1023.98px) {
                           line-height: 0;
                         }
                         em {
@@ -551,7 +573,7 @@ body {
                           }
 
                           .mobile-only {
-                            @media (min-width: 767.98px) {
+                            @media (min-width: 1023.98px) {
                               display: none;
                             }
                           }
@@ -578,14 +600,12 @@ body {
 
             //right content css
             .spz-left-content {
-             display: flex;
-             flex-direction: column;
-             max-width: 50%;
+              display: flex;
+              align-items: center;
               // background: linear-gradient(0deg, #0D122E, #0D122E), linear-gradient(251.07deg, rgba(51, 57, 92, 0.8) -0.82%, rgba(13, 18, 46, 0.8) 100%);
 
               @media (max-width: 767.98px) {
                 border-radius: 0 0 8px 8px;
-                max-width: 100%;
               }
 
               @media (min-width: 1023.98px) {
@@ -593,10 +613,6 @@ body {
               }
 
               .left-wrapper {
-                overflow: hidden;
-                display: flex;
-                align-items: center;
-                flex-grow: 1;
                 @media (max-width: 767.98px) {
                   background: linear-gradient(
                       188deg,
@@ -707,35 +723,20 @@ body {
                         width: 24px;
                         height: 125px;
                         // background: linear-gradient(0deg, rgb(13 18 46 / 86%) 1%, rgb(214 215 245 / 0%) 100%);
-                        background: linear-gradient(
-                          0deg,
-                          rgb(28 31 60) 1%,
-                          rgba(214, 215, 245, 0) 100%
-                        );
+                        background: linear-gradient(0deg, rgb(28 31 60) 1%, rgba(214, 215, 245, 0) 100%);
 
                         @media (max-width: 1023.98px) {
-                          background: linear-gradient(
-                            0deg,
-                            rgb(14 18 44) 1%,
-                            rgba(214, 215, 245, 0) 100%
-                          );
+                          background: linear-gradient(0deg, rgb(14 18 44) 1%, rgba(214, 215, 245, 0) 100%);
                         }
 
                         @media (max-width: 991.98px) {
-                          background: linear-gradient(
-                            0deg,
-                            rgb(14 18 44) 1%,
-                            rgba(214, 215, 245, 0) 100%
-                          );
+                          background: linear-gradient(0deg, rgb(14 18 44) 1%, rgba(214, 215, 245, 0) 100%);
                         }
 
                         @media (max-width: 767.98px) {
-                          background: linear-gradient(
-                            0deg,
-                            rgb(14 18 44) 1%,
-                            rgba(214, 215, 245, 0) 100%
-                          );
+                          background: linear-gradient(0deg, rgb(14 18 44) 1%, rgba(214, 215, 245, 0) 100%);
                         }
+                        
                       }
 
                       &::before {
@@ -849,11 +850,12 @@ body {
                       .bullet-title {
                         color: #f6fafa;
                         font-family: $eptura-font;
-                        font-size: 16px;
+                        font-size: 20px;
                         font-style: normal;
                         font-weight: 500;
-                        line-height: 24px;
+                        line-height: 28px;
                         margin-bottom: 4px;
+                        letter-spacing: 0.15px;
 
                         @media (max-width: 1023.98px) {
                           font-size: 18px;
@@ -864,10 +866,10 @@ body {
                       .bullet-content {
                         color: #f6fafa;
                         // font-family: Eptura Flexible;
-                        font-size: 16px;
+                        font-size: 20px;
                         font-style: normal;
                         font-weight: 300;
-                        line-height: 24px;
+                        line-height: 28px;
                         opacity: 0.9;
 
                         @media (max-width: 1023.98px) {
@@ -880,120 +882,6 @@ body {
                 }
               }
             }
-
-            // .spz-social-section {
-            //   .social-section-title {
-            //     color: var(--primary-neutrals-n-1, #0d122e);
-            //     font-size: 14px;
-            //     font-style: normal;
-            //     font-weight: 300;
-            //     line-height: 20px; /* 142.857% */
-            //     padding-top: 38px;
-            //     margin-bottom: 24px;
-            //     text-align: center;
-            //     position: relative;
-
-            //     @media (max-width: 1199.98px) {
-            //       padding-top: 8px;
-            //       margin-bottom: 12px;
-            //     }
-
-            //     &::before {
-            //       content: "";
-            //       width: 131px;
-            //       height: 1px;
-            //       opacity: 0.3;
-            //       background: #babfcb;
-            //       display: block;
-            //       position: absolute;
-            //       left: 0;
-            //       bottom: 9px;
-
-            //       @media (max-width: 1600px) {
-            //         width: 103px;
-            //       }
-
-            //       @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            //         width: calc(50% - 149px);
-            //       }
-
-            //       @media (max-width: 767.98px) {
-            //         width: 0;
-            //         display: none;
-            //       }
-            //     }
-
-            //     &::after {
-            //       content: "";
-            //       width: 131px;
-            //       height: 1px;
-            //       opacity: 0.3;
-            //       background: #babfcb;
-            //       display: block;
-            //       position: absolute;
-            //       right: 0;
-            //       bottom: 9px;
-
-            //       @media (max-width: 1600px) {
-            //         width: 103px;
-            //       }
-
-            //       @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            //         width: calc(50% - 149px);
-            //       }
-
-            //       @media (max-width: 767.98px) {
-            //         width: 0;
-            //         display: none;
-            //       }
-            //     }
-            //   }
-
-            //   @media (min-width: 767.98px) and (max-width: 1199.98px) {
-            //     margin-top: auto;
-            //   }
-            // }
-
-            // .social-logo-section {
-            //   display: flex;
-            //   justify-content: space-between;
-            //   align-items: center;
-            //   flex-wrap: wrap;
-            //   padding: 0 20px;
-            //   opacity: 0.7;
-
-            //   @media (min-width: 1600px) {
-            //     padding: 0 36px;
-            //   }
-
-            //   @media (max-width: 1199.98px) {
-            //     padding: 0 22px;
-            //   }
-            //   @media (max-width: 767.98px) {
-            //     padding: 0 4px;
-            //   }
-
-            //   > .logo-img {
-            //     width: 33.33%;
-            //     padding: 0 16px;
-            //     text-align: center;
-            //     margin-bottom: 10px;
-
-            //     @media (max-width: 1199.98px) {
-            //       padding: 0 12px;
-            //       margin-bottom: 0px;
-            //     }
-
-            //     img {
-            //       // max-width: 100px;
-            //       height: auto;
-
-            //       @media (max-width: 1199.98px) {
-            //         max-width: 100%;
-            //       }
-            //     }
-            //   }
-            // }
           }
 
           //Hero text content
@@ -1005,223 +893,385 @@ body {
               display: none !important;
             }
           }
-
-          //Form footer ribbon css
-          .logos-ribbon {
-            display: flex;
-            padding: 24px 56px 28px 56px;
-            align-items: center;
-            background: rgba(214, 215, 245, 0.04);
-            // margin: 0 -46px -50px;
-            position: relative;
-            pointer-events: none;
-            // margin-top: 50px;
-            border-radius: 0 0 8px 8px;
-
-            @media (max-width: 767.98px) {
-              // margin: 32px -20px -30px;
-              padding: 23px 30px;
-            }
-
-            &::after {
-              content: "";
-              position: absolute;
-              right: 0px;
-              bottom: 0px;
-              width: 135px;
-              height: 108px;
-              background: linear-gradient(270deg, #2C3051 0%, rgba(44, 48, 80, 0.00) 100%);
-              z-index: 1;
-              pointer-events: none;
-              border-bottom-right-radius: 8px;
-
-              @media (max-width: 767.98px) {
-                width: 43px;
-                height: 104px;
-              }
-            }
-
-            .ribbon-title {
-              max-width: 129px;
-              margin-right: 36px;
-              max-height: 56px;
-
-              h6 {
-                color: #0d122e;
-                font-family: $eptura-font;
-                font-size: 20px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 28px;
-                letter-spacing: 0.1px;
-                white-space: nowrap;
-
-                span {
-                  color: #904ab0;
-                }
-
-                @media (max-width: 767.98px) {
-                  font-size: 18px;
-                  line-height: 26px;
-                }
-              }
-            }
-
-            .logos-slider {
-              width: 100%;
-              flex-grow: 1;
-              overflow: hidden;
-              margin-right: -56px;
-              max-height: 56px;
-
-              @media (max-width: 767.98px) {
-                margin-right: -30px;
-              }
-
-              .slider-wrapper {
-                display: flex;
-                align-items: center;
-                .swiper-slide {
-                  max-width: 100%;
-                  width: auto;
-                  height: 52px;
-                  margin-right: 24px;
-                }
-              }
-            }
-          }
         }
       }
     }
   }
 
   // Page Specific Css
-  // &.website-proxyclick-demo {
-  //   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.webp);
+
+  &.website-proxyclick-demo {
+    .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+      @media (max-width: 1023.98px) {
+        #HeroFormPanel .sub-title {
+          max-width: 300px;
+        }
+      }
+
+      // .spz-left-content .left-wrapper .copy .bullets::after {
+      // bottom: -40%;
+      //   content: "";
+      //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697437742/eptura/4006/bullet-img.svg");
+      //   background-repeat: no-repeat;
+      //   width: 24px;
+      //   height: 448px;
+      //   display: block;
+      //   position: absolute;
+      //   left: -1.5px;
+      //   top: 10px;
+
+      //   @media (max-width: 1023.98px) {
+      //     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697446081/eptura/4006/bullet-img-tab.svg");
+      //     height: 578px;
+      //     top: 9.5px;
+      //   }
+
+      //   @media (max-width: 767.98px) {
+      //     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697446156/eptura/4006/bullet-img-mob.svg");
+      //     top: 8.5px;
+      //     left: -1px;
+      //   }
+      // }
+    }
+  }
+
+  &.website-managerplus-demo {
+    .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+      @media (max-width: 1023.98px) {
+        #HeroFormPanel .sub-title {
+          padding: 0 24px;
+        }
+      }
+      // .spz-left-content .left-wrapper .copy .bullets::after {
+      //   bottom: -40%;
+      //   @media (max-width: 767.98px) {
+      //     bottom: -45px;
+      //   }
+      // }
+    }
+  }
+
+  &.website-archibus-demo {
+    .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+      @media (max-width: 1023.98px) {
+        #HeroFormPanel .sub-title {
+          padding: 0 20px;
+        }
+      }
+      // .spz-left-content .left-wrapper .copy .bullets::before {
+      //   content: "";
+      //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697446938/eptura/4006/graphics-managerplus-desktop.svg");
+      //   background-repeat: no-repeat;
+      //   width: 24px;
+      //   height: 448px;
+      //   display: block;
+      //   position: absolute;
+      //   left: -1.5px;
+      //   top: 10px;
+
+      //   @media (max-width: 1023.98px) {
+      //     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697447100/eptura/4006/graphics-archibus-tablet.svg");
+      //     height: 578px;
+      //     top: 9.5px;
+      //   }
+
+      //   @media (max-width: 767.98px) {
+      //     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697447137/eptura/4006/graphics-archibus-mobile.svg");
+      //     top: 8.5px;
+      //     left: -1px;
+      //   }
+      // }
+    }
+  }
+
+  &.website-spaceiq-demo {
+    .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+      #HeroFormPanel .sub-title {
+        @media (max-width: 1023.98px) {
+          padding: 0 30px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 0 20px;
+          max-width: 300px;
+        }
+      }
+
+      .spz-left-content .left-wrapper .copy .bullets .dotted-bullet {
+        height: 458px;
+
+        @media (max-width: 767.98px) {
+          height: 500px;
+        }
+
+        @media (max-width: 345px) {
+          height: 530px;
+        }
+      }
+    }
+  }
+
+  &.website-ioffice-demo {
+    .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
+      #HeroFormPanel .sub-title {
+        @media (max-width: 1023.98px) {
+          padding: 0 30px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 0 20px;
+          max-width: 300px;
+        }
+      }
+      // .spz-left-content .left-wrapper .copy .bullets::before {
+      //   content: "";
+      //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697447185/eptura/4006/graphics-spaceiq-desktop.svg");
+      //   background-repeat: no-repeat;
+      //   width: 24px;
+      //   height: 448px;
+      //   display: block;
+      //   position: absolute;
+      //   left: -1.5px;
+      //   top: 10px;
+
+      //   @media (max-width: 1023.98px) {
+      //     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697447100/eptura/4006/graphics-archibus-tablet.svg");
+      //     height: 578px;
+      //     top: 9.5px;
+      //   }
+
+      //   @media (max-width: 767.98px) {
+      //     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697447289/eptura/4006/graphics-ioffice-mobile.svg");
+      //     top: 8.5px;
+      //     left: -1px;
+      //   }
+      // }
+    }
+  }
+
+  // Page Specific Css
+  // &.ppc-proxyclick-discover-a-better-way-to-check-in-visitors {
+  //   background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_1440.webp);
   //   background-repeat: no-repeat;
   //   background-position: left top;
   //   background-size: cover;
 
-  //   @media (max-width: 574.98px) {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.webp);
-  //     background-position: bottom;
+  //   @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.webp);
+  //     background-position: top;
+  //     background-size: cover;
+  //   }
+
+  //   @media (max-width: 767.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.webp);
+  //     background-position: top;
   //     background-size: cover;
   //   }
 
   //   &.safari {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1440.png);
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_1440.png);
   //     background-repeat: no-repeat;
   //     background-position: left top;
   //     background-size: cover;
 
-  //     @media (max-width: 574.98px) {
-  //       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_360.png);
-  //       background-position: bottom;
+  //     @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_768.png);
+  //       background-position: top;
+  //       background-size: cover;
+  //     }
+
+  //     @media (max-width: 767.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/proxyclick_bg_360.png);
+  //       background-position: top;
   //       background-size: cover;
   //     }
   //   }
   // }
 
-  // &.website-managerplus-demo {
-  //   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.webp);
+  // &.ppc-archibus-maintenance-software {
+  //   background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_1440.webp);
   //   background-repeat: no-repeat;
   //   background-position: left top;
   //   background-size: cover;
 
-  //   @media (max-width: 574.98px) {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.webp);
-  //     background-position: bottom;
+  //   @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_768.webp);
+  //     background-position: top;
+  //     background-size: cover;
+  //   }
+
+  //   @media (max-width: 767.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_360.webp);
+  //     background-position: top;
   //     background-size: cover;
   //   }
 
   //   &.safari {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1441.png);
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_1440.png);
   //     background-repeat: no-repeat;
   //     background-position: left top;
   //     background-size: cover;
 
-  //     @media (max-width: 574.98px) {
-  //       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_361.png);
-  //       background-position: bottom;
+  //     @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_768.png);
+  //       background-position: top;
+  //       background-size: cover;
+  //     }
+
+  //     @media (max-width: 767.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/archibus_bg_360.png);
+  //       background-position: top;
   //       background-size: cover;
   //     }
   //   }
   // }
 
-  // &.website-archibus-demo {
-  //   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.webp);
+  // &.ppc-eptura {
+  //   background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_1440.webp);
   //   background-repeat: no-repeat;
   //   background-position: left top;
   //   background-size: cover;
 
-  //   @media (max-width: 574.98px) {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.webp);
-  //     background-position: bottom;
+  //   @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_768.webp);
+  //     background-position: top;
+  //     background-size: cover;
+  //   }
+
+  //   @media (max-width: 767.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_360.webp);
+  //     background-position: top;
   //     background-size: cover;
   //   }
 
   //   &.safari {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1442.png);
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_1440.png);
   //     background-repeat: no-repeat;
   //     background-position: left top;
   //     background-size: cover;
 
-  //     @media (max-width: 574.98px) {
-  //       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_362.png);
-  //       background-position: bottom;
+  //     @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_768.png);
+  //       background-position: top;
+  //       background-size: cover;
+  //     }
+
+  //     @media (max-width: 767.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/eptura_ppc_bg_360.png);
+  //       background-position: top;
   //       background-size: cover;
   //     }
   //   }
   // }
 
-  // &.website-spaceiq-demo {
-  //   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.webp);
+  // &.ppc-condeco-make-your-flexible-office-work-better {
+  //   background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_1440.webp);
   //   background-repeat: no-repeat;
   //   background-position: left top;
   //   background-size: cover;
 
-  //   @media (max-width: 574.98px) {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.webp);
-  //     background-position: bottom;
+  //   @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_768.webp);
+  //     background-position: top;
   //     background-size: cover;
   //   }
 
+  //   @media (max-width: 767.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_360.webp);
+  //     background-position: top;
+  //     background-size: 100%;
+  //   }
+
   //   &.safari {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1443.png);
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_1440.png);
   //     background-repeat: no-repeat;
   //     background-position: left top;
   //     background-size: cover;
 
-  //     @media (max-width: 574.98px) {
-  //       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_363.png);
-  //       background-position: bottom;
+  //     @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_768.png);
+  //       background-position: top;
   //       background-size: cover;
+  //     }
+
+  //     @media (max-width: 767.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/condeco_bg_360.png);
+  //       background-position: top;
+  //       background-size: 100%;
   //     }
   //   }
   // }
 
-  // &.website-ioffice-demo {
-  //   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.webp);
+  // &.ppc-eptura-asset-management {
+  //   background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_1440.webp);
   //   background-repeat: no-repeat;
   //   background-position: left top;
   //   background-size: cover;
 
-  //   @media (max-width: 574.98px) {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.webp);
-  //     background-position: bottom;
+  //   @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_768.webp);
+  //     background-position: top;
   //     background-size: cover;
   //   }
 
+  //   @media (max-width: 767.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_360.webp);
+  //     background-position: top;
+  //     background-size: 100%;
+  //   }
+
   //   &.safari {
-  //     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_1444.png);
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_1440.png);
   //     background-repeat: no-repeat;
   //     background-position: left top;
   //     background-size: cover;
 
-  //     @media (max-width: 574.98px) {
-  //       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4004/proxyclick_bg_364.png);
-  //       background-position: bottom;
+  //     @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_768.png);
+  //       background-position: top;
   //       background-size: cover;
+  //     }
+
+  //     @media (max-width: 767.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/asset_management_bg_360.png);
+  //       background-position: top;
+  //       background-size: 100%;
+  //     }
+  //   }
+  // }
+
+  // &.ppc-eptura-room-management {
+  //   background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_1440.webp);
+  //   background-repeat: no-repeat;
+  //   background-position: left top;
+  //   background-size: cover;
+
+  //   @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_768.webp);
+  //     background-position: top;
+  //     background-size: cover;
+  //   }
+
+  //   @media (max-width: 767.98px) {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_360.webp);
+  //     background-position: top;
+  //     background-size: 100%;
+  //   }
+
+  //   &.safari {
+  //     background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_1440.png);
+  //     background-repeat: no-repeat;
+  //     background-position: left top;
+  //     background-size: cover;
+
+  //     @media (min-width: 767.98px) and (max-width: 1023.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_768.png);
+  //       background-position: top;
+  //       background-size: cover;
+  //     }
+
+  //     @media (max-width: 767.98px) {
+  //       background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/eptura/3012/room_management_bg_360.png);
+  //       background-position: top;
+  //       background-size: 100%;
   //     }
   //   }
   // }
