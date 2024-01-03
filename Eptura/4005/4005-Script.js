@@ -119,7 +119,7 @@
             lisTitle1: "Set up workplace details",
             listContent1: "Add your floor plans, inventory, employee roles and locations, and additional details.",
             lisTitle2: "Manage your workplace",
-            listContent2: "Drag-and-drop to plan spaces. Track assets and send work orders. Book spaces in <br class='mobile-only'/> 1-click.",
+            listContent2: "Drag-and-drop to plan spaces. Track assets and send work orders. Book spaces in 1-click.",
             lisTitle3: "Enjoy a unified workplace strategy",
             listContent3: "Optimize space usage, asset health, and employee services based on usage trends.",
             bgDesktop: assetURL + "proxyclick_bg_1452.webp",
@@ -486,8 +486,6 @@
                     document.querySelector('#hero > .hero_container > .row > #HeroFormCol #HeroFormPanel').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + con.pageLogo + `" alt="` + con.logoAlt + `"></div>`);
                     document.querySelector('#HeroFormCol #HeroFormTitleText').insertAdjacentHTML('afterend', `<div class="sub-title">${con.formSubTitle}</div>`);
 
-                    let count = identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo" ? "30+" : "40+";
-
                     document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('beforeend', `
                     <div class="spz-left-content">
                         <div class="left-wrapper">
@@ -515,7 +513,7 @@
                         </div>
                         <div class="logos-ribbon">
                         <div class="ribbon-title">
-                            <h6>Connect to <br><span> `+ count + ` </span> platforms</h6>
+                            <h6>Connect to <br><span> 40+ </span> platforms</h6>
                         </div>
                         <div class="logos-slider swiper mySwiper">
                         `+ sliderSec(con.pageName) + `
