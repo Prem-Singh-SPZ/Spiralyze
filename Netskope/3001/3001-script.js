@@ -79,7 +79,7 @@
                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
                 </picture>
                 <span>4.6</span></div>
-                <div class="section-review"> <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198276/netskope/3001/g2_svg.svg" alt="Gartner" class="Gartner"> <picture>
+                <div class="section-review"> <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198276/netskope/3001/g2_svg.svg" alt="G2" class="Gartner"> <picture>
                 <source media="(max-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
                 <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
                 </picture>
@@ -88,7 +88,7 @@
         </div>
         </div>
         <div class="spz-banner-section">
-        <div class="banner-section">
+        <div class="banner-section container">
         <h6>We partner with leaders across the security industry</h6>
         <div class="banner-images">
         <picture>

@@ -104,6 +104,10 @@ body .v3__container #components__content .spz-hero-section {
   background-position: center;
   background-size: cover;
 }
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper {
+  padding-top: 56px;
+  padding-bottom: 64px;
+}
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2 {
   color: #fff;
   text-align: center;
@@ -112,9 +116,24 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   font-weight: 400;
   line-height: 56px;
   text-align: center;
+  position: relative;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2 span {
   font-family: Lora;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::after {
+  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  left: 0;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::before {
+  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  right: 0;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title p {
   color: rgba(255, 255, 255, 0.8);
@@ -123,6 +142,9 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards {
+  margin: 48px 0;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes {
   display: -webkit-box;
@@ -197,8 +219,8 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
   width: 20px;
   height: 20px;
-  top: 4px;
-  left: 4px;
+  top: 12px;
+  left: 12px;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check.checked {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp) no-repeat;
@@ -211,6 +233,102 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check.checked p {
   color: #ffffff;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-CTA {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-CTA .v3 .get-started-cta {
+  border-radius: 200px;
+  padding: 10px 26px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-CTA .v3 .learn-more-cta {
+  border-radius: 200px;
+  border: 1px solid #ff8200;
+  background: transparent;
+  color: #ff8200;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 11px 28px;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-CTA .v3 .learn-more-cta:hover {
+  border: 1px solid #081a59;
+  background: #fff;
+  color: #081a59;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review .section-review {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review .section-review:first-child {
+  margin-right: 24px;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review .section-review .Gartner {
+  margin-right: 12px;
+}
+body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review .section-review span {
+  color: #fff;
+  font-family: HelveticaNeueCyr;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+}
+body .v3__container #components__content .spz-banner-section {
+  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp) no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+body .v3__container #components__content .spz-banner-section .banner-section {
+  min-height: 508px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding-bottom: 64px;
+}
+body .v3__container #components__content .spz-banner-section .banner-section h6 {
+  margin-top: auto;
+  margin-bottom: 40px;
+  color: #fff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage {
   margin-top: 0;

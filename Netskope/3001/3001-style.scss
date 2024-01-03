@@ -13,7 +13,7 @@ body {
         .header__container-inner {
           .header__top.has-promo-banner {
             padding: 24px 0px;
-            border-bottom: 1px solid rgba(255, 255, 255, 0.10);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
             .header__logo-image {
               img {
                 width: 156px;
@@ -128,10 +128,12 @@ body {
         background: #081a59
           url(//res.cloudinary.com/spiralyze/image/upload/v1701451953/netskope/3001/hero_background_all_devices.webp)
           no-repeat;
-          background-position: center;
-          background-size: cover;
+        background-position: center;
+        background-size: cover;
 
         .hero-section-wrapper {
+          padding-top: 56px;
+          padding-bottom: 64px;
           .hero-section-title {
             h2 {
               color: #fff;
@@ -141,9 +143,26 @@ body {
               font-weight: 400;
               line-height: 56px;
               text-align: center;
+              position: relative;
 
               span {
                 font-family: Lora;
+              }
+
+              &::after {
+                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                left: 0;
+              }
+
+              &::before {
+                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+                position: absolute;
+                width: 20px;
+                height: 20px;
+                right: 0;
               }
             }
 
@@ -155,9 +174,11 @@ body {
               font-weight: 500;
               line-height: 24px;
             }
+
           }
 
           .hero-section-cards {
+            margin: 48px 0;
             .checkboxes {
               display: flex;
               align-items: center;
@@ -222,8 +243,8 @@ body {
                   content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
                   width: 20px;
                   height: 20px;
-                  top: 4px;
-                  left: 4px;
+                  top: 12px;
+                  left: 12px;
                 }
 
                 &.checked {
@@ -243,9 +264,100 @@ body {
               }
             }
           }
+
+          .hero-section-CTA {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            .v3 {
+              .get-started-cta {
+                border-radius: 200px;
+                // background: var(--Buttons-isMain_Default, #ff8200);
+                padding: 10px 26px;
+                // color:  #081a59;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+              }
+
+              .learn-more-cta {
+                border-radius: 200px;
+                border: 1px solid #ff8200;
+                background: transparent;
+                color: #ff8200;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                padding: 11px 28px;
+
+                &:hover {
+                  border: 1px solid #081a59;
+                  background: #fff;
+                  color: #081a59;
+                }
+              }
+            }
+          }
+
+          .hero-section-review {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .section-review {
+              display: flex;
+              align-items: center;
+
+              &:first-child {
+                margin-right: 24px;
+              }
+
+              .Gartner {
+                margin-right: 12px;
+              }
+
+              span {
+                color: #fff;
+                font-family: HelveticaNeueCyr;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+              }
+            }
+          }
         }
       }
 
+      .spz-banner-section {
+        background: #081a59
+          url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp)
+          no-repeat;
+        background-position: top left;
+        background-size: cover;
+
+        .banner-section {
+          min-height: 508px;
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+          padding-bottom: 64px;
+
+          h6 {
+            margin-top: auto;
+            margin-bottom: 40px;
+            color: #fff;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+      }
+      
       .v3.v3-promo.homepage {
         margin-top: 0;
 
