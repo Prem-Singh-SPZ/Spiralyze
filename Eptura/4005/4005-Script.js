@@ -22,10 +22,10 @@
                 slidesPerView: "auto",
                 loop: true,
                 speed: 1200,
-                autoplay: {
-                    delay: 1000,
-                    disableOnInteraction: false,
-                },
+                // autoplay: {
+                //     delay: 1000,
+                //     disableOnInteraction: false,
+                // },
             });
         });
     }
@@ -140,51 +140,51 @@
         logoAlt: "Proxyclick demo",
         sliders: [
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202594/eptura/4005/logo_-_microsoft_1.svg",
                 sAltTag: "Microsoft AD FS",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft_teams.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202594/eptura/4005/logo_-_microsoft_teams_1.svg",
                 sAltTag: "Microsoft Teams",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_outlook.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202597/eptura/4005/logo_-_outlook_16.svg",
                 sAltTag: "Microsoft Outlook",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349750/eptura/4005/logo_-_outlook_1.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202599/eptura/4005/logo_-_outlook_17.svg",
                 sAltTag: "Genetec Security Center",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349752/eptura/4005/logo_-_outlook_2.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202601/eptura/4005/logo_-_outlook_18.svg",
                 sAltTag: "Lenel OnGuard",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349753/eptura/4005/logo_-_outlook_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202596/eptura/4005/logo_-_outlook_15.svg",
                 sAltTag: "Openpath - Avigilon",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202594/eptura/4005/logo_-_microsoft_1.svg",
                 sAltTag: "Microsoft AD FS",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_microsoft_teams.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202594/eptura/4005/logo_-_microsoft_teams_1.svg",
                 sAltTag: "Microsoft Teams",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349748/eptura/4005/logo_-_outlook.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202597/eptura/4005/logo_-_outlook_16.svg",
                 sAltTag: "Microsoft Outlook",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349750/eptura/4005/logo_-_outlook_1.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202599/eptura/4005/logo_-_outlook_17.svg",
                 sAltTag: "Genetec Security Center",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349752/eptura/4005/logo_-_outlook_2.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202601/eptura/4005/logo_-_outlook_18.svg",
                 sAltTag: "Lenel OnGuard",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349753/eptura/4005/logo_-_outlook_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202596/eptura/4005/logo_-_outlook_15.svg",
                 sAltTag: "Openpath - Avigilon",
             },
         ],
@@ -195,51 +195,51 @@
         logoAlt: "ManagerPlus demo",
         sliders: [
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349780/eptura/4005/logo_-_okta.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202615/eptura/4005/logo_-_okta_7.svg",
                 sAltTag: "ClearPath GPS",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349781/eptura/4005/logo_-_okta_1.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202614/eptura/4005/logo_-_okta_6.svg",
                 sAltTag: "GEOTAB",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349784/eptura/4005/logo_-_okta_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202617/eptura/4005/logo_-_okta_8.svg",
                 sAltTag: "GPS Insight",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349783/eptura/4005/logo_-_okta_2.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202618/eptura/4005/logo_-_okta_9.svg",
                 sAltTag: "VisionLink",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349786/eptura/4005/logo_-_okta_4.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202622/eptura/4005/logo_-_okta_11.svg",
                 sAltTag: "Zonar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349789/eptura/4005/logo_-_okta_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202620/eptura/4005/logo_-_okta_10.svg",
                 sAltTag: "Okta",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349780/eptura/4005/logo_-_okta.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202615/eptura/4005/logo_-_okta_7.svg",
                 sAltTag: "ClearPath GPS",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349781/eptura/4005/logo_-_okta_1.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202614/eptura/4005/logo_-_okta_6.svg",
                 sAltTag: "GEOTAB",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349784/eptura/4005/logo_-_okta_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202617/eptura/4005/logo_-_okta_8.svg",
                 sAltTag: "GPS Insight",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349783/eptura/4005/logo_-_okta_2.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202618/eptura/4005/logo_-_okta_9.svg",
                 sAltTag: "VisionLink",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349786/eptura/4005/logo_-_okta_4.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202622/eptura/4005/logo_-_okta_11.svg",
                 sAltTag: "Zonar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349789/eptura/4005/logo_-_okta_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202620/eptura/4005/logo_-_okta_10.svg",
                 sAltTag: "Okta",
             },
         ],
@@ -250,51 +250,51 @@
         logoAlt: "Archibus demo",
         sliders: [
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202643/eptura/4005/logo_-_outlook_23.svg",
                 sAltTag: "Microsoft Outlook",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349848/eptura/4005/logo_-_outlook_4.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202644/eptura/4005/logo_-_outlook_24.svg",
                 sAltTag: "Microsoft Exchange",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349853/eptura/4005/logo_-_outlook_7.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202637/eptura/4005/logo_-_outlook_20.svg",
                 sAltTag: "AutoCAD",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349851/eptura/4005/logo_-_outlook_6.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202641/eptura/4005/logo_-_outlook_22.svg",
                 sAltTag: "Revit",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349855/eptura/4005/logo_-_outlook_8.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202639/eptura/4005/logo_-_outlook_21.svg",
                 sAltTag: "ESRI",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349856/eptura/4005/logo_-_outlook_9.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202636/eptura/4005/logo_-_outlook_19.svg",
                 sAltTag: "VergeSense",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202643/eptura/4005/logo_-_outlook_23.svg",
                 sAltTag: "Microsoft Outlook",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349848/eptura/4005/logo_-_outlook_4.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202644/eptura/4005/logo_-_outlook_24.svg",
                 sAltTag: "Microsoft Exchange",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349853/eptura/4005/logo_-_outlook_7.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202637/eptura/4005/logo_-_outlook_20.svg",
                 sAltTag: "AutoCAD",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349851/eptura/4005/logo_-_outlook_6.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202641/eptura/4005/logo_-_outlook_22.svg",
                 sAltTag: "Revit",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349855/eptura/4005/logo_-_outlook_8.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202639/eptura/4005/logo_-_outlook_21.svg",
                 sAltTag: "ESRI",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349856/eptura/4005/logo_-_outlook_9.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202636/eptura/4005/logo_-_outlook_19.svg",
                 sAltTag: "VergeSense",
             },
         ],
@@ -305,67 +305,67 @@
         logoAlt: "SpaceIQ demo",
         sliders: [
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349879/eptura/4005/logo_-_outlook_10.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202660/eptura/4005/logo_-_outlook_25.svg",
                 sAltTag: "Microsoft Exchange",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_outlook_11.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202662/eptura/4005/logo_-_outlook_26.svg",
                 sAltTag: "Office 365 Calendar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349929/eptura/4005/logo_-_google_drive_2.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202657/eptura/4005/logo_-_google_drive_4.svg",
                 sAltTag: "Google Drive",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_google_drive.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202661/eptura/4005/logo_-_google_drive_5.svg",
                 sAltTag: "Google Calendar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349935/eptura/4005/logo_-_slack_4.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202658/eptura/4005/logo_-_slack_6.svg",
                 sAltTag: "Slack",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_slack_1.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202661/eptura/4005/logo_-_slack_8.svg",
                 sAltTag: "Loseant",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_slack_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202659/eptura/4005/logo_-_slack_7.svg",
                 sAltTag: "Namely",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_amazon_aws.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202657/eptura/4005/logo_-_amazon_aws_1.svg",
                 sAltTag: "AWS",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349879/eptura/4005/logo_-_outlook_10.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202660/eptura/4005/logo_-_outlook_25.svg",
                 sAltTag: "Microsoft Exchange",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_outlook_11.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202662/eptura/4005/logo_-_outlook_26.svg",
                 sAltTag: "Office 365 Calendar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349929/eptura/4005/logo_-_google_drive_2.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202657/eptura/4005/logo_-_google_drive_4.svg",
                 sAltTag: "Google Drive",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_google_drive.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202661/eptura/4005/logo_-_google_drive_5.svg",
                 sAltTag: "Google Calendar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349935/eptura/4005/logo_-_slack_4.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202658/eptura/4005/logo_-_slack_6.svg",
                 sAltTag: "Slack",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_slack_1.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202661/eptura/4005/logo_-_slack_8.svg",
                 sAltTag: "Loseant",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349880/eptura/4005/logo_-_slack_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202659/eptura/4005/logo_-_slack_7.svg",
                 sAltTag: "Namely",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349877/eptura/4005/logo_-_amazon_aws.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202657/eptura/4005/logo_-_amazon_aws_1.svg",
                 sAltTag: "AWS",
             },
         ],
@@ -376,23 +376,23 @@
         logoAlt: "iOFFICE demo",
         sliders: [
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202643/eptura/4005/logo_-_outlook_23.svg",
                 sAltTag: "Microsoft Outlook",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_google_drive_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202685/eptura/4005/logo_-_google_drive_6.svg",
                 sAltTag: "Google Calendar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_slack_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202686/eptura/4005/logo_-_slack_9.svg",
                 sAltTag: "Slack",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349958/eptura/4005/logo_-_outlook_13.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202687/eptura/4005/logo_-_outlook_27.svg",
                 sAltTag: "AutoCAD",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349960/eptura/4005/logo_-_outlook_14.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202690/eptura/4005/logo_-_outlook_29.svg",
                 sAltTag: "VergeSense",
             },
             {
@@ -400,23 +400,23 @@
                 sAltTag: "SAML 2.0",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349849/eptura/4005/logo_-_outlook_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202643/eptura/4005/logo_-_outlook_23.svg",
                 sAltTag: "Microsoft Outlook",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_google_drive_3.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202685/eptura/4005/logo_-_google_drive_6.svg",
                 sAltTag: "Google Calendar",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349955/eptura/4005/logo_-_slack_5.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202686/eptura/4005/logo_-_slack_9.svg",
                 sAltTag: "Slack",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349958/eptura/4005/logo_-_outlook_13.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202687/eptura/4005/logo_-_outlook_27.svg",
                 sAltTag: "AutoCAD",
             },
             {
-                sLogo: "//res.cloudinary.com/spiralyze/image/upload/v1699349960/eptura/4005/logo_-_outlook_14.svg",
+                sLogo: "https://res.cloudinary.com/spiralyze/image/upload/v1704202690/eptura/4005/logo_-_outlook_29.svg",
                 sAltTag: "VergeSense",
             },
             {
@@ -482,28 +482,8 @@
                 if (identifyPage == url.pageName) {
 
                     if (document.querySelector('#HeroFormCol #HeroFormTitleText')) {
-                        if (identifyPage == "website-archibus-demo" || identifyPage == "website-ioffice-demo") {
-                            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<h6>Get an ` + url.logoAlt + `</h6>`;
-                        }
-                        else {
-                            document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<h6>Get a ` + url.logoAlt + `</h6>`;
-                        }
+                        document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<h6>Get a demo</h6>`;
                     }
-
-                    // document.querySelector('#hero > .hero_container > .row > #HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-logo"><img src="` + url.pageLogo + `" alt="` + url.logoAlt + `"></div>`);
-
-
-                    // let count = identifyPage == "website-archibus-demo" || identifyPage == "website-spaceiq-demo" ? "30+" : "40+";
-
-                    // document.querySelector('#HeroForm').insertAdjacentHTML('afterend', `<div class="logos-ribbon">
-                    //     <div class="ribbon-title">
-                    //         <h6>Connect to <br><span> `+ count + ` </span> platforms</h6>
-                    //     </div>
-                    //     <div class="logos-slider swiper mySwiper">
-                    //     `+ sliderSec(url.pageName) + `
-                    //     </div>
-                    //     </div>`);
-
                 }
             })
 
@@ -722,14 +702,24 @@
             <style>
                 body {
                     background-image: url(${con.bgDesktop});
+                    background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
                     @media (max-width: 1199.98px) {
                         background-image: url(${con.bgTablet});
+                        background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
                     }
                     @media (max-width: 767.98px) {
                         background-image: url(${con.bgMobile});
+                        background-repeat: no-repeat;
+  background-position: left top;
+  background-size: cover;
                     }
                 }
             </style>
         `);
     }
 })();
+
