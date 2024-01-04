@@ -174,7 +174,6 @@ body {
               font-weight: 500;
               line-height: 24px;
             }
-
           }
 
           .hero-section-cards {
@@ -339,6 +338,38 @@ body {
         background-position: top left;
         background-size: cover;
 
+        @media (max-width: 767.98px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691733/netskope/3001/hero_image_mobile_1.webp)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (max-width: 1023.98px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_tablet_1.webp)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 1900px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691784/netskope/3001/hero_image_1921.webp)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 3000px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691785/netskope/3001/hero_image_4k_1.webp)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
         .banner-section {
           min-height: 508px;
           display: flex;
@@ -357,18 +388,466 @@ body {
           }
         }
       }
-      
+
       .v3.v3-promo.homepage {
         margin-top: 0;
+        padding: 96px 0;
+
+        .v3-two-column-image.orange_line_off {
+          padding-bottom: 96px;
+          .row.align-items-center.text-on-right {
+            flex-direction: row;
+            align-items: flex-start !important;
+
+            .v3-two-column-image__content {
+              position: relative;
+
+              > .plus-orange {
+                position: absolute;
+              }
+            }
+
+            .v3-two-column-image__image-container {
+              .v3-two-column-image__image {
+                margin: 0;
+              }
+            }
+          }
+        }
 
         .v3-promo__container {
+          max-width: 1060px;
           > img.v3-promo__image {
             display: none !important;
           }
 
-          .v3-promo__boxes {
+          .v3-promo__boxes.v3-promo__boxes-wrapper {
             margin: 0;
             width: 100%;
+
+            .slick-slide {
+              width: 100%;
+              max-width: 327px;
+              margin-right: 24px;
+              .v3-promo__box {
+                width: 100%;
+                min-height: 236px !important;
+                .v3-promo__box-inner {
+                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
+                  background-size: cover !important;
+                  background-repeat: no-repeat !important;
+                  background-position: right bottom !important;
+                  border-radius: 16px;
+                  padding: 24px;
+                  height: 100%;
+
+                  .plus-orange {
+                    .plus-orange__icon {
+                      top: 24px;
+                      right: 24px;
+                    }
+                  }
+
+                  .v3-promo__box-number {
+                    color: #7e8bba;
+                    font-family: Lora;
+                    font-size: 24px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 32px;
+                    margin: 0;
+                  }
+
+                  .v3-promo__box-title {
+                    height: auto !important;
+                    min-height: auto !important;
+                    margin: 32px 0;
+
+                    h6 {
+                      color: #081a59;
+                      font-size: 18px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: 24px;
+                      margin-bottom: 12px;
+                    }
+
+                    p {
+                      color: #081a59;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 24px;
+                      margin: 0;
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          > div:not(.v3-promo_arrows) {
+            position: relative;
+          }
+
+          .v3-promo_arrows {
+            position: static;
+
+            .v3-promo__slider-arrow {
+              position: absolute;
+              top: 50%;
+
+              img {
+                width: 40px;
+                height: 40px;
+              }
+
+              &.slick-prev {
+                left: -100px;
+              }
+
+              &.slick-next {
+                right: -100px;
+              }
+            }
+          }
+        }
+      }
+
+      .v3-reports.light.control {
+        background: #d9f3f9
+          url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
+          no-repeat;
+        background-position: top left;
+        background-size: cover;
+
+        @media (max-width: 1023.98px) {
+          background: #d9f3f9
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_tablet.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 1900px) {
+          background: #d9f3f9
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690113/netskope/3001/products_background_1920.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 3000px) {
+          background: #d9f3f9
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690070/netskope/3001/products_background_4k.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+        .container {
+          .v3-reports__top.v3-reports__top--no-border {
+            margin: 0;
+            text-align: center;
+
+            .v3-reports__title {
+              h2 {
+                font-size: 48px;
+                line-height: 48px;
+              }
+            }
+          }
+
+          .v3-reports__reports {
+            justify-content: center;
+
+            .v3-reports__reports-report {
+              padding: 24px;
+              background: #081a59
+                url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp)
+                no-repeat;
+              background-position: center;
+              background-size: cover;
+              display: flex;
+              flex-direction: column;
+              position: relative;
+
+              &::before {
+                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
+                position: absolute;
+                top: 24px;
+                right: 24px;
+                width: 20px;
+                height: 20px;
+              }
+
+              .v3-reports__reports-report-icon {
+                border-radius: 100px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+                background: #081a59;
+                width: 80px;
+                height: 80px;
+                padding: 12px;
+                img {
+                  width: 56px;
+                  height: 56px;
+                }
+              }
+
+              .v3-reports__reports-report-title {
+                color: #fff;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                margin-bottom: 12px;
+              }
+
+              .v3-reports__reports-report-text {
+                color: #fff;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+              }
+
+              .v3-reports__reports-report-cta {
+                margin-top: auto;
+
+                .ga__cta.v3-reports__reports-report-cta-link {
+                  color: #fff;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 24px;
+                }
+              }
+            }
+          }
+
+          .v3-reports__cta {
+            margin: 0;
+            text-align: center;
+          }
+        }
+      }
+
+      .spz-case-studies {
+        background: #081a59
+          url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg)
+          no-repeat;
+        background-position: top left;
+        background-size: cover;
+
+        @media (max-width: 1023.98px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_tablet.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 1900px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690111/netskope/3001/case_studies_background_1920.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 3000px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690064/netskope/3001/case_studies_background_4k.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        .case-studies-wrapper {
+          padding: 80px 0;
+          border-bottom: 1px solid var(--Dividers-Default, rgba(255, 255, 255, 0.10));
+
+          .case-studies-title {
+            text-align: center;
+
+            h2 {
+              color: #fff;
+              text-align: center;
+              font-size: 48px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 48px;
+              margin-bottom: 24px;
+            }
+
+            p {
+              color: rgba(255, 255, 255, 0.8);
+              text-align: center;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
+            }
+          }
+
+          .case-studies-slider {
+            .slider-thumb {
+              .slick-track {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+
+                .slick-slide {
+                  padding: 24px 0px;
+                  width: 216px;
+                  margin-right: 34px;
+
+                  &:last-child {
+                    margin-right: 0;
+                    @media (min-width: 1023.98px) {
+                      display: none;
+                    }
+                  }
+                  .cs-card-title {
+                    p {
+                      color: rgba(255, 255, 255, 0.8);
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 20px;
+                      cursor: pointer;
+                    }
+                  }
+
+                  &.slick-current {
+                    .cs-card-title {
+                      p {
+                        font-weight: 600;
+                        color: #ffffff;
+                      }
+                    }
+                  }
+                }
+              }
+            }
+            .slider-content {
+              .slick-list {
+                position: relative;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  right: 0;
+                  top: 0;
+                  width: 212px;
+                  height: 100%;
+                  background: linear-gradient(
+                    270deg,
+                    #081a59 0%,
+                    rgba(8, 26, 89, 0) 100%
+                  );
+                  z-index: 1;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  left: 0;
+                  top: 0;
+                  width: 212px;
+                  height: 100%;
+                  background: linear-gradient(
+                    90deg,
+                    #081a59 0%,
+                    rgba(8, 26, 89, 0) 100%
+                  );
+                  z-index: 1;
+                }
+
+                .slick-slide {
+                  background: #d9f3f9
+                    url(https://res.cloudinary.com/spiralyze/image/upload/v1701452314/netskope/3001/background_testimonials_card.webp)
+                    no-repeat;
+                  background-position: bottom right;
+                  background-size: cover;
+                  border-radius: 32px;
+                  max-width: 920px;
+                  min-height: 464px;
+                  padding: 48px 48px 40px;
+                  margin-right: 24px;
+                  margin-left: 24px;
+                  display: flex;
+
+                  > div {
+                    min-height: 100%;
+                  }
+                  .cs-card {
+                    display: flex !important;
+                    flex-direction: column;
+                    justify-content: space-between;
+                    height: 100%;
+
+                    .cs-content {
+                      p {
+                        color: #081a59;
+                        font-family: Lora;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 40px;
+                      }
+
+                      .tab-mob {
+                        @media (min-width: 1023.98px) {
+                          display: none;
+                        }
+                      }
+                    }
+
+                    .cs-reviewer {
+                      display: flex;
+                      justify-content: space-between;
+                      align-items: center;
+
+                      .cs-anchor {
+                        .v3-stacked-tabs__tab-cta {
+                          display: flex;
+                          align-items: center;
+                          gap: 12px;
+
+                          .v3-stacked-tabs__tab-cta-link {
+                            font-size: 16px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            text-decoration: none;
+                          }
+                        }
+                      }
+
+                      .cs-name {
+                        h6 {
+                          color: #081a59;
+                          font-size: 18px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
+                          margin-bottom: 8px;
+                        }
+
+                        p {
+                          color: #081a59;
+                          margin: 0;
+                          font-size: 16px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
         }
       }
