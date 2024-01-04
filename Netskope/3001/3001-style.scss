@@ -665,7 +665,7 @@ body {
       }
 
       .v3-reports.light.control {
-        padding-top: 96px;
+        padding: 96px 0;
         background: #d9f3f9
           url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
           no-repeat;
@@ -798,8 +798,13 @@ body {
           }
 
           .v3-reports__cta {
-            margin: 0;
+            margin: 12px 0;
             text-align: center;
+
+            .ga__cta.v3-reports__cta {
+              padding: 11px 27px;
+              line-height: 24px;
+            }
           }
         }
       }
@@ -808,8 +813,8 @@ body {
         background: #081a59
           url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg)
           no-repeat;
-        background-position: top left;
-        background-size: cover;
+        background-position: top;
+        // background-size: cover;
 
         @media (max-width: 1023.98px) {
           background: #081a59
@@ -841,6 +846,7 @@ body {
 
           .case-studies-title {
             text-align: center;
+            margin-bottom: 64px;
 
             h2 {
               color: #fff;
@@ -864,6 +870,8 @@ body {
 
           .case-studies-slider {
             .slider-thumb {
+              max-width: 1248px;
+              margin-bottom: 48px;
               .slick-track {
                 display: flex;
                 align-items: center;
@@ -871,7 +879,7 @@ body {
 
                 .slick-slide {
                   padding: 24px 0px;
-                  width: 216px;
+                  min-width: 216px;
                   margin-right: 34px;
 
                   &:last-child {
