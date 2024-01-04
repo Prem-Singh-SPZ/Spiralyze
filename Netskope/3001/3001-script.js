@@ -49,7 +49,7 @@
                     </div>
                     <div class="check-box">
                         <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198967/netskope/3001/icon_wrapper_12.svg" alt="Evolve Beyond Legacy VPN">
-                            <p>Evolve Beyond Legacy VPN</p>
+                            <p>Evolve Beyond<br>Legacy VPN</p>
                             <input class="spz-input" type="checkbox" value="Evolve Beyond Legacy VPN"><span class="checkmark"></span></label>
                     </div>
                     <div class="check-box">
@@ -70,7 +70,7 @@
                 </div>
             </div>
             <div class="hero-section-CTA">
-                <div class="v3"> <a href="https://www.netskope.com/get-started" class="get-started-cta btn">Get Started</a></div>
+                <div class="v3"> <a href="https://www.netskope.com/get-started" class="get-started-cta btn">Get started</a></div>
                 <div class="v3"> <a href="https://www.netskope.com/products" class="learn-more-cta btn">Learn more</a></div>
             </div>
             <div class="hero-section-review">
@@ -240,8 +240,16 @@
 
         document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
 
+        document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image').innerHTML = ` <picture>
+        <source media="(min-width:1023.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
+        <source media="(min-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
+        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
+        </picture>`;
+
         //rearranging sections
         document.querySelector('.v3-reports .v3-reports__reports').insertAdjacentElement('afterend', document.querySelector('.v3-reports .v3-reports__cta'));
+
+        document.querySelector('body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__cta .ga__cta.v3-reports__cta.btn-blue ').textContent = `See all analyst reports`;
 
         //Product cards added
         document.querySelector('.v3-promo.homepage').insertAdjacentHTML('afterend', `<div class="v3 v3-reports v3-reports-6593cee681481 control light">
