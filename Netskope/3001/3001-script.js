@@ -238,7 +238,7 @@
         </div>
         </div>`);
 
-        document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br>leading authorities`;
+        document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
 
         //rearranging sections
         document.querySelector('.v3-reports .v3-reports__reports').insertAdjacentElement('afterend', document.querySelector('.v3-reports .v3-reports__cta'));

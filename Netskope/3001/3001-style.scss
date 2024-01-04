@@ -664,7 +664,7 @@ body {
 
         .case-studies-wrapper {
           padding: 80px 0;
-          border-bottom: 1px solid var(--Dividers-Default, rgba(255, 255, 255, 0.10));
+          border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
           .case-studies-title {
             text-align: center;
@@ -853,6 +853,7 @@ body {
       }
 
       .netskope-component--video {
+        min-height: 800px;
         .w-chrome .w-ui-container div.w-css-reset {
           background: #081a59;
         }
@@ -868,10 +869,86 @@ body {
           max-width: 1440px;
           margin: auto;
           right: 0;
+
+          @media (max-width: 767.98px) {
+            background: #081a59
+              url(https://res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_mobile.webp)
+              no-repeat;
+            background-position: top left;
+            background-size: cover;
+          }
+
+          @media (max-width: 1023.98px) {
+            background: #081a59
+              url(https://res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_tablet.webp)
+              no-repeat;
+            background-position: top left;
+            background-size: cover;
+          }
+        }
+
+        .netskope-component--video-content {
+          padding-top: 368px;
+
+          .wistia_click_to_play {
+            > img {
+              display: none;
+            }
+
+            &::after {
+              content: "";
+              width: 96px;
+              height: 96px;
+              background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452233/netskope/3001/play_desktop_tablet.svg)
+                no-repeat;
+              background-size: 94px 94px;
+              background-position: center;
+              position: relative;
+              display: block;
+              border: 2px solid transparent;
+              border-radius: 200px;
+            }
+
+            &:hover {
+              &::after {
+                border: 2px solid #ff8200;
+              }
+            }
+          }
         }
       }
 
-      .v3-reports {
+      .v3-reports:not(.control) {
+        background: #d9f3f9
+          url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg)
+          no-repeat;
+        background-position: top left;
+        background-size: cover;
+
+        @media (max-width: 1023.98px) {
+          background: #d9f3f9
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_tablet.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 1900px) {
+          background: #d9f3f9
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690112/netskope/3001/trusted_section_background_1920.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 3000px) {
+          background: #d9f3f9
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690068/netskope/3001/trusted_section_background_4k.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
         .container {
           .plus-title {
             display: none !important;
@@ -883,7 +960,49 @@ body {
 
             .v3-reports__top {
               border: 0;
+              margin: 0;
+
+              .plus-orange {
+                display: none;
+              }
+
+              .v3-reports__title h2 {
+                color: #081a59;
+                text-align: center;
+                font-family: Graphik;
+                font-size: 48px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 48px;
+                margin-bottom: 24px;
+
+                span {
+                  font-family: Lora;
+                }
+              }
+
+              .v3-reports__text {
+                color: #081a59;
+                text-align: center;
+                font-family: Graphik;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                max-width: 882px;
+                margin-left: auto;
+                margin-right: auto;
+              }
             }
+          }
+
+          .v3-reports__reports{
+            justify-content: center;
+          }
+
+          .v3-reports__cta {
+            margin: 0;
+            text-align: center;
           }
         }
       }
