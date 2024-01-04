@@ -438,10 +438,40 @@ body {
 
       .v3.v3-promo.homepage {
         margin-top: 0;
-        padding: 96px 0;
+        padding: 96px 0 64px;
+        background: #081a59
+          url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg)
+          no-repeat;
+        background-position: top left;
+        background-size: cover;
+
+        @media (max-width: 1023.98px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_tablet_1.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 1900px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1704370332/netskope/3001/report_background_1921.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
+
+        @media (min-width: 3000px) {
+          background: #081a59
+            url(https://res.cloudinary.com/spiralyze/image/upload/v1704370348/netskope/3001/report_background_4k_1.svg)
+            no-repeat;
+          background-position: top left;
+          background-size: cover;
+        }
 
         .v3-two-column-image.orange_line_off {
-          padding-bottom: 96px;
+          padding-bottom: 88px;
+          background-color: transparent;
           .row.align-items-center.text-on-right {
             flex-direction: row;
             align-items: flex-start !important;
@@ -450,11 +480,24 @@ body {
               @media (min-width: 1023.98px) {
                 max-width: 540px;
                 .v3-two-column-image__content {
-                  padding-right: 32px;
+                  padding: 0 32px 0 81px;
                 }
               }
 
               .v3-two-column-image__content {
+                position: relative;
+
+                > .plus-orange {
+                  position: absolute;
+                  top: -27px;
+                  margin-left: -2.5rem;
+
+                  img {
+                    width: 16px;
+                    height: 16px;
+                  }
+                }
+
                 > h2 {
                   font-size: 40px;
                   color: #fff;
@@ -495,23 +538,20 @@ body {
                     height: 48px;
                     letter-spacing: 0;
                     padding: 13px 26.5px;
-                    margin-left: 1px;
                   }
                 }
               }
             }
 
-            .v3-two-column-image__content {
-              position: relative;
-
-              > .plus-orange {
-                position: absolute;
-              }
-            }
-
             .v3-two-column-image__image-container {
               .v3-two-column-image__image {
-                margin: 0;
+                margin: 0 auto 0 25px;
+                max-width: 544px;
+
+                img {
+                  width: 100%;
+                  border-radius: 32px;
+                }
               }
             }
           }
@@ -529,11 +569,13 @@ body {
 
             .slick-slide {
               width: 100%;
-              max-width: 327px;
+              max-width: 327.2px;
               margin-right: 24px;
               .v3-promo__box {
                 width: 100%;
-                min-height: 236px !important;
+                min-height: 228px !important;
+                max-height: 260px !important;
+
                 .v3-promo__box-inner {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
                   background-size: cover !important;
@@ -545,7 +587,7 @@ body {
 
                   .plus-orange {
                     .plus-orange__icon {
-                      top: 24px;
+                      top: 29px;
                       right: 24px;
                     }
                   }
@@ -583,6 +625,12 @@ body {
                       margin: 0;
                     }
                   }
+
+                  .v3-promo__box-link {
+                    .v3-promo__box-link-link {
+                      margin-left: 8px;
+                    }
+                  }
                 }
               }
             }
@@ -597,7 +645,7 @@ body {
 
             .v3-promo__slider-arrow {
               position: absolute;
-              top: 50%;
+              top: calc(50% - 32px);
 
               img {
                 width: 40px;
@@ -605,11 +653,11 @@ body {
               }
 
               &.slick-prev {
-                left: -100px;
+                left: -71px;
               }
 
               &.slick-next {
-                right: -100px;
+                right: -103px;
               }
             }
           }
@@ -617,6 +665,7 @@ body {
       }
 
       .v3-reports.light.control {
+        padding-top: 96px;
         background: #d9f3f9
           url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
           no-repeat;
@@ -652,9 +701,11 @@ body {
             text-align: center;
 
             .v3-reports__title {
+              margin-bottom: 48px;
               h2 {
                 font-size: 48px;
                 line-height: 48px;
+                letter-spacing: 0;
               }
             }
           }
@@ -672,6 +723,15 @@ body {
               display: flex;
               flex-direction: column;
               position: relative;
+              max-width: 326.5px;
+              margin-bottom: 24px;
+              margin-right: 24px;
+              border-radius: 16px;
+
+              &:nth-child(3),
+              &:nth-child(6) {
+                margin-right: 0;
+              }
 
               &::before {
                 content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
@@ -689,6 +749,8 @@ body {
                 width: 80px;
                 height: 80px;
                 padding: 12px;
+                margin-bottom: 32px;
+
                 img {
                   width: 56px;
                   height: 56px;
@@ -710,6 +772,7 @@ body {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
+                margin-bottom: 32px;
               }
 
               .v3-reports__reports-report-cta {
@@ -721,6 +784,14 @@ body {
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px;
+                  margin-left: 12px;
+                }
+
+                .ga__cta {
+                  img {
+                    width: 32px;
+                    height: 32px;
+                  }
                 }
               }
             }

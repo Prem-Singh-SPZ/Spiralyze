@@ -402,10 +402,35 @@ body .v3__container #components__content .spz-banner-section .banner-section h6 
 }
 body .v3__container #components__content .v3.v3-promo.homepage {
   margin-top: 0;
-  padding: 96px 0;
+  padding: 96px 0 64px;
+  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg) no-repeat;
+  background-position: top left;
+  background-size: cover;
+}
+@media (max-width: 1023.98px) {
+  body .v3__container #components__content .v3.v3-promo.homepage {
+    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_tablet_1.svg) no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
+}
+@media (min-width: 1900px) {
+  body .v3__container #components__content .v3.v3-promo.homepage {
+    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704370332/netskope/3001/report_background_1921.svg) no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
+}
+@media (min-width: 3000px) {
+  body .v3__container #components__content .v3.v3-promo.homepage {
+    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704370348/netskope/3001/report_background_4k_1.svg) no-repeat;
+    background-position: top left;
+    background-size: cover;
+  }
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off {
-  padding-bottom: 96px;
+  padding-bottom: 88px;
+  background-color: transparent;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right {
   -webkit-box-orient: horizontal;
@@ -421,8 +446,20 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-im
     max-width: 540px;
   }
   body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content {
-    padding-right: 32px;
+    padding: 0 32px 0 81px;
   }
+}
+body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content {
+  position: relative;
+}
+body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content > .plus-orange {
+  position: absolute;
+  top: -27px;
+  margin-left: -2.5rem;
+}
+body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content > .plus-orange img {
+  width: 16px;
+  height: 16px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content > h2 {
   font-size: 40px;
@@ -457,16 +494,14 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-im
   height: 48px;
   letter-spacing: 0;
   padding: 13px 26.5px;
-  margin-left: 1px;
-}
-body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__content {
-  position: relative;
-}
-body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__content > .plus-orange {
-  position: absolute;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image {
-  margin: 0;
+  margin: 0 auto 0 25px;
+  max-width: 544px;
+}
+body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image img {
+  width: 100%;
+  border-radius: 32px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container {
   max-width: 1060px;
@@ -480,12 +515,13 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide {
   width: 100%;
-  max-width: 327px;
+  max-width: 327.2px;
   margin-right: 24px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box {
   width: 100%;
-  min-height: 236px !important;
+  min-height: 228px !important;
+  max-height: 260px !important;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
@@ -497,7 +533,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   height: 100%;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner .plus-orange .plus-orange__icon {
-  top: 24px;
+  top: 29px;
   right: 24px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner .v3-promo__box-number {
@@ -530,6 +566,9 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   line-height: 24px;
   margin: 0;
 }
+body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner .v3-promo__box-link .v3-promo__box-link-link {
+  margin-left: 8px;
+}
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container > div:not(.v3-promo_arrows) {
   position: relative;
 }
@@ -538,19 +577,20 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo_arrows .v3-promo__slider-arrow {
   position: absolute;
-  top: 50%;
+  top: calc(50% - 32px);
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo_arrows .v3-promo__slider-arrow img {
   width: 40px;
   height: 40px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo_arrows .v3-promo__slider-arrow.slick-prev {
-  left: -100px;
+  left: -71px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo_arrows .v3-promo__slider-arrow.slick-next {
-  right: -100px;
+  right: -103px;
 }
 body .v3__container #components__content .v3-reports.light.control {
+  padding-top: 96px;
   background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg) no-repeat;
   background-position: top left;
   background-size: cover;
@@ -580,9 +620,13 @@ body .v3__container #components__content .v3-reports.light.control .container .v
   margin: 0;
   text-align: center;
 }
+body .v3__container #components__content .v3-reports.light.control .container .v3-reports__top.v3-reports__top--no-border .v3-reports__title {
+  margin-bottom: 48px;
+}
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__top.v3-reports__top--no-border .v3-reports__title h2 {
   font-size: 48px;
   line-height: 48px;
+  letter-spacing: 0;
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports {
   -webkit-box-pack: center;
@@ -602,6 +646,13 @@ body .v3__container #components__content .v3-reports.light.control .container .v
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+  max-width: 326.5px;
+  margin-bottom: 24px;
+  margin-right: 24px;
+  border-radius: 16px;
+}
+body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report:nth-child(3), body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report:nth-child(6) {
+  margin-right: 0;
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report::before {
   content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
@@ -618,6 +669,7 @@ body .v3__container #components__content .v3-reports.light.control .container .v
   width: 80px;
   height: 80px;
   padding: 12px;
+  margin-bottom: 32px;
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-icon img {
   width: 56px;
@@ -637,6 +689,7 @@ body .v3__container #components__content .v3-reports.light.control .container .v
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin-bottom: 32px;
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta {
   margin-top: auto;
@@ -647,6 +700,11 @@ body .v3__container #components__content .v3-reports.light.control .container .v
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin-left: 12px;
+}
+body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta .ga__cta img {
+  width: 32px;
+  height: 32px;
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__cta {
   margin: 0;
