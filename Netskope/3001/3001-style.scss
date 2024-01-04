@@ -897,6 +897,22 @@ body {
                       line-height: 20px;
                       cursor: pointer;
                     }
+
+                    .progress-bar {
+                      position: relative;
+                      height: 1px;
+                      width: 100%;
+                      background: rgba(255, 255, 255, 0.2);
+                    }
+
+                    .progress-fill {
+                      position: absolute;
+                      height: 1px;
+                      width: 0%;
+                      animation: progress-forward 1.5s infinite;
+                      background: #ff8200;
+                      display: none;
+                    }
                   }
 
                   &.slick-current {
@@ -904,6 +920,10 @@ body {
                       p {
                         font-weight: 600;
                         color: #ffffff;
+                      }
+
+                      .progress-fill {
+                        display: block;
                       }
                     }
                   }
@@ -1271,5 +1291,14 @@ body {
         }
       }
     }
+  }
+}
+
+@keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
   }
 }

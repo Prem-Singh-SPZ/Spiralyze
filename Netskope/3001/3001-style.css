@@ -800,9 +800,27 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   line-height: 20px;
   cursor: pointer;
 }
+body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title .progress-bar {
+  position: relative;
+  height: 1px;
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+}
+body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title .progress-fill {
+  position: absolute;
+  height: 1px;
+  width: 0%;
+  -webkit-animation: progress-forward 1.5s infinite;
+          animation: progress-forward 1.5s infinite;
+  background: #ff8200;
+  display: none;
+}
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide.slick-current .cs-card-title p {
   font-weight: 600;
   color: #ffffff;
+}
+body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide.slick-current .cs-card-title .progress-fill {
+  display: block;
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list {
   position: relative;
@@ -1117,4 +1135,22 @@ body .v3__container #components__content .v3-reports:not(.control) .container .v
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__cta {
   margin: 0;
   text-align: center;
+}
+
+@-webkit-keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes progress-forward {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
 }

@@ -116,12 +116,24 @@
             </div>
             <div class="case-studies-slider">
                 <div class="slider slider-thumb container">
-                    <div class="cs-card-title"><p>Protecting mission-critical data across Queensland</p></div>
-                    <div class="cs-card-title"><p>Securing a Perimeterless Organization</p></div>
-                    <div class="cs-card-title"><p>Ensuring Secure Use of Safe Cloud Apps</p></div>
-                    <div class="cs-card-title"><p>Hospital IT Team Gets “More Sleep and More Smiles”</p></div>
-                    <div class="cs-card-title"><p>Delivering a Secure Cloud Experience</p></div>
-                    <div class="cs-card-title"><p>A Better Prognosis for a National Healthcare Organization</p></div>
+                    <div class="cs-card-title"><p>Protecting mission-critical data across Queensland</p><div class="progress-bar">
+  <div class="progress-fill"></div>
+</div></div>
+                    <div class="cs-card-title"><p>Securing a Perimeterless Organization</p><div class="progress-bar">
+  <div class="progress-fill"></div>
+</div></div>
+                    <div class="cs-card-title"><p>Ensuring Secure Use of Safe Cloud Apps</p><div class="progress-bar">
+  <div class="progress-fill"></div>
+</div></div>
+                    <div class="cs-card-title"><p>Hospital IT Team Gets “More Sleep and More Smiles”</p><div class="progress-bar">
+  <div class="progress-fill"></div>
+</div></div>
+                    <div class="cs-card-title"><p>Delivering a Secure Cloud Experience</p><div class="progress-bar">
+  <div class="progress-fill"></div>
+</div></div>
+                    <div class="cs-card-title"><p>A Better Prognosis for a National Healthcare Organization</p><div class="progress-bar">
+  <div class="progress-fill"></div>
+</div></div>
                 </div>
                 <div class="slider slider-content">
                     <div class="cs-card">
