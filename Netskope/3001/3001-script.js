@@ -54,7 +54,7 @@
                     </div>
                     <div class="check-box">
                         <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198972/netskope/3001/icon_wrapper_15.svg" alt="Simplify & Redefine Data Protection">
-                            <p>Simplify & Redefine Data Protection</p>
+                            <p>Simplify & Redefine<br>Data Protection</p>
                             <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label>
                     </div>
                     <div class="check-box">
@@ -64,7 +64,7 @@
                     </div>
                     <div class="check-box">
                         <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198973/netskope/3001/icon_wrapper_16.svg" alt="Consolidate Your Security Architecture">
-                            <p>Consolidate Your Security Architecture</p>
+                            <p>Consolidate Your<br>Security Architecture</p>
                             <input class="spz-input" type="checkbox" value="Consolidate Your Security Architecture"><span class="checkmark"></span></label>
                     </div>
                 </div>

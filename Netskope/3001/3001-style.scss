@@ -17,8 +17,8 @@ body {
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
             @media (max-width: 1199.98px) {
-              margin-left: 43px;
-              margin-right: 43px;
+              margin-left: 32px;
+              margin-right: 32px;
             }
 
             .header__logo {
@@ -74,6 +74,15 @@ body {
 
               .header__top-menu-link-language {
                 padding: 8px 15px 8px 7px;
+              }
+
+              .header__mobile-toggle {
+                width: 23px;
+                height: 26px;
+                .header_mobile__navbar-toggler {
+                  width: 22px;
+                  height: 18px;
+                }
               }
             }
 
@@ -182,6 +191,13 @@ body {
         .hero-section-wrapper {
           padding-top: 56px;
           padding-bottom: 64px;
+
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            padding-top: 40px;
+            padding-bottom: 56px;
+            max-width: 734px;
+          }
+
           .hero-section-title {
             h2 {
               color: #fff;
@@ -205,6 +221,9 @@ body {
                 height: 20px;
                 left: 0;
                 bottom: 18px;
+                @media (max-width: 1023.98px) {
+                  display: none;
+                }
               }
 
               &::before {
@@ -215,6 +234,9 @@ body {
                 right: 0;
                 right: 4px;
                 bottom: 18px;
+                @media (max-width: 1023.98px) {
+                  display: none;
+                }
               }
             }
 
@@ -230,6 +252,11 @@ body {
 
           .hero-section-cards {
             margin: 48px 32px;
+
+            @media (max-width: 1023.98px) {
+              margin: 41px 0px 39px;
+            }
+
             .checkboxes {
               display: flex;
               align-items: center;
@@ -253,6 +280,10 @@ body {
                 position: relative;
                 cursor: pointer;
                 transition: all 0.15s ease-in-out;
+
+                @media (max-width: 1023.98px) {
+                  width: 224px;
+                }
 
                 margin: 0;
                 img {
@@ -440,6 +471,11 @@ body {
           align-items: center;
           padding-bottom: 64px;
 
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            min-height: 305px;
+            padding-bottom: 40px;
+          }
+
           h6 {
             margin-top: auto;
             margin-bottom: 40px;
@@ -448,6 +484,10 @@ body {
             font-style: normal;
             font-weight: 500;
             line-height: 24px;
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              margin-bottom: 17px;
+            }
           }
 
           .banner-images {
@@ -474,6 +514,7 @@ body {
             no-repeat;
           background-position: top left;
           background-size: cover;
+          padding: 64px 0;
         }
 
         @media (min-width: 1900px) {
@@ -508,9 +549,17 @@ body {
                   padding: 0 32px 0 81px;
                 }
               }
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                max-width: 356px;
+                padding-left: 12px;
+                padding-right: 0;
+              }
 
               .v3-two-column-image__content {
                 position: relative;
+                @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                  padding: 0;
+                }
 
                 > .plus-orange {
                   position: absolute;
@@ -526,12 +575,18 @@ body {
                 > h2 {
                   font-size: 40px;
                   color: #fff;
-
                   font-style: normal;
                   font-weight: 400;
                   line-height: 48px;
                   letter-spacing: 0;
                   padding-bottom: 23px;
+
+                  @media (max-width: 1023.98px) {
+                    font-size: 32px;
+                    line-height: 40px;
+                    padding-bottom: 15px;
+                    max-width: 340px;
+                  }
                 }
 
                 > div {
@@ -552,6 +607,11 @@ body {
                         font-weight: 400;
                         font-size: 10px;
                       }
+
+                      // @media (max-width: 1023.98px) {
+                      //   font-size: 32px;
+                      //   line-height: 40px;
+                      // }
                     }
                   }
                 }
@@ -565,6 +625,12 @@ body {
                     padding: 13px 26.5px;
                   }
                 }
+              }
+            }
+
+            .col-lg-6:last-child {
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                max-width: 320px;
               }
             }
 
@@ -737,6 +803,10 @@ body {
           background-size: cover;
         }
         .container {
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            max-width: 734px;
+          }
+
           .v3-reports__top.v3-reports__top--no-border {
             margin: 0;
             text-align: center;
@@ -919,6 +989,13 @@ body {
                 display: flex;
                 align-items: center;
                 justify-content: space-between;
+                overflow: auto;
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                  display: none;
+                }
 
                 .slick-slide {
                   padding: 24px 0px 16px;
@@ -1022,6 +1099,13 @@ body {
                   margin-left: 24px;
                   display: flex;
 
+                  @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                    max-width: 702px;
+                    margin-right: 8px;
+                    margin-left: 8px;
+                    min-height: 600px;
+                  }
+
                   > div {
                     min-height: 100%;
                   }
@@ -1044,6 +1128,23 @@ body {
                       .tab-mob {
                         @media (min-width: 1023.98px) {
                           display: none;
+                        }
+                        h6 {
+                          color: #081a59;
+                          font-size: 18px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
+                          margin-bottom: 8px;
+                        }
+
+                        p {
+                          color: #081a59;
+                          margin: 0;
+                          font-size: 16px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
                         }
                       }
                     }
@@ -1070,6 +1171,9 @@ body {
                       }
 
                       .cs-name {
+                        @media (max-width: 1023.98px) {
+                          display: none;
+                        }
                         h6 {
                           color: #081a59;
                           font-size: 18px;
