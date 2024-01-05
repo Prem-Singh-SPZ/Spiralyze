@@ -300,20 +300,20 @@
                     <div class="v3-reports__reports-report-text "> Automatically adapts to the ever-growing data landscape, including generative AI and new AI-driven attacks.</div>
                     <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/skopeai"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/skopeai">Learn more</a> </span></div>
                 </div>
-                <div class="v3-reports__reports-report ">
+                <div class="v3-reports__reports-report d-none d-md-block">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/private-access-for-ztna-icon-55x55-1.svg" alt="NPA (ZTNA) icon"></div>
                     <div class="v3-reports__reports-report-title "> Private Access for ZTNA</div>
                     <div class="v3-reports__reports-report-text "> Connect users anywhere to private resources ensuring fast and direct application connectivity and superior user experience.</div>
                     <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/private-access"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/private-access">Learn more</a> </span></div>
                 </div>
-                <div class="v3-reports__reports-report ">
+                <div class="v3-reports__reports-report d-none d-md-block">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/public-cloud-security-icon-55x55-1.svg" alt="Public Cloud Security icon"></div>
                     <div class="v3-reports__reports-report-title "> Public Cloud Security</div>
                     <div class="v3-reports__reports-report-text "> Gain visibility, control, and compliance across your multi-cloud environment.</div>
                     <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/public-cloud-security"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/public-cloud-security">Learn more</a> </span></div>
                 </div>
             </div>
-            <div class="v3-reports__cta "> <a class="ga__cta v3-reports__cta btn-blue " href="https://www.netskope.com/products">See all products</a></div>
+            <div class="v3-reports__cta"><a class="white-btn d-md-none" href="javascript:void(0)" id="see-more-btn">See more</a><a class="ga__cta v3-reports__cta btn-blue " href="https://www.netskope.com/products">See all products</a></div>
         </div>
         </div>`);
 
