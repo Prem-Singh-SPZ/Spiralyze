@@ -13,8 +13,13 @@ body {
         .header__container-inner {
           max-width: 1296px;
           .header__top.has-promo-banner {
-            padding: 20px 0px 22px;
+            padding: 20px 0 22px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+
+            @media (max-width: 1199.98px) {
+              margin-left: 43px;
+              margin-right: 43px;
+            }
 
             .header__logo {
               padding-top: 3px;
@@ -45,6 +50,13 @@ body {
               .header__top-menu-link--search {
                 width: 40px;
                 height: 40px;
+                display: block !important;
+                border: 1px solid #fff;
+                border-radius: 100px;
+              }
+
+              .header__top-menu-link--search-mobile {
+                display: none !important;
               }
 
               .header__top-menu-link--search-button img {
@@ -82,6 +94,7 @@ body {
               border-radius: 24px;
               border: 1px solid rgba(156, 157, 159, 0.6);
               margin-left: 15px;
+              padding: 0;
 
               .spz-3001-email {
                 input {
@@ -220,7 +233,10 @@ body {
             .checkboxes {
               display: flex;
               align-items: center;
-              justify-content: space-between;
+              justify-content: center;
+              flex-wrap: wrap;
+              gap: 16px;
+
               .check-box .custom-check {
                 display: flex;
                 padding: 24px;
@@ -382,14 +398,14 @@ body {
         background: #081a59
           url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp)
           no-repeat;
-        background-position: top left;
+        background-position: center;
         background-size: cover;
 
         @media (max-width: 767.98px) {
           background: #081a59
             url(https://res.cloudinary.com/spiralyze/image/upload/v1701691733/netskope/3001/hero_image_mobile_1.webp)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -397,7 +413,7 @@ body {
           background: #081a59
             url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_tablet_1.webp)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -405,7 +421,7 @@ body {
           background: #081a59
             url(https://res.cloudinary.com/spiralyze/image/upload/v1701691784/netskope/3001/hero_image_1921.webp)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -413,7 +429,7 @@ body {
           background: #081a59
             url(https://res.cloudinary.com/spiralyze/image/upload/v1701691785/netskope/3001/hero_image_4k_1.webp)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -433,12 +449,19 @@ body {
             font-weight: 500;
             line-height: 24px;
           }
+
+          .banner-images {
+            max-width: 100%;
+            img {
+              width: 100%;
+            }
+          }
         }
       }
 
       .v3.v3-promo.homepage {
         margin-top: 0;
-        padding: 96px 0 64px;
+        padding: 96px 0;
         background: #081a59
           url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg)
           no-repeat;
@@ -472,6 +495,8 @@ body {
         .v3-two-column-image.orange_line_off {
           padding-bottom: 88px;
           background-color: transparent;
+          overflow: hidden;
+
           .row.align-items-center.text-on-right {
             flex-direction: row;
             align-items: flex-start !important;
@@ -547,6 +572,9 @@ body {
               .v3-two-column-image__image {
                 margin: 0 auto 0 25px;
                 max-width: 544px;
+                @media (max-width: 1199.98px) {
+                  padding-right: 24px;
+                }
 
                 img {
                   width: 100%;
@@ -558,9 +586,20 @@ body {
         }
 
         .v3-promo__container {
-          max-width: 1060px;
+          max-width: 1200px;
+          overflow: hidden;
+          padding: 0 73px;
+
           > img.v3-promo__image {
             display: none !important;
+          }
+
+          .spz-custom-slider {
+            // position: relative;
+            @media (max-width: 1199.98px) {
+              max-width: 700px;
+              margin: auto;
+            }
           }
 
           .v3-promo__boxes.v3-promo__boxes-wrapper {
@@ -569,12 +608,18 @@ body {
 
             .slick-slide {
               width: 100%;
-              max-width: 327.2px;
-              margin-right: 24px;
+              margin: 0 12px;
+
+              @media (min-width: 1199.98px) {
+                max-width: 327.2px;
+              }
+
               .v3-promo__box {
                 width: 100%;
-                min-height: 228px !important;
-                max-height: 260px !important;
+                min-height: 260px !important;
+                max-height: 260px;
+                margin-bottom: 0;
+                max-width: 100%;
 
                 .v3-promo__box-inner {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
@@ -583,7 +628,7 @@ body {
                   background-position: right bottom !important;
                   border-radius: 16px;
                   padding: 24px;
-                  height: 100%;
+                  height: 260px;
 
                   .plus-orange {
                     .plus-orange__icon {
@@ -640,25 +685,21 @@ body {
             position: relative;
           }
 
-          .v3-promo_arrows {
-            position: static;
+          .v3-promo__slider-arrow {
+            position: absolute;
+            top: calc(50% - 16px);
 
-            .v3-promo__slider-arrow {
-              position: absolute;
-              top: calc(50% - 32px);
+            img {
+              width: 40px;
+              height: 40px;
+            }
 
-              img {
-                width: 40px;
-                height: 40px;
-              }
+            &.slick-prev {
+              left: -59px;
+            }
 
-              &.slick-prev {
-                left: -71px;
-              }
-
-              &.slick-next {
-                right: -103px;
-              }
+            &.slick-next {
+              right: -59px;
             }
           }
         }
@@ -730,7 +771,9 @@ body {
 
               &:nth-child(3),
               &:nth-child(6) {
-                margin-right: 0;
+                @media (min-width: 1439.98px) {
+                  margin-right: 0;
+                }
               }
 
               &::before {
@@ -1232,9 +1275,12 @@ body {
             align-items: center;
             max-width: 1060px;
             margin: auto;
+            @media (min-width: 1023.98px) {
+              flex-wrap: nowrap;
+            }
 
             .v3-reports__reports-report {
-              padding: 24px;
+              padding: 24px 20px 24px 24px;
               background: #081a59
                 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp)
                 no-repeat;
@@ -1245,11 +1291,15 @@ body {
               position: relative;
               margin: 0 25px 24px 0;
               max-width: 326px;
-              height: auto !important;
               border-radius: 16px;
+              @media (min-width: 1023.98px) {
+                height: auto !important;
+              }
 
               &:nth-child(2) {
-                height: 248px !important;
+                @media (min-width: 1023.98px) {
+                  height: 248px !important;
+                }
               }
 
               &:last-child {
@@ -1261,8 +1311,7 @@ body {
                 position: relative;
                 width: 20px;
                 height: 20px;
-                margin: 6px 0;
-                margin-left: auto;
+                margin: 6px 4px 6px auto;
               }
 
               &::after {
