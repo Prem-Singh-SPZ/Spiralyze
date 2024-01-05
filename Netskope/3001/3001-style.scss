@@ -216,10 +216,17 @@ body {
             max-width: 734px;
           }
 
+          @media (max-width: 767.98px) {
+            padding-left: 0;
+            padding-right: 0;
+          }
+
           .hero-section-title {
+            @media (max-width: 767.98px) {
+              padding: 0 25px;
+            }
             h2 {
               color: #fff;
-              text-align: center;
               font-size: 56px;
               font-style: normal;
               font-weight: 400;
@@ -230,6 +237,11 @@ body {
 
               span {
                 font-family: Lora;
+              }
+
+              @media (max-width: 767.98px) {
+                font-size: 32px;
+                line-height: 40px;
               }
 
               &::after {
@@ -282,6 +294,23 @@ body {
               flex-wrap: wrap;
               gap: 16px;
 
+              @media (max-width: 1023.98px) {
+                gap: 0;
+              }
+
+              @media (max-width: 767.98px) {
+                flex-wrap: nowrap;
+                overflow: auto;
+                justify-content: flex-start;
+                align-items: flex-start;
+                -ms-overflow-style: none; /* IE and Edge */
+                scrollbar-width: none;
+
+                &::-webkit-scrollbar {
+                  display: none;
+                }
+              }
+
               .check-box .custom-check {
                 display: flex;
                 padding: 24px;
@@ -298,12 +327,14 @@ body {
                 position: relative;
                 cursor: pointer;
                 transition: all 0.15s ease-in-out;
+                margin: 0;
 
                 @media (max-width: 1023.98px) {
                   width: 224px;
+                  margin-left: 8px;
+                  margin-right: 8px;
                 }
 
-                margin: 0;
                 img {
                   width: 56px;
                   height: 56px;
@@ -372,8 +403,18 @@ body {
             display: flex;
             justify-content: center;
             align-items: center;
+            @media (max-width: 767.98px) {
+              padding: 0 25px;
+              flex-wrap: wrap;
+            }
 
             .v3 {
+              @media (max-width: 767.98px) {
+                width: 100%;
+                max-width: 360px;
+                margin: auto;
+              }
+
               .get-started-cta {
                 border-radius: 200px;
                 // background: var(--Buttons-isMain_Default, #ff8200);
@@ -385,6 +426,10 @@ body {
                 line-height: 24px;
                 width: 141px;
                 margin: 1px 8px;
+
+                @media (max-width: 767.98px) {
+                  width: 100%;
+                }
               }
 
               .learn-more-cta {
@@ -400,6 +445,11 @@ body {
                 width: 142px;
                 margin: 1px 8px;
 
+                @media (max-width: 767.98px) {
+                  margin-top: 16px;
+                  width: 100%;
+                }
+
                 &:hover {
                   border: 1px solid #081a59;
                   background: #fff;
@@ -414,7 +464,9 @@ body {
             align-items: center;
             justify-content: center;
             margin-top: 31px;
-
+            @media (max-width: 767.98px) {
+              padding: 0 25px;
+            }
             .section-review {
               display: flex;
               align-items: center;
@@ -492,6 +544,11 @@ body {
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             min-height: 305px;
             padding-bottom: 40px;
+          }
+
+          @media (max-width: 767.98px) {
+            min-height: 178px;
+            padding-bottom: 20px;
           }
 
           h6 {
