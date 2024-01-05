@@ -106,6 +106,7 @@
         document.querySelector('.header__top-menu-link--search img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
         document.querySelector('.header__top-menu-link-language img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
 
+
         //case studies slider+tabs
         document.querySelector('.v3-solution-plays').insertAdjacentHTML('afterend', `<div class="spz-case-studies">
         <div class="">
@@ -320,6 +321,8 @@
         waitForElm('.v3-promo .v3-promo_arrows .slick-prev img').then(function (elm) {
             document.querySelector('.v3-promo .v3-promo_arrows .slick-prev img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198617/netskope/3001/icon_wrapper_1.svg');
             document.querySelector('.v3-promo .v3-promo_arrows .slick-next img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198616/netskope/3001/icon_wrapper.svg');
+
+            document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
 
             document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
                 element.setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')

@@ -335,7 +335,7 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   margin-right: 12px;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review .section-review picture {
-  margin-right: 6px;
+  margin-right: 8px;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-review .section-review span {
   color: #fff;
@@ -740,12 +740,12 @@ body .v3__container #components__content .spz-case-studies {
   }
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper {
-  padding: 80px 0;
+  padding: 80px 0 119px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-title {
   text-align: center;
-  margin-bottom: 64px;
+  margin-bottom: 65px;
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-title h2 {
   color: #fff;
@@ -754,7 +754,7 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  margin-bottom: 24px;
+  margin-bottom: 23px;
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-title p {
   color: rgba(255, 255, 255, 0.8);
@@ -780,7 +780,7 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
           justify-content: space-between;
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide {
-  padding: 24px 0px;
+  padding: 24px 0px 16px;
   min-width: 216px;
   margin-right: 34px;
 }
@@ -799,6 +799,7 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   font-weight: 400;
   line-height: 20px;
   cursor: pointer;
+  margin-bottom: 23px;
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title .progress-bar {
   position: relative;
@@ -933,6 +934,25 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   font-weight: 400;
   line-height: 24px;
 }
+body .v3__container #components__content #spacer.netskope-component--full-width {
+  padding: 60px 0 0 !important;
+}
+body .v3__container #components__content #spacer.netskope-component--full-width .plus-title {
+  margin-bottom: 0;
+}
+body .v3__container #components__content #spacer.netskope-component--full-width .plus-title .plus-title__icon {
+  padding-left: 29px;
+  margin-bottom: 12px;
+}
+body .v3__container #components__content #spacer.netskope-component--full-width .plus-title .plus-title__text.white {
+  color: #fff;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  padding-left: 29px;
+}
 body .v3__container #components__content .netskope-component--video {
   min-height: 800px;
 }
@@ -965,7 +985,7 @@ body .v3__container #components__content .netskope-component--video .wistia_embe
   }
 }
 body .v3__container #components__content .netskope-component--video .netskope-component--video-content {
-  padding-top: 368px;
+  padding-top: 352px;
 }
 body .v3__container #components__content .netskope-component--video .netskope-component--video-content .wistia_click_to_play > img {
   display: none;
@@ -979,13 +999,15 @@ body .v3__container #components__content .netskope-component--video .netskope-co
   background-position: center;
   position: relative;
   display: block;
-  border: 2px solid transparent;
+  border: 2px solid rgba(255, 255, 255, 0.9);
   border-radius: 200px;
+  left: -2px;
 }
 body .v3__container #components__content .netskope-component--video .netskope-component--video-content .wistia_click_to_play:hover::after {
   border: 2px solid #ff8200;
 }
 body .v3__container #components__content .v3-reports:not(.control) {
+  padding-top: 94px;
   background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg) no-repeat;
   background-position: top left;
   background-size: cover;
@@ -1027,6 +1049,9 @@ body .v3__container #components__content .v3-reports:not(.control) .container > 
 body .v3__container #components__content .v3-reports:not(.control) .container > .row .col-lg-6 .v3-reports__top .plus-orange {
   display: none;
 }
+body .v3__container #components__content .v3-reports:not(.control) .container > .row .col-lg-6 .v3-reports__top .v3-reports__title {
+  margin-bottom: 22px;
+}
 body .v3__container #components__content .v3-reports:not(.control) .container > .row .col-lg-6 .v3-reports__top .v3-reports__title h2 {
   color: #081a59;
   text-align: center;
@@ -1035,7 +1060,8 @@ body .v3__container #components__content .v3-reports:not(.control) .container > 
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  margin-bottom: 24px;
+  letter-spacing: 0;
+  margin-bottom: 0px;
 }
 body .v3__container #components__content .v3-reports:not(.control) .container > .row .col-lg-6 .v3-reports__top .v3-reports__title h2 span {
   font-family: Lora;
@@ -1049,8 +1075,7 @@ body .v3__container #components__content .v3-reports:not(.control) .container > 
   font-weight: 400;
   line-height: 24px;
   max-width: 882px;
-  margin-left: auto;
-  margin-right: auto;
+  margin: 0 auto 48px;
 }
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports {
   -webkit-box-pack: center;
@@ -1065,7 +1090,7 @@ body .v3__container #components__content .v3-reports:not(.control) .container .v
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports .v3-reports__reports-report {
   padding: 24px;
   background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp) no-repeat;
-  background-position: center;
+  background-position: bottom right;
   background-size: cover;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1075,12 +1100,13 @@ body .v3__container #components__content .v3-reports:not(.control) .container .v
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
-  margin: 0 24px 24px 0;
+  margin: 0 25px 24px 0;
   max-width: 326px;
   height: auto !important;
+  border-radius: 16px;
 }
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports .v3-reports__reports-report:nth-child(2) {
-  height: 270px !important;
+  height: 248px !important;
 }
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports .v3-reports__reports-report:last-child {
   margin-right: 0;
@@ -1131,10 +1157,41 @@ body .v3__container #components__content .v3-reports:not(.control) .container .v
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  margin-left: 11px;
 }
-body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__cta {
-  margin: 0;
+body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta .ga__cta img {
+  width: 32px;
+  height: 32px;
+}
+body .v3__container #components__content .v3-reports:not(.control) .container div.v3-reports__cta {
+  margin: 24px 0 56px;
   text-align: center;
+}
+body .v3__container #components__content .v3-reports:not(.control) .container div.v3-reports__cta .ga__cta.v3-reports__cta.btn-blue {
+  padding: 14px 27px;
+  margin: 0;
+}
+body .v3__container #components__content .v3.v3-cta.dark {
+  padding: 56px 0px;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(-4.22%, #081a59), color-stop(610.64%, rgba(0, 169, 206, 0)));
+  background: linear-gradient(180deg, #081a59 -4.22%, rgba(0, 169, 206, 0) 610.64%);
+}
+body .v3__container #components__content .v3.v3-cta.dark .v3-cta__container h2 {
+  color: #fff;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 32px;
+}
+body .v3__container #components__content .v3.v3-cta.dark .v3-cta__container h2 span {
+  font-family: Lora;
+}
+body .v3__container #components__content .v3.v3-cta.dark .v3-cta__cta .ga__cta.btn {
+  margin: 0;
+  padding: 13px 19px;
 }
 
 @-webkit-keyframes progress-forward {
