@@ -1,40 +1,40 @@
 
 
 (function () {
-    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp" as="image">`)
+  document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp" as="image">`)
 
-    //Main function call
-    if (location.pathname.includes('/get-started')) {
-        waitForElm('.mktoFormRow [name="utm_location__c"]').then(function (elm) {
-            document.body.classList.add('spz-3001');
-            submitEmail();
-        });
-    }
-    else {
-        waitForElm('.header__get-started-button.btn').then(function (elm) {
-            document.body.classList.add('spz-3001');
-            createTest3001();
-        });
-    }
+  //Main function call
+  if (location.pathname.includes('/get-started')) {
+    waitForElm('.mktoFormRow [name="utm_location__c"]').then(function (elm) {
+      document.body.classList.add('spz-3001');
+      submitEmail();
+    });
+  }
+  else {
+    waitForElm('.header__get-started-button.btn').then(function (elm) {
+      document.body.classList.add('spz-3001');
+      createTest3001();
+    });
+  }
 
-    //Passing test details to hidden fields
-    function submitEmail() {
-        MktoForms2.whenReady(function (form) {
-            if (getCookie('userEmailSPZ')) {
-                document.querySelector('.mktoFormRow #Email').value = getCookie('userEmailSPZ');
-                setCookieForEmail('userEmailSPZ', '');
-            }
-        });
-    }
+  //Passing test details to hidden fields
+  function submitEmail() {
+    MktoForms2.whenReady(function (form) {
+      if (getCookie('userEmailSPZ')) {
+        document.querySelector('.mktoForm #Email').value = getCookie('userEmailSPZ');
+        setCookieForEmail('userEmailSPZ', '');
+      }
+    });
+  }
 
-    function createTest3001() {
-        //Adding email field in nav
-        document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-3001-email"><input class="spz-email" type="email" placeholder="Email"></div>');
+  function createTest3001() {
+    //Adding email field in nav
+    document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-3001-email"><input class="spz-email" type="email" placeholder="Email"></div>');
 
-        document.querySelector('.header__top-menu').insertAdjacentHTML('afterend', '<div class="header__get-started mobile"><div class="spz-3001-email"><input class="spz-email" type="email" placeholder="Email"></div> <a class="header__get-started-button btn" href="https://www.netskope.com/get-started">Get Started</a></div>');
+    document.querySelector('.header__top-menu').insertAdjacentHTML('afterend', '<div class="header__get-started mobile"><div class="spz-3001-email"><input class="spz-email mobile" type="email" placeholder="Email"></div> <a class="header__get-started-button btn" href="https://www.netskope.com/get-started">Get Started</a></div>');
 
-        //Hero section added here
-        document.querySelector('#components__content').insertAdjacentHTML('afterbegin', `<div class="spz-hero-section">
+    //Hero section added here
+    document.querySelector('#components__content').insertAdjacentHTML('afterbegin', `<div class="spz-hero-section">
         <div class="hero-section-wrapper container">
             <div class="hero-section-title">
                 <h2>Secure your entire<br><span>multi-cloud environment</span></h2>
@@ -99,16 +99,16 @@
         </div>
         </div></div>`);
 
-        //rearranging 1st slider position
-        document.querySelector('.v3-promo .v3-promo__container').before(document.querySelector('.orange_line_off'));
+    //rearranging 1st slider position
+    document.querySelector('.v3-promo .v3-promo__container').before(document.querySelector('.orange_line_off'));
 
-        //Updating search icon
-        document.querySelector('.header__top-menu-link--search img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
-        document.querySelector('.header__top-menu-link-language img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
+    //Updating search icon
+    document.querySelector('.header__top-menu-link--search img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
+    document.querySelector('.header__top-menu-link-language img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
 
 
-        //case studies slider+tabs
-        document.querySelector('.v3-solution-plays').insertAdjacentHTML('afterend', `<div class="spz-case-studies">
+    //case studies slider+tabs
+    document.querySelector('.v3-solution-plays').insertAdjacentHTML('afterend', `<div class="spz-case-studies">
         <div class="">
         <div class="case-studies-wrapper">
             <div class="case-studies-title">
@@ -251,21 +251,26 @@
         </div>
         </div>`);
 
-        document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
+    document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
 
-        document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image').innerHTML = ` <picture>
+    document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image').innerHTML = ` <picture>
         <source media="(min-width:1023.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
         <source media="(min-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
         <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
         </picture>`;
 
-        //rearranging sections
-        document.querySelector('.v3-reports .v3-reports__reports').insertAdjacentElement('afterend', document.querySelector('.v3-reports .v3-reports__cta'));
+    document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content > div p:nth-child(2)').outerHTML = `<div class="mobile-image d-md-none"> <picture><source media="(min-width:1023.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
+        <source media="(min-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
+        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
+        </picture></div>`;
 
-        document.querySelector('body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__cta .ga__cta.v3-reports__cta.btn-blue ').textContent = `See all analyst reports`;
+    //rearranging sections
+    document.querySelector('.v3-reports .v3-reports__reports').insertAdjacentElement('afterend', document.querySelector('.v3-reports .v3-reports__cta'));
 
-        //Product cards added
-        document.querySelector('.v3-promo.homepage').insertAdjacentHTML('afterend', `<div class="v3 v3-reports v3-reports-6593cee681481 control light">
+    document.querySelector('body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__cta .ga__cta.v3-reports__cta.btn-blue ').textContent = `See all analyst reports`;
+
+    //Product cards added
+    document.querySelector('.v3-promo.homepage').insertAdjacentHTML('afterend', `<div class="v3 v3-reports v3-reports-6593cee681481 control light">
         <div class="container">
             <div class="row">
                 <div class="col-12 col-lg-12">
@@ -300,13 +305,13 @@
                     <div class="v3-reports__reports-report-text "> Automatically adapts to the ever-growing data landscape, including generative AI and new AI-driven attacks.</div>
                     <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/skopeai"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/skopeai">Learn more</a> </span></div>
                 </div>
-                <div class="v3-reports__reports-report d-none d-md-block">
+                <div class="v3-reports__reports-report d-none d-md-flex mob-hidden-1">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/private-access-for-ztna-icon-55x55-1.svg" alt="NPA (ZTNA) icon"></div>
                     <div class="v3-reports__reports-report-title "> Private Access for ZTNA</div>
                     <div class="v3-reports__reports-report-text "> Connect users anywhere to private resources ensuring fast and direct application connectivity and superior user experience.</div>
                     <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/private-access"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/private-access">Learn more</a> </span></div>
                 </div>
-                <div class="v3-reports__reports-report d-none d-md-block">
+                <div class="v3-reports__reports-report d-none d-md-flex mob-hidden-2">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/public-cloud-security-icon-55x55-1.svg" alt="Public Cloud Security icon"></div>
                     <div class="v3-reports__reports-report-title "> Public Cloud Security</div>
                     <div class="v3-reports__reports-report-text "> Gain visibility, control, and compliance across your multi-cloud environment.</div>
@@ -317,7 +322,7 @@
         </div>
         </div>`);
 
-        document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container').innerHTML = `<div class="spz-custom-slider">
+    document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container').innerHTML = `<div class="spz-custom-slider">
         <div id="v3-promo__boxes" class="v3-promo__boxes v3-promo__boxes-wrapper">
           <div class="v3-promo__box">
             <div class="v3-promo__box-inner">
@@ -497,137 +502,152 @@
         </div>
         `;
 
-        //Updating slider icon
-        waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
-            document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
+    //Updating slider icon
+    waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
+      document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
 
-            document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
-                element.setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
-            });;
+      document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
+        element.setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
+      });;
 
-            jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
+      jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
 
-        });
-
-
-        waitForElm('.slick-initialized').then(function (elm) {
-            jQuery('.slider-content').slick({
-                slidesToShow: 1,
-                slidesToScroll: 1,
-                infinite: true,
-                // autoplay: true,
-                // autoplaySpeed: 1000,
-                centerMode: true,
-                asNavFor: '.slider-thumb',
-                arrows: false,
-                variableWidth: true
-            });
-            jQuery('.slider-thumb').slick({
-                slidesToShow: 'auto',
-                slidesToScroll: 4,
-                asNavFor: '.slider-content',
-                dots: false,
-                centerMode: false,
-                focusOnSelect: true
-            });
-
-            jQuery('#v3-promo__boxes').slick({
-                slidesToShow: 3,
-                slidesToScroll: 1,
-                arrows: true,
-                infinite: false,
-                prevArrow: jQuery('.v3-promo__slider-arrow.slick-prev'),
-                nextArrow: jQuery('.v3-promo__slider-arrow.slick-next'),
-                responsive: [
-                    {
-                        breakpoint: 1280,
-                        settings: {
-                            slidesToShow: 2,
-                        }
-                    },
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow: 1.3,
-                        }
-                    },
-
-                ]
-            });
-
-        });
-    }
-
-    //on focus of .spz-email addClass to .header__get-started
-    waitForElm('.spz-email').then(function (elm) {
-        document.querySelector('.spz-email').addEventListener('focus', function (event) {
-            document.querySelector('.header__get-started').classList.add('i-focused');
-        });
-
-        document.querySelector('.spz-email').addEventListener('blur', function (event) {
-            document.querySelector('.header__get-started').classList.remove('i-focused');
-        });
-
-        hover(document.querySelector('.spz-email'), "i-hover");
     });
 
-    function hover(element, className) {
-        element.addEventListener('mouseenter', e => element.closest('.header__get-started').classList.add(className))
-        element.addEventListener('mouseleave', e => element.closest('.header__get-started').classList.remove(className))
-    }
 
-    //All click events
-    window.addEventListener("click", function (e) {
-        if (e.target.classList.contains('header__get-started-button')) {
-            let emailValue = this.document.querySelector('.spz-email').value;
-            setCookieForEmail('userEmailSPZ', emailValue);
-        }
+    waitForElm('.slick-initialized').then(function (elm) {
+      jQuery('#v3-promo__boxes').slick({
+        slidesToShow: 3,
+        slidesToScroll: 1,
+        arrows: true,
+        infinite: false,
+        prevArrow: jQuery('.v3-promo__slider-arrow.slick-prev'),
+        nextArrow: jQuery('.v3-promo__slider-arrow.slick-next'),
+        responsive: [
+          {
+            breakpoint: 1280,
+            settings: {
+              slidesToShow: 2,
+            }
+          },
+          {
+            breakpoint: 767,
+            settings: {
+              slidesToShow: 1.155,
+            }
+          },
+        ]
+      });
 
-        if (e.target.className == "spz-input") {
-            if (e.target.checked) {
-                e.target.closest('.custom-check').classList.add('checked');
+      jQuery('.slider-content').slick({
+        slidesToShow: 1,
+        slidesToScroll: 1,
+        infinite: true,
+        // autoplay: true,
+        // autoplaySpeed: 1000,
+        centerMode: true,
+        asNavFor: '.slider-thumb',
+        arrows: false,
+        variableWidth: true,
+        responsive: [
+          {
+            breakpoint: 767,
+            settings: {
+              // slidesToShow: 1.155,
+              centerMode: false,
             }
-            else {
-                e.target.closest('.custom-check').classList.remove('checked');
-            }
-        }
+          },
+        ]
+      });
+      jQuery('.slider-thumb').slick({
+        slidesToShow: 'auto',
+        slidesToScroll: 4,
+        asNavFor: '.slider-content',
+        dots: false,
+        centerMode: false,
+        focusOnSelect: true
+      });
+
+
+    });
+  }
+
+  //on focus of .spz-email addClass to .header__get-started
+  waitForElm('.spz-email').then(function (elm) {
+    document.querySelector('.spz-email').addEventListener('focus', function (event) {
+      document.querySelector('.header__get-started').classList.add('i-focused');
     });
 
-    function waitForElm(selector) {
-        return new Promise(function (resolve) {
-            if (document.querySelector(selector)) {
-                return resolve(document.querySelector(selector));
-            }
-            const observer = new MutationObserver(function (mutations) {
-                if (document.querySelector(selector)) {
-                    resolve(document.querySelector(selector));
-                    observer.disconnect();
-                }
-            });
-            observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
-        });
+    document.querySelector('.spz-email').addEventListener('blur', function (event) {
+      document.querySelector('.header__get-started').classList.remove('i-focused');
+    });
+
+    hover(document.querySelector('.spz-email'), "i-hover");
+  });
+
+  function hover(element, className) {
+    element.addEventListener('mouseenter', e => element.closest('.header__get-started').classList.add(className))
+    element.addEventListener('mouseleave', e => element.closest('.header__get-started').classList.remove(className))
+  }
+
+  //All click events
+  window.addEventListener("click", function (e) {
+    if (e.target.classList.contains('header__get-started-button')) {
+      let emailValue = this.document.querySelector('.spz-email').value || this.document.querySelector('.spz-email.mobile').value;
+      setCookieForEmail('userEmailSPZ', emailValue);
     }
 
-    // Add class 'safari' (used for cart scrollbar)
-    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-        document.body.classList.add('safari')
+    if (e.target.classList.contains('white-btn')) {
+      this.document.querySelector('.v3-reports.control .v3-reports__reports .mob-hidden-1').classList.remove('d-none');
+      this.document.querySelector('.v3-reports.control .v3-reports__reports .mob-hidden-2').classList.remove('d-none');
+      this.document.querySelector('.white-btn').classList.add('d-none');
     }
 
-    // Set a Cookie
-    function setCookieForEmail(cName, cValue) {
-        document.cookie = cName + "=" + cValue + "; path=/";
+    if (e.target.className == "spz-input") {
+      if (e.target.checked) {
+        e.target.closest('.custom-check').classList.add('checked');
+      }
+      else {
+        e.target.closest('.custom-check').classList.remove('checked');
+      }
     }
+  });
 
-    //Get a cookie
-    function getCookie(cName) {
-        const name = cName + "=";
-        const cDecoded = decodeURIComponent(document.cookie); //to be careful
-        const cArr = cDecoded.split('; ');
-        let res;
-        cArr.forEach(val => {
-            if (val.indexOf(name) === 0) res = val.substring(name.length);
-        })
-        return res;
-    }
+  function waitForElm(selector) {
+    return new Promise(function (resolve) {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+      const observer = new MutationObserver(function (mutations) {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+  }
+
+  // Add class 'safari' (used for cart scrollbar)
+  if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+    document.body.classList.add('safari')
+  }
+
+  // Set a Cookie
+  function setCookieForEmail(cName, cValue) {
+    document.cookie = cName + "=" + cValue + "; path=/";
+  }
+
+  //Get a cookie
+  function getCookie(cName) {
+    const name = cName + "=";
+    const cDecoded = decodeURIComponent(document.cookie); //to be careful
+    const cArr = cDecoded.split('; ');
+    let res;
+    cArr.forEach(val => {
+      if (val.indexOf(name) === 0) res = val.substring(name.length);
+    })
+    return res;
+  }
 })();
 
