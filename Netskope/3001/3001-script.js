@@ -520,7 +520,7 @@
         document.querySelector('.custom-card').remove();
         document.querySelector('.custom-title').remove();
       }
-      
+
       document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
   
       document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
@@ -532,6 +532,7 @@
         slidesToScroll: 1,
         arrows: true,
         infinite: false,
+        centerMode: false,
         prevArrow: jQuery('.v3-promo__slider-arrow.slick-prev'),
         nextArrow: jQuery('.v3-promo__slider-arrow.slick-next'),
         responsive: [
