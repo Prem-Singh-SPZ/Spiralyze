@@ -211,6 +211,10 @@ body {
         background-position: center;
         background-size: cover;
 
+        @media (min-width: 1900px) {
+          background-size: contain;
+        }
+
         .hero-section-wrapper {
           padding-top: 56px;
           padding-bottom: 64px;
@@ -250,7 +254,7 @@ body {
               }
 
               &::after {
-                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
                 position: absolute;
                 width: 20px;
                 height: 20px;
@@ -259,18 +263,24 @@ body {
                 @media (max-width: 1023.98px) {
                   display: none;
                 }
+
+                @media (min-width: 3500.98px) {
+                  left: -34px;
+                }
               }
 
               &::before {
-                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
                 position: absolute;
                 width: 20px;
                 height: 20px;
-                right: 0;
                 right: 4px;
                 bottom: 18px;
                 @media (max-width: 1023.98px) {
                   display: none;
+                }
+                @media (min-width: 3500.98px) {
+                  right: -34px;
                 }
               }
             }
@@ -329,7 +339,7 @@ body {
                 width: 212px;
                 height: 156px;
                 border-radius: 16px;
-                background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_light.webp)
+                background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_light.webp)
                   no-repeat;
                 background-position: center;
                 background-size: cover;
@@ -368,14 +378,14 @@ body {
                 }
 
                 &:hover {
-                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp)
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp)
                     no-repeat;
                   background-position: center;
                   background-size: cover;
                   border: 1.5px solid #95fa97;
 
                   .checkmark {
-                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg);
+                    content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg);
                   }
 
                   p {
@@ -390,7 +400,7 @@ body {
 
                 .checkmark {
                   position: absolute;
-                  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
+                  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
                   width: 16px;
                   height: 16px;
                   top: 12px;
@@ -398,13 +408,13 @@ body {
                 }
 
                 &.checked {
-                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp)
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp)
                     no-repeat;
                   background-position: center;
                   background-size: cover;
                   border: 1.5px solid #95fa97;
                   .checkmark {
-                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg);
+                    content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg);
                   }
 
                   p {
@@ -517,14 +527,14 @@ body {
 
       .spz-banner-section {
         background: #081a59
-          url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp)
+          url(//res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp)
           no-repeat;
         background-position: top center;
         background-size: cover;
 
         @media (max-width: 767.98px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691733/netskope/3001/hero_image_mobile_1.webp)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701691733/netskope/3001/hero_image_mobile_1.webp)
             no-repeat;
           background-position: top center;
           background-size: cover;
@@ -532,7 +542,7 @@ body {
 
         @media (max-width: 1023.98px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_tablet_1.webp)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_tablet_1.webp)
             no-repeat;
           background-position: top center;
           background-size: cover;
@@ -540,7 +550,7 @@ body {
 
         @media (min-width: 1900px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691784/netskope/3001/hero_image_1921.webp)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701691784/netskope/3001/hero_image_1921.webp)
             no-repeat;
           background-position: top center;
           background-size: cover;
@@ -548,7 +558,7 @@ body {
 
         @media (min-width: 3000px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701691785/netskope/3001/hero_image_4k_1.webp)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701691785/netskope/3001/hero_image_4k_1.webp)
             no-repeat;
           background-position: top center;
           background-size: cover;
@@ -611,14 +621,14 @@ body {
         margin-top: 0;
         padding: 96px 0;
         background: #081a59
-          url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg)
+          url(//res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg)
           no-repeat;
         background-position: top left;
         background-size: cover;
 
         @media (max-width: 1023.98px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_tablet_1.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_tablet_1.svg)
             no-repeat;
           background-position: top left;
           background-size: cover;
@@ -627,17 +637,17 @@ body {
 
         @media (min-width: 1900px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1704370332/netskope/3001/report_background_1921.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1704370332/netskope/3001/report_background_1921.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
         @media (min-width: 3000px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1704370348/netskope/3001/report_background_4k_1.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1704370348/netskope/3001/report_background_4k_1.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -648,7 +658,7 @@ body {
         .v3-two-column-image.orange_line_off {
           padding-bottom: 88px;
           background-color: transparent;
-          
+
           @media (max-width: 1123.98px) {
             overflow: hidden;
             padding-bottom: 20px;
@@ -878,7 +888,7 @@ body {
                 }
 
                 .v3-promo__box-inner {
-                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
                   background-size: cover !important;
                   background-repeat: no-repeat !important;
                   background-position: right bottom !important;
@@ -984,14 +994,14 @@ body {
       .v3-reports.light.control {
         padding: 96px 0;
         background: #d9f3f9
-          url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
+          url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
           no-repeat;
         background-position: top left;
         background-size: cover;
 
         @media (max-width: 1023.98px) {
           background: #d9f3f9
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_tablet.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_tablet.svg)
             no-repeat;
           background-position: top left;
           background-size: cover;
@@ -1000,17 +1010,17 @@ body {
 
         @media (min-width: 1900px) {
           background: #d9f3f9
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690113/netskope/3001/products_background_1920.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701690113/netskope/3001/products_background_1920.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
         @media (min-width: 3000px) {
           background: #d9f3f9
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690070/netskope/3001/products_background_4k.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701690070/netskope/3001/products_background_4k.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -1068,7 +1078,7 @@ body {
             .v3-reports__reports-report {
               padding: 24px;
               background: #081a59
-                url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp)
+                url(//res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp)
                 no-repeat;
               background-position: center;
               background-size: cover;
@@ -1102,7 +1112,7 @@ body {
               }
 
               &::before {
-                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
                 position: absolute;
                 top: 24px;
                 right: 24px;
@@ -1212,33 +1222,33 @@ body {
 
       .spz-case-studies {
         background: #081a59
-          url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg)
+          url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg)
           no-repeat;
-        background-position: top;
-        // background-size: cover;
+        background-position: top center;
+        background-size: auto;
 
         @media (max-width: 1023.98px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_tablet.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_tablet.svg)
             no-repeat;
-          background-position: top left;
+          background-position: top center;
           background-size: cover;
         }
 
         @media (min-width: 1900px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690111/netskope/3001/case_studies_background_1920.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701690111/netskope/3001/case_studies_background_1920.svg)
             no-repeat;
-          background-position: top left;
-          background-size: cover;
+          background-position: top center;
+          background-size: contain;
         }
 
         @media (min-width: 3000px) {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690064/netskope/3001/case_studies_background_4k.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701690064/netskope/3001/case_studies_background_4k.svg)
             no-repeat;
-          background-position: top left;
-          background-size: cover;
+          background-position: top center;
+          background-size: auto;
         }
 
         .case-studies-wrapper {
@@ -1340,9 +1350,9 @@ body {
 
                   &:last-child {
                     margin-right: 0;
-                    @media (min-width: 1023.98px) {
-                      display: none;
-                    }
+                    // @media (min-width: 1023.98px) {
+                    //   display: none;
+                    // }
                   }
                   .cs-card-title {
                     p {
@@ -1393,6 +1403,8 @@ body {
               }
             }
             .slider-content {
+              max-width: 2854px;
+              margin: auto;
               @media (max-width: 767.98px) {
                 padding-left: 24px;
               }
@@ -1414,11 +1426,29 @@ body {
                   );
                   z-index: 1;
 
+                  @media (max-width: 767.98px) {
+                    display: none;
+                  }
                   @media (max-width: 1023.98px) {
                     width: 35px;
                   }
-                  @media (max-width: 767.98px) {
-                    display: none;
+                  @media (min-width: 1900.98px) {
+                    width: 452px;
+                    background: linear-gradient(
+                      270deg,
+                      #081a59 0%,
+                      rgba(8, 26, 89, 0.46) 53.68%,
+                      rgba(8, 26, 89, 0) 100%
+                    );
+                  }
+                  @media (min-width: 3500.98px) {
+                    width: 920px;
+                    background: linear-gradient(
+                      270deg,
+                      #081a59 0%,
+                      rgba(8, 26, 89, 0.46) 69.89%,
+                      rgba(8, 26, 89, 0) 100%
+                    );
                   }
                 }
 
@@ -1436,17 +1466,35 @@ body {
                   );
                   z-index: 1;
 
+                  @media (max-width: 767.98px) {
+                    display: none;
+                  }
                   @media (max-width: 1023.98px) {
                     width: 35px;
                   }
-                  @media (max-width: 767.98px) {
-                    display: none;
+                  @media (min-width: 1900.98px) {
+                    width: 452px;
+                    background: linear-gradient(
+                      90deg,
+                      #081a59 0%,
+                      rgba(8, 26, 89, 0.46) 53.68%,
+                      rgba(8, 26, 89, 0) 100%
+                    );
+                  }
+                  @media (min-width: 3500.98px) {
+                    width: 920px;
+                    background: linear-gradient(
+                      90deg,
+                      #081a59 0%,
+                      rgba(8, 26, 89, 0.46) 69.89%,
+                      rgba(8, 26, 89, 0) 100%
+                    );
                   }
                 }
 
                 .slick-slide {
                   background: #d9f3f9
-                    url(https://res.cloudinary.com/spiralyze/image/upload/v1701452314/netskope/3001/background_testimonials_card.webp)
+                    url(//res.cloudinary.com/spiralyze/image/upload/v1701452314/netskope/3001/background_testimonials_card.webp)
                     no-repeat;
                   background-position: bottom right;
                   background-size: cover;
@@ -1641,7 +1689,7 @@ body {
         }
         .wistia_embed.background_video:after {
           background: #081a59
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452152/netskope/3001/video_wrapper_desktop.webp)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701452152/netskope/3001/video_wrapper_desktop.webp)
             no-repeat;
           background-size: cover;
           background-position: center;
@@ -1651,7 +1699,7 @@ body {
 
           @media (max-width: 767.98px) {
             background: #081a59
-              url(https://res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_mobile.webp)
+              url(//res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_mobile.webp)
               no-repeat;
             background-position: top left;
             background-size: cover;
@@ -1659,7 +1707,7 @@ body {
 
           @media (max-width: 1023.98px) {
             background: #081a59
-              url(https://res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_tablet.webp)
+              url(//res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_tablet.webp)
               no-repeat;
             background-position: top left;
             background-size: cover;
@@ -1696,7 +1744,7 @@ body {
               content: "";
               width: 96px;
               height: 96px;
-              background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452233/netskope/3001/play_desktop_tablet.svg)
+              background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452233/netskope/3001/play_desktop_tablet.svg)
                 no-repeat;
               background-size: 94px 94px;
               background-position: center;
@@ -1713,7 +1761,7 @@ body {
               @media (max-width: 767.98px) {
                 width: 64px;
                 height: 64px;
-                background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452250/netskope/3001/play_mobile.svg)
+                background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452250/netskope/3001/play_mobile.svg)
                   no-repeat;
                 background-size: 62px 62px;
                 background-position: center;
@@ -1733,14 +1781,14 @@ body {
       .v3-reports:not(.control) {
         padding-top: 94px;
         background: #d9f3f9
-          url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg)
+          url(//res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg)
           no-repeat;
         background-position: top left;
         background-size: cover;
 
         @media (max-width: 1023.98px) {
           background: #d9f3f9
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_tablet.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_tablet.svg)
             no-repeat;
           background-position: top left;
           background-size: cover;
@@ -1749,17 +1797,17 @@ body {
 
         @media (min-width: 1900px) {
           background: #d9f3f9
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690112/netskope/3001/trusted_section_background_1920.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701690112/netskope/3001/trusted_section_background_1920.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
         @media (min-width: 3000px) {
           background: #d9f3f9
-            url(https://res.cloudinary.com/spiralyze/image/upload/v1701690068/netskope/3001/trusted_section_background_4k.svg)
+            url(//res.cloudinary.com/spiralyze/image/upload/v1701690068/netskope/3001/trusted_section_background_4k.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
         }
 
@@ -1864,7 +1912,7 @@ body {
             .v3-reports__reports-report {
               padding: 24px 20px 24px 24px;
               background: #081a59
-                url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp)
+                url(//res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp)
                 no-repeat;
               background-position: bottom right;
               background-size: cover;
@@ -1908,7 +1956,7 @@ body {
               // }
 
               &::before {
-                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
                 position: relative;
                 width: 20px;
                 height: 20px;

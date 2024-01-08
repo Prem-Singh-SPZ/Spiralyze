@@ -1,7 +1,7 @@
 
 
 (function () {
-  document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp" as="image">`)
+  document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp" as="image">`)
 
   //Main function call
   if (location.pathname.includes('/get-started')) {
@@ -43,27 +43,27 @@
             <div class="hero-section-cards">
                 <div class="checkboxes">
                     <div class="check-box">
-                        <label class="custom-check"> <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198970/netskope/3001/icon_wrapper_14.svg" alt="Secure and Accelerate Web and Cloud Access">
+                        <label class="custom-check"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198970/netskope/3001/icon_wrapper_14.svg" alt="Secure and Accelerate Web and Cloud Access">
                             <p>Secure and Accelerate Web and Cloud Access</p>
                             <input class="spz-input" type="checkbox" value="Secure and Accelerate Web and Cloud Access"> <span class="checkmark"></span> </label>
                     </div>
                     <div class="check-box">
-                        <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198967/netskope/3001/icon_wrapper_12.svg" alt="Evolve Beyond Legacy VPN">
+                        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1704198967/netskope/3001/icon_wrapper_12.svg" alt="Evolve Beyond Legacy VPN">
                             <p>Evolve Beyond<br>Legacy VPN</p>
                             <input class="spz-input" type="checkbox" value="Evolve Beyond Legacy VPN"><span class="checkmark"></span></label>
                     </div>
                     <div class="check-box">
-                        <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198972/netskope/3001/icon_wrapper_15.svg" alt="Simplify & Redefine Data Protection">
+                        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1704198972/netskope/3001/icon_wrapper_15.svg" alt="Simplify & Redefine Data Protection">
                             <p>Simplify & Redefine<br>Data Protection</p>
                             <input class="spz-input" type="checkbox" value="Other"><span class="checkmark"></span></label>
                     </div>
                     <div class="check-box">
-                        <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198969/netskope/3001/icon_wrapper_13.svg" alt="Modernize Enterprise Networking">
+                        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1704198969/netskope/3001/icon_wrapper_13.svg" alt="Modernize Enterprise Networking">
                             <p>Modernize Enterprise Networking</p>
                             <input class="spz-input" type="checkbox" value="Modernize Enterprise Networking"><span class="checkmark"></span></label>
                     </div>
                     <div class="check-box">
-                        <label class="custom-check"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198973/netskope/3001/icon_wrapper_16.svg" alt="Consolidate Your Security Architecture">
+                        <label class="custom-check"><img src="//res.cloudinary.com/spiralyze/image/upload/v1704198973/netskope/3001/icon_wrapper_16.svg" alt="Consolidate Your Security Architecture">
                             <p>Consolidate Your<br>Security Architecture</p>
                             <input class="spz-input" type="checkbox" value="Consolidate Your Security Architecture"><span class="checkmark"></span></label>
                     </div>
@@ -74,14 +74,14 @@
                 <div class="v3"> <a href="https://www.netskope.com/products" class="learn-more-cta btn">Learn more</a></div>
             </div>
             <div class="hero-section-review">
-                <div class="section-review"> <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198255/netskope/3001/gartner_svg.svg" alt="Gartner" class="Gartner"> <picture>
-                <source media="(max-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
+                <div class="section-review"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198255/netskope/3001/gartner_svg.svg" alt="Gartner" class="Gartner"> <picture>
+                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
                 </picture>
                 <span>4.6</span></div>
-                <div class="section-review"> <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198276/netskope/3001/g2_svg.svg" alt="G2" class="Gartner"> <picture>
-                <source media="(max-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
+                <div class="section-review"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198276/netskope/3001/g2_svg.svg" alt="G2" class="Gartner"> <picture>
+                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
                 </picture>
                 <span>4.4</span></div>
             </div>
@@ -92,9 +92,9 @@
         <h6>We partner with leaders across the security industry</h6>
         <div class="banner-images">
         <picture>
-                <source media="(min-width:1023.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704200652/netskope/3001/Logos_Desktop.svg">
-                <source media="(min-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704200652/netskope/3001/Logos_Tablet.svg">
-                <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704200652/netskope/3001/Logos_Mobile.svg" alt="Our Partners">
+                <source media="(min-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704200652/netskope/3001/Logos_Desktop.svg">
+                <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704200652/netskope/3001/Logos_Tablet.svg">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1704200652/netskope/3001/Logos_Mobile.svg" alt="Our Partners">
         </picture>
         </div>
         </div></div>`);
@@ -103,8 +103,8 @@
     document.querySelector('.v3-promo .v3-promo__container').before(document.querySelector('.orange_line_off'));
 
     //Updating search icon
-    document.querySelector('.header__top-menu-link--search img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
-    document.querySelector('.header__top-menu-link-language img').setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
+    document.querySelector('.header__top-menu-link--search img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
+    document.querySelector('.header__top-menu-link-language img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
 
 
     //case studies slider+tabs
@@ -132,7 +132,7 @@
                     <div class="cs-card-title"><p>Delivering a Secure Cloud Experience</p><div class="progress-bar">
   <div class="progress-fill"></div>
 </div></div>
-                    <div class="cs-card-title"><p>A Better Prognosis for a National Healthcare Organization</p><div class="progress-bar">
+                    <div class="cs-card-title custom-title"><p>A Better Prognosis for a National Healthcare Organization</p><div class="progress-bar">
   <div class="progress-fill"></div>
 </div></div>
                 </div>
@@ -147,7 +147,7 @@
                         </div>
                         <div class="cs-reviewer">
                             <div class="cs-anchor">
-                            <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service"> <img alt="chevron" class="no-lazyload" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service">Read their story</a> </span></div>
+                            <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service">Read their story</a> </span></div>
                             </div>
                             <div class="cs-name">
                             <h6>Adam Carey</h6>
@@ -165,7 +165,7 @@
                     </div>
                     <div class="cs-reviewer">
                         <div class="cs-anchor">
-                        <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/morgan-sindall"> <img alt="chevron" class="no-lazyload" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/morgan-sindall">Read their story</a> </span></div>
+                        <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/morgan-sindall"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/morgan-sindall">Read their story</a> </span></div>
                         </div>
                         <div class="cs-name">
                         <h6>Neil Binnie</h6>
@@ -183,7 +183,7 @@
                 </div>
                 <div class="cs-reviewer">
                     <div class="cs-anchor">
-                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/waubonsee-community-college"> <img alt="chevron" class="no-lazyload" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/waubonsee-community-college">Read their story</a> </span></div>
+                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/waubonsee-community-college"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/waubonsee-community-college">Read their story</a> </span></div>
                     </div>
                     <div class="cs-name">
                     <h6>Tarun Trivedi</h6>
@@ -193,7 +193,7 @@
                 </div>
                 <div class="cs-card">
                 <div class="cs-content">
-                    <p>"Before, we could never be 100%. We couldn’t say that to our auditors or say with confidence that all patient data was prevented from flowing into Dropbox. We also couldn’t give users the flexibility of using apps for non-sensitive transfers. Rarely do we have a security solution like this that can make things so easy and secure.”</p>
+                    <p>"Before, we could never be 100%. We couldn&#8217;t say that to our auditors or say with confidence that all patient data was prevented from flowing into Dropbox. We also couldn&#8217;t give users the flexibility of using apps for non-sensitive transfers. Rarely do we have a security solution like this that can make things so easy and secure.”</p>
                     <div class="cs-name tab-mob">
                     <h6>Head of IT Security</h6>
                     <p>Internationally Recognized Hospital</p>
@@ -201,7 +201,7 @@
                 </div>
                 <div class="cs-reviewer">
                     <div class="cs-anchor">
-                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/hospital-it-team"> <img alt="chevron" class="no-lazyload" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/hospital-it-team">Read their story</a> </span></div>
+                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/hospital-it-team"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/hospital-it-team">Read their story</a> </span></div>
                     </div>
                     <div class="cs-name">
                     <h6>Head of IT Security</h6>
@@ -211,7 +211,7 @@
                 </div>
                 <div class="cs-card">
                 <div class="cs-content">
-                    <p>“We identified more than 600 applications that were being accessed within the CARE Ratings setup. With Netskope’s application and risk awareness, we have been able to tighten access restrictions, based on the risk of the apps themselves and the role-based profiles of the users accessing them.”</p>
+                    <p>“We identified more than 600 applications that were being accessed within the CARE Ratings setup. With Netskope&#8217;s application and risk awareness, we have been able to tighten access restrictions, based on the risk of the apps themselves and the role-based profiles of the users accessing them.”</p>
                     <div class="cs-name tab-mob">
                     <h6>A. Shiju Rawther</h6>
                     <p>Chief Information & Technology Officer at CARE Ratings</p>
@@ -219,7 +219,7 @@
                 </div>
                 <div class="cs-reviewer">
                     <div class="cs-anchor">
-                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/care-ratings"> <img alt="chevron" class="no-lazyload" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/care-ratings">Read their story</a> </span></div>
+                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/care-ratings"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/care-ratings">Read their story</a> </span></div>
                     </div>
                     <div class="cs-name">
                     <h6>A. Shiju Rawther</h6>
@@ -227,7 +227,7 @@
                     </div>
                 </div>
                 </div>
-                <div class="cs-card">
+                <div class="cs-card custom-card">
                 <div class="cs-content">
                     <p>“Netskope has the fuller SSE feature-set, meeting our requirements.” “With Netskope we have the ability to effectively perform real-time Tenant Restrictions for both internal owned O365 tenants and external tenants.”</p>
                     <div class="cs-name tab-mob">
@@ -237,7 +237,7 @@
                 </div>
                 <div class="cs-reviewer">
                     <div class="cs-anchor">
-                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/national-healthcare-organization"> <img alt="chevron" class="no-lazyload" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/national-healthcare-organization">Read their story</a> </span></div>
+                    <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/national-healthcare-organization"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/national-healthcare-organization">Read their story</a> </span></div>
                     </div>
                     <div class="cs-name">
                     <h6>Systems Architect</h6>
@@ -254,14 +254,14 @@
     document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
 
     document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image').innerHTML = ` <picture>
-        <source media="(min-width:1023.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
-        <source media="(min-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
-        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
+        <source media="(min-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
+        <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
         </picture>`;
 
-    document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content > div p:nth-child(2)').outerHTML = `<div class="mobile-image d-md-none"> <picture><source media="(min-width:1023.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
-        <source media="(min-width:767.98px)" srcset="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
-        <img src="https://res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
+    document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content > div p:nth-child(2)').outerHTML = `<div class="mobile-image d-md-none"> <picture><source media="(min-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704198562/netskope/3001/image_desktop.webp">
+        <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_tablet.webp">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198561/netskope/3001/image_mobile.webp" alt="Netskope recognized as a Leader in the 2023 Gartner® Magic QuadrantTM for SSE." class=" lazyloaded">
         </picture></div>`;
 
     //rearranging sections
@@ -349,7 +349,7 @@
                     <img
                       alt="chevron"
                       class="no-lazyload"
-                      src="https://res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
                     />
                   </a>
                 </span>
@@ -389,7 +389,7 @@
                     <img
                       alt="chevron"
                       class="no-lazyload"
-                      src="https://res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
                     />
                   </a>
                 </span>
@@ -429,7 +429,7 @@
                     <img
                       alt="chevron"
                       class="no-lazyload"
-                      src="https://res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
                     />
                   </a>
                 </span>
@@ -469,7 +469,7 @@
                     <img
                       alt="chevron"
                       class="no-lazyload"
-                      src="https://res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
                     />
                   </a>
                 </span>
@@ -488,26 +488,31 @@
           <div class="v3-promo__slider-arrow slick-prev">
             <img
               class="no-lazyload"
-              src="https://res.cloudinary.com/spiralyze/image/upload/v1704198617/netskope/3001/icon_wrapper_1.svg"
+              src="//res.cloudinary.com/spiralyze/image/upload/v1704198617/netskope/3001/icon_wrapper_1.svg"
               alt="arrow left"
             />
           </div>
           <div class="v3-promo__slider-arrow slick-next">
             <img
               class="no-lazyload"
-              src="https://res.cloudinary.com/spiralyze/image/upload/v1704198616/netskope/3001/icon_wrapper.svg"
+              src="//res.cloudinary.com/spiralyze/image/upload/v1704198616/netskope/3001/icon_wrapper.svg"
               alt="arrow right"
             />
           </div>
         </div>
         `;
 
+
+    //check if locale text is available
+    if (document.querySelector('#locale_place_holder') && document.querySelector('#locale_place_holder').textContent == '') {
+      document.querySelector('#locale_place_holder').textContent = 'EN';
+    }
     //Updating slider icon
     waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
       document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
 
       document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
-        element.setAttribute('src', 'https://res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
+        element.setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
       });;
 
       jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
@@ -516,6 +521,11 @@
 
 
     waitForElm('.slick-initialized').then(function (elm) {
+      if (window.innerWidth > 1023 && document.querySelector('.custom-card')) {
+        document.querySelector('.custom-card').remove();
+        document.querySelector('.custom-title').remove();
+      }
+
       jQuery('#v3-promo__boxes').slick({
         slidesToShow: 3,
         slidesToScroll: 1,

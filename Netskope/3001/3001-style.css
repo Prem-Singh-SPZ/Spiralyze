@@ -190,6 +190,11 @@ body .v3__container #components__content .spz-hero-section {
   background-position: center;
   background-size: cover;
 }
+@media (min-width: 1900px) {
+  body .v3__container #components__content .spz-hero-section {
+    background-size: contain;
+  }
+}
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper {
   padding-top: 56px;
   padding-bottom: 64px;
@@ -232,7 +237,7 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   }
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::after {
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
   position: absolute;
   width: 20px;
   height: 20px;
@@ -244,18 +249,27 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
     display: none;
   }
 }
+@media (min-width: 3500.98px) {
+  body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::after {
+    left: -34px;
+  }
+}
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::before {
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197362/netskope/3001/min_plus_1.svg);
   position: absolute;
   width: 20px;
   height: 20px;
-  right: 0;
   right: 4px;
   bottom: 18px;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::before {
     display: none;
+  }
+}
+@media (min-width: 3500.98px) {
+  body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title h2::before {
+    right: -34px;
   }
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-title p {
@@ -334,7 +348,7 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   width: 212px;
   height: 156px;
   border-radius: 16px;
-  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_light.webp) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_light.webp) no-repeat;
   background-position: center;
   background-size: cover;
   position: relative;
@@ -373,13 +387,13 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   margin: 0;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check:hover {
-  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp) no-repeat;
   background-position: center;
   background-size: cover;
   border: 1.5px solid #95fa97;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check:hover .checkmark {
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg);
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check:hover p {
   color: #ffffff;
@@ -390,20 +404,20 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check .checkmark {
   position: absolute;
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197700/netskope/3001/checkbox_base_5.svg);
   width: 16px;
   height: 16px;
   top: 12px;
   left: 12px;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check.checked {
-  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452367/netskope/3001/hero_card_background_dark.webp) no-repeat;
   background-position: center;
   background-size: cover;
   border: 1.5px solid #95fa97;
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check.checked .checkmark {
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg);
 }
 body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check.checked p {
   color: #ffffff;
@@ -518,34 +532,34 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   line-height: 24px;
 }
 body .v3__container #components__content .spz-banner-section {
-  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp) no-repeat;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_desktop_1.webp) no-repeat;
   background-position: top center;
   background-size: cover;
 }
 @media (max-width: 767.98px) {
   body .v3__container #components__content .spz-banner-section {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701691733/netskope/3001/hero_image_mobile_1.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701691733/netskope/3001/hero_image_mobile_1.webp) no-repeat;
     background-position: top center;
     background-size: cover;
   }
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .spz-banner-section {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_tablet_1.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701691734/netskope/3001/hero_image_tablet_1.webp) no-repeat;
     background-position: top center;
     background-size: cover;
   }
 }
 @media (min-width: 1900px) {
   body .v3__container #components__content .spz-banner-section {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701691784/netskope/3001/hero_image_1921.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701691784/netskope/3001/hero_image_1921.webp) no-repeat;
     background-position: top center;
     background-size: cover;
   }
 }
 @media (min-width: 3000px) {
   body .v3__container #components__content .spz-banner-section {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701691785/netskope/3001/hero_image_4k_1.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701691785/netskope/3001/hero_image_4k_1.webp) no-repeat;
     background-position: top center;
     background-size: cover;
   }
@@ -619,13 +633,13 @@ body .v3__container #components__content .spz-banner-section .banner-section .ba
 body .v3__container #components__content .v3.v3-promo.homepage {
   margin-top: 0;
   padding: 96px 0;
-  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg) no-repeat;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_desktop_1.svg) no-repeat;
   background-position: top left;
   background-size: cover;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_tablet_1.svg) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1704368588/netskope/3001/report_background_tablet_1.svg) no-repeat;
     background-position: top left;
     background-size: cover;
     padding: 64px 0 32px;
@@ -633,15 +647,15 @@ body .v3__container #components__content .v3.v3-promo.homepage {
 }
 @media (min-width: 1900px) {
   body .v3__container #components__content .v3.v3-promo.homepage {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704370332/netskope/3001/report_background_1921.svg) no-repeat;
-    background-position: top left;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1704370332/netskope/3001/report_background_1921.svg) no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
 @media (min-width: 3000px) {
   body .v3__container #components__content .v3.v3-promo.homepage {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1704370348/netskope/3001/report_background_4k_1.svg) no-repeat;
-    background-position: top left;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1704370348/netskope/3001/report_background_4k_1.svg) no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
@@ -890,7 +904,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   }
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner {
-  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452394/netskope/3001/reports_card_background_light.webp) !important;
   background-size: cover !important;
   background-repeat: no-repeat !important;
   background-position: right bottom !important;
@@ -980,13 +994,13 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
 }
 body .v3__container #components__content .v3-reports.light.control {
   padding: 96px 0;
-  background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg) no-repeat;
+  background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg) no-repeat;
   background-position: top left;
   background-size: cover;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3-reports.light.control {
-    background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_tablet.svg) no-repeat;
+    background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_tablet.svg) no-repeat;
     background-position: top left;
     background-size: cover;
     padding: 64px 0 40px;
@@ -994,15 +1008,15 @@ body .v3__container #components__content .v3-reports.light.control {
 }
 @media (min-width: 1900px) {
   body .v3__container #components__content .v3-reports.light.control {
-    background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701690113/netskope/3001/products_background_1920.svg) no-repeat;
-    background-position: top left;
+    background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701690113/netskope/3001/products_background_1920.svg) no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
 @media (min-width: 3000px) {
   body .v3__container #components__content .v3-reports.light.control {
-    background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701690070/netskope/3001/products_background_4k.svg) no-repeat;
-    background-position: top left;
+    background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701690070/netskope/3001/products_background_4k.svg) no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
@@ -1065,7 +1079,7 @@ body .v3__container #components__content .v3-reports.light.control .container .v
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report {
   padding: 24px;
-  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp) no-repeat;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp) no-repeat;
   background-position: center;
   background-size: cover;
   display: -webkit-box;
@@ -1101,7 +1115,7 @@ body .v3__container #components__content .v3-reports.light.control .container .v
   }
 }
 body .v3__container #components__content .v3-reports.light.control .container .v3-reports__reports .v3-reports__reports-report::before {
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
   position: absolute;
   top: 24px;
   right: 24px;
@@ -1200,28 +1214,29 @@ body .v3__container #components__content .v3-reports.light.control .container .v
   }
 }
 body .v3__container #components__content .spz-case-studies {
-  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg) no-repeat;
-  background-position: top;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg) no-repeat;
+  background-position: top center;
+  background-size: auto;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .spz-case-studies {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_tablet.svg) no-repeat;
-    background-position: top left;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_tablet.svg) no-repeat;
+    background-position: top center;
     background-size: cover;
   }
 }
 @media (min-width: 1900px) {
   body .v3__container #components__content .spz-case-studies {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701690111/netskope/3001/case_studies_background_1920.svg) no-repeat;
-    background-position: top left;
-    background-size: cover;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701690111/netskope/3001/case_studies_background_1920.svg) no-repeat;
+    background-position: top center;
+    background-size: contain;
   }
 }
 @media (min-width: 3000px) {
   body .v3__container #components__content .spz-case-studies {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701690064/netskope/3001/case_studies_background_4k.svg) no-repeat;
-    background-position: top left;
-    background-size: cover;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701690064/netskope/3001/case_studies_background_4k.svg) no-repeat;
+    background-position: top center;
+    background-size: auto;
   }
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper {
@@ -1335,11 +1350,6 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide:last-child {
   margin-right: 0;
 }
-@media (min-width: 1023.98px) {
-  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide:last-child {
-    display: none;
-  }
-}
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title p {
   color: rgba(255, 255, 255, 0.8);
   font-size: 14px;
@@ -1377,6 +1387,10 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide.slick-current .cs-card-title .progress-fill {
   display: block;
 }
+body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content {
+  max-width: 2854px;
+  margin: auto;
+}
 @media (max-width: 767.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content {
     padding-left: 24px;
@@ -1396,14 +1410,28 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   background: linear-gradient(270deg, #081a59 0%, rgba(8, 26, 89, 0) 100%);
   z-index: 1;
 }
+@media (max-width: 767.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::before {
+    display: none;
+  }
+}
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::before {
     width: 35px;
   }
 }
-@media (max-width: 767.98px) {
+@media (min-width: 1900.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::before {
-    display: none;
+    width: 452px;
+    background: -webkit-gradient(linear, right top, left top, from(#081a59), color-stop(53.68%, rgba(8, 26, 89, 0.46)), to(rgba(8, 26, 89, 0)));
+    background: linear-gradient(270deg, #081a59 0%, rgba(8, 26, 89, 0.46) 53.68%, rgba(8, 26, 89, 0) 100%);
+  }
+}
+@media (min-width: 3500.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::before {
+    width: 920px;
+    background: -webkit-gradient(linear, right top, left top, from(#081a59), color-stop(69.89%, rgba(8, 26, 89, 0.46)), to(rgba(8, 26, 89, 0)));
+    background: linear-gradient(270deg, #081a59 0%, rgba(8, 26, 89, 0.46) 69.89%, rgba(8, 26, 89, 0) 100%);
   }
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::after {
@@ -1417,18 +1445,32 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   background: linear-gradient(90deg, #081a59 0%, rgba(8, 26, 89, 0) 100%);
   z-index: 1;
 }
-@media (max-width: 1023.98px) {
-  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::after {
-    width: 35px;
-  }
-}
 @media (max-width: 767.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::after {
     display: none;
   }
 }
+@media (max-width: 1023.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::after {
+    width: 35px;
+  }
+}
+@media (min-width: 1900.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::after {
+    width: 452px;
+    background: -webkit-gradient(linear, left top, right top, from(#081a59), color-stop(53.68%, rgba(8, 26, 89, 0.46)), to(rgba(8, 26, 89, 0)));
+    background: linear-gradient(90deg, #081a59 0%, rgba(8, 26, 89, 0.46) 53.68%, rgba(8, 26, 89, 0) 100%);
+  }
+}
+@media (min-width: 3500.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list::after {
+    width: 920px;
+    background: -webkit-gradient(linear, left top, right top, from(#081a59), color-stop(69.89%, rgba(8, 26, 89, 0.46)), to(rgba(8, 26, 89, 0)));
+    background: linear-gradient(90deg, #081a59 0%, rgba(8, 26, 89, 0.46) 69.89%, rgba(8, 26, 89, 0) 100%);
+  }
+}
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-content .slick-list .slick-slide {
-  background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452314/netskope/3001/background_testimonials_card.webp) no-repeat;
+  background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701452314/netskope/3001/background_testimonials_card.webp) no-repeat;
   background-position: bottom right;
   background-size: cover;
   border-radius: 32px;
@@ -1627,7 +1669,7 @@ body .v3__container #components__content .netskope-component--video .w-chrome .w
   display: none !important;
 }
 body .v3__container #components__content .netskope-component--video .wistia_embed.background_video:after {
-  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452152/netskope/3001/video_wrapper_desktop.webp) no-repeat;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452152/netskope/3001/video_wrapper_desktop.webp) no-repeat;
   background-size: cover;
   background-position: center;
   max-width: 1440px;
@@ -1636,14 +1678,14 @@ body .v3__container #components__content .netskope-component--video .wistia_embe
 }
 @media (max-width: 767.98px) {
   body .v3__container #components__content .netskope-component--video .wistia_embed.background_video:after {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_mobile.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_mobile.webp) no-repeat;
     background-position: top left;
     background-size: cover;
   }
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .netskope-component--video .wistia_embed.background_video:after {
-    background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_tablet.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_tablet.webp) no-repeat;
     background-position: top left;
     background-size: cover;
   }
@@ -1680,7 +1722,7 @@ body .v3__container #components__content .netskope-component--video .netskope-co
   content: "";
   width: 96px;
   height: 96px;
-  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452233/netskope/3001/play_desktop_tablet.svg) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452233/netskope/3001/play_desktop_tablet.svg) no-repeat;
   background-size: 94px 94px;
   background-position: center;
   position: relative;
@@ -1698,7 +1740,7 @@ body .v3__container #components__content .netskope-component--video .netskope-co
   body .v3__container #components__content .netskope-component--video .netskope-component--video-content .wistia_click_to_play::after {
     width: 64px;
     height: 64px;
-    background: url(https://res.cloudinary.com/spiralyze/image/upload/v1701452250/netskope/3001/play_mobile.svg) no-repeat;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1701452250/netskope/3001/play_mobile.svg) no-repeat;
     background-size: 62px 62px;
     background-position: center;
     left: 0;
@@ -1709,13 +1751,13 @@ body .v3__container #components__content .netskope-component--video .netskope-co
 }
 body .v3__container #components__content .v3-reports:not(.control) {
   padding-top: 94px;
-  background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg) no-repeat;
+  background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg) no-repeat;
   background-position: top left;
   background-size: cover;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3-reports:not(.control) {
-    background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_tablet.svg) no-repeat;
+    background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_tablet.svg) no-repeat;
     background-position: top left;
     background-size: cover;
     padding-top: 62px;
@@ -1723,15 +1765,15 @@ body .v3__container #components__content .v3-reports:not(.control) {
 }
 @media (min-width: 1900px) {
   body .v3__container #components__content .v3-reports:not(.control) {
-    background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701690112/netskope/3001/trusted_section_background_1920.svg) no-repeat;
-    background-position: top left;
+    background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701690112/netskope/3001/trusted_section_background_1920.svg) no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
 @media (min-width: 3000px) {
   body .v3__container #components__content .v3-reports:not(.control) {
-    background: #d9f3f9 url(https://res.cloudinary.com/spiralyze/image/upload/v1701690068/netskope/3001/trusted_section_background_4k.svg) no-repeat;
-    background-position: top left;
+    background: #d9f3f9 url(//res.cloudinary.com/spiralyze/image/upload/v1701690068/netskope/3001/trusted_section_background_4k.svg) no-repeat;
+    background-position: center;
     background-size: cover;
   }
 }
@@ -1839,7 +1881,7 @@ body .v3__container #components__content .v3-reports:not(.control) .container .v
 }
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports .v3-reports__reports-report {
   padding: 24px 20px 24px 24px;
-  background: #081a59 url(https://res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp) no-repeat;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/v1701452461/netskope/3001/features_cards_background_dark.webp) no-repeat;
   background-position: bottom right;
   background-size: cover;
   display: -webkit-box;
@@ -1890,7 +1932,7 @@ body .v3__container #components__content .v3-reports:not(.control) .container .v
   }
 }
 body .v3__container #components__content .v3-reports:not(.control) .container .v3-reports__reports .v3-reports__reports-report::before {
-  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1704197773/netskope/3001/min_plus_3.svg);
   position: relative;
   width: 20px;
   height: 20px;
