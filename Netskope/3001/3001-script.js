@@ -71,7 +71,7 @@
             </div>
             <div class="hero-section-CTA">
                 <div class="v3"> <a href="https://www.netskope.com/get-started" class="get-started-cta btn">Get started</a></div>
-                <div class="v3"> <a href="https://www.netskope.com/products" class="learn-more-cta btn">Learn more</a></div>
+                <div class="v3"> <a href="javascript:void(0)" class="learn-more-cta btn">Learn more</a></div>
             </div>
             <div class="hero-section-review">
                 <div class="section-review"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198255/netskope/3001/gartner_svg.svg" alt="Gartner" class="Gartner"> <picture>
@@ -285,37 +285,37 @@
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/security-service-edge-sse-icon-55x55-1.svg" alt="Security Service Edge (SSE) icon"></div>
                     <div class="v3-reports__reports-report-title "> Security Service Edge</div>
                     <div class="v3-reports__reports-report-text "> Netskope Intelligent SSE converges security capabilities into a single cloud platform.</div>
-                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/security-service-edge"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/security-service-edge">Learn more</a> </span></div>
+                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/security-service-edge"> <img alt="chevron" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/security-service-edge">Learn more</a> </span></div>
                 </div>
                 <div class="v3-reports__reports-report ">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/swg-icon-55x55-1.svg" alt="Next Gen Secure Web Gateway icon"></div>
                     <div class="v3-reports__reports-report-title "> Next Gen Secure Web Gateway (SWG)</div>
                     <div class="v3-reports__reports-report-text "> The foundation for SSE web and cloud inline security providing threat and data protection.</div>
-                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/next-gen-swg"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/next-gen-swg">Learn more</a> </span></div>
+                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/next-gen-swg"> <img alt="chevron" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/next-gen-swg">Learn more</a> </span></div>
                 </div>
                 <div class="v3-reports__reports-report ">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/casb-icon-55.svg" alt="CASB icon"></div>
                     <div class="v3-reports__reports-report-title "> Cloud Access Security Broker (CASB)</div>
                     <div class="v3-reports__reports-report-text "> Confidently adopt cloud applications and services without sacrificing security.</div>
-                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/casb"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/casb">Learn more</a> </span></div>
+                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/casb"> <img alt="chevron" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/casb">Learn more</a> </span></div>
                 </div>
                 <div class="v3-reports__reports-report ">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2023/08/skopeai-icon-55x55-1.svg" alt="SkopeAI"></div>
                     <div class="v3-reports__reports-report-title "> SkopeAI</div>
                     <div class="v3-reports__reports-report-text "> Automatically adapts to the ever-growing data landscape, including generative AI and new AI-driven attacks.</div>
-                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/skopeai"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/skopeai">Learn more</a> </span></div>
+                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/skopeai"> <img alt="chevron" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/skopeai">Learn more</a> </span></div>
                 </div>
                 <div class="v3-reports__reports-report d-none d-md-flex mob-hidden-1">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/private-access-for-ztna-icon-55x55-1.svg" alt="NPA (ZTNA) icon"></div>
                     <div class="v3-reports__reports-report-title "> Private Access for ZTNA</div>
                     <div class="v3-reports__reports-report-text "> Connect users anywhere to private resources ensuring fast and direct application connectivity and superior user experience.</div>
-                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/private-access"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/private-access">Learn more</a> </span></div>
+                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/private-access"> <img alt="chevron" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/private-access">Learn more</a> </span></div>
                 </div>
                 <div class="v3-reports__reports-report d-none d-md-flex mob-hidden-2">
                     <div class="v3-reports__reports-report-icon "> <img src="https://www.netskope.com/wp-content/uploads/2022/04/public-cloud-security-icon-55x55-1.svg" alt="Public Cloud Security icon"></div>
                     <div class="v3-reports__reports-report-title "> Public Cloud Security</div>
                     <div class="v3-reports__reports-report-text "> Gain visibility, control, and compliance across your multi-cloud environment.</div>
-                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/public-cloud-security"> <img alt="chevron" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/round_chevron.png"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/public-cloud-security">Learn more</a> </span></div>
+                    <div class="v3-reports__reports-report-cta "> <span><a class="ga__cta" aria-label="Learn more" data-video-id="" href="/products/public-cloud-security"> <img alt="chevron" src="https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"> </a> </span> <span> <a data-video-id="" class="ga__cta v3-reports__reports-report-cta-link " href="/products/public-cloud-security">Learn more</a> </span></div>
                 </div>
             </div>
             <div class="v3-reports__cta"><a class="white-btn d-md-none" href="javascript:void(0)" id="see-more-btn">See more</a><a class="ga__cta v3-reports__cta btn-blue " href="https://www.netskope.com/products">See all products</a></div>
@@ -509,22 +509,23 @@
     }
     //Updating slider icon
     waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
-      document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
-
-      document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
-        element.setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
-      });;
-
+      
       jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
-
+      
     });
-
-
+    
+    
     waitForElm('.slick-initialized').then(function (elm) {
       if (window.innerWidth > 1023 && document.querySelector('.custom-card')) {
         document.querySelector('.custom-card').remove();
         document.querySelector('.custom-title').remove();
       }
+      
+      document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
+  
+      document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
+        element.setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
+      });;
 
       jQuery('#v3-promo__boxes').slick({
         slidesToShow: 3,
@@ -569,6 +570,7 @@
           },
         ]
       });
+      
       jQuery('.slider-thumb').slick({
         slidesToShow: 'auto',
         slidesToScroll: 4,
@@ -577,8 +579,6 @@
         centerMode: false,
         focusOnSelect: true
       });
-
-
     });
   }
 
@@ -605,6 +605,12 @@
     if (e.target.classList.contains('header__get-started-button')) {
       let emailValue = this.document.querySelector('.spz-email').value || this.document.querySelector('.spz-email.mobile').value;
       setCookieForEmail('userEmailSPZ', emailValue);
+    }
+
+    if (e.target.classList.contains('learn-more-cta')) {
+      document.querySelector('.spz-banner-section').scrollIntoView({
+        behavior: 'smooth'
+      });
     }
 
     if (e.target.classList.contains('white-btn')) {

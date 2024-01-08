@@ -3,6 +3,9 @@ body {
     position: sticky;
     top: -46px;
     z-index: 9999;
+    @media (max-width: 1023.98px) {
+      top: 0;
+    }
 
     .header.has-promo-banner {
       &.homepage {
@@ -167,7 +170,7 @@ body {
 
               .header__get-started-button.btn {
                 height: 40px;
-                font-weight: 600;
+                font-weight: 400;
                 padding: 8px 14px;
                 letter-spacing: 0;
                 line-height: 24px;
@@ -454,6 +457,7 @@ body {
                 line-height: 24px;
                 width: 141px;
                 margin: 1px 8px;
+                box-shadow: none;
 
                 @media (max-width: 767.98px) {
                   width: 100%;
@@ -473,6 +477,8 @@ body {
                 padding: 11px 28px;
                 width: 142px;
                 margin: 1px 8px;
+                box-shadow: none;
+                height: 48px;
 
                 @media (max-width: 767.98px) {
                   margin-top: 16px;
@@ -572,9 +578,15 @@ body {
           padding-bottom: 64px;
           overflow: hidden;
 
+          @media (min-width: 1023.98px) {
+            padding-left: 14px;
+          }
+
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             min-height: 305px;
             padding-bottom: 40px;
+            padding-left: 13px;
+            padding-right: 13px;
           }
 
           @media (max-width: 767.98px) {
@@ -653,6 +665,7 @@ body {
 
         @media (max-width: 767.98px) {
           padding: 40px 0 18px;
+          background: #081a59;
         }
 
         .v3-two-column-image.orange_line_off {
@@ -661,7 +674,7 @@ body {
 
           @media (max-width: 1123.98px) {
             overflow: hidden;
-            padding-bottom: 20px;
+            padding-bottom: 20.5px;
           }
 
           @media (max-width: 767.98px) {
@@ -699,6 +712,10 @@ body {
                 width: 312px;
                 height: 344px;
                 margin: 12px 0 16px;
+
+                @media (max-width: 767.98px) {
+                  margin: 14px 0 16px;
+                }
 
                 img {
                   width: 100%;
@@ -769,11 +786,15 @@ body {
                       sup {
                         font-weight: 400;
                         font-size: 10px;
+                        white-space: nowrap;
                       }
                     }
                     &:nth-child(3) {
-                      margin-top: 22px;
+                      margin-top: 23px;
                       @media (max-width: 1023.98px) {
+                        margin-top: 13px;
+                      }
+                      @media (max-width: 767.98px) {
                         margin-top: 11px;
                       }
                     }
@@ -794,6 +815,7 @@ body {
                     height: 48px;
                     letter-spacing: 0;
                     padding: 13px 26.5px;
+                    box-shadow: none;
 
                     @media (max-width: 767.98px) {
                       width: 100%;
@@ -814,10 +836,10 @@ body {
 
             .v3-two-column-image__image-container {
               .v3-two-column-image__image {
-                margin: 0 auto 0 25px;
+                margin: 0 auto 0 24px;
                 max-width: 544px;
                 @media (max-width: 1199.98px) {
-                  padding-right: 24px;
+                  padding-right: 23px;
                 }
 
                 img {
@@ -958,6 +980,8 @@ body {
           .v3-promo__slider-arrow {
             position: absolute;
             top: calc(50% - 16px);
+            cursor: pointer;
+
             @media (max-width: 1023.98px) {
               top: auto;
               bottom: 4px;
@@ -992,7 +1016,7 @@ body {
       }
 
       .v3-reports.light.control {
-        padding: 96px 0;
+        padding: 96px 0 97px;
         background: #d9f3f9
           url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
           no-repeat;
@@ -1022,6 +1046,10 @@ body {
             no-repeat;
           background-position: center;
           background-size: cover;
+        }
+
+        @media (max-width: 767.98px) {
+          background: #d9f3f9;
         }
 
         @media (max-width: 767.98px) {
@@ -1191,6 +1219,7 @@ body {
               @media (max-width: 767.98px) {
                 width: 100%;
                 margin: 0px 0 24px 0;
+                height: 48px;
               }
             }
 
@@ -1206,6 +1235,7 @@ body {
               text-align: center;
               text-decoration: none;
               margin: 0px 0 24px 0;
+              height: 48px;
 
               &:hover {
                 background: #ffffff;
@@ -1225,14 +1255,14 @@ body {
           url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_desktop.svg)
           no-repeat;
         background-position: top center;
-        background-size: auto;
+        background-size: contain;
 
         @media (max-width: 1023.98px) {
           background: #081a59
             url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/case_studies_background_tablet.svg)
             no-repeat;
           background-position: top center;
-          background-size: cover;
+          background-size: contain;
         }
 
         @media (min-width: 1900px) {
@@ -1249,6 +1279,10 @@ body {
             no-repeat;
           background-position: top center;
           background-size: auto;
+        }
+
+        @media (max-width: 767.98px) {
+          background: #081a59;
         }
 
         .case-studies-wrapper {
@@ -1268,7 +1302,7 @@ body {
             margin-bottom: 65px;
 
             @media (min-width: 767.98px) and (max-width: 1023.98px) {
-              margin-bottom: 33px;
+              margin-bottom: 34px;
             }
 
             @media (max-width: 767.98px) {
@@ -1599,6 +1633,10 @@ body {
                             font-weight: 400;
                             line-height: 24px;
                             text-decoration: none;
+
+                            &:hover {
+                              text-decoration: underline;
+                            }
                           }
                         }
                       }
@@ -1638,7 +1676,7 @@ body {
         padding: 60px 0 0 !important;
 
         @media (max-width: 767.98px) {
-          padding: 24px 0 0 !important;
+          padding: 25px 0 0 !important;
         }
 
         .plus-title {
@@ -1691,7 +1729,7 @@ body {
           background: #081a59
             url(//res.cloudinary.com/spiralyze/image/upload/v1701452152/netskope/3001/video_wrapper_desktop.webp)
             no-repeat;
-          background-size: cover;
+          background-size: contain;
           background-position: center;
           max-width: 1440px;
           margin: auto;
@@ -1701,16 +1739,16 @@ body {
             background: #081a59
               url(//res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_mobile.webp)
               no-repeat;
-            background-position: top left;
-            background-size: cover;
+            background-position: center;
+            background-size: contain;
           }
 
           @media (max-width: 1023.98px) {
             background: #081a59
               url(//res.cloudinary.com/spiralyze/image/upload/v1701452151/netskope/3001/video_wrapper_tablet.webp)
               no-repeat;
-            background-position: top left;
-            background-size: cover;
+            background-position: center;
+            background-size: contain;
           }
         }
 
@@ -1722,7 +1760,7 @@ body {
           }
 
           @media (max-width: 767.98px) {
-            padding: 68px 0;
+            padding: 67px 0;
           }
 
           .wistia_embed {
@@ -1783,14 +1821,14 @@ body {
         background: #d9f3f9
           url(//res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_desktop.svg)
           no-repeat;
-        background-position: top left;
+        background-position: center;
         background-size: cover;
 
         @media (max-width: 1023.98px) {
           background: #d9f3f9
             url(//res.cloudinary.com/spiralyze/image/upload/v1701452264/netskope/3001/trusted_section_background_tablet.svg)
             no-repeat;
-          background-position: top left;
+          background-position: center;
           background-size: cover;
           padding-top: 62px;
         }
@@ -1813,6 +1851,7 @@ body {
 
         @media (max-width: 767.98px) {
           padding: 40px 0;
+          background: #d9f3f9;
         }
 
         .container {
@@ -1847,7 +1886,7 @@ body {
                 margin-bottom: 22px;
 
                 @media (max-width: 767.98px) {
-                  margin-bottom: 14px;
+                  margin-bottom: 12px;
                 }
 
                 h2 {
@@ -1894,7 +1933,7 @@ body {
 
                 @media (max-width: 767.98px) {
                   text-align: left;
-                  margin-bottom: 31px;
+                  margin-bottom: 32px;
                 }
               }
             }
@@ -2055,7 +2094,7 @@ body {
         }
 
         @media (max-width: 767.98px) {
-          padding: 40px 0px;
+          padding: 40px 0px 39px;
           .container {
             padding: 0 32px;
             max-width: 400px;
@@ -2078,7 +2117,7 @@ body {
 
             @media (max-width: 767.98px) {
               text-align: left;
-              margin-bottom: 31px;
+              margin-bottom: 30px;
 
               span {
                 white-space: nowrap;
@@ -2091,6 +2130,7 @@ body {
           .ga__cta.btn {
             margin: 0;
             padding: 13px 19px;
+            box-shadow: none;
 
             @media (max-width: 767.98px) {
               width: 100%;
