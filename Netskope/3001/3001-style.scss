@@ -1129,6 +1129,7 @@ body {
               margin-bottom: 24px;
               margin-right: 24px;
               border-radius: 16px;
+              text-decoration: none;
 
               @media (min-width: 767.98px) and (max-width: 1023.98px) {
                 max-width: 340px;
@@ -1196,16 +1197,20 @@ body {
               .v3-reports__reports-report-cta {
                 margin-top: auto;
 
-                .ga__cta.v3-reports__reports-report-cta-link {
+                span:last-child {
                   color: #fff;
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px;
                   margin-left: 12px;
+
+                  &:hover{
+                    text-decoration: underline;
+                  }
                 }
 
-                .ga__cta {
+                span {
                   img {
                     width: 32px;
                     height: 32px;
