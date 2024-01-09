@@ -634,8 +634,8 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        autoplay: true,
-        autoplaySpeed: 2000,
+        // autoplay: true,
+        // autoplaySpeed: 2000,
         centerMode: true,
         asNavFor: '.slider-thumb',
         arrows: false,
@@ -682,6 +682,8 @@
 
   //All click events
   window.addEventListener("click", function (e) {
+    console.log(e.target);
+
     if (e.target.classList.contains('header__get-started-button')) {
       let emailValue = this.document.querySelector('.spz-email').value || this.document.querySelector('.spz-email.mobile').value;
       setCookieForEmail('userEmailSPZ', emailValue);
@@ -691,6 +693,12 @@
       document.querySelector('.spz-banner-section').scrollIntoView({
         behavior: 'smooth'
       });
+    }
+
+    if (e.target.classList.contains('v3-reports__reports-report')) {
+      if (e.target.querySelector('a.ga__cta')) {
+        e.target.querySelector('a.ga__cta').click();
+      }
     }
 
     if (e.target.classList.contains('white-btn')) {
