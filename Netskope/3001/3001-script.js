@@ -612,6 +612,7 @@
         arrows: true,
         infinite: true,
         centerMode: false,
+        // variableWidth: true,
         prevArrow: jQuery('.v3-promo__slider-arrow.slick-prev'),
         nextArrow: jQuery('.v3-promo__slider-arrow.slick-next'),
         responsive: [
@@ -625,6 +626,7 @@
             breakpoint: 767,
             settings: {
               slidesToShow: 1.155,
+              infinite: false,
             }
           },
         ]
@@ -682,8 +684,6 @@
 
   //All click events
   window.addEventListener("click", function (e) {
-    console.log(e.target);
-
     if (e.target.classList.contains('header__get-started-button')) {
       let emailValue = this.document.querySelector('.spz-email').value || this.document.querySelector('.spz-email.mobile').value;
       setCookieForEmail('userEmailSPZ', emailValue);

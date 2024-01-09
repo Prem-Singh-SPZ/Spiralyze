@@ -19,7 +19,7 @@ body {
             padding: 20px 0 22px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
-            @media (min-width: 1199.98px) and (max-width: 1324.98px) {
+            @media (min-width: 1219.98px) and (max-width: 1324.98px) {
               margin-left: 16px;
               margin-right: 16px;
             }
@@ -679,7 +679,7 @@ body {
 
           @media (max-width: 1123.98px) {
             overflow: hidden;
-            padding-bottom: 20.5px;
+            padding-bottom: 19.5px;
           }
 
           @media (max-width: 767.98px) {
@@ -719,7 +719,7 @@ body {
                 margin: 12px 0 16px;
 
                 @media (max-width: 767.98px) {
-                  margin: 14px 0 16px;
+                  margin: 12px 0 16px;
                 }
 
                 img {
@@ -795,9 +795,9 @@ body {
                       }
                     }
                     &:nth-child(3) {
-                      margin-top: 23px;
+                      margin-top: 22px;
                       @media (max-width: 1023.98px) {
-                        margin-top: 13px;
+                        margin-top: 11px;
                       }
                       @media (max-width: 767.98px) {
                         margin-top: 11px;
@@ -862,7 +862,7 @@ body {
         .v3-promo__container {
           max-width: 1200px;
           overflow: hidden;
-          padding: 0 73px;
+          padding: 0 74px;
 
           @media (max-width: 1023.98px) {
             padding: 0 0 0 0;
@@ -894,13 +894,17 @@ body {
             .slick-slide {
               width: 100%;
               margin: 0 12px;
+              max-width: 327px;
+
 
               @media (max-width: 1023.98px) {
                 margin: 0 10px;
+                max-width: 342px;
+
               }
 
-              @media (min-width: 1199.98px) {
-                max-width: 327.2px;
+              @media (max-width: 767.98px) {
+                max-width: 280px;
               }
 
               .v3-promo__box {
@@ -908,10 +912,14 @@ body {
                 min-height: 260px !important;
                 max-height: 260px;
                 margin-bottom: 0;
-                max-width: 100%;
+                width: 100%;
+
                 @media (min-width: 767.98px) and (max-width: 1023.98px) {
                   min-height: 236px !important;
                   max-height: 236px;
+                }
+
+                @media (max-width: 767.98px) {
                 }
 
                 .v3-promo__box-inner {
@@ -1009,7 +1017,7 @@ body {
             }
 
             &.slick-prev {
-              left: -59px;
+              left: -60px;
 
               @media (max-width: 1023.98px) {
                 left: calc(50% - 50px);
@@ -1017,7 +1025,7 @@ body {
             }
 
             &.slick-next {
-              right: -59px;
+              right: -60px;
 
               @media (max-width: 1023.98px) {
                 right: calc(50% - 50px);
@@ -1028,7 +1036,7 @@ body {
       }
 
       .v3-reports.light.control {
-        padding: 96px 0 97px;
+        padding: 96px 0;
         background: #d9f3f9
           url(//res.cloudinary.com/spiralyze/image/upload/v1701452110/netskope/3001/products_background_desktop.svg)
           no-repeat;
@@ -1319,7 +1327,7 @@ body {
             margin-bottom: 65px;
 
             @media (min-width: 767.98px) and (max-width: 1023.98px) {
-              margin-bottom: 34px;
+              margin-bottom: 33px;
             }
 
             @media (max-width: 767.98px) {
@@ -1363,8 +1371,9 @@ body {
               margin-bottom: 48px;
 
               @media (min-width: 767.98px) and (max-width: 1023.98px) {
-                max-width: 734px;
+                max-width: 768px;
                 margin-bottom: 16px;
+                padding: 0 0 0 32px;
               }
 
               @media (max-width: 767.98px) {
@@ -1604,6 +1613,7 @@ body {
                           display: none;
                         }
                         h6 {
+                          font-family: Graphik;
                           color: #081a59;
                           font-size: 18px;
                           font-style: normal;
@@ -1618,6 +1628,7 @@ body {
                         }
 
                         p {
+                          font-family: Graphik;
                           color: #081a59;
                           margin: 0;
                           font-size: 16px;
@@ -1664,6 +1675,7 @@ body {
                         }
                         h6 {
                           color: #081a59;
+                          font-family: Graphik;
                           font-size: 18px;
                           font-style: normal;
                           font-weight: 400;
@@ -1673,6 +1685,7 @@ body {
 
                         p {
                           color: #081a59;
+                          font-family: Graphik;
                           margin: 0;
                           font-size: 16px;
                           font-style: normal;
