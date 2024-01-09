@@ -323,183 +323,144 @@
         </div>`);
 
     document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container').innerHTML = `<div class="spz-custom-slider">
-        <div id="v3-promo__boxes" class="v3-promo__boxes v3-promo__boxes-wrapper">
-          <div class="v3-promo__box">
-            <div class="v3-promo__box-inner">
-              <div class="plus-orange">
-                <div class="plus-orange__icon">
-                  <img
-                    src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
-                    alt="orange plus"
-                  />
-                </div>
-              </div>
-              <div class="v3-promo__box-number">01</div>
-              <div class="v3-promo__box-title">
-                <h6>Cloud and Threat Report</h6>
-                <p>Top Adversary Tactics and Techniques.</p>
-              </div>
-              <div class="v3-promo__box-link">
-                <span>
-                  <a
-                    href="https://www.netskope.com/netskope-threat-labs/cloud-threat-report/top-adversary-tactics-and-techniques"
-                    aria-label="Read the report"
-                    tabindex="0"
-                  >
-                    <img
-                      alt="chevron"
-                      class="no-lazyload"
-                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                    />
-                  </a>
-                </span>
-                <span>
-                  <a
-                    class="v3-promo__box-link-link ga__cta"
-                    href="https://www.netskope.com/netskope-threat-labs/cloud-threat-report/top-adversary-tactics-and-techniques"
-                    tabindex="0"
-                    >Learn more</a
-                  >
-                </span>
-              </div>
+    <div id="v3-promo__boxes" class="v3-promo__boxes v3-promo__boxes-wrapper">
+      <div class="v3-promo__box">
+        <a
+          class="v3-promo__box-inner"
+          href="https://www.netskope.com/netskope-threat-labs/cloud-threat-report/top-adversary-tactics-and-techniques"
+        >
+          <div class="plus-orange">
+            <div class="plus-orange__icon">
+              <img
+                src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
+                alt="orange plus"
+              />
             </div>
           </div>
-          <div class="v3-promo__box">
-            <div class="v3-promo__box-inner">
-              <div class="plus-orange">
-                <div class="plus-orange__icon">
-                  <img
-                    src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
-                    alt="orange plus"
-                  />
-                </div>
-              </div>
-              <div class="v3-promo__box-number">02</div>
-              <div class="v3-promo__box-title">
-                <h6>SASE Week 2023</h6>
-                <p>On-Demand</p>
-              </div>
-              <div class="v3-promo__box-link">
-                <span>
-                  <a
-                    href="https://www.netskope.com/company/events/sase-week"
-                    aria-label="Register"
-                    tabindex="0"
-                  >
-                    <img
-                      alt="chevron"
-                      class="no-lazyload"
-                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                    />
-                  </a>
-                </span>
-                <span>
-                  <a
-                    class="v3-promo__box-link-link ga__cta"
-                    href="https://www.netskope.com/company/events/sase-week"
-                    tabindex="0"
-                    >Learn more</a
-                  >
-                </span>
-              </div>
+          <div class="v3-promo__box-number">01</div>
+          <div class="v3-promo__box-title">
+            <h6>Cloud and Threat Report</h6>
+            <p>Top Adversary Tactics and Techniques.</p>
+          </div>
+          <div class="v3-promo__box-link">
+            <span>
+              <img
+                alt="chevron"
+                class="no-lazyload"
+                src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+              />
+            </span>
+            <span> Learn more </span>
+          </div>
+        </a>
+      </div>
+      <div class="v3-promo__box">
+        <a
+          class="v3-promo__box-inner"
+          href="https://www.netskope.com/company/events/sase-week"
+        >
+          <div class="plus-orange">
+            <div class="plus-orange__icon">
+              <img
+                src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
+                alt="orange plus"
+              />
             </div>
           </div>
-          <div class="v3-promo__box">
-            <div class="v3-promo__box-inner">
-              <div class="plus-orange">
-                <div class="plus-orange__icon">
-                  <img
-                    src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
-                    alt="orange plus"
-                  />
-                </div>
-              </div>
-              <div class="v3-promo__box-number">03</div>
-              <div class="v3-promo__box-title">
-                <h6>4 Ways Generative</h6>
-                <p>AI Will Impact CISOs and Their Teams</p>
-              </div>
-              <div class="v3-promo__box-link">
-                <span>
-                  <a
-                    href="https://www.netskope.com/resources/analyst-reports/4-ways-generative-ai-will-impact-cisos-and-their-teams"
-                    aria-label="Read Gartner report"
-                    tabindex="-1"
-                  >
-                    <img
-                      alt="chevron"
-                      class="no-lazyload"
-                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                    />
-                  </a>
-                </span>
-                <span>
-                  <a
-                    class="v3-promo__box-link-link ga__cta"
-                    href="https://www.netskope.com/resources/analyst-reports/4-ways-generative-ai-will-impact-cisos-and-their-teams"
-                    tabindex="-1"
-                    >Learn more</a
-                  >
-                </span>
-              </div>
+          <div class="v3-promo__box-number">02</div>
+          <div class="v3-promo__box-title">
+            <h6>SASE Week 2023</h6>
+            <p>On-Demand</p>
+          </div>
+          <div class="v3-promo__box-link">
+            <span>
+              <img
+                alt="chevron"
+                class="no-lazyload"
+                src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+              />
+            </span>
+            <span> Learn more </span>
+          </div>
+        </a>
+      </div>
+      <div class="v3-promo__box">
+        <a
+          class="v3-promo__box-inner"
+          href="https://www.netskope.com/resources/analyst-reports/4-ways-generative-ai-will-impact-cisos-and-their-teams"
+        >
+          <div class="plus-orange">
+            <div class="plus-orange__icon">
+              <img
+                src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
+                alt="orange plus"
+              />
             </div>
           </div>
-          <div class="v3-promo__box">
-            <div class="v3-promo__box-inner">
-              <div class="plus-orange">
-                <div class="plus-orange__icon">
-                  <img
-                    src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
-                    alt="orange plus"
-                  />
-                </div>
-              </div>
-              <div class="v3-promo__box-number">04</div>
-              <div class="v3-promo__box-title">
-                <h6>Complete VPN</h6>
-                <p>Replacement with ZTNA Next</p>
-              </div>
-              <div class="v3-promo__box-link">
-                <span>
-                  <a
-                    href="https://www.netskope.com/solutions/replace-virtual-private-networks"
-                    aria-label="Learn about ZTNA Next"
-                    tabindex="-1"
-                  >
-                    <img
-                      alt="chevron"
-                      class="no-lazyload"
-                      src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                    />
-                  </a>
-                </span>
-                <span>
-                  <a
-                    class="v3-promo__box-link-link ga__cta"
-                    href="https://www.netskope.com/solutions/replace-virtual-private-networks"
-                    tabindex="-1"
-                    >Learn more</a
-                  >
-                </span>
-              </div>
+          <div class="v3-promo__box-number">03</div>
+          <div class="v3-promo__box-title">
+            <h6>4 Ways Generative</h6>
+            <p>AI Will Impact CISOs and Their Teams</p>
+          </div>
+          <div class="v3-promo__box-link">
+            <span>
+              <img
+                alt="chevron"
+                class="no-lazyload"
+                src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+              />
+            </span>
+            <span> Learn more </span>
+          </div>
+        </a>
+      </div>
+      <div class="v3-promo__box">
+        <a
+          class="v3-promo__box-inner"
+          href="https://www.netskope.com/solutions/replace-virtual-private-networks"
+        >
+          <div class="plus-orange">
+            <div class="plus-orange__icon">
+              <img
+                src="https://www.netskope.com/wp-content/themes/netskope/images/v3/plus_orange.svg"
+                alt="orange plus"
+              />
             </div>
           </div>
-        </div>
-          <div class="v3-promo__slider-arrow slick-prev">
-            <img
-              class="no-lazyload"
-              src="//res.cloudinary.com/spiralyze/image/upload/v1704198617/netskope/3001/icon_wrapper_1.svg"
-              alt="arrow left"
-            />
+          <div class="v3-promo__box-number">04</div>
+          <div class="v3-promo__box-title">
+            <h6>Complete VPN</h6>
+            <p>Replacement with ZTNA Next</p>
           </div>
-          <div class="v3-promo__slider-arrow slick-next">
-            <img
-              class="no-lazyload"
-              src="//res.cloudinary.com/spiralyze/image/upload/v1704198616/netskope/3001/icon_wrapper.svg"
-              alt="arrow right"
-            />
+          <div class="v3-promo__box-link">
+            <span>
+              <img
+                alt="chevron"
+                class="no-lazyload"
+                src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
+              />
+            </span>
+            <span> Learn more </span>
           </div>
-        </div>
+        </a>
+      </div>
+    </div>
+    <div class="v3-promo__slider-arrow slick-prev">
+      <img
+        class="no-lazyload"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1704198617/netskope/3001/icon_wrapper_1.svg"
+        alt="arrow left"
+      />
+    </div>
+    <div class="v3-promo__slider-arrow slick-next">
+      <img
+        class="no-lazyload"
+        src="//res.cloudinary.com/spiralyze/image/upload/v1704198616/netskope/3001/icon_wrapper.svg"
+        alt="arrow right"
+      />
+    </div>
+  </div>
+  
         `;
 
 
@@ -509,12 +470,12 @@
     }
     //Updating slider icon
     waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
-      
+
       jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
-      
+
     });
-    
-    
+
+
     waitForElm('.slick-initialized').then(function (elm) {
       if (window.innerWidth > 1023 && document.querySelector('.custom-card')) {
         document.querySelector('.custom-card').remove();
@@ -522,7 +483,7 @@
       }
 
       document.querySelector('.v3-cta.dark .v3-cta__title h2').innerHTML = `Accelerate your security program with the <span>SASE Leader</span>`;
-  
+
       document.querySelectorAll('.v3-reports .v3-reports__reports .v3-reports__reports-report .v3-reports__reports-report-cta img').forEach(element => {
         element.setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198787/netskope/3001/icon_wrapper_4.svg')
       });;
@@ -531,7 +492,7 @@
         slidesToShow: 3,
         slidesToScroll: 1,
         arrows: true,
-        infinite: false,
+        infinite: true,
         centerMode: false,
         prevArrow: jQuery('.v3-promo__slider-arrow.slick-prev'),
         nextArrow: jQuery('.v3-promo__slider-arrow.slick-next'),
@@ -555,8 +516,8 @@
         slidesToShow: 1,
         slidesToScroll: 1,
         infinite: true,
-        // autoplay: true,
-        // autoplaySpeed: 1000,
+        autoplay: true,
+        autoplaySpeed: 2000,
         centerMode: true,
         asNavFor: '.slider-thumb',
         arrows: false,
@@ -571,7 +532,7 @@
           },
         ]
       });
-      
+
       jQuery('.slider-thumb').slick({
         slidesToShow: 'auto',
         slidesToScroll: 4,

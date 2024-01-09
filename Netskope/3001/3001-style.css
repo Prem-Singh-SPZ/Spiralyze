@@ -948,6 +948,8 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   border-radius: 16px;
   padding: 24px;
   height: 260px;
+  display: block;
+  text-decoration: none;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner {
@@ -988,8 +990,12 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   line-height: 24px;
   margin: 0;
 }
-body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner .v3-promo__box-link .v3-promo__box-link-link {
+body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner .v3-promo__box-link span:last-child {
   margin-left: 8px;
+  text-decoration: none;
+}
+body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide .v3-promo__box .v3-promo__box-inner .v3-promo__box-link span:last-child:hover {
+  text-decoration: underline;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container > div:not(.v3-promo_arrows) {
   position: relative;
@@ -1425,8 +1431,8 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   position: absolute;
   height: 1px;
   width: 0%;
-  -webkit-animation: progress-forward 1.5s infinite;
-          animation: progress-forward 1.5s infinite;
+  -webkit-animation: progress-forward 2.4s infinite;
+          animation: progress-forward 2.4s infinite;
   background: #ff8200;
   display: none;
 }
