@@ -13,6 +13,10 @@ body {
         position: relative;
         top: 0;
 
+        .header__popup {
+          top: 100px;
+        }
+
         .header__container-inner {
           max-width: 1296px;
           .header__top.has-promo-banner {
@@ -201,6 +205,10 @@ body {
   }
 
   .v3__container {
+    .v3.v3-footer.netskope-footer {
+      margin-bottom: -24px;
+    }
+    
     #components__content {
       //   display: flex;
       //   flex-direction: column;
@@ -1370,7 +1378,7 @@ body {
               margin-bottom: 48px;
 
               @media (min-width: 767.98px) and (max-width: 1023.98px) {
-                max-width: 768px;
+                // max-width: 768px;
                 margin-bottom: 16px;
                 padding: 0 0 0 32px;
               }
@@ -1416,10 +1424,12 @@ body {
                       line-height: 20px;
                       cursor: pointer;
                       margin-bottom: 23px;
+                      height: 40px;
 
                       @media (max-width: 767.98px) {
                         font-size: 12px;
                         margin-bottom: 14px;
+                        height: auto;
                       }
                     }
 
@@ -2181,29 +2191,29 @@ body {
           background-position: center;
           background-size: cover;
 
-          .hero-section-wrapper
-            .hero-section-cards
-            .checkboxes
-            .check-box
-            .custom-check {
-            background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_light.png)
-              no-repeat;
-            background-position: center;
-            background-size: cover;
-            margin: 0 8px 16px;
+          .hero-section-wrapper .hero-section-cards .checkboxes {
+            gap: 0;
 
-            &:hover {
-              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png)
+            .check-box .custom-check {
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_light.png)
                 no-repeat;
               background-position: center;
               background-size: cover;
-            }
+              margin: 0 8px 16px;
 
-            &.checked {
-              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png)
-                no-repeat;
-              background-position: center;
-              background-size: cover;
+              &:hover {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png)
+                  no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
+
+              &.checked {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png)
+                  no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
             }
           }
         }

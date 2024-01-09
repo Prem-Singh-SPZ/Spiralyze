@@ -627,11 +627,10 @@ let bodyLoaded = setInterval(function () {
               breakpoint: 1280,
               settings: {
                 slidesToShow: 2,
-                // centerMode: true,
               }
             },
             {
-              breakpoint: 767,
+              breakpoint: 574,
               settings: {
                 slidesToShow: 1.155,
                 infinite: false,
@@ -645,8 +644,8 @@ let bodyLoaded = setInterval(function () {
           slidesToShow: 1,
           slidesToScroll: 1,
           infinite: true,
-          // autoplay: true,
-          // autoplaySpeed: 2000,
+          autoplay: true,
+          autoplaySpeed: 2000,
           centerMode: true,
           asNavFor: '.slider-thumb',
           arrows: false,
@@ -655,7 +654,6 @@ let bodyLoaded = setInterval(function () {
             {
               breakpoint: 767,
               settings: {
-                // slidesToShow: 1.155,
                 centerMode: false,
               }
             },
@@ -674,18 +672,32 @@ let bodyLoaded = setInterval(function () {
           variableWidth: true,
           responsive: [
             {
-              breakpoint: 1280,
+              breakpoint: 1200,
               settings: {
-                slidesToShow: 3.2,
-                // centerMode: true,
+                slidesToShow: 4,
+                infinite: true,
+                autoplay: true,
+                autoplaySpeed: 2000,
               }
             },
-            {
-              breakpoint: 767,
-              settings: {
-                slidesToShow: 1.8,
-              }
-            },
+            // {
+            //   breakpoint: 1023,
+            //   settings: {
+            //     slidesToShow: 3.2,
+            //     infinite: true,
+            //     autoplay: true,
+            //     autoplaySpeed: 2000,
+            //   }
+            // },
+            // {
+            //   breakpoint: 574,
+            //   settings: {
+            //     slidesToShow: 1.8,
+            //     infinite: true,
+            //     autoplay: true,
+            //     autoplaySpeed: 2000,
+            //   }
+            // },
           ]
         });
       });

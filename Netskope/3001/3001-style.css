@@ -13,6 +13,9 @@ body #wrapper .header.has-promo-banner.homepage {
   position: relative;
   top: 0;
 }
+body #wrapper .header.has-promo-banner.homepage .header__popup {
+  top: 100px;
+}
 body #wrapper .header.has-promo-banner.homepage .header__container-inner {
   max-width: 1296px;
 }
@@ -188,6 +191,9 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused {
   border: 1px solid #fff;
+}
+body .v3__container .v3.v3-footer.netskope-footer {
+  margin-bottom: -24px;
 }
 body .v3__container #components__content .v3-hero-carousel.has-promo-banner,
 body .v3__container #components__content .v3-resources,
@@ -1366,7 +1372,6 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb {
-    max-width: 768px;
     margin-bottom: 16px;
     padding: 0 0 0 32px;
   }
@@ -1418,11 +1423,13 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
   line-height: 20px;
   cursor: pointer;
   margin-bottom: 23px;
+  height: 40px;
 }
 @media (max-width: 767.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title p {
     font-size: 12px;
     margin-bottom: 14px;
+    height: auto;
   }
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title .progress-bar {
@@ -2134,6 +2141,9 @@ body .v3__container.safari #components__content .spz-hero-section {
   background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_background_all_devices.png) no-repeat;
   background-position: center;
   background-size: cover;
+}
+body .v3__container.safari #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes {
+  gap: 0;
 }
 body .v3__container.safari #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_light.png) no-repeat;
