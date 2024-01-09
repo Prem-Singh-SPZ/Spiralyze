@@ -627,6 +627,7 @@ let bodyLoaded = setInterval(function () {
               breakpoint: 1280,
               settings: {
                 slidesToShow: 2,
+                centerMode: true,
               }
             },
             {
@@ -634,6 +635,7 @@ let bodyLoaded = setInterval(function () {
               settings: {
                 slidesToShow: 1.155,
                 infinite: false,
+                centerMode: false,
               }
             },
           ]

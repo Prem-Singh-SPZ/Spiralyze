@@ -1664,8 +1664,8 @@ body {
                               text-decoration: underline;
                             }
                           }
-                          
-                          span:last-child{
+
+                          span:last-child {
                             margin-left: 12px;
                           }
                         }
@@ -2196,6 +2196,7 @@ body {
               no-repeat;
             background-position: center;
             background-size: cover;
+            margin: 0 8px 16px;
 
             &:hover {
               background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png)
@@ -2254,15 +2255,14 @@ body {
         }
 
         .v3.v3-promo.homepage {
-          .v3-promo__container
-            .v3-promo__boxes.v3-promo__boxes-wrapper
-            .slick-slide
-            .v3-promo__box
-            .v3-promo__box-inner {
-            background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/reports_card_background_light.png) !important;
-            background-size: cover !important;
-            background-repeat: no-repeat !important;
-            background-position: right bottom !important;
+          .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper {
+            visibility: visible;
+            .slick-slide .v3-promo__box .v3-promo__box-inner {
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/reports_card_background_light.png) !important;
+              background-size: cover !important;
+              background-repeat: no-repeat !important;
+              background-position: right bottom !important;
+            }
           }
         }
 
