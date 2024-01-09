@@ -619,7 +619,7 @@ let bodyLoaded = setInterval(function () {
           arrows: true,
           infinite: true,
           centerMode: false,
-          // variableWidth: true,
+          variableWidth: true,
           prevArrow: jQuery('.v3-promo__slider-arrow.slick-prev'),
           nextArrow: jQuery('.v3-promo__slider-arrow.slick-next'),
           responsive: [
@@ -627,7 +627,7 @@ let bodyLoaded = setInterval(function () {
               breakpoint: 1280,
               settings: {
                 slidesToShow: 2,
-                centerMode: true,
+                // centerMode: true,
               }
             },
             {
@@ -663,12 +663,30 @@ let bodyLoaded = setInterval(function () {
         });
 
         jQuery('.slider-thumb').slick({
-          slidesToShow: 'auto',
-          slidesToScroll: 4,
+          slidesToShow: 5,
+          slidesToScroll: 1,
           asNavFor: '.slider-content',
           dots: false,
           centerMode: false,
-          focusOnSelect: true
+          focusOnSelect: true,
+          arrows: false,
+          infinite: false,
+          variableWidth: true,
+          responsive: [
+            {
+              breakpoint: 1280,
+              settings: {
+                slidesToShow: 3.2,
+                // centerMode: true,
+              }
+            },
+            {
+              breakpoint: 767,
+              settings: {
+                slidesToShow: 1.8,
+              }
+            },
+          ]
         });
       });
     }

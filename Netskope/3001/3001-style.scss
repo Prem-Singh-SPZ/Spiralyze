@@ -861,9 +861,9 @@ body {
         }
 
         .v3-promo__container {
-          max-width: 1200px;
+          max-width: 1180px;
           overflow: hidden;
-          padding: 0 74px;
+          padding: 0 75px;
 
           @media (max-width: 1023.98px) {
             padding: 0 0 0 0;
@@ -880,7 +880,7 @@ body {
           .spz-custom-slider {
             // position: relative;
             @media (max-width: 1199.98px) {
-              max-width: 724px;
+              max-width: 704px;
               margin: auto;
             }
             @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -897,7 +897,7 @@ body {
               margin: 0 12px;
               max-width: 327px;
 
-              @media (max-width: 1023.98px) {
+              @media (max-width: 1199.98px) {
                 margin: 0 10px;
                 max-width: 342px;
               }
@@ -1016,7 +1016,7 @@ body {
             }
 
             &.slick-prev {
-              left: -60px;
+              left: -71px;
 
               @media (max-width: 1023.98px) {
                 left: calc(50% - 50px);
@@ -1024,7 +1024,7 @@ body {
             }
 
             &.slick-next {
-              right: -60px;
+              right: -71px;
 
               @media (max-width: 1023.98px) {
                 right: calc(50% - 50px);
@@ -1381,37 +1381,31 @@ body {
               }
 
               .slick-track {
-                display: flex;
-                align-items: center;
-                justify-content: space-between;
-                overflow: auto;
-                -ms-overflow-style: none; /* IE and Edge */
-                scrollbar-width: none;
-
-                &::-webkit-scrollbar {
-                  display: none;
+                @media (max-width: 767.98px) {
+                  display: flex;
+                  align-items: end;
                 }
 
                 .slick-slide {
                   padding: 24px 0px 16px;
-                  min-width: 216px;
+                  max-width: 216px;
                   margin-right: 34px;
+                  width: 100%;
 
                   @media (max-width: 1023.98px) {
                     margin-right: 24px;
                   }
 
                   @media (max-width: 767.98px) {
-                    padding: 14px 0px 16px;
-                    min-width: 180px;
+                    padding: 4px 0px 26px;
+                    max-width: 180px;
                     margin-right: 16px;
                   }
 
                   &:last-child {
-                    margin-right: 0;
-                    // @media (min-width: 1023.98px) {
-                    //   display: none;
-                    // }
+                    @media (max-width: 767.98px) {
+                      margin-right: 16px;
+                    }
                   }
                   .cs-card-title {
                     p {

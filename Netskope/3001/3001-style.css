@@ -882,9 +882,9 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-im
   }
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container {
-  max-width: 1200px;
+  max-width: 1180px;
   overflow: hidden;
-  padding: 0 74px;
+  padding: 0 75px;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container {
@@ -901,7 +901,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
 }
 @media (max-width: 1199.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .spz-custom-slider {
-    max-width: 724px;
+    max-width: 704px;
     margin: auto;
   }
 }
@@ -919,7 +919,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   margin: 0 12px;
   max-width: 327px;
 }
-@media (max-width: 1023.98px) {
+@media (max-width: 1199.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__boxes.v3-promo__boxes-wrapper .slick-slide {
     margin: 0 10px;
     max-width: 342px;
@@ -1024,7 +1024,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   height: 40px;
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__slider-arrow.slick-prev {
-  left: -60px;
+  left: -71px;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__slider-arrow.slick-prev {
@@ -1032,7 +1032,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__contai
   }
 }
 body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__slider-arrow.slick-next {
-  right: -60px;
+  right: -71px;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3.v3-promo.homepage .v3-promo__container .v3-promo__slider-arrow.slick-next {
@@ -1377,27 +1377,21 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
     margin-bottom: 6px;
   }
 }
-body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  overflow: auto;
-  -ms-overflow-style: none; /* IE and Edge */
-  scrollbar-width: none;
-}
-body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track::-webkit-scrollbar {
-  display: none;
+@media (max-width: 767.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: end;
+        -ms-flex-align: end;
+            align-items: end;
+  }
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide {
   padding: 24px 0px 16px;
-  min-width: 216px;
+  max-width: 216px;
   margin-right: 34px;
+  width: 100%;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide {
@@ -1406,13 +1400,15 @@ body .v3__container #components__content .spz-case-studies .case-studies-wrapper
 }
 @media (max-width: 767.98px) {
   body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide {
-    padding: 14px 0px 16px;
-    min-width: 180px;
+    padding: 4px 0px 26px;
+    max-width: 180px;
     margin-right: 16px;
   }
 }
-body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide:last-child {
-  margin-right: 0;
+@media (max-width: 767.98px) {
+  body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide:last-child {
+    margin-right: 16px;
+  }
 }
 body .v3__container #components__content .spz-case-studies .case-studies-wrapper .case-studies-slider .slider-thumb .slick-track .slick-slide .cs-card-title p {
   color: rgba(255, 255, 255, 0.8);
