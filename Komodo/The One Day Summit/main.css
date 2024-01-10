@@ -2,49 +2,464 @@ body {
   margin: 0;
   padding: 0;
 }
-body .top-section header {
-  background: linear-gradient(45deg, #4199fe, #74b4fe);
-  padding: 24px 0;
+body .hero-section-spz {
+  background: #000 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/top_bacgkround_1440.webp) no-repeat;
+  background-size: cover;
+  background-position: center;
 }
-body .top-section header .nav-container {
-  max-width: 1140px;
-  margin: auto;
+body .hero-section-spz .hero {
+  padding: 120px 0 140px;
+}
+@media (max-width: 767.98px) {
+  body .hero-section-spz .hero {
+    padding: 64px 0 48px;
+  }
+}
+@media (min-width: 1023.98px) and (max-width: 1280px) {
+  body .hero-section-spz .hero .spz-container {
+    max-width: 860px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .hero-section-spz .hero .spz-container {
+    max-width: 600px;
+  }
+}
+body .hero-section-spz .hero .spz-container .left-box {
+  max-width: 483px;
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box {
+  margin-bottom: 40px;
+}
+@media (max-width: 767.98px) {
+  body .hero-section-spz .hero .spz-container .left-box .title-box {
+    margin-bottom: 32px;
+  }
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box .hero-title {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  margin-bottom: 32px;
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box .hero-title .hero-one-img {
+  width: 90px;
+  height: 168px;
+}
+@media (min-width: 767.98px) {
+  body .hero-section-spz .hero .spz-container .left-box .title-box .hero-title .hero-one-img {
+    margin-left: -64px;
+    width: 128px;
+    height: 200px;
+  }
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box .hero-title .hs-title {
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 72px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  margin: 0 0 0 24px;
+  padding-bottom: 8px;
+}
+@media (max-width: 768px) {
+  body .hero-section-spz .hero .spz-container .left-box .title-box .hero-title .hs-title {
+    font-size: 48px;
+    line-height: 56px;
+  }
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box .hs-event-tag {
+  margin-bottom: 32px;
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box .hs-event-tag span {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 68px 10px 68px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 42px;
+  background: rgba(104, 204, 232, 0.25);
+  color: #fff;
+  text-align: center;
+  font-family: Titillium Web, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  white-space: nowrap;
+}
+@media (max-width: 768px) {
+  body .hero-section-spz .hero .spz-container .left-box .title-box .hs-event-tag span {
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+  }
+}
+body .hero-section-spz .hero .spz-container .left-box .title-box .hs-subtitle {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+body .join-us-section-spz {
+  background: #000 url(//res.cloudinary.com/spiralyze/image/upload/v1704819139/komodohealth/theonedaysummitmicrositeevent/join_us_background_1440.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+body .join-us-section-spz .video-in-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  padding: 96px 0;
 }
-body .top-section header .nav-container .navigation {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+body .join-us-section-spz .video-in-right .left-box {
+  max-width: 520px;
 }
-body .top-section header .nav-container .navigation nav .nav-list {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+body .join-us-section-spz .video-in-right .left-box .video-title {
+  margin-bottom: 32px;
+}
+body .join-us-section-spz .video-in-right .left-box .video-title .vs-title {
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+  margin-bottom: 20px;
+}
+body .join-us-section-spz .video-in-right .left-box .video-title .vs-subtitle {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  margin-bottom: 16px;
+}
+body .join-us-section-spz .video-in-right .left-box .video-title .vs-list {
+  padding-left: 0;
   list-style: none;
-  margin: 0;
 }
-body .top-section header .nav-container .navigation nav .nav-list li {
-  margin-left: 32px;
-}
-body .top-section header .nav-container .navigation nav .nav-list li a {
-  color: rgba(255, 255, 255, 0.6);
+body .join-us-section-spz .video-in-right .left-box .video-title .vs-list .vs-list-item {
+  padding-left: 16px;
+  color: #f0eeee;
   font-family: Titillium Web, sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 8px;
+  position: relative;
+}
+body .join-us-section-spz .video-in-right .left-box .video-title .vs-list .vs-list-item::before {
+  content: "";
+  width: 8px;
+  height: 8px;
+  border-radius: 30px;
+  background: #68cce8;
+  position: absolute;
+  left: 0;
+  top: calc(50% - 6px);
+}
+body .join-us-section-spz .video-in-right .right-box {
+  width: 580px;
+  height: 357px;
+}
+body .join-us-section-spz .video-in-right .right-box .video-caption {
+  color: #fff;
+  text-align: center;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 16px 0 0;
+}
+body .feature-section-spz {
+  background: #000 url(https://res.cloudinary.com/spiralyze/image/upload/v1704819139/komodohealth/theonedaysummitmicrositeevent/speakers_background_1440.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .feature-section-spz .feature-cards {
+  padding: 80px 0;
+}
+body .feature-section-spz .feature-cards .fc-title-container {
+  margin-bottom: 48px;
+}
+body .feature-section-spz .feature-cards .fc-title-container .fc-title {
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+}
+body .feature-section-spz .feature-cards .fc-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card {
+  width: 270px;
+  height: 416px;
+  margin-bottom: 20px;
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card img {
+  width: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+body .feature-section-spz .feature-cards .fc-cta-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .feature-section-spz .feature-cards .fc-cta-container .fc-cta-subtitle {
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 0 16px;
+}
+body .what-to-expect-spz {
+  background: #000 url(https://res.cloudinary.com/spiralyze/image/upload/v1704819139/komodohealth/theonedaysummitmicrositeevent/what_to_expect_background_1440.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
+body .what-to-expect-spz .what-to-expect {
+  padding: 96px 0;
+}
+body .what-to-expect-spz .what-to-expect .we-title-container {
+  margin-bottom: 32px;
+}
+body .what-to-expect-spz .what-to-expect .we-title-container .we-title {
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+}
+body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .img-container {
+  max-width: 560px;
+}
+body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .img-container img {
+  width: 100%;
+}
+body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .text-container {
+  max-width: 548px;
+}
+body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .text-container .slide-content .slide-title {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+}
+body .detail-section-spz {
+  background: #000 url(https://res.cloudinary.com/spiralyze/image/upload/v1704819139/komodohealth/theonedaysummitmicrositeevent/details__background_1440.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
+body .detail-section-spz .image-right {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 96px 0;
+}
+body .detail-section-spz .image-right .left-box {
+  max-width: 520px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container {
+  margin-bottom: 20px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container .ds-title {
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 56px;
+  margin-bottom: 20px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container .bullets {
+  margin-bottom: 32px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container .bullets .subtitle-parent {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 8px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container .bullets .subtitle-parent .subtitle {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  width: 91px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container .bullets .subtitle-parent .content {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+body .detail-section-spz .image-right .left-box .ds-title-container .bullets .subtitle-parent .content p {
+  margin: 0;
+}
+body .detail-section-spz .image-right .left-box .travel-cta .spz-secondary-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 12px 24px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  border: 1.5px solid #68cce8;
+  color: #fff;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.8px;
   text-transform: uppercase;
   text-decoration: none;
+}
+body .detail-section-spz .image-right .right-box {
+  width: 623px;
+  height: 362px;
+}
+body .detail-section-spz .image-right .right-box .img-container {
+  height: 100%;
+  text-align: center;
+}
+body .detail-section-spz .image-right .right-box .img-container img {
+  width: auto;
+  height: 100%;
+}
+@media (min-width: 767.98px) {
+  body .mobile-only {
+    display: none;
+  }
+}
+@media (max-width: 1023.98px) {
+  body .desktop-only {
+    display: none;
+  }
+}
+body .spz-container {
+  max-width: 1140px;
+  margin: auto;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .spz-container {
+    max-width: 688px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .spz-container {
+    max-width: 320px;
+  }
+}
+body a.spz-cta {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 100px;
+  background: #68cce8;
+  color: #000;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  text-decoration: none;
+  width: 163px;
+  height: 48px;
+  -webkit-transition: background-color 0.3s linear;
+  transition: background-color 0.3s linear;
+}
+body a.spz-cta:hover {
+  background-color: #fff;
+  color: #000;
+  -webkit-transition-duration: 0.1s;
+          transition-duration: 0.1s;
+}
+@media (max-width: 768px) {
+  body a.spz-cta {
+    width: 280px;
+  }
 }
