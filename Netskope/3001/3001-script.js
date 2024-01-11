@@ -6,7 +6,7 @@ let bodyLoaded = setInterval(function () {
     clearInterval(bodyLoaded);
 
     // (function () {
-    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.webp" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png" as="image">`)
+    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704197701/netskope/3001/checkbox_base_6.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704197698/netskope/3001/checkbox_base_4.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.webp" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_card_background_dark.png" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1704946437/netskope/3001/src/orange-chevron.svg" as="image">`)
 
     //Main function call
     if (location.pathname.includes('/get-started')) {
@@ -86,7 +86,7 @@ let bodyLoaded = setInterval(function () {
                     <span>4.6</span></div>
                     <div class="section-review"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198276/netskope/3001/g2_svg.svg" alt="G2" class="Gartner"> <picture>
                     <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5597.svg" alt="Star Rating">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5598.svg" alt="Star Rating">
                     </picture>
                     <span>4.4</span></div>
                 </div>
@@ -152,7 +152,7 @@ let bodyLoaded = setInterval(function () {
                             </div>
                             <div class="cs-reviewer">
                                 <div class="cs-anchor">
-                                <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service">Read their story</a> </span></div>
+                                <div class="v3-stacked-tabs__tab-cta "><span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/success-story-royal-flying-doctor-service">Read their story</a> </span></div>
                                 </div>
                                 <div class="cs-name">
                                 <h6>Adam Carey</h6>
@@ -170,7 +170,7 @@ let bodyLoaded = setInterval(function () {
                         </div>
                         <div class="cs-reviewer">
                             <div class="cs-anchor">
-                            <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/morgan-sindall"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/morgan-sindall">Read their story</a> </span></div>
+                            <div class="v3-stacked-tabs__tab-cta "><span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/morgan-sindall">Read their story</a> </span></div>
                             </div>
                             <div class="cs-name">
                             <h6>Neil Binnie</h6>
@@ -188,7 +188,7 @@ let bodyLoaded = setInterval(function () {
                     </div>
                     <div class="cs-reviewer">
                         <div class="cs-anchor">
-                        <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/waubonsee-community-college"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/waubonsee-community-college">Read their story</a> </span></div>
+                        <div class="v3-stacked-tabs__tab-cta "><span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/waubonsee-community-college">Read their story</a> </span></div>
                         </div>
                         <div class="cs-name">
                         <h6>Tarun Trivedi</h6>
@@ -206,7 +206,7 @@ let bodyLoaded = setInterval(function () {
                     </div>
                     <div class="cs-reviewer">
                         <div class="cs-anchor">
-                        <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/hospital-it-team"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/hospital-it-team">Read their story</a> </span></div>
+                        <div class="v3-stacked-tabs__tab-cta "><span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/hospital-it-team">Read their story</a> </span></div>
                         </div>
                         <div class="cs-name">
                         <h6>Head of IT Security</h6>
@@ -224,7 +224,7 @@ let bodyLoaded = setInterval(function () {
                     </div>
                     <div class="cs-reviewer">
                         <div class="cs-anchor">
-                        <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/care-ratings"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/care-ratings">Read their story</a> </span></div>
+                        <div class="v3-stacked-tabs__tab-cta "><span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/care-ratings">Read their story</a> </span></div>
                         </div>
                         <div class="cs-name">
                         <h6>A. Shiju Rawther</h6>
@@ -242,7 +242,7 @@ let bodyLoaded = setInterval(function () {
                     </div>
                     <div class="cs-reviewer">
                         <div class="cs-anchor">
-                        <div class="v3-stacked-tabs__tab-cta "> <span><a href="https://www.netskope.com/customers/national-healthcare-organization"> <img alt="chevron" class="no-lazyload" src="//res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg"> </a> </span> <span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/national-healthcare-organization">Read their story</a> </span></div>
+                        <div class="v3-stacked-tabs__tab-cta "><span> <a class="v3-stacked-tabs__tab-cta-link " href="https://www.netskope.com/customers/national-healthcare-organization">Read their story</a> </span></div>
                         </div>
                         <div class="cs-name">
                         <h6>Systems Architect</h6>
@@ -307,11 +307,6 @@ let bodyLoaded = setInterval(function () {
                 cloud platform.
               </div>
               <div class="v3-reports__reports-report-cta">
-                <span
-                  ><img
-                    alt="chevron"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"
-                /></span>
                 <span>Learn more</span>
               </div>
             </a>
@@ -330,11 +325,6 @@ let bodyLoaded = setInterval(function () {
                 and data protection.
               </div>
               <div class="v3-reports__reports-report-cta">
-                <span
-                  ><img
-                    alt="chevron"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"
-                /></span>
                 <span>Learn more</span>
               </div>
             </a>
@@ -353,11 +343,6 @@ let bodyLoaded = setInterval(function () {
                 security.
               </div>
               <div class="v3-reports__reports-report-cta">
-                <span
-                  ><img
-                    alt="chevron"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"
-                /></span>
                 <span>Learn more</span>
               </div>
             </a>
@@ -374,11 +359,6 @@ let bodyLoaded = setInterval(function () {
                 generative AI and new AI-driven attacks.
               </div>
               <div class="v3-reports__reports-report-cta">
-                <span
-                  ><img
-                    alt="chevron"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"
-                /></span>
                 <span>Learn more</span>
               </div>
             </a>
@@ -400,11 +380,6 @@ let bodyLoaded = setInterval(function () {
                 application connectivity and superior user experience.
               </div>
               <div class="v3-reports__reports-report-cta">
-                <span
-                  ><img
-                    alt="chevron"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"
-                /></span>
                 <span>Learn more</span>
               </div>
             </a>
@@ -426,11 +401,6 @@ let bodyLoaded = setInterval(function () {
                 environment.
               </div>
               <div class="v3-reports__reports-report-cta">
-                <span
-                  ><img
-                    alt="chevron"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg"
-                /></span>
                 <span>Learn more</span>
               </div>
             </a>
@@ -468,13 +438,6 @@ let bodyLoaded = setInterval(function () {
                 <p>Top Adversary Tactics and Techniques.</p>
               </div>
               <div class="v3-promo__box-link">
-                <span>
-                  <img
-                    alt="chevron"
-                    class="no-lazyload"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                  />
-                </span>
                 <span> Learn more </span>
               </div>
             </a>
@@ -498,13 +461,6 @@ let bodyLoaded = setInterval(function () {
                 <p>On-Demand</p>
               </div>
               <div class="v3-promo__box-link">
-                <span>
-                  <img
-                    alt="chevron"
-                    class="no-lazyload"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                  />
-                </span>
                 <span> Learn more </span>
               </div>
             </a>
@@ -528,13 +484,6 @@ let bodyLoaded = setInterval(function () {
                 <p>AI Will Impact CISOs and Their Teams</p>
               </div>
               <div class="v3-promo__box-link">
-                <span>
-                  <img
-                    alt="chevron"
-                    class="no-lazyload"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                  />
-                </span>
                 <span> Learn more </span>
               </div>
             </a>
@@ -558,13 +507,6 @@ let bodyLoaded = setInterval(function () {
                 <p>Replacement with ZTNA Next</p>
               </div>
               <div class="v3-promo__box-link">
-                <span>
-                  <img
-                    alt="chevron"
-                    class="no-lazyload"
-                    src="//res.cloudinary.com/spiralyze/image/upload/v1704198765/netskope/3001/icon_wrapper_3.svg"
-                  />
-                </span>
                 <span> Learn more </span>
               </div>
             </a>

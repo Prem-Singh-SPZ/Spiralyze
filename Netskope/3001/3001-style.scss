@@ -23,6 +23,10 @@ body {
             padding: 20px 0 22px;
             border-bottom: 1px solid rgba(255, 255, 255, 0.1);
 
+            @media (min-width: 1199.98px) and (max-width: 1219.98px) {
+              padding: 20px 12px 22px;
+            }
+
             @media (min-width: 1219.98px) and (max-width: 1324.98px) {
               margin-left: 16px;
               margin-right: 16px;
@@ -154,25 +158,25 @@ body {
                   }
 
                   &::-webkit-input-placeholder {
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #fff;
                   }
                   &:-moz-placeholder {
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #fff;
                     opacity: 1;
                   }
                   &::-moz-placeholder {
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #fff;
                     opacity: 1;
                   }
                   &:-ms-input-placeholder {
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #fff;
                   }
                   &::-ms-input-placeholder {
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #fff;
                   }
 
                   &::placeholder {
-                    color: rgba(255, 255, 255, 0.8);
+                    color: #fff;
                   }
                 }
               }
@@ -208,7 +212,7 @@ body {
     .v3.v3-footer.netskope-footer {
       margin-bottom: -24px;
     }
-    
+
     #components__content {
       //   display: flex;
       //   flex-direction: column;
@@ -363,6 +367,7 @@ body {
                 cursor: pointer;
                 transition: all 0.15s ease-in-out;
                 margin: 0;
+                border: 1.5px solid #d9f3f9;
 
                 @media (min-width: 767.98px) and (max-width: 1023.98px) {
                   width: 224px;
@@ -476,6 +481,12 @@ body {
                   width: 100%;
                   margin: 1px 0;
                 }
+
+                &:hover {
+                  border: 1px solid #081a59;
+                  background: #fff;
+                  color: #081a59;
+                }
               }
 
               .learn-more-cta {
@@ -549,14 +560,14 @@ body {
         background: #081a59
           url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_image_desktop_1.webp)
           no-repeat;
-        background-position: top center;
+        background-position: bottom center;
         background-size: cover;
 
         @media (max-width: 767.98px) {
           background: #081a59
             url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_image_mobile_1.webp)
             no-repeat;
-          background-position: top center;
+          background-position: bottom center;
           background-size: cover;
         }
 
@@ -564,7 +575,7 @@ body {
           background: #081a59
             url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_image_tablet_1.webp)
             no-repeat;
-          background-position: top center;
+          background-position: bottom center;
           background-size: cover;
         }
 
@@ -572,7 +583,7 @@ body {
           background: #081a59
             url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_image_1921.webp)
             no-repeat;
-          background-position: top center;
+          background-position: bottom center;
           background-size: cover;
         }
 
@@ -580,7 +591,7 @@ body {
           background: #081a59
             url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/hero_image_4k_1.webp)
             no-repeat;
-          background-position: top center;
+          background-position: bottom center;
           background-size: cover;
         }
 
@@ -964,7 +975,7 @@ body {
                   .v3-promo__box-title {
                     height: auto !important;
                     min-height: auto !important;
-                    margin: 32px 0;
+                    margin: 32px 0 36px;
 
                     h6 {
                       color: #081a59;
@@ -986,12 +997,31 @@ body {
                   }
 
                   .v3-promo__box-link {
-                    span:last-child {
-                      margin-left: 8px;
-                      text-decoration: none;
+                    span {
+                      color: #081a59;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 24px;
+                      position: relative;
+                      padding-left: 44px;
+
+                      &::before {
+                        content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704198935/netskope/3001/icon_wrapper_11.svg);
+                        position: absolute;
+                        top: -8px;
+                        left: 0;
+                        width: 32px;
+                        height: 32px;
+                        cursor: pointer;
+                      }
 
                       &:hover {
-                        text-decoration: underline;
+                        color: #ff8200;
+
+                        &::before {
+                          content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704946437/netskope/3001/src/orange-chevron.svg);
+                        }
                       }
                     }
                   }
@@ -1131,7 +1161,7 @@ body {
             }
 
             .v3-reports__reports-report {
-              padding: 24px;
+              padding: 24px 24px 28px;
               background: #081a59
                 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/features_cards_background_dark.webp)
                 no-repeat;
@@ -1206,29 +1236,37 @@ body {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
-                margin-bottom: 32px;
+                margin-bottom: 36px;
               }
 
               .v3-reports__reports-report-cta {
                 margin-top: auto;
 
-                span:last-child {
+                span {
                   color: #fff;
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px;
-                  margin-left: 12px;
+                  position: relative;
+                  padding-left: 44px;
 
-                  &:hover {
-                    text-decoration: underline;
-                  }
-                }
-
-                span {
-                  img {
+                  &::before {
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg);
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
                     width: 32px;
                     height: 32px;
+                    cursor: pointer;
+                  }
+
+                  &:hover {
+                    color: #ff8200;
+
+                    &::before {
+                      content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704946437/netskope/3001/src/orange-chevron.svg);
+                    }
                   }
                 }
               }
@@ -1663,14 +1701,26 @@ body {
                             font-weight: 400;
                             line-height: 24px;
                             text-decoration: none;
+                            position: relative;
+                            padding-left: 44px;
+
+                            &::before {
+                              content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704199036/netskope/3001/icon_wrapper_17.svg);
+                              position: absolute;
+                              top: -8px;
+                              left: 0;
+                              width: 32px;
+                              height: 32px;
+                              cursor: pointer;
+                            }
 
                             &:hover {
-                              text-decoration: underline;
-                            }
-                          }
+                              color: #ff8200;
 
-                          span:last-child {
-                            margin-left: 12px;
+                              &::before {
+                                content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704946437/netskope/3001/src/orange-chevron.svg);
+                              }
+                            }
                           }
                         }
                       }
@@ -2080,6 +2130,7 @@ body {
               .v3-reports__reports-report-cta {
                 margin-top: auto;
                 pointer-events: none;
+                height: 32px;
 
                 .ga__cta.v3-reports__reports-report-cta-link {
                   color: #fff;
@@ -2087,16 +2138,33 @@ body {
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px;
-                  margin-left: 11px;
                   pointer-events: all;
-                }
+                  padding-left: 44px;
+                  position: relative;
+                  margin: 0;
+                  text-decoration: none;
 
-                .ga__cta {
-                  pointer-events: all;
-                  img {
+                  &::before {
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704199083/netskope/3001/icon_wrapper_18.svg);
+                    position: absolute;
+                    top: -4px;
+                    left: 0;
                     width: 32px;
                     height: 32px;
+                    cursor: pointer;
                   }
+
+                  &:hover {
+                    color: #ff8200;
+
+                    &::before {
+                      content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704946437/netskope/3001/src/orange-chevron.svg);
+                    }
+                  }
+                }
+
+                span:first-child {
+                  display: none;
                 }
               }
             }
