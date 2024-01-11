@@ -133,6 +133,17 @@ body .join-us-section-spz .video-in-right {
           justify-content: space-between;
   padding: 96px 0;
 }
+@media (max-width: 1023.98px) {
+  body .join-us-section-spz .video-in-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 body .join-us-section-spz .video-in-right .left-box {
   max-width: 520px;
 }
@@ -186,6 +197,24 @@ body .join-us-section-spz .video-in-right .right-box {
   width: 580px;
   height: 357px;
 }
+body .join-us-section-spz .video-in-right .right-box .video-container .videoCoverImage > div[onclick] {
+  position: relative;
+}
+body .join-us-section-spz .video-in-right .right-box .video-container .videoCoverImage > div[onclick]::before {
+  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704819286/komodohealth/theonedaysummitmicrositeevent/play_icon_1.svg);
+  width: 80px;
+  height: 80px;
+  position: absolute;
+  top: calc(50% - 40px);
+  left: calc(50% - 40px);
+  cursor: pointer;
+}
+body .join-us-section-spz .video-in-right .right-box .video-container .videoCoverImage > div[onclick]:hover::before {
+  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1704819284/komodohealth/theonedaysummitmicrositeevent/play_icon.svg);
+}
+body .join-us-section-spz .video-in-right .right-box .video-container .videoCoverImage > div[onclick] .thumb {
+  width: 100%;
+}
 body .join-us-section-spz .video-in-right .right-box .video-caption {
   color: #fff;
   text-align: center;
@@ -202,7 +231,7 @@ body .feature-section-spz {
   background-position: center;
 }
 body .feature-section-spz .feature-cards {
-  padding: 80px 0;
+  padding: 80px 44px;
 }
 body .feature-section-spz .feature-cards .fc-title-container {
   margin-bottom: 48px;
@@ -321,6 +350,14 @@ body .detail-section-spz .image-right {
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 96px 0;
+}
+@media (max-width: 1023.98px) {
+  body .detail-section-spz .image-right {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
 }
 body .detail-section-spz .image-right .left-box {
   max-width: 520px;

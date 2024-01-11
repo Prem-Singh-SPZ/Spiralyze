@@ -4,6 +4,14 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>The One Day Summit</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick-theme.min.css"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.5.8/slick.css"
+    />
     <link rel="stylesheet" href="/Komodo/The One Day Summit/main.css" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="https://cdn.jsdelivr.net/jquery.slick/1.4.1/slick.min.js"></script>
@@ -112,13 +120,28 @@
           </div>
           <div class="right-box">
             <div class="video-container">
-              <iframe
-                width="580"
-                height="357"
-                src="https://www.youtube.com/watch?v=5A75ApXYi9Y&ab_channel=KomodoHealth"
-                frameborder="0"
-                allowfullscreen
-              ></iframe>
+              <div class="videoCoverImage">
+                <div
+                  onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'"
+                >
+                  <img
+                    class="thumb"
+                    style="cursor: pointer"
+                    src="https://res.cloudinary.com/spiralyze/image/upload/v1704819213/komodohealth/theonedaysummitmicrositeevent/video.webp"
+                  />
+                </div>
+                <div id="thevideo" style="display: none">
+                  <iframe
+                    width="580"
+                    height="357"
+                    src="https://www.youtube.com/embed/5A75ApXYi9Y?si=ynA2Re9NtN56_C38?rel=0;&autoplay=1&mute=1&loop=1"
+                    title="YouTube video player"
+                    frameborder="0"
+                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                    allowfullscreen
+                  ></iframe>
+                </div>
+              </div>
             </div>
             <p class="video-caption">The One Day Summit 2023 highlights</p>
           </div>
