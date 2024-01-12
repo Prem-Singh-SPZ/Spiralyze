@@ -141,7 +141,7 @@ body {
       @media (max-width: 1023.98px) {
         flex-direction: column;
         align-items: flex-start;
-        padding: 80px 0;
+        padding: 81px 0;
       }
 
       @media (max-width: 767.98px) {
@@ -161,6 +161,9 @@ body {
 
         .video-title {
           margin-bottom: 32px;
+          @media (max-width: 1023.98px) {
+            margin-bottom: 31px;
+          }
 
           .vs-title {
             color: $white;
@@ -254,7 +257,7 @@ body {
   }
   //join us section css ends
 
-  //Feature card section css starts
+  //Feature card section csspx starts
   .feature-section-spz {
     // background: $black
     //   url(https://res.cloudinary.com/spiralyze/image/upload/v1704819139/komodohealth/theonedaysummitmicrositeevent/speakers_background_1440.svg)
@@ -296,7 +299,7 @@ body {
         flex-wrap: wrap;
 
         @media (max-width: 1280.98px) {
-          max-width: 590px;
+          max-width: 600px;
         }
 
         @media (max-width: 767.98px) {
@@ -654,7 +657,7 @@ body {
                   line-height: 24px;
                 }
 
-                &.content_custom{
+                &.content_custom {
                   @media (min-width: 1023.98px) {
                     max-width: 194px;
                   }
@@ -887,6 +890,55 @@ body {
             }
           }
         }
+      }
+    }
+  }
+
+  //BG image update css
+
+  .body-container-wrapper {
+    .dnd_area-row-0-background-image {
+      @media (max-width: 1023.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/top_bacgkround_768.webp") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+
+    .dnd_area-row-1-background-image {
+      @media (max-width: 1023.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819115/komodohealth/theonedaysummitmicrositeevent/join_us_bacgkround_768.svg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+
+    .dnd_area-row-2-background-image {
+      @media (max-width: 1023.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819115/komodohealth/theonedaysummitmicrositeevent/speakers_bacgkround_768.svg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+
+    .dnd_area-row-3-background-image {
+      @media (max-width: 1023.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819115/komodohealth/theonedaysummitmicrositeevent/what_to_expect_bacgkround_768.svg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+
+    .dnd_area-row-4-background-image {
+      @media (max-width: 1023.98px) {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704820519/komodohealth/theonedaysummitmicrositeevent/details_bacgkround_769.svg") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
       }
     }
   }

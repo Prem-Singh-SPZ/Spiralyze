@@ -8,19 +8,20 @@ $().ready(function () {
         infinite: false,
         variableWidth: true,
         responsive: [
-            {
-                breakpoint: 1023,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                }
-            },
+            // {
+            //     breakpoint: 1023,
+            //     settings: {
+            //         slidesToShow: 1,
+            //         slidesToScroll: 1,
+            //     }
+            // },
             {
                 breakpoint: 767,
                 settings: {
                     slidesToShow: 1,
                     arrows: false,
-                    slidesToScroll: 1
+                    slidesToScroll: 1,
+                    variableWidth: false,
                 }
             }
         ]
