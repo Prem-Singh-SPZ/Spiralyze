@@ -10,29 +10,43 @@ body {
 
   //top section css starts
   .faq-section-title-spz {
-    background: $black
-      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/hero_background_2.webp)
-      no-repeat;
-    background-size: cover;
-    background-position: bottom;
-    padding: 40px 0 56px;
+    // background: $black
+    //   url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/hero_background_2.webp)
+    //   no-repeat;
+    // background-size: cover;
+    // background-position: bottom;
+    padding: 32px 0 56px;
+
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      padding: 44px 0 56px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 29px 0 55px;
+    }
 
     .faq-title {
-      text-align: center;
       color: $white;
       text-align: center;
       font-family: $titillium-font;
-      font-size: 56px;
+      font-size: 56px !important;
       font-style: normal;
       font-weight: 400;
-      line-height: 56px;
+      line-height: 56px !important;
+      letter-spacing: 0 !important;
+      margin: 0;
+
+      @media (max-width: 767.98px) {
+        text-align: left;
+        font-size: 48px !important;
+      }
     }
   }
   //top section css ends
 
   //faq section css starts
   .faq-section-spz {
-    padding: 48px 0 80px;
+    padding: 46px 0 78px;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     background: radial-gradient(
@@ -46,6 +60,15 @@ body {
         rgba(104, 204, 232, 0) 100%
       ),
       #000;
+
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      padding: 80px 0 77px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 39px 0 46px;
+      background: #000;
+    }
 
     .accordion {
       max-width: 754px;
@@ -68,14 +91,45 @@ body {
             font-style: normal;
             font-weight: 600;
             line-height: 26px;
+            padding: 19.5px 0;
+            border-radius: 0;
+            letter-spacing: 0;
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              padding: 19.65px 40px 19.5px 0px;
+            }
+
+            @media (max-width: 767.98px) {
+              padding-right: 48px;
+            }
 
             &::after {
+              content: "";
+              width: 24px;
+              height: 24px;
+              position: absolute;
+              right: 0;
+              // top: 20px;
               background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1705121057/KomodoHealth/FAQ-Hubspot-Page/chevron-down.svg);
+              background-size: 24px;
+              background-position: center;
             }
 
             &:not(.collapsed)::after {
               background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1705121058/KomodoHealth/FAQ-Hubspot-Page/chevron-up.svg);
               transform: none;
+              background-size: 24px;
+            }
+
+            &:not(.collapsed) {
+              padding: 21px 0 0;
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                padding: 20px 0 0;
+              }
+
+              @media (max-width: 767.98px) {
+                padding: 21px 48px 21px 0;
+              }
             }
           }
         }
@@ -96,6 +150,13 @@ body {
             background-repeat: no-repeat;
             background-position: bottom;
             background-size: 100% 77px;
+            padding: 0 0 20px;
+          }
+
+          &.show {
+            .accordion-body {
+              padding-top: 11px;
+            }
           }
         }
       }
@@ -105,27 +166,46 @@ body {
 
   //join-us-footer-section-spzn csspx starts
   .join-us-footer-section-spz {
-    background: $black
-      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/join_us_background_2.webp)
-      no-repeat;
-    background-size: cover;
-    background-position: center;
+    // background: $black
+    //   url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/join_us_background_2.webp)
+    //   no-repeat;
+    // background-size: cover;
+    // background-position: center;
     border-top: 1px solid rgba(255, 255, 255, 0.2);
     border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-    padding: 96px 0 120px;
+    padding: 96px 0 119px;
+
+    @media (max-width: 767.98px) {
+      padding: 48px 0 55px;
+    }
+
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      padding: 96px 0 119px;
+    }
 
     .jf-title-container {
       max-width: 500px;
-      margin: auto;
+      margin: 0 auto 31px;
+
+      // @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      //   margin: 0 auto 19px;
+
+      // }
 
       .jf-title {
         color: $white;
         text-align: center;
         font-family: $titillium-font;
-        font-size: 48px;
+        font-size: 48px !important;
         font-style: normal;
         font-weight: 400;
         line-height: 56px;
+        margin: 0;
+
+        @media (max-width: 767.98px) {
+          font-size: 40px !important;
+          line-height: 48px !important;
+        }
       }
     }
 
@@ -139,7 +219,14 @@ body {
 
       .register-cta,
       .agenda-cta {
-        margin: 12px;
+        margin-right: 12px;
+        margin-left: 12px;
+      }
+
+      .register-cta {
+        @media (max-width: 767.98px) {
+          margin-bottom: 16px;
+        }
       }
     }
   }
@@ -217,7 +304,7 @@ body {
     align-items: center;
     border-radius: 100px;
     background: #7e7e7e;
-    color: $black;
+    color: $white;
     font-family: $titillium-font;
     font-size: 16px;
     font-style: normal;
@@ -226,7 +313,7 @@ body {
     letter-spacing: 0.8px;
     text-transform: uppercase;
     text-decoration: none;
-    width: 163px;
+    width: 151px;
     height: 48px;
     transition: background-color 0.3s linear;
 
@@ -243,12 +330,19 @@ body {
 
   //pixel perfect Css
 
+  .body-container-wrapper {
+    .container-fluid {
+      padding: 0;
+    }
+  }
+
   //navigation css
   header.header {
     .header__container {
       @media (min-width: 1080px) {
         padding: 24px 20px;
         justify-content: flex-start;
+        align-items: flex-start;
       }
 
       .header__logo {
@@ -272,7 +366,7 @@ body {
               }
 
               li {
-                padding: 1px 14px 1px 13px;
+                padding: 1px 13px;
                 pointer-events: none;
                 a {
                   color: rgba(255, 255, 255, 0.6);
@@ -282,6 +376,10 @@ body {
                   line-height: 24px;
                   letter-spacing: 0.8px;
                   text-transform: uppercase;
+                }
+
+                &.menu-item:last-child {
+                  display: none;
                 }
               }
             }

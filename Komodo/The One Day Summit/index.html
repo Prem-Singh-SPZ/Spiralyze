@@ -77,7 +77,7 @@
             <div class="video-container">
               <div class="videoCoverImage">
                 <div
-                  onclick="thevid=document.getElementById('thevideo'); thevid.style.display='block'; this.style.display='none'"
+                  onclick="thevid=document.getElementById('thevideo'); thevid.innerHTML = ''; thevid.style.display='block'; this.style.display='none'; "
                 >
                   <img
                     class="thumb"
@@ -89,7 +89,7 @@
                   <iframe
                     width="580"
                     height="357"
-                    src="https://www.youtube.com/embed/5A75ApXYi9Y?si=ynA2Re9NtN56_C38?rel=0;&autoplay=1&mute=1&loop=1"
+                    src="https://www.youtube.com/embed/5A75ApXYi9Y?si=ynA2Re9NtN56_C38"
                     title="YouTube video player"
                     frameborder="0"
                     allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
@@ -214,6 +214,7 @@
                           height="auto"
                           src="https://www.youtube.com/embed/5A75ApXYi9Y?si=ynA2Re9NtN56_C38?rel=0;&autoplay=1&mute=1&loop=1"
                           title="YouTube video player"
+                          poster="http://example.com/wp-content/uploads/2017/01/example.jpg"
                           frameborder="0"
                           allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                           allowfullscreen

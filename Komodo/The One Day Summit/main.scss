@@ -146,8 +146,8 @@ body {
     //   no-repeat;
     // background-size: cover;
     // background-position: center;
-    // border-top: 1px solid rgba(255, 255, 255, 0.2);
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     .video-in-right {
       display: flex;
@@ -432,9 +432,9 @@ body {
     //   no-repeat;
     // background-size: cover;
     // background-position: center;
-    // // overflow: hidden;
-    // border-top: 1px solid rgba(255, 255, 255, 0.2);
-    // border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 
     .spz-container {
       @media (min-width: 1023.98px) {
@@ -453,7 +453,7 @@ body {
       @media (max-width: 767.98px) {
         max-width: 360px;
         margin: auto;
-        padding: 41px 0 58px;
+        padding: 40px 0 90px;
       }
 
       .we-title-container {
@@ -509,8 +509,8 @@ body {
             }
 
             @media (max-width: 767.98px) {
-              margin-right: 0;
-              height: 220px;
+              margin-right: 40px;
+              height: 200px;
               margin-bottom: 20px;
             }
 
@@ -553,9 +553,9 @@ body {
                 }
 
                 @media (max-width: 767.98px) {
-                  font-size: 20px;
-                  line-height: 28px;
-                  margin: 0 0 25px;
+                  // font-size: 20px;
+                  // line-height: 28px;
+                  // margin: 0 0 25px;
                 }
               }
 
@@ -628,7 +628,7 @@ body {
           }
 
           @media (max-width: 767.98px) {
-            bottom: -46px;
+            bottom: -80px;
           }
 
           li {
@@ -939,6 +939,11 @@ body {
   //pixel perfect Css
 
   //navigation css
+  @media (max-width: 1079px) {
+    body #stickyheader {
+      background: transparent;
+    }
+  }
   header.header {
     .header__container {
       @media (min-width: 1080px) {
@@ -1056,6 +1061,7 @@ body {
       }
       @media (max-width: 767.98px) {
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819027/komodohealth/theonedaysummitmicrositeevent/what_to_expect_background_360.svg") !important;
+        background-position: center -45px !important;
       }
     }
 
@@ -1064,7 +1070,7 @@ body {
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704820519/komodohealth/theonedaysummitmicrositeevent/details_bacgkround_769.svg") !important;
       }
       @media (max-width: 767.98px) {
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819027/komodohealth/theonedaysummitmicrositeevent/what_to_expect_background_360.svg") !important;
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819027/komodohealth/theonedaysummitmicrositeevent/details_background_360.svg") !important;
       }
     }
   }

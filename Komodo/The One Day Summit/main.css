@@ -138,6 +138,10 @@ body .hero-section-spz .hero .spz-container .left-box .title-box .hs-subtitle {
     margin-bottom: 31px !important;
   }
 }
+body .join-us-section-spz {
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 body .join-us-section-spz .video-in-right {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -438,6 +442,11 @@ body .feature-section-spz .feature-cards .fc-cta-container .fc-cta-subtitle {
     margin: 0;
   }
 }
+body .what-to-expect-spz {
+  overflow: hidden;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+}
 @media (min-width: 1023.98px) {
   body .what-to-expect-spz .spz-container {
     max-width: 1440px;
@@ -456,7 +465,7 @@ body .what-to-expect-spz .what-to-expect {
   body .what-to-expect-spz .what-to-expect {
     max-width: 360px;
     margin: auto;
-    padding: 41px 0 58px;
+    padding: 40px 0 90px;
   }
 }
 body .what-to-expect-spz .what-to-expect .we-title-container {
@@ -526,8 +535,8 @@ body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .im
 }
 @media (max-width: 767.98px) {
   body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .img-container {
-    margin-right: 0;
-    height: 220px;
+    margin-right: 40px;
+    height: 200px;
     margin-bottom: 20px;
   }
 }
@@ -575,13 +584,6 @@ body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .te
     font-size: 24px;
     line-height: 32px;
     margin: 0 0 32px;
-  }
-}
-@media (max-width: 767.98px) {
-  body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .text-container .slide-content .slide-title {
-    font-size: 20px;
-    line-height: 28px;
-    margin: 0 0 25px;
   }
 }
 body .what-to-expect-spz .what-to-expect .we-slider-container .slide-content .text-container .slide-content .slide-reviewer .reviewer {
@@ -649,7 +651,7 @@ body .what-to-expect-spz .what-to-expect .we-slider-container .slick-dots {
 }
 @media (max-width: 767.98px) {
   body .what-to-expect-spz .what-to-expect .we-slider-container .slick-dots {
-    bottom: -46px;
+    bottom: -80px;
   }
 }
 body .what-to-expect-spz .what-to-expect .we-slider-container .slick-dots li {
@@ -951,6 +953,11 @@ body .videoCoverImage > div[onclick]:hover::before {
 body .videoCoverImage > div[onclick] .thumb {
   width: 100%;
 }
+@media (max-width: 1079px) {
+  body body #stickyheader {
+    background: transparent;
+  }
+}
 @media (min-width: 1080px) {
   body header.header .header__container {
     padding: 24px 20px;
@@ -1054,6 +1061,7 @@ body header.header .header__container .header__menu .header__navigation .nav-mob
 @media (max-width: 767.98px) {
   body .body-container-wrapper .dnd_area-row-3-background-image {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819027/komodohealth/theonedaysummitmicrositeevent/what_to_expect_background_360.svg") !important;
+    background-position: center -45px !important;
   }
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -1063,6 +1071,6 @@ body header.header .header__container .header__menu .header__navigation .nav-mob
 }
 @media (max-width: 767.98px) {
   body .body-container-wrapper .dnd_area-row-4-background-image {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819027/komodohealth/theonedaysummitmicrositeevent/what_to_expect_background_360.svg") !important;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704819027/komodohealth/theonedaysummitmicrositeevent/details_background_360.svg") !important;
   }
 }
