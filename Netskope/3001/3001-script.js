@@ -10,7 +10,8 @@ let bodyLoaded = setInterval(function () {
 
     //Main function call
     if (location.pathname.includes('/get-started')) {
-      waitForElm('.mktoFormRow [name="utm_location__c"]').then(function (elm) {
+      console.log('Entered Form Page');
+      waitForElm('.mktoForm [name="utm_location__c"]').then(function (elm) {
         document.body.classList.add('spz-3001');
         submitEmail();
       });
@@ -265,8 +266,6 @@ let bodyLoaded = setInterval(function () {
                 </div>
             </div>
             </div>`);
-
-      document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
 
       document.querySelector('body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .v3-two-column-image__image-container .v3-two-column-image__image').innerHTML = ` <picture>
             <source media="(min-width:1023.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/3001/image_desktop.webp">
@@ -547,7 +546,7 @@ let bodyLoaded = setInterval(function () {
       }
       //Updating slider icon
       waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
-
+        document.querySelector('.v3-reports.light .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
         jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
 
       });
@@ -610,6 +609,15 @@ let bodyLoaded = setInterval(function () {
               }
             },
           ]
+        });
+
+        jQuery('.slider-thumb').on('touchstart', e => {
+          jQuery('.slider-content').slick('slickPlay');
+          jQuery('.slider-thumb').slick('slickPlay');
+        });
+        jQuery('.slider-content').on('touchstart', e => {
+          jQuery('.slider-content').slick('slickPause');
+          jQuery('.slider-thumb').slick('slickPause');
         });
 
         jQuery('.slider-thumb').slick({
