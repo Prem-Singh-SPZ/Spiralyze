@@ -43,7 +43,7 @@ let bodyLoaded = setInterval(function () {
 
     function createTest3001() {
       //Adding email field in nav
-      document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-3001-email"><input class="spz-email" type="email" placeholder="Email"></div>');
+      document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-3001-email"><input class="spz-email" type="email" placeholder="Business Email"></div>');
 
       document.querySelector('.header__top-menu').insertAdjacentHTML('afterend', '<div class="header__get-started mobile"><div class="spz-3001-email"><input class="spz-email mobile" type="email" placeholder="Email"></div> <a class="header__get-started-button btn" href="https://www.netskope.com/get-started">Get Started</a></div>');
 
