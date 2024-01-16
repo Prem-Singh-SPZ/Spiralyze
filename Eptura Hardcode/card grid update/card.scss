@@ -1,0 +1,73 @@
+$eptura: "Eptura Flexible Light", Arial, sans-serif;
+
+body {
+  margin: 0;
+  padding: 00;
+}
+.spz-custom-cards-section {
+  max-width: 1240px;
+  margin: auto;
+  padding: 100px 0 52px;
+
+  .section-headline {
+    color: #0d122e;
+    text-align: center;
+    font-family: $eptura;
+    font-size: 46px;
+    font-style: normal;
+    font-weight: 300;
+    line-height: 54px;
+    margin-bottom: 64px;
+  }
+
+  .spz-custom-cards {
+    .cards-row {
+      display: flex;
+      margin-bottom: 48px;
+      justify-content: space-between;
+
+      .custom-card {
+        display: flex;
+        flex-direction: column;
+        max-width: 380px;
+
+        &:nth-child(2) {
+          margin: 0 16px;
+        }
+
+        .img-container {
+          max-height: 320px;
+
+          img {
+            width: 100%;
+          }
+        }
+
+        .copy {
+          margin-top: 32px;
+          .card-title {
+            overflow: hidden;
+            color: #0d122e;
+            text-overflow: ellipsis;
+            font-family: $eptura;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 32px;
+            margin: 0 0 12px;
+          }
+
+          .card-content {
+            color: rgba(13, 18, 46, 0.8);
+            font-family: $eptura;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            margin: 0;
+          }
+        }
+      }
+    }
+  }
+}
