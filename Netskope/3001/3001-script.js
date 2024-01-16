@@ -26,8 +26,17 @@ let bodyLoaded = setInterval(function () {
     function submitEmail() {
       MktoForms2.whenReady(function (form) {
         if (getCookie('userEmailSPZ')) {
-          document.querySelector('.mktoForm #Email').value = getCookie('userEmailSPZ');
-          setCookieForEmail('userEmailSPZ', '');
+          let valueAdded = setInterval(() => {
+            document.querySelector('.mktoForm #Email').value = getCookie('userEmailSPZ');
+          }, 100);
+
+          setTimeout(() => {
+            clearInterval(valueAdded);
+          }, 2000);
+
+          setTimeout(() => {
+            setCookieForEmail('userEmailSPZ', '');
+          }, 5000);
         }
       });
     }
@@ -109,6 +118,7 @@ let bodyLoaded = setInterval(function () {
 
       //Updating search icon
       document.querySelector('.header__top-menu-link--search img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
+      document.querySelector('.header__top-menu-link--search-mobile img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704198990/netskope/3001/search.svg');
       document.querySelector('.header__top-menu-link-language img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1704199001/netskope/3001/chevron.svg');
 
 

@@ -14,7 +14,7 @@ body {
         top: 0;
 
         .header__popup {
-          top: 100px;
+          top: 88px;
         }
 
         .header__container-inner {
@@ -77,13 +77,19 @@ body {
               .header__top-menu-link--search {
                 width: 40px;
                 height: 40px;
-                display: block !important;
+                // display: block !important;
                 border: 1px solid #fff;
                 border-radius: 100px;
               }
 
               .header__top-menu-link--search-mobile {
-                display: none !important;
+                width: 40px;
+                height: 40px;
+                // display: block !important;
+                border: 1px solid #fff;
+                border-radius: 100px;
+                order: -1;
+                margin: 0;
               }
 
               .header__top-menu-link--search-button img {
@@ -158,25 +164,22 @@ body {
                   }
 
                   &::-webkit-input-placeholder {
-                    color: #fff;
+                    color: rgba(255, 255, 255, 0.8);
                   }
                   &:-moz-placeholder {
-                    color: #fff;
-                    opacity: 1;
+                    color: rgba(255, 255, 255, 0.8);
                   }
                   &::-moz-placeholder {
-                    color: #fff;
-                    opacity: 1;
+                    color: rgba(255, 255, 255, 0.8);
                   }
                   &:-ms-input-placeholder {
-                    color: #fff;
+                    color: rgba(255, 255, 255, 0.8);
                   }
                   &::-ms-input-placeholder {
-                    color: #fff;
+                    color: rgba(255, 255, 255, 0.8);
                   }
-
                   &::placeholder {
-                    color: #fff;
+                    color: rgba(255, 255, 255, 0.8);
                   }
                 }
               }
@@ -194,13 +197,35 @@ body {
                 }
               }
 
-              &.i-hover {
-                border: 1px solid #fff;
-              }
-
+              &.i-hover,
               &.i-focused {
                 border: 1px solid #fff;
+
+                input {
+                  &::-webkit-input-placeholder {
+                    color: #fff;
+                  }
+                  &:-moz-placeholder {
+                    color: #fff;
+                  }
+                  &::-moz-placeholder {
+                    color: #fff;
+                  }
+                  &:-ms-input-placeholder {
+                    color: #fff;
+                  }
+                  &::-ms-input-placeholder {
+                    color: #fff;
+                  }
+                  &::placeholder {
+                    color: #fff;
+                  }
+                }
               }
+
+              // &.i-focused {
+              //   border: 1px solid #fff;
+              // }
             }
           }
         }
@@ -367,7 +392,7 @@ body {
                 cursor: pointer;
                 transition: all 0.15s ease-in-out;
                 margin: 0;
-                border: 1.5px solid #d9f3f9;
+                border: 1.5px solid #081a59;
 
                 @media (min-width: 767.98px) and (max-width: 1023.98px) {
                   width: 224px;
@@ -839,7 +864,7 @@ body {
                   a.ga__cta.btn {
                     height: 48px;
                     letter-spacing: 0;
-                    padding: 13px 26.5px;
+                    padding: 13px 27.5px;
                     box-shadow: none;
                     border: 1px solid #ff8200;
 
@@ -2208,11 +2233,7 @@ body {
       .v3.v3-cta.dark {
         padding: 56px 0px;
         border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-        background: linear-gradient(
-          180deg,
-          #081a59 -4.22%,
-          rgba(0, 169, 206, 0) 610.64%
-        );
+        background: #081a59;
 
         @media (max-width: 1023.98px) {
           padding: 48px 0px;

@@ -23,8 +23,16 @@ body {
   .spz-custom-cards {
     .cards-row {
       display: flex;
-      margin-bottom: 48px;
       justify-content: space-between;
+
+      @media (min-width: 1023.98px) {
+        margin-bottom: 48px;
+      }
+
+      @media (max-width: 1023.98px) {
+        flex-wrap: wrap;
+        justify-content: center;
+      }
 
       .custom-card {
         display: flex;
@@ -33,6 +41,10 @@ body {
 
         &:nth-child(2) {
           margin: 0 16px;
+        }
+
+        @media (max-width: 1023.98px) {
+          margin-bottom: 40px;
         }
 
         .img-container {

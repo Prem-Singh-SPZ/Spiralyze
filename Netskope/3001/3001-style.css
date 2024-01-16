@@ -14,7 +14,7 @@ body #wrapper .header.has-promo-banner.homepage {
   top: 0;
 }
 body #wrapper .header.has-promo-banner.homepage .header__popup {
-  top: 100px;
+  top: 88px;
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner {
   max-width: 1296px;
@@ -79,12 +79,18 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__top-menu-link--search {
   width: 40px;
   height: 40px;
-  display: block !important;
   border: 1px solid #fff;
   border-radius: 100px;
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__top-menu-link--search-mobile {
-  display: none !important;
+  width: 40px;
+  height: 40px;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  -webkit-box-ordinal-group: 0;
+      -ms-flex-order: -1;
+          order: -1;
+  margin: 0;
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__top-menu .header__top-menu-link--search-button img {
   width: 24px;
@@ -164,20 +170,19 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
   }
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .spz-3001-email input::-webkit-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .spz-3001-email input::-moz-placeholder {
-  color: #fff;
-  opacity: 1;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .spz-3001-email input:-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .spz-3001-email input::-ms-input-placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .spz-3001-email input::placeholder {
-  color: #fff;
+  color: rgba(255, 255, 255, 0.8);
 }
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .header__get-started-button.btn {
   height: 40px;
@@ -191,11 +196,23 @@ body #wrapper .header.has-promo-banner.homepage .header__container-inner .header
 body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started .header__get-started-button.btn:hover {
   border: 1px solid #081a59;
 }
-body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover {
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover, body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused {
   border: 1px solid #fff;
 }
-body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused {
-  border: 1px solid #fff;
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover input::-webkit-input-placeholder, body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused input::-webkit-input-placeholder {
+  color: #fff;
+}
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover input::-moz-placeholder, body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused input::-moz-placeholder {
+  color: #fff;
+}
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover input:-ms-input-placeholder, body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused input:-ms-input-placeholder {
+  color: #fff;
+}
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover input::-ms-input-placeholder, body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused input::-ms-input-placeholder {
+  color: #fff;
+}
+body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-hover input::placeholder, body #wrapper .header.has-promo-banner.homepage .header__container-inner .header__top.has-promo-banner .header__get-started.i-focused input::placeholder {
+  color: #fff;
 }
 body .v3__container .v3.v3-footer.netskope-footer {
   margin-bottom: -24px;
@@ -378,7 +395,7 @@ body .v3__container #components__content .spz-hero-section .hero-section-wrapper
   -webkit-transition: all 0.15s ease-in-out;
   transition: all 0.15s ease-in-out;
   margin: 0;
-  border: 1.5px solid #d9f3f9;
+  border: 1.5px solid #081a59;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body .v3__container #components__content .spz-hero-section .hero-section-wrapper .hero-section-cards .checkboxes .check-box .custom-check {
@@ -861,7 +878,7 @@ body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-im
 body .v3__container #components__content .v3.v3-promo.homepage .v3-two-column-image.orange_line_off .row.align-items-center.text-on-right .col-lg-6:first-child .v3-two-column-image__content .v3-two-column-image-content__ctas a.ga__cta.btn {
   height: 48px;
   letter-spacing: 0;
-  padding: 13px 26.5px;
+  padding: 13px 27.5px;
   -webkit-box-shadow: none;
           box-shadow: none;
   border: 1px solid #ff8200;
@@ -2168,8 +2185,7 @@ body .v3__container #components__content .v3-reports:not(.control) .container di
 body .v3__container #components__content .v3.v3-cta.dark {
   padding: 56px 0px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(-4.22%, #081a59), color-stop(610.64%, rgba(0, 169, 206, 0)));
-  background: linear-gradient(180deg, #081a59 -4.22%, rgba(0, 169, 206, 0) 610.64%);
+  background: #081a59;
 }
 @media (max-width: 1023.98px) {
   body .v3__container #components__content .v3.v3-cta.dark {
