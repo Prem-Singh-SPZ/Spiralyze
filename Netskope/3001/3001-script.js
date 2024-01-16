@@ -46,7 +46,7 @@ let bodyLoaded = setInterval(function () {
       //Adding email field in nav
       document.querySelector('.header__get-started').insertAdjacentHTML('afterbegin', '<div class="spz-3001-email"><input class="spz-email" type="email" placeholder="Business Email"></div>');
 
-      document.querySelector('.header__top-menu').insertAdjacentHTML('afterend', '<div class="header__get-started mobile"><div class="spz-3001-email"><input class="spz-email mobile" type="email" placeholder="Email"></div> <a class="header__get-started-button btn" href="https://www.netskope.com/get-started">Get Started</a></div>');
+      document.querySelector('.header__top-menu').insertAdjacentHTML('afterend', '<div class="header__get-started mobile"><div class="spz-3001-email"><input class="spz-email mobile" type="email" placeholder="Business Email"></div> <a class="header__get-started-button btn" href="https://www.netskope.com/get-started">Get Started</a></div>');
 
       //Hero section added here
       document.querySelector('#components__content').insertAdjacentHTML('afterbegin', `<div class="spz-hero-section">
@@ -611,7 +611,7 @@ let bodyLoaded = setInterval(function () {
           ]
         });
 
-        jQuery('.slider-thumb').on('touchstart', e => {
+        jQuery('.slider-content').on('touchmove', e => {
           jQuery('.slider-content').slick('slickPlay');
           jQuery('.slider-thumb').slick('slickPlay');
         });

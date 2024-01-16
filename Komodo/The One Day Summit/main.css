@@ -364,7 +364,7 @@ body .feature-section-spz .feature-cards .fc-card-container {
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
 }
-@media (max-width: 1280.98px) {
+@media (max-width: 1023.98px) {
   body .feature-section-spz .feature-cards .fc-card-container {
     max-width: 600px;
   }
@@ -381,10 +381,59 @@ body .feature-section-spz .feature-cards .fc-card-container .fc-card {
   height: 416px;
   margin-bottom: 20px;
 }
-body .feature-section-spz .feature-cards .fc-card-container .fc-card img {
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .feature-section-spz .feature-cards .fc-card-container .fc-card {
+    width: 290px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .feature-section-spz .feature-cards .fc-card-container .fc-card {
+    width: 320px;
+  }
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-img {
   width: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
+  height: 302px;
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content {
+  padding: 8px 16px 24px 16px;
+  background: radial-gradient(122.18% 104.51% at 11.45% 104.51%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), #000;
+}
+@media (max-width: 767.98px) {
+  body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content {
+    text-align: center;
+  }
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content .fc-name {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 4px;
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content .fc-position {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 4px;
+}
+body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content .fc-company {
+  color: #68cce8;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
 }
 body .feature-section-spz .feature-cards .fc-cta-container {
   display: -webkit-box;
