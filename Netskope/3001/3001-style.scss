@@ -896,7 +896,7 @@ body {
           }
 
           @media (max-width: 767.98px) {
-            padding: 0 0 0 14px;
+            padding: 0 0 0 24px;
           }
 
           > img.v3-promo__image {
@@ -982,8 +982,11 @@ body {
 
                   .v3-promo__box-title {
                     height: auto !important;
-                    min-height: auto !important;
+                    min-height: 84px;
                     margin: 32px 0 36px;
+                    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                      min-height: 60px;
+                    }
 
                     h6 {
                       color: #081a59;
@@ -1438,6 +1441,10 @@ body {
                 @media (max-width: 767.98px) {
                   display: flex;
                   align-items: end;
+                }
+
+                @media (min-width: 1199.98px) {
+                  transform: translate3d(0, 0, 0) !important;
                 }
 
                 .slick-slide {

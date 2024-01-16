@@ -75,7 +75,7 @@ let bodyLoaded = setInterval(function () {
                     </div>
                 </div>
                 <div class="hero-section-CTA">
-                    <div class="v3"> <a href="https://www.netskope.com/get-started" class="get-started-cta btn">Get started</a></div>
+                    <div class="v3"> <a href="https://www.netskope.com/get-started" class="get-started-cta btn">Get Started</a></div>
                     <div class="v3"> <a href="javascript:void(0)" class="learn-more-cta btn">Learn more</a></div>
                 </div>
                 <div class="hero-section-review">
@@ -85,7 +85,7 @@ let bodyLoaded = setInterval(function () {
                     </picture>
                     <span>4.6</span></div>
                     <div class="section-review"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198276/netskope/3001/g2_svg.svg" alt="G2" class="Gartner"> <picture>
-                    <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704199148/netskope/3001/frame_5599.svg">
+                    <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1704199158/netskope/3001/frame_5600.svg">
                     <img src="//res.cloudinary.com/spiralyze/image/upload/v1704198262/netskope/3001/frame_5598.svg" alt="Star Rating">
                     </picture>
                     <span>4.4</span></div>
@@ -587,7 +587,7 @@ let bodyLoaded = setInterval(function () {
           slidesToScroll: 1,
           infinite: true,
           autoplay: true,
-          autoplaySpeed: 2000,
+          autoplaySpeed: 1900,
           centerMode: true,
           asNavFor: '.slider-thumb',
           arrows: false,
@@ -619,7 +619,7 @@ let bodyLoaded = setInterval(function () {
                 slidesToShow: 4,
                 infinite: true,
                 autoplay: true,
-                autoplaySpeed: 2000,
+                autoplaySpeed: 1900,
               }
             },
             // {
@@ -628,7 +628,7 @@ let bodyLoaded = setInterval(function () {
             //     slidesToShow: 3.2,
             //     infinite: true,
             //     autoplay: true,
-            //     autoplaySpeed: 2000,
+            //     autoplaySpeed: 1900,
             //   }
             // },
             // {
@@ -637,7 +637,7 @@ let bodyLoaded = setInterval(function () {
             //     slidesToShow: 1.8,
             //     infinite: true,
             //     autoplay: true,
-            //     autoplaySpeed: 2000,
+            //     autoplaySpeed: 1900,
             //   }
             // },
           ]
@@ -647,15 +647,17 @@ let bodyLoaded = setInterval(function () {
 
     //on focus of .spz-email addClass to .header__get-started
     waitForElm('.spz-email').then(function (elm) {
-      document.querySelector('.spz-email').addEventListener('focus', function (event) {
-        document.querySelector('.header__get-started').classList.add('i-focused');
-      });
+      document.querySelectorAll('.spz-email').forEach(element => {
+        element.addEventListener('focus', function (event) {
+          element.closest('.header__get-started').classList.add('i-focused');
+        });
 
-      document.querySelector('.spz-email').addEventListener('blur', function (event) {
-        document.querySelector('.header__get-started').classList.remove('i-focused');
-      });
+        element.addEventListener('blur', function (event) {
+          element.closest('.header__get-started').classList.remove('i-focused');
+        });
 
-      hover(document.querySelector('.spz-email'), "i-hover");
+        hover(element, "i-hover");
+      });
     });
 
     function hover(element, className) {
