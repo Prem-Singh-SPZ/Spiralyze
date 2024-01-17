@@ -546,9 +546,11 @@ let bodyLoaded = setInterval(function () {
       }
       //Updating slider icon
       waitForElm('.v3-reports:not(.control) .v3-reports__reports.slick-initialized').then(function (elm) {
-        document.querySelector('.v3-reports.light:not(.control) .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
         jQuery('.v3-reports:not(.control) .v3-reports__reports').slick('unslick');
+      });
 
+      waitForElm('.v3-reports.light:not(.control) .v3-reports__title h2').then(function (elm) {
+        document.querySelector('.v3-reports.light:not(.control) .v3-reports__title h2').innerHTML = `Trusted by the industry's<br><span>leading authorities</span>`;
       });
 
 
