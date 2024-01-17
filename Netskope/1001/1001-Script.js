@@ -98,7 +98,7 @@ function formModify() {
             document.querySelector('#LblFirstName').textContent = "First Name";
             document.querySelector('#LblLastName').textContent = "Last Name";
 
-            document.querySelector(".mktoButton.g-recaptcha").setAttribute('tabindex', '14');
+            document.querySelector(".mktoButton").setAttribute('tabindex', '14');
             setHiddenFields();
 
 
@@ -108,7 +108,7 @@ function formModify() {
         }, 100);
 
         document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
-        document.querySelector('.mktoFormCol.mktoCheckbox_151456_0-row').classList.add('spz-hidden');
+        document.querySelector('.mktoFormCol[class*="mktoCheckbox_"]').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol.numEmployeesRange-row').classList.add('spz-hidden');
