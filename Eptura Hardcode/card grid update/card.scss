@@ -14,11 +14,13 @@ body {
     padding: 100px 20px 52px;
 
     @media (min-width: 767.98px) and (max-width: 1199.98px) {
-      max-width: 688px;
+      max-width: 728px;
+      padding: 71px 20px 32px;
     }
 
     @media (max-width: 767.98px) {
       max-width: 300px;
+      padding: 72px 0px 32px;
     }
 
     .section-headline {
@@ -30,6 +32,17 @@ body {
       font-weight: 300;
       line-height: 54px;
       margin-bottom: 64px;
+
+      @media (min-width: 767.98px) and (max-width: 1199.98px) {
+        margin-bottom: 48px;
+      }
+
+      @media (max-width: 767.98px) {
+        font-size: 36px;
+        line-height: 44px;
+        text-align: left;
+        margin-bottom: 40px;
+      }
     }
 
     .spz-custom-cards {
@@ -86,6 +99,11 @@ body {
 
           .copy {
             margin-top: 32px;
+
+            @media (max-width: 1199.98px) {
+              margin-top: 24px;
+            }
+
             .card-title {
               overflow: hidden;
               color: #0d122e;
