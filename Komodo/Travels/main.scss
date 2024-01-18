@@ -5,5 +5,155 @@ $l_white: rgba(255, 255, 255, 0.6);
 $titillium-font: Titillium Web, sans-serif;
 
 body {
+  //image-in-left-section-spz css
+  .image-in-left-section-spz {
+    padding: 120px 0px;
+    .spz-container {
+      .image-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
 
+        @media (max-width: 1023.98px) {
+          flex-direction: column-reverse;
+          align-items: flex-start;
+        }
+
+        .left-box {
+          max-width: 560px;
+          margin-right: 32px;
+
+          @media (max-width: 1023.98px) {
+          }
+
+          .img-container {
+            width: 100%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+
+        .right-box {
+          max-width: 463px;
+        }
+      }
+    }
+  }
+
+  //image-in-right-section-spz css
+  .image-in-right-section-spz {
+    .spz-container {
+      .image-right {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        @media (max-width: 1023.98px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
+
+        .left-box {
+          max-width: 520px;
+          margin-right: 32px;
+
+          @media (max-width: 1023.98px) {
+          }
+        }
+
+        .right-box {
+          max-width: 580px;
+          .img-container {
+            width: 100%;
+
+            img {
+              width: 100%;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  //nearest-places-section-spz section
+  .nearest-places-section-spz {
+    padding: 120px 0px;
+
+    .spz-container {
+      max-width: 1140px;
+      margin: auto;
+
+      .title {
+        color: #fff;
+        font-family: $titillium-font;
+        font-size: 48px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 56px;
+        margin-bottom: 48px;
+      }
+
+      .nearest-places-cards {
+        display: flex;
+        align-items: flex-start;
+        justify-content: space-between;
+
+        @media (max-width: 1023.98px) {
+          flex-direction: column;
+        }
+
+        .places-card {
+          border-left: 1.5px solid #68cce8;
+          padding-left: 16px;
+          margin-right: 16px;
+
+          @media (max-width: 1023.98px) {
+            margin-right: 0;
+            margin-bottom: 32px;
+          }
+
+          &:last-child {
+            margin: 0;
+          }
+
+          .content-title {
+            color: #fff;
+            font-family: $titillium-font;
+            font-size: 24px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            margin: 0 0 8px;
+          }
+
+          .content-subtitle {
+            color: #f0eeee;
+            font-family: $titillium-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0 0 8px;
+          }
+
+          .content {
+            color: #f0eeee;
+            font-family: $titillium-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+
+            span {
+              color: #fff;
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
 }
