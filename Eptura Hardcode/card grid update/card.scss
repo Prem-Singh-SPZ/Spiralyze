@@ -9,9 +9,17 @@ body {
   background-color: #fff;
 
   .custom-cards-section {
-    max-width: 1240px;
+    max-width: 1280px;
     margin: auto;
-    padding: 100px 0 52px;
+    padding: 100px 20px 52px;
+
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      max-width: 688px;
+    }
+
+    @media (max-width: 767.98px) {
+      max-width: 300px;
+    }
 
     .section-headline {
       color: #0d122e;
@@ -25,17 +33,6 @@ body {
     }
 
     .spz-custom-cards {
-      max-width: 1240px;
-      margin: auto;
-
-      @media (min-width: 767.98px) and (max-width: 1199.98px) {
-        max-width: 688px;
-      }
-
-      @media (max-width: 767.98px) {
-        max-width: 300px;
-      }
-
       .cards-row {
         display: flex;
         flex-wrap: wrap;
@@ -64,9 +61,6 @@ body {
           @media (min-width: 1199.98px) {
           }
 
-          @media (min-width: 767.98px) and (max-width: 1199.98px) {
-          }
-
           @media (max-width: 1199.98px) {
             margin-bottom: 40px;
             max-width: 326px;
@@ -81,6 +75,12 @@ body {
 
             img {
               width: 100%;
+              border-radius: 12px;
+              height: 320px;
+
+              @media (max-width: 1199.98px) {
+                height: 260px;
+              }
             }
           }
 
