@@ -11,6 +11,12 @@ body {
   margin: auto;
   padding: 100px 20px 52px;
 }
+@media (min-width: 1199.98px) and (max-width: 1330.98px) {
+  .spz-custom-cards-section .custom-cards-section {
+    max-width: 1200px;
+    padding: 100px 100px 52px;
+  }
+}
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   .spz-custom-cards-section .custom-cards-section {
     max-width: 728px;
@@ -75,6 +81,11 @@ body {
   max-width: 380px;
   margin-bottom: 48px;
 }
+@media (min-width: 1199.98px) and (max-width: 1330.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card {
+    width: 32%;
+  }
+}
 @media (max-width: 1199.98px) {
   .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card {
     margin-bottom: 40px;
@@ -89,14 +100,19 @@ body {
 .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container {
   max-height: 320px;
 }
-.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container img {
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container .card-image {
+  border-radius: 12px;
+  border: 1px solid #d6d7f5;
+  background: #eeeff4;
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container .card-image img {
   width: 100%;
   border-radius: 12px;
-  height: 320px;
+  height: 318px;
 }
 @media (max-width: 1199.98px) {
-  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container img {
-    height: 260px;
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container .card-image img {
+    height: 258px;
   }
 }
 .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .copy {
