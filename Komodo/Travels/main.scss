@@ -7,7 +7,8 @@ $titillium-font: Titillium Web, sans-serif;
 body {
   //image-in-left-section-spz css
   .image-in-left-section-spz {
-    padding: 120px 0px;
+    // padding: 120px 0px;
+    padding: 119px 0px 111px;
     .spz-container {
       .image-right {
         display: flex;
@@ -82,7 +83,7 @@ body {
               margin: 0 0 20px;
             }
           }
-          
+
           @media (max-width: 1023.98px) {
           }
         }
@@ -130,7 +131,7 @@ body {
 
         .places-card {
           border-left: 1.5px solid #68cce8;
-          padding-left: 16px;
+          padding-left: 15px;
           margin-right: 16px;
           width: 33.33%;
 
@@ -180,6 +181,23 @@ body {
           }
         }
       }
+    }
+  }
+
+  //pixel-perfect css
+  .faq-section-title-spz {
+    padding-bottom: 55px;
+  }
+
+  .detail-section-spz .image-right {
+    padding: 120px 0 0;
+
+    .left-box
+      .ds-title-container
+      .bullets
+      .subtitle-parent
+      .content.content_custom {
+      max-width: 100%;
     }
   }
 }
