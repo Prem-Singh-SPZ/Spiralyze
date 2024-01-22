@@ -13,10 +13,10 @@ body {
     @media (max-width: 1023.98px) {
       border-top: 1px solid rgba(255, 255, 255, 0.2);
       border-bottom: 1px solid rgba(255, 255, 255, 0.2);
-      padding: 81px 0 77px;
+      padding: 81px 0 70px;
     }
 
-    @media (max-width: 768.98px) {
+    @media (max-width: 767.98px) {
       padding: 40px 0 39px;
     }
 
@@ -73,7 +73,11 @@ body {
               line-height: 56px;
               margin: 0 0 20px;
 
-              @media (max-width: 768.98px) {
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                margin: 0 0 19px;
+              }
+
+              @media (max-width: 767.98px) {
                 font-size: 40px !important;
                 line-height: 48px !important;
               }
@@ -89,11 +93,11 @@ body {
     padding: 111px 0px 0;
 
     @media (min-width: 767.98px) and (max-width: 1023.98px) {
-      padding: 81px 0 69px;
+      padding: 81px 0 71px;
     }
 
     @media (max-width: 767.98px) {
-      padding: 40px 0;
+      padding: 40px 0 39px;
     }
 
     .spz-container {
@@ -149,7 +153,7 @@ body {
             width: 100%;
 
             @media (max-width: 1023.98px) {
-              margin-top: 32px;
+              margin-top: 31px;
             }
 
             @media (max-width: 767.98px) {
@@ -169,13 +173,19 @@ body {
   .nearest-places-section-spz {
     // padding: 120px 0px;
     padding: 112px 0px 120px;
+    background: radial-gradient(
+      100.96% 53.37% at 57.01% 96.27%,
+      rgba(104, 204, 232, 0.2) 0%,
+      rgba(104, 204, 232, 0) 100%
+    );
 
     @media (max-width: 1023.98px) {
       padding: 81px 0 80px;
+      background: transparent;
     }
 
     @media (max-width: 767.98px) {
-      padding: 40px 0;
+      padding: 40px 0 48px;
     }
 
     .spz-container {
@@ -198,7 +208,7 @@ body {
         @media (max-width: 767.98px) {
           font-size: 40px !important;
           line-height: 48px !important;
-          margin-bottom: 29px;
+          margin-bottom: 31px;
         }
       }
 
@@ -296,26 +306,45 @@ body {
       }
 
       .left-box {
-        @media (max-width: 768.98px) {
+        @media (max-width: 767.98px) {
           max-width: 320px;
         }
 
-        .ds-title-container .bullets .subtitle-parent .content.content_custom {
-          max-width: 100%;
+        .ds-title-container .bullets {
+          .subtitle-parent {
+            .subtitle {
+              font-size: 16px;
+              line-height: 24px;
+            }
+
+            .content {
+              max-width: 304px;
+              font-size: 16px;
+              line-height: 24px;
+
+              p {
+                font-size: 16px !important;
+                line-height: 24px;
+              }
+            }
+          }
+          .subtitle-parent .content.content_custom {
+            max-width: 100%;
+          }
         }
 
         .cta-container {
           display: flex;
           align-items: center;
 
-          @media (max-width: 768.98px) {
+          @media (max-width: 767.98px) {
             flex-direction: column;
           }
 
           .travel-cta {
             margin-right: 24px;
 
-            @media (max-width: 768.98px) {
+            @media (max-width: 767.98px) {
               margin-right: 0;
               margin-bottom: 16px;
             }
@@ -324,7 +353,7 @@ body {
           .secondary-cta {
             .spz-cta-grey {
               width: 128px;
-              @media (max-width: 768.98px) {
+              @media (max-width: 767.98px) {
                 width: 320px;
               }
             }
@@ -343,6 +372,30 @@ body {
 
     @media (max-width: 1023.98px) {
       background: transparent;
+    }
+  }
+
+  .dnd_area-row-2-padding {
+    background: radial-gradient(
+      44.96% 58.21% at -8.19% 48.56%,
+      rgba(104, 204, 232, 0.2) 0%,
+      rgba(104, 204, 232, 0) 100%
+    );
+
+    @media (max-width: 1023.98px) {
+      background: transparent;
+    }
+
+    .image-in-left-section-spz {
+      padding: 111px 0px 0;
+
+      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+        padding: 80px 0 70px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 40px 0 39px;
+      }
     }
   }
 
