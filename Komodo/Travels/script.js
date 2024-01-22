@@ -27,3 +27,22 @@ $().ready(function () {
         ]
     });
 });
+
+document.addEventListener("DOMContentLoaded", (event) => {
+    window.addEventListener('click', function (el) {
+        if (el.target.classList.contains('accordion-button')) {
+
+            document.querySelectorAll('.accordion-item').forEach(function (elem) {
+                elem.querySelector('.accordion-button').classList.add('collapsed');
+                if (elem.querySelector('.accordion-collapse.show')) {
+                    elem.querySelector('.accordion-collapse.show').classList.remove('show');
+                }
+            })
+
+            el.target.classList.toggle('collapsed');
+            let id = el.target.getAttribute('data-bs-target');
+            this.document.querySelector(id).classList.toggle('show');
+        }
+    },);
+});
+

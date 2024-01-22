@@ -46,6 +46,14 @@
   <script src="/Komodo/Travels/script.js"></script>
 </html>
 
+document.addEventListener("DOMContentLoaded", (event) => {
+  window.addEventListener('click', function (el) {
+      el.target.classList.toggle('collapsed');
+      let id = el.target.getAttribute('data-bs-target');
+      this.document.querySelector(id).classList.toggle('show');
+  },);
+});
+
 <p style="font-size: 16px; line-height: 24px; color: #ffffff; font-weight: bold; margin: 0 0 8px;">MPG PARKING GARAGE</p>
 <p style="font-size: 16px; line-height: 24px; color: #f0eeee; font-weight: 400; margin: 0 0 8px;">336 West 58th and 18 West 60th (entrance/exits on both sides).</p>
 <p style="font-size: 16px; line-height: 24px; color: #f0eeee; font-weight: 400; margin: 0 0 8px;">MPG Parking Garage features direct elevator access to Jazz at Lincoln Center and The Shops at Columbus Circle.</p>

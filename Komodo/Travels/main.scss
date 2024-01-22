@@ -8,7 +8,18 @@ body {
   //image-in-left-section-spz css
   .image-in-left-section-spz {
     // padding: 120px 0px;
-    padding: 119px 0px 111px;
+    padding: 119px 0px 0;
+
+    @media (max-width: 1023.98px) {
+      border-top: 1px solid rgba(255, 255, 255, 0.2);
+      border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+      padding: 81px 0 77px;
+    }
+
+    @media (max-width: 768.98px) {
+      padding: 40px 0 39px;
+    }
+
     .spz-container {
       .image-right {
         display: flex;
@@ -25,10 +36,20 @@ body {
           margin-right: 32px;
 
           @media (max-width: 1023.98px) {
+            max-width: 100%;
+            margin: 0;
           }
 
           .img-container {
             width: 100%;
+
+            @media (max-width: 1023.98px) {
+              margin-top: 32px;
+            }
+
+            @media (max-width: 767.98px) {
+              margin-top: 23px;
+            }
 
             img {
               width: 100%;
@@ -38,6 +59,9 @@ body {
 
         .right-box {
           max-width: 463px;
+          @media (max-width: 1023.98px) {
+            max-width: 100%;
+          }
 
           .ds-title-container {
             .ds-title {
@@ -48,6 +72,11 @@ body {
               font-weight: 400;
               line-height: 56px;
               margin: 0 0 20px;
+
+              @media (max-width: 768.98px) {
+                font-size: 40px !important;
+                line-height: 48px !important;
+              }
             }
           }
         }
@@ -57,6 +86,16 @@ body {
 
   //image-in-right-section-spz css
   .image-in-right-section-spz {
+    padding: 111px 0px 0;
+
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      padding: 81px 0 69px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 40px 0;
+    }
+
     .spz-container {
       .image-right {
         display: flex;
@@ -72,6 +111,11 @@ body {
           max-width: 520px;
           margin-right: 32px;
 
+          @media (max-width: 1023.98px) {
+            max-width: 100%;
+            margin: 0;
+          }
+
           .ds-title-container {
             .ds-title {
               color: $white;
@@ -81,6 +125,11 @@ body {
               font-weight: 400;
               line-height: 56px;
               margin: 0 0 20px;
+
+              @media (max-width: 767.98px) {
+                font-size: 40px !important;
+                line-height: 48px !important;
+              }
             }
           }
 
@@ -90,8 +139,22 @@ body {
 
         .right-box {
           max-width: 580px;
+
+          @media (max-width: 1023.98px) {
+            max-width: 100%;
+            margin: 0;
+          }
+
           .img-container {
             width: 100%;
+
+            @media (max-width: 1023.98px) {
+              margin-top: 32px;
+            }
+
+            @media (max-width: 767.98px) {
+              margin-top: 23px;
+            }
 
             img {
               width: 100%;
@@ -104,11 +167,20 @@ body {
 
   //nearest-places-section-spz section
   .nearest-places-section-spz {
-    padding: 120px 0px;
+    // padding: 120px 0px;
+    padding: 112px 0px 120px;
+
+    @media (max-width: 1023.98px) {
+      padding: 81px 0 80px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 40px 0;
+    }
 
     .spz-container {
-      max-width: 1140px;
-      margin: auto;
+      // max-width: 1140px;
+      // margin: auto;
 
       .title {
         color: #fff;
@@ -117,7 +189,17 @@ body {
         font-style: normal;
         font-weight: 400;
         line-height: 56px;
-        margin-bottom: 48px;
+        margin-bottom: 47px;
+
+        @media (max-width: 1023.98px) {
+          margin-bottom: 39px;
+        }
+
+        @media (max-width: 767.98px) {
+          font-size: 40px !important;
+          line-height: 48px !important;
+          margin-bottom: 29px;
+        }
       }
 
       .nearest-places-cards {
@@ -148,30 +230,30 @@ body {
           .content-title {
             color: #fff;
             font-family: $titillium-font;
-            font-size: 24px;
+            font-size: 24px !important;
             font-style: normal;
             font-weight: 400;
-            line-height: 32px;
+            line-height: 32px !important;
             margin: 0 0 8px;
           }
 
           .content-subtitle {
             color: #f0eeee;
             font-family: $titillium-font;
-            font-size: 16px;
+            font-size: 16px !important;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 24px !important;
             margin: 0 0 8px;
           }
 
           .content {
             color: #f0eeee;
             font-family: $titillium-font;
-            font-size: 16px;
+            font-size: 16px !important;
             font-style: normal;
             font-weight: 400;
-            line-height: 24px;
+            line-height: 24px !important;
             margin: 0;
 
             span {
@@ -186,20 +268,111 @@ body {
 
   //pixel-perfect css
   .faq-section-title-spz {
-    padding-bottom: 55px;
+    padding-bottom: 52px;
+
+    @media (min-width: 767.98px) and (max-width: 1023.98px) {
+      padding: 30px 0 55px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 14px 0 55px;
+    }
   }
 
-  .detail-section-spz .image-right {
-    padding: 120px 0 0;
+  .detail-section-spz {
+    background-image: url("https://www.komodohealth.com/hubfs/Imported%20sitepage%20images/details_background_pattern_1.webp") !important;
+    background-size: contain;
+    background-position: left top !important;
+    background-repeat: no-repeat !important;
+    .image-right {
+      padding: 120px 0 0;
 
-    .left-box {
-      .ds-title-container .bullets .subtitle-parent .content.content_custom {
-        max-width: 100%;
+      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+        padding: 79px 0 90px;
       }
 
-      .cta-container {
-        display: flex;
-        align-items: center;
+      @media (max-width: 767.98px) {
+        padding: 40px 0 39px;
+      }
+
+      .left-box {
+        @media (max-width: 768.98px) {
+          max-width: 320px;
+        }
+
+        .ds-title-container .bullets .subtitle-parent .content.content_custom {
+          max-width: 100%;
+        }
+
+        .cta-container {
+          display: flex;
+          align-items: center;
+
+          @media (max-width: 768.98px) {
+            flex-direction: column;
+          }
+
+          .travel-cta {
+            margin-right: 24px;
+
+            @media (max-width: 768.98px) {
+              margin-right: 0;
+              margin-bottom: 16px;
+            }
+          }
+
+          .secondary-cta {
+            .spz-cta-grey {
+              width: 128px;
+              @media (max-width: 768.98px) {
+                width: 320px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .dnd_area-row-1-padding {
+    background: radial-gradient(
+      33.6% 55.59% at 107.4% 56.05%,
+      rgba(104, 204, 232, 0.2) 0%,
+      rgba(104, 204, 232, 0) 100%
+    );
+
+    @media (max-width: 1023.98px) {
+      background: transparent;
+    }
+  }
+
+  .dnd_area-row-3-padding {
+    .image-in-left-section-spz {
+      padding: 111px 0 0;
+
+      @media (max-width: 767.98px) {
+        padding: 40px 0;
+      }
+
+      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+        padding: 80px 0 70px;
+        .img-container {
+          margin-top: 32px;
+        }
+      }
+    }
+  }
+
+  .join-us-footer-section-spz {
+    .jf-cta-container {
+      .register-cta {
+        .spz-cta {
+          width: 163px;
+
+          @media (max-width: 767.98px) {
+            width: 320px;
+          }
+        }
       }
     }
   }
