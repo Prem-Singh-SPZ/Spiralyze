@@ -14,7 +14,15 @@ function copyModify() {
         document.querySelector('.landing-page__content-container .landing-page__title').textContent = 'Secure your entire multi-cloud environment';
         document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<ul><li><span>Network. </span>Deliver fast, secure network connectivity. One cloud-based solution.</li><li><span>Visibility.</span> Get full visibility into your multi-cloud network. Web, SaaS, cloud, and more.</li><li><span>Security.</span> Monitor & verify network activities 24/7. Only allow access to required tasks.</li></ul>`;
 
-        document.querySelector('#components__content').insertAdjacentHTML('beforeend', ``);
+        document.querySelector('#components__content').insertAdjacentHTML('beforeend', `<div class="spz-trusted-section"><div class="section-container"><div class="section-title"><p>We partner with leaders across the security industry</p></div><div class="section-content"><picture>
+        <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Desktop.svg">
+        <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Tablet.svg">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Mobile.svg" alt="Trusted Partners">
+        </picture></div></div></div><div class="spz-footer"><div class="footer-container"><div class="footer-badges"><picture>
+        <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-desktop.png">
+        <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-tablet.png">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-mobile.png" alt="Badges">
+        </picture></div><div class="footer-links"><div class="phone"><p><span>To contact us by phone, please call:</span></p></div><div class="privacy-policy"></div></div></div></div>`);
     });
 }
 

@@ -158,19 +158,3 @@ let bodyLoaded = setInterval(function () {
 
   }
 });
-
-/* -------------------------- */
-var viewportWidth = window.innerWidth;
-if (viewportWidth < 768) {
-  var crazyeggscript = document.createElement('script');
-  crazyeggscript.type = 'text/javascript';
-  crazyeggscript.innerHTML = `var CE_SNAPSHOT_NAME = "#11001 | ABC | Ignite (Solution) | Feature Grid | Mobile";`;
-  document.querySelector('html').insertAdjacentElement('afterbegin', crazyeggscript);
-}
-else {
-  var crazyeggscript = document.createElement('script');
-  crazyeggscript.type = 'text/javascript';
-  crazyeggscript.innerHTML = `var CE_SNAPSHOT_NAME = "#11001 | ABC | Ignite (Solution) | Feature Grid | Desktop";`;
-
-  document.querySelector('html').insertAdjacentElement('afterbegin', crazyeggscript);
-}
