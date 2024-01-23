@@ -1,0 +1,510 @@
+$color_1: #fff;
+$color_2: #ffffff;
+$color_3: #081a59;
+$color_4: #7e8bba;
+$color_5: #00a9ce;
+$font-family_1: Graphik;
+
+body {
+  background: #081a59
+    url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_desktop.webp)
+    no-repeat;
+  background-size: cover;
+  background-position: top left;
+
+  @media (min-width: 767.98px) and (max-width: 1023.98px) {
+    background: #081a59
+      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_tablet.webp)
+      no-repeat;
+    background-size: cover;
+    background-position: top left;
+  }
+
+  @media (max-width: 767.98px) {
+    background: #081a59
+      url(//res.cloudinary.com/spiralyze/image/upload/v1700121624/netskope/1002/768_background_6.webp)
+      no-repeat;
+    background-size: cover;
+    background-position: top left;
+  }
+
+  .landing-page__footer {
+    display: none;
+  }
+
+  .landing-page__container {
+    background: transparent;
+    #components__content {
+      .landing-page__form-title {
+        display: none;
+      }
+      .landing-page__form-container {
+        max-width: 504px;
+        width: 100%;
+        background: transparent;
+        padding: 0;
+        border: none;
+      }
+    }
+  }
+
+  .netskope-component--request-demo-form {
+    border-radius: 24px;
+    background: #fff;
+
+    @media (max-width: 767.98px) {
+      max-width: 360px;
+      margin: auto;
+    }
+
+    .form_title {
+      font-size: 40px;
+      font-weight: 400;
+      line-height: 48px;
+      display: flex;
+      justify-content: center;
+      padding: 24px 0px 0px;
+      color: $color_3;
+    }
+
+    form.mktoForm#mktoForm_1169 {
+      position: relative;
+      padding: 24px 26px 16px !important;
+      display: flex !important;
+      flex-wrap: wrap;
+
+      * {
+        font-family: Graphik !important;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 24px 10px 8px !important;
+      }
+
+      .mktoFormRow {
+        margin: 0;
+        &.hideField {
+          display: none !important;
+        }
+
+        &.row-netskope-fm {
+          order: 14;
+
+          .netskope-fm {
+            color: #7e8bba !important;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 20px;
+
+            a {
+              color: #7e8bba !important;
+              padding: 0;
+              text-decoration: underline !important;
+
+              // &:hover {
+              // }
+            }
+          }
+        }
+
+        &.row-PostalCode {
+          width: 100% !important;
+          order: 10;
+        }
+      }
+
+      .mktoFormCol {
+        width: 100%;
+        margin-bottom: 16px !important;
+        padding: 0 6px !important;
+
+        @media (min-width: 767.98px) {
+          max-width: 50%;
+        }
+        @media (max-width: 767.98px) {
+          margin-bottom: 8px !important;
+        }
+
+        > .mktoOffset {
+          display: none;
+        }
+
+        .mktoFieldWrap:not(.single_checkbox) {
+          position: relative;
+          width: 100%;
+          > .mktoGutter {
+            display: none;
+          }
+
+          > label {
+            color: $color_4 !important;
+            opacity: 1 !important;
+            top: 16px;
+            left: 16px;
+            height: 30px;
+            background: #fff;
+            max-width: calc(100% - 50px);
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            pointer-events: none;
+            line-height: 24px !important;
+            position: absolute;
+            font-weight: 400;
+            transition: all 0.3s ease-in-out;
+          }
+          &.active > label {
+            top: 6px;
+            font-size: 12px !important;
+            font-style: normal;
+            font-weight: 400 !important;
+            line-height: 20px !important;
+            height: auto;
+
+            &#LblContact_Us_Form_Entry__c {
+              // top: 1.1px;
+              // padding-top: 4.9px !important;
+              // border-radius: 8px;
+              top: 1px;
+              padding-top: 5px !important;
+              border-radius: 5px;
+              max-width: calc(100% - 34px);
+            }
+
+            & ~ textarea#Contact_Us_Form_Entry__c {
+              border-color: #081a59 !important;
+            }
+          }
+        }
+
+        &.FirstName-row {
+          order: 1;
+        }
+        &.LastName-row {
+          order: 2;
+        }
+        &.Email-row {
+          order: 3;
+        }
+        &.Company-row {
+          order: 5;
+        }
+        &.Title-row {
+          order: 6;
+        }
+
+        &.Phone-row {
+          order: 4;
+        }
+        &.Country-row {
+          order: 7;
+          .mktoFieldWrap {
+            &::after {
+              content: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg);
+              position: absolute;
+              right: 16px;
+              top: 12px;
+              display: block;
+            }
+
+            &.typing {
+              &::after {
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg);
+              }
+            }
+          }
+        }
+        &.PostalCode-row {
+          order: 8;
+        }
+        &.Contact_Us_Form_Entry__c-row {
+          order: 12;
+          max-width: 100%;
+          margin-bottom: 10px !important;
+
+          @media (max-width: 767.98px) {
+            margin-top: 8px;
+            margin-bottom: 5px !important;
+          }
+
+          .mktoFieldWrap {
+            display: none;
+            position: relative;
+          }
+          .mktoFieldWrap.visible {
+            display: block;
+            float: left;
+          }
+        }
+      }
+
+      .mktoButtonRow {
+        order: 15;
+        padding-top: 8px;
+
+        @media (max-width: 767.98px) {
+          padding-top: 16px;
+        }
+
+        .mktoButton {
+          width: 100% !important;
+          background-color: #ff8200 !important;
+          border-color: #ff8200 !important;
+          color: #081a59 !important;
+          height: 48px;
+          max-width: 536px;
+          margin-left: auto;
+          margin-right: auto;
+          font-weight: 400 !important;
+          letter-spacing: 0;
+
+          @media (max-width: 1024.98px) {
+            max-width: calc(100% - 12px);
+          }
+
+          &:hover {
+            background-color: #fff !important;
+            border: 1px solid #081a59 !important;
+          }
+        }
+      }
+
+      .mktoFieldDescriptor.mktoFormCol {
+        .mktoField {
+          height: 56px !important;
+          border-radius: 24px !important;
+          border: 1px solid rgba(8, 26, 89, 0.2) !important;
+          padding: 24px 20px 6px 16px !important;
+          color: #7e8bba !important;
+          line-height: 24px !important;
+          caret-color: #00a9ce;
+          width: 100% !important;
+          box-shadow: none;
+
+          &.mktoValid {
+            color: #081a59 !important;
+          }
+
+          &[aria-describedby="ValidMsgFirstName"],
+          &[aria-describedby="ValidMsgLastName"],
+          &[aria-describedby="ValidMsgCompany"],
+          &[aria-describedby="ValidMsgTitle"],
+          &[aria-describedby="ValidMsgEmail"],
+          &[aria-describedby="ValidMsgPhone"],
+          &[aria-describedby="ValidMsgmOICustomField11"],
+          &[aria-describedby="ValidMsgnumEmployeesRange"],
+          &[aria-describedby="ValidMsgCountry"] {
+            border-color: #ff5b28 !important;
+          }
+        }
+
+        select.mktoField {
+          background: none;
+        }
+
+        label#Lbltestfield {
+          display: none !important;
+          & + div + .customInput {
+            .customInput1 {
+              min-height: 56px;
+              border-radius: 24px !important;
+              border: 1px solid rgba(8, 26, 89, 0.2) !important;
+              padding: 16px 30px 16px 16px !important;
+
+              @media (max-width: 767.98px) {
+                padding: 16px 30px 2px 16px !important;
+                min-height: 80px;
+              }
+
+              span.hintText {
+                color: #7e8bba !important;
+                margin: 0 !important;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                transition: all 0.3s ease;
+                position: absolute;
+                left: 16px;
+                top: 16px;
+
+                @media (min-width: 1024.98px) {
+                  max-width: calc(100% - 50px);
+                }
+
+                @media (max-width: 767.98px) {
+                  top: 16px;
+                  max-width: 296px;
+                }
+              }
+            }
+
+            &:hover .customInput1:not(.openBox) {
+              span.hintText {
+                color: #081a59 !important;
+              }
+            }
+
+            &.openBox {
+              .customInput1 {
+                border: 1px solid #081a59 !important;
+                border-bottom-right-radius: 0px !important;
+                border-bottom: none !important;
+                border-bottom-left-radius: 0px !important;
+                border-color: #081a59 !important;
+              }
+
+              span.hintText {
+                font-size: 12px !important;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px !important;
+                top: 6px;
+              }
+              .customInput1 {
+                background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
+              }
+              .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+                overflow: hidden;
+                max-height: none;
+
+                > label {
+                  padding-left: 24px !important;
+                  padding-right: 10px !important;
+                }
+              }
+            }
+
+            &.hideHint > .customInput1 {
+              padding: 10px 32px 8px 16px !important;
+            }
+          }
+        }
+
+        .mktoError {
+          // top: 0;
+
+          @media (max-width: 480px) {
+            position: relative !important;
+            top: -8px;
+          }
+          .mktoErrorArrowWrap {
+            display: none !important;
+          }
+
+          // .mktoErrorMsg {
+          //   color: #ff5b28;
+          //   font-size: 12px;
+          //   font-style: normal;
+          //   font-weight: 400;
+          //   line-height: 20px;
+          //   padding: 0;
+          // }
+        }
+
+        &:hover {
+          .mktoFieldWrap:not(.active) > label:not(.labActive) {
+            color: #081a59 !important;
+          }
+        }
+
+        .mktoFieldWrap.typing {
+          .mktoField {
+            border-color: #081a59 !important;
+          }
+        }
+
+        .mktoFieldWrap.filled,
+        .mktoFieldWrap.active {
+          .mktoField {
+            color: #081a59 !important;
+          }
+        }
+        // input:-webkit-autofill,
+        // input:-webkit-autofill:hover, 
+        // input:-webkit-autofill:focus, 
+        // input:-webkit-autofill:active{
+        //     -webkit-background-clip: text;
+        //     -webkit-text-fill-color: #ffffff;
+        //     transition: background-color 5000s ease-in-out 0s;
+        //     box-shadow: inset 0 0 20px 20px #ffffff;
+        // }
+
+        
+        input:-webkit-autofill,
+        select:-webkit-autofill {
+          color: #081a59 !important;
+          -webkit-text-fill-color: #081a59;
+          border-color: rgba(8, 26, 89, 0.2) !important;
+          background-color: #fff !important;
+          box-shadow: inset 0 0 30px 30px #ffffff;
+        }
+
+        input[type="checkbox"] + label:before,
+        input[type="radio"] + label:before,
+        .single_checkbox > label:before {
+          content: url(//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_base.svg);
+          width: 16px !important;
+          height: 16px !important;
+          border: 0 !important;
+          background: transparent !important;
+        }
+
+        input[type="checkbox"]:checked + label::before,
+        .single_checkbox > .single_checked:before {
+          content: url(//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg);
+        }
+
+        input[type="checkbox"] + label::after,
+        input[type="radio"] + label::after,
+        .single_checkbox > label::after {
+          display: none;
+        }
+
+        &.spz-hidden {
+          display: none !important;
+        }
+      }
+
+      .mktoFormCol.Contact_Us_Form_Entry__c-row {
+        .frm-commt {
+          position: relative;
+          display: flex;
+          // float: left;
+          cursor: pointer;
+          .commt-text {
+            position: relative;
+            padding: 0px 0px 0px 28px;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+            color: $color_4;
+            &:before {
+              content: "+";
+              color: $color_5;
+              font-size: 25px;
+              left: 3px;
+              position: absolute;
+              transition: all 0.3s ease;
+              top: 2px;
+            }
+          }
+        }
+        .frm-commt.close-cmnt {
+          .commt-text {
+            &:before {
+              content: "-";
+              top: -2px;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // .landing-page__content-container {
+  //   display: none;
+  // }
+  // div#tech-support {
+  //   display: none;
+  // }
+}
