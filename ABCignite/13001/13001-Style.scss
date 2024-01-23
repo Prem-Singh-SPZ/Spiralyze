@@ -2,51 +2,46 @@
 $color_1: var(--black, #140f10);
 $color_2: #140f10;
 
-/* .spz-13001 .modal-content .bullet-img.tab {
-    content: url("//res.cloudinary.com/spiralyze/image/upload/v1692957998/abc_fitness_ignite/5001/mobile-BG.png");
-  } */
 .spz-13001 {
-  .modal.show {
-    display: flex !important;
-    align-items: center;
+  .modal {
+    .modal__overlay {
+      background: rgba(17, 17, 17, 0.5);
+      backdrop-filter: blur(3px);
+    }
 
-    .modal-dialog {
+    .modal__container {
+      display: flex;
+      flex-direction: row-reverse;
       max-width: 1200px;
-      width: 100%;
-      //   padding: 0 20px;
-    }
-  }
 
-  .modal-backdrop.fade.show {
-    background: rgba(17, 17, 17, 0.5);
-    backdrop-filter: blur(3px);
-    opacity: 1;
-  }
+      //Marketo form css starts
+      .flydown-modal__inner {
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+        padding: 40px;
+        max-width: 440px;
 
-  #popupModal {
-    align-items: flex-start;
-    padding-right: 0 !important;
-    max-height: 100vh;
-    transition: none;
+        .spz-demo-title {
+          color: $color_2;
+          text-align: center;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          // margin-bottom: -10px;
+        }
 
-    .modal-dialog {
-      margin-top: 53px;
-      @media (min-width: 767.98px) and (max-width: 1023.98px) {
-        margin-top: 48px;
-        padding-top: 0;
-      }
-
-      @media (max-width: 767.98px) {
-        margin-top: 40px;
-        padding-top: 0;
+        form.marketo-form {
+          .mktoFormRow {
+            flex-wrap: wrap;
+          }
+        }
       }
     }
-
-    .modal-header {
-      display: none;
-    }
   }
-  .modal-content {
+
+  .modal__container {
     flex-direction: row;
     padding: 60px 50px 50px 60px;
     position: relative;
@@ -56,7 +51,7 @@ $color_2: #140f10;
     border: 0;
 
     .bullet-section {
-      margin-right: 20px;
+      // margin-right: 20px;
       padding: 26px 0;
       max-width: 580px;
       width: 100%;
@@ -80,34 +75,6 @@ $color_2: #140f10;
         line-height: 140%;
         margin: 0;
       }
-    }
-    svg.close-icon {
-      position: absolute;
-      cursor: pointer;
-      right: 16px;
-      top: 16px;
-
-      path {
-        fill: #9d9d9d;
-      }
-      @media (max-width: 767.98px) {
-        right: 11px;
-        top: 10px;
-      }
-
-      &:hover {
-        path {
-          fill: #000;
-        }
-      }
-      &:active {
-        path {
-          fill: #000;
-        }
-      }
-    }
-    > div {
-      width: 50%;
     }
     .bullet-wrapper {
       margin: 30px 0 50px;
@@ -142,34 +109,6 @@ $color_2: #140f10;
         font-weight: 700;
       }
     }
-    .modal-body {
-      border-radius: 12px;
-      background: #fff;
-      -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
-      box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
-      padding: 40px 10px 30px;
-      max-width: 440px;
-      width: 100%;
-      height: fit-content;
-      div {
-        height: 100%;
-      }
-
-      .spz-demo-title {
-        color: $color_2;
-        text-align: center;
-        font-size: 32px;
-        font-style: normal;
-        font-weight: 600;
-        line-height: 140%;
-        // margin-bottom: -10px;
-      }
-
-      iframe {
-        height: 575px;
-      }
-    }
-
     .explore-platforms-parent {
       .explore-our-other {
         color: #1d1d1d;
@@ -236,70 +175,10 @@ $color_2: #140f10;
         }
       }
     }
-  }
-}
-@media only screen and (max-height: 820.98px) {
-  .spz-13001 {
-    .modal.show {
-      align-items: initial;
-    }
-  }
-}
-@media only screen and (max-width: 1023.98px) {
-  .spz-13001 {
-    .modal.show {
-      // -webkit-box-align: normal;
-      // -ms-flex-align: normal;
-      // align-items: normal;
-      .modal-dialog {
-        margin: 0;
-        padding: 59px 35px;
-        overflow: auto;
-        pointer-events: auto;
-      }
-    }
-    .modal-content {
-      flex-direction: column-reverse;
-      padding: 4ch;
-      .bullet-section {
-        max-width: 100%;
-        margin-right: 0;
-        padding: 0;
-        // margin-bottom: 40px;
-        margin-top: 40px;
-      }
-      .modal-body {
-        max-width: 100%;
-        padding: 40px 10px 20px;
-      }
-      .bullet-wrapper {
-        margin: 25px 0 32px;
-      }
-    }
-  }
-}
-@media only screen and (max-width: 767.98px) {
-  .spz-13001 {
-    .modal.show {
-      .modal-dialog {
-        padding: 79px 15px;
-      }
-    }
-    .modal-content {
+
+    @media only screen and (max-width: 767.98px) {
       padding: 30px 0px 23px;
       border-radius: 24px;
-
-      .modal-body {
-        padding: 0;
-        box-shadow: none;
-        border: 0;
-        // margin-bottom: 10px;
-
-        .spz-demo-title {
-          font-size: 26px;
-          line-height: 140%;
-        }
-      }
 
       .bullet-section {
         margin-bottom: 0px;

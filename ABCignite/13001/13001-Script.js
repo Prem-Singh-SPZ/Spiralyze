@@ -59,8 +59,8 @@ function init_13001() {
     if (!bodyEle.classList.contains('spz-13001')) {
         bodyEle.classList.add('spz-13001');
 
-        waitForElm('.modal-content .modal-body iframe').then(() => {
-            let bulltHtmlDesk = `<svg class="close-icon" width="13" height="14" viewBox="0 0 13 14" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M0.21967 0.728703C0.512563 0.43581 0.987437 0.43581 1.28033 0.728703L6.5 5.94837L11.7197 0.728703C12.0126 0.43581 12.4874 0.43581 12.7803 0.728703C13.0732 1.0216 13.0732 1.49647 12.7803 1.78936L7.56066 7.00903L12.7803 12.2287C13.0732 12.5216 13.0732 12.9965 12.7803 13.2894C12.4874 13.5823 12.0126 13.5823 11.7197 13.2894L6.5 8.06969L1.28033 13.2894C0.987437 13.5823 0.512563 13.5823 0.21967 13.2894C-0.0732233 12.9965 -0.0732233 12.5216 0.21967 12.2287L5.43934 7.00903L0.21967 1.78936C-0.0732233 1.49647 -0.0732233 1.0216 0.21967 0.728703Z" fill="#616161"/></svg>
+        waitForElm('.modal .modal__container').then(() => {
+            let bulltHtmlDesk = `
             <div class="bullet-section">
             <h6 class="bullet-sub-title">Make the dreams for your club a reality</h6>
             <h2 class="bullet-title">Discover ABC Ignite, the gym management software trusted by 40% of clubs in the US.</h2>
@@ -94,19 +94,19 @@ function init_13001() {
 
 
             let setTitle = setInterval(() => {
-                if (document.querySelectorAll('.modal-content .modal-body .spz-demo-title').length == 0) {
-                    document.querySelector('.modal-content .modal-body').insertAdjacentHTML("afterbegin", `<div class="spz-demo-title">Get a Demo</div>`);
+                if (document.querySelectorAll('.modal .modal__container .flydown-modal__inner .spz-demo-title').length == 0) {
+                    document.querySelector('.modal .modal__container .flydown-modal__inner').insertAdjacentHTML("afterbegin", `<div class="spz-demo-title">Get a Demo</div>`);
                 }
             }, 200);
 
 
-            document.querySelector('.modal-content .modal-body').insertAdjacentHTML("beforebegin", bulltHtmlDesk);
+            document.querySelector('.modal .modal__container').insertAdjacentHTML("beforeend", bulltHtmlDesk);
 
-            var closeBtn = document.querySelector(".modal-content .close-icon");
-            var HeadercloseBtn = document.querySelector(".spz-13001 #popupModal .modal-header button.close");
-            closeBtn.addEventListener('click', function () {
-                HeadercloseBtn.click();
-            });
+            // var closeBtn = document.querySelector(".modal-content .close-icon");
+            // var HeadercloseBtn = document.querySelector(".spz-13001 #popupModal .modal-header button.close");
+            // closeBtn.addEventListener('click', function () {
+            //     HeadercloseBtn.click();
+            // });
 
         });
     }
