@@ -7,6 +7,16 @@ document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="prel
 waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap').then(function () {
     formModify();
 });
+copyModify();
+
+function copyModify() {
+    waitForElm('.landing-page__content-container .landing-page__content ul li').then(function () {
+        document.querySelector('.landing-page__content-container .landing-page__title').textContent = 'Secure your entire multi-cloud environment';
+        document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<ul><li><span>Network. </span>Deliver fast, secure network connectivity. One cloud-based solution.</li><li><span>Visibility.</span> Get full visibility into your multi-cloud network. Web, SaaS, cloud, and more.</li><li><span>Security.</span> Monitor & verify network activities 24/7. Only allow access to required tasks.</li></ul>`;
+
+        document.querySelector('#components__content').insertAdjacentHTML('beforeend', ``);
+    });
+}
 
 function formModify() {
     const mktoFormRowElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow');
@@ -29,7 +39,7 @@ function formModify() {
     //form title update
     var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-        formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Get Started</div>`);
+        formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Contact us</div>`);
     }
 
     //form Cta update
@@ -55,7 +65,7 @@ function formModify() {
             clearInterval(changeLabels);
         }, 100);
 
-        document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+        // document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
 
 
         waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
@@ -75,16 +85,15 @@ function formModify() {
     });
 
 
-    // document.getElementById("mOICustomField11").setAttribute('tabindex', '1');
     document.getElementById("FirstName").setAttribute('tabindex', '1');
     document.getElementById("LastName").setAttribute('tabindex', '2');
     document.getElementById("Email").setAttribute('tabindex', '3');
-    document.getElementById("Company").setAttribute('tabindex', '4');
-    document.getElementById("Title").setAttribute('tabindex', '5');
-    // document.getElementById("numEmployeesRange").setAttribute('tabindex', '7');
-    document.getElementById("Phone").setAttribute('tabindex', '8');
-    document.getElementById("Country").setAttribute('tabindex', '9');
-    document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '11');
+    document.getElementById("Phone").setAttribute('tabindex', '4');
+    document.getElementById("Company").setAttribute('tabindex', '5');
+    document.getElementById("Title").setAttribute('tabindex', '6');
+    document.getElementById("Country").setAttribute('tabindex', '7');
+    document.getElementById("PostalCode").setAttribute('tabindex', '9');
+    document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '10');
 
     // form state
     var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
@@ -93,7 +102,6 @@ function formModify() {
         if (event.target.matches(selector)) {
             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
         }
-        checkState();
     }, true);
 
     var eventList = ["blur", "focusout", "keyup"];
@@ -109,7 +117,6 @@ function formModify() {
 
                 }
             }
-            checkState();
         });
     }
 
@@ -118,7 +125,6 @@ function formModify() {
         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
             elem.classList.remove('typing');
         })
-        checkState();
     }, true);
 };
 
@@ -137,30 +143,4 @@ function waitForElm(selector) {
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
 }
-
-function checkState() {
-    waitForElm('#PostalCode').then(function () {
-        // document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
-        // document.querySelector('.Country-row').insertAdjacentElement('afterend', document.querySelector('#PostalCode').closest('.mktoFormRow'));
-        document.querySelector('#PostalCode').setAttribute('tabindex', '12');
-        // if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-        //     document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('spz-hidden');
-        // }
-    });
-    waitForElm('.netskope-fm').then(function () {
-        document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
-        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-            document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
-        }
-        document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
-    });
-    waitForElm('.single_checkbox').then(function () {
-        document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
-        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-            document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
-        }
-        document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
-    });
-}
 // });
-
