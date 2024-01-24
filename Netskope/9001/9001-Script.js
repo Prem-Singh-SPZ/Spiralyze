@@ -22,7 +22,7 @@ function copyModify() {
         <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-desktop.png">
         <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-tablet.png">
         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-mobile.png" alt="Badges">
-        </picture></div><div class="footer-links"><div class="phone"><p><span>To contact us by phone, please call:</span></p></div><div class="privacy-policy"></div></div></div></div>`);
+        </picture></div><div class="footer-links"><div class="phone"><p><span>To contact us by phone, please call:</span><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</p></div><div class="privacy-policy"><p><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a> <span> © 2024, All rights reserved.</span></p></div></div></div></div>`);
     });
 }
 

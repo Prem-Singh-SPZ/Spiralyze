@@ -26,12 +26,99 @@ body .landing-page__container {
 body .landing-page__container #components__content .landing-page__form-title {
   display: none;
 }
-body .landing-page__container #components__content .landing-page__form-container {
+body .landing-page__container #components__content .landing-page__logo {
+  height: 94px !important;
+}
+body .landing-page__container #components__content .landing-page__container-inner {
+  max-width: 1190px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  padding: 48px 0 80px;
+  min-height: 636px;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container {
+  max-width: 585px;
+  width: 100%;
+  margin: 0 24px 0 0;
+  padding: 0;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__title {
+  color: #fff;
+  font-family: Graphik;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 48px;
+  margin: 0 0 32px;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul {
+  padding: 0;
+  list-style: none;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul li {
+  padding-left: 40px;
+  position: relative;
+  color: #fff;
+  font-family: Graphik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  position: relative;
+  margin: 0 0 16px;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul li span {
+  font-weight: 700;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul li::before {
+  content: "";
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1704976756/netskope/9001/check_wrapper.svg) no-repeat;
+  background-size: 100%;
+  background-position: center;
+  left: 0;
+  top: 0;
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__form-container {
   max-width: 504px;
   width: 100%;
   background: transparent;
   padding: 0;
   border: none;
+}
+body .landing-page__container #components__content .spz-trusted-section .section-container {
+  max-width: 1190px;
+  margin: 0 auto;
+}
+body .landing-page__container #components__content .spz-trusted-section .section-container .section-title p {
+  color: #fff;
+  text-align: center;
+  font-family: Graphik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+}
+body .landing-page__container #components__content .spz-footer .footer-container {
+  max-width: 1190px;
+  margin: 0 auto;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  padding: 40px 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-badges img {
+  max-width: 343px;
 }
 body .netskope-component--request-demo-form {
   border-radius: 24px;
