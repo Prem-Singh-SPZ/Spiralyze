@@ -12,6 +12,14 @@ body {
   background-size: cover;
   background-position: top left;
 
+  @media (min-width: 1900.98px) {
+    background: #081a59
+      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_4k.webp)
+      no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+
   @media (min-width: 767.98px) and (max-width: 1023.98px) {
     background: #081a59
       url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_tablet.webp)
@@ -21,11 +29,7 @@ body {
   }
 
   @media (max-width: 767.98px) {
-    background: #081a59
-      url(//res.cloudinary.com/spiralyze/image/upload/v1700121624/netskope/1002/768_background_6.webp)
-      no-repeat;
-    background-size: cover;
-    background-position: top left;
+    background: #081a59;
   }
 
   header.netskope-header {
@@ -47,6 +51,11 @@ body {
           @media (max-width: 1023.98px) {
             padding: 24px 0;
           }
+
+          @media (max-width: 767.98px) {
+            padding: 24px 8px;
+          }
+
           a.navbar-brand {
             @media (max-width: 1023.98px) {
               padding: 0;
@@ -88,6 +97,11 @@ body {
           padding: 32px 24px 30px;
         }
 
+        @media (max-width: 767.98px) {
+          padding: 0;
+          max-width: 360px;
+        }
+
         .landing-page__content-container {
           max-width: 585px;
           width: 100%;
@@ -97,6 +111,12 @@ body {
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             max-width: 704px;
             margin: 40px 0 0;
+          }
+
+          @media (max-width: 767.98px) {
+            padding: 32px 24px 40px;
+            max-width: 360px;
+            margin: 0;
           }
 
           .landing-page__title {
@@ -110,6 +130,11 @@ body {
 
             @media (min-width: 767.98px) and (max-width: 1023.98px) {
               display: none;
+            }
+
+            @media (max-width: 767.98px) {
+              font-size: 32px;
+              line-height: 40px;
             }
           }
 
@@ -209,6 +234,14 @@ body {
                 text-align: left;
                 margin: 0 0 17px;
               }
+
+              @media (max-width: 767.98px) {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                text-align: left;
+                margin: 0 0 17px;
+              }
             }
           }
 
@@ -238,17 +271,22 @@ body {
             max-width: 704px;
             flex-direction: column;
             align-items: flex-start;
+            padding: 39px 0;
           }
 
           .footer-badges {
             @media (max-width: 1023.98px) {
-              margin-bottom: 32px;
+              margin-bottom: 30px;
             }
             img {
               max-width: 343px;
 
               @media (min-width: 767.98px) and (max-width: 1023.98px) {
                 max-width: 279px;
+              }
+
+              @media (max-width: 767.98px) {
+                max-width: 312px;
               }
             }
           }
@@ -259,8 +297,19 @@ body {
             flex-wrap: wrap;
             justify-content: flex-end;
 
+            @media (max-width: 767.98px) {
+              justify-content: flex-start;
+            }
+
             .phone {
-              p {
+              display: flex;
+              align-items: center;
+
+              @media (max-width: 767.98px) {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+              .mobile {
                 color: #fff;
                 font-family: $font-family_1;
                 font-size: 12px;
@@ -268,24 +317,33 @@ body {
                 font-weight: 400;
                 line-height: 20px;
                 margin: 0;
-
-                span {
-                  color: rgba(255, 255, 255, 0.6);
-                  font-family: $font-family_1;
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 20px;
-                }
-
                 img {
                   margin: -3px 1px 0 8px;
+                  @media (max-width: 767.98px) {
+                    margin: 0px;
+                  }
                 }
+              }
+
+              .phone-text {
+                color: rgba(255, 255, 255, 0.6);
+                font-family: $font-family_1;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
               }
             }
 
             .privacy-policy {
-              p {
+              display: flex;
+              align-items: center;
+
+              @media (max-width: 767.98px) {
+                flex-direction: column;
+                align-items: flex-start;
+              }
+              .copyright {
                 color: #fff;
                 font-family: $font-family_1;
                 font-size: 12px;
@@ -293,7 +351,8 @@ body {
                 font-weight: 400;
                 line-height: 20px;
                 margin: 0;
-
+              }
+              .p-anchor {
                 a {
                   color: #fff;
                   font-family: $font-family_1;
@@ -302,11 +361,14 @@ body {
                   font-weight: 400;
                   line-height: 20px;
                   text-decoration: none;
-                  margin: 0px 30px 0 32px;
+                }
+                margin: 0px 33px 0 32px;
 
-                  @media (max-width: 1023.98px) {
-                    margin: 0px 52px 0 56px;
-                  }
+                @media (max-width: 1023.98px) {
+                  margin: 0px 56px 0 55px;
+                }
+                @media (max-width: 767.98px) {
+                  margin: 0px;
                 }
               }
             }
@@ -348,7 +410,7 @@ body {
         position: absolute;
         left: calc(50% - 166px);
         // top: 84px;
-        top: 0;
+        top: calc(50% - 166px);
         border-radius: 328px;
         background: rgba(20, 187, 255, 0.1) no-repeat;
         background-position: center;
@@ -361,7 +423,7 @@ body {
       }
 
       @media (max-width: 767.98px) {
-        padding: 24px 10px 8px !important;
+        padding: 24px 18px 8px !important;
       }
 
       .mktoFormRow {
@@ -572,6 +634,10 @@ body {
           font-style: normal;
           font-weight: 400;
           box-shadow: none;
+
+          @media (max-width: 767.98px) {
+            height: 56px !important;
+          }
 
           &.mktoValid {
             color: #081a59 !important;
