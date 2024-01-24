@@ -17,25 +17,48 @@ body {
     background-position: top left;
   }
 }
+body header.netskope-header {
+  position: relative;
+  top: auto;
+}
+body header.netskope-header .netskope-header--navigation {
+  padding: 0;
+}
+body header.netskope-header .netskope-header--navigation nav.navbar .navbar-left {
+  margin: 0;
+  padding: 32px 0;
+}
+body header.netskope-header .netskope-header--navigation nav.navbar .navbar-left a.navbar-brand img {
+  width: 196px;
+}
 body .landing-page__footer {
   display: none;
 }
 body .landing-page__container {
   background: transparent;
 }
-body .landing-page__container #components__content .landing-page__form-title {
+body .landing-page__container #components__content {
+  height: calc(100vh - 101px);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body .landing-page__container #components__content .landing-page__form-title,
+body .landing-page__container #components__content .landing-page__logo {
   display: none;
 }
-body .landing-page__container #components__content .landing-page__logo {
-  height: 94px !important;
-}
 body .landing-page__container #components__content .landing-page__container-inner {
-  max-width: 1190px;
+  max-width: 1238px;
+  width: 100%;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 48px 0 80px;
-  min-height: 636px;
+  padding: 41px 24px 80px;
+  min-height: 617px;
 }
 body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container {
   max-width: 585px;
@@ -66,7 +89,7 @@ body .landing-page__container #components__content .landing-page__container-inne
   font-weight: 400;
   line-height: 24px;
   position: relative;
-  margin: 0 0 16px;
+  margin: 0 0 17px;
 }
 body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul li span {
   font-weight: 700;
@@ -89,9 +112,13 @@ body .landing-page__container #components__content .landing-page__container-inne
   padding: 0;
   border: none;
 }
+body .landing-page__container #components__content .spz-trusted-section {
+  padding: 0 24px;
+}
 body .landing-page__container #components__content .spz-trusted-section .section-container {
   max-width: 1190px;
   margin: 0 auto;
+  padding: 0 0 48px;
 }
 body .landing-page__container #components__content .spz-trusted-section .section-container .section-title p {
   color: #fff;
@@ -101,6 +128,17 @@ body .landing-page__container #components__content .spz-trusted-section .section
   font-style: normal;
   font-weight: 400;
   line-height: 32px;
+  margin: 0 0 48px;
+}
+body .landing-page__container #components__content .spz-trusted-section .section-container .section-content {
+  width: 100%;
+}
+body .landing-page__container #components__content .spz-trusted-section .section-container .section-content img {
+  width: 100%;
+}
+body .landing-page__container #components__content .spz-footer {
+  margin-top: auto;
+  padding: 0 24px;
 }
 body .landing-page__container #components__content .spz-footer .footer-container {
   max-width: 1190px;
@@ -119,6 +157,58 @@ body .landing-page__container #components__content .spz-footer .footer-container
 }
 body .landing-page__container #components__content .spz-footer .footer-container .footer-badges img {
   max-width: 343px;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-links .phone p {
+  color: #fff;
+  font-family: Graphik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-links .phone p span {
+  color: rgba(255, 255, 255, 0.6);
+  font-family: Graphik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-links .phone p img {
+  margin: -3px 1px 0 8px;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-links .privacy-policy p {
+  color: #fff;
+  font-family: Graphik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin: 0;
+}
+body .landing-page__container #components__content .spz-footer .footer-container .footer-links .privacy-policy p a {
+  color: #fff;
+  font-family: Graphik;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: none;
+  margin: 0px 30px 0 32px;
 }
 body .netskope-component--request-demo-form {
   border-radius: 24px;
@@ -151,6 +241,20 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 {
   display: flex !important;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+}
+body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169::before {
+  content: "";
+  width: 328px;
+  height: 328px;
+  position: absolute;
+  left: 88px;
+  top: 0;
+  border-radius: 328px;
+  background: rgba(20, 187, 255, 0.1) no-repeat;
+  background-position: center;
+  background-size: 100%;
+  -webkit-filter: blur(100px);
+          filter: blur(100px);
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 * {
   font-family: Graphik !important;
@@ -217,7 +321,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFor
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormCol .mktoFieldWrap:not(.single_checkbox) > label {
   color: #7e8bba !important;
   opacity: 1 !important;
-  top: 16px;
+  top: 14px;
   left: 16px;
   height: 30px;
   background: #fff;
@@ -226,14 +330,17 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFor
   overflow: hidden;
   text-overflow: ellipsis;
   pointer-events: none;
+  font-size: 16px;
+  font-weight: 400;
   line-height: 24px !important;
   position: absolute;
   font-weight: 400;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+  padding: 0;
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormCol .mktoFieldWrap:not(.single_checkbox).active > label {
-  top: 6px;
+  top: 5px;
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -287,8 +394,8 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFor
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormCol.Country-row .mktoFieldWrap::after {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg);
   position: absolute;
-  right: 16px;
-  top: 12px;
+  right: 20px;
+  top: 18px;
   display: block;
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormCol.Country-row .mktoFieldWrap.typing::after {
@@ -324,7 +431,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoBut
   -webkit-box-ordinal-group: 16;
       -ms-flex-order: 15;
           order: 15;
-  padding-top: 8px;
+  padding: 12px 6px 0;
 }
 @media (max-width: 767.98px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoButtonRow {
@@ -332,16 +439,18 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoBut
   }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoButtonRow .mktoButton {
-  width: 100% !important;
-  background-color: #ff8200 !important;
-  border-color: #ff8200 !important;
-  color: #081a59 !important;
+  width: 100%;
+  background-color: #ff8200;
+  border: 1px solid #ff8200;
+  color: #081a59;
   height: 48px;
   max-width: 536px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 400 !important;
+  font-weight: 400;
   letter-spacing: 0;
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 @media (max-width: 1024.98px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoButtonRow .mktoButton {
@@ -349,18 +458,21 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoBut
   }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoButtonRow .mktoButton:hover {
-  background-color: #fff !important;
-  border: 1px solid #081a59 !important;
+  background-color: #fff;
+  border: 1px solid #081a59;
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol .mktoField {
-  height: 56px !important;
+  height: 52px !important;
   border-radius: 24px !important;
   border: 1px solid rgba(8, 26, 89, 0.2) !important;
-  padding: 24px 20px 6px 16px !important;
+  padding: 23px 20px 5px 15px !important;
   color: #7e8bba !important;
   line-height: 24px !important;
   caret-color: #00a9ce;
   width: 100% !important;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
@@ -371,7 +483,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFie
   border-color: #ff5b28 !important;
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol select.mktoField {
-  background: none;
+  background: #fff;
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol label#Lbltestfield {
   display: none !important;

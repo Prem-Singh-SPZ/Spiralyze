@@ -28,6 +28,22 @@ body {
     background-position: top left;
   }
 
+  header.netskope-header {
+    position: relative;
+    top: auto;
+
+    .netskope-header--navigation {
+      padding: 0;
+      nav.navbar .navbar-left {
+        margin: 0;
+        padding: 32px 0;
+        a.navbar-brand img {
+          width: 196px;
+        }
+      }
+    }
+  }
+
   .landing-page__footer {
     display: none;
   }
@@ -35,19 +51,21 @@ body {
   .landing-page__container {
     background: transparent;
     #components__content {
-      .landing-page__form-title {
+      height: calc(100vh - 101px);
+      display: flex;
+      flex-direction: column;
+
+      .landing-page__form-title,
+      .landing-page__logo {
         display: none;
       }
 
-      .landing-page__logo {
-        height: 94px !important;
-      }
-
       .landing-page__container-inner {
-        max-width: 1190px;
+        max-width: 1238px;
+        width: 100%;
         justify-content: space-between;
-        padding: 48px 0 80px;
-        min-height: 636px;
+        padding: 41px 24px 80px;
+        min-height: 617px;
 
         .landing-page__content-container {
           max-width: 585px;
@@ -79,7 +97,7 @@ body {
                 font-weight: 400;
                 line-height: 24px;
                 position: relative;
-                margin: 0 0 16px;
+                margin: 0 0 17px;
 
                 span {
                   font-weight: 700;
@@ -112,9 +130,11 @@ body {
       }
 
       .spz-trusted-section {
+        padding: 0 24px;
         .section-container {
           max-width: 1190px;
           margin: 0 auto;
+          padding: 0 0 48px;
 
           .section-title {
             p {
@@ -125,12 +145,23 @@ body {
               font-style: normal;
               font-weight: 400;
               line-height: 32px;
+              margin: 0 0 48px;
+            }
+          }
+
+          .section-content {
+            width: 100%;
+            img {
+              width: 100%;
             }
           }
         }
       }
 
       .spz-footer {
+        margin-top: auto;
+        padding: 0 24px;
+
         .footer-container {
           max-width: 1190px;
           margin: 0 auto;
@@ -143,6 +174,61 @@ body {
           .footer-badges {
             img {
               max-width: 343px;
+            }
+          }
+
+          .footer-links {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            justify-content: flex-end;
+
+            .phone {
+              p {
+                color: #fff;
+                font-family: $font-family_1;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                margin: 0;
+
+                span {
+                  color: rgba(255, 255, 255, 0.6);
+                  font-family: $font-family_1;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 20px;
+                }
+
+                img{
+                  margin: -3px 1px 0 8px;
+                }
+              }
+            }
+
+            .privacy-policy {
+              p {
+                color: #fff;
+                font-family: $font-family_1;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                margin: 0;
+
+                a {
+                  color: #fff;
+                  font-family: $font-family_1;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 20px;
+                  text-decoration: none;
+                  margin: 0px 30px 0 32px;
+                }
+              }
             }
           }
         }
@@ -174,6 +260,21 @@ body {
       padding: 24px 26px 16px !important;
       display: flex !important;
       flex-wrap: wrap;
+
+      &::before {
+        content: "";
+        width: 328px;
+        height: 328px;
+        position: absolute;
+        left: 88px;
+        // top: 84px;
+        top: 0;
+        border-radius: 328px;
+        background: rgba(20, 187, 255, 0.1) no-repeat;
+        background-position: center;
+        background-size: 100%;
+        filter: blur(100px);
+      }
 
       * {
         font-family: Graphik !important;
@@ -242,7 +343,7 @@ body {
           > label {
             color: $color_4 !important;
             opacity: 1 !important;
-            top: 16px;
+            top: 14px;
             left: 16px;
             height: 30px;
             background: #fff;
@@ -251,13 +352,16 @@ body {
             overflow: hidden;
             text-overflow: ellipsis;
             pointer-events: none;
+            font-size: 16px;
+            font-weight: 400;
             line-height: 24px !important;
             position: absolute;
             font-weight: 400;
             transition: all 0.3s ease-in-out;
+            padding: 0;
           }
           &.active > label {
-            top: 6px;
+            top: 5px;
             font-size: 12px !important;
             font-style: normal;
             font-weight: 400 !important;
@@ -305,8 +409,8 @@ body {
             &::after {
               content: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg);
               position: absolute;
-              right: 16px;
-              top: 12px;
+              right: 20px;
+              top: 18px;
               display: block;
             }
 
@@ -343,45 +447,49 @@ body {
 
       .mktoButtonRow {
         order: 15;
-        padding-top: 8px;
+        padding: 12px 6px 0;
 
         @media (max-width: 767.98px) {
           padding-top: 16px;
         }
 
         .mktoButton {
-          width: 100% !important;
-          background-color: #ff8200 !important;
-          border-color: #ff8200 !important;
-          color: #081a59 !important;
+          width: 100% ;
+          background-color: #ff8200;
+          border: 1px solid #ff8200 ;
+          color: #081a59;
           height: 48px;
           max-width: 536px;
           margin-left: auto;
           margin-right: auto;
-          font-weight: 400 !important;
+          font-weight: 400;
           letter-spacing: 0;
+          box-shadow: none;
 
           @media (max-width: 1024.98px) {
             max-width: calc(100% - 12px);
           }
 
           &:hover {
-            background-color: #fff !important;
-            border: 1px solid #081a59 !important;
+            background-color: #fff;
+            border: 1px solid #081a59;
           }
         }
       }
 
       .mktoFieldDescriptor.mktoFormCol {
         .mktoField {
-          height: 56px !important;
+          height: 52px !important;
           border-radius: 24px !important;
           border: 1px solid rgba(8, 26, 89, 0.2) !important;
-          padding: 24px 20px 6px 16px !important;
+          padding: 23px 20px 5px 15px !important;
           color: #7e8bba !important;
           line-height: 24px !important;
           caret-color: #00a9ce;
           width: 100% !important;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
           box-shadow: none;
 
           &.mktoValid {
@@ -402,7 +510,7 @@ body {
         }
 
         select.mktoField {
-          background: none;
+          background: #fff;
         }
 
         label#Lbltestfield {
