@@ -34,11 +34,27 @@ body {
 
     .netskope-header--navigation {
       padding: 0;
-      nav.navbar .navbar-left {
-        margin: 0;
-        padding: 32px 0;
-        a.navbar-brand img {
-          width: 196px;
+
+      .container {
+        @media (max-width: 1023.98px) {
+          max-width: 735px;
+        }
+
+        nav.navbar .navbar-left {
+          margin: 0;
+          padding: 32px 0;
+
+          @media (max-width: 1023.98px) {
+            padding: 24px 0;
+          }
+          a.navbar-brand {
+            @media (max-width: 1023.98px) {
+              padding: 0;
+            }
+            img {
+              width: 196px;
+            }
+          }
         }
       }
     }
@@ -65,13 +81,23 @@ body {
         width: 100%;
         justify-content: space-between;
         padding: 41px 24px 80px;
-        min-height: 617px;
+        // min-height: 617px;
+        @media (max-width: 1023.98px) {
+          flex-flow: column-reverse;
+          align-items: center;
+          padding: 32px 24px 30px;
+        }
 
         .landing-page__content-container {
           max-width: 585px;
           width: 100%;
           margin: 0 24px 0 0;
           padding: 0;
+
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            max-width: 704px;
+            margin: 40px 0 0;
+          }
 
           .landing-page__title {
             color: #fff;
@@ -81,6 +107,10 @@ body {
             font-weight: 400;
             line-height: 48px;
             margin: 0 0 32px;
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              display: none;
+            }
           }
 
           .landing-page__content {
@@ -126,6 +156,27 @@ body {
           background: transparent;
           padding: 0;
           border: none;
+          min-height: 496px;
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            max-width: 704px;
+          }
+
+          .tablet-title {
+            display: none;
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              display: block;
+              .landing-page__title {
+                color: #fff;
+                font-family: Graphik;
+                font-size: 56px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 56px;
+                margin: 0 0 41px;
+              }
+            }
+          }
         }
       }
 
@@ -135,6 +186,10 @@ body {
           max-width: 1190px;
           margin: 0 auto;
           padding: 0 0 48px;
+
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            max-width: 704px;
+          }
 
           .section-title {
             p {
@@ -146,6 +201,14 @@ body {
               font-weight: 400;
               line-height: 32px;
               margin: 0 0 48px;
+
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                font-size: 18px;
+                font-weight: 500;
+                line-height: 24px;
+                text-align: left;
+                margin: 0 0 17px;
+              }
             }
           }
 
@@ -171,9 +234,22 @@ body {
           align-items: center;
           justify-content: space-between;
 
+          @media (max-width: 1023.98px) {
+            max-width: 704px;
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
           .footer-badges {
+            @media (max-width: 1023.98px) {
+              margin-bottom: 32px;
+            }
             img {
               max-width: 343px;
+
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                max-width: 279px;
+              }
             }
           }
 
@@ -202,7 +278,7 @@ body {
                   line-height: 20px;
                 }
 
-                img{
+                img {
                   margin: -3px 1px 0 8px;
                 }
               }
@@ -227,6 +303,10 @@ body {
                   line-height: 20px;
                   text-decoration: none;
                   margin: 0px 30px 0 32px;
+
+                  @media (max-width: 1023.98px) {
+                    margin: 0px 52px 0 56px;
+                  }
                 }
               }
             }
@@ -266,7 +346,7 @@ body {
         width: 328px;
         height: 328px;
         position: absolute;
-        left: 88px;
+        left: calc(50% - 166px);
         // top: 84px;
         top: 0;
         border-radius: 328px;
@@ -359,6 +439,7 @@ body {
             font-weight: 400;
             transition: all 0.3s ease-in-out;
             padding: 0;
+            width: 100% !important;
           }
           &.active > label {
             top: 5px;
@@ -454,9 +535,9 @@ body {
         }
 
         .mktoButton {
-          width: 100% ;
+          width: 100%;
           background-color: #ff8200;
-          border: 1px solid #ff8200 ;
+          border: 1px solid #ff8200;
           color: #081a59;
           height: 48px;
           max-width: 536px;
@@ -467,7 +548,7 @@ body {
           box-shadow: none;
 
           @media (max-width: 1024.98px) {
-            max-width: calc(100% - 12px);
+            max-width: 100%;
           }
 
           &:hover {

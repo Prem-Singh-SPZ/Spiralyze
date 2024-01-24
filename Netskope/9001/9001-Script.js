@@ -48,6 +48,7 @@ function formModify() {
     var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
         formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Contact us</div>`);
+        document.querySelector('.landing-page__form-container').insertAdjacentHTML('afterbegin','<div class="tablet-title"><h1 class="landing-page__title">Secure your entire multi-cloud environment</h1></div>')
     }
 
     //form Cta update
@@ -57,7 +58,7 @@ function formModify() {
 
         let changeLabels = setInterval(() => {
             textChng.textContent = 'Submit';
-            document.querySelector('#LblPostalCode').textContent = "Zip Code";
+            document.querySelector('#LblPostalCode').textContent = "Zip/Postal Code";
             document.querySelector('#LblEmail').textContent = "Business Email";
             document.querySelector('#LblCompany').textContent = "Company";
             document.querySelector('#LblTitle').textContent = "Job Title";
