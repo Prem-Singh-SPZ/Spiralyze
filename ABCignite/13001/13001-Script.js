@@ -111,6 +111,10 @@ function init_13001() {
             // });
 
         });
+
+        waitForElm('form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').then(() => {
+            document.querySelector('form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').innerHTML = `Submit <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow">`;
+        });
     }
 }
 

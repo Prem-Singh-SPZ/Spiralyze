@@ -14,7 +14,7 @@
           flex-direction: row-reverse;
   max-width: 1200px;
   position: absolute;
-  top: 20px;
+  padding: 50px;
   position: relative;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
@@ -25,13 +25,26 @@
   border-radius: 32px;
   border: 0;
 }
+.spz-13001 .modal .modal__container .modal__close {
+  top: 14px;
+  right: 16px;
+}
+.spz-13001 .modal .modal__container .modal__close svg {
+  width: 16px;
+}
+.spz-13001 .modal .modal__container .modal__close svg path {
+  fill: #9D9D9D !important;
+}
+.spz-13001 .modal .modal__container .modal__close:hover svg path {
+  fill: #000000 !important;
+}
 .spz-13001 .modal .modal__container .flydown-modal__inner {
   border-radius: 12px;
   background: #fff;
   -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
           box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
-  padding: 40px;
-  max-width: 440px;
+  padding: 40px 30px;
+  max-width: 500px;
 }
 .spz-13001 .modal .modal__container .flydown-modal__inner .spz-demo-title {
   color: #140f10;
@@ -40,14 +53,46 @@
   font-style: normal;
   font-weight: 600;
   line-height: 140%;
+  margin: 0 0 32px;
 }
-.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .mktoFormRow {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form {
+  gap: 12px;
+}
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .mktoButtonRow .mktoButtonWrap {
+  margin-top: 17px;
+}
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton {
+  height: 56px;
+  border-radius: 100px;
+  background-color: #ef7f2e !important;
+  padding: 16px 32px;
+  color: #fff;
+  font-family: Poppins !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+  text-transform: uppercase;
+  width: 152px;
+  letter-spacing: 0;
+}
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton .cta-arrow {
+  margin-left: 10px;
+  text-replace: all 0.15s ease-in-out;
+}
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
+  background-color: #be5d17 !important;
+}
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton:hover .cta-arrow {
+  translate: 5px;
+}
+.spz-13001 .modal .modal__container .flydown-modal__inner form.marketo-form .marketo-form__notice {
+  margin-top: 21px;
+  margin-bottom: 0;
 }
 .spz-13001 .modal .modal__container .bullet-section {
-  padding: 26px 0;
-  max-width: 580px;
+  padding: 0;
+  max-width: 560px;
   width: 100%;
 }
 .spz-13001 .modal .modal__container .bullet-section .bullet-sub-title {
@@ -56,7 +101,7 @@
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
-  margin-bottom: 10px;
+  margin-bottom: 11px;
   letter-spacing: 0;
   padding: 0;
 }
@@ -69,7 +114,7 @@
   margin: 0;
 }
 .spz-13001 .modal .modal__container .bullet-wrapper {
-  margin: 30px 0 50px;
+  margin: 29px 0 31px;
   padding: 0;
 }
 .spz-13001 .modal .modal__container .bullet-point {
@@ -78,7 +123,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 160%;
-  margin-bottom: 24px;
+  margin-bottom: 16px;
   list-style: none;
   position: relative;
   padding-left: 32px;
@@ -146,7 +191,6 @@
   border-radius: 16px;
   border: 1px solid #e9e9e9;
   background: #ededed;
-  margin-bottom: 10px;
   margin-right: 10px;
   text-decoration: none;
   -webkit-transition: all 0.3s ease;
@@ -156,6 +200,11 @@
   .spz-13001 .modal .modal__container .explore-platforms-parent .explore-platforms .frame-group {
     width: 98px;
     height: 98px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-13001 .modal .modal__container .explore-platforms-parent .explore-platforms .frame-group {
+    margin-bottom: 10px;
   }
 }
 .spz-13001 .modal .modal__container .explore-platforms-parent .explore-platforms .frame-group .block-img {
