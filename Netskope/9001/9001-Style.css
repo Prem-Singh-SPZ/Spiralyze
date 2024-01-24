@@ -117,7 +117,6 @@ body .landing-page__container #components__content .landing-page__container-inne
 @media (max-width: 767.98px) {
   body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container {
     padding: 32px 24px 24px;
-    max-width: 360px;
     margin: 0;
   }
 }
@@ -139,6 +138,7 @@ body .landing-page__container #components__content .landing-page__container-inne
   body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__title {
     font-size: 32px;
     line-height: 40px;
+    margin: 0 0 24px;
   }
 }
 body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul {
@@ -214,6 +214,12 @@ body .landing-page__container #components__content .spz-trusted-section .section
     max-width: 704px;
   }
 }
+@media (max-width: 767.98px) {
+  body .landing-page__container #components__content .spz-trusted-section .section-container {
+    max-width: 320px;
+    padding: 0 0 39px;
+  }
+}
 body .landing-page__container #components__content .spz-trusted-section .section-container .section-title p {
   color: #fff;
   text-align: center;
@@ -281,6 +287,11 @@ body .landing-page__container #components__content .spz-footer .footer-container
     padding: 39px 0;
   }
 }
+@media (max-width: 767.98px) {
+  body .landing-page__container #components__content .spz-footer .footer-container {
+    max-width: 320px;
+  }
+}
 @media (max-width: 1023.98px) {
   body .landing-page__container #components__content .spz-footer .footer-container .footer-badges {
     margin-bottom: 30px;
@@ -336,6 +347,7 @@ body .landing-page__container #components__content .spz-footer .footer-container
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    margin-bottom: 16px;
   }
 }
 body .landing-page__container #components__content .spz-footer .footer-container .footer-links .phone .mobile {
@@ -362,6 +374,11 @@ body .landing-page__container #components__content .spz-footer .footer-container
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+@media (max-width: 767.98px) {
+  body .landing-page__container #components__content .spz-footer .footer-container .footer-links .phone .phone-text {
+    margin-bottom: 8px;
+  }
 }
 body .landing-page__container #components__content .spz-footer .footer-container .footer-links .privacy-policy {
   display: -webkit-box;
@@ -410,7 +427,7 @@ body .landing-page__container #components__content .spz-footer .footer-container
 }
 @media (max-width: 767.98px) {
   body .landing-page__container #components__content .spz-footer .footer-container .footer-links .privacy-policy .p-anchor {
-    margin: 0px;
+    margin: 0 0 16px;
   }
 }
 body .netskope-component--request-demo-form {
@@ -464,7 +481,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 * {
 }
 @media (max-width: 767.98px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 {
-    padding: 24px 18px 8px !important;
+    padding: 24px 18px 16px !important;
   }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormRow {
@@ -644,7 +661,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoBut
 }
 @media (max-width: 767.98px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoButtonRow {
-    padding-top: 16px;
+    padding-top: 17px;
   }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoButtonRow .mktoButton {
@@ -773,15 +790,6 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFie
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol label#Lbltestfield + div + .customInput.hideHint > .customInput1 {
   padding: 10px 32px 8px 16px !important;
 }
-@media (max-width: 480px) {
-  body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol .mktoError {
-    position: relative !important;
-    top: -8px;
-  }
-}
-body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol .mktoError .mktoErrorArrowWrap {
-  display: none !important;
-}
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFieldDescriptor.mktoFormCol:hover .mktoFieldWrap:not(.active) > label:not(.labActive) {
   color: #081a59 !important;
 }
@@ -836,6 +844,11 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFor
   font-weight: 400;
   line-height: 24px;
   color: #7e8bba;
+}
+@media (max-width: 767.98px) {
+  body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt .commt-text {
+    padding: 0px 0px 0px 36px;
+  }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1169 .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt .commt-text:before {
   content: "+";

@@ -115,7 +115,6 @@ body {
 
           @media (max-width: 767.98px) {
             padding: 32px 24px 24px;
-            max-width: 360px;
             margin: 0;
           }
 
@@ -135,6 +134,7 @@ body {
             @media (max-width: 767.98px) {
               font-size: 32px;
               line-height: 40px;
+              margin: 0 0 24px;
             }
           }
 
@@ -216,6 +216,11 @@ body {
             max-width: 704px;
           }
 
+          @media (max-width: 767.98px) {
+            max-width: 320px;
+            padding: 0 0 39px;
+          }
+
           .section-title {
             p {
               color: #fff;
@@ -275,6 +280,10 @@ body {
             padding: 39px 0;
           }
 
+          @media (max-width: 767.98px) {
+            max-width: 320px;
+          }
+
           .footer-badges {
             @media (max-width: 1023.98px) {
               margin-bottom: 30px;
@@ -309,6 +318,7 @@ body {
               @media (max-width: 767.98px) {
                 flex-direction: column;
                 align-items: flex-start;
+                margin-bottom: 16px;
               }
               .mobile {
                 color: #fff;
@@ -333,6 +343,10 @@ body {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 20px;
+
+                @media (max-width: 767.98px) {
+                  margin-bottom: 8px;
+                }
               }
             }
 
@@ -369,7 +383,7 @@ body {
                   margin: 0px 56px 0 55px;
                 }
                 @media (max-width: 767.98px) {
-                  margin: 0px;
+                  margin: 0 0 16px;
                 }
               }
             }
@@ -424,7 +438,7 @@ body {
       }
 
       @media (max-width: 767.98px) {
-        padding: 24px 18px 8px !important;
+        padding: 24px 18px 16px !important;
       }
 
       .mktoFormRow {
@@ -598,7 +612,7 @@ body {
         padding: 12px 6px 0;
 
         @media (max-width: 767.98px) {
-          padding-top: 16px;
+          padding-top: 17px;
         }
 
         .mktoButton {
@@ -751,12 +765,12 @@ body {
           // top: 0;
 
           @media (max-width: 480px) {
-            position: relative !important;
-            top: -8px;
+            // position: relative !important;
+            // top: -8px;
           }
-          .mktoErrorArrowWrap {
-            display: none !important;
-          }
+          // .mktoErrorArrowWrap {
+          //   display: none !important;
+          // }
 
           // .mktoErrorMsg {
           //   color: #ff5b28;
@@ -835,6 +849,11 @@ body {
             font-weight: 400;
             line-height: 24px;
             color: $color_4;
+
+            @media (max-width: 767.98px) {
+              padding: 0px 0px 0px 36px;
+            }
+
             &:before {
               content: "+";
               color: $color_5;
