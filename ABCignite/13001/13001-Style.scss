@@ -3,6 +3,11 @@ $color_1: var(--black, #140f10);
 $color_2: #140f10;
 
 .spz-13001 {
+
+  &:has(.flydown-modal.is-open){
+    overflow: hidden;
+  }
+  
   .modal {
     scrollbar-width: none;
     z-index: 10000;
