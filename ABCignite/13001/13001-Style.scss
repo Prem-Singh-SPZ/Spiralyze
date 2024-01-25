@@ -23,19 +23,35 @@ $color_2: #140f10;
       border-radius: 32px;
       border: 0;
 
+      @media (max-width: 1023.98px) {
+        max-width: 688px;
+        padding: 40px;
+      }
+
       .modal__close {
         top: 14px;
         right: 16px;
+
+        @media (max-width: 1023.98px) {
+          top: 10px;
+          right: 12px;
+        }
+
+        @media (max-width: 767.98px) {
+          top: 4px;
+          right: 7px;
+        }
+
         svg {
           width: 16px;
-          path{
-            fill: #9D9D9D !important;
+          path {
+            fill: #9d9d9d !important;
           }
         }
 
-        &:hover{
+        &:hover {
           svg {
-            path{
+            path {
               fill: #000000 !important;
             }
           }
@@ -49,6 +65,16 @@ $color_2: #140f10;
         box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
         padding: 40px 30px;
         max-width: 500px;
+
+        @media (max-width: 1023.98px) {
+          max-width: 100%;
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: 767.98px) {
+          box-shadow: none;
+          padding: 32px 32px 24px;
+        }
 
         .spz-demo-title {
           color: $color_2;
@@ -65,7 +91,7 @@ $color_2: #140f10;
           // .mktoFormRow {
           //   flex-wrap: wrap;
           // }
-          gap: 12px;
+          // gap: 12px;
 
           .mktoButtonRow {
             .mktoButtonWrap {
@@ -104,14 +130,23 @@ $color_2: #140f10;
             margin-top: 21px;
             margin-bottom: 0;
           }
+
+          input[name="Phone"] + .mktoError #ValidMsgPhone {
+            font-size: 10px;
+          }
         }
       }
 
       .bullet-section {
-        // margin-right: 20px;
+        margin-right: 20px;
         padding: 0;
         max-width: 560px;
         width: 100%;
+
+        @media (max-width: 1023.98px) {
+          max-width: 100%;
+          margin: 0px;
+        }
 
         .bullet-sub-title {
           color: #0057d6;
@@ -136,6 +171,10 @@ $color_2: #140f10;
       .bullet-wrapper {
         margin: 29px 0 31px;
         padding: 0;
+
+        @media (max-width: 1023.98px) {
+          margin: 24px 0 30px;
+        }
       }
       .bullet-point {
         &::before {
@@ -238,11 +277,24 @@ $color_2: #140f10;
 
       @media (max-width: 1023.98px) {
         flex-direction: column;
+        align-items: flex-start;
+        top: 12px;
       }
 
       @media (max-width: 767.98px) {
-        padding: 30px 0px 23px;
+        padding: 0px 0px 23px;
         border-radius: 24px;
+        max-width: 335px;
+        top: -20px;
+        
+        .flydown-modal__inner {
+          .spz-demo-title {
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+          }
+        }
 
         .bullet-section {
           margin-bottom: 0px;
@@ -253,9 +305,9 @@ $color_2: #140f10;
             position: absolute;
             top: -32px;
             background: #bababa;
-            width: calc(100% - 39px);
+            width: calc(100% - 38px);
             height: 1px;
-            left: 0;
+            left: 0px;
             right: 0;
             margin: auto;
           }
@@ -271,6 +323,10 @@ $color_2: #140f10;
         }
         .bullet-wrapper {
           margin: 15px 0 25px;
+
+          .bullet-point {
+            margin-bottom: 24px;
+          }
         }
 
         .explore-platforms-parent {
