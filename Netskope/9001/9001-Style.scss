@@ -40,8 +40,13 @@ body {
       padding: 0;
 
       .container {
+        max-width: 1220px;
         @media (max-width: 1023.98px) {
           max-width: 735px;
+        }
+
+        @media (max-width: 767.98px) {
+          max-width: 360px;
         }
 
         nav.navbar .navbar-left {
@@ -107,6 +112,18 @@ body {
           width: 100%;
           margin: 0 24px 0 0;
           padding: 0;
+          position: relative;
+
+          &::before {
+            content: url(//res.cloudinary.com/spiralyze/image/upload/v1704976725/netskope/9001/min_plus.svg);
+            position: absolute;
+            top: -31px;
+            left: -20px;
+
+            @media (max-width: 1023.98px) {
+              display: none;
+            }
+          }
 
           @media (min-width: 767.98px) and (max-width: 1023.98px) {
             max-width: 704px;
@@ -144,7 +161,6 @@ body {
               list-style: none;
               li {
                 padding-left: 40px;
-                position: relative;
                 color: #fff;
                 font-family: $font-family_1;
                 font-size: 18px;
@@ -376,6 +392,10 @@ body {
                   font-weight: 400;
                   line-height: 20px;
                   text-decoration: none;
+
+                  &:hover {
+                    text-decoration: underline;
+                  }
                 }
                 margin: 0px 33px 0 32px;
 
@@ -395,6 +415,7 @@ body {
 
   .netskope-component--request-demo-form {
     border-radius: 24px;
+    border: 1px solid rgba(8, 26, 89, 0.2);
     background: #fff;
 
     @media (max-width: 767.98px) {
@@ -408,13 +429,13 @@ body {
       line-height: 48px;
       display: flex;
       justify-content: center;
-      padding: 24px 0px 0px;
+      padding: 23px 0px 0px;
       color: $color_3;
     }
 
     form.mktoForm#mktoForm_1169 {
       position: relative;
-      padding: 24px 26px 16px !important;
+      padding: 24px 25px 15px !important;
       display: flex !important;
       flex-wrap: wrap;
 
@@ -438,7 +459,7 @@ body {
       }
 
       @media (max-width: 767.98px) {
-        padding: 24px 18px 16px !important;
+        padding: 24px 17px 15px !important;
       }
 
       .mktoFormRow {
@@ -447,26 +468,26 @@ body {
           display: none !important;
         }
 
-        &.row-netskope-fm {
-          order: 14;
+        // &.row-netskope-fm {
+        //   order: 14;
 
-          .netskope-fm {
-            color: #7e8bba !important;
-            font-size: 12px;
-            font-style: normal;
-            font-weight: 400;
-            line-height: 20px;
+        //   .netskope-fm {
+        //     color: #7e8bba !important;
+        //     font-size: 12px;
+        //     font-style: normal;
+        //     font-weight: 400;
+        //     line-height: 20px;
 
-            a {
-              color: #7e8bba !important;
-              padding: 0;
-              text-decoration: underline !important;
+        //     a {
+        //       color: #7e8bba !important;
+        //       padding: 0;
+        //       text-decoration: underline !important;
 
-              // &:hover {
-              // }
-            }
-          }
-        }
+        //       // &:hover {
+        //       // }
+        //     }
+        //   }
+        // }
 
         &.row-PostalCode {
           width: 100% !important;
@@ -603,6 +624,7 @@ body {
           .mktoFieldWrap.visible {
             display: block;
             float: left;
+            margin-top: 10px;
           }
         }
       }
@@ -627,6 +649,9 @@ body {
           font-weight: 400;
           letter-spacing: 0;
           box-shadow: none;
+          font-size: 16px;
+          line-height: 24px;
+          padding: 12px 30px;
 
           @media (max-width: 1024.98px) {
             max-width: 100%;
@@ -650,7 +675,7 @@ body {
           border-radius: 24px !important;
           border: 1px solid rgba(8, 26, 89, 0.2) !important;
           padding: 23px 20px 5px 15px !important;
-          color: #7e8bba !important;
+          color: #081a59 !important;
           line-height: 24px !important;
           caret-color: #00a9ce;
           width: 100% !important;
@@ -659,13 +684,17 @@ body {
           font-weight: 400;
           box-shadow: none;
 
+          &#Contact_Us_Form_Entry__c {
+            padding-top: 21px !important;
+          }
+
           @media (max-width: 767.98px) {
             height: 56px !important;
           }
 
-          &.mktoValid {
-            color: #081a59 !important;
-          }
+          // &.mktoValid {
+          //   color: #081a59 !important;
+          // }
 
           &[aria-describedby="ValidMsgFirstName"],
           &[aria-describedby="ValidMsgLastName"],
@@ -673,8 +702,8 @@ body {
           &[aria-describedby="ValidMsgTitle"],
           &[aria-describedby="ValidMsgEmail"],
           &[aria-describedby="ValidMsgPhone"],
-          &[aria-describedby="ValidMsgmOICustomField11"],
-          &[aria-describedby="ValidMsgnumEmployeesRange"],
+          &[aria-describedby="ValidMsgPostalCode"],
+          // &[aria-describedby="ValidMsgnumEmployeesRange"],
           &[aria-describedby="ValidMsgCountry"] {
             border-color: #ff5b28 !important;
           }
@@ -719,45 +748,45 @@ body {
               }
             }
 
-            &:hover .customInput1:not(.openBox) {
-              span.hintText {
-                color: #081a59 !important;
-              }
-            }
+            // &:hover .customInput1:not(.openBox) {
+            //   span.hintText {
+            //     color: #081a59 !important;
+            //   }
+            // }
 
-            &.openBox {
-              .customInput1 {
-                border: 1px solid #081a59 !important;
-                border-bottom-right-radius: 0px !important;
-                border-bottom: none !important;
-                border-bottom-left-radius: 0px !important;
-                border-color: #081a59 !important;
-              }
+            // &.openBox {
+            //   .customInput1 {
+            //     border: 1px solid #081a59 !important;
+            //     border-bottom-right-radius: 0px !important;
+            //     border-bottom: none !important;
+            //     border-bottom-left-radius: 0px !important;
+            //     border-color: #081a59 !important;
+            //   }
 
-              span.hintText {
-                font-size: 12px !important;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 20px !important;
-                top: 6px;
-              }
-              .customInput1 {
-                background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
-              }
-              .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
-                overflow: hidden;
-                max-height: none;
+            //   span.hintText {
+            //     font-size: 12px !important;
+            //     font-style: normal;
+            //     font-weight: 400;
+            //     line-height: 20px !important;
+            //     top: 6px;
+            //   }
+            //   .customInput1 {
+            //     background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
+            //   }
+            //   .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+            //     overflow: hidden;
+            //     max-height: none;
 
-                > label {
-                  padding-left: 24px !important;
-                  padding-right: 10px !important;
-                }
-              }
-            }
+            //     > label {
+            //       padding-left: 24px !important;
+            //       padding-right: 10px !important;
+            //     }
+            //   }
+            // }
 
-            &.hideHint > .customInput1 {
-              padding: 10px 32px 8px 16px !important;
-            }
+            // &.hideHint > .customInput1 {
+            //   padding: 10px 32px 8px 16px !important;
+            // }
           }
         }
 
@@ -794,12 +823,12 @@ body {
           }
         }
 
-        .mktoFieldWrap.filled,
-        .mktoFieldWrap.active {
-          .mktoField {
-            color: #081a59 !important;
-          }
-        }
+        // .mktoFieldWrap.filled,
+        // .mktoFieldWrap.active {
+        //   .mktoField {
+        //     color: #081a59 !important;
+        //   }
+        // }
 
         input:-webkit-autofill,
         select:-webkit-autofill {

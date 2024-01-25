@@ -64,6 +64,7 @@ function formModify() {
             document.querySelector('#LblTitle').textContent = "Job Title";
             document.querySelector('#LblPhone').textContent = "Phone";
             document.querySelector('#LblCountry').textContent = "Country";
+            document.querySelector('#Country option:first-child').textContent = "";
             document.querySelector('#LblFirstName').textContent = "First Name";
             document.querySelector('#LblLastName').textContent = "Last Name";
             document.querySelector('#LblContact_Us_Form_Entry__c').textContent = "Give us a brief description why you are contacting us.";
