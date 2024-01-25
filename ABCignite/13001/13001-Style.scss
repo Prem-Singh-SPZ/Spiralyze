@@ -4,6 +4,12 @@ $color_2: #140f10;
 
 .spz-13001 {
   .modal {
+    scrollbar-width: none;
+    z-index: 10000;
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
     .modal__overlay {
       background: rgba(17, 17, 17, 0.5);
       backdrop-filter: blur(3px);
@@ -22,6 +28,9 @@ $color_2: #140f10;
       align-items: center;
       border-radius: 32px;
       border: 0;
+      @media (max-height: 600.98px) {
+        align-items: flex-start;
+      }
 
       @media (max-width: 1023.98px) {
         max-width: 688px;
@@ -65,6 +74,7 @@ $color_2: #140f10;
         box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
         padding: 40px 30px;
         max-width: 500px;
+        min-width: 500px;
 
         @media (max-width: 1023.98px) {
           max-width: 100%;
@@ -74,6 +84,7 @@ $color_2: #140f10;
         @media (max-width: 767.98px) {
           box-shadow: none;
           padding: 32px 32px 24px;
+          min-width: auto;
         }
 
         .spz-demo-title {
@@ -92,6 +103,12 @@ $color_2: #140f10;
           //   flex-wrap: wrap;
           // }
           // gap: 12px;
+
+          @media (max-width: 767.98px) {
+            .mktoFormRow {
+              flex-wrap: wrap;
+            }
+          }
 
           .mktoButtonRow {
             .mktoButtonWrap {
@@ -133,6 +150,15 @@ $color_2: #140f10;
 
           input[name="Phone"] + .mktoError #ValidMsgPhone {
             font-size: 10px;
+            @media (max-width: 767.98px) {
+              font-size: 11px;
+            }
+          }
+
+          input[name="Email"] + .mktoError #ValidMsgEmail {
+            @media (max-width: 767.98px) {
+              font-size: 11px;
+            }
           }
         }
       }
@@ -243,6 +269,7 @@ $color_2: #140f10;
             @media (min-width: 991.98px) and (max-width: 1199.98px) {
               width: 98px;
               height: 98px;
+              margin-bottom: 10px;
             }
 
             @media (max-width: 767.98px) {
@@ -278,15 +305,15 @@ $color_2: #140f10;
       @media (max-width: 1023.98px) {
         flex-direction: column;
         align-items: flex-start;
-        top: 12px;
+        // top: 42px;
       }
 
       @media (max-width: 767.98px) {
         padding: 0px 0px 23px;
         border-radius: 24px;
         max-width: 335px;
-        top: -20px;
-        
+        // top: 40px;
+
         .flydown-modal__inner {
           .spz-demo-title {
             font-size: 26px;

@@ -159,8 +159,8 @@ function init5009() {
                 // if (window.location.pathname == '/') {
                 document.querySelector('.spz-demo-btn').addEventListener('click', function (e) {
                     e.preventDefault();
-                    // document.querySelector('.modal-flydown-trigger').click()
-                    window.location.href = 'https://abcfitness.com/request-a-demo/'
+                    // document.querySelector('.n2-style-bd99200e23340aaacefc00fabc6e3e20-heading.modal-flydown-trigger').click();
+                    window.location.href = 'https://abcfitness.com/request-a-demo/';
                     return false;
                 })
                 // }
