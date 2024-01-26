@@ -22,7 +22,9 @@ function loadTest() {
     waitForElm('.dnd-module .hs_cos_wrapper .btn').then(function () {
         document.body.classList.add('spz-4001');
 
-        document.querySelector('main#main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid').insertAdjacentHTML('afterbegin', pageHTML);
+        if (document.querySelectorAll('.spz-sections-wrapper').length == 0) {
+            document.querySelector('main#main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid').insertAdjacentHTML('afterbegin', pageHTML);
+        }
     });
 }
 
