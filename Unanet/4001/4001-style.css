@@ -499,6 +499,7 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  margin-bottom: 48px;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs li {
   margin: 0 4px;
@@ -554,24 +555,29 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   -webkit-animation: progress-anim 5s ease 0s;
           animation: progress-anim 5s ease 0s;
 }
-
-@-webkit-keyframes progress-forward {
-  0% {
-    background: #d8e9ab;
-  }
-  100% {
-    background: #c5d84a;
-  }
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .tab-content .tab-pane .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .tab-content .tab-pane .content-wrapper .content {
+  max-width: 338px;
+  width: 100%;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .tab-content .tab-pane .content-wrapper .img-wrapper {
+  max-width: 840px;
+  width: 100%;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .tab-content .tab-pane .content-wrapper .img-wrapper img {
+  width: 100%;
 }
 
-@keyframes progress-forward {
-  0% {
-    background: #d8e9ab;
-  }
-  100% {
-    background: #c5d84a;
-  }
-}
 @-webkit-keyframes progress-anim {
   0% {
     width: 0%;
@@ -580,6 +586,7 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
     width: 100%;
   }
 }
+
 @keyframes progress-anim {
   0% {
     width: 0%;

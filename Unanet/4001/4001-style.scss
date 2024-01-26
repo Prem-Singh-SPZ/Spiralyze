@@ -489,6 +489,7 @@ body {
                     border: none;
                     flex-wrap: nowrap;
                     justify-content: center;
+                    margin-bottom: 48px;
                     li {
                       margin: 0 4px;
                       width: 238px;
@@ -514,7 +515,7 @@ body {
                         top: 0;
                         right: 0;
                         bottom: 0;
-                      padding: 13px 16px;
+                        padding: 13px 16px;
 
                         text-align: center;
                         z-index: 10;
@@ -534,14 +535,35 @@ body {
                         height: 100%;
                       }
 
-                      
-                      &.active{
+                      &.active {
                         background: #d8e9ab;
-                        .progress{
+                        .progress {
                           opacity: 1;
                           animation: progress-anim 5s ease 0s;
                         }
-                      } 
+                      }
+                    }
+                  }
+
+                  .tab-content {
+                    .tab-pane {
+                      .content-wrapper {
+                        display: flex;
+                        align-items: center;
+                        justify-content: space-between;
+
+                        .content {
+                          max-width: 338px;
+                          width: 100%;
+                        }
+                        .img-wrapper {
+                          max-width: 840px;
+                          width: 100%;
+                          img {
+                            width: 100%;
+                          }
+                        }
+                      }
                     }
                   }
                 }
@@ -554,21 +576,12 @@ body {
   }
 }
 
-@keyframes progress-forward {
+@keyframes progress-anim {
   0% {
-    background: #d8e9ab;
+    width: 0%;
   }
 
   100% {
-    background: #c5d84a;
+    width: 100%;
   }
-}
-@keyframes progress-anim {
-	0% {
-		width: 0%;
-	}
-
-	100% {
-		width: 100%;
-	}
 }
