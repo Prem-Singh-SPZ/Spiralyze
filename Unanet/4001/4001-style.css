@@ -492,3 +492,99 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   letter-spacing: -1px;
   margin: 0 0 40px;
 }
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs {
+  border: none;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs li {
+  margin: 0 4px;
+  width: 238px;
+  height: 46px;
+  border-radius: 999px;
+  background: #fff;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  position: relative;
+  overflow: hidden;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs li a {
+  color: #363f44;
+  font-family: Mona Sans, arial, sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  white-space: nowrap;
+  text-decoration: none;
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  padding: 13px 16px;
+  text-align: center;
+  z-index: 10;
+  opacity: 1;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs li .progress {
+  position: absolute;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0%;
+  z-index: 5;
+  background: #c5d84a;
+  opacity: 0;
+  height: 100%;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs li.active {
+  background: #d8e9ab;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .nav.nav-tabs li.active .progress {
+  opacity: 1;
+  -webkit-animation: progress-anim 5s ease 0s;
+          animation: progress-anim 5s ease 0s;
+}
+
+@-webkit-keyframes progress-forward {
+  0% {
+    background: #d8e9ab;
+  }
+  100% {
+    background: #c5d84a;
+  }
+}
+
+@keyframes progress-forward {
+  0% {
+    background: #d8e9ab;
+  }
+  100% {
+    background: #c5d84a;
+  }
+}
+@-webkit-keyframes progress-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes progress-anim {
+  0% {
+    width: 0%;
+  }
+  100% {
+    width: 100%;
+  }
+}

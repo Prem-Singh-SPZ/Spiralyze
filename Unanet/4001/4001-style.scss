@@ -483,6 +483,68 @@ body {
                   letter-spacing: -1px;
                   margin: 0 0 40px;
                 }
+
+                .spz-tabs-carousel {
+                  .nav.nav-tabs {
+                    border: none;
+                    flex-wrap: nowrap;
+                    justify-content: center;
+                    li {
+                      margin: 0 4px;
+                      width: 238px;
+                      height: 46px;
+                      border-radius: 999px;
+                      background: #fff;
+                      display: flex;
+                      justify-content: center;
+                      position: relative;
+                      overflow: hidden;
+
+                      a {
+                        color: #363f44;
+                        font-family: $Mona-font;
+                        font-size: 14px;
+                        font-style: normal;
+                        font-weight: 600;
+                        line-height: 20px;
+                        white-space: nowrap;
+                        text-decoration: none;
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                      padding: 13px 16px;
+
+                        text-align: center;
+                        z-index: 10;
+                        opacity: 1;
+                      }
+
+                      .progress {
+                        position: absolute;
+                        left: 0;
+                        top: 0;
+                        right: 0;
+                        bottom: 0;
+                        width: 0%;
+                        z-index: 5;
+                        background: #c5d84a;
+                        opacity: 0;
+                        height: 100%;
+                      }
+
+                      
+                      &.active{
+                        background: #d8e9ab;
+                        .progress{
+                          opacity: 1;
+                          animation: progress-anim 5s ease 0s;
+                        }
+                      } 
+                    }
+                  }
+                }
               }
             }
           }
@@ -490,4 +552,23 @@ body {
       }
     }
   }
+}
+
+@keyframes progress-forward {
+  0% {
+    background: #d8e9ab;
+  }
+
+  100% {
+    background: #c5d84a;
+  }
+}
+@keyframes progress-anim {
+	0% {
+		width: 0%;
+	}
+
+	100% {
+		width: 100%;
+	}
 }

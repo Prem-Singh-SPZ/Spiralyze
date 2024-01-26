@@ -3,10 +3,15 @@ swiperJS.src = '//cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/js/swiper.js';
 swiperJS.type = 'text/javascript';
 document.head.appendChild(swiperJS);
 
+const bsJS = document.createElement('script');
+bsJS.src = '//stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js';
+bsJS.type = 'text/javascript';
+document.head.appendChild(bsJS);
+
 appendPreload()
 function appendPreload() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css"><script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>`
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css">`
     );
 }
 
@@ -27,16 +32,34 @@ function loadTest() {
         }
     });
 
-    waitForElm('.dnd-module .hs_cos_wrapper .btn').then(function () {
-        // Tab-Pane change function
-        var tabCarousel = setInterval(function () {
-            var tabs = $(".nav-tabs > li"),
-                active = tabs.filter(".active"),
-                next = active.next("li"),
-                toClick = next.length ? next.find("a") : tabs.eq(0).find("a");
-
-            toClick.trigger("click");
-        }, 3000);
+    window.addEventListener("load", function () {
+        var tabChange = function() {
+            var tabs = $(".nav-tabs > li");
+            var active = tabs.filter(".active").removeClass("active");
+            var next = active.next("li").length
+              ? active.next("li")
+              : tabs.filter(":first-child")
+            // Bootsrap tab show, para ativar a tab
+            next.addClass("active").find("a").tab("show")
+          };
+          // Tab Cycle function
+          var tabCycle = setInterval(tabChange, 5000);
+          // Tab click event handler
+          $(function() {
+            $(".nav-tabs a").click(function(e) {
+              e.preventDefault();
+              $(".nav-tabs .active").removeClass("active")
+              // Stop the cycle
+              clearInterval(tabCycle);
+              // Show the clicked tabs associated tab-pane
+              $(this).tab("show");
+              $(this).parent().addClass("active");
+              // Start the cycle again in a predefined amount of time
+              setTimeout(function() {
+                tabCycle = setInterval(tabChange, 5000);
+              }, 1);
+            });
+          });
     });
 }
 
@@ -547,172 +570,152 @@ const pageHTML = `<div class="spz-sections-wrapper">
 <section class="benefits-section">
   <div class="spz-container">
   <h6 class="title">Benefits</h6>
-    <div class="board">
-      <div class="board-inner">
-        <ul class="nav nav-tabs" id="myTab">
-          <li class="active">
-            <a href="#home" data-toggle="tab" title="welcome">
-              <span class="round-tabs one"> Grow sales </span>
-            </a>
-          </li>
-          <li>
-            <a href="#profile" data-toggle="tab" title="profile">
-              <span class="round-tabs two">
-                Streamline communication
-              </span>
-            </a>
-          </li>
-          <li>
-            <a
-              href="#messages"
-              data-toggle="tab"
-              title="bootsnipp goodies"
-            >
-              <span class="round-tabs three">
-                Consolidate contacts and bids
-              </span>
-            </a>
-          </li>
-          <li>
-            <a href="#settings" data-toggle="tab" title="blah blah">
-              <span class="round-tabs four">
-                Optimize resource allocation
-              </span>
-            </a>
-          </li>
-        </ul>
-      </div>
-      <div class="tab-content">
-        <div class="tab-pane fade in active" id="home">
-          <div class="tab-wrapper">
-            <div class="content">
-              <h6>Grow sales</h6>
-              <p>
-                Automatically create winning proposals. Track open bids in
-                one place and get automated follow-up reminders. Scale up
-                your sales activity.
-              </p>
-            </div>
-            <div class="img-wrapper">
-              <picture>
-                <source
-                  media="(min-width:1024px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
-                  "
-                />
-                <source
-                  media="(min-width:768px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
-                  "
-                />
-                <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
-                  alt="Grow Sales"
-                />
-              </picture>
-            </div>
-          </div>
+  <div id="tab-carousel" class="spz-tabs-carousel">
+  <ul class="nav nav-tabs">
+    <li class="active">
+      <a href="#tabs_1" class="active">Grow sales</a><span class="progress"></span>
+    </li>
+    <li>
+      <a href="#tabs_2">Streamline communication</a><span class="progress"></span>
+    </li>
+    <li>
+      <a href="#tabs_3">Consolidate contacts and bids</a><span class="progress"></span>
+    </li>
+    <li>
+      <a href="#tabs_4">Optimize resource allocation</a><span class="progress"></span>
+    </li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane active" id="tabs_1">
+      <div class="content-wrapper">
+        <div class="content">
+          <h6>Grow sales</h6>
+          <p>
+            Automatically create winning proposals. Track open bids in one
+            place and get automated follow-up reminders. Scale up your sales
+            activity.
+          </p>
         </div>
-        <div class="tab-pane fade" id="profile">
-          <div class="tab-wrapper">
-            <div class="content">
-              <h6>Streamline communication</h6>
-              <p>
-                Automatically create winning proposals. Track open bids in
-                one place and get automated follow-up reminders. Scale up
-                your sales activity.
-              </p>
-            </div>
-            <div class="img-wrapper">
-              <picture>
-                <source
-                  media="(min-width:1024px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101316/unanet/4001/frame_1171275697.webp
-                  "
-                />
-                <source
-                  media="(min-width:768px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101385/unanet/4001/frame_1171275698.webp
-                  "
-                />
-                <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/v1706101704/unanet/4001/frame_1171275709.webp"
-                  alt="Streamline communication"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="messages">
-          <div class="tab-wrapper">
-            <div class="content">
-              <h6>Streamline communication</h6>
-              <p>
-                Automatically create winning proposals. Track open bids in
-                one place and get automated follow-up reminders. Scale up
-                your sales activity.
-              </p>
-            </div>
-            <div class="img-wrapper">
-              <picture>
-                <source
-                  media="(min-width:1024px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101316/unanet/4001/frame_1171275697.webp
-                  "
-                />
-                <source
-                  media="(min-width:768px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101385/unanet/4001/frame_1171275698.webp
-                  "
-                />
-                <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/v1706101704/unanet/4001/frame_1171275709.webp"
-                  alt="Streamline communication"
-                />
-              </picture>
-            </div>
-          </div>
-        </div>
-        <div class="tab-pane fade" id="settings">
-          <div class="tab-wrapper">
-            <div class="content">
-              <h6>Streamline communication</h6>
-              <p>
-                Automatically create winning proposals. Track open bids in
-                one place and get automated follow-up reminders. Scale up
-                your sales activity.
-              </p>
-            </div>
-            <div class="img-wrapper">
-              <picture>
-                <source
-                  media="(min-width:1024px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101316/unanet/4001/frame_1171275697.webp
-                  "
-                />
-                <source
-                  media="(min-width:768px)"
-                  srcset="
-                    //res.cloudinary.com/spiralyze/image/upload/v1706101385/unanet/4001/frame_1171275698.webp
-                  "
-                />
-                <img
-                  src="//res.cloudinary.com/spiralyze/image/upload/v1706101704/unanet/4001/frame_1171275709.webp"
-                  alt="Streamline communication"
-                />
-              </picture>
-            </div>
-          </div>
+        <div class="img-wrapper">
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+              "
+            />
+            <img
+              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              alt="Grow Sales"
+            />
+          </picture>
         </div>
       </div>
     </div>
+    <div class="tab-pane" id="tabs_2">
+      <div class="content-wrapper">
+        <div class="content">
+          <h6>Grow sales</h6>
+          <p>
+            Automatically create winning proposals. Track open bids in one
+            place and get automated follow-up reminders. Scale up your sales
+            activity.
+          </p>
+        </div>
+        <div class="img-wrapper">
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+              "
+            />
+            <img
+              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              alt="Grow Sales"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tabs_3">
+      <div class="content-wrapper">
+        <div class="content">
+          <h6>Grow sales</h6>
+          <p>
+            Automatically create winning proposals. Track open bids in one
+            place and get automated follow-up reminders. Scale up your sales
+            activity.
+          </p>
+        </div>
+        <div class="img-wrapper">
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+              "
+            />
+            <img
+              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              alt="Grow Sales"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+    <div class="tab-pane" id="tabs_4">
+      <div class="content-wrapper">
+        <div class="content">
+          <h6>Grow sales</h6>
+          <p>
+            Automatically create winning proposals. Track open bids in one
+            place and get automated follow-up reminders. Scale up your sales
+            activity.
+          </p>
+        </div>
+        <div class="img-wrapper">
+          <picture>
+            <source
+              media="(min-width:1024px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+              "
+            />
+            <source
+              media="(min-width:768px)"
+              srcset="
+                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+              "
+            />
+            <img
+              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              alt="Grow Sales"
+            />
+          </picture>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
   </div>
 </section>
 
