@@ -12,8 +12,9 @@ body {
 
             .spz-sections-wrapper {
               .spz-container {
-                max-width: 1276px;
+                max-width: 1308px;
                 margin: auto;
+                padding: 0 16px;
               }
 
               .hero-section {
@@ -52,8 +53,6 @@ body {
                               color: #007c79;
                             }
                           }
-
-                          
                         }
                       }
                       &:last-child {
@@ -68,6 +67,421 @@ body {
                       }
                     }
                   }
+                }
+              }
+
+              .trusted-partner-section {
+                background: #007c79;
+
+                .content {
+                  padding: 50px 43px;
+
+                  .title {
+                    color: #fff;
+                    text-align: center;
+                    font-family: $Mona-font;
+                    font-size: 20px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 26px;
+                    margin: 0 0 48px;
+                  }
+
+                  .img-wrapper {
+                    img {
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+
+              .features-section {
+                background: #007c79
+                  url(//res.cloudinary.com/spiralyze/image/upload/v1705434973/unanet/4001/bottom_element.svg)
+                  no-repeat;
+                background-position: bottom center;
+                background-size: auto 261px;
+                padding: 60px 0 32px;
+
+                .title {
+                  color: #fff;
+                  text-align: center;
+                  font-family: $Mona-font;
+                  font-size: 40px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 50px;
+                  letter-spacing: -1px;
+                  margin: 0 0 48px;
+                }
+
+                .feature-cards-wrapper {
+                  display: flex;
+                  justify-content: space-between;
+                  flex-wrap: wrap;
+                  .card.feature-card {
+                    border-radius: 16px;
+                    background: #fff;
+                    width: 100%;
+                    max-width: 398.69px;
+                    margin-bottom: 48px;
+
+                    .card-img-top {
+                      border-radius: 16px 16px 0 0;
+                      height: 190px;
+                      width: 100%;
+                    }
+
+                    .card-body {
+                      padding: 24px 24px 40px;
+
+                      .card-title {
+                        color: #373737;
+                        font-family: $Mona-font;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                        margin: 0 0 12px;
+                      }
+
+                      .card-text {
+                        color: #373737;
+                        font-family: $Mona-font;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                      }
+                    }
+                  }
+                }
+              }
+
+              .review-slider-section {
+                background: #33585e;
+                padding: 80px 0;
+
+                .for-desktop {
+                  display: flex;
+                  justify-content: space-between;
+                  @media (max-width: 991.98px) {
+                    display: none;
+                  }
+                }
+
+                .for-tab-mob {
+                  display: flex;
+                  @media (min-width: 991.98px) {
+                    display: none;
+                  }
+                }
+
+                .g2-box {
+                  display: flex;
+                  padding: 24px 16px;
+                  flex-direction: column;
+                  justify-content: center;
+                  align-items: center;
+                  border-radius: 10px;
+                  border: 1px solid #ccd4d9;
+                  background: #fff;
+                  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                  max-width: 205px;
+                  height: 279px;
+                  width: 100%;
+
+                  .g2-images {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+
+                    .g2-logo,
+                    .star-rating {
+                      margin: 0 0 20px;
+                    }
+
+                    p {
+                      color: #002840;
+                      text-align: center;
+                      font-family: $Mona-font;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 800;
+                      line-height: 24px;
+                      margin: 0 0 20px;
+                    }
+                  }
+
+                  .reviews {
+                    margin: 20px 0 0;
+                    position: relative;
+                    p {
+                      color: #002840;
+                      text-align: center;
+                      font-family: $Mona-font;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 800;
+                      line-height: 24px;
+                      margin: 0;
+
+                      span {
+                        font-weight: 500;
+                      }
+                    }
+
+                    &::before {
+                      content: "";
+                      width: 100%;
+                      height: 1px;
+                      opacity: 0.25;
+                      background: #737373;
+                      display: block;
+                      position: absolute;
+                      top: -20px;
+                    }
+                  }
+                }
+
+                .review-box {
+                  border-radius: 10px;
+                  border: 1px solid #ccd4d9;
+                  background: #fff;
+                  box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
+                  display: flex;
+                  padding: 24px 16px;
+                  flex-direction: column;
+                  align-items: flex-start;
+                  max-width: 337px;
+                  height: 279px;
+                  width: 100%;
+
+                  .review-head {
+                    width: 100%;
+                    margin-bottom: 24px;
+                    display: flex;
+
+                    .g2-logo {
+                      margin-left: auto;
+                    }
+                  }
+
+                  p {
+                    color: #002840;
+                    font-family: $Mona-font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    flex-grow: 1;
+                    margin: 0;
+                  }
+
+                  .review-author {
+                    color: #002840;
+                    font-family: $Mona-font;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+
+                    span {
+                      color: #80939f;
+                      font-size: 14px;
+                      line-height: 17px;
+                    }
+                  }
+                }
+              }
+
+              .how-it-works {
+                background: #fff;
+                padding: 80px 0;
+
+                .title {
+                  color: #363f44;
+                  text-align: center;
+                  font-family: $Mona-font;
+                  font-size: 40px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 50px;
+                  letter-spacing: -1px;
+                  margin: 0 0 48px;
+                }
+
+                .cards-wrapper {
+                  display: flex;
+                  justify-content: space-between;
+
+                  .card.process-card {
+                    display: flex;
+                    padding: 30px 30px 40px 30px;
+                    justify-content: center;
+                    align-items: flex-start;
+                    max-width: 399px;
+                    width: 100%;
+                    border-radius: 24px 0px;
+                    border: 0;
+
+                    &:nth-child(1) {
+                      background: #5ec68d;
+                    }
+                    &:nth-child(2) {
+                      background: #2d8b61;
+                    }
+                    &:nth-child(3) {
+                      background: #1f807a;
+                    }
+
+                    .card-img-top {
+                      width: 80px;
+                      margin: 0 auto 48px;
+                    }
+
+                    .card-body {
+                      padding: 0;
+                      .title {
+                        color: #fff;
+                        font-family: $Mona-font;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 28px;
+                        margin: 0 0 16px;
+                      }
+
+                      .card-text {
+                        color: #fff;
+                        text-align: center;
+                        font-family: $Mona-font;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        margin: 0;
+                      }
+                    }
+                  }
+                }
+
+                .single-card {
+                  margin-top: 48px;
+
+                  .sales-card {
+                    display: flex;
+                    padding: 60px;
+                    flex-direction: column;
+                    align-items: flex-start;
+                    border-radius: 24px;
+                    background: #dceee2
+                      url(//res.cloudinary.com/spiralyze/image/upload/v1705433434/unanet/4001/frame_1171275716.svg)
+                      no-repeat;
+                    background-position: top right;
+                    background-size: initial;
+
+                    .header-card {
+                      color: #363f44;
+                      font-family: $Mona-font;
+                      font-size: 32px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: 40px;
+                      letter-spacing: -1px;
+                      display: flex;
+                      justify-content: center;
+                      align-items: center;
+                      margin: 0 0 24px;
+
+                      span {
+                        color: #363f44;
+                        leading-trim: both;
+                        text-edge: cap;
+                        font-family: $Mona-font;
+                        font-size: 32px;
+                        font-style: normal;
+                        font-weight: 700;
+                        line-height: 40px;
+                        letter-spacing: -1px;
+                        width: 74px;
+                        height: 74px;
+                        padding: 10px;
+                        border-radius: 0px 18px;
+                        background: #ade1c2;
+                        margin-right: 16px;
+                        display: flex;
+                        justify-content: center;
+                        align-items: center;
+                      }
+                    }
+
+                    .card-content {
+                      max-width: 973px;
+                      margin-bottom: 56px;
+                      p {
+                        color: #363f44;
+                        font-family: $Mona-font;
+                        font-size: 20px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 28px;
+                      }
+                    }
+
+                    .footer-card {
+                      display: flex;
+                      align-items: center;
+                      justify-content: space-between;
+                      width: 100%;
+
+                      .author {
+                        h6 {
+                          color: #363f44;
+                          font-family: $Mona-font;
+                          font-size: 20px;
+                          font-style: normal;
+                          font-weight: 700;
+                          line-height: 26px;
+                          margin: 0 0 8px;
+                        }
+
+                        p {
+                          color: #363f44;
+                          font-family: $Mona-font;
+                          font-size: 16px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
+                          margin: 0;
+                        }
+                      }
+
+                      .logo {
+                        max-width: 185px;
+                        img {
+                          width: 100%;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              .benefits-section {
+                background: #dceee2;
+                padding: 80px 0;
+
+                .title {
+                  color: #363f44;
+                  text-align: center;
+                  font-family: $Mona-font;
+                  font-size: 40px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 50px;
+                  letter-spacing: -1px;
+                  margin: 0 0 40px;
                 }
               }
             }

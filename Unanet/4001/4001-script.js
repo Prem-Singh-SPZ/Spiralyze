@@ -6,7 +6,7 @@ document.head.appendChild(swiperJS);
 appendPreload()
 function appendPreload() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css">`
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css"><script src="//netdna.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>`
     );
 }
 
@@ -25,6 +25,18 @@ function loadTest() {
         if (document.querySelectorAll('.spz-sections-wrapper').length == 0) {
             document.querySelector('main#main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid').insertAdjacentHTML('afterbegin', pageHTML);
         }
+    });
+
+    waitForElm('.dnd-module .hs_cos_wrapper .btn').then(function () {
+        // Tab-Pane change function
+        var tabCarousel = setInterval(function () {
+            var tabs = $(".nav-tabs > li"),
+                active = tabs.filter(".active"),
+                next = active.next("li"),
+                toClick = next.length ? next.find("a") : tabs.eq(0).find("a");
+
+            toClick.trigger("click");
+        }, 3000);
     });
 }
 
@@ -278,30 +290,30 @@ const pageHTML = `<div class="spz-sections-wrapper">
           <img
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434595/unanet/4001/g2.svg"
             alt="G2 Logo"
-            class="g2-logo"
+            class="g2-logo" width="48" height="48"
           />
           <img
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434579/unanet/4001/stars.svg"
             alt="star rating"
-            class="star-rating"
+            class="star-rating" width="93"
           />
           <p>Excellent</p>
         </div>
         <div class="reviews">
-          <p>4.4 <span>(252 reviews)</span></p>
+          <p>4.4 <br><span>(252 reviews)</span></p>
         </div>
       </div>
       <div class="review-box">
         <div class="review-head">
           <img
             class="star-rating"
-            width="124"
+            width="107"
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434637/unanet/4001/stars-rating.svg"
             alt="5 Star"
           />
           <img
             class="g2-logo"
-            width="24"
+            width="22"
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434649/unanet/4001/frame_1171275502.svg"
             alt="G2 Logo"
           />
@@ -311,19 +323,19 @@ const pageHTML = `<div class="spz-sections-wrapper">
           profitability, while cutting PM management time, across 1,000+
           projects per year.
         </p>
-        <div class="review-author">Michael D. <span>President</span></div>
+        <div class="review-author">Michael D. <br><span>President</span></div>
       </div>
       <div class="review-box">
         <div class="review-head">
           <img
             class="star-rating"
-            width="124"
+            width="107"
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434637/unanet/4001/stars-rating.svg"
             alt="5 Star"
           />
           <img
             class="g2-logo"
-            width="24"
+            width="22"
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434649/unanet/4001/frame_1171275502.svg"
             alt="G2 Logo"
           />
@@ -333,19 +345,19 @@ const pageHTML = `<div class="spz-sections-wrapper">
           huge number of reports and charts. You can also set budget hours
           at employee level or task level.
         </p>
-        <div class="review-author">Jenny C. <span>CEO</span></div>
+        <div class="review-author">Jenny C. <br><span>CEO</span></div>
       </div>
       <div class="review-box">
         <div class="review-head">
           <img
             class="star-rating"
-            width="124"
+            width="107"
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434637/unanet/4001/stars-rating.svg"
             alt="5 Star"
           />
           <img
             class="g2-logo"
-            width="24"
+            width="22"
             src="//res.cloudinary.com/spiralyze/image/upload/v1705434649/unanet/4001/frame_1171275502.svg"
             alt="G2 Logo"
           />
@@ -355,7 +367,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           with reports, monthly billings, accounting reviews, and more.
         </p>
         <div class="review-author">
-          Lynn W. <span>Director of Business Resources</span>
+          Lynn W. <br><span>Director of Business Resources</span>
         </div>
       </div>
     </div>
@@ -385,13 +397,13 @@ const pageHTML = `<div class="spz-sections-wrapper">
           <div class="review-head">
             <img
               class="star-rating"
-              width="124"
+              width="107"
               src="//res.cloudinary.com/spiralyze/image/upload/v1705434637/unanet/4001/stars-rating.svg"
               alt="5 Star"
             />
             <img
               class="g2-logo"
-              width="24"
+              width="22"
               src="//res.cloudinary.com/spiralyze/image/upload/v1705434649/unanet/4001/frame_1171275502.svg"
               alt="G2 Logo"
             />
@@ -409,13 +421,13 @@ const pageHTML = `<div class="spz-sections-wrapper">
           <div class="review-head">
             <img
               class="star-rating"
-              width="124"
+              width="107"
               src="//res.cloudinary.com/spiralyze/image/upload/v1705434637/unanet/4001/stars-rating.svg"
               alt="5 Star"
             />
             <img
               class="g2-logo"
-              width="24"
+              width="22"
               src="//res.cloudinary.com/spiralyze/image/upload/v1705434649/unanet/4001/frame_1171275502.svg"
               alt="G2 Logo"
             />
@@ -431,13 +443,13 @@ const pageHTML = `<div class="spz-sections-wrapper">
           <div class="review-head">
             <img
               class="star-rating"
-              width="124"
+              width="107"
               src="//res.cloudinary.com/spiralyze/image/upload/v1705434637/unanet/4001/stars-rating.svg"
               alt="5 Star"
             />
             <img
               class="g2-logo"
-              width="24"
+              width="22"
               src="//res.cloudinary.com/spiralyze/image/upload/v1705434649/unanet/4001/frame_1171275502.svg"
               alt="G2 Logo"
             />
@@ -505,7 +517,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
     </div>
     <div class="single-card">
       <div class="sales-card">
-        <div class="card-header"><span>2X</span> Increase in sales</div>
+        <div class="header-card"><span>2X</span> Increase in sales</div>
         <div class="card-content">
           <p>
             “With Unanet we stand apart from our competitors. Information
@@ -515,7 +527,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
             desirable.”
           </p>
         </div>
-        <div class="card-footer">
+        <div class="footer-card">
           <div class="author">
             <h6>Ashley Hartman</h6>
             <p>Marketing and Business Development Manager</p>
@@ -534,10 +546,10 @@ const pageHTML = `<div class="spz-sections-wrapper">
 
 <section class="benefits-section">
   <div class="spz-container">
+  <h6 class="title">Benefits</h6>
     <div class="board">
       <div class="board-inner">
         <ul class="nav nav-tabs" id="myTab">
-          <div class="liner"></div>
           <li class="active">
             <a href="#home" data-toggle="tab" title="welcome">
               <span class="round-tabs one"> Grow sales </span>
