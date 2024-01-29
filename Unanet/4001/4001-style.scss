@@ -33,11 +33,14 @@ body {
                   padding: 94px 16px 58px;
                   .row {
                     align-items: center;
+                    @media (min-width: 991.98px) {
+                     flex-wrap: nowrap;
+                    }
 
                     .col-lg-6 {
                       &:first-child {
                         @media (min-width: 991.98px) {
-                          width: 41%;
+                          width: 44%;
                         }
 
                         .hero-copy-wrapper {
@@ -69,7 +72,7 @@ body {
                       }
                       &:last-child {
                         @media (min-width: 991.98px) {
-                          width: 59%;
+                          width: 56%;
                         }
 
                         .right-img-wrapper {
