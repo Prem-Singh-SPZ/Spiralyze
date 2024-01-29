@@ -34,13 +34,13 @@ body {
                   .row {
                     align-items: center;
                     @media (min-width: 991.98px) {
-                     flex-wrap: nowrap;
+                      flex-wrap: nowrap;
                     }
 
                     .col-lg-6 {
                       &:first-child {
                         @media (min-width: 991.98px) {
-                          width: 44%;
+                          width: 543px;
                         }
 
                         .hero-copy-wrapper {
@@ -68,11 +68,56 @@ body {
                               color: #007c79;
                             }
                           }
+
+                          ul.list {
+                            padding-left: 0;
+                            list-style: none;
+                            margin: 30px 0 10px;
+
+                            .list-item {
+                              padding-left: 30px;
+                              position: relative;
+                              margin-bottom: 20px;
+                              color: #363f44;
+                              font-family: $Mona-font;
+                              font-size: 16px;
+                              font-style: normal;
+                              font-weight: 500;
+                              line-height: 24px;
+                              letter-spacing: -0.032px;
+
+                              &::before {
+                                content: url(//res.cloudinary.com/spiralyze/image/upload/v1705485163/unanet/4001/vector_2.svg);
+                                position: absolute;
+                                left: 0;
+                                top: 0;
+                              }
+
+                              span {
+                                font-weight: 700;
+                              }
+                            }
+                          }
+
+                          .cta-wrapper {
+                            .btn-secondary {
+                              height: 56px;
+                              width: 184px;
+                              color: #fff;
+                              text-align: center;
+                              font-family: $Mona-font;
+                              font-size: 18px;
+                              font-style: normal;
+                              font-weight: 700;
+                              line-height: 26px;
+                              padding: 15px 40px;
+                            }
+                          }
                         }
                       }
                       &:last-child {
                         @media (min-width: 991.98px) {
-                          width: 56%;
+                          width: 9%;
                         }
 
                         .right-img-wrapper {
@@ -80,6 +125,8 @@ body {
                           width: 100%;
                           img {
                             width: 100%;
+                            width: 762px;
+                            height: 595.563px;
                           }
                         }
                       }
