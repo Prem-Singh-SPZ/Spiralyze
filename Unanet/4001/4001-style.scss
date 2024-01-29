@@ -21,7 +21,7 @@ body {
                 background: #dceee2;
 
                 .spz-container {
-                  padding: 94px 0 58px;
+                  padding: 94px 16px 58px;
                   .row {
                     align-items: center;
 
@@ -125,6 +125,7 @@ body {
                     width: 100%;
                     max-width: 398.69px;
                     margin-bottom: 48px;
+                    flex: 0 0 32.33%;
 
                     .card-img-top {
                       border-radius: 16px 16px 0 0;
@@ -188,7 +189,7 @@ body {
                   background: #fff;
                   box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
                   max-width: 205px;
-                  height: 279px;
+                  min-height: 279px;
                   width: 100%;
 
                   .g2-images {
@@ -254,8 +255,9 @@ body {
                   flex-direction: column;
                   align-items: flex-start;
                   max-width: 337px;
-                  height: 279px;
+                  min-height: 279px;
                   width: 100%;
+                  margin-left: 20px;
 
                   .review-head {
                     width: 100%;
@@ -324,6 +326,7 @@ body {
                     width: 100%;
                     border-radius: 24px 0px;
                     border: 0;
+                    flex: 0 0 32.33%;
 
                     &:nth-child(1) {
                       background: #5ec68d;
@@ -564,6 +567,38 @@ body {
                           }
                         }
                       }
+                    }
+                  }
+                }
+              }
+
+              .pre-footer-section {
+                background: #0f3156;
+                padding: 128px 0;
+                overflow: hidden;
+                .spz-container {
+                  .bg-wrapper {
+                    position: relative;
+
+                    &::after {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1705433525/unanet/4001/frame_1171275573.svg);
+                      position: absolute;
+                      top: -66px;
+                      left: 751px;
+                      @media (max-width: 1023.98px) {
+                        display: none;
+                      }
+                    }
+
+                    .title {
+                      color: #fff;
+                      font-family: $Mona-font;
+                      font-size: 48px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: 64px;
+                      max-width: 671px;
+                      margin: 0 0 60px;
                     }
                   }
                 }

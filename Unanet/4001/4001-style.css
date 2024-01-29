@@ -10,7 +10,7 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   background: #dceee2;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .hero-section .spz-container {
-  padding: 94px 0 58px;
+  padding: 94px 16px 58px;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .hero-section .spz-container .row {
   -webkit-box-align: center;
@@ -104,6 +104,9 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   width: 100%;
   max-width: 398.69px;
   margin-bottom: 48px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32.33%;
+          flex: 0 0 32.33%;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .features-section .feature-cards-wrapper .card.feature-card .card-img-top {
   border-radius: 16px 16px 0 0;
@@ -178,7 +181,7 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   -webkit-box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.08);
   max-width: 205px;
-  height: 279px;
+  min-height: 279px;
   width: 100%;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .review-slider-section .g2-box .g2-images {
@@ -252,8 +255,9 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
       -ms-flex-align: start;
           align-items: flex-start;
   max-width: 337px;
-  height: 279px;
+  min-height: 279px;
   width: 100%;
+  margin-left: 20px;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .review-slider-section .review-box .review-head {
   width: 100%;
@@ -328,6 +332,9 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
   width: 100%;
   border-radius: 24px 0px;
   border: 0;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 32.33%;
+          flex: 0 0 32.33%;
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .how-it-works .cards-wrapper .card.process-card:nth-child(1) {
   background: #5ec68d;
@@ -576,6 +583,35 @@ body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-
 }
 body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .benefits-section .spz-tabs-carousel .tab-content .tab-pane .content-wrapper .img-wrapper img {
   width: 100%;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .pre-footer-section {
+  background: #0f3156;
+  padding: 128px 0;
+  overflow: hidden;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .pre-footer-section .spz-container .bg-wrapper {
+  position: relative;
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .pre-footer-section .spz-container .bg-wrapper::after {
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1705433525/unanet/4001/frame_1171275573.svg);
+  position: absolute;
+  top: -66px;
+  left: 751px;
+}
+@media (max-width: 1023.98px) {
+  body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .pre-footer-section .spz-container .bg-wrapper::after {
+    display: none;
+  }
+}
+body .body-wrapper.hs-site-page.page #main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid .spz-sections-wrapper .pre-footer-section .spz-container .bg-wrapper .title {
+  color: #fff;
+  font-family: Mona Sans, arial, sans-serif;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 64px;
+  max-width: 671px;
+  margin: 0 0 60px;
 }
 
 @-webkit-keyframes progress-anim {
