@@ -173,7 +173,7 @@ body {
                   url(//res.cloudinary.com/spiralyze/image/upload/v1705434973/unanet/4001/bottom_element.svg)
                   no-repeat;
                 background-position: bottom center;
-                background-size: auto 261px;
+                background-size: auto;
                 padding: 60px 0 32px;
 
                 .title {
@@ -249,7 +249,7 @@ body {
 
               .review-slider-section {
                 background: #33585e;
-                padding: 80px 0;
+                padding: 20px 0 80px;
                 position: relative;
 
                 .spz-container {
@@ -433,17 +433,23 @@ body {
                     line-height: 24px;
                     flex-grow: 1;
                     margin: 0;
+                    letter-spacing: -0.45px;
+
                   }
 
                   .review-author {
-                    color: #002840;
-                    font-family: $Mona-font;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 24px;
+                    p{
+                      color: #002840;
+                      font-family: $Mona-font;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 24px;
+                    }
 
                     span {
+                      font-family: $Mona-font;
+                      font-weight: 400;
                       color: #80939f;
                       font-size: 14px;
                       line-height: 17px;

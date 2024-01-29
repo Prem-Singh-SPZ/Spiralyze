@@ -346,7 +346,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           profitability, while cutting PM management time, across 1,000+
           projects per year.
         </p>
-        <div class="review-author">Michael D. <br><span>President</span></div>
+        <div class="review-author"><p>Michael D.</p><span>President</span></div>
       </div>
       <div class="review-box">
         <div class="review-head">
@@ -368,7 +368,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           huge number of reports and charts. You can also set budget hours
           at employee level or task level.
         </p>
-        <div class="review-author">Jenny C. <br><span>CEO</span></div>
+        <div class="review-author"><p>Jenny C.</p><span>CEO</span></div>
       </div>
       <div class="review-box">
         <div class="review-head">
@@ -390,7 +390,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           with reports, monthly billings, accounting reviews, and more.
         </p>
         <div class="review-author">
-          Lynn W. <br><span>Director of Business Resources</span>
+          <p>Lynn W. </p><span>Director of Business Resources</span>
         </div>
       </div>
     </div>
