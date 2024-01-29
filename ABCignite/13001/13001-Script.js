@@ -61,7 +61,7 @@ function init_13001() {
     if (!bodyEle.classList.contains('spz-13001')) {
         bodyEle.classList.add('spz-13001');
 
-        waitForElm('.modal .modal__container').then(() => {
+        waitForElm('#flydown-modal.modal .modal__container').then(() => {
             let bulltHtmlDesk = `
             <div class="bullet-section">
             <h6 class="bullet-sub-title">Make the dreams for your club a reality</h6>
@@ -102,8 +102,11 @@ function init_13001() {
             }, 200);
 
 
-            document.querySelector('.modal .modal__container').insertAdjacentHTML("beforeend", bulltHtmlDesk);
+            document.querySelector('#flydown-modal.modal .modal__container').insertAdjacentHTML("beforeend", bulltHtmlDesk);
 
+            waitForElm('#flydown-modal.modal .modal__container').then(() => {
+                document.querySelector('#flydown-modal form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').innerHTML = `Submit <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow">`;
+            });
             // var closeBtn = document.querySelector(".modal-content .close-icon");
             // var HeadercloseBtn = document.querySelector(".spz-13001 #popupModal .modal-header button.close");
             // closeBtn.addEventListener('click', function () {
@@ -112,8 +115,8 @@ function init_13001() {
 
         });
 
-        waitForElm('form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').then(() => {
-            document.querySelector('form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').innerHTML = `Submit <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow">`;
+        waitForElm('#flydown-modal form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').then(() => {
+            document.querySelector('#flydown-modal form.marketo-form .mktoButtonRow .mktoButtonWrap .mktoButton').innerHTML = `Submit <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow">`;
         });
     }
 }
@@ -159,8 +162,17 @@ function init5009() {
                 // if (window.location.pathname == '/') {
                 document.querySelector('.spz-demo-btn').addEventListener('click', function (e) {
                     e.preventDefault();
-                    // document.querySelector('.n2-style-bd99200e23340aaacefc00fabc6e3e20-heading.modal-flydown-trigger').click();
-                    window.location.href = 'https://abcfitness.com/request-a-demo/';
+                    document.querySelector('#flydown-modal').classList.add('is-open');
+                    document.querySelector('#flydown-modal').setAttribute('aria-hidden', "false");
+                    // window.location.href = 'https://abcfitness.com/request-a-demo/';
+                    return false;
+                })
+
+                document.querySelector('#flydown-modal .modal__close').addEventListener('click', function (e) {
+                    e.preventDefault();
+                    document.querySelector('#flydown-modal').classList.remove('is-open');
+                    document.querySelector('#flydown-modal').setAttribute('aria-hidden', "true");
+
                     return false;
                 })
                 // }

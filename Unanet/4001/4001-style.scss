@@ -15,6 +15,15 @@ body {
                 max-width: 1308px;
                 margin: auto;
                 padding: 0 16px;
+                @media (max-width: 991.98px) {
+                  max-width: 688px;
+                  padding: 0;
+                }
+
+                @media (max-width: 767.98px) {
+                  max-width: 320px;
+                  padding: 0;
+                }
               }
 
               .hero-section {
@@ -27,7 +36,10 @@ body {
 
                     .col-lg-6 {
                       &:first-child {
-                        width: 41%;
+                        @media (min-width: 991.98px) {
+                          width: 41%;
+                        }
+
                         .hero-copy-wrapper {
                           .subtitle {
                             color: #007c79;
@@ -56,7 +68,10 @@ body {
                         }
                       }
                       &:last-child {
-                        width: 59%;
+                        @media (min-width: 991.98px) {
+                          width: 59%;
+                        }
+
                         .right-img-wrapper {
                           max-width: 758px;
                           width: 100%;
@@ -119,6 +134,11 @@ body {
                   display: flex;
                   justify-content: space-between;
                   flex-wrap: wrap;
+
+                  @media (max-width: 767.98px) {
+                    justify-content: space-between;
+                  }
+
                   .card.feature-card {
                     border-radius: 16px;
                     background: #fff;
@@ -126,6 +146,14 @@ body {
                     max-width: 398.69px;
                     margin-bottom: 48px;
                     flex: 0 0 32.33%;
+
+                    @media (max-width: 991.98px) {
+                      flex: 0 0 49.33%;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      flex: 0 0 100%;
+                    }
 
                     .card-img-top {
                       border-radius: 16px 16px 0 0;
@@ -162,6 +190,11 @@ body {
               .review-slider-section {
                 background: #33585e;
                 padding: 80px 0;
+                position: relative;
+
+                .spz-container {
+                  overflow: hidden;
+                }
 
                 .for-desktop {
                   display: flex;
@@ -175,6 +208,55 @@ body {
                   display: flex;
                   @media (min-width: 991.98px) {
                     display: none;
+                  }
+
+                  @media (max-width: 767.98px) {
+                    flex-direction: column;
+                  }
+
+                  .g2-card-wrapper {
+                    @media (max-width: 991.98px) {
+                      margin-right: 20px;
+                    }
+
+                    @media (max-width: 767.98px) {
+                      margin-right: 0px;
+                      margin-bottom: 20px;
+                    }
+                  }
+
+                  .review-slider-wrapper {
+                    overflow: hidden;
+                    max-width: 463px;
+                  }
+
+                  .swiper-pagination {
+                    bottom: 25px;
+                    left: calc(50% - 12px);
+                  }
+
+                  .swiper-button-prev {
+                    background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1706528506/unanet/4001/src/arrow.svg);
+                    background-size: 48px 48px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 48px;
+                    bottom: 14px;
+                    height: 48px;
+                    top: auto;
+                    left: calc(50% - 61px);
+                  }
+                  .swiper-button-next {
+                    background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1706528506/unanet/4001/src/arrow.svg);
+                    background-size: 48px 48px;
+                    background-position: center;
+                    background-repeat: no-repeat;
+                    width: 48px;
+                    bottom: 14px;
+                    height: 48px;
+                    top: auto;
+                    right: calc(50% - 61px);
+                    transform: rotate(180deg);
                   }
                 }
 
@@ -191,6 +273,14 @@ body {
                   max-width: 205px;
                   min-height: 279px;
                   width: 100%;
+
+                  @media (max-width: 991.98px) {
+                    min-width: 205px;
+                  }
+
+                  @media (max-width: 767.98px) {
+                    max-width: 100%;
+                  }
 
                   .g2-images {
                     display: flex;
@@ -259,6 +349,11 @@ body {
                   width: 100%;
                   margin-left: 20px;
 
+                  @media (max-width: 991.98px) {
+                    max-width: 100%;
+                    margin-left: 0;
+                  }
+
                   .review-head {
                     width: 100%;
                     margin-bottom: 24px;
@@ -316,6 +411,9 @@ body {
                 .cards-wrapper {
                   display: flex;
                   justify-content: space-between;
+                  @media (max-width: 991.98px) {
+                    flex-wrap: wrap;
+                  }
 
                   .card.process-card {
                     display: flex;
@@ -327,6 +425,12 @@ body {
                     border-radius: 24px 0px;
                     border: 0;
                     flex: 0 0 32.33%;
+
+                    @media (max-width: 991.98px) {
+                      flex: 0 0 100%;
+                      max-width: 100%;
+                      margin-bottom: 24px;
+                    }
 
                     &:nth-child(1) {
                       background: #5ec68d;
@@ -555,6 +659,10 @@ body {
                         align-items: center;
                         justify-content: space-between;
 
+                        @media (max-width: 767.98px) {
+                          flex-direction: column;
+                        }
+
                         .content {
                           max-width: 338px;
                           width: 100%;
@@ -585,7 +693,7 @@ body {
                       position: absolute;
                       top: -66px;
                       left: 751px;
-                      @media (max-width: 1023.98px) {
+                      @media (max-width: 991.98px) {
                         display: none;
                       }
                     }

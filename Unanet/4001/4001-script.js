@@ -415,8 +415,9 @@ const pageHTML = `<div class="spz-sections-wrapper">
           </div>
         </div>
       </div>
-      <div class="review-slider-wrapper">
-        <div class="review-box">
+      <div class="review-slider-wrapper swiper">
+      <div class="swiper-wrapper">
+        <div class="review-box swiper-slide">
           <div class="review-head">
             <img
               class="star-rating"
@@ -440,7 +441,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
             Michael D. <span>President</span>
           </div>
         </div>
-        <div class="review-box">
+        <div class="review-box swiper-slide">
           <div class="review-head">
             <img
               class="star-rating"
@@ -462,7 +463,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           </p>
           <div class="review-author">Jenny C. <span>CEO</span></div>
         </div>
-        <div class="review-box">
+        <div class="review-box swiper-slide">
           <div class="review-head">
             <img
               class="star-rating"
@@ -485,7 +486,11 @@ const pageHTML = `<div class="spz-sections-wrapper">
             Lynn W. <span>Director of Business Resources</span>
           </div>
         </div>
-      </div>
+        </div>
+        </div>
+        <div class="swiper-button-next"></div>
+        <div class="swiper-pagination"></div>
+        <div class="swiper-button-prev"></div>
     </div>
   </div>
 </section>
@@ -573,16 +578,16 @@ const pageHTML = `<div class="spz-sections-wrapper">
   <div id="tab-carousel" class="spz-tabs-carousel">
   <ul class="nav nav-tabs">
     <li class="active">
-      <a href="#tabs_1" class="active">Grow sales</a><span class="progress"></span>
+      <a href="#tabs_1" class="active"><span class="d-none d-lg-block">Grow sales</span><span class="d-lg-none">1</span></a><span class="progress"></span>
     </li>
     <li>
-      <a href="#tabs_2">Streamline communication</a><span class="progress"></span>
+      <a href="#tabs_2"><span class="d-none d-lg-block">Streamline communication</span><span class="d-lg-none">2</span></a><span class="progress"></span>
     </li>
     <li>
-      <a href="#tabs_3">Consolidate contacts and bids</a><span class="progress"></span>
+      <a href="#tabs_3"><span class="d-none d-lg-block">Consolidate contacts and bids</span><span class="d-lg-none">3</span></a><span class="progress"></span>
     </li>
     <li>
-      <a href="#tabs_4">Optimize resource allocation</a><span class="progress"></span>
+      <a href="#tabs_4"><span class="d-none d-lg-block">Optimize resource allocation</span><span class="d-lg-none">4</span></a><span class="progress"></span>
     </li>
   </ul>
   <div class="tab-content">
@@ -737,39 +742,38 @@ const pageHTML = `<div class="spz-sections-wrapper">
 </section>
 </div>`;
 
-// swiperJS.onload = function () {
-//     if (window.innerWidth < 1024) {
-//         let intSlider = setInterval(() => {
-//             if (document.querySelector('.three-card-slider.swiper-container.swiper-container-horizontal')) {
-//                 clearInterval(intSlider);
-//             }
-//             init_Slider();
-//         }, 100);
-//     }
-//     window.addEventListener('resize', function (event) {
-//         init_Slider();
-//     }, true);
-// }
+swiperJS.onload = function () {
+    if (window.innerWidth < 1024) {
+        let intSlider = setInterval(() => {
+            if (document.querySelector('.review-slider-wrapper.swiper-container-horizontal')) {
+                clearInterval(intSlider);
+            }
+            init_Slider();
+        }, 100);
+    }
+    // window.addEventListener('resize', function (event) {
+    //     init_Slider();
+    // }, true);
+}
 
-// function init_Slider() {
-//     var Swipes = new Swiper('.swiper-container', {
-//         // loop: true,
-//         // autoplay: true,
-//         slidesPerView: 2,
-//         spaceBetween: 20,
-//         pagination: {
-//             el: ".swiper-pagination",
-//         },
-//         breakpoints: {
-//             767: {
-//                 slidesPerView: 1,
-//             },
-//         },
-//     });
+function init_Slider() {
+    var Swipes = new Swiper('.review-slider-wrapper', {
+        loop: true,
+        // autoplay: true,
+        slidesPerView: 1,
+        spaceBetween: 20,
+        pagination: {
+            el: ".swiper-pagination",
+        },
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+    });
 
-//     if (window.innerWidth > 1023) {
-//         if (Swipes !== undefined) {
-//             Swipes.destroy(true, true);
-//         }
-//     }
-// }
+    // if (window.innerWidth > 1023) {
+    //     if (Swipes !== undefined) {
+    //         Swipes.destroy(true, true);
+    //     }
+    // }
+}
