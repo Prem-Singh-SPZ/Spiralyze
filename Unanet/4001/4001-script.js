@@ -110,7 +110,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           </ul>
           <div class="cta-wrapper">
             <a
-              class="btn btn-secondary mb-3"
+              class="btn btn-secondary"
               href="https://unanet.com/demo-request"
               >Get a Demo</a
             >
