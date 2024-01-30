@@ -123,18 +123,18 @@ const pageHTML = `<div class="spz-sections-wrapper">
             <source
               media="(min-width:1024px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706095175/unanet/4001/desktop_1.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/desktop_1.webp
               "
             />
             <source
               media="(min-width:768px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706095175/unanet/4001/tablet_1.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/tablet_1.webp
               "
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/v1706095174/unanet/4001/mobile_1.webp"
-              alt="Grow Sales"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/mobile_1.webp"
+              alt="Grow Sales 2X"
             />
           </picture>
         </div>
@@ -152,18 +152,18 @@ const pageHTML = `<div class="spz-sections-wrapper">
           <source
             media="(min-width:1024px)"
             srcset="
-              //res.cloudinary.com/spiralyze/image/upload/v1705434408/unanet/4001/logos_1.webp
+              //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/logos_1.webp
             "
           />
           <source
             media="(min-width:768px)"
             srcset="
-              //res.cloudinary.com/spiralyze/image/upload/v1705434425/unanet/4001/logos_2.webp
+              //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/logos_2.webp
             "
           />
           <img
-            src="//res.cloudinary.com/spiralyze/image/upload/v1705434438/unanet/4001/frame_1171275565.webp"
-            alt="Our Partners"
+            src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275565.webp"
+            alt="Trusted by 3,700+ contractors and firms"
           />
         </picture>
       </div>
@@ -178,8 +178,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433356/unanet/4001/pipeline_management.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/pipeline_management.webp"
+          alt="Pipeline management"
         />
         <div class="card-body">
           <h5 class="card-title">Pipeline management</h5>
@@ -192,8 +192,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433356/unanet/4001/contracts.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/contracts.webp"
+          alt="Contracts"
         />
         <div class="card-body">
           <h5 class="card-title">Contracts</h5>
@@ -206,8 +206,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433356/unanet/4001/proposal_creation.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/proposal_creation.webp"
+          alt="Proposal creation"
         />
         <div class="card-body">
           <h5 class="card-title">Proposal creation</h5>
@@ -220,8 +220,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433357/unanet/4001/forecast_reporting.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/forecast_reporting.webp"
+          alt="Forecast reporting"
         />
         <div class="card-body">
           <h5 class="card-title">Forecast reporting</h5>
@@ -234,8 +234,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433357/unanet/4001/email_marketing.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/email_marketing.webp"
+          alt="Email marketing"
         />
         <div class="card-body">
           <h5 class="card-title">Email marketing</h5>
@@ -248,8 +248,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433357/unanet/4001/event_management.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/event_management.webp"
+          alt="Event management"
         />
         <div class="card-body">
           <h5 class="card-title">Event management</h5>
@@ -262,8 +262,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433357/unanet/4001/feedback_survey.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/feedback_survey.webp"
+          alt="Feedback survey"
         />
         <div class="card-body">
           <h5 class="card-title">Feedback survey</h5>
@@ -276,8 +276,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433357/unanet/4001/mobile_app.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/mobile_app.webp"
+          alt="Mobile app"
         />
         <div class="card-body">
           <h5 class="card-title">Mobile app</h5>
@@ -290,8 +290,8 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card feature-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433357/unanet/4001/integrations.webp"
-          alt="Card image cap"
+          src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/integrations.webp"
+          alt="Integrations"
         />
         <div class="card-body">
           <h5 class="card-title">Integrations</h5>
@@ -550,7 +550,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           <p>
             “With Unanet we stand apart from our competitors. Information
             is readily available to make our proposals stronger. Plus,
-            instead of going after general business, we’re dedicating
+            instead of going after general business, we&#8217;re dedicating
             resources to the pursuits that are the most winnable and
             desirable.”
           </p>
@@ -562,7 +562,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           </div>
           <div class="logo">
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/v1705433407/unanet/4001/frame_1171275668.webp"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275668.webp"
               alt="Above Group"
             />
           </div>
@@ -606,13 +606,13 @@ const pageHTML = `<div class="spz-sections-wrapper">
             <source
               media="(min-width:1024px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
               "
             />
             <source
               media="(min-width:768px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
               "
             />
             <img
@@ -638,17 +638,17 @@ const pageHTML = `<div class="spz-sections-wrapper">
             <source
               media="(min-width:1024px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
               "
             />
             <source
               media="(min-width:768px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
               "
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
               alt="Grow Sales"
             />
           </picture>
@@ -670,17 +670,17 @@ const pageHTML = `<div class="spz-sections-wrapper">
             <source
               media="(min-width:1024px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
               "
             />
             <source
               media="(min-width:768px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
               "
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
               alt="Grow Sales"
             />
           </picture>
@@ -702,17 +702,17 @@ const pageHTML = `<div class="spz-sections-wrapper">
             <source
               media="(min-width:1024px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101312/unanet/4001/frame_1171275693.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
               "
             />
             <source
               media="(min-width:768px)"
               srcset="
-                //res.cloudinary.com/spiralyze/image/upload/v1706101386/unanet/4001/frame_1171275699.webp
+                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
               "
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
               alt="Grow Sales"
             />
           </picture>
