@@ -65,7 +65,7 @@ function init_13001() {
             let bulltHtmlDesk = `
             <div class="bullet-section">
             <h6 class="bullet-sub-title">Make the dreams for your club a reality</h6>
-            <h2 class="bullet-title">Discover ABC Ignite, the gym management software trusted by 40% of clubs in the US.</h2>
+            <h2 class="bullet-title">Discover ABC Fitness, the gym management software trusted by 40% of clubs in the US.</h2>
             <ul class="bullet-wrapper desktop">
                 <li class="bullet-point"><strong>Get more members.</strong> Use powerful sales tools for online join, referrals, trigger-based text and emails, and more.</li>
                 <li class="bullet-point"><strong>Keep more members.</strong> Grant members access for self-service of scheduling and profile management.</li>
