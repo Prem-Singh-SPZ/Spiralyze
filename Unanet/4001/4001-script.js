@@ -11,7 +11,7 @@ document.head.appendChild(bsJS);
 appendPreload()
 function appendPreload() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css">`
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1706528506/unanet/4001/src/arrow-hovered.svg" as="image">`
     );
 }
 
@@ -616,7 +616,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
               "
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/v1706101702/unanet/4001/frame_1171275704.webp"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/grow_sales_1-min.png"
               alt="Grow Sales"
             />
           </picture>

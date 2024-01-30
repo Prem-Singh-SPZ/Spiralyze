@@ -400,6 +400,10 @@ body {
                     top: auto;
                     left: calc(50% - 84px);
 
+                    &:hover {
+                      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1706528506/unanet/4001/src/arrow-hovered.svg);
+                    }
+
                     @media (max-width: 767.98px) {
                       bottom: 48px;
                     }
@@ -415,6 +419,10 @@ body {
                     top: auto;
                     right: calc(50% - 84px);
                     transform: rotate(180deg);
+
+                    &:hover {
+                      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1706528506/unanet/4001/src/arrow-hovered.svg);
+                    }
 
                     @media (max-width: 767.98px) {
                       bottom: 48px;
@@ -965,6 +973,10 @@ body {
                         height: 100%;
                       }
 
+                      &:hover {
+                        background: #d8e9ab;
+                      }
+
                       &.active {
                         background: #d8e9ab;
                         .progress {
@@ -1001,7 +1013,7 @@ body {
                           }
 
                           @media (max-width: 767.98px) {
-                            margin-bottom: 32px;
+                            margin-bottom: 15px;
                           }
 
                           h6 {
@@ -1034,12 +1046,13 @@ body {
                             margin-right: -20px;
                           }
 
-                          @media (max-width: 767.98px) {
-                            
-                          }
-
                           img {
                             width: 100%;
+                            @media (max-width: 767.98px) {
+                              margin-left: -5px;
+                              height: 228px;
+                              width: 336px;
+                            }
                           }
                         }
                       }
@@ -1058,7 +1071,7 @@ body {
                 }
 
                 @media (max-width: 767.98px) {
-                 padding: 48px 0 28px;
+                  padding: 48px 0 28px;
                 }
 
                 .spz-container {
