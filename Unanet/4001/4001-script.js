@@ -438,7 +438,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
             projects per year.
           </p>
           <div class="review-author">
-            Michael D. <span>President</span>
+            <p>Michael D.</p><span>President</span>
           </div>
         </div>
         <div class="review-box swiper-slide">
@@ -461,7 +461,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
             a huge number of reports and charts. You can also set budget
             hours at employee level or task level.
           </p>
-          <div class="review-author">Jenny C. <span>CEO</span></div>
+          <div class="review-author"><p>Jenny C.</p><span>CEO</span></div>
         </div>
         <div class="review-box swiper-slide">
           <div class="review-head">
@@ -483,7 +483,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
             with reports, monthly billings, accounting reviews, and more.
           </p>
           <div class="review-author">
-            Lynn W. <span>Director of Business Resources</span>
+            <p>Lynn W.</p><span>Director of Business Resources</span>
           </div>
         </div>
         </div>
@@ -506,7 +506,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           alt="Setup"
         />
         <div class="card-body">
-          <p class="title">1. Setup</p>
+          <p class="title"><span>1.</span>Setup</p>
           <p class="card-text">
             Import contacts and proposals from HubSpot, Viewpoint,
             MailChimp, and more in a few clicks. Or upload from a
@@ -521,7 +521,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
           alt="Manage opportunities "
         />
         <div class="card-body">
-          <p class="title">2. Manage opportunities</p>
+          <p class="title"><span>2.</span>Manage opportunities</p>
           <p class="card-text">
             Get notified when prospects message you. Reply in-app. Send
             proposals. Drag-and-drop pipeline editing.
@@ -531,11 +531,11 @@ const pageHTML = `<div class="spz-sections-wrapper">
       <div class="card process-card">
         <img
           class="card-img-top"
-          src="//res.cloudinary.com/spiralyze/image/upload/v1705433242/unanet/4001/frame_1171275611.svg"
+          src="//res.cloudinary.com/spiralyze/image/upload/v1705433274/unanet/4001/frame_1171275612.svg"
           alt="Close contracts"
         />
         <div class="card-body">
-          <p class="title">3. Close contracts</p>
+          <p class="title"><span>3.</span>Close contracts</p>
           <p class="card-text">
             Send automated follow-ups. Finalize bids, send contracts, and
             track status. Close 2x more deals.
@@ -744,12 +744,13 @@ const pageHTML = `<div class="spz-sections-wrapper">
 
 swiperJS.onload = function () {
     if (window.innerWidth < 1024) {
-        let intSlider = setInterval(() => {
-            if (document.querySelector('.review-slider-wrapper.swiper-container-horizontal')) {
-                clearInterval(intSlider);
-            }
-            init_Slider();
-        }, 100);
+        // let intSlider = setInterval(() => {
+        //     if (document.querySelector('.review-slider-wrapper.swiper-container-horizontal')) {
+        //         clearInterval(intSlider);
+        //     }
+        //     init_Slider();
+        // }, 100);
+        init_Slider();
     }
     // window.addEventListener('resize', function (event) {
     //     init_Slider();
