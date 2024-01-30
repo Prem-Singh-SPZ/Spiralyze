@@ -687,6 +687,7 @@ body {
 
           &#Contact_Us_Form_Entry__c {
             padding-top: 21px !important;
+            pointer-events: all;
           }
 
           @media (max-width: 767.98px) {
@@ -870,6 +871,8 @@ body {
       }
 
       .mktoFormCol.Contact_Us_Form_Entry__c-row {
+        pointer-events: none;
+
         .frm-commt {
           position: relative;
           display: flex;
@@ -882,6 +885,7 @@ body {
             font-weight: 400;
             line-height: 24px;
             color: $color_4;
+            pointer-events: all;
 
             @media (max-width: 767.98px) {
               padding: 0px 0px 0px 36px;

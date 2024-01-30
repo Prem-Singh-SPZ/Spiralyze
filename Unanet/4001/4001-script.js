@@ -10,72 +10,72 @@ document.head.appendChild(bsJS);
 
 appendPreload()
 function appendPreload() {
-    document.querySelector('head').insertAdjacentHTML("afterbegin", `
+  document.querySelector('head').insertAdjacentHTML("afterbegin", `
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.3/css/swiper.css"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1706528506/unanet/4001/src/arrow-hovered.svg" as="image">`
-    );
+  );
 }
 
 let bodyLoaded = setInterval(function () {
-    const body = document.querySelector('body');
-    if (body) {
-        clearInterval(bodyLoaded);
-        loadTest();
-    }
+  const body = document.querySelector('body');
+  if (body) {
+    clearInterval(bodyLoaded);
+    loadTest();
+  }
 });
 
 function loadTest() {
-    waitForElm('.dnd-module .hs_cos_wrapper .btn').then(function () {
-        document.body.classList.add('spz-4001');
+  waitForElm('.dnd-module .hs_cos_wrapper .btn').then(function () {
+    document.body.classList.add('spz-4001');
 
-        if (document.querySelectorAll('.spz-sections-wrapper').length == 0) {
-            document.querySelector('main#main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid').insertAdjacentHTML('afterbegin', pageHTML);
-        }
-    });
+    if (document.querySelectorAll('.spz-sections-wrapper').length == 0) {
+      document.querySelector('main#main-content.body-container-wrapper .body-container--home > .row-fluid-wrapper > .row-fluid').insertAdjacentHTML('afterbegin', pageHTML);
+    }
+  });
 
-    window.addEventListener("load", function () {
-        var tabChange = function() {
-            var tabs = $(".nav-tabs > li");
-            var active = tabs.filter(".active").removeClass("active");
-            var next = active.next("li").length
-              ? active.next("li")
-              : tabs.filter(":first-child")
-            // Bootsrap tab show, para ativar a tab
-            next.addClass("active").find("a").tab("show")
-          };
-          // Tab Cycle function
-          var tabCycle = setInterval(tabChange, 5000);
-          // Tab click event handler
-          $(function() {
-            $(".nav-tabs a").click(function(e) {
-              e.preventDefault();
-              $(".nav-tabs .active").removeClass("active")
-              // Stop the cycle
-              clearInterval(tabCycle);
-              // Show the clicked tabs associated tab-pane
-              $(this).tab("show");
-              $(this).parent().addClass("active");
-              // Start the cycle again in a predefined amount of time
-              setTimeout(function() {
-                tabCycle = setInterval(tabChange, 5000);
-              }, 1);
-            });
-          });
+  window.addEventListener("load", function () {
+    var tabChange = function () {
+      var tabs = $(".nav-tabs > li");
+      var active = tabs.filter(".active").removeClass("active");
+      var next = active.next("li").length
+        ? active.next("li")
+        : tabs.filter(":first-child")
+      // Bootsrap tab show, para ativar a tab
+      next.addClass("active").find("a").tab("show")
+    };
+    // Tab Cycle function
+    var tabCycle = setInterval(tabChange, 5000);
+    // Tab click event handler
+    $(function () {
+      $(".nav-tabs a").click(function (e) {
+        e.preventDefault();
+        $(".nav-tabs .active").removeClass("active")
+        // Stop the cycle
+        clearInterval(tabCycle);
+        // Show the clicked tabs associated tab-pane
+        $(this).tab("show");
+        $(this).parent().addClass("active");
+        // Start the cycle again in a predefined amount of time
+        setTimeout(function () {
+          tabCycle = setInterval(tabChange, 5000);
+        }, 1);
+      });
     });
+  });
 }
 
 function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  return new Promise(function (resolve) {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(function (mutations) {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  });
 }
 
 const pageHTML = `<div class="spz-sections-wrapper">
@@ -616,7 +616,7 @@ const pageHTML = `<div class="spz-sections-wrapper">
               "
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/grow_sales_1-min.png"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
               alt="Grow Sales"
             />
           </picture>
@@ -626,30 +626,22 @@ const pageHTML = `<div class="spz-sections-wrapper">
     <div class="tab-pane" id="tabs_2">
       <div class="content-wrapper">
         <div class="content">
-          <h6>Grow sales</h6>
-          <p>
-            Automatically create winning proposals. Track open bids in one
-            place and get automated follow-up reminders. Scale up your sales
-            activity.
-          </p>
+          <h6>Streamline communication</h6>
+          <p>Automatically create winning proposals. Track open bids in one place and get automated follow-up reminders. Scale up your sales activity.</p>
         </div>
         <div class="img-wrapper">
           <picture>
             <source
               media="(min-width:1024px)"
-              srcset="
-                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
-              "
+              srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275697.webp"
             />
             <source
               media="(min-width:768px)"
-              srcset="
-                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
-              "
+              srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275698.webp"
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
-              alt="Grow Sales"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275709.webp"
+              alt="Streamline communication"
             />
           </picture>
         </div>
@@ -658,30 +650,22 @@ const pageHTML = `<div class="spz-sections-wrapper">
     <div class="tab-pane" id="tabs_3">
       <div class="content-wrapper">
         <div class="content">
-          <h6>Grow sales</h6>
-          <p>
-            Automatically create winning proposals. Track open bids in one
-            place and get automated follow-up reminders. Scale up your sales
-            activity.
-          </p>
+          <h6>Streamline communication</h6>
+          <p>Automatically create winning proposals. Track open bids in one place and get automated follow-up reminders. Scale up your sales activity.</p>
         </div>
         <div class="img-wrapper">
           <picture>
             <source
               media="(min-width:1024px)"
-              srcset="
-                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
-              "
+              srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275696.webp"
             />
             <source
               media="(min-width:768px)"
-              srcset="
-                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
-              "
+              srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275701.webp"
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
-              alt="Grow Sales"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275702.webp"
+              alt="Streamline communication"
             />
           </picture>
         </div>
@@ -690,30 +674,22 @@ const pageHTML = `<div class="spz-sections-wrapper">
     <div class="tab-pane" id="tabs_4">
       <div class="content-wrapper">
         <div class="content">
-          <h6>Grow sales</h6>
-          <p>
-            Automatically create winning proposals. Track open bids in one
-            place and get automated follow-up reminders. Scale up your sales
-            activity.
-          </p>
+          <h6>Optimize resource allocation</h6>
+          <p>Automatically create winning proposals. Track open bids in one place and get automated follow-up reminders. Scale up your sales activity.</p>
         </div>
         <div class="img-wrapper">
           <picture>
             <source
               media="(min-width:1024px)"
-              srcset="
-                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275693.webp
-              "
+              srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275695.webp"
             />
             <source
               media="(min-width:768px)"
-              srcset="
-                //res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275699.webp
-              "
+              srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275700.webp"
             />
             <img
-              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275704.webp"
-              alt="Grow Sales"
+              src="//res.cloudinary.com/spiralyze/image/upload/f_auto/unanet/4001/frame_1171275703.webp"
+              alt="Optimize resource allocation"
             />
           </picture>
         </div>
@@ -743,38 +719,38 @@ const pageHTML = `<div class="spz-sections-wrapper">
 </div>`;
 
 swiperJS.onload = function () {
-    if (window.innerWidth < 1024) {
-        // let intSlider = setInterval(() => {
-        //     if (document.querySelector('.review-slider-wrapper.swiper-container-horizontal')) {
-        //         clearInterval(intSlider);
-        //     }
-        //     init_Slider();
-        // }, 100);
-        init_Slider();
-    }
-    // window.addEventListener('resize', function (event) {
+  if (window.innerWidth < 1024) {
+    // let intSlider = setInterval(() => {
+    //     if (document.querySelector('.review-slider-wrapper.swiper-container-horizontal')) {
+    //         clearInterval(intSlider);
+    //     }
     //     init_Slider();
-    // }, true);
+    // }, 100);
+    init_Slider();
+  }
+  // window.addEventListener('resize', function (event) {
+  //     init_Slider();
+  // }, true);
 }
 
 function init_Slider() {
-    var Swipes = new Swiper('.review-slider-wrapper', {
-        loop: true,
-        // autoplay: true,
-        slidesPerView: 1,
-        spaceBetween: 20,
-        pagination: {
-            el: ".swiper-pagination",
-        },
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-    });
+  var Swipes = new Swiper('.review-slider-wrapper', {
+    loop: true,
+    // autoplay: true,
+    slidesPerView: 1,
+    spaceBetween: 20,
+    pagination: {
+      el: ".swiper-pagination",
+    },
+    navigation: {
+      nextEl: ".swiper-button-next",
+      prevEl: ".swiper-button-prev",
+    },
+  });
 
-    // if (window.innerWidth > 1023) {
-    //     if (Swipes !== undefined) {
-    //         Swipes.destroy(true, true);
-    //     }
-    // }
+  // if (window.innerWidth > 1023) {
+  //     if (Swipes !== undefined) {
+  //         Swipes.destroy(true, true);
+  //     }
+  // }
 }
