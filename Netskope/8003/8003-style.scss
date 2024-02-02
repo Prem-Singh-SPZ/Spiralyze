@@ -6,7 +6,7 @@ $color_5: #ff5b28;
 $font-family_1: Graphik;
 $font-family_2: "Graphik";
 
-.spz-8001 {
+body {
   font-size: 0;
   .header {
     .header__nav {
@@ -298,24 +298,38 @@ $font-family_2: "Graphik";
     z-index: 99;
   }
   .gated-content__right {
+    position: relative;
+    &:after {
+      position: absolute;
+      content: "";
+      width: 96px;
+      height: 252px;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1705655423/netskope/8003/arrow_1.svg");
+      background-size: contain;
+      background-repeat: no-repeat;
+      right: -68px;
+      bottom: -78px;
+
+      @media (max-width: 1023.98px) {
+        width: 96px;
+        height: 164px;
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1706867704/netskope/8003/vector_tablet.svg");
+        background-size: contain;
+        background-repeat: no-repeat;
+        right: 80px;
+        bottom: -179px;
+      }
+
+      @media (max-width: 767.98px) {
+        display: none;
+      }
+    }
     .gated-content__form {
       width: 100%;
       background: #fff;
       max-height: unset;
       border-radius: 24px;
       padding: 24px 32px 32px;
-      position: relative;
-      &:after {
-        position: absolute;
-        content: "";
-        width: 96px;
-        height: 163px;
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704276822/netskope/8001/Form-Arrow.svg");
-        background-size: contain;
-        background-repeat: no-repeat;
-        right: -67px;
-        bottom: -163px;
-      }
       .form_title {
         color: $color_2;
         text-align: center;
@@ -561,6 +575,10 @@ $font-family_2: "Graphik";
               }
             }
           }
+
+          &.spz-hidden {
+            display: none !important;
+          }
         }
         .mktoFormRow.field-10 {
           width: 100% !important;
@@ -617,7 +635,7 @@ $font-family_2: "Graphik";
     }
   }
 }
-.spz-8001.resources_whitepapers {
+body.resources_whitepapers {
   img.hero-book-img {
     max-width: 1438px;
   }
@@ -660,7 +678,7 @@ input {
   }
 }
 @media (max-width: 1023.98px) {
-  .spz-8001 {
+  body {
     .header.has-promo-banner {
       top: 0;
     }
@@ -787,7 +805,7 @@ input {
       }
     }
   }
-  .spz-8001.resources_whitepapers {
+  body.resources_whitepapers {
     .breadcrumbs {
       .breadcrumbs__list {
         .breadcrumbs__item {
@@ -802,7 +820,7 @@ input {
   }
 }
 @media (max-width: 767.98px) {
-  .spz-8001 {
+  body {
     .header__container-inner {
       padding: 0 24px;
       .header__top {
@@ -938,7 +956,7 @@ input {
       }
     }
   }
-  .spz-8001.resources_whitepapers {
+  body.resources_whitepapers {
     .gated-content__container {
       .gated-content__left {
         padding: 32px 0 40px;
@@ -963,7 +981,7 @@ input {
   }
 }
 @media (min-width: 1900px) {
-  .spz-8001 {
+  body {
     .gated-content {
       &::before {
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1704696178/netskope/8001/4k_resize_background_pattern_1.svg");

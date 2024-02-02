@@ -86,12 +86,22 @@ function formModify() {
     var formDiv = document.querySelector('body .gated-content__container .mktoForm');
     var sub_heading = document.querySelector("body .gated-content__banner .gated-content__type");
     var sub_heading_textContent = sub_heading.textContent || sub_heading.innerText;
+
     if (sub_heading_textContent == 'eBooks') {
         var processedText = sub_heading_textContent.replace('s', '');
-    } else {
+    }
+    else if (sub_heading_textContent == 'White Papers') {
+        var processedText = 'whitepaper';
+    }
+    else {
         var processedText = sub_heading_textContent;
     }
 
+    //Hiding extra fields
+    document.querySelector('.mktoFormRow.field-7').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.field-8').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.field-9').classList.add('spz-hidden');
+   
     // Form Extra Titles
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
         formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Download ` + processedText + `</h2>`);
@@ -139,6 +149,8 @@ function formModify() {
         if (event.target.matches(selector)) {
             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
         }
+        checkValidFields();
+
     }, true);
 
     var eventList = ["blur", "focusout", "keyup", "change"];
@@ -151,6 +163,7 @@ function formModify() {
                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
                 }
             }
+        checkValidFields();
         });
     }
 
@@ -158,7 +171,20 @@ function formModify() {
         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
             elem.classList.remove('active', 'typing');
         })
+        checkValidFields();
+
     }, true);
+}
+
+function checkValidFields() {
+    let validFields = document.querySelectorAll('.mktoRequiredField.filled').length;
+    if (validFields >= 4) {
+        document.querySelectorAll('.spz-hidden').forEach(function (elem) {
+            elem.classList.remove('spz-hidden');
+        })
+
+        document.querySelector('.gated-content__form.js-gated-form').classList.add('spz-full-form');
+    }
 }
 
 function setHiddenFields() {
