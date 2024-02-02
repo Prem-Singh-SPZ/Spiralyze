@@ -55,13 +55,9 @@
               </div>
               <div class="btn-section"><button class="get-started-cta">Get Started <img src="${astUrl}/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
               </div></div></div>
-              <div class="hero-img-section"> <div class="img-container"><picture>
-              <source media="(max-width: 767px)" srcset="${astUrl}/f_auto/drata/2006/360.webp">
-              <source media="(min-width: 768px)" srcset="${astUrl}/f_auto/drata/2006/1440.webp">
-              <source media="(min-width: 1900px)" srcset="${astUrl}/f_auto/drata/2006/1920.webp">
-              <source srcset="${astUrl}/f_auto/drata/2006/1440.png" type="image/png">
-              <img src="${astUrl}/f_auto/drata/2006/360.webp" alt="Drata Dashboard">
-            </picture></div></div>
+              <div class="hero-img-section"> <div class="img-container"><video autoplay loop muted width="100%">
+              <source src="https://res.cloudinary.com/spiralyze/video/upload/v1706860493/drata/2009/Video.mp4" type="video/mp4">
+            </video></div></div>
         <div class="social-pr-section">
             <!-- <div class="container"> -->
             <h2 class="sp-title">
