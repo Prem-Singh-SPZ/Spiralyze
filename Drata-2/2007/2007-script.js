@@ -329,12 +329,19 @@
           }
         });
 
-        // if (document.querySelector('.spz-2007 main') && document.querySelectorAll('.spz-2007 main input[name="cro_test_1"]').length == 0) {
-        //   document.querySelector('.spz-2007 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_1" value="#2006_Hero_Redesign">'); s
-        //   document.querySelector('.spz-2007 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_2" value="Variant">');
-        // }
+        setTimeout(() => {
+          submitTestDetails('#2007_variant');
+        }, 2000);
       }
     });
+  }
+
+  //Passing test details to hidden fields
+  function submitTestDetails(cro_test_2) {
+    if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
+      // document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', cro_test_1);
+      document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', cro_test_2);
+    }
   }
 
   function removeTest() {

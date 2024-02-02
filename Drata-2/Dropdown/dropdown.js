@@ -118,8 +118,8 @@
     const scriptSPZ = document.createElement('script');
 
     scriptSPZ.innerHTML = 'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "a6043509-2a53-4a93-8c05-b64cb53299e8", cssClass: "hs-form-spz", css: "", submitText: "Schedule Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
-    if (document.querySelector('.css-12ive4l-Form-formContainer')) {
-      document.querySelector('.css-12ive4l-Form-formContainer').appendChild(scriptSPZ);
+    if (document.querySelector('.mui-12ive4l-Form-formContainer')) {
+      document.querySelector('.mui-12ive4l-Form-formContainer').appendChild(scriptSPZ);
     }
   }
 
