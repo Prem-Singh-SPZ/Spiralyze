@@ -191,10 +191,10 @@ function setHiddenFields() {
     waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
         const field_int = setInterval(function () {
             if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#8003_spz_control") {
+                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#8003_spz_variant") {
                     clearInterval(field_int);
                 }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#8003_spz_control');
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#8003_spz_variant');
             }
         }, 100);
     });
