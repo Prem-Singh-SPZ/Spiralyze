@@ -1,6 +1,6 @@
 (function () {
   function createTest_2006() {
-    document.body.classList.add('spz-2007');
+    document.body.classList.add('spz-2009');
     waitForElm('ul[class*="Header-headerMenuCtas"]').then(function () {
       waitForElm('.swiper.swiper-3d').then(function () {
         appendHomeHeroContent();
@@ -329,16 +329,16 @@
           }
         });
 
-        // if (document.querySelector('.spz-2007 main') && document.querySelectorAll('.spz-2007 main input[name="cro_test_1"]').length == 0) {
-        //   document.querySelector('.spz-2007 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_1" value="#2006_Hero_Redesign">'); s
-        //   document.querySelector('.spz-2007 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_2" value="Variant">');
+        // if (document.querySelector('.spz-2009 main') && document.querySelectorAll('.spz-2009 main input[name="cro_test_1"]').length == 0) {
+        //   document.querySelector('.spz-2009 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_1" value="#2006_Hero_Redesign">'); s
+        //   document.querySelector('.spz-2009 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_2" value="Variant">');
         // }
       }
     });
   }
 
   function removeTest() {
-    document.body.classList.remove("spz-2007");
+    document.body.classList.remove("spz-2009");
   }
 
   history.pushState = (function (f) {

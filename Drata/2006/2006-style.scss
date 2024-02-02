@@ -14,7 +14,7 @@ $ff-inter: "Inter", sans-serif;
 
     .sp-title {
       font-family: $ff-inter;
-      color: #0C131A;
+      color: #0c131a;
       font-size: 16px;
       font-style: normal;
       font-weight: 600;
@@ -668,19 +668,19 @@ $ff-inter: "Inter", sans-serif;
     position: relative;
   }
 
-  .MuiBox-root.css-rdcx7j-HeroHomepage-featuredContent,
-  .css-1buoy6w-HeroHomepage-ellipses,
-  .css-3db0n2-HeroHomepage-hero,
-  .css-kfz1fl-MuiSvgIcon-root-Form-dotsSquarePrimaryIcon,
-  .css-1a8l7jt-MuiSvgIcon-root-Form-dotsSquareSecondaryIcon {
+  div[class*="HeroHomepage-featuredContent"],
+  div[class*="HeroHomepage-ellipses"],
+  div[class*="HeroHomepage-hero"],
+  div[class*="Form-dotsSquarePrimaryIcon"],
+  div[class*="Form-dotsSquareSecondaryIcon"] {
     display: none !important;
   }
 
-  .css-gdxc1a-HeroHomepage-root {
+  div[class*="HeroHomepage-root"] {
     //hero blue section height
     grid-template-rows: auto 0px min-content;
 
-    .css-itkljf-HeroHomepage-backgroundImage {
+    div[class*="HeroHomepage-backgroundImage"] {
       display: none !important;
     }
   }

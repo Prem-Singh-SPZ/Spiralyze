@@ -48,7 +48,7 @@ function formModify() {
     var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
         formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Contact us</div>`);
-        document.querySelector('.landing-page__form-container').insertAdjacentHTML('afterbegin','<div class="tablet-title"><h1 class="landing-page__title">Secure your entire multi-cloud environment</h1></div>')
+        document.querySelector('.landing-page__form-container').insertAdjacentHTML('afterbegin', '<div class="tablet-title"><h1 class="landing-page__title">Secure your entire multi-cloud environment</h1></div>')
     }
 
     //form Cta update
@@ -75,8 +75,27 @@ function formModify() {
             clearInterval(changeLabels);
         }, 100);
 
-        // document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+        MktoForms2.whenReady(function (form) {
+            // Change field sequences
+            document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+            document.querySelector('.Email-row').insertAdjacentElement('afterend', document.querySelector('.Phone-row'));
+            document.querySelector('.Phone-row').insertAdjacentElement('afterend', document.querySelector('.Company-row'));
 
+            // Update consent checkbox 'LblConsent_to_Processing__c' to parents 'mktoFormRow' class
+            document.querySelector('.mktoPlaceholderConsent_to_Processing__c').parentElement.classList.add('consent-check-spz');
+
+            // Add hidden fields
+            setHiddenFields();
+
+            // Disable option in 'Country' field where value contains '-------'
+            var countryOptions = document.querySelectorAll('#Country option');
+            countryOptions.forEach(function (option) {
+                if (option.textContent.includes('-------')) {
+                    option.setAttribute('disabled', 'disabled');
+                    option.setAttribute('style', 'color: #ccc');
+                }
+            });
+        });
 
         waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
             if (document.querySelectorAll('.frm-commt').length == 0) {
@@ -94,7 +113,6 @@ function formModify() {
         });
     });
 
-
     document.getElementById("FirstName").setAttribute('tabindex', '1');
     document.getElementById("LastName").setAttribute('tabindex', '2');
     document.getElementById("Email").setAttribute('tabindex', '3');
@@ -107,6 +125,12 @@ function formModify() {
 
     // form state
     var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
+
+    document.addEventListener('click', function (event) {
+        if (event.target.matches(selector)) {
+            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+        }
+    }, true);
 
     document.addEventListener('focus', function (event) {
         if (event.target.matches(selector)) {
@@ -131,12 +155,26 @@ function formModify() {
     }
 
     document.addEventListener('focusout', function (event) {
-
         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
             elem.classList.remove('typing');
         })
     }, true);
+
+    // On change of '#Country' field add class '.consent-check-oo-spz' on '.consent-check-spz .mktoFormCol' element
+    document.querySelector('#Country').addEventListener('change', function () {
+        document.querySelector('.consent-check-spz .mktoFormCol').classList.add('consent-check-oo-spz');
+    });
 };
+
+//Add hidden fields
+function setHiddenFields() {
+    if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#9001_spz_variant');
+    } else if (document.querySelectorAll('#mktoForm_1169 .mktoFormRow [name="utm_location__c"]').length == 0) {
+        // If [name="utm_location__c"] doesn't exist, add hidden field
+        document.querySelector('#mktoForm_1169').insertAdjacentHTML('beforeend', '<input type="hidden" name="utm_location__c" value="#9001_spz_variant">');
+    }
+}
 
 // Generic Code
 function waitForElm(selector) {

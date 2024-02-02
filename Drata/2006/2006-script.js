@@ -3,12 +3,12 @@
   function createTest_2006() {
     document.body.classList.add('spz-2006');
 
-    waitForElm('.css-nu3kba-MuiList-root-Header-headerMenuCtas').then(function () {
+    waitForElm('body').then(function () {
       // if (document.querySelector('.social-pr-section')) {
       //   document.querySelector('.social-pr-section').remove();
       // }
 
-      waitForElm('.css-1a48d2a-TabsQuotes-outerContainer .swiper.swiper-3d').then(function () {
+      waitForElm('.swiper.swiper-3d').then(function () {
         appendHomeHeroContent();
       });
 
@@ -21,10 +21,10 @@
 
   function appendHomeHeroContent() {
     const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
-    waitForElm('.css-3db0n2-HeroHomepage-hero').then(function () {
+    waitForElm('div[class*="HeroHomepage-hero"]').then(function () {
       // insert element anchors cta
       if (document.querySelectorAll('.hero-banner-section').length == 0) {
-        document.querySelector('.css-3db0n2-HeroHomepage-hero').insertAdjacentHTML('afterend', `
+        document.querySelector('div[class*="HeroHomepage-hero"]').insertAdjacentHTML('afterend', `
         <div class="hero-banner-section">
           <div class="hero-banner-container container">
           <div class="hero-copy"> 
