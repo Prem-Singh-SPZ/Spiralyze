@@ -6,10 +6,35 @@ $titillium-font: Titillium Web, sans-serif;
 
 body {
   .schedule-section-spz {
+    @media (min-width: 1023.98px) {
+      .spz-container {
+        max-width: 1020px;
+      }
+    }
     padding: 64px 84px;
-    background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), var(--Surface-Main, #000);
+    background: radial-gradient(
+        25.32% 43.72% at 103.4% 86.23%,
+        rgba(104, 204, 232, 0.2) 0%,
+        rgba(104, 204, 232, 0) 100%
+      ),
+      radial-gradient(
+        30.76% 25.88% at 24.65% 63.53%,
+        rgba(104, 204, 232, 0.2) 0%,
+        rgba(104, 204, 232, 0) 100%
+      ),
+      radial-gradient(
+        46.47% 27.79% at 4.27% 4.7%,
+        rgba(104, 204, 232, 0.2) 0%,
+        rgba(104, 204, 232, 0) 100%
+      ),
+      radial-gradient(
+        23.66% 34.7% at 70.9% 37.7%,
+        rgba(104, 204, 232, 0.2) 0%,
+        rgba(104, 204, 232, 0) 100%
+      ),
+      var(--Surface-Main, #000);
     .schedule-card {
-      padding: 48px 0;
+      padding: 40px 0 48px;
       border-bottom: 1px solid rgba(255, 255, 255, 0.58);
       display: flex;
       align-items: flex-start;
@@ -19,8 +44,9 @@ body {
       }
 
       .timing {
-        min-width: 92px;
-        margin-right: 48px;
+        min-width: 94px;
+        margin-right: 46px;
+        margin-top: 8px;
 
         @media (max-width: 767.98px) {
           margin-bottom: 24px;
@@ -67,6 +93,11 @@ body {
         .card-section {
           display: flex;
           flex-wrap: wrap;
+
+          gap: 24px;
+          @media (max-width: 1023.98px) {
+            gap: 0;
+          }
           .personality {
             display: flex;
             width: 320px;
@@ -123,11 +154,24 @@ body {
       }
 
       &:first-child {
-        padding-top: 0;
+        padding-top: 32px;
       }
       &:last-child {
         border: 0;
       }
     }
+  }
+
+  //pixel perfect css
+  .section-title-spz {
+    padding: 60px 0 49px;
+
+    .section-title {
+      margin: 0 0 18px;
+    }
+  }
+
+  .join-us-footer-section-spz .jf-a-container {
+    margin: 38px 0 34px;
   }
 }

@@ -162,7 +162,9 @@ function formModify() {
 
     // On change of '#Country' field add class '.consent-check-oo-spz' on '.consent-check-spz .mktoFormCol' element
     document.querySelector('#Country').addEventListener('change', function () {
-        document.querySelector('.consent-check-spz .mktoFormCol').classList.add('consent-check-oo-spz');
+        if (document.querySelector('.consent-check-spz .mktoFormCol')) {
+            document.querySelector('.consent-check-spz .mktoFormCol').classList.add('consent-check-oo-spz');
+        }
     });
 };
 

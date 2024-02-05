@@ -2,8 +2,13 @@ body .schedule-section-spz {
   padding: 64px 84px;
   background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), var(--Surface-Main, #000);
 }
+@media (min-width: 1023.98px) {
+  body .schedule-section-spz .spz-container {
+    max-width: 1020px;
+  }
+}
 body .schedule-section-spz .schedule-card {
-  padding: 48px 0;
+  padding: 40px 0 48px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.58);
   display: -webkit-box;
   display: -ms-flexbox;
@@ -21,8 +26,9 @@ body .schedule-section-spz .schedule-card {
   }
 }
 body .schedule-section-spz .schedule-card .timing {
-  min-width: 92px;
-  margin-right: 48px;
+  min-width: 94px;
+  margin-right: 46px;
+  margin-top: 8px;
 }
 @media (max-width: 767.98px) {
   body .schedule-section-spz .schedule-card .timing {
@@ -64,6 +70,12 @@ body .schedule-section-spz .schedule-card .details .card-section {
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  gap: 24px;
+}
+@media (max-width: 1023.98px) {
+  body .schedule-section-spz .schedule-card .details .card-section {
+    gap: 0;
+  }
 }
 body .schedule-section-spz .schedule-card .details .card-section .personality {
   display: -webkit-box;
@@ -115,8 +127,17 @@ body .schedule-section-spz .schedule-card .details .card-section .personality .p
   margin: 0;
 }
 body .schedule-section-spz .schedule-card:first-child {
-  padding-top: 0;
+  padding-top: 32px;
 }
 body .schedule-section-spz .schedule-card:last-child {
   border: 0;
+}
+body .section-title-spz {
+  padding: 60px 0 49px;
+}
+body .section-title-spz .section-title {
+  margin: 0 0 18px;
+}
+body .join-us-footer-section-spz .jf-a-container {
+  margin: 38px 0 34px;
 }
