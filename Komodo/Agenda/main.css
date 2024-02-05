@@ -1,10 +1,21 @@
 body .schedule-section-spz {
-  padding: 64px 84px;
-  background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), var(--Surface-Main, #000);
+  padding: 64px 84px 68px;
+  background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), #000;
 }
 @media (min-width: 1023.98px) {
   body .schedule-section-spz .spz-container {
     max-width: 1020px;
+  }
+}
+@media (max-width: 1023.98px) {
+  body .schedule-section-spz {
+    padding: 32px 84px 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .schedule-section-spz {
+    padding: 0px 20px;
+    background: none;
   }
 }
 body .schedule-section-spz .schedule-card {
@@ -16,6 +27,15 @@ body .schedule-section-spz .schedule-card {
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+}
+@media (max-width: 767.98px) {
+  body .schedule-section-spz .schedule-card {
+    padding: 32px 0 48px;
+  }
+}
+body .schedule-section-spz .schedule-card:nth-last-child(2) {
+  padding-top: 48px;
+  padding-bottom: 34px;
 }
 @media (max-width: 767.98px) {
   body .schedule-section-spz .schedule-card {
@@ -38,7 +58,7 @@ body .schedule-section-spz .schedule-card .timing {
 body .schedule-section-spz .schedule-card .timing .time {
   color: #68cce8;
   font-family: Titillium Web, sans-serif;
-  font-size: 20px;
+  font-size: 20px !important;
   font-style: normal;
   font-weight: 700;
   line-height: 32px;
@@ -49,16 +69,22 @@ body .schedule-section-spz .schedule-card .timing .time {
 body .schedule-section-spz .schedule-card .details .title p {
   color: var(--Fonts-isPrimary, #fff);
   font-family: Titillium Web, sans-serif;
-  font-size: 32px;
+  font-size: 32px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 40px;
   margin: 0 0 12px;
 }
+@media (max-width: 767.98px) {
+  body .schedule-section-spz .schedule-card .details .title p {
+    font-size: 24px !important;
+    line-height: 32px;
+  }
+}
 body .schedule-section-spz .schedule-card .details .content p {
   color: var(--Fonts-isSecondary, #f0eeee);
   font-family: Titillium Web, sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -102,7 +128,7 @@ body .schedule-section-spz .schedule-card .details .card-section .personality .p
 body .schedule-section-spz .schedule-card .details .card-section .personality .p-details .name {
   color: var(--Fonts-isPrimary, #fff);
   font-family: Titillium Web, sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
@@ -111,7 +137,7 @@ body .schedule-section-spz .schedule-card .details .card-section .personality .p
 body .schedule-section-spz .schedule-card .details .card-section .personality .p-details .p-designation {
   color: var(--Fonts-isSecondary, #f0eeee);
   font-family: Titillium Web, sans-serif;
-  font-size: 12px;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 166.667% */
@@ -120,7 +146,7 @@ body .schedule-section-spz .schedule-card .details .card-section .personality .p
 body .schedule-section-spz .schedule-card .details .card-section .personality .p-details .p-organisation {
   color: var(--Fonts-Accent, #68cce8);
   font-family: Titillium Web, sans-serif;
-  font-size: 12px;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 20px; /* 166.667% */
@@ -129,15 +155,46 @@ body .schedule-section-spz .schedule-card .details .card-section .personality .p
 body .schedule-section-spz .schedule-card:first-child {
   padding-top: 32px;
 }
+@media (max-width: 767.98px) {
+  body .schedule-section-spz .schedule-card:first-child {
+    padding-bottom: 46px;
+  }
+}
 body .schedule-section-spz .schedule-card:last-child {
   border: 0;
 }
 body .section-title-spz {
   padding: 60px 0 49px;
 }
+@media (max-width: 1023.98px) {
+  body .section-title-spz {
+    padding: 120px 0 134px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .section-title-spz {
+    padding: 64px 20px 43px;
+  }
+}
 body .section-title-spz .section-title {
   margin: 0 0 18px;
 }
+@media (max-width: 1023.98px) {
+  body .section-title-spz .section-title {
+    text-align: left;
+    margin: 0 0 25px;
+  }
+}
+@media (max-width: 1023.98px) {
+  body .section-title-spz .section-sub-title {
+    text-align: left;
+  }
+}
 body .join-us-footer-section-spz .jf-a-container {
   margin: 38px 0 34px;
+}
+@media (max-width: 767.98px) {
+  body .join-us-footer-section-spz .jf-a-container {
+    margin: 38px 0 22px;
+  }
 }
