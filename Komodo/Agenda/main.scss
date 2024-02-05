@@ -5,5 +5,129 @@ $l_white: rgba(255, 255, 255, 0.6);
 $titillium-font: Titillium Web, sans-serif;
 
 body {
-  
+  .schedule-section-spz {
+    padding: 64px 84px;
+    background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.20) 0%, rgba(104, 204, 232, 0.00) 100%), var(--Surface-Main, #000);
+    .schedule-card {
+      padding: 48px 0;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+      display: flex;
+      align-items: flex-start;
+
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+      }
+
+      .timing {
+        min-width: 92px;
+        margin-right: 48px;
+
+        @media (max-width: 767.98px) {
+          margin-bottom: 24px;
+        }
+
+        .time {
+          color: #68cce8;
+          font-family: $titillium-font;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 32px;
+          letter-spacing: 1.2px;
+          text-transform: uppercase;
+          margin: 0;
+        }
+      }
+
+      .details {
+        .title {
+          p {
+            color: var(--Fonts-isPrimary, #fff);
+            font-family: $titillium-font;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            margin: 0 0 12px;
+          }
+        }
+
+        .content {
+          p {
+            color: var(--Fonts-isSecondary, #f0eeee);
+            font-family: $titillium-font;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0 0 24px;
+          }
+        }
+
+        .card-section {
+          display: flex;
+          flex-wrap: wrap;
+          .personality {
+            display: flex;
+            width: 320px;
+            @media (max-width: 1023.98px) {
+              margin-bottom: 24px;
+
+              &:last-child {
+                margin: 0;
+              }
+            }
+
+            .p-img {
+              width: 56px;
+              height: 64px;
+              margin-right: 12px;
+
+              img {
+                width: 100%;
+              }
+            }
+
+            .p-details {
+              .name {
+                color: var(--Fonts-isPrimary, #fff);
+                font-family: $titillium-font;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 24px;
+                margin: 0;
+              }
+              .p-designation {
+                color: var(--Fonts-isSecondary, #f0eeee);
+                font-family: $titillium-font;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 166.667% */
+                margin: 0;
+              }
+
+              .p-organisation {
+                color: var(--Fonts-Accent, #68cce8);
+                font-family: $titillium-font;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px; /* 166.667% */
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+
+      &:first-child {
+        padding-top: 0;
+      }
+      &:last-child {
+        border: 0;
+      }
+    }
+  }
 }

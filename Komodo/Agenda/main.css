@@ -1,0 +1,122 @@
+body .schedule-section-spz {
+  padding: 64px 84px;
+  background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), var(--Surface-Main, #000);
+}
+body .schedule-section-spz .schedule-card {
+  padding: 48px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.58);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (max-width: 767.98px) {
+  body .schedule-section-spz .schedule-card {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+body .schedule-section-spz .schedule-card .timing {
+  min-width: 92px;
+  margin-right: 48px;
+}
+@media (max-width: 767.98px) {
+  body .schedule-section-spz .schedule-card .timing {
+    margin-bottom: 24px;
+  }
+}
+body .schedule-section-spz .schedule-card .timing .time {
+  color: #68cce8;
+  font-family: Titillium Web, sans-serif;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 32px;
+  letter-spacing: 1.2px;
+  text-transform: uppercase;
+  margin: 0;
+}
+body .schedule-section-spz .schedule-card .details .title p {
+  color: var(--Fonts-isPrimary, #fff);
+  font-family: Titillium Web, sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  margin: 0 0 12px;
+}
+body .schedule-section-spz .schedule-card .details .content p {
+  color: var(--Fonts-isSecondary, #f0eeee);
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+body .schedule-section-spz .schedule-card .details .card-section {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+body .schedule-section-spz .schedule-card .details .card-section .personality {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 320px;
+}
+@media (max-width: 1023.98px) {
+  body .schedule-section-spz .schedule-card .details .card-section .personality {
+    margin-bottom: 24px;
+  }
+  body .schedule-section-spz .schedule-card .details .card-section .personality:last-child {
+    margin: 0;
+  }
+}
+body .schedule-section-spz .schedule-card .details .card-section .personality .p-img {
+  width: 56px;
+  height: 64px;
+  margin-right: 12px;
+}
+body .schedule-section-spz .schedule-card .details .card-section .personality .p-img img {
+  width: 100%;
+}
+body .schedule-section-spz .schedule-card .details .card-section .personality .p-details .name {
+  color: var(--Fonts-isPrimary, #fff);
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0;
+}
+body .schedule-section-spz .schedule-card .details .card-section .personality .p-details .p-designation {
+  color: var(--Fonts-isSecondary, #f0eeee);
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  margin: 0;
+}
+body .schedule-section-spz .schedule-card .details .card-section .personality .p-details .p-organisation {
+  color: var(--Fonts-Accent, #68cce8);
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px; /* 166.667% */
+  margin: 0;
+}
+body .schedule-section-spz .schedule-card:first-child {
+  padding-top: 0;
+}
+body .schedule-section-spz .schedule-card:last-child {
+  border: 0;
+}
