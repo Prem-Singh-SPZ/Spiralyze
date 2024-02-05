@@ -11,7 +11,7 @@ copyModify();
 
 function copyModify() {
     waitForElm('.landing-page__content-container .landing-page__content ul li').then(function () {
-        document.querySelector('.landing-page__content-container .landing-page__title').textContent = 'Secure your entire multi-cloud environment';
+        document.querySelector('.landing-page__content-container .landing-page__title').innerHTML = 'Protect and accelerate<br>everything to everywhere';
         document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<ul><li><span>Network. </span>Deliver fast, secure network connectivity. One cloud-based solution.</li><li><span>Visibility.</span> Get full visibility into your multi-cloud network. Web, SaaS, cloud, and more.</li><li><span>Security.</span> Monitor & verify network activities 24/7. Only allow access to required tasks.</li></ul>`;
 
         document.querySelector('#components__content').insertAdjacentHTML('beforeend', `<div class="spz-trusted-section"><div class="section-container"><div class="section-title"><p>We partner with leaders across the security industry</p></div><div class="section-content"><picture>
@@ -48,7 +48,7 @@ function formModify() {
     var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
         formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Contact us</div>`);
-        document.querySelector('.landing-page__form-container').insertAdjacentHTML('afterbegin', '<div class="tablet-title"><h1 class="landing-page__title">Secure your entire multi-cloud environment</h1></div>')
+        document.querySelector('.landing-page__form-container').insertAdjacentHTML('afterbegin', '<div class="tablet-title"><h1 class="landing-page__title">Protect and accelerate<br>everything to everywhere</h1></div>')
     }
 
     //form Cta update
