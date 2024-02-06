@@ -1,0 +1,113 @@
+body .fc-card-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+@media (max-width: 1023.98px) {
+  body .fc-card-container {
+    max-width: 600px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .fc-card-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
+body .fc-card-container .fc-card {
+  width: 261px;
+  height: 474px;
+  margin: 24px 16px;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .fc-card-container .fc-card {
+    width: 290px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .fc-card-container .fc-card {
+    width: 320px;
+  }
+}
+body .fc-card-container .fc-card .card-img {
+  width: 100%;
+  height: 302px;
+}
+body .fc-card-container .fc-card .card-img img {
+  width: 100%;
+  height: 100%;
+}
+body .fc-card-container .fc-card .card-content {
+  padding: 8px 16px 24px 16px;
+  background: radial-gradient(122.18% 104.51% at 11.45% 104.51%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), #000;
+}
+@media (max-width: 767.98px) {
+  body .fc-card-container .fc-card .card-content {
+    text-align: center;
+  }
+}
+body .fc-card-container .fc-card .card-content .fc-name {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 4px;
+}
+body .fc-card-container .fc-card .card-content .fc-position {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 4px;
+}
+body .fc-card-container .fc-card .card-content .fc-company {
+  color: #68cce8;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 0 16px;
+}
+body .fc-card-container .fc-card .card-content .fc-speaker {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  margin: 0 0 4px;
+}
+body .fc-card-container .fc-card .card-content .fc-bio {
+  color: #f0eeee;
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+  margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body .fc-card-container .fc-card .card-content .fc-bio svg {
+  margin-left: 4px;
+}
