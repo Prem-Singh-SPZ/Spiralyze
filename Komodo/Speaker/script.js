@@ -1,48 +1,27 @@
-$().ready(function () {
-    $('.slick-carousel').slick({
-        slidesToShow: 1.3,
-        slidesToScroll: 1,
-        arrows: true,
-        // centerPadding: "0px",
-        dots: true,
-        infinite: false,
-        variableWidth: true,
-        responsive: [
-            // {
-            //     breakpoint: 1023,
-            //     settings: {
-            //         slidesToShow: 1,
-            //         slidesToScroll: 1,
-            //     }
-            // },
-            {
-                breakpoint: 767,
-                settings: {
-                    slidesToShow: 1,
-                    arrows: false,
-                    slidesToScroll: 1,
-                    variableWidth: false,
-                }
-            }
-        ]
-    });
-});
-
 document.addEventListener("DOMContentLoaded", (event) => {
-    window.addEventListener('click', function (el) {
-        if (el.target.classList.contains('accordion-button')) {
+    var modal = document.querySelector(".modal");
+    var trigger = document.querySelector(".speaker-card");
+    var closeButton = document.querySelector(".close-button");
 
-            document.querySelectorAll('.accordion-item').forEach(function (elem) {
-                elem.querySelector('.accordion-button').classList.add('collapsed');
-                if (elem.querySelector('.accordion-collapse.show')) {
-                    elem.querySelector('.accordion-collapse.show').classList.remove('show');
-                }
-            })
+    function toggleModal() {
+        modal.classList.toggle("show-modal");
+    }
 
-            el.target.classList.toggle('collapsed');
-            let id = el.target.getAttribute('data-bs-target');
-            this.document.querySelector(id).classList.toggle('show');
+    function windowOnClick(event) {
+        if (event.target === modal) {
+            toggleModal();
         }
-    },);
+    }
+
+    window.addEventListener("click", function (e) {
+        if (e.target.classList.contains('speaker-bio')) {
+            console.log(e.target)
+            toggleModal();
+        }
+    });
+
+    trigger.addEventListener("click", toggleModal);
+    closeButton.addEventListener("click", toggleModal);
+    window.addEventListener("click", windowOnClick);
 });
 
