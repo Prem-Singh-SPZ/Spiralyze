@@ -1,5 +1,5 @@
 body .schedule-section-spz {
-  padding: 64px 84px 68px;
+  padding: 64px 84px 72px;
   background: radial-gradient(25.32% 43.72% at 103.4% 86.23%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(30.76% 25.88% at 24.65% 63.53%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(46.47% 27.79% at 4.27% 4.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(23.66% 34.7% at 70.9% 37.7%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), #000;
 }
 @media (min-width: 1023.98px) {
@@ -14,7 +14,7 @@ body .schedule-section-spz {
 }
 @media (max-width: 767.98px) {
   body .schedule-section-spz {
-    padding: 0px 20px 10px;
+    padding: 0px 20px 6px;
     background: none;
   }
 }
@@ -164,11 +164,15 @@ body .schedule-section-spz .schedule-card:first-child {
 }
 @media (max-width: 767.98px) {
   body .schedule-section-spz .schedule-card:first-child {
+    padding-top: 30px;
     padding-bottom: 20px;
   }
 }
 body .schedule-section-spz .schedule-card:last-child {
   border: 0;
+}
+body .schedule-section-spz .schedule-card p:empty {
+  margin: 0 !important;
 }
 body .section-title-spz {
   padding: 60px 0 49px;
@@ -198,10 +202,30 @@ body .section-title-spz .section-title {
   }
 }
 body .join-us-footer-section-spz .jf-a-container {
-  margin: 38px 0 34px;
+  margin: 36px 0 34px;
 }
 @media (max-width: 767.98px) {
   body .join-us-footer-section-spz .jf-a-container {
-    margin: 38px 0 22px;
+    margin: 38px 0 24px;
+  }
+}
+
+body a.spz-cta-grey[class] {
+  width: 163px;
+}
+@media (max-width: 767.98px) {
+  body a.spz-cta-grey[class] {
+    width: 320px;
+  }
+}
+
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .body-container-wrapper .dnd_area-row-0-background-image[class] {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/hero_image_768.webp) !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body .body-container-wrapper .dnd_area-row-0-background-image[class] {
+    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/theonedaysummitmicrositeevent/hero_image_360.webp) !important;
   }
 }
