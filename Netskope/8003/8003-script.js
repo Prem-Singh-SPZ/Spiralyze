@@ -29,6 +29,10 @@ let bodyLoaded = setInterval(function () {
                     }
                 }
 
+                if (currentUrl.includes('why-you-should-and-how-you-can-move-away-from-existing-dlp-programs')) {
+                    document.querySelector('.gated-content__right').classList.add('arrow-position');
+                }
+
                 var imageUrls = {
                     "the-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement": "//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8001/the_6_most_compelling_image.webp",
                     "why-you-should-and-how-you-can-move-away-from-existing-dlp-programs": "//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8001/why_you_should_image.webp",
@@ -87,8 +91,9 @@ function formModify() {
     var sub_heading = document.querySelector("body .gated-content__banner .gated-content__type");
     var sub_heading_textContent = sub_heading.textContent || sub_heading.innerText;
 
-    if (sub_heading_textContent == 'eBooks') {
-        var processedText = sub_heading_textContent.replace('s', '');
+    if (sub_heading_textContent == 'eBooks' || sub_heading_textContent == 'eBook') {
+        // var processedText = sub_heading_textContent.replace('s', '');
+        var processedText = 'ebook';
     }
     else if (sub_heading_textContent == 'White Papers') {
         var processedText = 'whitepaper';
