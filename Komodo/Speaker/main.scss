@@ -101,11 +101,11 @@ body {
           line-height: 20px;
           letter-spacing: 0.6px;
           text-transform: uppercase;
-          margin:0;
+          margin: 0;
           display: flex;
           align-items: center;
 
-          svg{
+          svg {
             margin-left: 4px;
           }
         }
@@ -121,37 +121,91 @@ body {
   top: 0;
   width: 100%;
   height: 100%;
-  background-color: rgba(0, 0, 0, 0.5);
+  background: rgba(0, 0, 0, 0.7);
+  backdrop-filter: blur(2px);
   opacity: 0;
   visibility: hidden;
   transform: scale(1.1);
   transition: visibility 0s linear 0.25s, opacity 0.25s 0s, transform 0.25s;
-}
-.modal-content {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: white;
-  padding: 1rem 1.5rem;
-  width: 24rem;
-  border-radius: 0.5rem;
-}
-.close-button {
-  float: right;
-  width: 1.5rem;
-  line-height: 1.5rem;
-  text-align: center;
-  cursor: pointer;
-  border-radius: 0.25rem;
-  background-color: lightgray;
-}
-.close-button:hover {
-  background-color: darkgray;
+  .modal-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    max-width: 601px;
+    width: 100%;
+    position: relative;
+    .close-button {
+      position: absolute;
+      top: 8px;
+      right: 8px;
+      width: 16px;
+      cursor: pointer;
+    }
+
+    .modal-body {
+      background: #161c1e;
+      .modal-header {
+        display: flex;
+        padding: 24px 32px;
+        align-items: center;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        background: #0f1315;
+
+        .profile-image {
+          width: 144px;
+          height: 160px;
+          margin-right: 24px;
+          img {
+            width: 100%;
+          }
+        }
+
+        .profile {
+          .name {
+            color: #fff;
+            font-family: $titillium-font;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 40px;
+            margin: 0 0 4px;
+          }
+
+          .designation {
+            color: #fff;
+            font-family: $titillium-font;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            margin: 0 0 4px;
+          }
+
+          .organzation {
+            color: #68cce8;
+            font-family: $titillium-font;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            margin: 0 0 4px;
+          }
+        }
+      }
+
+      .modal-copy {
+        display: flex;
+        padding: 24px 24px 32px 24px;
+        flex-direction: column;
+        align-items: flex-start;
+      }
+    }
+  }
 }
 .show-modal {
   opacity: 1;
   visibility: visible;
-  transform: scale(1.0);
+  transform: scale(1);
   transition: visibility 0s linear 0s, opacity 0.25s 0s, transform 0.25s;
 }
