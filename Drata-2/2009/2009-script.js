@@ -56,7 +56,7 @@
               <div class="btn-section"><button class="get-started-cta">Get Started <img src="${astUrl}/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
               </div></div></div>
               <div class="hero-img-section"> <div class="img-container"><div class="video-container"><video autoplay loop muted playsinline width="100%">
-              <source src="https://res.cloudinary.com/spiralyze/video/upload/v1707286439/drata/2009/Video_without_overlay.mp4" type="video/mp4">
+              <source src="https://res.cloudinary.com/spiralyze/video/upload/f_auto/drata/2009/Video_without_overlay.mp4" type="video/mp4">
             </video></div></div></div>
         <div class="social-pr-section">
             <!-- <div class="container"> -->
