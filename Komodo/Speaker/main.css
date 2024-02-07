@@ -1,3 +1,6 @@
+body.no-scroll {
+  overflow: hidden;
+}
 body .speaker-card-container {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -41,10 +44,12 @@ body .speaker-card-container .speaker-card {
 body .speaker-card-container .speaker-card .card-img {
   width: 100%;
   height: 302px;
+  cursor: pointer;
 }
 body .speaker-card-container .speaker-card .card-img img {
   width: 100%;
   height: 100%;
+  pointer-events: none;
 }
 body .speaker-card-container .speaker-card .card-content {
   padding: 8px 16px 24px 16px;
@@ -139,6 +144,13 @@ body .speaker-card-container .speaker-card .card-content .speaker-bio svg {
   max-width: 601px;
   width: 100%;
   position: relative;
+  overflow: auto;
+  max-height: calc(100vh - 16px);
+}
+@media (max-width: 767.98px) {
+  .modal .modal-content {
+    max-width: 344px;
+  }
 }
 .modal .modal-content .close-button {
   position: absolute;
@@ -161,10 +173,22 @@ body .speaker-card-container .speaker-card .card-content .speaker-bio svg {
   border-bottom: 1px solid rgba(255, 255, 255, 0.1);
   background: #0f1315;
 }
+@media (max-width: 767.98px) {
+  .modal .modal-content .modal-body .modal-header {
+    padding: 24px 16px;
+  }
+}
 .modal .modal-content .modal-body .modal-header .profile-image {
   width: 144px;
   height: 160px;
   margin-right: 24px;
+}
+@media (max-width: 767.98px) {
+  .modal .modal-content .modal-body .modal-header .profile-image {
+    width: 108px;
+    height: 120px;
+    margin-right: 16px;
+  }
 }
 .modal .modal-content .modal-body .modal-header .profile-image img {
   width: 100%;
@@ -178,6 +202,12 @@ body .speaker-card-container .speaker-card .card-content .speaker-bio svg {
   line-height: 40px;
   margin: 0 0 4px;
 }
+@media (max-width: 767.98px) {
+  .modal .modal-content .modal-body .modal-header .profile .name {
+    font-size: 24px;
+    line-height: 32px;
+  }
+}
 .modal .modal-content .modal-body .modal-header .profile .designation {
   color: #fff;
   font-family: Titillium Web, sans-serif;
@@ -187,6 +217,13 @@ body .speaker-card-container .speaker-card .card-content .speaker-bio svg {
   line-height: 26px;
   margin: 0 0 4px;
 }
+@media (max-width: 767.98px) {
+  .modal .modal-content .modal-body .modal-header .profile .designation {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
+}
 .modal .modal-content .modal-body .modal-header .profile .organzation {
   color: #68cce8;
   font-family: Titillium Web, sans-serif;
@@ -195,6 +232,13 @@ body .speaker-card-container .speaker-card .card-content .speaker-bio svg {
   font-weight: 600;
   line-height: 26px;
   margin: 0 0 4px;
+}
+@media (max-width: 767.98px) {
+  .modal .modal-content .modal-body .modal-header .profile .organzation {
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+  }
 }
 .modal .modal-content .modal-body .modal-copy {
   display: -webkit-box;
