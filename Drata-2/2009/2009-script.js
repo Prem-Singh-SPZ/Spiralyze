@@ -56,7 +56,7 @@
               <div class="btn-section"><button class="get-started-cta">Get Started <img src="${astUrl}/v1698933833/drata/2006/arrow_icon.svg" alt="Arrow"></button></div>
               </div></div></div>
               <div class="hero-img-section"> <div class="img-container"><div class="video-container"><video autoplay loop muted playsinline width="100%">
-              <source src="https://res.cloudinary.com/spiralyze/video/upload/v1706860493/drata/2009/Video.mp4" type="video/mp4">
+              <source src="https://res.cloudinary.com/spiralyze/video/upload/v1707286439/drata/2009/Video_without_overlay.mp4" type="video/mp4">
             </video></div></div></div>
         <div class="social-pr-section">
             <!-- <div class="container"> -->
@@ -305,24 +305,27 @@
   }
 
   function demoChecked() {
-    waitForElm('.hs_demo_product_of_interest .input .MuiFormControlLabel-label').then(function () {
+    document.body.classList.add('spz-2009');
+
+    waitForElm('.spz-2009 .hs_demo_product_of_interest .input .MuiFormControlLabel-label').then(function () {
+
 
       if (document.querySelector('.MuiFormControlLabel-label')) {
         document.querySelectorAll('.hs_demo_product_of_interest .input .hs-form-checkbox-display').forEach(function (checkbox) {
           let checkValue = checkbox.querySelector('span').textContent;
           let isCookiePresent = getCookie(checkValue);
 
-          if (isCookiePresent) {
-            checkbox.querySelector('input').checked = true;
+            if (isCookiePresent) {
+              checkbox.querySelector('input').checked = true;
 
-            let secondCheck = checkbox.querySelector('input').getAttribute('id');
+              let secondCheck = checkbox.querySelector('input').getAttribute('id');
 
-            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + ' #' + secondCheck).checked = true;
-            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + ' #' + secondCheck).closest('label').click();
+              document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + '#' + secondCheck).checked = true;
+              document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + '#' + secondCheck).closest('label').click();
 
-            //delete cookie
-            deleteCookie(checkValue);
-          }
+              //delete cookie
+              deleteCookie(checkValue);
+            }
         });
 
         // if (document.querySelector('.spz-2009 main') && document.querySelectorAll('.spz-2009 main input[name="cro_test_1"]').length == 0) {
