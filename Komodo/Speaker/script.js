@@ -15,7 +15,8 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     window.addEventListener("click", function (e) {
         if (e.target.classList.contains('card-img')) {
-            console.log(e.target)
+            console.log(e.target);
+            document.querySelector(".modal .modal-header .profile-image").innerHTML = e.target.innerHTML;
             toggleModal();
         }
     });
