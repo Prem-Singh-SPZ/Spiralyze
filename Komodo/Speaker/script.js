@@ -15,8 +15,11 @@ document.addEventListener("DOMContentLoaded", (event) => {
 
     window.addEventListener("click", function (e) {
         if (e.target.classList.contains('card-img')) {
-            console.log(e.target);
             document.querySelector(".modal .modal-header .profile-image").innerHTML = e.target.innerHTML;
+            document.querySelector(".modal .modal-header .profile .name").textContent = e.target.parentElement.querySelector('.card-content .speaker-name').textContent;
+            document.querySelector(".modal .modal-header .profile .designation").textContent = e.target.parentElement.querySelector('.card-content .speaker-position').textContent;
+            document.querySelector(".modal .modal-header .profile .organzation").textContent = e.target.parentElement.querySelector('.card-content .speaker-company').textContent;
+            document.querySelector(".modal .modal-copy").innerHTML = e.target.parentElement.querySelector('.card-content .about-speaker').innerHTML;
             toggleModal();
         }
     });
@@ -25,4 +28,3 @@ document.addEventListener("DOMContentLoaded", (event) => {
     closeButton.addEventListener("click", toggleModal);
     window.addEventListener("click", windowOnClick);
 });
-
