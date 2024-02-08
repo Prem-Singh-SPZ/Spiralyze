@@ -657,6 +657,12 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
   }
   .hs-form-private.hs-form-spz .hs-button {
     white-space: pre-wrap;
+    width: 157.44px;
+    display: block !important;
+
+    & + button.MuiButton-ctaModulePrimary{
+      display: none !important;
+    }
   }
   .hs-form-private.hs-form-spz .hs-richtext {
     word-break: break-word;
@@ -666,6 +672,17 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
     padding: 0;
     margin: 0;
     // max-width: 500px;
+
+    @media (min-width: 776px) and (max-width: 1000px) {
+      display: block;
+    }
+
+    @media (min-width: 501px) and (max-width: 775px) {
+      display: flex;
+    }
+    @media  (max-width: 501px) {
+      display: block;
+    }
   }
   .hs-form-private.hs-form-spz fieldset.form-columns-1 .hs-input {
     width: 95%;
@@ -902,6 +919,8 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
 
           &.single-value,
           &.multiple-value {
+            padding-bottom: 2px;
+            padding-top: 7px;
             .label {
               display: none;
             }

@@ -608,6 +608,11 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-field
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz .hs-button {
   white-space: pre-wrap;
+  width: 157.44px;
+  display: block !important;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz .hs-button + button.MuiButton-ctaModulePrimary {
+  display: none !important;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz .hs-richtext {
   word-break: break-word;
@@ -616,6 +621,23 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-
   border: 0;
   padding: 0;
   margin: 0;
+}
+@media (min-width: 776px) and (max-width: 1000px) {
+  body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz fieldset {
+    display: block;
+  }
+}
+@media (min-width: 501px) and (max-width: 775px) {
+  body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz fieldset {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+}
+@media (max-width: 501px) {
+  body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz fieldset {
+    display: block;
+  }
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz fieldset.form-columns-1 .hs-input {
   width: 95%;
@@ -799,6 +821,10 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
   margin-bottom: 5px;
   border-radius: 6px;
   background: #ddd;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn.single-value, body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn.multiple-value {
+  padding-bottom: 2px;
+  padding-top: 7px;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn.single-value .label, body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn.multiple-value .label {
   display: none;
