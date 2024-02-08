@@ -13,12 +13,12 @@
       bodyEle.classList.add('spz-2001');
 
       //Hero section content feeding
-      waitForElm('.css-1tsiji8-Form-root form.hs-form-private .hs-form-field').then(function (elm) {
+      waitForElm('form.hs-form-private.hs-form-spz .hs-form-field').then(function (elm) {
         appendInputLabel();
         focusFields();
         checkboxDropdown();
 
-        document.querySelector('form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span></button>`);
+        document.querySelector('form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`);
 
         window.addEventListener("click", function (e) {
           if (e.target.classList.contains("spz-btn")) {
