@@ -660,7 +660,7 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
     width: 157.44px;
     display: block !important;
 
-    & + button.MuiButton-ctaModulePrimary{
+    & + button.MuiButton-ctaModulePrimary {
       display: none !important;
     }
   }
@@ -680,7 +680,7 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
     @media (min-width: 501px) and (max-width: 775px) {
       display: flex;
     }
-    @media  (max-width: 501px) {
+    @media (max-width: 501px) {
       display: block;
     }
   }
@@ -955,6 +955,19 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
           .spz-btn {
             border-color: #c87872;
           }
+        }
+      }
+
+      .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display {
+        display: flex;
+        align-items: flex-start;
+
+        span {
+          font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+          font-size: 16px;
+          font-weight: normal;
+          line-height: 22px;
+          color: #33475b;
         }
       }
     }
