@@ -19,10 +19,10 @@ function loadTest() {
     waitForElm(element).then(function () {
       let addField = setInterval(() => {
         appendEmailField(element);
-      }, 100);
+      }, 10);
       setTimeout(() => {
         clearInterval(addField);
-      }, 1000);
+      }, 100);
     });
   }
 }
@@ -35,13 +35,13 @@ function appendEmailField(selector) {
       <form class="form-spz" id="mktoForm_1001" method="GET">
         <div class="header__get-started">
         <div class="spz-1001-email">
-          <input class="spz-email" type="email" placeholder="Business email">
+          <input class="spz-email" type="email" placeholder="Email">
   
           <div class="mktoError">
-            <div class="mktoErrorMsg">Must be valid email. <span class="mktoErrorDetail">example@yourdomain.com</span></div>
+            <div class="mktoErrorMsg">Please complete this required field.</div>
           </div>
         </div>
-        <button type="submit" class="get-started-cta btn">Get Started</button>
+        <button type="submit" class="get-started-cta css-mqxvzn">Get Started</button>
       </div>
     </form>
   </div>`
@@ -51,43 +51,9 @@ function appendEmailField(selector) {
 
 //All click events
 window.addEventListener("click", function (e) {
-  if (e.target.classList.contains("header__get-started-button")) {
-    let emailValue =
-      this.document.querySelector(".spz-email").value ||
-      this.document.querySelector(".spz-email.mobile").value;
-    setCookieForEmail("userEmailSPZ", emailValue);
+  if (e.target.classList.contains("get-started-cta")) {
+    validateEmailField();
   }
-});
-
-//on focus of .spz-email addClass to .header__get-started
-waitForElm(".spz-email").then(function (elm) {
-  document.querySelectorAll(".spz-email").forEach((element) => {
-    element.addEventListener("focus", function (event) {
-      element.closest(".header__get-started").classList.add("i-focused");
-    });
-
-    element.addEventListener("blur", function (event) {
-      element.closest(".header__get-started").classList.remove("i-focused");
-    });
-
-    // On enter key pressed in 'spz-email' field click on 'header__get-started-button'
-    element.addEventListener("keyup", function (event) {
-      if (event.keyCode === 13) {
-        event.preventDefault();
-        document.querySelector(".header__get-started-button").click();
-      }
-
-      validateEmailField(false);
-    });
-  });
-
-  // Validate email input present in '.hero-section-CTA' on '.get-started-cta' click
-  document
-    .querySelector(".get-started-cta")
-    .addEventListener("click", function (e) {
-      e.preventDefault();
-      validateEmailField();
-    });
 });
 
 // Validate email field
@@ -105,7 +71,7 @@ function validateEmailField(redirect = true) {
     setCookieForEmail("userEmailSPZ", email.value);
     email.closest(".header__get-started").classList.remove("input-error");
     if (redirect) {
-      location.href = "https://www.netskope.com/get-started";
+      location.href = "https://assemblysoftware.com/get-a-demo";
     }
     return true;
   }
@@ -115,40 +81,8 @@ function validateEmailField(redirect = true) {
 function validateEmail(email) {
   var emailRegex =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  const disallowDomains = [
-    "gmail",
-    "yahoo",
-    "hotmail",
-    "outlook",
-    "aol",
-    "icloud",
-    "msn",
-    "live",
-    "me",
-    "inbox",
-    "zoho",
-    "yandex",
-    "protonmail",
-    "gmx",
-    "mail",
-    "aol",
-    "icloud",
-    "msn",
-    "live",
-    "me",
-    "inbox",
-    "zoho",
-    "yandex",
-    "protonmail",
-    "gmx",
-    "mail",
-    "test",
-    "sample",
-  ];
-  const domain = email.split("@")[1];
   if (
-    emailRegex.test(email) &&
-    !disallowDomains.includes(domain.split(".")[0])
+    emailRegex.test(email)
   ) {
     return true;
   }
@@ -244,4 +178,21 @@ if (
   navigator.userAgent.toLowerCase().indexOf("safari/") > -1
 ) {
   document.body.classList.add("safari");
+}
+
+// Set a Cookie
+function setCookieForEmail(cName, cValue) {
+  document.cookie = cName + "=" + cValue + "; path=/";
+}
+
+//Get a cookie
+function getCookie(cName) {
+  const name = cName + "=";
+  const cDecoded = decodeURIComponent(document.cookie); //to be careful
+  const cArr = cDecoded.split('; ');
+  let res;
+  cArr.forEach(val => {
+    if (val.indexOf(name) === 0) res = val.substring(name.length);
+  })
+  return res;
 }

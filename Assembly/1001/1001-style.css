@@ -1,3 +1,7 @@
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i2i95w3 {
+  display: none !important;
+}
+
 .hero-section-CTA {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -34,65 +38,6 @@
   .hero-section-CTA .hsc-title {
     font-size: 16px;
   }
-}
-@media (max-width: 767.98px) {
-  .hero-section-CTA .v3 {
-    width: 100%;
-    max-width: 360px;
-    margin: auto;
-  }
-}
-.hero-section-CTA .v3 .get-started-cta {
-  border-radius: 200px;
-  padding: 10px 26px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  width: 141px;
-  margin: 1px 8px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-@media (max-width: 767.98px) {
-  .hero-section-CTA .v3 .get-started-cta {
-    width: 100%;
-    margin: 1px 0;
-  }
-}
-.hero-section-CTA .v3 .get-started-cta:hover {
-  border: 1px solid #081a59;
-  background: #fff;
-  color: #081a59;
-}
-.hero-section-CTA .v3 .learn-more-cta {
-  border-radius: 200px;
-  border: 1px solid #ff8200;
-  background: transparent;
-  color: #ff8200;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  padding: 11px 28px;
-  width: 142px;
-  margin: 1px 8px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-  height: 48px;
-  white-space: nowrap;
-}
-@media (max-width: 767.98px) {
-  .hero-section-CTA .v3 .learn-more-cta {
-    margin-top: 16px;
-    width: 100%;
-    margin: 16px 0 0;
-  }
-}
-.hero-section-CTA .v3 .learn-more-cta:hover {
-  border: 1px solid #081a59;
-  background: #fff;
-  color: #081a59;
 }
 .hero-section-CTA .header__get-started {
   height: 64px;
@@ -133,7 +78,8 @@
   }
 }
 .hero-section-CTA .header__get-started.input-error .spz-1001-email input {
-  border: 1px solid #ff5b28;
+  border: 1px solid #E30004;
+  color: #E30004;
 }
 .hero-section-CTA .header__get-started.input-error .mktoError {
   display: block !important;
@@ -142,18 +88,24 @@
   position: relative;
 }
 .hero-section-CTA .header__get-started .spz-1001-email input {
-  border: 1px solid rgba(255, 255, 255, 0.2);
-  border-radius: 50px;
-  background: rgba(204, 204, 205, 0.4);
-  height: 64px;
-  width: 479.5px;
-  padding: 8px 135px 8px 27px;
-  margin-right: -131.5px;
-  outline: transparent;
-  color: #fff;
-  caret-color: #ff8200;
+  border-radius: 4px 0px 0px 4px;
+  background: #FFF;
+  width: 300px;
   -webkit-transition-duration: 0.25s;
           transition-duration: 0.25s;
+  overflow: hidden;
+  color: #1A1A1A;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-family: Causten, Roboto, Helvetica, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 150%;
+  height: 56px;
+  padding: 15px 16px 14px 16px;
+  border: 0;
+  outline: transparent;
 }
 @media (max-width: 1023.98px) {
   .hero-section-CTA .header__get-started .spz-1001-email input {
@@ -167,27 +119,26 @@
   }
 }
 .hero-section-CTA .header__get-started .spz-1001-email input::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: #757575;
 }
 .hero-section-CTA .header__get-started .spz-1001-email input::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: #757575;
   opacity: 1;
 }
 .hero-section-CTA .header__get-started .spz-1001-email input:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: #757575;
 }
 .hero-section-CTA .header__get-started .spz-1001-email input::-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: #757575;
 }
 .hero-section-CTA .header__get-started .spz-1001-email input::placeholder {
-  color: rgba(255, 255, 255, 0.8);
+  color: #757575;
 }
 .hero-section-CTA .header__get-started .spz-1001-email .mktoError {
   display: none;
   position: absolute;
   top: calc(100% + 3px);
-  left: 27px;
-  color: #ff5b28;
+  color: #E30004;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
@@ -200,30 +151,9 @@
     text-align: center;
   }
 }
-.hero-section-CTA .header__get-started .get-started-cta.btn {
-  border-radius: 50px;
-  background-color: #ff8200;
-  color: #081a59;
+.hero-section-CTA .header__get-started .get-started-cta {
   height: 56px;
-  font-family: "Graphik", sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  padding: 8px 14px;
-  letter-spacing: 0;
-  line-height: 24px;
-  width: 127px;
-  white-space: nowrap;
-  text-decoration: none;
-  margin-bottom: 0;
-  z-index: 2;
-  outline: none !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-.hero-section-CTA .header__get-started .get-started-cta.btn:hover {
-  background: #fff;
-  color: #081a59;
+  border-radius: 0px 4px 4px 0px;
 }
 .hero-section-CTA .header__get-started.i-hover input, .hero-section-CTA .header__get-started.i-focused input {
   border: 1px solid #fff !important;
