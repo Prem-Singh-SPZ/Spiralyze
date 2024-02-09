@@ -2,29 +2,42 @@ function loadTest() {
   // Set test class
   document.body.classList.add("spz-1001");
 
-  if (location.href.includes("/neos")) {
-    let element =
-      '#___gatsby div[data-testid="hero-banner__container"] .e1i2i95w4';
-    waitForElm(element).then(function () {
-      let addField = setInterval(() => {
-        appendEmailField(element);
-      }, 100);
-      setTimeout(() => {
-        clearInterval(addField);
-      }, 1000);
-    });
+  if (location.href.includes("/get-a-demo")) {
+    submitEmail();
   } else {
-    let element =
-      '#___gatsby div[data-testid="hero-banner__container"] .elpe6hc1';
+    let element = location.href.includes("/neos")
+      ? '#___gatsby div[data-testid="hero-banner__container"] .e1i2i95w4'
+      : '#___gatsby div[data-testid="hero-banner__container"] .elpe6hc1';
+
     waitForElm(element).then(function () {
       let addField = setInterval(() => {
         appendEmailField(element);
-      }, 10);
+      }, 50);
       setTimeout(() => {
         clearInterval(addField);
-      }, 100);
+      }, 500);
     });
   }
+}
+
+//Passing email id to email field for the demo page
+function submitEmail() {
+  waitForElm("form.mktoForm #Email").then(function () {
+    if (getCookie("userEmailSPZ")) {
+      let valueAdded = setInterval(() => {
+        document.querySelector(".mktoForm #Email").value =
+          getCookie("userEmailSPZ");
+      }, 100);
+
+      setTimeout(() => {
+        clearInterval(valueAdded);
+      }, 2000);
+
+      setTimeout(() => {
+        setCookieForEmail("userEmailSPZ", "");
+      }, 5000);
+    }
+  });
 }
 
 function appendEmailField(selector) {
@@ -41,20 +54,50 @@ function appendEmailField(selector) {
             <div class="mktoErrorMsg">Please complete this required field.</div>
           </div>
         </div>
-        <button type="submit" class="get-started-cta css-mqxvzn">Get Started</button>
+        <button type="submit" class="get-started-cta css-mqxvzn ripple-spz">Get a demo</button>
       </div>
     </form>
   </div>`
     );
+
+    if (
+      !location.href.includes("/neos") &&
+      document.querySelector(".hero-section-CTA") &&
+      document.querySelectorAll(".hero-section-CTA + .lean-more-div").length ==
+        0
+    ) {
+      document
+        .querySelector(".hero-section-CTA")
+        .insertAdjacentHTML("afterend", `<div class="lean-more-div"><p>or learn more</p></div>`);
+    }
   }
+
+  rippleEffect();
 }
 
 //All click events
 window.addEventListener("click", function (e) {
   if (e.target.classList.contains("get-started-cta")) {
+    e.preventDefault();
     validateEmailField();
   }
 });
+
+function rippleEffect() {
+  document.querySelector(".ripple-spz").addEventListener("click", function (e) {
+    let x = e.clientX - e.target.offsetLeft;
+    let y = e.clientY - e.target.offsetTop;
+
+    let ripples = document.createElement("span");
+    ripples.style.left = x + "px";
+    ripples.style.top = y + "px";
+    this.appendChild(ripples);
+
+    setTimeout(() => {
+      ripples.remove();
+    }, 1000);
+  });
+}
 
 // Validate email field
 function validateEmailField(redirect = true) {
@@ -77,13 +120,11 @@ function validateEmailField(redirect = true) {
   }
 }
 
-// Email validation to block email domains like gmail, yahoo, etc.\
+// Email validation
 function validateEmail(email) {
   var emailRegex =
     /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-  if (
-    emailRegex.test(email)
-  ) {
+  if (emailRegex.test(email)) {
     return true;
   }
   return false;
@@ -121,6 +162,7 @@ function urlCheck(url) {
   let testURL = "";
   if (
     window.location.pathname.indexOf("/neos") > -1 ||
+    window.location.pathname.indexOf("/get-a-demo") > -1 ||
     window.location.href == "https://assemblysoftware.com/"
   ) {
     testURL = window.location.href;
@@ -189,10 +231,10 @@ function setCookieForEmail(cName, cValue) {
 function getCookie(cName) {
   const name = cName + "=";
   const cDecoded = decodeURIComponent(document.cookie); //to be careful
-  const cArr = cDecoded.split('; ');
+  const cArr = cDecoded.split("; ");
   let res;
-  cArr.forEach(val => {
+  cArr.forEach((val) => {
     if (val.indexOf(name) === 0) res = val.substring(name.length);
-  })
+  });
   return res;
 }

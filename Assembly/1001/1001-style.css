@@ -1,5 +1,19 @@
-body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i2i95w3 {
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] {
+  overflow: hidden;
+}
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i2i95w3,
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1mwpucm3,
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .elpe6hc3 .e1i2i95w3,
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .elpe6hc3 .e1mwpucm3 {
   display: none !important;
+}
+@media (max-width: 991.98px) {
+  body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .css-1taavcj.elpe6hc1 {
+    margin-bottom: 0;
+  }
+}
+body.spz-1001 #___gatsby div[data-testid=hero-banner__container] div[data-testid=standard-promo__container] {
+  overflow: hidden;
 }
 
 .hero-section-CTA {
@@ -10,37 +24,20 @@ body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
-  max-width: 573px;
-}
-@media (max-width: 1023.98px) {
-  .hero-section-CTA {
-    max-width: 704px;
-  }
 }
 @media (max-width: 767.98px) {
   .hero-section-CTA {
-    padding: 0 24px;
+    padding: 0 12px;
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
     max-width: 360px;
     margin: auto;
   }
 }
-.hero-section-CTA .hsc-title {
-  color: #fff;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 24px;
-  margin-bottom: 16px;
-}
-@media (max-width: 767.98px) {
-  .hero-section-CTA .hsc-title {
-    font-size: 16px;
-  }
+.hero-section-CTA .form-spz {
+  margin: auto;
 }
 .hero-section-CTA .header__get-started {
-  height: 64px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -52,24 +49,9 @@ body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i
   padding: 0;
   margin-left: 0;
 }
-.hero-section-CTA .header__get-started.mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-}
-@media (min-width: 767.98px) {
-  .hero-section-CTA .header__get-started.mobile {
-    display: none !important;
-  }
-}
 @media (max-width: 767.98px) {
-  .hero-section-CTA .header__get-started.mobile {
-    margin: 16px 94px 0;
-  }
-}
-@media (max-width: 767.98px) and (max-width: 574.98px) {
-  .hero-section-CTA .header__get-started.mobile {
-    margin: 16px 0px 0;
+  .hero-section-CTA .header__get-started {
+    display: block;
   }
 }
 @media (max-width: 1023.98px) {
@@ -78,7 +60,22 @@ body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i
   }
 }
 .hero-section-CTA .header__get-started.input-error .spz-1001-email input {
-  border: 1px solid #E30004;
+  color: #E30004;
+}
+.hero-section-CTA .header__get-started.input-error .spz-1001-email input::-webkit-input-placeholder {
+  color: #E30004;
+}
+.hero-section-CTA .header__get-started.input-error .spz-1001-email input::-moz-placeholder {
+  color: #E30004;
+  opacity: 1;
+}
+.hero-section-CTA .header__get-started.input-error .spz-1001-email input:-ms-input-placeholder {
+  color: #E30004;
+}
+.hero-section-CTA .header__get-started.input-error .spz-1001-email input::-ms-input-placeholder {
+  color: #E30004;
+}
+.hero-section-CTA .header__get-started.input-error .spz-1001-email input::placeholder {
   color: #E30004;
 }
 .hero-section-CTA .header__get-started.input-error .mktoError {
@@ -107,15 +104,10 @@ body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i
   border: 0;
   outline: transparent;
 }
-@media (max-width: 1023.98px) {
-  .hero-section-CTA .header__get-started .spz-1001-email input {
-    width: 704px;
-    background: #505e8e;
-  }
-}
 @media (max-width: 767.98px) {
   .hero-section-CTA .header__get-started .spz-1001-email input {
-    width: 312px;
+    width: 300px;
+    border-radius: 4px;
   }
 }
 .hero-section-CTA .header__get-started .spz-1001-email input::-webkit-input-placeholder {
@@ -147,29 +139,63 @@ body.spz-1001 #___gatsby div[data-testid=hero-banner__container] .e1i2i95w4 .e1i
 @media (max-width: 767.98px) {
   .hero-section-CTA .header__get-started .spz-1001-email .mktoError {
     left: 0;
-    min-width: 310px;
-    text-align: center;
+    position: relative;
   }
 }
 .hero-section-CTA .header__get-started .get-started-cta {
   height: 56px;
   border-radius: 0px 4px 4px 0px;
+  text-transform: unset;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 150%;
+  min-width: 180px;
 }
-.hero-section-CTA .header__get-started.i-hover input, .hero-section-CTA .header__get-started.i-focused input {
-  border: 1px solid #fff !important;
+@media (max-width: 767.98px) {
+  .hero-section-CTA .header__get-started .get-started-cta {
+    width: 300px;
+    margin-top: 16px;
+    border-radius: 4px;
+  }
 }
-.hero-section-CTA .header__get-started.i-hover input::-webkit-input-placeholder, .hero-section-CTA .header__get-started.i-focused input::-webkit-input-placeholder {
-  color: #fff;
+.hero-section-CTA .header__get-started .ripple-spz {
+  overflow: hidden;
 }
-.hero-section-CTA .header__get-started.i-hover input::-moz-placeholder, .hero-section-CTA .header__get-started.i-focused input::-moz-placeholder {
-  color: #fff;
+.hero-section-CTA .header__get-started .ripple-spz span {
+  position: absolute;
+  background: #2299B5;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+  pointer-events: none;
+  border-radius: 50%;
+  -webkit-animation: animate 0.5s linear;
+          animation: animate 0.5s linear;
+  z-index: 0;
 }
-.hero-section-CTA .header__get-started.i-hover input:-ms-input-placeholder, .hero-section-CTA .header__get-started.i-focused input:-ms-input-placeholder {
-  color: #fff;
+
+@-webkit-keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }
-.hero-section-CTA .header__get-started.i-hover input::-ms-input-placeholder, .hero-section-CTA .header__get-started.i-focused input::-ms-input-placeholder {
-  color: #fff;
-}
-.hero-section-CTA .header__get-started.i-hover input::placeholder, .hero-section-CTA .header__get-started.i-focused input::placeholder {
-  color: #fff;
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
+  }
 }

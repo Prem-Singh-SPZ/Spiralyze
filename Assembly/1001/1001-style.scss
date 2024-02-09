@@ -1,10 +1,25 @@
 body.spz-1001 {
   #___gatsby {
     div[data-testid="hero-banner__container"] {
-      .e1i2i95w4 {
-        .e1i2i95w3 {
+      overflow: hidden;
+
+      .e1i2i95w4,
+      .elpe6hc3 {
+
+        .e1i2i95w3,
+        .e1mwpucm3 {
           display: none !important;
         }
+      }
+
+      @media  (max-width: 991.98px) {
+        .css-1taavcj.elpe6hc1 {
+          margin-bottom: 0;
+        }
+      }
+
+      div[data-testid="standard-promo__container"] {
+        overflow: hidden;
       }
     }
   }
@@ -13,57 +28,24 @@ body.spz-1001 {
 .hero-section-CTA {
   display: flex;
   flex-direction: column;
-  // justify-content: center;
-  // align-items: center;
-  max-width: 573px;
+  // max-width: 573px;
 
   @media (max-width: 1023.98px) {
-    max-width: 704px;
+    // max-width: 704px;
   }
 
   @media (max-width: 767.98px) {
-    padding: 0 24px;
+    padding: 0 12px;
     flex-wrap: wrap;
     max-width: 360px;
     margin: auto;
   }
 
-  .hsc-title {
-    color: #fff;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 600;
-    line-height: 24px;
-    margin-bottom: 16px;
-
-    @media (max-width: 767.98px) {
-      font-size: 16px;
-    }
+  .form-spz {
+    margin: auto;
   }
 
   .header__get-started {
-    height: 64px;
-
-    @media (max-width: 767.98px) {
-      // display: none;
-    }
-
-    &.mobile {
-      display: flex;
-
-      @media (min-width: 767.98px) {
-        display: none !important;
-      }
-
-      @media (max-width: 767.98px) {
-        margin: 16px 94px 0;
-
-        @media (max-width: 574.98px) {
-          margin: 16px 0px 0;
-        }
-      }
-    }
-
     display: flex;
     align-items: center;
     border-radius: 50px;
@@ -71,14 +53,45 @@ body.spz-1001 {
     padding: 0;
     margin-left: 0;
 
+    @media (max-width: 767.98px) {
+      display: block;
+    }
+
+
     @media (max-width: 1023.98px) {
       max-width: initial;
     }
 
     &.input-error {
       .spz-1001-email input {
-        border: 1px solid #E30004;
+        // border: 1px solid #E30004;
         color: #E30004;
+
+        &::-webkit-input-placeholder {
+          color: #E30004;
+        }
+
+        &:-moz-placeholder {
+          color: #E30004;
+          opacity: 1;
+        }
+
+        &::-moz-placeholder {
+          color: #E30004;
+          opacity: 1;
+        }
+
+        &:-ms-input-placeholder {
+          color: #E30004;
+        }
+
+        &::-ms-input-placeholder {
+          color: #E30004;
+        }
+
+        &::placeholder {
+          color: #E30004;
+        }
       }
 
       .mktoError {
@@ -110,14 +123,15 @@ body.spz-1001 {
 
 
         @media (max-width: 1023.98px) {
-          width: 704px;
-          background: #505e8e;
+          // width: 704px;
+          // background: #505e8e;
           // border: 1px solid rgba(255, 255, 255, 0.2);
         }
 
         @media (max-width: 767.98px) {
-          width: 312px;
+          width: 300px;
           // padding: 8px 135px 8px 27px;
+          border-radius: 4px;
         }
 
         &::-webkit-input-placeholder {
@@ -160,8 +174,8 @@ body.spz-1001 {
 
         @media (max-width: 767.98px) {
           left: 0;
-          min-width: 310px;
-          text-align: center;
+          position: relative;
+          // text-align: center;
         }
       }
     }
@@ -169,37 +183,46 @@ body.spz-1001 {
     .get-started-cta {
       height: 56px;
       border-radius: 0px 4px 4px 0px;
-    }
+      text-transform: unset;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 150%;
+      min-width: 180px;
 
-    &.i-hover,
-    &.i-focused {
-      input {
-        border: 1px solid #fff !important;
-
-        &::-webkit-input-placeholder {
-          color: #fff;
-        }
-
-        &:-moz-placeholder {
-          color: #fff;
-        }
-
-        &::-moz-placeholder {
-          color: #fff;
-        }
-
-        &:-ms-input-placeholder {
-          color: #fff;
-        }
-
-        &::-ms-input-placeholder {
-          color: #fff;
-        }
-
-        &::placeholder {
-          color: #fff;
-        }
+      @media (max-width: 767.98px) {
+        width: 300px;
+        margin-top: 16px;
+        border-radius: 4px;
       }
     }
+
+    .ripple-spz {
+      overflow: hidden;
+
+      span {
+        position: absolute;
+        background: #2299B5;
+        transform: translate(-50%, -50%);
+        pointer-events: none;
+        border-radius: 50%;
+        animation: animate 0.5s linear;
+        z-index: 0;
+      }
+    }
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0;
+    height: 0;
+    opacity: 0.5;
+  }
+
+  100% {
+    width: 300px;
+    height: 300px;
+    opacity: 0;
   }
 }
