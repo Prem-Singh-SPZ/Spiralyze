@@ -68,7 +68,10 @@ function appendEmailField(selector) {
     ) {
       document
         .querySelector(".hero-section-CTA")
-        .insertAdjacentHTML("afterend", `<div class="lean-more-div"><p>or learn more</p></div>`);
+        .insertAdjacentHTML(
+          "afterend",
+          `<div class="lean-more-div"><p>or <a href="javascript:void(0)" class="spz-redirectToNeos">learn more</a></p></div>`
+        );
     }
   }
 
@@ -81,6 +84,10 @@ window.addEventListener("click", function (e) {
     e.preventDefault();
     validateEmailField();
   }
+
+  if (e.target.classList.contains("spz-redirectToNeos")) {
+    this.document.querySelector('a[href="/neos"]').click();
+  }
 });
 
 function rippleEffect() {
@@ -89,8 +96,8 @@ function rippleEffect() {
     let y = e.clientY - e.target.offsetTop;
 
     let ripples = document.createElement("span");
-    ripples.style.left = x + "px";
-    ripples.style.top = y + "px";
+    ripples.style.left = 50 + "%";
+    ripples.style.top = 50 + "%";
     this.appendChild(ripples);
 
     setTimeout(() => {
