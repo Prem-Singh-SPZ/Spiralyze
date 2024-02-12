@@ -58,8 +58,6 @@ body {
       display: flex;
       flex-wrap: wrap;
       justify-content: space-between;
-      margin-top: 10px;
-      max-width: 1180px;
     }
     .list-grp-wrapper {
       .list-group {
@@ -115,8 +113,10 @@ body {
       position: relative;
       width: 527px;
       margin-top: 24.5px;
-      margin-bottom: 83px;
       margin-bottom: 94px;
+      @media (max-width: 991.98px) {
+        width: 100%;
+      }
     }
     .form-wrapper-spz {
       display: flex;
@@ -144,6 +144,8 @@ body {
         display: flex;
         flex-wrap: wrap;
         .form-columns-0 {
+          width: 100% !important;
+          max-width: 100% !important;
           .hs-richtext.hs-main-font-element {
             font-family: $titillium-font;
             font-size: 12px;
@@ -170,10 +172,14 @@ body {
           fieldset {
             display: flex;
             max-width: unset;
-            // width: calc(50% - 8px);
-            &:nth-child(1n + 8) {
+            @media (min-width: 767.98px) and (max-width: 991.98px) {
+              width: calc(50% - 10px);
+            }
+
+            @media (max-width: 767.98px) {
               width: 100%;
             }
+
             .input {
               margin-right: 0;
             }
@@ -182,6 +188,11 @@ body {
               width: 221.5px;
               max-width: 221.5px;
               margin-bottom: 10px;
+
+              @media (max-width: 991.98px) {
+                width: 100%;
+                max-width: 100%;
+              }
 
               display: flex;
               align-items: center;
@@ -259,6 +270,10 @@ body {
                 border-radius: 8px;
                 width: 221.5px;
                 max-width: 221.5px;
+                @media (max-width: 991.98px) {
+                  width: 100%;
+                  max-width: 100%;
+                }
               }
               label.hs-label-spz {
                 position: absolute;
@@ -373,20 +388,24 @@ body {
               }
               .hs-input[type="checkbox"] ~ span {
                 font-family: $titillium-font;
+                color: var(--Fonts-isPrimary, #000);
+                font-size: 12px;
                 font-style: normal;
-                font-weight: 500;
-                font-size: 14px;
+                font-weight: 400;
                 line-height: 20px;
-                color: #fff;
                 cursor: pointer;
+
+                .hs-form-required {
+                  display: none;
+                }
               }
               .hs-input[type="checkbox"] {
-                &:hover ~ span {
-                  color: #fff;
-                }
-                &:checked ~ span {
-                  font-weight: 600;
-                }
+                // &:hover ~ span {
+                //   color: #fff;
+                // }
+                // &:checked ~ span {
+                //   font-weight: 600;
+                // }
               }
 
               textarea {
@@ -436,99 +455,86 @@ body {
             //     }
             //   }
             // }
-            .field.hs-fieldtype-checkbox {
-              width: 100%;
+
+            &.form-columns-0.spz-custom-field {
               max-width: 100%;
-              margin-top: 20px;
-              margin-bottom: 0;
-              > legend.hs-field-desc {
-                font-family: $titillium-font;
-                font-size: 20px;
-                font-weight: 600;
-                line-height: 28px;
-                letter-spacing: 0em;
-                text-align: left;
-                color: #fff;
-                padding-left: 0;
-              }
-              > .input {
-                border: none;
+              .field.hs-fieldtype-booleancheckbox {
                 width: 100%;
                 max-width: 100%;
-                ul {
-                  list-style: none;
-                  padding: 0;
-                  margin: 15px 0 0;
+                margin-top: 20px;
+                margin-bottom: 0;
+                > .input {
+                  border: none;
+                  width: 100%;
+                  max-width: 100%;
+                  ul {
+                    list-style: none;
+                    padding: 0;
+                    margin: 15px 0 0;
 
-                  display: flex;
+                    display: flex;
 
-                  flex-wrap: wrap;
-                  li {
-                    min-width: 74px;
-                    font-family: $titillium-font;
-                    font-style: normal;
-                    font-weight: 400;
-                    font-size: 16px;
-                    line-height: 24px;
-                    color: #000;
-                    margin-right: 20px;
-                    margin-bottom: 9px;
-                    > label {
-                      position: relative;
-                      display: inline-block;
-                      span {
-                        &:before {
-                          content: url("https://res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_blank.svg");
-                          position: relative;
-                          top: 5px;
-                          left: 12px;
-                          display: inline-block;
-                          width: 20px;
-                          height: 20px;
-                          border-radius: 4px;
-                          cursor: pointer;
-                          -webkit-transform: translate(-100%, 0%);
-                          transform: translate(-100%, 0%);
-                          -webkit-transition: all 0.2s ease-in-out;
-                          transition: all 0.2s ease-in-out;
-                        }
-                      }
-                      [type="checkbox"] {
-                        position: absolute;
-                        opacity: 0;
-                        z-index: -2;
-                        &:hover ~ span {
+                    flex-wrap: wrap;
+                    li {
+                      min-width: 74px;
+                      font-family: $titillium-font;
+                      font-style: normal;
+                      font-weight: 400;
+                      font-size: 16px;
+                      line-height: 24px;
+                      color: #000;
+                      margin-right: 20px;
+                      margin-bottom: 9px;
+                      > label {
+                        position: relative;
+                        display: inline-block;
+                        span {
                           &:before {
-                            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_hover.svg");
+                            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_base.svg");
+                            position: relative;
+                            top: 5px;
+                            left: 12px;
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            -webkit-transform: translate(-100%, 0%);
+                            transform: translate(-100%, 0%);
+                            -webkit-transition: all 0.2s ease-in-out;
+                            transition: all 0.2s ease-in-out;
                           }
                         }
-                        &:checked ~ span {
-                          &:before {
-                            content: url("https://res.cloudinary.com/spiralyze/image/upload/v1694522988/drata/6012/checkbox_check.svg");
+                        [type="checkbox"] {
+                          position: absolute;
+                          opacity: 0;
+                          z-index: -2;
+                          // &:hover ~ span {
+                          //   &:before {
+                          //     content: url("https://res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_hover.svg");
+                          //   }
+                          // }
+                          &:checked ~ span {
+                            &:before {
+                              content: url("https://res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_checked.svg");
+                            }
                           }
                         }
-                      }
-                      > span {
-                        padding-left: 8px;
+                        > span {
+                          padding-left: 8px;
+                        }
                       }
                     }
                   }
                 }
               }
             }
-          }
-          fieldset.full-width {
-            width: 100%;
-            max-width: 100%;
-            .field {
+
+            .hs-dependent-field {
               width: 100%;
-              max-width: 100%;
-              .input {
-                width: 100%;
-                max-width: 100%;
-              }
             }
           }
+
           .hs-submit {
             width: 100%;
           }
@@ -583,37 +589,15 @@ body {
         form {
           .form-columns-0 {
             .hs-richtext.hs-main-font-element {
-              padding: 0 20px;
+              // padding: 0 20px;
               line-height: 20px;
               margin-bottom: 12px;
             }
           }
         }
       }
-      .container {
-        max-width: 360px;
-        padding: 0 16px;
-      }
-      .hero-right-section {
-        margin-bottom: 70px;
-      }
-      body {
-        .hero-section {
-          .form-wrapper-spz {
-            padding: 32px 16px 40px;
-          }
-        }
-        .hs-form-spz.form-step-2 {
-          .form-columns-0 {
-            .hs-richtext.hs-main-font-element {
-              margin-top: 20px;
-              padding: 0 4px;
-            }
-          }
-        }
-      }
     }
-    @media (max-width: 1280px) {
+    @media (min-width: 767.98px) and (max-width: 1280px) {
       .container {
         width: 100%;
         max-width: 704px;
@@ -642,7 +626,6 @@ body {
         .hero-container {
           position: relative;
           margin-top: 21px;
-
           flex-direction: column;
         }
         .list-grp-wrapper {
@@ -688,54 +671,13 @@ body {
       .form-wrapper-spz {
         .hbspt-form {
           form {
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
             justify-content: center;
             fieldset {
               flex-wrap: wrap;
-              -webkit-box-pack: center;
-              -ms-flex-pack: center;
               justify-content: center;
-              &:nth-child(2) {
-                align-items: center;
-              }
-              .field {
-                width: 288px !important;
-                margin-bottom: 10px;
-                .input {
-                  width: 288px;
-                }
-              }
-              .field.hs-fieldtype-checkbox {
-                margin-top: 21px;
-                > legend.hs-field-desc {
-                  font-size: 18px;
-                  line-height: 26px;
-                }
-                > .input {
-                  ul {
-                    margin-top: 14px;
-                    li {
-                      margin-bottom: 17.5px;
-                      &:nth-child(2) {
-                        margin-right: 0;
-                        min-width: initial;
-                      }
-                      &:nth-child(4) {
-                        min-width: 74px;
-                        margin-bottom: 8px;
-                      }
-                      &:nth-child(5) {
-                        margin-bottom: 8px;
-                      }
-                    }
-                  }
-                }
-              }
             }
             .actions {
               margin-top: 20px;
-              width: 288px;
               &:before {
                 top: 22px;
                 right: 73px;
@@ -751,7 +693,6 @@ body {
 
     @media screen and (max-width: 1280px) {
       .hero-content {
-        text-align: center;
         width: 100%;
         max-width: 704px;
         padding: 12px 0;
@@ -775,8 +716,6 @@ body {
       }
       .hero-container {
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
       }
       .list-grp-wrapper {
@@ -801,6 +740,32 @@ body {
       display: flex;
       align-items: center;
       justify-content: space-between;
+
+      @media (max-width: 767.98px) {
+        flex-wrap: wrap;
+        max-width: 328px;
+        margin: auto;
+      }
+
+      .brand-logo {
+        @media (max-width: 767.98px) {
+          &:nth-child(1) {
+            order: 2;
+          }
+          &:nth-child(2) {
+            order: 3;
+          }
+          &:nth-child(3) {
+            order: 1;
+          }
+          &:nth-child(4) {
+            order: 5;
+          }
+          &:nth-child(5) {
+            order: 4;
+          }
+        }
+      }
     }
   }
 
@@ -822,8 +787,10 @@ body {
       }
 
       .copy-wrapper {
-        min-width: 404px;
-        margin-right: 59px;
+        @media (min-width: 1023.98px) {
+          min-width: 404px;
+          margin-right: 59px;
+        }
 
         .title {
           color: #fff;
@@ -855,14 +822,18 @@ body {
         margin-bottom: -29px;
 
         @media (max-width: 1023.98px) {
-          height: 516px;
+          width: 100%;
+          height: auto;
           margin: 0;
         }
-  
 
         img {
           height: 100%;
           width: auto;
+          @media (max-width: 1023.98px) {
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }
@@ -886,7 +857,7 @@ body {
       padding: 80px 0;
 
       @media (max-width: 767.98px) {
-        max-width: 360px;
+        max-width: 328px;
         margin: auto;
         padding: 40px 0 48px;
       }
@@ -932,7 +903,7 @@ body {
         }
 
         @media (max-width: 767.98px) {
-          justify-content: center;
+          justify-content: flex-start;
         }
 
         .fc-card {
@@ -945,7 +916,7 @@ body {
           }
 
           @media (max-width: 767.98px) {
-            width: 320px;
+            min-width: 320px;
           }
 
           .card-img {
@@ -966,10 +937,6 @@ body {
                 rgba(104, 204, 232, 0) 100%
               ),
               #000;
-
-            @media (max-width: 767.98px) {
-              text-align: center;
-            }
 
             .fc-name {
               color: #f0eeee;
@@ -1024,7 +991,7 @@ body {
       padding: 80px 0;
 
       @media (max-width: 767.98px) {
-        max-width: 360px;
+        max-width: 328px;
         margin: auto;
         padding: 40px 0 48px;
       }
@@ -1070,7 +1037,7 @@ body {
         }
 
         @media (max-width: 767.98px) {
-          justify-content: center;
+          justify-content: flex-start;
         }
 
         .rr-card {
@@ -1080,12 +1047,12 @@ body {
           display: flex;
           flex-direction: column;
 
-          @media (min-width: 767.98px) and (max-width: 1023.98px) {
-            width: 290px;
-          }
+          // @media (min-width: 767.98px) and (max-width: 1023.98px) {
+          //   width: 290px;
+          // }
 
           @media (max-width: 767.98px) {
-            width: 320px;
+            min-width: 320px;
           }
 
           .card-img {
