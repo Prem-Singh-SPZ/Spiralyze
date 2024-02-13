@@ -1,24 +1,31 @@
 (function () {
   function createTest_2006() {
-    document.body.classList.add('spz-2009');
+    document.body.classList.add("spz-2009");
     waitForElm('ul[class*="Header-headerMenuCtas"]').then(function () {
-      waitForElm('.swiper.swiper-3d').then(function () {
+      waitForElm(".swiper.swiper-3d").then(function () {
         appendHomeHeroContent();
       });
 
       // Add class 'safari' on body if browser is safari
-      if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
-        document.body.classList.add('safari');
+      if (
+        navigator.userAgent.toLowerCase().indexOf("chrome/") == -1 &&
+        navigator.userAgent.toLowerCase().indexOf("safari/") > -1
+      ) {
+        document.body.classList.add("safari");
       }
     });
   }
 
   function appendHomeHeroContent() {
-    const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
+    const astUrl = "//res.cloudinary.com/spiralyze/image/upload";
     waitForElm('div[class*="HeroHomepage-hero"]').then(function () {
       // insert element anchors cta
-      if (document.querySelectorAll('.hero-banner-section').length == 0) {
-        document.querySelector('div[class*="HeroHomepage-hero"]').insertAdjacentHTML('afterend', `
+      if (document.querySelectorAll(".hero-banner-section").length == 0) {
+        document
+          .querySelector('div[class*="HeroHomepage-hero"]')
+          .insertAdjacentHTML(
+            "afterend",
+            `
         <div class="hero-banner-section">
           <div class="hero-banner-container container">
           <div class="hero-copy"> 
@@ -258,19 +265,22 @@
                 </div>
               </div>
             </div>
-          `);
+          `
+          );
 
-        waitForElm('.typing').then(function () {
+        waitForElm(".typing").then(function () {
           typingEffect();
         });
       }
     });
   }
 
-
   const words = [
-    "SOC2 Compliance", "ISO 27001 Certification", "HIPAA Compliance", "GDPR Compliance"
-  ]
+    "SOC2 Compliance",
+    "ISO 27001 Certification",
+    "HIPAA Compliance",
+    "GDPR Compliance",
+  ];
 
   // function for each character typing and deleting effect using javascript
   function typingEffect() {
@@ -287,7 +297,7 @@
       } else {
         setTimeout(erase, 2000);
       }
-    }
+    };
 
     const erase = () => {
       if (charIndex > 0) {
@@ -299,41 +309,67 @@
         if (wordIndex >= words.length) wordIndex = 0;
         setTimeout(type, 2000);
       }
-    }
+    };
 
     setTimeout(type, 200);
   }
 
   function demoChecked() {
-    document.body.classList.add('spz-2009');
+    document.body.classList.add("spz-2009");
 
-    waitForElm('.spz-2009 .hs_demo_product_of_interest .input .MuiFormControlLabel-label').then(function () {
-
-
-      if (document.querySelector('.MuiFormControlLabel-label')) {
-        document.querySelectorAll('.hs_demo_product_of_interest .input .hs-form-checkbox-display').forEach(function (checkbox) {
-          let checkValue = checkbox.querySelector('span').textContent;
-          let isCookiePresent = getCookie(checkValue);
+    waitForElm(
+      ".spz-2009 .hs_demo_product_of_interest .input .MuiFormControlLabel-label"
+    ).then(function () {
+      if (document.querySelector(".MuiFormControlLabel-label")) {
+        document
+          .querySelectorAll(
+            ".hs_demo_product_of_interest .input .hs-form-checkbox-display"
+          )
+          .forEach(function (checkbox) {
+            let checkValue = checkbox.querySelector("span").textContent;
+            let isCookiePresent = getCookie(checkValue);
 
             if (isCookiePresent) {
-              checkbox.querySelector('input').checked = true;
+              checkbox.querySelector("input").checked = true;
 
-              let secondCheck = checkbox.querySelector('input').getAttribute('id');
+              let secondCheck = checkbox
+                .querySelector("input")
+                .getAttribute("id");
 
-              document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + '#' + secondCheck).checked = true;
-              document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + '#' + secondCheck).closest('label').click();
+              document.querySelector(
+                ".MuiFormControlLabel-labelPlacementEnd " + "#" + secondCheck
+              ).checked = true;
+              document
+                .querySelector(
+                  ".MuiFormControlLabel-labelPlacementEnd " + "#" + secondCheck
+                )
+                .closest("label")
+                .click();
 
               //delete cookie
               deleteCookie(checkValue);
             }
-        });
-
-        // if (document.querySelector('.spz-2009 main') && document.querySelectorAll('.spz-2009 main input[name="cro_test_1"]').length == 0) {
-        //   document.querySelector('.spz-2009 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_1" value="#2006_Hero_Redesign">'); s
-        //   document.querySelector('.spz-2009 main').insertAdjacentHTML("beforeend", '<input type="hidden" name="cro_test_2" value="Variant">');
-        // }
+          });
       }
+
+      setTimeout(() => {
+        submitTestDetails("#2009_variant");
+      }, 2000);
     });
+  }
+
+  //Passing test details to hidden fields
+  function submitTestDetails(cro_test_2) {
+    if (
+      document.querySelector(
+        "form.hs-form-private .hs_cro_test_2 .input .hs-input"
+      )
+    ) {
+      // document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', cro_test_1);
+      document
+        .querySelector("form.hs-form-private .hs_cro_test_2 .input .hs-input")
+        .setAttribute("value", cro_test_2);
+    }
   }
 
   function removeTest() {
@@ -343,23 +379,23 @@
   history.pushState = (function (f) {
     return function pushState() {
       var ret = f.apply(this, arguments);
-      window.dispatchEvent(new Event('pushstate'));
-      window.dispatchEvent(new Event('locationchange'));
+      window.dispatchEvent(new Event("pushstate"));
+      window.dispatchEvent(new Event("locationchange"));
       return ret;
     };
   })(history.pushState);
   history.replaceState = (function (f) {
     return function replaceState() {
       var ret = f.apply(this, arguments);
-      window.dispatchEvent(new Event('replacestate'));
-      window.dispatchEvent(new Event('locationchange'));
+      window.dispatchEvent(new Event("replacestate"));
+      window.dispatchEvent(new Event("locationchange"));
       return ret;
     };
   })(history.replaceState);
-  window.addEventListener('popstate', function () {
-    window.dispatchEvent(new Event('locationchange'));
+  window.addEventListener("popstate", function () {
+    window.dispatchEvent(new Event("locationchange"));
   });
-  window.addEventListener('locationchange', function () {
+  window.addEventListener("locationchange", function () {
     removeTest();
 
     url = location.href;
@@ -369,30 +405,28 @@
   urlNewCheck(url);
 
   function urlNewCheck(url) {
-    var targetTestURL = 'https://drata.com/';
+    var targetTestURL = "https://drata.com/";
     if (isSameUrl(url, targetTestURL, true)) {
       createTest_2006();
-    }
-    else if (window.location.pathname.indexOf("/demo") > -1) {
+    } else if (window.location.pathname.indexOf("/demo") > -1) {
       demoChecked();
-    }
-    else {
+    } else {
       removeTest();
     }
   }
 
   // isSameUrl Parameters
   function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
-    currentUrl = currentUrl.includes("#") ?
-      currentUrl.slice(0, currentUrl.indexOf("#")) :
-      currentUrl;
-    specifiedUrl = specifiedUrl.includes("#") ?
-      specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
-      specifiedUrl;
+    currentUrl = currentUrl.includes("#")
+      ? currentUrl.slice(0, currentUrl.indexOf("#"))
+      : currentUrl;
+    specifiedUrl = specifiedUrl.includes("#")
+      ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
+      : specifiedUrl;
     if (includeQueryParams)
-      currentUrl = currentUrl.includes("?") ?
-        currentUrl.slice(0, currentUrl.indexOf("?")) :
-        currentUrl;
+      currentUrl = currentUrl.includes("?")
+        ? currentUrl.slice(0, currentUrl.indexOf("?"))
+        : currentUrl;
     if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
       return true;
     return false;
@@ -409,7 +443,12 @@
           observer.disconnect();
         }
       });
-      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+      observer.observe(document, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
     });
   }
 
@@ -422,10 +461,10 @@
   function getCookie(cname) {
     var name = cname + "=";
     var decodedCookie = decodeURIComponent(document.cookie);
-    var ca = decodedCookie.split(';');
+    var ca = decodedCookie.split(";");
     for (var i = 0; i < ca.length; i++) {
       var c = ca[i];
-      while (c.charAt(0) == ' ') {
+      while (c.charAt(0) == " ") {
         c = c.substring(1);
       }
       if (c.indexOf(name) == 0) {
@@ -437,22 +476,21 @@
 
   //delete cookie using js
   function deleteCookie(cname) {
-    document.cookie = cname + '=;expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    document.cookie = cname + "=;expires=Thu, 01 Jan 1970 00:00:01 GMT;";
   }
 
   //window onclick check target class
   window.onclick = function (event) {
     if (event.target.className == "spz-input") {
       if (event.target.checked) {
-        event.target.closest('.custom-check').classList.add('checked');
-      }
-      else {
-        event.target.closest('.custom-check').classList.remove('checked');
+        event.target.closest(".custom-check").classList.add("checked");
+      } else {
+        event.target.closest(".custom-check").classList.remove("checked");
       }
     }
 
     if (event.target.className == "get-started-cta") {
-      document.querySelectorAll('.checkboxes input').forEach(function (elem) {
+      document.querySelectorAll(".checkboxes input").forEach(function (elem) {
         if (elem.checked) {
           setCookie(elem.value, 1);
         }
@@ -460,5 +498,7 @@
 
       document.querySelector('a[href="/demo"]').click();
     }
-  }
+  };
 })();
+
+
