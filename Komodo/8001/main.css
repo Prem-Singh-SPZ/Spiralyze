@@ -16,6 +16,11 @@ body .container {
   position: relative;
   margin: 0 auto;
 }
+@media (max-width: 767.98px) {
+  body .container {
+    padding: 0 16px;
+  }
+}
 body .hero-section {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8001/hero_background_1440.webp) no-repeat;
   background-size: cover;
@@ -35,6 +40,7 @@ body .hero-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/v1707404697/komodohealth/8001/hero_background_360.webp) no-repeat;
     background-size: cover;
     background-position: top center;
+    padding-top: 0;
   }
 }
 body .hero-section .hero-content {
@@ -100,6 +106,13 @@ body .hero-section .hero-content .hc-title {
   body .hero-section .hero-content .hc-title {
     text-align: center;
     padding: 8px 32px 0;
+  }
+}
+@media (max-width: 767.98px) {
+  body .hero-section .hero-content .hc-title {
+    font-size: 32px !important;
+    line-height: 40px !important;
+    margin: 0 0 22px;
   }
 }
 body .hero-section .hero-container {
@@ -188,6 +201,11 @@ body .hero-section .form-wrapper-spz {
   z-index: 1;
   border-radius: var(--Radius-Default, 0px);
   background: var(--Surface-Main, #fff);
+}
+@media (max-width: 767.98px) {
+  body .hero-section .form-wrapper-spz {
+    padding: 24px 16px 32px;
+  }
 }
 body .hero-section .form-wrapper-spz .form-title-spz {
   font-family: Titillium Web, sans-serif;
@@ -683,6 +701,11 @@ body .hero-section .form-wrapper-spz .hbspt-form form .actions .hs-button:active
   color: #fff !important;
   background: #4a4a4a !important;
 }
+@media (max-width: 767.98px) {
+  body .hero-section .form-wrapper-spz .hbspt-form form .actions .hs-button {
+    margin: -4px 0 0 !important;
+  }
+}
 body .hero-section .dis-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -710,13 +733,14 @@ body .hero-section .align-items-center {
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
+    padding: 0;
   }
 }
 @media screen and (max-width: 767.98px) {
   body .hero-section .break-desk {
     display: none;
   }
-  body .hero-section .hero-section .hero-container {
+  body .hero-section .hero-container {
     position: relative;
     margin-top: 21px;
     -webkit-box-orient: vertical;
@@ -724,25 +748,25 @@ body .hero-section .align-items-center {
         -ms-flex-direction: column;
             flex-direction: column;
   }
-  body .hero-section .hero-section .list-grp-wrapper .list-group {
+  body .hero-section .list-grp-wrapper .list-group {
     margin-bottom: 0;
   }
-  body .hero-section .hero-section .list-grp-wrapper .list-group .list-item {
+  body .hero-section .list-grp-wrapper .list-group .list-item {
     margin-bottom: 16px;
   }
-  body .hero-section .hero-section .list-grp-wrapper .list-group .list-item .ls-title {
+  body .hero-section .list-grp-wrapper .list-group .list-item .ls-title {
     font-size: 16px;
     line-height: 24px;
     margin-bottom: 7px;
   }
-  body .hero-section .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
+  body .hero-section .list-grp-wrapper .list-group .list-item .ls-desc {
     font-size: 16px;
     line-height: 24px;
   }
-  body .hero-section .hero-section .list-grp-wrapper .list-group .list-item:before {
+  body .hero-section .list-grp-wrapper .list-group .list-item:before {
     top: 1px;
   }
-  body .hero-section .hero-section .list-grp-wrapper .list-group .list-item:last-child {
+  body .hero-section .list-grp-wrapper .list-group .list-item:last-child {
     margin-bottom: 0;
   }
   body .hero-section .hero-right-section {
@@ -772,9 +796,6 @@ body .hero-section .align-items-center {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-  }
-  body .hero-section .form-wrapper-spz .hbspt-form form .actions {
-    margin-top: 20px;
   }
   body .hero-section .form-wrapper-spz .hbspt-form form .actions:before {
     top: 22px;
@@ -821,39 +842,22 @@ body .brand-partner-section .brand-wrapper {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
-@media (max-width: 767.98px) {
-  body .brand-partner-section .brand-wrapper {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    max-width: 328px;
-    margin: auto;
+body .brand-partner-section .brand-wrapper .brand-logo {
+  min-height: 40px;
+  width: 100%;
+}
+@media (max-width: 1023.98px) {
+  body .brand-partner-section .brand-wrapper .brand-logo {
+    background: url(https://www.komodohealth.com/hubfs/Imported%20images/social_proof_1440.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 @media (max-width: 767.98px) {
-  body .brand-partner-section .brand-wrapper .brand-logo:nth-child(1) {
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
-  }
-  body .brand-partner-section .brand-wrapper .brand-logo:nth-child(2) {
-    -webkit-box-ordinal-group: 4;
-        -ms-flex-order: 3;
-            order: 3;
-  }
-  body .brand-partner-section .brand-wrapper .brand-logo:nth-child(3) {
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
-  }
-  body .brand-partner-section .brand-wrapper .brand-logo:nth-child(4) {
-    -webkit-box-ordinal-group: 6;
-        -ms-flex-order: 5;
-            order: 5;
-  }
-  body .brand-partner-section .brand-wrapper .brand-logo:nth-child(5) {
-    -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-            order: 4;
+  body .brand-partner-section .brand-wrapper .brand-logo {
+    background: url(https://www.komodohealth.com/hubfs/Imported%20images/social_proof_1440.svg) no-repeat;
+    background-size: cover;
+    background-position: center;
   }
 }
 body .img-in-right-scetion {
@@ -863,7 +867,12 @@ body .img-in-right-scetion {
 }
 @media (max-width: 1023.98px) {
   body .img-in-right-scetion {
-    padding: 40px 0;
+    padding: 62px 0 54px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .img-in-right-scetion {
+    padding: 48px 0 38px;
   }
 }
 body .img-in-right-scetion .full-container {
@@ -888,6 +897,11 @@ body .img-in-right-scetion .full-container {
     padding: 0;
   }
 }
+@media (max-width: 767.98px) {
+  body .img-in-right-scetion .full-container {
+    max-width: 328px;
+  }
+}
 @media (min-width: 1023.98px) {
   body .img-in-right-scetion .full-container .copy-wrapper {
     min-width: 404px;
@@ -903,13 +917,16 @@ body .img-in-right-scetion .full-container .copy-wrapper .title {
   line-height: 56px;
   margin-bottom: 24px;
 }
-body .img-in-right-scetion .full-container .copy-wrapper .copy-content ul li {
-  color: #fff;
-  font-family: Titillium Web, sans-serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
+@media (max-width: 767.98px) {
+  body .img-in-right-scetion .full-container .copy-wrapper .title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+@media (max-width: 1023.98px) {
+  body .img-in-right-scetion .full-container .copy-wrapper .copy-content {
+    padding-bottom: 24px;
+  }
 }
 body .img-in-right-scetion .full-container .img-wrapper {
   height: 720px;
@@ -944,11 +961,16 @@ body .feature-section-spz {
 body .feature-section-spz .feature-cards {
   padding: 80px 0 96px;
 }
+@media (max-width: 1023.98px) {
+  body .feature-section-spz .feature-cards {
+    padding: 65px 0 78px;
+  }
+}
 @media (max-width: 767.98px) {
   body .feature-section-spz .feature-cards {
-    max-width: 328px;
+    max-width: 100%;
     margin: auto;
-    padding: 40px 0 48px;
+    padding: 36px 0 48px;
   }
 }
 body .feature-section-spz .feature-cards .fc-title-container {
@@ -979,7 +1001,7 @@ body .feature-section-spz .feature-cards .fc-title-container .fc-title {
     text-align: center;
     font-size: 40px !important;
     line-height: 48px !important;
-    margin: 0 0 32px;
+    margin: 0 0 36px;
   }
 }
 body .feature-section-spz .feature-cards .fc-card-container {
@@ -1015,6 +1037,11 @@ body .feature-section-spz .feature-cards .fc-card-container .fc-card {
   height: 442px;
   margin: 0 12px;
 }
+@media (max-width: 767.98px) {
+  body .feature-section-spz .feature-cards .fc-card-container .fc-card {
+    height: 462px;
+  }
+}
 @media (min-width: 1023.98px) {
   body .feature-section-spz .feature-cards .fc-card-container .fc-card:first-child {
     margin-left: 0;
@@ -1026,11 +1053,17 @@ body .feature-section-spz .feature-cards .fc-card-container .fc-card {
 @media (max-width: 767.98px) {
   body .feature-section-spz .feature-cards .fc-card-container .fc-card {
     min-width: 320px;
+    margin: 0 6px;
   }
 }
 body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-img {
   width: 100%;
   height: 320px;
+}
+@media (max-width: 767.98px) {
+  body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-img {
+    height: 340px;
+  }
 }
 body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-img img {
   width: 100%;
@@ -1045,7 +1078,7 @@ body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-conte
 body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content .fc-name {
   color: #f0eeee;
   font-family: Titillium Web, sans-serif;
-  font-size: 18px;
+  font-size: 18px !important;
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
@@ -1054,7 +1087,7 @@ body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-conte
 body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content .fc-position {
   color: #f0eeee;
   font-family: Titillium Web, sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -1063,7 +1096,7 @@ body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-conte
 body .feature-section-spz .feature-cards .fc-card-container .fc-card .card-content .fc-company {
   color: #68cce8;
   font-family: Titillium Web, sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
@@ -1082,11 +1115,16 @@ body .related-resources-section {
 body .related-resources-section .related-resources {
   padding: 80px 0;
 }
+@media (max-width: 1023.98px) {
+  body .related-resources-section .related-resources {
+    padding: 65px 0 78px;
+  }
+}
 @media (max-width: 767.98px) {
   body .related-resources-section .related-resources {
-    max-width: 328px;
+    max-width: 100%;
     margin: auto;
-    padding: 40px 0 48px;
+    padding: 36px 0 48px;
   }
 }
 body .related-resources-section .related-resources .rr-title-container .rr-title {
@@ -1109,7 +1147,7 @@ body .related-resources-section .related-resources .rr-title-container .rr-title
     text-align: center;
     font-size: 40px !important;
     line-height: 48px !important;
-    margin: 0 0 32px;
+    margin: 0 0 36px;
   }
 }
 body .related-resources-section .related-resources .rr-card-container {
@@ -1163,6 +1201,7 @@ body .related-resources-section .related-resources .rr-card-container .rr-card {
 @media (max-width: 767.98px) {
   body .related-resources-section .related-resources .rr-card-container .rr-card {
     min-width: 320px;
+    margin: 0 6px;
   }
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-img {
@@ -1253,7 +1292,7 @@ body .related-resources-section .related-resources .rr-card-container .rr-card .
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-content .copy .rr-title {
   color: #fff;
   font-family: Titillium Web, sans-serif;
-  font-size: 18px;
+  font-size: 18px !important;
   font-style: normal;
   font-weight: 600;
   line-height: 26px;
@@ -1269,18 +1308,13 @@ body .related-resources-section .related-resources .rr-card-container .rr-card .
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-content .copy .rr-anchor {
   color: #68cce8;
   font-family: Titillium Web, sans-serif;
-  font-size: 12px;
+  font-size: 12px !important;
   font-style: normal;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.6px;
   text-transform: uppercase;
   margin: 8px 4px;
-}
-body .copyright-footer-section {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/v1707404860/komodohealth/8001/background_8.webp) no-repeat;
-  background-size: cover;
-  background-image: top center;
 }
 body .copyright-footer-section .copyright-footer .footer-copy {
   color: #fff;
@@ -1291,6 +1325,12 @@ body .copyright-footer-section .copyright-footer .footer-copy {
   line-height: 24px;
   text-align: center;
   padding: 16px;
+}
+@media (max-width: 767.98px) {
+  body .copyright-footer-section .copyright-footer .footer-copy {
+    font-size: 12px;
+    line-height: 20px;
+  }
 }
 body footer.footer {
   display: none !important;

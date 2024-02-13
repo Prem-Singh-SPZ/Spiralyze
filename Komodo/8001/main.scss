@@ -23,6 +23,10 @@ body {
     max-width: 1180px;
     position: relative;
     margin: 0 auto;
+
+    @media (max-width: 767.98px) {
+      padding: 0 16px;
+    }
   }
   .hero-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8001/hero_background_1440.webp)
@@ -43,6 +47,7 @@ body {
         no-repeat;
       background-size: cover;
       background-position: top center;
+      padding-top: 0;
     }
 
     .hero-content {
@@ -108,6 +113,12 @@ body {
         @media (min-width: 767.98px) and (max-width: 1023.98px) {
           text-align: center;
           padding: 8px 32px 0;
+        }
+
+        @media (max-width: 767.98px) {
+          font-size: 32px !important;
+          line-height: 40px !important;
+          margin: 0 0 22px;
         }
       }
     }
@@ -194,6 +205,10 @@ body {
       z-index: 1;
       border-radius: var(--Radius-Default, 0px);
       background: var(--Surface-Main, #fff);
+
+      @media (max-width: 767.98px) {
+        padding: 24px 16px 32px;
+      }
 
       .form-title-spz {
         font-family: $titillium-font;
@@ -702,6 +717,10 @@ body {
                 color: #fff !important;
                 background: #4a4a4a !important;
               }
+
+              @media (max-width: 767.98px) {
+                margin: -4px 0 0 !important;
+              }
             }
           }
         }
@@ -735,38 +754,37 @@ body {
       }
       .hero-container {
         flex-direction: column;
+        padding: 0;
       }
     }
     @media screen and (max-width: 767.98px) {
       .break-desk {
         display: none;
       }
-      .hero-section {
-        .hero-container {
-          position: relative;
-          margin-top: 21px;
-          flex-direction: column;
-        }
-        .list-grp-wrapper {
-          .list-group {
-            margin-bottom: 0;
-            .list-item {
-              margin-bottom: 16px;
-              .ls-title {
-                font-size: 16px;
-                line-height: 24px;
-                margin-bottom: 7px;
-              }
-              .ls-desc {
-                font-size: 16px;
-                line-height: 24px;
-              }
-              &:before {
-                top: 1px;
-              }
-              &:last-child {
-                margin-bottom: 0;
-              }
+      .hero-container {
+        position: relative;
+        margin-top: 21px;
+        flex-direction: column;
+      }
+      .list-grp-wrapper {
+        .list-group {
+          margin-bottom: 0;
+          .list-item {
+            margin-bottom: 16px;
+            .ls-title {
+              font-size: 16px;
+              line-height: 24px;
+              margin-bottom: 7px;
+            }
+            .ls-desc {
+              font-size: 16px;
+              line-height: 24px;
+            }
+            &:before {
+              top: 1px;
+            }
+            &:last-child {
+              margin-bottom: 0;
             }
           }
         }
@@ -796,7 +814,7 @@ body {
               justify-content: center;
             }
             .actions {
-              margin-top: 20px;
+              // margin-top: 20px;
               &:before {
                 top: 22px;
                 right: 73px;
@@ -843,29 +861,20 @@ body {
       align-items: center;
       justify-content: space-between;
 
-      @media (max-width: 767.98px) {
-        flex-wrap: wrap;
-        max-width: 328px;
-        margin: auto;
-      }
-
       .brand-logo {
+        min-height: 40px;
+        width: 100%;
+        @media (max-width: 1023.98px) {
+          background: url(https://www.komodohealth.com/hubfs/Imported%20images/social_proof_1440.svg)
+            no-repeat;
+          background-size: cover;
+          background-position: center;
+        }
         @media (max-width: 767.98px) {
-          &:nth-child(1) {
-            order: 2;
-          }
-          &:nth-child(2) {
-            order: 3;
-          }
-          &:nth-child(3) {
-            order: 1;
-          }
-          &:nth-child(4) {
-            order: 5;
-          }
-          &:nth-child(5) {
-            order: 4;
-          }
+          background: url(https://www.komodohealth.com/hubfs/Imported%20images/social_proof_1440.svg)
+            no-repeat;
+          background-size: cover;
+          background-position: center;
         }
       }
     }
@@ -880,7 +889,10 @@ body {
     );
     overflow: hidden;
     @media (max-width: 1023.98px) {
-      padding: 40px 0;
+      padding: 62px 0 54px;
+    }
+    @media (max-width: 767.98px) {
+      padding: 48px 0 38px;
     }
 
     .full-container {
@@ -893,6 +905,9 @@ body {
         max-width: 704px;
         margin: auto;
         padding: 0;
+      }
+      @media (max-width: 767.98px) {
+        max-width: 328px;
       }
 
       .copy-wrapper {
@@ -909,18 +924,16 @@ body {
           font-weight: 400;
           line-height: 56px;
           margin-bottom: 24px;
+
+          @media (max-width: 767.98px) {
+            font-size: 40px;
+            line-height: 48px;
+          }
         }
 
         .copy-content {
-          ul {
-            li {
-              color: #fff;
-              font-family: $titillium-font;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 24px;
-            }
+          @media (max-width: 1023.98px) {
+            padding-bottom: 24px;
           }
         }
       }
@@ -965,15 +978,19 @@ body {
     .feature-cards {
       padding: 80px 0 96px;
 
+      @media (max-width: 1023.98px) {
+        padding: 65px 0 78px;
+      }
+
       @media (max-width: 767.98px) {
-        max-width: 328px;
+        max-width: 100%;
         margin: auto;
-        padding: 40px 0 48px;
+        padding: 36px 0 48px;
       }
 
       .fc-title-container {
         margin-bottom: 48px;
-  
+
         @media (max-width: 767.98px) {
           margin-bottom: 32px;
         }
@@ -996,7 +1013,7 @@ body {
             text-align: center;
             font-size: 40px !important;
             line-height: 48px !important;
-            margin: 0 0 32px;
+            margin: 0 0 36px;
           }
         }
       }
@@ -1025,6 +1042,10 @@ body {
           height: 442px;
           margin: 0 12px;
 
+          @media (max-width: 767.98px) {
+            height: 462px;
+          }
+
           @media (min-width: 1023.98px) {
             &:first-child {
               margin-left: 0;
@@ -1040,11 +1061,17 @@ body {
 
           @media (max-width: 767.98px) {
             min-width: 320px;
+            margin: 0 6px;
           }
 
           .card-img {
             width: 100%;
             height: 320px;
+
+            @media (max-width: 767.98px) {
+              height: 340px;
+            }
+
             img {
               width: 100%;
               height: 100%;
@@ -1064,7 +1091,7 @@ body {
             .fc-name {
               color: #f0eeee;
               font-family: $titillium-font;
-              font-size: 18px;
+              font-size: 18px !important;
               font-style: normal;
               font-weight: 600;
               line-height: 26px;
@@ -1073,7 +1100,7 @@ body {
             .fc-position {
               color: #f0eeee;
               font-family: $titillium-font;
-              font-size: 16px;
+              font-size: 16px !important;
               font-style: normal;
               font-weight: 400;
               line-height: 24px;
@@ -1082,7 +1109,7 @@ body {
             .fc-company {
               color: #68cce8;
               font-family: $titillium-font;
-              font-size: 16px;
+              font-size: 16px !important;
               font-style: normal;
               font-weight: 400;
               line-height: 24px;
@@ -1113,10 +1140,14 @@ body {
     .related-resources {
       padding: 80px 0;
 
+      @media (max-width: 1023.98px) {
+        padding: 65px 0 78px;
+      }
+
       @media (max-width: 767.98px) {
-        max-width: 328px;
+        max-width: 100%;
         margin: auto;
-        padding: 40px 0 48px;
+        padding: 36px 0 48px;
       }
 
       .rr-title-container {
@@ -1138,7 +1169,7 @@ body {
             text-align: center;
             font-size: 40px !important;
             line-height: 48px !important;
-            margin: 0 0 32px;
+            margin: 0 0 36px;
           }
         }
       }
@@ -1184,6 +1215,7 @@ body {
 
           @media (max-width: 767.98px) {
             min-width: 320px;
+            margin: 0 6px;
           }
 
           .card-img {
@@ -1291,7 +1323,7 @@ body {
               .rr-title {
                 color: #fff;
                 font-family: $titillium-font;
-                font-size: 18px;
+                font-size: 18px !important;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 26px;
@@ -1308,7 +1340,7 @@ body {
               .rr-anchor {
                 color: #68cce8;
                 font-family: $titillium-font;
-                font-size: 12px;
+                font-size: 12px !important;
                 font-style: normal;
                 font-weight: 700;
                 line-height: 20px;
@@ -1324,11 +1356,6 @@ body {
   }
 
   .copyright-footer-section {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/v1707404860/komodohealth/8001/background_8.webp)
-      no-repeat;
-    background-size: cover;
-    background-image: top center;
-
     .copyright-footer {
       .footer-copy {
         color: #fff;
@@ -1339,6 +1366,11 @@ body {
         line-height: 24px;
         text-align: center;
         padding: 16px;
+
+        @media (max-width: 767.98px) {
+          font-size: 12px;
+          line-height: 20px;
+        }
       }
     }
   }
