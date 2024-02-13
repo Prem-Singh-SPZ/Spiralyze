@@ -53,9 +53,9 @@ function appendFavicon() {
   document.querySelector("head").insertAdjacentHTML(
     "afterbegin",
     `
-          <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg" as="image">
-          <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_hover.svg" as="image">
-          <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694522988/drata/6012/checkbox_check.svg" as="image">`
+          <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707797422/KomodoHealth/8001/src/Checkbox_base.svg" as="image">
+          <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_checked.svg" as="image">
+          <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707797996/KomodoHealth/8001/src/Arrow_Pointing_Above.svg" as="image">`
   );
 }
 

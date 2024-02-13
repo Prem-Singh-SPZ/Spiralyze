@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Graphik";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.eot");
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.eot?#iefix") format("embedded-opentype"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.woff2") format("woff2"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.woff") format("woff"), url("https://res.cloudinary.com/spiralyze/raw/upload/v1697448600/KomodoHealth/1003/Graphik-Semibold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
 body {
   margin: 0;
   padding: 0;
@@ -12,6 +20,20 @@ body .hero-section {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8001/hero_background_1440.webp) no-repeat;
   background-size: cover;
   background-position: top center;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body .hero-section {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8001/hero_background_768.webp) no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
+}
+@media (max-width: 767.98px) {
+  body .hero-section {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1707404697/komodohealth/8001/hero_background_360.webp) no-repeat;
+    background-size: cover;
+    background-position: top center;
+  }
 }
 body .hero-section .hero-content {
   max-width: 560px;
@@ -223,21 +245,21 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field {
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-error-msgs.inputs-list {
   position: absolute;
   display: inline-block;
-  font-family: inherit;
+  font-family: Graphik;
+  font-size: 12px;
   font-style: normal;
-  font-weight: 600;
-  font-size: 10px;
-  line-height: 16px;
-  background-color: #d53641;
-  border-radius: 4px;
+  font-weight: 400;
+  line-height: 16px; /* 133.333% */
+  letter-spacing: -0.192px;
+  background: var(--Surface-Error, #dc0000);
+  -webkit-box-shadow: 0px 10px 40px -5px rgba(129, 24, 24, 0.16), 0px 2px 8px -5px rgba(129, 24, 24, 0.24);
+          box-shadow: 0px 10px 40px -5px rgba(129, 24, 24, 0.16), 0px 2px 8px -5px rgba(129, 24, 24, 0.24);
   color: #fff;
   list-style: none;
   text-align: center;
-  top: calc(100% + 10px);
+  top: calc(100% + 8px);
   margin: 0;
-  padding: 8px 13px;
-  -webkit-box-shadow: 0px 2px 8px -5px rgba(129, 24, 24, 0.24), 0px 10px 40px -5px rgba(129, 24, 24, 0.16);
-          box-shadow: 0px 2px 8px -5px rgba(129, 24, 24, 0.24), 0px 10px 40px -5px rgba(129, 24, 24, 0.16);
+  padding: 8px 12px;
   z-index: 3;
 }
 @media (max-width: 767.98px) {
@@ -250,7 +272,7 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-error-
   position: absolute;
   bottom: calc(100% - 1.5px);
   left: calc(50% - 8px);
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1682678739/drata/6002/error-arrow.svg") no-repeat;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/v1707797996/KomodoHealth/8001/src/Arrow_Pointing_Above.svg") no-repeat;
   width: 16px;
   height: 8px;
   z-index: 2;
@@ -264,13 +286,6 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-error-
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-error-msgs.inputs-list label > a {
   cursor: pointer;
-}
-body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs_error_rollup {
-  text-align: center;
-}
-body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs_error_rollup .hs-error-msgs {
-  position: relative;
-  display: inline-block !important;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field > label {
   display: none;
@@ -471,13 +486,13 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.sp
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox {
   width: 100%;
   max-width: 100%;
-  margin-top: 20px;
   margin-bottom: 0;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox > .input {
   border: none;
   width: 100%;
   max-width: 100%;
+  margin: 0;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox > .input ul {
   list-style: none;
@@ -497,15 +512,13 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.sp
   font-size: 16px;
   line-height: 24px;
   color: #000;
-  margin-right: 20px;
-  margin-bottom: 9px;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox > .input ul li > label {
   position: relative;
   display: inline-block;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox > .input ul li > label span:before {
-  content: url("https://res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_base.svg");
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1707797422/KomodoHealth/8001/src/Checkbox_base.svg");
   position: relative;
   top: 5px;
   left: 12px;
@@ -525,13 +538,56 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.sp
   z-index: -2;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox > .input ul li > label [type=checkbox]:checked ~ span:before {
-  content: url("https://res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_checked.svg");
+  content: url("//res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_checked.svg");
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox > .input ul li > label > span {
   padding-left: 8px;
 }
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox .no-list.hs-error-msgs.inputs-list {
+  display: inline-block !important;
+  margin-top: 0;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox .no-list.hs-error-msgs.inputs-list::before {
+  content: "";
+  display: block;
+  position: absolute;
+  bottom: calc(100% - 1.5px);
+  left: calc(50% - 8px);
+  background: url("//res.cloudinary.com/spiralyze/image/upload/v1707797996/KomodoHealth/8001/src/Arrow_Pointing_Above.svg") no-repeat;
+  width: 16px;
+  height: 8px;
+  z-index: 2;
+}
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .hs-dependent-field {
   width: 100%;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form .hs_error_rollup {
+  text-align: center;
+  width: 100%;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form .hs_error_rollup ul.no-list.hs-error-msgs {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form .hs_error_rollup .hs-error-msgs {
+  position: relative;
+  display: inline-block !important;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form .hs_error_rollup .hs-main-font-element {
+  color: #dc0000;
+  text-align: center;
+  padding: 8px 0;
+  display: block;
+  margin: 0px;
+  line-height: 16px !important;
+  margin: -16px 0px 0px;
+  float: left;
+  width: 100%;
+  clear: both;
+  font-family: Titillium Web, sans-serif;
+  font-size: 14px !important;
+  font-weight: 400;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form .hs-submit {
   width: 100%;
@@ -540,7 +596,6 @@ body .hero-section .form-wrapper-spz .hbspt-form form .actions {
   position: relative;
   max-width: initial;
   width: 100%;
-  margin: 20.5px auto 0;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form .actions .hs-button {
   font-family: Titillium Web, sans-serif;
@@ -567,7 +622,8 @@ body .hero-section .form-wrapper-spz .hbspt-form form .actions .hs-button {
   outline: none;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form .actions .hs-button:hover {
-  background: #ffffff;
+  background: #000000;
+  color: #ffffff;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form .actions .hs-button:active {
   color: #fff;
