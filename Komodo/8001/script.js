@@ -1,32 +1,37 @@
-const formInt = setInterval(() => {
-  if (document.querySelectorAll(".hbspt-form form").length > 0) {
-    clearInterval(formInt);
+updateFormStyling();
 
-    appendInputLabel();
+function updateFormStyling() {
+  const formInt = setInterval(() => {
+    if (document.querySelectorAll(".hbspt-form form").length > 0) {
+      clearInterval(formInt);
 
-    // hs-button
-    document.querySelector(".hs-button").addEventListener("click", function () {
-      const err = setInterval(() => {
-        checkError();
-        clearInterval(err);
-      }, 100);
-    });
+      appendInputLabel();
 
-    // // Add field-untouched class on select element
-    // document.querySelectorAll('select.hs-input').forEach(function (el) {
-    //     if (el.options.length > 0) {
-    //         el.closest('.field').classList.add('field-untouched');
-    //     }
-    // });
+      // hs-button
+      document
+        .querySelector(".hs-button")
+        .addEventListener("click", function () {
+          const err = setInterval(() => {
+            checkError();
+            clearInterval(err);
+          }, 100);
+        });
 
-    // Set focus on input
-    focusFields();
-    removeStyleTags();
-    moveDependentField();
-    // Hide '.hs_demo_product_of_interest' and its parent 'fieldset'
-    // document.querySelector('.hs_demo_product_of_interest').parentElement.style.display = 'none';
-  }
-}, 100);
+      // // Add field-untouched class on select element
+      // document.querySelectorAll('select.hs-input').forEach(function (el) {
+      //     if (el.options.length > 0) {
+      //         el.closest('.field').classList.add('field-untouched');
+      //     }
+      // });
+
+      // Set focus on input
+      focusFields();
+      moveDependentField();
+      // Hide '.hs_demo_product_of_interest' and its parent 'fieldset'
+      // document.querySelector('.hs_demo_product_of_interest').parentElement.style.display = 'none';
+    }
+  }, 100);
+}
 
 function moveDependentField() {
   if (
@@ -44,7 +49,7 @@ function moveDependentField() {
   waitForElm(".hs-fieldtype-booleancheckbox").then(function () {
     // document.querySelector(".hs-form-spz fieldset.spz-custom-field").appendChild(document.querySelector('.hs-fieldtype-booleancheckbox'));
     // setTimeout(() => {
-      moveElement(".hs-fieldtype-booleancheckbox", "fieldset.spz-custom-field");
+    moveElement(".hs-fieldtype-booleancheckbox", "fieldset.spz-custom-field");
     // }, 200);
   });
 }
@@ -57,35 +62,6 @@ function appendFavicon() {
           <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707745302/KomodoHealth/8001/src/Checkbox_checked.svg" as="image">
           <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707797996/KomodoHealth/8001/src/Arrow_Pointing_Above.svg" as="image">`
   );
-}
-
-// function appendGTM() {
-//     document.body.insertAdjacentHTML("afterbegin", `
-//       <!-- Google Tag Manager (noscript) -->
-//       <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5K4ZZ96"
-//       height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-//       <!-- End Google Tag Manager (noscript) -->`);
-// }
-// appendGTM();
-// appendFavicon();
-
-// Remove all style tags without id in header
-function removeStyleTags() {
-  // document.querySelectorAll('style:not([id])').forEach(function (el) {
-  //   el.remove();
-  // });
-  // Remove style tag which is after 'main.min.css' link
-  // document.querySelectorAll('link').forEach(function (el) {
-  //     if (el.href.indexOf('main.min.css') > -1) {
-  //         el.nextElementSibling.remove();
-  //     }
-  // });
-  // Remove link tag which contains main.min.css or Social_follow.min.css in href attribute
-  // document.querySelectorAll('link').forEach(function (el) {
-  //     if (el.href.indexOf('main.min.css') > -1 || el.href.indexOf('Social_follow.min.css') > -1) {
-  //         el.remove();
-  //     }
-  // });
 }
 
 // Create input label with placeholder text
@@ -131,14 +107,8 @@ function focusFields() {
     if (el.tagName == "SELECT") {
       el.addEventListener("change", function () {
         el.closest(".field").classList.remove("field-error");
+        updateFormStyling();
       });
-
-      // el.addEventListener('focus', function () {
-      //     el.closest('.field').classList.add('field-focus');
-      //     setTimeout(function () {
-      //         el.closest('.field').classList.remove('field-untouched');
-      //     }, 100);
-      // });
     }
   });
 }

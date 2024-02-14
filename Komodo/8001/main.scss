@@ -235,6 +235,13 @@ body {
       }
       .hbspt-form {
         width: 100%;
+
+        .submitted-message {
+          color: #000;
+          p {
+            color: #000;
+          }
+        }
         form {
           display: flex;
 
@@ -291,6 +298,7 @@ body {
                 margin: 0;
                 padding: 8px 12px !important;
                 z-index: 3;
+                width: auto;
 
                 li {
                   line-height: 0 !important;
@@ -490,7 +498,7 @@ body {
                 -moz-appearance: none;
                 appearance: none;
                 -webkit-appearance: none;
-                background: #F8F7F7 !important;
+                background: #f8f7f7 !important;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -517,7 +525,9 @@ body {
               }
 
               &.field-error {
-                .hs-input:not([type="checkbox"]):not([type="radio"]).error[name="email"]:not(.no-value)
+                .hs-input:not([type="checkbox"]):not(
+                    [type="radio"]
+                  ).error[name="email"]:not(.no-value)
                   ~ label {
                   color: #dc0000;
                 }
