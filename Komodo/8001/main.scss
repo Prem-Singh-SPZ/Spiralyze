@@ -40,14 +40,14 @@ body {
         no-repeat;
       background-size: cover;
       background-position: top center;
-      padding: 42px 0;
+      padding: 42px 0 54px;
     }
     @media (max-width: 767.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/v1707404697/komodohealth/8001/hero_background_360.webp)
         no-repeat;
       background-size: cover;
       background-position: top center;
-      padding-top: 0;
+      padding: 0px 0px 32px;
     }
 
     .hero-content {
@@ -793,17 +793,6 @@ body {
         width: 312px;
         margin-bottom: 40px;
         width: 328px;
-        margin-bottom: 50.5px;
-        &:before {
-          top: -16px;
-          right: -16px;
-          width: 150px;
-          height: 208px;
-          display: none;
-        }
-        &:after {
-          bottom: -28px;
-        }
       }
       .form-wrapper-spz {
         .hbspt-form {
@@ -812,16 +801,6 @@ body {
             fieldset {
               flex-wrap: wrap;
               justify-content: center;
-            }
-            .actions {
-              // margin-top: 20px;
-              &:before {
-                top: 22px;
-                right: 73px;
-                height: 16px;
-                width: 16px;
-                background-size: 16px;
-              }
             }
           }
         }
@@ -854,7 +833,11 @@ body {
 
   .brand-partner-section {
     background: #212121;
-
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      padding: 0;
+    }
     .brand-wrapper {
       padding: 24px 0;
       display: flex;
@@ -865,16 +848,20 @@ body {
         min-height: 40px;
         width: 100%;
         @media (max-width: 1023.98px) {
-          background: url(https://www.komodohealth.com/hubfs/Imported%20images/social_proof_1440.svg)
-            no-repeat;
+          background: url(//res.cloudinary.com/spiralyze/image/upload/v1707838818/komodohealth/8001/social_proof_2.svg)
+            no-repeat !important;
           background-size: cover;
           background-position: center;
+          min-height: 36px;
+          padding: 0 6px 0 0;
         }
         @media (max-width: 767.98px) {
-          background: url(https://www.komodohealth.com/hubfs/Imported%20images/social_proof_1440.svg)
-            no-repeat;
+          background: url(//res.cloudinary.com/spiralyze/image/upload/v1707838820/komodohealth/8001/social_proof_3.svg)
+            no-repeat !important;
           background-size: cover;
           background-position: center;
+          min-height: 80px;
+          padding: 0;
         }
       }
     }
