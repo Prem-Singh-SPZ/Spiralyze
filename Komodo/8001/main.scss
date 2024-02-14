@@ -44,7 +44,8 @@ body {
         content: url(//res.cloudinary.com/spiralyze/image/upload/v1707404802/komodohealth/8001/arrow_hero.svg);
         right: 22px;
         position: absolute;
-        top: 78.5%;
+        top: auto;
+        bottom: -16px;
 
         @media (max-width: 1199.98px) {
           top: auto;
@@ -225,7 +226,8 @@ body {
               font-size: 12px !important;
               letter-spacing: 0;
 
-              a {
+              span {
+                text-decoration: underline;
               }
             }
           }
@@ -285,7 +287,7 @@ body {
                 color: #fff !important;
                 list-style: none;
                 text-align: center !important;
-                top: calc(100% - 8px);
+                top: calc(100% - 16px);
                 margin: 0;
                 padding: 8px 12px !important;
                 z-index: 3;
@@ -298,8 +300,7 @@ body {
                     font-size: 12px !important;
                     font-style: normal;
                     font-weight: 400 !important;
-                    line-height: 16px !important;
-                    letter-spacing: -0.192px !important;
+                    line-height: 20px !important;
                     color: #fff !important;
                   }
                 }
@@ -359,7 +360,7 @@ body {
                 font-weight: 400;
                 font-size: 16px;
                 line-height: 24px;
-                color: #000000;
+                color: #4a4a4a;
                 -webkit-transition: all 0.3s ease-in-out;
                 transition: all 0.3s ease-in-out;
                 pointer-events: none;
@@ -367,21 +368,6 @@ body {
                 letter-spacing: 0;
               }
               .hs-input {
-                border: 1px solid rgba(0, 0, 0, 0.1) !important;
-                background-color: #f8f7f7 !important;
-                height: 48px !important;
-                text-overflow: ellipsis;
-                padding: 11px 19px 12px !important;
-                color: #000;
-                font-family: Titillium Web;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 24px;
-                outline: none !important;
-                letter-spacing: 0;
-                background-clip: padding-box !important;
-
                 &:-webkit-autofill,
                 &:-webkit-autofill:hover,
                 &:-webkit-autofill:focus {
@@ -408,31 +394,39 @@ body {
                     -webkit-transition: all 0.3s ease-in-out;
                     transition: all 0.3s ease-in-out;
                     margin: 0px 0 18px !important;
+                    background-clip: padding-box !important;
+
                     &::placeholder {
                       display: none;
                       color: transparent;
                     }
+                    &:hover {
+                      border: 1px solid rgba(0, 0, 0, 0.2) !important;
+
+                      & ~ label {
+                        color: #000;
+                      }
+                    }
+                    &:focus {
+                      border: 1px solid rgba(0, 0, 0, 0.4) !important;
+                      background-color: #fff !important;
+                    }
+                    &:focus ~ label {
+                      top: -8px;
+                      font-size: 10px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 16px;
+                      background: #fff;
+                      padding: 0 4px;
+                      left: 16px;
+                      color: #000000;
+                    }
+
+                    &.error {
+                      border: 1px solid var(--Dividers-Error, #dc0000) !important;
+                    }
                   }
-                }
-                &:hover {
-                  border: 1px solid var(--Neutrals-400, #96a1b2) !important;
-                }
-                &:focus {
-                  border: 1px solid rgba(0, 0, 0, 0.4) !important;
-                  background-color: #fff !important;
-                }
-                &:focus ~ label {
-                  top: -8px;
-                  font-size: 10px;
-                  font-weight: 500;
-                  line-height: 12px;
-                  background: #fff;
-                  letter-spacing: -0.16px;
-                  padding: 0 4px;
-                  left: 16px;
-                  color: #000000;
-                  box-shadow: 0px -5px 0px 0px white inset;
-                  -webkit-box-shadow: 0px -5px 0px 0px white inset;
                 }
                 // &:not([value=""]) ~ label {
                 //   top: 8px;
@@ -452,12 +446,14 @@ body {
                   }
                   &:not(:placeholder-shown) ~ label {
                     top: -8px;
-                    font-size: 12px;
-                    line-height: 18px;
-                    height: 18px;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
                     background: #fff;
                     padding: 0 4px;
                     left: 16px;
+                    color: #7e7e7e;
                   }
                 }
               }
@@ -494,8 +490,7 @@ body {
                 -moz-appearance: none;
                 appearance: none;
                 -webkit-appearance: none;
-                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg")
-                  #fff no-repeat right 11px center !important;
+                background: #F8F7F7 !important;
                 white-space: nowrap;
                 overflow: hidden;
                 text-overflow: ellipsis;
@@ -512,6 +507,45 @@ body {
               }
               select.is-placeholder {
                 color: transparent !important;
+              }
+
+              &.field-focus {
+                .hs-input:not([type="checkbox"]):not([type="radio"]).error
+                  ~ label {
+                  color: #dc0000;
+                }
+              }
+
+              &.field-error {
+                .hs-input:not([type="checkbox"]):not([type="radio"]).error[name="email"]:not(.no-value)
+                  ~ label {
+                  color: #dc0000;
+                }
+              }
+
+              &.hs-fieldtype-select {
+                .input {
+                  position: relative;
+                  &::after {
+                    content: url(https://res.cloudinary.com/spiralyze/image/upload/v1707903072/KomodoHealth/8001/src/Chevron.svg);
+                    position: absolute;
+                    right: 19px;
+                    top: 9px;
+                    pointer-events: none;
+                    width: 16px;
+                    height: 16px;
+                    z-index: 2;
+                  }
+                }
+
+                &.field-focus {
+                  .input {
+                    &::after {
+                      top: 26px;
+                      transform: rotate(180deg);
+                    }
+                  }
+                }
               }
             }
             // .field.field-untouched {
@@ -611,7 +645,7 @@ body {
                 .no-list.hs-error-msgs.inputs-list {
                   display: inline-block !important;
                   margin-top: 0;
-                  top: calc(100% + 8px);
+                  top: calc(100% + 2px);
 
                   &::before {
                     content: "";
@@ -848,7 +882,8 @@ body {
           background-size: cover !important;
           background-position: center !important;
           min-height: 80px;
-          margin: 0;
+          max-width: 360px;
+          margin: auto;
         }
       }
     }

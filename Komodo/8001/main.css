@@ -44,7 +44,8 @@ body .hero-section .hero-content::after {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1707404802/komodohealth/8001/arrow_hero.svg);
   right: 22px;
   position: absolute;
-  top: 78.5%;
+  top: auto;
+  bottom: -16px;
 }
 @media (max-width: 1199.98px) {
   body .hero-section .hero-content::after {
@@ -228,6 +229,9 @@ body .hero-section .form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-f
   font-size: 12px !important;
   letter-spacing: 0;
 }
+body .hero-section .form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-font-element p span {
+  text-decoration: underline;
+}
 body .hero-section .form-wrapper-spz .hbspt-form {
   width: 100%;
 }
@@ -291,7 +295,7 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-error-
   color: #fff !important;
   list-style: none;
   text-align: center !important;
-  top: calc(100% - 8px);
+  top: calc(100% - 16px);
   margin: 0;
   padding: 8px 12px !important;
   z-index: 3;
@@ -304,8 +308,7 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-error-
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400 !important;
-  line-height: 16px !important;
-  letter-spacing: -0.192px !important;
+  line-height: 20px !important;
   color: #fff !important;
 }
 @media (max-width: 767.98px) {
@@ -359,28 +362,12 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field label.hs-l
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #000000;
+  color: #4a4a4a;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
   z-index: 2;
   letter-spacing: 0;
-}
-body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input {
-  border: 1px solid rgba(0, 0, 0, 0.1) !important;
-  background-color: #f8f7f7 !important;
-  height: 48px !important;
-  text-overflow: ellipsis;
-  padding: 11px 19px 12px !important;
-  color: #000;
-  font-family: Titillium Web;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  outline: none !important;
-  letter-spacing: 0;
-  background-clip: padding-box !important;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:-webkit-autofill, body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:-webkit-autofill:hover, body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
@@ -412,6 +399,7 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   margin: 0px 0 18px !important;
+  background-clip: padding-box !important;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
   display: none;
@@ -433,25 +421,29 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:
   display: none;
   color: transparent;
 }
-body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:hover {
-  border: 1px solid var(--Neutrals-400, #96a1b2) !important;
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]):hover {
+  border: 1px solid rgba(0, 0, 0, 0.2) !important;
 }
-body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus {
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]):hover ~ label {
+  color: #000;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]):focus {
   border: 1px solid rgba(0, 0, 0, 0.4) !important;
   background-color: #fff !important;
 }
-body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus ~ label {
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]):focus ~ label {
   top: -8px;
   font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
   background: #fff;
-  letter-spacing: -0.16px;
   padding: 0 4px;
   left: 16px;
   color: #000000;
-  box-shadow: 0px -5px 0px 0px white inset;
-  -webkit-box-shadow: 0px -5px 0px 0px white inset;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]).error {
+  border: 1px solid var(--Dividers-Error, #dc0000) !important;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
   border: 1px solid var(--Neutrals-700, #293642);
@@ -464,30 +456,36 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
   top: -8px;
-  font-size: 12px;
-  line-height: 18px;
-  height: 18px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
   background: #fff;
   padding: 0 4px;
   left: 16px;
+  color: #7e7e7e;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
   top: -8px;
-  font-size: 12px;
-  line-height: 18px;
-  height: 18px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
   background: #fff;
   padding: 0 4px;
   left: 16px;
+  color: #7e7e7e;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
   top: -8px;
-  font-size: 12px;
-  line-height: 18px;
-  height: 18px;
+  font-size: 10px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
   background: #fff;
   padding: 0 4px;
   left: 16px;
+  color: #7e7e7e;
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field .hs-input[type=checkbox] ~ span {
   font-family: Titillium Web, sans-serif;
@@ -511,7 +509,7 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field select {
   -moz-appearance: none;
   appearance: none;
   -webkit-appearance: none;
-  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg") #fff no-repeat right 11px center !important;
+  background: #F8F7F7 !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -528,6 +526,30 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field select opt
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field select.is-placeholder {
   color: transparent !important;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field.field-focus .hs-input:not([type=checkbox]):not([type=radio]).error ~ label {
+  color: #dc0000;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field.field-error .hs-input:not([type=checkbox]):not([type=radio]).error[name=email]:not(.no-value) ~ label {
+  color: #dc0000;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-select .input {
+  position: relative;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-select .input::after {
+  content: url(https://res.cloudinary.com/spiralyze/image/upload/v1707903072/KomodoHealth/8001/src/Chevron.svg);
+  position: absolute;
+  right: 19px;
+  top: 9px;
+  pointer-events: none;
+  width: 16px;
+  height: 16px;
+  z-index: 2;
+}
+body .hero-section .form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-select.field-focus .input::after {
+  top: 26px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field {
   max-width: 100%;
@@ -604,7 +626,7 @@ body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.sp
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox .no-list.hs-error-msgs.inputs-list {
   display: inline-block !important;
   margin-top: 0;
-  top: calc(100% + 8px);
+  top: calc(100% + 2px);
 }
 body .hero-section .form-wrapper-spz .hbspt-form form fieldset.form-columns-0.spz-custom-field .field.hs-fieldtype-booleancheckbox .no-list.hs-error-msgs.inputs-list::before {
   content: "";
@@ -834,7 +856,8 @@ body .brand-partner-section .brand-wrapper .brand-logo {
     background-size: cover !important;
     background-position: center !important;
     min-height: 80px;
-    margin: 0;
+    max-width: 360px;
+    margin: auto;
   }
 }
 body .img-in-right-scetion {

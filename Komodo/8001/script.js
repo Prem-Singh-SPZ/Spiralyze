@@ -115,7 +115,7 @@ function focusFields() {
       el.closest(".field").classList.add("field-focus");
       setTimeout(function () {
         el.closest(".field").classList.remove("field-error");
-        el.closest(".field").classList.remove("field-untouched");
+        // el.closest(".field").classList.remove("field-untouched");
       }, 100);
     });
 
@@ -150,6 +150,12 @@ function checkError() {
       el.closest(".field").classList.add("field-error");
     } else {
       el.closest(".field").classList.remove("field-error");
+    }
+
+    if (!el.getAttribute("value")) {
+      el.classList.add("no-value");
+    } else {
+      el.classList.remove("no-value");
     }
   });
 }
