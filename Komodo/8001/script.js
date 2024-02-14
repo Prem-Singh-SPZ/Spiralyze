@@ -17,18 +17,9 @@ function updateFormStyling() {
           }, 100);
         });
 
-      // // Add field-untouched class on select element
-      // document.querySelectorAll('select.hs-input').forEach(function (el) {
-      //     if (el.options.length > 0) {
-      //         el.closest('.field').classList.add('field-untouched');
-      //     }
-      // });
-
       // Set focus on input
       focusFields();
       moveDependentField();
-      // Hide '.hs_demo_product_of_interest' and its parent 'fieldset'
-      // document.querySelector('.hs_demo_product_of_interest').parentElement.style.display = 'none';
     }
   }, 100);
 }
@@ -47,10 +38,7 @@ function moveDependentField() {
   }
 
   waitForElm(".hs-fieldtype-booleancheckbox").then(function () {
-    // document.querySelector(".hs-form-spz fieldset.spz-custom-field").appendChild(document.querySelector('.hs-fieldtype-booleancheckbox'));
-    // setTimeout(() => {
     moveElement(".hs-fieldtype-booleancheckbox", "fieldset.spz-custom-field");
-    // }, 200);
   });
 }
 
@@ -79,7 +67,15 @@ function appendInputLabel() {
       label.setAttribute("for", el.id);
       label.classList.add("hs-label-spz");
 
-      el.parentNode.insertBefore(label, el.nextSibling);
+      if (el.parentNode.querySelectorAll("label.hs-label-spz").length == 0) {
+        el.parentNode.insertBefore(label, el.nextSibling);
+      }
+    });
+
+  document
+    .querySelectorAll('input.hs-input:not([type="hidden"])')
+    .forEach(function (el) {
+      el.setAttribute("placeholder", " ");
     });
 }
 
@@ -107,6 +103,7 @@ function focusFields() {
     if (el.tagName == "SELECT") {
       el.addEventListener("change", function () {
         el.closest(".field").classList.remove("field-error");
+        // moveDependentField();
         updateFormStyling();
       });
     }
