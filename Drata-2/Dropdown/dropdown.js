@@ -1,131 +1,218 @@
 (function () {
   var bodyInterval = setInterval(function () {
-    var bodyEle = document.querySelector('body');
-    if (!bodyEle.classList.contains('spz-2001')) {
+    var bodyEle = document.querySelector("body");
+    if (!bodyEle.classList.contains("spz-2001")) {
       clearInterval(bodyInterval);
 
-      const hubSpotJS = document.createElement('script');
-      hubSpotJS.src = '//js.hsforms.net/forms/embed/v2.js';
-      hubSpotJS.type = 'text/javascript';
-      hubSpotJS.setAttribute('charset', 'utf-8');
+      const hubSpotJS = document.createElement("script");
+      hubSpotJS.src = "//js.hsforms.net/forms/embed/v2.js";
+      hubSpotJS.type = "text/javascript";
+      hubSpotJS.setAttribute("charset", "utf-8");
       document.head.appendChild(hubSpotJS);
 
-      bodyEle.classList.add('spz-2001');
+      bodyEle.classList.add("spz-2001");
 
       //Hero section content feeding
-      waitForElm('form.hs-form-private.hs-form-spz .hs-form-field').then(function (elm) {
-        appendInputLabel();
-        focusFields();
-        checkboxDropdown();
-        appendImages();
+      waitForElm("form.hs-form-private.hs-form-spz .hs-form-field").then(
+        function (elm) {
+          appendInputLabel();
+          focusFields();
+          checkboxDropdown();
+          appendImages();
 
-        document.querySelector('form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`);
+          document
+            .querySelector(
+              "form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc"
+            )
+            .insertAdjacentHTML(
+              "afterend",
+              ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`
+            );
 
-        window.addEventListener("click", function (e) {
-          if (e.target.classList.contains("spz-btn")) {
-            e.target.parentElement.classList.toggle('field-focus');
-            dropdownFunctionality();
-          }
-          if (e.target.classList.contains("hs-button")) {
-            checkError();
-          }
-          if (e.target.closest('ul')) {
-            if (e.target.closest('ul').classList.contains('hs-error-msgs')) {
+          window.addEventListener("click", function (e) {
+            if (e.target.classList.contains("spz-btn")) {
+              e.target.parentElement.classList.toggle("field-focus");
+              dropdownFunctionality();
+            }
+            if (e.target.classList.contains("hs-button")) {
               checkError();
             }
-          }
-        });
-
-        var jQueryInterval = setInterval(function () {
-          if (typeof jQuery != 'undefined') {
-            clearInterval(jQueryInterval);
-
-            jQuery('body').click(function (evt) {
-              if (!jQuery(evt.target).hasClass("hs_capability_types") && jQuery(evt.target).closest('.hs-fieldtype-checkbox.field.hs-form-field').length == 0) {
-                console.log('i am herr ' + evt.target.classList)
-                if (jQuery(".hs-fieldtype-checkbox.field.hs-form-field").hasClass('field-focus')) {
-                  jQuery(".hs-fieldtype-checkbox.field.hs-form-field").removeClass('field-focus');
-                  dropdownFunctionality();
-                }
+            if (e.target.closest("ul")) {
+              if (e.target.closest("ul").classList.contains("hs-error-msgs")) {
+                checkError();
               }
-            });
-          }
-        });
-      });
+            }
+          });
+
+          var jQueryInterval = setInterval(function () {
+            if (typeof jQuery != "undefined") {
+              clearInterval(jQueryInterval);
+
+              jQuery("body").click(function (evt) {
+                if (
+                  !jQuery(evt.target).hasClass("hs_capability_types") &&
+                  jQuery(evt.target).closest(
+                    ".hs-fieldtype-checkbox.field.hs-form-field"
+                  ).length == 0
+                ) {
+                  if (
+                    jQuery(
+                      ".hs-fieldtype-checkbox.field.hs-form-field"
+                    ).hasClass("field-focus")
+                  ) {
+                    jQuery(
+                      ".hs-fieldtype-checkbox.field.hs-form-field"
+                    ).removeClass("field-focus");
+                    dropdownFunctionality();
+                  }
+                }
+              });
+            }
+          });
+        }
+      );
 
       hubSpotJS.onload = function () {
         appendHubspotScript();
-      }
+      };
     }
   });
 
   function appendImages() {
-    document.head.insertAdjacentHTML('beforeend',`<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg" as="image">`)
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg" as="image">`
+    );
   }
 
   function checkboxDropdown() {
     let counter = 0;
-    document.querySelectorAll('.hs-form-checkbox').forEach(function (elem, i) {
-      elem.querySelector('.hs-input').addEventListener("click", function () {
-        var title = elem.querySelector('span').textContent;
+    document.querySelectorAll(".hs-form-checkbox").forEach(function (elem, i) {
+      elem.querySelector(".hs-input").addEventListener("click", function () {
+        var title = elem.querySelector("span").textContent;
 
         if (elem.querySelector('input[type="checkbox"]').checked) {
-          var html = '<span title="' + title + '">' + title + '</span>';
-          document.querySelector('.spz-btn .value-container').insertAdjacentHTML('beforeend', html);
+          var html = '<span title="' + title + '">' + title + "</span>";
+          document
+            .querySelector(".spz-btn .value-container")
+            .insertAdjacentHTML("beforeend", html);
           counter++;
-        }
-        else {
+        } else {
           document.querySelector('span[title="' + title + '"]').remove();
           counter--;
         }
 
         if (counter == 1) {
-          document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.add('single-value');
-          if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('multiple-value')) {
-            document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('multiple-value');
+          document
+            .querySelector(
+              ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+            )
+            .classList.add("single-value");
+          if (
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.contains("multiple-value")
+          ) {
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.remove("multiple-value");
           }
-        }
-        else if (counter == 0) {
-          if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('single-value')) {
-            document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('single-value');
+        } else if (counter == 0) {
+          if (
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.contains("single-value")
+          ) {
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.remove("single-value");
           }
-          if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('multiple-value')) {
-            document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('multiple-value');
+          if (
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.contains("multiple-value")
+          ) {
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.remove("multiple-value");
           }
-        }
-        else {
-          document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.add('multiple-value');
-          if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.contains('single-value')) {
-            document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .spz-btn').classList.remove('single-value');
+        } else {
+          document
+            .querySelector(
+              ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+            )
+            .classList.add("multiple-value");
+          if (
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.contains("single-value")
+          ) {
+            document
+              .querySelector(
+                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+              )
+              .classList.remove("single-value");
           }
         }
       });
-    })
+    });
   }
 
   function dropdownFunctionality() {
-    if (!document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.contains('field-focus')) {
+    if (
+      !document
+        .querySelector(".hs-fieldtype-checkbox.field.hs-form-field")
+        .classList.contains("field-focus")
+    ) {
       if (document.querySelector(".spz-btn > .value-container > span")) {
-        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.add('input-filled');
-      }
-      else {
-        document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.remove('input-filled');
+        document
+          .querySelector(".hs-fieldtype-checkbox.field.hs-form-field")
+          .classList.add("input-filled");
+      } else {
+        document
+          .querySelector(".hs-fieldtype-checkbox.field.hs-form-field")
+          .classList.remove("input-filled");
       }
     }
-    if (document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field .error') != null) {
-      document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.add('field-error');
+    if (
+      document.querySelector(
+        ".hs-fieldtype-checkbox.field.hs-form-field .error"
+      ) != null
+    ) {
+      document
+        .querySelector(".hs-fieldtype-checkbox.field.hs-form-field")
+        .classList.add("field-error");
     } else {
-      document.querySelector('.hs-fieldtype-checkbox.field.hs-form-field').classList.remove('field-error');
+      document
+        .querySelector(".hs-fieldtype-checkbox.field.hs-form-field")
+        .classList.remove("field-error");
     }
   }
 
   // Append hubspot script in '.form-wrapper-spz' div
   function appendHubspotScript() {
-    const scriptSPZ = document.createElement('script');
+    const scriptSPZ = document.createElement("script");
 
-    scriptSPZ.innerHTML = 'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "a6043509-2a53-4a93-8c05-b64cb53299e8", cssClass: "hs-form-spz", css: "", submitText: "Schedule Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
-    if (document.querySelector('.mui-12ive4l-Form-formContainer')) {
-      document.querySelector('.mui-12ive4l-Form-formContainer').appendChild(scriptSPZ);
+    scriptSPZ.innerHTML =
+      'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "a6043509-2a53-4a93-8c05-b64cb53299e8", cssClass: "hs-form-spz", css: "", submitText: "Schedule Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
+    if (document.querySelector(".mui-12ive4l-Form-formContainer")) {
+      document
+        .querySelector(".mui-12ive4l-Form-formContainer")
+        .appendChild(scriptSPZ);
     }
   }
 
@@ -141,40 +228,47 @@
           observer.disconnect();
         }
       });
-      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+      observer.observe(document, {
+        attributes: true,
+        childList: true,
+        subtree: true,
+        characterData: true,
+      });
     });
   }
 
   // Create input label with placeholder text
   function appendInputLabel() {
-    document.querySelectorAll('.hs-form-field:not(.smart-field)').forEach(function (el) {
-      el.querySelector('label').classList.add('hs-label-spz');
-    });
+    document
+      .querySelectorAll(".hs-form-field:not(.smart-field)")
+      .forEach(function (el) {
+        el.querySelector("label").classList.add("hs-label-spz");
+      });
   }
 
   // On input focus add class on closest parent .field class
   function focusFields() {
-    document.querySelectorAll('.hs-input').forEach(function (el) {
-      el.addEventListener('focus', function () {
-        el.closest('.field').classList.add('field-focus');
+    document.querySelectorAll(".hs-input").forEach(function (el) {
+      el.addEventListener("focus", function () {
+        el.closest(".field").classList.add("field-focus");
       });
-      el.addEventListener('blur', function () {
-        el.closest('.field').classList.remove('field-focus');
+      el.addEventListener("blur", function () {
+        el.closest(".field").classList.remove("field-focus");
         checkError();
       });
 
       // add event listeners to the input element
-      el.addEventListener('keypress', () => {
+      el.addEventListener("keypress", () => {
         checkError();
         dropdownFunctionality();
       });
 
-      el.addEventListener('keydown', () => {
+      el.addEventListener("keydown", () => {
         checkError();
         dropdownFunctionality();
       });
 
-      el.addEventListener('keyup', () => {
+      el.addEventListener("keyup", () => {
         checkError();
         dropdownFunctionality();
       });
@@ -184,21 +278,23 @@
   // Function to add .field-error class on closest parent .field class if .error is exist on .hs-input
   function checkError() {
     let timeBuffer = setInterval(() => {
-      document.querySelectorAll('.hs-input').forEach(function (el) {
-        if (el.closest('.field').querySelector('.error') != null) {
-          el.closest('.field').classList.add('field-error');
+      document.querySelectorAll(".hs-input").forEach(function (el) {
+        if (el.closest(".field").querySelector(".error") != null) {
+          el.closest(".field").classList.add("field-error");
         } else {
-          el.closest('.field').classList.remove('field-error');
+          el.closest(".field").classList.remove("field-error");
         }
       });
-      document.querySelectorAll('.hs-input:not([type="checkbox"])').forEach(function (el) {
-        if (el && el.value) {
-          el.closest('.field').classList.add('input-filled');
-        } else {
-          el.closest('.field').classList.remove('input-filled');
-        }
-      });
-    },);
+      document
+        .querySelectorAll('.hs-input:not([type="checkbox"])')
+        .forEach(function (el) {
+          if (el && el.value) {
+            el.closest(".field").classList.add("input-filled");
+          } else {
+            el.closest(".field").classList.remove("input-filled");
+          }
+        });
+    });
 
     setTimeout(() => {
       clearInterval(timeBuffer);
