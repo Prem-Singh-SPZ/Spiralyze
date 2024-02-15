@@ -180,9 +180,8 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] select.hs
   border-color: #b9554d;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .actions {
-  margin-top: 18px;
-  margin-bottom: 18px;
-  padding: 17px 0px;
+  margin-top: 16px;
+  margin-bottom: 17px;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .inputs-list {
   margin: 0 0 5px;
@@ -786,6 +785,9 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] .hubspot-
   margin-top: -9px;
   margin-left: -5px;
 }
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox {
+  margin-top: 5px;
+}
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox > label {
   display: none;
 }
@@ -838,18 +840,28 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn.single-value .label, body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn.multiple-value .label {
   display: none;
 }
-body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .input .inputs-list.multi-container {
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input {
+  margin-right: 8px;
   display: none;
   position: absolute;
   background: #fff;
   width: calc(100% - 8px);
-  height: 400px;
-  overflow: auto;
+  height: 220px;
   z-index: 1;
-  padding: 24px 16px;
+  top: 100%;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
 }
-body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .input .MuiFormControl-root.MuiFormControl-fullWidth {
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input .inputs-list.multi-container {
+  height: 100%;
+  overflow: auto;
+  padding: 4px 16px;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input .MuiFormControl-root.MuiFormControl-fullWidth {
   display: none !important;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field-focus .input {
+  display: block;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field-focus .input .inputs-list.multi-container {
   display: block !important;
@@ -864,6 +876,10 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
   -webkit-box-align: start;
       -ms-flex-align: start;
           align-items: flex-start;
+  position: relative;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input {
+  margin-top: 0;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;

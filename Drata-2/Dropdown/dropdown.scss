@@ -187,9 +187,9 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
     border-color: #b9554d;
   }
   .actions {
-    margin-top: 18px;
-    margin-bottom: 18px;
-    padding: 17px 0px;
+    margin-top: 16px;
+    margin-bottom: 17px;
+    // padding: 17px 0px;
   }
   .inputs-list {
     margin: 0 0 5px;
@@ -876,6 +876,7 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
   form.hs-form-spz {
     .form-columns-1 {
       .hs-fieldtype-checkbox {
+        margin-top: 5px;
         > label {
           display: none;
         }
@@ -889,7 +890,7 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
           border-radius: 3px;
           width: calc(100% - 8px);
           text-align: left;
-          background-image:url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNyAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gXAogICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMS45OTc1IDAuNzM3NTQ5TDguNSA2LjQ2MjU1TDE1LjAwMjUgMC43Mzc1NDlMMTcgMi41MDAwNUw4LjUgMTBMMCAyLjUwMDA1TDEuOTk3NSAwLjczNzU0OVoiIGZpbGw9IiNBNEE0QTQiLz4gXAogICAgICAgICAgICAgICAgICAgIDwvc3ZnPg==);
+          background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNyAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gXAogICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMS45OTc1IDAuNzM3NTQ5TDguNSA2LjQ2MjU1TDE1LjAwMjUgMC43Mzc1NDlMMTcgMi41MDAwNUw4LjUgMTBMMCAyLjUwMDA1TDEuOTk3NSAwLjczNzU0OVoiIGZpbGw9IiNBNEE0QTQiLz4gXAogICAgICAgICAgICAgICAgICAgIDwvc3ZnPg==);
           -webkit-background-position: right center;
           background-position: 99.1% center;
           background-repeat: no-repeat;
@@ -932,27 +933,33 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
               display: none;
             }
           }
-        }
 
-        .input {
-          .inputs-list.multi-container {
+          & + .input {
+            margin-right: 8px;
             display: none;
             position: absolute;
             background: #fff;
             width: calc(100% - 8px);
-            height: 400px;
-            overflow: auto;
+            height: 220px;
             z-index: 1;
-            padding: 24px 16px;
-          }
+            top: 100%;
+            border-radius: 8px;
+            border: 1px solid #bfbfbf;
+            .inputs-list.multi-container {
+              height: 100%;
+              overflow: auto;
+              padding: 4px 16px;
+            }
 
-          .MuiFormControl-root.MuiFormControl-fullWidth {
-            display: none !important;
+            .MuiFormControl-root.MuiFormControl-fullWidth {
+              display: none !important;
+            }
           }
         }
 
         &.field-focus {
           .input {
+            display: block;
             .inputs-list.multi-container {
               display: block !important;
             }
@@ -969,6 +976,11 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
       .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display {
         display: flex;
         align-items: flex-start;
+        position: relative;
+
+        input {
+          margin-top: 0;
+        }
 
         span {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
