@@ -1,6 +1,9 @@
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] #reactHubspotForm0 {
   display: none !important;
 }
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] #reactHubspotForm0 + span.MuiCircularProgress-root {
+  display: none !important;
+}
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form {
   gap: 0;
 }
@@ -846,11 +849,22 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
   position: absolute;
   background: #fff;
   width: calc(100% - 8px);
-  height: 220px;
+  height: 200px;
   z-index: 1;
-  top: 100%;
+  top: 40px;
   border-radius: 8px;
   border: 1px solid #bfbfbf;
+  border-top: 0;
+}
+@media (max-width: 472.98px) {
+  body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input {
+    top: 62px;
+  }
+}
+@media (min-width: 775.98px) and (max-width: 945.98px) {
+  body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input {
+    top: 62px;
+  }
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input .inputs-list.multi-container {
   height: 100%;
@@ -866,6 +880,12 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field-focus .input .inputs-list.multi-container {
   display: block !important;
 }
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field-focus .input .inputs-list.multi-container .hs-form-checkbox {
+  margin-bottom: 6px;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field-focus .label {
+  color: #33475b;
+}
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field-error .spz-btn {
   border-color: #c87872;
 }
@@ -873,18 +893,20 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
   position: relative;
 }
-body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input {
-  margin-top: 0;
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input::before {
+  width: 14px;
+  height: 14px;
+  background-size: 100%;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 16px;
+  font-size: 12px;
   font-weight: normal;
-  line-height: 22px;
+  line-height: 18px;
   color: #33475b;
 }

@@ -2,6 +2,10 @@ $ff-inter: Inter;
 body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
   #reactHubspotForm0 {
     display: none !important;
+
+    & + span.MuiCircularProgress-root {
+      display: none !important;
+    }
   }
   form {
     gap: 0;
@@ -940,11 +944,20 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
             position: absolute;
             background: #fff;
             width: calc(100% - 8px);
-            height: 220px;
+            height: 200px;
             z-index: 1;
-            top: 100%;
+            top: 40px;
             border-radius: 8px;
             border: 1px solid #bfbfbf;
+            border-top: 0;
+
+            @media (max-width: 472.98px) {
+              top: 62px;
+            }
+            @media  (min-width: 775.98px) and (max-width: 945.98px) {
+              top: 62px;
+            }
+
             .inputs-list.multi-container {
               height: 100%;
               overflow: auto;
@@ -962,7 +975,15 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
             display: block;
             .inputs-list.multi-container {
               display: block !important;
+
+              .hs-form-checkbox {
+                margin-bottom: 6px;
+              }
             }
+          }
+
+          .label{
+            color: #33475b;
           }
         }
 
@@ -975,18 +996,25 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
 
       .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display {
         display: flex;
-        align-items: flex-start;
+        align-items: end;
         position: relative;
 
         input {
-          margin-top: 0;
+          //   margin: 0;
+          //   visibility: visible;
+          //   &::after,
+          &::before {
+            width: 14px;
+            height: 14px;
+            background-size: 100%;
+          }
         }
 
         span {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 16px;
+          font-size: 12px;
           font-weight: normal;
-          line-height: 22px;
+          line-height: 18px;
           color: #33475b;
         }
       }

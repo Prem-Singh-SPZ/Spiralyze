@@ -41,6 +41,7 @@
 
             jQuery('body').click(function (evt) {
               if (!jQuery(evt.target).hasClass("hs_capability_types") && jQuery(evt.target).closest('.hs-fieldtype-checkbox.field.hs-form-field').length == 0) {
+                console.log('i am herr ' + evt.target.classList)
                 if (jQuery(".hs-fieldtype-checkbox.field.hs-form-field").hasClass('field-focus')) {
                   jQuery(".hs-fieldtype-checkbox.field.hs-form-field").removeClass('field-focus');
                   dropdownFunctionality();
