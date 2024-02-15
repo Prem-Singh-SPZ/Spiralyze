@@ -869,7 +869,7 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input .inputs-list.multi-container {
   height: 100%;
   overflow: auto;
-  padding: 4px 16px;
+  padding: 0;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox .spz-btn + .input .MuiFormControl-root.MuiFormControl-fullWidth {
   display: none !important;
@@ -893,20 +893,31 @@ body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-f
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   position: relative;
-}
-body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input::before {
-  width: 14px;
-  height: 14px;
-  background-size: 100%;
+  padding: 0px 16px;
 }
 body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display span {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-  font-size: 12px;
+  font-size: 16px;
   font-weight: normal;
-  line-height: 18px;
+  line-height: 22px;
   color: #33475b;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display:hover {
+  background-color: #0580E8;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display:hover span {
+  color: #fff;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox]::before {
+  width: 16px;
+  height: 16px;
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox.svg);
+  background-size: 100%;
+}
+body.spz-2001 #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox]:checked::before {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg);
 }

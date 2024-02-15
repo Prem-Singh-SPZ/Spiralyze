@@ -321,8 +321,8 @@
 
             let secondCheck = checkbox.querySelector('input').getAttribute('id');
 
-            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + ' #' + secondCheck).checked = true;
-            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + ' #' + secondCheck).closest('label').click();
+            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + '#' + secondCheck).checked = true;
+            document.querySelector('.MuiFormControlLabel-labelPlacementEnd ' + '#' + secondCheck).closest('label').click();
 
             //delete cookie
             deleteCookie(checkValue);
@@ -330,7 +330,7 @@
         });
 
         setTimeout(() => {
-          submitTestDetails('#2007_variant');
+          submitTestDetails('#2009_control');
         }, 2000);
       }
     });

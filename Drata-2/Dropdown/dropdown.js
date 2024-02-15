@@ -17,6 +17,7 @@
         appendInputLabel();
         focusFields();
         checkboxDropdown();
+        appendImages();
 
         document.querySelector('form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc').insertAdjacentHTML('afterend', ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`);
 
@@ -57,6 +58,10 @@
       }
     }
   });
+
+  function appendImages() {
+    document.head.insertAdjacentHTML('beforeend',`<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg" as="image">`)
+  }
 
   function checkboxDropdown() {
     let counter = 0;
@@ -138,17 +143,6 @@
       });
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
-  }
-
-  // Move element
-  // sourceElm: Element which we have to move
-  // targetLoc: New location of an element 
-  function moveElement(sourceElm, targetLoc) {
-    const f = document.createDocumentFragment();
-    if (document.querySelector(sourceElm) != null) {
-      f.appendChild(document.querySelector(sourceElm));
-      document.querySelector(targetLoc).appendChild(f);
-    }
   }
 
   // Create input label with placeholder text

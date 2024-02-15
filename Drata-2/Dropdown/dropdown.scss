@@ -954,14 +954,15 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
             @media (max-width: 472.98px) {
               top: 62px;
             }
-            @media  (min-width: 775.98px) and (max-width: 945.98px) {
+            @media (min-width: 775.98px) and (max-width: 945.98px) {
               top: 62px;
             }
 
             .inputs-list.multi-container {
               height: 100%;
               overflow: auto;
-              padding: 4px 16px;
+              // padding: 4px 16px;
+              padding: 0;
             }
 
             .MuiFormControl-root.MuiFormControl-fullWidth {
@@ -982,7 +983,7 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
             }
           }
 
-          .label{
+          .label {
             color: #33475b;
           }
         }
@@ -996,26 +997,42 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
 
       .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display {
         display: flex;
-        align-items: end;
+        align-items: flex-start;
         position: relative;
-
-        input {
-          //   margin: 0;
-          //   visibility: visible;
-          //   &::after,
-          &::before {
-            width: 14px;
-            height: 14px;
-            background-size: 100%;
-          }
-        }
+        padding: 0px 16px;
 
         span {
           font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-          font-size: 12px;
+          font-size: 16px;
           font-weight: normal;
-          line-height: 18px;
+          line-height: 22px;
           color: #33475b;
+        }
+
+        &:hover {
+          background-color: #0580E8;
+          span {
+            color: #fff;
+          }
+        }
+
+        input[type="checkbox"] {
+          &::before {
+            width: 16px;
+            height: 16px;
+            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox.svg);
+            background-size: 100%;
+          }
+
+          &:checked {
+            &::before {
+              background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg);
+            }
+
+            // & + span {
+            //   color: #0c131a;
+            // }
+          }
         }
       }
     }
