@@ -1,7 +1,7 @@
 (function () {
   var bodyInterval = setInterval(function () {
     var bodyEle = document.querySelector("body");
-    if (!bodyEle.classList.contains("spz-2001")) {
+    if (!bodyEle.classList.contains("spz_custom_dropdown")) {
       clearInterval(bodyInterval);
 
       const hubSpotJS = document.createElement("script");
@@ -10,7 +10,7 @@
       hubSpotJS.setAttribute("charset", "utf-8");
       document.head.appendChild(hubSpotJS);
 
-      bodyEle.classList.add("spz-2001");
+      bodyEle.classList.add("spz_custom_dropdown");
 
       //Hero section content feeding
       waitForElm("form.hs-form-private.hs-form-spz .hs-form-field").then(
