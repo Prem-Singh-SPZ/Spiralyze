@@ -1,25 +1,29 @@
 (function () {
-  var bodyInterval = setInterval(function () {
-    var bodyEle = document.querySelector("body");
-    if (!bodyEle.classList.contains("spz_custom_dropdown")) {
-      clearInterval(bodyInterval);
+  // var bodyInterval = setInterval(function () {
+  //   var bodyEle = document.querySelector("body");
+  //   if (!bodyEle.classList.contains("spz_custom_dropdown")) {
+  //     clearInterval(bodyInterval);
 
-      const hubSpotJS = document.createElement("script");
-      hubSpotJS.src = "//js.hsforms.net/forms/embed/v2.js";
-      hubSpotJS.type = "text/javascript";
-      hubSpotJS.setAttribute("charset", "utf-8");
-      document.head.appendChild(hubSpotJS);
+  function loadTest() {
+    const hubSpotJS = document.createElement("script");
+    hubSpotJS.src = "//js.hsforms.net/forms/embed/v2.js";
+    hubSpotJS.type = "text/javascript";
+    hubSpotJS.setAttribute("charset", "utf-8");
+    document.head.appendChild(hubSpotJS);
 
-      bodyEle.classList.add("spz_custom_dropdown");
+    document.body.classList.add("spz_custom_dropdown");
 
-      //Hero section content feeding
-      waitForElm("form.hs-form-private.hs-form-spz .hs-form-field").then(
-        function (elm) {
-          appendInputLabel();
-          focusFields();
-          checkboxDropdown();
-          appendImages();
+    //Hero section content feeding
+    waitForElm("form.hs-form-private.hs-form-spz .hs-form-field").then(
+      function (elm) {
+        appendInputLabel();
+        focusFields();
+        checkboxDropdown();
+        appendImages();
 
+        if (
+          document.querySelectorAll(".spz-btn.custom-input-btn").length == 0
+        ) {
           document
             .querySelector(
               "form.hs-form-private .hs-fieldtype-checkbox.field.hs-form-field legend.hs-field-desc"
@@ -28,55 +32,121 @@
               "afterend",
               ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`
             );
+        }
 
-          window.addEventListener("click", function (e) {
-            if (e.target.classList.contains("spz-btn")) {
-              e.target.parentElement.classList.toggle("field-focus");
-              dropdownFunctionality();
-            }
-            if (e.target.classList.contains("hs-button")) {
+        window.addEventListener("click", function (e) {
+          if (e.target.classList.contains("spz-btn")) {
+            e.target.parentElement.classList.toggle("field-focus");
+            dropdownFunctionality();
+          }
+          if (e.target.classList.contains("hs-button")) {
+            checkError();
+          }
+          if (e.target.closest("ul")) {
+            if (e.target.closest("ul").classList.contains("hs-error-msgs")) {
               checkError();
             }
-            if (e.target.closest("ul")) {
-              if (e.target.closest("ul").classList.contains("hs-error-msgs")) {
-                checkError();
-              }
-            }
-          });
+          }
+        });
 
-          var jQueryInterval = setInterval(function () {
-            if (typeof jQuery != "undefined") {
-              clearInterval(jQueryInterval);
+        var jQueryInterval = setInterval(function () {
+          if (typeof jQuery != "undefined") {
+            clearInterval(jQueryInterval);
 
-              jQuery("body").click(function (evt) {
+            jQuery("body").click(function (evt) {
+              if (
+                !jQuery(evt.target).hasClass("hs_capability_types") &&
+                jQuery(evt.target).closest(
+                  ".hs-fieldtype-checkbox.field.hs-form-field"
+                ).length == 0
+              ) {
                 if (
-                  !jQuery(evt.target).hasClass("hs_capability_types") &&
-                  jQuery(evt.target).closest(
-                    ".hs-fieldtype-checkbox.field.hs-form-field"
-                  ).length == 0
+                  jQuery(".hs-fieldtype-checkbox.field.hs-form-field").hasClass(
+                    "field-focus"
+                  )
                 ) {
-                  if (
-                    jQuery(
-                      ".hs-fieldtype-checkbox.field.hs-form-field"
-                    ).hasClass("field-focus")
-                  ) {
-                    jQuery(
-                      ".hs-fieldtype-checkbox.field.hs-form-field"
-                    ).removeClass("field-focus");
-                    dropdownFunctionality();
-                  }
+                  jQuery(
+                    ".hs-fieldtype-checkbox.field.hs-form-field"
+                  ).removeClass("field-focus");
+                  dropdownFunctionality();
                 }
-              });
-            }
-          });
-        }
-      );
+              }
+            });
+          }
+        });
+      }
+    );
 
-      hubSpotJS.onload = function () {
-        appendHubspotScript();
-      };
-    }
+    hubSpotJS.onload = function () {
+      appendHubspotScript();
+    };
+  }
+
+  //   }
+  // });
+
+  function removeTest() {
+    setTimeout(() => {
+      document.body.classList.remove("spz_custom_dropdown");
+    }, 500);
+  }
+
+  history.pushState = (function (f) {
+    return function pushState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event("pushstate"));
+      window.dispatchEvent(new Event("locationchange"));
+      return ret;
+    };
+  })(history.pushState);
+  history.replaceState = (function (f) {
+    return function replaceState() {
+      var ret = f.apply(this, arguments);
+      window.dispatchEvent(new Event("replacestate"));
+      window.dispatchEvent(new Event("locationchange"));
+      return ret;
+    };
+  })(history.replaceState);
+  window.addEventListener("popstate", function () {
+    window.dispatchEvent(new Event("locationchange"));
   });
+  window.addEventListener("locationchange", function () {
+    // removeTest();
+
+    url = location.href;
+    urlNewCheck(url);
+  });
+  var url = location.href;
+  urlNewCheck(url);
+
+  function urlNewCheck(url) {
+    // var targetTestURL = 'https://drata.com/';
+    // if (isSameUrl(url, targetTestURL, true)) {
+    //   createTest_2006();
+    // }
+    if (window.location.pathname.indexOf("/access") > -1) {
+      loadTest();
+    } else {
+      removeTest();
+    }
+  }
+
+  // isSameUrl Parameters
+  function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
+    currentUrl = currentUrl.includes("#")
+      ? currentUrl.slice(0, currentUrl.indexOf("#"))
+      : currentUrl;
+    specifiedUrl = specifiedUrl.includes("#")
+      ? specifiedUrl.slice(0, specifiedUrl.indexOf("#"))
+      : specifiedUrl;
+    if (includeQueryParams)
+      currentUrl = currentUrl.includes("?")
+        ? currentUrl.slice(0, currentUrl.indexOf("?"))
+        : currentUrl;
+    if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+      return true;
+    return false;
+  }
 
   function appendImages() {
     document.head.insertAdjacentHTML(
@@ -209,11 +279,17 @@
 
     scriptSPZ.innerHTML =
       'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "a6043509-2a53-4a93-8c05-b64cb53299e8", cssClass: "hs-form-spz", css: "", submitText: "Schedule Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
-    if (document.querySelector(".mui-12ive4l-Form-formContainer")) {
-      document
-        .querySelector(".mui-12ive4l-Form-formContainer")
-        .appendChild(scriptSPZ);
-    }
+
+    waitForElm(".mui-12ive4l-Form-formContainer").then(function (elm) {
+      if (
+        document.querySelectorAll(".mui-12ive4l-Form-formContainer .hbspt-form")
+          .length == 0
+      ) {
+        document
+          .querySelector(".mui-12ive4l-Form-formContainer")
+          .appendChild(scriptSPZ);
+      }
+    });
   }
 
   // Generic Code
