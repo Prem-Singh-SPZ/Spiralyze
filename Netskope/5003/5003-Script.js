@@ -87,8 +87,7 @@
                     <div class="ems-content">
                     <a href="javascript:void(0)" class="ems-close-btn"></a>
                         <div class="ems-content-inner">
-                            <h6>Get a quick demo to see how Netskope can 
-                            secure your entire multi-cloud environment</h6>
+                            <h6>Get a quick demo to see how Netskope can protect and accelerate everything to everywhere</h6>
                             <ul class="ems-points">
                                 <li>Visibility</li>
                                 <li>Security</li>
