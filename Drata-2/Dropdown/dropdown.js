@@ -81,7 +81,7 @@
   function appendImages() {
     document.head.insertAdjacentHTML(
       "beforeend",
-      `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg" as="image">`
+      `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1708060676/drata/Access-Page-Custom-Dropdown/Arrow-active.svg" as="image">`
     );
   }
 

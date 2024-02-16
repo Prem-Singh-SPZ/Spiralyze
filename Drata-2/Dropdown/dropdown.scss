@@ -141,9 +141,13 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
     box-shadow: none;
   }
   select {
-    appearance: auto;
-    -webkit-appearance: auto;
-    background-image: none;
+    appearance: none;
+    -webkit-appearance: none;
+    background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg);
+    -webkit-background-position: right center;
+    background-position: calc(100% + 10px) center;
+    background-repeat: no-repeat;
+    background-size: 18px;
   }
   select.is-placeholder {
     color: #bfbfbf;
@@ -698,9 +702,17 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
   .hs-form-private.hs-form-spz fieldset.form-columns-1 input[type="radio"] {
     width: auto;
   }
-  .hs-form-private.hs-form-spz fieldset.form-columns-2 .hs-form-field {
-    // width: 50%;
-    // float: left;
+  .hs-form-private.hs-form-spz
+    fieldset.form-columns-1
+    .hs-form-field.hs-fieldtype-select {
+    &.field-focus,
+    &.input-filled {
+      .input {
+        select {
+          background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708060676/drata/Access-Page-Custom-Dropdown/Arrow-active.svg);
+        }
+      }
+    }
   }
   .hs-form-private.hs-form-spz fieldset.form-columns-2 .input {
     margin-right: 8px;
@@ -894,12 +906,12 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
           border-radius: 3px;
           width: calc(100% - 8px);
           text-align: left;
-          background-image: url(data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTciIGhlaWdodD0iMTAiIHZpZXdCb3g9IjAgMCAxNyAxMCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4gXAogICAgICAgICAgICAgICAgICAgICA8cGF0aCBkPSJNMS45OTc1IDAuNzM3NTQ5TDguNSA2LjQ2MjU1TDE1LjAwMjUgMC43Mzc1NDlMMTcgMi41MDAwNUw4LjUgMTBMMCAyLjUwMDA1TDEuOTk3NSAwLjczNzU0OVoiIGZpbGw9IiNBNEE0QTQiLz4gXAogICAgICAgICAgICAgICAgICAgIDwvc3ZnPg==);
+          background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708060676/drata/Access-Page-Custom-Dropdown/Arrow-grey.svg);
           -webkit-background-position: right center;
-          background-position: 99.1% center;
+          background-position: 100% center;
           background-repeat: no-repeat;
-          -webkit-background-size: 17px;
-          background-size: 9px;
+          -webkit-background-size: 18px;
+          background-size: 18px;
           background-color: #f5f8fa;
           outline: transparent;
 
@@ -934,6 +946,8 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
           &.multiple-value {
             padding-bottom: 2px;
             padding-top: 7px;
+            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708060676/drata/Access-Page-Custom-Dropdown/Arrow-active.svg);
+
             .label {
               display: none;
             }
@@ -947,23 +961,16 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
             width: calc(100% - 8px);
             height: 200px;
             z-index: 1;
-            top: 40px;
+            top: 100%;
             border-radius: 8px;
             border: 1px solid #bfbfbf;
             border-top: 0;
 
-            @media (max-width: 472.98px) {
-              top: 62px;
-            }
-            @media (min-width: 775.98px) and (max-width: 945.98px) {
-              top: 62px;
-            }
-
             .inputs-list.multi-container {
               height: 100%;
               overflow: auto;
-              // padding: 4px 16px;
-              padding: 0;
+              padding: 4px 0;
+              // padding: 0;
             }
 
             .MuiFormControl-root.MuiFormControl-fullWidth {
@@ -973,6 +980,26 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
         }
 
         &.field-focus {
+          &.field-error {
+            margin-bottom: 41px;
+
+            @media (max-width: 472.98px) {
+              margin-bottom: 36px;
+            }
+            @media (min-width: 775.98px) and (max-width: 945.98px) {
+              margin-bottom: 36px;
+            }
+          }
+
+          .spz-btn {
+            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708060676/drata/Access-Page-Custom-Dropdown/Arrow-active.svg);
+            border-color: rgba(82, 168, 236, 0.8);
+          }
+
+          .no-list.hs-error-msgs.inputs-list {
+            position: absolute;
+          }
+
           .input {
             display: block;
             .inputs-list.multi-container {
@@ -1011,7 +1038,7 @@ body.spz-2001 #__next main section div[class*="Form-formOuterContainer"] {
         }
 
         &:hover {
-          background-color: #0580E8;
+          background-color: #0580e8;
           span {
             color: #fff;
           }
