@@ -16,9 +16,21 @@
       appendHubspotScript();
     };
 
+    
     //Hero section content feeding
     waitForElm("form.hs-form-private.hs-form-spz .hs-form-field").then(
       function (elm) {
+        if (
+          document.querySelector(
+            '#__next main section div[class*="Form-formOuterContainer"] .hs-form-iframe'
+          )
+        ) {
+          document
+            .querySelector(
+              '#__next main section div[class*="Form-formOuterContainer"] .hs-form-iframe'
+            )
+            .remove();
+        }
         appendInputLabel();
         focusFields();
 
@@ -71,6 +83,7 @@
 
   window.addEventListener("click", function (e) {
     if (e.target.classList.contains("spz-btn")) {
+      // console.log('I am batman')
       e.target.parentElement.classList.toggle("field-focus");
       dropdownFunctionality();
     }
@@ -121,8 +134,7 @@
 
   function urlNewCheck(url) {
     var targetTestURL = "https://drata.com/access";
-    if (
-      isSameUrl(url, targetTestURL, true)) {
+    if (isSameUrl(url, targetTestURL, true)) {
       waitForElm(".mui-12ive4l-Form-formContainer").then(function (elm) {
         loadTest();
       });

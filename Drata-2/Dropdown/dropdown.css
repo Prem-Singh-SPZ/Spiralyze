@@ -1,7 +1,9 @@
-body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-form-iframe, body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] div[id*=reactHubspotForm] {
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-form-iframe,
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] div[id*=reactHubspotForm] {
   display: none !important;
 }
-body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-form-iframe + span.MuiCircularProgress-root, body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] div[id*=reactHubspotForm] + span.MuiCircularProgress-root {
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-form-iframe + span.MuiCircularProgress-root,
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] div[id*=reactHubspotForm] + span.MuiCircularProgress-root {
   display: none !important;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form {
@@ -663,6 +665,8 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   font-weight: normal;
   line-height: 22px;
   color: #33475b;
+  position: relative;
+  padding-left: 20px;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display:hover {
   background-color: #0580e8;
@@ -670,12 +674,27 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display:hover span {
   color: #fff;
 }
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox] {
+  height: 0;
+  width: 0;
+  margin: 0;
+  visibility: hidden;
+  opacity: 0;
+}
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox]::before {
+  display: none;
+}
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox] + span::before {
+  content: "";
+  position: absolute;
+  cursor: pointer;
   width: 16px;
   height: 16px;
+  left: 0;
+  top: 2px;
   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox.svg);
   background-size: 100%;
 }
-body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox]:checked::before {
+body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display input[type=checkbox]:checked + span::before {
   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg);
 }

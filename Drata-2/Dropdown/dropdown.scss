@@ -1,6 +1,11 @@
 $ff-inter: Inter;
-body.spz_custom_dropdown #__next main section div[class*="Form-formOuterContainer"] {
-  .hs-form-iframe, div[id*=reactHubspotForm] {
+body.spz_custom_dropdown
+  #__next
+  main
+  section
+  div[class*="Form-formOuterContainer"] {
+  .hs-form-iframe,
+  div[id*="reactHubspotForm"] {
     display: none !important;
 
     & + span.MuiCircularProgress-root {
@@ -1035,6 +1040,8 @@ body.spz_custom_dropdown #__next main section div[class*="Form-formOuterContaine
           font-weight: normal;
           line-height: 22px;
           color: #33475b;
+          position: relative;
+          padding-left: 20px;
         }
 
         &:hover {
@@ -1045,14 +1052,29 @@ body.spz_custom_dropdown #__next main section div[class*="Form-formOuterContaine
         }
 
         input[type="checkbox"] {
+          height: 0;
+          width: 0;
+          margin: 0;
+          visibility: hidden;
+          opacity: 0;
           &::before {
-            width: 16px;
-            height: 16px;
-            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox.svg);
-            background-size: 100%;
+            display: none;
+          }
+          & + span {
+            &::before {
+              content: "";
+              position: absolute;
+              cursor: pointer;
+              width: 16px;
+              height: 16px;
+              left: 0;
+              top: 2px;
+              background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox.svg);
+              background-size: 100%;
+            }
           }
 
-          &:checked {
+          &:checked + span {
             &::before {
               background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1707981595/drata/Access-Page-Custom-Dropdown/Checkbox_checked.svg);
             }
