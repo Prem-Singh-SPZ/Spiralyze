@@ -10,15 +10,18 @@
     hubSpotJS.type = "text/javascript";
     hubSpotJS.setAttribute("charset", "utf-8");
     document.head.appendChild(hubSpotJS);
-
     document.body.classList.add("spz_custom_dropdown");
+
+    hubSpotJS.onload = function () {
+      appendHubspotScript();
+    };
 
     //Hero section content feeding
     waitForElm("form.hs-form-private.hs-form-spz .hs-form-field").then(
       function (elm) {
         appendInputLabel();
         focusFields();
-        checkboxDropdown();
+
         appendImages();
 
         if (
@@ -33,21 +36,6 @@
               ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`
             );
         }
-
-        window.addEventListener("click", function (e) {
-          if (e.target.classList.contains("spz-btn")) {
-            e.target.parentElement.classList.toggle("field-focus");
-            dropdownFunctionality();
-          }
-          if (e.target.classList.contains("hs-button")) {
-            checkError();
-          }
-          if (e.target.closest("ul")) {
-            if (e.target.closest("ul").classList.contains("hs-error-msgs")) {
-              checkError();
-            }
-          }
-        });
 
         var jQueryInterval = setInterval(function () {
           if (typeof jQuery != "undefined") {
@@ -76,14 +64,25 @@
         });
       }
     );
-
-    hubSpotJS.onload = function () {
-      appendHubspotScript();
-    };
   }
 
   //   }
   // });
+
+  window.addEventListener("click", function (e) {
+    if (e.target.classList.contains("spz-btn")) {
+      e.target.parentElement.classList.toggle("field-focus");
+      dropdownFunctionality();
+    }
+    // if (e.target.classList.contains("hs-button")) {
+    //   checkError();
+    // }
+    if (e.target.closest("ul")) {
+      if (e.target.closest("ul").classList.contains("hs-error-msgs")) {
+        checkError();
+      }
+    }
+  });
 
   function removeTest() {
     setTimeout(() => {
@@ -116,16 +115,19 @@
     url = location.href;
     urlNewCheck(url);
   });
+
   var url = location.href;
   urlNewCheck(url);
 
   function urlNewCheck(url) {
-    // var targetTestURL = 'https://drata.com/';
-    // if (isSameUrl(url, targetTestURL, true)) {
-    //   createTest_2006();
-    // }
-    if (window.location.pathname.indexOf("/access") > -1) {
-      loadTest();
+    var targetTestURL = "https://drata.com/access";
+    if (
+      isSameUrl(url, targetTestURL, true) &&
+      !document.body.classList.contains("spz_custom_dropdown")
+    ) {
+      waitForElm(".mui-12ive4l-Form-formContainer").then(function (elm) {
+        loadTest();
+      });
     } else {
       removeTest();
     }
@@ -156,90 +158,106 @@
   }
 
   function checkboxDropdown() {
-    let counter = 0;
-    document.querySelectorAll(".hs-form-checkbox").forEach(function (elem, i) {
-      elem.querySelector(".hs-input").addEventListener("click", function () {
-        var title = elem.querySelector("span").textContent;
+    waitForElm(".spz_custom_dropdown .hs-form-spz .hs-form-checkbox").then(
+      function (elm) {
+        let counter = 0;
+        document
+          .querySelectorAll(".hs-form-checkbox")
+          .forEach(function (elem, i) {
+            elem
+              .querySelector(".hs-input")
+              .addEventListener("click", function () {
+                var title = elem.querySelector("span").textContent;
 
-        if (elem.querySelector('input[type="checkbox"]').checked) {
-          var html = '<span title="' + title + '">' + title + "</span>";
-          document
-            .querySelector(".spz-btn .value-container")
-            .insertAdjacentHTML("beforeend", html);
-          counter++;
-        } else {
-          document.querySelector('span[title="' + title + '"]').remove();
-          counter--;
-        }
+                if (elem.querySelector('input[type="checkbox"]').checked) {
+                  var html = '<span title="' + title + '">' + title + "</span>";
 
-        if (counter == 1) {
-          document
-            .querySelector(
-              ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-            )
-            .classList.add("single-value");
-          if (
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.contains("multiple-value")
-          ) {
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.remove("multiple-value");
-          }
-        } else if (counter == 0) {
-          if (
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.contains("single-value")
-          ) {
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.remove("single-value");
-          }
-          if (
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.contains("multiple-value")
-          ) {
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.remove("multiple-value");
-          }
-        } else {
-          document
-            .querySelector(
-              ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-            )
-            .classList.add("multiple-value");
-          if (
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.contains("single-value")
-          ) {
-            document
-              .querySelector(
-                ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-              )
-              .classList.remove("single-value");
-          }
-        }
-      });
-    });
+                  if (
+                    document.querySelectorAll('span[title="' + title + '"]')
+                      .length == 0
+                  ) {
+                    document
+                      .querySelector(".spz-btn .value-container")
+                      .insertAdjacentHTML("beforeend", html);
+                    counter++;
+                  }
+                } else {
+                  document
+                    .querySelector('span[title="' + title + '"]')
+                    .remove();
+                  counter--;
+                }
+
+                if (counter == 1) {
+                  document
+                    .querySelector(
+                      ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                    )
+                    .classList.add("single-value");
+                  if (
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.contains("multiple-value")
+                  ) {
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.remove("multiple-value");
+                  }
+                } else if (counter == 0) {
+                  if (
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.contains("single-value")
+                  ) {
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.remove("single-value");
+                  }
+                  if (
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.contains("multiple-value")
+                  ) {
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.remove("multiple-value");
+                  }
+                } else {
+                  document
+                    .querySelector(
+                      ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                    )
+                    .classList.add("multiple-value");
+                  if (
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.contains("single-value")
+                  ) {
+                    document
+                      .querySelector(
+                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                      )
+                      .classList.remove("single-value");
+                  }
+                }
+              });
+          });
+      }
+    );
   }
 
   function dropdownFunctionality() {
@@ -273,23 +291,21 @@
     }
   }
 
-  // Append hubspot script in '.form-wrapper-spz' div
+  // Hubspot form script
   function appendHubspotScript() {
     const scriptSPZ = document.createElement("script");
 
-    scriptSPZ.innerHTML =
-      'hbspt.forms.create({region: "na1", portalId: "7817592", formId: "a6043509-2a53-4a93-8c05-b64cb53299e8", cssClass: "hs-form-spz", css: "", submitText: "Schedule Demo", onFormReady: function ($form) { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });';
+    scriptSPZ.innerHTML = `hbspt.forms.create({region: "na1", portalId: "7817592", formId: "a6043509-2a53-4a93-8c05-b64cb53299e8", cssClass: "hs-form-spz", css: "", submitText: "Schedule Demo", onFormReady: ($form) => { }, onFormSubmit: function ($form) { }, onFormSubmitted: function ($form) { } });`;
 
-    waitForElm(".mui-12ive4l-Form-formContainer").then(function (elm) {
-      if (
-        document.querySelectorAll(".mui-12ive4l-Form-formContainer .hbspt-form")
-          .length == 0
-      ) {
-        document
-          .querySelector(".mui-12ive4l-Form-formContainer")
-          .appendChild(scriptSPZ);
-      }
-    });
+    if (
+      document.querySelectorAll(".mui-12ive4l-Form-formContainer .hbspt-form")
+        .length == 0
+    ) {
+      document
+        .querySelector(".mui-12ive4l-Form-formContainer")
+        .appendChild(scriptSPZ);
+      checkboxDropdown();
+    }
   }
 
   // Generic Code
