@@ -122,9 +122,7 @@
   function urlNewCheck(url) {
     var targetTestURL = "https://drata.com/access";
     if (
-      isSameUrl(url, targetTestURL, true) &&
-      !document.body.classList.contains("spz_custom_dropdown")
-    ) {
+      isSameUrl(url, targetTestURL, true)) {
       waitForElm(".mui-12ive4l-Form-formContainer").then(function (elm) {
         loadTest();
       });
