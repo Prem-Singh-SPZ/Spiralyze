@@ -1,0 +1,2906 @@
+<!doctype html>
+<html lang="en"><!-- Copyright (C) 2022 Perkuto Solutions Inc - All Rights Reserved. You may use and modify this code under the terms of the Perkuto Template license available here: http://perkuto.com/terms-and-conditions -->
+ <head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="icon" type="image/x-icon" href="${Favicon}">
+  <title>${SEOTitle}</title> <!-- Google Tag Manager -->
+  <script>(function (w, d, s, l, i) {
+                w[l] = w[l] || []; w[l].push({
+                    'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+                }); var f = d.getElementsByTagName(s)[0],
+                    j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                        'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+            })(window, document, 'script', 'dataLayer', 'GTM-MM7S3LZ');
+        </script> <!-- End Google Tag Manager -->
+  <link rel="stylesheet" href="https://lp.eptura.com/rs/267-JUP-120/images/eptura__form.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css" integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+  <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script> <!-- Marketo Variables --> <!-- Strings -->
+  <meta class="mktoString" id="Favicon" mktoname="Favicon URL:" default="https://lp.eptura.com/rs/267-JUP-120/images/Eptura-Favicon-Logo-16px.webp">
+  <meta class="mktoString" id="LightLogoURL" mktoname="Light Logo URL:" default="https://lp.eptura.com/rs/267-JUP-120/images/Eptura.png">
+  <meta class="mktoString" id="DarkLogoURL" mktoname="Dark Logo URL:" default="https://lp.eptura.com/rs/267-JUP-120/images/Eptura%20Obsidian.png">
+  <meta class="mktoString" id="SEOTitle" mktoname="SEO Page Title:" default="Eptura">
+  <meta class="mktoString" id="HeroFormOpac" mktoname="Hero Form Opac (0-100):" default="100">
+  <meta class="mktoString" id="BottomSpacer" mktoname="Bottom Spacer:" default="25">
+  <meta class="mktoString" id="CountdownDate" mktoname="Coutdown Date (YYYY-MM-DD):" default="2023-04-28">
+  <meta class="mktoString" id="CountdownTime" mktoname="Coutdown Time (HH:MM):" default="10:00">
+  <meta class="mktoString" id="CountdownTimeZone" mktoname="Coutdown Time Zone:" default="America/New_York">
+  <meta class="mktoString" id="domainblock" mktoname="Email Domain Blocking:" default="https://lp.eptura.com/rs/267-JUP-120/images/domain-block-script.js">
+  <meta class="mktoString" id="Reordering" mktoname="Section Reordering" default>
+  <meta class="mktoString" id="Reordering1" mktoname="2 Col + Form:" default="1">
+  <meta class="mktoString" id="Reordering2" mktoname="Countdown Timer:" default="2">
+  <meta class="mktoString" id="Reordering3" mktoname="2 Col Img Right:" default="3">
+  <meta class="mktoString" id="Reordering4" mktoname="2 Col Img Left:" default="4">
+  <meta class="mktoString" id="Reordering5" mktoname="Testimonials:" default="5">
+  <meta class="mktoString" id="Reordering6" mktoname="3 Cards Section:" default="6">
+  <meta class="mktoString" id="Reordering7" mktoname="2 Cards Section:" default="7">
+  <meta class="mktoString" id="Reordering8" mktoname="1st CTA Panel:" default="8">
+  <meta class="mktoString" id="Reordering9" mktoname="4 Icons Section:" default="9">
+  <meta class="mktoString" id="Reordering10" mktoname="3 Icons Section:" default="10">
+  <meta class="mktoString" id="Reordering11" mktoname="Video Section:" default="11">
+  <meta class="mktoString" id="Reordering12" mktoname="3 Posts Section:" default="12">
+  <meta class="mktoString" id="Reordering13" mktoname="2nd CTA Panel:" default="13">
+  <meta class="mktoString" id="Reordering14" mktoname="Blank Section:" default="14">
+  <meta class="mktoString" id="Reordering15" mktoname="Card Grid Section:" default="15"><!-- Colors -->
+  <meta class="mktoColor" id="HeroBGColor" mktoname="Hero: BG Color" default="#0D122E">
+  <meta class="mktoColor" id="HeroNavColor" mktoname="Hero: Nav Color" default="#0D122E">
+  <meta class="mktoColor" id="HeroFormBGColor" mktoname="Hero Form: BG Color" default="#FFFFFF">
+  <meta class="mktoColor" id="HeroFormTextColor" mktoname="Hero Form: Text Color" default="#FFFFFF">
+  <meta class="mktoColor" id="TopBannerBGColor" mktoname="Top Banner: BG Color" default="#D6D7F5">
+  <meta class="mktoColor" id="TwoColFormBGColor" mktoname="2Col w/ Form: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="CountdownTimerBGColor" mktoname="Countdown Timer: BG Color" default="#0D122E">
+  <meta class="mktoColor" id="TwoColImgRBGColor" mktoname="2Col Img Right: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="TwoColImgLBGColor" mktoname="2Col Img Left: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="TestimonialTopBGColor" mktoname="Testimonial: BG Color" default="#D6D7F5">
+  <meta class="mktoColor" id="ThreeColCards" mktoname="3Col Cards: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="TwoColCards" mktoname="2Col Cards: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="MiddleCTAPanel" mktoname="Middle CTA: BG Color" default="#D6D7F5">
+  <meta class="mktoColor" id="FourColIcons" mktoname="4Col Icons: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="ThreeColIcons" mktoname="3Col Icons: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="TwoColVideoBG" mktoname="2Col Video: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="ThreeColCardsBottom" mktoname="3Col Cards: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="CTAPanelBottom" mktoname="CTA Bottom: BG Color" default="#D6D7F5">
+  <meta class="mktoColor" id="BlankSectionColor" mktoname="Blank Section: BG Color" default="#ffffff">
+  <meta class="mktoColor" id="FooterBG" mktoname="Footer: BG Color" default="#0D122E">
+  <meta class="mktoColor" id="CardGridBG" mktoname="Card Grid: BG Color" default="#FFFFFF"><!-- Boolean -->
+  <meta class="mktoBoolean" id="Flex23Mode" mktoname="Flex23 Mode" default="false" false_value="false" true_value="true" false_value_name="Off" true_value_name="On">
+  <meta class="mktoBoolean" id="NavSticky" mktoname="Nav: Position" default="true" false_value="false" true_value="true" false_value_name="Static" true_value_name="Sticky">
+  <meta class="mktoBoolean" id="NavDisplay" mktoname="Nav: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="NavBtnDisplay" mktoname="Nav: Button Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="HeroDisplay" mktoname="Hero: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="HeroBtnDisplay" mktoname="Hero: Button Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="HeroImgDisplay" mktoname="Hero: Image Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="HeroFormDisplay" mktoname="Hero: Form Display" default="false" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="HeroFormTitleTextDisplay" mktoname="Hero: Form Title Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="TopBannerDisplay" mktoname="Top Banner: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="2ColFormDisplay" mktoname="2Col + Form: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="2ColForm_Display" mktoname="2Col + Form: Form Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="CountdownDisplay" mktoname="Countdown Timer: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="2ColImgRightDisplay" mktoname="2Col Right Img: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="2ColImgLeftDisplay" mktoname="2Col Left Img: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="TestimonialBannerDisplay" mktoname="Testimonial Banner: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="3CardsDisplay" mktoname="3 Cards Section: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="3CardsBtnDisplay" mktoname="3 Cards Button: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="2CardsDisplay" mktoname="2 Cards Section: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="CTAPanel1Display" mktoname="CTA Panel 1: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="4ColIconsDisplay" mktoname="4 Col Icons: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="4ColIconsBtnDisplay" mktoname="4 Col Button: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="3ColIconsDisplay" mktoname="3 Col Icons: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="3ColIconsBtnDisplay" mktoname="3 Col Button: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="2ColVideoDisplay" mktoname="2 Col Video: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="3ColCardsBottomDisplay" mktoname="3 Col Cards: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="CTAPanel2Display" mktoname="CTA Panel 2: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="blankSectionDisplay" mktoname="Blank Section: Display" default="false" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="FooterDisplay" mktoname="Footer: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+  <meta class="mktoBoolean" id="FormDirection" mktoname="Form Direction" default="true" false_value="row" true_value="row-reverse" false_value_name="Right" true_value_name="Left">
+  <meta class="mktoBoolean" id="HeroListDisplay" mktoname="Hero: List Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="HeroListIcon" mktoname="Hero List Icon:" default="url(//res.cloudinary.com/spiralyze/image/upload/v1690976851/eptura/3002/checkmark-icon.svg)">
+  <meta class="mktoString" id="PageSpecificCSS" mktoname="Page Specific CSS:" default="">     
+  <meta class="mktoString" id="PageSpecificScript" mktoname="Page Specific Script:" default="">
+  <meta class="mktoBoolean" id="2ColImgButton" mktoname="2 Col Button: Display" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="FooterDivider" mktoname="Footer: Divider Line" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="FooterLinks" mktoname="Footer: All Links" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoString" id="HeroImgAltTag" mktoname="Hero Image Alt Tag" default="Hero Image">     
+  <meta class="mktoBoolean" id="cardGridDisplay" mktoname="Cards Grid Section" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">  
+  <meta class="mktoBoolean" id="cardGrid2Row" mktoname="Cards Grid 2 Row" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+  <meta class="mktoBoolean" id="cardGrid3Row" mktoname="Cards Grid 3 Row" default="true" false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+
+
+
+   
+ <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0062/1175.js" async></script>
+  <script type="text/javascript" src="https://cdn.bizible.com/scripts/bizible.js" async=""></script>
+  <style>
+            /* Global */
+            :root {
+                --Obsidian: #0D122E;
+                --PaleBlue: #7AA0FF;
+                --LightBlue: #456ED6;
+                --MedBlue: #1B4BC5;
+                --Turquoise: #26A199;
+                --Purple: #904AB0;
+                --Lilac: #D6D7F5;
+                --OffWhite: #F6FAFA;
+                --Grey: #888B8D;
+                --White: #ffffff;
+            }
+
+            @font-face {
+                font-family: 'Eptura Flexible';
+                src: url('https://lp.eptura.com/rs/267-JUP-120/images/EpturaFlexible-Regular.woff2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Eptura Flexible Light';
+                src: url('https://lp.eptura.com/rs/267-JUP-120/images/EpturaFlexible-Light.woff2') format('woff2');
+            }
+
+            @font-face {
+                font-family: 'Eptura Flexible Bold';
+                src: url('https://lp.eptura.com/rs/267-JUP-120/images/EpturaFlexible-Bold.woff2') format('woff2');
+            }
+
+            * {
+                scroll-behavior: smooth;
+                font-family: 'Eptura Flexible Light', Arial, sans-serif;
+            }
+
+            body {
+                background-color: var(--Obsidian);
+            }
+
+            span {
+                display: inline-block;
+            }
+
+            a:hover {
+                text-decoration: none;
+            }
+
+            ul {
+                padding-left: 20px;
+            }
+
+            .page_padding {
+                padding: 0 100px;
+                max-width: 1600px;
+                margin: auto;
+            }
+
+            .btn-primary {
+                border: none;
+                color: var(--Obsidian);
+                padding: .5rem 1.25rem;
+                font-size: 1rem;
+                font-weight: 400;
+                font-family: 'Eptura Flexible Light', Arial, sans-serif !important;
+            }
+
+            .light-btn {
+                color: #ffffff;
+                background-color: var(--MedBlue);
+            }
+
+            .light-btn:hover {
+                background-color: #456ED6;
+            }
+
+            .dark-btn {
+                color: #ffffff;
+                background-color: var(--Obsidian);
+            }
+
+            .dark-btn:hover {
+                background-color: #151d48;
+            }
+
+            .cta {
+                display: flex;
+                align-items: center;
+            }
+
+            .cta img {
+                width: .4rem;
+                margin-left: .35rem;
+            }
+
+            .desktopHide {
+                display: none;
+            }
+
+            .svg_square {
+                position: relative;
+                -webkit-mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='552px' height='500px' viewBox='0 0 552 500'%3E%3Ctitle%3Emask-blob-header%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M179.112611,49.4769647 C232.748487,50.747957 300.619478,51.0021555 388.826346,10.5845993 C477.033214,-29.8329568 585.067562,59.3907049 542.362219,212.163983 C499.656877,364.683063 436.869856,470.429625 311.295814,496.357869 C185.721771,522.286112 -6.45226944,385.781536 0.156890689,241.396807 C6.76605082,96.7578794 105.649254,47.9517739 179.112611,49.4769647 Z' id='mask-blob-header' fill='%230D122E' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='552px' height='500px' viewBox='0 0 552 500'%3E%3Ctitle%3Emask-blob-header%3C/title%3E%3Cg id='Page-1' stroke='none' stroke-width='1' fill='none' fill-rule='evenodd'%3E%3Cpath d='M179.112611,49.4769647 C232.748487,50.747957 300.619478,51.0021555 388.826346,10.5845993 C477.033214,-29.8329568 585.067562,59.3907049 542.362219,212.163983 C499.656877,364.683063 436.869856,470.429625 311.295814,496.357869 C185.721771,522.286112 -6.45226944,385.781536 0.156890689,241.396807 C6.76605082,96.7578794 105.649254,47.9517739 179.112611,49.4769647 Z' id='mask-blob-header' fill='%230D122E' fill-rule='nonzero'%3E%3C/path%3E%3C/g%3E%3C/svg%3E");
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+            }
+
+            .svg_square2 {
+                position: relative;
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 218.89 207.58'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M70.64,28.58c30.5-1.2,63.3-8.7,82.4-21,36.3-23.3,77.7,8.4,62.7,77-16,73.3-9.4,82.7-38.8,107-36.9,30.3-89.9,13.6-136.7-17.3C-.86,147.28-36.06,32.78,70.64,28.58Z'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 218.89 207.58'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M70.64,28.58c30.5-1.2,63.3-8.7,82.4-21,36.3-23.3,77.7,8.4,62.7,77-16,73.3-9.4,82.7-38.8,107-36.9,30.3-89.9,13.6-136.7-17.3C-.86,147.28-36.06,32.78,70.64,28.58Z'/%3E%3C/svg%3E");
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+            }
+
+            .svg_square3 {
+                position: relative;
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 232.53 200.83'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M145,35.44C126.1,26.64,106.2-2.96,67,.24,12.6,4.74-17.9,56.64,11.3,128.54c24.4,60.2,91.2,75.7,130.4,71.7,47.3-4.8,93.6-48.1,90.7-108.8-2.9-60.6-60.2-43.5-87.4-56Z'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 232.53 200.83'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M145,35.44C126.1,26.64,106.2-2.96,67,.24,12.6,4.74-17.9,56.64,11.3,128.54c24.4,60.2,91.2,75.7,130.4,71.7,47.3-4.8,93.6-48.1,90.7-108.8-2.9-60.6-60.2-43.5-87.4-56Z'/%3E%3C/svg%3E");
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+            }
+
+            .svg_square4 {
+                position: relative;
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 217.57 208.19'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M116.07,184.29c-19.2,5.7-37.8,27.1-66.9,23.5S-6.13,177.29,1.27,144.19C12.97,91.69-3.93,67.09,25.87,35.99,83.67-24.31,137.87,4.69,168.87,26.09c57.3,39.7,64.4,114.6,19.4,144.1-21.3,14.1-38.7,4.3-72.2,14.1Z'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 217.57 208.19'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M116.07,184.29c-19.2,5.7-37.8,27.1-66.9,23.5S-6.13,177.29,1.27,144.19C12.97,91.69-3.93,67.09,25.87,35.99,83.67-24.31,137.87,4.69,168.87,26.09c57.3,39.7,64.4,114.6,19.4,144.1-21.3,14.1-38.7,4.3-72.2,14.1Z'/%3E%3C/svg%3E");
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+            }
+
+            .svg_square5 {
+                position: relative;
+                -webkit-mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224.58 198.72'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M169.76,18.24C135.96,23.64,96.56-8.96,51.26,2.44,19.56,10.44-21.34,69.44,13.06,141.74c34.4,72.3,87.8,61,126.6,45.4,38.7-15.5,61.2-44.5,78.6-98,14.4-44.4,6.6-79.7-48.5-70.9Z'/%3E%3C/svg%3E");
+                mask-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='Layer_1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 224.58 198.72'%3E%3Cdefs%3E%3Cstyle%3E.cls-1%7Bfill:%231d1c38;%7D%3C/style%3E%3C/defs%3E%3Cpath class='cls-1' d='M169.76,18.24C135.96,23.64,96.56-8.96,51.26,2.44,19.56,10.44-21.34,69.44,13.06,141.74c34.4,72.3,87.8,61,126.6,45.4,38.7-15.5,61.2-44.5,78.6-98,14.4-44.4,6.6-79.7-48.5-70.9Z'/%3E%3C/svg%3E");
+                -webkit-mask-repeat: no-repeat;
+                mask-repeat: no-repeat;
+                -webkit-mask-size: contain;
+                mask-size: contain;
+            }
+
+            #threecol_cards .svg_square4 {
+                max-width: 275px !important;
+                padding-bottom: 25px;
+            }
+
+            .svg_square4 img {}
+
+            .svg_square::after {
+                content: "";
+                display: block;
+                padding-bottom: 100%;
+            }
+
+            .svg_square img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: 50% 50%;
+            }
+
+            .svg_square .img img {
+                width: 100%;
+                /* or any custom size */
+                height: auto;
+                object-fit: cover;
+                position: absolute;
+
+            }
+
+            .drop_shadow_md {
+                filter: drop-shadow(0 4px 3px rgb(0 0 0 / 0.07)) drop-shadow(0 2px 2px rgb(0 0 0 / 0.06));
+            }
+
+            .card {
+                background-color: transparent;
+                height: 100%;
+            }
+
+            .FourColBtn {
+                display: ${4ColIconsBtnDisplay};
+            }
+
+            .ThreeColBtn {
+                display: ${3ColIconsBtnDisplay};
+            }
+
+            #NavButton {
+                display: ${NavBtnDisplay};
+            }
+
+            #HeroBtn {
+                display: ${HeroBtnDisplay};
+            }
+
+            /* Nav */
+
+            #nav {
+                transition: background-color .15s;
+                z-index: 1;
+                background-color: ${HeroNavColor};
+            }
+
+            .transparent {
+                background-color: transparent !important;
+            }
+
+            .nav-scrolled {
+                background-color: white !important;
+                filter: drop-shadow(0 10px 8px rgb(0 0 0 / 0.04)) drop-shadow(0 4px 3px rgb(0 0 0 / 0.1));
+            }
+
+
+            #nav .button a {
+                background-color: #7AA0FF;
+            }
+
+            nav img {
+                width: 100%;
+                max-width: 175px;
+            }
+
+            #hero .button a:hover,
+            #nav .button a:hover {
+                background-color: #D6D7F5;
+                color: var(--Obsidian);
+            }
+
+            /* Hero */
+            #hero {
+                background-color: ${HeroBGColor};
+            }
+
+            #hero h1 {
+                font-weight: normal;
+                font-size: clamp(2rem, 4vw, 4rem);
+                letter-spacing: 2px;
+            }
+
+            #hero h6 {
+                font-weight: normal;
+                letter-spacing: 1px;
+            }
+
+            #hero p {
+                font-weight: 300;
+                font-size: clamp(1rem, 2vw, 1.25rem);
+                max-width: 900px;
+            }
+
+            #hero h6,
+            #hero .span_text {
+                color: var(--Turquoise);
+            }
+
+            #hero h1,
+            #hero p {
+                color: var(--White);
+            }
+
+            #hero .span_spacer,
+            #hero p,
+            #hero .button {
+                padding-left: 85px;
+            }
+
+            #hero .button a {
+                background-color: #7AA0FF;
+            }
+
+            #hero .svg_square {
+                max-width: 500px;
+            }
+
+            #HeroFormCol .panel {
+                border-radius: 4px;
+                padding: 2rem 3rem;
+            }
+
+             .mktoForm .mktoRadioList label,
+             .mktoForm .mktoCheckboxList label,
+            .mktoHtmlText,
+           .mktoForm label.mktoLabel,
+          .mktoHtmlText.mktoHasWidth>a {
+                color: ${HeroFormTextColor} !important;
+            }
+
+            /* Top Banner */
+            #top_banner {
+                background-color: ${TopBannerBGColor};
+            }
+
+            #top_banner .banner_container {
+                padding: 15px 160px;
+            }
+
+            #top_banner .banner_container>div {
+                flex-wrap: wrap;
+            }
+
+            #top_banner p {
+                margin: 0;
+                font-size: 14px;
+                line-height: 24px;
+                letter-spacing: 1px;
+            }
+
+            /* 2col + Form / 2col Img Right  */
+            #twocol_form h2,
+            #twocol_img_right h2,
+            #twocol_img_left h2 {
+                font-size: 2.5rem;
+                font-weight: normal;
+            }
+
+            #twocol_form h6,
+            #twocol_form .span_text {
+                color: var(--Purple);
+            }
+
+            #twocol_form .spacer,
+            #twocol_img_right .spacer,
+            #twocol_img_left .spacer {
+                padding-top: 10px;
+                padding-left: 80px;
+                padding-right: 40px;
+                padding-bottom: 10px;
+            }
+
+            #twocol_form li,
+            #twocol_img_right li,
+            #twocol_img_left li {
+                padding-bottom: .5rem;
+            }
+
+            /* 2col + Form */
+            #twocol_form {
+                padding-top: 6rem;
+                padding-bottom: 4rem;
+                background-color: ${TwoColFormBGColor};
+            }
+
+            #twocol_form .spacer p,
+            #twocol_img_right .spacer p,
+            #twocol_img_left .spacer p {
+                font-size: clamp(1rem, 2vw, 1.25rem);
+            }
+
+            /* 2col Img Right + 2col Img Left */
+            #twocol_img_right h6,
+            #twocol_img_left .span_text,
+            #twocol_img_left h6,
+            #twocol_img_right .span_text {
+                color: var(--Turquoise);
+            }
+
+            #twocol_img_right .svg_square,
+            #twocol_img_left .svg_square {
+                max-width: 450px;
+            }
+
+            #twocol_img_right {
+                background-color: ${TwoColImgRBGColor};
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+            }
+
+            #twocol_img_left {
+                padding-top: 3rem;
+                padding-bottom: 3rem;
+                background-color: ${TwoColImgLBGColor};
+            }
+
+            /* Countdown Timer */
+            #countdown {
+                background-color: #ffffff;
+                padding-bottom: 3rem;
+            }
+
+            #countdown p {
+                margin: 0;
+            }
+
+            #countdown .left .text p {
+                font-size: 2rem;
+            }
+
+            #countdown .right p.bolded {
+                font-size: 3rem;
+                line-height: 3rem;
+                font-family: 'Eptura Flexible Bold', Arial, sans-serif;
+                font-weight: bold;
+            }
+
+            #countdown .right p.light {
+                font-size: 15px;
+                font-family: 'Eptura Flexible Light', Arial, sans-serif;
+                font-weight: lighter;
+            }
+
+            #countdown .timer_container {
+                width: 100%;
+                color: #ffffff;
+                padding: 2rem 1.5rem;
+                margin: auto;
+                border-radius: 6px;
+                background-color: ${CountdownTimerBGColor};
+            }
+
+            /* Testimonials */
+            #testimonials {
+                background-color: ${TestimonialTopBGColor};
+            }
+
+            #testimonials h3 {
+                font-size: 1.15rem;
+            }
+
+            .testimonial_container img {
+                height: auto;
+                align-self: center;
+            }
+
+            .testimonial_container > div {
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+            }
+
+            /* 3col Cards */
+            #threecol_cards {
+                padding-top: 6rem;
+                background-color: ${ThreeColCards};
+                padding-bottom: 2rem;
+            }
+
+            #threecol_cards .svg_square {
+                max-width: 300px;
+            }
+
+            #threecol_cards h6 {
+                font-size: 14px;
+                letter-spacing: 1px;
+                color: var(--Turquoise);
+            }
+
+            #threecol_cards h2 {
+                font-size: 2.5rem;
+                font-weight: normal;
+            }
+
+            #threecol_cards h2 .span_text {
+                color: var(--Turquoise);
+            }
+
+            #threecol_cards .text_spacer,
+            #threecol_cards .spacer {
+                padding-left: 80px;
+            }
+
+            #threecol_cards .spacer {
+                padding-left: 180px;
+            }
+
+            #threecol_cards h5 {
+                font-size: .85rem;
+            }
+
+            #threecol_cards .cards_content {
+                padding-top: 4rem;
+            }
+
+            #threecol_cards .cards_content .card {
+                max-width: 425px;
+                border: none;
+            }
+
+            #threecol_cards .cards_content .svg_mask {
+                width: 18vw;
+                height: 18vw;
+            }
+
+            #threecol_cards .cards_content img {
+                /* height: 18vw; */
+            }
+
+            #threecol_cards .card_1 h5,
+            #threecol_cards .card_1 span {
+                color: var(--Turquoise);
+            }
+
+            #threecol_cards .card_2 h5,
+            #threecol_cards .card_2 span {
+                color: var(--LightBlue);
+            }
+
+            #threecol_cards .card_3 h5,
+            #threecol_cards .card_3 span {
+                color: var(--Purple);
+            }
+
+            #threecol_cards .spacer p,
+            #fourcol_icons .spacer p,
+            #threecol_icons .spacer p,
+            #threecol_cards_bottom .spacer p {
+                font-size: clamp(1rem, 2vw, 1.05rem);
+            }
+
+            #threecol_cards>div>div.text_content {
+                max-width: 900px;
+            }
+
+            /* 2 Col Cards */
+            #twocol_cards {
+                background-color: ${TwoColCards};
+                padding-top: 2rem;
+            }
+
+            #twocol_cards .text_content {
+                padding-left: 100px;
+            }
+
+            #twocol_cards .span_spacer {
+                padding-left: 80px;
+            }
+
+            #twocol_cards h6,
+            #twocol_cards h5,
+            #twocol_cards .span_text {
+                color: var(--Turquoise);
+            }
+
+            #twocol_cards h5 {
+                font-size: .85rem;
+            }
+
+            #twocol_cards h2 {
+                font-size: 2.5rem;
+            }
+
+            #twocol_cards .svg_square {
+                min-width: 250px;
+                max-height: 250px;
+            }
+
+            #twocol_cards .svg_square img {
+                align-self: flex-start;
+            }
+
+            /* CTA Panel */
+            #cta_panel {
+                background-color: ${MiddleCTAPanel};
+            }
+
+            #cta_panel p {
+                margin: 0;
+                font-family: 'Eptura Flexible', Arial, sans-serif !important;
+                font-size: 1.15rem;
+            }
+
+            /* 4col Icons */
+            #fourcol_icons {
+                background-color: ${FourColIcons};
+                padding-bottom: 2rem;
+            }
+
+            #fourcol_icons .columns,
+            #threecol_icons .columns {
+                padding-top: 4.25rem;
+            }
+
+            /* 3col Icons */
+            #threecol_icons {
+                background-color: ${ThreeColIcons};
+                padding-bottom: 2rem;
+            }
+
+            /* 2col Video */
+            #twocol_video {
+                background-color: ${TwoColVideoBG};
+                padding-left: 85px;
+            }
+
+            #twocol_video .row {
+                max-width: 1380px;
+                margin-left: auto;
+            }
+
+            #twocol_video span {
+                color: var(--Purple);
+            }
+
+            #twocol_video .text_content {
+                max-width: 500px;
+            }
+
+            #twocol_video .video {
+                max-width: 700px;
+            }
+
+            /* 3 Col Cards Bottom */
+            #threecol_cards_bottom {
+                background-color: ${ThreeColCardsBottom};
+                padding-top: 2rem;
+            }
+
+            #threecol_cards_bottom .spacer {
+                max-width: 700px;
+            }
+
+            #threecol_cards_bottom .card {
+                border-radius: .5rem;
+            }
+
+            #threecol_cards_bottom .columns h5 {
+                font-size: .85rem;
+            }
+
+            #threecol_cards_bottom .columns h3 {
+                font-size: 1.25rem;
+            }
+
+            #threecol_cards_bottom .card_1 h5 {
+                color: var(--Turquoise);
+            }
+
+            #threecol_cards_bottom .card_2 h5 {
+                color: var(--MedBlue);
+            }
+
+            #threecol_cards_bottom .card_3 h5 {
+                color: var(--Purple);
+            }
+
+            .cta_link {
+                color: var(--MedBlue);
+            }
+
+            .cta_link:hover {
+                color: var(--LightBlue);
+            }
+
+            /* CTA Panel Bottom */
+            #cta_panel_bottom {
+                background-color: ${CTAPanelBottom};
+            }
+
+            #cta_panel_bottom p {
+                margin: 0;
+                font-size: clamp(1.35rem, 2.3vw, 1.65rem);
+                padding-top: 1rem;
+                padding-bottom: 1rem;
+                font-family: 'Eptura Flexible', Arial, sans-serif !important;
+            }
+
+            /* 4col Icons */
+            #fourcol_icons {
+                padding-top: 2rem;
+            }
+
+            #fourcol_icons .span_text,
+            #fourcol_icons h6 {
+                color: var(--MedBlue);
+            }
+
+            #fourcol_icons .text_content {
+                padding-left: 100px;
+                max-width: 750px;
+            }
+
+            #fourcol_icons .spacer {
+                padding-left: 80px;
+            }
+
+            #fourcol_icons img {
+                max-height: 58px;
+                width: auto;
+            }
+
+            #fourcol_icons .icon_1 h4 {
+                color: var(--Turquoise);
+            }
+
+            #fourcol_icons .icon_2 h4 {
+                color: var(--MedBlue);
+            }
+
+            #fourcol_icons .icon_3 h4 {
+                color: var(--Purple);
+            }
+
+            #fourcol_icons .icon_4 h4 {
+                color: var(--Turquoise);
+            }
+
+            /* 3col Icons */
+            #threecol_icons h6,
+            #threecol_icons .span_text {
+                color: var(--MedBlue);
+            }
+
+            #threecol_icons .text_content {
+                padding-left: 100px;
+                max-width: 750px;
+            }
+
+            #threecol_icons .spacer {
+                padding-left: 80px;
+            }
+
+            #threecol_icons img {
+                max-height: 58px;
+            }
+
+            #threecol_icons .columns {
+                padding-left: 180px;
+            }
+
+            #threecol_icons .icon_1 h4 {
+                color: var(--Turquoise);
+            }
+
+            #threecol_icons .icon_2 h4 {
+                color: var(--MedBlue);
+            }
+
+            #threecol_icons .icon_3 h4 {
+                color: var(--Purple);
+            }
+
+            /* 3col Cards Bottom */
+            #threecol_cards_bottom span {
+                color: var(--Purple);
+            }
+
+            #threecol_cards_bottom .text_content {
+                padding-left: 100px;
+            }
+
+            #threecol_cards_bottom .spacer {
+                padding-left: 80px;
+            }
+
+            #threecol_cards_bottom .card_img {
+                max-height: 250.75px;
+                height: 55vw;
+            }
+
+            #threecol_cards_bottom .card_img div {
+                max-height: 250.75px;
+                height: 15vw;
+            }
+
+            #threecol_cards_bottom .card_img img {
+                height: 100%;
+                width: 100%;
+                object-fit: cover;
+            }
+
+            .spacer {
+                padding: ${BottomSpacer}px 0;
+            }
+
+            .spacer-bottom {
+                background-color: #ffffff;
+            }
+
+            /* Footer */
+            footer {
+                background-color: ${FooterBG};
+                font-weight: 300;
+                font-size: 14px;
+            }
+
+            footer h4 {
+                color: var(--Lilac);
+                font-size: 1rem;
+                font-weight: normal;
+                letter-spacing: 2px;
+            }
+
+            footer p {
+                margin: 0;
+                color: var(--OffWhite);
+            }
+
+            footer hr {
+                background-color: var(--Lilac);
+            }
+
+            footer ul {
+                margin: 0;
+                padding: 0;
+            }
+
+            footer ul li {
+                list-style: none;
+                padding-top: 1rem;
+            }
+
+            footer ul li a {
+                color: var(--OffWhite);
+            }
+
+            footer ul li a:hover,
+            footer .middle ul li a:hover,
+            footer .middle ul li a,
+            footer .right ul li a:hover {
+                text-decoration: none;
+                color: #d6d7f5;
+            }
+
+            footer .middle ul li a,
+            footer .right ul li a {
+                color: var(--Grey);
+            }
+
+            footer .footer_logo img {
+                max-width: 82px;
+            }
+
+            footer .bottom .links {
+                width: 100%;
+                max-width: 900px;
+            }
+
+            footer .bottom .links ul {
+                margin-bottom: 0;
+            }
+
+            footer .bottom .links ul li {
+                text-decoration: none;
+                list-style: none;
+                padding: 0;
+            }
+
+            footer .bottom .right a {
+                padding-left: 1rem;
+                text-decoration: none;
+            }
+
+            footer .bottom .right a img {
+                height: 20px;
+            }
+
+            footer .bottom .right a img:hover {
+                filter: grayscale(100%);
+            }
+
+            footer .bottom .left {
+                width: 75%;
+            }
+
+            /* Form Adjustments */
+            .mktoForm>div:nth-child(6)>div.mktoFormCol>div.mktoFieldWrap>div.mktoHtmlText.mktoHasWidth {
+                font-size: 12px !important;
+            }
+
+            /* Body Wrapper */
+            .body-wrapper:before {
+                background-image: url('https://lp.eptura.com/rs/267-JUP-120/images/aura-transparent-bg.png');
+                background-position: 110% 210%;
+                background-repeat: no-repeat;
+                content: "";
+                height: 100vh;
+                opacity: 50%;
+                position: fixed;
+                width: 100%;
+                z-index: -10;
+            }
+
+            /* [COOKIE BANNER] */
+            #cookie-law {
+                position: fixed;
+                z-index: 99999;
+                background: rgba(0, 0, 0, 0.8);
+                box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+                text-align: center;
+                padding: 30px;
+                right: 0;
+                bottom: 0;
+                left: 0;
+            }
+
+            #cookie-law p {
+                margin: 0;
+                color: #fff;
+                font-size: 16px;
+            }
+
+            #cookie-law p a {
+                color: var(--MedBlue);
+            }
+
+            .close-cookie-banner span {
+                display: block;
+                position: absolute;
+                top: -25px;
+                right: 25px;
+                color: #fff;
+                font-size: 15px;
+                padding: 12px 18px;
+                background-color: var(--MedBlue);
+                ;
+                border-radius: 50%;
+                text-decoration: none;
+                cursor: pointer;
+                border: var(--MedBlue) 2px solid;
+                opacity: 1;
+                transition-duration: .334s;
+                transition-property: background-color, border-color, color;
+                transition-timing-function: cubic-bezier(.33, 0, .67, 1);
+            }
+
+            .close-cookie-banner:hover span {
+                background-color: #fff;
+                color: var(--MedBlue);
+                text-decoration: none;
+                transition-duration: .334s;
+                transition-property: background-color, border-color, color;
+                transition-timing-function: cubic-bezier(.33, 0, .67, 1);
+            }
+
+            /* [/COOKIE BANNER] */
+
+
+            @media only screen and (max-width: 991px) {
+
+                #hero span,
+                p,
+                .button,
+                .spacer,
+                .text_spacer {
+                    padding-left: 0 !important;
+                }
+
+                #countdown .left {
+                    width: 75% !important;
+                }
+
+                #threecol_cards .svg_square4 {
+                    padding-bottom: 0;
+                }
+            }
+
+            @media only screen and (max-width: 767px) {
+
+
+                #hero span,
+                p,
+                .button,
+                .spacer,
+                .text_spacer,
+                #twocol_cards .span_spacer,
+                #twocol_cards .text_content,
+                #fourcol_icons .text_content,
+                #threecol_icons .text_content,
+                #threecol_icons .columns,
+                #twocol_video .text_content,
+                #threecol_cards_bottom .text_content,
+                .video_container,
+                #CTAPanelTxt,
+                .cta_panel_btn,
+                .pl-mob-0 {
+                    padding-left: 0 !important;
+                }
+
+                .page_padding {
+                    padding: 0 10vw;
+                }
+
+                .mobHide {
+                    display: none;
+                }
+
+                .desktopHide {
+                    display: block;
+                }
+
+                .spacer {
+                    padding-right: 0 !important;
+                }
+
+                #top_banner .banner_container {
+                    padding: 10px 10vw;
+                }
+
+                #form {
+                    max-width: 375px;
+                }
+
+                #twocol_form,
+                #threecol_cards {
+                    padding-top: 2rem;
+                    padding-bottom: 1rem;
+                }
+
+                #twocol_img_right {
+                    padding-bottom: 1rem;
+                }
+
+                #twocol_img_left {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
+
+                #twocol_img_left .row {
+                    flex-direction: column-reverse;
+                }
+
+                #twocol_img_right .svg_square,
+                #twocol_img_left .svg_square,
+                #hero .svg_square {
+                    max-width: 300px;
+                }
+
+                #twocol_cards {
+                    padding-top: 1rem;
+                    padding-bottom: 3rem;
+                }
+
+                #twocol_cards .svg_square img {
+                    max-width: 300px;
+                }
+
+                #twocol_cards .svg_square {
+                    margin-bottom: 1.75rem;
+                    margin-top: 1rem;
+                }
+
+                #countdown .left {
+                    width: 100% !important;
+                    padding-bottom: 1rem;
+                }
+
+                .testimonial_container {
+                    display: grid !important;
+                    grid-template-columns: 1fr 1fr;
+                    gap: 0.25rem;
+                }
+
+                .testimonial_container>* {
+                    margin: auto;
+                }
+
+                #threecol_cards .cards_content {
+                    padding-top: 2rem;
+                }
+
+                #threecol_cards .text_content p,
+                #threecol_icons .spacer {
+                    width: 100%;
+                }
+
+                #fourcol_icons .columns,
+                #threecol_icons .columns {
+                    padding-top: 2.75rem;
+                }
+
+                #ThreeColTopTitle {
+                    padding-top: 1rem !important;
+                }
+
+                #fourcol_icons {
+                    padding-top: 0rem;
+                }
+
+                #threecol_icons {
+                    padding-bottom: 1rem;
+                }
+
+                #cta_panel_bottom p {
+                    padding-top: .25rem;
+                    padding-bottom: .25rem;
+                }
+
+                #twocol_video {
+                    padding-left: 0;
+                }
+
+                #twocol_video .row {
+                    padding-top: 1rem !important;
+                    padding-bottom: 1rem !important;
+                }
+
+                footer>* {
+                    text-align: center;
+                }
+
+                footer h4 {
+                    padding-bottom: 1.25rem;
+                }
+
+                footer p {
+                    padding-bottom: .35rem;
+                }
+
+                footer .middle li,
+                footer .top li {
+                    padding-bottom: .75rem;
+                }
+
+                footer ul li {
+                    padding-top: 0rem;
+                }
+
+                footer .bottom .right {
+                    padding-top: 1rem;
+                }
+
+                footer .bottom .right {
+                    gap: 1.25rem;
+                }
+
+                footer .bottom .right a {
+                    padding: 0;
+                }
+
+                footer .bottom .right a img {
+                    height: 28px;
+                }
+
+                footer .links ul li a {
+                    color: var(--Lilac);
+                }
+
+                footer .bottom .left {
+                    width: 100%;
+                    margin: auto;
+                }
+
+                /* Body Wrapper */
+                .body-wrapper:before {
+                    background-position: 30vw 50%;
+                    background-repeat: no-repeat;
+                    background-size: 65vh;
+                    content: "";
+                    height: 100vh;
+                }
+            }
+
+            object {
+                position: absolute;
+                top: -1000px;
+                left: -1000px
+            }
+        </style> <!-- FormComplete Start -->
+  <style>
+            form[data-zi-mapped-form] input:not([type="email"]):not([type="submit"]) {
+                display: block !important;
+            }
+
+            form[data-zi-mapped-form] input[data-zi-input-enriched="false"] {
+                display: block !important;
+            }
+        </style> <!-- FormComplete End --> 
+   
+    <!-- SPZ CSS Start -->
+  <style>
+    #hero > .hero_container > .row{
+        flex-direction: ${FormDirection};
+    }
+    .hero-list-copy {
+    list-style: none;
+    padding-left: 40px;
+    margin-bottom: 16px;
+    }
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+   .hero-list-copy {
+    padding-right: 4px;
+  }
+}
+@media (max-width: 767.98px) {
+   .hero-list-copy {
+    padding-left: 40px;
+  }
+}
+ .hero-list-copy .list-item {
+  color: var(--primary-neutrals-n-3, #f6fafa);
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 28px;
+  margin-bottom: 24px;
+  position: relative;
+}
+@media (max-width: 767.98px) {
+   .hero-list-copy .list-item {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+}
+ .hero-list-copy .list-item span {
+  font-weight: 500;
+  letter-spacing: 0.2px;
+  font-family: "Eptura Flexible", Arial, sans-serif;
+}
+ .hero-list-copy .list-item::before {
+  content: "";
+  background: ${HeroListIcon};
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  display: block;
+  position: absolute;
+  left: -40px;
+  top: 0;
+}
+@media (max-width: 767.98px) {
+   .hero-list-copy .list-item::before {
+    left: -40px;
+  }
+}
+.hero-image img#HeroImg {
+    width: 100%;
+    height: 100%;
+}
+
+
+  form.mktoForm .mktoFormRow .mktoFormCol {
+     min-height: auto;
+     margin: 0 !important;
+     padding: 0 10px !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
+     position: relative;
+     float: none !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
+     position: absolute;
+     overflow: hidden;
+     color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8)) !important;
+     text-overflow: ellipsis;
+     white-space: nowrap;
+     font-family: "Eptura Flexible", Arial, sans-serif;
+     font-size: 16px !important;
+     font-style: normal;
+     font-weight: 300 !important;
+     line-height: 24px;
+     /* 150% */
+     top: 11px;
+     left: 16px;
+     padding: 0 !important;
+     -webkit-transition: all 0.3s ease-in-out;
+     transition: all 0.3s ease-in-out;
+     pointer-events: none;
+     max-width: calc(100% - 58px);
+     background: #fff;
+     right: 0;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
+     border-radius: 4px;
+     border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+     width: 280px;
+     padding: 11px 16px 10px 16px !important;
+     color: var(--primary-neutrals-n-1, #0d122e) !important;
+     text-overflow: ellipsis;
+     font-family: "Eptura Flexible", Arial, sans-serif !important;
+     font-size: 16px !important;
+     font-style: normal;
+     font-weight: 300 !important;
+     line-height: 24px !important;
+     /* 150% */
+     margin-bottom: 20px !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+     overflow: hidden;
+     height: 48px !important;
+     white-space: nowrap;
+ }
+
+ @media (min-width: 767.98px) {
+     form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+         max-width: 100%;
+     }
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c,
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country,
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
+     outline: transparent;
+     -webkit-appearance: none !important;
+     -moz-appearance: none !important;
+     appearance: none !important;
+     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
+     background-repeat: no-repeat !important;
+     background-position: right 14px center !important;
+     background-size: 24px !important;
+     padding-right: 32px !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c~.mktoError {
+     margin-top: 0 !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c~.mktoError .mktoErrorArrowWrap {
+     top: -27px;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c~.mktoError .mktoErrorMsg {
+     margin-top: -20px;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+     -webkit-box-shadow: 0 0 0 30px white inset !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+     -webkit-box-shadow: 0 0 0 30px white inset !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+     margin: 0 !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
+     color: #848995;
+     font-size: 10px !important;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 16px;
+     /* 160% */
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
+     padding: 0;
+     color: #1b4bc5;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a:hover {
+     color: #0d122e;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
+     margin-top: 3px;
+     cursor: pointer;
+     display: inline-block;
+     position: relative;
+     padding-left: 25px;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+     border: 1px solid #d6d7f5;
+     height: 16px !important;
+     width: 16px !important;
+     cursor: pointer;
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+         margin-top: 7px;
+     }
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
+     font-family: "Eptura Flexible", Arial, sans-serif !important;
+     color: #0d122e !important;
+     font-size: 14px !important;
+     font-style: normal !important;
+     font-weight: 300 !important;
+     line-height: 20px !important;
+     margin-left: 19px;
+     letter-spacing: -0.1px;
+     cursor: pointer;
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
+         font-size: 12px !important;
+         line-height: 18px !important;
+     }
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a {
+     color: #1B4BC5 !important;
+     padding: 0 !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a:hover {
+     color: #0d122e !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
+     content: "";
+     width: 16px;
+     height: 16px;
+     position: absolute;
+     left: 0;
+     background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark.svg?version=0") left center no-repeat;
+     margin-top: 2px;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:hover::before {
+     background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-hover.svg?version=0") left center no-repeat;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox] {
+     display: none !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox]:checked+label:before {
+     background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-checked.svg?version=0") left center no-repeat;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
+     margin-top: 48px !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+     color: #f3f3f3;
+     font-size: 13px;
+     font-style: normal;
+     font-weight: 400;
+     line-height: 16px;
+     /* 123.077% */
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label {
+     color: #e51b00 !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label a {
+     color: #e51b00 !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label::before {
+     background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-errored.svg?version=0") left center no-repeat;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
+     top: -8px;
+     left: 11px;
+     right: auto;
+     padding: 0 5px !important;
+     font-family: "Eptura Flexible", Arial, sans-serif;
+     color: var(--accents-a-5, #904ab0) !important;
+     font-size: 13px !important;
+     line-height: 18px !important;
+     /* 138.462% */
+     background: #fff;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
+     border-color: #904ab0 !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
+     top: -8px;
+     left: 11px;
+     right: auto;
+     font-family: "Eptura Flexible", Arial, sans-serif;
+     padding: 0 5px !important;
+     font-size: 13px !important;
+     line-height: 18px !important;
+     /* 138.462% */
+     background: #fff;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
+     color: var(--accents-a-5, #f83a59) !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
+     border-color: #f83a59 !important;
+ }
+
+ form.mktoForm .mktoFormRow[data-zi-field-enriched=true] {
+     display: inline !important;
+ }
+
+ form.mktoForm .mktoFormRow .mktoFormCol[data-zi-field-enriched=true] {
+     display: inline !important;
+ }
+
+ form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     width: 100%;
+ }
+
+ form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden)+.mktoFieldDescriptor.mktoFormCol {
+     display: none !important;
+ }
+
+ form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+     overflow: hidden;
+     color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+     font-family: "Eptura Flexible", Arial, sans-serif;
+     text-overflow: ellipsis;
+     font-size: 16px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 24px;
+     margin-bottom: 12px;
+     display: inline-block;
+     margin-top: 2px;
+     -webkit-transition: all 0.3s ease;
+     transition: all 0.3s ease;
+     margin-left: 10px;
+ }
+
+ form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
+     padding-right: 5px;
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+         padding: 0;
+     }
+ }
+
+ form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
+     color: #904ab0;
+ }
+
+ form.mktoForm .mktoFormRow .spz-hidden {
+     display: none;
+ }
+
+ form.mktoForm .mktoButtonRow {
+     text-align: center;
+ }
+
+ form.mktoForm .mktoButtonRow .mktoButtonWrap {
+     width: 100%;
+ }
+
+ form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+     display: -webkit-box;
+     display: -ms-flexbox;
+     display: flex;
+     width: 100% !important;
+     max-width: 140px !important;
+     height: 50px !important;
+     padding: 0px 8px !important;
+     -webkit-box-pack: center;
+     -ms-flex-pack: center;
+     justify-content: center;
+     -webkit-box-align: center;
+     -ms-flex-align: center;
+     align-items: center;
+     border-radius: 3px !important;
+     background: var(--interactive-colors-a-1, #1b4bc5) !important;
+     color: var(--primary-neutrals-w, #fff) !important;
+     text-align: center;
+     font-family: "Eptura Flexible", Arial, sans-serif !important;
+     font-size: 16px !important;
+     font-style: normal;
+     font-weight: 500 !important;
+     line-height: 24px !important;
+     /* 150% */
+     margin-top: 22px !important;
+     white-space: nowrap;
+ }
+
+ form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover,
+ form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+     background: var(--interactive-colors-a-3, #456ed6) !important;
+ }
+
+ form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+     -webkit-transform: translate(0, 1px);
+     transform: translate(0, 1px);
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+         height: 56px !important;
+         padding: 0px 32px;
+         max-width: 300px !important;
+     }
+ }
+
+ form.mktoForm .spz-email {
+     display: flex;
+ }
+
+ form.mktoForm .spz-email .mktoFieldWrap {
+     margin-top: 18px;
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .spz-email .mktoFieldWrap {
+         margin-top: 24px;
+     }
+ }
+
+ form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+     text-align: center;
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+         line-height: 0;
+     }
+ }
+
+ form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+     color: var(--primary-neutrals-n-1, #0d122e);
+     font-size: 14px;
+     font-style: normal;
+     font-weight: 300;
+     line-height: 20px;
+     /* 142.857% */
+ }
+
+ @media (max-width: 767.98px) {
+     form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth>span {
+         text-align: center;
+     }
+
+     form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+         padding: 0;
+     }
+ }
+
+ @media (min-width: 767.98px) {
+     form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
+         display: none;
+     }
+ }
+
+ form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
+     color: var(--interactive-colors-a-1, #1b4bc5);
+     font-weight: 500;
+     padding: 0;
+     font-family: "Eptura Flexible", Arial, sans-serif;
+     padding-left: 2px;
+ }
+
+ form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
+     color: #0d122e;
+ }
+    
+    
+    
+
+.spz-custom-cards-section {
+  background-color: ${CardGridBG};
+}
+.spz-custom-cards-section .custom-cards-section {
+  max-width: 1280px;
+  margin: auto;
+  padding: 100px 20px 52px;
+}
+@media (min-width: 1199.98px) and (max-width: 1330.98px) {
+  .spz-custom-cards-section .custom-cards-section {
+    max-width: 1200px;
+    padding: 100px 100px 52px;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .spz-custom-cards-section .custom-cards-section {
+    max-width: 728px;
+    padding: 71px 20px 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-custom-cards-section .custom-cards-section {
+    max-width: 300px;
+    padding: 72px 0px 32px;
+  }
+}
+.spz-custom-cards-section .custom-cards-section .section-headline {
+  color: #0d122e;
+  text-align: center;
+  font-family: "Eptura Flexible Light", Arial, sans-serif;
+  font-size: 46px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 54px;
+  margin-bottom: 64px;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  .spz-custom-cards-section .custom-cards-section .section-headline {
+    margin-bottom: 48px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-custom-cards-section .custom-cards-section .section-headline {
+    font-size: 36px;
+    line-height: 44px;
+    text-align: left;
+    margin-bottom: 40px;
+  }
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+@media (max-width: 767.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 380px;
+  margin-bottom: 48px;
+}
+@media (min-width: 1199.98px) and (max-width: 1330.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card {
+    width: 32%;
+  }
+}
+@media (max-width: 1199.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card {
+    margin-bottom: 40px;
+    max-width: 326px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card {
+    max-width: 300px;
+  }
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container {
+  max-height: 320px;
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container .card-image {
+  border-radius: 12px;
+  border: 1px solid #d6d7f5;
+  background: #eeeff4;
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container .card-image img {
+  width: 100%;
+  border-radius: 12px;
+  height: 318px;
+}
+@media (max-width: 1199.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .img-container .card-image img {
+    height: 258px;
+  }
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .copy {
+  margin-top: 32px;
+}
+@media (max-width: 1199.98px) {
+  .spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .copy {
+    margin-top: 24px;
+  }
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .copy .card-title {
+  overflow: hidden;
+  color: #0d122e;
+  text-overflow: ellipsis;
+  font-family: "Eptura Flexible Light", Arial, sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 32px;
+  margin: 0 0 12px;
+}
+.spz-custom-cards-section .custom-cards-section .spz-custom-cards .cards-row .custom-card .copy .card-content {
+  color: rgba(13, 18, 46, 0.8);
+  font-family: "Eptura Flexible Light", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  margin: 0;
+}
+    
+    
+
+    
+    
+    ${PageSpecificCSS}
+    
+        </style> <!-- SPZ CSS End -->
+   <script>${PageSpecificScript}</script>
+   <!-- HeaderScripts -->
+ </head>
+ <body class="transparent-toggle">
+  <div class="mktoText" id="HeaderScripts" mktoname="Header Scripts" style="background: #0D122E;">
+   &nbsp;
+  </div> <!-- Google Tag Manager (noscript) -->
+  <noscript>
+   <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM7S3LZ" height="0" width="0" style="display:none;visibility:hidden"></iframe>
+  </noscript> <!-- End Google Tag Manager (noscript) -->
+  <div class="body-wrapper">
+   <section id="nav" style="display:${NavDisplay};" data-jeto="NavDisplay">
+    <nav class="page_padding d-flex justify-content-between align-items-center py-4">
+     <div class="logo" id="NavLogo"><a href="https://eptura.com/" target="_blank"> <img src="${LightLogoURL}" alt="" id="logo-img"> </a>
+     </div>
+     <div class="button mktoText" id="NavButton" mktoname="Nav: Button"><a href="#form" class="btn btn-primary"> Contact us </a>
+     </div>
+    </nav>
+   </section>
+   <section class="transparent-toggle" id="hero" style="display: ${HeroDisplay};" data-jeto="HeroDisplay">
+    <div class="hero_container page_padding py-4">
+     <div class="row">
+      <div class="col-md pb-5">
+       <div class="mktoText" id="HeroText" mktoname="Hero: Text">
+        <h6>SUBHEADING</h6>
+        <h1>Landing page <br> <span class="span_spacer"><span class="span_text">heading</span> title</span></h1>
+        <p class="pt-4">We’re Eptura™ — a global worktech company that provides software solutions for workplaces, people, and assets that enable everyone to reach their full potential.</p>
+       </div>
+        <div class="mktoText" id="HeroList" mktoname="Hero: List" style="display: ${HeroListDisplay};">
+        <ul class="hero-list-copy"><li class="list-item"><span>Visitor check-in.</span> Create badges, control access, and get real-time alerts. Pre-screen. Self-check in kiosks.</li>
+          <li class="list-item"><span>Security & compliance.</span> Include identity verification, NDAs, safety briefings, or health screens. Log compliance.</li>
+          <li class="list-item"><span>Integrations.</span> Sync data with internal access and security systems. Automated email or Slack notifications.</li></ul>
+              </div>
+
+          <div class="hero-image" style="display: ${HeroImgDisplay};" data-jeto="HeroImgDisplay">
+       <div class="mktoImg svg_square" id="HeroImg" mktoname="Hero: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/smiling-businesswoman.png" alt="Hero Image">
+       </div>
+      </div>
+       <div class="button pt-4 mktoText" id="HeroBtn" mktoname="Hero: Button"><a href="#form" class="btn btn-primary"> Book a demo </a>
+       </div>
+      </div>
+     
+      <div class="col-md pb-4" id="HeroFormCol" >
+        <div class="hero-image" style="display: ${HeroImgDisplay};" data-jeto="HeroImgDisplay">
+            <div class="mktoImg svg_square" id="HeroImg" mktoname="Hero: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/smiling-businesswoman.png" alt="Hero Image">
+            </div>
+           </div>
+       <div class="panel" id="HeroFormPanel" style="display: ${HeroFormDisplay};" data-jeto="HeroFormDisplay">
+        <div class="pb-2 mktoText" id="HeroFormTitleText" mktoname="Hero: Form Title Text" style="display: ${HeroFormTitleTextDisplay}" data-jeto="HeroFormTitleTextDisplay">
+         <h2>Lorem Ipsum Dolor</h2>
+        </div>
+        <div class="mktoForm" id="HeroForm" mktoname="Hero Form">
+        </div>
+       </div>
+      </div>
+     </div>
+    </div>
+   </section>
+   <section id="top_banner" style="display: ${TopBannerDisplay};" data-jeto="TopBannerDisplay">
+    <div class="banner_container page_padding">
+     <div class="d-flex justify-content-between mktoText" id="TopBannerTxt" mktoname="Top Banner: Text">
+      <p>16 MILLION USERS WORLDWIDE</p>
+      <p>MICROSOFT GOLD PARTNER</p>
+      <p>ISO CERTIFIED SOFTWARE</p>
+     </div>
+    </div>
+   </section>
+   <div class="d-flex flex-column">
+    <section class="transparent-toggle" id="twocol_form" style="display: ${2ColFormDisplay}; order:${Reordering1};" data-jeto="2ColFormDisplay">
+     <div class="page_padding">
+      <div class="row">
+       <div class="col-md mktoText order-2 order-md-1" id="2ColFormTxt" mktoname="2 Col Form: Text">
+        <h6>Preheading form</h6>
+        <h2>Heading 2 goes <span class="span_text">here</span></h2>
+        <div class="spacer">
+         <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         <ul class="pt-0 pt-md-4">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Ut pretium pretium tempor. Ut eget imperdiet neque</li>
+          <li>In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc.</li>
+          <li>Phasellus ligula ipsum, volutpat eget semper id, viverra eget nib.</li>
+         </ul>
+        </div>
+       </div>
+       <div class="col-md order-1 order-md-2 pb-5" style="display: ${2ColForm_Display}" data-jeto="2ColForm_Display">
+        <div class="mktoForm" id="form" mktoname="Form">
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="countdown" style="display: ${CountdownDisplay}; order:${Reordering2};" data-jeto="CountdownDisplay">
+     <div class="page_padding">
+      <div class="timer_container">
+       <div class="timer d-md-flex justify-content-between align-items-center">
+        <div class="left w-100 text-center text-md-left">
+         <div class="text mktoText" id="CountdownTimerTxt" mktoname="Countdown Timer: Text">
+          <p>See you soon...</p>
+         </div>
+        </div>
+        <div class="right d-flex justify-content-around w-100">
+         <div class="d-flex flex-column align-items-center" id="days">
+          <p class="bolded">0</p>
+          <p class="light">Days</p>
+         </div>
+         <div class="d-flex flex-column align-items-center" id="hours">
+          <p class="bolded">0</p>
+          <p class="light">Hours</p>
+         </div>
+         <div class="d-flex flex-column align-items-center" id="minutes">
+          <p class="bolded">0</p>
+          <p class="light">Minutes</p>
+         </div>
+         <div class="d-flex flex-column align-items-center" id="seconds">
+          <p class="bolded">0</p>
+          <p class="light">Seconds</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="twocol_img_right" style="display: ${2ColImgRightDisplay}; order:${Reordering3};" data-jeto="2ColImgRightDisplay">
+     <div class="page_padding">
+      <div class="row">
+       <div class="col-md mktoText" id="2ColImgRightTxt" mktoname="2 Col Img Right: Text">
+        <h6>Preheading</h6>
+        <h2>Heading 2 goes <span class="span_text">here</span></h2>
+        <div class="spacer">
+         <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         <ul class="pt-0 pt-md-4">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Ut pretium pretium tempor. Ut eget imperdiet neque</li>
+          <li>In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc.</li>
+          <li>Phasellus ligula ipsum, volutpat eget semper id, viverra eget nib.</li>
+         </ul>
+        </div>
+       </div>
+       <div class="col-md">
+        <div class="svg_square ml-md-auto mktoText" id="2ColImgRightImg" mktoname="2 Col Img Right: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/office-worker-wearing-headphones-2022.png" alt="">
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="twocol_img_left" style="display: ${2ColImgLeftDisplay}; order:${Reordering4};" data-jeto="2ColImgLeftDisplay">
+     <div class="page_padding">
+      <div class="row">
+       <div class="col-md">
+        <div class="svg_square svg_square2 mktoText" id="2ColImgLeftImg" mktoname="2 Col Img Left: Img"><img src="https://lp.eptura.com/rs/267-JUP-120/images/freelancer-working-remotely-on-laptop-typing-docu-2022.png" alt="">
+        </div>
+       </div>
+       <div class="col-md">       
+		<div class="mktoText" id="2ColImgLeftTxt" mktoname="2 Col Img Left: Text">
+        <h6>Preheading</h6>
+        <h2>Heading 2 goes <span class="span_text">here</span></h2>
+        <div class="spacer">
+         <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         <ul class="pt-0 pt-md-4">
+          <li>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</li>
+          <li>Ut pretium pretium tempor. Ut eget imperdiet neque</li>
+          <li>In volutpat ante semper diam molestie, et aliquam erat laoreet. Sed sit amet arcu aliquet, molestie justo at, auctor nunc.</li>
+          <li>Phasellus ligula ipsum, volutpat eget semper id, viverra eget nib.</li>
+         </ul>
+        </div>
+       </div>   
+		<!--<div class="2ColImgButton" style="display: ${2ColImgButton};"><a href="#hero" class="btn btn-primary light-btn"> Request a demo </a>
+        </div>    -->
+		</div>
+      </div>
+     </div>
+    </section>
+    <section id="testimonials" style="display: ${TestimonialBannerDisplay}; order:${Reordering5};" data-jeto="TestimonialBannerDisplay">
+     <div class="page_padding py-3">
+      <div class="title text-center pt-4 mktoText" id="TestimonialTxt" mktoname="Testimonial: Text">
+       <h3>Trusted by 16,000+ customers worldwide</h3>
+      </div>
+      <div class="testimonial_container d-flex justify-content-between flex-wrap pb-4 w-100 mktoText" id="TestimonialImg" mktoname="Testimonial: Images"><img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-1.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-2.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-3.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-4.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-5.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-6.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-7.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-8.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-9.png" alt=""> <img src="https://lp.eptura.com/rs/267-JUP-120/images/customer-logo-10.png" alt="">
+      </div>
+     </div>
+    </section>
+     
+     <!--SPZ custom cards section starts here -->
+      <section class="spz-custom-cards-section" style="display: ${cardGridDisplay}; order:${Reordering15};" data-jeto="cardGridDisplay">
+      <div class="custom-cards-section">
+        <div class="section-headline mktoText" id="cardGridTitle" mktoname="Card Grid Title">Headline here</div>
+        <div class="spz-custom-cards">
+          <div class="cards-row">
+            <div class="custom-card">
+              <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_1" mktoname="Card Grid Image 1"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_1" mktoname="Card Grid Copy 1">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card">
+              <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_2" mktoname="Card Grid Image 2"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_2" mktoname="Card Grid Copy 2">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card">
+                <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_3" mktoname="Card Grid Image 3"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_3" mktoname="Card Grid Copy 3">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+          
+            <div class="custom-card" style="display: ${cardGrid2Row};" data-jeto="cardGrid2Row">
+  				<div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_4" mktoname="Card Grid Image 4"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_4" mktoname="Card Grid Copy 4">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card" style="display: ${cardGrid2Row};" data-jeto="cardGrid2Row">
+  			  <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_5" mktoname="Card Grid Image 5"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_5" mktoname="Card Grid Copy 5">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card" style="display: ${cardGrid2Row};" data-jeto="cardGrid2Row">
+                <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_6" mktoname="Card Grid Image 6"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_6" mktoname="Card Grid Copy 6">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card" style="display: ${cardGrid3Row};" data-jeto="cardGrid3Row">
+                <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_7" mktoname="Card Grid Image 7"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_7" mktoname="Card Grid Copy 7">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card" style="display: ${cardGrid3Row};" data-jeto="cardGrid3Row">
+               <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_8" mktoname="Card Grid Image 8"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_8" mktoname="Card Grid Copy 8">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+            <div class="custom-card" style="display: ${cardGrid3Row};" data-jeto="cardGrid3Row">
+                <div class="img-container">
+                <div class="card-image mktoText" id="cardGridImg_9" mktoname="Card Grid Image 9"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1705397564/eptura/stephaniesrequest/img-desktop-03.webp" alt="">
+        		</div>
+              </div>
+              <div class="copy mktoText" id="cardGridContent_9" mktoname="Card Grid Copy 9">
+                <h6 class="card-title">Step one: register.</h6>
+                <p class="card-content">
+                  Fill out the form to register for your free trial and to get
+                  immeadiate access to the system.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+     <!--SPZ custom cards section ends here -->
+     
+    <section class="transparent-toggle" id="threecol_cards" style="display: ${3CardsDisplay}; order:${Reordering6};" data-jeto="3CardsDisplay">
+     <div class="page_padding">
+      <div class="text_content">
+       <div class="mktoText" id="3ColTopTxt" mktoname="3 Col: Top Text">
+        <h6>RESOURCES 3 COLUMN</h6>
+        <h2>Heading 2 <br> <span class="text_spacer">goes <span class="span_text">here</span></span></h2>
+       </div>
+       <div class="spacer">
+        <p class="mktoText" id="ThreeColTopTxt2" mktoname="3 Col: Top Text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+        <div class="mktoText" id="ThreeColTopBtn" mktoname="3 Col: Button" style="display: ${3CardsBtnDisplay};" data-jeto="3CardsBtnDisplay"><a href="#form" class="btn btn-primary light-btn"> Read More </a>
+        </div>
+       </div>
+      </div>
+      <div class="row cards_content">
+       <div class="col-md pt-2">
+        <div class="card card_1">
+         <div class="svg_square mktoText" id="3ColCard1" mktoname="3 Col Card 1: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/confident-young-man-wearing-headphones-2022.png" alt="">
+         </div>
+         <div class="card-body pt-0 pl-mob-0">
+          <div class="mktoText" id="3ColCard1Txt" mktoname="3 Col Card 1: Text">
+           <h5>PRESS RELEASE</h5>
+           <h3>Heading 3 goes <span>here</span></h3>
+           <p class="card-text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+          </div>
+          <div class="cta pt-3">
+           <div class="mktoText" id="3ColCard1Cta" mktoname="3 Col Card 1: CTA Link"><a href="#" class="cta_link">Read more</a>
+           </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col-md pt-2">
+        <div class="card card_2">
+         <div class="svg_square svg_square3 mktoText" id="3ColCard2" mktoname="3 Col Card 2: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/creative-businesswoman-in-casual-gesturing-while-u-2021.png" alt="">
+         </div>
+         <div class="card-body pt-0 pl-mob-0">
+          <div class="mktoText" id="3ColCard2Txt" mktoname="3 Col Card 2: Text">
+           <h5>PODCAST</h5>
+           <h3>Heading 3 goes <span>here</span></h3>
+           <p class="card-text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+          </div>
+          <div class="cta pt-3">
+           <div class="mktoText" id="3ColCard2Cta" mktoname="3 Col Card 2: CTA Link"><a href="#" class="cta_link">Read more</a>
+           </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="col-md col-lg pt-2">
+        <div class="card card_3">
+         <div class="svg_square svg_square4 mktoText" id="3ColCard3" mktoname="3 Col Card 3: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/businesswoman-working-at-office-2022.png" alt="">
+         </div>
+         <div class="card-body pt-0 pl-mob-0">
+          <div class="mktoText" id="3ColCard3Txt" mktoname="3 Col Card 3: Text">
+           <h5>EVENTS</h5>
+           <h3>Heading 3 goes <span>here</span></h3>
+           <p class="card-text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+          </div>
+          <div class="cta pt-3">
+           <div class="mktoText" id="3ColCard3Cta" mktoname="3 Col Card 3: CTA Link"><a href="#" class="cta_link">Read more</a>
+           </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="twocol_cards" style="display: ${2CardsDisplay}; order:${Reordering7};" data-jeto="2CardsDisplay">
+     <div class="page_padding">
+      <div class="text_content mktoText" id="2ColCardsTxt" mktoname="2 Col: Text">
+       <h6>Resources 2 column</h6>
+       <h2>Heading 2 <br> <span class="span_spacer">goes <span class="span_text">here</span></span></h2>
+      </div>
+      <div class="row pt-2 pt-md-5 pb-md-5">
+       <div class="left col-md">
+        <div class="d-md-flex">
+         <div class="svg_square mktoText" id="2ColCard1Img" mktoname="2 Col Card 1: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/confident-young-man-wearing-headphones-2022.png" alt="">
+         </div>
+         <div class="px-md-3 pl-md-4">
+          <div class="mktoText" id="2ColCard1Txt" mktoname="2 Col Card 1: Text">
+           <h5>PRESS RELEASE</h5>
+           <h3>Heading 3 goes <span class="span_text">here</span></h3>
+           <p class="card-text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+          </div>
+          <div class="cta pt-3">
+           <div class="mktoText" id="2ColCard1CTA" mktoname="2 Col Card 1: CTA"><a href="#" class="cta_link">Read more</a>
+           </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="right col-md">
+        <div class="d-md-flex">
+         <div class="svg_square svg_square5 mktoText" id="2ColCard2Img" mktoname="2 Col Card 2: Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/creative-businesswoman-in-casual-gesturing-while-u-2021.png" alt="">
+         </div>
+         <div class="px-md-3 pl-md-4">
+          <div class="mktoText" id="2ColCard2Txt" mktoname="2 Col Card 2: Text">
+           <h5>PRESS RELEASE</h5>
+           <h3>Heading 3 goes <span class="span_text">here</span></h3>
+           <p class="card-text">Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+          </div>
+          <div class="cta pt-3">
+           <div class="mktoText" id="2ColCard2CTA" mktoname="2 Col Card 2: CTA"><a href="#" class="cta_link">Read more</a>
+           </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="cta_panel" style="display: ${CTAPanel1Display}; order:${Reordering8};" data-jeto="CTAPanel1Display">
+     <div class="page_padding row align-items-center py-5">
+      <div class="col-md-9 mktoText" id="CTAPanelTxt" mktoname="CTA Panel: Text">
+       <p>CTA panel full width - Cras quis nulla commodo, aliquam lectus sed, blandit augue. Cras ullamcorper bibendum bibendum. Duis tincidunt urna non pretium.</p>
+      </div>
+      <div class="col-md-3 d-flex justify-content-md-end cta_panel_btn pt-4 pt-md-0">
+       <div class="mktoText" id="CTAPanelBtn" mktoname="CTA Panel: Button"><a href="#form" class="btn btn-primary dark-btn">Find out more</a>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="fourcol_icons" style="display: ${4ColIconsDisplay}; order:${Reordering9};" data-jeto="4ColIconsDisplay">
+     <div class="page_padding">
+      <div class="text_content pt-5 mktoText" id="FourColTitle1" mktoname="4 Col: Top Text">
+       <h6>Preheading 4 column icons</h6>
+       <h2>Heading 2 goes <span class="span_text">here</span></h2>
+       <div class="spacer pt-2">
+        <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+        <div class="FourColBtn"><a href="#form" class="btn btn-primary light-btn"> Book a demo </a>
+        </div>
+       </div>
+      </div>
+      <div class="columns">
+       <div class="row">
+        <div class="col-md icon_1">
+         <div class="img mktoText" id="4ColIcon1Img" mktoname="4 Col: Icon 1 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/Certified_Secure_Software_Icon_50x50mm_SmartObsidian.png" alt="">
+         </div>
+         <div class="mktoText" id="4ColIcon1Txt" mktoname="4 Col: Icon 1 Text">
+          <h4 class="pt-3">Heading 4 goes here</h4>
+          <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         </div>
+        </div>
+        <div class="col-md icon_2 pt-3 pt-md-0">
+         <div class="img mktoText" id="4ColIcon2Img" mktoname="4 Col: Icon 2 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/Calendar_50x50mm_SmartObsidian.png" alt="">
+         </div>
+         <div class="mktoText" id="4ColIcon2Txt" mktoname="4 Col: Icon 2 Text">
+          <h4 class="pt-3">Heading 4 goes here</h4>
+          <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         </div>
+        </div>
+        <div class="col-md icon_3 pt-3 pt-md-0">
+         <div class="img mktoText" id="4ColIcon3Img" mktoname="4 Col: Icon 3 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/Book_A_Workspace_Icon_50x50mm_SmartObsidian.png" alt="">
+         </div>
+         <div class="mktoText" id="4ColIcon3Txt" mktoname="4 Col: Icon 3 Text">
+          <h4 class="pt-3">Heading 4 goes here</h4>
+          <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         </div>
+        </div>
+        <div class="col-md icon_4 pt-3 pt-md-0">
+         <div class="img mktoText" id="4ColIcon4Img" mktoname="4 Col: Icon 4 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/Acquisition_50x50mm_SmartObsidian.png" alt="">
+         </div>
+         <div class="mktoText" id="4ColIcon4Txt" mktoname="4 Col: Icon 4 Text">
+          <h4 class="pt-3">Heading 4 goes here</h4>
+          <p>Vestibulum rutrum quam vitae fringilla tincidunt. Suspendisse nec tortor urna. Ut laoreet sodales nisi, quis iaculis nulla iaculis vitae. Donec sagittis faucibus lacu.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="threecol_icons" style="display: ${3ColIconsDisplay}; order:${Reordering10};" data-jeto="3ColIconsDisplay">
+     <div class="page_padding">
+      <div class="text_content pt-5 mktoText" id="ThreeColTopTitle" mktoname="3 Col: Top Text">
+       <h6>SOLVE YOUR VISITOR MANAGEMENT CHALLENGES</h6>
+       <h2><span class="span_text">Streamline</span> the visitor experience</h2>
+       <div class="spacer pt-2">
+        <p>With our free consult and demo, our team will help you find the perfect visitor management solution for your business.</p>
+        <div class="ThreeColBtn"><a href="#form" class="btn btn-primary light-btn"> Book a demo </a>
+        </div>
+       </div>
+      </div>
+      <div class="columns">
+       <div class="row">
+        <div class="col-md icon_1">
+         <div class="img mktoText" id="3ColIcon1Img" mktoname="3 Col: Icon 1 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/padlock.svg" alt="">
+         </div>
+         <div class="mktoText" id="3ColIcon1Txt" mktoname="3 Col: Icon 1 Text">
+          <h4 class="pt-3">Ensure a secure working environment</h4>
+          <p>Welcome visitors into the workplace with an experience that doesn't compromise your company's health, security, or compliance objectives.</p>
+         </div>
+        </div>
+        <div class="col-md icon_2 pt-3 pt-md-0">
+         <div class="img mktoText" id="3ColIcon2Img" mktoname="3 Col: Icon 2 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/visitor-management.svg" alt="">
+         </div>
+         <div class="mktoText" id="3ColIcon2Txt" mktoname="3 Col: Icon 2 Text">
+          <h4 class="pt-3">Automate visitor management</h4>
+          <p>Sync visitor and employee data with your access control system, send unique QR codes to grant access at the right time, and get real-time information about who is in the building.</p>
+         </div>
+        </div>
+        <div class="col-md icon_3 pt-3 pt-md-0">
+         <div class="img mktoText" id="3ColIcon3Img" mktoname="3 Col: Icon 3 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/General administration.svg" alt="">
+         </div>
+         <div class="mktoText" id="3ColIcon3Txt" mktoname="3 Col: Icon 3 Text">
+          <h4 class="pt-3">Reduce operational costs</h4>
+          <p>Save time with an automated visitor management system, allowing office staff to dedicate more time and resources to other projects.</p>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="twocol_video" style="display: ${2ColVideoDisplay}; order:${Reordering11};" data-jeto="2ColVideoDisplay">
+     <div class="page_padding">
+      <div class="row py-5">
+       <div class="col-md text_content mktoText" id="TwoColVideo" mktoname="2 Col Video: Left Text">
+        <h3>We enable workplaces, people, and assets to <span>perform at their best</span> through a better understanding of how the world works.</h3>
+        <p>With Eptura, you can feel confident that you have the tools you need to maximize the potential of your people and your business.</p>
+       </div>
+       <div class="col-md video_container">
+        <div class="video ml-md-auto mktoText" id="TwoColVideoEmbed" mktoname="2 Col Video: Embed">
+         <div class="wistia_responsive_padding" style="padding: 56.25% 0 0 0; position: relative">
+          <div class="wistia_responsive_wrapper" style="
+                                                                                      height: 100%;
+                                                                                      left: 0;
+                                                                                      position: absolute;
+                                                                                      top: 0;
+                                                                                      width: 100%;
+                                                                                      "><iframe src="https://fast.wistia.net/embed/iframe/2fsbwe21h7?videoFoam=true" title="Eptura - Work your world Video" allow="autoplay; fullscreen" allowtransparency="true" frameborder="0" scrolling="no" class="wistia_embed" name="wistia_embed" msallowfullscreen width="100%" height="100%"></iframe>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section class="transparent-toggle" id="threecol_cards_bottom" style="display: ${3ColCardsBottomDisplay}; order:${Reordering12};" data-jeto="3ColCardsBottomDisplay">
+     <div class="page_padding">
+      <div class="text_content mktoText" id="3ColCardsBottomTop" mktoname="3 Col Cards: Top Text">
+       <h3>Discover <span>Eptura</span></h3>
+       <div class="spacer pt-2">
+        <p>Welcome to the world of Eptura, where you’ll find the resources you need to better understand how to make your business thrive.</p>
+       </div>
+      </div>
+      <div class="columns">
+       <div class="row py-4 pb-5">
+        <div class="col-md">
+         <div class="card card_1">
+          <div class="card_img mktoText" id="3ColCard1Img" mktoname="3 Col Cards: Card 1 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/card_img_1.png" alt="">
+          </div>
+          <div class="card-body">
+           <div class="mktoText" id="3ColCard1Txt1" mktoname="3 Col Cards: Card 1 Text">
+            <h5>LATEST RESEARCH</h5>
+            <h3>Attitudes to hybrid <br> working 2022</h3>
+           </div>
+           <div class="cta">
+            <div class="mktoText" id="3ColCard1CTA" mktoname="3 Col Cards: Card 1 CTA"><a href="#" class="cta_link">Read more</a>
+            </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="col-md pt-5 pt-md-0">
+         <div class="card card_2">
+          <div class="card_img mktoText" id="3ColCard2Img" mktoname="3 Col Cards: Card 2 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/card_img_2.png" alt="">
+          </div>
+          <div class="card-body">
+           <div class="mktoText" id="3ColCard2Txt1" mktoname="3 Col Cards: Card 2 Text">
+            <h5>HYBRID VS FLEXIBLE WORK</h5>
+            <h3>What are the key differences and what do you need to consider?</h3>
+           </div>
+           <div class="cta">
+            <div class="mktoText" id="3ColCard2CTA" mktoname="3 Col Cards: Card 2 CTA"><a href="#" class="cta_link">Read more</a>
+            </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+           </div>
+          </div>
+         </div>
+        </div>
+        <div class="col-md pt-5 pt-md-0">
+         <div class="card card_3">
+          <div class="card_img mktoText" id="3ColCard3Img" mktoname="3 Col Cards: Card 3 Image"><img src="https://lp.eptura.com/rs/267-JUP-120/images/card_img_2.png" alt="">
+          </div>
+          <div class="card-body">
+           <div class="mktoText" id="3ColCard3Txt1" mktoname="3 Col Cards: Card 3 Text">
+            <h5>LATEST BLOG</h5>
+            <h3>Nam porttitor blandit accumsan. Ut vel dictum sem, a pretium.</h3>
+           </div>
+           <div class="cta">
+            <div class="mktoText" id="3ColCard3CTA" mktoname="3 Col Cards: Card 3 CTA"><a href="#" class="cta_link">Read more</a>
+            </div> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EpturaRightArrow.png" alt="">
+           </div>
+          </div>
+         </div>
+        </div>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="cta_panel_bottom" style="display: ${CTAPanel2Display}; order:${Reordering13};" data-jeto="CTAPanel2Display">
+     <div class="row page_padding align-items-center py-4 py-md-3 m-auto">
+      <div class="col-md mktoText" id="BotCTAPanelTxt" mktoname="Bottom CTA Panel: Text">
+       <p>CTA panel lorem ipsum lorem ipsum</p>
+      </div>
+      <div class="col-md d-flex justify-content-md-end pt-3 pt-md-0">
+       <div class="mktoText" id="BotCTAPanelCTA" mktoname="Bottom CTA Panel: Button"><a href="#form" class="btn btn-primary dark-btn">Find out more</a>
+       </div>
+      </div>
+     </div>
+    </section>
+    <section id="blankSection" style="display: ${blankSectionDisplay}; order:${Reordering14}; background-color:${BlankSectionColor};" data-jeto="blankSectionDisplay">
+     <div class="row page_padding py-4 py-md-3 m-auto">
+      <div class="col-md mktoText" id="blankSectionTxt" mktoname="Blank Section">
+      </div>
+     </div>
+    </section>
+   </div>
+   <!-- <section class="transparent-toggle spacer spacer-bottom"></section> -->
+   <footer style="display: ${FooterDisplay};" data-jeto="FooterDisplay">
+    <div class="page_padding">
+     <div class="top pt-5" style="display: ${FooterLinks};">
+      <div class="d-md-flex justify-content-between">
+       <div class="left_mid d-md-flex col-md-8 pl-0">
+        <div class="pr-0 pr-md-4 mktoText" id="FooterLeft" mktoname="Footer: Left Content">
+         <h4>COMPANY</h4>
+         <p>We're a worktech company providing global solutions for workplaces, people, and assets to create a better future for everyone.</p>
+         <ul class="pt-2 pt-md-1">
+          <li><a href="https://eptura.com/our-vision/" target="_blank">About us</a></li>
+          <li><a href="https://eptura.com/what-we-do/products/" target="_blank">What we do</a></li>
+          <li><a href="https://eptura.com/partner/" target="_blank">Who we partner with</a></li>
+          <li><a href="https://eptura.com/support/" target="_blank">Support</a></li>
+          <li><a href="https://eptura.com/contact-us/" target="_blank">Contact us</a></li>
+         </ul>
+        </div>
+        <div class="middle pt-4 pt-md-0 mktoText" id="FooterMiddle" mktoname="Footer: Middle Content">
+         <h4>PRODUCTS</h4>
+         <p>Our work solutions are built with technology that gets you, so you can perform at your best.</p>
+         <div class="row pt-2 pt-md-0">
+          <div class="col">
+           <ul>
+            <li><a href="https://archibus.com/" target="_blank">Archibus</a></li>
+            <li><a href="https://www.condecosoftware.com/" target="_blank">Condeco</a></li>
+            <li><a href="https://hippocmms.iofficecorp.com/?__hstc=81812937.18fa73123a1b242403f4c0bdb0aca2a3.1667230157785.1667230157785.1668724533501.2&amp;__hssc=81812937.2.1668724533501&amp;__hsfp=388684205" target="_blank">Hippo CMMS</a></li>
+            <li><a href="https://iofficecorp.com/?__hstc=81812937.18fa73123a1b242403f4c0bdb0aca2a3.1667230157785.1667230157785.1668724533501.2&amp;__hssc=81812937.2.1668724533501&amp;__hsfp=388684205" target="_blank">iOffice</a></li>
+            <li><a href="https://managerplus.iofficecorp.com/?__hstc=81812937.18fa73123a1b242403f4c0bdb0aca2a3.1667230157785.1667230157785.1668724533501.2&amp;__hssc=81812937.2.1668724533501&amp;__hsfp=388684205" target="_blank">ManagerPlus</a></li>
+           </ul>
+          </div>
+          <div class="col">
+           <ul>
+            <li><a href="https://www.proxyclick.com/" target="_blank">Proxyclick</a></li>
+            <li><a href="https://serraview.com/" target="_blank">Serraview</a></li>
+            <li><a href="https://spaceiq.com/" target="_blank">SpaceIQ</a></li>
+            <li><a href="https://www.teem.com/?__hstc=81812937.18fa73123a1b242403f4c0bdb0aca2a3.1667230157785.1667230157785.1668724533501.2&amp;__hssc=81812937.2.1668724533501&amp;__hsfp=388684205" target="_blank">Teem</a></li>
+           </ul>
+          </div>
+         </div>
+        </div>
+       </div>
+       <div class="right_mid pt-4 pt-md-0 mktoText" id="FooterRight" mktoname="Footer: Right Content">
+        <div class="right">
+         <h4>DISCOVER</h4>
+         <ul>
+          <li><a href="https://eptura.com/discover-more/podcasts/" target="_blank">Podcast</a></li>
+          <li><a href="https://eptura.com/discover-more/blog/" target="_blank">Blog</a></li>
+          <li><a href="https://eptura.com/discover-more/news/" target="_blank">News</a></li>
+          <li><a href="https://eptura.com/discover-more/events/" target="_blank">Events</a></li>
+         </ul>
+        </div>
+       </div>
+      </div>
+     </div>
+     <div class="divider py-3" style="display: ${FooterDivider};">
+      <hr>
+     </div>
+     <div class="bottom pb-5">
+      <div class="d-md-flex w-100 justify-content-md-between">
+       <div class="left d-md-flex">
+        <div class="footer_logo mktoText" id="FooterLogo" mktoname="Footer: Logo"><a href="https://eptura.com/" target="_blank"> <img src="https://lp.eptura.com/rs/267-JUP-120/images/EPT-PNG-Logo.png" alt="Eptura"> </a>
+        </div>
+        <div class="links pt-3 pt-md-0 pl-0 pl-md-5 d-md-flex align-items-center">
+         <ul class="d-flex align-items-center justify-content-between w-100 mktoText" id="FooterBottom" mktoname="Footer: Bottom Content">
+          <li><a href="https://eptura.com/terms/saas-privacy-policy" target="">SaaS Privacy Policy</a></li>
+          <li><a href="https://eptura.com/terms/privacy-policy/" target="">Privacy policy</a></li>
+          <li><a href="https://eptura.com/terms/modern-slavery/" target="">Modern Slavery</a></li>
+          <p class="mobHide">All Rights Reserved © Eptura™</p>
+         </ul>
+         <p class="pt-3 pt-md-2 desktopHide">All Rights Reserved © Eptura™</p>
+        </div>
+       </div>
+       <div class="right d-flex align-items-center justify-content-center pt-3 pt-md-0 mktoText" id="FooterSocial" mktoname="Footer: Social Icons"><a href="https://twitter.com/epturawork" target="_blank"> <img src="https://lp.eptura.com/rs/267-JUP-120/images/eptura_twitter_footer.svg" alt=""> </a> <a href="https://www.facebook.com/EpturaWork/" target="_blank"> <img src="https://lp.eptura.com/rs/267-JUP-120/images/eptura_facebook_footer.svg" alt=""> </a> <a href="https://www.linkedin.com/company/iofficecorp/mycompany/verification/?viewAsMember=true" target="_blank"> <img src="https://lp.eptura.com/rs/267-JUP-120/images/eptura_linkedin_footer.svg" alt=""> </a>
+       </div>
+      </div>
+     </div>
+    </div>
+   </footer>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct" crossorigin="anonymous"></script>
+  <script src="https://lp.eptura.com/rs/267-JUP-120/images/eptura_cookie_banner.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment-timezone/0.5.32/moment-timezone-with-data.min.js"></script> <!-- Countdown Timer -->
+  <script>
+            $(document).ready(function () {
+                // Set the target date and time
+                // const targetDate = moment.tz('2023-04-16 15:00', 'America/New_York');
+                const targetDate = moment.tz('${CountdownDate} ${CountdownTime}', '${CountdownTimeZone}');
+                const duration = moment.duration(targetDate.diff(moment()));
+                let countdownComplete = false;
+                if (duration._milliseconds < 0) {
+                    countdownComplete = true;
+                    return;
+                }
+                const days = Math.floor(duration.asDays());
+                const hours = duration.hours();
+                const minutes = duration.minutes();
+                const seconds = duration.seconds();
+                $("#days > .bolded").html(days);
+                $("#hours > .bolded").html(hours);
+                $("#minutes > .bolded").html(minutes);
+                $("#seconds > .bolded").html(seconds);
+                const countdown = `${days} days, ${hours} hours, ${minutes} minutes, ${seconds} seconds`;
+
+                // Update the countdown every second
+                setInterval(function () {
+                    if (countdownComplete) return;
+                    // Calculate the duration between the current time and the target time
+                    const duration = moment.duration(targetDate.diff(moment()));
+
+                    // Format the duration as a countdown
+                    const days = Math.floor(duration.asDays());
+                    const hours = duration.hours();
+                    const minutes = duration.minutes();
+                    const seconds = duration.seconds();
+
+                    $("#days > .bolded").html(days);
+                    $("#hours > .bolded").html(hours);
+                    $("#minutes > .bolded").html(minutes);
+                    $("#seconds > .bolded").html(seconds);
+                }, 1000);
+            });
+        </script>
+  <script>
+            const stickyHeader = '${NavSticky}';
+            // const stickyHeader = 'true';
+            if (stickyHeader === 'true') {
+                const nav = document.getElementById('nav');
+                nav.classList.add('sticky-top')
+                window.addEventListener('scroll', function () {
+                    const logoImg = document.getElementById('logo-img');
+                    let scrolled = window.scrollY;
+                    if (scrolled > 0) {
+                        nav.classList.add('nav-scrolled');
+                        logoImg.src = '${DarkLogoURL}';
+                    } else {
+                        nav.classList.remove('nav-scrolled');
+                        logoImg.src = '${LightLogoURL}';
+                    }
+                });
+            }
+        </script>
+  <script>
+            const transparentToggleSections = document.querySelectorAll('.transparent-toggle');
+            const flex23Mode = '${Flex23Mode}';
+            // const flex23Mode = 'true';
+            if (flex23Mode === 'true') {
+                transparentToggleSections.forEach(section => {
+                    section.classList.add('transparent');
+                })
+            }
+        </script>
+  <script>
+            const panel = document.getElementById('HeroFormPanel');
+            const opacity = ${HeroFormOpac};
+            const alpha = Math.round(opacity * 2.55);
+            const hexAlpha = alpha.toString(16).toUpperCase().padStart(2, "0");
+            const hexColor = "${HeroFormBGColor}" + hexAlpha;
+            panel.style.backgroundColor = hexColor;
+        </script>
+   <script>
+     
+     MktoForms2.whenReady(function (form) {
+            loadTest();
+		});
+     
+     
+      function loadTest() {
+        formUpdate();
+        focusFields();
+        
+        // Add class 'safari' (used for cart scrollbar)
+        if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+            document.querySelector('body').classList.add('safari')
+        }
+        window.addEventListener("click", function (e) {
+            if (e.target.classList.contains("show-comment-dynamic")) {
+                e.target.parentElement.classList.add('spz-hidden');
+                this.document.querySelector('#Lead_Notes__c').focus();
+            }
+
+            if (e.target.classList.contains("mktoField")) {
+                showGlobalError();
+            }
+
+            if (e.target.classList.contains("mktoButton")) {
+                document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+                    checkError(el);
+                    showGlobalError();
+                });
+            }
+        });
+        document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-errored.svg?version=0" as="image"><link rel="preload" href="https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-hover.svg?version=0" as="image"><link rel="preload" href="https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-checked.svg?version=0" as="image">`
+        );
+    }
+     
+    //custom error for checkbox field
+    function showGlobalError() {
+        let checkErrorforCheckBox = setInterval(() => {
+            if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {
+                document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.add('spz-cstm-error');
+            }
+            else {
+                document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.remove('spz-cstm-error');
+            }
+        }, 50);
+
+        setTimeout(() => {
+            clearInterval(checkErrorforCheckBox);
+        }, 1000);
+    }
+
+    //Marketo form update
+    function formUpdate() {
+         if (document.querySelector('.mktoForm em')) {
+        document.querySelector('.mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
+         document.querySelector('.mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
+        document.querySelector('.mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
+         }
+      
+       if (document.querySelector('.hero-image #HeroImg')) {
+         	document.querySelector('.hero-image #HeroImg').setAttribute('alt', '${HeroImgAltTag}');
+        }
+      
+        if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
+            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = '<span>Let&#8217;s get started <span>';
+        }
+
+        
+ 		if (document.querySelector('#Lead_Notes__c') && document.querySelectorAll('.spz-anchor').length == 0) {
+        document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic">+ Comment</a></div>`);
+        document.querySelector('#I_am__c').addEventListener('change', function () {
+            dropdownFunctionality(this.value);
+        });
+        document.querySelector('#LblI_am__c').textContent = 'I am...*';
+        }
+      
+       document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+            el.closest('.mktoFormCol').classList.add('col-' + el.getAttribute('name'));
+        });
+      //document.querySelector('#HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span').outerHTML = `<span>If you consent to us contacting you, please tick below to confirm you would like us to contact you:</span><br><span>You can unsubscribe from these communications at any time. For more information our privacy practices, please review our <a href="https://eptura.com/terms/privacy-policy/" target="_blank" id="">Privacy Policy</a>.</span>`;
+            //document.querySelectorAll('#HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span')[2].style.display = "none";
+    }
+
+    //On value change of "I am.." field switch label od comment button
+    function dropdownFunctionality(val) {
+        let setBuffer = setInterval(() => {
+            if (document.querySelector('#Lead_Notes__c')) {
+                if (document.querySelector('.spz-anchor').classList.contains('spz-hidden')) {
+                    document.querySelector('.spz-anchor').classList.remove('spz-hidden');
+                }
+            }
+            else {
+                document.querySelector('.spz-anchor').classList.add('spz-hidden');
+            }
+
+            if (val == 'Other' || val == 'A current client' || val == 'A current Partner') {
+                document.querySelector('.show-comment-dynamic').textContent = '+ Please let us know how we may assist you';
+            }
+            else {
+                document.querySelector('.show-comment-dynamic').textContent = '+ Comment';
+            }
+            focusFields();
+        }, 5);
+
+        setTimeout(() => {
+            clearInterval(setBuffer);
+        }, 50);
+    }
+
+    // On input focus add class on closest parent field class
+    function focusFields() {
+        document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+
+            blockChar();
+
+            el.addEventListener('focus', function () {
+                el.closest('.mktoFormCol').classList.add('field-focus');
+            });
+            el.addEventListener('blur', function () {
+                el.closest('.mktoFormCol').classList.remove('field-focus');
+                checkError(el);
+            });
+
+            // add event listeners to the input element
+            el.addEventListener('keypress', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('change', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('keydown', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('keyup', () => {
+                checkError(el);
+            });
+        });
+    }
+
+    // Function to add .field-error class on closest parent .field class if .error is exist on input
+    function checkError(elem) {
+        let timeBuffer = setInterval(() => {
+            if (elem.closest('.mktoFormCol ').querySelector('.mktoError') && elem.closest('.mktoFormCol').querySelector('.mktoInvalid')) {
+                elem.closest('.mktoFormCol').classList.add('field-error');
+            } else {
+                elem.closest('.mktoFormCol').classList.remove('field-error');
+            }
+            if (elem && elem.value && (elem.value != '')) {
+                // console.log(elem.value)
+                elem.closest('.mktoFormCol').classList.add('input-filled');
+                // elem.closest('.mktoFormCol').classList.remove('field-error');
+            } else {
+                elem.closest('.mktoFormCol').classList.remove('input-filled');
+                // elem.closest('.mktoFormCol').classList.add('field-error');
+            }
+
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(timeBuffer);
+        }, 1000);
+    }
+
+    //Block "e" from number of employees field
+    function blockChar() {
+        if (document.querySelector('#NumberOfEmployees')){
+            document.querySelector('#NumberOfEmployees').addEventListener("keydown", function (e) {
+                if (e.key == 'e') {
+                    e.preventDefault();
+                }
+            });
+        }
+    }
+     
+     // Generic Code
+    function waitForElm(selector) {
+        return new Promise(function (resolve) {
+            if (document.querySelector(selector)) {
+                return resolve(document.querySelector(selector));
+            }
+            const observer = new MutationObserver(function (mutations) {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+        });
+    }
+   </script>
+   
+   
+  <script src="${domainblock}"></script>
+  <div class="mktoText" id="FooterScripts" mktoname="Footer Scripts" style="background: #0D122E;">
+   &nbsp;
+  </div> <!-- <script src="https://lp.eptura.com/rs/267-JUP-120/images/formcompleteUpdate.js"></script> -->
+ </body>
+</html>
