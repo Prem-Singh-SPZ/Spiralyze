@@ -18,49 +18,51 @@ body.spz-1014 {
           fieldset {
             .field.hs-form-field {
               .input {
-                .hs-input {
-                  border-bottom: 1px solid var(--Neutrals-White, #fff);
-                  background-color: #0580e8;
-                  border-radius: 0;
-                }
                 // Custom label
                 label.hs-label-spz {
                   position: absolute;
-                  top: 16px;
-                  left: 16px;
+                  top: 21px;
+                  left: 12px;
                   padding: 0;
                   font-family: $ff-inter;
                   font-style: normal;
-                  font-weight: 400;
+                  font-weight: 500;
                   font-size: 16px;
                   line-height: 24px;
                   color: #fff;
                   transition: all 0.3s ease-in-out;
                   pointer-events: none;
+
+                  ~ .hs-label-spz {
+                    display: none;
+                  }
                 }
 
                 // Input field
                 .hs-input {
                   font-family: $ff-inter;
                   font-style: normal;
-                  font-weight: 400;
+                  font-weight: 500;
                   font-size: 16px;
                   line-height: 24px;
                   color: #fff;
-                  border-radius: 4px;
-                //   border: 1px solid #d6d6d6;
+                  border-bottom: 1px solid var(--Neutrals-White, #fff);
+                  background-color: #0580e8;
+                  border-radius: 0;
+                  // border-radius: 8px;
+                  // border: 1px solid #d6d6d6;
 
                   &:not([type="checkbox"]):not([type="radio"]) {
                     box-sizing: border-box;
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    padding: 14px 16px 0;
-                    height: 56px;
-                    // width: 100%;
+                    padding: 1px 12px 0;
+                    height: 64px;
+                    width: 100%;
                     // background: #fff;
-                    // border: none;
-                    // border-radius: 4px;
+                    // border: 1px solid #dde3eb;
+                    // border-radius: 8px;
                     outline: none;
                     transition: all 0.3s ease-in-out;
 
@@ -71,23 +73,94 @@ body.spz-1014 {
                   }
 
                   &:hover {
-                    // border: 1px solid #a3a3a3;
+                    // box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                    // border: 1px solid var(--Neutrals-400, #96a1b2) !important;
+
+                    // ~ label {
+                    //   color: var(--Neutrals-700, #293642);
+                    // }
+                  }
+
+                  &:focus {
+                    // border: 1px solid var(--Neutrals-900, #0c131a);
+
+                    ~ label {
+                      // color: var(--Neutrals-700, #293642);
+                    }
                   }
 
                   &:focus ~ label,
-                  &:not([value=""]) ~ label {
-                    top: 5px;
+                  &:not([value=""]):not(select) ~ label {
+                    top: 8px;
                     font-size: 12px;
-                    font-weight: 500;
-                    color: #f97f70;
+                    // font-weight: 500;
+                    color: #d53641;
                   }
 
                   &:focus ~ label,
-                  &:not(:placeholder-shown) ~ label {
-                    top: 5px;
+                  &input:not(:placeholder-shown) ~ label {
+                    top: 4px;
                     font-size: 12px;
                     font-weight: 500;
+                    line-height: 18px;
                     color: #fff;
+                  }
+
+                  &[type="checkbox"],
+                  &[type="radio"] {
+                    ~ span {
+                      font-family: $ff-inter;
+                      font-style: normal;
+                      font-weight: 500;
+                      font-size: 14px;
+                      line-height: 20px;
+                      color: #fff;
+                      cursor: pointer;
+                    }
+
+                    &:hover ~ span {
+                      color: #fff;
+                    }
+
+                    &:checked ~ span {
+                      font-weight: 600;
+                    }
+                  }
+
+                  &:not(.is-placeholder){
+                    &:not(:placeholder-shown) {
+                      border: 1px solid var(--Neutrals-700, #293642);
+
+                      ~ label {
+                        top: 4px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        // font-weight: 500;
+                        height: 18px;
+                      }
+                    }
+                    &:not(:-moz-placeholder-shown) {
+                      border: 1px solid var(--Neutrals-700, #293642);
+
+                      ~ label {
+                        top: 4px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        // font-weight: 500;
+                        height: 18px;
+                      }
+                    }
+                    &:not(:-ms-input-placeholder) {
+                      border: 1px solid var(--Neutrals-700, #293642);
+
+                      ~ label {
+                        top: 4px;
+                        font-size: 12px;
+                        line-height: 18px;
+                        // font-weight: 500;
+                        height: 18px;
+                      }
+                    }
                   }
                 }
 
@@ -95,12 +168,20 @@ body.spz-1014 {
                   appearance: none;
                   -webkit-appearance: none;
                   // set custom icon on select
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/v1681219562/System_Icons.svg")
-                     no-repeat right 15px center !important;
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg")
+                    no-repeat right 11px center !important;
+                  white-space: nowrap;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                  padding-right: 35px !important;
 
+                  &.is-placeholder {
+                    color: transparent !important;
+                  }
                   option {
+                    color: #0c131a !important;
                     &:hover {
-                      background: rgba(5, 128, 232, 0.06);
+                      background: rgba(55, 153, 237, 0.1);
                     }
                   }
                 }
@@ -110,35 +191,56 @@ body.spz-1014 {
                   display: none;
                 }
 
-                &.field-untouched {
-                  .input {
-                    .hs-label-spz {
-                      top: 16px;
-                      left: 16px;
-                      color: #a3a3a3;
-                      font-size: 16px;
-                      font-weight: 400;
-                      background-color: #fff;
-                      width: calc(100% - 60px);
-                      height: 30px;
-                    }
-                  }
-                }
-
                 &.field-error {
                   .input {
                     .hs-input {
-                      border: 1px solid #f97f70;
-                      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-                      color: #444;
+                      border: 1px solid #d53641;
+                      // box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                      // color: #444;
 
-                      ~ .hs-label-spz {
-                        color: #a3a3a3;
-                      }
+                      // ~ .hs-label-spz {
+                      //   color: #293642;
+                      // }
 
-                      &:not([value=""]):not(select) {
-                        ~ .hs-label-spz {
-                          color: #f97f70;
+                      // &:not([value=""]):not(select) {
+                      //   ~ .hs-label-spz {
+                      //     color: #d53641;
+                      //   }
+                      // }
+
+                      &:not(.is-placeholder) {
+                        &:not(:placeholder-shown) {
+                          ~ {
+                            label {
+                              top: 4px;
+                              font-size: 12px;
+                              line-height: 18px;
+                              // font-weight: 500;
+                              height: 18px;
+                            }
+                          }
+                        }
+                        &:not(:-moz-placeholder-shown) {
+                          ~ {
+                            label {
+                              top: 4px;
+                              font-size: 12px;
+                              line-height: 18px;
+                              // font-weight: 500;
+                              height: 18px;
+                            }
+                          }
+                        }
+                        &:not(:-ms-input-placeholder) {
+                          ~ {
+                            label {
+                              top: 4px;
+                              font-size: 12px;
+                              line-height: 18px;
+                              // font-weight: 500;
+                              height: 18px;
+                            }
+                          }
                         }
                       }
                     }
@@ -150,11 +252,12 @@ body.spz-1014 {
 
                   &.hs-fieldtype-select {
                     .input .hs-label-spz {
-                      top: 16px;
-                      left: 16px;
-                      color: #a3a3a3;
+                      top: 20px;
+                      left: 12px;
+                      color: #697586;
                       font-size: 16px;
-                      font-weight: 400;
+                      font-weight: 500;
+                      line-height: 24px;
                       background-color: #fff;
                       width: calc(100% - 60px);
                       height: 30px;
@@ -162,35 +265,189 @@ body.spz-1014 {
                   }
                 }
 
-                &.field-focus {
+                &.field-focus:not(.hs-fieldtype-checkbox) {
                   .input {
+                    box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+
                     .hs-input {
-                      border: 1px solid #0580e8;
-                      box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+                      border: 1px solid var(--Neutrals-900, #0c131a);
+                      // box-shadow: 0px 0px 0px 2px #3799ed;
 
                       ~ .hs-label-spz {
-                        color: #0580e8;
-                        font-weight: 500;
+                        color: #293642 !important;
+                        // font-weight: 500;
                       }
 
                       &:not([value=""]) {
                         ~ .hs-label-spz {
-                          color: #0580e8;
+                          color: #293642;
                         }
                       }
                     }
 
                     // .hs-label-spz {
-                    //   color: #0580e8;
+                    //   color: #293642;
                     //   font-weight: 500;
                     // }
                   }
 
                   &.hs-fieldtype-select {
                     select {
-                      background: url("//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg")
-                         no-repeat right 15px center !important;
+                      background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg")
+                        #fff no-repeat right 11px center !important;
                     }
+                  }
+                }
+
+                // Checkbox
+                &.hs-fieldtype-checkbox {
+                  width: 100%;
+                  max-width: 100%;
+                  margin-top: 20px;
+                  margin-bottom: 0;
+
+                  > legend.hs-field-desc {
+                    font-family: $ff-inter;
+                    font-size: 20px;
+                    font-weight: 600;
+                    line-height: 28px;
+                    letter-spacing: 0em;
+                    text-align: left;
+                    color: #fff;
+                    padding-left: 0;
+                  }
+
+                  > .input {
+                    border: none;
+                    width: 100%;
+                    max-width: 100%;
+                    ul {
+                      list-style: none;
+                      padding: 0;
+                      margin: 15px 0 0;
+                      display: flex;
+                      flex-wrap: wrap;
+
+                      li {
+                        min-width: 74px;
+                        font-family: $ff-inter;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #000;
+                        margin-right: 20px;
+                        margin-bottom: 9px;
+
+                        > label {
+                          position: relative;
+                          display: inline-block;
+                          // align-items: center;
+
+                          // Checkbox icon styling
+                          span::before {
+                            content: url("//res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_blank.svg");
+                            position: relative;
+                            top: 5px;
+                            left: 12px;
+                            display: inline-block;
+                            width: 20px;
+                            height: 20px;
+                            border-radius: 4px;
+                            cursor: pointer;
+                            transform: translate(-100%, 0%);
+                            transition: all 0.2s ease-in-out;
+                          }
+
+                          [type="checkbox"] {
+                            position: absolute;
+                            opacity: 0;
+                            z-index: -2;
+
+                            &:hover ~ span::before {
+                              content: url("//res.cloudinary.com/spiralyze/image/upload/v1694522987/drata/6012/Checkbox_hover.svg");
+                            }
+
+                            &:checked {
+                              ~ span::before {
+                                // opacity: 0;
+                              }
+
+                              ~ span::before {
+                                content: url("//res.cloudinary.com/spiralyze/image/upload/v1694522988/drata/6012/checkbox_check.svg");
+                                // position: absolute;
+                                // top: -1.3px;
+                                // left: -1px;
+                                // transform: translate(-100%, 0%);
+                                // width: 16px;
+                                // height: 16px;
+                                // border-radius: 4px;
+                                // transition: all 0.2s ease-in-out;
+                              }
+                            }
+                          }
+
+                          > span {
+                            padding-left: 8px;
+                          }
+                        }
+                      }
+
+                      // Specific for hs_demo_product_of_interest starts
+                      // SOC2
+                      li:nth-child(1) {
+                        order: 1;
+                      }
+
+                      // ISO 27001
+                      li:nth-child(2) {
+                        order: 3;
+                        min-width: 102.3px;
+                      }
+
+                      // HIPAA
+                      li:nth-child(3) {
+                        order: 2;
+
+                        // @media (min-width: 1200px) {
+                        //   min-width: 135px;
+                        // }
+                      }
+
+                      // GDPR
+                      li:nth-child(4) {
+                        order: 4;
+                        min-width: 70px;
+                      }
+
+                      // Other
+                      li:nth-child(5) {
+                        order: 5;
+
+                        // @media (min-width: 1200px) {
+                        //   min-width: 135px;
+                        // }
+                      }
+                      // Specific for hs_demo_product_of_interest ends
+                    }
+                  }
+                }
+              }
+
+              &.field-untouched {
+                .input .hs-input:not(:placeholder-shown)  ~ label {
+                  &.hs-label-spz {
+                    top: 21px;
+                    left: 12px;
+                    color: #fff;
+                    font-family: $ff-inter;
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 16px;
+                    line-height: 24px;
+                    background-color: #0580e8;
+                    width: calc(100% - 60px);
+                    height: 30px;
                   }
                 }
               }

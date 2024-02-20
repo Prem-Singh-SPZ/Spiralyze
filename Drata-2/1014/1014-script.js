@@ -1,11 +1,30 @@
 (function () {
   function createTest() {
-    waitForElm(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input").then(function () {
+    waitForElm(
+      ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input"
+    ).then(function () {
       document.querySelector("body").classList.add("spz-1014");
 
       appendInputLabel();
       focusFields();
       setHiddenFields();
+
+      // hs-button
+      document
+        .querySelector(".hs-button")
+        .addEventListener("click", function () {
+          const err = setInterval(() => {
+            checkError();
+            clearInterval(err);
+          }, 100);
+        });
+
+      // Add field-untouched class on select element
+      document.querySelectorAll("select.hs-input").forEach(function (el) {
+        if (el.options.length > 0) {
+          el.closest(".field").classList.add("field-untouched");
+        }
+      });
     });
   }
 
@@ -19,8 +38,19 @@
       }
       label.setAttribute("for", el.id);
       label.classList.add("hs-label-spz");
-      if(el.parentElement.querySelectorAll('.hs-label-spz').length == 0){
+      if (el.parentElement.querySelectorAll(".hs-label-spz").length == 0) {
         el.parentNode.insertBefore(label, el.nextSibling);
+      }
+    });
+  }
+
+  // Function to add .field-error class on closest parent .field class if .error is exist on .hs-input
+  function checkError() {
+    document.querySelectorAll(".hs-input").forEach(function (el) {
+      if (el.closest(".field").querySelector(".error") != null) {
+        el.closest(".field").classList.add("field-error");
+      } else {
+        el.closest(".field").classList.remove("field-error");
       }
     });
   }
@@ -31,11 +61,18 @@
       // On input focus add .field-focus class on closest parent .field class
       el.addEventListener("focus", function () {
         el.closest(".field").classList.add("field-focus");
+        setTimeout(function () {
+          el.closest(".field").classList.remove("field-error");
+          el.closest(".field").classList.remove("field-untouched");
+        }, 100);
       });
 
       // On input blur remove .field-focus class on closest parent .field class
       el.addEventListener("blur", function () {
         el.closest(".field").classList.remove("field-focus");
+        setTimeout(function () {
+          checkError();
+        }, 100);
       });
 
       // On select element change remove .field-error class on closest parent .field class
