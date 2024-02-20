@@ -9,6 +9,11 @@ body.spz-1014 {
       max-width: 700px;
       padding: 40px;
 
+      @media (max-width: 767.98px) {
+        padding: 28px 24px;
+        width: 87.47%;
+      }
+
       > button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
         position: absolute;
       }
@@ -22,7 +27,7 @@ body.spz-1014 {
                 label.hs-label-spz {
                   position: absolute;
                   top: 21px;
-                  left: 12px;
+                  left: 0;
                   padding: 0;
                   font-family: $ff-inter;
                   font-style: normal;
@@ -57,7 +62,7 @@ body.spz-1014 {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    padding: 1px 12px 0;
+                    padding: 1px 0px 0;
                     height: 64px;
                     width: 100%;
                     // background: #fff;
@@ -75,6 +80,7 @@ body.spz-1014 {
                   &:hover {
                     // box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
                     // border: 1px solid var(--Neutrals-400, #96a1b2) !important;
+                    box-shadow: none;
 
                     // ~ label {
                     //   color: var(--Neutrals-700, #293642);
@@ -83,27 +89,26 @@ body.spz-1014 {
 
                   &:focus {
                     // border: 1px solid var(--Neutrals-900, #0c131a);
-
+                    box-shadow: none;
                     ~ label {
                       // color: var(--Neutrals-700, #293642);
                     }
                   }
 
-                  &:focus ~ label,
-                  &:not([value=""]):not(select) ~ label {
-                    top: 8px;
-                    font-size: 12px;
-                    // font-weight: 500;
-                    color: #d53641;
-                  }
+                  // &:focus ~ label,
+                  // &:not([value=""]):not(select) ~ label {
+                  //   top: 8px;
+                  //   font-size: 12px;
+                  //   // font-weight: 500;
+                  //   color: #d53641;
+                  // }
 
                   &:focus ~ label,
                   &input:not(:placeholder-shown) ~ label {
                     top: 4px;
                     font-size: 12px;
-                    font-weight: 500;
+                    font-weight: 700;
                     line-height: 18px;
-                    color: #fff;
                   }
 
                   &[type="checkbox"],
@@ -127,9 +132,9 @@ body.spz-1014 {
                     }
                   }
 
-                  &:not(.is-placeholder){
+                  &:not(.is-placeholder) {
                     &:not(:placeholder-shown) {
-                      border: 1px solid var(--Neutrals-700, #293642);
+                      // border: 1px solid var(--Neutrals-700, #293642);
 
                       ~ label {
                         top: 4px;
@@ -140,7 +145,7 @@ body.spz-1014 {
                       }
                     }
                     &:not(:-moz-placeholder-shown) {
-                      border: 1px solid var(--Neutrals-700, #293642);
+                      // border: 1px solid var(--Neutrals-700, #293642);
 
                       ~ label {
                         top: 4px;
@@ -151,7 +156,7 @@ body.spz-1014 {
                       }
                     }
                     &:not(:-ms-input-placeholder) {
-                      border: 1px solid var(--Neutrals-700, #293642);
+                      // border: 1px solid var(--Neutrals-700, #293642);
 
                       ~ label {
                         top: 4px;
@@ -168,7 +173,7 @@ body.spz-1014 {
                   appearance: none;
                   -webkit-appearance: none;
                   // set custom icon on select
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg")
+                  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1707900386/drata/1014/foms_icon__close.svg")
                     no-repeat right 11px center !important;
                   white-space: nowrap;
                   overflow: hidden;
@@ -435,10 +440,10 @@ body.spz-1014 {
               }
 
               &.field-untouched {
-                .input .hs-input:not(:placeholder-shown)  ~ label {
+                .input .hs-input:not(:placeholder-shown) ~ label {
                   &.hs-label-spz {
                     top: 21px;
-                    left: 12px;
+                    left: 0;
                     color: #fff;
                     font-family: $ff-inter;
                     font-style: normal;
@@ -462,7 +467,8 @@ body.spz-1014 {
             height: 60px;
             margin: 23.5px auto 0;
 
-            .hs-button {
+            button {
+              width: 100%;
               font-family: $ff-inter;
               font-style: normal;
               font-weight: 700;
@@ -472,7 +478,7 @@ body.spz-1014 {
               color: #fff;
               width: 100%;
               height: 64px;
-              padding: 15px 62px 16px 30px;
+              padding: 15px 30px 16px 30px;
               background: #000;
               border: 1px solid #000;
               border-radius: 4px;
@@ -528,9 +534,9 @@ body.spz-1014 {
           select:-webkit-autofill,
           select:-webkit-autofill:hover,
           select:-webkit-autofill:focus {
-            background-color: #fff;
-            -webkit-text-fill-color: #000;
-            -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+            background-color: #0580e8;
+            -webkit-text-fill-color: #fff;
+            -webkit-box-shadow: 0 0 0px 1000px #0580e8 inset;
             transition: background-color 5000s ease-in-out 0s;
           }
 
@@ -538,8 +544,8 @@ body.spz-1014 {
           .hs-input:-webkit-autofill:hover,
           .hs-input:-webkit-autofill:focus,
           .hs-input:-webkit-autofill:active {
-            -webkit-box-shadow: 0 0 0 56px white inset !important;
-            -webkit-text-fill-color: #000 !important;
+            -webkit-box-shadow: 0 0 0 56px #0580e8 inset !important;
+            -webkit-text-fill-color: #fff !important;
           }
         }
       }

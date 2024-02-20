@@ -25,6 +25,15 @@
           el.closest(".field").classList.add("field-untouched");
         }
       });
+
+      let updateLabel = setInterval(() => {
+        document.querySelector('.MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button').textContent = 'Get Started';
+      }, 50);
+
+      setTimeout(() => {
+        clearInterval(updateLabel);
+      }, 1000);
+
     });
   }
 

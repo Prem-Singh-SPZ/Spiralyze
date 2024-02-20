@@ -6,13 +6,19 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] {
   max-width: 700px;
   padding: 40px;
 }
+@media (max-width: 767.98px) {
+  body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] {
+    padding: 28px 24px;
+    width: 87.47%;
+  }
+}
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] > button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
   position: absolute;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input label.hs-label-spz {
   position: absolute;
   top: 21px;
-  left: 12px;
+  left: 0;
   padding: 0;
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -51,7 +57,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 1px 12px 0;
+  padding: 1px 0px 0;
   height: 64px;
   width: 100%;
   outline: none;
@@ -78,31 +84,31 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   display: none;
   color: transparent;
 }
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:focus ~ label, body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([value=""]):not(select) ~ label {
-  top: 8px;
-  font-size: 12px;
-  color: #d53641;
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:hover {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:focus {
+  -webkit-box-shadow: none;
+          box-shadow: none;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-inputinput:not(:-moz-placeholder-shown) ~ label {
   top: 4px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
-  color: #fff;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-inputinput:not(:-ms-input-placeholder) ~ label {
   top: 4px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
-  color: #fff;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:focus ~ label, body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-inputinput:not(:placeholder-shown) ~ label {
   top: 4px;
   font-size: 12px;
-  font-weight: 500;
+  font-weight: 700;
   line-height: 18px;
-  color: #fff;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input[type=checkbox] ~ span, body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input[type=radio] ~ span {
   font-family: Inter, sans-serif;
@@ -118,15 +124,6 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input[type=checkbox]:checked ~ span, body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input[type=radio]:checked ~ span {
   font-weight: 600;
-}
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border: 1px solid var(--Neutrals-700, #293642);
-}
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border: 1px solid var(--Neutrals-700, #293642);
-}
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:placeholder-shown) {
-  border: 1px solid var(--Neutrals-700, #293642);
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
   top: 4px;
@@ -146,17 +143,11 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   line-height: 18px;
   height: 18px;
 }
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border: 1px solid var(--Neutrals-700, #293642);
-}
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
   top: 4px;
   font-size: 12px;
   line-height: 18px;
   height: 18px;
-}
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border: 1px solid var(--Neutrals-700, #293642);
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
   top: 4px;
@@ -168,7 +159,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   -moz-appearance: none;
        appearance: none;
   -webkit-appearance: none;
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg") no-repeat right 11px center !important;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1707900386/drata/1014/foms_icon__close.svg") no-repeat right 11px center !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
@@ -350,7 +341,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-untouched .input .hs-input:not(:-moz-placeholder-shown) ~ label.hs-label-spz {
   top: 21px;
-  left: 12px;
+  left: 0;
   color: #fff;
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -363,7 +354,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-untouched .input .hs-input:not(:-ms-input-placeholder) ~ label.hs-label-spz {
   top: 21px;
-  left: 12px;
+  left: 0;
   color: #fff;
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -376,7 +367,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-untouched .input .hs-input:not(:placeholder-shown) ~ label.hs-label-spz {
   top: 21px;
-  left: 12px;
+  left: 0;
   color: #fff;
   font-family: Inter, sans-serif;
   font-style: normal;
@@ -394,7 +385,8 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   height: 60px;
   margin: 23.5px auto 0;
 }
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions .hs-button {
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button {
+  width: 100%;
   font-family: Inter, sans-serif;
   font-style: normal;
   font-weight: 700;
@@ -404,14 +396,14 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   color: #fff;
   width: 100%;
   height: 64px;
-  padding: 15px 62px 16px 30px;
+  padding: 15px 30px 16px 30px;
   background: #000;
   border: 1px solid #000;
   border-radius: 4px;
   position: relative;
   cursor: pointer;
 }
-body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions .hs-button:hover {
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button:hover {
   background: #2f2f2f;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions::before {
@@ -450,9 +442,9 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form select:-webkit-autofill,
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form select:-webkit-autofill:hover,
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form select:-webkit-autofill:focus {
-  background-color: #fff;
-  -webkit-text-fill-color: #000;
-  -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+  background-color: #0580e8;
+  -webkit-text-fill-color: #fff;
+  -webkit-box-shadow: 0 0 0px 1000px #0580e8 inset;
   -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
@@ -460,6 +452,6 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs-input:-webkit-autofill:hover,
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs-input:-webkit-autofill:focus,
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
+  -webkit-box-shadow: 0 0 0 56px #0580e8 inset !important;
+  -webkit-text-fill-color: #fff !important;
 }
