@@ -170,7 +170,7 @@
   function checkboxDropdown() {
     waitForElm(".spz_custom_dropdown .hs-form-spz .hs-form-checkbox").then(
       function (elm) {
-        let counter = 0;
+        // let counter = 0;
         document
           .querySelectorAll(".hs-form-checkbox")
           .forEach(function (elem, i) {
@@ -189,67 +189,69 @@
                     document
                       .querySelector(".spz-btn .value-container")
                       .insertAdjacentHTML("beforeend", html);
-                    counter++;
+                    // counter++;
                   }
                 } else {
                   document
                     .querySelector('span[title="' + title + '"]')
                     .remove();
-                  counter--;
+                  // counter--;
                 }
 
-                if (counter == 1) {
+                if (document.querySelectorAll(".spz-btn .value-container span[title]").length > 0) {
                   document
                     .querySelector(
                       ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
                     )
                     .classList.add("single-value");
-                  if (
-                    document
-                      .querySelector(
-                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                      )
-                      .classList.contains("multiple-value")
-                  ) {
-                    document
-                      .querySelector(
-                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                      )
-                      .classList.remove("multiple-value");
-                  }
-                } else if (counter == 0) {
-                  if (
-                    document
-                      .querySelector(
-                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                      )
-                      .classList.contains("single-value")
-                  ) {
-                    document
-                      .querySelector(
-                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                      )
-                      .classList.remove("single-value");
-                  }
-                  if (
-                    document
-                      .querySelector(
-                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                      )
-                      .classList.contains("multiple-value")
-                  ) {
-                    document
-                      .querySelector(
-                        ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                      )
-                      .classList.remove("multiple-value");
-                  }
-                } else {
-                  document
-                    .querySelector(
-                      ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
-                    )
-                    .classList.add("multiple-value");
+                  // if (
+                  //   document
+                  //     .querySelector(
+                  //       ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                  //     )
+                  //     .classList.contains("multiple-value")
+                  // ) {
+                  //   document
+                  //     .querySelector(
+                  //       ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                  //     )
+                  //     .classList.remove("multiple-value");
+                  // }
+                } 
+                // else if (counter == 0) {
+                //   if (
+                //     document
+                //       .querySelector(
+                //         ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                //       )
+                //       .classList.contains("single-value")
+                //   ) {
+                //     document
+                //       .querySelector(
+                //         ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                //       )
+                //       .classList.remove("single-value");
+                //   }
+                //   if (
+                //     document
+                //       .querySelector(
+                //         ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                //       )
+                //       .classList.contains("multiple-value")
+                //   ) {
+                //     document
+                //       .querySelector(
+                //         ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                //       )
+                //       .classList.remove("multiple-value");
+                //   }
+                // } 
+                else {
+                  // document
+                  //   .querySelector(
+                  //     ".hs-fieldtype-checkbox.field.hs-form-field .spz-btn"
+                  //   )
+                  //   .classList.add("multiple-value");
                   if (
                     document
                       .querySelector(
