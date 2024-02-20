@@ -16,12 +16,22 @@ body.spz-1014 {
 
       > button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
         position: absolute;
+        top: 50px;
+        left: 42px;
+      }
+
+      p.MuiTypography-body1 {
+        letter-spacing: -0.84px;
+        margin: 0 0 32px;
       }
 
       div[class*="Form-formContainer"] {
         form.hs-form {
+          gap: 0;
           fieldset {
+            gap: 12px;
             .field.hs-form-field {
+              margin-bottom: 12px;
               .input {
                 // Custom label
                 label.hs-label-spz {
@@ -174,7 +184,7 @@ body.spz-1014 {
                   -webkit-appearance: none;
                   // set custom icon on select
                   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1707900386/drata/1014/foms_icon__close.svg")
-                    no-repeat right 11px center !important;
+                    no-repeat right 0px center !important;
                   white-space: nowrap;
                   overflow: hidden;
                   text-overflow: ellipsis;
@@ -299,7 +309,7 @@ body.spz-1014 {
                   &.hs-fieldtype-select {
                     select {
                       background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg")
-                        #fff no-repeat right 11px center !important;
+                        #fff no-repeat right 0px center !important;
                     }
                   }
                 }
@@ -456,6 +466,54 @@ body.spz-1014 {
                   }
                 }
               }
+
+              &.hs_demo_product_of_interest {
+                margin-top: 20px;
+
+                .hs-field-desc {
+                  font-size: 20px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 28px;
+                  padding-left: 0;
+                }
+
+                .input {
+                  .MuiFormControl-fullWidth {
+                    margin: 10px 0 0;
+                    div[class*="Form-inlineCheckBoxContainer"] {
+                      display: flex;
+                      flex-wrap: wrap;
+                      label {
+                        margin-right: 25px;
+                        padding: 0;
+                        margin-top: 10px;
+                        margin-left: 0;
+                        .MuiCheckbox-colorPrimary {
+                          padding: 0 8px 0 0;
+                          border-radius: 0;
+                        }
+
+                        &:nth-child(1) {
+                          order: 0;
+                        }
+                        &:nth-child(2) {
+                          order: 2;
+                        }
+                        &:nth-child(3) {
+                          order: 1;
+                        }
+                        &:nth-child(4) {
+                          order: 4;
+                        }
+                        &:nth-child(5) {
+                          order: 5;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
             }
           }
 
@@ -463,48 +521,54 @@ body.spz-1014 {
           .actions {
             position: relative;
             max-width: initial;
-            width: 209px;
+            width: 182px;
             height: 60px;
-            margin: 23.5px auto 0;
+            margin: 20px auto 0;
 
             button {
               width: 100%;
               font-family: $ff-inter;
+              font-size: 16px;
               font-style: normal;
-              font-weight: 700;
-              font-size: 20px;
-              line-height: 32px;
+              font-weight: 600;
+              line-height: 24px;
               text-align: center;
               color: #fff;
               width: 100%;
-              height: 64px;
-              padding: 15px 30px 16px 30px;
-              background: #000;
-              border: 1px solid #000;
-              border-radius: 4px;
+              height: 60px;
+              padding: 16px 58px 16px 30px;
+              background: #0C131A;
+              border: none;
               position: relative;
               cursor: pointer;
+              border-radius: 12px;
 
               &:hover {
-                background: #2f2f2f;
+                background: #293642;
               }
             }
 
             &::before {
               content: "";
               position: absolute;
-              top: 20px;
-              right: 32px;
+              top: 18px;
+              right: 16px;
               width: 24px;
               height: 24px;
               z-index: 3;
               background: url(https://res.cloudinary.com/spiralyze/image/upload/v1707900386/drata/1014/arrow_icon.svg)
-              no-repeat center center;
+                no-repeat center center;
               pointer-events: none;
             }
           }
 
           // Error messages Starts
+          .hs-error-msgs {
+            position: relative;
+            top: 0;
+            left: 0;
+          }
+
           .hs-error-msgs.inputs-list li label {
             font-family: $ff-inter;
             font-style: normal;
@@ -576,6 +640,16 @@ body.spz-1014 {
                 }
               }
             }
+          }
+
+          p.MuiTypography-body1 {
+            text-align: center;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 18px;
+            letter-spacing: 0;
+            margin: 12px 0 0px;
           }
         }
       }

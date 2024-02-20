@@ -27,13 +27,30 @@
       });
 
       let updateLabel = setInterval(() => {
-        document.querySelector('.MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button').textContent = 'Get Started';
+        document.querySelector(
+          ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button"
+        ).textContent = "Get Started";
+
+        document.querySelector(
+          ".hs_source__inbound_demo_ .input .hs-label-spz"
+        ).textContent = "How did you hear about us?*";
+
+        // move .MuiTypography-body1 after .hs_submit
+        document
+          .querySelector(
+            ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit"
+          )
+          .insertAdjacentElement(
+            "afterend",
+            document.querySelector(
+              ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"
+            )
+          );
       }, 50);
 
       setTimeout(() => {
         clearInterval(updateLabel);
       }, 1000);
-
     });
   }
 
