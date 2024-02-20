@@ -24,7 +24,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #a3a3a3;
+  color: #fff;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
@@ -35,7 +35,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   font-weight: 400;
   font-size: 16px;
   line-height: 24px;
-  color: #000;
+  color: #fff;
   border-radius: 4px;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio]) {
@@ -87,19 +87,19 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   top: 5px;
   font-size: 12px;
   font-weight: 500;
-  color: #727272;
+  color: #fff;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(:-ms-input-placeholder) ~ label {
   top: 5px;
   font-size: 12px;
   font-weight: 500;
-  color: #727272;
+  color: #fff;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:focus ~ label, body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(:placeholder-shown) ~ label {
   top: 5px;
   font-size: 12px;
   font-weight: 500;
-  color: #727272;
+  color: #fff;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input select {
   -moz-appearance: none;
@@ -164,7 +164,7 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   position: relative;
   max-width: initial;
   width: 209px;
-  height: 64px;
+  height: 60px;
   margin: 23.5px auto 0;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions .hs-button {
@@ -194,9 +194,25 @@ body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   right: 32px;
   width: 24px;
   height: 24px;
-  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260806/drata/4001/system_icons_4.svg") no-repeat;
   z-index: 3;
   pointer-events: none;
+}
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs-error-msgs.inputs-list li label {
+  font-family: Inter, sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f97f70;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs-error-msgs.inputs-list li label label > a {
+  cursor: pointer;
+}
+body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_error_rollup {
+  text-align: center;
 }
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form input:-webkit-autofill,
 body.spz-1014 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form input:-webkit-autofill:hover,

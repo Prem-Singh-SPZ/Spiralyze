@@ -19,7 +19,9 @@
       }
       label.setAttribute("for", el.id);
       label.classList.add("hs-label-spz");
-      el.parentNode.insertBefore(label, el.nextSibling);
+      if(el.parentElement.querySelectorAll('.hs-label-spz').length == 0){
+        el.parentNode.insertBefore(label, el.nextSibling);
+      }
     });
   }
 

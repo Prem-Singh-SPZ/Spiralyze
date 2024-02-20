@@ -34,7 +34,7 @@ body.spz-1014 {
                   font-weight: 400;
                   font-size: 16px;
                   line-height: 24px;
-                  color: #a3a3a3;
+                  color: #fff;
                   transition: all 0.3s ease-in-out;
                   pointer-events: none;
                 }
@@ -46,7 +46,7 @@ body.spz-1014 {
                   font-weight: 400;
                   font-size: 16px;
                   line-height: 24px;
-                  color: #000;
+                  color: #fff;
                   border-radius: 4px;
                 //   border: 1px solid #d6d6d6;
 
@@ -87,7 +87,7 @@ body.spz-1014 {
                     top: 5px;
                     font-size: 12px;
                     font-weight: 500;
-                    color: #727272;
+                    color: #fff;
                   }
                 }
 
@@ -202,7 +202,7 @@ body.spz-1014 {
             position: relative;
             max-width: initial;
             width: 209px;
-            height: 64px;
+            height: 60px;
             margin: 23.5px auto 0;
 
             .hs-button {
@@ -234,33 +234,31 @@ body.spz-1014 {
               right: 32px;
               width: 24px;
               height: 24px;
-              background: url("https://res.cloudinary.com/spiralyze/image/upload/v1680260806/drata/4001/system_icons_4.svg")
-                no-repeat;
               z-index: 3;
               pointer-events: none;
             }
           }
 
           // Error messages Starts
-        //   .hs-error-msgs.inputs-list {
-        //     font-family: $ff-inter;
-        //     font-style: normal;
-        //     font-weight: 500;
-        //     font-size: 12px;
-        //     line-height: 14px;
-        //     color: #f97f70;
-        //     list-style: none;
-        //     margin: 0;
-        //     padding: 0;
+          .hs-error-msgs.inputs-list li label {
+            font-family: $ff-inter;
+            font-style: normal;
+            font-weight: 500;
+            font-size: 12px;
+            line-height: 14px;
+            color: #f97f70;
+            list-style: none;
+            margin: 0;
+            padding: 0;
 
-        //     label > a {
-        //       cursor: pointer;
-        //     }
-        //   }
+            label > a {
+              cursor: pointer;
+            }
+          }
 
-        //   .hs_error_rollup {
-        //     text-align: center;
-        //   }
+          .hs_error_rollup {
+            text-align: center;
+          }
           // Error messages Ends
 
           // Change autocomplete styles in WebKit browsers
