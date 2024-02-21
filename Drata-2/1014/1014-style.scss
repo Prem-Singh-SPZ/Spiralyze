@@ -9,20 +9,45 @@ body.spz-1014 {
       max-width: 700px;
       padding: 40px;
 
+      @media (max-width: 1023.98px) {
+        max-width: 704px;
+        width: 100%;
+      }
+
       @media (max-width: 767.98px) {
         padding: 28px 24px;
-        width: 87.47%;
+        max-width: 328px;
+        width: 100%;
       }
 
       > button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
         position: absolute;
         top: 50px;
         left: 42px;
+
+        @media (max-width: 767.98px) {
+          top: 11px;
+          left: 14px;
+
+          svg {
+            width: 20px;
+            height: 20px;
+          }
+        }
       }
 
       p.MuiTypography-body1 {
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px;
         letter-spacing: -0.84px;
         margin: 0 0 32px;
+
+        @media (max-width: 767.98px) {
+          font-size: 32px;
+          line-height: 40px;
+        }
       }
 
       div[class*="Form-formContainer"] {
@@ -30,6 +55,13 @@ body.spz-1014 {
           gap: 0;
           fieldset {
             gap: 12px;
+            @media (max-width: 767.98px) {
+             gap: 0;
+            }
+            @media (min-width: 767.98px) {
+              grid-template-columns: repeat(auto-fit, minmax(0px, 1fr));
+            }
+
             .field.hs-form-field {
               margin-bottom: 12px;
               .input {
@@ -64,6 +96,7 @@ body.spz-1014 {
                   border-bottom: 1px solid var(--Neutrals-White, #fff);
                   background-color: #0580e8;
                   border-radius: 0;
+                  caret-color: #fff;
                   // border-radius: 8px;
                   // border: 1px solid #d6d6d6;
 
@@ -72,7 +105,7 @@ body.spz-1014 {
                     display: flex;
                     flex-direction: row;
                     align-items: center;
-                    padding: 1px 0px 0;
+                    padding: 16px 0px 8px;
                     height: 64px;
                     width: 100%;
                     // background: #fff;
@@ -476,11 +509,23 @@ body.spz-1014 {
                   font-weight: 600;
                   line-height: 28px;
                   padding-left: 0;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 18px;
+                    font-style: normal;
+                    font-weight: 600;
+                    line-height: 26px;
+                  }
                 }
 
                 .input {
                   .MuiFormControl-fullWidth {
                     margin: 10px 0 0;
+
+                    @media (max-width: 767.98px) {
+                      margin: 19px 0 0;
+                    }
+
                     div[class*="Form-inlineCheckBoxContainer"] {
                       display: flex;
                       flex-wrap: wrap;
@@ -489,6 +534,13 @@ body.spz-1014 {
                         padding: 0;
                         margin-top: 10px;
                         margin-left: 0;
+
+                        @media (max-width: 767.98px) {
+                          min-width: 106px;
+                          margin-top: 0;
+                          margin-bottom: 20px;
+                        }
+
                         .MuiCheckbox-colorPrimary {
                           padding: 0 8px 0 0;
                           border-radius: 0;
@@ -525,6 +577,11 @@ body.spz-1014 {
             height: 60px;
             margin: 20px auto 0;
 
+            @media (max-width: 767.98px) {
+              width: 100%;
+              margin: 0 auto;
+            }
+
             button {
               width: 100%;
               font-family: $ff-inter;
@@ -537,7 +594,7 @@ body.spz-1014 {
               width: 100%;
               height: 60px;
               padding: 16px 58px 16px 30px;
-              background: #0C131A;
+              background: #0c131a;
               border: none;
               position: relative;
               cursor: pointer;
@@ -559,13 +616,17 @@ body.spz-1014 {
               background: url(https://res.cloudinary.com/spiralyze/image/upload/v1707900386/drata/1014/arrow_icon.svg)
                 no-repeat center center;
               pointer-events: none;
+
+              @media (max-width: 767.98px) {
+               right:  calc(50% - 75px);;
+              }
             }
           }
 
           // Error messages Starts
           .hs-error-msgs {
             position: relative;
-            top: 0;
+            top: 4px;
             left: 0;
           }
 

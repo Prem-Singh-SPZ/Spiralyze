@@ -1,13 +1,14 @@
 (function () {
   function createTest() {
     waitForElm(
-      ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input"
+      ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"
     ).then(function () {
       document.querySelector("body").classList.add("spz-1014");
 
       appendInputLabel();
       focusFields();
       setHiddenFields();
+      appendImages();
 
       // hs-button
       document
@@ -26,32 +27,39 @@
         }
       });
 
-      let updateLabel = setInterval(() => {
-        document.querySelector(
-          ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button"
-        ).textContent = "Get Started";
+      // let updateLabel = setInterval(() => {
+      document.querySelector(
+        ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button"
+      ).textContent = "Get Started";
 
-        document.querySelector(
-          ".hs_source__inbound_demo_ .input .hs-label-spz"
-        ).textContent = "How did you hear about us?*";
+      document.querySelector(
+        ".hs_source__inbound_demo_ .input .hs-label-spz"
+      ).textContent = "How did you hear about us?*";
 
-        // move .MuiTypography-body1 after .hs_submit
-        document
-          .querySelector(
-            ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit"
+      // move .MuiTypography-body1 after .hs_submit
+      document
+        .querySelector(
+          ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit"
+        )
+        .insertAdjacentElement(
+          "afterend",
+          document.querySelector(
+            ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"
           )
-          .insertAdjacentElement(
-            "afterend",
-            document.querySelector(
-              ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"
-            )
-          );
-      }, 50);
+        );
+      // }, 50);
 
-      setTimeout(() => {
-        clearInterval(updateLabel);
-      }, 1000);
+      // setTimeout(() => {
+      //   clearInterval(updateLabel);
+      // }, 1000);
     });
+  }
+
+  function appendImages() {
+    document.head.insertAdjacentHTML(
+      "beforeend",
+      `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1708413855/drata/1014/Checkbox_filled.svg" as="image">`
+    );
   }
 
   // Create input label with placeholder text
