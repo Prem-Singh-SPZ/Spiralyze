@@ -86,9 +86,10 @@
       e.target.parentElement.classList.toggle("field-focus");
       dropdownFunctionality();
     }
-    // if (e.target.classList.contains("hs-button")) {
-    //   checkError();
-    // }
+    if (e.target.classList.contains("hs-button")) {
+      checkError();
+      dropdownFunctionality();
+    }
     if (e.target.closest("ul")) {
       if (e.target.closest("ul").classList.contains("hs-error-msgs")) {
         checkError();
