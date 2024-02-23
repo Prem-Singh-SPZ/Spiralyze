@@ -116,7 +116,7 @@ $color_2: #140f10;
               &::before {
                 content: url(//res.cloudinary.com/spiralyze/image/upload/v1708433968/abcfitness/13002/line_5.svg);
                 position: absolute;
-                top: -4px;
+                top: 4px;
                 right: -32px;
                 width: 25px;
                 height: 1px;
@@ -133,7 +133,6 @@ $color_2: #140f10;
                 display: none;
               }
               &.active {
-                background-color: #0f71ff;
                 .active {
                   display: flex;
                 }
@@ -303,6 +302,8 @@ $color_2: #140f10;
             }
           }
         }
+
+      
       }
 
       .bullet-section {
@@ -435,6 +436,145 @@ $color_2: #140f10;
     }
   }
 }
+
+
+// Common bits
+$range__track-width: 14.5em;
+:root {
+  // go full width until max
+  --track-width: 100%;
+  --max-track-width: 100%;
+}
+
+$range__track-height: 0.25em;
+$range__thumb-diameter: 1.5em;
+$range__track-colour: #D9D9D9 !default;
+$range__fill-colour: #0F71FF !default;
+$range__thumb-colour: #099 !default;
+
+@mixin track() {
+  box-sizing: border-box;
+  border: none;
+  width: $range__track-width;
+  width: var(--track-width);
+  max-width: var(--max-track-width);
+  height: 1px;
+  background: $range__track-colour;
+}
+
+@mixin fill() {
+  height: $range__track-height;
+}
+
+@mixin progress-fill() {
+  background: $range__fill-colour;
+}
+
+@mixin thumb() {
+  box-sizing: border-box;
+  border: none;
+  width: $range__thumb-diameter;
+  height: $range__thumb-diameter;
+  border-radius: 50%;
+  background: $range__thumb-colour;
+}
+
+.range {
+  &__wrapper {
+    margin-top: 0.5em;
+    width: $range__track-width;
+    width: var(--track-width);
+    max-width: var(--max-track-width);
+  }
+
+  .range__labels {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 0;
+    margin-bottom: 1em;
+    line-height: 1;
+  }
+
+  &__output {
+    margin-top: 0;
+  }
+
+  [type="range"] {
+    --range: calc(var(--max) - var(--min));
+    --ratio: calc((var(--val) - var(--min)) / var(--range));
+    --sx: calc(
+      0.5 * #{$range__thumb-diameter} + var(--ratio) * (100% - #{$range__thumb-diameter})
+    );
+
+    margin: 0;
+    padding: 0;
+    width: $range__track-width;
+    width: var(--track-width);
+    max-width: var(--max-track-width);
+    height: 1px;
+    background: transparent;
+
+    &,
+    &::-webkit-slider-thumb {
+      -webkit-appearance: none;
+    }
+
+    &::-webkit-slider-runnable-track {
+      @include track;
+    }
+
+    &.range--progress::-webkit-slider-runnable-track {
+      background: linear-gradient($range__fill-colour, $range__fill-colour) 0 /
+        var(--sx) 100% no-repeat $range__track-colour;
+    }
+
+    &::-moz-range-track {
+      @include track;
+    }
+
+    &::-ms-track {
+      @include track;
+    }
+
+    &::-moz-range-progress {
+      @include fill;
+    }
+
+    &.range--progress::-moz-range-progress {
+      @include progress-fill;
+    }
+
+    &::-ms-fill-lower {
+      @include fill;
+    }
+
+    &.range--progress::-ms-fill-lower {
+      @include progress-fill;
+    }
+
+    &::-webkit-slider-thumb {
+      @include thumb;
+
+      margin-top: 0.5 * ($range__track-height - $range__thumb-diameter);
+    }
+
+    &::-moz-range-thumb {
+      @include thumb;
+    }
+
+    &::-ms-thumb {
+      @include thumb;
+
+      margin-top: 0;
+    }
+
+    &::-ms-tooltip {
+      display: none;
+    }
+  }
+}
+
+
 
 .hide {
   display: none;

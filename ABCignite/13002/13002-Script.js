@@ -84,10 +84,41 @@ function init_13002() {
                   ></span>
                 </div>
               </div>
-            </div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoNative"><a id="step-1-submit" class="mktoButton">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div><div class="step-2-form"></div>`
+            </div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoNative"><a id="step-1-submit" class="mktoButton">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div><div class="step-2-form"><div class="form-container"><p class="question">How many locations do you have?</p><form data-formid="1195" class="marketo-form flydown-form marketo-layout1 mktoForm mktoHasWidth mktoLayoutLeft" data-prefill="" id="" novalidate="novalidate" data-styles-ready="true"><div class="range">
+            <div class="range__wrapper">
+                <p>
+                    <input
+                        type="range"
+                        id="styled-range"
+                        name="styled-range"
+                        min="0"
+                        max="100"
+                        value="50"
+                        step="5"
+                        list="styled-range-list"
+                        class="range--progress"
+                        style="--min: 0; --max: 100; --val: 50"
+                    />
+                </p>
+                <p class="range__labels" aria-hidden="true">
+                    <span>0</span>
+              <span>1-400</span>
+                    <span>400+</span>
+                </p>
+                <datalist id="styled-range-list">
+                    <option value="0"></option>
+                    <option value="100"></option>
+                </datalist>
+            </div>
+        </div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoNative"><a id="step-2-submit" class="mktoButton">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div>`
             );
 
           focusFields();
+          document
+            .querySelector(".range--progress")
+            .addEventListener("input", (event) => {
+              event.target.style.setProperty("--val", event.target.value);
+            });
         }
       }, 200);
 
