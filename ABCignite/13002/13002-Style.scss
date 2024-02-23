@@ -127,7 +127,7 @@ $color_2: #140f10;
               }
 
               &:last-child {
-                margin-right: 6px;
+                margin-right: 6px !important;
                 &::before {
                   display: none;
                 }
@@ -167,6 +167,10 @@ $color_2: #140f10;
         form.mktoForm {
           gap: 0;
           .mktoFormRow {
+            @media (max-width: 480px) {
+              
+              gap: 0;
+            }
             .mktoFormCol {
               min-height: auto;
               margin: 0;

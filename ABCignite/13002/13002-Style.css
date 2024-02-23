@@ -134,7 +134,7 @@
   height: 1px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:last-child {
-  margin-right: 6px;
+  margin-right: 6px !important;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:last-child::before {
   display: none;
@@ -167,6 +167,11 @@
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm {
   gap: 0;
+}
+@media (max-width: 480px) {
+  .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow {
+    gap: 0;
+  }
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol {
   min-height: auto;

@@ -109,7 +109,6 @@ function init_13002() {
         </div><div class="mktoButtonRow custom-btn-row"><span class="mktoButtonWrap mktoNative"><a class="mktoButton step-2-submit">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div>`
             );
 
-          focusFields();
           document
             .querySelector(".range--progress")
             .addEventListener("input", (event) => {
@@ -117,6 +116,8 @@ function init_13002() {
             });
         }
       }, 200);
+
+
 
       document
         .querySelector("#flydown-modal.modal .modal__container")
@@ -142,6 +143,13 @@ function init_13002() {
       ).innerHTML = `Submit <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow">`;
     });
 
+    waitForElm(
+      "#flydown-modal .step-1-form form.marketo-form .mktoButtonRow "
+    ).then(() => {
+     
+      focusFields();
+    });
+    
     init5009();
     multiStepLogic();
   }
@@ -265,6 +273,7 @@ function focusFields() {
     )
     .forEach(function (el) {
       el.addEventListener("focus", function () {
+        console.log(el);
         el.closest(".mktoFormCol").classList.add("field-focus");
       });
       el.addEventListener("blur", function () {
