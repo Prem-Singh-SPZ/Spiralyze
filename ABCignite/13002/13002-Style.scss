@@ -102,18 +102,176 @@ $color_2: #140f10;
           // margin-bottom: -10px;
         }
 
-        form.marketo-form {
-          // .mktoFormRow {
-          //   flex-wrap: wrap;
-          // }
-          // gap: 12px;
+        .multi-steps {
+          .steps {
+            display: flex;
+            justify-content: center;
+            .step-count {
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin-right: 45px;
+              position: relative;
 
-          @media (max-width: 767.98px) {
-            .mktoFormRow {
-              flex-wrap: wrap;
+              &::before {
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1708433968/abcfitness/13002/line_5.svg);
+                position: absolute;
+                top: -4px;
+                right: -32px;
+                width: 25px;
+                height: 1px;
+              }
+
+              &:last-child {
+                margin-right: 0;
+                &::before {
+                  display: none;
+                }
+              }
+
+              .active {
+                display: none;
+              }
+              &.active {
+                background-color: #0f71ff;
+                .active {
+                  display: flex;
+                }
+                .in-active {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+
+        //Form Css starts here
+        form.mktoForm {
+          gap: 0;
+          .mktoFormRow {
+            .mktoFormCol {
+              min-height: auto;
+              margin: 0;
+
+              .mktoFieldWrap {
+                position: relative;
+                .mktoLabel {
+                  position: absolute;
+                  overflow: hidden;
+                  color: #8d8994;
+                  text-overflow: ellipsis;
+                  white-space: nowrap;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 26px; /* 150% */
+                  top: 17px;
+                  left: 16px;
+                  padding: 0;
+                  transition: all 0.3s ease-in-out;
+                  pointer-events: none;
+                  max-width: calc(100% - 58px);
+                  background: #fff;
+                  right: 0;
+                  text-transform: capitalize;
+                }
+
+                .mktoField:not([type="checkbox"]) {
+                  border-radius: 12px;
+                  border: 1px solid rgba(0, 0, 0, 0.2);
+                  width: 100%;
+                  padding: 17px 14px 17px 16px;
+                  color: #5a5e69;
+                  text-overflow: ellipsis;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 26px; /* 150% */
+                  margin-bottom: 20px;
+                  background-position: right 17px center;
+
+                  &:not(#Lead_Notes__c) {
+                    overflow: hidden;
+                    height: 60px;
+                    white-space: nowrap;
+                    @media (min-width: 767.98px) {
+                      // max-width: calc(100% - 10px);
+                      max-width: 100%;
+                    }
+                  }
+
+                  &:-webkit-autofill {
+                    -webkit-box-shadow: 0 0 0 30px white inset;
+                  }
+                  &:autofill {
+                    -webkit-box-shadow: 0 0 0 30px white inset;
+                  }
+                }
+
+                .mktoError {
+                  .mktoErrorMsg {
+                    color: #dc251c;
+                    font-family: Poppins;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                  }
+                }
+              }
+
+              &.field-focus {
+                .mktoFieldWrap {
+                  .mktoLabel {
+                    top: -10px;
+                    left: 11px;
+                    right: auto;
+                    padding: 0 5px;
+                    color: #0f71ff;
+                    font-size: 14px;
+                    line-height: 20px;
+                    background: #fff;
+                  }
+                }
+                .mktoField:not([type="checkbox"]) {
+                  border: 1.5px solid #0f71ff;
+                }
+              }
+
+              &.input-filled {
+                .mktoFieldWrap {
+                  .mktoLabel {
+                    top: -10px;
+                    left: 11px;
+                    right: auto;
+                    padding: 0 5px;
+                    font-size: 14px;
+                    line-height: 20px;
+                    background: #fff;
+                  }
+                }
+                .mktoField:not([type="checkbox"]) {
+                  border-color: #b6b3ba;
+                }
+              }
+
+              &.field-error {
+                &.field-focus {
+                  .mktoFieldWrap {
+                    .mktoLabel {
+                      color: #dc251c;
+                    }
+                  }
+                }
+
+                .mktoField:not([type="checkbox"]) {
+                  border-color: #dc251c;
+                }
+              }
             }
           }
 
+          //submit button css
           .mktoButtonRow {
             .mktoButtonWrap {
               margin-top: 17px;
@@ -132,37 +290,16 @@ $color_2: #140f10;
                 width: 152px;
                 letter-spacing: 0;
                 white-space: nowrap;
+                text-decoration: none;
 
                 .cta-arrow {
                   margin-left: 10px;
-                  // transition: all 0.3s ease-in-out;
                 }
 
                 &:hover {
                   background-color: #be5d17 !important;
-                  // .cta-arrow {
-                  //   translate: 5px;
-                  // }
                 }
               }
-            }
-          }
-
-          .marketo-form__notice {
-            margin-top: 21px;
-            margin-bottom: 0;
-          }
-
-          input[name="Phone"] + .mktoError #ValidMsgPhone {
-            font-size: 10px;
-            @media (max-width: 767.98px) {
-              font-size: 11px;
-            }
-          }
-
-          input[name="Email"] + .mktoError #ValidMsgEmail {
-            @media (max-width: 767.98px) {
-              font-size: 11px;
             }
           }
         }
@@ -302,266 +439,6 @@ $color_2: #140f10;
 .hide {
   display: none;
 }
-
-  //Form Css starts here
-  form.mktoForm {
-    gap: 0;
-    .mktoFormRow {
-      .mktoFormCol {
-        min-height: auto;
-        margin: 0 !important;
-
-        .mktoFieldWrap {
-          position: relative;
-          .mktoLabel {
-            position: absolute;
-            overflow: hidden;
-            color: var(
-              --primary-neutrals-n-2,
-              rgba(13, 18, 46, 0.8)
-            ) !important;
-            text-overflow: ellipsis;
-            white-space: nowrap;
-            font-size: 16px !important;
-            font-style: normal;
-            font-weight: 300 !important;
-            line-height: 24px; /* 150% */
-            top: 11px;
-            left: 16px;
-            padding: 0 !important;
-            transition: all 0.3s ease-in-out;
-            pointer-events: none;
-            max-width: calc(100% - 58px);
-            background: #fff;
-            right: 0;
-            text-transform: capitalize;
-          }
-
-          .mktoField:not([type="checkbox"]) {
-            border-radius: 4px;
-            border: 1px solid
-              var(--interactive-colors-a-4, #d6d7f5) !important;
-            width: 100%;
-            padding: 11px 16px 10px 16px !important;
-            color: var(
-              --primary-neutrals-n-1,
-              #0d122e
-            ) !important;
-            text-overflow: ellipsis;
-            font-size: 16px !important;
-            font-style: normal;
-            font-weight: 300 !important;
-            line-height: 24px !important; /* 150% */
-            margin-bottom: 20px !important;
-
-            &:not(#Lead_Notes__c) {
-              overflow: hidden;
-              height: 48px !important;
-              white-space: nowrap;
-              @media (min-width: 767.98px) {
-                // max-width: calc(100% - 10px);
-                max-width: 100%;
-              }
-            }
-
-            &:-webkit-autofill {
-              -webkit-box-shadow: 0 0 0 30px white inset !important;
-            }
-            &:autofill {
-              -webkit-box-shadow: 0 0 0 30px white inset !important;
-            }
-          }
-
-          .mktoHtmlText.mktoHasWidth {
-            margin: 0 !important;
-            span {
-              color: #848995;
-              font-size: 10px !important;
-              font-style: normal;
-              font-weight: 300;
-              line-height: 16px; /* 160% */
-
-              a {
-                padding: 0;
-                color: #1b4bc5;
-                // font-weight: 500;
-                &:hover {
-                  color: #0d122e;
-                }
-              }
-            }
-          }
-
-          .mktoCheckboxList {
-            margin-top: 3px;
-            cursor: pointer;
-            display: inline-block;
-            position: relative;
-            padding-left: 25px;
-            .mktoField {
-              border: 1px solid #d6d7f5;
-              height: 16px !important;
-              width: 16px !important;
-              cursor: pointer;
-              @media (max-width: 767.98px) {
-                margin-top: 7px;
-              }
-            }
-
-            label {
-              color: var(--primary-neutrals-n-1, #0d122e);
-              font-size: 12px !important;
-              font-style: normal !important;
-              font-weight: 300 !important;
-              line-height: 18px !important; /* 142.857% */
-              margin-left: 19px;
-              letter-spacing: -0.1px;
-              cursor: pointer;
-              &:before {
-                content: "";
-                width: 16px;
-                height: 16px;
-                position: absolute;
-                left: 0;
-                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg")
-                  left center no-repeat;
-                margin-top: 2px;
-              }
-
-              &:hover {
-                &::before {
-                  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg")
-                    left center no-repeat;
-                }
-              }
-            }
-            input[type="checkbox"] {
-              display: none !important;
-
-              &:checked + label:before {
-                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg")
-                  left center no-repeat;
-              }
-            }
-          }
-
-          //custom error for checkbox field
-          &.spz-cstm-error {
-            .mktoCheckboxList label {
-              color: #e51b00 !important;
-
-              &::before {
-                background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg")
-                  left center no-repeat;
-              }
-            }
-          }
-        }
-
-        &.field-focus {
-          .mktoFieldWrap {
-            .mktoLabel {
-              top: -8px;
-              left: 11px;
-              right: auto;
-              padding: 0 5px !important;
-              color: var(--accents-a-5, #904ab0) !important;
-              font-size: 13px !important;
-              line-height: 18px !important; /* 138.462% */
-              background: #fff;
-            }
-          }
-          .mktoField:not([type="checkbox"]) {
-            border-color: #904ab0 !important;
-          }
-        }
-
-        &.input-filled {
-          .mktoFieldWrap {
-            .mktoLabel {
-              top: -8px;
-              left: 11px;
-              right: auto;
-              padding: 0 5px !important;
-              font-size: 13px !important;
-              line-height: 18px !important; /* 138.462% */
-              background: #fff;
-            }
-          }
-        }
-
-        &.field-error {
-          &.field-focus {
-            .mktoFieldWrap {
-              .mktoLabel {
-                color: var(--accents-a-5, #f83a59) !important;
-              }
-            }
-          }
-
-          .mktoField:not([type="checkbox"]) {
-            border-color: #f83a59 !important;
-          }
-        }
-      }
-
-      &[data-zi-field-enriched="true"] {
-        display: inline !important;
-      }
-
-      .spz-anchor:not(.spz-hidden) {
-        display: flex;
-        width: 100%;
-
-        + .mktoFieldDescriptor.mktoFormCol {
-          display: none !important;
-        }
-
-        .show-comment-dynamic {
-          overflow: hidden;
-          color: var(
-            --primary-neutrals-n-2,
-            rgba(13, 18, 46, 0.8)
-          );
-          text-overflow: ellipsis;
-          font-size: 16px;
-          font-style: normal;
-          font-weight: 300;
-          line-height: 24px;
-          margin-bottom: 18px;
-          display: inline-block;
-          margin-top: 2px;
-          transition: all 0.3s ease;
-          margin-left: 10px;
-          span {
-            padding-right: 5px;
-          }
-          @media (max-width: 767.98px) {
-            padding: 0;
-            margin-bottom: 26px;
-          }
-
-          &:hover {
-            color: #904ab0;
-          }
-        }
-      }
-      .spz-hidden {
-        display: none;
-      }
-    }
-
-    //submit button css
-    .mktoButtonRow {
-      text-align: center;
-
-      .mktoButtonWrap {
-        button.mktoButton {
-          
-        }
-      }
-    }
-  }
 
 .spz-13002 .hero-sec .n2-style-f8293b450b12ef15d5c4ff97a617a3e3-heading img {
   width: auto;

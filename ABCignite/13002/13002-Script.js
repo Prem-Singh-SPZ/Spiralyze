@@ -27,7 +27,7 @@ function init_13002() {
             .querySelector(".modal .modal__container .flydown-modal__inner")
             .insertAdjacentHTML(
               "afterbegin",
-              `<div class="multi-steps"><div class="steps"><div class="step-count">1</div><div class="step-count">2</div><div class="step-count">3</div></div></div><div class="spz-demo-title">Get a Demo</div><div class="step-1-form"><div class="form-container"><p class="question">Which kind of fitness business are you?</p><form data-formid="1195" class="marketo-form flydown-form marketo-layout1 mktoForm mktoHasWidth mktoLayoutLeft" data-prefill="" id="" novalidate="novalidate" data-styles-ready="true"><div
+              `<div class="multi-steps"><div class="steps"><div class="step-count step-1 active"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433974/abcfitness/13002/frame_5601.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5596.svg" alt="Step Count"></div><div class="step-count step-2"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5597.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433972/abcfitness/13002/frame_5600.svg" alt="Step Count"></div><div class="step-count step-3"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433971/abcfitness/13002/frame_5599.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5598.svg" alt="Step Count"></div></div></div><div class="spz-demo-title">Get a Demo</div><div class="step-1-form"><div class="form-container"><p class="question">Which kind of fitness business are you?</p><form data-formid="1195" class="marketo-form flydown-form marketo-layout1 mktoForm mktoHasWidth mktoLayoutLeft" data-prefill="" id="" novalidate="novalidate" data-styles-ready="true"><div
               class="mktoFormRow"
               data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
             >
@@ -84,7 +84,7 @@ function init_13002() {
                   ></span>
                 </div>
               </div>
-            </div></form></div></div><div class="step-2-form"></div>`
+            </div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoNative"><a id="step-1-submit" class="mktoButton">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div><div class="step-2-form"></div>`
             );
 
           focusFields();
