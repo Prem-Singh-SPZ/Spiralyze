@@ -106,7 +106,7 @@ function init_13002() {
                     <option value="100"></option>
                 </datalist>
             </div>
-        </div><div class="mktoButtonRow"><span class="mktoButtonWrap mktoNative"><a class="mktoButton step-2-submit">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div>`
+        </div><div class="mktoButtonRow custom-btn-row"><span class="mktoButtonWrap mktoNative"><a class="mktoButton step-2-submit">Next <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow"></a></span></div><p class="marketo-form__notice">By completing the form and submitting your information above, you are agreeing to our <a href="/privacy-policy/" target="_blank">Privacy Policy</a>.</p></form></div></div>`
             );
 
           focusFields();
