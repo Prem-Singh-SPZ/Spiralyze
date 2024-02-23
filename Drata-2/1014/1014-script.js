@@ -10,16 +10,6 @@
       setHiddenFields();
       appendImages();
 
-      // hs-button
-      document
-        .querySelector(".hs-button")
-        .addEventListener("click", function () {
-          const err = setInterval(() => {
-            checkError();
-            clearInterval(err);
-          }, 100);
-        });
-
       // Add field-untouched class on select element
       document.querySelectorAll("select.hs-input").forEach(function (el) {
         if (el.options.length > 0) {
@@ -61,6 +51,15 @@
       `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1708413855/drata/1014/Checkbox_filled.svg" as="image">`
     );
   }
+
+  document.addEventListener("click", function (e) {
+    if (e.target.classList.contains("MuiButton-ctaModule")) {
+      const err = setInterval(() => {
+        checkError();
+        clearInterval(err);
+      }, 100);
+    }
+  });
 
   // Create input label with placeholder text
   function appendInputLabel() {
