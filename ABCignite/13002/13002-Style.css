@@ -273,6 +273,212 @@
   }
 }
 
+.hide {
+  display: none;
+}
+
+form.mktoForm {
+  gap: 0;
+}
+form.mktoForm .mktoFormRow .mktoFormCol {
+  min-height: auto;
+  margin: 0 !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
+  position: relative;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
+  position: absolute;
+  overflow: hidden;
+  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8)) !important;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 300 !important;
+  line-height: 24px; /* 150% */
+  top: 11px;
+  left: 16px;
+  padding: 0 !important;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  pointer-events: none;
+  max-width: calc(100% - 58px);
+  background: #fff;
+  right: 0;
+  text-transform: capitalize;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
+  border-radius: 4px;
+  border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+  width: 100%;
+  padding: 11px 16px 10px 16px !important;
+  color: var(--primary-neutrals-n-1, #0d122e) !important;
+  text-overflow: ellipsis;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 300 !important;
+  line-height: 24px !important; /* 150% */
+  margin-bottom: 20px !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+  overflow: hidden;
+  height: 48px !important;
+  white-space: nowrap;
+}
+@media (min-width: 767.98px) {
+  form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+    max-width: 100%;
+  }
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+  margin: 0 !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
+  color: #848995;
+  font-size: 10px !important;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 16px; /* 160% */
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
+  padding: 0;
+  color: #1b4bc5;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a:hover {
+  color: #0d122e;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
+  margin-top: 3px;
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  padding-left: 25px;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+  border: 1px solid #d6d7f5;
+  height: 16px !important;
+  width: 16px !important;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+    margin-top: 7px;
+  }
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
+  color: var(--primary-neutrals-n-1, #0d122e);
+  font-size: 12px !important;
+  font-style: normal !important;
+  font-weight: 300 !important;
+  line-height: 18px !important; /* 142.857% */
+  margin-left: 19px;
+  letter-spacing: -0.1px;
+  cursor: pointer;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  left: 0;
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark.svg") left center no-repeat;
+  margin-top: 2px;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:hover::before {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg") left center no-repeat;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox] {
+  display: none !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox]:checked + label:before {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg") left center no-repeat;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label {
+  color: #e51b00 !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label::before {
+  background: url("https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg") left center no-repeat;
+}
+form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
+  top: -8px;
+  left: 11px;
+  right: auto;
+  padding: 0 5px !important;
+  color: var(--accents-a-5, #904ab0) !important;
+  font-size: 13px !important;
+  line-height: 18px !important; /* 138.462% */
+  background: #fff;
+}
+form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
+  border-color: #904ab0 !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
+  top: -8px;
+  left: 11px;
+  right: auto;
+  padding: 0 5px !important;
+  font-size: 13px !important;
+  line-height: 18px !important; /* 138.462% */
+  background: #fff;
+}
+form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
+  color: var(--accents-a-5, #f83a59) !important;
+}
+form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
+  border-color: #f83a59 !important;
+}
+form.mktoForm .mktoFormRow[data-zi-field-enriched=true] {
+  display: inline !important;
+}
+form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+}
+form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) + .mktoFieldDescriptor.mktoFormCol {
+  display: none !important;
+}
+form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+  overflow: hidden;
+  color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+  text-overflow: ellipsis;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 300;
+  line-height: 24px;
+  margin-bottom: 18px;
+  display: inline-block;
+  margin-top: 2px;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  margin-left: 10px;
+}
+form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
+  padding-right: 5px;
+}
+@media (max-width: 767.98px) {
+  form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+    padding: 0;
+    margin-bottom: 26px;
+  }
+}
+form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
+  color: #904ab0;
+}
+form.mktoForm .mktoFormRow .spz-hidden {
+  display: none;
+}
+form.mktoForm .mktoButtonRow {
+  text-align: center;
+}
 .spz-13002 .hero-sec .n2-style-f8293b450b12ef15d5c4ff97a617a3e3-heading img {
   width: auto;
   display: block;
@@ -320,7 +526,7 @@ body.spz-13002 .hero-sec {
   font-size: 40px;
   line-height: 52px;
   letter-spacing: -0.8px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin: 30px 0px 24px;
 }
 
@@ -329,12 +535,12 @@ body.spz-13002 .hero-sec {
   font-weight: 400;
   font-size: 24px !important;
   line-height: 28.8px;
-  color: #FFFFFF;
+  color: #ffffff;
   margin-bottom: 29px;
 }
 
 .spz-13002 .ignite-item a.hero-btn {
-  background: #EF7F2E;
+  background: #ef7f2e;
   border-radius: 100px;
   padding: 22px 28px;
   height: 62px;
@@ -358,7 +564,7 @@ body.spz-13002 .hero-sec {
 .spz-13002 .ignite-item a.hero-btn:hover,
 .spz-13002 .ignite-item a.hero-btn:active,
 .spz-13002 .ignite-item a.hero-btn:focus {
-  background: #BE5D17;
+  background: #be5d17;
   outline: none;
   text-decoration: none;
 }
@@ -476,9 +682,9 @@ body.spz-13002 .hero-sec {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #EF7F2E;
+  background: #ef7f2e;
   border-radius: 36px;
-  color: #FFF;
+  color: #fff;
   font-size: 14px;
   font-style: normal;
   font-weight: 600;
@@ -489,8 +695,8 @@ body.spz-13002 .hero-sec {
 
 .spz-13002 .spz-demo-btn:hover,
 .spz-13002 .spz-demo-btn:focus {
-  background: #BE5D17 !important;
-  color: #FFF;
+  background: #be5d17 !important;
+  color: #fff;
   text-decoration: none;
   outline: none !important;
   text-decoration: none !important;

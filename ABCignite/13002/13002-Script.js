@@ -27,8 +27,67 @@ function init_13002() {
             .querySelector(".modal .modal__container .flydown-modal__inner")
             .insertAdjacentHTML(
               "afterbegin",
-              `<div class="spz-demo-title">Get a Demo</div>`
+              `<div class="multi-steps"><div class="steps"><div class="step-count">1</div><div class="step-count">2</div><div class="step-count">3</div></div></div><div class="spz-demo-title">Get a Demo</div><div class="step-1-form"><div class="form-container"><p class="question">Which kind of fitness business are you?</p><form data-formid="1195" class="marketo-form flydown-form marketo-layout1 mktoForm mktoHasWidth mktoLayoutLeft" data-prefill="" id="" novalidate="novalidate" data-styles-ready="true"><div
+              class="mktoFormRow"
+              data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
+            >
+              <div
+                class="mktoFieldDescriptor mktoFormCol"
+                data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
+              >
+                <div class="mktoOffset"></div>
+                <div class="mktoFieldWrap mktoRequiredField">
+                  <label
+                    for="Modality__c_17086647185130.7863942112471629"
+                    id="LblModality__c"
+                    class="mktoLabel mktoHasWidth"
+                  >
+                    <div class="mktoAsterix">*</div>Business type
+                  </label>
+                  <div class="mktoGutter mktoHasWidth"></div>
+                  <select
+                    id="Modality__c_17086647185130.7863942112471629"
+                    name="Modality__c"
+                    aria-labelledby="LblModality__c InstructModality__c"
+                    class="mktoField mktoHasWidth mktoRequired mktoValid"
+                    aria-required="true"
+                    aria-invalid="false"
+                  >
+                    <option value="">Please select one</option>
+                    <option value="Fitness Studio">Fitness Studio</option>
+                    <option value="Gym">Gym</option>
+                    <option value="Pilates Studio">Pilates Studio</option>
+                    <option value="Boxing Fitness Studio (Class Based)">
+                      Boxing Fitness Studio
+                    </option>
+                    <option value="PT Studio">PT Studio</option>
+                    <option value="Wellness / Therapy Centre">
+                      Wellness / Therapy Center
+                    </option>
+                    <option value="Barre Studio">Barre Studio</option>
+                    <option value="Dance Fitness Studio">Dance Fitness Studio</option>
+                    <option value="Martial Arts Club">Martial Arts Club</option>
+                    <option value="Spin / Cycle Studio">Spin / Cycle Studio</option>
+                    <option value="Yoga Studio">Yoga Studio</option>
+                    <option value="Crossfit">Crossfit</option>
+                    <option value="Pole Fitness">Pole Fitness</option>
+                    <option value="Large Gym / Leisure Club">
+                      Large Gym / Leisure Club
+                    </option>
+                    <option value="Golf">Golf</option>
+                    <option value="Other">Other</option>
+                  </select>
+                  <span
+                    id="InstructModality__c"
+                    tabindex="-1"
+                    class="mktoInstruction"
+                  ></span>
+                </div>
+              </div>
+            </div></form></div></div><div class="step-2-form"></div>`
             );
+
+          focusFields();
         }
       }, 200);
 
@@ -57,7 +116,17 @@ function init_13002() {
     });
 
     init5009();
+    multiStepLogic();
   }
+}
+
+function multiStepLogic() {
+  //multi step form logic
+  var step1Form = document.querySelector(".step-1-form"); //step 1 form
+  var step2Form = document.querySelector(".step-2-form"); //step 2 form
+  var step3Form = document.querySelector(".flydown-modal__form"); //step 3 form
+
+  step3Form.classList.add("hide");
 }
 
 function init5009() {
@@ -137,6 +206,66 @@ function init5009() {
     }
   });
   //   }
+}
+
+// On input focus add class on closest parent field class
+function focusFields() {
+  document
+    .querySelectorAll(
+      '.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])'
+    )
+    .forEach(function (el) {
+      el.addEventListener("focus", function () {
+        el.closest(".mktoFormCol").classList.add("field-focus");
+      });
+      el.addEventListener("blur", function () {
+        el.closest(".mktoFormCol").classList.remove("field-focus");
+        checkError(el);
+      });
+
+      // add event listeners to the input element
+      el.addEventListener("keypress", () => {
+        checkError(el);
+      });
+
+      el.addEventListener("change", () => {
+        checkError(el);
+      });
+
+      el.addEventListener("keydown", () => {
+        checkError(el);
+      });
+
+      el.addEventListener("keyup", () => {
+        checkError(el);
+      });
+    });
+}
+
+// Function to add .field-error class on closest parent .field class if .error is exist on input
+function checkError(elem) {
+  let timeBuffer = setInterval(() => {
+    if (
+      elem.closest(".mktoFormCol ").querySelector(".mktoError") &&
+      elem.closest(".mktoFormCol").querySelector(".mktoInvalid")
+    ) {
+      elem.closest(".mktoFormCol").classList.add("field-error");
+    } else {
+      elem.closest(".mktoFormCol").classList.remove("field-error");
+    }
+    if (elem && elem.value && elem.value != "") {
+      // console.log(elem.value)
+      elem.closest(".mktoFormCol").classList.add("input-filled");
+      // elem.closest('.mktoFormCol').classList.remove('field-error');
+    } else {
+      elem.closest(".mktoFormCol").classList.remove("input-filled");
+      // elem.closest('.mktoFormCol').classList.add('field-error');
+    }
+  }, 100);
+
+  setTimeout(() => {
+    clearInterval(timeBuffer);
+  }, 1000);
 }
 
 function waitForElm(selector) {
