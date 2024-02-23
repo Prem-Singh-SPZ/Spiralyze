@@ -266,6 +266,7 @@
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton .cta-arrow {
   margin-left: 10px;
+  pointer-events: none;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
   background-color: #be5d17 !important;
@@ -419,8 +420,18 @@
   margin-bottom: 1em;
   line-height: 1;
 }
-.range__output {
-  margin-top: 0;
+.range .range__labels > span:first-child {
+  position: relative;
+}
+.range .range__labels > span:first-child::before {
+  content: "";
+  position: absolute;
+  top: -20px;
+  left: 0px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #0F71FF;
 }
 .range [type=range] {
   --range: calc(var(--max) - var(--min));
@@ -447,11 +458,11 @@
   width: var(--track-width);
   max-width: var(--max-track-width);
   height: 1px;
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 .range [type=range].range--progress::-webkit-slider-runnable-track {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0F71FF), to(#0F71FF)) 0/var(--sx) 100% no-repeat #D9D9D9;
-  background: linear-gradient(#0F71FF, #0F71FF) 0/var(--sx) 100% no-repeat #D9D9D9;
+  background: -webkit-gradient(linear, left top, left bottom, from(#0f71ff), to(#0f71ff)) 0/var(--sx) 100% no-repeat #d9d9d9;
+  background: linear-gradient(#0f71ff, #0f71ff) 0/var(--sx) 100% no-repeat #d9d9d9;
 }
 .range [type=range]::-moz-range-track {
   box-sizing: border-box;
@@ -460,7 +471,7 @@
   width: var(--track-width);
   max-width: var(--max-track-width);
   height: 1px;
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 .range [type=range]::-ms-track {
   box-sizing: border-box;
@@ -469,45 +480,42 @@
   width: var(--track-width);
   max-width: var(--max-track-width);
   height: 1px;
-  background: #D9D9D9;
+  background: #d9d9d9;
 }
 .range [type=range]::-moz-range-progress {
   height: 0.25em;
 }
 .range [type=range].range--progress::-moz-range-progress {
-  background: #0F71FF;
+  background: #0f71ff;
 }
 .range [type=range]::-ms-fill-lower {
   height: 0.25em;
 }
 .range [type=range].range--progress::-ms-fill-lower {
-  background: #0F71FF;
+  background: #0f71ff;
 }
 .range [type=range]::-webkit-slider-thumb {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
   border: none;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background: #099;
+  width: 20px;
+  height: 20px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg) no-repeat center center;
   margin-top: -0.625em;
 }
 .range [type=range]::-moz-range-thumb {
   box-sizing: border-box;
   border: none;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background: #099;
+  width: 20px;
+  height: 20px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg) no-repeat center center;
 }
 .range [type=range]::-ms-thumb {
   box-sizing: border-box;
   border: none;
-  width: 1.5em;
-  height: 1.5em;
-  border-radius: 50%;
-  background: #099;
+  width: 20px;
+  height: 20px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg) no-repeat center center;
   margin-top: 0;
 }
 .range [type=range]::-ms-tooltip {

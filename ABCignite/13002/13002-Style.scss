@@ -293,6 +293,7 @@ $color_2: #140f10;
 
                 .cta-arrow {
                   margin-left: 10px;
+                  pointer-events: none;
                 }
 
                 &:hover {
@@ -302,8 +303,6 @@ $color_2: #140f10;
             }
           }
         }
-
-      
       }
 
       .bullet-section {
@@ -437,7 +436,6 @@ $color_2: #140f10;
   }
 }
 
-
 // Common bits
 $range__track-width: 14.5em;
 :root {
@@ -448,8 +446,8 @@ $range__track-width: 14.5em;
 
 $range__track-height: 0.25em;
 $range__thumb-diameter: 1.5em;
-$range__track-colour: #D9D9D9 !default;
-$range__fill-colour: #0F71FF !default;
+$range__track-colour: #d9d9d9 !default;
+$range__fill-colour: #0f71ff !default;
 $range__thumb-colour: #099 !default;
 
 @mixin track() {
@@ -473,10 +471,12 @@ $range__thumb-colour: #099 !default;
 @mixin thumb() {
   box-sizing: border-box;
   border: none;
-  width: $range__thumb-diameter;
-  height: $range__thumb-diameter;
-  border-radius: 50%;
-  background: $range__thumb-colour;
+  width: 20px;
+  height: 20px;
+  // border-radius: 50%;
+  // background: $range__thumb-colour;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg)
+    no-repeat center center;
 }
 
 .range {
@@ -493,10 +493,21 @@ $range__thumb-colour: #099 !default;
     margin-top: 0;
     margin-bottom: 1em;
     line-height: 1;
-  }
 
-  &__output {
-    margin-top: 0;
+    > span:first-child{
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        top: -20px;
+        left: 0px;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background: #0F71FF;
+      }
+    }
   }
 
   [type="range"] {
@@ -573,8 +584,6 @@ $range__thumb-colour: #099 !default;
     }
   }
 }
-
-
 
 .hide {
   display: none;
