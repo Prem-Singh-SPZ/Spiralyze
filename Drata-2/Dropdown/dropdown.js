@@ -44,7 +44,7 @@
             )
             .insertAdjacentHTML(
               "afterend",
-              ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:</span></button>`
+              ` <button class="spz-btn custom-input-btn" type="button"><span class="value-container"></span><span class="label">Select which framework(s) you'd like access to:*</span></button>`
             );
         }
 
