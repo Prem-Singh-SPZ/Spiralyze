@@ -1,0 +1,604 @@
+@import url("https://fonts.googleapis.com/css2?family=Mulish&family=Poppins:wght@700&display=swap");
+$color_1: var(--black, #140f10);
+$color_2: #140f10;
+
+.spz-13002 {
+  &:has(.flydown-modal.is-open) {
+    overflow: hidden;
+  }
+
+  .modal {
+    scrollbar-width: none;
+    z-index: 10000;
+    ::-webkit-scrollbar {
+      width: 0px;
+    }
+
+    .modal__overlay {
+      background: rgba(17, 17, 17, 0.5);
+      backdrop-filter: blur(3px);
+    }
+
+    .modal__container {
+      display: flex;
+      flex-direction: row-reverse;
+      max-width: 1200px;
+      position: absolute;
+      // top: 36px;
+      padding: 50px;
+      // overflow: hidden;
+      position: relative;
+      justify-content: space-between;
+      // align-items: center;
+      border-radius: 32px;
+      border: 0;
+      align-items: flex-start;
+      // @media (max-height: 600.98px) {
+      // }
+
+      @media (max-width: 1023.98px) {
+        max-width: 688px;
+        padding: 40px;
+      }
+
+      .modal__close {
+        top: 14px;
+        right: 16px;
+
+        @media (max-width: 1023.98px) {
+          top: 10px;
+          right: 12px;
+        }
+
+        @media (max-width: 767.98px) {
+          top: 4px;
+          right: 7px;
+        }
+
+        svg {
+          width: 16px;
+          path {
+            fill: #9d9d9d !important;
+          }
+        }
+
+        &:hover {
+          svg {
+            path {
+              fill: #000000 !important;
+            }
+          }
+        }
+      }
+
+      //Marketo form css starts
+      .flydown-modal__inner {
+        border-radius: 12px;
+        background: #fff;
+        box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+        padding: 40px 30px;
+        max-width: 500px;
+        min-width: 500px;
+
+        @media (max-width: 1023.98px) {
+          max-width: 100%;
+          margin-bottom: 40px;
+        }
+
+        @media (max-width: 767.98px) {
+          box-shadow: none;
+          padding: 32px 32px 24px;
+          min-width: auto;
+        }
+
+        .spz-demo-title {
+          color: $color_2;
+          text-align: center;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          margin: 0 0 32px;
+          // margin-bottom: -10px;
+        }
+
+        form.marketo-form {
+          // .mktoFormRow {
+          //   flex-wrap: wrap;
+          // }
+          // gap: 12px;
+
+          @media (max-width: 767.98px) {
+            .mktoFormRow {
+              flex-wrap: wrap;
+            }
+          }
+
+          .mktoButtonRow {
+            .mktoButtonWrap {
+              margin-top: 17px;
+              .mktoButton {
+                height: 56px;
+                border-radius: 100px;
+                background-color: #ef7f2e !important;
+                padding: 16px 32px;
+                color: #fff;
+                font-family: Poppins !important;
+                font-size: 16px !important;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 120%;
+                text-transform: uppercase;
+                width: 152px;
+                letter-spacing: 0;
+                white-space: nowrap;
+
+                .cta-arrow {
+                  margin-left: 10px;
+                  // transition: all 0.3s ease-in-out;
+                }
+
+                &:hover {
+                  background-color: #be5d17 !important;
+                  // .cta-arrow {
+                  //   translate: 5px;
+                  // }
+                }
+              }
+            }
+          }
+
+          .marketo-form__notice {
+            margin-top: 21px;
+            margin-bottom: 0;
+          }
+
+          input[name="Phone"] + .mktoError #ValidMsgPhone {
+            font-size: 10px;
+            @media (max-width: 767.98px) {
+              font-size: 11px;
+            }
+          }
+
+          input[name="Email"] + .mktoError #ValidMsgEmail {
+            @media (max-width: 767.98px) {
+              font-size: 11px;
+            }
+          }
+        }
+      }
+
+      .bullet-section {
+        margin-right: 20px;
+        padding: 0;
+        max-width: 560px;
+        width: 100%;
+
+        @media (max-width: 1023.98px) {
+          max-width: 100%;
+          margin: 0px;
+        }
+
+        .bullet-sub-title {
+          color: #0057d6;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 130%;
+          margin-bottom: 11px;
+          letter-spacing: 0;
+          padding: 0;
+
+          @media (min-width: 1023.98px) {
+            margin-top: 64px;
+          }
+        }
+
+        .bullet-title {
+          color: $color_1;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 140%;
+          margin: 0;
+        }
+      }
+      .bullet-wrapper {
+        margin: 29px 0 31px;
+        padding: 0;
+
+        @media (max-width: 1023.98px) {
+          margin: 24px 0 30px;
+        }
+      }
+      .bullet-point {
+        &::before {
+          content: "";
+          display: block;
+          background: url(//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/abcfitness/13001/check.webp)
+            no-repeat;
+          background-size: 24px 24px;
+          width: 24px;
+          height: 24px;
+          position: absolute;
+          left: 0;
+          top: 0;
+        }
+        color: $color_2;
+        font-size: 15px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 160%;
+        margin-bottom: 16px;
+        list-style: none;
+        position: relative;
+        padding-left: 32px;
+        &:last-child {
+          margin: 0;
+        }
+        strong {
+          font-weight: 700;
+        }
+      }
+
+      @media (max-width: 1023.98px) {
+        flex-direction: column;
+        align-items: flex-start;
+        // top: 42px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 0px 0px 23px;
+        border-radius: 24px;
+        max-width: 335px;
+        // top: 40px;
+
+        .flydown-modal__inner {
+          .spz-demo-title {
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 140%;
+          }
+        }
+
+        .bullet-section {
+          margin-bottom: 0px;
+          padding: 0 31.5px;
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            top: -32px;
+            background: #bababa;
+            width: calc(100% - 38px);
+            height: 1px;
+            left: 0px;
+            right: 0;
+            margin: auto;
+          }
+
+          .bullet-sub-title {
+            font-size: 14px;
+            line-height: 130%;
+          }
+          .bullet-title {
+            font-size: 22px;
+            line-height: 140%;
+          }
+        }
+        .bullet-wrapper {
+          margin: 15px 0 25px;
+
+          .bullet-point {
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
+}
+
+
+.spz-13002 .hero-sec .n2-style-f8293b450b12ef15d5c4ff97a617a3e3-heading img {
+  width: auto;
+  display: block;
+}
+
+.spz-13002 .hero-sec .nextend-arrow img {
+  display: none !important;
+}
+
+body.spz-13002 .hero-sec {
+  display: none;
+}
+
+.spz-13002 .hero-banner .hero-block {
+  max-width: 1440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.spz-13002 .hero-banner .hero-block .gym-sec {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319100.webp);
+  background-clip: padding-box;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding-left: 110px;
+  padding-right: 110px;
+}
+
+.spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
+  max-width: 540px;
+  width: 100%;
+  margin-right: 113px;
+}
+
+.spz-13002 .ignite-item h2 {
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: -0.8px;
+  color: #FFFFFF;
+  margin: 30px 0px 24px;
+}
+
+.spz-13002 .ignite-item p {
+  font-family: 'Poppins' !important;
+  font-weight: 400;
+  font-size: 24px !important;
+  line-height: 28.8px;
+  color: #FFFFFF;
+  margin-bottom: 29px;
+}
+
+.spz-13002 .ignite-item a.hero-btn {
+  background: #EF7F2E;
+  border-radius: 100px;
+  padding: 22px 28px;
+  height: 62px;
+  display: inline-block;
+  max-width: 188px;
+  width: 100%;
+  text-align: center;
+  font-family: 'Poppins';
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 19.2px;
+  color: #fff;
+  text-decoration: none;
+}
+
+.spz-13002 .ignite-item a.hero-btn img {
+  margin-left: 8px;
+  margin-top: -2px;
+}
+
+.spz-13002 .ignite-item a.hero-btn:hover,
+.spz-13002 .ignite-item a.hero-btn:active,
+.spz-13002 .ignite-item a.hero-btn:focus {
+  background: #BE5D17;
+  outline: none;
+  text-decoration: none;
+}
+
+.spz-13002 .ignite-item a.hero-btn:focus img {
+  outline: none;
+}
+
+.spz-13002 .platform-img-sec img {
+  width: 100%;
+  height: 770px;
+}
+
+.modal-open .bkg-header.fixed {
+  z-index: 9;
+}
+
+@media (max-width:1199.98px) {
+  .spz-13002 .hero-banner .hero-block .gym-sec {
+      background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319101.webp);
+      padding-left: 0;
+      display: block;
+      padding-right: 0px;
+      background-size: cover;
+  }
+
+  .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
+      max-width: 580px;
+      margin: 0px auto;
+      text-align: center;
+      padding: 80px 0 60px;
+  }
+
+  .spz-13002 .platform-img-sec img {
+      height: auto;
+  }
+
+  .spz-13002 .platform-img-sec {
+      max-width: 567px;
+      width: 100%;
+      margin: 0 auto;
+  }
+
+  .gb-layout-features .wrap-home-sections {
+      padding-top: 64px !important;
+  }
+
+  @media not all and (min-resolution:.001dpcm) {
+      @supports (-webkit-appearance:none) and (margin-top:-30px) {
+          .site-main>:first-child {
+              margin-top: -30px;
+          }
+      }
+  }
+}
+
+@media (max-width:699.98px) {
+  .spz-13002 .hero-banner .hero-block .gym-sec {
+      background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319102.webp);
+  }
+
+  .spz-13002 .ignite-img img {
+      max-width: 109.34px;
+      width: 100%;
+      height: 40px;
+  }
+
+  .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
+      max-width: 335px;
+      padding: 50px 0;
+  }
+
+  .spz-13002 .ignite-item h2 {
+      font-size: 28px;
+      line-height: 36.4px;
+      letter-spacing: -0.56px;
+  }
+
+  .spz-13002 .ignite-item p {
+      font-size: 18px !important;
+      line-height: 21.6px;
+  }
+
+  .spz-13002 .platform-img-sec {
+      max-width: 300px;
+  }
+}
+
+@media (max-width:375.98px) and (min-height:635.98px) {
+  @media not all and (min-resolution:.001dpcm) {
+      @supports (-webkit-appearance:none) and (margin-top:-30px) {
+          .site-main>:first-child {
+              margin-top: -30px;
+          }
+      }
+  }
+}
+
+@media (max-width:330.98px) {
+  .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
+      max-width: 100%;
+      padding: 50px 20px;
+  }
+}
+
+/* Winner 5009 CSS starts here */
+.spz-13002 #mega-menu-primary .spz-menu-item {
+  display: flex;
+  align-items: center;
+  padding: 0 11px 0 10px;
+  order: 1;
+}
+
+.spz-13002 .spz-demo-btn {
+  min-width: 125px;
+  height: 39px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: #EF7F2E;
+  border-radius: 36px;
+  color: #FFF;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: normal;
+  text-transform: uppercase;
+  padding: 0 10px;
+}
+
+.spz-13002 .spz-demo-btn:hover,
+.spz-13002 .spz-demo-btn:focus {
+  background: #BE5D17 !important;
+  color: #FFF;
+  text-decoration: none;
+  outline: none !important;
+  text-decoration: none !important;
+}
+
+.spz-13002 #mega-menu-wrap-primary #mega-menu-primary {
+  left: 0 !important;
+  width: 100% !important;
+}
+
+.spz-13002 #mega-menu-wrap-primary #mega-menu-primary>li.mega-menu-item.mega-current-language-menu-item {
+  position: relative;
+}
+
+.spz-13002 #mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right.mega-current-language-menu-item>ul.mega-sub-menu {
+  margin-right: -18px;
+}
+
+.spz-13002 .bkg-header.fixed-header {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  z-index: 9999;
+  top: 0;
+}
+
+.spz-13002 .modal-backdrop {
+  z-index: 10000;
+}
+
+@media only screen and (max-width: 1200px) {
+
+  .spz-13002 #mega-menu-primary .spz-menu-item {
+      position: absolute;
+      bottom: 20px;
+      left: 0;
+      width: 100%;
+      padding-left: 20px;
+  }
+
+  .spz-13002 #mega-menu-wrap-primary #mega-menu-primary {
+      padding-bottom: 72px !important;
+      position: absolute;
+      margin-top: 7px;
+  }
+
+  .spz-13002 #site-navigation,
+  .spz-13002 #mega-menu-wrap-primary,
+  .spz-13002 #masthead {
+      position: inherit;
+  }
+
+  .spz-13002 .spz-demo-btn {
+      min-width: 149px;
+      height: 37px;
+  }
+
+  .spz-13002 #mega-menu-wrap-primary #mega-menu-primary li.mega-align-bottom-right.mega-current-language-menu-item>ul.mega-sub-menu {
+      margin-right: 0px;
+  }
+
+  .spz-13002 .bkg-header.fixed-header {
+      position: fixed;
+      left: 0;
+      width: 100%;
+      z-index: 9999;
+      top: 0;
+  }
+
+}
+
+
+@media only screen and (max-width: 767px) {
+
+  .spz-13002 #mega-menu-primary .spz-menu-item {
+      justify-content: center;
+      padding-left: 11px;
+      bottom: 10px;
+  }
+
+  .spz-13002 #site-navigation {
+      margin-left: auto;
+  }
+
+
+}
