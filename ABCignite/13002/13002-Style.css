@@ -42,8 +42,8 @@
   }
 }
 .spz-13002 .modal .modal__container .modal__close {
-  top: 14px;
-  right: 16px;
+  top: 22px;
+  right: 20px;
 }
 @media (max-width: 1023.98px) {
   .spz-13002 .modal .modal__container .modal__close {
@@ -67,11 +67,11 @@
   fill: #000000 !important;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner {
-  border-radius: 12px;
+  border-radius: 16px;
   background: #fff;
-  -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
-          box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
-  padding: 40px 30px;
+  -webkit-box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+  padding: 25px 36px 32px 36px;
   max-width: 500px;
   min-width: 500px;
 }
@@ -90,13 +90,13 @@
   }
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .spz-demo-title {
-  color: #140f10;
+  color: #000;
   text-align: center;
   font-size: 32px;
   font-style: normal;
-  font-weight: 600;
-  line-height: 140%;
-  margin: 0 0 32px;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0 0 20px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps {
   display: -webkit-box;
@@ -105,6 +105,10 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-bottom: 24px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count {
   display: -webkit-box;
@@ -118,23 +122,30 @@
           justify-content: center;
   margin-right: 45px;
   position: relative;
+  width: 24px;
+  height: 24px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count::before {
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1708433968/abcfitness/13002/line_5.svg);
   position: absolute;
-  top: 4px;
-  right: -32px;
+  top: calc(50% - 16px);
+  right: -30px;
   width: 25px;
   height: 1px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:last-child {
-  margin-right: 0;
+  margin-right: 6px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:last-child::before {
   display: none;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count .active {
   display: none;
+}
+.spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active {
+  width: 38px;
+  height: 38px;
+  margin-right: 40px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active .active {
   display: -webkit-box;
@@ -143,6 +154,16 @@
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active .in-active {
   display: none;
+}
+.spz-13002 .modal .modal__container .flydown-modal__inner .question {
+  color: #000;
+  font-family: Poppins;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-align: center;
+  margin: 0 0 20px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm {
   gap: 0;
@@ -244,6 +265,19 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
   border-color: #dc251c;
 }
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .marketo-form__notice {
+  color: var(--Black, #140f10);
+  text-align: center;
+  font-family: Poppins;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .marketo-form__notice a {
+  color: #0f71ff;
+}
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap {
   margin-top: 17px;
 }
@@ -271,10 +305,19 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
   background-color: #be5d17 !important;
 }
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row {
+  margin-bottom: 20px;
+}
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap {
+  margin-top: 0;
+}
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap .mktoButton {
+  width: 133px;
+}
 .spz-13002 .modal .modal__container .bullet-section {
   margin-right: 20px;
   padding: 0;
-  max-width: 560px;
+  max-width: 510px;
   width: 100%;
 }
 @media (max-width: 1023.98px) {
@@ -289,14 +332,10 @@
   font-style: normal;
   font-weight: 600;
   line-height: 130%;
-  margin-bottom: 11px;
+  margin-bottom: 10px;
   letter-spacing: 0;
   padding: 0;
-}
-@media (min-width: 1023.98px) {
-  .spz-13002 .modal .modal__container .bullet-section .bullet-sub-title {
-    margin-top: 64px;
-  }
+  margin-top: 14px;
 }
 .spz-13002 .modal .modal__container .bullet-section .bullet-title {
   color: var(--black, #140f10);
@@ -307,7 +346,7 @@
   margin: 0;
 }
 .spz-13002 .modal .modal__container .bullet-wrapper {
-  margin: 29px 0 31px;
+  margin: 30px 0 0;
   padding: 0;
 }
 @media (max-width: 1023.98px) {
@@ -431,7 +470,7 @@
   width: 10px;
   height: 10px;
   border-radius: 50%;
-  background: #0F71FF;
+  background: #0f71ff;
 }
 .range [type=range] {
   --range: calc(var(--max) - var(--min));

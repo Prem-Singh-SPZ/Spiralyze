@@ -42,8 +42,8 @@ $color_2: #140f10;
       }
 
       .modal__close {
-        top: 14px;
-        right: 16px;
+        top: 22px;
+        right: 20px;
 
         @media (max-width: 1023.98px) {
           top: 10px;
@@ -73,10 +73,10 @@ $color_2: #140f10;
 
       //Marketo form css starts
       .flydown-modal__inner {
-        border-radius: 12px;
+        border-radius: 16px;
         background: #fff;
-        box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
-        padding: 40px 30px;
+        box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+        padding: 25px 36px 32px 36px;
         max-width: 500px;
         min-width: 500px;
 
@@ -92,13 +92,13 @@ $color_2: #140f10;
         }
 
         .spz-demo-title {
-          color: $color_2;
+          color: #000;
           text-align: center;
           font-size: 32px;
           font-style: normal;
-          font-weight: 600;
-          line-height: 140%;
-          margin: 0 0 32px;
+          font-weight: 500;
+          line-height: 40px;
+          margin: 0 0 20px;
           // margin-bottom: -10px;
         }
 
@@ -106,24 +106,28 @@ $color_2: #140f10;
           .steps {
             display: flex;
             justify-content: center;
+            align-items: center;
+            margin-bottom: 24px;
             .step-count {
               display: flex;
               align-items: center;
               justify-content: center;
               margin-right: 45px;
               position: relative;
+              width: 24px;
+              height: 24px;
 
               &::before {
                 content: url(//res.cloudinary.com/spiralyze/image/upload/v1708433968/abcfitness/13002/line_5.svg);
                 position: absolute;
-                top: 4px;
-                right: -32px;
+                top: calc((50% - 16px));
+                right: -30px;
                 width: 25px;
                 height: 1px;
               }
 
               &:last-child {
-                margin-right: 0;
+                margin-right: 6px;
                 &::before {
                   display: none;
                 }
@@ -133,6 +137,10 @@ $color_2: #140f10;
                 display: none;
               }
               &.active {
+                width: 38px;
+                height: 38px;
+                margin-right: 40px;
+
                 .active {
                   display: flex;
                 }
@@ -142,6 +150,17 @@ $color_2: #140f10;
               }
             }
           }
+        }
+
+        .question {
+          color: #000;
+          font-family: Poppins;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          text-align: center;
+          margin: 0 0 20px;
         }
 
         //Form Css starts here
@@ -270,6 +289,21 @@ $color_2: #140f10;
             }
           }
 
+          .marketo-form__notice {
+            color: var(--Black, #140f10);
+            text-align: center;
+            font-family: Poppins;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+
+            a {
+              color: #0f71ff;
+            }
+          }
+
           //submit button css
           .mktoButtonRow {
             .mktoButtonWrap {
@@ -301,6 +335,17 @@ $color_2: #140f10;
                 }
               }
             }
+
+            &.custom-btn-row {
+              margin-bottom: 20px;
+
+              .mktoButtonWrap {
+                margin-top: 0;
+                .mktoButton {
+                  width: 133px;
+                }
+              }
+            }
           }
         }
       }
@@ -308,7 +353,7 @@ $color_2: #140f10;
       .bullet-section {
         margin-right: 20px;
         padding: 0;
-        max-width: 560px;
+        max-width: 510px;
         width: 100%;
 
         @media (max-width: 1023.98px) {
@@ -322,13 +367,10 @@ $color_2: #140f10;
           font-style: normal;
           font-weight: 600;
           line-height: 130%;
-          margin-bottom: 11px;
+          margin-bottom: 10px;
           letter-spacing: 0;
           padding: 0;
-
-          @media (min-width: 1023.98px) {
-            margin-top: 64px;
-          }
+          margin-top: 14px;
         }
 
         .bullet-title {
@@ -341,7 +383,7 @@ $color_2: #140f10;
         }
       }
       .bullet-wrapper {
-        margin: 29px 0 31px;
+        margin: 30px 0 0;
         padding: 0;
 
         @media (max-width: 1023.98px) {
@@ -494,7 +536,7 @@ $range__thumb-colour: #099 !default;
     margin-bottom: 1em;
     line-height: 1;
 
-    > span:first-child{
+    > span:first-child {
       position: relative;
 
       &::before {
@@ -505,7 +547,7 @@ $range__thumb-colour: #099 !default;
         width: 10px;
         height: 10px;
         border-radius: 50%;
-        background: #0F71FF;
+        background: #0f71ff;
       }
     }
   }
