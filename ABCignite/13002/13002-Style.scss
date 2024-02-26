@@ -37,18 +37,18 @@ $color_2: #140f10;
       // }
 
       @media (max-width: 1023.98px) {
-        max-width: 688px;
-        padding: 40px;
+        max-width: 560px;
+        padding: 30px;
       }
 
       .modal__close {
         top: 22px;
         right: 20px;
 
-        @media (max-width: 1023.98px) {
-          top: 10px;
-          right: 12px;
-        }
+        // @media (max-width: 1023.98px) {
+        //   top: 10px;
+        //   right: 12px;
+        // }
 
         @media (max-width: 767.98px) {
           top: 4px;
@@ -82,13 +82,18 @@ $color_2: #140f10;
 
         @media (max-width: 1023.98px) {
           max-width: 100%;
-          margin-bottom: 40px;
+          margin-bottom: 16px;
+          box-shadow: none;
+          border-bottom: 1px solid #d2d2d2;
+          padding: 25px 0 22px;
+          border-radius: 0;
         }
 
         @media (max-width: 767.98px) {
           box-shadow: none;
           padding: 32px 32px 24px;
           min-width: auto;
+          border-bottom: 0;
         }
 
         .spz-demo-title {
@@ -100,6 +105,10 @@ $color_2: #140f10;
           line-height: 40px;
           margin: 0 0 20px;
           // margin-bottom: -10px;
+
+          @media (max-width: 1023.98px) {
+            margin: 0 0 10px;
+          }
         }
 
         .multi-steps {
@@ -150,6 +159,18 @@ $color_2: #140f10;
               }
             }
           }
+        }
+
+        .bullet-sub-title {
+          color: #0057d6;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 130%;
+          margin-bottom: 20px;
+          letter-spacing: 0;
+          margin-top: 10px;
+          text-align: center;
         }
 
         .question {
@@ -254,7 +275,7 @@ $color_2: #140f10;
                     font-size: 14px;
                     line-height: 20px;
                     background: #fff;
-                    color: #8D8994;
+                    color: #8d8994;
                   }
                 }
                 .mktoField:not([type="checkbox"]) {
@@ -348,6 +369,10 @@ $color_2: #140f10;
             &.custom-btn-row {
               margin-bottom: 20px;
 
+              @media (max-width: 1023.98px) {
+                margin-top: -4px;
+              }
+
               .mktoButtonWrap {
                 margin-top: 0;
                 .mktoButton {
@@ -383,6 +408,10 @@ $color_2: #140f10;
           letter-spacing: 0;
           padding: 0;
           margin-top: 14px;
+
+          @media (max-width: 1023.98px) {
+            display: none;
+          }
         }
 
         .bullet-title {
@@ -392,6 +421,10 @@ $color_2: #140f10;
           font-weight: 600;
           line-height: 140%;
           margin: 0;
+
+          @media (max-width: 1023.98px) {
+            display: none;
+          }
         }
       }
       .bullet-wrapper {
@@ -429,6 +462,11 @@ $color_2: #140f10;
         }
         strong {
           font-weight: 700;
+        }
+
+        @media (max-width: 1023.98px) {
+          display: flex;
+          flex-direction: column;
         }
       }
 
