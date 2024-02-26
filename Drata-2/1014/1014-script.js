@@ -59,6 +59,9 @@
         clearInterval(err);
       }, 100);
     }
+
+    checkError();
+
   });
 
   // Create input label with placeholder text
