@@ -168,6 +168,9 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm {
   gap: 0;
 }
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow {
+  gap: 24px;
+}
 @media (max-width: 480px) {
   .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow {
     gap: 0;
@@ -212,7 +215,7 @@
   font-style: normal;
   font-weight: 400;
   line-height: 26px; /* 150% */
-  margin-bottom: 20px;
+  margin-bottom: 24px;
   background-position: right 17px center;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
@@ -243,6 +246,19 @@
   font-weight: 400;
   line-height: 20px;
 }
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
+  top: -10px;
+  left: 11px;
+  right: auto;
+  padding: 0 5px;
+  font-size: 14px;
+  line-height: 20px;
+  background: #fff;
+  color: #8D8994;
+}
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoField:not([type=checkbox]) {
+  border-color: #b6b3ba;
+}
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
   top: -10px;
   left: 11px;
@@ -255,18 +271,6 @@
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
   border: 1.5px solid #0f71ff;
-}
-.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
-  top: -10px;
-  left: 11px;
-  right: auto;
-  padding: 0 5px;
-  font-size: 14px;
-  line-height: 20px;
-  background: #fff;
-}
-.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoField:not([type=checkbox]) {
-  border-color: #b6b3ba;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
   color: #dc251c;
@@ -287,8 +291,11 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .marketo-form__notice a {
   color: #0f71ff;
 }
+.spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow {
+  margin-bottom: 20px;
+}
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap {
-  margin-top: 17px;
+  margin-top: -4px;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton {
   height: 56px;
@@ -322,6 +329,13 @@
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap .mktoButton {
   width: 133px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 18px 32px;
 }
 .spz-13002 .modal .modal__container .bullet-section {
   margin-right: 20px;
@@ -468,6 +482,14 @@
   margin-bottom: 1em;
   line-height: 1;
 }
+.range .range__labels span {
+  color: #000;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px; /* 171.429% */
+}
 .range .range__labels > span:first-child {
   position: relative;
 }
@@ -480,6 +502,10 @@
   height: 10px;
   border-radius: 50%;
   background: #0f71ff;
+}
+.range .range__labels > span:nth-child(2),
+.range .range__labels > span:nth-child(3) {
+  margin-right: -14px;
 }
 .range [type=range] {
   --range: calc(var(--max) - var(--min));
