@@ -1,5 +1,9 @@
 init_13002();
 
+//preload image by adding in head tag
+document.querySelector("head").insertAdjacentHTML("beforeend", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg" as="image">
+  `);
+
 function init_13002() {
   var bodyEle = document.querySelector("body");
   if (!bodyEle.classList.contains("spz-13002")) {
@@ -174,6 +178,10 @@ document.addEventListener("click", function (e) {
     document.querySelector(".step-count.step-2").classList.remove("active");
     document.querySelector(".step-count.step-3").classList.add("active");
   }
+
+  if (e.target.classList.contains("mktoButton")) {
+    focusFields();
+  }
 });
 
 function init5009() {
@@ -336,19 +344,3 @@ function waitForElm(selector) {
     });
   });
 }
-
-//click event for a button .modal-flydown-trigger
-document.addEventListener("click", function (e) {
-  if (e.target.classList.contains("modal-flydown-trigger")) {
-    e.preventDefault();
-    document.querySelector("#flydown-modal").classList.add("is-open");
-    document.querySelector("#flydown-modal").setAttribute("aria-hidden", "false");
-    return false;
-  }
-  if (e.target.classList.contains("modal__close")) {
-    e.preventDefault();
-    document.querySelector("#flydown-modal").classList.remove("is-open");
-    document.querySelector("#flydown-modal").setAttribute("aria-hidden", "true");
-    return false;
-  }
-});

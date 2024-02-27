@@ -2,7 +2,7 @@
 $color_1: var(--black, #140f10);
 $color_2: #140f10;
 
-.spz-13002 {
+body {
   &:has(.flydown-modal.is-open) {
     overflow: hidden;
   }
@@ -42,7 +42,7 @@ $color_2: #140f10;
         padding: 30px;
       }
 
-       @media (max-width: 767.98px) {
+      @media (max-width: 767.98px) {
         padding: 0px;
       }
 
@@ -72,7 +72,7 @@ $color_2: #140f10;
         border-radius: 16px;
         background: #fff;
         box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
-        padding: 25px 36px 32px 36px;
+        padding: 24px 36px 32px 36px;
         max-width: 500px;
         min-width: 500px;
 
@@ -100,7 +100,7 @@ $color_2: #140f10;
           font-style: normal;
           font-weight: 500;
           line-height: 40px;
-          margin: 0 0 20px;
+          margin: 0 0 12px;
           // margin-bottom: -10px;
 
           // @media (max-width: 1023.98px) {
@@ -186,6 +186,10 @@ $color_2: #140f10;
           }
         }
 
+        .flydown-modal__form {
+          margin-top: 20px;
+        }
+
         //Form Css starts here
         form.mktoForm {
           gap: 0;
@@ -197,6 +201,15 @@ $color_2: #140f10;
 
             @media (max-width: 767.98px) {
               padding: 0;
+            }
+
+            .mktoFormRow
+              .mktoFormCol
+              .mktoFieldWrap
+              .mktoField:not([type="checkbox"]):not(#Lead_Notes__c) {
+              @media (max-width: 767.98px) {
+                height: 56px !important;
+              }
             }
           }
 
@@ -227,7 +240,7 @@ $color_2: #140f10;
                   top: 17px;
                   left: 16px;
                   padding: 0;
-                  transition: all 0.3s ease-in-out;
+                  transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
                   pointer-events: none;
                   max-width: calc(100% - 50px);
                   background: #fff;
@@ -256,10 +269,6 @@ $color_2: #140f10;
 
                     @media (min-width: 767.98px) {
                       max-width: 100%;
-                    }
-
-                    @media screen and (max-width: 767.98px) {
-                      height: 56px;
                     }
                   }
 
@@ -354,6 +363,10 @@ $color_2: #140f10;
             a {
               color: #0f71ff;
             }
+
+            @media screen and (max-width: 767.98px) {
+              line-height: 18px;
+            }
           }
 
           //submit button css
@@ -379,6 +392,10 @@ $color_2: #140f10;
                 letter-spacing: 0;
                 white-space: nowrap;
                 text-decoration: none;
+
+                @media screen and (max-width: 767.98px) {
+                  width: 100%;
+                }
 
                 .cta-arrow {
                   margin-left: 10px;
@@ -507,8 +524,8 @@ $color_2: #140f10;
         }
 
         @media (max-width: 1023.98px) {
-          display: flex;
-          flex-direction: column;
+          // display: flex;
+          // flex-direction: column;
           margin-bottom: 28px;
         }
       }
@@ -614,7 +631,7 @@ $range__thumb-colour: #099 !default;
   height: 20px;
   // border-radius: 50%;
   // background: $range__thumb-colour;
-  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg)
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg)
     no-repeat center center;
 }
 
@@ -624,10 +641,13 @@ $range__thumb-colour: #099 !default;
     width: $range__track-width;
     width: var(--track-width);
     max-width: 314px;
+    margin-top: -6px;
 
     @media (max-width: 1023.98px) {
       max-width: 356px;
-      margin-top: -6px;
+    }
+    @media (max-width: 767.98px) {
+      max-width: 272px;
     }
   }
 
@@ -635,16 +655,15 @@ $range__thumb-colour: #099 !default;
     display: flex;
     justify-content: space-between;
     margin-top: 0;
-    margin-bottom: 1em;
     line-height: 1;
+    margin-bottom: 30px;
 
-    @media (max-width: 1023.98px) {
-      margin-bottom: 30px;
-    }
+    // @media (max-width: 1023.98px) {
+    // }
 
-    @media (max-width: 767.98px) {
-      margin-bottom: 20px;
-    }
+    // @media (max-width: 767.98px) {
+    //   margin-bottom: 20px;
+    // }
 
     span {
       color: #000;
@@ -771,135 +790,11 @@ $range__thumb-colour: #099 !default;
   display: none;
 }
 
-// .spz-13002 .hero-sec .n2-style-f8293b450b12ef15d5c4ff97a617a3e3-heading img {
-//   width: auto;
-//   display: block;
-// }
-
-// .spz-13002 .hero-sec .nextend-arrow img {
-//   display: none !important;
-// }
-
-// body.spz-13002 .hero-sec {
-//   display: none;
-// }
-
-// .spz-13002 .hero-banner .hero-block {
-//   max-width: 1440px;
-//   width: 100%;
-//   margin: 0 auto;
-// }
-
-// .spz-13002 .hero-banner .hero-block .gym-sec {
-//   background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319100.webp);
-//   background-clip: padding-box;
-//   background-repeat: no-repeat;
-//   background-size: cover;
-//   height: 100%;
-//   display: flex;
-//   align-items: center;
-//   padding-left: 110px;
-//   padding-right: 110px;
-// }
-
-// .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-//   max-width: 540px;
-//   width: 100%;
-//   margin-right: 113px;
-// }
-
-// .spz-13002 .ignite-item h2 {
-//   font-family: "Poppins";
-//   font-weight: 700;
-//   font-size: 40px;
-//   line-height: 52px;
-//   letter-spacing: -0.8px;
-//   color: #ffffff;
-//   margin: 30px 0px 24px;
-// }
-
-// .spz-13002 .ignite-item p {
-//   font-family: "Poppins" !important;
-//   font-weight: 400;
-//   font-size: 24px !important;
-//   line-height: 28.8px;
-//   color: #ffffff;
-//   margin-bottom: 29px;
-// }
-
-// .spz-13002 .ignite-item a.hero-btn {
-//   background: #ef7f2e;
-//   border-radius: 100px;
-//   padding: 22px 28px;
-//   height: 62px;
-//   display: inline-block;
-//   max-width: 188px;
-//   width: 100%;
-//   text-align: center;
-//   font-family: "Poppins";
-//   font-weight: 700;
-//   font-size: 16px;
-//   line-height: 19.2px;
-//   color: #fff;
-//   text-decoration: none;
-// }
-
-// .spz-13002 .ignite-item a.hero-btn img {
-//   margin-left: 8px;
-//   margin-top: -2px;
-// }
-
-// .spz-13002 .ignite-item a.hero-btn:hover,
-// .spz-13002 .ignite-item a.hero-btn:active,
-// .spz-13002 .ignite-item a.hero-btn:focus {
-//   background: #be5d17;
-//   outline: none;
-//   text-decoration: none;
-// }
-
-// .spz-13002 .ignite-item a.hero-btn:focus img {
-//   outline: none;
-// }
-
-// .spz-13002 .platform-img-sec img {
-//   width: 100%;
-//   height: 770px;
-// }
-
 .modal-open .bkg-header.fixed {
   z-index: 9;
 }
 
 @media (max-width: 1199.98px) {
-  // .spz-13002 .hero-banner .hero-block .gym-sec {
-  //   background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319101.webp);
-  //   padding-left: 0;
-  //   display: block;
-  //   padding-right: 0px;
-  //   background-size: cover;
-  // }
-
-  // .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-  //   max-width: 580px;
-  //   margin: 0px auto;
-  //   text-align: center;
-  //   padding: 80px 0 60px;
-  // }
-
-  // .spz-13002 .platform-img-sec img {
-  //   height: auto;
-  // }
-
-  // .spz-13002 .platform-img-sec {
-  //   max-width: 567px;
-  //   width: 100%;
-  //   margin: 0 auto;
-  // }
-
-  // .gb-layout-features .wrap-home-sections {
-  //   padding-top: 64px !important;
-  // }
-
   @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) and (margin-top: -30px) {
       .site-main > :first-child {
@@ -908,38 +803,6 @@ $range__thumb-colour: #099 !default;
     }
   }
 }
-
-// @media (max-width: 699.98px) {
-//   .spz-13002 .hero-banner .hero-block .gym-sec {
-//     background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319102.webp);
-//   }
-
-//   .spz-13002 .ignite-img img {
-//     max-width: 109.34px;
-//     width: 100%;
-//     height: 40px;
-//   }
-
-//   .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-//     max-width: 335px;
-//     padding: 50px 0;
-//   }
-
-//   .spz-13002 .ignite-item h2 {
-//     font-size: 28px;
-//     line-height: 36.4px;
-//     letter-spacing: -0.56px;
-//   }
-
-//   .spz-13002 .ignite-item p {
-//     font-size: 18px !important;
-//     line-height: 21.6px;
-//   }
-
-//   .spz-13002 .platform-img-sec {
-//     max-width: 300px;
-//   }
-// }
 
 @media (max-width: 375.98px) and (min-height: 635.98px) {
   @media not all and (min-resolution: 0.001dpcm) {
@@ -951,22 +814,15 @@ $range__thumb-colour: #099 !default;
   }
 }
 
-// @media (max-width: 330.98px) {
-//   .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-//     max-width: 100%;
-//     padding: 50px 20px;
-//   }
-// }
-
 /* Winner 5009 CSS starts here */
-.spz-13002 #mega-menu-primary .spz-menu-item {
+body #mega-menu-primary .spz-menu-item {
   display: flex;
   align-items: center;
   padding: 0 11px 0 10px;
   order: 1;
 }
 
-.spz-13002 .spz-demo-btn {
+body .spz-demo-btn {
   min-width: 125px;
   height: 39px;
   display: flex;
@@ -983,8 +839,8 @@ $range__thumb-colour: #099 !default;
   padding: 0 10px;
 }
 
-.spz-13002 .spz-demo-btn:hover,
-.spz-13002 .spz-demo-btn:focus {
+body .spz-demo-btn:hover,
+body .spz-demo-btn:focus {
   background: #be5d17 !important;
   color: #fff;
   text-decoration: none;
@@ -992,19 +848,19 @@ $range__thumb-colour: #099 !default;
   text-decoration: none !important;
 }
 
-.spz-13002 #mega-menu-wrap-primary #mega-menu-primary {
+body #mega-menu-wrap-primary #mega-menu-primary {
   left: 0 !important;
   width: 100% !important;
 }
 
-.spz-13002
+body
   #mega-menu-wrap-primary
   #mega-menu-primary
   > li.mega-menu-item.mega-current-language-menu-item {
   position: relative;
 }
 
-.spz-13002
+body
   #mega-menu-wrap-primary
   #mega-menu-primary
   li.mega-align-bottom-right.mega-current-language-menu-item
@@ -1012,7 +868,7 @@ $range__thumb-colour: #099 !default;
   margin-right: -18px;
 }
 
-.spz-13002 .bkg-header.fixed-header {
+body .bkg-header.fixed-header {
   position: fixed;
   left: 0;
   width: 100%;
@@ -1020,12 +876,12 @@ $range__thumb-colour: #099 !default;
   top: 0;
 }
 
-.spz-13002 .modal-backdrop {
+body .modal-backdrop {
   z-index: 10000;
 }
 
 @media only screen and (max-width: 1200px) {
-  .spz-13002 #mega-menu-primary .spz-menu-item {
+  body #mega-menu-primary .spz-menu-item {
     position: absolute;
     bottom: 20px;
     left: 0;
@@ -1033,24 +889,24 @@ $range__thumb-colour: #099 !default;
     padding-left: 20px;
   }
 
-  .spz-13002 #mega-menu-wrap-primary #mega-menu-primary {
+  body #mega-menu-wrap-primary #mega-menu-primary {
     padding-bottom: 72px !important;
     position: absolute;
     margin-top: 7px;
   }
 
-  .spz-13002 #site-navigation,
-  .spz-13002 #mega-menu-wrap-primary,
-  .spz-13002 #masthead {
+  body #site-navigation,
+  body #mega-menu-wrap-primary,
+  body #masthead {
     position: inherit;
   }
 
-  .spz-13002 .spz-demo-btn {
+  body .spz-demo-btn {
     min-width: 149px;
     height: 37px;
   }
 
-  .spz-13002
+  body
     #mega-menu-wrap-primary
     #mega-menu-primary
     li.mega-align-bottom-right.mega-current-language-menu-item
@@ -1058,7 +914,7 @@ $range__thumb-colour: #099 !default;
     margin-right: 0px;
   }
 
-  .spz-13002 .bkg-header.fixed-header {
+  body .bkg-header.fixed-header {
     position: fixed;
     left: 0;
     width: 100%;
@@ -1068,13 +924,13 @@ $range__thumb-colour: #099 !default;
 }
 
 @media only screen and (max-width: 767px) {
-  .spz-13002 #mega-menu-primary .spz-menu-item {
+  body #mega-menu-primary .spz-menu-item {
     justify-content: center;
     padding-left: 11px;
     bottom: 10px;
   }
 
-  .spz-13002 #site-navigation {
+  body #site-navigation {
     margin-left: auto;
   }
 }
