@@ -10,6 +10,15 @@ body {
               no-repeat center center !important;
             background-size: cover !important;
 
+            @media (max-width: 767.98px) {
+              background: radial-gradient(
+                  620.25% 113.08% at 22.29% -50.24%,
+                  rgba(104, 204, 232, 0.4) 0%,
+                  rgba(104, 204, 232, 0) 100%
+                ),
+                var(--Surface-Main, #000) !important;
+            }
+
             .subscribe_form_outer {
               text-align: left;
               .form-title {
@@ -23,11 +32,14 @@ body {
 
               .hs_cos_wrapper_type_form {
                 .hs-form.hs-custom-form {
-                  margin-left: 0;
-
                   &.stacked {
                     display: flex;
                     justify-content: space-between;
+                    margin-left: 0;
+
+                    @media (max-width: 767.98px) {
+                      flex-direction: column;
+                    }
 
                     .field {
                       position: relative;
@@ -262,6 +274,10 @@ body {
                       width: 100%;
                       margin: 0 !important;
                       padding: 0 !important;
+
+                      @media screen and (max-width: 767.98px) {
+                        padding-top: 24px !important;
+                      }
 
                       .hs-button {
                         font-family: $titillium-font;
