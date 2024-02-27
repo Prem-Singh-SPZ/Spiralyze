@@ -10,6 +10,7 @@ $color_2: #140f10;
   .modal {
     scrollbar-width: none;
     z-index: 10000;
+
     ::-webkit-scrollbar {
       width: 0px;
     }
@@ -57,6 +58,7 @@ $color_2: #140f10;
 
         svg {
           width: 16px;
+
           path {
             fill: #9d9d9d !important;
           }
@@ -117,6 +119,7 @@ $color_2: #140f10;
             justify-content: center;
             align-items: center;
             margin-bottom: 24px;
+
             .step-count {
               display: flex;
               align-items: center;
@@ -137,6 +140,7 @@ $color_2: #140f10;
 
               &:last-child {
                 margin-right: 6px !important;
+
                 &::before {
                   display: none;
                 }
@@ -145,6 +149,7 @@ $color_2: #140f10;
               .active {
                 display: none;
               }
+
               &.active {
                 width: 38px;
                 height: 38px;
@@ -153,6 +158,7 @@ $color_2: #140f10;
                 .active {
                   display: flex;
                 }
+
                 .in-active {
                   display: none;
                 }
@@ -187,17 +193,21 @@ $color_2: #140f10;
         //Form Css starts here
         form.mktoForm {
           gap: 0;
+
           .mktoFormRow {
             gap: 24px;
+
             @media (max-width: 480px) {
               gap: 0;
             }
+
             .mktoFormCol {
               min-height: auto;
               margin: 0;
 
               .mktoFieldWrap {
                 position: relative;
+
                 .mktoLabel {
                   position: absolute;
                   overflow: hidden;
@@ -207,7 +217,8 @@ $color_2: #140f10;
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 26px; /* 150% */
+                  line-height: 26px;
+                  /* 150% */
                   top: 17px;
                   left: 16px;
                   padding: 0;
@@ -229,7 +240,8 @@ $color_2: #140f10;
                   font-size: 16px;
                   font-style: normal;
                   font-weight: 400;
-                  line-height: 26px; /* 150% */
+                  line-height: 26px;
+                  /* 150% */
                   margin-bottom: 24px;
                   background-position: right 17px center;
 
@@ -237,6 +249,7 @@ $color_2: #140f10;
                     overflow: hidden;
                     height: 60px;
                     white-space: nowrap;
+
                     @media (min-width: 767.98px) {
                       // max-width: calc(100% - 10px);
                       max-width: 100%;
@@ -246,6 +259,7 @@ $color_2: #140f10;
                   &:-webkit-autofill {
                     -webkit-box-shadow: 0 0 0 30px white inset;
                   }
+
                   &:autofill {
                     -webkit-box-shadow: 0 0 0 30px white inset;
                   }
@@ -254,6 +268,7 @@ $color_2: #140f10;
                 .mktoError {
                   position: relative;
                   top: -16px;
+
                   .mktoErrorMsg {
                     color: #dc251c;
                     font-family: Poppins;
@@ -278,6 +293,7 @@ $color_2: #140f10;
                     color: #8d8994;
                   }
                 }
+
                 .mktoField:not([type="checkbox"]) {
                   border-color: #b6b3ba;
                 }
@@ -296,6 +312,7 @@ $color_2: #140f10;
                     background: #fff;
                   }
                 }
+
                 .mktoField:not([type="checkbox"]) {
                   border: 1.5px solid #0f71ff;
                 }
@@ -338,6 +355,7 @@ $color_2: #140f10;
 
             .mktoButtonWrap {
               margin-top: -4px;
+
               .mktoButton {
                 height: 56px;
                 border-radius: 100px;
@@ -375,6 +393,7 @@ $color_2: #140f10;
 
               .mktoButtonWrap {
                 margin-top: 0;
+
                 .mktoButton {
                   width: 133px;
                   display: flex;
@@ -427,6 +446,7 @@ $color_2: #140f10;
           }
         }
       }
+
       .bullet-wrapper {
         margin: 30px 0 0;
         padding: 0;
@@ -435,6 +455,7 @@ $color_2: #140f10;
           margin: 24px 0 30px;
         }
       }
+
       .bullet-point {
         &::before {
           content: "";
@@ -448,6 +469,7 @@ $color_2: #140f10;
           left: 0;
           top: 0;
         }
+
         color: $color_2;
         font-size: 15px;
         font-style: normal;
@@ -457,9 +479,11 @@ $color_2: #140f10;
         list-style: none;
         position: relative;
         padding-left: 32px;
+
         &:last-child {
           margin: 0;
         }
+
         strong {
           font-weight: 700;
         }
@@ -495,6 +519,7 @@ $color_2: #140f10;
           margin-bottom: 0px;
           padding: 0 31.5px;
           position: relative;
+
           &::before {
             content: "";
             position: absolute;
@@ -511,11 +536,13 @@ $color_2: #140f10;
             font-size: 14px;
             line-height: 130%;
           }
+
           .bullet-title {
             font-size: 22px;
             line-height: 140%;
           }
         }
+
         .bullet-wrapper {
           margin: 15px 0 25px;
 
@@ -530,6 +557,7 @@ $color_2: #140f10;
 
 // Common bits
 $range__track-width: 14.5em;
+
 :root {
   // go full width until max
   --track-width: 100%;
@@ -592,7 +620,8 @@ $range__thumb-colour: #099 !default;
       font-size: 14px;
       font-style: normal;
       font-weight: 400;
-      line-height: 24px; /* 171.429% */
+      line-height: 24px;
+      /* 171.429% */
     }
 
     > span:first-child {
