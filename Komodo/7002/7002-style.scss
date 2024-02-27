@@ -1,3 +1,326 @@
-body{
-    
+$titillium-font: Titillium Web, sans-serif;
+
+body {
+  .body-wrapper {
+    main.body-wrapper--blog-post {
+      article.blog-post {
+        .widget-type-blog_subscribe {
+          #module_17001412262822.insights-subscribe {
+            background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/7002/cta_section_desktop.webp)
+              no-repeat center center !important;
+            background-size: cover !important;
+
+            .subscribe_form_outer {
+              text-align: left;
+              .form-title {
+                color: #fff !important;
+                font-family: Titillium Web, sans-serif;
+                font-size: 24px !important;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 32px;
+              }
+
+              .hs_cos_wrapper_type_form {
+                .hs-form.hs-custom-form {
+                  margin-left: 0;
+
+                  &.stacked {
+                    display: flex;
+                    justify-content: space-between;
+
+                    .field {
+                      position: relative;
+                      //   width: 221.5px;
+                      //   max-width: 221.5px;
+                      //   margin-bottom: 10px;
+
+                      @media (max-width: 991.98px) {
+                        width: 100%;
+                        max-width: 100%;
+                      }
+
+                      display: flex;
+                      align-items: center;
+                      flex-direction: column;
+
+                      // Error messages Starts
+                      .hs-error-msgs.inputs-list {
+                        position: absolute;
+                        display: inline-block;
+                        background: var(--Surface-Error, #dc0000);
+                        box-shadow: 0px 10px 40px -5px rgba(129, 24, 24, 0.16),
+                          0px 2px 8px -5px rgba(129, 24, 24, 0.24);
+                        color: #fff !important;
+                        list-style: none;
+                        text-align: center !important;
+                        top: calc(100% + 8px);
+                        margin: 0;
+                        padding: 8px 12px !important;
+                        z-index: 3;
+                        width: auto;
+
+                        li {
+                          line-height: 0 !important;
+
+                          .hs-error-msg.hs-main-font-element {
+                            display: block;
+                            font-family: $titillium-font;
+                            font-size: 12px !important;
+                            font-style: normal;
+                            font-weight: 400 !important;
+                            line-height: 20px !important;
+                            color: #fff !important;
+                          }
+                        }
+                        @media (max-width: 767.98px) {
+                          font-size: 11px;
+                        }
+
+                        // a triangle
+                        &::before {
+                          content: "";
+                          position: absolute;
+                          bottom: calc(100% - 1.5px);
+                          left: calc(50% - 8px);
+                          background: url("//res.cloudinary.com/spiralyze/image/upload/v1707797996/KomodoHealth/8001/src/Arrow_Pointing_Above.svg")
+                            no-repeat;
+                          width: 16px;
+                          height: 8px;
+                          z-index: 2;
+                        }
+
+                        &:nth-child(2n + 1) {
+                          display: none;
+                          margin-top: 4px;
+
+                          &::before {
+                            display: none;
+                          }
+                        }
+
+                        label > a {
+                          cursor: pointer;
+                        }
+                      }
+                      // Error messages Ends
+
+                      > label {
+                        display: none;
+                      }
+                      .input {
+                        position: relative;
+                        // border-radius: 8px;
+                        // width: 221.5px;
+                        // max-width: 221.5px;
+                        @media (max-width: 991.98px) {
+                          width: 100%;
+                          max-width: 100%;
+                        }
+                      }
+                      label.hs-label-spz {
+                        display: block;
+                        position: absolute;
+                        top: 12px;
+                        left: 20px;
+                        padding: 0;
+                        font-family: $titillium-font;
+                        font-style: normal;
+                        font-weight: 400;
+                        font-size: 16px;
+                        line-height: 24px;
+                        color: #4a4a4a;
+                        -webkit-transition: all 0.3s ease-in-out;
+                        transition: all 0.3s ease-in-out;
+                        pointer-events: none;
+                        z-index: 2;
+                        letter-spacing: 0;
+                      }
+                      .hs-input {
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus {
+                          -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
+                          transition: background-color 5000s ease-in-out 0s !important;
+                          -webkit-text-fill-color: #000 !important;
+                          z-index: 2;
+                          position: relative;
+                        }
+
+                        &:not([type="checkbox"]) {
+                          &:not([type="radio"]) {
+                            -webkit-box-sizing: border-box;
+                            box-sizing: border-box;
+                            display: flex;
+                            flex-direction: row;
+                            align-items: center;
+                            padding: 1px 20px !important;
+                            height: 48px;
+                            width: 100% !important;
+                            border: 1px solid rgba(0, 0, 0, 0.1) !important;
+                            background: var(--Surface-Light, #f8f7f7);
+                            outline: none;
+                            -webkit-transition: all 0.3s ease-in-out;
+                            transition: all 0.3s ease-in-out;
+                            margin: 0px !important;
+                            background-clip: padding-box !important;
+
+                            &::placeholder {
+                              display: none;
+                              color: transparent;
+                            }
+                            &:hover {
+                              border: 1px solid rgba(0, 0, 0, 0.2) !important;
+
+                              & ~ label {
+                                color: #000;
+                              }
+                            }
+                            &:focus {
+                              border: 1px solid rgba(0, 0, 0, 0.4) !important;
+                              background-color: #fff !important;
+                            }
+                            &:focus ~ label {
+                              top: -8px;
+                              font-size: 10px;
+                              font-style: normal;
+                              font-weight: 400;
+                              line-height: 16px;
+                              background: #fff;
+                              padding: 0 4px;
+                              left: 16px;
+                              color: #000000;
+                            }
+
+                            &.error {
+                              border: 1px solid var(--Dividers-Error, #dc0000) !important;
+                            }
+                          }
+                        }
+
+                        &:not(.is-placeholder) {
+                          &:not(:placeholder-shown) {
+                            border: 1px solid var(--Neutrals-700, #293642);
+                          }
+                          &:not(:placeholder-shown) ~ label {
+                            top: -8px;
+                            font-size: 10px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 16px;
+                            background: #fff;
+                            padding: 0 4px;
+                            left: 16px;
+                            color: #7e7e7e;
+                          }
+                        }
+                      }
+                      .hs-input[type="checkbox"] ~ span {
+                        font-family: $titillium-font;
+                        color: var(--Fonts-isPrimary, #000);
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        cursor: pointer;
+                        letter-spacing: 0;
+
+                        .hs-form-required {
+                          display: none !important;
+                        }
+                      }
+
+                      &.field-focus {
+                        .hs-input:not([type="checkbox"]):not(
+                            [type="radio"]
+                          ).error
+                          ~ label {
+                          color: #dc0000;
+                        }
+                      }
+
+                      &.field-error {
+                        .hs-input:not([type="checkbox"]):not(
+                            [type="radio"]
+                          ).error[name="email"]:not(.no-value)
+                          ~ label {
+                          color: #dc0000;
+                        }
+                      }
+                    }
+
+                    .hs_error_rollup {
+                      display: none;
+                    }
+
+                    .hs-submit {
+                      width: 100%;
+                    }
+                    .actions {
+                      position: relative;
+                      max-width: initial;
+                      width: 100%;
+                      margin: 0 !important;
+                      padding: 0 !important;
+
+                      .hs-button {
+                        font-family: $titillium-font;
+                        font-size: 16px !important;
+                        font-style: normal;
+                        font-weight: 700 !important;
+                        line-height: 24px !important; /* 150% */
+                        letter-spacing: 0.8px !important;
+                        text-transform: uppercase !important;
+                        color: #000 !important;
+                        width: 100%;
+                        height: 48px;
+                        padding: 12px 16px !important;
+                        border: none !important;
+                        position: relative;
+                        cursor: pointer !important;
+                        transition-duration: 100ms !important;
+                        border-radius: 100px !important;
+                        background: #68cce8 !important;
+                        outline: none;
+                        margin: 0 !important;
+                        display: block;
+                        &:hover {
+                          color: #000000 !important;
+                          background: #ffffff !important;
+                        }
+                        &:active {
+                          color: #000000 !important;
+                          background: #ffffff !important;
+                        }
+
+                        @media (max-width: 767.98px) {
+                          margin: -4px 0 0 !important;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+
+            .blog_subscribe_disclaimer {
+              margin-left: 0;
+              color: #f0eeee !important;
+              font-family: Titillium Web, sans-serif;
+              font-size: 12px !important;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 20px !important;
+              text-align: left !important;
+              max-width: 541px;
+
+              a {
+                color: #f0eeee !important;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
