@@ -160,17 +160,6 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active .in-active {
   display: none;
 }
-.spz-13002 .modal .modal__container .flydown-modal__inner .bullet-sub-title {
-  color: #0057d6;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 130%;
-  margin-bottom: 20px;
-  letter-spacing: 0;
-  margin-top: 10px;
-  text-align: center;
-}
 .spz-13002 .modal .modal__container .flydown-modal__inner .question {
   color: #000;
   font-family: Poppins;
@@ -385,7 +374,7 @@
 }
 @media (max-width: 1023.98px) {
   .spz-13002 .modal .modal__container .bullet-section .bullet-sub-title {
-    display: none;
+    text-align: center;
   }
 }
 .spz-13002 .modal .modal__container .bullet-section .bullet-title {
@@ -533,7 +522,6 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  /* 171.429% */
 }
 .range .range__labels > span:first-child {
   position: relative;
@@ -541,7 +529,7 @@
 .range .range__labels > span:first-child::before {
   content: "";
   position: absolute;
-  top: -20px;
+  top: -19px;
   left: 0px;
   width: 10px;
   height: 10px;
@@ -551,6 +539,19 @@
 .range .range__labels > span:nth-child(2),
 .range .range__labels > span:nth-child(3) {
   margin-right: -14px;
+}
+.range .range__labels > span:nth-child(3) {
+  position: relative;
+}
+.range .range__labels > span:nth-child(3)::before {
+  content: "";
+  position: absolute;
+  top: -19px;
+  right: 6px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #d9d9d9;
 }
 .range [type=range] {
   --range: calc(var(--max) - var(--min));
@@ -645,166 +646,17 @@
   display: none;
 }
 
-.spz-13002 .hero-sec .n2-style-f8293b450b12ef15d5c4ff97a617a3e3-heading img {
-  width: auto;
-  display: block;
-}
-
-.spz-13002 .hero-sec .nextend-arrow img {
-  display: none !important;
-}
-
-body.spz-13002 .hero-sec {
-  display: none;
-}
-
-.spz-13002 .hero-banner .hero-block {
-  max-width: 1440px;
-  width: 100%;
-  margin: 0 auto;
-}
-
-.spz-13002 .hero-banner .hero-block .gym-sec {
-  background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319100.webp);
-  background-clip: padding-box;
-  background-repeat: no-repeat;
-  background-size: cover;
-  height: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding-left: 110px;
-  padding-right: 110px;
-}
-
-.spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-  max-width: 540px;
-  width: 100%;
-  margin-right: 113px;
-}
-
-.spz-13002 .ignite-item h2 {
-  font-family: "Poppins";
-  font-weight: 700;
-  font-size: 40px;
-  line-height: 52px;
-  letter-spacing: -0.8px;
-  color: #ffffff;
-  margin: 30px 0px 24px;
-}
-
-.spz-13002 .ignite-item p {
-  font-family: "Poppins" !important;
-  font-weight: 400;
-  font-size: 24px !important;
-  line-height: 28.8px;
-  color: #ffffff;
-  margin-bottom: 29px;
-}
-
-.spz-13002 .ignite-item a.hero-btn {
-  background: #ef7f2e;
-  border-radius: 100px;
-  padding: 22px 28px;
-  height: 62px;
-  display: inline-block;
-  max-width: 188px;
-  width: 100%;
-  text-align: center;
-  font-family: "Poppins";
-  font-weight: 700;
-  font-size: 16px;
-  line-height: 19.2px;
-  color: #fff;
-  text-decoration: none;
-}
-
-.spz-13002 .ignite-item a.hero-btn img {
-  margin-left: 8px;
-  margin-top: -2px;
-}
-
-.spz-13002 .ignite-item a.hero-btn:hover,
-.spz-13002 .ignite-item a.hero-btn:active,
-.spz-13002 .ignite-item a.hero-btn:focus {
-  background: #be5d17;
-  outline: none;
-  text-decoration: none;
-}
-
-.spz-13002 .ignite-item a.hero-btn:focus img {
-  outline: none;
-}
-
-.spz-13002 .platform-img-sec img {
-  width: 100%;
-  height: 770px;
-}
-
 .modal-open .bkg-header.fixed {
   z-index: 9;
 }
 
 @media (max-width: 1199.98px) {
-  .spz-13002 .hero-banner .hero-block .gym-sec {
-    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319101.webp);
-    padding-left: 0;
-    display: block;
-    padding-right: 0px;
-    background-size: cover;
-  }
-  .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-    max-width: 580px;
-    margin: 0px auto;
-    text-align: center;
-    padding: 80px 0 60px;
-  }
-  .spz-13002 .platform-img-sec img {
-    height: auto;
-  }
-  .spz-13002 .platform-img-sec {
-    max-width: 567px;
-    width: 100%;
-    margin: 0 auto;
-  }
-  .gb-layout-features .wrap-home-sections {
-    padding-top: 64px !important;
-  }
   @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) and (margin-top: -30px) {
       .site-main > :first-child {
         margin-top: -30px;
       }
     }
-  }
-}
-@media (max-width: 699.98px) {
-  .spz-13002 .hero-banner .hero-block .gym-sec {
-    background-image: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5010/frame_427319102.webp);
-  }
-  .spz-13002 .ignite-img img {
-    max-width: 109.34px;
-    width: 100%;
-    height: 40px;
-  }
-  .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-    max-width: 335px;
-    padding: 50px 0;
-  }
-  .spz-13002 .ignite-item h2 {
-    font-size: 28px;
-    line-height: 36.4px;
-    letter-spacing: -0.56px;
-  }
-  .spz-13002 .ignite-item p {
-    font-size: 18px !important;
-    line-height: 21.6px;
-  }
-  .spz-13002 .platform-img-sec {
-    max-width: 300px;
   }
 }
 @media (max-width: 375.98px) and (min-height: 635.98px) {
@@ -814,12 +666,6 @@ body.spz-13002 .hero-sec {
         margin-top: -30px;
       }
     }
-  }
-}
-@media (max-width: 330.98px) {
-  .spz-13002 .hero-banner .hero-block .gym-sec .ignite-item {
-    max-width: 100%;
-    padding: 50px 20px;
   }
 }
 /* Winner 5009 CSS starts here */
