@@ -22,7 +22,6 @@ function loadTest() {
   });
 }
 
-// Generic
 
 // Create input label with placeholder text
 function appendInputLabel() {
@@ -30,18 +29,19 @@ function appendInputLabel() {
     .querySelectorAll('.hs-input:not([type="checkbox"])')
     .forEach(function (el) {
       const label = document.createElement("label");
-      label.innerHTML = el
-        .closest(".hs-form-field")
-        .querySelector("label > span:first-child").textContent;
-      // if (!el.hasAttribute('type') && el.options.length > 0) {
-      //     label.innerHTML = el.options[0].text;
-      // }
+      label.innerHTML = el.getAttribute("placeholder");
       label.setAttribute("for", el.id);
       label.classList.add("hs-label-spz");
 
       if (el.parentNode.querySelectorAll("label.hs-label-spz").length == 0) {
         el.parentNode.insertBefore(label, el.nextSibling);
       }
+    });
+
+  document
+    .querySelectorAll('input.hs-input:not([type="hidden"])')
+    .forEach(function (el) {
+      el.setAttribute("placeholder", " ");
     });
 }
 
