@@ -84,7 +84,7 @@ $color_2: #140f10;
 
         @media (max-width: 1023.98px) {
           max-width: 100%;
-          margin-bottom: 16px;
+          margin-bottom: 36px;
           box-shadow: none;
           border-bottom: 1px solid #d2d2d2;
           padding: 25px 0 22px;
@@ -126,10 +126,10 @@ $color_2: #140f10;
               justify-content: center;
               margin-right: 45px;
               position: relative;
-            
-              img{
+
+              img {
                 width: 24px;
-              height: 24px;
+                height: 24px;
               }
 
               &::before {
@@ -155,7 +155,7 @@ $color_2: #140f10;
 
               &.active {
                 margin-right: 40px;
-                img{
+                img {
                   width: 38px;
                   height: 38px;
                 }
@@ -186,6 +186,12 @@ $color_2: #140f10;
         //Form Css starts here
         form.mktoForm {
           gap: 0;
+
+          &:not(.flydown-form) {
+            @media (max-width: 1023.98px) {
+              padding: 0 36px;
+            }
+          }
 
           .mktoFormRow {
             gap: 24px;
@@ -421,6 +427,7 @@ $color_2: #140f10;
 
           @media (max-width: 1023.98px) {
             text-align: center;
+            margin-bottom: 30px;
           }
         }
 
@@ -443,7 +450,7 @@ $color_2: #140f10;
         padding: 0;
 
         @media (max-width: 1023.98px) {
-          margin: 24px 0 30px;
+          margin: 24px 0 8px;
         }
       }
 
@@ -482,13 +489,14 @@ $color_2: #140f10;
         @media (max-width: 1023.98px) {
           display: flex;
           flex-direction: column;
+          margin-bottom: 28px;
         }
       }
 
       @media (max-width: 1023.98px) {
         flex-direction: column;
         align-items: flex-start;
-        // top: 42px;
+        // margin-bottom: 28px;
       }
 
       @media (max-width: 767.98px) {
@@ -596,6 +604,11 @@ $range__thumb-colour: #099 !default;
     width: $range__track-width;
     width: var(--track-width);
     max-width: 314px;
+
+    @media (max-width: 1023.98px) {
+      max-width: 356px;
+      margin-top: -6px;
+    }
   }
 
   .range__labels {
@@ -604,6 +617,10 @@ $range__thumb-colour: #099 !default;
     margin-top: 0;
     margin-bottom: 1em;
     line-height: 1;
+
+    @media (max-width: 1023.98px) {
+      margin-bottom: 30px;
+    }
 
     span {
       color: #000;
