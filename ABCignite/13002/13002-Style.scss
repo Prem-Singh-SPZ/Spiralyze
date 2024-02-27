@@ -42,19 +42,13 @@ $color_2: #140f10;
         padding: 30px;
       }
 
+       @media (max-width: 767.98px) {
+        padding: 0px;
+      }
+
       .modal__close {
         top: 22px;
         right: 20px;
-
-        // @media (max-width: 1023.98px) {
-        //   top: 10px;
-        //   right: 12px;
-        // }
-
-        @media (max-width: 767.98px) {
-          top: 4px;
-          right: 7px;
-        }
 
         svg {
           width: 16px;
@@ -93,9 +87,10 @@ $color_2: #140f10;
 
         @media (max-width: 767.98px) {
           box-shadow: none;
-          padding: 32px 32px 24px;
+          padding: 32px 20px 20px;
           min-width: auto;
           border-bottom: 0;
+          margin-bottom: 38px;
         }
 
         .spz-demo-title {
@@ -114,6 +109,10 @@ $color_2: #140f10;
         }
 
         .multi-steps {
+          @media screen and (max-width: 767.98px) {
+            padding-top: 22px;
+          }
+
           .steps {
             display: flex;
             justify-content: center;
@@ -181,6 +180,10 @@ $color_2: #140f10;
           line-height: 24px;
           text-align: center;
           margin: 0 0 20px;
+
+          @media (max-width: 767.98px) {
+            font-size: 14px;
+          }
         }
 
         //Form Css starts here
@@ -188,8 +191,12 @@ $color_2: #140f10;
           gap: 0;
 
           &:not(.flydown-form) {
-            @media (max-width: 1023.98px) {
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
               padding: 0 36px;
+            }
+
+            @media (max-width: 767.98px) {
+              padding: 0;
             }
           }
 
@@ -248,8 +255,11 @@ $color_2: #140f10;
                     white-space: nowrap;
 
                     @media (min-width: 767.98px) {
-                      // max-width: calc(100% - 10px);
                       max-width: 100%;
+                    }
+
+                    @media screen and (max-width: 767.98px) {
+                      height: 56px;
                     }
                   }
 
@@ -373,6 +383,7 @@ $color_2: #140f10;
                 .cta-arrow {
                   margin-left: 10px;
                   pointer-events: none;
+                  padding: 0;
                 }
 
                 &:hover {
@@ -383,19 +394,25 @@ $color_2: #140f10;
 
             &.custom-btn-row {
               margin-bottom: 20px;
-
               margin-top: -4px;
+              width: 100%;
               @media (max-width: 1023.98px) {
               }
 
               .mktoButtonWrap {
                 margin-top: 0;
+                width: 100%;
 
                 .mktoButton {
                   width: 133px;
                   display: flex;
                   align-items: center;
                   padding: 18px 32px;
+
+                  @media screen and (max-width: 767.98px) {
+                    width: 100%;
+                    justify-content: center;
+                  }
                 }
               }
             }
@@ -428,6 +445,9 @@ $color_2: #140f10;
           @media (max-width: 1023.98px) {
             text-align: center;
             margin-bottom: 30px;
+          }
+          @media (max-width: 767.98px) {
+            margin-bottom: 20px;
           }
         }
 
@@ -500,23 +520,23 @@ $color_2: #140f10;
       }
 
       @media (max-width: 767.98px) {
-        padding: 0px 0px 23px;
-        border-radius: 24px;
-        max-width: 335px;
+        border-radius: 32px;
+        max-width: 340px;
+        width: 100%;
         // top: 40px;
 
         .flydown-modal__inner {
           .spz-demo-title {
-            font-size: 26px;
+            font-size: 28px;
             font-style: normal;
-            font-weight: 600;
-            line-height: 140%;
+            font-weight: 500;
+            line-height: 40px;
           }
         }
 
         .bullet-section {
           margin-bottom: 0px;
-          padding: 0 31.5px;
+          padding: 0 20px 16px;
           position: relative;
 
           &::before {
@@ -531,10 +551,10 @@ $color_2: #140f10;
             margin: auto;
           }
 
-          .bullet-sub-title {
-            font-size: 14px;
-            line-height: 130%;
-          }
+          // .bullet-sub-title {
+          //   font-size: 14px;
+          //   line-height: 130%;
+          // }
 
           .bullet-title {
             font-size: 22px;
@@ -546,7 +566,7 @@ $color_2: #140f10;
           margin: 15px 0 25px;
 
           .bullet-point {
-            margin-bottom: 24px;
+            margin-bottom: 20px;
           }
         }
       }
@@ -622,6 +642,10 @@ $range__thumb-colour: #099 !default;
       margin-bottom: 30px;
     }
 
+    @media (max-width: 767.98px) {
+      margin-bottom: 20px;
+    }
+
     span {
       color: #000;
       font-family: Poppins;
@@ -658,7 +682,7 @@ $range__thumb-colour: #099 !default;
         content: "";
         position: absolute;
         top: -19px;
-        right: 6px;
+        right: 13px;
         width: 10px;
         height: 10px;
         border-radius: 50%;
@@ -673,7 +697,8 @@ $range__thumb-colour: #099 !default;
     --sx: calc(
       0.5 * #{$range__thumb-diameter} + var(--ratio) * (100% - #{$range__thumb-diameter})
     );
-
+    position: relative;
+    z-index: 1;
     margin: 0;
     padding: 0;
     width: $range__track-width;

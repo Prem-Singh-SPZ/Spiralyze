@@ -41,15 +41,14 @@
     padding: 30px;
   }
 }
+@media (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container {
+    padding: 0px;
+  }
+}
 .spz-13002 .modal .modal__container .modal__close {
   top: 22px;
   right: 20px;
-}
-@media (max-width: 767.98px) {
-  .spz-13002 .modal .modal__container .modal__close {
-    top: 4px;
-    right: 7px;
-  }
 }
 .spz-13002 .modal .modal__container .modal__close svg {
   width: 16px;
@@ -84,9 +83,10 @@
   .spz-13002 .modal .modal__container .flydown-modal__inner {
     -webkit-box-shadow: none;
             box-shadow: none;
-    padding: 32px 32px 24px;
+    padding: 32px 20px 20px;
     min-width: auto;
     border-bottom: 0;
+    margin-bottom: 38px;
   }
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .spz-demo-title {
@@ -97,6 +97,11 @@
   font-weight: 500;
   line-height: 40px;
   margin: 0 0 20px;
+}
+@media screen and (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps {
+    padding-top: 22px;
+  }
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner .multi-steps .steps {
   display: -webkit-box;
@@ -169,12 +174,22 @@
   text-align: center;
   margin: 0 0 20px;
 }
+@media (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container .flydown-modal__inner .question {
+    font-size: 14px;
+  }
+}
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm {
   gap: 0;
 }
-@media (max-width: 1023.98px) {
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
   .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm:not(.flydown-form) {
     padding: 0 36px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm:not(.flydown-form) {
+    padding: 0;
   }
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow {
@@ -235,6 +250,11 @@
 @media (min-width: 767.98px) {
   .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
     max-width: 100%;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+    height: 56px;
   }
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
@@ -326,6 +346,7 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton .cta-arrow {
   margin-left: 10px;
   pointer-events: none;
+  padding: 0;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
   background-color: #be5d17 !important;
@@ -333,9 +354,11 @@
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row {
   margin-bottom: 20px;
   margin-top: -4px;
+  width: 100%;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap {
   margin-top: 0;
+  width: 100%;
 }
 .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap .mktoButton {
   width: 133px;
@@ -346,6 +369,14 @@
       -ms-flex-align: center;
           align-items: center;
   padding: 18px 32px;
+}
+@media screen and (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap .mktoButton {
+    width: 100%;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
 }
 .spz-13002 .modal .modal__container .bullet-section {
   margin-right: 20px;
@@ -373,6 +404,11 @@
   .spz-13002 .modal .modal__container .bullet-section .bullet-sub-title {
     text-align: center;
     margin-bottom: 30px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-13002 .modal .modal__container .bullet-section .bullet-sub-title {
+    margin-bottom: 20px;
   }
 }
 .spz-13002 .modal .modal__container .bullet-section .bullet-title {
@@ -450,19 +486,19 @@
 }
 @media (max-width: 767.98px) {
   .spz-13002 .modal .modal__container {
-    padding: 0px 0px 23px;
-    border-radius: 24px;
-    max-width: 335px;
+    border-radius: 32px;
+    max-width: 340px;
+    width: 100%;
   }
   .spz-13002 .modal .modal__container .flydown-modal__inner .spz-demo-title {
-    font-size: 26px;
+    font-size: 28px;
     font-style: normal;
-    font-weight: 600;
-    line-height: 140%;
+    font-weight: 500;
+    line-height: 40px;
   }
   .spz-13002 .modal .modal__container .bullet-section {
     margin-bottom: 0px;
-    padding: 0 31.5px;
+    padding: 0 20px 16px;
     position: relative;
   }
   .spz-13002 .modal .modal__container .bullet-section::before {
@@ -476,10 +512,6 @@
     right: 0;
     margin: auto;
   }
-  .spz-13002 .modal .modal__container .bullet-section .bullet-sub-title {
-    font-size: 14px;
-    line-height: 130%;
-  }
   .spz-13002 .modal .modal__container .bullet-section .bullet-title {
     font-size: 22px;
     line-height: 140%;
@@ -488,7 +520,7 @@
     margin: 15px 0 25px;
   }
   .spz-13002 .modal .modal__container .bullet-wrapper .bullet-point {
-    margin-bottom: 24px;
+    margin-bottom: 20px;
   }
 }
 
@@ -525,6 +557,11 @@
     margin-bottom: 30px;
   }
 }
+@media (max-width: 767.98px) {
+  .range .range__labels {
+    margin-bottom: 20px;
+  }
+}
 .range .range__labels span {
   color: #000;
   font-family: Poppins;
@@ -557,7 +594,7 @@
   content: "";
   position: absolute;
   top: -19px;
-  right: 6px;
+  right: 13px;
   width: 10px;
   height: 10px;
   border-radius: 50%;
@@ -569,6 +606,8 @@
   --sx: calc(
     0.5 * 1.5em + var(--ratio) * (100% - 1.5em)
   );
+  position: relative;
+  z-index: 1;
   margin: 0;
   padding: 0;
   width: 14.5em;
