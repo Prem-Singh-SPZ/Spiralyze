@@ -141,7 +141,7 @@ body {
                         font-weight: 400;
                         font-size: 16px;
                         line-height: 24px;
-                        color: #4a4a4a;
+                        color: #f0eeee;
                         -webkit-transition: all 0.3s ease-in-out;
                         transition: all 0.3s ease-in-out;
                         pointer-events: none;
@@ -149,16 +149,6 @@ body {
                         letter-spacing: 0;
                       }
                       .hs-input {
-                        &:-webkit-autofill,
-                        &:-webkit-autofill:hover,
-                        &:-webkit-autofill:focus {
-                          -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
-                          transition: background-color 5000s ease-in-out 0s !important;
-                          -webkit-text-fill-color: #000 !important;
-                          z-index: 2;
-                          position: relative;
-                        }
-
                         &:not([type="checkbox"]) {
                           &:not([type="radio"]) {
                             -webkit-box-sizing: border-box;
@@ -168,29 +158,35 @@ body {
                             align-items: center;
                             padding: 1px 20px !important;
                             height: 48px;
-                            width: 100% !important;
-                            border: 1px solid rgba(0, 0, 0, 0.1) !important;
-                            background: var(--Surface-Light, #f8f7f7);
+                            width: 416px !important;
+                            border-radius: 100px !important;
+                            border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                            background: rgba(126, 126, 126, 0.35) !important;
                             outline: none;
                             -webkit-transition: all 0.3s ease-in-out;
                             transition: all 0.3s ease-in-out;
                             margin: 0px !important;
                             background-clip: padding-box !important;
+                            font-size: 16px !important;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 24px;
+                            color: #fff !important;
 
                             &::placeholder {
                               display: none;
                               color: transparent;
                             }
                             &:hover {
-                              border: 1px solid rgba(0, 0, 0, 0.2) !important;
+                              border: 1px solid rgba(255, 255, 255, 0.6) !important;
+                              background: rgba(74, 74, 74, 0.6) !important;
 
                               & ~ label {
-                                color: #000;
+                                color: #fff;
                               }
                             }
                             &:focus {
-                              border: 1px solid rgba(0, 0, 0, 0.4) !important;
-                              background-color: #fff !important;
+                              border: 1px solid #fff !important;
                             }
                             &:focus ~ label {
                               top: -8px;
@@ -198,10 +194,10 @@ body {
                               font-style: normal;
                               font-weight: 400;
                               line-height: 16px;
-                              background: #fff;
+                              background: rgba(74, 74, 74, 1);
                               padding: 0 4px;
                               left: 16px;
-                              color: #000000;
+                              color: #fff;
                             }
 
                             &.error {
@@ -220,10 +216,10 @@ body {
                             font-style: normal;
                             font-weight: 400;
                             line-height: 16px;
-                            background: #fff;
+                            background: rgba(74, 74, 74, 1);
                             padding: 0 4px;
                             left: 16px;
-                            color: #7e7e7e;
+                            color: #F0EEEE;
                           }
                         }
                       }
@@ -271,8 +267,8 @@ body {
                     .actions {
                       position: relative;
                       max-width: initial;
-                      width: 100%;
-                      margin: 0 !important;
+                      width: 142px;
+                      margin: 0 0 0 -142px !important;
                       padding: 0 !important;
 
                       @media screen and (max-width: 767.98px) {
@@ -300,13 +296,14 @@ body {
                         outline: none;
                         margin: 0 !important;
                         display: block;
+
                         &:hover {
                           color: #000000 !important;
                           background: #ffffff !important;
                         }
                         &:active {
-                          color: #000000 !important;
-                          background: #ffffff !important;
+                          color: #fff !important;
+                          background: #4a4a4a !important;
                         }
 
                         @media (max-width: 767.98px) {

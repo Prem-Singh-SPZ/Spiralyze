@@ -43,12 +43,6 @@ function appendInputLabel() {
         el.parentNode.insertBefore(label, el.nextSibling);
       }
     });
-
-  document
-    .querySelectorAll('input.hs-input:not([type="hidden"])')
-    .forEach(function (el) {
-      el.setAttribute("placeholder", " ");
-    });
 }
 
 // On input focus add class on closest parent .field class
