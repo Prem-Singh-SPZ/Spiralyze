@@ -24,8 +24,8 @@ body {
                   rgba(104, 204, 232, 0.4) 0%,
                   rgba(104, 204, 232, 0) 100%
                 ),
-                var(--Surface-Main, #000) !important;
-                padding: 40px 20px 28px 20px;
+                #000 !important;
+              padding: 40px 20px 28px 20px;
             }
 
             .subscribe_form_outer {
@@ -68,10 +68,9 @@ body {
                       .hs-error-msgs.inputs-list {
                         position: absolute;
                         display: inline-block;
-                        background: var(--Surface-Error, #dc0000);
+                        background: #dc0000;
                         box-shadow: 0px 10px 40px -5px rgba(129, 24, 24, 0.16),
                           0px 2px 8px -5px rgba(129, 24, 24, 0.24);
-                        // color: #fff !important;
                         list-style: none;
                         text-align: center !important;
                         top: calc(100% + 8px);
@@ -79,7 +78,7 @@ body {
                         padding: 8px 12px !important;
                         z-index: 3;
                         width: auto;
-                        
+
                         @media (min-width: 767.98px) {
                           left: 40px;
                         }
@@ -216,14 +215,14 @@ body {
                             }
 
                             &.error {
-                              border: 1px solid var(--Dividers-Error, #dc0000) !important;
+                              border: 1px solid #dc0000 !important;
                             }
                           }
                         }
 
                         &:not(.is-placeholder) {
                           &:not(:placeholder-shown) {
-                            border: 1px solid var(--Neutrals-700, #293642);
+                            border: 1px solid  #293642;
                           }
                           &:not(:placeholder-shown) ~ label {
                             top: -8px;
@@ -241,7 +240,7 @@ body {
                       }
                       .hs-input[type="checkbox"] ~ span {
                         font-family: $titillium-font;
-                        color: var(--Fonts-isPrimary, #000);
+                        color:  #000;
                         font-size: 12px;
                         font-style: normal;
                         font-weight: 400;
@@ -298,7 +297,7 @@ body {
                         font-size: 16px !important;
                         font-style: normal;
                         font-weight: 700 !important;
-                        line-height: 24px !important; /* 150% */
+                        line-height: 24px !important; 
                         letter-spacing: 0.8px !important;
                         text-transform: uppercase !important;
                         color: #000 !important;
