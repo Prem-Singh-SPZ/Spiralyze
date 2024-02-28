@@ -35,6 +35,13 @@ body .modal .modal__container {
   border-radius: 32px;
   border: 0;
 }
+@media (max-height: 699.98px) {
+  body .modal .modal__container {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
 @media (max-width: 1023.98px) {
   body .modal .modal__container {
     max-width: 560px;
@@ -268,12 +275,12 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
   position: relative;
-  top: -16px;
+  top: -22px;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
   color: #dc251c;
   font-family: Poppins;
-  font-size: 14px;
+  font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
@@ -362,7 +369,10 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow
   padding: 0;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
-  background-color: #be5d17 !important;
+  background-color: #CC5F10 !important;
+}
+body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:active, body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:focus {
+  background-color: #F9D1B3 !important;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row {
   margin-bottom: 20px;
