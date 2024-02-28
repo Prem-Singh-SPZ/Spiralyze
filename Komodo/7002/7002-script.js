@@ -19,6 +19,8 @@ function loadTest() {
 
     //update innerHTMl of disclaimer text
     document.querySelector('main.body-wrapper--blog-post article.blog-post .widget-type-blog_subscribe .insights-subscribe .blog_subscribe_disclaimer').innerHTML = 'By providing your email address, you agree to receive marketing communications from Komodo Health.<br>For more information on how we process personal information, please refer to our published <a href="https://www.komodohealth.com/privacy-notice" rel="noopener" target="_blank">Privacy Notice</a>.';
+
+    document.querySelector('.widget-type-blog_subscribe #module_17001412262822.insights-subscribe .subscribe_form_outer .form-title .hs_cos_wrapper_type_inline_text').textContent = `Stay up-to-date on the latest healthcare tech news`;
   });
 }
 

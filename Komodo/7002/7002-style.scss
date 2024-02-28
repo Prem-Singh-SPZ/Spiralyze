@@ -9,11 +9,13 @@ body {
             background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/7002/cta_section_desktop.webp)
               no-repeat center center !important;
             background-size: cover !important;
+            padding: 40px 64px 48px;
 
             @media (min-width: 768px) and (max-width: 1023.98px) {
               background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/7002/cta_section_tablet.webp)
-              no-repeat center center !important;
-            background-size: cover !important;
+                no-repeat center center !important;
+              background-size: cover !important;
+              padding: 40px 40px 48px;
             }
 
             @media (max-width: 767.98px) {
@@ -23,6 +25,7 @@ body {
                   rgba(104, 204, 232, 0) 100%
                 ),
                 var(--Surface-Main, #000) !important;
+                padding: 40px 20px 28px 20px;
             }
 
             .subscribe_form_outer {
@@ -42,6 +45,7 @@ body {
                     display: flex;
                     justify-content: space-between;
                     margin-left: 0;
+                    padding-top: 32px;
 
                     @media (max-width: 767.98px) {
                       flex-direction: column;
@@ -50,9 +54,6 @@ body {
 
                     .field {
                       position: relative;
-                      //   width: 221.5px;
-                      //   max-width: 221.5px;
-                      //   margin-bottom: 10px;
 
                       @media (max-width: 991.98px) {
                         width: 100%;
@@ -129,9 +130,6 @@ body {
                       }
                       .input {
                         position: relative;
-                        // border-radius: 8px;
-                        // width: 221.5px;
-                        // max-width: 221.5px;
                         @media (max-width: 991.98px) {
                           width: 100%;
                           max-width: 100%;
@@ -180,6 +178,10 @@ body {
                             line-height: 24px;
                             color: #fff !important;
 
+                            @media (min-width: 767.98px) and (max-width: 991.98px) {
+                              width: 452px !important;
+                            }
+
                             @media screen and (max-width: 767.98px) {
                               width: 100% !important;
                             }
@@ -205,9 +207,10 @@ body {
                               font-style: normal;
                               font-weight: 400;
                               line-height: 16px;
-                              background: linear-gradient(180deg,#030507 40%,#1c2021 46%);
-                              padding: 0 4px;
-                              left: 16px;
+                              border-radius: 2px 2px 0px 0px;
+                              background: #364144;
+                              padding: 0;
+                              left: 20px;
                               color: #fff;
                             }
 
@@ -227,9 +230,10 @@ body {
                             font-style: normal;
                             font-weight: 400;
                             line-height: 16px;
-                            background: linear-gradient(180deg,#030507 40%,#1c2021 46%);
-                            padding: 0 4px;
-                            left: 16px;
+                            border-radius: 2px 2px 0px 0px;
+                            background: #364144;
+                            padding: 0;
+                            left: 20px;
                             color: #f0eeee;
                           }
                         }
@@ -339,6 +343,7 @@ body {
               line-height: 20px !important;
               text-align: left !important;
               max-width: 541px;
+              padding-top: 20px;
 
               a {
                 color: #f0eeee !important;
