@@ -113,7 +113,7 @@ function waitForElm(selector) {
   });
 }
 
-// Add class 'safari' (used for cart scrollbar)
+// Add class 'safari'
 if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
   document.body.classList.add('safari')
 }
