@@ -228,36 +228,40 @@ body {
                       }
                     }
 
-                    &:not(.is-placeholder) {
-                      &:not(:placeholder-shown) {
-                        border: 1px solid rgba(255, 255, 255, 0.3) !important;
-                      }
-                      &:not(:placeholder-shown) ~ label {
-                        top: -8px;
-                        font-size: 10px;
-                        font-style: normal;
-                        font-weight: 400;
-                        line-height: 16px;
-                        border-radius: 2px 2px 0px 0px;
-                        background: #364144;
-                        padding: 0;
-                        left: 20px;
-                        color: #f0eeee;
-                      }
-                    }
-                  }
-                  .hs-input[type="checkbox"] ~ span {
-                    font-family: $titillium-font;
-                    color: #000;
-                    font-size: 12px;
-                    font-style: normal;
-                    font-weight: 400;
-                    line-height: 20px;
-                    cursor: pointer;
-                    letter-spacing: 0;
+                    // &:not(.is-placeholder) {
+                    //   &:not(:placeholder-shown),
+                    //   &.value-filled {
+                    //     border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                    //   }
+                    //   &:not(:placeholder-shown) ~ label,
+                    //   &.value-filled ~ label {
+                    //     top: -8px;
+                    //     font-size: 10px;
+                    //     font-style: normal;
+                    //     font-weight: 400;
+                    //     line-height: 16px;
+                    //     border-radius: 2px 2px 0px 0px;
+                    //     background: #364144;
+                    //     padding: 0;
+                    //     left: 20px;
+                    //     color: #f0eeee;
+                    //   }
+                    // }
 
-                    .hs-form-required {
-                      display: none !important;
+                    &.value-filled {
+                      border: 1px solid rgba(255, 255, 255, 0.3) !important;
+                    }
+                    &.value-filled ~ label {
+                      top: -8px;
+                      font-size: 10px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 16px;
+                      border-radius: 2px 2px 0px 0px;
+                      background: #364144;
+                      padding: 0;
+                      left: 20px;
+                      color: #f0eeee;
                     }
                   }
 

@@ -91,7 +91,7 @@ function checkError() {
     if (!el.getAttribute("value")) {
       el.classList.add("no-value");
     } else {
-      el.classList.remove("no-value");
+      el.classList.add("value-filled");
     }
   });
 }
