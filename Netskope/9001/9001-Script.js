@@ -26,7 +26,7 @@ function copyModify() {
     });
 }
 
-function formModify() {
+function rearrangeFields() {
     const mktoFormRowElements = document.querySelectorAll('.netskope-component--request-demo-form form.mktoForm .mktoFormRow');
     mktoFormRowElements.forEach(function (element) {
         const mktoField = element.querySelector('.mktoField');
@@ -42,7 +42,10 @@ function formModify() {
             });
         }
     });
+}
 
+function formModify() {
+    rearrangeFields();
 
     //form title update
     var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
@@ -58,7 +61,6 @@ function formModify() {
 
         let changeLabels = setInterval(() => {
             textChng.textContent = 'Submit';
-            document.querySelector('#LblPostalCode').textContent = "Zip/Postal Code";
             document.querySelector('#LblEmail').textContent = "Business Email";
             document.querySelector('#LblCompany').textContent = "Company";
             document.querySelector('#LblTitle').textContent = "Job Title";
@@ -113,6 +115,15 @@ function formModify() {
         });
     });
 
+    function zipCodeField() {
+        waitForElm('#LblPostalCode').then(function () {
+            document.querySelector('#LblPostalCode').textContent = "Zip/Postal Code";
+            document.getElementById("PostalCode").setAttribute('tabindex', '9');
+            document.getElementById("PostalCode").closest('.mktoFormCol').classList.add('row-PostalCode');
+            rearrangeFields();
+        });
+    }
+
     document.getElementById("FirstName").setAttribute('tabindex', '1');
     document.getElementById("LastName").setAttribute('tabindex', '2');
     document.getElementById("Email").setAttribute('tabindex', '3');
@@ -120,7 +131,6 @@ function formModify() {
     document.getElementById("Company").setAttribute('tabindex', '5');
     document.getElementById("Title").setAttribute('tabindex', '6');
     document.getElementById("Country").setAttribute('tabindex', '7');
-    document.getElementById("PostalCode").setAttribute('tabindex', '9');
     document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '10');
 
     // form state
@@ -162,6 +172,7 @@ function formModify() {
 
     // On change of '#Country' field add class '.consent-check-oo-spz' on '.consent-check-spz .mktoFormCol' element
     document.querySelector('#Country').addEventListener('change', function () {
+        zipCodeField();
         if (document.querySelector('.consent-check-spz .mktoFormCol')) {
             document.querySelector('.consent-check-spz .mktoFormCol').classList.add('consent-check-oo-spz');
         }
