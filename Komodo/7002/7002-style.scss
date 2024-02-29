@@ -30,7 +30,7 @@ body {
           padding: 40px 20px 28px 20px;
         }
 
-        .submitted-message {
+        #spz_submitted_id.submitted-message {
           color: #fff !important;
         }
 
@@ -283,7 +283,7 @@ body {
                   &.field-error {
                     .hs-input:not([type="checkbox"]):not(
                         [type="radio"]
-                      ).error[name="email"]:not(.no-value)
+                      ).error[name="email"]
                       ~ label {
                       color: #dc0000;
                     }
