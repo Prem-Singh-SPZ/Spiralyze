@@ -58,6 +58,16 @@ body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__fo
   height: 69px;
   margin: 0 auto 40px;
 }
+body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form .abc-logo a {
+  outline: none !important;
+  text-decoration: none !important;
+  border: none !important;
+}
+body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form .abc-logo a img {
+  outline: none !important;
+  text-decoration: none !important;
+  border: none !important;
+}
 body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form .pricing-hero__form-title {
   color: #231f20;
   text-align: center;
@@ -82,6 +92,12 @@ body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__fo
 }
 body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap label.mktoLabel {
   text-transform: capitalize;
+  color: #37465a;
+  font-family: Poppins;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 26px;
 }
 body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField {
   color: #000;
@@ -122,6 +138,20 @@ body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__fo
   height: 52px;
   width: 184px;
   margin-top: 4px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 120%;
+}
+body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton::after {
+  -webkit-transition: al 0.3s ease-in-out;
+  transition: al 0.3s ease-in-out;
+}
+body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover {
+  background-color: #be5d17 !important;
+}
+body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover::after {
+  right: 40px;
 }
 @media screen and (max-width: 767.98px) {
   body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton {
@@ -129,6 +159,9 @@ body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__fo
   }
   body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton::after {
     right: 85px;
+  }
+  body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton:hover::after {
+    right: 75px;
   }
 }
 body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .marketo-form__notice {
@@ -138,6 +171,9 @@ body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__fo
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+}
+body #page #primary #main .pricing-bg .pricing-hero .container .pricing-hero__form form.marketo-form.mktoForm .marketo-form__notice a:hover {
+  color: #00599d;
 }
 body #page #primary #main footer.pricing-copy {
   display: none !important;
