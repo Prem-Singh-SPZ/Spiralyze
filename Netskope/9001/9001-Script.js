@@ -1,6 +1,6 @@
 document.body.classList.add('spz-9001');
 
-document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg" as="image">`
+document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1709197595/netskope/9001/Checkbox_checked.svg" as="image">`
 );
 
 //Form internal code
@@ -119,6 +119,7 @@ function formModify() {
         waitForElm('#LblPostalCode').then(function () {
             document.querySelector('#LblPostalCode').textContent = "Zip/Postal Code";
             document.getElementById("PostalCode").setAttribute('tabindex', '9');
+            document.getElementById("PostalCode").setAttribute('placeholder', '');;
             document.getElementById("PostalCode").closest('.mktoFormCol').classList.add('row-PostalCode');
             rearrangeFields();
         });
