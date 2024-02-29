@@ -310,7 +310,10 @@ body .body-wrapper .widget-type-blog_subscribe .insights-subscribe #spz_custom_i
 body .body-wrapper .widget-type-blog_subscribe .insights-subscribe #spz_custom_id.subscribe_form_outer .hs_cos_wrapper_type_form .hs-form.hs-custom-form.stacked .field.field-focus .hs-input:not([type=checkbox]):not([type=radio]).error ~ label {
   color: #dc0000;
 }
-body .body-wrapper .widget-type-blog_subscribe .insights-subscribe #spz_custom_id.subscribe_form_outer .hs_cos_wrapper_type_form .hs-form.hs-custom-form.stacked .field.field-error .hs-input:not([type=checkbox]):not([type=radio]).error[name=email] ~ label {
+body .body-wrapper .widget-type-blog_subscribe .insights-subscribe #spz_custom_id.subscribe_form_outer .hs_cos_wrapper_type_form .hs-form.hs-custom-form.stacked .field.field-error .hs-input:not([type=checkbox]):not([type=radio]).error.value-filled ~ label {
+  color: #dc0000;
+}
+body .body-wrapper .widget-type-blog_subscribe .insights-subscribe #spz_custom_id.subscribe_form_outer .hs_cos_wrapper_type_form .hs-form.hs-custom-form.stacked .field.field-error .hs-input:not([type=checkbox]):not([type=radio]).error[name=email]:not(.no-value) ~ label {
   color: #dc0000;
 }
 body .body-wrapper .widget-type-blog_subscribe .insights-subscribe #spz_custom_id.subscribe_form_outer .hs_cos_wrapper_type_form .hs-form.hs-custom-form.stacked .hs_error_rollup {

@@ -281,9 +281,13 @@ body {
                   }
 
                   &.field-error {
+                    .hs-input:not([type="checkbox"]):not([type="radio"]).error.value-filled
+                      ~ label {
+                      color: #dc0000;
+                    }
                     .hs-input:not([type="checkbox"]):not(
                         [type="radio"]
-                      ).error[name="email"]
+                      ).error[name="email"]:not(.no-value)
                       ~ label {
                       color: #dc0000;
                     }

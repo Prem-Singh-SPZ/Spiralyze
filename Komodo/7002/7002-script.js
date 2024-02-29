@@ -95,10 +95,14 @@ function checkError() {
       el.closest(".field").classList.remove("field-error");
     }
 
-    if (!el.getAttribute("value")) {
-      el.classList.add("no-value");
-    } else {
+    if (el.getAttribute("value") && el.getAttribute("value") != '') {
       el.classList.add("value-filled");
+      if (el.classList.contains("no-value"))
+        el.classList.remove("no-value");
+    } else {
+      if (el.classList.contains("value-filled"))
+        el.classList.remove("value-filled");
+      el.classList.add("no-value");
     }
   });
 }
