@@ -21,7 +21,6 @@ function code_inject() {
 }
 
 window.addEventListener("click", function (e) {
-    console.log(e.target);
     if (e.target.classList.contains("mktoButton")) {
         document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
             checkError(el);
@@ -68,12 +67,9 @@ function checkError(elem) {
             elem.closest('.mktoFormCol').classList.remove('field-error');
         }
         if (elem && elem.value && (elem.value != '')) {
-            // console.log(elem.value)
             elem.closest('.mktoFormCol').classList.add('input-filled');
-            // elem.closest('.mktoFormCol').classList.remove('field-error');
         } else {
             elem.closest('.mktoFormCol').classList.remove('input-filled');
-            // elem.closest('.mktoFormCol').classList.add('field-error');
         }
 
     }, 100);
