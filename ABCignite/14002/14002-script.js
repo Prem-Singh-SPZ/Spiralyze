@@ -16,12 +16,72 @@ function code_inject() {
     }
 
     document.querySelector(".pricing-hero__form .pricing-hero__form-title").textContent = "Get a Demo";
+
+    focusFields();
 }
 
 window.addEventListener("click", function (e) {
-    if (e.target.classList.contains("demo-btn")) {
+    console.log(e.target);
+    if (e.target.classList.contains("mktoButton")) {
+        document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+            checkError(el);
+        });
     }
 });
+
+// On input focus add class on closest parent field class
+function focusFields() {
+    document.querySelectorAll(' .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+        el.addEventListener('focus', function () {
+            el.closest('.mktoFormCol').classList.add('field-focus');
+        });
+        el.addEventListener('blur', function () {
+            el.closest('.mktoFormCol').classList.remove('field-focus');
+            checkError(el);
+        });
+
+        // add event listeners to the input element
+        el.addEventListener('keypress', () => {
+            checkError(el);
+        });
+
+        el.addEventListener('change', () => {
+            checkError(el);
+        });
+
+        el.addEventListener('keydown', () => {
+            checkError(el);
+        });
+
+        el.addEventListener('keyup', () => {
+            checkError(el);
+        });
+    });
+}
+
+// Function to add .field-error class on closest parent .field class if .error is exist on input
+function checkError(elem) {
+    let timeBuffer = setInterval(() => {
+        if (elem.closest('.mktoFormCol ').querySelector('.mktoError') && elem.closest('.mktoFormCol').querySelector('.mktoInvalid')) {
+            elem.closest('.mktoFormCol').classList.add('field-error');
+        } else {
+            elem.closest('.mktoFormCol').classList.remove('field-error');
+        }
+        if (elem && elem.value && (elem.value != '')) {
+            // console.log(elem.value)
+            elem.closest('.mktoFormCol').classList.add('input-filled');
+            // elem.closest('.mktoFormCol').classList.remove('field-error');
+        } else {
+            elem.closest('.mktoFormCol').classList.remove('input-filled');
+            // elem.closest('.mktoFormCol').classList.add('field-error');
+        }
+
+    }, 100);
+
+    setTimeout(() => {
+        clearInterval(timeBuffer);
+    }, 1000);
+}
 
 function waitForElm(selector) {
     return new Promise((resolve) => {
