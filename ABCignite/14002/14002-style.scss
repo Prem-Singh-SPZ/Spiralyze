@@ -1,0 +1,61 @@
+body {
+  #page {
+    #primary {
+      #main {
+        .pricing-bg {
+          .pricing-partners,
+          .pricing-hero__info {
+            display: none !important;
+          }
+          .pricing-hero {
+            background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitness/14002/frame_1171274773.webp)
+              no-repeat top left;
+            background-size: cover;
+            min-height: 100vh;
+            padding: 24px 0;
+            display: flex;
+            align-items: center;
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitness/14002/frame_1171274776.webp)
+                no-repeat top left;
+              background-size: cover;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitness/14002/frame_1171274775.webp)
+                no-repeat top left;
+              background-size: cover;
+            }
+
+            @media screen and (min-width: 1900.98px) {
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitness/14002/frame_1171274774.webp)
+                no-repeat top left;
+              background-size: cover;
+            }
+
+            .container {
+              justify-content: center;
+
+              .pricing-hero__form {
+                padding: 0px 40px 40px 40px;
+                border-radius: 12px;
+                background: #fff;
+                box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+
+                .abc-logo {
+                  width: 192px;
+                  height: 69px;
+                  margin: 0 auto 40px;
+                }
+              }
+            }
+          }
+        }
+        footer.pricing-copy {
+          display: none !important;
+        }
+      }
+    }
+  }
+}
