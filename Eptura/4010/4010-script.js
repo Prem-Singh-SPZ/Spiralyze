@@ -3,7 +3,7 @@
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.body.classList.add(identifyPage);
 
-    const assetURL = 'https://res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4010/';
+    const assetURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4010/';
 
     const rightBullets = [
         {
@@ -68,7 +68,7 @@
         },
         {
             pageName: "website-ioffice-demo",
-            pageLogo: "https://res.cloudinary.com/dxprfaxf3/image/upload/v1696950704/eptura/4006/ioffice-eptura-logo-color_2.svg",
+            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1696950704/eptura/4006/ioffice-eptura-logo-color_2.svg",
             logoAlt: "iOffice Logo",
             formSubTitle: "Get an iOffice demo",
             title: "Facility MANAGEMENT SOFTWARE",
@@ -76,7 +76,7 @@
             lisTitle1: "Set up workplace details",
             listContent1: "Add your floor plans, inventory, employee roles and locations, and additional details.",
             lisTitle2: "Manage your workplace",
-            listContent2: "Drag-and-drop to plan spaces. Track assets and send work orders. Book spaces in <br class='mobile-only'/> 1-click.",
+            listContent2: "Drag-and-drop to plan spaces. Track assets and send work orders. Book spaces in 1-click.",
             lisTitle3: "Enjoy a unified workplace strategy",
             listContent3: "Optimize space usage, asset health, and employee services based on usage trends.",
             bgDesktop: assetURL + "proxyclick_bg_1452.webp",
