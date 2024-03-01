@@ -90,15 +90,28 @@
 
     function loadTest() {
         updatePageContent();
-        setInterval(() => {
-            let distance = findDistanceBetweenElements(document.querySelector('#bullet_title_1'), document.querySelector('#bullet_title_3'));
-            document.querySelector('.spz-left-content .copy .bullets .dotted-bullet').style.height = distance + 'px';
-        }, 1000);
+        let intVar = setInterval(() => {
+            getDistance();
+        }, 500);
+
+        setTimeout(() => {
+            clearInterval(intVar);
+        }, 5000);
+
+        //window resize event   
+        window.addEventListener('resize', function () {
+            getDistance();
+        });
 
         // Add class 'safari' 
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.body.classList.add('safari')
         }
+    }
+
+    function getDistance() {
+        let distance = findDistanceBetweenElements(document.querySelector('#bullet_title_1'), document.querySelector('#bullet_title_3'));
+        document.querySelector('.spz-left-content .copy .bullets .dotted-bullet').style.height = distance + 'px';
     }
 
     function updatePageContent() {
