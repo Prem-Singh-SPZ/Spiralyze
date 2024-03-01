@@ -98,6 +98,10 @@
 
     function loadTest() {
         updatePageContent();
+        setInterval(() => {
+            let distance = findDistanceBetweenElements(document.querySelector('#bullet_title_1'), document.querySelector('#bullet_title_3'));
+            document.querySelector('.spz-left-content .copy .bullets .dotted-bullet').style.height = distance + 'px';
+        }, 1000);
 
         // Add class 'safari' 
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -112,7 +116,7 @@
 
                     document.querySelector('#form-over #form_title').textContent = con.formSubTitle;
 
-                  
+
                     document.querySelector('.spz-left-content .heading #bullet_subtitle').textContent = con.title;
                     document.querySelector('.spz-left-content .heading #bullet_main_title').textContent = con.subtitle;
 
@@ -125,7 +129,7 @@
                     document.querySelector('.spz-left-content .bullets  #bullet_title_3').textContent = con.lisTitle3;
                     document.querySelector('.spz-left-content .bullets  #bullet_content_3').textContent = con.listContent3;
 
-                    document.querySelector('.spz-left-content .bullets').insertAdjacentHTML('afterend', '<div class="trusted-partner-section"><div class="trusted-partner-title"><h6>Trusted by 16,000+ customers worldwide</h6></div><div class="trusted-partner"><div class="partner"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-comcast.svg" alt="Comcast"></div><div class="partner"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-nbcuniversal.svg" alt="NBCUniversal"></div><div class="partner"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-zoom.svg" alt="Zoom"></div><div class="partner"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-pepsico.svg" alt="Pepsico"></div><div class="partner"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-slack.svg" alt="Slack"></div></div></div>');
+                    document.querySelector('.spz-left-content .bullets').insertAdjacentHTML('afterend', '<div class="trusted-partner-section"><div class="trusted-partner-title"><h6>Trusted by 16,000+ customers worldwide</h6></div><div class="trusted-partner"><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-comcast.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-comcast-mob.svg" alt="Comcast"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-nbcuniversal.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-nbcuniversal-mob.svg" alt="NBCUniversal"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-zoom.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-zoom-mob.svg" alt="Zoom"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-pepsico-mob.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-pepsico.svg" alt="Pepsico"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-slack.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-slack-mob.svg" alt="Slack"></picture></div></div></div>');
 
                     setBgImage(con);
                 }
@@ -157,4 +161,14 @@
 })();
 
 
+
+//find distance between two elements in px
+function findDistanceBetweenElements(element1, element2) {
+    var element1Rect = element1.getBoundingClientRect();
+    var element2Rect = element2.getBoundingClientRect();
+    var distance = Math.sqrt(Math.pow(element2Rect.x - element1Rect.x, 2) + Math.pow(element2Rect.y - element1Rect.y, 2));
+
+    distance = distance + 12;
+    return distance;
+}
 
