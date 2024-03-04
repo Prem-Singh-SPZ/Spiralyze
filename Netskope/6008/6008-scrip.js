@@ -63,11 +63,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-icon">
-                                <img src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png"
-                                    alt="quote">
-                            </div>
-                            <div class=" v3-quotes-flip__quote-text" style="height: 144px;">
+                            <div class=" v3-quotes-flip__quote-text" >
                                 We chose Netskope over other vendors because it just seemed to be a more mature SSE platform
                                 with a better long-term plan." </div>
         
@@ -97,13 +93,8 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-icon">
-                                <img src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png"
-                                    alt="quote">
-                            </div>
-                            <div class=" v3-quotes-flip__quote-text" style="height: 144px;">
+                            <div class=" v3-quotes-flip__quote-text" >
                                 When it comes to SSE, Netskope provides an all-around product."
-                                <br><br>
                             </div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
@@ -132,13 +123,8 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-icon">
-                                <img src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png"
-                                    alt="quote">
-                            </div>
-                            <div class=" v3-quotes-flip__quote-text" style="height: 144px;">
+                            <div class=" v3-quotes-flip__quote-text" >
                                 Netskope can scale and is a leader in this SSE market segment."
-                                <br><br>
                             </div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
@@ -188,13 +174,12 @@ let checkjQuery = setInterval(function () {
         clearInterval(checkjQuery);
         // YOUR CODE HERE
         console.log("Jquery loaded");
-        jQuery(".v3-quotes-flip__quote-text", ".spz-quotes-slider").sameHeight();
-        //jQuery(".v3-quotes-flip_container ", "#v3-quotes-flip__65e5b30b33c9c").sameHeight();
+
         let blocked = false;
         let blockTimeout = null;
         let prevDeltaY = 0;
-        let id = "v3-quotes-flip__65e5b30b33c9c";
-        let $object = $("#" + id);
+        let id = "spz-quotes-slider";
+        let $object = $("." + id);
 
 
         let slider = jQuery('.spz-quotes-slider');
@@ -203,9 +188,10 @@ let checkjQuery = setInterval(function () {
             arrows: false,
             infinite: true,
             fade: true,
-            speed: 1000,
+            speed: 500,
             swipe: true,
             // autoplay: true,
+            adaptiveHeight: true,
 
             responsive: [{
                 breakpoint: 1025,
@@ -218,6 +204,7 @@ let checkjQuery = setInterval(function () {
             }],
 
         });
+
 
         //Implementing navigation of slides using mouse scroll
         slider.on('mousewheel DOMMouseScroll wheel mouseOver', (function (e) {
