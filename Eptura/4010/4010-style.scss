@@ -9,6 +9,9 @@ body#bodyId.form-overlay {
 
       .hero-wrapper-spz {
         .spz-wrapper {
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
+            margin: 32px 0;
+          }
           #form-over {
             box-shadow: none;
             @media screen and (max-width: 1023.98px) {
@@ -97,6 +100,11 @@ body#bodyId.form-overlay {
                   @media (min-width: 767.98px) and (max-width: 1023.98px) {
                     margin-bottom: 48px;
                   }
+
+                  @media (max-width: 1023.98px) {
+                    margin-bottom: 40px;
+                  }
+
                   .dotted-bullet {
                     &::before {
                       height: 100%;
@@ -154,7 +162,7 @@ body#bodyId.form-overlay {
                       text-transform: uppercase;
                       margin: 16px 0;
 
-                      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                      @media (max-width: 1023.98px) {
                         margin-bottom: 8px;
                       }
                     }
@@ -179,9 +187,19 @@ body#bodyId.form-overlay {
                       justify-content: center;
                       align-items: center;
 
-                      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                      @media (min-width: 1023.98px) {
+                        &:nth-child(4) {
+                          padding-top: 5px;
+                        }
+                      }
+
+                      @media (max-width: 1023.98px) {
                         height: 36px;
                         margin-right: 11px;
+                      }
+
+                      @media (max-width: 1023.98px) {
+                        margin-right: 6px;
                       }
                     }
                   }
