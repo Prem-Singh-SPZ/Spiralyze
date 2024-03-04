@@ -92,14 +92,15 @@ let bodyLoaded = setInterval(function () {
                   </picture></div>`;
                 });
 
+                document.querySelectorAll('.v3-quotes-flip_container.v3-quotes-flip__quote-container .v3-quotes-flip__quote-icon').forEach((item) => {   
+                    item.innerHTML = `<img alt="quote" data-src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png" class=" ls-is-cached lazyloaded" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png">`;
+                });
+
                 let checkjQuery = setInterval(function () {
                     if (typeof jQuery != "undefined" && jQuery.fn) {
                         clearInterval(checkjQuery);
-                        // YOUR CODE HERE
-                        console.log("Jquery loaded");
-
+                     
                         setTimeout(() => {
-
                             $(".v3-quotes-flip").slick('unslick');
                             jQuery(".v3-quotes-flip__quote-text", ".v3-quotes-flip").sameHeight(); let blocked = false; let blockTimeout = null; let prevDeltaY = 0; let id = "v3-quotes-flip"; let $object = $("." + id); let slider = jQuery('.v3-quotes-flip'); slider.slick({ dots: true, arrows: false, infinite: false, fade: true, speed: 1000, swipe: true,autoplay: true,
                                 autoplaySpeed: 1500, responsive: [{ breakpoint: 1025, settings: {  swipe: true, infinite: true }, }], }); slider.on('mousewheel DOMMouseScroll wheel mouseOver', (function (e) {

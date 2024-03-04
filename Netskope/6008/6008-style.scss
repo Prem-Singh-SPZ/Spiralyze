@@ -29,17 +29,21 @@ $font-family_3: "Lora";
     }
   }
   #components__content {
-    overflow: hidden;
+    // overflow: hidden;
+    background-color: #081a59;
     .v3-quotes-flip__row {
       background: url(//res.cloudinary.com/spiralyze/image/upload/v1707489254/netskope/6008/background_review_section_1440.svg)
         no-repeat;
       background-position: center;
       background-size: cover;
+      display: block !important;
 
       .v3-quotes-flip__row-inner {
         flex-flow: row-reverse;
+        align-items: center;
         .v3-quotes-flip_container {
           .hero-form-img-picture {
+            display: none;
             img {
               width: 100%;
             }
@@ -47,7 +51,105 @@ $font-family_3: "Lora";
 
           &.v3-quotes-flip__quote-container {
             background: none !important;
+            padding: 0 64px 0 0;
+            position: relative;
+            height: 420px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            .v3-quotes-flip__quote-icon {
+              position: absolute;
+              left: -28px;
+              top: 36px;
+              width: 30px;
+              height: 27px;
+              img {
+                width: 100%;
+              }
+            }
+
+            .v3-quotes-flip__quote-text {
+              color: #081a59;
+              font-family: Graphik;
+              font-size: 32px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 40px;
+              height: auto !important;
+              margin-bottom: 24px;
+            }
+
+            .v3-quotes-flip__quote-container-source {
+              .v3-quotes-flip__quote-container-source-author {
+                .v3-quotes-flip__quote-container-source-author-position {
+                  color: #081a59;
+                  font-family: Graphik;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 24px;
+                  margin-bottom: 8px;
+                }
+
+                .v3-quotes-flip__quote-container-source-author-company {
+                  color: #081a59;
+                  font-family: Graphik;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  margin-bottom: 16px;
+                  line-height: 24px;
+                }
+              }
+            }
+
+            .v3-quotes-flip__quote-container-source-link {
+              a {
+                color: #081a59;
+                font-family: Graphik;
+                font-size: 14px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+                text-decoration-line: underline;
+              }
+            }
           }
+        }
+      }
+    }
+
+    .v3-quotes-flip {
+      position: relative;
+      max-width: 1440px;
+      padding: 125px 0;
+      margin: auto;
+
+      .slick-dots {
+        position: absolute;
+        left: 64px;
+        bottom: 80px;
+        display: flex;
+        list-style: none;
+        grid-gap: 10px;
+        margin: 0;
+        padding: 0;
+        line-height: 0;
+        li.slick-active {
+          button {
+            background: #081a59;
+          }
+        }
+        button {
+          margin: 0;
+          width: 8px;
+          height: 8px;
+          padding: 0;
+          background: none;
+          font-size: 0;
+          border-radius: 50%;
+          border: 1px solid #081a59;
         }
       }
     }
@@ -643,32 +745,7 @@ $font-family_3: "Lora";
   //         line-height: 24px;
   //       }
   //     }
-  //     .slick-dots {
-  //       position: absolute;
-  //       left: 0;
-  //       bottom: -40px;
-  //       display: flex;
-  //       list-style: none;
-  //       grid-gap: 10px;
-  //       margin: 0;
-  //       padding: 0;
-  //       line-height: 0;
-  //       li.slick-active {
-  //         button {
-  //           background: #081a59;
-  //         }
-  //       }
-  //       button {
-  //         margin: 0;
-  //         width: 8px;
-  //         height: 8px;
-  //         padding: 0;
-  //         background: none;
-  //         font-size: 0;
-  //         border-radius: 50%;
-  //         border: 1px solid #081a59;
-  //       }
-  //     }
+  //
   //     .row {
   //       margin-left: 0;
   //       margin-right: 0;
@@ -1221,9 +1298,9 @@ $font-family_3: "Lora";
       position: relative;
       z-index: 1;
     }
-    .slick-list {
-      overflow: visible;
-    }
+    // .slick-list {
+    //   overflow: visible;
+    // }
     .hero-form-bg {
       overflow: hidden;
       padding-bottom: 35px;
