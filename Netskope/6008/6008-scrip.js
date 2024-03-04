@@ -51,28 +51,127 @@ let bodyLoaded = setInterval(function () {
                         `<h2 class="form-content-heading">Highest in Execution. Furthest in <span>Vision</span>.</h2><h4 class="ta-content-heading">Netskope recognized as a Leader in the 2023 GartnerÂ® Magic Quadrant<sup>TM</sup> for SSE.</h4>`
                     );
 
-                // var target = document.querySelector(".v3-quotes-flip");
-                // var wrap = document.createElement("div");
-                // wrap.appendChild(target.cloneNode(true));
+                document.querySelector("body .v3-quotes-flip").insertAdjacentHTML(
+                    "beforebegin",
+                    `<div class="hero-form-bg"><div class="container"><div class="hero-form-bg-container"><div class="hero-form-img__wrapper"><div class="hero-form-img-picture"><picture class="hero-form-img">
+              <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp">
+              <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/tablet_report.webp">
+              <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
+            </picture></div><div class="slider-wrap"><div id="v3-quotes-flip" class="v3 v3-quotes-flip spz-quotes-slider">
+            <div class=" v3-quotes-flip__row ">
+                <div class="container">
+                    <div class="row v3-quotes-flip__row-inner">
+                        <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
+                            <div class=" v3-quotes-flip__quote-icon">
+                                <img src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png"
+                                    alt="quote">
+                            </div>
+                            <div class=" v3-quotes-flip__quote-text" style="height: 144px;">
+                                We chose Netskope over other vendors because it just seemed to be a more mature SSE platform
+                                with a better long-term plan." </div>
+        
+                            <div class="v3-quotes-flip__quote-container-source ">
+        
+        
+                                <div class="v3-quotes-flip__quote-container-source-author ">
+                                    <div class="v3-quotes-flip__quote-container-source-author-name ">
+                                    </div>
+                                    <div class="v3-quotes-flip__quote-container-source-author-position ">
+                                        Information Security Manager </div>
+                                    <div class="v3-quotes-flip__quote-container-source-author-company ">
+                                        Large Enterprise Automotive &amp; Transport Company </div>
+        
+                                </div>
+        
+        
+                            </div>
+                            <div class="v3-quotes-flip__quote-container-source-link ">
+                                <a class=" " href="https://www.userevidence.com/assets/3563ELWZ" tabindex="0">UserEvidence</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" v3-quotes-flip__row ">
+                <div class="container">
+                    <div class="row v3-quotes-flip__row-inner">
+                        <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
+                            <div class=" v3-quotes-flip__quote-icon">
+                                <img src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png"
+                                    alt="quote">
+                            </div>
+                            <div class=" v3-quotes-flip__quote-text" style="height: 144px;">
+                                When it comes to SSE, Netskope provides an all-around product."
+                                <br><br>
+                            </div>
+        
+                            <div class="v3-quotes-flip__quote-container-source ">
+        
+        
+                                <div class="v3-quotes-flip__quote-container-source-author ">
+                                    <div class="v3-quotes-flip__quote-container-source-author-name ">
+                                    </div>
+                                    <div class="v3-quotes-flip__quote-container-source-author-position ">
+                                        Information Security Manager </div>
+                                    <div class="v3-quotes-flip__quote-container-source-author-company ">
+                                        Large Enterprise Financial Services Company </div>
+        
+                                </div>
+        
+        
+                            </div>
+                            <div class="v3-quotes-flip__quote-container-source-link ">
+                                <a class=" " href="https://www.userevidence.com/assets/7911FVGD" tabindex="-1">UserEvidence</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class=" v3-quotes-flip__row ">
+                <div class="container">
+                    <div class="row v3-quotes-flip__row-inner">
+                        <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
+                            <div class=" v3-quotes-flip__quote-icon">
+                                <img src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png"
+                                    alt="quote">
+                            </div>
+                            <div class=" v3-quotes-flip__quote-text" style="height: 144px;">
+                                Netskope can scale and is a leader in this SSE market segment."
+                                <br><br>
+                            </div>
+        
+                            <div class="v3-quotes-flip__quote-container-source ">
+        
+        
+                                <div class="v3-quotes-flip__quote-container-source-author ">
+                                    <div class="v3-quotes-flip__quote-container-source-author-name ">
+                                    </div>
+                                    <div class="v3-quotes-flip__quote-container-source-author-position ">
+                                        Sr. Security Architect </div>
+                                    <div class="v3-quotes-flip__quote-container-source-author-company ">
+                                        Global 500 Financial Services Company </div>
+        
+                                </div>
+        
+        
+                            </div>
+                            <div class="v3-quotes-flip__quote-container-source-link ">
+                                <a class=" " href="https://www.userevidence.com/assets/3683NUME" tabindex="-1">UserEvidence</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div></div></div></div></div></div>`
+                );
 
-                //     document.querySelector(".netskope_6008 .v3-quotes-flip").insertAdjacentHTML(
-                //         "beforebegin",
-                //         `<div class="hero-form-bg"><div class="container"><div class="hero-form-bg-container"><div class="hero-form-img__wrapper"><div class="hero-form-img-picture"><picture class="hero-form-img">
-                //   <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp">
-                //   <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/tablet_report.webp">
-                //   <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
-                //   <img src="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
-                // </picture></div><div class="slider-wrap">` +
-                //         wrap.innerHTML +
-                //         `</div></div></div></div></div>`
-                //     );
-
-                document.querySelectorAll(".v3-quotes-flip__quote-text").forEach((item) => {
-                    let arrow = document.createElement("span");
-                    arrow.textContent = '"';
-                    arrow.setAttribute("class", "ta-quote");
-                    item.prepend(arrow);
-                });
+                // document.querySelectorAll(".v3-quotes-flip__quote-text").forEach((item) => {
+                //     let arrow = document.createElement("span");
+                //     arrow.textContent = '"';
+                //     arrow.setAttribute("class", "ta-quote");
+                //     item.prepend(arrow);
+                // });
 
                 //Form internal code
                 waitForElm("body form.mktoForm .mktoFormCol .mktoFieldWrap input").then(function () {
@@ -80,44 +179,87 @@ let bodyLoaded = setInterval(function () {
                     setHiddenFields();
                 });
             });
-
-            waitForElm('.v3-quotes-flip.slick-initialized').then(function () {
-
-                document.querySelectorAll('.v3-quotes-flip_container:not(.v3-quotes-flip_container.v3-quotes-flip__quote-container)').forEach((item) => {
-                    item.innerHTML = `<div class="hero-form-img-picture"><picture class="hero-form-img">
-                    <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp">
-                    <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/tablet_report.webp">
-                    <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
-                  </picture></div>`;
-                });
-
-                document.querySelectorAll('.v3-quotes-flip_container.v3-quotes-flip__quote-container .v3-quotes-flip__quote-icon').forEach((item) => {   
-                    item.innerHTML = `<img alt="quote" data-src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png" class=" ls-is-cached lazyloaded" src="https://www.netskope.com/wp-content/themes/netskope/images/v3/quote-mark-light-bg.png">`;
-                });
-
-                let checkjQuery = setInterval(function () {
-                    if (typeof jQuery != "undefined" && jQuery.fn) {
-                        clearInterval(checkjQuery);
-                     
-                        setTimeout(() => {
-                            $(".v3-quotes-flip").slick('unslick');
-                            jQuery(".v3-quotes-flip__quote-text", ".v3-quotes-flip").sameHeight(); let blocked = false; let blockTimeout = null; let prevDeltaY = 0; let id = "v3-quotes-flip"; let $object = $("." + id); let slider = jQuery('.v3-quotes-flip'); slider.slick({ dots: true, arrows: false, infinite: false, fade: true, speed: 1000, swipe: true,autoplay: true,
-                                autoplaySpeed: 1500, responsive: [{ breakpoint: 1025, settings: {  swipe: true, infinite: true }, }], }); slider.on('mousewheel DOMMouseScroll wheel mouseOver', (function (e) {
-                                if ($(document).width() < 1024) { return; }
-                                let currentSlide = $(this).slick('slickCurrentSlide'); let slideCount = $(this)[0].slick.slideCount; let deltaY = e.originalEvent.deltaY; if ($(window).scrollTop() < $object.offset().top && $object.offset().top - $(window).scrollTop() < $object.height()) { } else { return }
-                                if (currentSlide === 0 && deltaY < 0 || currentSlide === slideCount - 1 && deltaY > 0) { return; }
-                                e.preventDefault(); e.stopPropagation(); clearTimeout(blockTimeout); blockTimeout = setTimeout(function () { blocked = false; }, 50); if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) { blocked = true; prevDeltaY = deltaY; if (deltaY > 0) { $(this).slick('slickNext'); } else { $(this).slick('slickPrev'); } }
-                            }));
-                        }, 100);
-                    }
-                });
-            });
-
         }
     }
 });
 
+let checkjQuery = setInterval(function () {
+    if (typeof jQuery != "undefined" && jQuery.fn) {
+        clearInterval(checkjQuery);
+        // YOUR CODE HERE
+        console.log("Jquery loaded");
+        jQuery(".v3-quotes-flip__quote-text", ".spz-quotes-slider").sameHeight();
+        //jQuery(".v3-quotes-flip_container ", "#v3-quotes-flip__65e5b30b33c9c").sameHeight();
+        let blocked = false;
+        let blockTimeout = null;
+        let prevDeltaY = 0;
+        let id = "v3-quotes-flip__65e5b30b33c9c";
+        let $object = $("#" + id);
+
+
+        let slider = jQuery('.spz-quotes-slider');
+        slider.slick({
+            dots: true,
+            arrows: false,
+            infinite: true,
+            fade: true,
+            speed: 1000,
+            swipe: true,
+            // autoplay: true,
+
+            responsive: [{
+                breakpoint: 1025,
+                settings: {
+                    autoplay: true,
+                    swipe: true,
+
+                    infinite: true
+                },
+            }],
+
+        });
+
+        //Implementing navigation of slides using mouse scroll
+        slider.on('mousewheel DOMMouseScroll wheel mouseOver', (function (e) {
+            if ($(document).width() < 1024) {
+                return;
+            }
+            let currentSlide = $(this).slick('slickCurrentSlide');
+            let slideCount = $(this)[0].slick.slideCount;
+            let deltaY = e.originalEvent.deltaY;
+
+            if ($(window).scrollTop() < $object.offset().top && $object.offset().top - $(window).scrollTop() < $object.height()) {
+
+            } else {
+
+                return
+            }
+
+            if (currentSlide === 0 && deltaY < 0 || currentSlide === slideCount - 1 && deltaY > 0) {
+                return;
+            }
+
+            e.preventDefault();
+            e.stopPropagation();
+
+            clearTimeout(blockTimeout);
+            blockTimeout = setTimeout(function () {
+                blocked = false;
+            }, 50);
+
+            if (deltaY > 0 && deltaY > prevDeltaY || deltaY < 0 && deltaY < prevDeltaY || !blocked) {
+                blocked = true;
+                prevDeltaY = deltaY;
+                if (deltaY > 0) {
+                    $(this).slick('slickNext');
+                } else {
+                    $(this).slick('slickPrev');
+                }
+            }
+        }));
+
+    }
+});
 
 // Generic Code
 function insertAfter(referenceNode, newNode) {
@@ -250,3 +392,4 @@ function setHiddenFields() {
         }, 100);
     });
 }
+
