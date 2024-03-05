@@ -324,7 +324,7 @@ function init5014() {
         //5015 changes
         waitForElm('#mega-menu-primary .mega-menu-grid.mega-has-icon').then((elm) => {
             if (document.querySelectorAll('#mega-menu-primary .mega-menu-grid.mega-has-icon .spz-custom-menu').length == 0) {
-                document.querySelector('#mega-menu-primary .mega-menu-grid.mega-has-icon').insertAdjacentHTML("beforebegin", `<li class="spz-custom-menu mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout"><a class="mega-menu-link" href="https://client.abcfinancial.com/(S(24medb3ygyhq2u45e1hpzqnd))/default.aspx">MEMBER LOGIN</a></li>`)
+                document.querySelector('#mega-menu-primary .mega-menu-grid.mega-has-icon').insertAdjacentHTML("beforebegin", `<li class="spz-custom-menu mega-menu-item mega-menu-item-type-custom mega-menu-item-object-custom mega-align-bottom-left mega-menu-flyout"><a class="mega-menu-link" href="https://client.abcfinancial.com/(S(24medb3ygyhq2u45e1hpzqnd))/default.aspx" target="_blank">MEMBER LOGIN</a></li>`)
             }
         });
 
