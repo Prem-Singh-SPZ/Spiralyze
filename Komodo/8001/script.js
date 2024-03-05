@@ -19,28 +19,36 @@ function updateFormStyling() {
 
       // Set focus on input
       focusFields();
-      moveDependentField();
+      // moveDependentField();
+      if (document.querySelector('.hs_consent_countries select')) {
+        document.querySelector('.hs_consent_countries select').setAttribute('autocomplete', 'none');
+      }
+
     }
   }, 100);
 }
 
-function moveDependentField() {
-  if (
-    document.querySelectorAll(".hs-form-spz fieldset.spz-custom-field")
-      .length == 0
-  ) {
-    document
-      .querySelector(".hs-form-spz fieldset.form-columns-0")
-      .insertAdjacentHTML(
-        "beforebegin",
-        `<fieldset class="form-columns-0 spz-custom-field"></fieldset>`
-      );
-  }
+// function moveDependentField() {
+//   if (
+//     document.querySelectorAll(".hs-form-spz fieldset.spz-custom-field")
+//       .length == 0
+//   ) {
+//     document
+//       .querySelector(".hs-form-spz fieldset.form-columns-0")
+//       .insertAdjacentHTML(
+//         "beforebegin",
+//         `<fieldset class="form-columns-0 spz-custom-field"></fieldset>`
+//       );
+//   }
 
-  waitForElm(".hs-fieldtype-booleancheckbox").then(function () {
-    moveElement(".hs-fieldtype-booleancheckbox", "fieldset.spz-custom-field");
-  });
-}
+//   waitForElm(".hs-fieldtype-booleancheckbox").then(function () {
+//     document.querySelector('.hs-input[type="checkbox"]').checked = false;
+//     moveElement(".hs-fieldtype-booleancheckbox", "fieldset.spz-custom-field");
+//     if (document.querySelector('.hs-form-spz .hs_consent_to_communicate')) {
+//       document.querySelector('.hs-form-spz .hs_consent_to_communicate').closest('fieldset').classList.add('spz-hidden');
+//     }
+//   });
+// }
 
 function appendFavicon() {
   document.querySelector("head").insertAdjacentHTML(
@@ -77,6 +85,10 @@ function appendInputLabel() {
     .forEach(function (el) {
       el.setAttribute("placeholder", " ");
     });
+
+  document.querySelector(`.hs-form-spz fieldset:nth-child(5)`).classList.add('spz-hidden');
+  document.querySelector(`.hs-form-spz fieldset:nth-child(6)`).classList.add('spz-hidden');
+
 }
 
 // On input focus add class on closest parent .field class
@@ -87,7 +99,7 @@ function focusFields() {
       el.closest(".field").classList.add("field-focus");
       setTimeout(function () {
         el.closest(".field").classList.remove("field-error");
-        // el.closest(".field").classList.remove("field-untouched");
+        checkError();
       }, 100);
     });
 
@@ -95,16 +107,16 @@ function focusFields() {
     el.addEventListener("blur", function () {
       el.closest(".field").classList.remove("field-focus");
       setTimeout(function () {
-        checkError();
+        // checkError();
       }, 100);
     });
 
     // On select element change remove .field-error class on closest parent .field class
     if (el.tagName == "SELECT") {
-      el.addEventListener("change", function () {
+      el.addEventListener("change", function (e) {
         el.closest(".field").classList.remove("field-error");
-        // moveDependentField();
-        updateFormStyling();
+        el.closest(".hs-dependent-field").classList.add("field-active");
+        console.log("moveDependentField");
       });
     }
   });
@@ -112,19 +124,31 @@ function focusFields() {
 
 // Function to add .field-error class on closest parent .field class if .error is exist on .hs-input
 function checkError() {
-  document.querySelectorAll(".hs-input").forEach(function (el) {
+  document.querySelectorAll(`.hs-input:not([type="hidden"]):not([type="checkbox"])`).forEach(function (el) {
     if (el.closest(".field").querySelector(".error") != null) {
       el.closest(".field").classList.add("field-error");
     } else {
       el.closest(".field").classList.remove("field-error");
     }
 
-    if (!el.getAttribute("value")) {
-      el.classList.add("no-value");
+    if (el.getAttribute("value") && el.getAttribute("value") != '') {
+      el.classList.add("value-filled");
+      if (el.classList.contains("no-value"))
+        el.classList.remove("no-value");
     } else {
-      el.classList.remove("no-value");
+      if (el.classList.contains("value-filled"))
+        el.classList.remove("value-filled");
+      el.classList.add("no-value");
     }
   });
+
+  if (document.querySelectorAll('.value-filled').length >= 3) {
+    document.querySelector('.hs-form-spz fieldset:nth-child(5)').classList.remove('spz-hidden');
+    document.querySelector('.hs-form-spz fieldset:nth-child(6)').classList.remove('spz-hidden');
+    // if (document.querySelector('.hs-form-spz .hs_consent_to_communicate') && document.querySelector('.hs-form-spz .hs_consent_to_communicate').closest('fieldset').classList.hasClass('spz-hidden')) {
+    //   document.querySelector('.hs-form-spz .hs_consent_to_communicate').closest('fieldset').classList.remove('spz-hidden');
+    // }
+  }
 }
 
 // Add class 'safari' on body if browser is safari
