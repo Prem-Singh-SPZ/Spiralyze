@@ -63,9 +63,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-text" >
-                                We chose Netskope over other vendors because it just seemed to be a more mature SSE platform
-                                with a better long-term plan." </div>
+                            <div class=" v3-quotes-flip__quote-text" >“We chose Netskope over other vendors because it just seemed to be a more mature SSE platform with a better long-term plan.”</div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
         
@@ -93,8 +91,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-text" >
-                                When it comes to SSE, Netskope provides an all-around product."
+                            <div class=" v3-quotes-flip__quote-text" >“When it comes to SSE, Netskope provides an all-around product.”
                             </div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
@@ -123,9 +120,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-text" >
-                                Netskope can scale and is a leader in this SSE market segment."
-                            </div>
+                            <div class=" v3-quotes-flip__quote-text" >“Netskope can scale and is a leader in this SSE market segment.”</div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
         
@@ -172,8 +167,6 @@ let bodyLoaded = setInterval(function () {
 let checkjQuery = setInterval(function () {
     if (typeof jQuery != "undefined" && jQuery.fn) {
         clearInterval(checkjQuery);
-        // YOUR CODE HERE
-        console.log("Jquery loaded");
 
         let blocked = false;
         let blockTimeout = null;
@@ -190,18 +183,19 @@ let checkjQuery = setInterval(function () {
             fade: true,
             speed: 500,
             swipe: true,
-            // autoplay: true,
+            autoplay: true,
+            autoplaySpeed: 1500,
             adaptiveHeight: true,
 
-            responsive: [{
-                breakpoint: 1025,
-                settings: {
-                    autoplay: true,
-                    swipe: true,
+            // responsive: [{
+            //     breakpoint: 1025,
+            //     settings: {
+            //         autoplay: true,
+            //         swipe: true,
 
-                    infinite: true
-                },
-            }],
+            //         infinite: true
+            //     },
+            // }],
 
         });
 
@@ -291,7 +285,7 @@ function formModify() {
             ".netskope_6008 .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton"
         );
         if (textChng) {
-            textChng.innerText = "Get the report";
+            textChng.innerText = "Download Now";
             clearInterval(form_button);
         }
     }, 100);
@@ -370,11 +364,11 @@ function setHiddenFields() {
         const field_int = setInterval(function () {
             if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
                 if (
-                    document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute("value") == "#6001_SPZ_Variant"
+                    document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute("value") == "#6008_spz_variant"
                 ) {
                     clearInterval(field_int);
                 }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute("value", "#6001_SPZ_Variant");
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute("value", "#6008_spz_variant");
             }
         }, 100);
     });
