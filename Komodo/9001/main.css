@@ -135,6 +135,16 @@ body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
       -ms-flex-align: center;
           align-items: center;
 }
+@media (max-width: 1023.98px) {
+  body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
+    padding: 48px 32px 56px;
+  }
+}
+@media (max-width: 767.98px) {
+  body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
+    padding: 32px 16px;
+  }
+}
 body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper .schedule-demo-title {
   color: #fff;
   text-align: center;
@@ -184,11 +194,21 @@ body .related-resources-section .related-resources .rr-card-container {
   -ms-overflow-style: none;
   overflow-x: auto;
 }
+@media (max-width: 767.98px) {
+  body .related-resources-section .related-resources .rr-card-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    overflow: hidden;
+  }
+}
 body .related-resources-section .related-resources .rr-card-container::-webkit-scrollbar {
   display: none;
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card {
   width: 364px;
+  min-width: 364px;
   margin: 0 12px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -346,7 +366,7 @@ body footer.footer {
   }
   body .related-resources-section .related-resources .rr-card-container .rr-card {
     min-width: 320px;
-    margin: 0 6px;
+    margin: 0 0 24px;
   }
   body .copyright-footer-section .copyright-footer .footer-copy {
     font-size: 12px;
