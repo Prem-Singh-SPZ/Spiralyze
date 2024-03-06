@@ -51,9 +51,10 @@ let bodyLoaded = setInterval(function () {
                         `<h2 class="form-content-heading">Highest in Execution. Furthest in <span>Vision</span>.</h2><h4 class="ta-content-heading">Netskope recognized as a Leader in the 2023 GartnerÂ® Magic Quadrant<sup>TM</sup> for SSE.</h4>`
                     );
 
-                document.querySelector("body .v3-quotes-flip").insertAdjacentHTML(
-                    "beforebegin",
-                    `<div class="hero-form-bg"><div class="container"><div class="hero-form-bg-container"><div class="hero-form-img__wrapper"><div class="hero-form-img-picture"><picture class="hero-form-img">
+                waitForElm("body .v3-quotes-flip").then(function () {
+                    document.querySelector("body .v3-quotes-flip").insertAdjacentHTML(
+                        "beforebegin",
+                        `<div class="hero-form-bg"><div class="container"><div class="hero-form-bg-container"><div class="hero-form-img__wrapper"><div class="hero-form-img-picture"><picture class="hero-form-img">
               <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp">
               <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/tablet_report.webp">
               <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
@@ -63,7 +64,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-text" >“We chose Netskope over other vendors because it just seemed to be a more mature SSE platform with a better long-term plan.”</div>
+                            <div class=" v3-quotes-flip__quote-text" ><span class="ta-quote">“</span>We chose Netskope over other vendors because it just seemed to be a more mature SSE platform with a better long-term plan.”</div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
         
@@ -91,7 +92,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-text" >“When it comes to SSE, Netskope provides an all-around product.”
+                            <div class=" v3-quotes-flip__quote-text" ><span class="ta-quote">“</span>When it comes to SSE, Netskope provides an all-around product.”
                             </div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
@@ -120,7 +121,7 @@ let bodyLoaded = setInterval(function () {
                 <div class="container">
                     <div class="row v3-quotes-flip__row-inner">
                         <div class="v3-quotes-flip_container v3-quotes-flip__quote-container col-12 light">
-                            <div class=" v3-quotes-flip__quote-text" >“Netskope can scale and is a leader in this SSE market segment.”</div>
+                            <div class=" v3-quotes-flip__quote-text" ><span class="ta-quote">“</span>Netskope can scale and is a leader in this SSE market segment.”</div>
         
                             <div class="v3-quotes-flip__quote-container-source ">
         
@@ -145,7 +146,8 @@ let bodyLoaded = setInterval(function () {
                 </div>
             </div>
         </div></div></div></div></div></div>`
-                );
+                    );
+                });
 
                 // document.querySelectorAll(".v3-quotes-flip__quote-text").forEach((item) => {
                 //     let arrow = document.createElement("span");
@@ -172,7 +174,7 @@ let checkjQuery = setInterval(function () {
         let blockTimeout = null;
         let prevDeltaY = 0;
         let id = "spz-quotes-slider";
-        let $object = $("." + id);
+        let object = jQuery("." + id);
 
 
         let slider = jQuery('.spz-quotes-slider');
@@ -202,14 +204,14 @@ let checkjQuery = setInterval(function () {
 
         //Implementing navigation of slides using mouse scroll
         slider.on('mousewheel DOMMouseScroll wheel mouseOver', (function (e) {
-            if ($(document).width() < 1024) {
+            if (jQuery(document).width() < 1024) {
                 return;
             }
-            let currentSlide = $(this).slick('slickCurrentSlide');
-            let slideCount = $(this)[0].slick.slideCount;
+            let currentSlide = jQuery(this).slick('slickCurrentSlide');
+            let slideCount = jQuery(this)[0].slick.slideCount;
             let deltaY = e.originalEvent.deltaY;
 
-            if ($(window).scrollTop() < $object.offset().top && $object.offset().top - $(window).scrollTop() < $object.height()) {
+            if (jQuery(window).scrollTop() < object.offset().top && object.offset().top - jQuery(window).scrollTop() < object.height()) {
 
             } else {
 
@@ -232,9 +234,9 @@ let checkjQuery = setInterval(function () {
                 blocked = true;
                 prevDeltaY = deltaY;
                 if (deltaY > 0) {
-                    $(this).slick('slickNext');
+                    jQuery(this).slick('slickNext');
                 } else {
-                    $(this).slick('slickPrev');
+                    jQuery(this).slick('slickPrev');
                 }
             }
         }));
