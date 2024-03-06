@@ -116,7 +116,6 @@ function focusFields() {
       el.addEventListener("change", function (e) {
         el.closest(".field").classList.remove("field-error");
         el.closest(".hs-dependent-field").classList.add("field-active");
-        console.log("moveDependentField");
       });
     }
   });
