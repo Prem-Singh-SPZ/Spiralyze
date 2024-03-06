@@ -55,11 +55,11 @@ let bodyLoaded = setInterval(function () {
                     document.querySelector("body .v3-quotes-flip").insertAdjacentHTML(
                         "beforebegin",
                         `<div class="hero-form-bg"><div class="container"><div class="hero-form-bg-container"><div class="hero-form-img__wrapper"><div class="hero-form-img-picture"><picture class="hero-form-img">
-              <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp">
-              <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/tablet_report.webp">
-              <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
-              <source srcset="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.png" type="image/png">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1706515940/netskope/6003/desktop_report.webp" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
+              <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp">
+              <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/tablet_report.webp">
+              <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6002/mobile_image.webp">
+              <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.png" type="image/png">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
             </picture></div><div class="slider-wrap"><div id="v3-quotes-flip" class="v3 v3-quotes-flip spz-quotes-slider">
             <div class=" v3-quotes-flip__row ">
                 <div class="container">
@@ -168,7 +168,7 @@ let bodyLoaded = setInterval(function () {
 });
 
 let checkjQuery = setInterval(function () {
-    if (typeof jQuery != "undefined" && jQuery.fn) {
+    if (typeof jQuery != "undefined" && jQuery.fn && jQuery.fn.slick) {
         clearInterval(checkjQuery);
 
         let blocked = false;
@@ -376,4 +376,3 @@ function setHiddenFields() {
         }, 100);
     });
 }
-
