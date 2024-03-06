@@ -1,0 +1,288 @@
+$color_1: #fff;
+$color_2: #68cce8;
+$font-family_1: Titillium Web, sans-serif;
+
+body {
+  .container {
+    margin: 0 auto;
+    max-width: 1180px;
+    padding: 0 20px;
+    position: relative;
+  }
+
+  @media (max-width: 767.98px) {
+    .container {
+      padding: 0 16px;
+    }
+  }
+
+  .brand-partner-section {
+    background: #111;
+    .container {
+      width: 100%;
+      max-width: 1440px;
+      padding: 0;
+    }
+    .brand-wrapper {
+      padding: 24px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      .brand-logo {
+        min-height: 40px;
+        width: 100%;
+      }
+    }
+  }
+  .related-resources-section {
+    border-top: 1px solid var(--Dividers-Medium, rgba(255, 255, 255, 0.2));
+    border-bottom: 1px solid var(--Dividers-Medium, rgba(255, 255, 255, 0.2));
+    background: radial-gradient(
+        107.74% 71.84% at -8.19% -13.24%,
+        rgba(104, 204, 232, 0.2) 0%,
+        rgba(104, 204, 232, 0) 100%
+      ),
+      radial-gradient(
+        401.4% 228.77% at 113.85% 137.37%,
+        rgba(104, 204, 232, 0.2) 0%,
+        rgba(104, 204, 232, 0) 100%
+      );
+
+    .related-resources {
+      padding: 80px 0;
+      .rr-title-container {
+        .rr-title {
+          color: $color_1;
+          font-family: $font-family_1;
+          font-size: 48px !important;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 56px;
+          margin: 0 0 47px;
+          letter-spacing: 0 !important;
+          text-align: center;
+        }
+      }
+      .rr-card-container {
+        display: flex;
+
+        align-items: center;
+
+        justify-content: space-between;
+        -ms-overflow-style: none;
+        overflow-x: auto;
+        &::-webkit-scrollbar {
+          display: none;
+        }
+        .rr-card {
+          width: 364px;
+          margin: 0 12px;
+
+          display: flex;
+          flex-direction: column;
+          .card-img {
+            width: 100%;
+            height: 196px;
+            img {
+              width: 100%;
+              height: 100%;
+              -o-object-fit: cover;
+              object-fit: cover;
+            }
+          }
+          .card-content {
+            .card-middle-border {
+              padding: 12px 24px 8px 24px;
+              background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/card_header_desktop_tablet_product.webp)
+                no-repeat;
+              background-position: left bottom;
+              background-size: cover;
+              color: $color_1;
+              font-family: $font-family_1;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 20px;
+              letter-spacing: 0.6px;
+              text-transform: uppercase;
+            }
+            .copy {
+              background: #000
+                url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_desktop_tablet_product_card.webp)
+                no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+          }
+
+          .card-content {
+            flex-grow: 1;
+            display: flex;
+            flex-direction: column;
+            .copy {
+              padding: 24px;
+              flex-grow: 1;
+              .rr-title {
+                color: $color_1;
+                font-family: $font-family_1;
+                font-size: 18px !important;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 26px;
+                height: 101px;
+                margin: 0 0 16px;
+                -webkit-line-clamp: 2;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                display: block;
+              }
+              a {
+                width: fit-content;
+                display: block;
+              }
+              .rr-anchor {
+                color: $color_2;
+                font-family: $font-family_1;
+                font-size: 12px !important;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                margin: 8px 4px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  .copyright-footer-section {
+    .copyright-footer {
+      .footer-copy {
+        color: $color_1;
+        font-family: $font-family_1;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        text-align: center;
+        padding: 16px;
+      }
+    }
+  }
+  footer.footer {
+    display: none !important;
+  }
+}
+@media (max-width: 1023.98px) {
+  body {
+    .brand-partner-section {
+      .brand-wrapper {
+        .brand-logo {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/v1709643925/KomodoHealth/8001/Social_proof_768.svg)
+            no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+          min-height: 36px;
+          margin-right: 6px;
+        }
+      }
+    }
+    .related-resources-section {
+      background: radial-gradient(
+          225.71% 171.94% at 63.35% 137.74%,
+          rgba(104, 204, 232, 0.2) 0%,
+          rgba(104, 204, 232, 0) 100%
+        ),
+        var(--Surface-Main, #000);
+      border: 0;
+      .container {
+        padding: 0;
+      }
+      .related-resources {
+        padding: 65px 0 78px;
+        .rr-title-container {
+          .rr-title {
+            text-align: center;
+          }
+        }
+        .rr-card-container {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  body {
+    .brand-partner-section {
+      .brand-wrapper {
+        .brand-logo {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/v1709643925/KomodoHealth/8001/Social_proof_360.svg)
+            no-repeat !important;
+          background-size: cover !important;
+          background-position: center !important;
+          min-height: 80px;
+          max-width: 360px;
+          margin: auto;
+        }
+      }
+    }
+    .related-resources-section {
+      background: radial-gradient(
+          276.84% 204.33% at 102.5% -1.19%,
+          rgba(104, 204, 232, 0.2) 0%,
+          rgba(104, 204, 232, 0) 100%
+        ),
+        var(--Surface-Main, #000);
+      .related-resources {
+        max-width: 100%;
+        margin: auto;
+        padding: 36px 0 48px;
+        .rr-title-container {
+          .rr-title {
+            text-align: center;
+            font-size: 40px !important;
+            line-height: 48px !important;
+            margin: 0 0 36px;
+          }
+        }
+        .rr-card-container {
+          justify-content: flex-start;
+          .rr-card {
+            min-width: 320px;
+            margin: 0 6px;
+          }
+        }
+      }
+    }
+    .copyright-footer-section {
+      .copyright-footer {
+        .footer-copy {
+          font-size: 12px;
+          line-height: 20px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 1023.98px) {
+  body {
+    .related-resources-section {
+      .related-resources {
+        .rr-card-container {
+          .rr-card {
+            &:first-child {
+              margin-left: 0;
+            }
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+}
