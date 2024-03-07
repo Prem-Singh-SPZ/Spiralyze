@@ -120,7 +120,21 @@ body .related-resources-section:not(.schedule-demo-sticky) {
   background: radial-gradient(107.74% 71.84% at -8.19% -13.24%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%), radial-gradient(401.4% 228.77% at 113.85% 137.37%, rgba(104, 204, 232, 0.2) 0%, rgba(104, 204, 232, 0) 100%);
 }
 body .related-resources-section.schedule-demo-sticky .related-resources {
-  padding: 80px 0 20px;
+  padding: 80px 0 24px;
+}
+body .related-resources-section.schedule-demo-sticky .see-more-anchor {
+  text-align: center;
+}
+body .related-resources-section.schedule-demo-sticky .see-more-anchor .see-more {
+  color: #68cce8;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.8px;
+  text-decoration-line: underline;
+  text-transform: uppercase;
 }
 body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
   display: -webkit-box;
@@ -134,15 +148,24 @@ body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_desktop_cta.webp) no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 @media (max-width: 1023.98px) {
   body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
     padding: 48px 32px 56px;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_tablet_cta.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 @media (max-width: 767.98px) {
   body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
     padding: 32px 16px;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_mobile_cta.webp) no-repeat;
+    background-position: center;
+    background-size: cover;
   }
 }
 body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper .schedule-demo-title {
@@ -160,12 +183,7 @@ body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper .sch
 }
 body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper .schedule-demo-cta .spz-cta {
   margin: auto;
-  background: #fff;
-  color: #000;
-}
-body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper .schedule-demo-cta .spz-cta:hover {
-  background-color: #68cce8;
-  color: #000;
+  width: 186px;
 }
 body .related-resources-section .related-resources {
   padding: 80px 0;

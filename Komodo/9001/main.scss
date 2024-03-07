@@ -131,7 +131,23 @@ body {
 
     &.schedule-demo-sticky {
       .related-resources {
-        padding: 80px 0 20px;
+        padding: 80px 0 24px;
+      }
+
+      .see-more-anchor {
+        text-align: center;
+
+        .see-more {
+          color: $color_2;
+          font-family: $font-family_1;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 20px;
+          letter-spacing: 0.8px;
+          text-decoration-line: underline;
+          text-transform: uppercase;
+        }
       }
 
       .schedule-demo-wrapper {
@@ -139,13 +155,25 @@ body {
         padding: 48px 150px 56px 150px;
         flex-direction: column;
         align-items: center;
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_desktop_cta.webp)
+          no-repeat;
+        background-position: center;
+        background-size: cover;
 
         @media (max-width: 1023.98px) {
           padding: 48px 32px 56px;
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_tablet_cta.webp)
+            no-repeat;
+          background-position: center;
+          background-size: cover;
         }
 
         @media (max-width: 767.98px) {
           padding: 32px 16px;
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_mobile_cta.webp)
+            no-repeat;
+          background-position: center;
+          background-size: cover;
         }
 
         .schedule-demo-title {
@@ -163,13 +191,7 @@ body {
           text-align: center;
           .spz-cta {
             margin: auto;
-            background: #fff;
-            color: #000;
-
-            &:hover {
-              background-color: #68cce8;
-              color: #000;
-            }
+            width: 186px;
           }
         }
       }
