@@ -103,9 +103,48 @@
             getDistance();
         });
 
+
+        document.querySelector('#mktoForm_1225 .mktoButtonRow button[type="submit"].mktoButton').addEventListener('click', function () {
+            checkVisibleInputs();
+
+            setTimeout(() => {
+                if (!document.querySelector('#Form .mktoForm').classList.contains('fully-load')) {
+                    var eventclick = new Event('focus');
+                    var inpEmail = document.querySelector('.mktoEmailField');
+                    var inpIam = document.querySelector('#I_am__c');
+                    var inpFN = document.querySelector('#FirstName');
+                    var inpLN = document.querySelector('#LastName');
+
+                    if (inpFN.value != '' && inpLN.value != '') {
+                        if (inpEmail.value == '' || !validateEmail(inpEmail.value)) {
+                            var eml = MktoForms2.allForms()[0].getFormElem().find("#Email")
+                            MktoForms2.allForms()[0].showErrorMessage('Must be valid email. example@yourdomain.com', eml)
+                            inpEmail.dispatchEvent(eventclick);
+                            inpEmail.closest('.mktoFormCol').classList.add('field-error');
+                            inpEmail.focus();
+                        } else {
+                            if (inpIam.value == '') {
+                                var emlIam = MktoForms2.allForms()[0].getFormElem().find("#I_am__c")
+                                MktoForms2.allForms()[0].showErrorMessage('This field is required.', emlIam)
+                                inpIam.dispatchEvent(eventclick);
+                                inpIam.closest('.mktoFormCol').classList.add('field-error')
+                            }
+                        }
+                    }
+                }
+            }, 200)
+        })
+
         // Add class 'safari' 
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.body.classList.add('safari')
+        }
+    }
+
+    //5004 Specific form css where counting field and accordingly switching classes
+    function checkVisibleInputs() {
+        if (document.querySelectorAll('.mktoFormCol[style*="display: none"]').length <= 2) {
+            document.querySelector('#Form .mktoForm').classList.add('fully-load');
         }
     }
 
@@ -140,6 +179,12 @@
                 }
             })
         });
+    }
+
+    // Email validation
+    function validateEmail(email) {
+        var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+        return regex.test(String(email).toLowerCase());
     }
 
     // Generic Code

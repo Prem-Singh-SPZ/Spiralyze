@@ -48,7 +48,7 @@ let bodyLoaded = setInterval(function () {
                     .querySelector(".netskope_6008 .landing-page-v3__content")
                     .insertAdjacentHTML(
                         "beforebegin",
-                        `<h2 class="form-content-heading">Highest in Execution. Furthest in <span>Vision</span>.</h2><h4 class="ta-content-heading">Netskope recognized as a Leader in the 2023 GartnerÂ® Magic Quadrant<sup>TM</sup> for SSE.</h4>`
+                        `<h2 class="form-content-heading">Highest in Execution. Furthest in <span>Vision</span>.</h2><h4 class="ta-content-heading">Netskope recognized as a Leader in the 2023 Gartner® Magic Quadrant<sup>TM</sup> for SSE.</h4>`
                     );
 
                 waitForElm("body .v3-quotes-flip").then(function () {
