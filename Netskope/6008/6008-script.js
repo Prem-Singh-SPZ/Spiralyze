@@ -298,7 +298,7 @@ function formModify() {
     document.querySelector("#LblLastName").textContent = "Last Name";
     document.querySelector("#LblEmail").textContent = "Business Email";
     document.querySelector("#LblCompany").textContent = "Company";
-    document.querySelector("#LblTitle").textContent = "Job title";
+    document.querySelector("#LblTitle").textContent = "Job Title";
     document.querySelector("#LblPhone").textContent = "Phone";
     document.querySelector("#Country option:first-child").textContent = "";
     document.querySelector("#LblCountry").textContent = "Country";
@@ -367,11 +367,11 @@ function setHiddenFields() {
         const field_int = setInterval(function () {
             if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
                 if (
-                    document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute("value") == "#6008_spz_variant"
+                    document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute("value") == "#6008_spz_variant_1"
                 ) {
                     clearInterval(field_int);
                 }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute("value", "#6008_spz_variant");
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute("value", "#6008_spz_variant_1");
             }
         }, 100);
     });
