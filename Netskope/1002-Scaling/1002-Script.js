@@ -42,8 +42,6 @@ function formModify() {
 
         let changeLabels = setInterval(() => {
             textChng.textContent = 'Submit';
-            // document.querySelector('#mOICustomField11 option:first-child').textContent = "";
-            // document.querySelector('#LblmOICustomField11').textContent = "I would like to";
             document.querySelector('#numEmployeesRange option:first-child').textContent = "";
             document.querySelector('#LblEmail').textContent = "Business Email";
             document.querySelector('#LblCompany').textContent = "Company";
@@ -63,7 +61,6 @@ function formModify() {
             clearInterval(changeLabels);
         }, 100);
 
-        // document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol[class*="mktoCheckbox_"]').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden', 'select-wrap');
         document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
@@ -99,7 +96,6 @@ function formModify() {
     });
 
 
-    // document.getElementById("mOICustomField11").setAttribute('tabindex', '1');
     document.getElementById("FirstName").setAttribute('tabindex', '2');
     document.getElementById("LastName").setAttribute('tabindex', '3');
     document.getElementById("Email").setAttribute('tabindex', '4');
@@ -108,90 +104,103 @@ function formModify() {
     document.getElementById("numEmployeesRange").setAttribute('tabindex', '7');
     document.getElementById("Phone").setAttribute('tabindex', '8');
     document.getElementById("Country").setAttribute('tabindex', '9');
-    // document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '11');
-    focusFields();
 
+    // form state
+    // focusFields();
+    var selector =
+        "body form.mktoForm .mktoFormCol .mktoFieldWrap input, body form.mktoForm .mktoFormCol .mktoFieldWrap select";
 
-    // On input focus add class on closest parent field class
-    function focusFields() {
-        document.querySelectorAll('form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type="checkbox"])').forEach(function (el) {
-
-            el.addEventListener('focus', function () {
-                el.closest('.mktoFieldWrap').classList.add('active', 'typing');
-                checkValidFields();
-
-            });
-            el.addEventListener('blur', function () {
-                el.closest('.mktoFieldWrap').classList.remove('typing');
-                checkError(el);
-            });
-
-            // add event listeners to the input element
-            el.addEventListener('keypress', () => {
-                checkError(el);
-            });
-
-            el.addEventListener('change', () => {
-                checkError(el);
-            });
-
-            el.addEventListener('keydown', () => {
-                checkError(el);
-            });
-
-            el.addEventListener('keyup', () => {
-                checkError(el);
-            });
-        });
-    }
-
-    // Function to add .field-error class on closest parent .field class if .error is exist on input
-    function checkError(elem) {
-        let timeBuffer = setInterval(() => {
-            if (elem.value == null || elem.value == '') {
-                elem.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active', 'filled');
-            } else {
-                elem.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'filled');
+    document.addEventListener(
+        "focus",
+        function (event) {
+            if (event.target.matches(selector)) {
+                event.target.closest("body form.mktoForm .mktoFormCol .mktoFieldWrap").classList.add("active", "typing");
             }
             checkValidFields();
-        }, 100);
+            checkState();
+        },
+        true
+    );
 
-        setTimeout(() => {
-            clearInterval(timeBuffer);
-        }, 1000);
+    document.addEventListener(
+        "focusout",
+        function (event) {
+            document.querySelectorAll("body form.mktoForm .mktoFormCol .mktoFieldWrap.typing").forEach(function (elem) {
+                elem.classList.remove("typing");
+            });
+            checkState();
+        },
+        true
+    );
+
+    var eventList = ["blur", "keyup", "change"];
+    for (s_event of eventList) {
+        document.addEventListener(s_event, function (event) {
+            if (event.target.matches(selector)) {
+                checkError(event.target);
+            }
+        });
     }
-    // form state
-    // var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap input, body form.mktoForm .mktoFormCol .mktoFieldWrap select';
-
-    // document.addEventListener('focus', function (event) {
-    //     if (event.target.matches(selector)) {
-    //         event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
-    //     }
-    //     checkValidFields();
-    //     // checkState();
-    // }, true);
-
-    // var eventList = ["blur", "focusout", "keyup"];
-    // for (s_event of eventList) {
-    //     document.addEventListener(s_event, function (event) {
-    //         if (event.target.matches(selector)) {
-    //             if (event.target.value == null || event.target.value == '') {
-    //                 event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active', 'filled');
-    //             } else {
-    //                 event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'filled');
-    //             }
-    //         }
-    //         checkState();
-    //     });
-    // }
-
-    // document.addEventListener('focusout', function (event) {
-    //     document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-    //         elem.classList.remove('typing');
-    //     })
-    //     checkState();
-    // }, true);
 };
+
+
+// On input focus add class on closest parent field class
+// function focusFields() {
+
+//     window.addEventListener('focus', function (event) {
+//         if (event.target.classList.contains('mktoField')) {
+//             event.target.closest('.mktoFieldWrap').classList.add('active', 'typing');
+//             checkValidFields();
+//         }
+//     });
+
+//     document.querySelectorAll('form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type="checkbox"])').forEach(function (el) {
+
+//         // el.addEventListener('focus', function () {
+//         //     el.closest('.mktoFieldWrap').classList.add('active', 'typing');
+//         //     checkValidFields();
+
+//         // });
+//         el.addEventListener('blur', function () {
+//             el.closest('.mktoFieldWrap').classList.remove('typing');
+//             checkError(el);
+//         });
+
+//         // add event listeners to the input element
+//         el.addEventListener('keypress', () => {
+//             checkError(el);
+//         });
+
+//         el.addEventListener('change', () => {
+//             checkError(el);
+//         });
+
+//         el.addEventListener('keydown', () => {
+//             checkError(el);
+//         });
+
+//         el.addEventListener('keyup', () => {
+//             checkError(el);
+//         });
+//     });
+// }
+
+// Function to add .field-error class on closest parent .field class if .error is exist on input
+function checkError(elem) {
+    let timeBuffer = setInterval(() => {
+        if (elem.value == null || elem.value == '') {
+            elem.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active', 'filled');
+        } else {
+            elem.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'filled');
+        }
+        checkValidFields();
+    }, 100);
+
+    checkState();
+    setTimeout(() => {
+        clearInterval(timeBuffer);
+    }, 1000);
+}
 
 //Add hidden fields
 function setHiddenFields() {
@@ -238,7 +247,6 @@ function waitForElm(selector) {
 function checkState() {
     waitForElm('#PostalCode').then(function () {
         document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
-        // document.querySelector('.Country-row').insertAdjacentElement('afterend', document.querySelector('#PostalCode').closest('.mktoFormRow'));
         document.querySelector('#PostalCode').setAttribute('tabindex', '12');
         document.querySelector('#PostalCode').setAttribute('placeholder', '');
         document.querySelector('#LblPostalCode').textContent = "Postal Code";
@@ -246,13 +254,7 @@ function checkState() {
             document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('spz-hidden');
         }
     });
-    waitForElm('.netskope-fm').then(function () {
-        document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('row-netskope-fm');
-        if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
-            document.querySelector('.netskope-fm').closest('.mktoFormRow').classList.add('spz-hidden');
-        }
-        document.querySelector(".netskope-fm a").setAttribute('tabindex', '13');
-    });
+
     waitForElm('.single_checkbox').then(function () {
         document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('row-single_checkbox');
         if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
@@ -262,3 +264,4 @@ function checkState() {
     });
 }
 // });
+
