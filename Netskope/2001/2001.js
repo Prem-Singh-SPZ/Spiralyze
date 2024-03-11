@@ -109,7 +109,7 @@ function formModify() {
 
   waitForElm(".mktoFormRow.hideField").then(function () {
     let changeLabels = setInterval(() => {
-      document.querySelector(".spz-2001 .hintText").innerHTML = "Iâ€™m interested in ... (Select all that apply.)";
+      document.querySelector(".spz-2001 .hintText").innerHTML = "I&#8217;m interested in ... (Select all that apply.)";
 
       textChng.textContent = "Submit";
       // document.querySelector("#mOICustomField11 option:first-child").textContent = "";

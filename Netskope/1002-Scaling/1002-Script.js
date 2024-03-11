@@ -164,10 +164,10 @@ function checkValidFields() {
         document.querySelector('.netskope-component--request-demo-form').classList.add('spz-full-form');
 
         setTimeout(() => {
-            if (window.innerWidth > 767) {
+            if (window.innerWidth > 767 && window.innerHeight > 601) {
                 const elem = document.querySelector('.customInput1');
                 let distance = elem.getBoundingClientRect().top - window.innerHeight;
-                elem.style.maxHeight = Math.abs(distance - 60) + 'px';
+                document.querySelector('.mktoLogicalField.mktoCheckboxList ').style.maxHeight = Math.abs(distance + 60) + 'px';
             }
         }, 200);
     }
