@@ -307,6 +307,39 @@ body {
             float: left;
           }
         }
+
+        &.select-wrap {
+          .mktoFieldWrap {
+            select {
+              background: none !important;
+              background-image: none !important;
+              background-repeat: no-repeat !important;
+
+              option {
+                background: #fff !important;
+                color: inherit;
+                border-bottom: inherit;
+                padding: inherit;
+              }
+            }
+
+            &:before {
+              content: "";
+              width: 16px;
+              height: 16px;
+              position: absolute;
+              right: 19px;
+              top: 18px;
+              z-index: 1;
+              pointer-events: none;
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/netskope/1001/Chevron.svg") !important;
+            }
+
+            &.typing:before {
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/netskope/1001/Chevron_inverted.svg") !important;
+            }
+          }
+        }
       }
 
       .mktoButtonRow {
@@ -372,7 +405,7 @@ body {
           }
         }
 
-        select.mktoField,
+        // select.mktoField,
         .customInput1 {
           background-position: right 18px center !important;
           padding-right: 36px !important;
@@ -542,9 +575,9 @@ body {
             border-color: #081a59 !important;
           }
 
-          select.mktoField {
-            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
-          }
+          // select.mktoField {
+          //   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg) !important;
+          // }
         }
 
         .mktoFieldWrap.filled,
