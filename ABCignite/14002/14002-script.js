@@ -4,7 +4,7 @@ let bodyLoaded = setInterval(function () {
         clearInterval(bodyLoaded);
         document.body.classList.add('spz-14002');
 
-        waitForElm(".pricing-hero__form .marketo-form").then((elm) => {
+        waitForElm(`.pricing-hero__form .marketo-form .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])`).then((elm) => {
             code_inject();
         });
     }
@@ -30,7 +30,7 @@ window.addEventListener("click", function (e) {
 
 // On input focus add class on closest parent field class
 function focusFields() {
-    document.querySelectorAll(' .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+    document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
         el.addEventListener('focus', function () {
             el.closest('.mktoFormCol').classList.add('field-focus');
         });
