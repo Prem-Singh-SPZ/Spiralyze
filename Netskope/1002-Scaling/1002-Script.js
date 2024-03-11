@@ -29,7 +29,10 @@ function formModify() {
     //form title update
     var formDiv = document.querySelector('.landing-page__form-container .landing-page__form .landing-page__form-content .mktoForm');
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-        formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Get Started</div>`);
+        formDiv.insertAdjacentHTML('beforebegin', `<div class="ns-logo"><a class="logo" href="https://www.netskope.com"><picture>
+        <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1710134238/netskope/1002-Scaling/NS_Logo.svg">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1710134422/netskope/1002-Scaling/NS_logo_Mobile.svg" alt="Netskope logo" class="">
+      </picture></a></div><div class="form_title">Request a Demo</div>`);
     }
 
     //form Cta update
@@ -174,6 +177,8 @@ function checkState() {
         document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('row-PostalCode');
         // document.querySelector('.Country-row').insertAdjacentElement('afterend', document.querySelector('#PostalCode').closest('.mktoFormRow'));
         document.querySelector('#PostalCode').setAttribute('tabindex', '12');
+        document.querySelector('#PostalCode').setAttribute('placeholder', '');
+        document.querySelector('#LblPostalCode').textContent = "Postal Code";
         if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
             document.querySelector('#PostalCode').closest('.mktoFormRow').classList.add('spz-hidden');
         }

@@ -69,8 +69,13 @@ body .landing-page__container .landing-page__container-inner .landing-page__form
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  padding: 24px 0px 0px;
   color: #081a59;
+}
+@media (max-width: 767.98px) {
+  body .landing-page__container .landing-page__container-inner .landing-page__form-container .form_title {
+    font-size: 32px;
+    line-height: 40px;
+  }
 }
 body .netskope-component--request-demo-form {
   border-radius: 24px;
@@ -80,6 +85,29 @@ body .netskope-component--request-demo-form {
   body .netskope-component--request-demo-form {
     max-width: 360px;
     margin: auto;
+  }
+}
+body .netskope-component--request-demo-form .ns-logo {
+  width: 160px;
+  height: 80px;
+  padding: 27px 0px 27.934px 0px;
+  margin: auto;
+}
+@media (max-width: 767.98px) {
+  body .netskope-component--request-demo-form .ns-logo {
+    width: 136px;
+    height: auto;
+    padding: 28px 0px;
+  }
+}
+body .netskope-component--request-demo-form .ns-logo img {
+  width: 160px;
+  height: 25.066px;
+}
+@media (max-width: 767.98px) {
+  body .netskope-component--request-demo-form .ns-logo img {
+    width: 136px;
+    height: 20px;
   }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 {
@@ -138,15 +166,15 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFor
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormRow.row-single_checkbox .mktoLabel {
   padding-left: 24px !important;
 }
-body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormRow.row-single_checkbox .mktoLabel p.p11 {
+body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormRow.row-single_checkbox .mktoLabel p.p1 {
   color: #081a59;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  margin-top: 2px;
 }
-body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormRow.row-single_checkbox .mktoLabel p.p11 a {
+body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormRow.row-single_checkbox .mktoLabel p.p1 a {
+  color: #081a59 !important;
   padding: 0;
   text-decoration: underline !important;
 }
@@ -163,6 +191,9 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFor
   width: 100%;
   margin-bottom: 16px !important;
   padding: 0 6px !important;
+}
+body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormCol .mktoOffset {
+  display: none !important;
 }
 @media (min-width: 767.98px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFormCol {
@@ -191,6 +222,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFor
   pointer-events: none;
   line-height: 24px !important;
   position: absolute;
+  font-size: 16px !important;
   font-weight: 400;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
@@ -297,16 +329,20 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoBut
   }
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoButtonRow .mktoButton {
-  width: 100% !important;
-  background-color: #ff8200 !important;
-  border-color: #ff8200 !important;
-  color: #081a59 !important;
+  width: 100%;
+  background-color: #ff8200;
+  border: 1px solid #ff8200 !important;
+  color: #081a59;
   height: 48px;
   max-width: 536px;
   margin-left: auto;
   margin-right: auto;
-  font-weight: 400 !important;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 24px;
   letter-spacing: 0;
+  display: block;
+  padding: 11px 30px;
 }
 @media (max-width: 1024.98px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoButtonRow .mktoButton {
@@ -325,6 +361,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFie
   color: #7e8bba !important;
   line-height: 24px !important;
   caret-color: #00a9ce;
+  background-color: #ffffff !important;
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFieldDescriptor.mktoFormCol .mktoField.mktoValid {
   color: #081a59 !important;
@@ -428,6 +465,7 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFie
 }
 body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFieldDescriptor.mktoFormCol .mktoError {
   top: 0;
+  position: relative;
 }
 @media (max-width: 480px) {
   body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFieldDescriptor.mktoFormCol .mktoError {
