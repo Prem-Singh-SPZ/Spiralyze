@@ -390,10 +390,10 @@ body {
               padding: 16px 30px 16px 16px !important;
               background-color: #ffffff !important;
 
-              @media (max-width: 767.98px) {
-                padding: 16px 30px 2px 16px !important;
-                min-height: 80px;
-              }
+              // @media (max-width: 767.98px) {
+              //   padding: 16px 30px 2px 16px !important;
+              //   min-height: 80px;
+              // }
 
               > label {
                 width: auto !important;
@@ -403,7 +403,7 @@ body {
                 color: #081a59 !important;
                 font-size: 16px !important;
                 line-height: 17px !important;
-                padding: 4px 14px !important;
+                padding: 9px 20px !important;
                 border-radius: 24px !important;
                 cursor: pointer !important;
               }
@@ -452,6 +452,19 @@ body {
                 border-color: #081a59 !important;
               }
 
+              &::before {
+                position: absolute;
+                content: "";
+                height: 1px;
+                width: 95%;
+                background: #c8c9c7;
+                left: 0;
+                right: 0;
+                margin-left: auto;
+                margin-right: auto;
+                top: 54px;
+              }
+
               span.hintText {
                 font-size: 12px !important;
                 font-style: normal;
@@ -467,10 +480,18 @@ body {
                 // max-height: none;
                 border-bottom-right-radius: 24px !important;
                 border-bottom-left-radius: 24px !important;
+                max-height: 120px;
+                overflow-y: auto;
+                padding-top: 16px !important;
+                border-top: none !important;
+                display: flex !important;
+                flex-wrap: wrap;
 
                 > label {
                   padding-left: 24px !important;
                   padding-right: 10px !important;
+                  margin-bottom: 13px !important;
+                  flex: 0 0 50%;
                 }
               }
             }

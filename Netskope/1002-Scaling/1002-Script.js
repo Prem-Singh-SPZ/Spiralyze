@@ -73,6 +73,15 @@ function formModify() {
         document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
 
 
+        // Disable option in 'Country' field where value contains '-------'
+        var countryOptions = document.querySelectorAll('#Country option');
+        countryOptions.forEach(function (option) {
+            if (option.textContent.includes('-------')) {
+                option.setAttribute('disabled', 'disabled');
+                option.setAttribute('style', 'color: #ccc');
+            }
+        });
+
         waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
             if (document.querySelectorAll('.frm-commt').length == 0) {
                 document.querySelector('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
@@ -108,6 +117,7 @@ function formModify() {
         if (event.target.matches(selector)) {
             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
         }
+
         checkValidFields();
         checkState();
     }, true);
@@ -130,7 +140,6 @@ function formModify() {
     }
 
     document.addEventListener('focusout', function (event) {
-
         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
             elem.classList.remove('typing');
         })
@@ -152,7 +161,15 @@ function checkValidFields() {
             elem.classList.remove('spz-hidden');
         })
 
-        document.querySelector('.get-started-form__container').classList.add('spz-full-form');
+        document.querySelector('.netskope-component--request-demo-form').classList.add('spz-full-form');
+
+        setTimeout(() => {
+            if (window.innerWidth > 767) {
+                const elem = document.querySelector('.customInput1');
+                let distance = elem.getBoundingClientRect().top - window.innerHeight;
+                elem.style.maxHeight = Math.abs(distance - 60) + 'px';
+            }
+        }, 200);
     }
 }
 
@@ -199,4 +216,3 @@ function checkState() {
     });
 }
 // });
-
