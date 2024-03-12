@@ -158,7 +158,7 @@
             rightBullets.forEach(function (con) {
                 if (identifyPage == con.pageName) {
 
-                    document.querySelector('#form-over #form_title').textContent = con.formSubTitle;
+                    document.querySelector('#form-over #form_title').textContent = "Request a demo";
 
 
                     document.querySelector('.spz-left-content .heading #bullet_subtitle').textContent = con.title;

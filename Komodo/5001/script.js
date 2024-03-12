@@ -1,7 +1,7 @@
 const bodyInterval = setInterval(function () {
     if (document.querySelector('body')) {
         clearInterval(bodyInterval)
-        if (!document.querySelector('.spz-5001')) {
+        if (!document.querySelector('body')) {
             const timer = 5000;
             const gb_load_css = (path) => {
                 let css = document.createElement('link');
@@ -44,7 +44,7 @@ const bodyInterval = setInterval(function () {
             gb_load_css("https://res.cloudinary.com/spiralyze/raw/upload/v1704274288/KomodoHealth/5001/OS.css")
             gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
             document.querySelector('body').classList.add('spz-5001')
-            document.querySelector('.spz-5001 main > div:first-child').insertAdjacentHTML('beforebegin', `
+            document.querySelector('body main > div:first-child').insertAdjacentHTML('beforebegin', `
         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/4003/header-desktop-bg.jpg" alt="background" width="0" height="0" style="display:none" />
         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/5001/bg-hero-tablet.jpg" alt="background" width="0" height="0" style="display:none" />
         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/5001/bg-hero-mobile.jpg" alt="background" width="0" height="0" style="display:none" />
@@ -439,19 +439,19 @@ const bodyInterval = setInterval(function () {
           </div>
         </section>
         `)
-            document.querySelector('.spz-5001 .section3 .tab-wrapper').addEventListener("click", function (event) {
+            document.querySelector('body .section3 .tab-wrapper').addEventListener("click", function (event) {
                 if (event.target.closest(".tab-button")) {
                     const dataIndex = event.target.closest(".tab-button").getAttribute("data-index")
 
-                    document.querySelector('.spz-5001 .section3 .tab-wrapper .tab-button.active').classList.remove("active");
+                    document.querySelector('body .section3 .tab-wrapper .tab-button.active').classList.remove("active");
                     for (let i = 0; i < 3; i++) {
-                        document.querySelector('.spz-5001 .section3 .content-wrapper .child .text > div.active').classList.remove("active");
+                        document.querySelector('body .section3 .content-wrapper .child .text > div.active').classList.remove("active");
                     }
                     for (let i = 0; i < 3; i++) {
-                        document.querySelectorAll('.spz-5001 .section3 .content-wrapper .child')[i].querySelector('.text > div[data-index="' + dataIndex + '"]').classList.add("active")
+                        document.querySelectorAll('body .section3 .content-wrapper .child')[i].querySelector('.text > div[data-index="' + dataIndex + '"]').classList.add("active")
                     }
-                    document.querySelector('.spz-5001 .section3 .content-wrapper .child:nth-child(3) img.active').classList.remove("active")
-                    document.querySelector('.spz-5001 .section3 .content-wrapper .child:nth-child(3) img[data-index="' + dataIndex + '"]').classList.add("active");
+                    document.querySelector('body .section3 .content-wrapper .child:nth-child(3) img.active').classList.remove("active")
+                    document.querySelector('body .section3 .content-wrapper .child:nth-child(3) img[data-index="' + dataIndex + '"]').classList.add("active");
                     event.target.closest(".tab-button").classList.add("active");
                 }
             })
@@ -464,7 +464,7 @@ const bodyInterval = setInterval(function () {
                     SizeObserverPlugin,
                     ClickScrollPlugin
                 } = OverlayScrollbarsGlobal;
-                osInstance = OverlayScrollbars(document.querySelector('.spz-5001 .section3 .tab-wrapper'), {
+                osInstance = OverlayScrollbars(document.querySelector('body .section3 .tab-wrapper'), {
                     scrollbars: {
                         visibility: 'hidden',
                         autoHide: 'never',
@@ -473,7 +473,7 @@ const bodyInterval = setInterval(function () {
                         pointers: ['mouse', 'touch', 'pen'],
                     },
                 });
-                osInstance2 = OverlayScrollbars(document.querySelector('.spz-5001 .section6 .wrapper .accordion-wrapper2'), {
+                osInstance2 = OverlayScrollbars(document.querySelector('body .section6 .wrapper .accordion-wrapper2'), {
                     scrollbars: {
                         visibility: 'hidden',
                         autoHide: 'never',
@@ -488,15 +488,15 @@ const bodyInterval = setInterval(function () {
 
                 function centeringAccordion() {
 
-                    viewport2.scrollLeft = (outerWidth(document.querySelector('.spz-5001 .section6 .child.child1')) + outerWidth(document.querySelector('.spz-5001 .section6 .child.child2')) + outerWidth(document.querySelector('.spz-5001 .section6 .child.child3')) + outerWidth(document.querySelector('.spz-5001 .section6 .margin')) + getScrollbarWidth() - window.innerWidth) / 2;
+                    viewport2.scrollLeft = (outerWidth(document.querySelector('body .section6 .child.child1')) + outerWidth(document.querySelector('body .section6 .child.child2')) + outerWidth(document.querySelector('body .section6 .child.child3')) + outerWidth(document.querySelector('body .section6 .margin')) + getScrollbarWidth() - window.innerWidth) / 2;
 
                 }
                 centeringAccordion();
                 window.addEventListener('resize', function () {
                     centeringAccordion()
                 })
-                document.querySelector('.spz-5001 .section3 .tab-wrapper').addEventListener('wheel', (evt) => {
-                    if (window.getComputedStyle(document.querySelector('.spz-5001 .section3 .tab-wrapper [data-overlayscrollbars-viewport]')).overflowX == "scroll") {
+                document.querySelector('body .section3 .tab-wrapper').addEventListener('wheel', (evt) => {
+                    if (window.getComputedStyle(document.querySelector('body .section3 .tab-wrapper [data-overlayscrollbars-viewport]')).overflowX == "scroll") {
                         evt.preventDefault();
                         viewport.scrollLeft += evt.deltaY;
                         if ((evt.deltaY < 0 && viewport.scrollLeft == 0) || (evt.deltaY > 0 && viewport.scrollWidth < viewport.scrollLeft + viewport.clientWidth + 1)) {
@@ -505,7 +505,7 @@ const bodyInterval = setInterval(function () {
                     }
                 });
                 loadJS(' https://cdn.jsdelivr.net/npm/interactjs/dist/interact.min.js', function () {
-                    const drag1 = interact('.spz-5001 .section3 .tab-wrapper')
+                    const drag1 = interact('body .section3 .tab-wrapper')
                     drag1.draggable({                        // make the element fire drag event
                         listeners: {
                             move(event) {                  // call this listener on every dragmove
@@ -513,7 +513,7 @@ const bodyInterval = setInterval(function () {
                             }
                         }
                     })
-                    const drag2 = interact('.spz-5001 .section6 .wrapper .accordion-wrapper2')
+                    const drag2 = interact('body .section6 .wrapper .accordion-wrapper2')
 
                     drag2.draggable({                        // make the element fire drag event
                         listeners: {
@@ -526,10 +526,10 @@ const bodyInterval = setInterval(function () {
                 }, document.body);
             }, document.body);
 
-            document.querySelector(".spz-5001 .section4 .accordion-wrapper > .text").addEventListener("click", function (e) {
-                if (e.target.closest(".title") && !e.target.closest(".child").classList.contains("active") && !document.querySelector('.spz-5001 .accordion-wrapper .animate')) {
+            document.querySelector("body .section4 .accordion-wrapper > .text").addEventListener("click", function (e) {
+                if (e.target.closest(".title") && !e.target.closest(".child").classList.contains("active") && !document.querySelector('body .accordion-wrapper .animate')) {
                     // remove active
-                    const prevElement = document.querySelector('.spz-5001 .accordion-wrapper .text .child.active');
+                    const prevElement = document.querySelector('body .accordion-wrapper .text .child.active');
                     const prevActiveHeight = prevElement.offsetHeight;
                     prevElement.classList.remove("active")
                     const afterActiveHeight = prevElement.offsetHeight;
@@ -545,11 +545,11 @@ const bodyInterval = setInterval(function () {
                         prevElement.classList.remove("animate");
                     }, 301)
                     //remove border
-                    if (document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.no-border')) {
-                        document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.no-border').classList.remove('no-border')
+                    if (document.querySelector('body .section4 .accordion-wrapper .child.no-border')) {
+                        document.querySelector('body .section4 .accordion-wrapper .child.no-border').classList.remove('no-border')
                     }
                     if (e.target.closest(".child").getAttribute("data-index") != "1") {
-                        document.querySelector('.spz-5001 .section4 .accordion-wrapper .child[data-index="' + (parseInt(e.target.closest(".child").getAttribute("data-index")) - 1) + '"]').classList.add("no-border")
+                        document.querySelector('body .section4 .accordion-wrapper .child[data-index="' + (parseInt(e.target.closest(".child").getAttribute("data-index")) - 1) + '"]').classList.add("no-border")
                     }
 
                     //adding active
@@ -569,13 +569,13 @@ const bodyInterval = setInterval(function () {
                         nextElement.classList.remove("animate");
                     }, 301)
                     //image animation 
-                    document.querySelector('.spz-5001 .accordion-wrapper .image .hero.active').classList.remove("active")
-                    document.querySelector('.spz-5001 .accordion-wrapper .image .hero[data-index="' + e.target.closest(".child").getAttribute("data-index") + '"]').classList.add("active")
+                    document.querySelector('body .accordion-wrapper .image .hero.active').classList.remove("active")
+                    document.querySelector('body .accordion-wrapper .image .hero[data-index="' + e.target.closest(".child").getAttribute("data-index") + '"]').classList.add("active")
                     //change scroll position
-                    if (window.matchMedia("(max-width: 1079.98px)").matches && document.querySelector('.spz-5001 .section4 .accordion-wrapper.stop')) {
+                    if (window.matchMedia("(max-width: 1079.98px)").matches && document.querySelector('body .section4 .accordion-wrapper.stop')) {
                         setTimeout(function () {
                             var scroll = new SmoothScroll();
-                            scroll.animateScroll(document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active').offsetTop, null, {
+                            scroll.animateScroll(document.querySelector('body .section4 .accordion-wrapper .child.active').offsetTop, null, {
                                 speed: 1000,
                                 easing: 'Linear',
                             });
@@ -586,39 +586,39 @@ const bodyInterval = setInterval(function () {
 
             let i = 0;
             const autoAccordionInterval = setInterval(function () {
-                document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
-                document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active .bar .line').style.width = "" + ((i / timer) * 100) + "%";
+                document.querySelector('body .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
+                document.querySelector('body .section4 .accordion-wrapper .child.active .bar .line').style.width = "" + ((i / timer) * 100) + "%";
                 if (i > timer) {
-                    document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
-                    let curIndex = parseInt(document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active').getAttribute("data-index"));
+                    document.querySelector('body .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
+                    let curIndex = parseInt(document.querySelector('body .section4 .accordion-wrapper .child.active').getAttribute("data-index"));
                     if (curIndex != 5) {
                         curIndex = curIndex + 1
                     } else {
                         curIndex = 1;
                     }
-                    document.querySelector('.spz-5001 .section4 .accordion-wrapper .child[data-index="' + curIndex + '"] .title').click();
+                    document.querySelector('body .section4 .accordion-wrapper .child[data-index="' + curIndex + '"] .title').click();
                     i = 0;
                 }
                 i += 200;
             }, 200)
-            document.querySelector('.spz-5001 .section4 .accordion-wrapper .image').addEventListener("mouseenter", function () {
+            document.querySelector('body .section4 .accordion-wrapper .image').addEventListener("mouseenter", function () {
                 clearInterval(autoAccordionInterval);
-                document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
-                if (!document.querySelector('.spz-5001 .section4 .accordion-wrapper.stop')) {
-                    document.querySelector('.spz-5001 .section4 .accordion-wrapper').classList.add("stop")
+                document.querySelector('body .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
+                if (!document.querySelector('body .section4 .accordion-wrapper.stop')) {
+                    document.querySelector('body .section4 .accordion-wrapper').classList.add("stop")
                 }
             })
-            document.querySelector('.spz-5001 .section4 .accordion-wrapper > .text').addEventListener("mouseenter", function () {
+            document.querySelector('body .section4 .accordion-wrapper > .text').addEventListener("mouseenter", function () {
                 clearInterval(autoAccordionInterval);
-                document.querySelector('.spz-5001 .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
-                if (!document.querySelector('.spz-5001 .section4 .accordion-wrapper.stop')) {
-                    document.querySelector('.spz-5001 .section4 .accordion-wrapper').classList.add("stop")
+                document.querySelector('body .section4 .accordion-wrapper .child.active .bar .line').removeAttribute("style")
+                if (!document.querySelector('body .section4 .accordion-wrapper.stop')) {
+                    document.querySelector('body .section4 .accordion-wrapper').classList.add("stop")
                 }
             })
 
             loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function () {
 
-                var splide = new Splide('.spz-5001 .section5 .splide1', {
+                var splide = new Splide('body .section5 .splide1', {
                     type: 'loop',
                     autoplay: true,
                     arrows: false,
@@ -642,15 +642,15 @@ const bodyInterval = setInterval(function () {
                     splide.mount();
                     splide.on("move", function (e) {
 
-                        document.querySelector('.spz-5001 .section5 .slider1-wrapper').classList.remove("active1", "active2", "active3")
-                        document.querySelector('.spz-5001 .section5 .slider1-wrapper').classList.add("active" + (parseInt(splide.index) + 1))
+                        document.querySelector('body .section5 .slider1-wrapper').classList.remove("active1", "active2", "active3")
+                        document.querySelector('body .section5 .slider1-wrapper').classList.add("active" + (parseInt(splide.index) + 1))
 
                     })
 
                     window.addEventListener('resize', function () {
                         splide.refresh()
                     })
-                    document.querySelector('.spz-5001 .section5 .slider1-wrapper').classList.add("active1")
+                    document.querySelector('body .section5 .slider1-wrapper').classList.add("active1")
                 }, 200)
             }, document.body)
 
