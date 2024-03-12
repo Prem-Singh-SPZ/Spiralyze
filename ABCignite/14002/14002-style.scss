@@ -1,6 +1,6 @@
 body {
   #page {
-    .sticky-header+.site-content{
+    .sticky-header + .site-content {
       padding-top: 0;
     }
     #primary {
@@ -114,9 +114,9 @@ body {
                             border-color: #000;
                           }
 
-                          &.mktoValid {
-                            border-color: #0057d6;
-                          }
+                          // &.mktoValid {
+                          //   border-color: #0057d6;
+                          // }
                         }
 
                         .mktoError {
@@ -138,14 +138,9 @@ body {
                           }
                         }
                       }
-
-                      &.field-error {
+                      &.input-filled {
                         .mktoFieldWrap .mktoField {
-                          border-color: #ff001f;
-                        }
-
-                        label.mktoLabel {
-                          color: #ff001f;
+                          border-color: #0057d6;
                         }
                       }
 
@@ -156,6 +151,16 @@ body {
 
                         label.mktoLabel {
                           color: #37465a;
+                        }
+                      }
+
+                      &.field-error {
+                        .mktoFieldWrap .mktoField {
+                          border-color: #ff001f;
+                        }
+
+                        label.mktoLabel {
+                          color: #ff001f;
                         }
                       }
                     }

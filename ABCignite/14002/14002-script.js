@@ -66,6 +66,7 @@ function checkError(elem) {
         } else {
             elem.closest('.mktoFormCol').classList.remove('field-error');
         }
+        console.log(elem && elem.value && (elem.value != ''));
         if (elem && elem.value && (elem.value != '')) {
             elem.closest('.mktoFormCol').classList.add('input-filled');
         } else {
