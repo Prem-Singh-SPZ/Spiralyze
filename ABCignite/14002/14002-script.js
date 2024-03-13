@@ -33,6 +33,7 @@ function focusFields() {
     document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
         el.addEventListener('focus', function () {
             el.closest('.mktoFormCol').classList.add('field-focus');
+            checkError(el);
         });
         el.addEventListener('blur', function () {
             el.closest('.mktoFormCol').classList.remove('field-focus');
@@ -59,25 +60,26 @@ function focusFields() {
 }
 
 // Function to add .field-error class on closest parent .field class if .error is exist on input
-function checkError(elem) {
+function checkError() {
     let timeBuffer = setInterval(() => {
-        if (elem.closest('.mktoFormCol ').querySelector('.mktoError') && elem.closest('.mktoFormCol').querySelector('.mktoInvalid')) {
-            elem.closest('.mktoFormCol').classList.add('field-error');
-        } else {
-            elem.closest('.mktoFormCol').classList.remove('field-error');
-        }
-        console.log(elem && elem.value && (elem.value != ''));
-        if (elem && elem.value && (elem.value != '')) {
-            elem.closest('.mktoFormCol').classList.add('input-filled');
-        } else {
-            elem.closest('.mktoFormCol').classList.remove('input-filled');
-        }
+        document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (elem) {
+            if (elem.closest('.mktoFormCol ').querySelector('.mktoError') && elem.closest('.mktoFormCol').querySelector('.mktoInvalid')) {
+                elem.closest('.mktoFormCol').classList.add('field-error');
+            } else {
+                elem.closest('.mktoFormCol').classList.remove('field-error');
+            }
 
+            if (elem && elem.value && (elem.value != '')) {
+                elem.closest('.mktoFormCol').classList.add('input-filled');
+            } else {
+                elem.closest('.mktoFormCol').classList.remove('input-filled');
+            }
+        });
     }, 100);
 
     setTimeout(() => {
         clearInterval(timeBuffer);
-    }, 1000);
+    }, 500);
 }
 
 function waitForElm(selector) {
