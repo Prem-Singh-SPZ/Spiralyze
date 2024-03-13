@@ -12,7 +12,7 @@ let bodyLoaded = setInterval(function () {
 
 function code_inject() {
     if (document.querySelectorAll(".pricing-hero__form .logo-btn").length == 0) {
-        document.querySelector(".pricing-hero__form .pricing-hero__form-title").insertAdjacentHTML("beforebegin", `<div class="abc-logo"><a class="" href="/"><img class="logo-btn" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitness/14002/frame_1000003326.webp" alt="fitness-logo"/></a></div>`);
+        document.querySelector(".pricing-hero__form .pricing-hero__form-title").insertAdjacentHTML("beforebegin", `<div class="abc-logo"><a class="" href="/"><img class="logo-btn" src="//res.cloudinary.com/spiralyze/image/upload/v1710253735/abcfitness/14002/frame_1000003327.svg" alt="fitness-logo"/></a></div>`);
     }
 
     document.querySelector(".pricing-hero__form .pricing-hero__form-title").textContent = "Get a Demo";

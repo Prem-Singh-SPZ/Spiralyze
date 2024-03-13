@@ -53,7 +53,7 @@ function init_13002() {
                     id="Modality__c_17086647185130.7863942112471629"
                     name="Modality__c"
                     aria-labelledby="LblModality__c InstructModality__c"
-                    class="mktoField mktoHasWidth mktoRequired mktoValid"
+                    class="mktoField mktoHasWidth mktoRequired"
                     aria-required="true"
                     aria-invalid="false"
                   >
