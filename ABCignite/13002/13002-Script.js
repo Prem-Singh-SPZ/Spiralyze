@@ -17,7 +17,7 @@ function init_13002() {
             <ul class="bullet-wrapper desktop">
                 <li class="bullet-point"><strong>Get more members.</strong> Use powerful sales tools for online join, referrals, trigger-based text and emails, and more.</li>
                 <li class="bullet-point"><strong>Keep more members.</strong> Grant members access for self-service of scheduling and profile management.</li>
-                <li class="bullet-point"><strong>Run club operations more efficiently.</strong> Spend less time on tasks with the  best full service billing, reporting, and facility management system.</li>
+                <li class="bullet-point"><strong>Run club operations more efficiently.</strong> Spend less time on tasks with the best full service billing, reporting, and facility management system.</li>
             </ul>
             </div>`;
 
@@ -145,7 +145,7 @@ function init_13002() {
       focusFields();
     });
 
-    init5009();
+    // init5009();
     multiStepLogic();
   }
 }
@@ -184,84 +184,84 @@ document.addEventListener("click", function (e) {
   }
 });
 
-function init5009() {
-  //   if (!bodyEle.classList.contains("spz-5010")) {
-  //5009 Winner test changes starts
-  let btnHtml;
-  if (window.location.pathname.indexOf("/pt/") > -1) {
-    btnHtml = `<li class="spz-menu-item">
-            <a class="spz-demo-btn" href="#">Quero testar</a>
-        </li>`;
-  } else if (window.location.pathname.indexOf("/es/") > -1) {
-    btnHtml = `<li class="spz-menu-item">
-            <a class="spz-demo-btn" href="#">PruÃ©belo</a>
-        </li>`;
-  } else {
-    btnHtml = `<li class="spz-menu-item">
-            <a class="spz-demo-btn" href="#">GET A DEMO</a>
-        </li>`;
-  }
+// function init5009() {
+//   //   if (!bodyEle.classList.contains("spz-5010")) {
+//   //5009 Winner test changes starts
+//   let btnHtml;
+//   if (window.location.pathname.indexOf("/pt/") > -1) {
+//     btnHtml = `<li class="spz-menu-item">
+//             <a class="spz-demo-btn" href="#">Quero testar</a>
+//         </li>`;
+//   } else if (window.location.pathname.indexOf("/es/") > -1) {
+//     btnHtml = `<li class="spz-menu-item">
+//             <a class="spz-demo-btn" href="#">PruÃ©belo</a>
+//         </li>`;
+//   } else {
+//     btnHtml = `<li class="spz-menu-item">
+//             <a class="spz-demo-btn" href="#">GET A DEMO</a>
+//         </li>`;
+//   }
 
-  waitForElm(".site-header #mega-menu-primary").then((elm) => {
-    elm.insertAdjacentHTML("beforeend", btnHtml);
-    setTimeout(() => {
-      // if (window.location.pathname == '/') {
-      document
-        .querySelector(".spz-demo-btn")
-        .addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector("#flydown-modal").classList.add("is-open");
-          document
-            .querySelector("#flydown-modal")
-            .setAttribute("aria-hidden", "false");
-          // window.location.href = 'https://abcfitness.com/request-a-demo/';
-          return false;
-        });
+//   waitForElm(".site-header #mega-menu-primary").then((elm) => {
+//     elm.insertAdjacentHTML("beforeend", btnHtml);
+//     setTimeout(() => {
+//       // if (window.location.pathname == '/') {
+//       document
+//         .querySelector(".spz-demo-btn")
+//         .addEventListener("click", function (e) {
+//           e.preventDefault();
+//           document.querySelector("#flydown-modal").classList.add("is-open");
+//           document
+//             .querySelector("#flydown-modal")
+//             .setAttribute("aria-hidden", "false");
+//           // window.location.href = 'https://abcfitness.com/request-a-demo/';
+//           return false;
+//         });
 
-      document
-        .querySelector("#flydown-modal .modal__close")
-        .addEventListener("click", function (e) {
-          e.preventDefault();
-          document.querySelector("#flydown-modal").classList.remove("is-open");
-          document
-            .querySelector("#flydown-modal")
-            .setAttribute("aria-hidden", "true");
+//       document
+//         .querySelector("#flydown-modal .modal__close")
+//         .addEventListener("click", function (e) {
+//           e.preventDefault();
+//           document.querySelector("#flydown-modal").classList.remove("is-open");
+//           document
+//             .querySelector("#flydown-modal")
+//             .setAttribute("aria-hidden", "true");
 
-          return false;
-        });
-      // }
-    }, 100);
-  });
+//           return false;
+//         });
+//       // }
+//     }, 100);
+//   });
 
-  if (
-    window.location.pathname == "/" ||
-    window.location.pathname == "/pt/" ||
-    window.location.pathname == "/es/"
-  ) {
-    waitForElm(".modal-flydown-trigger").then((elm) => {
-      if (window.location.pathname.indexOf("/pt/") > -1) {
-        elm.innerText = "SOLICITE UMA DEMO";
-      } else if (window.location.pathname.indexOf("/es/") > -1) {
-        elm.innerText = "SOLICITA UNA DEMO";
-      } else {
-        // elm.innerText = 'REQUEST A DEMO';
-      }
-    });
-  }
+//   if (
+//     window.location.pathname == "/" ||
+//     window.location.pathname == "/pt/" ||
+//     window.location.pathname == "/es/"
+//   ) {
+//     waitForElm(".modal-flydown-trigger").then((elm) => {
+//       if (window.location.pathname.indexOf("/pt/") > -1) {
+//         elm.innerText = "SOLICITE UMA DEMO";
+//       } else if (window.location.pathname.indexOf("/es/") > -1) {
+//         elm.innerText = "SOLICITA UNA DEMO";
+//       } else {
+//         // elm.innerText = 'REQUEST A DEMO';
+//       }
+//     });
+//   }
 
-  window.addEventListener("scroll", function () {
-    var headerNav = document.querySelector(".bkg-header");
-    let getScrollposition = window.scrollY;
-    if (getScrollposition > headerNav.offsetTop) {
-      headerNav.classList.add("fixed-header");
-    } else {
-      if (headerNav.classList.contains("fixed-header")) {
-        headerNav.classList.remove("fixed-header");
-      }
-    }
-  });
-  //   }
-}
+//   window.addEventListener("scroll", function () {
+//     var headerNav = document.querySelector(".bkg-header");
+//     let getScrollposition = window.scrollY;
+//     if (getScrollposition > headerNav.offsetTop) {
+//       headerNav.classList.add("fixed-header");
+//     } else {
+//       if (headerNav.classList.contains("fixed-header")) {
+//         headerNav.classList.remove("fixed-header");
+//       }
+//     }
+//   });
+//   //   }
+// }
 
 // On input focus add class on closest parent field class
 function focusFields() {
@@ -273,6 +273,7 @@ function focusFields() {
       el.addEventListener("focus", function () {
         // console.log(el);
         el.closest(".mktoFormCol").classList.add("field-focus");
+        checkError(el);
       });
       el.addEventListener("blur", function () {
         el.closest(".mktoFormCol").classList.remove("field-focus");
