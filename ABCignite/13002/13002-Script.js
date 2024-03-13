@@ -151,6 +151,10 @@ function init_13002() {
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
       document.querySelector('body').classList.add('safari')
     }
+    if (navigator.userAgent.toLowerCase().indexOf('firefox') > -1) {
+      document.querySelector('body').classList.add('mozilla')
+
+    }
   }
 }
 

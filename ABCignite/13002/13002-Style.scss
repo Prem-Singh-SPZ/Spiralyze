@@ -345,7 +345,7 @@ body {
                 }
 
                 .mktoField:not([type="checkbox"]) {
-                  border-color: #dc251c;
+                  border: 1.5px solid #dc251c;
                 }
               }
             }
@@ -393,6 +393,7 @@ body {
                 letter-spacing: 0;
                 white-space: nowrap;
                 text-decoration: none;
+                outline: none;
 
                 @media screen and (max-width: 767.98px) {
                   width: 100%;
@@ -819,10 +820,32 @@ $range__thumb-colour: #099 !default;
   }
 }
 
-body.safari .range .range__labels > span:first-child:before,
-body.safari .range .range__labels > span:nth-child(3):before {
-  top: -29px;
+body {
+  &.safari {
+    .range .range__labels > span {
+      &:first-child:before {
+        top: -29px;
+      }
+      &:nth-child(3):before {
+        top: -29px;
+      }
+    }
+  }
+
+  &.mozilla {
+    .range .range__labels > span {
+      &:first-child:before {
+        top: -29px;
+        left: -1px;
+        z-index: 1;
+      }
+      &:nth-child(3):before {
+        top: -29px;
+      }
+    }
+  }
 }
+
 body.safari
   .modal
   .modal__container
@@ -833,4 +856,5 @@ body.safari
   .mktoFieldWrap
   .mktoField:not([type="checkbox"]) {
   padding-top: 15px;
+  padding-bottom: 15px;
 }

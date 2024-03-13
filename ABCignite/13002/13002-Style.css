@@ -315,7 +315,7 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   color: #dc251c;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
-  border-color: #dc251c;
+  border: 1.5px solid #dc251c;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .marketo-form__notice {
   color: #140f10 !important;
@@ -357,6 +357,7 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow
   letter-spacing: 0;
   white-space: nowrap;
   text-decoration: none;
+  outline: none;
 }
 @media screen and (max-width: 767.98px) {
   body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow .mktoButtonWrap .mktoButton {
@@ -728,11 +729,22 @@ body .modal .modal__container .bullet-point strong {
     }
   }
 }
-body.safari .range .range__labels > span:first-child:before,
+body.safari .range .range__labels > span:first-child:before {
+  top: -29px;
+}
 body.safari .range .range__labels > span:nth-child(3):before {
+  top: -29px;
+}
+body.mozilla .range .range__labels > span:first-child:before {
+  top: -29px;
+  left: -1px;
+  z-index: 1;
+}
+body.mozilla .range .range__labels > span:nth-child(3):before {
   top: -29px;
 }
 
 body.safari .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   padding-top: 15px;
+  padding-bottom: 15px;
 }
