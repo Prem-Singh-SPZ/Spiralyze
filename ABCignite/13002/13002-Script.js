@@ -147,6 +147,10 @@ function init_13002() {
 
     // init5009();
     multiStepLogic();
+    // Add class 'safari' 
+    if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+      document.querySelector('body').classList.add('safari')
+    }
   }
 }
 
