@@ -188,7 +188,6 @@ document.addEventListener("click", function (e) {
   }
 });
 
-// function init5009() {
 //   //   if (!bodyEle.classList.contains("spz-5010")) {
 //   //5009 Winner test changes starts
 //   let btnHtml;
@@ -306,25 +305,26 @@ function focusFields() {
 // Function to add .field-error class on closest parent .field class if .error is exist on input
 function checkError(elem) {
   let timeBuffer = setInterval(() => {
-    if (
-      elem.closest(".mktoFormCol ").querySelector(".mktoError") &&
-      elem.closest(".mktoFormCol").querySelector(".mktoInvalid")
-    ) {
-      elem.closest(".mktoFormCol").classList.add("field-error");
-    } else {
-      elem.closest(".mktoFormCol").classList.remove("field-error");
-      if (document.querySelector('select[name="Modality__c"] + .mktoError')) {
-        document.querySelector('select[name="Modality__c"] + .mktoError').classList.add("hide");
+    document.querySelectorAll('.mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (elem) {
+      if (
+        elem.closest(".mktoFormCol ").querySelector(".mktoError") &&
+        elem.closest(".mktoFormCol").querySelector(".mktoInvalid")
+      ) {
+        elem.closest(".mktoFormCol").classList.add("field-error");
+      } else {
+        elem.closest(".mktoFormCol").classList.remove("field-error");
+        if (document.querySelector('select[name="Modality__c"] + .mktoError')) {
+          document.querySelector('select[name="Modality__c"] + .mktoError').classList.add("hide");
+        }
       }
-    }
-    if (elem && elem.value && elem.value != "") {
-      // console.log(elem.value)
-      elem.closest(".mktoFormCol").classList.add("input-filled");
-      // elem.closest('.mktoFormCol').classList.remove('field-error');
-    } else {
-      elem.closest(".mktoFormCol").classList.remove("input-filled");
-      // elem.closest('.mktoFormCol').classList.add('field-error');
-    }
+      if (elem && elem.value && elem.value != "") {
+        // console.log(elem.value)
+        elem.closest(".mktoFormCol").classList.add("input-filled");
+      } else {
+        elem.closest(".mktoFormCol").classList.remove("input-filled");
+      }
+    });
+
   }, 100);
 
   setTimeout(() => {
