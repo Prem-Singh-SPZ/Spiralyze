@@ -193,6 +193,7 @@ body {
         //Form Css starts here
         form.mktoForm {
           gap: 0;
+          z-index: 1;
 
           &:not(.flydown-form) {
             @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -261,7 +262,10 @@ body {
                   font-weight: 400;
                   line-height: 26px;
                   margin-bottom: 24px;
-                  background-position: right 20px center;
+                  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1710403542/ABCFitnessIgnite/13002/chevron-down.svg);
+                  background-repeat: no-repeat;
+                  background-position: right 13px center;
+                  background-size: 24px 24px;
 
                   &:not(#Lead_Notes__c) {
                     overflow: hidden;
@@ -447,6 +451,15 @@ body {
         padding: 0;
         max-width: 510px;
         width: 100%;
+
+        &:before {
+          content: "";
+          width: 100%;
+          height: 100%;
+          position: absolute;
+          top: 0;
+          left: 0;
+        }
 
         @media (max-width: 1023.98px) {
           max-width: 100%;
