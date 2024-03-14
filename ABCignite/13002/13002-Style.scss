@@ -226,6 +226,7 @@ body {
 
               .mktoFieldWrap {
                 position: relative;
+                width: 100%;
 
                 .mktoLabel {
                   position: absolute;
@@ -405,12 +406,10 @@ body {
                   padding: 0;
                 }
 
-                &:hover {
-                  background-color: #cc5f10 !important;
-                }
+                &:hover,
                 &:active,
                 &:focus {
-                  background-color: #f9d1b3 !important;
+                  background-color: #cc5f10 !important;
                 }
               }
             }
@@ -692,6 +691,7 @@ $range__thumb-colour: #099 !default;
         height: 10px;
         border-radius: 50%;
         background: #0f71ff;
+        z-index: 1;
       }
     }
 
