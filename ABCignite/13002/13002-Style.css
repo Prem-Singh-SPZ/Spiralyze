@@ -257,10 +257,6 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   font-weight: 400;
   line-height: 26px;
   margin-bottom: 24px;
-  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1710403542/ABCFitnessIgnite/13002/chevron-down.svg);
-  background-repeat: no-repeat;
-  background-position: right 13px center;
-  background-size: 24px 24px;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
   overflow: hidden;
@@ -271,6 +267,12 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
     max-width: 100%;
   }
+}
+body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(input) {
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1710403542/ABCFitnessIgnite/13002/chevron-down.svg);
+  background-repeat: no-repeat;
+  background-position: right 13px center;
+  background-size: 24px 24px;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
   -webkit-box-shadow: 0 0 0 30px white inset;

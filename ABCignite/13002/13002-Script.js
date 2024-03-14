@@ -1,5 +1,10 @@
 init_13002();
 
+//domcontentloaded
+// document.addEventListener("DOMContentLoaded", function () {
+//   init_13002();
+// });
+
 //preload image by adding in head tag
 document.querySelector("head").insertAdjacentHTML("beforeend", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg" as="image">
   `);
@@ -36,7 +41,7 @@ function init_13002() {
               data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
             >
               <div
-                class="mktoFieldDescriptor mktoFormCol"
+                class="mktoFieldDescriptor mktoFormCol spz-custom-js"
                 data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
               >
                 <div class="mktoOffset"></div>
@@ -122,21 +127,13 @@ function init_13002() {
       }, 200);
 
 
-
-      document
-        .querySelector("#flydown-modal.modal .modal__container")
-        .insertAdjacentHTML("beforeend", bulltHtmlDesk);
+      document.querySelector("#flydown-modal.modal .modal__container").insertAdjacentHTML("beforeend", bulltHtmlDesk);
 
       waitForElm("#flydown-modal form.flydown-form .mktoButtonRow .mktoButtonWrap .mktoButton").then(() => {
         document.querySelector(
           "#flydown-modal form.flydown-form .mktoButtonRow .mktoButtonWrap .mktoButton"
         ).innerHTML = `Submit <img class="cta-arrow" src="//res.cloudinary.com/spiralyze/image/upload/v1706094180/ABCFitnessIgnite/13001/Updated%20Code/Arrow.svg" alt="arrow">`;
       });
-      // var closeBtn = document.querySelector(".modal-content .close-icon");
-      // var HeadercloseBtn = document.querySelector(".spz-13002 #popupModal .modal-header button.close");
-      // closeBtn.addEventListener('click', function () {
-      //     HeadercloseBtn.click();
-      // });
     });
 
     waitForElm(
@@ -147,6 +144,7 @@ function init_13002() {
 
     // init5009();
     multiStepLogic();
+
     // Add class 'safari' 
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
       document.querySelector('body').classList.add('safari')
@@ -353,3 +351,4 @@ function waitForElm(selector) {
     });
   });
 }
+
