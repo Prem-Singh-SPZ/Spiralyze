@@ -12,7 +12,7 @@ copyModify();
 function copyModify() {
     waitForElm('.landing-page__content-container .landing-page__content ul li').then(function () {
         document.querySelector('.landing-page__content-container .landing-page__title').innerHTML = 'Protect and accelerate<br>everything to everywhere';
-        document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<ul><li><span>Network. </span>Deliver fast, secure network connectivity. One cloud-based solution.</li><li><span>Visibility.</span> Get full visibility into your multi-cloud network. Web, SaaS, cloud, and more.</li><li><span>Security.</span> Monitor & verify network activities 24/7. Only allow access to required tasks.</li></ul>`;
+        document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<ul><li><span>The Power of One </span>- Reduce cost and complexity through one platform, one client, one gateway, and one private security cloud.</li><li><span>Ultimate visibility & protection </span>- Decode cloud and SaaS user activity with AI & Zero Trust Engine to stop data loss and threats.</li><li><span>A phenomenal user experience </span>- Accelerate your enterprise on our private security cloud & manage the experience end-to-end.</li></ul>`;
 
         document.querySelector('#components__content').insertAdjacentHTML('beforeend', `<div class="spz-trusted-section"><div class="section-container"><div class="section-title"><p>We partner with leaders across the security industry</p></div><div class="section-content"><picture>
         <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Desktop.svg">
