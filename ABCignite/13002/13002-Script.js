@@ -1,10 +1,5 @@
 init_13002();
 
-//domcontentloaded
-// document.addEventListener("DOMContentLoaded", function () {
-//   init_13002();
-// });
-
 //preload image by adding in head tag
 document.querySelector("head").insertAdjacentHTML("beforeend", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1708690066/ABCFitnessIgnite/13002/Ellipse_2.svg" as="image">
   `);
@@ -144,6 +139,14 @@ function init_13002() {
 
     // init5009();
     multiStepLogic();
+
+    let removeFocus = setInterval(() => {
+      if (document.querySelector('.spz-custom-js.field-focus')) {
+        console.log('remove focus');
+        document.querySelector('select[name="Modality__c"]').dispatchEvent(new Event('blur'));
+        clearInterval(removeFocus);
+      }
+    }, 50);
 
     // Add class 'safari' 
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -351,4 +354,3 @@ function waitForElm(selector) {
     });
   });
 }
-
