@@ -60,15 +60,15 @@ function formModify() {
         <div class="list">
           <div class="child">
             <img src="//res.cloudinary.com/spiralyze/image/upload/v1704885513/netskope/1003/check-logo.svg" alt="Check Icon" width="24" height="25"/>
-            <div class="text"><strong>Visibility.</strong> Get complete visibility into your cloud network. Web, SaaS, cloud, public and private apps, and more.</div>
+            <div class="text"><strong>The Power of One </strong>- Reduce cost and complexity through one platform, one client, one gateway, and one private security cloud.</div>
           </div>
           <div class="child">
             <img src="//res.cloudinary.com/spiralyze/image/upload/v1704885513/netskope/1003/check-logo.svg" alt="Check Icon" width="24" height="25"/>
-            <div class="text"><strong>Security.</strong> Manage security in one place. Granular web and cloud policy controls. Advanced access control. Threat protection.</div>
+            <div class="text"><strong>Ultimate visibility & protection </strong>- Decode cloud and SaaS user activity with AI & Zero Trust Engine to stop data loss and threats.</div>
           </div>
           <div class="child">
             <img src="//res.cloudinary.com/spiralyze/image/upload/v1704885513/netskope/1003/check-logo.svg" alt="Check Icon" width="24" height="25"/>
-            <div class="text"><strong>Network.</strong> Deliver fast, high-performing connectivity between users, devices, and locations, complete with zero-trust security.</div>
+            <div class="text"><strong>A phenomenal user experience </strong>- Accelerate your enterprise on our private security cloud & manage the experience end-to-end.</div>
           </div>
         </div>
         <div class="desc">

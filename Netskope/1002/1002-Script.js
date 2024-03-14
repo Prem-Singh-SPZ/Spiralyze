@@ -40,8 +40,8 @@ function formModify() {
 
         let changeLabels = setInterval(() => {
             textChng.textContent = 'Submit';
-            document.querySelector('#mOICustomField11 option:first-child').textContent = "";
-            document.querySelector('#LblmOICustomField11').textContent = "I would like to";
+            // document.querySelector('#mOICustomField11 option:first-child').textContent = "";
+            // document.querySelector('#LblmOICustomField11').textContent = "I would like to";
             document.querySelector('#numEmployeesRange option:first-child').textContent = "";
             document.querySelector('#LblnumEmployeesRange').textContent = "Number of Employees";
 
@@ -57,7 +57,7 @@ function formModify() {
             clearInterval(changeLabels);
         }, 100);
 
-        document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
+        // document.querySelector('.mktoFormCol.Contact_Us_Form_Entry__c-row').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol[class*="mktoCheckbox_"]').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol.Country-row').classList.add('spz-hidden');
         document.querySelector('.mktoFormCol.Phone-row').classList.add('spz-hidden');
@@ -84,7 +84,7 @@ function formModify() {
     });
 
 
-    document.getElementById("mOICustomField11").setAttribute('tabindex', '1');
+    // document.getElementById("mOICustomField11").setAttribute('tabindex', '1');
     document.getElementById("FirstName").setAttribute('tabindex', '2');
     document.getElementById("LastName").setAttribute('tabindex', '3');
     document.getElementById("Email").setAttribute('tabindex', '4');
@@ -93,7 +93,7 @@ function formModify() {
     document.getElementById("numEmployeesRange").setAttribute('tabindex', '7');
     document.getElementById("Phone").setAttribute('tabindex', '8');
     document.getElementById("Country").setAttribute('tabindex', '9');
-    document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '11');
+    // document.getElementById("Contact_Us_Form_Entry__c").setAttribute('tabindex', '11');
 
     // form state
     var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap input, body form.mktoForm .mktoFormCol .mktoFieldWrap select';
