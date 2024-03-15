@@ -1,0 +1,186 @@
+body.spz-5005 .exit-modal-sec-spz {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.2);
+  -webkit-backdrop-filter: blur(4px);
+          backdrop-filter: blur(4px);
+  z-index: 99999;
+  display: none;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  overflow: auto;
+  -webkit-transition-duration: 400ms;
+  transition-duration: 400ms;
+}
+@media (min-height: 550px) {
+  body.spz-5005 .exit-modal-sec-spz {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content {
+  border-radius: 16px;
+  background: linear-gradient(76deg, #C0EFFA 80.01%, rgba(165, 224, 239, 0.3) 102.97%);
+  max-width: 1007px;
+  height: 538px;
+  width: 100%;
+  margin: 32px 0;
+  position: relative;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-close-btn {
+  position: absolute;
+  top: 18px;
+  right: 20px;
+  height: 20px;
+  width: 16px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1700143366/netskope/5003/close__stroke.webp) no-repeat center;
+  background-size: cover;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-close-btn:hover, body.spz-5005 .exit-modal-sec-spz .ems-content .ems-close-btn:focus {
+  opacity: 0.8;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner {
+  padding: 64px 0px 64px 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner h6 {
+  color: #fff;
+  text-align: center;
+  font-family: Graphik;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 32px;
+  margin-bottom: 20px;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-points {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding-left: 0;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-points li {
+  color: var(--fonts-is-primary, #fff);
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin-right: 24px;
+  position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-points li::before {
+  content: "";
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701777431/netskope/5003/check_wrapper_2.svg) no-repeat;
+  background-size: cover;
+  position: relative;
+  width: 24px;
+  height: 24px;
+  display: block;
+  margin-right: 8px;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-points li:last-child {
+  margin-right: 0;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta {
+  margin-top: 16px;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo {
+  border-radius: var(--radius-absolute, 200px);
+  background: var(--buttons-is-main-default, #ff8200);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 18px 36px 18px 36px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: var(--buttons-on-main-default, #081a59);
+  font-family: Graphik;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-decoration: none;
+  width: 210px;
+  height: 48px;
+  -webkit-appearance: none;
+  -webkit-transition: all 0.1s ease-in-out;
+  transition: all 0.1s ease-in-out;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-cta .get-a-demo:hover {
+  border: 1px solid var(--blue-700, #081a59);
+  background: var(--buttons-is-secondary-hover, #fff);
+}
+@media (min-width: 1023.98px) {
+  body.spz-5005.active {
+    overflow: hidden;
+  }
+  body.spz-5005.active .exit-modal-sec-spz {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-animation: slideIn 0.5s;
+            animation: slideIn 0.5s;
+  }
+}
+
+@-webkit-keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, -100vh);
+            transform: translate(0, -100vh);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    -webkit-transform: translate(0, -100vh);
+            transform: translate(0, -100vh);
+  }
+  to {
+    opacity: 1;
+    -webkit-transform: translate(0, 0);
+            transform: translate(0, 0);
+  }
+}
+@media (min-width: 1023.98px) {
+  html.active {
+    overflow: hidden;
+  }
+}

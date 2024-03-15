@@ -1,0 +1,162 @@
+body.spz-5005 {
+  //Exit intent pop up Css starts here
+  .exit-modal-sec-spz {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    z-index: 99999;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: auto;
+
+    -webkit-transition-duration: 400ms;
+    -moz-transition-duration: 400ms;
+    -ms-transition-duration: 400ms;
+    transition-duration: 400ms;
+
+    @media (min-height: 550px) {
+      align-items: center;
+    }
+
+    .ems-content {
+      border-radius: 16px;
+background: linear-gradient(76deg, #C0EFFA 80.01%, rgba(165, 224, 239, 0.30) 102.97%);
+      max-width: 1007px;
+      height: 538px;
+      width: 100%;
+      margin: 32px 0;
+      position: relative;
+
+      .ems-close-btn {
+        position: absolute;
+        top: 18px;
+        right: 20px;
+        height: 20px;
+        width: 16px;
+
+        background: url(//res.cloudinary.com/spiralyze/image/upload/v1700143366/netskope/5003/close__stroke.webp)
+          no-repeat center;
+        background-size: cover;
+
+        &:hover,
+        &:focus {
+          opacity: 0.8;
+        }
+      }
+
+      .ems-content-inner {
+        padding: 64px 0px 64px 40px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        h6 {
+          color: #fff;
+          text-align: center;
+          font-family: Graphik;
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          margin-bottom: 20px;
+        }
+
+        .ems-points {
+          list-style: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          padding-left: 0;
+
+          li {
+            color: var(--fonts-is-primary, #fff);
+            font-family: Graphik;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 24px;
+            margin-right: 24px;
+            position: relative;
+            display: flex;
+
+            &::before {
+              content: "";
+              background: url(//res.cloudinary.com/spiralyze/image/upload/v1701777431/netskope/5003/check_wrapper_2.svg)
+                no-repeat;
+              background-size: cover;
+              position: relative;
+              width: 24px;
+              height: 24px;
+              display: block;
+              margin-right: 8px;
+            }
+
+            &:last-child {
+              margin-right: 0;
+            }
+          }
+        }
+
+        .ems-cta {
+          margin-top: 16px;
+          .get-a-demo {
+            border-radius: var(--radius-absolute, 200px);
+            background: var(--buttons-is-main-default, #ff8200);
+            display: flex;
+            padding: 18px 36px 18px 36px;
+            justify-content: center;
+            align-items: center;
+            color: var(--buttons-on-main-default, #081a59);
+            font-family: Graphik;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            text-decoration: none;
+            width: 210px;
+            height: 48px;
+            -webkit-appearance: none;
+            transition: all 0.1s ease-in-out;
+
+            &:hover {
+              border: 1px solid var(--blue-700, #081a59);
+              background: var(--buttons-is-secondary-hover, #fff);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.active {
+    @media (min-width: 1023.98px) {
+      overflow: hidden;
+      .exit-modal-sec-spz {
+        display: flex;
+        animation: slideIn 0.5s;
+      }
+    }
+  }
+}
+
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translate(0, -100vh);
+  }
+  to {
+    opacity: 1;
+    transform: translate(0, 0);
+  }
+}
+
+html.active {
+  @media (min-width: 1023.98px) {
+    overflow: hidden;
+  }
+}
