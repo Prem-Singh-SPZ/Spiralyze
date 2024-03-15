@@ -593,24 +593,22 @@ body {
         .bullet-section {
           margin-bottom: 0px;
           padding: 0 20px 16px;
-          position: relative;
 
-          &::before {
-            content: "";
-            position: absolute;
-            top: -32px;
-            background: #bababa;
-            width: calc(100% - 38px);
-            height: 1px;
-            left: 0px;
-            right: 0;
-            margin: auto;
+          .bullet-sub-title {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: -32px;
+              background: #bababa;
+              width: 100%;
+              height: 1px;
+              left: 0px;
+              right: 0;
+              margin: auto;
+            }
           }
-
-          // .bullet-sub-title {
-          //   font-size: 14px;
-          //   line-height: 130%;
-          // }
 
           .bullet-title {
             font-size: 22px;

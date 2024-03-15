@@ -543,14 +543,16 @@ body .modal .modal__container .bullet-point strong {
   body .modal .modal__container .bullet-section {
     margin-bottom: 0px;
     padding: 0 20px 16px;
+  }
+  body .modal .modal__container .bullet-section .bullet-sub-title {
     position: relative;
   }
-  body .modal .modal__container .bullet-section::before {
+  body .modal .modal__container .bullet-section .bullet-sub-title::before {
     content: "";
     position: absolute;
     top: -32px;
     background: #bababa;
-    width: calc(100% - 38px);
+    width: 100%;
     height: 1px;
     left: 0px;
     right: 0;

@@ -171,6 +171,11 @@ function multiStepLogic() {
 }
 
 document.addEventListener("click", function (e) {
+
+  if (e.target.classList.contains("mktoButton")) {
+    focusFields();
+  }
+
   if (e.target.classList.contains("step-1-submit")) {
     if (document.querySelector('select[name="Modality__c"]').selectedIndex) {
       document.querySelector(".step-1-form").classList.add("hide");
@@ -188,10 +193,6 @@ document.addEventListener("click", function (e) {
     document.querySelector(".flydown-modal__form").classList.remove("hide");
     document.querySelector(".step-count.step-2").classList.remove("active");
     document.querySelector(".step-count.step-3").classList.add("active");
-  }
-
-  if (e.target.classList.contains("mktoButton")) {
-    focusFields();
   }
 });
 
