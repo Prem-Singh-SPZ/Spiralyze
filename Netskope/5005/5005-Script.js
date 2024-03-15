@@ -7,7 +7,7 @@
             submitTestDetails();
         });
     }
-    else {
+    else if (!location.pathname.includes('/get-started')) {
         waitForElm('.page .v3__container #components__content').then(function (elm) {
             createTest5005();
             exitIntentPopup(false);

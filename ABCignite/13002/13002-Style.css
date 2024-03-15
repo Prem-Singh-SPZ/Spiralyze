@@ -427,6 +427,11 @@ body .modal .modal__container .bullet-section {
   max-width: 510px;
   width: 100%;
 }
+@media (max-width: 767.98px) {
+  body .modal .modal__container .bullet-section {
+    position: relative;
+  }
+}
 body .modal .modal__container .bullet-section:before {
   content: "";
   width: 100%;
@@ -434,6 +439,11 @@ body .modal .modal__container .bullet-section:before {
   position: absolute;
   top: 0;
   left: 0;
+}
+@media (max-width: 767.98px) {
+  body .modal .modal__container .bullet-section:before {
+    top: -100px;
+  }
 }
 @media (max-width: 1023.98px) {
   body .modal .modal__container .bullet-section {
