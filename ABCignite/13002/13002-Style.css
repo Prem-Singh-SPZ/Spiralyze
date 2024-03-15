@@ -34,6 +34,7 @@ body .modal .modal__container {
           align-items: center;
   border-radius: 32px;
   border: 0;
+  background: #f8f8f8;
 }
 @media (max-height: 699.98px) {
   body .modal .modal__container {
@@ -46,6 +47,7 @@ body .modal .modal__container {
   body .modal .modal__container {
     max-width: 560px;
     padding: 30px;
+    background: #fff;
   }
 }
 @media (max-width: 767.98px) {
@@ -234,7 +236,7 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
   position: absolute;
   overflow: hidden;
-  color: #8d8994;
+  color: #5a5e69;
   text-overflow: ellipsis;
   white-space: nowrap;
   font-size: 16px;
@@ -257,7 +259,7 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   border: 1px solid rgba(0, 0, 0, 0.2);
   width: 100%;
   padding: 17px 14px 17px 16px;
-  color: #5A5E69;
+  color: #000;
   text-overflow: ellipsis;
   font-size: 16px;
   font-style: normal;
@@ -269,6 +271,9 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   overflow: hidden;
   height: 60px;
   white-space: nowrap;
+}
+body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) option {
+  font-family: "Poppins", sans-serif !important;
 }
 @media (min-width: 767.98px) {
   body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
@@ -310,7 +315,7 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   font-size: 14px;
   line-height: 20px;
   background: #fff;
-  color: #8d8994;
+  color: #5a5e69;
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoField:not([type=checkbox]) {
   border-color: #b6b3ba;
