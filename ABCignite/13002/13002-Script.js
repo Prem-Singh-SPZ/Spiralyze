@@ -31,12 +31,14 @@ function init_13002() {
             .querySelector(".modal .modal__container .flydown-modal__inner")
             .insertAdjacentHTML(
               "afterbegin",
-              `<div class="multi-steps"><div class="steps"><div class="step-count step-1 active"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433974/abcfitness/13002/frame_5601.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5596.svg" alt="Step Count"></div><div class="step-count step-2"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5597.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433972/abcfitness/13002/frame_5600.svg" alt="Step Count"></div><div class="step-count step-3"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433971/abcfitness/13002/frame_5599.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5598.svg" alt="Step Count"></div></div></div><div class="spz-demo-title">Get a Demo</div><div class="step-1-form"><div class="form-container"><p class="question">Which kind of fitness business are you?</p><form class="marketo-form mktoForm" data-styles-ready="true"><div
+              `<div class="multi-steps"><div class="steps"><div class="step-count step-1 active"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433974/abcfitness/13002/frame_5601.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5596.svg" alt="Step Count"></div><div class="step-count step-2"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5597.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433972/abcfitness/13002/frame_5600.svg" alt="Step Count"></div><div class="step-count step-3"><img class="in-active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433971/abcfitness/13002/frame_5599.svg" alt="Step Count"><img class="active" src="//res.cloudinary.com/spiralyze/image/upload/v1708433969/abcfitness/13002/frame_5598.svg" alt="Step Count"></div></div></div><div class="spz-demo-title">Get a Demo</div><div class="step-1-form"><div class="form-container"><p class="question">Which kind of fitness business are you?</p><form class="marketo-form mktoForm" data-styles-ready="true">
+              <div class="mktoFormRow spz-custom-js"><div class="mktoFieldDescriptor mktoFormCol"><div class="mktoFieldWrap mktoRequiredField"><input id="FirstName" name="FirstName0" maxlength="255" aria-labelledby="LblFirstName InstructFirstName" type="text" class="mktoField mktoTextField mktoHasWidth" aria-required="true" aria-invalid="true" fdprocessedid="1ut2n8"><span id="InstructFirstName" tabindex="-1" class="mktoInstruction"></span></div></div><div class="mktoClear"></div></div>
+              <div
               class="mktoFormRow"
               data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
             >
               <div
-                class="mktoFieldDescriptor mktoFormCol spz-custom-js"
+                class="mktoFieldDescriptor mktoFormCol"
                 data-wrapper-for="Modality__c_17086647185130.7863942112471629 Modality__c"
               >
                 <div class="mktoOffset"></div>
@@ -140,13 +142,13 @@ function init_13002() {
     // init5009();
     multiStepLogic();
 
-    let removeFocus = setInterval(() => {
-      if (document.querySelector('.spz-custom-js.field-focus')) {
-        console.log('remove focus');
-        document.querySelector('select[name="Modality__c"]').dispatchEvent(new Event('blur'));
-        clearInterval(removeFocus);
-      }
-    }, 50);
+    // let removeFocus = setInterval(() => {
+    //   if (document.querySelector('.spz-custom-js.field-focus')) {
+    //     console.log('remove focus');
+    //     document.querySelector('select[name="Modality__c"]').dispatchEvent(new Event('blur'));
+    //     clearInterval(removeFocus);
+    //   }
+    // }, 50);
 
     // Add class 'safari' 
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {

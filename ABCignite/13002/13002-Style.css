@@ -211,6 +211,13 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm {
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow {
   gap: 24px;
 }
+body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow.spz-custom-js {
+  opacity: 0;
+  visibility: hidden;
+  height: 0;
+  position: absolute;
+  pointer-events: none;
+}
 @media (max-width: 480px) {
   body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow {
     gap: 0;

@@ -217,6 +217,14 @@ body {
           .mktoFormRow {
             gap: 24px;
 
+            &.spz-custom-js {
+              opacity: 0;
+              visibility: hidden;
+              height: 0;
+              position: absolute;
+              pointer-events: none;
+            }
+
             @media (max-width: 480px) {
               gap: 0;
             }
