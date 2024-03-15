@@ -95,13 +95,15 @@
                                 <li>Network & security convergence</li>
                             </ul>
                             <div class="ems-cta">
-                                <a href="https://www.netskope.com/resources/ebooks/6-zero-trust-use-cases-for-netskope-one-a-unified-sase-platform" class="get-a-demo">Download ebook now <img src="" alt="Arrow" class=""></a>
+                                <a href="https://www.netskope.com/resources/ebooks/6-zero-trust-use-cases-for-netskope-one-a-unified-sase-platform" class="get-a-demo">Download ebook now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                <path d="M6 12L10 8L6 4" stroke="#081A59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                              </svg></a>
                             </div>
                           </div>
                           <div class="ems-right-img">
                           <picture>
-                            <source srcset="https://www.netskope.com/wp-content/uploads/2021/08/5005-Exit-Intent-Modal-Image-1.png" type="image/png">
-                            <img src="https://www.netskope.com/wp-content/uploads/2021/08/5005-Exit-Intent-Modal-Image-1.webp" alt="Image">
+                            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.png" type="image/png">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.webp" alt="Image">
                             </picture>
                           </div>
                         </div>

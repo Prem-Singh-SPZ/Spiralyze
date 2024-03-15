@@ -31,20 +31,22 @@ body.spz-5005 {
         rgba(165, 224, 239, 0.3) 102.97%
       );
       max-width: 1007px;
+      max-height: 396px;
       width: 100%;
       margin: 32px 0;
       position: relative;
 
       .ems-close-btn {
         position: absolute;
-        top: 18px;
-        right: 20px;
-        height: 20px;
-        width: 16px;
-
-        background: url(//res.cloudinary.com/spiralyze/image/upload/v1700143366/netskope/5003/close__stroke.webp)
+        right: 16px;
+        top: 16px;
+        width: 32px;
+        height: 32px;
+        background: url(//res.cloudinary.com/spiralyze/image/upload/v1710486682/netskope/5005/close_3.svg)
           no-repeat center;
         background-size: cover;
+        cursor: pointer;
+        z-index: 1;
 
         &:hover,
         &:focus {
@@ -55,7 +57,7 @@ body.spz-5005 {
       .ems-content-inner {
         padding: 64px 0px 64px 40px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
         justify-content: center;
 
         .ems-left-copy {
@@ -88,7 +90,7 @@ body.spz-5005 {
 
               &::before {
                 content: "";
-                background: url(//res.cloudinary.com/spiralyze/image/upload/v1701777431/netskope/5003/check_wrapper_2.svg)
+                background: url(//res.cloudinary.com/spiralyze/image/upload/v1710486697/netskope/5005/check_wrapper_3.svg)
                   no-repeat;
                 background-size: cover;
                 position: relative;
@@ -110,7 +112,7 @@ body.spz-5005 {
               border-radius: var(--radius-absolute, 200px);
               background: var(--buttons-is-main-default, #ff8200);
               display: flex;
-              padding: 18px 36px 18px 36px;
+              padding: 12px 18px 12px 24px;
               justify-content: center;
               align-items: center;
               color: var(--buttons-on-main-default, #081a59);
@@ -121,9 +123,15 @@ body.spz-5005 {
               line-height: 24px;
               text-decoration: none;
               width: 227px;
+              white-space: nowrap;
               height: 48px;
               -webkit-appearance: none;
               transition: all 0.1s ease-in-out;
+              outline: none;
+
+              svg {
+                margin-left: 4px;
+              }
 
               &:hover {
                 border: 1px solid var(--blue-700, #081a59);
@@ -136,6 +144,19 @@ body.spz-5005 {
         .ems-right-img {
           max-width: calc(100% - 428px);
           width: 100%;
+          position: relative;
+
+          img {
+            position: absolute;
+            max-width: 578px;
+            top: -98px;
+            left: -9px;
+
+            @media (max-width: 1100px) {
+              max-width: 556px;
+              top: -90px;
+            }
+          }
         }
       }
     }

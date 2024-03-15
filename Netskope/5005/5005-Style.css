@@ -30,18 +30,21 @@ body.spz-5005 .exit-modal-sec-spz .ems-content {
   border-radius: 16px;
   background: linear-gradient(76deg, #c0effa 80.01%, rgba(165, 224, 239, 0.3) 102.97%);
   max-width: 1007px;
+  max-height: 396px;
   width: 100%;
   margin: 32px 0;
   position: relative;
 }
 body.spz-5005 .exit-modal-sec-spz .ems-content .ems-close-btn {
   position: absolute;
-  top: 18px;
-  right: 20px;
-  height: 20px;
-  width: 16px;
-  background: url(//res.cloudinary.com/spiralyze/image/upload/v1700143366/netskope/5003/close__stroke.webp) no-repeat center;
+  right: 16px;
+  top: 16px;
+  width: 32px;
+  height: 32px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1710486682/netskope/5005/close_3.svg) no-repeat center;
   background-size: cover;
+  cursor: pointer;
+  z-index: 1;
 }
 body.spz-5005 .exit-modal-sec-spz .ems-content .ems-close-btn:hover, body.spz-5005 .exit-modal-sec-spz .ems-content .ems-close-btn:focus {
   opacity: 0.8;
@@ -51,9 +54,9 @@ body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -89,7 +92,7 @@ body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy
 }
 body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy .ems-points li::before {
   content: "";
-  background: url(//res.cloudinary.com/spiralyze/image/upload/v1701777431/netskope/5003/check_wrapper_2.svg) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1710486697/netskope/5005/check_wrapper_3.svg) no-repeat;
   background-size: cover;
   position: relative;
   width: 24px;
@@ -109,7 +112,7 @@ body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 18px 36px 18px 36px;
+  padding: 12px 18px 12px 24px;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
@@ -124,10 +127,15 @@ body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy
   line-height: 24px;
   text-decoration: none;
   width: 227px;
+  white-space: nowrap;
   height: 48px;
   -webkit-appearance: none;
   -webkit-transition: all 0.1s ease-in-out;
   transition: all 0.1s ease-in-out;
+  outline: none;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy .ems-cta .get-a-demo svg {
+  margin-left: 4px;
 }
 body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy .ems-cta .get-a-demo:hover {
   border: 1px solid var(--blue-700, #081a59);
@@ -136,6 +144,19 @@ body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-left-copy
 body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-right-img {
   max-width: calc(100% - 428px);
   width: 100%;
+  position: relative;
+}
+body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-right-img img {
+  position: absolute;
+  max-width: 578px;
+  top: -98px;
+  left: -9px;
+}
+@media (max-width: 1100px) {
+  body.spz-5005 .exit-modal-sec-spz .ems-content .ems-content-inner .ems-right-img img {
+    max-width: 556px;
+    top: -90px;
+  }
 }
 @media (min-width: 1023.98px) {
   body.spz-5005.active {
