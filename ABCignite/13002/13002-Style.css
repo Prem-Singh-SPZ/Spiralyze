@@ -116,13 +116,14 @@ body .modal .modal__container .flydown-modal__inner .multi-steps .steps {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-bottom: 24px;
+  margin: 0 auto 24px;
+  width: 168px;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count {
   display: -webkit-box;
@@ -134,7 +135,6 @@ body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-co
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-right: 45px;
   position: relative;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count img {
@@ -157,9 +157,6 @@ body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-co
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count .active {
   display: none;
-}
-body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active {
-  margin-right: 40px;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active img {
   width: 38px;
