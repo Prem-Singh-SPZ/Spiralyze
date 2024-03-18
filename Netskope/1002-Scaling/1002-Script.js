@@ -45,7 +45,7 @@ function formModify() {
             document.querySelector('#numEmployeesRange option:first-child').textContent = "";
             document.querySelector('#LblEmail').textContent = "Business Email";
             document.querySelector('#LblCompany').textContent = "Company";
-            document.querySelector('#LblTitle').textContent = "Job title";
+            document.querySelector('#LblTitle').textContent = "Job Title";
             document.querySelector('#LblnumEmployeesRange').textContent = "Number of Employees";
             document.querySelector('#LblPhone').textContent = "Phone";
 
@@ -68,6 +68,8 @@ function formModify() {
         document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
 
         document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
+
+        document.querySelector('.customInput1 .hintText').textContent = 'Topics of Interest (Select all that apply)';
 
 
         // Disable option in 'Country' field where value contains '-------'
@@ -219,12 +221,21 @@ function checkValidFields() {
         document.querySelector('.netskope-component--request-demo-form').classList.add('spz-full-form');
 
         setTimeout(() => {
-            if (window.innerWidth > 767 && window.innerHeight > 601) {
-                const elem = document.querySelector('.customInput1');
-                let distance = elem.getBoundingClientRect().top - window.innerHeight;
-                document.querySelector('.mktoLogicalField.mktoCheckboxList ').style.maxHeight = Math.abs(distance + 60) + 'px';
-            }
+            adjustDropdownHeight();
         }, 200);
+
+        //function to call on every window resize
+        window.addEventListener('resize', function () {
+            adjustDropdownHeight();
+        });
+    }
+}
+
+function adjustDropdownHeight() {
+    if (window.innerWidth > 767 && window.innerHeight > 601) {
+        const elem = document.querySelector('.customInput1');
+        let distance = elem.getBoundingClientRect().top - window.innerHeight;
+        document.querySelector('.mktoLogicalField.mktoCheckboxList ').style.maxHeight = Math.abs(distance + 60) + 'px';
     }
 }
 
