@@ -96,7 +96,7 @@ function init_13002() {
                         min="0"
                         max="100"
                         value="50"
-                        step="5"
+                        step="50"
                         list="styled-range-list"
                         class="range--progress"
                         style="--min: 0; --max: 100; --val: 50"
