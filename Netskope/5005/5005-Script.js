@@ -8,7 +8,7 @@
         });
     }
     else if (!location.pathname.includes('/get-started')) {
-        waitForElm('.page .v3__container #components__content').then(function (elm) {
+        waitForElm('body footer a').then(function (elm) {
             createTest5005();
             exitIntentPopup(false);
         });
@@ -77,39 +77,45 @@
         return res;
     }
 
+    const htmlContent = `<div class="exit-modal-sec-spz">
+    <div class="ems-content">
+    <a href="javascript:void(0)" class="ems-close-btn"></a>
+        <div class="ems-content-inner">
+          <div class="ems-left-copy">
+            <h6>Learn more about security & network transformation in the age of SASE</h6>
+            <ul class="ems-points">
+                <li>Cost savings</li>
+                <li>Bridging skills gap</li>
+                <li>Network & security convergence</li>
+            </ul>
+            <div class="ems-cta">
+                <a href="https://www.netskope.com/resources/ebooks/6-zero-trust-use-cases-for-netskope-one-a-unified-sase-platform" class="get-a-demo">Download ebook now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                <path d="M6 12L10 8L6 4" stroke="#081A59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              </svg></a>
+            </div>
+          </div>
+          <div class="ems-right-img">
+          <picture>
+            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.png" type="image/png">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.webp" alt="Image">
+            </picture>
+          </div>
+        </div>
+    </div>
+    <div class="ems-tab-spacer"></div>
+    </div>`;
+
 
     // Append popup content to body
     function appendPopup() {
         // Append popup content
-        if (document.querySelectorAll('.page .exit-modal-sec-spz').length == 0) {
-            document.querySelector('.page .v3__container').insertAdjacentHTML('afterend',
-                `<div class="exit-modal-sec-spz">
-                    <div class="ems-content">
-                    <a href="javascript:void(0)" class="ems-close-btn"></a>
-                        <div class="ems-content-inner">
-                          <div class="ems-left-copy">
-                            <h6>Learn more about security & network transformation in the age of SASE</h6>
-                            <ul class="ems-points">
-                                <li>Cost savings</li>
-                                <li>Bridging skills gap</li>
-                                <li>Network & security convergence</li>
-                            </ul>
-                            <div class="ems-cta">
-                                <a href="https://www.netskope.com/resources/ebooks/6-zero-trust-use-cases-for-netskope-one-a-unified-sase-platform" class="get-a-demo">Download ebook now <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                <path d="M6 12L10 8L6 4" stroke="#081A59" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                              </svg></a>
-                            </div>
-                          </div>
-                          <div class="ems-right-img">
-                          <picture>
-                            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.png" type="image/png">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.webp" alt="Image">
-                            </picture>
-                          </div>
-                        </div>
-                    </div>
-                    <div class="ems-tab-spacer"></div>
-                </div>`);
+        if (document.querySelectorAll('body .exit-modal-sec-spz').length == 0) {
+            if (document.querySelector('.page .v3__container')) {
+                document.querySelector('.page .v3__container').insertAdjacentHTML('afterend', htmlContent);
+            }
+            else {
+                document.querySelector('body footer').insertAdjacentHTML('afterend', htmlContent);
+            }
         }
 
         exitIntentPopup();
