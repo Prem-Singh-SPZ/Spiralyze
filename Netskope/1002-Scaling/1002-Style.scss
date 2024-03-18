@@ -452,6 +452,10 @@ body {
                 padding: 9px 20px !important;
                 border-radius: 24px !important;
                 cursor: pointer !important;
+                text-overflow: ellipsis !important;
+                white-space: nowrap !important;
+                overflow: hidden !important;
+                max-width: calc(100% - 16px) !important;
               }
 
               span.hintText {
@@ -547,6 +551,7 @@ body {
 
             &.hideHint > .customInput1 {
               padding: 10px 32px 8px 16px !important;
+              height: 56px !important;
             }
           }
         }

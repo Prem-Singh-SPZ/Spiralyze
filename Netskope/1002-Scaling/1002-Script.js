@@ -274,7 +274,9 @@ function checkState() {
         if (document.querySelector('.mktoFormCol.Country-row.spz-hidden')) {
             document.querySelector('.single_checkbox').closest('.mktoFormRow').classList.add('spz-hidden');
         }
-        document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
+        // document.querySelector("#LblConsent_to_Processing__c .p11 a").setAttribute('tabindex', '12');
+
+        document.querySelector('.single_checkbox #LblConsent_to_Processing__c').innerHTML = `<p class="p1"><span class="s1">Netskope would like to send you additional marketing information and share your personal data with our trusted third-parties for marketing purposes.</span></p><br><p class="p1"><span class="s1">Please check the box to opt-in and agree to our<span>&nbsp;</span><a href="https://www.netskope.com/privacy-policy/" target="_blank" id="">privacy policy</a><span>&nbsp;</span>which includes instructions on how to opt-out at any time.</span></p>`;
     });
 }
 // });
