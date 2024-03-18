@@ -327,7 +327,6 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFor
   padding-right: 36px !important;
   text-overflow: ellipsis;
   display: -webkit-box;
-  -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
   overflow: hidden !important;
 }
@@ -438,6 +437,9 @@ body .netskope-component--request-demo-form form.mktoForm#mktoForm_1767 .mktoFie
   margin: 0 !important;
   overflow: hidden;
   text-overflow: ellipsis;
+  display: -webkit-box;
+  display: block;
+  width: calc(100% - 44px);
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: absolute;

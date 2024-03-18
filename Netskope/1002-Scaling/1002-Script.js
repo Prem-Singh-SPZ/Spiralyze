@@ -55,6 +55,10 @@ function formModify() {
             document.querySelector('#LblLastName').textContent = "Last Name";
 
             document.querySelector(".mktoButton").setAttribute('tabindex', '14');
+            if (document.querySelector('.customInput1 .hintText')) {
+                document.querySelector('.customInput1 .hintText').textContent = 'Topics of Interest (Select all that apply)';
+            }
+
             setHiddenFields();
         }, 10);
         setTimeout(() => {
@@ -68,8 +72,6 @@ function formModify() {
         document.querySelector('.mktoFormCol.Title-row').classList.add('spz-hidden');
 
         document.querySelector('.LastName-row').insertAdjacentElement('afterend', document.querySelector('.Email-row'));
-
-        document.querySelector('.customInput1 .hintText').textContent = 'Topics of Interest (Select all that apply)';
 
 
         // Disable option in 'Country' field where value contains '-------'
@@ -228,15 +230,16 @@ function checkValidFields() {
         window.addEventListener('resize', function () {
             adjustDropdownHeight();
         });
+
     }
 }
 
 function adjustDropdownHeight() {
-    if (window.innerWidth > 767 && window.innerHeight > 601) {
+    // if (window.innerWidth > 767 && window.innerHeight > 601) {
         const elem = document.querySelector('.customInput1');
         let distance = elem.getBoundingClientRect().top - window.innerHeight;
         document.querySelector('.mktoLogicalField.mktoCheckboxList ').style.maxHeight = Math.abs(distance + 60) + 'px';
-    }
+    // }
 }
 
 // Generic Code
