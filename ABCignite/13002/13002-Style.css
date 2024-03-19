@@ -599,6 +599,9 @@ body .modal .modal__container .bullet-point strong {
     max-width: 272px;
   }
 }
+.range__wrapper > p:first-child {
+  height: 27px;
+}
 .range .range__labels {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -784,4 +787,12 @@ body.mozilla .range .range__labels > span:nth-child(3):before {
 body.safari .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   padding-top: 15px;
   padding-bottom: 15px;
+}
+
+body.page-template-tpl-careers .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:before {
+  top: calc(50% - 10px);
+}
+
+body.page-template-tpl-careers .range [type=range]::-webkit-slider-thumb {
+  margin-top: -9px;
 }
