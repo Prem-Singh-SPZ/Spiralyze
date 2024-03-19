@@ -3,13 +3,13 @@ let bodyLoaded = setInterval(function () {
     if (body) {
         clearInterval(bodyLoaded);
 
-        if (!body.classList.contains('netskope_8004')) {
-            body.classList.add('netskope_8004');
+        if (!body.classList.contains('spz-8003-v1')) {
+            body.classList.add('spz-8003-v1');
 
-            waitForElm('.netskope_8004 .gated-content__top .gated-content__banner').then(function () {
+            waitForElm('.spz-8003-v1 .gated-content__top .gated-content__banner').then(function () {
                 footerFields();
-                waitForElm('.netskope_8004 .gated-content__content').then(function () { handFields(); });
-                waitForElm('.netskope_8004 .gated-content__form').then(function () {
+                waitForElm('.spz-8003-v1 .gated-content__content').then(function () { handFields(); });
+                waitForElm('.spz-8003-v1 .gated-content__form').then(function () {
                     sucessFields();
                 });
                 //Form internal code
@@ -18,11 +18,11 @@ let bodyLoaded = setInterval(function () {
                     setHiddenFields();
                 });
                 /*Right section */
-                var heading = document.querySelector(".netskope_8004 .gated-content__banner .page-intro__resource-title").textContent; document.querySelector('.netskope_8004 .gated-content__container .gated-content__left').insertAdjacentHTML("afterbegin", `<div id="ninnerwrapper"><h2 class="form-content-heading">` + heading + `</h2></div>`);
-                document.querySelectorAll('.netskope_8004 .gated-content__container .rte').forEach((item) => {
+                var heading = document.querySelector(".spz-8003-v1 .gated-content__banner .page-intro__resource-title").textContent; document.querySelector('.spz-8003-v1 .gated-content__container .gated-content__left').insertAdjacentHTML("afterbegin", `<div id="ninnerwrapper"><h2 class="form-content-heading">` + heading + `</h2></div>`);
+                document.querySelectorAll('.spz-8003-v1 .gated-content__container .rte').forEach((item) => {
                     document.querySelector('.form-content-heading').insertAdjacentElement('afterend', item);
                 });
-                document.querySelectorAll('.netskope_8004 .gated-content__container .gated-content__content').forEach((item) => {
+                document.querySelectorAll('.spz-8003-v1 .gated-content__container .gated-content__content').forEach((item) => {
                     document.querySelector('.rte').insertAdjacentElement('afterend', item);
                 });
 
@@ -62,7 +62,7 @@ let bodyLoaded = setInterval(function () {
     }
 });
 function footerFields() {
-    waitForElm('.netskope_8004 footer.v3-footer.netskope-footer').then(function () {
+    waitForElm('.spz-8003-v1 footer.v3-footer.netskope-footer').then(function () {
         var footer_html = `<div class="spz-Nfooter"><div class="footer-container">\
         <div class="footer-Nlinks">\
             <div class="ncopyright"> © 2024, All rights reserved.</div>\
@@ -89,13 +89,13 @@ function footerFields() {
                  <div class="ncopyright"> © 2024, All rights reserved.</div>\
                 </div>\
                 </div></div></div></div>`;
-        document.querySelector('.netskope_8004 footer.v3-footer.netskope-footer').insertAdjacentHTML("afterbegin", footer_html);
+        document.querySelector('.spz-8003-v1 footer.v3-footer.netskope-footer').insertAdjacentHTML("afterbegin", footer_html);
     });
 }
 function sucessFields() {
     /*sucess setcion*/
-    document.querySelectorAll('.netskope_8004 .gated-content__content .gated-content__action').forEach((item) => {
-        document.querySelector('.netskope_8004 .gated-content__form').insertAdjacentElement('beforeend', item);
+    document.querySelectorAll('.spz-8003-v1 .gated-content__content .gated-content__action').forEach((item) => {
+        document.querySelector('.spz-8003-v1 .gated-content__form').insertAdjacentElement('beforeend', item);
     });
 }
 function handFields() {
@@ -130,15 +130,15 @@ function waitForElm(selector) {
 
 function formModify() {
     // Add class in mktoFormRow using count
-    var parentDiv = document.querySelector('.netskope_8004 .gated-content__container .mktoForm');
+    var parentDiv = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm');
     var childElements = parentDiv.children;
     for (var i = 0; i < childElements.length; i++) {
         var dynamicClass = 'field-' + (i + 1);
         childElements[i].classList.add(dynamicClass);
     }
     /*formtotles*/
-    var formDiv = document.querySelector('.netskope_8004 .gated-content__container .mktoForm');
-    var sub_heading = document.querySelector(".netskope_8004 .gated-content__banner .gated-content__type");
+    var formDiv = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm');
+    var sub_heading = document.querySelector(".spz-8003-v1 .gated-content__banner .gated-content__type");
     var sub_heading_textContent = sub_heading.textContent || sub_heading.innerText;
     if (sub_heading_textContent == 'eBooks') {
         var processedText = sub_heading_textContent.replace('eBooks', 'ebook');
@@ -156,7 +156,7 @@ function formModify() {
         }
         // form CTA Update
         var form_button = setInterval(() => {
-            var textChng = document.querySelector('.netskope_8004 .gated-content__container .mktoForm .mktoButtonRow .mktoButton');
+            var textChng = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm .mktoButtonRow .mktoButton');
             if (textChng) {
                 textChng.innerText = 'Instant access';
                 clearInterval(form_button);
@@ -174,8 +174,8 @@ function formModify() {
         document.querySelector('#LblCountry').textContent = "Country";
 
         // Change Field Position
-        var email_field = document.querySelector('.netskope_8004 .gated-content__container .mktoForm .mktoFormRow.field-3');
-        var lastname_field = document.querySelector('.netskope_8004 .gated-content__container .mktoForm .mktoFormRow.field-5');
+        var email_field = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm .mktoFormRow.field-3');
+        var lastname_field = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm .mktoFormRow.field-5');
         lastname_field.after(email_field);
     });
 
@@ -185,7 +185,7 @@ function formModify() {
     zip_row.classList.add('mktoFormRow');
     zip_row.classList.add('mktoZipRow');
 
-    var extraRow = document.querySelectorAll(".netskope_8004 .gated-content__container .mktoForm .mktoFormRow")[7];
+    var extraRow = document.querySelectorAll(".spz-8003-v1 .gated-content__container .mktoForm .mktoFormRow")[7];
     insertAfter(extraRow, zip_row);
 
     const zip_row_old = document.querySelector(".mktoPlaceholderPostalCode");
@@ -225,10 +225,10 @@ function setHiddenFields() {
     waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
         const field_int = setInterval(function () {
             if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#8004_SPZ_Variant_1") {
+                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#8003_SPZ_Variant_1") {
                     clearInterval(field_int);
                 }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#8004_SPZ_Variant_1');
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#8003_SPZ_Variant_1');
             }
         }, 100);
     });
