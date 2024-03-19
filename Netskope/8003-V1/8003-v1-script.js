@@ -155,7 +155,8 @@ function formModify() {
 
     waitForElm('#mktoForm_8949').then(function () {
         if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-            formDiv.insertAdjacentHTML('beforebegin', `<div class="frm-logo">\n<div class="frm-logoimgt"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1707850827/netskope/8004/Netskope-Logo.svg" alt="Netskope Logo"></div>\n<h2 class="form_title">Download ` + processedText + `</h2></div>`);
+            formDiv.insertAdjacentHTML('beforebegin', `<div class="frm-logo"><h2 class="form_title">Get Gartner report</h2></div>`);
+            // formDiv.insertAdjacentHTML('beforebegin', `<div class="frm-logo">\n<div class="frm-logoimgt"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1707850827/netskope/8004/Netskope-Logo.svg" alt="Netskope Logo"></div>\n<h2 class="form_title">Download ` + processedText + `</h2></div>`);
         }
         // form CTA Update
         var form_button = setInterval(() => {
