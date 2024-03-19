@@ -11,6 +11,9 @@ let bodyLoaded = setInterval(function () {
                 waitForElm('.spz-8003-v1 .gated-content__content').then(function () { handFields(); });
                 waitForElm('.spz-8003-v1 .gated-content__form').then(function () {
                     sucessFields();
+                    document.querySelector('.gated-content__right').insertAdjacentHTML('afterbegin', `<div class="progress"> 
+                    <div class="progress__bar"></div>
+                  </div>`);
                 });
                 //Form internal code
                 waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
@@ -177,6 +180,13 @@ function formModify() {
         var email_field = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm .mktoFormRow.field-3');
         var lastname_field = document.querySelector('.spz-8003-v1 .gated-content__container .mktoForm .mktoFormRow.field-5');
         lastname_field.after(email_field);
+
+        //Hiding extra fields
+        document.querySelector('.mktoFormRow.field-7').classList.add('spz-hidden');
+        document.querySelector('.mktoFormRow.field-8').classList.add('spz-hidden');
+        document.querySelector('.mktoFormRow.field-9').classList.add('spz-hidden');
+        document.querySelector('.mktoFormRow.field-10').classList.add('spz-hidden');
+        document.querySelector('.mktoFormRow.field-11').classList.add('spz-hidden');
     });
 
 
@@ -199,6 +209,8 @@ function formModify() {
         if (event.target.matches(selector)) {
             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
         }
+        checkValidFields();
+
     }, true);
 
     var eventList = ["blur", "focusout", "keyup", "change"];
@@ -211,6 +223,8 @@ function formModify() {
                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
                 }
             }
+            checkValidFields();
+
         });
     }
 
@@ -218,7 +232,26 @@ function formModify() {
         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
             elem.classList.remove('active', 'typing');
         })
+        checkValidFields();
+
     }, true);
+}
+
+function checkValidFields() {
+    let validFields = document.querySelectorAll('.mktoRequiredField.filled').length;
+    if (validFields >= 4) {
+        document.querySelectorAll('.spz-hidden:not(.field-9):not(.field-10):not(.field-11)').forEach(function (elem) {
+            elem.classList.remove('spz-hidden');
+        })
+        document.querySelector('.gated-content__right').classList.add('spz-partial-form');
+    }
+
+    if (validFields >= 6) {
+        document.querySelectorAll('.spz-hidden').forEach(function (elem) {
+            elem.classList.remove('spz-hidden');
+        })
+        document.querySelector('.gated-content__right').classList.replace('spz-partial-form', 'spz-full-form');
+    }
 }
 
 function setHiddenFields() {

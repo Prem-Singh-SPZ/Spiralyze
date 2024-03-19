@@ -789,10 +789,11 @@ body.safari .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFo
   padding-bottom: 15px;
 }
 
-body.page-template-tpl-careers .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:before {
-  top: calc(50% - 10px);
+@media (min-width: 1023.98px) {
+  body.page-template-tpl-careers .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count:before {
+    top: calc(50% - 10px);
+  }
 }
-
 body.page-template-tpl-careers .range [type=range]::-webkit-slider-thumb {
   margin-top: -9px;
 }
