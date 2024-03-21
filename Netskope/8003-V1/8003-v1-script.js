@@ -111,6 +111,16 @@ function handFields() {
     for (var i = 0; i < list.length; ++i) {
         list[i].classList.add("holder" + (i + 4));
     }
+
+
+    //move element .gated-content__label inside sibling .gated-content__tags
+    var labels = document.querySelectorAll('.gated-content__content .gated-content__label');
+    labels.forEach(function (label) {
+        var nextSibling = label.nextElementSibling;
+        if (nextSibling && nextSibling.classList.contains('gated-content__tags')) {
+            nextSibling.insertAdjacentElement('afterbegin', label);
+        }
+    });
 }
 // Generic Code
 function insertAfter(referenceNode, newNode) {
@@ -271,3 +281,4 @@ function setHiddenFields() {
         }, 100);
     });
 }
+
