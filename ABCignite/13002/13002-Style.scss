@@ -889,6 +889,32 @@ body {
       }
     }
   }
+
+  .new-hero button.new-hero__link.orange.modal-flydown-trigger,
+  .new-hero a.new-hero__link.orange.modal-flydown-trigger {
+    background-color: #ef7f2e !important;
+    color: #ffffff !important;
+    .new-hero__link-icon {
+      fill: #fff;
+    }
+
+    &:focus {
+      background-color: #ef7f2e !important;
+      color: #ffffff !important;
+      .new-hero__link-icon {
+        fill: #fff;
+      }
+    }
+
+    &:active,
+    &:hover {
+      color: #ef7f2e !important;
+      background-color: #ffffff !important;
+      .new-hero__link-icon {
+        fill: #ef7f2e;
+      }
+    }
+  }
 }
 
 body.safari
