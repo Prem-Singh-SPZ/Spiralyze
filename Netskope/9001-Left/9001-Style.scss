@@ -7,14 +7,14 @@ $font-family_1: Graphik;
 
 body {
   background: #081a59
-    url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_desktop.webp)
+    url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_desktop_1.webp)
     no-repeat;
   background-size: cover;
   background-position: top left;
 
   @media (min-width: 1900.98px) {
     background: #081a59
-      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_4k.webp)
+      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_4k_1.webp)
       no-repeat;
     background-size: cover;
     background-position: top center;
@@ -96,6 +96,8 @@ body {
         justify-content: space-between;
         padding: 41px 24px 80px;
         // min-height: 617px;
+        flex-flow: row-reverse;
+
         @media (max-width: 1023.98px) {
           flex-flow: column-reverse;
           align-items: center;

@@ -1,11 +1,11 @@
 body {
-  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_desktop.webp) no-repeat;
+  background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_desktop_1.webp) no-repeat;
   background-size: cover;
   background-position: top left;
 }
 @media (min-width: 1900.98px) {
   body {
-    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_4k.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_4k_1.webp) no-repeat;
     background-size: cover;
     background-position: top center;
   }
@@ -91,6 +91,10 @@ body .landing-page__container #components__content .landing-page__container-inne
       -ms-flex-pack: justify;
           justify-content: space-between;
   padding: 41px 24px 80px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: reverse;
+      -ms-flex-flow: row-reverse;
+          flex-flow: row-reverse;
 }
 @media (max-width: 1023.98px) {
   body .landing-page__container #components__content .landing-page__container-inner {
