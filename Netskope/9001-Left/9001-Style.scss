@@ -22,7 +22,7 @@ body {
 
   @media (min-width: 767.98px) and (max-width: 1023.98px) {
     background: #081a59
-      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_tablet.webp)
+      url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_tablet_1.webp)
       no-repeat;
     background-size: cover;
     background-position: top left;
@@ -112,7 +112,7 @@ body {
         .landing-page__content-container {
           max-width: 585px;
           width: 100%;
-          margin: 0 24px 0 0;
+          margin: 0 0 0 24px ;
           padding: 0;
           position: relative;
 
@@ -151,16 +151,49 @@ body {
             }
 
             @media (max-width: 767.98px) {
-              font-size: 26px;
-              line-height: 40px;
+              font-size: 24px;
+              line-height: 32px;
               margin: 0 0 24px;
             }
           }
 
           .landing-page__content {
+            .content_1, .content_2 {
+              color: var(--Fonts-isPrimary, #fff);
+              font-family: Graphik;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 24px;
+              margin: 0 0 24px;
+
+              @media (max-width: 767.98px) {
+                font-size: 16px;
+              }
+            }
+
+            .content_3{
+              color: var(--Fonts-isPrimary, #fff);
+              font-family: Graphik;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 24px;
+
+              @media (max-width: 767.98px) {
+                font-size: 16px;
+              }
+
+              a{
+                color: #00A9CE;
+              }
+            }
+
             ul {
               padding: 0;
               list-style: none;
+              margin-bottom: 25px;
+
               li {
                 padding-left: 40px;
                 color: #fff;
@@ -255,7 +288,7 @@ body {
                 font-weight: 500;
                 line-height: 24px;
                 text-align: left;
-                margin: 0 0 17px;
+                margin: 1px 0 17px;
               }
 
               @media (max-width: 767.98px) {

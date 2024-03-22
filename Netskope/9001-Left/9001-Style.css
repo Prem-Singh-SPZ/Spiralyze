@@ -12,7 +12,7 @@ body {
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body {
-    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_tablet.webp) no-repeat;
+    background: #081a59 url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/bg_tablet_1.webp) no-repeat;
     background-size: cover;
     background-position: top left;
   }
@@ -117,7 +117,7 @@ body .landing-page__container #components__content .landing-page__container-inne
 body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container {
   max-width: 585px;
   width: 100%;
-  margin: 0 24px 0 0;
+  margin: 0 0 0 24px;
   padding: 0;
   position: relative;
 }
@@ -160,14 +160,45 @@ body .landing-page__container #components__content .landing-page__container-inne
 }
 @media (max-width: 767.98px) {
   body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__title {
-    font-size: 26px;
-    line-height: 40px;
+    font-size: 24px;
+    line-height: 32px;
     margin: 0 0 24px;
   }
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_1, body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_2 {
+  color: var(--Fonts-isPrimary, #fff);
+  font-family: Graphik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin: 0 0 24px;
+}
+@media (max-width: 767.98px) {
+  body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_1, body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_2 {
+    font-size: 16px;
+  }
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_3 {
+  color: var(--Fonts-isPrimary, #fff);
+  font-family: Graphik;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+@media (max-width: 767.98px) {
+  body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_3 {
+    font-size: 16px;
+  }
+}
+body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content .content_3 a {
+  color: #00A9CE;
 }
 body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul {
   padding: 0;
   list-style: none;
+  margin-bottom: 25px;
 }
 body .landing-page__container #components__content .landing-page__container-inner .landing-page__content-container .landing-page__content ul li {
   padding-left: 40px;
@@ -259,7 +290,7 @@ body .landing-page__container #components__content .spz-trusted-section .section
     font-weight: 500;
     line-height: 24px;
     text-align: left;
-    margin: 0 0 17px;
+    margin: 1px 0 17px;
   }
 }
 @media (max-width: 767.98px) {

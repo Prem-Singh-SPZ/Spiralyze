@@ -11,10 +11,12 @@ copyModify();
 
 function copyModify() {
     waitForElm('.landing-page__content-container .landing-page__content ul li').then(function () {
-        document.querySelector('.landing-page__content-container .landing-page__title').innerHTML = 'Protect and accelerate<br>everything to everywhere';
-        document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<p class="content_1">Get in touch with a Netskope representative to see a demo or simply learn more about our products</p><ul><li><span>The Power of One </span>- Reduce cost and complexity through one platform, one client, one gateway, and one private security cloud.</li><li><span>Ultimate visibility & protection </span>- Decode cloud and SaaS user activity with AI & Zero Trust Engine to stop data loss and threats.</li><li><span>A phenomenal user experience </span>- Accelerate your enterprise on our private security cloud & manage the experience end-to-end.</li></ul><p class="content_2">To contact us by phone, please call: USA: +1 (800) 979-6988</p><p class="content_3">Requesting support? Contact us <a href="https://www.netskope.com/netskope-technical-support">here</a></p>`;
 
-        document.querySelector('#components__content').insertAdjacentHTML('beforeend', `<div class="spz-trusted-section"><div class="section-container"><div class="section-title"><p>We partner with leaders across the security industry</p></div><div class="section-content"><picture>
+        if (document.querySelectorAll('.landing-page__content-container .landing-page__content .content_3').length == 0) {
+            document.querySelector('.landing-page__content-container .landing-page__title').innerHTML = 'Protect and accelerate<br>everything to everywhere';
+            document.querySelector('.landing-page__content-container .landing-page__content').innerHTML = `<p class="content_1">Get in touch with a Netskope representative to see a demo or simply learn more about our products</p><ul><li><span>The Power of One </span>- Reduce cost and complexity through one platform, one client, one gateway, and one private security cloud.</li><li><span>Ultimate visibility & protection </span>- Decode cloud and SaaS user activity with AI & Zero Trust Engine to stop data loss and threats.</li><li><span>A phenomenal user experience </span>- Accelerate your enterprise on our private security cloud & manage the experience end-to-end.</li></ul><p class="content_2">To contact us by phone, please call: USA: +1 (800) 979-6988</p><p class="content_3">Requesting support? Contact us <a href="https://www.netskope.com/netskope-technical-support">here</a></p>`;
+
+            document.querySelector('#components__content').insertAdjacentHTML('beforeend', `<div class="spz-trusted-section"><div class="section-container"><div class="section-title"><p>We partner with leaders across the security industry</p></div><div class="section-content"><picture>
         <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Desktop.svg">
         <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Tablet.svg">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1706011189/netskope/9001/Trusted-Mobile.svg" alt="Trusted Partners">
@@ -23,6 +25,7 @@ function copyModify() {
         <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-tablet.png">
         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/9001/Badges-mobile.png" alt="Badges">
         </picture></div><div class="footer-links"><div class="phone"><div class="phone-text">To contact us by phone, please call:</div><div class="mobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div></div><div class="privacy-policy"><div class="p-anchor"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></div><div class="copyright"> © 2024, All rights reserved.</div></div></div></div></div>`);
+        }
     });
 }
 
