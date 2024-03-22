@@ -262,6 +262,9 @@ body.netskope_6009 {
 .netskope_6009 .js-hero-banner .gated-content__right .rte ul li {
   margin: 0;
 }
+.netskope_6009 .js-hero-banner .gated-content__right .gated-content__content{
+  max-width: 488px;
+}
 .netskope_6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__label {
   font-family: Graphik;
   font-size: 18px;
@@ -281,6 +284,9 @@ body.netskope_6009 {
   line-height: 24px;
   letter-spacing: 0em;
   padding: 3px 15px;
+}
+.netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{
+  padding: 8px;
 }
 .netskope_6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags ~ * {
   display: none;
@@ -702,20 +708,23 @@ body.netskope_6009 {
   .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) {
     font-size: 18px;
     line-height: 24px;
-    max-width: 70%;
+    //max-width: 70%;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) sup {
-    top: unset;
-    font-size: 100%;
+    //top: unset;
+    font-size: 62%;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .rte p {
-    margin-bottom: 25px;
+    margin-bottom: 12px;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .rte ul {
-    margin-top: -14px;
+    //margin-top: -14px;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__form {
     margin-bottom: 32px;
+  }
+  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__content{
+    max-width: 100%;
   }
 }
 @media (max-width: 1400px) {
