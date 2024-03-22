@@ -8,7 +8,7 @@
         });
     }
     else if (!location.pathname.includes('/get-started')) {
-        waitForElm('body footer a').then(function (elm) {
+        waitForElm('body div').then(function (elm) {
             createTest5005();
             exitIntentPopup(false);
         });
@@ -96,8 +96,8 @@
           </div>
           <div class="ems-right-img">
           <picture>
-            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.png" type="image/png">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_1.webp" alt="Image">
+            <source srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_new.png" type="image/png">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/5005/ui_new.webp" alt="Image">
             </picture>
           </div>
         </div>
@@ -114,7 +114,7 @@
                 document.querySelector('.page .v3__container').insertAdjacentHTML('afterend', htmlContent);
             }
             else {
-                document.querySelector('body footer').insertAdjacentHTML('afterend', htmlContent);
+                document.querySelector('body').insertAdjacentHTML('beforeend', htmlContent);
             }
         }
 

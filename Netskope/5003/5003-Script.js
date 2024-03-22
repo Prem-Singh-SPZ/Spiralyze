@@ -8,7 +8,7 @@
         });
     }
     else {
-        waitForElm('.page .v3__container #components__content').then(function (elm) {
+        waitForElm('body div').then(function (elm) {
             createTest5003();
             exitIntentPopup(false);
         });
@@ -77,29 +77,33 @@
         return res;
     }
 
+    const htmlContent = `<div class="exit-modal-sec-spz">
+    <div class="ems-content">
+    <a href="javascript:void(0)" class="ems-close-btn"></a>
+        <div class="ems-content-inner">
+            <h6>Get a quick demo to see how Netskope can protect and accelerate everything to everywhere</h6>
+            <ul class="ems-points">
+                <li>Visibility</li>
+                <li>Security</li>
+                <li>Network</li>
+            </ul>
+            <div class="ems-cta">
+                <a href="https://www.netskope.com/get-started" class="get-a-demo">Get Started</a>
+            </div>
+        </div>
+    </div>
+    <div class="ems-tab-spacer"></div>
+</div>`;
 
     // Append popup content to body
     function appendPopup() {
-        // Append popup content
-        if (document.querySelectorAll('.page .exit-modal-sec-spz').length == 0) {
-            document.querySelector('.page .v3__container').insertAdjacentHTML('afterend',
-                `<div class="exit-modal-sec-spz">
-                    <div class="ems-content">
-                    <a href="javascript:void(0)" class="ems-close-btn"></a>
-                        <div class="ems-content-inner">
-                            <h6>Get a quick demo to see how Netskope can protect and accelerate everything to everywhere</h6>
-                            <ul class="ems-points">
-                                <li>Visibility</li>
-                                <li>Security</li>
-                                <li>Network</li>
-                            </ul>
-                            <div class="ems-cta">
-                                <a href="https://www.netskope.com/get-started" class="get-a-demo">Get Started</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="ems-tab-spacer"></div>
-                </div>`);
+        if (document.querySelectorAll('body .exit-modal-sec-spz').length == 0) {
+            if (document.querySelector('.page .v3__container')) {
+                document.querySelector('.page .v3__container').insertAdjacentHTML('afterend', htmlContent);
+            }
+            else {
+                document.querySelector('body').insertAdjacentHTML('beforeend', htmlContent);
+            }
         }
 
         exitIntentPopup();
