@@ -1,15 +1,15 @@
 var css = `
-body.netskope_6009 {
+body.spz-6009-tc {
   scroll-behavior: smooth;
 }
-.netskope_6009:not(.show_content) > #components__content,
-.netskope_6009:not(.show_content) .netskope-footer {
+.spz-6009-tc:not(.show_content) > #components__content,
+.spz-6009-tc:not(.show_content) .netskope-footer {
   height: 0;
   overflow: hidden;
   opacity: 0;
   padding: 0;
 }
-.netskope_6009 .lock_hero {
+.spz-6009-tc .lock_hero {
   width: 100%;
   padding: 32px;
   text-align: center;
@@ -19,8 +19,8 @@ body.netskope_6009 {
   left: 0;
   z-index: 99;
 }
-.netskope_6009.show_content .lock_hero {display: none;}
-.netskope_6009 .lock_hero span {
+.spz-6009-tc.show_content .lock_hero {display: none;}
+.spz-6009-tc .lock_hero span {
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
@@ -34,63 +34,63 @@ body.netskope_6009 {
   cursor: pointer;
   transition: all 0.3s ease-in-out;
 }
-.netskope_6009 .lock_hero span:hover {
+.spz-6009-tc .lock_hero span:hover {
   color: #ff862a;
 }
-.netskope_6009 .lock_hero span svg {
+.spz-6009-tc .lock_hero span svg {
   margin-left: 8px;
 }
-.netskope_6009 .lock_hero span svg path {
+.spz-6009-tc .lock_hero span svg path {
   transition: all 0.3s ease-in-out;
 }
-.netskope_6009 .lock_hero span:hover svg path {
+.spz-6009-tc .lock_hero span:hover svg path {
   stroke: #ff862a;
 }
-.netskope_6009 .header.has-promo-banner {
+.spz-6009-tc .header.has-promo-banner {
   top: 46px;
 }
-.netskope_6009 .header.has-promo-banner .header__container-inner {
+.spz-6009-tc .header.has-promo-banner .header__container-inner {
   max-width: 1238px;
   padding: 0 24px;
 }
-.netskope_6009 .header.has-promo-banner .header__container {
+.spz-6009-tc .header.has-promo-banner .header__container {
   padding: 32px 0;
 }
-.netskope_6009 .header.has-promo-banner .header__top {
+.spz-6009-tc .header.has-promo-banner .header__top {
   padding: 0;
 }
-.netskope_6009 .header.has-promo-banner .header__top > div:not(.header__logo) {
+.spz-6009-tc .header.has-promo-banner .header__top > div:not(.header__logo) {
   display: none;
 }
-.netskope_6009 .header.has-promo-banner .header__logo {
+.spz-6009-tc .header.has-promo-banner .header__logo {
   padding: 0;
 }
-.netskope_6009 .header.has-promo-banner img {
+.spz-6009-tc .header.has-promo-banner img {
   width: 196px;
 }
-.netskope_6009 .js-hero-banner .gated-content__top,
-.netskope_6009 .js-hero-banner .gated-content__left {
+.spz-6009-tc .js-hero-banner .gated-content__top,
+.spz-6009-tc .js-hero-banner .gated-content__left {
   display: none;
 }
-.netskope_6009 .js-hero-banner {
+.spz-6009-tc .js-hero-banner {
   padding: 142px 0 0;
   background: #081a59 !important;
   background-size: 100% !important;
   position: relative;
 }
-.netskope_6009:not(.show_content) .js-hero-banner {
+.spz-6009-tc:not(.show_content) .js-hero-banner {
   min-height: calc(100vh - 46px);
 }
-.netskope_6009 .js-hero-banner .container {
+.spz-6009-tc .js-hero-banner .container {
   max-width: 1238px;
   padding: 0 24px 48px;
   position: relative;
   z-index: 99;
 }
-.netskope_6009:not(.show_content) .js-hero-banner .container {
+.spz-6009-tc:not(.show_content) .js-hero-banner .container {
   padding: 0 24px 137px;
 }
-.netskope_6009 .js-hero-banner::before {
+.spz-6009-tc .js-hero-banner::before {
   position: absolute;
   content: "";
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6001/background_pattern_2.webp");
@@ -103,26 +103,29 @@ body.netskope_6009 {
   pointer-events: none;
 }
 @media (min-width: 1900px) and (max-width: 2500px) {
-  .netskope_6009 .js-hero-banner::before {
+  .spz-6009-tc .js-hero-banner::before {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
 }
 @media (min-width: 2500px) and (max-width: 3500px) {
-  .netskope_6009 .js-hero-banner::before {
+  .spz-6009-tc .js-hero-banner::before {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
 }
-.netskope_6009 .js-hero-banner .gated-content__container {
+.spz-6009-tc .js-hero-banner .gated-content__container {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  flex-direction: row-reverse;
+  -webkit-box-orient: unset;
+  -webkit-box-direction: unset;
+  -ms-flex-direction: unset;
+  flex-direction: unset;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -130,11 +133,11 @@ body.netskope_6009 {
   -ms-flex-align: start;
   align-items: flex-start;
 }
-.netskope_6009 .js-hero-banner .gated-content__container .hero_left {
+.spz-6009-tc .js-hero-banner .gated-content__container .hero_left {
   width: 49.16%;
   max-width: 585px;
 }
-.netskope_6009 .hero_left .form-content-heading {
+.spz-6009-tc .hero_left .form-content-heading {
   color: #fff;
   font-family: Graphik;
   font-size: 48px;
@@ -144,10 +147,10 @@ body.netskope_6009 {
   margin: 0;
   position: relative;
 }
-.netskope_6009 .hero_left .form-content-heading br {
+.spz-6009-tc .hero_left .form-content-heading br {
   display: none;
 }
-.netskope_6009 .hero_left .form-content-heading::before {
+.spz-6009-tc .hero_left .form-content-heading::before {
   position: absolute;
   content: "";
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701662318/netskope/6001/Union.svg");
@@ -158,7 +161,7 @@ body.netskope_6009 {
   top: -20px;
   left: -36px;
 }
-.netskope_6009 .hero_left .form-content-subheading {
+.spz-6009-tc .hero_left .form-content-subheading {
   font-family: Graphik;
   font-size: 18px;
   font-weight: 600;
@@ -167,14 +170,14 @@ body.netskope_6009 {
   color: #FFF;
   margin: 24px 0 16px;
 }
-.netskope_6009 .hero_left .form-content-subheading sup {
+.spz-6009-tc .hero_left .form-content-subheading sup {
   top: inherit;
   font-size: 100%;
 }
-.netskope_6009 .hero_left .form-content-description img, .netskope_6009 .hero_left .form-content-description br {
+.spz-6009-tc .hero_left .form-content-description img, .spz-6009-tc .hero_left .form-content-description br {
   display: none;
 }
-.netskope_6009 .hero_left .form-content-description p {
+.spz-6009-tc .hero_left .form-content-description p {
   font-family: Graphik;
   font-size: 16px;
   font-weight: 400;
@@ -182,13 +185,13 @@ body.netskope_6009 {
   letter-spacing: 0em;
   margin-bottom: 41px;
 }
-.netskope_6009 .hero_left .form-content-description p strong {
+.spz-6009-tc .hero_left .form-content-description p strong {
   font-weight: 600;
 }
-.netskope_6009 .hero_left .hero-form-img {
+.spz-6009-tc .hero_left .hero-form-img {
   position: relative;
 }
-.netskope_6009 .hero_left .hero-form-img::after {
+.spz-6009-tc .hero_left .hero-form-img::after {
   position: absolute;
   content: "";
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1706516012/netskope/6003/arrow_desktop_1.svg");
@@ -199,33 +202,33 @@ body.netskope_6009 {
   right: -88px;
   top: 95px;
 }
-.netskope_6009 .hero_left .hero-form-img img {
+.spz-6009-tc .hero_left .hero-form-img img {
   width: 87.4%;
   max-width: 511px;
 }
-.netskope_6009 .hero_left img {
+.spz-6009-tc .hero_left img {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
 }
-.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right {
+.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right {
   width: 42.5%;
   max-width: 504px;
   margin: 0;
 }
-.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading,
-.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img {
+.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .form-content-heading,
+.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .hero-form-img {
   display: none;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .gated-content__form {
+.spz-6009-tc .js-hero-banner .gated-content__right .gated-content__form {
   width: 100%;
   max-width: unset;
   padding: 24px 32px 32px;
   border-radius: 24px;
   margin-bottom: 40px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .form_title {
+.spz-6009-tc .js-hero-banner .gated-content__right .form_title {
   color: #081a59;
   text-align: center;
   font-family: Graphik;
@@ -235,14 +238,14 @@ body.netskope_6009 {
   line-height: 48px;
   margin-bottom: 24px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .rte {
+.spz-6009-tc .js-hero-banner .gated-content__right .rte {
   margin-bottom: 32px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01), .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
+.spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(02) {
   display: none;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .rte p,
-.netskope_6009 .js-hero-banner .gated-content__right .rte ul li {
+.spz-6009-tc .js-hero-banner .gated-content__right .rte p,
+.spz-6009-tc .js-hero-banner .gated-content__right .rte ul li {
   font-family: Graphik;
   font-size: 16px;
   font-weight: 400;
@@ -250,18 +253,18 @@ body.netskope_6009 {
   letter-spacing: 0em;
   margin-bottom: 12px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .rte p strong,
-.netskope_6009 .js-hero-banner .gated-content__right .rte ul li strong {
+.spz-6009-tc .js-hero-banner .gated-content__right .rte p strong,
+.spz-6009-tc .js-hero-banner .gated-content__right .rte ul li strong {
   font-weight: 600;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .rte ul {
+.spz-6009-tc .js-hero-banner .gated-content__right .rte ul {
   padding-left: 24px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .rte ul,
-.netskope_6009 .js-hero-banner .gated-content__right .rte ul li {
+.spz-6009-tc .js-hero-banner .gated-content__right .rte ul,
+.spz-6009-tc .js-hero-banner .gated-content__right .rte ul li {
   margin: 0;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__label {
+.spz-6009-tc .js-hero-banner .gated-content__right .gated-content__content .gated-content__label {
   font-family: Graphik;
   font-size: 18px;
   font-weight: 600;
@@ -269,10 +272,10 @@ body.netskope_6009 {
   letter-spacing: 0em;
   margin-bottom: 8px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags {
+.spz-6009-tc .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags {
   margin: 0 -8px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
+.spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
   margin: 8px;
   font-family: Graphik;
   font-size: 16px;
@@ -281,10 +284,10 @@ body.netskope_6009 {
   letter-spacing: 0em;
   padding: 3px 15px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags ~ * {
+.spz-6009-tc .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags ~ * {
   display: none;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -295,37 +298,37 @@ body.netskope_6009 {
   justify-content: space-between;
   padding: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoTemplateBox {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoTemplateBox {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoTemplateBox .welcomeback {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoTemplateBox .welcomeback {
   color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoTemplateBox a.mktoNotYou {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoTemplateBox a.mktoNotYou {
   color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-2 {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-2 {
   display: none !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow {
   display: -webkit-inline-box !important;
   display: -ms-inline-flexbox !important;
   display: inline-flex !important;
   margin: 0;
   width: calc(50% - 6px) !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFormCol {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFormCol {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap {
   position: relative;
   margin-bottom: 16px;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox) label.mktoLabel {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox) label.mktoLabel {
   position: absolute !important;
   top: 16px;
   left: 16px;
@@ -341,10 +344,10 @@ body.netskope_6009 {
   transition: all 0.3s ease-in-out;
   font-family: "Graphik" !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox):hover label.mktoLabel {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox):hover label.mktoLabel {
   color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField {
   font-family: "Graphik" !important;
   height: 56px !important;
   padding: 24px 15px 8px !important;
@@ -360,10 +363,10 @@ body.netskope_6009 {
   box-shadow: none !important;
   outline: none !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:focus {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:focus {
   border-color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField {
   background-position: right 19px center !important;
   padding-right: 36px !important;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg") !important;
@@ -374,16 +377,16 @@ body.netskope_6009 {
   overflow: hidden;
   text-overflow: ellipsis;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField option {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField option {
   background: inherit;
   color: inherit;
   border-bottom: inherit;
   padding: inherit;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField.mktoInvalid {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField.mktoInvalid {
   border-color: #ff5b28 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError {
   top: initial;
   bottom: initial !important;
   left: initial !important;
@@ -391,10 +394,10 @@ body.netskope_6009 {
   display: inline-block;
   margin: 0;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
   display: none !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg {
   margin: 2px 0 0 10px;
   padding: 0;
   color: #ff5b28;
@@ -405,34 +408,34 @@ body.netskope_6009 {
   display: inline-block;
   bottom: auto;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.active.typing:not(.single_checkbox) label.mktoLabel {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.active.typing:not(.single_checkbox) label.mktoLabel {
   top: 6px;
   font-size: 12px !important;
   line-height: 20px !important;
   color: #7e8bba !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.active.typing .mktoField {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.active.typing .mktoField {
   border-color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.filled:not(.single_checkbox) label.mktoLabel {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.filled:not(.single_checkbox) label.mktoLabel {
   top: 6px;
   font-size: 12px !important;
   line-height: 20px !important;
   color: #7e8bba !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.typing select.mktoField {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.typing select.mktoField {
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg") !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox {
   margin: 0 0 8px 0;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
   padding: 0 0 0 24px !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
   opacity: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::before {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::before {
   width: 16px !important;
   height: 16px !important;
   border: 1px solid #ff8200 !important;
@@ -440,11 +443,11 @@ body.netskope_6009 {
   background: #fff !important;
   top: 2px !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p.p11 {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p.p11 {
   width: 100%;
   font-family: "Graphik" !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
   color: #081a59 !important;
   font-size: 12px;
   font-style: normal;
@@ -452,7 +455,7 @@ body.netskope_6009 {
   line-height: 20px;
   text-decoration: none !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p a {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p a {
   color: #081a59 !important;
   font-size: 12px;
   font-style: normal;
@@ -461,13 +464,13 @@ body.netskope_6009 {
   text-decoration: none !important;
   text-decoration: underline !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel.single_checked::before {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel.single_checked::before {
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701250536/netskope/6001/Checkbox_base.svg") !important;
   background-size: contain !important;
   background-repeat: no-repeat !important;
   border: none !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoHtmlText .netskope-fm {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoHtmlText .netskope-fm {
   padding: 0 !important;
   color: #7e8bba !important;
   font-size: 12px;
@@ -479,7 +482,7 @@ body.netskope_6009 {
   border: none;
   margin: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoHtmlText .netskope-fm a {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoHtmlText .netskope-fm a {
   padding: 0 !important;
   color: #7e8bba !important;
   font-size: 12px;
@@ -490,26 +493,26 @@ body.netskope_6009 {
   text-decoration: none !important;
   text-decoration: underline !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-10 {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-10 {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonRow {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoButtonRow {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
   margin-top: 8px !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton,
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton,
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
@@ -532,12 +535,12 @@ body.netskope_6009 {
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton:hover,
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn:hover {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton:hover,
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn:hover {
   background: #fff !important;
   border-color: #081a59 !important;
 }
-.netskope_6009 .landing-page-v3__content-container--bottom p {
+.spz-6009-tc .landing-page-v3__content-container--bottom p {
   color: #fff;
   font-family: Graphik;
   font-size: 16px;
@@ -546,13 +549,13 @@ body.netskope_6009 {
   line-height: 24px;
   margin: 0;
 }
-.netskope_6009 .landing-page-v3__content-container--bottom p strong {
+.spz-6009-tc .landing-page-v3__content-container--bottom p strong {
   font-weight: 600;
 }
-.netskope_6009 .landing-page-v3__content-container--bottom p b {
+.spz-6009-tc .landing-page-v3__content-container--bottom p b {
   font-weight: 600;
 }
-.netskope_6009 .landing-page-v3__content-container--bottom ul {
+.spz-6009-tc .landing-page-v3__content-container--bottom ul {
   color: #fff;
   font-family: Graphik;
   font-size: 16px;
@@ -562,44 +565,44 @@ body.netskope_6009 {
   margin: 0;
   padding-left: 24px;
 }
-.netskope_6009 .landing-page-v3__content-container--bottom ul strong {
+.spz-6009-tc .landing-page-v3__content-container--bottom ul strong {
   font-weight: 600;
 }
-.netskope_6009 .landing-page-v3__content-container--bottom ul b {
+.spz-6009-tc .landing-page-v3__content-container--bottom ul b {
   font-weight: 600;
 }
-.netskope_6009 .mktoForm select#Country:focus {
+.spz-6009-tc .mktoForm select#Country:focus {
   border: 1px solid #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right .mktoForm .mktoFormCol .mktoFieldWrap a {
+.spz-6009-tc .js-hero-banner .gated-content__right .mktoForm .mktoFormCol .mktoFieldWrap a {
   text-underline-offset: 2px;
   padding: 0;
 }
 
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 56px #fff inset !important;
   -webkit-text-fill-color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:hover {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 56px #fff inset !important;
   -webkit-text-fill-color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:focus {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 56px #fff inset !important;
   -webkit-text-fill-color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:active {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 56px #fff inset !important;
   -webkit-text-fill-color: #081a59 !important;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p, .netskope_6009 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p span {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p, .spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p span {
   color: #081a59;
   display: block;
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p span {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p span {
   margin: 15px auto 5px
 }
-.netskope_6009 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p br {
+.spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset p br {
   display: none;
 }
 #success-msg {
@@ -609,7 +612,7 @@ body.netskope_6009 {
   margin: 15px auto 5px;
 }
 @media(max-width: 1199.98px) and (min-width: 1024px) {
-  .netskope_6009 .hero_left .hero-form-img::after {
+  .spz-6009-tc .hero_left .hero-form-img::after {
     width: 199px;
     height: 65px;
     right: -92px;
@@ -617,40 +620,40 @@ body.netskope_6009 {
   }
 }
 @media (max-width: 1023.98px) {
-  .netskope_6009 .header.has-promo-banner {
+  .spz-6009-tc .header.has-promo-banner {
     top: 0;
   }
-  .netskope_6009 .header.has-promo-banner .header__container-inner {
+  .spz-6009-tc .header.has-promo-banner .header__container-inner {
     max-width: 752px;
   }
-  .netskope_6009 .header.has-promo-banner .header__container {
+  .spz-6009-tc .header.has-promo-banner .header__container {
     padding: 24px 0;
   }
-  .netskope_6009 .js-hero-banner {
+  .spz-6009-tc .js-hero-banner {
     padding: 74px 0 0 0;
     overflow-x: hidden;
   }
-  .netskope_6009 .js-hero-banner .container {
+  .spz-6009-tc .js-hero-banner .container {
     max-width: 752px;
   }
-  .netskope_6009 .js-hero-banner .container {
+  .spz-6009-tc .js-hero-banner .container {
     padding-bottom: 0;
   }
-  .netskope_6009:not(.show_content) .js-hero-banner .container {
+  .spz-6009-tc:not(.show_content) .js-hero-banner .container {
     padding-bottom: 89px;
   }
-  .netskope_6009 .js-hero-banner::before {
+  .spz-6009-tc .js-hero-banner::before {
     width: 1440px;
     height: 639px;
     right: -144px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container {
+  .spz-6009-tc .js-hero-banner .gated-content__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     display: block;
     color: #fff;
     font-size: 56px;
@@ -660,17 +663,17 @@ body.netskope_6009 {
     margin: 0 0 32px;
     position: relative;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right {
     width: 100%;
     max-width: unset;
     margin: 28px 0 32px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right > .hero-form-img {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right > .hero-form-img {
     display: block;
     position: relative;
     margin-bottom: 32px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img::after {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .hero-form-img::after {
     position: absolute;
     content: "";
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1706515985/netskope/6003/arrow_tablet_1.svg");
@@ -681,156 +684,156 @@ body.netskope_6009 {
     top: 3px;
     left: 341px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img img {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .hero-form-img img {
     width: 100%;
     max-width: 320px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .hero_left,
-  .netskope_6009 .js-hero-banner .gated-content__right .rte img,
-  .netskope_6009 .js-hero-banner .gated-content__right .rte br {
+  .spz-6009-tc .js-hero-banner .gated-content__container .hero_left,
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte img,
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte br {
     display: none;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01), .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(02) {
     display: block;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(01) {
     font-size: 18px;
     line-height: 24px;
     max-width: 70%;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) sup {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(01) sup {
     top: unset;
     font-size: 100%;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte p {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte p {
     margin-bottom: 25px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte ul {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte ul {
     margin-top: -14px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__form {
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__form {
     margin-bottom: 32px;
   }
 }
 @media (max-width: 1400px) {
-  .netskope_6009 .landing-page__footer-inner > .row {
+  .spz-6009-tc .landing-page__footer-inner > .row {
     margin: 0;
   }
 }
 @media (max-width: 767.98px) {
-  .netskope_6009 .header.has-promo-banner img {
+  .spz-6009-tc .header.has-promo-banner img {
     width: 136px;
   }
-  .netskope_6009 .header.has-promo-banner .header__container {
+  .spz-6009-tc .header.has-promo-banner .header__container {
     padding: 18px 0;
   }
-  .netskope_6009 .header.has-promo-banner .header__container-inner {
+  .spz-6009-tc .header.has-promo-banner .header__container-inner {
     max-width: 548px;
   }
 }
 @media (min-width: 3500px) {
-  .netskope_6009 .js-hero-banner::before {
+  .spz-6009-tc .js-hero-banner::before {
     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
   }
 }
 @media (max-width: 1199.98px) {
-  .netskope_6009 .landing-page-v3__form-container .js-hero-banner .gated-content__container .gated-content__right::after {
+  .spz-6009-tc .landing-page-v3__form-container .js-hero-banner .gated-content__container .gated-content__right::after {
     bottom: -100px;
   }
 }
 @media (max-width: 767.98px) {
-  .netskope_6009 .lock_hero {
+  .spz-6009-tc .lock_hero {
     position: relative;
     padding: 23px 24px 24px;
   }
-  .netskope_6009 .js-hero-banner {
+  .spz-6009-tc .js-hero-banner {
     padding: 48px 0 0 0;
   }
-  .netskope_6009 .js-hero-banner .container {
+  .spz-6009-tc .js-hero-banner .container {
     padding: 0 !important;
   }
-  .netskope_6009 .js-hero-banner::before {
+  .spz-6009-tc .js-hero-banner::before {
     right: -348px;
     top: 0;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     font-size: 40px;
     line-height: 48px;
     padding: 0 24px;
     margin-bottom: 24px;
   }
-  .netskope_6009 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
+  .spz-6009-tc .landing-page-v3__form-container .landing-page-v3__form .hero_left {
     padding: 0 24px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img,
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img::after {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .hero-form-img,
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .hero-form-img::after {
     display: none;
   }
-  .netskope_6009 .landing-page-v3__form-container .js-hero-banner .gated-content__container .gated-content__right {
+  .spz-6009-tc .landing-page-v3__form-container .js-hero-banner .gated-content__container .gated-content__right {
     padding: 24px 24px 32px;
     margin: 22px 0 23px;
   }
-  .netskope_6009 .hero_left h4 {
+  .spz-6009-tc .hero_left h4 {
     font-size: 16px;
     margin: 2px 0 23px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__form {
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__form {
     margin: 0;
     padding: 24px 24px 32px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow {
+  .spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow {
     width: 100% !important;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap {
+  .spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap {
     margin-bottom: 8px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
+  .spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
     margin-top: 6px !important;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
+  .spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
     margin-top: 3px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
+  .spz-6009-tc .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
     margin-top: 10px !important;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte {
     max-width: unset;
     padding: 0 24px;
     margin: 32px 0 31px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img {
     display: block;
     margin: 33px 0;
   }
-  .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img img {
+  .spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img img {
     display: block;
     margin: 0;
     max-width: unset;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(01) {
     max-width: 100%;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte p {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte p {
     margin-bottom: 16px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .rte ul {
+  .spz-6009-tc .js-hero-banner .gated-content__right .rte ul {
     margin-top: -4px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__content {
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__content {
     padding: 0 24px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags {
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags {
     margin: 0 -4px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
     margin: 8px 4px;
   }
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(01) {order: 1}
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(02) {order: 3}
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(03) {order: 2}
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
-  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(01) {order: 1}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(02) {order: 3}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(03) {order: 2}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
 }`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
@@ -843,17 +846,17 @@ let bodyLoaded = setInterval(function () {
   if (body) {
     clearInterval(bodyLoaded);
 
-    if (!body.classList.contains('netskope_6009')) {
+    if (!body.classList.contains('spz-6009-tc')) {
 		
-	    body.classList.add('netskope_6009');
+	    body.classList.add('spz-6009-tc');
 
-		  waitForElm('.netskope_6009 .js-hero-banner').then(function () {
-        var heading = document.querySelector(".netskope_6009 .js-hero-banner .page-intro__resource-title span").textContent;
-        var sub_heading = document.querySelector(".netskope_6009 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
-        var short_description = document.querySelector(".netskope_6009 .js-hero-banner .gated-content__left .rte p:nth-child(02)").outerHTML;
+		  waitForElm('.spz-6009-tc .js-hero-banner').then(function () {
+        var heading = document.querySelector(".spz-6009-tc .js-hero-banner .page-intro__resource-title span").textContent;
+        var sub_heading = document.querySelector(".spz-6009-tc .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
+        var short_description = document.querySelector(".spz-6009-tc .js-hero-banner .gated-content__left .rte p:nth-child(02)").outerHTML;
       
         // Hero Form Content
-        document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
+        document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
           <h2 class="form-content-heading">`+heading+`</h2>
           <h6 class="form-content-subheading">`+sub_heading+`</h6>
           <div class="form-content-description">`+short_description+`</div>
@@ -862,14 +865,14 @@ let bodyLoaded = setInterval(function () {
           </div>
         </div>`);
 
-        document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend", `<picture class="hero-form-img">
+        document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend", `<picture class="hero-form-img">
           <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp">
           <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/tablet_report.webp">
           <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
           <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+heading+`">
-        </picture>`+document.querySelector(".netskope_6009 .js-hero-banner .gated-content__left").innerHTML);
-        document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
-        document.querySelector('.netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
+        </picture>`+document.querySelector(".spz-6009-tc .js-hero-banner .gated-content__left").innerHTML);
+        document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
+        document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
           <img src="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp" alt="`+heading+`">
         </div>`);
         
@@ -880,16 +883,16 @@ let bodyLoaded = setInterval(function () {
         });
 
         // Lock Hero
-        document.querySelector('.netskope_6009 .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="lock_hero">
+        document.querySelector('.spz-6009-tc .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="lock_hero">
           <span>Learn More <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
               <path d="M6.5 9L12.5 15L18.5 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
             </svg>
           </span>
         </div>`);
-        document.querySelector('.netskope_6009 .lock_hero span').addEventListener('click', function() {
+        document.querySelector('.spz-6009-tc .lock_hero span').addEventListener('click', function() {
           if (!document.body.classList.contains('show_content')) {
             document.body.classList.add('show_content');
-            document.querySelector('.netskope_6009.show_content > #components__content').scrollIntoView({
+            document.querySelector('.spz-6009-tc.show_content > #components__content').scrollIntoView({
               block: "start",
               behavior: "smooth"
             });
@@ -922,21 +925,21 @@ function waitForElm(selector) {
 
 function formModify() {
   // Add class in mktoFormRow using count
-  var parentDiv = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
+  var parentDiv = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
   var childElements = parentDiv.children;
   for (var i = 0; i < childElements.length; i++) {
     var dynamicClass = 'field-' + (i + 1);
     childElements[i].classList.add(dynamicClass);
   }
 
-  var formDiv = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
+  var formDiv = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
   // Form Extra Titles
 	if (formDiv && document.querySelectorAll('.form_title').length == 0) {
 		formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
 	}
   // form CTA Update
   var form_button = setInterval(() => {
-    var textChng = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .mktoForm .mktoButtonRow .mktoButton');
+    var textChng = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .gated-content__right .mktoForm .mktoButtonRow .mktoButton');
     if (textChng) {
       textChng.innerText = 'Get the report';
       clearInterval(form_button);
@@ -954,12 +957,12 @@ function formModify() {
 	document.querySelector('#LblCountry').textContent = "Country";
 
   // Change Field Position
-  var email_field = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-3');
-  var lastname_field = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-5');
+  var email_field = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-3');
+  var lastname_field = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-5');
   lastname_field.after(email_field);
 
-  var optout_field = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-11');
-  var form_footer = document.querySelector('.netskope_6009 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-10');
+  var optout_field = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-11');
+  var form_footer = document.querySelector('.spz-6009-tc .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-10');
   form_footer.before(optout_field);
 
   var zip_row = document.createElement("div");
@@ -967,7 +970,7 @@ function formModify() {
 	zip_row.classList.add('mktoFormRow');
 	zip_row.classList.add('mktoZipRow');
 	
-	var extraRow = document.querySelectorAll(".netskope_6009 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow")[7];
+	var extraRow = document.querySelectorAll(".spz-6009-tc .js-hero-banner .gated-content__container .mktoForm .mktoFormRow")[7];
 	insertAfter(extraRow, zip_row);
 	
 	const zip_row_old = document.querySelector(".mktoPlaceholderPostalCode");
