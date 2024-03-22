@@ -2,6 +2,10 @@ var css = `
 body.netskope_6009 {
   scroll-behavior: smooth;
 }
+.netskope_6009 #wrapper .landing-page-v3__container #components__content{
+  position: relative;
+  z-index: 1;
+}
 .netskope_6009:not(.show_content) #wrapper > #components__content,
 .netskope_6009:not(.show_content) .landing-page__footer {
   height: 0;
@@ -121,10 +125,7 @@ body.netskope_6009 {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-orient: unset;
-  -webkit-box-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -148,8 +149,13 @@ body.netskope_6009 {
   display: none;
 }
 .netskope_6009 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
-  width: 46.5%;
-  max-width: 548px;
+  // width: 46.5%;
+  // max-width: 548px;
+  width: 46.01%;
+  max-width: 561px;
+  margin-right: 37px;
+  position: relative;
+  z-index: 1;
 }
 .netskope_6009 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
   width: 42.5%;
@@ -162,13 +168,13 @@ body.netskope_6009 {
 .netskope_6009 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content::after {
   position: absolute;
   content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700151751/netskope/6001/vector_9.svg");
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1710838436/netskope/6009/vector.svg");
   background-size: contain;
   background-repeat: no-repeat;
-  width: 260px;
+  width: 144px;
   height: 72px;
-  left: -125px;
-  bottom: -107px;
+  right: -148px;
+  bottom: -95px;
 }
 .netskope_6009 .hero_left .form-content-heading {
   color: #fff;
@@ -475,6 +481,7 @@ body.netskope_6009 {
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
+  font-family: Graphik !important;
 }
 .netskope_6009 .landing-page-v3__form-content form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .netskope_6009 .landing-page-v3__form-content form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -840,7 +847,7 @@ function formModify() {
 	document.querySelector('#LblLastName').textContent = "Last Name";
 	document.querySelector('#LblEmail').textContent = "Business Email";
 	document.querySelector('#LblCompany').textContent = "Company";
-	document.querySelector('#LblTitle').textContent = "Job title";
+	document.querySelector('#LblTitle').textContent = "Job Title";
 	document.querySelector('#LblPhone').textContent = "Phone";
 	document.querySelector('#Country option:first-child').textContent = "";
 	document.querySelector('#LblCountry').textContent = "Country";

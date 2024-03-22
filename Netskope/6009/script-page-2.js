@@ -203,6 +203,8 @@ body.netskope_6009 {
 .netskope_6009 .hero_left .hero-form-img img {
   width: 87.4%;
   max-width: 511px;
+  position: relative;
+  z-index: 1;
 }
 .netskope_6009 .hero_left img {
   width: 100%;
@@ -618,14 +620,14 @@ body.netskope_6009 {
 }
 @media(max-width: 1199.98px) and (min-width: 1024px) {
   .netskope_6009 .hero_left .hero-form-img::after {
-    background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1706516012/netskope/6003/arrow_desktop_1.svg);
+    /* background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1706516012/netskope/6003/arrow_desktop_1.svg); */
     background-size: contain;
     background-repeat: no-repeat;
     width: 199px;
     height: 65px;
-    right: -92px;
-    top: 14px;
-    left:auto;
+    /* right: -92px; */
+    top: 65px;
+    left: -80px;
   }
 }
 @media (max-width: 1023.98px) {
@@ -685,13 +687,13 @@ body.netskope_6009 {
   .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img::after {
     position: absolute;
     content: "";
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1706515985/netskope/6003/arrow_tablet_1.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1710838462/netskope/6009/arrow_tablet.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 173px;
-    height: 167px;
-    top: 3px;
-    left: 341px;
+    width: 202px;
+    height: 188px;
+    top: 18px;
+    left: 362px;
   }
   .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img img {
     width: 100%;
@@ -769,8 +771,8 @@ body.netskope_6009 {
     top: 0;
   }
   .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 40px;
     padding: 0 24px;
     margin-bottom: 24px;
   }
@@ -811,7 +813,7 @@ body.netskope_6009 {
   .netskope_6009 .js-hero-banner .gated-content__right .rte {
     max-width: unset;
     padding: 0 24px;
-    margin: 32px 0 31px;
+    margin: 24px 0;
   }
   .netskope_6009 .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img {
     display: block;
@@ -823,10 +825,10 @@ body.netskope_6009 {
     max-width: unset;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) {
-    max-width: 100%;
+    max-width: 98%;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .rte p {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .rte ul {
     margin-top: -4px;
@@ -838,7 +840,7 @@ body.netskope_6009 {
     margin: 0 -4px;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
-    margin: 8px 4px;
+    margin: 8px 14px 8px 4px;
   }
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(01) {order: 1}
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(02) {order: 3}
@@ -846,6 +848,7 @@ body.netskope_6009 {
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
   .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
+  .netskope_6009 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag {order: 6; padding-left: 0}
 }`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
@@ -974,7 +977,7 @@ function formModify() {
   document.querySelector('#LblLastName').textContent = "Last Name";
   document.querySelector('#LblEmail').textContent = "Business Email";
   document.querySelector('#LblCompany').textContent = "Company";
-  document.querySelector('#LblTitle').textContent = "Job title";
+  document.querySelector('#LblTitle').textContent = "Job Title";
   document.querySelector('#LblPhone').textContent = "Phone";
   document.querySelector('#Country option:first-child').textContent = "";
   document.querySelector('#LblCountry').textContent = "Country";
