@@ -109,6 +109,101 @@ ready(function () {
             <div class="form-section">
               <div class="title">Contact Us</div>
               <div id="new-formDemo-wrapper"><div class='lds-dual-ring'></div></div>
+              <div class="step1-wrapper step-wrapper">
+    <div class="sub">What best describes you? </div>
+    <div class="option-wrapper column3">
+      <div class="option continue">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735375/KomodoHealth/2004/icon1-1.svg" class="default" width="32" height="32" alt="Life Sciences"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735375/KomodoHealth/2004/icon1-1-h.svg" class="hover" width="32" height="32" alt="Life Sciences hover"/>
+        </div>
+        <div class="text">Life Sciences </div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735376/KomodoHealth/2004/icon1-2.svg" class="default" width="32" height="32" alt="Consultancies"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735375/KomodoHealth/2004/icon1-2-h.svg" class="hover" width="32" height="32" alt="Consultancies hover"/>
+        </div>
+        <div class="text">Consultancies</div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735376/KomodoHealth/2004/icon1-3.svg" class="default" width="32" height="32" alt="Partnerships"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735376/KomodoHealth/2004/icon1-3-h.svg" class="hover" width="32" height="32" alt="Partnerships hover"/>
+        </div>
+        <div class="text">Partnerships</div>
+      </div>
+    </div>
+    <div class="option-wrapper column2 no-margin-bottom">
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735377/KomodoHealth/2004/icon1-4.svg" class="default" width="32" height="32" alt="Payers"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735377/KomodoHealth/2004/icon1-4-h.svg" class="hover" width="32" height="32" alt="Payers hover"/>
+        </div>
+        <div class="text">Payers</div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735375/KomodoHealth/2004/icon1-5.svg" class="default" width="32" height="32" alt="Other"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735378/KomodoHealth/2004/icon1-5-h.svg" class="hover" width="32" height="32" alt="Other hover"/>
+        </div>
+        <div class="text">Other</div>
+      </div>
+    </div>
+    <div class="error-message">Please choose one answer</div>
+    <div class="next next-1">NEXT</div>
+  </div>
+  <div class="step2-wrapper step-wrapper hide">
+    <div class="sub">What best describes you? </div>
+    <div class="option-wrapper column3">
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735375/KomodoHealth/2004/icon2-1.svg" class="default" width="32" height="32" alt="Clinical Development"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735375/KomodoHealth/2004/icon2-1-h.svg" class="hover" width="32" height="32" alt="Clinical Development hover"/>
+        </div>
+        <div class="text">Clinical Development </div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735378/KomodoHealth/2004/icon2-2.svg" class="default" width="32" height="32" alt="Commercial"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735376/KomodoHealth/2004/icon2-2-h.svg" class="hover" width="32" height="32" alt="Commercial hover"/>
+        </div>
+        <div class="text">Commercial</div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735378/KomodoHealth/2004/icon2-3.svg" class="default" width="32" height="32" alt="HEOR"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735379/KomodoHealth/2004/icon2-3-h.svg" class="hover" width="32" height="32" alt="HEOR hover"/>
+        </div>
+        <div class="text">HEOR</div>
+      </div>
+    </div>
+    <div class="option-wrapper column3 no-margin-bottom">
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735378/KomodoHealth/2004/icon2-4.svg" class="default" width="32" height="32" alt="Market Access"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735378/KomodoHealth/2004/icon2-4-h.svg" class="hover" width="32" height="32" alt="Market Access hover"/>
+        </div>
+        <div class="text">Market Access </div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735380/KomodoHealth/2004/icon2-5.svg" class="default" width="32" height="32" alt="Medical Affairs"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735380/KomodoHealth/2004/icon2-5-h.svg" class="hover" width="32" height="32" alt="Medical Affairs hover"/>
+        </div>
+        <div class="text">Medical Affairs</div>
+      </div>
+      <div class="option">
+        <div class="image-wrapper">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735380/KomodoHealth/2004/icon2-6.svg" class="default" width="32" height="32" alt="Other"/>
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1698735380/KomodoHealth/2004/icon2-6-h.svg" class="hover" width="32" height="32" alt="Other hover"/>
+        </div>
+        <div class="text">Other</div>
+      </div>
+    </div>
+    <div class="error-message">Please choose one answer</div>
+    <div class="next next-2">NEXT</div>
+  </div>
             </div>
           </div>
         </div>
@@ -206,6 +301,50 @@ ready(function () {
     </div>
     `);
 
+      document.querySelector('.spz-2004 #popup_request_a_demo .step-wrapper .next-1').addEventListener("click", function () {
+        if (!(document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected'))) {
+          document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .error-message').classList.add('show');
+        } else {
+          if (document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected').classList.contains('continue')) {
+            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper').classList.add("hide");
+            document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper').classList.remove("hide")
+          } else {
+            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper').classList.add("hide");
+            document.querySelector('.spz-2004 #new-formDemo-wrapper').classList.add("show")
+          }
+        }
+      })
+      document.querySelector('.spz-2004 #popup_request_a_demo .step-wrapper .next-2').addEventListener("click", function () {
+        if (!(document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .selected'))) {
+          document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .error-message').classList.add('show');
+        } else {
+          document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper').classList.add("hide");
+          document.querySelector('.spz-2004 #new-formDemo-wrapper').classList.add("show")
+        }
+      })
+      document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper').addEventListener("click", function (e) {
+        if (e.target.closest('.option') && !e.target.closest('.option').classList.contains('selected')) {
+          if (document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected')) {
+            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected').classList.remove('selected')
+          }
+          if (document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .error-message.show')) {
+            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .error-message.show').classList.remove("show")
+          }
+          e.target.closest('.option').classList.add("selected")
+        }
+      })
+      document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper').addEventListener("click", function (e) {
+        if (e.target.closest('.option') && !e.target.closest('.option').classList.contains('selected')) {
+          if (document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .selected')) {
+            document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .selected').classList.remove('selected')
+          }
+          if (document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .error-message.show')) {
+            document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .error-message.show').classList.remove("show")
+          }
+          e.target.closest('.option').classList.add("selected")
+        }
+      })
+
       loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function () {
         let updateHeight = () => {
           let slide = splide.Components.Slides.getAt(typeof (newIndex) == 'number' ? newIndex : splide.index).slide;
@@ -243,15 +382,7 @@ ready(function () {
           splide.go('>');
         })
       }, document.body)
-      document.querySelector('.spz-2001 #popup_contact_us .wcs-pform').remove()
-      document.querySelector('.spz-2001 #popup_connect .wcs-pform').remove()
-      document.querySelector('.spz-2001 #popup_contact_us .wcs-col-12').innerHTML = `
-    <div class="wcs-pform">
-      <div class="wcs-popup-heading">
-        <h2>Contact Us</h2>
-      </div>
-    </div>
-    `
+
       let i = 0;
       const CROInterval = setInterval(() => {
         if (document.querySelector('.spz-2001 #new-formDemo-wrapper input[name="cro1"]')) {
