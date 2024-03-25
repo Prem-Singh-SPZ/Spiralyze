@@ -2,8 +2,7 @@ var css = `
 body.spz-0001 {
   scroll-behavior: smooth;
 }
-.spz-0001 .js-hero-banner .gated-content__top,
-.spz-0001 .js-hero-banner .gated-content__left {
+.spz-0001 .js-hero-banner .gated-content__top{
   display: none;
 }
 .spz-0001 .js-hero-banner {
@@ -705,19 +704,19 @@ let bodyLoaded = setInterval(function () {
 	    body.classList.add('spz-0001');
 
 		  waitForElm('.spz-0001 .js-hero-banner').then(function () {
-        var heading = document.querySelector(".spz-0001 .js-hero-banner .page-intro__resource-title span").textContent;
-        var sub_heading = document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
-        var short_description = document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte p:nth-child(02)").outerHTML;
+        // var heading = document.querySelector(".spz-0001 .js-hero-banner .page-intro__resource-title span").textContent;
+        // var sub_heading = document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
+        // var short_description = document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte p:nth-child(02)").outerHTML;
       
-        // Hero Form Content
-        document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
-          <h2 class="form-content-heading">`+heading+`</h2>
-          <h6 class="form-content-subheading">`+sub_heading+`</h6>
-          <div class="form-content-description">`+short_description+`</div>
-        </div>`);
+        // // Hero Form Content
+        // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
+        //   <h2 class="form-content-heading">`+heading+`</h2>
+        //   <h6 class="form-content-subheading">`+sub_heading+`</h6>
+        //   <div class="form-content-description">`+short_description+`</div>
+        // </div>`);
 
-        document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend",document.querySelector(".spz-0001 .js-hero-banner .gated-content__left").innerHTML);
-        document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
+        // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend",document.querySelector(".spz-0001 .js-hero-banner .gated-content__left").innerHTML);
+        // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
         
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {

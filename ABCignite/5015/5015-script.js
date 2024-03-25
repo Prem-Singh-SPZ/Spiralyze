@@ -333,63 +333,63 @@ function init5014() {
         }
     }
 
-    let ctaBottomHtml = `<div class="spz-bottom-wrap">
-		<div class="spz-bottom-container">
-			<div class="spz-bottom-content">
-				<h2>#1 club & gym management platform</h2>
-				<p>Grow your gym 30% while streamlining sales, member engagement, and operations.</p>
-				<form>
-					<div class="spz-input-wrap">
-						<input type="text" class="spz-bottom-input" placeholder="Email" />
-						<button class="spz-bottom-cta has-background" type="button">GET A DEMO <svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
-							<path fill-rule="evenodd" clip-rule="evenodd" d="M11.8561 0.238644L16.7737 5.42386C17.0754 5.74206 17.0754 6.25795 16.7737 6.57614L11.8561 11.7614C11.5543 12.0795 11.065 12.0795 10.7633 11.7614C10.4615 11.4432 10.4615 10.9273 10.7633 10.6091L14.3617 6.81478L0.772727 6.81478C0.345961 6.81478 -5.63876e-07 6.44999 -5.24537e-07 6C-4.85197e-07 5.55001 0.345961 5.18522 0.772727 5.18522L14.3617 5.18522L10.7633 1.39092C10.4615 1.07272 10.4615 0.556835 10.7633 0.238644C11.065 -0.0795468 11.5543 -0.0795467 11.8561 0.238644Z" fill="white"/>
-							</svg>
-						</button>
-				</form>
-			</div>
-		</div>
-	</div>`;
+    // let ctaBottomHtml = `<div class="spz-bottom-wrap">
+	// 	<div class="spz-bottom-container">
+	// 		<div class="spz-bottom-content">
+	// 			<h2>#1 club & gym management platform</h2>
+	// 			<p>Grow your gym 30% while streamlining sales, member engagement, and operations.</p>
+	// 			<form>
+	// 				<div class="spz-input-wrap">
+	// 					<input type="text" class="spz-bottom-input" placeholder="Email" />
+	// 					<button class="spz-bottom-cta has-background" type="button">GET A DEMO <svg xmlns="http://www.w3.org/2000/svg" width="17" height="12" viewBox="0 0 17 12" fill="none">
+	// 						<path fill-rule="evenodd" clip-rule="evenodd" d="M11.8561 0.238644L16.7737 5.42386C17.0754 5.74206 17.0754 6.25795 16.7737 6.57614L11.8561 11.7614C11.5543 12.0795 11.065 12.0795 10.7633 11.7614C10.4615 11.4432 10.4615 10.9273 10.7633 10.6091L14.3617 6.81478L0.772727 6.81478C0.345961 6.81478 -5.63876e-07 6.44999 -5.24537e-07 6C-4.85197e-07 5.55001 0.345961 5.18522 0.772727 5.18522L14.3617 5.18522L10.7633 1.39092C10.4615 1.07272 10.4615 0.556835 10.7633 0.238644C11.065 -0.0795468 11.5543 -0.0795467 11.8561 0.238644Z" fill="white"/>
+	// 						</svg>
+	// 					</button>
+	// 			</form>
+	// 		</div>
+	// 	</div>
+	// </div>`;
 
-    waitForElm('.site-footer').then((elm) => {
-        if (document.querySelectorAll('.spz-bottom-wrap').length == 0) {
-            elm.insertAdjacentHTML("beforebegin", ctaBottomHtml)
-            document.querySelector('.spz-bottom-cta').addEventListener('click', function () {
-                if (document.querySelector('#flydown-modal .flydown-modal__form .mktoEmailField')) {
-                    document.querySelector('#flydown-modal .flydown-modal__form .mktoEmailField').value = document.querySelector('.spz-bottom-input').value;
-                }
+    // waitForElm('.site-footer').then((elm) => {
+    //     if (document.querySelectorAll('.spz-bottom-wrap').length == 0) {
+    //         elm.insertAdjacentHTML("beforebegin", ctaBottomHtml)
+    //         document.querySelector('.spz-bottom-cta').addEventListener('click', function () {
+    //             if (document.querySelector('#flydown-modal .flydown-modal__form .mktoEmailField')) {
+    //                 document.querySelector('#flydown-modal .flydown-modal__form .mktoEmailField').value = document.querySelector('.spz-bottom-input').value;
+    //             }
 
-                if (document.querySelector(".site-header .modal-flydown-trigger")) {
-                    document.querySelector(".site-header .modal-flydown-trigger").click();
-                } else if (document.querySelector('.spz-menu-item .spz-demo-btn')) {
-                    document.querySelector('.spz-menu-item .spz-demo-btn').click()
-                }
-            });
+    //             if (document.querySelector(".site-header .modal-flydown-trigger")) {
+    //                 document.querySelector(".site-header .modal-flydown-trigger").click();
+    //             } else if (document.querySelector('.spz-menu-item .spz-demo-btn')) {
+    //                 document.querySelector('.spz-menu-item .spz-demo-btn').click()
+    //             }
+    //         });
 
-            document.querySelector('.spz-bottom-input').addEventListener('focus', function (el) {
-                document.querySelector('.spz-input-wrap').classList.add('field-focus');
+    //         document.querySelector('.spz-bottom-input').addEventListener('focus', function (el) {
+    //             document.querySelector('.spz-input-wrap').classList.add('field-focus');
 
-            });
-            document.querySelector('.spz-bottom-input').addEventListener('blur', function (el) {
-                document.querySelector('.spz-input-wrap').classList.remove('field-focus');
-                if (document.querySelector('.spz-bottom-input').value != '') {
-                    document.querySelector('.spz-input-wrap').classList.add('input-filled');
-                } else {
-                    document.querySelector('.spz-input-wrap').classList.remove('input-filled');
-                }
-            });
-        }
-    })
+    //         });
+    //         document.querySelector('.spz-bottom-input').addEventListener('blur', function (el) {
+    //             document.querySelector('.spz-input-wrap').classList.remove('field-focus');
+    //             if (document.querySelector('.spz-bottom-input').value != '') {
+    //                 document.querySelector('.spz-input-wrap').classList.add('input-filled');
+    //             } else {
+    //                 document.querySelector('.spz-input-wrap').classList.remove('input-filled');
+    //             }
+    //         });
+    //     }
+    // })
 
-    waitForElm('.modal .modal__overlay').then((elm) => {
-        elm.removeAttribute('data-micromodal-close')
+    // waitForElm('.modal .modal__overlay').then((elm) => {
+    //     elm.removeAttribute('data-micromodal-close')
 
-        elm.addEventListener('click', function (e) {
-            if (e.target == elm) {
-                document.querySelector('.modal__close').click();
-            }
-        })
+    //     elm.addEventListener('click', function (e) {
+    //         if (e.target == elm) {
+    //             document.querySelector('.modal__close').click();
+    //         }
+    //     })
 
-    })
+    // })
 
 }
 
