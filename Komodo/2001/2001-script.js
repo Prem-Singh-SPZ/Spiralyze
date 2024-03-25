@@ -1,4 +1,4 @@
-console.log("test running")
+console.log("Test Running...")
 function ready(fn) {
   if (document.readyState !== 'loading') {
     fn();
@@ -7,11 +7,11 @@ function ready(fn) {
   }
 }
 ready(function () {
-  console.log("after dom load")
+  console.log("DOM ready")
   if (!document.querySelector('.spz-2001')) {
     document.querySelector('body').classList.add('spz-2001')
     //targeted page
-    if (window.location.href.indexOf('https://www.komodohealth.com/contact-us') > -1) {
+    if (window.location.href.indexOf('https://www.komodohealth.com/get-a-demo') > -1) {
       const loadJS = (url, implementationCode, location) => {
         var scriptTag = document.createElement('script');
         scriptTag.src = url;
@@ -108,7 +108,7 @@ ready(function () {
               </div>
             </div>
             <div class="form-section">
-              <div class="title">Contact Us</div>
+              <div class="title">Get a Demo</div>
               <div class="review-wrapper">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1702395225/komodohealth/2004/frame_5597.svg" alt="Star Review" width="116" height="20">
         <div class="text"><span class="black">4.8</span> (678 reviews)</div>
@@ -544,11 +544,11 @@ ready(function () {
     //non targeted page
     else {
       let elementArray = [];
-      for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
-        elementArray[i] = document.querySelectorAll('a[href="#popup_contact_us"]')[i];
+      for (let i = 0; i < document.querySelectorAll('a[href="#popup_request_a_demo"]').length; i++) {
+        elementArray[i] = document.querySelectorAll('a[href="#popup_request_a_demo"]')[i];
       }
       for (let i = 0; i < elementArray.length; i++) {
-        elementArray[i].setAttribute("href", "https://www.komodohealth.com/get-in-touch");
+        elementArray[i].setAttribute("href", "https://www.komodohealth.com/get-a-demo");
         elementArray[i].removeAttribute("rel");
       }
     }
