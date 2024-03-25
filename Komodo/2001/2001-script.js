@@ -301,45 +301,45 @@ ready(function () {
     </div>
     `);
 
-      document.querySelector('.spz-2004 #popup_request_a_demo .step-wrapper .next-1').addEventListener("click", function () {
-        if (!(document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected'))) {
-          document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .error-message').classList.add('show');
+      document.querySelector('.spz-2001 .form-wrapper .form-section .step-wrapper .next-1').addEventListener("click", function () {
+        if (!(document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .selected'))) {
+          document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .error-message').classList.add('show');
         } else {
-          if (document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected').classList.contains('continue')) {
-            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper').classList.add("hide");
-            document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper').classList.remove("hide")
+          if (document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .selected').classList.contains('continue')) {
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper').classList.add("hide");
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper').classList.remove("hide")
           } else {
-            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper').classList.add("hide");
-            document.querySelector('.spz-2004 #new-formDemo-wrapper').classList.add("show")
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper').classList.add("hide");
+            document.querySelector('.spz-2001 #new-formDemo-wrapper').classList.add("show")
           }
         }
       })
-      document.querySelector('.spz-2004 #popup_request_a_demo .step-wrapper .next-2').addEventListener("click", function () {
-        if (!(document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .selected'))) {
-          document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .error-message').classList.add('show');
+      document.querySelector('.spz-2001 .form-wrapper .form-section .step-wrapper .next-2').addEventListener("click", function () {
+        if (!(document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper .selected'))) {
+          document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper .error-message').classList.add('show');
         } else {
-          document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper').classList.add("hide");
-          document.querySelector('.spz-2004 #new-formDemo-wrapper').classList.add("show")
+          document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper').classList.add("hide");
+          document.querySelector('.spz-2001 #new-formDemo-wrapper').classList.add("show")
         }
       })
-      document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper').addEventListener("click", function (e) {
+      document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper').addEventListener("click", function (e) {
         if (e.target.closest('.option') && !e.target.closest('.option').classList.contains('selected')) {
-          if (document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected')) {
-            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .selected').classList.remove('selected')
+          if (document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .selected')) {
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .selected').classList.remove('selected')
           }
-          if (document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .error-message.show')) {
-            document.querySelector('.spz-2004 #popup_request_a_demo .step1-wrapper .error-message.show').classList.remove("show")
+          if (document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .error-message.show')) {
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step1-wrapper .error-message.show').classList.remove("show")
           }
           e.target.closest('.option').classList.add("selected")
         }
       })
-      document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper').addEventListener("click", function (e) {
+      document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper').addEventListener("click", function (e) {
         if (e.target.closest('.option') && !e.target.closest('.option').classList.contains('selected')) {
-          if (document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .selected')) {
-            document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .selected').classList.remove('selected')
+          if (document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper .selected')) {
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper .selected').classList.remove('selected')
           }
-          if (document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .error-message.show')) {
-            document.querySelector('.spz-2004 #popup_request_a_demo .step2-wrapper .error-message.show').classList.remove("show")
+          if (document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper .error-message.show')) {
+            document.querySelector('.spz-2001 .form-wrapper .form-section .step2-wrapper .error-message.show').classList.remove("show")
           }
           e.target.closest('.option').classList.add("selected")
         }
