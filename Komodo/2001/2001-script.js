@@ -407,14 +407,17 @@ ready(function () {
             portalId: "6374024",
             formId: "bd5fd709-5849-4d8c-95a3-b52f5a1453c0",
             target: '.spz-2001 #new-formDemo-wrapper',
+            inlineMessage: "Thanks for submitting the form.",
             onFormSubmitted: function ($form) {
               console.log('Report conversion...');
               sessionStorage.setItem("spz-2001", "submitted");
               gtag_report_conversion();
             },
             isInsideFrame: true,
-            inlineMessage: "Thanks for submitting the form.",
             onFormReady: function ($form) {
+              if (document.querySelector('#popup_request_a_demo')) {
+                document.querySelector('#popup_request_a_demo').remove();
+              }
               const allFieldset = document.querySelectorAll('.spz-2001 #new-formDemo-wrapper .form-columns-2,.spz-2001 #new-formDemo-wrapper .form-columns-1,.spz-2001 #new-formDemo-wrapper .form-columns-0')
               for (let i = 0; i < allFieldset.length; i++) {
                 allFieldset[i].replaceWith(...allFieldset[i].childNodes)
