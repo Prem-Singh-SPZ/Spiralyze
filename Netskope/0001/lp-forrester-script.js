@@ -93,14 +93,15 @@ body.spz-0001 {
   display: none;
 }
 .spz-0001 .landing-page-v3__form-container .hero_left {
-  width: 46.5%;
-  max-width: 548px;
+  width: 50%;
+  max-width: 585px;
 }
 .spz-0001 .landing-page-v3__form-container .landing-page-v3__form{
   width: 42.5%;
   max-width: 504px;
   display: flex;
   flex-direction: column;
+  margin-bottom: 33px;
 }
 .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
   padding: 24px 32px 32px;
@@ -108,6 +109,28 @@ body.spz-0001 {
   border-radius: 24px;
   position: relative;
   width: 100%;
+  margin-bottom: 40px;
+}
+.spz-0001 .landing-page-v3__content p{
+  color:  #FFF;
+font-family: Graphik !important;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+margin-bottom: 12px;
+}
+.spz-0001 .landing-page-v3__content ul{
+  padding-left: 24px;
+}
+.spz-0001 .landing-page-v3__content ul li{
+  color:  #FFF;
+font-family: Graphik !important;
+font-size: 16px;
+font-style: normal;
+font-weight: 400;
+line-height: 24px;
+margin-bottom: 0;
 }
 .spz-0001 .hero_left .form-content-heading {
   color: #fff;
@@ -140,7 +163,7 @@ body.spz-0001 {
   font-style: normal;
   font-weight: 600;
   line-height: 24px;
-  margin: 24px 0;
+  margin: 24px 0 40px;
 }
 .spz-0001 .hero_left h4 sup {
   font-size: 8px;
@@ -148,6 +171,7 @@ body.spz-0001 {
 }
 .spz-0001 .hero_left img {
   width: 100%;
+  max-width: 517px;
   -o-object-fit: contain;
   object-fit: contain;
 }
@@ -414,6 +438,7 @@ body.spz-0001 {
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
+  font-family: Graphik !important;
 }
 .spz-0001 .landing-page-v3__form-content form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .spz-0001 .landing-page-v3__form-content form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -487,6 +512,10 @@ body.spz-0001 {
 }
 
 @media (max-width: 1023.98px) {
+  .spz-0001 .landing-page-v3__container .landing-page-v3__form-container{
+    flex-direction: column-reverse;
+    padding-top: 0;
+  }
   .spz-0001 .header.has-promo-banner .header__container-inner {
     max-width: 752px;
   }
@@ -499,19 +528,14 @@ body.spz-0001 {
   }
   .spz-0001 .landing-page-v3__container .landing-page-v3__container-inner {
     max-width: 752px;
+    padding: 0 8px;
   }
   .spz-0001 .landing-page-v3__container::before {
     width: 1440px;
     height: 639px;
     right: -107px;
   }
-  .spz-0001 .landing-page-v3__container .landing-page-v3__form-container .landing-page-v3__form {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading {
+  .spz-0001 .landing-page-v3__form-container .form-content-heading {
     display: block;
     color: #fff;
     font-size: 56px;
@@ -538,9 +562,15 @@ body.spz-0001 {
   }
   .spz-0001 .hero_left h4 {
     margin: 2px 0 32px;
+    display: none;
   }
-  .spz-0001 .hero_left img {
-    max-width: 320px;
+  .spz-0001 .landing-page-v3__content img {
+    max-width: 325px;
+    margin-top: 2px;
+    margin-bottom: 32px;
+  }
+  .spz-0001 #components__content{
+    overflow-x: hidden;
   }
 }
 @media (max-width: 1400px) {
@@ -562,8 +592,16 @@ body.spz-0001 {
     margin-top: 10px !important;
   }
 }
-.spz-0001 .desk-tab{
+.spz-0001 .desk-only{
+  @media (max-width: 1023.98px) {
+    display: none;
+  }
+}
+.spz-0001 .tab-only{
   @media (max-width: 767.98px) {
+    display: none;
+  }
+  @media (min-width: 1023.98px) {
     display: none;
   }
 }
@@ -647,15 +685,14 @@ let bodyLoaded = setInterval(function () {
         document.querySelector('.spz-0001 #wrapper .v3.landing-page-v3__container .landing-page-v3__form-container ').insertAdjacentHTML("afterbegin", `<div class="hero_left">
 			  <h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2>
 			  `+ sub_heading + `
-        <picture class="hero-form-img desk-tab">
-        <source media="(max-width: 1023px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_tablet.webp">
-				<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_desktop.webp" alt="A Recognized Leader in Security Service Edge">
-        </picture>
-			</div>`);
+				<img class="desk-only" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_desktop.webp" alt="A Recognized Leader in Security Service Edge">
+			  </div>`);
 
-        document.querySelector('.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<div class="landing-page-v3__content"><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><img class="mob-only" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_mobile.webp" alt="A Recognized Leader in Security Service Edge"><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul></div>`);
+        document.querySelector('.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<div class="landing-page-v3__content">
+        <img class="tab-only" media="(max-width: 1023px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_tablet.webp" alt="A Recognized Leader in Security Service Edge">
+        <p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><img class="mob-only" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_mobile.webp" alt="A Recognized Leader in Security Service Edge"><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul></div>`);
 
-        document.querySelector('.spz-0001 #wrapper .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2>`);
+        document.querySelector('.spz-0001 #wrapper .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("beforebegin", `<h2 class="form-content-heading tab-only">A Recognized Leader in <br>Security Service Edge</h2>`);
 
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
@@ -724,7 +761,7 @@ function formModify() {
   document.querySelector('#LblLastName').textContent = "Last Name";
   document.querySelector('#LblEmail').textContent = "Business Email";
   document.querySelector('#LblCompany').textContent = "Company";
-  document.querySelector('#LblTitle').textContent = "Job title";
+  document.querySelector('#LblTitle').textContent = "Job Title";
   document.querySelector('#LblPhone').textContent = "Phone";
   document.querySelector('#Country option:first-child').textContent = "";
   document.querySelector('#LblCountry').textContent = "Country";
