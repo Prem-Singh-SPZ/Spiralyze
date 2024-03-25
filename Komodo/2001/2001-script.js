@@ -89,25 +89,30 @@ ready(function () {
           </div>
           <div class="form-wrapper">
             <div class="text-section">
-              <div class="small">Complete Real-World Data and Innovative SaaS</div>
-              <div class="big">Insights You Can Trust to Drive Decision Making</div>
+              <div class="small">Healthcare and patient analytics software</div>
+              <div class="big">Get Real-World Clinical Data
+              for 330+ Million Patients</div>
               <div class="list">
                 <div class="child"> 
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-1.png" alt="Healthcare Map Icon" width="32" height="32"/>
-                  <div class="desc"><strong>The Healthcare Map&trade;:</strong> Track the longitudinal and real-time patient journeys of 330+ million unique individuals across HCPs, HCOs, and sites of care.</div>
+                  <div class="desc"><strong>Healthcare Data:</strong> View provider, treatment, labs results, hospital records, payers, ethnicity, and other clinical data. 15 million new encounters daily.</div>
                 </div>
                 <div class="child">
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-2.png" alt="Patient Journey Icon" width="32" height="32"/>
-                  <div class="desc"><strong>MapEnhance:</strong> Increase your understanding of the patient population with lab, EHR, genomics, race and ethnicity, mortality, insurance, and SDoH insights.</div>
+                  <div class="desc"><strong>Patient Cohorts:</strong> Create patient cohorts based on any criteria. Get alerts for new patient and provider opportunities. Engage via preferred channels.</div>
                 </div>
                 <div class="child">
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-3.png" alt="Analytics Icon" width="32" height="32"/>
-                  <div class="desc"><strong>AI-Driven SaaS:</strong> Accelerate speed-to-insights with our suite of fit-for-purpose solutions for Life Sciences, payers, patient advocacy organizations, and more. </div>
+                  <div class="desc"><strong>Analytics:</strong> Generate reports on patient populations, treatment pathways, outcomes, and more. Forecast trends. Demonstrate therapeutic impact.</div>
                 </div>
               </div>
             </div>
             <div class="form-section">
               <div class="title">Contact Us</div>
+              <div class="review-wrapper">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1702395225/komodohealth/2004/frame_5597.svg" alt="Star Review" width="116" height="20">
+        <div class="text"><span class="black">4.8</span> (678 reviews)</div>
+      </div>
               <div id="new-formDemo-wrapper"><div class='lds-dual-ring'></div></div>
               <div class="step1-wrapper step-wrapper">
     <div class="sub">What best describes you? </div>
