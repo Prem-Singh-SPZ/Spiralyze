@@ -8,10 +8,10 @@ function ready(fn) {
 }
 ready(function () {
   console.log("after dom load")
-  if (!document.querySelector('.spz-1001')) {
-    document.querySelector('body').classList.add('spz-1001')
+  if (!document.querySelector('.spz-2001')) {
+    document.querySelector('body').classList.add('spz-2001')
     //targeted page
-    if (window.location.href.indexOf('https://www.komodohealth.com/get-in-touch') > -1) {
+    if (window.location.href.indexOf('https://www.komodohealth.com/contact-us') > -1) {
       const loadJS = (url, implementationCode, location) => {
         var scriptTag = document.createElement('script');
         scriptTag.src = url;
@@ -46,15 +46,15 @@ ready(function () {
       }
       const getMaxQuoteHeight = () => {
         let maxHeight = 0;
-        for (let i = 0; i < document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc').length; i++) {
-          document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].removeAttribute("style");
+        for (let i = 0; i < document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc').length; i++) {
+          document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc')[i].removeAttribute("style");
         }
-        for (let i = 0; i < document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc').length; i++) {
+        for (let i = 0; i < document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc').length; i++) {
           if (!maxHeight) {
-            maxHeight = document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
+            maxHeight = document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
           } else {
-            if (maxHeight <= document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight) {
-              maxHeight = document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
+            if (maxHeight <= document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight) {
+              maxHeight = document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
             }
           }
         }
@@ -62,8 +62,8 @@ ready(function () {
       }
       const adjustQuoteHeight = () => {
         const maxHeight = getMaxQuoteHeight()
-        for (let i = 0; i < document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc').length; i++) {
-          document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].setAttribute('style', 'height:' + maxHeight + 'px');
+        for (let i = 0; i < document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc').length; i++) {
+          document.querySelectorAll('.spz-2001 .new-wrapper .section3 .slider-wrapper .desc')[i].setAttribute('style', 'height:' + maxHeight + 'px');
         }
       }
       const gb_load_css = (path) => {
@@ -108,7 +108,7 @@ ready(function () {
             </div>
             <div class="form-section">
               <div class="title">Contact Us</div>
-              <div id="new-form-wrapper"><div class='lds-dual-ring'></div></div>
+              <div id="new-formDemo-wrapper"><div class='lds-dual-ring'></div></div>
             </div>
           </div>
         </div>
@@ -211,7 +211,7 @@ ready(function () {
           let slide = splide.Components.Slides.getAt(typeof (newIndex) == 'number' ? newIndex : splide.index).slide;
           slide.parentElement.parentElement.style.height = outerHeight(slide) + 76 + 'px';
         };
-        var splide = new Splide('.spz-1001 .new-wrapper .section3 .slider-wrapper .splide1', {
+        var splide = new Splide('.spz-2001 .new-wrapper .section3 .slider-wrapper .splide1', {
           type: 'loop',
           perPage: 1,
           autoplay: true,
@@ -225,27 +225,27 @@ ready(function () {
 
           splide.on("move", function (e) {
             updateHeight()
-            document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper').classList.remove("active1", "active2", "active3")
-            document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper').classList.add("active" + (parseInt(splide.index) + 1))
+            document.querySelector('.spz-2001 .new-wrapper .section3 .slider-wrapper').classList.remove("active1", "active2", "active3")
+            document.querySelector('.spz-2001 .new-wrapper .section3 .slider-wrapper').classList.add("active" + (parseInt(splide.index) + 1))
 
           })
           splide.on("resize", function (e) {
             updateHeight()
 
           })
-          document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper').classList.add("active1")
+          document.querySelector('.spz-2001 .new-wrapper .section3 .slider-wrapper').classList.add("active1")
           updateHeight()
         }, 200)
-        document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper .arrow-left img').addEventListener("click", function () {
+        document.querySelector('.spz-2001 .new-wrapper .section3 .slider-wrapper .arrow-left img').addEventListener("click", function () {
           splide.go('<');
         })
-        document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper .arrow-right img').addEventListener("click", function () {
+        document.querySelector('.spz-2001 .new-wrapper .section3 .slider-wrapper .arrow-right img').addEventListener("click", function () {
           splide.go('>');
         })
       }, document.body)
-      document.querySelector('.spz-1001 #popup_contact_us .wcs-pform').remove()
-      document.querySelector('.spz-1001 #popup_connect .wcs-pform').remove()
-      document.querySelector('.spz-1001 #popup_contact_us .wcs-col-12').innerHTML = `
+      document.querySelector('.spz-2001 #popup_contact_us .wcs-pform').remove()
+      document.querySelector('.spz-2001 #popup_connect .wcs-pform').remove()
+      document.querySelector('.spz-2001 #popup_contact_us .wcs-col-12').innerHTML = `
     <div class="wcs-pform">
       <div class="wcs-popup-heading">
         <h2>Contact Us</h2>
@@ -254,145 +254,156 @@ ready(function () {
     `
       let i = 0;
       const CROInterval = setInterval(() => {
-        if (document.querySelector('.spz-1001 #new-form-wrapper input[name="cro1"]')) {
+        if (document.querySelector('.spz-2001 #new-formDemo-wrapper input[name="cro1"]')) {
           clearInterval(CROInterval)
-          document.querySelector('.spz-1001 #new-form-wrapper input[name="cro1"]').value = "#1001_variant"
+          document.querySelector('.spz-2001 #new-formDemo-wrapper input[name="cro1"]').value = "#1001_variant"
         }
         i++;
         if (i > 6) {
           clearInterval(CROInterval)
         }
       }, 500);
-      loadJS('//js.hsforms.net/forms/embed/v2.js', function () {
-        hbspt.forms.create({
-          region: "na1",
-          portalId: "6374024",
-          formId: "89116499-15d1-4cd0-b724-7a46e68cf8f0",
-          target: '.spz-1001 #new-form-wrapper',
-          isInsideFrame: true,
-          inlineMessage: "Thanks for submitting the form.",
-          onFormSubmitted: function ($form) {
-            console.log('Report conversion...');
-            gtag_report_conversion();
-          },
-          onFormReady: function ($form) {
-            if (document.querySelector('.spz-1001 #new-form-wrapper .hs_firstname')) {
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_firstname').classList.add("width50", "clear");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_lastname').classList.add("width50", "with-margin");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_company').classList.add("width50", "clear");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_jobtitle').classList.add("width50", "with-margin");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_email').classList.add("width50", "clear");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_phone').classList.add("width50", "with-margin");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_message').classList.add("clear");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries').classList.add("clear");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs-richtext').classList.add("clear", "pp-parent");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_submit').classList.add("clear", "submit-parent");
 
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_company label span').innerHTML = 'Company';
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_phone label span').innerHTML = 'Phone (optional)';
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries label span').innerHTML = 'Country';
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select').value = 'United States'
-              trigger(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select'), 'change');
-              trigger(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select'), 'blur');
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select option:first-child').remove();
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries').classList.add("hasValue");
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value = "SUBMIT";
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select').insertAdjacentHTML("afterend", "<div class='arrow-select'></div>")
-              const step1Checking = setInterval(function () {
-                if (document.querySelector('.spz-1001 #new-form-wrapper .hs_firstname input').value != "" &&
-                  document.querySelector('.spz-1001 #new-form-wrapper .hs_lastname input').value != "" &&
-                  document.querySelector('.spz-1001 #new-form-wrapper .hs_company input').value != "" &&
-                  document.querySelector('.spz-1001 #new-form-wrapper .hs_jobtitle input').value != "") {
-                  clearInterval(step1Checking);
-                  document.querySelector('.spz-1001 #new-form-wrapper').classList.add("step2")
-                }
-              }, 200)
-            }
-            else {
-              document.querySelector('.spz-1001 #new-form-wrapper').classList.add("step2")
-              if (document.querySelector('.spz-1001 #new-form-wrapper .hs_email')) {
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_email label span').innerHTML = 'Email';
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_email').classList.add("clear");
+      function loadDemoForm() {
+        loadJS('//js.hsforms.net/forms/embed/v2.js', function () {
+          hbspt.forms.create({
+            region: "na1",
+            portalId: "6374024",
+            formId: "bd5fd709-5849-4d8c-95a3-b52f5a1453c0",
+            target: '.spz-2001 #new-formDemo-wrapper',
+            onFormSubmitted: function ($form) {
+              console.log('Report conversion...');
+              sessionStorage.setItem("spz-2001", "submitted");
+              gtag_report_conversion();
+            },
+            isInsideFrame: true,
+            inlineMessage: "Thanks for submitting the form.",
+            onFormReady: function ($form) {
+              const allFieldset = document.querySelectorAll('.spz-2001 #new-formDemo-wrapper .form-columns-2,.spz-2001 #new-formDemo-wrapper .form-columns-1,.spz-2001 #new-formDemo-wrapper .form-columns-0')
+              for (let i = 0; i < allFieldset.length; i++) {
+                allFieldset[i].replaceWith(...allFieldset[i].childNodes)
               }
-              if (document.querySelector('.spz-1001 #new-form-wrapper .hs_message')) {
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_message').classList.add("clear");
+              //long form
+              if (document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_firstname')) {
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_firstname').classList.add("width50", "clear");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_lastname').classList.add("width50", "with-margin");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_company').classList.add("width50", "with-margin");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_jobtitle').classList.add("width50", "clear");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email').classList.add("width50", "clear");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs-dependent-field').classList.add("clear");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_phone').classList.add("width50", "with-margin");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries').classList.add("clear");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs-richtext').classList.add("clear", "pp-parent");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_submit').classList.add("clear", "submit-parent");
+                insertAfter(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email'), document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_lastname'));
+                insertAfter(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_company'), document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email'));
+                insertAfter(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_jobtitle'), document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_company'));
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_firstname label span').innerHTML = 'First Name';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_lastname label span').innerHTML = 'Last Name';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email label span').innerHTML = 'Email';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_company label span').innerHTML = 'Company';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_phone label span').innerHTML = 'Phone';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_jobtitle label span').innerHTML = 'Job Title (Optional)';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries label span').innerHTML = 'Country';
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select').value = 'United States'
+                trigger(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select'), 'change');
+                trigger(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select'), 'blur');
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select option:first-child').remove();
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries').classList.add("hasValue");
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_submit input').value = "SUBMIT";
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_buying_timeline select').value = "Immediately";
+                trigger(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_buying_timeline select'), 'change');
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select').insertAdjacentHTML("afterend", "<div class='arrow-select'></div>")
+                const step1Checking = setInterval(function () {
+                  if (document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_firstname input').value != "" &&
+                    document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_lastname input').value != "" &&
+                    document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_company input').value != "" &&
+                    document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email input').value != "") {
+                    clearInterval(step1Checking);
+                    document.querySelector('.spz-2001 #new-formDemo-wrapper').classList.add("step2")
+                  }
+                }, 200)
               }
-              if (document.querySelector('.spz-1001 #new-form-wrapper .hs_phone')) {
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_phone label span').innerHTML = 'Phone (Optional)';
+              //short form
+              else {
+                if (document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email')) {
+                  document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email label span').innerHTML = 'Email';
+                  document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_email').classList.add("clear");
+                }
+                if (document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_buying_timeline select')) {
+                  document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_buying_timeline select').value = "Immediately";
+                  trigger(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_buying_timeline select'), 'change');
+                }
+                document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_submit input').value = "SUBMIT";
               }
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value = "SUBMIT";
-            }
-            var allInput = document.querySelectorAll('.spz-1001 #new-form-wrapper .hs-input');
-            function errorState(item) {
-              var i = 0;
-              var errorInterval = setInterval(() => {
-                if (item.parentElement.parentElement.querySelector('.hs-error-msgs')) {
-                  item.parentElement.parentElement.classList.add('hasError');
-                }
-                else {
-                  item.parentElement.parentElement.classList.remove('hasError');
-                }
-                if (i == 100) {
-                  clearInterval(errorInterval);
-                }
-                i++
-              }, 10);
-            }
-            function labelChange(e) {
-              if (e.value == '' || e.value == null) {
-                e.parentElement.parentElement.classList.remove("hasValue");
-              } else if (e.value != '' || e.value != null) {
-                e.parentElement.parentElement.classList.add("hasValue");
+              var allInput = document.querySelectorAll('.spz-2001 #new-formDemo-wrapper .hs-input');
+              function errorState(item) {
+                var i = 0;
+                var errorInterval = setInterval(() => {
+                  if (item.parentElement.parentElement.querySelector('.hs-error-msgs')) {
+                    item.parentElement.parentElement.classList.add('hasError');
+                  }
+                  else {
+                    item.parentElement.parentElement.classList.remove('hasError');
+                  }
+                  if (i == 100) {
+                    clearInterval(errorInterval);
+                  }
+                  i++
+                }, 10);
               }
-            }
-            allInput.forEach(function (e) {
-              e.addEventListener('focus', () => {
-                e.parentElement.parentElement.classList.add("focus");
-                errorState(e);
-              }, true);
-              e.addEventListener('blur', () => {
-                labelChange(e);
-                e.parentElement.parentElement.classList.remove("focus");
-                errorState(e);
-              }, true);
-              e.addEventListener('change', () => {
-                labelChange(e);
-                errorState(e);
-              }, true);
-              e.addEventListener('keyup', () => {
-                errorState(e);
-              }, true);
-              labelChange(e);
-              errorState(e);
-            })
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').addEventListener("click", function () {
+              function labelChange(e) {
+                if (e.value == '' || e.value == null) {
+                  e.parentElement.parentElement.classList.remove("hasValue");
+                } else if (e.value != '' || e.value != null) {
+                  e.parentElement.parentElement.classList.add("hasValue");
+                }
+              }
               allInput.forEach(function (e) {
+                e.addEventListener('focus', () => {
+                  e.parentElement.parentElement.classList.add("focus");
+                  errorState(e);
+                }, true);
+                e.addEventListener('blur', () => {
+                  labelChange(e);
+                  e.parentElement.parentElement.classList.remove("focus");
+                  errorState(e);
+                }, true);
+                e.addEventListener('change', () => {
+                  labelChange(e);
+                  errorState(e);
+                }, true);
+                e.addEventListener('keyup', () => {
+                  errorState(e);
+                }, true);
+                labelChange(e);
                 errorState(e);
               })
-              if (document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select')) {
-                trigger(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select'), 'change');
-              }
-              let i = 0;
-              const submitInterval = setInterval(() => {
-                if (document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value != "SUBMIT") {
-                  clearInterval(submitInterval)
-                  document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value = "SUBMIT";
+              document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_submit input').addEventListener("click", function () {
+                allInput.forEach(function (e) {
+                  errorState(e);
+                })
+                if (document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select')) {
+                  trigger(document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_consent_countries select'), 'change');
                 }
-                i++;
-                if (i > 80) {
-                  clearInterval(submitInterval)
-                }
-              }, 5);
-            })
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_message textarea').addEventListener("keypress", function (e) {
-              if (e.key === 'Enter') {
-                e.preventDefault();
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').click()
-              }
-            });
-          },
-        });
-      }, document.body);
+                let i = 0;
+                const submitInterval = setInterval(() => {
+                  if (document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_submit input').value != "SUBMIT") {
+                    clearInterval(submitInterval)
+                    document.querySelector('.spz-2001 #new-formDemo-wrapper .hs_submit input').value = "SUBMIT";
+                  }
+                  i++;
+                  if (i > 80) {
+                    clearInterval(submitInterval)
+                  }
+                }, 5);
+              })
+            }
+          })
+        }, document.body);
+      }
+      loadDemoForm()
+
     }
     //non targeted page
     else {
