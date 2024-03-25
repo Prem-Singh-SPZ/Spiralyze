@@ -67,12 +67,6 @@ body.spz-0001 {
   display: none;
 }
 .spz-0001 .landing-page-v3__container .landing-page-v3__form-container {
-  -webkit-box-ordinal-group: unset;
-  -ms-flex-order: unset;
-  order: unset;
-  padding: 0;
-}
-.spz-0001 .landing-page-v3__container .landing-page-v3__form-container .landing-page-v3__form {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -87,10 +81,7 @@ body.spz-0001 {
   align-items: flex-start;
 }
 .spz-0001 .landing-page-v3__container .landing-page-v3__content-container--bottom {
-  padding: 96px 0 49px;
-  -webkit-box-ordinal-group: unset;
-  -ms-flex-order: unset;
-  order: unset;
+ display: none;
 }
 .spz-0001 .landing-page-v3__form-container .landing-page-v3__form-image {
   display: none;
@@ -101,17 +92,22 @@ body.spz-0001 {
 .spz-0001 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading br {
   display: none;
 }
-.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
+.spz-0001 .landing-page-v3__form-container .hero_left {
   width: 46.5%;
   max-width: 548px;
 }
-.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
+.spz-0001 .landing-page-v3__form-container .landing-page-v3__form{
   width: 42.5%;
   max-width: 504px;
+  display: flex;
+  flex-direction: column;
+}
+.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
   padding: 24px 32px 32px;
   background: #ffffff;
   border-radius: 24px;
   position: relative;
+  width: 100%;
 }
 .spz-0001 .hero_left .form-content-heading {
   color: #fff;
@@ -515,9 +511,6 @@ body.spz-0001 {
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
   }
-  .spz-0001 .landing-page-v3__container .landing-page-v3__content-container--bottom {
-    padding: 41px 0 39px;
-  }
   .spz-0001 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading {
     display: block;
     color: #fff;
@@ -528,12 +521,14 @@ body.spz-0001 {
     margin: 0;
     position: relative;
   }
-  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
+  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form{
     width: 100%;
     max-width: unset;
+  }
+  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
     margin: 32px 0 30px;
   }
-  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
+  .spz-0001 .landing-page-v3__form-container .hero_left {
     width: 100%;
     max-width: 100%;
     position: relative;
@@ -567,6 +562,16 @@ body.spz-0001 {
     margin-top: 10px !important;
   }
 }
+.spz-0001 .desk-tab{
+  @media (max-width: 767.98px) {
+    display: none;
+  }
+}
+.spz-0001 .mob-only{
+  @media (min-width: 767.98px) {
+    display: none;
+  }
+}
 @media (min-width: 3500px) {
   .spz-0001 .landing-page-v3__container::before {
     background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
@@ -575,9 +580,6 @@ body.spz-0001 {
 @media (max-width: 767.98px) {
   .spz-0001 .landing-page-v3__container {
     padding: 76px 0 0 0;
-  }
-  .spz-0001 .landing-page-v3__container .landing-page-v3__content-container--bottom {
-    padding: 24px 24px 32px;
   }
   .spz-0001 .landing-page-v3__container::before {
     right: -347px;
@@ -592,12 +594,14 @@ body.spz-0001 {
   .spz-0001 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading br {
     display: block;
   }
-  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
+  .spz-0001 .landing-page-v3__form-container .hero_left {
     padding: 0 24px;
+  }
+  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form{
+    margin: 24px 0 23px;
   }
   .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
     padding: 24px 24px 32px;
-    margin: 24px 0 23px;
   }
   .spz-0001 .hero_left h4 {
     font-size: 16px;
@@ -638,14 +642,18 @@ let bodyLoaded = setInterval(function () {
 
       waitForElm('.spz-0001 #wrapper .v3.landing-page-v3__container').then(function () {
         const sub_heading = document.querySelector(".spz-0001 #wrapper .v3.landing-page-v3__container .landing-page-v3__subheadline").innerHTML;
-        const content = document.querySelector(".spz-0001 #wrapper .v3.landing-page-v3__container .landing-page-v3__container-inner .landing-page-v3__content-container--bottom").innerHTML;
 
         // Hero Fom Content
-        document.querySelector('.spz-0001 #wrapper .v3.landing-page-v3__container .landing-page-v3__form').insertAdjacentHTML("afterbegin", `<div class="hero_left">
+        document.querySelector('.spz-0001 #wrapper .v3.landing-page-v3__container .landing-page-v3__form-container ').insertAdjacentHTML("afterbegin", `<div class="hero_left">
 			  <h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2>
 			  `+ sub_heading + `
-				<img class="hero-form-img desk-only" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_desktop.webp" alt="A Recognized Leader in Security Service Edge">
+        <picture class="hero-form-img desk-tab">
+        <source media="(max-width: 1023px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_tablet.webp">
+				<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_desktop.webp" alt="A Recognized Leader in Security Service Edge">
+        </picture>
 			</div>`);
+
+        document.querySelector('.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<div class="landing-page-v3__content"><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><img class="mob-only" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_mobile.webp" alt="A Recognized Leader in Security Service Edge"><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul></div>`);
 
         document.querySelector('.spz-0001 #wrapper .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2>`);
 
@@ -655,18 +663,12 @@ let bodyLoaded = setInterval(function () {
           setHiddenFields();
         });
 
-        MktoForms2.whenReady(function (form) {
-          // console.log('Load MKtoforms2');
-          // Add an onSuccess handler to capture form submissions
-          form.onSuccess(function (values, followUpUrl) {
-            // console.log("Form submitted successfully");
-            // You can perform additional actions here, such as tracking or redirecting
-          });
-        });
+        // MktoForms2.whenReady(function (form) {
+        //   form.onSuccess(function (values, followUpUrl) {
+        //   });
+        // });
       });
-      // }
     }
-
   }
 });
 
@@ -706,7 +708,7 @@ function formModify() {
   var formDiv = document.querySelector('.spz-0001 .landing-page-v3__form .landing-page-v3__form-content .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+    formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get <span>Forrester</span> report</h2>`);
   }
   // form CTA Update
   var form_button = setInterval(() => {
