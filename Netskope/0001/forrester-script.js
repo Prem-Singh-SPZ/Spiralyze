@@ -55,10 +55,7 @@ body.spz-0001 {
   display: flex;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-orient: unset;
-  -webkit-box-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
+  flex-direction: row-reverse;
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
@@ -66,11 +63,11 @@ body.spz-0001 {
   -ms-flex-align: start;
   align-items: flex-start;
 }
-.spz-0001 .js-hero-banner .gated-content__container .hero_left {
+.spz-0001 .js-hero-banner .gated-content__left {
   width: 49.16%;
   max-width: 585px;
 }
-.spz-0001 .hero_left .form-content-heading {
+.spz-0001 .form-content-heading {
   color: #fff;
   font-family: Graphik;
   font-size: 48px;
@@ -80,10 +77,10 @@ body.spz-0001 {
   margin: 0;
   position: relative;
 }
-.spz-0001 .hero_left .form-content-heading br {
+.spz-0001 .form-content-heading br {
   display: none;
 }
-.spz-0001 .hero_left .form-content-heading::before {
+.spz-0001 .form-content-heading::before {
   position: absolute;
   content: "";
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701662318/netskope/6001/Union.svg");
@@ -94,7 +91,7 @@ body.spz-0001 {
   top: -20px;
   left: -36px;
 }
-.spz-0001 .hero_left .form-content-subheading {
+.spz-0001 .form-content-subheading {
   font-family: Graphik;
   font-size: 18px;
   font-weight: 600;
@@ -103,29 +100,9 @@ body.spz-0001 {
   color: #FFF;
   margin: 24px 0 16px;
 }
-.spz-0001 .hero_left .form-content-subheading sup {
-  top: inherit;
-  font-size: 100%;
-}
-.spz-0001 .hero_left .form-content-description img, .spz-0001 .hero_left .form-content-description br {
-  display: none;
-}
-.spz-0001 .hero_left .form-content-description p {
-  font-family: Graphik;
-  font-size: 16px;
-  font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0em;
-  margin-bottom: 41px;
-}
-.spz-0001 .hero_left .form-content-description p strong {
+
+.spz-0001 .form-content-description p .strong {
   font-weight: 600;
-}
-.spz-0001 .hero_left img {
-  width: 100%;
-  -o-object-fit: contain;
-  object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
 }
 .spz-0001 .js-hero-banner .gated-content__container .gated-content__right {
   width: 42.5%;
@@ -566,11 +543,6 @@ body.spz-0001 {
     max-width: unset;
     margin: 28px 0 32px;
   }
-  .spz-0001 .js-hero-banner .gated-content__container .hero_left,
-  .spz-0001 .js-hero-banner .gated-content__right .rte img,
-  .spz-0001 .js-hero-banner .gated-content__right .rte br {
-    display: none;
-  }
   .spz-0001 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-0001 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
     display: block;
   }
@@ -628,16 +600,9 @@ body.spz-0001 {
     padding: 0 24px;
     margin-bottom: 24px;
   }
-  .spz-0001 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
-    padding: 0 24px;
-  }
   .spz-0001 .landing-page-v3__form-container .js-hero-banner .gated-content__container .gated-content__right {
     padding: 24px 24px 32px;
     margin: 22px 0 23px;
-  }
-  .spz-0001 .hero_left h4 {
-    font-size: 16px;
-    margin: 2px 0 23px;
   }
   .spz-0001 .js-hero-banner .gated-content__right .gated-content__form {
     margin: 0;
@@ -717,6 +682,8 @@ let bodyLoaded = setInterval(function () {
 
         // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend",document.querySelector(".spz-0001 .js-hero-banner .gated-content__left").innerHTML);
         // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
+
+        document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte").innerHTML = `<div class="form-content-heading"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711121079/netskope/0001/forrester_wrapper_1.webp" alt="Forrester"></div><h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2><p class="strong">Forrester has named Netskope a Leader in The Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024</p><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul>`;
         
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
