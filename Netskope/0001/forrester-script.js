@@ -3,6 +3,9 @@ body.spz-0001 {
   scroll-behavior: smooth;
 }
 .spz-0001 .js-hero-banner .gated-content__top{
+  padding: 0px 0 35px;
+}
+.spz-0001 .js-hero-banner .gated-content__top .gated-content__banner{
   display: none;
 }
 .spz-0001 .js-hero-banner {
@@ -20,13 +23,22 @@ body.spz-0001 {
   position: relative;
   z-index: 99;
 }
+.breadcrumbs__item-link{
+  margin: 0 16px;
+}
+.spz-0001 .breadcrumbs__item a.breadcrumbs__item-link{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
 .spz-0001:not(.show_content) .js-hero-banner .container {
-  padding: 0 24px 137px;
+  padding: 0 24px 8px;
 }
 .spz-0001 .js-hero-banner::before {
   position: absolute;
   content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6001/background_pattern_2.webp");
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711366852/netskope/0001/bg_1441.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -35,16 +47,30 @@ body.spz-0001 {
   right: 0;
   pointer-events: none;
 }
+@media  (max-width: 1023.98px) {
+  .spz-0001 .js-hero-banner::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711366852/netskope/0001/bg_361.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
+@media  (max-width: 767.98px) {
+  .spz-0001 .js-hero-banner::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711366852/netskope/0001/bg_769.svg");
+    background-size: 100%;
+    background-repeat: no-repeat;
+  }
+}
 @media (min-width: 1900px) and (max-width: 2500px) {
   .spz-0001 .js-hero-banner::before {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711367257/netskope/0001/bg_1920.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
 }
-@media (min-width: 2500px) and (max-width: 3500px) {
+@media (min-width: 2500px) {
   .spz-0001 .js-hero-banner::before {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711375425/netskope/0001/bg_4k_1.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
@@ -66,6 +92,69 @@ body.spz-0001 {
 .spz-0001 .js-hero-banner .gated-content__left {
   width: 49.16%;
   max-width: 585px;
+}
+.spz-0001 .js-hero-banner .gated-content__left .rte .forrester-img {
+  width: 121px;
+  height: 45px;
+  margin-bottom: 20px;
+}
+.spz-0001 .js-hero-banner .gated-content__left .rte .forrester-img img {
+  margin: 0 0 8px;
+}
+.spz-0001 .js-hero-banner .gated-content__left .rte p {
+  margin-bottom: 12px;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.spz-0001 .js-hero-banner .gated-content__left .rte ul {
+  padding-left: 24px;
+}
+.spz-0001 .js-hero-banner .gated-content__left .rte{
+  margin-bottom: 32px;
+}
+.spz-0001 .js-hero-banner .gated-content__left .rte .strong {
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin-bottom: 32px;
+}
+.spz-0001 .gated-content__content .gated-content__label{
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  margin-bottom: 16px;
+}
+.spz-0001 .gated-content__content .gated-content__label:nth-child(6){
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  margin-bottom: 12px;
+}
+.spz-0001 .v3-social-icons .v3-social-icons__icon{
+  width: 40px;
+  height: 40px;
+  margin-right: 28px;
+}
+.spz-0001 .v3-social-icons .v3-social-icons__icon img{
+  width: 100%;
+}
+.spz-0001 .gated-content__content .gated-content__tags{
+  margin-bottom: 16px;
+}
+.spz-0001 .gated-content__content .gated-content__tags .ga__cta{
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  padding: 3px 15px 3px 16px;
+}
+.spz-0001 h2.form-content-heading{
+  margin-bottom: 32px;
 }
 .spz-0001 .form-content-heading {
   color: #fff;
@@ -128,6 +217,9 @@ body.spz-0001 {
   font-weight: 400;
   line-height: 48px;
   margin-bottom: 24px;
+}
+.spz-0001 .js-hero-banner .gated-content__right .form_title span{
+  color: #00A9CE;
 }
 .spz-0001 .js-hero-banner .gated-content__right .rte {
   margin-bottom: 32px;
@@ -425,6 +517,7 @@ body.spz-0001 {
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
+  font-family: Graphik !important;
 }
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -665,14 +758,14 @@ let bodyLoaded = setInterval(function () {
     clearInterval(bodyLoaded);
 
     if (!body.classList.contains('spz-0001')) {
-		
-	    body.classList.add('spz-0001');
 
-		  waitForElm('.spz-0001 .js-hero-banner').then(function () {
+      body.classList.add('spz-0001');
+
+      waitForElm('.spz-0001 .js-hero-banner').then(function () {
         // var heading = document.querySelector(".spz-0001 .js-hero-banner .page-intro__resource-title span").textContent;
         // var sub_heading = document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
         // var short_description = document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte p:nth-child(02)").outerHTML;
-      
+
         // // Hero Form Content
         // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
         //   <h2 class="form-content-heading">`+heading+`</h2>
@@ -683,14 +776,18 @@ let bodyLoaded = setInterval(function () {
         // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend",document.querySelector(".spz-0001 .js-hero-banner .gated-content__left").innerHTML);
         // document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
 
-        document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte").innerHTML = `<div class="form-content-heading"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711121079/netskope/0001/forrester_wrapper_1.webp" alt="Forrester"></div><h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2><p class="strong">Forrester has named Netskope a Leader in The Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024</p><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul>`;
-        
+        document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte").innerHTML = `<div class="form-content-heading forrester-img"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711121079/netskope/0001/forrester_wrapper_1.webp" alt="Forrester"></div><h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2><p class="strong">Forrester has named Netskope a Leader in The Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024</p><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul>`;
+
+        if(document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent == 'Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024'){
+          document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent = 'Forrester Wave for Security Service Edge (SSE) Solutions';
+        }
+
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
           formModify();
           setHiddenFields();
         });
-		  });
+      });
     }
   }
 });
@@ -725,9 +822,9 @@ function formModify() {
 
   var formDiv = document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
   // Form Extra Titles
-	if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-		formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get <span>Forrester</span> report</h2>`);
-	}
+  if (formDiv && document.querySelectorAll('.form_title').length == 0) {
+    formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get <span>Forrester</span> report</h2>`);
+  }
   // form CTA Update
   var form_button = setInterval(() => {
     var textChng = document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .gated-content__right .mktoForm .mktoButtonRow .mktoButton');
@@ -738,14 +835,14 @@ function formModify() {
   }, 100);
 
   // Updating Form Labels
-	document.querySelector('#LblFirstName').textContent = "First Name";
-	document.querySelector('#LblLastName').textContent = "Last Name";
-	document.querySelector('#LblEmail').textContent = "Business Email";
-	document.querySelector('#LblCompany').textContent = "Company";
-	document.querySelector('#LblTitle').textContent = "Job title";
-	document.querySelector('#LblPhone').textContent = "Phone";
-	document.querySelector('#Country option:first-child').textContent = "";
-	document.querySelector('#LblCountry').textContent = "Country";
+  document.querySelector('#LblFirstName').textContent = "First Name";
+  document.querySelector('#LblLastName').textContent = "Last Name";
+  document.querySelector('#LblEmail').textContent = "Business Email";
+  document.querySelector('#LblCompany').textContent = "Company";
+  document.querySelector('#LblTitle').textContent = "Job Title";
+  document.querySelector('#LblPhone').textContent = "Phone";
+  document.querySelector('#Country option:first-child').textContent = "";
+  document.querySelector('#LblCountry').textContent = "Country";
 
   // Change Field Position
   var email_field = document.querySelector('.spz-0001 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-3');
@@ -757,58 +854,58 @@ function formModify() {
   form_footer.before(optout_field);
 
   var zip_row = document.createElement("div");
-	zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
-	zip_row.classList.add('mktoFormRow');
-	zip_row.classList.add('mktoZipRow');
-	
-	var extraRow = document.querySelectorAll(".spz-0001 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow")[7];
-	insertAfter(extraRow, zip_row);
-	
-	const zip_row_old = document.querySelector(".mktoPlaceholderPostalCode");
-	const zip_row_new = document.querySelector(".mktoZipRow");
-	zip_row_new.appendChild(zip_row_old);
+  zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
+  zip_row.classList.add('mktoFormRow');
+  zip_row.classList.add('mktoZipRow');
+
+  var extraRow = document.querySelectorAll(".spz-0001 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow")[7];
+  insertAfter(extraRow, zip_row);
+
+  const zip_row_old = document.querySelector(".mktoPlaceholderPostalCode");
+  const zip_row_new = document.querySelector(".mktoZipRow");
+  zip_row_new.appendChild(zip_row_old);
 
   // form state
   var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap input, body form.mktoForm .mktoFormCol .mktoFieldWrap select';
 
   document.addEventListener('focus', function (event) {
-		if (event.target.matches(selector)) {
-			event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
-		}
-	}, true);	
+    if (event.target.matches(selector)) {
+      event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+    }
+  }, true);
 
   var eventList = ["blur", "focusout", "keyup", "change"];
-	for (s_event of eventList) {
-		document.addEventListener(s_event, function (event) {
-			if (event.target.matches(selector)) {
-				if (event.target.value == null || event.target.value == '') {
-					event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
-				} else {
-					event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
-				}
-			}
-		});
-	}
-		
-	document.addEventListener('focusout', function (event) {
-		document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-			elem.classList.remove('active', 'typing');
-		})
-	}, true);
+  for (s_event of eventList) {
+    document.addEventListener(s_event, function (event) {
+      if (event.target.matches(selector)) {
+        if (event.target.value == null || event.target.value == '') {
+          event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
+        } else {
+          event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
+        }
+      }
+    });
+  }
+
+  document.addEventListener('focusout', function (event) {
+    document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
+      elem.classList.remove('active', 'typing');
+    })
+  }, true);
 }
 
 function setHiddenFields() {
-	waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
-		const field_int = setInterval(function () {
-			if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-				if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#6009_spz_control") {
-					clearInterval(field_int);
-				}
-				if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != ''){
-					document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
-				}
-				document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
-			}
-		}, 100);
-	});
+  waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
+    const field_int = setInterval(function () {
+      if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#6009_spz_control") {
+          clearInterval(field_int);
+        }
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
+          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
+        }
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
+      }
+    }, 100);
+  });
 }

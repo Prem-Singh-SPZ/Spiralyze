@@ -166,7 +166,7 @@ body.spz-6009 {
   letter-spacing: 0em;
   color: #FFF;
   margin: 24px 0 16px;
-  max-width: 500px;
+  // max-width: 500px;
 }
 .spz-6009 .hero_left .form-content-subheading sup {
   //top: inherit;
