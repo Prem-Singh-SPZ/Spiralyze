@@ -255,7 +255,7 @@ function formModify() {
 function checkValidFields() {
     let validFields = document.querySelectorAll('.mktoRequiredField.filled').length;
     if (validFields >= 4) {
-        document.querySelectorAll('.spz-hidden:not(.field-9):not(.field-10):not(.field-11)').forEach(function (elem) {
+        document.querySelectorAll('.spz-hidden:not(.field-9):not(.field-10):not(.field-11):not(.mktoZipRow)').forEach(function (elem) {
             elem.classList.remove('spz-hidden');
         })
         document.querySelector('.gated-content__right').classList.add('spz-partial-form');

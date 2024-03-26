@@ -710,7 +710,7 @@ body.spz-6009 {
   .spz-6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) {
     font-size: 18px;
     line-height: 24px;
-    //max-width: 70%;
+    max-width: 70%;
   }
   .spz-6009 .js-hero-banner .gated-content__right .rte p:nth-child(01) sup {
     //top: unset;
