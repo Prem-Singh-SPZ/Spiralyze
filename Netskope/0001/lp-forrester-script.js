@@ -22,7 +22,7 @@ body.spz-0001 {
   width: 196px;
 }
 .spz-0001 .landing-page-v3__container {
-  padding: 142px 0 0 0;
+  padding: 169px 0 0 0;
   background: #081a59 !important;
   background-size: 100% !important;
   position: relative;
@@ -540,7 +540,7 @@ margin-bottom: 0;
     padding: 24px 0;
   }
   .spz-0001 .landing-page-v3__container {
-    padding: 102px 0 0 0;
+    padding: 74px 0 0 0;
     overflow-x: hidden;
   }
   .spz-0001 .landing-page-v3__container .landing-page-v3__container-inner {
@@ -644,7 +644,7 @@ margin-bottom: 0;
 // }
 @media (max-width: 767.98px) {
   .spz-0001 .landing-page-v3__container {
-    padding: 76px 0 0 0;
+    padding: 66px 0 0 0;
   }
   .spz-0001 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading {
     font-size: 40px;

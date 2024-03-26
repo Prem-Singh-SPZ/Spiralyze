@@ -9,13 +9,10 @@ body.spz-0001 {
   display: none;
 }
 .spz-0001 .js-hero-banner {
-  padding: 142px 0 0;
+  padding: 136px 0 0;
   background: #081a59 !important;
   background-size: 100% !important;
   position: relative;
-}
-.spz-0001:not(.show_content) .js-hero-banner {
-  min-height: calc(100vh - 46px);
 }
 .spz-0001 .js-hero-banner .container {
   max-width: 1238px;
