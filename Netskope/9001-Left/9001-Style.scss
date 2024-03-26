@@ -437,7 +437,7 @@ body {
                     text-decoration: underline;
                   }
                 }
-                margin: 0 33px 1px 32px;
+                margin: 0 33px 0 32px;
 
                 @media (max-width: 1023.98px) {
                   margin: 0px 56px 0 55px;
@@ -757,7 +757,10 @@ body {
           padding-right: 34px !important;
           white-space: nowrap;
           text-overflow: ellipsis;
-          font-family: "Graphik", sans-serif !important;
+
+          option {
+            font-family: "Graphik", sans-serif !important;
+          }
         }
 
         label#Lbltestfield {
