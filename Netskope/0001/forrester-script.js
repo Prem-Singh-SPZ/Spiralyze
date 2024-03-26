@@ -115,9 +115,9 @@ body.spz-0001 {
   margin-bottom: 32px;
 }
 .spz-0001 .js-hero-banner .gated-content__left .rte .strong {
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 24px;
   margin-bottom: 32px;
 }
@@ -596,7 +596,11 @@ body.spz-0001 {
 .thanksmsg h2 {
   margin: 15px auto 5px;
 }
-
+@media (max-width: 1199.98px){
+  .v3-social-icons {
+    margin-top: 0px;
+  }
+}
 @media (max-width: 1023.98px) {
   .spz-0001 .js-hero-banner {
     padding: 74px 0 0 0;
@@ -605,6 +609,12 @@ body.spz-0001 {
   .spz-0001 .breadcrumbs {
     margin-bottom: 0;
   }
+  .spz-0001 .breadcrumbs .breadcrumbs__item {
+    margin-bottom: 8px;
+  }
+  .spz-0001 .breadcrumbs .breadcrumbs__item:last-child {
+    margin-left: 8px;
+  }
   .spz-0001 .js-hero-banner .container {
     max-width: 752px;
   }
@@ -612,7 +622,19 @@ body.spz-0001 {
     padding-bottom: 0;
   }
   .spz-0001:not(.show_content) .js-hero-banner .container {
-    padding-bottom: 89px;
+    padding-bottom: 0px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__top{
+    padding: 0px;
+  }
+  .spz-0001 h2.form-content-heading {
+    margin-bottom: 24px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__left .rte .strong{
+    margin-bottom: 20px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__left .rte {
+    margin-bottom: 20px;
   }
   .spz-0001 .js-hero-banner .gated-content__container {
     -webkit-box-orient: vertical;
@@ -623,6 +645,7 @@ body.spz-0001 {
   .spz-0001 .js-hero-banner .gated-content__left {
     width: 100%;
     max-width: 100%;
+    margin-bottom: 22px;
   }
   .spz-0001 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     display: block;
@@ -689,9 +712,25 @@ body.spz-0001 {
   .spz-0001 .js-hero-banner .container {
     padding: 0 !important;
   }
-  .spz-0001 .js-hero-banner::before {
-    right: -348px;
-    top: 0;
+  .spz-0001 .js-hero-banner .gated-content__left .rte .forrester-img{
+    width: 88px;
+    height: 32px;
+    margin-top: 18px;
+  }
+  .spz-0001 h2.form-content-heading{
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__top, .spz-0001 .js-hero-banner .gated-content__left {
+    padding: 0px 24px;
+  }
+  .spz-0001 .breadcrumbs__item a.breadcrumbs__item-link{
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
   }
   .spz-0001 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     font-size: 40px;
