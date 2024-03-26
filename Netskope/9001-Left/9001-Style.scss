@@ -112,7 +112,7 @@ body {
         .landing-page__content-container {
           max-width: 585px;
           width: 100%;
-          margin: 0 0 0 24px ;
+          margin: 0 0 0 24px;
           padding: 0;
           position: relative;
 
@@ -158,7 +158,8 @@ body {
           }
 
           .landing-page__content {
-            .content_1, .content_2 {
+            .content_1,
+            .content_2 {
               color: var(--Fonts-isPrimary, #fff);
               font-family: Graphik;
               font-size: 18px;
@@ -172,7 +173,7 @@ body {
               }
             }
 
-            .content_3{
+            .content_3 {
               color: var(--Fonts-isPrimary, #fff);
               font-family: Graphik;
               font-size: 18px;
@@ -184,8 +185,8 @@ body {
                 font-size: 16px;
               }
 
-              a{
-                color: #00A9CE;
+              a {
+                color: #00a9ce;
               }
             }
 
@@ -289,6 +290,7 @@ body {
                 line-height: 24px;
                 text-align: left;
                 margin: 1px 0 17px;
+                letter-spacing: -0.08px;
               }
 
               @media (max-width: 767.98px) {
@@ -338,6 +340,9 @@ body {
           .footer-badges {
             @media (max-width: 1023.98px) {
               margin-bottom: 30px;
+            }
+            @media (max-width: 767.98px) {
+              margin-bottom: 31px;
             }
             img {
               max-width: 343px;
@@ -432,7 +437,7 @@ body {
                     text-decoration: underline;
                   }
                 }
-                margin: 0px 33px 0 32px;
+                margin: 0 33px 1px 32px;
 
                 @media (max-width: 1023.98px) {
                   margin: 0px 56px 0 55px;
@@ -752,6 +757,7 @@ body {
           padding-right: 34px !important;
           white-space: nowrap;
           text-overflow: ellipsis;
+          font-family: "Graphik", sans-serif !important;
         }
 
         label#Lbltestfield {
