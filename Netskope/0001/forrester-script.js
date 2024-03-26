@@ -179,6 +179,7 @@ body.spz-0001 {
   height: 12px;
   top: -20px;
   left: -36px;
+  display: none;
 }
 .spz-0001 .form-content-subheading {
   font-family: Graphik;
@@ -601,6 +602,9 @@ body.spz-0001 {
     padding: 74px 0 0 0;
     overflow-x: hidden;
   }
+  .spz-0001 .breadcrumbs {
+    margin-bottom: 0;
+  }
   .spz-0001 .js-hero-banner .container {
     max-width: 752px;
   }
@@ -610,16 +614,15 @@ body.spz-0001 {
   .spz-0001:not(.show_content) .js-hero-banner .container {
     padding-bottom: 89px;
   }
-  .spz-0001 .js-hero-banner::before {
-    width: 1440px;
-    height: 639px;
-    right: -144px;
-  }
   .spz-0001 .js-hero-banner .gated-content__container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
     -ms-flex-direction: column-reverse;
     flex-direction: column-reverse;
+  }
+  .spz-0001 .js-hero-banner .gated-content__left {
+    width: 100%;
+    max-width: 100%;
   }
   .spz-0001 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     display: block;
@@ -634,7 +637,10 @@ body.spz-0001 {
   .spz-0001 .js-hero-banner .gated-content__container .gated-content__right {
     width: 100%;
     max-width: unset;
-    margin: 28px 0 32px;
+    margin: 28px 0 8px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__left .rte .forrester-img{
+    margin-bottom: 24px;
   }
   .spz-0001 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-0001 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
     display: block;
