@@ -208,7 +208,7 @@ function formModify() {
     var zip_row = document.createElement("div");
     zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
     zip_row.classList.add('mktoFormRow');
-    zip_row.classList.add('mktoZipRow');
+    zip_row.classList.add('mktoZipRow', 'spz-hidden');
 
     var extraRow = document.querySelectorAll(".spz-8003-v1 .gated-content__container .mktoForm .mktoFormRow")[7];
     insertAfter(extraRow, zip_row);

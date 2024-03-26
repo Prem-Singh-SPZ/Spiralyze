@@ -801,15 +801,15 @@
     margin: 0px 16px 16px 0px !important;
 }
 
-.spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2 ~ a.ga__cta:last-child {
+.spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2~a.ga__cta:last-child {
     margin-bottom: 0px !important;
 }
 
-.spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2 ~ a.ga__cta:nth-last-child(2) {
+.spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2~a.ga__cta:nth-last-child(2) {
     margin-bottom: 0px !important;
 }
 
-.spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2 ~ a.ga__cta:nth-last-child(3) {
+.spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2~a.ga__cta:nth-last-child(3) {
     margin-bottom: 0px !important;
 }
 
@@ -1417,7 +1417,7 @@
     }
 
     @media (min-width: 767.98px) {
-        .spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2 ~ a.ga__cta:nth-last-child(3) {
+        .spz-8003-v1.spz-cur .gated-content__container .gated-content__content .gated-content__tags.holder5 .holder2~a.ga__cta:nth-last-child(3) {
             margin-right: 0px !important;
         }
     }
@@ -1764,7 +1764,8 @@
         margin: 0px 0px 18px;
     }
 
-    .spz-8003-v1.spz-str .gated-content__left #ninnerwrapper, .spz-8003-v1.spz-cur .gated-content__left #ninnerwrapper  {
+    .spz-8003-v1.spz-str .gated-content__left #ninnerwrapper,
+    .spz-8003-v1.spz-cur .gated-content__left #ninnerwrapper {
         margin: 0px 0px 8px;
     }
 
@@ -1930,7 +1931,7 @@ input:-webkit-autofill:active {
 .spz-8003-v1 .gated-content__right .gated-content__form form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField {
     font-family: 'Graphik' !important;
     height: 56px !important;
-    padding: 24px 15px 8px !important;
+    padding: 24px 15px 16px !important;
     border-radius: 24px !important;
     border: 1px solid rgba(8, 26, 89, 0.20) !important;
     background: #fff !important;
@@ -1945,6 +1946,10 @@ input:-webkit-autofill:active {
     caret-color: #00a9ce !important;
     -moz-appearance: none;
     -webkit-appearance: none;
+}
+
+.spz-8003-v1 .gated-content__right .gated-content__form form.mktoForm .mktoFormRow .mktoFieldWrap.filled .mktoField {
+    padding-bottom: 8px !important;
 }
 
 .spz-8003-v1 .gated-content__right .gated-content__form form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField {
@@ -2168,9 +2173,9 @@ input:-webkit-autofill:active {
         margin-top: 6px !important;
     }
 
-    .spz-8003-v1 .gated-content__right .gated-content__form form.mktoForm .mktoFormRow.field-11 p.p11 {
+    /* .spz-8003-v1 .gated-content__right .gated-content__form form.mktoForm .mktoFormRow.field-11 p.p11 {
         margin-top: 3px;
-    }
+    } */
 
     .spz-8003-v1 .gated-content__right .gated-content__form form.mktoForm .mktoButtonWrap {
         margin-top: 16px !important;
@@ -2359,6 +2364,7 @@ input:-webkit-autofill:active {
     position: absolute;
     top: 0;
     z-index: 1;
+    border-radius: 0;
 }
 
 .progress .progress__bar {
