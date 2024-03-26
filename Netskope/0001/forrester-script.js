@@ -600,7 +600,7 @@ body.spz-0001 {
 }
 @media (max-width: 1023.98px) {
   .spz-0001 .js-hero-banner {
-    padding: 74px 0 0 0;
+    padding: 72px 0 0 0;
     overflow-x: hidden;
   }
   .spz-0001 .breadcrumbs {
@@ -684,19 +684,6 @@ body.spz-0001 {
     margin-bottom: 32px;
   }
 }
-@media (max-width: 1400px) {
-  .spz-0001 .landing-page__footer-inner > .row {
-    margin: 0;
-  }
-}
-@media (max-width: 767.98px) {
-  
-}
-@media (min-width: 3500px) {
-  .spz-0001 .js-hero-banner::before {
-    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
-  }
-}
 @media (max-width: 1199.98px) {
   .spz-0001 .landing-page-v3__form-container .js-hero-banner .gated-content__container .gated-content__right::after {
     bottom: -100px;
@@ -713,15 +700,47 @@ body.spz-0001 {
     width: 88px;
     height: 32px;
     margin-top: 18px;
+    margin-bottom: 26px;
   }
   .spz-0001 h2.form-content-heading{
     font-size: 32px;
     font-style: normal;
     font-weight: 400;
     line-height: 40px;
+    margin-bottom: 20px;
   }
+  .spz-0001 .gated-content__content .gated-content__tags {
+    margin-bottom: 12px;
+}
+  .spz-0001 .js-hero-banner .gated-content__left .rte .strong, .spz-0001 .js-hero-banner .gated-content__left .rte p {
+    margin-bottom: 16px;
+   }
+   .spz-0001 .js-hero-banner .gated-content__left .rte {
+    margin-bottom: 16px;
+    max-width: 100%;
+   }
+   .spz-0001 .gated-content__content .gated-content__tags .ga__cta:nth-child(01) {order: 0}
+   .spz-0001 .gated-content__content .gated-content__tags .ga__cta:nth-child(02) {order: 2}
+   .spz-0001 .gated-content__content .gated-content__tags .ga__cta:nth-child(03) {order: 1}
   .spz-0001 .js-hero-banner .gated-content__top, .spz-0001 .js-hero-banner .gated-content__left {
     padding: 0px 24px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__top{
+    padding-top: 22px;
+  }
+  .spz-0001 .js-hero-banner .gated-content__left{
+    margin-bottom: 38px;
+  }
+  .spz-0001 .breadcrumbs .breadcrumbs__item {
+    margin-bottom: 4px;
+  }
+  .spz-0001 .breadcrumbs .breadcrumbs__item:last-child{
+    text-overflow: ellipsis;
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+    max-width: 83%;
   }
   .spz-0001 .breadcrumbs__item a.breadcrumbs__item-link{
     font-size: 12px;
@@ -729,6 +748,9 @@ body.spz-0001 {
     font-weight: 400;
     line-height: 20px;
   }
+  .spz-0001 .js-hero-banner .gated-content__container .gated-content__right {
+    margin-top: 22px;
+   }
   .spz-0001 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     font-size: 40px;
     line-height: 48px;
@@ -820,7 +842,7 @@ let bodyLoaded = setInterval(function () {
 
         document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte").innerHTML = `<div class="form-content-heading forrester-img"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711121079/netskope/0001/forrester_wrapper_1.webp" alt="Forrester"></div><h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2><p class="strong">Forrester has named Netskope a Leader in The Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024</p><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul>`;
 
-        if(document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent == 'Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024'){
+        if (document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent == 'Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024') {
           document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent = 'Forrester Wave for Security Service Edge (SSE) Solutions';
         }
 
