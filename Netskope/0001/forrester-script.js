@@ -64,7 +64,14 @@ body.spz-0001 {
     background-repeat: no-repeat;
   }
 }
-@media (min-width: 2500px) {
+@media (min-width: 2500px) and (max-width: 3500px){
+  .spz-0001 .js-hero-banner::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711375425/netskope/0001/bg_4k_1.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+  }
+}
+@media (min-width: 3500px) {
   .spz-0001 .js-hero-banner::before {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1711375425/netskope/0001/bg_4k_1.svg");
     background-size: contain;
