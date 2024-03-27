@@ -173,6 +173,7 @@ margin-bottom: 0;
   height: 12px;
   top: -20px;
   left: -36px;
+  display: none;
 }
 .spz-0001 .hero_left h4 {
   color: #fff;
