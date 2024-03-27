@@ -31,6 +31,8 @@ body.spz-0001 {
  .breadcrumbs__item:before{
   content: url(//res.cloudinary.com/spiralyze/image/upload/v1711532458/netskope/0001/src/Chevron.svg);
   transform: none;
+  top: 3px;
+  left: -7px;
 }
 .spz-0001:not(.show_content) .js-hero-banner .container {
   padding: 0 24px 8px;
