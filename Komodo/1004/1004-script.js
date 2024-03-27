@@ -124,82 +124,128 @@ if(!document.querySelector('.spz-1001')){
       </div>
       <div class="section3">
         <div class="wrapper">
-          <div class="title">What Our Partners Say</div>
-          <div class="slider-wrapper">
-            <section class="splide splide1">
-              <div class="splide__track">
-                <ul class="splide__list">
-                  <li class="splide__slide">
-                    <div class="child">
-                      <div class="left">
-                        <picture>
-                          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/ava-1-mob.jpg">
-                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/pp-1.png" alt="Michael Townsend" width="71" height="80" />
-                        </picture>
-                        <div class="mobile-quote">“Komodo's full-stack platform approach enables a comprehensive foundation for healthcare analytics, allowing Life Science and healthcare companies to generate critical insights across the industry.”</div>
-                        <div class="text">
-                          <div class="name">Michael Townsend</div>
-                          <div class="job-title">Research Director<span class="mobile">,</span> <br />Life Sciences Commercial Strategies<span class="mobile">, IDC</span></div>
-                        </div>
-                        <div class="logo">
-                          <img src="//res.cloudinary.com/spiralyze/image/upload/v1702358750/KomodoHealth/1001/logo-1.svg" alt="International Data Corporation" width="98" height="32" />
-                        </div>
-                      </div>
-                      <div class="right">
-                        <div class="desktop-quote">“Komodo's full-stack platform approach enables a comprehensive foundation for healthcare analytics, allowing Life Science and healthcare companies to generate critical insights across the industry.”</div>
-                      </div>
+            <div class="title">What Our Partners Say</div>
+            <div class="slider-wrapper">
+                <section class="splide splide1">
+                    <div class="splide__track">
+                        <ul class="splide__list">
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                            330 M+
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                            Hospital chargemaster &
+                                            in-hospital sources
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                        </ul>
                     </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="child child2">
-                      <div class="left">
-                        <picture>
-                          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/ava-3-mob.jpg">
-                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/pp-2.png" alt="Joey Mattingly" width="71" height="80" />
-                        </picture>
-                        <div class="mobile-quote">“With Komodo's research-grade insights and technology, we will now have unprecedented visibility into the full range of factors that contribute to healthcare outcomes, including the historically overlooked role of social determinants.”</div>
-                        <div class="text">
-                          <div class="name">Joey Mattingly</div>
-                          <div class="job-title">PharmD, MBA, PhD, Associate Professor </div>
-                        </div>
-                        <div class="logo">
-                          <img src="//res.cloudinary.com/spiralyze/image/upload/v1702358750/KomodoHealth/1001/logo-2.svg" alt="University of Maryland" width="64" height="64" />
-                        </div>
-                      </div>
-                      <div class="right">
-                        <div class="desktop-quote">“With Komodo's research-grade insights and technology, we will now have unprecedented visibility into the full range of factors that contribute to healthcare outcomes, including the historically overlooked role of social determinants.”</div>
-                      </div>
-                    </div>
-                  </li>
-                  <li class="splide__slide">
-                    <div class="child child3">
-                      <div class="left">
-                        <picture>
-                          <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/ava-mob-5.jpg">
-                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/pp-3.png" alt="Tom Haskell" width="71" height="80" />
-                        </picture>
-                        <div class="mobile-quote">“Komodo allows us to unlock richer insights by integrating our own data with the Healthcare Map, all on the Sentinel platform. In our experience with real-world-evidence research, this technology has played a pivotal role in offering a timely, comprehensive, and accurate view of patient journeys to drive evidence around disease burden and health outcomes.”</div>
-                        <div class="text">
-                          <div class="name">Tom Haskell</div>
-                          <div class="job-title">Global Head of Innovation, Data, and Analytics</div>
-                        </div>
-                        <div class="logo">
-                          <img src="//res.cloudinary.com/spiralyze/image/upload/v1702358751/KomodoHealth/1001/logo-3.svg" alt="Kantar" width="129" height="24" />
-                        </div>
-                      </div>
-                      <div class="right">
-                        <div class="desktop-quote">“Komodo allows us to unlock richer insights by integrating our own data with the Healthcare Map, all on the Sentinel platform. In our experience with real-world-evidence research, this technology has played a pivotal role in offering a timely, comprehensive, and accurate view of patient journeys to drive evidence around disease burden and health outcomes.”</div>
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-              </div>
-            </section>
-            <div class="arrow-left"><img src="//res.cloudinary.com/spiralyze/image/upload/v1702358601/KomodoHealth/1001/left-arrow-1.svg" alt="Left Arrow" width="48" height="48"/></div>
-            <div class="arrow-right"><img src="//res.cloudinary.com/spiralyze/image/upload/v1702358633/KomodoHealth/1001/right-arrow-1.svg" alt="Right Arrow" width="48" height="48"/></div>
-          </div>
+                </section>
+                <div class="arrow-left"><img
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1702358601/KomodoHealth/1001/left-arrow-1.svg"
+                        alt="Left Arrow" width="48" height="48" /></div>
+                <div class="arrow-right"><img
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1702358633/KomodoHealth/1001/right-arrow-1.svg"
+                        alt="Right Arrow" width="48" height="48" /></div>
+            </div>
         </div>
-      </div>
+    </div>
       <div class="section4 new-footer">
         <div class="text">&copy;2024 All Rights Reserved | Komodo Health, Inc.</div>
       </div>
