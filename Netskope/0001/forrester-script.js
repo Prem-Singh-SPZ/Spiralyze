@@ -403,6 +403,7 @@ body.spz-0001 {
 }
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
   padding: 0 0 0 24px !important;
+  width: fit-content !important;
 }
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
   opacity: 0 !important;
@@ -756,9 +757,9 @@ body.spz-0001 {
   .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
     margin-top: 6px !important;
   }
-  .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
-    margin-top: 3px;
-  }
+  // .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
+  //   margin-top: 3px;
+  // }
   .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
     margin-top: 10px !important;
   }
