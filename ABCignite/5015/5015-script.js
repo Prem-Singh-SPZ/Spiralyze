@@ -300,22 +300,22 @@ function init5014() {
     var bodyEle = document.querySelector('body');
     if (!bodyEle.classList.contains('spz-5015')) {
         bodyEle.classList.add('spz-5015');
-        bodyEle.classList.add('spz-5014');
+        // bodyEle.classList.add('spz-5014');
 
-        var link5014 = document.createElement('link');
-        link5014.type = 'text/css';
-        link5014.rel = 'stylesheet';
-        link5014.href = '//res.cloudinary.com/spiralyze/raw/upload/v1706623304/ABCFitnessIgnite/5014/code/5014-style.css';
-        document.head.appendChild(link5014);
+        // var link5014 = document.createElement('link');
+        // link5014.type = 'text/css';
+        // link5014.rel = 'stylesheet';
+        // link5014.href = '//res.cloudinary.com/spiralyze/raw/upload/v1706623304/ABCFitnessIgnite/5014/code/5014-style.css';
+        // document.head.appendChild(link5014);
 
         document.head.insertAdjacentHTML('beforeend', `<style id="5015-css">@media (min-width: 1199.98px) {
             body .site-cta {
               margin-right: 27px;
               margin-left: 12px;
             }
-            body #mega-menu-wrap-primary #mega-menu-primary {
-              width: auto !important;
-            }
+            // body #mega-menu-wrap-primary #mega-menu-primary {
+            //   width: auto !important;
+            // }
             body #mega-menu-wrap-primary #mega-menu-primary > li.mega-menu-item > a.mega-menu-link {
               white-space: nowrap;
             }
