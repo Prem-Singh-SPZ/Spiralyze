@@ -22,14 +22,14 @@ body.spz-0001 {
 //   width: 196px;
 // }
 .spz-0001 .landing-page-v3__container {
-  padding: 169px 0 0 0;
+  padding: 100px 0 0 0;
   background: #081a59 !important;
   background-size: 100% !important;
   position: relative;
 }
 .spz-0001 .landing-page-v3__container .landing-page-v3__container-inner {
   max-width: 1238px;
-  padding: 0 24px;
+  padding: 69px 24px 0;
 }
 .spz-0001 .landing-page-v3__container::before {
   position: absolute;
@@ -173,7 +173,6 @@ margin-bottom: 0;
   height: 12px;
   top: -20px;
   left: -36px;
-  display: none;
 }
 .spz-0001 .hero_left h4 {
   color: #fff;

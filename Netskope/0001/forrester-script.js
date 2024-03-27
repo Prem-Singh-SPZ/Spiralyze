@@ -34,6 +34,12 @@ body.spz-0001 {
   top: 3px;
   left: -7px;
 }
+@media (max-width: 767.98px) {
+  .breadcrumbs__item:before{
+    margin-left: 1px;
+  }
+}
+
 .spz-0001:not(.show_content) .js-hero-banner .container {
   padding: 0 24px 8px;
 }
@@ -838,9 +844,9 @@ let bodyLoaded = setInterval(function () {
 
         document.querySelector(".spz-0001 .js-hero-banner .gated-content__left .rte").innerHTML = `<div class="form-content-heading forrester-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/forrester_wrapper_1.png" alt="Forrester"></div><h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2><p class="strong">Forrester has named Netskope a Leader in The Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024</p><p>Netskope has led the way in helping customers across diverse sectors to benefit from reduced risk, greater agility, lower costs and a simplified operational experience across the IT organization. This is achieved by replacing legacy tools with Netskope&#8217;s Intelligent Security Service Edge (SSE) solution, part of the Netskope One unified SASE platform.</p><p>Forrester has recently named Netskope a Leader in the inaugural Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024 report after analyzing our Security Service (SSE) solution. We believe we were named a Leader in this report because:</p><ul><li>One Engine, Client, Gateway and Network fully integrated</li><li>Our heritage of data protection makes a difference</li><li>Full control of our network and advanced features</li></ul>`;
 
-        if (document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent == 'Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024') {
-          document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent = 'Forrester Wave for Security Service Edge (SSE) Solutions';
-        }
+        // if (document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent == 'Forrester Wave™: Security Service Edge (SSE) Solutions, Q1 2024') {
+        //   document.querySelector('.breadcrumbs__item:last-of-type .breadcrumbs__item-link').textContent = 'Forrester Wave for Security Service Edge (SSE) Solutions';
+        // }
 
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
