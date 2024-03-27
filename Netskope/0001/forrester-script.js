@@ -25,7 +25,6 @@ body.spz-0001 {
 }
 .spz-0001 .breadcrumbs__item a.breadcrumbs__item-link{
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
@@ -101,7 +100,6 @@ body.spz-0001 {
 .spz-0001 .js-hero-banner .gated-content__left .rte p {
   margin-bottom: 12px;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
 }
@@ -113,21 +111,18 @@ body.spz-0001 {
 }
 .spz-0001 .js-hero-banner .gated-content__left .rte .strong {
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 32px;
 }
 .spz-0001 .gated-content__content .gated-content__label{
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   margin-bottom: 16px;
 }
 .spz-0001 .gated-content__content .gated-content__label:nth-child(6){
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   margin-bottom: 12px;
@@ -145,7 +140,6 @@ body.spz-0001 {
 }
 .spz-0001 .gated-content__content .gated-content__tags .ga__cta{
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   padding: 3px 15px 3px 16px;
@@ -155,9 +149,8 @@ body.spz-0001 {
 }
 .spz-0001 .form-content-heading {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 48px;
-  font-style: normal;
   font-weight: 400;
   line-height: 48px;
   margin: 0;
@@ -179,7 +172,7 @@ body.spz-0001 {
   display: none;
 }
 .spz-0001 .form-content-subheading {
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -209,9 +202,8 @@ body.spz-0001 {
 .spz-0001 .js-hero-banner .gated-content__right .form_title {
   color: #081a59;
   text-align: center;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 40px;
-  font-style: normal;
   font-weight: 400;
   line-height: 48px;
   margin-bottom: 24px;
@@ -227,7 +219,7 @@ body.spz-0001 {
 }
 .spz-0001 .js-hero-banner .gated-content__right .rte p,
 .spz-0001 .js-hero-banner .gated-content__right .rte ul li {
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -246,7 +238,7 @@ body.spz-0001 {
   margin: 0;
 }
 .spz-0001 .js-hero-banner .gated-content__right .gated-content__content .gated-content__label {
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 18px;
   font-weight: 600;
   line-height: 24px;
@@ -258,7 +250,7 @@ body.spz-0001 {
 }
 .spz-0001 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
   margin: 8px;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 16px;
   font-weight: 400;
   line-height: 24px;
@@ -315,7 +307,6 @@ body.spz-0001 {
   left: 16px;
   color: #7e8bba !important;
   font-size: 16px !important;
-  font-style: normal;
   font-weight: 400 !important;
   line-height: 24px !important;
   width: auto !important;
@@ -337,7 +328,6 @@ body.spz-0001 {
   background: #fff !important;
   color: #081a59 !important;
   font-size: 16px !important;
-  font-style: normal;
   font-weight: 400 !important;
   line-height: 24px !important;
   -webkit-box-shadow: none !important;
@@ -432,7 +422,6 @@ body.spz-0001 {
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
   color: #081a59 !important;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none !important;
@@ -440,7 +429,6 @@ body.spz-0001 {
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p a {
   color: #081a59 !important;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none !important;
@@ -456,7 +444,6 @@ body.spz-0001 {
   padding: 0 !important;
   color: #7e8bba !important;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   font-family: "Graphik" !important;
@@ -468,7 +455,6 @@ body.spz-0001 {
   padding: 0 !important;
   color: #7e8bba !important;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   font-family: "Graphik" !important;
@@ -516,7 +502,7 @@ body.spz-0001 {
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
-  font-family: Graphik !important;
+  font-family: "Graphik" !important;
 }
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .spz-0001 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -525,9 +511,8 @@ body.spz-0001 {
 }
 .spz-0001 .landing-page-v3__content-container--bottom p {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin: 0;
@@ -540,9 +525,8 @@ body.spz-0001 {
 }
 .spz-0001 .landing-page-v3__content-container--bottom ul {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin: 0;
@@ -649,7 +633,6 @@ body.spz-0001 {
     display: block;
     color: #fff;
     font-size: 56px;
-    font-style: normal;
     font-weight: 400;
     line-height: 56px;
     margin: 0 0 32px;
@@ -705,7 +688,6 @@ body.spz-0001 {
   }
   .spz-0001 h2.form-content-heading{
     font-size: 32px;
-    font-style: normal;
     font-weight: 400;
     line-height: 40px;
     margin-bottom: 20px;
@@ -745,7 +727,6 @@ body.spz-0001 {
   }
   .spz-0001 .breadcrumbs__item a.breadcrumbs__item-link{
     font-size: 12px;
-    font-style: normal;
     font-weight: 400;
     line-height: 20px;
   }
@@ -850,7 +831,7 @@ let bodyLoaded = setInterval(function () {
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
           formModify();
-          setHiddenFields();
+          // setHiddenFields();
         });
       });
     }
@@ -963,13 +944,13 @@ function setHiddenFields() {
   waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
     const field_int = setInterval(function () {
       if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#6009_spz_control") {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#0001_spz_variant") {
           clearInterval(field_int);
         }
         if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
-          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
+          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0001_spz_variant');
         }
-        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0001_spz_variant');
       }
     }, 100);
   });

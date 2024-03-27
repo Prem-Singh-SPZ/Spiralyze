@@ -18,9 +18,9 @@ body.spz-0001 {
 .spz-0001 .header.has-promo-banner .header__logo {
   padding: 0;
 }
-.spz-0001 .header.has-promo-banner img {
-  width: 196px;
-}
+// .spz-0001 .header.has-promo-banner img {
+//   width: 196px;
+// }
 .spz-0001 .landing-page-v3__container {
   padding: 169px 0 0 0;
   background: #081a59 !important;
@@ -127,9 +127,8 @@ body.spz-0001 {
 }
 .spz-0001 .landing-page-v3__content p{
   color:  #FFF;
-font-family: Graphik !important;
+font-family: "Graphik" !important;
 font-size: 16px;
-font-style: normal;
 font-weight: 400;
 line-height: 24px;
 margin-bottom: 12px;
@@ -139,18 +138,16 @@ margin-bottom: 12px;
 }
 .spz-0001 .landing-page-v3__content ul li{
   color:  #FFF;
-font-family: Graphik !important;
+font-family: "Graphik" !important;
 font-size: 16px;
-font-style: normal;
 font-weight: 400;
 line-height: 24px;
 margin-bottom: 0;
 }
 .spz-0001 .hero_left .form-content-heading {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 48px;
-  font-style: normal;
   font-weight: 400;
   line-height: 48px;
   margin: 0;
@@ -172,9 +169,8 @@ margin-bottom: 0;
 }
 .spz-0001 .hero_left h4 {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 18px;
-  font-style: normal;
   font-weight: 600;
   line-height: 24px;
   margin: 24px 0 40px;
@@ -192,9 +188,8 @@ margin-bottom: 0;
 .spz-0001 .landing-page-v3__form-content .form_title {
   color: #081a59;
   text-align: center;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 40px;
-  font-style: normal;
   font-weight: 400;
   line-height: 48px;
   margin-bottom: 24px;
@@ -249,7 +244,7 @@ margin-bottom: 0;
   left: 16px;
   color: #7e8bba !important;
   font-size: 16px !important;
-  font-style: normal;
+  
   font-weight: 400 !important;
   line-height: 24px !important;
   width: auto !important;
@@ -272,7 +267,6 @@ margin-bottom: 0;
   background: #fff !important;
   color: #081a59 !important;
   font-size: 16px !important;
-  font-style: normal;
   font-weight: 400 !important;
   line-height: 24px !important;
   -webkit-box-shadow: none !important;
@@ -367,7 +361,7 @@ margin-bottom: 0;
 .spz-0001 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
   color: #081a59 !important;
   font-size: 12px;
-  font-style: normal;
+  
   font-weight: 400;
   line-height: 20px;
   text-decoration: none !important;
@@ -375,7 +369,6 @@ margin-bottom: 0;
 .spz-0001 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p a {
   color: #081a59 !important;
   font-size: 12px;
-  font-style: normal;
   font-weight: 400;
   line-height: 20px;
   text-decoration: none !important;
@@ -391,7 +384,7 @@ margin-bottom: 0;
   padding: 0 !important;
   color: #7e8bba !important;
   font-size: 12px;
-  font-style: normal;
+  
   font-weight: 400;
   line-height: 20px;
   font-family: "Graphik" !important;
@@ -403,7 +396,7 @@ margin-bottom: 0;
   padding: 0 !important;
   color: #7e8bba !important;
   font-size: 12px;
-  font-style: normal;
+  
   font-weight: 400;
   line-height: 20px;
   font-family: "Graphik" !important;
@@ -451,7 +444,7 @@ margin-bottom: 0;
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
-  font-family: Graphik !important;
+  font-family: "Graphik" !important;
 }
 .spz-0001 .landing-page-v3__form-content form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .spz-0001 .landing-page-v3__form-content form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -460,9 +453,9 @@ margin-bottom: 0;
 }
 .spz-0001 .landing-page-v3__content-container--bottom p {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 16px;
-  font-style: normal;
+  
   font-weight: 400;
   line-height: 24px;
   margin: 0;
@@ -475,9 +468,9 @@ margin-bottom: 0;
 }
 .spz-0001 .landing-page-v3__content-container--bottom ul {
   color: #fff;
-  font-family: Graphik;
+  font-family: "Graphik";
   font-size: 16px;
-  font-style: normal;
+  
   font-weight: 400;
   line-height: 24px;
   margin: 0;
@@ -547,7 +540,7 @@ margin-bottom: 0;
     display: block;
     color: #fff;
     font-size: 56px;
-    font-style: normal;
+    
     font-weight: 400;
     line-height: 56px;
     margin: 0;
@@ -719,7 +712,7 @@ let bodyLoaded = setInterval(function () {
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
           formModify();
-          setHiddenFields();
+          // setHiddenFields();
         });
 
         // MktoForms2.whenReady(function (form) {
@@ -842,13 +835,13 @@ function setHiddenFields() {
   waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
     const field_int = setInterval(function () {
       if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#6009_spz_control") {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#0001_spz_variant") {
           clearInterval(field_int);
         }
         if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
-          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
+          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0001_spz_variant');
         }
-        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6009_spz_control');
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0001_spz_variant');
       }
     }, 100);
   });
