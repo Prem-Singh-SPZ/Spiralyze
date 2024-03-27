@@ -124,7 +124,6 @@ if(!document.querySelector('.spz-1001')){
       </div>
       <div class="section3">
         <div class="wrapper">
-            <div class="title">What Our Partners Say</div>
             <div class="slider-wrapper">
                 <section class="splide splide1">
                     <div class="splide__track">
@@ -259,7 +258,7 @@ if(!document.querySelector('.spz-1001')){
       };
       var splide = new Splide( '.spz-1001 .new-wrapper .section3 .slider-wrapper .splide1', {
         type   : 'loop',
-        perPage: 1,
+        perPage: 3,
         autoplay: true,
         arrows: false,
         autoHeight: true,
