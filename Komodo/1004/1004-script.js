@@ -8,8 +8,8 @@ function ready(fn) {
 }
 ready(function(){
   console.log("after dom load")
-if(!document.querySelector('.spz-1001')){
-  document.querySelector('body').classList.add('spz-1001')
+if(!document.querySelector('.spz-1004')){
+  document.querySelector('body').classList.add('spz-1004')
   //targeted page
   if(window.location.href.indexOf('https://www.komodohealth.com/get-in-touch')>-1){
     const loadJS = (url, implementationCode, location)=>{
@@ -46,15 +46,15 @@ if(!document.querySelector('.spz-1001')){
     }
     const getMaxQuoteHeight =()=>{
       let maxHeight=0;
-      for(let i=0;i<document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc').length;i++){
-        document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].removeAttribute("style");
+      for(let i=0;i<document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc').length;i++){
+        document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].removeAttribute("style");
       }
-      for(let i=0;i<document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc').length;i++){
+      for(let i=0;i<document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc').length;i++){
         if(!maxHeight){
-          maxHeight=document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
+          maxHeight=document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
         } else {
-          if(maxHeight<=document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight){
-            maxHeight=document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
+          if(maxHeight<=document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight){
+            maxHeight=document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
           }
         }
       }
@@ -62,8 +62,8 @@ if(!document.querySelector('.spz-1001')){
     }
     const adjustQuoteHeight =()=>{
       const maxHeight = getMaxQuoteHeight()
-      for(let i=0;i<document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc').length;i++){ 
-        document.querySelectorAll('.spz-1001 .new-wrapper .section3 .slider-wrapper .desc')[i].setAttribute('style','height:'+maxHeight+'px');
+      for(let i=0;i<document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc').length;i++){ 
+        document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].setAttribute('style','height:'+maxHeight+'px');
       }
     }
     const gb_load_css=(path)=> {
@@ -256,7 +256,7 @@ if(!document.querySelector('.spz-1001')){
         let slide = splide.Components.Slides.getAt( typeof( newIndex ) == 'number' ? newIndex : splide.index ).slide;
           slide.parentElement.parentElement.style.height = outerHeight(slide) + 76 + 'px';
       };
-      var splide = new Splide( '.spz-1001 .new-wrapper .section3 .slider-wrapper .splide1', {
+      var splide = new Splide( '.spz-1004 .new-wrapper .section3 .slider-wrapper .splide1', {
         type   : 'loop',
         perPage: 3,
         autoplay: true,
@@ -270,27 +270,27 @@ if(!document.querySelector('.spz-1001')){
       
         splide.on("move", function (e) {
           updateHeight()
-          document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper').classList.remove("active1","active2","active3")
-          document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper').classList.add("active"+(parseInt(splide.index)+1))
+          document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper').classList.remove("active1","active2","active3")
+          document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper').classList.add("active"+(parseInt(splide.index)+1))
           
         })
         splide.on("resize", function (e) {
           updateHeight()
           
         })
-        document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper').classList.add("active1")
+        document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper').classList.add("active1")
         updateHeight()
       },200)
-      document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper .arrow-left img').addEventListener("click",function(){
+      document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-left img').addEventListener("click",function(){
         splide.go( '<' );
       })
-      document.querySelector('.spz-1001 .new-wrapper .section3 .slider-wrapper .arrow-right img').addEventListener("click",function(){
+      document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-right img').addEventListener("click",function(){
         splide.go( '>' );
       })
     },document.body)
-    document.querySelector('.spz-1001 #popup_contact_us .wcs-pform').remove()
-    document.querySelector('.spz-1001 #popup_connect .wcs-pform').remove()
-    document.querySelector('.spz-1001 #popup_contact_us .wcs-col-12').innerHTML=`
+    document.querySelector('.spz-1004 #popup_contact_us .wcs-pform').remove()
+    document.querySelector('.spz-1004 #popup_connect .wcs-pform').remove()
+    document.querySelector('.spz-1004 #popup_contact_us .wcs-col-12').innerHTML=`
     <div class="wcs-pform">
       <div class="wcs-popup-heading">
         <h2>Contact Us</h2>
@@ -299,9 +299,9 @@ if(!document.querySelector('.spz-1001')){
     `
     let i=0;
       const CROInterval = setInterval(() => {
-        if(document.querySelector('.spz-1001 #new-form-wrapper input[name="cro1"]')){
+        if(document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]')){
           clearInterval (CROInterval)
-          document.querySelector('.spz-1001 #new-form-wrapper input[name="cro1"]').value="#1001_variant"
+          document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]').value="#1001_variant"
         }
         i++;
         if(i>6){
@@ -313,7 +313,7 @@ if(!document.querySelector('.spz-1001')){
         region: "na1",
         portalId: "6374024",
         formId: "89116499-15d1-4cd0-b724-7a46e68cf8f0",
-        target: '.spz-1001 #new-form-wrapper',
+        target: '.spz-1004 #new-form-wrapper',
         isInsideFrame: true,
         inlineMessage: "Thanks for submitting the form.",
           onFormSubmitted: function($form) {
@@ -321,53 +321,53 @@ if(!document.querySelector('.spz-1001')){
             gtag_report_conversion();
           },
         onFormReady: function($form){
-          if(document.querySelector('.spz-1001 #new-form-wrapper .hs_firstname')){
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_firstname').classList.add("width50","clear");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_lastname').classList.add("width50","with-margin");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_company').classList.add("width50","clear");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_jobtitle').classList.add("width50","with-margin");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_email').classList.add("width50","clear");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_phone').classList.add("width50","with-margin");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_message').classList.add("clear");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries').classList.add("clear");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs-richtext').classList.add("clear","pp-parent");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_submit').classList.add("clear","submit-parent");
+          if(document.querySelector('.spz-1004 #new-form-wrapper .hs_firstname')){
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_firstname').classList.add("width50","clear");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_lastname').classList.add("width50","with-margin");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_company').classList.add("width50","clear");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_jobtitle').classList.add("width50","with-margin");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_email').classList.add("width50","clear");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_phone').classList.add("width50","with-margin");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_message').classList.add("clear");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries').classList.add("clear");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs-richtext').classList.add("clear","pp-parent");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_submit').classList.add("clear","submit-parent");
             
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_company label span').innerHTML='Company';
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_phone label span').innerHTML='Phone (optional)';
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries label span').innerHTML='Country';
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select').value='United States'
-            trigger(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select'), 'change');
-            trigger(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select'), 'blur');
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select option:first-child').remove();                           
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries').classList.add("hasValue");
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value="SUBMIT";
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select').insertAdjacentHTML("afterend","<div class='arrow-select'></div>")
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_company label span').innerHTML='Company';
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_phone label span').innerHTML='Phone (optional)';
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries label span').innerHTML='Country';
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select').value='United States'
+            trigger(document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select'), 'change');
+            trigger(document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select'), 'blur');
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select option:first-child').remove();                           
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries').classList.add("hasValue");
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_submit input').value="SUBMIT";
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select').insertAdjacentHTML("afterend","<div class='arrow-select'></div>")
             const step1Checking = setInterval(function(){
-              if(document.querySelector('.spz-1001 #new-form-wrapper .hs_firstname input').value!="" &&
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_lastname input').value!="" &&
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_company input').value!="" &&
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_jobtitle input').value!="") {
+              if(document.querySelector('.spz-1004 #new-form-wrapper .hs_firstname input').value!="" &&
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_lastname input').value!="" &&
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_company input').value!="" &&
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_jobtitle input').value!="") {
                 clearInterval(step1Checking);
-                document.querySelector('.spz-1001 #new-form-wrapper').classList.add("step2")
+                document.querySelector('.spz-1004 #new-form-wrapper').classList.add("step2")
               }
             },200)
           }
           else {
-            document.querySelector('.spz-1001 #new-form-wrapper').classList.add("step2")
-            if(document.querySelector('.spz-1001 #new-form-wrapper .hs_email')){ 
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_email label span').innerHTML='Email';
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_email').classList.add("clear");
+            document.querySelector('.spz-1004 #new-form-wrapper').classList.add("step2")
+            if(document.querySelector('.spz-1004 #new-form-wrapper .hs_email')){ 
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_email label span').innerHTML='Email';
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_email').classList.add("clear");
             }
-            if(document.querySelector('.spz-1001 #new-form-wrapper .hs_message')){
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_message').classList.add("clear");
+            if(document.querySelector('.spz-1004 #new-form-wrapper .hs_message')){
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_message').classList.add("clear");
             }
-            if(document.querySelector('.spz-1001 #new-form-wrapper .hs_phone')){
-              document.querySelector('.spz-1001 #new-form-wrapper .hs_phone label span').innerHTML='Phone (Optional)';
+            if(document.querySelector('.spz-1004 #new-form-wrapper .hs_phone')){
+              document.querySelector('.spz-1004 #new-form-wrapper .hs_phone label span').innerHTML='Phone (Optional)';
             }
-            document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value="SUBMIT";
+            document.querySelector('.spz-1004 #new-form-wrapper .hs_submit input').value="SUBMIT";
           }
-          var allInput = document.querySelectorAll('.spz-1001 #new-form-wrapper .hs-input');
+          var allInput = document.querySelectorAll('.spz-1004 #new-form-wrapper .hs-input');
           function errorState(item) {
             var i = 0;
             var errorInterval = setInterval(() => {
@@ -410,18 +410,18 @@ if(!document.querySelector('.spz-1001')){
             labelChange(e);
             errorState(e);
           })
-          document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').addEventListener("click",function(){
+          document.querySelector('.spz-1004 #new-form-wrapper .hs_submit input').addEventListener("click",function(){
             allInput.forEach(function (e) {          
               errorState(e);          
             })
-            if(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select')){
-              trigger(document.querySelector('.spz-1001 #new-form-wrapper .hs_consent_countries select'), 'change');
+            if(document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select')){
+              trigger(document.querySelector('.spz-1004 #new-form-wrapper .hs_consent_countries select'), 'change');
             }
             let i=0;
             const submitInterval =setInterval(() => {
-              if(document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value!="SUBMIT"){
+              if(document.querySelector('.spz-1004 #new-form-wrapper .hs_submit input').value!="SUBMIT"){
                 clearInterval(submitInterval)
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').value="SUBMIT";
+                document.querySelector('.spz-1004 #new-form-wrapper .hs_submit input').value="SUBMIT";
               }
               i++;
               if(i>80){
@@ -429,10 +429,10 @@ if(!document.querySelector('.spz-1001')){
               }
             }, 5);
           })
-          document.querySelector('.spz-1001 #new-form-wrapper .hs_message textarea').addEventListener("keypress",function (e) {
+          document.querySelector('.spz-1004 #new-form-wrapper .hs_message textarea').addEventListener("keypress",function (e) {
             if (e.key === 'Enter') {
                 e.preventDefault();
-                document.querySelector('.spz-1001 #new-form-wrapper .hs_submit input').click()
+                document.querySelector('.spz-1004 #new-form-wrapper .hs_submit input').click()
             }
           });
         },
