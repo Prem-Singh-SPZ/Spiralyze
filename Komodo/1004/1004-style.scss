@@ -655,12 +655,17 @@ $font-family_4: Titillium Web, sans-serif;
       }
     }
     .section3 {
-      padding: 72px 0 84.5px 0;
+      padding: 40px 0 39px 0;
       background: #000
         url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp")
         no-repeat;
       background-size: cover;
       background-position: center center;
+
+      .wrapper {
+        max-width: 1330px;
+        margin: 0 auto;
+      }
       .slider-wrapper {
         position: relative;
         .child {
@@ -678,8 +683,8 @@ $font-family_4: Titillium Web, sans-serif;
           .top-text {
             padding: 32px 0;
             width: 100%;
-            border-bottom: 1px solid #68CCE8;
-            
+            border-bottom: 1px solid #68cce8;
+
             .l-number {
               color: $color_1;
               text-align: center;
@@ -690,10 +695,29 @@ $font-family_4: Titillium Web, sans-serif;
               line-height: 64px;
             }
           }
+
+          .bottom-text {
+            padding: 20px 0 24px;
+            width: 100%;
+            min-height: 96px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            .card-text {
+              color: #f0eeee;
+              text-align: center;
+              font-family: $font-family_1;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 26px;
+            }
+          }
         }
         .splide__slide {
           //   margin-right: 80px;
-          padding: 0 75px;
+          //   padding: 0 75px;
         }
         .splide__list {
           align-items: flex-start;

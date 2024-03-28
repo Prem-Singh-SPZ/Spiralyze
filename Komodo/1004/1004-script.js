@@ -21,18 +21,7 @@ if(!document.querySelector('.spz-1004')){
     
       location.appendChild(scriptTag);
     };
-    function insertAfter(newNode, referenceNode) {
-      referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-    }
-    function outerHeight(el) {
-      const style = getComputedStyle(el);
-    
-      return (
-        el.getBoundingClientRect().height +
-        parseFloat(style.marginTop) +
-        parseFloat(style.marginBottom)
-      );
-    }
+
     function trigger(el, eventType) {
       if (typeof eventType === 'string' && typeof el[eventType] === 'function') {
         el[eventType]();
@@ -44,28 +33,7 @@ if(!document.querySelector('.spz-1004')){
         el.dispatchEvent(event);
       }
     }
-    const getMaxQuoteHeight =()=>{
-      let maxHeight=0;
-      for(let i=0;i<document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc').length;i++){
-        document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].removeAttribute("style");
-      }
-      for(let i=0;i<document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc').length;i++){
-        if(!maxHeight){
-          maxHeight=document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
-        } else {
-          if(maxHeight<=document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight){
-            maxHeight=document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].offsetHeight;
-          }
-        }
-      }
-      return maxHeight;
-    }
-    const adjustQuoteHeight =()=>{
-      const maxHeight = getMaxQuoteHeight()
-      for(let i=0;i<document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc').length;i++){ 
-        document.querySelectorAll('.spz-1004 .new-wrapper .section3 .slider-wrapper .desc')[i].setAttribute('style','height:'+maxHeight+'px');
-      }
-    }
+  
     const gb_load_css=(path)=> {
       let css = document.createElement('link');
       css.rel = 'stylesheet';
@@ -137,8 +105,7 @@ if(!document.querySelector('.spz-1004')){
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                           Patients in the US
                                         </div>
                                     </div>
                                 </div>
@@ -147,13 +114,12 @@ if(!document.querySelector('.spz-1004')){
                                 <div class="child">
                                     <div class="top-text">
                                         <div class="l-number">
-                                            330 M+
+                                        15 M
                                         </div>
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                        Healthcare encountersevery day
                                         </div>
                                     </div>
                                 </div>
@@ -162,13 +128,12 @@ if(!document.querySelector('.spz-1004')){
                                 <div class="child">
                                     <div class="top-text">
                                         <div class="l-number">
-                                            330 M+
+                                        30%
                                         </div>
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                        More unique patients 
                                         </div>
                                     </div>
                                 </div>
@@ -177,13 +142,12 @@ if(!document.querySelector('.spz-1004')){
                                 <div class="child">
                                     <div class="top-text">
                                         <div class="l-number">
-                                            330 M+
+                                        40%
                                         </div>
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                        More clinical encounters per patient
                                         </div>
                                     </div>
                                 </div>
@@ -192,13 +156,12 @@ if(!document.querySelector('.spz-1004')){
                                 <div class="child">
                                     <div class="top-text">
                                         <div class="l-number">
-                                            330 M+
+                                        15 M
                                         </div>
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                        Healthcare encounters every day
                                         </div>
                                     </div>
                                 </div>
@@ -207,13 +170,13 @@ if(!document.querySelector('.spz-1004')){
                                 <div class="child">
                                     <div class="top-text">
                                         <div class="l-number">
-                                            330 M+
+                                        6 yr
                                         </div>
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                        Average historical patient
+                                        journey data
                                         </div>
                                     </div>
                                 </div>
@@ -222,13 +185,85 @@ if(!document.querySelector('.spz-1004')){
                                 <div class="child">
                                     <div class="top-text">
                                         <div class="l-number">
-                                            330 M+
+                                        3.5 M+
                                         </div>
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                            Hospital chargemaster &
-                                            in-hospital sources
+                                        Providers across care settings
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                        450 K
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                        HCOS across the continuum of care
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                        100%
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                        Medicare data as a CMS
+                                         qualified entity
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                        15-20
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                        Years of publication
+                                         and clinical trial data
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                        11 B
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                        Lab records
+                                        </div>
+                                    </div>
+                                </div>
+                            </li>
+                            <li class="splide__slide">
+                                <div class="child">
+                                    <div class="top-text">
+                                        <div class="l-number">
+                                        1300
+                                        </div>
+                                    </div>
+                                    <div class="bottom-text">
+                                        <div class="card-text">
+                                        Hospital chargemaster &
+                                        in-hospital sources
                                         </div>
                                     </div>
                                 </div>
@@ -252,35 +287,24 @@ if(!document.querySelector('.spz-1004')){
     `);
     
     loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function(){
-      let updateHeight = () => {
-        let slide = splide.Components.Slides.getAt( typeof( newIndex ) == 'number' ? newIndex : splide.index ).slide;
-          slide.parentElement.parentElement.style.height = outerHeight(slide) + 76 + 'px';
-      };
       var splide = new Splide( '.spz-1004 .new-wrapper .section3 .slider-wrapper .splide1', {
         type   : 'loop',
         perPage: 3,
-        autoplay: true,
+        // autoplay: true,
         arrows: false,
         autoHeight: true,
-        pagination: true,
-  
+        pagination: false,
+        breakpoints: {
+          767: {
+            pagination: true,
+
+          }
+        }
       });
       setTimeout(function(){
         splide.mount()
-      
-        splide.on("move", function (e) {
-          updateHeight()
-          document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper').classList.remove("active1","active2","active3")
-          document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper').classList.add("active"+(parseInt(splide.index)+1))
-          
-        })
-        splide.on("resize", function (e) {
-          updateHeight()
-          
-        })
-        document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper').classList.add("active1")
-        updateHeight()
       },200)
+
       document.querySelector('.spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-left img').addEventListener("click",function(){
         splide.go( '<' );
       })
