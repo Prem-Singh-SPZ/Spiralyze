@@ -8,44 +8,9 @@ body.spz-6010 {
   overflow: hidden;
   opacity: 0;
   padding: 0;
+  display: none;
 }
-.spz-6010 .lock_hero {
-  width: 100%;
-  padding: 32px;
-  text-align: center;
-  border-top: 1px solid #FFFFFF33;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
-}
-.spz-6010.show_content .lock_hero {display: none;}
-.spz-6010 .lock_hero span {
-  display: inline-flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-  font-size: 18px;
-  font-weight: 600;
-  line-height: 24px;
-  letter-spacing: 0em;
-  text-align: center;
-  color: #FFF;
-  cursor: pointer;
-  transition: all 0.3s ease-in-out;
-}
-.spz-6010 .lock_hero span:hover {
-  color: #ff862a;
-}
-.spz-6010 .lock_hero span svg {
-  margin-left: 8px;
-}
-.spz-6010 .lock_hero span svg path {
-  transition: all 0.3s ease-in-out;
-}
-.spz-6010 .lock_hero span:hover svg path {
-  stroke: #ff862a;
-}
+
 .spz-6010 .header.has-promo-banner {
   top: 46px;
 }
@@ -742,10 +707,6 @@ body.spz-6010 {
   }
 }
 @media (max-width: 767.98px) {
-  .spz-6010 .lock_hero {
-    position: relative;
-    padding: 23px 24px 24px;
-  }
   .spz-6010 .js-hero-banner {
     padding: 48px 0 0 0;
   }
@@ -834,7 +795,169 @@ body.spz-6010 {
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
-}`;
+}
+/*--- Footer CSS Start Here ---*/
+.spz-6010 .spz-Nfooter {
+    color: var(--Surface-White, #FFF);
+    font-family: Graphik;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    max-width: 1296px;
+    margin: auto;
+}
+
+.spz-6010 .spz-Nfooter .p-nanchor a {
+    color: var(--Surface-White, #FFF);
+    text-decoration: none;
+}
+
+.spz-6010 .spz-Nfooter .socialicon-warp {
+    display: flex;
+}
+
+.spz-6010 .spz-Nfooter .nscos a:hover {
+    cursor: pointer;
+}
+
+.spz-6010 .spz-Nfooter .nscos a:hover img.social-icons__ficon--off,
+.spz-6010 .spz-Nfooter .nscos a:hover img.social-icons__licon--off,
+.spz-6010 .spz-Nfooter .nscos a:hover img.social-icons__ticon--off {
+    display: none;
+}
+
+.spz-6010 .spz-Nfooter .nscos .social-icons__ficon--on,
+.spz-6010 .spz-Nfooter .nscos .social-icons__licon--on,
+.spz-6010 .spz-Nfooter .nscos .social-icons__ticon--on {
+    display: none;
+}
+
+.spz-6010 .spz-Nfooter .nscos a:hover img.social-icons__ficon--on,
+.spz-6010 .spz-Nfooter .nscos a:hover img.social-icons__licon--on,
+.spz-6010 .spz-Nfooter .nscos a:hover img.social-icons__ticon--on {
+    display: block;
+}
+
+.spz-6010 .footer-Nlinks.tab-mob {
+    display: none;
+}
+
+.spz-6010 .nscos {
+    margin-right: 0px;
+    margin-left: 8px;
+}
+
+.spz-6010 .footer-Nlinks {
+    display: flex;
+    justify-content: space-between;
+}
+
+.spz-6010 .sec-policyinner {
+    display: flex
+}
+
+.spz-6010 .p-nanchor {
+    margin: auto 10px;
+}
+
+.spz-6010 .socialicon {
+    display: flex;
+}
+
+.spz-6010 .socialicon-inner {
+    display: flex;
+}
+
+.spz-6010 .nmobile img {
+    padding-right: 4px;
+}
+
+.spz-6010 .v3-footer {
+    padding: 17px 72px 15px 72px;
+    background: rgba(8, 26, 89, 0.60);
+    backdrop-filter: blur(6px);
+}
+
+.spz-6010 .nmobile {
+    margin-right: 25px;
+}
+
+@media (max-width: 1023.98px) {
+    .spz-6010 .footer-Nlinks.tab-mob {
+        display: block;
+    }
+
+    .spz-6010 .footer-Nlinks {
+        display: none;
+    }
+
+    .spz-6010 .footer-Nlinks .footer-container {
+        max-width: 704px;
+        margin-right: auto;
+        margin-left: auto;
+    }
+
+    .spz-6010 .socialicon {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 14px;
+    }
+
+    .spz-6010 .sec-policy {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .spz-6010 .copiright {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .spz-6010 .v3-footer {
+        padding: 17px 77px 15px 32px;
+
+    }
+
+    .spz-6010 .p-nanchor {
+        margin: auto 20px auto 0px;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .spz-6010 .header__container {
+        background: transparent;
+    }
+
+    .spz-6010 .sec-policyinner,
+    .spz-6010 .sec-policy {
+        display: block;
+    }
+
+    .spz-6010 .copiright {
+        display: grid;
+    }
+
+    .spz-6010 .ncopyright {
+        order: 2;
+    }
+
+    .spz-6010 .sec-policyinner {
+        display: block;
+    }
+
+    .spz-6010 .p-nanchor {
+        margin: auto 0px 12px 0px;
+    }
+
+    .spz-6010 .v3-footer {
+        padding: 19px 24px 15px 24px;
+        /* background: transparent; */
+    }
+}
+
+/*--- Footer CSS End Here ---*/`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
 head.appendChild(style);
@@ -882,23 +1005,33 @@ let bodyLoaded = setInterval(function () {
           setHiddenFields();
         });
 
-        // Lock Hero
-        document.querySelector('.spz-6010 .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="lock_hero">
-          <span>Learn More <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-              <path d="M6.5 9L12.5 15L18.5 9" stroke="white" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
-            </svg>
-          </span>
-        </div>`);
-        document.querySelector('.spz-6010 .lock_hero span').addEventListener('click', function() {
-          if (!document.body.classList.contains('show_content')) {
-            document.body.classList.add('show_content');
-            document.querySelector('.spz-6010.show_content > #components__content').scrollIntoView({
-              block: "start",
-              behavior: "smooth"
-            });
-          }
-        });
-        
+        // New Footer
+        document.querySelector('.spz-6010 .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="spz-Nfooter"><div class="footer-container">\
+        <div class="footer-Nlinks">\
+            <div class="ncopyright"> © 2024, All rights reserved.</div>\
+            <div class="sec-policy"><div class="sec-policyinner"><div class="p-nanchor"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></div>\
+            <div class="p-nanchor"><a href="https://www.netskope.com/vulnerability-disclosure-policy">Vulnerability Disclosure Policy</a></div>\
+            <div class="p-nanchor"><a href="https://www.netskope.com/terms-of-use">Terms of Use</a></div>\
+            <div class="p-nanchor"><a href="https://www.netskope.com/netskope-technical-support">Support</a></div></div></div>\
+            <div class="socialicon">\
+            <div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div>\
+            <div class="socialicon-warp"><div class="nscos"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"><img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/facebook.svg" class="no-lazyload social-icons__ficon--off" alt="facebook icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/facebook_1.svg" class="no-lazyload social-icons__ficon--on" alt="facebook icon"> </a></div><div class="nscos"><a href="https://twitter.com/share?text= Delivering on the Promise of 100% Legacy VPN Retirement @Netskope&amp;url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Fwhite-papers%2Fdelivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/twitter.svg" class="no-lazyload social-icons__ticon--off" alt="twitter icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/twitter_1.svg" class="no-lazyload social-icons__ticon--on" alt="twitter icon"> </a></div></div><div class="nscos"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/linkedin.svg" class="no-lazyload social-icons__licon--off" alt="linkedin icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/linkedin_1.svg" class="no-lazyload social-icons__licon--on" alt="linkedin icon"> </a></div>\
+                </div></div>\
+               <div class="footer-Nlinks tab-mob">\
+                <div class="socialicon">\
+                    <div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div>\
+                    <div class="socialicon-warp"><div class="nscos"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096753/netskope/8004/facebook.svg" class="no-lazyload social-icons__ficon--off" alt="facebook icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708369722/netskope/8004/Facebook-icon.svg" class="no-lazyload social-icons__ficon--on" alt="facebook icon"> </a></div>\
+                     <div class="nscos"><a href="https://twitter.com/share?text= Delivering on the Promise of 100% Legacy VPN Retirement @Netskope&amp;url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Fwhite-papers%2Fdelivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096754/netskope/8004/twitter.svg" class="no-lazyload social-icons__ticon--off" alt="twitter icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708370609/netskope/8004/Twitter-icon.svg" class="no-lazyload social-icons__ticon--on" alt="twitter icon"> </a></div>\
+                        <div class="nscos"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096753/netskope/8004/linkedin.svg" class="no-lazyload social-icons__licon--off" alt="linkedin icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708370608/netskope/8004/Linkedin-icon.svg" class="no-lazyload social-icons__licon--on" alt="linkedin icon"> </a></div>\
+                       </div></div>\
+                       <div class="copiright">\
+                <div class="sec-policy"><div class="sec-policyinner"><div class="p-nanchor"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></div>\
+                <div class="p-nanchor"><a href="https://www.netskope.com/vulnerability-disclosure-policy">Vulnerability Disclosure Policy</a></div>\
+                <div class="p-nanchor"><a href="https://www.netskope.com/terms-of-use">Terms of Use</a></div>\
+                <div class="p-nanchor"><a href="https://www.netskope.com/netskope-technical-support">Support</a></div></div>\
+                 <div class="ncopyright"> © 2024, All rights reserved.</div>\
+                </div>\
+                </div></div></div></div>`);  
 		  });
     }
   }
