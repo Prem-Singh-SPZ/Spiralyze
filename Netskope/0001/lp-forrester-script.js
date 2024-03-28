@@ -579,6 +579,7 @@ margin-bottom: 0;
     max-width: 325px;
     margin-top: 2px;
     margin-bottom: 32px;
+    position: relative;
   }
   .spz-0001 .landing-page-v3__form-container .landing-page-v3__form{
     margin-bottom: 8px;
@@ -707,7 +708,7 @@ let bodyLoaded = setInterval(function () {
         document.querySelector('.spz-0001 #wrapper .v3.landing-page-v3__container .landing-page-v3__form-container ').insertAdjacentHTML("afterbegin", `<div class="hero_left">
 			  <h2 class="form-content-heading">A Recognized Leader in <br>Security Service Edge</h2>
 			  `+ sub_heading + `
-				<img class="desk-only" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_desktop.webp" alt="A Recognized Leader in Security Service Edge">
+				<img class="desk-only" style="margin-bottom: 24px;" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0001/ui_desktop.webp" alt="A Recognized Leader in Security Service Edge">
 			  </div>`);
 
         document.querySelector('.spz-0001 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<div class="landing-page-v3__content">
