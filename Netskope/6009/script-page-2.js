@@ -189,17 +189,7 @@ body.spz-6009 {
 .spz-6009 .hero_left .hero-form-img {
   position: relative;
 }
-.spz-6009 .hero_left .hero-form-img::after {
-  position: absolute;
-  content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1710838436/netskope/6009/vector.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 169.636px;
-  height: 68.76px;
-  left: -108px;
-  top: 100px;
-}
+
 .spz-6009 .hero_left .hero-form-img img {
   width: 87.4%;
   max-width: 511px;
@@ -216,6 +206,7 @@ body.spz-6009 {
   width: 42.5%;
   max-width: 504px;
   margin: 0;
+  position: relative;
 }
 .spz-6009 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading,
 .spz-6009 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img {
@@ -437,6 +428,7 @@ body.spz-6009 {
 }
 .spz-6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
   padding: 0 0 0 24px !important;
+  width: fit-content !important;
 }
 .spz-6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
   opacity: 0 !important;
@@ -618,19 +610,21 @@ body.spz-6009 {
 .thanksmsg h2 {
   margin: 15px auto 5px;
 }
-@media(max-width: 1199.98px) and (min-width: 1024px) {
-  .spz-6009 .hero_left .hero-form-img::after {
-    /* background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1706516012/netskope/6003/arrow_desktop_1.svg); */
+.gated-content__right::before{
+    position: absolute;
+    content: "";
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1710838436/netskope/6009/vector.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 199px;
-    height: 65px;
-    /* right: -92px; */
-    top: 65px;
-    left: -80px;
-  }
+    width: 144px;
+    height: 72px;
+    right: -137px;
+    bottom: 351px;
 }
 @media (max-width: 1023.98px) {
+  .gated-content__right::before{
+    display: none;
+  }
   .spz-6009 .header.has-promo-banner {
     top: 0;
   }
@@ -803,9 +797,6 @@ body.spz-6009 {
   }
   .spz-6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
     margin-top: 6px !important;
-  }
-  .spz-6009 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
-    margin-top: 3px;
   }
   .spz-6009 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
     margin-top: 10px !important;
