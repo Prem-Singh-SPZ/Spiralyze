@@ -655,12 +655,12 @@ $font-family_4: Titillium Web, sans-serif;
       }
     }
     .section3 {
-      padding: 40px 0 39px 0;
+      padding: 40px 20px 39px;
       background: #000
         url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp")
         no-repeat;
       background-size: cover;
-      background-position: center center;
+      background-position: top left;
 
       .wrapper {
         max-width: 1330px;
@@ -668,7 +668,6 @@ $font-family_4: Titillium Web, sans-serif;
       }
       .slider-wrapper {
         position: relative;
-        overflow: hidden;
         .child {
           display: flex;
           align-items: center;
@@ -694,6 +693,7 @@ $font-family_4: Titillium Web, sans-serif;
               background: url(//res.cloudinary.com/spiralyze/image/upload/v1711606594/komodohealth/1004/line.svg)
                 no-repeat;
               background-size: contain;
+              background-position: center;
               top: 31px;
               position: relative;
             }
@@ -714,7 +714,7 @@ $font-family_4: Titillium Web, sans-serif;
           }
 
           .bottom-text {
-            padding: 20px 0 24px;
+            padding: 18px 0 24px;
             width: 100%;
             min-height: 96px;
             display: flex;
@@ -754,10 +754,15 @@ $font-family_4: Titillium Web, sans-serif;
             background: url(//res.cloudinary.com/spiralyze/image/upload/v1711612897/komodohealth/1004/vertical_line.svg)
               no-repeat;
             background-size: contain;
+            background-position: center;
             position: absolute;
             right: 0;
             top: 0;
             opacity: 1;
+
+            @media (max-width: 767.98px) {
+              display: none;
+            }
           }
 
           &.is-visible:not(.is-active):not(.is-next) {
@@ -784,28 +789,34 @@ $font-family_4: Titillium Web, sans-serif;
         }
         .arrow-left {
           position: absolute;
-          top: 51.5%;
-          left: 0px;
+          top: calc(50% + 20px);
+          left: -31px;
           transform: translateY(-50%);
           transition: 0.2s left;
           img {
             cursor: pointer;
             &:hover {
-              filter: brightness(30%);
+              filter: brightness(130%);
             }
+          }
+          @media (max-width: 767.98px) {
+            display: none;
           }
         }
         .arrow-right {
           position: absolute;
-          top: 51.5%;
-          right: 0px;
+          top: calc(50% + 20px);
+          right: -31px;
           transform: translateY(-50%);
           transition: 0.2s right;
           img {
             cursor: pointer;
             &:hover {
-              filter: brightness(30%);
+              filter: brightness(130%);
             }
+          }
+          @media (max-width: 767.98px) {
+            display: none;
           }
         }
         .splide__pagination {
@@ -965,12 +976,12 @@ $font-family_4: Titillium Web, sans-serif;
             padding: 0;
           }
           .arrow-right {
-            top: 51.3%;
-            // display: none;
+            top: calc(50% + 14px);
+            right: -27px;
           }
           .arrow-left {
-            top: 51.3%;
-            // display: none;
+            top: calc(50% + 14px);
+            left: -27px;
           }
           .splide__slide {
             .child {
@@ -1164,28 +1175,22 @@ $font-family_4: Titillium Web, sans-serif;
         }
       }
       .section3 {
-        .title {
-          font-size: 24px;
-          line-height: 32px;
-        }
-        padding: 33px 0 11px 0;
+        padding: 10px 0 23px 0;
         .slider-wrapper {
-          .child {
-            width: 100%;
-            max-width: 500px;
-            flex-direction: column;
-            padding: 0px;
-          }
-
           .splide__slide {
             margin-right: 80px;
             padding: 0 16px;
+            .child {
+              width: 100%;
+              padding: 0px;
+              max-width: 328px;
+            }
           }
           .splide__track {
             padding: 23px 0 40px 0;
           }
           .splide__pagination {
-            bottom: 18px;
+            bottom: 7px;
           }
         }
       }

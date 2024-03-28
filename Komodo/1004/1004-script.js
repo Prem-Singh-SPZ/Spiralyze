@@ -273,10 +273,10 @@ if(!document.querySelector('.spz-1004')){
                 </section>
                 <div class="arrow-left"><img
                         src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_left.svg"
-                        alt="Left Arrow" width="64" height="64" /></div>
+                        alt="Left Arrow" width="68" height="68" /></div>
                 <div class="arrow-right"><img
                         src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_right.svg"
-                        alt="Right Arrow" width="64" height="64" /></div>
+                        alt="Right Arrow" width="68" height="68" /></div>
             </div>
         </div>
     </div>
@@ -296,8 +296,9 @@ if(!document.querySelector('.spz-1004')){
         pagination: false,
         breakpoints: {
           767: {
+            perPage: 1,
             pagination: true,
-
+            arrows: false,
           }
         }
       });

@@ -614,10 +614,10 @@
   margin-bottom: 2px;
 }
 .spz-1004 .new-wrapper .section3 {
-  padding: 40px 0 39px 0;
+  padding: 40px 20px 39px;
   background: #000 url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp") no-repeat;
   background-size: cover;
-  background-position: center center;
+  background-position: top left;
 }
 .spz-1004 .new-wrapper .section3 .wrapper {
   max-width: 1330px;
@@ -625,7 +625,6 @@
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper {
   position: relative;
-  overflow: hidden;
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .child {
   display: -webkit-box;
@@ -656,6 +655,7 @@
   height: 1px;
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1711606594/komodohealth/1004/line.svg) no-repeat;
   background-size: contain;
+  background-position: center;
   top: 31px;
   position: relative;
 }
@@ -675,7 +675,7 @@
   }
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .child .bottom-text {
-  padding: 20px 0 24px;
+  padding: 18px 0 24px;
   width: 100%;
   min-height: 96px;
   display: -webkit-box;
@@ -719,10 +719,16 @@
   height: 100%;
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1711612897/komodohealth/1004/vertical_line.svg) no-repeat;
   background-size: contain;
+  background-position: center;
   position: absolute;
   right: 0;
   top: 0;
   opacity: 1;
+}
+@media (max-width: 767.98px) {
+  .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__slide::after {
+    display: none;
+  }
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__slide.is-visible:not(.is-active):not(.is-next)::after {
   opacity: 0;
@@ -751,8 +757,8 @@
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-left {
   position: absolute;
-  top: 51.5%;
-  left: 0px;
+  top: calc(50% + 20px);
+  left: -31px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: 0.2s left;
@@ -762,13 +768,18 @@
   cursor: pointer;
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-left img:hover {
-  -webkit-filter: brightness(30%);
-          filter: brightness(30%);
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+@media (max-width: 767.98px) {
+  .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-left {
+    display: none;
+  }
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-right {
   position: absolute;
-  top: 51.5%;
-  right: 0px;
+  top: calc(50% + 20px);
+  right: -31px;
   -webkit-transform: translateY(-50%);
           transform: translateY(-50%);
   -webkit-transition: 0.2s right;
@@ -778,8 +789,13 @@
   cursor: pointer;
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-right img:hover {
-  -webkit-filter: brightness(30%);
-          filter: brightness(30%);
+  -webkit-filter: brightness(130%);
+          filter: brightness(130%);
+}
+@media (max-width: 767.98px) {
+  .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-right {
+    display: none;
+  }
 }
 .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__pagination {
   bottom: -15px;
@@ -915,10 +931,12 @@
     padding: 0;
   }
   .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-right {
-    top: 51.3%;
+    top: calc(50% + 14px);
+    right: -27px;
   }
   .spz-1004 .new-wrapper .section3 .slider-wrapper .arrow-left {
-    top: 51.3%;
+    top: calc(50% + 14px);
+    left: -27px;
   }
   .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__slide .child {
     max-width: 180px;
@@ -1081,30 +1099,22 @@
             transform: none;
   }
   .spz-1004 .new-wrapper .section3 {
-    padding: 33px 0 11px 0;
-  }
-  .spz-1004 .new-wrapper .section3 .title {
-    font-size: 24px;
-    line-height: 32px;
-  }
-  .spz-1004 .new-wrapper .section3 .slider-wrapper .child {
-    width: 100%;
-    max-width: 500px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    padding: 0px;
+    padding: 10px 0 23px 0;
   }
   .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__slide {
     margin-right: 80px;
     padding: 0 16px;
   }
+  .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__slide .child {
+    width: 100%;
+    padding: 0px;
+    max-width: 328px;
+  }
   .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__track {
     padding: 23px 0 40px 0;
   }
   .spz-1004 .new-wrapper .section3 .slider-wrapper .splide__pagination {
-    bottom: 18px;
+    bottom: 7px;
   }
   .spz-1004 .new-wrapper .section4 {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/footer-background-mobile.jpg");
