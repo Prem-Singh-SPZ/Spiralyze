@@ -290,7 +290,7 @@ if(!document.querySelector('.spz-1004')){
       var splide = new Splide( '.spz-1004 .new-wrapper .section3 .slider-wrapper .splide1', {
         type   : 'loop',
         perPage: 3,
-        // autoplay: true,
+        autoplay: true,
         arrows: false,
         autoHeight: true,
         pagination: false,
