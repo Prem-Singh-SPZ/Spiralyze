@@ -674,7 +674,7 @@ $font-family_4: Titillium Web, sans-serif;
           justify-content: center;
           flex-direction: column;
           //   box-shadow: 0px 5px 40px 0px rgba(0, 9, 43, 0.13);
-          width: 280px;
+          max-width: 280px;
           position: relative;
           margin: 0 auto;
           //   max-width: 90%;
@@ -690,9 +690,13 @@ $font-family_4: Titillium Web, sans-serif;
               text-align: center;
               font-family: $font-family_1;
               font-size: 64px;
-              font-style: normal;
               font-weight: 400;
               line-height: 64px;
+              @media (max-width: 1023.98px) {
+                font-size: 48px;
+                font-weight: 400;
+                line-height: 48px;
+              }
             }
           }
 
@@ -703,6 +707,10 @@ $font-family_4: Titillium Web, sans-serif;
             display: flex;
             align-items: center;
             justify-content: center;
+            @media (max-width: 1023.98px) {
+              min-height: 92px;
+              align-items: flex-start;
+            }
 
             .card-text {
               color: #f0eeee;
@@ -712,6 +720,12 @@ $font-family_4: Titillium Web, sans-serif;
               font-style: normal;
               font-weight: 600;
               line-height: 26px;
+
+              @media (max-width: 1023.98px) {
+                font-size: 16px;
+                font-weight: 700;
+                line-height: 24px;
+              }
             }
           }
         }
@@ -725,6 +739,11 @@ $font-family_4: Titillium Web, sans-serif;
         .splide__track {
           padding: 40px 0;
           transition: height 0.2s;
+          max-width: 100%;
+          margin: 0 auto;
+          @media (max-width: 1200px) {
+            max-width: 88%;
+          }
         }
         .arrow-left {
           position: absolute;
@@ -834,7 +853,7 @@ $font-family_4: Titillium Web, sans-serif;
     }
   }
 }
-@media (max-width: 1024.98px) {
+@media (max-width: 1023.98px) {
   .spz-1004.run-var {
     .new-wrapper {
       .wrapper {
@@ -869,11 +888,11 @@ $font-family_4: Titillium Web, sans-serif;
           }
         }
       }
-      .section3 {
-        .wrapper {
-          padding: 0px;
-        }
-      }
+      //   .section3 {
+      //     .wrapper {
+      //       padding: 0px;
+      //     }
+      //   }
     }
   }
   .spz-1004 {
@@ -895,7 +914,8 @@ $font-family_4: Titillium Web, sans-serif;
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_4.webp");
       }
       .section3 {
-        padding: 40px 0 52px 0;
+        padding: 20px 0 15px 0;
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
         .slider-wrapper {
           .child {
             flex-direction: column;
@@ -904,16 +924,21 @@ $font-family_4: Titillium Web, sans-serif;
             width: 100%;
           }
 
+          .splide__track {
+            padding: 0;
+          }
           .arrow-right {
             top: 51.3%;
-            display: none;
+            // display: none;
           }
           .arrow-left {
             top: 51.3%;
-            display: none;
+            // display: none;
           }
           .splide__slide {
-            padding: 0 32px;
+            .child {
+              max-width: 180px;
+            }
           }
         }
       }
