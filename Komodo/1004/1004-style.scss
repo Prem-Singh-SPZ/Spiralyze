@@ -668,6 +668,7 @@ $font-family_4: Titillium Web, sans-serif;
       }
       .slider-wrapper {
         position: relative;
+        overflow: hidden;
         .child {
           display: flex;
           align-items: center;
@@ -683,7 +684,19 @@ $font-family_4: Titillium Web, sans-serif;
           .top-text {
             padding: 32px 0;
             width: 100%;
-            border-bottom: 1px solid #68cce8;
+            // border-bottom: 1px solid #68cce8;
+
+            &::after {
+              content: "";
+              display: block;
+              width: 100%;
+              height: 1px;
+              background: url(//res.cloudinary.com/spiralyze/image/upload/v1711606594/komodohealth/1004/line.svg)
+                no-repeat;
+              background-size: contain;
+              top: 31px;
+              position: relative;
+            }
 
             .l-number {
               color: $color_1;
@@ -732,6 +745,26 @@ $font-family_4: Titillium Web, sans-serif;
         .splide__slide {
           //   margin-right: 80px;
           //   padding: 0 75px;
+
+          &::after {
+            content: "";
+            display: block;
+            width: 1px;
+            height: 100%;
+            background: url(//res.cloudinary.com/spiralyze/image/upload/v1711612897/komodohealth/1004/vertical_line.svg)
+              no-repeat;
+            background-size: contain;
+            position: absolute;
+            right: 0;
+            top: 0;
+            opacity: 1;
+          }
+
+          &.is-visible:not(.is-active):not(.is-next) {
+            &::after {
+              opacity: 0;
+            }
+          }
         }
         .splide__list {
           align-items: flex-start;
@@ -743,6 +776,10 @@ $font-family_4: Titillium Web, sans-serif;
           margin: 0 auto;
           @media (max-width: 1200px) {
             max-width: 88%;
+          }
+
+          @media (max-width: 1023.98px) {
+            max-width: 638px;
           }
         }
         .arrow-left {
@@ -914,7 +951,7 @@ $font-family_4: Titillium Web, sans-serif;
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_4.webp");
       }
       .section3 {
-        padding: 20px 0 15px 0;
+        padding: 19px 0 15px 0;
         background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
         .slider-wrapper {
           .child {

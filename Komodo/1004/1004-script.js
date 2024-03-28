@@ -119,7 +119,7 @@ if(!document.querySelector('.spz-1004')){
                                     </div>
                                     <div class="bottom-text">
                                         <div class="card-text">
-                                        Healthcare encountersevery day
+                                        Healthcare encounters every day
                                         </div>
                                     </div>
                                 </div>
@@ -272,11 +272,11 @@ if(!document.querySelector('.spz-1004')){
                     </div>
                 </section>
                 <div class="arrow-left"><img
-                        src="//res.cloudinary.com/spiralyze/image/upload/v1702358601/KomodoHealth/1001/left-arrow-1.svg"
-                        alt="Left Arrow" width="48" height="48" /></div>
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_left.svg"
+                        alt="Left Arrow" width="64" height="64" /></div>
                 <div class="arrow-right"><img
-                        src="//res.cloudinary.com/spiralyze/image/upload/v1702358633/KomodoHealth/1001/right-arrow-1.svg"
-                        alt="Right Arrow" width="48" height="48" /></div>
+                        src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_right.svg"
+                        alt="Right Arrow" width="64" height="64" /></div>
             </div>
         </div>
     </div>
