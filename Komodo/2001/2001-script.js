@@ -94,11 +94,11 @@ ready(function () {
               for 330+ Million Patients</div>
               <div class="list">
                 <div class="child"> 
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-1.png" alt="Healthcare Map Icon" width="32" height="32"/>
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-1.png" alt="Healthcare Data Icon" width="32" height="32"/>
                   <div class="desc"><strong>Healthcare Data:</strong> View provider, treatment, labs results, hospital records, payers, ethnicity, and other clinical data. 15 million new encounters daily.</div>
                 </div>
                 <div class="child">
-                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-2.png" alt="Patient Journey Icon" width="32" height="32"/>
+                  <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-2.png" alt="Patient Cohorts Icon" width="32" height="32"/>
                   <div class="desc"><strong>Patient Cohorts:</strong> Create patient cohorts based on any criteria. Get alerts for new patient and provider opportunities. Engage via preferred channels.</div>
                 </div>
                 <div class="child">

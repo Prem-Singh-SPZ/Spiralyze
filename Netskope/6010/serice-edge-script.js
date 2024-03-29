@@ -804,10 +804,16 @@ body.spz-6010 {
     font-style: normal;
     font-weight: 400;
     line-height: 20px;
-    max-width: 1296px;
+    max-width: 1238px;
     margin: auto;
+    padding: 24px;
 }
 
+@media (max-width: 1260.98px){
+  .spz-6010 .spz-Nfooter {
+    padding-right: 70px;
+  }
+}
 .spz-6010 .spz-Nfooter .p-nanchor a {
     color: var(--Surface-White, #FFF);
     text-decoration: none;
@@ -846,6 +852,7 @@ body.spz-6010 {
 .spz-6010 .nscos {
     margin-right: 0px;
     margin-left: 8px;
+    margin-top: -2px;
 }
 
 .spz-6010 .footer-Nlinks {
@@ -884,6 +891,9 @@ body.spz-6010 {
 }
 
 @media (max-width: 1023.98px) {
+  .spz-6010 .spz-Nfooter{
+    padding: 24px 70px 16px 32px;
+  }
     .spz-6010 .footer-Nlinks.tab-mob {
         display: block;
     }
@@ -901,7 +911,7 @@ body.spz-6010 {
     .spz-6010 .socialicon {
         display: flex;
         justify-content: space-between;
-        margin-bottom: 14px;
+        margin-bottom: 16px;
     }
 
     .spz-6010 .sec-policy {
@@ -926,6 +936,9 @@ body.spz-6010 {
 }
 
 @media (max-width: 767.98px) {
+  .spz-6010 .spz-Nfooter {
+    padding: 26px 24px 16px 24px;
+   }
     .spz-6010 .header__container {
         background: transparent;
     }
