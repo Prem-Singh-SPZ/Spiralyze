@@ -37,6 +37,13 @@ body.spz-6010 {
 }
 .spz-6010:not(.show_content) .landing-page-v3__container {
   min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+.spz-6010:not(.show_content) .landing-page-v3__container > #components__content {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
 }
 .spz-6010 .landing-page-v3__container .landing-page-v3__container-inner {
   max-width: 1238px;
@@ -693,7 +700,8 @@ body.spz-6010 {
     font-weight: 400;
     line-height: 20px;
     max-width: 1238px;
-    margin: auto;
+    width: 100%;
+    margin: auto auto 0;
     padding: 24px;
 }
 

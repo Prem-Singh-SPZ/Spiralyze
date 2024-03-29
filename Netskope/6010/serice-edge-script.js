@@ -45,6 +45,8 @@ body.spz-6010 {
 }
 .spz-6010:not(.show_content) .js-hero-banner {
   min-height: calc(100vh - 46px);
+  display: flex;
+  flex-direction: column;
 }
 .spz-6010 .js-hero-banner .container {
   max-width: 1238px;
@@ -820,7 +822,8 @@ padding: 8px;
     font-weight: 400;
     line-height: 20px;
     max-width: 1238px;
-    margin: auto;
+    width: 100%;
+    margin: auto auto 0;
     padding: 24px;
 }
 
