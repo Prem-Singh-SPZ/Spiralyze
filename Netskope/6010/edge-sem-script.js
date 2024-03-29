@@ -276,6 +276,7 @@ body.spz-6010 {
   -webkit-box-shadow: none !important;
   box-shadow: none !important;
   outline: none !important;
+  -webkit-appearance: none;
 }
 .spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField:focus {
   border-color: #081a59 !important;
@@ -707,7 +708,7 @@ body.spz-6010 {
 
 @media (max-width: 1260.98px){
   .spz-6010 .spz-Nfooter {
-    padding-right: 70px;
+    padding-right: 74px;
   }
 }
 .spz-6010 .spz-Nfooter .p-nanchor a {
@@ -788,7 +789,7 @@ body.spz-6010 {
 
 @media (max-width: 1023.98px) {
   .spz-6010 .spz-Nfooter{
-    padding: 24px 70px 16px 32px;
+    padding: 24px 74px 16px 32px;
   }
     .spz-6010 .footer-Nlinks.tab-mob {
         display: block;
