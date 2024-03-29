@@ -53,7 +53,7 @@ body.spz-6010 {
   z-index: 99;
 }
 .spz-6010:not(.show_content) .js-hero-banner .container {
-  padding: 0 24px 137px;
+  padding: 0 24px 58px;
 }
 .spz-6010 .js-hero-banner::before {
   position: absolute;
@@ -164,8 +164,8 @@ body.spz-6010 {
   background-repeat: no-repeat;
   width: 229px;
   height: 85px;
-  right: -88px;
-  top: 95px;
+  right: -80px;
+  top: 97px;
 }
 .spz-6010 .hero_left .hero-form-img img {
   width: 87.4%;
@@ -204,7 +204,7 @@ body.spz-6010 {
   margin-bottom: 24px;
 }
 .spz-6010 .js-hero-banner .gated-content__right .rte {
-  margin-bottom: 32px;
+  margin-bottom: 40px;
 }
 .spz-6010 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-6010 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
   display: none;
@@ -229,6 +229,9 @@ body.spz-6010 {
 .spz-6010 .js-hero-banner .gated-content__right .rte ul li {
   margin: 0;
 }
+.spz-6010 .js-hero-banner .gated-content__right .gated-content__content {
+  max-width: 420px;
+}
 .spz-6010 .js-hero-banner .gated-content__right .gated-content__content .gated-content__label {
   font-family: Graphik;
   font-size: 18px;
@@ -248,6 +251,9 @@ body.spz-6010 {
   line-height: 24px;
   letter-spacing: 0em;
   padding: 3px 15px;
+}
+.spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{
+padding: 8px;
 }
 .spz-6010 .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags ~ * {
   display: none;
@@ -396,6 +402,7 @@ body.spz-6010 {
 }
 .spz-6010 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
   padding: 0 0 0 24px !important;
+  width: fit-content !important;
 }
 .spz-6010 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
   opacity: 0 !important;
@@ -499,6 +506,7 @@ body.spz-6010 {
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
+  font-family: Graphik !important;
 }
 .spz-6010 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .spz-6010 .js-hero-banner .gated-content__right form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -605,7 +613,7 @@ body.spz-6010 {
     padding-bottom: 0;
   }
   .spz-6010:not(.show_content) .js-hero-banner .container {
-    padding-bottom: 89px;
+    padding-bottom: 10px;
   }
   .spz-6010 .js-hero-banner::before {
     width: 1440px;
@@ -641,13 +649,13 @@ body.spz-6010 {
   .spz-6010 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img::after {
     position: absolute;
     content: "";
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1706515985/netskope/6003/arrow_tablet_1.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1710921640/netskope/6010/arrow_tablet.svg");
     background-size: contain;
     background-repeat: no-repeat;
-    width: 173px;
-    height: 167px;
-    top: 3px;
-    left: 341px;
+    width: 199px;
+    height: 176px;
+    top: 18px;
+    left: 365px;
   }
   .spz-6010 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img img {
     width: 100%;
@@ -657,6 +665,12 @@ body.spz-6010 {
   .spz-6010 .js-hero-banner .gated-content__right .rte img,
   .spz-6010 .js-hero-banner .gated-content__right .rte br {
     display: none;
+  }
+  .spz-6010 .js-hero-banner .gated-content__right .rte{
+    margin-bottom: 12px;
+  }
+  .spz-6010 .js-hero-banner .gated-content__right .gated-content__content{
+    max-width: 100%;
   }
   .spz-6010 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-6010 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
     display: block;
@@ -695,6 +709,9 @@ body.spz-6010 {
   .spz-6010 .header.has-promo-banner .header__container-inner {
     max-width: 548px;
   }
+  .spz-6010 .js-hero-banner .gated-content__container .gated-content__right {
+    margin: 28px 0 23px;
+  }
 }
 @media (min-width: 3500px) {
   .spz-6010 .js-hero-banner::before {
@@ -718,8 +735,8 @@ body.spz-6010 {
     top: 0;
   }
   .spz-6010 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
-    font-size: 40px;
-    line-height: 48px;
+    font-size: 32px;
+    line-height: 40px;
     padding: 0 24px;
     margin-bottom: 24px;
   }
@@ -751,16 +768,13 @@ body.spz-6010 {
   .spz-6010 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
     margin-top: 6px !important;
   }
-  .spz-6010 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
-    margin-top: 3px;
-  }
   .spz-6010 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
     margin-top: 10px !important;
   }
   .spz-6010 .js-hero-banner .gated-content__right .rte {
     max-width: unset;
     padding: 0 24px;
-    margin: 32px 0 31px;
+    margin: 24px 0 8px;
   }
   .spz-6010 .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img {
     display: block;
@@ -775,7 +789,7 @@ body.spz-6010 {
     max-width: 100%;
   }
   .spz-6010 .js-hero-banner .gated-content__right .rte p {
-    margin-bottom: 16px;
+    margin-bottom: 12px;
   }
   .spz-6010 .js-hero-banner .gated-content__right .rte ul {
     margin-top: -4px;
@@ -787,7 +801,7 @@ body.spz-6010 {
     margin: 0 -4px;
   }
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
-    margin: 8px 4px;
+    margin: 8px 13px 8px 4px;
   }
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(01) {order: 1}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(02) {order: 3}
@@ -795,6 +809,7 @@ body.spz-6010 {
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
+  .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{order:7;padding:8px 3px;}
 }
 /*--- Footer CSS Start Here ---*/
 .spz-6010 .spz-Nfooter {
