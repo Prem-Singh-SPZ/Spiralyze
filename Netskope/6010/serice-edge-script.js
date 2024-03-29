@@ -709,16 +709,16 @@ padding: 8px;
   .spz-6010 .header.has-promo-banner .header__container {
     padding: 18px 0;
   }
-  .spz-6010 .header.has-promo-banner .header__container-inner {
-    max-width: 548px;
-  }
+  // .spz-6010 .header.has-promo-banner .header__container-inner {
+  //   max-width: 548px;
+  // }
   .spz-6010 .js-hero-banner .gated-content__container .gated-content__right {
     margin: 28px 0 23px;
   }
 }
 @media (min-width: 3500px) {
   .spz-6010 .js-hero-banner::before {
-    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
   }
 }
 @media (max-width: 1199.98px) {

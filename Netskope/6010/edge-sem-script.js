@@ -633,7 +633,7 @@ body.spz-6010 {
 }
 @media (min-width: 3500px) {
   .spz-6010 .landing-page-v3__container::before {
-    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
   }
 }
 @media (max-width: 1199.98px) {
