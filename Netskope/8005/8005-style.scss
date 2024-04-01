@@ -390,14 +390,41 @@ $font-family_1: "Graphik", sans-serif;
                 border-radius: 16px;
                 border: 1px solid rgba(255, 255, 255, 0.2);
 
-                .header__mobile-nav{
+                .header__mobile-nav {
                   padding: 0;
-                 
-                  .header__mobile-nav-list{
+
+                  .header__mobile-nav-list {
                     padding: 0;
+
+                    .header__mobile-nav-item {
+                      .header__mobile-nav-item-link {
+                        color: #fff;
+                        font-family: $font-family_1;
+                        font-size: 18px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        text-decoration-line: underline;
+                        text-underline-offset: 3px;
+
+                        img{
+                          right: 0;
+                        }
+
+                        &:hover{
+                          font-weight: 600;
+                          text-decoration: none;
+                        }
+                      }
+                      &:last-child {
+                        .header__mobile-nav-item-link {
+                          border: 0;
+                        }
+                      }
+                    }
                   }
-  
-                  .header__mobile-nav-footer{
+
+                  .header__mobile-nav-footer {
                     display: none;
                   }
                 }
