@@ -51,8 +51,83 @@ $font-family_1: "Graphik", sans-serif;
         .gated-content__left {
           background: #081a59;
           max-width: 840px;
-          padding: 44px 40px 40px;
           z-index: 1;
+          position: relative;
+          overflow: hidden;
+
+          &::before {
+            content: "";
+            position: absolute;
+            left: 137px;
+            top: -507px;
+            width: 977.752px;
+            height: 823px;
+            background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708099430/netskope/8005/pattern_background.svg);
+            background-size: cover;
+            background-position: center;
+            background-repeat: no-repeat;
+          }
+
+          .gated-content__banner {
+            flex-direction: column;
+            padding: 44px 40px 0;
+
+            .gated-content__info {
+              .gated-content__type {
+                display: none;
+              }
+
+              .page-intro__resource-title {
+                color: #fff;
+                font-family: $font-family_1;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 40px;
+              }
+            }
+
+            .gated-content__thumbnail {
+              margin: 16px auto;
+              background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708099561/netskope/8005/ui_desktop_tablet.webp) !important;
+              height: 352px;
+              width: 100%;
+            }
+          }
+
+          .rte {
+            padding: 0 40px;
+          }
+
+          .gated-content__content {
+            padding: 0 40px 40px;
+
+            .gated-content__social,
+            :nth-child(6) {
+              display: none;
+            }
+          }
+
+          .related-resources-cards {
+            padding: 48px 40px;
+
+            .filters__content {
+              padding: 0;
+
+              .filters__wrapper {
+                min-height: auto;
+                .card {
+                  border-radius: 16px;
+                  background: radial-gradient(
+                    156.62% 315.48% at 233.88% 259.06%,
+                    #00a9ce 0%,
+                    #fff 100%
+                  );
+                  border: 0;
+                }
+              }
+            }
+          }
         }
 
         //Left form section

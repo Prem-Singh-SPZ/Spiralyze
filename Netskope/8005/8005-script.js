@@ -36,7 +36,8 @@ let bodyLoaded = setInterval(function () {
                 document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .gated-content__banner'));
                 document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('beforeend', document.querySelector('#components__content .related-resources-cards'));
 
-                //Content update
+                //Footer addition
+                document.querySelector('.gated-content__container .gated-content__left').insertAdjacentHTML('beforeend',`<div class="spz-footer-section"><div class="footer-container"><div class="u-footer"></div><div class="l-footer"></div></div></div>`);
             });
         }
 
