@@ -7,7 +7,8 @@
   display: none !important;
 }
 .spz-8005 .header__top-menu .header__mobile-toggle,
-.spz-8005 .header__top-menu .header__top-menu-link--search-mobile, .spz-8005 .header__top-menu .header__top-menu-link-language {
+.spz-8005 .header__top-menu .header__top-menu-link--search-mobile,
+.spz-8005 .header__top-menu .header__top-menu-link-language {
   display: block !important;
 }
 .spz-8005 .js-hero-banner {
@@ -275,6 +276,11 @@
   overflow: hidden;
   white-space: nowrap;
 }
+@media screen and (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item .breadcrumbs__item-link {
+    color: #fff;
+  }
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form {
   width: 100%;
   padding: 24px 40px 40px;
@@ -303,6 +309,11 @@
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form form.mktoForm {
+    padding: 0 !important;
+  }
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form form.mktoForm .mktoFormRow {
   display: -webkit-inline-box !important;

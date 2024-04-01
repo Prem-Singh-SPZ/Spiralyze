@@ -16,7 +16,8 @@ $font-family_1: "Graphik", sans-serif;
 
   .header__top-menu {
     .header__mobile-toggle,
-    .header__top-menu-link--search-mobile, .header__top-menu-link-language {
+    .header__top-menu-link--search-mobile,
+    .header__top-menu-link-language {
       display: block !important;
     }
   }
@@ -68,7 +69,7 @@ $font-family_1: "Graphik", sans-serif;
           @media (max-width: 1199.98px) {
             margin: 0;
           }
-          
+
           @media (max-width: 1023.98px) {
             max-width: 100%;
           }
@@ -272,6 +273,10 @@ $font-family_1: "Graphik", sans-serif;
                     text-overflow: ellipsis;
                     overflow: hidden;
                     white-space: nowrap;
+
+                    @media screen and (max-width: 1023.98px) {
+                      color: #fff;
+                    }
                   }
                 }
               }
@@ -304,6 +309,10 @@ $font-family_1: "Graphik", sans-serif;
               flex-wrap: wrap;
               justify-content: space-between;
               // padding: 0px 32px 32px !important;
+
+              @media (max-width: 1023.98px) {
+                padding: 0 !important;
+              }
 
               .mktoFormRow {
                 .mktoFieldWrap {
