@@ -217,7 +217,7 @@ $font-family_1: "Graphik", sans-serif;
 
                       .card__content__link {
                         flex-direction: row-reverse;
-                        // right: 21px;
+                        right: 40px;
 
                         img {
                           margin: 0;
@@ -226,7 +226,7 @@ $font-family_1: "Graphik", sans-serif;
                         }
                         .card__content__link-text {
                           display: block;
-                          margin-right: 16px;
+                          margin-right: 13px;
                         }
                       }
                     }
@@ -239,7 +239,7 @@ $font-family_1: "Graphik", sans-serif;
           .spz-footer-section {
             border-top: 1px solid rgba(255, 255, 255, 0.1);
             backdrop-filter: blur(6px);
-            padding: 32px 40px;
+            padding: 31px 40px;
             margin-top: auto;
 
             .u-footer {
@@ -259,6 +259,10 @@ $font-family_1: "Graphik", sans-serif;
               .social-icons {
                 display: flex;
                 align-items: center;
+
+                .social-icon {
+                  margin-left: 12px;
+                }
               }
             }
 
@@ -266,7 +270,7 @@ $font-family_1: "Graphik", sans-serif;
               display: flex;
               align-items: center;
               justify-content: space-between;
-              margin-top: 16px;
+              margin-top: 13px;
 
               .navbar-nav {
                 display: flex;
@@ -375,6 +379,28 @@ $font-family_1: "Graphik", sans-serif;
               .header_mobile__navbar-toggler {
                 width: 24px;
                 height: 32px;
+              }
+            }
+
+            .header__container-inner {
+              .header__mobile-nav-container {
+                right: 32px;
+                width: 372px;
+                padding: 8px 28px;
+                border-radius: 16px;
+                border: 1px solid rgba(255, 255, 255, 0.2);
+
+                .header__mobile-nav{
+                  padding: 0;
+                 
+                  .header__mobile-nav-list{
+                    padding: 0;
+                  }
+  
+                  .header__mobile-nav-footer{
+                    display: none;
+                  }
+                }
               }
             }
           }
