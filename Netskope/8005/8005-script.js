@@ -30,11 +30,13 @@ let bodyLoaded = setInterval(function () {
                     }
                 }
 
-                // Right section
+                // Right section content relocation
                 document.querySelector('.gated-content__container .gated-content__right').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .breadcrumbs'));
                 document.querySelector('.gated-content__container .gated-content__right').insertAdjacentElement('afterbegin', document.querySelector('#wrapper .header.has-promo-banner'));
                 document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .gated-content__banner'));
                 document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('beforeend', document.querySelector('#components__content .related-resources-cards'));
+
+                //Content update
             });
         }
 
