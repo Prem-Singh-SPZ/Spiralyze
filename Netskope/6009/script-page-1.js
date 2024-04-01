@@ -309,16 +309,35 @@ body.spz-6009 {
   border-color: #081a59 !important;
 }
 .spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField {
-  background-position: right 19px center !important;
   padding-right: 36px !important;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg") !important;
-  background-color: #FFF !important;
-  background-size: 16px !important;
-  background-repeat: no-repeat !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  background: none !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
 }
+.spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFormCol.select-wrap .mktoFieldWrap select option {
+  background: #fff !important;
+  color: inherit;
+  border-bottom: inherit;
+  padding: inherit;
+}
+.spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFormCol.select-wrap .mktoFieldWrap:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 19px;
+  top: 18px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/netskope/1001/Chevron.svg") !important;
+}
+.spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFormCol.select-wrap .mktoFieldWrap.typing:before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/netskope/1001/Chevron_inverted.svg") !important;
+}
+
 .spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField option {
   background: inherit;
   color: inherit;
@@ -364,9 +383,6 @@ body.spz-6009 {
   font-size: 12px !important;
   line-height: 20px !important;
   color: #7e8bba !important;
-}
-.spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.typing select.mktoField {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg") !important;
 }
 .spz-6009 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox {
   margin: -4px 0 8px 0;
@@ -849,6 +865,9 @@ function formModify() {
   document.querySelector('#LblPhone').textContent = "Phone";
   document.querySelector('#Country option:first-child').textContent = "";
   document.querySelector('#LblCountry').textContent = "Country";
+
+  document.querySelector('#Country').closest('.mktoFormCol').classList.add('select-wrap');
+
 
   // Change Field Position
   var email_field = document.querySelector('.spz-6009 .landing-page-v3__form .mktoForm .mktoFormRow.field-3');
