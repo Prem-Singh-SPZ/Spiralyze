@@ -7,7 +7,7 @@
   display: none !important;
 }
 .spz-8005 .header__top-menu .header__mobile-toggle,
-.spz-8005 .header__top-menu .header__top-menu-link--search-mobile {
+.spz-8005 .header__top-menu .header__top-menu-link--search-mobile, .spz-8005 .header__top-menu .header__top-menu-link-language {
   display: block !important;
 }
 .spz-8005 .js-hero-banner {
@@ -32,6 +32,14 @@
       -ms-flex-pack: center;
           justify-content: center;
 }
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+  }
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container::before {
   content: "";
   position: absolute;
@@ -41,12 +49,34 @@
   height: 100%;
   background: #081a59;
 }
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container::before {
+    display: none;
+  }
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left {
   background: #081a59;
   max-width: 840px;
   z-index: 1;
   position: relative;
   overflow: hidden;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+@media (max-width: 1199.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left {
+    margin: 0;
+  }
+}
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left {
+    max-width: 100%;
+  }
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left::before {
   content: "";
@@ -108,10 +138,106 @@
   background: radial-gradient(156.62% 315.48% at 233.88% 259.06%, #00a9ce 0%, #fff 100%);
   border: 0;
 }
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section {
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-backdrop-filter: blur(6px);
+          backdrop-filter: blur(6px);
+  padding: 32px 40px;
+  margin-top: auto;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .u-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .u-footer .nmobile {
+  color: #fff;
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .u-footer .social-icons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 16px;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 1360.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav li.menu-item {
+  margin-right: 28px;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav li.menu-item:last-child {
+  margin-right: 0;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav li.menu-item a {
+  color: #fff;
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .v3-footer__date {
+  color: #fff;
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  white-space: nowrap;
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right {
   position: relative;
   max-width: 600px;
   margin-left: initial;
+  width: 45%;
+}
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right {
+    max-width: 100%;
+    width: 100%;
+    background: #081a59;
+  }
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner {
   position: relative;
@@ -152,6 +278,12 @@
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form {
   width: 100%;
   padding: 24px 40px 40px;
+}
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form {
+    max-width: 704px;
+    width: 100%;
+  }
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form .frm-logo .form_title {
   color: #081a59;
@@ -455,6 +587,7 @@
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
+  font-family: "Graphik", sans-serif !important;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form form.mktoForm .mktoButtonWrap .mktoButton:hover {
   background: #fff !important;
