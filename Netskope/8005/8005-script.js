@@ -7,22 +7,11 @@ let bodyLoaded = setInterval(function () {
             body.classList.add('spz-8005');
 
             waitForElm('.spz-8005 .gated-content__top .gated-content__banner').then(function () {
-                waitForElm('.spz-8005 .gated-content__content').then(function () { handFields(); });
-                waitForElm('.spz-8005 .gated-content__form').then(function () {
-                    sucessFields();
-                });
+
                 //Form internal code
                 waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
                     formModify();
                     setHiddenFields();
-                });
-                /*Right section */
-                var heading = document.querySelector(".spz-8005 .gated-content__banner .page-intro__resource-title").textContent; document.querySelector('.spz-8005 .gated-content__container .gated-content__left').insertAdjacentHTML("afterbegin", `<div id="ninnerwrapper"><h2 class="form-content-heading">` + heading + `</h2></div>`);
-                document.querySelectorAll('.spz-8005 .gated-content__container .rte').forEach((item) => {
-                    document.querySelector('.form-content-heading').insertAdjacentElement('afterend', item);
-                });
-                document.querySelectorAll('.spz-8005 .gated-content__container .gated-content__content').forEach((item) => {
-                    document.querySelector('.rte').insertAdjacentElement('afterend', item);
                 });
 
                 /*Truecontrolclass*/
@@ -40,39 +29,18 @@ let bodyLoaded = setInterval(function () {
                         body.classList.add(BodyClasses[key]);
                     }
                 }
-                var BodysClasses = {
-                    "why-you-should-and-how-you-can-move-away-from-existing-dlp-programs": "spz-disp",
-                };
-                var currentsUrl = window.location.href;
-                for (var key in BodysClasses) {
-                    if (currentsUrl.includes(key)) {
-                        body.classList.add(BodysClasses[key]);
-                    }
-                }
 
+                // Right section
+                document.querySelector('.gated-content__container .gated-content__right').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .breadcrumbs'));
+                document.querySelector('.gated-content__container .gated-content__right').insertAdjacentElement('afterbegin', document.querySelector('#wrapper .header.has-promo-banner'));
+                document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .gated-content__banner'));
+                document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('beforeend', document.querySelector('#components__content .related-resources-cards'));
             });
         }
 
     }
 });
 
-function sucessFields() {
-    /*sucess setcion*/
-    document.querySelectorAll('.spz-8005 .gated-content__content .gated-content__action').forEach((item) => {
-        document.querySelector('.spz-8005 .gated-content__form').insertAdjacentElement('beforeend', item);
-    });
-}
-function handFields() {
-    /*tag setcion*/
-    list = document.querySelectorAll(".gated-content__content .gated-content__label");
-    for (var i = 0; i < list.length; ++i) {
-        list[i].classList.add("holder" + (i + 1));
-    }
-    list = document.querySelectorAll(".gated-content__content .gated-content__tags");
-    for (var i = 0; i < list.length; ++i) {
-        list[i].classList.add("holder" + (i + 4));
-    }
-}
 // Generic Code
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
@@ -116,7 +84,7 @@ function formModify() {
 
     waitForElm('#mktoForm_8949').then(function () {
         if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-            formDiv.insertAdjacentHTML('beforebegin', `<div class="frm-logo">\n<div class="frm-logoimgt"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1707850827/netskope/8004/Netskope-Logo.svg" alt="Netskope Logo"></div>\n<h2 class="form_title">Download ` + processedText + `</h2></div>`);
+            formDiv.insertAdjacentHTML('beforebegin', `<div class="frm-logo"><h2 class="form_title">Download ` + processedText + `</h2></div>`);
         }
         // form CTA Update
         var form_button = setInterval(() => {

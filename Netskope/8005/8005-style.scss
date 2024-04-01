@@ -5,326 +5,377 @@ $color_4: #ff5b28;
 $font-family_1: "Graphik";
 
 .spz-8005 {
-  .gated-content__right {
-    .gated-content__form {
-      form.mktoForm {
-        .mktoFormRow {
-          .mktoFieldWrap {
-            input {
-              &:-webkit-autofill {
-                -webkit-box-shadow: 0 0 0 56px #fff inset !important;
-                background-color: #ffffff !important;
-                &:hover {
-                  -webkit-box-shadow: 0 0 0 56px #fff inset !important;
-                  background-color: #ffffff !important;
-                }
-                &:focus {
-                  -webkit-box-shadow: 0 0 0 56px #fff inset !important;
-                  background-color: #ffffff !important;
-                }
-                &:active {
-                  -webkit-box-shadow: 0 0 0 56px #fff inset !important;
-                  background-color: #ffffff !important;
-                }
-              }
-            }
-            .mktoField {
-              &:-webkit-autofill {
-                -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
-                -webkit-text-fill-color: #081a59 !important;
-                color: $color_1 !important;
-              }
-              font-family: $font-family_1 !important;
-              height: 56px !important;
-              padding: 24px 15px 8px !important;
-              border-radius: 24px !important;
-              border: 1px solid rgba(8, 26, 89, 0.2) !important;
-              background: #fff !important;
-              color: $color_1 !important;
-              font-size: 16px !important;
-              font-style: normal;
-              font-weight: 400 !important;
-              line-height: 24px !important;
-              -webkit-box-shadow: none !important;
-              box-shadow: none !important;
-              outline: none !important;
-              caret-color: #00a9ce !important;
-              &:focus {
-                border-color: #081a59 !important;
-              }
-            }
+  #menu-main-menu-v3,
+  .homepage .header__top-menu-link--support,
+  .header__get-started,
+  footer.netskope-footer,
+  .header__popup,
+  .header__top-menu-link--search {
+    display: none !important;
+  }
+
+  .header__top-menu {
+    .header__mobile-toggle,
+    .header__top-menu-link--search-mobile {
+      display: block !important;
+    }
+  }
+
+  .js-hero-banner {
+    background: transparent !important;
+    padding: 0;
+
+    > .container {
+      max-width: 100%;
+      padding: 0;
+      .gated-content__top {
+        display: none;
+      }
+      .gated-content__container {
+        flex-direction: row-reverse;
+        .gated-content__left {
+          background: #081a59;
+          max-width: 840px;
+          padding: 44px 40px 40px;
+        }
+        .gated-content__right {
+          position: relative;
+          max-width: 600px;
+
+          .header__search-container-mobile {
+            max-width: 280px;
+            left: 53%;
+          }
+
+          .header__top.has-promo-banner {
+            visibility: visible !important;
+          }
+          .header.has-promo-banner {
             position: relative;
-            margin-bottom: 16px;
-            &:not(.single_checkbox) {
-              label.mktoLabel {
-                position: absolute !important;
-                top: 16px;
-                left: 16px;
-                color: $color_2 !important;
-                font-size: 16px !important;
-                font-style: normal;
-                font-weight: 400 !important;
-                line-height: 24px !important;
-                width: auto !important;
-                height: auto;
-                pointer-events: none;
-                -webkit-transition: all 0.3s ease-in-out;
-                -o-transition: all 0.3s ease-in-out;
-                transition: all 0.3s ease-in-out;
-                font-family: $font-family_1 !important;
-              }
-              &:hover {
-                label.mktoLabel {
-                  color: $color_1 !important;
-                }
-              }
-            }
-            select.mktoField {
-              background-position: right 19px center !important;
-              padding-right: 36px !important;
-              background-size: 16px !important;
-              background-repeat: no-repeat !important;
-              white-space: nowrap;
-              overflow: hidden;
-              -o-text-overflow: ellipsis;
-              text-overflow: ellipsis;
-              option {
-                background: inherit;
-                color: $color_3;
-                border-bottom: inherit;
-                padding: inherit;
-              }
-            }
-            .mktoField.mktoInvalid {
-              border-color: #ff5b28 !important;
-            }
-            .mktoError {
-              top: initial;
-              bottom: initial !important;
-              left: initial !important;
-              right: initial !important;
-              display: inline-block;
-              margin: 0;
-              .mktoErrorArrowWrap {
-                display: none !important;
-              }
-              .mktoErrorMsg {
-                margin: 2px 0 0 10px;
-                padding: 0;
-                color: $color_4;
-                font-size: 12px;
-                font-weight: 400;
-                line-height: 20px;
-                letter-spacing: 0em;
-                display: inline-block;
-                bottom: 0;
-              }
-            }
+            top: 0;
           }
-          display: -webkit-inline-box !important;
-          display: -ms-inline-flexbox !important;
-          display: inline-flex !important;
-          margin: 0;
-          width: calc(50% - 6px) !important;
-          .mktoFormCol {
-            width: 100% !important;
-            padding: 0 !important;
-            margin: 0 !important;
-          }
-          .mktoFieldWrap.active.typing {
-            &:not(.single_checkbox) {
-              label.mktoLabel {
-                top: 6px;
-                font-size: 12px !important;
-                line-height: 20px !important;
-                color: $color_2 !important;
-              }
-            }
-            .mktoField {
-              border-color: #081a59 !important;
-            }
-          }
-          .mktoFieldWrap.filled {
-            &:not(.single_checkbox) {
-              label.mktoLabel {
-                top: 6px;
-                font-size: 12px !important;
-                line-height: 20px !important;
-                color: $color_2 !important;
-              }
-            }
-          }
-          .mktoFieldWrap.single_checkbox {
-            margin: -4px 0 8px 0;
-            .mktoLabel {
-              padding: 0 0 0 24px !important;
-              &::after {
-                opacity: 0 !important;
-              }
-              &::before {
-                width: 16px !important;
-                height: 16px !important;
-                border: 1px solid #ff8200 !important;
-                border-radius: 4px !important;
-                background: #fff !important;
-                top: 2px !important;
-              }
-              p.p11 {
-                width: 100%;
-                font-family: $font-family_1 !important;
-              }
-              p {
-                a {
-                  text-decoration: underline !important;
-                  color: $color_1 !important;
-                  font-size: 12px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 20px;
-                  text-decoration-skip-ink: none;
-                  &:hover {
-                    text-decoration: underline !important;
-                    text-decoration-skip-ink: none;
+          .gated-content__form {
+            form.mktoForm {
+              .mktoFormRow {
+                .mktoFieldWrap {
+                  input {
+                    &:-webkit-autofill {
+                      -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+                      background-color: #ffffff !important;
+                      &:hover {
+                        -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+                        background-color: #ffffff !important;
+                      }
+                      &:focus {
+                        -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+                        background-color: #ffffff !important;
+                      }
+                      &:active {
+                        -webkit-box-shadow: 0 0 0 56px #fff inset !important;
+                        background-color: #ffffff !important;
+                      }
+                    }
+                  }
+                  .mktoField {
+                    &:-webkit-autofill {
+                      -webkit-box-shadow: 0 0 0 30px #ffffff inset !important;
+                      -webkit-text-fill-color: #081a59 !important;
+                      color: $color_1 !important;
+                    }
+                    font-family: $font-family_1 !important;
+                    height: 56px !important;
+                    padding: 24px 15px 8px !important;
+                    border-radius: 24px !important;
+                    border: 1px solid rgba(8, 26, 89, 0.2) !important;
+                    background: #fff !important;
+                    color: $color_1 !important;
+                    font-size: 16px !important;
+                    font-style: normal;
+                    font-weight: 400 !important;
+                    line-height: 24px !important;
+                    -webkit-box-shadow: none !important;
+                    box-shadow: none !important;
+                    outline: none !important;
+                    caret-color: #00a9ce !important;
+                    &:focus {
+                      border-color: #081a59 !important;
+                    }
+                  }
+                  position: relative;
+                  margin-bottom: 16px;
+                  &:not(.single_checkbox) {
+                    label.mktoLabel {
+                      position: absolute !important;
+                      top: 16px;
+                      left: 16px;
+                      color: $color_2 !important;
+                      font-size: 16px !important;
+                      font-style: normal;
+                      font-weight: 400 !important;
+                      line-height: 24px !important;
+                      width: auto !important;
+                      height: auto;
+                      pointer-events: none;
+                      -webkit-transition: all 0.3s ease-in-out;
+                      -o-transition: all 0.3s ease-in-out;
+                      transition: all 0.3s ease-in-out;
+                      font-family: $font-family_1 !important;
+                    }
+                    &:hover {
+                      label.mktoLabel {
+                        color: $color_1 !important;
+                      }
+                    }
+                  }
+                  select.mktoField {
+                    background-position: right 19px center !important;
+                    padding-right: 36px !important;
+                    background-size: 16px !important;
+                    background-repeat: no-repeat !important;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    -o-text-overflow: ellipsis;
+                    text-overflow: ellipsis;
+                    option {
+                      background: inherit;
+                      color: $color_3;
+                      border-bottom: inherit;
+                      padding: inherit;
+                    }
+                  }
+                  .mktoField.mktoInvalid {
+                    border-color: #ff5b28 !important;
+                  }
+                  .mktoError {
+                    top: initial;
+                    bottom: initial !important;
+                    left: initial !important;
+                    right: initial !important;
+                    display: inline-block;
+                    margin: 0;
+                    .mktoErrorArrowWrap {
+                      display: none !important;
+                    }
+                    .mktoErrorMsg {
+                      margin: 2px 0 0 10px;
+                      padding: 0;
+                      color: $color_4;
+                      font-size: 12px;
+                      font-weight: 400;
+                      line-height: 20px;
+                      letter-spacing: 0em;
+                      display: inline-block;
+                      bottom: 0;
+                    }
                   }
                 }
-                color: $color_1 !important;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 20px;
-                text-decoration: none !important;
+                display: -webkit-inline-box !important;
+                display: -ms-inline-flexbox !important;
+                display: inline-flex !important;
+                margin: 0;
+                width: calc(50% - 6px) !important;
+                .mktoFormCol {
+                  width: 100% !important;
+                  padding: 0 !important;
+                  margin: 0 !important;
+                }
+                .mktoFieldWrap.active.typing {
+                  &:not(.single_checkbox) {
+                    label.mktoLabel {
+                      top: 6px;
+                      font-size: 12px !important;
+                      line-height: 20px !important;
+                      color: $color_2 !important;
+                    }
+                  }
+                  .mktoField {
+                    border-color: #081a59 !important;
+                  }
+                }
+                .mktoFieldWrap.filled {
+                  &:not(.single_checkbox) {
+                    label.mktoLabel {
+                      top: 6px;
+                      font-size: 12px !important;
+                      line-height: 20px !important;
+                      color: $color_2 !important;
+                    }
+                  }
+                }
+                .mktoFieldWrap.single_checkbox {
+                  margin: -4px 0 8px 0;
+                  .mktoLabel {
+                    padding: 0 0 0 24px !important;
+                    &::after {
+                      opacity: 0 !important;
+                    }
+                    &::before {
+                      width: 16px !important;
+                      height: 16px !important;
+                      border: 1px solid #ff8200 !important;
+                      border-radius: 4px !important;
+                      background: #fff !important;
+                      top: 2px !important;
+                    }
+                    p.p11 {
+                      width: 100%;
+                      font-family: $font-family_1 !important;
+                    }
+                    p {
+                      a {
+                        text-decoration: underline !important;
+                        color: $color_1 !important;
+                        font-size: 12px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 20px;
+                        text-decoration-skip-ink: none;
+                        &:hover {
+                          text-decoration: underline !important;
+                          text-decoration-skip-ink: none;
+                        }
+                      }
+                      color: $color_1 !important;
+                      font-size: 12px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 20px;
+                      text-decoration: none !important;
+                    }
+                  }
+                  .mktoLabel.single_checked {
+                    &::before {
+                      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701250536/netskope/6001/Checkbox_base.svg") !important;
+                      background-size: contain !important;
+                      background-repeat: no-repeat !important;
+                      border: none !important;
+                    }
+                  }
+                }
+                .mktoHtmlText {
+                  .netskope-fm {
+                    padding: 0 !important;
+                    color: $color_2 !important;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 20px;
+                    font-family: $font-family_1 !important;
+                    text-decoration: none !important;
+                    border: none;
+                    margin: 0 !important;
+                    a {
+                      padding: 0 !important;
+                      color: $color_2 !important;
+                      font-size: 12px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 20px;
+                      font-family: $font-family_1 !important;
+                      text-decoration: none !important;
+                      border: none;
+                      margin: 0 !important;
+                      text-decoration: underline !important;
+                      text-decoration-skip-ink: none;
+                    }
+                  }
+                }
               }
-            }
-            .mktoLabel.single_checked {
-              &::before {
-                background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701250536/netskope/6001/Checkbox_base.svg") !important;
-                background-size: contain !important;
-                background-repeat: no-repeat !important;
-                border: none !important;
-              }
-            }
-          }
-          .mktoHtmlText {
-            .netskope-fm {
-              padding: 0 !important;
-              color: $color_2 !important;
-              font-size: 12px;
-              font-style: normal;
-              font-weight: 400;
-              line-height: 20px;
-              font-family: $font-family_1 !important;
-              text-decoration: none !important;
-              border: none;
-              margin: 0 !important;
-              a {
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+              -webkit-box-pack: justify;
+              -ms-flex-pack: justify;
+              justify-content: space-between;
+              padding: 0px 32px 32px !important;
+              .mktoTemplateBox {
+                .welcomeback {
+                  color: $color_1 !important;
+                }
+                a.mktoNotYou {
+                  color: $color_1 !important;
+                }
+                width: 100% !important;
                 padding: 0 !important;
-                color: $color_2 !important;
-                font-size: 12px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 20px;
-                font-family: $font-family_1 !important;
-                text-decoration: none !important;
-                border: none;
                 margin: 0 !important;
-                text-decoration: underline !important;
-                text-decoration-skip-ink: none;
               }
-            }
-          }
-        }
-        display: -webkit-box;
-        display: -ms-flexbox;
-        display: flex;
-        -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-        -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-        justify-content: space-between;
-        padding: 0px 32px 32px !important;
-        .mktoTemplateBox {
-          .welcomeback {
-            color: $color_1 !important;
-          }
-          a.mktoNotYou {
-            color: $color_1 !important;
-          }
-          width: 100% !important;
-          padding: 0 !important;
-          margin: 0 !important;
-        }
-        .mktoFormRow.field-2 {
-          display: none !important;
-        }
-        .mktoFormRow.field-10 {
-          width: 100% !important;
-          padding: 0 !important;
-          margin: 0 !important;
-        }
-        .mktoFormRow.field-11 {
-          width: 100% !important;
-          padding: 0 !important;
-          margin: 0 !important;
-        }
-        .mktoButtonRow {
-          width: 100% !important;
-          padding: 0 !important;
-          margin: 0 !important;
-        }
-        .mktoFormRow.field-9 {
-          .mktoFieldWrap {
-            &:before {
-              content: "";
-              width: 16px;
-              height: 16px;
-              position: absolute;
-              right: 20px;
-              top: 21px;
-              z-index: 1;
-              pointer-events: none;
-              background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1709021903/netskope/8004/Chevron-drop.svg) !important;
-            }
-          }
-          .mktoFieldWrap.typing {
-            &:before {
-              background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1709021903/netskope/8004/Chevron-drop.svg) !important;
-              right: 19px;
-              top: 18px;
-              transform: rotate(180deg);
-              -ms-transform: rotate(180deg);
-              -moz-transform: rotate(180deg);
-              -webkit-transform: rotate(180deg);
-              -o-transform: rotate(180deg);
-            }
-          }
-        }
-        .mktoButtonWrap {
-          margin-top: 19px !important;
-          .mktoButton {
-            display: -webkit-box !important;
-            display: -ms-flexbox !important;
-            display: flex !important;
-            -ms-flex-wrap: wrap;
-            flex-wrap: wrap;
-            -webkit-box-align: center;
-            -ms-flex-align: center;
-            align-items: center;
-            -webkit-box-pack: center;
-            -ms-flex-pack: center;
-            justify-content: center;
-            width: 100% !important;
-            height: 48px;
-            font-size: 16px !important;
-            font-weight: 400 !important;
-            line-height: 24px !important;
-            letter-spacing: 0.4px;
-            color: $color_1 !important;
-            background: #ff8200 !important;
-            border: 1px solid #ff8200 !important;
-            border-radius: 200px !important;
-            &:hover {
-              background: #fff !important;
-              border-color: #081a59 !important;
+              .mktoFormRow.field-2 {
+                display: none !important;
+              }
+              .mktoFormRow.field-10 {
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+              }
+              .mktoFormRow.field-11 {
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+              }
+              .mktoButtonRow {
+                width: 100% !important;
+                padding: 0 !important;
+                margin: 0 !important;
+              }
+              .mktoFormRow.field-9 {
+                .mktoFieldWrap {
+                  &:before {
+                    content: "";
+                    width: 16px;
+                    height: 16px;
+                    position: absolute;
+                    right: 20px;
+                    top: 21px;
+                    z-index: 1;
+                    pointer-events: none;
+                    background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1709021903/netskope/8004/Chevron-drop.svg) !important;
+                  }
+                }
+                .mktoFieldWrap.typing {
+                  &:before {
+                    background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1709021903/netskope/8004/Chevron-drop.svg) !important;
+                    right: 19px;
+                    top: 18px;
+                    transform: rotate(180deg);
+                    -ms-transform: rotate(180deg);
+                    -moz-transform: rotate(180deg);
+                    -webkit-transform: rotate(180deg);
+                    -o-transform: rotate(180deg);
+                  }
+                }
+              }
+              .mktoButtonWrap {
+                margin-top: 19px !important;
+                .mktoButton {
+                  display: -webkit-box !important;
+                  display: -ms-flexbox !important;
+                  display: flex !important;
+                  -ms-flex-wrap: wrap;
+                  flex-wrap: wrap;
+                  -webkit-box-align: center;
+                  -ms-flex-align: center;
+                  align-items: center;
+                  -webkit-box-pack: center;
+                  -ms-flex-pack: center;
+                  justify-content: center;
+                  width: 100% !important;
+                  height: 48px;
+                  font-size: 16px !important;
+                  font-weight: 400 !important;
+                  line-height: 24px !important;
+                  letter-spacing: 0.4px;
+                  color: $color_1 !important;
+                  background: #ff8200 !important;
+                  border: 1px solid #ff8200 !important;
+                  border-radius: 200px !important;
+                  &:hover {
+                    background: #fff !important;
+                    border-color: #081a59 !important;
+                  }
+                }
+              }
             }
           }
         }
