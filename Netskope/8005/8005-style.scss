@@ -35,6 +35,7 @@ $font-family_1: "Graphik", sans-serif;
         flex-direction: row-reverse;
         position: relative;
         min-height: 100vh;
+        justify-content: center;
 
         &::before {
           content: "";
@@ -58,6 +59,7 @@ $font-family_1: "Graphik", sans-serif;
         .gated-content__right {
           position: relative;
           max-width: 600px;
+          margin-left: initial;
 
           //Header changes
           .header.has-promo-banner {
