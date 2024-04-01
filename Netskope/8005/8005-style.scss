@@ -132,7 +132,7 @@ $font-family_1: "Graphik", sans-serif;
           }
 
           .gated-content__content {
-            padding: 0 40px 40px;
+            padding: 0 40px 16px;
 
             .gated-content__social,
             :nth-child(6) {
@@ -148,35 +148,86 @@ $font-family_1: "Graphik", sans-serif;
               line-height: 24px;
               margin-bottom: 16px;
             }
+
+            .gated-content__tags {
+              margin-bottom: 8px;
+              .gated-content__tag {
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+                padding: 3px 15.5px;
+              }
+            }
           }
 
           .related-resources-cards {
             padding: 48px 40px;
 
-            .filters__content {
+            .container {
               padding: 0;
+              .filters__content {
+                padding: 0;
 
-              .filters__layout {
-                display: none;
-              }
+                .filters__header-title {
+                  color: #081a59;
+                  font-family: $font-family_1;
+                  font-size: 32px;
+                  font-weight: 400;
+                  line-height: 40px;
+                }
 
-              .filters__wrapper {
-                min-height: auto;
-                .card {
-                  border-radius: 16px;
-                  border: 0;
-                  height: 160px;
+                .filters__layout {
+                  display: none;
+                }
 
-                  .card__content {
-                    background: url(//res.cloudinary.com/spiralyze/image/upload/v1711977142/netskope/8005/bg-card-1440.webp)
-                      no-repeat bottom right;
-                    background-size: contain;
+                .filters__wrapper {
+                  min-height: auto;
+                  margin-top: 24px;
 
-                    .card__content__link {
-                      flex-direction: row-reverse;
-                      .card__content__link-text {
-                        display: block;
-                        margin-right: 40px;
+                  .card {
+                    border-radius: 16px;
+                    border: 0;
+                    height: 160px;
+
+                    .card__content {
+                      background: url(//res.cloudinary.com/spiralyze/image/upload/v1711977142/netskope/8005/bg-card-1440.webp)
+                        no-repeat bottom right;
+                      background-size: contain;
+                      height: 100%;
+                      padding: 40px;
+
+                      .card__content-tag {
+                        color: #081a59;
+                        font-family: $font-family_1;
+                        font-size: 12px;
+                        font-weight: 400;
+                        line-height: 20px;
+                        margin-bottom: 12px;
+                      }
+
+                      .card__content-text {
+                        color: #081a59;
+                        font-family: $font-family_1;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        line-height: 24px;
+                        max-width: 283px;
+                      }
+
+                      .card__content__link {
+                        flex-direction: row-reverse;
+                        // right: 21px;
+
+                        img {
+                          margin: 0;
+                          width: 32px;
+                          height: 32px;
+                        }
+                        .card__content__link-text {
+                          display: block;
+                          margin-right: 16px;
+                        }
                       }
                     }
                   }
