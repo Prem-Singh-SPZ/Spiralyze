@@ -57,6 +57,9 @@ function iconUpdate() {
         document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975619/netskope/8005/chevron-down-light.svg';
         document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/search-light.svg';
         document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/logo-light.svg';
+        if (document.querySelector('.related-resources-cards .filters__content .filters__wrapper') && document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.contains('filters__wrapper--list')) {
+            document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.remove('filters__wrapper--list');
+        }
     }
     else {
         //white Icons
@@ -64,6 +67,7 @@ function iconUpdate() {
         document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711354290/netskope/8005/chevron-down.svg';
         document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/search-dark.svg';
         document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/logo-dark.svg';
+        document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
     }
 }
 
