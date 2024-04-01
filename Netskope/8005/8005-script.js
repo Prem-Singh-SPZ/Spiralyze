@@ -37,12 +37,35 @@ let bodyLoaded = setInterval(function () {
                 document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('beforeend', document.querySelector('#components__content .related-resources-cards'));
 
                 //Footer addition
-                document.querySelector('.gated-content__container .gated-content__left').insertAdjacentHTML('beforeend',`<div class="spz-footer-section"><div class="footer-container"><div class="u-footer"><div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div><div class="social-icons"><div class="social-icons  icon--facebook"> <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/ebooks/the-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement'"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/facebook_logo.svg" class="s-icon" alt="facebook icon"></a></div><div class="social-icons  icon--twitter"> <a href="https://twitter.com/share?text= The 6 Most Compelling Use Cases for Complete Legacy VPN Replacement @Netskope&amp;url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Febooks%2Fthe-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/x_logo.svg" class="s-icon" alt="twitter icon"></a></div><div class="social-icons  icon--linkedin"> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.netskope.com/resources/ebooks/the-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement'"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/linkedin_logo.svg" class="s-icon" alt="twitter icon"></a></div></div></div><div class="l-footer"><ul class="navbar-nav"><li class="menu-item"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></li><li class="menu-item"><a href="https://www.netskope.com/vulnerability-disclosure-policy">Vulnerability Disclosure Policy</a></li><li class="menu-item"><a href="https://www.netskope.com/terms-of-use">Terms of Use</a></li><li class="menu-item"><a href="https://www.netskope.com/ccpa-compliance-statement">CCPA Compliance Statement</a></li></ul><div class="v3-footer__date">© 2024, All rights reserved.</div></div></div></div>`);
+                document.querySelector('.gated-content__container .gated-content__left').insertAdjacentHTML('beforeend', `<div class="spz-footer-section"><div class="footer-container"><div class="u-footer"><div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div><div class="social-icons"><div class="social-icons  icon--facebook"> <a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/ebooks/the-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement'"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/facebook_logo.svg" class="s-icon" alt="facebook icon"></a></div><div class="social-icons  icon--twitter"> <a href="https://twitter.com/share?text= The 6 Most Compelling Use Cases for Complete Legacy VPN Replacement @Netskope&amp;url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Febooks%2Fthe-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/x_logo.svg" class="s-icon" alt="twitter icon"></a></div><div class="social-icons  icon--linkedin"> <a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.netskope.com/resources/ebooks/the-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement'"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/linkedin_logo.svg" class="s-icon" alt="twitter icon"></a></div></div></div><div class="l-footer"><ul class="navbar-nav"><li class="menu-item"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></li><li class="menu-item"><a href="https://www.netskope.com/vulnerability-disclosure-policy">Vulnerability Disclosure Policy</a></li><li class="menu-item"><a href="https://www.netskope.com/terms-of-use">Terms of Use</a></li><li class="menu-item"><a href="https://www.netskope.com/ccpa-compliance-statement">CCPA Compliance Statement</a></li></ul><div class="v3-footer__date">© 2024, All rights reserved.</div></div></div></div>`);
+
+                //on window resize run the function
+                iconUpdate();
+                window.addEventListener('resize', function () {
+                    iconUpdate();
+                });
             });
         }
 
     }
 });
+
+function iconUpdate() {
+    if (window.innerWidth < 1024) {
+        //Darker Icons
+        document.querySelector('.header__mobile-toggle img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/menu-light.svg';
+        document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975619/netskope/8005/chevron-down-light.svg';
+        document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/search-light.svg';
+        document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/logo-light.svg';
+    }
+    else {
+        //white Icons
+        document.querySelector('.header__mobile-toggle img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/menu-dark.svg';
+        document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711354290/netskope/8005/chevron-down.svg';
+        document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/search-dark.svg';
+        document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/logo-dark.svg';
+    }
+}
 
 // Generic Code
 function insertAfter(referenceNode, newNode) {

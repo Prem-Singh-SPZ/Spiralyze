@@ -252,6 +252,14 @@
   visibility: visible !important;
   padding: 32px;
 }
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__top-menu-link-language #locale_place_holder {
+  color: #081a59;
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs {
   margin: 0;
   padding: 12px 32px;
@@ -263,6 +271,19 @@
   -ms-flex-wrap: nowrap;
       flex-wrap: nowrap;
 }
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item::before {
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-dark.svg);
+  -webkit-transform: none;
+          transform: none;
+}
+@media (max-width: 1023.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item::before {
+    content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-right.svg);
+  }
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item:first-of-type:before {
+  content: none;
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item .breadcrumbs__item-link {
   color: #081a59;
   font-family: "Graphik", sans-serif;
@@ -270,16 +291,18 @@
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  text-overflow: ellipsis;
-  overflow: hidden;
   white-space: nowrap;
 }
 @media screen and (max-width: 1023.98px) {
   .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item .breadcrumbs__item-link {
     color: #fff;
   }
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item:last-child .breadcrumbs__item-link {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  text-overflow: ellipsis;
+  overflow: hidden;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .gated-content__form {
   width: 100%;

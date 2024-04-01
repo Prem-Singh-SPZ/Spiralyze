@@ -247,6 +247,17 @@ $font-family_1: "Graphik", sans-serif;
               visibility: visible !important;
               padding: 32px;
             }
+
+            .header__top-menu-link-language {
+              #locale_place_holder {
+                color: #081a59;
+                font-family: $font-family_1;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+              }
+            }
           }
 
           //breadcrumbs
@@ -260,6 +271,19 @@ $font-family_1: "Graphik", sans-serif;
                 flex-wrap: nowrap;
 
                 .breadcrumbs__item {
+                  &::before {
+                    content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-dark.svg);
+                    transform: none;
+
+                    @media (max-width: 1023.98px) {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-right.svg);
+                    }
+                  }
+
+                  &:first-of-type:before {
+                    content: none;
+                  }
+
                   .breadcrumbs__item-link {
                     color: #081a59;
                     font-family: $font-family_1;
@@ -267,16 +291,17 @@ $font-family_1: "Graphik", sans-serif;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 24px;
-                    display: -webkit-box;
-                    -webkit-box-orient: vertical;
                     //   -webkit-line-clamp: 1;
-                    text-overflow: ellipsis;
-                    overflow: hidden;
                     white-space: nowrap;
-
                     @media screen and (max-width: 1023.98px) {
                       color: #fff;
                     }
+                  }
+                  &:last-child .breadcrumbs__item-link {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    text-overflow: ellipsis;
+                    overflow: hidden;
                   }
                 }
               }
