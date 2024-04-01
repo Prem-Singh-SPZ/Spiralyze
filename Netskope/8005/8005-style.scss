@@ -116,6 +116,19 @@ $font-family_1: "Graphik", sans-serif;
 
           .rte {
             padding: 0 40px;
+            margin-bottom: 8px;
+
+            > p {
+              margin-bottom: 12px;
+
+              &:nth-child(2) {
+                margin-bottom: 0;
+              }
+            }
+
+            ul {
+              padding-left: 24px;
+            }
           }
 
           .gated-content__content {
@@ -124,6 +137,15 @@ $font-family_1: "Graphik", sans-serif;
             .gated-content__social,
             :nth-child(6) {
               display: none;
+            }
+
+            .gated-content__label {
+              color: #fff;
+              font-family: $font-family_1;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 24px;
             }
           }
 
@@ -269,7 +291,7 @@ $font-family_1: "Graphik", sans-serif;
 
             .header__top.has-promo-banner {
               visibility: visible !important;
-              padding: 32px;
+              padding: 31px 32px;
 
               .header__logo {
                 padding: 0;
@@ -320,6 +342,7 @@ $font-family_1: "Graphik", sans-serif;
                     content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-dark.svg);
                     transform: none;
                     left: -8px;
+                    top: 3px;
 
                     @media (max-width: 1023.98px) {
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-right.svg);
@@ -351,6 +374,10 @@ $font-family_1: "Graphik", sans-serif;
                     @media screen and (max-width: 1023.98px) {
                       color: #fff;
                     }
+                  }
+
+                  &:first-child .breadcrumbs__item-link {
+                    margin-left: 0;
                   }
                 }
               }
@@ -671,7 +698,7 @@ $font-family_1: "Graphik", sans-serif;
                 }
               }
               .mktoButtonWrap {
-                margin-top: 19px !important;
+                margin-top: 16px !important;
                 .mktoButton {
                   display: -webkit-box !important;
                   display: -ms-flexbox !important;
@@ -689,7 +716,6 @@ $font-family_1: "Graphik", sans-serif;
                   font-size: 16px !important;
                   font-weight: 400 !important;
                   line-height: 24px !important;
-                  letter-spacing: 0.4px;
                   color: $color_1 !important;
                   background: #ff8200 !important;
                   border: 1px solid #ff8200 !important;
