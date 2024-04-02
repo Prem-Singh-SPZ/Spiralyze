@@ -45,11 +45,11 @@ waitForElm('.hero-content h1.hc-title').then(function () {
         loadTest('hipaa');
     }
 
-    else if (window.location.href.indexOf('try.drata.com/product/soc2') > -1) {
+    else if (window.location.href.indexOf('try.drata.com/product/soc-2') > -1) {
         loadTest('soc2');
     }
 
-    else if (window.location.href.indexOf('try.drata.com/product/iso27001') > -1) {
+    else if (window.location.href.indexOf('try.drata.com/product/iso-27001') > -1) {
         loadTest('iso27001');
     }
 });
