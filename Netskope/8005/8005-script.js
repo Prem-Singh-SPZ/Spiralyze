@@ -62,7 +62,7 @@ let bodyLoaded = setInterval(function () {
                         document.getElementById('spz-8005').remove();
                     }
                     let width = document.querySelector('.header__top.has-promo-banner').offsetWidth - 64 + 'px';
-                    let left = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().left + 40 + 'px';
+                    let left = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().left + 32 + 'px';
                     let top = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().top + 80 + 'px';
 
                     document.querySelector('.algolia-autocomplete').insertAdjacentHTML('afterend', `<style id="spz-8005">.spz-8005 .algolia-autocomplete{width: ${width}!important; left: ${left}!important; top: ${top}!important;}</style>`);

@@ -386,8 +386,9 @@ $font-family_1: "Graphik", sans-serif;
             position: relative;
             top: 0;
             .header__search-container-mobile {
-              max-width: 256px;
-              left: 35%;
+              max-width: calc(100% - 344px);
+              left: auto;
+              right: 136px;
               height: auto;
               top: 29px;
               width: 100%;
@@ -395,7 +396,7 @@ $font-family_1: "Graphik", sans-serif;
               .header__search {
                 border-radius: 24px;
                 border: 1px solid #081a59;
-                padding: 4px 36px 4px 16px;
+                padding: 4px 36px 4px 10px;
 
                 input.header__search-input {
                   height: 26px;
@@ -405,12 +406,18 @@ $font-family_1: "Graphik", sans-serif;
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px;
+
+                  &::placeholder {
+                    opacity: 0;
+                  }
                 }
               }
 
               .header__search-close-mobile {
-                top: 0px;
-                right: 1px;
+                top: 6px;
+                right: 6px;
+                width: 24px;
+                height: 24px;
               }
             }
 
@@ -471,7 +478,7 @@ $font-family_1: "Graphik", sans-serif;
               .header__mobile-nav-container {
                 right: 32px;
                 width: 372px;
-                padding: 8px 28px;
+                padding: 7px 27px 8px;
                 border-radius: 16px;
                 border: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -491,12 +498,14 @@ $font-family_1: "Graphik", sans-serif;
                         line-height: 24px;
                         text-decoration-line: underline;
                         text-underline-offset: 3px;
+                        padding: 21px 0 22px;
 
                         img {
                           right: 0;
                           transform: none;
                           width: 28px;
                           height: 28px;
+                          top: 20px;
                         }
 
                         &:hover {
@@ -520,10 +529,10 @@ $font-family_1: "Graphik", sans-serif;
 
               .header__top-menu {
                 .header__language-container {
-                  left: -112px !important;
+                  left: -122px !important;
                   top: 8px !important;
                   width: 168px;
-                  padding: 8px 28px !important;
+                  padding: 7px 28px !important;
                   border-radius: 16px !important;
                   border: 1px solid rgba(255, 255, 255, 0.2);
 
@@ -559,8 +568,15 @@ $font-family_1: "Graphik", sans-serif;
                     opacity: 0;
                   }
 
-                  &.active::before {
-                    opacity: 1;
+                  &.active {
+                    // margin-left: 24px;
+                    width: 32px;
+                    img{
+                      width: 32px;
+                    }
+                    &::before {
+                      opacity: 1;
+                    }
                   }
                 }
               }
