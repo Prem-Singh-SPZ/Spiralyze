@@ -146,6 +146,10 @@ $font-family_1: "Graphik", sans-serif;
             flex-direction: column;
             padding: 44px 40px 0;
 
+            @media screen and (max-width: 1023.98px) {
+              padding: 16px 32px 0;
+            }
+
             .gated-content__info {
               .gated-content__type {
                 display: none;
@@ -166,9 +170,14 @@ $font-family_1: "Graphik", sans-serif;
               height: 352px;
               width: 100%;
 
-              @media (max-width: 1199.98px) {
+              @media (min-width: 1023.98px) and (max-width: 1199.98px) {
                 height: 250px;
                 background-size: contain;
+              }
+
+              @media screen and (max-width: 1023.98px) {
+                width: 760px;
+                margin-left: -28px;
               }
             }
           }
@@ -176,6 +185,10 @@ $font-family_1: "Graphik", sans-serif;
           .rte {
             padding: 0 40px;
             margin-bottom: 8px;
+
+            @media screen and (max-width: 1023.98px) {
+              padding: 0 32px;
+            }
 
             > p {
               margin-bottom: 12px;
@@ -192,6 +205,10 @@ $font-family_1: "Graphik", sans-serif;
 
           .gated-content__content {
             padding: 0 40px 16px;
+
+            @media screen and (max-width: 1023.98px) {
+              padding: 0 32px 16px;
+            }
 
             .gated-content__social,
             :nth-child(6) {
@@ -221,6 +238,10 @@ $font-family_1: "Graphik", sans-serif;
 
           .related-resources-cards {
             padding: 48px 40px;
+
+            @media screen and (max-width: 1023.98px) {
+              padding: 40px 13px;
+            }
 
             .container {
               padding: 0;
@@ -254,6 +275,10 @@ $font-family_1: "Graphik", sans-serif;
                       background-size: cover;
                       height: 100%;
                       padding: 40px;
+
+                      .card__content-img {
+                        display: none;
+                      }
 
                       .card__content-tag {
                         color: #081a59;
@@ -330,6 +355,9 @@ $font-family_1: "Graphik", sans-serif;
               align-items: center;
               justify-content: space-between;
               margin-top: 13px;
+              @media (min-width: 1023.98px) and (max-width: 1360.98px) {
+                align-items: flex-start;
+              }
 
               .navbar-nav {
                 display: flex;
@@ -338,7 +366,7 @@ $font-family_1: "Graphik", sans-serif;
 
                 @media (max-width: 1360.98px) {
                   flex-wrap: wrap;
-                  align-items: flex-start;
+                  // align-items: flex-start;
                 }
 
                 li.menu-item {
@@ -398,10 +426,19 @@ $font-family_1: "Graphik", sans-serif;
               top: 29px;
               width: 100%;
 
+              @media screen and (max-width: 1023.98px) {
+                top: 21px;
+                max-width: calc(100% - 403px);
+              }
+
               .header__search {
                 border-radius: 24px;
                 border: 1px solid #081a59;
                 padding: 4px 36px 4px 10px;
+
+                @media screen and (max-width: 1023.98px) {
+                  border-color: #fff;
+                }
 
                 input.header__search-input {
                   height: 26px;
@@ -414,6 +451,10 @@ $font-family_1: "Graphik", sans-serif;
 
                   &::placeholder {
                     opacity: 0;
+                  }
+
+                  @media screen and (max-width: 1023.98px) {
+                    color: #fff !important;
                   }
                 }
               }
@@ -428,6 +469,13 @@ $font-family_1: "Graphik", sans-serif;
 
             .header__top-menu-link--search-mobile {
               border: 0;
+
+              @media screen and (max-width: 1023.98px) {
+                width: 32px;
+                height: 32px;
+                margin: 0;
+              }
+
               .header__top-menu-link--search-button {
                 img {
                   width: 32px;
@@ -439,6 +487,10 @@ $font-family_1: "Graphik", sans-serif;
             .header__top.has-promo-banner {
               visibility: visible !important;
               padding: 31px 32px;
+
+              @media screen and (max-width: 1023.98px) {
+                padding: 23px 32px;
+              }
 
               .header__logo {
                 padding: 0;
@@ -459,6 +511,11 @@ $font-family_1: "Graphik", sans-serif;
               padding: 4px;
               margin-left: 14px;
 
+              img{
+                width: 20px;
+                height: 20px;
+              }
+
               #locale_place_holder {
                 color: #081a59;
                 font-family: $font-family_1;
@@ -466,6 +523,11 @@ $font-family_1: "Graphik", sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 20px;
+                width: 18px;
+
+                @media screen and (max-width: 1023.98px) {
+                  color: #fff;
+                }
               }
             }
 
@@ -541,6 +603,11 @@ $font-family_1: "Graphik", sans-serif;
                   border-radius: 16px !important;
                   border: 1px solid rgba(255, 255, 255, 0.2);
 
+                  @media (max-width: 1023.98px) {
+                    left: -69px !important;
+                    top: 16px !important;
+                  }
+
                   li {
                     a {
                       font-size: 16px;
@@ -571,6 +638,11 @@ $font-family_1: "Graphik", sans-serif;
                     background: #fff;
                     pointer-events: none;
                     opacity: 0;
+
+                    @media screen and (max-width: 1023.98px) {
+                      content: url(//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-light.svg);
+                      background: #081a59;
+                    }
                   }
 
                   &.active {
@@ -592,6 +664,10 @@ $font-family_1: "Graphik", sans-serif;
           .breadcrumbs {
             margin: 0;
             padding: 12px 32px;
+
+            @media (max-width: 1023.98px) {
+              margin-bottom: 24px;
+            }
 
             .breadcrumbs__container {
               overflow: hidden;
@@ -649,10 +725,16 @@ $font-family_1: "Graphik", sans-serif;
           .gated-content__form {
             width: 100%;
             padding: 24px 40px 40px;
+            position: sticky;
+            top: 0;
 
             @media (max-width: 1023.98px) {
               max-width: 704px;
               width: 100%;
+              padding: 40px 32px;
+              border-radius: 24px;
+              position: relative;
+              margin-bottom: 40px;
             }
 
             .frm-logo {

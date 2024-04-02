@@ -37,19 +37,19 @@ const heroCopy = {
 document.body.classList.add("spz-4011");
 
 waitForElm('.hero-content h1.hc-title').then(function () {
-    if (window.location.href.indexOf('try.drata.com/product/gdpr')) {
+    if (window.location.href.indexOf('try.drata.com/product/gdpr') > -1) {
         loadTest('gdpr');
     }
 
-    else if (window.location.href.indexOf('try.drata.com/product/hipaa')) {
+    else if (window.location.href.indexOf('try.drata.com/product/hipaa') > -1) {
         loadTest('hipaa');
     }
 
-    else if (window.location.href.indexOf('try.drata.com/product/soc2')) {
+    else if (window.location.href.indexOf('try.drata.com/product/soc2') > -1) {
         loadTest('soc2');
     }
 
-    else if (window.location.href.indexOf('try.drata.com/product/iso27001')) {
+    else if (window.location.href.indexOf('try.drata.com/product/iso27001') > -1) {
         loadTest('iso27001');
     }
 });

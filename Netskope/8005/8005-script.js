@@ -1,5 +1,4 @@
 // breadcrumb ellepsis
-// form section sticky
 
 let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
@@ -72,6 +71,12 @@ let bodyLoaded = setInterval(function () {
                     let left = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().left + 32 + 'px';
                     let top = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().top + 80 + 'px';
 
+                    if ((window.innerWidth > 767) && (window.innerWidth < 1024)) {
+                        width = 600 + 'px';
+                        top = 73 + 'px';
+                        left = (this.window.innerWidth - 732) + 'px';
+                    }
+
                     document.querySelector('.algolia-autocomplete').insertAdjacentHTML('afterend', `<style id="spz-8005">.spz-8005 .algolia-autocomplete{width: ${width}!important; left: ${left}!important; top: ${top}!important;}</style>`);
                 }
             });
@@ -97,12 +102,17 @@ function iconUpdate() {
         document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975619/netskope/8005/chevron-down-light.svg';
         document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/search-light.svg';
         document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/logo-light.svg';
+        document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
+
+        document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-light.svg');
+    }
+
+    else if (window.innerWidth < 768) {
         if (document.querySelector('.related-resources-cards .filters__content .filters__wrapper') && document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.contains('filters__wrapper--list')) {
             document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.remove('filters__wrapper--list');
         }
-        document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-light.svg');
-
     }
+
     else {
         //white Icons
         document.querySelector('.header__mobile-toggle img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/menu-dark.svg';
