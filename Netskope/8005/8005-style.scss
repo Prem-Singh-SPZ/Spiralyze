@@ -175,9 +175,13 @@ $font-family_1: "Graphik", sans-serif;
                 background-size: contain;
               }
 
-              @media screen and (max-width: 1023.98px) {
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
                 width: 760px;
                 margin-left: -28px;
+              }
+
+              @media (max-width: 767.98px) {
+                height: 180px;
               }
             }
           }
@@ -191,7 +195,7 @@ $font-family_1: "Graphik", sans-serif;
             }
 
             @media screen and (max-width: 767.98px) {
-             max-width: 100%;
+              max-width: 100%;
             }
 
             > p {
@@ -273,12 +277,27 @@ $font-family_1: "Graphik", sans-serif;
                     border: 0;
                     height: 160px;
 
+                    @media (max-width: 767.98px) {
+                      height: 280px;
+                    }
+
                     .card__content {
-                      background: url(//res.cloudinary.com/spiralyze/image/upload/v1711977142/netskope/8005/bg-card-1440.webp)
+                      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-1440.webp)
                         no-repeat bottom right;
                       background-size: cover;
                       height: 100%;
                       padding: 40px;
+
+                      @media (max-width: 767.98px) {
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-768.webp)
+                          no-repeat bottom right;
+                        background-size: cover;
+                      }
+                      @media (max-width: 767.98px) {
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-360.webp)
+                          no-repeat bottom right;
+                        background-size: cover;
+                      }
 
                       .card__content-img {
                         display: none;
@@ -330,6 +349,10 @@ $font-family_1: "Graphik", sans-serif;
             padding: 31px 40px;
             margin-top: auto;
 
+            @media (max-width: 767.98px) {
+              padding: 24px 32px 32px;
+            }
+
             .u-footer {
               display: flex;
               align-items: center;
@@ -350,6 +373,13 @@ $font-family_1: "Graphik", sans-serif;
 
                 .social-icon {
                   margin-left: 12px;
+
+                  @media (max-width: 767.98px) {
+                    img {
+                      width: 32px;
+                      height: 32px;
+                    }
+                  }
                 }
               }
             }
@@ -363,6 +393,11 @@ $font-family_1: "Graphik", sans-serif;
                 align-items: flex-start;
               }
 
+              @media (max-width: 767.98px) {
+                flex-direction: column;
+                align-items: flex-start;
+               }
+
               .navbar-nav {
                 display: flex;
                 flex-direction: row;
@@ -371,6 +406,11 @@ $font-family_1: "Graphik", sans-serif;
                 @media (max-width: 1360.98px) {
                   flex-wrap: wrap;
                   // align-items: flex-start;
+                }
+
+                @media (max-width: 767.98px) {
+                 flex-direction: column;
+                 align-items: flex-start;
                 }
 
                 li.menu-item {
@@ -435,6 +475,13 @@ $font-family_1: "Graphik", sans-serif;
                 max-width: calc(100% - 403px);
               }
 
+              @media screen and (max-width: 767.98px) {
+                top: 21px;
+                max-width: 90%;
+                left: 16px;
+                right: 16px;
+              }
+
               .header__search {
                 border-radius: 24px;
                 border: 1px solid #081a59;
@@ -489,7 +536,9 @@ $font-family_1: "Graphik", sans-serif;
             }
 
             .header__top.has-promo-banner {
-              visibility: visible !important;
+              @media screen and (min-width: 767.98px) {
+                visibility: visible !important;
+              }
               padding: 31px 32px;
 
               @media screen and (max-width: 1023.98px) {
@@ -501,6 +550,10 @@ $font-family_1: "Graphik", sans-serif;
 
                 img {
                   width: 160px;
+
+                  @media screen and (max-width: 767.98px) {
+                    width: 136px;
+                  }
                 }
               }
 
@@ -515,7 +568,7 @@ $font-family_1: "Graphik", sans-serif;
               padding: 4px;
               margin-left: 14px;
 
-              img{
+              img {
                 width: 20px;
                 height: 20px;
               }
@@ -715,6 +768,11 @@ $font-family_1: "Graphik", sans-serif;
                     @media screen and (max-width: 1023.98px) {
                       color: #fff;
                     }
+
+                    @media screen and (max-width: 767.98px) {
+                      font-size: 12px;
+                      line-height: 20px;
+                    }
                   }
 
                   &:first-child .breadcrumbs__item-link {
@@ -741,6 +799,10 @@ $font-family_1: "Graphik", sans-serif;
               margin-bottom: 40px;
             }
 
+            @media (max-width: 767.98px) {
+              margin-left: 0;
+            }
+
             .frm-logo {
               .form_title {
                 color: #081a59;
@@ -750,6 +812,10 @@ $font-family_1: "Graphik", sans-serif;
                 font-weight: 400;
                 line-height: 48px;
                 margin-bottom: 24px;
+
+                @media screen and (max-width: 767.98px) {
+                  text-align: center;
+                }
               }
             }
             form.mktoForm {
@@ -875,11 +941,14 @@ $font-family_1: "Graphik", sans-serif;
                     }
                   }
                 }
-                display: -webkit-inline-box !important;
-                display: -ms-inline-flexbox !important;
                 display: inline-flex !important;
                 margin: 0;
                 width: calc(50% - 6px) !important;
+
+                @media screen and (max-width: 767.98px) {
+                  width: 100% !important;
+                }
+
                 .mktoFormCol {
                   width: 100% !important;
                   padding: 0 !important;
