@@ -24,8 +24,6 @@ $font-family_1: "Graphik", sans-serif;
 
   //search suggestion dropdown css
   span.algolia-autocomplete {
-    width: 536px !important;
-
     .aa-dropdown-menu {
       border-radius: 16px;
       border: 1px solid rgba(8, 26, 89, 0.2);
@@ -54,6 +52,10 @@ $font-family_1: "Graphik", sans-serif;
 
         .aa-suggestion {
           padding: 4px 0;
+
+          &.aa-cursor {
+            background-color: #ecfbfe !important;
+          }
           .suggestion-post-title {
             overflow: hidden;
             color: #081a59;
@@ -492,6 +494,9 @@ $font-family_1: "Graphik", sans-serif;
 
                         img {
                           right: 0;
+                          transform: none;
+                          width: 28px;
+                          height: 28px;
                         }
 
                         &:hover {
@@ -543,7 +548,7 @@ $font-family_1: "Graphik", sans-serif;
                 .header__mobile-toggle {
                   position: relative;
                   &::before {
-                    content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-dark.svg);
+                    content: url(//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-dark.svg);
                     position: absolute;
                     top: 0;
                     right: 0;

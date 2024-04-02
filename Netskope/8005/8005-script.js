@@ -57,11 +57,15 @@ let bodyLoaded = setInterval(function () {
 
             //click event listener for document
             window.addEventListener('click', function (event) {
-                console.log(event.target);
+                if (event.target.classList.contains('header__search-input')) {
+                    if (this.document.getElementById('spz-8005')) {
+                        document.getElementById('spz-8005').remove();
+                    }
+                    let width = document.querySelector('.header__top.has-promo-banner').offsetWidth - 64 + 'px';
+                    let left = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().left + 40 + 'px';
+                    let top = document.querySelector('.header__top.has-promo-banner').getBoundingClientRect().top + 80 + 'px';
 
-                if (event.target.classList.contains('header_mobile__navbar-toggler')) {
-                    console.log('clicked');
-
+                    document.querySelector('.algolia-autocomplete').insertAdjacentHTML('afterend', `<style id="spz-8005">.spz-8005 .algolia-autocomplete{width: ${width}!important; left: ${left}!important; top: ${top}!important;}</style>`);
                 }
             });
 
@@ -80,6 +84,8 @@ function iconUpdate() {
         if (document.querySelector('.related-resources-cards .filters__content .filters__wrapper') && document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.contains('filters__wrapper--list')) {
             document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.remove('filters__wrapper--list');
         }
+        document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-light.svg');
+
     }
     else {
         //white Icons
@@ -88,7 +94,12 @@ function iconUpdate() {
         document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/search-dark.svg';
         document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/logo-dark.svg';
         document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
+        document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-dark.svg');
     }
+
+    document.querySelectorAll('.header__mobile-nav-item .header__mobile-nav-item-link img').forEach(function (elem) {
+        elem.src = '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/chevron-down-big.svg';
+    });
 }
 
 // Generic Code
