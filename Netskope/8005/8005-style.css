@@ -157,6 +157,12 @@
   height: 352px;
   width: 100%;
 }
+@media (max-width: 1199.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .gated-content__banner .gated-content__thumbnail {
+    height: 250px;
+    background-size: contain;
+  }
+}
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .rte {
   padding: 0 40px;
   margin-bottom: 8px;
@@ -225,7 +231,7 @@
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .related-resources-cards .container .filters__content .filters__wrapper .card .card__content {
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1711977142/netskope/8005/bg-card-1440.webp) no-repeat bottom right;
-  background-size: contain;
+  background-size: cover;
   height: 100%;
   padding: 40px;
 }
@@ -327,6 +333,9 @@
   .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav {
     -ms-flex-wrap: wrap;
         flex-wrap: wrap;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
   }
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .spz-footer-section .l-footer .navbar-nav li.menu-item {
