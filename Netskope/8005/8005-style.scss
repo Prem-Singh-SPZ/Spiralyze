@@ -163,7 +163,6 @@ $font-family_1: "Graphik", sans-serif;
 
             .gated-content__thumbnail {
               margin: 8px auto 16px;
-              background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708099561/netskope/8005/ui_desktop_tablet.webp) !important;
               height: 352px;
               width: 100%;
             }
@@ -571,7 +570,7 @@ $font-family_1: "Graphik", sans-serif;
                   &.active {
                     // margin-left: 24px;
                     width: 32px;
-                    img{
+                    img {
                       width: 32px;
                     }
                     &::before {
@@ -986,6 +985,18 @@ $font-family_1: "Graphik", sans-serif;
             }
           }
         }
+      }
+    }
+  }
+
+  //custom page css
+  &.resources_whitepapers {
+    .gated-content__thumbnail {
+      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1708099561/netskope/8005/ui_desktop_tablet.webp) !important;
+
+      @media screen and (max-width: 767.98px) {
+        background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1711976594/netskope/8005/ui_mobile_8.webp) !important;
+        
       }
     }
   }

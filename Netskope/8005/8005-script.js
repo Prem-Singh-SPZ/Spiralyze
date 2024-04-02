@@ -1,3 +1,6 @@
+// breadcrumb ellepsis
+// form section sticky
+
 let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
     if (body) {
@@ -51,9 +54,13 @@ let bodyLoaded = setInterval(function () {
 
             // on click of .header_mobile__navbar-toggler add class in parent
             document.querySelector('.header_mobile__navbar-toggler').addEventListener('click', function () {
-                document.querySelector('.header__mobile-toggle').classList.toggle('active');
+                checkMenuIsOpen();
             });
 
+            //on window resize run the function
+            window.addEventListener('resize', function () {
+                checkMenuIsOpen();
+            });
 
             //click event listener for document
             window.addEventListener('click', function (event) {
@@ -73,6 +80,15 @@ let bodyLoaded = setInterval(function () {
 
     }
 });
+
+function checkMenuIsOpen() {
+    if (document.querySelector('#header__mobile-nav-container[style*="display: block;"]')) {
+        document.querySelector('.header__mobile-toggle').classList.add('active');
+    }
+    else if (document.querySelector('#header__mobile-nav-container[style*="display: none;"]')) {
+        document.querySelector('.header__mobile-toggle').classList.remove('active');
+    }
+}
 
 function iconUpdate() {
     if (window.innerWidth < 1024) {
