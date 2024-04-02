@@ -11,6 +11,29 @@
 .spz-8005 .header__top-menu .header__top-menu-link-language {
   display: block !important;
 }
+.spz-8005 span.algolia-autocomplete {
+  width: 536px !important;
+}
+.spz-8005 span.algolia-autocomplete .aa-dropdown-menu {
+  border-radius: 16px;
+  border: 1px solid rgba(8, 26, 89, 0.2);
+}
+.spz-8005 span.algolia-autocomplete .aa-dropdown-menu div[class*=aa-dataset] .autocomplete-header {
+  border-bottom: 1px solid rgba(8, 26, 89, 0.1);
+  padding: 8px 16px;
+  margin: 0;
+  line-height: 20px;
+}
+.spz-8005 span.algolia-autocomplete .aa-dropdown-menu div[class*=aa-dataset] .autocomplete-header .autocomplete-header-title a {
+  color: #081a59;
+  font-family: "Graphik", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 20px;
+  letter-spacing: 0.6px;
+  text-transform: uppercase;
+}
 .spz-8005 .js-hero-banner {
   background: transparent !important;
   padding: 0;
@@ -342,6 +365,16 @@
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__search-container-mobile .header__search input.header__search-input {
   height: 26px;
+  color: #081a59 !important;
+  font-family: "Graphik", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__search-container-mobile .header__search-close-mobile {
+  top: 0px;
+  right: 1px;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__top-menu-link--search-mobile {
   border: 0;
@@ -359,6 +392,9 @@
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__top.has-promo-banner .header__logo img {
   width: 160px;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__top.has-promo-banner[style*="visibility: hidden;"] .header__top-menu-link--search-mobile {
+  visibility: hidden;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__top-menu-link-language {
   padding: 4px;
@@ -436,6 +472,23 @@
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__container-inner .header__top-menu .header__language-container li a:hover {
   font-weight: 600;
   text-decoration: none;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__container-inner .header__top-menu .header__mobile-toggle {
+  position: relative;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__container-inner .header__top-menu .header__mobile-toggle::before {
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-dark.svg);
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 32px;
+  height: 32px;
+  background: #fff;
+  pointer-events: none;
+  opacity: 0;
+}
+.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .header.has-promo-banner .header__container-inner .header__top-menu .header__mobile-toggle.active::before {
+  opacity: 1;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs {
   margin: 0;

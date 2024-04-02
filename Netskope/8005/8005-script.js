@@ -49,6 +49,11 @@ let bodyLoaded = setInterval(function () {
                 document.querySelector('.header__mobile-nav .header__mobile-nav-list').insertAdjacentHTML('beforeend', `<li class="header__mobile-nav-item"><a href="/netskope-technical-support" class="header__mobile-nav-item-link">Support</a></li>`);
             });
 
+            // on click of .header_mobile__navbar-toggler add class in parent
+            document.querySelector('.header_mobile__navbar-toggler').addEventListener('click', function () {
+                document.querySelector('.header__mobile-toggle').classList.toggle('active');
+            });
+
 
             //click event listener for document
             window.addEventListener('click', function (event) {
@@ -56,7 +61,7 @@ let bodyLoaded = setInterval(function () {
 
                 if (event.target.classList.contains('header_mobile__navbar-toggler')) {
                     console.log('clicked');
-                    document.querySelector('.header_mobile__navbar-toggler').setAttribute('src','//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/close.svg');
+
                 }
             });
 
