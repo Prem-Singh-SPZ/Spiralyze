@@ -150,6 +150,10 @@ $font-family_1: "Graphik", sans-serif;
               padding: 16px 32px 0;
             }
 
+            @media screen and (max-width: 767.98px) {
+              padding: 16px 24px 0;
+            }
+
             .gated-content__info {
               .gated-content__type {
                 display: none;
@@ -162,6 +166,11 @@ $font-family_1: "Graphik", sans-serif;
                 font-style: normal;
                 font-weight: 400;
                 line-height: 40px;
+
+                @media screen and (max-width: 767.98px) {
+                  font-size: 24px;
+                  line-height: 32px;
+                }
               }
             }
 
@@ -196,6 +205,7 @@ $font-family_1: "Graphik", sans-serif;
 
             @media screen and (max-width: 767.98px) {
               max-width: 100%;
+              padding: 0 24px;
             }
 
             > p {
@@ -216,6 +226,10 @@ $font-family_1: "Graphik", sans-serif;
 
             @media screen and (max-width: 1023.98px) {
               padding: 0 32px 16px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              padding: 0 24px 8px;
             }
 
             .gated-content__social,
@@ -249,6 +263,10 @@ $font-family_1: "Graphik", sans-serif;
 
             @media screen and (max-width: 1023.98px) {
               padding: 40px 13px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              padding: 32px 24px 23px;
             }
 
             .container {
@@ -292,6 +310,7 @@ $font-family_1: "Graphik", sans-serif;
                         background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-768.webp)
                           no-repeat bottom right;
                         background-size: cover;
+                        padding: 24px 24px 16px;
                       }
                       @media (max-width: 767.98px) {
                         background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-360.webp)
@@ -326,14 +345,32 @@ $font-family_1: "Graphik", sans-serif;
                         flex-direction: row-reverse;
                         right: 40px;
 
+                        @media (max-width: 767.98px) {
+                          flex-direction: row;
+                          padding: 0;
+                          right: 0;
+                        }
+
                         img {
                           margin: 0;
                           width: 32px;
                           height: 32px;
+
+                          @media (max-width: 767.98px) {
+                            width: 24px;
+                            height: 24px;
+                          }
                         }
                         .card__content__link-text {
                           display: block;
                           margin-right: 13px;
+                          @media (max-width: 767.98px) {
+                            font-size: 12px;
+                            font-style: normal;
+                            font-weight: 400;
+                            line-height: 20px;
+                            margin-left: 12px;
+                          }
                         }
                       }
                     }
@@ -396,7 +433,7 @@ $font-family_1: "Graphik", sans-serif;
               @media (max-width: 767.98px) {
                 flex-direction: column;
                 align-items: flex-start;
-               }
+              }
 
               .navbar-nav {
                 display: flex;
@@ -409,12 +446,16 @@ $font-family_1: "Graphik", sans-serif;
                 }
 
                 @media (max-width: 767.98px) {
-                 flex-direction: column;
-                 align-items: flex-start;
+                  flex-direction: column;
+                  align-items: flex-start;
                 }
 
                 li.menu-item {
                   margin-right: 28px;
+
+                  @media (max-width: 767.98px) {
+                    margin-bottom: 8px;
+                  }
 
                   &:last-child {
                     margin-right: 0;
@@ -440,6 +481,10 @@ $font-family_1: "Graphik", sans-serif;
                 font-weight: 400;
                 line-height: 20px;
                 white-space: nowrap;
+
+                @media (max-width: 767.98px) {
+                  margin-top: 14px;
+                }
               }
             }
           }
@@ -543,6 +588,10 @@ $font-family_1: "Graphik", sans-serif;
 
               @media screen and (max-width: 1023.98px) {
                 padding: 23px 32px;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                padding: 14px 32px;
               }
 
               .header__logo {
@@ -726,6 +775,11 @@ $font-family_1: "Graphik", sans-serif;
               margin-bottom: 24px;
             }
 
+            @media screen and (max-width: 767.98px) {
+              padding: 12px 24px;
+              margin-bottom: 16px;
+            }
+
             .breadcrumbs__container {
               overflow: hidden;
               .breadcrumbs__list {
@@ -801,6 +855,8 @@ $font-family_1: "Graphik", sans-serif;
 
             @media (max-width: 767.98px) {
               margin-left: 0;
+              padding: 24px 24px 32px;
+              margin-bottom: 16px;
             }
 
             .frm-logo {
@@ -815,6 +871,7 @@ $font-family_1: "Graphik", sans-serif;
 
                 @media screen and (max-width: 767.98px) {
                   text-align: center;
+                  padding: 0 8px;
                 }
               }
             }
@@ -1115,6 +1172,11 @@ $font-family_1: "Graphik", sans-serif;
               }
               .mktoButtonWrap {
                 margin-top: 16px !important;
+
+                @media screen and (max-width: 767.98px) {
+                  margin-top: 8px !important;
+                }
+
                 .mktoButton {
                   display: -webkit-box !important;
                   display: -ms-flexbox !important;
