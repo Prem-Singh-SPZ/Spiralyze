@@ -89,21 +89,20 @@ ready(function () {
           </div>
           <div class="form-wrapper">
             <div class="text-section">
-              <div class="small">Healthcare and patient analytics software</div>
-              <div class="big">Get Real-World Clinical Data
-              for 330+ Million Patients</div>
+              <div class="small">Complete Real-world data and innovative saas</div>
+              <div class="big">Insights You Can Trust to Drive Decision Making</div>
               <div class="list">
                 <div class="child"> 
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-1.png" alt="Healthcare Data Icon" width="32" height="32"/>
-                  <div class="desc"><strong>Healthcare Data:</strong> View provider, treatment, lab results, hospital records, payers, ethnicity, and other clinical data. 15 million new encounters daily.</div>
+                  <div class="desc"><strong>The Healthcare MapTM:</strong> Track the longitudinal and real-time patient journeys of 330+ million unique individuals across HCPs, HCOs, and sites of care.</div>
                 </div>
                 <div class="child">
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-2.png" alt="Patient Cohorts Icon" width="32" height="32"/>
-                  <div class="desc"><strong>Patient Cohorts:</strong> Create patient cohorts based on any criteria. Get alerts for new patient and provider opportunities. Engage via preferred channels.</div>
+                  <div class="desc"><strong>MapEnhance:</strong> Increase your understanding of the patient population with lab, EHR, genomics, race and ethnicity, mortality, insurance, and SDoH insights</div>
                 </div>
                 <div class="child">
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-3.png" alt="Analytics Icon" width="32" height="32"/>
-                  <div class="desc"><strong>Analytics:</strong> Generate reports on patient populations, treatment pathways, outcomes, and more. Forecast trends. Demonstrate therapeutic impact.</div>
+                  <div class="desc"><strong>AI-Driven SaaS:</strong> Accelerate speed-to-insights with our suite of fit-for-purpose solutions for Life Sciences, payers, patient advocacy organizations, and more</div>
                 </div>
               </div>
             </div>
