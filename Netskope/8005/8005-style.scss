@@ -1294,5 +1294,47 @@ $font-family_1: "Graphik", sans-serif;
         background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1711976684/netskope/8005/ui_mobile_12.webp) !important;
       }
     }
+
+    .js-hero-banner
+      > .container
+      .gated-content__container
+      .gated-content__left {
+      .rte {
+        > p:nth-child(1) strong {
+          font-weight: 600;
+        }
+
+        > p:nth-child(3) {
+          margin: 12px 0 0;
+        }
+
+        > ul {
+          margin-bottom: 12px;
+        }
+
+        > p:nth-child(6) {
+          margin-bottom: 0;
+        }
+
+        > p:nth-child(7) {
+          font-weight: 600;
+          margin-bottom: 15px;
+        }
+      }
+
+      .gated-content__content .gated-content__tags .gated-content__tag {
+        @media screen and (max-width: 767.98px) {
+          &:nth-child(1) {
+            order: 0;
+          }
+          &:nth-child(2) {
+            order: 2;
+          }
+          &:nth-child(3) {
+            order: 1;
+          }
+        }
+      }
+    }
   }
 }
