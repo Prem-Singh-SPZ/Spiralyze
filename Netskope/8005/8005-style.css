@@ -251,26 +251,17 @@
   padding: 3px 15.5px;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .related-resources-cards {
-  padding: 48px 40px;
+  padding: 48px 40px 28px;
   position: relative;
-}
-.spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .related-resources-cards::after {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 99%;
-  width: 100%;
-  height: 100%;
-  background: #fff;
 }
 @media screen and (max-width: 1023.98px) {
   .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .related-resources-cards {
-    padding: 40px 13px;
+    padding: 40px 13px 20px;
   }
 }
 @media screen and (max-width: 767.98px) {
   .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .related-resources-cards {
-    padding: 32px 24px 23px;
+    padding: 32px 24px 12px;
   }
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__left .related-resources-cards .container {
@@ -540,6 +531,11 @@
   max-width: 600px;
   margin-left: initial;
   width: 100%;
+}
+@media (min-width: 1023.98px) and (max-width: 1300.98px) {
+  .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right {
+    min-width: 45%;
+  }
 }
 @media (max-width: 1023.98px) {
   .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right {
@@ -827,7 +823,7 @@
 }
 @media screen and (max-width: 767.98px) {
   .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs {
-    padding: 8px 24px;
+    padding: 10px 24px;
     margin-bottom: 16px;
   }
 }
@@ -835,6 +831,7 @@
   overflow: hidden;
 }
 .spz-8005 .js-hero-banner > .container .gated-content__container .gated-content__right .breadcrumbs .breadcrumbs__container .breadcrumbs__list .breadcrumbs__item {
+  line-height: 1;
   margin-top: 4px;
   margin-bottom: 4px;
 }
