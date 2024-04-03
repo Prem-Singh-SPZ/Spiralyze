@@ -282,15 +282,34 @@ body.spz-6010 {
   border-color: #081a59 !important;
 }
 .spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField {
-  background-position: right 19px center !important;
   padding-right: 36px !important;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron.svg") !important;
-  background-color: #FFF !important;
-  background-size: 16px !important;
-  background-repeat: no-repeat !important;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
+  background: none !important;
+  background-image: none !important;
+  background-repeat: no-repeat !important;
+}
+.spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFormCol.select-wrap .mktoFieldWrap select option {
+  background: #fff !important;
+  color: inherit;
+  border-bottom: inherit;
+  padding: inherit;
+  font-family: "Graphik", sans-serif !important;
+}
+.spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFormCol.select-wrap .mktoFieldWrap:before {
+  content: "";
+  width: 16px;
+  height: 16px;
+  position: absolute;
+  right: 19px;
+  top: 18px;
+  z-index: 1;
+  pointer-events: none;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/netskope/1001/Chevron.svg") !important;
+}
+.spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFormCol.select-wrap .mktoFieldWrap.typing:before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/netskope/1001/Chevron_inverted.svg") !important;
 }
 .spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap select.mktoField option {
   background: inherit;
@@ -337,9 +356,6 @@ body.spz-6010 {
   font-size: 12px !important;
   line-height: 20px !important;
   color: #7e8bba !important;
-}
-.spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.typing select.mktoField {
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg") !important;
 }
 .spz-6010 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox {
   margin: -4px 0 8px 0;
@@ -917,14 +933,14 @@ let bodyLoaded = setInterval(function () {
             <div class="p-nanchor"><a href="https://www.netskope.com/netskope-technical-support">Support</a></div></div></div>\
             <div class="socialicon">\
             <div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div>\
-            <div class="socialicon-warp"><div class="nscos"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"><img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/facebook_1.svg" class="no-lazyload social-icons__ficon--off" alt="facebook icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/facebook.svg" class="no-lazyload social-icons__ficon--on" alt="facebook icon"> </a></div><div class="nscos"><a href="https://twitter.com/share?text= Delivering on the Promise of 100% Legacy VPN Retirement @Netskope&amp;url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Fwhite-papers%2Fdelivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/twitter_1.svg" class="no-lazyload social-icons__ticon--off" alt="twitter icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/twitter.svg" class="no-lazyload social-icons__ticon--on" alt="twitter icon"> </a></div></div><div class="nscos"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/linkedin_1.svg" class="no-lazyload social-icons__licon--off" alt="linkedin icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/linkedin.svg" class="no-lazyload social-icons__licon--on" alt="linkedin icon"> </a></div>\
+            <div class="socialicon-warp"><div class="nscos"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/analyst-reports/2023-gartner-magic-quadrant-for-security-service-edge%27"><img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/facebook_1.svg" class="no-lazyload social-icons__ficon--off" alt="facebook icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/facebook.svg" class="no-lazyload social-icons__ficon--on" alt="facebook icon"> </a></div><div class="nscos"><a href="https://twitter.com/share?text=%202023%20Gartner%C2%AE%20Magic%20Quadrant%E2%84%A2%20for%20Security%20Service%20Edge%20@Netskope&url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Fanalyst-reports%2F2023-gartner-magic-quadrant-for-security-service-edge"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/twitter_1.svg" class="no-lazyload social-icons__ticon--off" alt="twitter icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/twitter.svg" class="no-lazyload social-icons__ticon--on" alt="twitter icon"> </a></div></div><div class="nscos"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.netskope.com/resources/analyst-reports/2023-gartner-magic-quadrant-for-security-service-edge%27"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/linkedin_1.svg" class="no-lazyload social-icons__licon--off" alt="linkedin icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1710782028/netskope/8003/linkedin.svg" class="no-lazyload social-icons__licon--on" alt="linkedin icon"> </a></div>\
                 </div></div>\
                <div class="footer-Nlinks tab-mob">\
                 <div class="socialicon">\
                     <div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div>\
-                    <div class="socialicon-warp"><div class="nscos"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096753/netskope/8004/facebook_1.svg" class="no-lazyload social-icons__ficon--off" alt="facebook icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708369722/netskope/8004/Facebook-icon.svg" class="no-lazyload social-icons__ficon--on" alt="facebook icon"> </a></div>\
-                     <div class="nscos"><a href="https://twitter.com/share?text= Delivering on the Promise of 100% Legacy VPN Retirement @Netskope&amp;url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Fwhite-papers%2Fdelivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096754/netskope/8004/twitter_1.svg" class="no-lazyload social-icons__ticon--off" alt="twitter icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708370609/netskope/8004/Twitter-icon.svg" class="no-lazyload social-icons__ticon--on" alt="twitter icon"> </a></div>\
-                        <div class="nscos"><a href="https://www.linkedin.com/shareArticle?mini=true&amp;url=https://www.netskope.com/resources/white-papers/delivering-on-the-promise-of-100-legacy-vpn-retirement"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096753/netskope/8004/linkedin_1.svg" class="no-lazyload social-icons__licon--off" alt="linkedin icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708370608/netskope/8004/Linkedin-icon.svg" class="no-lazyload social-icons__licon--on" alt="linkedin icon"> </a></div>\
+                    <div class="socialicon-warp"><div class="nscos"><a href="https://www.facebook.com/sharer/sharer.php?u=https://www.netskope.com/resources/analyst-reports/2023-gartner-magic-quadrant-for-security-service-edge%27"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096753/netskope/8004/facebook_1.svg" class="no-lazyload social-icons__ficon--off" alt="facebook icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708369722/netskope/8004/Facebook-icon.svg" class="no-lazyload social-icons__ficon--on" alt="facebook icon"> </a></div>\
+                     <div class="nscos"><a href="https://twitter.com/share?text=%202023%20Gartner%C2%AE%20Magic%20Quadrant%E2%84%A2%20for%20Security%20Service%20Edge%20@Netskope&url=https%3A%2F%2Fwww.netskope.com%2Fresources%2Fanalyst-reports%2F2023-gartner-magic-quadrant-for-security-service-edge"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096754/netskope/8004/twitter_1.svg" class="no-lazyload social-icons__ticon--off" alt="twitter icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708370609/netskope/8004/Twitter-icon.svg" class="no-lazyload social-icons__ticon--on" alt="twitter icon"> </a></div>\
+                        <div class="nscos"><a href="https://www.linkedin.com/shareArticle?mini=true&url=https://www.netskope.com/resources/analyst-reports/2023-gartner-magic-quadrant-for-security-service-edge%27"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708096753/netskope/8004/linkedin_1.svg" class="no-lazyload social-icons__licon--off" alt="linkedin icon"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708370608/netskope/8004/Linkedin-icon.svg" class="no-lazyload social-icons__licon--on" alt="linkedin icon"> </a></div>\
                        </div></div>\
                        <div class="copiright">\
                 <div class="sec-policy"><div class="sec-policyinner"><div class="p-nanchor"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></div>\
@@ -1012,6 +1028,8 @@ function formModify() {
   document.querySelector('#LblPhone').textContent = "Phone";
   document.querySelector('#Country option:first-child').textContent = "";
   document.querySelector('#LblCountry').textContent = "Country";
+  document.querySelector('#Country').closest('.mktoFormCol').classList.add('select-wrap');
+
 
   // Change Field Position
   var email_field = document.querySelector('.spz-6010 .landing-page-v3__form .mktoForm .mktoFormRow.field-3');
