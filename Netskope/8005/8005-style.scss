@@ -885,9 +885,11 @@ $font-family_1: "Graphik", sans-serif;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 24px;
-                    //   -webkit-line-clamp: 1;
-                    // white-space: nowrap;
                     margin: 0 8px;
+
+                    &::after {
+                      background-color: #081a59;
+                    }
 
                     @media screen and (max-width: 1023.98px) {
                       color: #fff;
@@ -902,20 +904,6 @@ $font-family_1: "Graphik", sans-serif;
                   &:first-child .breadcrumbs__item-link {
                     margin-left: 0;
                   }
-
-                  // &:last-child {
-                  //   max-width: 202px;
-                  //   .breadcrumbs__item-link {
-                  //     height: 24px;
-                  //     display: -webkit-box;
-                  //     -webkit-line-clamp: 1;
-                  //     -webkit-box-orient: vertical;
-                  //     overflow: hidden;
-                  //     -o-text-overflow: ellipsis;
-                  //     text-overflow: ellipsis;
-                  //     word-break: break-all;
-                  //   }
-                  // }
                 }
               }
             }
