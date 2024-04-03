@@ -211,6 +211,12 @@ $font-family_1: "Graphik", sans-serif;
 
             > p {
               margin-bottom: 12px;
+              color: rgba(255, 255, 255, 0.8);
+
+              strong, a {
+                font-weight: 600;
+                color: rgba(255, 255, 255, 0.8);
+              }
 
               &:nth-child(2) {
                 margin-bottom: 0;
@@ -219,6 +225,10 @@ $font-family_1: "Graphik", sans-serif;
 
             ul {
               padding-left: 24px;
+
+              li {
+                color: rgba(255, 255, 255, 0.8);
+              }
             }
           }
 
@@ -260,7 +270,7 @@ $font-family_1: "Graphik", sans-serif;
           }
 
           .related-resources-cards {
-            padding:48px 40px 28px;
+            padding: 48px 40px 28px;
             position: relative;
 
             @media screen and (max-width: 1023.98px) {
@@ -1281,6 +1291,16 @@ $font-family_1: "Graphik", sans-serif;
     }
   }
 
+  &.spz-str {
+    .gated-content__thumbnail {
+      background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1711976667/netskope/8005/ui_desktop_tablet_12.webp) !important;
+
+      @media screen and (max-width: 767.98px) {
+        background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1711976666/netskope/8005/ui_mobile_11.webp) !important;
+      }
+    }
+  }
+
   &.spz-cur {
     .gated-content__thumbnail {
       background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1711976687/netskope/8005/ui_desktop_tablet_13.webp) !important;
@@ -1295,10 +1315,6 @@ $font-family_1: "Graphik", sans-serif;
       .gated-content__container
       .gated-content__left {
       .rte {
-        > p:nth-child(1) strong {
-          font-weight: 600;
-        }
-
         > p:nth-child(3) {
           margin: 12px 0 0;
         }
@@ -1312,7 +1328,6 @@ $font-family_1: "Graphik", sans-serif;
         }
 
         > p:nth-child(7) {
-          font-weight: 600;
           margin-bottom: 15px;
         }
       }
