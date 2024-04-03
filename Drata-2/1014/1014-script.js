@@ -27,21 +27,87 @@
       ).textContent = "How did you hear about us?*";
 
       // move .MuiTypography-body1 after .hs_submit
-      document
-        .querySelector(
-          ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit"
-        )
-        .insertAdjacentElement(
-          "afterend",
-          document.querySelector(
-            ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"
-          )
-        );
+      if (!document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit + .MuiTypography-body1")) {
+        document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit").insertAdjacentElement("afterend", document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"));
+      }
       // }, 50);
 
       // setTimeout(() => {
       //   clearInterval(updateLabel);
       // }, 1000);
+    });
+  }
+
+  function createTest1010() {
+    var cssElement = document.createElement('style');
+    cssElement.type = 'text/css';
+    var cssCode = `
+  .spz-1010 div#__next {display: none;}
+  .spz-1010 .mui-1ek5bku-Modal-modalContentContainer {
+    max-width: 633px;
+    width: 100%;
+    margin: auto;
+    overflow: unset;
+    max-height: unset;
+    position: relative;
+    top: initial;
+    left: initial;
+    transform: unset;
+  }
+  .spz-1010 .mui-79ws1d-MuiModal-root {
+    display: flex;
+    position: absolute;
+    padding: 20px;
+    overflow: auto;
+  }
+  .spz-1010 .MuiModal-root.mui-79ws1d-MuiModal-root > .MuiBox-root.mui-0 {
+    display: none;
+  }
+  .spz-1010 .spz-video-bg {
+    position: fixed;
+    left: 0;
+    top: 0;
+    min-width: 100%; 
+    min-height: 100%;
+    z-index: 99;
+  }
+  .spz-1010 .spz-video-bg::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    backdrop-filter: blur(6px);
+    -webkit-backdrop-filter: blur(6px);
+  }
+   @media (min-width: 1900.98px) {.spz-1010 .spz-video-bg video{width:100%;}}
+   @media(max-width: 767.98px) {
+    .spz-1010 .mui-79ws1d-MuiModal-root {
+      padding: 15px
+    }
+   }
+  `;
+    cssElement.appendChild(document.createTextNode(cssCode));
+    document.head.appendChild(cssElement);
+    waitForElm('.mui-79ws1d-MuiModal-root').then(function () {
+      document.querySelector("body").classList.add("loading-spz_test");
+      document.querySelector("body").classList.add("spz-1010");
+      if (!document.querySelector('.spz-1010 .spz-video-bg')) {
+        document.body.insertAdjacentHTML("afterbegin", `<div class="spz-video-bg">
+            <video autoplay muted loop playsinline>
+              <source src="//res.cloudinary.com/spiralyze/video/upload/v1706178007/drata/1010/Video.mp4" type="video/mp4">
+            </video>
+          </div>`);
+      }
+      waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
+        let setValue = setInterval(() => {
+          if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '#1010_variant') {
+            clearInterval(setValue);
+          }
+          document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1010_variant');
+        }, 100);
+      });
     });
   }
 
@@ -122,6 +188,11 @@
 
   function removeTest() {
     document.body.classList.remove("spz-1014");
+    document.body.classList.remove("loading-spz_test");
+    document.body.classList.remove("spz-1010");
+    if (document.querySelector('.spz-video-bg')) {
+      document.querySelector('.spz-video-bg').remove();
+    }
   }
 
   function setHiddenFields() {
@@ -168,6 +239,7 @@
     }
     if (isSameUrl(url, testURL, true)) {
       createTest();
+      createTest1010();
     } else {
       removeTest();
     }

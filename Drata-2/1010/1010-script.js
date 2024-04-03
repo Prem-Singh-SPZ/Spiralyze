@@ -3,9 +3,27 @@
     var cssElement = document.createElement('style');
     cssElement.type = 'text/css';
     var cssCode = `
+    .spz-1010 div#__next {display: none;}
+    .spz-1010 .mui-1ek5bku-Modal-modalContentContainer {
+      max-width: 633px;
+      width: 100%;
+      margin: auto;
+      overflow: unset;
+      max-height: unset;
+      position: relative;
+      top: initial;
+      left: initial;
+      transform: unset;
+    }
+    .spz-1010 .mui-79ws1d-MuiModal-root {
+      display: flex;
+      position: absolute;
+      padding: 20px;
+      overflow: auto;
+    }
     .spz-1010 .MuiModal-root.mui-79ws1d-MuiModal-root > .MuiBox-root.mui-0 {
       display: none;
-    } 
+    }
     .spz-1010 .spz-video-bg {
       position: fixed;
       left: 0;
@@ -25,6 +43,11 @@
       -webkit-backdrop-filter: blur(6px);
     }
      @media (min-width: 1900.98px) {.spz-1010 .spz-video-bg video{width:100%;}}
+     @media(max-width: 767.98px) {
+      .spz-1010 .mui-79ws1d-MuiModal-root {
+        padding: 15px
+      }
+     }
     `;
     cssElement.appendChild(document.createTextNode(cssCode));
     document.head.appendChild(cssElement);
@@ -34,7 +57,7 @@
             document.querySelector("body").classList.add("spz-1010");
             if (!document.querySelector('.spz-1010 .spz-video-bg')) {
                 document.body.insertAdjacentHTML("afterbegin", `<div class="spz-video-bg">
-              <video autoplay muted loop>
+              <video autoplay muted loop playsinline>
                 <source src="//res.cloudinary.com/spiralyze/video/upload/v1706178007/drata/1010/Video.mp4" type="video/mp4">
               </video>
             </div>`);
