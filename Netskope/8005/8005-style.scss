@@ -10,7 +10,8 @@ $font-family_1: "Graphik", sans-serif;
   .header__get-started,
   footer.netskope-footer,
   .header__popup,
-  .header__top-menu-link--search, .v3-two-column-image {
+  .header__top-menu-link--search,
+  .v3-two-column-image {
     display: none !important;
   }
 
@@ -140,6 +141,18 @@ $font-family_1: "Graphik", sans-serif;
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+
+            @media (max-width: 1023.98px) {
+              right: -618.248px;
+              top: -391px;
+            }
+
+            @media (min-width: 1900px) {
+              width: 977.752px;
+              height: 823px;
+              left: 137px;
+              top: -507px;
+            }
           }
 
           .gated-content__banner {
@@ -213,7 +226,8 @@ $font-family_1: "Graphik", sans-serif;
               margin-bottom: 12px;
               color: rgba(255, 255, 255, 0.8);
 
-              strong, a {
+              strong,
+              a {
                 font-weight: 600;
                 color: rgba(255, 255, 255, 0.8);
               }
@@ -530,6 +544,10 @@ $font-family_1: "Graphik", sans-serif;
             max-width: 100%;
             width: 100%;
             background: #081a59;
+          }
+
+          @media (min-width: 1900.98px) {
+            margin-left: 240px;
           }
 
           //Header changes
