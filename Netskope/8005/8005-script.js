@@ -19,7 +19,7 @@ let bodyLoaded = setInterval(function () {
                 /*Truecontrolclass*/
                 var BodyClasses = {
                     "delivering-on-the-promise-of-100-legacy-vpn-retirement": "resources_whitepapers",
-                    "why-you-should-and-how-you-can-move-away-from-existing-dlp-programs": "resources_whitepapers",
+                    "why-you-should-and-how-you-can-move-away-from-existing-dlp-programs": "resources_dlp",
                     "ebooks/the-6-most-compelling-use-cases-for-complete-legacy-vpn-replacement": "spz-mos",
                     "ebooks/security-service-edge-sse-for-dummies": "spz-cur",
                     "ebooks/modern-data-loss-prevention-dlp-for-dummies": "spz-str"
@@ -36,7 +36,9 @@ let bodyLoaded = setInterval(function () {
                 document.querySelector('.gated-content__container .gated-content__right').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .breadcrumbs'));
                 document.querySelector('.gated-content__container .gated-content__right').insertAdjacentElement('afterbegin', document.querySelector('#wrapper .header.has-promo-banner'));
                 document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('afterbegin', document.querySelector('.gated-content__top .gated-content__banner'));
-                document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('beforeend', document.querySelector('#components__content .related-resources-cards'));
+                if(document.querySelector('#components__content .related-resources-cards')){
+                    document.querySelector('.gated-content__container .gated-content__left').insertAdjacentElement('beforeend', document.querySelector('#components__content .related-resources-cards'));
+                }
 
                 //Footer addition
 
@@ -112,7 +114,9 @@ function iconUpdate() {
         document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975619/netskope/8005/chevron-down-light.svg';
         document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/search-light.svg';
         document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/logo-light.svg';
-        document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
+        if(document.querySelector('.related-resources-cards .filters__content .filters__wrapper')){
+            document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
+        }
         document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-light.svg');
 
         if (window.innerWidth < 768) {
@@ -128,7 +132,9 @@ function iconUpdate() {
         document.querySelector('.header__top-menu-link-language img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711354290/netskope/8005/chevron-down.svg';
         document.querySelector('.header__top-menu-link--search-mobile img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/search-dark.svg';
         document.querySelector('.header__logo-image--white img').src = '//res.cloudinary.com/spiralyze/image/upload/v1711975524/netskope/8005/logo-dark.svg';
-        document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
+        if(document.querySelector('.related-resources-cards .filters__content .filters__wrapper')){
+            document.querySelector('.related-resources-cards .filters__content .filters__wrapper').classList.add('filters__wrapper--list');
+        }
         document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-dark.svg');
     }
 
