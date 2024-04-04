@@ -17,7 +17,6 @@
         }
       });
 
-      // let updateLabel = setInterval(() => {
       document.querySelector(
         ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button"
       ).textContent = "Get Started";
@@ -30,11 +29,6 @@
       if (!document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit + .MuiTypography-body1")) {
         document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit").insertAdjacentElement("afterend", document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"));
       }
-      // }, 50);
-
-      // setTimeout(() => {
-      //   clearInterval(updateLabel);
-      // }, 1000);
     });
   }
 
@@ -187,12 +181,14 @@
   }
 
   function removeTest() {
-    document.body.classList.remove("spz-1014");
-    document.body.classList.remove("loading-spz_test");
-    document.body.classList.remove("spz-1010");
-    if (document.querySelector('.spz-video-bg')) {
-      document.querySelector('.spz-video-bg').remove();
-    }
+    setTimeout(() => {
+      if (document.querySelector('.spz-video-bg')) {
+        document.body.classList.remove("spz-1014");
+        document.body.classList.remove("loading-spz_test");
+        document.body.classList.remove("spz-1010");
+        document.querySelector('.spz-video-bg').remove();
+      }
+    }, 2000);
   }
 
   function setHiddenFields() {
