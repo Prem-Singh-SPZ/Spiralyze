@@ -655,6 +655,8 @@ body.spz-6010 {
 @media (max-width: 1199.98px) {
   .spz-6010 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content::after {
     bottom: -100px;
+    width: 200px;
+    left: -164px;
   }
 }
 @media (max-width: 767.98px) {
