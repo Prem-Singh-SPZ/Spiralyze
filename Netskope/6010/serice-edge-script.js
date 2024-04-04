@@ -255,7 +255,7 @@ body.spz-6010 {
   padding: 3px 15px;
 }
 .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{
-padding: 8px;
+margin: 8px;
 }
 .spz-6010 .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags ~ * {
   display: none;
@@ -828,7 +828,7 @@ padding: 8px;
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
   .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
-  .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{order:7;padding:8px 3px;}
+  .spz-6010 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{order:7;margin:8px 3px;}
 }
 /*--- Footer CSS Start Here ---*/
 .spz-6010 .spz-Nfooter {
@@ -1018,21 +1018,21 @@ let bodyLoaded = setInterval(function () {
     clearInterval(bodyLoaded);
 
     if (!body.classList.contains('spz-6010')) {
-		
-	    body.classList.add('spz-6010');
 
-		  waitForElm('.spz-6010 .js-hero-banner').then(function () {
+      body.classList.add('spz-6010');
+
+      waitForElm('.spz-6010 .js-hero-banner').then(function () {
         var heading = document.querySelector(".spz-6010 .js-hero-banner .page-intro__resource-title span").textContent;
         var sub_heading = document.querySelector(".spz-6010 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
         var short_description = document.querySelector(".spz-6010 .js-hero-banner .gated-content__left .rte p:nth-child(02)").outerHTML;
-      
+
         // Hero Form Content
         document.querySelector('.spz-6010 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
-          <h2 class="form-content-heading">`+heading+`</h2>
-          <h6 class="form-content-subheading">`+sub_heading+`</h6>
-          <div class="form-content-description">`+short_description+`</div>
+          <h2 class="form-content-heading">`+ heading + `</h2>
+          <h6 class="form-content-subheading">`+ sub_heading + `</h6>
+          <div class="form-content-description">`+ short_description + `</div>
           <div class="hero-form-img">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+heading+`">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
           </div>
         </div>`);
 
@@ -1040,18 +1040,20 @@ let bodyLoaded = setInterval(function () {
           <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp">
           <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/tablet_report.webp">
           <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+heading+`">
-        </picture>`+document.querySelector(".spz-6010 .js-hero-banner .gated-content__left").innerHTML);
-        document.querySelector('.spz-6010 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">`+heading+`</h2>`);
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
+        </picture>`+ document.querySelector(".spz-6010 .js-hero-banner .gated-content__left").innerHTML);
+        document.querySelector('.spz-6010 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">` + heading + `</h2>`);
         document.querySelector('.spz-6010 .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp" alt="`+heading+`">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp" alt="`+ heading + `">
         </div>`);
-        
+
         //Form internal code
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
           formModify();
           setHiddenFields();
+          document.querySelector('.js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag').setAttribute('href', 'javascript:void(0)');
         });
+
 
         // New Footer
         document.querySelector('.spz-6010 .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="spz-Nfooter"><div class="footer-container">\
@@ -1079,8 +1081,8 @@ let bodyLoaded = setInterval(function () {
                 <div class="p-nanchor"><a href="https://www.netskope.com/netskope-technical-support">Support</a></div></div>\
                  <div class="ncopyright"> © 2024, All rights reserved.</div>\
                 </div>\
-                </div></div></div></div>`);  
-		  });
+                </div></div></div></div>`);
+      });
     }
   }
 });
@@ -1115,9 +1117,9 @@ function formModify() {
 
   var formDiv = document.querySelector('.spz-6010 .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
   // Form Extra Titles
-	if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-		formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
-	}
+  if (formDiv && document.querySelectorAll('.form_title').length == 0) {
+    formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+  }
   // form CTA Update
   var form_button = setInterval(() => {
     var textChng = document.querySelector('.spz-6010 .js-hero-banner .gated-content__container .gated-content__right .mktoForm .mktoButtonRow .mktoButton');
@@ -1128,14 +1130,14 @@ function formModify() {
   }, 100);
 
   // Updating Form Labels
-	document.querySelector('#LblFirstName').textContent = "First Name";
-	document.querySelector('#LblLastName').textContent = "Last Name";
-	document.querySelector('#LblEmail').textContent = "Business Email";
-	document.querySelector('#LblCompany').textContent = "Company";
-	document.querySelector('#LblTitle').textContent = "Job Title";
-	document.querySelector('#LblPhone').textContent = "Phone";
-	document.querySelector('#Country option:first-child').textContent = "";
-	document.querySelector('#LblCountry').textContent = "Country";
+  document.querySelector('#LblFirstName').textContent = "First Name";
+  document.querySelector('#LblLastName').textContent = "Last Name";
+  document.querySelector('#LblEmail').textContent = "Business Email";
+  document.querySelector('#LblCompany').textContent = "Company";
+  document.querySelector('#LblTitle').textContent = "Job Title";
+  document.querySelector('#LblPhone').textContent = "Phone";
+  document.querySelector('#Country option:first-child').textContent = "";
+  document.querySelector('#LblCountry').textContent = "Country";
 
   document.querySelector('#Country').closest('.mktoFormCol').classList.add('select-wrap');
 
@@ -1150,58 +1152,58 @@ function formModify() {
   form_footer.before(optout_field);
 
   var zip_row = document.createElement("div");
-	zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
-	zip_row.classList.add('mktoFormRow');
-	zip_row.classList.add('mktoZipRow');
-	
-	var extraRow = document.querySelectorAll(".spz-6010 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow")[7];
-	insertAfter(extraRow, zip_row);
-	
-	const zip_row_old = document.querySelector(".mktoPlaceholderPostalCode");
-	const zip_row_new = document.querySelector(".mktoZipRow");
-	zip_row_new.appendChild(zip_row_old);
+  zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
+  zip_row.classList.add('mktoFormRow');
+  zip_row.classList.add('mktoZipRow');
+
+  var extraRow = document.querySelectorAll(".spz-6010 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow")[7];
+  insertAfter(extraRow, zip_row);
+
+  const zip_row_old = document.querySelector(".mktoPlaceholderPostalCode");
+  const zip_row_new = document.querySelector(".mktoZipRow");
+  zip_row_new.appendChild(zip_row_old);
 
   // form state
   var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap input, body form.mktoForm .mktoFormCol .mktoFieldWrap select';
 
   document.addEventListener('focus', function (event) {
-		if (event.target.matches(selector)) {
-			event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
-		}
-	}, true);	
+    if (event.target.matches(selector)) {
+      event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+    }
+  }, true);
 
   var eventList = ["blur", "focusout", "keyup", "change"];
-	for (s_event of eventList) {
-		document.addEventListener(s_event, function (event) {
-			if (event.target.matches(selector)) {
-				if (event.target.value == null || event.target.value == '') {
-					event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
-				} else {
-					event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
-				}
-			}
-		});
-	}
-		
-	document.addEventListener('focusout', function (event) {
-		document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-			elem.classList.remove('active', 'typing');
-		})
-	}, true);
+  for (s_event of eventList) {
+    document.addEventListener(s_event, function (event) {
+      if (event.target.matches(selector)) {
+        if (event.target.value == null || event.target.value == '') {
+          event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
+        } else {
+          event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
+        }
+      }
+    });
+  }
+
+  document.addEventListener('focusout', function (event) {
+    document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
+      elem.classList.remove('active', 'typing');
+    })
+  }, true);
 }
 
 function setHiddenFields() {
-	waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
-		const field_int = setInterval(function () {
-			if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-				if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#6010_spz_variant") {
-					clearInterval(field_int);
-				}
-				if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != ''){
-					document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6010_spz_variant');
-				}
-				document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6010_spz_variant');
-			}
-		}, 100);
-	});
+  waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
+    const field_int = setInterval(function () {
+      if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#6010_spz_variant") {
+          clearInterval(field_int);
+        }
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
+          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6010_spz_variant');
+        }
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#6010_spz_variant');
+      }
+    }, 100);
+  });
 }

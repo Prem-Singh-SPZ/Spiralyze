@@ -284,6 +284,9 @@ body.spz-6009-tc {
   letter-spacing: 0em;
   padding: 3px 15px;
 }
+.spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{
+  margin: 8px;
+  }
 .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__content .gated-content__tags ~ * {
   display: none;
 }
@@ -834,6 +837,7 @@ body.spz-6009-tc {
   .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(04) {order: 4}
   .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
   .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
+  .spz-6009-tc .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{order:7;margin:8px 3px;}
 }`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
@@ -880,6 +884,7 @@ let bodyLoaded = setInterval(function () {
         waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
           formModify();
           setHiddenFields();
+          document.querySelector('.js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag').setAttribute('href', 'javascript:void(0)');
         });
 
         // Lock Hero
