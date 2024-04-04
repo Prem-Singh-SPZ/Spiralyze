@@ -1063,7 +1063,7 @@ let bodyLoaded = setInterval(function () {
           });
         });
 
-        // New Footer
+        // New Footer 
         document.querySelector('.spz-6010 .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="spz-Nfooter"><div class="footer-container">\
         <div class="footer-Nlinks">\
             <div class="ncopyright"> © 2024, All rights reserved.</div>\
