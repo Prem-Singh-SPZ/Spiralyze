@@ -391,7 +391,7 @@ ready(function () {
       const CROInterval = setInterval(() => {
         if (document.querySelector('.spz-2001 #new-formDemo-wrapper input[name="cro1"]')) {
           clearInterval(CROInterval)
-          document.querySelector('.spz-2001 #new-formDemo-wrapper input[name="cro1"]').value = "#1001_variant"
+          document.querySelector('.spz-2001 #new-formDemo-wrapper input[name="cro1"]').value = "#2001_variant"
         }
         i++;
         if (i > 6) {
