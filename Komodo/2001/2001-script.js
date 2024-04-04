@@ -545,14 +545,25 @@ ready(function () {
     }
     //non targeted page
     else {
-      let elementArray = [];
-      for (let i = 0; i < document.querySelectorAll('a[href="#popup_request_a_demo"]').length; i++) {
-        elementArray[i] = document.querySelectorAll('a[href="#popup_request_a_demo"]')[i];
-      }
-      for (let i = 0; i < elementArray.length; i++) {
-        elementArray[i].setAttribute("href", "https://www.komodohealth.com/get-a-demo");
-        elementArray[i].removeAttribute("rel");
-      }
+      // let elementArray = [];
+      // for (let i = 0; i < document.querySelectorAll('a[href="#popup_request_a_demo"]').length; i++) {
+      //   elementArray[i] = document.querySelectorAll('a[href="#popup_request_a_demo"]')[i];
+      // }
+      // for (let i = 0; i < elementArray.length; i++) {
+      //   elementArray[i].setAttribute("href", "https://www.komodohealth.com/get-a-demo");
+      //   elementArray[i].removeAttribute("rel");
+      // }
+
+      let rfst = setInterval(() => {
+        document.querySelectorAll('a[href="#popup_request_a_demo"]').forEach(function (el) {
+          el.setAttribute("href", "https://www.komodohealth.com/get-a-demo");
+          el.removeAttribute("rel");
+        })
+      }, 100);
+
+      setTimeout(() => {
+        clearInterval(rfst);
+      }, 2000);
     }
   }
 })

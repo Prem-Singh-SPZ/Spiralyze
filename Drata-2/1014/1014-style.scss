@@ -239,8 +239,6 @@ body.spz-1014 {
                   display: none;
                 }
 
-              
-
                 &.field-focus:not(.hs-fieldtype-checkbox) {
                   .input {
                     box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
@@ -413,7 +411,7 @@ body.spz-1014 {
               &.field-error {
                 .input {
                   .hs-input {
-                    border-color:#FC7881;
+                    border-color: #fc7881;
                     // box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
                     // color: #444;
 
@@ -484,7 +482,6 @@ body.spz-1014 {
                 // }
               }
 
-
               &.field-untouched {
                 .input .hs-input:not(:placeholder-shown) ~ label {
                   &.hs-label-spz {
@@ -547,6 +544,10 @@ body.spz-1014 {
                         .MuiCheckbox-colorPrimary {
                           padding: 0 8px 0 0;
                           border-radius: 0;
+
+                          &.Mui-checked + span.MuiFormControlLabel-label {
+                            font-weight: 600;
+                          }
                         }
 
                         &:nth-child(1) {
@@ -639,7 +640,7 @@ body.spz-1014 {
             font-weight: 600;
             font-size: 12px;
             line-height: 14px;
-            color: #FC7881;
+            color: #fc7881;
             list-style: none;
             margin: 0;
             padding: 0;
