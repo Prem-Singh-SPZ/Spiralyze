@@ -1054,6 +1054,14 @@ let bodyLoaded = setInterval(function () {
           document.querySelector('.js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag').setAttribute('href', 'javascript:void(0)');
         });
 
+        document.querySelectorAll(".show-hide-tag").forEach(showHideTag => {
+          showHideTag.addEventListener("click", function (event) {
+            event.preventDefault();
+            const hideTags = document.querySelectorAll(".hide-tag");
+            hideTags.forEach(hideTag => hideTag.style.display = "block");
+            this.style.display = "none";
+          });
+        });
 
         // New Footer
         document.querySelector('.spz-6010 .js-hero-banner').insertAdjacentHTML("beforeend", `<div class="spz-Nfooter"><div class="footer-container">\
