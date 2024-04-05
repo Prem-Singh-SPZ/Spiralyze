@@ -14,10 +14,6 @@ body.spz-6009-tc {
   padding: 32px;
   text-align: center;
   border-top: 1px solid #FFFFFF33;
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 99;
 }
 .spz-6009-tc.show_content .lock_hero {display: none;}
 .spz-6009-tc .lock_hero span {
