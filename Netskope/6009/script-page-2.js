@@ -93,7 +93,7 @@ body.spz-6009 {
 .spz-6009 .js-hero-banner::before {
   position: absolute;
   content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6001/background_pattern_2.webp");
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1712300492/netskope/6009/background_pattern_1440.svg");
   background-size: contain;
   background-repeat: no-repeat;
   width: 100%;
@@ -104,16 +104,21 @@ body.spz-6009 {
 }
 @media (min-width: 1900px) and (max-width: 2500px) {
   .spz-6009 .js-hero-banner::before {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700439/netskope/6001/1920_background_pattern.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1712300492/netskope/6009/background_pattern_1440.svg");
     background-size: contain;
     background-repeat: no-repeat;
   }
 }
 @media (min-width: 2500px) and (max-width: 3500px) {
   .spz-6009 .js-hero-banner::before {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1701700422/netskope/6001/2560_background_pattern.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1712300568/netskope/6009/background_pattern_2560.svg");
     background-size: contain;
     background-repeat: no-repeat;
+  }
+}
+@media (min-width: 3500px) {
+  .spz-6009 .js-hero-banner::before {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1712300505/netskope/6009/background_pattern_3840.svg");
   }
 }
 .spz-6009 .js-hero-banner .gated-content__container {
@@ -753,11 +758,6 @@ body.spz-6009 {
   }
   .spz-6009 .header.has-promo-banner .header__container-inner {
     max-width: 548px;
-  }
-}
-@media (min-width: 3500px) {
-  .spz-6009 .js-hero-banner::before {
-    background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1701688623/netskope/6001/4k_background_pattern.svg");
   }
 }
 @media (max-width: 1199.98px) {
