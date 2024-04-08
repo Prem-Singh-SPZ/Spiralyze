@@ -1,0 +1,192 @@
+let bodyLoaded = setInterval(function () {
+  const body = document.querySelector('body');
+  if (body) {
+    clearInterval(bodyLoaded);
+
+    var intr = setInterval(function () {
+      if (document.querySelector('.landing-page-v3__container-inner') && !document.querySelector('body').classList.contains('spz-7006')) {
+        clearInterval(intr);
+        document.body.classList.add('spz-7006');
+        code_inject();
+      }
+    }, 100);
+
+    function code_inject() {
+
+      var is_opera = !!window.opera || navigator.userAgent.indexOf(' OPR/') >= 0;
+      var is_Edge = navigator.userAgent.indexOf("Edge") > -1;
+      var is_chrome = !!window.chrome && !is_opera && !is_Edge;
+      var is_explorer = typeof document !== 'undefined' && !!document.documentMode && !is_Edge;
+      var is_firefox = typeof window.InstallTrigger !== 'undefined';
+      var is_safari = /^((?!chrome|android).)*safari/i.test(navigator.userAgent);
+      if (is_chrome) {
+        document.body.classList.add('chrome');
+      } else if (/^((?!chrome|android).)*safari/i.test(navigator.userAgent)) {
+        document.body.classList.add('safari');
+      } else if (is_firefox) {
+        document.body.classList.add('firefox');
+      }
+
+      var BodyClasses = {
+        "lp-gartner-market-guide-for-zero-trust-network-access-sem": "zero_trust",
+        "lp-gartner-market-guide-for-single-vendor-sase-sem": "single_vendor",
+      };
+      var currentUrl = window.location.href;
+      for (var key in BodyClasses) {
+        if (currentUrl.includes(key)) {
+          body.classList.add(BodyClasses[key]);
+        }
+      }
+
+
+
+      document.querySelector('.landing-page-v3__content-container .plus-orange').insertAdjacentHTML('beforebegin', '<div class="spz-gartner-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1702652529/netskope/7001/grtner_wrapper_1.svg" alt="Gartner Logo"></div>')
+      document.querySelector('.landing-page-v3__form-container .landing-page-v3__form-content').insertAdjacentHTML('beforebegin', `<div class="spz-formlogo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711024659/netskope/7006/logo.svg" alt="Netskope Logo"></div><div class="spz-form-title"><h3>Get <span>Gartner</span> report</h3></div>`)
+
+      let privacyHtml = `
+          <div class="spz-form-privacy">
+            <p>© 2024, All rights reserved.</p>
+            <a href="https://www.netskope.com/privacy-policy">Privacy Policy</a>
+          </div>`;
+
+      document.querySelector('.landing-page-v3__content-container .landing-page-v3__content').insertAdjacentHTML('afterend', privacyHtml)
+
+      let bagdeHtml = `
+          <div class="spz-form-badge">
+            <picture>
+              <source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1711978478/netskope/7006/badges_desktop_svg.svg">
+              <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1711978475/netskope/7006/badges_tablet_svg.svg">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1711978210/netskope/7006/badges_mobile_svg.svg" alt="Badges">
+            </picture>
+          </div>`;
+
+      document.querySelector('.landing-page-v3__form-container .landing-page-v3__form-content').insertAdjacentHTML('afterend', bagdeHtml)
+
+
+      document.querySelectorAll('.landing-page-v3__content-container .landing-page-v3__content p').forEach(function (para) {
+        if (para.innerHTML == '&nbsp;' || para.innerHTML == '&nbsp; ') {
+          para.classList.add('empty-para')
+        }
+        if (window.location.pathname.indexOf('/lp-gartner-market-guide-for-zero-trust-network-access-sem') > -1) {
+          if (para.textContent.indexOf('The 2023 Gartner® Market Guide for ZTNA provides fresh insights into') > -1) {
+            para.innerHTML = `The 2023 Gartner® Market Guide for ZTNA provides fresh insights into market trends, core ZTNA capabilities, and how ZTNA fits into a Security Service Edge (SSE) strategy and Secure Access Service Edge (SASE) architecture. <br class="br-mobile">The report includes:`
+            para.classList.add('para-insight')
+          }
+        }
+      })
+
+
+
+      if (window.location.pathname.indexOf('/lp-gartner-market-guide-for-single-vendor-sase-sem') > -1) {
+        var allPara = document.querySelectorAll('.landing-page-v3__content p')
+        allPara.forEach(function (para) {
+          if (para.textContent == 'Here’s a few of the key findings and recommendations you’ll find within this report:') {
+            para.classList.add('maxwidth-para')
+          }
+        })
+      }
+
+
+      const formInt = setInterval(() => {
+        if (document.querySelector('form.mktoForm #FirstName')) {
+
+          clearInterval(formInt);
+
+          document.querySelector('#FirstName').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-fname');
+          document.querySelector('#LastName').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-lname');
+          document.querySelector('#Email').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-email');
+          document.querySelector('#Company').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-company');
+          document.querySelector('#Title').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-title');
+          document.querySelector('#Phone').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-phone');
+          document.querySelector('#Country').closest('.mktoFormRow').classList.add('spz-field', 'spz-field-country');
+          document.querySelector('form.mktoForm .form-heading').closest('.mktoFormRow').classList.add('spz-hide');
+          document.querySelector('.mktoPlaceholderConsent_to_Processing__c')?.closest('.mktoFormRow').classList.add('spz-field-privacy');
+          document.querySelector('.mktoPlaceholderHtmlText_2022-06-22T14')?.closest('.mktoFormRow').classList.add('spz-field-netinfo');
+          document.querySelector('.spz-field-email').before(document.querySelector('.spz-field-fname'))
+          document.querySelector('.spz-field-email').before(document.querySelector('.spz-field-lname'))
+
+          document.querySelector('#LblFirstName').textContent = 'First Name';
+          document.querySelector('#LblLastName').textContent = 'Last Name';
+          document.querySelector('#LblEmail').textContent = 'Business Email';
+          document.querySelector('#LblCompany').textContent = 'Company';
+          document.querySelector('#LblTitle').textContent = 'Job Title';
+          document.querySelector('#LblPhone').textContent = 'Phone';
+          document.querySelector('#Country option:first-child').textContent = "";
+          document.querySelector('#LblCountry').textContent = 'Country';
+
+
+
+          let allInputs = document.querySelectorAll('.spz-field .mktoField')
+          var eventfocus = new Event('focus');
+          var eventblur = new Event('blur');
+          allInputs.forEach(function (inp) {
+
+            inp.addEventListener('blur', function () {
+              inp.dispatchEvent(eventfocus);
+
+            });
+
+          })
+
+
+
+          document.addEventListener("visibilitychange", (event) => {
+            if (document.activeElement.tagName == 'A') {
+              document.activeElement.blur()
+            }
+          });
+
+
+          setHiddenFields();
+
+
+        }
+      }, 100);
+      waitForElm('form.mktoForm .mktoButtonRow button.mktoButton').then(function () {
+        document.querySelector('form.mktoForm .mktoButtonRow button.mktoButton').textContent = 'Instant access';
+        setTimeout(() => {
+          document.querySelector('form.mktoForm .mktoButtonRow button.mktoButton').textContent = 'Instant access';
+        }, 100)
+      })
+
+      setTimeout(() => {
+        document.querySelector('body').classList.add('variant-loaded');
+      }, 4000)
+
+    }
+
+  }
+
+
+});
+
+function waitForElm(selector) {
+  return new Promise(resolve => {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(mutations => {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
+    });
+    observer.observe(document.body, {
+      childList: true,
+      subtree: true
+    });
+  });
+}
+
+function setHiddenFields() {
+  waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
+    const field_int = setInterval(function () {
+      if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#7006_spz_variant") {
+          clearInterval(field_int);
+        }
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#7006_spz_variant');
+      }
+    }, 100);
+  });
+}
