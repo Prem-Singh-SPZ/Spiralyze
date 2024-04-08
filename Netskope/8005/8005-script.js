@@ -1,5 +1,3 @@
-// breadcrumb ellepsis
-
 let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
     if (body) {
@@ -259,10 +257,10 @@ function setHiddenFields() {
     waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
         const field_int = setInterval(function () {
             if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#8004_SPZ_Variant_1") {
+                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#8005_spz_variant") {
                     clearInterval(field_int);
                 }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#8004_SPZ_Variant_1');
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#8005_spz_variant');
             }
         }, 100);
     });
