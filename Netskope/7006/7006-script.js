@@ -53,11 +53,21 @@ let bodyLoaded = setInterval(function () {
 
       let bagdeHtml = `
           <div class="spz-form-badge">
-            <picture>
-              <source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1711978478/netskope/7006/badges_desktop_svg.svg">
-              <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1711978475/netskope/7006/badges_tablet_svg.svg">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1711978210/netskope/7006/badges_mobile_svg.svg" alt="Badges">
-            </picture>
+            <div class="spz-icon">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1711024647/netskope/7006/icon_dark_global_indosec_awards_winner.svg" alt="Global Indosec Awards Winner">
+            </div>
+            <div class="spz-icon">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1711024647/netskope/7006/icon_dark_crn_clous_100.svg" alt="CRN">
+          </div>
+          <div class="spz-icon">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1711024647/netskope/7006/icon_dark_forbes.svg" alt="Forbes">
+            </div>
+            <div class="spz-icon">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1712669175/netskope/7006/icon_dark_exellent_award_winner_1.svg" alt="Exellent Award Winner">
+            </div>
+            <div class="spz-icon">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1711024647/netskope/7006/icon_dark_crn_channel_awards.svg" alt="CRN">
+          </div>
           </div>`;
 
       document.querySelector('.landing-page-v3__form-container .landing-page-v3__form-content').insertAdjacentHTML('afterend', bagdeHtml)

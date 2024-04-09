@@ -68,7 +68,8 @@
   margin-bottom: 12px;
 }
 
-.spz-7006 #components__content .landing-page-v3__content-container .landing-page-v3__subheadline p, .spz-7006 #components__content .landing-page-v3__content-container .landing-page-v3__subheadline p strong{
+.spz-7006 #components__content .landing-page-v3__content-container .landing-page-v3__subheadline p,
+.spz-7006 #components__content .landing-page-v3__content-container .landing-page-v3__subheadline p strong {
   font-size: 18px !important;
   font-weight: 600 !important;
   line-height: 24px;
@@ -230,7 +231,8 @@ body.spz-7006 .kerrytown .landing-page-v3__form-content .mktoForm .mktoFormCol s
 .spz-7006 form.mktoForm div.mktoFormRow.spz-field .labelError1 select.mktoField,
 
 .spz-7006 form.mktoForm div.mktoFormRow.spz-field input.mktoField.mktoInvalid,
-.spz-7006 form.mktoForm div.mktoFormRow.spz-field select.mktoField.mktoInvalid {
+.spz-7006 form.mktoForm div.mktoFormRow.spz-field select.mktoField.mktoInvalid,
+.spz-7006 form.mktoForm div.mktoFormRow.spz-field #Country.mktoField.mktoInvalid {
   border-color: #FF5B28 !important;
 }
 
@@ -695,12 +697,21 @@ div.landing-page-v3__container {
 
 .spz-7006 .spz-form-badge {
   margin-top: 34px;
-  margin-left: -26px;
-  margin-right: -26px;
+  /* margin-left: -26px;
+  margin-right: -26px; */
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
 }
 
-.spz-7006 .spz-form-badge img {
-  width: 100%;
+.spz-7006 .spz-form-badge .spz-icon {
+  width: auto;
+  height: 60px;
+}
+
+.spz-7006 .spz-form-badge .spz-icon img{
+  width: auto;
+  height: 100%;
   display: block;
 }
 
