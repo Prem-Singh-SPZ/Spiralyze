@@ -270,6 +270,14 @@ body {
                     }
                   }
 
+                  input:-webkit-autofill,
+                  input:-webkit-autofill:hover,
+                  input:-webkit-autofill:focus {
+                    -webkit-text-fill-color: #fff;
+                    -webkit-box-shadow: 0 0 0px 40rem #364144  inset;
+                    caret-color: #fff;
+                  }
+
                   &.field-focus {
                     .hs-input:not([type="checkbox"]):not([type="radio"]).error
                       ~ label {
