@@ -1,7 +1,3 @@
-
-// let bodyLoad = setInterval(function () {
-//     const bodyEle = document.querySelector('body');
-
 //create json object to change hero copy
 const heroCopy = {
     "gdpr": {
@@ -30,8 +26,14 @@ const heroCopy = {
     }
 }
 
-// if (bodyEle) {
-//     clearInterval(bodyLoad);
+//create a style tag and append in head 
+const style = document.createElement('style');
+style.innerHTML = `@media (min-width: 767.98px){.spz-4011 .hero-section .hero-content .hc-title{font-size: 52px;
+    font-weight: 700;
+    line-height: 64px;
+    letter-spacing: -1.04px;}}`;
+document.head.appendChild(style);
+
 
 // Set test class
 document.body.classList.add("spz-4011");
@@ -80,6 +82,3 @@ function waitForElm(selector) {
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
 }
-// }
-// });
-
