@@ -143,8 +143,10 @@ $font-family_1: "Graphik", sans-serif;
             background-repeat: no-repeat;
 
             @media (max-width: 1023.98px) {
-              right: -618.248px;
-              top: -391px;
+              right: -691.248px;
+              top: -389px;
+              width: 984.248px;
+              height: 815px;
             }
 
             @media (min-width: 1900px) {
@@ -552,7 +554,8 @@ $font-family_1: "Graphik", sans-serif;
           width: 100%;
 
           @media (min-width: 1023.98px) and (max-width: 1300.98px) {
-            min-width: 45%;
+            min-width: 450px;
+            max-width: 510px;
           }
 
           @media (max-width: 1023.98px) {
@@ -857,7 +860,7 @@ $font-family_1: "Graphik", sans-serif;
             }
 
             @media screen and (max-width: 767.98px) {
-              padding: 10px 24px;
+              padding: 8px 24px;
               margin-bottom: 16px;
             }
 
@@ -870,8 +873,10 @@ $font-family_1: "Graphik", sans-serif;
                   margin-bottom: 4px;
 
                   @media screen and (max-width: 767.98px) {
-                    margin-top: 2px;
-                    margin-bottom: 2px;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    display: flex;
+                    align-items: flex-start;
                   }
 
                   &::before {
@@ -886,6 +891,11 @@ $font-family_1: "Graphik", sans-serif;
 
                     @media (max-width: 1023.98px) {
                       content: url(//res.cloudinary.com/spiralyze/image/upload/v1711975525/netskope/8005/chevron-right-right.svg);
+                    }
+
+                    @media screen and (max-width: 767.98px) {
+                      left: -2px;
+                      top: 2px;
                     }
                   }
 
@@ -913,6 +923,7 @@ $font-family_1: "Graphik", sans-serif;
                     @media screen and (max-width: 767.98px) {
                       font-size: 12px;
                       line-height: 20px;
+                      margin: 0 10.5px;
                     }
                   }
 

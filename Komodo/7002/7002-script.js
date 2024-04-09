@@ -28,7 +28,6 @@ function loadTest() {
 
   waitForElm('.widget-type-blog_subscribe .insights-subscribe .submitted-message').then(function (elm) {
     document.querySelector('.widget-type-blog_subscribe .insights-subscribe .submitted-message').setAttribute('id', 'spz_submitted_id');
-
   });
 }
 

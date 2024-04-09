@@ -139,6 +139,18 @@ function iconUpdate() {
     document.querySelectorAll('.header__mobile-nav-item .header__mobile-nav-item-link img').forEach(function (elem) {
         elem.src = '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/chevron-down-big.svg';
     });
+
+    waitForElm('.gated-content__container .gated-content__left .related-resources-cards .container .filters__content .filters__wrapper .card .card__content .card__content__link img').then(function () {
+        let arrowElem = setInterval(() => {
+            document.querySelectorAll('.gated-content__container .gated-content__left .related-resources-cards .container .filters__content .filters__wrapper .card .card__content .card__content__link img').forEach(function (elem) {
+                elem.setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712641137/netskope/8005/Search_circle.svg');
+            });
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(arrowElem);
+        }, 5000);
+    });
 }
 
 // Generic Code
