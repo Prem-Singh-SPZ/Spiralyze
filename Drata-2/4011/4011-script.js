@@ -5,25 +5,25 @@
 //create json object to change hero copy
 const heroCopy = {
     "gdpr": {
-        "heroTitle": `<span>Simplify</span> and <span>Fast-<br class="break-desk">Track</span> GDPR Compliance`,
+        "heroTitle": `<span>Simplify</span> and <span>Fast-Track</span> GDPR Compliance`,
         "herolist1": `Cut compliance work by 80%.<span class="ls-desc"> Drata collects evidence for you via integrations - no spreadsheets or screenshots required.</span>`,
         "herolist2": `Ace your audits.<span class="ls-desc"> Get complete audit confidence with full visibility into your compliance status and auditor-preferred files.</span>`,
         "herolist3": `Unblock sales with unmatched security.<span class="ls-desc"> Quickly publish and share compliance documents to speed through security reviews.</span>`,
     },
     "hipaa": {
-        "heroTitle": `<span>Simplify</span> and <span>Fast-<br class="break-desk">Track</span> HIPAA Compliance`,
+        "heroTitle": `<span>Simplify</span> and <span>Fast-Track</span> HIPAA Compliance`,
         "herolist1": `Cut compliance work by 80%.<span class="ls-desc"> Drata collects evidence for you via integrations - no spreadsheets or screenshots required.</span>`,
         "herolist2": `Ace your audits.<span class="ls-desc"> Get complete audit confidence with full visibility into your compliance status and auditor-preferred files.</span>`,
         "herolist3": `Unblock sales with unmatched security.<span class="ls-desc"> Quickly publish and share compliance documents to speed through security reviews.</span>`,
     },
     "soc2": {
-        "heroTitle": `<span>Simplify</span> and <span>Fast-<br class="break-desk">Track</span> SOC 2 Compliance`,
+        "heroTitle": `<span>Simplify</span> and <span>Fast-Track</span> SOC 2 Compliance`,
         "herolist1": `Cut compliance work by 80%.<span class="ls-desc"> Drata collects evidence for you via integrations - no spreadsheets or screenshots required.</span>`,
         "herolist2": `Ace your audits.<span class="ls-desc"> Get complete audit confidence with full visibility into your compliance status and auditor-preferred files.</span>`,
         "herolist3": `Unblock sales with unmatched security.<span class="ls-desc"> Quickly publish and share compliance documents to speed through security reviews.</span>`,
     },
     "iso27001": {
-        "heroTitle": `<span>Simplify</span> and <span>Fast-<br class="break-desk">Track</span> ISO 27001 Compliance`,
+        "heroTitle": `<span>Simplify</span> and <span>Fast-Track</span> ISO 27001 Compliance`,
         "herolist1": `Cut compliance work by 80%.<span class="ls-desc"> Drata collects evidence for you via integrations - no spreadsheets or screenshots required.</span>`,
         "herolist2": `Ace your audits.<span class="ls-desc"> Get complete audit confidence with full visibility into your compliance status and auditor-preferred files.</span>`,
         "herolist3": `Unblock sales with unmatched security.<span class="ls-desc"> Quickly publish and share compliance documents to speed through security reviews.</span>`,
