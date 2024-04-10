@@ -39,12 +39,12 @@ if (!document.body.classList.contains('spz-8005')) {
             let changePosition = setInterval(() => {
                 if (document.querySelector('.gated-content__container .gated-content__left .related-resources-cards')) {
                     clearInterval(changePosition);
-    
+
                     //Footer addition
                     let facebookHref = document.querySelector('.v3-social-icons__icon--facebook a').getAttribute('href');
                     let twitterHref = document.querySelector('.v3-social-icons__icon--twitter a').getAttribute('href');
                     let linkedinHref = document.querySelector('.v3-social-icons__icon--linkedin a').getAttribute('href');
-    
+
                     document.querySelector('.gated-content__container .gated-content__left').insertAdjacentHTML('beforeend', `<div class="spz-footer-section"><div class="footer-container"><div class="u-footer"><div class="nmobile"><img src="//res.cloudinary.com/spiralyze/image/upload/v1706077616/netskope/9001/Call-icon.svg" alt="phone"> USA: +1 (800) 979-6988</div><div class="social-icons"><div class="social-icon icon--facebook"> <a href="` + facebookHref + `"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/facebook_logo.svg" class="s-icon" alt="facebook icon"></a></div><div class="social-icon icon--twitter"> <a href="` + twitterHref + `"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/x_logo.svg" class="s-icon" alt="twitter icon"></a></div><div class="social-icon icon--linkedin"> <a href="` + linkedinHref + `"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1708099742/netskope/8005/linkedin_logo.svg" class="s-icon" alt="twitter icon"></a></div></div></div><div class="l-footer"><ul class="navbar-nav"><li class="menu-item"><a href="https://www.netskope.com/privacy-policy">Privacy Policy</a></li><li class="menu-item"><a href="https://www.netskope.com/vulnerability-disclosure-policy">Vulnerability Disclosure Policy</a></li><li class="menu-item"><a href="https://www.netskope.com/terms-of-use">Terms of Use</a></li><li class="menu-item"><a href="https://www.netskope.com/netskope-technical-support">Support</a></li></ul><div class="v3-footer__date">© 2024, All rights reserved.</div></div></div></div>`);
                 }
                 else {
@@ -105,12 +105,14 @@ if (!document.body.classList.contains('spz-8005')) {
 // });
 
 function checkMenuIsOpen() {
-    if (document.querySelector('#header__mobile-nav-container[style*="display: block;"]')) {
-        document.querySelector('.header__mobile-toggle').classList.add('active');
-    }
-    else if (document.querySelector('#header__mobile-nav-container[style*="display: none;"]')) {
-        document.querySelector('.header__mobile-toggle').classList.remove('active');
-    }
+    setTimeout(() => {
+        if (document.querySelector('#header__mobile-nav-container[style*="display: block;"]')) {
+            document.querySelector('.header__mobile-toggle').classList.add('active');
+        }
+        else if (document.querySelector('#header__mobile-nav-container[style*="display: none;"]')) {
+            document.querySelector('.header__mobile-toggle').classList.remove('active');
+        }
+    }, 50);
 }
 
 function iconUpdate() {

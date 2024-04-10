@@ -103,11 +103,12 @@ $font-family_1: "Graphik", sans-serif;
       .gated-content__container {
         flex-direction: row-reverse;
         position: relative;
-        min-height: 100vh;
+        min-height: calc(100vh - 46px);
         justify-content: center;
 
         @media (max-width: 1023.98px) {
           flex-direction: column-reverse;
+          min-height: auto;
         }
 
         &::before {
