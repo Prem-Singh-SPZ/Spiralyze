@@ -773,6 +773,7 @@ $font-family_1: "Graphik", sans-serif;
                           width: 28px;
                           height: 28px;
                           top: 20px;
+                          left: auto;
                         }
 
                         &:hover {
@@ -783,6 +784,17 @@ $font-family_1: "Graphik", sans-serif;
                       &:last-child {
                         .header__mobile-nav-item-link {
                           border: 0;
+                        }
+                      }
+
+                      .header__mobile-nav-item-link-subgroup{
+                        .header__mobile-nav-item-link-subgroup-li{
+                          .header__mobile-nav-item-subgroup-link{
+                            img{
+                              left: auto;
+                              right: 0;
+                            }
+                          }
                         }
                       }
                     }
