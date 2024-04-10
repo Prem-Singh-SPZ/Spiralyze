@@ -37,11 +37,15 @@ let bodyLoaded = setInterval(function () {
           body.classList.add(BodyClasses[key]);
         }
       }
+      waitForElm(".kerrytown .landing-page-v3__form-content .form-heading").then(function () {
+        let formTitle = document.querySelector(".kerrytown .landing-page-v3__form-content .form-heading").innerHTML;
 
-
-
-      document.querySelector('.landing-page-v3__content-container .plus-orange').insertAdjacentHTML('beforebegin', '<div class="spz-gartner-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1702652529/netskope/7001/grtner_wrapper_1.svg" alt="Gartner Logo"></div>')
-      document.querySelector('.landing-page-v3__form-container .landing-page-v3__form-content').insertAdjacentHTML('beforebegin', `<div class="spz-formlogo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711024659/netskope/7006/logo.svg" alt="Netskope Logo"></div><div class="spz-form-title"><h3>Get <span>Gartner</span> report</h3></div>`)
+        document.querySelector('.landing-page-v3__content-container .plus-orange').insertAdjacentHTML('beforebegin', '<div class="spz-gartner-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1702652529/netskope/7001/grtner_wrapper_1.svg" alt="Gartner Logo"></div>')
+        if (document.querySelector('html[lang="en-US"]')) {
+          formTitle = 'Get <span>Gartner</span> report'
+        }
+        document.querySelector('.landing-page-v3__form-container .landing-page-v3__form-content').insertAdjacentHTML('beforebegin', `<div class="spz-formlogo"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1711024659/netskope/7006/logo.svg" alt="Netskope Logo"></div><div class="spz-form-title"><h3>` + formTitle + `</h3></div>`)
+      });
 
       let privacyHtml = `
           <div class="spz-form-privacy">
@@ -93,30 +97,45 @@ let bodyLoaded = setInterval(function () {
           document.querySelector('.spz-field-email').before(document.querySelector('.spz-field-fname'))
           document.querySelector('.spz-field-email').before(document.querySelector('.spz-field-lname'))
 
-          document.querySelector('#LblFirstName').textContent = 'First Name';
-          document.querySelector('#LblLastName').textContent = 'Last Name';
-          document.querySelector('#LblEmail').textContent = 'Business Email';
-          document.querySelector('#LblCompany').textContent = 'Company';
-          document.querySelector('#LblTitle').textContent = 'Job Title';
-          document.querySelector('#LblPhone').textContent = 'Phone';
-          document.querySelector('#Country option:first-child').textContent = "";
-          document.querySelector('#LblCountry').textContent = 'Country';
+          // document.querySelector('#LblFirstName').textContent = 'First Name';
+          // document.querySelector('#LblLastName').textContent = 'Last Name';
+          // document.querySelector('#LblEmail').textContent = 'Business Email';
+          // document.querySelector('#LblCompany').textContent = 'Company';
+          // document.querySelector('#LblTitle').textContent = 'Job Title';
+          // document.querySelector('#LblPhone').textContent = 'Phone';
+          // document.querySelector('#Country option:first-child').textContent = "";
+          // document.querySelector('#LblCountry').textContent = 'Country';
 
+          if (document.querySelector("html").getAttribute("lang") == "en-US") {
+            document.querySelector("#LblFirstName").textContent = "First Name";
+            document.querySelector("#LblLastName").textContent = "Last Name";
+            document.querySelector("#LblEmail").textContent = "Business Email";
+            document.querySelector("#LblCompany").textContent = "Company";
+            document.querySelector("#LblTitle").textContent = "Job Title";
+            document.querySelector("#LblPhone").textContent = "Phone";
+            document.querySelector("#LblCountry").textContent = "Country";
+          } else {
+            // Other languages
+            // Get the text from '#Country option' and set it to '#LblCountry'
+            let countryLbl = document.querySelector("#Country option:first-child").textContent;
+            document.querySelector("#LblCountry").textContent = countryLbl;
+          }
 
+          // Disable option in 'Country' field where value is null
+          let countryOpt = document.querySelector("#Country option:first-child");
+          if (countryOpt.value == "" || countryOpt.value == null) {
+            countryOpt.setAttribute('disabled', 'disabled');
+            countryOpt.setAttribute('style', 'color: #ccc');
+          }
 
           let allInputs = document.querySelectorAll('.spz-field .mktoField')
           var eventfocus = new Event('focus');
           var eventblur = new Event('blur');
           allInputs.forEach(function (inp) {
-
             inp.addEventListener('blur', function () {
               inp.dispatchEvent(eventfocus);
-
             });
-
           })
-
-
 
           document.addEventListener("visibilitychange", (event) => {
             if (document.activeElement.tagName == 'A') {
@@ -124,21 +143,26 @@ let bodyLoaded = setInterval(function () {
             }
           });
 
-
           setHiddenFields();
-
-
         }
       }, 100);
-      waitForElm('form.mktoForm .mktoButtonRow button.mktoButton').then(function () {
-        document.querySelector('form.mktoForm .mktoButtonRow button.mktoButton').textContent = 'Instant access';
+
+      waitForElm("html[lang='en-US'] form .mktoButtonRow button.mktoButton").then(function () {
+        document.querySelector("form .mktoButtonRow button.mktoButton").textContent = "Instant access";
         setTimeout(() => {
-          document.querySelector('form.mktoForm .mktoButtonRow button.mktoButton').textContent = 'Instant access';
-        }, 100)
-      })
+          document.querySelector("form .mktoButtonRow button.mktoButton").textContent = "Instant access";
+        }, 100);
+      });
 
       setTimeout(() => {
         document.querySelector('body').classList.add('variant-loaded');
+
+        // Remove p tags which are empty or contains only '&nbsp;'
+        document.querySelectorAll(".landing-page-v3__content p:last-child").forEach((p) => {
+          if (p.textContent.trim() == "" || p.textContent.trim() == "&nbsp;") {
+            p.remove();
+          }
+        });
       }, 4000)
 
     }
