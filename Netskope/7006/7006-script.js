@@ -142,10 +142,7 @@ let bodyLoaded = setInterval(function () {
       }, 4000)
 
     }
-
   }
-
-
 });
 
 function waitForElm(selector) {
