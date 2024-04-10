@@ -541,7 +541,6 @@ ready(function () {
         }, document.body);
       }
       loadDemoForm()
-
     }
     //non targeted page
     else {
