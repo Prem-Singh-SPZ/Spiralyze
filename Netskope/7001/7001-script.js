@@ -96,7 +96,6 @@ let bodyLoaded = setInterval(function () {
   
             }
           }, 100);
-          console.log('1');
           waitForElm('form.mktoForm .mktoButtonRow button.mktoButton').then(function(){
             document.querySelector('form.mktoForm .mktoButtonRow button.mktoButton').textContent = 'Instant access';          
             setTimeout(() => {

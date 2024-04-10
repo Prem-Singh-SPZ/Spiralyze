@@ -142,6 +142,12 @@
   width: 100% !important;
 }
 
+@media (max-width: 767.98px) {
+  .spz-7006 form.mktoForm .mktoFormRow.spz-field.spz-field-country {
+    display: block !important;
+  }
+}
+
 .spz-7006 form.mktoForm .spz-hide {
   display: none !important;
 }
@@ -345,8 +351,8 @@ body.spz-7006 .kerrytown .landing-page-v3__form-content .mktoForm .mktoFormCol s
 }
 
 .spz-7006 form.mktoForm #LblConsent_to_Processing__c p,
-.spz-7006 form.mktoForm #LblConsent_to_Processing__c p a, 
-  .spz-7006 form.mktoForm #LblConsent_to_Processing__c span {
+.spz-7006 form.mktoForm #LblConsent_to_Processing__c p a,
+.spz-7006 form.mktoForm #LblConsent_to_Processing__c span {
   color: #081A59 !important;
   font-size: 12px;
   font-weight: 400;
@@ -361,6 +367,10 @@ body.spz-7006 .kerrytown .landing-page-v3__form-content .mktoForm .mktoFormCol s
 .spz-7006 form.mktoForm .single_checkbox>label {
   padding-left: 24px !important;
   width: auto !important;
+}
+
+html:not([lang="en-US"]) .spz-7006 form.mktoForm .single_checkbox>label {
+  padding-top: 0 !important;
 }
 
 .spz-7006 form.mktoForm .single_checkbox>label:before {
