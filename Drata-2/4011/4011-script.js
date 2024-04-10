@@ -66,6 +66,20 @@ function loadTest(page) {
     heroList1.innerHTML = heroCopy[page].herolist1;
     heroList2.innerHTML = heroCopy[page].herolist2;
     heroList3.innerHTML = heroCopy[page].herolist3;
+
+    setHiddenFields();
+
+}
+
+function setHiddenFields() {
+    waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
+        let setValue = setInterval(() => {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_4011') {
+                clearInterval(setValue);
+            }
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_4011');
+        }, 100);
+    });
 }
 
 function waitForElm(selector) {
