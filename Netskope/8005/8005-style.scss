@@ -75,6 +75,18 @@ $font-family_1: "Graphik", sans-serif;
           }
         }
       }
+
+      .aa-empty {
+        .autocomplete-empty {
+          .empty-query {
+            max-width: 100%;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: block;
+          }
+        }
+      }
     }
   }
 
@@ -290,6 +302,7 @@ $font-family_1: "Graphik", sans-serif;
           .related-resources-cards {
             padding: 48px 40px 24px;
             position: relative;
+            background: #F5FBFC;
 
             @media screen and (max-width: 1023.98px) {
               padding: 48px 13px 24px;
@@ -609,6 +622,7 @@ $font-family_1: "Graphik", sans-serif;
                   font-style: normal;
                   font-weight: 400;
                   line-height: 24px;
+                  width: 100%;
 
                   &::placeholder {
                     opacity: 0;
@@ -1072,7 +1086,8 @@ $font-family_1: "Graphik", sans-serif;
                       padding: inherit;
                     }
                   }
-                  .mktoField.mktoInvalid, #Country.mktoField.mktoInvalid {
+                  .mktoField.mktoInvalid,
+                  #Country.mktoField.mktoInvalid {
                     border-color: #ff5b28 !important;
                   }
                   .mktoError {
