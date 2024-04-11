@@ -917,6 +917,7 @@ let bodyLoaded = setInterval(function () {
             document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
             document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
           }
+
         });
 
         // Lock Hero
@@ -936,6 +937,19 @@ let bodyLoaded = setInterval(function () {
           }
         });
 
+      });
+
+      //window on click event listener
+      waitForElm('.mktoTemplateBox').then(function () {
+        document.addEventListener('click', function (event) {
+          if (event.target.classList.contains('mktoButton') && event.target.classList.contains('g-recaptcha')) {
+            if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
+              document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
+              document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
+              document.querySelector('.gated-content__content .gated-content__action').removeAttribute('style');
+            }
+          }
+        });
       });
     }
   }
