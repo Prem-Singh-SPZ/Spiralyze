@@ -259,6 +259,9 @@ body.spz-6009 {
 .spz-6009 .js-hero-banner .gated-content__right .gated-content__content{
   max-width: 488px;
 }
+.spz-6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__action{
+  margin-bottom: 8px;
+}
 .spz-6009 .js-hero-banner .gated-content__right .gated-content__content .gated-content__label {
   font-family: Graphik;
   font-size: 18px;
@@ -909,6 +912,11 @@ let bodyLoaded = setInterval(function () {
               this.style.display = "none";
             });
           });
+
+          if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
+            document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
+            document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
+          }
         });
 
         // Lock Hero
