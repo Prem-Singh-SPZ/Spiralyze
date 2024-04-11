@@ -303,7 +303,7 @@ $font-family_1: "Graphik", sans-serif;
           .related-resources-cards {
             padding: 48px 40px 24px;
             position: relative;
-            background: #F5FBFC;
+            background: #f5fbfc;
 
             @media screen and (max-width: 1023.98px) {
               padding: 48px 13px 24px;
@@ -767,6 +767,10 @@ $font-family_1: "Graphik", sans-serif;
                         text-underline-offset: 3px;
                         padding: 21px 0 22px;
 
+                        &.open {
+                          padding-left: 40px;
+                        }
+
                         img {
                           right: 0;
                           transform: none;
@@ -774,6 +778,12 @@ $font-family_1: "Graphik", sans-serif;
                           height: 28px;
                           top: 20px;
                           left: auto;
+
+                          &.back {
+                            left: 0;
+                            right: auto;
+                            transform: rotate(180deg);
+                          }
                         }
 
                         &:hover {
@@ -787,15 +797,43 @@ $font-family_1: "Graphik", sans-serif;
                         }
                       }
 
-                      .header__mobile-nav-item-link-subgroup{
-                        .header__mobile-nav-item-link-subgroup-li{
-                          .header__mobile-nav-item-subgroup-link{
-                            img{
+                      .header__mobile-nav-item-link-subgroup {
+                        .header__mobile-nav-item-link-subgroup-li {
+                          .header__mobile-nav-item-subgroup-link {
+                            img {
                               left: auto;
                               right: 0;
                               transform: none;
                               height: 24px;
                               width: 24px;
+
+                              &.back {
+                                left: 0;
+                                right: auto;
+                                transform: rotate(180deg);
+                              }
+                            }
+
+                            &.open {
+                              margin-top: 22px;
+                            }
+                          }
+
+                          .header__mobile-nav-item-link-subgroup-subcontainer {
+                            .header__mobile-nav-item-subgroup-sublinks {
+                              .header__mobile-nav-item-subgroup-sublinks-li {
+                                .header__mobile-nav-item-subgroup-sublinks-link {
+                                  padding-right: 30px;
+                                  img {
+                                    left: auto;
+                                    right: 0;
+                                    transform: none;
+                                    height: 24px;
+                                    width: 24px;
+                                    top: calc(50% - 12px);
+                                  }
+                                }
+                              }
                             }
                           }
                         }

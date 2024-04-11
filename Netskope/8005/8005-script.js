@@ -146,13 +146,9 @@ function iconUpdate() {
         document.querySelector('.header__search-container-mobile .header__search-close-mobile').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/ross-circle-dark.svg');
     }
 
-    document.querySelectorAll('.header__mobile-nav-item .header__mobile-nav-item-link img').forEach(function (elem) {
-        elem.src = '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/chevron-down-big.svg';
-    });
-    
-    document.querySelectorAll('.header__mobile-nav-item-subgroup-link img').forEach(function (elem) {
-        elem.src = '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/chevron-down-big.svg';
-    });
+    changeChevron('.header__mobile-nav-item .header__mobile-nav-item-link img');
+    changeChevron('.header__mobile-nav-item-subgroup-link img');
+    changeChevron('.header__mobile-nav-item-subgroup-sublinks-link img');
 
     waitForElm('.gated-content__container .gated-content__left .related-resources-cards .container .filters__content .filters__wrapper .card .card__content .card__content__link img').then(function () {
         let arrowElem = setInterval(() => {
@@ -164,6 +160,12 @@ function iconUpdate() {
         setTimeout(() => {
             clearInterval(arrowElem);
         }, 5000);
+    });
+}
+
+function changeChevron(params) {
+    document.querySelectorAll(params).forEach(function (elem) {
+        elem.src = '//res.cloudinary.com/spiralyze/image/upload/v1712038573/netskope/8005/chevron-down-big.svg';
     });
 }
 
