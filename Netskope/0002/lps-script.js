@@ -23,29 +23,16 @@ body.spz-0002 {
 }
 .spz-0002 .landing-page-v3__container {
   padding: 142px 0 0 0;
-  background: #081a59 !important;
-  background-size: 100% !important;
+  background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1712919705/netskope/0002/desktop_back.webp") no-repeat !important;
+  background-size: 1600px 1000px!important;
+  background-position: 263px top!important;
   position: relative;
-}
-.spz-0002:not(.show_content) .landing-page-v3__container {
-  min-height: 100vh;
+  overflow-x: hidden;
 }
 .spz-0002 .landing-page-v3__container .landing-page-v3__container-inner {
   max-width: 1238px;
   padding: 0 24px;
   position: relative;
-}
-.spz-0002 .landing-page-v3__container::before {
-  position: absolute;
-  content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1712919705/netskope/0002/desktop_back.webp");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  right: 0;
-  pointer-events: none;
 }
 @media (min-width: 1900px) and (max-width: 2500px) {
   .spz-0002 .landing-page-v3__container::before {
@@ -84,7 +71,7 @@ body.spz-0002 {
   max-width: 504px;
 }
 .spz-0002 .landing-page-v3__container .landing-page-v3__content-container--bottom {
-  padding: 96px 0 49px;
+  padding: 40px 0 64px;
   -webkit-box-ordinal-group: unset;
   -ms-flex-order: unset;
   order: unset;
@@ -112,20 +99,9 @@ body.spz-0002 {
   border-radius: 24px;
   position: relative;
 }
-.spz-0002 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content::after {
-  position: absolute;
-  content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1700151751/netskope/6001/vector_9.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 260px;
-  height: 72px;
-  left: -125px;
-  bottom: -107px;
-}
 .spz-0002 .hero_left .form-content-heading * {
   color: #fff;
-  font-family: Graphik;
+  font-family: Graphik, sans-serif;
   font-size: 48px !important;
   font-style: normal;
   font-weight: 400;
@@ -143,11 +119,11 @@ body.spz-0002 {
   width: 12px;
   height: 12px;
   top: -20px;
-  left: -36px;
+  left: -12px;
 }
 .spz-0002 .hero_left h4 {
   color: #fff;
-  font-family: Graphik;
+  font-family: Graphik, sans-serif;
   font-size: 18px;
   font-style: normal;
   font-weight: 600;
@@ -162,11 +138,13 @@ body.spz-0002 {
   width: 100%;
   -o-object-fit: contain;
   object-fit: contain;
+  max-width: 511px;
+  margin-top: 16px;
 }
 .spz-0002 .landing-page-v3__form-content .form_title {
   color: #081a59;
   text-align: center;
-  font-family: Graphik;
+  font-family: Graphik, sans-serif;
   font-size: 40px;
   font-style: normal;
   font-weight: 400;
@@ -228,14 +206,14 @@ body.spz-0002 {
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-  font-family: "Graphik" !important;
+  font-family: Graphik, sans-serif !important;
   opacity: 1 !important;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox):hover label.mktoLabel {
   color: #081a59 !important;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField {
-  font-family: "Graphik" !important;
+  font-family: Graphik, sans-serif !important;
   height: 56px !important;
   padding: 24px 15px 8px !important;
   border-radius: 24px !important;
@@ -332,7 +310,7 @@ body.spz-0002 {
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p.p11 {
   width: 100%;
-  font-family: "Graphik" !important;
+  font-family: Graphik, sans-serif !important;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
   color: #081a59 !important;
@@ -364,7 +342,7 @@ body.spz-0002 {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  font-family: "Graphik" !important;
+  font-family: Graphik, sans-serif !important;
   text-decoration: none !important;
   border: none;
   margin: 0 !important;
@@ -376,7 +354,7 @@ body.spz-0002 {
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  font-family: "Graphik" !important;
+  font-family: Graphik, sans-serif !important;
   text-decoration: none !important;
   text-decoration: underline !important;
 }
@@ -426,6 +404,7 @@ body.spz-0002 {
   background: #ff8200 !important;
   border: 1px solid #ff8200 !important;
   border-radius: 200px !important;
+  font-family: Graphik, sans-serif !important;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoButtonWrap .mktoButton:hover,
 .spz-0002 .landing-page-v3__form-content form.mktoForm + #landing-page-v3__asset .btn:hover {
@@ -434,12 +413,16 @@ body.spz-0002 {
 }
 .spz-0002 .landing-page-v3__content-container--bottom p {
   color: #fff;
-  font-family: Graphik;
+  font-family: Graphik, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin: 0;
+}
+
+.spz-0002 .landing-page-v3__content-container--bottom p:first-child {
+  margin-bottom: 12px;
 }
 .spz-0002 .landing-page-v3__content-container--bottom p strong {
   font-weight: 600;
@@ -449,7 +432,7 @@ body.spz-0002 {
 }
 .spz-0002 .landing-page-v3__content-container--bottom ul {
   color: #fff;
-  font-family: Graphik;
+  font-family: Graphik, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -589,11 +572,6 @@ body.spz-0002 {
   }
   .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoButtonWrap {
     margin-top: 10px !important;
-  }
-}
-@media (max-width: 1199.98px) {
-  .spz-0002 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content::after {
-    bottom: -100px;
   }
 }
 @media (max-width: 767.98px) {
