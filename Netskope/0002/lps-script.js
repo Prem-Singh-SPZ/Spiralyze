@@ -649,23 +649,19 @@ head.appendChild(style);
 style.type = 'text/css';
 style.appendChild(document.createTextNode(css));
 
-let bodyLoaded = setInterval(function () {
-  const body = document.querySelector('body');
-  if (body) {
-    clearInterval(bodyLoaded);
 
-    if (!body.classList.contains('spz-0002')) {
+if (!document.body.classList.contains('spz-0002')) {
 
-      // if(window.location.pathname.indexOf("/lp-2023-magic-quadrant-for-security-service-edge-sem") > -1) {
-      body.classList.add('spz-0002');
+  // if(window.location.pathname.indexOf("/lp-2023-magic-quadrant-for-security-service-edge-sem") > -1) {
+  document.body.classList.add('spz-0002');
 
-      waitForElm('.spz-0002 #wrapper .v3.landing-page-v3__container').then(function () {
-        var sub_heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__subheadline").innerHTML;
-        var heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__title").innerHTML;
-        var bottom_html = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__content-container--bottom").innerHTML;
+  waitForElm('.spz-0002 #wrapper .v3.landing-page-v3__container').then(function () {
+    var sub_heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__subheadline").innerHTML;
+    var heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__title").innerHTML;
+    var bottom_html = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__content-container--bottom").innerHTML;
 
-        // Hero Fom Content
-        document.querySelector('.spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__form').insertAdjacentHTML("beforebegin", `<div class="hero_left">
+    // Hero Fom Content
+    document.querySelector('.spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__form').insertAdjacentHTML("beforebegin", `<div class="hero_left">
 			  <h2 class="form-content-heading">`+ heading + `</h2>
 			  `+ sub_heading + `
 			  <picture class="hero-form-img">
@@ -676,21 +672,19 @@ let bodyLoaded = setInterval(function () {
 			  </picture>
 			</div>`);
 
-        document.querySelector('.spz-0002 #wrapper .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<h2 class="form-content-heading">` + heading + `</h2>`);
+    document.querySelector('.spz-0002 #wrapper .landing-page-v3__form .landing-page-v3__form-content').insertAdjacentHTML("afterend", `<h2 class="form-content-heading">` + heading + `</h2>`);
 
-        document.querySelector('.spz-0002 #wrapper .landing-page-v3__form').insertAdjacentHTML("beforeend", `<div class="spz-bottom-copy  landing-page-v3__content-container--bottom">` + bottom_html + `</div>`);
+    document.querySelector('.spz-0002 #wrapper .landing-page-v3__form').insertAdjacentHTML("beforeend", `<div class="spz-bottom-copy  landing-page-v3__content-container--bottom">` + bottom_html + `</div>`);
 
-        //Form internal code
-        waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
-          formModify();
-          // setHiddenFields();
-        });
-      });
-      // }
-    }
+    //Form internal code
+    waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
+      formModify();
+      // setHiddenFields();
+    });
+  });
+  // }
+}
 
-  }
-});
 
 // Generic Code
 function insertAfter(referenceNode, newNode) {
@@ -752,6 +746,8 @@ function formModify() {
   }, 100);
 
   // Updating Form Labels
+  document.querySelector("#Country").setAttribute('autocomplete', 'none');
+
   if (document.querySelector("html").getAttribute("lang") == "en-US") {
     document.querySelector("#LblFirstName").textContent = "First Name";
     document.querySelector("#LblLastName").textContent = "Last Name";
@@ -777,6 +773,16 @@ function formModify() {
     countryOpt.setAttribute('style', 'color: #ccc');
     countryOpt.textContent = "";
   }
+
+  //document event listener if consist .show-hide-tag then remove all .hide-tag
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('show-hide-tag')) {
+      document.querySelectorAll('.hide-tag').forEach(function (el) {
+        el.classList.remove('hide-tag');
+      });
+      e.target.classList.add('hide-tag');
+    }
+  });
 
   // Change Field Position
   var email_field = document.querySelector('.spz-0002 .landing-page-v3__form .mktoForm .mktoFormRow.field-3');

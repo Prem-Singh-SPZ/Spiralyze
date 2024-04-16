@@ -303,7 +303,7 @@ body.spz-0002 {
   border-bottom: inherit;
   padding: inherit;
 }
-.spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField.mktoInvalid {
+.spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoField.mktoInvalid, .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap #Country.mktoInvalid {
   border-color: #ff5b28 !important;
 }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap .mktoError {
@@ -732,22 +732,18 @@ head.appendChild(style);
 style.type = 'text/css';
 style.appendChild(document.createTextNode(css));
 
-let bodyLoaded = setInterval(function () {
-  const body = document.querySelector('body');
-  if (body) {
-    clearInterval(bodyLoaded);
 
-    if (!body.classList.contains('spz-0002')) {
+if (!body.classList.contains('spz-0002')) {
 
-      body.classList.add('spz-0002');
+  body.classList.add('spz-0002');
 
-      waitForElm('.spz-0002 .js-hero-banner').then(function () {
-        var heading = document.querySelector(".spz-0002 .js-hero-banner .page-intro__resource-title span").innerHTML;
-        var sub_heading = document.querySelector(".spz-0002 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
-        var short_description = document.querySelector(".spz-0002 .js-hero-banner .gated-content__left .gated-content__content").outerHTML;
+  waitForElm('.spz-0002 .js-hero-banner').then(function () {
+    var heading = document.querySelector(".spz-0002 .js-hero-banner .page-intro__resource-title span").innerHTML;
+    var sub_heading = document.querySelector(".spz-0002 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
+    var short_description = document.querySelector(".spz-0002 .js-hero-banner .gated-content__left .gated-content__content").outerHTML;
 
-        // Hero Form Content
-        document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
+    // Hero Form Content
+    document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
           <h2 class="form-content-heading">`+ heading + `</h2>
           <h6 class="form-content-subheading">`+ sub_heading + `</h6>
           <div class="hero-form-img">
@@ -756,45 +752,43 @@ let bodyLoaded = setInterval(function () {
           `+ short_description + `
         </div>`);
 
-        document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend", `<picture class="hero-form-img">
+    document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend", `<picture class="hero-form-img">
           <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp">
           <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/tablet_report.webp">
           <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
           <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
         </picture>`+ document.querySelector(".spz-0002 .js-hero-banner .gated-content__left").innerHTML);
-        document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">` + heading + `</h2>`);
-        document.querySelector('.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
+    document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">` + heading + `</h2>`);
+    document.querySelector('.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
           <img src="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp" alt="`+ heading + `">
         </div>`);
 
-        //Form internal code
-        waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
-          formModify();
-          // setHiddenFields();
-          document.querySelector('.js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag').setAttribute('href', 'javascript:void(0)');
+    //Form internal code
+    waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
+      formModify();
+      // setHiddenFields();
+      document.querySelector('.js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag').setAttribute('href', 'javascript:void(0)');
 
-          if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
-            document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
-            document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
-          }
-        });
-      });
+      if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
+        document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
+        document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
+      }
+    });
+  });
 
-      //window on click event listener
-      waitForElm('.mktoTemplateBox').then(function () {
-        document.addEventListener('click', function (event) {
-          if (event.target.classList.contains('mktoButton') && event.target.classList.contains('g-recaptcha')) {
-            if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
-              document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
-              document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
-              document.querySelector('.gated-content__content .gated-content__action').removeAttribute('style');
-            }
-          }
-        });
-      });
-    }
-  }
-});
+  //window on click event listener
+  waitForElm('.mktoTemplateBox').then(function () {
+    document.addEventListener('click', function (event) {
+      if (event.target.classList.contains('mktoButton') && event.target.classList.contains('g-recaptcha')) {
+        if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
+          document.querySelectorAll('.gated-content__content .gated-content__action')[0].remove();
+          document.querySelector('.gated-content__content .gated-content__action .btn--orange').removeAttribute('disabled');
+          document.querySelector('.gated-content__content .gated-content__action').removeAttribute('style');
+        }
+      }
+    });
+  });
+}
 
 // Generic Code
 function insertAfter(referenceNode, newNode) {
@@ -857,6 +851,8 @@ function formModify() {
   }, 100);
 
   // Updating Form Labels
+  document.querySelector("#Country").setAttribute('autocomplete', 'none');
+
   if (document.querySelector("html").getAttribute("lang") == "en-US") {
     document.querySelector("#LblFirstName").textContent = "First Name";
     document.querySelector("#LblLastName").textContent = "Last Name";
@@ -882,6 +878,16 @@ function formModify() {
     countryOpt.setAttribute('style', 'color: #ccc');
     countryOpt.textContent = "";
   }
+
+  //document event listener if consist .show-hide-tag then remove all .hide-tag
+  document.addEventListener('click', function (e) {
+    if (e.target.classList.contains('show-hide-tag')) {
+      document.querySelectorAll('.hide-tag').forEach(function (el) {
+        el.classList.remove('hide-tag');
+      });
+      e.target.classList.add('hide-tag');
+    }
+  });
 
   // Change Field Position
   var email_field = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-3');
