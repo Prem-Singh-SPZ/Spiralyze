@@ -70,8 +70,8 @@ body.spz-0002 {
   align-items: flex-start;
 }
 .spz-0002 .js-hero-banner .gated-content__container .hero_left {
-  width: 49.16%;
-  max-width: 585px;
+  width: 55%;
+  max-width: 614px;
 }
 .spz-0002 .hero_left .form-content-heading {
   color: #fff;
@@ -102,6 +102,7 @@ body.spz-0002 {
   letter-spacing: 0em;
   color: #FFF;
   margin: 24px 0 16px;
+  max-width: 560px;
 }
 .spz-0002 .hero_left .form-content-subheading sup {
   top: inherit;
@@ -160,7 +161,8 @@ body.spz-0002 {
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  margin-bottom: 24px;
+  max-width: 402px;
+  margin: 0 auto 24px;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte {
   margin-bottom: 32px;
@@ -177,7 +179,7 @@ body.spz-0002 {
   letter-spacing: 0em;
   margin-bottom: 12px;
 }
-.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(04){
+.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-last-child(02){
   margin-bottom: 0;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte p strong,
@@ -628,7 +630,6 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
   }
   .spz-0002 .js-hero-banner .gated-content__right .gated-content__content{
     display: block;
-    padding: 0 24px;
   }
 }
 @media (max-width: 1400px) {
@@ -653,6 +654,9 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
     line-height: 40px;
     padding: 0 24px;
     margin-bottom: 24px;
+  }
+  .spz-0002 .js-hero-banner .gated-content__right .gated-content__content{
+    padding: 0 24px;
   }
   .spz-0002 .landing-page-v3__form-container .landing-page-v3__form .hero_left {
     padding: 0 24px;
@@ -767,6 +771,8 @@ if (!document.body.classList.contains('spz-0002')) {
     waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
       formModify();
       // setHiddenFields();
+      wrapTextInP();
+
       document.querySelector('.js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag').setAttribute('href', 'javascript:void(0)');
 
       if (document.querySelectorAll('.gated-content__content .gated-content__action').length == 2) {
@@ -954,5 +960,18 @@ function setHiddenFields() {
         document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0002_SPZ_Variant');
       }
     }, 100);
+  });
+}
+
+//check if some random text is coming inside .rte without wrapped in any html tag then wrap it in <p> tag
+function wrapTextInP() {
+  document.querySelectorAll('.spz-0002 .js-hero-banner .gated-content__right .rte').forEach(function (el) {
+    el.childNodes.forEach(function (node) {
+      if (node.nodeType === 3 && node.textContent.trim() !== "") {
+        var p = document.createElement('p');
+        p.innerHTML = node.textContent;
+        node.replaceWith(p);
+      }
+    });
   });
 }
