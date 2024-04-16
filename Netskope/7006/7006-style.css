@@ -348,10 +348,12 @@ body.spz-7006 .kerrytown .landing-page-v3__form-content .mktoForm .mktoFormCol s
 .spz-7006 form.mktoForm #LblConsent_to_Processing__c p a {
   text-decoration-skip-ink: none;
   display: inline-block;
+  padding: 0 !important;
 }
 
 .spz-7006 form.mktoForm #LblConsent_to_Processing__c p,
 .spz-7006 form.mktoForm #LblConsent_to_Processing__c p a,
+.spz-7006 form.mktoForm #LblConsent_to_Processing__c span a,
 .spz-7006 form.mktoForm #LblConsent_to_Processing__c span {
   color: #081A59 !important;
   font-size: 12px;
@@ -592,7 +594,10 @@ div.landing-page-v3__container {
   body:not(.variant-loaded) .landing-page-v3__container {
     height: 1508px;
   }
-
+  .spz-7006 form.mktoForm .mktoButtonRow button.mktoButton {
+    height: auto;
+    min-height: 48px;
+  }
 }
 
 

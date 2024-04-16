@@ -161,7 +161,6 @@ body.spz-0002 {
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  max-width: 402px;
   margin: 0 auto 24px;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte {
