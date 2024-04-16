@@ -7,7 +7,7 @@ body.spz-0002 {
   display: none;
 }
 .spz-0002 .js-hero-banner .gated-content__top{
-  padding: 0;
+  padding: 32px 12px;
 }
 .spz-0002 .js-hero-banner {
   padding: 124px 0 0;
@@ -361,6 +361,7 @@ body.spz-0002 {
 }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
   padding: 0 0 0 24px !important;
+  width: fit-content !important;
 }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
   opacity: 0 !important;
@@ -377,7 +378,7 @@ body.spz-0002 {
   width: 100%;
   font-family: Graphik, sans-serif !important;
 }
-.spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
+.spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel * {
   color: #081a59 !important;
   font-size: 12px;
   font-style: normal;
@@ -651,6 +652,9 @@ body.spz-0002 {
   .spz-0002 .js-hero-banner::before {
     right: -348px;
     top: 0;
+  }
+  .spz-0002 .js-hero-banner .gated-content__top{
+    padding: 12px 24px;
   }
   .spz-0002 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     font-size: 40px;
