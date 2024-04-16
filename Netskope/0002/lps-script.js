@@ -297,6 +297,7 @@ body.spz-0002 {
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel {
   padding: 0 0 0 24px !important;
+  width: fit-content !important;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel::after {
   opacity: 0 !important;
@@ -313,7 +314,7 @@ body.spz-0002 {
   width: 100%;
   font-family: Graphik, sans-serif !important;
 }
-.spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p {
+.spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel * {
   color: #081a59 !important;
   font-size: 12px;
   font-style: normal;
@@ -359,17 +360,27 @@ body.spz-0002 {
   text-decoration: none !important;
   text-decoration: underline !important;
 }
-.spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 {
+html:not([lang="ja-JP"]) .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
+}
+html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.mktoZipRow, html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 .mktoClear{
+  display: none !important;
+}
+html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-12, html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-9{
+  width: 100% !important;
+}
+html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10{
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between;
+  width: 100% !important;
+}
+html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
+  width: calc(50% - 6px) !important;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-11 {
-  width: 100% !important;
-  padding: 0 !important;
-  margin: 0 !important;
-}
-.spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.mktoZipRow {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
@@ -625,6 +636,12 @@ body.spz-0002 {
     padding: 0;
     max-width: 500px;
   }
+  html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10{
+    flex-direction: column;
+  }
+  html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
+    width: 100% !important;
+  }
 }`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
@@ -708,10 +725,22 @@ function formModify() {
     childElements[i].classList.add(dynamicClass);
   }
 
-  var formDiv = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm');
+  var formDiv = document.querySelector('.landing-page-v3__form .landing-page-v3__form-content .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+    if (document.querySelector('html[lang="en-US"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+    }
+    if (document.querySelector('html[lang="fr-FR"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Veuillez remplir
+      ce formulaire</h2>`);
+    }
+    if (document.querySelector('html[lang="pt-BR"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, preencha este formulário</h2>`);
+    }
+    if (document.querySelector('html[lang="ja-JP"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">このフォームに必要事項を入力してください</h2>`);
+    }
   }
   // form CTA Update
   var form_button = setInterval(() => {
@@ -736,6 +765,9 @@ function formModify() {
     // Get the text from '#Country option' and set it to '#LblCountry'
     let countryLbl = document.querySelector("#Country option:first-child").textContent;
     document.querySelector("#LblCountry").textContent = countryLbl;
+    if (document.querySelector('html[lang="ja-JP"]')) {
+      document.querySelector("#LblCountry").textContent = '国';
+    }
   }
 
   // Disable option in 'Country' field where value is null
@@ -753,7 +785,12 @@ function formModify() {
 
   var optout_field = document.querySelector('.spz-0002 .landing-page-v3__form .mktoForm .mktoFormRow.field-11');
   var form_footer = document.querySelector('.spz-0002 .landing-page-v3__form .mktoForm .mktoFormRow.field-10');
-  form_footer.before(optout_field);
+  if (!document.querySelector('html[lang="ja-JP"]')) {
+    form_footer.before(optout_field);
+  }
+  else {
+    document.querySelector('.spz-0002 .landing-page-v3__form .mktoForm .mktoFormRow.field-11').before(document.querySelector('.spz-0002 .landing-page-v3__form .mktoForm .mktoFormRow.field-12'));
+  }
 
   var zip_row = document.createElement("div");
   zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
