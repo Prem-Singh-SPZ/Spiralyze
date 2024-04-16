@@ -780,7 +780,7 @@ function formModify() {
       document.querySelectorAll('.hide-tag').forEach(function (el) {
         el.classList.remove('hide-tag');
       });
-      e.target.classList.add('hide-tag');
+      e.target.remove();
     }
   });
 

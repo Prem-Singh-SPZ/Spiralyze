@@ -733,9 +733,9 @@ style.type = 'text/css';
 style.appendChild(document.createTextNode(css));
 
 
-if (!body.classList.contains('spz-0002')) {
+if (!document.body.classList.contains('spz-0002')) {
 
-  body.classList.add('spz-0002');
+  document.body.classList.add('spz-0002');
 
   waitForElm('.spz-0002 .js-hero-banner').then(function () {
     var heading = document.querySelector(".spz-0002 .js-hero-banner .page-intro__resource-title span").innerHTML;
@@ -885,7 +885,7 @@ function formModify() {
       document.querySelectorAll('.hide-tag').forEach(function (el) {
         el.classList.remove('hide-tag');
       });
-      e.target.classList.add('hide-tag');
+      e.target.remove();
     }
   });
 
