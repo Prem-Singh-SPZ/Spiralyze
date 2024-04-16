@@ -430,6 +430,12 @@ $font-family_1: "Graphik", sans-serif;
                           }
                         }
                       }
+
+                      &:hover{
+                        background: linear-gradient(0deg,rgba(217,250,255,.6),rgba(217,250,255,.6)),#fff;
+                        text-decoration: none;
+                        outline: 0;
+                      }
                     }
                   }
                 }
@@ -727,12 +733,14 @@ $font-family_1: "Graphik", sans-serif;
             }
 
             .header__mobile-toggle {
-              width: 24px;
+              width: 32px;
               height: 32px;
+              margin-left: 8px;
 
               .header_mobile__navbar-toggler {
-                width: 24px;
+                width: 32px;
                 height: 32px;
+                // padding-left: 8px;
               }
             }
 
