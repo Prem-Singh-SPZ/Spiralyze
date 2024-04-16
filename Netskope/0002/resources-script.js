@@ -424,6 +424,26 @@ body.spz-0002 {
   text-decoration: none !important;
   text-decoration: underline !important;
 }
+html:not([lang="ja-JP"]) .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 {
+  width: 100% !important;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.mktoZipRow, html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoClear{
+  display: none !important;
+}
+html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-12, html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-9{
+  width: 100% !important;
+}
+html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10{
+  display: flex !important;
+  flex-wrap: nowrap !important;
+  justify-content: space-between;
+  width: 100% !important;
+}
+html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
+  width: calc(50% - 6px) !important;
+}
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-10 {
   width: 100% !important;
   padding: 0 !important;
@@ -729,6 +749,13 @@ body.spz-0002 {
   .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(05) {order: 6}
   .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
   .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{order:7;margin:8px 3px;}
+
+  html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10{
+    flex-direction: column;
+  }
+  html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
+    width: 100% !important;
+  }
 }`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
@@ -831,11 +858,29 @@ function formModify() {
   var formDiv = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+    if (document.querySelector('html[lang="en-US"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+    }
+    if (document.querySelector('html[lang="es-ES"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, rellene el formulario</h2>`);
+    }
+    if (document.querySelector('html[lang="fr-FR"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Veuillez remplir
+      ce formulaire</h2>`);
+    }
+    if (document.querySelector('html[lang="pt-BR"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, preencha este formulário</h2>`);
+    }
+    if (document.querySelector('html[lang="ja-JP"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">このフォームに必要事項を入力してください</h2>`);
+    }
+    if (document.querySelector('html[lang="de-DE"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Bitte füllen Sie dieses Formular aus</h2>`);
+    }
   }
   // form CTA Update
   var form_button = setInterval(() => {
-    var textChng = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right .mktoForm .mktoButtonRow .mktoButton');
+    var textChng = document.querySelector('html[lang="en-US"] .js-hero-banner .gated-content__container .gated-content__right .mktoForm .mktoButtonRow .mktoButton');
     if (textChng) {
       textChng.innerText = 'Get the report';
       clearInterval(form_button);
@@ -876,7 +921,9 @@ function formModify() {
 
   var optout_field = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-11');
   var form_footer = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-10');
-  form_footer.before(optout_field);
+  if (!document.querySelector('html[lang="ja-JP"]')) {
+    form_footer.before(optout_field);
+  }
 
   var zip_row = document.createElement("div");
   zip_row.innerHTML = '<div class="mktoPlaceholder mktoPlaceholderPostalCode"></div>';
