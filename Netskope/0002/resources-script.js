@@ -102,7 +102,7 @@ body.spz-0002 {
   letter-spacing: 0em;
   color: #FFF;
   margin: 24px 0 16px;
-  max-width: 562px;
+  max-width: 573px;
 }
 .spz-0002 .hero_left .form-content-subheading sup {
   top: inherit;
@@ -143,7 +143,7 @@ body.spz-0002 {
 }
 
 .spz-0002 .hero_left .hero-form-img + .gated-content__content {
-  margin-top: 40px;
+  margin-top: 37px;
 }
 
 .spz-0002 .js-hero-banner .gated-content__right .gated-content__form {
@@ -151,7 +151,7 @@ body.spz-0002 {
   max-width: unset;
   padding: 24px 32px 32px;
   border-radius: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 40px;
 }
 .spz-0002 .js-hero-banner .gated-content__right .form_title {
   color: #081a59;
@@ -165,6 +165,9 @@ body.spz-0002 {
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte {
   margin-bottom: 32px;
+}
+.spz-0002 .js-hero-banner .gated-content__right .rte br{
+  display: none;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02) img {
   display: none;
@@ -608,6 +611,9 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
     width: 100%;
     max-width: 320px;
   }
+  .spz-0002 .js-hero-banner .gated-content__right .rte {
+    margin-bottom: 48px;
+  }
   .spz-0002 .js-hero-banner .gated-content__container .hero_left,
   .spz-0002 .js-hero-banner .gated-content__right .rte img,
   .spz-0002 .js-hero-banner .gated-content__right .rte br {
@@ -685,19 +691,19 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
   .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap {
     margin-bottom: 8px;
   }
-  .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
+  html:not([lang="en-US"]) .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 {
     margin-top: 6px !important;
   }
   .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-11 p.p11 {
     margin-top: 3px;
   }
   .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoButtonWrap {
-    margin-top: 10px !important;
+    margin-top: 16px !important;
   }
   .spz-0002 .js-hero-banner .gated-content__right .rte {
     max-width: unset;
     padding: 0 24px;
-    margin: 24px 0 31px;
+    margin: 24px 0 21px;
   }
   .spz-0002 .js-hero-banner .gated-content__container .gated-content__right .rte .hero-form-img {
     display: block;
