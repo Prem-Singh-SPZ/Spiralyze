@@ -41,7 +41,14 @@ body.spz-0002 {
 }
 @media (max-width: 1023.98px) {
   .spz-0002 .landing-page-v3__container {
-    background-position: -438px -54px !important;
+    background-position: -394px -54px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-0002 .landing-page-v3__container {
+    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0002/mobile_back.webp") no-repeat !important;
+    background-size: 100% 1065px!important;
+    background-position: 0 top!important;
   }
 }
 .spz-0002 .landing-page-v3__container .landing-page-v3__container-inner {
@@ -125,11 +132,14 @@ body.spz-0002 {
 .spz-0002 .hero_left h4 {
   color: #fff;
   font-family: Graphik, sans-serif;
-  font-size: 18px;
+  font-size: 18px !important;
   font-style: normal;
   font-weight: 600;
-  line-height: 24px;
+  line-height: 24px !important;
   margin: 24px 0;
+}
+.spz-0002 .hero_left .mobile-only{
+  display: none;
 }
 .spz-0002 .hero_left h4 sup {
   font-size: 8px;
@@ -141,6 +151,7 @@ body.spz-0002 {
   object-fit: contain;
   max-width: 511px;
   margin-top: 16px;
+  margin-bottom: 24px;
 }
 .spz-0002 .landing-page-v3__form-content .form_title {
   color: #081a59;
@@ -150,7 +161,8 @@ body.spz-0002 {
   font-style: normal;
   font-weight: 400;
   line-height: 48px;
-  margin-bottom: 24px;
+  margin:0 auto 24px;
+  max-width: 440px;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm {
   display: -webkit-box;
@@ -572,6 +584,7 @@ html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoF
   .spz-0002 .hero_left img {
     max-width: 320px;
     margin-top: 2px;
+    margin-bottom: 0;
   }
 }
 @media (max-width: 1400px) {
@@ -592,13 +605,20 @@ html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoF
   .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoButtonWrap {
     margin-top: 10px !important;
   }
+  .spz-0002 .landing-page-v3__form-content .form_title {
+    max-width: 312px;
+  }
+  .spz-0002 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading *{
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
 }
 @media (max-width: 767.98px) {
   .spz-0002 .landing-page-v3__container {
     padding: 76px 0 0 0;
   }
   .spz-0002 .landing-page-v3__container .landing-page-v3__content-container--bottom {
-    padding: 24px 24px 32px;
+    padding: 24px 24px 40px;
   }
   .spz-0002 .landing-page-v3__form-container .landing-page-v3__form-content + .form-content-heading {
     font-size: 40px;
@@ -608,17 +628,29 @@ html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoF
   }
   .spz-0002 .landing-page-v3__form-container .hero_left {
     padding: 0 24px;
+    flex-direction: column;
   }
   .spz-0002 .landing-page-v3__form-container .hero_left::after {
     display: none;
   }
   .spz-0002 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
-    padding: 24px 24px 32px;
-    margin: 24px 0 23px;
+    padding: 24px;
+    margin: 16px 0 23px;
   }
   .spz-0002 .hero_left h4 {
     font-size: 16px;
-    margin: 2px 0 23px;
+    margin: 2px 0 11px;
+    order: 0;
+  }
+  .spz-0002 .hero_left .hero-form-img{
+    order: 2;
+  }
+  .spz-0002 .hero_left img{
+    margin-top: 8px;
+  }
+  .spz-0002 .hero_left .mobile-only{
+    display: block;
+    order: 1;
   }
   .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow {
     width: 100% !important;
@@ -642,6 +674,9 @@ html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoF
   html[lang="ja-JP"] .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
     width: 100% !important;
   }
+  .spz-0002 .landing-page-v3__content-container--bottom .landing-page-v3__content > p:nth-child(1){
+    display: none;
+  }
 }`;
 
 head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
@@ -659,9 +694,10 @@ if (!document.body.classList.contains('spz-0002')) {
     var sub_heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__subheadline").innerHTML;
     var heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__title").innerHTML;
     var bottom_html = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__content-container--bottom").innerHTML;
+    var first_p = document.querySelector(".spz-0002 .landing-page-v3__content-container--bottom .landing-page-v3__content > p:nth-child(1)").innerHTML;
 
     // Hero Fom Content
-    document.querySelector('.spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__form').insertAdjacentHTML("beforebegin", `<div class="hero_left">
+    document.querySelector('.spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__form').insertAdjacentHTML("beforebegin", `<div class="hero_left"><p class="mobile-only">` + first_p + `</p>
 			  <h2 class="form-content-heading">`+ heading + `</h2>
 			  `+ sub_heading + `
 			  <picture class="hero-form-img">
@@ -722,8 +758,14 @@ function formModify() {
   var formDiv = document.querySelector('.landing-page-v3__form .landing-page-v3__form-content .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    if (document.querySelector('html[lang="en-US"]')) {
+    if (document.querySelector('html[lang="en-US"]') && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
+    }
+    if (location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > -1) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Compilare questo modulo</h2>`);
+    }
+    if (document.querySelector('html[lang="es-ES"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, rellene el formulario</h2>`);
     }
     if (document.querySelector('html[lang="fr-FR"]')) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Veuillez remplir
@@ -735,13 +777,18 @@ function formModify() {
     if (document.querySelector('html[lang="ja-JP"]')) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">このフォームに必要事項を入力してください</h2>`);
     }
+    if (document.querySelector('html[lang="de-DE"]')) {
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Bitte füllen Sie dieses Formular aus</h2>`);
+    }
   }
   // form CTA Update
   var form_button = setInterval(() => {
-    var textChng = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton');
-    if (textChng) {
-      textChng.innerText = 'Get the report';
-      clearInterval(form_button);
+    if (location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0) {
+      var textChng = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton');
+      if (textChng) {
+        textChng.innerText = 'Get the report';
+        clearInterval(form_button);
+      }
     }
   }, 100);
 

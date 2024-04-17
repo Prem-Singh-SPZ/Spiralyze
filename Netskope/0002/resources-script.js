@@ -162,7 +162,7 @@ body.spz-0002 {
   font-weight: 400;
   line-height: 48px;
   margin: 0 auto 24px;
-  max-width: 340px;
+  max-width: 440px;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte {
   margin-bottom: 32px;
@@ -656,7 +656,7 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
     padding: 12px 24px;
   }
   .spz-0002 .js-hero-banner .gated-content__right .form_title{
-    max-width: 192px;
+    max-width: 312px;
   }
   .spz-0002 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     font-size: 32px;
@@ -771,6 +771,7 @@ if (!document.body.classList.contains('spz-0002')) {
           <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
           <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
         </picture>`+ document.querySelector(".spz-0002 .js-hero-banner .gated-content__left").innerHTML);
+
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">` + heading + `</h2>`);
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
           <img src="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp" alt="`+ heading + `">
