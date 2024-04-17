@@ -102,7 +102,7 @@ body.spz-0002 {
   letter-spacing: 0em;
   color: #FFF;
   margin: 24px 0 16px;
-  max-width: 560px;
+  max-width: 562px;
 }
 .spz-0002 .hero_left .form-content-subheading sup {
   top: inherit;
@@ -962,14 +962,15 @@ function setHiddenFields() {
   });
 }
 
-//check if some random text is coming inside .rte without wrapped in any html tag then wrap it in <p> tag
-function wrapTextInP() {
+//check if some random text is coming inside .rte without wrapped in any html tag then append it in second <p> tag
+function wrapTextInP()  {
   document.querySelectorAll('.spz-0002 .js-hero-banner .gated-content__right .rte').forEach(function (el) {
     el.childNodes.forEach(function (node) {
       if (node.nodeType === 3 && node.textContent.trim() !== "") {
         var p = document.createElement('p');
         p.innerHTML = node.textContent;
-        node.replaceWith(p);
+        el.querySelector('p:nth-child(2)').appendChild(p);
+        node.remove();
       }
     });
   });
