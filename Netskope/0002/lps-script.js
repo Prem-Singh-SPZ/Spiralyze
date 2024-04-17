@@ -777,6 +777,7 @@ function formModify() {
   //document event listener if consist .show-hide-tag then remove all .hide-tag
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('show-hide-tag')) {
+      e.preventDefault();
       document.querySelectorAll('.hide-tag').forEach(function (el) {
         el.classList.remove('hide-tag');
       });

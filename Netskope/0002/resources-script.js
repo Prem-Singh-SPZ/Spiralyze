@@ -162,6 +162,7 @@ body.spz-0002 {
   font-weight: 400;
   line-height: 48px;
   margin: 0 auto 24px;
+  max-width: 340px;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte {
   margin-bottom: 32px;
@@ -604,7 +605,7 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
     background-repeat: no-repeat;
     width: 200px;
     height: 193px;
-    top: 41px;
+    top: 34px;
     right: 139px;
   }
   .spz-0002 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img img {
@@ -653,6 +654,9 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
   }
   .spz-0002 .js-hero-banner .gated-content__top{
     padding: 12px 24px;
+  }
+  .spz-0002 .js-hero-banner .gated-content__right .form_title{
+    max-width: 192px;
   }
   .spz-0002 .js-hero-banner .gated-content__container .gated-content__right .form-content-heading {
     font-size: 32px;
@@ -893,6 +897,7 @@ function formModify() {
   //document event listener if consist .show-hide-tag then remove all .hide-tag
   document.addEventListener('click', function (e) {
     if (e.target.classList.contains('show-hide-tag')) {
+      e.preventDefault();
       document.querySelectorAll('.hide-tag').forEach(function (el) {
         el.classList.remove('hide-tag');
       });
