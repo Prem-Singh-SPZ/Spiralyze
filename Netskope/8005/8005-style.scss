@@ -359,9 +359,25 @@ $font-family_1: "Graphik", sans-serif;
                         padding: 24px 24px 16px;
                       }
                       @media (max-width: 767.98px) {
-                        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-360.webp)
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-360_1.webp)
                           no-repeat bottom right;
                         background-size: cover;
+                      }
+
+                      &:hover {
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-hover-1440_1.webp)
+                          no-repeat bottom right;
+                        background-size: cover;
+                        @media (max-width: 767.98px) {
+                          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-hover-768_1.webp)
+                            no-repeat bottom right;
+                          background-size: cover;
+                        }
+                        @media (max-width: 767.98px) {
+                          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-hover-360_1.webp)
+                            no-repeat bottom right;
+                          background-size: cover;
+                        }
                       }
 
                       .card__content-img {
@@ -429,12 +445,6 @@ $font-family_1: "Graphik", sans-serif;
                             margin-left: 12px;
                           }
                         }
-                      }
-
-                      &:hover{
-                        background: linear-gradient(0deg,rgba(217,250,255,.6),rgba(217,250,255,.6)),#fff;
-                        text-decoration: none;
-                        outline: 0;
                       }
                     }
                   }

@@ -1,7 +1,6 @@
-// let bodyLoaded = setInterval(function () {
-//     const body = document.querySelector('body');
-//     if (body) {
-//         clearInterval(bodyLoaded);
+//append and preload three image in head tag
+document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-hover-1440_1.webp" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-hover-768_1.webp" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/8005/bg-card-hover-360_1.webp" as="image">`);
+
 
 if (!document.body.classList.contains('spz-8005')) {
     document.body.classList.add('spz-8005');
@@ -100,9 +99,6 @@ if (!document.body.classList.contains('spz-8005')) {
     });
 
 }
-
-//     }
-// });
 
 function checkMenuIsOpen() {
     setTimeout(() => {
