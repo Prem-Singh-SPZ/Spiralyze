@@ -760,11 +760,8 @@ function formModify() {
   var formDiv = document.querySelector('.landing-page-v3__form .landing-page-v3__form-content .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    if (document.querySelector('html[lang="en-US"]') && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0) {
+    if (document.querySelector('html[lang="en-US"]')) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
-    }
-    if (location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > -1) {
-      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Compilare questo modulo</h2>`);
     }
     if (document.querySelector('html[lang="es-ES"]')) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, rellene el formulario</h2>`);
@@ -785,12 +782,10 @@ function formModify() {
   }
   // form CTA Update
   var form_button = setInterval(() => {
-    if (location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0) {
-      var textChng = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton');
-      if (textChng) {
-        textChng.innerText = 'Get the report';
-        clearInterval(form_button);
-      }
+    var textChng = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton');
+    if (textChng) {
+      textChng.innerText = 'Get the report';
+      clearInterval(form_button);
     }
   }, 100);
 
