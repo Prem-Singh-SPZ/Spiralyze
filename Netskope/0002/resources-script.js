@@ -33,7 +33,7 @@ body.spz-0002 {
 }
 
 .spz-0002 .js-hero-banner {
-  background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_1440.svg") no-repeat !important;
+  background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713440698/netskope/0002/background_pattern_1441.svg") no-repeat !important;
   background-size: 100% !important;
   background-position: 0 0 !important;
   position: relative;
@@ -41,21 +41,21 @@ body.spz-0002 {
 }
 @media (min-width: 2500px) and (max-width: 3500px) {
   .spz-0002 .js-hero-banner {
-    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_2560.svg") no-repeat !important;
+    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713440923/netskope/0002/background_pattern_2561.svg") no-repeat !important;
     background-size: 100%  !important;
     background-position: 0 0 !important;
   }
 }
 @media (min-width: 3500px) {
   .spz-0002 .js-hero-banner {
-    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_3840.svg") no-repeat !important;
+    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713440923/netskope/0002/background_pattern_3841.svg") no-repeat !important;
     background-size: 100%  !important;
     background-position: 0 0 !important;
   }
 }
 @media (max-width: 1023.98px) {
   .spz-0002 .js-hero-banner {
-    background-position: 0 0 !important;
+    background-position: -124px 72px !important;
     background-size: 1400px 908px !important;
   }
   .spz-0002 .desk-only-p{
@@ -64,12 +64,10 @@ body.spz-0002 {
 }
 @media (max-width: 767.98px) {
   .spz-0002 .js-hero-banner {
-    background-position: 0 0 !important;
+    background-position: -177px 83px !important;
   }
 }
 .spz-0002 .js-hero-banner .gated-content__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   flex-wrap: wrap;
   flex-direction: row-reverse;
