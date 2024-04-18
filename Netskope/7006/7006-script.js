@@ -55,6 +55,19 @@ let bodyLoaded = setInterval(function () {
 
       document.querySelector('.landing-page-v3__content-container .landing-page-v3__content').insertAdjacentHTML('afterend', privacyHtml)
 
+      let bagdeHtml = `
+          <div class="spz-form-badge">
+            <picture>
+              <source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/7006/Logos_desk.png">
+              <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/7006/Logos_tab.png">
+              <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/7006/Logos_mob.png" alt="Badges">
+            </picture>
+          </div>`;
+
+      if (document.querySelectorAll('.landing-page-v3__form-container .spz-form-badge').length == 0) {
+        document.querySelector('.landing-page-v3__form-container .landing-page-v3__form-content').insertAdjacentHTML('afterend', bagdeHtml)
+      }
+
       document.querySelectorAll('.landing-page-v3__content-container .landing-page-v3__content p').forEach(function (para) {
         if (para.innerHTML == '&nbsp;' || para.innerHTML == '&nbsp; ') {
           para.classList.add('empty-para')

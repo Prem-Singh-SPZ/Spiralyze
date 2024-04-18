@@ -37,11 +37,33 @@ if (!document.body.classList.contains('spz-8005-v2')) {
         if (document.querySelectorAll('.gated-content__container .gated-content__left .spz-footer-section').length == 0) {
             addFooter();
         }
+        else {
+            let changeResource = setInterval(() => {
+                if (document.querySelector('#components__content .related-resources-cards')) {
+                    document.querySelector('.gated-content__container .gated-content__left .spz-footer-section').insertAdjacentElement('beforebegin', document.querySelector('#components__content .related-resources-cards'));
+                    iconUpdate();
+
+                }
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(changeResource);
+                iconUpdate();
+            }, 5000);
+        }
 
         waitForElm('.gated-content__container .gated-content__left .spz-footer-section').then(function () {
-            if (document.querySelector('#components__content .related-resources-cards')) {
-                document.querySelector('.gated-content__container .gated-content__left .spz-footer-section').insertAdjacentElement('beforebegin', document.querySelector('#components__content .related-resources-cards'));
-            }
+            let changeResource = setInterval(() => {
+                if (document.querySelector('#components__content .related-resources-cards')) {
+                    document.querySelector('.gated-content__container .gated-content__left .spz-footer-section').insertAdjacentElement('beforebegin', document.querySelector('#components__content .related-resources-cards'));
+                    iconUpdate();
+                }
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(changeResource);
+                iconUpdate();
+            }, 5000);
         });
 
         //on window resize run the function
