@@ -985,13 +985,25 @@ function setHiddenFields() {
 //check if some random text is coming inside .rte without wrapped in any html tag then append it in second <p> tag
 function wrapTextInP() {
   document.querySelectorAll('.spz-0002 .js-hero-banner .gated-content__right .rte').forEach(function (el) {
+    removeTags();
     el.childNodes.forEach(function (node) {
       if (node.nodeType === 3 && node.textContent.trim() !== "") {
         var p = document.createElement('p');
         p.innerHTML = node.textContent;
-        el.querySelector('p:nth-child(2)').appendChild(p);
+        document.querySelector('.desk-only-p').appendChild(p);
+        el.querySelector('p:nth-child(2)').innerHTML = document.querySelector('.desk-only-p').innerHTML;
         node.remove();
       }
     });
+  });
+}
+
+//remove all <br> and <noscript> tags from .rte
+function removeTags() {
+  document.querySelectorAll('.spz-0002 .js-hero-banner .gated-content__right .rte > br').forEach(function (el) {
+    el.remove();
+  });
+  document.querySelectorAll('.spz-0002 .js-hero-banner .gated-content__right .rte > noscript').forEach(function (el) {
+    el.remove();
   });
 }
