@@ -26,20 +26,24 @@ body.spz-0002 {
 }
 
 .spz-0002 .js-hero-banner {
-  background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1712915456/netskope/0002/background_pattern.svg") no-repeat !important;
-  background-size: 2000px 1118px!important;
-  background-position: 0 116px !important;
+  background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_1440.svg") no-repeat !important;
+  background-size: 100% !important;
+  background-position: 0 168px !important;
   position: relative;
   overflow-x: hidden;
 }
 @media (min-width: 2500px) and (max-width: 3500px) {
   .spz-0002 .js-hero-banner {
-    background-position: 100% 116px !important;
+    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_2560.svg") no-repeat !important;
+    background-size: 100%  !important;
+    background-position: 0 168px !important;
   }
 }
 @media (min-width: 3500px) {
   .spz-0002 .js-hero-banner {
-    background-position: calc(100% - 560px) 116px !important;
+    background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_3840.svg") no-repeat !important;
+    background-size: 100%  !important;
+    background-position: 0 168px !important;
   }
 }
 @media (max-width: 1023.98px) {
@@ -56,22 +60,14 @@ body.spz-0002 {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
   flex-wrap: wrap;
-  -webkit-box-orient: unset;
-  -webkit-box-direction: unset;
-  -ms-flex-direction: unset;
-  flex-direction: unset;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
+  flex-direction: row-reverse;
   justify-content: space-between;
-  -webkit-box-align: start;
-  -ms-flex-align: start;
   align-items: flex-start;
 }
 .spz-0002 .js-hero-banner .gated-content__container .hero_left {
-  width: 55%;
-  max-width: 614px;
+  width: 50%;
+  max-width: 585px;
 }
 .spz-0002 .hero_left .form-content-heading {
   color: #fff;
@@ -975,7 +971,7 @@ function setHiddenFields() {
 }
 
 //check if some random text is coming inside .rte without wrapped in any html tag then append it in second <p> tag
-function wrapTextInP()  {
+function wrapTextInP() {
   document.querySelectorAll('.spz-0002 .js-hero-banner .gated-content__right .rte').forEach(function (el) {
     el.childNodes.forEach(function (node) {
       if (node.nodeType === 3 && node.textContent.trim() !== "") {
