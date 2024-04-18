@@ -205,9 +205,9 @@ body.spz-0002 {
 .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{
   margin: 8px;
   }
-.spz-0002 .js-hero-banner .gated-content__right .gated-content__content{
-  display: none;
-}
+// .spz-0002 .js-hero-banner .gated-content__right .gated-content__content{
+//   display: none;
+// }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -746,20 +746,20 @@ if (!document.body.classList.contains('spz-0002')) {
 
   document.body.classList.add('spz-0002');
 
-  waitForElm('.spz-0002 .js-hero-banner').then(function () {
+  waitForElm('.spz-0002 .js-hero-banner .rte p').then(function () {
     var heading = document.querySelector(".spz-0002 .js-hero-banner .page-intro__resource-title span").innerHTML;
     var sub_heading = document.querySelector(".spz-0002 .js-hero-banner .gated-content__left .rte p").firstChild.innerHTML;
-    var short_description = document.querySelector(".spz-0002 .js-hero-banner .gated-content__left .gated-content__content").outerHTML;
+    var short_description = document.querySelector(".spz-0002 .js-hero-banner .rte p:nth-child(2)").textContent;
 
     // Hero Form Content
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__left').insertAdjacentHTML("beforebegin", `<div class="hero_left">
           <h2 class="form-content-heading">`+ heading + `</h2>
           <h6 class="form-content-subheading">`+ sub_heading + `</h6>
+          <div class="desk-only-p">`+ short_description + `</div>
           <div class="hero-form-img">
             <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
-          </div>
-          `+ short_description + `
-        </div>`);
+          </div> 
+          </div>`);
 
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend", `<picture class="hero-form-img">
           <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp">
