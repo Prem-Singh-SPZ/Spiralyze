@@ -71,6 +71,7 @@ body.spz-0002 {
   justify-content: space-between;
   padding: 0;
   order:unset;
+  flex-direction: row-reverse;
 }
 .spz-0002 .landing-page-v3__container .landing-page-v3__form-container .landing-page-v3__form {
   display: flex;
@@ -97,8 +98,9 @@ body.spz-0002 {
   display: none;
 }
 .spz-0002 .landing-page-v3__form-container .hero_left {
-  width: 48.5%;
-  max-width: 573px;
+  width: 49.5%;
+  max-width: 585px;
+  position: relative;
 }
 .spz-0002 .landing-page-v3__form-container .landing-page-v3__form .landing-page-v3__form-content {
   width: 100%;
@@ -127,7 +129,7 @@ body.spz-0002 {
   width: 12px;
   height: 12px;
   top: -20px;
-  left: -12px;
+  left: -36px;
 }
 .spz-0002 .hero_left h4 {
   color: #fff;
