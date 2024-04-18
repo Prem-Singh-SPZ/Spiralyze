@@ -25,10 +25,17 @@ body.spz-0002 {
   margin-bottom: 50px;
 }
 
+.spz-0002 .desk-only-p img{
+  display: none;
+}
+.spz-0002 .desk-only-p{
+  margin-bottom: 16px;
+}
+
 .spz-0002 .js-hero-banner {
   background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_1440.svg") no-repeat !important;
   background-size: 100% !important;
-  background-position: 0 168px !important;
+  background-position: 0 0 !important;
   position: relative;
   overflow-x: hidden;
 }
@@ -36,24 +43,28 @@ body.spz-0002 {
   .spz-0002 .js-hero-banner {
     background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_2560.svg") no-repeat !important;
     background-size: 100%  !important;
-    background-position: 0 168px !important;
+    background-position: 0 0 !important;
   }
 }
 @media (min-width: 3500px) {
   .spz-0002 .js-hero-banner {
     background: #081a59 url("//res.cloudinary.com/spiralyze/image/upload/v1713423969/netskope/0002/background_pattern_3840.svg") no-repeat !important;
     background-size: 100%  !important;
-    background-position: 0 168px !important;
+    background-position: 0 0 !important;
   }
 }
 @media (max-width: 1023.98px) {
   .spz-0002 .js-hero-banner {
-    background-position: -458px 94px !important;
+    background-position: 0 0 !important;
+    background-size: 1400px 908px !important;
+  }
+  .spz-0002 .desk-only-p{
+    display: none;
   }
 }
 @media (max-width: 767.98px) {
   .spz-0002 .js-hero-banner {
-    background-position: -705px 76px !important;
+    background-position: 0 0 !important;
   }
 }
 .spz-0002 .js-hero-banner .gated-content__container {
@@ -97,7 +108,7 @@ body.spz-0002 {
   line-height: 24px;
   letter-spacing: 0em;
   color: #FFF;
-  margin: 24px 0 16px;
+  margin: 24px 0 24px;
   max-width: 573px;
 }
 .spz-0002 .hero_left .form-content-subheading sup {
@@ -166,7 +177,7 @@ body.spz-0002 {
 .spz-0002 .js-hero-banner .gated-content__right .rte br{
   display: none;
 }
-.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02) img {
+.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01), .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02) {
   display: none;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte p,
@@ -178,19 +189,21 @@ body.spz-0002 {
   letter-spacing: 0em;
   margin-bottom: 12px;
 }
-.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-last-child(02){
+.spz-0002 .js-hero-banner .gated-content__container .gated-content__right .hero-form-img + p{
   margin-bottom: 0;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte p strong,
 .spz-0002 .js-hero-banner .gated-content__right .rte ul li strong {
   font-weight: 600;
 }
-.spz-0002 .js-hero-banner .gated-content__right .rte ul {
-  padding-left: 24px;
-}
+
 .spz-0002 .js-hero-banner .gated-content__right .rte ul,
 .spz-0002 .js-hero-banner .gated-content__right .rte ul li {
   margin: 0;
+}
+.spz-0002 .js-hero-banner .gated-content__right .rte ul {
+  padding-left: 24px;
+  margin-bottom: 16px;
 }
 
 .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
@@ -616,13 +629,14 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
   .spz-0002 .js-hero-banner .gated-content__right .rte br {
     display: none;
   }
-  .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01){
+  .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01),  .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02){
     display: block;
   }
   .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01) {
     font-size: 18px;
     line-height: 24px;
   }
+  
   .spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(01) sup {
     top: unset;
     font-size: 100%;
