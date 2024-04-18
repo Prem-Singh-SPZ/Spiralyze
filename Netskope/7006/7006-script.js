@@ -97,15 +97,6 @@ let bodyLoaded = setInterval(function () {
           document.querySelector('.spz-field-email').before(document.querySelector('.spz-field-fname'))
           document.querySelector('.spz-field-email').before(document.querySelector('.spz-field-lname'))
 
-          // document.querySelector('#LblFirstName').textContent = 'First Name';
-          // document.querySelector('#LblLastName').textContent = 'Last Name';
-          // document.querySelector('#LblEmail').textContent = 'Business Email';
-          // document.querySelector('#LblCompany').textContent = 'Company';
-          // document.querySelector('#LblTitle').textContent = 'Job Title';
-          // document.querySelector('#LblPhone').textContent = 'Phone';
-          // document.querySelector('#Country option:first-child').textContent = "";
-          // document.querySelector('#LblCountry').textContent = 'Country';
-
           if (document.querySelector("html").getAttribute("lang") == "en-US") {
             document.querySelector("#LblFirstName").textContent = "First Name";
             document.querySelector("#LblLastName").textContent = "Last Name";
