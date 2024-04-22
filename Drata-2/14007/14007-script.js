@@ -1,6 +1,28 @@
 (function () {
     const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
 
+    //append swiper js script in head and onload of that call function initslider
+    function appendScript(url, callback) {
+        var script = document.createElement("script");
+        script.type = "text/javascript";
+        script.src = url;
+
+        var css = document.createElement("link");
+        css.rel = "stylesheet";
+        css.href = "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css";
+
+        document.getElementsByTagName("head")[0].appendChild(script);
+        document.getElementsByTagName("head")[0].appendChild(css);
+
+        script.onload = function () {
+            callback();
+        };
+    }
+
+    appendScript("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js", function () {
+        initSlider();
+    });
+
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
 
@@ -391,11 +413,174 @@
                     </div>
                 </div>
             </div>
-        </section><section class="auto-footer">
+        </section><section class="cr-section">
+        <div class="title-wrapper">
+            <h3 class="large-title">Don't Take Our Word for It</h3>
+            <p class="small-description">See how others your Drata to achieve and maintain SOC 2 compliance.</p>
+        </div>
+        <div class="slider-section">
+            <div class="container slider-column">
+                <div class="swiper swiper-slider">
+                    <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <div class="slider-img">
+                                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/avatar.webp"
+                                        alt="">
+                                </div>
+                                <div class="slider-content">
+                                    <div class="text-copy">
+                                        <h3 class="card-title">Saves Our Team Hundreds of Hours</h3>
+                                        <p class="card-desc">
+                                            “With Drata, we can quickly achieve SOC 2 compliance without disrupting our flow
+                                            of business. Makes compliance easy. Puts us on the fast track.”
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="footer-logos">
+                                            <div class="c-logo">
+                                                <span style="font-weight: 700;color: #0C131A;">Tor Fusdahl</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <span style="font-weight: 500;color: #0C131A;">Engineering Manager</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/logo.svg"
+                                                    alt="Superside">
+                                            </div>
+                                        </div>
+                                        <div class="learn-more-cta">
+                                            <a href="javascript:void(0)" class="learn-more">Learn More <img
+                                                    src="//res.cloudinary.com/spiralyze/image/upload/v1713779545/drata/14007/right-arrow.svg"
+                                                    class="button_arrow" alt="CTA Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <div class="slider-img">
+                                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/avatar.webp"
+                                        alt="">
+                                </div>
+                                <div class="slider-content">
+                                    <div class="text-copy">
+                                        <h3 class="card-title">Saves Our Team Hundreds of Hours</h3>
+                                        <p class="card-desc">
+                                            “With Drata, we can quickly achieve SOC 2 compliance without disrupting our flow
+                                            of business. Makes compliance easy. Puts us on the fast track.”
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="footer-logos">
+                                            <div class="c-logo">
+                                                <span style="font-weight: 700;color: #0C131A;">Tor Fusdahl</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <span style="font-weight: 500;color: #0C131A;">Engineering Manager</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/logo.svg"
+                                                    alt="Superside">
+                                            </div>
+                                        </div>
+                                        <div class="learn-more-cta">
+                                            <a href="javascript:void(0)" class="learn-more">Learn More <img
+                                                    src="//res.cloudinary.com/spiralyze/image/upload/v1713779545/drata/14007/right-arrow.svg"
+                                                    class="button_arrow" alt="CTA Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <div class="slider-img">
+                                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/avatar.webp"
+                                        alt="">
+                                </div>
+                                <div class="slider-content">
+                                    <div class="text-copy">
+                                        <h3 class="card-title">Saves Our Team Hundreds of Hours</h3>
+                                        <p class="card-desc">
+                                            “With Drata, we can quickly achieve SOC 2 compliance without disrupting our flow
+                                            of business. Makes compliance easy. Puts us on the fast track.”
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="footer-logos">
+                                            <div class="c-logo">
+                                                <span style="font-weight: 700;color: #0C131A;">Tor Fusdahl</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <span style="font-weight: 500;color: #0C131A;">Engineering Manager</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/logo.svg"
+                                                    alt="Superside">
+                                            </div>
+                                        </div>
+                                        <div class="learn-more-cta">
+                                            <a href="javascript:void(0)" class="learn-more">Learn More <img
+                                                    src="//res.cloudinary.com/spiralyze/image/upload/v1713779545/drata/14007/right-arrow.svg"
+                                                    class="button_arrow" alt="CTA Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="swiper-slide">
+                            <div class="slider-card">
+                                <div class="slider-img">
+                                    <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/avatar.webp"
+                                        alt="">
+                                </div>
+                                <div class="slider-content">
+                                    <div class="text-copy">
+                                        <h3 class="card-title">Saves Our Team Hundreds of Hours</h3>
+                                        <p class="card-desc">
+                                            “With Drata, we can quickly achieve SOC 2 compliance without disrupting our flow
+                                            of business. Makes compliance easy. Puts us on the fast track.”
+                                        </p>
+                                    </div>
+                                    <div class="card-footer">
+                                        <div class="footer-logos">
+                                            <div class="c-logo">
+                                                <span style="font-weight: 700;color: #0C131A;">Tor Fusdahl</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <span style="font-weight: 500;color: #0C131A;">Engineering Manager</span>
+                                            </div>
+                                            <div class="c-logo">
+                                                <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/logo.svg"
+                                                    alt="Superside">
+                                            </div>
+                                        </div>
+                                        <div class="learn-more-cta">
+                                            <a href="javascript:void(0)" class="learn-more">Learn More <img
+                                                    src="//res.cloudinary.com/spiralyze/image/upload/v1713779545/drata/14007/right-arrow.svg"
+                                                    class="button_arrow" alt="CTA Arrow"></a>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <span class="swiper-pagination"></span>
+                    <span class="swiper-button-prev"></span>
+                    <span class="swiper-button-next"></span>
+                </div>
+            </div>
+        </div>
+        <div class="cta-wrapper"><a href="javascript:void(0)" class="blue-cta-btn"><span>See All Stories</span> <img
+                    src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/6009/arrow_icon.svg"
+                    class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a></div>
+    </section><section class="auto-footer">
         <div class="automate-footer container dis-flex flex-wrap"><h6 class="small-title">Get a Demo</h6>
           <h3 class="auto-title">Accelerate Your SOC 2 Journey</h3>
           <p class="auto-sub-title">Get a demo and find out how you can close deals faster, drive revenue, and build trust through continuous monitoring and assurance. </p>
-          <button class="get-started-btn">Get Started</button>
+          <button class="get-started-btn redirect-to-demo">Get Started</button>
         </div>
       </section>`);
 
@@ -427,6 +612,40 @@
         document.querySelector('[variant="collectionAccordionSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').innerHTML = `<h6 class="small-title">FAQs</h6><h5 class="large-title">Your SOC 2 Questions Answered</h5><p class="small-description">At Drata, we&#8217;re here to help companies earn and keep the trust of their users, customers, partners, and prospects. We believe the best way to earn trust is by first proving that you deserve it. Here&#8217;s how we walk the walk when it comes to our own security program:</p>`;
 
         document.querySelector('[class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary]').click();
+    }
+
+    function initSlider() {
+        const swiper = new Swiper(".swiper-slider", {
+            // Optional parameters
+            centeredSlides: true,
+            slidesPerView: 1,
+            grabCursor: true,
+            freeMode: false,
+            loop: true,
+            mousewheel: false,
+            keyboard: {
+                enabled: true
+            },
+
+            // Enabled autoplay mode
+            // autoplay: {
+            //     delay: 3000,
+            //     disableOnInteraction: false
+            // },
+
+            // If we need pagination
+            pagination: {
+                el: ".swiper-pagination",
+                dynamicBullets: false,
+                clickable: true
+            },
+
+            // If we need navigation
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev"
+            },
+        });
     }
 
     // When middle part of the section is middle of the viewport return true
