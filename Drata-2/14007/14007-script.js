@@ -1,0 +1,424 @@
+(function () {
+    const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
+
+    function createTest() {
+        // document.querySelector("body").classList.remove("remove-spz-14001-test");
+
+        waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root').then(function () {
+            document.querySelector("body").classList.add("loading-spz_test");
+            document.querySelector("body").classList.add("spz-14007");
+
+            if (document.querySelector('body .MuiContainer-root .hero-section-14001')) {
+                document.querySelector('body .MuiContainer-root .hero-section-14001').remove();
+                document.querySelector('body .MuiContainer-root .logo-section-14001').remove();
+            }
+
+            heroContent();
+            whatsIncludedSec();
+            simpleSteps();
+
+            // submitTestDetails('#14004a_variant');
+        });
+    }
+
+    function removeTest() {
+        document.body.classList.remove("loading-spz_test");
+        document.body.classList.remove("spz-14007");
+        if (document.querySelector('body .MuiContainer-root .hero-section-14001')) {
+            document.querySelector('body .MuiContainer-root .hero-section-14001').remove();
+            document.querySelector('body .MuiContainer-root .logo-section-14001').remove();
+            if (document.querySelector('body .MuiContainer-root .spz-benefits')) {
+                document.querySelector('body .MuiContainer-root .spz-benefits').remove();
+            }
+        }
+        // document.querySelector("body").classList.add("remove-spz-14001-test");
+    }
+
+    //Passing test details to hidden fields
+    function submitTestDetails(cro_test_2) {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
+            // document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', cro_test_1);
+            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', cro_test_2);
+        }
+    }
+
+    function demoChecked() {
+        const sInt = setInterval(() => {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').val != '') {
+                clearInterval(sInt);
+                submitTestDetails('#14004a_variant');
+            }
+        }, 1000);
+    }
+
+    history.pushState = (function (f) {
+        return function pushState() {
+            var ret = f.apply(this, arguments);
+            window.dispatchEvent(new Event('pushstate'));
+            window.dispatchEvent(new Event('locationchange'));
+            return ret;
+        };
+    })(history.pushState);
+    history.replaceState = (function (f) {
+        return function replaceState() {
+            var ret = f.apply(this, arguments);
+            window.dispatchEvent(new Event('replacestate'));
+            window.dispatchEvent(new Event('locationchange'));
+            return ret;
+        };
+    })(history.replaceState);
+    window.addEventListener('popstate', function () {
+        window.dispatchEvent(new Event('locationchange'));
+    });
+    window.addEventListener('locationchange', function () {
+        url = location.href;
+        urlCheck(url);
+    });
+    var url = location.href;
+    urlCheck(url);
+
+    function urlCheck(url) {
+        let testURL = '';
+        if (window.location.pathname.indexOf("/product/soc-2") > -1) {
+            testURL = window.location.href;
+        }
+        if (isSameUrl(url, testURL, true)) {
+            createTest();
+        } else {
+            removeTest();
+        }
+        if (window.location.pathname.indexOf("/demo") > -1) {
+            // ADDED ONLY FOR DEMO PAGE TO ADD #14004a_variant IN HIDDEN FIELD
+            demoChecked();
+        }
+    }
+
+    function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
+        currentUrl = currentUrl.includes("#") ?
+            currentUrl.slice(0, currentUrl.indexOf("#")) :
+            currentUrl;
+        specifiedUrl = specifiedUrl.includes("#") ?
+            specifiedUrl.slice(0, specifiedUrl.indexOf("#")) :
+            specifiedUrl;
+        if (!includeQueryParams)
+            currentUrl = currentUrl.includes("?") ?
+                currentUrl.slice(0, currentUrl.indexOf("?")) :
+                currentUrl;
+        if (currentUrl === specifiedUrl || currentUrl === specifiedUrl + "/")
+            return true;
+        return false;
+    }
+
+    function waitForElm(selector) {
+        return new Promise(function (resolve) {
+            if (document.querySelector(selector)) {
+                return resolve(document.querySelector(selector));
+            }
+            const observer = new MutationObserver(function (mutations) {
+                if (document.querySelector(selector)) {
+                    resolve(document.querySelector(selector));
+                    observer.disconnect();
+                }
+            });
+            observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+        });
+    }
+
+    function heroContent() {
+        let appendHero = setInterval(() => {
+            if (document.querySelector('body header + div[data-csk-entry-type="hero"] > .MuiContainer-root')) {
+                if (document.querySelectorAll('body header + div[data-csk-entry-type="hero"] > .MuiContainer-root .hero-section-14001').length == 0) {
+                    document.querySelector('body header + div[data-csk-entry-type="hero"] > .MuiContainer-root').insertAdjacentHTML("afterbegin", '<section class="hero-section-14001">\
+                    <div class="hero-content dis-flex flex-wrap justify-content-between">\
+                    <div class="hero-left-section">\
+                    <h1 class="hc-title">Accelerate <span class="hc-blue"><i class="dynamic-product-name">SOC 2</i> Compliance</span>. Reduce Time and Cost by 50%.</h1>\
+                    <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">\
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>\
+                    <div class="list-grp-wrapper">\
+                    <ul class="list-group">\
+                    <li class="list-item"><strong>Evidence Collection.</strong> Create <i class="dynamic-product-name">SOC 2</i> documentation in minutes via integrations with your tech stack.</li>\
+                    <li class="list-item"><strong>Policy Implementation.</strong> Pre-mapped controls, risk assessments, and security training for SOC 2 Compliance.</li>\
+                    <li class="list-item"><strong>Compliance Experts.</strong> Never get stuck. Our compliance experts can walk you through the entire process.</li>\
+                    </ul>\
+                    </div>\
+                    <a href="javascript:void(0)" id="hero-copy-url" class="hero-btn redirect-to-demo"><span>Get Started</span> <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>\
+                    </div>\
+                    <div class="hero-right-section">\
+                    <picture>\
+                        <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/frame_48096469.webp">\
+                        <source media="(min-width:300px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/frame_48096469.webp">\
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/frame_48096469.webp" class="hero-img" alt="Accelerate SOC 2 Compliance. Reduce Time and Cost by 50%." title="Accelerate SOC 2 Compliance. Reduce Time and Cost by 50%.">\
+                                        </picture>\
+                    </div>\
+                    </div>\
+                    </section>');
+
+                    if (window.location.href.indexOf("soc-2") > -1) {
+                        document.querySelectorAll('.dynamic-product-name').forEach(function (v, i) {
+                            v.textContent = "SOC 2";
+                        });
+                    }
+                }
+
+                appendCaseStudies();
+                benefitsSection();
+
+                // On click of any '.redirect-to-demo' link, trigger click on header button
+                window.addEventListener('click', function (e) {
+                    if (e.target.matches('.redirect-to-demo')) {
+                        document.querySelector('header a[href="/demo"]').click();
+                    }
+                });
+            }
+        }, 50);
+
+        setTimeout(() => {
+            clearInterval(appendHero);
+        }, 500);
+    }
+
+    function appendCaseStudies() {
+        const aUrl = astUrl + '/fl_sanitize/drata/2013/';
+        const caseStudies = [
+            {
+                title: 'Lemonade',
+                logo: aUrl + 'lemonade_logo.svg',
+                number: '200',
+                text: 'hours saved',
+                arrow: 'down'
+            },
+            {
+                title: 'Thnks',
+                logo: aUrl + 'thnks_logo.svg',
+                number: '100',
+                text: 'hours saved',
+                arrow: 'down'
+            },
+            {
+                title: 'PolicyDock',
+                logo: aUrl + 'policy_dock.svg',
+                number: '24',
+                text: 'weeks saved',
+                arrow: 'down'
+            },
+            {
+                title: 'Plane',
+                logo: aUrl + 'plane.svg',
+                number: '4x',
+                text: 'faster compliance',
+                arrow: 'up'
+            },
+            {
+                title: 'Fivetran',
+                logo: aUrl + 'fivetran.svg',
+                number: '50%',
+                text: 'time saved',
+                arrow: 'down'
+            },
+            {
+                title: 'Measurabl',
+                logo: aUrl + 'measurable.svg',
+                number: '80%',
+                text: 'workload automated',
+                arrow: 'down'
+            },
+            {
+                title: 'Deeper Signals',
+                logo: aUrl + 'deeper_signals.svg',
+                number: '75%',
+                text: 'time saved',
+                arrow: 'down'
+            },
+            {
+                title: 'Lucid Works',
+                logo: aUrl + 'lucid.svg',
+                number: '40%',
+                text: 'workload automated',
+                arrow: 'up'
+            }
+        ];
+
+        if (document.querySelectorAll('.case-studies-section').length === 0) {
+            document.querySelector('.hero-section-14001').insertAdjacentHTML('afterend', `
+            <section class="case-studies-section">
+              <h3 class="cs-title">See Why Companies are Automating Compliance with Drata</h3>
+              <div class="cs-overflow">
+                <div class="case-study-wrapper" id="mini-cs-wrapper">
+                </div>
+              </div>
+            </section>`);
+
+            caseStudies.forEach((cs, index) => {
+                document.querySelector('#mini-cs-wrapper').insertAdjacentHTML('beforeend', `
+              <div class="case-study ${cs.arrow}">
+                <img class="cs-logo" src="${cs.logo}" alt="${cs.title}">
+                <span class="cs-divider"></span>
+                <div class="cs-details">
+                  <div class="cs-right">
+                    <div class="cs-numb">${cs.number} 
+                      <img class="cs-arrow" src="${aUrl}arrow.svg" alt="Arrow ${cs.arrow}">
+                    </div>
+                    <div class="cs-text">${cs.text}</div>
+                  </div>
+                </div>
+              </div>`);
+            });
+        }
+    }
+
+    function benefitsSection() {
+        if (document.querySelectorAll('body .MuiContainer-root .spz-benefits').length == 0) {
+            let benInfo = '', benImg = '', i = 1;
+            document.querySelectorAll('section.MuiBox-root').forEach(function (element) {
+                if (element.getAttribute('variant') === 'blockImageOnLeftSectionWrapper' || element.getAttribute('variant') === 'blockImageOnRightSectionWrapper') {
+                    var accordion_title = element.querySelector('.MuiBox-root .MuiContainer-root .MuiBox-root h2').textContent;
+                    var accordion_description = element.querySelector('.MuiBox-root .MuiContainer-root .MuiBox-root [class$=Text-root]').innerHTML;
+                    element.querySelector('.MuiBox-root .MuiContainer-root [class$=Block-mediaWrapper] img').setAttribute('alt', accordion_title);
+                    var accordion_image = element.querySelector('.MuiBox-root .MuiContainer-root [class$=Block-mediaWrapper]').innerHTML;
+                    if (i == 1) {
+                        var isOpen = "open";
+                    } else {
+                        var isOpen = "";
+                    }
+                    benInfo += `<div class="ac-item ` + isOpen + `" image_div="` + i + `">
+                        <div class="ac-header">`+ accordion_title + `</div>
+                        <div class="ac-cont">
+                            `+ accordion_description + `
+                        </div>
+                        <div class="ac-img-tab">
+                            `+ accordion_image + `
+                        </div>
+                    </div>`;
+                    benImg += `<div class="ac-img ac-img_` + i + ` ` + isOpen + `">` + accordion_image + `</div>`;
+                    i += 1;
+                }
+            });
+
+            jQuery(document).on('click', '.ac-item', function () {
+                jQuery('.ac-item').removeClass('open');
+                jQuery(this).addClass('open');
+                jQuery('.ac-img').removeClass('open');
+                var img_div = jQuery(this).attr('image_div');
+                var div_index = 'ac-img_' + img_div;
+                jQuery('.ac-img.' + div_index).addClass('open');
+            });
+
+            document.querySelector('.case-studies-section').insertAdjacentHTML('afterend',
+                `<section class="spz-benefits">
+                    <div class="spz-container">
+                        <h2 class="ac-heading">SOC 2 Automation Has Its Benefits</h2>
+                        <div class="benefits-accord">
+                            <div class="ac-info">
+                                ${benInfo}
+                            </div>
+                            <div class="ac-img-wrap">
+                                ${benImg}
+                            </div>
+                        </div>
+                        <div class="btn-block">
+                            <a href="javascript:void(0)" class="ac-btn redirect-to-demo">Get Started<img src="//res.cloudinary.com/spiralyze/image/upload/v1701172106/drata/14004/Arrow-Icon.svg" alt="Right Arrow" title="Right Arrow"></a>
+                        </div>
+                    </div>
+                </section>`);
+        }
+    }
+
+    function whatsIncludedSec() {
+        document.querySelector('[variant="collectionContentGridSectionWrapper"]').classList.add('whats-included-sec');
+        document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=MuiTypography-root-Text-title]').textContent = 'Everything You Need to Get SOC 2 Compliant with Drata';
+        document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=Text-root-Collection-introText]').insertAdjacentHTML('beforeend', `<a href="javascript:void(0)" class="blue-cta-btn"><span>Explore the Platform</span> <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>`);
+    }
+
+    function simpleSteps() {
+        document.querySelector('.whats-included-sec').insertAdjacentHTML('afterend', `
+        <section class="simple-steps-sec">
+            <div class="simple-steps-container">
+                <div class="ss-top-bar dis-flex">
+                    <div class="ss-left">
+                        <div class="ss-subtitle">How Drata Works</div>
+                        <h2 class="ss-title">SOC 2 in 3 Simple Steps</h2>
+                    </div>
+                    <div class="ss-right">
+                        <div class="ss-text">Get full visibility into your compliance status so you can stay on top of risks, action items, and audit readiness.</div>
+                        <div class="ss-divider"></div>
+                        <div class="ss-text">When compliance gets confusing, get step-by-step guidance and access to live support 24/5.</div>
+                    </div>
+                </div>
+                <div class="ssc-contents">
+                    <div class="ss-steps-count">
+                        <div class="ss-step step-1">1</div>
+                        <div class="ss-step step-2">2</div>
+                        <div class="ss-step step-3">3</div>
+                    </div>                    
+                    <div class="simple-steps-wrapper">
+                        <div class="simple-steps">
+                            <div class="ss-item step-1">
+                                <div class="ss-step step-1">1</div>
+                                <div class="ss-content">
+                                    <div class="ss-img-wr">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/collect_1.webp" class="ss-img" alt="Configure Your Compliance Needs" title="Configure Your Compliance Needs">
+                                    </div>
+                                    <div class="ss-title">Configure Your Compliance Needs</div>
+                                    <div class="ss-desc">Get started with 23+ framework templates, all pre-mapped with auditor-validated controls</div>
+                                </div>
+                            </div>
+                            <div class="ss-item step-2">
+                                <div class="ss-step step-2">2</div>
+                                <div class="ss-content">
+                                    <div class="ss-img-wr">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/collect_2.webp" class="ss-img" alt="Collect Evidence Automatically" title="Collect Evidence Automatically">
+                                    </div>
+                                    <div class="ss-title">Collect Evidence Automatically</div>
+                                    <div class="ss-desc">Drata collects and stores compliance evidence and documentation for you using native integrations with your tech stack.</div>
+                                </div>
+                            </div>
+                            <div class="ss-item step-3">
+                                <div class="ss-step step-3">3</div>
+                                <div class="ss-content">
+                                    <div class="ss-img-wr">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/collect.webp" class="ss-img" alt="Crush the Audit" title="Crush the Audit">
+                                    </div>
+                                    <div class="ss-title">Crush the Audit</div>
+                                    <div class="ss-desc">Reduce back-and-forth with auditors, automate evidence requests, and share documentation instantly to streamline the process.</div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="ss-bottom-bar">
+                            <div class="ssb-title">Continuous Control Monitoring</div>
+                            <div class="ssb-subtitle">Continuous tests ensure you’re in compliance before and after the audit for year-round peace of mind.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>`);
+
+        // On hover of any .ss-item, add specific step class name to .simple-steps-container
+        document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+            item.addEventListener('mouseover', function () {
+                document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+                document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
+            });
+        });
+
+        
+        // On scroll, add class to .simple-steps-container according to the step in view
+        window.addEventListener('scroll', function () {
+            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+                if (isInViewport(item)) {
+                    document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+                    document.querySelector('.simple-steps-container').classList.add('step-' + item.querySelector('.ss-step').textContent);
+                }
+            });
+        });
+    }
+
+    function isInViewport(element) {
+        const rect = element.getBoundingClientRect();
+        return (
+            rect.top >= 0 &&
+            rect.left >= 0 &&
+            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
+            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+        );
+    }
+})();
