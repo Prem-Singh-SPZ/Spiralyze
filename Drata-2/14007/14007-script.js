@@ -16,6 +16,7 @@
             heroContent();
             whatsIncludedSec();
             simpleSteps();
+            faqSection();
 
             // submitTestDetails('#14004a_variant');
         });
@@ -390,7 +391,13 @@
                     </div>
                 </div>
             </div>
-        </section>`);
+        </section><section class="auto-footer">
+        <div class="automate-footer container dis-flex flex-wrap"><h6 class="small-title">Get a Demo</h6>
+          <h3 class="auto-title">Accelerate Your SOC 2 Journey</h3>
+          <p class="auto-sub-title">Get a demo and find out how you can close deals faster, drive revenue, and build trust through continuous monitoring and assurance. </p>
+          <button class="get-started-btn">Get Started</button>
+        </div>
+      </section>`);
 
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
         document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
@@ -400,9 +407,12 @@
             });
         });
 
-        
         // On scroll, add class to .simple-steps-container according to the step in view
         window.addEventListener('scroll', function () {
+
+            // Above 1024px, don't add class on scroll
+            if (window.innerWidth > 1024) return;
+
             document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
                 if (isInViewport(item)) {
                     document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
@@ -412,13 +422,19 @@
         });
     }
 
-    function isInViewport(element) {
-        const rect = element.getBoundingClientRect();
+    function faqSection() {
+        document.querySelector('[variant="collectionAccordionSectionWrapper"]').classList.add('spz-faq-sec');
+        document.querySelector('[variant="collectionAccordionSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').innerHTML = `<h6 class="small-title">FAQs</h6><h5 class="large-title">Your SOC 2 Questions Answered</h5><p class="small-description">At Drata, we&#8217;re here to help companies earn and keep the trust of their users, customers, partners, and prospects. We believe the best way to earn trust is by first proving that you deserve it. Here&#8217;s how we walk the walk when it comes to our own security program:</p>`;
+
+        document.querySelector('[class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary]').click();
+    }
+
+    // When middle part of the section is middle of the viewport return true
+    function isInViewport(el) {
+        const rect = el.getBoundingClientRect();
         return (
-            rect.top >= 0 &&
-            rect.left >= 0 &&
-            rect.bottom <= (window.innerHeight || document.documentElement.clientHeight) &&
-            rect.right <= (window.innerWidth || document.documentElement.clientWidth)
+            rect.top <= (window.innerHeight / 2) &&
+            rect.bottom >= (window.innerHeight / 2)
         );
     }
 })();

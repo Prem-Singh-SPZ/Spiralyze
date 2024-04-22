@@ -1387,6 +1387,247 @@ body.spz-14007 {
 // Simple Steps Section Ends
 
 //14007 FAQ Section Starts
-section[variant="collectionAccordionSectionWrapper"] {
-  background: #eef2f6;
+.spz-14007 {
+  .auto-footer {
+    height: 420px;
+    max-width: 1248px;
+    margin: auto;
+    border-radius: 16px;
+    background: radial-gradient(50% 50% at 50% 50%, #1793FF 0%, #0580E8 100%);
+    position: relative;
+    margin-top: 96px;
+
+    @media (max-width: 1280.98px) {
+      max-width: 1088px;
+    }
+
+    @media (max-width: 1199.98px) {
+      max-width: 704px;
+    }
+
+    @media (max-width: 767.98px) {
+      max-width: 328px;
+      height: 344px;
+    }
+
+    .automate-footer {
+      flex-direction: column;
+      align-items: center;
+      height: 100%;
+      justify-content: center;
+
+      .small-title{
+        color:  #B2E0FF;
+        font-family: $ff-inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 24px;
+        margin: 0 0 12px;
+      }
+
+      .auto-title {
+        color: #fff;
+        text-align: center;
+        font-family: $ff-inter;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: -0.84px;
+        margin: 0 0 12px;
+
+        @media (max-width: 767.98px) {
+          font-size: 32px;
+          line-height: 40px;
+          letter-spacing: -0.64px;
+        }
+      }
+
+      .auto-sub-title {
+        color: #fff;
+        text-align: center;
+        font-family: $ff-inter;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 26px;
+        max-width: 624px;
+        margin: 0 0 20px;
+
+        @media (max-width: 767.98px) {
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 20px;
+          padding: 0 8px;
+        }
+      }
+
+      .get-started-btn {
+        height: 60px;
+        padding: 10px 20px;
+        border-radius: 12px;
+        background: #0c131a;
+        color: #fff;
+        font-family: $ff-inter;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 600;
+        line-height: 24px;
+        outline: transparent;
+        border: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 154px;
+        border: 2px solid #0c131a;
+        cursor: pointer;
+
+        img {
+          pointer-events: none;
+        }
+
+        &:hover {
+          color: #fff;
+          background: #293642;
+          border: 2px solid #293642;
+        }
+
+        &:active {
+          color: #fff;
+          border: 2px solid var(--neutral-500, #697586);
+          background: var(--neutral-700, #293642);
+        }
+      }
+    }
+  }
+
+  .spz-faq-sec {
+    background: #eef2f6;
+
+    [class$="CollectionAccordion-root"] {
+      [class$="CollectionAccordion-introText"] {
+        max-width: 768px;
+        margin: auto;
+
+        .small-title {
+          color: #0580e8;
+          font-family: $ff-inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+          text-align: center;
+          margin: 0 0 12px;
+        }
+
+        .large-title {
+          color: #0c131a;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 32px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 40px;
+          letter-spacing: -0.64px;
+          margin: 0 0 20px;
+        }
+
+        .small-description {
+          color: #485665;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+        }
+      }
+
+      [class$="CollectionAccordion-itemsContainer"] {
+        max-width: 768px;
+        margin: auto;
+
+        [class$="MuiAccordion-root-CollectionAccordion-accordion"] {
+          border: 0;
+          border-bottom: 1px solid #dde3eb;
+          background-color: transparent;
+          padding: 24px 0 32px;
+          position: relative;
+
+          &::after {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/Icon-plus.svg)
+              no-repeat;
+            background-position: center;
+            background-size: cover;
+            top: 24px;
+            right: 0;
+            pointer-events: none;
+          }
+
+          &.Mui-expanded {
+            &::after {
+              background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/Icon-minus.svg)
+                no-repeat;
+              background-position: center;
+              background-size: cover;
+            }
+          }
+
+          &:last-child {
+            border-bottom: 0;
+          }
+
+          [class$="MuiAccordionSummary-root-CollectionAccordion-accordionSummary"] {
+            background-color: transparent;
+            padding: 0 48px 0 0;
+            min-height: auto;
+
+            .MuiAccordionSummary-content {
+              margin: 0;
+
+              [class$="CollectionAccordion-title"] {
+                color: #1d252e;
+                font-family: $ff-inter;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+              }
+            }
+          }
+
+          .MuiCollapse-wrapper {
+            [class$="MuiAccordionDetails-root-CollectionAccordion-accordionDetails"] {
+              padding: 20px 0 0;
+              border: 0;
+
+              [class$="MuiTypography-root"],
+              [class$="MuiTypography-root"] * {
+                color: #697586;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+              }
+
+              [class$="MuiTypography-root"] a {
+                color: #0580e8;
+              }
+            }
+          }
+
+          .MuiAccordionSummary-expandIconWrapper {
+            display: none;
+          }
+        }
+      }
+    }
+  }
 }
