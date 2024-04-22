@@ -35,7 +35,8 @@ body.spz-14007 header + div > .MuiContainer-root > :not(section) {
   display: none;
 }
 body.spz-14007 section[variant=collectionCustomerLogosSectionWrapper],
-body.spz-14007 section[variant=globalCta], body.spz-14007 section[variant=collectionContentSectionWrapper] {
+body.spz-14007 section[variant=globalCta],
+body.spz-14007 section[variant=collectionContentSectionWrapper] {
   display: none;
 }
 body.spz-14007 .dis-flex {
@@ -1853,6 +1854,79 @@ body.spz-14007 .spz-benefits .ac-btn img {
   color: #fff;
   border: 2px solid var(--neutral-500, #697586);
   background: var(--neutral-700, #293642);
+}
+.spz-14007 .resources-section .resources-wrapper {
+  max-width: 1248px;
+  margin: auto;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 20px 0px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-bottom: 1.007px solid rgba(205, 213, 223, 0.4);
+  margin-bottom: 40px;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-title .title {
+  color: #0c131a;
+  font-family: "Inter", sans-serif;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 28px;
+  margin: 0;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-title .explore-more {
+  margin: 0;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-title .explore-more a {
+  color: #0c131a;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-decoration: none;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-title .explore-more a img {
+  margin-left: 8px;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 296px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 16px;
+  border: 1px solid #dde3eb;
+  background: #fff;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card .card-img {
+  width: 100%;
+  height: 163px;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card .card-img img {
+  width: 100%;
 }
 .spz-14007 .spz-faq-sec {
   background: #eef2f6;

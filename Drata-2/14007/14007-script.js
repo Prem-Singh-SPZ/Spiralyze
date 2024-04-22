@@ -635,7 +635,71 @@
           <p class="auto-sub-title">Get a demo and find out how you can close deals faster, drive revenue, and build trust through continuous monitoring and assurance. </p>
           <button class="get-started-btn redirect-to-demo">Get Started</button>
         </div>
-      </section>`);
+      </section><div class="resources-section">
+      <div class="resources-wrapper">
+          <div class="resource-title">
+              <h6 class="title">Stay Up to Date with the Latest SOC 2 Resources</h6>
+              <p class="explore-more">
+                  <a href="https://drata.com/resources" class="ex-more">Explore More <img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1713779545/drata/14007/right-arrow.svg"
+                          class="button_arrow" alt="CTA Arrow"></a>
+              </p>
+          </div>
+  
+          <div class="resource-cards">
+              <div class="resource-card">
+                  <a href="https://drata.com/resources/soc-2-guide">
+                      <div class="card-img">
+                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/01.webp"
+                              alt="SOC 2 Compliance Checklist">
+                      </div>
+                      <div class="card-content">
+                          <p class="card-title">ARTICLE</p>
+                          <p class="card-desc">Start-to-Finish Guide on SOC 2 Compliance</p>
+                      </div>
+                  </a>
+              </div>
+              <div class="resource-card">
+                  <a href="https://drata.com/grc-central/soc-2/compliance-checklist#heading-soc-2-compliance-checklist">
+                      <div class="card-img">
+                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/02.webp"
+                              alt="SOC 2 Compliance Checklist">
+                      </div>
+                      <div class="card-content">
+                          <p class="card-title">ARTICLE</p>
+                          <p class="card-desc">SOC 2 Compliance Checklist: 9 Key Steps To Take</p>
+                      </div>
+                  </a>
+              </div>
+              <div class="resource-card">
+                  <a href="https://drata.com/grc-central/soc-2/questions-to-ask-an-auditor">
+                      <div class="card-img">
+                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/03.webp"
+                              alt="SOC 2 Compliance Checklist">
+                      </div>
+                      <div class="card-content">
+                          <p class="card-title">ARTICLE</p>
+                          <p class="card-desc">Audit Your Auditor: 5 Questions to Ask a Potential Auditor</p>
+                      </div>
+                  </a>
+              </div>
+              <div class="resource-card">
+                  <a href="https://drata.com/resources/webinars/5-internal-threats-to-your-compliance-program">
+                      <div class="card-img">
+                          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/14007/04.webp"
+                              alt="SOC 2 Compliance Checklist">
+                      </div>
+                      <div class="card-content">
+                          <p class="card-title">ARTICLE</p>
+                          <p class="card-desc">5 Internal Threats to Your Compliance Program and How to Solve for Them</p>
+                      </div>
+                  </a>
+              </div>
+          </div>
+      </div>
+  </div>`);
+
+        videoIntegration();
 
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
         document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
