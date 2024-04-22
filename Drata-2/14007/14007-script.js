@@ -9,7 +9,7 @@
 
         var css = document.createElement("link");
         css.rel = "stylesheet";
-        css.href = "https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css";
+        css.href = "//res.cloudinary.com/spiralyze/raw/upload/v1713790594/drata/14007/Swiper/swiper-min.css";
 
         document.getElementsByTagName("head")[0].appendChild(script);
         document.getElementsByTagName("head")[0].appendChild(css);
@@ -19,7 +19,7 @@
         };
     }
 
-    appendScript("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js", function () {
+    appendScript("//res.cloudinary.com/spiralyze/raw/upload/v1713790594/drata/14007/Swiper/swiper-min.js", function () {
         initSlider();
     });
 
