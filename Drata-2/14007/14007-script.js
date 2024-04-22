@@ -1,7 +1,7 @@
 (function () {
     const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
 
-    //append swiper js script in head and onload of that call function initslider
+    //append swiper js script in head and onload of that call function initSlider
     function appendScript(url, callback) {
         var script = document.createElement("script");
         script.type = "text/javascript";
@@ -22,6 +22,9 @@
     appendScript("https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js", function () {
         initSlider();
     });
+
+    //append to preload images
+    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/slider-left-hover.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/slider-right-hover.svg" as="image">`);
 
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
@@ -441,9 +444,11 @@
                                             <div class="c-logo">
                                                 <span style="font-weight: 700;color: #0C131A;">Tor Fusdahl</span>
                                             </div>
+                                            <div class="c-line"></div>
                                             <div class="c-logo">
-                                                <span style="font-weight: 500;color: #0C131A;">Engineering Manager</span>
+                                                <span style="font-weight: 500;color: #96A1B2;">Engineering Manager</span>
                                             </div>
+                                            <div class="c-line"></div>
                                             <div class="c-logo">
                                                 <img src="//res.cloudinary.com/spiralyze/image/upload/v1713151482/drata/14007/logo.svg"
                                                     alt="Superside">

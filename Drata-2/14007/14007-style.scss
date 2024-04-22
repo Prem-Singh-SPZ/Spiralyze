@@ -1487,7 +1487,55 @@ body.spz-14007 {
               .footer-logos {
                 display: flex;
                 align-items: center;
+
+                .c-logo span {
+                  font-family: $ff-inter;
+                  font-size: 16px;
+                  font-style: normal;
+                  line-height: 24px;
+                }
+
+                .c-line {
+                  width: 1px;
+                  height: 25px;
+                  background: #dde3eb;
+                  margin: 0 16px;
+                }
               }
+
+              .learn-more-cta {
+                .learn-more {
+                  color: #0c131a;
+                  font-family: $ff-inter;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 24px;
+                  text-decoration: none;
+                  display: flex;
+                  align-items: center;
+
+                  img {
+                    margin-left: 8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .swiper-pagination {
+          bottom: -48px;
+
+          .swiper-pagination-bullet {
+            width: 31px;
+            height: 4px;
+            border-radius: 20px;
+            background: #96a1b2;
+
+            &.swiper-pagination-bullet-active {
+              width: 54px;
+              background: #1d252e;
             }
           }
         }
@@ -1502,6 +1550,11 @@ body.spz-14007 {
           left: -20px;
           top: calc(50% + 0px);
           cursor: pointer;
+
+          &:hover {
+            background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/slider-left-hover.svg)
+              no-repeat;
+          }
         }
 
         .swiper-btn-next {
@@ -1514,8 +1567,18 @@ body.spz-14007 {
           right: -20px;
           top: calc(50% + 0px);
           cursor: pointer;
+
+          &:hover {
+            background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/slider-right-hover.svg)
+              no-repeat;
+          }
         }
       }
+    }
+
+    .cta-wrapper{
+      text-align: center;
+      margin-top: 64px;
     }
   }
   .auto-footer {
