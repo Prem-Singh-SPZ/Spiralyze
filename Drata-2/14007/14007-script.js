@@ -57,7 +57,12 @@
                 document.querySelector('body .MuiContainer-root .spz-benefits').remove();
             }
         }
-        // document.querySelector("body").classList.add("remove-spz-14001-test");
+        if (document.querySelector('.video-integration-sec')) {
+            document.querySelector('.video-integration-sec').remove();
+        }
+        if (document.querySelector('.simple-steps-sec')) {
+            document.querySelector('.simple-steps-sec').remove();
+        }
     }
 
     //Passing test details to hidden fields
@@ -352,10 +357,13 @@
     function whatsIncludedSec() {
         document.querySelector('[variant="collectionContentGridSectionWrapper"]').classList.add('whats-included-sec');
         document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=MuiTypography-root-Text-title]').textContent = 'Everything You Need to Get SOC 2 Compliant with Drata';
-        document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=Text-root-Collection-introText]').insertAdjacentHTML('beforeend', `<a href="javascript:void(0)" class="blue-cta-btn"><span>Explore the Platform</span> <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>`);
+        if (document.querySelector('.whats-included-sec .blue-cta-btn') == null) {
+            document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=Text-root-Collection-introText]').insertAdjacentHTML('beforeend', `<a href="javascript:void(0)" class="blue-cta-btn"><span>Explore the Platform</span> <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a>`);
+        }
     }
 
     function simpleSteps() {
+        if (document.querySelector('.simple-steps-sec')) return;
         document.querySelector('.whats-included-sec').insertAdjacentHTML('afterend', `
         <section class="simple-steps-sec">
             <div class="simple-steps-container">
@@ -659,6 +667,41 @@
         document.querySelector('[class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary]').click();
     }
 
+    function videoIntegration() {
+        document.querySelector('.simple-steps-sec').insertAdjacentHTML('afterend', `
+        <section class="video-integration-sec">
+            <div class="vi-wrapper">
+                <div class="vi-head">
+                    <div class="vi-title">Powerful Integrations Make Continuous Compliance Easy</div>
+                    <div class="vi-desc">Integrating the right systems will take the stress out of evidence collection and documentation. With Drata, you can stay compliant and focus on business growth.</div>
+                    <a href="javascript:void(0)" class="blue-cta-btn">
+                        <span>Explore Integrations</span>
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow">
+                    </a>
+                </div>
+                <div class="vi-video-wrap">
+                    
+                </div>
+            </div>
+        </section>`);
+
+        // On scroll, play video when in view
+        window.addEventListener('scroll', function () {
+            const vEl = document.querySelector('.video-integration-sec .vi-video-wrap video');
+
+            if (isInViewport(document.querySelector('.video-integration-sec'))) {
+                if (vEl == null) {
+                    document.querySelector('.video-integration-sec .vi-video-wrap').insertAdjacentHTML('afterbegin', `<video src="//res.cloudinary.com/spiralyze/video/upload/v1713778093/drata/14007/14007_Product_Internal__Big_Swing_-_Wireframe_Copy_1.mp4" class="vi-video" loop muted playsinline></video>`);
+                    document.querySelector('.vi-video').play();
+                }
+            } else {
+                if (vEl != null) {
+                    document.querySelector('.vi-video').pause();
+                }
+            }
+        });
+    }
+
     function initSlider() {
         const swiper = new Swiper(".swiper-slider", {
             // Optional parameters
@@ -700,4 +743,5 @@
             rect.bottom >= (window.innerHeight / 2)
         );
     }
+
 })();
