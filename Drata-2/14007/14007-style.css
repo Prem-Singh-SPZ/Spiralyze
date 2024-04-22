@@ -1544,6 +1544,12 @@ body.spz-14007 .spz-benefits .ac-btn img {
   background: #eef2f6;
   padding: 96px 0;
 }
+@media (max-width: 1280px) {
+  .spz-14007 .cr-section {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 .spz-14007 .cr-section .title-wrapper .large-title {
   color: #0c131a;
   text-align: center;
@@ -1574,6 +1580,11 @@ body.spz-14007 .spz-benefits .ac-btn img {
   max-width: 1144px;
   margin: auto;
 }
+@media (max-width: 1280px) {
+  .spz-14007 .cr-section .slider-section .container {
+    max-width: 85%;
+  }
+}
 .spz-14007 .cr-section .slider-section .container .slider-card {
   height: 271px;
   display: -webkit-box;
@@ -1585,6 +1596,11 @@ body.spz-14007 .spz-benefits .ac-btn img {
   border-radius: 6px;
   border: 1px solid #dde3eb;
   background: #fff;
+}
+@media (max-width: 1280px) {
+  .spz-14007 .cr-section .slider-section .container .slider-card {
+    height: auto;
+  }
 }
 .spz-14007 .cr-section .slider-section .container .slider-card .slider-img {
   max-width: 243px;
@@ -1663,6 +1679,7 @@ body.spz-14007 .spz-benefits .ac-btn img {
   font-size: 16px;
   font-style: normal;
   line-height: 24px;
+  white-space: nowrap;
 }
 .spz-14007 .cr-section .slider-section .container .slider-card .slider-content .card-footer .footer-logos .c-line {
   width: 1px;
@@ -1684,6 +1701,7 @@ body.spz-14007 .spz-benefits .ac-btn img {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  white-space: nowrap;
 }
 .spz-14007 .cr-section .slider-section .container .slider-card .slider-content .card-footer .learn-more-cta .learn-more img {
   margin-left: 8px;
@@ -1859,6 +1877,12 @@ body.spz-14007 .spz-benefits .ac-btn img {
   max-width: 1248px;
   margin: auto;
 }
+@media (max-width: 1280px) {
+  .spz-14007 .resources-section .resources-wrapper {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
 .spz-14007 .resources-section .resources-wrapper .resource-title {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1904,6 +1928,8 @@ body.spz-14007 .spz-benefits .ac-btn img {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 .spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card {
   display: -webkit-box;
@@ -1921,12 +1947,43 @@ body.spz-14007 .spz-benefits .ac-btn img {
   border: 1px solid #dde3eb;
   background: #fff;
 }
-.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card .card-img {
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card a {
+  text-decoration: none;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card a .card-img {
   width: 100%;
   height: 163px;
 }
-.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card .card-img img {
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card a .card-img img {
   width: 100%;
+  border-radius: 16px 16px 0 0;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card a .card-content {
+  padding: 16px;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card a .card-content .card-title {
+  overflow: hidden;
+  color: #697586;
+  text-overflow: ellipsis;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 18px;
+  margin: 0 0 8px;
+}
+.spz-14007 .resources-section .resources-wrapper .resource-cards .resource-card a .card-content .card-desc {
+  overflow: hidden;
+  color: #0c131a;
+  text-overflow: ellipsis;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 3;
 }
 .spz-14007 .spz-faq-sec {
   background: #eef2f6;
