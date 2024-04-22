@@ -567,10 +567,10 @@
                             </div>
                         </div>
                     </div>
+                    </div>
                     <span class="swiper-pagination"></span>
-                    <span class="swiper-button-prev"></span>
-                    <span class="swiper-button-next"></span>
-                </div>
+                    <span class="swiper-btn-prev"></span>
+                    <span class="swiper-btn-next"></span>
             </div>
         </div>
         <div class="cta-wrapper"><a href="javascript:void(0)" class="blue-cta-btn"><span>See All Stories</span> <img
@@ -619,7 +619,6 @@
             // Optional parameters
             centeredSlides: true,
             slidesPerView: 1,
-            grabCursor: true,
             freeMode: false,
             loop: true,
             mousewheel: false,
@@ -642,8 +641,8 @@
 
             // If we need navigation
             navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev"
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev"
             },
         });
     }
