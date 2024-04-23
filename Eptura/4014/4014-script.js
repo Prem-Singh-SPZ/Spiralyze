@@ -1,5 +1,5 @@
 (function () {
-    document.body.classList.add('spz-4010');
+    document.body.classList.add('spz-4014');
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.body.classList.add(identifyPage);
 
@@ -84,73 +84,17 @@
     ];
 
     waitForElm('.mktoForm .mktoFormRow .mktoField').then(function () {
-        document.body.classList.add('spz-4010');
+        document.body.classList.add('spz-4014');
         loadTest();
     });
 
     function loadTest() {
         updatePageContent();
-        let intVar = setInterval(() => {
-            getDistance();
-        }, 500);
-
-        setTimeout(() => {
-            clearInterval(intVar);
-        }, 5000);
-
-        //window resize event   
-        window.addEventListener('resize', function () {
-            getDistance();
-        });
-
-
-        document.querySelector('#mktoForm_1225 .mktoButtonRow button[type="submit"].mktoButton').addEventListener('click', function () {
-            checkVisibleInputs();
-
-            setTimeout(() => {
-                if (!document.querySelector('#Form .mktoForm').classList.contains('fully-load')) {
-                    var eventclick = new Event('focus');
-                    var inpEmail = document.querySelector('.mktoEmailField');
-                    var inpIam = document.querySelector('#I_am__c');
-                    var inpFN = document.querySelector('#FirstName');
-                    var inpLN = document.querySelector('#LastName');
-
-                    if (inpFN.value != '' && inpLN.value != '') {
-                        if (inpEmail.value == '' || !validateEmail(inpEmail.value)) {
-                            var eml = MktoForms2.allForms()[0].getFormElem().find("#Email")
-                            MktoForms2.allForms()[0].showErrorMessage('Must be valid email. example@yourdomain.com', eml)
-                            inpEmail.dispatchEvent(eventclick);
-                            inpEmail.closest('.mktoFormCol').classList.add('field-error');
-                            inpEmail.focus();
-                        } else {
-                            if (inpIam.value == '') {
-                                var emlIam = MktoForms2.allForms()[0].getFormElem().find("#I_am__c")
-                                MktoForms2.allForms()[0].showErrorMessage('This field is required.', emlIam)
-                                inpIam.dispatchEvent(eventclick);
-                                inpIam.closest('.mktoFormCol').classList.add('field-error')
-                            }
-                        }
-                    }
-                }
-            }, 200)
-        })
-
+     
         // Add class 'safari' 
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.body.classList.add('safari')
         }
-    }
-
-    //5004 Specific form css where counting field and accordingly switching classes
-    function checkVisibleInputs() {
-        if (document.querySelectorAll('.mktoFormCol[style*="display: none"]').length <= 2) {
-            document.querySelector('#Form .mktoForm').classList.add('fully-load');
-        }
-    }
-
-    function getDistance() {
-        let distance = findDistanceBetweenElements(document.querySelector('#bullet_title_1'), document.querySelector('#bullet_title_3'));
-        document.querySelector('.spz-left-content .copy .bullets .dotted-bullet').style.height = distance + 'px';
     }
 
     function updatePageContent() {
@@ -158,35 +102,15 @@
             rightBullets.forEach(function (con) {
                 if (identifyPage == con.pageName) {
 
-                    document.querySelector('#form-over #form_title').textContent = "Request a demo";
+                    document.querySelector('#form-over #form_title').textContent = "Get a demo";
 
 
-                    document.querySelector('.spz-left-content .heading #bullet_subtitle').textContent = con.title;
-                    document.querySelector('.spz-left-content .heading #bullet_main_title').textContent = con.subtitle;
-
-                    document.querySelector('.spz-left-content .bullets  #bullet_title_1').textContent = con.lisTitle1;
-                    document.querySelector('.spz-left-content .bullets  #bullet_content_1').textContent = con.listContent1;
-
-                    document.querySelector('.spz-left-content .bullets  #bullet_title_2').textContent = con.lisTitle2;
-                    document.querySelector('.spz-left-content .bullets  #bullet_content_2').textContent = con.listContent2;
-
-                    document.querySelector('.spz-left-content .bullets  #bullet_title_3').textContent = con.lisTitle3;
-                    document.querySelector('.spz-left-content .bullets  #bullet_content_3').textContent = con.listContent3;
-
-                    document.querySelector('.spz-left-content .bullets').insertAdjacentHTML('afterend', '<div class="trusted-partner-section"><div class="trusted-partner-title"><h6>Trusted by 16,000+ customers worldwide</h6></div><div class="trusted-partner"><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-comcast.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-comcast-mob.svg" alt="Comcast"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-nbcuniversal.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-nbcuniversal-mob.svg" alt="NBCUniversal"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-zoom.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-zoom-mob.svg" alt="Zoom"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-pepsico-mob.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-pepsico.svg" alt="Pepsico"></picture></div><div class="partner"><picture><source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1703090860/eptura/4010/logo-slack.svg"><img src="//res.cloudinary.com/spiralyze/image/upload/v1703090963/eptura/4010/logo-slack-mob.svg" alt="Slack"></picture></div></div></div>');
-
-                    setBgImage(con);
+                    // setBgImage(con);
                 }
             })
         });
     }
-
-    // Email validation
-    function validateEmail(email) {
-        var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
-        return regex.test(String(email).toLowerCase());
-    }
-
+   
     // Generic Code
     function waitForElm(selector) {
         return new Promise(function (resolve) {
@@ -209,16 +133,3 @@
         document.querySelector('#form-over #mkto_gen_form_logo img').setAttribute('src', con.pageLogo);
     }
 })();
-
-
-
-//find distance between two elements in px
-function findDistanceBetweenElements(element1, element2) {
-    var element1Rect = element1.getBoundingClientRect();
-    var element2Rect = element2.getBoundingClientRect();
-    var distance = Math.sqrt(Math.pow(element2Rect.x - element1Rect.x, 2) + Math.pow(element2Rect.y - element1Rect.y, 2));
-
-    distance = distance + 12;
-    return distance;
-}
-
