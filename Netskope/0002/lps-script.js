@@ -717,7 +717,7 @@ if (!document.body.classList.contains('spz-0002')) {
     //Form internal code
     waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
       formModify();
-      // setHiddenFields();
+      setHiddenFields();
     });
   });
   // }
@@ -888,13 +888,13 @@ function setHiddenFields() {
   waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
     const field_int = setInterval(function () {
       if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#0002_SPZ_Variant") {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "#0002_spz_Variant") {
           clearInterval(field_int);
         }
         if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
-          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0002_SPZ_Variant');
+          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0002_spz_Variant');
         }
-        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0002_SPZ_Variant');
+        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#0002_spz_Variant');
       }
     }, 100);
   });
