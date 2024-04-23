@@ -196,17 +196,17 @@ function waitForElm(selector) {
 }
 
 function setHiddenFields() {
-    // waitForElm('.mktoFormRow [type="hidden"]').then(function () {
+    waitForElm('.mktoFormRow [type="hidden"]').then(function () {
         const field_int = setInterval(function () {
             if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute("value") == "#7004_spz_variant") {
+                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute("value") == "#7006_spz_control") {
                     clearInterval(field_int);
                 }
-                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute("value", "#7004_spz_variant");
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute("value", "#7006_spz_control");
             } else {
-                document.querySelector('.landing-page-v3__form .mktoForm').insertAdjacentHTML('beforeend', '<input type="hidden" name="utm_location__c" value="#7004_spz_variant">');
+                document.querySelector('.landing-page-v3__form .mktoForm').insertAdjacentHTML('beforeend', '<input type="hidden" name="utm_location__c" value="#7006_spz_control">');
                 clearInterval(field_int);
             }
         }, 100);
-    // });
+    });
 }
