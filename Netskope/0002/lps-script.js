@@ -223,6 +223,7 @@ body.spz-0002 {
   transition: all 0.3s ease-in-out;
   font-family: Graphik, sans-serif !important;
   opacity: 1 !important;
+  text-transform: capitalize;
 }
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox):hover label.mktoLabel {
   color: #081a59 !important;

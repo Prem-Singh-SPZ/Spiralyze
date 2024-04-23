@@ -196,12 +196,13 @@ body.spz-0002 {
 }
 
 .spz-0002 .js-hero-banner .gated-content__right .rte ul,
-.spz-0002 .js-hero-banner .gated-content__right .rte ul li {
+.spz-0002 .js-hero-banner .gated-content__right .rte ul li,
+.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-last-child(02) {
   margin: 0;
 }
 .spz-0002 .js-hero-banner .gated-content__right .rte ul {
   padding-left: 24px;
-  margin-bottom: 16px;
+  margin-bottom: 12px;
 }
 
 .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta {
@@ -275,6 +276,7 @@ body.spz-0002 {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   font-family: Graphik, sans-serif !important;
+  text-transform: capitalize;
 }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap:not(.single_checkbox):hover label.mktoLabel {
   color: #081a59 !important;
@@ -620,7 +622,7 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
     max-width: 320px;
   }
   .spz-0002 .js-hero-banner .gated-content__right .rte {
-    margin-bottom: 48px;
+    margin-bottom: 34px;
   }
   .spz-0002 .js-hero-banner .gated-content__container .hero_left,
   .spz-0002 .js-hero-banner .gated-content__right .rte img,
