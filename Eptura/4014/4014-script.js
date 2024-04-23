@@ -3,37 +3,27 @@
     let identifyPage = window.location.pathname.replace('/', '').replace('.html', '');
     document.body.classList.add(identifyPage);
 
-    const assetURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4010/';
+    const assetURL = '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/4014/';
 
     const rightBullets = [
         {
             pageName: "website-proxyclick-demo",
-            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1695293167/eptura/3012/endorsed_logos.svg",
-            logoAlt: "Proxyclick Logo",
-            formSubTitle: "Get a Proxyclick demo",
-            title: "VISiTOR MANAGEMENT SOFTWARE",
-            subtitle: "How does it work?",
-            lisTitle1: "Set up pre-screening process",
-            listContent1: "Upload pre-screening documents, like legal forms and questionnaires, to send to guests before arrival.",
-            lisTitle2: "Invite visitors",
-            listContent2: "Send invites that automatically include check-in requirements. Approve or deny based on responses.",
-            lisTitle3: "Enjoy streamlined check-in",
-            listContent3: "Check visitors in with a couple of clicks. Or let them scan for entry. Reduce front desk admin.",
+            value_prop1_img: assetURL + "icon_proxyclick_01.svg",
+            value_prop1_copy: "Optimize <br>guest experience",
+            value_prop2_img: assetURL + "icon_proxyclick_02.svg",
+            value_prop2_copy: "Improve <br>safety & security",
+            value_prop3_img: assetURL + "icon_proxyclick_03.svg",
+            value_prop3_copy: "Decrease <br>operational costs",
             bgDesktop: assetURL + "proxyclick_bg_1440.webp",
         },
         {
             pageName: "website-managerplus-demo",
-            pageLogo: "//res.cloudinary.com/dxprfaxf3/image/upload/v1696950672/eptura/4006/logo_-managerplus.svg",
-            logoAlt: "Manager Plus Logo",
-            formSubTitle: "Get a ManagerPlus demo",
-            title: "All-in-one Asset MANAGEMENT SOFTWARE",
-            subtitle: "How does it work?",
-            lisTitle1: "Set up asset details",
-            listContent1: "Upload maintenance history, equipment lists, and warranty information for all assets. ",
-            lisTitle2: "Schedule automated maintenance",
-            listContent2: "Auto-send work orders based on usage thresholds, or as needed. See asset status.",
-            lisTitle3: "Enjoy streamlined asset management",
-            listContent3: "Track progress. Auto-reorder inventory. Reduce time spent managing assets.",
+            value_prop1_img: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/4014/icon_proxyclick_01.svg",
+            value_prop1_copy: "Optimize <br>guest experience",
+            value_prop2_img: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/4014/icon_proxyclick_02.svg",
+            value_prop2_copy: "Improve <br>safety & security",
+            value_prop3_img: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/4014/icon_proxyclick_03.svg",
+            value_prop3_copy: "Decrease <br>operational costs",
             bgDesktop: assetURL + "proxyclick_bg_1443.webp",
         },
         {
@@ -90,7 +80,7 @@
 
     function loadTest() {
         updatePageContent();
-     
+
         // Add class 'safari' 
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.body.classList.add('safari')
@@ -98,19 +88,34 @@
     }
 
     function updatePageContent() {
-        waitForElm('.body-wrapper #form-over ').then(function () {
+        waitForElm('.body-wrapper #form-over #form_title').then(function () {
             rightBullets.forEach(function (con) {
                 if (identifyPage == con.pageName) {
 
                     document.querySelector('#form-over #form_title').textContent = "Get a demo";
 
+                    document.querySelector('#form-over #form_title').insertAdjacentHTML('afterend', `
+                    <div class="value-props-section">
+                    <div class="value-props-wrapper">
+                        <div class="value-prop">
+                            <div class="prop-img"><img src="${con.value_prop1_img}" alt="${con.value_prop1_copy}"></div>
+                            <div class="prop-copy">${con.value_prop1_copy}</div>
+                        </div>
+                        <div class="line"></div>
+                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop2_img}" alt="${con.value_prop2_copy}"></div>
+                        <div class="prop-copy">${con.value_prop2_copy}</div></div>
+                        <div class="line"></div>
+                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop3_img}" alt="${con.value_prop3_copy}"></div>
+                        <div class="prop-copy">${con.value_prop3_copy}</div></div>
+                    </div></div>
+                    `);
 
                     // setBgImage(con);
                 }
             })
         });
     }
-   
+
     // Generic Code
     function waitForElm(selector) {
         return new Promise(function (resolve) {
