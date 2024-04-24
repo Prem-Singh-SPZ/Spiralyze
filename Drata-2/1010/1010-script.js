@@ -48,6 +48,10 @@
         padding: 15px
       }
      }
+     body.spz-1010 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form p.MuiTypography-body1 a {
+        color: #fff;
+        text-decoration: none;
+      }
     `;
     cssElement.appendChild(document.createTextNode(cssCode));
     document.head.appendChild(cssElement);
@@ -64,11 +68,15 @@
             }
             waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
                 let setValue = setInterval(() => {
-                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '#1010_variant') {
+                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Control_1014') {
                         clearInterval(setValue);
                     }
-                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1010_variant');
+                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Control_1014');
                 }, 100);
+            });
+
+            waitForElm('form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1').then(function () {
+                document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1").innerHTML = `For partner or reseller inquiries, please contact <a href="mailto:partnerships@drata.com">partnerships@drata.com</a>`;
             });
         });
     }
