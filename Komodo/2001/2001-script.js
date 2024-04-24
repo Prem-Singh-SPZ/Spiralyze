@@ -76,7 +76,8 @@ ready(function () {
       }
       gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
       document.querySelector('body').classList.add('run-var')
-      document.querySelector('[data-global-resource-path]').classList.add("hide")
+      document.querySelector('[data-global-resource-path]').classList.add("hide");
+      document.querySelector('.hs-search-hidden.komodo-header').classList.add("hide");
       document.querySelector('body').insertAdjacentHTML('afterbegin', `
     <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_2.webp" alt="background" width="0" height="0" style="display:none"/>
     <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_1.webp" alt="background" width="0" height="0" style="display:none"/>
