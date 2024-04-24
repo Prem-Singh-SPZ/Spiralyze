@@ -390,13 +390,20 @@ body.spz-0002 {
   line-height: 20px;
   text-decoration: none !important;
 }
+.spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel a {
+  color: #081a59 !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: underline !important;
+}
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p a {
   color: #081a59 !important;
   font-size: 12px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
-  text-decoration: none !important;
   text-decoration: underline !important;
 }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel.single_checked::before {
