@@ -98,7 +98,7 @@ ready(function () {
                 </div>
                 <div class="child">
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-2.png" alt="Patient Cohorts Icon" width="32" height="32"/>
-                  <div class="l-desc"><strong>MapEnhance:</strong> Increase your understanding of the patient population with lab, EHR, genomics, race and ethnicity, mortality, insurance, and SDoH insights</div>
+                  <div class="l-desc"><strong>MapEnhance<sup>TM</sup>:</strong> Increase your understanding of the patient population with lab, EHR, genomics, race and ethnicity, mortality, insurance, and SDoH insights</div>
                 </div>
                 <div class="child">
                   <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/Icon-3.png" alt="Analytics Icon" width="32" height="32"/>
