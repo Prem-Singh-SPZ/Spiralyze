@@ -35,12 +35,12 @@
         },
         {
             pageName: "website-spaceiq-demo",
-            value_prop1_img: assetURL + "icon_proxyclick_01.svg",
-            value_prop1_copy: "Optimize <br>guest experience",
-            value_prop2_img: assetURL + "icon_proxyclick_02.svg",
-            value_prop2_copy: "Improve <br>safety & security",
-            value_prop3_img: assetURL + "icon_proxyclick_03.svg",
-            value_prop3_copy: "Decrease <br>operational costs",
+            value_prop1_img: assetURL + "hand_icon_1.svg",
+            value_prop1_copy: "Space <br>planning",
+            value_prop2_img: assetURL + "security_icon_4.svg",
+            value_prop2_copy: "Support hybrid working",
+            value_prop3_img: assetURL + "security_icon_3.svg",
+            value_prop3_copy: "Uncover <br>smarter data",
         },
         {
             pageName: "website-ioffice-demo",

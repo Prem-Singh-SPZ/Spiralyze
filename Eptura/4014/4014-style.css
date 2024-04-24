@@ -173,3 +173,27 @@ body#bodyId.form-overlay.website-proxyclick-demo .form-overlay .overlay #mkto_ge
     height: 94px;
   }
 }
+body#bodyId.form-overlay.website-spaceiq-demo .form-overlay .overlay #mkto_gen_ovelayImg img {
+  display: none !important;
+}
+body#bodyId.form-overlay.website-spaceiq-demo .form-overlay .overlay #mkto_gen_ovelayImg::before {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-desktop_1.webp) no-repeat !important;
+  background-position: 0 0;
+  background-size: cover !important;
+  -webkit-backdrop-filter: none;
+          backdrop-filter: none;
+}
+@media (max-width: 1023.98px) {
+  body#bodyId.form-overlay.website-spaceiq-demo .form-overlay .overlay #mkto_gen_ovelayImg::before {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-tablet_1.webp) no-repeat !important;
+    background-position: 0 0;
+    background-size: cover !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body#bodyId.form-overlay.website-spaceiq-demo .form-overlay .overlay #mkto_gen_ovelayImg::before {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-mobile_1.webp) no-repeat !important;
+    background-position: 0 0;
+    background-size: cover !important;
+  }
+}
