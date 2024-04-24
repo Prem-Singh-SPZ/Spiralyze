@@ -25,6 +25,8 @@
         ".hs_source__inbound_demo_ .input .hs-label-spz"
       ).textContent = "How did you hear about us?*";
 
+      document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1").innerHTML = `For partner or reseller inquiries, please contact <a href="mailto:partnerships@drata.com">partnerships@drata.com</a>`;
+
       // move .MuiTypography-body1 after .hs_submit
       if (!document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit + .MuiTypography-body1")) {
         document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_submit").insertAdjacentElement("afterend", document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs_demo_product_of_interest p.MuiTypography-body1"));
@@ -94,14 +96,6 @@
             </video>
           </div>`);
       }
-      waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
-        let setValue = setInterval(() => {
-          if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '#1010_variant') {
-            clearInterval(setValue);
-          }
-          document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1010_variant');
-        }, 100);
-      });
     });
   }
 
@@ -192,14 +186,14 @@
   }
 
   function setHiddenFields() {
-    // waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
-    //     let setValue = setInterval(() => {
-    //         if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '#1010_variant') {
-    //             clearInterval(setValue);
-    //         }
-    //         document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1010_variant');
-    //     }, 100);
-    // });
+    waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
+        let setValue = setInterval(() => {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_1014') {
+                clearInterval(setValue);
+            }
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_1014');
+        }, 100);
+    });
   }
 
   history.pushState = (function (f) {
