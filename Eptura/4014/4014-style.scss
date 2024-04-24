@@ -83,6 +83,10 @@ body#bodyId.form-overlay {
                     font-weight: 400;
                     line-height: 16px;
                     margin: 4px 0;
+                    min-height: 28px;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
 
                     @media (max-width: 767.98px) {
                       font-size: 12px;
@@ -220,6 +224,36 @@ body#bodyId.form-overlay {
 
         @media (max-width: 767.98px) {
           background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-mobile_1.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+      }
+    }
+  }
+
+  &.website-managerplus-demo {
+    .form-overlay .overlay #mkto_gen_ovelayImg {
+      img {
+        display: none !important;
+      }
+
+      &::before {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg_image_managerplus_desktop.webp)
+          no-repeat !important;
+        background-position: 0 0;
+        background-size: cover !important;
+        backdrop-filter: none;
+
+        @media (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg_image_managerplus_tablet.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg_image_managerplus_mobile.webp)
             no-repeat !important;
           background-position: 0 0;
           background-size: cover !important;

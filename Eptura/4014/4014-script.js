@@ -17,12 +17,12 @@
         },
         {
             pageName: "website-managerplus-demo",
-            value_prop1_img: assetURL + "icon_proxyclick_01.svg",
-            value_prop1_copy: "Optimize <br>guest experience",
-            value_prop2_img: assetURL + "icon_proxyclick_02.svg",
-            value_prop2_copy: "Improve <br>safety & security",
-            value_prop3_img: assetURL + "icon_proxyclick_03.svg",
-            value_prop3_copy: "Decrease <br>operational costs",
+            value_prop1_img: assetURL + "icon_managerplus_01.svg",
+            value_prop1_copy: "Improve asset availability",
+            value_prop2_img: assetURL + "icon_managerplus_02.svg",
+            value_prop2_copy: "Extend asset longevity",
+            value_prop3_img: assetURL + "icon_managerplus_03.svg",
+            value_prop3_copy: "Save time",
         },
         {
             pageName: "website-archibus-demo",
