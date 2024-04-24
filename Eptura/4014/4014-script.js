@@ -26,12 +26,12 @@
         },
         {
             pageName: "website-archibus-demo",
-            value_prop1_img: assetURL + "icon_proxyclick_01.svg",
-            value_prop1_copy: "Optimize <br>guest experience",
-            value_prop2_img: assetURL + "icon_proxyclick_02.svg",
-            value_prop2_copy: "Improve <br>safety & security",
-            value_prop3_img: assetURL + "icon_proxyclick_03.svg",
-            value_prop3_copy: "Decrease <br>operational costs",
+            value_prop1_img: assetURL + "icon_archibus_01.svg",
+            value_prop1_copy: "Boost workplace productivity",
+            value_prop2_img: assetURL + "icon_archibus_02.svg",
+            value_prop2_copy: "Maximize your space",
+            value_prop3_img: assetURL + "icon_archibus_03.svg",
+            value_prop3_copy: "Get real-time data",
         },
         {
             pageName: "website-spaceiq-demo",
