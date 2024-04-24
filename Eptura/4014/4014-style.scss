@@ -2,6 +2,9 @@ body#bodyId.form-overlay {
   .body-wrapper {
     .form-overlay {
       .hero-wrapper-spz {
+        @media (max-width: 767.98px) {
+          padding-top: 0 !important;
+        }
         .spz-wrapper {
           .spz-left-content {
             display: none !important;
@@ -26,6 +29,10 @@ body#bodyId.form-overlay {
                 font-size: 36px !important;
                 line-height: 44px !important;
               }
+
+              @media (max-width: 767.98px) {
+                margin: 8px auto;
+              }
             }
 
             .value-props-section {
@@ -36,16 +43,28 @@ body#bodyId.form-overlay {
                 margin: 24px 10px;
                 padding: 5px 0 15px;
 
+                @media (max-width: 767.98px) {
+                  margin: 15px 10px 21px;
+                  padding: 2px 0;
+                }
+
                 .line {
                   width: 1px;
                   height: 84px;
                   background: #eeeff4;
+
+                  @media (max-width: 767.98px) {
+                    height: 94px;
+                  }
                 }
 
                 .value-prop {
                   text-align: center;
                   max-width: 117px;
                   width: 100%;
+                  @media (max-width: 767.98px) {
+                    max-width: 82.7px;
+                  }
 
                   .prop-img {
                     margin: 2.2px;
@@ -64,6 +83,11 @@ body#bodyId.form-overlay {
                     font-weight: 400;
                     line-height: 16px;
                     margin: 4px 0;
+
+                    @media (max-width: 767.98px) {
+                      font-size: 12px;
+                      line-height: 14px;
+                    }
                   }
                 }
               }
@@ -76,6 +100,10 @@ body#bodyId.form-overlay {
 
                 @media (min-width: 767.98px) {
                   height: 50px !important;
+                }
+
+                @media (max-width: 767.98px) {
+                  max-width: 280px !important;
                 }
               }
 
@@ -94,9 +122,11 @@ body#bodyId.form-overlay {
                 }
 
                 .mktoFieldWrap .mktoCheckboxList label {
-                  font-size: 14px !important;
-                  line-height: 20px !important;
-                  font-family: "Eptura Flexible Light", Arial, sans-serif !important;
+                  @media (min-width: 767px) {
+                    font-size: 14px !important;
+                    line-height: 20px !important;
+                    font-family: "Eptura Flexible Light", Arial, sans-serif !important;
+                  }
                 }
 
                 .mktoFormCol
@@ -113,6 +143,9 @@ body#bodyId.form-overlay {
                 margin-top: 15px;
                 @media (max-width: 1023.98px) {
                   margin-top: 21px;
+                }
+                @media (max-width: 767.98px) {
+                  margin-top: 19px;
                 }
               }
             }
