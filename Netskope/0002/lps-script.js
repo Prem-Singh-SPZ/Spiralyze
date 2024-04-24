@@ -337,6 +337,14 @@ body.spz-0002 {
   line-height: 20px;
   text-decoration: none !important;
 }
+.spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel a {
+  color: #081a59 !important;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-decoration: underline !important;
+}
 .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow .mktoFieldWrap.single_checkbox .mktoLabel p a {
   color: #081a59 !important;
   font-size: 12px;
@@ -372,7 +380,6 @@ body.spz-0002 {
   font-weight: 400;
   line-height: 20px;
   font-family: Graphik, sans-serif !important;
-  text-decoration: none !important;
   text-decoration: underline !important;
 }
 html:not([lang="ja-JP"]) .spz-0002 .landing-page-v3__form-content form.mktoForm .mktoFormRow.field-10 {

@@ -428,24 +428,24 @@ body.spz-0002 {
   text-decoration: none !important;
   text-decoration: underline !important;
 }
-html:not([lang="ja-JP"]) .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 {
+.spz-0002:not(.japanese) .js-hero-banner form.mktoForm .mktoFormRow.field-10 {
   width: 100% !important;
   padding: 0 !important;
   margin: 0 !important;
 }
-html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.mktoZipRow, html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoClear{
+.japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.mktoZipRow, .japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoClear{
   display: none !important;
 }
-html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-12, html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-9{
+.japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-12, .japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-9{
   width: 100% !important;
 }
-html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10{
+.japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10{
   display: flex !important;
   flex-wrap: nowrap !important;
   justify-content: space-between;
   width: 100% !important;
 }
-html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
+.japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
   width: calc(50% - 6px) !important;
 }
 .spz-0002 .js-hero-banner .gated-content__right form.mktoForm .mktoFormRow.field-10 {
@@ -742,10 +742,10 @@ html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10
   .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .gated-content__tag.ga__cta:nth-child(06) {order: 5}
   .spz-0002 .js-hero-banner .gated-content__right .gated-content__tags .show-hide-tag{order:7;margin:8px 3px;}
 
-  html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10{
+  .japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10{
     flex-direction: column;
   }
-  html[lang="ja-JP"] .spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
+  .japanese.spz-0002 .js-hero-banner form.mktoForm .mktoFormRow.field-10 .mktoFormCol{
     width: 100% !important;
   }
 }`;
@@ -850,21 +850,26 @@ function formModify() {
     if (document.querySelector('html[lang="en-US"]')) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
     }
-    if (document.querySelector('html[lang="es-ES"]')) {
+    if (document.querySelector('html[lang="es-ES"]') || location.href.indexOf('/es/resources/') > -1) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, rellene el formulario</h2>`);
+      document.body.classList.add('spanish');
     }
-    if (document.querySelector('html[lang="fr-FR"]')) {
+    if (document.querySelector('html[lang="fr-FR"]') || location.href.indexOf('/fr/resources/') > -1) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Veuillez remplir
       ce formulaire</h2>`);
+      document.body.classList.add('french');
     }
-    if (document.querySelector('html[lang="pt-BR"]')) {
+    if (document.querySelector('html[lang="pt-BR"]') || location.href.indexOf('/pt/resources/') > -1) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Por favor, preencha este formulário</h2>`);
+      document.body.classList.add('portuguese');
     }
-    if (document.querySelector('html[lang="ja-JP"]')) {
+    if (document.querySelector('html[lang="ja-JP"]') || location.href.indexOf('/jp/resources/') > -1) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">このフォームに必要事項を入力してください</h2>`);
+      document.body.classList.add('japanese');
     }
-    if (document.querySelector('html[lang="de-DE"]')) {
+    if (document.querySelector('html[lang="de-DE"]') || location.href.indexOf('/de/resources/') > -1) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Bitte füllen Sie dieses Formular aus</h2>`);
+      document.body.classList.add('german');
     }
   }
   // form CTA Update
@@ -892,7 +897,7 @@ function formModify() {
     // Get the text from '#Country option' and set it to '#LblCountry'
     let countryLbl = document.querySelector("#Country option:first-child").textContent;
     document.querySelector("#LblCountry").textContent = countryLbl;
-    if (document.querySelector('html[lang="ja-JP"]')) {
+    if (location.href.indexOf('/jp/resources/') > -1) {
       document.querySelector("#LblCountry").textContent = '国';
     }
   }
@@ -923,7 +928,7 @@ function formModify() {
 
   var optout_field = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-11');
   var form_footer = document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .mktoForm .mktoFormRow.field-10');
-  if (!document.querySelector('html[lang="ja-JP"]')) {
+  if (location.href.indexOf('/jp/resources/') < 0) {
     form_footer.before(optout_field);
   }
 
