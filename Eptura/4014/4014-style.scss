@@ -1,12 +1,6 @@
 body#bodyId.form-overlay {
   .body-wrapper {
     .form-overlay {
-      // #mkto_gen_ovelayImg {
-      //   &::before {
-      //     display: none;
-      //   }
-      // }
-
       .hero-wrapper-spz {
         .spz-wrapper {
           .spz-left-content {
@@ -16,6 +10,10 @@ body#bodyId.form-overlay {
           #form-over.form-over {
             max-width: 560px;
 
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              padding: 16px 46px 51px 46px;
+            }
+
             .main_logo,
             #form_subtitle {
               display: none !important;
@@ -23,6 +21,11 @@ body#bodyId.form-overlay {
 
             .form-heading {
               margin: 24px auto;
+
+              @media (min-width: 767.98px) {
+                font-size: 36px !important;
+                line-height: 44px !important;
+              }
             }
 
             .value-props-section {
@@ -70,9 +73,80 @@ body#bodyId.form-overlay {
               .mktoButtonRow .mktoButtonWrap button.mktoButton {
                 width: 100% !important;
                 max-width: 448px !important;
+
+                @media (min-width: 767.98px) {
+                  height: 50px !important;
+                }
+              }
+
+              .mktoFormRow {
+                .mktoFormCol:first-child:nth-last-child(3),
+                .mktoFormCol:first-child:nth-last-child(3) ~ .mktoFormCol {
+                  @media (min-width: 767px) {
+                    width: 50% !important;
+                    margin: 0 !important;
+                    padding: 0 10px !important;
+                  }
+                }
+
+                .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+                  margin-bottom: 12px;
+                }
+
+                .mktoFieldWrap .mktoCheckboxList label {
+                  font-size: 14px !important;
+                  line-height: 20px !important;
+                  font-family: "Eptura Flexible Light", Arial, sans-serif !important;
+                }
+
+                .mktoFormCol
+                  .mktoFieldWrap
+                  .mktoHtmlText.mktoHasWidth
+                  em
+                  .mobile-only {
+                  @media (min-width: 767.98px) {
+                    display: none;
+                  }
+                }
+              }
+              .spz-email .mktoFieldWrap {
+                margin-top: 15px;
+                @media (max-width: 1023.98px) {
+                  margin-top: 21px;
+                }
               }
             }
           }
+        }
+      }
+    }
+  }
+
+  &.website-proxyclick-demo {
+    .form-overlay .overlay #mkto_gen_ovelayImg {
+      img {
+        display: none !important;
+      }
+
+      &::before {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-proxyclick-desktop_2.webp)
+          no-repeat !important;
+        background-position: 0 0;
+        background-size: cover !important;
+        backdrop-filter: none;
+
+        @media (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-proxyclick-tablet_1.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/proxyclick_bg_361.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
         }
       }
     }

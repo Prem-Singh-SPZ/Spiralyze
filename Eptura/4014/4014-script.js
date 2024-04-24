@@ -14,7 +14,6 @@
             value_prop2_copy: "Improve <br>safety & security",
             value_prop3_img: assetURL + "icon_proxyclick_03.svg",
             value_prop3_copy: "Decrease <br>operational costs",
-            bgDesktop: assetURL + "proxyclick_bg_1440.webp",
         },
         {
             pageName: "website-managerplus-demo",
@@ -109,8 +108,6 @@
                         <div class="prop-copy">${con.value_prop3_copy}</div></div>
                     </div></div>
                     `);
-
-                    // setBgImage(con);
                 }
             })
         });
@@ -130,11 +127,5 @@
             });
             observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
         });
-    }
-
-    // Set background image on body according to screen size (1200px, 1024px, 768px)
-    function setBgImage(con) {
-        document.querySelector('.form-overlay #mkto_gen_ovelayImg img').setAttribute('src', con.bgDesktop);
-        document.querySelector('#form-over #mkto_gen_form_logo img').setAttribute('src', con.pageLogo);
     }
 })();
