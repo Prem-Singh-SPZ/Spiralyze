@@ -82,7 +82,7 @@ function appendCaseStudies() {
     if (document.querySelectorAll('.case-studies-section').length === 0) {
         document.querySelector('.hero-section').insertAdjacentHTML('afterend', `
         <section class="case-studies-section">
-          <h3 class="cs-title">See Why Companies are Automating Compliance with Drata</h3>
+          <h3 class="cs-title">See How Companies are Automating Compliance with Drata</h3>
           <div class="cs-overflow">
             <div class="case-study-wrapper" id="mini-cs-wrapper">
             </div>
