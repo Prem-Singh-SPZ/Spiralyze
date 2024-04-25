@@ -1,0 +1,108 @@
+body {
+  .hs-page {
+    .komodo-header.hs-search-hidden {
+      display: none;
+    }
+
+    .section2 .wrapper .logo-container {
+      padding: 24px 0;
+      @media screen and (max-width: 1024px) {
+        padding: 24px 1px 24px 7px;
+
+        .logo {
+          height: 32px;
+        }
+      }
+    }
+
+    .splide__slide .logo img {
+      width: auto !important;
+      height: auto !important;
+    }
+
+    @media (max-width: 1024.98px) {
+      .wrapper {
+        padding: 0;
+      }
+
+      .section3 {
+        padding: 40px 0 52px;
+
+        .slider-wrapper .splide__slide {
+          padding: 0 27px;
+        }
+      }
+
+      .dnd_area-row-0-background-image {
+        background-image: url("//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/komodohealth/1001/background_1.webp") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+    }
+
+    @media (max-width: 767.98px) {
+      .dnd-section {
+        padding-left: 11px;
+        padding-right: 11px;
+      }
+
+      .dnd_area-row-0-background-image {
+        background-image: url("//res.cloudinary.com/dxprfaxf3/image/upload/f_auto/komodohealth/1001/background.webp") !important;
+        background-size: cover !important;
+        background-position: center center !important;
+        background-repeat: no-repeat !important;
+      }
+
+      .section2 .wrapper .logo-container {
+        gap: 0 16px;
+        padding: 24px 0px 8px 0px;
+      }
+
+      .section2 .wrapper .logo-container .logo:nth-child(3) {
+        order: 0;
+      }
+      .section2 .wrapper .logo-container .logo:first-child {
+        order: 1;
+      }
+      .section2 .wrapper .logo-container .logo:nth-child(2) {
+        order: 2;
+      }
+      .section2 .wrapper .logo-container .logo:nth-child(5) {
+        order: 3;
+      }
+      .section2 .wrapper .logo-container .logo:nth-child(4) {
+        order: 4;
+      }
+
+      .section3 {
+        padding: 32px 0 12px;
+
+        .slider-wrapper {
+          .splide__track {
+            padding-top: 24px;
+          }
+
+          .splide__slide {
+            padding: 0 11px;
+            .left {
+              .mobile-img {
+                display: block;
+                width: 100%;
+                min-height: 270px;
+                img {
+                  width: 100%;
+                  height: auto;
+                }
+              }
+
+              > img {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
