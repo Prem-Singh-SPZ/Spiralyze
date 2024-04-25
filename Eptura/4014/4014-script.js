@@ -74,18 +74,22 @@
 
                     document.querySelector('#form-over #form_title').textContent = "Get a demo";
 
+                    let iconAlt1 = removeBrTag(con.value_prop1_copy);
+                    let iconAlt2 = removeBrTag(con.value_prop2_copy);
+                    let iconAlt3 = removeBrTag(con.value_prop3_copy);
+
                     document.querySelector('#form-over #form_title').insertAdjacentHTML('afterend', `
                     <div class="value-props-section">
                     <div class="value-props-wrapper">
                         <div class="value-prop">
-                            <div class="prop-img"><img src="${con.value_prop1_img}" alt="${con.value_prop1_copy}"></div>
+                            <div class="prop-img"><img src="${con.value_prop1_img}" alt="` + iconAlt1 + `"></div>
                             <div class="prop-copy">${con.value_prop1_copy}</div>
                         </div>
                         <div class="line"></div>
-                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop2_img}" alt="${con.value_prop2_copy}"></div>
+                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop2_img}" alt="` + iconAlt2 + `"></div>
                         <div class="prop-copy">${con.value_prop2_copy}</div></div>
                         <div class="line"></div>
-                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop3_img}" alt="${con.value_prop3_copy}"></div>
+                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop3_img}" alt="` + iconAlt3 + `"></div>
                         <div class="prop-copy">${con.value_prop3_copy}</div></div>
                     </div></div>
                     `);
@@ -93,6 +97,12 @@
             })
         });
     }
+
+    //remove <br> from string coming in variable ${con.value_prop1_copy}
+    function removeBrTag(str) {
+        return str.replace(/<br>/g, '');
+    }
+
 
     // Generic Code
     function waitForElm(selector) {
