@@ -6,7 +6,7 @@ body.spz-6013 .case-studies-section {
   margin: 1px auto 88px;
 }
 body.spz-6013 .case-studies-section .cs-title {
-  color: #0C131A;
+  color: #0c131a;
   font-family: "Inter", sans-serif;
   font-size: 32px;
   font-style: normal;
@@ -127,6 +127,11 @@ body.spz-6013 .case-studies-section .case-study-wrapper .case-study .cs-details 
   body.spz-6013 .case-studies-section .cs-overflow {
     width: 100%;
     overflow-y: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+  }
+  body.spz-6013 .case-studies-section .cs-overflow::-webkit-scrollbar {
+    display: none;
   }
   body.spz-6013 .case-studies-section .cs-title {
     font-size: 24px;
