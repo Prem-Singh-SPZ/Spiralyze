@@ -425,13 +425,13 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
     </div>
     `;
 
-  document.body.classList.add('spz-3018-V1');
+  document.body.classList.add('spz-3022');
 
   if (single_page_setup != '') {
     document.body.classList.add(single_page_setup.page_class);
   }
   waitForElm('#bodyId #hero #HeroFormCol #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
-    document.body.classList.add('spz-3018-V1');
+    document.body.classList.add('spz-3022');
     loadTest();
     clearFormFields();
 
@@ -615,7 +615,7 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
       document.querySelector('#HeroFormCol').insertAdjacentHTML('afterend', hero_content);
     }
 
-    document.querySelector('.spz-3018-V1 .mktoForm .mktoButtonRow button[type="submit"].mktoButton').addEventListener('click', function () {
+    document.querySelector('.spz-3022 .mktoForm .mktoButtonRow button[type="submit"].mktoButton').addEventListener('click', function () {
       setTimeout(() => {
         // if (!document.querySelector('.get-form .mktoForm').classList.contains('fully-load')) {
         var eventclick = new Event('focus');
