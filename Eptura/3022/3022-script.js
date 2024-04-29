@@ -1,7 +1,7 @@
 let page_setup = [
   {
     'page_class': 'spz-ppc-proxy-click',
-    'form_title': 'Make the visitor check-in experience <span>50% faster</span> while improving security.',
+    'form_title': 'Make the visitor check-in experience <span>50% faster</span>',
     'site_logo': '//res.cloudinary.com/spiralyze/image/upload/v1702565045/eptura/3017/proxyclick_logo.svg',
     'logo_alt': 'Proxyclick',
     'hero_image': {
