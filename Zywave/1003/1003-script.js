@@ -1,6 +1,6 @@
 document.body.classList.add('spz-1003');
 
-document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700209674/netskope/1001/Chevron_inverted.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1709197595/netskope/9001/Checkbox_checked.svg" as="image">`
+document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image">`
 );
 
 //Form internal code
@@ -19,8 +19,7 @@ function rearrangeFields() {
         else {
             element.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm, index) {
                 elm.classList.add('field_' + index);
-                console.log(elm.querySelector('.mktoField'));
-
+                document.querySelector('.mktoForm fieldset.mktoFormCol').insertAdjacentElement('beforeend', elm);
                 // check if mktoField has placeholder
                 if (elm.querySelector('.mktoField[placeholder]')) {
                     elm.querySelector('.mktoField').setAttribute('placeholder', '');
@@ -42,7 +41,6 @@ function formModify() {
     //form Cta update
     var textChng = document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container button.mktoButton');
 
-
     let changeLabels = setInterval(() => {
         textChng.textContent = 'Submit';
         document.querySelector('#LblEmail').textContent = "Business Email";
@@ -59,21 +57,6 @@ function formModify() {
         clearInterval(changeLabels);
     }, 100);
 
-    waitForElm('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').then(function () {
-        if (document.querySelectorAll('.frm-commt').length == 0) {
-            document.querySelector('body .netskope-component--request-demo-form form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<div class="frm-commt">
-                    <div class="commt-text">Comment</div>
-                    </div>`);
-        }
-        document.querySelector('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt .commt-text').addEventListener('click', function () {
-            this.parentElement.classList.toggle("close-cmnt");
-            var mktoFieldWrapList = document.querySelectorAll('body form.mktoForm .mktoFormCol.Contact_Us_Form_Entry__c-row .mktoFieldWrap');
-            mktoFieldWrapList.forEach(function (element) {
-                element.classList.toggle("visible");
-            });
-        });
-    });
-
     document.getElementById("FirstName").setAttribute('tabindex', '1');
     document.getElementById("LastName").setAttribute('tabindex', '2');
     document.getElementById("Email").setAttribute('tabindex', '3');
@@ -81,6 +64,15 @@ function formModify() {
     document.getElementById("Company").setAttribute('tabindex', '5');
     document.getElementById("Phone").setAttribute('tabindex', '6');
     document.getElementById("ringdna100__ProductInterest__c").setAttribute('tabindex', '7');
+
+    var countryOptions = document.querySelectorAll('.mktoFieldWrap select');
+    countryOptions.forEach(function (select) {
+        if (select.querySelector('option[value=""]')) {
+            select.querySelector('option[value=""]').setAttribute('disabled', 'disabled');
+            select.querySelector('option[value=""]').setAttribute('style', 'color: #ccc');
+            select.querySelector('option[value=""]').textContent = '';
+        }
+    });
 
     // form state
     var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
@@ -124,9 +116,6 @@ function formModify() {
 function setHiddenFields() {
     if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
         document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#9001_spz_variant');
-    } else if (document.querySelectorAll('#mktoForm_1169 .mktoFormRow [name="utm_location__c"]').length == 0) {
-        // If [name="utm_location__c"] doesn't exist, add hidden field
-        document.querySelector('#mktoForm_1169').insertAdjacentHTML('beforeend', '<input type="hidden" name="utm_location__c" value="#9001_spz_variant">');
     }
 }
 
