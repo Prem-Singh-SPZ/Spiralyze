@@ -1,0 +1,249 @@
+body#bodyId.form-overlay {
+  .body-wrapper {
+    .form-overlay {
+      @media (max-width: 767.98px) {
+        align-items: center;
+      }
+      .hero-wrapper-spz {
+        @media (max-width: 767.98px) {
+          padding-top: 0 !important;
+        }
+        .spz-wrapper {
+          &::after {
+            background-image: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/4013/graphics-aura.svg);
+            background-repeat: no-repeat;
+            width: 417px;
+            height: 446px;
+            right: -130px;
+            top: -88px;
+
+            @media (max-width: 1023.98px) {
+              right: -200px;
+              top: -94px;
+            }
+          }
+
+          #form-over.form-over {
+            #form_subtitle {
+              display: none !important;
+            }
+
+            #form_title {
+              margin: 48px auto 32px;
+
+              @media (max-width: 1023.98px) {
+                margin: 44px auto 28px;
+              }
+            }
+          }
+
+          .spz-left-content {
+            flex-direction: column;
+            @media (min-width: 1023.98px) {
+              max-width: 50%;
+            }
+
+            .left-wrapper {
+              flex-grow: 1;
+            }
+
+            .case-studies-section {
+              background: rgba(214, 215, 245, 0.08);
+              padding: 20px 56px 24px 56px;
+              width: 100%;
+
+              @media (max-width: 1023.98px) {
+                padding: 16px 24px 20px 24px;
+              }
+
+              .case-studies-wrapper {
+                display: flex;
+                // flex-wrap: wrap;
+                align-items: center;
+
+                @media (max-width: 1023.98px) {
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
+
+                .value-prop {
+                  flex-grow: 1;
+                  border-right: 1px solid rgba(214, 215, 245, 0.08);
+
+                  @media (max-width: 1023.98px) {
+                    padding-bottom: 16px;
+                    border-right: 0;
+                    border-bottom: 1px solid rgba(214, 215, 245, 0.08);
+                  }
+
+                  .growth-copy {
+                    display: flex;
+                    align-items: center;
+                    span {
+                      margin-left: 4px;
+                      color: #fff;
+                      font-size: 26px;
+                      font-weight: 300;
+                      line-height: 34px;
+                    }
+                  }
+
+                  .prop-copy {
+                    padding: 4px 6px;
+                    border-radius: 2px;
+                    background: rgba(214, 215, 245, 0.08);
+                    color: #ced1d7;
+                    font-family: "Eptura Flexible", Arial, sans-serif;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    width: fit-content;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    margin-right: 16px;
+                  }
+                }
+
+                .person-prof {
+                  padding-left: 20px;
+                  display: flex;
+                  align-items: center;
+
+                  @media (max-width: 1023.98px) {
+                    padding: 16px 0 0;
+                  }
+
+                  .person-img {
+                    width: 40px;
+                    height: 40px;
+
+                    img {
+                      width: 100%;
+                      height: auto;
+                    }
+                  }
+
+                  .person-copy {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 8px;
+
+                    .name {
+                      color: #f6fafa;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: 20px;
+                      font-family: "Eptura Flexible", Arial, sans-serif;
+                    }
+
+                    .company {
+                      color: #babfcb;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 20px;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  &.website-proxyclick-demo {
+    .form-overlay .overlay #mkto_gen_ovelayImg {
+      img {
+        display: none !important;
+      }
+
+      &::before {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-proxyclick-desktop_2.webp)
+          no-repeat !important;
+        background-position: 0 0;
+        background-size: cover !important;
+        backdrop-filter: none;
+
+        @media (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-proxyclick-tablet_1.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/proxyclick_bg_361.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+      }
+    }
+  }
+
+  &.website-spaceiq-demo {
+    .form-overlay .overlay #mkto_gen_ovelayImg {
+      img {
+        display: none !important;
+      }
+
+      &::before {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-desktop_1.webp)
+          no-repeat !important;
+        background-position: 0 0;
+        background-size: cover !important;
+        backdrop-filter: none;
+
+        @media (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-tablet_1.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-mobile_1.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+      }
+    }
+  }
+
+  &.website-managerplus-demo {
+    .form-overlay .overlay #mkto_gen_ovelayImg {
+      img {
+        display: none !important;
+      }
+
+      &::before {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg_image_managerplus_desktop.webp)
+          no-repeat !important;
+        background-position: 0 0;
+        background-size: cover !important;
+        backdrop-filter: none;
+
+        @media (max-width: 1023.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg_image_managerplus_tablet.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+
+        @media (max-width: 767.98px) {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg_image_managerplus_mobile.webp)
+            no-repeat !important;
+          background-position: 0 0;
+          background-size: cover !important;
+        }
+      }
+    }
+  }
+}
