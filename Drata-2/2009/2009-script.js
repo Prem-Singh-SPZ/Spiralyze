@@ -276,7 +276,7 @@
   }
 
   const words = [
-    "SOC2 Compliance",
+    "SOC 2 Compliance",
     "ISO 27001 Certification",
     "HIPAA Compliance",
     "GDPR Compliance",

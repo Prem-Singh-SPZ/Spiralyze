@@ -273,7 +273,7 @@
 
 
   const words = [
-    "SOC2 Compliance", "ISO 27001 Certification", "HIPAA Compliance", "GDPR Compliance"
+    "SOC 2 Compliance", "ISO 27001 Certification", "HIPAA Compliance", "GDPR Compliance"
   ]
 
   // function for each character typing and deleting effect using javascript
