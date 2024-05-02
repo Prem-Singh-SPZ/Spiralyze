@@ -23,7 +23,7 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/frame_1171275510_webp_1.webp" alt="Hero Image" class="popup-hero" width="469" height="322">
               </picture>
             </div>
-            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame.svg" alt="close" width="20" height="20" class="close-popup" />
+            <div class="close-popup"></div>
             </div>
           </div>
         </div>`)

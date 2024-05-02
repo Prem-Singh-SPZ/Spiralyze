@@ -14,8 +14,12 @@
   height: 100%;
 }
 .spz-7001 .popup-wrapper .getdemo-popup {
-  width: 794px;
-  background: white;
+  width: 960px;
+  border-radius: 16px;
+  background: linear-gradient(102deg, #0f2d52 0%, #1a508f 100.01%);
+  -webkit-box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+          box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+  padding: 60px 400px 60px 60px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -23,31 +27,47 @@
   margin: auto;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .left {
-  width: 387px;
-  text-align: center;
-  padding: 23px 32px;
+  width: 500px;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .left .title {
-  color: #68cce8;
-  font-size: 16px;
+  color: #fff;
+  font-family: Bree;
+  font-size: 32px;
+  font-style: normal;
   font-weight: 700;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
-  margin-top: 24px;
+  line-height: 110%;
+  margin-bottom: 30px;
 }
-.spz-7001 .popup-wrapper .getdemo-popup .left .tag {
-  color: #4a4a4a;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  margin-top: 10.5px;
+.spz-7001 .popup-wrapper .getdemo-popup .left .title span {
+  color: #5fb53b;
 }
-.spz-7001 .popup-wrapper .getdemo-popup .left .desc {
-  color: #000;
-  font-size: 24px;
+.spz-7001 .popup-wrapper .getdemo-popup .left .tag-list {
+  padding: 0;
+  list-style: none;
+}
+.spz-7001 .popup-wrapper .getdemo-popup .left .tag-list li {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.spz-7001 .popup-wrapper .getdemo-popup .left .tag-list li img {
+  width: 32px;
+  height: 32px;
+}
+.spz-7001 .popup-wrapper .getdemo-popup .left .tag-list li p {
+  margin: 0 0 24px 16px;
+  color: #fff;
+  font-family: "Segoe UI";
+  font-size: 16px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 32px;
-  margin-top: 14px;
+  line-height: 140%;
+}
+.spz-7001 .popup-wrapper .getdemo-popup .left .tag-list li p span {
+  font-weight: 600;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .left .cta {
   display: -webkit-box;
@@ -59,31 +79,28 @@
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  border-radius: 100px;
-  background: #68cce8;
-  width: 323px;
-  height: 48px;
+  border-radius: 99px;
+  background: #5fb53b;
+  width: 194px;
+  height: 60px;
   text-decoration: none;
-  color: #000;
-  margin: 31px auto 32px auto;
-  font-size: 16px;
+  color: #0f2d52;
+  font-family: "Segoe UI";
+  font-size: 18px;
+  font-style: normal;
   font-weight: 700;
-  line-height: 24px;
-  letter-spacing: 0.8px;
-  text-transform: uppercase;
+  line-height: 130%;
   outline: 0;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .left .cta:hover {
-  background-color: #000000;
-  color: #fff;
+  background: #7edb58;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .left .cta:active {
-  background-color: #4a4a4a;
-  color: #fff;
+  background: #a6ff82;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .right {
   background: #f0eeee;
-  width: calc(100% - 387px);
+  width: calc(100% - 500px);
   position: relative;
 }
 .spz-7001 .popup-wrapper .getdemo-popup .right .popup-hero {
@@ -96,13 +113,19 @@
 }
 .spz-7001 .popup-wrapper .close-popup {
   position: absolute;
+  right: 10px;
+  top: 10px;
   cursor: pointer;
-  top: 8px;
-  right: 8px;
+  width: 24px;
+  height: 24px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame.svg) no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 .spz-7001 .popup-wrapper .close-popup:hover {
-  -webkit-filter: contrast(0.1);
-          filter: contrast(0.1);
+  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_1.svg) no-repeat;
+  background-position: center;
+  background-size: 100%;
 }
 .spz-7001 .popup-wrapper.show {
   display: -webkit-box;

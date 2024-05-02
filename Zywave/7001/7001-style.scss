@@ -2,7 +2,7 @@
   &.spz-no-scroll {
     overflow: hidden;
   }
-  
+
   .popup-wrapper {
     position: fixed;
     top: 0;
@@ -15,67 +15,85 @@
     padding: 40px 0;
     height: 100%;
     .getdemo-popup {
-      width: 794px;
-      background: white;
+      width: 960px;
+      border-radius: 16px;
+      background: linear-gradient(102deg, #0f2d52 0%, #1a508f 100.01%);
+      box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
+      padding: 60px 400px 60px 60px;
       display: flex;
       position: relative;
       margin: auto;
       .left {
-        width: 387px;
-        text-align: center;
-        padding: 23px 32px;
+        width: 500px;
+
         .title {
-          color: #68cce8;
-          font-size: 16px;
+          color: #fff;
+          font-family: Bree;
+          font-size: 32px;
+          font-style: normal;
           font-weight: 700;
-          letter-spacing: 0.8px;
-          text-transform: uppercase;
-          margin-top: 24px;
+          line-height: 110%;
+          margin-bottom: 30px;
+
+          span {
+            color: #5fb53b;
+          }
         }
-        .tag {
-          color: #4a4a4a;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 20px;
-          margin-top: 10.5px;
-        }
-        .desc {
-          color: #000;
-          font-size: 24px;
-          font-weight: 400;
-          line-height: 32px;
-          margin-top: 14px;
+        .tag-list {
+          padding: 0;
+          list-style: none;
+
+          li {
+            display: flex;
+            align-items: flex-start;
+
+            img {
+              width: 32px;
+              height: 32px;
+            }
+
+            p {
+              margin: 0 0 24px 16px;
+              color: #fff;
+              font-family: "Segoe UI";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+
+              span {
+                font-weight: 600;
+              }
+            }
+          }
         }
         .cta {
           display: flex;
           align-items: center;
           justify-content: center;
-          border-radius: 100px;
-          background: #68cce8;
-          width: 323px;
-          height: 48px;
+          border-radius: 99px;
+          background: #5fb53b;
+          width: 194px;
+          height: 60px;
           text-decoration: none;
-          color: #000;
-          margin: 31px auto 32px auto;
-          font-size: 16px;
+          color: #0f2d52;
+          font-family: "Segoe UI";
+          font-size: 18px;
+          font-style: normal;
           font-weight: 700;
-          line-height: 24px;
-          letter-spacing: 0.8px;
-          text-transform: uppercase;
+          line-height: 130%;
           outline: 0;
           &:hover {
-            background-color: #000000;
-            color: #fff;
+            background: #7edb58;
           }
           &:active {
-            background-color: #4a4a4a;
-            color: #fff;
+            background: #a6ff82;
           }
         }
       }
       .right {
         background: #f0eeee;
-        width: calc(100% - 387px);
+        width: calc(100% - 500px);
         position: relative;
         .popup-hero {
           position: absolute;
@@ -89,11 +107,20 @@
     }
     .close-popup {
       position: absolute;
+      right: 10px;
+      top: 10px;
       cursor: pointer;
-      top: 8px;
-      right: 8px;
+      width: 24px;
+      height: 24px;
+      background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame.svg)
+        no-repeat;
+      background-position: center;
+      background-size: 100%;
       &:hover {
-        filter: contrast(0.1);
+        background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_1.svg)
+        no-repeat;
+      background-position: center;
+      background-size: 100%;
       }
     }
   }
