@@ -7,21 +7,23 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
         <div class="popup-wrapper">
           <div class="getdemo-popup">
             <div class="left">
-              <div class="title">Get a demo</div>
-              <div class="tag">Patient Data | Clinical Outcomes | Treatment Data | Lab Records</div>
-              <div class="desc">Answer your complex questions with the industry's largest patient database</div>
+              <div class="title"><span>Streamline</span> the insurance lifecycle <br>from sales to customer retention.</div>
+              <ul class="tag-list">
+              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/icon_1.svg" alt="Agencies"> <p><span>Agencies.</span> Sell and manage plans for employee benefits, commercial, and personal insurance.</p></li>
+              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_2.svg" alt="Insurers"> <p><span>Insurers.</span> Streamline underwriting, post-bind activities, and claim tracking. Connect with clients.</p></li>
+              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/analytics_2.svg" alt="Service Providers"> <p><span>Service Providers.</span> Automate prospecting, quoting, and HCM services. Healthcare, payroll, and PEO.</p></li>
+              </ul>
               <a class="cta" href="javascript:void(0)">
                 Get a demo
               </a>
             </div>
             <div class="right">
               <picture>
-                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/4001/hero-mobile.png">
-                <source media="(max-width:1024.98px)" srcset="///res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/4001/hero-tablet.png">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/4001/hero-desktop.png" alt="Hero Image" class="popup-hero" width="469" height="322">
+                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/frame_1171275510_webp.webp">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/frame_1171275510_webp_1.webp" alt="Hero Image" class="popup-hero" width="469" height="322">
               </picture>
             </div>
-            <img src="//res.cloudinary.com/spiralyze/image/upload/v1698145805/komodohealth/4001/close__stroke.svg" alt="close" width="20" height="20" class="close-popup" />
+            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame.svg" alt="close" width="20" height="20" class="close-popup" />
             </div>
           </div>
         </div>`)
