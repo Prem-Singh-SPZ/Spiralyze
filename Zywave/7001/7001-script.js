@@ -2,14 +2,15 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
     if (document.querySelector('#zy-demo-form-section')) {
         document.body.classList.add('spz-7001');
 
-        document.querySelector('body').insertAdjacentHTML("beforeend", `
+        if (document.querySelectorAll('body .popup-wrapper').length == 0) {
+            document.querySelector('body').insertAdjacentHTML("beforeend", `
         <div class="popup-wrapper">
           <div class="getdemo-popup">
             <div class="left">
               <div class="title">Get a demo</div>
               <div class="tag">Patient Data | Clinical Outcomes | Treatment Data | Lab Records</div>
               <div class="desc">Answer your complex questions with the industry's largest patient database</div>
-              <a class="cta" href="#popup_request_a_demo" rel="modal:open">
+              <a class="cta" href="javascript:void(0)">
                 Get a demo
               </a>
             </div>
@@ -23,38 +24,46 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             <img src="//res.cloudinary.com/spiralyze/image/upload/v1698145805/komodohealth/4001/close__stroke.svg" alt="close" width="20" height="20" class="close-popup" />
             </div>
           </div>
-        </div>
-    `)
+        </div>`)
+        }
 
         document.body.onresize = function () {
         }
-        document.querySelector("html").onmouseleave = function () {
-            if (!sessionStorage.getItem("spz-7001") && !document.querySelector('.spz-7001 .jquery-modal')) {
-                document.querySelector('.spz-7001 .popup-wrapper').classList.add("show");
-                sessionStorage.setItem("spz-7001", "shown");
-            }
-        }
-        if (window.matchMedia("(max-width: 1024.98px)").matches || navigator.maxTouchPoints) {
+
+        if (window.innerWidth < 1025 || navigator.maxTouchPoints) {
             console.log("mobile")
             setTimeout(function () {
                 if (!sessionStorage.getItem("spz-7001") && !document.querySelector('.spz-7001 .jquery-modal')) {
-
+                    document.body.classList.add('spz-no-scroll');
                     document.querySelector('.spz-7001 .popup-wrapper').classList.add("show");
                     sessionStorage.setItem("spz-7001", "shown");
                 }
             }, 10000)
         }
+        else {
+            document.querySelector("html").onmouseleave = function () {
+                if (!sessionStorage.getItem("spz-7001") && !document.querySelector('.spz-7001 .jquery-modal')) {
+                    document.body.classList.add('spz-no-scroll');
+                    document.querySelector('.spz-7001 .popup-wrapper').classList.add("show");
+                    sessionStorage.setItem("spz-7001", "shown");
+                }
+            }
+        }
+
         document.querySelector('.spz-7001 .popup-wrapper').addEventListener("click", function (event) {
             if (event.target.classList.contains("popup-wrapper")) {
                 document.querySelector('.spz-7001 .popup-wrapper').classList.remove("show")
+                document.body.classList.remove('spz-no-scroll');
             }
         })
         document.querySelector('.spz-7001 .popup-wrapper .close-popup').addEventListener("click", function (event) {
-
+            document.body.classList.remove('spz-no-scroll');
             document.querySelector('.spz-7001 .popup-wrapper').classList.remove("show")
         })
         document.querySelector('.spz-7001 .popup-wrapper .getdemo-popup .left .cta').addEventListener("click", function (event) {
+            document.querySelector('.zy-header-container-inner .zy-top-demo-container>a').click();
             document.querySelector('.spz-7001 .popup-wrapper').classList.remove("show")
+            document.body.classList.remove('spz-no-scroll');
         })
 
     }
