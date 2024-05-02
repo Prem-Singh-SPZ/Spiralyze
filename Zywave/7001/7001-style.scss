@@ -23,8 +23,17 @@
       display: flex;
       position: relative;
       margin: auto;
+
+      @media (min-width: 1023.97px) and (max-width: 1250px) {
+        width: 74%;
+      }
+
       .left {
         width: 500px;
+
+        @media (min-width: 1023.97px) and (max-width: 1250px) {
+          min-width: 50%;
+        }
 
         .title {
           color: #fff;
@@ -42,6 +51,7 @@
         .tag-list {
           padding: 0;
           list-style: none;
+          margin: 0;
 
           li {
             display: flex;
@@ -50,6 +60,7 @@
             img {
               width: 32px;
               height: 32px;
+              margin-top: 2px;
             }
 
             p {
@@ -83,6 +94,7 @@
           font-weight: 700;
           line-height: 130%;
           outline: 0;
+          margin-top: 6px;
           &:hover {
             background: #7edb58;
           }
@@ -92,16 +104,21 @@
         }
       }
       .right {
-        background: #f0eeee;
+        background: transparent;
         width: calc(100% - 500px);
         position: relative;
+
         .popup-hero {
           position: absolute;
           height: auto;
-          width: 517px;
+          width: 535px;
           pointer-events: none;
-          top: -8px;
-          left: 6px;
+          top: 3px;
+          left: 23px;
+
+          @media (min-width: 1023.97px) and (max-width: 1250px) {
+            width: 500px;
+          }
         }
       }
     }
@@ -118,9 +135,9 @@
       background-size: 100%;
       &:hover {
         background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_1.svg)
-        no-repeat;
-      background-position: center;
-      background-size: 100%;
+          no-repeat;
+        background-position: center;
+        background-size: 100%;
       }
     }
   }
@@ -128,66 +145,65 @@
     display: flex;
   }
 }
-// @media (max-width: 1024.98px) {
-//   .spz-7001 {
-//     .popup-wrapper {
-//       .getdemo-popup {
-//         flex-direction: column;
-//         width: 491px;
-//         .left {
-//           width: 100%;
-//           padding: 24px 32px 0px 32px;
-//           .title {
-//             margin-top: 0px;
-//           }
-//           .cta {
-//             width: 100%;
-//           }
-//         }
-//         .right {
-//           width: 100%;
-//           height: 366px;
-//           .popup-hero {
-//             width: 581px;
-//             top: 12px;
-//             left: -39px;
-//           }
-//         }
-//       }
-//       .close-popup {
-//         top: 12px;
-//         right: 12px;
-//       }
-//     }
-//   }
-// }
-// @media (max-width: 767.98px) {
-//   .spz-7001 {
-//     .popup-wrapper {
-//       .getdemo-popup {
-//         width: 95.6%;
-//         max-width: 344px;
-//         .left {
-//           padding: 24px 16px 0;
-//           text-align: left;
-//           .tag {
-//             width: 256px;
-//             max-width: 100%;
-//           }
-//           .cta {
-//             margin-top: 23px;
-//           }
-//         }
-//         .right {
-//           .popup-hero {
-//             transform: translateX(-50%);
-//             width: 90.7%;
-//             top: 32px;
-//             left: 50%;
-//           }
-//           height: 304px;
-//         }
-//       }
-//     }
-//   }
-// }
+@media (max-width: 1023.98px) {
+  .spz-7001 {
+    .popup-wrapper {
+      .getdemo-popup {
+        flex-direction: column;
+        width: 580px;
+        padding: 60px 40px;
+        .left {
+          width: 100%;
+
+          .cta {
+            width: 100%;
+          }
+        }
+        .right {
+          width: 100%;
+          height: 400px;
+          .popup-hero {
+            width: 581px;
+            top: 12px;
+            left: -39px;
+          }
+        }
+      }
+      .close-popup {
+        top: 12px;
+        right: 12px;
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-7001 {
+    .popup-wrapper {
+      .getdemo-popup {
+        width: 100%;
+        max-width: 335px;
+        padding: 40px 18px 0px 18px;
+        .left {
+          .tag {
+            width: 256px;
+            max-width: 100%;
+          }
+          .cta {
+            margin-top: 23px;
+          }
+        }
+        .right {
+          height: 272px;
+          width: 345px;
+
+          .popup-hero {
+            transform: translateX(-50%);
+            width: 345px;
+            top: 32px;
+            left: 45%;
+          }
+        }
+      }
+    }
+  }
+}

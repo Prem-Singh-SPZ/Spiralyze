@@ -1,4 +1,7 @@
 waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () {
+
+    document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_1.svg" as="image">`)
+
     if (document.querySelector('#zy-demo-form-section')) {
         document.body.classList.add('spz-7001');
 
@@ -19,8 +22,8 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             </div>
             <div class="right">
               <picture>
-                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/frame_1171275510_webp.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/frame_1171275510_webp_1.webp" alt="Hero Image" class="popup-hero" width="469" height="322">
+                <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/mobile-img-min.png">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/desktop-img-min.png" alt="Hero Image" class="popup-hero">
               </picture>
             </div>
             <div class="close-popup"></div>
@@ -32,7 +35,7 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
         document.body.onresize = function () {
         }
 
-        if (window.innerWidth < 1025 || navigator.maxTouchPoints) {
+        if (window.innerWidth < 1024 || navigator.maxTouchPoints) {
             console.log("mobile")
             setTimeout(function () {
                 if (!sessionStorage.getItem("spz-7001") && !document.querySelector('.spz-7001 .jquery-modal')) {
