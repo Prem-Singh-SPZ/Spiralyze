@@ -178,27 +178,47 @@
           }
         }
       }
-      .close-popup {
-        top: 12px;
-        right: 12px;
-      }
+      //   .close-popup {
+      //     top: 12px;
+      //     right: 12px;
+      //   }
     }
   }
 }
 @media (max-width: 767.98px) {
   .spz-7001 {
     .popup-wrapper {
+      padding: 24px 0 86px;
       .getdemo-popup {
         width: 100%;
         max-width: 335px;
-        padding: 40px 18px 0px 18px;
+        padding: 36px 18px 0px 18px;
         .left {
-          .tag {
-            width: 256px;
-            max-width: 100%;
+          .title {
+            font-size: 28px;
+            margin-left: -0.5px;
+            margin-right: -0.5px;
+
+            br {
+              display: none;
+            }
+          }
+          .tag-list {
+            margin: 0;
+
+            li {
+              img {
+                width: 24px;
+                height: 24px;
+              }
+            }
           }
           .cta {
-            margin-top: 23px;
+            margin-top: 2px;
+            height: 50px;
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 130%;
           }
         }
         .right {
