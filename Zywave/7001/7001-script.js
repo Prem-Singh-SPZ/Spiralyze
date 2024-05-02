@@ -23,7 +23,7 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             <div class="right">
               <picture>
                 <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/mobile-img-min.png">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/desktop-img-min.png" alt="Hero Image" class="popup-hero">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/7001/desktop-img-min.png" alt="Streamline the insurance lifecycle from sales to customer retention" class="popup-hero">
               </picture>
             </div>
             <div class="close-popup"></div>
