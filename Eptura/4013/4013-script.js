@@ -88,6 +88,11 @@
                     `);
                 }
             })
+
+            document.querySelectorAll('.spz-left-content .left-wrapper .copy .bullet').forEach(element => {
+                let title = element.querySelector('.bullet-title > div').textContent;
+                element.querySelector('.bullet-content > div').insertAdjacentHTML('afterbegin', `<strong>` + title + ` - </strong>`);
+            });
         });
     }
 

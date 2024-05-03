@@ -62,6 +62,26 @@ body#bodyId.form-overlay {
                 @media (max-width: 1023.98px) {
                   margin: 40px 0;
                 }
+
+                .bullets {
+                  .bullet {
+                    .bullet-title {
+                      display: none !important;
+                    }
+
+                    .bullet-content, .bullet-content > div {
+                      color: #f6fafa;
+                      font-size: 18px;
+                      font-weight: 300;
+                      line-height: 26px;
+                      opacity: 1;
+
+                      strong {
+                        font-weight: 600;
+                      }
+                    }
+                  }
+                }
               }
             }
 
