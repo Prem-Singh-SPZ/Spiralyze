@@ -64,6 +64,17 @@ body#bodyId.form-overlay {
                 }
 
                 .bullets {
+                  
+                  .dotted-bullet {
+                    &::before {
+                      height: 100%;
+                    }
+
+                    &::after {
+                      display: none;
+                    }
+                  }
+                  
                   .bullet {
                     .bullet-title {
                       display: none !important;

@@ -58,6 +58,19 @@
     function loadTest() {
         updatePageContent();
 
+        let intVar = setInterval(() => {
+            getDistance();
+        }, 500);
+
+        setTimeout(() => {
+            clearInterval(intVar);
+        }, 5000);
+
+        //window resize event   
+        window.addEventListener('resize', function () {
+            getDistance();
+        });
+
         // Add class 'safari' 
         if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
             document.body.classList.add('safari')
@@ -101,6 +114,20 @@
         return str.replace(/<br>/g, '');
     }
 
+    function getDistance() {
+        let distance = findDistanceBetweenElements(document.querySelector('#bullet_content_1'), document.querySelector('#bullet_content_3'));
+        document.querySelector('.spz-left-content .copy .bullets .dotted-bullet').style.height = distance + 'px';
+    }
+
+    //find distance between two elements in px
+    function findDistanceBetweenElements(element1, element2) {
+        var element1Rect = element1.getBoundingClientRect();
+        var element2Rect = element2.getBoundingClientRect();
+        var distance = Math.sqrt(Math.pow(element2Rect.x - element1Rect.x, 2) + Math.pow(element2Rect.y - element1Rect.y, 2));
+
+        distance = distance + 12;
+        return distance;
+    }
 
     // Generic Code
     function waitForElm(selector) {
