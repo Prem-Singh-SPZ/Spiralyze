@@ -39,10 +39,10 @@ waitForElm('.spz-email').then(function (elm) {
         element.addEventListener('keyup', function (event) {
             if (event.keyCode === 13) {
                 event.preventDefault();
-                document.querySelector('.hero-get-demo-button').click();
+                document.querySelector('.get-demo-cta').click();
             }
 
-            validateEmailField(false);
+            validateEmailField();
         });
 
     });
@@ -55,10 +55,16 @@ waitForElm('.spz-email').then(function (elm) {
     });
 });
 
+
+function hover(element, className) {
+    element.addEventListener('mouseenter', e => element.closest('.hero-get-demo').classList.add(className))
+    element.addEventListener('mouseleave', e => element.closest('.hero-get-demo').classList.remove(className))
+  }
+
 // Validate email field
-function validateEmailField(redirect = true) {
+function validateEmailField() {
     // Get email value
-    const email = document.querySelector('.hero-section-CTA .form-spz .spz-email');
+    const email = document.querySelector('.spz-hero-section .form-spz .spz-email');
     // Check if email is valid
     if (!validateEmail(email.value)) {
         // Add class 'input-error' to '.hero-get-demo' on error
@@ -67,9 +73,7 @@ function validateEmailField(redirect = true) {
     } else {
         setCookieForEmail('userEmailSPZ', email.value);
         email.closest('.hero-get-demo').classList.remove('input-error');
-        if (redirect) {
-            location.href = "https://www.netskope.com/get-started";
-        }
+        document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
         return true;
     }
 }
