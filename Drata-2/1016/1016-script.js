@@ -19,7 +19,9 @@
 
       document.querySelector(
         ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button"
-      ).textContent = "Get Started";
+      ).textContent = "Get a Demo";
+
+      document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1").innerHTML = "Get compliant 4x faster by <br>automating your compliance.";
 
       document.querySelector(
         ".hs_source__inbound_demo_ .input .hs-label-spz"
@@ -38,8 +40,8 @@
     var cssElement = document.createElement('style');
     cssElement.type = 'text/css';
     var cssCode = `
-  .spz-1010 div#__next {display: none;}
-  .spz-1010 .mui-1ek5bku-Modal-modalContentContainer {
+  .spz-1016 div#__next {display: none;}
+  .spz-1016 .mui-1ek5bku-Modal-modalContentContainer {
     max-width: 633px;
     width: 100%;
     margin: auto;
@@ -50,16 +52,16 @@
     left: initial;
     transform: unset;
   }
-  .spz-1010 .mui-79ws1d-MuiModal-root {
+  .spz-1016 .mui-79ws1d-MuiModal-root {
     display: flex;
     position: absolute;
     padding: 20px;
     overflow: auto;
   }
-  .spz-1010 .MuiModal-root.mui-79ws1d-MuiModal-root > .MuiBox-root.mui-0 {
+  .spz-1016 .MuiModal-root.mui-79ws1d-MuiModal-root > .MuiBox-root.mui-0 {
     display: none;
   }
-  .spz-1010 .spz-video-bg {
+  .spz-1016 .spz-video-bg {
     position: fixed;
     left: 0;
     top: 0;
@@ -67,7 +69,7 @@
     min-height: 100%;
     z-index: 99;
   }
-  .spz-1010 .spz-video-bg::before {
+  .spz-1016 .spz-video-bg::before {
     position: absolute;
     content: "";
     width: 100%;
@@ -77,9 +79,9 @@
     backdrop-filter: blur(6px);
     -webkit-backdrop-filter: blur(6px);
   }
-   @media (min-width: 1900.98px) {.spz-1010 .spz-video-bg video{width:100%;}}
+   @media (min-width: 1900.98px) {.spz-1016 .spz-video-bg video{width:100%;}}
    @media(max-width: 767.98px) {
-    .spz-1010 .mui-79ws1d-MuiModal-root {
+    .spz-1016 .mui-79ws1d-MuiModal-root {
       padding: 15px
     }
    }
@@ -88,8 +90,8 @@
     document.head.appendChild(cssElement);
     waitForElm('.mui-79ws1d-MuiModal-root').then(function () {
       document.querySelector("body").classList.add("loading-spz_test");
-      document.querySelector("body").classList.add("spz-1010");
-      if (!document.querySelector('.spz-1010 .spz-video-bg')) {
+      document.querySelector("body").classList.add("spz-1016");
+      if (!document.querySelector('.spz-1016 .spz-video-bg')) {
         document.body.insertAdjacentHTML("afterbegin", `<div class="spz-video-bg">
             <video autoplay muted loop playsinline>
               <source src="//res.cloudinary.com/spiralyze/video/upload/v1706178007/drata/1010/Video.mp4" type="video/mp4">
@@ -179,7 +181,6 @@
       if (document.querySelector('.spz-video-bg')) {
         document.body.classList.remove("spz-1016");
         document.body.classList.remove("loading-spz_test");
-        document.body.classList.remove("spz-1010");
         document.querySelector('.spz-video-bg').remove();
       }
     }, 2000);
@@ -188,10 +189,10 @@
   function setHiddenFields() {
     waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
         let setValue = setInterval(() => {
-            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_1014') {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_1016') {
                 clearInterval(setValue);
             }
-            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_1014');
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_1016');
         }, 100);
     });
   }
