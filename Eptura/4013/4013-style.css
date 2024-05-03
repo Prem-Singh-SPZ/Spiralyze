@@ -201,6 +201,7 @@ body#bodyId.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrap
     padding-bottom: 16px;
     border-right: 0;
     border-bottom: 1px solid rgba(214, 215, 245, 0.08);
+    width: 100%;
   }
 }
 body#bodyId.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .growth-copy {
@@ -286,6 +287,26 @@ body#bodyId.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrap
   line-height: 20px;
   white-space: nowrap;
 }
+@media (max-width: 1023.98px) {
+  body#bodyId.form-overlay.website-ioffice-demo .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .prop-copy br {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  body#bodyId.form-overlay.website-ioffice-demo .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .prop-copy {
+    margin-right: 0;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  body#bodyId.form-overlay.website-archibus-demo .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .prop-copy {
+    white-space: nowrap;
+    margin-right: 0;
+  }
+  body#bodyId.form-overlay.website-archibus-demo .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .prop-copy br {
+    display: none;
+  }
+}
 body#bodyId.form-overlay.website-proxyclick-demo .form-overlay .overlay #mkto_gen_ovelayImg img {
   display: none !important;
 }
@@ -332,6 +353,17 @@ body#bodyId.form-overlay.website-spaceiq-demo .form-overlay .overlay #mkto_gen_o
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4014/bg-spaceiq-mobile_1.webp) no-repeat !important;
     background-position: 0 0;
     background-size: cover !important;
+  }
+}
+@media (max-width: 1023.98px) {
+  body#bodyId.form-overlay.website-spaceiq-demo .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .prop-copy br {
+    display: none;
+  }
+}
+@media (max-width: 767.98px) {
+  body#bodyId.form-overlay.website-spaceiq-demo .spz-left-content .case-studies-section .case-studies-wrapper .value-prop .prop-copy {
+    margin-right: 0;
+    white-space: nowrap;
   }
 }
 body#bodyId.form-overlay.website-managerplus-demo .form-overlay .overlay #mkto_gen_ovelayImg img {

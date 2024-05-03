@@ -183,6 +183,7 @@ body#bodyId.form-overlay {
                     padding-bottom: 16px;
                     border-right: 0;
                     border-bottom: 1px solid rgba(214, 215, 245, 0.08);
+                    width: 100%;
                   }
 
                   .growth-copy {
@@ -268,6 +269,41 @@ body#bodyId.form-overlay {
     }
   }
 
+  &.website-ioffice-demo {
+    .spz-left-content
+      .case-studies-section
+      .case-studies-wrapper
+      .value-prop
+      .prop-copy {
+      @media (max-width: 1023.98px) {
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: 767.98px) {
+        margin-right: 0;
+        white-space: nowrap;
+      }
+    }
+  }
+
+  &.website-archibus-demo {
+    .spz-left-content
+      .case-studies-section
+      .case-studies-wrapper
+      .value-prop
+      .prop-copy {
+      @media (min-width: 767.98px) and (max-width: 1023.98px) {
+        white-space: nowrap;
+        margin-right: 0;
+
+        br {
+          display: none;
+        }
+      }
+    }
+  }
+
   &.website-proxyclick-demo {
     .form-overlay .overlay #mkto_gen_ovelayImg {
       img {
@@ -324,6 +360,22 @@ body#bodyId.form-overlay {
           background-position: 0 0;
           background-size: cover !important;
         }
+      }
+    }
+
+    .spz-left-content
+      .case-studies-section
+      .case-studies-wrapper
+      .value-prop
+      .prop-copy {
+      @media (max-width: 1023.98px) {
+        br {
+          display: none;
+        }
+      }
+      @media (max-width: 767.98px) {
+        margin-right: 0;
+        white-space: nowrap;
       }
     }
   }

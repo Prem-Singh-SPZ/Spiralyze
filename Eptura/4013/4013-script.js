@@ -23,6 +23,7 @@
             person_img: assetURL + "avatar_-__brian_martinez_1.webp",
             person_name: "Brian Martinez",
             person_company: "Metro Group",
+            page_logo: logoURL + "logo_-managerplus.svg",
         },
         {
             pageName: "website-archibus-demo",
@@ -31,6 +32,7 @@
             person_img: assetURL + "avatar_-_michael_dulaney_1.webp",
             person_name: "Michael DuLaney",
             person_company: "UCHealth",
+            page_logo: logoURL + "archibus-eptura-logo-color_2.svg",
         },
         {
             pageName: "website-spaceiq-demo",
@@ -39,6 +41,7 @@
             person_img: assetURL + "avatar_-_john_watkins_1.webp",
             person_name: "John Watkins",
             person_company: "San Diego Gas & Electric",
+            page_logo: logoURL + "spaceiq-eptura-logo-color_3.svg",
         },
         {
             pageName: "website-ioffice-demo",
@@ -47,6 +50,7 @@
             person_img: assetURL + "avatar_-_edgar_sanchez_1.webp",
             person_name: "Edgar Sanchez",
             person_company: "Sephora",
+            page_logo: logoURL + "ioffice-eptura-logo-color_2.svg",
         }
     ];
 
@@ -103,7 +107,7 @@
             })
 
             document.querySelectorAll('.spz-left-content .left-wrapper .copy .bullet').forEach(element => {
-                let title = element.querySelector('.bullet-title > div').textContent;
+                let title = element.querySelector('.bullet-title > div').textContent.replace(/[\n\r]+|[\s]{2,}/g, ' ').trim();
                 element.querySelector('.bullet-content > div').insertAdjacentHTML('afterbegin', `<strong>` + title + ` - </strong>`);
             });
         });
