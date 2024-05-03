@@ -6,7 +6,7 @@ waitForElm('body .zy-demo-form-section-container form.mktoForm .mktoFormCol .mkt
 });
 
 function pageModify() {
-    document.querySelector('.zy-homepage-hero-container .zy-homepage-hero-container-inner').insertAdjacentHTML('beforeend', `<div class="spz-hero-section"><div class="hero-title-wrapper"><h1 class="title">Automate insurance sales <br>and retention. Boost revenue. </h1> <p class="subtitle">Find qualified prospects. Send instant quotes. Let clients manage plans from an online portal. Generate benefit booklets, compliance guides and more.</p></div><div class="hero-email-cta"><form class="form-spz" id="mktoForm_1031">
+    document.querySelector('.zy-homepage-hero-container .zy-homepage-hero-container-inner').insertAdjacentHTML('beforeend', `<div class="spz-hero-section"><div class="hero-title-wrapper"><h1 class="h-title">Automate insurance sales <br>and retention. Boost revenue. </h1> <p class="h-subtitle">Find qualified prospects. Send instant quotes. Let clients manage plans from an online portal. Generate benefit booklets, compliance guides and more.</p></div><div class="hero-email-cta"><form class="form-spz" id="mktoForm_1031">
     <div class="hero-get-demo">
         <div class="spz-2002-email">
             <input class="spz-email" type="email" placeholder="Email address">
@@ -16,8 +16,9 @@ function pageModify() {
         </div>
             <button type="submit" class="get-demo-cta btn">Get a demo</button>
         </div>
-    </form> </div><div class="hero-banner-img"> </div> 
-    </div><div class="spz-brands-section"> </div>`);
+    </form> </div><div class="hero-banner-img"> <picture><source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_desktop.webp"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_tablet.webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_mobile.webp" alt="Qualified Prospects" class="hb-img"></picture></div> 
+    </div><div class="spz-brands-section"> <div class="brand-section-wrapper"> <h6 class="bs-title">Join 15,000+ insurers, agencies, and service providers using Zywave.</h6>
+    <picture><source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_desktop.webp"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_tablet.webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_mobile.webp" alt="Brand Logos" class="bs-logos"></picture></div></div>`);
 
 }
 
@@ -120,7 +121,3 @@ function waitForElm(selector) {
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
 }
-
-//write a picture tag HTML  
-
-
