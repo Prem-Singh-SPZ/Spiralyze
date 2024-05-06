@@ -45,9 +45,16 @@ body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz
       -ms-flex-align: center;
           align-items: center;
   margin: 40px auto 24px;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo.i-hover, body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo.i-focused {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(39, 119, 211, 0.1)), to(rgba(39, 119, 211, 0.1))), #fff;
+  background: linear-gradient(0deg, rgba(39, 119, 211, 0.1) 0%, rgba(39, 119, 211, 0.1) 100%), #fff;
 }
 body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email {
   width: calc(100% - 178px);
+  position: relative;
 }
 body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .spz-email {
   height: 56px;
@@ -57,9 +64,60 @@ body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz
   border: 0;
   outline: 0;
   width: 100%;
+  color: #0f2d52;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 17px;
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .spz-email::-webkit-input-placeholder {
+  color: rgba(15, 45, 82, 0.8);
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .spz-email:-moz-placeholder {
+  color: rgba(15, 45, 82, 0.8);
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .spz-email::-moz-placeholder {
+  color: rgba(15, 45, 82, 0.8);
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .spz-email:-ms-input-placeholder {
+  color: rgba(15, 45, 82, 0.8);
 }
 body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .mktoError {
   display: none;
+  position: absolute;
+  top: calc(100% + 20px);
+  left: 10px;
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .mktoError .mktoErrorMsg {
+  color: #d9175d;
+  leading-trim: both;
+  text-edge: cap;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 17px;
+  border-radius: 7px;
+  background: #fae5ea;
+  padding: 10px;
+  width: -webkit-min-content;
+  width: -moz-min-content;
+  width: min-content;
+  position: relative;
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .spz-2002-email .mktoError .mktoErrorMsg::before {
+  content: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/2002/Triangle_SVG.svg");
+  position: absolute;
+  top: -10px;
+  left: 20px;
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo.input-error .spz-2002-email .mktoError {
+  display: block;
 }
 body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .get-demo-cta.btn {
   height: 56px;
@@ -76,6 +134,11 @@ body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz
   font-weight: 700;
   line-height: 17px;
   white-space: nowrap;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+}
+body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-email-cta .form-spz .hero-get-demo .get-demo-cta.btn:hover {
+  background: #1768c6;
 }
 body.spz-2002 .zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section .hero-banner-img {
   width: 100%;

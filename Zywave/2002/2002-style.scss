@@ -53,9 +53,21 @@ body.spz-2002 {
               display: flex;
               align-items: center;
               margin: 40px auto 24px;
+              transition: all 0.3s ease-in-out;
+
+              &.i-hover,
+              &.i-focused {
+                background: linear-gradient(
+                    0deg,
+                    rgba(39, 119, 211, 0.1) 0%,
+                    rgba(39, 119, 211, 0.1) 100%
+                  ),
+                  #fff;
+              }
 
               .spz-2002-email {
                 width: calc(100% - 178px);
+                position: relative;
 
                 .spz-email {
                   height: 56px;
@@ -65,9 +77,67 @@ body.spz-2002 {
                   border: 0;
                   outline: 0;
                   width: 100%;
+                  color: #0f2d52;
+                  leading-trim: both;
+                  text-edge: cap;
+                  font-family: $segoe;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 17px;
+
+                  //css to change placeholder color for all browsers
+                  &::-webkit-input-placeholder {
+                    color: rgba(15, 45, 82, 0.8);
+                  }
+                  &:-moz-placeholder {
+                    color: rgba(15, 45, 82, 0.8);
+                  }
+                  &::-moz-placeholder {
+                    color: rgba(15, 45, 82, 0.8);
+                  }
+                  &:-ms-input-placeholder {
+                    color: rgba(15, 45, 82, 0.8);
+                  }
                 }
                 .mktoError {
                   display: none;
+                  position: absolute;
+                  top: calc(100% + 20px);
+                  left: 10px;
+
+                  .mktoErrorMsg {
+                    color: #d9175d;
+                    leading-trim: both;
+                    text-edge: cap;
+                    font-family: $segoe;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 17px;
+                    border-radius: 7px;
+                    background: #fae5ea;
+                    padding: 10px;
+                    width: min-content;
+                    position: relative;
+
+                    //css to add an svg icon in ::before pseudo element
+                    &::before {
+                      content: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/2002/Triangle_SVG.svg");
+                      position: absolute;
+                      top: -10px;
+                      left: 20px;
+                      transform: translateX(-50%);
+                    }
+                  }
+                }
+              }
+
+              &.input-error {
+                .spz-2002-email {
+                  .mktoError {
+                    display: block;
+                  }
                 }
               }
 
@@ -84,8 +154,13 @@ body.spz-2002 {
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 700;
-                line-height: 17px; 
+                line-height: 17px;
                 white-space: nowrap;
+                transition: all 0.3s ease-in-out;
+
+                &:hover {
+                  background: #1768c6;
+                }
               }
             }
           }

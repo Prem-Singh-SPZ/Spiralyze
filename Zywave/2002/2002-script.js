@@ -76,9 +76,8 @@ function validateEmailField() {
         email.closest('.hero-get-demo').classList.add('input-error');
         return false;
     } else {
-        setCookieForEmail('userEmailSPZ', email.value);
         email.closest('.hero-get-demo').classList.remove('input-error');
-        document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
+        // document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
         return true;
     }
 }
@@ -96,14 +95,17 @@ function validateEmail(email) {
 
 //All click events
 window.addEventListener("click", function (e) {
-    if (e.target.classList.contains('hero-get-demo-button')) {
-        let emailValue = this.document.querySelector('.spz-email').value || this.document.querySelector('.spz-email.mobile').value;
-        setCookieForEmail('userEmailSPZ', emailValue);
-    }
+    if (e.target.classList.contains('get-demo-cta')) {
+        let emailValue = this.document.querySelector('.spz-email').value;
 
-    if (e.target.classList.contains('v3-reports__reports-report')) {
-        if (e.target.querySelector('a.ga__cta')) {
-            e.target.querySelector('a.ga__cta').click();
+        console.log(emailValue);
+        if (validateEmailField()) {
+            document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
+
+            setTimeout(() => {
+                document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').value = emailValue;
+                document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').focus();
+            }, 200);
         }
     }
 });
