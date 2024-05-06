@@ -77,7 +77,6 @@ function validateEmailField() {
         return false;
     } else {
         email.closest('.hero-get-demo').classList.remove('input-error');
-        // document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
         return true;
     }
 }
@@ -98,7 +97,6 @@ window.addEventListener("click", function (e) {
     if (e.target.classList.contains('get-demo-cta')) {
         let emailValue = this.document.querySelector('.spz-email').value;
 
-        console.log(emailValue);
         if (validateEmailField()) {
             document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
 
