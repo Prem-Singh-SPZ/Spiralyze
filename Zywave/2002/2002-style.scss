@@ -1,9 +1,12 @@
+$bree: "bree", sans-serif;
+$segoe: "Segoe UI", "Open Sans", sans-serif;
+
 body.spz-2002 {
   .zy-homepage-hero-container {
-    background: linear-gradient(180deg, #11325B 0%, #2064AF 100%);
+    background: linear-gradient(180deg, #11325b 0%, #2064af 100%);
 
-    .zy-hero-line{
-        display: none !important;
+    .zy-hero-line {
+      display: none !important;
     }
 
     .zy-homepage-hero-container-inner {
@@ -12,11 +15,124 @@ body.spz-2002 {
         display: none !important;
       }
 
-      .spz-hero-section{
-        .hero-title-wrapper{
-          
+      .spz-hero-section {
+        .hero-title-wrapper {
+          .h-title {
+            color: #fff;
+            text-align: center;
+            font-family: $bree;
+            font-size: 64px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+            margin: 0 0 20px;
+          }
+
+          .h-subtitle {
+            color: #fff;
+            text-align: center;
+            font-family: $segoe;
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 32px;
+            max-width: 883px;
+            margin: auto;
+          }
+        }
+
+        .hero-email-cta {
+          .form-spz {
+            .hero-get-demo {
+              border-radius: 999px;
+              background: #fff;
+              box-shadow: 0px 12px 24px 0px rgba(0, 0, 0, 0.12);
+              padding: 2px;
+              max-width: 472px;
+              width: 100%;
+              display: flex;
+              align-items: center;
+              margin: 40px auto 24px;
+
+              .spz-2002-email {
+                width: calc(100% - 178px);
+
+                .spz-email {
+                  height: 56px;
+                  padding: 0px 20px;
+                  border-radius: 99px;
+                  background: transparent;
+                  border: 0;
+                  outline: 0;
+                  width: 100%;
+                }
+                .mktoError {
+                  display: none;
+                }
+              }
+
+              .get-demo-cta.btn {
+                height: 56px;
+                padding: 0px 40px;
+                border-radius: 99px;
+                background: #2777d3;
+                color: #fff;
+                text-align: center;
+                leading-trim: both;
+                text-edge: cap;
+                font-family: $segoe;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 17px; 
+                white-space: nowrap;
+              }
+            }
+          }
+        }
+
+        .hero-banner-img {
+          width: 100%;
+
+          .hb-img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
     }
+  }
+
+  .spz-brands-section {
+    background: #0f2d52;
+
+    .brand-section-wrapper {
+      display: flex;
+      max-width: 1440px;
+      padding: 64px 0px 36px 0px;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      margin: auto;
+
+      .bs-title {
+        color: #fff;
+        text-align: center;
+        font-family: $bree;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 120%;
+        margin: 0 0 48px;
+      }
+
+      .bs-logos {
+        width: 100%;
+      }
+    }
+  }
+
+  #zy-homepage-clouds-container {
+    margin-top: 0;
   }
 }
