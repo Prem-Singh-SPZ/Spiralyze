@@ -21,7 +21,7 @@ function pageModify() {
         </form> </div><div class="hero-banner-img"> <picture><source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_desktop.webp"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_tablet.webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_mobile.webp" alt="Qualified Prospects" class="hb-img"></picture></div> 
         </div>`);
 
-        document.querySelector('.zy-homepage-hero-container').insertAdjacentHTML('afterend', `<div class="spz-brands-section"> <div class="brand-section-wrapper"> <h6 class="bs-title">Join 15,000+ insurers, agencies, and service providers using Zywave.</h6>
+        document.querySelector('.zy-homepage-hero-container').insertAdjacentHTML('afterend', `<div class="spz-brands-section"> <div class="brand-section-wrapper"> <h6 class="bs-title">Join 15,000+<br> insurers, agencies, and service providers using Zywave.</h6>
         <picture><source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_desktop.webp"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_tablet.webp"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_mobile.webp" alt="Brand Logos" class="bs-logos"></picture></div></div>`);
     }
 
