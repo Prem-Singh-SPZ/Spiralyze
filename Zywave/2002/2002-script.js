@@ -100,10 +100,10 @@ window.addEventListener("click", function (e) {
         if (validateEmailField()) {
             document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
 
-            setTimeout(() => {
+            // setTimeout(() => {
                 document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').value = emailValue;
                 document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').focus();
-            }, 200);
+            // }, 200);
         }
     }
 });
