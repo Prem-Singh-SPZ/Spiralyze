@@ -74,7 +74,6 @@ waitForElm('.spz-email').then(function (elm) {
 
             validateEmailField();
         });
-
     });
 
 
