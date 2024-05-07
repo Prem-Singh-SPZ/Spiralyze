@@ -511,42 +511,21 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
   function formUpdate() {
     document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
-    waitForElm('#HeroFormCol #HeroFormTitleText h2').then(function () {
-      document.querySelector('#HeroFormCol #HeroFormTitleText h2').outerHTML = '<h6>Get a demo</h6>';
+    waitForElm('#HeroFormCol #HeroFormTitleText').then(function () {
+      if (document.querySelector('#HeroFormCol #HeroFormTitleText h2')) {
+        document.querySelector('#HeroFormCol #HeroFormTitleText h2').outerHTML = '<div class="title-and-progress"><h6>Get a demo</h6><div class="progress"><div class="progress-value"></div></div></div>';
+      }
 
-      var targetNode = document.querySelector('#HeroFormCol #HeroFormTitleText h2');
-      var callback = function (mutationsList, observer) {
-        for (var mutation of mutationsList) {
-          if (mutation.type === 'childList' || mutation.type === 'attributes') {
-            document.querySelector('#HeroFormCol #HeroFormTitleText h2').outerHTML = '<h6>Get a demo</h6>';
-            observer.disconnect();
-          }
-        }
-      };
-
-      var observer = new MutationObserver(callback);
-      var config = { attributes: true, childList: true, subtree: true };
-      observer.observe(targetNode, config);
+      else if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
+        document.querySelector('#HeroFormCol #HeroFormTitleText h6').outerHTML = '<div class="title-and-progress"><h6>Get a demo</h6><div class="progress"><div class="progress-value"></div></div></div>';
+      }
     });
 
 
-    waitForElm('#HeroFormCol #HeroFormTitleText h6').then(function () {
-      document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Get a demo';
+    // waitForElm('#HeroFormCol #HeroFormTitleText h6').then(function () {
+    //   document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Get a demo';
 
-      var targetNode = document.querySelector('#HeroFormCol #HeroFormTitleText h6');
-      var callback = function (mutationsList, observer) {
-        for (var mutation of mutationsList) {
-          if (mutation.type === 'childList' || mutation.type === 'attributes') {
-            document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Get a demo';
-            observer.disconnect();
-          }
-        }
-      };
-
-      var observer = new MutationObserver(callback);
-      var config = { attributes: true, childList: true, subtree: true };
-      observer.observe(targetNode, config);
-    });
+    // });
 
     document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
     document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
