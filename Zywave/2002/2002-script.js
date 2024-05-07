@@ -1,14 +1,16 @@
 document.body.classList.add('spz-2002');
 
+document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/2002/Triangle_SVG.svg" as="image">`);
+
 //Test code
-waitForElm('body .zy-demo-form-section-container form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField[id]').then(function () {
+waitForElm('body .zy-homepage-hero-container .zy-hero-line').then(function () {
     pageModify();
 });
 
 function pageModify() {
 
     if (document.querySelectorAll('.zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section').length == 0) {
-        document.querySelector('.zy-homepage-hero-container .zy-homepage-hero-container-inner').insertAdjacentHTML('beforeend', `<div class="spz-hero-section"><div class="hero-title-wrapper"><h1 class="h-title">Automate insurance sales <br>and retention. Boost revenue. </h1> <p class="h-subtitle">Find qualified prospects. Send instant quotes. Let clients manage plans from an online portal. Generate benefit booklets, compliance guides and more.</p></div><div class="hero-email-cta"><form class="form-spz" id="mktoForm_1031">
+        document.querySelector('.zy-homepage-hero-container .zy-homepage-hero-container-inner').insertAdjacentHTML('beforeend', `<div class="spz-hero-section"><div class="hero-title-wrapper"><h1 class="h-title">Automate insurance sales <br>and retention. Boost revenue. </h1> <p class="h-subtitle">Find qualified prospects. Send instant quotes. Let clients manage plans from an online portal. Generate benefit booklets, compliance guides and more.</p></div><div class="hero-email-cta"><form class="form-spz" id="">
         <div class="hero-get-demo">
             <div class="spz-2002-email">
                 <input class="spz-email" type="email" placeholder="Email address">
