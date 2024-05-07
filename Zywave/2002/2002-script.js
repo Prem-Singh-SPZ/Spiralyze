@@ -19,7 +19,7 @@ function pageModify() {
          <form class="form-spz" id="">
           <div class="hero-get-demo">
            <div class="spz-2002-email">
-            <input class="spz-email" type="email" placeholder="Email address">
+            <input class="spz-email" name="email" type="email" placeholder="Email address">
             <div class="mktoError">
              <div class="mktoErrorMsg">Must be valid email. <span class="mktoErrorDetail">example@yourdomain.com</span>
              </div>
