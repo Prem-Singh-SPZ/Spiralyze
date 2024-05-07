@@ -8,7 +8,6 @@ waitForElm('body .zy-homepage-hero-container .zy-hero-line').then(function () {
 });
 
 function pageModify() {
-
     if (document.querySelectorAll('.zy-homepage-hero-container .zy-homepage-hero-container-inner .spz-hero-section').length == 0) {
         document.querySelector('.zy-homepage-hero-container .zy-homepage-hero-container-inner').insertAdjacentHTML('beforeend', `<div class="spz-hero-section">
         <div class="hero-title-wrapper">
@@ -49,7 +48,6 @@ function pageModify() {
         </div>
        </div>`);
     }
-
 }
 
 //on focus of .spz-email addClass to .hero-get-demo

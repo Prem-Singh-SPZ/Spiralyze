@@ -26,26 +26,31 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] > button.Mu
 }
 @media (max-width: 767.98px) {
   body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] > button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary {
-    top: 37px;
-    left: 26px;
+    top: 32px;
+    left: 18px;
   }
   body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] > button.MuiButtonBase-root.MuiIconButton-root.MuiIconButton-colorPrimary svg {
     width: 20px;
     height: 20px;
   }
 }
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1 {
-  font-size: 42px;
-  font-style: normal;
+body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1[class*=MuiTypography-root-Form-formMessage] {
+  font-size: 32px;
   font-weight: 900;
-  line-height: 48px;
-  letter-spacing: -0.84px;
+  line-height: 40px;
+  letter-spacing: -0.64px;
   margin: 0 0 32px;
 }
 @media (max-width: 767.98px) {
-  body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1 {
-    font-size: 32px;
-    line-height: 40px;
+  body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1[class*=MuiTypography-root-Form-formMessage] {
+    font-size: 24px;
+    line-height: 28px;
+    letter-spacing: 0;
+    max-width: 252px;
+    margin: 0 auto 32px;
+  }
+  body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1[class*=MuiTypography-root-Form-formMessage] br {
+    display: none;
   }
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form {
