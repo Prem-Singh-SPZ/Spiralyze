@@ -511,22 +511,6 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
   function formUpdate() {
     document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:info@eptura-marketing.com" target="_blank" id="">info@eptura-marketing.com</a>`;
 
-    waitForElm('#HeroFormCol #HeroFormTitleText').then(function () {
-      if (document.querySelector('#HeroFormCol #HeroFormTitleText h2')) {
-        document.querySelector('#HeroFormCol #HeroFormTitleText h2').outerHTML = '<div class="title-and-progress"><h6>Get a demo</h6><div class="progress"><div class="progress-value"></div></div></div>';
-      }
-
-      else if (document.querySelector('#HeroFormCol #HeroFormTitleText h6')) {
-        document.querySelector('#HeroFormCol #HeroFormTitleText h6').outerHTML = '<div class="title-and-progress"><h6>Get a demo</h6><div class="progress"><div class="progress-value"></div></div></div>';
-      }
-    });
-
-
-    // waitForElm('#HeroFormCol #HeroFormTitleText h6').then(function () {
-    //   document.querySelector('#HeroFormCol #HeroFormTitleText h6').innerHTML = 'Get a demo';
-
-    // });
-
     document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
     document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
 
@@ -539,8 +523,54 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
     // Add form title and sub title
     if (document.querySelectorAll('#HeroFormCol #HeroFormTitleText .spz-form-title').length == 0 && single_page_setup.form_title) {
       document.querySelector('#HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-site-logo"><img src="${single_page_setup.site_logo}" alt="${single_page_setup.logo_alt}"></div>`);
-      document.querySelector('#HeroFormCol #HeroFormTitleText').insertAdjacentHTML('afterbegin', `<p class="spz-form-title">${single_page_setup.form_title}</p>`);
+      document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<p class="spz-form-title">${single_page_setup.form_title}</p><div class="title-and-progress"><h6>Get a demo</h6><div class="spz-progress"><div class="spz-progress-value"></div></div></div> <div class="selection-tags"><div class="s-tag"><p class="industry"><span class="title">Industry</span><span class="value"></span></p><p class="employees"><span class="title">Employees</span><span class="value"></span></p></div></div>`;
+
+      document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-1-wrapper"><div class="step-title">
+      What is your industry?</div><div class="step-cards-container"><div class="step-cards"><label for="selected-item-1" class="selected-label">
+      <input type="radio" checked name="selected-item" id="selected-item-1">
+      <div class="selected-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-01-desktop_1.svg" alt="Business Services">
+        <p>Business Services</p>
+      </div>
+    </label>
+    <label for="selected-item-2" class="selected-label">
+      <input type="radio" name="selected-item" id="selected-item-2">
+      <div class="selected-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon_desktop_3.svg" alt="Software & Tech">
+        <p>Software & Tech</p>
+      </div>
+    </label>
+    <label for="selected-item-3" class="selected-label">
+      <input type="radio" name="selected-item" id="selected-item-3">
+      <div class="selected-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-11_5.svg" alt="Manufacturing & Operations">
+        <p>Manufacturing & Operations</p>
+      </div>
+    </label>
+    <label for="selected-item-4" class="selected-label">
+      <input type="radio" name="selected-item" id="selected-item-4">
+      <div class="selected-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon_desktop_7.svg" alt="Energy & Transportation">
+        <p>Energy & Transportation</p>
+      </div>
+    </label>
+    <label for="selected-item-5" class="selected-label">
+      <input type="radio" name="selected-item" id="selected-item-5">
+      <div class="selected-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-desktop-05.svg" alt="Construction & Facilities">
+        <p>Construction & Facilities</p>
+      </div>
+    </label>
+    <label for="selected-item-6" class="selected-label">
+      <input type="radio" name="selected-item" id="selected-item-6">
+      <div class="selected-content">
+        <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-05_7.svg" alt="Others">
+        <p>Others</p>
+      </div>
+    </label>
+    </div></div></div>`);
     }
+
 
     // Add Testimonials
     if (document.querySelectorAll('#HeroFormPanel .spz-testimonials').length == 0) {
