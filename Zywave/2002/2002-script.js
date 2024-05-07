@@ -84,9 +84,8 @@ function validateEmailField() {
 // Email validation to block email domains like gmail, yahoo, etc.\
 function validateEmail(email) {
     var emailRegex = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
-    const disallowDomains = ['gmail', 'yahoo', 'hotmail', 'outlook', 'aol', 'icloud', 'msn', 'live', 'me', 'inbox', 'zoho', 'yandex', 'protonmail', 'gmx', 'mail', 'aol', 'icloud', 'msn', 'live', 'me', 'inbox', 'zoho', 'yandex', 'protonmail', 'gmx', 'mail', 'test', 'sample'];
-    const domain = email.split('@')[1];
-    if (emailRegex.test(email) && !disallowDomains.includes(domain.split('.')[0])) {
+
+    if (emailRegex.test(email)) {
         return true;
     }
     return false;
@@ -109,11 +108,11 @@ window.addEventListener("click", function (e) {
 });
 
 //Add hidden fields
-function setHiddenFields() {
-    if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#2002_variant');
-    }
-}
+// function setHiddenFields() {
+//     if (document.querySelector('.mktoFormRow [name="cR02"]')) {
+//         document.querySelector('.mktoFormRow [name="cR02"]').setAttribute('value', '#2002_variant');
+//     }
+// }
 
 // Generic Code
 function waitForElm(selector) {
