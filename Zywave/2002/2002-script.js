@@ -20,7 +20,7 @@ function pageModify() {
            <div class="spz-2002-email">
             <input class="spz-email" name="email" type="email" placeholder="Email address">
             <div class="mktoError">
-             <div class="mktoErrorMsg">Must be valid email. <span class="mktoErrorDetail">example@yourdomain.com</span>
+             <div class="mktoErrorMsg">Must be a valid email. <span class="mktoErrorDetail">example@yourdomain.com</span>
              </div>
             </div>
            </div>
