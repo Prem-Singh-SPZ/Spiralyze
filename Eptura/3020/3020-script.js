@@ -525,50 +525,72 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
       document.querySelector('#HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-site-logo"><img src="${single_page_setup.site_logo}" alt="${single_page_setup.logo_alt}"></div>`);
       document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<p class="spz-form-title">${single_page_setup.form_title}</p><div class="title-and-progress"><h6>Get a demo</h6><div class="spz-progress"><div class="spz-progress-value"></div></div></div> <div class="selection-tags"><div class="s-tag"><p class="industry"><span class="title">Industry</span><span class="value"></span></p><p class="employees"><span class="title">Employees</span><span class="value"></span></p></div></div>`;
 
-      document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-1-wrapper"><div class="step-title">
-      What is your industry?</div><div class="step-cards-container"><div class="step-cards"><label for="selected-item-1" class="selected-label">
-      <input type="radio" checked name="selected-item" id="selected-item-1">
+      document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-wrapper step-1"><div class="step-title">
+      What is your industry?</div><div class="step-cards-container"><div class="step-cards"><label for="i-elem-1" class="i-label">
+      <input type="radio" checked name="i-elem" id="i-elem-1">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-01-desktop_1.svg" alt="Business Services">
         <p>Business Services</p>
       </div>
     </label>
-    <label for="selected-item-2" class="selected-label">
-      <input type="radio" name="selected-item" id="selected-item-2">
+    <label for="i-elem-2" class="i-label">
+      <input type="radio" name="i-elem" id="i-elem-2">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon_desktop_3.svg" alt="Software & Tech">
         <p>Software & Tech</p>
       </div>
     </label>
-    <label for="selected-item-3" class="selected-label">
-      <input type="radio" name="selected-item" id="selected-item-3">
+    <label for="i-elem-3" class="i-label">
+      <input type="radio" name="i-elem" id="i-elem-3">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-11_5.svg" alt="Manufacturing & Operations">
         <p>Manufacturing & Operations</p>
       </div>
     </label>
-    <label for="selected-item-4" class="selected-label">
-      <input type="radio" name="selected-item" id="selected-item-4">
+    <label for="i-elem-4" class="i-label">
+      <input type="radio" name="i-elem" id="i-elem-4">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon_desktop_7.svg" alt="Energy & Transportation">
         <p>Energy & Transportation</p>
       </div>
     </label>
-    <label for="selected-item-5" class="selected-label">
-      <input type="radio" name="selected-item" id="selected-item-5">
+    <label for="i-elem-5" class="i-label">
+      <input type="radio" name="i-elem" id="i-elem-5">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-desktop-05.svg" alt="Construction & Facilities">
         <p>Construction & Facilities</p>
       </div>
     </label>
-    <label for="selected-item-6" class="selected-label">
-      <input type="radio" name="selected-item" id="selected-item-6">
+    <label for="i-elem-6" class="i-label">
+      <input type="radio" name="i-elem" id="i-elem-6">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-05_7.svg" alt="Others">
         <p>Others</p>
       </div>
     </label>
-    </div></div></div>`);
+    </div></div></div>
+    <div class="step-wrapper step-2"><div class="step-title">What is your employee range?</div><div class="step-cards-container"><div class="step-cards"><label for="em-elem-1" class="em-label">
+    <input type="radio" checked name="em-elem" id="em-elem-1">
+    <div class="selected-content">
+      <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578098/eptura/3020/icon_desktop_15.svg" alt="0-199">
+      <p>0-199</p>
+    </div>
+  </label>
+  <label for="em-elem-2" class="em-label">
+    <input type="radio" name="em-elem" id="em-elem-2">
+    <div class="selected-content">
+      <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578096/eptura/3020/icon_desktop_14.svg" alt="200-1999">
+      <p>200-1999</p>
+    </div>
+  </label>
+  <label for="em-elem-3" class="em-label">
+    <input type="radio" name="em-elem" id="em-elem-3">
+    <div class="selected-content">
+      <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578094/eptura/3020/icon_desktop_13.svg" alt="2000+">
+      <p>2000+</p>
+    </div>
+  </label>
+  </div></div></div>`);
     }
 
 
