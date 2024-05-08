@@ -515,10 +515,13 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row {
 }
 
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
-  max-width: 600px;
+  max-width: 620px;
   padding: 0 64px 48px;
   padding-bottom: 47px;
   margin: auto;
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
 }
 
 body.spz-3020 #hero .spz-form-title {
@@ -532,8 +535,8 @@ body.spz-3020 #hero .spz-form-title {
   text-align: left;
   color: #0d122e;
   display: block;
-  margin-bottom: 39px;
-  margin-top: 49px;
+  margin-bottom: 47px;
+  margin-top: 17px;
 }
 
 body.spz-3020.spz-ppc-archibus #hero .spz-form-title {
@@ -652,8 +655,8 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol .spz-site-
   height: -moz-fit-content;
   height: fit-content;
   width: 100%;
-  max-width: 600px;
-  margin: auto;
+  max-width: 620px;
+  margin: 0 auto 40px;
 }
 
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol:after {
@@ -675,7 +678,7 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol:after {
 body.spz-3020 .spz-hero-contents {
   display: block;
   width: calc(100% - 760px);
-  padding-top: 120px;
+  padding-top: 80px;
   margin: 0 auto;
 }
 
@@ -750,7 +753,7 @@ body.spz-3020 .spz-footer {
       flex-wrap: wrap;
   width: 100%;
   padding-top: 64px;
-  padding-bottom: 56px;
+  padding-bottom: 40px;
   margin-top: auto;
 }
 
@@ -833,10 +836,10 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol {
   display: -webkit-box !important;
   display: -ms-flexbox !important;
   display: flex !important;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: justify;
-      align-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 100vh;
   background: #ffffff;
 }
@@ -1042,13 +1045,13 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 @media (max-width: 1600.98px) {
   body.spz-3020 .spz-hero-contents {
-    width: calc(100% - 600px);
+    width: calc(100% - 620px);
   }
   body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol {
-    max-width: 600px;
+    max-width: 620px;
   }
   body.spz-3020 .spz-hero-contents .spz-hero-content-wrap {
-    max-width: 740px;
+    max-width: 720px;
   }
 }
 @media (max-width: 1440.98px) {
@@ -1369,11 +1372,11 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 .spz-3020 .spz-testimonials::before {
   position: absolute;
   content: "";
-  bottom: -170px;
-  left: -39px;
+  left: -38px;
+  bottom: -188px;
   width: 316px;
   height: 492px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1707909554/eptura/3018/graphics-quotes-2_desktop.svg");
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/3018/graphics-quotes-2_desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
   pointer-events: none;
@@ -1382,18 +1385,18 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 .spz-3020 .spz-testimonials::after {
   position: absolute;
   content: "";
-  top: -87px;
-  right: -22px;
-  width: 316px;
+  width: 315.929px;
   height: 492px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1707909554/eptura/3018/graphics-quotes-1_desktop.svg");
+  right: -21.929px;
+  bottom: -190px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/3018/graphics-quotes-1_desktop.svg");
   background-size: contain;
   background-repeat: no-repeat;
 }
 
 .spz-3020 .spz-testimonials-wrap {
   margin: 0 64px;
-  padding: 48px 0 47px;
+  padding: 31px 0 32px;
   border-top: 1px solid rgb(217, 220, 226);
   position: relative;
   z-index: 99;
@@ -1544,22 +1547,10 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 
 .spz-progress {
   background: #e3e6ec;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: flex-start;
   border-radius: 3px;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
   height: 3px;
   width: calc(100% - 140px);
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
 }
 
 .spz-progress-value {
@@ -1576,7 +1567,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     width: 0;
   }
   100% {
-    width: 33%;
+    width: 33.33%;
   }
 }
 
@@ -1585,28 +1576,28 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     width: 0;
   }
   100% {
-    width: 33%;
+    width: 33.33%;
   }
 }
 @-webkit-keyframes step_2 {
   0% {
-    width: 33%;
+    width: 33.33%;
   }
   100% {
-    width: 66%;
+    width: 66.66%;
   }
 }
 @keyframes step_2 {
   0% {
-    width: 33%;
+    width: 33.33%;
   }
   100% {
-    width: 66%;
+    width: 66.66%;
   }
 }
 @-webkit-keyframes step_3 {
   0% {
-    width: 66%;
+    width: 66.66%;
   }
   100% {
     width: 100%;
@@ -1614,7 +1605,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 @keyframes step_3 {
   0% {
-    width: 66%;
+    width: 66.66%;
   }
   100% {
     width: 100%;
@@ -1628,6 +1619,9 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
       -ms-flex-align: center;
           align-items: center;
   margin-bottom: 8px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .title-and-progress h6 {
   white-space: nowrap;
@@ -1641,7 +1635,7 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
           animation: step_3 2s normal forwards;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .selection-tags {
-  margin: 4px 0 8px;
+  margin: 12px 0 8px;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .selection-tags .s-tag {
   display: -webkit-box;
@@ -1654,24 +1648,41 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
       flex-wrap: wrap;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .selection-tags .s-tag p {
-  margin: 0 12px 0 0;
+  margin: 0 14px 0 0;
   padding: 0;
   color: #848995;
   font-size: 14px;
   font-style: normal;
   font-weight: 300;
   line-height: 20px;
+  position: relative;
+  padding-left: 20px;
+}
+body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .selection-tags .s-tag p::after {
+  content: "";
+  width: 16px;
+  height: 16px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/3020/check_1.svg) no-repeat;
+  display: block;
+  position: absolute;
+  top: 2px;
+  left: 0;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .selection-tags .s-tag p .title {
   font-weight: 600;
+  font-family: "Eptura Flexible", Arial, sans-serif;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper .step-title {
   color: #0d122e;
   font-size: 20px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 28px;
-  margin: 0 0 8px;
+  margin: 28px 0 8px;
+  font-family: "Eptura Flexible", Arial, sans-serif;
+}
+body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper.step-2 .step-title {
+  margin-bottom: 12px;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper .step-cards-container .step-cards {
   display: -webkit-box;
@@ -1688,14 +1699,15 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper .step-cards-container .step-cards > label {
   margin-top: 8px;
+  margin-bottom: 0;
   border-radius: 8px;
   border: 1px solid #e3e6ec;
   background: #fff;
   -webkit-box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
           box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
-  padding: 12px 8px;
+  padding: 11px 8px;
   width: 100%;
-  max-width: calc(33.333% - 8px);
+  max-width: calc(33.666% - 8px);
   cursor: pointer;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper .step-cards-container .step-cards > label:hover, body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper .step-cards-container .step-cards > label.i-checked {
