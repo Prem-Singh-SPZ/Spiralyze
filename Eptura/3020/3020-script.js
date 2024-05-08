@@ -63,7 +63,7 @@ let page_setup = [
   },
   {
     'page_class': 'spz-ppc-archibus',
-    'form_title': 'Automate preventive maintenance and repair. Reduce costs <span>by 30%.</span>',
+    'form_title': 'Automate repair and preventive maintenance. Reduce costs<span> 30%.</span>',
     'site_logo': '//res.cloudinary.com/spiralyze/image/upload/v1702565375/eptura/3017/endorsed_logos_1.svg',
     'logo_alt': 'Archibus',
     'hero_image': {
@@ -125,7 +125,7 @@ let page_setup = [
   },
   {
     'page_class': 'spz-ppc-eptura',
-    'form_title': 'Automate operations with one platform for workplace and asset management.',
+    'form_title': 'Automate workplace and asset management with one platform.',
     'site_logo': '//res.cloudinary.com/spiralyze/image/upload/v1702565415/eptura/3017/main_logo_1.svg',
     'logo_alt': 'Eptura',
     'hero_image': {
@@ -187,7 +187,7 @@ let page_setup = [
   },
   {
     'page_class': 'spz-ppc-condeco',
-    'form_title': 'Streamline desk and meeting room scheduling. Simplify<br> hybrid work.',
+    'form_title': 'Streamline desk and room bookings. Simplify hybrid work.',
     'site_logo': '//res.cloudinary.com/spiralyze/image/upload/v1702565303/eptura/3017/endorsed_logos_2.svg',
     'logo_alt': 'Condeco',
     'hero_image': {
@@ -249,7 +249,7 @@ let page_setup = [
   },
   {
     'page_class': 'spz-ppc-eptura-asset',
-    'form_title': 'Automate equipment maintenance. Reduce costs. Increase performance.',
+    'form_title': 'Automate asset maintenance. Reduce costs. Boost performance.',
     'site_logo': '//res.cloudinary.com/spiralyze/image/upload/v1702565415/eptura/3017/main_logo_1.svg',
     'logo_alt': 'Eptura',
     'hero_image': {
