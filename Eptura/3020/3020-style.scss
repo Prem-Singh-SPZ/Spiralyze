@@ -2148,6 +2148,10 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     .spz-site-logo {
     padding: 0 30px;
     max-width: 100%;
+    margin-bottom: 20px;
+  }
+  body.spz-3020 #hero .spz-form-title {
+    margin-bottom: 28px;
   }
   body.spz-3020.spz-ppc-archibus #hero .spz-form-title {
     padding: 0;
@@ -2457,6 +2461,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol,
   body.spz-3020 .spz-hero-contents {
     width: 100%;
+    min-height: auto;
   }
   body.spz-3020
     .body-wrapper
@@ -2723,6 +2728,9 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   }
 }
 @media (max-width: 767.98px) {
+  .spz-3020 .spz-testimonials-wrap {
+    padding: 23px 24px 24px 24px;
+  }
   .spz-3020 .spz-testimonials::before {
     bottom: -58px;
     left: -12px;
@@ -2841,7 +2849,7 @@ body.spz-3020
         display: flex;
         align-items: center;
         flex-wrap: wrap;
-        
+
         @media screen and (max-width: 1023.98px) {
           flex-direction: column;
           align-items: flex-start;
@@ -2880,6 +2888,11 @@ body.spz-3020
               margin-top: 8px;
             }
           }
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 13px;
+            line-height: 18px;
+          }
         }
       }
     }
@@ -2898,11 +2911,19 @@ body.spz-3020
       @media screen and (max-width: 1023.98px) {
         margin: 20px 0 8px;
       }
+
+      @media screen and (max-width: 767.98px) {
+        margin: 16px 0 12px;
+      }
     }
 
     &.step-2 {
       .step-title {
         margin-bottom: 12px;
+
+        @media screen and (max-width: 767.98px) {
+          margin-bottom: 16px;
+        }
       }
     }
 
@@ -2924,12 +2945,18 @@ body.spz-3020
           max-width: calc(33.666% - 8px);
           cursor: pointer;
 
-          @media screen and (max-width: 1023.98px) {
+          @media (min-width: 767.98px) and (max-width: 1023.98px) {
             max-width: calc(50% - 4px);
 
             &.em-label:nth-child(3) {
               max-width: 100%;
             }
+          }
+
+          @media screen and (max-width: 767.98px) {
+            max-width: calc(33.666% - 4px);
+            margin-top: 4px;
+            padding: 11px 2px;
           }
 
           &:hover,
@@ -2951,6 +2978,11 @@ body.spz-3020
             img {
               width: 40px;
               height: 40px;
+
+              @media screen and (max-width: 767.98px) {
+                width: 32px;
+                height: 32px;
+              }
             }
 
             p {
@@ -2965,6 +2997,11 @@ body.spz-3020
               height: 32px;
               display: flex;
               align-items: center;
+
+              @media screen and (max-width: 767.98px) {
+                font-size: 13px;
+                line-height: 16px;
+              }
             }
           }
         }
@@ -2976,9 +3013,14 @@ body.spz-3020
     margin-top: 28px;
 
     @media (max-width: 1023.98px) {
-      form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
-          display: block;
+      form.mktoForm
+        .spz-email
+        .mktoFieldWrap
+        .mktoHtmlText.mktoHasWidth
+        em
+        .mobile-only {
+        display: block;
       }
-  }
+    }
   }
 }
