@@ -40,6 +40,7 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             setTimeout(function () {
                 if (!sessionStorage.getItem("spz-7001") && !document.querySelector('.spz-7001 .jquery-modal')) {
                     document.body.classList.add('spz-no-scroll');
+                    document.querySelector('html').classList.add('spz-overlay');
                     document.querySelector('.spz-7001 .popup-wrapper').classList.add("show");
                     sessionStorage.setItem("spz-7001", "shown");
                 }
@@ -49,6 +50,7 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             document.querySelector("html").onmouseleave = function () {
                 if (!sessionStorage.getItem("spz-7001") && !document.querySelector('.spz-7001 .jquery-modal')) {
                     document.body.classList.add('spz-no-scroll');
+                    document.querySelector('html').classList.add('spz-overlay');
                     document.querySelector('.spz-7001 .popup-wrapper').classList.add("show");
                     sessionStorage.setItem("spz-7001", "shown");
                 }
@@ -59,16 +61,19 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             if (event.target.classList.contains("popup-wrapper")) {
                 document.querySelector('.spz-7001 .popup-wrapper').classList.remove("show")
                 document.body.classList.remove('spz-no-scroll');
+                document.querySelector('html').classList.remove('spz-overlay');
             }
         })
         document.querySelector('.spz-7001 .popup-wrapper .close-popup').addEventListener("click", function (event) {
             document.body.classList.remove('spz-no-scroll');
+            document.querySelector('html').classList.remove('spz-overlay');
             document.querySelector('.spz-7001 .popup-wrapper').classList.remove("show")
         })
         document.querySelector('.spz-7001 .popup-wrapper .getdemo-popup .left .cta').addEventListener("click", function (event) {
             document.querySelector('.zy-header-container-inner .zy-top-demo-container>a').click();
             document.querySelector('.spz-7001 .popup-wrapper').classList.remove("show")
             document.body.classList.remove('spz-no-scroll');
+            document.querySelector('html').classList.remove('spz-overlay');
         })
 
     }
