@@ -9,6 +9,7 @@
     const rightBullets = [
         {
             pageName: "website-proxyclick-demo",
+            logoAlt: "Proxyclick logo",
             growth_percent: "50%",
             growth_percent_copy: "Increase in Check-in efficiency",
             person_img: assetURL + "avatar_-_eric_van_lint_3.webp",
@@ -18,6 +19,7 @@
         },
         {
             pageName: "website-managerplus-demo",
+            logoAlt: "ManagerPlus logo",
             growth_percent: "70%",
             growth_percent_copy: "Increase in work orders tracked",
             person_img: assetURL + "avatar_-__brian_martinez_1.webp",
@@ -27,6 +29,7 @@
         },
         {
             pageName: "website-archibus-demo",
+            logoAlt: "Archibus logo",
             growth_percent: "83%",
             growth_percent_copy: "increase in CMS <br>reporting turnaround",
             person_img: assetURL + "avatar_-_michael_dulaney_1.webp",
@@ -36,6 +39,7 @@
         },
         {
             pageName: "website-spaceiq-demo",
+            logoAlt: "SpaceIQ logo",
             growth_percent: "7x",
             growth_percent_copy: "increase in capital <br>projects budget",
             person_img: assetURL + "avatar_-_john_watkins_1.webp",
@@ -45,6 +49,7 @@
         },
         {
             pageName: "website-ioffice-demo",
+            logoAlt: "iOFFICE logo",
             growth_percent: "10x",
             growth_percent_copy: "increase in move <br>planning Efficeincy",
             person_img: assetURL + "avatar_-_edgar_sanchez_1.webp",
@@ -88,6 +93,7 @@
 
                     document.querySelector('#form-over #form_title').textContent = "Get a demo";
                     document.querySelector('#form-over #form_logo').setAttribute('src', con.page_logo);
+                    document.querySelector('#form-over #form_logo').setAttribute('alt', con.logoAlt);
 
                     document.querySelector('.spz-left-content .left-wrapper').insertAdjacentHTML('afterend', `
                     <div class="case-studies-section">
