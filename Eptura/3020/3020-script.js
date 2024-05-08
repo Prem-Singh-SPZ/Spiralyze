@@ -485,6 +485,39 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
           showGlobalError();
         });
       }
+
+      if (e.target.classList.contains("i-label")) {
+        e.target.classList.add('i-checked');
+        document.querySelector('#HeroFormCol .step-wrapper.step-1').classList.add('spz-hidden');
+        document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.remove('spz-hidden');
+
+        document.querySelector('#HeroFormPanel #HeroFormTitleText .selection-tags .s-tag .employees').classList.add('spz-hidden');
+        document.querySelector('#HeroFormPanel #HeroFormTitleText .selection-tags').classList.remove('spz-hidden');
+        document.querySelector('#HeroFormPanel #HeroFormTitleText .selection-tags .s-tag .industry .value').textContent = e.target.querySelector('.selected-content p').textContent;
+
+        document.querySelector('#HeroFormCol .title-and-progress').classList.add('step-2');
+        document.querySelector('.step-wrapper .step-cards-container .step-cards .em-label').classList.add('i-checked');
+      }
+
+      if (e.target.classList.contains("em-label")) {
+        e.target.classList.add('i-checked');
+        document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.add('spz-hidden');
+        document.querySelector('#HeroFormCol #HeroForm').classList.remove('spz-hidden');
+
+        document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').closest('.mktoFormRow').classList.add('spz-hidden');
+        if (e.target.querySelector('.selected-content p').textContent == '0-199') {
+          document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').value = '199';
+        }
+        else if (e.target.querySelector('.selected-content p').textContent == '200-1999') {
+          document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').value = '1999';
+        }
+        else { document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').value = '2000'; }
+
+        document.querySelector('#HeroFormPanel #HeroFormTitleText .selection-tags .s-tag .employees').classList.remove('spz-hidden');
+        document.querySelector('#HeroFormPanel #HeroFormTitleText .selection-tags .s-tag .employees .value').textContent = e.target.querySelector('.selected-content p').textContent;
+
+        document.querySelector('#HeroFormCol .title-and-progress').classList.add('step-3');
+      }
     });
     document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1692677050/eptura/3002/form-checkmark-errored.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-hover.svg" as="image"><link rel="preload" href="https://res.cloudinary.com/spiralyze/image/upload/v1691420998/eptura/3001/custom/form-checkmark-checked.svg" as="image">`
     );
@@ -523,7 +556,9 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
     // Add form title and sub title
     if (document.querySelectorAll('#HeroFormCol #HeroFormTitleText .spz-form-title').length == 0 && single_page_setup.form_title) {
       document.querySelector('#HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-site-logo"><img src="${single_page_setup.site_logo}" alt="${single_page_setup.logo_alt}"></div>`);
-      document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<p class="spz-form-title">${single_page_setup.form_title}</p><div class="title-and-progress"><h6>Get a demo</h6><div class="spz-progress"><div class="spz-progress-value"></div></div></div> <div class="selection-tags"><div class="s-tag"><p class="industry"><span class="title">Industry - </span><span class="value"></span></p><p class="employees"><span class="title">Employees - </span><span class="value"></span></p></div></div>`;
+
+      //3020 test changes starts here
+      document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<p class="spz-form-title">${single_page_setup.form_title}</p><div class="title-and-progress"><h6>Get a demo</h6><div class="spz-progress"><div class="spz-progress-value"></div></div></div> <div class="selection-tags"><div class="s-tag"><p class="industry"><span class="title">Industry -&nbsp;</span><span class="value"></span></p><p class="employees"><span class="title">Employees -&nbsp;</span><span class="value"></span></p></div></div>`;
 
       document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-wrapper step-1"><div class="step-title">
       What is your industry?</div><div class="step-cards-container"><div class="step-cards"><label for="i-elem-1" class="i-label">
@@ -591,6 +626,11 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
     </div>
   </label>
       </div></div></div>`);
+
+      document.querySelector('#HeroFormCol #HeroForm').classList.add('spz-hidden');
+      document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.add('spz-hidden');
+      document.querySelector('#HeroFormTitleText .selection-tags').classList.add('spz-hidden');
+      document.querySelector('#HeroFormCol .step-wrapper.step-1 .step-cards .i-label').classList.add('i-checked');
     }
 
 

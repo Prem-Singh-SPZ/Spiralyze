@@ -1538,6 +1538,10 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 /* Testimonial CSS End Here */
 /* 3020 Test changes starts here */
+.spz-hidden {
+  display: none !important;
+}
+
 .spz-progress {
   background: #e3e6ec;
   -webkit-box-pack: start;
@@ -1559,8 +1563,8 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 
 .spz-progress-value {
-  -webkit-animation: step_1 3s normal forwards;
-          animation: step_1 3s normal forwards;
+  -webkit-animation: step_1 2s normal forwards;
+          animation: step_1 2s normal forwards;
   border-radius: 3px;
   background: #904ab0;
   height: 3px;
@@ -1600,6 +1604,22 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     width: 66%;
   }
 }
+@-webkit-keyframes step_3 {
+  0% {
+    width: 66%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes step_3 {
+  0% {
+    width: 66%;
+  }
+  100% {
+    width: 100%;
+  }
+}
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .title-and-progress {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1611,6 +1631,14 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .title-and-progress h6 {
   white-space: nowrap;
+}
+body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .title-and-progress.step-2 .spz-progress .spz-progress-value {
+  -webkit-animation: step_2 2s normal forwards;
+          animation: step_2 2s normal forwards;
+}
+body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .title-and-progress.step-3 .spz-progress .spz-progress-value {
+  -webkit-animation: step_3 2s normal forwards;
+          animation: step_3 2s normal forwards;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText .selection-tags {
   margin: 4px 0 8px;
@@ -1688,6 +1716,7 @@ body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  pointer-events: none;
 }
 body.spz-3020 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel .step-wrapper .step-cards-container .step-cards > label .selected-content img {
   width: 40px;

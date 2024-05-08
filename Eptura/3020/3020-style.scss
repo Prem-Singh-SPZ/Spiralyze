@@ -2756,6 +2756,9 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 /* Testimonial CSS End Here */
 
 /* 3020 Test changes starts here */
+.spz-hidden {
+  display: none !important;
+}
 .spz-progress {
   background: #e3e6ec;
   justify-content: flex-start;
@@ -2769,7 +2772,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 
 .spz-progress-value {
-  animation: step_1 3s normal forwards;
+  animation: step_1 2s normal forwards;
   border-radius: 3px;
   background: #904ab0;
   height: 3px;
@@ -2794,6 +2797,15 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   }
 }
 
+@keyframes step_3 {
+  0% {
+    width: 66%;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
 body.spz-3020
   .body-wrapper
   #hero
@@ -2809,6 +2821,22 @@ body.spz-3020
 
       h6 {
         white-space: nowrap;
+      }
+
+      &.step-2 {
+        .spz-progress {
+          .spz-progress-value {
+            animation: step_2 2s normal forwards;
+          }
+        }
+      }
+
+      &.step-3 {
+        .spz-progress {
+          .spz-progress-value {
+            animation: step_3 2s normal forwards;
+          }
+        }
       }
     }
 
@@ -2864,7 +2892,8 @@ body.spz-3020
           max-width: calc(33.333% - 8px);
           cursor: pointer;
 
-          &:hover, &.i-checked {
+          &:hover,
+          &.i-checked {
             border: 1px solid #1b4bc5;
             background: #f6fafa;
           }
@@ -2877,6 +2906,7 @@ body.spz-3020
             display: flex;
             flex-direction: column;
             align-items: center;
+            pointer-events: none;
 
             img {
               width: 40px;
