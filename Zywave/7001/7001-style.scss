@@ -1,3 +1,17 @@
+html.spz-overlay {
+  position: relative;
+  &::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    z-index: 1;
+  }
+}
+
 .spz-7001 {
   &.spz-no-scroll {
     overflow: hidden;
@@ -14,6 +28,7 @@
     overflow-y: auto;
     padding: 40px 0;
     height: 100%;
+    pointer-events: none;
     .getdemo-popup {
       width: 960px;
       border-radius: 16px;
@@ -23,6 +38,8 @@
       display: flex;
       position: relative;
       margin: auto;
+      z-index: 2;
+      pointer-events: all;
 
       @media (min-width: 1023.97px) and (max-width: 1250px) {
         width: 74%;
@@ -37,7 +54,7 @@
 
         .title {
           color: #fff;
-          font-family: "bree",sans-serif;
+          font-family: "bree", sans-serif;
           font-size: 32px;
           font-style: normal;
           font-weight: 700;
@@ -66,7 +83,7 @@
             p {
               margin: 0 0 24px 16px;
               color: #fff;
-              font-family: "Segoe UI","Open Sans",sans-serif;
+              font-family: "Segoe UI", "Open Sans", sans-serif;
               font-size: 16px;
               font-style: normal;
               font-weight: 400;
@@ -88,7 +105,7 @@
           height: 60px;
           text-decoration: none;
           color: #0f2d52;
-          font-family: "Segoe UI","Open Sans",sans-serif;
+          font-family: "Segoe UI", "Open Sans", sans-serif;
           font-size: 18px;
           font-style: normal;
           font-weight: 700;
