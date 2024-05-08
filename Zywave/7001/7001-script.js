@@ -1,8 +1,7 @@
 waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () {
-
     document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_1.svg" as="image">`)
 
-    if (document.querySelector('#zy-demo-form-section')) {
+    if (document.querySelector('#zy-demo-form-section') && location.href.indexOf('/login-redirect') < 0) {
         document.body.classList.add('spz-7001');
 
         if (document.querySelectorAll('body .popup-wrapper').length == 0) {
