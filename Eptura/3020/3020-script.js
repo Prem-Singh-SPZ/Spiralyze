@@ -558,9 +558,10 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
       document.querySelector('#HeroFormCol').insertAdjacentHTML('afterbegin', `<div class="spz-site-logo"><img src="${single_page_setup.site_logo}" alt="${single_page_setup.logo_alt}"></div>`);
 
       //3020 test changes starts here
-      document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<p class="spz-form-title">${single_page_setup.form_title}</p><div class="title-and-progress"><h6>Get a demo</h6><div class="spz-progress"><div class="spz-progress-value"></div></div></div> <div class="selection-tags"><div class="s-tag"><p class="industry"><span class="title">Industry -&nbsp;</span><span class="value"></span></p><p class="employees"><span class="title">Employees -&nbsp;</span><span class="value"></span></p></div></div>`;
+      let addContent = setInterval(() => {
+        document.querySelector('#HeroFormCol #HeroFormTitleText').innerHTML = `<p class="spz-form-title">${single_page_setup.form_title}</p><div class="title-and-progress"><h6>Get a demo</h6><div class="spz-progress"><div class="spz-progress-value"></div></div></div> <div class="selection-tags"><div class="s-tag"><p class="industry"><span class="title">Industry -&nbsp;</span><span class="value"></span></p><p class="employees"><span class="title">Employees -&nbsp;</span><span class="value"></span></p></div></div>`;
 
-      document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-wrapper step-1"><div class="step-title">
+        document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-wrapper step-1"><div class="step-title">
       What is your industry?</div><div class="step-cards-container"><div class="step-cards"><label for="i-elem-1" class="i-label">
       <input type="radio" checked name="i-elem" id="i-elem-1">
       <div class="selected-content">
@@ -625,12 +626,18 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
       <p>2000+</p>
     </div>
   </label>
-      </div></div></div>`);
+        </div></div></div>`);
 
-      document.querySelector('#HeroFormCol #HeroForm').classList.add('spz-hidden');
-      document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.add('spz-hidden');
-      document.querySelector('#HeroFormTitleText .selection-tags').classList.add('spz-hidden');
-      document.querySelector('#HeroFormCol .step-wrapper.step-1 .step-cards .i-label').classList.add('i-checked');
+        document.querySelector('#HeroFormCol #HeroForm').classList.add('spz-hidden');
+        document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.add('spz-hidden');
+        document.querySelector('#HeroFormTitleText .selection-tags').classList.add('spz-hidden');
+        document.querySelector('#HeroFormCol .step-wrapper.step-1 .step-cards .i-label').classList.add('i-checked');
+
+        if (document.querySelector('#HeroFormPanel #HeroFormTitleText .title-and-progress h6').textContent == 'Get a demo') {
+          clearInterval(addContent);
+        }
+      }, 50);
+
     }
 
 

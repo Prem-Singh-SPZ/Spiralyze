@@ -1928,6 +1928,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     #HeroFormCol
     .spz-site-logo {
     padding: 0 24px;
+    margin-bottom: 24px;
   }
   body.spz-3020 .body-wrapper > footer .page_padding .bottom.pb-5 .left .links {
     padding-left: 0px !important;
@@ -1997,8 +1998,8 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   body.spz-3020 #hero .spz-form-title {
     font-size: 26px;
     line-height: 34px;
-    margin-top: 40px;
-    margin-bottom: 28px;
+    margin-top: 12px;
+    margin-bottom: 32px;
   }
   body.spz-3020
     .body-wrapper
@@ -2009,7 +2010,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     #HeroFormPanel {
     padding-left: 24px;
     padding-right: 24px;
-    padding-bottom: 40px;
+    padding-bottom: 23px;
   }
   body.spz-3020
     .body-wrapper
@@ -2080,17 +2081,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     width: 100%;
     text-align: center;
   }
-  body.spz-3020
-    .body-wrapper
-    #hero
-    .hero_container
-    > .row
-    #HeroFormCol
-    #HeroFormPanel
-    #HeroFormTitleText
-    h6 {
-    margin-bottom: 32px;
-  }
+
   body.spz-3020
     .body-wrapper
     #hero
@@ -2117,7 +2108,7 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     .mktoButtonRow
     .mktoButtonWrap
     button.mktoButton {
-    margin-top: 13px !important;
+    margin-top: 16px !important;
   }
   body.spz-3020
     .body-wrapper
@@ -2692,20 +2683,21 @@ body.spz-3020.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 @media (max-width: 1023.98px) {
   .spz-3020 .spz-testimonials::before {
-    bottom: -105px;
-    left: -12px;
+    left: 0px;
+    bottom: -125px;
     width: 206px;
     height: 321px;
   }
   .spz-3020 .spz-testimonials::after {
-    top: -12px;
-    right: -38px;
+    top: auto;
+    right: -28px;
+    bottom: -122px;
     width: 206px;
     height: 322px;
   }
   .spz-3020 .spz-testimonials-wrap {
-    margin: 0 24px;
-    padding: 23px 0 24px;
+    margin: 0px;
+    padding: 20px 14px 20px 24px;
   }
   .spz-3020 .spz-testimonials-slider .spz-testimonial .spz-testimonial-content {
     font-size: 16px !important;
@@ -2849,6 +2841,11 @@ body.spz-3020
         display: flex;
         align-items: center;
         flex-wrap: wrap;
+        
+        @media screen and (max-width: 1023.98px) {
+          flex-direction: column;
+          align-items: flex-start;
+        }
 
         p {
           margin: 0 14px 0 0;
@@ -2859,7 +2856,7 @@ body.spz-3020
           font-weight: 300;
           line-height: 20px;
           position: relative;
-          padding-left: 20px;
+          padding-left: 20px !important;
 
           &::after {
             content: "";
@@ -2875,7 +2872,13 @@ body.spz-3020
 
           .title {
             font-weight: 600;
-            font-family: 'Eptura Flexible', Arial, sans-serif;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+          }
+
+          @media screen and (max-width: 1023.98px) {
+            &.employees {
+              margin-top: 8px;
+            }
           }
         }
       }
@@ -2891,6 +2894,10 @@ body.spz-3020
       line-height: 28px;
       margin: 28px 0 8px;
       font-family: "Eptura Flexible", Arial, sans-serif;
+
+      @media screen and (max-width: 1023.98px) {
+        margin: 20px 0 8px;
+      }
     }
 
     &.step-2 {
@@ -2916,6 +2923,14 @@ body.spz-3020
           width: 100%;
           max-width: calc(33.666% - 8px);
           cursor: pointer;
+
+          @media screen and (max-width: 1023.98px) {
+            max-width: calc(50% - 4px);
+
+            &.em-label:nth-child(3) {
+              max-width: 100%;
+            }
+          }
 
           &:hover,
           &.i-checked {
@@ -2957,7 +2972,13 @@ body.spz-3020
     }
   }
 
-  #HeroForm{
+  #HeroForm {
     margin-top: 28px;
+
+    @media (max-width: 1023.98px) {
+      form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
+          display: block;
+      }
+  }
   }
 }
