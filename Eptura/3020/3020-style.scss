@@ -2805,10 +2805,99 @@ body.spz-3020
     .title-and-progress {
       display: flex;
       align-items: center;
-      margin-bottom: 12px;
+      margin-bottom: 8px;
 
       h6 {
         white-space: nowrap;
+      }
+    }
+
+    .selection-tags {
+      margin: 4px 0 8px;
+
+      .s-tag {
+        display: flex;
+        align-items: center;
+        flex-wrap: wrap;
+
+        p {
+          margin: 0 12px 0 0;
+          padding: 0;
+          color: #848995;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 20px;
+
+          .title {
+            font-weight: 600;
+          }
+        }
+      }
+    }
+  }
+
+  .step-wrapper {
+    .step-title {
+      color: #0d122e;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 28px;
+      margin: 0 0 8px;
+    }
+
+    .step-cards-container {
+      .step-cards {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-wrap: wrap;
+        > label {
+          margin-top: 8px;
+          border-radius: 8px;
+          border: 1px solid #e3e6ec;
+          background: #fff;
+          box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
+          padding: 12px 8px;
+          width: 100%;
+          max-width: calc(33.333% - 8px);
+          cursor: pointer;
+
+          &:hover, &.i-checked {
+            border: 1px solid #1b4bc5;
+            background: #f6fafa;
+          }
+
+          input {
+            display: none;
+          }
+
+          .selected-content {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            img {
+              width: 40px;
+              height: 40px;
+            }
+
+            p {
+              color: #0d122e;
+              text-align: center;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 300;
+              line-height: 16px;
+              margin: 2px 0 0;
+              padding: 0;
+              height: 32px;
+              display: flex;
+              align-items: center;
+            }
+          }
+        }
       }
     }
   }
