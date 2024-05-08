@@ -504,7 +504,7 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
         document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.add('spz-hidden');
         document.querySelector('#HeroFormCol #HeroForm').classList.remove('spz-hidden');
 
-        document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').closest('.mktoFormRow').classList.add('spz-hidden');
+        document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').closest('.mktoFormCol').classList.add('spz-hidden');
         if (e.target.querySelector('.selected-content p').textContent == '0-199') {
           document.querySelector('#HeroFormCol #HeroForm #NumberOfEmployees').value = '199';
         }
