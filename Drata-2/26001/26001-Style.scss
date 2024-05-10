@@ -1,4 +1,4 @@
-body.spz-3002-drataverse {
+body.spz-26001 {
   #__next {
     .spz-sticky-footer {
       position: fixed;
@@ -26,22 +26,10 @@ body.spz-3002-drataverse {
           max-width: 1440px;
           margin: auto;
           padding: 12px 96px;
-          @media (min-width: 767.98px) and (max-width: 991.98px) {
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 768px;
             padding: 7px 16px;
           }
-
-          @media (min-width: 991.98px) and (max-width: 1199.98px) {
-            max-width: 95.7%;
-            padding: 7px 16px;
-          }
-
-          @media (max-width: 767.98px) {
-            flex-direction: column;
-            width: 360px;
-            padding: 8px 16px;
-          }
-
           @media (max-width: 767.98px) {
             flex-direction: column;
             width: 360px;
@@ -56,24 +44,21 @@ body.spz-3002-drataverse {
             display: flex;
             align-items: center;
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
-              max-width: 264px;
+              max-width: 206px;
               align-items: flex-start;
             }
             @media (max-width: 767.98px) {
-              align-items: start;
+              display: none;
             }
 
             img {
               width: 24px;
               height: 24px;
-              @media (max-width: 1199.98px) {
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 width: 16px;
                 height: 16px;
                 margin-top: 8px;
               }
-              // @media (max-width: 767.98px) {
-              //   margin-top: 6px;
-              // }
             }
             span {
               color: var(--neutrals-white-fff, #fff);
@@ -85,16 +70,43 @@ body.spz-3002-drataverse {
               letter-spacing: -0.48px;
               padding-left: 16px;
               padding-bottom: 8px;
-              @media (max-width: 1199.98px) {
-                font-size: 18px;
+              @media (min-width: 767.98px) and (max-width: 1199.98px) {
+                font-size: 24px;
                 line-height: 24px; /* 100% */
                 letter-spacing: -0.24px;
                 padding-left: 12px;
               }
-              @media (max-width: 767.98px) {
-                max-width: 75%;
-                padding-bottom: 12px;
+            }
+          }
+
+          .center-content {
+            display: flex;
+            align-items: center;
+            .g2-logo {
+              width: 32px;
+              height: 32px;
+              margin-right: 12px;
+            }
+            .star-ratings {
+              width: 108px;
+              height: 20px;
+              margin-right: 12px;
+            }
+            .ratings {
+              color: var(--neutrals-white-fff, #fff);
+              font-family: "Inter", sans-serif;
+              font-size: 15px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px;
+              white-space: nowrap;
+              span {
+                font-weight: 600;
               }
+            }
+            @media (min-width: 767.98px) and (max-width: 1199.98px) {
+              padding-bottom: 2px;
+              margin: 0 16px;
             }
           }
 
@@ -116,7 +128,7 @@ body.spz-3002-drataverse {
               line-height: 22px; /* 146.667% */
               text-decoration: none;
               height: 48px;
-              width: 181px;
+              width: 169px;
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -183,21 +195,6 @@ body.spz-3002-drataverse {
           }
         }
       }
-    }
-  }
-
-  //chat button improvement
-  #hubspot-messages-iframe-container.widget-align-right {
-    bottom: 73px !important;
-    @media (min-width: 767.98px) and (max-width: 1199.98px) {
-      bottom: 114px !important;
-    }
-    @media (max-width: 767.98px) {
-      bottom: 148px !important;
-    }
-
-    &[style*="height: 100%"] {
-      height: calc(100% - 148px) !important;
     }
   }
 }
