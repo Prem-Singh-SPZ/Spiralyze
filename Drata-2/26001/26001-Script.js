@@ -59,7 +59,7 @@ function checkScrollPosition() {
         let scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         let headerHeight = document.querySelector('#__next header.MuiAppBar-positionFixed').offsetHeight;
         var heroHeight = document.querySelector('header.MuiAppBar-positionFixed + div[class*="HeroSubpage-root"]').offsetHeight;
-        var totalHeight = headerHeight + heroHeight;
+        var totalHeight = headerHeight;
         if (document.querySelector('body .spz-sticky-footer')) {
             let stickyHeight = document.querySelector('#__next .spz-sticky-footer').offsetHeight;
 
