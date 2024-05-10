@@ -106,7 +106,7 @@ body.spz-26001 {
             }
             .hs-cta-primary {
               border-radius: 12px;
-              background: #0C131A;
+              background: #0c131a;
               padding: 12px 24px 13px 28px;
               color: #fff;
               text-align: center;
@@ -160,21 +160,38 @@ body.spz-26001 {
           .sticky-close-btn {
             width: 32px;
             height: 32px;
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             border-radius: 999px;
+            border: 1px solid #0466ba;
+            background: #0580e8;
 
-            img {
+            svg {
               pointer-events: none;
-              border-radius: 999px;
-              border: 1px solid var(--brand-drata-blue-1-darker, #0466ba);
-              background: var(--brand-drata-blue, #0580e8);
-              padding: 7px;
             }
 
-            &:hover,
+            &:hover {
+              border: 1px solid #1253a8;
+              background: #0068c9;
+
+              svg g {
+                opacity: 1;
+                path {
+                  fill: #fff;
+                }
+              }
+            }
+
             &:focus {
-              img {
-                background: var(--brand-drata-blue-1-darker, #0466ba);
+              border: 1px solid #102857;
+              background: #102857;
+
+              svg g {
+                opacity: 1;
+                path {
+                  fill: #fff;
+                }
               }
             }
           }

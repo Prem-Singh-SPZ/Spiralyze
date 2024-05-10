@@ -46,7 +46,11 @@ function insertStickySection() {
             </div>
             </div>
             <div class="close-sticky">
-            <a href="javascript:void(0)" class="sticky-close-btn"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690986863/drata/3002/close.svg" alt="Close" /></a>
+            <a href="javascript:void(0)" class="sticky-close-btn"><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            <g opacity="0.5">
+              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.0674 3.6395L13.4209 3.28595L12.7138 2.57884L12.3603 2.9324L7.9999 7.29277L3.63954 2.93241L3.28598 2.57885L2.57888 3.28596L2.93243 3.63951L7.29279 7.99988L2.93218 12.3605L2.57863 12.714L3.28574 13.4211L3.63929 13.0676L7.9999 8.70698L12.3605 13.0676L12.7141 13.4212L13.4212 12.714L13.0676 12.3605L8.70701 7.99988L13.0674 3.6395Z" fill="black"/>
+            </g>
+          </svg></a>
             </div>
         </div>
     </div>
