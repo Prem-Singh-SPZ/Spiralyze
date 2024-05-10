@@ -13,8 +13,8 @@ body.spz-26001 {
       }
 
       .sticky-footer {
-        border-top: 1px solid var(--brand-drata-blue-1-darker, #0466ba);
-        background: var(--brand-drata-blue, #0580e8);
+        border-top: 1px solid #0466ba;
+        background: #0580e8;
         position: relative;
         width: 100%;
 
@@ -25,7 +25,7 @@ body.spz-26001 {
           position: relative;
           max-width: 1440px;
           margin: auto;
-          padding: 12px 96px;
+          padding: 11.5px 96px;
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 768px;
             padding: 7px 16px;
@@ -37,7 +37,7 @@ body.spz-26001 {
           }
 
           @media (min-width: 1499.98px) {
-            padding: 12px 60px;
+            padding: 11.5px 60px;
           }
 
           .left-content {
@@ -51,28 +51,16 @@ body.spz-26001 {
               display: none;
             }
 
-            img {
-              width: 24px;
-              height: 24px;
-              @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                width: 16px;
-                height: 16px;
-                margin-top: 8px;
-              }
-            }
             span {
-              color: var(--neutrals-white-fff, #fff);
-              font-family: "Darker Grotesque", sans-serif;
-              font-size: 28px;
+              color: #fff;
+              font-family: "Inter", sans-serif;
+              font-size: 24px;
               font-style: normal;
-              font-weight: 800;
-              line-height: 24px; /* 85.714% */
-              letter-spacing: -0.48px;
-              padding-left: 16px;
-              padding-bottom: 8px;
+              font-weight: 900;
+              line-height: 28px;
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
                 font-size: 24px;
-                line-height: 24px; /* 100% */
+                line-height: 24px;
                 letter-spacing: -0.24px;
                 padding-left: 12px;
               }
@@ -93,15 +81,15 @@ body.spz-26001 {
               margin-right: 12px;
             }
             .ratings {
-              color: var(--neutrals-white-fff, #fff);
+              color: #fff;
               font-family: "Inter", sans-serif;
-              font-size: 15px;
+              font-size: 16px;
               font-style: normal;
-              font-weight: 400;
-              line-height: 22px;
+              font-weight: 500;
+              line-height: 24px;
               white-space: nowrap;
               span {
-                font-weight: 600;
+                font-weight: 800;
               }
             }
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
@@ -116,19 +104,19 @@ body.spz-26001 {
               margin-top: 8px;
             }
             .hs-cta-primary {
-              border-radius: 4px;
-              background: var(--neutrals-black-000, #000);
-              padding: 13px 32px;
-              color: var(--neutrals-white-fff, #fff);
+              border-radius: 12px;
+              background: #000;
+              padding: 12px 24px 13px 28px;
+              color: #fff;
               text-align: center;
               font-family: "Inter", sans-serif;
-              font-size: 15px;
+              font-size: 16px;
               font-style: normal;
               font-weight: 600;
-              line-height: 22px; /* 146.667% */
+              line-height: 24px;
               text-decoration: none;
               height: 48px;
-              width: 169px;
+              width: 190px;
               display: flex;
               align-items: center;
               justify-content: space-between;
@@ -143,13 +131,12 @@ body.spz-26001 {
                 color: #c0ff60;
               }
               &:active {
-                background: var(--neutrals-gray-900, #303030);
+                background: #303030;
                 color: #c0ff60;
               }
 
-              img {
+              svg {
                 @media (max-width: 767.98px) {
-                  padding-left: 4px;
                 }
               }
             }

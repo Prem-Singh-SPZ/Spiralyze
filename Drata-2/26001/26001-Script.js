@@ -16,10 +16,10 @@ function createTest3002() {
 //perform click actions
 window.addEventListener("click", function (e) {
     // console.log(e.target)
-    // if (e.target.classList.contains("sticky-close-btn")) {
-    //     this.document.querySelector('.spz-sticky-footer').remove();
-    //     document.querySelector('#__next').style.paddingBottom = "0px";
-    // }
+    if (e.target.classList.contains("sticky-close-btn")) {
+        this.document.querySelector('.spz-sticky-footer').remove();
+        document.querySelector('#__next').style.paddingBottom = "0px";
+    }
     // console.log(e.target.classList)
     // if (e.target.classList.contains("trigger-demo-btn")) {
     //     document.querySelector('a[href="/demo"]').click();
@@ -40,13 +40,13 @@ function insertStickySection() {
                 <div class="ratings"><span>4.9 </span> (700+ reviews)</div>
             </div>
             <div class="right-content">
-                <a href="/demo" target="_blank" class="hs-cta-primary trigger-demo-btn">Register Here <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+                <a href="https://drata.com/resources/webinars/accelerate-revenue-with-soc-2" class="hs-cta-primary trigger-demo-btn">Register Here <svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                 <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
               </svg></a>
             </div>
             </div>
             <div class="close-sticky">
-            <a href="https://drata.com/resources/webinars/accelerate-revenue-with-soc-2" class="sticky-close-btn"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690986863/drata/3002/close.svg" alt="Close" /></a>
+            <a href="javascript:void(0)" class="sticky-close-btn"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1690986863/drata/3002/close.svg" alt="Close" /></a>
             </div>
         </div>
     </div>
@@ -58,8 +58,8 @@ function checkScrollPosition() {
     waitForElm('#__next header.MuiAppBar-positionFixed').then(function () {
         let scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         let headerHeight = document.querySelector('#__next header.MuiAppBar-positionFixed').offsetHeight;
-        // var heroHeight = document.querySelector('header.mui-fixed + div').offsetHeight;
-        var totalHeight = headerHeight + 506;
+        var heroHeight = document.querySelector('header.MuiAppBar-positionFixed + div[class*="HeroSubpage-root"]').offsetHeight;
+        var totalHeight = headerHeight + heroHeight;
         if (document.querySelector('body .spz-sticky-footer')) {
             let stickyHeight = document.querySelector('#__next .spz-sticky-footer').offsetHeight;
 
