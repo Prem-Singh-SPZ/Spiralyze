@@ -122,6 +122,7 @@ body.spz-26001 {
               align-items: center;
               justify-content: space-between;
               -webkit-appearance: none;
+              border: 2px solid #0c131a;
 
               @media (max-width: 767.98px) {
                 width: 100%;
@@ -129,11 +130,12 @@ body.spz-26001 {
               }
 
               &:hover {
-                color: #c0ff60;
+                background: #293642;
+                border-color: #293642;
               }
               &:active {
-                background: #303030;
-                color: #c0ff60;
+                background: #293642;
+                border-color: #697586;
               }
 
               svg {
@@ -183,7 +185,7 @@ body.spz-26001 {
               }
             }
 
-            &:focus {
+            &:active {
               border: 1px solid #102857;
               background: #102857;
 
@@ -197,6 +199,21 @@ body.spz-26001 {
           }
         }
       }
+    }
+  }
+
+  //chat button improvement
+  #hubspot-messages-iframe-container.widget-align-right {
+    bottom: 73px !important;
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      bottom: 114px !important;
+    }
+    @media (max-width: 767.98px) {
+      bottom: 148px !important;
+    }
+
+    &[style*="height: 100%"] {
+      height: calc(100% - 148px) !important;
     }
   }
 }

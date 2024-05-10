@@ -155,6 +155,7 @@ body.spz-26001 #__next .spz-sticky-footer .sticky-footer .sticky-container .righ
       -ms-flex-pack: justify;
           justify-content: space-between;
   -webkit-appearance: none;
+  border: 2px solid #0c131a;
 }
 @media (max-width: 767.98px) {
   body.spz-26001 #__next .spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary {
@@ -165,11 +166,12 @@ body.spz-26001 #__next .spz-sticky-footer .sticky-footer .sticky-container .righ
   }
 }
 body.spz-26001 #__next .spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary:hover {
-  color: #c0ff60;
+  background: #293642;
+  border-color: #293642;
 }
 body.spz-26001 #__next .spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary:active {
-  background: #303030;
-  color: #c0ff60;
+  background: #293642;
+  border-color: #697586;
 }
 @media (max-width: 767.98px) {
   body.spz-26001 #__next .spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary svg {
@@ -221,13 +223,29 @@ body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-c
 body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:hover svg g path {
   fill: #fff;
 }
-body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:focus {
+body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:active {
   border: 1px solid #102857;
   background: #102857;
 }
-body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:focus svg g {
+body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:active svg g {
   opacity: 1;
 }
-body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:focus svg g path {
+body.spz-26001 #__next .spz-sticky-footer .sticky-footer .close-sticky .sticky-close-btn:active svg g path {
   fill: #fff;
+}
+body.spz-26001 #hubspot-messages-iframe-container.widget-align-right {
+  bottom: 73px !important;
+}
+@media (min-width: 767.98px) and (max-width: 1199.98px) {
+  body.spz-26001 #hubspot-messages-iframe-container.widget-align-right {
+    bottom: 114px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-26001 #hubspot-messages-iframe-container.widget-align-right {
+    bottom: 148px !important;
+  }
+}
+body.spz-26001 #hubspot-messages-iframe-container.widget-align-right[style*="height: 100%"] {
+  height: calc(100% - 148px) !important;
 }
