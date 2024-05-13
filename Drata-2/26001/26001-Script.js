@@ -19,6 +19,9 @@ window.addEventListener("click", function (e) {
     if (e.target.classList.contains("sticky-close-btn")) {
         this.document.querySelector('.spz-sticky-footer').remove();
         document.querySelector('#__next').style.paddingBottom = "0px";
+        if (document.querySelector('#hubspot-messages-iframe-container.sticky-showed')) {
+            document.querySelector('#hubspot-messages-iframe-container').classList.remove('sticky-showed');
+        }
     }
     // console.log(e.target.classList)
     // if (e.target.classList.contains("trigger-demo-btn")) {
@@ -70,11 +73,19 @@ function checkScrollPosition() {
             if (scrollTop > totalHeight) {
                 document.querySelector('body .spz-sticky-footer').classList.add('show-sticky');
                 document.querySelector('#__next').style.paddingBottom = stickyHeight + "px";
+
+                if (document.querySelector('#hubspot-messages-iframe-container')) {
+                    document.querySelector('#hubspot-messages-iframe-container').classList.add('sticky-showed');
+                }
             }
             else {
                 if (document.querySelector('body .spz-sticky-footer').classList.contains('show-sticky')) {
                     document.querySelector('body .spz-sticky-footer').classList.remove('show-sticky');
                     document.querySelector('#__next').style.paddingBottom = "0px";
+
+                    if (document.querySelector('#hubspot-messages-iframe-container.sticky-showed')) {
+                        document.querySelector('#hubspot-messages-iframe-container').classList.remove('sticky-showed');
+                    }
                 }
             }
         }
