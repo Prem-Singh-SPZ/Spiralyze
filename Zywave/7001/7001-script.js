@@ -11,9 +11,9 @@ waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () 
             <div class="left">
               <div class="title"><span>Streamline</span> the insurance lifecycle <br>from sales to customer retention.</div>
               <ul class="tag-list">
-              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/icon_1.svg" alt="Agencies"> <p><span>Agencies.</span> Sell and manage plans for employee benefits, commercial, and personal insurance.</p></li>
-              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_2.svg" alt="Insurers"> <p><span>Insurers.</span> Streamline underwriting, post-bind activities, and claim tracking. Connect with clients.</p></li>
-              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/analytics_2.svg" alt="Service Providers"> <p><span>Service Providers.</span> Automate prospecting, quoting, and HCM services. Healthcare, payroll, and PEO.</p></li>
+              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/icon_1.svg" alt="Agencies"> <p><span>Agencies.</span> Prospect, engage, quote and manage your clients and prospects for all lines of business.</p></li>
+              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/frame_2.svg" alt="Insurers"> <p><span>Insurers.</span> Create innovative products, distribute them to key markets, seamlessly engage and retain policyholders and clients.</p></li>
+              <li><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/7001/analytics_2.svg" alt="Service Providers"> <p><span>Service Providers.</span> Simplify market analyses, streamline workflows and maximize growth opportunities.</p></li>
               </ul>
               <a class="cta" href="javascript:void(0)">
                 Get a demo
