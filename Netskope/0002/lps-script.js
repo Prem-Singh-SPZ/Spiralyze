@@ -711,10 +711,7 @@ if (!document.body.classList.contains('spz-0002')) {
 			  <h2 class="form-content-heading">`+ heading + `</h2>
 			  `+ sub_heading + `
 			  <picture class="hero-form-img">
-				<source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0002/desktop_report_1.webp">
-				<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0002/tablet_report_1.webp">
-				<source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0002/mobile_report_1.webp">
-				<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/0002/desktop_report_1.webp" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
+				<img src="https://www.netskope.com/wp-content/uploads/2024/04/2024-gartner-sse-magic-quadrant-1040x1094-1.png" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
 			  </picture>
 			</div>`);
 

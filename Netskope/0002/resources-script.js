@@ -778,20 +778,17 @@ if (!document.body.classList.contains('spz-0002')) {
           <h6 class="form-content-subheading">`+ sub_heading + `</h6>
           <div class="desk-only-p">`+ short_description + `</div>
           <div class="hero-form-img">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
+            <img src="https://www.netskope.com/wp-content/uploads/2024/04/2024-gartner-sse-magic-quadrant-1040x1094-1.png" alt="`+ heading + `">
           </div> 
           </div>`);
 
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("beforeend", `<picture class="hero-form-img">
-          <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp">
-          <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/tablet_report.webp">
-          <source media="(max-width: 767px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/netskope/6003/desktop_report.webp" alt="`+ heading + `">
+          <img src="https://www.netskope.com/wp-content/uploads/2024/04/2024-gartner-sse-magic-quadrant-1040x1094-1.png" alt="`+ heading + `">
         </picture>`+ document.querySelector(".spz-0002 .js-hero-banner .gated-content__left").innerHTML);
 
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__container .gated-content__right').insertAdjacentHTML("afterbegin", `<h2 class="form-content-heading">` + heading + `</h2>`);
     document.querySelector('.spz-0002 .js-hero-banner .gated-content__right .rte p:nth-child(02)').insertAdjacentHTML("afterend", `<div class="hero-form-img">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/v1700667411/netskope/6002/mobile_image.webp" alt="`+ heading + `">
+          <img src="https://www.netskope.com/wp-content/uploads/2024/04/2024-gartner-sse-magic-quadrant-1040x1094-1.png" alt="`+ heading + `">
         </div>`);
 
     //Form internal code
