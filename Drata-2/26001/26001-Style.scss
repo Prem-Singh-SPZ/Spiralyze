@@ -21,14 +21,14 @@ body.spz-26001 {
         .sticky-container {
           display: flex;
           align-items: center;
-          justify-content: space-between;
+          justify-content: center;
           position: relative;
           max-width: 1440px;
           margin: auto;
-          padding: 11.5px 96px;
+          padding: 11px 96px 12px;
           @media (min-width: 767.98px) and (max-width: 1199.98px) {
             max-width: 768px;
-            padding: 8px 16px 7px;
+            padding: 7px 16px 6px;
           }
           @media (max-width: 767.98px) {
             flex-direction: column;
@@ -43,13 +43,15 @@ body.spz-26001 {
           .left-content {
             display: flex;
             align-items: center;
+            margin-right: 48px;
             @media (min-width: 767.98px) and (max-width: 1199.98px) {
-              max-width: 219px;
+              // max-width: 219px;
               align-items: flex-start;
               width: 100%;
             }
             @media (max-width: 767.98px) {
-              display: none;
+              // display: none;
+              margin: 3px 0 0;
             }
 
             span {
@@ -59,17 +61,26 @@ body.spz-26001 {
               font-style: normal;
               font-weight: 900;
               line-height: 28px;
+              margin-top: 1px;
               @media (min-width: 767.98px) and (max-width: 1199.98px) {
-                font-size: 18px;
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 900;
+                line-height: 28px;
+                margin-top: 0;
+              }
+              @media (max-width: 767.98px) {
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 800;
-                line-height: 26px;
+                line-height: 24px;
               }
             }
           }
 
           .center-content {
-            display: flex;
+            display: none !important;
+            // display: flex;
             align-items: center;
             .g2-logo {
               width: 32px;
@@ -107,7 +118,7 @@ body.spz-26001 {
             .hs-cta-primary {
               border-radius: 12px;
               background: #0c131a;
-              padding: 12px 24px 13px 28px;
+              padding: 12px 22px 13px 27px;
               color: #fff;
               text-align: center;
               font-family: "Inter", sans-serif;
