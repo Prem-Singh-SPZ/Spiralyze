@@ -812,10 +812,10 @@ function formModify() {
   else if(location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > -1){
     document.querySelector("#LblFirstName").textContent = "Nome";
     document.querySelector("#LblLastName").textContent = "Cognome";
-    document.querySelector("#LblEmail").textContent = "E-mail";
-    document.querySelector("#LblCompany").textContent = "Nome Della Tua Azienda";
-    document.querySelector("#LblTitle").textContent = "Ruolo In Azienda";
-    document.querySelector("#LblPhone").textContent = "Numero Di Telefono";
+    document.querySelector("#LblEmail").textContent = "E-mail di lavoro";
+    document.querySelector("#LblCompany").textContent = "Azienda";
+    document.querySelector("#LblTitle").textContent = "Titolo di lavoro";
+    document.querySelector("#LblPhone").textContent = "Telefono";
     document.querySelector("#LblCountry").textContent = "Paese";
   } 
   else {
