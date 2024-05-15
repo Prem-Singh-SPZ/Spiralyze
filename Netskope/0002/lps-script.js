@@ -765,7 +765,7 @@ function formModify() {
   var formDiv = document.querySelector('.landing-page-v3__form .landing-page-v3__form-content .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    if (document.querySelector('html[lang="en-US"]')) {
+    if (document.querySelector('html[lang="en-US"]') && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > 0){
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
     }
     if (document.querySelector('html[lang="es-ES"]')) {
@@ -788,7 +788,7 @@ function formModify() {
   // form CTA Update
   var form_button = setInterval(() => {
     var textChng = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton');
-    if (textChng) {
+    if (textChng && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > 0) {
       textChng.innerText = 'Get the report';
       clearInterval(form_button);
     }
@@ -797,7 +797,7 @@ function formModify() {
   // Updating Form Labels
   document.querySelector("#Country").setAttribute('autocomplete', 'none');
 
-  if (document.querySelector("html").getAttribute("lang") == "en-US") {
+  if (document.querySelector("html").getAttribute("lang") == "en-US" && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > 0) {
     document.querySelector("#LblFirstName").textContent = "First Name";
     document.querySelector("#LblLastName").textContent = "Last Name";
     document.querySelector("#LblEmail").textContent = "Business Email";
