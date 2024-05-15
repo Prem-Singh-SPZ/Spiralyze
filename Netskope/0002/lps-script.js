@@ -701,15 +701,15 @@ if (!document.body.classList.contains('spz-0002')) {
   document.body.classList.add('spz-0002');
 
   waitForElm('.spz-0002 #wrapper .v3.landing-page-v3__container').then(function () {
-    var sub_heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__subheadline").innerHTML;
+    var sub_heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__subheadline").textContent;
     var heading = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__title").innerHTML;
     var bottom_html = document.querySelector(".spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__content-container--bottom").innerHTML;
     var first_p = document.querySelector(".spz-0002 .landing-page-v3__content-container--bottom .landing-page-v3__content > p:nth-child(1)").innerHTML;
 
     // Hero Fom Content
     document.querySelector('.spz-0002 #wrapper .v3.landing-page-v3__container .landing-page-v3__form').insertAdjacentHTML("beforebegin", `<div class="hero_left"><p class="mobile-only">` + first_p + `</p>
-			  <h2 class="form-content-heading">`+ heading + `</h2>
-			  `+ sub_heading + `
+			  <h2 class="form-content-heading">`+ heading + `</h2><h4>
+			  `+ sub_heading + `</h4>
 			  <picture class="hero-form-img">
 				<img src="https://www.netskope.com/wp-content/uploads/2024/04/2024-gartner-sse-magic-quadrant-1040x1094-1.png" alt="Highest in Execution. Furthest in Vision." title="Highest in Execution. Furthest in Vision.">
 			  </picture>
@@ -765,7 +765,7 @@ function formModify() {
   var formDiv = document.querySelector('.landing-page-v3__form .landing-page-v3__form-content .mktoForm');
   // Form Extra Titles
   if (formDiv && document.querySelectorAll('.form_title').length == 0) {
-    if (document.querySelector('html[lang="en-US"]') && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > 0){
+    if (document.querySelector('html[lang="en-US"]') && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0){
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Get Gartner report</h2>`);
     }
     if (document.querySelector('html[lang="es-ES"]')) {
@@ -791,7 +791,7 @@ function formModify() {
   // form CTA Update
   var form_button = setInterval(() => {
     var textChng = document.querySelector('html[lang="en-US"] .landing-page-v3__form .landing-page-v3__form-content .mktoForm .mktoButtonRow .mktoButton');
-    if (textChng && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > 0) {
+    if (textChng && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0) {
       textChng.innerText = 'Get the report';
       clearInterval(form_button);
     }
@@ -800,7 +800,7 @@ function formModify() {
   // Updating Form Labels
   document.querySelector("#Country").setAttribute('autocomplete', 'none');
 
-  if (document.querySelector("html").getAttribute("lang") == "en-US" && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > 0) {
+  if (document.querySelector("html").getAttribute("lang") == "en-US" && location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") < 0) {
     document.querySelector("#LblFirstName").textContent = "First Name";
     document.querySelector("#LblLastName").textContent = "Last Name";
     document.querySelector("#LblEmail").textContent = "Business Email";
