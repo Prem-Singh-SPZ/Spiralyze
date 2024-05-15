@@ -51,11 +51,20 @@ ready(function () {
     }
     document.addEventListener('click', function (e) {
       if (e.target.closest("a") && e.target.closest("a").getAttribute('href') === '#popup_request_a_demo') {
+
+        //THank you message
         if (document.querySelector('.spz-2002 #new-formDemo-wrapper .submitted-message')) {
           document.querySelector('.spz-2002 #new-formDemo-wrapper').innerHTML = "<div class='lds-dual-ring'></div>"
-
           loadDemoForm();
         }
+
+        if (document.querySelector('.spz-2002 .overlay-spz')) {
+          document.querySelector('.spz-2002 .overlay-spz').remove();
+        }
+        document.querySelector('.spz-2002 #popup_request_a_demo').parentElement.classList.add("demo-active-spz");
+        document.querySelector('.spz-2002 #popup_request_a_demo').parentElement.insertAdjacentHTML("afterbegin", "<div class='overlay-spz'></div>");
+        document.querySelector('html').classList.add("spz-modal-open");
+
         let i = 0;
         const CROInterval = setInterval(() => {
           if (document.querySelector('.spz-2002 #new-formDemo-wrapper input[name="cro1"]')) {
@@ -68,8 +77,13 @@ ready(function () {
           }
         }, 500);
       }
-    });
 
+      //close popup
+      if (e.target.classList.contains('close-modal')) {
+        document.querySelector('.spz-2002 .overlay-spz').remove();
+        document.querySelector('html').classList.remove("spz-modal-open");
+      }
+    });
 
     //for form
     document.querySelector('.spz-2002 #popup_request_a_demo .wcs-popup-heading').insertAdjacentHTML("afterend", "<div id='new-formDemo-wrapper'><div class='lds-dual-ring'></div></div>")
@@ -127,6 +141,15 @@ ready(function () {
               document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_buying_timeline select').value = "Immediately";
               trigger(document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_buying_timeline select'), 'change');
               document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_consent_countries select').insertAdjacentHTML("afterend", "<div class='arrow-select'></div>")
+              const step1Checking = setInterval(function () {
+                if (document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_firstname input').value != "" &&
+                  document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_lastname input').value != "" &&
+                  document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_company input').value != "" &&
+                  document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_email input').value != "") {
+                  clearInterval(step1Checking);
+                  document.querySelector('.spz-2002 #new-formDemo-wrapper').classList.add("step2")
+                }
+              }, 200)
             }
             //short form
             else {

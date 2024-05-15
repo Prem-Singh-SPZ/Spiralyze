@@ -201,9 +201,17 @@
   display: block;
 }
 
-.spz-2002 .blocker {
+.spz-2002 .blocker.current.demo-active-spz {
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1712564548/komodohealth/2002/background_1441.webp) no-repeat;
   background-size: cover;
+}
+.spz-2002 .blocker.current.demo-active-spz .overlay-spz {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 2;
 }
 
 .spz-2002 #popup_request_a_demo {
@@ -761,10 +769,6 @@
             transform: translateX(-1px);
   }
 }
-body .body-wrapper * {
-  pointer-events: none;
-}
-body .body-wrapper * .wcs-modal.modal,
-body .body-wrapper * .wcs-modal.modal * {
-  pointer-events: all;
+html.spz-modal-open {
+  overflow: hidden;
 }
