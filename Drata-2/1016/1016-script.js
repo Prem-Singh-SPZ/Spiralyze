@@ -21,7 +21,7 @@
         ".MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions button"
       ).textContent = "Get a Demo";
 
-      document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1").innerHTML = "Get compliant 4x faster by <br>automating your compliance.";
+      document.querySelector(".MuiModal-root div[class*=Modal-modalContentContainer] p.MuiTypography-body1").innerHTML = "Get Compliant 4x Faster by <br>Automating Your Compliance";
 
       document.querySelector(
         ".hs_source__inbound_demo_ .input .hs-label-spz"

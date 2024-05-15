@@ -784,6 +784,9 @@ function formModify() {
     if (document.querySelector('html[lang="de-DE"]')) {
       formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Bitte füllen Sie dieses Formular aus</h2>`);
     }
+    if(location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > -1){
+      formDiv.insertAdjacentHTML('beforebegin', `<h2 class="form_title">Compilare questo modulo</h2>`);
+    }
   }
   // form CTA Update
   var form_button = setInterval(() => {
@@ -805,7 +808,17 @@ function formModify() {
     document.querySelector("#LblTitle").textContent = "Job Title";
     document.querySelector("#LblPhone").textContent = "Phone";
     document.querySelector("#LblCountry").textContent = "Country";
-  } else {
+  }
+  else if(location.pathname.indexOf("/lp-2024-magic-quadrant-for-security-service-edge-it") > -1){
+    document.querySelector("#LblFirstName").textContent = "Nome";
+    document.querySelector("#LblLastName").textContent = "Cognome";
+    document.querySelector("#LblEmail").textContent = "E-mail";
+    document.querySelector("#LblCompany").textContent = "Nome Della Tua Azienda";
+    document.querySelector("#LblTitle").textContent = "Ruolo In Azienda";
+    document.querySelector("#LblPhone").textContent = "Numero Di Telefono";
+    document.querySelector("#LblCountry").textContent = "Paese";
+  } 
+  else {
     // Other languages
     // Get the text from '#Country option' and set it to '#LblCountry'
     let countryLbl = document.querySelector("#Country option:first-child").textContent;
