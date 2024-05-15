@@ -8,6 +8,8 @@
     const rightBullets = [
         {
             pageName: "website-proxyclick-demo",
+            pageLogo: assetURL + "endorsed_logos.svg",
+            logoAlt: "Proxyclick logo",
             value_prop1_img: assetURL + "icon_proxyclick_01.svg",
             value_prop1_copy: "Optimize <br>guest experience",
             value_prop2_img: assetURL + "icon_proxyclick_02.svg",
@@ -17,6 +19,8 @@
         },
         {
             pageName: "website-managerplus-demo",
+            pageLogo: assetURL + "logo_-managerplus.svg",
+            logoAlt: "Managerplus logo",
             value_prop1_img: assetURL + "icon_managerplus_01.svg",
             value_prop1_copy: "Improve asset availability",
             value_prop2_img: assetURL + "icon_managerplus_02.svg",
@@ -26,6 +30,8 @@
         },
         {
             pageName: "website-archibus-demo",
+            pageLogo: assetURL + "archibus-eptura-logo-color_2.svg",
+            logoAlt: "Archibus logo",
             value_prop1_img: assetURL + "icon_archibus_01.svg",
             value_prop1_copy: "Boost workplace productivity",
             value_prop2_img: assetURL + "icon_archibus_02.svg",
@@ -35,6 +41,8 @@
         },
         {
             pageName: "website-spaceiq-demo",
+            pageLogo: assetURL + "spaceiq-eptura-logo-color_2.svg",
+            logoAlt: "Spaceiq logo",
             value_prop1_img: assetURL + "hand_icon_1.svg",
             value_prop1_copy: "Space <br>planning",
             value_prop2_img: assetURL + "security_icon_4.svg",
@@ -44,6 +52,8 @@
         },
         {
             pageName: "website-ioffice-demo",
+            pageLogo: assetURL + "ioffice-eptura-logo-color_2.svg",
+            logoAlt: "ioffice logo",
             value_prop1_img: assetURL + "icon_ioffice_01.svg",
             value_prop1_copy: "Maximize <br>your space",
             value_prop2_img: assetURL + "icon_ioffice_02.svg",
@@ -72,27 +82,32 @@
             rightBullets.forEach(function (con) {
                 if (identifyPage == con.pageName) {
 
+                    document.querySelector('.body-wrapper .main_logo #mkto_gen_form_logo img').setAttribute('src', con.pageLogo);
+                    document.querySelector('.body-wrapper .main_logo #mkto_gen_form_logo img').setAttribute('alt', con.logoAlt);
+
                     document.querySelector('#form-over #form_title').textContent = "Get a demo";
 
                     let iconAlt1 = removeBrTag(con.value_prop1_copy);
                     let iconAlt2 = removeBrTag(con.value_prop2_copy);
                     let iconAlt3 = removeBrTag(con.value_prop3_copy);
 
-                    document.querySelector('#form-over #form_title').insertAdjacentHTML('afterend', `
-                    <div class="value-props-section">
-                    <div class="value-props-wrapper">
-                        <div class="value-prop">
-                            <div class="prop-img"><img src="${con.value_prop1_img}" alt="` + iconAlt1 + `"></div>
-                            <div class="prop-copy">${con.value_prop1_copy}</div>
-                        </div>
-                        <div class="line"></div>
-                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop2_img}" alt="` + iconAlt2 + `"></div>
-                        <div class="prop-copy">${con.value_prop2_copy}</div></div>
-                        <div class="line"></div>
-                        <div class="value-prop"><div class="prop-img"><img src="${con.value_prop3_img}" alt="` + iconAlt3 + `"></div>
-                        <div class="prop-copy">${con.value_prop3_copy}</div></div>
-                    </div></div>
-                    `);
+                    if (document.querySelectorAll('#form-over .value-props-section').length == 0) {
+                        document.querySelector('#form-over #form_title').insertAdjacentHTML('afterend', `
+                        <div class="value-props-section">
+                        <div class="value-props-wrapper">
+                            <div class="value-prop">
+                                <div class="prop-img"><img src="${con.value_prop1_img}" alt="` + iconAlt1 + `"></div>
+                                <div class="prop-copy">${con.value_prop1_copy}</div>
+                            </div>
+                            <div class="line"></div>
+                            <div class="value-prop"><div class="prop-img"><img src="${con.value_prop2_img}" alt="` + iconAlt2 + `"></div>
+                            <div class="prop-copy">${con.value_prop2_copy}</div></div>
+                            <div class="line"></div>
+                            <div class="value-prop"><div class="prop-img"><img src="${con.value_prop3_img}" alt="` + iconAlt3 + `"></div>
+                            <div class="prop-copy">${con.value_prop3_copy}</div></div>
+                        </div></div>
+                        `);
+                    }
                 }
             })
         });
