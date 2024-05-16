@@ -327,17 +327,19 @@ body.spz-8001 {
                         width: 100% !important;
                         font-size: 16px;
                         font-style: normal;
-                        font-weight: 600;
+                        font-weight: 400;
                         line-height: 24px;
                         color: #0f2d52;
                         margin: 0;
+                        outline: none;
+                        font-family: $segoe;
                       }
 
                       .mktoLabel {
                         position: absolute;
                         top: 12px;
                         left: 16px;
-                        font-family: "Segoe UI";
+                        font-family: $segoe;
                         font-size: 16px;
                         font-style: normal;
                         font-weight: 400;
@@ -347,14 +349,37 @@ body.spz-8001 {
                         pointer-events: none;
                       }
 
+                      .mktoError {
+                        margin-top: 6px;
+
+                        .mktoErrorArrowWrap {
+                          display: none;
+                        }
+                        .mktoErrorMsg {
+                          color: #e30004;
+                          font-family: $segoe;
+                          font-size: 13px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 20px;
+                        }
+                      }
+
                       //when typing class added here to move label up
-                      &.typing .mktoLabel {
-                        top: -12px;
-                        padding: 1px 6px;
-                        font-size: 13px;
-                        line-height: 20px;
-                        left: 10px;
-                        background: #fff;
+                      &.typing {
+                        .mktoField {
+                          border-color: #0f2d52;
+                        }
+
+                        .mktoLabel {
+                          top: -12px;
+                          padding: 1px 6px;
+                          font-size: 13px;
+                          line-height: 20px;
+                          left: 10px;
+                          background: #fff;
+                          color: #0f2d52;
+                        }
                       }
 
                       &.filled .mktoLabel {
@@ -364,6 +389,15 @@ body.spz-8001 {
                         line-height: 20px;
                         left: 10px;
                         background: #fff;
+                      }
+
+                      &.error {
+                        .mktoField {
+                          border-color: #e30004;
+                        }
+                        .mktoLabel {
+                          color: #e30004;
+                        }
                       }
                     }
                   }
@@ -401,10 +435,13 @@ body.spz-8001 {
                     border-radius: 99px;
                     margin: 0;
                     color: #0f2d52;
+                    cursor: pointer;
 
                     &:hover {
-                      background: #0f2d52;
-                      color: #fff;
+                      background: #7edb58;
+                    }
+                    &:active {
+                      background: #a6ff82;
                     }
                   }
                 }

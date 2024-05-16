@@ -158,14 +158,6 @@ function formModify() {
         clearInterval(changeLabels);
     }, 100);
 
-    // document.getElementById("FirstName").setAttribute('tabindex', '1');
-    // document.getElementById("LastName").setAttribute('tabindex', '2');
-    // document.getElementById("Email").setAttribute('tabindex', '3');
-    // document.getElementById("websiteFormJobDescription").setAttribute('tabindex', '4');
-    // document.getElementById("Company").setAttribute('tabindex', '5');
-    // document.getElementById("Phone").setAttribute('tabindex', '6');
-    // document.getElementById("ringdna100__ProductInterest__c").setAttribute('tabindex', '7');
-
     var countryOptions = document.querySelectorAll('.mktoFieldWrap select');
     countryOptions.forEach(function (select) {
         if (select.querySelector('option[value=""]')) {
@@ -176,43 +168,91 @@ function formModify() {
     });
 
     // form state
-    var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
+    //     var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
 
-    document.addEventListener('click', function (event) {
-        if (event.target.matches(selector)) {
-            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
-        }
-    }, true);
+    //     document.addEventListener('click', function (event) {
+    //         if (event.target.matches(selector)) {
+    //             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+    //         }
+    //     }, true);
 
+    //     document.addEventListener('focus', function (event) {
+    //         if (event.target.matches(selector)) {
+    //             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+    //         }
+    //     }, true);
+
+    //     var eventList = ["blur", "focusout", "keyup"];
+    //     for (s_event of eventList) {
+    //         document.addEventListener(s_event, function (event) {
+    //             if (event.target.matches(selector)) {
+    //                 if (event.target.value == null || event.target.value == '') {
+    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active');
+    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
+    //                 } else {
+    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active');
+    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
+
+    //                 }
+    //             }
+    //         });
+    //     }
+
+    //     document.addEventListener('focusout', function (event) {
+    //         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
+    //             elem.classList.remove('typing');
+    //         })
+    //     }, true);
+    // };
+
+    // form state
+    var selector = '.spz-8001 .spz-form-container form.mktoForm .mktoFormCol .mktoFieldWrap input, .spz-8001 .spz-form-container form.mktoForm .mktoFormCol .mktoFieldWrap select';
     document.addEventListener('focus', function (event) {
         if (event.target.matches(selector)) {
-            event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
         }
     }, true);
-
-    var eventList = ["blur", "focusout", "keyup"];
+    var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
     for (s_event of eventList) {
         document.addEventListener(s_event, function (event) {
             if (event.target.matches(selector)) {
                 if (event.target.value == null || event.target.value == '') {
-                    event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active');
-                    event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
+                    event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('filled');
                 } else {
-                    event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active');
-                    event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
-
+                    event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('filled');
+                }
+                if (event.type == "change" && event.target.tagName == 'SELECT') {
+                    if (event.target.value == "") {
+                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
+                    } else {
+                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
+                        if (event.target.parentNode.querySelector('.mktoError').length > 0) {
+                            event.target.parentNode.querySelector('.mktoError').style.display = 'none';
+                        }
+                    }
+                } else {
+                    if (event.target.classList.contains('mktoInvalid')) {
+                        var closestError = event.target.parentNode.querySelector('.mktoError');
+                        if (closestError && closestError.style.display == '') {
+                            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
+                        } else {
+                            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
+                        }
+                    } else {
+                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
+                    }
                 }
             }
         });
     }
 
     document.addEventListener('focusout', function (event) {
-        document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-            elem.classList.remove('typing');
+        document.querySelectorAll('body form .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
+            elem.classList.remove('active', 'typing');
         })
     }, true);
-};
 
+};
 //Add hidden fields
 function setHiddenFields() {
     if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {

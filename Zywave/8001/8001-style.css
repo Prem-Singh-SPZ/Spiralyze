@@ -369,16 +369,18 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   width: 100% !important;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 400;
   line-height: 24px;
   color: #0f2d52;
   margin: 0;
+  outline: none;
+  font-family: "Segoe UI", Arial, sans-serif;
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoLabel {
   position: absolute;
   top: 12px;
   left: 16px;
-  font-family: "Segoe UI";
+  font-family: "Segoe UI", Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 400;
@@ -388,6 +390,23 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   transition: all 0.3s;
   pointer-events: none;
 }
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoError {
+  margin-top: 6px;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+  display: none;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+  color: #e30004;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.typing .mktoField {
+  border-color: #0f2d52;
+}
 body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.typing .mktoLabel {
   top: -12px;
   padding: 1px 6px;
@@ -395,6 +414,7 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   line-height: 20px;
   left: 10px;
   background: #fff;
+  color: #0f2d52;
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.filled .mktoLabel {
   top: -12px;
@@ -403,6 +423,12 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   line-height: 20px;
   left: 10px;
   background: #fff;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.error .mktoField {
+  border-color: #e30004;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.error .mktoLabel {
+  color: #e30004;
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:nth-child(3) {
   max-width: 100%;
@@ -440,10 +466,13 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   border-radius: 99px;
   margin: 0;
   color: #0f2d52;
+  cursor: pointer;
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow .mktoButton:hover {
-  background: #0f2d52;
-  color: #fff;
+  background: #7edb58;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow .mktoButton:active {
+  background: #a6ff82;
 }
 body.spz-8001 .profile-section {
   margin-top: -160px;
