@@ -1,4 +1,10 @@
+$bree: "BreeBold", Arial, sans-serif;
+$segoe: "Segoe UI", Arial, sans-serif;
 body.spz-8001 {
+  > div[style] {
+    display: none !important;
+  }
+
   .hero-section {
     background: linear-gradient(114deg, #0f2e54 -0.34%, #2776d0 100.65%);
 
@@ -16,6 +22,107 @@ body.spz-8001 {
       margin: auto;
 
       .hero-col {
+        display: flex;
+        justify-content: space-between;
+        padding-bottom: 200px;
+
+        .hero-copy {
+          max-width: 500px;
+          .hero-eyebrow {
+            color: #5fb53b;
+            font-family: Lato;
+            font-size: 15px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 130%;
+            text-transform: uppercase;
+            margin: 0 0 8px;
+          }
+
+          .hero-title {
+            color: #fff;
+            font-feature-settings: "salt" on;
+            font-family: $bree;
+            font-size: 56px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+            margin: 0 0 22px;
+          }
+
+          .date-and-time {
+            height: 40px;
+            padding: 0px 12px;
+            border-radius: 10px;
+            border: 1px solid rgba(39, 119, 211, 0.22);
+            background: rgba(39, 119, 211, 0.12);
+            display: flex;
+            align-items: center;
+            width: fit-content;
+            margin: 0 0 30px;
+
+            .date,
+            .time {
+              display: flex;
+              align-self: center;
+
+              svg {
+                margin-right: 8px;
+              }
+
+              span {
+                color: #fff;
+                font-family: $segoe;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+              }
+            }
+
+            .line {
+              width: 1px;
+              height: 24px;
+              background: rgba(39, 119, 211, 0.22);
+              margin: 0 12px;
+            }
+          }
+
+          .hero-list {
+            padding: 0;
+            list-style: none;
+
+            li {
+              padding-left: 36px;
+              color: #fff;
+              font-family: $segoe;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin-bottom: 16px;
+              position: relative;
+
+              span {
+                font-weight: 700;
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                margin: 3px 0;
+                background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/8001/icon-20-bullet.svg)
+                  no-repeat;
+                background-size: 100%;
+              }
+            }
+          }
+        }
+
         .hero-form {
           .spz-form-container {
             div.mktoForm {
@@ -25,11 +132,22 @@ body.spz-8001 {
               box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
               padding: 48px 30px;
 
+              .form_title {
+                color: #0f2d52;
+                text-align: center;
+                font-family: $bree;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
+                margin: 0 0 32px;
+              }
+
               form.mktoForm {
                 .mktoFormRow {
                   justify-content: space-between;
                   gap: 0;
-                  
+
                   .mktoClear {
                     display: none !important;
                   }
@@ -89,6 +207,15 @@ body.spz-8001 {
                         left: 10px;
                         background: #fff;
                       }
+
+                      &.filled .mktoLabel {
+                        top: -12px;
+                        padding: 1px 6px;
+                        font-size: 13px;
+                        line-height: 20px;
+                        left: 10px;
+                        background: #fff;
+                      }
                     }
                   }
 
@@ -125,6 +252,211 @@ body.spz-8001 {
                   }
                 }
               }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .profile-section {
+    margin-top: -150px;
+    margin-bottom: -150px;
+    .profile-row {
+      max-width: 1180px;
+      margin: auto;
+
+      .profile-col {
+        display: flex;
+        justify-content: space-between;
+
+        .profile-card {
+          border-radius: 18px;
+          background: #eef4fb;
+          display: flex;
+          padding: 32px;
+          flex-direction: column;
+          justify-content: center;
+          align-items: flex-start;
+          max-width: 510px;
+
+          .profile-header {
+            display: flex;
+            align-items: center;
+            padding-bottom: 8px;
+
+            .profile-image {
+              width: 128px;
+              height: 128px;
+              border: 4px solid #fff;
+              border-radius: 999px;
+              box-shadow: 0px 0px 0px 6px rgba(255, 255, 255, 0.2);
+              margin-right: 24px;
+
+              img {
+                width: 100%;
+                height: 100%;
+                border-radius: 999px;
+              }
+            }
+
+            .profile-details {
+              .profile-name {
+                color: #0f2d52;
+                font-feature-settings: "salt" on;
+                font-family: $bree;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
+                margin: 0 0 8px;
+              }
+
+              .profile-title {
+                color: #0f2d52;
+                font-family: $segoe;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+                margin: 0 0 2px;
+              }
+
+              .profile-company {
+                color: #0f2d52;
+                font-family: $segoe;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 140%;
+              }
+            }
+          }
+
+          .profile-copy {
+            padding-top: 10px;
+
+            p {
+              color: #0f2d52;
+              font-family: $segoe;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin: 0;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .whats-covered-section {
+    overflow: hidden;
+    .wc-row {
+      max-width: 1180px;
+      margin: auto;
+      .wc-col {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding-top: 200px;
+
+        .wc-copy {
+          max-width: 500px;
+
+          .wc-title {
+            color: #0f2d52;
+            font-feature-settings: "salt" on;
+            font-family: $bree;
+            font-size: 48px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 110%;
+            margin: 0 0 24px;
+          }
+
+          .wc-list {
+            padding: 0;
+            list-style: none;
+
+            li {
+              padding-left: 36px;
+              color: #0f2d52;
+              font-family: $segoe;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
+              margin-bottom: 16px;
+              position: relative;
+
+              span {
+                font-weight: 700;
+              }
+
+              &::before {
+                content: "";
+                position: absolute;
+                top: 0;
+                left: 0;
+                width: 20px;
+                height: 20px;
+                margin: 3px 0;
+                background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/8001/icon-20-bullet.svg)
+                  no-repeat;
+                background-size: 100%;
+              }
+            }
+          }
+        }
+
+        .wc-image {
+          max-width: 684px;
+
+          img {
+            height: 614px;
+          }
+        }
+      }
+    }
+  }
+
+  .zy-subfooter-section {
+    .sf-row {
+      max-width: 1180px;
+      margin: auto;
+
+      .sf-col {
+        display: flex;
+        justify-content: space-between;
+        padding: 24px 0;
+
+        .copyright {
+          color: #0f2d52;
+          font-family: $segoe;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          margin: 0;
+        }
+
+        .zy-subfooter-menu {
+          margin: 0;
+          padding: 0;
+          list-style: none;
+          display: flex;
+          align-items: center;
+          li {
+            margin-left: 32px;
+            a {
+              color: #0f2d52;
+              font-family: $segoe;
+              font-size: 13px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 140%;
             }
           }
         }
