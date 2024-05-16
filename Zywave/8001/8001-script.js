@@ -75,7 +75,7 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
                         alt="Profile Image">
                 </div>
                 <div class="profile-details">
-                    <p class="profile-name">John Doe</p>
+                    <p class="profile-name">Zach Boggs</p>
                     <p class="profile-title">Customer Success Manager</p>
                     <p class="profile-company">Zywave</p>
                 </div>
