@@ -205,6 +205,29 @@
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1712564548/komodohealth/2002/background_1441.webp) no-repeat;
   background-size: cover;
 }
+@media screen and (max-width: 1023.98px) {
+  .spz-2002 .blocker.current.demo-active-spz {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_770.webp) no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz-2002 .blocker.current.demo-active-spz {
+    background: #fff;
+  }
+}
+@media screen and (min-width: 1600.98px) {
+  .spz-2002 .blocker.current.demo-active-spz {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1921.webp) no-repeat;
+    background-size: cover;
+  }
+}
+@media screen and (min-width: 3500.98px) {
+  .spz-2002 .blocker.current.demo-active-spz {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_3841.webp) no-repeat;
+    background-size: cover;
+  }
+}
 .spz-2002 .blocker.current.demo-active-spz .overlay-spz {
   position: absolute;
   top: 0;
@@ -215,9 +238,9 @@
 }
 
 .spz-2002 #popup_request_a_demo {
-  max-width: 600px !important;
-  -webkit-box-shadow: 0px 12.33333px 49.33334px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 12.33333px 49.33334px 0px rgba(0, 0, 0, 0.2);
+  max-width: 448px !important;
+  -webkit-box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
   padding: 24px 32px 32px !important;
 }
 
@@ -423,8 +446,8 @@
   letter-spacing: -0.16px;
   padding: 0 4px;
   color: #7e7e7e;
-  box-shadow: 0px -6px 0px 0px #f8f7f7 inset;
-  -webkit-box-shadow: 0px -6px 0px 0px #f8f7f7 inset;
+  box-shadow: 0px -8px 0px 0px #f8f7f7 inset;
+  -webkit-box-shadow: 0px -8px 0px 0px #f8f7f7 inset;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs-form-field.focus > label span {
@@ -435,8 +458,8 @@
   letter-spacing: -0.16px;
   padding: 0 4px;
   color: #000000;
-  box-shadow: 0px -6px 0px 0px white inset;
-  -webkit-box-shadow: 0px -6px 0px 0px white inset;
+  box-shadow: 0px -8px 0px 0px white inset;
+  -webkit-box-shadow: 0px -8px 0px 0px white inset;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs-form-field.hasError.focus > label span {
@@ -447,8 +470,8 @@
   letter-spacing: -0.16px;
   padding: 0 4px;
   color: #dc0000;
-  box-shadow: 0px -6px 0px 0px white inset;
-  -webkit-box-shadow: 0px -6px 0px 0px white inset;
+  box-shadow: 0px -8px 0px 0px white inset;
+  -webkit-box-shadow: 0px -8px 0px 0px white inset;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs-form-field.hasError > label span {
@@ -469,7 +492,7 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0;
-  margin-bottom: 17px;
+  margin-bottom: 0;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs-richtext p a {
@@ -509,17 +532,17 @@
   letter-spacing: 0.8px !important;
   margin-top: 0px !important;
   margin-bottom: 0px !important;
-  border: none;
+  border: 2px solid #68cce8 !important;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs_submit input:hover {
-  background-color: #000000 !important;
-  color: white !important;
+  background-color: #fff !important;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs_submit input:active {
   background-color: #4a4a4a !important;
-  color: white !important;
+  color: #fff !important;
+  border: none !important;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs_consent_countries select {
@@ -630,11 +653,11 @@
 
 .spz-2002 #new-formDemo-wrapper .pp-parent {
   float: left;
-  margin: 3px 0px 0px;
+  margin: 3px 0px 16px;
 }
 
 .spz-2002 #new-formDemo-wrapper.step2 .pp-parent {
-  margin: -12px 0px 15.5px;
+  margin: -12px 0px 16px;
 }
 
 .spz-2002 #new-formDemo-wrapper .hs_submit .actions {
@@ -667,14 +690,10 @@
 }
 
 .spz-2002 #new-formDemo-wrapper .hs_consent_countries {
-  margin-bottom: 12.5px;
+  margin-bottom: 10px;
 }
 
 @media (max-width: 767.98px) {
-  .spz-2002 .jquery-modal.blocker.current {
-    background-color: rgba(0, 0, 0, 0.6);
-    padding: 0px 0px 0px;
-  }
   .spz-2002 .blocker:before {
     vertical-align: top;
   }

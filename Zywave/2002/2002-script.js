@@ -32,7 +32,7 @@ function pageModify() {
          <picture>
           <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_desktop.webp">
           <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_tablet.webp">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/interface_mobile.webp" alt="Qualified Prospects" class="hb-img">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/mobile_interface.webp" alt="Qualified Prospects" class="hb-img">
          </picture>
         </div>
        </div>`);
@@ -43,7 +43,7 @@ function pageModify() {
          <picture>
           <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_desktop.webp">
           <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_tablet.webp">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_mobile.webp" alt="Brand Logos" class="bs-logos">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_mobile_1.webp" alt="Brand Logos" class="bs-logos">
          </picture>
         </div>
        </div>`);
