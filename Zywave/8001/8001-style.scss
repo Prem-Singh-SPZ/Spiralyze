@@ -333,6 +333,14 @@ body.spz-8001 {
                         margin: 0;
                         outline: none;
                         font-family: $segoe;
+
+                        &:-webkit-autofill,
+                        &:-webkit-autofill:hover,
+                        &:-webkit-autofill:focus,
+                        &:-webkit-autofill:active {
+                          -webkit-box-shadow: 0 0 0 50px white inset !important;
+                          -webkit-text-fill-color: #0f2d52 !important;
+                        }
                       }
 
                       .mktoLabel {
