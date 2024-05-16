@@ -17,7 +17,7 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
     <div class="hero-col">
         <div class="hero-copy">
             <p class="hero-eyebrow">Take Action Webinar</p>
-            <h1 class="hero-title">Master Loss Analysis & Benchmarking</h1>
+            <h1 class="hero-title">Master Loss Analysis &amp; Benchmarking</h1>
             <div class="date-and-time">
                 <div class="date"><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
                         fill="none">
@@ -113,7 +113,7 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
 		<div class="sf-row">
 			<div class="sf-col">
 					<p class="copyright">© 2024 ZYWAVE</p>
-					<ul class="zy-subfooter-menu"><li><a href="/terms-conditions/">Terms &amp; Conditions</a></li><li><a href="/privacy-statement/">Privacy</a></li><li><a href="/training-cancellation-policy/">Training Cancellation Policy</a></li><li><a href="/dmca-notice/">DMCA Notice</a></li><li><a href="/hipaa-security/">HIPAA Security</a></li></ul>
+					<ul class="zy-subfooter-menu"><li><a href="https://www.zywave.com/terms-conditions/">Terms &amp; Conditions</a></li><li><a href="https://www.zywave.com/privacy-statement/">Privacy</a></li><li><a href="https://www.zywave.com/training-cancellation-policy/">Training Cancellation Policy</a></li><li><a href="https://www.zywave.com/dmca-notice/">DMCA Notice</a></li><li><a href="https://www.zywave.com/hipaa-security/">HIPAA Security</a></li></ul>
 			</div>
 	</div>
 </section>`);
