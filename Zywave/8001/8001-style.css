@@ -12,78 +12,40 @@ body.spz-8001 .hero-section .hero-row {
   max-width: 1180px;
   margin: auto;
 }
-body.spz-8001 .zy-demo-form-section-container {
-  position: fixed;
-  top: 0;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.4)), to(rgba(0, 0, 0, 0.4)));
-  background: linear-gradient(0deg, rgba(0, 0, 0, 0.4) 0%, rgba(0, 0, 0, 0.4) 100%);
-  z-index: 9;
-}
-body.spz-8001 .zy-demo-form-section-container .zy-container {
-  height: 100%;
-}
-body.spz-8001 .zy-demo-form-section-container .zy-container .row {
-  height: 100%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-text {
-  display: none !important;
-}
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm {
+  max-width: 440px;
   border-radius: 32px;
   background: #fff;
   -webkit-box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
           box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
-  max-width: 536px;
-  padding: 48px;
+  padding: 48px 30px;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form .form_title {
-  color: #0f2d52;
-  text-align: center;
-  font-family: Bree;
-  font-size: 28px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 120%;
-  margin-bottom: 32px;
-}
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  gap: 0;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFormRow {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoClear {
   display: none !important;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol {
   width: 100%;
   max-width: 212px;
   margin-bottom: 16px !important;
+  position: relative;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol .mktoOffset {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoOffset {
   display: none !important;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap {
   display: block;
   padding: 0;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoGutter {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoGutter {
   display: none !important;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoField {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoField {
   background-color: #fff;
   border: 1px solid #bfbfbf;
   border-radius: 8px;
@@ -95,8 +57,9 @@ body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fi
   font-weight: 600;
   line-height: 24px;
   color: #0f2d52;
+  margin: 0;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoLabel {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoLabel {
   position: absolute;
   top: 12px;
   left: 16px;
@@ -110,7 +73,7 @@ body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fi
   transition: all 0.3s;
   pointer-events: none;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.typing .mktoLabel {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.typing .mktoLabel {
   top: -12px;
   padding: 1px 6px;
   font-size: 13px;
@@ -118,19 +81,21 @@ body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fi
   left: 10px;
   background: #fff;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form fieldset .mktoFieldDescriptor.mktoFormCol.field_7 {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:nth-child(3) {
   max-width: 100%;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form .mktoButtonRow {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:nth-child(3) .mktoFieldDescriptor.mktoFormCol {
+  max-width: 100%;
+}
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  margin-top: 16px;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form .mktoButtonRow .mktoButton {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow .mktoButton {
   background: #5fb53b;
   padding: 12px 40px;
   font-family: "Segoe UI";
@@ -144,7 +109,7 @@ body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form .m
   border: 0;
   border-radius: 99px;
 }
-body.spz-8001 .zy-demo-form-section-container .zy-container .row .zy-col-form .mktoButtonRow .mktoButton:hover {
+body.spz-8001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow .mktoButton:hover {
   background: #0f2d52;
   color: #fff;
 }

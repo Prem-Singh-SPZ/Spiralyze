@@ -15,13 +15,12 @@ document.body.insertAdjacentHTML('afterbegin', `
         </div>
         <div class="hero-row">
             <div class="hero-col">
-                <h1 class="hero-title
-                ">Get a demo</h1>
-                <p class="hero-copy">See how Zywave can help you grow your business</p>
-            </div>
-            <div class="hero-col">
+                <div class="hero-copy">
+                    <h1 class="hero-title
+                    ">Get a demo</h1>
+                    <p class="hero-copy">See how Zywave can help you grow your business</p>
+                </div>
                 <div class="hero-form">
-                    <div class="zy-marketo-form-container"></div>
                 </div>
             </div>
         </div>
@@ -33,62 +32,50 @@ waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField[id]').then
     formModify();
 });
 
-function rearrangeFields() {
-    const mktoFormRowElements = document.querySelectorAll('form.mktoForm .mktoFormRow');
-    mktoFormRowElements.forEach(function (element) {
-        const mktoField = element.querySelector('.mktoField');
-
-        if (mktoField && mktoField.getAttribute('type') == 'hidden') {
-            element.classList.add('hideField');
-        }
-        else {
-            element.querySelectorAll('.mktoFieldDescriptor.mktoFormCol').forEach(function (elm, index) {
-                elm.classList.add('field_' + index);
-                document.querySelector('.mktoForm fieldset.mktoFormCol').insertAdjacentElement('beforeend', elm);
-                // check if mktoField has placeholder
-                if (elm.querySelector('.mktoField[placeholder]')) {
-                    elm.querySelector('.mktoField').setAttribute('placeholder', '');
-                }
-            });
-        }
-    });
-}
-
 function formModify() {
-    rearrangeFields();
 
     //form title update
-    var formDiv = document.querySelector('.zy-marketo-form-container');
+    let formDiv = document.querySelector('body form.mktoForm').closest('div[style]:not([class])').classList.add('spz-form-container');
+
+    document.querySelector('.spz-form-container').removeAttribute('style');
+
+    document.querySelector('.hero-form').insertAdjacentElement('beforeend', document.querySelector('.spz-form-container'));
     if (formDiv && document.querySelectorAll('.form_title').length == 0) {
         formDiv.insertAdjacentHTML('beforebegin', `<div class="form_title">Get a demo</div>`);
     }
 
     //form Cta update
-    var textChng = document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container button.mktoButton');
+    var textChng = document.querySelector('form.mktoForm .mktoButtonRow button.mktoButton');
 
     let changeLabels = setInterval(() => {
         textChng.textContent = 'Submit';
-        document.querySelector('#LblEmail').textContent = "Business Email";
-        document.querySelector('#LblCompany').textContent = "Company";
-        document.querySelector('#LblwebsiteFormJobDescription').textContent = "Job category";
-        document.querySelector('#LblPhone').textContent = "Phone";
-        document.querySelector('#LblFirstName').textContent = "First Name";
-        document.querySelector('#LblLastName').textContent = "Last Name";
-        document.querySelector('#Lblringdna100__ProductInterest__c').textContent = "I want to discuss";
 
-        document.querySelector(".mktoButton").setAttribute('tabindex', '14');
+        document.querySelectorAll('form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type="hidden"])').forEach(function (input) {
+            let label = input.getAttribute('placeholder');
+            if (input.closest('.mktoFieldWrap').querySelector('.mktoLabel')) {
+                input.closest('.mktoFieldWrap').querySelector('.mktoLabel').textContent = label;
+            }
+
+            setTimeout(() => {
+                input.setAttribute('placeholder', '');
+                if (input.closest('.mktoFieldWrap').querySelector('.mktoGutter.mktoHasWidth')) {
+                    input.closest('.mktoFieldWrap').querySelector('.mktoGutter.mktoHasWidth').remove();
+
+                }
+            }, 100);
+        });
     }, 10);
     setTimeout(() => {
         clearInterval(changeLabels);
     }, 100);
 
-    document.getElementById("FirstName").setAttribute('tabindex', '1');
-    document.getElementById("LastName").setAttribute('tabindex', '2');
-    document.getElementById("Email").setAttribute('tabindex', '3');
-    document.getElementById("websiteFormJobDescription").setAttribute('tabindex', '4');
-    document.getElementById("Company").setAttribute('tabindex', '5');
-    document.getElementById("Phone").setAttribute('tabindex', '6');
-    document.getElementById("ringdna100__ProductInterest__c").setAttribute('tabindex', '7');
+    // document.getElementById("FirstName").setAttribute('tabindex', '1');
+    // document.getElementById("LastName").setAttribute('tabindex', '2');
+    // document.getElementById("Email").setAttribute('tabindex', '3');
+    // document.getElementById("websiteFormJobDescription").setAttribute('tabindex', '4');
+    // document.getElementById("Company").setAttribute('tabindex', '5');
+    // document.getElementById("Phone").setAttribute('tabindex', '6');
+    // document.getElementById("ringdna100__ProductInterest__c").setAttribute('tabindex', '7');
 
     var countryOptions = document.querySelectorAll('.mktoFieldWrap select');
     countryOptions.forEach(function (select) {
