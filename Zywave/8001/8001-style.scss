@@ -1,0 +1,159 @@
+body.spz-8001 {
+  .hero-section {
+    background: linear-gradient(114deg, #0f2e54 -0.34%, #2776d0 100.65%);
+
+    .header-row {
+      max-width: 1180px;
+      margin: auto;
+
+      .header-col {
+        padding: 32px 0;
+      }
+    }
+
+    .hero-row {
+      max-width: 1180px;
+      margin: auto;
+    }
+  }
+
+  .zy-demo-form-section-container {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 0.4) 0%,
+      rgba(0, 0, 0, 0.4) 100%
+    );
+    z-index: 9;
+
+    .zy-container {
+      height: 100%;
+      .row {
+        height: 100%;
+        justify-content: center;
+        align-items: center;
+        .zy-col-text {
+          display: none !important;
+        }
+
+        .zy-col-form {
+          border-radius: 32px;
+          background: #fff;
+          box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
+          max-width: 536px;
+          padding: 48px;
+
+          .form_title {
+            color: #0f2d52;
+            text-align: center;
+            font-family: Bree;
+            font-size: 28px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 120%;
+            margin-bottom: 32px;
+          }
+
+          fieldset {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .mktoFormRow {
+              display: none !important;
+            }
+
+            .mktoFieldDescriptor.mktoFormCol {
+              width: 100%;
+              max-width: 212px;
+              margin-bottom: 16px !important;
+
+              .mktoOffset {
+                display: none !important;
+              }
+              .mktoFieldWrap {
+                display: block;
+                padding: 0;
+
+                .mktoGutter {
+                  display: none !important;
+                }
+
+                .mktoField {
+                  background-color: #fff;
+                  border: 1px solid #bfbfbf;
+                  border-radius: 8px;
+                  padding: 12px 124px 14px 16px !important;
+                  height: 50px;
+                  width: 100% !important;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 24px;
+                  color: #0f2d52;
+                }
+
+                .mktoLabel {
+                  position: absolute;
+                  top: 12px;
+                  left: 16px;
+                  font-family: "Segoe UI";
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 24px;
+                  color: #a9a9a9;
+                  transition: all 0.3s;
+                  pointer-events: none;
+                }
+
+                //when typing class added here to move label up
+                &.typing .mktoLabel {
+                  top: -12px;
+                  padding: 1px 6px;
+                  font-size: 13px;
+                  line-height: 20px;
+                  left: 10px;
+                  background: #fff;
+                }
+              }
+
+              &.field_7 {
+                max-width: 100%;
+              }
+            }
+          }
+
+          .mktoButtonRow {
+            display: flex;
+            justify-content: center;
+            margin-top: 16px;
+
+            .mktoButton {
+              background: #5fb53b;
+              padding: 12px 40px;
+              font-family: "Segoe UI";
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 24px;
+              color: #0f2d52;
+              transition: all 0.3s;
+              border: 0;
+              border-radius: 99px;
+
+              &:hover {
+                background: #0f2d52;
+                color: #fff;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
