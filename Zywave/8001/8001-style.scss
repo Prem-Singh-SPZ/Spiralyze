@@ -294,6 +294,10 @@ body.spz-8001 {
                   justify-content: space-between;
                   gap: 0;
 
+                  @media screen and (max-width: 767.98px) {
+                    display: block;
+                  }
+
                   .mktoClear {
                     display: none !important;
                   }
@@ -322,7 +326,7 @@ body.spz-8001 {
                         background-color: #fff;
                         border: 1px solid #bfbfbf;
                         border-radius: 8px;
-                        padding: 12px  15px !important;
+                        padding: 12px 15px !important;
                         height: 50px;
                         width: 100% !important;
                         font-size: 16px;
@@ -399,13 +403,14 @@ body.spz-8001 {
                         background: #fff;
                       }
 
-                      &.error{
+                      &.error {
                         .mktoField {
                           border-color: #e30004;
                         }
                       }
 
-                      &.error.filled,  &.error.typing{
+                      &.error.filled,
+                      &.error.typing {
                         .mktoLabel {
                           color: #e30004;
                         }
@@ -826,8 +831,9 @@ body.spz-8001 {
               line-height: 140%;
               white-space: nowrap;
 
-              &:hover,  &:active {
-                color: #5FB53B;
+              &:hover,
+              &:active {
+                color: #5fb53b;
               }
             }
           }
