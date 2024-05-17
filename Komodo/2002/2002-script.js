@@ -141,15 +141,15 @@ ready(function () {
               document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_buying_timeline select').value = "Immediately";
               trigger(document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_buying_timeline select'), 'change');
               document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_consent_countries select').insertAdjacentHTML("afterend", "<div class='arrow-select'></div>")
-              const step1Checking = setInterval(function () {
-                if (document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_firstname input').value != "" &&
-                  document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_lastname input').value != "" &&
-                  document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_company input').value != "" &&
-                  document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_email input').value != "") {
-                  clearInterval(step1Checking);
-                  document.querySelector('.spz-2002 #new-formDemo-wrapper').classList.add("step2")
-                }
-              }, 200)
+              // const step1Checking = setInterval(function () {
+              //   if (document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_firstname input').value != "" &&
+              //     document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_lastname input').value != "" &&
+              //     document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_company input').value != "" &&
+              //     document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_email input').value != "") {
+              //     clearInterval(step1Checking);
+              //     document.querySelector('.spz-2002 #new-formDemo-wrapper').classList.add("step2")
+              //   }
+              // }, 200)
             }
             //short form
             else {

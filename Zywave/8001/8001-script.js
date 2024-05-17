@@ -69,7 +69,7 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
             <div class="profile-header">
                 <div class="profile-image">
                     <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/8001/avatar-raeann-fortin_1.webp"
-                        alt="Profile Image">
+                        alt="Zach Boggs">
                 </div>
                 <div class="profile-details">
                     <p class="profile-name">Zach Boggs</p>
@@ -100,7 +100,7 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
             <picture>
                 <source media="(min-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/8001/frame_1171275638.webp" type="image/webp">
                 <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/8001/frame_1171275633.webp" type="image/webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/8001/frame_1171275636.webp" alt="Hero Image">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/8001/frame_1171275636.webp" alt="Whats Covered Image">
             </picture>
         </div>
     </div>
