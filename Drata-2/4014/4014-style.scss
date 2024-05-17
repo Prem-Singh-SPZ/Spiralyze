@@ -1,0 +1,74 @@
+body.spz-4014 {
+  .hero-section .list-grp-wrapper .list-group {
+    @media (min-width: 1199.98px) {
+      max-width: 521px;
+    }
+
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
+      padding-right: 40px;
+    }
+  }
+
+  .form-wrapper-spz
+    .hbspt-form
+    form
+    fieldset
+    .field.hs-fieldtype-checkbox
+    > .input
+    ul {
+    @media (min-width: 767.98px) {
+      flex-wrap: nowrap;
+    }
+
+    li {
+      margin-right: 16.5px;
+
+      @media (max-width: 1199.98px) {
+        margin-right: 20px;
+      }
+
+      &:nth-child(2) {
+        order: 2;
+        @media (max-width: 767.98px) {
+          margin-right: 24px;
+          min-width: 97.5px;
+        }
+      }
+      &:nth-child(3) {
+        order: 4;
+        min-width: 145px;
+
+        @media (max-width: 767.98px) {
+          order: 5;
+        }
+      }
+      &:nth-child(4) {
+        order: 3;
+
+        @media (max-width: 767.98px) {
+          margin-right: 0;
+          min-width: initial;
+        }
+      }
+
+      &:nth-child(5) {
+        margin-right: 0;
+
+        // @media (max-width: 767.98px) {
+        //   order: 4;
+        //   margin-right: 17px;
+        // }
+      }
+
+      > label > span {
+        white-space: nowrap;
+      }
+    }
+  }
+
+  .form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-font-element {
+    @media (max-width: 767.98px) {
+      margin-top: 0;
+    }
+  }
+}
