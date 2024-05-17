@@ -1,8 +1,5 @@
 document.body.classList.add('spz-8001');
 
-document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1700035287/netskope/1001/Checkbox_checked.svg" as="image">`
-);
-
 //create html for hero section, with header logo in row and copy and form in 2nd row
 document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
 <div class="header-row">
@@ -168,44 +165,6 @@ function formModify() {
     });
 
     // form state
-    //     var selector = 'body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
-
-    //     document.addEventListener('click', function (event) {
-    //         if (event.target.matches(selector)) {
-    //             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
-    //         }
-    //     }, true);
-
-    //     document.addEventListener('focus', function (event) {
-    //         if (event.target.matches(selector)) {
-    //             event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
-    //         }
-    //     }, true);
-
-    //     var eventList = ["blur", "focusout", "keyup"];
-    //     for (s_event of eventList) {
-    //         document.addEventListener(s_event, function (event) {
-    //             if (event.target.matches(selector)) {
-    //                 if (event.target.value == null || event.target.value == '') {
-    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('active');
-    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.remove('filled');
-    //                 } else {
-    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('active');
-    //                     event.target.closest('body form.mktoForm .mktoFormCol .mktoFieldWrap').classList.add('filled');
-
-    //                 }
-    //             }
-    //         });
-    //     }
-
-    //     document.addEventListener('focusout', function (event) {
-    //         document.querySelectorAll('body form.mktoForm .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-    //             elem.classList.remove('typing');
-    //         })
-    //     }, true);
-    // };
-
-    // form state
     var selector = '.spz-8001 .spz-form-container form.mktoForm .mktoFormCol .mktoFieldWrap input, .spz-8001 .spz-form-container form.mktoForm .mktoFormCol .mktoFieldWrap select';
     document.addEventListener('focus', function (event) {
         if (event.target.matches(selector)) {
@@ -253,12 +212,6 @@ function formModify() {
     }, true);
 
 };
-//Add hidden fields
-function setHiddenFields() {
-    if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-        document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', '#9001_spz_variant');
-    }
-}
 
 // Generic Code
 function waitForElm(selector) {
@@ -275,4 +228,3 @@ function waitForElm(selector) {
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
 }
-// });
