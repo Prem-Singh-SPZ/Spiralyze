@@ -496,7 +496,7 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
         document.querySelector('#HeroFormPanel #HeroFormTitleText .selection-tags .s-tag .industry .value').textContent = e.target.querySelector('.selected-content p').textContent;
 
         document.querySelector('#HeroFormCol .title-and-progress').classList.add('step-2');
-        document.querySelector('.step-wrapper .step-cards-container .step-cards .em-label').classList.add('i-checked');
+        // document.querySelector('.step-wrapper .step-cards-container .step-cards .em-label').classList.add('i-checked');
       }
 
       if (e.target.classList.contains("em-label")) {
@@ -563,7 +563,7 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
 
         document.querySelector('#HeroFormCol #HeroForm').insertAdjacentHTML('beforebegin', `<div class="step-wrapper step-1"><div class="step-title">
       What is your industry?</div><div class="step-cards-container"><div class="step-cards"><label for="i-elem-1" class="i-label">
-      <input type="radio" checked name="i-elem" id="i-elem-1">
+      <input type="radio" name="i-elem" id="i-elem-1">
       <div class="selected-content">
         <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578061/eptura/3020/icon-01-desktop_1.svg" alt="Business Services">
         <p>Business Services</p>
@@ -606,7 +606,7 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
     </label>
     </div></div></div>
     <div class="step-wrapper step-2"><div class="step-title">What is your employee range?</div><div class="step-cards-container"><div class="step-cards"><label for="em-elem-1" class="em-label">
-    <input type="radio" checked name="em-elem" id="em-elem-1">
+    <input type="radio" name="em-elem" id="em-elem-1">
     <div class="selected-content">
       <img src="//res.cloudinary.com/spiralyze/image/upload/v1714578098/eptura/3020/icon_desktop_15.svg" alt="0-199">
       <p>0-199</p>
@@ -631,7 +631,7 @@ if (location.href.indexOf('ppc-proxyclick-discover-a-better-way-to-check-in-visi
         document.querySelector('#HeroFormCol #HeroForm').classList.add('spz-hidden');
         document.querySelector('#HeroFormCol .step-wrapper.step-2').classList.add('spz-hidden');
         document.querySelector('#HeroFormTitleText .selection-tags').classList.add('spz-hidden');
-        document.querySelector('#HeroFormCol .step-wrapper.step-1 .step-cards .i-label').classList.add('i-checked');
+        // document.querySelector('#HeroFormCol .step-wrapper.step-1 .step-cards .i-label').classList.add('i-checked');
 
         if (document.querySelector('#HeroFormPanel #HeroFormTitleText .title-and-progress h6').textContent == 'Get a demo') {
           clearInterval(addContent);
