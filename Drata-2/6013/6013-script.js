@@ -16,6 +16,8 @@ function createTest() {
     document.querySelector('.review-section.desk').insertAdjacentElement('beforebegin', document.querySelector(".integrations-section"));
 
     appendCaseStudies();
+
+    submitTestDetails();
 }
 
 function appendCaseStudies() {
@@ -105,4 +107,32 @@ function appendCaseStudies() {
           </div>`);
         });
     }
+}
+
+//Passing test details to hidden fields
+function submitTestDetails() {
+    waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
+        let setValue = setInterval(() => {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_6013') {
+                clearInterval(setValue);
+            }
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_6013');
+        }, 100);
+    });
+}
+
+
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
 }
