@@ -56,7 +56,7 @@
   width: 100%;
   height: 1px;
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1711606594/komodohealth/1004/line.svg) no-repeat;
-  background-size: cover;
+  background-size: contain;
   background-position: center;
   top: 31px;
   position: relative;
@@ -64,6 +64,11 @@
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .top-text::after {
     top: 36px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .top-text::after {
+    background-size: cover;
   }
 }
 .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .top-text .l-number {
