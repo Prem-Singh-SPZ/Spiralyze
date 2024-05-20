@@ -27,9 +27,7 @@ ready(function () {
                                       </div>
                                       <div class="bottom-text">
                                           <div class="card-text">
-                                              Patients with
-                                              self-identified race
-                                              and ethnicity
+                                              Patients with <span>self-identified</span> race <br>and ethnicity
                                           </div>
                                       </div>
                                   </div>
@@ -141,7 +139,7 @@ ready(function () {
                                       </div>
                                       <div class="bottom-text">
                                           <div class="card-text">
-                                              Average historical patient journey <br>data
+                                              Average historical patient <br>journey data
                                           </div>
                                       </div>
                                   </div>

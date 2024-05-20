@@ -1,15 +1,29 @@
 .spz-1004 .body-container .row-depth-1.row-number-5.dnd_area-row-2-padding > .row-fluid {
   display: none !important;
 }
-.spz-1004 .new-slider-wrapper .stats-slider {
-  padding: 40px 20px 39px;
+.spz-1004 .new-slider-wrapper {
   background: #000 url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp") no-repeat;
   background-size: cover;
   background-position: top left;
 }
+.spz-1004 .new-slider-wrapper .stats-slider {
+  padding: 40px 20px 39px;
+  margin: auto;
+  max-width: 1332px;
+}
+@media (max-width: 1365.98px) {
+  .spz-1004 .new-slider-wrapper .stats-slider {
+    margin: 0 24px;
+  }
+}
 .spz-1004 .new-slider-wrapper .stats-slider .wrapper {
   max-width: 1330px;
   margin: 0 auto;
+}
+@media (max-width: 1023.98px) {
+  .spz-1004 .new-slider-wrapper .stats-slider .wrapper {
+    max-width: 97.5%;
+  }
 }
 .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper {
   position: relative;
@@ -42,10 +56,15 @@
   width: 100%;
   height: 1px;
   background: url(//res.cloudinary.com/spiralyze/image/upload/v1711606594/komodohealth/1004/line.svg) no-repeat;
-  background-size: contain;
+  background-size: cover;
   background-position: center;
   top: 31px;
   position: relative;
+}
+@media (min-width: 767.98px) and (max-width: 1023.98px) {
+  .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .top-text::after {
+    top: 36px;
+  }
 }
 .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .top-text .l-number {
   color: #68cce8;
@@ -78,11 +97,18 @@
 }
 @media (max-width: 1023.98px) {
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .bottom-text {
+    padding: 24px 0;
     min-height: 92px;
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
     max-width: 195px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .bottom-text {
+    padding: 20px 0;
+    max-width: 256px;
   }
 }
 .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .bottom-text .card-text {
@@ -94,14 +120,15 @@
   font-weight: 600;
   line-height: 26px;
 }
+.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .bottom-text .card-text span {
+  white-space: nowrap;
+}
 @media (max-width: 1023.98px) {
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .bottom-text .card-text {
     font-size: 16px;
     font-weight: 700;
     line-height: 24px;
   }
-}
-@media (max-width: 767.98px) {
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child .bottom-text .card-text br {
     display: none;
   }
@@ -237,9 +264,11 @@
   }
 }
 @media (max-width: 1023.98px) {
+  .spz-1004 .new-slider-wrapper {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
+  }
   .spz-1004 .new-slider-wrapper .stats-slider {
     padding: 19px 0 15px 0;
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
   }
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .child {
     -webkit-box-orient: vertical;
@@ -247,7 +276,7 @@
         -ms-flex-direction: column;
             flex-direction: column;
     max-width: 100%;
-    padding: 24px 0;
+    padding: 24px 0 0;
     width: 100%;
   }
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide__track {
@@ -266,9 +295,11 @@
   }
 }
 @media (max-width: 767.98px) {
+  .spz-1004 .new-slider-wrapper {
+    background: #000;
+  }
   .spz-1004 .new-slider-wrapper .stats-slider {
     padding: 10px 0 23px 0;
-    background: #000;
   }
   .spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide__slide {
     margin-right: 80px;

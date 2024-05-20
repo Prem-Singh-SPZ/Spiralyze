@@ -19,17 +19,27 @@ $font-family_4: Titillium Web, sans-serif;
     }
   }
   .new-slider-wrapper {
+    background: #000
+      url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp")
+      no-repeat;
+    background-size: cover;
+    background-position: top left;
     .stats-slider {
       padding: 40px 20px 39px;
-      background: #000
-        url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp")
-        no-repeat;
-      background-size: cover;
-      background-position: top left;
+      margin: auto;
+      max-width: 1332px;
+
+      @media (max-width: 1365.98px) {
+        margin: 0 24px;
+      }
 
       .wrapper {
         max-width: 1330px;
         margin: 0 auto;
+
+        @media (max-width: 1023.98px) {
+          max-width: 97.5%;
+        }
       }
       .slider-wrapper {
         position: relative;
@@ -57,10 +67,14 @@ $font-family_4: Titillium Web, sans-serif;
               height: 1px;
               background: url(//res.cloudinary.com/spiralyze/image/upload/v1711606594/komodohealth/1004/line.svg)
                 no-repeat;
-              background-size: contain;
+              background-size: cover;
               background-position: center;
               top: 31px;
               position: relative;
+
+              @media (min-width: 767.98px) and (max-width: 1023.98px) {
+                top: 36px;
+              }
             }
 
             .l-number {
@@ -86,9 +100,15 @@ $font-family_4: Titillium Web, sans-serif;
             align-items: flex-start;
             justify-content: center;
             @media (max-width: 1023.98px) {
+              padding: 24px 0;
               min-height: 92px;
               align-items: flex-start;
               max-width: 195px;
+            }
+
+            @media (max-width: 767.98px) {
+              padding: 20px 0;
+              max-width: 256px;
             }
 
             .card-text {
@@ -100,16 +120,20 @@ $font-family_4: Titillium Web, sans-serif;
               font-weight: 600;
               line-height: 26px;
 
+              span {
+                white-space: nowrap;
+              }
               @media (max-width: 1023.98px) {
                 font-size: 16px;
                 font-weight: 700;
                 line-height: 24px;
-              }
-
-              @media (max-width: 767.98px) {
                 br {
                   display: none;
                 }
+
+                // @media (min-width: 767.98px) {
+                //   max-width: 146px;
+                // }
               }
             }
           }
@@ -253,14 +277,14 @@ $font-family_4: Titillium Web, sans-serif;
 @media (max-width: 1023.98px) {
   .spz-1004 {
     .new-slider-wrapper {
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
       .stats-slider {
         padding: 19px 0 15px 0;
-        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
         .slider-wrapper {
           .child {
             flex-direction: column;
             max-width: 100%;
-            padding: 24px 0;
+            padding: 24px 0 0;
             width: 100%;
           }
 
@@ -288,9 +312,9 @@ $font-family_4: Titillium Web, sans-serif;
 @media (max-width: 767.98px) {
   .spz-1004 {
     .new-slider-wrapper {
+      background: #000;
       .stats-slider {
         padding: 10px 0 23px 0;
-        background: #000;
 
         .slider-wrapper {
           .splide__slide {
