@@ -11,198 +11,238 @@ ready(function () {
     //targeted page
     if (window.location.href.indexOf('https://www.komodohealth.com/contact-us') > -1) {
       document.querySelector('body .body-container .row-depth-1.row-number-5.dnd_area-row-2-padding').insertAdjacentHTML('afterbegin', `
-    <div class="new-slider-wrapper">
+      <div class="new-slider-wrapper">
       <div class="stats-slider">
-        <div class="wrapper">
-            <div class="slider-wrapper">
-                <section class="splide splide1">
-                    <div class="splide__track">
-                        <ul class="splide__list">
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                            330 M+
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                           Patients in the US
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        15 M
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Healthcare encounters every day
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        30%
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        More unique patients 
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        40%
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        More clinical encounters per patient
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        15 M
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Healthcare encounters every day
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        6 yr
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Average historical patient
-                                        journey data
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        3.5 M+
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Providers across care settings
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        450 K
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        HCOS across the continuum of care
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        100%
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Medicare data as a CMS
-                                         qualified entity
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        15-20
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Years of publication
-                                         and clinical trial data
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        11 B
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Lab records
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                            <li class="splide__slide">
-                                <div class="child">
-                                    <div class="top-text">
-                                        <div class="l-number">
-                                        1300
-                                        </div>
-                                    </div>
-                                    <div class="bottom-text">
-                                        <div class="card-text">
-                                        Hospital chargemaster &
-                                        in-hospital sources
-                                        </div>
-                                    </div>
-                                </div>
-                            </li>
-                        </ul>
-                    </div>
-                </section>
-                <div class="arrow-left"><img
-                        src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_left.svg"
-                        alt="Left Arrow" width="68" height="68" /></div>
-                <div class="arrow-right"><img
-                        src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_right.svg"
-                        alt="Right Arrow" width="68" height="68" /></div>
-            </div>
-        </div>
-    </div>
-    </div>
+          <div class="wrapper">
+              <div class="slider-wrapper">
+                  <section class="splide splide1">
+                      <div class="splide__track">
+                          <ul class="splide__list">
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              200M
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Patients with
+                                              self-identified race
+                                              and ethnicity
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              10K
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Unique health <br>insurance plans
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              97%
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Rx-to-Mx <br>match rate
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              160M
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Closed, linkable lives <br>per year
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              330M+
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Patients in the US
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              15M
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Healthcare encounters <br>everyday
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              2X
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              More unique patients than <br>legacy aggregators
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              40%
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              More clinical encounters per patient than legacy aggregators
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              7+ years
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Average historical patient journey <br>data
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              4M+
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Providers across <br>care settings
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              700K
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              HCOs across the continuum <br>of care
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              100%
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Medicare data as a CMS <br>qualified entity
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              23
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Years of publication and <br>clinical trial data
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              8B
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Lab records
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                              <li class="splide__slide">
+                                  <div class="child">
+                                      <div class="top-text">
+                                          <div class="l-number">
+                                              700
+                                          </div>
+                                      </div>
+                                      <div class="bottom-text">
+                                          <div class="card-text">
+                                              Hospital/owned facilities' itemized <br>charge data
+                                          </div>
+                                      </div>
+                                  </div>
+                              </li>
+                          </ul>
+                      </div>
+                  </section>
+                  <div class="arrow-left"><img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_left.svg"
+                          alt="Left Arrow" width="68" height="68" /></div>
+                  <div class="arrow-right"><img
+                          src="//res.cloudinary.com/spiralyze/image/upload/v1711606638/komodohealth/1004/arrow_right.svg"
+                          alt="Right Arrow" width="68" height="68" /></div>
+              </div>
+          </div>
+      </div>
+  </div>
     `);
 
 
