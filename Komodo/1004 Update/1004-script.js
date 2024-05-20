@@ -205,34 +205,37 @@ ready(function () {
     </div>
     `);
 
-      var splide = new Splide('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide1', {
-        type: 'loop',
-        perPage: 3,
-        autoplay: true,
-        arrows: false,
-        autoHeight: true,
-        pagination: false,
-        breakpoints: {
-          767: {
-            perPage: 1,
-            pagination: true,
-            arrows: false,
-          }
-        }
-      });
-      setTimeout(function () {
-        splide.mount()
-      }, 200)
-
-      document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-left img').addEventListener("click", function () {
-        splide.go('<');
-      })
-      document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-right img').addEventListener("click", function () {
-        splide.go('>');
-      })
 
       let i = 0;
       const CROInterval = setInterval(() => {
+        if (typeof (Splide)) {
+          var splide = new Splide('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide1', {
+            type: 'loop',
+            perPage: 3,
+            autoplay: true,
+            arrows: false,
+            autoHeight: true,
+            pagination: false,
+            breakpoints: {
+              767: {
+                perPage: 1,
+                pagination: true,
+                arrows: false,
+              }
+            }
+          });
+          setTimeout(function () {
+            splide.mount()
+          }, 200)
+
+          document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-left img').addEventListener("click", function () {
+            splide.go('<');
+          })
+          document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-right img').addEventListener("click", function () {
+            splide.go('>');
+          })
+        }
+
         if (document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]')) {
           clearInterval(CROInterval)
           document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]').value = "#1001_variant"
