@@ -6,6 +6,22 @@ function ready(fn) {
   }
 }
 ready(function () {
+
+  const heroImages = {
+    page1: {
+      four_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_3841.webp',
+      two_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1921.webp',
+      desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1441.webp',
+      tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_770.webp',
+    },
+  };
+
+  // Keep images in cache to avoid loading delay (according to the device resolution)
+  for (const key in heroImages) {
+    const img = new Image();
+    img.src = window.innerWidth > 3500 ? heroImages[key].four_k : window.innerWidth > 1600 ? heroImages[key].two_k : window.innerWidth > 1024 ? heroImages[key].desk : heroImages[key].tab;
+  }
+
   if (!document.querySelector('.spz-2002')) {
     document.querySelector('body').classList.add('spz-2002')
     const loadJS = (url, implementationCode, location) => {
@@ -35,7 +51,7 @@ ready(function () {
     document.querySelector('.spz-2002 #popup_request_a_demo .wcs-col-12').innerHTML = `
   <div class="wcs-pform">
     <div class="wcs-popup-heading">
-      <h2>Get a demo</h2>
+      <h2>Get a Demo</h2>
     </div>
   </div>
   `
@@ -87,7 +103,7 @@ ready(function () {
 
     //for form
     document.querySelector('.spz-2002 #popup_request_a_demo .wcs-popup-heading').insertAdjacentHTML("afterend", "<div id='new-formDemo-wrapper'><div class='lds-dual-ring'></div></div>")
-    document.querySelector('.spz-2002 #popup_request_a_demo .wcs-popup-heading h2').innerHTML = "Get a demo";
+    document.querySelector('.spz-2002 #popup_request_a_demo .wcs-popup-heading h2').innerHTML = "Get a Demo";
     //check if submitted
     if (sessionStorage.getItem("spz-2002")) {
       document.querySelector('.spz-2002 #new-formDemo-wrapper').classList.add("show")

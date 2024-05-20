@@ -197,6 +197,7 @@
   }
   @media screen and (max-width: 767.98px) {
     background: #fff;
+    padding: 16px;
   }
   @media screen and (min-width: 1600.98px) {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1921.webp)
@@ -222,7 +223,11 @@
 .spz-2002 #popup_request_a_demo {
   max-width: 448px !important;
   box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
-  padding: 24px 32px 32px !important;
+  padding: 16px 32px 32px !important;
+
+  @media (min-width: 767.98px) and (max-width: 1024.98px) {
+    max-width: 600px !important;
+  }
 }
 .spz-2002 #new-formDemo-wrapper .hs-form-field.width50 {
   width: calc((100% - 20px) / 2);
@@ -239,7 +244,7 @@
 .spz-2002 #popup_request_a_demo .close-modal {
   width: 20px;
   height: 20px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697439750/KomodoHealth/1003/close.svg") !important;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/komodohealth/2002/icon_x.svg") !important;
   top: 12px;
   right: 12px;
   outline: 0;
@@ -404,9 +409,8 @@
   -webkit-font-smoothing: antialiased;
   font-family: Titillium Web, sans-serif;
   font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: -0.16px;
+  font-weight: 400;
+  line-height: 16px;
   padding: 0 4px;
   color: #7e7e7e;
   box-shadow: 0px -8px 0px 0px #f8f7f7 inset;
@@ -415,9 +419,8 @@
 .spz-2002 #new-formDemo-wrapper .hs-form-field.focus > label span {
   font-family: Titillium Web, sans-serif;
   font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: -0.16px;
+  font-weight: 400;
+  line-height: 16px;
   padding: 0 4px;
   color: #000000;
   box-shadow: 0px -8px 0px 0px white inset;
@@ -458,6 +461,7 @@
   color: #68cce8 !important;
   text-decoration-skip-ink: none;
   text-underline-offset: 1px;
+  white-space: nowrap;
 }
 .spz-2002 #new-formDemo-wrapper .hs-richtext p a:hover,
 .spz-2002 #new-formDemo-wrapper .hs-richtext p a:active {
@@ -636,12 +640,18 @@
 }
 
 .spz-2002 #new-formDemo-wrapper .hs_consent_countries {
-  margin-bottom: 10px;
+  margin-bottom: 13px;
 }
 
 @media (max-width: 767.98px) {
   .spz-2002 .blocker:before {
     vertical-align: top;
+  }
+
+  .spz-2002 #new-formDemo-wrapper{
+    max-width: 312px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .spz-2002 #new-formDemo-wrapper .hs-form-field.width50 {
     width: 100%;
@@ -651,21 +661,25 @@
     margin-left: 0px;
   }
   .spz-2002 #popup_request_a_demo {
-    padding: 24px 16px 32px !important;
+    padding: 0 0 16px !important;
     box-shadow: none;
     width: 95.556% !important;
     max-width: 400px !important;
-    margin: 8px 0;
+    margin: 0;
   }
-  .spz-2002 #new-formDemo-wrapper .hs-form-field {
-    margin-bottom: 16px;
+  .spz-2002 #popup_request_a_demo .close-modal {
+    top: -4px;
+    right: -4px;
   }
+  // .spz-2002 #new-formDemo-wrapper .hs-form-field {
+  //   margin-bottom: 16px;
+  // }
   .spz-2002 #new-formDemo-wrapper .pp-parent {
     margin-top: 0px;
     margin-bottom: 0px;
   }
   .spz-2002 #new-formDemo-wrapper .pp-parent {
-    margin-top: -8px;
+    margin-top: -12px;
     margin-bottom: 1px;
   }
 
