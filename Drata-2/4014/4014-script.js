@@ -14,7 +14,7 @@ function loadTest() {
 
     waitForElm('.form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox>.input ul li>label>span').then(function () {
         document.querySelector('.form-wrapper-spz .hbspt-form form fieldset .field.hs-fieldtype-checkbox>.input ul li:nth-child(3)>label>span').textContent = 'Cyber Essentials';
-        document.querySelector('.form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-font-element').textContent = 'For partnership inquiries, please contact partnerships@drata.com'
+        // document.querySelector('.form-wrapper-spz form .form-columns-0 .hs-richtext.hs-main-font-element').textContent = 'For partnership inquiries, please contact partnerships@drata.com';
     });
 
     // setHiddenFields();
