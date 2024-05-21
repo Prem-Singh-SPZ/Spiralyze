@@ -2,6 +2,22 @@ let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
     if (body) {
         clearInterval(bodyLoaded);
+
+        const heroImages = {
+            page1: {
+                two_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/1920.webp',
+                desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/1440.webp',
+                tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/768.webp',
+                mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/375.webp',
+            },
+        };
+
+        // Keep images in cache to avoid loading delay (according to the device resolution)
+        for (const key in heroImages) {
+            const img = new Image();
+            img.src = window.innerWidth > 1600 ? heroImages[key].two_k : window.innerWidth > 1023 ? heroImages[key].desk : window.innerWidth > 767 ? heroImages[key].tab : heroImages[key].mob;
+        }
+
         if (!body.classList.contains('spz-1002')) {
             body.classList.add('spz-1002');
             waitForElm('.spz-1002 #zy-demo-form-section .zy-col-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
