@@ -1,9 +1,8 @@
-
 $bree: "BreeBold", Arial, sans-serif;
 $segoe: "Segoe UI", Arial, sans-serif;
 body.spz-8001 {
   overflow-x: hidden;
-  
+
   > div[style] > section[style] {
     display: none !important;
   }
@@ -79,14 +78,14 @@ body.spz-8001 {
       .hero-col {
         display: flex;
         justify-content: space-between;
-        padding: 20px 0 240px;
+        padding: 20px 0 239.5px;
 
         @media screen and (max-width: 1023.98px) {
           flex-direction: column-reverse;
           align-items: center;
           max-width: 648px;
           margin: auto;
-          padding: 20px 0 509px;
+          padding: 20px 0 510px;
         }
 
         @media screen and (max-width: 767.98px) {
@@ -94,7 +93,7 @@ body.spz-8001 {
         }
 
         .hero-copy {
-          max-width: 504px;
+          max-width: 510px;
 
           @media screen and (max-width: 1199.98px) {
             width: 49%;
@@ -107,27 +106,28 @@ body.spz-8001 {
           .hero-eyebrow {
             color: #5fb53b;
             font-family: $segoe;
-            font-size: 15px;
+            font-size: 16px;
             font-style: normal;
-            font-weight: 500;
-            line-height: 130%;
+            font-weight: 600;
+            line-height: 140%;
+            letter-spacing: 0.6px;
             text-transform: uppercase;
-            margin: 0 0 0;
+            margin: 0 0 8px;
 
-            @media screen and (max-width: 767.98px) {
-              margin: 0 0 4px;
-            }
+            // @media screen and (max-width: 767.98px) {
+            //   margin: 0 0 4px;
+            // }
           }
 
           .hero-title {
             color: #fff;
-            font-feature-settings: "salt" on;
+            font-feature-settings: "ss03" on, "liga" off;
             font-family: $bree;
             font-size: 56px;
             font-style: normal;
             font-weight: 700;
             line-height: 110%;
-            margin: 0 0 30px;
+            margin: 0 0 22px;
 
             @media screen and (max-width: 767.98px) {
               font-size: 32px;
@@ -145,6 +145,10 @@ body.spz-8001 {
             align-items: center;
             width: fit-content;
             margin: 0 0 30px;
+
+            @media screen and (max-width: 1023.98px) {
+              margin: 0 0 29px;
+            }
 
             @media screen and (max-width: 767.98px) {
               border: none;
@@ -170,7 +174,7 @@ body.spz-8001 {
                 border-radius: 10px;
                 height: 36px;
                 width: 92%;
-                margin-top: 10px;
+                margin-top: 9px;
               }
 
               svg {
@@ -187,7 +191,7 @@ body.spz-8001 {
                 font-family: $segoe;
                 font-size: 16px;
                 font-style: normal;
-                font-weight: 600;
+                font-weight: 500;
                 line-height: 140%;
 
                 @media screen and (max-width: 767.98px) {
@@ -219,11 +223,15 @@ body.spz-8001 {
               font-style: normal;
               font-weight: 400;
               line-height: 140%;
-              margin-bottom: 16px;
+              margin-bottom: 15px;
               position: relative;
 
               span {
                 font-weight: 700;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                margin-bottom: 14px;
               }
 
               &::before {
@@ -244,7 +252,7 @@ body.spz-8001 {
 
         .hero-form {
           @media screen and (max-width: 1023.98px) {
-            margin: 0 0 62px;
+            margin: 0 0 61px;
           }
 
           @media screen and (max-width: 767.98px) {
@@ -520,13 +528,14 @@ body.spz-8001 {
           }
           @media screen and (max-width: 1023.98px) {
             width: 100%;
-            margin-bottom: 32px;
+            margin-bottom: 31px;
             max-width: 584px;
           }
 
           @media screen and (max-width: 767.98px) {
             max-width: 280px;
-            padding: 32px 20px 30px;
+            padding: 32px 20px 30.5px;
+            margin-bottom: 32px;
           }
 
           .profile-header {
@@ -563,7 +572,11 @@ body.spz-8001 {
                 font-style: normal;
                 font-weight: 700;
                 line-height: 110%;
-                margin: 0 0 8px;
+                margin: 0 0 13px;
+
+                @media screen and (max-width: 1023.98px) {
+                  margin: 0 0 8px;
+                }
 
                 @media screen and (max-width: 767.98px) {
                   font-size: 20px;
@@ -640,12 +653,12 @@ body.spz-8001 {
         display: flex;
         justify-content: space-between;
         align-items: center;
-        padding: 196px 0 24px;
+        padding: 195px 0 24px;
 
         @media screen and (max-width: 1023.98px) {
           flex-direction: column;
           align-items: center;
-          padding: 176px 0 16px;
+          padding: 177px 0 16px;
         }
 
         @media screen and (max-width: 767.98px) {
@@ -667,7 +680,7 @@ body.spz-8001 {
             font-style: normal;
             font-weight: 700;
             line-height: 110%;
-            margin: 0 0 32px;
+            margin: -2px 0 31px;
 
             @media screen and (max-width: 1023.98px) {
               margin: 0 0 26px;
@@ -808,7 +821,7 @@ body.spz-8001 {
           }
 
           li {
-            margin-left: 32px;
+            margin-left: 33px;
 
             @media screen and (max-width: 1023.98px) {
               margin-left: 16px;

@@ -88,7 +88,7 @@ body.spz-8001 .hero-section .hero-row .hero-col {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  padding: 20px 0 240px;
+  padding: 20px 0 239.5px;
 }
 @media screen and (max-width: 1023.98px) {
   body.spz-8001 .hero-section .hero-row .hero-col {
@@ -101,7 +101,7 @@ body.spz-8001 .hero-section .hero-row .hero-col {
             align-items: center;
     max-width: 648px;
     margin: auto;
-    padding: 20px 0 509px;
+    padding: 20px 0 510px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -110,7 +110,7 @@ body.spz-8001 .hero-section .hero-row .hero-col {
   }
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-copy {
-  max-width: 504px;
+  max-width: 510px;
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-8001 .hero-section .hero-row .hero-col .hero-copy {
@@ -126,28 +126,24 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-copy {
 body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-eyebrow {
   color: #5fb53b;
   font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 15px;
+  font-size: 16px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 130%;
+  font-weight: 600;
+  line-height: 140%;
+  letter-spacing: 0.6px;
   text-transform: uppercase;
-  margin: 0 0 0;
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-eyebrow {
-    margin: 0 0 4px;
-  }
+  margin: 0 0 8px;
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-title {
   color: #fff;
-  -webkit-font-feature-settings: "salt" on;
-          font-feature-settings: "salt" on;
+  -webkit-font-feature-settings: "ss03" on, "liga" off;
+          font-feature-settings: "ss03" on, "liga" off;
   font-family: "BreeBold", Arial, sans-serif;
   font-size: 56px;
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
-  margin: 0 0 30px;
+  margin: 0 0 22px;
 }
 @media screen and (max-width: 767.98px) {
   body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-title {
@@ -171,6 +167,11 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .date-and-time {
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 0 30px;
+}
+@media screen and (max-width: 1023.98px) {
+  body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .date-and-time {
+    margin: 0 0 29px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .date-and-time {
@@ -209,7 +210,7 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .date-and-time .time 
     border-radius: 10px;
     height: 36px;
     width: 92%;
-    margin-top: 10px;
+    margin-top: 9px;
   }
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .date-and-time .date svg,
@@ -229,7 +230,7 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .date-and-time .time 
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
-  font-weight: 600;
+  font-weight: 500;
   line-height: 140%;
 }
 @media screen and (max-width: 767.98px) {
@@ -261,11 +262,16 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-list li {
   font-style: normal;
   font-weight: 400;
   line-height: 140%;
-  margin-bottom: 16px;
+  margin-bottom: 15px;
   position: relative;
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-list li span {
   font-weight: 700;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-list li {
+    margin-bottom: 14px;
+  }
 }
 body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-list li::before {
   content: "";
@@ -280,7 +286,7 @@ body.spz-8001 .hero-section .hero-row .hero-col .hero-copy .hero-list li::before
 }
 @media screen and (max-width: 1023.98px) {
   body.spz-8001 .hero-section .hero-row .hero-col .hero-form {
-    margin: 0 0 62px;
+    margin: 0 0 61px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -562,14 +568,15 @@ body.spz-8001 .profile-section .profile-row .profile-col .profile-card {
 @media screen and (max-width: 1023.98px) {
   body.spz-8001 .profile-section .profile-row .profile-col .profile-card {
     width: 100%;
-    margin-bottom: 32px;
+    margin-bottom: 31px;
     max-width: 584px;
   }
 }
 @media screen and (max-width: 767.98px) {
   body.spz-8001 .profile-section .profile-row .profile-col .profile-card {
     max-width: 280px;
-    padding: 32px 20px 30px;
+    padding: 32px 20px 30.5px;
+    margin-bottom: 32px;
   }
 }
 body.spz-8001 .profile-section .profile-row .profile-col .profile-card .profile-header {
@@ -610,7 +617,12 @@ body.spz-8001 .profile-section .profile-row .profile-col .profile-card .profile-
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
-  margin: 0 0 8px;
+  margin: 0 0 13px;
+}
+@media screen and (max-width: 1023.98px) {
+  body.spz-8001 .profile-section .profile-row .profile-col .profile-card .profile-header .profile-details .profile-name {
+    margin: 0 0 8px;
+  }
 }
 @media screen and (max-width: 767.98px) {
   body.spz-8001 .profile-section .profile-row .profile-col .profile-card .profile-header .profile-details .profile-name {
@@ -691,7 +703,7 @@ body.spz-8001 .whats-covered-section .wc-row .wc-col {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  padding: 196px 0 24px;
+  padding: 195px 0 24px;
 }
 @media screen and (max-width: 1023.98px) {
   body.spz-8001 .whats-covered-section .wc-row .wc-col {
@@ -702,7 +714,7 @@ body.spz-8001 .whats-covered-section .wc-row .wc-col {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    padding: 176px 0 16px;
+    padding: 177px 0 16px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -728,7 +740,7 @@ body.spz-8001 .whats-covered-section .wc-row .wc-col .wc-copy .wc-title {
   font-style: normal;
   font-weight: 700;
   line-height: 110%;
-  margin: 0 0 32px;
+  margin: -2px 0 31px;
 }
 @media screen and (max-width: 1023.98px) {
   body.spz-8001 .whats-covered-section .wc-row .wc-col .wc-copy .wc-title {
@@ -885,7 +897,7 @@ body.spz-8001 .zy-subfooter-section .sf-row .sf-col .zy-subfooter-menu {
   }
 }
 body.spz-8001 .zy-subfooter-section .sf-row .sf-col .zy-subfooter-menu li {
-  margin-left: 32px;
+  margin-left: 33px;
 }
 @media screen and (max-width: 1023.98px) {
   body.spz-8001 .zy-subfooter-section .sf-row .sf-col .zy-subfooter-menu li {
