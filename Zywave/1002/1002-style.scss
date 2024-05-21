@@ -9,6 +9,7 @@ body.spz-1002.show-popup {
   overflow: hidden !important;
   touch-action: none;
   -ms-touch-action: none;
+  pointer-events: none;
 }
 .spz-1002 {
   #zy-demo-form-section {
@@ -373,6 +374,7 @@ body.spz-1002.show-popup {
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/375.webp")
       no-repeat left top;
     background-size: cover;
+    pointer-events: none;
     visibility: visible;
 
     @media (min-width: 767.98px) {
@@ -398,7 +400,12 @@ body.spz-1002.show-popup {
       -webkit-transform: translateY(50%);
       -ms-transform: translateY(50%);
       transform: translateY(50%);
+      pointer-events: all;
     }
+  }
+
+  .embeddedServiceHelpButton{
+    pointer-events: all;
   }
 }
 @media (max-width: 767.98px) {
