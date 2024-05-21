@@ -94,7 +94,9 @@ function formModify() {
                         event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
                     } else {
                         event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                        event.target.parentNode.querySelector('.mktoError').style.display = 'none';
+                        if (event.target.parentNode.querySelector('.mktoError')) {
+                            event.target.parentNode.querySelector('.mktoError').style.display = 'none';
+                        }
                     }
                 } else {
                     if (event.target.classList.contains('mktoInvalid')) {

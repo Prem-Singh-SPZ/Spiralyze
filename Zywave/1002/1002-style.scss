@@ -370,8 +370,29 @@ body.spz-1002.show-popup {
 }
 .spz-1002.show-popup {
   #zy-demo-form-section {
-    background: rgba(0, 0, 0, 0.6);
+    background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/375.webp")
+      no-repeat left top;
+    background-size: cover;
     visibility: visible;
+
+    @media (min-width: 767.98px) {
+      background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/768.webp")
+        no-repeat left top;
+      background-size: cover;
+    }
+
+    @media (min-width: 1023.98px) {
+      background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/1440.webp")
+        no-repeat left top;
+      background-size: cover;
+    }
+
+    @media (min-width: 1900.98px) {
+      background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/1920.webp")
+        no-repeat left top;
+      background-size: cover;
+    }
+
     .zy-container {
       bottom: 50%;
       -webkit-transform: translateY(50%);
