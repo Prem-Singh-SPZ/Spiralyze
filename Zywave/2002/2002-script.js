@@ -39,11 +39,11 @@ function pageModify() {
 
         document.querySelector('.zy-homepage-hero-container').insertAdjacentHTML('afterend', `<div class="spz-brands-section">
         <div class="brand-section-wrapper">
-         <h6 class="bs-title">Join 15,000+ <br> insurers, agencies, and service providers using Zywave. </h6>
+         <h6 class="bs-title">Join 18,000+ <br>insurers, agencies, and service providers using Zywave.</h6>
          <picture>
-          <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_desktop.webp">
-          <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_tablet.webp">
-          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/logos_mobile_1.webp" alt="Brand Logos" class="bs-logos">
+          <source media="(min-width: 1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/frame_1000003341.webp">
+          <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/frame_1000003562.webp">
+          <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/2002/frame_1000003561.webp" alt="Brand Logos" class="bs-logos">
          </picture>
         </div>
        </div>`);
