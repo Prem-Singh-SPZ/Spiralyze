@@ -22,10 +22,10 @@ function loadTest() {
 function setHiddenFields() {
     waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
         let setValue = setInterval(() => {
-            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_4014') {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_4015') {
                 clearInterval(setValue);
             }
-            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_4014');
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_4015');
         }, 100);
     });
 }
