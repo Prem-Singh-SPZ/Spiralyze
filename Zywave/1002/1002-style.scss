@@ -31,9 +31,10 @@ body.spz-1002.show-popup {
     -ms-flex-pack: center;
     justify-content: center;
     visibility: hidden;
-    -webkit-transition: all 0.8s ease-in-out;
-    -o-transition: all 0.8s ease-in-out;
-    transition: all 0.8s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+
     .zy-container {
       width: 100%;
       max-width: 536px;
@@ -53,9 +54,9 @@ body.spz-1002.show-popup {
       -ms-transform: unset;
       transform: unset;
       bottom: 100%;
-      -webkit-transition: all 0.8s ease-in-out;
-      -o-transition: all 0.8s ease-in-out;
-      transition: all 0.8s ease-in-out;
+      -webkit-transition: all 0.3s ease-in-out;
+      -o-transition: all 0.3s ease-in-out;
+      transition: all 0.3s ease-in-out;
     }
     .close-icon {
       position: absolute;
@@ -151,7 +152,7 @@ body.spz-1002.show-popup {
               font-family: $font-family_2;
               font-size: 16px;
               font-style: normal;
-              font-weight: 400;
+              font-weight: 400 !important;
               line-height: 1.5;
               pointer-events: none;
               -webkit-transition: all 0.3s ease-in-out;
@@ -376,6 +377,10 @@ body.spz-1002.show-popup {
     background-size: cover;
     pointer-events: none;
     visibility: visible;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
 
     @media (min-width: 767.98px) {
       background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/768.webp")
@@ -404,7 +409,7 @@ body.spz-1002.show-popup {
     }
   }
 
-  .embeddedServiceHelpButton{
+  .embeddedServiceHelpButton {
     pointer-events: all;
   }
 }

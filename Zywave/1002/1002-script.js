@@ -100,7 +100,7 @@ function formModify() {
     for (s_event of eventList) {
         document.addEventListener(s_event, function (event) {
             if (event.target.matches(selector)) {
-                if (event.target.value == null || event.target.value == '') {
+                if (event.target.value == null || event.target.value.trim() == '') {
                     event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('filled');
                 } else {
                     event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('filled');
@@ -138,9 +138,9 @@ function formModify() {
     // Form Progressive Code Here...
     document.addEventListener('focusin', function (event) {
         if (event.target.matches(selector)) {
-            var fname = document.querySelector('input#FirstName').value;
-            var lname = document.querySelector('input#LastName').value;
-            var email = document.querySelector('input#Email').value;
+            var fname = document.querySelector('input#FirstName').value.trim();
+            var lname = document.querySelector('input#LastName').value.trim();
+            var email = document.querySelector('input#Email').value.trim();
             var jobcategory = document.querySelector('select#websiteFormJobDescription').value;
             var i = 0;
             if (fname != '') {
