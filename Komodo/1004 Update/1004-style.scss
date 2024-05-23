@@ -22,10 +22,10 @@ $font-family_4: Titillium Web, sans-serif;
   }
   .new-slider-wrapper {
     background: #000
-      url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background.webp")
+      url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/back_1440.webp")
       no-repeat;
     background-size: cover;
-    background-position: top left;
+    background-position: top center;
     .stats-slider {
       padding: 40px 20px 39px;
       margin: auto;
@@ -263,6 +263,31 @@ $font-family_4: Titillium Web, sans-serif;
       }
     }
   }
+
+  .dnd_area-row-0-background-image {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/hero_background_1440.webp") !important;
+    background-size: cover !important;
+    background-position: center center !important;
+    background-repeat: no-repeat !important;
+
+    @media (max-width: 1024.98px) {
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_768.webp") !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+    }
+
+    @media (max-width: 767.98px) {
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_360.webp") !important;
+      background-size: cover !important;
+      background-position: center center !important;
+      background-repeat: no-repeat !important;
+    }
+  }
+
+  .dnd_area-row-1-background-image{
+    background: #000000 !important;
+  }
 }
 @media (max-width: 1280.98px) {
   .spz-1004 {
@@ -283,7 +308,7 @@ $font-family_4: Titillium Web, sans-serif;
 @media (max-width: 1023.98px) {
   .spz-1004 {
     .new-slider-wrapper {
-      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/background_1.webp");
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/back_768.webp");
       .stats-slider {
         padding: 19px 0 15px 0;
         .slider-wrapper {
@@ -318,7 +343,7 @@ $font-family_4: Titillium Web, sans-serif;
 @media (max-width: 767.98px) {
   .spz-1004 {
     .new-slider-wrapper {
-      background: #000;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/back_360.webp");
       .stats-slider {
         padding: 10px 0 23px 0;
 
