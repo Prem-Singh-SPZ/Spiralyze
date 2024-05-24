@@ -3,7 +3,24 @@ $color_2: #4a4a4a;
 $color_3: #000;
 $color_4: #fff;
 
+html.spz-modal-show {
+  overflow: hidden !important;
+}
+
 .spz-4006 {
+  &.spz-modal-show {
+    overflow: hidden !important;
+  }
+
+  //hiding controls modal
+  &[class*="go"] {
+    overflow-x: unset;
+    overflow-y: initial;
+  }
+  #hs-web-interactives-top-anchor {
+    display: none !important;
+  }
+
   .popup-wrapper {
     position: fixed;
     top: 0;
