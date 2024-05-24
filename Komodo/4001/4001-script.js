@@ -73,7 +73,3 @@ if (!document.querySelector('.spz-4001')) {
         bodyScrollLock.enableBodyScroll(document.querySelector('.spz-4001 .popup-wrapper'));
     })
 }
-/* EDITELEMENT */
-vwo_$(".tag").html("Complete RWD | Patient-Level Analytics | Innovative Software");
-/* EDITELEMENT */
-vwo_$(".desc").html("Answer your complex questions with the industry’s only full-stack insights platform");
