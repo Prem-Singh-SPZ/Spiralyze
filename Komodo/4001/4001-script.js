@@ -20,7 +20,7 @@ if (!document.querySelector('.spz-4001')) {
             <div class="left">
               <div class="title">Get a demo</div>
               <div class="tag">Patient Data | Clinical Outcomes | Treatment Data | Lab Records</div>
-              <div class="desc">Answer your complex questions with the industry's largest patient database</div>
+              <div class="desc">Answer your complex questions with the industry&#8217;s largest patient database</div>
               <a class="cta" href="#popup_request_a_demo" rel="modal:open">
                 Get a demo
               </a>

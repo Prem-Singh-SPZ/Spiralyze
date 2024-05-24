@@ -1,6 +1,9 @@
 if (!document.querySelector('.spz-4006') && window.innerWidth > 1024) {
     document.body.classList.add('spz-4006');
 
+    const img = new Image();
+    img.src = "//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/4006/ui_1441.webp";
+
     document.querySelector('body').insertAdjacentHTML("beforeend", `
         <div class="popup-wrapper">
           <div class="getdemo-popup">
