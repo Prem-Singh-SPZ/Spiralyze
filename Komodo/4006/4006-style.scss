@@ -3,13 +3,17 @@ $color_2: #4a4a4a;
 $color_3: #000;
 $color_4: #fff;
 
-html.spz-modal-show {
-  overflow: hidden !important;
+@media (min-width: 1024.98px) {
+  html.spz-modal-show {
+    overflow: hidden !important;
+  }
 }
 
 .spz-4006 {
-  &.spz-modal-show {
-    overflow: hidden !important;
+  @media (min-width: 1024.98px) {
+    &.spz-modal-show {
+      overflow: hidden !important;
+    }
   }
 
   //hiding controls modal
@@ -33,36 +37,55 @@ html.spz-modal-show {
     padding: 40px 0;
     height: 100%;
     .getdemo-popup {
-      width: 794px;
-      background: white;
+      width: 874px;
+      height: 448px;
+      background: #000
+        url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/4006/background_1441.webp)
+        no-repeat;
+      background-position: top right;
+      background-size: cover;
       display: flex;
       position: relative;
       margin: auto;
       .left {
-        width: 387px;
-        text-align: center;
-        padding: 23px 32px;
+        width: 460px;
+        padding: 24px 32px 32px;
         .title {
           color: $color_1;
           font-size: 16px;
           font-weight: 700;
+          line-height: 24px;
           letter-spacing: 0.8px;
           text-transform: uppercase;
-          margin-top: 24px;
+          margin: 0 0 12px;
         }
-        .tag {
-          color: $color_2;
-          font-size: 12px;
-          font-weight: 400;
-          line-height: 20px;
-          margin-top: 10.5px;
-        }
-        .desc {
-          color: $color_3;
+        .description {
+          color: $color_4;
           font-size: 24px;
           font-weight: 400;
           line-height: 32px;
-          margin-top: 14px;
+          margin: 0 0 12px;
+        }
+
+        .m-list {
+          padding: 0;
+          margin: 0;
+          list-style: none;
+          li {
+            padding-left: 32px;
+            background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/4006/bullet.webp)
+              no-repeat left 5px;
+            background-size: 20px 20px;
+            margin: 0 0 12px;
+            color: #f0eeee;
+            font-size: 16px;
+            font-weight: 400;
+            line-height: 24px;
+
+            span {
+              font-weight: 700;
+            }
+          }
         }
         .cta {
           display: flex;
@@ -70,38 +93,38 @@ html.spz-modal-show {
           justify-content: center;
           border-radius: 100px;
           background: #68cce8;
-          width: 323px;
+          width: 396px;
           height: 48px;
           text-decoration: none;
           color: $color_3;
-          margin: 31px auto 32px auto;
+          margin: 31px auto 0 0;
           font-size: 16px;
           font-weight: 700;
           line-height: 24px;
           letter-spacing: 0.8px;
           text-transform: uppercase;
           outline: 0;
+          border: 2px solid #68cce8;
           &:hover {
-            background-color: #000000;
-            color: $color_4;
+            background-color: #fff;
           }
           &:active {
             background-color: #4a4a4a;
             color: $color_4;
+            border: none;
           }
         }
       }
       .right {
-        background: #f0eeee;
-        width: calc(100% - 387px);
+        width: calc(100% - 460px);
         position: relative;
         .popup-hero {
           position: absolute;
           height: auto;
-          width: 517px;
+          width: 504px;
           pointer-events: none;
-          top: -8px;
-          left: 6px;
+          top: -3px;
+          left: -15px;
         }
       }
     }
@@ -122,6 +145,7 @@ html.spz-modal-show {
 @media (max-width: 1024.98px) {
   .spz-4006 {
     .popup-wrapper {
+      display: none !important;
       .getdemo-popup {
         flex-direction: column;
         width: 491px;
