@@ -1,0 +1,200 @@
+body {
+  background: #000;
+  margin: 0;
+  padding: 0;
+
+  .single-review-banner {
+    .single-review-banner-content {
+      background: rgba(255, 255, 255, 0.1);
+      padding: 32px;
+      display: flex;
+      align-items: center;
+
+      @media (max-width: 767.98px) {
+        flex-direction: column;
+        padding: 24px;
+      }
+
+      .left-image-name {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        max-width: 348px;
+        width: 100%;
+        border-right: 1px solid rgba(255, 255, 255, 0.2);
+
+        @media (max-width: 1024.98px) {
+          max-width: 264px;
+        }
+
+        @media (max-width: 767.98px) {
+          border-right: none;
+          border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+          max-width: 100%;
+
+          padding-bottom: 32px;
+        }
+
+        .profile-img {
+          img {
+            width: 71px;
+            height: auto;
+          }
+        }
+
+        .profile-name {
+          margin-left: 20px;
+
+          h6 {
+            color: #fff;
+            font-family: "Titillium Web";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            margin: 4px 0 0;
+          }
+
+          p {
+            color: #fff;
+            font-family: "Titillium Web";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+          }
+        }
+      }
+      .right-copy {
+        padding: 0 8px 0 56px;
+
+        @media (max-width: 767.98px) {
+          padding: 24px 0 0;
+        }
+
+        p {
+          color: #fff;
+          font-family: "Titillium Web";
+          font-size: 24px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 32px;
+          margin: 0;
+
+          @media (max-width: 1024.98px) {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+      }
+    }
+  }
+
+  .three-col-cards-section {
+    .tcc-title h6 {
+      color: #fff;
+      text-align: center;
+      font-family: "Titillium Web";
+      font-size: 48px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 56px;
+      margin: 0;
+
+      @media (max-width: 1024.98px) {
+        font-size: 40px;
+        line-height: 48px;
+      }
+
+      @media (max-width: 767.98px) {
+        text-align: left;
+        font-size: 32px;
+        line-height: 40px;
+      }
+    }
+
+    .three-col-cards {
+      display: flex;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      margin: 48px 0;
+
+      .three-col-card {
+        max-width: calc(33.3333% - 20px);
+        width: 100%;
+        display: flex;
+        padding: 24px;
+        flex-direction: column;
+        align-items: flex-start;
+        background: rgba(255, 255, 255, 0.1);
+        margin-bottom: 20px;
+
+        .three-col-card-image {
+          img {
+            width: 96px;
+            height: auto;
+          }
+        }
+
+        .three-col-card-content {
+          margin-top: 24px;
+
+          h6 {
+            color: #fff;
+            font-family: "Titillium Web";
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 26px;
+            margin: 0 0 8px;
+          }
+          p {
+            color: #fff;
+            font-family: "Titillium Web";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 24px;
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .tcc-cta {
+      text-align: center;
+
+      .spz-cta {
+        display: flex;
+        height: 48px;
+        padding: 12px 16px;
+        justify-content: center;
+        align-items: center;
+        border-radius: 100px;
+        background: #68cce8;
+        color: #000;
+        font-family: "Titillium Web";
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        letter-spacing: 0.8px;
+        text-transform: uppercase;
+        width: 149px;
+        text-decoration: none;
+
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
+
+        &:hover {
+          background: #fff;
+        }
+        &:active {
+          background: #4a4a4a;
+          color: #fff;
+        }
+      }
+    }
+  }
+}
