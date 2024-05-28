@@ -98,24 +98,28 @@ body .hs-page .splide__slide .logo img {
         background-position: center center !important;
         background-repeat: no-repeat !important;
     }
+
     .dnd_area-row-1-background-image {
         background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/10001/bg-logo-768.webp') !important;
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
     }
+
     .dnd_area-row-2-background-image {
         background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/10001/bg-review-768.webp') !important;
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
     }
+
     .dnd_area-row-3-background-image {
         background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/10001/bg-cards-768_1.webp') !important;
         background-size: cover !important;
         background-position: center center !important;
         background-repeat: no-repeat !important;
     }
+
     .dnd_area-row-4-background-image {
         background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/10001/bg-light-768.webp') !important;
         background-size: cover !important;
@@ -136,15 +140,11 @@ body .hs-page .splide__slide .logo img {
     }
 
     body .hs-page .band-logo .wrapper .logo-container .logo:nth-child(3) {
-        -webkit-box-ordinal-group: 1;
-        -ms-flex-order: 0;
-        order: 0;
+        order: 5;
     }
 
     body .hs-page .band-logo .wrapper .logo-container .logo:first-child {
-        -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-        order: 1;
+        order: 0;
     }
 
     body .hs-page .band-logo .wrapper .logo-container .logo:nth-child(2) {
@@ -160,9 +160,11 @@ body .hs-page .splide__slide .logo img {
     }
 
     body .hs-page .band-logo .wrapper .logo-container .logo:nth-child(4) {
-        -webkit-box-ordinal-group: 5;
-        -ms-flex-order: 4;
-        order: 4;
+        order: 1;
+    }
+
+    body .band-logo .wrapper .logo-container .logo {
+        margin-bottom: 20px;
     }
 
     body .hs-page .single-card-slider {
@@ -190,5 +192,10 @@ body .hs-page .splide__slide .logo img {
 
     body .hs-page .single-card-slider .slider-wrapper .splide__slide .left>img {
         display: none;
+    }
+
+    body .single-card-slider .slider-wrapper .child {
+        max-width: 500px;
+        width: 100%;
     }
 }
