@@ -117,8 +117,11 @@ body {
     .three-col-cards {
       display: flex;
       justify-content: space-between;
-      flex-wrap: wrap;
       margin: 48px 0;
+
+      @media (min-width: 767.98px) {
+        flex-wrap: wrap;
+      }
 
       .three-col-card {
         max-width: calc(33.3333% - 20px);
@@ -129,6 +132,10 @@ body {
         align-items: flex-start;
         background: rgba(255, 255, 255, 0.1);
         margin-bottom: 20px;
+
+        @media (max-width: 767.98px) {
+          max-width: 100;
+        }
 
         .three-col-card-image {
           img {

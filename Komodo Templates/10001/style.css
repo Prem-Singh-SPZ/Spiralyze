@@ -127,9 +127,13 @@ body .three-col-cards-section .three-col-cards {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   margin: 48px 0;
+}
+@media (min-width: 767.98px) {
+  body .three-col-cards-section .three-col-cards {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 body .three-col-cards-section .three-col-cards .three-col-card {
   max-width: calc(33.3333% - 20px);
@@ -147,6 +151,11 @@ body .three-col-cards-section .three-col-cards .three-col-card {
           align-items: flex-start;
   background: rgba(255, 255, 255, 0.1);
   margin-bottom: 20px;
+}
+@media (max-width: 767.98px) {
+  body .three-col-cards-section .three-col-cards .three-col-card {
+    max-width: 100;
+  }
 }
 body .three-col-cards-section .three-col-cards .three-col-card .three-col-card-image img {
   width: 96px;
