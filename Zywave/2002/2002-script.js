@@ -130,11 +130,15 @@ window.addEventListener("click", function (e) {
 });
 
 //Add hidden fields
-// function setHiddenFields() {
-//     if (document.querySelector('.mktoFormRow [name="cR02"]')) {
-//         document.querySelector('.mktoFormRow [name="cR02"]').setAttribute('value', '#2002_variant');
-//     }
-// }
+function setHiddenFields() {
+    if (document.querySelector('.mktoFormRow [name="cR02"]')) {
+        document.querySelector('.mktoFormRow [name="cR02"]').setAttribute('value', '#2002_variant');
+    }
+}
+
+waitForElm('.zy-demo-form-section-container .zy-marketo-form-container .mktoForm input[name="cR02"]').then(function (elm) {
+    setHiddenFields();
+});
 
 // Generic Code
 function waitForElm(selector) {
