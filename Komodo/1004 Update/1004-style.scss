@@ -27,7 +27,7 @@ $font-family_4: Titillium Web, sans-serif;
     background-size: cover;
     background-position: top center;
     .stats-slider {
-      padding: 40px 20px 39px;
+      padding: 40px 20px 62px;
       margin: auto;
       max-width: 1332px;
 
@@ -262,6 +262,73 @@ $font-family_4: Titillium Web, sans-serif;
         }
       }
     }
+
+    .support-cta-wrapper {
+      padding-bottom: 40px;
+
+      @media (max-width: 767.98px) {
+        padding-bottom: 32px;
+      }
+      .support-cta {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media (max-width: 767.98px) {
+          flex-direction: column;
+        }
+
+        .support-cta-text {
+          color: #fff;
+          // text-align: center;
+          font-family: $font-family_1;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 26px;
+          margin-right: 24px;
+
+          @media (max-width: 767.98px) {
+            margin-right: 0;
+            margin-bottom: 20px;
+          }
+        }
+
+        .support-cta-button {
+          .spz-cta {
+            display: flex;
+            height: 48px;
+            padding: 12px 16px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-radius: 100px;
+            background: #68cce8;
+            color: #000;
+            font-family: "Titillium Web";
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            letter-spacing: 0.8px;
+            text-transform: uppercase;
+            width: 276px;
+            text-decoration: none;
+            margin: auto;
+
+            &:hover {
+              background: #fff;
+            }
+            &:active {
+              background: #4a4a4a;
+              color: #fff;
+            }
+          }
+        }
+      }
+    }
   }
 
   .dnd_area-row-0-background-image {
@@ -285,7 +352,7 @@ $font-family_4: Titillium Web, sans-serif;
     }
   }
 
-  .dnd_area-row-1-background-image{
+  .dnd_area-row-1-background-image {
     background: #000000 !important;
   }
 }
@@ -310,7 +377,7 @@ $font-family_4: Titillium Web, sans-serif;
     .new-slider-wrapper {
       background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/back_768.webp");
       .stats-slider {
-        padding: 19px 0 15px 0;
+        padding: 19px 0 40px 0;
         .slider-wrapper {
           .child {
             flex-direction: column;
@@ -345,7 +412,7 @@ $font-family_4: Titillium Web, sans-serif;
     .new-slider-wrapper {
       background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1004/back_360.webp");
       .stats-slider {
-        padding: 10px 0 23px 0;
+        padding: 10px 0 47px 0;
 
         .slider-wrapper {
           .splide__slide {

@@ -35,11 +35,13 @@ let bodyLoaded = setInterval(function () {
                     element.addEventListener('click', function (e) {
                         e.preventDefault();
                         document.body.classList.add('show-popup');
+                        document.querySelector('html').classList.add('show-popup');
                     });
                 });
                 document.querySelectorAll('.spz-1002 #zy-demo-form-section .close-icon, .spz-1002 #zy-demo-form-section').forEach((ec) => {
                     ec.addEventListener("click", () => {
                         document.body.classList.remove('show-popup');
+                        document.querySelector('html').classList.remove('show-popup');
                     });
                 });
                 document.querySelector('.spz-1002 #zy-demo-form-section .zy-container').addEventListener("click", (ev) => {

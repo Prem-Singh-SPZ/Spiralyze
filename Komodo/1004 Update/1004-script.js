@@ -240,6 +240,16 @@ ready(function () {
               </div>
           </div>
       </div>
+        <div class="support-cta-wrapper">
+            <div class="support-cta">
+                <div class="support-cta-text">
+                  Need help? 
+                </div>
+                <div class="support-cta-button">
+                    <a href="https://www.komodohealth.com/support" class="spz-cta">Contact Customer Support</a>
+                </div>
+            </div>
+        </div>
   </div>
     `);
 
