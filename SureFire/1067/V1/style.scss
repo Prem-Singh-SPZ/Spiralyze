@@ -492,11 +492,15 @@
 
   .spzFieldWrapper {
     position: relative;
-    border-radius: 999px;
-    background: #fff;
-    box-shadow: 0px 12px 22px 0px rgba(37, 37, 37, 0.08);
-    height: 68px;
-    padding: 4px;
+
+    @media (min-width: 767.98px) {
+      border-radius: 999px;
+      background: #fff;
+      box-shadow: 0px 12px 22px 0px rgba(37, 37, 37, 0.08);
+      height: 68px;
+      padding: 4px;
+    }
+
     .email-input {
       height: 60px;
       padding: 18px 22px;
@@ -515,6 +519,10 @@
       border: none;
       box-shadow: none;
       width: 100%;
+
+      @media (max-width: 767.98px) {
+        box-shadow: 0px 12px 22px 0px rgba(37, 37, 37, 0.08);
+      }
 
       &::-webkit-input-placeholder {
         color: #252525;
@@ -595,7 +603,7 @@
   }
 
   .ani-button-container {
-    margin-top: 12px;
+    margin-top: 20px;
     .price-ai {
       color: rgba(37, 37, 37, 0.6);
       text-align: center;
@@ -612,8 +620,9 @@
         text-decoration-line: underline;
         text-underline-offset: 2px;
 
-        &:hover, &:active {
-          color: #3858EA;
+        &:hover,
+        &:active {
+          color: #3858ea;
         }
       }
     }
@@ -626,9 +635,11 @@
 }
 .SFL_1067 .omark-activitysec .oma-buttons .oma-demo,
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo {
-  position: absolute;
-  top: 4px;
-  right: 4px;
+  @media screen and (min-width: 767.98px){
+    position: absolute;
+    top: 4px;
+    right: 4px;
+  }
 }
 
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper a,
@@ -3224,7 +3235,7 @@
   }
 
   .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo {
-    margin: 0px 0px 10px;
+    margin: 10px 0px 10px;
   }
 
   .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo a {
