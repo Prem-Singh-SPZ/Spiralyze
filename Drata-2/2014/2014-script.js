@@ -2,9 +2,9 @@
     function load_2014() {
         document.body.classList.add('spz-2014');
         waitForElm('ul[class*="Header-headerMenuCtas"]').then(function () {
-            waitForElm('.swiper.swiper-3d').then(function () {
-                appendHomeHeroContent();
-            });
+            // waitForElm('[class*=HeroHomepage-featuredContent]').then(function () {
+            // });
+            appendHomeHeroContent();
 
             // Add class 'safari' on body if browser is safari
             if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -15,10 +15,10 @@
 
     function appendHomeHeroContent() {
         const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
-        waitForElm('div[class*="HeroHomepage-hero"]').then(function () {
+        waitForElm('div[class*="HeroHomepage-root"]').then(function () {
             // insert element anchors cta
             if (document.querySelectorAll('.hero-banner-section').length == 0) {
-                document.querySelector('div[class*="HeroHomepage-hero"]').insertAdjacentHTML('afterend', `
+                document.querySelector('div[class*="HeroHomepage-root"]').insertAdjacentHTML('beforeend', `
           <div class="hero-banner-section">
             <div class="hero-banner-container container">
             <div class="hero-copy"> 
