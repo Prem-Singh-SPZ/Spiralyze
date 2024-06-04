@@ -30,7 +30,7 @@ if (!bodyElem.classList.contains('SFL_1067')) {
 							<h2 class="ani-title">The top <span class="highlight">marketing platform</span> <span class="text-tab">for</span> <br> local businesses</h2>
 							<div class="ani-desc">Surefire automates review requests, SEO, social media, online advertising, and more. So you grow your online visibility, customer base, and revenue.</div>
 							<div class="ani-button">
-								<div class="spzFieldWrapper"><input id="Email" name="Email" placeholder="Work Email" type="email" class="email-input" spellcheck="false"><div class="error-msg">Please enter a valid Email address</div>
+								<div class="spzFieldWrapper"><input id="Email" name="Email" placeholder="Work Email" type="email" class="email-input" spellcheck="false"><div class="error-msg" style="display:none;">Please enter a valid Email address</div>
 									<div class="ani-button-container">
 										<div class="ai-demo"><a class="dummy-CTA demo" href="javascript:void(0)">Request a Demo</a></div>
 										<div class="ai-price"><a class="dummy-CTA price" href="javascript:void(0)">Get Pricing</a></div>
@@ -798,8 +798,8 @@ if (!bodyElem.classList.contains('SFL_1067')) {
 		if (e.target.classList.contains('dummy-CTA')) {
 			var fieldWrapper = e.target.closest('.spzFieldWrapper');
 			var emailInput = fieldWrapper.querySelector('.email-input');
-			validEmail(emailInput, fieldWrapper);
-			console.log(e.target.classList);
+			let page = e.target.classList.contains('demo') ? 'demo' : 'pricing';
+			validEmail(emailInput, fieldWrapper, page);
 		}
 	});
 
@@ -813,7 +813,7 @@ if (!bodyElem.classList.contains('SFL_1067')) {
 	// 	});
 	// });
 
-	function validEmail(emailInput, fieldWrapper) {
+	function validEmail(emailInput, fieldWrapper, page) {
 		var emailValue = emailInput.value;
 		var isValidEmail = /^[^@\s]+@[^@\s]+\.[^@\s]{2,}$/.test(emailValue);
 		var errorMsg = fieldWrapper.querySelector('.error-msg');
@@ -829,7 +829,12 @@ if (!bodyElem.classList.contains('SFL_1067')) {
 				// } else {
 				// 	fieldWrapper.closest('ul').classList.remove('error');
 				// }
-				window.location.href = 'https://info.surefirelocal.com/lp/demo?email=' + encodeURIComponent(emailInput.value);
+				if (page === 'demo') {
+					window.location.href = 'https://info.surefirelocal.com/lp/demo?email=' + encodeURIComponent(emailInput.value);
+				}
+				else if (page === 'pricing') {
+					window.location.href = 'https://info.surefirelocal.com/lp/pricing?email=' + encodeURIComponent(emailInput.value);
+				}
 
 			} else {
 				errorMsg.style.display = 'block';
