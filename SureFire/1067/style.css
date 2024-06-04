@@ -360,7 +360,7 @@
   background: #fff;
   color: #000;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Gilroy-Regular";
+  font-family: Gilroy, sans-serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 500;
@@ -420,6 +420,12 @@
 .SFL_1067 .omark-activitysec .oma-buttons .spzFieldWrapper .email-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 50px #f5f5f5 inset;
 }
+@media screen and (max-width: 767.98px) {
+  .SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper .email-input,
+  .SFL_1067 .omark-activitysec .oma-buttons .spzFieldWrapper .email-input {
+    text-align: center;
+  }
+}
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper .ani-button-container,
 .SFL_1067 .omark-activitysec .oma-buttons .spzFieldWrapper .ani-button-container {
   display: -webkit-box;
@@ -429,6 +435,19 @@
       -ms-flex-pack: justify;
           justify-content: space-between;
   margin-top: 12px;
+}
+@media screen and (max-width: 767.98px) {
+  .SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper .ani-button-container,
+  .SFL_1067 .omark-activitysec .oma-buttons .spzFieldWrapper .ani-button-container {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    margin-top: 10px;
+  }
 }
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper.error .email-input,
 .SFL_1067 .omark-activitysec .oma-buttons .spzFieldWrapper.error .email-input {
@@ -446,7 +465,7 @@
   color: #fff;
   text-align: center;
   font-variant-numeric: lining-nums proportional-nums;
-  font-family: "Gilroy-Regular";
+  font-family: Gilroy, sans-serif;
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -485,7 +504,7 @@
   font-weight: 600;
   line-height: 24px;
   letter-spacing: -0.32px;
-  height: 60px;
+  height: 58px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -2585,15 +2604,20 @@
   }
   .SFL_1067 .animate-herosec .animate-herotop .ani-desc {
     padding: 0px 10px;
-    margin: 0px auto 27px;
+    margin: 0px auto 25px;
   }
   .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo {
-    margin: 0px 0px 12px;
+    margin: 0px 0px 10px;
   }
   .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo a {
     width: 100%;
+    height: 60px;
   }
-  .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a {
+  .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo {
+    width: 100%;
+  }
+  .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a,
+  .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price {
     width: 100%;
   }
   .SFL_1067 .animate-herosec .animate-heromiddle {
