@@ -1,0 +1,120 @@
+.header__navigation {
+  .navigation-primary {
+    display: flex;
+    align-items: center;
+
+    .spz-header {
+      .container {
+        .nav {
+          display: flex;
+          align-items: center;
+          @media (max-width: 768px) {
+            flex-direction: column;
+            align-items: flex-start;
+          }
+
+          .nav-item {
+            padding: 16px;
+
+            > a {
+              color: rgba(255, 255, 255, 0.8);
+              font-family: "Titillium Web";
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 26px;
+              text-transform: capitalize;
+              display: flex;
+
+              &::after {
+                content: url(//res.cloudinary.com/spiralyze/image/upload/v1712831192/komodohealth/4005/chevron_1.svg);
+                width: 16px;
+                height: 16px;
+                display: block;
+                margin: 4px 0 0 4px;
+              }
+            }
+
+            .menu-items {
+              display: none;
+
+              .menu-item  > a {
+                display: flex;
+                justify-content: space-between;
+                
+                &::after {
+                  content: url(//res.cloudinary.com/spiralyze/image/upload/v1712831190/komodohealth/4005/arrow-right.svg);
+                  width: 16px;
+                  height: 16px;
+                  display: block;
+                  margin: 4px 0 0 4px;
+                }
+              }
+
+              a {
+                &:hover .anchor-item {
+                  border-radius: 2px;
+                  border-left: 1px solid #68cce8;
+                  background: #41585e;
+                }
+              }
+              .anchor-item {
+                display: flex;
+                align-items: flex-start;
+
+                .content {
+                  flex-grow: 1;
+
+                  .anchor-text {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 1;
+                    flex: 1 0 0;
+                    overflow: hidden;
+                    color: #fff;
+                    text-overflow: ellipsis;
+                    font-family: "Titillium Web";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    text-transform: capitalize;
+                  }
+
+                  .short-description {
+                    color: #f0eeee;
+                    font-family: "Titillium Web";
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 24px;
+                    text-transform: capitalize;
+                  }
+                }
+              }
+            }
+
+            > a:hover + .menu-items {
+              display: block;
+              position: relative;
+
+              @media (min-width: 768px) {
+                position: absolute;
+                top: 80px;
+                left: 0;
+                right: 0;
+                background: #000;
+                z-index: 1;
+              }
+            }
+          }
+        }
+      }
+    }
+    .nav-contact-btn {
+      @media (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+}

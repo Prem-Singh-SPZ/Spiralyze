@@ -1,0 +1,130 @@
+.header__navigation .navigation-primary {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+.header__navigation .navigation-primary .spz-header .container .nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+@media (max-width: 768px) {
+  .header__navigation .navigation-primary .spz-header .container .nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item {
+  padding: 16px;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item > a {
+  color: rgba(255, 255, 255, 0.8);
+  font-family: "Titillium Web";
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+  text-transform: capitalize;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item > a::after {
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1712831192/komodohealth/4005/chevron_1.svg);
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: 4px 0 0 4px;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items {
+  display: none;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .menu-item > a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .menu-item > a::after {
+  content: url(//res.cloudinary.com/spiralyze/image/upload/v1712831190/komodohealth/4005/arrow-right.svg);
+  width: 16px;
+  height: 16px;
+  display: block;
+  margin: 4px 0 0 4px;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items a:hover .anchor-item {
+  border-radius: 2px;
+  border-left: 1px solid #68cce8;
+  background: #41585e;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item .content {
+  -webkit-box-flex: 1;
+      -ms-flex-positive: 1;
+          flex-grow: 1;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item .content .anchor-text {
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 0 0px;
+          flex: 1 0 0;
+  overflow: hidden;
+  color: #fff;
+  text-overflow: ellipsis;
+  font-family: "Titillium Web";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item .content .short-description {
+  color: #f0eeee;
+  font-family: "Titillium Web";
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  text-transform: capitalize;
+}
+.header__navigation .navigation-primary .spz-header .container .nav .nav-item > a:hover + .menu-items {
+  display: block;
+  position: relative;
+}
+@media (min-width: 768px) {
+  .header__navigation .navigation-primary .spz-header .container .nav .nav-item > a:hover + .menu-items {
+    position: absolute;
+    top: 80px;
+    left: 0;
+    right: 0;
+    background: #000;
+    z-index: 1;
+  }
+}
+@media (max-width: 768px) {
+  .header__navigation .navigation-primary .nav-contact-btn {
+    display: none;
+  }
+}
