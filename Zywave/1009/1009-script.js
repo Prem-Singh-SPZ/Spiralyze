@@ -5,10 +5,10 @@ let bodyLoaded = setInterval(function () {
 
         const heroImages = {
             page1: {
-                two_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/1920.webp',
-                desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/1440.webp',
-                tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/768.webp',
-                mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1002/375.webp',
+                two_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1009/frame_1171275527.webp',
+                desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1009/frame_1171275528.webp',
+                tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1009/img-bg.webp',
+                mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1009/frame_1171275525.webp',
             },
         };
 
