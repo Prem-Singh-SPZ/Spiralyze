@@ -92,6 +92,12 @@ body.spz-1009.show-popup {
   display: inline-flex;
   cursor: pointer;
 }
+@media screen and (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .zy-col-form .close-icon {
+    top: 20px;
+    right: 20px;
+  }
+}
 .spz-1009 #zy-demo-form-section .zy-col-form .close-icon svg path {
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
@@ -123,6 +129,10 @@ body.spz-1009.show-popup {
   -webkit-box-pack: justify;
   -ms-flex-pack: justify;
   justify-content: space-between;
+}
+.spz-1009 #zy-demo-form-section .zy-col-form form.mktoForm .mktoFormRow fieldset.mktoFormCol > legend {
+  margin: 0;
+  padding: 0;
 }
 .spz-1009 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow {
   width: calc(50% - 8px);
@@ -342,6 +352,14 @@ body.spz-1009.show-popup {
     padding: 30px 40px;
   }
 }
+@media (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .t-product-img-parent {
+    max-width: 540px;
+    border-bottom-left-radius: 32px;
+    border-bottom-right-radius: 32px;
+    padding: 30px 20px;
+  }
+}
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-text-wrapper {
   margin-bottom: 28px;
 }
@@ -366,6 +384,11 @@ body.spz-1009.show-popup {
   .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-text-wrapper .t-text {
     font-size: 24px;
     letter-spacing: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-text-wrapper .t-text {
+    font-size: 16px;
   }
 }
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent {
@@ -398,6 +421,12 @@ body.spz-1009.show-popup {
     height: 60px;
   }
 }
+@media (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent .t-avatar {
+    width: 40px;
+    height: 40px;
+  }
+}
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent .t-avatar img {
   width: 100%;
   height: 100%;
@@ -411,6 +440,11 @@ body.spz-1009.show-popup {
   line-height: 140%;
   margin-bottom: 2px;
 }
+@media (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent .t-details .t-name {
+    font-size: 14px;
+  }
+}
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent .t-details .t-designation {
   color: #fff;
   font-family: "Segoe UI", "Open Sans", sans-serif;
@@ -420,8 +454,18 @@ body.spz-1009.show-popup {
   line-height: 140%;
   opacity: 0.8;
 }
+@media (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent .t-details .t-designation {
+    font-size: 13px;
+  }
+}
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-footer-logo {
   width: 128px;
+}
+@media (max-width: 767.98px) {
+  .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-footer-logo {
+    width: 94.222px;
+  }
 }
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-footer-logo img {
   width: 100%;
@@ -467,14 +511,20 @@ body.spz-1009.show-popup {
 
 @media (max-width: 767.98px) {
   .spz-1009 #zy-demo-form-section .zy-container {
-    max-width: calc(100% - 61px);
-    padding: 48px 20px 48px;
+    max-width: calc(100% - 40px);
+  }
+  .spz-1009 #zy-demo-form-section .zy-col-form {
+    padding: 16px 20px 30px;
+    border-radius: 32px 32px 0px 0px;
   }
   .spz-1009 #zy-demo-form-section .zy-col-form .form_title {
-    margin-bottom: 0;
+    margin-bottom: 20px;
   }
   .spz-1009 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow {
     width: 100%;
+  }
+  .spz-1009 #zy-demo-form-section form.mktoForm .mktoButtonRow {
+    margin-top: 0;
   }
   .spz-1009 #zy-demo-form-section form.mktoForm .mktoButtonRow button.mktoButton {
     width: 100%;
