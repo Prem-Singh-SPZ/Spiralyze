@@ -482,8 +482,7 @@
   margin: 0px auto 22px;
 }
 
-.SFL_1067 .animate-herosec .animate-herotop .ani-button,
-.SFL_1067 .omark-activitysec .oma-buttons {
+.SFL_1067 .animate-herosec .animate-herotop .ani-button {
   position: relative;
   /* display: flex;
     justify-content: space-between; */
@@ -519,6 +518,7 @@
       border: none;
       box-shadow: none;
       width: 100%;
+      caret-color: #252525;
 
       @media (max-width: 767.98px) {
         box-shadow: 0px 12px 22px 0px rgba(37, 37, 37, 0.08);
@@ -618,7 +618,7 @@
       a {
         color: #252525;
         text-decoration-line: underline;
-        text-underline-offset: 2px;
+        text-underline-offset: 4px;
 
         &:hover,
         &:active {
@@ -629,20 +629,47 @@
   }
 }
 
-.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price,
-.SFL_1067 .omark-activitysec .oma-buttons .oma-price {
+.SFL_1067 .omark-activitysec .oma-buttons {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  max-width: 426px;
+  margin: 0px auto;
+}
+
+.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price {
   position: relative;
 }
-.SFL_1067 .omark-activitysec .oma-buttons .oma-demo,
+
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-demo {
-  @media screen and (min-width: 767.98px){
+  @media screen and (min-width: 767.98px) {
     position: absolute;
     top: 4px;
     right: 4px;
   }
 }
 
-.SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper a,
+.SFL_1067 .omark-activitysec .oma-buttons .oma-demo,
+.SFL_1067 .omark-activitysec .oma-buttons .oma-price {
+    position: relative;
+}
+
+.SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper a {
+  border-radius: 40px;
+  font-family: Gilroy;
+  font-size: 16px;
+  font-weight: 600;
+  line-height: 24px;
+  letter-spacing: -0.32px;
+  height: 60px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 100%;
+  padding: 0px 0px 2px;
+  position: relative;
+}
+
 .SFL_1067 .omark-activitysec .oma-buttons a {
   border-radius: 40px;
   font-family: Gilroy;
@@ -709,19 +736,37 @@
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/SurefireLocal/1066/arrow-hover.png");
 }
 
-.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a,
-.SFL_1067 .omark-activitysec .oma-buttons .oma-price a {
+.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a {
   background-color: transparent;
   border: 1px solid #3858ea;
   width: 206px;
   color: #3858ea;
 }
 
-.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:after,
-.SFL_1067 .omark-activitysec .oma-buttons .oma-price a:after {
+.SFL_1067 .omark-activitysec .oma-buttons .oma-price a {
+  background-color: transparent;
+  border: 1px solid #252525;
+  width: 206px;
+  color: #252525;
+}
+
+.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:after {
   content: "";
   position: relative;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717489212/SurefireLocal/1066/blue_arrow.svg");
+  height: 16px;
+  width: 16px;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: right 0px;
+  right: 0px;
+  margin: 4px 0px 0px 11px;
+}
+
+.SFL_1067 .omark-activitysec .oma-buttons .oma-price a:after {
+  content: "";
+  position: relative;
+  background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/SurefireLocal/1066/secondary_arrow.png');
   height: 16px;
   width: 16px;
   background-repeat: no-repeat;
@@ -744,9 +789,7 @@
 }
 
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:hover,
-.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:active,
-.SFL_1067 .omark-activitysec .oma-buttons .oma-price a:hover,
-.SFL_1067 .omark-activitysec .oma-buttons .oma-price a:active {
+.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:active{
   //   background-color: #252525;
   //   box-shadow: 0px 12px 30px 0px rgba(95, 95, 95, 0.25);
   color: #ffffff;
@@ -756,6 +799,13 @@
   background: linear-gradient(180deg, #3858ea 0%, #2f4fde 52%, #2846d3 100%),
     #3858ea;
   box-shadow: 0px 12px 30px 0px rgba(95, 95, 95, 0.25);
+}
+
+.SFL_1067 .omark-activitysec .oma-buttons .oma-price a:hover,
+.SFL_1067 .omark-activitysec .oma-buttons .oma-price a:active {
+    background-color: #252525;
+    box-shadow: 0px 12px 30px 0px rgba(95, 95, 95, 0.25);
+    color: #ffffff;
 }
 
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:hover:after,
@@ -2334,7 +2384,7 @@
   }
 
   .SFL_1067 .site-container .site-header .wrap .menu-toggle.activated:before {
-    background-image: url("/wp-content/themes/surefirelocal/images/assets/close__icon.svg");
+    background-image: url("https://www.surefirelocal.com/wp-content/themes/surefirelocal/images/assets/close__icon.svg");
     background-position: right;
     background-position-x: 0px;
     background-size: auto;
