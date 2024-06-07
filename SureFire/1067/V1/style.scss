@@ -599,6 +599,17 @@
         border-right: 5px solid transparent;
         border-top: 9.5px solid #c81f1f;
       }
+
+      @media (max-width: 767.98px) {
+        left: calc(50% - 102px);
+        top: -32px;
+
+        &::before {
+          left: 50%;
+          margin-left: -5px;
+          border-top: 6.5px solid #c81f1f;
+        }
+      }
     }
   }
 
@@ -651,7 +662,7 @@
 
 .SFL_1067 .omark-activitysec .oma-buttons .oma-demo,
 .SFL_1067 .omark-activitysec .oma-buttons .oma-price {
-    position: relative;
+  position: relative;
 }
 
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .spzFieldWrapper a {
@@ -766,7 +777,7 @@
 .SFL_1067 .omark-activitysec .oma-buttons .oma-price a:after {
   content: "";
   position: relative;
-  background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/SurefireLocal/1066/secondary_arrow.png');
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/SurefireLocal/1066/secondary_arrow.png");
   height: 16px;
   width: 16px;
   background-repeat: no-repeat;
@@ -789,7 +800,7 @@
 }
 
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:hover,
-.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:active{
+.SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:active {
   //   background-color: #252525;
   //   box-shadow: 0px 12px 30px 0px rgba(95, 95, 95, 0.25);
   color: #ffffff;
@@ -803,9 +814,9 @@
 
 .SFL_1067 .omark-activitysec .oma-buttons .oma-price a:hover,
 .SFL_1067 .omark-activitysec .oma-buttons .oma-price a:active {
-    background-color: #252525;
-    box-shadow: 0px 12px 30px 0px rgba(95, 95, 95, 0.25);
-    color: #ffffff;
+  background-color: #252525;
+  box-shadow: 0px 12px 30px 0px rgba(95, 95, 95, 0.25);
+  color: #ffffff;
 }
 
 .SFL_1067 .animate-herosec .animate-herotop .ani-button .ai-price a:hover:after,
