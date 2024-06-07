@@ -3,6 +3,8 @@ createTest4001();
 function createTest4001() {
     document.body.classList.add('spz-4001');
 
+    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/4001/mingcuteclose-line.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/4001/mingcuteclose-line_1.svg" as="image">`);
+
     waitForElm('.zy-header-bottom-inner .zy-header-bottom-demo>a').then(function () {
         insertStickySection();
     });
