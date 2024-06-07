@@ -53,7 +53,7 @@ function checkScrollPosition() {
     waitForElm('body .zy-mobile-header').then(function () {
         let scrollTop = (window.pageYOffset !== undefined) ? window.pageYOffset : (document.documentElement || document.body.parentNode || document.body).scrollTop;
         let headerHeight = document.querySelector('body .zy-mobile-header').offsetHeight + document.querySelector('body .zy-header-container').offsetTop;
-        var heroHeight = document.querySelector('.zy-hero-container-general').offsetHeight;
+        // var heroHeight = document.querySelector('.zy-hero-container-general').offsetHeight;
         var totalHeight = headerHeight;
         if (document.querySelector('body .spz-sticky-footer')) {
             let stickyHeight = document.querySelector('body .spz-sticky-footer').offsetHeight;
