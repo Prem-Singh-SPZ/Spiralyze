@@ -61,7 +61,7 @@ let bodyLoaded = setInterval(function () {
                                 <source media="(min-width:1025px)"
                                     srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1009/frame_1171275511.webp">
                                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/1009/frame_1171275512.webp"
-                                    alt="Copany Logo">
+                                    alt="Roland Barrera">
                             </picture>
                         </div>
                     </div>

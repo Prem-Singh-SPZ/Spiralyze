@@ -24,10 +24,6 @@ window.addEventListener("click", function (e) {
         this.document.querySelector('.spz-sticky-footer').remove();
         // document.querySelector('body').style.paddingBottom = "0px";
         document.body.classList.remove('sticky-footer-show');
-
-        //once sticky closed, it should not show again for that whole session
-        sessionStorage.setItem('stickyClosed', true);
-
     }
     if (e.target.classList.contains("trigger-demo-btn")) {
         this.document.querySelector('.zy-header-bottom-demo>a').click();
@@ -40,7 +36,7 @@ function insertStickySection() {
         document.querySelector('body').insertAdjacentHTML('beforeend', `<div class="spz-sticky-footer"><div class="sticky-footer">
         <div class="sticky-container">
             <div class="left-content">
-                <span>Streamline every step of the insurance lifecycle</span>
+                <span>Streamline every step of the insurance lifecycle management</span>
             </div>
             <div class="right-content">
                 <a href="javascript:void(0)" class="hs-cta-primary trigger-demo-btn">Book a Demo</a>
@@ -64,7 +60,7 @@ function checkScrollPosition() {
         if (document.querySelector('body .spz-sticky-footer')) {
             let stickyHeight = document.querySelector('body .spz-sticky-footer').offsetHeight;
 
-            if (scrollTop > totalHeight && !sessionStorage.getItem('stickyClosed')) {
+            if (scrollTop > totalHeight) {
                 document.querySelector('body .spz-sticky-footer').classList.add('show-sticky');
                 document.body.classList.add('sticky-footer-show');
                 // document.querySelector('body').style.paddingBottom = stickyHeight + "px";
