@@ -99,20 +99,9 @@ body.sticky-footer-show div.embeddedServiceHelpButton .helpButton {
   }
 }
 .spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary {
-  background: #5fb53b;
   padding: 18px 0;
   height: 50px;
   width: 182px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
-  color: #0f2d52;
-  -webkit-transition: all 0.3s;
-  transition: all 0.3s;
-  border: 0;
-  border-radius: 99px;
-  text-decoration: none;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -122,12 +111,24 @@ body.sticky-footer-show div.embeddedServiceHelpButton .helpButton {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
+  font-size: 17px;
+  border-radius: 25px;
+  line-height: 25px;
+  text-align: center;
+  font-weight: bold;
+  border: 2px solid transparent;
+  -webkit-transition: background-color 0.35s;
+  transition: background-color 0.35s;
+  text-decoration: none;
+  background-color: transparent;
+  color: #fff;
+  border-color: #5FB53B;
+  -webkit-transition: background-color 0.95s;
+  transition: background-color 0.95s;
+  white-space: nowrap;
 }
 .spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary:hover {
-  background: #7edb58;
-}
-.spz-sticky-footer .sticky-footer .sticky-container .right-content .hs-cta-primary:active {
-  background: #a6ff82;
+  background-color: #5FB53B;
 }
 .spz-sticky-footer .sticky-footer .close-sticky {
   position: absolute;

@@ -43,7 +43,7 @@ function insertStickySection() {
                 <span>Streamline every step of the insurance lifecycle</span>
             </div>
             <div class="right-content">
-                <a href="javascript:void(0)" class="hs-cta-primary trigger-demo-btn">Book a Demo</a>
+                <a href="javascript:void(0)" class="hs-cta-primary trigger-demo-btn">Book a demo</a>
             </div>
             </div>
             <div class="close-sticky">
