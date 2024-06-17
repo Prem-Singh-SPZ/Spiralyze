@@ -23,16 +23,440 @@
           align-items: center;
 }
 
+body.spz-25003 header div[class*=MuiToolbar-root-Header-contentContainer] {
+  -ms-grid-rows: minmax(108px, 1fr);
+  grid-template-rows: minmax(108px, 1fr);
+}
+body.spz-25003 header div[class*=MuiToolbar-root-Header-contentContainer] [class*=Media-root-Header-logo] {
+  width: 157px;
+  height: 28px;
+}
 body.spz-25003 main section[variant=splitHalves] {
   background-color: #eef2f6;
 }
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] {
+  max-width: 1500px;
+  gap: 40px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] {
+  padding: 90px 0;
+}
+@media (max-width: 1299px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] [class*=Block-contentOuterWrapper] {
+    padding-right: 0px;
+  }
+}
+@media (max-width: 1299px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child {
+    margin-right: 88px;
+  }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] {
+  padding: 0;
+  max-width: 604px;
+  margin: 0;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] {
+  padding: 31px 38px 40px;
+  -webkit-box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
+          box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] > svg {
+  display: none;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .form-title {
+  color: #eef2f6;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 40px;
+  letter-spacing: -0.64px;
+  margin-bottom: 30px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border: none;
+  background: transparent;
+  padding: 0;
+  gap: 12px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .form-note {
+  color: #fff;
+  font-family: "Inter", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 20px;
+  margin: 20px 0 18px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs-error-msgs {
+  width: 100%;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs-error-msgs li label {
+  color: #d6edff;
+  font-family: "Inter", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  margin-top: 4px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset {
+  max-width: unset;
+  width: calc(50% - 6px);
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field {
+  position: relative;
+  margin-bottom: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .input {
+  width: 100%;
+  position: relative;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field input {
+  width: 100% !important;
+  height: 64px;
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 8px;
+  outline: none;
+  padding: 14px 12px 0 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000 !important;
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field input {
+    padding-left: 12px;
+  }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field input:hover {
+  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field input:hover + label.hs-label-spz {
+  color: #454545;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select {
+  width: 100% !important;
+  height: 64px;
+  background: #ffffff;
+  border: 1px solid #dde3eb;
+  border-radius: 8px;
+  outline: none;
+  padding: 14px 12px 0 12px;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #000000;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  background: #fff url(//res.cloudinary.com/spiralyze/image/upload/v1683867771/drata/7001/dropdown_arrow.svg) no-repeat calc(100% - 16px) 50%;
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select {
+    padding-left: 12px;
+  }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select:hover {
+  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select:hover + label.hs-label-spz {
+  color: #454545;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select:focus {
+  background: #fff url(//res.cloudinary.com/spiralyze/image/upload/v1683867771/drata/7001/dropdown_arrow_up.svg) no-repeat calc(100% - 16px) 50%;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select option {
+  color: #000 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select.is-placeholder {
+  color: transparent !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select.is-placeholder:focus {
+  color: #000 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset.form-columns-2 {
+  width: 100%;
+  max-width: unset;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  gap: 12px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset.form-columns-2 .field {
+  width: calc(50% - 6px);
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs-submit {
+  width: 100%;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs_error_rollup {
+  width: 100%;
+  text-align: center;
+  display: none;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs_error_rollup label.hs-main-font-element {
+  padding: 0;
+  margin: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  color: #f97f70;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset label {
+  padding: 0;
+  margin: 0;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field label.hs-label-spz {
+  position: absolute;
+  top: 20px;
+  left: 12px;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 24px;
+  color: #697586;
+  pointer-events: none;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
+  white-space: nowrap;
+  max-width: calc(100% - 32px);
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+@media (min-width: 1199.98px) and (max-width: 1216.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field label.hs-label-spz {
+    left: 12px;
+  }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
+  display: none;
+  color: transparent;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-moz-placeholder {
+  display: none;
+  color: transparent;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]):-ms-input-placeholder {
+  display: none;
+  color: transparent;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-ms-input-placeholder {
+  display: none;
+  color: transparent;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::placeholder {
+  display: none;
+  color: transparent;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
+  border-color: #d7d7d7;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
+  border-color: #d7d7d7;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) {
+  border-color: #d7d7d7;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  top: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #727272;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  top: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #727272;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
+  top: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #727272;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  top: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0580e8;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  top: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0580e8;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:focus {
+  border-color: #0466ba !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #3799ed;
+          box-shadow: 0px 0px 0px 2px #3799ed;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:focus ~ label {
+  top: 9px;
+  font-size: 12px;
+  line-height: 16px;
+  color: #0580e8 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error {
+  border-color: #d53641 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  color: #d53641 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  color: #d53641 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:placeholder-shown) ~ label {
+  color: #d53641 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:focus {
+  border-color: #0466ba !important;
+  -webkit-box-shadow: 0px 0px 0px 2px #3799ed;
+          box-shadow: 0px 0px 0px 2px #3799ed;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error + .hs-label-spz {
+  color: #d53641 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select option[value=""] {
+  display: none;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions {
+  position: relative;
+  max-width: initial;
+  width: 100%;
+  height: 60px;
+  margin: 2px auto 0;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton] {
+  font-family: "Inter", sans-serif;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  width: 100%;
+  height: 60px;
+  padding: 10px 20px;
+  background: #0c131a;
+  border: 1px solid #0c131a;
+  border-radius: 12px;
+  position: relative;
+  -webkit-appearance: none;
+  cursor: pointer;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]:hover {
+  background: #293642;
+  border: 1px solid #293642;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]:active {
+  border: 2px solid #697586;
+  background: #293642;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton] [class*=MuiButton-endIcon] {
+  margin-right: -10px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton] [class*=MuiButton-endIcon] > :nth-of-type(1) {
+  font-size: 10px;
+  margin-left: 20px;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] fieldset.form-columns-0 {
+  width: 100%;
+  padding: 0;
+  border: 0;
+  margin-top: 32px;
+  margin-left: 0;
+}
+@media (max-width: 767.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] fieldset.form-columns-0 {
+    margin-top: 28px;
+  }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
+  font-family: "Inter", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 22px;
+  color: #ffffff;
+  margin-bottom: 8px;
+}
+@media (max-width: 767.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
+    margin-top: -4px;
+    margin-bottom: 18px;
+  }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill:hover {
+  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-form .submitted-message {
+  background: no-repeat;
+  border: none;
+  padding: 0;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-form .submitted-message p {
+  margin-bottom: 0;
+  font-size: 32px;
+  font-family: "Inter", sans-serif;
+  text-align: center;
+  color: #fff;
+  line-height: 36px;
+}
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content {
   max-width: 636px;
-  padding: 39px 0;
 }
 @media (min-width: 1199.98px) {
   body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content {
-    margin-right: 16px;
+    margin-right: 14px;
+    margin-left: 24px;
   }
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .hc-title {
@@ -44,7 +468,6 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   line-height: 64px;
   letter-spacing: -1.08px;
   color: #000000;
-  padding: 1.5px 0 1px 0;
   margin: 0 0 22px;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .hc-title span {
@@ -89,13 +512,22 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   margin-bottom: 25px;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .star-rating .sr-img {
-  width: 108px;
+  width: 116px;
   height: 20px;
 }
 @media (max-width: 767.98px) {
   body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .star-rating .sr-img {
     width: 116px;
   }
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .hc-sub-title {
+  color: #0c131a;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-bottom: 20px;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .sr-number {
   margin-left: 12px;
@@ -122,7 +554,7 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .list-grp-wrapper .list-group .list-item::before {
   content: "";
   position: absolute;
-  top: 1px;
+  top: 1.5px;
   left: -32px;
   height: 20px;
   width: 20px;
@@ -135,8 +567,6 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   font-style: normal;
   font-weight: 800;
   line-height: 24px;
-  display: inline;
-  margin-bottom: 9px;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .list-grp-wrapper .list-group .list-item .ls-desc {
   color: var(--Neutrals-600, #485665);
@@ -147,502 +577,6 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   line-height: 26px;
   display: inline;
   letter-spacing: 0;
-}
-body.spz-25003 .hs-form form fieldset .field.field-focus .input .hs-input:focus ~ .hs-label-spz {
-  color: #0580e8 !important;
-}
-
-body.spz-25003 form {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  border: none;
-  background: transparent;
-  padding: 0;
-}
-body.spz-25003 form fieldset {
-  max-width: unset;
-  width: calc(50% - 8px);
-}
-body.spz-25003 form fieldset .field {
-  position: relative;
-  margin-bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-}
-body.spz-25003 form fieldset .field .input {
-  width: 100%;
-  position: relative;
-}
-body.spz-25003 form fieldset .field input {
-  width: 100% !important;
-  height: 56px;
-  background: #ffffff;
-  border: 1px solid #d7d7d7;
-  border-radius: 4px;
-  outline: none;
-  padding: 22px 16px 8px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #000 !important;
-}
-@media (min-width: 1199.98px) and (max-width: 1216.98px) {
-  body.spz-25003 form fieldset .field input {
-    padding-left: 12px;
-  }
-}
-body.spz-25003 form fieldset .field input:hover {
-  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-}
-body.spz-25003 form fieldset .field input:hover + label.hs-label-spz {
-  color: #454545;
-}
-body.spz-25003 form fieldset .field select {
-  width: 100% !important;
-  height: 56px;
-  background: #ffffff;
-  border: 1px solid #d7d7d7;
-  border-radius: 4px;
-  outline: none;
-  padding: 22px 16px 8px;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #000000;
-  -webkit-appearance: none;
-  -moz-appearance: none;
-  appearance: none;
-  background: #fff url(//res.cloudinary.com/spiralyze/image/upload/v1683867771/drata/7001/dropdown_arrow.svg) no-repeat calc(100% - 16px) 50%;
-}
-@media (min-width: 1199.98px) and (max-width: 1216.98px) {
-  body.spz-25003 form fieldset .field select {
-    padding-left: 12px;
-  }
-}
-body.spz-25003 form fieldset .field select:hover {
-  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-}
-body.spz-25003 form fieldset .field select:hover + label.hs-label-spz {
-  color: #454545;
-}
-body.spz-25003 form fieldset .field select:focus {
-  background: #fff url(//res.cloudinary.com/spiralyze/image/upload/v1683867771/drata/7001/dropdown_arrow_up.svg) no-repeat calc(100% - 16px) 50%;
-}
-body.spz-25003 form fieldset .field select option {
-  color: #000 !important;
-}
-body.spz-25003 form fieldset .field select.is-placeholder {
-  color: transparent !important;
-}
-body.spz-25003 form fieldset .field select.is-placeholder:focus {
-  color: #000 !important;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox .hs-field-desc {
-  font-family: "Darker Grotesque", sans-serif;
-  font-style: normal;
-  font-weight: 800;
-  font-size: 24px;
-  line-height: 24px;
-  letter-spacing: -0.24px;
-  color: #ffffff;
-  margin-bottom: 18px;
-  margin-top: 16px;
-  padding: 0;
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-25003 form fieldset .hs-fieldtype-checkbox .hs-field-desc {
-    margin-top: 20px;
-  }
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list {
-  margin: 0;
-  padding: 0;
-  list-style: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox {
-  margin-bottom: 14px;
-  margin-right: 19px;
-  margin-top: 0;
-  min-width: 74px;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(1) {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(2) {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
-  min-width: 103px;
-}
-@media (min-width: 767.98px) and (max-width: 868.98px) {
-  body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(2) {
-    margin-right: 0;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(2) {
-    margin-right: 0;
-  }
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(3) {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(4) {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list li.hs-form-checkbox:nth-child(5) {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
-  margin-right: 0;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list input {
-  position: absolute;
-  width: 0 !important;
-  height: 0;
-  opacity: 0;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list input:checked + span {
-  font-weight: 600;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list input:checked + span::before {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1686657672/drata/1005/Checkbox.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  border: none;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list span {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #ffffff;
-  padding-left: 28px;
-  position: relative;
-  cursor: pointer;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list span::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: #0466ba;
-  border: 1px solid transparent;
-  border-radius: 4px;
-}
-body.spz-25003 form fieldset .hs-fieldtype-checkbox ul.inputs-list span:hover::before {
-  position: absolute;
-  content: "";
-  width: 20px;
-  height: 20px;
-  top: 50%;
-  left: 0;
-  -webkit-transform: translateY(-50%);
-  transform: translateY(-50%);
-  background: #0466ba;
-  border: 1px solid rgb(255, 255, 255);
-  border-radius: 4px;
-}
-body.spz-25003 form fieldset.form-columns-2 {
-  width: 100%;
-  max-width: unset;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-}
-body.spz-25003 form fieldset.form-columns-2 .field {
-  width: calc(50% - 8px);
-}
-body.spz-25003 form .hs-submit {
-  width: 100%;
-}
-body.spz-25003 form .hs_error_rollup {
-  width: 100%;
-  text-align: center;
-  display: none;
-}
-body.spz-25003 form .hs_error_rollup label.hs-main-font-element {
-  padding: 0;
-  margin: 0;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 12px;
-  line-height: 14px;
-  color: #f97f70;
-}
-body.spz-25003 form fieldset label {
-  padding: 0;
-  margin: 0;
-}
-body.spz-25003 form fieldset .field label.hs-label-spz {
-  position: absolute;
-  top: 16px;
-  left: 16px;
-  padding: 0;
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #727272;
-  pointer-events: none;
-  -webkit-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  white-space: nowrap;
-  max-width: calc(100% - 32px);
-  overflow: hidden;
-  text-overflow: ellipsis;
-}
-@media (min-width: 1199.98px) and (max-width: 1216.98px) {
-  body.spz-25003 form fieldset .field label.hs-label-spz {
-    left: 12px;
-  }
-}
-body.spz-25003 form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-25003 form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-moz-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-25003 form fieldset .field .hs-input:not([type=checkbox]):not([type=radio]):-ms-input-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-25003 form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-ms-input-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-25003 form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border-color: #d7d7d7;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border-color: #d7d7d7;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) {
-  border-color: #d7d7d7;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #727272;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #727272;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #727272;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #0580e8;
-}
-body.spz-25003 form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #0580e8;
-}
-body.spz-25003 form fieldset .field .hs-input:focus {
-  border-color: #0466ba !important;
-  -webkit-box-shadow: 0px 0px 0px 2px #3799ed;
-          box-shadow: 0px 0px 0px 2px #3799ed;
-}
-body.spz-25003 form fieldset .field .hs-input:focus ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  color: #0580e8 !important;
-}
-body.spz-25003 form fieldset .field .hs-input.invalid.error {
-  border-color: #d53641 !important;
-}
-body.spz-25003 form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  color: #d53641 !important;
-}
-body.spz-25003 form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  color: #d53641 !important;
-}
-body.spz-25003 form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:placeholder-shown) ~ label {
-  color: #d53641 !important;
-}
-body.spz-25003 form fieldset .field .hs-input.invalid.error:focus {
-  border-color: #0466ba !important;
-  -webkit-box-shadow: 0px 0px 0px 2px #3799ed;
-          box-shadow: 0px 0px 0px 2px #3799ed;
-}
-body.spz-25003 form fieldset .field select option[value=""] {
-  display: none;
-}
-body.spz-25003 form .actions {
-  position: relative;
-  max-width: initial;
-  width: 100%;
-  height: 64px;
-  margin: 2px auto 0;
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-25003 form .actions {
-    margin: 6px auto 0;
-  }
-}
-body.spz-25003 form .actions .hs-button {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 600;
-  font-size: 20px;
-  line-height: 28px;
-  text-align: center;
-  color: #fff;
-  width: 100%;
-  height: 64px;
-  padding: 16px 63px 16px 30px;
-  background: #000;
-  border: 1px solid #000;
-  border-radius: 4px;
-  position: relative;
-  -webkit-border-radius: 4px;
-  -webkit-appearance: none;
-  cursor: pointer;
-}
-body.spz-25003 form .actions .hs-button:hover {
-  color: #c0ff60;
-}
-body.spz-25003 form .actions .hs-button:active {
-  background: #303030;
-  color: #c0ff60;
-  border: 1px solid #303030;
-}
-body.spz-25003 form .actions::before {
-  content: "";
-  position: absolute;
-  top: 20.5px;
-  right: 32%;
-  width: 24px;
-  height: 24px;
-  background: url("//res.cloudinary.com/spiralyze/image/upload/v1682086278/drata/6002/cta_arrow.svg") no-repeat;
-  z-index: 3;
-  pointer-events: none;
-}
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
-  body.spz-25003 form .actions::before {
-    right: 26%;
-  }
-}
-@media (min-width: 1600.98px) {
-  body.spz-25003 form .actions::before {
-    right: 37%;
-  }
-}
-body.spz-25003 fieldset.form-columns-0 {
-  width: 100%;
-  padding: 0;
-  border: 0;
-  margin-top: 32px;
-  margin-left: 0;
-}
-@media (max-width: 767.98px) {
-  body.spz-25003 fieldset.form-columns-0 {
-    margin-top: 28px;
-  }
-}
-body.spz-25003 fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
-  font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 15px;
-  line-height: 22px;
-  color: #ffffff;
-  margin-bottom: 8px;
-}
-@media (max-width: 767.98px) {
-  body.spz-25003 fieldset.form-columns-0 .hs-richtext.hs-main-font-element {
-    margin-top: -4px;
-    margin-bottom: 18px;
-  }
-}
-body.spz-25003 .hs-input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-body.spz-25003 .hs-input:-webkit-autofill:hover {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-body.spz-25003 .hs-input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-body.spz-25003 .hs-input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
-}
-body.spz-25003 .hs-form .submitted-message {
-  background: no-repeat;
-  border: none;
-  padding: 0;
-}
-body.spz-25003 .hs-form .submitted-message p {
-  margin-bottom: 0;
-  font-size: 32px;
-  font-family: "Inter", sans-serif;
-  text-align: center;
-  color: #fff;
-  line-height: 36px;
 }
 
 body.spz-25003 #__next > header nav[class*=Header-headerMenuNav],

@@ -28,16 +28,21 @@
     waitForElm('div[class*="Form-formContainer"] #reactHubspotForm0 form.hs-form').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
+        if (document.querySelectorAll('div[class*="Form-formContainer"] #reactHubspotForm0 .form-title').length == 0) {
+          // add form title div here
+          const formTitle = document.createElement('div');
+          formTitle.classList.add('form-title');
+          formTitle.innerHTML = 'Download the Guide';
+          document.querySelector('div[class*="Form-formContainer"] #reactHubspotForm0  form.hs-form').insertAdjacentElement('beforebegin', formTitle);
+          document.querySelector('div[class*="Form-formContainer"] #reactHubspotForm0  form.hs-form .hs_submit').insertAdjacentHTML('beforebegin', `<p class="form-note">For partnership inquiries, please contact partnerships@drata.com</p>`);
+        }
+
         console.log('Form loaded');
         appendInputLabel();
 
-        // Set input label
-        document.querySelector('[name="number_of_employees"] + .hs-label-spz').innerHTML = 'No. of Employees*';
-        document.querySelector('[name="number_of_employees"] option:first-child').innerHTML = 'No. of Employees*';
-
         // Set button label
-        document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
-        document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
+        document.querySelector('.hs-button.primary').innerHTML = 'Download';
+        document.querySelector('.hs-button.primary').setAttribute('value', 'Download');
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
           const err = setInterval(() => {
