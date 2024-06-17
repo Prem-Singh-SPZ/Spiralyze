@@ -1,7 +1,29 @@
 (function () {
   function loadTest() {
-    document.body.insertAdjacentHTML("afterbegin", pageContent());
     document.body.classList.add('spz-25003');
+
+    waitForElm('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').then(function () {
+      document.querySelector('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
+        <h1 class="hc-title">Guide to <span>Cybersecurity</span> Risk Management</h1>
+        <div class="hc-tag dis-flex"><span>SOC 2</span> <span>ISO 27001</span> <span>HIPAA</span> <span>GDPR</span> <span>PCI</span> <span> More</span></div>
+        <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/hero_logo-g2_1.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1698673988/drata/4012/custom/4.9_Star_rating.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <span class="sr-number"><strong>4.9</strong> (700+ reviews)</span></div>
+        <p class="hc-sub-title">Access our guide to learn how to kickstart your risk management program, and find out: </p>
+        <div class="list-grp-wrapper">
+        <ul class="list-group">
+        <li class="list-item">
+        <div class="ls-title">An overview of IT and cybersecurity risk management.</div>
+        </li>
+        <li class="list-item">
+        <div class="ls-title">Why you need risk management.</div>
+        </li>
+        <li class="list-item">
+        <div class="ls-title">How to make risk management work for your organization.</div>
+        </li>
+        </ul>
+        </div>
+        </div>`;
+    });
+
 
     waitForElm('div[class*="Form-formContainer"] #reactHubspotForm0 form.hs-form').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
@@ -36,18 +58,9 @@
 
         // Set focus on input
         focusFields();
-        hideReviewBadges();
-        submitTestDetails();
-
-        document.body.classList.add('spz-25003');
+        // submitTestDetails();
       }
     });
-
-    function hideReviewBadges() {
-      waitForElm(' .hbspt-form .submitted-message').then(function () {
-        document.querySelector(' fieldset.form-columns-0').style.display = 'none';
-      });
-    }
 
     function waitForElm(selector) {
       return new Promise(function (resolve) {
@@ -183,9 +196,7 @@
       testURL = window.location.href;
     }
     if (isSameUrl(url, testURL, true)) {
-      if (document.querySelectorAll('.hero-section').length == 0) {
-        loadTest();
-      }
+      loadTest();
     } else {
       removeTest();
     }
@@ -211,9 +222,6 @@
     if (document.body.classList.contains('spz-25003')) {
       document.body.classList.remove('spz-25003');
     }
-    if (document.querySelectorAll('.hero-section').length > 0) {
-      document.querySelector('.hero-section').remove();
-    }
   }
 
   // Add .field-error class on closest parent .field class if .error is exist on .hs-input
@@ -227,53 +235,8 @@
     });
   }
 
-  // Move element
-  // sourceElm: Element which we have to move
-  // targetLoc: New location of an element 
-  function moveElement(sourceElm, targetLoc) {
-    const f = document.createDocumentFragment();
-    if (document.querySelector(sourceElm) != null) {
-      f.appendChild(document.querySelector(sourceElm));
-      document.querySelector(targetLoc).appendChild(f);
-    }
-  }
-
   // Add class 'safari' on body if browser is safari
   if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
     document.body.classList.add('safari');
-  }
-
-  function pageContent() {
-    return `<section class="hero-section">
-    <div class="hero-content container dis-flex">
-    <div class="spz-header"><a href="Javascript:void(0);" id="header-logo-url"
-     class="drata-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1690373470/drata/1007/drata-wordmark.svg" alt="Drata"></a></div>
-      <div class="hero-right-section">
-        <div class="form-wrapper-spz">
-          <h2 class="form-title-spz">Get a Demo</h2>
-          <script
-            type="text/javascript"
-            src="//js.hsforms.net/forms/embed/v2.js"
-            charset="utf-8"
-          ></script>
-          <script>
-            hbspt.forms.create({
-              region: "na1",
-              portalId: "7817592",
-              formId: "429140d2-bd90-4a8b-a561-5d732c9bd514",
-              cssClass: "hs-form-spz",
-              css: "",
-              submitText: "Get Started",
-              onFormReady: function ($form) {},
-              onFormSubmit: function ($form) {},
-              onFormSubmitted: function ($form) {},
-            });
-          </script>
-        </div>
-      </div>
-      </div>
-      <div class="analytics-bg-section"></div>
-  </section>
-  `;
   }
 })();
