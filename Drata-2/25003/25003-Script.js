@@ -1,22 +1,17 @@
 (function () {
   function loadTest() {
     document.body.insertAdjacentHTML("afterbegin", pageContent());
-    document.body.classList.add('spz-1007');
+    document.body.classList.add('spz-25003');
 
-    const formInt = setInterval(() => {
-      if (document.querySelectorAll('.hbspt-form form').length > 0 && document.querySelectorAll('.hs-form').length == 2) {
-        clearInterval(formInt);
+    waitForElm('div[class*="Form-formContainer"] #reactHubspotForm0 form.hs-form').then(function () {
+      if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
+        console.log('Form loaded');
         appendInputLabel();
 
         // Set input label
-        document.querySelector('[name="source__inbound_demo_"] + .hs-label-spz').innerHTML = 'How did you hear about us?*';
-        document.querySelector('[name="source__inbound_demo_"]').setAttribute('placeholder', 'How did you hear about us?*');
         document.querySelector('[name="number_of_employees"] + .hs-label-spz').innerHTML = 'No. of Employees*';
         document.querySelector('[name="number_of_employees"] option:first-child').innerHTML = 'No. of Employees*';
-        document.querySelector('label#label-demo_product_of_interest-429140d2-bd90-4a8b-a561-5d732c9bd514 + .hs-field-desc').innerHTML = 'What product(s) are you interested in?';
-        // Set SOC-2 checkbox checked
-        // document.querySelector('[name="demo_product_of_interest"]').setAttribute('checked', 'checked');
 
         // Set button label
         document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
@@ -44,9 +39,9 @@
         hideReviewBadges();
         submitTestDetails();
 
-        document.body.classList.add('spz-1007');
+        document.body.classList.add('spz-25003');
       }
-    }, 100);
+    });
 
     function hideReviewBadges() {
       waitForElm(' .hbspt-form .submitted-message').then(function () {
@@ -68,38 +63,6 @@
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
       });
     }
-
-    function forClearBitForms() {
-      document.querySelectorAll(' .hs-input').forEach(function (el) {
-        if (el.closest('.hs-form-field[style*="display: none"]')) {
-          el.closest('fieldset').classList.add('field-hidden');
-        } else {
-          el.closest('fieldset').classList.remove('field-hidden');
-        }
-
-        // Make 'How did you hear about us?' field full width if hidden fields count is odd
-        const hiddenFields = document.querySelectorAll('fieldset:not(.form-columns-3).field-hidden').length;
-        if (hiddenFields % 2 == 0) {
-          document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.add('full-width');
-        } else {
-          document.querySelector('.hs_source__inbound_demo_').closest('fieldset').classList.remove('full-width');
-        }
-      });
-    }
-
-    setInterval(function () {
-      // if (document.querySelectorAll('fieldset:not(.form-columns-3) .hs-form-field[style*="display: none"]').length > 0) {
-      // clearInterval(cbInt);
-      forClearBitForms();
-      // }
-    }, 500);
-
-    // on user type in .hs-input run forClearBitForms() function
-    document.addEventListener('keyup', function (e) {
-      if (e.target.classList.contains('hs-input')) {
-        forClearBitForms();
-      }
-    });
   }
 
 
@@ -119,7 +82,7 @@
 
   // Create input label with placeholder text
   function appendInputLabel() {
-    document.querySelectorAll('.hbspt-form form .hs-input').forEach(function (el) {
+    document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form .hs-input').forEach(function (el) {
       const label = document.createElement("label");
       label.innerHTML = el.placeholder;
       if (!el.hasAttribute('type') && el.options.length > 0) {
@@ -135,9 +98,9 @@
 
   //Passing test details to hidden fields
   function submitTestDetails() {
-    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
-      document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
-      document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
+    if (document.querySelector('div[class*="Form-formContainer"] form.hs-form .hs_cro_test_1 .input .hs-input')) {
+      document.querySelector('div[class*="Form-formContainer"] form.hs-form .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
+      document.querySelector('div[class*="Form-formContainer"] form.hs-form .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
     }
   }
 
@@ -245,8 +208,8 @@
   }
 
   function removeTest() {
-    if (document.body.classList.contains('spz-1007')) {
-      document.body.classList.remove('spz-1007');
+    if (document.body.classList.contains('spz-25003')) {
+      document.body.classList.remove('spz-25003');
     }
     if (document.querySelectorAll('.hero-section').length > 0) {
       document.querySelector('.hero-section').remove();
