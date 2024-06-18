@@ -33,13 +33,30 @@ body.spz-25003 header div[class*=MuiToolbar-root-Header-contentContainer] [class
 }
 body.spz-25003 main section[variant=splitHalves] {
   background-color: #eef2f6;
+  margin-bottom: 28px;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] {
   max-width: 1500px;
   gap: 40px;
 }
+@media (max-width: 1199.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] {
   padding: 90px 0;
+}
+@media (max-width: 1199.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] {
+    padding-bottom: 0;
+  }
 }
 @media (max-width: 1299px) {
   body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] [class*=Block-contentOuterWrapper] {
@@ -51,13 +68,19 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
     margin-right: 88px;
   }
 }
+@media (max-width: 1199.98px) {
+  body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child {
+    margin-right: 0;
+    margin-bottom: 64px;
+  }
+}
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] {
   padding: 0;
   max-width: 604px;
   margin: 0;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] {
-  padding: 31px 38px 40px;
+  padding: 31px 38px 39px;
   -webkit-box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
           box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
 }
@@ -145,7 +168,7 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   font-weight: 500;
   font-size: 16px;
   line-height: 24px;
-  color: #0C131A !important;
+  color: #0c131a !important;
 }
 @media (min-width: 1199.98px) and (max-width: 1216.98px) {
   body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field input {
@@ -186,13 +209,13 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg") #fff no-repeat right 11px center !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select option {
-  color: #0C131A !important;
+  color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select.is-placeholder {
   color: transparent !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field select.is-placeholder:focus {
-  color: #0C131A !important;
+  color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset.form-columns-2 {
   width: 100%;
@@ -245,7 +268,7 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
-  max-width: calc(100% - 32px);
+  max-width: calc(100% - 40px);
   overflow: hidden;
   text-overflow: ellipsis;
 }
@@ -275,13 +298,13 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   color: transparent;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border-color: #DDE3EB;
+  border-color: #dde3eb;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border-color: #DDE3EB;
+  border-color: #dde3eb;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) {
-  border-color: #DDE3EB;
+  border-color: #dde3eb;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
   top: 9px;
@@ -320,7 +343,7 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   top: 9px;
   font-size: 12px;
   line-height: 16px;
-  color: #0C131A !important;
+  color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error {
   border-color: #d53641 !important;
@@ -411,19 +434,19 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #0C131A !important;
+  -webkit-text-fill-color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #0C131A !important;
+  -webkit-text-fill-color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #0C131A !important;
+  -webkit-text-fill-color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #0C131A !important;
+  -webkit-text-fill-color: #0c131a !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-form .submitted-message {
   background: no-repeat;

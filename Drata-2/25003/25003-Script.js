@@ -9,19 +9,19 @@
         <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/hero_logo-g2_1.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1698673988/drata/4012/custom/4.9_Star_rating.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <span class="sr-number"><strong>4.9</strong> (700+ reviews)</span></div>
         <p class="hc-sub-title">Access our guide to learn how to kickstart your risk management program, and find out: </p>
         <div class="list-grp-wrapper">
-        <ul class="list-group">
-        <li class="list-item">
-        <div class="ls-title">An overview of IT and cybersecurity risk management.</div>
-        </li>
-        <li class="list-item">
-        <div class="ls-title">Why you need risk management.</div>
-        </li>
-        <li class="list-item">
-        <div class="ls-title">How to make risk management work for your organization.</div>
-        </li>
-        </ul>
+            <ul class="list-group">
+              <li class="list-item">
+                  <div class="ls-title">An overview of IT and cybersecurity risk management.</div>
+              </li>
+              <li class="list-item">
+                  <div class="ls-title">Why you need risk management.</div>
+              </li>
+              <li class="list-item">
+                  <div class="ls-title">How to make risk management work for your organization.</div>
+              </li>
+            </ul>
         </div>
-        </div>`;
+      </div>`;
     });
 
 
@@ -37,7 +37,6 @@
           document.querySelector('div[class*="Form-formContainer"] #reactHubspotForm0  form.hs-form .hs_submit').insertAdjacentHTML('beforebegin', `<p class="form-note">For partnership inquiries, please contact partnerships@drata.com</p>`);
         }
 
-        console.log('Form loaded');
         appendInputLabel();
 
         // Set button label
@@ -57,9 +56,6 @@
             el.closest('.field').classList.add('field-untouched');
           }
         });
-
-        // moveElement('.hs_source__inbound_demo_', '.hbspt-form .form-columns-1:nth-child(2)');
-        // moveElement(' .hbspt-form .form-columns-0', ' .hbspt-form');
 
         // Set focus on input
         focusFields();
@@ -147,13 +143,6 @@
         el.addEventListener('change', function () {
           el.closest('.field').classList.remove('field-error');
         });
-
-        // el.addEventListener('focus', function () {
-        //     el.closest('.field').classList.add('field-focus');
-        //     setTimeout(function () {
-        //         el.closest('.field').classList.remove('field-untouched');
-        //     }, 100);
-        // });
       }
     });
   }
