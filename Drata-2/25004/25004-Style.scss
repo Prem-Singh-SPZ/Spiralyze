@@ -56,9 +56,10 @@ body.spz-25004 {
        [class$="Section-gridContainer"] {
         max-width: 1500px;
         gap: 40px;
+        display: flex;
+        align-items: center;
 
         @media (max-width: 1199.98px) {
-          display: flex;
           flex-direction: column;
         }
 
@@ -71,6 +72,7 @@ body.spz-25004 {
           }
 
           [class*="Block-contentOuterWrapper"] {
+            padding-left: 24px;
             @media (max-width: 1299px) {
               padding-right: 0px;
             }
@@ -100,7 +102,7 @@ body.spz-25004 {
                 display: none;
               }
 
-              .form-title {
+             > [class*="MuiTypography-root-Form-formMessage"] {
                 color: #eef2f6;
                 text-align: center;
                 font-family: $font-family_3;
@@ -151,12 +153,21 @@ body.spz-25004 {
                   max-width: unset;
                   width: calc(50% - 6px);
 
+                  &:nth-child(5){
+                    width: 100%;
+                  }
+
                   .field {
                     position: relative;
                     margin-bottom: 0;
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+
+                    > label[id]{
+                      display: none !important;
+                    }
+
                     .input {
                       width: 100%;
                       position: relative;
@@ -251,9 +262,9 @@ body.spz-25004 {
                   -ms-flex-pack: justify;
                   justify-content: space-between;
                   gap: 12px;
-                  .field {
-                    width: calc(50% - 6px);
-                  }
+                  // .field {
+                  //   width: calc(50% - 6px);
+                  // }
                 }
                 .hs-submit {
                   width: 100%;
@@ -514,7 +525,7 @@ body.spz-25004 {
             // padding: 39px 0;
             @media (min-width: 1199.98px) {
               margin-right: 14px;
-              margin-left: 24px;
+              // margin-left: 24px;
             }
 
             .hc-title {

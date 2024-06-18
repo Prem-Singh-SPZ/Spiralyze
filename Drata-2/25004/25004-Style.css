@@ -38,12 +38,15 @@ body.spz-25004 main section[variant=defaultResponsive] {
 body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] {
   max-width: 1500px;
   gap: 40px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 1199.98px) {
   body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] {
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
@@ -57,6 +60,9 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
   body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] {
     padding-bottom: 0;
   }
+}
+body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] [class*=Block-contentOuterWrapper] {
+  padding-left: 24px;
 }
 @media (max-width: 1299px) {
   body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] [class*=Block-contentOuterWrapper] {
@@ -87,7 +93,7 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
 body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] > svg {
   display: none;
 }
-body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .form-title {
+body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] > [class*=MuiTypography-root-Form-formMessage] {
   color: #eef2f6;
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -137,6 +143,9 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
   max-width: unset;
   width: calc(50% - 6px);
 }
+body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset:nth-child(5) {
+  width: 100%;
+}
 body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field {
   position: relative;
   margin-bottom: 0;
@@ -150,6 +159,9 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field > label[id] {
+  display: none !important;
 }
 body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .input {
   width: 100%;
@@ -227,9 +239,6 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
   -ms-flex-pack: justify;
   justify-content: space-between;
   gap: 12px;
-}
-body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset.form-columns-2 .field {
-  width: calc(50% - 6px);
 }
 body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs-submit {
   width: 100%;
@@ -467,7 +476,6 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
 @media (min-width: 1199.98px) {
   body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content {
     margin-right: 14px;
-    margin-left: 24px;
   }
 }
 body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=Block-contentOuterWrapper] .hero-content .hc-title {
