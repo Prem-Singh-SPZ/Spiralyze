@@ -236,18 +236,17 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs_error_rollup {
   width: 100%;
-  text-align: center;
-  display: none;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .hs_error_rollup label.hs-main-font-element {
   padding: 0;
-  margin: 0;
+  margin: 4px 0 0;
   font-family: "Inter", sans-serif;
-  font-style: normal;
-  font-weight: 500;
+  color: #D6EDFF;
   font-size: 12px;
-  line-height: 14px;
-  color: #f97f70;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 18px;
+  text-align: center;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset label {
   padding: 0;
@@ -607,15 +606,7 @@ body.spz-25003 .field-hidden {
   display: none !important;
 }
 
-.hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
-  display: none;
-}
-
-.field-hidden {
-  display: none !important;
-}
-
-.hero-section form fieldset .field select {
+.safari .hero-section form fieldset .field select {
   white-space: nowrap;
   overflow: hidden !important;
   text-overflow: ellipsis;

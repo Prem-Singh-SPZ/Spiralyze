@@ -59,7 +59,6 @@
 
         // Set focus on input
         focusFields();
-        // submitTestDetails();
       }
     });
 
@@ -81,14 +80,7 @@
 
 
   function appendFavicon() {
-    document.querySelector('head').insertAdjacentHTML("afterbegin", `
-        <link rel="shortcut icon" href="https://drata.com/images/favicon.ico">
-        <link rel="icon" type="image/png" sizes="256x256" href="https://drata.com/images/favicon-256x256.png">
-        <link rel="icon" type="image/png" sizes="48x48" href="https://drata.com/images/favicon-48x48.png">
-        <link rel="icon" type="image/png" sizes="32x32" href="https://drata.com/images/favicon-32x32.png">
-        <link rel="icon" type="image/png" sizes="16x16" href="https://drata.com/images/favicon-16x16.png">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1681388733/drata/4001/System_Icons_open.svg" as="image">
-        <link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1686657672/drata/1005/Checkbox.svg" as="image">`
+    document.querySelector('head').insertAdjacentHTML("afterbegin", `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1694603081/drata/6012/select-focus.svg" as="image">`
     );
   }
 
@@ -108,14 +100,6 @@
         el.parentNode.insertBefore(label, el.nextSibling);
       }
     });
-  }
-
-  //Passing test details to hidden fields
-  function submitTestDetails() {
-    if (document.querySelector('div[class*="Form-formContainer"] form.hs-form .hs_cro_test_1 .input .hs-input')) {
-      document.querySelector('div[class*="Form-formContainer"] form.hs-form .hs_cro_test_1 .input .hs-input').setAttribute('value', '#1007__Demo(Internal)_Form_Over_UI_Left');
-      document.querySelector('div[class*="Form-formContainer"] form.hs-form .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
-    }
   }
 
   // On input focus add class on closest parent .field class
