@@ -5,6 +5,7 @@
 
     const assetURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4013/';
     const logoURL = '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/4013/';
+    const iconURL = '//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/4013/';
 
     const rightBullets = [
         {
@@ -16,6 +17,12 @@
             person_name: "Eric Van Lint",
             person_company: "Dimension Data",
             page_logo: logoURL + "endorsed_logos.svg",
+            value_prop1_img: iconURL + "proxy_click_icon_01.webp",
+            value_prop1_copy: "Optimize <br>guest experience",
+            value_prop2_img: iconURL + "proxy_click_icon_02_webp.webp",
+            value_prop2_copy: "Decrease <br>operational costs",
+            value_prop3_img: iconURL + "proxy_click_icon_03_webp.webp",
+            value_prop3_copy: "Improve <br>safety & security",
         },
         {
             pageName: "website-managerplus-demo",
@@ -26,6 +33,12 @@
             person_name: "Brian Martinez",
             person_company: "Metro Group",
             page_logo: logoURL + "logo_-managerplus.svg",
+            value_prop1_img: iconURL + "icon_managerplus_01.svg",
+            value_prop1_copy: "Improve asset availability",
+            value_prop2_img: iconURL + "icon_managerplus_02.svg",
+            value_prop2_copy: "Extend asset longevity",
+            value_prop3_img: iconURL + "icon_managerplus_03.svg",
+            value_prop3_copy: "Save time",
         },
         {
             pageName: "website-archibus-demo",
@@ -36,6 +49,12 @@
             person_name: "Michael DuLaney",
             person_company: "UCHealth",
             page_logo: logoURL + "archibus-eptura-logo-color_2.svg",
+            value_prop1_img: iconURL + "icon_archibus_01.svg",
+            value_prop1_copy: "Boost workplace productivity",
+            value_prop2_img: iconURL + "icon_archibus_02.svg",
+            value_prop2_copy: "Maximize your space",
+            value_prop3_img: iconURL + "icon_archibus_03.svg",
+            value_prop3_copy: "Get real-time data",
         },
         {
             pageName: "website-spaceiq-demo",
@@ -46,6 +65,12 @@
             person_name: "John Watkins",
             person_company: "San Diego Gas & Electric",
             page_logo: logoURL + "spaceiq-eptura-logo-color_3.svg",
+            value_prop1_img: iconURL + "hand_icon_1.svg",
+            value_prop1_copy: "Space <br>planning",
+            value_prop2_img: iconURL + "security_icon_4.svg",
+            value_prop2_copy: "Support hybrid working",
+            value_prop3_img: iconURL + "security_icon_3.svg",
+            value_prop3_copy: "Uncover <br>smarter data",
         },
         {
             pageName: "website-ioffice-demo",
@@ -56,6 +81,12 @@
             person_name: "Edgar Sanchez",
             person_company: "Sephora",
             page_logo: logoURL + "ioffice-eptura-logo-color_2.svg",
+            value_prop1_img: iconURL + "icon_ioffice_01.svg",
+            value_prop1_copy: "Maximize <br>your space",
+            value_prop2_img: iconURL + "icon_ioffice_02.svg",
+            value_prop2_copy: "Boost office productivity",
+            value_prop3_img: iconURL + "icon_ioffice_03.svg",
+            value_prop3_copy: "Uncover <br>smarter data",
         }
     ];
 
@@ -95,7 +126,7 @@
                     document.querySelector('#form-over #form_logo').setAttribute('src', con.page_logo);
                     document.querySelector('#form-over #form_logo').setAttribute('alt', con.logoAlt);
 
-                    document.querySelector('.spz-left-content .left-wrapper').insertAdjacentHTML('afterend', `
+                    document.querySelector('.mktoForm#Form').insertAdjacentHTML('afterend', `
                     <div class="case-studies-section">
                     <div class="case-studies-wrapper">
                         <div class="value-prop">
@@ -109,6 +140,26 @@
                         <div class="person-copy"><span class="name">${con.person_name}</span><span class="company">${con.person_company}</span></div></div>
                     </div></div>
                     `);
+
+                    let iconAlt1 = removeBrTag(con.value_prop1_copy);
+                    let iconAlt2 = removeBrTag(con.value_prop2_copy);
+                    let iconAlt3 = removeBrTag(con.value_prop3_copy);
+
+                    if (document.querySelectorAll('#form-over .value-props-section').length == 0) {
+                        document.querySelector('#form-over #form_title').insertAdjacentHTML('afterend', `
+                        <div class="value-props-section">
+                        <div class="value-props-wrapper">
+                            <div class="value-prop">
+                                <div class="prop-img"><img src="${con.value_prop1_img}" alt="` + iconAlt1 + `"></div>
+                                <div class="prop-copy">${con.value_prop1_copy}</div>
+                            </div>
+                            <div class="value-prop"><div class="prop-img"><img src="${con.value_prop2_img}" alt="` + iconAlt2 + `"></div>
+                            <div class="prop-copy">${con.value_prop2_copy}</div></div>
+                            <div class="value-prop"><div class="prop-img"><img src="${con.value_prop3_img}" alt="` + iconAlt3 + `"></div>
+                            <div class="prop-copy">${con.value_prop3_copy}</div></div>
+                        </div></div>
+                        `);
+                    }
                 }
             })
 

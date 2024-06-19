@@ -29,19 +29,110 @@ body#bodyId.spz-4013.form-overlay {
           }
 
           #form-over.form-over {
+            max-width: 600px;
+
+            @media screen and (max-width: 1023.98px) {
+              padding: 16px 46px 32px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              padding: 16px 14px 32px;
+            }
+
+            .value-props-section {
+              .value-props-wrapper {
+                display: flex;
+                align-items: center;
+                margin: 10px 24px;
+                padding: 0 0 15px;
+
+                @media (max-width: 1023.98px) {
+                  margin: 30px 24px 8px;
+                }
+
+                @media (max-width: 767.98px) {
+                  margin: 15px 10px 9px;
+                }
+
+                .value-prop {
+                  display: flex;
+                  margin-right: 16px;
+                  &:last-child {
+                    margin-right: 0;
+                  }
+
+                  @media (max-width: 767.98px) {
+                    flex-direction: column;
+                    justify-content: center;
+                    align-items: center;
+                  }
+
+                  .prop-img {
+                    margin: 2.2px 8px 2.2px 2.2px;
+                    img {
+                      width: 32px;
+                      height: 32px;
+                    }
+                  }
+
+                  .prop-copy {
+                    color: #0d122e;
+                    font-family: "Eptura Flexible";
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 400;
+                    line-height: 16px;
+                    margin: 4px 0;
+                    white-space: nowrap;
+
+                    @media (max-width: 767.98px) {
+                      white-space: wrap;
+                      text-align: center;
+                      line-height: 14px;
+                    }
+                  }
+                }
+              }
+            }
+
             #form_subtitle {
               display: none !important;
             }
 
             #form_title {
-              margin: 48px auto 32px;
+              margin: 28px auto 32px;
+              font-size: 32px;
+              line-height: 40px;
 
               @media (max-width: 1023.98px) {
-                margin: 44px auto 28px;
+                margin: 30px auto 28px;
               }
 
               @media (max-width: 767.98px) {
-                margin: 24px auto;
+                margin: 32px auto 8px;
+                font-size: 26px;
+                line-height: 34px;
+              }
+            }
+
+            .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+              margin-bottom: 12px;
+
+              @media (max-width: 767.98px) {
+                margin-bottom: 15px;
+              }
+            }
+
+            .mktoButtonRow .mktoButtonWrap button.mktoButton {
+              width: 100% !important;
+              max-width: calc(100% - 20px) !important;
+              height: 50px !important;
+            }
+
+            @media (min-width: 767.98px) and (max-width: 1023.98px) {
+              .mktoFormCol:first-child:nth-last-child(3),
+              .mktoFormCol:first-child:nth-last-child(3) ~ .mktoFormCol {
+                width: 50% !important;
               }
             }
 
@@ -56,24 +147,167 @@ body#bodyId.spz-4013.form-overlay {
             }
             @media (min-width: 1023.98px) {
               .spz-email .mktoFieldWrap {
-                margin-top: 19px;
+                margin-top: 16px;
               }
             }
 
             @media (max-width: 1023.98px) {
-              .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
-                margin-bottom: 20px;
+              // .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+              //   margin-bottom: 20px;
+              // }
+
+              .mktoFormRow .mktoFieldWrap .mktoCheckboxList label {
+                font-size: 14px !important;
+                line-height: 20px !important;
+              }
+
+              .mktoFormRow
+                .mktoFormCol
+                .mktoFieldWrap
+                .mktoHtmlText.mktoHasWidth
+                em
+                .mobile-only {
+                  @media (min-width: 767.98px) {
+                    display: none;
+                  }
+              }
+
+              .mktoFormRow.spz-email .mktoFieldWrap {
+                margin-top: 20px;
               }
             }
 
             @media (max-width: 767.98px) {
               .mktoButtonRow .mktoButtonWrap button.mktoButton {
-                margin-top: 21px !important;
+                margin-top: 23px !important;
+                height: 56px !important;
+              }
+
+              .mktoFormRow .mktoFieldWrap .mktoCheckboxList label {
+                font-size: 12px !important;
+                line-height: 18px !important;
+              }
+            }
+
+            .case-studies-section {
+              background: #eeeff4;
+              height: 75px;
+              padding: 3px 56px 2px 56px;
+              margin: 24px -46px -49px;
+
+              @media (max-width: 1023.98px) {
+                // padding: 16px 24px 20px 24px;
+                margin: 28px -46px -34px;
+              }
+
+              @media (max-width: 767.98px) {
+                padding: 20px 24px 24px 24px;
+                height: auto;
+                margin: 24px -14px -32px;
+              }
+
+              .case-studies-wrapper {
+                display: flex;
+                // flex-wrap: wrap;
+                align-items: center;
+
+                @media (max-width: 767.98px) {
+                  flex-direction: column;
+                  align-items: flex-start;
+                }
+
+                .value-prop {
+                  flex-grow: 1;
+                  border-right: 1px solid #d9dce2;
+
+                  @media (max-width: 767.98px) {
+                    padding-bottom: 16px;
+                    border-right: 0;
+                    border-bottom: 1px solid #d9dce2;
+                    width: 100%;
+                  }
+
+                  .growth-copy {
+                    display: flex;
+                    align-items: center;
+                    span {
+                      margin-left: 4px;
+                      color: #0d122e;
+                      font-size: 28px;
+                      font-weight: 300;
+                      line-height: 36px;
+                    }
+                  }
+
+                  .prop-copy {
+                    padding: 4px 6px;
+                    border-radius: 2px;
+                    background: #d9dce2;
+                    color: #545965;
+                    font-family: "Eptura Flexible", Arial, sans-serif;
+                    font-size: 10px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 12px;
+                    letter-spacing: 2px;
+                    text-transform: uppercase;
+                    width: fit-content;
+                    margin-top: 4px;
+                    margin-bottom: 4px;
+                    margin-right: 16px;
+                  }
+                }
+
+                .person-prof {
+                  padding-left: 20px;
+                  display: flex;
+                  align-items: center;
+
+                  @media (max-width: 767.98px) {
+                    padding: 21px 0 0;
+                  }
+
+                  .person-img {
+                    width: 40px;
+                    height: 40px;
+
+                    img {
+                      width: 100%;
+                      height: auto;
+                    }
+                  }
+
+                  .person-copy {
+                    display: flex;
+                    flex-direction: column;
+                    margin-left: 8px;
+
+                    .name {
+                      color: #0d122e;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 500;
+                      line-height: 20px;
+                      font-family: "Eptura Flexible", Arial, sans-serif;
+                      white-space: nowrap;
+                    }
+
+                    .company {
+                      color: rgba(13, 18, 46, 0.8);
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 300;
+                      line-height: 20px;
+                      white-space: nowrap;
+                    }
+                  }
+                }
               }
             }
           }
 
           .spz-left-content {
+            display: none !important;
             flex-direction: column;
             @media (min-width: 1023.98px) {
               max-width: 50%;
@@ -146,118 +380,6 @@ body#bodyId.spz-4013.form-overlay {
                         font-size: 16px;
                         line-height: 24px;
                       }
-                    }
-                  }
-                }
-              }
-            }
-
-            .case-studies-section {
-              background: rgba(214, 215, 245, 0.08);
-              padding: 20px 56px 24px 56px;
-              width: 100%;
-
-              @media (max-width: 1023.98px) {
-                padding: 16px 24px 20px 24px;
-              }
-
-              @media (max-width: 767.98px) {
-                padding: 20px 24px 24px 24px;
-              }
-
-              .case-studies-wrapper {
-                display: flex;
-                // flex-wrap: wrap;
-                align-items: center;
-
-                @media (max-width: 1023.98px) {
-                  flex-direction: column;
-                  align-items: flex-start;
-                }
-
-                .value-prop {
-                  flex-grow: 1;
-                  border-right: 1px solid rgba(255, 255, 255, 0.1);
-
-                  @media (max-width: 1023.98px) {
-                    padding-bottom: 16px;
-                    border-right: 0;
-                    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-                    width: 100%;
-                  }
-
-                  .growth-copy {
-                    display: flex;
-                    align-items: center;
-                    span {
-                      margin-left: 4px;
-                      color: #fff;
-                      font-size: 26px;
-                      font-weight: 300;
-                      line-height: 34px;
-                    }
-                  }
-
-                  .prop-copy {
-                    padding: 4px 6px;
-                    border-radius: 2px;
-                    background: rgba(214, 215, 245, 0.08);
-                    color: #ced1d7;
-                    font-family: "Eptura Flexible", Arial, sans-serif;
-                    font-size: 10px;
-                    font-style: normal;
-                    font-weight: 500;
-                    line-height: 12px;
-                    letter-spacing: 2px;
-                    text-transform: uppercase;
-                    width: fit-content;
-                    margin-top: 4px;
-                    margin-bottom: 4px;
-                    margin-right: 16px;
-                  }
-                }
-
-                .person-prof {
-                  padding-left: 20px;
-                  display: flex;
-                  align-items: center;
-
-                  @media (max-width: 1023.98px) {
-                    padding: 15px 0 0;
-                  }
-
-                  .person-img {
-                    width: 40px;
-                    height: 40px;
-
-                    img {
-                      width: 100%;
-                      height: auto;
-                    }
-                  }
-
-                  .person-copy {
-                    display: flex;
-                    flex-direction: column;
-                    margin-left: 8px;
-
-                    .name {
-                      color: #f6fafa;
-                      font-size: 14px;
-                      font-style: normal;
-                      font-weight: 500;
-                      line-height: 20px;
-                      font-family: "Eptura Flexible", Arial, sans-serif;
-                      white-space: nowrap;
-                    }
-
-                    .company {
-                      color: #babfcb;
-                      font-size: 14px;
-                      font-style: normal;
-                      font-weight: 300;
-                      line-height: 20px;
-                      white-space: nowrap;
                     }
                   }
                 }
