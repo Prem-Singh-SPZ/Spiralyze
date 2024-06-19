@@ -44,7 +44,11 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
     <div class="section-title">Features</div>
         <div class="accordion-col">
             <nav id="tabs">
-                <li class="active"><a href="#tab1">Employee Benefits</a></li>
+                <li class="active"><a href="#tab1">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275642.svg" alt="Employee Benefits" class="i-default">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275642.svg" alt="Employee Benefits" class="i-hover">
+                    Employee Benefits</a>
+                </li>
                 <li><a href="#tab2">Commercial Lines</a></li>
             </nav>
             
@@ -59,7 +63,7 @@ document.body.insertAdjacentHTML('afterbegin', `<section class="hero-section">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/KomodoHealth/5001/down-arrow.svg" alt="Arrow" width="24" height="24"/>
                             </div>
                             <div class="content">
-                            <div class="text">Comprehensive insights start with Komodo’s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
+                            <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
                             <picture>
                                 <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/healthcare_map_1440.webp">
                                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/healthcare_map_1440.webp" alt="Insights Foundation" width="688" height="404">

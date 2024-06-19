@@ -493,21 +493,37 @@ body.spz-10001 {
 
         #tabs {
           list-style-type: none;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-bottom: 32px;
+
           li {
-            display: inline-block;
-            margin-bottom: -1px;
+            margin: 0 5px;
+            position: relative;
+
             a {
-              display: block;
-              height: 100%;
-              padding: 10px;
-              border-radius: 4px 4px 0 0;
-              border: 1px solid;
-              border-color: #ccc #ccc transparent;
-              text-align: center;
+              display: flex;
+              height: 44px;
+              padding: 0 20px 0 50px;
+              justify-content: center;
+              align-items: center;
+              border-radius: 999px;
+              border: 1px solid #0f2d52;
+              color: #0f2d52;
+              leading-trim: both;
+              text-edge: cap;
+              font-family: $segoe;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 600;
+              line-height: 140%;
             }
+
             &:hover a,
             &.active a {
-              background-color: #efefef;
+              background: #0f2d52;
+              color: #fff;
             }
           }
         }
