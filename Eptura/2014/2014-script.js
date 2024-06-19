@@ -1,5 +1,4 @@
 (function () {
-    // document.body.classList.add('spz-2010');
     document.body.classList.add('spz-2014');
 
     var link = document.createElement('link');
@@ -60,6 +59,11 @@
         }
     ]
 
+    const selectedData = {
+        industry: '',
+        employee: ''
+    };
+
     waitForElm('body .body-wrapper').then(function () {
         document.body.classList.add('spz-2014');
         loadTest();
@@ -73,6 +77,8 @@
 
         header();
         footer();
+        createSteps();
+
         formUpdate();
         trustedLogo();
 
@@ -81,8 +87,166 @@
         document.head.appendChild(script);
     }
 
+    function createSteps() {
+        // Wrap the #HeroForm in a div and add class name 'step step-3'
+        let heroForm = document.querySelector('#HeroForm');
+        let step3 = document.createElement('div');
+        step3.className = 'step step-3';
+        heroForm.parentNode.insertBefore(step3, heroForm);
+        step3.appendChild(heroForm);
+        step3.insertBefore(document.querySelector('#HeroFormTitleText'), heroForm);
+        step3.insertAdjacentHTML('afterbegin', `
+            <div class="stepper">
+                <i></i><i></i><i></i>
+            </div>`);
+
+
+        // Add step 1 and step 2
+        document.querySelector('.step.step-3').insertAdjacentHTML('beforebegin',
+            `<div class="step step-1 active">
+                <div class="stepper">
+                    <i></i><i></i><i></i>
+                </div>
+                <div class="step-title">Let’s get started!</div>
+                <div class="step-desc">What is your industry?</div>
+
+                <div class="step-container">
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_9.svg" alt="Business Services">
+                        <div class="separator"></div>
+                        <span>Business Services</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_3.svg" alt="Software & Tech">
+                        <div class="separator"></div>
+                        <span>Software & Tech</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_5.svg" alt="Manufacturing & Operations">
+                        <div class="separator"></div>
+                        <span>Manufacturing & Operations</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_8.svg" alt="Energy & Transportation">
+                        <div class="separator"></div>
+                        <span>Energy & Transportation</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon-05.svg" alt="Construction & Facilities">
+                        <div class="separator"></div>
+                        <span>Construction & Facilities</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_13.svg" alt="Others">
+                        <div class="separator"></div>
+                        <span class="single-line">Others</span>
+                    </div>
+                </div>
+            </div>
+            <div class="step step-2">
+                <div class="stepper">
+                    <i></i><i></i><i></i>
+                </div>
+                <div class="step-title">Let’s get started!</div>
+                <div class="step-desc">What is your employee range?</div>
+
+                <div class="step-container">
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_10.svg" alt="0 - 199">
+                        <div class="separator"></div>
+                        <span class="single-line">0 - 199</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_11.svg" alt="200 - 1,999">
+                        <div class="separator"></div>
+                        <span class="single-line">200 - 1,999</span>
+                    </div>
+                    <div class="step-item">
+                        <img src="https://res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/icon_desktop_12.svg" alt="2,000+">
+                        <div class="separator"></div>
+                        <span class="single-line">2,000+</span>
+                    </div>
+                </div>
+            </div>`);
+
+
+        stepEvent();
+
+        // By default add active class to step 1 and step 2
+        // document.querySelector('.step-1 .step-item').classList.add('active');
+        // document.querySelector('.step-2 .step-item').classList.add('active');
+
+    }
+
+    // Step 1 and Step 2 event listener
+    function stepEvent() {
+        // Add event listener for step 1
+        document.querySelectorAll('.step-1 .step-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (document.querySelector('.step-1 .step-item.active')) {
+                    document.querySelector('.step-1 .step-item.active').classList.remove('active');
+                }
+                item.classList.add('active');
+
+                document.querySelector('.step-1').classList.remove('active');
+                document.querySelector('.step-2').classList.add('active');
+                document.querySelector('.step-3').classList.remove('active');
+                selectedData.industry = item.querySelector('span').innerText;
+            });
+        });
+
+        // Add event listener for step 2
+        document.querySelectorAll('.step-2 .step-item').forEach(function (item) {
+            item.addEventListener('click', function () {
+                if (document.querySelector('.step-2 .step-item.active')) {
+                    document.querySelector('.step-2 .step-item.active').classList.remove('active');
+                }
+                item.classList.add('active');
+
+                document.querySelector('.step-1').classList.remove('active');
+                document.querySelector('.step-2').classList.remove('active');
+                document.querySelector('.step-3').classList.add('active');
+                selectedData.employee = item.querySelector('span').innerText;
+
+                showSelectedValues();
+            });
+        });
+    }
+
+    function showSelectedValues() {
+        // remove spaces in selectedData.employee
+        selectedData.employee = selectedData.employee.replace(/\s/g, '');
+
+        document.querySelector('.step-3 #HeroFormTitleText h2').insertAdjacentHTML('afterend', `
+            <div class="selected-values">
+                <div class="sv-text"><strong>Industry</strong>&nbsp;- ${selectedData.industry}</div>
+                <div class="sv-text"><strong>Employees</strong>&nbsp;- ${selectedData.employee}</div>
+            </div>`);
+
+        // Add class closest parent .mktoFormRow of #NumberOfEmployees
+        document.querySelector('#NumberOfEmployees').closest('.mktoFormRow').classList.add('NumberOfEmployees');
+
+        // Get value after - in selectedData.employee
+        let employeeValue = selectedData.employee.split('-')[1] || selectedData.employee;
+
+        // Remove + or , from employeeValue if it has
+        employeeValue = employeeValue.replace(',', '');
+        employeeValue = employeeValue.replace('+', '');
+        
+        // Fill the #NumberOfEmployees with the value
+        document.querySelector('#NumberOfEmployees').value = +employeeValue;
+
+        // On #Email blur, Fill the #NumberOfEmployees with the value
+        document.querySelector('#Email').addEventListener('blur', function () {
+            setTimeout(function () {
+                document.querySelector('#NumberOfEmployees').value = +employeeValue;
+            }, 2000);
+        });
+    }
+
     function formUpdate() {
-        document.querySelector('#HeroFormCol #HeroFormTitleText h2').innerHTML = `Get a <span>demo</span>`;
+        document.querySelector('#HeroFormCol #HeroFormTitleText h2').innerHTML = `<span>Get a demo</span>`;
+        // document.querySelector('#HeroFormCol #HeroFormTitleText h2').insertAdjacentHTML('afterend', `<div class="wht-indus">What is your industry?</div>`);
     }
 
     function trustedLogo() {
@@ -91,11 +255,11 @@
                 <span class="tlt-text">Trusted by 16,000+ customers worldwide<span>
             </h4>
             <div class="trusted-logo">
-            <picture>
-                <source srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2009/logo_set_-_desktop_1.svg" media="(min-width: 1200px)">
-                <source srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2009/logo_set_-_tablet.svg" media="(min-width: 768px)">
-                <img class="tl-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2009/logo_set_-_mobile.svg" alt="Trusted Logo">
-            </picture>
+                <picture>
+                    <source srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2009/logo_set_-_desktop_1.svg" media="(min-width: 1200px)">
+                    <source srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2009/logo_set_-_tablet.svg" media="(min-width: 768px)">
+                    <img class="tl-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2009/logo_set_-_mobile.svg" alt="Trusted Logo">
+                </picture>
         </div>`);
 
         testimonial();
@@ -174,8 +338,8 @@
         </div>`);
     }
 
-    // Create HTML content from JSON array
-    function createTestimonialHTML(testimonial) {
+       // Create HTML content from JSON array
+       function createTestimonialHTML(testimonial) {
         return `<li class="testimonial-item splide__slide">
             <div class="testimonial-item-inner">
                 <div class="testimonials-item mobile-only">
@@ -276,5 +440,4 @@
         el.src = source;
         document.body.appendChild(el);
     }
-
 })();

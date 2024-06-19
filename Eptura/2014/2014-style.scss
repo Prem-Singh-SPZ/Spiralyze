@@ -12,8 +12,8 @@ body.spz-2014 {
   background-repeat: no-repeat;
 
   @media (min-width: 1500px) {
-    background-size: auto 905px;
-    background-position: top center;
+    // background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/2010/bg__1440__v2.webp');
+    background-size: cover;
   }
 
   @media (max-width: 1023.98px) {
@@ -39,20 +39,6 @@ body.spz-2014 {
     ) {
     display: none !important;
   }
-
-  // Common code Starts
-  .mobile-only {
-    display: none !important;
-  }
-  @media (max-width: 767.98px) {
-    .desktop-only {
-      display: none !important;
-    }
-    .mobile-only {
-      display: flex !important;
-    }
-  }
-  // Common code Ends
 
   .body-wrapper {
     display: flex;
@@ -85,10 +71,10 @@ body.spz-2014 {
   .spz-header {
     width: 100%;
     max-width: 1240px;
-    margin: 40px auto 52px;
+    margin: 40px auto 49px;
 
     .spz-header-wrap {
-      width: 86px;
+      width: 90px;
 
       .spz-header-logo {
         width: 100%;
@@ -124,10 +110,6 @@ body.spz-2014 {
   .hero_container {
     padding-bottom: 18px !important;
 
-    @media (max-width: 1199.98px) {
-      padding-bottom: 0 !important;
-    }
-
     > .row {
       margin-left: 0;
       margin-right: 0;
@@ -138,7 +120,7 @@ body.spz-2014 {
     }
   }
   #HeroFormCol {
-    margin-bottom: 92px;
+    margin-bottom: 112px;
 
     @media (max-width: 1199.98px) {
       margin-bottom: 68.5px;
@@ -158,15 +140,15 @@ body.spz-2014 {
 
       &.panel {
         border-radius: 8px;
-        padding: 36px 46px 42.5px;
+        padding: 25px 40px 39px;
         box-shadow: 0px 24px 48px 0px rgba(13, 18, 46, 0.12);
 
         @media (max-width: 1199.98px) {
-          padding: 36px 46px 41.5px;
+          padding: 24px 40px 39.5px;
         }
 
         @media (max-width: 767.98px) {
-          padding: 32px 19px 30px;
+          padding: 24px 30px 23px;
           box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
         }
 
@@ -190,6 +172,16 @@ body.spz-2014 {
               margin-bottom: 20px;
             }
           }
+
+          .wht-indus {
+            color: #0d122e;
+            text-align: center;
+            font-family: $eptura-font;
+            font-size: 26px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 34px;
+          }
         }
 
         form.mktoForm
@@ -212,7 +204,7 @@ body.spz-2014 {
 
         @media (max-width: 767.98px) {
           .mktoButtonRow {
-            padding: 0 11px;
+            padding: 0;
           }
         }
       }
@@ -228,12 +220,8 @@ body.spz-2014 {
   .trusted-logo-container {
     margin-bottom: 62px;
 
-    @media (max-width: 1199.98px) {
-      margin-bottom: 38px;
-    }
-
     @media (max-width: 767.98px) {
-      margin-bottom: 14.5px;
+      margin-bottom: 29.6px;
     }
 
     .tl-title {
@@ -487,6 +475,292 @@ body.spz-2014 {
   }
   // Footer Ends
 }
+
+// Stepper Starts
+body.spz-2014 {
+  .step {
+    display: none;
+    flex-direction: column;
+
+    .stepper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 32px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 24.5px !important;
+      }
+
+      i {
+        display: inline-block;
+        width: 10px;
+        height: 10px;
+        border-radius: 50%;
+        background-color: #e3e6ec;
+
+        &:nth-child(2) {
+          margin: 0 12px;
+        }
+      }
+    }
+
+    .step-title {
+      color: #904ab0;
+      text-align: center;
+      font-family: "Eptura Flexible";
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 16px;
+      letter-spacing: 2.6px;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+
+      @media (max-width: 767.98px) {
+        font-size: 12px;
+        line-height: 13px;
+        letter-spacing: 2.4px;
+      }
+    }
+
+    .step-desc {
+      color: #0d122e;
+      text-align: center;
+      // font-family: "Eptura Flexible";
+      font-size: 26px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 34px;
+      margin-bottom: 31px;
+
+      @media (max-width: 767.98px) {
+        margin-bottom: 24px;
+      }
+    }
+
+    .step-container {
+      display: flex;
+      justify-content: space-evenly;
+      flex-wrap: wrap;
+
+      .step-item {
+        display: flex;
+        align-items: center;
+        // justify-content: center;
+        flex-direction: column;
+        border-radius: 8px;
+        border: 1px solid #e3e6ec;
+        background: #fff;
+        width: 33.33%;
+        max-width: 141.33px;
+        padding: 12px 0;
+        margin-bottom: 16px;
+        box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        .separator {
+          background-color: #e3e6ec;
+          height: 1px;
+          width: 109.33px;
+          margin: 7px 0px;
+        }
+
+        img {
+          width: 40px;
+          height: 40px;
+
+          @media (max-width: 767.98px) {
+            width: 36px;
+            height: 36px;
+          }
+        }
+
+        span {
+          color: #0d122e;
+          text-align: center;
+          font-family: "Eptura Flexible";
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 300;
+          line-height: 16px;
+          max-width: 100px;
+
+          &.single-line {
+            line-height: 32px;
+          }
+        }
+
+        &.active, &:hover {
+          border-radius: 8px;
+          border: 1px solid #1b4bc5;
+          background: #f6fafa;
+
+          .separator {
+            background: #1B4BC5;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          width: 100%;
+          max-width: 100%;
+          flex-direction: row;
+          padding: 7px 7.5px;
+          margin-bottom: 8.7px;
+
+          .separator {
+            width: 1px;
+            height: 32px;
+            border: none;
+            margin: 0 8px 0 7px;
+            background-color: #e3e6ec;
+          }
+
+          span {
+            font-size: 13px;
+            max-width: 100%;
+            letter-spacing: -0.1px;
+          }
+        }
+      }
+    }
+
+    &.active {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &.step-1 {
+      &.active .stepper i:nth-child(1) {
+        background-color: #904ab0;
+      }
+    }
+    &.step-2 {
+      &.active .stepper i:nth-child(2) {
+        background-color: #904ab0;
+      }
+      @media (max-width: 767.98px) {
+        .step-desc {
+          margin-bottom: 24px;
+          font-size: 24px;
+          line-height: 32px;
+        }
+
+        .step-container .step-item {
+          padding: 5px 12.5px;
+
+          img {
+            width: 40px;
+            height: 40px;
+          }
+
+          .separator {
+            margin: 0 12px 0 10px;
+          }
+
+          .single-line {
+            font-size: 14px;
+            line-height: 16px;
+            letter-spacing: 0;
+          }
+        }
+      }
+    }
+    &.step-3 {
+      &.active .stepper i:nth-child(3) {
+        background-color: #904ab0;
+      }
+
+      .stepper {
+        margin-bottom: 23px;
+      }
+
+      .mktoText h2 {
+        margin-bottom: 8px !important;
+      }
+
+      #HeroForm {
+        margin: 0 5px;
+
+        .mktoFormRow.NumberOfEmployees {
+          display: none !important;
+        }
+
+        @media (max-width: 1199.98px) {
+          .spz-email {
+            margin-bottom: 3px;
+          }
+        }
+
+        @media (max-width: 767.98px) {
+          margin: 0;
+
+          .spz-email {
+            margin-bottom: 8px;
+          }
+
+          .mktoFormCol {
+            padding: 0 !important;
+          }
+        }
+      }
+    }
+
+    .selected-values {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 16px;
+
+      .sv-text {
+        display: flex;
+        align-items: center;
+        color: #848995;
+        font-family: "Eptura Flexible Light", Arial, sans-serif;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 20px;
+        margin-right: 13px;
+
+        strong {
+          font-family: $eptura-font;
+          font-weight: 500;
+        }
+
+        &::before {
+          content: " ";
+          display: inline-block;
+          width: 16px;
+          height: 16px;
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/2014/check_1.svg");
+          background-repeat: no-repeat;
+          margin-right: 4px;
+        }
+
+        &:last-child {
+          margin-right: 0;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        align-items: flex-start;
+        justify-content: flex-start;
+        flex-direction: column;
+        margin-bottom: 11.5px;
+
+        .sv-text {
+          font-size: 13px;
+          line-height: 18px;
+          margin-bottom: 9px;
+        }
+      }
+    }
+  }
+}
+// Stepper Ends
+
 
 /* Testimonial */
 .spz-2014 #hero .span_spacer,

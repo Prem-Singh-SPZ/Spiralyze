@@ -218,12 +218,9 @@ body#bodyId.spz-4013.form-overlay {
 
                 .value-prop {
                   flex-grow: 1;
-                  border-right: 1px solid #d9dce2;
 
                   @media (max-width: 767.98px) {
                     padding-bottom: 16px;
-                    border-right: 0;
-                    border-bottom: 1px solid #d9dce2;
                     width: 100%;
                   }
 
@@ -255,16 +252,20 @@ body#bodyId.spz-4013.form-overlay {
                     margin-top: 4px;
                     margin-bottom: 4px;
                     margin-right: 16px;
+                    white-space: nowrap;
                   }
                 }
 
                 .person-prof {
-                  padding-left: 20px;
+                  padding-left: 12px;
                   display: flex;
                   align-items: center;
+                  border-left: 1px solid #d9dce2;
 
                   @media (max-width: 767.98px) {
                     padding: 21px 0 0;
+                    border-left: 0;
+                    border-top: 1px solid #d9dce2;
                   }
 
                   .person-img {
@@ -298,7 +299,7 @@ body#bodyId.spz-4013.form-overlay {
                       font-style: normal;
                       font-weight: 300;
                       line-height: 20px;
-                      white-space: nowrap;
+                      // white-space: nowrap;
                     }
                   }
                 }
