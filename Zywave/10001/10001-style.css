@@ -922,6 +922,17 @@ body.spz-10001 .testimonial-section .testimonial-row .testimonial-col .testimoni
   line-height: 48px;
   margin-bottom: 56px;
   max-width: 810px;
+  position: relative;
+}
+body.spz-10001 .testimonial-section .testimonial-row .testimonial-col .testimonial-card .testimonial-text::before {
+  content: "";
+  position: absolute;
+  left: -91px;
+  top: -3px;
+  width: 56px;
+  height: 56px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/v1717672796/zywave/10001/layer_1.svg) no-repeat center;
+  background-size: cover;
 }
 body.spz-10001 .testimonial-section .testimonial-row .testimonial-col .testimonial-card .testimonial-profile {
   display: -webkit-box;
