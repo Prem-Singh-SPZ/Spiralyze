@@ -82,7 +82,6 @@ function setTabsContent() {
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
                                     <div class="text">Insights Foundation</div>
-                                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/KomodoHealth/5001/down-arrow.svg" alt="Arrow" width="24" height="24"/>
                                     </div>
                                     <div class="content">
                                     <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
@@ -102,7 +101,6 @@ function setTabsContent() {
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
                                     <div class="text">Specialty Data Enhancements</div>
-                                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/KomodoHealth/5001/down-arrow.svg" alt="Arrow" width="24" height="24"/>
                                     </div>
                                     <div class="content">
                                     <div class="text">Access exclusive, highly-curated data sources — including lab, genomics, oncology, EMR data, race and ethnicity, social determinants of health, mortality, and more.</div>
@@ -122,7 +120,6 @@ function setTabsContent() {
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
                                     <div class="text">Streamlined Software Solutions</div>
-                                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/KomodoHealth/5001/down-arrow.svg" alt="Arrow" width="24" height="24"/>
                                     </div>
                                     <div class="content">
                                     <div class="text">MapLab<sup>TM</sup> reimagines the healthcare insights workflow to answer complex business questions, quickly, with out-of-the-box dashboards and customizable data workflows.</div>
