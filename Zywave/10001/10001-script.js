@@ -57,6 +57,7 @@ function setHeroContent() {
     setTabsContent();
 }
 
+// Set the tabs content of accordion
 function setTabsContent() {
     document.querySelector('.hero-section').insertAdjacentHTML('afterend', `<div class="accordion-section">
             <div class="accordion-row">
@@ -76,7 +77,7 @@ function setTabsContent() {
                     
                     <div id="tab-contents">
                         <div id="tab1" class="tab-contents active">
-                            <div class="accordion-wrapper">
+                            <div class="accordion-wrapper ac-wrapper-1">
                                 <div class="text">
                                 <div class="child active" data-index="1">
                                     <div class="bar"><div class="line"></div></div>
@@ -145,13 +146,79 @@ function setTabsContent() {
                             </div>
                         </div>
                         <div id="tab2" class="tab-contents">
-                            <p>These are the contents of tab 2.</p>
+                            <div class="accordion-wrapper ac-wrapper-2">
+                                <div class="text">
+                                <div class="child active" data-index="1">
+                                    <div class="bar"><div class="line"></div></div>
+                                    <div class="title">
+                                    <div class="text">Insights Foundation</div>
+                                    </div>
+                                    <div class="content">
+                                    <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
+                                    <picture>
+                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                                    </picture>
+                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
+                                        <span>GET A DEMO</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+                                        </svg>
+                                    </a>
+                                    </div>
+                                </div>
+                                <div class="child" data-index="2">
+                                    <div class="bar"><div class="line"></div></div>
+                                    <div class="title">
+                                    <div class="text">Specialty Data Enhancements</div>
+                                    </div>
+                                    <div class="content">
+                                    <div class="text">Access exclusive, highly-curated data sources — including lab, genomics, oncology, EMR data, race and ethnicity, social determinants of health, mortality, and more.</div>
+                                    <picture>
+                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp" alt="Specialty Data Enhancements" width="688" height="404">
+                                    </picture>
+                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
+                                        <span>get a demo</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+                                        </svg>
+                                    </a>
+                                    </div>
+                                </div>
+                                <div class="child" data-index="3">
+                                    <div class="bar"><div class="line"></div></div>
+                                    <div class="title">
+                                    <div class="text">Streamlined Software Solutions</div>
+                                    </div>
+                                    <div class="content">
+                                    <div class="text">MapLab<sup>TM</sup> reimagines the healthcare insights workflow to answer complex business questions, quickly, with out-of-the-box dashboards and customizable data workflows.</div>
+                                    <picture>
+                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="688" height="404">
+                                    </picture>
+                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
+                                        <span>get a demo</span>
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
+                                        </svg>
+                                    </a>
+                                    </div>
+                                </div>
+                                </div>
+                                <div class="image">
+                                <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="851" height="503"/>
+                                <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="851" height="503"/>
+                                <img class="hero" data-index="2" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp" alt="Specialty Data Enhancements" width="851" height="503"/>
+                                <img class="hero" data-index="3" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="851" height="503"/>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>`);
 
-    // Define variables
+    // Nav buttons functionality
     var tabLabels = document.querySelectorAll("#tabs li");
     var tabPanes = document.getElementsByClassName("tab-contents");
 
@@ -177,12 +244,21 @@ function setTabsContent() {
         label.addEventListener("click", activateTab);
     });
 
+    accordionHandler('.ac-wrapper-1');
+    accordionHandler('.ac-wrapper-2');
+
+    testimonial();
+}
+
+//multiple accordion handel
+function accordionHandler(parentClass) {
+
     // Accordion functionality
-    document.querySelectorAll('.child .title').forEach((title, index) => {
+    document.querySelectorAll('' + parentClass + ' .child .title').forEach((title, index) => {
         title.addEventListener('click', function () {
             const parent = title.parentElement;
             const siblings = Array.from(parent.parentElement.children).filter(child => child !== parent);
-            const heroImages = document.querySelectorAll('.image .hero');
+            const heroImages = document.querySelectorAll('' + parentClass + ' .image .hero');
 
             siblings.forEach(sibling => {
                 sibling.classList.remove('active');
@@ -199,40 +275,60 @@ function setTabsContent() {
         });
     });
 
-    const tabs = document.querySelectorAll('.accordion-wrapper .child');
+    const tabs = document.querySelectorAll('' + parentClass + ' .child');
     let i = 0;
     const autoAccordionInterval = setInterval(function () {
-        document.querySelector('.accordion-wrapper .child.active .bar .line').removeAttribute("style")
-        document.querySelector('.accordion-wrapper .child.active .bar .line').style.width = "" + ((i / timer) * 100) + "%";
+        document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
+        document.querySelector('' + parentClass + ' .child.active .bar .line').style.width = "" + ((i / timer) * 100) + "%";
         if (i > timer) {
-            document.querySelector('.accordion-wrapper .child.active .bar .line').removeAttribute("style")
-            let curIndex = parseInt(document.querySelector('.accordion-wrapper .child.active').getAttribute("data-index"));
+            document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
+            let curIndex = parseInt(document.querySelector('' + parentClass + ' .child.active').getAttribute("data-index"));
             if (curIndex != tabs.length) {
                 curIndex = curIndex + 1
             } else {
                 curIndex = 1;
             }
-            document.querySelector('.accordion-wrapper .child[data-index="' + curIndex + '"] .title').click();
+            document.querySelector('' + parentClass + ' .child[data-index="' + curIndex + '"] .title').click();
             i = 0;
         }
         i += 200;
     }, 200)
-    document.querySelector('.accordion-wrapper .image').addEventListener("mouseenter", function () {
+    document.querySelector('' + parentClass + ' .image').addEventListener("mouseenter", function () {
         clearInterval(autoAccordionInterval);
-        document.querySelector('.accordion-wrapper .child.active .bar .line').removeAttribute("style")
-        if (!document.querySelector('.accordion-wrapper.stop')) {
-            document.querySelector('.accordion-wrapper').classList.add("stop")
+        document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
+        if (!document.querySelector('' + parentClass + '.stop')) {
+            document.querySelector('' + parentClass + '').classList.add("stop")
         }
     })
-    document.querySelector('.accordion-wrapper > .text').addEventListener("mouseenter", function () {
+    document.querySelector('' + parentClass + ' > .text').addEventListener("mouseenter", function () {
         clearInterval(autoAccordionInterval);
-        document.querySelector('.accordion-wrapper .child.active .bar .line').removeAttribute("style")
-        if (!document.querySelector('.accordion-wrapper.stop')) {
-            document.querySelector('.accordion-wrapper').classList.add("stop")
+        document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
+        if (!document.querySelector('' + parentClass + '.stop')) {
+            document.querySelector('' + parentClass + '').classList.add("stop")
         }
     })
 }
 
+function testimonial() {
+    ///add a single testimonial card section after accordion
+    document.querySelector('.accordion-section').insertAdjacentHTML('afterend', `<div class="testimonial-section">
+        <div class="testimonial-row">
+            <div class="testimonial-col">
+                <div class="testimonial-card">
+                        <div class="testimonial-text">It makes quoting multiple companies faster than hand-keying everything into separate company quoting systems.</div>
+                    <div class="testimonial-profile">
+                        <div class="testimonial-image">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275629.webp" alt="Melissa Mayberry">
+                        </div>
+                        <div class="testimonial-author">
+                            <p class="t-name">Melissa Mayberry</p>
+                            <p class="t-desgn">Insurance Agent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+}
 
 //Form internal code
 waitForElm('body form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField[id]').then(function () {

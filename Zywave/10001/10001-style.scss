@@ -931,4 +931,97 @@ body.spz-10001 {
       }
     }
   }
+
+  .testimonial-section {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/bg_desktop_1.webp)
+      no-repeat;
+    background-size: cover;
+    position: relative;
+
+    @media screen and (max-width: 1023.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/bg_tablet_1.webp)
+        no-repeat;
+      background-size: cover;
+    }
+
+    @media screen and (max-width: 767.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/desktop_mob_1.webp)
+        no-repeat;
+      background-size: cover;
+    }
+
+    @media screen and (min-width: 1900.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/v4.webp)
+        no-repeat;
+      background-size: cover;
+    }
+
+    .testimonial-row {
+      max-width: 1180px;
+      margin: auto;
+
+      .testimonial-col {
+        padding: 96px 0;
+        margin: auto;
+
+        .testimonial-card {
+          display: flex;
+          width: 100%;
+          max-width: 1040px;
+          padding: 50px 70px;
+          flex-direction: column;
+          border-radius: 32px;
+          background: #fff;
+          box-shadow: 0px 40px 56px 0px rgba(15, 45, 82, 0.04);
+
+          .testimonial-text {
+            color: #0f2d52;
+            font-family: $segoe;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 600;
+            line-height: 48px;
+            margin-bottom: 56px;
+            max-width: 810px;
+          }
+
+          .testimonial-profile {
+            display: flex;
+            align-items: center;
+
+            .testimonial-image {
+              margin-right: 20px;
+
+              img {
+                width: 80px;
+                height: 80px;
+              }
+            }
+
+            .testimonial-author {
+              .t-name {
+                color: #0f2d52;
+                font-family: $segoe;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26px;
+                margin-bottom: 4px;
+              }
+
+              .t-desgn {
+                font-family: $segoe;
+                color: #a9a9a9;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 26px;
+                margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
