@@ -109,6 +109,7 @@ body.spz-2014 {
   // Form Starts
   .hero_container {
     padding-bottom: 18px !important;
+    padding-top: 27px !important;
 
     > .row {
       margin-left: 0;
@@ -120,7 +121,7 @@ body.spz-2014 {
     }
   }
   #HeroFormCol {
-    margin-bottom: 112px;
+    margin-bottom: 93px;
 
     @media (max-width: 1199.98px) {
       margin-bottom: 68.5px;
@@ -474,6 +475,20 @@ body.spz-2014 {
     }
   }
   // Footer Ends
+
+  // Common code Starts
+  .mobile-only {
+    display: none !important;
+  }
+  @media (max-width: 767.98px) {
+    .desktop-only {
+      display: none !important;
+    }
+    .mobile-only {
+      display: flex !important;
+    }
+  }
+  // Common code Ends
 }
 
 // Stepper Starts

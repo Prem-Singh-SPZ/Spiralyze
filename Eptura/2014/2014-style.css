@@ -102,6 +102,7 @@ body.spz-2014 .spz-header .spz-header-wrap .spz-header-logo {
 }
 body.spz-2014 .hero_container {
   padding-bottom: 18px !important;
+  padding-top: 27px !important;
 }
 body.spz-2014 .hero_container > .row {
   margin-left: 0;
@@ -113,7 +114,7 @@ body.spz-2014 .hero_container > .row {
   }
 }
 body.spz-2014 #HeroFormCol {
-  margin-bottom: 112px;
+  margin-bottom: 93px;
 }
 @media (max-width: 1199.98px) {
   body.spz-2014 #HeroFormCol {
@@ -456,6 +457,19 @@ body.spz-2014 .spz-footer .spz-footer-copyright {
   }
   body.spz-2014 .spz-footer .spz-footer-links li {
     padding-right: 15px;
+  }
+}
+body.spz-2014 .mobile-only {
+  display: none !important;
+}
+@media (max-width: 767.98px) {
+  body.spz-2014 .desktop-only {
+    display: none !important;
+  }
+  body.spz-2014 .mobile-only {
+    display: -webkit-box !important;
+    display: -ms-flexbox !important;
+    display: flex !important;
   }
 }
 
