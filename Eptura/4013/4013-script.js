@@ -52,7 +52,7 @@
             value_prop1_img: iconURL + "icon_archibus_01.svg",
             value_prop1_copy: "Boost workplace <br>productivity",
             value_prop2_img: iconURL + "icon_archibus_02.svg",
-            value_prop2_copy: "Maximize <br>your space",
+            value_prop2_copy: "Maximize your <br>space",
             value_prop3_img: iconURL + "icon_archibus_03.svg",
             value_prop3_copy: "Get real-time <br>data",
         },

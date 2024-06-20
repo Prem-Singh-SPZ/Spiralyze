@@ -50,12 +50,15 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin: 10px 24px;
+  margin: 10px 10px;
   padding: 0 0 15px;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 @media (max-width: 1023.98px) {
   body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper {
-    margin: 30px 24px 8px;
+    margin: 30px 10px 8px;
   }
 }
 @media (max-width: 767.98px) {
@@ -67,10 +70,7 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-right: 16px;
-}
-body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop:last-child {
-  margin-right: 0;
+  width: 152px;
 }
 @media (max-width: 767.98px) {
   body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop {
@@ -84,10 +84,16 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
+    width: 82.67px;
   }
 }
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop .prop-img {
-  margin: 2.2px 8px 2.2px 2.2px;
+  margin: 4px 8px 0 0;
+}
+@media (max-width: 767.98px) {
+  body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop .prop-img {
+    margin-right: 0;
+  }
 }
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop .prop-img img {
   width: 32px;
@@ -102,12 +108,21 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
   line-height: 16px;
   margin: 4px 0;
   white-space: nowrap;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 @media (max-width: 767.98px) {
   body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop .prop-copy {
     white-space: wrap;
     text-align: center;
     line-height: 14px;
+  }
+  body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .value-props-section .value-props-wrapper .value-prop .prop-copy br {
+    display: none;
   }
 }
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over #form_subtitle {
@@ -193,12 +208,13 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section {
   background: #eeeff4;
   height: 75px;
-  padding: 3px 56px 2px 56px;
-  margin: 24px -46px -49px;
+  padding: 5px 56px 2px 56px;
+  margin: 22px -46px -49px;
 }
 @media (max-width: 1023.98px) {
   body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section {
-    margin: 28px -46px -34px;
+    padding: 4px 56px 2px 56px;
+    margin: 26px -46px -32px;
   }
 }
 @media (max-width: 767.98px) {
@@ -236,6 +252,7 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
   body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section .case-studies-wrapper .value-prop {
     padding-bottom: 16px;
     width: 100%;
+    border-bottom: 1px solid #d9dce2;
   }
 }
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section .case-studies-wrapper .value-prop .growth-copy {
@@ -274,7 +291,7 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
   white-space: nowrap;
 }
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section .case-studies-wrapper .person-prof {
-  padding-left: 12px;
+  padding-left: 20px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -287,7 +304,6 @@ body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz 
   body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section .case-studies-wrapper .person-prof {
     padding: 21px 0 0;
     border-left: 0;
-    border-top: 1px solid #d9dce2;
   }
 }
 body#bodyId.spz-4013.form-overlay .body-wrapper .form-overlay .hero-wrapper-spz .spz-wrapper #form-over.form-over .case-studies-section .case-studies-wrapper .person-prof .person-img {
