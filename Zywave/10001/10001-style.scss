@@ -625,7 +625,7 @@ body.spz-10001 {
                   background: #cccccc;
                   pointer-events: none;
                   z-index: 1;
-                  display: none;
+                  // display: none;
 
                   .line {
                     position: absolute;
@@ -643,7 +643,7 @@ body.spz-10001 {
                   display: flex;
                   align-items: center;
                   justify-content: space-between;
-                  padding: 16px;
+                  padding: 20px 16px;
                   -webkit-tap-highlight-color: transparent;
                   cursor: pointer;
                   position: relative;
@@ -695,13 +695,22 @@ body.spz-10001 {
                   padding: 0 20px 24px 16px;
 
                   .text {
-                    margin-top: -4px;
                     color: #0f2d52;
                     font-family: $segoe;
                     font-size: 16px;
                     font-style: normal;
                     font-weight: 400;
                     line-height: 140%;
+
+                    p {
+                      color: #0f2d52;
+                      font-family: $segoe;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 140%;
+                      margin: 0 0 12px;
+                    }
 
                     sup {
                       font-size: 12px;
@@ -714,36 +723,29 @@ body.spz-10001 {
                     display: none;
                   }
 
-                  .cta {
+                  .zy-cta {
+                    border-radius: 99px;
+                    border: 2px solid #5fb53b;
+                    padding: 0;
+                    font-family: $segoe;
+                    height: 50px;
+                    width: 167px;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 130%;
+                    transition: all 0.3s;
+                    margin: 0;
+                    background: #fff;
+                    color: #0f2d52;
+                    cursor: pointer;
                     display: flex;
                     align-items: center;
-                    width: fit-content;
-                    margin-top: 20px;
-                    outline: none;
-                    color: #21acd3;
-                    text-decoration: none;
+                    justify-content: center;
+                    margin: 26px 0 14px;
 
-                    &:hover,
-                    &:active {
-                      color: #fff;
-                    }
-
-                    span {
-                      color: inherit;
-                      font-family: $bree;
-                      font-size: 16px;
-                      font-weight: 700;
-                      line-height: 24px;
-                      letter-spacing: 0.8px;
-                      text-transform: uppercase;
-                      margin-right: 4px;
-                      outline: none;
-                      text-decoration: none;
-                    }
-
-                    img {
-                      outline: none;
-                      text-decoration: none;
+                    &:hover {
+                      background: #5fb53b;
                     }
                   }
                 }
@@ -776,6 +778,15 @@ body.spz-10001 {
                   }
                   .content {
                     display: block;
+                  }
+                }
+
+                &:last-child {
+                  .title {
+                    border-bottom: none;
+                  }
+                  &::before {
+                    display: none;
                   }
                 }
               }

@@ -94,26 +94,22 @@ function setTabsContent() {
                                 <div class="child active" data-index="1">
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
-                                    <div class="text">Insights Foundation</div>
+                                    <div class="text">Plan strategy</div>
                                     </div>
                                     <div class="content">
-                                    <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
+                                    <div class="text"><p>Identify the right carriers and plan designs to meet employers&#8217; medical, vision, and dental needs.</p>
+                                        <p>Capture clients&#8217; claim history, coverage gaps, and other insurance needs. Evaluate current plans, renewal options, and alternative coverage. Identify upsell opportunities.</p></div>
                                     <picture>
                                         <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="688" height="404">
                                     </picture>
-                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
-                                        <span>GET A DEMO</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                                        </svg>
-                                    </a>
+                                    <a href="javascript:void(0);" class="zy-cta">Get a demo</a>
                                     </div>
                                 </div>
                                 <div class="child" data-index="2">
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
-                                    <div class="text">Specialty Data Enhancements</div>
+                                    <div class="text">Carrier pricing</div>
                                     </div>
                                     <div class="content">
                                     <div class="text">Access exclusive, highly-curated data sources — including lab, genomics, oncology, EMR data, race and ethnicity, social determinants of health, mortality, and more.</div>
@@ -132,7 +128,7 @@ function setTabsContent() {
                                 <div class="child" data-index="3">
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
-                                    <div class="text">Streamlined Software Solutions</div>
+                                    <div class="text">Quotes and proposals</div>
                                     </div>
                                     <div class="content">
                                     <div class="text">MapLab<sup>TM</sup> reimagines the healthcare insights workflow to answer complex business questions, quickly, with out-of-the-box dashboards and customizable data workflows.</div>
@@ -150,8 +146,8 @@ function setTabsContent() {
                                 </div>
                                 </div>
                                 <div class="image">
-                                <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="851" height="503"/>
-                                <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="851" height="503"/>
+                                <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="851" height="503"/>
+                                <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="851" height="503"/>
                                 <img class="hero" data-index="2" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp" alt="Specialty Data Enhancements" width="851" height="503"/>
                                 <img class="hero" data-index="3" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="851" height="503"/>
                                 </div>
