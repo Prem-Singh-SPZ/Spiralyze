@@ -404,7 +404,7 @@
                     1199: {
                         gap: '56px',
                         start: 0,
-                        perPage: 1.5,
+                        perPage: 1,
                         perMove: 1,
                         snap: false,
                         arrows: false,
