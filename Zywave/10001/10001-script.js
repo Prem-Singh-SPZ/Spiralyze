@@ -29,10 +29,10 @@ function setHeroContent() {
                     <h1 class="hero-title">Streamline insurance quoting and proposals. <span>Grow volume XX%.</span></h1>
                     <div class="accordion-cta">
                         <div class="ac-cta">
-                            <a href="https://www.zywave.com/"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275641.svg" alt="Employee Benefits"> Employee Benefits</a>
+                            <a class="ac-first" href="javascript:void(0);"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275641.svg" alt="Employee Benefits"> Employee Benefits</a>
                         </div>
                         <div class="ac-cta">
-                            <a href="https://www.zywave.com/"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings.svg" alt="Commercial Lines"> Commercial Lines</a>
+                            <a class="ac-second" href="javascript:void(0);"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings.svg" alt="Commercial Lines"> Commercial Lines</a>
                         </div>
                     </div>
                     <ul class="hero-list">
@@ -53,6 +53,18 @@ function setHeroContent() {
             </div>
         </div>
     </div>`);
+
+    window.addEventListener('click', function (e) {
+        if (e.target.classList.contains('ac-first')) {
+            this.document.querySelector('#tabs a[href="#tab1"]').click();
+            document.querySelector('.accordion-section').scrollIntoView({ behavior: 'smooth' });
+        }
+
+        if (e.target.classList.contains('ac-second')) {
+            this.document.querySelector('#tabs a[href="#tab2"]').click();
+            document.querySelector('.accordion-section').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
 
     setTabsContent();
 }
@@ -323,6 +335,80 @@ function testimonial() {
                         <div class="testimonial-author">
                             <p class="t-name">Melissa Mayberry</p>
                             <p class="t-desgn">Insurance Agent</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+
+    benefits();
+}
+
+function benefits() {
+    document.querySelector('.testimonial-section').insertAdjacentHTML('afterend', `<div class="benefits-section">
+        <div class="benefits-row">
+            <div class="benefits-col">
+                <div class="benefits-title">Benefits</div>
+                <div class="benefits-content">
+                    <div class="benefits-line benefits-left">
+                        <div class=" benefits-text">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1717672854/zywave/10001/frame_1171275599.svg" alt="Streamline manual workflows">
+                            <h3>Streamline manual workflows</h3>
+                            <p>Let clients complete digital forms that consolidate carrier questionnaires. Auto-capture plan needs and other details. Get instant pricing from 1,000+ carriers. No more manually entering client data across every carrier site. Streamline the request for proposal (RFP) process no matter what plan design your employer requires.</p>
+                        </div>
+                        <div class="benefits-image">
+                            <picture>
+                                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003441.webp">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003440.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003439.webp" alt="Streamline manual workflows">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="benefits-line benefits-right">
+                        <div class="benefits-image">
+                           <picture>
+                                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275611.webp">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275610.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275609.webp" alt="Boost sales">
+                            </picture>
+                        </div>
+                        <div class="benefits-text">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1717672863/zywave/10001/frame_1171275600.svg" alt="Boost sales">
+                            <h3>Boost sales</h3>
+                            <p>Build instant quotes based on real-time carrier rates. New policies, renewals, and alternative plan options. Add professional branding so your quotes stand out. Send to clients in 1 click. Send 2x more quotes. Turn more prospects into clients.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="benefits-cta">
+                    <a href="javascript:void(0);" class="zy-cta">Get started</a>
+                </div>
+            </div>
+        </div>`);
+
+    window.addEventListener('click', function (e) {
+        if (e.target.classList.contains('zy-cta')) {
+            document.querySelector('.hero-form').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
+    footer();
+}
+
+function footer() {
+    document.querySelector('.benefits-section').insertAdjacentHTML('afterend', `<div class="footer-section">
+        <div class="footer-row">
+            <div class="footer-col">
+                    <div class="footer-text">Zywave, Inc.</div>
+                    <div class="footer-social">
+                        <div class="social-link">
+                            <a href="https://linkedin.com/zywave" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M5.78335 4.16652C5.78313 4.60855 5.60732 5.03239 5.2946 5.34479C4.98188 5.6572 4.55787 5.83258 4.11585 5.83236C3.67382 5.83214 3.24998 5.65633 2.93758 5.34361C2.62517 5.0309 2.44979 4.60688 2.45001 4.16486C2.45023 3.72283 2.62604 3.29899 2.93876 2.98659C3.25147 2.67419 3.67548 2.4988 4.11751 2.49902C4.55954 2.49924 4.98338 2.67505 5.29578 2.98777C5.60818 3.30049 5.78357 3.7245 5.78335 4.16652ZM5.83335 7.06652H2.50001V17.4999H5.83335V7.06652ZM11.1 7.06652H7.78335V17.4999H11.0667V12.0249C11.0667 8.97486 15.0417 8.69152 15.0417 12.0249V17.4999H18.3333V10.8915C18.3333 5.74986 12.45 5.94152 11.0667 8.46652L11.1 7.06652Z" fill="white"/>
+                            </svg></a>
+                        </div>
+                        <div class="social-link">
+                            <a href="https://www.facebook.com/Zywave/" target="_blank"><svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                            <path d="M7.665 17.9168H10.9983V11.2418H14.0017L14.3317 7.92516H10.9983V6.25016C10.9983 6.02915 11.0861 5.81719 11.2424 5.66091C11.3987 5.50463 11.6107 5.41683 11.8317 5.41683H14.3317V2.0835H11.8317C10.7266 2.0835 9.66679 2.52248 8.88539 3.30388C8.10399 4.08529 7.665 5.14509 7.665 6.25016V7.92516H5.99833L5.66833 11.2418H7.665V17.9168Z" fill="white"/>
+                            </svg></a>
                         </div>
                     </div>
                 </div>

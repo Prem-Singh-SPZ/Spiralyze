@@ -3,19 +3,19 @@ $segoe: "Segoe UI", Arial, sans-serif;
 body.spz-10001 {
   overflow-x: hidden;
 
-  > div[style] > section[style]:not(:last-child) {
+  > div[style] > section[style] {
     display: none !important;
   }
 
   .hero-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/desktop_bg.webp)
-      no-repeat;
+      no-repeat center;
     background-size: cover;
     position: relative;
 
     @media screen and (max-width: 1023.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275645.webp)
-        no-repeat;
+        no-repeat center;
       background-size: cover;
     }
 
@@ -25,7 +25,7 @@ body.spz-10001 {
 
     @media screen and (min-width: 1900.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275612.webp)
-        no-repeat;
+        no-repeat center;
       background-size: cover;
     }
 
@@ -62,7 +62,7 @@ body.spz-10001 {
       .hero-col {
         display: flex;
         justify-content: space-between;
-        padding: 20px 0;
+        padding: 20px 0 48px;
 
         @media screen and (max-width: 1023.98px) {
           flex-direction: column-reverse;
@@ -90,7 +90,7 @@ body.spz-10001 {
             font-style: normal;
             font-weight: 700;
             line-height: 110%;
-            margin: 0 0 22px;
+            margin: 8px 0 39px;
 
             span {
               color: #5fb53b;
@@ -124,11 +124,11 @@ body.spz-10001 {
                 display: flex;
                 align-items: center;
                 transition: all 0.3s;
+                letter-spacing: -0.2px;
 
                 img {
                   width: 20px;
                   height: 20px;
-                  padding: 1px;
                   margin-right: 10px;
                 }
 
@@ -142,6 +142,7 @@ body.spz-10001 {
           .hero-list {
             padding: 0;
             list-style: none;
+            margin: 32px 0;
 
             li {
               padding-left: 48px;
@@ -151,7 +152,7 @@ body.spz-10001 {
               font-style: normal;
               font-weight: 400;
               line-height: 26px;
-              margin-bottom: 15px;
+              margin-bottom: 24px;
               position: relative;
               list-style: none;
 
@@ -171,7 +172,6 @@ body.spz-10001 {
                 left: 0;
                 width: 32px;
                 height: 32px;
-                margin: 3px 0;
               }
 
               &:first-child {
@@ -203,6 +203,7 @@ body.spz-10001 {
 
         .hero-form {
           max-width: 440px;
+          margin-right: 60px;
           width: 100%;
           @media screen and (max-width: 1023.98px) {
             margin: 0 0 61px;
@@ -218,7 +219,7 @@ body.spz-10001 {
               border-radius: 32px;
               background: #fff;
               box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
-              padding: 44px 30px 48px;
+              padding: 43.5px 30px 48px;
               position: relative;
 
               @media screen and (max-width: 1023.98px) {
@@ -420,10 +421,9 @@ body.spz-10001 {
                     font-family: $segoe;
                     height: 60px;
                     width: 157px;
-                    font-size: 16px;
-                    font-style: normal;
+                    font-size: 18px;
                     font-weight: 700;
-                    line-height: 24px;
+                    line-height: 130%;
                     transition: all 0.3s;
                     margin: 0;
                     background: #fff;
@@ -431,9 +431,6 @@ body.spz-10001 {
                     cursor: pointer;
 
                     &:hover {
-                      background: #5fb53b;
-                    }
-                    &:active {
                       background: #5fb53b;
                     }
                   }
@@ -445,6 +442,7 @@ body.spz-10001 {
       }
 
       .brand-logo {
+        padding-bottom: 20px;
         img {
           width: 100%;
         }
@@ -455,6 +453,7 @@ body.spz-10001 {
   .accordion-section {
     background: #fff;
     padding: 100px 0 180px;
+    overflow: hidden;
     .accordion-row {
       max-width: 1180px;
       margin: auto;
@@ -483,7 +482,7 @@ body.spz-10001 {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 20px 0;
+        padding: 48px 0 0;
 
         @media screen and (max-width: 1023.98px) {
           align-items: center;
@@ -496,7 +495,7 @@ body.spz-10001 {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 32px;
+          margin-bottom: 64px;
 
           li {
             margin: 0 5px;
@@ -504,15 +503,14 @@ body.spz-10001 {
 
             a {
               display: flex;
-              height: 44px;
-              padding: 0 20px 0 20px;
+              // height: 44px;
+              padding: 10px 19px;
               justify-content: center;
               align-items: center;
               border-radius: 999px;
               border: 1px solid #0f2d52;
               color: #0f2d52;
-              leading-trim: both;
-              text-edge: cap;
+              letter-spacing: -0.2px;
               font-family: $segoe;
               font-size: 16px;
               font-style: normal;
@@ -558,8 +556,9 @@ body.spz-10001 {
               align-items: flex-start;
 
               > .text {
-                width: 532px;
+                width: 457px;
                 flex-shrink: 0;
+                margin-top: 32px;
               }
 
               .child {
@@ -724,7 +723,7 @@ body.spz-10001 {
                   }
                   .title {
                     cursor: default;
-                    padding: 16px 16px 12px;
+                    padding: 20px 16px;
                     // border-top: 4px solid var(--Icons-Accent, #68cce8);
                     border-bottom: none;
 
@@ -741,7 +740,7 @@ body.spz-10001 {
                         no-repeat center;
                       background-size: cover;
                       transform: rotate(180deg);
-                      top: calc(50% - 8px);
+                      // top: calc(50% - 8px);
                     }
                   }
                   .content {
@@ -765,7 +764,7 @@ body.spz-10001 {
 
               .image {
                 position: relative;
-                margin-left: 48px;
+                margin-left: 102px;
                 width: calc(100% - 38px - 391px);
 
                 .reference {
@@ -934,25 +933,25 @@ body.spz-10001 {
 
   .testimonial-section {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/bg_desktop_1.webp)
-      no-repeat;
+      no-repeat center;
     background-size: cover;
     position: relative;
 
     @media screen and (max-width: 1023.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/bg_tablet_1.webp)
-        no-repeat;
+        no-repeat center;
       background-size: cover;
     }
 
     @media screen and (max-width: 767.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/desktop_mob_1.webp)
-        no-repeat;
+        no-repeat center;
       background-size: cover;
     }
 
     @media screen and (min-width: 1900.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/v4.webp)
-        no-repeat;
+        no-repeat center;
       background-size: cover;
     }
 
@@ -962,13 +961,13 @@ body.spz-10001 {
 
       .testimonial-col {
         padding: 96px 0;
-        margin: auto;
-
+        
         .testimonial-card {
+          margin: auto;
           display: flex;
           width: 100%;
-          max-width: 1040px;
-          padding: 50px 70px;
+          max-width: 900px;
+          padding: 50px 70px 46px;
           flex-direction: column;
           border-radius: 32px;
           background: #fff;
@@ -984,6 +983,7 @@ body.spz-10001 {
             margin-bottom: 56px;
             max-width: 810px;
             position: relative;
+            letter-spacing: -0.6px;
 
             &::before {
               content: "";
@@ -1030,6 +1030,181 @@ body.spz-10001 {
                 font-weight: 400;
                 line-height: 26px;
                 margin: 0;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .benefits-section {
+    padding: 94px 0 100.5px;
+    overflow: hidden;
+
+    .benefits-row {
+      max-width: 1180px;
+      margin: auto;
+
+      .benefits-col {
+        padding: 20px 0;
+
+        .benefits-title {
+          color: #0f2d52;
+          text-align: center;
+          font-feature-settings: "salt" on;
+          font-family: $bree;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%;
+          margin-bottom: 78px;
+        }
+
+        .benefits-content {
+          .benefits-line {
+            display: flex;
+            align-items: center;
+            padding: 24px 0;
+            margin-bottom: 72px;
+
+            .benefits-text {
+              max-width: 500px;
+              width: 100%;
+
+              > img {
+                // width: 64px;
+                // height: 64px;
+                margin-bottom: 19px;
+              }
+
+              > h3 {
+                color: #0f2d52;
+                font-feature-settings: "salt" on;
+                font-family: $bree;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
+                margin: 0 0 21px;
+              }
+
+              > p {
+                color: #0f2d52;
+                font-family: $segoe;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 140%;
+              }
+            }
+
+            .benefits-image {
+              margin-left: 140px;
+              width: calc(100% - 500px);
+              height: 500px;
+              position: relative;
+
+              img {
+                width: auto;
+                height: 100%;
+                position: absolute;
+                top: 0;
+                left: 0;
+                z-index: 0;
+                border-radius: 22px;
+                background: #fff;
+                box-shadow: 0px 12px 32px 0px rgba(15, 45, 82, 0.12),
+                  4.697px 4.697px 30.063px 0px rgba(15, 45, 82, 0.08);
+              }
+            }
+
+            &.benefits-right {
+              .benefits-image {
+                margin: 36px 140px 36px 0;
+                height: 428px;
+                img {
+                  right: 0;
+                  left: auto;
+                }
+              }
+            }
+          }
+        }
+
+        .benefits-cta {
+          .zy-cta {
+            border-radius: 99px;
+            border: 2px solid #5fb53b;
+            padding: 0;
+            font-family: $segoe;
+            height: 56px;
+            width: 187px;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 130%;
+            transition: all 0.3s;
+            margin: 0;
+            background: #fff;
+            color: #0f2d52;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: auto;
+
+            &:hover {
+              background: #5fb53b;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer-section {
+    background: #0f2d52;
+    .footer-row {
+      max-width: 1180px;
+      margin: auto;
+
+      .footer-col {
+        padding: 16px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+
+        .footer-text {
+          color: #fff;
+          font-family: $segoe;
+          font-size: 13px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          margin: 0;
+        }
+
+        .footer-social {
+          display: flex;
+          align-items: center;
+
+          .social-link {
+            margin-left: 16px;
+            a {
+              display: flex;
+              width: 36px;
+              height: 36px;
+              // padding: 8px;
+              justify-content: center;
+              align-items: center;
+              border-radius: 999px;
+              background: #0f2d52;
+              // width: 20px;
+              // height: 20px;
+              &:hover {
+                // opacity: 0.7;
+                background: #576876;
               }
             }
           }
