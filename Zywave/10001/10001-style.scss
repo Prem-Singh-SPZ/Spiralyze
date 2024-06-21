@@ -3,6 +3,10 @@ $segoe: "Segoe UI", Arial, sans-serif;
 body.spz-10001 {
   overflow-x: hidden;
 
+  * {
+    box-sizing: border-box;
+  }
+
   > div[style] > section[style] {
     display: none !important;
   }
@@ -13,8 +17,8 @@ body.spz-10001 {
     background-size: cover;
     position: relative;
 
-    @media screen and (max-width: 1023.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275645.webp)
+    @media screen and (max-width: 1024.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003545.webp)
         no-repeat center;
       background-size: cover;
     }
@@ -40,7 +44,7 @@ body.spz-10001 {
       .header-col {
         padding: 32px 0;
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1024.98px) {
           text-align: center;
         }
       }
@@ -64,11 +68,12 @@ body.spz-10001 {
         justify-content: space-between;
         padding: 20px 0 48px;
 
-        @media screen and (max-width: 1023.98px) {
-          flex-direction: column-reverse;
+        @media screen and (max-width: 1024.98px) {
+          flex-direction: column;
           align-items: center;
-          max-width: 648px;
+          max-width: 598px;
           margin: auto;
+          padding: 6px 0 48px;
         }
 
         .hero-copy {
@@ -77,7 +82,7 @@ body.spz-10001 {
           @media screen and (max-width: 1199.98px) {
             width: 49%;
           }
-          @media screen and (max-width: 1023.98px) {
+          @media screen and (max-width: 1024.98px) {
             max-width: 100%;
             width: 100%;
           }
@@ -96,6 +101,10 @@ body.spz-10001 {
               color: #5fb53b;
             }
 
+            @media screen and (max-width: 1024.98px) {
+              text-align: center;
+            }
+
             @media screen and (max-width: 767.98px) {
               font-size: 32px;
               margin: 0 0 12px;
@@ -107,8 +116,14 @@ body.spz-10001 {
             align-items: center;
             margin: 8px 0;
 
+            @media screen and (max-width: 1024.98px) {
+              justify-content: center;
+            }
+
             .ac-cta {
-              margin-right: 30px;
+              &:first-child {
+                margin-right: 30px;
+              }
 
               a {
                 color: #fff;
@@ -202,11 +217,11 @@ body.spz-10001 {
         }
 
         .hero-form {
-          max-width: 440px;
-          margin-right: 60px;
+          max-width: 500px;
           width: 100%;
-          @media screen and (max-width: 1023.98px) {
-            margin: 0 0 61px;
+          @media screen and (max-width: 1024.98px) {
+            margin: 16px 0 0 0;
+            max-width: 598px;
           }
 
           @media screen and (max-width: 767.98px) {
@@ -222,15 +237,15 @@ body.spz-10001 {
               padding: 43.5px 30px 48px;
               position: relative;
 
-              @media screen and (max-width: 1023.98px) {
+              @media screen and (max-width: 1024.98px) {
                 max-width: 100%;
-                width: 588px !important;
+                // width: 588px !important;
                 margin: 0;
-                padding: 49px 30px 48px;
+                padding: 43px 30px 48px;
               }
 
               @media screen and (max-width: 767.98px) {
-                width: 280px !important;
+                // width: 280px !important;
                 margin: 0;
                 padding: 31px 20px 30px;
               }
@@ -244,8 +259,8 @@ body.spz-10001 {
                 font-weight: 700;
                 line-height: 110%;
                 margin: 0 0 36px;
-                @media screen and (max-width: 1023.98px) {
-                  margin: 0 0 31px;
+                @media screen and (max-width: 1024.98px) {
+                  margin: 0 0 36px;
                 }
 
                 @media screen and (max-width: 767.98px) {
@@ -280,7 +295,7 @@ body.spz-10001 {
                     // max-width: 212px;
                     margin-bottom: 16px !important;
                     position: relative;
-                    @media screen and (max-width: 1023.98px) {
+                    @media screen and (max-width: 1024.98px) {
                       max-width: 286px;
                     }
 
@@ -443,6 +458,13 @@ body.spz-10001 {
 
       .brand-logo {
         padding-bottom: 20px;
+
+        @media (max-width: 1024.98px) {
+          padding-bottom: 60px;
+          max-width: 688px;
+          margin: auto;
+        }
+
         img {
           width: 100%;
         }
@@ -452,8 +474,13 @@ body.spz-10001 {
 
   .accordion-section {
     background: #fff;
-    padding: 100px 0 180px;
+    padding: 100px 0 256px;
     overflow: hidden;
+
+    @media screen and (max-width: 1024.98px) {
+      padding: 64px 0 180px;
+    }
+
     .accordion-row {
       max-width: 1180px;
       margin: auto;
@@ -484,9 +511,9 @@ body.spz-10001 {
         flex-direction: column;
         padding: 48px 0 0;
 
-        @media screen and (max-width: 1023.98px) {
+        @media screen and (max-width: 1024.98px) {
           align-items: center;
-          max-width: 648px;
+          max-width: 598px;
           margin: auto;
         }
 
@@ -497,13 +524,17 @@ body.spz-10001 {
           justify-content: center;
           margin-bottom: 64px;
 
+          @media screen and (max-width: 1024.98px) {
+            margin-bottom: 32px;
+          }
+
           li {
             margin: 0 5px;
             position: relative;
 
             a {
               display: flex;
-              // height: 44px;
+              height: 44px;
               padding: 10px 19px;
               justify-content: center;
               align-items: center;
@@ -812,14 +843,14 @@ body.spz-10001 {
             @media (max-width: 1024.98px) {
               .accordion-wrapper {
                 flex-direction: column;
-                margin-top: 48px;
+                // margin-top: 48px;
 
                 .image {
                   display: none;
                 }
 
                 > .text {
-                  width: 768px;
+                  width: 678px;
                   margin-left: auto;
                   margin-right: auto;
                 }
@@ -864,8 +895,7 @@ body.spz-10001 {
 
                   &.active {
                     .title {
-                      padding: 16px 24px 12px;
-                      background: #000;
+                      // padding: 16px 24px 12px;
                       border-bottom: none;
 
                       > .text {
@@ -875,7 +905,7 @@ body.spz-10001 {
                     }
 
                     .content {
-                      padding: 0 24px 24px 24px;
+                      padding: 0px 32px 32px 16px;
 
                       .text {
                         font-size: 16px;
@@ -937,7 +967,7 @@ body.spz-10001 {
     background-size: cover;
     position: relative;
 
-    @media screen and (max-width: 1023.98px) {
+    @media screen and (max-width: 1024.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/bg_tablet_1.webp)
         no-repeat center;
       background-size: cover;
@@ -959,19 +989,36 @@ body.spz-10001 {
       max-width: 1180px;
       margin: auto;
 
+      @media screen and (max-width: 1199.98px) {
+        padding: 0 24px;
+      }
+
       .testimonial-col {
         padding: 96px 0;
-        
+
+        @media (max-width: 1024.98px) {
+          padding: 64px 0;
+        }
+
         .testimonial-card {
           margin: auto;
           display: flex;
           width: 100%;
-          max-width: 900px;
+          max-width: 1040px;
           padding: 50px 70px 46px;
           flex-direction: column;
           border-radius: 32px;
           background: #fff;
           box-shadow: 0px 40px 56px 0px rgba(15, 45, 82, 0.04);
+
+          @media (max-width: 1199.98px) {
+            max-width: 718px;
+          }
+
+          @media screen and (max-width: 1024.98px) {
+            max-width: 598px;
+            padding: 40px 40px 36px;
+          }
 
           .testimonial-text {
             color: #0f2d52;
@@ -995,6 +1042,11 @@ body.spz-10001 {
               background: url(//res.cloudinary.com/spiralyze/image/upload/v1717672796/zywave/10001/layer_1.svg)
                 no-repeat center;
               background-size: cover;
+
+              @media screen and (max-width: 1024.98px) {
+                left: -65px;
+                top: -3px;
+              }
             }
           }
 
@@ -1042,12 +1094,25 @@ body.spz-10001 {
     padding: 94px 0 100.5px;
     overflow: hidden;
 
+    @media screen and (max-width: 1024.98px) {
+      padding: 38px 0 100.5px;
+    }
+
     .benefits-row {
       max-width: 1180px;
       margin: auto;
 
+      @media screen and (max-width: 1199.98px) {
+        padding: 0 24px;
+      }
+
       .benefits-col {
         padding: 20px 0;
+
+        @media screen and (max-width: 1024.98px) {
+          max-width: 598px;
+          margin: auto;
+        }
 
         .benefits-title {
           color: #0f2d52;
@@ -1059,6 +1124,10 @@ body.spz-10001 {
           font-weight: 700;
           line-height: 110%;
           margin-bottom: 78px;
+
+          @media screen and (max-width: 1024.98px) {
+            margin-bottom: 29px;
+          }
         }
 
         .benefits-content {
@@ -1068,9 +1137,18 @@ body.spz-10001 {
             padding: 24px 0;
             margin-bottom: 72px;
 
+            @media screen and (max-width: 1024.98px) {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
             .benefits-text {
               max-width: 500px;
               width: 100%;
+
+              @media screen and (max-width: 1024.98px) {
+                max-width: 100%;
+              }
 
               > img {
                 // width: 64px;
@@ -1105,6 +1183,12 @@ body.spz-10001 {
               height: 500px;
               position: relative;
 
+              @media screen and (max-width: 1024.98px) {
+                margin: 38px 0 0;
+                width: 100%;
+                height: auto;
+              }
+
               img {
                 width: auto;
                 height: 100%;
@@ -1116,10 +1200,20 @@ body.spz-10001 {
                 background: #fff;
                 box-shadow: 0px 12px 32px 0px rgba(15, 45, 82, 0.12),
                   4.697px 4.697px 30.063px 0px rgba(15, 45, 82, 0.08);
+
+                @media screen and (max-width: 1024.98px) {
+                  position: relative;
+                  width: 100%;
+                  height: auto;
+                }
               }
             }
 
             &.benefits-right {
+              @media screen and (max-width: 1024.98px) {
+                flex-direction: column-reverse;
+              }
+
               .benefits-image {
                 margin: 36px 140px 36px 0;
                 height: 428px;
@@ -1138,8 +1232,8 @@ body.spz-10001 {
             border: 2px solid #5fb53b;
             padding: 0;
             font-family: $segoe;
-            height: 56px;
-            width: 187px;
+            height: 60px;
+            width: 191px;
             font-size: 18px;
             font-style: normal;
             font-weight: 700;
@@ -1168,6 +1262,10 @@ body.spz-10001 {
     .footer-row {
       max-width: 1180px;
       margin: auto;
+
+      @media screen and (max-width: 1199.98px) {
+        padding: 0 24px;
+      }
 
       .footer-col {
         padding: 16px 0;
