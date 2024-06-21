@@ -502,6 +502,11 @@ function formModify() {
                         event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
                     }
                 }
+
+                waitForElm('form.mktoForm #LblCompany').then(function () {
+                    document.querySelector('form.mktoForm #LblCompany').textContent = 'Company';
+                    document.querySelector('form.mktoForm #LblCompany').closest('.mktoFormRow').classList.add('spz-row');
+                });
             }
         });
     }
