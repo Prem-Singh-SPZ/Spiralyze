@@ -793,13 +793,15 @@ body.spz-10001 {
 
               &.stop {
                 .child {
-                  .bar .line {
-                    width: 100%;
-                  }
+                  &.active {
+                    .bar .line {
+                      width: 100%;
+                    }
 
-                  &.active .title {
-                    // border-top: 4px solid var(--Icons-Accent, #68cce8);
-                    // background: var(--Surface-Main, #000);
+                    .title {
+                      // border-top: 4px solid var(--Icons-Accent, #68cce8);
+                      // background: var(--Surface-Main, #000);
+                    }
                   }
                 }
               }

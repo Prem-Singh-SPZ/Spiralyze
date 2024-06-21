@@ -301,6 +301,7 @@ function accordionHandler(parentClass) {
         }
         i += 200;
     }, 200)
+
     document.querySelector('' + parentClass + ' .image').addEventListener("mouseenter", function () {
         clearInterval(autoAccordionInterval);
         document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
