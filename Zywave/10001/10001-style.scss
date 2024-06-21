@@ -1095,7 +1095,7 @@ body.spz-10001 {
     overflow: hidden;
 
     @media screen and (max-width: 1024.98px) {
-      padding: 38px 0 100.5px;
+      padding: 38px 0 44.5px;
     }
 
     .benefits-row {
@@ -1140,6 +1140,8 @@ body.spz-10001 {
             @media screen and (max-width: 1024.98px) {
               flex-direction: column;
               align-items: flex-start;
+              padding-bottom: 20px;
+              margin-bottom: 0;
             }
 
             .benefits-text {
@@ -1205,6 +1207,9 @@ body.spz-10001 {
                   position: relative;
                   width: 100%;
                   height: auto;
+                  border-radius: 16px;
+                  box-shadow: 0px 10px 20px 0px rgba(15, 45, 82, 0.12),
+                    3.504px 4px 20px 0px rgba(15, 45, 82, 0.08);
                 }
               }
             }
@@ -1217,6 +1222,13 @@ body.spz-10001 {
               .benefits-image {
                 margin: 36px 140px 36px 0;
                 height: 428px;
+
+                @media screen and (max-width: 1024.98px) {
+                  margin: 38px 0 0;
+                  width: 100%;
+                  height: auto;
+                }
+
                 img {
                   right: 0;
                   left: auto;
@@ -1227,6 +1239,9 @@ body.spz-10001 {
         }
 
         .benefits-cta {
+          @media screen and (max-width: 1024.98px) {
+            margin: 48px auto 0;
+          }
           .zy-cta {
             border-radius: 99px;
             border: 2px solid #5fb53b;
@@ -1272,6 +1287,11 @@ body.spz-10001 {
         display: flex;
         align-items: center;
         justify-content: space-between;
+
+        @media screen and (max-width: 1024.98px) {
+          max-width: 598px;
+          margin: auto;
+        }
 
         .footer-text {
           color: #fff;

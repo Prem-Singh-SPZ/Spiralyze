@@ -1030,7 +1030,7 @@ body.spz-10001 .benefits-section {
 }
 @media screen and (max-width: 1024.98px) {
   body.spz-10001 .benefits-section {
-    padding: 38px 0 100.5px;
+    padding: 38px 0 44.5px;
   }
 }
 body.spz-10001 .benefits-section .benefits-row {
@@ -1087,6 +1087,8 @@ body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-content .
     -webkit-box-align: start;
         -ms-flex-align: start;
             align-items: flex-start;
+    padding-bottom: 20px;
+    margin-bottom: 0;
   }
 }
 body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-content .benefits-line .benefits-text {
@@ -1150,6 +1152,9 @@ body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-content .
     position: relative;
     width: 100%;
     height: auto;
+    border-radius: 16px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(15, 45, 82, 0.12), 3.504px 4px 20px 0px rgba(15, 45, 82, 0.08);
+            box-shadow: 0px 10px 20px 0px rgba(15, 45, 82, 0.12), 3.504px 4px 20px 0px rgba(15, 45, 82, 0.08);
   }
 }
 @media screen and (max-width: 1024.98px) {
@@ -1164,9 +1169,21 @@ body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-content .
   margin: 36px 140px 36px 0;
   height: 428px;
 }
+@media screen and (max-width: 1024.98px) {
+  body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-content .benefits-line.benefits-right .benefits-image {
+    margin: 38px 0 0;
+    width: 100%;
+    height: auto;
+  }
+}
 body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-content .benefits-line.benefits-right .benefits-image img {
   right: 0;
   left: auto;
+}
+@media screen and (max-width: 1024.98px) {
+  body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-cta {
+    margin: 48px auto 0;
+  }
 }
 body.spz-10001 .benefits-section .benefits-row .benefits-col .benefits-cta .zy-cta {
   border-radius: 99px;
@@ -1222,6 +1239,12 @@ body.spz-10001 .footer-section .footer-row .footer-col {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+}
+@media screen and (max-width: 1024.98px) {
+  body.spz-10001 .footer-section .footer-row .footer-col {
+    max-width: 598px;
+    margin: auto;
+  }
 }
 body.spz-10001 .footer-section .footer-row .footer-col .footer-text {
   color: #fff;
