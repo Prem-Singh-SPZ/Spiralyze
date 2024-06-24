@@ -47,6 +47,10 @@ body.spz-10001 {
         @media screen and (max-width: 1024.98px) {
           text-align: center;
         }
+
+        @media screen and (max-width: 767.98px) {
+          padding: 32px 0 17px;
+        }
       }
     }
 
@@ -60,7 +64,6 @@ body.spz-10001 {
 
       @media screen and (max-width: 767.98px) {
         padding: 0 20px;
-        max-width: 320px;
       }
 
       .hero-col {
@@ -74,6 +77,10 @@ body.spz-10001 {
           max-width: 598px;
           margin: auto;
           padding: 6px 0 48px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+          padding: 6px 0 40px;
         }
 
         .hero-copy {
@@ -107,7 +114,7 @@ body.spz-10001 {
 
             @media screen and (max-width: 767.98px) {
               font-size: 32px;
-              margin: 0 0 12px;
+              margin: 0 0 29px;
             }
           }
 
@@ -120,9 +127,17 @@ body.spz-10001 {
               justify-content: center;
             }
 
+            // @media (max-width: 767.98px) {
+            //   justify-content: space-between;
+            // }
+
             .ac-cta {
               &:first-child {
                 margin-right: 30px;
+
+                @media (max-width: 767.98px) {
+                  margin-right: 16px;
+                }
               }
 
               a {
@@ -141,10 +156,19 @@ body.spz-10001 {
                 transition: all 0.3s;
                 letter-spacing: -0.2px;
 
+                @media (max-width: 767.98px) {
+                  min-width: 160px;
+                  justify-content: center;
+                }
+
                 img {
                   width: 20px;
                   height: 20px;
                   margin-right: 10px;
+
+                  @media (max-width: 767.98px) {
+                    display: none;
+                  }
                 }
 
                 &:hover {
@@ -158,6 +182,10 @@ body.spz-10001 {
             padding: 0;
             list-style: none;
             margin: 32px 0;
+
+            @media screen and (max-width: 767.98px) {
+              margin: 27px 0 40.5px;
+            }
 
             li {
               padding-left: 48px;
@@ -176,9 +204,10 @@ body.spz-10001 {
                 color: #fff;
               }
 
-              @media screen and (max-width: 767.98px) {
-                margin-bottom: 14px;
-              }
+              // @media screen and (max-width: 767.98px) {
+              //   // margin-bottom: 14px;
+              //   padding-left: 47px;
+              // }
 
               &::before {
                 content: "";
@@ -225,7 +254,7 @@ body.spz-10001 {
           }
 
           @media screen and (max-width: 767.98px) {
-            margin: 0 0 40px;
+            margin: 0 0;
           }
 
           .spz-form-container {
@@ -245,15 +274,16 @@ body.spz-10001 {
               }
 
               @media screen and (max-width: 767.98px) {
-                // width: 280px !important;
+                border-radius: 24px;
                 margin: 0;
-                padding: 31px 20px 30px;
+                padding: 43px 30px 48px;
               }
 
               .form_title {
                 color: #0f2d52;
                 text-align: center;
                 font-family: $bree;
+                font-feature-settings: "salt" on;
                 font-size: 32px;
                 font-style: normal;
                 font-weight: 700;
@@ -264,7 +294,7 @@ body.spz-10001 {
                 }
 
                 @media screen and (max-width: 767.98px) {
-                  font-size: 28px;
+                  font-size: 32px;
                 }
               }
 
@@ -276,6 +306,10 @@ body.spz-10001 {
                   &.spz-row {
                     max-width: calc(50% - 8px);
                     width: 100%;
+
+                    @media screen and (max-width: 767.98px) {
+                      max-width: 100%;
+                    }
                   }
 
                   &:not(.spz-row) {
@@ -297,6 +331,10 @@ body.spz-10001 {
                     position: relative;
                     @media screen and (max-width: 1024.98px) {
                       max-width: 286px;
+                    }
+
+                    @media screen and (max-width: 767.98px) {
+                      max-width: 100%;
                     }
 
                     .mktoOffset {
@@ -425,9 +463,9 @@ body.spz-10001 {
                   margin-top: 16px;
                   width: 100%;
 
-                  @media screen and (max-width: 767.98px) {
-                    margin-top: 32px;
-                  }
+                  // @media screen and (max-width: 767.98px) {
+                  //   margin-top: 32px;
+                  // }
 
                   .mktoButton {
                     border-radius: 99px;
@@ -465,6 +503,11 @@ body.spz-10001 {
           margin: auto;
         }
 
+        @media (max-width: 767.98px) {
+          padding-bottom: 44px;
+          max-width: 400px;
+        }
+
         img {
           width: 100%;
         }
@@ -481,6 +524,10 @@ body.spz-10001 {
       padding: 64px 0 65px;
     }
 
+    @media screen and (max-width: 767.98px) {
+      padding: 44px 0 48px;
+    }
+
     .accordion-row {
       max-width: 1180px;
       margin: auto;
@@ -491,7 +538,6 @@ body.spz-10001 {
 
       @media screen and (max-width: 767.98px) {
         padding: 0 20px;
-        max-width: 320px;
       }
 
       .section-title {
@@ -503,6 +549,10 @@ body.spz-10001 {
         font-style: normal;
         font-weight: 700;
         line-height: 110%;
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 28px;
+        }
       }
 
       .accordion-col {
@@ -517,6 +567,10 @@ body.spz-10001 {
           margin: auto;
         }
 
+        @media screen and (max-width: 767.98px) {
+          padding: 36px 0 0;
+        }
+
         #tabs {
           list-style-type: none;
           display: flex;
@@ -526,6 +580,10 @@ body.spz-10001 {
 
           @media screen and (max-width: 1024.98px) {
             margin-bottom: 32px;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            margin-bottom: 0;
           }
 
           li {
@@ -548,10 +606,18 @@ body.spz-10001 {
               font-weight: 600;
               line-height: 140%;
 
+              @media screen and (max-width: 767.98px) {
+                font-size: 14px;
+              }
+
               img {
                 margin-right: 10px;
                 width: 20px;
                 height: 20px;
+
+                @media screen and (max-width: 767.98px) {
+                  display: none !important;
+                }
               }
 
               .i-hover {
@@ -891,9 +957,17 @@ body.spz-10001 {
                     margin-top: 28px;
                     margin-bottom: 6px;
                     border-radius: 11.815px;
-                    box-shadow: 0px 7.089px 18.904px 0px rgba(15, 45, 82, 0.12), 2.775px 2.775px 17.76px 0px rgba(15, 45, 82, 0.08);
+                    box-shadow: 0px 7.089px 18.904px 0px rgba(15, 45, 82, 0.12),
+                      2.775px 2.775px 17.76px 0px rgba(15, 45, 82, 0.08);
                     max-width: 100%;
                     width: 100%;
+
+                    @media (max-width: 767.98px) {
+                      margin-bottom: 2px;
+                      border-radius: 6.165px;
+                      box-shadow: 0px 3.699px 9.865px 0px rgba(15, 45, 82, 0.12),
+                        1.448px 1.448px 9.268px 0px rgba(15, 45, 82, 0.08);
+                    }
                   }
 
                   .bar {
@@ -934,36 +1008,36 @@ body.spz-10001 {
 
             @media (max-width: 767.98px) {
               .accordion-wrapper {
-                margin-top: 24px;
+                margin-top: 0;
 
                 > .text {
                   width: 100%;
                 }
 
                 .child {
-                  padding-left: 20px;
-                  padding-right: 20px;
+                  padding-left: 0;
+                  padding-right: 0;
 
                   .bar,
                   &::before {
-                    width: calc(100% - 40px);
+                    width: 100%;
                   }
 
-                  .title {
-                    padding: 14.5px 8px;
-                  }
+                  // .title {
+                  //   padding: 14.5px 8px;
+                  // }
 
                   .content .text sup {
                     font-size: 10.5px;
                   }
 
                   &.active {
-                    .title {
-                      padding: 16px 8px 12px;
-                    }
+                    // .title {
+                    //   padding: 16px 8px 12px;
+                    // }
 
                     .content {
-                      padding: 0 8px 24px 8px;
+                      padding: 0 32px 32px 16px;
                     }
                   }
                 }
@@ -1008,11 +1082,19 @@ body.spz-10001 {
         padding: 0 24px;
       }
 
+      @media (max-width: 767.98px) {
+        padding: 0 20px;
+      }
+
       .testimonial-col {
         padding: 96px 0;
 
         @media (max-width: 1024.98px) {
           padding: 64px 0;
+        }
+
+        @media (max-width: 767.98px) {
+          padding: 56px 0;
         }
 
         .testimonial-card {
@@ -1035,6 +1117,11 @@ body.spz-10001 {
             padding: 40px 40px 36px;
           }
 
+          @media screen and (max-width: 767.98px) {
+            padding: 32px 24px 28px;
+            border-radius: 24px;
+          }
+
           .testimonial-text {
             color: #0f2d52;
             font-family: $segoe;
@@ -1046,6 +1133,13 @@ body.spz-10001 {
             max-width: 810px;
             position: relative;
             letter-spacing: -0.6px;
+
+            @media screen and (max-width: 767.98px) {
+              font-size: 18px;
+              line-height: 140%;
+              margin-bottom: 24px;
+              letter-spacing: -0.3px;
+            }
 
             &::before {
               content: "";
@@ -1062,6 +1156,13 @@ body.spz-10001 {
                 left: -65px;
                 top: -3px;
               }
+
+              @media screen and (max-width: 767.98px) {
+                width: 44px;
+                height: 44px;
+                left: -3px;
+                top: -50px;
+              }
             }
           }
 
@@ -1072,9 +1173,18 @@ body.spz-10001 {
             .testimonial-image {
               margin-right: 20px;
 
+              @media screen and (max-width: 767.98px) {
+                margin-right: 12px;
+              }
+
               img {
                 width: 80px;
                 height: 80px;
+
+                @media screen and (max-width: 767.98px) {
+                  width: 48px;
+                  height: 48px;
+                }
               }
             }
 
@@ -1087,6 +1197,12 @@ body.spz-10001 {
                 font-weight: 700;
                 line-height: 26px;
                 margin-bottom: 4px;
+
+                @media screen and (max-width: 767.98px) {
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 140%;
+                }
               }
 
               .t-desgn {
@@ -1097,6 +1213,12 @@ body.spz-10001 {
                 font-weight: 400;
                 line-height: 26px;
                 margin: 0;
+
+                @media screen and (max-width: 767.98px) {
+                  font-size: 14px;
+                  font-weight: 400;
+                  line-height: 140%;
+                }
               }
             }
           }
@@ -1113,12 +1235,20 @@ body.spz-10001 {
       padding: 38px 0 44.5px;
     }
 
+    @media screen and (max-width: 767.98px) {
+      padding: 32px 0 36px;
+    }
+
     .benefits-row {
       max-width: 1180px;
       margin: auto;
 
       @media screen and (max-width: 1199.98px) {
         padding: 0 24px;
+      }
+
+      @media screen and (max-width: 767.98px) {
+        padding: 0 20px;
       }
 
       .benefits-col {
@@ -1143,6 +1273,10 @@ body.spz-10001 {
           @media screen and (max-width: 1024.98px) {
             margin-bottom: 29px;
           }
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 28px;
+          }
         }
 
         .benefits-content {
@@ -1159,6 +1293,10 @@ body.spz-10001 {
               margin-bottom: 0;
             }
 
+            @media screen and (max-width: 767.98px) {
+              padding-top: 7px;
+              margin-bottom: 17px;
+            }
             .benefits-text {
               max-width: 500px;
               width: 100%;
@@ -1167,21 +1305,41 @@ body.spz-10001 {
                 max-width: 100%;
               }
 
-              > img {
-                // width: 64px;
-                // height: 64px;
-                margin-bottom: 19px;
-              }
+              .title-img-wrapper {
+                > img {
+                  // width: 64px;
+                  // height: 64px;
+                  margin-bottom: 19px;
 
-              > h3 {
-                color: #0f2d52;
-                font-feature-settings: "salt" on;
-                font-family: $bree;
-                font-size: 32px;
-                font-style: normal;
-                font-weight: 700;
-                line-height: 110%;
-                margin: 0 0 21px;
+                  @media screen and (max-width: 767.98px) {
+                    width: 40px;
+                    height: 40px;
+                    margin-bottom: 0;
+                    margin-right: 16px;
+                  }
+                }
+
+                > h3 {
+                  color: #0f2d52;
+                  font-feature-settings: "salt" on;
+                  font-family: $bree;
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 110%;
+                  margin: 0 0 21px;
+
+                  @media screen and (max-width: 767.98px) {
+                    font-size: 20px;
+                    margin-bottom: 4px;
+                  }
+                }
+
+                @media screen and (max-width: 767.98px) {
+                  display: flex;
+                  align-items: center;
+                  margin-bottom: 16px;
+                }
               }
 
               > p {
@@ -1257,6 +1415,11 @@ body.spz-10001 {
           @media screen and (max-width: 1024.98px) {
             margin: 48px auto 0;
           }
+
+          @media screen and (max-width: 767.98px) {
+            margin: 24px auto 0;
+          }
+
           .zy-cta {
             border-radius: 99px;
             border: 2px solid #5fb53b;
@@ -1295,6 +1458,10 @@ body.spz-10001 {
 
       @media screen and (max-width: 1199.98px) {
         padding: 0 24px;
+      }
+
+      @media screen and (max-width: 767.98px) {
+        padding: 0 20px;
       }
 
       .footer-col {
