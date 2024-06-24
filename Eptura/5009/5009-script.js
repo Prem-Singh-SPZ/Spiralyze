@@ -98,6 +98,7 @@ function formUpdate() {
     });
 
     document.querySelector('#LblI_am__c').textContent = 'I am...*';
+    document.querySelector('form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label').innerHTML = 'By submitting this form, you agree to the processing of your personal data by Eptura as described in the  <a href="https://eptura.com/terms/privacy-policy/">Privacy Statement</a>';
 
     document.querySelectorAll('.get-form .mktoForm .mktoFormRow').forEach(function (el, index) {
         el.closest('.mktoFormRow').setAttribute('spz_row_num', index);

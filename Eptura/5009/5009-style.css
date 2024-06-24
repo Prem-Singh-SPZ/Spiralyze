@@ -14,9 +14,20 @@ body.spz-5009 .site-content .inner-banner.dark-contact-hero {
 body.spz-5009 .site-content .get-touch-form.dark_form_container {
   position: relative;
 }
+@media (min-width: 991.98px) {
+  body.spz-5009 .site-content .get-touch-form.dark_form_container {
+    padding: 130px 0 29px;
+  }
+}
+@media (max-width: 991.98px) {
+  body.spz-5009 .site-content .get-touch-form.dark_form_container {
+    padding-bottom: 0;
+  }
+}
 body.spz-5009 .site-content .get-touch-form.dark_form_container::before {
   content: "";
   width: calc(50% - 172px);
+  min-width: 548px;
   height: 100%;
   left: 0;
   top: 0;
@@ -61,13 +72,14 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .titl
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_tablet_1.webp") no-repeat;
     background-position: center;
     background-size: 100%;
+    margin: 0;
   }
 }
 @media (max-width: 991.98px) and (min-width: 767.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .title-part::before {
     content: "";
     position: absolute;
-    top: -69px;
+    top: 0;
     left: calc(50% - 20px);
     width: 40px;
     height: 16px;
@@ -91,13 +103,14 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   flex-direction: column;
   max-width: 548px;
   min-height: 840px;
-  padding: 93px 54px 96px;
+  padding: 93px 54px 54px;
   position: relative;
 }
 @media (max-width: 991.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container {
     max-width: 100%;
     min-height: auto;
+    padding: 82px 30px 65.5px;
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .left-section-title {
@@ -109,10 +122,11 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   line-height: 44px;
   margin-bottom: 39px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 @media (max-width: 1199.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .left-section-title {
-    margin-bottom: 31.5px;
+    margin-bottom: 40px;
   }
 }
 @media (max-width: 767.98px) {
@@ -128,6 +142,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   border-top: 1px solid #e3e6ec;
   margin-bottom: 20px;
   margin-left: 10px;
+  margin-right: 10px;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .line-header .header-img {
   margin-right: 12px;
@@ -158,6 +173,9 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header {
   border-bottom: 1px solid #e3e6ec;
   position: relative;
+  padding-bottom: 18px;
+  padding-top: 18px;
+  margin-bottom: 0;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header a {
   display: flex;
@@ -170,10 +188,11 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   position: relative;
   margin-top: 12px;
   z-index: 1;
+  margin-bottom: 39px;
 }
-@media (min-width: 767.98px) and (max-width: 1199.98px) {
+@media (min-width: 767.98px) and (max-width: 991.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form {
-    padding-top: 40px;
+    margin-bottom: 38px;
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm {
@@ -284,6 +303,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   display: inline-block;
   position: relative;
   padding-left: 14px;
+  padding-right: 0;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
   border: 1px solid #d6d7f5;
@@ -492,7 +512,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap {
-  margin-top: 24px;
+  margin-top: 17px;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   text-align: center;
@@ -509,11 +529,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   font-weight: 300;
   line-height: 20px;
   font-family: "Flexible", Arial, sans-serif;
-}
-@media (max-width: 767.98px) {
-  body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
-    padding: 0;
-  }
+  padding: 0;
 }
 @media (min-width: 767.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
