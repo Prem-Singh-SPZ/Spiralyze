@@ -23,15 +23,6 @@ var bodyInterval = setInterval(function () {
     }
 });
 
-// waitForElm('body .site-content .get-touch-form .get-form .mktoForm .mktoFormRow .mktoField').then(function () {
-//     document.body.classList.add('spz-5009');
-//     clearFormFields();
-//     loadTest();
-// });
-// waitForElm('body .site-content .get-touch-form .get-form').then(function () {
-//     addPageContent();
-// });
-
 //Clear form fields
 function clearFormFields() {
     document.querySelectorAll('.get-form .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
@@ -106,11 +97,13 @@ function formUpdate() {
         dropdownFunctionality(this.value);
     });
 
-    document.querySelector('#LblI_am__c').textContent = 'I am*';
+    document.querySelector('#LblI_am__c').textContent = 'I am...*';
 
     document.querySelectorAll('.get-form .mktoForm .mktoFormRow').forEach(function (el, index) {
         el.closest('.mktoFormRow').setAttribute('spz_row_num', index);
     });
+
+    checkVisibleInputs();
 
     document.querySelector('#mktoForm_1002 .mktoButtonRow button[type="submit"].mktoButton').addEventListener('click', function () {
         setTimeout(() => {
@@ -269,12 +262,10 @@ function waitForElm(selector) {
 
 //adding page contents
 function addPageContent() {
-    if (document.querySelector('header .right-links > .link')) {
-        const csLink = document.querySelector('header .right-links > .link');
-        csLink.querySelector('a').textContent = 'Contact us';
-        csLink.classList.add('button-1');
-        csLink.classList.remove('link');
-    }
+    document.querySelector('.title-part').innerHTML = '';
+
+    document.querySelector('.form-container').insertAdjacentHTML('afterbegin', `<div class="left-section-title">Get in touch</div><div class="line-header"><div class="header-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1718811851/eptura/5009/icon-04.svg" alt="Contact Sales"></div><div class="header-title"><p class="title">Contact Sales</p><p class="sub-title">For demo & pricing</p></div></div>`);
+    document.querySelector('.form-container').insertAdjacentHTML('beforeend', `<div class="line-header"><div class="header-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1718811851/eptura/5009/icon-01.svg" alt="Customer support"></div><div class="header-title"><p class="title">Customer support</p><p class="sub-title">For questions & inqueries</p></div></div><div class="line-header"><div class="header-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1718811851/eptura/5009/icon-03.svg" alt="Our locations"></div><div class="header-title"><p class="title">Our locations</p><p class="sub-title">For office addresses </p></div></div>`);
 
     // Add browser specific class safari
     if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
@@ -291,10 +282,10 @@ function addPageContent() {
 function setHiddenFields() {
     if (document.querySelector('.mktoFormRow [name="CP2__c"]')) {
         document.querySelectorAll('.mktoFormRow [name="CP2__c"]').forEach(function (el, k) {
-            el.setAttribute('value', '5010_Variant');
+            el.setAttribute('value', '5009_Variant');
         });
     } else if (!document.querySelector('.mktoForm .mktoFormRow [name="CP2__c"]')) {
         // If [name="CP2__c"] doesn't exist, add hidden field
-        document.querySelector('.mktoForm').insertAdjacentHTML('beforeend', '<input type="hidden" name="CP2__c" value="5010_Variant">');
+        document.querySelector('.mktoForm').insertAdjacentHTML('beforeend', '<input type="hidden" name="CP2__c" value="5009_Variant">');
     }
 }
