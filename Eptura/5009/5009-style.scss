@@ -76,7 +76,7 @@ body.spz-5009 {
             background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_tablet_1.webp")
               no-repeat;
             background-position: center;
-            background-size: 100%;
+            background-size: contain;
             margin: 0;
 
             @media (min-width: 767.98px) {
@@ -99,7 +99,7 @@ body.spz-5009 {
             background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_mobile_1.webp")
               no-repeat;
             background-position: center;
-            background-size: 100%;
+            background-size: contain;
             min-height: 306px;
           }
         }
@@ -117,7 +117,11 @@ body.spz-5009 {
           @media (max-width: 991.98px) {
             max-width: 100%;
             min-height: auto;
-            padding: 82px 30px 65.5px;
+            padding: 82px 30px 64.5px;
+          }
+
+          @media (max-width: 767.98px) {
+            padding: 82px 20px 47.5px;
           }
 
           .left-section-title {
@@ -136,9 +140,9 @@ body.spz-5009 {
             }
 
             @media (max-width: 767.98px) {
-              font-size: 26px;
-              line-height: 34px;
-              margin-bottom: 27.5px;
+              //   font-size: 26px;
+              //   line-height: 34px;
+              //   margin-bottom: 27.5px;
             }
           }
 
@@ -182,18 +186,27 @@ body.spz-5009 {
 
           .get-form ~ .line-header {
             border-bottom: 1px solid #e3e6ec;
-            position: relative;
-            padding-bottom: 18px;
+            padding-bottom: 19px;
             padding-top: 18px;
             margin-bottom: 0;
 
             a {
+              position: relative;
               display: flex;
               width: 100%;
-            }
 
-            &::after {
-              content: "";
+              &::after {
+                content: "";
+                position: absolute;
+                top: calc(50% - 10px);
+                right: 0;
+                width: 20px;
+                height: 20px;
+                background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/5009/chevron-down.svg")
+                  no-repeat;
+                background-position: center;
+                background-size: cover;
+              }
             }
           }
 
@@ -282,6 +295,7 @@ body.spz-5009 {
                         background-position: right 14px center !important;
                         background-size: 24px !important;
                         padding-right: 32px !important;
+                        max-width: 100%;
                       }
 
                       &#Lead_Notes__c ~ .mktoError {
@@ -366,10 +380,10 @@ body.spz-5009 {
                           }
                         }
 
-                        @media (max-width: 767.98px) {
-                          font-size: 12px !important;
-                          line-height: 18px !important;
-                        }
+                        // @media (max-width: 767.98px) {
+                        //   font-size: 12px !important;
+                        //   line-height: 18px !important;
+                        // }
 
                         &:before {
                           content: "";
@@ -514,7 +528,7 @@ body.spz-5009 {
                       padding-right: 5px;
                     }
                     @media (max-width: 1199.98px) {
-                      margin: 3px 0 18px 10px;
+                      margin: 3px 0 13px 10px;
                     }
                     @media (max-width: 767.98px) {
                       padding: 0;
@@ -591,11 +605,9 @@ body.spz-5009 {
                     }
 
                     @media (max-width: 767.98px) {
-                      height: 56px !important;
+                      height: 50px !important;
                       padding: 0px 32px;
-                      width: 270px !important;
-                      max-width: 270px !important;
-                      margin-top: 11px !important;
+                      margin-top: 10.5px !important;
                     }
                   }
                 }

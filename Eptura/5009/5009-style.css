@@ -71,7 +71,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .titl
     position: relative;
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_tablet_1.webp") no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: contain;
     margin: 0;
   }
 }
@@ -92,7 +92,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .titl
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .title-part {
     background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_mobile_1.webp") no-repeat;
     background-position: center;
-    background-size: 100%;
+    background-size: contain;
     min-height: 306px;
   }
 }
@@ -110,7 +110,12 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container {
     max-width: 100%;
     min-height: auto;
-    padding: 82px 30px 65.5px;
+    padding: 82px 30px 64.5px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container {
+    padding: 82px 20px 47.5px;
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .left-section-title {
@@ -127,13 +132,6 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
 @media (max-width: 1199.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .left-section-title {
     margin-bottom: 40px;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .left-section-title {
-    font-size: 26px;
-    line-height: 34px;
-    margin-bottom: 27.5px;
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .line-header {
@@ -172,17 +170,25 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header {
   border-bottom: 1px solid #e3e6ec;
-  position: relative;
-  padding-bottom: 18px;
+  padding-bottom: 19px;
   padding-top: 18px;
   margin-bottom: 0;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header a {
+  position: relative;
   display: flex;
   width: 100%;
 }
-body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header::after {
+body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header a::after {
   content: "";
+  position: absolute;
+  top: calc(50% - 10px);
+  right: 0;
+  width: 20px;
+  height: 20px;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/5009/chevron-down.svg") no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form {
   position: relative;
@@ -261,6 +267,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   background-position: right 14px center !important;
   background-size: 24px !important;
   padding-right: 32px !important;
+  max-width: 100%;
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c ~ .mktoError {
   margin-top: 0 !important;
@@ -334,12 +341,6 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a:hover, body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a:focus {
   color: #0d122e;
   text-decoration: underline;
-}
-@media (max-width: 767.98px) {
-  body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
-    font-size: 12px !important;
-    line-height: 18px !important;
-  }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
   content: "";
@@ -442,7 +443,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
 }
 @media (max-width: 1199.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
-    margin: 3px 0 18px 10px;
+    margin: 3px 0 13px 10px;
   }
 }
 @media (max-width: 767.98px) {
@@ -504,11 +505,9 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
 }
 @media (max-width: 767.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
-    height: 56px !important;
+    height: 50px !important;
     padding: 0px 32px;
-    width: 270px !important;
-    max-width: 270px !important;
-    margin-top: 11px !important;
+    margin-top: 10.5px !important;
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap {
