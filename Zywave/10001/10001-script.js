@@ -350,7 +350,7 @@ function benefits() {
                     <div class="benefits-line benefits-left">
                         <div class="benefits-text">
                             <div class="title-img-wrapper">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/v1717672854/zywave/10001/frame_1171275599.svg" alt="Streamline manual workflows">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275599.svg" alt="Streamline manual workflows">
                                 <h3>Streamline manual workflows</h3>
                             </div>
                             <p>Let clients complete digital forms that consolidate carrier questionnaires. Auto-capture plan needs and other details. Get instant pricing from 1,000+ carriers. No more manually entering client data across every carrier site. Streamline the request for proposal (RFP) process no matter what plan design your employer requires.</p>
@@ -373,7 +373,7 @@ function benefits() {
                         </div>
                         <div class="benefits-text">
                             <div class="title-img-wrapper">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/v1717672863/zywave/10001/frame_1171275600.svg" alt="Boost sales">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275600.svg" alt="Boost sales">
                                 <h3>Boost sales</h3>
                             </div>
                             <p>Build instant quotes based on real-time carrier rates. New policies, renewals, and alternative plan options. Add professional branding so your quotes stand out. Send to clients in 1 click. Send 2x more quotes. Turn more prospects into clients.</p>
