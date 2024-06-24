@@ -39,10 +39,14 @@ body.spz-2025 .product-list-area.fixed-nav-product {
 .spz-2025 .products-boxes {
   display: flex;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 @media (max-width: 599.98px) {
   .spz-2025 .products-boxes {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -448,6 +452,7 @@ body.spz-2025 .product-list-area.fixed-nav-product {
   display: inline-flex;
   align-items: center;
   line-height: 24px;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #ec7923;
 }
@@ -681,4 +686,4 @@ body.spz-2025 .product-list-area.fixed-nav-product {
   .spz-2025 .banner-box .banner {
     height: 350px !important;
   }
-}/*# sourceMappingURL=2025-Style.css.map */
+}

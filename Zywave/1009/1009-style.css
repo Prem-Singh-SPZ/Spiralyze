@@ -22,16 +22,10 @@ body.spz-1009.show-popup {
   background: transparent;
   z-index: 999 !important;
   inset: 0;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
   visibility: hidden;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1009 #zy-demo-form-section .zy-container {
@@ -44,26 +38,18 @@ body.spz-1009.show-popup {
   position: absolute;
   padding: 0;
   left: initial;
-  -webkit-transform: unset;
-          transform: unset;
+  transform: unset;
   bottom: 100%;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1009 #zy-demo-form-section .row {
   margin: 0;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1024.98px) {
   .spz-1009 #zy-demo-form-section .row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 .spz-1009 #zy-demo-form-section .zy-col-text {
@@ -72,13 +58,10 @@ body.spz-1009.show-popup {
 .spz-1009 #zy-demo-form-section .zy-col-form {
   width: 100%;
   max-width: 540px;
-  -webkit-box-flex: unset;
-      -ms-flex: unset;
-          flex: unset;
+  flex: unset;
   border-radius: 16px;
   background: #fff;
-  -webkit-box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
-          box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
+  box-shadow: 0px 56px 80px 0px rgba(15, 45, 82, 0.16);
   padding: 40px;
   position: relative;
 }
@@ -87,8 +70,6 @@ body.spz-1009.show-popup {
   top: 10px;
   right: 10px;
   z-index: 99;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   cursor: pointer;
 }
@@ -100,6 +81,7 @@ body.spz-1009.show-popup {
 }
 .spz-1009 #zy-demo-form-section .zy-col-form .close-icon svg path {
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1009 #zy-demo-form-section .zy-col-form .close-icon:hover svg path {
@@ -166,6 +148,7 @@ body.spz-1009.show-popup {
   line-height: 1.5;
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1009 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap label.mktoLabel::after {
@@ -195,6 +178,7 @@ body.spz-1009.show-popup {
   appearance: none;
   white-space: nowrap;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 .spz-1009 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill {
@@ -390,23 +374,13 @@ body.spz-1009.show-popup {
   }
 }
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 .spz-1009 #zy-demo-form-section .t-product-img-parent .t-product-wrapper .t-content-parent .t-avatar-parent .t-avatar {
   width: 80px;
@@ -500,6 +474,7 @@ body.spz-1009.show-popup {
 .spz-1009.show-popup #zy-demo-form-section .zy-container {
   bottom: 50%;
   -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
   transform: translateY(50%);
   pointer-events: all;
 }

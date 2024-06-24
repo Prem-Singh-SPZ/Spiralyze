@@ -18,7 +18,6 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   line-height: 12px;
   position: relative;
   text-align: center;
-  -webkit-transition: all 0.15s linear;
   transition: all 0.15s linear;
   background-color: #ff7a59;
   border-color: #ff7a59;
@@ -65,8 +64,10 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   line-height: 22px;
   color: #33475b;
   border: 1px solid #cbd6e2;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  -ms-border-radius: 3px;
   border-radius: 3px;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-input:not([type=file]) {
@@ -86,12 +87,10 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   padding: initial;
   border: initial;
   line-height: initial;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] select {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   background-image: url(https://res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/foms_icon__close.svg);
   -webkit-background-position: right center;
@@ -116,7 +115,6 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-input input,
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-input textarea {
-  -webkit-transition: border 0.2s linear;
   transition: border 0.2s linear;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-input:focus {
@@ -204,17 +202,13 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   width: 90%;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-rtl .field {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
+  flex: 0 1 100%;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-rtl .hs-input[type=checkbox],
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-rtl .hs-input[type=radio] {
   margin: 3px 5px 3px 5px;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-rtl fieldset {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-rtl fieldset[class^=form-columns-] .input {
@@ -231,14 +225,9 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   margin-left: 0px;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-rtl .hs-dependent-field {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 1 100%;
-          flex: 0 1 100%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex: 0 1 100%;
+  flex-wrap: wrap;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .email-correction,
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .email-validation {
@@ -425,8 +414,6 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
 }
 @media (min-width: 501px) and (max-width: 775px) {
   body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-form-private.hs-form-spz fieldset {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -482,8 +469,7 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-custom-style > div input:not([type=image]):not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]),
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] .hs-custom-style fieldset input:not([type=image]):not([type=submit]):not([type=button]):not([type=radio]):not([type=checkbox]):not([type=file]) {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   padding: 0 15px;
   min-height: 27px;
 }
@@ -559,6 +545,7 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   -webkit-background-position: right center;
   background-position: 100% center;
   background-repeat: no-repeat;
+  -webkit-background-size: 18px;
   background-size: 18px;
   background-color: #f5f8fa;
   outline: transparent;
@@ -653,12 +640,8 @@ body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer
   border-color: #c87872;
 }
 body.spz_custom_dropdown #__next main section div[class*=Form-formOuterContainer] form.hs-form-spz .form-columns-1 .hs-fieldtype-checkbox.field.hs-form-field .hs-form-checkbox-display {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
   position: relative;
   padding: 2px 16px 0;
 }

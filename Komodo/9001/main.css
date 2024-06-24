@@ -43,20 +43,11 @@ body a.spz-cta:hover {
   transition-duration: 0.1s;
 }
 body .banner-img-section .banner-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 48px 0 88px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 body .banner-img-section .banner-wrapper .eyebrow-title {
   color: #68cce8;
@@ -100,15 +91,9 @@ body .brand-partner-section .container {
 }
 body .brand-partner-section .brand-wrapper {
   padding: 24px 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 body .brand-partner-section .brand-wrapper .brand-logo {
   min-height: 40px;
@@ -137,17 +122,10 @@ body .related-resources-section.schedule-demo-sticky .see-more-anchor .see-more 
   text-transform: uppercase;
 }
 body .related-resources-section.schedule-demo-sticky .schedule-demo-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 48px 150px 56px 150px;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/9001/background_desktop_cta.webp) no-repeat;
   background-position: center;
   background-size: cover;
@@ -200,24 +178,15 @@ body .related-resources-section .related-resources .rr-title-container .rr-title
   text-align: center;
 }
 body .related-resources-section .related-resources .rr-card-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   -ms-overflow-style: none;
   overflow-x: auto;
 }
 @media (max-width: 767.98px) {
   body .related-resources-section .related-resources .rr-card-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
     overflow: hidden;
   }
 }
@@ -228,13 +197,8 @@ body .related-resources-section .related-resources .rr-card-container .rr-card {
   width: 364px;
   min-width: 364px;
   margin: 0 12px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-img {
   width: 100%;
@@ -266,22 +230,13 @@ body .related-resources-section .related-resources .rr-card-container .rr-card .
   background-size: cover;
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-content {
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  flex-grow: 1;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-content .copy {
   padding: 24px;
-  -webkit-box-flex: 1;
-      -ms-flex-positive: 1;
-          flex-grow: 1;
+  flex-grow: 1;
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-content .copy .rr-title {
   color: #fff;
@@ -299,8 +254,6 @@ body .related-resources-section .related-resources .rr-card-container .rr-card .
   display: block;
 }
 body .related-resources-section .related-resources .rr-card-container .rr-card .card-content .copy a {
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
   display: block;
 }
@@ -378,9 +331,7 @@ body footer.footer {
     margin: 0 0 36px;
   }
   body .related-resources-section .related-resources .rr-card-container {
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
+    justify-content: flex-start;
   }
   body .related-resources-section .related-resources .rr-card-container .rr-card {
     min-width: 320px;

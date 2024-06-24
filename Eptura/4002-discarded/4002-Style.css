@@ -22,26 +22,16 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding {
   height: 100%;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
   height: 100%;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
   max-width: 604px;
   padding: 32px 30px 0px;
   background: #fff;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-direction: column;
+  justify-content: space-between;
 }
 @media (min-width: 1600px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
@@ -53,13 +43,8 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
     width: 384px;
     padding: 24px 14px 16px;
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 @media (max-width: 767.98px) {
@@ -67,24 +52,16 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
     max-width: 100%;
     width: 100%;
     padding: 24px 20px 23px !important;
-    -webkit-box-ordinal-group: 0;
-        -ms-flex-order: -1;
-            order: -1;
+    order: -1;
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-logo {
   text-align: center;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-11 {
   position: relative;
@@ -93,14 +70,10 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   font-weight: 300;
   color: #0d122e;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 0.4;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-1 .step-11::before {
@@ -137,8 +110,6 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   opacity: 0.6;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps .step-2 .step-11::before {
@@ -229,8 +200,6 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
   max-width: 132px;
@@ -239,13 +208,8 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   border-radius: 8px;
   background: #f6fafa;
   overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 8px;
   cursor: pointer;
   position: relative;
@@ -253,10 +217,7 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 @media (max-width: 1198.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     max-width: 100%;
     padding: 8px 12px 8px 8px;
     height: 48px;
@@ -383,15 +344,9 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-2,
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-1,
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-error-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 4px 0 24px 0;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-error-1 img,
@@ -419,18 +374,12 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action,
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 50px;
   padding: 0px 28px 0px 32px;
   width: 124px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 3px;
   background: #904ab0;
   color: #fff;
@@ -453,7 +402,6 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action:hover, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-1 .step-ques-button button.call-to-action:active,
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action:hover,
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .step-ques-section-2 .step-ques-button button.call-to-action:active {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0.25))), #904ab0;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), #904ab0;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel {
@@ -513,7 +461,6 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   top: 11px;
   left: 16px;
   padding: 0 !important;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
   max-width: calc(100% - 30px);
@@ -549,9 +496,7 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
   outline: transparent;
-  -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-          appearance: none !important;
+  appearance: none !important;
   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
   background-repeat: no-repeat !important;
   background-position: right 14px center !important;
@@ -717,8 +662,6 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   display: inline !important;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -737,7 +680,6 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   margin-bottom: 18px;
   display: inline-block;
   margin-top: 2px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-left: 10px;
 }
@@ -786,12 +728,10 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   all: initial;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  background: -webkit-gradient(linear, left bottom, left top, from(rgba(255, 255, 255, 0.25)), to(rgba(255, 255, 255, 0.25))), #904ab0 !important;
   background: linear-gradient(0deg, rgba(255, 255, 255, 0.25) 0%, rgba(255, 255, 255, 0.25) 100%), #904ab0 !important;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  -webkit-transform: translate(0, 1px);
-          transform: translate(0, 1px);
+  transform: translate(0, 1px);
 }
 @media (max-width: 767.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
@@ -919,17 +859,10 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormC
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0 20px;
   opacity: 0.7;
 }
@@ -1000,21 +933,14 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.
   display: none !important;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 100%;
   max-width: 800px;
   margin: auto;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .main .hero-title {
   color: #f6fafa;
@@ -1104,38 +1030,21 @@ body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: flex-end;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: flex-end;
+  justify-content: space-between;
   height: 100%;
 }
 @media (max-width: 1199.98px) {
   body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
-    -webkit-box-pack: end;
-        -ms-flex-pack: end;
-            justify-content: flex-end;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
   }
 }
 body.spz-4003 .body-wrapper #hero .hero_container.page_padding > .row > .col-md.pb-5 .spz-copy .wrap .spz-simplified-footer .footer-container .links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   width: 100%;
   max-width: 305px;
 }

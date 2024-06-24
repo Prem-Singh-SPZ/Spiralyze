@@ -32,6 +32,7 @@ body.spz-1002.show-popup {
   justify-content: center;
   visibility: hidden;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1002 #zy-demo-form-section .zy-container {
@@ -50,9 +51,11 @@ body.spz-1002.show-popup {
   position: absolute;
   left: initial;
   -webkit-transform: unset;
+  -ms-transform: unset;
   transform: unset;
   bottom: 100%;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1002 #zy-demo-form-section .close-icon {
@@ -67,6 +70,7 @@ body.spz-1002.show-popup {
 }
 .spz-1002 #zy-demo-form-section .close-icon svg path {
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1002 #zy-demo-form-section .close-icon:hover svg path {
@@ -142,6 +146,7 @@ body.spz-1002.show-popup {
   line-height: 1.5;
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 .spz-1002 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap label.mktoLabel::after {
@@ -171,6 +176,7 @@ body.spz-1002.show-popup {
   appearance: none;
   white-space: nowrap;
   overflow: hidden;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
 }
 .spz-1002 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill {
@@ -352,6 +358,7 @@ body.spz-1002.show-popup {
 .spz-1002.show-popup #zy-demo-form-section .zy-container {
   bottom: 50%;
   -webkit-transform: translateY(50%);
+  -ms-transform: translateY(50%);
   transform: translateY(50%);
   pointer-events: all;
 }

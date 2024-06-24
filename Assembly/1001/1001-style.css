@@ -16,19 +16,13 @@ body.spz-1001 #___gatsby div[data-testid=standard-promo__container] .css-npjjgg.
   overflow: hidden;
 }
 body.spz-1001 #___gatsby .hero-section-CTA {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 @media (max-width: 767.98px) {
   body.spz-1001 #___gatsby .hero-section-CTA {
     padding: 0 12px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     max-width: 360px;
     margin: auto;
   }
@@ -37,12 +31,8 @@ body.spz-1001 #___gatsby .hero-section-CTA .form-spz {
   margin: auto;
 }
 body.spz-1001 #___gatsby .hero-section-CTA .header__get-started {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   border-radius: 50px;
   max-width: 481px;
   padding: 0;
@@ -63,6 +53,10 @@ body.spz-1001 #___gatsby .hero-section-CTA .header__get-started.input-error .spz
 }
 body.spz-1001 #___gatsby .hero-section-CTA .header__get-started.input-error .spz-1001-email input::-webkit-input-placeholder {
   color: #e30004;
+}
+body.spz-1001 #___gatsby .hero-section-CTA .header__get-started.input-error .spz-1001-email input:-moz-placeholder {
+  color: #e30004;
+  opacity: 1;
 }
 body.spz-1001 #___gatsby .hero-section-CTA .header__get-started.input-error .spz-1001-email input::-moz-placeholder {
   color: #e30004;
@@ -87,8 +81,7 @@ body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .spz-1001-email 
   border-radius: 4px 0px 0px 4px;
   background: #fff;
   width: 300px;
-  -webkit-transition-duration: 0.25s;
-          transition-duration: 0.25s;
+  transition-duration: 0.25s;
   overflow: hidden;
   color: #1a1a1a;
   text-overflow: ellipsis;
@@ -111,6 +104,10 @@ body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .spz-1001-email 
 }
 body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .spz-1001-email input::-webkit-input-placeholder {
   color: #757575;
+}
+body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .spz-1001-email input:-moz-placeholder {
+  color: #757575;
+  opacity: 1;
 }
 body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .spz-1001-email input::-moz-placeholder {
   color: #757575;
@@ -165,12 +162,10 @@ body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .ripple-spz {
 body.spz-1001 #___gatsby .hero-section-CTA .header__get-started .ripple-spz span {
   position: absolute;
   background: #2299b5;
-  -webkit-transform: translate(-50%, -50%);
-          transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
   pointer-events: none;
   border-radius: 50%;
-  -webkit-animation: animate 0.5s linear;
-          animation: animate 0.5s linear;
+  animation: animate 0.5s linear;
   z-index: 0;
 }
 body.spz-1001 #___gatsby .lean-more-div p {
@@ -197,19 +192,6 @@ body.spz-1001 #___gatsby .lean-more-div p a:hover {
 }
 body.spz-1001 #___gatsby .lean-more-div p a:focus, body.spz-1001 #___gatsby .lean-more-div p a:active {
   color: #2299b5;
-}
-
-@-webkit-keyframes animate {
-  0% {
-    width: 0;
-    height: 0;
-    opacity: 0.5;
-  }
-  100% {
-    width: 300px;
-    height: 300px;
-    opacity: 0;
-  }
 }
 
 @keyframes animate {

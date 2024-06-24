@@ -269,16 +269,25 @@
   width: 100%;
   margin: 0 auto;
   padding: 41px 0 56px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   border-top: 1px solid #dee5e8;
 }
 .spz-3302 .review-section .item-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
   min-height: 175px;
   max-width: 302.67px;
   width: 100%;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
 .spz-3302 .review-section .item-wrapper:nth-child(1) {
@@ -295,8 +304,15 @@
   }
 }
 .spz-3302 .review-section .item-wrapper:nth-child(1) .comment-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -ms-flex-direction: column;
   flex-direction: column;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 0 auto;
 }
@@ -319,7 +335,11 @@
   margin-top: 24px;
   margin-bottom: 17px;
   text-align: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   margin: 24px 24px 17px;
 }
@@ -376,12 +396,11 @@
 @media (max-width: 1199.98px) {
   .spz-3302 .review-section .container {
     max-width: 624px;
+    -ms-flex-flow: wrap;
     flex-flow: wrap;
     padding: 38px 0 20px;
     justify-content: space-between;
   }
-}
-@media (max-width: 1199.98px) {
   .spz-3302 .review-section .item-wrapper {
     margin-bottom: 13px;
     max-width: 296px;
@@ -723,6 +742,7 @@
   height: 44px !important;
   background: #fff;
   border: 1px solid #dee5e8 !important;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 4px !important;
   font-family: "Roboto";
@@ -743,6 +763,7 @@
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow select {
   height: 44px !important;
   border: 1px solid #dfdfdf !important;
+  -webkit-box-sizing: border-box;
   box-sizing: border-box;
   border-radius: 4px !important;
   font-style: normal;
@@ -759,6 +780,7 @@
   font-family: Mulish, sans-serif;
   overflow: hidden;
   white-space: nowrap;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   padding: 6px 25px 6px 14px !important;
 }
@@ -816,6 +838,8 @@
   color: #fff;
   margin-top: 24px !important;
   letter-spacing: 3px;
+  -webkit-transition: none !important;
+  -o-transition: none !important;
   transition: none !important;
   display: flex;
   justify-content: center;
@@ -859,6 +883,8 @@
   line-height: 24px;
   color: #82939c;
   pointer-events: none;
+  -webkit-transition: 0.3s all ease-in-out;
+  -o-transition: 0.3s all ease-in-out;
   transition: 0.3s all ease-in-out;
 }
 .spz-3302 .grid-x.grid-padding-x .medium-10.large-order-1 .main-form .mktoFormRow .mktoFormCol .mktoFieldWrap.focused label.mktoLabel {
@@ -893,16 +919,34 @@
 .spz-3302 .grid-x.grid-padding-x .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
   margin-bottom: 0 !important;
 }
+.mktoFieldWrap input::-webkit-input-placeholder {
+  color: transparent;
+}
 .mktoFieldWrap input::-moz-placeholder {
   color: transparent;
   opacity: 1 !important;
 }
+.mktoFieldWrap input:-ms-input-placeholder {
+  color: transparent;
+}
+.mktoFieldWrap input::-ms-input-placeholder {
+  color: transparent;
+}
 .mktoFieldWrap input::placeholder {
+  color: transparent;
+}
+.mktoFieldWrap select::-webkit-input-placeholder {
   color: transparent;
 }
 .mktoFieldWrap select::-moz-placeholder {
   color: transparent;
   opacity: 1 !important;
+}
+.mktoFieldWrap select:-ms-input-placeholder {
+  color: transparent;
+}
+.mktoFieldWrap select::-ms-input-placeholder {
+  color: transparent;
 }
 .mktoFieldWrap select::placeholder {
   color: transparent;
@@ -942,7 +986,11 @@
   flex-wrap: wrap;
 }
 .medium-10.large-order-1 .main-form .mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
   display: flex !important;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
   justify-content: center;
   max-width: 100%;
   margin-bottom: 5px;
@@ -1069,4 +1117,4 @@
     line-height: 15px;
     max-width: 100%;
   }
-}/*# sourceMappingURL=3302-Style.css.map */
+}

@@ -3,6 +3,11 @@
   margin: auto;
   padding: 96px;
 }
+@media (min-width: 1600px) {
+  .copy-and-image {
+    padding: 95px 96px;
+  }
+}
 .copy-and-image .image-in-left,
 .copy-and-image .image-in-right {
   display: flex;
@@ -35,8 +40,14 @@
   border-left: 8px solid #007aff;
   margin-left: -24px;
   padding-left: 16px;
-  margin-top: 74px;
+  margin-top: 88px;
   margin-bottom: 26px;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-left .ci-copy .copy-title,
+  .copy-and-image .image-in-right .ci-copy .copy-title {
+    margin-top: 73.5px;
+  }
 }
 .copy-and-image .image-in-left .ci-copy .copy-content p,
 .copy-and-image .image-in-right .ci-copy .copy-content p {
@@ -55,6 +66,12 @@
 .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
   margin-bottom: 30px;
   margin-top: 0;
+}
+@media (min-width: 1600px) {
+  .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+    margin-bottom: 31px;
+  }
 }
 .copy-and-image .image-in-left .ci-copy .copy-cta button,
 .copy-and-image .image-in-right .ci-copy .copy-cta button {
@@ -83,7 +100,7 @@
   border: 2px solid #000000;
 }
 .copy-and-image .image-in-left:last-child .ci-copy .copy-title {
-  margin-top: 84px;
+  margin-top: 82.5px;
 }
 .copy-and-image .image-in-left:last-child .ci-image {
   margin-top: -4px;
@@ -95,7 +112,7 @@
   padding-left: 24px;
 }
 .copy-and-image .image-in-right .ci-copy .copy-title {
-  margin-top: 84px;
+  margin-top: 98px;
 }
 .copy-and-image .image-in-right .ci-image {
   margin-left: 40px;
@@ -106,4 +123,92 @@
   .copy-and-image .image-in-right .ci-image {
     order: -1;
   }
-}/*# sourceMappingURL=copy-and-image.css.map */
+}
+
+@media (max-width: 1280px) {
+  .copy-and-image {
+    padding: 72px 10px 100px 10px;
+  }
+  .copy-and-image .image-in-left .ci-image,
+  .copy-and-image .image-in-right .ci-image {
+    margin: 0 auto;
+  }
+  .copy-and-image .image-in-left .ci-image img,
+  .copy-and-image .image-in-right .ci-image img {
+    width: 736px;
+  }
+  .copy-and-image .image-in-left .ci-copy,
+  .copy-and-image .image-in-right .ci-copy {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-title,
+  .copy-and-image .image-in-right .ci-copy .copy-title {
+    font-size: 32px;
+    line-height: 32px;
+    margin: 35.5px 0 0 0;
+    padding-left: 0;
+    border-left: none;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content,
+  .copy-and-image .image-in-right .ci-copy .copy-content {
+    text-align: center;
+    max-width: 736px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+    margin-bottom: 22px;
+  }
+  .copy-and-image .image-in-right {
+    padding-bottom: 100px;
+  }
+  .copy-and-image .image-in-right .ci-copy {
+    padding-left: 0;
+  }
+  .copy-and-image .image-in-left:last-child .ci-copy .copy-title {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .copy-and-image .image-in-left .ci-image img,
+  .copy-and-image .image-in-right .ci-image img {
+    max-width: 328px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-title,
+  .copy-and-image .image-in-right .ci-copy .copy-title {
+    margin: 19.5px 0 0 0;
+    max-width: 300px;
+    text-align: center;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content,
+  .copy-and-image .image-in-right .ci-copy .copy-content {
+    max-width: 328px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p:first-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
+    margin-top: 17px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+    margin-bottom: 23px;
+  }
+  .copy-and-image .image-in-right {
+    padding: 64px 0;
+  }
+  .copy-and-image .image-in-right .ci-copy {
+    padding-left: 0;
+  }
+  .copy-and-image .image-in-left:last-child {
+    margin-top: 4px;
+  }
+  .copy-and-image .image-in-left:last-child .ci-copy .copy-title {
+    margin-top: 19px;
+  }
+}
+@media (max-width: 340px) {
+  .copy-and-image .image-in-left .ci-image img,
+  .copy-and-image .image-in-right .ci-image img {
+    max-width: 315px;
+  }
+}

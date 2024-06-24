@@ -102,11 +102,8 @@
     z-index: 99999;
     background-color: rgba(0, 0, 0, 0.64);
     display: none;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-wrap: wrap;
+    align-items: center;
     padding: 2rem 0;
     overflow: auto;
     opacity: 0;
@@ -139,8 +136,7 @@
     margin: auto;
     border-radius: 8px;
     background: var(--popup-background, linear-gradient(0deg, rgba(69, 28, 92, 0.45) 0%, rgba(69, 28, 92, 0.45) 100%), linear-gradient(56deg, #41165a 4.04%, #620597 44.67%, #6900a4 55.21%, #650899 67.4%, #4f1d6b 89%));
-    -webkit-box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
-            box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
+    box-shadow: 0px 32px 64px 0px rgba(0, 0, 0, 0.36);
     padding-top: 58px;
     padding-left: 52px;
     padding-bottom: 72px;
@@ -229,7 +225,6 @@
     justify-content: center;
     margin-bottom: 32px;
     padding: 5px;
-    -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background: linear-gradient(45deg, #399ffe, #11c3ab);
     background-position: 100% 0;
@@ -239,7 +234,6 @@
     text-decoration: none !important;
   }
   .spz-coveo-28003 .spz-coveo-popup .spz-coveo-popup-cta:hover {
-    -webkit-transition: all 0.2s ease-in-out;
     transition: all 0.2s ease-in-out;
     background-position: 0 0;
   }
@@ -260,10 +254,8 @@
     bottom: 58px;
     width: 549.524px;
     height: 343.284px;
-    -webkit-box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.25);
-            box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.25);
-    -webkit-transform: rotate(-4deg);
-            transform: rotate(-4deg);
+    box-shadow: 0px 14px 12px 0px rgba(0, 0, 0, 0.25);
+    transform: rotate(-4deg);
     border-radius: 1.5%;
   }
   .spz-coveo-28003.scaleoutpopup .spz-coveo-overlay {
@@ -291,8 +283,6 @@
     animation-fill-mode: forwards;
   }
   .spz-coveo-28003.exitpopup28003displayed .spz-coveo-overlay {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }

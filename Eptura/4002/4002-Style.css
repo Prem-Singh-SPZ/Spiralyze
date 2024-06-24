@@ -23,26 +23,18 @@ body .body-wrapper #hero .hero_container.page_padding {
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   min-height: 100vh;
 }
 @media (max-height: 670px) {
   body .body-wrapper #hero .hero_container.page_padding > .row {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
@@ -50,8 +42,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol {
   padding: 16px 46px 48px 46px !important;
   border-radius: 8px;
   background: var(--primary-neutrals-w, #fff);
-  -webkit-box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 40px 80px 0px rgba(0, 0, 0, 0.08);
   margin: 24px 0;
 }
 @media (max-width: 767.98px) {
@@ -74,15 +65,9 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   padding: 8px;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-11 {
@@ -92,14 +77,10 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
   font-weight: 300;
   color: #0d122e;
   text-align: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   opacity: 0.4;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-1 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-1 .step-11::before {
@@ -129,8 +110,6 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
   opacity: 0.6;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-2 .step-11::before {
@@ -172,8 +151,6 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
   opacity: 0.6;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-3 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .steps .step-3 .step-11::before {
@@ -267,8 +244,6 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
   width: 100%;
   max-width: 132px;
@@ -277,13 +252,8 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
   border-radius: 8px;
   background: #f6fafa;
   overflow: hidden;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin-bottom: 8px;
   cursor: pointer;
   position: relative;
@@ -291,10 +261,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz,
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-variant-question .form-checkboxes .custom-checkbox-spz {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: row;
-            flex-direction: row;
+    flex-direction: row;
     max-width: 100%;
     padding: 8px 12px 8px 8px;
     height: 48px;
@@ -414,15 +381,9 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-error-2,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-error-1,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-error-2 {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-top: 4px;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-error-1 img,
@@ -450,18 +411,12 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-button button.call-to-action,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   height: 50px;
   padding: 0px 28px 0px 32px;
   width: 124px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 3px;
   background: #1b4bc5;
   color: #fff;
@@ -492,8 +447,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-1 .step-ques-button button.call-to-action:active,
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-button button.call-to-action:active {
   background: #456ed6;
-  -webkit-transform: translate(0, 1px);
-          transform: translate(0, 1px);
+  transform: translate(0, 1px);
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .steps-container .step-ques-section-2 .step-ques-title {
@@ -563,7 +517,6 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   top: 11px;
   left: 16px;
   padding: 0 !important;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
   max-width: calc(100% - 58px);
@@ -596,9 +549,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country, body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
   outline: transparent;
-  -webkit-appearance: none !important;
-     -moz-appearance: none !important;
-          appearance: none !important;
+  appearance: none !important;
   background-image: url("https://res.cloudinary.com/spiralyze/image/upload/v1691142439/eptura/3001/custom/chevron-down.svg") !important;
   background-repeat: no-repeat !important;
   background-position: right 14px center !important;
@@ -734,8 +685,6 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   display: inline !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 100%;
 }
@@ -754,7 +703,6 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   margin-bottom: 18px;
   display: inline-block;
   margin-top: 2px;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   margin-left: 10px;
 }
@@ -777,18 +725,12 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   text-align: center;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 140px !important;
   height: 50px !important;
   padding: 0px !important;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 3px !important;
   background: #1b4bc5 !important;
   color: #fff !important;
@@ -806,8 +748,7 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroF
   background: #456ed6 !important;
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
-  -webkit-transform: translate(0, 1px);
-          transform: translate(0, 1px);
+  transform: translate(0, 1px);
 }
 @media (max-width: 767.98px) {
   body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
@@ -937,17 +878,10 @@ body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .spz-s
   }
 }
 body .body-wrapper #hero .hero_container.page_padding > .row #HeroFormCol .social-logo-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
   padding: 0 20px;
   opacity: 0.7;
 }

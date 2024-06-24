@@ -109,12 +109,8 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   }
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row {
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-wrap: nowrap;
+  flex-direction: column;
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col {
   max-width: 100%;
@@ -173,21 +169,14 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   }
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.hero-text .review-and-rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 16px;
 }
 @media (max-width: 767.98px) {
   body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.hero-text .review-and-rating {
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     margin-top: 20px;
     margin-bottom: 24px;
   }
@@ -251,8 +240,7 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   border-radius: 12px;
   border: 1px solid rgba(222, 229, 232, 0.3);
   background: #fff;
-  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.12);
   max-width: 100%;
   padding: 39px;
   position: relative;
@@ -366,6 +354,7 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   line-height: 24px;
   margin-bottom: 0 !important;
   -webkit-transition: all 0.2s;
+  -o-transition: all 0.2s;
   transition: all 0.2s;
   pointer-events: none;
   display: block !important;
@@ -450,6 +439,7 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   appearance: none;
   overflow: hidden;
   white-space: nowrap;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   background-size: 10px;
   padding: 6px 25px 6px 14px !important;
@@ -474,6 +464,7 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
   margin-top: 8px !important;
   letter-spacing: 3px;
   -webkit-transition: none !important;
+  -o-transition: none !important;
   transition: none !important;
   -webkit-border-radius: 52px !important;
   -moz-border-radius: 52px !important;
@@ -516,8 +507,7 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap 
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-ExplicitOptOut__c] .mktoFormCol .mktoFieldWrap .mktoLogicalField.mktoCheckboxList.mktoHasWidth {
   max-width: 100% !important;
   margin-bottom: 0;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  flex-wrap: nowrap;
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .hero-sec .hero-wrap .hero-section .hero-row .hero-col.form-col .hero-col-wrapper .main-form .mktoForm .mktoFormRow[input-name=parent-noinput] .mktoFormCol {
   margin-bottom: 0 !important;
@@ -700,14 +690,9 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientD
   line-height: 36px; /* 128.571% */
 }
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientDesign .spz-key-features .key-features-wrapper .key-features-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  flex-wrap: wrap;
+  justify-content: center;
   max-width: 1188px;
   margin: 48px auto;
 }
@@ -726,16 +711,9 @@ body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientD
 body.spz-704 .off-canvas-wrapper .off-canvas-wrapper-inner .bgBlueGreenGradientDesign .spz-key-features .key-features-wrapper .key-features-content .key-card {
   width: 100%;
   max-width: 356px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   margin: 32px 20px;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -767,6 +745,11 @@ body.spz-704 ::-webkit-input-placeholder {
   color: transparent;
   opacity: 0;
 }
+body.spz-704 :-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: #fff;
+  opacity: 0;
+}
 body.spz-704 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   opacity: 0;
@@ -775,22 +758,6 @@ body.spz-704 ::-moz-placeholder {
 }
 body.spz-704 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  opacity: 0;
-  color: transparent;
-}
-body.spz-704 input::-webkit-input-placeholder {
-  opacity: 0;
-  color: transparent;
-}
-body.spz-704 input::-moz-placeholder {
-  opacity: 0;
-  color: transparent;
-}
-body.spz-704 input:-ms-input-placeholder {
-  opacity: 0;
-  color: transparent;
-}
-body.spz-704 input::-ms-input-placeholder {
   opacity: 0;
   color: transparent;
 }
@@ -842,25 +809,20 @@ body.spz-704 .grid-container {
 }
 body.spz-704 .grid-container .grid-x {
   display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
   -ms-flex-flow: row wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-          flex-flow: row wrap;
+  flex-flow: row wrap;
 }
 body.spz-704 .grid-container .grid-x > .small-12 {
   -ms-flex-preferred-size: auto;
   flex-basis: auto;
   -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   width: 100%;
 }
 body.spz-704 .grid-container .cell {
   -ms-flex: 0 0 auto;
-  -webkit-box-flex: 0;
-          flex: 0 0 auto;
+  flex: 0 0 auto;
   min-height: 0;
   min-width: 0;
   width: 100%;
@@ -880,23 +842,20 @@ body.spz-704 .grid-container .cell {
 @media print, screen and (min-width: 40em) {
   body.spz-704 .grid-container .grid-x > .medium-10 {
     -ms-flex: 0 0 auto;
-    -webkit-box-flex: 0;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 83.3333333333%;
   }
 }
 @media print, screen and (min-width: 64em) {
   body.spz-704 .grid-container .grid-x > .large-8 {
     -ms-flex: 0 0 auto;
-    -webkit-box-flex: 0;
-            flex: 0 0 auto;
+    flex: 0 0 auto;
     width: 66.6666666667%;
   }
 }
 body.spz-704 .grid-container .align-center {
   -ms-flex-pack: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
 }
 body.spz-704 .grid-container .font-size-h3 {
   font-size: 1.375rem;
@@ -951,8 +910,7 @@ body.spz-704 .quoteBlock__item {
 @media screen and (min-width: 64em) {
   body.spz-704 .quoteBlock__item {
     -ms-flex: 1;
-    -webkit-box-flex: 1;
-            flex: 1;
+    flex: 1;
     max-width: none;
     margin: 0;
     padding: 0 20px;
@@ -969,15 +927,12 @@ body.spz-704 .quoteBlock__item-icon {
 }
 body.spz-704 .quoteBlock__item-content {
   display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
   -ms-flex-align: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   min-height: 250px;
   -ms-flex-pack: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 35px;
   margin-bottom: 32px;
   background-color: rgba(255, 255, 255, 0.6);
@@ -1015,21 +970,17 @@ body.spz-704 .quoteBlock.orange-quote .quoteBlock__item-icon {
 }
 body.spz-704 .quoteBlock.orange-quote .quoteBlock__item-content {
   display: -ms-flexbox;
-  display: -webkit-box;
   display: flex;
   -ms-flex-align: center;
-  -webkit-box-align: center;
-          align-items: center;
+  align-items: center;
   min-height: initial;
   -ms-flex-pack: center;
-  -webkit-box-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: initial;
   margin-bottom: initial;
   background-color: initial;
   border-radius: 0;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 body.spz-704 .quoteBlock.orange-quote .quoteBlock__item-content span {
   font-weight: 900;

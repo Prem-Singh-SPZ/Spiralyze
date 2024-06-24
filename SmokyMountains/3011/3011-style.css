@@ -79,6 +79,8 @@
   z-index: 9;
 }
 .spz-sm-3011 .hc-primary__container .hc-field.input-focused .hc-field__label {
+  -webkit-transform: translate(-24px, -21px);
+  -ms-transform: translate(-24px, -21px);
   transform: translate(-24px, -21px);
 }
 .spz-sm-3011 .hc-payment__container {
@@ -369,7 +371,11 @@
   margin: 0;
   background-color: transparent;
   z-index: 1;
+  -webkit-transition: background-color 0s ease 0.2s, -webkit-transform 0.2s ease 0s;
+  transition: background-color 0s ease 0.2s, -webkit-transform 0.2s ease 0s;
+  -o-transition: transform 0.2s ease 0s, background-color 0s ease 0.2s;
   transition: transform 0.2s ease 0s, background-color 0s ease 0.2s;
+  transition: transform 0.2s ease 0s, background-color 0s ease 0.2s, -webkit-transform 0.2s ease 0s;
 }
 .spz-sm-3011 .hc-main__content .hc-field .hc-field__label[for=email2] {
   text-transform: inherit;
@@ -380,6 +386,7 @@
   padding-right: 12px;
   height: 44px;
   border: 1px solid #dce0e0;
+  -webkit-box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
   box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
   border-radius: 4px;
   font-weight: 400;
@@ -388,7 +395,11 @@
   color: #454545;
   font-family: "Segoe UI";
 }
-.spz-sm-3011 .hc-main__content .hc-field input::-moz-placeholder {
+.spz-sm-3011 .hc-main__content .hc-field input::-webkit-input-placeholder {
+  font-size: 0;
+  opacity: 0;
+}
+.spz-sm-3011 .hc-main__content .hc-field input:-ms-input-placeholder {
   font-size: 0;
   opacity: 0;
 }
@@ -407,6 +418,7 @@
   font-family: "Segoe UI";
   height: 44px;
   border: 1px solid #dce0e0;
+  -webkit-box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
   box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
   border-radius: 4px;
   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1676264991/SmokyMountains/3011/assets/icon_dropdown.svg);
@@ -418,9 +430,15 @@
   background-color: #fff;
   font-size: 12px;
   line-height: 16px;
+  -webkit-transform: translate(4px, -21px);
+  -ms-transform: translate(4px, -21px);
   transform: translate(4px, -21px);
   z-index: 2;
+  -webkit-transition: background-color 0.04s ease 0.16s, -webkit-transform 0.2s ease 0s;
+  transition: background-color 0.04s ease 0.16s, -webkit-transform 0.2s ease 0s;
+  -o-transition: transform 0.2s ease 0s, background-color 0.04s ease 0.16s;
   transition: transform 0.2s ease 0s, background-color 0.04s ease 0.16s;
+  transition: transform 0.2s ease 0s, background-color 0.04s ease 0.16s, -webkit-transform 0.2s ease 0s;
 }
 .spz-sm-3011 .hc-main__content .hc-field.input-focused .hc-field__label[for=apt] {
   text-transform: uppercase;
@@ -461,6 +479,7 @@
 }
 .spz-sm-3011 .hc-payment__card-number {
   border: 1px solid #dce0e0;
+  -webkit-box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
   box-shadow: 0px 1px 4px rgba(207, 207, 207, 0.33);
   border-radius: 4px;
   margin-bottom: 20px;
@@ -470,6 +489,7 @@
   margin-bottom: 0;
 }
 .spz-sm-3011 .hc-payment__card-number .hc-field input {
+  -webkit-box-shadow: none;
   box-shadow: none;
   border: none;
   height: 42px;
@@ -490,6 +510,8 @@
   max-width: 100%;
 }
 .spz-sm-3011 .hc-payment__card-data {
+  -webkit-box-pack: justify;
+  -ms-flex-pack: justify;
   justify-content: space-between;
 }
 .spz-sm-3011 .hc-field .hc-field__arrow {
@@ -579,6 +601,8 @@
   outline: 2px solid #cbf6cf;
 }
 .spz-sm-3011 .hc-agree__terms input[type=checkbox]:checked + label:after {
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
   transform: scale(1);
 }
 .spz-sm-3011 .hc-agree__terms label {
@@ -609,7 +633,11 @@
   display: inline-block;
   background: #0a8446;
   border-radius: 2px;
+  -webkit-transform: scale(0);
+  -ms-transform: scale(0);
   transform: scale(0);
+  -webkit-transition: all 0.2s linear;
+  -o-transition: all 0.2s linear;
   transition: all 0.2s linear;
   position: absolute;
   top: 3px;
@@ -920,9 +948,11 @@
     margin-bottom: 33px !important;
   }
   .spz-sm-3011 .hc-primary__names {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .spz-sm-3011 .hc-billing__row {
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
   }
   .spz-sm-3011 .secure_icon__agree {
@@ -940,4 +970,4 @@
   .spz-sm-3011 .hc-payment__list li {
     padding-right: 0px;
   }
-}/*# sourceMappingURL=3011-style.css.map */
+}

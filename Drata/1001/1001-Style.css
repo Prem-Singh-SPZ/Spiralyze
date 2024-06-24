@@ -472,6 +472,7 @@ body.spz-4001 .hero-section form fieldset .hs-fieldtype-checkbox ul.inputs-list 
   top: 50%;
   left: 0;
   -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
   transform: translateY(-50%);
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 255, 255, 0.4);
@@ -539,6 +540,7 @@ body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field label.hs-label-
   color: #a3a3a3;
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
@@ -561,28 +563,8 @@ body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not([
   display: none;
   color: transparent;
 }
-body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border-color: #d0d5dd;
-}
-body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border-color: #d0d5dd;
-}
 body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) {
   border-color: #d0d5dd;
-}
-body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  color: #727272;
-}
-body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 500;
-  color: #727272;
 }
 body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
   top: 9px;
@@ -618,12 +600,6 @@ body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input:focus
 }
 body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input.invalid.error {
   border-color: #f97f70;
-}
-body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  color: #f97f70;
-}
-body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  color: #f97f70;
 }
 body.spz-4001 .form-wrapper-spz .hbspt-form form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:placeholder-shown) ~ label {
   color: #f97f70;
@@ -782,12 +758,8 @@ body.spz-4001 .logo-section .ls-logo-item {
   margin-bottom: 48px;
   height: 48px;
   max-width: 180px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 body.spz-4001 .logo-section .ls-logo-item img {
   width: 100%;

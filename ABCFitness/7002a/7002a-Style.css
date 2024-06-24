@@ -70,17 +70,11 @@ body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-cont
   color: #fff !important;
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater {
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
 }
 @media (max-width: 1200px) {
   body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
+    flex-direction: column-reverse;
   }
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column {
@@ -121,11 +115,8 @@ body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-cont
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .c-hero__repeater .c-hero__column:first-child .spz-subtitle {
   text-transform: none;
   font-weight: normal;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   padding-bottom: 16px;
   letter-spacing: -0.02em;
   line-height: 134%;
@@ -331,15 +322,9 @@ body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-cont
   color: #fff;
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
   margin-top: 7px;
 }
 body.spz-7002a[class] main.l-body-wrapper section.c-hero .c-hero__content.l-container .c-hero__info-wrapper .hs-social-proofs-spz .hs-sp-img-tab {

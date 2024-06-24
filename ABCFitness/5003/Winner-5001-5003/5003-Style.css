@@ -224,8 +224,12 @@ body.spz-5003[class] header#header[id] > .spz-header-cta-container .spz-header-c
   padding: 5px 30px 0;
   margin: 0px;
   height: 46px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-transform: uppercase;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.014em;
   font-weight: 500;
@@ -243,8 +247,12 @@ body.spz-5003[class] header#header[id] > .spz-header-cta-container .spz-header-c
   padding: 6px 0px 0 0px;
   margin: 0px;
   height: 46px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-transform: uppercase;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.014em;
   font-weight: 500;
@@ -283,7 +291,11 @@ body.spz-5003[class] header#header[id] > .spz-header-cta-container .spz-header-c
   border: 1px solid #ff6f30;
   color: #000;
   height: 46px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.014em;
   font-weight: 500;
@@ -298,8 +310,12 @@ body.spz-5003[class] header#header[id] > .spz-header-cta-container .spz-header-c
   border: 1px solid #f26122;
   color: #000;
   height: 46px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
   text-transform: uppercase;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
   align-items: center;
   letter-spacing: 0.014em;
   font-weight: 500;
@@ -445,11 +461,6 @@ body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero
   margin-top: 8px;
   margin-bottom: 0;
 }
-body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle #userEmailForm .emailBox ::-moz-placeholder {
-  /* Chrome, Firefox, Opera, Safari 10.1+ */
-  color: #636363;
-  opacity: 1; /* Firefox */
-}
 body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle #userEmailForm .emailBox ::placeholder {
   /* Chrome, Firefox, Opera, Safari 10.1+ */
   color: #636363;
@@ -465,10 +476,6 @@ body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero
 }
 body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle #userEmailForm .emailBox.have-error > input {
   border: 1px solid #dc251c;
-}
-body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle #userEmailForm .emailBox.have-error ::-moz-placeholder {
-  color: #dc251c;
-  opacity: 1; /* Firefox */
 }
 body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle #userEmailForm .emailBox.have-error ::placeholder {
   color: #dc251c;
@@ -506,4 +513,4 @@ body.spz-5003 main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero
 }
 body.spz-5003.safari main.l-body-wrapper .c-hero__content .c-hero__info-wrapper .c-hero__subtitle #userEmailForm .emailBox > input {
   padding-top: 24px;
-}/*# sourceMappingURL=5003-Style.css.map */
+}

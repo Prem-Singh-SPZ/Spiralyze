@@ -1,13 +1,8 @@
 body {
   background-color: #081a59;
   height: 100vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body:not(.netskope-1001-spz) {
   position: relative;
@@ -23,29 +18,15 @@ body:not(.netskope-1001-spz)::after {
   border-bottom-color: transparent;
   border-radius: 50%;
   display: inline-block;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  -webkit-animation: rotation 1s linear infinite;
-          animation: rotation 1s linear infinite;
-}
-@-webkit-keyframes rotation {
-  0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
-  }
-  100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
-  }
+  box-sizing: border-box;
+  animation: rotation 1s linear infinite;
 }
 @keyframes rotation {
   0% {
-    -webkit-transform: rotate(0deg);
-            transform: rotate(0deg);
+    transform: rotate(0deg);
   }
   100% {
-    -webkit-transform: rotate(360deg);
-            transform: rotate(360deg);
+    transform: rotate(360deg);
   }
 }
 
@@ -77,9 +58,7 @@ body.netskope-1001-spz .header__logo-image--white img {
 }
 body.netskope-1001-spz .header__top {
   padding: 0;
-  -webkit-box-align: unset;
-      -ms-flex-align: unset;
-          align-items: unset;
+  align-items: unset;
 }
 body.netskope-1001-spz .header__container-inner {
   max-width: 1440px;
@@ -114,29 +93,21 @@ body.netskope-1001-spz .landing-page__logo {
 body.netskope-1001-spz .landing-page__container-inner {
   max-width: 1190px;
   margin: 0 auto;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 body.netskope-1001-spz .landing-page__container-inner .hero_left {
   width: 49.16%;
   max-width: 585px;
   position: relative;
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 @media (max-width: 1024.98px) {
   body.netskope-1001-spz .landing-page__container-inner .hero_left {
     width: 100%;
     max-width: 704px;
     margin: auto;
-    -webkit-box-ordinal-group: 3;
-        -ms-flex-order: 2;
-            order: 2;
+    order: 2;
     margin-top: 8px;
   }
 }
@@ -159,9 +130,7 @@ body.netskope-1001-spz .landing-page__container-inner .landing-page__form-contai
   body.netskope-1001-spz .landing-page__container-inner .landing-page__form-container {
     width: 100%;
     max-width: 704px !important;
-    -webkit-box-ordinal-group: 2;
-        -ms-flex-order: 1;
-            order: 1;
+    order: 1;
   }
   body.netskope-1001-spz .landing-page__container-inner .landing-page__form-container .hero-title-tablet {
     margin-bottom: 40px;
@@ -189,12 +158,8 @@ body.netskope-1001-spz .landing-page__container-inner .landing-page__form-contai
   font-size: 40px;
   font-weight: 400;
   line-height: 48px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  justify-content: center;
   padding: 24px 0px 0px;
   color: #081a59;
 }
@@ -285,8 +250,7 @@ body.netskope-1001-spz .hero_left .hero-wrap::after {
   position: absolute;
   bottom: 54px;
   right: -48px;
-  -webkit-transform: rotate(330deg);
-          transform: rotate(330deg);
+  transform: rotate(330deg);
   width: 253.477px;
   height: 91.68px;
 }
@@ -314,22 +278,13 @@ body.netskope-1001-spz .v3-footer {
   }
 }
 body.netskope-1001-spz .v3-footer .v3-footer__social-icons-container {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
 }
 @media (max-width: 767.98px) {
   body.netskope-1001-spz .v3-footer .v3-footer__social-icons-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-        -ms-flex-direction: column-reverse;
-            flex-direction: column-reverse;
-    -webkit-box-align: baseline;
-        -ms-flex-align: baseline;
-            align-items: baseline;
+    flex-direction: column-reverse;
+    align-items: baseline;
   }
 }
 body.netskope-1001-spz .v3-footer .v3-footer__social-icons-container .contact {
@@ -341,12 +296,8 @@ body.netskope-1001-spz .v3-footer .v3-footer__social-icons-container .contact {
   }
 }
 body.netskope-1001-spz .v3-footer .v3-footer__social-icons-container .contact .contact-in {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 body.netskope-1001-spz .v3-footer .v3-footer__social-icons-container .contact .contact-in .cont-detail {
   font-size: 16px;
@@ -391,11 +342,8 @@ body.netskope-1001-spz .netskope-component--request-demo-form {
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 {
   position: relative;
   padding: 24px 26px 16px !important;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 * {
   font-family: Graphik !important;
@@ -412,9 +360,7 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
   display: none !important;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-netskope-fm {
-  -webkit-box-ordinal-group: 15;
-      -ms-flex-order: 14;
-          order: 14;
+  order: 14;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-netskope-fm .netskope-fm {
   color: #7e8bba !important;
@@ -424,9 +370,7 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
   line-height: 20px;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-single_checkbox {
-  -webkit-box-ordinal-group: 14;
-      -ms-flex-order: 13;
-          order: 13;
+  order: 13;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-single_checkbox .mktoLabel {
   padding-left: 24px !important;
@@ -440,9 +384,7 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.row-PostalCode {
   width: 100% !important;
-  -webkit-box-ordinal-group: 11;
-      -ms-flex-order: 10;
-          order: 10;
+  order: 10;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormRow.spz-hidden {
   display: none !important;
@@ -496,61 +438,39 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
   border-color: #081a59 !important;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.mOICustomField11-row {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
   max-width: 100%;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.FirstName-row {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.LastName-row {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  order: 3;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Email-row {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  order: 4;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Company-row {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
+  order: 5;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Title-row {
-  -webkit-box-ordinal-group: 7;
-      -ms-flex-order: 6;
-          order: 6;
+  order: 6;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.numEmployeesRange-row {
-  -webkit-box-ordinal-group: 8;
-      -ms-flex-order: 7;
-          order: 7;
+  order: 7;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Phone-row {
-  -webkit-box-ordinal-group: 9;
-      -ms-flex-order: 8;
-          order: 8;
+  order: 8;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Country-row {
-  -webkit-box-ordinal-group: 10;
-      -ms-flex-order: 9;
-          order: 9;
+  order: 9;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol[class*=mktoCheckbox_] {
-  -webkit-box-ordinal-group: 12;
-      -ms-flex-order: 11;
-          order: 11;
+  order: 11;
   max-width: 100%;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Contact_Us_Form_Entry__c-row {
-  -webkit-box-ordinal-group: 13;
-      -ms-flex-order: 12;
-          order: 12;
+  order: 12;
   max-width: 100%;
 }
 @media (max-width: 767.98px) {
@@ -567,9 +487,7 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
   float: left;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoButtonRow {
-  -webkit-box-ordinal-group: 16;
-      -ms-flex-order: 15;
-          order: 15;
+  order: 15;
   padding-top: 8px;
 }
 @media (max-width: 767.98px) {
@@ -637,7 +555,6 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
   margin: 0 !important;
   overflow: hidden;
   text-overflow: ellipsis;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
   position: absolute;
   left: 16px;
@@ -744,8 +661,6 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt {
   position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   float: left;
   cursor: pointer;
@@ -764,7 +679,6 @@ body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mkto
   font-size: 25px;
   left: 2px;
   position: absolute;
-  -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
 }
 body.netskope-1001-spz .netskope-component--request-demo-form form.mktoForm#mktoForm_8778 .mktoFormCol.Contact_Us_Form_Entry__c-row .frm-commt.close-cmnt .commt-text:before {

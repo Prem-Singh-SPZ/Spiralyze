@@ -21,12 +21,8 @@ body .schedule-section-spz {
 body .schedule-section-spz .schedule-card {
   padding: 40px 0 48px;
   border-bottom: 1px solid rgba(255, 255, 255, 0.58);
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  align-items: flex-start;
 }
 @media (max-width: 767.98px) {
   body .schedule-section-spz .schedule-card {
@@ -45,10 +41,7 @@ body .schedule-section-spz .schedule-card:nth-last-child(2) {
 }
 @media (max-width: 767.98px) {
   body .schedule-section-spz .schedule-card {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 body .schedule-section-spz .schedule-card .timing {
@@ -97,11 +90,8 @@ body .schedule-section-spz .schedule-card .details .content p {
   margin: 0 0 24px;
 }
 body .schedule-section-spz .schedule-card .details .card-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   gap: 24px;
 }
 @media (max-width: 1023.98px) {
@@ -110,8 +100,6 @@ body .schedule-section-spz .schedule-card .details .card-section {
   }
 }
 body .schedule-section-spz .schedule-card .details .card-section .personality {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   width: 320px;
 }

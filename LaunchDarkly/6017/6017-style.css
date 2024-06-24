@@ -82,10 +82,15 @@ body {
   margin: 0;
   padding: 0;
   list-style: none;
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
   display: flex;
 }
 .tab-menu ul li {
+  -ms-flex-preferred-size: 0;
   flex-basis: 0;
+  -ms-flex-positive: 1;
   flex-grow: 1;
   max-width: 100%;
   text-align: center;
@@ -167,4 +172,4 @@ body {
 }
 .tab-main-box .styles-module--card a:hover {
   box-shadow: 0 7px 10px rgba(0, 0, 0, 0.7);
-}/*# sourceMappingURL=6017-style.css.map */
+}

@@ -152,7 +152,6 @@ body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .lo
   left: 16px;
   width: calc(100% - 32px);
   text-align: left;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-custom-email.input-filled input {
@@ -178,10 +177,7 @@ body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .lo
 @media (max-width: 767.98px) {
   body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container {
     margin: 4px 0 16px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container .hero-cta {
@@ -222,13 +218,11 @@ body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .lo
   letter-spacing: 3px;
   text-transform: uppercase;
   width: 206px;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container .hero-cta:nth-child(even) a.button.mdBtn:hover, body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container .hero-cta:nth-child(even) a.button.mdBtn:active,
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container .hero-cta .btn-tertiary.button.mdBtn:hover,
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container .hero-cta .btn-tertiary.button.mdBtn:active {
-  background: -webkit-gradient(linear, left top, left bottom, from(rgba(222, 229, 232, 0)), to(#dee5e8));
   background: linear-gradient(180deg, rgba(222, 229, 232, 0) 0%, #dee5e8 100%);
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .button-container .hero-cta .hero-cta-subtext {
@@ -242,15 +236,9 @@ body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .lo
   margin-top: 12px;
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin: 32px 0 8px;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
@@ -261,20 +249,13 @@ body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .lo
 @media (max-width: 767.98px) {
   body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section {
     margin: 16px 0 0px;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .gartner-peer,
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .g-2-logo {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin: 0 20px;
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .gartner-peer .peer-insights,
@@ -291,12 +272,8 @@ body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .lo
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .gartner-peer .rating,
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .g-2-logo .rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .gartner-peer .rating span,
 body.spz-2205 .off-canvas-wrapper .off-canvas-content .longHero .overlayText .longHero__content .spz-review-section .g-2-logo .rating span {

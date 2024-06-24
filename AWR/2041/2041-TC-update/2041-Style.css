@@ -130,10 +130,14 @@ body.spz-2041 .product-list-area.fixed-nav-product {
 .spz-2041 .products-boxes {
   display: flex;
   flex-wrap: wrap;
+  -webkit-box-pack: start;
+  -ms-flex-pack: start;
   justify-content: flex-start;
 }
 @media (max-width: 631.98px) {
   .spz-2041 .products-boxes {
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
     justify-content: center;
   }
 }
@@ -443,6 +447,7 @@ body.spz-2041 .product-list-area.fixed-nav-product {
 }
 .spz-2041 .products-boxes .products-single-box .product-text button.enroll-now-spz:hover {
   background-color: #c8661d;
+  -webkit-transition: 0.2s ease-in;
   transition: 0.2s ease-in;
 }
 .spz-2041 .products-boxes .products-single-box .product-text button.enroll-now-spz svg {
@@ -472,6 +477,7 @@ body.spz-2041 .product-list-area.fixed-nav-product {
   display: inline-flex;
   align-items: center;
   line-height: 24px;
+  -webkit-text-decoration-line: underline;
   text-decoration-line: underline;
   color: #ec7923;
 }
@@ -597,4 +603,4 @@ body.spz-2041 .product-list-area.fixed-nav-product {
   .spz-2041 .banner-box .banner {
     height: 350px !important;
   }
-}/*# sourceMappingURL=2041-Style.css.map */
+}

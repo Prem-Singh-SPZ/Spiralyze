@@ -94,7 +94,6 @@ body.spz-4010 .logo-section::before {
   width: 100%;
   height: 1px;
   background: rgb(215, 215, 215);
-  background: -webkit-gradient(linear, left top, right top, from(#d7d7d7), to(rgba(215, 215, 215, 0)));
   background: linear-gradient(90deg, #d7d7d7 0%, rgba(215, 215, 215, 0) 100%);
 }
 body.spz-4010 .logo-section::after {
@@ -105,7 +104,6 @@ body.spz-4010 .logo-section::after {
   width: 100%;
   height: 1px;
   background: rgb(215, 215, 215);
-  background: -webkit-gradient(linear, left top, right top, from(rgba(215, 215, 215, 0)), to(#d7d7d7));
   background: linear-gradient(90deg, rgba(215, 215, 215, 0) 0%, #d7d7d7 100%);
 }
 @media (max-width: 991.98px) {
@@ -198,14 +196,9 @@ body.spz-4010 .feature-section .feature-title-container > p {
   }
 }
 body.spz-4010 .feature-section .fs-card-group {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 body.spz-4010 .feature-section .fs-card-group .fs-card-item {
   max-width: 373.33px;
@@ -222,8 +215,6 @@ body.spz-4010 .feature-section .fs-card-group .fs-card-item {
 }
 @media (max-width: 767.98px) {
   body.spz-4010 .feature-section .fs-card-group .fs-card-item {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
 }
@@ -286,6 +277,7 @@ body.spz-4010 .feature-section .fs-card-group .fs-card-item .content-container >
 }
 body.spz-4010 .how-works-section {
   background: -webkit-gradient(linear, left top, left bottom, from(#f2f2f2), to(#f2f2f2));
+  background: -o-linear-gradient(top, #f2f2f2 0%, #f2f2f2 100%);
   background: linear-gradient(180deg, #f2f2f2 0%, #f2f2f2 100%);
   padding: 120px 0 119px;
   position: relative;
@@ -345,6 +337,7 @@ body.spz-4010 .logo-slider::before {
   position: absolute;
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   height: 100%;
   width: 200px;
@@ -356,6 +349,7 @@ body.spz-4010 .logo-slider::after {
   position: absolute;
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   height: 100%;
   width: 200px;
@@ -363,6 +357,7 @@ body.spz-4010 .logo-slider::after {
   right: 0;
   top: 0;
   -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotateZ(180deg);
 }
 body.spz-4010 .marquee {
@@ -420,18 +415,11 @@ body.spz-4010 .review-section .review-slider {
 body.spz-4010 .review-slider .review-item-box {
   width: 25%;
   max-width: 304px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body.spz-4010 .review-slider .review-item-box:not(.review-info-box) .review-content {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 body.spz-4010 .review-slider .review-item-box:not(.review-info-box) .review-content h6 {
   margin-top: auto;
@@ -631,6 +619,7 @@ body.spz-4010 .footer-top::after {
   height: 1px;
   background: rgb(68, 68, 68);
   background: -webkit-gradient(linear, left top, right top, from(rgb(68, 68, 68)), to(rgba(68, 68, 68, 0)));
+  background: -o-linear-gradient(left, rgb(68, 68, 68) 0%, rgba(68, 68, 68, 0) 100%);
   background: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgba(68, 68, 68, 0) 100%);
 }
 body.spz-4010 .footer-top .sec-title {
@@ -643,6 +632,7 @@ body.spz-4010 .footer-top .border-title::before {
   body.spz-4010 .footer-top .border-title::before {
     left: 50%;
     -webkit-transform: translateX(-50%);
+    -ms-transform: translateX(-50%);
     transform: translateX(-50%);
   }
 }
@@ -699,6 +689,7 @@ body.spz-4010 .brand-footer::after {
   height: 1px;
   background: rgb(68, 68, 68);
   background: -webkit-gradient(linear, left top, right top, from(rgb(68, 68, 68)), to(rgba(68, 68, 68, 0)));
+  background: -o-linear-gradient(left, rgb(68, 68, 68) 0%, rgba(68, 68, 68, 0) 100%);
   background: linear-gradient(90deg, rgb(68, 68, 68) 0%, rgba(68, 68, 68, 0) 100%);
   width: 100vw;
   left: auto;
@@ -977,13 +968,8 @@ body.spz-4010 .footer-bottom .footer-legalLinks a:hover {
 }
 @media (max-width: 1199.98px) and (max-width: 1199.98px) {
   body.spz-4010 .brand-footer {
-    -webkit-box-orient: horizontal;
-    -webkit-box-direction: normal;
-        -ms-flex-flow: row;
-            flex-flow: row;
-    -webkit-box-align: end;
-        -ms-flex-align: end;
-            align-items: end;
+    flex-flow: row;
+    align-items: end;
   }
 }
 @media (max-width: 1199.98px) {
@@ -1154,8 +1140,7 @@ body.spz-4010 .footer-bottom .footer-legalLinks a:hover {
   }
   body.spz-4010 .brand-footer {
     padding: 36px 16px 40px;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
   }
   body.spz-4010 .brand-footer .footer-brand-info {
     width: 100%;
@@ -1188,15 +1173,12 @@ body.spz-4010 .integrations-section {
 body.spz-4010 .integrations-section .container .css-1o00hxm-MuiContainer-root-Collection-contentContainer {
   width: 100%;
   margin-left: auto;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   margin-right: auto;
   display: block;
   padding-left: 16px;
   padding-right: 16px;
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: 1fr 16px 1fr;
   grid-template-columns: repeat(2, 1fr);
   gap: 16px 16px;
 }
@@ -1232,14 +1214,12 @@ body.spz-4010 .integrations-section .container .css-1o00hxm-MuiContainer-root-Co
 }
 @media (min-width: 767.98px) {
   body.spz-4010 .integrations-section .container .css-1o00hxm-MuiContainer-root-Collection-contentContainer {
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
     grid-template-columns: repeat(6, 1fr);
     gap: 40px 24px;
   }
 }
 @media (min-width: 1200px) {
   body.spz-4010 .integrations-section .container .css-1o00hxm-MuiContainer-root-Collection-contentContainer {
-    -ms-grid-columns: 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr 24px 1fr;
     grid-template-columns: repeat(12, 1fr);
     gap: 64px 24px;
     padding: 0;
@@ -1247,8 +1227,6 @@ body.spz-4010 .integrations-section .container .css-1o00hxm-MuiContainer-root-Co
 }
 body.spz-4010 .integrations-section .container .css-op7sus-Text-rootWrapper-Collection-introText {
   white-space: pre-wrap;
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
   position: relative;
 }
@@ -1297,15 +1275,11 @@ body.spz-4010 .integrations-section .container .css-op7sus-Text-rootWrapper-Coll
 }
 @media (min-width: 767.98px) {
   body.spz-4010 .integrations-section .container .css-op7sus-Text-rootWrapper-Collection-introText {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 5;
     grid-column: 1/span 5;
   }
 }
 @media (min-width: 1200px) {
   body.spz-4010 .integrations-section .container .css-op7sus-Text-rootWrapper-Collection-introText {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 8;
     grid-column: 1/span 8;
   }
 }
@@ -1319,10 +1293,7 @@ body.spz-4010 .integrations-section .container .css-17jd2ru-MuiTypography-root-T
   text-align: default;
 }
 body.spz-4010 .integrations-section .container .css-8z2x31-Collection-itemsContainer {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
-  display: -ms-grid;
   display: grid;
   gap: 24px 16px;
 }
@@ -1333,33 +1304,31 @@ body.spz-4010 .integrations-section .container .css-8z2x31-Collection-itemsConta
 }
 @media (min-width: 767.98px) {
   body.spz-4010 .integrations-section .container .css-8z2x31-Collection-itemsContainer {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1/span 6;
     gap: 48px 24px;
   }
 }
 @media (min-width: 1200px) {
   body.spz-4010 .integrations-section .container .css-8z2x31-Collection-itemsContainer {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 12;
     grid-column: 1/span 12;
     gap: 64px 24px;
   }
 }
 body.spz-4010 .integrations-section .container .css-1robkoz-MuiButtonBase-root-MuiCardActionArea-root-Card-cardLink {
   display: -webkit-inline-box;
+  display: -webkit-inline-flex;
   display: -ms-inline-flexbox;
   display: inline-flex;
+  -webkit-align-items: center;
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
   -ms-flex-pack: center;
+  -webkit-justify-content: center;
   justify-content: center;
   position: relative;
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   -webkit-tap-highlight-color: transparent;
   background-color: transparent;
   outline: 0;
@@ -1434,6 +1403,7 @@ body.spz-4010 .integrations-section .container .css-mceo4z-MuiSvgIcon-root-Card-
   height: 1em;
   display: inline-block;
   fill: currentColor;
+  -webkit-flex-shrink: 0;
   -ms-flex-negative: 0;
   flex-shrink: 0;
   -webkit-transition: fill 200ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
@@ -1456,8 +1426,6 @@ body.spz-4010 .integrations-section .container .css-5onkdd-MuiTypography-root-Ca
   font-style: normal;
 }
 body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-introText] {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
 }
 body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-introText] [class$=Text-title] {
@@ -1471,25 +1439,20 @@ body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [clas
 }
 @media (min-width: 767.98px) {
   body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-introText] {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1/span 6;
   }
 }
 @media (min-width: 1200px) {
   body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-introText] {
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 4;
     grid-column: 1/span 4;
     height: 121px;
   }
 }
 body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-itemsContainer] {
-  -ms-grid-column: 1;
-  -ms-grid-column-span: 2;
   grid-column: 1/span 2;
   -webkit-box-pack: stretch;
   -ms-flex-pack: stretch;
+  -webkit-justify-content: stretch;
   justify-content: stretch;
   padding: 0px 32px;
 }
@@ -1501,14 +1464,13 @@ body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [clas
 @media (min-width: 767.98px) {
   body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-itemsContainer] {
     padding: 0;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
     grid-column: 1/span 6;
-    -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
     -webkit-box-pack: center;
     -ms-flex-pack: center;
+    -webkit-justify-content: center;
     justify-content: center;
+    -webkit-align-items: flex-end;
     -webkit-box-align: flex-end;
     -ms-flex-align: flex-end;
     align-items: flex-end;
@@ -1516,10 +1478,7 @@ body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [clas
 }
 @media (min-width: 1200px) {
   body.spz-4010 .integrations-section .container .css-dwssr9-Collection-root [class$=Collection-itemsContainer] {
-    -ms-grid-row: 1;
     grid-row: 1;
-    -ms-grid-column: 5;
-    -ms-grid-column-span: 8;
     grid-column: 5/span 8;
   }
 }
@@ -1527,23 +1486,16 @@ body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard
   background-color: #fff;
   color: #00030b;
   -webkit-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  -webkit-transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
-  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 8px;
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.08);
   overflow: hidden;
   position: relative;
   background-color: #f3f3f3;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard-root-Card-root-Collection-item [class$=Card-cardContent] {
-  display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto 14px 1fr;
   grid-template-columns: auto 1fr;
   gap: 0px 14px;
 }
@@ -1552,7 +1504,6 @@ body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard
 }
 body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard-root-Card-root-Collection-item [class$=Card-angledArrowIcon] {
   display: block;
-  -ms-grid-column: 1;
   grid-column: 1;
 }
 body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard-root-Card-root-Collection-item [class$=Card-title] {
@@ -1563,7 +1514,6 @@ body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard
   font-style: normal;
   letter-spacing: -0.03em;
   color: #0580e8;
-  -ms-grid-column: 2;
   grid-column: 2;
 }
 body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard-root-Card-root-Collection-item [class$=Card-subtitle] {
@@ -1573,7 +1523,6 @@ body.spz-4010 .integrations-section .container .css-ipcq2m-MuiPaper-root-MuiCard
   font-weight: 700;
   font-style: normal;
   color: #8b8b8b;
-  -ms-grid-column: 2;
   grid-column: 2;
 }
 body.spz-4010 .integrations-section .container .css-1f920qz-MuiTypography-root-Card-subtitle {
@@ -1866,6 +1815,7 @@ body.spz-4010 .integrations-logo-slider .logo-item {
   color: #000000;
   -webkit-transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  -o-transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms, -webkit-box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
   border-radius: 8px;
@@ -1907,6 +1857,7 @@ body.spz-4010 .logo-slider::before {
   position: absolute;
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   height: 100%;
   width: 200px;
@@ -1918,6 +1869,7 @@ body.spz-4010 .logo-slider::after {
   position: absolute;
   content: "";
   background: -webkit-gradient(linear, left top, right top, from(rgb(255, 255, 255)), to(rgba(255, 255, 255, 0)));
+  background: -o-linear-gradient(left, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   background: linear-gradient(to right, rgb(255, 255, 255), rgba(255, 255, 255, 0));
   height: 100%;
   width: 200px;
@@ -1925,6 +1877,7 @@ body.spz-4010 .logo-slider::after {
   right: 0;
   top: 0;
   -webkit-transform: rotateZ(180deg);
+  -ms-transform: rotate(180deg);
   transform: rotateZ(180deg);
 }
 body.spz-4010 .marquee {

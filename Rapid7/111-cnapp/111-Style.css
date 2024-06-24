@@ -8,8 +8,7 @@
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm {
   background-color: #fff;
   border: 1px solid #dee5e8;
-  -webkit-box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.12);
 }
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm #intro h2,
 body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.hero-two-column-block[class] .right-side-form[class] .form-wrapper[class] .marketoForm #intro p {
@@ -97,7 +96,6 @@ body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.her
   position: relative !important;
   font-size: 12px !important;
   color: #595959 !important;
-  -webkit-transition: none !important;
   transition: none !important;
   top: 3px !important;
   left: 3px !important;
@@ -174,6 +172,12 @@ body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.her
   opacity: 0;
 }
 
+:-moz-placeholder {
+  /* Mozilla Firefox 4 to 18 */
+  color: transparent;
+  opacity: 0;
+}
+
 ::-moz-placeholder {
   /* Mozilla Firefox 19+ */
   opacity: 0;
@@ -182,26 +186,6 @@ body.spz-111[class] .off-canvas-wrapper[class] .longHero[class] .overlayText.her
 
 :-ms-input-placeholder {
   /* Internet Explorer 10+ */
-  opacity: 0;
-  color: transparent;
-}
-
-input::-webkit-input-placeholder {
-  opacity: 0;
-  color: transparent;
-}
-
-input::-moz-placeholder {
-  opacity: 0;
-  color: transparent;
-}
-
-input:-ms-input-placeholder {
-  opacity: 0;
-  color: transparent;
-}
-
-input::-ms-input-placeholder {
   opacity: 0;
   color: transparent;
 }

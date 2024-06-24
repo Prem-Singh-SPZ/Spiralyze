@@ -67,12 +67,8 @@ body.spz-3003 #__next main .spz-sticky-blog-section .sticky-blog-section .blog-c
   }
 }
 body.spz-3003 #__next main .spz-sticky-blog-section .sticky-blog-section .blog-container .blog-rating {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   margin-bottom: 16px;
 }
 body.spz-3003 #__next main .spz-sticky-blog-section .sticky-blog-section .blog-container .blog-rating .g2-logo {
@@ -100,16 +96,10 @@ body.spz-3003 #__next main .spz-sticky-blog-section .sticky-blog-section .blog-c
   border-radius: 4px;
   background: var(--neutrals-black-000, #000);
   width: 100%;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 13px 32px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   color: var(--neutrals-white-fff, #fff);
   text-align: center;
   font-family: "Inter", sans-serif;
@@ -134,7 +124,6 @@ body.spz-3003 #__next main .spz-sticky-blog-section .sticky-blog-section .blog-c
 body.spz-3003 #__next main .spz-sticky-blog-section.for-desktop {
   position: sticky;
   top: 24px;
-  -webkit-transition: all 0.1s ease-out;
   transition: all 0.1s ease-out;
 }
 @media (max-width: 1199.98px) {
@@ -153,8 +142,6 @@ body.spz-3003 #__next main .spz-sticky-blog-section.for-desktop {
     margin: 32px auto 44px;
   }
   body.spz-3003 #__next main .spz-sticky-blog-section.for-mobile .sticky-blog-section {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
   }
   body.spz-3003 #__next main .spz-sticky-blog-section.for-mobile .sticky-blog-section::before {
@@ -176,9 +163,7 @@ body.spz-3003 #__next main .spz-sticky-blog-section.for-desktop {
     max-width: 278px;
   }
   body.spz-3003 #__next main .spz-sticky-blog-section.for-mobile .sticky-blog-section .blog-container {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
     padding-top: 16px;
   }
 }

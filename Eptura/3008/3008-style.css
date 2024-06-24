@@ -14,8 +14,7 @@ body.spz-3008.modal-open::before {
   left: 0;
   right: 0;
   bottom: 0;
-  -webkit-backdrop-filter: blur(4px);
-          backdrop-filter: blur(4px);
+  backdrop-filter: blur(4px);
 }
 body.spz-3008 .form-wrapper-spz {
   display: none;
@@ -865,6 +864,16 @@ body.spz-3008 .get-demo-spz .form-group-spz .form-input .form-input-field:focus 
   border-radius: 4px;
   border-color: #904ab0 !important;
 }
+body.spz-3008 .get-demo-spz .form-group-spz .form-input .form-input-field::-webkit-input-placeholder {
+  color: rgba(13, 18, 46, 0.8);
+  font-style: normal;
+  opacity: 1;
+}
+body.spz-3008 .get-demo-spz .form-group-spz .form-input .form-input-field:-ms-input-placeholder {
+  color: rgba(13, 18, 46, 0.8);
+  font-style: normal;
+  opacity: 1;
+}
 body.spz-3008 .get-demo-spz .form-group-spz .form-input .form-input-field::placeholder {
   color: rgba(13, 18, 46, 0.8);
   font-style: normal;
@@ -872,6 +881,14 @@ body.spz-3008 .get-demo-spz .form-group-spz .form-input .form-input-field::place
 }
 body.spz-3008 .get-demo-spz .form-group-spz .form-input.input-error .form-input-field {
   border-color: #f83a59 !important;
+}
+body.spz-3008 .get-demo-spz .form-group-spz .form-input.input-error .form-input-field::-webkit-input-placeholder {
+  color: #f83a59 !important;
+  opacity: 1;
+}
+body.spz-3008 .get-demo-spz .form-group-spz .form-input.input-error .form-input-field:-ms-input-placeholder {
+  color: #f83a59 !important;
+  opacity: 1;
 }
 body.spz-3008 .get-demo-spz .form-group-spz .form-input.input-error .form-input-field::placeholder {
   color: #f83a59 !important;

@@ -30,32 +30,20 @@ body .main-wrapper .main-content .home-hero .home-hero__inner {
   max-width: 1281px;
 }
 body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
-  -ms-flex-wrap: nowrap;
-      flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  flex-wrap: nowrap;
 }
 @media (max-width: 1023.98px) {
   body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    flex-direction: column;
+    align-items: center;
   }
 }
 body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .home-hero__col1 {
   max-width: 650px;
   width: 100%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .home-hero__col1 {
@@ -124,8 +112,7 @@ body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .h
   max-width: 100%;
   border-radius: 24px;
   background: #fff;
-  -webkit-box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
+  box-shadow: 0px 4px 40px 0px rgba(0, 0, 0, 0.2);
 }
 body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .home-hero__col1 .home-hero__info .pristine-form.home-hero__form.hero-form .hero-form__row {
   gap: 12px;
@@ -150,9 +137,7 @@ body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .h
 body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .home-hero__col2 {
   max-width: 630px;
   width: 100%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 50%;
-          flex: 0 0 50%;
+  flex: 0 0 50%;
 }
 @media (min-width: 767.98px) and (max-width: 1023.98px) {
   body .main-wrapper .main-content .home-hero .home-hero__inner .home-hero__row .home-hero__col2 {

@@ -11,36 +11,24 @@ body .modal ::-webkit-scrollbar {
 }
 body .modal .modal__overlay {
   background: rgba(17, 17, 17, 0.5);
-  -webkit-backdrop-filter: blur(3px);
-          backdrop-filter: blur(3px);
+  backdrop-filter: blur(3px);
 }
 body .modal .modal__container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: reverse;
-      -ms-flex-direction: row-reverse;
-          flex-direction: row-reverse;
+  flex-direction: row-reverse;
   max-width: 1200px;
   position: absolute;
   padding: 50px;
   position: relative;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   border-radius: 32px;
   border: 0;
   background: #f8f8f8;
 }
 @media (max-height: 699.98px) {
   body .modal .modal__container {
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    align-items: flex-start;
   }
 }
 @media (max-width: 1023.98px) {
@@ -71,8 +59,7 @@ body .modal .modal__container .modal__close:hover svg path {
 body .modal .modal__container .flydown-modal__inner {
   border-radius: 16px;
   background: #fff;
-  -webkit-box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
-          box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
+  box-shadow: 0px 4px 24px 0px rgba(0, 0, 0, 0.05);
   padding: 24px 36px 32px 36px;
   max-width: 500px;
   min-width: 500px;
@@ -81,8 +68,7 @@ body .modal .modal__container .flydown-modal__inner {
   body .modal .modal__container .flydown-modal__inner {
     max-width: 100%;
     margin-bottom: 36px;
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     border-bottom: 1px solid #d2d2d2;
     padding: 25px 0 22px;
     border-radius: 0;
@@ -90,8 +76,7 @@ body .modal .modal__container .flydown-modal__inner {
 }
 @media (max-width: 767.98px) {
   body .modal .modal__container .flydown-modal__inner {
-    -webkit-box-shadow: none;
-            box-shadow: none;
+    box-shadow: none;
     padding: 32px 20px 20px;
     min-width: auto;
     border-bottom: 0;
@@ -113,28 +98,16 @@ body .modal .modal__container .flydown-modal__inner .spz-demo-title {
   }
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: space-between;
+  align-items: center;
   margin: 0 auto 24px;
   width: 168px;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   position: relative;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count img {
@@ -163,8 +136,6 @@ body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-co
   height: 38px;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active .active {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 body .modal .modal__container .flydown-modal__inner .multi-steps .steps .step-count.active .in-active {
@@ -243,7 +214,6 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoFormRow .
   top: 17px;
   left: 16px;
   padding: 0;
-  -webkit-transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   transition: all 0.3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
   pointer-events: none;
   max-width: calc(100% - 50px);
@@ -402,20 +372,14 @@ body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow
 }
 body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap .mktoButton {
   width: 133px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 18px 32px;
 }
 @media screen and (max-width: 767.98px) {
   body .modal .modal__container .flydown-modal__inner form.mktoForm .mktoButtonRow.custom-btn-row .mktoButtonWrap .mktoButton {
     width: 100%;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    justify-content: center;
   }
 }
 body .modal .modal__container .bullet-section {
@@ -526,13 +490,8 @@ body .modal .modal__container .bullet-point strong {
 }
 @media (max-width: 1023.98px) {
   body .modal .modal__container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
   }
 }
 @media (max-width: 767.98px) {
@@ -603,12 +562,8 @@ body .modal .modal__container .bullet-point strong {
   height: 27px;
 }
 .range .range__labels {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   margin-top: 0;
   line-height: 1;
   margin-bottom: 30px;
@@ -672,8 +627,7 @@ body .modal .modal__container .bullet-point strong {
   -webkit-appearance: none;
 }
 .range [type=range]::-webkit-slider-runnable-track {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: none;
   width: 14.5em;
   width: var(--track-width);
@@ -682,7 +636,6 @@ body .modal .modal__container .bullet-point strong {
   background: #d9d9d9;
 }
 .range [type=range].range--progress::-webkit-slider-runnable-track {
-  background: -webkit-gradient(linear, left top, left bottom, from(#0f71ff), to(#0f71ff)) 0/var(--sx) 100% no-repeat #d9d9d9;
   background: linear-gradient(#0f71ff, #0f71ff) 0/var(--sx) 100% no-repeat #d9d9d9;
 }
 .range [type=range]::-moz-range-track {
@@ -716,8 +669,7 @@ body .modal .modal__container .bullet-point strong {
   background: #0f71ff;
 }
 .range [type=range]::-webkit-slider-thumb {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
+  box-sizing: border-box;
   border: none;
   width: 20px;
   height: 20px;
@@ -752,7 +704,7 @@ body .modal .modal__container .bullet-point strong {
 }
 
 @media (max-width: 1199.98px) {
-  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) and (margin-top: -30px) {
       .site-main > :first-child {
         margin-top: -30px;
@@ -761,7 +713,7 @@ body .modal .modal__container .bullet-point strong {
   }
 }
 @media (max-width: 375.98px) and (min-height: 635.98px) {
-  @media not all and (-webkit-min-device-pixel-ratio: 0), not all and (min-resolution: 0.001dpcm) {
+  @media not all and (min-resolution: 0.001dpcm) {
     @supports (-webkit-appearance: none) and (margin-top: -30px) {
       .site-main > :first-child {
         margin-top: -30px;

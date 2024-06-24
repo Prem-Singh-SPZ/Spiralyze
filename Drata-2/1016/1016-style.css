@@ -1,8 +1,7 @@
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] {
   border-radius: 12px;
   background: var(--Primary-Primary-600, #0580e8);
-  -webkit-box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08);
-          box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08);
+  box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08);
   max-width: 700px;
   padding: 40px;
 }
@@ -83,7 +82,6 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   font-size: 16px;
   line-height: 24px;
   color: #fff;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   pointer-events: none;
 }
@@ -103,65 +101,26 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   caret-color: #fff;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio]) {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  box-sizing: border-box;
   display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: row;
+  align-items: center;
   padding: 22px 0px 8px;
   height: 64px;
   width: 100%;
   outline: none;
-  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio])::-webkit-input-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio])::-moz-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio]):-ms-input-placeholder {
-  display: none;
-  color: transparent;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio])::-ms-input-placeholder {
-  display: none;
-  color: transparent;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not([type=checkbox]):not([type=radio])::placeholder {
   display: none;
   color: transparent;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:hover {
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:focus {
   border-bottom: 1px solid var(--Neutrals-White, #fff) !important;
-  -webkit-box-shadow: none;
-          box-shadow: none;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-inputinput:not(:-moz-placeholder-shown) ~ label {
-  top: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 18px;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-inputinput:not(:-ms-input-placeholder) ~ label {
-  top: 4px;
-  font-size: 12px;
-  font-weight: 700;
-  line-height: 18px;
+  box-shadow: none;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:focus ~ label, body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-inputinput:not(:placeholder-shown) ~ label {
   top: 4px;
@@ -183,20 +142,6 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input[type=checkbox]:checked ~ span, body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input[type=radio]:checked ~ span {
   font-weight: 600;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  top: 4px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-  height: 18px;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  top: 4px;
-  font-size: 12px;
-  line-height: 18px;
-  font-weight: 700;
-  height: 18px;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
   top: 4px;
@@ -220,8 +165,7 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   height: 18px;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input select {
-  -moz-appearance: none;
-       appearance: none;
+  appearance: none;
   -webkit-appearance: none;
   background: url("https://res.cloudinary.com/spiralyze/image/upload/v1707900386/drata/1014/foms_icon__close.svg") no-repeat right 0px center !important;
   white-space: nowrap;
@@ -242,8 +186,7 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   display: none;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.field-focus:not(.hs-fieldtype-checkbox) .input {
-  -webkit-box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
-          box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
+  box-shadow: 0px 1px 2px rgba(16, 24, 40, 0.05);
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.field-focus:not(.hs-fieldtype-checkbox) .input .hs-input {
   border: 1px solid var(--Neutrals-900, #0c131a);
@@ -282,11 +225,8 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   list-style: none;
   padding: 0;
   margin: 15px 0 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li {
   min-width: 74px;
@@ -313,9 +253,7 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   height: 20px;
   border-radius: 4px;
   cursor: pointer;
-  -webkit-transform: translate(-100%, 0%);
-          transform: translate(-100%, 0%);
-  -webkit-transition: all 0.2s ease-in-out;
+  transform: translate(-100%, 0%);
   transition: all 0.2s ease-in-out;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li > label [type=checkbox] {
@@ -333,60 +271,24 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   padding-left: 8px;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li:nth-child(1) {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li:nth-child(2) {
-  -webkit-box-ordinal-group: 4;
-      -ms-flex-order: 3;
-          order: 3;
+  order: 3;
   min-width: 102.3px;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li:nth-child(3) {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li:nth-child(4) {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  order: 4;
   min-width: 70px;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field .input.hs-fieldtype-checkbox > .input ul li:nth-child(5) {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
+  order: 5;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-error .input .hs-input {
   border-color: #fc7881;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-untouched .input .hs-input:not(:-moz-placeholder-shown) ~ label.hs-label-spz {
-  top: 21px;
-  left: 0;
-  color: #fff;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: #0580e8;
-  width: calc(100% - 60px);
-  height: 30px;
-}
-body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-untouched .input .hs-input:not(:-ms-input-placeholder) ~ label.hs-label-spz {
-  top: 21px;
-  left: 0;
-  color: #fff;
-  font-family: Inter, sans-serif;
-  font-style: normal;
-  font-weight: 500;
-  font-size: 16px;
-  line-height: 24px;
-  background-color: #0580e8;
-  width: calc(100% - 60px);
-  height: 30px;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.field-untouched .input .hs-input:not(:placeholder-shown) ~ label.hs-label-spz {
   top: 21px;
@@ -428,11 +330,8 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   }
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] label {
   margin-right: 25px;
@@ -455,29 +354,19 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   font-weight: 600;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] label:nth-child(1) {
-  -webkit-box-ordinal-group: 1;
-      -ms-flex-order: 0;
-          order: 0;
+  order: 0;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] label:nth-child(2) {
-  -webkit-box-ordinal-group: 3;
-      -ms-flex-order: 2;
-          order: 2;
+  order: 2;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] label:nth-child(3) {
-  -webkit-box-ordinal-group: 2;
-      -ms-flex-order: 1;
-          order: 1;
+  order: 1;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] label:nth-child(4) {
-  -webkit-box-ordinal-group: 5;
-      -ms-flex-order: 4;
-          order: 4;
+  order: 4;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form fieldset .field.hs-form-field.hs_demo_product_of_interest .input .MuiFormControl-fullWidth div[class*=Form-inlineCheckBoxContainer] label:nth-child(5) {
-  -webkit-box-ordinal-group: 6;
-      -ms-flex-order: 5;
-          order: 5;
+  order: 5;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .actions {
   position: relative;
@@ -563,7 +452,6 @@ body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=
   background-color: #0580e8;
   -webkit-text-fill-color: #fff;
   -webkit-box-shadow: 0 0 0px 1000px #0580e8 inset;
-  -webkit-transition: background-color 5000s ease-in-out 0s;
   transition: background-color 5000s ease-in-out 0s;
 }
 body.spz-1016 .MuiModal-root div[class*=Modal-modalContentContainer] div[class*=Form-formContainer] form.hs-form .hs-input:-webkit-autofill,

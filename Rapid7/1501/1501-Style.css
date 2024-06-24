@@ -545,6 +545,7 @@ body.rapid-contact-spz.load {
   appearance: none;
   overflow: hidden;
   white-space: nowrap;
+  -o-text-overflow: ellipsis;
   text-overflow: ellipsis;
   margin-bottom: 0px;
   padding: 10px 30px 10px 14px;
@@ -562,6 +563,7 @@ body.rapid-contact-spz.load {
   font-size: 14px;
   line-height: 14px;
   -webkit-transition: all 0.3s ease;
+  -o-transition: all 0.3s ease;
   transition: all 0.3s ease;
   color: #82939C;
   cursor: text;
@@ -577,6 +579,7 @@ body.rapid-contact-spz.load {
   line-height: 13px;
   padding: 0 2px;
   -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock dl:not(.bottomtext).focused input {
@@ -592,6 +595,7 @@ body.rapid-contact-spz.load {
   line-height: 13px;
   padding: 0 2px;
   -webkit-transition: all 0.4s;
+  -o-transition: all 0.4s;
   transition: all 0.4s;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock dl:not(.bottomtext).filled input {
@@ -697,6 +701,7 @@ body.rapid-contact-spz.load {
   height: 52px;
   margin-top: 2px;
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock dl.expand button.submit:after {
@@ -708,6 +713,7 @@ body.rapid-contact-spz.load {
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock dl.expand button.submit:focus {
@@ -716,6 +722,7 @@ body.rapid-contact-spz.load {
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock dl.expand button.submit:active {
@@ -724,6 +731,7 @@ body.rapid-contact-spz.load {
   -webkit-box-shadow: none;
   box-shadow: none;
   -webkit-transition: none;
+  -o-transition: none;
   transition: none;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock [type=checkbox].r7-check:checked + label:after {
@@ -787,12 +795,8 @@ body.rapid-contact-spz.load {
   margin: 0 auto 15.5px;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
   max-width: 462px;
   width: 100%;
   margin: 0 auto;
@@ -805,23 +809,19 @@ body.rapid-contact-spz.load {
   border: 1px solid #DEE5E8;
   border-radius: 6px;
   margin-bottom: 32px;
-  -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper .card-item:hover {
   border: 1px solid #E85E26;
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper .card-item:active {
   border: 1px solid #E85E26;
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper .card-item:focus {
   border: 1px solid #E85E26;
-  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
-          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
+  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.12);
 }
 .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper .card-item img {
   max-width: 225px;
@@ -869,6 +869,8 @@ body.rapid-contact-spz.load {
   image-rendering: auto;
   image-rendering: crisp-edges;
   -ms-interpolation-mode: nearest-neighbor;
+  image-rendering: -moz-crisp-edges;
+  image-rendering: -o-pixelated;
   image-rendering: pixelated;
   image-rendering: -webkit-optimize-contrast;
 }
@@ -1020,11 +1022,8 @@ body.rapid-contact-spz.load {
   }
   .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper {
     max-width: 275px;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    justify-content: center;
+    flex-wrap: wrap;
   }
   .rapid-contact-spz .form-wrap .form-container form#formBlock .card-wrapper .card-item {
     margin-bottom: 16px;

@@ -62,8 +62,7 @@ body .faq-section-spz .accordion .accordion-item {
 body .faq-section-spz .accordion .accordion-item .accordion-header .accordion-button {
   border: 0;
   background-color: transparent;
-  -webkit-box-shadow: none;
-          box-shadow: none;
+  box-shadow: none;
   color: #fff;
   font-family: Titillium Web, sans-serif;
   font-size: 18px;
@@ -96,8 +95,7 @@ body .faq-section-spz .accordion .accordion-item .accordion-header .accordion-bu
 }
 body .faq-section-spz .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed)::after {
   background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1705121058/KomodoHealth/FAQ-Hubspot-Page/chevron-up.svg);
-  -webkit-transform: none;
-          transform: none;
+  transform: none;
   background-size: 24px;
 }
 body .faq-section-spz .accordion .accordion-item .accordion-header .accordion-button:not(.collapsed) {
@@ -165,22 +163,13 @@ body .join-us-footer-section-spz .jf-title-container .jf-title {
   }
 }
 body .join-us-footer-section-spz .jf-cta-container {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
 }
 @media (max-width: 767.98px) {
   body .join-us-footer-section-spz .jf-cta-container {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 body .join-us-footer-section-spz .jf-cta-container .register-cta,
@@ -223,16 +212,10 @@ body .spz-container {
   }
 }
 body a.spz-cta {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 8px 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 100px;
   background: #68cce8;
   color: #000;
@@ -246,14 +229,12 @@ body a.spz-cta {
   text-decoration: none;
   width: 163px;
   height: 48px;
-  -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
 body a.spz-cta:hover {
   background-color: #fff;
   color: #000;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
+  transition-duration: 0.1s;
 }
 @media (max-width: 767.98px) {
   body a.spz-cta {
@@ -261,16 +242,10 @@ body a.spz-cta:hover {
   }
 }
 body a.spz-cta-grey {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
   padding: 8px 20px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  justify-content: center;
+  align-items: center;
   border-radius: 100px;
   background: #7e7e7e;
   color: #fff;
@@ -284,14 +259,12 @@ body a.spz-cta-grey {
   text-decoration: none;
   width: 151px;
   height: 48px;
-  -webkit-transition: background-color 0.3s linear;
   transition: background-color 0.3s linear;
 }
 body a.spz-cta-grey:hover {
   background-color: #fff;
   color: #000;
-  -webkit-transition-duration: 0.1s;
-          transition-duration: 0.1s;
+  transition-duration: 0.1s;
 }
 @media (max-width: 767.98px) {
   body a.spz-cta-grey {
@@ -304,12 +277,8 @@ body .body-container-wrapper .container-fluid {
 @media (min-width: 1080px) {
   body header.header .header__container {
     padding: 24px 20px;
-    -webkit-box-pack: start;
-        -ms-flex-pack: start;
-            justify-content: flex-start;
-    -webkit-box-align: start;
-        -ms-flex-align: start;
-            align-items: flex-start;
+    justify-content: flex-start;
+    align-items: flex-start;
   }
 }
 body header.header .header__container .header__logo {
@@ -317,9 +286,7 @@ body header.header .header__container .header__logo {
 }
 @media (min-width: 1080px) {
   body header.header .header__container .header__menu {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
+    flex-grow: 1;
   }
 }
 @media screen and (max-width: 1079px) {

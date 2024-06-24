@@ -28,8 +28,7 @@
   height: 60px;
   background-color: black;
   margin-left: 8px;
-  -webkit-animation: blink 0.6s linear infinite alternate;
-          animation: blink 0.6s linear infinite alternate;
+  animation: blink 0.6s linear infinite alternate;
   bottom: -8px;
   position: relative;
 }
@@ -38,20 +37,6 @@
     width: 8px;
     height: 39px;
     bottom: -6px;
-  }
-}
-@-webkit-keyframes blink {
-  0% {
-    opacity: 1;
-  }
-  40% {
-    opacity: 1;
-  }
-  60% {
-    opacity: 0;
-  }
-  100% {
-    opacity: 0;
   }
 }
 @keyframes blink {
@@ -116,28 +101,19 @@
 }
 .spz-2009 .social-pr-section .sp-logo-group::before {
   left: 0;
-  background: -webkit-gradient(linear, left top, right top, color-stop(58.53%, #fff), to(rgba(255, 255, 255, 0)));
   background: linear-gradient(90deg, #fff 58.53%, rgba(255, 255, 255, 0) 100%);
 }
 .spz-2009 .social-pr-section .sp-logo-group::after {
   right: 0;
-  background: -webkit-gradient(linear, left top, right top, color-stop(4.32%, rgba(255, 255, 255, 0)), color-stop(48.3%, #fff));
   background: linear-gradient(90deg, rgba(255, 255, 255, 0) 4.32%, #fff 48.3%);
 }
 .spz-2009 .social-pr-section .sp-logo-group .sp-marquee {
   height: 100%;
-  width: -webkit-fit-content;
-  width: -moz-fit-content;
   width: fit-content;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  align-items: center;
   display: flex;
   position: relative;
-  -webkit-animation: marquee 40s linear infinite;
-          animation: marquee 40s linear infinite;
+  animation: marquee 40s linear infinite;
   will-change: transform;
 }
 .spz-2009 .social-pr-section .sp-logo-group .sp-logo-item {
@@ -148,8 +124,7 @@
 .spz-2009 .social-pr-section .sp-logo-group .sp-logo-item .sp-img {
   width: 100%;
   height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 .spz-2009 .social-pr-section .dummy-border {
   height: 1px;
@@ -178,16 +153,9 @@
     margin: 0 16px;
   }
 }
-@-webkit-keyframes marquee {
-  to {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
-  }
-}
 @keyframes marquee {
   to {
-    -webkit-transform: translateX(-50%);
-            transform: translateX(-50%);
+    transform: translateX(-50%);
   }
 }
 @media (max-width: 1280px) {
@@ -261,9 +229,6 @@
   display: none !important;
 }
 .spz-2009 div[class*=HeroHomepage-root] {
-  -ms-grid-rows: auto 0px -webkit-min-content;
-  -ms-grid-rows: auto 0px min-content;
-  grid-template-rows: auto 0px -webkit-min-content;
   grid-template-rows: auto 0px min-content;
 }
 .spz-2009 div[class*=HeroHomepage-root] div[class*=HeroHomepage-backgroundImage] {
@@ -373,14 +338,9 @@
   }
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   max-width: 1056px;
   margin: auto;
   margin-bottom: 40px;
@@ -399,16 +359,9 @@
   }
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-direction: column;
+  align-items: center;
   width: 100%;
   max-width: 156px;
 }
@@ -481,18 +434,15 @@
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check:hover {
   border: 1px solid var(--primary-primary-400, #84ccff);
-  -webkit-box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06);
-          box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06);
+  box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06);
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check:hover p {
   color: #293642;
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check.checked {
   border: 1px solid var(--primary-primary-500, #1793ff);
-  -webkit-box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06), 0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
-          box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06), 0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
-  -webkit-transform: translate(0px, -5.5px);
-          transform: translate(0px, -5.5px);
+  box-shadow: 0px 2.97872px 5.95745px -2.97872px rgba(16, 24, 40, 0.06), 0px 5.95745px 11.91489px -2.97872px rgba(16, 24, 40, 0.1);
+  transform: translate(0px, -5.5px);
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check.checked p {
   color: #293642;
@@ -503,14 +453,12 @@
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check.checked {
-    -webkit-transform: translate(0px, -4.5px);
-            transform: translate(0px, -4.5px);
+    transform: translate(0px, -4.5px);
   }
 }
 @media (max-width: 767.98px) {
   .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .checkboxes .check-box .custom-check.checked {
-    -webkit-transform: translate(0px, -5.25px);
-            transform: translate(0px, -5.25px);
+    transform: translate(0px, -5.25px);
   }
 }
 .spz-2009 .hero-banner-section .hero-banner-container .checkbox-section .btn-section {
@@ -530,15 +478,9 @@
   outline: transparent;
   width: 100%;
   max-width: 182px;
-  display: -webkit-inline-box;
-  display: -ms-inline-flexbox;
   display: inline-flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   border: 0;
   cursor: pointer;
   white-space: nowrap;
@@ -612,8 +554,7 @@
 }
 .spz-2009 .hero-img-section .img-container .video-container video {
   border-radius: 8px;
-  -webkit-box-shadow: 0px 19.064px 38.128px -9.532px rgba(16, 24, 40, 0.18);
-          box-shadow: 0px 19.064px 38.128px -9.532px rgba(16, 24, 40, 0.18);
+  box-shadow: 0px 19.064px 38.128px -9.532px rgba(16, 24, 40, 0.18);
 }
 @media (max-width: 1199.98px) {
   .spz-2009 .hero-img-section .img-container .video-container video {
@@ -623,7 +564,6 @@
 @media (max-width: 767.98px) {
   .spz-2009 .hero-img-section .img-container .video-container video {
     border-radius: 4px;
-    -webkit-box-shadow: 0px 35.745px 71.489px -17.872px rgba(16, 24, 40, 0.18);
-            box-shadow: 0px 35.745px 71.489px -17.872px rgba(16, 24, 40, 0.18);
+    box-shadow: 0px 35.745px 71.489px -17.872px rgba(16, 24, 40, 0.18);
   }
 }

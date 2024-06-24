@@ -1,0 +1,237 @@
+.copy-and-image {
+  max-width: 1248px;
+  margin: auto;
+  padding: 96px;
+}
+@media (min-width: 1600px) {
+  .copy-and-image {
+    padding: 95px 96px;
+  }
+}
+.copy-and-image .image-in-left,
+.copy-and-image .image-in-right {
+  display: flex;
+  justify-content: center;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-left,
+  .copy-and-image .image-in-right {
+    flex-wrap: wrap;
+  }
+}
+.copy-and-image .image-in-left .ci-image,
+.copy-and-image .image-in-right .ci-image {
+  margin-right: 64px;
+}
+.copy-and-image .image-in-left .ci-image img,
+.copy-and-image .image-in-right .ci-image img {
+  width: 604px;
+  height: auto;
+}
+.copy-and-image .image-in-left .ci-copy .copy-title,
+.copy-and-image .image-in-right .ci-copy .copy-title {
+  font-family: "Darker Grotesque";
+  font-style: normal;
+  font-weight: 800;
+  font-size: 48px;
+  line-height: 44px;
+  letter-spacing: -0.48px;
+  color: #000;
+  border-left: 8px solid #0580e8;
+  margin-left: -24px;
+  padding-left: 16px;
+  margin-top: 74px;
+  margin-bottom: 24px;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-left .ci-copy .copy-title,
+  .copy-and-image .image-in-right .ci-copy .copy-title {
+    margin-top: 73.5px;
+  }
+}
+.copy-and-image .image-in-left .ci-copy .copy-content p,
+.copy-and-image .image-in-right .ci-copy .copy-content p {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  color: #303030;
+}
+.copy-and-image .image-in-left .ci-copy .copy-content p:first-child,
+.copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
+  margin-bottom: 12px;
+}
+@media (max-width: 767.98px) {
+  .copy-and-image .image-in-left .ci-copy .copy-content p:first-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
+    margin-bottom: 8px;
+  }
+}
+.copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+.copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+  margin-bottom: 30px;
+  margin-top: 0;
+}
+@media (min-width: 1600px) {
+  .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+    margin-bottom: 31px;
+  }
+}
+@media (min-width: 1280.98px) {
+  .copy-and-image .image-in-left .ci-copy .copy-cta,
+  .copy-and-image .image-in-right .ci-copy .copy-cta {
+    margin-top: 32px;
+  }
+}
+.copy-and-image .image-in-left .ci-copy .copy-cta button,
+.copy-and-image .image-in-right .ci-copy .copy-cta button {
+  width: 134px;
+  height: 44px;
+  background: #0580e8;
+  border-radius: 4px;
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  text-align: center;
+  color: #ffffff;
+  outline: transparent;
+  border: none;
+  cursor: pointer;
+}
+.copy-and-image .image-in-left .ci-copy .copy-cta button:hover,
+.copy-and-image .image-in-right .ci-copy .copy-cta button:hover {
+  border: 2px solid #000000;
+}
+.copy-and-image .image-in-left .ci-copy .copy-cta button:active,
+.copy-and-image .image-in-right .ci-copy .copy-cta button:active {
+  background: #0466BA;
+  border: 2px solid #000000;
+}
+.copy-and-image .image-in-left:last-child .ci-copy .copy-title {
+  margin-top: 91px;
+}
+.copy-and-image .image-in-left:last-child .ci-image {
+  margin-top: -4px;
+}
+.copy-and-image .image-in-right {
+  padding: 96px 0;
+}
+.copy-and-image .image-in-right .ci-copy {
+  padding-left: 24px;
+}
+.copy-and-image .image-in-right .ci-copy .copy-title {
+  margin-top: 104px;
+}
+.copy-and-image .image-in-right .ci-image {
+  margin-left: 40px;
+  margin-right: 0;
+  margin-top: -4px;
+}
+@media (max-width: 1280.98px) {
+  .copy-and-image .image-in-right .ci-image {
+    order: -1;
+  }
+}
+
+@media (max-width: 1280px) {
+  .copy-and-image {
+    padding: 72px 10px 98px 10px;
+  }
+  .copy-and-image .image-in-left .ci-image,
+  .copy-and-image .image-in-right .ci-image {
+    margin: 0 auto;
+  }
+  .copy-and-image .image-in-left .ci-image img,
+  .copy-and-image .image-in-right .ci-image img {
+    width: 736px;
+  }
+  .copy-and-image .image-in-left .ci-copy,
+  .copy-and-image .image-in-right .ci-copy {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-title,
+  .copy-and-image .image-in-right .ci-copy .copy-title {
+    font-size: 40px;
+    line-height: 36px;
+    margin: 35.5px 0 0 0;
+    padding-left: 0;
+    border-left: none;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content,
+  .copy-and-image .image-in-right .ci-copy .copy-content {
+    text-align: center;
+    max-width: 736px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+    margin-bottom: 23px;
+  }
+  .copy-and-image .image-in-right {
+    padding-bottom: 100px;
+  }
+  .copy-and-image .image-in-right .ci-copy {
+    padding-left: 0;
+  }
+  .copy-and-image .image-in-left:last-child .ci-copy .copy-title {
+    margin-top: 35px;
+  }
+}
+@media (max-width: 767px) {
+  .copy-and-image {
+    padding: 72px 10px 100px 10px;
+  }
+  .copy-and-image .image-in-left .ci-image img,
+  .copy-and-image .image-in-right .ci-image img {
+    max-width: 328px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-title,
+  .copy-and-image .image-in-right .ci-copy .copy-title {
+    margin: 20px 0 0 0;
+    max-width: 300px;
+    text-align: center;
+    font-size: 32px;
+    line-height: 28px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content,
+  .copy-and-image .image-in-right .ci-copy .copy-content {
+    max-width: 328px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p,
+  .copy-and-image .image-in-right .ci-copy .copy-content p {
+    font-size: 15px;
+    line-height: 22px;
+    /* or 147% */
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p:first-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:first-child {
+    margin-top: 17px;
+  }
+  .copy-and-image .image-in-left .ci-copy .copy-content p:last-child,
+  .copy-and-image .image-in-right .ci-copy .copy-content p:last-child {
+    margin-bottom: 23px;
+  }
+  .copy-and-image .image-in-right {
+    padding: 64px 0;
+  }
+  .copy-and-image .image-in-right .ci-copy {
+    padding-left: 0;
+  }
+  .copy-and-image .image-in-left:last-child {
+    margin-top: 4px;
+  }
+  .copy-and-image .image-in-left:last-child .ci-copy .copy-title {
+    margin-top: 19px;
+  }
+}
+@media (max-width: 340px) {
+  .copy-and-image .image-in-left .ci-image img,
+  .copy-and-image .image-in-right .ci-image img {
+    max-width: 315px;
+  }
+}
