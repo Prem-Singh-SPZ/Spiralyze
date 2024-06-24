@@ -11,6 +11,25 @@ body.spz-5009 .site-content .inner-banner.style-three {
 body.spz-5009 .site-content .inner-banner.dark-contact-hero {
   display: none !important;
 }
+body.spz-5009 .site-content .get-touch-form.dark_form_container {
+  position: relative;
+}
+body.spz-5009 .site-content .get-touch-form.dark_form_container::before {
+  content: "";
+  width: calc(50% - 172px);
+  height: 100%;
+  left: 0;
+  top: 0;
+  position: absolute;
+  background: #fff;
+  z-index: 0;
+  pointer-events: none;
+}
+@media (max-width: 991.98px) {
+  body.spz-5009 .site-content .get-touch-form.dark_form_container::before {
+    display: none;
+  }
+}
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container {
   max-width: 1440px;
   padding: 0;
@@ -19,6 +38,11 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container {
 @media (max-width: 991.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container {
     flex-direction: column-reverse;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-5009 .site-content .get-touch-form.dark_form_container .container {
+    display: flex;
   }
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .title-part {
@@ -34,6 +58,9 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .titl
     min-height: 654px;
     max-width: 100%;
     position: relative;
+    background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_tablet_1.webp") no-repeat;
+    background-position: center;
+    background-size: 100%;
   }
 }
 @media (max-width: 991.98px) and (min-width: 767.98px) {
@@ -49,6 +76,14 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .titl
     clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
   }
 }
+@media (max-width: 767.98px) {
+  body.spz-5009 .site-content .get-touch-form.dark_form_container .container .title-part {
+    background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_mobile_1.webp") no-repeat;
+    background-position: center;
+    background-size: 100%;
+    min-height: 306px;
+  }
+}
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container {
   background: #fff;
   margin: 0;
@@ -57,6 +92,7 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   max-width: 548px;
   min-height: 840px;
   padding: 93px 54px 96px;
+  position: relative;
 }
 @media (max-width: 991.98px) {
   body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container {
@@ -118,6 +154,17 @@ body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form
   letter-spacing: 2px;
   text-transform: uppercase;
   margin: 0;
+}
+body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header {
+  border-bottom: 1px solid #e3e6ec;
+  position: relative;
+}
+body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header a {
+  display: flex;
+  width: 100%;
+}
+body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form ~ .line-header::after {
+  content: "";
 }
 body.spz-5009 .site-content .get-touch-form.dark_form_container .container .form-container .get-form {
   position: relative;

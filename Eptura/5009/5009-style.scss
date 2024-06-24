@@ -21,6 +21,24 @@ body.spz-5009 {
     }
 
     .get-touch-form.dark_form_container {
+      position: relative;
+
+      &::before {
+        content: "";
+        width: calc(50% - 172px);
+        height: 100%;
+        left: 0;
+        top: 0;
+        position: absolute;
+        background: #fff;
+        z-index: 0;
+        pointer-events: none;
+
+        @media (max-width: 991.98px) {
+          display: none;
+        }
+      }
+
       .container {
         max-width: 1440px;
         padding: 0;
@@ -28,6 +46,10 @@ body.spz-5009 {
 
         @media (max-width: 991.98px) {
           flex-direction: column-reverse;
+        }
+
+        @media (max-width: 767.98px) {
+          display: flex;
         }
 
         .title-part {
@@ -43,6 +65,10 @@ body.spz-5009 {
             min-height: 654px;
             max-width: 100%;
             position: relative;
+            background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_tablet_1.webp")
+              no-repeat;
+            background-position: center;
+            background-size: 100%;
 
             @media (min-width: 767.98px) {
               &::before {
@@ -59,6 +85,14 @@ body.spz-5009 {
               }
             }
           }
+
+          @media (max-width: 767.98px) {
+            background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/5009/image_mobile_1.webp")
+              no-repeat;
+            background-position: center;
+            background-size: 100%;
+            min-height: 306px;
+          }
         }
 
         .form-container {
@@ -69,6 +103,7 @@ body.spz-5009 {
           max-width: 548px;
           min-height: 840px;
           padding: 93px 54px 96px;
+          position: relative;
 
           @media (max-width: 991.98px) {
             max-width: 100%;
@@ -130,6 +165,20 @@ body.spz-5009 {
                 text-transform: uppercase;
                 margin: 0;
               }
+            }
+          }
+
+          .get-form ~ .line-header {
+            border-bottom: 1px solid #e3e6ec;
+            position: relative;
+
+            a {
+              display: flex;
+              width: 100%;
+            }
+
+            &::after {
+              content: "";
             }
           }
 
