@@ -99,11 +99,11 @@ function setTabsContent() {
                                     <div class="content">
                                     <div class="text"><p>Identify the right carriers and plan designs to meet employers&#8217; medical, vision, and dental needs.</p>
                                         <p>Capture clients&#8217; claim history, coverage gaps, and other insurance needs. Evaluate current plans, renewal options, and alternative coverage. Identify upsell opportunities.</p></div>
+                                        <a href="javascript:void(0);" class="zy-cta">Get a demo</a>
                                     <picture>
                                         <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
                                         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="688" height="404">
                                     </picture>
-                                    <a href="javascript:void(0);" class="zy-cta">Get a demo</a>
                                     </div>
                                 </div>
                                 <div class="child" data-index="2">
