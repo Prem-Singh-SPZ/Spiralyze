@@ -117,7 +117,7 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
 }
 @media (max-width: 767.98px) {
   body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container {
-    padding: 82px 20px 47.5px;
+    padding: 82px 20px 31px;
   }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .form-title .sub-title {
@@ -142,7 +142,7 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   line-height: 34px;
   margin: 0 0 40px;
 }
-@media (min-width: 767.98px) and (max-width: 991.98px) {
+@media screen and (max-width: 767.98px) {
   body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .form-title .title {
     margin: 0 0 32px;
   }
@@ -176,6 +176,11 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
     margin-right: 0;
   }
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card {
+    margin-bottom: 15px;
+  }
+}
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card a {
   display: flex;
   padding: 12px 16px;
@@ -184,6 +189,7 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card a img {
   padding-right: 16px;
   border-right: 1px solid #e3e6ec;
+  pointer-events: none;
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card a p {
   padding-left: 16px;
@@ -194,6 +200,12 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   font-weight: 300;
   line-height: 24px;
   margin: 0;
+  pointer-events: none;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card a p {
+    max-width: 64%;
+  }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form {
   position: relative;
@@ -495,6 +507,11 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   white-space: nowrap;
   max-width: calc(100% - 20px);
 }
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+    margin-top: 31.5px !important;
+  }
+}
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover, body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
   background: var(--interactive-colors-a-3, #456ed6) !important;
 }
@@ -505,11 +522,21 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
     height: 50px !important;
     padding: 0px 32px;
-    margin-top: 10.5px !important;
+    margin-top: 23.5px !important;
   }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap {
   margin-top: 17px;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap {
+    margin-bottom: 3px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap {
+    margin-bottom: 20px;
+  }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
   text-align: center;

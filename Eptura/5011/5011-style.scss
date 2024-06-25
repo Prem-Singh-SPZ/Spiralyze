@@ -123,7 +123,7 @@ body.spz-5011 {
           }
 
           @media (max-width: 767.98px) {
-            padding: 82px 20px 47.5px;
+            padding: 82px 20px 31px;
           }
 
           .form-title {
@@ -150,7 +150,11 @@ body.spz-5011 {
               line-height: 34px;
               margin: 0 0 40px;
 
-              @media (min-width: 767.98px) and (max-width: 991.98px) {
+              // @media (min-width: 767.98px) and (max-width: 991.98px) {
+              //   margin: 0 0 32px;
+              // }
+
+              @media screen and (max-width: 767.98px) {
                 margin: 0 0 32px;
               }
             }
@@ -185,6 +189,10 @@ body.spz-5011 {
                   }
                 }
 
+                @media screen and (max-width: 767.98px) {
+                  margin-bottom: 15px;
+                }
+
                 a {
                   display: flex;
                   padding: 12px 16px;
@@ -193,6 +201,7 @@ body.spz-5011 {
                   img {
                     padding-right: 16px;
                     border-right: 1px solid #e3e6ec;
+                    pointer-events: none;
                   }
 
                   p {
@@ -204,6 +213,11 @@ body.spz-5011 {
                     font-weight: 300;
                     line-height: 24px;
                     margin: 0;
+                    pointer-events: none;
+
+                    @media (min-width: 767.98px) and (max-width: 991.98px) {
+                      max-width: 64%;
+                    }
                   }
                 }
               }
@@ -584,6 +598,10 @@ body.spz-5011 {
                     white-space: nowrap;
                     max-width: calc(100% - 20px);
 
+                    @media (min-width: 767.98px) and (max-width: 991.98px) {
+                      margin-top: 31.5px !important;
+                    }
+
                     &:hover,
                     &:focus {
                       background: var(
@@ -598,7 +616,7 @@ body.spz-5011 {
                     @media (max-width: 767.98px) {
                       height: 50px !important;
                       padding: 0px 32px;
-                      margin-top: 10.5px !important;
+                      margin-top: 23.5px !important;
                     }
                   }
                 }
@@ -609,9 +627,12 @@ body.spz-5011 {
                 .mktoFieldWrap {
                   margin-top: 17px;
 
-                  // @media (max-width: 767.98px) {
-                  //   margin-top: 18px;
-                  // }
+                  @media (min-width: 767.98px) and (max-width: 991.98px) {
+                    margin-bottom: 3px;
+                  }
+                  @media (max-width: 767.98px) {
+                    margin-bottom: 20px;
+                  }
 
                   .mktoHtmlText.mktoHasWidth {
                     text-align: center;
