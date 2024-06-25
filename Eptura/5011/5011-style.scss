@@ -119,7 +119,7 @@ body.spz-5011 {
           @media (max-width: 991.98px) {
             max-width: 100%;
             min-height: auto;
-            padding: 82px 30px 64.5px;
+            padding: 82px 30px 64px;
           }
 
           @media (max-width: 767.98px) {
@@ -149,6 +149,10 @@ body.spz-5011 {
               font-weight: 300;
               line-height: 34px;
               margin: 0 0 40px;
+
+              @media (min-width: 767.98px) and (max-width: 991.98px) {
+                margin: 0 0 32px;
+              }
             }
           }
 
@@ -158,12 +162,28 @@ body.spz-5011 {
               flex-direction: column;
               margin: 0 10px;
 
+              @media (min-width: 767.98px) and (max-width: 991.98px) {
+                flex-direction: row;
+                justify-content: center;
+              }
+
               .spz-card {
                 border-radius: 8px;
                 border: 1px solid #e3e6ec;
                 background: #fff;
                 box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
                 margin-bottom: 19px;
+
+                @media (min-width: 767.98px) and (max-width: 991.98px) {
+                  margin-bottom: 0;
+                  margin-right: 20px;
+                  width: 216px;
+                  height: 72px;
+
+                  &:last-child {
+                    margin-right: 0;
+                  }
+                }
 
                 a {
                   display: flex;
@@ -193,14 +213,6 @@ body.spz-5011 {
           .get-form {
             position: relative;
             z-index: 1;
-            margin-bottom: 39px;
-
-            @media (min-width: 767.98px) and (max-width: 991.98px) {
-              margin-bottom: 38px;
-            }
-
-            @media (max-width: 767.98px) {
-            }
 
             //Form Css starts here
             form.mktoForm {

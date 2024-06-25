@@ -290,10 +290,10 @@ function addPageContent() {
 function setHiddenFields() {
     if (document.querySelector('.mktoFormRow [name="CP2__c"]')) {
         document.querySelectorAll('.mktoFormRow [name="CP2__c"]').forEach(function (el, k) {
-            el.setAttribute('value', '5010_Variant');
+            el.setAttribute('value', '5011_Variant');
         });
     } else if (!document.querySelector('.mktoForm .mktoFormRow [name="CP2__c"]')) {
         // If [name="CP2__c"] doesn't exist, add hidden field
-        document.querySelector('.mktoForm').insertAdjacentHTML('beforeend', '<input type="hidden" name="CP2__c" value="5010_Variant">');
+        document.querySelector('.mktoForm').insertAdjacentHTML('beforeend', '<input type="hidden" name="CP2__c" value="5011_Variant">');
     }
 }

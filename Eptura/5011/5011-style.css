@@ -112,7 +112,7 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container {
     max-width: 100%;
     min-height: auto;
-    padding: 82px 30px 64.5px;
+    padding: 82px 30px 64px;
   }
 }
 @media (max-width: 767.98px) {
@@ -142,10 +142,21 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   line-height: 34px;
   margin: 0 0 40px;
 }
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .form-title .title {
+    margin: 0 0 32px;
+  }
+}
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps {
   display: flex;
   flex-direction: column;
   margin: 0 10px;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps {
+    flex-direction: row;
+    justify-content: center;
+  }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card {
   border-radius: 8px;
@@ -153,6 +164,17 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
   background: #fff;
   box-shadow: 0px 3px 12px 0px rgba(0, 0, 0, 0.08);
   margin-bottom: 19px;
+}
+@media (min-width: 767.98px) and (max-width: 991.98px) {
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card {
+    margin-bottom: 0;
+    margin-right: 20px;
+    width: 216px;
+    height: 72px;
+  }
+  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card:last-child {
+    margin-right: 0;
+  }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .step-1-wrapper .step-1-steps .spz-card a {
   display: flex;
@@ -176,12 +198,6 @@ body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form {
   position: relative;
   z-index: 1;
-  margin-bottom: 39px;
-}
-@media (min-width: 767.98px) and (max-width: 991.98px) {
-  body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form {
-    margin-bottom: 38px;
-  }
 }
 body.spz-5011 .site-content .get-touch-form.dark_form_container .container .form-container .get-form form.mktoForm {
   box-shadow: none;
