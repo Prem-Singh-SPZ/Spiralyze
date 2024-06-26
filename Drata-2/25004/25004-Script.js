@@ -97,6 +97,8 @@
       if (label.innerHTML != '') {
         el.parentNode.insertBefore(label, el.nextSibling);
       }
+
+      el.setAttribute('placeholder', oldLabel);
     });
   }
 
