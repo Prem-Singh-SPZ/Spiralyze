@@ -53,7 +53,7 @@ body.spz-25004 {
       background-color: #eef2f6;
       margin-bottom: 38px;
 
-       [class$="Section-gridContainer"] {
+      [class$="Section-gridContainer"] {
         max-width: 1500px;
         gap: 40px;
         display: flex;
@@ -65,7 +65,7 @@ body.spz-25004 {
 
         [class*="MuiGrid-root-Section-gridItem"]:first-child
           [class$="Block-root"] {
-          padding: 102px 0 96px;
+          padding: 100px 0 97px;
 
           @media (max-width: 1199.98px) {
             padding-bottom: 0;
@@ -102,7 +102,7 @@ body.spz-25004 {
                 display: none;
               }
 
-             > [class*="MuiTypography-root-Form-formMessage"] {
+              > [class*="MuiTypography-root-Form-formMessage"] {
                 color: #eef2f6;
                 text-align: center;
                 font-family: $font-family_3;
@@ -123,7 +123,7 @@ body.spz-25004 {
                 padding: 0;
                 gap: 12px;
 
-                .cookie-reset-container{
+                .cookie-reset-container {
                   display: none !important;
                 }
 
@@ -157,7 +157,7 @@ body.spz-25004 {
                   max-width: unset;
                   width: calc(50% - 6px);
 
-                  &.form-columns-1:has(select[name="clearbit_country"]){
+                  &.form-columns-1:has(select[name="clearbit_country"]) {
                     width: 100%;
                   }
 
@@ -168,7 +168,7 @@ body.spz-25004 {
                     align-items: center;
                     flex-direction: column;
 
-                    > label[id]{
+                    > label[id] {
                       display: none !important;
                     }
 
@@ -279,11 +279,11 @@ body.spz-25004 {
                     padding: 0;
                     margin: 0;
                     font-family: $font-family_4;
-                    color:  #D6EDFF;
+                    color: #d6edff;
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 600;
-                    line-height: 18px; 
+                    line-height: 18px;
                     text-align: center;
                   }
                 }
@@ -449,12 +449,9 @@ body.spz-25004 {
                       background: #293642;
                     }
 
-                    [class*="MuiButton-endIcon"] {
-                      margin-right: -10px;
-                      & > :nth-of-type(1) {
-                        font-size: 10px;
-                        margin-left: 20px;
-                      }
+                    span[class*="cta-arrow"] {
+                      margin-left: 30px;
+                      margin-right: -8px;
                     }
                   }
                 }
@@ -657,7 +654,7 @@ body.spz-25004 {
                   }
 
                   .ls-desc {
-                    color: #0C131A;
+                    color: #0c131a;
                     font-family: $font-family_3;
                     font-size: 18px;
                     font-style: normal;

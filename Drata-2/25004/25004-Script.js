@@ -27,7 +27,7 @@
       document.querySelector('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').textContent = "Download the Report";
     });
 
-    waitForElm('div[class*="Form-formContainer"] #reactHubspotForm0 form.hs-form').then(function () {
+    waitForElm('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
         if (document.querySelectorAll('div[class*="Form-formContainer"] #reactHubspotForm0 .form-note').length == 0) {
@@ -37,8 +37,8 @@
         appendInputLabel();
 
         // Set button label
-        document.querySelector('.hs-button.primary').innerHTML = 'Get Started';
-        document.querySelector('.hs-button.primary').setAttribute('value', 'Get Started');
+        document.querySelector('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').innerHTML = 'Get Started <span class="cta-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
+
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
           const err = setInterval(() => {
@@ -171,7 +171,7 @@
     if (window.location.href.indexOf('https://drata.com/resources/risk-trends') > -1) {
       testURL = window.location.href;
     }
-    if (isSameUrl(url, testURL, true)) {
+    if (isSameUrl(url, testURL, true)  && window.innerWidth > 1024) {
       loadTest();
     } else {
       removeTest();
