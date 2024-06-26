@@ -64,7 +64,7 @@ body.spz-25003 {
 
         [class*="MuiGrid-root-Section-gridItem"]:first-child
           [class$="Block-root"] {
-          padding: 90px 0;
+          padding: 94px 0 90px;
 
           @media (max-width: 1199.98px) {
             padding-bottom: 0;
@@ -264,11 +264,11 @@ body.spz-25003 {
                     padding: 0;
                     margin: 4px 0 0;
                     font-family: $font-family_4;
-                    color:  #D6EDFF;
+                    color: #d6edff;
                     font-size: 12px;
                     font-style: normal;
                     font-weight: 600;
-                    line-height: 18px; 
+                    line-height: 18px;
                     text-align: center;
                   }
                 }
@@ -434,12 +434,9 @@ body.spz-25003 {
                       background: #293642;
                     }
 
-                    [class*="MuiButton-endIcon"] {
-                      margin-right: -10px;
-                      & > :nth-of-type(1) {
-                        font-size: 10px;
-                        margin-left: 20px;
-                      }
+                    span[class*="cta-arrow"] {
+                      margin-left: 30px;
+                      margin-right: -8px;
                     }
                   }
                 }

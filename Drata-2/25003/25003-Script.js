@@ -25,7 +25,7 @@
     });
 
 
-    waitForElm('div[class*="Form-formContainer"] #reactHubspotForm0 form.hs-form').then(function () {
+    waitForElm('[class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
         if (document.querySelectorAll('div[class*="Form-formContainer"] #reactHubspotForm0 .form-title').length == 0) {
@@ -40,8 +40,8 @@
         appendInputLabel();
 
         // Set button label
-        document.querySelector('.hs-button.primary').innerHTML = 'Download';
-        document.querySelector('.hs-button.primary').setAttribute('value', 'Download');
+        document.querySelector('[class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').innerHTML = 'Download <span class="cta-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
+
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
           const err = setInterval(() => {
