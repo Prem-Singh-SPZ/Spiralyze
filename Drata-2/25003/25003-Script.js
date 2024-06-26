@@ -173,7 +173,7 @@
     if (window.location.href.indexOf('https://drata.com/resources/complete-guide-risk-management') > -1) {
       testURL = window.location.href;
     }
-    if (isSameUrl(url, testURL, true)) {
+    if (isSameUrl(url, testURL, true) && window.innerWidth > 1024) {
       loadTest();
     } else {
       removeTest();
