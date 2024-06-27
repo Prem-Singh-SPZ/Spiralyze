@@ -3,7 +3,8 @@
     document.body.classList.add('spz-25003');
 
     waitForElm('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').then(function () {
-      document.querySelector('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
+      let changeText = setInterval(() => {
+        document.querySelector('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
         <h1 class="hc-title">Guide to <span>Cybersecurity</span> Risk Management</h1>
         <div class="hc-tag dis-flex"><span>SOC 2</span> <span>ISO 27001</span> <span>HIPAA</span> <span>GDPR</span> <span>PCI</span> <span> More</span></div>
         <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/hero_logo-g2_1.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1698673988/drata/4012/custom/4.9_Star_rating.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <span class="sr-number"><strong>4.9</strong> (700+ reviews)</span></div>
@@ -22,19 +23,24 @@
             </ul>
         </div>
       </div>`;
+      }, 100);
+
+      setTimeout(() => {
+        clearInterval(changeText);
+      }, 5000);
     });
 
 
     waitForElm('[class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
-        if (document.querySelectorAll('div[class*="Form-formContainer"] #reactHubspotForm0 .form-title').length == 0) {
+        if (document.querySelectorAll('div[class*="Form-formContainer"] div[id*="reactHubspotForm"] .form-title').length == 0) {
           // add form title div here
           const formTitle = document.createElement('div');
           formTitle.classList.add('form-title');
           formTitle.innerHTML = 'Download the Guide';
-          document.querySelector('div[class*="Form-formContainer"] #reactHubspotForm0  form.hs-form').insertAdjacentElement('beforebegin', formTitle);
-          document.querySelector('div[class*="Form-formContainer"] #reactHubspotForm0  form.hs-form .hs_submit').insertAdjacentHTML('beforebegin', `<p class="form-note">For partnership inquiries, please contact partnerships@drata.com</p>`);
+          document.querySelector('div[class*="Form-formContainer"] div[id*="reactHubspotForm"]  form.hs-form').insertAdjacentElement('beforebegin', formTitle);
+          document.querySelector('div[class*="Form-formContainer"] div[id*="reactHubspotForm"]  form.hs-form .hs_submit').insertAdjacentHTML('beforebegin', `<p class="form-note">For partnership inquiries, please contact partnerships@drata.com</p>`);
         }
 
         appendInputLabel();

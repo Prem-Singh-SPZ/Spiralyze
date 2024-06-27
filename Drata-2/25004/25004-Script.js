@@ -3,7 +3,8 @@
     document.body.classList.add('spz-25004');
 
     waitForElm('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').then(function () {
-      document.querySelector('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
+      let changeText = setInterval(() => {
+        document.querySelector('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
         <h1 class="hc-title">Drata's <span>Risk Trends</span> Report</h1>
         <div class="hc-tag dis-flex"><span>SOC 2</span> <span>ISO 27001</span> <span>HIPAA</span> <span>GDPR</span> <span>PCI</span> <span> More</span></div>
         <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/hero_logo-g2_1.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1698673988/drata/4012/custom/4.9_Star_rating.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <span class="sr-number"><strong>4.9</strong> (700+ reviews)</span></div>
@@ -21,6 +22,12 @@
             </ul>
         </div>
       </div>`;
+      }, 100);
+
+
+      setTimeout(() => {
+        clearInterval(changeText);
+      }, 5000);
     });
 
     waitForElm('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').then(function () {
@@ -30,8 +37,8 @@
     waitForElm('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
-        if (document.querySelectorAll('div[class*="Form-formContainer"] #reactHubspotForm0 .form-note').length == 0) {
-          document.querySelector('div[class*="Form-formContainer"] #reactHubspotForm0  form.hs-form .hs_submit').insertAdjacentHTML('beforebegin', `<p class="form-note">For partnership inquiries, please contact partnerships@drata.com</p>`);
+        if (document.querySelectorAll('div[class*="Form-formContainer"] div[id*="reactHubspotForm"] .form-note').length == 0) {
+          document.querySelector('div[class*="Form-formContainer"] div[id*="reactHubspotForm"]  form.hs-form .hs_submit').insertAdjacentHTML('beforebegin', `<p class="form-note">For partnership inquiries, please contact partnerships@drata.com</p>`);
         }
 
         appendInputLabel();
@@ -173,7 +180,7 @@
     if (window.location.href.indexOf('https://drata.com/resources/risk-trends') > -1) {
       testURL = window.location.href;
     }
-    if (isSameUrl(url, testURL, true)  && window.innerWidth > 1024) {
+    if (isSameUrl(url, testURL, true) && window.innerWidth > 1024) {
       loadTest();
     } else {
       removeTest();

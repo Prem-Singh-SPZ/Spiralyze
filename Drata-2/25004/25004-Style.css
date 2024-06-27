@@ -1,5 +1,5 @@
 @import "https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 .dis-flex {
   display: flex;
 }
@@ -249,6 +249,7 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
   max-width: calc(100% - 40px);
   overflow: hidden;
   text-overflow: ellipsis;
+  text-transform: capitalize;
 }
 @media (min-width: 1199.98px) and (max-width: 1216.98px) {
   body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field label.hs-label-spz {
@@ -540,9 +541,9 @@ body.spz-25004 main section[variant=defaultResponsive] [class$=Section-gridConta
   letter-spacing: 0;
 }
 
-body.spz-25004 #__next > header nav[class*=Header-headerMenuNav],
-body.spz-25004 #__next > header ul[class*=Header-headerMenuCtas],
-body.spz-25004 #__next > div.MuiBox-root[data-testid=HeroSubpage] {
+body.spz-25004 > header nav[class*=Header-headerMenuNav],
+body.spz-25004 > header ul[class*=Header-headerMenuCtas],
+body.spz-25004 > div.MuiBox-root[data-testid=HeroSubpage] {
   display: none !important;
 }
 body.spz-25004 .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {

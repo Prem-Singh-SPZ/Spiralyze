@@ -23,7 +23,7 @@ $border-color_2: #d53641;
 $border-color_3: #0580e8;
 
 @import "https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 
 .dis-flex {
   display: flex;
@@ -314,6 +314,7 @@ body.spz-25004 {
                       max-width: calc(100% - 40px);
                       overflow: hidden;
                       text-overflow: ellipsis;
+                      text-transform: capitalize;
 
                       @media (min-width: 1199.98px) and (max-width: 1216.98px) {
                         left: 12px;
@@ -674,13 +675,13 @@ body.spz-25004 {
 }
 
 body.spz-25004 {
-  #__next {
-    > header nav[class*="Header-headerMenuNav"],
-    > header ul[class*="Header-headerMenuCtas"],
-    > div.MuiBox-root[data-testid="HeroSubpage"] {
-      display: none !important;
-    }
+  // #__next {
+  > header nav[class*="Header-headerMenuNav"],
+  > header ul[class*="Header-headerMenuCtas"],
+  > div.MuiBox-root[data-testid="HeroSubpage"] {
+    display: none !important;
   }
+  // }
   .hero-section form fieldset:has(.hs-form-field[style="display: none;"]) {
     display: none;
   }
