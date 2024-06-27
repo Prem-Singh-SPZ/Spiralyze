@@ -17,7 +17,7 @@
                   <div class="ls-title">Access vital data and trends: <span class="ls-desc"> Get insights from a survey of 300 organisations on the challenges and opportunities in third-party risk management.</span></div>
               </li>
               <li class="list-item">
-                  <div class="ls-title">Learn proactive risk management strategies: <span class="ls-desc"> How to address the gaps in TPRM processes and moving towards more automated risk and compliance solutions</span></div>
+                  <div class="ls-title">Learn proactive risk management strategies: <span class="ls-desc"> How to address the gaps in TPRM processes and moving towards more automated risk and compliance solutions.</span></div>
               </li>
             </ul>
         </div>
@@ -101,7 +101,7 @@
       }
       label.setAttribute('for', el.id);
       label.classList.add('hs-label-spz');
-      if (label.innerHTML != '') {
+      if (label.innerHTML != '' && !el.closest('.field').querySelector('.input label.hs-label-spz')) {
         el.parentNode.insertBefore(label, el.nextSibling);
       }
 

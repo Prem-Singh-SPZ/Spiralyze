@@ -1,30 +1,22 @@
 @import "https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap";
 @import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 .dis-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
 }
 
 .flex-wrap {
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
 }
 
 .justify-content-between {
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  justify-content: space-between;
 }
 
 .align-items-center {
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
 }
 
 body.spz-25003 header div[class*=MuiToolbar-root-Header-contentContainer] {
-  -ms-grid-rows: minmax(108px, 1fr);
   grid-template-rows: minmax(108px, 1fr);
 }
 body.spz-25003 header div[class*=MuiToolbar-root-Header-contentContainer] [class*=Media-root-Header-logo] {
@@ -41,13 +33,8 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 }
 @media (max-width: 1199.98px) {
   body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] {
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
+    flex-direction: column;
   }
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:first-child [class$=Block-root] {
@@ -81,8 +68,7 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] {
   padding: 31px 38px 39px;
-  -webkit-box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
-          box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
+  box-shadow: 0px 17.872px 23.83px -5.957px rgba(16, 24, 40, 0.08), 0px 5.957px 8.936px -2.979px rgba(16, 24, 40, 0.03);
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] > svg {
   display: none;
@@ -99,14 +85,9 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   margin-bottom: 30px;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  justify-content: space-between;
   border: none;
   background: transparent;
   padding: 0;
@@ -140,16 +121,9 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field {
   position: relative;
   margin-bottom: 0;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  align-items: center;
+  flex-direction: column;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .input {
   width: 100%;
@@ -265,6 +239,7 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   color: #697586;
   pointer-events: none;
   -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
   white-space: nowrap;
   max-width: calc(100% - 42px);
@@ -296,26 +271,8 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   display: none;
   color: transparent;
 }
-body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) {
-  border-color: #dde3eb;
-}
-body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) {
-  border-color: #dde3eb;
-}
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) {
   border-color: #dde3eb;
-}
-body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 18px;
-  color: #697586;
-}
-body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  top: 9px;
-  font-size: 12px;
-  line-height: 18px;
-  color: #697586;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input:not(.is-placeholder):not(:placeholder-shown) ~ label {
   top: 9px;
@@ -346,12 +303,6 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error {
   border-color: #d53641 !important;
-}
-body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
-  color: #d53641 !important;
-}
-body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
-  color: #d53641 !important;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .hs-input.invalid.error:not(.is-placeholder):not(:placeholder-shown) ~ label {
   color: #d53641 !important;
@@ -595,8 +546,6 @@ body.spz-25003 .hero-section form fieldset:has(.hs-form-field[style="display: no
   display: none;
 }
 body.spz-25003 .hs-form-field[style="display: block;"] {
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
 }
 body.spz-25003 .field-hidden {

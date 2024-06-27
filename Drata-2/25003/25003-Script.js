@@ -102,7 +102,7 @@
       }
       label.setAttribute('for', el.id);
       label.classList.add('hs-label-spz');
-      if (label.innerHTML != '') {
+      if (label.innerHTML != '' && !el.closest('.field').querySelector('.input label.hs-label-spz')) {
         el.parentNode.insertBefore(label, el.nextSibling);
       }
     });
