@@ -1,103 +1,96 @@
-.header__navigation .navigation-primary {
-  display: flex;
-  align-items: center;
+body {
+  margin: 0;
+  padding: 0;
 }
-.header__navigation .navigation-primary .spz-header .container .nav {
-  display: flex;
-  align-items: center;
+
+.komodo-header {
+  background-color: #344043;
+  padding: 20px 0;
+  position: relative;
 }
-@media (max-width: 768px) {
-  .header__navigation .navigation-primary .spz-header .container .nav {
-    flex-direction: column;
-    align-items: flex-start;
-  }
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper {
+  display: none;
+  position: absolute;
+  top: calc(100% - 20px);
+  left: 0;
+  background-color: #344043;
+  min-width: 100%;
+  width: max-content;
+  z-index: 2;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item {
-  padding: 16px;
-}
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item > a {
-  color: rgba(255, 255, 255, 0.8);
-  font-family: "Titillium Web";
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 600;
-  line-height: 26px;
-  text-transform: capitalize;
-  display: flex;
-}
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item > a::after {
-  content: url(//res.cloudinary.com/spiralyze/image/upload/v1712831192/komodohealth/4005/chevron_1.svg);
-  width: 16px;
-  height: 16px;
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper a {
+  color: #68cce8;
   display: block;
-  margin: 4px 0 0 4px;
+  font-weight: 400;
+  padding: 5px 15px;
+  text-transform: none;
+  font-size: 20px;
+  transition: 250ms background ease-in-out;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items {
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper a:hover {
+  background-color: #485355;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper li {
+  padding: 0;
+  width: -webkit-fill-available;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children .hs-menu-children-wrapper {
   display: none;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .menu-item > a {
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:hover {
+  padding-bottom: 20px;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:hover .hs-menu-children-wrapper {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  position: absolute;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:hover .hs-menu-children-wrapper .hs-menu-item.hs-menu-depth-3 {
+  flex: 0 0 50%;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-3 a {
+  padding-left: 35px;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1:hover {
+  padding-bottom: 20px;
+}
+.komodo-header .hs-item-has-children.hs-menu-depth-1:hover > .hs-menu-children-wrapper {
   display: flex;
   justify-content: space-between;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .menu-item > a::after {
-  content: url(//res.cloudinary.com/spiralyze/image/upload/v1712831190/komodohealth/4005/arrow-right.svg);
-  width: 16px;
-  height: 16px;
-  display: block;
-  margin: 4px 0 0 4px;
-}
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items a:hover .anchor-item {
-  border-radius: 2px;
-  border-left: 1px solid #68cce8;
-  background: #41585e;
-}
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item {
+
+.komodo-header__menu ul {
   display: flex;
   align-items: flex-start;
+  padding: 0;
+  margin: 0;
+  list-style: none;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item .content {
-  flex-grow: 1;
+.komodo-header__menu ul li {
+  margin: 0;
+  padding: 5px 14px;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item .content .anchor-text {
-  display: -webkit-box;
-  -webkit-box-orient: vertical;
-  -webkit-line-clamp: 1;
-  flex: 1 0 0;
-  overflow: hidden;
+.komodo-header__menu ul li a {
+  font-size: 20px;
+  color: rgba(255, 255, 255, 0.6);
+  font-weight: 600;
+  line-height: 34px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  transition: 250ms color ease-in-out;
+  text-decoration: none !important;
+}
+.komodo-header__menu ul li a:hover {
   color: #fff;
-  text-overflow: ellipsis;
-  font-family: "Titillium Web";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 24px;
-  text-transform: capitalize;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item .menu-items .anchor-item .content .short-description {
-  color: #f0eeee;
-  font-family: "Titillium Web";
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  text-transform: capitalize;
+.komodo-header__menu .hs-menu-wrapper {
+  transition: opacity 0.3s ease-in-out;
+  opacity: 1;
 }
-.header__navigation .navigation-primary .spz-header .container .nav .nav-item > a:hover + .menu-items {
-  display: block;
-  position: relative;
-}
-@media (min-width: 768px) {
-  .header__navigation .navigation-primary .spz-header .container .nav .nav-item > a:hover + .menu-items {
-    position: absolute;
-    top: 80px;
-    left: 0;
-    right: 0;
-    background: #000;
-    z-index: 1;
-  }
-}
-@media (max-width: 768px) {
-  .header__navigation .navigation-primary .nav-contact-btn {
+
+@media (max-width: 1079px) {
+  .komodo-header__menu ul {
     display: none;
   }
 }
