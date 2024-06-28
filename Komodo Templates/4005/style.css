@@ -70,11 +70,11 @@ header.komodo-header {
   transition: 250ms background-color ease-in-out;
   display: inline-block;
 }
-.komodo-header__menu ul li.hs-menu-depth-1:hover {
+.komodo-header__menu ul li.hs-menu-depth-1.active {
   border-radius: 100px;
   background: #000;
 }
-.komodo-header__menu ul li.hs-menu-depth-1:hover > a::after {
+.komodo-header__menu ul li.hs-menu-depth-1.active > a::after {
   transform: rotate(180deg);
 }
 .komodo-header__menu .hs-menu-wrapper {

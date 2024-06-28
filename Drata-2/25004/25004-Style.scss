@@ -39,6 +39,17 @@ $border-color_3: #0580e8;
 }
 
 body.spz-25004 {
+  header[class*="-MuiPaper-root-MuiAppBar-root-Header-root"] {
+    position: relative !important;
+    transition: none;
+
+    // @media (min-width: 1200px) {
+    //   div[class*="Header-superNav"] {
+    //     display: inline-grid;
+    //   }
+    // }
+  }
+
   header div[class*="MuiToolbar-root-Header-contentContainer"] {
     grid-template-rows: minmax(108px, 1fr);
 

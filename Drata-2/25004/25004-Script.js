@@ -22,6 +22,10 @@
             </ul>
         </div>
       </div>`;
+
+        waitForElm('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').then(function () {
+          document.querySelector('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').textContent = "Download the Report";
+        });
       }, 100);
 
 
@@ -30,9 +34,6 @@
       }, 5000);
     });
 
-    waitForElm('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').then(function () {
-      document.querySelector('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').textContent = "Download the Report";
-    });
 
     waitForElm('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
