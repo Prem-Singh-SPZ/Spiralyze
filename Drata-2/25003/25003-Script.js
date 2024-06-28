@@ -31,7 +31,7 @@
     });
 
 
-    waitForElm('[class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
+    waitForElm('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
         if (document.querySelectorAll('div[class*="Form-formContainer"] div[id*="reactHubspotForm"] .form-title').length == 0) {
@@ -46,7 +46,7 @@
         appendInputLabel();
 
         // Set button label
-        document.querySelector('[class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').innerHTML = 'Download <span class="cta-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
+        document.querySelector('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').innerHTML = 'Download <span class="cta-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
 
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
@@ -94,7 +94,7 @@
 
   // Create input label with placeholder text
   function appendInputLabel() {
-    document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form .hs-input').forEach(function (el) {
+    document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form.hs-form .hs-input').forEach(function (el) {
       const label = document.createElement("label");
       label.innerHTML = el.placeholder;
       if (!el.hasAttribute('type') && el.options.length > 0) {
@@ -110,7 +110,7 @@
 
   // On input focus add class on closest parent .field class
   function focusFields() {
-    document.querySelectorAll('.hs-input').forEach(function (el) {
+    document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input').forEach(function (el) {
       // On input focus add .field-focus class on closest parent .field class
       el.addEventListener('focus', function () {
         el.closest('.field').classList.add('field-focus');

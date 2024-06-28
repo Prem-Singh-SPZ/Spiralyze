@@ -4,6 +4,7 @@ header.komodo-header {
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center center;
+  position: relative;
 }
 
 .komodo-header.header-bg-transparent {
@@ -18,14 +19,14 @@ header.komodo-header {
 }
 
 .komodo-header__container {
-  height: 68px;
+  height: 84px;
   display: flex;
   align-items: center;
   justify-content: space-between;
   margin: 0 auto;
   width: 100%;
   max-width: 1180px;
-  padding: 11.5px 20px;
+  padding: 20px 20px;
 }
 
 .komodo-header__menu {
@@ -34,19 +35,12 @@ header.komodo-header {
 }
 .komodo-header__menu ul {
   display: flex;
-  align-items: center;
-  padding: 0;
-  margin: 0;
-  list-style: none;
-  display: flex;
   align-items: flex-start;
   padding: 0;
   margin: 0;
   list-style: none;
 }
 .komodo-header__menu ul li {
-  margin: 0;
-  padding: 5px 14px;
   margin: 0;
   padding: 5px 14px;
 }
@@ -58,13 +52,32 @@ header.komodo-header {
   letter-spacing: 0;
   transition: 250ms color ease-in-out;
   text-decoration: none !important;
+  position: relative;
 }
 .komodo-header__menu ul li a:hover {
   color: #fff;
 }
+.komodo-header__menu ul li.hs-menu-depth-1 > a::after {
+  content: "";
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1719553071/komodohealth/4005/chevron.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  transition: 250ms background-color ease-in-out;
+  display: inline-block;
+}
+.komodo-header__menu ul li.hs-menu-depth-1:hover {
+  border-radius: 100px;
+  background: #000;
+}
+.komodo-header__menu ul li.hs-menu-depth-1:hover > a::after {
+  transform: rotate(180deg);
+}
 .komodo-header__menu .hs-menu-wrapper {
-  transition: opacity 0.3s ease-in-out;
-  opacity: 1;
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 }
@@ -77,33 +90,23 @@ header.komodo-header {
   opacity: 0;
 }
 
-.komodo-header {
-  padding: 20px 0 8px;
-  position: relative;
+.komodo-header .hs-menu-depth-1 {
+  padding: 8px 14px 10px 16px;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 {
-  padding-bottom: 12px;
-}
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper {
-  display: none;
-  display: none;
-  position: absolute;
-  top: 100%;
-  left: 0;
-  background-color: #344043;
-  min-width: 100%;
-  width: max-content;
-  z-index: 2;
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper {
   display: none;
   position: fixed;
-  top: calc(100% - 9px);
+  top: calc(100% - 2px);
   left: 0;
   right: 0;
-  background-color: #344043;
+  background-color: #000;
   width: auto;
   z-index: 2;
+  max-width: 1180px;
+  margin: auto;
+  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.55);
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper a {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper a {
   color: #68cce8;
   display: block;
   font-weight: 400;
@@ -112,33 +115,35 @@ header.komodo-header {
   font-size: 20px;
   transition: 250ms background ease-in-out;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper a:hover {
-  background-color: #485355;
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper a::after {
+  content: "";
+}
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper a:hover {
   background-color: #485355;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper li {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li {
   padding: 0;
   width: -webkit-fill-available;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children .hs-menu-children-wrapper {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children .hs-menu-children-wrapper {
   display: none;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:hover {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children.active {
   padding-bottom: 20px;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:hover .hs-menu-children-wrapper {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children.active .hs-menu-children-wrapper {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
   position: absolute;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children:hover .hs-menu-children-wrapper .hs-menu-item.hs-menu-depth-3 {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-2.hs-item-has-children.active .hs-menu-children-wrapper .hs-menu-item.hs-menu-depth-3 {
   flex: 0 0 50%;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-3 a {
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-3 a {
   padding-left: 35px;
 }
-.komodo-header .hs-item-has-children.hs-menu-depth-1:hover > .hs-menu-children-wrapper {
+.komodo-header .hs-menu-depth-1.active > .hs-menu-children-wrapper {
   display: flex;
   justify-content: space-between;
 }
@@ -157,14 +162,10 @@ header.komodo-header {
 .komodo-header .hs-item-has-children .hs-menu-children-wrapper li {
   padding: 0;
 }
-.komodo-header .hs-item-has-children .hs-menu-depth-2 .hs-menu-children-wrapper {
-  position: static;
-}
-.komodo-header .hs-item-has-children:hover .hs-menu-children-wrapper {
-  display: block;
-}
 .komodo-header .hs_cos_wrapper_type_logo img {
-  width: 150px !important;
+  max-width: 117px !important;
+  height: 32px;
+  width: 100% !important;
 }
 .komodo-header .hs_cos_wrapper_type_logo a {
   display: flex;

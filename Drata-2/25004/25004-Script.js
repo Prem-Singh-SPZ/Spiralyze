@@ -92,7 +92,7 @@
 
   // Create input label with placeholder text
   function appendInputLabel() {
-    document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form .hs-input').forEach(function (el) {
+    document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form.hs-form .hs-input').forEach(function (el) {
       let oldLabel = el.closest('.field').querySelector('label[id]').textContent;
       const label = document.createElement("label");
       label.innerHTML = oldLabel || el.placeholder;
@@ -111,7 +111,7 @@
 
   // On input focus add class on closest parent .field class
   function focusFields() {
-    document.querySelectorAll('.hs-input').forEach(function (el) {
+    document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input').forEach(function (el) {
       // On input focus add .field-focus class on closest parent .field class
       el.addEventListener('focus', function () {
         el.closest('.field').classList.add('field-focus');
