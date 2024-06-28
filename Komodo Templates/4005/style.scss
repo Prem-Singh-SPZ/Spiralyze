@@ -121,44 +121,65 @@ header.komodo-header {
       margin: auto;
       box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.55);
 
-      a {
-        color: $color_1;
-        display: block;
-        font-weight: 400;
-        padding: 5px 15px;
-        text-transform: none;
-        font-size: 20px;
-        transition: 250ms background ease-in-out;
-
-        &::after {
-          content: "";
-        }
-
-        &:hover {
-          background-color: #485355;
-        }
-      }
-      li {
+      li.hs-menu-depth-2 {
         padding: 0;
         width: -webkit-fill-available;
-      }
-      .hs-menu-depth-2.hs-item-has-children {
-        .hs-menu-children-wrapper {
-          display: none;
-        }
-        &.active {
-          padding-bottom: 20px;
-          .hs-menu-children-wrapper {
+        a {
+          display: block;
+          padding: 20px 12px;
+          text-transform: none;
+          border-left: 1px solid transparent;
+          transition: 250ms background ease-in-out;
+
+          .anchor-item {
             display: flex;
-            justify-content: space-between;
-            flex-wrap: wrap;
-            position: absolute;
-            .hs-menu-item.hs-menu-depth-3 {
-              flex: 0 0 50%;
+
+            .anchor-img {
+              display: none;
+            }
+
+            .anchor-text {
+              font-weight: 700;
+              color: #ffffff;
+              font-size: 20px;
+              line-height: 28px;
+              margin-bottom: 8px;
+            }
+
+            .short-description {
+              color: #f0eeee;
+              font-size: 16px;
+              font-weight: 400;
+              line-height: 24px;
+            }
+          }
+
+          &:hover {
+            border-radius: 2px;
+            border-left: 1px solid #68cce8;
+            background: #41585e;
+          }
+        }
+
+        &.hs-item-has-children {
+          .hs-menu-children-wrapper {
+            display: none;
+          }
+          &.active {
+            padding-bottom: 20px;
+            .hs-menu-children-wrapper {
+              display: flex;
+              justify-content: space-between;
+              flex-wrap: wrap;
+              position: absolute;
+              .hs-menu-item.hs-menu-depth-3 {
+                flex: 0 0 50%;
+              }
             }
           }
         }
       }
+
       .hs-menu-depth-3 {
         a {
           padding-left: 35px;
