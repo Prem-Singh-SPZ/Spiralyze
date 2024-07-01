@@ -515,8 +515,8 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row {
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
-  max-width: 600px;
-  padding: 0 64px 47px;
+  max-width: 620px;
+  padding: 63px 64px 47px;
   margin: auto;
 }
 
@@ -535,7 +535,7 @@ body.spz-3024 #hero .spz-form-title {
   margin-top: 49px;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper {
-  height: 40px;
+  height: auto;
   overflow: hidden;
   display: block;
   position: relative;
@@ -554,9 +554,14 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
   font-style: italic;
   font-weight: 300;
   line-height: 40px;
+  width: 100%;
+  opacity: 0;
+  position: absolute;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item:nth-child(1) {
   animation: fade-up 1000ms ease-in-out 2s infinite alternate;
+  opacity: 1;
+  position: relative;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height.active {
   opacity: 1;
@@ -568,7 +573,7 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height.active {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-50px);
+    transform: translateY(-100px);
   }
 }
 body.spz-3024.spz-ppc-eptura-preventive #hero .spz-form-title {
@@ -700,7 +705,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol .spz-site-
   display: flex;
   height: fit-content;
   width: 100%;
-  max-width: 600px;
+  max-width: 620px;
   margin: auto;
 }
 
@@ -793,8 +798,7 @@ body.spz-3024 .spz-footer {
   display: flex;
   flex-wrap: wrap;
   width: 100%;
-  padding-top: 64px;
-  padding-bottom: 56px;
+  padding: 40px 4px;
   margin-top: auto;
 }
 
@@ -867,7 +871,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol {
   width: 100%;
   display: flex !important;
   flex-wrap: wrap;
-  align-content: space-between;
+  align-content: baseline;
   min-height: 100vh;
   background: #ffffff;
 }
@@ -1003,13 +1007,6 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   body.spz-3024 .spz-hero-contents {
     width: calc(100% - 1000px);
   }
-  body.spz-3024 .spz-hero-contents .spz-hero-content-wrap .spz-hero-image-list {
-    flex-grow: 1;
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: column;
-    justify-content: center;
-  }
 }
 @media (min-width: 767.98px) and (max-width: 1199.98px) {
   body.spz-3024 .body-wrapper > footer .page_padding {
@@ -1064,13 +1061,17 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   body.spz-3024.ppc-eptura .body-wrapper #hero .hero_container > .row #HeroText .hero-list-copy {
     padding-right: 14px;
   }
+  body.spz-3024 .spz-hero-contents .spz-hero-content-wrap .spz-hero-image-list {
+    flex-grow: 1;
+    align-content: center;
+  }
 }
 @media (max-width: 1600.98px) {
   body.spz-3024 .spz-hero-contents {
-    width: calc(100% - 600px);
+    width: calc(100% - 620px);
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol {
-    max-width: 600px;
+    max-width: 620px;
   }
   body.spz-3024 .spz-hero-contents .spz-hero-content-wrap {
     max-width: 740px;
@@ -1143,6 +1144,10 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     margin-top: 40px;
     margin-bottom: 28px;
   }
+  body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
+    font-size: 26px;
+    line-height: 34px;
+  }
   body.spz-3024.spz-ppc-eptura-preventive #hero .spz-form-title {
     font-size: 36px;
     line-height: 44px;
@@ -1151,6 +1156,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     padding-left: 24px;
     padding-right: 24px;
     padding-bottom: 40px;
+    padding-top: 40px;
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
     width: 100% !important;
@@ -1173,8 +1179,8 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     width: 100%;
     justify-content: space-between;
     padding-bottom: 8px;
-    padding-left: 15px;
-    padding-right: 15px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
   body.spz-3024 .spz-footer .spz-footer-copyright {
     display: block;
@@ -1194,7 +1200,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     margin-top: 16px;
   }
   body.spz-3024 .spz-hero-contents {
-    padding-top: 88px;
+    padding-top: 128px;
   }
   body.spz-3024 .spz-hero-contents .spz-hero-list {
     margin-top: 40px;
@@ -1344,15 +1350,26 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
     max-width: initial;
-    padding-left: 30px;
-    padding-right: 30px;
-    padding-bottom: 32px;
+    padding: 0 30px 40px;
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a {
     padding: 0;
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
     margin-top: 16px;
+  }
+  body.spz-3024 #hero .spz-form-title {
+    font-size: 24px;
+    line-height: 32px;
+    margin-top: 32px;
+    margin-bottom: 28px;
+  }
+  body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
+    font-size: 24px;
+    line-height: 32px;
+  }
+  body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol {
+    min-height: auto;
   }
   body.spz-3024 .spz-hero-contents {
     padding-top: 64px;
@@ -1373,8 +1390,8 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     padding-top: 56px;
   }
   body.spz-3024 .spz-footer .spz-footer-links {
-    padding-left: 18px;
-    padding-right: 18px;
+    padding-left: 14px;
+    padding-right: 14px;
     padding-bottom: 12px;
   }
   body.spz-3024 .spz-footer .spz-footer-links li {
@@ -1394,6 +1411,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 .spz-3024 .spz-testimonials {
   position: relative;
   overflow: hidden;
+  margin-top: 64px;
 }
 
 .spz-3024 .spz-testimonials-wrap {
@@ -1415,7 +1433,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   font-size: 18px !important;
   font-style: normal;
   font-weight: 300 !important;
-  line-height: 26px;
+  line-height: 28px;
   padding: 0 1px 0 0 !important;
   margin: 0 0 24px;
   display: -webkit-box;
@@ -1441,8 +1459,8 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info img {
-  width: 48px;
-  height: 48px;
+  width: 40px;
+  height: 40px;
   border-radius: 48px;
   margin-right: 12px;
 }
@@ -1450,12 +1468,11 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h4 {
   color: #fff;
   font-family: "Eptura Flexible", Arial, sans-serif;
-  font-size: 16px;
+  font-size: 14px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 24px;
+  font-weight: 700;
+  line-height: 20px;
   margin: 0;
-  opacity: 0.7;
 }
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h6 {
@@ -1467,7 +1484,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   line-height: 20px;
   letter-spacing: unset !important;
   margin: 0;
-  opacity: 0.7;
+  opacity: 0.8;
   display: -webkit-box;
   -webkit-line-clamp: 1;
   -webkit-box-orient: vertical;
@@ -1477,7 +1494,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .company-info {
   border-left: 1px solid rgb(217, 220, 226);
-  padding-left: 11px;
+  padding-left: 16px;
 }
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .company-info img {
@@ -1488,30 +1505,49 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 
 @media (max-width: 1023.98px) {
   .spz-3024 .spz-testimonials-wrap {
-    margin: 0 24px;
-    padding: 23px 0 24px;
+    padding: 28px 20px;
   }
   .spz-3024 .spz-testimonial .spz-testimonial-content {
     font-size: 16px !important;
     line-height: 24px;
+    -webkit-line-clamp: 4;
   }
   .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h4 {
-    font-size: 14px;
-    line-height: 20px;
+    font-size: 13px;
+    line-height: 18px;
   }
   .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h6 {
     font-size: 12px;
     line-height: 18px;
   }
+  .spz-3024 .spz-testimonial .spz-testimonial-author .company-info {
+    padding-left: 12px;
+  }
+  .spz-3024 .spz-testimonial .spz-testimonial-author .company-info img {
+    width: auto;
+    height: 40px;
+    object-fit: contain;
+  }
 }
 @media (max-width: 767.98px) {
+  .spz-3024 .spz-testimonials {
+    margin-top: 40px;
+  }
+  .spz-3024 .spz-testimonials .spz-testimonials-wrap {
+    padding: 24px 20px;
+    max-width: 89.3%;
+  }
   .mobile-only-br {
     display: block;
   }
   .spz-3024 .spz-testimonial .spz-testimonial-author .author-info img {
-    width: 40px;
-    height: 40px;
+    width: 36px;
+    height: 36px;
     border-radius: 40px;
+  }
+  .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h4 {
+    font-size: 12px;
+    line-height: 18px;
   }
 }
 /* Testimonial CSS End Here */
