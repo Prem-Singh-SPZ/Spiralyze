@@ -64,6 +64,7 @@
 
 //on hover of .hs-item-has-children, add class .active
 document.querySelectorAll('.hs-item-has-children').forEach(item => {
+    item.classList.remove('active');
     item.addEventListener('mouseover', () => {
         item.classList.add('active');
     });

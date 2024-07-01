@@ -61,20 +61,22 @@ header.komodo-header {
       }
 
       &.hs-menu-depth-1 {
-        > a {
-          &::after {
-            content: "";
-            position: relative;
-            left: 2px;
-            top: 2px;
-            width: 16px;
-            height: 16px;
-            background: url(https://res.cloudinary.com/spiralyze/image/upload/v1719553071/komodohealth/4005/chevron.svg)
-              no-repeat;
-            background-size: cover;
-            background-position: center;
-            transition: 250ms background-color ease-in-out;
-            display: inline-block;
+        &.hs-item-has-children {
+          > a {
+            &::after {
+              content: "";
+              position: relative;
+              left: 2px;
+              top: 2px;
+              width: 16px;
+              height: 16px;
+              background: url(https://res.cloudinary.com/spiralyze/image/upload/v1719553071/komodohealth/4005/chevron.svg)
+                no-repeat;
+              background-size: cover;
+              background-position: center;
+              transition: 250ms background-color ease-in-out;
+              display: inline-block;
+            }
           }
         }
 
@@ -166,7 +168,7 @@ header.komodo-header {
             display: none;
           }
 
-        >  a {
+          > a {
             .anchor-item .anchor-text {
               &::after {
                 content: "";
