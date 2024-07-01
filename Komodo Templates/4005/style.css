@@ -20,9 +20,15 @@ header.komodo-header {
 
 .komodo-header__container {
   height: 84px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   margin: 0 auto;
   width: 100%;
   max-width: 1180px;
@@ -30,12 +36,20 @@ header.komodo-header {
 }
 
 .komodo-header__menu {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 .komodo-header__menu ul {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
   padding: 0;
   margin: 0;
   list-style: none;
@@ -50,6 +64,7 @@ header.komodo-header {
   font-weight: 600;
   line-height: 26px;
   letter-spacing: 0;
+  -webkit-transition: 250ms color ease-in-out;
   transition: 250ms color ease-in-out;
   text-decoration: none !important;
   position: relative;
@@ -67,6 +82,7 @@ header.komodo-header {
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1719553071/komodohealth/4005/chevron.svg) no-repeat;
   background-size: cover;
   background-position: center;
+  -webkit-transition: 250ms background-color ease-in-out;
   transition: 250ms background-color ease-in-out;
   display: inline-block;
 }
@@ -75,9 +91,11 @@ header.komodo-header {
   background: #000;
 }
 .komodo-header__menu ul li.hs-menu-depth-1.active > a::after {
-  transform: rotate(180deg);
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
 }
 .komodo-header__menu .hs-menu-wrapper {
+  -webkit-transition: opacity 0.3s ease-in-out;
   transition: opacity 0.3s ease-in-out;
   opacity: 1;
 }
@@ -104,7 +122,8 @@ header.komodo-header {
   z-index: 2;
   max-width: 1180px;
   margin: auto;
-  box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.55);
+  -webkit-box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.55);
+          box-shadow: 0px 4px 34px 0px rgba(0, 0, 0, 0.55);
 }
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2 {
   padding: 0;
@@ -115,9 +134,12 @@ header.komodo-header {
   padding: 20px 12px;
   text-transform: none;
   border-left: 1px solid transparent;
+  -webkit-transition: 250ms background ease-in-out;
   transition: 250ms background ease-in-out;
 }
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2 a .anchor-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2 a .anchor-item .anchor-img {
@@ -144,24 +166,54 @@ header.komodo-header {
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2.hs-item-has-children .hs-menu-children-wrapper {
   display: none;
 }
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2.hs-item-has-children > a .anchor-item .anchor-text::after {
+  content: "";
+  position: relative;
+  left: 2px;
+  top: 2px;
+  width: 16px;
+  height: 16px;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/komodohealth/4005/chevron.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+  -webkit-transition: 250ms background-color ease-in-out;
+  transition: 250ms background-color ease-in-out;
+  display: inline-block;
+}
+.komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2.hs-item-has-children > a:hover .anchor-item .anchor-text::after {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/KomodoHealth/4005/Chevron_Blue.svg) no-repeat;
+  background-size: cover;
+  background-position: center;
+}
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2.hs-item-has-children.active {
   padding-bottom: 20px;
 }
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2.hs-item-has-children.active .hs-menu-children-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   position: absolute;
 }
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper li.hs-menu-depth-2.hs-item-has-children.active .hs-menu-children-wrapper .hs-menu-item.hs-menu-depth-3 {
-  flex: 0 0 50%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 50%;
+          flex: 0 0 50%;
 }
 .komodo-header .hs-menu-depth-1 .hs-menu-children-wrapper .hs-menu-depth-3 a {
   padding-left: 35px;
 }
 .komodo-header .hs-menu-depth-1.active > .hs-menu-children-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 .komodo-header .hs-item-has-children .hs-menu-children-wrapper a {
   color: #68cce8;
@@ -170,6 +222,7 @@ header.komodo-header {
   padding: 5px 15px;
   text-transform: none;
   font-size: 20px;
+  -webkit-transition: 250ms background ease-in-out;
   transition: 250ms background ease-in-out;
 }
 .komodo-header .hs-item-has-children .hs-menu-children-wrapper .hs-menu-depth-3 a {
@@ -184,6 +237,8 @@ header.komodo-header {
   width: 100% !important;
 }
 .komodo-header .hs_cos_wrapper_type_logo a {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 .komodo-header .nav-contact-btn {
@@ -195,9 +250,15 @@ header.komodo-header {
   transition: background-color 0.3s linear, opacity 0.3s ease-in-out;
   min-width: 118px;
   height: 40px;
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   font-family: Titillium Web;
   font-size: 16px;
   font-style: normal;
@@ -217,26 +278,38 @@ header.komodo-header {
 
 .komodo-header__search {
   cursor: pointer;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-left: 20px;
   width: 40px;
   height: 40px;
   text-decoration: none !important;
+  -webkit-transition: 250ms background ease-in-out;
   transition: 250ms background ease-in-out;
 }
 .komodo-header__search svg {
   width: 25px;
   height: 25px;
+  -webkit-transition: 250ms -webkit-transform ease-in-out;
+  transition: 250ms -webkit-transform ease-in-out;
   transition: 250ms transform ease-in-out;
+  transition: 250ms transform ease-in-out, 250ms -webkit-transform ease-in-out;
 }
 .komodo-header__search svg .x-icon {
+  -webkit-transition: opacity 0.25s ease, visibility 0.25s ease;
   transition: opacity 0.25s ease, visibility 0.25s ease;
   opacity: 0;
   visibility: hidden;
 }
 .komodo-header__search svg .magnify {
+  -webkit-transition: opacity 0.25s ease, visibility 0.25s ease;
   transition: opacity 0.25s ease, visibility 0.25s ease;
 }
 
@@ -258,6 +331,7 @@ header.komodo-header {
   max-width: 0px;
   outline: none;
   padding: 10px 0 !important;
+  -webkit-transition: 300ms ease-in-out max-width, 300ms padding ease-in-out, 150ms ease opacity;
   transition: 300ms ease-in-out max-width, 300ms padding ease-in-out, 150ms ease opacity;
   opacity: 0;
   visibility: hidden;
@@ -268,7 +342,8 @@ header.komodo-header {
   background: #68cce8;
 }
 .komodo-header__menu.active .komodo-header__search svg {
-  transform: scale(0.76);
+  -webkit-transform: scale(0.76);
+          transform: scale(0.76);
   stroke: #fff;
 }
 .komodo-header__menu.active .komodo-header__search svg circle {
@@ -321,10 +396,16 @@ header.komodo-header {
 .komodo-header__form__suggestions .komodo-health__search__see-all {
   color: #000;
   font-size: 16px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   gap: 12px;
-  justify-content: flex-end;
+  -webkit-box-pack: end;
+      -ms-flex-pack: end;
+          justify-content: flex-end;
   text-decoration: none !important;
   border-bottom: none;
 }
@@ -350,16 +431,21 @@ header.komodo-header {
   display: block;
   height: 2px;
   margin-bottom: 6px;
+  -webkit-transition: opacity 0.2s cubic-bezier(0.3, 0, 0.22, 1), -webkit-transform 0.4s cubic-bezier(0.3, 0, 0.22, 1);
+  transition: opacity 0.2s cubic-bezier(0.3, 0, 0.22, 1), -webkit-transform 0.4s cubic-bezier(0.3, 0, 0.22, 1);
   transition: transform 0.4s cubic-bezier(0.3, 0, 0.22, 1), opacity 0.2s cubic-bezier(0.3, 0, 0.22, 1);
+  transition: transform 0.4s cubic-bezier(0.3, 0, 0.22, 1), opacity 0.2s cubic-bezier(0.3, 0, 0.22, 1), -webkit-transform 0.4s cubic-bezier(0.3, 0, 0.22, 1);
 }
 .komodo-header__hamburger span:first-of-type {
-  transform-origin: top right;
+  -webkit-transform-origin: top right;
+          transform-origin: top right;
 }
 .komodo-header__hamburger span:nth-of-type(2) {
   margin: auto 0 6px auto;
 }
 .komodo-header__hamburger span:last-of-type {
-  transform-origin: bottom right;
+  -webkit-transform-origin: bottom right;
+          transform-origin: bottom right;
 }
 
 .komodo-header__dropdown {
@@ -398,6 +484,7 @@ input[type=search]::-webkit-search-cancel-button {
     display: block;
     max-height: 0px;
     padding-bottom: 0;
+    -webkit-transition: 300ms max-height ease-in-out, 300ms padding-bottom ease-in-out;
     transition: 300ms max-height ease-in-out, 300ms padding-bottom ease-in-out;
   }
   .komodo-header__dropdown .hs_cos_wrapper_type_menu {
@@ -453,6 +540,8 @@ input[type=search]::-webkit-search-cancel-button {
   .komodo-header__dropdown .nav-contact-btn {
     margin: 40px auto 0;
     display: block;
+    width: -webkit-max-content !important;
+    width: -moz-max-content !important;
     width: max-content !important;
     position: relative;
     z-index: 2;
@@ -470,15 +559,18 @@ input[type=search]::-webkit-search-cancel-button {
   }
   .komodo-header__hamburger.open span:first-of-type {
     top: -1;
-    transform: rotate(-45deg) translateY(-2px);
+    -webkit-transform: rotate(-45deg) translateY(-2px);
+            transform: rotate(-45deg) translateY(-2px);
   }
   .komodo-header__hamburger.open span:nth-of-type(2) {
     opacity: 0;
-    transform: translateX(100%);
+    -webkit-transform: translateX(100%);
+            transform: translateX(100%);
   }
   .komodo-header__hamburger.open span:last-of-type {
     bottom: -1;
-    transform: rotate(45deg) translateY(2px);
+    -webkit-transform: rotate(45deg) translateY(2px);
+            transform: rotate(45deg) translateY(2px);
   }
 }
 @media (max-width: 640px) {

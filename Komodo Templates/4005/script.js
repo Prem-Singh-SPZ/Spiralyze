@@ -62,10 +62,21 @@
 //     return result;
 // }
 
-//on click of .hs-item-has-children, add class .active and remove
+//on hover of .hs-item-has-children, add class .active
 document.querySelectorAll('.hs-item-has-children').forEach(item => {
-    item.addEventListener('click', event => {
-        event.preventDefault();
-        item.classList.toggle('active');
+    item.addEventListener('mouseover', () => {
+        item.classList.add('active');
     });
+
+    //onclick outside of the element, remove class .active
+    document.addEventListener('click', (e) => {
+        if (!item.contains(e.target)) {
+            item.classList.remove('active');
+        }
+    });
+    // item.addEventListener('mouseout', () => {    
+    //     item.classList.remove('active');
+    // });
 });
+
+

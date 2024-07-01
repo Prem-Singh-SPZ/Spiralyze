@@ -165,6 +165,36 @@ header.komodo-header {
           .hs-menu-children-wrapper {
             display: none;
           }
+
+        >  a {
+            .anchor-item .anchor-text {
+              &::after {
+                content: "";
+                position: relative;
+                left: 2px;
+                top: 2px;
+                width: 16px;
+                height: 16px;
+                background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/komodohealth/4005/chevron.svg)
+                  no-repeat;
+                background-size: cover;
+                background-position: center;
+                transition: 250ms background-color ease-in-out;
+                display: inline-block;
+              }
+            }
+
+            &:hover {
+              .anchor-item .anchor-text::after {
+                background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/KomodoHealth/4005/Chevron_Blue.svg)
+                  no-repeat;
+                background-size: cover;
+                background-position: center;
+                // transform: rotate(180deg);
+              }
+            }
+          }
+
           &.active {
             padding-bottom: 20px;
             .hs-menu-children-wrapper {
