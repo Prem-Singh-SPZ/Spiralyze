@@ -338,13 +338,12 @@ page_setup.forEach(it => {
 
         function showSlides2() {
             //animation start
-            jQuery('.spz-form-title .item:nth-child(1)').animate({
-                height: 'hide'
-            }, 800);
+            // jQuery('.spz-form-title .item:nth-child(1)').animate({
+            //     height: 'hide'
+            // }, 800);
 
             setTimeout(function () {
                 var attr = jQuery('.spz-form-title .item:nth-child(1)').attr('data-order');
-                console.log(attr);
                 if (typeof attr !== 'undefined' && attr !== false) {
                     //check if not dummy then enter
                     //debugger;
@@ -359,7 +358,7 @@ page_setup.forEach(it => {
                     //if dummy remove item
                     jQuery('.spz-form-title .item:nth-child(1)').remove();
                 }
-            }, 800);
+            }, 100);
 
             setTimeout(showSlides2, 3000);
         }

@@ -542,7 +542,6 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper {
   z-index: 1;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height {
-  margin-top: -42px;
   display: block;
   position: relative;
   z-index: 1;
@@ -550,12 +549,28 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height {
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
   position: relative;
   z-index: 1;
+  color: #904ab0;
+  font-size: 32px;
+  font-style: italic;
+  font-weight: 300;
+  line-height: 40px;
+}
+body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item:nth-child(1) {
+  animation: fade-up 1000ms ease-in-out 2s infinite alternate;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height.active {
   opacity: 1;
   transition: opacity 0.2s ease-in;
 }
 
+@keyframes fade-up {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-50px);
+  }
+}
 body.spz-3024.spz-ppc-eptura-preventive #hero .spz-form-title {
   font-size: 46px;
   line-height: 54px;
@@ -1381,44 +1396,21 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   overflow: hidden;
 }
 
-.spz-3024 .spz-testimonials::before {
-  position: absolute;
-  content: "";
-  bottom: -170px;
-  left: -39px;
-  width: 316px;
-  height: 492px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1707909554/eptura/3018/graphics-quotes-2_desktop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-
-.spz-3024 .spz-testimonials::after {
-  position: absolute;
-  content: "";
-  top: -87px;
-  right: -22px;
-  width: 316px;
-  height: 492px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1707909554/eptura/3018/graphics-quotes-1_desktop.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-}
-
 .spz-3024 .spz-testimonials-wrap {
-  margin: 0 64px;
-  padding: 48px 0 47px;
-  border-top: 1px solid rgb(217, 220, 226);
+  margin: 0 auto;
+  max-width: 582px;
+  padding: 32px 40px;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
   position: relative;
   z-index: 99;
 }
 
-/* .spz-3024 .spz-testimonials-slider .spz-testimonial {
+/* .spz-3024  .spz-testimonial {
     cursor: pointer;
 } */
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-content {
-  color: #0d122e !important;
+.spz-3024 .spz-testimonial .spz-testimonial-content {
+  color: #fff !important;
   font-family: "Eptura Flexible Light", Arial, sans-serif;
   font-size: 18px !important;
   font-style: normal;
@@ -1432,31 +1424,31 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   overflow: hidden;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-content strong {
+.spz-3024 .spz-testimonial .spz-testimonial-content strong {
   font-weight: 500;
   font-family: "Eptura Flexible", Arial, sans-serif;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author,
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info {
+.spz-3024 .spz-testimonial .spz-testimonial-author,
+.spz-3024 .spz-testimonial .spz-testimonial-author .author-info {
   display: flex;
   align-items: center;
   justify-content: space-between;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info {
+.spz-3024 .spz-testimonial .spz-testimonial-author .author-info {
   padding-right: 12px;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info img {
+.spz-3024 .spz-testimonial .spz-testimonial-author .author-info img {
   width: 48px;
   height: 48px;
   border-radius: 48px;
   margin-right: 12px;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h4 {
-  color: #0d122e;
+.spz-3024 .spz-testimonial .spz-testimonial-author .author-info h4 {
+  color: #fff;
   font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -1466,8 +1458,8 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   opacity: 0.7;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 {
-  color: #0d122e !important;
+.spz-3024 .spz-testimonial .spz-testimonial-author .author-info h6 {
+  color: #fff !important;
   font-family: "Eptura Flexible Light", Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
@@ -1483,43 +1475,31 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   word-break: break-all;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .company-info {
+.spz-3024 .spz-testimonial .spz-testimonial-author .company-info {
   border-left: 1px solid rgb(217, 220, 226);
   padding-left: 11px;
 }
 
-.spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .company-info img {
+.spz-3024 .spz-testimonial .spz-testimonial-author .company-info img {
   width: auto;
   height: 48px;
   object-fit: contain;
 }
 
 @media (max-width: 1023.98px) {
-  .spz-3024 .spz-testimonials::before {
-    bottom: -105px;
-    left: -12px;
-    width: 206px;
-    height: 321px;
-  }
-  .spz-3024 .spz-testimonials::after {
-    top: -12px;
-    right: -38px;
-    width: 206px;
-    height: 322px;
-  }
   .spz-3024 .spz-testimonials-wrap {
     margin: 0 24px;
     padding: 23px 0 24px;
   }
-  .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-content {
+  .spz-3024 .spz-testimonial .spz-testimonial-content {
     font-size: 16px !important;
     line-height: 24px;
   }
-  .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h4 {
+  .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h4 {
     font-size: 14px;
     line-height: 20px;
   }
-  .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 {
+  .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h6 {
     font-size: 12px;
     line-height: 18px;
   }
@@ -1528,19 +1508,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   .mobile-only-br {
     display: block;
   }
-  .spz-3024 .spz-testimonials::before {
-    bottom: -58px;
-    left: -12px;
-    width: 175px;
-    height: 273px;
-  }
-  .spz-3024 .spz-testimonials::after {
-    top: 8px;
-    right: -32px;
-    width: 175px;
-    height: 273px;
-  }
-  .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info img {
+  .spz-3024 .spz-testimonial .spz-testimonial-author .author-info img {
     width: 40px;
     height: 40px;
     border-radius: 40px;
