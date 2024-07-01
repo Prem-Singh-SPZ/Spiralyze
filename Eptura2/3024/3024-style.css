@@ -3,7 +3,7 @@ body:not(.spz-load-complete) {
 }
 
 body.spz-3024 #hero {
-  background: #1B203B;
+  background: #1b203b;
 }
 
 body.spz-3024 #HeaderScripts.mktoText {
@@ -499,7 +499,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container > .
 
 /* Additional Css */
 body.spz-3024 {
-  background: linear-gradient(180deg, #20253F 0%, #0D122E 151.2%);
+  background: linear-gradient(180deg, #20253f 0%, #0d122e 151.2%);
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container {
@@ -529,10 +529,31 @@ body.spz-3024 #hero .spz-form-title {
   line-height: 40px;
   letter-spacing: 0em;
   text-align: left;
-  color: #0D122E;
+  color: #0d122e;
   display: block;
   margin-bottom: 39px;
   margin-top: 49px;
+}
+body.spz-3024 #hero .spz-form-title .title-anim-wrapper {
+  height: 40px;
+  overflow: hidden;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height {
+  margin-top: -42px;
+  display: block;
+  position: relative;
+  z-index: 1;
+}
+body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
+  position: relative;
+  z-index: 1;
+}
+body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height.active {
+  opacity: 1;
+  transition: opacity 0.2s ease-in;
 }
 
 body.spz-3024.spz-ppc-eptura-preventive #hero .spz-form-title {
@@ -544,9 +565,9 @@ body.spz-3024.spz-ppc-archibus #hero .spz-form-title {
   padding: 0;
 }
 
-body.spz-3024 #hero .spz-form-title span {
+body.spz-3024 #hero .spz-form-title span.p-bold {
   font-weight: 500;
-  color: #904AB0;
+  color: #904ab0;
   font-family: "Eptura Flexible", Arial, sans-serif;
   line-height: 1;
   display: initial;
@@ -560,7 +581,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   line-height: 20px;
   letter-spacing: 2.6px;
   text-align: left;
-  color: #904AB0;
+  color: #904ab0;
   margin: 0;
   margin-bottom: 40px;
   position: relative;
@@ -573,7 +594,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   top: 50%;
   right: 0;
   width: calc(100% - 140px);
-  border-bottom: 1px solid #D9DCE2;
+  border-bottom: 1px solid #d9dce2;
   transform: translateY(-50%);
   opacity: 0.7;
 }
@@ -634,11 +655,11 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a {
-  color: #1B4BC5;
+  color: #1b4bc5;
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a:hover {
-  color: #0D122E;
+  color: #0d122e;
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
@@ -728,7 +749,7 @@ body.spz-3024 .spz-hero-contents .spz-hero-list li {
   line-height: 28px;
   letter-spacing: 0em;
   text-align: left;
-  color: #F6FAFA;
+  color: #f6fafa;
   margin-bottom: 32px;
   padding-left: 40px;
   background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjQ0MjkgMi4xNTUzOEMxNC43OTY1IDIuMTU1MzggMTcuNjc4MSAwLjA4NzY5NTEgMjAuODM0NiAxLjQ4NDQ4QzI0LjAwMjEgMi44ODEyNiAyNC45Njk5IDYuNTQzNjkgMjIuOTI0MyAxMC4wNDEyQzIwLjg3ODYgMTMuNTM4NiAyMi42MjczIDIxLjQwMjQgMTYuOTk2MiAyMi40MjUyQzExLjU1MiAyMy40MTUxIDguNzgwNDUgMjEuODIwMyA0LjU5MDA5IDE4LjYzMDhDLTAuNDQ3MTI2IDE0LjgxNDQgLTIuMjE3ODUgMy4yMDAyMSAzLjgzMTIxIDEuMzE5NUM3LjE1MjY5IDAuMjk2NjYzIDguMzQwNTEgMi4xNTUzOCAxMi40NDI5IDIuMTU1MzhaIiBmaWxsPSIjOTA0QUIwIi8+CjxwYXRoIGQ9Ik04IDExTDExIDE0TDE3IDgiIHN0cm9rZT0iI0Y2RkFGQSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==");
@@ -794,7 +815,7 @@ body.spz-3024 .spz-footer .spz-footer-links li a {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
-  color: #F6FAFA;
+  color: #f6fafa;
   display: block;
   -webkit-transition: all 0.2s ease-in-out;
   -moz-transition: all 0.2s ease-in-out;
@@ -804,7 +825,7 @@ body.spz-3024 .spz-footer .spz-footer-links li a {
 }
 
 body.spz-3024 .spz-footer .spz-footer-links li a:hover {
-  color: #D6D7F5;
+  color: #d6d7f5;
 }
 
 body.spz-3024 .spz-footer .spz-footer-copyright {
@@ -816,7 +837,7 @@ body.spz-3024 .spz-footer .spz-footer-copyright {
   line-height: 18px;
   letter-spacing: 0em;
   text-align: left;
-  color: #F6FAFA;
+  color: #f6fafa;
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row > .col-md.pb-5 {
@@ -1397,7 +1418,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     cursor: pointer;
 } */
 .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-content {
-  color: #0D122E !important;
+  color: #0d122e !important;
   font-family: "Eptura Flexible Light", Arial, sans-serif;
   font-size: 18px !important;
   font-style: normal;
@@ -1435,7 +1456,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 
 .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h4 {
-  color: #0D122E;
+  color: #0d122e;
   font-family: "Eptura Flexible", Arial, sans-serif;
   font-size: 16px;
   font-style: normal;
@@ -1446,7 +1467,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 
 .spz-3024 .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 {
-  color: #0D122E !important;
+  color: #0d122e !important;
   font-family: "Eptura Flexible Light", Arial, sans-serif;
   font-size: 14px;
   font-style: normal;
