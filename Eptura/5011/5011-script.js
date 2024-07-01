@@ -270,6 +270,13 @@ function waitForElm(selector) {
 function addPageContent() {
     document.querySelector('.title-part').innerHTML = '';
 
+    if (document.querySelector('header .right-links > .link')) {
+        const csLink = document.querySelector('header .right-links > .link');
+        csLink.querySelector('a').textContent = 'Customer support';
+        csLink.classList.add('button-1');
+        csLink.classList.remove('link');
+    }
+
     document.querySelector('.form-container').insertAdjacentHTML('afterbegin', `<div class="step-1-wrapper"><div class="form-title"><p class="sub-title">Get in touch</p><p class="title">How can we help?</p></div><div class="step-1-steps"><div class="card-1 spz-card"><a href="javascript:void(0)" class="show-form"><img src='//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/5011/icon_01.svg' alt="Contact Sales"><p>Contact Sales</p></a></div> <div class="card-2 spz-card"><a href="https://eptura.com/support/"><img src='//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/5011/icon_02.svg' alt="Product Support"><p>Product Support</p></a></div> <div class="card-3 spz-card"><a href="https://eptura.com/offices/"><img src='//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/eptura/5011/icon_03.svg' alt="Office Locations"><p>Office Locations</p></div></a></div></div>`);
 
     document.querySelector('.form-container .default-form.get-form').insertAdjacentHTML('afterbegin', `<div class="form-title"><p class="sub-title">demo & pricing</p><p class="title">Contact Sales</p></div>`);
