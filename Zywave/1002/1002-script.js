@@ -30,7 +30,7 @@ let bodyLoaded = setInterval(function () {
               <path d="M6 6L18 18" stroke="#0F2D52" stroke-opacity="0.5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"></path>
             </svg>
           </div>`);
-                var headerCTA = document.querySelectorAll('.spz-1002 .zy-header-container .zy-top-demo-container a, .spz-1002 .zy-header-bottom-inner .zy-header-bottom-demo a, .spz-1002 .zy-mobile-nav-container .zy-mobile-nav-footer a');
+                var headerCTA = document.querySelectorAll('.spz-1002 a[href="#zy-demo-form-section"]');
                 headerCTA.forEach(function (element) {
                     element.addEventListener('click', function (e) {
                         e.preventDefault();
