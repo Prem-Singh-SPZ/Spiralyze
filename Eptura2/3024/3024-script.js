@@ -83,7 +83,9 @@ let page_setup = [
             "Improve asset availability",
         ],
         "testimonial_slide": [
-            "<div class=\"swiper-slide spz-testimonial\">\n <p class=\"spz-testimonial-content\">We <strong>reduced the time</strong> for the receptionist to welcome each visitor <strong>by 50%.</strong> But the most important isn't the time we save, it's the time it gives us to <strong>better welcome</strong> our visitors.</p>\n <div class=\"spz-testimonial-author\">\n <div class=\"author-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/Eric-Van-Lint.png\" alt=\"Eric Van Lint\" title=\"Eric Van Lint\">\n <div class=\"name\">\n <h4>Eric Van Lint</h4>\n <h6>Senior Alliance Manager</h6>\n </div>\n </div>\n <div class=\"company-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3024/logo_-_dimension_data_webp.webp\" alt=\"Dimension Data Logo\" title=\"Dimension Data Logo\">\n </div>\n </div>\n </div>"
+            `<div class="swiper-slide spz-testimonial"> <p class="spz-testimonial-content">We <strong>reduced the time</strong> for the receptionist to welcome each visitor <strong>by 50%.</strong> But the most important isn't the time we save, it's the time it gives us to <strong>better welcome</strong> our visitors.</p> <div class="spz-testimonial-author"> <div class="author-info"> <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/Eric-Van-Lint.png" alt="Eric Van Lint" title="Eric Van Lint"> <div class="name"> <h4>Eric Van Lint</h4> <h6>Senior Alliance Manager</h6> </div> </div> <div class="company-info"> <picture><source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824907/eptura/3024/logo_-_dimension_data.svg"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824920/eptura/3024/logo_-_dimension_data_tablet.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824932/eptura/3024/logo_-_dimension_data_mobile.svg" alt="Dimension Data Logo">
+            </picture> </div> </div> </div>`
         ]
     },
     {
@@ -104,7 +106,11 @@ let page_setup = [
             "Extend asset longevity",
         ],
         "testimonial_slide": [
-            "<div class=\"swiper-slide spz-testimonial\">\n <p class=\"spz-testimonial-content\">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management easier</strong> on all of our staff members and team.</p>\n <div class=\"spz-testimonial-author\">\n <div class=\"author-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png\" alt=\"Alissa Hall\" title=\"Alissa Hall\">\n <div class=\"name\">\n <h4>Alissa Hall</h4>\n <h6>Maintenance Manager</h6>\n </div>\n </div>\n <div class=\"company-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg\" alt=\"Deer Valley Logo\" title=\"Deer Valley Logo\">\n </div>\n </div>\n </div>"
+            `<div class="swiper-slide spz-testimonial"><p class="spz-testimonial-content">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management easier</strong> on all of our staff members and team.</p><div class="spz-testimonial-author"><div class="author-info"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png" alt="Alissa Hall" title="Alissa Hall"><div class="name"><h4>Alissa Hall</h4><h6>Maintenance Manager</h6></div></div><div class="company-info"><picture>
+            <source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg">
+            <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824960/eptura/3024/logo_-_deer_valley_tablet.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824970/eptura/3024/logo_-_deer_valley_mobile.svg" alt="Deer Valley Logo">
+            </picture></div></div></div>`
         ]
     },
     {
@@ -126,7 +132,11 @@ let page_setup = [
             "Increase compliance",
         ],
         "testimonial_slide": [
-            "<div class=\"swiper-slide spz-testimonial\">\n <p class=\"spz-testimonial-content\">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management easier</strong> on all of our staff members and team.</p>\n <div class=\"spz-testimonial-author\">\n <div class=\"author-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png\" alt=\"Alissa Hall\" title=\"Alissa Hall\">\n <div class=\"name\">\n <h4>Alissa Hall</h4>\n <h6>Maintenance Manager</h6>\n </div>\n </div>\n <div class=\"company-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg\" alt=\"Deer Valley Logo\" title=\"Deer Valley Logo\">\n </div>\n </div>\n </div>"
+            `<div class="swiper-slide spz-testimonial"><p class="spz-testimonial-content">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management easier</strong> on all of our staff members and team.</p><div class="spz-testimonial-author"><div class="author-info"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png" alt="Alissa Hall" title="Alissa Hall"><div class="name"><h4>Alissa Hall</h4><h6>Maintenance Manager</h6></div></div><div class="company-info"><picture>
+            <source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg">
+            <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824960/eptura/3024/logo_-_deer_valley_tablet.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824970/eptura/3024/logo_-_deer_valley_mobile.svg" alt="Deer Valley Logo">
+            </picture></div></div></div>`
         ]
     },
     {
@@ -169,7 +179,11 @@ let page_setup = [
             "Reduce future costly repairs ",
         ],
         "testimonial_slide": [
-            "<div class=\"swiper-slide spz-testimonial\">\n <p class=\"spz-testimonial-content\">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management</strong> easier on all of our staff members and team.</p>\n <div class=\"spz-testimonial-author\">\n <div class=\"author-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png\" alt=\"Alissa Hall\" title=\"Alissa Hall\">\n <div class=\"name\">\n <h4>Alissa Hall</h4>\n <h6>Maintenance Manager</h6>\n </div>\n </div>\n <div class=\"company-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg\" alt=\"Deer Valley Logo\" title=\"Deer Valley Logo\">\n </div>\n </div>\n </div>"
+            `<div class="swiper-slide spz-testimonial"> <p class="spz-testimonial-content">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management</strong> easier on all of our staff members and team.</p> <div class="spz-testimonial-author"> <div class="author-info"> <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png" alt="Alissa Hall" title="Alissa Hall"> <div class="name"> <h4>Alissa Hall</h4> <h6>Maintenance Manager</h6> </div> </div> <div class="company-info"> <picture>
+            <source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg">
+            <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824960/eptura/3024/logo_-_deer_valley_tablet.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824970/eptura/3024/logo_-_deer_valley_mobile.svg" alt="Deer Valley Logo">
+            </picture> </div> </div> </div>`
         ]
     },
     {
@@ -190,7 +204,9 @@ let page_setup = [
             "Optimize guest experience",
         ],
         "testimonial_slide": [
-            "<div class=\"swiper-slide spz-testimonial\">\n <p class=\"spz-testimonial-content\">We <strong>reduced the time</strong> for the receptionist to welcome each visitor <strong>by 50%.</strong> But the most important isn't the time we save, it's the time it gives us to <strong>better welcome</strong> our visitors.</p>\n <div class=\"spz-testimonial-author\">\n <div class=\"author-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/Eric-Van-Lint.png\" alt=\"Eric Van Lint\" title=\"Eric Van Lint\">\n <div class=\"name\">\n <h4>Eric Van Lint</h4>\n <h6>Senior Alliance Manager</h6>\n </div>\n </div>\n <div class=\"company-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3024/logo_-_dimension_data_webp.webp\" alt=\"Dimension Data Logo\" title=\"Dimension Data Logo\">\n </div>\n </div>\n </div>"
+            `<div class="swiper-slide spz-testimonial"> <p class="spz-testimonial-content">We <strong>reduced the time</strong> for the receptionist to welcome each visitor <strong>by 50%.</strong> But the most important isn't the time we save, it's the time it gives us to <strong>better welcome</strong> our visitors.</p> <div class="spz-testimonial-author"> <div class="author-info"> <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/Eric-Van-Lint.png" alt="Eric Van Lint" title="Eric Van Lint"> <div class="name"> <h4>Eric Van Lint</h4> <h6>Senior Alliance Manager</h6> </div> </div> <div class="company-info"><picture><source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824907/eptura/3024/logo_-_dimension_data.svg"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824920/eptura/3024/logo_-_dimension_data_tablet.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824932/eptura/3024/logo_-_dimension_data_mobile.svg" alt="Dimension Data Logo">
+            </picture> </div> </div> </div>`
         ]
     },
     {
@@ -232,7 +248,9 @@ let page_setup = [
             "decreasing operational costs",
         ],
         "testimonial_slide": [
-            "<div class=\"swiper-slide spz-testimonial\">\n <p class=\"spz-testimonial-content\">We <strong>reduced the time</strong> for the receptionist to welcome each visitor <strong>by 50%.</strong> But the most important isn't the time we save, it's the time it gives us to <strong>better welcome</strong> our visitors.</p>\n <div class=\"spz-testimonial-author\">\n <div class=\"author-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/Eric-Van-Lint.png\" alt=\"Eric Van Lint\" title=\"Eric Van Lint\">\n <div class=\"name\">\n <h4>Eric Van Lint</h4>\n <h6>Senior Alliance Manager</h6>\n </div>\n </div>\n <div class=\"company-info\">\n <img src=\"//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3024/logo_-_dimension_data_webp.webp\" alt=\"Dimension Data Logo\" title=\"Dimension Data Logo\">\n </div>\n </div>\n </div>"
+            `<div class="swiper-slide spz-testimonial"> <p class="spz-testimonial-content">We <strong>reduced the time</strong> for the receptionist to welcome each visitor <strong>by 50%.</strong> But the most important isn't the time we save, it's the time it gives us to <strong>better welcome</strong> our visitors.</p> <div class="spz-testimonial-author"> <div class="author-info"> <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/Eric-Van-Lint.png" alt="Eric Van Lint" title="Eric Van Lint"> <div class="name"> <h4>Eric Van Lint</h4> <h6>Senior Alliance Manager</h6> </div> </div> <div class="company-info"><picture><source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824907/eptura/3024/logo_-_dimension_data.svg"><source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824920/eptura/3024/logo_-_dimension_data_tablet.svg">
+            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824932/eptura/3024/logo_-_dimension_data_mobile.svg" alt="Dimension Data Logo">
+            </picture> </div> </div> </div>`
         ]
     },
     {
@@ -506,7 +524,7 @@ page_setup.forEach(it => {
                 document.querySelector('#HeroFormCol #HeroFormTitleText').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><span class="const-title">${single_page_setup.form_title}</span><div class="title-anim-wrapper"><div class="title-height">${genList()}</div></div></div>`);
             }
             else {
-                document.querySelector('#HeroFormCol #HeroFormTitleText').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><div class="title-anim-wrapper"><div class="title-height">${genList()}</div></div><span class="const-title">${single_page_setup.form_title}</span></div>`);
+                document.querySelector('#HeroFormCol #HeroFormTitleText').insertAdjacentHTML('afterbegin', `<div class="spz-form-title"><div class="title-anim-wrapper top-anim"><div class="title-height">${genList()}</div></div><span class="const-title">${single_page_setup.form_title}</span></div>`);
             }
         }
 

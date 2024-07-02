@@ -567,24 +567,25 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height.active {
   opacity: 1;
   transition: opacity 0.2s ease-in;
 }
+body.spz-3024 #hero .spz-form-title .title-anim-wrapper.top-anim .title-height {
+  min-height: 80px;
+  display: flex;
+  align-items: end;
+}
+@media (max-width: 991.98px) {
+  body.spz-3024 #hero .spz-form-title .title-anim-wrapper.top-anim .title-height {
+    min-height: 102px;
+  }
+}
 
 @keyframes fade-up {
   0% {
     transform: translateY(0);
   }
   100% {
-    transform: translateY(-100px);
+    transform: translateY(-104px);
   }
 }
-body.spz-3024.spz-ppc-eptura-preventive #hero .spz-form-title {
-  font-size: 46px;
-  line-height: 54px;
-}
-
-body.spz-3024.spz-ppc-archibus #hero .spz-form-title {
-  padding: 0;
-}
-
 body.spz-3024 #hero .spz-form-title span.p-bold {
   font-weight: 500;
   color: #904ab0;
@@ -1147,10 +1148,6 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
     font-size: 26px;
     line-height: 34px;
-  }
-  body.spz-3024.spz-ppc-eptura-preventive #hero .spz-form-title {
-    font-size: 36px;
-    line-height: 44px;
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
     padding-left: 24px;
