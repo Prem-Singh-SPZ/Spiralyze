@@ -9,7 +9,7 @@ body.spz-5001 {
   .spz-cta {
     border-radius: 25px;
     border: 2px solid #5fb53b;
-    padding: 14px 30px;
+    padding: 12px 30px;
     color: #fff;
     text-align: center;
     font-family: $segoe;
@@ -21,10 +21,26 @@ body.spz-5001 {
     transition: background-color 0.95s;
     white-space: nowrap;
     background-color: transparent;
+    display: inline-block;
 
     &:hover {
       background-color: #5fb53b;
       color: #fff;
+    }
+  }
+
+  .spz-anchor {
+    padding: 0px 7px 0px 6px;
+    color: #2777d3;
+    font-family: $segoe;
+    font-size: 15px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 25px;
+    text-decoration-line: underline;
+
+    &:hover {
+      color: #0f2d52;
     }
   }
 
@@ -215,16 +231,53 @@ body.spz-5001 {
 
                 &.sc-list {
                   li:first-child::before {
-                    background: url("//res.cloudinary.com/spiralyze/image/upload/v1718967443/zywave/5001/frame_1171275665.svg")
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/frame_1171275665.svg")
                       no-repeat center center / cover;
                   }
                   li:nth-child(2)::before {
-                    background: url("//res.cloudinary.com/spiralyze/image/upload/v1718967443/zywave/5001/frame_1171275664.svg")
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/frame_1171275664.svg")
                       no-repeat center center / cover;
                   }
                   li:nth-child(3)::before {
-                    background: url("//res.cloudinary.com/spiralyze/image/upload/v1718967445/zywave/5001/frame_1171275666.svg")
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/frame_1171275666.svg")
                       no-repeat center center / cover;
+                  }
+                }
+
+                &.cc-list {
+                  li:first-child::before {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/servicing_1.svg")
+                      no-repeat center center / cover;
+                  }
+                  li:nth-child(2)::before {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/frame_1171275206.svg")
+                      no-repeat center center / cover;
+                  }
+                  li:nth-child(3)::before {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/icon.svg")
+                      no-repeat center center / cover;
+                  }
+                }
+              }
+
+              .anchor-wrapper {
+                margin-top: 13px;
+                display: flex;
+                align-items: center;
+
+                .spz-cta {
+                  color: #0f2d52;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 130%;
+                  width: 180px;
+                  height: 50px;
+                  margin-right: 32px;
+                  transition: all 0.95s;
+
+                  &:hover {
+                    background-color: #5fb53b;
+                    color: #fff;
                   }
                 }
               }
@@ -250,7 +303,7 @@ body.spz-5001 {
                 left: 0;
                 z-index: 0;
                 border-radius: 20px;
-                background: #FFF;
+                background: #fff;
                 box-shadow: 0px 12px 30px 0px rgba(15, 45, 82, 0.12);
 
                 @media screen and (max-width: 991.98px) {
@@ -284,42 +337,6 @@ body.spz-5001 {
                   left: auto;
                 }
               }
-            }
-          }
-        }
-
-        .sc-cta {
-          @media screen and (max-width: 991.98px) {
-            margin: 48px auto 0;
-          }
-
-          @media screen and (max-width: 767.98px) {
-            margin: 24px auto 0;
-          }
-
-          .zy-cta {
-            border-radius: 99px;
-            border: 2px solid #5fb53b;
-            padding: 0;
-            font-family: $segoe;
-            height: 60px;
-            width: 191px;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 130%;
-            transition: all 0.3s;
-            margin: 0;
-            background: #fff;
-            color: #0f2d52;
-            cursor: pointer;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: auto;
-
-            &:hover {
-              background: #5fb53b;
             }
           }
         }
