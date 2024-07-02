@@ -239,6 +239,10 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   margin-top: -20px;
 }
 
+body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+  -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
   -webkit-box-shadow: 0 0 0 30px white inset !important;
 }
@@ -491,7 +495,6 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container > .
 
 /* Additional Css */
 body.spz-3024 {
-  background: -webkit-gradient(linear, left top, left bottom, from(#20253f), color-stop(151.2%, #0d122e));
   background: linear-gradient(180deg, #20253f 0%, #0d122e 151.2%);
 }
 
@@ -504,10 +507,7 @@ body.spz-3024 .body-wrapper #hero .hero_container {
 body.spz-3024 .body-wrapper #hero .hero_container > .row {
   /*-webkit-box-orient: horizontal; -webkit-box-direction: reverse; -ms-flex-flow: row-reverse; flex-flow: row-reverse;*/
   margin: 0;
-  -webkit-box-orient: initial;
-  -webkit-box-direction: initial;
-      -ms-flex-direction: initial;
-          flex-direction: initial;
+  flex-direction: initial;
 }
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
@@ -555,24 +555,18 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item {
   position: absolute;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height .item:nth-child(1) {
-  -webkit-animation: fade-up 1000ms ease-in-out 2s infinite alternate;
-          animation: fade-up 1000ms ease-in-out 2s infinite alternate;
+  animation: fade-up 1000ms ease-in-out 2s infinite alternate;
   opacity: 1;
   position: relative;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper .title-height.active {
   opacity: 1;
-  -webkit-transition: opacity 0.2s ease-in;
   transition: opacity 0.2s ease-in;
 }
 body.spz-3024 #hero .spz-form-title .title-anim-wrapper.top-anim .title-height {
   min-height: 80px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: end;
-      -ms-flex-align: end;
-          align-items: end;
+  align-items: end;
 }
 @media (max-width: 991.98px) {
   body.spz-3024 #hero .spz-form-title .title-anim-wrapper.top-anim .title-height {
@@ -580,25 +574,12 @@ body.spz-3024 #hero .spz-form-title .title-anim-wrapper.top-anim .title-height {
   }
 }
 
-@-webkit-keyframes fade-up {
-  0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
-  }
-  100% {
-    -webkit-transform: translateY(-104px);
-            transform: translateY(-104px);
-  }
-}
-
 @keyframes fade-up {
   0% {
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    transform: translateY(0);
   }
   100% {
-    -webkit-transform: translateY(-104px);
-            transform: translateY(-104px);
+    transform: translateY(-104px);
   }
 }
 body.spz-3024 #hero .spz-form-title span.p-bold {
@@ -631,8 +612,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormP
   right: 0;
   width: calc(100% - 140px);
   border-bottom: 1px solid #d9dce2;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   opacity: 0.7;
 }
 
@@ -719,11 +699,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol {
 
 body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol .spz-site-logo {
   padding: 0 64px;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  height: -webkit-fit-content;
-  height: -moz-fit-content;
   height: fit-content;
   width: 100%;
   max-width: 620px;
@@ -735,8 +711,7 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol:after {
   position: absolute;
   top: 50%;
   right: -20px;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
+  transform: translateY(-50%);
   display: block;
   width: 21px;
   height: 48px;
@@ -754,20 +729,14 @@ body.spz-3024 .spz-hero-contents {
 }
 
 body.spz-3024 .spz-hero-contents .spz-hero-content-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   max-width: 840px;
   padding: 0 20px;
   width: 100%;
   margin: auto;
   height: 100%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  flex-direction: column;
 }
 
 body.spz-3024 .spz-hero-contents picture,
@@ -823,40 +792,25 @@ body.spz-3024 .spz-hero-contents .spz-hero-list li:last-child {
 }
 
 body.spz-3024 .spz-footer {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  flex-wrap: wrap;
   width: 100%;
   padding: 40px 4px;
   margin-top: auto;
 }
 
 body.spz-3024 .spz-footer .spz-footer-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
   width: 100%;
 }
 
 body.spz-3024 .spz-footer .spz-footer-links {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  flex-wrap: wrap;
+  align-items: center;
   list-style: none;
   margin: 0;
   padding: 0;
@@ -880,6 +834,9 @@ body.spz-3024 .spz-footer .spz-footer-links li a {
   color: #f6fafa;
   display: block;
   -webkit-transition: all 0.2s ease-in-out;
+  -moz-transition: all 0.2s ease-in-out;
+  -o-transition: all 0.2s ease-in-out;
+  -ms-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
 }
 
@@ -909,13 +866,9 @@ body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol {
   padding-top: 24px !important;
   max-width: 760px;
   width: 100%;
-  display: -webkit-box !important;
-  display: -ms-flexbox !important;
   display: flex !important;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -ms-flex-line-pack: baseline;
-      align-content: baseline;
+  flex-wrap: wrap;
+  align-content: baseline;
   min-height: 100vh;
   background: #ffffff;
 }
@@ -1036,29 +989,16 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 }
 @media (min-width: 2100.98px) {
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol #HeroFormPanel {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    display: -webkit-box;
-    display: -ms-flexbox;
+    flex-grow: 1;
     display: flex;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: normal;
-        -ms-flex-direction: column;
-            flex-direction: column;
-    -webkit-box-pack: center;
-        -ms-flex-pack: center;
-            justify-content: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
     position: relative;
   }
   body.spz-3024 .body-wrapper #hero .hero_container > .row #HeroFormCol {
-    display: -webkit-box !important;
-    display: -ms-flexbox !important;
     display: flex !important;
-    -ms-flex-wrap: wrap;
-        flex-wrap: wrap;
+    flex-wrap: wrap;
     max-width: 1000px;
   }
   body.spz-3024 .spz-hero-contents {
@@ -1119,11 +1059,8 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
     padding-right: 14px;
   }
   body.spz-3024 .spz-hero-contents .spz-hero-content-wrap .spz-hero-image-list {
-    -webkit-box-flex: 1;
-        -ms-flex-positive: 1;
-            flex-grow: 1;
-    -ms-flex-line-pack: center;
-        align-content: center;
+    flex-grow: 1;
+    align-content: center;
   }
 }
 @media (max-width: 1600.98px) {
@@ -1233,9 +1170,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   }
   body.spz-3024 .spz-footer .spz-footer-links {
     width: 100%;
-    -webkit-box-pack: justify;
-        -ms-flex-pack: justify;
-            justify-content: space-between;
+    justify-content: space-between;
     padding-bottom: 8px;
     padding-left: 12px;
     padding-right: 12px;
@@ -1481,10 +1416,15 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   position: relative;
   z-index: 99;
 }
+.spz-3024 .spz-testimonials-wrap::before {
+  content: open-quote;
+  position: absolute;
+  color: #fff;
+  left: 35px;
+  top: 30px;
+  font-size: 20px;
+}
 
-/* .spz-3024  .spz-testimonial {
-    cursor: pointer;
-} */
 .spz-3024 .spz-testimonial .spz-testimonial-content {
   color: #fff !important;
   font-family: "Eptura Flexible Light", Arial, sans-serif;
@@ -1508,15 +1448,9 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 
 .spz-3024 .spz-testimonial .spz-testimonial-author,
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
+  align-items: center;
+  justify-content: space-between;
 }
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info {
@@ -1548,6 +1482,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   font-weight: 700;
   line-height: 20px;
   margin: 0;
+  letter-spacing: 0.15px;
 }
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h6 {
@@ -1575,8 +1510,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
 .spz-3024 .spz-testimonial .spz-testimonial-author .company-info img {
   width: auto;
   height: 48px;
-  -o-object-fit: contain;
-     object-fit: contain;
+  object-fit: contain;
 }
 
 @media (max-width: 1023.98px) {
@@ -1602,8 +1536,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   .spz-3024 .spz-testimonial .spz-testimonial-author .company-info img {
     width: auto;
     height: 40px;
-    -o-object-fit: contain;
-       object-fit: contain;
+    object-fit: contain;
   }
 }
 @media (max-width: 767.98px) {

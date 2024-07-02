@@ -2858,11 +2858,20 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   background: rgba(255, 255, 255, 0.04);
   position: relative;
   z-index: 99;
+
+  &::before {
+    content: open-quote;
+    position: absolute;
+    color: #fff;
+    left: 35px;
+    top: 30px;
+    font-size: 20px;
+  }
 }
 
-/* .spz-3024  .spz-testimonial {
-    cursor: pointer;
-} */
+// .spz-3024 .spz-testimonials-slider.swiper {
+ 
+// }
 
 .spz-3024 .spz-testimonial .spz-testimonial-content {
   color: #fff !important;
@@ -2917,6 +2926,7 @@ body.spz-3024.ppc-eptura-room-management .body-wrapper #hero .hero_container {
   font-weight: 700;
   line-height: 20px;
   margin: 0;
+  letter-spacing: 0.15px;
 }
 
 .spz-3024 .spz-testimonial .spz-testimonial-author .author-info h6 {
