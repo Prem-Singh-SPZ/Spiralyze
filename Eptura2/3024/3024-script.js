@@ -106,7 +106,7 @@ let page_setup = [
             "Extend asset longevity",
         ],
         "testimonial_slide": [
-            `<div class="swiper-slide spz-testimonial"><p class="spz-testimonial-content">We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management easier</strong> on all of our staff members and team.</p><div class="spz-testimonial-author"><div class="author-info"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png" alt="Alissa Hall" title="Alissa Hall"><div class="name"><h4>Alissa Hall</h4><h6>Maintenance Manager</h6></div></div><div class="company-info"><picture>
+            `<div class="swiper-slide spz-testimonial"><p class="spz-testimonial-content"><span class="psudo-apos"></span>We've been able to <strong>better streamline</strong> our business and processes to make <strong>maintenance management easier</strong> on all of our staff members and team."</p><div class="spz-testimonial-author"><div class="author-info"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3018/alissa_hall.png" alt="Alissa Hall" title="Alissa Hall"><div class="name"><h4>Alissa Hall</h4><h6>Maintenance Manager</h6></div></div><div class="company-info"><picture>
             <source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824948/eptura/3024/logo_-_deer_valley.svg">
             <source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/v1719824960/eptura/3024/logo_-_deer_valley_tablet.svg">
             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719824970/eptura/3024/logo_-_deer_valley_mobile.svg" alt="Deer Valley Logo">
