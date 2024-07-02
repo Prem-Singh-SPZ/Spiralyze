@@ -6,6 +6,28 @@ body.spz-5001 {
     display: none !important;
   }
 
+  .spz-cta {
+    border-radius: 25px;
+    border: 2px solid #5fb53b;
+    padding: 14px 30px;
+    color: #fff;
+    text-align: center;
+    font-family: $segoe;
+    font-size: 17px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 25px;
+    text-decoration: none;
+    transition: background-color 0.95s;
+    white-space: nowrap;
+    background-color: transparent;
+
+    &:hover {
+      background-color: #5fb53b;
+      color: #fff;
+    }
+  }
+
   .zy-hero-container-general {
     background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/background_6.svg")
       no-repeat center center;
@@ -17,7 +39,7 @@ body.spz-5001 {
       background-size: cover;
     }
 
-    @media (min-width: 1023.98px) {
+    @media (min-width: 991.98px) {
       background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/background_8.svg")
         no-repeat center center;
       background-size: cover;
@@ -28,13 +50,56 @@ body.spz-5001 {
         no-repeat center center;
       background-size: cover;
     }
+
+    .zy-hero-container-inner {
+      .spz-hero-copy-container {
+        .eye-brow-text {
+          color: #5fb53b;
+          text-align: center;
+          font-family: Lato;
+          font-size: 15px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 130%;
+          text-transform: uppercase;
+          margin: 0 0 20px;
+        }
+
+        .h-title {
+          color: #fff;
+          text-align: center;
+          font-size: 64px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 110%;
+          margin: 0 auto 20px;
+          max-width: 1280px;
+        }
+
+        .h-copy {
+          color: #fff;
+          text-align: center;
+          font-family: $segoe;
+          font-size: 20px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 26px;
+          margin: 0 auto;
+          max-width: 834px;
+        }
+
+        .h-demo-cta {
+          margin-top: 70px;
+        }
+      }
+    }
   }
 
   .sc-section {
     padding: 94px 0 100.5px;
     overflow: hidden;
 
-    @media screen and (max-width: 1024.98px) {
+    @media screen and (max-width: 991.98px) {
       padding: 38px 0 44.5px;
     }
 
@@ -57,7 +122,7 @@ body.spz-5001 {
       .sc-col {
         padding: 20px 0;
 
-        @media screen and (max-width: 1024.98px) {
+        @media screen and (max-width: 991.98px) {
           max-width: 598px;
           margin: auto;
         }
@@ -67,13 +132,13 @@ body.spz-5001 {
           text-align: center;
           font-feature-settings: "salt" on;
           font-family: $bree;
-          font-size: 48px;
+          font-size: 40px;
           font-style: normal;
           font-weight: 700;
           line-height: 110%;
           margin-bottom: 78px;
 
-          @media screen and (max-width: 1024.98px) {
+          @media screen and (max-width: 991.98px) {
             margin-bottom: 29px;
           }
 
@@ -89,7 +154,7 @@ body.spz-5001 {
             padding: 24px 0;
             margin-bottom: 72px;
 
-            @media screen and (max-width: 1024.98px) {
+            @media screen and (max-width: 991.98px) {
               flex-direction: column;
               align-items: flex-start;
               padding-bottom: 20px;
@@ -104,64 +169,74 @@ body.spz-5001 {
               max-width: 500px;
               width: 100%;
 
-              @media screen and (max-width: 1024.98px) {
+              @media screen and (max-width: 991.98px) {
                 max-width: 100%;
               }
 
-              .title-img-wrapper {
-                > img {
-                  // width: 64px;
-                  // height: 64px;
-                  margin-bottom: 19px;
-
-                  @media screen and (max-width: 767.98px) {
-                    width: 40px;
-                    height: 40px;
-                    margin-bottom: 0;
-                    margin-right: 16px;
-                  }
-                }
-
-                > h3 {
-                  color: #0f2d52;
-                  font-feature-settings: "salt" on;
-                  font-family: $bree;
-                  font-size: 32px;
-                  font-style: normal;
-                  font-weight: 700;
-                  line-height: 110%;
-                  margin: 0 0 21px;
-
-                  @media screen and (max-width: 767.98px) {
-                    font-size: 20px;
-                    margin-bottom: 4px;
-                  }
-                }
-
-                @media screen and (max-width: 767.98px) {
-                  display: flex;
-                  align-items: center;
-                  margin-bottom: 16px;
-                }
+              .copy-title {
+                color: #0f2d52;
+                font-feature-settings: "salt" on;
+                font-family: $bree;
+                font-size: 28px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 110%;
               }
 
-              > p {
-                color: #0f2d52;
-                font-family: $segoe;
-                font-size: 18px;
-                font-style: normal;
-                font-weight: 400;
-                line-height: 140%;
+              ul {
+                margin: 30px 0;
+                padding: 0;
+                list-style: none;
+
+                li {
+                  padding-left: 32px;
+                  color: #0f2d52;
+                  font-family: $segoe;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 140%;
+                  position: relative;
+                  margin: 0 0 32px;
+
+                  span {
+                    font-weight: 700;
+                  }
+
+                  &:before {
+                    content: "";
+                    position: absolute;
+                    left: 0;
+                    top: 3px;
+                    width: 22px;
+                    height: 22px;
+                  }
+                }
+
+                &.sc-list {
+                  li:first-child::before {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/v1718967443/zywave/5001/frame_1171275665.svg")
+                      no-repeat center center / cover;
+                  }
+                  li:nth-child(2)::before {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/v1718967443/zywave/5001/frame_1171275664.svg")
+                      no-repeat center center / cover;
+                  }
+                  li:nth-child(3)::before {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/v1718967445/zywave/5001/frame_1171275666.svg")
+                      no-repeat center center / cover;
+                  }
+                }
               }
             }
 
             .sc-image {
               margin-left: 140px;
               width: calc(100% - 500px);
-              height: 500px;
+              height: 528px;
               position: relative;
 
-              @media screen and (max-width: 1024.98px) {
+              @media screen and (max-width: 991.98px) {
                 margin: 38px 0 0;
                 width: 100%;
                 height: auto;
@@ -174,12 +249,11 @@ body.spz-5001 {
                 top: 0;
                 left: 0;
                 z-index: 0;
-                border-radius: 22px;
-                background: #fff;
-                box-shadow: 0px 12px 32px 0px rgba(15, 45, 82, 0.12),
-                  4.697px 4.697px 30.063px 0px rgba(15, 45, 82, 0.08);
+                border-radius: 20px;
+                background: #FFF;
+                box-shadow: 0px 12px 30px 0px rgba(15, 45, 82, 0.12);
 
-                @media screen and (max-width: 1024.98px) {
+                @media screen and (max-width: 991.98px) {
                   position: relative;
                   width: 100%;
                   height: auto;
@@ -191,15 +265,15 @@ body.spz-5001 {
             }
 
             &.sc-right {
-              @media screen and (max-width: 1024.98px) {
+              @media screen and (max-width: 991.98px) {
                 flex-direction: column-reverse;
               }
 
               .sc-image {
                 margin: 36px 140px 36px 0;
-                height: 428px;
+                // height: 428px;
 
-                @media screen and (max-width: 1024.98px) {
+                @media screen and (max-width: 991.98px) {
                   margin: 38px 0 0;
                   width: 100%;
                   height: auto;
@@ -215,7 +289,7 @@ body.spz-5001 {
         }
 
         .sc-cta {
-          @media screen and (max-width: 1024.98px) {
+          @media screen and (max-width: 991.98px) {
             margin: 48px auto 0;
           }
 
@@ -257,7 +331,7 @@ body.spz-5001 {
 //Form CSS starts here
 .spz-5001 #zy-demo-form-section {
   padding: 80px 0 78px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1004/1440.svg");
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718968862/zywave/5001/1440_1.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
@@ -703,7 +777,7 @@ body.spz-5001 {
 }
 @media (min-width: 1601px) {
   .spz-5001 #zy-demo-form-section {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1713430808/zywave/1004/1920.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718968863/zywave/5001/1920_1.svg");
   }
 }
 @media (max-width: 1249.98px) {
@@ -711,9 +785,9 @@ body.spz-5001 {
     padding-top: 100px;
   }
 }
-@media (max-width: 1000.98px) {
+@media (max-width: 991.98px) {
   .spz-5001 #zy-demo-form-section {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1713430808/zywave/1004/768.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718968862/zywave/5001/768_1.svg");
   }
   .spz-5001 #zy-demo-form-section .row {
     padding: 0 35px;
@@ -736,7 +810,7 @@ body.spz-5001 {
 }
 @media (max-width: 767.98px) {
   .spz-5001 #zy-demo-form-section {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1714106446/zywave/1004/375-BG.svg");
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718968862/zywave/5001/375_1.svg");
     padding: 100px 0 59px;
   }
   .spz-5001 #zy-demo-form-section .zy-container {
