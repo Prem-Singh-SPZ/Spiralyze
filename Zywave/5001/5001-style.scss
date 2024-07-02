@@ -2,7 +2,35 @@ $bree: "bree", sans-serif;
 $segoe: "Segoe UI", "Open Sans", sans-serif;
 
 body.spz-5001 {
-  .benefits-section {
+  .zy-accordions-container {
+    display: none !important;
+  }
+
+  .zy-hero-container-general {
+    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/background_6.svg")
+      no-repeat center center;
+    background-size: cover;
+
+    @media (min-width: 767.98px) {
+      background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/background_7.svg")
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    @media (min-width: 1023.98px) {
+      background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/background_8.svg")
+        no-repeat center center;
+      background-size: cover;
+    }
+
+    @media (min-width: 1600.98px) {
+      background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/5001/background_9.svg")
+        no-repeat center center;
+      background-size: cover;
+    }
+  }
+
+  .sc-section {
     padding: 94px 0 100.5px;
     overflow: hidden;
 
@@ -14,7 +42,7 @@ body.spz-5001 {
       padding: 32px 0 36px;
     }
 
-    .benefits-row {
+    .sc-row {
       max-width: 1180px;
       margin: auto;
 
@@ -26,7 +54,7 @@ body.spz-5001 {
         padding: 0 20px;
       }
 
-      .benefits-col {
+      .sc-col {
         padding: 20px 0;
 
         @media screen and (max-width: 1024.98px) {
@@ -34,7 +62,7 @@ body.spz-5001 {
           margin: auto;
         }
 
-        .benefits-title {
+        .sc-title {
           color: #0f2d52;
           text-align: center;
           font-feature-settings: "salt" on;
@@ -54,8 +82,8 @@ body.spz-5001 {
           }
         }
 
-        .benefits-content {
-          .benefits-line {
+        .sc-content {
+          .sc-line {
             display: flex;
             align-items: center;
             padding: 24px 0;
@@ -72,7 +100,7 @@ body.spz-5001 {
               padding-top: 7px;
               margin-bottom: 17px;
             }
-            .benefits-text {
+            .sc-text {
               max-width: 500px;
               width: 100%;
 
@@ -127,7 +155,7 @@ body.spz-5001 {
               }
             }
 
-            .benefits-image {
+            .sc-image {
               margin-left: 140px;
               width: calc(100% - 500px);
               height: 500px;
@@ -162,12 +190,12 @@ body.spz-5001 {
               }
             }
 
-            &.benefits-right {
+            &.sc-right {
               @media screen and (max-width: 1024.98px) {
                 flex-direction: column-reverse;
               }
 
-              .benefits-image {
+              .sc-image {
                 margin: 36px 140px 36px 0;
                 height: 428px;
 
@@ -186,7 +214,7 @@ body.spz-5001 {
           }
         }
 
-        .benefits-cta {
+        .sc-cta {
           @media screen and (max-width: 1024.98px) {
             margin: 48px auto 0;
           }
@@ -229,7 +257,7 @@ body.spz-5001 {
 //Form CSS starts here
 .spz-5001 #zy-demo-form-section {
   padding: 80px 0 78px;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1713430808/zywave/1004/1440.svg");
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1004/1440.svg");
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;

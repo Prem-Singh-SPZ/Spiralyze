@@ -13,55 +13,49 @@ let bodyLoaded = setInterval(function () {
 
 function heroSection() {
 
-    document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p></div>`;
+    document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p><h1 class="h-title">Grow New Client Sales xx. Transform sales, marketing and customer engagement.</h1><p class="h-copy">Access millions of in-depth lead profiles. Auto-compare and generate quotes for multiple carriers at once. Automate content delivery. Manage your agency in one platform.</p><div class="h-demo-cta"><a href="#zy-demo-form-section" class="spz-cta">Book a demo</a></div></div>`;
 
     salesCloud();
 }
 
 function salesCloud() {
-    document.querySelector('.zy-hero-container-general.zy-hero-container-accordion').insertAdjacentHTML('afterend', `<div class="benefits-section">
-        <div class="benefits-row">
-            <div class="benefits-col">
-                <div class="benefits-title">Benefits</div>
-                <div class="benefits-content">
-                    <div class="benefits-line benefits-left">
-                        <div class="benefits-text">
-                            <div class="title-img-wrapper">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275599.svg" alt="Streamline manual workflows">
-                                <h3>Streamline manual workflows</h3>
-                            </div>
-                            <p>Let clients complete digital forms that consolidate carrier questionnaires. Auto-capture plan needs and other details. Get instant pricing from 1,000+ carriers. No more manually entering client data across every carrier site. Streamline the request for proposal (RFP) process no matter what plan design your employer requires.</p>
+    document.querySelector('.zy-hero-container-general.zy-hero-container-accordion').insertAdjacentHTML('afterend', `<div class="sc-section">
+        <div class="sc-row">
+            <div class="sc-col">
+                <div class="sc-title">Sales Cloud</div>
+                <div class="sc-content">
+                    <div class="sc-line sc-left">
+                        <div class="sc-text">
+                            <h3 class="copy-title">Grow Sales and Renewals</h3>
+                            <ul class="sc-list"><li><span>Marketing:</span> Access our database of 80+ million households. Create and send automated emails to your target audience.</li><li><span>Quoting & Proposals:</span> Find the best coverage and price for leads in seconds. 200+ carriers for auto, home, renters, and more.</li><li><span>Agency Management:</span> Manage plans. Centralize contact info. Automate new client account creation, reminders, and reporting.</li></ul>
+                            <div class="anchor-wrapper"><a href="#zy-demo-form-section" class="spz-cta">Book a demo</a><a class="spz-anchor" href="/personal-lines/sales-cloud/">Learn more</a></div>
                         </div>
-                        <div class="benefits-image">
+                        <div class="sc-image">
                             <picture>
-                                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003441.webp">
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003440.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003439.webp" alt="Streamline manual workflows">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_1_desktop__tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile.webp" alt="Grow Sales and Renewals">
                             </picture>
                         </div>
                     </div>                   
                 </div>
             </div>
         </div>
-        <div class="benefits-section">
-        <div class="benefits-row">
-            <div class="benefits-col">
-                <div class="benefits-title">Benefits</div>
-                <div class="benefits-content">
-                    <div class="benefits-line benefits-right">
-                        <div class="benefits-image">
+        <div class="sc-section">
+        <div class="sc-row">
+            <div class="sc-col">
+                <div class="sc-title">Content Cloud</div>
+                <div class="sc-content">
+                    <div class="sc-line sc-right">
+                        <div class="sc-image">
                            <picture>
-                                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275611.webp">
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275610.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275609.webp" alt="Boost sales">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_desktop__tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile.webp" alt="Drive Client Engagement">
                             </picture>
                         </div>
-                        <div class="benefits-text">
-                            <div class="title-img-wrapper">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275600.svg" alt="Boost sales">
-                                <h3>Boost sales</h3>
-                            </div>
-                            <p>Build instant quotes based on real-time carrier rates. New policies, renewals, and alternative plan options. Add professional branding so your quotes stand out. Send to clients in 1 click. Send 2x more quotes. Turn more prospects into clients.</p>
+                        <div class="sc-text">
+                            <h3 class="copy-title">Drive Client Engagement</h3>
+                            <ul class="cc-list"><li><span>Content Library:</span> Provide pre-built resources to your team and clients. Marketing, risk management, updates, and more.</li><li><span>Distribution:</span> Distribute email content throughout the year or as one-offs. Auto-send resources at the right times to drive upsells.</li><li><span>Content Management:</span> Centralize all your organization's content. Track marketing content performance.</li></ul>
+                            <div class="anchor-wrapper"><a href="#zy-demo-form-section" class="spz-cta">Book a demo</a><a class="spz-anchor" href="/personal-lines/content-cloud/">Learn more</a></div>
                         </div>
                     </div>                 
                 </div>
