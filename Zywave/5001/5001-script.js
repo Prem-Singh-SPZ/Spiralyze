@@ -40,7 +40,8 @@ function salesCloud() {
                 </div>
             </div>
         </div>
-        <div class="sc-section">
+        </div>
+        <div class="sc-section cc-section">
         <div class="sc-row">
             <div class="sc-col">
                 <div class="sc-title">Content Cloud</div>
@@ -72,15 +73,15 @@ function salesCloud() {
 
 function footerFormSection() {
     waitForElm('.spz-5001 #zy-demo-form-section').then(function () {
-        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text h3').textContent = "Ready to rocket your ROI?";
-        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text .zy-content').textContent = "Improve efficiency of prospecting and selling. Make smarter decisions with data-driven insights. Increase productivity and achieve profitable growth.";
+        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text h3').textContent = "Increase revenue 15% by streamlining insurance sales and management";
+        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text .zy-content').textContent = "Find qualified prospects. Send instant quotes. Let clients manage plans through an online portal. Generate benefit and plan resources.";
         //Form internal code
         waitForElm('.spz-5001 #zy-demo-form-section .zy-col-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
             formModify();
         });
         //Add Hidden field value
         waitForElm('.spz-5001 .zy-marketo-form-container .mktoForm input[name="cR02"]').then(function () {
-            document.querySelector(`.spz-5001 .zy-marketo-form-container .mktoForm input[name="cR01"]`).setAttribute("value", "1004_variant");
+            document.querySelector(`.spz-5001 .zy-marketo-form-container .mktoForm input[name="cR01"]`).setAttribute("value", "5001_variant");
         });
     });
 }
