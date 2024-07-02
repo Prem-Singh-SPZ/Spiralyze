@@ -13,6 +13,8 @@ let bodyLoaded = setInterval(function () {
 
 function heroSection() {
 
+    document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p></div>`;
+
     salesCloud();
 }
 
