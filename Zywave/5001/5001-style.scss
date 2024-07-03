@@ -189,9 +189,9 @@ body.spz-5001 {
       padding: 25px 0 0;
     }
 
-    @media screen and (max-width: 767.98px) {
-      padding: 25px 0 36px;
-    }
+    // @media screen and (max-width: 767.98px) {
+    //   padding: 25px 0 6px;
+    // }
 
     .sc-row {
       max-width: 1180px;
@@ -253,7 +253,7 @@ body.spz-5001 {
               flex-direction: column-reverse;
               align-items: flex-start;
               padding-top: 7px;
-              margin-bottom: 17px;
+              margin-bottom: 9px;
             }
             .sc-text {
               max-width: 535px;
@@ -273,7 +273,7 @@ body.spz-5001 {
                 list-style: none;
 
                 @media screen and (max-width: 767.98px) {
-                  margin: 30px 0 40px;
+                  margin: 30px 0 28px;
                 }
 
                 li {
@@ -286,6 +286,10 @@ body.spz-5001 {
                   line-height: 140%;
                   position: relative;
                   margin: 0 0 32px;
+
+                  @media screen and (max-width: 767.98px) {
+                    margin: 0 0 31px;
+                  }
 
                   span {
                     font-weight: 700;
@@ -301,7 +305,7 @@ body.spz-5001 {
                   }
 
                   &:last-child {
-                    margin-bottom: 0;
+                    margin-bottom: 0 !important;
                   }
                 }
 
@@ -346,6 +350,11 @@ body.spz-5001 {
                   margin-bottom: 6px;
                 }
 
+                @media screen and (max-width: 767.98px) {
+                  flex-direction: column;
+                  margin-bottom: 0;
+                }
+
                 .spz-cta {
                   color: #0f2d52;
                   font-size: 16px;
@@ -355,6 +364,12 @@ body.spz-5001 {
                   height: 50px;
                   margin-right: 32px;
                   transition: all 0.95s;
+
+                  @media screen and (max-width: 767.98px) {
+                    width: 100%;
+                    margin-right: 0;
+                    margin-bottom: 17px;
+                  }
 
                   &:hover {
                     background-color: #5fb53b;
@@ -436,7 +451,6 @@ body.spz-5001 {
                 }
 
                 @media screen and (max-width: 767.98px) {
-                  margin: 38px 0 0;
                   width: 100%;
                   height: auto;
                 }
@@ -459,15 +473,27 @@ body.spz-5001 {
 
     @media screen and (max-width: 991.98px) {
       padding-top: 0;
-      padding-bottom: 10.5px;
+      padding-bottom: 0;
 
       .sc-row .sc-col {
         padding-top: 5px;
+
+        @media screen and (max-width: 767.98px) {
+          .sc-content .sc-line .copy-title {
+            margin-bottom: 28px;
+          }
+          .sc-content .sc-line .sc-text ul {
+            margin-top: 24px;
+          }
+        }
       }
     }
 
     .sc-row .sc-col .sc-title {
       margin-bottom: 28px;
+      @media screen and (max-width: 767.98px) {
+        margin-bottom: 18px;
+      }
     }
   }
 }
@@ -960,24 +986,27 @@ body.spz-5001 {
 @media (max-width: 767.98px) {
   .spz-5001 #zy-demo-form-section {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718968862/zywave/5001/375_1.svg");
-    padding: 100px 0 59px;
+    padding: 54px 0 59px;
   }
   .spz-5001 #zy-demo-form-section .zy-container {
     padding: 0;
-    width: calc(100% - 60px);
+    width: calc(100% - 35.33px);
   }
   .spz-5001 #zy-demo-form-section .row {
     padding: 0;
   }
+  .spz-5001 #zy-demo-form-section .zy-col-text .zy-content{
+    padding: 0 1px;
+  }
   .spz-5001 #zy-demo-form-section .zy-col-text h3 {
-    font-size: 32px;
+    font-size: 36px;
   }
   .spz-5001 #zy-demo-form-section .zy-col-form .zy-marketo-form-container {
-    margin: 38px 0 0;
-    padding: 48px 20px;
+    margin: 35.5px 0 0;
+    padding: 30px 20px 35px;
   }
   .spz-5001 #zy-demo-form-section .zy-col-form .form_title {
-    margin-bottom: 0px;
+    margin-bottom: 34.5px;
   }
   .zy-demo-form-section-container .zy-marketo-form-container form {
     padding: 0;
