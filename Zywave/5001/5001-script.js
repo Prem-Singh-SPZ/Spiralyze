@@ -13,7 +13,7 @@ let bodyLoaded = setInterval(function () {
 
 function heroSection() {
 
-    document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p><h1 class="h-title">Grow New Client Sales xx. Transform sales, marketing and customer engagement.</h1><p class="h-copy">Access millions of in-depth lead profiles. Auto-compare and generate quotes for multiple carriers at once. Automate content delivery. Manage your agency in one platform.</p><div class="h-demo-cta"><a href="javascript:;" class="spz-cta">Book a demo</a></div></div>`;
+    document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p><h1 class="h-title">Grow New Client Sales xx. Transform sales, marketing and customer engagement.</h1><p class="h-copy">Access millions of in-depth lead profiles. <span class="no-wrap">Auto-compare</span> and generate quotes for multiple carriers at once. Automate content delivery. Manage your agency in one platform.</p><div class="h-demo-cta"><a href="javascript:;" class="spz-cta">Book a demo</a></div></div>`;
 
     salesCloud();
 }
@@ -26,14 +26,15 @@ function salesCloud() {
                 <div class="sc-content">
                     <div class="sc-line sc-left">
                         <div class="sc-text">
-                            <h3 class="copy-title">Grow Sales and Renewals</h3>
+                            <h3 class="copy-title desktop">Grow Sales and Renewals</h3>
                             <ul class="sc-list"><li><span>Marketing:</span> Access our database of 80+ million households. Create and send automated emails to your target audience.</li><li><span>Quoting & Proposals:</span> Find the best coverage and price for leads in seconds. 200+ carriers for auto, home, renters, and more.</li><li><span>Agency Management:</span> Manage plans. Centralize contact info. Automate new client account creation, reminders, and reporting.</li></ul>
                             <div class="anchor-wrapper"><a href="javascript:;" class="spz-cta">Book a demo</a><a class="spz-anchor" href="/personal-lines/sales-cloud/">Learn more</a></div>
                         </div>
                         <div class="sc-image">
+                            <h3 class="copy-title mobile">Grow Sales and Renewals</h3>
                             <picture>
                                 <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_1_desktop__tablet.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile.webp" alt="Grow Sales and Renewals">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_1_mobile.webp" alt="Grow Sales and Renewals">
                             </picture>
                         </div>
                     </div>                   
@@ -48,13 +49,14 @@ function salesCloud() {
                 <div class="sc-content">
                     <div class="sc-line sc-right">
                         <div class="sc-image">
+                            <h3 class="copy-title mobile">Drive Client Engagement</h3>
                            <picture>
                                 <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_desktop__tablet.webp">
                                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile.webp" alt="Drive Client Engagement">
                             </picture>
                         </div>
                         <div class="sc-text">
-                            <h3 class="copy-title">Drive Client Engagement</h3>
+                            <h3 class="copy-title desktop">Drive Client Engagement</h3>
                             <ul class="cc-list"><li><span>Content Library:</span> Provide pre-built resources to your team and clients. Marketing, risk management, updates, and more.</li><li><span>Distribution:</span> Distribute email content throughout the year or as one-offs. Auto-send resources at the right times to drive upsells.</li><li><span>Content Management:</span> Centralize all your organization's content. Track marketing content performance.</li></ul>
                             <div class="anchor-wrapper"><a href="javascript:;" class="spz-cta">Book a demo</a><a class="spz-anchor" href="/personal-lines/content-cloud/">Learn more</a></div>
                         </div>
