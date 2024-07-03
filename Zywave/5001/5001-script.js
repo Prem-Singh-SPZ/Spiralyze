@@ -4,16 +4,15 @@ let bodyLoaded = setInterval(function () {
         clearInterval(bodyLoaded);
         if (!body.classList.contains('spz-5001')) {
             body.classList.add('spz-5001');
-
             heroSection();
-            footerFormSection();
         }
     }
 });
 
 function heroSection() {
-
-    document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p><h1 class="h-title">Grow New Client Sales xx. Transform sales, marketing and customer engagement.</h1><p class="h-copy">Access millions of in-depth lead profiles. <span class="no-wrap">Auto-compare</span> and generate quotes for multiple carriers at once. Automate content delivery. Manage your agency in one platform.</p><div class="h-demo-cta"><a href="javascript:;" class="spz-cta">Book a demo</a></div></div>`;
+    waitForElm('.spz-5001 .zy-hero-container-accordion .zy-hero-container-inner').then(function () {
+        document.querySelector('.zy-hero-container-accordion .zy-hero-container-inner').innerHTML = `<div class="spz-hero-copy-container"><p class="eye-brow-text">Personal lines Solutions</p><h1 class="h-title">Grow New Client Sales xx. Transform sales, marketing and customer engagement.</h1><p class="h-copy">Access millions of in-depth lead profiles. <span class="no-wrap">Auto-compare</span> and generate quotes for multiple carriers at once. Automate content delivery. Manage your agency in one platform.</p><div class="h-demo-cta"><a href="javascript:;" class="spz-cta">Book a demo</a></div></div>`;
+    });
 
     salesCloud();
 }
@@ -71,6 +70,8 @@ function salesCloud() {
             document.querySelector('.zy-header-container-inner .zy-top-demo-container>a').click();
         }
     });
+
+    footerFormSection();
 }
 
 function footerFormSection() {
@@ -82,7 +83,7 @@ function footerFormSection() {
             formModify();
         });
         //Add Hidden field value
-        waitForElm('.spz-5001 .zy-marketo-form-container .mktoForm input[name="cR02"]').then(function () {
+        waitForElm('.spz-5001 .zy-marketo-form-container .mktoForm input[name="cR01"]').then(function () {
             document.querySelector(`.spz-5001 .zy-marketo-form-container .mktoForm input[name="cR01"]`).setAttribute("value", "5001_variant");
         });
     });
