@@ -236,6 +236,15 @@
       document.querySelector('body.spz-2002 #Company_Size__c option[value=""]').textContent = 'Company Size';
       document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
       document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'country');
+
+      //update tab index of all the .mktoField
+      document.querySelector('body.spz-2002 form.mktoForm #Email').setAttribute('tabindex', 1);
+      document.querySelector('body.spz-2002 form.mktoForm #FirstName').setAttribute('tabindex', 2);
+      document.querySelector('body.spz-2002 form.mktoForm #LastName').setAttribute('tabindex', 3);
+      document.querySelector('body.spz-2002 form.mktoForm #Phone').setAttribute('tabindex', 4);
+      document.querySelector('body.spz-2002 form.mktoForm #Company').setAttribute('tabindex', 5);
+      document.querySelector('body.spz-2002 form.mktoForm #Company_Size__c').setAttribute('tabindex', 6);
+      document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('tabindex', 7);
     });
 
     appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
