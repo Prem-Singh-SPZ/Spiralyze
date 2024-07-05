@@ -242,6 +242,7 @@
       document.querySelector('body.spz-2002 form.mktoForm .mktoButtonRow').insertAdjacentElement('afterend', document.querySelector('body.spz-2002 form.mktoForm .mktoCaptchaDisclaimer'));
 
       document.querySelector('body.spz-2002 #Company_Size__c option[value=""]').textContent = 'Company Size';
+      document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
     });
 
   }

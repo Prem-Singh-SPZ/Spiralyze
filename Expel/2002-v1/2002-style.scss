@@ -1,8 +1,7 @@
 :root {
   --inputHeight: 52px;
   --desk-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1440.webp");
-  --tab-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/OptimoRoute/2006_OptimoRoute_Sign_Up_Review_Summary/Background_768_2x-min.jpg");
-  --mob-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/OptimoRoute/2006_OptimoRoute_Sign_Up_Review_Summary/Background_360_2x-min.jpg");
+  --2k-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1921.webp");
 }
 
 $color_1: #747474;
@@ -17,21 +16,28 @@ $color_9: #fff;
 $font-family_1: proxima-nova, Arial, sans-serif;
 
 body.spz-2002 {
+  overflow-x: hidden;
+  overflow-y: auto;
+
   &::before {
     content: "";
     display: block;
-    background: var(--desk-bg) no-repeat top center / cover;
+    background: var(--desk-bg) no-repeat top left / cover;
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 100;
 
     @media (max-width: 991px) {
-      background: var(--tab-bg) no-repeat top center / cover;
+      background: var(--desk-bg) no-repeat top left / cover;
     }
 
-    @media (max-width: 767px) {
-      background: var(--mob-bg) no-repeat top center / cover;
+    @media (max-width: 767.98px) {
+      background: var(--desk-bg) no-repeat top left / cover;
+    }
+
+    @media (min-width: 1620px) {
+      background: var(--2k-bg) no-repeat top left / cover;
     }
   }
 
@@ -53,6 +59,7 @@ body.spz-2002 {
         display: flex;
         flex-wrap: wrap;
         margin-top: 18px;
+        width: 100%;
       }
 
       &.spz-form-wrap {
@@ -64,7 +71,7 @@ body.spz-2002 {
         text-align: center;
         z-index: 1000000;
 
-        @media (max-width: 767px) {
+        @media (max-width: 767.98px) {
           width: calc(100% - 32px);
         }
 
@@ -89,6 +96,7 @@ body.spz-2002 {
           flex-wrap: wrap;
           gap: 0 12px;
           max-width: 100%;
+          width: 100% !important;
 
           .mktoClear,
           .mktoFormRow,
@@ -102,6 +110,10 @@ body.spz-2002 {
             width: 100%;
             margin: 0 6px;
             float: none;
+
+            @media (max-width: 767.98px) {
+              width: 100% !important;
+            }
 
             &.spz-email,
             &.spz-ispartner {
@@ -383,6 +395,7 @@ body.spz-2002 {
               align-items: center;
               justify-content: center;
               border: none;
+              border-radius: 72px;
               background: #1762e6;
               background-image: none !important;
               color: $color_9;
