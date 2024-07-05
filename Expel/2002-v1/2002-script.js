@@ -190,8 +190,6 @@
         elem.closest('.spz-input-wrap').classList.remove('filled');
         // elem.closest('.spz-input-wrap').classList.add('field-error');
       }
-
-      // checkVisibleInputs();
     }, 100);
 
     setTimeout(() => {
@@ -243,10 +241,11 @@
 
       document.querySelector('body.spz-2002 #Company_Size__c option[value=""]').textContent = 'Company Size';
       document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
+      document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'country');
     });
-
+    
+    appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
   }
-
 
   // Wait for element to load
   function waitForElm(selector) {
@@ -262,5 +261,13 @@
       });
       observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
+  }
+
+  //append current test name to utmlocation input field with existing value
+  function appendHiddenField(field, value) {
+    let utmLocation = document.querySelector(field);
+    if (utmLocation) {
+      utmLocation.value = utmLocation.value + value;
+    }
   }
 })();
