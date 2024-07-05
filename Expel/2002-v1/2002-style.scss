@@ -122,6 +122,8 @@ body.spz-2002 {
 
             .mktoFieldWrap {
               float: none;
+              position: relative;
+              width: 100% !important;
 
               .mktoLabel {
                 .mktoAsterix {
@@ -141,29 +143,7 @@ body.spz-2002 {
                 left: 10px;
                 transition: all 0.3s ease-in-out;
               }
-              position: relative;
-              width: 100% !important;
-              .mktoHtmlText {
-                width: 100% !important;
-                color: $color_1 !important;
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 400 !important;
-                line-height: 22px;
-                a {
-                  color: $color_2;
-                  font-size: 14px;
-                  font-style: normal;
-                  font-weight: 400;
-                  line-height: 22px;
-                  text-decoration-line: underline;
-                  text-underline-offset: 3px;
-                  padding: 0;
-                  &:hover {
-                    color: $color_3;
-                  }
-                }
-              }
+
               .mktoField {
                 width: 100% !important;
                 height: 52px;
@@ -366,18 +346,6 @@ body.spz-2002 {
               }
             }
           }
-          .comment-toggler {
-            display: inline-block;
-            color: $color_5;
-            font-family: $font-family_1;
-            font-size: 18px;
-            font-style: normal;
-            font-weight: 700;
-            line-height: 26px;
-            &:hover {
-              color: $color_8;
-            }
-          }
           .mktoButtonRow {
             width: 100%;
             margin: 6px auto 18px;
@@ -429,6 +397,27 @@ body.spz-2002 {
               padding: 0;
               &:hover {
                 color: $color_8;
+              }
+            }
+          }
+          .mktoHtmlText.mktoHasWidth {
+            width: 100% !important;
+            color: $color_1 !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400 !important;
+            line-height: 22px;
+            a {
+              color: $color_2;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 22px;
+              text-decoration-line: underline;
+              text-underline-offset: 3px;
+              padding: 0;
+              &:hover {
+                color: $color_3;
               }
             }
           }
