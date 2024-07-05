@@ -245,6 +245,9 @@
       document.querySelector('body.spz-2002 form.mktoForm #Company').setAttribute('tabindex', 5);
       document.querySelector('body.spz-2002 form.mktoForm #Company_Size__c').setAttribute('tabindex', 6);
       document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('tabindex', 7);
+      document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText.mktoHasWidth a').setAttribute('tabindex', 8);
+      // document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol .mktoCheckboxList input').setAttribute('tabindex', 9);
+
     });
 
     appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
