@@ -5,6 +5,7 @@
     formSelector: "#mktoForm_2231",
 
     cardContent: {
+      formLogo: `//res.cloudinary.com/spiralyze/image/upload/v1720174422/expel/2002/Expel_logo.svg`,
       formHeading: `Get a Demo`,
     },
 
@@ -105,6 +106,7 @@
         <div class="spz-form-container">
           <div class="spz-form-wrap" id="spz-form-wrap">
               <div class="form-section">
+                <div class="form-logo"><img src="${formData.formLogo}" alt="Expel Logo"></div>
                 ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
                 <div class="the-form"></div>
               </div>

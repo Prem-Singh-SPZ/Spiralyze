@@ -64,7 +64,7 @@ body.spz-2002 {
 
       &.spz-form-wrap {
         max-width: 594px;
-        padding: 40px 36px;
+        padding: 40px 30px;
         border-radius: 16px;
         width: 100%;
         background: #fff;
@@ -76,6 +76,15 @@ body.spz-2002 {
         }
 
         .form-section {
+
+          .form-logo{
+            padding-bottom: 20px;
+            border-bottom: 1px solid rgba(19, 20, 22, 0.00);
+            img{
+              width: 100px;
+            }
+          }
+
           .form-heading {
             color: #131416;
             text-align: center;
@@ -118,6 +127,38 @@ body.spz-2002 {
             &.spz-email,
             &.spz-ispartner {
               width: 100% !important;
+            }
+
+            &.spz-email{
+              order: 0;
+            }
+
+            &.spz-firstname{
+              order: 1;
+            }
+
+            &.spz-lastname{
+              order: 2;
+            }
+
+            &.spz-phone{
+              order: 3;
+            }
+
+            &.spz-company{
+              order: 4;
+            }
+
+            &.spz-company_size__c{
+              order: 5;
+            }
+
+            &.spz-person_country__c{
+              order: 6;
+            }
+
+            &.spz-ispartner{
+              order: 8;
             }
 
             .mktoFieldWrap {
@@ -267,9 +308,11 @@ body.spz-2002 {
               width: 100% !important;
               padding: 0;
               position: relative;
+              margin-top: 18px;
               input {
                 position: absolute;
                 opacity: 0;
+                height: auto !important;
                 &:checked + label {
                   &::before {
                     background: #1762e6;
@@ -348,7 +391,7 @@ body.spz-2002 {
           }
           .mktoButtonRow {
             width: 100%;
-            margin: 6px auto 18px;
+            margin: 6px 6px 18px;
             .mktoButtonWrap {
               display: block;
               width: auto;
@@ -382,7 +425,7 @@ body.spz-2002 {
             }
           }
           .mktoCaptchaDisclaimer {
-            width: 70% !important;
+            width: 68% !important;
             margin: 0 auto !important;
             color: $color_1 !important;
             text-align: center;
@@ -401,7 +444,9 @@ body.spz-2002 {
             }
           }
           .mktoHtmlText.mktoHasWidth {
+            order: 7;
             width: 100% !important;
+            margin: 0 6px;
             color: $color_1 !important;
             font-size: 14px;
             font-style: normal;
