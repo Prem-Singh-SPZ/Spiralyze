@@ -1,277 +1,267 @@
+(function () {
 
-let bodyLoaded = setInterval(function () {
-    const body = document.querySelector('body');
-    if (body) {
-        clearInterval(bodyLoaded);
-        if (!body.classList.contains('spz_2003')) {
-            body.classList.add('spz_2003');
-            waitForElm('.spz_2003 #hero-section').then(function () {
-                document.querySelector('.spz_2003 #hero-section .row.hero .col.content').insertAdjacentHTML('afterend', `<div class="col spz-content">
-          <a href="https://expel.com/" class="site-logo-link" rel="home">
-            <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/expel_logosvg.svg" class="site-logo-img" alt="Expel">
-          </a>
-          <h6 class="section-label">Managed Detection and Response Services</h6>
-          <h2 class="section-heading">Streamline detection and remediation</h2>
-          <p class="info-text"><strong>With Expel you get:</strong></p>
-          <ul class="section-highlight-point">
-            <li class="list-item"><span class="highlight-text">24x7 SOC services</span> with threat detection, alert triage, remediation recommendations, automated responses & a 23-minute MTTR.</li>
-            <li class="list-item"><span class="highlight-text">Extensive protection</span> across cloud workloads, control plans, identity management, SaaS, endpoints, and networks.</li>
-            <li class="list-item"><span class="highlight-text">120+ integrations</span> including AWS, CrowdStrike, Google, Microsoft, Okta, Palo Alto, SentinelOne, Splunk, Salesforce, Wiz, and more.</li>
-          </ul>
-          <p class="info-text">See Expel in action!</p>
-        </div>`);
-                document.querySelector('.spz_2003 #hero-section .row.hero').insertAdjacentHTML('afterend', `<div class="hero-client-logos">
-          <div class="container">
-            <div class="img-wrapper">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame_1171275521.svg" alt="Visa" class="client-logo" />
-            </div>
-            <div class="img-wrapper">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661499/expel/2003/frame_1171275522.svg" alt="Uber" class="client-logo" />
-            </div>
-            <div class="img-wrapper">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame_1171275523.svg" alt="Markel" class="client-logo" />
-            </div>
-            <div class="img-wrapper">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame_1171275524.svg" alt="Carter's" class="client-logo" />
-            </div>
-            <div class="img-wrapper">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661499/expel/2003/frame_1171275525.svg" alt="Doordash" class="client-logo" />
-            </div>
-          </div>  
-        </div>`);
-                document.querySelector('.spz_2003 #hero-section .hero .ex-form .form-title').textContent = "Watch Demo";
+  const testDetails = {
+    test_num: '2002',
+    formSelector: "#mktoForm_2231",
 
-                //Form internal code
-                waitForElm('.spz_2003 #hero-section .ex-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
-                    formModify();
-                });
-            });
-        }
-    }
-});
+    cardContent: {
+      formLogo: `//res.cloudinary.com/spiralyze/image/upload/v1720174422/expel/2002/Expel_logo.svg`,
+      formHeading: `Get a Demo`,
+    },
 
-function formModify() {
-    // Unwrap all child elemnts of mktoFormRow
-    var mktoForm = document.querySelector('.mktoForm');
-    var mktoFormRows = document.querySelectorAll('.mktoFormRow');
-    mktoFormRows.forEach(function (row) {
-        while (row.firstChild) {
-            mktoForm.insertBefore(row.firstChild, row);
-        }
-        row.remove();
+    useCustomFormLabels: true,
+    formFields: [
+      {
+        inputSel: "#Email", // input element selector
+        labelSel: "#LblEmail", // label element selector
+        labelText: "Business Email", // label text/value
+      },
+      {
+        inputSel: "#FirstName",
+        labelSel: "#LblFirstName",
+        labelText: "First Name",
+      },
+      {
+        inputSel: "#LastName",
+        labelSel: "#LblLastName",
+        labelText: "Last Name",
+      },
+      {
+        inputSel: "#Company",
+        labelSel: "#LblCompany",
+        labelText: "Company Name",
+      },
+      {
+        inputSel: "#Company_Size__c",
+        labelSel: "#LblCompany_Size__c",
+        labelText: "Company Size",
+      },
+      {
+        inputSel: "#Phone",
+        labelSel: "#LblPhone",
+        labelText: "Phone Number",
+      },
+      {
+        inputSel: "#Person_Country__c",
+        labelSel: "#LblPerson_Country__c",
+        labelText: "Country",
+      },
+    ],
+  };
+
+  waitForElm(`${testDetails.formSelector} .mktoFormRow .mktoFieldWrap .mktoField`).then(function (elm) {
+    restructureForm();
+    addForm(testDetails.cardContent);
+  });
+
+
+  // function will accept json which will contain inputSel, labelSel and labelText
+  function animateLabels(data) {
+    data.formFields.map((item) => {
+      const label = document.querySelector(item.labelSel);
+      const parentDiv = findParent(item.inputSel);
+
+      // If default labels are used then no need to change the label text
+      if (data.useCustomFormLabels && parentDiv) {
+        label.innerText = item.labelText;
+      }
+      // label.classList.add(`label-spz-${item.labelSel.replace("#", "")}`);
+      if (label) {
+        label.style.width = "";
+        document.querySelector(item.inputSel).placeholder = "";
+      }
+
+      if (parentDiv) {
+        parentDiv.classList.add("spz-input-wrap");
+      }
     });
-    // Add class in mktoFormRow using count
-    var form_fields = document.querySelectorAll('.spz_2003 #hero-section .hero .ex-form form.mktoForm .mktoFormCol');
-    for (var i = 0; i < form_fields.length; i++) {
-        var dynamicClass = 'field-' + (i + 1);
-        form_fields[i].classList.add(dynamicClass);
+    focusFields();
+  }
+
+  //Helper function to find parent div of input or select element
+  function findParent(elementSelector) {
+    try {
+      let element = document.querySelector(elementSelector);
+      let wrapper = element.closest("div"); //define parent's tag name
+
+      // Check if parent div contains input or select element and label
+      if ((wrapper.innerHTML.includes("<input") || wrapper.innerHTML.includes("<select") || wrapper.innerHTML.includes("<textarea")) && wrapper.innerHTML.includes("<label")) {
+        return wrapper;
+      } else if (wrapper.parentElement.innerHTML.includes("<input") && wrapper.parentElement.innerHTML.includes("<label")) {
+        return wrapper.parentElement;
+      } else {
+        console.log("Something is wrong");
+      }
+    } catch (error) {
+      console.error("Please check if selector is correct: ", elementSelector);
     }
-    // Updating Form Labels
-    document.querySelector('#LblCompany_Size__c').textContent = "Company Size";
-    document.querySelector('#Company_Size__c').options[0].textContent = 'Select';
-    document.querySelector('#LblPerson_Country__c').textContent = "Country";
-    // document.querySelector('#LblhowDidYouHearAboutUs').textContent = "What would you like to see?";
-    // document.querySelector('.spz_2003 .mktoForm .field-8 .mktoHtmlText').innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`;
-    // form CTA Update
-    let form_CTA = setInterval(() => {
-        let textChng = document.querySelector('.spz_2003 #hero-section .hero .ex-form form.mktoForm .mktoButtonRow .mktoButton');
-        if (textChng && !textChng.classList.contains('updated')) {
-            textChng.innerHTML = '<svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.745 8.188L4.958 2.362a.738.738 0 00-.383-.112.701.701 0 00-.696.703h-.004v12.094h.004c0 .387.312.703.696.703.144 0 .263-.05.393-.12l9.777-5.818a1.06 1.06 0 000-1.624z" fill="#fff"/></svg> Instant access ';
-            textChng.classList.add('updated');
-            clearInterval(form_CTA);
+  }
+
+  // This is the code to generate the form over UI section do no edit it
+  function addForm(formData) {
+    const formSelector = testDetails.formSelector;
+
+    // Added id to formSelector (Used in CSS to override control styles)
+    const formTemplate = `
+        <div class="spz-form-container">
+          <div class="spz-form-wrap" id="spz-form-wrap">
+              <div class="form-section">
+                <div class="form-logo"><img src="${formData.formLogo}" alt="Expel Logo"></div>
+                ${formData.formHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.formHeading}</div>` : ""}
+                <div class="the-form"></div>
+              </div>
+            </div>
+        </div> `;
+
+    // Remove existing spz-form-wrap if exist (avoiding duplicate)
+    if (document.querySelector('.spz-form-wrap')) {
+      document.querySelector('.spz-form-wrap').remove();
+    }
+
+    document.body.insertAdjacentHTML("beforeend", formTemplate); /*Insert spz-form-wrap before closing body tag*/
+
+    if (!document.querySelector(formSelector)) {
+      document.querySelector(".spz-form-wrap .the-form").insertAdjacentHTML("beforeend", "<div style='color:red;'>Please add proper form selector in code to load form correctly.</div>");
+    } else {
+      const formLoaded = setInterval(() => {
+        if (document.querySelector(formSelector) && document.querySelectorAll(`${formSelector} input`).length > 0) {
+          clearInterval(formLoaded);
+          document.querySelector(".spz-form-wrap .the-form").appendChild(document.querySelector(formSelector)); /*Apply form to spz form wrapper*/
         }
+      });
+    }
+
+    animateLabels(testDetails);
+
+    // Add class to body based on test number
+    document.body.classList.add(`spz-${testDetails.test_num}`)
+  }
+
+
+  // On input focus add class on closest parent field class
+  function focusFields() {
+    document.querySelectorAll(`${testDetails.formSelector} .form-fields-row .mktoField:not([type="checkbox"]):not([type="hidden"]):not([type="checkbox"])`).forEach(function (el) {
+      el.addEventListener('focus', function () {
+        el.closest('.spz-input-wrap').classList.add('focused');
+        checkError(el);
+      });
+      el.addEventListener('blur', function () {
+        el.closest('.spz-input-wrap').classList.remove('focused');
+        checkError(el);
+      });
+
+      // add event listeners to the input element
+      el.addEventListener('keypress', () => {
+        checkError(el);
+      });
+
+      el.addEventListener('change', () => {
+        checkError(el);
+      });
+
+      el.addEventListener('keydown', () => {
+        checkError(el);
+      });
+
+      el.addEventListener('keyup', () => {
+        checkError(el);
+      });
+    });
+  }
+
+  // Function to add .field-error class on closest parent .field class if .error is exist on input
+  function checkError(elem) {
+    let timeBuffer = setInterval(() => {
+      if (elem.closest('.spz-input-wrap').querySelector('.mktoError') && elem.closest('.spz-input-wrap').querySelector('.mktoInvalid')) {
+        elem.closest('.spz-input-wrap').classList.add('field-error');
+      } else {
+        elem.closest('.spz-input-wrap').classList.remove('field-error');
+      }
+      if (elem && elem.value && (elem.value != '')) {
+        elem.closest('.spz-input-wrap').classList.add('filled');
+        // elem.closest('.spz-input-wrap').classList.remove('field-error');
+      } else {
+        elem.closest('.spz-input-wrap').classList.remove('filled');
+        // elem.closest('.spz-input-wrap').classList.add('field-error');
+      }
     }, 100);
-    // Change Field Position
-    var phone_field = document.querySelector('.spz_2003 .mktoForm .field-2');
-    var lname_field = document.querySelector('.spz_2003 .mktoForm .field-4');
-    lname_field.after(phone_field);
 
-    var disclaimer_field = document.querySelector('.spz_2003 .mktoForm .mktoCaptchaDisclaimer');
-    var form_button = document.querySelector('.spz_2003 .mktoForm .mktoButtonRow');
-    form_button.after(disclaimer_field);
+    setTimeout(() => {
+      clearInterval(timeBuffer);
+    }, 1000);
+  }
 
-    // + Additional comments
-    // document.querySelector('.spz_2003 .mktoForm .field-9 .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<a href="javascript:void(0);" class="comment-toggler">+ Additional comments</a>`);
-    // var comment_toggler = document.querySelector(".spz_2003 .mktoForm .field-9 .comment-toggler");
-    // comment_toggler.addEventListener("click", (event) => {
-    //   comment_toggler.classList.add("show-field");
-    //   document.querySelector('.spz_2003 .mktoForm .field-9 textarea.mktoField').focus();
-    // });
+  // Why? - To make it in 2 columns properly
+  // Add new 'div.form-fields-row' inside formSelector and move all '.mktoFormCol' in '.mktoFormRow'
+  function restructureForm() {
+    let formSelector = testDetails.formSelector;
 
-    // form state
-    var selector = '.spz_2003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
-    document.addEventListener('focus', function (event) {
-        if (event.target.matches(selector)) {
-            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+    // Insert new 'div.form-fields-row' inside formSelector
+    document.querySelector(formSelector).insertAdjacentHTML('afterbegin', '<div class="form-fields-row"></div>');
 
-        }
-    }, true);
-    var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
-    for (s_event of eventList) {
-        document.addEventListener(s_event, function (event) {
-            if (event.target.matches(selector)) {
-                if (event.target.value == null || event.target.value == '') {
-                    event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('filled');
-                } else {
-                    event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('filled');
-                }
-                if (event.type == "change") {
-                    if (event.target.value == "") {
-                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
-                    } else {
-                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                        //event.target.parentNode.querySelector('.mktoError').style.display = 'none';
-                    }
-                } else {
-                    if (event.target.classList.contains('mktoInvalid')) {
-                        var closestError = event.target.parentNode.querySelector('.mktoError');
-                        if (closestError && closestError.style.display == '') {
-                            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
-                        } else {
-                            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                        }
-                    } else {
-                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                    }
-                }
-                // if(event.type == "focusout" && event.target.name == 'Email' && !event.target.classList.contains('mktoInvalid') && event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.contains('filled') && !event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.contains('error')) {
-                //   document.body.classList.add('form-expand');
-                // }
-                if (event.target.name == 'Email') {
-                    let counterA = 0;
-                    const intervalIdA = setInterval(() => {
-                        if (document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoFormCol.field-3').style.display !== "none") {
-                            document.body.classList.add('form-expand');
-                        }
-                        counterA++;
-                        if (counterA >= 20) {
-                            clearInterval(intervalIdA);
-                        }
-                    }, 500);
-                }
-                if (event.target.name == 'Person_Country__c') {
-                    waitForElm('.spz_2003 #hero-section form.mktoForm .mktoFormCol[data-wrapper-for="mktoCheckbox_27626_0 Privacy_Compliance_Explicit_Opt_In__c"]').then(function (elm) {
-                        document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoFormCol.field-8').after(elm);
-                    });
-                }
-            }
-        });
-    }
+    // Move all '.mktoFormCol' to '.form-fields-row'
+    document.querySelectorAll(`${formSelector} .mktoFormCol:not(.mktoButtonRow)`).forEach(function (col) {
+      if (col.querySelector('.mktoField:not(#honeypot)')) {
+        // Append each '.mktoFormCol' to '.form-fields-row'
+        document.querySelector('.form-fields-row').appendChild(col);
 
-    document.addEventListener('focusout', function (event) {
-        document.querySelectorAll('body form .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-            elem.classList.remove('active', 'typing');
-        })
-    }, true);
+        // Removing inline styles from mktoFormCol
+        col.removeAttribute('style');
 
-    document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
-        waitForElm('.spz_2003 #hero-section .hero .ex-form form.mktoForm .mktoError').then(function (elm) {
-            if (elm.parentNode.querySelector('#ValidMsgEmail')) {
-                const targetNode = elm.parentNode;
-                const config = { attributes: true, childList: true, subtree: true };
-                const callback = (mutationList, observer) => {
-                    for (const mutation of mutationList) {
-                        if (mutation.type === "childList") {
-                            if (elm.parentNode === null && elm.style.display != 'none') {
-                                targetNode.classList.add('error');
-                            } else {
-                                elm.parentNode.classList.add('error');
-                            }
-                            observer.disconnect();
-                        } else if (mutation.type === "attributes") {
-                            if (elm.parentNode === null) {
-                                targetNode.classList.add('error');
-                            } else {
-                                elm.parentNode.classList.add('error');
-                            }
-                            observer.disconnect();
-                        }
-                    }
-                };
-                const observer = new MutationObserver(callback);
-                observer.observe(targetNode, config);
-            } else {
-                let counterA = 0;
-                const intervalIdA = setInterval(() => {
-                    if (document.querySelector('.spz_2003 #hero-section .hero .ex-form form.mktoForm .mktoError #ValidMsgEmail') !== null) {
-                        document.querySelector('.spz_2003 #hero-section .hero .ex-form form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-                    }
-                    counterA++;
-                    if (counterA >= 10) {
-                        clearInterval(intervalIdA);
-                    }
-                }, 500);
-            }
-        });
-    })
+        // Remove inline styles from .mktoField
+        col.querySelector('.mktoField').removeAttribute('style');
 
-    // Do not touch below hidden field code for any Experiment (Set Hidden Filed Value)
-    function hiddenValue(currentExperimentName, currentExperimentValue) {
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
+        // Add unique class to each field group, take input name and add it as class
+        col.classList.add('spz-' + col.querySelector('.mktoField').name.toLowerCase());
+
+        // Remove all width from .mktoHasWidth in all columns
+        if (col.querySelectorAll('.mktoHasWidth').length > 0) {
+          col.querySelectorAll('.mktoHasWidth').forEach(function (el) {
+            el.removeAttribute('style');
+          });
         }
 
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
+        // If .mktoLogicalField is present then add class to parent .mktoFormCol
+        if (col.querySelector('.mktoLogicalField')) {
+          col.classList.add('checkbox-group');
         }
 
-        var ExistingExperimentName = getCookie('ExperimentName');
-        var ExistingExperimentValue = getCookie('ExperimentValue');
-
-        if (!ExistingExperimentName) {
-
-            setCookie('ExperimentName', currentExperimentName, 1);
-            setCookie('ExperimentValue', currentExperimentValue, 1);
-
-        } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
-
-            setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
-            setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
-
-        } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
-
-            var existingNames = ExistingExperimentName.split(',');
-            var existingValues = ExistingExperimentValue.split(',');
-
-            var index = existingNames.indexOf(currentExperimentName);
-            existingValues[index] = currentExperimentValue;
-
-            setCookie('ExperimentName', existingNames.join(','), 1);
-            setCookie('ExperimentValue', existingValues.join(','), 1);
-        }
-    }
-    // Do not touch below hidden field code for any Experiment over (Set Hidden Filed Value)
-
-    // Use this and change value according to the experiment
-    hiddenValue('#2003 | Expel | Demo | Shortform SPZ Baseline', 'variant_#2003');
-}
-
-
-// Generic Code
-function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+      }
     });
-}
+
+    waitForElm(`.spz-ispartner`).then(function (elm) {
+      document.querySelector('body.spz-2002 .mktoFormCol.spz-ispartner').insertAdjacentElement('beforebegin', document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoHtmlText'));
+      document.querySelector('body.spz-2002 form.mktoForm .mktoButtonRow').insertAdjacentElement('afterend', document.querySelector('body.spz-2002 form.mktoForm .mktoCaptchaDisclaimer'));
+
+      document.querySelector('body.spz-2002 #Company_Size__c option[value=""]').textContent = 'Company Size';
+      document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
+      document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'country');
+    });
+
+    appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
+  }
+
+  // Wait for element to load
+  function waitForElm(selector) {
+    return new Promise(function (resolve) {
+      if (document.querySelector(selector)) {
+        return resolve(document.querySelector(selector));
+      }
+      const observer = new MutationObserver(function (mutations) {
+        if (document.querySelector(selector)) {
+          resolve(document.querySelector(selector));
+          observer.disconnect();
+        }
+      });
+      observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+  }
+
+  //append current test name to input field with existing value, only if similar value doesn't exist already
+  function appendHiddenField(selector, value) {
+    let hiddenField = document.querySelector(selector);
+    if (hiddenField && hiddenField.value.indexOf(value) === -1) {
+      hiddenField.value += `${value}`;
+    }
+  }
+})();
