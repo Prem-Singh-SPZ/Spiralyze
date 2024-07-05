@@ -36,6 +36,19 @@ let bodyLoaded = setInterval(function () {
                         e.preventDefault();
                         document.body.classList.add('show-popup');
                         document.querySelector('html').classList.add('show-popup');
+
+                        //when form shows up, check if email field is filled and add class to parent
+                        var emailField = document.querySelector('.spz-1002 #zy-demo-form-section .mktoFormRow input#Email');
+
+                        let checkEmail = setInterval(() => {
+                            if (emailField.value) {
+                                emailField.closest('.mktoFieldWrap').classList.add('filled');
+                            }
+                        }, 100);
+
+                        setTimeout(() => {
+                            clearInterval(checkEmail);
+                        }, 2000);
                     });
                 });
                 document.querySelectorAll('.spz-1002 #zy-demo-form-section .close-icon, .spz-1002 #zy-demo-form-section').forEach((ec) => {
