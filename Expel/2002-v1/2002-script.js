@@ -46,14 +46,6 @@
         labelText: "Country",
       },
     ],
-
-
-    // spzHiddenFields: [
-    //   {
-    //     inputSel: "#CPC__c",
-    //     value: `variant_${this.test_num}`,
-    //   },
-    // ],
   };
 
   waitForElm(`${testDetails.formSelector} .mktoFormRow .mktoFieldWrap .mktoField`).then(function (elm) {
@@ -243,7 +235,7 @@
       document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
       document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'country');
     });
-    
+
     appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
   }
 
@@ -263,11 +255,11 @@
     });
   }
 
-  //append current test name to utmlocation input field with existing value
-  function appendHiddenField(field, value) {
-    let utmLocation = document.querySelector(field);
-    if (utmLocation) {
-      utmLocation.value = utmLocation.value + value;
+  //append current test name to input field with existing value, only if similar value doesn't exist already
+  function appendHiddenField(selector, value) {
+    let hiddenField = document.querySelector(selector);
+    if (hiddenField && hiddenField.value.indexOf(value) === -1) {
+      hiddenField.value += `${value}`;
     }
   }
 })();
