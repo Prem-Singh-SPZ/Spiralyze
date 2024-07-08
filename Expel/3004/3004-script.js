@@ -254,6 +254,7 @@
             // document.querySelector('body.spz-3004 form.mktoForm .mktoFormCol .mktoCheckboxList input').setAttribute('tabindex', 9);
 
             // + Additional comments
+            document.querySelector('#LblpersonNotestoAppend').textContent = "What would you like to see?";
             document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<a href="javascript:void(0);" class="comment-toggler">+ Additional comments</a>`);
             var comment_toggler = document.querySelector(".spz-3004 .mktoForm .spz-personnotestoappend .comment-toggler");
             comment_toggler.addEventListener("click", (event) => {
