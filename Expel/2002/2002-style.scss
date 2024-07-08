@@ -70,14 +70,19 @@ body.spz-2002 {
         text-align: center;
         z-index: 1000000;
 
+        @media screen and (max-width: 991px) {
+          max-width: 692px;
+        }
+
         @media (max-width: 767.98px) {
           width: calc(100% - 32px);
         }
 
         .form-section {
           .form-logo {
-            padding-bottom: 20px;
+            padding-bottom: 13px;
             position: relative;
+            margin-bottom: 18px;
 
             &::after {
               content: "";
@@ -92,7 +97,8 @@ body.spz-2002 {
             }
 
             img {
-              width: 100px;
+              width: 93.5px;
+              height: 31px;
             }
           }
 
@@ -105,10 +111,6 @@ body.spz-2002 {
             font-weight: 800;
             line-height: 40px;
           }
-        }
-
-        .the-form {
-          margin-top: 18px;
         }
 
         form.mktoForm {
@@ -436,7 +438,7 @@ body.spz-2002 {
             }
           }
           .mktoCaptchaDisclaimer {
-            width: 68% !important;
+            width: 350px !important;
             margin: 0 auto !important;
             color: $grey !important;
             text-align: center;
