@@ -173,9 +173,9 @@
   function checkError(elem) {
     let timeBuffer = setInterval(() => {
       if (elem.closest('.spz-input-wrap').querySelector('.mktoError') && elem.closest('.spz-input-wrap').querySelector('.mktoInvalid')) {
-        elem.closest('.spz-input-wrap').classList.add('field-error');
+        elem.closest('.spz-input-wrap').classList.add('error');
       } else {
-        elem.closest('.spz-input-wrap').classList.remove('field-error');
+        elem.closest('.spz-input-wrap').classList.remove('error');
       }
       if (elem && elem.value && (elem.value != '')) {
         elem.closest('.spz-input-wrap').classList.add('filled');
@@ -235,7 +235,11 @@
 
       document.querySelector('body.spz-2002 #Company_Size__c option[value=""]').textContent = 'Company Size';
       document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
-      document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'country');
+      // document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'dont');
+
+      document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').removeAttribute('style');
+      document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').classList.add('spz-hidden');
+      document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.add('spz-hidden');
 
       //update tab index of all the .mktoField
       document.querySelector('body.spz-2002 form.mktoForm #Email').setAttribute('tabindex', 1);
@@ -247,11 +251,15 @@
       document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('tabindex', 7);
       document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText.mktoHasWidth a').setAttribute('tabindex', 8);
       // document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol .mktoCheckboxList input').setAttribute('tabindex', 9);
-
     });
 
-    appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
+    waitForElm(`.spz-firstname[data-zi-field-enriched]`).then(function (elm) {
+      document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').classList.remove('spz-hidden');
+      document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.remove('spz-hidden');
+    });
+    // appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
   }
+
 
   // Wait for element to load
   function waitForElm(selector) {

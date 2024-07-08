@@ -39,7 +39,7 @@ body.spz-2002 {
     }
   }
 
-  #page {
+  #page, .spz-hidden {
     display: none !important;
   }
 
@@ -158,6 +158,10 @@ body.spz-2002 {
               order: 8;
             }
 
+            .mktoHtmlText.mktoHasWidth{
+              order: 7;
+            }
+
             .mktoFieldWrap {
               float: none;
               position: relative;
@@ -169,11 +173,11 @@ body.spz-2002 {
                 }
                 width: auto !important;
                 padding: 1px 6px;
-                color: $grey !important;
-                font-size: 16px !important;
+                color: $grey;
+                font-size: 16px;
                 font-style: normal;
-                font-weight: 400 !important;
-                line-height: 24px !important;
+                font-weight: 400;
+                line-height: 24px;
                 pointer-events: none;
                 background: $white;
                 position: absolute;
@@ -185,17 +189,17 @@ body.spz-2002 {
               .mktoField {
                 width: 100% !important;
                 height: 52px;
-                border: 1px solid #b4b3b9 !important;
-                border-radius: 12px !important;
+                border: 1px solid #b4b3b9;
+                border-radius: 12px;
                 outline: none;
-                box-shadow: none !important;
-                padding: 13px 15px !important;
-                margin: 0 !important;
-                color: $black !important;
-                font-size: 16px !important;
+                box-shadow: none;
+                padding: 13px 15px;
+                margin: 0;
+                color: $black;
+                font-size: 16px;
                 font-style: normal;
-                font-weight: 400 !important;
-                line-height: 24px !important;
+                font-weight: 400;
+                line-height: 24px;
                 &:-webkit-autofill {
                   -webkit-box-shadow: 0 0 0 52px $white inset !important;
                   -webkit-text-fill-color: $black !important;
@@ -214,8 +218,8 @@ body.spz-2002 {
                 }
               }
               select.mktoField {
-                padding-right: 37px !important;
-                appearance: none !important;
+                padding-right: 37px;
+                appearance: none;
                 background-image: none;
               }
 
@@ -240,11 +244,12 @@ body.spz-2002 {
                   box-shadow: none;
                   text-shadow: none;
                   margin: 0;
-                  padding: 7px 0 7px 12px;
+                  padding: 7px 0 0 12px;
                   height: auto;
                   border: none;
                   border-radius: 0;
                   color: $red;
+                  font-family: $proxima-nova;
                   font-size: 12px;
                   font-style: normal;
                   font-weight: 400;
@@ -254,7 +259,7 @@ body.spz-2002 {
                   display: flex;
                   flex-wrap: wrap;
                 }
-                #ValidMsgEmail.mktoErrorMsg {
+                #ValidMsgEmail.mktoErrorMsg, #ValidMsgPhone.mktoErrorMsg {
                   span.mktoErrorDetail {
                     padding-left: 3px;
                   }
@@ -264,52 +269,59 @@ body.spz-2002 {
 
             .mktoFieldWrap.filled {
               .mktoLabel {
-                font-size: 14px !important;
-                font-weight: 600 !important;
-                line-height: 22px !important;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 22px;
                 top: -11.5px;
-                color: $black !important;
+                color: $black;
               }
               .mktoField {
-                border-color: $grey !important;
+                border-color: $grey;
               }
             }
             .mktoFieldWrap.focused {
               .mktoLabel {
-                font-size: 14px !important;
-                font-weight: 600 !important;
-                line-height: 22px !important;
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 22px;
                 top: -11.5px;
-                color: $blue !important;
+                color: $blue;
               }
               .mktoField {
-                border-color: $blue !important;
+                border-color: $blue;
                 caret-color: $blue;
               }
             }
             .mktoFieldWrap.error.filled {
               .mktoLabel {
-                color: $red !important;
+                color: $red;
               }
             }
             .mktoFieldWrap.error.focused {
               .mktoLabel {
-                color: $red !important;
+                color: $red;
               }
               .mktoField {
-                border-color: $red !important;
+                border-color: $red;
                 caret-color: $red;
               }
             }
+            .mktoFieldWrap.error {
+              .mktoField {
+                border-color: $red;
+                // caret-color: $red;
+              }
+            }
             .mktoCheckboxList {
-              width: 100% !important;
+              width: 100%;
               padding: 0;
               position: relative;
               margin-top: 18px;
-              input {
+              input[name="isPartner"] {
                 position: absolute;
                 opacity: 0;
                 height: auto !important;
+                width: auto !important;
                 &:checked + label {
                   &::before {
                     background: $blue;
@@ -320,13 +332,15 @@ body.spz-2002 {
               label {
                 margin: 0;
                 padding-left: 28px;
-                color: $grey !important;
-                font-size: 14px !important;
+                color: $grey;
+                font-size: 14px;
                 font-style: normal;
-                font-weight: 400 !important;
-                line-height: 22px !important;
+                font-weight: 400;
+                line-height: 22px;
                 position: relative;
                 cursor: pointer;
+                width: fit-content;
+
                 &::before {
                   position: absolute;
                   content: "";
@@ -415,6 +429,8 @@ body.spz-2002 {
               color: $l_black;
               text-decoration: underline;
               text-underline-offset: 3px;
+              text-decoration-skip-ink: none;
+              text-decoration-thickness: 0.5px;
               padding: 0;
               &:hover {
                 color: $l_blue;
@@ -438,6 +454,8 @@ body.spz-2002 {
               line-height: 22px;
               text-decoration-line: underline;
               text-underline-offset: 3px;
+              text-decoration-skip-ink: none;
+              text-decoration-thickness: 0.5px;
               padding: 0;
               &:hover {
                 color: $l_blue;
