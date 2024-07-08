@@ -257,7 +257,9 @@
       document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').classList.remove('spz-hidden');
       document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.remove('spz-hidden');
     });
-    // appendHiddenField(`input[name="utmsource"]`, `#2002_spz_variant`);
+
+    // Use this and change value according to the experiment
+    hiddenValue('#2002 | Expel | Demo | Form over UI', 'variant_#2002');
   }
 
 
@@ -277,11 +279,53 @@
     });
   }
 
-  //append current test name to input field with existing value, only if similar value doesn't exist already
-  function appendHiddenField(selector, value) {
-    let hiddenField = document.querySelector(selector);
-    if (hiddenField && hiddenField.value.indexOf(value) === -1) {
-      hiddenField.value += `${value}`;
+  // Do not touch below hidden field code for any Experiment
+  function hiddenValue(currentExperimentName, currentExperimentValue) {
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
+    }
+
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
+    }
+
+    var ExistingExperimentName = getCookie('ExperimentName');
+    var ExistingExperimentValue = getCookie('ExperimentValue');
+
+    if (!ExistingExperimentName) {
+
+      setCookie('ExperimentName', currentExperimentName, 1);
+      setCookie('ExperimentValue', currentExperimentValue, 1);
+
+    } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
+
+      setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
+      setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
+
+    } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
+
+      var existingNames = ExistingExperimentName.split(',');
+      var existingValues = ExistingExperimentValue.split(',');
+
+      var index = existingNames.indexOf(currentExperimentName);
+      existingValues[index] = currentExperimentValue;
+
+      setCookie('ExperimentName', existingNames.join(','), 1);
+      setCookie('ExperimentValue', existingValues.join(','), 1);
     }
   }
+  // Do not touch above hidden field code for any Experiment over
 })();
