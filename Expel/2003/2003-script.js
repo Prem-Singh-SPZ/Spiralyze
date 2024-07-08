@@ -1,4 +1,3 @@
-
 let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
     if (body) {
@@ -98,73 +97,82 @@ function formModify() {
     //   document.querySelector('.spz_2003 .mktoForm .field-9 textarea.mktoField').focus();
     // });
 
-    // form state
-    var selector = '.spz_2003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField';
-    document.addEventListener('focus', function (event) {
-        if (event.target.matches(selector)) {
-            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('active', 'typing');
+    // On input focus add class on closest parent field class
+    function focusFields() {
+        document.querySelectorAll(`.spz_2003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+            el.addEventListener('focus', function () {
+                el.closest('.mktoFieldWrap').classList.add('active', 'typing');
+                checkError(el);
+            });
+            el.addEventListener('blur', function () {
+                el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
+                checkError(el);
+            });
 
-        }
-    }, true);
-    var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
-    for (s_event of eventList) {
-        document.addEventListener(s_event, function (event) {
-            if (event.target.matches(selector)) {
-                if (event.target.value == null || event.target.value == '') {
-                    event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('filled');
-                } else {
-                    event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('filled');
-                }
-                if (event.type == "change") {
-                    if (event.target.value == "") {
-                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
-                    } else {
-                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                        //event.target.parentNode.querySelector('.mktoError').style.display = 'none';
-                    }
-                } else {
-                    if (event.target.classList.contains('mktoInvalid')) {
-                        var closestError = event.target.parentNode.querySelector('.mktoError');
-                        if (closestError && closestError.style.display == '') {
-                            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.add('error');
-                        } else {
-                            event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                        }
-                    } else {
-                        event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.remove('error');
-                    }
-                }
-                // if(event.type == "focusout" && event.target.name == 'Email' && !event.target.classList.contains('mktoInvalid') && event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.contains('filled') && !event.target.closest('body form .mktoFormCol .mktoFieldWrap').classList.contains('error')) {
-                //   document.body.classList.add('form-expand');
-                // }
-                if (event.target.name == 'Email') {
-                    let counterA = 0;
-                    const intervalIdA = setInterval(() => {
-                        if (document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoFormCol.field-3').style.display !== "none") {
-                            document.body.classList.add('form-expand');
-                        }
-                        counterA++;
-                        if (counterA >= 20) {
-                            clearInterval(intervalIdA);
-                        }
-                    }, 500);
-                }
-                if (event.target.name == 'Person_Country__c') {
-                    waitForElm('.spz_2003 #hero-section form.mktoForm .mktoFormCol[data-wrapper-for="mktoCheckbox_27626_0 Privacy_Compliance_Explicit_Opt_In__c"]').then(function (elm) {
-                        document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoFormCol.field-8').after(elm);
-                    });
-                }
-            }
+            // add event listeners to the input element
+            el.addEventListener('keypress', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('change', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('keydown', () => {
+                checkError(el);
+            });
+
+            el.addEventListener('keyup', () => {
+                checkError(el);
+            });
         });
     }
 
-    document.addEventListener('focusout', function (event) {
-        document.querySelectorAll('body form .mktoFormCol .mktoFieldWrap.typing').forEach(function (elem) {
-            elem.classList.remove('active', 'typing');
-        })
-    }, true);
+    focusFields();
+
+    // Function to add .field-error class on closest parent .field class if .error is exist on input
+    function checkError(elem) {
+        let timeBuffer = setInterval(() => {
+            if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
+                elem.closest('.mktoFieldWrap').classList.add('error');
+            } else {
+                elem.closest('.mktoFieldWrap').classList.remove('error');
+            }
+            if (elem && elem.value && (elem.value != '')) {
+                elem.closest('.mktoFieldWrap').classList.add('filled');
+            } else {
+                elem.closest('.mktoFieldWrap').classList.remove('filled');
+            }
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(timeBuffer);
+        }, 1000);
+
+
+        if (elem.name == 'Email') {
+            let counterA = 0;
+            const intervalIdA = setInterval(() => {
+                if (document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoFormCol.field-3').style.display !== "none") {
+                    document.body.classList.add('form-expand');
+                }
+                counterA++;
+                if (counterA >= 20) {
+                    clearInterval(intervalIdA);
+                }
+            }, 500);
+        }
+        if (elem.name == 'Person_Country__c') {
+            waitForElm('.spz_2003 #hero-section form.mktoForm .mktoFormCol[data-wrapper-for="mktoCheckbox_27626_0 Privacy_Compliance_Explicit_Opt_In__c"]').then(function (elm) {
+                document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoFormCol.field-8').after(elm);
+            });
+        }
+    }
 
     document.querySelector('.spz_2003 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
+        // document.querySelectorAll(`.spz_2003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+        //   console.log('111111111111');
+        // });
         waitForElm('.spz_2003 #hero-section .hero .ex-form form.mktoForm .mktoError').then(function (elm) {
             if (elm.parentNode.querySelector('#ValidMsgEmail')) {
                 const targetNode = elm.parentNode;

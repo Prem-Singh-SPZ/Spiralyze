@@ -1,0 +1,505 @@
+:root {
+  --inputHeight: 52px;
+  --desk-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1440.webp");
+  --2k-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1921.webp");
+}
+
+$grey: #747474;
+$l_black: #131416;
+$black: #000000;
+$blue: #1762e6;
+$red: #e51b00;
+$l_blue: #0e4c8a;
+$white: #fff;
+$proxima-nova: proxima-nova, Arial, sans-serif;
+
+body.spz-3004 {
+  overflow-x: hidden;
+  overflow-y: auto;
+
+  &::before {
+    content: "";
+    display: block;
+    background: var(--desk-bg) no-repeat top left / cover;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 100;
+
+    @media (max-width: 991px) {
+      background: var(--desk-bg) no-repeat top left / cover;
+    }
+
+    @media (max-width: 767.98px) {
+      background: var(--desk-bg) no-repeat top left / cover;
+    }
+
+    @media (min-width: 1620px) {
+      background: var(--2k-bg) no-repeat top left / cover;
+    }
+  }
+
+  #page,
+  .spz-hidden {
+    display: none !important;
+  }
+
+  .spz-form-container {
+    position: relative;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+
+    #spz-form-wrap {
+      margin: 24px 0;
+      .form-fields-row {
+        display: flex;
+        flex-wrap: wrap;
+        margin-top: 18px;
+        width: 100%;
+
+        @media (max-width: 767.98px) {
+          margin-top: 8px;
+        }
+      }
+
+      &.spz-form-wrap {
+        max-width: 594px;
+        padding: 40px 30px;
+        border-radius: 16px;
+        width: 100%;
+        background: $white;
+        text-align: center;
+        z-index: 1000000;
+
+        @media screen and (max-width: 991px) {
+          max-width: 692px;
+        }
+
+        @media (max-width: 767.98px) {
+          width: calc(100% - 36px);
+          padding: 28px 4px 18px;
+        }
+
+        .form-section {
+          .form-logo {
+            padding-bottom: 13px;
+            position: relative;
+            margin-bottom: 18px;
+
+            &::after {
+              content: "";
+              background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/2002/line.svg")
+                no-repeat;
+              width: 100%;
+              height: 1px;
+              background-position: center;
+              background-size: 100%;
+              display: block;
+              position: absolute;
+              bottom: 0;
+            }
+
+            img {
+              width: 93.5px;
+              height: 31px;
+            }
+          }
+
+          .form-heading {
+            color: $l_black;
+            text-align: center;
+            font-family: $proxima-nova;
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 40px;
+
+            @media screen and (max-width: 767.98px) {
+              font-size: 24px;
+              line-height: 32px;
+            }
+          }
+        }
+
+        form.mktoForm {
+          display: flex;
+          flex-wrap: wrap;
+          gap: 0;
+          max-width: 100%;
+          width: 100% !important;
+
+          .mktoClear,
+          .mktoFormRow,
+          .mktoOffset,
+          .mktoGutter {
+            display: none !important;
+          }
+          .mktoFormCol {
+            width: calc(50% - 12px) !important;
+            margin-bottom: 12px !important;
+            width: 100%;
+            margin: 0 6px;
+            float: none;
+
+            @media (max-width: 767.98px) {
+              width: 100% !important;
+            }
+
+            &.spz-email,
+            &.spz-ispartner {
+              width: 100% !important;
+            }
+
+            &.spz-email {
+              order: 0;
+            }
+
+            &.spz-firstname {
+              order: 1;
+            }
+
+            &.spz-lastname {
+              order: 2;
+            }
+
+            &.spz-phone {
+              order: 3;
+            }
+
+            &.spz-company {
+              order: 4;
+            }
+
+            &.spz-company_size__c {
+              order: 5;
+            }
+
+            &.spz-person_country__c {
+              order: 6;
+            }
+
+            &.spz-ispartner {
+              order: 8;
+            }
+
+            .mktoHtmlText.mktoHasWidth {
+              order: 7;
+            }
+
+            .mktoFieldWrap {
+              float: none;
+              position: relative;
+              width: 100% !important;
+
+              .mktoLabel {
+                .mktoAsterix {
+                  display: none !important;
+                }
+                width: auto !important;
+                padding: 1px 6px;
+                color: $grey;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                font-family: $proxima-nova;
+                line-height: 24px;
+                pointer-events: none;
+                background: $white;
+                position: absolute;
+                top: 13px;
+                left: 10px;
+                transition: all 0.3s ease-in-out;
+              }
+
+              .mktoField {
+                width: 100% !important;
+                height: 52px;
+                border: 1px solid #b4b3b9;
+                border-radius: 12px;
+                outline: none;
+                box-shadow: none;
+                padding: 13px 15px;
+                margin: 0;
+                color: $black;
+                font-size: 16px;
+                font-family: $proxima-nova;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+                &:-webkit-autofill {
+                  -webkit-box-shadow: 0 0 0 52px $white inset !important;
+                  -webkit-text-fill-color: $black !important;
+                  &:hover {
+                    -webkit-box-shadow: 0 0 0 52px $white inset !important;
+                    -webkit-text-fill-color: $black !important;
+                  }
+                  &:focus {
+                    -webkit-box-shadow: 0 0 0 52px $white inset !important;
+                    -webkit-text-fill-color: $black !important;
+                  }
+                  &:active {
+                    -webkit-box-shadow: 0 0 0 52px $white inset !important;
+                    -webkit-text-fill-color: $black !important;
+                  }
+                }
+              }
+              select.mktoField {
+                padding-right: 37px;
+                appearance: none;
+                background-image: none;
+              }
+
+              .mktoError {
+                position: relative;
+                right: initial !important;
+                bottom: initial !important;
+                display: flex;
+                flex-wrap: wrap;
+                align-items: center;
+                width: 100%;
+                .mktoErrorArrowWrap {
+                  display: none;
+                }
+                .mktoErrorMsg {
+                  max-width: unset;
+                  background: transparent;
+                  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717661831/expel/2003/frame_1.svg");
+                  background-size: 22px;
+                  background-repeat: no-repeat;
+                  background-position: 0 7px;
+                  box-shadow: none;
+                  text-shadow: none;
+                  margin: 0;
+                  padding: 7px 0 0 12px;
+                  height: auto;
+                  border: none;
+                  border-radius: 0;
+                  color: $red;
+                  font-family: $proxima-nova;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 22px;
+                  padding-left: 26px;
+                  position: relative;
+                  display: flex;
+                  flex-wrap: wrap;
+                }
+                #ValidMsgEmail.mktoErrorMsg,
+                #ValidMsgPhone.mktoErrorMsg {
+                  span.mktoErrorDetail {
+                    padding-left: 3px;
+                  }
+                }
+              }
+            }
+
+            .mktoFieldWrap.filled {
+              .mktoLabel {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 22px;
+                top: -11.5px;
+                color: $black;
+              }
+              .mktoField {
+                border-color: $grey;
+              }
+            }
+            .mktoFieldWrap.focused {
+              .mktoLabel {
+                font-size: 14px;
+                font-weight: 600;
+                line-height: 22px;
+                top: -11.5px;
+                color: $blue;
+              }
+              .mktoField {
+                border-color: $blue;
+                caret-color: $blue;
+              }
+            }
+            .mktoFieldWrap.error.filled {
+              .mktoLabel {
+                color: $red;
+              }
+            }
+            .mktoFieldWrap.error.focused {
+              .mktoLabel {
+                color: $red;
+              }
+              .mktoField {
+                border-color: $red;
+                caret-color: $red;
+              }
+            }
+            .mktoFieldWrap.error {
+              .mktoField {
+                border-color: $red;
+                // caret-color: $red;
+              }
+            }
+            .mktoCheckboxList {
+              width: 100%;
+              padding: 0;
+              position: relative;
+              margin-top: 18px;
+              input[name="isPartner"] {
+                position: absolute;
+                opacity: 0;
+                height: auto !important;
+                width: auto !important;
+                &:checked + label {
+                  &::before {
+                    background: $blue;
+                    border-color: $blue;
+                  }
+                }
+              }
+              label {
+                margin: 0;
+                padding-left: 28px;
+                color: $grey;
+                font-size: 14px;
+                font-family: $proxima-nova;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 22px;
+                position: relative;
+                cursor: pointer;
+                width: fit-content;
+
+                &::before {
+                  position: absolute;
+                  content: "";
+                  width: 20px;
+                  height: 20px;
+                  background: $white;
+                  border: 1px solid $grey;
+                  border-radius: 5px;
+                  top: 2px;
+                  left: 0;
+                }
+                &::after {
+                  position: absolute;
+                  content: "";
+                  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717664127/expel/2003/check.svg");
+                  background-size: contain;
+                  background-repeat: no-repeat;
+                  width: 14px;
+                  height: 14px;
+                  top: 5px;
+                  left: 3px;
+                }
+              }
+            }
+          }
+
+          .mktoFormCol.spz-person_country__c,
+          .mktoFormCol.spz-company_size__c {
+            .mktoFieldWrap {
+              &::after {
+                position: absolute;
+                content: "";
+                top: 20px;
+                right: 20px;
+                width: 12px;
+                height: 12px;
+                background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717757061/expel/2003/dropdown_icon.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+              }
+            }
+          }
+
+          .mktoButtonRow {
+            width: 100%;
+            margin: 6px 6px 18px;
+            .mktoButtonWrap {
+              display: block;
+              width: auto;
+              height: auto;
+              margin: 0 !important;
+            }
+            .mktoButton {
+              width: 100%;
+              height: 48px;
+              display: flex;
+              flex-wrap: wrap;
+              align-items: center;
+              justify-content: center;
+              border: none;
+              border-radius: 72px;
+              background: $blue;
+              background-image: none !important;
+              color: $white;
+              font-family: $proxima-nova;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: 24px;
+              padding: 0 !important;
+              margin: 0 !important;
+              &:hover {
+                background: $l_blue;
+              }
+            }
+          }
+          .mktoCaptchaDisclaimer {
+            width: 350px !important;
+            margin: 0 auto !important;
+            color: $grey !important;
+            text-align: center;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-family: $proxima-nova;
+            line-height: 22px;
+            a {
+              font-family: $proxima-nova;
+              color: $l_black;
+              text-decoration: underline;
+              text-underline-offset: 3px;
+              text-decoration-skip-ink: none;
+              text-decoration-thickness: 0.5px;
+              padding: 0;
+              &:hover {
+                color: $l_blue;
+              }
+            }
+          }
+          .mktoHtmlText.mktoHasWidth {
+            order: 7;
+            width: 100% !important;
+            margin: 0 6px;
+            color: $grey !important;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 400 !important;
+            font-family: $proxima-nova;
+            line-height: 22px;
+            a {
+              color: $l_black;
+              font-size: 14px;
+              font-style: normal;
+              font-family: $proxima-nova;
+              font-weight: 400;
+              line-height: 22px;
+              text-decoration-line: underline;
+              text-underline-offset: 3px;
+              text-decoration-skip-ink: none;
+              text-decoration-thickness: 0.5px;
+              padding: 0;
+              &:hover {
+                color: $l_blue;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

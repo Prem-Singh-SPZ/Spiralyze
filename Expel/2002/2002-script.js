@@ -231,6 +231,7 @@
 
     waitForElm(`.spz-ispartner`).then(function (elm) {
       document.querySelector('body.spz-2002 .mktoFormCol.spz-ispartner').insertAdjacentElement('beforebegin', document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoHtmlText'));
+      document.querySelector('body.spz-2002 .mktoFormCol.spz-lastname').insertAdjacentElement('afterend', document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-phone'));
       document.querySelector('body.spz-2002 form.mktoForm .mktoButtonRow').insertAdjacentElement('afterend', document.querySelector('body.spz-2002 form.mktoForm .mktoCaptchaDisclaimer'));
 
       document.querySelector('body.spz-2002 #Company_Size__c option[value=""]').textContent = 'Company Size';
