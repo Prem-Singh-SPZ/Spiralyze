@@ -27,12 +27,13 @@ body.spz-2002 {
     z-index: 100;
 
     @media (max-width: 991px) {
-      background: var(--desk-bg) no-repeat top left / cover;
+      background: var(--2k-bg) repeat top left;
+      background-size: 1920px 1228px;
     }
 
-    @media (max-width: 767.98px) {
-      background: var(--desk-bg) no-repeat top left / cover;
-    }
+    // @media (max-width: 767.98px) {
+    //   background: var(--2k-bg) repeat top left;
+    // }
 
     @media (min-width: 1620px) {
       background: var(--2k-bg) no-repeat top left / cover;
@@ -120,7 +121,6 @@ body.spz-2002 {
             @media screen and (max-width: 767.98px) {
               font-size: 24px;
               line-height: 32px;
-              
             }
           }
         }
