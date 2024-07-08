@@ -5,7 +5,7 @@
     formSelector: "#mktoForm_2231",
 
     cardContent: {
-      formLogo: `//res.cloudinary.com/spiralyze/image/upload/v1720174422/expel/2002/Expel_logo.svg`,
+      formLogo: `//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/2002/logo_standart.svg`,
       formHeading: `Get a Demo`,
     },
 

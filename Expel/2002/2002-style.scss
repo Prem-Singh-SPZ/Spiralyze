@@ -39,7 +39,8 @@ body.spz-2002 {
     }
   }
 
-  #page, .spz-hidden {
+  #page,
+  .spz-hidden {
     display: none !important;
   }
 
@@ -76,7 +77,20 @@ body.spz-2002 {
         .form-section {
           .form-logo {
             padding-bottom: 20px;
-            border-bottom: 1px solid rgba(19, 20, 22, 0);
+            position: relative;
+
+            &::after {
+              content: "";
+              background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/2002/line.svg")
+                no-repeat;
+              width: 100%;
+              height: 1px;
+              background-position: center;
+              display: block;
+              position: absolute;
+              bottom: 0;
+            }
+
             img {
               width: 100px;
             }
@@ -158,7 +172,7 @@ body.spz-2002 {
               order: 8;
             }
 
-            .mktoHtmlText.mktoHasWidth{
+            .mktoHtmlText.mktoHasWidth {
               order: 7;
             }
 
@@ -261,7 +275,8 @@ body.spz-2002 {
                   display: flex;
                   flex-wrap: wrap;
                 }
-                #ValidMsgEmail.mktoErrorMsg, #ValidMsgPhone.mktoErrorMsg {
+                #ValidMsgEmail.mktoErrorMsg,
+                #ValidMsgPhone.mktoErrorMsg {
                   span.mktoErrorDetail {
                     padding-left: 3px;
                   }
