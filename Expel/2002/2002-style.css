@@ -71,7 +71,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap {
   width: 100%;
   background: #fff;
   text-align: center;
-  z-index: 1000000;
+  z-index: 9999;
 }
 @media screen and (max-width: 991px) {
   body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap {
@@ -190,6 +190,9 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
       -ms-flex-order: 8;
           order: 8;
 }
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.full-width {
+  width: 100% !important;
+}
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoHtmlText.mktoHasWidth {
   -webkit-box-ordinal-group: 8;
       -ms-flex-order: 7;
@@ -236,6 +239,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
+  -webkit-appearance: none;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 52px #fff inset !important;
@@ -259,6 +263,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
      -moz-appearance: none;
           appearance: none;
   background-image: none;
+  background-color: #fff;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError {
   position: relative;
@@ -348,7 +353,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   width: 100% !important;
   padding: 0;
   position: relative;
-  margin-top: 18px;
+  margin-top: 19px;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList input[name=isPartner] {
   position: absolute;
@@ -411,7 +416,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin: 6px 6px 18px;
+  margin: 8px 6px 18px;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoButtonRow .mktoButtonWrap {
   display: block;

@@ -54,6 +54,7 @@
     addForm(testDetails.cardContent);
   });
 
+  document.head.insertAdjacentHTML("beforeend", `<link img-src="preload" rel="preload" as="image" href="https://res.cloudinary.com/spiralyze/image/upload/v1717661831/expel/2003/frame_1.svg">`);
 
   // function will accept json which will contain inputSel, labelSel and labelText
   function animateLabels(data) {
@@ -183,6 +184,16 @@
       } else {
         elem.closest('.spz-input-wrap').classList.remove('filled');
         // elem.closest('.spz-input-wrap').classList.add('field-error');
+      }
+
+      if (document.querySelectorAll('.form-fields-row [data-zi-field-enriched="false"]').length % 2 !== 0) {
+        let lastField = document.querySelectorAll('.form-fields-row [data-zi-field-enriched="false"]').length - 1;
+        document.querySelectorAll('.form-fields-row [data-zi-field-enriched="false"]')[lastField].closest('.mktoFormCol').classList.add('full-width');
+      }
+      else {
+        document.querySelectorAll('.form-fields-row .mktoFormCol.full-width').forEach(function (el) {
+          el.classList.remove('full-width');
+        });
       }
     }, 100);
 
