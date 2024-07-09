@@ -46,6 +46,11 @@
                 labelSel: "#LblPerson_Country__c",
                 labelText: "Country",
             },
+            {
+                inputSel: "#personNotestoAppend",
+                labelSel: "#LblpersonNotestoAppend",
+                labelText: "What would you like to see?",
+            },
         ],
     };
 
@@ -241,6 +246,8 @@
             document.querySelector('body.spz-3004 form.mktoForm .mktoHtmlText').removeAttribute('style');
             document.querySelector('body.spz-3004 form.mktoForm .mktoHtmlText').classList.add('spz-hidden');
             document.querySelector('body.spz-3004 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.add('spz-hidden');
+            document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend .mktoFieldWrap').classList.add('spz-hidden');
+            document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend').classList.add('spz-hidden');
 
             //update tab index of all the .mktoField
             document.querySelector('body.spz-3004 form.mktoForm #Email').setAttribute('tabindex', 1);
@@ -254,11 +261,11 @@
             // document.querySelector('body.spz-3004 form.mktoForm .mktoFormCol .mktoCheckboxList input').setAttribute('tabindex', 9);
 
             // + Additional comments
-            document.querySelector('#LblpersonNotestoAppend').textContent = "What would you like to see?";
             document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend .mktoFieldWrap').insertAdjacentHTML('beforebegin', `<a href="javascript:void(0);" class="comment-toggler">+ Additional comments</a>`);
-            var comment_toggler = document.querySelector(".spz-3004 .mktoForm .spz-personnotestoappend .comment-toggler");
+            const comment_toggler = document.querySelector(".spz-3004 .mktoForm .spz-personnotestoappend .comment-toggler");
             comment_toggler.addEventListener("click", (event) => {
-                comment_toggler.classList.add("show-field");
+                comment_toggler.classList.add('spz-hidden');
+                document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend .mktoFieldWrap').classList.remove('spz-hidden');
                 document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend input.mktoField').focus();
             });
         });
@@ -266,10 +273,11 @@
         waitForElm(`.spz-firstname[data-zi-field-enriched]`).then(function (elm) {
             document.querySelector('body.spz-3004 form.mktoForm .mktoHtmlText').classList.remove('spz-hidden');
             document.querySelector('body.spz-3004 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.remove('spz-hidden');
+            document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend').classList.remove('spz-hidden');
         });
 
         // Use this and change value according to the experiment
-        hiddenValue('#2002 | Expel | Demo | Form over UI', 'variant_#2002');
+        hiddenValue('#2002 | Expel | Demo | Form over UI', 'variant_#3004');
     }
 
 

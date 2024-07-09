@@ -130,6 +130,7 @@ body.spz-3004 {
           gap: 0;
           max-width: 100%;
           width: 100% !important;
+          padding: 0;
 
           .mktoClear,
           .mktoFormRow,
@@ -181,12 +182,35 @@ body.spz-3004 {
               order: 6;
             }
 
+            &.spz-personnotestoappend {
+              order: 7;
+              width: 100% !important;
+
+              .comment-toggler {
+                display: inline-block;
+                color: #1762e6;
+                font-family: $proxima-nova;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26px;
+
+                &:hover {
+                  color: #0e4c8a;
+                }
+              }
+
+              .spz-input-wrap .mktoField{
+                height: 91px;
+              }
+            }
+
             &.spz-ispartner {
-              order: 8;
+              order: 9;
             }
 
             .mktoHtmlText.mktoHasWidth {
-              order: 7;
+              order: 8;
             }
 
             .mktoFieldWrap {
