@@ -1,7 +1,6 @@
 :root {
   --inputHeight: 52px;
-  --desk-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1440.webp");
-  --2k-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1921.webp");
+  --desk-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3004/bg_1.webp");
 }
 
 $grey: #747474;
@@ -20,23 +19,23 @@ body.spz-3004 {
   &::before {
     content: "";
     display: block;
-    background: var(--desk-bg) no-repeat top left / cover;
+    background: var(--desk-bg) repeat top center / cover;
     position: absolute;
     width: 100%;
     height: 100%;
     z-index: 100;
 
-    @media (max-width: 991px) {
-      background: var(--desk-bg) no-repeat top left / cover;
-    }
+    // @media (max-width: 991px) {
+    //   background: var(--desk-bg) no-repeat top left / cover;
+    // }
 
-    @media (max-width: 767.98px) {
-      background: var(--desk-bg) no-repeat top left / cover;
-    }
+    // @media (max-width: 767.98px) {
+    //   background: var(--desk-bg) no-repeat top left / cover;
+    // }
 
-    @media (min-width: 1620px) {
-      background: var(--2k-bg) no-repeat top left / cover;
-    }
+    // @media (min-width: 1620px) {
+    //   background: var(--2k-bg) no-repeat top left / cover;
+    // }
   }
 
   #page,
@@ -200,9 +199,9 @@ body.spz-3004 {
                 }
               }
 
-              .spz-input-wrap .mktoField{
-                height: 91px;
-              }
+              // .spz-input-wrap .mktoField{
+              //   height: 91px;
+              // }
             }
 
             &.spz-ispartner {

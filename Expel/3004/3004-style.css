@@ -1,7 +1,6 @@
 :root {
   --inputHeight: 52px;
-  --desk-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1440.webp");
-  --2k-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2002/bg_dashboard_1921.webp");
+  --desk-bg: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3004/bg_1.webp");
 }
 
 body.spz-3004 {
@@ -11,26 +10,11 @@ body.spz-3004 {
 body.spz-3004::before {
   content: "";
   display: block;
-  background: var(--desk-bg) no-repeat top left/cover;
+  background: var(--desk-bg) repeat top center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 100;
-}
-@media (max-width: 991px) {
-  body.spz-3004::before {
-    background: var(--desk-bg) no-repeat top left/cover;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-3004::before {
-    background: var(--desk-bg) no-repeat top left/cover;
-  }
-}
-@media (min-width: 1620px) {
-  body.spz-3004::before {
-    background: var(--2k-bg) no-repeat top left/cover;
-  }
 }
 body.spz-3004 #page,
 body.spz-3004 .spz-hidden {
@@ -207,9 +191,6 @@ body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
 }
 body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-personnotestoappend .comment-toggler:hover {
   color: #0e4c8a;
-}
-body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-personnotestoappend .spz-input-wrap .mktoField {
-  height: 91px;
 }
 body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-ispartner {
   -webkit-box-ordinal-group: 10;
