@@ -71,7 +71,7 @@ body.spz-3004 {
         width: 100%;
         background: $white;
         text-align: center;
-        z-index: 1000000;
+        z-index: 9999;
 
         @media screen and (max-width: 991px) {
           max-width: 692px;
@@ -79,7 +79,7 @@ body.spz-3004 {
 
         @media (max-width: 767.98px) {
           width: calc(100% - 36px);
-          padding: 28px 14px 28px;
+          padding: 28px 14px;
         }
 
         .form-section {
@@ -208,6 +208,10 @@ body.spz-3004 {
               order: 9;
             }
 
+            &.full-width {
+              width: 100% !important;
+            }
+
             .mktoHtmlText.mktoHasWidth {
               order: 8;
             }
@@ -252,6 +256,8 @@ body.spz-3004 {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 24px;
+                -webkit-appearance: none;
+
                 &:-webkit-autofill {
                   -webkit-box-shadow: 0 0 0 52px $white inset !important;
                   -webkit-text-fill-color: $black !important;
@@ -273,6 +279,7 @@ body.spz-3004 {
                 padding-right: 37px;
                 appearance: none;
                 background-image: none;
+                background-color: $white;
               }
 
               .mktoError {
@@ -369,7 +376,7 @@ body.spz-3004 {
               width: 100% !important;
               padding: 0;
               position: relative;
-              margin-top: 18px;
+              margin-top: 19px;
               input[name="isPartner"] {
                 position: absolute;
                 opacity: 0;
@@ -440,7 +447,7 @@ body.spz-3004 {
 
           .mktoButtonRow {
             width: 100%;
-            margin: 6px 6px 18px;
+            margin: 8px 6px 18px;
             .mktoButtonWrap {
               display: block;
               width: auto;
