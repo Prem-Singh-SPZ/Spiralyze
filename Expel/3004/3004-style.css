@@ -10,11 +10,16 @@ body.spz-3004 {
 body.spz-3004::before {
   content: "";
   display: block;
-  background: var(--desk-bg) repeat top center/cover;
+  background: var(--desk-bg) no-repeat top center/cover;
   position: absolute;
   width: 100%;
   height: 100%;
   z-index: 100;
+}
+@media (min-width: 1620px) {
+  body.spz-3004::before {
+    background: var(--desk-bg) no-repeat center center/cover;
+  }
 }
 body.spz-3004 #page,
 body.spz-3004 .spz-hidden {
@@ -49,7 +54,7 @@ body.spz-3004 .spz-form-container #spz-form-wrap .form-fields-row {
 }
 @media (max-width: 767.98px) {
   body.spz-3004 .spz-form-container #spz-form-wrap .form-fields-row {
-    margin-top: 8px;
+    margin-top: 18px;
   }
 }
 body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap {
@@ -69,7 +74,7 @@ body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap {
 @media (max-width: 767.98px) {
   body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap {
     width: calc(100% - 36px);
-    padding: 28px 4px 18px;
+    padding: 28px 14px 28px;
   }
 }
 body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap .form-section .form-logo {
@@ -352,7 +357,7 @@ body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   border-color: #e51b00;
 }
 body.spz-3004 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList {
-  width: 100%;
+  width: 100% !important;
   padding: 0;
   position: relative;
   margin-top: 18px;
