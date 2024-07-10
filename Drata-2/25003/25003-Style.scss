@@ -143,6 +143,10 @@ body.spz-25003 {
                       font-weight: 600;
                       line-height: 18px;
                       margin-top: 4px;
+                      animation: none;
+                      animation-fill-mode: none;
+                      position: relative;
+                      top: 0;
                     }
                   }
                 }
@@ -157,6 +161,11 @@ body.spz-25003 {
                     display: flex;
                     align-items: center;
                     flex-direction: column;
+
+                    > label{
+                      display: none;
+                    }
+
                     .input {
                       width: 100%;
                       position: relative;
@@ -299,6 +308,8 @@ body.spz-25003 {
                       max-width: calc(100% - 42px);
                       overflow: hidden;
                       text-overflow: ellipsis;
+                      animation: none;
+                      animation-fill-mode: none;
 
                       @media (min-width: 1199.98px) and (max-width: 1216.98px) {
                         left: 12px;

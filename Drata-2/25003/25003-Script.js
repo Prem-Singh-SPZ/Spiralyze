@@ -96,10 +96,12 @@
   function appendInputLabel() {
     document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form.hs-form .hs-input').forEach(function (el) {
       const label = document.createElement("label");
-      label.innerHTML = el.placeholder;
-      if (!el.hasAttribute('type') && el.options.length > 0) {
-        label.innerHTML = el.options[0].text;
-      }
+      const oldLabel = el.closest('.field').querySelector('label[id]').textContent;
+      console.log(oldLabel);
+      label.innerHTML = oldLabel || el.placeholder;
+      // if (!el.hasAttribute('type') && el.options.length > 0) {
+      //   label.innerHTML = el.options[0].text;
+      // }
       label.setAttribute('for', el.id);
       label.classList.add('hs-label-spz');
       if (label.innerHTML != '' && !el.closest('.field').querySelector('.input label.hs-label-spz')) {

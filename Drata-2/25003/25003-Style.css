@@ -113,6 +113,10 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   font-weight: 600;
   line-height: 18px;
   margin-top: 4px;
+  animation: none;
+  animation-fill-mode: none;
+  position: relative;
+  top: 0;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset {
   max-width: unset;
@@ -124,6 +128,9 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   display: flex;
   align-items: center;
   flex-direction: column;
+}
+body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field > label {
+  display: none;
 }
 body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field .input {
   width: 100%;
@@ -245,6 +252,8 @@ body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer
   max-width: calc(100% - 42px);
   overflow: hidden;
   text-overflow: ellipsis;
+  animation: none;
+  animation-fill-mode: none;
 }
 @media (min-width: 1199.98px) and (max-width: 1216.98px) {
   body.spz-25003 main section[variant=splitHalves] > [class$=Section-gridContainer] [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form fieldset .field label.hs-label-spz {
