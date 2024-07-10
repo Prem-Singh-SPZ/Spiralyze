@@ -81,6 +81,12 @@
                 parentDiv.classList.add("spz-input-wrap");
             }
         });
+
+        //add a textarea just after #personNotestoAppend and whatever value entered in textarea will copy here
+        // document.querySelector('body form.mktoForm #personNotestoAppend').insertAdjacentHTML('afterend', `<textarea class="mktoField" id="personNotestoAppendSPZ" name="personNotestoAppend"></textarea>`);
+        // document.querySelector('body form.mktoForm #personNotestoAppendSPZ').addEventListener('input', function () {
+        //     document.querySelector('body form.mktoForm input#personNotestoAppend').value = document.querySelector('body.spz-3004 form.mktoForm #personNotestoAppendSPZ').value;
+        // });
         focusFields();
     }
 
