@@ -13,19 +13,21 @@ const bodyInterval = setInterval(function () {
 
 // Set the tabs content of accordion
 function setTabsContent() {
-    document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-depth-1.row-number-1').insertAdjacentHTML('beforebegin', `<div class="accordion-section">
+    document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-depth-1.row-number-1').insertAdjacentHTML('beforebegin', `<div class="hero-section">
+            <div class="hero-content">
+                <div class="hero-title">Interactive Product Tours</div>
+                <div class="hero-subtitle">See our Incentives or Sales Planning products come to life by selecting one of the self-guided tours below.</div>
+            </div>
+        </div>
+        <div class="accordion-section">
             <div class="accordion-row">
             <div class="section-title">Features</div>
                 <div class="accordion-col">
                     <nav id="parent-tabs">
                         <li class="active"><a href="#p-tab1">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275642.svg" alt="Employee Benefits" class="i-default">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275643.svg" alt="Employee Benefits" class="i-hover">
                             Employee Benefits</a>
                         </li>
                         <li><a href="#p-tab2">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_1.svg" alt="Commercial Lines" class="i-default">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_2.svg" alt="Commercial Lines" class="i-hover">
                             Commercial Lines</a></li>
                     </nav>
                     
@@ -34,30 +36,28 @@ function setTabsContent() {
                             <div class="accordion-wrapper ac-wrapper-1">
                                 <nav id="child-tabs">
                                     <li class="active"><a href="#c-tab1">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275642.svg" alt="Employee Benefits" class="i-default">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275643.svg" alt="Employee Benefits" class="i-hover">
                                         Employee Benefits</a>
                                     </li>
                                     <li><a href="#c-tab2">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_1.svg" alt="Commercial Lines" class="i-default">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_2.svg" alt="Commercial Lines" class="i-hover">
                                         Commercial Lines</a></li>
                                 </nav>
                                <div id="c-tab-contents">
                                     <div id="c-tab1" class="c-tab-contents active">
-                                    hello
+                                     <div class="content-wrapper">
+                                    <div class="title">
+                                    <div class="text">Insights Foundation</div>
                                     </div>
-                                    <div id="c-tab2" class="c-tab-contents ">
-                                    there
+                                    <div class="content">
+                                    <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
+                                    <picture>
+                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
+                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                                    </picture>
                                     </div>
                                 </div>
-                            </div>
-                        </div>
-                        <div id="p-tab2" class="p-tab-contents">
-                            <div class="accordion-wrapper ac-wrapper-2">
-                                <div class="text">
-                                <div class="child active" data-index="1">
-                                    <div class="bar"><div class="line"></div></div>
+                                    </div>
+                                    <div id="c-tab2" class="c-tab-contents ">
+                                     <div class="content-wrapper">
                                     <div class="title">
                                     <div class="text">Insights Foundation</div>
                                     </div>
@@ -75,6 +75,14 @@ function setTabsContent() {
                                     </a>
                                     </div>
                                 </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="p-tab2" class="p-tab-contents">
+                            <div class="accordion-wrapper ac-wrapper-2">
+                                <div class="text">
+                               
                                 <div class="child" data-index="2">
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
