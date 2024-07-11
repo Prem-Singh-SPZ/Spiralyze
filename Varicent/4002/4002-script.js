@@ -87,21 +87,46 @@ function setTabsContent() {
               </div>
               <div id="c-tab2" class="c-tab-contents ">
                 <div class="content-wrapper">
-                  <div class="title">
-                    <div class="text">Insights Foundation</div>
+                  <div class="copy-wrapper">
+                    <div class="title">Manager Experience Tour</div>
+                    <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquires. </div>
+                    <div class="cta-wrapper cta-demo-1"></div>
                   </div>
                   <div class="content">
-                    <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map <sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330 million unique individuals in the U.S </div>
                     <picture>
                       <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
                       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
                     </picture>
-                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
-                      <span>GET A DEMO</span>
-                      <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                      </svg>
-                    </a>
+                  </div>
+                </div>
+              </div>
+              <div id="c-tab3" class="c-tab-contents ">
+                <div class="content-wrapper">
+                  <div class="copy-wrapper">
+                    <div class="title">Admin Experience Tour</div>
+                    <div class="desc">Manage data, people, and commissions in one place. Generate reports on sales by region, total revenue, and plan performance. Optimize incentive plans.</div>
+                    <div class="cta-wrapper cta-demo-1"></div>
+                  </div>
+                  <div class="content">
+                    <picture>
+                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div id="c-tab4" class="c-tab-contents ">
+                <div class="content-wrapper">
+                  <div class="copy-wrapper">
+                    <div class="title">Business User Experience Tour</div>
+                    <div class="desc">Sync compensation and sales data from 24+ integrations. Validate rosters and transactions, consolidate orders, track territory changes, and more.</div>
+                    <div class="cta-wrapper cta-demo-1"></div>
+                  </div>
+                  <div class="content">
+                    <picture>
+                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                    </picture>
                   </div>
                 </div>
               </div>
@@ -110,6 +135,46 @@ function setTabsContent() {
         </div>
         <div id="p-tab2" class="p-tab-contents">
           <div class="tab-content-wrapper">
+            <nav id="child-tabs">
+              <li class="active">
+                <a href="#c-tab5">Payee</a>
+              </li>
+              <li>
+                <a href="#c-tab6">Manager</a>
+              </li>
+            </nav>
+            <div id="c-tab-contents">
+              <div id="c-tab5" class="c-tab-contents active">
+                <div class="content-wrapper">
+                  <div class="copy-wrapper">
+                    <div class="title">Payee Experience Tour</div>
+                    <div class="desc">Let the sales team see their payouts, current incentive plans, and how closing certain deals affects pay. Automate bookkeeping. Mobile, desktop, & tablet.</div>
+                    <div class="cta-wrapper cta-demo-1"></div>
+                  </div>
+                  <div class="content">
+                    <picture>
+                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+              <div id="c-tab6" class="c-tab-contents ">
+                <div class="content-wrapper">
+                  <div class="copy-wrapper">
+                    <div class="title">Manager Experience Tour</div>
+                    <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquires. </div>
+                    <div class="cta-wrapper cta-demo-1"></div>
+                  </div>
+                  <div class="content">
+                    <picture>
+                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                    </picture>
+                  </div>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </div>

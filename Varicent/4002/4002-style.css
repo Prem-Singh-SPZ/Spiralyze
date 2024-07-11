@@ -1,3 +1,27 @@
+body.spz-4002 .hero-section .hero-content {
+  text-align: center;
+}
+body.spz-4002 .hero-section .hero-content .hero-title {
+  color: #000;
+  font-family: Inter, serif;
+  font-style: normal;
+  font-weight: 700;
+  text-transform: none;
+  font-size: 40px;
+  text-align: center;
+  line-height: 54px;
+}
+body.spz-4002 .hero-section .hero-content .hero-subtitle {
+  font-family: Inter, serif;
+  color: #282828;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  max-width: 538px;
+  margin: auto;
+}
 body.spz-4002 .accordion-section {
   background: #fff;
   padding: 100px 0 249px;
@@ -14,7 +38,7 @@ body.spz-4002 .accordion-section {
   }
 }
 body.spz-4002 .accordion-section .accordion-row {
-  max-width: 1180px;
+  max-width: 1200px;
   margin: auto;
 }
 @media screen and (max-width: 1199.98px) {
@@ -27,30 +51,24 @@ body.spz-4002 .accordion-section .accordion-row {
     padding: 0 20px;
   }
 }
-body.spz-4002 .accordion-section .accordion-row .section-title {
-  color: #0f2d52;
-  text-align: center;
-  font-feature-settings: "salt" on;
-  font-family: Inter, serif;
-  font-size: 48px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 110%;
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-4002 .accordion-section .accordion-row .section-title {
-    font-size: 28px;
-  }
-}
 body.spz-4002 .accordion-section .accordion-row .accordion-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 48px 0 0;
 }
 @media screen and (max-width: 1024.98px) {
   body.spz-4002 .accordion-section .accordion-row .accordion-col {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 598px;
     margin: auto;
   }
@@ -62,9 +80,15 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col {
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 64px;
 }
 @media screen and (max-width: 1024.98px) {
@@ -78,520 +102,254 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs {
   }
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li {
-  margin: 0 5px;
+  margin: 0 8px;
   position: relative;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  height: 44px;
-  padding: 10px 19px;
-  justify-content: center;
-  align-items: center;
-  border-radius: 999px;
-  border: 1px solid #0f2d52;
-  color: #0f2d52;
-  letter-spacing: -0.2px;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 19px 16px 19px 20px;
+  border-radius: 6px;
+  border: 1px solid #9a9a9a;
+  background: #f8f8f8;
+  max-width: 337px;
+  min-height: 111px;
+  pointer-events: none;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn .btn-img {
+  width: 56px;
+  height: 50px;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn .btn-img .i-hover {
+  display: none;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn .btn-copy .btn-headline {
+  color: #282828;
   font-family: Inter, serif;
   font-size: 16px;
   font-style: normal;
   font-weight: 600;
-  line-height: 140%;
-  white-space: nowrap;
+  line-height: 120%;
+  margin: 0 0 4px;
 }
-@media screen and (max-width: 767.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a {
-    font-size: 14px;
-  }
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn .btn-copy .btn-desc {
+  color: #686868;
+  font-family: Inter, serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 16px;
+  margin: 0;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn {
-  pointer-events: none;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a .p-tab-btn, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a .p-tab-btn {
+  border: 1px solid #2b4ff4;
+  background: #fff;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a img {
-  margin-right: 10px;
-  width: 20px;
-  height: 20px;
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a img {
-    display: none !important;
-  }
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .i-hover {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a .p-tab-btn .btn-img .i-default, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a .p-tab-btn .btn-img .i-default {
   display: none;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a {
-  background: #0f2d52;
-  color: #fff;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a .i-hover, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a .i-hover {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a .p-tab-btn .btn-img .i-hover, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a .p-tab-btn .btn-img .i-hover {
   display: block;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a .i-default, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a .i-default {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li:hover a .p-tab-btn .btn-copy .btn-headline, body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li.active a .p-tab-btn .btn-copy .btn-headline {
+  color: #2b4ff4;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents {
   display: none;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents {
-  display: none;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents.active,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents.active,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents.active,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents.active {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents.active {
   display: block;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper > .text {
-  width: 457px;
-  flex-shrink: 0;
-  margin-top: 32px;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin-bottom: 64px;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child {
+@media screen and (max-width: 1024.98px) {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs {
+    margin-bottom: 32px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs {
+    margin-bottom: 0;
+  }
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li {
+  margin: 0 2px;
   position: relative;
-  transition: height 0.3s cubic-bezier(0.22, 1, 0.36, 1);
-  overflow: hidden;
-  margin-top: -2px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% - 3px);
+          flex: 0 0 calc(25% - 3px);
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child::before {
-  position: absolute;
-  bottom: 0px;
-  left: 0px;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li a {
+  height: 53px;
+  padding: 8px 16px 28px 16px;
+  border-bottom: 4px solid #eee;
+  color: #000;
+  text-align: center;
+  font-family: Inter, serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 120%;
+  opacity: 0.7;
   width: 100%;
-  height: 2px;
-  content: "";
-  background: #cccccc;
+  text-align: center;
+  display: block;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.no-border::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.no-border::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.no-border::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.no-border::before {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li:hover a, body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li.active a {
+  border-bottom: 4px solid #2b4ff4;
+  color: #2b4ff4;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents {
   display: none;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child:first-child,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child:first-child,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child:first-child,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child:first-child {
-  margin-top: 0px;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents.active {
+  display: block;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .bar,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .bar,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .bar,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .bar {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  width: 100%;
-  height: 2px;
-  background: #cccccc;
-  pointer-events: none;
-  z-index: 1;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .bar .line,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .bar .line,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .bar .line,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .bar .line {
-  position: absolute;
-  top: 0;
-  left: 0px;
-  width: 0px;
-  height: 100%;
-  background: #5fb53b;
-  transition: width 0.2s linear;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .title {
-  position: relative;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: space-between;
-  padding: 20px 16px;
-  -webkit-tap-highlight-color: transparent;
-  cursor: pointer;
-  position: relative;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .title::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .title::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .title::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .title::after {
-  content: "";
-  position: absolute;
-  top: calc(50% - 4px);
-  right: 16px;
-  width: 16px;
-  height: 8px;
-  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/vector1.svg) no-repeat center;
-  background-size: cover;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper {
+  max-width: 392px;
+  width: 100%;
+  padding-top: 40px;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .title > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .title > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .title > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .title > .text {
-  color: #b3b3b3;
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper .title {
+  color: #1a1c33;
+  font-family: Inter, serif;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 40px;
+  margin: 0 0 24px;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper .desc {
+  color: #1a1c33;
   font-family: Inter, serif;
   font-size: 20px;
   font-style: normal;
-  font-weight: 700;
-  line-height: 140%;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .title img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .title img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .title img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .title img {
-  transform: rotate(0deg);
-  transition: 0.3s cubic-bezier(0.22, 1, 0.36, 1) transform;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .title:hover > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .title:hover > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .title:hover > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .title:hover > .text {
-  color: #0f2d52;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .title:hover::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .title:hover::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .title:hover::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .title:hover::after {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/vector.svg) no-repeat center;
-  background-size: cover;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content {
-  display: none;
-  padding-bottom: 20px;
-  padding: 0 20px 24px 16px;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text {
-  color: #0f2d52;
-  font-family: Inter, serif;
-  font-size: 16px;
-  font-style: normal;
   font-weight: 400;
-  line-height: 140%;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text p,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text p,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text p,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text p {
-  color: #0f2d52;
-  font-family: Inter, serif;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 140%;
-  margin: 0 0 12px;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text sup,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text sup,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text sup,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text sup {
-  font-size: 12px;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content picture img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content picture img {
-  max-width: 100%;
-  height: auto;
-  display: none;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .zy-cta,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content .zy-cta,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content .zy-cta,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content .zy-cta {
-  border-radius: 99px;
-  border: 2px solid #5fb53b;
-  padding: 0;
-  font-family: Inter, serif;
-  height: 50px;
-  width: 167px;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 130%;
-  transition: all 0.3s;
-  margin: 0;
-  background: #fff;
-  color: #0f2d52;
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 26px 0 14px;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .zy-cta:hover,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content .zy-cta:hover,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content .zy-cta:hover,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content .zy-cta:hover {
-  background: #5fb53b;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .bar,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .bar,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .bar,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .bar {
-  display: block;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title {
-  cursor: default;
-  padding: 20px 16px;
-  border-bottom: none;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title > .text,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title > .text {
-  color: #0f2d52;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title img {
-  transform: rotate(180deg);
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title::after,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title::after {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/vector.svg) no-repeat center;
-  background-size: cover;
-  transform: rotate(180deg);
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content {
-  display: block;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child:last-child .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child:last-child .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child:last-child .title,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child:last-child .title {
-  border-bottom: none;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child:last-child::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child:last-child::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child:last-child::before,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child:last-child::before {
-  display: none;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper.stop .child.active .bar .line,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper.stop .child.active .bar .line,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper.stop .child.active .bar .line,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper.stop .child.active .bar .line {
-  width: 100%;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image {
-  position: relative;
-  margin-left: 102px;
-  width: calc(100% - 38px - 391px);
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image .reference,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image .reference,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image .reference,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image .reference {
-  opacity: 0;
-  width: 931px;
-  height: 464px;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image .hero,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image .hero,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image .hero,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image .hero {
-  position: absolute;
-  top: 0;
-  left: 0;
-  opacity: 0;
-  transition: 0.3s opacity cubic-bezier(0.22, 1, 0.36, 1);
-  z-index: 0;
-  width: 931px;
-  height: auto;
-  border-radius: 20px;
-  background: #fff;
-  box-shadow: 0px 12px 32px 0px rgba(15, 45, 82, 0.12), 5px 5px 32px 0px rgba(15, 45, 82, 0.08);
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image .hero.active,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image .hero.active,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image .hero.active,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image .hero.active {
-  opacity: 1;
-  z-index: 1;
-}
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image img,
-body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image img {
-  width: 100%;
-  height: auto;
-  display: block;
+  line-height: 150%;
 }
 @media (max-width: 1439.98px) {
   body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image .reference,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image .hero,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image .reference,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image .hero,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image .reference,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image .hero,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image .reference,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image .hero {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image .hero {
     max-width: 100%;
     height: auto;
   }
 }
 @media (max-width: 1024.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper {
-    flex-direction: column;
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .image,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .image,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .image {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .image {
     display: none;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper > .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper > .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper > .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper > .text {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper > .text {
     width: 678px;
     margin-left: auto;
     margin-right: auto;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child {
     padding-left: 40px;
     padding-right: 40px;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content picture img,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content picture img {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img {
     display: block;
     margin-top: 28px;
     margin-bottom: 6px;
     border-radius: 11.815px;
-    box-shadow: 0px 7.089px 18.904px 0px rgba(15, 45, 82, 0.12), 2.775px 2.775px 17.76px 0px rgba(15, 45, 82, 0.08);
+    -webkit-box-shadow: 0px 7.089px 18.904px 0px rgba(15, 45, 82, 0.12), 2.775px 2.775px 17.76px 0px rgba(15, 45, 82, 0.08);
+            box-shadow: 0px 7.089px 18.904px 0px rgba(15, 45, 82, 0.12), 2.775px 2.775px 17.76px 0px rgba(15, 45, 82, 0.08);
     max-width: 100%;
     width: 100%;
   }
 }
 @media (max-width: 1024.98px) and (max-width: 767.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content picture img,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content picture img {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content picture img {
     margin-bottom: 2px;
     border-radius: 6.165px;
-    box-shadow: 0px 3.699px 9.865px 0px rgba(15, 45, 82, 0.12), 1.448px 1.448px 9.268px 0px rgba(15, 45, 82, 0.08);
+    -webkit-box-shadow: 0px 3.699px 9.865px 0px rgba(15, 45, 82, 0.12), 1.448px 1.448px 9.268px 0px rgba(15, 45, 82, 0.08);
+            box-shadow: 0px 3.699px 9.865px 0px rgba(15, 45, 82, 0.12), 1.448px 1.448px 9.268px 0px rgba(15, 45, 82, 0.08);
   }
 }
 @media (max-width: 1024.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .bar,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .bar,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .bar,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .bar {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .bar {
     width: calc(100% - 80px);
     left: auto;
     right: auto;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child::before,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child::before,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child::before,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child::before {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child::before {
     width: calc(100% - 80px);
     left: auto;
     right: auto;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .title {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .title {
     border-bottom: none;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content {
     padding: 0px 32px 32px 16px;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content .text {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content .text {
     font-size: 16px;
     line-height: 24px;
   }
 }
 @media (max-width: 767.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper {
     margin-top: 0;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper > .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper > .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper > .text,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper > .text {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper > .text {
     width: 100%;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child {
     padding-left: 0;
     padding-right: 0;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .bar, body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child::before,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .bar,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child::before,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .bar,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child::before,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .bar,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child::before {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .bar, body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child::before {
     width: 100%;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text sup,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text sup,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text sup,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child .content .text sup {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child .content .text sup {
     font-size: 10.5px;
   }
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content,
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #c-tab-contents .c-tab-contents .tab-content-wrapper .child.active .content {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper .child.active .content {
     padding: 0 32px 32px 16px;
   }
 }
