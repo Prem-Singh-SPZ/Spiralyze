@@ -182,55 +182,56 @@ function setTabsContent() {
   </div>`);
 
     // Nav buttons functionality
-    var tabLabels = document.querySelectorAll("#parent-tabs li");
+    var tabLabels = document.querySelectorAll("#parent-tabs li a");
     var tabPanes = document.getElementsByClassName("p-tab-contents");
 
-    function activateTab(e) {
-        e.preventDefault();
+    // function activateTab(e, tabLabels, tabPanes) {
+    //     e.preventDefault();
 
-        // Deactivate all tabs
-        tabLabels.forEach(function (label, index) {
-            label.classList.remove("active");
-        });
-        [].forEach.call(tabPanes, function (pane, index) {
-            pane.classList.remove("active");
-        });
+    //     // Deactivate all tabs
+    //     tabLabels.forEach(function (label, index) {
+    //         label.classList.remove("active");
+    //     });
+    //     [].forEach.call(tabPanes, function (pane, index) {
+    //         pane.classList.remove("active");
+    //     });
 
-        // Activate current tab
-        e.target.parentNode.classList.add("active");
-        var clickedTab = e.target.getAttribute("href");
-        document.querySelector(clickedTab).classList.add("active");
-    }
+    //     // Activate current tab
+    //     e.target.parentNode.classList.add("active");
+    //     var clickedTab = e.target.getAttribute("href");
+    //     document.querySelector(clickedTab).classList.add("active");
+    // }
 
     // Apply event listeners
     tabLabels.forEach(function (label, index) {
-        label.addEventListener("click", activateTab);
+        label.addEventListener("click", addActiveClass, );
     });
 
+
     //convert above code to be dynamic
-    var childTabs = document.querySelectorAll("#child-tabs li");
+    var childTabs = document.querySelectorAll("#child-tabs li a");
     var childPanes = document.getElementsByClassName("c-tab-contents");
 
-    function activateChildTab(e) {
-        e.preventDefault();
+    // function activateChildTab(e) {
+    //     e.preventDefault();
 
-        // Deactivate all tabs
-        childTabs.forEach(function (label, index) {
-            label.classList.remove("active");
-        });
-        [].forEach.call(childPanes, function (pane, index) {
-            pane.classList.remove("active");
-        });
+    //     // Deactivate all tabs
+    //     childTabs.forEach(function (label, index) {
+    //         label.classList.remove("active");
+    //     });
+    //     [].forEach.call(childPanes, function (pane, index) {
+    //         pane.classList.remove("active");
+    //     });
 
-        // Activate current tab
-        e.target.parentNode.classList.add("active");
-        var clickedTab = e.target.getAttribute("href");
-        document.querySelector(clickedTab).classList.add("active");
-    }
+    //     // Activate current tab
+    //     e.target.parentNode.classList.add("active");
+    //     var clickedTab = e.target.getAttribute("href");
+    //     document.querySelector(clickedTab).classList.add("active");
+    // }
 
     // Apply event listeners
     childTabs.forEach(function (label, index) {
-        label.addEventListener("click", activateChildTab);
+        label.addEventListener("click", addActiveClass);
     });
 }
 
@@ -247,5 +248,26 @@ function waitForElm(selector) {
             }
         });
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
+}
+
+//function for onclick of anchor tag add class active to the id of similar href of anchor tag
+
+function addActiveClass(e) {
+    e.preventDefault();
+    var parentLi = e.target.closest('li');
+    var clickedTab = e.target.getAttribute("href");
+    e.target.closest('nav').querySelectorAll('li').forEach(function (li) {
+        li.classList.remove('active');
+    });
+    parentLi.classList.add('active');
+
+    //remove active class from all the siblings of document.querySelector(clickedTab)
+    var siblings = document.querySelector(clickedTab).parentNode.querySelectorAll('div');
+    siblings.forEach(function (sibling) {
+        if (sibling !== document.querySelector(clickedTab)) {
+            document.querySelector(clickedTab).classList.add("active");
+            sibling.classList.remove('active');
+        }
     });
 }

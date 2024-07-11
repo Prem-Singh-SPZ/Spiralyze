@@ -2,9 +2,9 @@
   function loadTest() {
     document.body.classList.add('spz-25004');
 
-    waitForElm('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').then(function () {
+    waitForElm('.spz-25004 div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').then(function () {
       let changeText = setInterval(() => {
-        document.querySelector('div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
+        document.querySelector('.spz-25004 div[class*="MuiGrid-root-Section-gridContainer"] div[class*="Block-contentWrapper"] [class$=Block-content]').innerHTML = `<div class="hero-content">
         <h1 class="hc-title">Drata's <span>Risk Trends</span> Report</h1>
         <div class="hc-tag dis-flex"><span>SOC 2</span> <span>ISO 27001</span> <span>HIPAA</span> <span>GDPR</span> <span>PCI</span> <span> More</span></div>
         <div class="star-rating dis-flex align-items-center"><img src="//res.cloudinary.com/spiralyze/image/upload/v1694156756/drata/6012/hero_logo-g2_1.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1698673988/drata/4012/custom/4.9_Star_rating.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"> <span class="sr-number"><strong>4.9</strong> (700+ reviews)</span></div>
@@ -23,7 +23,7 @@
         </div>
       </div>`;
 
-        waitForElm('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').then(function () {
+        waitForElm('.spz-25004 div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').then(function () {
           document.querySelector('div[class*="Form-formOuterContainer"] > [class*="MuiTypography-root-Form-formMessage"]').textContent = "Download the Report";
         });
       }, 100);
@@ -35,7 +35,7 @@
     });
 
 
-    waitForElm('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
+    waitForElm('.spz-25004 [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').then(function () {
       if (document.querySelectorAll('div[class*="Form-formContainer"] form.hs-form').length > 0) {
 
         if (document.querySelectorAll('div[class*="Form-formContainer"] div[id*="reactHubspotForm"] .form-note').length == 0) {
@@ -45,7 +45,7 @@
         appendInputLabel();
 
         // Set button label
-        document.querySelector('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').innerHTML = 'Get Started <span class="cta-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
+        document.querySelector('.spz-25004 [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form .actions [class*=MuiButton-root-Form-darkSubmitButton]').innerHTML = 'Get Started <span class="cta-arrow"><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none"><path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg></span>';
 
         // hs-button
         document.querySelector('.hs-button').addEventListener('click', function () {
@@ -93,7 +93,7 @@
 
   // Create input label with placeholder text
   function appendInputLabel() {
-    document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form.hs-form .hs-input').forEach(function (el) {
+    document.querySelectorAll('.spz-25004 [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] form.hs-form .hs-input').forEach(function (el) {
       let oldLabel = el.closest('.field').querySelector('label[id]').textContent;
       const label = document.createElement("label");
       label.innerHTML = oldLabel || el.placeholder;
@@ -112,7 +112,7 @@
 
   // On input focus add class on closest parent .field class
   function focusFields() {
-    document.querySelectorAll('[class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input').forEach(function (el) {
+    document.querySelectorAll('.spz-25004 [class*=MuiGrid-root-Section-gridItem]:last-child > [class*=Form-root] [class*=Form-formOuterContainer] .hs-input').forEach(function (el) {
       // On input focus add .field-focus class on closest parent .field class
       el.addEventListener('focus', function () {
         el.closest('.field').classList.add('field-focus');
