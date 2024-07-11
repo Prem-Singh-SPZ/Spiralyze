@@ -14,37 +14,37 @@
       {
         inputSel: "#Email", // input element selector
         labelSel: "#LblEmail", // label element selector
-        labelText: "Business Email", // label text/value
+        labelText: "Business Email*", // label text/value
       },
       {
         inputSel: "#FirstName",
         labelSel: "#LblFirstName",
-        labelText: "First Name",
+        labelText: "First Name*",
       },
       {
         inputSel: "#LastName",
         labelSel: "#LblLastName",
-        labelText: "Last Name",
+        labelText: "Last Name*",
       },
       {
         inputSel: "#Company",
         labelSel: "#LblCompany",
-        labelText: "Company Name",
+        labelText: "Company Name*",
       },
       {
         inputSel: "#Company_Size__c",
         labelSel: "#LblCompany_Size__c",
-        labelText: "Company Size",
+        labelText: "Company Size*",
       },
       {
         inputSel: "#Phone",
         labelSel: "#LblPhone",
-        labelText: "Phone Number",
+        labelText: "Phone Number*",
       },
       {
         inputSel: "#Person_Country__c",
         labelSel: "#LblPerson_Country__c",
-        labelText: "Country",
+        labelText: "Country*",
       },
     ],
   };
