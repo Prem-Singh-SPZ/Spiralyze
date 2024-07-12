@@ -181,6 +181,7 @@ div#hs_cos_wrapper_widget_1685726606255 {
 
 .spz-1001 form.hs-form .hs-form-field select.hs-input:not([type=checkbox]) {
   padding-right: 35px;
+  cursor: pointer;
 }
 
 .spz-1001 form.hs-form .hs-form-field .hs-input:not([type=checkbox]):hover,
@@ -214,16 +215,6 @@ div#hs_cos_wrapper_widget_1685726606255 {
   width: 100%;
   position: relative;
   margin: 1.5px 0 0 5px;
-}
-
-.spz-1001 form.hs-form .hs-form-field .hs-error-msgs label.hs-error-msg {
-  color: #e00000;
-  font-family: Inter;
-  font-size: 12px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 14.52px;
-  margin: 0;
 }
 
 .spz-1001 form.hs-form .hs-form-field .hs-error-msgs label {
@@ -306,11 +297,11 @@ div#hs_cos_wrapper_widget_1685726606255 {
   margin: 0 0 16px;
 }
 
-.spz-1001 form.hs-form .hs_error_rollup label.hs-main-font-element {
+.spz-1001 form.hs-form .hs_error_rollup label.hs-main-font-element:not(.hs-error-msg) {
   margin: 0;
-  color: #e00000;
+  color: #dc3545;
   font-family: Inter;
-  font-size: 16px;
+  font-size: 0.875em;
   font-style: normal;
   font-weight: 400;
   line-height: 1.64;

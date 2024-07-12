@@ -46,9 +46,9 @@ function form_modify() {
             // On input blur remove .typing class on closest parent .field class
             el.addEventListener('blur', function () {
                 el.closest('.field').classList.remove('typing');
-                setTimeout(function () {
+                // setTimeout(function () {
                     checkError();
-                }, 100);
+                // }, 100);
             });
 
             // On select element change remove .error class on closest parent .field class
