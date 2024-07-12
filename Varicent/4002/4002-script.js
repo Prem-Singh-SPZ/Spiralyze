@@ -27,8 +27,8 @@ function setTabsContent() {
           <a href="#p-tab1">
             <div class="p-tab-btn">
               <div class="btn-img">
-                <img class="b-default" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/incentives.webp" alt="Incentives">
-                <img class="b-hover" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/incentives-hover.webp" alt="Incentives">
+                <img class="b-default" src="//res.cloudinary.com/spiralyze/image/upload/v1720750191/varicent/4002/incentives__disabled_1.svg" alt="Incentives">
+                <img class="b-hover" src="//res.cloudinary.com/spiralyze/image/upload/v1720750191/varicent/4002/incentives__active_1.svg" alt="Incentives">
               </div>
               <div class="btn-copy">
                 <p class="btn-headline">Incentives</p>
@@ -41,8 +41,8 @@ function setTabsContent() {
           <a href="#p-tab2">
             <div class="p-tab-btn">
               <div class="btn-img">
-                <img class="b-default" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/incentives.webp" alt="Incentives">
-                <img class="b-hover" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/incentives-hover.webp" alt="Incentives">
+                <img class="b-default" src="//res.cloudinary.com/spiralyze/image/upload/v1720750191/varicent/4002/sales_planning__disabled_2.svg" alt="Sales Planning">
+                <img class="b-hover" src="//res.cloudinary.com/spiralyze/image/upload/v1720750191/varicent/4002/sales_planning__active_2.svg" alt="Sales Planning">
               </div>
               <div class="btn-copy">
                 <p class="btn-headline">Sales Planning</p>
@@ -137,18 +137,18 @@ function setTabsContent() {
           <div class="tab-content-wrapper">
             <nav id="child-tabs">
               <li class="active">
-                <a href="#c-tab5">Payee</a>
+                <a href="#c-tab5">Sales Operations</a>
               </li>
               <li>
-                <a href="#c-tab6">Manager</a>
+                <a href="#c-tab6">Sales Manager</a>
               </li>
             </nav>
             <div id="c-tab-contents">
               <div id="c-tab5" class="c-tab-contents active">
                 <div class="content-wrapper">
                   <div class="copy-wrapper">
-                    <div class="title">Payee Experience Tour</div>
-                    <div class="desc">Let the sales team see their payouts, current incentive plans, and how closing certain deals affects pay. Automate bookkeeping. Mobile, desktop, & tablet.</div>
+                    <div class="title">Sales Operations Experience Tour</div>
+                    <div class="desc">Build and optimize market plans. Monitor sales performance. Compare sales by region, country, and team member. Adjust plans to meet goals.</div>
                     <div class="cta-wrapper cta-demo-1"></div>
                   </div>
                   <div class="content">
@@ -162,8 +162,8 @@ function setTabsContent() {
               <div id="c-tab6" class="c-tab-contents ">
                 <div class="content-wrapper">
                   <div class="copy-wrapper">
-                    <div class="title">Manager Experience Tour</div>
-                    <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquires. </div>
+                    <div class="title">Sales Manager Experience Tour</div>
+                    <div class="desc">Build territory and quota assignments. Instantly draw new boundaries and compare scenarios. Collaborate with other sales managers to optimize plans.</div>
                     <div class="cta-wrapper cta-demo-1"></div>
                   </div>
                   <div class="content">

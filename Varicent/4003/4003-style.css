@@ -1,0 +1,540 @@
+body.spz_4003 {
+    overflow: initial !important;
+    overflow-x: hidden !important;
+}
+
+.spz_4003:not(.get_access) {
+    font-size: 0;
+}
+
+.spz_4003:not(.get_access) .body-wrapper,
+.spz_4003 .modal-backdrop,
+.spz_4003:not(.get_access) #scrollToTopBtn {
+    display: none;
+}
+
+.spz_4003 .form-over-model {
+    padding: 20px 24px !important;
+    margin: auto !important;
+    min-height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4003/bg_1440.webp");
+    background-size: cover;
+    background-position: top left;
+}
+
+.spz_4003.get_access .form-over-model {
+    display: none;
+}
+
+.spz_4003 .form-over-model .form-over-box {
+    width: 100%;
+    max-width: 620px;
+    background: #2B4FF4;
+    border-radius: 12px;
+    padding: 56px 64px 58px;
+    box-shadow: 0px 28px 56px 0px rgba(27, 35, 72, 0.51);
+    display: flex;
+    flex-flow: column;
+    flex-wrap: wrap;
+    align-items: center;
+}
+
+.spz_4003 .form-over-model.hidden-step .form-over-box {
+    padding: 56px 40px 57px;
+}
+
+.spz_4003 .form-over-model .site-logo {
+    display: inline-flex;
+    flex-wrap: wrap;
+}
+
+.spz_4003 .form-over-model .divider {
+    width: 100%;
+    max-width: 280px;
+    height: 1px;
+    margin: 23px auto 25px;
+    background: linear-gradient(90deg, rgba(255, 255, 255, 0.00) 0%, rgba(213, 220, 253, 0.30) 50%, rgba(255, 255, 255, 0.00) 100%);
+}
+
+.spz_4003 .form-over-model.hidden-step .divider {
+    margin-bottom: 25px;
+}
+
+.spz_4003 .form-over-model .form-over-heading {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 40px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 48.41px;
+    margin: 0 20px 26px;
+}
+
+.spz_4003 .form-over-model.hidden-step .form-over-heading {
+    margin-bottom: 28px;
+}
+
+.spz_4003 .form-over-model .form-over-heading .highlight-text {
+    color: #FADB14;
+}
+
+.spz_4003 .form-over-model .form-choice-step {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-between;
+}
+
+.spz_4003 .form-over-model.hidden-step .form-choice-step {
+    display: none;
+}
+
+.spz_4003 .form-over-model .form-choice-step .choice-heading {
+    color: #FFF;
+    width: 100%;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    margin-bottom: 28px;
+}
+
+.spz_4003 .form-over-model .form-choice-step .choice-option {
+    width: calc(50% - 8px);
+    height: 200px;
+    display: inline-flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    background: #FFFFFF;
+    border: 1px solid #2B4FF4;
+    border-radius: 8px;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+}
+
+.spz_4003 .form-over-model .form-choice-step .choice-option:hover {
+    background: rgba(255, 255, 255, 0.80);
+}
+
+.spz_4003 .form-over-model .form-choice-step .choice-option::after {
+    position: absolute;
+    content: "";
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718788306/varicent/4003/Bullet.svg");
+    width: 20px;
+    height: 20px;
+    bottom: 19px;
+    right: 19px;
+    pointer-events: none;
+}
+
+.spz_4003 .form-over-model .form-choice-step .choice-option input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.spz_4003 .form-over-model .form-choice-step .choice-option .choice-label {
+    color: #2B4FF4;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin: 16px 0 0 0;
+}
+
+.spz_4003 .form-over-model .form-step {
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    margin-top: -2px;
+}
+
+.spz_4003 .form-over-model .form-step .hs_cos_wrapper_type_form {
+    width: 100%;
+}
+
+.spz_4003 .form-over-model .form-step .submitted-message {
+    color: #FFF;
+    text-align: center;
+    font-family: Inter;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    padding: 0;
+}
+
+.spz_4003 .form-over-model .form-step div[data-hs-forms-root=true] {
+    position: relative;
+    top: unset;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form {
+    background: transparent;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field:not(.hidden-field) {
+    display: inline-flex !important;
+    flex-wrap: wrap;
+    align-content: flex-start;
+    width: 100%;
+    margin: 0 0 20px;
+    position: relative;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs_firstname,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs_lastname {
+    width: calc(50% - 8px);
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .input {
+    width: 100%;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hidden-field,
+.spz_4003 .form-over-model .form-step form.hs-form>.hs-dependent-field {
+    display: none !important;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs-fieldtype-select .input {
+    position: relative;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs-fieldtype-select .input::after {
+    position: absolute;
+    content: "";
+    width: 12px;
+    height: 12px;
+    top: 18px;
+    right: 16px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718599394/varicent/1002/dropdown-arrow.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    pointer-events: none;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field>label {
+    margin: 0;
+    position: absolute;
+    top: 19px;
+    left: 16px;
+    pointer-events: none;
+    color: #58636D;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 19.36px;
+    transition: all 0.4s ease-in-out;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field>label .hs-form-required {
+    color: #58636D !important;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.active.typing>label,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.filled>label {
+    top: 12px;
+    font-size: 12px;
+    line-height: 14.52px;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-input:not([type="checkbox"]) {
+    width: 100% !important;
+    height: 56px;
+    padding: 25.5px 16px 10.5px 15px;
+    background-color: rgba(255, 255, 255, 0.8);
+    border: 1px solid rgba(255, 255, 255, 0.8);
+    border-radius: 8px;
+    outline: none;
+    box-shadow: none;
+    color: #212529;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    line-height: 19.36px;
+    transition: all 0.3s ease-in-out;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field select.hs-input:not([type="checkbox"]) {
+    padding-right: 35px;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-input:not([type="checkbox"]):hover,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.filled .hs-input,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.active.typing .hs-input {
+    background-color: #FFF;
+    border-color: #FFF;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.error .hs-input {
+    background-color: #FFE5E5 !important;
+    border-color: #E00000 !important;
+    color: #E00000 !important;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field input.hs-input {
+    /* background-image: none; */
+    padding-right: 35px !important;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-input:-webkit-autofill,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-input:-webkit-autofill:hover,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-input:-webkit-autofill:focus,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-input:-webkit-autofill:active {
+    -webkit-box-shadow: 0 0 0 48px #FFF inset !important;
+    -webkit-text-fill-color: #212529 !important;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-error-msgs {
+    display: block;
+    width: 100%;
+    position: relative;
+    margin: 1.5px 0 0 5px;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-error-msgs label.hs-error-msg {
+    color: #E00000;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14.52px;
+    margin: 0;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-error-msgs label {
+    margin: 0;
+    display: flex;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-error-msgs label a {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 14.52px;
+    margin: 0;
+    cursor: pointer;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .legal-consent-container .inputs-list {
+    margin: 4px 0 5px;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .legal-consent-container label.hs-form-booleancheckbox-display {
+    margin: 0;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-form-booleancheckbox input {
+    position: absolute;
+    visibility: hidden;
+    margin: 0;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-form-booleancheckbox span {
+    position: relative;
+    margin: 0;
+    padding-left: 24px;
+    cursor: pointer;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-form-booleancheckbox span * {
+    color: #FFF;
+    font-family: Inter;
+    font-size: 14.4px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 23.62px;
+    margin: 0;
+    padding: 0;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-form-booleancheckbox span:not(.hs-form-required):before {
+    position: absolute;
+    content: "";
+    width: 16px;
+    height: 16px;
+    border-radius: 3px;
+    background: #FFF;
+    top: 4px;
+    left: 0;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field .hs-form-booleancheckbox input:checked+span::after {
+    position: absolute;
+    content: "";
+    width: 8px;
+    height: 8px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718272039/varicent/1002/Checkmark.svg");
+    background-size: contain;
+    background-repeat: no-repeat;
+    top: 8px;
+    left: 4px;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs_error_rollup {
+    width: 100%;
+    text-align: center;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs_error_rollup .hs-error-msgs {
+    margin: 0 0 16px;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs_error_rollup label.hs-main-font-element {
+    margin: 0;
+    color: #E00000;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 1.64;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs-recaptcha {
+    width: auto;
+    margin: 0;
+    position: absolute;
+    bottom: -1px;
+    right: 0;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs-recaptcha .grecaptcha-badge {
+    box-shadow: none !important;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-submit,
+.spz_4003 .form-over-model .form-step form.hs-form .hs-submit .actions {
+    display: inline-flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 0;
+    width: auto;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-submit .hs-button {
+    width: 231px;
+    height: 58px;
+    background: #FADB14;
+    border: 1px solid #2B4FF4;
+    padding: 0;
+    border-radius: 55px;
+    color: #2B4FF4;
+    text-align: center;
+    font-family: Inter;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.spz_4003 .form-over-model .form-step form.hs-form .hs-submit .hs-button:hover {
+    border-color: #0327cc;
+}
+
+@media (min-width: 1441px) {
+    .spz_4003 .form-over-model {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4003/bg_1920.webp");
+    }
+}
+
+@media (min-width: 1921px) {
+    .spz_4003 .form-over-model {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4003/bg_4k.webp");
+    }
+}
+
+@media(max-width: 767.98px) {
+    .spz_4003 .form-over-model {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4003/bg360_1.webp");
+    }
+
+    .spz_4003 .form-over-model .form-over-box {
+        padding: 56px 16px 24px;
+    }
+
+    .spz_4003 .form-over-model.hidden-step .form-over-box {
+        padding: 56px 16px;
+    }
+
+    .spz_4003 .form-over-model.hidden-step .divider {
+        margin: 23px auto 24px;
+    }
+
+    .spz_4003 .form-over-model .form-over-heading {
+        font-size: 30px;
+        line-height: 36.31px;
+        margin: 0 10px 27px;
+    }
+
+    .spz_4003 .form-over-model .form-choice-step {
+        padding: 0 8px;
+    }
+
+    .spz_4003 .form-over-model .form-choice-step .choice-heading {
+        font-size: 20px;
+        line-height: 28px;
+        margin-bottom: 12px;
+    }
+
+    .spz_4003 .form-over-model .form-choice-step .choice-option {
+        width: 100%;
+        margin-top: 16px;
+    }
+
+    .spz_4003 .form-over-model .form-step {
+        margin-top: 0px;
+        padding: 0 8px;
+    }
+
+    .spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs_firstname,
+    .spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs_lastname {
+        width: 100%;
+    }
+
+    .spz_4003 .form-over-model .form-step form.hs-form .hs-form-field.hs-recaptcha {
+        position: relative;
+        bottom: unset;
+        right: unset;
+    }
+
+    .spz_4003 .form-over-model .form-step form.hs-form .hs_error_rollup .hs-error-msgs {
+        margin: 16px 0 0;
+    }
+
+    .spz_4003 .form-over-model .form-step form.hs-form .hs-submit {
+        width: 100%;
+        margin-top: 28px;
+    }
+}
