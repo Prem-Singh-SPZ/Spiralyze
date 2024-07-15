@@ -40,7 +40,8 @@
   padding: 12px 24px 10px;
   line-height: 1;
   border-radius: 24px 24px 0 0;
-  transition: 0.3 opacity;
+  transition: opacity 0.3s ease-in-out;
+  white-space: nowrap;
 }
 .spz-2001 #unblock_btn:hover, .spz-2001 #unblock_btn:active {
   opacity: 0.6;
@@ -51,7 +52,7 @@
   content: "";
   display: inline-block;
   width: 30px;
-  height: 30px;
+  height: 12px;
   vertical-align: middle;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767483/varicent/2001/arrows_down_svg.svg");
   background-position: center;
@@ -84,30 +85,32 @@
 .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding .spz-headline ~ p {
   display: none !important;
 }
-.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding .hero-copy p {
+.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid {
+  align-items: center;
+  max-width: 1304px;
+}
+.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:nth-child(2) {
+  max-width: 558px;
+}
+@media screen and (max-width: 767px) {
+  .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:nth-child(2) {
+    max-width: 100%;
+  }
+}
+@media screen and (max-width: 767px) {
+  .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5 {
+    width: 100%;
+  }
+}
+.spz-2001 .hero-copy p {
   color: #fff;
   font-family: Inter, serif;
   font-size: 1.0625rem;
   font-weight: 400;
   line-height: 164%;
 }
-.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding .hero-copy p span {
+.spz-2001 .hero-copy p span {
   color: #fadb14;
-}
-.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid {
-  align-items: center;
-  max-width: 1304px;
-}
-.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5 {
-  width: 50%;
-}
-.spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:nth-child(2) {
-  max-width: 558px;
-}
-@media screen and (max-width: 767px) {
-  .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5 {
-    width: 100%;
-  }
 }
 .spz-2001 .hs_error_rollup {
   display: none;

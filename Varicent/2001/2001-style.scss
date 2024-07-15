@@ -51,7 +51,8 @@
     padding: 12px 24px 10px;
     line-height: 1;
     border-radius: 24px 24px 0 0;
-    transition: 0.3 opacity;
+    transition: opacity 0.3s ease-in-out;
+    white-space: nowrap;
 
     &:hover,
     &:active {
@@ -64,7 +65,7 @@
       content: "";
       display: inline-block;
       width: 30px;
-      height: 30px;
+      height: 12px;
       vertical-align: middle;
       background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767483/varicent/2001/arrows_down_svg.svg");
       background-position: center;
@@ -104,31 +105,21 @@
       }
     }
 
-    .hero-copy {
-      p {
-        color: #fff;
-        font-family: Inter, serif;
-        font-size: 1.0625rem;
-        font-weight: 400;
-        line-height: 164%;
-
-        span {
-          color: #fadb14;
-        }
-      }
-    }
     > .row-fluid {
       align-items: center;
       max-width: 1304px;
 
       > .span5 {
-        width: 50%;
+        // width: 50%;
         &:first-child {
-        //   max-width: 546px;
+          //   max-width: 546px;
         }
 
         &:nth-child(2) {
           max-width: 558px;
+          @media screen and (max-width: 767px) {
+            max-width: 100%;
+          }
         }
 
         @media screen and (max-width: 767px) {
@@ -137,6 +128,21 @@
       }
     }
   }
+
+  .hero-copy {
+    p {
+      color: #fff;
+      font-family: Inter, serif;
+      font-size: 1.0625rem;
+      font-weight: 400;
+      line-height: 164%;
+
+      span {
+        color: #fadb14;
+      }
+    }
+  }
+
   .hs_error_rollup {
     display: none;
   }
