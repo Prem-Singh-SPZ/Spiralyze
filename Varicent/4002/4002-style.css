@@ -52,23 +52,14 @@ body.spz-4002 .accordion-section .accordion-row {
   }
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
   padding: 48px 0 0;
 }
 @media screen and (max-width: 1024.98px) {
   body.spz-4002 .accordion-section .accordion-row .accordion-col {
-    -webkit-box-align: center;
-        -ms-flex-align: center;
-            align-items: center;
+    align-items: center;
     max-width: 598px;
     margin: auto;
   }
@@ -80,15 +71,9 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col {
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 64px;
 }
 @media screen and (max-width: 1024.98px) {
@@ -106,12 +91,8 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li {
   position: relative;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
+  align-items: center;
   padding: 19px 16px 19px 20px;
   border-radius: 6px;
   border: 1px solid #9a9a9a;
@@ -166,29 +147,16 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
   display: block;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
+  justify-content: space-between;
+  flex-direction: column;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs,
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 {
   list-style-type: none;
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-items: center;
+  justify-content: center;
   margin-bottom: 64px;
 }
 @media screen and (max-width: 1024.98px) {
@@ -207,9 +175,7 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 li {
   margin: 0 2px;
   position: relative;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(25% - 3px);
-          flex: 0 0 calc(25% - 3px);
+  flex: 0 0 calc(25% - 3px);
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li a,
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 li a {
@@ -250,15 +216,9 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper,
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper,
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  justify-content: space-between;
+  align-items: flex-start;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper,
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper .copy-wrapper,
@@ -306,7 +266,5 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
   height: 496px;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents#p-tab2 .tab-content-wrapper #child-tabs-2 li {
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 calc(50% - 2px);
-          flex: 0 0 calc(50% - 2px);
+  flex: 0 0 calc(50% - 2px);
 }

@@ -120,11 +120,11 @@ window.addEventListener("click", function (e) {
 
         if (validateEmailField()) {
             document.querySelector('.zy-header-bottom-inner .zy-header-bottom-demo>a').click();
-
-            // setTimeout(() => {
-                document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').value = emailValue;
-                document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').focus();
-            // }, 200);
+            document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').value = emailValue;
+            document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container form').scrollIntoView({ behavior: 'smooth' });
+            setTimeout(() => {
+                document.querySelector('.zy-demo-form-section-container .zy-marketo-form-container input[type=email]').closest('.mktoFieldWrap ').classList.add('filled');
+            }, 500);
         }
     }
 });

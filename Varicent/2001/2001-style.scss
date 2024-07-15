@@ -1,0 +1,224 @@
+.spz-2001 {
+  overflow-y: scroll;
+  min-height: 100vh;
+
+  &.unblocked {
+    overflow-y: auto;
+    height: auto;
+  }
+
+  .header-wrapper > div:nth-of-type(1),
+  .span2,
+  .row-number-3 > div:nth-of-type(1) > div:nth-of-type(1),
+  #drift-frame-controller,
+  &:not(.unblocked)
+    #main-content
+    > div.container-fluid.body-container
+    > div
+    > div
+    > div
+    > div:not(:first-child) {
+    display: none !important;
+  }
+
+  .widget-type-form form.hs-form.hs-custom-form {
+    position: relative;
+
+    &::before {
+      content: "";
+      position: absolute;
+      width: 76px;
+      height: 76px;
+      right: -39px;
+      top: -32px;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/2001/target_img_1440.webp");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  #unblock_btn {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    color: #fff;
+    border: 1px solid #fff;
+    border-bottom: 0 none;
+    font-size: 16px;
+    padding: 12px 24px 10px;
+    line-height: 1;
+    border-radius: 24px 24px 0 0;
+    transition: 0.3 opacity;
+
+    &:hover,
+    &:active {
+      opacity: 0.6;
+    }
+
+    &:after {
+      margin-left: 5px;
+      margin-bottom: 2px;
+      content: "";
+      display: inline-block;
+      width: 30px;
+      height: 30px;
+      vertical-align: middle;
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767483/varicent/2001/arrows_down_svg.svg");
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+    }
+  }
+
+  .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
+    align-items: center;
+    display: flex;
+    background-repeat: no-repeat;
+    position: relative;
+    padding-top: 15px !important;
+    padding-bottom: 65px !important;
+    min-height: 100vh;
+
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
+    background-position: center;
+    background-size: 819px 206px;
+    background-repeat: no-repeat;
+
+    .spz-headline {
+      line-height: 1.1;
+
+      .w-text {
+        color: #ffffff;
+        font-size: 0.93em;
+      }
+
+      span.y-text {
+        color: #fadb14;
+      }
+
+      ~ p {
+        display: none !important;
+      }
+    }
+
+    .hero-copy {
+      p {
+        color: #fff;
+        font-family: Inter, serif;
+        font-size: 1.0625rem;
+        font-weight: 400;
+        line-height: 164%;
+
+        span {
+          color: #fadb14;
+        }
+      }
+    }
+    > .row-fluid {
+      align-items: center;
+      max-width: 1304px;
+
+      > .span5 {
+        width: 50%;
+        &:first-child {
+        //   max-width: 546px;
+        }
+
+        &:nth-child(2) {
+          max-width: 558px;
+        }
+
+        @media screen and (max-width: 767px) {
+          width: 100%;
+        }
+      }
+    }
+  }
+  .hs_error_rollup {
+    display: none;
+  }
+  #hs_form_target_widget_1705331026358 {
+    &:after {
+      display: none;
+      content: none;
+      background: none;
+    }
+    &:before {
+      display: none;
+      content: none;
+      background: none;
+    }
+  }
+  @media (min-width: 768px) and (min-height: 741px) {
+    .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
+      height: 100vh;
+      background-position: 50% calc(50% + 340px);
+    }
+  }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
+      background-size: 65% auto;
+    }
+  }
+  //   @media (min-width: 992px) and (max-width: 1199px) {
+  //     #main-content {
+  //       .cell_1705331059177-vertical-alignment {
+  //         width: calc(58.33333% - var(--gap));
+  //       }
+  //     }
+  //   }
+  @media (max-height: 900px) {
+    .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
+      background: none;
+    }
+  }
+  @media (max-width: 767px) {
+    .row-number-4 {
+      > div {
+        &:nth-of-type(1) {
+          > div {
+            &:nth-of-type(1) {
+              > div {
+                &:nth-of-type(1) {
+                  > span {
+                    &:nth-of-type(1) {
+                      > div {
+                        &:nth-of-type(1) {
+                          margin-bottom: 25px;
+                          position: static;
+                          top: auto;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+    .widget-type-form {
+      form.hs-form.hs-custom-form {
+        &:before {
+          right: -20px;
+          top: -20px;
+        }
+      }
+    }
+    #scrollToTopBtn {
+      display: none;
+    }
+  }
+  @media (max-height: 740px) {
+    #hs_cos_wrapper_widget_1705331026358 {
+      padding-bottom: 0 !important;
+    }
+    #hs_cos_wrapper_dnd_area-module-2 {
+      padding-bottom: 0 !important;
+    }
+  }
+}
