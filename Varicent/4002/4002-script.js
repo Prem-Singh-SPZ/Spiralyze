@@ -80,11 +80,13 @@ function setTabsContent() {
                     </div>
                   </div>
                   <div class="content">
-                    <picture>
-                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__payee_experience_tour.webp">
-                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__payee_experience_tour.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__payee_experience_tour.webp" alt="Payee Experience Tour">
-                    </picture>
+                    <a href="//www.varicent.com/interactive-product-tours/payee-experience" target="_blank" rel="noopener">
+                      <picture>
+                        <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__payee_experience_tour.webp">
+                        <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__payee_experience_tour.webp">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__payee_experience_tour.webp" alt="Payee Experience Tour">
+                      </picture>  
+                    </a>
                   </div>
                 </div>
               </div>
@@ -96,11 +98,13 @@ function setTabsContent() {
                     <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
                   </div>
                   <div class="content">
+                    <a href="//www.varicent.com/interactive-product-tours/manager-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__manager_experience_tour.webp">
                       <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__manager_experience_tour.webp">
                       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__manager_experience_tour.webp" alt="Manager Experience Tour">
                     </picture>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -112,11 +116,13 @@ function setTabsContent() {
                     <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
                   </div>
                   <div class="content">
-                    <picture>
-                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__admin_experience_tour.webp">
-                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__admin_experience_tour.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__admin_experience_tour.webp" alt="Admin Experience Tour">
-                    </picture>
+                    <a href="//www.varicent.com/interactive-product-tours/admin-experience" target="_blank" rel="noopener">
+                      <picture>
+                        <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__admin_experience_tour.webp">
+                        <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__admin_experience_tour.webp">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__admin_experience_tour.webp" alt="Admin Experience Tour">
+                      </picture>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -128,11 +134,13 @@ function setTabsContent() {
                     <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
                   </div>
                   <div class="content">
+                    <a href="https://www.varicent.com/interactive-product-tours/business-user-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__business_user_experience_tour.webp">
                       <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__business_user_experience_tour.webp">
                       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__business_user_experience_tour.webp" alt="Business User Experience Tour">
                     </picture>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -155,14 +163,16 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Sales Operations Experience Tour</div>
                     <div class="desc">Build and optimize market plans. Monitor sales performance. Compare sales by region, country, and team member. Adjust plans to meet goals.</div>
-                    <div class="cta-wrapper cta-demo-1"></div>
+                    <div class="cta-wrapper cta-demo-2"><a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-popup-module_1669058258137">Get Access to Our Sales Planning Tour</a></div>
                   </div>
                   <div class="content">
+                    <a href="//www.varicent.com/interactive-product-tours/sales-operation-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__sales_operations_experience_tour.webp">
                       <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__sales_operations_experience_tour.webp">
                       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__sales_operations_experience_tour.webp" alt="Sales Operations Experience Tour">
                     </picture>
+                    </a>
                   </div>
                 </div>
               </div>
@@ -171,14 +181,16 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Sales Manager Experience Tour</div>
                     <div class="desc">Build territory and quota assignments. Instantly draw new boundaries and compare scenarios. Collaborate with other sales managers to optimize plans.</div>
-                    <div class="cta-wrapper cta-demo-1"></div>
+                    <div class="cta-wrapper cta-demo-2"><a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-popup-module_1669058258137">Get Access to Our Sales Planning Tour</a></div>
                   </div>
                   <div class="content">
+                    <a href="https://www.varicent.com/interactive-product-tours/sales-manager-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__sales_manager_experience_tour.webp">
                       <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__sales_manager_experience_tour.webp">
                       <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__sales_manager_experience_tour.webp" alt="Sales Manager Experience Tour">
                     </picture>
+                    </a>
                   </div>
                 </div>
               </div>
