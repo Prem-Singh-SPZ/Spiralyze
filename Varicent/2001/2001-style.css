@@ -37,7 +37,7 @@
   border: 1px solid #fff;
   border-bottom: 0 none;
   font-size: 16px;
-  padding: 12px 24px 10px;
+  padding: 12px 16px 10px 24px;
   line-height: 1;
   border-radius: 24px 24px 0 0;
   transition: opacity 0.3s ease-in-out;
@@ -47,7 +47,7 @@
   opacity: 0.6;
 }
 .spz-2001 #unblock_btn:after {
-  margin-left: 5px;
+  margin-left: -4px;
   margin-bottom: 2px;
   content: "";
   display: inline-block;
@@ -67,10 +67,14 @@
   padding-top: 15px !important;
   padding-bottom: 65px !important;
   min-height: 100vh;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
-  background-position: center;
-  background-size: 819px 206px;
-  background-repeat: no-repeat;
+}
+@media screen and (min-width: 767px) {
+  .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
+    background-position: center;
+    background-size: 819px 206px;
+    background-repeat: no-repeat;
+  }
 }
 .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding .spz-headline {
   line-height: 1.1;
@@ -87,7 +91,6 @@
 }
 .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid {
   align-items: center;
-  max-width: 1304px;
 }
 .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:nth-child(2) {
   max-width: 558px;
@@ -134,6 +137,11 @@
 @media (min-width: 768px) and (max-width: 1199px) {
   .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
     background-size: 65% auto;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .spz-2001 #main-content .cell_1705331059177-vertical-alignment {
+    width: calc(58.33333% - var(--gap));
   }
 }
 @media (max-height: 900px) {

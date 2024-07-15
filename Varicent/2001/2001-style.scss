@@ -48,7 +48,7 @@
     border: 1px solid #fff;
     border-bottom: 0 none;
     font-size: 16px;
-    padding: 12px 24px 10px;
+    padding: 12px 16px 10px 24px;
     line-height: 1;
     border-radius: 24px 24px 0 0;
     transition: opacity 0.3s ease-in-out;
@@ -60,7 +60,7 @@
     }
 
     &:after {
-      margin-left: 5px;
+      margin-left: -4px;
       margin-bottom: 2px;
       content: "";
       display: inline-block;
@@ -83,10 +83,12 @@
     padding-bottom: 65px !important;
     min-height: 100vh;
 
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
-    background-position: center;
-    background-size: 819px 206px;
-    background-repeat: no-repeat;
+    @media screen and (min-width: 767px) {
+      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
+      background-position: center;
+      background-size: 819px 206px;
+      background-repeat: no-repeat;
+    }
 
     .spz-headline {
       line-height: 1.1;
@@ -107,7 +109,7 @@
 
     > .row-fluid {
       align-items: center;
-      max-width: 1304px;
+    //   max-width: 1304px;
 
       > .span5 {
         // width: 50%;
@@ -169,13 +171,13 @@
       background-size: 65% auto;
     }
   }
-  //   @media (min-width: 992px) and (max-width: 1199px) {
-  //     #main-content {
-  //       .cell_1705331059177-vertical-alignment {
-  //         width: calc(58.33333% - var(--gap));
-  //       }
-  //     }
-  //   }
+  @media (min-width: 992px) and (max-width: 1199px) {
+    #main-content {
+      .cell_1705331059177-vertical-alignment {
+        width: calc(58.33333% - var(--gap));
+      }
+    }
+  }
   @media (max-height: 900px) {
     .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
       background: none;
