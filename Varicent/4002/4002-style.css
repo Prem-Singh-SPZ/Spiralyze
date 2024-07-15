@@ -52,14 +52,23 @@ body.spz-4002 .accordion-section .accordion-row {
   }
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   padding: 48px 0 0;
 }
 @media screen and (max-width: 1024.98px) {
   body.spz-4002 .accordion-section .accordion-row .accordion-col {
-    align-items: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
     max-width: 598px;
     margin: auto;
   }
@@ -71,9 +80,15 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col {
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 64px;
 }
 @media screen and (max-width: 1024.98px) {
@@ -91,8 +106,12 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li {
   position: relative;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #parent-tabs li a .p-tab-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   padding: 19px 16px 19px 20px;
   border-radius: 6px;
   border: 1px solid #9a9a9a;
@@ -147,33 +166,53 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
   display: block;
 }
 body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 {
   list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  align-items: center;
-  justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin-bottom: 64px;
 }
 @media screen and (max-width: 1024.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs,
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 {
     margin-bottom: 32px;
   }
 }
 @media screen and (max-width: 767.98px) {
-  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs {
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs,
+  body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 {
     margin-bottom: 0;
   }
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 li {
   margin: 0 2px;
   position: relative;
-  flex: 0 0 calc(25% - 3px);
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(25% - 3px);
+          flex: 0 0 calc(25% - 3px);
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li a {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li a,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 li a {
   height: 53px;
   padding: 8px 16px 28px 16px;
   border-bottom: 4px solid #eee;
@@ -189,27 +228,50 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
   text-align: center;
   display: block;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li:hover a, body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li.active a {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li:hover a, body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs li.active a,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 li:hover a,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #child-tabs-2 li.active a {
   border-bottom: 4px solid #2b4ff4;
   color: #2b4ff4;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 {
   display: none;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents.active {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents.active,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2.active,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents.active,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2.active {
   display: block;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  justify-content: space-between;
-  align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper .copy-wrapper,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper .copy-wrapper,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper .copy-wrapper {
   max-width: 392px;
   width: 100%;
   padding-top: 40px;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper .title {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper .title,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper .copy-wrapper .title,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper .copy-wrapper .title,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper .copy-wrapper .title {
   color: #1a1c33;
   font-family: Inter, serif;
   font-size: 32px;
@@ -218,7 +280,10 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
   line-height: 40px;
   margin: 0 0 24px;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper .desc {
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .copy-wrapper .desc,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper .copy-wrapper .desc,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper .copy-wrapper .desc,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper .copy-wrapper .desc {
   color: #1a1c33;
   font-family: Inter, serif;
   font-size: 20px;
@@ -226,6 +291,22 @@ body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .
   font-weight: 400;
   line-height: 150%;
 }
-body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents#p-tab2 .tab-content-wrapper #child-tabs li {
-  flex: 0 0 calc(50% - 2px);
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .content,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper .content,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper .content,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper .content {
+  max-width: calc(100% - 392px);
+  margin-left: 80px;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents .content-wrapper .content img,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents .c-tab-contents-2 .content-wrapper .content img,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents .content-wrapper .content img,
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents .tab-content-wrapper #c-tab-contents-2 .c-tab-contents-2 .content-wrapper .content img {
+  width: 728px;
+  height: 496px;
+}
+body.spz-4002 .accordion-section .accordion-row .accordion-col #p-tab-contents .p-tab-contents#p-tab2 .tab-content-wrapper #child-tabs-2 li {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 calc(50% - 2px);
+          flex: 0 0 calc(50% - 2px);
 }

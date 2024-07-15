@@ -2,18 +2,18 @@ const timer = 5000;
 
 
 const bodyInterval = setInterval(function () {
-    if (document.querySelector('body')) {
-        clearInterval(bodyInterval)
+  if (document.querySelector('body')) {
+    clearInterval(bodyInterval)
 
-        document.body.classList.add('spz-4002');
+    document.body.classList.add('spz-4002');
 
-        setTabsContent();
-    }
+    setTabsContent();
+  }
 }, 10);
 
 // Set the tabs content of accordion
 function setTabsContent() {
-    document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-depth-1.row-number-1').insertAdjacentHTML('beforebegin', `<div class="hero-section">
+  document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-depth-1.row-number-1').insertAdjacentHTML('beforebegin', `<div class="hero-section">
   <div class="hero-content">
     <div class="hero-title">Interactive Product Tours</div>
     <div class="hero-subtitle">See our Incentives or Sales Planning products come to life by selecting one of the self-guided tours below.</div>
@@ -75,12 +75,15 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Payee Experience Tour</div>
                     <div class="desc">Let the sales team see their payouts, current incentive plans, and how closing certain deals affects pay. Automate bookkeeping. Mobile, desktop, & tablet.</div>
-                    <div class="cta-wrapper cta-demo-1"></div>
+                    <div class="cta-wrapper cta-demo-1">
+                    <a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a>
+                    </div>
                   </div>
                   <div class="content">
                     <picture>
-                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__payee_experience_tour.webp">
+                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__payee_experience_tour.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__payee_experience_tour.webp" alt="Payee Experience Tour">
                     </picture>
                   </div>
                 </div>
@@ -90,12 +93,13 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Manager Experience Tour</div>
                     <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquires. </div>
-                    <div class="cta-wrapper cta-demo-1"></div>
+                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
                   </div>
                   <div class="content">
                     <picture>
-                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__manager_experience_tour.webp">
+                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__manager_experience_tour.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__manager_experience_tour.webp" alt="Manager Experience Tour">
                     </picture>
                   </div>
                 </div>
@@ -105,12 +109,13 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Admin Experience Tour</div>
                     <div class="desc">Manage data, people, and commissions in one place. Generate reports on sales by region, total revenue, and plan performance. Optimize incentive plans.</div>
-                    <div class="cta-wrapper cta-demo-1"></div>
+                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
                   </div>
                   <div class="content">
                     <picture>
-                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__admin_experience_tour.webp">
+                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__admin_experience_tour.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__admin_experience_tour.webp" alt="Admin Experience Tour">
                     </picture>
                   </div>
                 </div>
@@ -120,12 +125,13 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Business User Experience Tour</div>
                     <div class="desc">Sync compensation and sales data from 24+ integrations. Validate rosters and transactions, consolidate orders, track territory changes, and more.</div>
-                    <div class="cta-wrapper cta-demo-1"></div>
+                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
                   </div>
                   <div class="content">
                     <picture>
-                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__business_user_experience_tour.webp">
+                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__business_user_experience_tour.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__business_user_experience_tour.webp" alt="Business User Experience Tour">
                     </picture>
                   </div>
                 </div>
@@ -135,16 +141,16 @@ function setTabsContent() {
         </div>
         <div id="p-tab2" class="p-tab-contents">
           <div class="tab-content-wrapper">
-            <nav id="child-tabs">
+            <nav id="child-tabs-2">
               <li class="active">
-                <a href="#c-tab5">Sales Operations</a>
+                <a href="#c2-tab1">Sales Operations</a>
               </li>
               <li>
-                <a href="#c-tab6">Sales Manager</a>
+                <a href="#c2-tab2">Sales Manager</a>
               </li>
             </nav>
-            <div id="c-tab-contents">
-              <div id="c-tab5" class="c-tab-contents active">
+            <div id="c-tab-contents-2">
+              <div id="c2-tab1" class="c-tab-contents-2 active">
                 <div class="content-wrapper">
                   <div class="copy-wrapper">
                     <div class="title">Sales Operations Experience Tour</div>
@@ -153,13 +159,14 @@ function setTabsContent() {
                   </div>
                   <div class="content">
                     <picture>
-                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__sales_operations_experience_tour.webp">
+                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__sales_operations_experience_tour.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__sales_operations_experience_tour.webp" alt="Sales Operations Experience Tour">
                     </picture>
                   </div>
                 </div>
               </div>
-              <div id="c-tab6" class="c-tab-contents ">
+              <div id="c2-tab2" class="c-tab-contents-2 ">
                 <div class="content-wrapper">
                   <div class="copy-wrapper">
                     <div class="title">Sales Manager Experience Tour</div>
@@ -168,8 +175,9 @@ function setTabsContent() {
                   </div>
                   <div class="content">
                     <picture>
-                      <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
+                      <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__sales_manager_experience_tour.webp">
+                      <source media="(min-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/tablet__sales_manager_experience_tour.webp">
+                      <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile__sales_manager_experience_tour.webp" alt="Sales Manager Experience Tour">
                     </picture>
                   </div>
                 </div>
@@ -181,93 +189,119 @@ function setTabsContent() {
     </div>
   </div>`);
 
-    // Nav buttons functionality
-    var tabLabels = document.querySelectorAll("#parent-tabs li a");
-    var tabPanes = document.getElementsByClassName("p-tab-contents");
+  // Nav buttons functionality
+  var tabLabels = document.querySelectorAll("#parent-tabs li");
+  var tabPanes = document.getElementsByClassName("p-tab-contents");
 
-    // function activateTab(e, tabLabels, tabPanes) {
-    //     e.preventDefault();
+  function activateTab(e) {
+    e.preventDefault();
 
-    //     // Deactivate all tabs
-    //     tabLabels.forEach(function (label, index) {
-    //         label.classList.remove("active");
-    //     });
-    //     [].forEach.call(tabPanes, function (pane, index) {
-    //         pane.classList.remove("active");
-    //     });
-
-    //     // Activate current tab
-    //     e.target.parentNode.classList.add("active");
-    //     var clickedTab = e.target.getAttribute("href");
-    //     document.querySelector(clickedTab).classList.add("active");
-    // }
-
-    // Apply event listeners
+    // Deactivate all tabs
     tabLabels.forEach(function (label, index) {
-        label.addEventListener("click", addActiveClass, );
+      label.classList.remove("active");
+    });
+    [].forEach.call(tabPanes, function (pane, index) {
+      pane.classList.remove("active");
     });
 
+    // Activate current tab
+    e.target.parentNode.classList.add("active");
+    var clickedTab = e.target.getAttribute("href");
+    document.querySelector(clickedTab).classList.add("active");
+  }
 
-    //convert above code to be dynamic
-    var childTabs = document.querySelectorAll("#child-tabs li a");
-    var childPanes = document.getElementsByClassName("c-tab-contents");
+  // Apply event listeners
+  tabLabels.forEach(function (label, index) {
+    label.addEventListener("click", activateTab);
+  });
 
-    // function activateChildTab(e) {
-    //     e.preventDefault();
 
-    //     // Deactivate all tabs
-    //     childTabs.forEach(function (label, index) {
-    //         label.classList.remove("active");
-    //     });
-    //     [].forEach.call(childPanes, function (pane, index) {
-    //         pane.classList.remove("active");
-    //     });
+  //convert above code to be dynamic
+  var childTabs = document.querySelectorAll("#child-tabs li");
+  var childPanes = document.getElementsByClassName("c-tab-contents");
 
-    //     // Activate current tab
-    //     e.target.parentNode.classList.add("active");
-    //     var clickedTab = e.target.getAttribute("href");
-    //     document.querySelector(clickedTab).classList.add("active");
-    // }
+  function activateChildTab(e) {
+    e.preventDefault();
 
-    // Apply event listeners
+    // Deactivate all tabs
     childTabs.forEach(function (label, index) {
-        label.addEventListener("click", addActiveClass);
+      label.classList.remove("active");
     });
+    [].forEach.call(childPanes, function (pane, index) {
+      pane.classList.remove("active");
+    });
+
+    // Activate current tab
+    e.target.parentNode.classList.add("active");
+    var clickedTab = e.target.getAttribute("href");
+    document.querySelector(clickedTab).classList.add("active");
+  }
+
+  // Apply event listeners
+  childTabs.forEach(function (label, index) {
+    label.addEventListener("click", activateChildTab);
+  });
+
+  //convert above code to be dynamic
+  var childTabs2 = document.querySelectorAll("#child-tabs-2 li");
+  var childPanes2 = document.getElementsByClassName("c-tab-contents-2");
+
+  function activateChildTab2(e) {
+    e.preventDefault();
+
+    // Deactivate all tabs
+    childTabs2.forEach(function (label, index) {
+      label.classList.remove("active");
+    });
+    [].forEach.call(childPanes2, function (pane, index) {
+      pane.classList.remove("active");
+    });
+
+    // Activate current tab
+    e.target.parentNode.classList.add("active");
+    var clickedTab = e.target.getAttribute("href");
+    document.querySelector(clickedTab).classList.add("active");
+  }
+
+  // Apply event listeners
+  childTabs2.forEach(function (label, index) {
+    label.addEventListener("click", activateChildTab2);
+  });
 }
 
 // Generic Code
 function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  return new Promise(function (resolve) {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(function (mutations) {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  });
 }
 
 //function for onclick of anchor tag add class active to the id of similar href of anchor tag
 
-function addActiveClass(e) {
-    e.preventDefault();
-    var parentLi = e.target.closest('li');
-    var clickedTab = e.target.getAttribute("href");
-    e.target.closest('nav').querySelectorAll('li').forEach(function (li) {
-        li.classList.remove('active');
-    });
-    parentLi.classList.add('active');
+// function addActiveClass(e) {
+//     e.preventDefault();
+//     var parentLi = e.target.closest('li');
+//     var clickedTab = e.target.getAttribute("href");
+//     e.target.closest('nav').querySelectorAll('li').forEach(function (li) {
+//         li.classList.remove('active');
+//     });
+//     parentLi.classList.add('active');
 
-    //remove active class from all the siblings of document.querySelector(clickedTab)
-    var siblings = document.querySelector(clickedTab).parentNode.querySelectorAll('div');
-    siblings.forEach(function (sibling) {
-        if (sibling !== document.querySelector(clickedTab)) {
-            document.querySelector(clickedTab).classList.add("active");
-            sibling.classList.remove('active');
-        }
-    });
-}
+//     //remove active class from all the siblings of document.querySelector(clickedTab)
+//     var siblings = document.querySelector(clickedTab).parentNode.querySelectorAll('div');
+//     siblings.forEach(function (sibling) {
+//         if (sibling !== document.querySelector(clickedTab)) {
+//             document.querySelector(clickedTab).classList.add("active");
+//             sibling.classList.remove('active');
+//         }
+//     });
+// }

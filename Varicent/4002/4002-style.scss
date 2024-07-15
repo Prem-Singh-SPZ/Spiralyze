@@ -171,7 +171,8 @@ body.spz-4002 {
               justify-content: space-between;
               flex-direction: column;
 
-              #child-tabs {
+              #child-tabs,
+              #child-tabs-2 {
                 list-style-type: none;
                 display: flex;
                 align-items: center;
@@ -216,8 +217,10 @@ body.spz-4002 {
                 }
               }
 
-              #c-tab-contents {
-                .c-tab-contents {
+              #c-tab-contents,
+              #c-tab-contents-2 {
+                .c-tab-contents,
+                .c-tab-contents-2 {
                   display: none;
                   &.active {
                     display: block;
@@ -252,6 +255,16 @@ body.spz-4002 {
                         line-height: 150%;
                       }
                     }
+
+                    .content {
+                      max-width: calc(100% - 392px);
+                      margin-left: 80px;
+
+                      img {
+                        width: 728px;
+                        height: 496px;
+                      }
+                    }
                   }
                 }
               }
@@ -259,7 +272,7 @@ body.spz-4002 {
 
             &#p-tab2 {
               .tab-content-wrapper {
-                #child-tabs {
+                #child-tabs-2 {
                   li {
                     flex: 0 0 calc(50% - 2px);
                   }
