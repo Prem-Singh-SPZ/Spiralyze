@@ -1,6 +1,3 @@
-const timer = 5000;
-
-
 const bodyInterval = setInterval(function () {
   if (document.querySelector('body')) {
     clearInterval(bodyInterval)
@@ -76,10 +73,10 @@ function setTabsContent() {
                     <div class="title">Payee Experience Tour</div>
                     <div class="desc">Let the sales team see their payouts, current incentive plans, and how closing certain deals affects pay. Automate bookkeeping. Mobile, desktop, & tablet.</div>
                     <div class="cta-wrapper cta-demo-1">
-                    <a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a>
+                    <a href="#" class="btn btn-primary abc cd-1" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Instant Access</a>
                     </div>
                   </div>
-                  <div class="content">
+                  <div class="content with-overlay">
                     <a href="//www.varicent.com/interactive-product-tours/payee-experience" target="_blank" rel="noopener">
                       <picture>
                         <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__payee_experience_tour.webp">
@@ -95,9 +92,9 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Manager Experience Tour</div>
                     <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquires. </div>
-                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
+                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc cd-1" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Instant Access</a></div>
                   </div>
-                  <div class="content">
+                  <div class="content with-overlay">
                     <a href="//www.varicent.com/interactive-product-tours/manager-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__manager_experience_tour.webp">
@@ -113,9 +110,9 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Admin Experience Tour</div>
                     <div class="desc">Manage data, people, and commissions in one place. Generate reports on sales by region, total revenue, and plan performance. Optimize incentive plans.</div>
-                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
+                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc cd-1" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Instant Access</a></div>
                   </div>
-                  <div class="content">
+                  <div class="content with-overlay">
                     <a href="//www.varicent.com/interactive-product-tours/admin-experience" target="_blank" rel="noopener">
                       <picture>
                         <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__admin_experience_tour.webp">
@@ -131,9 +128,9 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Business User Experience Tour</div>
                     <div class="desc">Sync compensation and sales data from 24+ integrations. Validate rosters and transactions, consolidate orders, track territory changes, and more.</div>
-                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Get Access to Our Incentives Tours</a></div>
+                    <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc cd-1" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Instant Access</a></div>
                   </div>
-                  <div class="content">
+                  <div class="content with-overlay">
                     <a href="https://www.varicent.com/interactive-product-tours/business-user-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__business_user_experience_tour.webp">
@@ -163,9 +160,9 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Sales Operations Experience Tour</div>
                     <div class="desc">Build and optimize market plans. Monitor sales performance. Compare sales by region, country, and team member. Adjust plans to meet goals.</div>
-                    <div class="cta-wrapper cta-demo-2"><a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-popup-module_1669058258137">Get Access to Our Sales Planning Tour</a></div>
+                    <div class="cta-wrapper cta-demo-2"><a href="#" class="btn btn-primary cd-2" data-bs-toggle="modal" data-bs-target="#modal-popup-module_1669058258137">Instant Access</a></div>
                   </div>
-                  <div class="content">
+                  <div class="content with-overlay">
                     <a href="//www.varicent.com/interactive-product-tours/sales-operation-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__sales_operations_experience_tour.webp">
@@ -181,9 +178,9 @@ function setTabsContent() {
                   <div class="copy-wrapper">
                     <div class="title">Sales Manager Experience Tour</div>
                     <div class="desc">Build territory and quota assignments. Instantly draw new boundaries and compare scenarios. Collaborate with other sales managers to optimize plans.</div>
-                    <div class="cta-wrapper cta-demo-2"><a href="#" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#modal-popup-module_1669058258137">Get Access to Our Sales Planning Tour</a></div>
+                    <div class="cta-wrapper cta-demo-2"><a href="#" class="btn btn-primary cd-2" data-bs-toggle="modal" data-bs-target="#modal-popup-module_1669058258137">Instant Access</a></div>
                   </div>
-                  <div class="content">
+                  <div class="content with-overlay">
                     <a href="https://www.varicent.com/interactive-product-tours/sales-manager-experience" target="_blank" rel="noopener">
                     <picture>
                       <source media="(min-width:1024.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop__sales_manager_experience_tour.webp">
@@ -279,6 +276,30 @@ function setTabsContent() {
   childTabs2.forEach(function (label, index) {
     label.addEventListener("click", activateChildTab2);
   });
+
+
+  //window click event listener
+  window.addEventListener("click", function (e) {
+    if (e.target.classList.contains('cd-1')) {
+      postMsg('#c-tab-contents .c-tab-contents', e.target);
+    }
+
+    if (e.target.classList.contains('cd-2')) {
+      postMsg('#c-tab-contents-2 .c-tab-contents-2', e.target);
+    }
+  });
+
+  function postMsg(overlay, target) {
+    window.addEventListener("message", function (a) {
+      if ("hsFormCallback" === a.data.type && "onFormSubmitted" === a.data.eventName) {
+        this.document.querySelectorAll(overlay).forEach(function (tab) {
+          tab.querySelector('.content-wrapper .content.with-overlay').classList.remove('with-overlay');
+        });
+        target.classList.add('hide');
+      }
+    });
+  }
+
 }
 
 // Generic Code
@@ -296,24 +317,3 @@ function waitForElm(selector) {
     observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
   });
 }
-
-//function for onclick of anchor tag add class active to the id of similar href of anchor tag
-
-// function addActiveClass(e) {
-//     e.preventDefault();
-//     var parentLi = e.target.closest('li');
-//     var clickedTab = e.target.getAttribute("href");
-//     e.target.closest('nav').querySelectorAll('li').forEach(function (li) {
-//         li.classList.remove('active');
-//     });
-//     parentLi.classList.add('active');
-
-//     //remove active class from all the siblings of document.querySelector(clickedTab)
-//     var siblings = document.querySelector(clickedTab).parentNode.querySelectorAll('div');
-//     siblings.forEach(function (sibling) {
-//         if (sibling !== document.querySelector(clickedTab)) {
-//             document.querySelector(clickedTab).classList.add("active");
-//             sibling.classList.remove('active');
-//         }
-//     });
-// }

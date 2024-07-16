@@ -1,18 +1,30 @@
 $inter: Inter, serif;
 
 body.spz-4002 {
+  #main-content .container-fluid.body-container {
+    .span12.widget-span.widget-type-cell {
+      .row-fluid-wrapper.row-depth-1 {
+        display: none !important;
+      }
+    }
+  }
+
   .hero-section {
     .hero-content {
       text-align: center;
+      padding: 54px 16px;
+
       .hero-title {
         color: #000;
         font-family: $inter;
         font-style: normal;
         font-weight: 700;
         text-transform: none;
-        font-size: 40px;
+        font-size: 40.8px;
         text-align: center;
-        line-height: 54px;
+        line-height: 55.2px;
+        padding-left: 12px;
+        margin: 56px;
       }
 
       .hero-subtitle {
@@ -263,6 +275,27 @@ body.spz-4002 {
                       img {
                         width: 728px;
                         height: 496px;
+                      }
+
+                      &.with-overlay {
+                        position: relative;
+                        overflow: hidden;
+
+                        a {
+                          pointer-events: none;
+                        }
+
+                        &::after {
+                          content: "";
+                          position: absolute;
+                          top: 0;
+                          left: 0;
+                          width: 928px;
+                          height: 659px;
+                          background: rgba(255, 255, 255, 0.8);
+                          pointer-events: none;
+                          z-index: 0;
+                        }
                       }
                     }
                   }
