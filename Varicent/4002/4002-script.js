@@ -295,7 +295,10 @@ function setTabsContent() {
         this.document.querySelectorAll(overlay).forEach(function (tab) {
           tab.querySelector('.content-wrapper .content.with-overlay').classList.remove('with-overlay');
         });
-        target.classList.add('hide');
+
+        this.document.querySelectorAll(target).forEach(function (btn) {
+          btn.classList.add('spz-hide');
+        });
       }
     });
   }
