@@ -14,6 +14,12 @@ function form_modify() {
         }, 100);
     });
 
+    document.querySelectorAll('.spz-1001 .hs-custom-form .hs-form-field').forEach(function (el, index) {
+        if (index < 6) {
+            el.classList.add('spz-fields');
+        }
+    });
+
     // Set focus on input
     focusFields()
 
@@ -43,11 +49,18 @@ function form_modify() {
                 }, 100);
             });
 
+            //check keyup event
+            el.addEventListener('keyup', function () {
+                setTimeout(function () {
+                    checkError();
+                }, 100);
+            });
+
             // On input blur remove .typing class on closest parent .field class
             el.addEventListener('blur', function () {
                 el.closest('.field').classList.remove('typing');
                 // setTimeout(function () {
-                    checkError();
+                checkError();
                 // }, 100);
             });
 
@@ -86,6 +99,18 @@ function form_modify() {
                 el.closest('.field').classList.add('filled');
             }
         });
+
+        //check first 5 .field and add class full width the one is hidden
+        if (document.querySelectorAll('.spz-1001 .hs-custom-form .hs-form-field.spz-fields.filled[style*="display: none;"]').length % 2 !== 0) {
+            let lastField = document.querySelectorAll('.spz-1001 .hs-custom-form .field.spz-fields').length - 1;
+            document.querySelectorAll('.spz-1001 .hs-custom-form .field.spz-fields')[lastField].classList.add('full-width');
+        }
+        else {
+            document.querySelectorAll('.spz-1001 .hs-custom-form .field.spz-fields.full-width').forEach(function (el) {
+                el.classList.remove('full-width');
+            });
+        }
+
     }
 }
 // Wait for element to load

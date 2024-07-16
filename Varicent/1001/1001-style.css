@@ -1,6 +1,9 @@
 @media (min-width: 768px) and (max-width: 991px) {
   #ab-row {
-    flex-direction: column;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
   }
   #ab-row > div {
     width: 100%;
@@ -65,6 +68,36 @@ div#hs_cos_wrapper_widget_1685726606255 {
   padding: 0;
 }
 
+@media screen and (min-width: 990.98px) {
+  .spz-1001 .mob-only {
+    display: none;
+  }
+}
+
+@media screen and (max-width: 990.98px) {
+  .spz-1001 .desk-only {
+    display: none;
+  }
+}
+
+@media (min-width: 1024.98px) {
+  .spz-1001 > .body-wrapper.hs-site-page.page {
+    height: 100vh;
+  }
+  .spz-1001 #main-content {
+    height: calc(100% - 0px);
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .spz-1001 #main-content > .container-fluid.body-container + div[data-global-resource-path] {
+    margin-top: auto;
+  }
+}
 .spz-1001 .form-over-heading .highlight-text {
   color: #fadb14;
 }
@@ -93,17 +126,27 @@ div#hs_cos_wrapper_widget_1685726606255 {
   background: transparent;
   border: none;
   border-radius: 0;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .spz-1001 form.hs-form .hs-form-field:not(.hidden-field) {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-wrap: wrap;
-  align-content: flex-start;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   width: calc(50% - 8px);
   margin: 0 0 20px;
   position: relative;
@@ -139,6 +182,7 @@ div#hs_cos_wrapper_widget_1685726606255 {
   font-style: normal;
   font-weight: 400;
   line-height: 19.36px;
+  -webkit-transition: all 0.4s ease-in-out;
   transition: all 0.4s ease-in-out;
   z-index: 1;
   width: calc(100% - 74px);
@@ -158,6 +202,10 @@ div#hs_cos_wrapper_widget_1685726606255 {
   line-height: 14.52px;
 }
 
+.spz-1001 form.hs-form .hs-form-field:not(.hidden-field).full-width {
+  width: 100%;
+}
+
 .spz-1001 form.hs-form .hs-form-field .hs-input:not([type=checkbox]) {
   width: 100% !important;
   height: 56px;
@@ -166,7 +214,8 @@ div#hs_cos_wrapper_widget_1685726606255 {
   border: 1px solid rgba(255, 255, 255, 0.8) !important;
   border-radius: 8px;
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   color: #212529;
   font-family: Inter;
   font-size: 16px;
@@ -176,6 +225,7 @@ div#hs_cos_wrapper_widget_1685726606255 {
   overflow: hidden;
   text-overflow: ellipsis;
   line-height: 19.36px;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 
@@ -194,7 +244,6 @@ div#hs_cos_wrapper_widget_1685726606255 {
 .spz-1001 form.hs-form .hs-form-field.error .hs-input {
   background-color: #ffe5e5 !important;
   border-color: #e00000 !important;
-  color: #e00000 !important;
 }
 
 .spz-1001 form.hs-form .hs-form-field input.hs-input {
@@ -219,6 +268,8 @@ div#hs_cos_wrapper_widget_1685726606255 {
 
 .spz-1001 form.hs-form .hs-form-field .hs-error-msgs label {
   margin: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
 }
 
@@ -316,14 +367,20 @@ div#hs_cos_wrapper_widget_1685726606255 {
 }
 
 .spz-1001 form.hs-form .hs-form-field.hs-recaptcha .grecaptcha-badge {
-  box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
 }
 
 .spz-1001 form.hs-form .hs-submit,
 .spz-1001 form.hs-form .hs-submit .actions {
+  display: -webkit-inline-box;
+  display: -ms-inline-flexbox;
   display: inline-flex;
-  flex-wrap: wrap;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   margin: 0;
   width: 100%;
 }
@@ -342,7 +399,7 @@ div#hs_cos_wrapper_widget_1685726606255 {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 2px;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 

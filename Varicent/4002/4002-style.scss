@@ -49,6 +49,11 @@ body.spz-4002 {
           margin: 4px 0 48px;
           padding-left: 0;
         }
+
+        @media (max-width: 767.98px) {
+          font-size: 28.5px;
+          margin: 4px 0 46px;
+        }
       }
 
       .hero-subtitle {
@@ -84,7 +89,11 @@ body.spz-4002 {
     }
 
     @media screen and (max-width: 767.98px) {
-      padding: 44px 0 48px;
+      padding: 16px 0 52px;
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/mobile_bg_graphic_elements.webp)
+        no-repeat;
+      background-size: 100% auto;
+      background-position: bottom 24px right;
     }
 
     .accordion-row {
@@ -111,9 +120,9 @@ body.spz-4002 {
           margin: auto;
         }
 
-        @media screen and (max-width: 767.98px) {
-          padding: 36px 0 0;
-        }
+        // @media screen and (max-width: 767.98px) {
+        //   padding: 36px 0 0;
+        // }
 
         #parent-tabs {
           list-style-type: none;
@@ -127,7 +136,8 @@ body.spz-4002 {
           }
 
           @media screen and (max-width: 767.98px) {
-            margin-bottom: 0;
+            margin-bottom: 36px;
+            flex-direction: column;
           }
 
           li {
@@ -142,6 +152,13 @@ body.spz-4002 {
               }
             }
 
+            @media screen and (max-width: 767.98px) {
+              margin: 0;
+              &:first-child {
+                margin-bottom: 16px;
+              }
+            }
+
             a {
               .p-tab-btn {
                 display: flex;
@@ -153,6 +170,11 @@ body.spz-4002 {
                 max-width: 337px;
                 min-height: 111px;
                 pointer-events: none;
+
+                @media screen and (max-width: 767.98px) {
+                  padding: 15px 20px;
+                  min-height: 103px;
+                }
 
                 .btn-img {
                   width: 56px;
@@ -238,12 +260,17 @@ body.spz-4002 {
 
                 @media screen and (max-width: 767.98px) {
                   margin-bottom: 0;
+                  flex-wrap: wrap;
                 }
 
                 li {
                   margin: 0 2px;
                   position: relative;
                   flex: 0 0 calc(25% - 3px);
+
+                  @media screen and (max-width: 767.98px) {
+                    flex: 0 0 calc(50% - 4px);
+                  }
 
                   a {
                     height: 56px;
@@ -260,12 +287,38 @@ body.spz-4002 {
                     width: 100%;
                     text-align: center;
                     display: block;
+                    white-space: nowrap;
+
+                    @media screen and (max-width: 767.98px) {
+                      padding: 8px 14px 16px;
+                      font-size: 16px;
+                      height: 47px;
+                      margin-bottom: 4px;
+                    }
                   }
 
                   &:hover a,
                   &.active a {
                     border-bottom: 4px solid #2b4ff4;
                     color: #2b4ff4;
+                  }
+
+                  &:first-child a {
+                    border-bottom-left-radius: 4px;
+                  }
+
+                  &:last-child a {
+                    border-bottom-right-radius: 4px;
+                  }
+
+                  @media screen and (max-width: 767.98px) {
+                    &:nth-child(3) a {
+                      border-bottom-left-radius: 4px;
+                    }
+
+                    &:nth-child(2) a {
+                      border-bottom-right-radius: 4px;
+                    }
                   }
                 }
               }
@@ -301,6 +354,10 @@ body.spz-4002 {
                         padding-top: 17px;
                       }
 
+                      @media screen and (max-width: 767.98px) {
+                        padding-top: 32px;
+                      }
+
                       .title {
                         color: #1a1c33;
                         font-family: $inter;
@@ -312,6 +369,11 @@ body.spz-4002 {
 
                         @media screen and (max-width: 1024.98px) {
                           margin: 0 0 16px;
+                        }
+
+                        @media screen and (max-width: 767.98px) {
+                          font-size: 24px;
+                          line-height: 36px;
                         }
                       }
 
@@ -326,6 +388,10 @@ body.spz-4002 {
                         @media screen and (max-width: 1024.98px) {
                           font-size: 18px;
                           line-height: 26px;
+                        }
+
+                        @media screen and (max-width: 767.98px) {
+                          font-size: 16px;
                         }
                       }
 
@@ -348,6 +414,10 @@ body.spz-4002 {
                           width: 183px;
                           height: 42px;
 
+                          @media screen and (max-width: 767.98px) {
+                            width: 100%;
+                          }
+
                           &:hover {
                             background-color: #10239e;
                           }
@@ -368,6 +438,7 @@ body.spz-4002 {
                       img {
                         width: 100%;
                         height: auto;
+                        border-radius: 8px;
                       }
 
                       &.with-overlay {
@@ -394,7 +465,6 @@ body.spz-4002 {
                             left: -36px;
                             // width: calc(100% + 48px);
                             // height: calc(100% + 90px);
-                            
                           }
                         }
                       }

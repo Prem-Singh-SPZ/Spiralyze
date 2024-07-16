@@ -70,6 +70,35 @@ div#hs_cos_wrapper_widget_1685726606255 {
 
 //form css starts here
 
+.spz-1001 .mob-only {
+  @media screen and (min-width: 990.98px) {
+    display: none;
+  }
+}
+
+.spz-1001 .desk-only {
+  @media screen and (max-width: 990.98px) {
+    display: none;
+  }
+}
+
+@media (min-width: 1024.98px) {
+  .spz-1001 > .body-wrapper.hs-site-page.page {
+    height: 100vh;
+    // overflow-y: auto;
+  }
+
+  .spz-1001 #main-content {
+    height: calc(100% - 0px);
+    display: flex;
+    flex-direction: column;
+
+    > .container-fluid.body-container + div[data-global-resource-path] {
+      margin-top: auto;
+    }
+  }
+}
+
 .spz-1001 .form-over-heading .highlight-text {
   color: #fadb14;
 }
@@ -163,6 +192,10 @@ div#hs_cos_wrapper_widget_1685726606255 {
   line-height: 14.52px;
 }
 
+.spz-1001 form.hs-form .hs-form-field:not(.hidden-field).full-width {
+  width: 100%;
+}
+
 .spz-1001 form.hs-form .hs-form-field .hs-input:not([type="checkbox"]) {
   width: 100% !important;
   height: 56px;
@@ -199,7 +232,7 @@ div#hs_cos_wrapper_widget_1685726606255 {
 .spz-1001 form.hs-form .hs-form-field.error .hs-input {
   background-color: #ffe5e5 !important;
   border-color: #e00000 !important;
-  color: #e00000 !important;
+  // color: #e00000 !important;
 }
 
 .spz-1001 form.hs-form .hs-form-field input.hs-input {
@@ -372,7 +405,7 @@ div#hs_cos_wrapper_widget_1685726606255 {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: 2px;
+  letter-spacing: 0;
   text-transform: uppercase;
 }
 
