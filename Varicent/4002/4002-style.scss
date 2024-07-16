@@ -12,7 +12,7 @@ body.spz-4002 {
   .hero-section {
     .hero-content {
       text-align: center;
-      padding: 54px 16px;
+      padding: 54px 16px 0;
 
       .hero-title {
         color: #000;
@@ -24,7 +24,7 @@ body.spz-4002 {
         text-align: center;
         line-height: 55.2px;
         padding-left: 12px;
-        margin: 56px;
+        margin: 0 0 56px;
       }
 
       .hero-subtitle {
@@ -36,15 +36,19 @@ body.spz-4002 {
         font-weight: 600;
         line-height: 120%;
         max-width: 538px;
-        margin: auto;
+        margin: 0 auto 8px;
       }
     }
   }
 
   .accordion-section {
     background: #fff;
-    padding: 16px 0;
+    padding: 16px 0 99px;
     overflow: hidden;
+
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/4002/desktop_bg_graphic_image.webp) no-repeat;
+    background-size: calc(100% + 72px) auto;
+    background-position: bottom right -36px;
 
     @media screen and (max-width: 1024.98px) {
       padding: 64px 0 65px;
@@ -70,7 +74,7 @@ body.spz-4002 {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 48px 0 0;
+        // padding: 48px 0 0;
 
         @media screen and (max-width: 1024.98px) {
           align-items: center;
@@ -87,7 +91,7 @@ body.spz-4002 {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 64px;
+          margin-bottom: 60px;
 
           @media screen and (max-width: 1024.98px) {
             margin-bottom: 32px;
@@ -205,7 +209,7 @@ body.spz-4002 {
                   flex: 0 0 calc(25% - 3px);
 
                   a {
-                    height: 53px;
+                    height: 56px;
                     padding: 8px 16px 28px 16px;
                     border-bottom: 4px solid #eee;
                     color: #000;
@@ -265,6 +269,10 @@ body.spz-4002 {
                         font-style: normal;
                         font-weight: 400;
                         line-height: 150%;
+                      }
+
+                      .cta-wrapper{
+                        margin-top: 32px;
                       }
                     }
 
