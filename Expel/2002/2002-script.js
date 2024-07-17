@@ -49,7 +49,7 @@
     ],
   };
 
-  waitForElm(`${testDetails.formSelector} .mktoFormRow .mktoFormCol[data-wrapper-for="FirstName"][style*="display: none;"] .mktoFieldWrap .mktoField`).then(function (elm) {
+  waitForElm(`${testDetails.formSelector} .mktoFormRow .mktoFieldWrap .mktoField`).then(function (elm) {
     restructureForm();
     addForm(testDetails.cardContent);
   });
@@ -206,6 +206,7 @@
   // Add new 'div.form-fields-row' inside formSelector and move all '.mktoFormCol' in '.mktoFormRow'
   function restructureForm() {
     let formSelector = testDetails.formSelector;
+    document.querySelector(`${formSelector} .mktoFormCol[data-wrapper-for="Company"]`).style.display = 'none';
 
     // Insert new 'div.form-fields-row' inside formSelector
     document.querySelector(formSelector).insertAdjacentHTML('afterbegin', '<div class="form-fields-row"></div>');
@@ -217,7 +218,7 @@
         document.querySelector('.form-fields-row').appendChild(col);
 
         // Removing inline styles from mktoFormCol
-        col.removeAttribute('style');
+        // col.removeAttribute('style');
 
         // Remove inline styles from .mktoField
         col.querySelector('.mktoField').removeAttribute('style');
