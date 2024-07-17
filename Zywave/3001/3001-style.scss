@@ -243,7 +243,6 @@ body.spz-3001 {
                 flex-wrap: wrap;
                 justify-content: space-between;
                 .mktoFormRow {
-                 
                   &.spz-row {
                     max-width: calc(50% - 8px);
                     width: 100%;
@@ -550,6 +549,16 @@ body.spz-3001 {
               font-weight: 600;
               line-height: 140%;
               white-space: nowrap;
+              position: relative;
+
+              .hover{
+                position: absolute;
+                background-color: red;
+                top: 0;
+                bottom: 0;
+                z-index: -1;
+              }
+        
 
               @media screen and (max-width: 767.98px) {
                 font-size: 14px;
@@ -572,8 +581,9 @@ body.spz-3001 {
 
             &:hover a,
             &.active a {
-              background: #0f2d52;
+              // background: #0f2d52;
               color: #fff;
+
 
               .i-hover {
                 display: block;

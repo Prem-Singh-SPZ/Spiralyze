@@ -57,15 +57,26 @@ function setTabsContent() {
             <div class="section-title">Features</div>
                 <div class="accordion-col">
                     <nav id="tabs">
-                        <li class="active" data-index="1"><a href="#tab1">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275642.svg" alt="Employee Benefits" class="i-default">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275643.svg" alt="Employee Benefits" class="i-hover">
-                            Employee Benefits</a>
+                        <li class="active" data-index="1"><a href="#tab1"><span class="hover"></span>
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331938/zywave/3001/sales_cloud.svg" alt="Sales Cloud" class="i-default">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331957/zywave/3001/sales_cloud_hov.svg" alt="Sales Cloud" class="i-hover">
+                            Sales Cloud</a>
                         </li>
                         <li data-index="2"><a href="#tab2">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_1.svg" alt="Commercial Lines" class="i-default">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_2.svg" alt="Commercial Lines" class="i-hover">
-                            Commercial Lines</a></li>
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331997/zywave/3001/client_cloud.svg" alt="Client Cloud" class="i-default">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332026/zywave/3001/client_cloud_hov.svg" alt="Client Cloud" class="i-hover">
+                            Client Cloud</a>
+                        </li>
+                         <li data-index="3"><a href="#tab3">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332050/zywave/3001/content_cloud.svg" alt="Content Cloud" class="i-default">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332077/zywave/3001/content_cloud_hov.svg" alt="Content Cloud" class="i-hover">
+                            Content Cloud</a>
+                        </li>
+                         <li data-index="4"><a href="#tab4">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332099/zywave/3001/analytics_cloud.svg" alt="Analytics Cloud" class="i-default">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332128/zywave/3001/analytics_cloud_hov.svg" alt="Analytics Cloud" class="i-hover">
+                            Analytics Cloud</a>
+                        </li>
                     </nav>
                     
                     <div id="tab-contents">
@@ -147,15 +158,13 @@ function setTabsContent() {
         label.addEventListener("click", activateTab);
     });
 
-    accordionHandler('#tabs');
+    // accordionHandler('#tabs');
 
     footer();
 }
 
-//multiple accordion handel
+// Accordion functionality
 function accordionHandler(parentClass) {
-    console.log('accordionHandler');
-    // Accordion functionality
     const tabs = document.querySelectorAll('' + parentClass + ' > li');
     let i = 0;
     autoAccordionInterval = setInterval(function () {
@@ -166,7 +175,6 @@ function accordionHandler(parentClass) {
             } else {
                 curIndex = 1;
             }
-            console.log('' + parentClass + ' > li[data-index="' + curIndex + '"] a');
             document.querySelector('' + parentClass + ' > li[data-index="' + curIndex + '"] a').click();
             i = 0;
         }
