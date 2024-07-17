@@ -219,7 +219,6 @@
     // Add new 'div.form-fields-row' inside formSelector and move all '.mktoFormCol' in '.mktoFormRow'
     function restructureForm() {
         let formSelector = testDetails.formSelector;
-        document.querySelector(`${formSelector} .mktoFormCol[data-wrapper-for="Person_Country__c"]`).style.display = 'none';
 
         // Insert new 'div.form-fields-row' inside formSelector
         document.querySelector(formSelector).insertAdjacentHTML('afterbegin', '<div class="form-fields-row"></div>');
@@ -294,6 +293,10 @@
             document.querySelector('body.spz-3004 form.mktoForm .mktoHtmlText').classList.remove('spz-hidden');
             document.querySelector('body.spz-3004 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.remove('spz-hidden');
             document.querySelector('.spz-3004 .mktoForm .spz-personnotestoappend').classList.remove('spz-hidden');
+        });
+
+        waitForElm(`${formSelector} .mktoFormCol[data-wrapper-for="Person_Country__c"]`).then(function (elm) {
+            document.querySelector(`${formSelector} .mktoFormCol[data-wrapper-for="Person_Country__c"]`).style.display = 'none';
         });
 
         // Use this and change value according to the experiment
