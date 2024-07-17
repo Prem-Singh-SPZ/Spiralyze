@@ -54,7 +54,7 @@
         ],
     };
 
-    waitForElm(`${testDetails.formSelector} .mktoFormRow .mktoFieldWrap .mktoField`).then(function (elm) {
+    waitForElm(`${testDetails.formSelector} .mktoFormRow .mktoFormCol[data-wrapper-for="FirstName"][style*="display: none;"] .mktoFieldWrap .mktoField`).then(function (elm) {
         restructureForm();
         addForm(testDetails.cardContent);
     });
