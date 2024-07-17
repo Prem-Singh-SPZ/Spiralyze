@@ -1,5 +1,5 @@
 const timer = 5000;
-
+let autoAccordionInterval;
 
 const bodyInterval = setInterval(function () {
     if (document.querySelector('body')) {
@@ -26,45 +26,26 @@ function setHeroContent() {
         <div class="hero-row">
             <div class="hero-col">
                 <div class="hero-copy">
-                    <h1 class="hero-title">Streamline insurance quoting and proposals. <span>Grow volume XX%.</span></h1>
-                    <div class="accordion-cta">
-                        <div class="ac-cta">
-                            <a class="ac-first" href="javascript:void(0);"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275641.svg" alt="Employee Benefits"> Employee Benefits</a>
-                        </div>
-                        <div class="ac-cta">
-                            <a class="ac-second" href="javascript:void(0);"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings.svg" alt="Commercial Lines"> Commercial Lines</a>
-                        </div>
-                    </div>
+                    <h1 class="hero-title"><span>Streamline</span> insurance sales and management</h1>
                     <ul class="hero-list">
-                        <li><span>Quotes.</span> Instantly generate professional, on-brand quotes and proposals. Send to leads and clients. Enable self-serve enrollment.</li>
-                        <li><span>Carrier pricing.</span> Access immediate rates from 1,000+ carriers at once. Eliminate manual searches and data entry.</li>
-                        <li><span>Questionnaires.</span> Consolidate carrier questionnaires into one client-friendly form. Automatically generate quotes across carriers.</li>
+                        <li><span>Sales.</span> Find qualified prospects instantly. Automatically send bulk email campaigns. Generate quotes and proposals in minutes. </li>
+                        <li><span>Client portal.</span> Let clients enroll in benefits, manage plans, make payments and access resources from a dedicated client portal. </li>
+                        <li><span>Content library.</span> Over 150,000 resources including benefit booklets and compliance guides. Customize and send to prospects and clients.</li>
                     </ul>
                 </div>
                 <div class="hero-form">
                 </div>
             </div>
+            <div class="social-proof-title">Join 18,000+ insurers, agencies, and service providers using Zywave.</div>
             <div class="brand-logo">
                 <picture>
-                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003546.webp">
-                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003342.webp">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003343.webp" alt="Brand Logo">
+                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/logos.webp">
+                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/logos_t.webp">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/logos_mobile.webp" alt="Social Proof">
                 </picture>
             </div>
         </div>
     </div>`);
-
-    window.addEventListener('click', function (e) {
-        if (e.target.classList.contains('ac-first')) {
-            this.document.querySelector('#tabs a[href="#tab1"]').click();
-            document.querySelector('.accordion-section').scrollIntoView({ behavior: 'smooth' });
-        }
-
-        if (e.target.classList.contains('ac-second')) {
-            this.document.querySelector('#tabs a[href="#tab2"]').click();
-            document.querySelector('.accordion-section').scrollIntoView({ behavior: 'smooth' });
-        }
-    });
 
     setTabsContent();
 }
@@ -76,12 +57,12 @@ function setTabsContent() {
             <div class="section-title">Features</div>
                 <div class="accordion-col">
                     <nav id="tabs">
-                        <li class="active"><a href="#tab1">
+                        <li class="active" data-index="1"><a href="#tab1">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275642.svg" alt="Employee Benefits" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275643.svg" alt="Employee Benefits" class="i-hover">
                             Employee Benefits</a>
                         </li>
-                        <li><a href="#tab2">
+                        <li data-index="2"><a href="#tab2">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_1.svg" alt="Commercial Lines" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/bold__building_infrastructure__buildings_2.svg" alt="Commercial Lines" class="i-hover">
                             Commercial Lines</a></li>
@@ -90,23 +71,7 @@ function setTabsContent() {
                     <div id="tab-contents">
                         <div id="tab1" class="tab-contents active">
                             <div class="accordion-wrapper ac-wrapper-1">
-                                <div class="text">
-                                <div class="child active" data-index="1">
-                                    <div class="bar"><div class="line"></div></div>
-                                    <div class="title">
-                                    <div class="text">Plan strategy</div>
-                                    </div>
-                                    <div class="content">
-                                    <div class="text"><p>Identify the right carriers and plan designs to meet employers&#8217; medical, vision, and dental needs.</p>
-                                        <p>Capture clients&#8217; claim history, coverage gaps, and other insurance needs. Evaluate current plans, renewal options, and alternative coverage. Identify upsell opportunities.</p></div>
-                                        <a href="javascript:void(0);" class="zy-cta">Get a demo</a>
-                                    <picture>
-                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="688" height="404">
-                                    </picture>
-                                    </div>
-                                </div>
-                                <div class="child" data-index="2">
+                                <div class="child">
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
                                     <div class="text">Carrier pricing</div>
@@ -125,60 +90,14 @@ function setTabsContent() {
                                     </a>
                                     </div>
                                 </div>
-                                <div class="child" data-index="3">
-                                    <div class="bar"><div class="line"></div></div>
-                                    <div class="title">
-                                    <div class="text">Quotes and proposals</div>
-                                    </div>
-                                    <div class="content">
-                                    <div class="text">MapLab<sup>TM</sup> reimagines the healthcare insights workflow to answer complex business questions, quickly, with out-of-the-box dashboards and customizable data workflows.</div>
-                                    <picture>
-                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="688" height="404">
-                                    </picture>
-                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
-                                        <span>get a demo</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                                        </svg>
-                                    </a>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="image">
-                                <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="851" height="503"/>
-                                <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Plan strategy" width="851" height="503"/>
-                                <img class="hero" data-index="2" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp" alt="Specialty Data Enhancements" width="851" height="503"/>
-                                <img class="hero" data-index="3" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="851" height="503"/>
-                                </div>
                             </div>
                         </div>
                         <div id="tab2" class="tab-contents">
                             <div class="accordion-wrapper ac-wrapper-2">
-                                <div class="text">
-                                <div class="child active" data-index="1">
+                                <div class="child">
                                     <div class="bar"><div class="line"></div></div>
                                     <div class="title">
-                                    <div class="text">Insights Foundation</div>
-                                    </div>
-                                    <div class="content">
-                                    <div class="text">Comprehensive insights start with Komodo&#8217;s industry-leading Healthcare Map<sup>TM</sup>, providing an average 7+ years of the patient journey for more than 330  million unique individuals in the U.S</div>
-                                    <picture>
-                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="688" height="404">
-                                    </picture>
-                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
-                                        <span>GET A DEMO</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                            <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                                        </svg>
-                                    </a>
-                                    </div>
-                                </div>
-                                <div class="child" data-index="2">
-                                    <div class="bar"><div class="line"></div></div>
-                                    <div class="title">
-                                    <div class="text">Specialty Data Enhancements</div>
+                                    <div class="text">Carrier pricing</div>
                                     </div>
                                     <div class="content">
                                     <div class="text">Access exclusive, highly-curated data sources — including lab, genomics, oncology, EMR data, race and ethnicity, social determinants of health, mortality, and more.</div>
@@ -194,32 +113,6 @@ function setTabsContent() {
                                     </a>
                                     </div>
                                 </div>
-                                <div class="child" data-index="3">
-                                    <div class="bar"><div class="line"></div></div>
-                                    <div class="title">
-                                    <div class="text">Streamlined Software Solutions</div>
-                                    </div>
-                                    <div class="content">
-                                    <div class="text">MapLab<sup>TM</sup> reimagines the healthcare insights workflow to answer complex business questions, quickly, with out-of-the-box dashboards and customizable data workflows.</div>
-                                    <picture>
-                                        <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp">
-                                        <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="688" height="404">
-                                    </picture>
-                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
-                                        <span>get a demo</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                                        </svg>
-                                    </a>
-                                    </div>
-                                </div>
-                                </div>
-                                <div class="image">
-                                <img class="reference" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="851" height="503"/>
-                                <img class="hero active" data-index="1" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003463.webp" alt="Insights Foundation" width="851" height="503"/>
-                                <img class="hero" data-index="2" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp" alt="Specialty Data Enhancements" width="851" height="503"/>
-                                <img class="hero" data-index="3" src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/streamlined_software_solutions_1440.webp" alt="Streamlined Software Solutions" width="851" height="503"/>
-                                </div>
                             </div>
                         </div>
                     </div>
@@ -232,6 +125,7 @@ function setTabsContent() {
 
     function activateTab(e) {
         e.preventDefault();
+        clearInterval(autoAccordionInterval);
 
         // Deactivate all tabs
         tabLabels.forEach(function (label, index) {
@@ -245,6 +139,7 @@ function setTabsContent() {
         e.target.parentNode.classList.add("active");
         var clickedTab = e.target.getAttribute("href");
         document.querySelector(clickedTab).classList.add("active");
+        accordionHandler('#tabs');
     }
 
     // Apply event listeners
@@ -252,151 +147,35 @@ function setTabsContent() {
         label.addEventListener("click", activateTab);
     });
 
-    accordionHandler('.ac-wrapper-1');
-    accordionHandler('.ac-wrapper-2');
+    accordionHandler('#tabs');
 
-    testimonial();
+    footer();
 }
 
 //multiple accordion handel
 function accordionHandler(parentClass) {
-
+    console.log('accordionHandler');
     // Accordion functionality
-    document.querySelectorAll('' + parentClass + ' .child .title').forEach((title, index) => {
-        title.addEventListener('click', function () {
-            const parent = title.parentElement;
-            const siblings = Array.from(parent.parentElement.children).filter(child => child !== parent);
-            const heroImages = document.querySelectorAll('' + parentClass + ' .image .hero');
-
-            siblings.forEach(sibling => {
-                sibling.classList.remove('active');
-            });
-
-            heroImages.forEach((img, idx) => {
-                img.classList.remove('active');
-                if (idx === index) {
-                    img.classList.add('active');
-                }
-            });
-
-            parent.classList.add('active');
-        });
-    });
-
-    const tabs = document.querySelectorAll('' + parentClass + ' .child');
+    const tabs = document.querySelectorAll('' + parentClass + ' > li');
     let i = 0;
-    const autoAccordionInterval = setInterval(function () {
-        document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
-        document.querySelector('' + parentClass + ' .child.active .bar .line').style.width = "" + ((i / timer) * 100) + "%";
+    autoAccordionInterval = setInterval(function () {
         if (i > timer) {
-            document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
-            let curIndex = parseInt(document.querySelector('' + parentClass + ' .child.active').getAttribute("data-index"));
+            let curIndex = parseInt(document.querySelector('' + parentClass + ' > li.active').getAttribute("data-index"));
             if (curIndex != tabs.length) {
                 curIndex = curIndex + 1
             } else {
                 curIndex = 1;
             }
-            document.querySelector('' + parentClass + ' .child[data-index="' + curIndex + '"] .title').click();
+            console.log('' + parentClass + ' > li[data-index="' + curIndex + '"] a');
+            document.querySelector('' + parentClass + ' > li[data-index="' + curIndex + '"] a').click();
             i = 0;
         }
         i += 200;
-    }, 200)
-
-    document.querySelector('' + parentClass + ' .image').addEventListener("mouseenter", function () {
-        clearInterval(autoAccordionInterval);
-        document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
-        if (!document.querySelector('' + parentClass + '.stop')) {
-            document.querySelector('' + parentClass + '').classList.add("stop")
-        }
-    })
-    document.querySelector('' + parentClass + ' > .text').addEventListener("mouseenter", function () {
-        clearInterval(autoAccordionInterval);
-        document.querySelector('' + parentClass + ' .child.active .bar .line').removeAttribute("style")
-        if (!document.querySelector('' + parentClass + '.stop')) {
-            document.querySelector('' + parentClass + '').classList.add("stop")
-        }
-    })
-}
-
-function testimonial() {
-    ///add a single testimonial card section after accordion
-    document.querySelector('.accordion-section').insertAdjacentHTML('afterend', `<div class="testimonial-section">
-        <div class="testimonial-row">
-            <div class="testimonial-col">
-                <div class="testimonial-card">
-                        <div class="testimonial-text">It makes quoting multiple companies faster than hand-keying everything into separate company quoting systems.</div>
-                    <div class="testimonial-profile">
-                        <div class="testimonial-image">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275629.webp" alt="Melissa Mayberry">
-                        </div>
-                        <div class="testimonial-author">
-                            <p class="t-name">Melissa Mayberry</p>
-                            <p class="t-desgn">Insurance Agent</p>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>`);
-
-    benefits();
-}
-
-function benefits() {
-    document.querySelector('.testimonial-section').insertAdjacentHTML('afterend', `<div class="benefits-section">
-        <div class="benefits-row">
-            <div class="benefits-col">
-                <div class="benefits-title">Benefits</div>
-                <div class="benefits-content">
-                    <div class="benefits-line benefits-left">
-                        <div class="benefits-text">
-                            <div class="title-img-wrapper">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275599.svg" alt="Streamline manual workflows">
-                                <h3>Streamline manual workflows</h3>
-                            </div>
-                            <p>Let clients complete digital forms that consolidate carrier questionnaires. Auto-capture plan needs and other details. Get instant pricing from 1,000+ carriers. No more manually entering client data across every carrier site. Streamline the request for proposal (RFP) process no matter what plan design your employer requires.</p>
-                        </div>
-                        <div class="benefits-image">
-                            <picture>
-                                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003441.webp">
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003440.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003439.webp" alt="Streamline manual workflows">
-                            </picture>
-                        </div>
-                    </div>
-                    <div class="benefits-line benefits-right">
-                        <div class="benefits-image">
-                           <picture>
-                                <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275611.webp">
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275610.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275609.webp" alt="Boost sales">
-                            </picture>
-                        </div>
-                        <div class="benefits-text">
-                            <div class="title-img-wrapper">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/frame_1171275600.svg" alt="Boost sales">
-                                <h3>Boost sales</h3>
-                            </div>
-                            <p>Build instant quotes based on real-time carrier rates. New policies, renewals, and alternative plan options. Add professional branding so your quotes stand out. Send to clients in 1 click. Send 2x more quotes. Turn more prospects into clients.</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="benefits-cta">
-                    <a href="javascript:void(0);" class="zy-cta">Get started</a>
-                </div>
-            </div>
-        </div>`);
-
-    window.addEventListener('click', function (e) {
-        if (e.target.classList.contains('zy-cta')) {
-            document.querySelector('.hero-form').scrollIntoView({ behavior: 'smooth' });
-        }
-    });
-
-    footer();
+    }, 200);
 }
 
 function footer() {
-    document.querySelector('.benefits-section').insertAdjacentHTML('afterend', `<div class="footer-section">
+    document.querySelector('.accordion-section').insertAdjacentHTML('afterend', `<div class="footer-section">
         <div class="footer-row">
             <div class="footer-col">
                     <div class="footer-text">Zywave, Inc.</div>
