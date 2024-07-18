@@ -35,17 +35,27 @@ body.spz-2002 .spz-hidden {
 body.spz-2002 .spz-form-container {
   position: relative;
   min-height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap {
   margin: 24px 0;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap .form-fields-row {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   margin-top: 18px;
   width: 100%;
 }
@@ -110,8 +120,11 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap .form-section .fo
   }
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm {
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
   gap: 0;
   max-width: 100%;
   width: 100% !important;
@@ -139,34 +152,52 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   width: 100% !important;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-email {
-  order: 0;
+  -webkit-box-ordinal-group: 1;
+      -ms-flex-order: 0;
+          order: 0;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-firstname {
-  order: 1;
+  -webkit-box-ordinal-group: 2;
+      -ms-flex-order: 1;
+          order: 1;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-lastname {
-  order: 2;
+  -webkit-box-ordinal-group: 3;
+      -ms-flex-order: 2;
+          order: 2;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-phone {
-  order: 3;
+  -webkit-box-ordinal-group: 4;
+      -ms-flex-order: 3;
+          order: 3;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-company {
-  order: 4;
+  -webkit-box-ordinal-group: 5;
+      -ms-flex-order: 4;
+          order: 4;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-company_size__c {
-  order: 5;
+  -webkit-box-ordinal-group: 6;
+      -ms-flex-order: 5;
+          order: 5;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-person_country__c {
-  order: 6;
+  -webkit-box-ordinal-group: 7;
+      -ms-flex-order: 6;
+          order: 6;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-ispartner {
-  order: 8;
+  -webkit-box-ordinal-group: 9;
+      -ms-flex-order: 8;
+          order: 8;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.full-width {
   width: 100% !important;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoHtmlText.mktoHasWidth {
-  order: 7;
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap {
   float: none;
@@ -187,6 +218,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   position: absolute;
   top: 13px;
   left: 10px;
+  -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoLabel .mktoAsterix {
@@ -198,7 +230,8 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   border: 1px solid #b4b3b9;
   border-radius: 12px;
   outline: none;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   padding: 13px 15px;
   margin: 0;
   color: #000000;
@@ -227,7 +260,9 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap select.mktoField {
   padding-right: 37px;
-  appearance: none;
+  -webkit-appearance: none;
+     -moz-appearance: none;
+          appearance: none;
   background-image: none;
   background-color: #fff;
 }
@@ -235,9 +270,14 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   position: relative;
   right: initial !important;
   bottom: initial !important;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
   width: 100%;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
@@ -250,7 +290,8 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   background-size: 22px;
   background-repeat: no-repeat;
   background-position: 0 7px;
-  box-shadow: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
   text-shadow: none;
   margin: 0;
   padding: 7px 0 0 12px;
@@ -265,8 +306,11 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   line-height: 22px;
   padding-left: 26px;
   position: relative;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgEmail.mktoErrorMsg span.mktoErrorDetail,
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgPhone.mktoErrorMsg span.mktoErrorDetail {
@@ -333,6 +377,8 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   line-height: 22px;
   position: relative;
   cursor: pointer;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
   width: fit-content;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList label::before {
@@ -368,6 +414,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717757061/expel/2003/dropdown_icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  pointer-events: none;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoButtonRow {
   width: 100%;
@@ -382,10 +429,17 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoButtonRow .mktoButton {
   width: 100%;
   height: 48px;
+  display: -webkit-box;
+  display: -ms-flexbox;
   display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   border: none;
   border-radius: 72px;
   background: #1762e6;
@@ -418,7 +472,8 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   color: #131416;
   text-decoration: underline;
   text-underline-offset: 3px;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: 0.5px;
   padding: 0;
 }
@@ -426,7 +481,9 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   color: #0e4c8a;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoHtmlText.mktoHasWidth {
-  order: 7;
+  -webkit-box-ordinal-group: 8;
+      -ms-flex-order: 7;
+          order: 7;
   width: 100% !important;
   margin: 0 6px;
   color: #747474 !important;
@@ -445,7 +502,8 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   line-height: 22px;
   text-decoration-line: underline;
   text-underline-offset: 3px;
-  text-decoration-skip-ink: none;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
   text-decoration-thickness: 0.5px;
   padding: 0;
 }
