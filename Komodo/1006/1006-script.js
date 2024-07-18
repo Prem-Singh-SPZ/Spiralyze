@@ -32,7 +32,8 @@ ready(function () {
       }
     }
 
-    document.querySelector('.spz-1006 #popup_contact_us .wcs-pform').remove()
+    document.querySelector('.spz-1006 #popup_contact_us .wcs-pform').remove();
+    document.querySelector('.spz-1006  #popup_connect.wcs.wcs-modal').remove();
     document.querySelector('.spz-1006 #popup_contact_us .wcs-col-12').innerHTML = `
         <div class="home-logo"><a href="https://www.komodohealth.com/"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1707409447/komodohealth/1006/logo.webp" alt="Komodo Logo"></a></div>
         <div class="wcs-pform">
@@ -55,15 +56,17 @@ ready(function () {
     // if (document.querySelector('#tmpwidget_1665168603900')) {
     //     document.querySelector('a[href="#tmpwidget_1665168603900"]').setAttribute("href", "#popup_contact_us")
     // }
-    if (document.querySelector('a[href="#popup_contact_us"]')) {
-      for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
-        if (document.querySelectorAll('a[href="#popup_contact_us"]')[i].getAttribute("href") == "#popup_contact_us" && document.querySelectorAll('a[href="#popup_contact_us"]')[i].innerHTML.trim() == 'Request Demo') {
-          document.querySelectorAll('a[href="#popup_contact_us"]')[i].setAttribute("href", "#popup_contact_us")
-        }
-      }
-    }
+    // if (document.querySelector('a[href="#popup_contact_us"]')) {
+    //   for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
+    //     if (document.querySelectorAll('a[href="#popup_contact_us"]')[i].getAttribute("href") == "#popup_contact_us" && document.querySelectorAll('a[href="#popup_contact_us"]')[i].innerHTML.trim() == 'Request Demo') {
+    //       document.querySelectorAll('a[href="#popup_contact_us"]')[i].setAttribute("href", "#popup_contact_us")
+    //     }
+    //   }
+    // }
     document.addEventListener('click', function (e) {
       if (e.target.closest("a") && e.target.closest("a").getAttribute('href') === '#popup_contact_us') {
+        document.body.classList.add('contact-modal-open');
+        document.querySelector('html').classList.add('contact-modal-open');
         window.dispatchEvent(new Event('resize'));
         if (document.querySelector('.spz-1006 #contact-us-form-wrapper .submitted-message')) {
           document.querySelector('.spz-1006 #contact-us-form-wrapper').innerHTML = "<div class='lds-dual-ring'></div>"
@@ -81,6 +84,14 @@ ready(function () {
           }
         }, 500);
       }
+
+      if (e.target.classList.contains("wcs-bg-img")) {
+        document.querySelector('.spz-1006 #popup_contact_us .close-modal').click();
+      }
+      if (e.target.classList.contains("close-modal")) {
+        document.body.classList.remove('contact-modal-open');
+        document.querySelector('html').classList.remove('contact-modal-open');
+      }
     });
 
     //for form
@@ -92,13 +103,14 @@ ready(function () {
           portalId: "6374024",
           formId: "89116499-15d1-4cd0-b724-7a46e68cf8f0",
           target: '.spz-1006 #contact-us-form-wrapper',
+          inlineMessage: "Thanks for submitting the form.",
+          submitText: "SUBMIT",
           onFormSubmitted: function ($form) {
             console.log('Report conversion...');
             sessionStorage.setItem("spz-1006", "submitted");
             gtag_report_conversion();
           },
           isInsideFrame: true,
-          inlineMessage: "Thanks for submitting the form.",
           onFormReady: function ($form) {
             const allFieldset = document.querySelectorAll('.spz-1006 #contact-us-form-wrapper .form-columns-2,.spz-1006 #contact-us-form-wrapper .form-columns-1,.spz-1006 #contact-us-form-wrapper .form-columns-0')
             for (let i = 0; i < allFieldset.length; i++) {
@@ -132,7 +144,7 @@ ready(function () {
               trigger(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries select'), 'blur');
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries select option:first-child').remove();
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries').classList.add("hasValue");
-              document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value = "SUBMIT";
+              // document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value = "SUBMIT";
               if (document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_buying_timeline select')) {
                 document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_buying_timeline select').value = "Immediately";
                 trigger(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_buying_timeline select'), 'change');
@@ -158,7 +170,7 @@ ready(function () {
                 document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_buying_timeline select').value = "Immediately";
                 trigger(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_buying_timeline select'), 'change');
               }
-              document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value = "SUBMIT";
+              // document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value = "SUBMIT";
             }
             var allInput = document.querySelectorAll('.spz-1006 #contact-us-form-wrapper .hs-input');
             function errorState(item) {
@@ -210,17 +222,17 @@ ready(function () {
               if (document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries select')) {
                 trigger(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries select'), 'change');
               }
-              let i = 0;
-              const submitInterval = setInterval(() => {
-                if (document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value != "SUBMIT") {
-                  clearInterval(submitInterval)
-                  document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value = "SUBMIT";
-                }
-                i++;
-                if (i > 80) {
-                  clearInterval(submitInterval)
-                }
-              }, 5);
+              // let i = 0;
+              // const submitInterval = setInterval(() => {
+              //   if (document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value != "SUBMIT") {
+              //     clearInterval(submitInterval)
+              //     document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit input').value = "SUBMIT";
+              //   }
+              //   i++;
+              //   if (i > 80) {
+              //     clearInterval(submitInterval)
+              //   }
+              // }, 5);
               let y = 0;
               const sliderInterval = setInterval(() => {
                 window.dispatchEvent(new Event('resize'));

@@ -1,4 +1,4 @@
-html:has(.spz-1006 .jquery-modal.blocker.current) {
+html.contact-modal-open {
   overflow: hidden;
 }
 
@@ -71,6 +71,8 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
 }
 .spz-1006 #popup_contact_us .wcs-col-12 .home-logo a {
   display: block;
+  outline: none;
+  text-decoration: none;
 }
 .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
   margin-top: -6px;
@@ -99,7 +101,6 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
   width: 24px;
   height: 56px;
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1721285891/KomodoHealth/1006/Pointer.svg);
-  pointer-events: none;
 }
 
 .spz-1006 #popup_contact_us .hbspt-form {
@@ -129,9 +130,10 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
   font-weight: 400;
   line-height: 20px;
   margin: 8px auto;
+  outline: none;
 }
 
-.spz-1006 .blocker {
+.spz-1006.contact-modal-open .blocker {
   background: #fff;
   padding: 0;
 }
@@ -546,10 +548,6 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
 }
 
 @media (max-width: 767.98px) {
-  .spz-1006 .jquery-modal.blocker.current {
-    background-color: rgba(0, 0, 0, 0.5);
-    padding: 0px;
-  }
   .spz-1006 #popup_contact_us .wcs-pform {
     padding: 10px 24px 0 !important;
     max-width: 400px;
