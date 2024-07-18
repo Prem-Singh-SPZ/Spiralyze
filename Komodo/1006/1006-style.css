@@ -58,6 +58,12 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
   min-width: 448px;
   width: 100%;
 }
+@media screen and (max-width: 767.98px) {
+  .spz-1006 #popup_contact_us .wcs-col-12 {
+    max-width: 100%;
+    min-width: 100%;
+  }
+}
 .spz-1006 #popup_contact_us .wcs-col-12 .home-logo {
   width: 177px;
   height: 40px;
@@ -78,6 +84,11 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
 @media (max-width: 1024.98px) {
   .spz-1006 #popup_contact_us .wcs-bg-img {
     background: url(//res.cloudinary.com/spiralyze/image/upload/v1707409548/komodohealth/1006/background_ui_768.webp) no-repeat top left/cover;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1006 #popup_contact_us .wcs-bg-img {
+    display: none !important;
   }
 }
 .spz-1006 #popup_contact_us .wcs-bg-img::after {
@@ -539,6 +550,12 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0px;
   }
+  .spz-1006 #popup_contact_us .wcs-pform {
+    padding: 10px 24px 0 !important;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
   .spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
     width: 100%;
     float: none;
@@ -547,11 +564,13 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
     margin-left: 0px;
   }
   .spz-1006 #popup_contact_us .wcs-popup-heading h2 {
-    font-size: 24px !important;
-    line-height: 32px;
-    letter-spacing: -0.576px !important;
+    font-size: 32px !important;
+    line-height: 40px;
   }
   .spz-1006 #contact-us-form-wrapper .hs-form-field {
+    margin-bottom: 15.5px;
+  }
+  .spz-1006 #contact-us-form-wrapper .hs-form-field.hs-consent_to_communicate {
     margin-bottom: 20px;
   }
   .spz-1006 #contact-us-form-wrapper .pp-parent {
@@ -564,7 +583,7 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
     margin: 4px 0px 23px;
   }
   .spz-1006 #contact-us-form-wrapper .hs-richtext p {
-    margin-bottom: 16px;
+    margin-bottom: 23.5px;
   }
   .spz-1006 #contact-us-form-wrapper .hs-error-msgs label a {
     padding-top: 0px;
@@ -582,12 +601,16 @@ html:has(.spz-1006 .jquery-modal.blocker.current) {
     margin-bottom: 12px;
   }
   .spz-1006 #contact-us-form-wrapper .hs_submit input {
-    width: 296px;
+    width: 280px !important;
     max-width: 100%;
     margin-left: auto;
     margin-right: auto;
   }
   .spz-1006 #popup_contact_us .mobile-break {
     display: block;
+  }
+  .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
+    margin: -6px auto 0;
+    max-width: 312px;
   }
 }
