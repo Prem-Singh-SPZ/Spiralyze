@@ -79,13 +79,9 @@
     display: flex;
     background-repeat: no-repeat;
     position: relative;
-    padding-top: 15px !important;
+    padding-top: 40px !important;
     padding-bottom: 65px !important;
     min-height: 100vh;
-
-    @media (max-height: 600px) {
-      padding-top: 40px !important;
-    }
 
     @media screen and (min-width: 767.98px) {
       background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
@@ -116,19 +112,21 @@
       //   max-width: 1304px;
 
       > .span5 {
-        // width: 50%;
         &:first-child {
-          //   max-width: 546px;
+          @media screen and (min-width: 767.98px) {
+            width: 50%;
+            max-width: 546px;
+          }
         }
 
         &:nth-child(2) {
           max-width: 558px;
-          @media screen and (max-width: 767px) {
+          @media screen and (max-width: 767.98px) {
             max-width: 100%;
           }
         }
 
-        @media screen and (max-width: 767px) {
+        @media screen and (max-width: 767.98px) {
           width: 100%;
         }
       }
@@ -187,7 +185,7 @@
       background: none;
     }
   }
-  @media (max-width: 767px) {
+  @media (max-width: 767.98px) {
     .row-number-4 {
       > div {
         &:nth-of-type(1) {

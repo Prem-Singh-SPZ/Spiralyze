@@ -27,32 +27,34 @@ document.body.classList.add('spz-2001');
 
 waitForElm(`form.hs-form-private .hs_firstname input`).then(function (elm) {
     //check if session storage item is set
-    if (!sessionStorage.getItem('unblock')) {
-        hero_modify();
-    }
-    else {
-        document.body.classList.add('unblocked');
-    }
+    hero_modify();
 });
 
 function hero_modify() {
+
     document.querySelector('h1.h2').insertAdjacentHTML('afterend', '<div class="hero-copy d-md-block d-none"><p>The sales strategy and planning process is an intricate web of activities, including sales territory management, quotas, capacity, and more. Each of these elements are driving towards the common goal of hitting company revenue goals but are completely interdependent on one another.</p><p>This collaboration needs to happen not only between the people, but also the data and processes you have in place. <span class="fw-semibold">Learn more by downloading The Complete Guide to Sales Planning.</span></p></div>');
     document.querySelector('.hs_cos_wrapper.hs_cos_wrapper_widget.hs_cos_wrapper_type_form').insertAdjacentHTML('afterend', '<div class="hero-copy d-md-none"><p>The sales strategy and planning process is an intricate web of activities, including sales territory management, quotas, capacity, and more. Each of these elements are driving towards the common goal of hitting company revenue goals but are completely interdependent on one another.</p><p>This collaboration needs to happen not only between the people, but also the data and processes you have in place. <span class="fw-semibold">Learn more by downloading The Complete Guide to Sales Planning.</span></p></div>');
     document.querySelector('h1.h2').outerHTML = '<h1 class="fw-bold my-4 spz-headline"><span class="w-text">Is your <span class="d-xl-block d-inline y-text">Sales Go-To-Market</span> Plan failing?</span></h1>';
 
-    document.querySelector('.dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding').insertAdjacentHTML('beforeend', '<a id="unblock_btn">LEARN MORE</a>');
+    if (!sessionStorage.getItem('unblock')) {
+        document.querySelector('.dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding').insertAdjacentHTML('beforeend', '<a id="unblock_btn">LEARN MORE</a>');
 
-    //onclick of learn more button
-    document.getElementById('unblock_btn').addEventListener('click', function (e) {
-        e.preventDefault();
+        //onclick of learn more button
+        document.getElementById('unblock_btn').addEventListener('click', function (e) {
+            e.preventDefault();
+            document.body.classList.add('unblocked');
+            let heroBanner = document.querySelector('.dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding');
+            if (heroBanner)
+                window.scrollTo({ top: heroBanner.clientHeight, behavior: 'smooth' });
+            this.style.display = 'none';
+            //set session storage item here
+            sessionStorage.setItem('unblock', 'true');
+        });
+    }
+    else {
         document.body.classList.add('unblocked');
-        let heroBanner = document.querySelector('.dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding');
-        if (heroBanner)
-            window.scrollTo({ top: heroBanner.clientHeight, behavior: 'smooth' });
-        this.style.display = 'none';
-        //set session storage item here
-        sessionStorage.setItem('unblock', 'true');
-    });
+    }
+
 
 }
 

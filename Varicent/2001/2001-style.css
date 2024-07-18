@@ -70,14 +70,9 @@
   display: flex;
   background-repeat: no-repeat;
   position: relative;
-  padding-top: 15px !important;
+  padding-top: 40px !important;
   padding-bottom: 65px !important;
   min-height: 100vh;
-}
-@media (max-height: 600px) {
-  .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
-    padding-top: 40px !important;
-  }
 }
 @media screen and (min-width: 767.98px) {
   .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding {
@@ -105,15 +100,21 @@
       -ms-flex-align: center;
           align-items: center;
 }
+@media screen and (min-width: 767.98px) {
+  .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:first-child {
+    width: 50%;
+    max-width: 546px;
+  }
+}
 .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:nth-child(2) {
   max-width: 558px;
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5:nth-child(2) {
     max-width: 100%;
   }
 }
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 767.98px) {
   .spz-2001 .dnd_area-row-0-background-color.dnd-section.dnd_area-row-0-padding > .row-fluid > .span5 {
     width: 100%;
   }
@@ -162,7 +163,7 @@
     background: none;
   }
 }
-@media (max-width: 767px) {
+@media (max-width: 767.98px) {
   .spz-2001 .row-number-4 > div:nth-of-type(1) > div:nth-of-type(1) > div:nth-of-type(1) > span:nth-of-type(1) > div:nth-of-type(1) {
     margin-bottom: 25px;
     position: static;
