@@ -83,7 +83,11 @@
     padding-bottom: 65px !important;
     min-height: 100vh;
 
-    @media screen and (min-width: 767px) {
+    @media (max-height: 600px) {
+      padding-top: 40px !important;
+    }
+
+    @media screen and (min-width: 767.98px) {
       background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717767496/varicent/2001/arrow_5.svg");
       background-position: center;
       background-size: 819px 206px;
@@ -109,7 +113,7 @@
 
     > .row-fluid {
       align-items: center;
-    //   max-width: 1304px;
+      //   max-width: 1304px;
 
       > .span5 {
         // width: 50%;

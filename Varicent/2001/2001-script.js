@@ -26,7 +26,13 @@ window.addEventListener("message", function (event) {
 document.body.classList.add('spz-2001');
 
 waitForElm(`form.hs-form-private .hs_firstname input`).then(function (elm) {
-    hero_modify();
+    //check if session storage item is set
+    if (!sessionStorage.getItem('unblock')) {
+        hero_modify();
+    }
+    else {
+        document.body.classList.add('unblocked');
+    }
 });
 
 function hero_modify() {
@@ -44,6 +50,8 @@ function hero_modify() {
         if (heroBanner)
             window.scrollTo({ top: heroBanner.clientHeight, behavior: 'smooth' });
         this.style.display = 'none';
+        //set session storage item here
+        sessionStorage.setItem('unblock', 'true');
     });
 
 }
