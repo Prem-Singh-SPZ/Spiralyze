@@ -97,7 +97,7 @@ body.spz-3001 .hero-section .hero-row .hero-col {
   }
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy {
-  max-width: 580px;
+  max-width: 560px;
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-3001 .hero-section .hero-row .hero-col .hero-copy {
@@ -146,39 +146,38 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list {
   }
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li {
-  padding-left: 48px;
-  color: rgba(255, 255, 255, 0.84);
+  padding-left: 56px;
+  color: #fff;
   font-family: "Segoe UI", Arial, sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 400;
-  line-height: 26px;
+  line-height: 140%;
   margin-bottom: 24px;
   position: relative;
   list-style: none;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li span {
   font-weight: 700;
-  color: #fff;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li::before {
   content: "";
   position: absolute;
   top: 0;
   left: 0;
-  width: 32px;
-  height: 32px;
+  width: 40px;
+  height: 40px;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li:first-child::before {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/icon.svg) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/sales.webp) no-repeat;
   background-size: 100%;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li:nth-child(2)::before {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/icon_2.svg) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/client_portal.webp) no-repeat;
   background-size: 100%;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li:nth-child(3)::before {
-  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/icon_1.svg) no-repeat;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/content_library.webp) no-repeat;
   background-size: 100%;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form {
@@ -249,6 +248,11 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
+  width: 100% !important;
+}
+body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm > div:not([class]),
+body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm div.g-recaptcha {
+  display: none;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow.spz-row {
   max-width: calc(50% - 8px);
@@ -261,14 +265,6 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:not(.spz-row) {
   display: none;
-}
-body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:not(.spz-row) + div {
-  display: none;
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow {
-    display: block;
-  }
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoClear {
   display: none !important;
@@ -331,6 +327,9 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
   -webkit-transition: all 0.3s;
   transition: all 0.3s;
   pointer-events: none;
+  width: -webkit-fit-content !important;
+  width: -moz-fit-content !important;
+  width: fit-content !important;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap .mktoLabel .mktoAsterix {
   display: none;
@@ -375,10 +374,10 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.error.filled .mktoLabel, body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow .mktoFieldDescriptor.mktoFormCol .mktoFieldWrap.error.typing .mktoLabel {
   color: #e30004;
 }
-body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:nth-child(5) {
+body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow.full-width {
   max-width: 100%;
 }
-body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow:nth-child(5) .mktoFieldDescriptor.mktoFormCol {
+body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoFormRow.full-width .mktoFieldDescriptor.mktoFormCol {
   max-width: 100%;
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow {
@@ -410,6 +409,17 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm form.mktoForm .mktoButtonRow .mktoButton:hover {
   background: #5fb53b;
+}
+body.spz-3001 .hero-section .hero-row .social-proof-title {
+  color: #fff;
+  text-align: center;
+  font-family: "BreeBold", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-transform: uppercase;
+  margin: 24px 0 48px;
 }
 body.spz-3001 .hero-section .hero-row .brand-logo {
   padding-bottom: 20px;
@@ -542,8 +552,8 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a {
       -ms-flex-align: center;
           align-items: center;
   border-radius: 999px;
-  border: 1px solid #0f2d52;
-  color: #0f2d52;
+  border: 1px solid #cccccc;
+  color: #b3b3b3;
   letter-spacing: -0.2px;
   font-family: "Segoe UI", Arial, sans-serif;
   font-size: 16px;
@@ -552,13 +562,29 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a {
   line-height: 140%;
   white-space: nowrap;
   position: relative;
+  overflow: hidden;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a .text {
+  z-index: 1;
+  color: #b3b3b3;
+  letter-spacing: -0.2px;
+  font-family: "Segoe UI", Arial, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 140%;
+  white-space: nowrap;
+  pointer-events: none;
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a .hover {
   position: absolute;
-  background-color: red;
   top: 0;
   bottom: 0;
-  z-index: -1;
+  z-index: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  pointer-events: none;
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a {
@@ -569,6 +595,8 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a img {
   margin-right: 10px;
   width: 20px;
   height: 20px;
+  z-index: 1;
+  pointer-events: none;
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a img {
@@ -579,13 +607,60 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a .i-hov
   display: none;
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:hover a, body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li.active a {
-  color: #fff;
+  color: #0f2d52;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:hover a .text, body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li.active a .text {
+  color: #0f2d52;
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:hover a .i-hover, body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li.active a .i-hover {
   display: block;
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:hover a .i-default, body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li.active a .i-default {
   display: none;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(1):hover a {
+  border-color: #f7991d;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(1).active a {
+  border-color: #f7991d;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(1).active a .hover {
+  background: rgba(247, 153, 29, 0.1);
+  -webkit-animation: fadeIn1 5s linear forwards;
+          animation: fadeIn1 5s linear forwards;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(2):hover a {
+  border-color: #ff5e49;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(2).active a {
+  border-color: #ff5e49;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(2).active a .hover {
+  background: rgba(255, 94, 73, 0.1);
+  -webkit-animation: fadeIn2 5s linear forwards;
+          animation: fadeIn2 5s linear forwards;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(3):hover a {
+  border-color: #9763ff;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(3).active a {
+  border-color: #9763ff;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(3).active a .hover {
+  background: rgba(151, 99, 255, 0.1);
+  -webkit-animation: fadeIn2 5s linear forwards;
+          animation: fadeIn2 5s linear forwards;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(4):hover a {
+  border-color: #0cbcab;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(4).active a {
+  border-color: #0cbcab;
+}
+body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li:nth-child(4).active a .hover {
+  background: rgba(12, 188, 171, 0.1);
+  -webkit-animation: fadeIn2 5s linear forwards;
+          animation: fadeIn2 5s linear forwards;
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents {
   display: none;
@@ -597,9 +672,9 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .ta
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: flex-start;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper > .text {
   width: 457px;
@@ -987,4 +1062,70 @@ body.spz-3001 .footer-section .footer-row .footer-col .footer-social .social-lin
 }
 body.spz-3001 .footer-section .footer-row .footer-col .footer-social .social-link a:hover {
   background: #576876;
+}
+
+@-webkit-keyframes fadeIn1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+
+@keyframes fadeIn1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeIn2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeIn3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@-webkit-keyframes fadeIn4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
 }

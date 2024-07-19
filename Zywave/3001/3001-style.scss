@@ -84,7 +84,7 @@ body.spz-3001 {
         }
 
         .hero-copy {
-          max-width: 580px;
+          max-width: 560px;
 
           @media screen and (max-width: 1199.98px) {
             width: 49%;
@@ -128,20 +128,19 @@ body.spz-3001 {
             }
 
             li {
-              padding-left: 48px;
-              color: rgba(255, 255, 255, 0.84);
+              padding-left: 56px;
+              color: #fff;
               font-family: $segoe;
-              font-size: 18px;
+              font-size: 16px;
               font-style: normal;
               font-weight: 400;
-              line-height: 26px;
+              line-height: 140%;
               margin-bottom: 24px;
               position: relative;
               list-style: none;
 
               span {
                 font-weight: 700;
-                color: #fff;
               }
 
               // @media screen and (max-width: 767.98px) {
@@ -154,13 +153,13 @@ body.spz-3001 {
                 position: absolute;
                 top: 0;
                 left: 0;
-                width: 32px;
-                height: 32px;
+                width: 40px;
+                height: 40px;
               }
 
               &:first-child {
                 &::before {
-                  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/icon.svg)
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/sales.webp)
                     no-repeat;
                   background-size: 100%;
                 }
@@ -168,7 +167,7 @@ body.spz-3001 {
 
               &:nth-child(2) {
                 &::before {
-                  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/icon_2.svg)
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/client_portal.webp)
                     no-repeat;
                   background-size: 100%;
                 }
@@ -176,7 +175,7 @@ body.spz-3001 {
 
               &:nth-child(3) {
                 &::before {
-                  background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/10001/icon_1.svg)
+                  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/content_library.webp)
                     no-repeat;
                   background-size: 100%;
                 }
@@ -242,6 +241,13 @@ body.spz-3001 {
                 display: flex;
                 flex-wrap: wrap;
                 justify-content: space-between;
+                width: 100% !important;
+
+                > div:not([class]),
+                div.g-recaptcha {
+                  display: none;
+                }
+
                 .mktoFormRow {
                   &.spz-row {
                     max-width: calc(50% - 8px);
@@ -254,14 +260,11 @@ body.spz-3001 {
 
                   &:not(.spz-row) {
                     display: none;
-                    + div {
-                      display: none;
-                    }
                   }
 
-                  @media screen and (max-width: 767.98px) {
-                    display: block;
-                  }
+                  // @media screen and (max-width: 767.98px) {
+                  //   display: block;
+                  // }
 
                   .mktoClear {
                     display: none !important;
@@ -328,6 +331,7 @@ body.spz-3001 {
                         color: #a9a9a9;
                         transition: all 0.3s;
                         pointer-events: none;
+                        width: fit-content !important;
 
                         .mktoAsterix {
                           display: none;
@@ -391,7 +395,7 @@ body.spz-3001 {
                     }
                   }
 
-                  &:nth-child(5) {
+                  &.full-width {
                     max-width: 100%;
 
                     .mktoFieldDescriptor.mktoFormCol {
@@ -435,6 +439,18 @@ body.spz-3001 {
             }
           }
         }
+      }
+
+      .social-proof-title {
+        color: #fff;
+        text-align: center;
+        font-family: $bree;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 130%;
+        text-transform: uppercase;
+        margin: 24px 0 48px;
       }
 
       .brand-logo {
@@ -540,8 +556,8 @@ body.spz-3001 {
               justify-content: center;
               align-items: center;
               border-radius: 999px;
-              border: 1px solid #0f2d52;
-              color: #0f2d52;
+              border: 1px solid #cccccc;
+              color: #b3b3b3;
               letter-spacing: -0.2px;
               font-family: $segoe;
               font-size: 16px;
@@ -550,15 +566,32 @@ body.spz-3001 {
               line-height: 140%;
               white-space: nowrap;
               position: relative;
+              overflow: hidden;
 
-              .hover{
+              .text {
+                z-index: 1;
+                color: #b3b3b3;
+                letter-spacing: -0.2px;
+                font-family: $segoe;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 140%;
+                white-space: nowrap;
+                pointer-events: none;
+              }
+
+              .hover {
                 position: absolute;
-                background-color: red;
                 top: 0;
                 bottom: 0;
-                z-index: -1;
+                z-index: 0;
+                left: 0;
+                right: 0;
+                // width: 100%;
+                height: 100%;
+                pointer-events: none;
               }
-        
 
               @media screen and (max-width: 767.98px) {
                 font-size: 14px;
@@ -568,6 +601,8 @@ body.spz-3001 {
                 margin-right: 10px;
                 width: 20px;
                 height: 20px;
+                z-index: 1;
+                pointer-events: none;
 
                 @media screen and (max-width: 767.98px) {
                   display: none !important;
@@ -581,15 +616,61 @@ body.spz-3001 {
 
             &:hover a,
             &.active a {
-              // background: #0f2d52;
-              color: #fff;
+              color: #0f2d52;
 
+              .text {
+                color: #0f2d52;
+              }
 
               .i-hover {
                 display: block;
               }
               .i-default {
                 display: none;
+              }
+            }
+
+            &:nth-child(1):hover a {
+              border-color: #f7991d;
+            }
+            &:nth-child(1).active a {
+              border-color: #f7991d;
+              .hover {
+                background: rgba(247, 153, 29, 0.1);
+                animation: fadeIn1 5s linear forwards;
+              }
+            }
+
+            &:nth-child(2):hover a {
+              border-color: #ff5e49;
+            }
+            &:nth-child(2).active a {
+              border-color: #ff5e49;
+              .hover {
+                background: rgb(255 94 73 / 10%);
+                animation: fadeIn2 5s linear forwards;
+              }
+            }
+
+            &:nth-child(3):hover a {
+              border-color: #9763ff;
+            }
+            &:nth-child(3).active a {
+              border-color: #9763ff;
+              .hover {
+                background: rgba(151, 99, 255, 0.1);
+                animation: fadeIn2 5s linear forwards;
+              }
+            }
+
+            &:nth-child(4):hover a {
+              border-color: #0cbcab;
+            }
+            &:nth-child(4).active a {
+              border-color: #0cbcab;
+              .hover {
+                background: rgba(12, 188, 171, 0.1);
+                animation: fadeIn2 5s linear forwards;
               }
             }
           }
@@ -605,7 +686,7 @@ body.spz-3001 {
             // Solutions Accordion Starts
             .accordion-wrapper {
               display: flex;
-              align-items: flex-start;
+              align-items: center;
 
               > .text {
                 width: 457px;
@@ -1066,5 +1147,38 @@ body.spz-3001 {
         }
       }
     }
+  }
+}
+
+@keyframes fadeIn1 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn2 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn3 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
+  }
+}
+@keyframes fadeIn4 {
+  0% {
+    width: 0;
+  }
+  100% {
+    width: 100%;
   }
 }

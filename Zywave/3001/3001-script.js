@@ -60,46 +60,40 @@ function setTabsContent() {
                         <li class="active" data-index="1"><a href="#tab1"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331938/zywave/3001/sales_cloud.svg" alt="Sales Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331957/zywave/3001/sales_cloud_hov.svg" alt="Sales Cloud" class="i-hover">
-                            Sales Cloud</a>
+                            <span class="text">Sales Cloud</span></a>
                         </li>
-                        <li data-index="2"><a href="#tab2">
+                        <li data-index="2"><a href="#tab2"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331997/zywave/3001/client_cloud.svg" alt="Client Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332026/zywave/3001/client_cloud_hov.svg" alt="Client Cloud" class="i-hover">
-                            Client Cloud</a>
+                            <span class="text">Client Cloud</span></a>
                         </li>
-                         <li data-index="3"><a href="#tab3">
+                         <li data-index="3"><a href="#tab3"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332050/zywave/3001/content_cloud.svg" alt="Content Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332077/zywave/3001/content_cloud_hov.svg" alt="Content Cloud" class="i-hover">
-                            Content Cloud</a>
+                            <span class="text">Content Cloud</span></a>
                         </li>
-                         <li data-index="4"><a href="#tab4">
+                         <li data-index="4"><a href="#tab4"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332099/zywave/3001/analytics_cloud.svg" alt="Analytics Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332128/zywave/3001/analytics_cloud_hov.svg" alt="Analytics Cloud" class="i-hover">
-                            Analytics Cloud</a>
+                            <span class="text">Analytics Cloud</span></a>
                         </li>
                     </nav>
                     
                     <div id="tab-contents">
                         <div id="tab1" class="tab-contents active">
                             <div class="accordion-wrapper ac-wrapper-1">
-                                <div class="child">
-                                    <div class="bar"><div class="line"></div></div>
-                                    <div class="title">
-                                    <div class="text">Carrier pricing</div>
+                                <div class="left-copy">
+                                    <div class="title">Carrier pricing</div>
+                                    <div class="description">Access exclusive, highly-curated data sources — including lab, genomics, oncology, EMR data, race and ethnicity, social determinants of health, mortality, and more.</div>
+                                    <div class="cta-wrapper">
+                                        <a href="javascript:void(0);" class="spz-cta">get a demo</a>
                                     </div>
-                                    <div class="content">
-                                    <div class="text">Access exclusive, highly-curated data sources — including lab, genomics, oncology, EMR data, race and ethnicity, social determinants of health, mortality, and more.</div>
+                                </div>
+                                <div class="right-img">
                                     <picture>
                                         <source media="(max-width:767.98px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp">
                                         <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/specialty_data_enhancements_1440.webp" alt="Specialty Data Enhancements" width="688" height="404">
                                     </picture>
-                                    <a href="#popup_request_a_demo" rel="modal:open" class="cta">
-                                        <span>get a demo</span>
-                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-                                        <path d="M6 12L10 8L6 4" stroke="currentColor" stroke-width="1.5" stroke-linecap="square"></path>
-                                        </svg>
-                                    </a>
-                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -125,6 +119,11 @@ function setTabsContent() {
                                     </div>
                                 </div>
                             </div>
+                        </div>
+                       
+                        <div id="tab3" class="tab-contents">
+                        </div>
+                         <div id="tab4" class="tab-contents">
                         </div>
                     </div>
                 </div>
@@ -155,7 +154,7 @@ function setTabsContent() {
 
     // Apply event listeners
     tabLabels.forEach(function (label, index) {
-        label.addEventListener("click", activateTab);
+        label.querySelector('a').addEventListener("click", activateTab);
     });
 
     // accordionHandler('#tabs');
@@ -232,7 +231,7 @@ function formModify() {
 
     waitForElm('form.mktoForm #LblCompany').then(function () {
         document.querySelector('form.mktoForm #LblCompany').textContent = 'Company';
-        document.querySelector('form.mktoForm #LblCompany').closest('.mktoFormRow').classList.add('spz-row');
+        document.querySelector('form.mktoForm #LblCompany').closest('.mktoFormRow').classList.add('spz-row','full-width');
     });
 
     textChng.textContent = 'Submit';
