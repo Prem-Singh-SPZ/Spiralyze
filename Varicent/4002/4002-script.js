@@ -281,22 +281,22 @@ function setTabsContent() {
   //window click event listener
   window.addEventListener("click", function (e) {
     if (e.target.classList.contains('cd-1')) {
-      postMsg('#c-tab-contents .c-tab-contents', e.target);
+      postMsg('#c-tab-contents .c-tab-contents', '.cd-1');
     }
 
     if (e.target.classList.contains('cd-2')) {
-      postMsg('#c-tab-contents-2 .c-tab-contents-2', e.target);
+      postMsg('#c-tab-contents-2 .c-tab-contents-2', '.cd-2');
     }
   });
 
   function postMsg(overlay, target) {
     window.addEventListener("message", function (a) {
       if ("hsFormCallback" === a.data.type && "onFormSubmitted" === a.data.eventName) {
-        this.document.querySelectorAll(overlay).forEach(function (tab) {
+        document.querySelectorAll(overlay).forEach(function (tab) {
           tab.querySelector('.content-wrapper .content.with-overlay').classList.remove('with-overlay');
         });
 
-        this.document.querySelectorAll(target).forEach(function (btn) {
+        document.querySelectorAll(target).forEach(function (btn) {
           btn.classList.add('spz-hide');
         });
       }
