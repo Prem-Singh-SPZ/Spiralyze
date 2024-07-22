@@ -1,4 +1,4 @@
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 html {
   overflow-x: hidden;
 }
@@ -28,7 +28,7 @@ body.spz-28001 .align-items-center {
 body.spz-28001 i {
   font-style: normal;
 }
-body.spz-28001 .blue-cta-btn {
+body.spz-28001 .blue-btn {
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -48,11 +48,12 @@ body.spz-28001 .blue-cta-btn {
   -webkit-transition: all 0.5s;
   -webkit-transition: all 0.15s;
   transition: all 0.15s;
+  height: 48px;
 }
-body.spz-28001 .blue-cta-btn > span {
+body.spz-28001 .blue-btn > span {
   padding: 0px 16px 0px 12px;
 }
-body.spz-28001 .blue-cta-btn .button_arrow {
+body.spz-28001 .blue-btn .button_arrow {
   margin-left: 8px;
   width: 16px;
   height: 16px;
@@ -60,12 +61,17 @@ body.spz-28001 .blue-cta-btn .button_arrow {
   object-fit: contain;
   pointer-events: none;
 }
-body.spz-28001 .blue-cta-btn:hover {
+body.spz-28001 .blue-btn:hover {
   background: #0068c9;
   color: #fff;
 }
+body.spz-28001 .blue-btn:active {
+  background: #0068c9;
+  color: #fff;
+  border: 2px solid #b2e0ff;
+}
 @media (max-width: 767.98px) {
-  body.spz-28001 .blue-cta-btn {
+  body.spz-28001 .blue-btn {
     padding: 12px 18.45px;
     font-size: 16px;
     width: 100%;
@@ -73,9 +79,32 @@ body.spz-28001 .blue-cta-btn:hover {
         -ms-flex-pack: center;
             justify-content: center;
   }
-  body.spz-28001 .blue-cta-btn > span {
+  body.spz-28001 .blue-btn > span {
     padding: 0px 13px 0px 9px;
   }
+}
+body.spz-28001 [class*=HeroSubpage-root] [class*=HeroSubpage-content] {
+  gap: 0;
+}
+body.spz-28001 [class*=HeroSubpage-root] [class*=HeroSubpage-content] span[class*=MuiChip-label] {
+  font-family: "Inter", sans-serif;
+  color: #eff8ff;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+  margin: 0 0 16px;
+}
+body.spz-28001 [class*=HeroSubpage-root] [class*=HeroSubpage-content] [class*=HeroSubpage-title] {
+  color: #fff;
+  text-align: center;
+  font-family: "Inter", sans-serif;
+  font-size: 64px;
+  font-style: normal;
+  font-weight: 900;
+  line-height: 72px;
+  letter-spacing: -1.28px;
+  margin: 0 0 16px;
 }
 body.spz-28001 .simple-steps-sec {
   background-color: #f6f8fa;

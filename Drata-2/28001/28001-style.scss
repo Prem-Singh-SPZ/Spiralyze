@@ -1,7 +1,7 @@
 $ff-inter: "Inter", sans-serif;
 
 // @import "https://fonts.googleapis.com/css2?family=Darker+Grotesque:wght@800&display=swap";
-@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap";
+@import "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap";
 html {
   overflow-x: hidden;
 }
@@ -25,7 +25,9 @@ body.spz-28001 {
   // overflow-x: hidden;
 
   main {
-    > section[class*="control-section"]:not(.control-section-1):not(.control-section-8){
+    > section[class*="control-section"]:not(.control-section-1):not(
+        .control-section-8
+      ) {
       display: none;
     }
   }
@@ -53,7 +55,7 @@ body.spz-28001 {
     font-style: normal;
   }
 
-  .blue-cta-btn {
+  .blue-btn {
     display: inline-flex;
     align-items: center;
     background: #0580e8;
@@ -68,6 +70,7 @@ body.spz-28001 {
     text-decoration: none;
     -webkit-transition: all 0.5s;
     transition: all 0.15s;
+    height: 48px;
 
     > span {
       padding: 0px 16px 0px 12px;
@@ -85,11 +88,11 @@ body.spz-28001 {
       background: #0068c9;
       color: #fff;
     }
-    // &:active {
-    //   background: #0068c9;
-    //   color: #fff;
-    //   border: 2px solid #b2e0ff;
-    // }
+    &:active {
+      background: #0068c9;
+      color: #fff;
+      border: 2px solid #b2e0ff;
+    }
 
     @media (max-width: 767.98px) {
       padding: 12px 18.45px;
@@ -102,6 +105,35 @@ body.spz-28001 {
       }
     }
   }
+
+  // Hero Section Starts
+  [class*="HeroSubpage-root"] {
+    [class*="HeroSubpage-content"] {
+      gap: 0;
+      span[class*="MuiChip-label"] {
+        font-family: $ff-inter;
+        color: #eff8ff;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 26px;
+        margin: 0 0 16px;
+      }
+
+      [class*="HeroSubpage-title"] {
+        color: #fff;
+        text-align: center;
+        font-family: $ff-inter;
+        font-size: 64px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 72px;
+        letter-spacing: -1.28px;
+        margin: 0 0 16px;
+      }
+    }
+  }
+  // Hero Section ends
 
   // Simple Steps Section Starts
   .simple-steps-sec {

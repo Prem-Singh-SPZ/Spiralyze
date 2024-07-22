@@ -257,7 +257,7 @@
         document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar">
             <div class="nav-container">
                 <div class="nav-logo">
-                    <img src="${astUrl}/fl_sanitize/drata/14007/logo.svg" alt="Drata Logo" title="Drata Logo">
+                    <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
                     <a class="nav-anchor active" href="#">Learn About Compliance</a>
@@ -563,7 +563,7 @@
         document.querySelector('.control-section-8').insertAdjacentHTML('afterend', `<section class="demo-cta-section">
             <div class="demo-cta-container">
                 <div class="cta-desc">Start Your Compliance Journey Today</div>
-                <a href="https://drata.com/demo" class="cta-btn">Request a Demo</a>
+                <a href="https://drata.com/demo" class="cta-btn blue-btn">Request a Demo</a>
             </div>
         </section>`);
 
