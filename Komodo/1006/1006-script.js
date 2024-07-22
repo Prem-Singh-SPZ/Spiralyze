@@ -67,6 +67,7 @@ ready(function () {
       if (e.target.closest("a") && e.target.closest("a").getAttribute('href') === '#popup_contact_us') {
         document.body.classList.add('contact-modal-open');
         document.querySelector('html').classList.add('contact-modal-open');
+        whichForm();
         window.dispatchEvent(new Event('resize'));
         if (document.querySelector('.spz-1006 #contact-us-form-wrapper .submitted-message')) {
           document.querySelector('.spz-1006 #contact-us-form-wrapper').innerHTML = "<div class='lds-dual-ring'></div>"
@@ -88,14 +89,19 @@ ready(function () {
       if (e.target.classList.contains("wcs-bg-img")) {
         document.querySelector('.spz-1006 #popup_contact_us .close-modal').click();
       }
-      if (e.target.classList.contains("close-modal")) {
-        document.body.classList.remove('contact-modal-open');
-        document.querySelector('html').classList.remove('contact-modal-open');
-      }
     });
 
-    //for form
+    function whichForm() {
+      let checkForm = setInterval(function () {
+        if (!document.querySelector('.spz-1006 .jquery-modal.blocker.current #contact-us-form-wrapper')) {
+          clearInterval(checkForm);
+          document.body.classList.remove('contact-modal-open');
+          document.querySelector('html').classList.remove('contact-modal-open');
+        }
+      }, 100);
+    }
 
+    //for form
     function loadDemoForm() {
       loadJS('//js.hsforms.net/forms/embed/v2.js', function () {
         hbspt.forms.create({

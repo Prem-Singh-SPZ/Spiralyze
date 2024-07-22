@@ -39,6 +39,11 @@ html.contact-modal-open {
   min-width: 448px;
   width: 100%;
 
+  @media screen and (max-width: 1024.98px) {
+    max-width: 50%;
+    min-width: 50%;
+  }
+
   @media screen and (max-width: 767.98px) {
     max-width: 100%;
     min-width: 100%;
@@ -58,6 +63,10 @@ html.contact-modal-open {
 
   .social-proof {
     margin-top: -6px;
+
+    @media screen and (max-width: 1024.98px) {
+      margin: 24px 0 0;
+    }
   }
 }
 
@@ -71,6 +80,7 @@ html.contact-modal-open {
   @media (max-width: 1024.98px) {
     background: url(//res.cloudinary.com/spiralyze/image/upload/v1707409548/komodohealth/1006/background_ui_768.webp)
       no-repeat top left / cover;
+    width: 50%;
   }
 
   @media (max-width: 767.98px) {
@@ -386,6 +396,12 @@ html.contact-modal-open {
   margin-top: 0px !important;
   margin-bottom: 0px !important;
   border: none;
+
+  @media screen and (max-width: 1024.98px) {
+    width: calc(100% - 16px);
+    margin-right: auto;
+    margin-left: auto;
+  }
 }
 
 .spz-1006 #contact-us-form-wrapper .hs_submit input:hover {
@@ -550,6 +566,10 @@ html.contact-modal-open {
 
 .spz-1006 #popup_contact_us .wcs-pform {
   padding: 10px 32px 0 !important;
+
+  @media screen and (max-width: 1024.98px) {
+    padding: 10px 24px 0 !important;
+  }
 }
 
 @media (max-width: 767.98px) {
@@ -578,7 +598,7 @@ html.contact-modal-open {
   .spz-1006 #contact-us-form-wrapper .hs-form-field {
     margin-bottom: 15.5px;
   }
-  .spz-1006 #contact-us-form-wrapper .hs-form-field.hs-consent_to_communicate{
+  .spz-1006 #contact-us-form-wrapper .hs-form-field.hs-consent_to_communicate {
     margin-bottom: 20px;
   }
 
@@ -636,8 +656,8 @@ html.contact-modal-open {
     display: block;
   }
 
-  .spz-1006 #popup_contact_us .wcs-col-12 .social-proof{
+  .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
     margin: -6px auto 0;
-    max-width: 312px;
+    max-width: 344px;
   }
 }
