@@ -90,11 +90,12 @@
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
 
-        waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root').then(function () {
+        waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
             document.querySelector("body").classList.add("spz-28001");
 
             waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
-                simpleSteps();
+                heroChanges();
+                spzNavBar();
             });
 
             submitTestDetails('Variant_28001');
@@ -238,17 +239,84 @@
             if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
         }
         return null;
-    }    
+    }
 
     // Delete cookie
     function deleteCookie(name) {
         document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
     }
 
+    function heroChanges() {
+        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
+        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
+        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta"><span>Download SOC 2 Guide</span></a></div>`)
+        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
+    }
+
+    function spzNavBar() {
+        if (document.querySelector('.spz-navbar')) return;
+
+        document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar">
+            <div class="nav-container">
+                <div class="nav-logo">
+                    <img src="${astUrl}/fl_sanitize/drata/14007/logo.svg" alt="Drata Logo" title="Drata Logo">
+                </div>
+                <div class="nav-links">
+                    <a class="nav-anchor active" href="#">Learn About Compliance</a>
+                    <a class="nav-anchor" href="#about">Why Drata?</a>
+                    <a class="nav-anchor" href="#project">Learn About Frameworks</a>
+                    <a class="nav-anchor" href="#contact">Guides & Resources</a>
+                </div>
+            </div>
+        </nav>`);
+
+        benefits();
+    }
+
+    //add Compliance Benefits section after navbar
+    function benefits() {
+        if (document.querySelector('.benefits-sec')) return;
+
+        document.querySelector('.spz-navbar').insertAdjacentHTML('afterend', `
+            <section class="benefits-sec">
+                <div class="benefits-container">
+                    <div class="bs-title">
+                            <div class="bs-eyebrow">Compliance Benefits</div>
+                            <h2 class="bs-title">Why Comply? Security Secures Your Future.</h2>
+                            <div class="bs-desc">Discover how compliance accelerates revenue, enhances security, and turns trust into a competitive advantage.</div>
+                    </div>
+                    <div class="bs-cards-container">
+                        <div class="bs-card">
+                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
+                            <div class="bs-card-title">Unblock Sales</div>
+                            <div class="bs-card-desc">No one wants to work with a security risk. Get compliant to earn trust and expedite the sales process.</div>
+                        </div>
+                         <div class="bs-card">
+                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721176526/drata/28001/icon_2.svg" alt="Secure Funding"></div>
+                            <div class="bs-card-title">Secure Funding</div>
+                            <div class="bs-card-desc">Investors don’t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
+                        </div>
+                         <div class="bs-card">
+                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721176526/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
+                            <div class="bs-card-title">Unlock Expansion</div>
+                            <div class="bs-card-desc">Meet enterprise and regulatory requirements to expand into larger deals and new markets.</div>
+                        </div>
+                         <div class="bs-card">
+                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721176526/drata/28001/icon_4.svg" alt="Reduce Risk"></div>
+                            <div class="bs-card-title">Reduce Risk</div>
+                            <div class="bs-card-desc">Startups can't afford risks. Achieve compliance to avoid costly penalties and fines.</div>
+                        </div>
+                    </div>
+                </div>
+            </section>`);
+
+        simpleSteps();
+    }
+
     function simpleSteps() {
         if (document.querySelector('.simple-steps-sec')) return;
 
-        document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', `
+        document.querySelector('.benefits-sec').insertAdjacentHTML('afterend', `
             <section class="simple-steps-sec">
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
@@ -321,7 +389,7 @@
                 </div>
             </section>`);
 
-            customerReviews();
+        customerReviews();
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
         document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
             item.addEventListener('mouseover', function () {
