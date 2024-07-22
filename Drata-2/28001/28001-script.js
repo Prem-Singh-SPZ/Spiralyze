@@ -247,12 +247,14 @@
     }
 
     function heroChanges() {
-        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
-        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
-        if (!document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container')) {
-            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta"><span>Download SOC 2 Guide</span></a></div>`)
-            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
-        }
+        waitForElm('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]').then(function () {
+            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
+            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
+            if (!document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container')) {
+                document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta"><span>Download SOC 2 Guide</span></a></div>`)
+                document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
+            }
+        });
     }
 
     function spzNavBar() {
@@ -414,18 +416,79 @@
     }
 
     function complianceChanges() {
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin',`<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won’t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
+        waitForElm('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]').then(function () {
+            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin', `<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
+            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
+            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won’t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
 
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"]').insertAdjacentHTML('beforeend', `<div class="cs-bg-img"></div>`);
+
+            let title = document.querySelectorAll('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]');
+            let content = document.querySelectorAll('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-itemDetails"] p[data-testid*="Text-body"]');
+
+            title[0].textContent = "Kickstart Compliance";
+            content[0].textContent = "Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata’s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.";
+
+            title[1].textContent = "Reduce Compliance Time by 80%";
+            content[1].textContent = "With hundreds of integrations, Drata automatically collects compliance evidence for you. That means less digging through tools, taking screenshots, and updating spreadsheets.";
+
+            title[2].textContent = "Track Your Progress";
+            content[2].textContent = "Get complete visibility into your compliance program. Track everything in one place, get alerts for risks, see upcoming tasks, and always be ready to report your status to investors or customers.";
+
+            title[3].textContent = "Rinse & Repeat";
+            content[3].textContent = "Make your next audit even easier by maintaining compliance year-round. With daily tests that validate controls and keep you compliant, you’ll have non-stop peace of mind while eliminating “audit season” scrambles.";
+        });
+
+
+        meetDrata();
+    }
+
+    function meetDrata() {
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"]').insertAdjacentHTML('afterend', `
+            <section class="meet-drata">
+                <div class="md-container">
+                <div class="md-title-container">
+                    <div class="md-title">Meet Drata, Your One-Stop-Shop For Compliance</div>
+                    <div class="md-desc">Because it takes more than software to get compliant.</div>
+                </div>
+                <div class="md-content">
+                        <div class="md-top-section d-flex">
+                            <div class="md-left">
+                                <div class="md-img-wr">
+                                    <img src="${astUrl}/f_auto/drata/28001/hero.webp" alt="Drata Hero Image" title="Drata Hero Image">
+                                </div>
+                            </div>
+                            <div class="md-right">
+                                <div class="md-card">
+                                    <div class="md-card-title">Automated Compliance</div>
+                                    <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
+                                    <a href="https://drata.com/platform/startup" class="md-card-cta">Learn More</a>
+                                </div>
+                                 <div class="md-card">
+                                    <div class="md-card-title">Automated Compliance</div>
+                                    <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
+                                    <a href="https://drata.com/platform/startup" class="md-card-cta">Learn More</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="md-bottom-section">
+                          <div class="md-card">
+                                    <div class="md-card-title">Automated Compliance</div>
+                                    <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
+                                    <a href="https://drata.com/platform/startup" class="md-card-cta">Learn More</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>`);
 
         customerReviews();
     }
 
     function customerReviews() {
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"]').insertAdjacentHTML('afterend', `
+        document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
             <section class="cr-section">
                 <div class="title-wrapper">
                     <h3 class="large-title">Don't Take Our Word for It</h3>
