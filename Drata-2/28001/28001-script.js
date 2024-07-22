@@ -1,5 +1,5 @@
 (function () {
-    const astUrl = '//res.cloudinary.com/spiralyze/image/upload';
+    const astUrl = '//res.cloudinary.com/spiralyze/image/upload/';
 
     // Convert customer reviews section to dynamic JSON data
     const custReviews = [
@@ -249,8 +249,10 @@
     function heroChanges() {
         document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
         document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
-        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta"><span>Download SOC 2 Guide</span></a></div>`)
-        document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
+        if (!document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container')) {
+            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta"><span>Download SOC 2 Guide</span></a></div>`)
+            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
+        }
     }
 
     function spzNavBar() {
@@ -273,7 +275,6 @@
         benefits();
     }
 
-    //add Compliance Benefits section after navbar
     function benefits() {
         if (document.querySelector('.benefits-sec')) return;
 
@@ -287,22 +288,22 @@
                     </div>
                     <div class="bs-cards-container">
                         <div class="bs-card">
-                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
+                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
                             <div class="bs-card-title">Unblock Sales</div>
                             <div class="bs-card-desc">No one wants to work with a security risk. Get compliant to earn trust and expedite the sales process.</div>
                         </div>
                          <div class="bs-card">
-                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721176526/drata/28001/icon_2.svg" alt="Secure Funding"></div>
+                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_2.svg" alt="Secure Funding"></div>
                             <div class="bs-card-title">Secure Funding</div>
                             <div class="bs-card-desc">Investors don’t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
                         </div>
                          <div class="bs-card">
-                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721176526/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
+                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
                             <div class="bs-card-title">Unlock Expansion</div>
                             <div class="bs-card-desc">Meet enterprise and regulatory requirements to expand into larger deals and new markets.</div>
                         </div>
                          <div class="bs-card">
-                            <div class="bs-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721176526/drata/28001/icon_4.svg" alt="Reduce Risk"></div>
+                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_4.svg" alt="Reduce Risk"></div>
                             <div class="bs-card-title">Reduce Risk</div>
                             <div class="bs-card-desc">Startups can't afford risks. Achieve compliance to avoid costly penalties and fines.</div>
                         </div>
@@ -321,15 +322,13 @@
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
                         <div class="ss-left">
-                            <div class="ss-subtitle">How Drata Works</div>
-                            <h2 class="ss-title">SOC 2 in 3 Simple Steps</h2>
+                            <div class="ss-subtitle">How to Become Compliant</div>
+                            <h2 class="ss-title">Get Compliant in 3 Simple Steps</h2>
                         </div>
                         <div class="ss-right">
-                            <div class="ss-text">Get full visibility into your compliance status so you can stay on top of risks,
-                                action items, and audit readiness.</div>
+                            <div class="ss-text"><span class="red-txt">Manual:</span> Traditional compliance is like doing taxes by hand, tedious and error-prone, involving screenshots and spreadsheets to collect compliance evidence.</div>
                             <div class="ss-divider"></div>
-                            <div class="ss-text">When compliance gets confusing, get step-by-step guidance and access to live
-                                support 24/5.</div>
+                            <div class="ss-text"><span class="grn-txt">Automated:</span> Imagine a program doing all that work for you. Compliance automation reduces manual tasks, tracks progress, and organizes your documents for auditors to reduce time and human error.</div>
                         </div>
                     </div>
                     <div class="ssc-contents">
@@ -344,52 +343,48 @@
                                     <div class="ss-step step-1">1</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/14007/collect_1.webp"
-                                                class="ss-img" alt="Configure Your Compliance Needs"
-                                                title="Configure Your Compliance Needs">
+                                            <img src="${astUrl}/f_auto/drata/28001/configure.webp"
+                                                class="ss-img" alt="Identify Needs"
+                                                title="Identify Needs">
                                         </div>
-                                        <div class="ss-title">Configure Your Compliance Needs</div>
-                                        <div class="ss-desc">Get started with 23+ framework templates, all pre-mapped with
-                                            auditor-validated controls.</div>
+                                        <div class="ss-title">Identify Needs</div>
+                                        <div class="ss-desc">Assess regulatory needs, the markets you serve, and your business goals. Then, select an appropriate framework.</div>
                                     </div>
                                 </div>
                                 <div class="ss-item step-2">
                                     <div class="ss-step step-2">2</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/14007/collect_2.webp"
-                                                class="ss-img" alt="Collect Evidence Automatically"
-                                                title="Collect Evidence Automatically">
+                                            <img src="${astUrl}/f_auto/drata/28001/collect.webp"
+                                                class="ss-img" alt="Implement Controls"
+                                                title="Implement Controls">
                                         </div>
-                                        <div class="ss-title">Collect Evidence Automatically</div>
-                                        <div class="ss-desc">Drata collects and stores compliance evidence and documentation for you
-                                            using native integrations with your tech stack.</div>
+                                        <div class="ss-title">Implement Controls</div>
+                                        <div class="ss-desc">Map the controls (policies, procedures, training) for your chosen framework, then collect evidence of their effectiveness.</div>
                                     </div>
                                 </div>
                                 <div class="ss-item step-3">
                                     <div class="ss-step step-3">3</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/14007/collect.webp"
-                                                class="ss-img" alt="Crush the Audit" title="Crush the Audit">
+                                            <img src="${astUrl}/f_auto/drata/28001/audit.webp"
+                                                class="ss-img" alt="Ace the Audit" title="Ace the Audit">
                                         </div>
-                                        <div class="ss-title">Crush the Audit</div>
-                                        <div class="ss-desc">Reduce back-and-forth with auditors, automate evidence requests, and
-                                            share documentation instantly to streamline the process.</div>
+                                        <div class="ss-title">Ace the Audit</div>
+                                        <div class="ss-desc">Engage with a third-party auditor to formally review if your controls are effective and meet requirements, receiving a report if successful.</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="ss-bottom-bar">
-                                <div class="ssb-title">Continuous Control Monitoring</div>
-                                <div class="ssb-subtitle">Continuous tests ensure you’re in compliance before and after the audit
-                                    for year-round peace of mind.</div>
+                                <div class="ssb-title">Compliance Upkeep</div>
+                                <div class="ssb-subtitle">Compliance shouldn’t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
                             </div>
                         </div>
                     </div>
                 </div>
             </section>`);
 
-        customerReviews();
+        complianceChanges();
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
         document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
             item.addEventListener('mouseover', function () {
@@ -418,8 +413,19 @@
         });
     }
 
+    function complianceChanges() {
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin',`<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won’t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
+
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+
+        customerReviews();
+    }
+
     function customerReviews() {
-        document.querySelector('.simple-steps-sec').insertAdjacentHTML('afterend', `
+        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"]').insertAdjacentHTML('afterend', `
             <section class="cr-section">
                 <div class="title-wrapper">
                     <h3 class="large-title">Don't Take Our Word for It</h3>

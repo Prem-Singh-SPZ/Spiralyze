@@ -24,12 +24,12 @@ html {
 body.spz-28001 {
   // overflow-x: hidden;
 
-  // section[variant="collectionCustomerLogosSectionWrapper"],
-  // section[variant="globalCta"]:not(:last-child),
-  // section[variant="collectionContentSectionWrapper"],
-  // .case-studies-section + [class$="HeroSubpage-root"] {
-  //   display: none;
-  // }
+  main {
+    > section[variant="collectionThreePerRowSectionWrapper"] {
+      display: none;
+    }
+  }
+
   .dis-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -590,7 +590,6 @@ body.spz-28001 {
   }
   // Simple Steps Section Ends
 
-
   // Customer Reviews Section Starts
   .cr-section {
     background: #eef2f6;
@@ -1020,7 +1019,6 @@ body.spz-28001 {
     }
   }
   // Customer Reviews Section Ends
-
 
   // Resources Section Starts
   .resources-section {
