@@ -4,43 +4,32 @@
     // Convert customer reviews section to dynamic JSON data
     const custReviews = [
         {
-            name: "Tor Fusdahl",
-            designation: "Engineering Manager",
-            company: "Superside",
-            companyLogo: astUrl + "/fl_sanitize/drata/14007/logo.svg",
-            avatar: astUrl + "/f_auto/drata/14007/image_01.webp",
-            title: "Saves Our Team Hundreds of Hours",
-            review: "With Drata, we can quickly achieve SOC 2 compliance without disrupting our flow of business. Makes compliance easy. Puts us on the fast track.",
-            link: "https://drata.com/customers/superside"
+            name: "SOC 2",
+            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_soc_2.svg",
+            title: "Achieve SOC 2 5x Faster",
+            review: "Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers’ private data stays private.",
+            link: "https://drata.com/product/soc-2"
         },
         {
-            name: "Joshua Peskay",
-            designation: "vCIO",
-            company: "RedRover",
-            companyLogo: astUrl + "/fl_sanitize/drata/14007/redrover.svg",
-            avatar: astUrl + "/f_auto/drata/14007/image_02.webp",
-            title: "Limousine for Your Compliance Journey",
-            review: "Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.",
+            name: "ISO 27001",
+            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_iso_27001.svg",
+            title: "ISO 27001, So Easy",
+            review: "Go global with this internationally respected framework. Accelerate your journey with a platform that satisfies ISO 27001 requirements for systematic information security management.",
+            link: "https://drata.com/product/iso-27001"
         },
         {
-            name: "Jonathan Jaffe",
-            designation: "CISO",
-            company: "Lemonade",
-            companyLogo: astUrl + "/fl_sanitize/drata/14007/lemonade.svg",
-            avatar: astUrl + "/f_auto/drata/14007/image_04.webp",
-            title: "We Saved 80% of Time With Drata",
-            review: "I’ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I’m able to make my own control framework.",
-            link: "https://drata.com/customers/lemonade"
+            name: "PCI DSS",
+            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_pci_1.svg",
+            title: "Make PCI a Piece of Cake",
+            review: "Get paid, not played. Drata automates the processes required to prove secure credit card payment systems, significantly reducing the chance of human error.",
+            link: "https://drata.com/product/pci-dss"
         },
         {
-            name: "Chris Bake",
-            designation: "CTO",
-            company: "Apple NextEd",
-            companyLogo: astUrl + "/fl_sanitize/drata/14007/nextEd.svg",
-            avatar: astUrl + "/f_auto/drata/14007/image_05.webp",
-            title: "Time savings and impact on sales are immediate",
-            review: "SOC 2 brings about a lot of questions around time, cost, resources, and requirements. For us, automating the path to compliance was the clear answer, and Drata has been exceptional in easeing this journey for us.",
-            link: "https://drata.com/customers/apl-nexted"
+            name: "HIPAA",
+            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_hipaa.svg",
+            title: "Avoid HIPAA Hiccups",
+            review: "By automating compliance tasks, Drata helps ensure continuous protection of patient data as required by HIPAA, while expert support helps navigate complex regulations.",
+            link: "https://drata.com/product/hipaa"
         }
     ];
 
@@ -94,6 +83,11 @@
             document.querySelector("body").classList.add("spz-28001");
 
             waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
+
+                document.querySelectorAll('main[data-csk-entry-field="contents"] > section').forEach(function (section, index) {
+                    section.classList.add('control-section-' + index);
+                });
+
                 heroChanges();
                 spzNavBar();
             });
@@ -278,8 +272,6 @@
     }
 
     function benefits() {
-        if (document.querySelector('.benefits-sec')) return;
-
         document.querySelector('.spz-navbar').insertAdjacentHTML('afterend', `
             <section class="benefits-sec">
                 <div class="benefits-container">
@@ -317,8 +309,6 @@
     }
 
     function simpleSteps() {
-        if (document.querySelector('.simple-steps-sec')) return;
-
         document.querySelector('.benefits-sec').insertAdjacentHTML('afterend', `
             <section class="simple-steps-sec">
                 <div class="simple-steps-container">
@@ -416,17 +406,17 @@
     }
 
     function complianceChanges() {
-        waitForElm('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]').then(function () {
-            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin', `<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
-            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
-            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won’t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
+        waitForElm('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]').then(function () {
+            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin', `<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
+            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
+            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won’t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
 
-            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
-            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
-            document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"]').insertAdjacentHTML('beforeend', `<div class="cs-bg-img"></div>`);
+            document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+            document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
+            document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"]').insertAdjacentHTML('beforeend', `<div class="cs-bg-img"></div>`);
 
-            let title = document.querySelectorAll('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]');
-            let content = document.querySelectorAll('section[variant="contentAccordionDefaultSectionWrapper"] [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-itemDetails"] p[data-testid*="Text-body"]');
+            let title = document.querySelectorAll('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]');
+            let content = document.querySelectorAll('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-itemDetails"] p[data-testid*="Text-body"]');
 
             title[0].textContent = "Kickstart Compliance";
             content[0].textContent = "Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata’s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.";
@@ -446,7 +436,9 @@
     }
 
     function meetDrata() {
-        document.querySelector('section[variant="contentAccordionDefaultSectionWrapper"]').insertAdjacentHTML('afterend', `
+        if (document.querySelector('.meet-drata')) return;
+
+        document.querySelector('.control-section-1').insertAdjacentHTML('afterend', `
             <section class="meet-drata">
                 <div class="md-container">
                 <div class="md-title-container">
@@ -454,7 +446,7 @@
                     <div class="md-desc">Because it takes more than software to get compliant.</div>
                 </div>
                 <div class="md-content">
-                        <div class="md-top-section d-flex">
+                        <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-img-wr">
                                     <img src="${astUrl}/f_auto/drata/28001/hero.webp" alt="Drata Hero Image" title="Drata Hero Image">
@@ -514,87 +506,215 @@
             initSlider();
         }
 
+        customerStories();
+    }
+
+    function customerStories() {
+        document.querySelector('.cr-section').insertAdjacentHTML('afterend', `<section class="cs-section">
+            <div class="cs-container dis-flex">
+                <div class="cs-left-copy">
+                    <p class="cs-eyebrow">Compliance Automation</p>
+                    <h2 class="cs-title">Automate Compliance, Accelerate Growth</h2>
+                    <p class="cs-desc">Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers’ private data stays private.</p>
+                    <a href="https://drata.com/platform/startup" class="cs-cta">Learn More</a>
+                </div>
+                <div class="cs-right-video">
+                    <div class="thumb-img">
+                      <img src="${astUrl}/f_auto/drata/28001/video_image.webp" alt="Drata Video" title="Drata Video">
+                    </div>
+                </div>
+            </div>
+        </section>`);
+
+        waitForElm('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe').then(function () {
+            document.querySelector('.cs-section .cs-right-video').insertAdjacentElement('afterbegin', document.querySelector('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe'));
+        });
+
+        whyDrata();
+    }
+
+    function whyDrata() {
+        if (document.querySelector('.spz-title-container')) return;
+
+        document.querySelector('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').innerHTML = `<div class="spz-title-container">
+        <h6 class="ing-sub-title">Why Drata?</h6>
+        <h2 class="ing-sec-title">We Deliver Results for Customers</h2>
+        <div class="ing-stats-section dis-flex">
+        <div class="ing-stats">
+        <h1>4x</h1>
+        <span class="ing-spn">Customer Satisfaction Rate</span></div>
+        <div class="line">&nbsp;</div>
+        <div class="ing-stats">
+        <h1>5x</h1>
+        <span class="ing-spn">Faster Compliance Management</span></div>
+        <div class="line">&nbsp;</div>
+        <div class="ing-stats">
+        <h1>9.4</h1>
+        <span class="ing-spn">G2 Ease-of-Use Rating</span></div>
+        </div>
+        </div>`;
+
+        globalCTA();
+    }
+
+    function globalCTA() {
+        if (document.querySelector('.demo-cta-section')) return;
+
+        document.querySelector('.control-section-8').insertAdjacentHTML('afterend', `<section class="demo-cta-section">
+            <div class="demo-cta-container">
+                <div class="cta-desc">Start Your Compliance Journey Today</div>
+                <a href="https://drata.com/demo" class="cta-btn">Request a Demo</a>
+            </div>
+        </section>`);
+
         resourceSection();
     }
 
     function resourceSection() {
-        document.querySelector('.cr-section').insertAdjacentHTML('afterend', `
+        document.querySelector('.demo-cta-section').insertAdjacentHTML('afterend', `
         <section class="resources-section">
             <div class="resources-wrapper">
                 <div class="resource-title">
-                    <h6 class="title">Stay Up to Date with the Latest SOC 2 Resources</h6>
-                    <div class="explore-more">
-                        <a href="https://drata.com/grc-central/soc-2" class="ex-more">Explore More 
-                            <svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8"></path>
-                            </svg>
-                        </a>
-                    </div>
+                    <h6 class="title">Compliance 101 Resources for Startups</h6>
+                    <p class="sub-title">Learn the lingo, understand key benefits, and dive into the basics of compliance with these guides and articles.</p>
                 </div>
 
                 <div class="resource-cards">
                     <div class="resource-card">
                         <a href="https://drata.com/resources/soc-2-guide" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/14007/01.webp"
-                                    alt="SOC 2 Compliance Checklist">
+                                <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
+                                    alt="SOC 2 Beginners Guide">
                             </div>
                             <div class="card-content">
-                                <div class="card-title">ARTICLE</div>
-                                <div class="card-desc">Start-to-Finish Guide on SOC 2 Compliance</div>
+                                <div class="card-title">SOC 2 Beginners Guide</div>
+                                <div class="card-desc">Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.</div>
+                            </div>
+                            <div class="learn-more">
+                               learn-more
                             </div>
                         </a>
                     </div>
                     <div class="resource-card">
                         <a href="https://drata.com/grc-central/soc-2/compliance-checklist#heading-soc-2-compliance-checklist" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/14007/02.webp"
-                                    alt="SOC 2 Compliance Checklist">
+                                <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
+                                    alt="8 Easy Steps to Get Started with ISO 27001">
                             </div>
                             <div class="card-content">
-                                <div class="card-title">ARTICLE</div>
-                                <div class="card-desc">SOC 2 Compliance Checklist: 9 Key Steps To Take</div>
+                                <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
+                                <div class="card-desc">Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.</div>
+                            </div>
+                             <div class="learn-more">
+                               learn-more
                             </div>
                         </a>
                     </div>
                     <div class="resource-card">
                         <a href="https://drata.com/grc-central/soc-2/questions-to-ask-an-auditor" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/14007/03.webp"
-                                    alt="SOC 2 Compliance Checklist">
+                                <img src="${astUrl}/f_auto/drata/28001/image_03.webp"
+                                    alt="Learn About the Cost of Non-Compliance">
                             </div>
                             <div class="card-content">
-                                <div class="card-title">ARTICLE</div>
-                                <div class="card-desc">Audit Your Auditor: 5 Questions to Ask a Potential Auditor</div>
+                                <div class="card-title">Learn About the Cost of Non-Compliance</div>
+                                <div class="card-desc">Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.</div>
+                            </div>
+                             <div class="learn-more">
+                               learn-more
                             </div>
                         </a>
                     </div>
                     <div class="resource-card">
                         <a href="https://drata.com/resources/webinars/5-internal-threats-to-your-compliance-program" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/14007/04.webp"
-                                    alt="SOC 2 Compliance Checklist">
+                                <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
+                                    alt="SOC 2 Audits: What You Can Expect from Start to Finish">
                             </div>
                             <div class="card-content">
-                                <div class="card-title">ARTICLE</div>
-                                <div class="card-desc">5 Internal Threats to Your Compliance Program and How to Solve for Them</div>
+                                <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
+                                <div class="card-desc">Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.</div>
+                            </div>
+                             <div class="learn-more">
+                               learn-more
                             </div>
                         </a>
                     </div>
                 </div>
-                <div class="explore-more mob-only">
-                    <a href="https://drata.com/grc-central/soc-2" class="ex-more">Explore More 
-                        <svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8"></path>
-                        </svg>
-                    </a>
-                </div>
             </div>
         </section>`);
+
+        complianceFAQ();
     }
+
+    function complianceFAQ() {
+        document.querySelector('.resources-section').insertAdjacentHTML('afterend', `
+            <section class="compliance-faq-section">
+                <div class="compliance-faq-container">
+                    <div class="left-container">
+                        <div class="accordion-wrapper">
+                            <div class="accordion accordion_1">
+                                <div class="accordion-item open">
+                                    <div class="accordion-title">What is compliance?</div>
+                                    <div class="accordion-content">Compliance is the act of adhering to laws, regulations, standards, or guidelines relevant to a specific industry or business. Compliance ensures that an organization is following the rules and regulations set forth by the governing body.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Why is compliance important?</div>
+                                    <div class="accordion-content">Compliance is important because it helps organizations maintain trust with customers, avoid legal issues, and protect sensitive data. Compliance also helps organizations avoid costly fines and penalties.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">What are the benefits of compliance?</div>
+                                    <div class="accordion-content">The benefits of compliance include increased trust with customers, improved security, reduced risk of data breaches, and protection against legal issues. Compliance can also help organizations expand into new markets and secure funding from investors.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">What is a compliance framework?</div>
+                                    <div class="accordion-content">A compliance framework is a structured set of guidelines, policies, and procedures that help organizations comply with specific laws, regulations, or standards. Compliance frameworks provide a roadmap for organizations to achieve and maintain compliance.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="right-container">
+                        <div class="accordion-wrapper">
+                            <div class="accordion accordion_2">
+                                <div class="accordion-item open">
+                                    <div class="accordion-title">What is compliance?</div>
+                                    <div class="accordion-content">Compliance is the act of adhering to laws, regulations, standards, or guidelines relevant to a specific industry or business. Compliance ensures that an organization is following the rules and regulations set forth by the governing body.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Why is compliance important?</div>
+                                    <div class="accordion-content">Compliance is important because it helps organizations maintain trust with customers, avoid legal issues, and protect sensitive data. Compliance also helps organizations avoid costly fines and penalties.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">What are the benefits of compliance?</div>
+                                    <div class="accordion-content">The benefits of compliance include increased trust with customers, improved security, reduced risk of data breaches, and protection against legal issues. Compliance can also help organizations expand into new markets and secure funding from investors.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">What is a compliance framework?</div>
+                                    <div class="accordion-content">A compliance framework is a structured set of guidelines, policies, and procedures that help organizations comply with specific laws, regulations, or standards. Compliance frameworks provide a roadmap for organizations to achieve and maintain compliance.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>`);
+
+        //write code for accordion functionality
+        const accordion = document.querySelector('.accordion_1');
+        const items = accordion.querySelectorAll('.accordion-item');
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                items.forEach(item => item.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+    };
 
     // Initialize slider
     function initSlider() {
+        let cardName = document.querySelectorAll('.swiper-slider .swiper-slide .card-name');
         const swiper = new Swiper(".swiper-slider", {
             // Optional parameters
             centeredSlides: true,
@@ -615,8 +735,11 @@
             // If we need pagination
             pagination: {
                 el: ".swiper-pagination",
-                dynamicBullets: false,
-                clickable: true
+                clickable: true,
+                renderBullet: function (index, className) {
+                    return '<span class="' + className + ' ' + cardName[index].textContent.replace(/\s/g, "") + '">' + (cardName[index].textContent) + "</span>";
+                },
+
             },
 
             // If we need navigation
@@ -644,32 +767,19 @@
             reviewsHTML += `
                 <div class="swiper-slide">
                     <div class="slider-card">
-                        <div class="slider-img">
-                            <img src="${review.avatar}" alt="${review.name}">
-                        </div>
                         <div class="slider-content">
                             <div class="text-copy">
-                                <h3 class="card-title">${review.title}</h3>
-                                <p class="card-desc">“${review.review}”</p>
+                                <div class="title-copy">
+                                    <p class="card-name">${review.name}</p>
+                                    <h3 class="card-title">${review.title}</h3>
+                                    <p class="card-desc">“${review.review}”</p>
+                                </div>
+                                <div class="c-logo ht-25 no-desk">
+                                        <img src="${review.companyLogo}" alt="${review.company}">
+                                </div>
                             </div>
                             <div class="card-footer">
-                                <div class="footer-logos">
-                                    <div class="c-logo">
-                                        <span style="font-weight: 700;color: #0C131A;">${review.name}</span>
-                                    </div>
-                                    <div class="c-line"></div>
-                                    <div class="c-logo">
-                                        <span style="font-weight: 500;color: #96A1B2;">${review.designation}</span>
-                                    </div>
-                                    <div class="c-line desk-only"></div>
-                                    <div class="c-logo ht-25 desk-only">
-                                        <img src="${review.companyLogo}" alt="${review.company}">
-                                    </div>
-                                </div>
                                 <div class="learn-more-cta">
-                                    <div class="c-logo ht-25 no-desk">
-                                        <img src="${review.companyLogo}" alt="${review.company}">
-                                    </div>
                                     ` + ((!review.link) ? '' : `
                                     <a href="${review.link}" class="learn-more" data-review="${review.review}">Learn More
                                         <svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
@@ -679,6 +789,9 @@
                                     `) + `
                                 </div>
                             </div>
+                        </div>
+                         <div class="slider-img">
+                            <img src="${review.avatar}" alt="${review.name}">
                         </div>
                     </div>
                 </div>`;
