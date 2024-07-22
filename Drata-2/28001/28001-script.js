@@ -491,8 +491,8 @@
         document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
             <section class="cr-section">
                 <div class="title-wrapper">
-                    <h3 class="large-title">Don't Take Our Word for It</h3>
-                    <p class="small-description">See how others your Drata to achieve and maintain SOC 2 compliance.</p>
+                    <p class="small-eyebrow">Pre-Built Templates</p>
+                    <h3 class="large-title">20+ Frameworks. None of the Grunt Work.</h3>
                 </div>
                 <div class="slider-section">
                     <div class="container slider-column">
@@ -506,8 +506,6 @@
                         <span class="swiper-btn-next"></span>
                     </div>
                 </div>
-                <div class="cta-wrapper"><a href="https://drata.com/customers" class="blue-cta-btn"><span>See All Stories</span>
-                    <img src="${astUrl}/fl_sanitize/drata/6009/arrow_icon.svg" class="button_arrow" alt="CTA Arrow" title="CTA Arrow"></a></div>
             </section>`);
 
 
