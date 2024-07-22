@@ -7,7 +7,7 @@
             name: "SOC 2",
             companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_soc_2.svg",
             title: "Achieve SOC 2 5x Faster",
-            review: "Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers’ private data stays private.",
+            review: "Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers&#8217; private data stays private.",
             link: "https://drata.com/product/soc-2"
         },
         {
@@ -36,7 +36,7 @@
 
     // FAQ section data
     const faq = [{
-        que: "We’re not planning on getting SOC 2 yet. Why should I use Drata?",
+        que: "We&#8217;re not planning on getting SOC 2 yet. Why should I use Drata?",
         ans: `<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Your security posture matters. SOC 2 is just one way to prove the effectiveness of your security program, but having a real-time view of your security controls is invaluable for any business.</p> <p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata is the most advanced continuous monitoring platform on the market to assess your security posture in real-time, every day. You can score your SOC 2 readiness here. Check out <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways mui-k61s3s-MuiTypography-root-MuiLink-root-Link-root" href="https://www.forbes.com/sites/troymarkowitz/2021/01/15/why-saas-start-ups-should-prioritize-soc-2-compliance/" target="_blank" rel="noopener noreferrer" data-testid="Text-hyperlink">this Forbes piece</a> written by our Co-Founder Troy Markowitz that discusses this further.</p>`
     },
     {
@@ -44,7 +44,7 @@
         ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata only gives auditors access to what they need in order to streamline the audit engagement. In the Auditor View, you control the level of access your auditor receives. You also dictate the time period that access covers, and the framework so auditors are only seeing evidence and test results of your controls during that specific time window.<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>"
     }, {
         que: "Why is the Auditor View important?",
-        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata was built alongside auditors to ensure you and the auditor have the best user experience. Today, most platforms enable an export of reports or access to the entire set of controls and data you have visibility into. While not every control is applicable to your environment, auditors can’t unsee the evidence you’ve collected, which is why it’s important to only display pertinent information in the Auditor-Only View.</p>"
+        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata was built alongside auditors to ensure you and the auditor have the best user experience. Today, most platforms enable an export of reports or access to the entire set of controls and data you have visibility into. While not every control is applicable to your environment, auditors can&#8217;t unsee the evidence you&#8217;ve collected, which is why it&#8217;s important to only display pertinent information in the Auditor-Only View.</p>"
     },
     {
         que: "Do I still need an auditor if I use Drata?",
@@ -289,7 +289,7 @@
                          <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_2.svg" alt="Secure Funding"></div>
                             <div class="bs-card-title">Secure Funding</div>
-                            <div class="bs-card-desc">Investors don’t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
+                            <div class="bs-card-desc">Investors don&#8217;t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
                         </div>
                          <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
@@ -369,7 +369,7 @@
                             </div>
                             <div class="ss-bottom-bar">
                                 <div class="ssb-title">Compliance Upkeep</div>
-                                <div class="ssb-subtitle">Compliance shouldn’t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
+                                <div class="ssb-subtitle">Compliance shouldn&#8217;t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
                             </div>
                         </div>
                     </div>
@@ -409,7 +409,7 @@
         waitForElm('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]').then(function () {
             document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin', `<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
             document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
-            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won’t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
+            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won&#8217;t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
 
             document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
             document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
@@ -419,7 +419,7 @@
             let content = document.querySelectorAll('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-itemDetails"] p[data-testid*="Text-body"]');
 
             title[0].textContent = "Kickstart Compliance";
-            content[0].textContent = "Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata’s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.";
+            content[0].textContent = "Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.";
 
             title[1].textContent = "Reduce Compliance Time by 80%";
             content[1].textContent = "With hundreds of integrations, Drata automatically collects compliance evidence for you. That means less digging through tools, taking screenshots, and updating spreadsheets.";
@@ -428,7 +428,7 @@
             content[2].textContent = "Get complete visibility into your compliance program. Track everything in one place, get alerts for risks, see upcoming tasks, and always be ready to report your status to investors or customers.";
 
             title[3].textContent = "Rinse & Repeat";
-            content[3].textContent = "Make your next audit even easier by maintaining compliance year-round. With daily tests that validate controls and keep you compliant, you’ll have non-stop peace of mind while eliminating “audit season” scrambles.";
+            content[3].textContent = "Make your next audit even easier by maintaining compliance year-round. With daily tests that validate controls and keep you compliant, you&#8217;ll have non-stop peace of mind while eliminating “audit season” scrambles.";
         });
 
 
@@ -515,7 +515,7 @@
                 <div class="cs-left-copy">
                     <p class="cs-eyebrow">Compliance Automation</p>
                     <h2 class="cs-title">Automate Compliance, Accelerate Growth</h2>
-                    <p class="cs-desc">Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers’ private data stays private.</p>
+                    <p class="cs-desc">Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers&#8217; private data stays private.</p>
                     <a href="https://drata.com/platform/startup" class="cs-cta">Learn More</a>
                 </div>
                 <div class="cs-right-video">
@@ -650,25 +650,26 @@
     function complianceFAQ() {
         document.querySelector('.resources-section').insertAdjacentHTML('afterend', `
             <section class="compliance-faq-section">
+                <div class="compliance-faq-title">
+                    <p class="small-eyebrow">Compliance FAQ</p>
+                    <h6 class="title">Your Questions, Answered</h6>
+                    <p class="sub-desc">With over 4,000 customers, we&#8217;ve heard a lot of compliance questions. Here are some common ones you might have when starting out.</p>
+                </div>
                 <div class="compliance-faq-container">
                     <div class="left-container">
                         <div class="accordion-wrapper">
                             <div class="accordion accordion_1">
                                 <div class="accordion-item open">
-                                    <div class="accordion-title">What is compliance?</div>
-                                    <div class="accordion-content">Compliance is the act of adhering to laws, regulations, standards, or guidelines relevant to a specific industry or business. Compliance ensures that an organization is following the rules and regulations set forth by the governing body.</div>
+                                    <div class="accordion-title">Why start compliance now?</div>
+                                    <div class="accordion-content">Starting compliance early is crucial because it becomes more challenging as your company scales. Eventually, customers, investors, and partners will ask for it, so being prepared in advance is beneficial. By building a strong compliance foundation now, you can scale more efficiently and with fewer resources in the future. Additionally, the compliance process takes time, and being proactive while there&#8217;s less at stake (funding and sales) can reduce stress later on.</div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">Why is compliance important?</div>
-                                    <div class="accordion-content">Compliance is important because it helps organizations maintain trust with customers, avoid legal issues, and protect sensitive data. Compliance also helps organizations avoid costly fines and penalties.</div>
+                                    <div class="accordion-title">What is the audit process? Is having Drata enough?</div>
+                                    <div class="accordion-content">It&#8217;s important to note that Drata does not conduct the audit itself. Instead, we simplify and automate the audit preparation process for you by mapping out requirements, collecting documentation, and organizing everything for the auditors. While we can&#8217;t act as auditors, we can help you find one through our vetted Audit Alliance network. This separation ensures your audit integrity and avoids any conflicts of interest.</div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">What are the benefits of compliance?</div>
-                                    <div class="accordion-content">The benefits of compliance include increased trust with customers, improved security, reduced risk of data breaches, and protection against legal issues. Compliance can also help organizations expand into new markets and secure funding from investors.</div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-title">What is a compliance framework?</div>
-                                    <div class="accordion-content">A compliance framework is a structured set of guidelines, policies, and procedures that help organizations comply with specific laws, regulations, or standards. Compliance frameworks provide a roadmap for organizations to achieve and maintain compliance.</div>
+                                    <div class="accordion-title">Do I still need to use Drata after I receive my audit?</div>
+                                    <div class="accordion-content">While you can stop using Drata after your audit, we don&#8217;t recommend it. Continuous compliance is crucial for several reasons. Firstly, compliance yesterday doesn&#8217;t guarantee compliance today, and your customers know this. They want to ensure their data is safe today, so a report from last quarter won&#8217;t cut it. Secondly, maintaining daily compliance through continuous monitoring helps improve overall security by identifying risks and failing controls promptly. Lastly, staying compliant year-round reduces the time and effort required for your next audit. By maintaining compliance (with minimal effort thanks to automation) throughout the year, you can avoid last-minute stress and make your next audit much smoother and more efficient.</div>
                                 </div>
                             </div>
                         </div>
@@ -677,20 +678,16 @@
                         <div class="accordion-wrapper">
                             <div class="accordion accordion_2">
                                 <div class="accordion-item open">
-                                    <div class="accordion-title">What is compliance?</div>
-                                    <div class="accordion-content">Compliance is the act of adhering to laws, regulations, standards, or guidelines relevant to a specific industry or business. Compliance ensures that an organization is following the rules and regulations set forth by the governing body.</div>
+                                    <div class="accordion-title">How long does the SOC 2 process take?</div>
+                                    <div class="accordion-content">The SOC 2 process timeline varies depending on the company&#8217;s size, complexity, and specific security needs. For a SOC 2 Type 1 report, the process can take anywhere from one month to six months. For a SOC 2 Type 2 report, it typically takes about six months to a year. Each company's journey is unique, so these timeframes can vary.</div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">Why is compliance important?</div>
-                                    <div class="accordion-content">Compliance is important because it helps organizations maintain trust with customers, avoid legal issues, and protect sensitive data. Compliance also helps organizations avoid costly fines and penalties.</div>
+                                    <div class="accordion-title">I&#8217;m not an expert. Can I manage compliance alone?</div>
+                                    <div class="accordion-content">Absolutely. That was our mission from day one. We provide pre-built frameworks, templates, and guides to make the process straightforward. With Drata, you can easily track your progress, see incomplete requirements, and ensure you&#8217;re on the right path. Plus, if you ever have questions, our compliance experts and 24/5 technical support are available to assist you.</div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">What are the benefits of compliance?</div>
-                                    <div class="accordion-content">The benefits of compliance include increased trust with customers, improved security, reduced risk of data breaches, and protection against legal issues. Compliance can also help organizations expand into new markets and secure funding from investors.</div>
-                                </div>
-                                <div class="accordion-item">
-                                    <div class="accordion-title">What is a compliance framework?</div>
-                                    <div class="accordion-content">A compliance framework is a structured set of guidelines, policies, and procedures that help organizations comply with specific laws, regulations, or standards. Compliance frameworks provide a roadmap for organizations to achieve and maintain compliance.</div>
+                                    <div class="accordion-title">What are the benefits of compliance even if we&#8217;re not planning to be audited?</div>
+                                    <div class="accordion-content">Even if you&#8217;re not planning an immediate audit, establishing a compliance program can enhance your security and streamline sales cycles. Many customers have found that even a basic compliance program demonstrates a commitment to security to investors and potential customers. Additionally, having this foundation gives you a significant advantage when you do decide to undergo an audit, typically when a big customer or investor requires it.</div>
                                 </div>
                             </div>
                         </div>
