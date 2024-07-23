@@ -1865,3 +1865,82 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
   -webkit-box-orient: vertical;
   -webkit-line-clamp: 3;
 }
+body.spz-28001 .compliance-faq-section {
+  padding: 96px 24px;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container {
+  max-width: 1280px;
+  margin: 0 auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 32px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 12px;
+  border: 1px solid #dde3eb;
+  background: #fff;
+  margin-bottom: 12px;
+  cursor: pointer;
+  position: relative;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item .accordion-title, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item .accordion-title {
+  height: 40px;
+  color: #0c131a;
+  font-family: "Inter", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 26px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item .accordion-content, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item .accordion-content {
+  color: #697586;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin-top: 12px;
+  display: none;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item::after, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item::after {
+  content: "";
+  position: absolute;
+  top: 28px;
+  right: 28px;
+  width: 40px;
+  height: 40px;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item:hover::after, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item:hover::after {
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_09.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item.open::after, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item.open::after {
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item.open .accordion-content, body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item.open .accordion-content {
+  display: block;
+}

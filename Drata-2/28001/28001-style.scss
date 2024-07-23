@@ -1882,4 +1882,90 @@ body.spz-28001 {
     }
   }
   // Resources Section Ends
+
+  //faq
+  .compliance-faq-section {
+    padding: 96px 24px;
+
+    .compliance-faq-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      display: flex;
+
+      .left-container, .right-container {
+        .accordion-wrapper {
+          .accordion {
+            .accordion-item {
+              display: flex;
+              padding: 32px;
+              flex-direction: column;
+              align-items: flex-start;
+              border-radius: 12px;
+              border: 1px solid #dde3eb;
+              background: #fff;
+              margin-bottom: 12px;
+              cursor: pointer;
+              position: relative;
+
+              .accordion-title {
+                height: 40px;
+                color: #0c131a;
+                font-family: $ff-inter;
+                font-size: 18px;
+                font-style: normal;
+                font-weight: 800;
+                line-height: 26px;
+                display: flex;
+                align-items: center;
+              }
+
+              .accordion-content {
+                color: #697586;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                margin-top: 12px;
+                display: none;
+              }
+
+              &::after {
+                content: "";
+                position: absolute;
+                top: 28px;
+                right: 28px;
+                width: 40px;
+                height: 40px;
+                background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")
+                  no-repeat;
+                background-size: cover;
+                background-repeat: no-repeat;
+                pointer-events: none;
+              }
+
+              &:hover::after {
+                background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_09.svg")
+                  no-repeat;
+                background-size: cover;
+                background-repeat: no-repeat;
+              }
+
+              &.open {
+                &::after {
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                }
+                .accordion-content {
+                  display: block;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 }
