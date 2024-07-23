@@ -74,7 +74,7 @@
     });
 
     //append to preload images
-    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/14007/slider-left-hover.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/14007/slider-right-hover.svg" as="image">`);
+    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_09.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/14007/slider-right-hover.svg" as="image">`);
 
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
@@ -245,7 +245,7 @@
             document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
             document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
             if (!document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container')) {
-                document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta"><span>Download SOC 2 Guide</span></a></div>`)
+                document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta">Download SOC 2 Guide</a></div>`)
                 document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
             }
         });
@@ -255,7 +255,7 @@
         if (document.querySelector('.spz-navbar')) return;
 
         document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar">
-            <div class="nav-container">
+            <div class="nav-container dis-flex justify-content-between align-items-center">
                 <div class="nav-logo">
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
@@ -275,12 +275,12 @@
         document.querySelector('.spz-navbar').insertAdjacentHTML('afterend', `
             <section class="benefits-sec">
                 <div class="benefits-container">
-                    <div class="bs-title">
+                    <div class="bs-title-container">
                             <div class="bs-eyebrow">Compliance Benefits</div>
                             <h2 class="bs-title">Why Comply? Security Secures Your Future.</h2>
                             <div class="bs-desc">Discover how compliance accelerates revenue, enhances security, and turns trust into a competitive advantage.</div>
                     </div>
-                    <div class="bs-cards-container">
+                    <div class="bs-cards-container justify-content-between dis-flex">
                         <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
                             <div class="bs-card-title">Unblock Sales</div>
@@ -406,39 +406,85 @@
     }
 
     function complianceChanges() {
-        waitForElm('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]').then(function () {
-            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').insertAdjacentHTML('beforebegin', `<p class="compliance-eyebrow">Beyond the Audit: Compliance Automation</p>`);
-            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] > p[class*="BlockText-title"]').textContent = "Invest in a Compliance Solution That Grows With You";
-            document.querySelector('.control-section-1 [class*="BlockText-contentOuterWrapper"] [class*="BlockText-content"] [class*="BlockText-body"] p[data-testid="Text-body1"]').textContent = "This might be your first audit, but it won&#8217;t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.";
+        document.querySelector('.simple-steps-sec').insertAdjacentHTML('afterend', `<section class="compliance-sec">
+            <div class="compliance-container">
+                <div class="c-title-container">
+                    <div class="c-eyebrow">Beyond the Audit: Compliance Automation</div>
+                    <h2 class="c-title">Invest in a Compliance Solution That Grows With You</h2>
+                    <div class="c-desc">This might be your first audit, but it won&#8217;t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.</div>
+                </div>
+                <div class="c-content dis-flex">
+                    <div class="c-left">
+                        <div class="accordion-wrapper">
+                            <div class="accordion accordion_1">
+                                <div class="accordion-item open">
+                                    <div class="accordion-title">Kickstart Compliance</div>
+                                    <div class="accordion-content">Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Reduce Compliance Time by 80%</div>
+                                    <div class="accordion-content">With hundreds of integrations, Drata automatically collects compliance evidence for you. That means less digging through tools, taking screenshots, and updating spreadsheets.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Track Your Progress</div>
+                                    <div class="accordion-content">Get complete visibility into your compliance program. Track everything in one place, get alerts for risks, see upcoming tasks, and always be ready to report your status to investors or customers.</div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Rinse & Repeat</div>
+                                    <div class="accordion-content">Make your next audit even easier by maintaining compliance year-round. With daily tests that validate controls and keep you compliant, you&#8217;ll have non-stop peace of mind while eliminating “audit season” scrambles.</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-right">
+                        <div class="c-img">
+                            <img src="${astUrl}/f_auto/drata/28001/frame_1000003381.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>`);
 
-            document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('src', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
-            document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] > img[class*="ContentAccordion-styledMedia"]').setAttribute('url', `${astUrl}/f_auto/drata/28001/frame_1000003381.webp`);
-            document.querySelector('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"]').insertAdjacentHTML('beforeend', `<div class="cs-bg-img"></div>`);
+        //write code for accordion functionality
+        const accordion = document.querySelector('.accordion_1');
+        const items = accordion.querySelectorAll('.accordion-item');
+        items.forEach(item => {
+            item.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                items.forEach(item => item.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+                else {
+                    item.classList.add('open');
 
-            let title = document.querySelectorAll('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-title"]');
-            let content = document.querySelectorAll('.control-section-1 [class*="ContentAccordion-contentOuterWrapper"] [class*="ContentAccordion-contentContainer"] [class*="CollectionAccordion-root"] [class*="CollectionAccordion-itemsContainer"] [class*="CollectionAccordion-itemDetails"] p[data-testid*="Text-body"]');
+                }
 
-            title[0].textContent = "Kickstart Compliance";
-            content[0].textContent = "Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.";
-
-            title[1].textContent = "Reduce Compliance Time by 80%";
-            content[1].textContent = "With hundreds of integrations, Drata automatically collects compliance evidence for you. That means less digging through tools, taking screenshots, and updating spreadsheets.";
-
-            title[2].textContent = "Track Your Progress";
-            content[2].textContent = "Get complete visibility into your compliance program. Track everything in one place, get alerts for risks, see upcoming tasks, and always be ready to report your status to investors or customers.";
-
-            title[3].textContent = "Rinse & Repeat";
-            content[3].textContent = "Make your next audit even easier by maintaining compliance year-round. With daily tests that validate controls and keep you compliant, you&#8217;ll have non-stop peace of mind while eliminating “audit season” scrambles.";
+                updateImgHeight();
+            });
         });
 
-
+        updateImgHeight();
         meetDrata();
+    }
+
+    //check if window is resized
+    window.addEventListener('resize', function () {
+        updateImgHeight();
+    });
+
+    function updateImgHeight() {
+        //calculate height of .accordion-wrapper and set it to .accordion
+        const accordionWrapper = document.querySelector('.accordion-wrapper');
+        const accordionImg = document.querySelector('.c-right .c-img img');
+        const accordionHeight = accordionWrapper.offsetHeight;
+        accordionImg.style.height = accordionHeight + 'px';
     }
 
     function meetDrata() {
         if (document.querySelector('.meet-drata')) return;
 
-        document.querySelector('.control-section-1').insertAdjacentHTML('afterend', `
+        document.querySelector('.compliance-sec').insertAdjacentHTML('afterend', `
             <section class="meet-drata">
                 <div class="md-container">
                 <div class="md-title-container">
@@ -658,7 +704,7 @@
                 <div class="compliance-faq-container">
                     <div class="left-container">
                         <div class="accordion-wrapper">
-                            <div class="accordion accordion_1">
+                            <div class="accordion accordion_2">
                                 <div class="accordion-item open">
                                     <div class="accordion-title">Why start compliance now?</div>
                                     <div class="accordion-content">Starting compliance early is crucial because it becomes more challenging as your company scales. Eventually, customers, investors, and partners will ask for it, so being prepared in advance is beneficial. By building a strong compliance foundation now, you can scale more efficiently and with fewer resources in the future. Additionally, the compliance process takes time, and being proactive while there&#8217;s less at stake (funding and sales) can reduce stress later on.</div>
@@ -676,7 +722,7 @@
                     </div>
                     <div class="right-container">
                         <div class="accordion-wrapper">
-                            <div class="accordion accordion_2">
+                            <div class="accordion accordion_3">
                                 <div class="accordion-item open">
                                     <div class="accordion-title">How long does the SOC 2 process take?</div>
                                     <div class="accordion-content">The SOC 2 process timeline varies depending on the company&#8217;s size, complexity, and specific security needs. For a SOC 2 Type 1 report, the process can take anywhere from one month to six months. For a SOC 2 Type 2 report, it typically takes about six months to a year. Each company's journey is unique, so these timeframes can vary.</div>
@@ -696,7 +742,7 @@
             </section>`);
 
         //write code for accordion functionality
-        const accordion = document.querySelector('.accordion_1');
+        const accordion = document.querySelector('.accordion_2');
         const items = accordion.querySelectorAll('.accordion-item');
         items.forEach(item => {
             item.addEventListener('click', () => {

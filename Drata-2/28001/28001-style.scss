@@ -23,15 +23,6 @@ html {
 
 body.spz-28001 {
   // overflow-x: hidden;
-
-  main {
-    > section[class*="control-section"]:not(.control-section-1):not(
-        .control-section-8
-      ) {
-      display: none;
-    }
-  }
-
   .dis-flex {
     display: -webkit-box;
     display: -ms-flexbox;
@@ -106,6 +97,12 @@ body.spz-28001 {
     }
   }
 
+  main {
+    > section[class*="control-section"]:not(.control-section-8) {
+      display: none;
+    }
+  }
+
   // Hero Section Starts
   [class*="HeroSubpage-root"] {
     [class*="HeroSubpage-content"] {
@@ -131,14 +128,180 @@ body.spz-28001 {
         letter-spacing: -1.28px;
         margin: 0 0 16px;
       }
+
+      [class*="HeroSubpage-body"] p {
+        color: #b2e0ff;
+        text-align: center;
+        font-family: $ff-inter;
+        font-size: 20px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 28px;
+        margin: 0 0 38px;
+      }
+
+      .hero-cta-container {
+        .hero-blue-cta {
+          border-radius: 12px;
+          border: 1px solid rgba(255, 255, 255, 0.3);
+          color: #fff;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 24px;
+          display: flex;
+          height: 48px;
+          padding: 10px 20px;
+          justify-content: center;
+          align-items: center;
+          text-decoration: none;
+
+          &:hover {
+            background: rgba(255, 255, 255, 0.1);
+          }
+
+          &:active {
+            background: rgba(255, 255, 255, 0.1);
+            box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.3);
+          }
+        }
+      }
     }
   }
   // Hero Section ends
 
+  //spz nav bar starts
+  .spz-navbar {
+    height: 80px;
+    border-bottom: 1px solid #dde3eb;
+    background: #fff;
+    padding: 16px 24px;
+    position: sticky;
+    top: 0;
+    z-index: 99;
+
+    .nav-container {
+      max-width: 1280px;
+      margin: 0 auto;
+      height: 100%;
+
+      .nav-links {
+        .nav-anchor {
+          color: #485665;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 14px;
+          font-style: normal;
+          font-weight: 600;
+          line-height: 20px;
+          text-decoration: none;
+          margin-left: 24px;
+          padding: 4px 0;
+
+          &.active {
+            border-bottom: 2px solid #0580e8;
+          }
+        }
+      }
+    }
+  }
+  //spz nav bar ends
+
+  //benefits section starts
+  .benefits-sec {
+    padding: 96px 24px;
+
+    .benefits-container {
+      max-width: 1280px;
+      margin: 0 auto;
+
+      .bs-title-container {
+        margin-bottom: 64px;
+        .bs-eyebrow {
+          color: #0580e8;
+          font-family: $ff-inter;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+          margin: 0 0 16px;
+        }
+
+        .bs-title {
+          color: #000;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 42px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 48px;
+          letter-spacing: -0.84px;
+          max-width: 628.059px;
+          margin: 0 auto 16px;
+        }
+
+        .bs-desc {
+          color: #485665;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          max-width: 673.352px;
+          margin: 0 auto;
+        }
+      }
+
+      .bs-cards-container {
+        .bs-card {
+          display: flex;
+          max-width: calc(25% - 24px);
+          width: 100%;
+          padding: 32px;
+          flex-direction: column;
+          align-items: flex-start;
+          border-radius: 12px;
+          border: 1px solid #dde3eb;
+          background: #fff;
+
+          .bs-card-img {
+            width: 56px;
+            height: 56px;
+            margin-bottom: 24px;
+          }
+
+          .bs-card-title {
+            color: #1d252e;
+            font-family: $ff-inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 800;
+            line-height: 24px;
+            margin: 0 0 12px;
+          }
+
+          .bs-card-desc {
+            color: #485665;
+            font-family: $ff-inter;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+          }
+        }
+      }
+    }
+  }
+  //benefits section ends
+
   // Simple Steps Section Starts
   .simple-steps-sec {
     background-color: #f6f8fa;
-    padding: 96px;
+    padding: 96px 24px;
 
     @media (max-width: 1200px) {
       padding: 96px 24px;
@@ -206,26 +369,26 @@ body.spz-28001 {
           .ss-subtitle {
             color: #0580e8;
             font-family: $ff-inter;
-            font-size: 18px;
+            font-size: 16px;
             font-style: normal;
-            font-weight: 600;
-            line-height: 26px;
+            font-weight: 700;
+            line-height: 24px;
 
-            @media (max-width: 1023.98px) {
-              font-size: 18px;
-              line-height: 26px;
-            }
+            // @media (max-width: 1023.98px) {
+            //   font-size: 18px;
+            //   line-height: 26px;
+            // }
           }
 
           .ss-title {
-            color: #0c131a;
+            color: #000;
             font-family: $ff-inter;
-            font-size: 54px;
+            font-size: 42px;
             font-style: normal;
             font-weight: 900;
-            line-height: 64px;
-            letter-spacing: -1.08px;
-            margin-top: 12px;
+            line-height: 48px;
+            letter-spacing: -0.84px;
+            margin-top: 16px;
             margin-bottom: 0;
 
             @media (max-width: 1023.98px) {
@@ -243,7 +406,7 @@ body.spz-28001 {
         }
 
         .ss-right {
-          max-width: 515px;
+          max-width: 584px;
 
           @media (max-width: 1023.98px) {
             display: flex;
@@ -270,19 +433,23 @@ body.spz-28001 {
             font-weight: 500;
             line-height: 24px;
             padding-left: 44px;
-            padding-right: 5px;
 
             @media (max-width: 1023.98px) {
               max-width: 376px;
               padding-right: 20px;
             }
 
+            .red-txt {
+              color: #ff0000;
+            }
+
+            .grn-txt {
+              color: #08bc30;
+            }
+
             &::before {
               content: "";
               display: inline-block;
-              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14007/check-mark.svg");
-              background-size: contain;
-              background-repeat: no-repeat;
               width: 32px;
               height: 32px;
               position: absolute;
@@ -292,6 +459,17 @@ body.spz-28001 {
               @media (max-width: 767.98px) {
                 top: 0;
               }
+            }
+
+            &:first-child::before {
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_no.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
+            }
+            &:last-child::before {
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_yes.svg");
+              background-size: contain;
+              background-repeat: no-repeat;
             }
           }
 
@@ -487,10 +665,10 @@ body.spz-28001 {
                 color: #0c131a;
                 text-align: center;
                 font-family: $ff-inter;
-                font-size: 20px;
+                font-size: 16px;
                 font-style: normal;
                 font-weight: 800;
-                line-height: 28px;
+                line-height: 24px;
                 margin: 1px 0 9px;
 
                 @media (max-width: 1023.98px) {
@@ -605,6 +783,8 @@ body.spz-28001 {
           font-style: normal;
           font-weight: 500;
           line-height: 24px;
+          max-width: 819px;
+          margin: 0 auto;
 
           @media (max-width: 1023.98px) {
             padding: 0 20px;
@@ -621,6 +801,146 @@ body.spz-28001 {
     }
   }
   // Simple Steps Section Ends
+
+  //compliance automation section starts
+  .compliance-sec {
+    padding: 96px 24px;
+    .compliance-container {
+      max-width: 1248px;
+      margin: 0 auto;
+      .c-title-container {
+        .c-eyebrow {
+          color: #0580e8;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+          margin: 0 0 16px;
+        }
+
+        .c-title {
+          color: #000;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 42px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 48px;
+          letter-spacing: -0.84px;
+          max-width: 676px;
+          margin: 0 auto 20px;
+        }
+
+        .c-desc {
+          max-width: 676px;
+          color: #485665;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+          margin: 0 auto 64px;
+        }
+      }
+
+      .c-content {
+        .c-left {
+          max-width: 624px;
+          width: 100%;
+          flex: 0 0 50%;
+
+          .accordion-wrapper {
+            .accordion {
+              .accordion-item {
+                display: flex;
+                padding: 32px;
+                flex-direction: column;
+                align-items: flex-start;
+                border-radius: 12px;
+                border: 1px solid #dde3eb;
+                background: #fff;
+                margin-bottom: 12px;
+                cursor: pointer;
+                position: relative;
+
+                .accordion-title {
+                  height: 40px;
+                  color: #0c131a;
+                  font-family: $ff-inter;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 800;
+                  line-height: 26px;
+                  display: flex;
+                  align-items: center;
+                }
+
+                .accordion-content {
+                  color: #697586;
+                  font-family: $ff-inter;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 500;
+                  line-height: 24px;
+                  margin-top: 12px;
+                  display: none;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 28px;
+                  right: 28px;
+                  width: 40px;
+                  height: 40px;
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  pointer-events: none;
+                }
+
+                &:hover::after {
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_09.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                }
+
+                &.open {
+                  &::after {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                      no-repeat;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  .accordion-content {
+                    display: block;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .c-right {
+          width: 100%;
+          position: relative;
+          margin-left: 48px;
+
+          .c-img img {
+            width: auto;
+            height: 584px;
+            object-fit: contain;
+            image-rendering: -webkit-optimize-contrast;
+          }
+        }
+      }
+    }
+  }
 
   // Customer Reviews Section Starts
   .cr-section {
