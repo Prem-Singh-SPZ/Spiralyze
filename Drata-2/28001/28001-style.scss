@@ -941,6 +941,206 @@ body.spz-28001 {
       }
     }
   }
+  //compliance automation section ends
+
+  // Video Integration Section Starts
+  .meet-drata {
+    background: #eef2f6;
+    padding: 96px 24px;
+
+    .md-container {
+      max-width: 1280px;
+      margin: 0 auto;
+
+      .md-title-container {
+        margin: 0 0 48px;
+        .md-title {
+          color: #0c131a;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 42px;
+          font-style: normal;
+          font-weight: 900;
+          line-height: 48px;
+          letter-spacing: -0.84px;
+          max-width: 626px;
+          margin: 0 auto 20px;
+        }
+
+        .md-desc {
+          color: #485665;
+          text-align: center;
+          font-family: $ff-inter;
+          font-size: 18px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 26px;
+        }
+      }
+
+      .md-content {
+        .md-top-section {
+          .md-left {
+            max-width: 759px;
+            width: 100%;
+            flex: 0 0 60%;
+
+            .md-video-wr {
+              border-radius: 16px;
+              border: 2px solid #fff;
+              background: #dde3eb;
+              padding: 54px 1px 0px 50px;
+              display: flex;
+              justify-content: flex-end;
+              align-items: flex-end;
+              video {
+                width: 100%;
+                height: 100%;
+                border-radius: 11.796px;
+              }
+            }
+          }
+
+          .md-right {
+            margin-left: 32px;
+
+            .md-card {
+              border-radius: 16px;
+              background: #fff;
+              box-shadow: 0px 1.489px 2.979px 0px rgba(16, 24, 40, 0.05);
+              padding: 32px;
+              margin-bottom: 24px;
+
+              .md-card-title {
+                color: #1d252e;
+                font-family: $ff-inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                margin: 0 0 12px;
+              }
+
+              .md-card-desc {
+                color: #485665;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+                margin: 0 0 16px;
+              }
+
+              .md-anchor {
+                color: #0580e8;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+
+                .a-arrow {
+                  width: 16px;
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/arrow.svg")
+                    no-repeat center;
+                  height: 16px;
+                  display: block;
+                  margin-left: 8px;
+                }
+
+                &:hover {
+                  color: #0068c9;
+
+                  .a-arrow {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/src/assets/arrow-hover.svg")
+                      no-repeat center;
+                  }
+                }
+
+                &:active {
+                  color: #1253a8;
+
+                  .a-arrow {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/src/assets/arrow-active.svg")
+                      no-repeat center;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        .md-bottom-section {
+          margin-top: 8px;
+
+          .md-card {
+            border-radius: 16px;
+            background: #fff;
+            display: flex;
+            padding: 32px;
+            justify-content: space-between;
+            align-items: center;
+
+            .md-card-title-wrapper {
+              max-width: 735px;
+              .md-card-title {
+                color: #1d252e;
+                font-family: $ff-inter;
+                font-size: 24px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 28px;
+                margin: 0 0 12px;
+              }
+
+              .md-card-desc {
+                color: #485665;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 24px;
+              }
+            }
+
+            .md-cta-wrapper {
+              .black-cta {
+                display: flex;
+                height: 48px;
+                width: 144px;
+                padding: 10px 20px;
+                justify-content: center;
+                align-items: center;
+                border-radius: 12px;
+                background: #0c131a;
+                color: #fff;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                text-decoration: none;
+                border: 2px solid #0c131a;
+
+                &:hover {
+                  background: #293642;
+                  border-color: #293642;
+                }
+
+                &:active {
+                  border-color: #697586;
+                  background: #293642;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
 
   // Customer Reviews Section Starts
   .cr-section {

@@ -521,22 +521,26 @@
                             </div>
                             <div class="md-right">
                                 <div class="md-card">
-                                    <div class="md-card-title">Automated Compliance</div>
-                                    <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
-                                    <a href="https://drata.com/platform" class="md-card-cta">Learn More</a>
+                                    <div class="md-card-title">Ease of Use</div>
+                                    <div class="md-card-desc">Not a compliance expert? Not a problem. Drata&#8217;s intuitive platform and step-by-step walkthroughs make the entire process a breeze.</div>
+                                    <a href="https://drata.com/platform" class="md-anchor">Explore the Platform <span class="a-arrow"></span></a>
                                 </div>
                                  <div class="md-card">
-                                    <div class="md-card-title">Automated Compliance</div>
-                                    <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
-                                    <a href="https://drata.com/product" class="md-card-cta">Learn More</a>
+                                    <div class="md-card-title">Built to Scale Securely</div>
+                                    <div class="md-card-desc">Threats don&#8217;t stop, so neither do we. By constantly adding new frameworks and features, we stay ahead of regulatory changes and emerging threats, ensuring your compliance strategy remains proactive.</div>
+                                    <a href="https://drata.com/product" class="md-anchor">Explore Frameworks <span class="a-arrow"></span></a>
                                 </div>
                             </div>
                         </div>
                         <div class="md-bottom-section">
                           <div class="md-card">
-                                    <div class="md-card-title">Automated Compliance</div>
-                                    <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
-                                    <a href="https://drata.com/platform/startup" class="md-card-cta">Learn More</a>
+                                <div class="md-card-title-wrapper">
+                                    <div class="md-card-title">Expert Support at Every Step</div>
+                                    <div class="md-card-desc">Whether you need help choosing a framework or hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
+                                </div>
+                                <div class="md-cta-wrapper">
+                                    <a href="https://drata.com/platform/startup" class="md-cta black-cta">Learn More</a>
+                                </div>
                             </div>
                         </div>
                     </div>
