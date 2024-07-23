@@ -73,6 +73,7 @@
                 let updatePage = setInterval(() => {
                     heroChanges();
                     spzNavBar();
+                    checkActiveNav();
                     updateImgHeight();
                 }, 200);
 
@@ -250,20 +251,53 @@
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
-                    <a class="nav-anchor active" href="#">Learn About Compliance</a>
-                    <a class="nav-anchor" href="#about">Why Drata?</a>
-                    <a class="nav-anchor" href="#project">Learn About Frameworks</a>
-                    <a class="nav-anchor" href="#contact">Guides & Resources</a>
+                    <a class="nav-anchor" href="#nav-compliance">Learn About Compliance</a>
+                    <a class="nav-anchor" href="#why-drata">Why Drata?</a>
+                    <a class="nav-anchor" href="#frameworks">Learn About Frameworks</a>
+                    <a class="nav-anchor" href="#nav-resource">Guides & Resources</a>
                 </div>
             </div>
         </nav>`);
 
+
+        document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+            anchor.addEventListener('click', function (e) {
+                const target = document.querySelector(this.getAttribute('href'));
+
+                document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+                    anchor.classList.remove('active');
+                });
+
+                e.preventDefault();
+                this.classList.add('active');
+                if (target) {
+                    window.scrollTo({
+                        top: target.offsetTop - 100,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+
+
         benefits();
+    }
+
+    function checkActiveNav() {
+        document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+            const target = document.querySelector(anchor.getAttribute('href'));
+            if (isInViewport(target)) {
+                document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+                    anchor.classList.remove('active');
+                });
+                anchor.classList.add('active');
+            }
+        });
     }
 
     function benefits() {
         document.querySelector('.spz-navbar').insertAdjacentHTML('afterend', `
-            <section class="benefits-sec">
+            <section class="benefits-sec" id="nav-compliance">
                 <div class="benefits-container">
                     <div class="bs-title-container">
                             <div class="bs-eyebrow">Compliance Benefits</div>
@@ -469,7 +503,7 @@
         if (document.querySelector('.meet-drata')) return;
 
         document.querySelector('.compliance-sec').insertAdjacentHTML('afterend', `
-            <section class="meet-drata">
+            <section class="meet-drata" id="why-drata">
                 <div class="md-container">
                 <div class="md-title-container">
                     <div class="md-title">Meet Drata, Your One-Stop-Shop For Compliance</div>
@@ -478,20 +512,23 @@
                 <div class="md-content">
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
-                                <div class="md-img-wr">
-                                    <img src="${astUrl}/f_auto/drata/28001/hero.webp" alt="Drata Hero Image" title="Drata Hero Image">
+                                <div class="md-video-wr">
+                                    <video controls>
+                                    <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                    </video>
                                 </div>
                             </div>
                             <div class="md-right">
                                 <div class="md-card">
                                     <div class="md-card-title">Automated Compliance</div>
                                     <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
-                                    <a href="https://drata.com/platform/startup" class="md-card-cta">Learn More</a>
+                                    <a href="https://drata.com/platform" class="md-card-cta">Learn More</a>
                                 </div>
                                  <div class="md-card">
                                     <div class="md-card-title">Automated Compliance</div>
                                     <div class="md-card-desc">Drata automates the compliance process, saving you time and reducing human error. With Drata, you can achieve and maintain compliance with SOC 2, ISO 27001, and more.</div>
-                                    <a href="https://drata.com/platform/startup" class="md-card-cta">Learn More</a>
+                                    <a href="https://drata.com/product" class="md-card-cta">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -511,7 +548,7 @@
 
     function customerReviews() {
         document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
-            <section class="cr-section">
+            <section class="cr-section" id="frameworks">
                 <div class="title-wrapper">
                     <p class="small-eyebrow">Pre-Built Templates</p>
                     <h3 class="large-title">20+ Frameworks. None of the Grunt Work.</h3>
@@ -602,7 +639,7 @@
 
     function resourceSection() {
         document.querySelector('.demo-cta-section').insertAdjacentHTML('afterend', `
-        <section class="resources-section">
+        <section class="resources-section" id="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
                     <h6 class="title">Compliance 101 Resources for Startups</h6>
@@ -829,6 +866,11 @@
     //check if window is resized
     window.addEventListener('resize', function () {
         updateImgHeight();
+    });
+
+    //when scroll, check which section is in view and add active class to respective nav-anchor
+    window.addEventListener('scroll', function () {
+        checkActiveNav();
     });
 
 })();
