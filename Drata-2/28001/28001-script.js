@@ -588,8 +588,8 @@
                 <div class="cs-left-copy">
                     <p class="cs-eyebrow">Compliance Automation</p>
                     <h2 class="cs-title">Automate Compliance, Accelerate Growth</h2>
-                    <p class="cs-desc">Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers&#8217; private data stays private.</p>
-                    <a href="https://drata.com/platform/startup" class="cs-cta">Learn More</a>
+                    <p class="cs-desc">See how automated evidence collection and continuous monitoring reduce manual work for startups that need to move fast.</p>
+                    <a href="https://drata.com/platform/startup" class="cs-cta blue-btn">Learn More</a>
                 </div>
                 <div class="cs-right-video">
                     <div class="thumb-img">
