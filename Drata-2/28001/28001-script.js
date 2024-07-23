@@ -33,24 +33,6 @@
         }
     ];
 
-
-    // FAQ section data
-    const faq = [{
-        que: "We&#8217;re not planning on getting SOC 2 yet. Why should I use Drata?",
-        ans: `<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Your security posture matters. SOC 2 is just one way to prove the effectiveness of your security program, but having a real-time view of your security controls is invaluable for any business.</p> <p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata is the most advanced continuous monitoring platform on the market to assess your security posture in real-time, every day. You can score your SOC 2 readiness here. Check out <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways mui-k61s3s-MuiTypography-root-MuiLink-root-Link-root" href="https://www.forbes.com/sites/troymarkowitz/2021/01/15/why-saas-start-ups-should-prioritize-soc-2-compliance/" target="_blank" rel="noopener noreferrer" data-testid="Text-hyperlink">this Forbes piece</a> written by our Co-Founder Troy Markowitz that discusses this further.</p>`
-    },
-    {
-        que: "If I use Drata, will my auditor have access to all my data and results of control testing?",
-        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata only gives auditors access to what they need in order to streamline the audit engagement. In the Auditor View, you control the level of access your auditor receives. You also dictate the time period that access covers, and the framework so auditors are only seeing evidence and test results of your controls during that specific time window.<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>"
-    }, {
-        que: "Why is the Auditor View important?",
-        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata was built alongside auditors to ensure you and the auditor have the best user experience. Today, most platforms enable an export of reports or access to the entire set of controls and data you have visibility into. While not every control is applicable to your environment, auditors can&#8217;t unsee the evidence you&#8217;ve collected, which is why it&#8217;s important to only display pertinent information in the Auditor-Only View.</p>"
-    },
-    {
-        que: "Do I still need an auditor if I use Drata?",
-        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Yes, auditors are an essential part of the process and provide independent third-party validation of compliance. We work with and through auditors to ensure a strong security posture. We streamline the process they have to go through to evaluate evidence.</p> <p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>If you do not already have an audit firm selected, Drata will introduce you to a firm that meets your needs and budget, and work closely with them throughout the entire process.</p>"
-    }];
-
     //append swiper js script in head and onload of that call function initSlider
     function appendScript(url, callback) {
         var script = document.createElement("script");
@@ -88,14 +70,22 @@
                     section.classList.add('control-section-' + index);
                 });
 
-                heroChanges();
-                spzNavBar();
+                let updatePage = setInterval(() => {
+                    heroChanges();
+                    spzNavBar();
+                    updateImgHeight();
+                }, 200);
+
+                setTimeout(() => {
+                    clearInterval(updatePage);
+                }, 5000);
+
             });
 
-            submitTestDetails('Variant_28001');
+            // submitTestDetails('Variant_28001');
         });
 
-        createCookie('spz-28001-loaded', 'true', 1);
+        // createCookie('spz-28001-loaded', 'true', 1);
     }
 
     function removeTest() {
@@ -116,11 +106,11 @@
     }
 
     //Passing test details to hidden fields
-    function submitTestDetails(cro_test) {
-        if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
-            document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
-        }
-    }
+    // function submitTestDetails(cro_test) {
+    //     if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
+    //         document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
+    //     }
+    // }
 
     // function demoChecked() {
     //     const sInt = setInterval(() => {
@@ -213,32 +203,32 @@
     }
 
     // Create cookie
-    function createCookie(name, value, days) {
-        var expires = "";
-        if (days) {
-            var date = new Date();
-            date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-            expires = "; expires=" + date.toUTCString();
-        }
-        document.cookie = name + "=" + value + expires + "; path=/";
-    }
+    // function createCookie(name, value, days) {
+    //     var expires = "";
+    //     if (days) {
+    //         var date = new Date();
+    //         date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+    //         expires = "; expires=" + date.toUTCString();
+    //     }
+    //     document.cookie = name + "=" + value + expires + "; path=/";
+    // }
 
     // Check if cookie exists
-    function isCookieExist(name) {
-        var nameEQ = name + "=";
-        var ca = document.cookie.split(';');
-        for (var i = 0; i < ca.length; i++) {
-            var c = ca[i];
-            while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-            if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-        }
-        return null;
-    }
+    // function isCookieExist(name) {
+    //     var nameEQ = name + "=";
+    //     var ca = document.cookie.split(';');
+    //     for (var i = 0; i < ca.length; i++) {
+    //         var c = ca[i];
+    //         while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+    //         if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+    //     }
+    //     return null;
+    // }
 
     // Delete cookie
-    function deleteCookie(name) {
-        document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
-    }
+    // function deleteCookie(name) {
+    //     document.cookie = name + '=; expires=Thu, 01 Jan 1970 00:00:01 GMT;';
+    // }
 
     function heroChanges() {
         waitForElm('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]').then(function () {
@@ -464,14 +454,8 @@
             });
         });
 
-        updateImgHeight();
         meetDrata();
     }
-
-    //check if window is resized
-    window.addEventListener('resize', function () {
-        updateImgHeight();
-    });
 
     function updateImgHeight() {
         //calculate height of .accordion-wrapper and set it to .accordion
@@ -841,5 +825,10 @@
         });
         return reviewsHTML;
     }
+
+    //check if window is resized
+    window.addEventListener('resize', function () {
+        updateImgHeight();
+    });
 
 })();
