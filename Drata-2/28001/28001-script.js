@@ -787,8 +787,8 @@
         let cardName = document.querySelectorAll('.swiper-slider .swiper-slide .card-name');
         const swiper = new Swiper(".swiper-slider", {
             // Optional parameters
-            centeredSlides: true,
-            slidesPerView: 1,
+            centeredSlides: false,
+            slidesPerView: 1.3,
             freeMode: false,
             loop: true,
             mousewheel: false,
@@ -861,7 +861,7 @@
                             </div>
                         </div>
                          <div class="slider-img">
-                            <img src="${review.avatar}" alt="${review.name}">
+                            <img src="${review.companyLogo}" alt="${review.company}">
                         </div>
                     </div>
                 </div>`;

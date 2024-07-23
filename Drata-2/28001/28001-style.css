@@ -22,8 +22,10 @@ body.spz-28001 .align-items-center {
   -ms-flex-align: center;
   align-items: center;
 }
-body.spz-28001 i {
-  font-style: normal;
+@media (min-width: 767.98px) {
+  body.spz-28001 .no-desk {
+    display: none;
+  }
 }
 body.spz-28001 .blue-btn {
   display: -webkit-inline-box;
@@ -1191,16 +1193,20 @@ body.spz-28001 .cr-section .cr-section-container .slider-section {
   }
 }
 body.spz-28001 .cr-section .cr-section-container .slider-section .container .slider-card {
-  height: 271px;
+  min-height: 257px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  border-radius: 6px;
-  border: 1px solid #dde3eb;
+  border-radius: 24px;
+  border: 1.007px solid #dde3eb;
   background: #fff;
+  -webkit-box-shadow: 0px 17.989px 23.985px -5.996px rgba(16, 24, 40, 0.08), 0px 5.996px 8.994px -2.998px rgba(16, 24, 40, 0.03);
+          box-shadow: 0px 17.989px 23.985px -5.996px rgba(16, 24, 40, 0.08), 0px 5.996px 8.994px -2.998px rgba(16, 24, 40, 0.03);
+  margin-right: 31.2px;
+  padding: 40px;
 }
 @media (max-width: 1200px) {
   body.spz-28001 .cr-section .cr-section-container .slider-section .container .slider-card {
@@ -1217,10 +1223,9 @@ body.spz-28001 .cr-section .cr-section-container .slider-section .container .sli
   }
 }
 body.spz-28001 .cr-section .cr-section-container .slider-section .container .slider-card .slider-img {
-  max-width: 243px;
+  max-width: 220px;
   width: 100%;
-  height: 100%;
-  margin-right: 32px;
+  height: 220px;
 }
 body.spz-28001 .cr-section .cr-section-container .slider-section .container .slider-card .slider-img img {
   width: 100%;
@@ -1248,7 +1253,7 @@ body.spz-28001 .cr-section .cr-section-container .slider-section .container .sli
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 16px 32px 16px 0px;
+  margin-right: 40px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -1505,7 +1510,7 @@ body.spz-28001 .cr-section .cr-section-container .slider-section .container .swi
 body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   border-radius: 8.052px;
   background: #eef2f6;
-  color: #1D252E;
+  color: #1d252e;
 }
 body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-btn-prev {
   width: 48px;
