@@ -56,7 +56,7 @@
     });
 
     //append to preload images
-    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_09.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/14007/slider-right-hover.svg" as="image">`);
+    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_09.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_03.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_04.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_05.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_06.svg" as="image">`);
 
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
@@ -553,20 +553,22 @@
     function customerReviews() {
         document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
             <section class="cr-section" id="frameworks">
-                <div class="title-wrapper">
-                    <p class="small-eyebrow">Pre-Built Templates</p>
-                    <h3 class="large-title">20+ Frameworks. None of the Grunt Work.</h3>
-                </div>
-                <div class="slider-section">
-                    <div class="container slider-column">
-                        <div class="swiper swiper-slider">
-                            <div class="swiper-wrapper">
-                                ${createCustomerReviews()}
+                <div class="cr-section-container">
+                    <div class="title-wrapper">
+                        <p class="small-eyebrow">Pre-Built Templates</p>
+                        <h3 class="large-title">20+ Frameworks. None of the Grunt Work.</h3>
+                    </div>
+                    <div class="slider-section">
+                        <div class="container slider-column">
+                            <div class="swiper swiper-slider">
+                                <div class="swiper-wrapper">
+                                    ${createCustomerReviews()}
+                                </div>
                             </div>
+                            <span class="swiper-pagination"></span>
+                            <span class="swiper-btn-prev"></span>
+                            <span class="swiper-btn-next"></span>
                         </div>
-                        <span class="swiper-pagination"></span>
-                        <span class="swiper-btn-prev"></span>
-                        <span class="swiper-btn-next"></span>
                     </div>
                 </div>
             </section>`);
