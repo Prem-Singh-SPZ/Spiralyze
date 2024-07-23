@@ -32,7 +32,7 @@ function salesCloud() {
                         <div class="sc-image">
                             <h3 class="copy-title mobile">Grow Sales and Renewals</h3>
                             <picture>
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_1_desktop__tablet.webp">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_1_desktop__tablet_webp.webp">
                                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_1_mobile.webp" alt="Grow Sales and Renewals">
                             </picture>
                         </div>
@@ -50,7 +50,7 @@ function salesCloud() {
                         <div class="sc-image">
                             <h3 class="copy-title mobile">Drive Client Engagement</h3>
                            <picture>
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_desktop__tablet.webp">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_desktop__tablet_webp.webp">
                                 <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile.webp" alt="Drive Client Engagement">
                             </picture>
                         </div>
@@ -77,7 +77,7 @@ function salesCloud() {
 function footerFormSection() {
     waitForElm('.spz-5001 #zy-demo-form-section').then(function () {
         document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text h3').textContent = "Increase revenue 15% by streamlining insurance sales and management";
-        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text .zy-content').textContent = "Find qualified prospects. Send instant quotes. Let clients manage plans through an online portal. Generate benefit and plan resources.";
+        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text .zy-content').textContent = "Find qualified prospects. Send instant quotes. Let clients manage plans through an online portal. Generate benefits and plan resources.";
         //Form internal code
         waitForElm('.spz-5001 #zy-demo-form-section .zy-col-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
             formModify();
