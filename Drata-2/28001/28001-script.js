@@ -539,7 +539,7 @@
                                     <div class="md-card-desc">Whether you need help choosing a framework or hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
                                 </div>
                                 <div class="md-cta-wrapper">
-                                    <a href="https://drata.com/platform/startup" class="md-cta black-cta">Learn More</a>
+                                    <a href="https://drata.com/contact" class="md-cta black-cta">Learn More</a>
                                 </div>
                             </div>
                         </div>
@@ -636,7 +636,9 @@
         document.querySelector('.control-section-8').insertAdjacentHTML('afterend', `<section class="demo-cta-section">
             <div class="demo-cta-container">
                 <div class="cta-desc">Start Your Compliance Journey Today</div>
-                <a href="https://drata.com/demo" class="cta-btn blue-btn">Request a Demo</a>
+                <div class="cta-wrapper">
+                    <a href="https://drata.com/demo" class="cta-btn blue-btn">Get a Demo</a>
+                </div>
             </div>
         </section>`);
 

@@ -1661,6 +1661,111 @@ body.spz-28001 {
   }
   //customer stories section ends
 
+  //control carousel starts
+  .control-section-8 {
+    div[class*="Section-gridContainer"] {
+      max-width: 1280px;
+      margin: 0 auto;
+
+      div[class$="Collection-root"] {
+        div[class$="Collection-contentContainer"] {
+          display: flex;
+          .spz-title-container {
+            width: 100%;
+
+            .ing-sub-title {
+              color: #0580e8;
+              text-align: center;
+              font-family: $ff-inter;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px;
+              margin: 0 0 8px;
+            }
+
+            .ing-sec-title {
+              color: #0c131a;
+              text-align: center;
+              font-family: $ff-inter;
+              font-size: 42px;
+              font-style: normal;
+              font-weight: 900;
+              line-height: 48px;
+              letter-spacing: -0.84px;
+              margin: 0 0 64px;
+            }
+
+            .ing-stats-section {
+              justify-content: space-between;
+
+              .ing-stats {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+
+                h1 {
+                  color: #0580e8;
+                  font-family: $ff-inter;
+                  font-size: 64.416px;
+                  font-style: normal;
+                  font-weight: 900;
+                  line-height: 72.468px;
+                  letter-spacing: -1.288px;
+                  margin: 0 0 4px;
+                }
+
+                .ing-spn {
+                  color: #697586;
+                  font-family: $ff-inter;
+                  font-size: 18.117px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 26.169px;
+                }
+              }
+
+              .line {
+                min-height: 100%;
+                width: 1px;
+                background: #dde3eb;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+  //control carousel ends
+
+  //global cta section starts
+  .demo-cta-section {
+    background: #0c131a;
+    padding: 96px 24px;
+
+    .demo-cta-container {
+      max-width: 1280px;
+      margin: 0 auto;
+
+      .cta-desc {
+        color: #fff;
+        text-align: center;
+        font-family: $ff-inter;
+        font-size: 42px;
+        font-style: normal;
+        font-weight: 900;
+        line-height: 48px;
+        letter-spacing: -0.84px;
+        margin: 0 0 24px;
+      }
+
+      .cta-wrapper{
+        text-align: center;
+      }
+    }
+  }
+  //global cta section ends
+
   // Resources Section Starts
   .resources-section {
     margin: 96px 0;
@@ -1892,7 +1997,8 @@ body.spz-28001 {
       margin: 0 auto;
       display: flex;
 
-      .left-container, .right-container {
+      .left-container,
+      .right-container {
         .accordion-wrapper {
           .accordion {
             .accordion-item {
