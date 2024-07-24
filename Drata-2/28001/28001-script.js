@@ -656,37 +656,37 @@
 
                 <div class="resource-cards">
                     <div class="resource-card">
-                        <a href="https://drata.com/resources/soc-2-guide" class="rc-link">
+                        <a href="https://drata.com/grc-central/soc-2/type-2" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
+                                <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
                                     alt="SOC 2 Beginners Guide">
                             </div>
                             <div class="card-content">
                                 <div class="card-title">SOC 2 Beginners Guide</div>
                                 <div class="card-desc">Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.</div>
-                            </div>
-                            <div class="learn-more">
-                               learn-more
+                                <div class="learn-more">
+                                   learn-more <span class="a-arrow"></span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="resource-card">
-                        <a href="https://drata.com/grc-central/soc-2/compliance-checklist#heading-soc-2-compliance-checklist" class="rc-link">
+                        <a href="https://drata.com/grc-central/iso-27001/checklist" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
+                                <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
                                     alt="8 Easy Steps to Get Started with ISO 27001">
                             </div>
                             <div class="card-content">
                                 <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
                                 <div class="card-desc">Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.</div>
-                            </div>
-                             <div class="learn-more">
-                               learn-more
+                                <div class="learn-more">
+                                   learn-more <span class="a-arrow"></span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="resource-card">
-                        <a href="https://drata.com/grc-central/soc-2/questions-to-ask-an-auditor" class="rc-link">
+                        <a href="https://drata.com/blog/cost-of-non-compliance" class="rc-link">
                             <div class="card-img">
                                 <img src="${astUrl}/f_auto/drata/28001/image_03.webp"
                                     alt="Learn About the Cost of Non-Compliance">
@@ -694,24 +694,24 @@
                             <div class="card-content">
                                 <div class="card-title">Learn About the Cost of Non-Compliance</div>
                                 <div class="card-desc">Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.</div>
-                            </div>
-                             <div class="learn-more">
-                               learn-more
+                                <div class="learn-more">
+                                   learn-more <span class="a-arrow"></span>
+                                </div>
                             </div>
                         </a>
                     </div>
                     <div class="resource-card">
-                        <a href="https://drata.com/resources/webinars/5-internal-threats-to-your-compliance-program" class="rc-link">
+                        <a href="https://drata.com/grc-central/soc-2/audit" class="rc-link">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
+                                <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
                                     alt="SOC 2 Audits: What You Can Expect from Start to Finish">
                             </div>
                             <div class="card-content">
                                 <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
                                 <div class="card-desc">Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.</div>
-                            </div>
-                             <div class="learn-more">
-                               learn-more
+                                <div class="learn-more">
+                                   learn-more <span class="a-arrow"></span>
+                                </div>
                             </div>
                         </a>
                     </div>

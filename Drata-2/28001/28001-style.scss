@@ -1759,7 +1759,7 @@ body.spz-28001 {
         margin: 0 0 24px;
       }
 
-      .cta-wrapper{
+      .cta-wrapper {
         text-align: center;
       }
     }
@@ -1797,31 +1797,20 @@ body.spz-28001 {
       }
 
       .resource-title {
-        display: flex;
         padding: 20px 0px;
-        justify-content: space-between;
-        align-items: center;
-        border-bottom: 1.007px solid rgba(205, 213, 223, 0.4);
         margin-bottom: 40px;
-
-        @media (max-width: 1280px) {
-          align-items: flex-end;
-        }
-
-        @media (max-width: 767.98px) {
-          .explore-more {
-            display: none;
-          }
-        }
 
         .title {
           color: #0c131a;
           font-family: $ff-inter;
-          font-size: 24px;
+          font-size: 42px;
           font-style: normal;
           font-weight: 900;
-          line-height: 28px;
-          margin: 0;
+          line-height: 48px;
+          letter-spacing: -0.84px;
+          margin: 0 auto 16px;
+          max-width: 552px;
+          text-align: center;
 
           @media (max-width: 1280px) {
             font-size: 32px;
@@ -1839,47 +1828,17 @@ body.spz-28001 {
             text-align: center;
           }
         }
-      }
 
-      .explore-more {
-        margin: 0;
-
-        .ex-more {
-          display: flex;
-          align-items: center;
-          color: #0c131a;
+        .sub-title {
+          color: #485665;
+          text-align: center;
           font-family: $ff-inter;
-          font-size: 16px;
+          font-size: 18px;
           font-style: normal;
-          font-weight: 600;
-          line-height: 24px;
-          padding: 0 3px;
-          text-decoration: none;
-          transition-duration: 0.15s;
-
-          &:hover {
-            color: #0580e8;
-
-            .button_arrow path {
-              fill: #1253a8;
-            }
-          }
-
-          .button_arrow {
-            margin-left: 10px;
-          }
-        }
-
-        @media (max-width: 767.98px) {
-          &.mob-only {
-            justify-content: center;
-            margin: 32px auto;
-            // .ex-more {
-            //   .button_arrow {
-            //     margin-left: 10px;
-            //   }
-            // }
-          }
+          font-weight: 500;
+          line-height: 26px;
+          margin: 0 auto;
+          max-width: 673px;
         }
       }
 
@@ -1907,13 +1866,11 @@ body.spz-28001 {
         }
 
         .resource-card {
-          display: flex;
           width: 296px;
-          flex-direction: column;
-          align-items: flex-start;
           border-radius: 16px;
           border: 1px solid #dde3eb;
           background: #fff;
+          min-height: 376px;
 
           @media (max-width: 1280px) {
             width: 360px;
@@ -1924,10 +1881,13 @@ body.spz-28001 {
           .rc-link {
             text-decoration: none;
             height: 100%;
+            flex-direction: column;
+            align-items: flex-start;
+            display: flex;
 
             .card-img {
               width: 100%;
-              height: 163px;
+              height: 140px;
 
               @media (max-width: 1280px) {
                 overflow: hidden;
@@ -1936,6 +1896,7 @@ body.spz-28001 {
 
               img {
                 width: 100%;
+                height: 100%;
                 border-radius: 16px 16px 0 0;
 
                 @media (max-width: 1280px) {
@@ -1949,36 +1910,72 @@ body.spz-28001 {
             }
 
             .card-content {
-              padding: 16px;
+              padding: 24px;
+              display: flex;
+              flex-direction: column;
+              flex-grow: 1;
 
               @media (max-width: 1280px) {
                 padding: 15.5px 16px;
               }
 
               .card-title {
-                overflow: hidden;
-                color: #697586;
-                text-overflow: ellipsis;
                 font-family: $ff-inter;
-                font-size: 12px;
+                color: #0c131a;
+                font-size: 16px;
                 font-style: normal;
-                font-weight: 500;
-                line-height: 18px;
-                margin: 0 0 8px;
+                font-weight: 700;
+                line-height: 24px;
+                margin: 0 0 12px;
               }
 
               .card-desc {
-                overflow: hidden;
-                color: #0c131a;
-                text-overflow: ellipsis;
+                color: #485665;
                 font-family: $ff-inter;
-                font-size: 18px;
+                font-size: 14px;
                 font-style: normal;
-                font-weight: 700;
-                line-height: 26px;
-                display: -webkit-box;
-                -webkit-box-orient: vertical;
-                -webkit-line-clamp: 3;
+                font-weight: 500;
+                line-height: 20px;
+              }
+
+              .learn-more {
+                color: #0580e8;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                display: flex;
+                align-items: center;
+                text-decoration: none;
+                margin-top: auto;
+
+                .a-arrow {
+                  width: 16px;
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/arrow.svg")
+                    no-repeat center;
+                  height: 16px;
+                  display: block;
+                  margin-left: 8px;
+                }
+
+                &:hover {
+                  color: #0068c9;
+
+                  .a-arrow {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/src/assets/arrow-hover.svg")
+                      no-repeat center;
+                  }
+                }
+
+                &:active {
+                  color: #1253a8;
+
+                  .a-arrow {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/src/assets/arrow-active.svg")
+                      no-repeat center;
+                  }
+                }
               }
             }
           }
@@ -1988,7 +1985,7 @@ body.spz-28001 {
   }
   // Resources Section Ends
 
-  //faq
+  //faq starts
   .compliance-faq-section {
     padding: 96px 24px;
 
@@ -2074,4 +2071,5 @@ body.spz-28001 {
       }
     }
   }
+  //faq ends
 }
