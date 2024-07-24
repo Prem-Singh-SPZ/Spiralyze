@@ -1926,7 +1926,7 @@ body.spz-28001 {
 
             .card-img {
               width: 100%;
-              height: 140px;
+              height: 139px;
 
               @media (max-width: 1280px) {
                 overflow: hidden;
@@ -1949,7 +1949,7 @@ body.spz-28001 {
             }
 
             .card-content {
-              padding: 24px;
+              padding: 25px 23px 23px;
               display: flex;
               flex-direction: column;
               flex-grow: 1;
@@ -2026,7 +2026,7 @@ body.spz-28001 {
 
   //faq starts
   .compliance-faq-section {
-    padding: 96px 24px;
+    padding: 96px 24px 82px;
 
     .compliance-faq-title {
       max-width: 1280px;
@@ -2049,7 +2049,7 @@ body.spz-28001 {
         font-weight: 900;
         line-height: 48px;
         letter-spacing: -0.84px;
-        margin: 0 0 16px;
+        margin: 0 0 17px;
       }
 
       .sub-desc {
@@ -2078,18 +2078,18 @@ body.spz-28001 {
           .accordion {
             .accordion-item {
               display: flex;
-              padding: 32px;
+              padding: 32px 31px 30px;
               flex-direction: column;
               align-items: flex-start;
               border-radius: 12px;
               border: 1px solid #dde3eb;
               background: #fff;
-              margin-bottom: 12px;
+              margin-bottom: 16px;
               cursor: pointer;
               position: relative;
 
               .accordion-title {
-                height: 40px;
+                min-height: 40px;
                 color: #0c131a;
                 font-family: $ff-inter;
                 font-size: 18px;
@@ -2098,6 +2098,7 @@ body.spz-28001 {
                 line-height: 26px;
                 display: flex;
                 align-items: center;
+                padding-right: 34px;
               }
 
               .accordion-content {
@@ -2107,15 +2108,16 @@ body.spz-28001 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 24px;
-                margin-top: 12px;
+                margin-top: 16px;
                 display: none;
+                letter-spacing: -0.16px;
               }
 
               &::after {
                 content: "";
                 position: absolute;
-                top: 28px;
-                right: 28px;
+                top: 32px;
+                right: 32px;
                 width: 40px;
                 height: 40px;
                 background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")

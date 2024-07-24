@@ -684,7 +684,7 @@
                                 <div class="card-title">SOC 2 Beginners Guide</div>
                                 <div class="card-desc">Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.</div>
                                 <div class="learn-more">
-                                   learn-more <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -699,7 +699,7 @@
                                 <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
                                 <div class="card-desc">Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.</div>
                                 <div class="learn-more">
-                                   learn-more <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -714,7 +714,7 @@
                                 <div class="card-title">Learn About the Cost of Non-Compliance</div>
                                 <div class="card-desc">Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.</div>
                                 <div class="learn-more">
-                                   learn-more <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"></span>
                                 </div>
                             </div>
                         </a>
@@ -729,7 +729,7 @@
                                 <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
                                 <div class="card-desc">Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.</div>
                                 <div class="learn-more">
-                                   learn-more <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"></span>
                                 </div>
                             </div>
                         </a>
