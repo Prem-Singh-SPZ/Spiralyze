@@ -605,8 +605,8 @@
         document.querySelector('.cr-section').insertAdjacentHTML('afterend', `<section class="cs-section">
             <div class="cs-container dis-flex">
                 <div class="cs-left-copy">
-                    <p class="cs-eyebrow">Compliance Automation</p>
-                    <h2 class="cs-title">Automate Compliance, Accelerate Growth</h2>
+                    <p class="cs-eyebrow">Customer Stories</p>
+                    <h2 class="cs-title">PolicyDock Saves 6 Months in the SOC 2 Audit</h2>
                     <p class="cs-desc">See how automated evidence collection and continuous monitoring reduce manual work for startups that need to move fast.</p>
                     <a href="https://drata.com/platform/startup" class="cs-cta blue-btn">Learn More</a>
                 </div>
