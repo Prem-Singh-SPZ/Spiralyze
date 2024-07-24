@@ -232,12 +232,14 @@
     // }
 
     function heroChanges() {
-        waitForElm('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]').then(function () {
-            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
-            document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
-            if (!document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container')) {
-                document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-container"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta">Download SOC 2 Guide</a></div>`)
-                document.querySelector('div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] .hero-cta-container').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
+        const pSelector = 'div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] ';
+        waitForElm('' + pSelector + ' a[class*="MuiLink-root-Link-root-HeroSubpage-link"]').then(function () {
+            document.querySelector('' + pSelector + ' a[class*="MuiLink-root-Link-root-HeroSubpage-link"]').textContent = "Get Demo";
+            document.querySelector('' + pSelector + ' h1[class*="MuiTypography-root-HeroSubpage-title"]').textContent = "Simple Startup Compliance";
+            document.querySelector('' + pSelector + ' div[class*="Text-root-HeroSubpage-body"] > [data-testid="Text-root"] > [data-testid="Text-body1"]').innerHTML = "Investors and customers demanding compliance? We got you. <br>Quickly get compliant with SOC 2, ISO 27001, and other frameworks with automated audit prep, ready-to-use templates, and expert support.";
+            if (!document.querySelector('' + pSelector + ' .hero-cta-wrapper')) {
+                document.querySelector('' + pSelector + ' div[class*="Text-root-HeroSubpage-body"]').insertAdjacentHTML('afterend', `<div class="hero-cta-wrapper"><a href="https://drata.com/resources/soc-2-guide" class="hero-blue-cta">Download SOC 2 Guide</a></div>`)
+                document.querySelector('' + pSelector + ' .hero-cta-wrapper').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
             }
         });
     }
@@ -293,6 +295,23 @@
                 anchor.classList.add('active');
             }
         });
+
+        const hero = document.querySelector('header + div[data-csk-entry-type="hero"]');
+        const rect = hero.getBoundingClientRect();
+        if (rect.top <= -200) {
+            document.querySelector('header').classList.add('hide-header');
+        } else {
+            document.querySelector('header').classList.remove('hide-header');
+        }
+
+        // if (document.querySelector('header + div[data-csk-entry-type="hero"]')) {
+        //     if (isInViewport(document.querySelector('header + div[data-csk-entry-type="hero"]'))) {
+        //         document.querySelector('header').classList.add('hide-header');
+        //     } else {
+        //         document.querySelector('header').classList.remove('hide-header');
+        //     }
+        // }
+
     }
 
     function benefits() {
@@ -402,31 +421,31 @@
 
         complianceChanges();
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
-        document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
-            item.addEventListener('mouseover', function () {
-                document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-                document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
-            });
+        // document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+        //     item.addEventListener('mouseover', function () {
+        //         document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+        //         document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
+        //     });
 
-            // On mouseout, remove all step classes
-            item.addEventListener('mouseout', function () {
-                document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-            });
-        });
+        //     // On mouseout, remove all step classes
+        //     item.addEventListener('mouseout', function () {
+        //         document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+        //     });
+        // });
 
         // On scroll, add class to .simple-steps-container according to the step in view
-        window.addEventListener('scroll', function () {
+        // window.addEventListener('scroll', function () {
 
-            // Above 1024px, don't add class on scroll
-            if (window.innerWidth >= 1024) return;
+        //     // Above 1024px, don't add class on scroll
+        //     if (window.innerWidth >= 1024) return;
 
-            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
-                if (isInViewport(item)) {
-                    document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-                    document.querySelector('.simple-steps-container').classList.add('step-' + item.querySelector('.ss-step').textContent);
-                }
-            });
-        });
+        //     document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+        //         if (isInViewport(item)) {
+        //             document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+        //             document.querySelector('.simple-steps-container').classList.add('step-' + item.querySelector('.ss-step').textContent);
+        //         }
+        //     });
+        // });
     }
 
     function complianceChanges() {
@@ -495,7 +514,7 @@
         //calculate height of .accordion-wrapper and set it to .accordion
         const accordionWrapper = document.querySelector('.accordion-wrapper');
         const accordionImg = document.querySelector('.c-right .c-img img');
-        const accordionHeight = accordionWrapper.offsetHeight;
+        const accordionHeight = accordionWrapper.offsetHeight + 2;
         accordionImg.style.height = accordionHeight + 'px';
     }
 
