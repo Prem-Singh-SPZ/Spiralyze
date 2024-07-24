@@ -1019,7 +1019,7 @@ body.spz-28001 {
               border-radius: 16px;
               border: 2px solid #fff;
               background: #dde3eb;
-              padding: 54px 1px 0px 50px;
+              padding: 52px 0px 0px 48px;
               display: flex;
               justify-content: flex-end;
               align-items: flex-end;
@@ -1133,6 +1133,7 @@ body.spz-28001 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 24px;
+                margin: 0 0 -2px;
               }
             }
 
@@ -1634,6 +1635,7 @@ body.spz-28001 {
   .cs-section {
     padding: 96px 24px;
     background: #f6f8fa;
+    overflow: hidden;
 
     .cs-container {
       max-width: 1064px;
@@ -1691,13 +1693,18 @@ body.spz-28001 {
 
   //control carousel starts
   .control-section-8 {
+    padding: 96px 24px 64px;
     div[class*="Section-gridContainer"] {
-      max-width: 1280px;
+      max-width: 1062px;
       margin: 0 auto;
 
       div[class$="Collection-root"] {
+        padding: 0;
         div[class$="Collection-contentContainer"] {
           display: flex;
+          padding: 0;
+          max-width: 990px;
+          margin-bottom: 34px;
           .spz-title-container {
             width: 100%;
 
@@ -1721,7 +1728,7 @@ body.spz-28001 {
               font-weight: 900;
               line-height: 48px;
               letter-spacing: -0.84px;
-              margin: 0 0 64px;
+              margin: 0 0 66px;
             }
 
             .ing-stats-section {
@@ -1769,7 +1776,7 @@ body.spz-28001 {
   //global cta section starts
   .demo-cta-section {
     background: #0c131a;
-    padding: 96px 24px;
+    padding: 92px 24px;
 
     .demo-cta-container {
       max-width: 1280px;
@@ -1789,6 +1796,11 @@ body.spz-28001 {
 
       .cta-wrapper {
         text-align: center;
+
+        .cta-btn{
+          width: 133px;
+          padding: 18px 28px;
+        }
       }
     }
   }
@@ -1796,22 +1808,22 @@ body.spz-28001 {
 
   // Resources Section Starts
   .resources-section {
-    margin: 96px 0;
+    padding: 96px 0;
 
     @media (max-width: 1280px) {
-      margin: 96px 64px 78px;
+      padding: 96px 64px 78px;
     }
 
     @media (max-width: 1199.98px) {
-      margin: 96px 0 78px;
+      padding: 96px 0 78px;
     }
 
     @media (max-width: 767.98px) {
-      margin: 64px 0 63px;
+      padding: 64px 0 63px;
     }
 
     .resources-wrapper {
-      max-width: 1248px;
+      max-width: 1280px;
       margin: auto;
 
       @media (max-width: 1280px) {
@@ -1825,8 +1837,7 @@ body.spz-28001 {
       }
 
       .resource-title {
-        padding: 20px 0px;
-        margin-bottom: 40px;
+        margin-bottom: 64px;
 
         .title {
           color: #0c131a;

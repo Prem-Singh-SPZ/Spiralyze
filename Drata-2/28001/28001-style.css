@@ -979,7 +979,7 @@ body.spz-28001 .meet-drata .md-container .md-content .md-top-section .md-left .m
   border-radius: 16px;
   border: 2px solid #fff;
   background: #dde3eb;
-  padding: 54px 1px 0px 50px;
+  padding: 52px 0px 0px 48px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1094,6 +1094,7 @@ body.spz-28001 .meet-drata .md-container .md-content .md-bottom-section .md-card
   font-style: normal;
   font-weight: 500;
   line-height: 24px;
+  margin: 0 0 -2px;
 }
 body.spz-28001 .meet-drata .md-container .md-content .md-bottom-section .md-card .md-cta-wrapper .black-cta {
   display: -webkit-box;
@@ -1600,6 +1601,7 @@ body.spz-28001 .cr-section .cr-section-container .slider-section .container .swi
 body.spz-28001 .cs-section {
   padding: 96px 24px;
   background: #f6f8fa;
+  overflow: hidden;
 }
 body.spz-28001 .cs-section .cs-container {
   max-width: 1064px;
@@ -1648,14 +1650,23 @@ body.spz-28001 .cs-section .cs-container .cs-right-video iframe {
   width: 100% !important;
   height: 364px !important;
 }
+body.spz-28001 .control-section-8 {
+  padding: 96px 24px 64px;
+}
 body.spz-28001 .control-section-8 div[class*=Section-gridContainer] {
-  max-width: 1280px;
+  max-width: 1062px;
   margin: 0 auto;
+}
+body.spz-28001 .control-section-8 div[class*=Section-gridContainer] div[class$=Collection-root] {
+  padding: 0;
 }
 body.spz-28001 .control-section-8 div[class*=Section-gridContainer] div[class$=Collection-root] div[class$=Collection-contentContainer] {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  padding: 0;
+  max-width: 990px;
+  margin-bottom: 34px;
 }
 body.spz-28001 .control-section-8 div[class*=Section-gridContainer] div[class$=Collection-root] div[class$=Collection-contentContainer] .spz-title-container {
   width: 100%;
@@ -1679,7 +1690,7 @@ body.spz-28001 .control-section-8 div[class*=Section-gridContainer] div[class$=C
   font-weight: 900;
   line-height: 48px;
   letter-spacing: -0.84px;
-  margin: 0 0 64px;
+  margin: 0 0 66px;
 }
 body.spz-28001 .control-section-8 div[class*=Section-gridContainer] div[class$=Collection-root] div[class$=Collection-contentContainer] .spz-title-container .ing-stats-section {
   -webkit-box-pack: justify;
@@ -1723,7 +1734,7 @@ body.spz-28001 .control-section-8 div[class*=Section-gridContainer] div[class$=C
 }
 body.spz-28001 .demo-cta-section {
   background: #0c131a;
-  padding: 96px 24px;
+  padding: 92px 24px;
 }
 body.spz-28001 .demo-cta-section .demo-cta-container {
   max-width: 1280px;
@@ -1743,26 +1754,30 @@ body.spz-28001 .demo-cta-section .demo-cta-container .cta-desc {
 body.spz-28001 .demo-cta-section .demo-cta-container .cta-wrapper {
   text-align: center;
 }
+body.spz-28001 .demo-cta-section .demo-cta-container .cta-wrapper .cta-btn {
+  width: 133px;
+  padding: 18px 28px;
+}
 body.spz-28001 .resources-section {
-  margin: 96px 0;
+  padding: 96px 0;
 }
 @media (max-width: 1280px) {
   body.spz-28001 .resources-section {
-    margin: 96px 64px 78px;
+    padding: 96px 64px 78px;
   }
 }
 @media (max-width: 1199.98px) {
   body.spz-28001 .resources-section {
-    margin: 96px 0 78px;
+    padding: 96px 0 78px;
   }
 }
 @media (max-width: 767.98px) {
   body.spz-28001 .resources-section {
-    margin: 64px 0 63px;
+    padding: 64px 0 63px;
   }
 }
 body.spz-28001 .resources-section .resources-wrapper {
-  max-width: 1248px;
+  max-width: 1280px;
   margin: auto;
 }
 @media (max-width: 1280px) {
@@ -1778,8 +1793,7 @@ body.spz-28001 .resources-section .resources-wrapper {
   }
 }
 body.spz-28001 .resources-section .resources-wrapper .resource-title {
-  padding: 20px 0px;
-  margin-bottom: 40px;
+  margin-bottom: 64px;
 }
 body.spz-28001 .resources-section .resources-wrapper .resource-title .title {
   color: #0c131a;

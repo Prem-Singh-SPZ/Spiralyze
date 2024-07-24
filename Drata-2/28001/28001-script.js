@@ -532,7 +532,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-video-wr">
-                                    <video controls>
+                                    <video controls poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
                                     <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                     </video>
@@ -656,7 +656,7 @@
             <div class="demo-cta-container">
                 <div class="cta-desc">Start Your Compliance Journey Today</div>
                 <div class="cta-wrapper">
-                    <a href="https://drata.com/demo" class="cta-btn blue-btn">Get a Demo</a>
+                    <a href="https://drata.com/demo" class="cta-btn blue-btn">Get Demo</a>
                 </div>
             </div>
         </section>`);
