@@ -54,14 +54,24 @@ html.contact-modal-open {
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
-  max-width: 448px;
-  min-width: 448px;
+  max-width: 548px;
+  min-width: 548px;
   width: 100%;
 }
 @media screen and (max-width: 1024.98px) {
   .spz-1006 #popup_contact_us .wcs-col-12 {
-    max-width: 50%;
-    min-width: 50%;
+    max-width: 600px;
+    min-width: 600px;
+    border-radius: 0px;
+    background: #fff;
+    -webkit-box-shadow: 4px 4px 8px 0px rgba(1, 26, 33, 0.1);
+            box-shadow: 4px 4px 8px 0px rgba(1, 26, 33, 0.1);
+    margin: 24px 0;
+    height: 100%;
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+    z-index: 1;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -81,23 +91,28 @@ html.contact-modal-open {
   text-decoration: none;
 }
 .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
-  margin-top: -6px;
+  margin: 4px 50px 0;
 }
 @media screen and (max-width: 1024.98px) {
   .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
-    margin: 24px 0 0;
+    margin: -6px 0px -10px;
   }
 }
 
 .spz-1006 #popup_contact_us .wcs-bg-img {
-  width: calc(100% - 448px);
+  width: calc(100% - 548px);
   position: relative;
-  background: url(//res.cloudinary.com/spiralyze/image/upload/v1707409414/komodohealth/1006/background_ui_1440.webp) no-repeat top left/cover;
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1006/background_ui_1443.webp) no-repeat top left/cover;
 }
 @media (max-width: 1024.98px) {
   .spz-1006 #popup_contact_us .wcs-bg-img {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/v1707409548/komodohealth/1006/background_ui_768.webp) no-repeat top left/cover;
-    width: 50%;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1006/background_ui_771.webp) no-repeat top left/cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
 }
 @media (max-width: 767.98px) {
@@ -113,6 +128,11 @@ html.contact-modal-open {
   width: 24px;
   height: 56px;
   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1721285891/KomodoHealth/1006/Pointer.svg);
+}
+@media (max-width: 1024.98px) {
+  .spz-1006 #popup_contact_us .wcs-bg-img::after {
+    display: none !important;
+  }
 }
 
 .spz-1006 #popup_contact_us .hbspt-form {
@@ -161,6 +181,16 @@ html.contact-modal-open {
           box-shadow: none;
   vertical-align: top;
   min-height: 100vh;
+}
+@media screen and (max-width: 1024.98px) {
+  .spz-1006 .jquery-modal #popup_contact_us {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 
 .spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
@@ -414,7 +444,6 @@ html.contact-modal-open {
 }
 @media screen and (max-width: 1024.98px) {
   .spz-1006 #contact-us-form-wrapper .hs_submit input {
-    width: calc(100% - 16px);
     margin-right: auto;
     margin-left: auto;
   }
@@ -567,7 +596,7 @@ html.contact-modal-open {
 }
 @media screen and (max-width: 1024.98px) {
   .spz-1006 #popup_contact_us .wcs-pform {
-    padding: 10px 24px 0 !important;
+    padding: 8px 32px 0 !important;
   }
 }
 
@@ -630,6 +659,9 @@ html.contact-modal-open {
   }
   .spz-1006 #popup_contact_us .mobile-break {
     display: block;
+  }
+  .spz-1006 #popup_contact_us .wcs-col-12 {
+    margin: 0;
   }
   .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
     margin: -6px auto 0;

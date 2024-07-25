@@ -1176,7 +1176,7 @@ body.spz-28001 {
   // Customer Reviews Section Starts
   .cr-section {
     background: #fff;
-    padding: 96px 24px;
+    padding: 96px 0;
 
     @media (max-width: 1280px) {
       padding: 81px 16px 80px;
@@ -1187,11 +1187,9 @@ body.spz-28001 {
     }
 
     .cr-section-container {
-      max-width: 1280px;
-      margin: 0 auto;
-
       .title-wrapper {
-        margin: 0 0 40px;
+        max-width: 1280px;
+        margin: 0 auto 40px;
 
         .small-eyebrow {
           color: #0580e8;
@@ -1245,16 +1243,18 @@ body.spz-28001 {
       }
 
       .slider-section {
-        margin: 100px auto 32px;
+        margin: 94px auto 32px;
         position: relative;
+        // padding-left: 64px;
 
         @media (max-width: 767.98px) {
           max-width: 340px;
         }
 
         .container {
-          // max-width: 1144px;
-          // margin: auto;
+          max-width: 1440px;
+          margin: auto;
+          position: relative;
 
           @media (max-width: 1280px) {
             max-width: 85%;
@@ -1262,6 +1262,10 @@ body.spz-28001 {
 
           @media (max-width: 1200px) {
             max-width: 100%;
+          }
+
+          .swiper-wrapper .swiper-slide {
+            padding: 40px 0;
           }
 
           .slider-card {
@@ -1273,7 +1277,7 @@ body.spz-28001 {
             background: #fff;
             box-shadow: 0px 17.989px 23.985px -5.996px rgba(16, 24, 40, 0.08),
               0px 5.996px 8.994px -2.998px rgba(16, 24, 40, 0.03);
-            margin-right: 31.2px;
+            // margin-right: 31.2px;
             padding: 40px;
 
             @media (max-width: 1200px) {
@@ -1339,15 +1343,25 @@ body.spz-28001 {
               }
 
               .text-copy {
+                .card-name {
+                  color: #0580e8;
+                  font-family: $ff-inter;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 24px;
+                  margin: 0 0 16px;
+                }
+
                 .card-title {
-                  color: #1d252e;
+                  color: #0c131a;
                   font-family: $ff-inter;
                   font-size: 32px;
                   font-style: normal;
                   font-weight: 900;
                   line-height: 40px;
                   letter-spacing: -0.64px;
-                  margin: 0 0 12px;
+                  margin: 0 0 16px;
 
                   @media (max-width: 1200px) {
                     font-size: 24px;
@@ -1368,8 +1382,8 @@ body.spz-28001 {
                   font-style: normal;
                   font-weight: 500;
                   line-height: 26px;
-                  margin: 0;
-                  max-width: 677px;
+                  margin: 0 0 36px;
+                  max-width: 710px;
 
                   @media (max-width: 1200px) {
                     font-size: 16px;
@@ -1458,18 +1472,14 @@ body.spz-28001 {
                   }
 
                   .learn-more {
-                    color: #0c131a;
-                    font-family: $ff-inter;
-                    font-size: 16px;
-                    font-style: normal;
-                    font-weight: 600;
-                    line-height: 24px;
                     text-decoration: none;
                     display: flex;
                     align-items: center;
                     white-space: nowrap;
-                    padding: 0 3px;
+                    padding: 0;
                     transition-duration: 0.15s;
+                    width: 144px;
+                    justify-content: center;
 
                     .button_arrow {
                       margin-left: 9px;
@@ -1517,9 +1527,9 @@ body.spz-28001 {
           }
 
           .swiper-pagination {
-            top: -60px;
+            top: -48px;
             bottom: auto;
-            left: 0;
+            left: 16px;
             right: auto;
             width: auto;
 
@@ -1540,7 +1550,7 @@ body.spz-28001 {
               font-weight: 500;
               line-height: 24px;
               opacity: 1;
-              padding: 4px 16px;
+              padding: 8px 16px;
               margin-right: 24px;
               white-space: nowrap;
               width: auto;
@@ -1556,6 +1566,7 @@ body.spz-28001 {
                 border-radius: 8.052px;
                 background: #eef2f6;
                 color: #1d252e;
+                padding: 8px 8px;
               }
             }
           }
@@ -1797,7 +1808,7 @@ body.spz-28001 {
       .cta-wrapper {
         text-align: center;
 
-        .cta-btn{
+        .cta-btn {
           width: 133px;
           padding: 18px 28px;
         }

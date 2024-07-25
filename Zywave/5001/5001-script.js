@@ -50,8 +50,8 @@ function salesCloud() {
                         <div class="sc-image">
                             <h3 class="copy-title mobile">Drive Client Engagement</h3>
                            <picture>
-                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_desktop__tablet_webp.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile.webp" alt="Drive Client Engagement">
+                                <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_desktop__tablet_3.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/5001/image_2_mobile_webp.webp" alt="Drive Client Engagement">
                             </picture>
                         </div>
                         <div class="sc-text">

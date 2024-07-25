@@ -35,13 +35,20 @@ html.contact-modal-open {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  max-width: 448px;
-  min-width: 448px;
+  max-width: 548px;
+  min-width: 548px;
   width: 100%;
 
   @media screen and (max-width: 1024.98px) {
-    max-width: 50%;
-    min-width: 50%;
+    max-width: 600px;
+    min-width: 600px;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(1, 26, 33, 0.1);
+    margin: 24px 0;
+    height: 100%;
+    justify-content: flex-start;
+    z-index: 1;
   }
 
   @media screen and (max-width: 767.98px) {
@@ -62,25 +69,30 @@ html.contact-modal-open {
   }
 
   .social-proof {
-    margin-top: -6px;
+    margin: 4px 50px 0;
 
     @media screen and (max-width: 1024.98px) {
-      margin: 24px 0 0;
+      margin: -6px 0px -10px;
     }
   }
 }
 
 .spz-1006 #popup_contact_us .wcs-bg-img {
-  width: calc(100% - 448px);
+  width: calc(100% - 548px);
   position: relative;
 
-  background: url(//res.cloudinary.com/spiralyze/image/upload/v1707409414/komodohealth/1006/background_ui_1440.webp)
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1006/background_ui_1443.webp)
     no-repeat top left / cover;
 
   @media (max-width: 1024.98px) {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/v1707409548/komodohealth/1006/background_ui_768.webp)
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1006/background_ui_771.webp)
       no-repeat top left / cover;
-    width: 50%;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
   }
 
   @media (max-width: 767.98px) {
@@ -96,6 +108,10 @@ html.contact-modal-open {
     height: 56px;
     background: url(https://res.cloudinary.com/spiralyze/image/upload/v1721285891/KomodoHealth/1006/Pointer.svg);
     // pointer-events: none;
+
+    @media (max-width: 1024.98px) {
+      display: none !important;
+    }
   }
 }
 
@@ -143,6 +159,11 @@ html.contact-modal-open {
   box-shadow: none;
   vertical-align: top;
   min-height: 100vh;
+
+  @media screen and (max-width: 1024.98px) {
+    justify-content: center;
+    align-items: center;
+  }
 }
 
 .spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
@@ -398,7 +419,7 @@ html.contact-modal-open {
   border: none;
 
   @media screen and (max-width: 1024.98px) {
-    width: calc(100% - 16px);
+    // width: calc(100% - 16px);
     margin-right: auto;
     margin-left: auto;
   }
@@ -568,7 +589,7 @@ html.contact-modal-open {
   padding: 10px 32px 0 !important;
 
   @media screen and (max-width: 1024.98px) {
-    padding: 10px 24px 0 !important;
+    padding: 8px 32px 0 !important;
   }
 }
 
@@ -654,6 +675,10 @@ html.contact-modal-open {
 
   .spz-1006 #popup_contact_us .mobile-break {
     display: block;
+  }
+
+  .spz-1006 #popup_contact_us .wcs-col-12 {
+    margin: 0;
   }
 
   .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {

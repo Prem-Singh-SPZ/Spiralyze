@@ -808,8 +808,9 @@
         let cardName = document.querySelectorAll('.swiper-slider .swiper-slide .card-name');
         const swiper = new Swiper(".swiper-slider", {
             // Optional parameters
-            centeredSlides: false,
-            slidesPerView: 1.3,
+            centeredSlides: true,
+            spaceBetween: 32,
+            slidesPerView: 1.2,
             freeMode: false,
             loop: true,
             mousewheel: false,
@@ -863,7 +864,7 @@
                                 <div class="title-copy">
                                     <p class="card-name">${review.name}</p>
                                     <h3 class="card-title">${review.title}</h3>
-                                    <p class="card-desc">“${review.review}”</p>
+                                    <p class="card-desc">${review.review}</p>
                                 </div>
                                 <div class="c-logo ht-25 no-desk">
                                         <img src="${review.companyLogo}" alt="${review.company}">
@@ -872,11 +873,7 @@
                             <div class="card-footer">
                                 <div class="learn-more-cta">
                                     ` + ((!review.link) ? '' : `
-                                    <a href="${review.link}" class="learn-more" data-review="${review.review}">Learn More
-                                        <svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg>
-                                    </a>
+                                    <a href="${review.link}" class="learn-more blue-btn" data-review="${review.review}">Learn More</a>
                                     `) + `
                                 </div>
                             </div>
