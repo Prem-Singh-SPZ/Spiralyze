@@ -249,7 +249,7 @@
 
         document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar spz-sec">
             <div class="nav-container dis-flex justify-content-between align-items-center">
-                <div class="nav-logo">
+                <div class="nav-logo no-mob">
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
@@ -917,7 +917,7 @@
                                 </div>
                             </div>
                         </div>
-                         <div class="slider-img">
+                         <div class="slider-img no-mob">
                             <img src="${review.companyLogo}" alt="${review.title}">
                         </div>
                     </div>

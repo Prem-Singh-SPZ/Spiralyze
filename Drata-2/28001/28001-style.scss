@@ -32,6 +32,11 @@ body.spz-28001 {
       display: none;
     }
   }
+  .no-mob {
+    @media (max-width: 767.98px) {
+      display: none;
+    }
+  }
   .tab-mob {
     @media (min-width: 1024.98px) {
       display: none;
@@ -55,19 +60,8 @@ body.spz-28001 {
     transition: all 0.15s;
     height: 48px;
     white-space: nowrap;
+    border: 2px solid #0580e8;
 
-    > span {
-      padding: 0px 16px 0px 12px;
-    }
-
-    .button_arrow {
-      margin-left: 8px;
-      width: 16px;
-      height: 16px;
-      -o-object-fit: contain;
-      object-fit: contain;
-      pointer-events: none;
-    }
     &:hover {
       background: #0068c9;
       color: #fff;
@@ -75,18 +69,13 @@ body.spz-28001 {
     &:active {
       background: #0068c9;
       color: #fff;
-      border: 2px solid #b2e0ff;
+      border-color: #b2e0ff;
     }
 
     @media (max-width: 767.98px) {
       padding: 12px 18.45px;
-      font-size: 16px;
       width: 100%;
       justify-content: center;
-
-      > span {
-        padding: 0px 13px 0px 9px;
-      }
     }
   }
 
@@ -111,8 +100,16 @@ body.spz-28001 {
       padding: 206px 24px 209px;
     }
 
+    @media screen and (max-width: 767.98px) {
+      padding: 76px 16px 81px;
+    }
+
     [class*="HeroSubpage-content"] {
       gap: 0;
+
+      @media screen and (max-width: 767.98px) {
+        max-width: 100%;
+      }
 
       div[class*="styledChip"] {
         margin: 0 0 12px;
@@ -124,6 +121,11 @@ body.spz-28001 {
           font-style: normal;
           font-weight: 700;
           line-height: 26px;
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
       }
 
@@ -143,6 +145,12 @@ body.spz-28001 {
           line-height: 64px;
           letter-spacing: -1.08px;
         }
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 42px;
+          line-height: 48px;
+          letter-spacing: -0.84px;
+        }
       }
 
       [class*="HeroSubpage-body"] p {
@@ -158,15 +166,33 @@ body.spz-28001 {
         @media screen and (max-width: 1024.98px) {
           padding: 0;
         }
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 14px;
+          line-height: 20px;
+
+          br {
+            display: none;
+          }
+        }
       }
 
       .hero-cta-wrapper {
         display: flex;
 
+        @media screen and (max-width: 767.98px) {
+          flex-direction: column-reverse;
+          align-items: center;
+        }
+
         a[class*="HeroSubpage-link"] {
           width: 133px;
           margin-right: 12px;
           justify-content: center;
+
+          @media (max-width: 767.98px) {
+            margin: 0;
+          }
         }
 
         .hero-blue-cta {
@@ -186,6 +212,10 @@ body.spz-28001 {
           align-items: center;
           text-decoration: none;
           width: 236px;
+
+          @media screen and (max-width: 767.98px) {
+            margin-bottom: 12px;
+          }
 
           &:hover {
             background: rgba(255, 255, 255, 0.1);
@@ -215,6 +245,10 @@ body.spz-28001 {
       padding: 16px;
     }
 
+    @media (max-width: 767.98px) {
+      padding: 16px 0;
+    }
+
     .nav-container {
       max-width: 1280px;
       margin: 0 auto;
@@ -225,6 +259,15 @@ body.spz-28001 {
       }
 
       .nav-links {
+        display: flex;
+        overflow-x: auto;
+        //css to hide scrollbar in all browsers
+        scrollbar-width: none; /* Firefox */
+        -ms-overflow-style: none; /* IE and Edge */
+        &::-webkit-scrollbar {
+          display: none; /* Chrome, Safari, Opera */
+        }
+
         .nav-anchor {
           color: #485665;
           text-align: center;
@@ -236,9 +279,17 @@ body.spz-28001 {
           text-decoration: none;
           margin-left: 20px;
           padding: 6px 0px 7px;
+          white-space: nowrap;
 
           &.active {
             border-bottom: 2px solid #0580e8;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            margin-left: 24px;
+            &:first-child {
+              margin-left: 16px;
+            }
           }
         }
       }
@@ -264,6 +315,10 @@ body.spz-28001 {
           margin-bottom: 47px;
         }
 
+        @media (max-width: 767.98px) {
+          margin-bottom: 32px;
+        }
+
         .bs-eyebrow {
           color: #0580e8;
           font-family: $ff-inter;
@@ -277,6 +332,12 @@ body.spz-28001 {
           @media (max-width: 1024.98px) {
             font-size: 14px;
             line-height: 20px;
+          }
+
+          @media (max-width: 767.98px) {
+            font-size: 12px;
+            line-height: 18px;
+            margin: 0 0 8px;
           }
         }
 
@@ -300,6 +361,13 @@ body.spz-28001 {
             letter-spacing: -0.64px;
             max-width: 554px;
           }
+
+          @media (max-width: 767.98px) {
+            font-size: 24px;
+            line-height: 28px;
+            letter-spacing: 0;
+            margin: 0 auto 8px;
+          }
         }
 
         .bs-desc {
@@ -317,6 +385,11 @@ body.spz-28001 {
             font-size: 16px;
             line-height: 24px;
             max-width: 554px;
+          }
+
+          @media (max-width: 767.98px) {
+            font-size: 14px;
+            line-height: 20px;
           }
         }
       }
@@ -342,10 +415,20 @@ body.spz-28001 {
             padding: 32px 31px;
           }
 
+          @media (max-width: 767.98px) {
+            max-width: 100%;
+            margin-bottom: 16px;
+            padding: 24px 23px 23px;
+          }
+
           .bs-card-img {
             width: 56px;
             height: 56px;
             margin-bottom: 24px;
+
+            @media (max-width: 767.98px) {
+              margin-bottom: 16px;
+            }
           }
 
           .bs-card-title {
@@ -356,6 +439,12 @@ body.spz-28001 {
             font-weight: 800;
             line-height: 24px;
             margin: 0 0 12px;
+
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+              line-height: 20px;
+              margin: 0 0 8px;
+            }
           }
 
           .bs-card-desc {
@@ -365,6 +454,11 @@ body.spz-28001 {
             font-style: normal;
             font-weight: 500;
             line-height: 24px;
+
+            @media (max-width: 767.98px) {
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
         }
       }
@@ -560,6 +654,13 @@ body.spz-28001 {
               height: 100%;
               margin: 0 20px;
             }
+
+            @media (max-width: 767.98px) {
+              width: 100%;
+              height: 1px;
+              margin: 20px 0;
+              min-height: initial;
+            }
           }
         }
       }
@@ -725,9 +826,9 @@ body.spz-28001 {
                   }
                 }
 
-                @media (min-width: 1024px) and (max-width: 1280px) {
-                  margin-left: calc(50% - 203px);
-                }
+                // @media (min-width: 1024px) and (max-width: 1280px) {
+                //   margin-left: calc(50% - 203px);
+                // }
 
                 @media (max-width: 1024.98px) {
                   margin: 0 auto;
@@ -736,8 +837,8 @@ body.spz-28001 {
                 }
 
                 @media (max-width: 767.98px) {
-                  margin: -2px auto;
-                  width: 234px;
+                  // margin: -2px auto;
+                  // width: 234px;
 
                   .ss-img {
                     border-radius: 26px;
@@ -1665,17 +1766,17 @@ body.spz-28001 {
                     width: 144px;
                     justify-content: center;
 
-                    .button_arrow {
-                      margin-left: 9px;
-                    }
+                    // .button_arrow {
+                    //   margin-left: 9px;
+                    // }
 
-                    &:hover {
-                      color: #0580e8;
+                    // &:hover {
+                    //   color: #0580e8;
 
-                      .button_arrow path {
-                        fill: #1253a8;
-                      }
-                    }
+                    //   .button_arrow path {
+                    //     fill: #1253a8;
+                    //   }
+                    // }
                   }
 
                   .c-logo.no-desk {
