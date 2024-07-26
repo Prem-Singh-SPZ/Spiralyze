@@ -66,8 +66,8 @@
 
             waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
 
-                document.querySelectorAll('main[data-csk-entry-field="contents"] > section').forEach(function (section, index) {
-                    section.classList.add('control-section-' + index);
+                document.querySelectorAll('main[data-csk-entry-field="contents"] > section:not(.spz-sec):not(.con-sec)').forEach(function (section, index) {
+                    section.classList.add('con-sec','control-section-' + index);
                 });
 
                 let updatePage = setInterval(() => {
@@ -247,7 +247,7 @@
     function spzNavBar() {
         if (document.querySelector('.spz-navbar')) return;
 
-        document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar">
+        document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar spz-sec">
             <div class="nav-container dis-flex justify-content-between align-items-center">
                 <div class="nav-logo">
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
@@ -296,21 +296,15 @@
             }
         });
 
-        const hero = document.querySelector('header + div[data-csk-entry-type="hero"]');
-        const rect = hero.getBoundingClientRect();
-        if (rect.top <= -200) {
-            document.querySelector('header').classList.add('hide-header');
-        } else {
-            document.querySelector('header').classList.remove('hide-header');
+        if(document.querySelector('header + div[data-csk-entry-type="hero"]')){
+            const hero = document.querySelector('header + div[data-csk-entry-type="hero"]');
+            const rect = hero.getBoundingClientRect();
+            if (hero && rect.top <= -200) {
+                document.querySelector('header').classList.add('hide-header');
+            } else {
+                document.querySelector('header').classList.remove('hide-header');
+            }
         }
-
-        // if (document.querySelector('header + div[data-csk-entry-type="hero"]')) {
-        //     if (isInViewport(document.querySelector('header + div[data-csk-entry-type="hero"]'))) {
-        //         document.querySelector('header').classList.add('hide-header');
-        //     } else {
-        //         document.querySelector('header').classList.remove('hide-header');
-        //     }
-        // }
 
     }
 
@@ -353,7 +347,7 @@
 
     function simpleSteps() {
         document.querySelector('.benefits-sec').insertAdjacentHTML('afterend', `
-            <section class="simple-steps-sec">
+            <section class="simple-steps-sec spz-sec">
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
                         <div class="ss-left">
@@ -449,7 +443,7 @@
     }
 
     function complianceChanges() {
-        document.querySelector('.simple-steps-sec').insertAdjacentHTML('afterend', `<section class="compliance-sec">
+        document.querySelector('.simple-steps-sec').insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec">
             <div class="compliance-container">
                 <div class="c-title-container">
                     <div class="c-eyebrow">Beyond the Audit: Compliance Automation</div>
@@ -522,7 +516,7 @@
         if (document.querySelector('.meet-drata')) return;
 
         document.querySelector('.compliance-sec').insertAdjacentHTML('afterend', `
-            <section class="meet-drata" id="why-drata">
+            <section class="meet-drata spz-sec" id="why-drata">
                 <div class="md-container">
                 <div class="md-title-container">
                     <div class="md-title">Meet Drata, Your One-Stop-Shop For Compliance</div>
@@ -532,7 +526,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-video-wr">
-                                    <video controls poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
+                                    <video controls controlsList="nodownload" poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
                                     <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                     </video>
@@ -542,12 +536,16 @@
                                 <div class="md-card">
                                     <div class="md-card-title">Ease of Use</div>
                                     <div class="md-card-desc">Not a compliance expert? Not a problem. Drata&#8217;s intuitive platform and step-by-step walkthroughs make the entire process a breeze.</div>
-                                    <a href="https://drata.com/platform" class="md-anchor">Explore the Platform <span class="a-arrow"></span></a>
+                                    <a href="https://drata.com/platform" class="md-anchor">Explore the Platform <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                        </svg></span></a>
                                 </div>
                                  <div class="md-card">
                                     <div class="md-card-title">Built to Scale Securely</div>
                                     <div class="md-card-desc">Threats don&#8217;t stop, so neither do we. By constantly adding new frameworks and features, we stay ahead of regulatory changes and emerging threats, ensuring your compliance strategy remains proactive.</div>
-                                    <a href="https://drata.com/product" class="md-anchor">Explore Frameworks <span class="a-arrow"></span></a>
+                                    <a href="https://drata.com/product" class="md-anchor">Explore Frameworks <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                        </svg></span></a>
                                 </div>
                             </div>
                         </div>
@@ -571,12 +569,14 @@
 
     function customerReviews() {
         document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
-            <section class="cr-section" id="frameworks">
-                <div class="cr-section-container">
+            <section class="cr-section spz-sec" id="frameworks">
+                <div class="cr-title-container">
                     <div class="title-wrapper">
                         <p class="small-eyebrow">Pre-Built Templates</p>
                         <h3 class="large-title">20+ Frameworks. None of the Grunt Work.</h3>
                     </div>
+                </div>
+                <div class="cr-section-container">
                     <div class="slider-section">
                         <div class="container slider-column">
                             <div class="swiper swiper-slider">
@@ -602,18 +602,15 @@
     }
 
     function customerStories() {
-        document.querySelector('.cr-section').insertAdjacentHTML('afterend', `<section class="cs-section">
+        document.querySelector('.cr-section').insertAdjacentHTML('afterend', `<section class="cs-section spz-sec">
             <div class="cs-container dis-flex">
                 <div class="cs-left-copy">
                     <p class="cs-eyebrow">Customer Stories</p>
                     <h2 class="cs-title">PolicyDock Saves 6 Months in the SOC 2 Audit</h2>
                     <p class="cs-desc">See how automated evidence collection and continuous monitoring reduce manual work for startups that need to move fast.</p>
-                    <a href="https://drata.com/platform/startup" class="cs-cta blue-btn">Learn More</a>
+                    <a href="javascript:void()" class="demo-btn cs-cta blue-btn">Get Demo</a>
                 </div>
                 <div class="cs-right-video">
-                    <div class="thumb-img">
-                      <img src="${astUrl}/f_auto/drata/28001/video_image.webp" alt="Drata Video" title="Drata Video">
-                    </div>
                 </div>
             </div>
         </section>`);
@@ -652,11 +649,11 @@
     function globalCTA() {
         if (document.querySelector('.demo-cta-section')) return;
 
-        document.querySelector('.control-section-8').insertAdjacentHTML('afterend', `<section class="demo-cta-section">
+        document.querySelector('.control-section-8').insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
             <div class="demo-cta-container">
                 <div class="cta-desc">Start Your Compliance Journey Today</div>
                 <div class="cta-wrapper">
-                    <a href="https://drata.com/demo" class="cta-btn blue-btn">Get Demo</a>
+                    <a href="javascript:void()" class="demo-btn cta-btn blue-btn">Get Demo</a>
                 </div>
             </div>
         </section>`);
@@ -666,7 +663,7 @@
 
     function resourceSection() {
         document.querySelector('.demo-cta-section').insertAdjacentHTML('afterend', `
-        <section class="resources-section" id="nav-resource">
+        <section class="resources-section spz-sec" id="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
                     <h6 class="title">Compliance 101 Resources for Startups</h6>
@@ -684,7 +681,9 @@
                                 <div class="card-title">SOC 2 Beginners Guide</div>
                                 <div class="card-desc">Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.</div>
                                 <div class="learn-more">
-                                   Learn More <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                        </svg></span>
                                 </div>
                             </div>
                         </a>
@@ -699,7 +698,9 @@
                                 <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
                                 <div class="card-desc">Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.</div>
                                 <div class="learn-more">
-                                   Learn More <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                        </svg></span>
                                 </div>
                             </div>
                         </a>
@@ -714,7 +715,9 @@
                                 <div class="card-title">Learn About the Cost of Non-Compliance</div>
                                 <div class="card-desc">Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.</div>
                                 <div class="learn-more">
-                                   Learn More <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                        </svg></span>
                                 </div>
                             </div>
                         </a>
@@ -729,7 +732,9 @@
                                 <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
                                 <div class="card-desc">Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.</div>
                                 <div class="learn-more">
-                                   Learn More <span class="a-arrow"></span>
+                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                        </svg></span>
                                 </div>
                             </div>
                         </a>
@@ -743,7 +748,7 @@
 
     function complianceFAQ() {
         document.querySelector('.resources-section').insertAdjacentHTML('afterend', `
-            <section class="compliance-faq-section">
+            <section class="compliance-faq-section spz-sec">
                 <div class="compliance-faq-title">
                     <p class="small-eyebrow">Compliance FAQ</p>
                     <h6 class="title">Your Questions, Answered</h6>
@@ -790,12 +795,24 @@
             </section>`);
 
         //write code for accordion functionality
-        const accordion = document.querySelector('.accordion_2');
-        const items = accordion.querySelectorAll('.accordion-item');
-        items.forEach(item => {
+        const accordion_2 = document.querySelector('.accordion_2');
+        const items_2 = accordion_2.querySelectorAll('.accordion-item');
+        items_2.forEach(item => {
             item.addEventListener('click', () => {
                 const isOpen = item.classList.contains('open');
-                items.forEach(item => item.classList.remove('open'));
+                items_2.forEach(item => item.classList.remove('open'));
+                if (!isOpen) {
+                    item.classList.add('open');
+                }
+            });
+        });
+
+        const accordion_3 = document.querySelector('.accordion_3');
+        const items_3 = accordion_3.querySelectorAll('.accordion-item');
+        items_3.forEach(item => {
+            item.addEventListener('click', () => {
+                const isOpen = item.classList.contains('open');
+                items_3.forEach(item => item.classList.remove('open'));
                 if (!isOpen) {
                     item.classList.add('open');
                 }
@@ -810,9 +827,10 @@
             // Optional parameters
             centeredSlides: true,
             spaceBetween: 32,
-            slidesPerView: 1.2,
+            slidesPerView: 1.338,
             freeMode: false,
             loop: true,
+            autoHeight: true,
             mousewheel: false,
             keyboard: {
                 enabled: true
@@ -895,6 +913,12 @@
     //when scroll, check which section is in view and add active class to respective nav-anchor
     window.addEventListener('scroll', function () {
         checkActiveNav();
+    });
+
+    window.addEventListener('click', function (e) {
+        if (e.target.classList.contains('demo-btn')) {
+            this.document.querySelector('a[href="/demo"]').click();
+        }
     });
 
 })();
