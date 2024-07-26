@@ -127,6 +127,12 @@ body.spz-28001 {
         line-height: 72px;
         letter-spacing: -1.28px;
         margin: 0 0 16px;
+
+        @media screen and (max-width: 1024.98px) {
+          font-size: 54px;
+          line-height: 64px;
+          letter-spacing: -1.08px;
+        }
       }
 
       [class*="HeroSubpage-body"] p {
@@ -241,6 +247,11 @@ body.spz-28001 {
           font-weight: 700;
           line-height: 24px;
           margin: 0 0 16px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
 
         .bs-title {
@@ -254,6 +265,15 @@ body.spz-28001 {
           letter-spacing: -0.84px;
           max-width: 628.059px;
           margin: 0 auto 16px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 32px;
+            font-style: normal;
+            font-weight: 900;
+            line-height: 40px;
+            letter-spacing: -0.64px;
+            max-width: 554px;
+          }
         }
 
         .bs-desc {
@@ -266,10 +286,19 @@ body.spz-28001 {
           line-height: 26px;
           max-width: 673.352px;
           margin: 0 auto;
+
+          @media (max-width: 1024.98px) {
+            font-size: 16px;
+            line-height: 24px;
+            max-width: 554px;
+          }
         }
       }
 
       .bs-cards-container {
+        @media (max-width: 1024.98px) {
+          flex-wrap: wrap;
+        }
         .bs-card {
           display: flex;
           max-width: calc(25% - 24px);
@@ -280,6 +309,11 @@ body.spz-28001 {
           border-radius: 12px;
           border: 1px solid #dde3eb;
           background: #fff;
+
+          @media (max-width: 1024.98px) {
+            max-width: calc(50% - 8px);
+            margin-bottom: 16px;
+          }
 
           .bs-card-img {
             width: 56px;
@@ -320,7 +354,7 @@ body.spz-28001 {
       padding: 96px 24px;
     }
 
-    @media (max-width: 1023.98px) {
+    @media (max-width: 1024.98px) {
       padding: 81px 16px;
     }
 
@@ -366,7 +400,7 @@ body.spz-28001 {
         // align-items: flex-end;
         justify-content: space-between;
 
-        @media (max-width: 1023.98px) {
+        @media (max-width: 1024.98px) {
           align-items: center;
           flex-direction: column;
         }
@@ -374,7 +408,7 @@ body.spz-28001 {
         .ss-left {
           max-width: 382px;
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1024.98px) {
             max-width: 100%;
             text-align: center;
           }
@@ -387,7 +421,7 @@ body.spz-28001 {
             font-weight: 700;
             line-height: 24px;
 
-            // @media (max-width: 1023.98px) {
+            // @media (max-width: 1024.98px) {
             //   font-size: 18px;
             //   line-height: 26px;
             // }
@@ -404,7 +438,7 @@ body.spz-28001 {
             margin-top: 14px;
             margin-bottom: 0;
 
-            @media (max-width: 1023.98px) {
+            @media (max-width: 1024.98px) {
               font-size: 32px;
               line-height: 40px;
               letter-spacing: -0.64px;
@@ -421,7 +455,7 @@ body.spz-28001 {
         .ss-right {
           max-width: 584px;
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1024.98px) {
             display: flex;
             flex-direction: row;
             max-width: 100%;
@@ -447,7 +481,7 @@ body.spz-28001 {
             line-height: 24px;
             padding-left: 36px;
 
-            @media (max-width: 1023.98px) {
+            @media (max-width: 1024.98px) {
               max-width: 376px;
               padding-right: 20px;
             }
@@ -492,7 +526,7 @@ body.spz-28001 {
             background-color: #dde3eb;
             margin: 18px 0 21px;
 
-            @media (max-width: 1023.98px) {
+            @media (max-width: 1024.98px) {
               display: none;
             }
           }
@@ -500,7 +534,7 @@ body.spz-28001 {
       }
 
       .ssc-contents {
-        @media (max-width: 1023.98px) {
+        @media (max-width: 1024.98px) {
           padding-top: 48px;
           max-width: 736px;
           margin: 0 auto;
@@ -514,7 +548,7 @@ body.spz-28001 {
         justify-content: space-around;
         margin: 62px 10px 25px;
 
-        @media (max-width: 1023.98px) {
+        @media (max-width: 1024.98px) {
           display: none;
         }
 
@@ -559,7 +593,7 @@ body.spz-28001 {
         background: #dde3eb;
         padding: 15px 0 35.5px;
 
-        @media (max-width: 1023.98px) {
+        @media (max-width: 1024.98px) {
           position: relative;
           max-width: 658px;
           margin-left: auto;
@@ -575,7 +609,7 @@ body.spz-28001 {
           justify-content: center;
           margin-bottom: 35px;
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1024.98px) {
             flex-direction: column;
             margin-bottom: 23px;
 
@@ -617,7 +651,7 @@ body.spz-28001 {
               width: 31.75%;
             }
 
-            @media (max-width: 1023.98px) {
+            @media (max-width: 1024.98px) {
               width: auto;
               padding: 0 24px 64px 24px;
               margin: 0px 15.5px 12px 15px;
@@ -635,7 +669,7 @@ body.spz-28001 {
             }
 
             .ss-content {
-              @media (max-width: 1023.98px) {
+              @media (max-width: 1024.98px) {
                 overflow: hidden;
               }
 
@@ -652,14 +686,21 @@ body.spz-28001 {
                   height: auto;
                   object-fit: contain;
                   image-rendering: -webkit-optimize-contrast;
+
+                  @media (max-width: 1024.98px) {
+                    margin: 0 auto;
+                    height: 176px;
+                    width: auto;
+                  }
                 }
 
                 @media (min-width: 1024px) and (max-width: 1280px) {
                   margin-left: calc(50% - 203px);
                 }
 
-                @media (max-width: 1023.98px) {
+                @media (max-width: 1024.98px) {
                   margin: 0 auto;
+                  width: 332px;
                 }
 
                 @media (max-width: 767.98px) {
@@ -686,8 +727,9 @@ body.spz-28001 {
                 line-height: 24px;
                 margin: 2px 0 9px;
 
-                @media (max-width: 1023.98px) {
-                  margin-top: -1px;
+                @media (max-width: 1024.98px) {
+                  font-size: 20px;
+                  line-height: 28px;
                 }
 
                 @media (max-width: 767.98px) {
@@ -736,7 +778,7 @@ body.spz-28001 {
           transition-duration: 0.15s;
           z-index: 2;
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1024.98px) {
             display: flex !important;
             align-items: center;
             justify-content: center;
@@ -802,7 +844,7 @@ body.spz-28001 {
           max-width: 819px;
           margin: 0 auto;
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1024.98px) {
             padding: 0 20px;
           }
 
@@ -835,6 +877,11 @@ body.spz-28001 {
           font-weight: 700;
           line-height: 24px;
           margin: 0 0 16px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
 
         .c-title {
@@ -848,6 +895,12 @@ body.spz-28001 {
           letter-spacing: -0.84px;
           max-width: 676px;
           margin: 0 auto 20px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.64px;
+          }
         }
 
         .c-desc {
@@ -860,14 +913,28 @@ body.spz-28001 {
           font-weight: 500;
           line-height: 26px;
           margin: 0 auto 64px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
       }
 
       .c-content {
+        @media (max-width: 1024.98px) {
+          flex-direction: column;
+        }
+
         .c-left {
           max-width: 624px;
           width: 100%;
           flex: 0 0 50%;
+
+          @media (max-width: 1024.98px) {
+            max-width: 100%;
+            flex: 0 0 100%;
+          }
 
           .accordion-wrapper {
             .accordion {
@@ -949,11 +1016,21 @@ body.spz-28001 {
           position: relative;
           margin-left: 64px;
 
+          @media (max-width: 1024.98px) {
+            max-width: 100%;
+            margin: 0;
+          }
+
           .c-img img {
             width: auto;
             height: 584px;
             object-fit: contain;
             image-rendering: -webkit-optimize-contrast;
+
+            @media (max-width: 1024.98px) {
+              width: 100%;
+              height: auto !important;
+            }
           }
         }
       }
@@ -983,6 +1060,12 @@ body.spz-28001 {
           letter-spacing: -0.84px;
           max-width: 626px;
           margin: 0 auto 20px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.64px;
+          }
         }
 
         .md-desc {
@@ -998,10 +1081,18 @@ body.spz-28001 {
 
       .md-content {
         .md-top-section {
+          @media screen and (max-width: 1024.98px) {
+            flex-direction: column;
+          }
           .md-left {
             max-width: 759px;
             width: 100%;
             flex: 0 0 60%;
+
+            @media screen and (max-width: 1024.98px) {
+              max-width: 100%;
+              flex: 0 0 100%;
+            }
 
             .md-video-wr {
               border-radius: 16px;
@@ -1021,6 +1112,12 @@ body.spz-28001 {
 
           .md-right {
             margin-left: 32px;
+
+            @media screen and (max-width: 1024.98px) {
+              max-width: 100%;
+              flex: 0 0 100%;
+              margin-left: 0;
+            }
 
             .md-card {
               border-radius: 16px;
@@ -1163,7 +1260,7 @@ body.spz-28001 {
     background: #fff;
     padding: 96px 0 24px;
 
-    @media (max-width: 1199.98px) {
+    @media (max-width: 1024.98px) {
       padding: 81px 16px 80px;
     }
 
@@ -1291,6 +1388,9 @@ body.spz-28001 {
                 height: 100%;
                 object-fit: cover;
                 border-radius: 6px 0 0 6px;
+                @media (max-width: 1199.98px) {
+                  object-fit: contain;
+                }
               }
 
               @media (max-width: 1199.98px) {
@@ -1326,7 +1426,7 @@ body.spz-28001 {
               @media (max-width: 1199.98px) {
                 height: auto;
                 width: 100%;
-                padding: 16px 32px 16px 0px;
+                // padding: 16px 32px 16px 0px;
               }
 
               @media (max-width: 767.98px) {
@@ -1534,7 +1634,8 @@ body.spz-28001 {
               // bottom: -45.5px;
             }
 
-            .swiper-pagination-bullet {
+            .swiper-pagination-bullet,
+            .spz-anchor {
               color: #485665;
               text-align: center;
               font-family: $ff-inter;
@@ -1550,6 +1651,7 @@ body.spz-28001 {
               width: auto;
               height: auto;
               background-color: transparent;
+              text-decoration: none;
 
               &:hover {
                 border-radius: 8.052px;
@@ -1577,7 +1679,7 @@ body.spz-28001 {
             transition-duration: 0.15s;
             z-index: 15;
 
-            @media (max-width: 1199.98px) {
+            @media (max-width: 1024.98px) {
               top: calc(100% + 27px);
               left: 0;
             }
@@ -1610,7 +1712,7 @@ body.spz-28001 {
             transition-duration: 0.15s;
             z-index: 15;
 
-            @media (max-width: 1199.98px) {
+            @media (max-width: 1024.98px) {
               top: calc(100% + 27px);
               right: 0;
             }
@@ -1843,7 +1945,7 @@ body.spz-28001 {
         padding-right: 24px;
       }
 
-      @media (max-width: 1023.98px) {
+      @media (max-width: 1024.98px) {
         padding-left: 16px;
         padding-right: 16px;
       }

@@ -67,7 +67,7 @@
             waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
 
                 document.querySelectorAll('main[data-csk-entry-field="contents"] > section:not(.spz-sec):not(.con-sec)').forEach(function (section, index) {
-                    section.classList.add('con-sec','control-section-' + index);
+                    section.classList.add('con-sec', 'control-section-' + index);
                 });
 
                 let updatePage = setInterval(() => {
@@ -296,7 +296,7 @@
             }
         });
 
-        if(document.querySelector('header + div[data-csk-entry-type="hero"]')){
+        if (document.querySelector('header + div[data-csk-entry-type="hero"]')) {
             const hero = document.querySelector('header + div[data-csk-entry-type="hero"]');
             const rect = hero.getBoundingClientRect();
             if (hero && rect.top <= -200) {
@@ -836,6 +836,22 @@
                 enabled: true
             },
 
+            // Responsive breakpoints
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.1,
+                    spaceBetween: 8
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                1025: {
+                    spaceBetween: 32,
+                    slidesPerView: 1.338
+                }
+            },
+
             // Enabled autoplay mode
             // autoplay: {
             //     delay: 3000,
@@ -857,6 +873,11 @@
                 nextEl: ".swiper-btn-next",
                 prevEl: ".swiper-btn-prev"
             },
+        });
+
+        waitForElm('body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination').then(function () {
+            if (document.querySelector('body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination .spz-anchor')) return;
+            document.querySelector('body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination').insertAdjacentHTML('beforeend', `<a class="spz-anchor" href="https://drata.com/product">All</a>`);
         });
     }
 
@@ -885,7 +906,7 @@
                                     <p class="card-desc">${review.review}</p>
                                 </div>
                                 <div class="c-logo ht-25 no-desk">
-                                        <img src="${review.companyLogo}" alt="${review.company}">
+                                        <img src="${review.companyLogo}" alt="${review.title}">
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -897,7 +918,7 @@
                             </div>
                         </div>
                          <div class="slider-img">
-                            <img src="${review.companyLogo}" alt="${review.company}">
+                            <img src="${review.companyLogo}" alt="${review.title}">
                         </div>
                     </div>
                 </div>`;
