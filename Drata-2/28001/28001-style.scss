@@ -32,6 +32,11 @@ body.spz-28001 {
       display: none;
     }
   }
+  .tab-mob {
+    @media (min-width: 1024.98px) {
+      display: none;
+    }
+  }
 
   .blue-btn {
     display: inline-flex;
@@ -101,6 +106,11 @@ body.spz-28001 {
   // Hero Section Starts
   div[class*="HeroSubpage-root"] {
     padding: 167px 24px 169px;
+
+    @media screen and (max-width: 1024.98px) {
+      padding: 206px 24px 209px;
+    }
+
     [class*="HeroSubpage-content"] {
       gap: 0;
 
@@ -144,6 +154,10 @@ body.spz-28001 {
         font-weight: 500;
         line-height: 28px;
         margin: 0 0 38px;
+
+        @media screen and (max-width: 1024.98px) {
+          padding: 0;
+        }
       }
 
       .hero-cta-wrapper {
@@ -197,6 +211,10 @@ body.spz-28001 {
     top: 0;
     z-index: 99;
 
+    @media (max-width: 1024.98px) {
+      padding: 16px;
+    }
+
     .nav-container {
       max-width: 1280px;
       margin: 0 auto;
@@ -232,12 +250,20 @@ body.spz-28001 {
   .benefits-sec {
     padding: 96px 24px;
 
+    @media (max-width: 1024.98px) {
+      padding: 80px 16px 62px;
+    }
+
     .benefits-container {
       max-width: 1280px;
       margin: 0 auto;
 
       .bs-title-container {
         margin-bottom: 64px;
+        @media (max-width: 1024.98px) {
+          margin-bottom: 47px;
+        }
+
         .bs-eyebrow {
           color: #0580e8;
           font-family: $ff-inter;
@@ -313,6 +339,7 @@ body.spz-28001 {
           @media (max-width: 1024.98px) {
             max-width: calc(50% - 8px);
             margin-bottom: 16px;
+            padding: 32px 31px;
           }
 
           .bs-card-img {
@@ -355,7 +382,7 @@ body.spz-28001 {
     }
 
     @media (max-width: 1024.98px) {
-      padding: 81px 16px;
+      padding: 81px 16px 157px;
     }
 
     @media (max-width: 767.98px) {
@@ -421,10 +448,10 @@ body.spz-28001 {
             font-weight: 700;
             line-height: 24px;
 
-            // @media (max-width: 1024.98px) {
-            //   font-size: 18px;
-            //   line-height: 26px;
-            // }
+            @media (max-width: 1024.98px) {
+              font-size: 14px;
+              line-height: 20px;
+            }
           }
 
           .ss-title {
@@ -442,6 +469,7 @@ body.spz-28001 {
               font-size: 32px;
               line-height: 40px;
               letter-spacing: -0.64px;
+              margin-top: 16px;
             }
 
             @media (max-width: 767.98px) {
@@ -459,7 +487,7 @@ body.spz-28001 {
             display: flex;
             flex-direction: row;
             max-width: 100%;
-            margin-top: 38px;
+            margin-top: 48px;
           }
 
           @media (max-width: 767.98px) {
@@ -482,8 +510,8 @@ body.spz-28001 {
             padding-left: 36px;
 
             @media (max-width: 1024.98px) {
-              max-width: 376px;
-              padding-right: 20px;
+              max-width: 348px;
+              padding: 0 0 0 36px;
             }
 
             .red-txt {
@@ -527,7 +555,10 @@ body.spz-28001 {
             margin: 18px 0 21px;
 
             @media (max-width: 1024.98px) {
-              display: none;
+              width: 1px;
+              min-height: 144px;
+              height: 100%;
+              margin: 0 20px;
             }
           }
         }
@@ -653,15 +684,15 @@ body.spz-28001 {
 
             @media (max-width: 1024.98px) {
               width: auto;
-              padding: 0 24px 64px 24px;
+              padding: 0 24px 27px 24px;
               margin: 0px 15.5px 12px 15px;
               overflow: initial;
 
-              &.step-1 {
-                .ss-desc {
-                  padding: 0 20px;
-                }
-              }
+              // &.step-1 {
+              //   .ss-desc {
+              //     padding: 0 20px;
+              //   }
+              // }
             }
 
             @media (max-width: 767.98px) {
@@ -701,6 +732,7 @@ body.spz-28001 {
                 @media (max-width: 1024.98px) {
                   margin: 0 auto;
                   width: 332px;
+                  height: 181px;
                 }
 
                 @media (max-width: 767.98px) {
@@ -845,7 +877,7 @@ body.spz-28001 {
           margin: 0 auto;
 
           @media (max-width: 1024.98px) {
-            padding: 0 20px;
+            padding: 0 38px;
           }
 
           @media (max-width: 767.98px) {
@@ -864,6 +896,11 @@ body.spz-28001 {
   .compliance-sec {
     padding: 96px 24px 84px;
     overflow: hidden;
+
+    @media (max-width: 1024.98px) {
+      padding: 96px 16px 93px;
+    }
+
     .compliance-container {
       max-width: 1280px;
       margin: 0 auto;
@@ -917,6 +954,8 @@ body.spz-28001 {
           @media (max-width: 1024.98px) {
             font-size: 16px;
             line-height: 24px;
+            max-width: 100%;
+            margin: 0 auto 48px;
           }
         }
       }
@@ -934,6 +973,7 @@ body.spz-28001 {
           @media (max-width: 1024.98px) {
             max-width: 100%;
             flex: 0 0 100%;
+            margin-bottom: 37px;
           }
 
           .accordion-wrapper {
@@ -950,6 +990,11 @@ body.spz-28001 {
                 cursor: pointer;
                 position: relative;
 
+                @media (max-width: 1024.98px) {
+                  padding: 16px 15px;
+                  margin-bottom: 10.5px;
+                }
+
                 .accordion-title {
                   height: 40px;
                   color: #0c131a;
@@ -961,6 +1006,11 @@ body.spz-28001 {
                   display: flex;
                   align-items: center;
                   padding-right: 42px;
+
+                  @media (max-width: 1024.98px) {
+                    font-weight: 700;
+                    max-width: 80%;
+                  }
                 }
 
                 .accordion-content {
@@ -972,6 +1022,11 @@ body.spz-28001 {
                   line-height: 24px;
                   margin-top: 12px;
                   display: none;
+
+                  @media (max-width: 1024.98px) {
+                    font-size: 14px;
+                    line-height: 20px;
+                  }
                 }
 
                 &::after {
@@ -986,6 +1041,11 @@ body.spz-28001 {
                   background-size: cover;
                   background-repeat: no-repeat;
                   pointer-events: none;
+
+                  @media (max-width: 1024.98px) {
+                    top: 16px;
+                    right: 16px;
+                  }
                 }
 
                 &:hover::after {
@@ -1043,6 +1103,10 @@ body.spz-28001 {
     background: #eef2f6;
     padding: 96px 24px;
 
+    @media (max-width: 1024.98px) {
+      padding: 80px 16px;
+    }
+
     .md-container {
       max-width: 1280px;
       margin: 0 auto;
@@ -1092,6 +1156,7 @@ body.spz-28001 {
             @media screen and (max-width: 1024.98px) {
               max-width: 100%;
               flex: 0 0 100%;
+              margin-bottom: 30px;
             }
 
             .md-video-wr {
@@ -1163,8 +1228,8 @@ body.spz-28001 {
                   //   no-repeat center;
                   height: 16px;
                   display: block;
-                  margin-left: 8px;
-                  margin-top: 1px;
+                  margin-left: 10px;
+                  margin-top: 2px;
                 }
 
                 &:hover {
@@ -1196,8 +1261,18 @@ body.spz-28001 {
             justify-content: space-between;
             align-items: center;
 
+            @media (max-width: 1024.98px) {
+              flex-direction: column;
+              align-items: flex-start;
+            }
+
             .md-card-title-wrapper {
               max-width: 735px;
+
+              @media (max-width: 1024.98px) {
+                margin-bottom: 26px;
+              }
+
               .md-card-title {
                 color: #1d252e;
                 font-family: $ff-inter;
@@ -1261,7 +1336,7 @@ body.spz-28001 {
     padding: 96px 0 24px;
 
     @media (max-width: 1024.98px) {
-      padding: 81px 16px 80px;
+      padding: 80px 16px 40px;
     }
 
     @media (max-width: 767.98px) {
@@ -1270,6 +1345,11 @@ body.spz-28001 {
 
     .cr-title-container {
       padding: 0 24px;
+
+      @media (max-width: 1024.98px) {
+        padding: 0;
+      }
+
       .title-wrapper {
         max-width: 1280px;
         margin: 0 auto 40px;
@@ -1282,6 +1362,11 @@ body.spz-28001 {
           font-weight: 700;
           line-height: 24px;
           margin: 0 0 16px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
 
         .large-title {
@@ -1332,6 +1417,10 @@ body.spz-28001 {
         position: relative;
         // padding-left: 64px;
 
+        @media (max-width: 1024.98px) {
+          margin: 63px auto 0;
+        }
+
         @media (max-width: 767.98px) {
           max-width: 340px;
         }
@@ -1371,7 +1460,7 @@ body.spz-28001 {
 
             @media (max-width: 1199.98px) {
               height: auto;
-              min-height: 281px;
+              min-height: 323px;
 
               @media (max-width: 767.98px) {
                 flex-direction: column;
@@ -1426,7 +1515,10 @@ body.spz-28001 {
               @media (max-width: 1199.98px) {
                 height: auto;
                 width: 100%;
-                // padding: 16px 32px 16px 0px;
+              }
+
+              @media (max-width: 1024.98px) {
+                height: 324px;
               }
 
               @media (max-width: 767.98px) {
@@ -1478,8 +1570,8 @@ body.spz-28001 {
                   max-width: 710px;
 
                   @media (max-width: 1199.98px) {
-                    font-size: 16px;
-                    line-height: 24px;
+                    // font-size: 16px;
+                    // line-height: 24px;
                     margin-bottom: 12px;
                   }
 
@@ -1626,8 +1718,12 @@ body.spz-28001 {
             width: auto;
 
             @media (max-width: 1300px) {
-              // bottom: -59.5px;
               left: 24px;
+            }
+
+            @media (max-width: 1024.98px) {
+              left: 0;
+              top: -31px;
             }
 
             @media (max-width: 767.98px) {
@@ -1680,8 +1776,8 @@ body.spz-28001 {
             z-index: 15;
 
             @media (max-width: 1024.98px) {
-              top: calc(100% + 27px);
-              left: 0;
+              right: 48px;
+              top: -32px;
             }
 
             @media (max-width: 767.98px) {
@@ -1713,8 +1809,8 @@ body.spz-28001 {
             z-index: 15;
 
             @media (max-width: 1024.98px) {
-              top: calc(100% + 27px);
-              right: 0;
+              right: -8px;
+              top: -32px;
             }
 
             @media (max-width: 767.98px) {
@@ -1743,14 +1839,28 @@ body.spz-28001 {
     background: #f6f8fa;
     overflow: hidden;
 
+    @media (max-width: 1024.98px) {
+      padding: 80px 16px 40px;
+    }
+
     .cs-container {
       max-width: 1064px;
       margin: 0 auto;
+
+      @media (max-width: 1024.98px) {
+        flex-direction: column;
+        max-width: 540px;
+      }
 
       .cs-left-copy {
         max-width: 448px;
         width: 100%;
         flex: 0 0 50%;
+
+        @media (max-width: 1024.98px) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
 
         .cs-eyebrow {
           color: #0580e8;
@@ -1760,6 +1870,11 @@ body.spz-28001 {
           font-weight: 700;
           line-height: 24px;
           margin: 0 0 16px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
 
         .cs-title {
@@ -1771,6 +1886,12 @@ body.spz-28001 {
           line-height: 48px;
           letter-spacing: -0.84px;
           margin: 0 0 16px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 32px;
+            line-height: 40px;
+            letter-spacing: -0.64px;
+          }
         }
 
         .cs-desc {
@@ -1781,6 +1902,10 @@ body.spz-28001 {
           font-weight: 500;
           line-height: 26px;
           margin: 0 0 38px;
+
+          @media (max-width: 1024.98px) {
+            margin: 0 0 32px;
+          }
         }
 
         .cs-cta {
@@ -1795,6 +1920,12 @@ body.spz-28001 {
         width: 100%;
         margin-left: 76px;
         max-width: 540px;
+
+        @media (max-width: 1024.98px) {
+          max-width: 100%;
+          flex: 0 0 100%;
+          margin: 0;
+        }
 
         iframe {
           width: 100% !important;
@@ -1819,6 +1950,11 @@ body.spz-28001 {
           padding: 0;
           max-width: 990px;
           margin-bottom: 34px;
+
+          @media (max-width: 1024.98px) {
+            margin-bottom: 18px;
+          }
+
           .spz-title-container {
             width: 100%;
 
@@ -1831,6 +1967,11 @@ body.spz-28001 {
               font-weight: 700;
               line-height: 24px;
               margin: 0 0 8px;
+
+              @media (max-width: 1024.98px) {
+                font-size: 14px;
+                line-height: 20px;
+              }
             }
 
             .ing-sec-title {
@@ -1843,10 +1984,20 @@ body.spz-28001 {
               line-height: 48px;
               letter-spacing: -0.84px;
               margin: 0 0 66px;
+
+              @media (max-width: 1024.98px) {
+                font-size: 32px;
+                line-height: 40px;
+                letter-spacing: -0.64px;
+              }
             }
 
             .ing-stats-section {
               justify-content: space-between;
+              @media (max-width: 1024.98px) {
+                flex-direction: column;
+                align-items: center;
+              }
 
               .ing-stats {
                 display: flex;
@@ -1878,6 +2029,12 @@ body.spz-28001 {
                 min-height: 100%;
                 width: 1px;
                 background: #dde3eb;
+
+                @media (max-width: 1024.98px) {
+                  height: 1px;
+                  width: 288px;
+                  margin: 32px 0;
+                }
               }
             }
           }
@@ -1891,6 +2048,10 @@ body.spz-28001 {
   .demo-cta-section {
     background: #0c131a;
     padding: 92px 24px;
+
+    @media screen and (max-width: 1024.98px) {
+      padding: 76px 16px;
+    }
 
     .demo-cta-container {
       max-width: 1280px;
@@ -1906,6 +2067,14 @@ body.spz-28001 {
         line-height: 48px;
         letter-spacing: -0.84px;
         margin: 0 0 24px;
+
+        @media screen and (max-width: 1024.98px) {
+          font-size: 32px;
+          line-height: 40px;
+          letter-spacing: -0.64px;
+          max-width: 400px;
+          margin: 0 auto 24px;
+        }
       }
 
       .cta-wrapper {
@@ -1928,8 +2097,8 @@ body.spz-28001 {
       padding: 96px 64px 78px;
     }
 
-    @media (max-width: 1199.98px) {
-      padding: 96px 0 78px;
+    @media (max-width: 1024.98px) {
+      padding: 80px 0 78px;
     }
 
     @media (max-width: 767.98px) {
@@ -1953,6 +2122,10 @@ body.spz-28001 {
       .resource-title {
         margin-bottom: 64px;
 
+        @media screen and (max-width: 1024.98px) {
+          margin-bottom: 48px;
+        }
+
         .title {
           color: #0c131a;
           font-family: $ff-inter;
@@ -1965,11 +2138,11 @@ body.spz-28001 {
           max-width: 552px;
           text-align: center;
 
-          @media (max-width: 1280px) {
+          @media (max-width: 1024.98px) {
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.64px;
-            max-width: 382px;
+            max-width: 468px;
           }
 
           @media (max-width: 767.98px) {
@@ -1992,6 +2165,11 @@ body.spz-28001 {
           line-height: 26px;
           margin: 0 auto;
           max-width: 673px;
+
+          @media screen and (max-width: 1024.98px) {
+            font-size: 16px;
+            line-height: 24px;
+          }
         }
       }
 
@@ -2025,11 +2203,17 @@ body.spz-28001 {
           background: #fff;
           min-height: 376px;
 
-          @media (max-width: 1280px) {
+          @media (max-width: 1280.98px) {
             width: 360px;
-            min-height: 299px;
+            min-height: 376px;
             margin-bottom: 16px;
           }
+
+          // @media (max-width: 1024.98px) {
+          //   width: 360px;
+          //   min-height: 376px;
+          //   margin-bottom: 16px;
+          // }
 
           .rc-link {
             text-decoration: none;
@@ -2068,9 +2252,9 @@ body.spz-28001 {
               flex-direction: column;
               flex-grow: 1;
 
-              @media (max-width: 1280px) {
-                padding: 15.5px 16px;
-              }
+              // @media (max-width: 1280px) {
+              //   padding: 15.5px 16px;
+              // }
 
               .card-title {
                 font-family: $ff-inter;
@@ -2109,8 +2293,8 @@ body.spz-28001 {
                   //   no-repeat center;
                   height: 16px;
                   display: block;
-                  margin-left: 8px;
-                  margin-top: 1px;
+                  margin-left: 10px;
+                  margin-top: 2px;
                 }
 
                 &:hover {
@@ -2139,9 +2323,18 @@ body.spz-28001 {
   .compliance-faq-section {
     padding: 96px 24px 82px;
 
+    @media (max-width: 1024.98px) {
+      padding: 82px 16px 81px;
+    }
+
     .compliance-faq-title {
       max-width: 1280px;
       margin: 0 auto 64px;
+
+      @media (max-width: 1024.98px) {
+        margin: 0 auto 47px;
+      }
+
       .small-eyebrow {
         color: #0580e8;
         font-family: $ff-inter;
@@ -2181,10 +2374,20 @@ body.spz-28001 {
       display: flex;
       justify-content: space-between;
 
+      @media (max-width: 1024.98px) {
+        flex-direction: column;
+      }
+
       .left-container,
       .right-container {
         flex: 0 0 calc(50% - 16px);
         max-width: 624px;
+
+        @media (max-width: 1024.98px) {
+          max-width: 100%;
+          flex: 0 0 100%;
+        }
+
         .accordion-wrapper {
           .accordion {
             .accordion-item {
@@ -2198,6 +2401,10 @@ body.spz-28001 {
               margin-bottom: 16px;
               cursor: pointer;
               position: relative;
+
+              @media (max-width: 1024.98px) {
+                margin-bottom: 16.5px;
+              }
 
               .accordion-title {
                 min-height: 40px;

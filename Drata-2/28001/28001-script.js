@@ -573,7 +573,7 @@
                 <div class="cr-title-container">
                     <div class="title-wrapper">
                         <p class="small-eyebrow">Pre-Built Templates</p>
-                        <h3 class="large-title">20+ Frameworks. None of the Grunt Work.</h3>
+                        <h3 class="large-title">20+ Frameworks. <br class="tab-mob">None of the Grunt Work.</h3>
                     </div>
                 </div>
                 <div class="cr-section-container">
