@@ -59,30 +59,27 @@
     document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_09.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_03.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_04.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_05.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_06.svg" as="image"><link rel="preload" href="${astUrl}/f_auto/drata/28001/src/assets/Bg-hovered-min.png" as="image">`);
 
     function createTest() {
-        // document.querySelector("body").classList.remove("remove-spz-14001-test");
-
         waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
             document.querySelector("body").classList.add("spz-28001");
 
-            waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
+            let updatePage = setInterval(() => {
+                waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
 
-                document.querySelectorAll('main[data-csk-entry-field="contents"] > section:not(.spz-sec):not(.con-sec)').forEach(function (section, index) {
-                    section.classList.add('con-sec', 'control-section-' + index);
-                });
+                    document.querySelectorAll('main[data-csk-entry-field="contents"] > section:not(.spz-sec):not(.con-sec)').forEach(function (section, index) {
+                        section.classList.add('con-sec', 'control-section-' + index);
+                    });
 
-                let updatePage = setInterval(() => {
                     heroChanges();
                     spzNavBar();
                     checkActiveNav();
                     updateImgHeight();
-                }, 200);
 
-                setTimeout(() => {
-                    clearInterval(updatePage);
-                }, 5000);
+                });
+            }, 200);
 
-            });
-
+            setTimeout(() => {
+                clearInterval(updatePage);
+            }, 5000);
             // submitTestDetails('Variant_28001');
         });
 
@@ -92,18 +89,11 @@
     function removeTest() {
         document.body.classList.remove("loaded-test");
         document.body.classList.remove("spz-28001");
-        if (document.querySelector('.simple-steps-sec')) {
-            document.querySelector('.simple-steps-sec').remove();
+        if (document.querySelector('.spz-sec')) {
+            document.querySelectorAll('.spz-sec').forEach(function (sec) {
+                sec.remove();
+            });
         }
-        if (document.querySelector('.cr-section')) {
-            document.querySelector('.cr-section').remove();
-        }
-        if (document.querySelector('.resources-section')) {
-            document.querySelector('.resources-section').remove();
-        }
-
-        // Remove scroll event listener
-        window.removeEventListener('scroll', function () { });
     }
 
     //Passing test details to hidden fields
@@ -310,7 +300,7 @@
 
     function benefits() {
         document.querySelector('.spz-navbar').insertAdjacentHTML('afterend', `
-            <section class="benefits-sec" id="nav-compliance">
+            <section class="benefits-sec spz-sec" id="nav-compliance">
                 <div class="benefits-container">
                     <div class="bs-title-container">
                             <div class="bs-eyebrow">Compliance Benefits</div>

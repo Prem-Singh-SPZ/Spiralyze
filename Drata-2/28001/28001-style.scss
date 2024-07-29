@@ -70,6 +70,7 @@ body.spz-28001 {
     &:hover {
       background: #0068c9;
       color: #fff;
+      border-color: #0068c9;
     }
     &:active {
       background: #0068c9;
@@ -634,10 +635,12 @@ body.spz-28001 {
 
             .red-txt {
               color: #ff0000;
+              font-weight: 700;
             }
 
             .grn-txt {
               color: #08bc30;
+              font-weight: 700;
             }
 
             &::before {
@@ -698,7 +701,7 @@ body.spz-28001 {
           margin: 0 auto;
         }
 
-        @media (max-width: 1024.98px) {
+        @media (max-width: 767.98px) {
           padding-top: 32px;
         }
       }
@@ -708,7 +711,7 @@ body.spz-28001 {
         display: flex;
         align-items: center;
         justify-content: space-around;
-        margin: 62px 10px 25px;
+        margin: 63px 6px 24px;
 
         @media (max-width: 1024.98px) {
           display: none;
@@ -719,7 +722,7 @@ body.spz-28001 {
           position: absolute;
           top: calc(50% - 1px);
           left: -10px;
-          height: 2px;
+          height: 1px;
           width: calc(100% + 20px);
           background-color: #dde3eb;
           border-radius: 1px;
@@ -753,7 +756,7 @@ body.spz-28001 {
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.25);
         background: #dde3eb;
-        padding: 15px 0 35.5px;
+        padding: 15px 0 34.5px;
 
         @media (max-width: 1024.98px) {
           position: relative;
@@ -779,9 +782,9 @@ body.spz-28001 {
               content: " ";
               position: absolute;
               top: -2px;
-              left: -56.5px;
+              left: -57.5px;
               height: calc(100% + 2px);
-              width: 2px;
+              width: 1px;
               background-color: #dde3eb;
               border-radius: 1px;
             }
@@ -948,8 +951,8 @@ body.spz-28001 {
             display: flex !important;
             align-items: center;
             justify-content: center;
-            top: -2.5px;
-            left: -94px;
+            top: 0px;
+            left: -96px;
             width: 48px;
           }
 
@@ -1052,9 +1055,10 @@ body.spz-28001 {
           @media (max-width: 1024.98px) {
             font-size: 14px;
             line-height: 20px;
+            margin: 0 0 17px;
           }
 
-          @media (max-width: 768.98px) {
+          @media (max-width: 767.98px) {
             font-size: 12px;
             line-height: 18px;
           }
@@ -1078,7 +1082,7 @@ body.spz-28001 {
             letter-spacing: -0.64px;
           }
 
-          @media (max-width: 768.98px) {
+          @media (max-width: 767.98px) {
             font-size: 24px;
             line-height: 28px;
             letter-spacing: 0;
@@ -1106,7 +1110,7 @@ body.spz-28001 {
             margin: 0 auto 48px;
           }
 
-          @media (max-width: 768.98px) {
+          @media (max-width: 767.98px) {
             font-size: 14px;
             line-height: 20px;
             margin: 0 auto 32px;
@@ -1170,7 +1174,7 @@ body.spz-28001 {
                     max-width: 80%;
                   }
 
-                  @media (max-width: 768.98px) {
+                  @media (max-width: 767.98px) {
                     font-size: 14px;
                     line-height: 20px;
                     max-width: 92%;
@@ -1212,7 +1216,7 @@ body.spz-28001 {
                     right: 16px;
                   }
 
-                  @media (max-width: 768.98px) {
+                  @media (max-width: 767.98px) {
                     width: 32px;
                     height: 32px;
                   }
@@ -1353,7 +1357,7 @@ body.spz-28001 {
               border-radius: 16px;
               border: 2px solid #fff;
               background: #dde3eb;
-              padding: 52px 0px 0px 48px;
+              padding: 51px 0px 0px 47px;
               display: flex;
               justify-content: flex-end;
               align-items: flex-end;
@@ -1700,6 +1704,7 @@ body.spz-28001 {
                 #fff
               );
               z-index: 2;
+              pointer-events: none;
             }
             //add white gradient to the left of the slider
             &::before {
@@ -1715,6 +1720,7 @@ body.spz-28001 {
                 #fff
               );
               z-index: 2;
+              pointer-events: none;
             }
           }
 
@@ -1731,7 +1737,7 @@ body.spz-28001 {
           }
 
           .slider-card {
-            min-height: 257px;
+            min-height: 338px;
             display: flex;
             align-items: center;
             border-radius: 24px;
@@ -1740,7 +1746,7 @@ body.spz-28001 {
             box-shadow: 0px 17.989px 23.985px -5.996px rgba(16, 24, 40, 0.08),
               0px 5.996px 8.994px -2.998px rgba(16, 24, 40, 0.03);
             // margin-right: 31.2px;
-            padding: 40px;
+            padding: 40px 39px;
 
             @media (min-width: 1199.98px) and (max-width: 1330.98px) {
               min-height: 365px;
@@ -1880,7 +1886,7 @@ body.spz-28001 {
                   font-style: normal;
                   font-weight: 500;
                   line-height: 26px;
-                  margin: 0 0 36px;
+                  margin: 0 0 35px;
                   max-width: 710px;
 
                   @media (max-width: 1199.98px) {
@@ -2290,7 +2296,7 @@ body.spz-28001 {
         margin-left: 76px;
         max-width: 540px;
         position: relative;
-        margin-top: 1px;
+        margin-top: 2px;
 
         @media (max-width: 1024.98px) {
           max-width: 100%;
@@ -2337,7 +2343,12 @@ body.spz-28001 {
 
   //control carousel starts
   .control-section-8 {
-    padding: 96px 24px 64px;
+    padding: 96px 24px 63.5px;
+
+    @media (max-width: 1024.98px) {
+      padding: 97px 24px 63.5px;
+    }
+
     div[class*="Section-gridContainer"] {
       max-width: 1062px;
       margin: 0 auto;
@@ -2509,7 +2520,7 @@ body.spz-28001 {
 
         .cta-btn {
           width: 133px;
-          padding: 18px 28px;
+          padding: 18px 26px 16px;
         }
       }
     }
@@ -2550,7 +2561,7 @@ body.spz-28001 {
         margin-bottom: 64px;
 
         @media screen and (max-width: 1024.98px) {
-          margin-bottom: 48px;
+          margin-bottom: 47px;
         }
 
         .title {
@@ -2561,7 +2572,7 @@ body.spz-28001 {
           font-weight: 900;
           line-height: 48px;
           letter-spacing: -0.84px;
-          margin: 0 auto 16px;
+          margin: 0 auto 17px;
           max-width: 552px;
           text-align: center;
 
@@ -2748,10 +2759,10 @@ body.spz-28001 {
 
   //faq starts
   .compliance-faq-section {
-    padding: 96px 24px 82px;
+    padding: 96px 24px 81px;
 
     @media (max-width: 1024.98px) {
-      padding: 82px 16px 64px;
+      padding: 82px 16px 80.5px;
     }
 
     .compliance-faq-title {
