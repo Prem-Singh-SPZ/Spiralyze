@@ -56,7 +56,7 @@
     });
 
     //append to preload images
-    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_09.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_03.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_04.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_05.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_06.svg" as="image">`);
+    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_09.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_03.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_04.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_05.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/28001/icon_navigation_06.svg" as="image"><link rel="preload" href="${astUrl}/f_auto/drata/28001/src/assets/Bg-hovered-min.png" as="image">`);
 
     function createTest() {
         // document.querySelector("body").classList.remove("remove-spz-14001-test");
@@ -611,13 +611,18 @@
                     <a href="javascript:void()" class="demo-btn cs-cta blue-btn">Get Demo</a>
                 </div>
                 <div class="cs-right-video">
+                    <div class="cs-video-mask"></div>
+                    <video controls controlsList="nodownload" id="cs-video" poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/video_image.webp">
+                        <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
                 </div>
             </div>
         </section>`);
 
-        waitForElm('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe').then(function () {
-            document.querySelector('.cs-section .cs-right-video').insertAdjacentElement('afterbegin', document.querySelector('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe'));
-        });
+        // waitForElm('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe').then(function () {
+        //     document.querySelector('.cs-section .cs-right-video').insertAdjacentElement('afterbegin', document.querySelector('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe'));
+        // });
 
         whyDrata();
     }
@@ -625,7 +630,8 @@
     function whyDrata() {
         if (document.querySelector('.spz-title-container')) return;
 
-        document.querySelector('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').innerHTML = `<div class="spz-title-container">
+        waitForElm('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').then(function () {
+            document.querySelector('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').innerHTML = `<div class="spz-title-container">
         <h6 class="ing-sub-title">Why Drata?</h6>
         <h2 class="ing-sec-title">We Deliver Results for Customers</h2>
         <div class="ing-stats-section dis-flex">
@@ -642,6 +648,7 @@
         <span class="ing-spn">G2 Ease-of-Use Rating</span></div>
         </div>
         </div>`;
+        });
 
         globalCTA();
     }
@@ -939,6 +946,12 @@
     window.addEventListener('click', function (e) {
         if (e.target.classList.contains('demo-btn')) {
             this.document.querySelector('a[href="/demo"]').click();
+        }
+
+        if (e.target.classList.contains('cs-video-mask')) {
+            //hide the mask and play the video
+            e.target.remove();
+            this.document.querySelector('#cs-video').play();
         }
     });
 
