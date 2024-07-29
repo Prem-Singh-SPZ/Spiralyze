@@ -2715,38 +2715,42 @@ body.spz-28001 {
               }
 
               .learn-more {
-                color: #0580e8;
-                font-family: $ff-inter;
-                font-size: 16px;
-                font-style: normal;
-                font-weight: 600;
-                line-height: 24px;
-                display: flex;
-                align-items: flex-start;
-                text-decoration: none;
                 margin-top: auto;
 
-                .a-arrow {
-                  width: 16px;
-                  // background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/arrow.svg")
-                  //   no-repeat center;
-                  height: 16px;
-                  display: block;
-                  margin-left: 10px;
-                  margin-top: 2px;
-                }
+                > a {
+                  color: #0580e8;
+                  font-family: $ff-inter;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 24px;
+                  display: flex;
+                  align-items: flex-start;
+                  text-decoration: none;
+                  width: fit-content;
 
-                &:hover {
-                  color: #0068c9;
-                  .a-arrow svg path {
-                    fill: #0068c9;
+                  .a-arrow {
+                    width: 16px;
+                    // background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/arrow.svg")
+                    //   no-repeat center;
+                    height: 16px;
+                    display: block;
+                    margin-left: 10px;
+                    margin-top: 2px;
                   }
-                }
 
-                &:active {
-                  color: #1253a8;
-                  .a-arrow svg path {
-                    fill: #1253a8;
+                  &:hover {
+                    color: #0068c9;
+                    .a-arrow svg path {
+                      fill: #0068c9;
+                    }
+                  }
+
+                  &:active {
+                    color: #1253a8;
+                    .a-arrow svg path {
+                      fill: #1253a8;
+                    }
                   }
                 }
               }

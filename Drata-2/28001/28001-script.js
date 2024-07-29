@@ -669,7 +669,7 @@
 
                 <div class="resource-cards">
                     <div class="resource-card">
-                        <a href="https://drata.com/grc-central/soc-2/type-2" class="rc-link">
+                        <div class="rc-link">
                             <div class="card-img">
                                 <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
                                     alt="SOC 2 Beginners Guide">
@@ -678,15 +678,17 @@
                                 <div class="card-title">SOC 2 Beginners Guide</div>
                                 <div class="card-desc">Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.</div>
                                 <div class="learn-more">
-                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg></span>
+                                    <a href="https://drata.com/grc-central/soc-2/type-2">
+                                    Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                                <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                            </svg></span>
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="resource-card">
-                        <a href="https://drata.com/grc-central/iso-27001/checklist" class="rc-link">
+                        <div class="rc-link">
                             <div class="card-img">
                                 <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
                                     alt="8 Easy Steps to Get Started with ISO 27001">
@@ -695,15 +697,17 @@
                                 <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
                                 <div class="card-desc">Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.</div>
                                 <div class="learn-more">
-                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg></span>
+                                    <a href="https://drata.com/grc-central/iso-27001/checklist">
+                                    Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                                <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                            </svg></span>
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="resource-card">
-                        <a href="https://drata.com/blog/cost-of-non-compliance" class="rc-link">
+                        <div class="rc-link">
                             <div class="card-img">
                                 <img src="${astUrl}/f_auto/drata/28001/image_03.webp"
                                     alt="Learn About the Cost of Non-Compliance">
@@ -712,15 +716,17 @@
                                 <div class="card-title">Learn About the Cost of Non-Compliance</div>
                                 <div class="card-desc">Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.</div>
                                 <div class="learn-more">
+                                    <a href="https://drata.com/blog/cost-of-non-compliance">
                                    Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
                                             <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
                                         </svg></span>
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                     <div class="resource-card">
-                        <a href="https://drata.com/grc-central/soc-2/audit" class="rc-link">
+                        <div class="rc-link">
                             <div class="card-img">
                                 <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
                                     alt="SOC 2 Audits: What You Can Expect from Start to Finish">
@@ -729,12 +735,14 @@
                                 <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
                                 <div class="card-desc">Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.</div>
                                 <div class="learn-more">
+                                    <a href="https://drata.com/blog/soc-2-audits">
                                    Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
                                             <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
                                         </svg></span>
+                                    </a>
                                 </div>
                             </div>
-                        </a>
+                        </div>
                     </div>
                 </div>
             </div>

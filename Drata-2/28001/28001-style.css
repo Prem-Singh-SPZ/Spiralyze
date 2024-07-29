@@ -2803,6 +2803,9 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
   line-height: 20px;
 }
 body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more {
+  margin-top: auto;
+}
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a {
   color: #0580e8;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2816,25 +2819,27 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
       -ms-flex-align: start;
           align-items: flex-start;
   text-decoration: none;
-  margin-top: auto;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more .a-arrow {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a .a-arrow {
   width: 16px;
   height: 16px;
   display: block;
   margin-left: 10px;
   margin-top: 2px;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:hover {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:hover {
   color: #0068c9;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:hover .a-arrow svg path {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:hover .a-arrow svg path {
   fill: #0068c9;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:active {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:active {
   color: #1253a8;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:active .a-arrow svg path {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:active .a-arrow svg path {
   fill: #1253a8;
 }
 body.spz-28001 .compliance-faq-section {
