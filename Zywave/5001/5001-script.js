@@ -76,7 +76,7 @@ function salesCloud() {
 
 function footerFormSection() {
     waitForElm('.spz-5001 #zy-demo-form-section').then(function () {
-        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text h3').textContent = "Ready to rocket your ROI?";
+        document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text h3').textContent = "Ready to Rocket your ROI?";
         document.querySelector('.spz-5001 #zy-demo-form-section .zy-col-text .zy-content').textContent = "Improve efficiency of prospecting and selling. Make smarter decisions with data-driven insights. Increase productivity and achieve profitable growth.";
         //Form internal code
         waitForElm('.spz-5001 #zy-demo-form-section .zy-col-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
