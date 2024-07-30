@@ -484,7 +484,6 @@
                 }
                 else {
                     item.classList.add('open');
-
                 }
 
                 updateImgHeight();
@@ -809,6 +808,9 @@
                 if (!isOpen) {
                     item.classList.add('open');
                 }
+                else {
+                    item.classList.add('open');
+                }
             });
         });
 
@@ -819,6 +821,9 @@
                 const isOpen = item.classList.contains('open');
                 items_3.forEach(item => item.classList.remove('open'));
                 if (!isOpen) {
+                    item.classList.add('open');
+                }
+                else {
                     item.classList.add('open');
                 }
             });
@@ -911,7 +916,7 @@
                                     <p class="card-desc">${review.review}</p>
                                 </div>
                                 <div class="c-logo ht-25 no-desk">
-                                        <img src="${review.companyLogo}" alt="${review.title}">
+                                        <img src="${review.companyLogo}" alt="${review.name}">
                                 </div>
                             </div>
                             <div class="card-footer">
@@ -923,7 +928,7 @@
                             </div>
                         </div>
                          <div class="slider-img no-mob">
-                            <img src="${review.companyLogo}" alt="${review.title}">
+                            <img src="${review.companyLogo}" alt="${review.name}">
                         </div>
                     </div>
                 </div>`;
