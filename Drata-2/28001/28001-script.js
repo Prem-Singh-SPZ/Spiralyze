@@ -41,7 +41,7 @@
 
         var css = document.createElement("link");
         css.rel = "stylesheet";
-        css.href = "//res.cloudinary.com/spiralyze/raw/upload/v1713790594/drata/14007/Swiper/swiper-min.css";
+        css.href = "https://res.cloudinary.com/spiralyze/raw/upload/v1722331974/drata/28001/src/assets/swiper-bundle.min.css";
 
         document.getElementsByTagName("head")[0].appendChild(script);
         document.getElementsByTagName("head")[0].appendChild(css);
@@ -51,7 +51,7 @@
         };
     }
 
-    appendScript("//res.cloudinary.com/spiralyze/raw/upload/v1713790594/drata/14007/Swiper/swiper-min.js", function () {
+    appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
         initSlider();
     });
 
@@ -283,6 +283,9 @@
                     anchor.classList.remove('active');
                 });
                 anchor.classList.add('active');
+            }
+            else {
+                anchor.classList.remove('active');
             }
         });
 

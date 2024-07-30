@@ -296,15 +296,15 @@ body.spz-28001 {
             border-color: #0580e8;
             color: #0c131a;
             transition-delay: 300ms;
-            animation: border fadeIn 0.3s ease-in-out forwards 0.2s;
+            // animation: fadeIn 0.2s ease-in-out;
           }
 
           @keyframes fadeIn {
             from {
-              opacity: 0;
+              border-color: transparent;
             }
             to {
-              opacity: 1;
+              border-color: #0580e8;
             }
           }
 
@@ -1700,6 +1700,12 @@ body.spz-28001 {
           @media (max-width: 767.98px) {
             .swiper.swiper-slider {
               padding-bottom: 48px;
+
+              @media (max-width: 392px) {
+                .swiper-wrapper {
+                  min-height: 420px;
+                }
+              }
             }
           }
 
@@ -1774,6 +1780,7 @@ body.spz-28001 {
             @media (max-width: 767.98px) {
               padding: 0;
               flex-direction: column;
+              border-radius: 24px 80px 24px 24px;
             }
 
             .slider-img {
@@ -2145,17 +2152,19 @@ body.spz-28001 {
               height: 56px;
               left: 16px;
               right: auto;
-              background-size: 100%;
+              background-size: 100% 100%;
             }
 
             &:hover {
               background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_04.svg)
                 no-repeat;
+              background-size: 100% 100%;
             }
 
             &:active {
               background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_06.svg)
                 no-repeat;
+              background-size: 100% 100%;
             }
           }
 
@@ -2182,17 +2191,19 @@ body.spz-28001 {
               width: 56px;
               height: 56px;
               right: 16px;
-              background-size: 100%;
+              background-size: 100% 100%;
             }
 
             &:hover {
               background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_03.svg)
                 no-repeat;
+              background-size: 100% 100%;
             }
 
             &:active {
               background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_05.svg)
                 no-repeat;
+              background-size: 100% 100%;
             }
           }
         }
@@ -2327,7 +2338,7 @@ body.spz-28001 {
           height: 100%;
           background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Bg-default-min.png)
             no-repeat;
-          background-size: 100%;
+          background-size: 100% 100%;
           z-index: 1;
           cursor: pointer;
 
