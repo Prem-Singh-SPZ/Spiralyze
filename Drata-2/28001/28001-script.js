@@ -605,7 +605,7 @@
                 <div class="cs-right-video">
                     <div class="cs-video-mask"></div>
                     <video controls controlsList="nodownload" id="cs-video" poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/video_image.webp">
-                        <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
+                        <source src="https://try.drata.com/hubfs/Spiralyze/28001/Drata_PolicyDock%20%5Bv8%5D%20(1).mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>
@@ -628,15 +628,15 @@
         <h2 class="ing-sec-title">We Deliver Results for Customers</h2>
         <div class="ing-stats-section dis-flex">
         <div class="ing-stats">
-        <h1>4x</h1>
+        <h3>4x</h3>
         <span class="ing-spn">Customer Satisfaction Rate</span></div>
         <div class="line">&nbsp;</div>
         <div class="ing-stats">
-        <h1>5x</h1>
+        <h3>5x</h3>
         <span class="ing-spn">Faster Compliance Management</span></div>
         <div class="line">&nbsp;</div>
         <div class="ing-stats">
-        <h1>9.4</h1>
+        <h3>9.4</h3>
         <span class="ing-spn">G2 Ease-of-Use Rating</span></div>
         </div>
         </div>`;
