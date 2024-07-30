@@ -1253,13 +1253,20 @@ body.spz-28001 {
 
                 &.open {
                   &::after {
-                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg")
                       no-repeat;
                     background-size: cover;
                     background-repeat: no-repeat;
                   }
                   .accordion-content {
                     display: block;
+                  }
+
+                  &:hover::after {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                      no-repeat;
+                    background-size: cover;
+                    background-repeat: no-repeat;
                   }
                 }
               }
@@ -2699,6 +2706,16 @@ body.spz-28001 {
           //   margin-bottom: 16px;
           // }
 
+          &:hover {
+            box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.2);
+          }
+
+          &:active {
+            border-color: #1253a8;
+            background: #eff8ff;
+            box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.3);
+          }
+
           .rc-link {
             text-decoration: none;
             height: 100%;
@@ -2761,41 +2778,36 @@ body.spz-28001 {
 
               .learn-more {
                 margin-top: auto;
+                color: #0580e8;
+                font-family: $ff-inter;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 24px;
+                display: flex;
+                align-items: flex-start;
+                text-decoration: none;
+                width: fit-content;
 
-                > a {
-                  color: #0580e8;
-                  font-family: $ff-inter;
-                  font-size: 16px;
-                  font-style: normal;
-                  font-weight: 600;
-                  line-height: 24px;
-                  display: flex;
-                  align-items: flex-start;
-                  text-decoration: none;
-                  width: fit-content;
+                .a-arrow {
+                  width: 16px;
+                  height: 16px;
+                  display: block;
+                  margin-left: 10px;
+                  margin-top: 2px;
+                }
 
-                  .a-arrow {
-                    width: 16px;
-                    // background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/arrow.svg")
-                    //   no-repeat center;
-                    height: 16px;
-                    display: block;
-                    margin-left: 10px;
-                    margin-top: 2px;
+                &:hover {
+                  color: #0068c9;
+                  .a-arrow svg path {
+                    fill: #0068c9;
                   }
+                }
 
-                  &:hover {
-                    color: #0068c9;
-                    .a-arrow svg path {
-                      fill: #0068c9;
-                    }
-                  }
-
-                  &:active {
-                    color: #1253a8;
-                    .a-arrow svg path {
-                      fill: #1253a8;
-                    }
+                &:active {
+                  color: #1253a8;
+                  .a-arrow svg path {
+                    fill: #1253a8;
                   }
                 }
               }
@@ -2997,13 +3009,20 @@ body.spz-28001 {
 
               &.open {
                 &::after {
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg")
                     no-repeat;
                   background-size: cover;
                   background-repeat: no-repeat;
                 }
                 .accordion-content {
                   display: block;
+                }
+
+                &:hover::after {
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
                 }
               }
             }

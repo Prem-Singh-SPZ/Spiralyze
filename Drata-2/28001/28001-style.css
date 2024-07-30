@@ -1304,12 +1304,17 @@ body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordi
   background-repeat: no-repeat;
 }
 body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item.open::after {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg") no-repeat;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg") no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
 }
 body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item.open .accordion-content {
   display: block;
+}
+body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item.open:hover::after {
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body.spz-28001 .compliance-sec .compliance-container .c-content .c-right {
   width: 100%;
@@ -2796,6 +2801,16 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
     margin-bottom: 16px;
   }
 }
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card:hover {
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.2);
+          box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.2);
+}
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card:active {
+  border-color: #1253a8;
+  background: #eff8ff;
+  -webkit-box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.3);
+          box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.3);
+}
 body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link {
   text-decoration: none;
   height: 100%;
@@ -2857,8 +2872,6 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
 }
 body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more {
   margin-top: auto;
-}
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a {
   color: #0580e8;
   font-family: "Inter", sans-serif;
   font-size: 16px;
@@ -2876,23 +2889,23 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
   width: -moz-fit-content;
   width: fit-content;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a .a-arrow {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more .a-arrow {
   width: 16px;
   height: 16px;
   display: block;
   margin-left: 10px;
   margin-top: 2px;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:hover {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:hover {
   color: #0068c9;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:hover .a-arrow svg path {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:hover .a-arrow svg path {
   fill: #0068c9;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:active {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:active {
   color: #1253a8;
 }
-body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more > a:active .a-arrow svg path {
+body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card .rc-link .card-content .learn-more:active .a-arrow svg path {
   fill: #1253a8;
 }
 body.spz-28001 .compliance-faq-section {
@@ -3121,11 +3134,17 @@ body.spz-28001 .compliance-faq-section .compliance-faq-container .right-containe
 }
 body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item.open::after,
 body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item.open::after {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg") no-repeat;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg") no-repeat;
   background-size: cover;
   background-repeat: no-repeat;
 }
 body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item.open .accordion-content,
 body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item.open .accordion-content {
   display: block;
+}
+body.spz-28001 .compliance-faq-section .compliance-faq-container .left-container .accordion-wrapper .accordion .accordion-item.open:hover::after,
+body.spz-28001 .compliance-faq-section .compliance-faq-container .right-container .accordion-wrapper .accordion .accordion-item.open:hover::after {
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
