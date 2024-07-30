@@ -2363,6 +2363,15 @@ body.spz-28001 {
           background-size: contain;
           z-index: 1;
           cursor: pointer;
+          border-radius: 32px;
+
+          @media (max-width: 1024.98px) {
+            background-size: 100% 100%;
+          }
+
+          @media (max-width: 767.98px) {
+            border-radius: 19.437px;
+          }
 
           &:hover {
             filter: grayscale(1);

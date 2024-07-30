@@ -2445,6 +2445,17 @@ body.spz-28001 .cs-section .cs-container .cs-right-video .cs-video-mask {
   background-size: contain;
   z-index: 1;
   cursor: pointer;
+  border-radius: 32px;
+}
+@media (max-width: 1024.98px) {
+  body.spz-28001 .cs-section .cs-container .cs-right-video .cs-video-mask {
+    background-size: 100% 100%;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-28001 .cs-section .cs-container .cs-right-video .cs-video-mask {
+    border-radius: 19.437px;
+  }
 }
 body.spz-28001 .cs-section .cs-container .cs-right-video .cs-video-mask:hover {
   -webkit-filter: grayscale(1);
