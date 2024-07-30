@@ -7,7 +7,7 @@
             name: "SOC 2",
             companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_soc_2.svg",
             title: "Achieve SOC 2 5x Faster",
-            review: "Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more —ensuring your customers&#8217; private data stays private.",
+            review: "Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more — ensuring your customers&#8217; private data stays private.",
             link: "https://drata.com/product/soc-2"
         },
         {
