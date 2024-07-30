@@ -325,6 +325,10 @@ body.spz-28001 {
     padding: 96px 24px;
 
     @media (max-width: 1024.98px) {
+      padding: 80px 16px 62px;
+    }
+
+    @media (max-width: 767.98px) {
       padding: 80px 16px 65px;
     }
 
@@ -584,7 +588,7 @@ body.spz-28001 {
             font-weight: 900;
             line-height: 48px;
             letter-spacing: -0.84px;
-            margin-top: 14px;
+            margin-top: 15px;
             margin-bottom: 0;
 
             @media (max-width: 1024.98px) {
@@ -1048,6 +1052,10 @@ body.spz-28001 {
     overflow: hidden;
 
     @media (max-width: 1024.98px) {
+      padding: 96px 16px 93px;
+    }
+
+    @media (max-width: 767.98px) {
       padding: 96px 16px 90px;
     }
 
@@ -1068,7 +1076,7 @@ body.spz-28001 {
           @media (max-width: 1024.98px) {
             font-size: 14px;
             line-height: 20px;
-            margin: 0 0 17px;
+            margin: 0 0 18px;
           }
 
           @media (max-width: 767.98px) {
@@ -1087,12 +1095,13 @@ body.spz-28001 {
           line-height: 48px;
           letter-spacing: -0.84px;
           max-width: 676px;
-          margin: 0 auto 20px;
+          margin: 0 auto 21px;
 
           @media (max-width: 1024.98px) {
             font-size: 32px;
             line-height: 40px;
             letter-spacing: -0.64px;
+            margin: 0 auto 19px;
           }
 
           @media (max-width: 767.98px) {
@@ -2106,7 +2115,7 @@ body.spz-28001 {
                 line-height: 24px;
                 opacity: 1;
                 padding: 8px 16px;
-                margin-right: 24px;
+                margin-right: 24.5px;
                 margin-left: 0;
                 white-space: nowrap;
                 width: auto;
@@ -2129,21 +2138,22 @@ body.spz-28001 {
           }
 
           .swiper-btn-prev {
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_02.svg)
               no-repeat;
+            background-size: 100% 100%;
             display: block;
             position: absolute;
-            right: 119px;
-            top: -47px;
+            right: 127px;
+            top: -48px;
             cursor: pointer;
             transition-duration: 0.15s;
             z-index: 15;
 
             @media (max-width: 1024.98px) {
-              right: 48px;
-              top: -32px;
+              right: 56px;
+              top: -31px;
             }
 
             @media (max-width: 767.98px) {
@@ -2152,7 +2162,6 @@ body.spz-28001 {
               height: 56px;
               left: 16px;
               right: auto;
-              background-size: 100% 100%;
             }
 
             &:hover {
@@ -2169,21 +2178,23 @@ body.spz-28001 {
           }
 
           .swiper-btn-next {
-            width: 48px;
-            height: 48px;
+            width: 40px;
+            height: 40px;
             background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_01.svg)
               no-repeat;
+            background-size: 100% 100%;
+
             display: block;
             position: absolute;
-            right: 63px;
-            top: -47px;
+            right: 71px;
+            top: -48px;
             cursor: pointer;
             transition-duration: 0.15s;
             z-index: 15;
 
             @media (max-width: 1024.98px) {
-              right: -8px;
-              top: -32px;
+              right: 0px;
+              top: -31px;
             }
 
             @media (max-width: 767.98px) {
@@ -2191,7 +2202,6 @@ body.spz-28001 {
               width: 56px;
               height: 56px;
               right: 16px;
-              background-size: 100% 100%;
             }
 
             &:hover {
@@ -2214,11 +2224,15 @@ body.spz-28001 {
 
   //customer stories section
   .cs-section {
-    padding: 96px 24px 91px;
+    padding: 96px 24px;
     background: #f6f8fa;
     overflow: hidden;
 
     @media (max-width: 1024.98px) {
+      padding: 81px 16px 79px;
+    }
+
+    @media (max-width: 767.98px) {
       padding: 80px 16px 73px;
     }
 
@@ -2323,6 +2337,7 @@ body.spz-28001 {
         max-width: 540px;
         position: relative;
         margin-top: 2px;
+        max-height: 360px;
 
         @media (max-width: 1024.98px) {
           max-width: 100%;
@@ -2338,7 +2353,7 @@ body.spz-28001 {
           height: 100%;
           background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Bg-default-min.png)
             no-repeat;
-          background-size: 100% 100%;
+          background-size: contain;
           z-index: 1;
           cursor: pointer;
 
@@ -2434,13 +2449,14 @@ body.spz-28001 {
                 font-size: 32px;
                 line-height: 40px;
                 letter-spacing: -0.64px;
+                margin: 0 0 65px;
               }
 
               @media (max-width: 767.98px) {
                 font-size: 24px;
                 line-height: 28px;
                 letter-spacing: 0;
-                margin: 0 0 34px;
+                margin: 0 0 31px;
               }
             }
 
@@ -2566,11 +2582,11 @@ body.spz-28001 {
     }
 
     @media (max-width: 1024.98px) {
-      padding: 80px 0 78px;
+      padding: 80px 0 64px;
     }
 
     @media (max-width: 767.98px) {
-      padding: 79px 0 63px;
+      padding: 80.5px 0 63px;
     }
 
     .resources-wrapper {
@@ -2797,7 +2813,11 @@ body.spz-28001 {
     background: #f6f8fa;
 
     @media (max-width: 1024.98px) {
-      padding: 82px 16px 80.5px;
+      padding: 97px 16px 80.5px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 81.5px 16px 65.5px;
     }
 
     .compliance-faq-title {
