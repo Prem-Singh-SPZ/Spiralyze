@@ -261,7 +261,7 @@
                 });
 
                 e.preventDefault();
-                this.classList.add('active');
+                // this.classList.add('active');
                 if (target) {
                     window.scrollTo({
                         top: target.offsetTop - 100,

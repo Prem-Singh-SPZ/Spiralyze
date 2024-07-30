@@ -300,10 +300,31 @@ body.spz-28001 .spz-navbar .nav-container .nav-links .nav-anchor {
   margin-left: 25px;
   padding: 8px 0px 6px;
   white-space: nowrap;
+  border-bottom: 2px solid transparent;
 }
 body.spz-28001 .spz-navbar .nav-container .nav-links .nav-anchor.active {
-  border-bottom: 2px solid #0580e8;
+  border-color: #0580e8;
   color: #0c131a;
+  -webkit-transition-delay: 300ms;
+          transition-delay: 300ms;
+  -webkit-animation: border fadeIn 0.3s ease-in-out forwards 0.2s;
+          animation: border fadeIn 0.3s ease-in-out forwards 0.2s;
+}
+@-webkit-keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
 }
 @media screen and (max-width: 767.98px) {
   body.spz-28001 .spz-navbar .nav-container .nav-links .nav-anchor {
@@ -2406,6 +2427,11 @@ body.spz-28001 .cs-section .cs-container .cs-right-video .cs-video-mask + video 
 body.spz-28001 .cs-section .cs-container .cs-right-video video {
   width: 100%;
   border-radius: 32px;
+}
+@media (max-width: 767.98px) {
+  body.spz-28001 .cs-section .cs-container .cs-right-video video {
+    border-radius: 19.437px;
+  }
 }
 body.spz-28001 .cs-section .cs-container .cs-right-video iframe {
   width: 100% !important;
