@@ -282,7 +282,10 @@
                 document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
                     anchor.classList.remove('active');
                 });
-                anchor.classList.add('active');
+                // setTimeout(() => {
+                    anchor.classList.add('active');
+                // }, 10);
+                // console.log(anchor);
             }
             else {
                 anchor.classList.remove('active');
