@@ -29,7 +29,7 @@
             companyLogo: astUrl + "/fl_sanitize/drata/14007/lemonade.svg",
             avatar: astUrl + "/f_auto/drata/14007/image_04.webp",
             title: "We Saved 80% of Time With Drata",
-            review: "I’ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I’m able to make my own control framework.",
+            review: "I&#8217;ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I&#8217;m able to make my own control framework.",
             link: "https://drata.com/customers/lemonade"
         },
         {
@@ -47,7 +47,7 @@
 
     // FAQ section data
     const faq = [{
-        que: "We’re not planning on getting SOC 2 yet. Why should I use Drata?",
+        que: "We&#8217;re not planning on getting SOC 2 yet. Why should I use Drata?",
         ans: `<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Your security posture matters. SOC 2 is just one way to prove the effectiveness of your security program, but having a real-time view of your security controls is invaluable for any business.</p> <p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata is the most advanced continuous monitoring platform on the market to assess your security posture in real-time, every day. You can score your SOC 2 readiness here. Check out <a class="MuiTypography-root MuiTypography-inherit MuiLink-root MuiLink-underlineAlways mui-k61s3s-MuiTypography-root-MuiLink-root-Link-root" href="https://www.forbes.com/sites/troymarkowitz/2021/01/15/why-saas-start-ups-should-prioritize-soc-2-compliance/" target="_blank" rel="noopener noreferrer" data-testid="Text-hyperlink">this Forbes piece</a> written by our Co-Founder Troy Markowitz that discusses this further.</p>`
     },
     {
@@ -55,7 +55,7 @@
         ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata only gives auditors access to what they need in order to streamline the audit engagement. In the Auditor View, you control the level of access your auditor receives. You also dictate the time period that access covers, and the framework so auditors are only seeing evidence and test results of your controls during that specific time window.<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>"
     }, {
         que: "Why is the Auditor View important?",
-        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata was built alongside auditors to ensure you and the auditor have the best user experience. Today, most platforms enable an export of reports or access to the entire set of controls and data you have visibility into. While not every control is applicable to your environment, auditors can’t unsee the evidence you’ve collected, which is why it’s important to only display pertinent information in the Auditor-Only View.</p>"
+        ans: "<p class='MuiTypography-root MuiTypography-body1 mui-198vr4a-MuiTypography-root'>Drata was built alongside auditors to ensure you and the auditor have the best user experience. Today, most platforms enable an export of reports or access to the entire set of controls and data you have visibility into. While not every control is applicable to your environment, auditors can&#8217;t unsee the evidence you&#8217;ve collected, which is why it&#8217;s important to only display pertinent information in the Auditor-Only View.</p>"
     },
     {
         que: "Do I still need an auditor if I use Drata?",
@@ -267,7 +267,7 @@
             if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
         }
         return null;
-    }    
+    }
 
     // Delete cookie
     function deleteCookie(name) {
@@ -332,7 +332,7 @@
 
                 setTimeout(() => {
                     if (document.querySelector('#hero-video')) {
-                        document.querySelector('#hero-video').play();                        
+                        document.querySelector('#hero-video').play();
                     }
                 }, 1000);
             }
@@ -351,7 +351,7 @@
         // }, 150);
 
         // setTimeout(() => {
-            // clearInterval(appendHero);
+        // clearInterval(appendHero);
         // }, 1000);
     }
 
@@ -532,14 +532,35 @@
                     }
                 });
 
-                jQuery(document).on('click', '.ac-item', function () {
-                    jQuery('.ac-item').removeClass('open');
-                    jQuery(this).addClass('open');
-                    jQuery('.ac-img').removeClass('open');
-                    var img_div = jQuery(this).attr('image_div');
-                    var div_index = 'ac-img_' + img_div;
-                    jQuery('.ac-img.' + div_index).addClass('open');
+
+                // jQuery(document).on('click', '.ac-item', function () {
+                //     jQuery('.ac-item').removeClass('open');
+                //     jQuery(this).addClass('open');
+                //     jQuery('.ac-img').removeClass('open');
+                //     var img_div = jQuery(this).attr('image_div');
+                //     var div_index = 'ac-img_' + img_div;
+                //     jQuery('.ac-img.' + div_index).addClass('open');
+                // });
+
+                //convert above in vanilla js
+                waitForElm('.ac-item').then(function () {
+                    document.querySelectorAll('.ac-item').forEach(function (item) {
+                        item.addEventListener('click', function () {
+                            document.querySelectorAll('.ac-item').forEach(function (item) {
+                                item.classList.remove('open');
+                            });
+                            this.classList.add('open');
+                            document.querySelectorAll('.ac-img').forEach(function (img) {
+                                img.classList.remove('open');
+                            });
+                            var img_div = this.getAttribute('image_div');
+                            var div_index = 'ac-img_' + img_div;
+                            document.querySelector('.ac-img.' + div_index).classList.add('open');
+                        });
+                    });
                 });
+
+
 
                 document.querySelector('body main').insertAdjacentHTML('afterbegin',
                     `<section class="spz-benefits">
@@ -568,7 +589,7 @@
 
     function whatsIncludedSec() {
         document.body.classList.add("loaded-test");
-        
+
         setTimeout(() => {
             document.querySelector('[variant="collectionContentGridSectionWrapper"]').classList.add('whats-included-sec');
             document.querySelector('[variant="collectionContentGridSectionWrapper"] [class$=MuiTypography-root-Text-title]').textContent = 'Everything You Need to Get SOC 2 Compliant with Drata';
@@ -648,7 +669,7 @@
                             </div>
                             <div class="ss-bottom-bar">
                                 <div class="ssb-title">Continuous Control Monitoring</div>
-                                <div class="ssb-subtitle">Continuous tests ensure you’re in compliance before and after the audit
+                                <div class="ssb-subtitle">Continuous tests ensure you&#8217;re in compliance before and after the audit
                                     for year-round peace of mind.</div>
                             </div>
                         </div>
@@ -722,7 +743,7 @@
             // Play video when in view
             if (isInViewport(document.querySelector('.video-integration-sec'))) {
                 document.querySelector('.vi-video').play();
-            } else if (document.querySelector('.vi-video')){
+            } else if (document.querySelector('.vi-video')) {
                 // Pause video when out of view
                 document.querySelector('.vi-video').pause();
             }
@@ -854,24 +875,31 @@
 
     function faqSection() {
         document.querySelector('[variant="collectionAccordionSectionWrapper"]').classList.add('spz-faq-sec');
-        document.querySelector('[variant="collectionAccordionSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').innerHTML = `<h6 class="small-title">FAQ</h6><h5 class="large-title">Your SOC 2 Questions Answered</h5><p class="small-description">At Drata, we&#8217;re here to help companies earn and keep the trust of their users, customers, partners, and prospects. We believe the best way to earn trust is by first proving that you deserve it. Here&#8217;s how we walk the walk when it comes to our own security program:</p>`;
+        waitForElm('body.spz-14007 .spz-faq-sec [class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary] .MuiAccordionSummary-content [class$=CollectionAccordion-title]').then(function () {
+            let updateFaq = setInterval(() => {
+                document.querySelector('[variant="collectionAccordionSectionWrapper"] [class$="CollectionAccordion-root"] [variant="default"]').innerHTML = `<h6 class="small-title">FAQ</h6><h5 class="large-title">Your SOC 2 Questions Answered</h5><p class="small-description">At Drata, we&#8217;re here to help companies earn and keep the trust of their users, customers, partners, and prospects. We believe the best way to earn trust is by first proving that you deserve it. Here&#8217;s how we walk the walk when it comes to our own security program:</p>`;
 
-        document.querySelector('[class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary]').click();
-
-        const faqContainer = document.querySelector('[class$="CollectionAccordion-itemsContainer"]');
-        const faQue = document.querySelectorAll('[class$="CollectionAccordion-title"]');
-        const faAns = document.querySelectorAll('[class$="CollectionAccordion-itemDetails"] [class$="Text-root"');
-
-        // Update the faq question and answer in the DOM
-        faq.forEach((item, index) => {
-            faQue[index + 1].innerHTML = item.que;
-            faAns[index + 1].innerHTML = item.ans;
+                
+                const faqContainer = document.querySelector('[class$="CollectionAccordion-itemsContainer"]');
+                const faQue = document.querySelectorAll('[class$="CollectionAccordion-title"]');
+                const faAns = document.querySelectorAll('[class$="CollectionAccordion-itemDetails"] [class$="Text-root"');
+                
+                // Update the faq question and answer in the DOM
+                faq.forEach((item, index) => {
+                    faQue[index + 1].innerHTML = item.que;
+                    faAns[index + 1].innerHTML = item.ans;
+                });
+                
+                // Remove last 1 faq items
+                if (faQue.length > 5) {
+                    faqContainer.removeChild(faqContainer.lastElementChild);
+                }
+            }, 100);
+            setTimeout(() => {
+                clearInterval(updateFaq);
+                document.querySelector('[class$=CollectionAccordion-root] [class$=CollectionAccordion-itemsContainer] [class$=MuiAccordion-root-CollectionAccordion-accordion] [class$=MuiAccordionSummary-root-CollectionAccordion-accordionSummary]').click();
+            }, 1000);
         });
-
-        // Remove last 1 faq items
-        if (faQue.length > 5) {
-            faqContainer.removeChild(faqContainer.lastElementChild);
-        }
     }
 
     // Initialize slider
