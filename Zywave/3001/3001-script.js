@@ -187,6 +187,14 @@ function setTabsContent() {
 
     // accordionHandler('#tabs');
 
+    //check event listener on window
+    window.addEventListener('click', function (e) {
+        if (e.target.classList.contains('spz-cta')) {
+            //scroll to form smoothly
+            document.querySelector('.mktoForm').scrollIntoView({ behavior: 'smooth' });
+        }
+    });
+
     footer();
 }
 
