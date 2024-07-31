@@ -12,7 +12,7 @@
         },
         {
             name: "ISO 27001",
-            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_iso_27001.svg",
+            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_iso_27002.svg",
             title: "ISO 27001, So Easy",
             review: "Go global with this internationally respected framework. Accelerate your journey with a platform that satisfies ISO 27001 requirements for systematic information security management.",
             link: "https://drata.com/product/iso-27001"
@@ -673,8 +673,11 @@
                     <div class="resource-card">
                         <a class="rc-link" href="https://drata.com/grc-central/soc-2/type-2">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
+                                <picture>
+                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-1.png" type="image/png">
+                                    <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
                                     alt="SOC 2 Beginners Guide">
+                                </picture>
                             </div>
                             <div class="card-content">
                                 <div class="card-title">SOC 2 Beginners Guide</div>
@@ -690,8 +693,11 @@
                     <div class="resource-card">
                         <a class="rc-link" href="https://drata.com/grc-central/iso-27001/checklist">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
+                                <picture>
+                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-2.png" type="image/png">
+                                    <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
                                     alt="8 Easy Steps to Get Started with ISO 27001">
+                                </picture>
                             </div>
                             <div class="card-content">
                                 <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
@@ -707,8 +713,11 @@
                     <div class="resource-card">
                         <a class="rc-link" href="https://drata.com/blog/cost-of-non-compliance">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_03.webp"
+                                <picture>
+                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-3.png" type="image/png">
+                                    <img src="${astUrl}/f_auto/drata/28001/image_03.webp"
                                     alt="Learn About the Cost of Non-Compliance">
+                                </picture>
                             </div>
                             <div class="card-content">
                                 <div class="card-title">Learn About the Cost of Non-Compliance</div>
@@ -724,8 +733,11 @@
                     <div class="resource-card">
                         <a class="rc-link" href="https://drata.com/blog/soc-2-audits">
                             <div class="card-img">
-                                <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
+                                 <picture>
+                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-4.png" type="image/png">
+                                    <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
                                     alt="SOC 2 Audits: What You Can Expect from Start to Finish">
+                                </picture>
                             </div>
                             <div class="card-content">
                                 <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
