@@ -535,7 +535,7 @@ body.spz-3001 {
     overflow: hidden;
 
     @media screen and (max-width: 1024.98px) {
-      padding: 64px 0 65px;
+      padding: 82px 0 65px;
     }
 
     @media screen and (max-width: 767.98px) {
@@ -593,7 +593,7 @@ body.spz-3001 {
           margin-bottom: 44px;
 
           @media screen and (max-width: 1024.98px) {
-            margin-bottom: 32px;
+            margin-bottom: 42px;
           }
 
           @media screen and (max-width: 767.98px) {
@@ -612,6 +612,11 @@ body.spz-3001 {
               display: flex;
               position: relative;
               overflow: hidden;
+
+              @media screen and (max-width: 1024.98px) {
+                width: 154.5px;
+                justify-content: center;
+              }
 
               > div {
                 white-space: nowrap;
@@ -740,6 +745,10 @@ body.spz-3001 {
               display: flex;
               align-items: center;
               justify-content: space-between;
+              
+              @media screen and (max-width: 1024.98px) {
+                flex-direction: column;
+              }
 
               .left-copy {
                 max-width: 367px;
@@ -747,6 +756,12 @@ body.spz-3001 {
                 margin-right: 48px;
                 flex: 0 0 40%;
                 margin-bottom: 9px;
+
+                @media screen and (max-width: 1024.98px) {
+                  max-width: 100%;
+                  margin-right: 0;
+                  flex: 0 0 100%;
+                }
 
                 .title {
                   color: #0f2d52;
@@ -797,6 +812,11 @@ body.spz-3001 {
 
               .right-img {
                 margin-right: -26px;
+
+                @media screen and (max-width: 1024.98px) {
+                  max-width: 100%;
+                  margin-right: 0;
+                }
 
                 img {
                   width: auto;
