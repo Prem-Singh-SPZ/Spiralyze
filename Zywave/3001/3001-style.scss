@@ -3,6 +3,18 @@ $segoe: "Segoe UI", Arial, sans-serif;
 body.spz-3001 {
   overflow-x: hidden;
 
+  .no-desk {
+    @media screen and (min-width: 1024.98px) {
+      display: none !important;
+    }
+  }
+
+  .desk-only {
+    @media screen and (max-width: 1024.98px) {
+      display: none !important;
+    }
+  }
+
   * {
     box-sizing: border-box;
   }
@@ -12,25 +24,33 @@ body.spz-3001 {
   }
 
   .hero-section {
-    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/desktop_bg.webp)
-      no-repeat center;
-    background-size: cover;
+    background: linear-gradient(114deg, #0f2e54 -0.34%, #2776d0 100.65%);
     position: relative;
 
-    @media screen and (max-width: 1024.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003545.webp)
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background: url(//res.cloudinary.com/spiralyze/image/upload/v1719333506/zywave/3001/background_element_desktop.svg)
         no-repeat center;
       background-size: cover;
-    }
+      z-index: 0;
+      pointer-events: none;
 
-    @media screen and (max-width: 767.98px) {
-      background: linear-gradient(171deg, #112f55 6.65%, #2062ae 93.35%);
-    }
+      @media screen and (max-width: 1024.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1000003545.webp)
+          no-repeat center;
+        background-size: cover;
+      }
 
-    @media screen and (min-width: 1900.98px) {
-      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275612.webp)
-        no-repeat center;
-      background-size: cover;
+      @media screen and (min-width: 1900.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/10001/frame_1171275612.webp)
+          no-repeat center;
+        background-size: cover;
+      }
     }
 
     .header-row {
@@ -88,7 +108,9 @@ body.spz-3001 {
 
           @media screen and (max-width: 1199.98px) {
             width: 49%;
+            margin-right: 24px;
           }
+
           @media screen and (max-width: 1024.98px) {
             max-width: 100%;
             width: 100%;
@@ -102,7 +124,7 @@ body.spz-3001 {
             font-style: normal;
             font-weight: 700;
             line-height: 110%;
-            margin: 8px 0 39px;
+            margin: 24px 0 48px;
 
             span {
               color: #5fb53b;
@@ -135,7 +157,7 @@ body.spz-3001 {
               font-style: normal;
               font-weight: 400;
               line-height: 140%;
-              margin-bottom: 24px;
+              margin-bottom: 23px;
               position: relative;
               list-style: none;
 
@@ -222,7 +244,7 @@ body.spz-3001 {
                 color: #0f2d52;
                 text-align: center;
                 font-family: $bree;
-                font-feature-settings: "salt" on;
+                // font-feature-settings: "salt" on;
                 font-size: 32px;
                 font-style: normal;
                 font-weight: 700;
@@ -445,8 +467,7 @@ body.spz-3001 {
                   font-weight: 400;
                   line-height: 140%;
                   max-width: 274px;
-                  margin-left: auto;
-                  margin-right: auto;
+                  margin: 16px auto 17px;
 
                   a {
                     color: #2777d3;
@@ -466,17 +487,17 @@ body.spz-3001 {
       .social-proof-title {
         color: #fff;
         text-align: center;
-        font-family: $bree;
+        font-family: $segoe;
         font-size: 16px;
         font-style: normal;
-        font-weight: 700;
-        line-height: 130%;
+        font-weight: 600;
+        line-height: 140%;
         text-transform: uppercase;
-        margin: 24px 0 48px;
+        margin: 32px 0 47px;
       }
 
       .brand-logo {
-        padding-bottom: 20px;
+        padding-bottom: 62px;
 
         @media (max-width: 1024.98px) {
           padding-bottom: 60px;
@@ -498,7 +519,7 @@ body.spz-3001 {
 
   .accordion-section {
     background: #fff;
-    padding: 100px 0 249px;
+    padding: 82px 0;
     overflow: hidden;
 
     @media screen and (max-width: 1024.98px) {
@@ -540,7 +561,7 @@ body.spz-3001 {
         display: flex;
         justify-content: space-between;
         flex-direction: column;
-        padding: 48px 0 0;
+        padding: 56px 0 0;
 
         @media screen and (max-width: 1024.98px) {
           align-items: center;
@@ -557,7 +578,7 @@ body.spz-3001 {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 64px;
+          margin-bottom: 44px;
 
           @media screen and (max-width: 1024.98px) {
             margin-bottom: 32px;
@@ -572,30 +593,27 @@ body.spz-3001 {
             position: relative;
 
             a {
-              display: flex;
-              height: 44px;
-              padding: 10px 19px;
-              justify-content: center;
-              align-items: center;
+              height: 50px;
+              padding: 9px 31.5px 10px 25px;
               border-radius: 999px;
               border: 1px solid #cccccc;
-              color: #b3b3b3;
-              letter-spacing: -0.2px;
-              font-family: $segoe;
-              font-size: 16px;
-              font-style: normal;
-              font-weight: 600;
-              line-height: 140%;
-              white-space: nowrap;
+              display: flex;
               position: relative;
               overflow: hidden;
+
+              > div {
+                white-space: nowrap;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+              }
 
               .text {
                 z-index: 1;
                 color: #b3b3b3;
                 letter-spacing: -0.2px;
                 font-family: $segoe;
-                font-size: 16px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 600;
                 line-height: 140%;
@@ -621,8 +639,8 @@ body.spz-3001 {
 
               img {
                 margin-right: 10px;
-                width: 20px;
-                height: 20px;
+                width: 24px;
+                height: 24px;
                 z-index: 1;
                 pointer-events: none;
 
@@ -715,6 +733,7 @@ body.spz-3001 {
                 max-width: 367px;
                 width: 100%;
                 margin-right: 48px;
+                flex: 0 0 40%;
 
                 .title {
                   color: #0f2d52;
@@ -764,12 +783,15 @@ body.spz-3001 {
               }
 
               .right-img {
-                max-width: 753px;
-                width: 100%;
+                margin-right: -26px;
 
                 img {
-                  width: 100%;
-                  height: 460px;
+                  width: auto;
+                  max-height: 465px;
+
+                  @media screen and (max-width: 1199.98px) {
+                    width: 100%;
+                  }
                 }
               }
             }
@@ -802,6 +824,7 @@ body.spz-3001 {
         justify-content: space-between;
 
         @media screen and (max-width: 1024.98px) {
+          flex-direction: column-reverse;
           max-width: 598px;
           margin: auto;
         }
@@ -814,9 +837,11 @@ body.spz-3001 {
           font-weight: 400;
           line-height: 140%;
           margin: 0;
+          white-space: nowrap;
         }
 
         .footer-links {
+          margin-bottom: 16px;
           .spz-subfooter-menu {
             margin: 0;
             padding: 0;
@@ -835,6 +860,7 @@ body.spz-3001 {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
+                white-space: nowrap;
 
                 &:hover {
                   text-decoration: underline;

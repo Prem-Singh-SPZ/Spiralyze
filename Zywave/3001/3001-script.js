@@ -54,28 +54,28 @@ function setHeroContent() {
 function setTabsContent() {
     document.querySelector('.hero-section').insertAdjacentHTML('afterend', `<div class="accordion-section">
             <div class="accordion-row">
-            <div class="section-title">Features</div>
+            <div class="section-title">Solutions</div>
                 <div class="accordion-col">
                     <nav id="tabs">
-                        <li class="active" data-index="1"><a href="#tab1"><span class="hover"></span>
+                        <li class="active" data-index="1"><a href="#tab1"><div class="desk-only"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331938/zywave/3001/sales_cloud.svg" alt="Sales Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331957/zywave/3001/sales_cloud_hov.svg" alt="Sales Cloud" class="i-hover">
-                            <span class="text">Sales Cloud</span></a>
+                            <span class="text">Sales Cloud</span></div><div class="no-desk"><span class="hover"></span><span class="text">1</span></div></a>
                         </li>
-                        <li data-index="2"><a href="#tab2"><span class="hover"></span>
+                        <li data-index="2"><a href="#tab2"><div class="desk-only"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719331997/zywave/3001/client_cloud.svg" alt="Client Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332026/zywave/3001/client_cloud_hov.svg" alt="Client Cloud" class="i-hover">
-                            <span class="text">Client Cloud</span></a>
+                            <span class="text">Client Cloud</span></div><div class="no-desk"><span class="hover"></span><span class="text">2</span></div></a>
                         </li>
-                         <li data-index="3"><a href="#tab3"><span class="hover"></span>
+                         <li data-index="3"><a href="#tab3"><div class="desk-only"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332050/zywave/3001/content_cloud.svg" alt="Content Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332077/zywave/3001/content_cloud_hov.svg" alt="Content Cloud" class="i-hover">
-                            <span class="text">Content Cloud</span></a>
+                            <span class="text">Content Cloud</span></div><div class="no-desk"><span class="hover"></span><span class="text">3</span></div></a>
                         </li>
-                         <li data-index="4"><a href="#tab4"><span class="hover"></span>
+                         <li data-index="4"><a href="#tab4"><div class="desk-only"><span class="hover"></span>
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332099/zywave/3001/analytics_cloud.svg" alt="Analytics Cloud" class="i-default">
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1719332128/zywave/3001/analytics_cloud_hov.svg" alt="Analytics Cloud" class="i-hover">
-                            <span class="text">Analytics Cloud</span></a>
+                            <span class="text">Analytics Cloud</span></div><div class="no-desk"><span class="hover"></span><span class="text">4</span></div></a>
                         </li>
                     </nav>
                     
