@@ -1,16 +1,79 @@
 function ready(fn) {
-  if (document.readyState !== 'loading') {
-    fn();
-  } else {
-    document.addEventListener('DOMContentLoaded', fn);
-  }
+    if (document.readyState !== 'loading') {
+        fn();
+    } else {
+        document.addEventListener('DOMContentLoaded', fn);
+    }
 }
+
+//create a json for slider with two attributes
+let sliderData = {
+    "slider": [
+        {
+            "topText": "265M",
+            "bottomText": "Patients with self-identified race and ethnicity ",
+        },
+        {
+            "topText": "10K",
+            "bottomText": "Unique health <br>insurance plans",
+        },
+        {
+            "topText": "76%",
+            "bottomText": "Rx-to-Mx <br>match rate",
+        },
+        {
+            "topText": "160M",
+            "bottomText": "Closed, linkable lives <br>per year",
+        },
+        {
+            "topText": "330M+",
+            "bottomText": "Patients in the US",
+        },
+        {
+            "topText": "16M",
+            "bottomText": "Healthcare encounters <br>everyday",
+        },
+        {
+            "topText": "7+ years",
+            "bottomText": "Average historical patient <br>journey data",
+        },
+        {
+            "topText": "6.5M",
+            "bottomText": "Individual HCPs",
+        },
+        {
+            "topText": "1.7M",
+            "bottomText": "Unique HCOs",
+        },
+        {
+            "topText": "8B",
+            "bottomText": "Lab records",
+        },
+        {
+            "topText": "698",
+            "bottomText": "Hospital/owned facilities' itemized charge data",
+        },
+        {
+            "topText": "100%",
+            "bottomText": "Medicare data as a CMS <br>qualified entity",
+        },
+        {
+            "topText": "23",
+            "bottomText": "Years of publication and <br>clinical trial data",
+        },
+        {
+            "topText": "60+",
+            "bottomText": "Data Sources",
+        },
+    ]
+};
+
 ready(function () {
-  if (!document.querySelector('.spz-1004')) {
-    document.querySelector('body').classList.add('spz-1004')
-    //targeted page
-    if (window.location.href.indexOf('https://www.komodohealth.com/contact-us') > -1) {
-      document.querySelector('body .body-container .row-depth-1.row-number-5.dnd_area-row-2-padding').insertAdjacentHTML('afterbegin', `
+    if (!document.querySelector('.spz-1004')) {
+        document.querySelector('body').classList.add('spz-1004')
+        //targeted page
+        if (window.location.href.indexOf('https://www.komodohealth.com/contact-us') > -1) {
+            document.querySelector('body .body-container .row-depth-1.row-number-5.dnd_area-row-2-padding').insertAdjacentHTML('afterbegin', `
       <div class="new-slider-wrapper">
       <div class="stats-slider">
           <div class="wrapper">
@@ -18,216 +81,7 @@ ready(function () {
                   <section class="splide splide1">
                       <div class="splide__track">
                           <ul class="splide__list">
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              200M
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Patients with <span>self-identified</span> race <br>and ethnicity
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              10K
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Unique health <br>insurance plans
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              97%
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Rx-to-Mx <br>match rate
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              160M
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Closed, linkable lives <br>per year
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              330M+
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Patients in the US
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              15M
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Healthcare encounters <br>everyday
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              2X
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              More unique patients than <br>legacy aggregators
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              40%
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              More clinical encounters per patient than legacy aggregators
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              7+ years
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Average historical patient <br>journey data
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              4M+
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Providers across <br>care settings
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              700K
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              HCOs across the continuum <br>of care
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              100%
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Medicare data as a CMS <br>qualified entity
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              23
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Years of publication and <br>clinical trial data
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              8B
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Lab records
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
-                              <li class="splide__slide">
-                                  <div class="child">
-                                      <div class="top-text">
-                                          <div class="l-number">
-                                              700
-                                          </div>
-                                      </div>
-                                      <div class="bottom-text">
-                                          <div class="card-text">
-                                              Hospital/owned facilities' itemized <br>charge data
-                                          </div>
-                                      </div>
-                                  </div>
-                              </li>
+                              ` + getSliderHTML(sliderData) + `
                           </ul>
                       </div>
                   </section>
@@ -254,56 +108,80 @@ ready(function () {
     `);
 
 
-      let i = 0;
-      const CROInterval = setInterval(() => {
-        if (typeof (Splide)) {
-          var splide = new Splide('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide1', {
-            type: 'loop',
-            perPage: 3,
-            autoplay: true,
-            arrows: false,
-            autoHeight: true,
-            pagination: false,
-            breakpoints: {
-              767: {
-                perPage: 1,
-                pagination: true,
-                arrows: false,
-              }
+            let i = 0;
+            const CROInterval = setInterval(() => {
+                if (typeof (Splide)) {
+                    var splide = new Splide('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide1', {
+                        type: 'loop',
+                        perPage: 3,
+                        autoplay: true,
+                        arrows: false,
+                        autoHeight: true,
+                        pagination: false,
+                        breakpoints: {
+                            767: {
+                                perPage: 1,
+                                pagination: true,
+                                arrows: false,
+                            }
+                        }
+                    });
+                    setTimeout(function () {
+                        splide.mount()
+                    }, 200)
+
+                    document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-left img').addEventListener("click", function () {
+                        splide.go('<');
+                    })
+                    document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-right img').addEventListener("click", function () {
+                        splide.go('>');
+                    })
+                }
+
+                if (document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]')) {
+                    clearInterval(CROInterval)
+                    document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]').value = "#1001_variant"
+                }
+                i++;
+                if (i > 6) {
+                    clearInterval(CROInterval)
+                }
+            }, 500);
+        }
+        //non targeted page
+        else {
+            let elementArray = [];
+            for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
+                elementArray[i] = document.querySelectorAll('a[href="#popup_contact_us"]')[i];
             }
-          });
-          setTimeout(function () {
-            splide.mount()
-          }, 200)
-
-          document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-left img').addEventListener("click", function () {
-            splide.go('<');
-          })
-          document.querySelector('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .arrow-right img').addEventListener("click", function () {
-            splide.go('>');
-          })
+            for (let i = 0; i < elementArray.length; i++) {
+                elementArray[i].setAttribute("href", "https://www.komodohealth.com/contact-us?hs_preview=CdkDwRWl-165496376225");
+                elementArray[i].removeAttribute("rel");
+            }
         }
-
-        if (document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]')) {
-          clearInterval(CROInterval)
-          document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]').value = "#1001_variant"
-        }
-        i++;
-        if (i > 6) {
-          clearInterval(CROInterval)
-        }
-      }, 500);
     }
-    //non targeted page
-    else {
-      let elementArray = [];
-      for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
-        elementArray[i] = document.querySelectorAll('a[href="#popup_contact_us"]')[i];
-      }
-      for (let i = 0; i < elementArray.length; i++) {
-        elementArray[i].setAttribute("href", "https://www.komodohealth.com/contact-us?hs_preview=CdkDwRWl-165496376225");
-        elementArray[i].removeAttribute("rel");
-      }
-    }
-  }
 })
+
+//return a html for slider using json data
+function getSliderHTML(data) {
+    let html = '';
+    data.slider.forEach((item) => {
+        html += `
+        <li class="splide__slide">
+            <div class="child">
+                <div class="top-text">
+                    <div class="l-number">
+                        ${item.topText}
+                    </div>
+                </div>
+                <div class="bottom-text">
+                    <div class="card-text">
+                        ${item.bottomText}
+                    </div>
+                </div>
+            </div>
+        </li>
+        `;
+    });
+    return html;
+}

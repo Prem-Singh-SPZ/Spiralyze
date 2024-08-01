@@ -488,9 +488,9 @@
                 if (!isOpen) {
                     item.classList.add('open');
                 }
-                else {
-                    item.classList.add('open');
-                }
+                // else {
+                //     item.classList.add('open');
+                // }
 
                 updateImgHeight();
             });
@@ -818,9 +818,9 @@
                 if (!isOpen) {
                     item.classList.add('open');
                 }
-                else {
-                    item.classList.add('open');
-                }
+                // else {
+                //     item.classList.add('open');
+                // }
             });
         });
 
@@ -833,9 +833,9 @@
                 if (!isOpen) {
                     item.classList.add('open');
                 }
-                else {
-                    item.classList.add('open');
-                }
+                // else {
+                //     item.classList.add('open');
+                // }
             });
         });
     };
