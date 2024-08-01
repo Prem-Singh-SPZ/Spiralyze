@@ -36,7 +36,7 @@ function setHeroContent() {
                 <div class="hero-form">
                 </div>
             </div>
-            <div class="social-proof-title">Join 18,000+ insurers, agencies, and service providers using Zywave.</div>
+            <div class="social-proof-title">Join 18,000+ <br class="mob-only">insurers, agencies, and service providers using Zywave.</div>
             <div class="brand-logo">
                 <picture>
                 <source media="(min-width:1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/logos.webp">

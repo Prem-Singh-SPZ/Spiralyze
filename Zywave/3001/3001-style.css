@@ -11,6 +11,11 @@ body.spz-3001 {
     display: none !important;
   }
 }
+@media screen and (min-width: 767.98px) {
+  body.spz-3001 .mob-only {
+    display: none !important;
+  }
+}
 body.spz-3001 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
@@ -65,7 +70,7 @@ body.spz-3001 .hero-section .header-row .header-col {
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .hero-section .header-row .header-col {
-    padding: 32px 0 17px;
+    padding: 32px 0 23px;
   }
 }
 body.spz-3001 .hero-section .hero-row {
@@ -162,7 +167,7 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list {
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list {
-    margin: 27px 0 40.5px;
+    margin: 24px 0 44px;
   }
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li {
@@ -187,6 +192,11 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li::before
   left: 0;
   width: 40px;
   height: 40px;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li::before {
+    top: 3px;
+  }
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-copy .hero-list li:first-child::before {
   background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/zywave/3001/sales.webp) no-repeat;
@@ -232,9 +242,9 @@ body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container d
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm {
-    border-radius: 24px;
+    border-radius: 22px;
     margin: 0;
-    padding: 43px 30px 48px;
+    padding: 28px 24px 32.5px;
   }
 }
 body.spz-3001 .hero-section .hero-row .hero-col .hero-form .spz-form-container div.mktoForm .form_title {
@@ -464,7 +474,12 @@ body.spz-3001 .hero-section .hero-row .social-proof-title {
 }
 @media (max-width: 1024.98px) {
   body.spz-3001 .hero-section .hero-row .social-proof-title {
-    margin: 8px 0 47px;
+    margin: 8px 22px 47px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-3001 .hero-section .hero-row .social-proof-title {
+    margin: 16px 22px 31px;
   }
 }
 body.spz-3001 .hero-section .hero-row .brand-logo {
@@ -479,7 +494,7 @@ body.spz-3001 .hero-section .hero-row .brand-logo {
 }
 @media (max-width: 767.98px) {
   body.spz-3001 .hero-section .hero-row .brand-logo {
-    padding-bottom: 44px;
+    padding-bottom: 68px;
     max-width: 400px;
   }
 }
@@ -498,7 +513,7 @@ body.spz-3001 .accordion-section {
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .accordion-section {
-    padding: 44px 0 48px;
+    padding: 44px 0;
   }
 }
 body.spz-3001 .accordion-section .accordion-row {
@@ -578,7 +593,7 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs {
 }
 @media screen and (max-width: 767.98px) {
   body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs {
-    margin-bottom: 0;
+    margin-bottom: 29px;
   }
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li {
@@ -602,6 +617,12 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a {
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a {
+    width: 72.5px;
+    height: 44px;
   }
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a > div {
@@ -637,11 +658,6 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a .hover
   right: 0;
   height: 100%;
   pointer-events: none;
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a {
-    font-size: 14px;
-  }
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tabs li a img {
   margin-right: 10px;
@@ -758,6 +774,12 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .ta
     margin-bottom: 44px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .left-copy {
+    margin-bottom: 22px;
+    max-width: 320px;
+  }
+}
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .left-copy .title {
   color: #0f2d52;
   font-family: "BreeBold", Arial, sans-serif;
@@ -767,6 +789,12 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .ta
   line-height: 110%;
   margin: 0 0 21px;
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .left-copy .title {
+    font-size: 20px;
+    margin: 0 0 19px;
+  }
+}
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .left-copy .description {
   color: #0f2d52;
   font-family: "Segoe UI", Arial, sans-serif;
@@ -775,6 +803,11 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .ta
   font-weight: 400;
   line-height: 140%;
   margin: 0 0 40px;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .left-copy .description {
+    margin: 0 0 23px;
+  }
 }
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .left-copy .cta-wrapper .spz-cta {
   border-radius: 99px;
@@ -813,6 +846,11 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .ta
     margin-right: -36px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .right-img {
+    margin-right: -18px;
+  }
+}
 body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .right-img img {
   width: auto;
   max-height: 465px;
@@ -825,6 +863,11 @@ body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .ta
 @media screen and (max-width: 1024.98px) {
   body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .right-img img {
     width: 658px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .accordion-section .accordion-row .accordion-col #tab-contents .tab-contents .accordion-wrapper .right-img img {
+    width: 324px;
   }
 }
 body.spz-3001 .footer-section {
@@ -881,6 +924,11 @@ body.spz-3001 .footer-section .footer-row .footer-col .footer-text {
     margin: 0 0 16px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .footer-section .footer-row .footer-col .footer-links {
+    margin: 0 0 11px;
+  }
+}
 body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfooter-menu {
   margin: 0;
   padding: 0;
@@ -892,6 +940,15 @@ body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfoot
           align-items: center;
   list-style: none;
 }
+@media screen and (max-width: 1024.98px) {
+  body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfooter-menu {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+}
 body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfooter-menu li {
   list-style: none;
   margin-left: 32.5px;
@@ -899,6 +956,11 @@ body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfoot
 @media screen and (max-width: 1024.98px) {
   body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfooter-menu li {
     margin: 0 16.5px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfooter-menu li {
+    margin: 0 10.5px 12px;
   }
 }
 body.spz-3001 .footer-section .footer-row .footer-col .footer-links .spz-subfooter-menu li a {
