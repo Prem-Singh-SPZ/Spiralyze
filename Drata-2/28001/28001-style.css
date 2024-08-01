@@ -1172,6 +1172,11 @@ body.spz-28001 .compliance-sec .compliance-container .c-title-container .c-desc 
     margin: 0 auto 32px;
   }
 }
+body.spz-28001 .compliance-sec .compliance-container .c-content {
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
 @media (max-width: 1024.98px) {
   body.spz-28001 .compliance-sec .compliance-container .c-content {
     -webkit-box-orient: vertical;
@@ -1327,15 +1332,17 @@ body.spz-28001 .compliance-sec .compliance-container .c-content .c-right {
 }
 body.spz-28001 .compliance-sec .compliance-container .c-content .c-right .c-img img {
   width: auto;
-  height: 584px;
+  height: 610px;
   -o-object-fit: contain;
      object-fit: contain;
   image-rendering: -webkit-optimize-contrast;
+  margin-bottom: 4px;
 }
 @media (max-width: 1024.98px) {
   body.spz-28001 .compliance-sec .compliance-container .c-content .c-right .c-img img {
     width: 100%;
     height: auto !important;
+    margin: 0;
   }
 }
 body.spz-28001 .meet-drata {
@@ -1705,7 +1712,7 @@ body.spz-28001 .cr-section .cr-title-container .title-wrapper .small-eyebrow {
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
-  margin: 0 0 16px;
+  margin: 0 auto 16px;
 }
 @media (max-width: 1024.98px) {
   body.spz-28001 .cr-section .cr-title-container .title-wrapper .small-eyebrow {
@@ -2959,6 +2966,7 @@ body.spz-28001 .compliance-faq-section .compliance-faq-title .small-eyebrow {
   font-weight: 700;
   line-height: 24px;
   margin: 0 0 16px;
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   body.spz-28001 .compliance-faq-section .compliance-faq-title .small-eyebrow {
@@ -2974,7 +2982,8 @@ body.spz-28001 .compliance-faq-section .compliance-faq-title .title {
   font-weight: 900;
   line-height: 48px;
   letter-spacing: -0.84px;
-  margin: 0 0 17px;
+  margin: 0 auto 17px;
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   body.spz-28001 .compliance-faq-section .compliance-faq-title .title {
@@ -2990,8 +2999,9 @@ body.spz-28001 .compliance-faq-section .compliance-faq-title .sub-desc {
   font-style: normal;
   font-weight: 500;
   line-height: 26px;
-  margin: 0 0 16px;
+  margin: 0 auto 16px;
   max-width: 626px;
+  text-align: center;
 }
 @media (max-width: 767.98px) {
   body.spz-28001 .compliance-faq-section .compliance-faq-title .sub-desc {

@@ -72,7 +72,7 @@
                     heroChanges();
                     spzNavBar();
                     checkActiveNav();
-                    updateImgHeight();
+                    // updateImgHeight();
 
                 });
             }, 200);
@@ -492,7 +492,7 @@
                 //     item.classList.add('open');
                 // }
 
-                updateImgHeight();
+                // updateImgHeight();
             });
         });
 
@@ -947,9 +947,9 @@
     }
 
     //check if window is resized
-    window.addEventListener('resize', function () {
-        updateImgHeight();
-    });
+    // window.addEventListener('resize', function () {
+    //     updateImgHeight();
+    // });
 
     //when scroll, check which section is in view and add active class to respective nav-anchor
     window.addEventListener('scroll', function () {

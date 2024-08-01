@@ -1141,6 +1141,7 @@ body.spz-28001 {
       }
 
       .c-content {
+        align-items: center;
         @media (max-width: 1024.98px) {
           flex-direction: column;
         }
@@ -1286,13 +1287,15 @@ body.spz-28001 {
 
           .c-img img {
             width: auto;
-            height: 584px;
+            height: 610px;
             object-fit: contain;
             image-rendering: -webkit-optimize-contrast;
+            margin-bottom: 4px;
 
             @media (max-width: 1024.98px) {
               width: 100%;
               height: auto !important;
+              margin: 0;
             }
           }
         }
@@ -1640,7 +1643,7 @@ body.spz-28001 {
           font-style: normal;
           font-weight: 700;
           line-height: 24px;
-          margin: 0 0 16px;
+          margin: 0 auto 16px;
 
           @media (max-width: 1024.98px) {
             font-size: 14px;
@@ -2870,6 +2873,7 @@ body.spz-28001 {
         font-weight: 700;
         line-height: 24px;
         margin: 0 0 16px;
+        text-align: center;
 
         @media (max-width: 767.98px) {
           font-size: 12px;
@@ -2885,7 +2889,8 @@ body.spz-28001 {
         font-weight: 900;
         line-height: 48px;
         letter-spacing: -0.84px;
-        margin: 0 0 17px;
+        margin: 0 auto 17px;
+        text-align: center;
 
         @media (max-width: 767.98px) {
           font-size: 24px;
@@ -2901,8 +2906,9 @@ body.spz-28001 {
         font-style: normal;
         font-weight: 500;
         line-height: 26px;
-        margin: 0 0 16px;
+        margin: 0 auto 16px;
         max-width: 626px;
+        text-align: center;
 
         @media (max-width: 767.98px) {
           font-size: 14px;
