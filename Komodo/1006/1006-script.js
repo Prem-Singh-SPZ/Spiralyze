@@ -135,6 +135,9 @@ ready(function () {
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries').classList.add("clear");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs-richtext').classList.add("clear", "pp-parent");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit').classList.add("clear", "submit-parent");
+              if (document.querySelectorAll('.spz-1006 #contact-us-form-wrapper .hs-richtext p.support-link').length == 0) {
+                document.querySelector('.spz-1006 #contact-us-form-wrapper .hs-richtext').insertAdjacentHTML('afterbegin', '<p class="support-link">Looking for support? <a href="https://www.komodohealth.com/support" target="_blank" rel="noopener">Click Here</a></p>');
+              }
               // insertAfter(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_email'), document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_lastname'));
               // insertAfter(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_company'), document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_email'));
               // insertAfter(document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_jobtitle'), document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_company'));
