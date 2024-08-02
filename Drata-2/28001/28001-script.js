@@ -283,12 +283,18 @@
                     anchor.classList.remove('active');
                 });
                 // setTimeout(() => {
-                    anchor.classList.add('active');
+                anchor.classList.add('active');
                 // }, 10);
                 // console.log(anchor);
             }
             else {
                 anchor.classList.remove('active');
+            }
+
+            //left scroll the nav links to bring the active link in focus
+            if (window.innerWidth < 760 && anchor.classList.contains('active')) {
+                document.querySelector('.nav-links').style.scrollBehavior = 'smooth';
+                document.querySelector('.nav-links').scrollLeft = anchor.offsetLeft - 100;
             }
         });
 
