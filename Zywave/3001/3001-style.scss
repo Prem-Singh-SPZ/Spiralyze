@@ -48,6 +48,7 @@ body.spz-3001 {
       @media screen and (max-width: 1024.98px) {
         background: url(//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/3001/line_tablet.svg)
           no-repeat center calc(50% + 74px);
+        background-size: 100%;
       }
 
       @media screen and (max-width: 767.98px) {
@@ -98,7 +99,7 @@ body.spz-3001 {
         @media screen and (max-width: 1024.98px) {
           flex-direction: column;
           align-items: center;
-          max-width: 648px;
+          max-width: 650px;
           margin: auto;
           padding: 6px 0 48px;
         }
@@ -124,7 +125,7 @@ body.spz-3001 {
 
           .hero-title {
             color: #fff;
-            font-feature-settings: "ss03" on, "liga" off;
+            font-feature-settings: "ss01" on;
             font-family: $bree;
             font-size: 56px;
             font-style: normal;
@@ -152,6 +153,10 @@ body.spz-3001 {
             padding: 0;
             list-style: none;
             margin: 32px 0;
+
+            @media screen and (max-width: 1024.98px) {
+              margin: 32px 1px;
+            }
 
             @media screen and (max-width: 767.98px) {
               margin: 24px 0 44px;
@@ -256,7 +261,7 @@ body.spz-3001 {
                 color: #0f2d52;
                 text-align: center;
                 font-family: $bree;
-                // font-feature-settings: "salt" on;
+                font-feature-settings: "ss01" on;
                 font-size: 32px;
                 font-style: normal;
                 font-weight: 700;
@@ -544,11 +549,11 @@ body.spz-3001 {
 
   .accordion-section {
     background: #fff;
-    padding: 82px 0 90px;
+    padding: 82px 0 93px;
     overflow: hidden;
 
     @media screen and (max-width: 1024.98px) {
-      padding: 82px 0 89px;
+      padding: 82px 0 92px;
     }
 
     @media screen and (max-width: 767.98px) {
@@ -603,7 +608,7 @@ body.spz-3001 {
           display: flex;
           align-items: center;
           justify-content: center;
-          margin-bottom: 44px;
+          margin-bottom: 46px;
 
           @media screen and (max-width: 1024.98px) {
             margin-bottom: 42px;
@@ -769,15 +774,15 @@ body.spz-3001 {
                 width: 100%;
                 margin-right: 48px;
                 flex: 0 0 40%;
-                margin-bottom: 9px;
+                margin-bottom: 8px;
 
                 @media screen and (max-width: 1024.98px) {
                   max-width: 100%;
                   margin-right: 0;
                   flex: 0 0 100%;
-                  margin-bottom: 44px;
+                  margin-bottom: 47px;
                 }
-                
+
                 @media screen and (max-width: 767.98px) {
                   margin-bottom: 22px;
                   max-width: 320px;
@@ -840,29 +845,29 @@ body.spz-3001 {
               }
 
               .right-img {
-                margin-right: -26px;
+                // margin-right: -26px;
 
-                @media screen and (max-width: 1024.98px) {
-                  margin-right: -36px;
-                }
+                // @media screen and (max-width: 1024.98px) {
+                //   margin-right: -36px;
+                // }
 
-                @media screen and (max-width: 767.98px) {
-                  margin-right: -18px;
-                }
+                // @media screen and (max-width: 767.98px) {
+                //   margin-right: -18px;
+                // }
 
                 img {
                   width: auto;
-                  max-height: 465px;
+                  max-height: 460px;
 
                   @media screen and (max-width: 1199.98px) {
                     width: 100%;
                   }
 
                   @media screen and (max-width: 1024.98px) {
-                    width: 658px;
+                    width: 648px;
                   }
                   @media screen and (max-width: 767.98px) {
-                    width: 324px;
+                    width: 315px;
                   }
                 }
               }
