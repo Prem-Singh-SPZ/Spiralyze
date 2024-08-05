@@ -370,7 +370,7 @@
                                     <div class="ss-step step-1">1</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/28001/configure.webp"
+                                            <img src="${astUrl}/f_auto/drata/28001/configure_6.webp"
                                                 class="ss-img" alt="Identify Needs"
                                                 title="Identify Needs">
                                         </div>
@@ -382,7 +382,7 @@
                                     <div class="ss-step step-2">2</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/28001/collect.webp"
+                                            <img src="${astUrl}/f_auto/drata/28001/collect_6.webp"
                                                 class="ss-img" alt="Implement Controls"
                                                 title="Implement Controls">
                                         </div>
@@ -394,7 +394,7 @@
                                     <div class="ss-step step-3">3</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/28001/audit.webp"
+                                            <img src="${astUrl}/f_auto/drata/28001/audit_6.webp"
                                                 class="ss-img" alt="Ace the Audit" title="Ace the Audit">
                                         </div>
                                         <div class="ss-title">Ace the Audit</div>
