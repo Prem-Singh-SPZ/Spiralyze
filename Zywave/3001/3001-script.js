@@ -185,7 +185,7 @@ function setTabsContent() {
         label.querySelector('a').addEventListener("click", activateTab);
     });
 
-    // accordionHandler('#tabs');
+    accordionHandler('#tabs');
 
     //check event listener on window
     window.addEventListener('click', function (e) {
