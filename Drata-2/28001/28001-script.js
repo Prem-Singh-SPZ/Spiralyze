@@ -327,11 +327,6 @@
                             <div class="bs-card-desc">No one wants to work with a security risk. Get compliant to earn trust and expedite the sales process.</div>
                         </div>
                          <div class="bs-card">
-                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_2.svg" alt="Secure Funding"></div>
-                            <div class="bs-card-title">Secure Funding</div>
-                            <div class="bs-card-desc">Investors don&#8217;t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
-                        </div>
-                         <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
                             <div class="bs-card-title">Unlock Expansion</div>
                             <div class="bs-card-desc">Meet enterprise and regulatory requirements to expand into larger deals and new markets.</div>
@@ -459,7 +454,7 @@
                             <div class="accordion accordion_1">
                                 <div class="accordion-item open">
                                     <div class="accordion-title">Kickstart Compliance</div>
-                                    <div class="accordion-content">Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s Trust Center, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.</div>
+                                    <div class="accordion-content">Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s <a href="https://drata.com/product/trust-center">Trust Center</a>, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.</div>
                                 </div>
                                 <div class="accordion-item">
                                     <div class="accordion-title">Reduce Compliance Time by 80%</div>
@@ -528,7 +523,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-video-wr">
-                                    <video controls controlsList="nodownload" poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
+                                    <video autoplay loop muted playsinline poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
                                     <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                     </video>
@@ -558,7 +553,7 @@
                                     <div class="md-card-desc">Whether you need help choosing a framework or hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
                                 </div>
                                 <div class="md-cta-wrapper">
-                                    <a href="https://drata.com/contact" class="md-cta black-cta">Learn More</a>
+                                    <a href="https://drata.com/success" class="md-cta black-cta">Learn More</a>
                                 </div>
                             </div>
                         </div>

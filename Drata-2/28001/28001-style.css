@@ -443,11 +443,19 @@ body.spz-28001 .benefits-sec .benefits-container .bs-title-container .bs-desc {
         flex-wrap: wrap;
   }
 }
+@media screen and (max-width: 1024.98px) and (min-width: 767.98px) {
+  body.spz-28001 .benefits-sec .benefits-container .bs-cards-container {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0 16px;
+  }
+}
 body.spz-28001 .benefits-sec .benefits-container .bs-cards-container .bs-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  max-width: calc(25% - 24px);
+  max-width: calc(33.33% - 24px);
   width: 100%;
   padding: 32px 31px 31px;
   -webkit-box-orient: vertical;
@@ -576,7 +584,7 @@ body.spz-28001 .simple-steps-sec .simple-steps-container .ss-top-bar {
   }
 }
 body.spz-28001 .simple-steps-sec .simple-steps-container .ss-top-bar .ss-left {
-  max-width: 382px;
+  max-width: 360px;
 }
 @media (max-width: 1024.98px) {
   body.spz-28001 .simple-steps-sec .simple-steps-container .ss-top-bar .ss-left {
@@ -1276,6 +1284,16 @@ body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordi
     font-size: 14px;
     line-height: 20px;
   }
+}
+body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-content a {
+  color: #0580e8;
+  text-decoration: none;
+}
+body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-content a:hover {
+  color: #0068c9;
+}
+body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-content a:active {
+  color: #1253a8;
 }
 body.spz-28001 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item::after {
   content: "";
@@ -2826,7 +2844,7 @@ body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-c
 body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card:hover {
   -webkit-box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.2);
           box-shadow: 0px 0px 0px 4px rgba(5, 128, 232, 0.2);
-  border-color: #0580E8;
+  border-color: #0580e8;
 }
 body.spz-28001 .resources-section .resources-wrapper .resource-cards .resource-card:active {
   border-color: #1253a8;
