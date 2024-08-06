@@ -142,7 +142,7 @@ $arrowHov: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/10
             background: #3f6 !important;
             color: #000000;
 
-            svg path{
+            svg path {
               stroke: #000000;
             }
           }
@@ -1299,3 +1299,132 @@ $arrowHov: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/10
   }
 }
 // Header Navigation Styles Ends
+
+//white header style starts
+.spz-1002:not(.spz-nav-sticky) {
+  #masthead {
+    // Main Navigation
+    .expel-main-navigation {
+      @media (max-width: 1150px) {
+        height: 80px;
+      }
+      .site-branding {
+        .custom-logo-link {
+          // &:not(.spz-logo) {
+          //   display: none;
+          // }
+
+          &:last-child {
+            display: none;
+          }
+        }
+      }
+
+      .inner-container {
+        @media (min-width: 1441px) {
+          padding: 0 30px;
+        }
+
+        @media (max-width: 1150px) {
+          padding: 0 35px 0 38px;
+        }
+
+        @media (max-width: 767.98px) {
+          padding: 0 18px;
+        }
+
+        .logo .site-branding .custom-logo-link img {
+          max-width: 104px;
+        }
+
+        #NavStrip {
+          ul#menu-main-menu {
+            gap: 40.5px;
+
+            .mega-menu {
+              cursor: pointer;
+              transition-duration: 0.5ms;
+
+              > a {
+                .menu-item-title {
+                  font-family: $proxima;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 150%;
+                }
+              }
+
+              .fa {
+                height: 20px;
+                width: 12px;
+
+                &:before {
+                  font-size: 13px;
+                }
+              }
+            }
+
+            .blue-button {
+              position: relative;
+              background-color: transparent;
+              margin-left: -7px;
+              padding: 0;
+
+              a {
+                background: #1762e6;
+                border-radius: 72px;
+                color: $white;
+                font-family: $proxima;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 500;
+                line-height: 150%;
+                text-align: center;
+                padding: 12px 52px 12px 24px;
+                cursor: pointer;
+                leading-trim: both;
+                text-edge: cap;
+                transition-duration: 150ms;
+
+                &:hover {
+                  background: $hover;
+                }
+              }
+
+              &::after {
+                content: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/1002/icon_right.svg");
+                position: absolute;
+                right: 24px;
+                pointer-events: none;
+              }
+            }
+          }
+
+          label.icon {
+            margin-right: 4.5px;
+            height: 4.5px;
+            width: 26px;
+
+            .menu {
+              width: 23px;
+
+              &:before {
+                top: -7px;
+              }
+
+              &:after {
+                top: 7px;
+              }
+
+              &:after,
+              &:before {
+                width: 23px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
