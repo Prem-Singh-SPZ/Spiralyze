@@ -73,14 +73,14 @@
                     heroChanges();
                     spzNavBar();
                     checkActiveNav();
-                    // updateImgHeight();
+                    globalCTA();
 
                 });
             }, 200);
 
             setTimeout(() => {
                 clearInterval(updatePage);
-            }, 5000);
+            }, 3000);
             // submitTestDetails('Variant_28001');
         });
 
@@ -88,13 +88,18 @@
     }
 
     function removeTest() {
-        document.body.classList.remove("loaded-test");
         document.body.classList.remove("spz-28001");
-        if (document.querySelector('.spz-sec')) {
-            document.querySelectorAll('.spz-sec').forEach(function (sec) {
-                sec.remove();
-            });
-        }
+        let removePage = setInterval(() => {
+            if (document.querySelector('.spz-sec')) {
+                document.querySelectorAll('.spz-sec').forEach(function (sec) {
+                    sec.remove();
+                });
+            }
+        }, 100);
+
+        setTimeout(() => {
+            clearInterval(removePage);
+        }, 3100);
     }
 
     //Passing test details to hidden fields
