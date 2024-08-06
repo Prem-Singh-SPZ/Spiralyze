@@ -76,11 +76,11 @@
                     globalCTA();
 
                 });
-            }, 200);
+            }, 10);
 
             setTimeout(() => {
                 clearInterval(updatePage);
-            }, 3000);
+            }, 1000);
             // submitTestDetails('Variant_28001');
         });
 
@@ -95,11 +95,11 @@
                     sec.remove();
                 });
             }
-        }, 100);
+        }, 10);
 
         setTimeout(() => {
             clearInterval(removePage);
-        }, 3100);
+        }, 1100);
     }
 
     //Passing test details to hidden fields
