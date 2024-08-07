@@ -163,9 +163,13 @@
         } else {
             removeTest();
         }
-        // if (window.location.pathname.indexOf("/demo") > -1) {
-        //     demoChecked();
-        // }
+        if (window.location.pathname.indexOf("/demo") > -1) {
+            waitForElm('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').then(function () {
+                if (document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video')) {
+                    document.querySelector('div[class*="MuiModal-root"] div[class*="Modal-styledReactPlayer"] video').setAttribute('playsinline', '');
+                }
+            });
+        }
     }
 
     function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
