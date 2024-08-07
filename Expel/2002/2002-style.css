@@ -131,10 +131,10 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm {
   width: 100% !important;
   padding: 0;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoClear,
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow,
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoOffset,
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoGutter {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoClear:not([data-wrapper-for=spz-privacy-policy]),
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow:not([data-wrapper-for=spz-privacy-policy]),
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoOffset:not([data-wrapper-for=spz-privacy-policy]),
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoGutter:not([data-wrapper-for=spz-privacy-policy]) {
   display: none !important;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol {
@@ -405,6 +405,9 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   top: 5px;
   left: 3px;
 }
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow[data-wrapper-for=spz-privacy-policy] .mktoFormCol {
+  width: 100% !important;
+}
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-person_country__c .mktoFieldWrap::after,
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-company_size__c .mktoFieldWrap::after {
   position: absolute;
@@ -492,7 +495,6 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
       -ms-flex-order: 7;
           order: 7;
   width: 100% !important;
-  margin: 0 6px;
   color: #747474 !important;
   font-size: 14px;
   font-style: normal;
