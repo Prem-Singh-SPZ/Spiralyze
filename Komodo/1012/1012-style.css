@@ -1,8 +1,16 @@
 .spz-1012 #popup_contact_us {
   max-width: 600px !important;
-  -webkit-box-shadow: 0px 12.33333px 49.33334px 0px rgba(0, 0, 0, 0.2);
-          box-shadow: 0px 12.33333px 49.33334px 0px rgba(0, 0, 0, 0.2);
+  -webkit-box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
   padding: 24px 32px 32px !important;
+}
+@media (min-width: 767.98px) {
+  .spz-1012 #popup_contact_us {
+    margin: 24px 0;
+  }
+}
+.spz-1012 #popup_contact_us .blocker {
+  background: rgba(0, 0, 0, 0.5);
 }
 .spz-1012 #popup_contact_us .hbspt-form {
   display: none;
@@ -34,34 +42,80 @@
   letter-spacing: 0px !important;
   margin-bottom: 24px;
 }
-.spz-1012 #new-form-wrapper .hs-form-required {
+.spz-1012 #popup_contact_us .spz-social-proof {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-top: 24px;
+}
+@media (max-width: 767.98px) {
+  .spz-1012 #popup_contact_us .spz-social-proof {
+    max-width: 312px;
+    margin: 24px auto 0;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    gap: 0 16px;
+  }
+}
+.spz-1012 #popup_contact_us .spz-social-proof .sp-logo img {
+  height: 28px;
+  width: auto;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 form {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-2 {
+  width: 100%;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-1.width-50 {
+  width: calc((100% - 20px) / 2);
+}
+@media (max-width: 767.98px) {
+  .spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-1.width-50 {
+    width: 100%;
+  }
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-required {
   display: none;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.width50 {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.width50 {
   width: calc((100% - 20px) / 2);
   float: left;
   clear: none;
 }
-.spz-1012 #new-form-wrapper .with-margin {
+.spz-1012 #popup_contact_us #contact-form-1012 .with-margin {
   margin-left: 20px;
 }
-.spz-1012 #new-form-wrapper .clear {
+.spz-1012 #popup_contact_us #contact-form-1012 .clear {
   clear: both;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.width50.clear {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.width50.clear {
   clear: both;
 }
-.spz-1012 #new-form-wrapper .hs-form-field {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field {
   position: relative;
-  margin-bottom: 20px;
+  margin-bottom: 20px !important;
 }
-.spz-1012 #new-form-wrapper .hs-form-field > label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field > label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
   position: absolute;
   top: 12px;
   left: 20px;
   pointer-events: none;
 }
-.spz-1012 #new-form-wrapper .hs-form-field > label span {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field > label span {
   color: #4a4a4a;
   font-family: Titillium Web, sans-serif;
   font-size: 16px;
@@ -71,7 +125,10 @@
   letter-spacing: 0px;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .hs-input {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field .input {
+  margin: 0px !important;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-input {
   margin: 0px !important;
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   background-color: #f8f7f7 !important;
@@ -88,7 +145,7 @@
   letter-spacing: 0;
   background-clip: padding-box;
 }
-.spz-1012 #new-form-wrapper .hs-input:-webkit-autofill {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
@@ -96,7 +153,7 @@
   z-index: 2;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .hs-input:-webkit-autofill:hover {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
@@ -104,7 +161,7 @@
   z-index: 2;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .hs-input:-webkit-autofill:focus {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
@@ -112,7 +169,7 @@
   z-index: 2;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .hs-error-msgs label {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-error-msgs label {
   font-size: 14px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -123,22 +180,22 @@
   margin-top: 4px;
   margin-bottom: -12px;
 }
-.spz-1012 #new-form-wrapper .hs-error-msgs label a {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-error-msgs label a {
   display: block;
   padding-top: 6px;
   color: #dc0000;
 }
-.spz-1012 #new-form-wrapper .hs-error-msgs.inputs-list {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-error-msgs.inputs-list {
   padding-left: 0px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate {
   display: none;
   margin-bottom: 4px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate .hs-error-msgs label {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate .hs-error-msgs label {
   margin-bottom: -3px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate input[type=checkbox] {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate input[type=checkbox] {
   min-width: 20px;
   height: 20px;
   -webkit-appearance: none;
@@ -151,7 +208,7 @@
   border-radius: 0;
   outline: 0;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate input[type=checkbox]:checked {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate input[type=checkbox]:checked {
   background-color: #68cce8 !important;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
   background-repeat: no-repeat;
@@ -159,12 +216,12 @@
   border: 1px solid #68cce8 !important;
   background-clip: border-box;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate label {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate label span {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate label span {
   color: #000;
   font-family: Titillium Web, sans-serif;
   font-size: 12px;
@@ -177,17 +234,17 @@
   margin-left: 0px;
   margin-right: 0px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate .hs-form-booleancheckbox {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate .hs-form-booleancheckbox {
   margin: 0px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us {
   display: none;
   margin-bottom: 4px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us .hs-error-msgs label {
   margin-bottom: -3px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us input[type=checkbox] {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us input[type=checkbox] {
   min-width: 20px;
   height: 20px;
   -webkit-appearance: none;
@@ -200,7 +257,7 @@
   border-radius: 0;
   outline: 0;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us input[type=checkbox]:checked {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us input[type=checkbox]:checked {
   background-color: #68cce8 !important;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
   background-repeat: no-repeat;
@@ -208,12 +265,12 @@
   border: 1px solid #68cce8 !important;
   background-clip: border-box;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us label {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us label {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us label span {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us label span {
   color: #000;
   font-family: Titillium Web, sans-serif;
   font-size: 12px;
@@ -226,14 +283,14 @@
   margin-left: 0px;
   margin-right: 0px;
 }
-.spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us .hs-form-booleancheckbox {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us .hs-form-booleancheckbox {
   margin: 0px;
 }
-.spz-1012 #new-form-wrapper .focus .hs-input {
+.spz-1012 #popup_contact_us #contact-form-1012 .focus .hs-input {
   border: 1px solid rgba(0, 0, 0, 0.4) !important;
   background-color: #fff !important;
 }
-.spz-1012 #new-form-wrapper .focus .hs-input:-webkit-autofill {
+.spz-1012 #popup_contact_us #contact-form-1012 .focus .hs-input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
@@ -241,7 +298,7 @@
   z-index: 2;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .focus .hs-input:-webkit-autofill:hover {
+.spz-1012 #popup_contact_us #contact-form-1012 .focus .hs-input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
@@ -249,7 +306,7 @@
   z-index: 2;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .focus .hs-input:-webkit-autofill:focus {
+.spz-1012 #popup_contact_us #contact-form-1012 .focus .hs-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
   -webkit-transition: background-color 5000s ease-in-out 0s !important;
   transition: background-color 5000s ease-in-out 0s !important;
@@ -257,82 +314,79 @@
   z-index: 2;
   position: relative;
 }
-.spz-1012 #new-form-wrapper .hasValue .hs-input {
+.spz-1012 #popup_contact_us #contact-form-1012 .hasValue .hs-input {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   background-color: #f8f7f7 !important;
 }
-.spz-1012 #new-form-wrapper .hasError .hs-input {
+.spz-1012 #popup_contact_us #contact-form-1012 .hasError .hs-input {
   border: 1px solid #dc0000 !important;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.focus > label {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue > label {
   top: -13px !important;
   left: 16px !important;
   z-index: 4;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.focus > label span {
-  font-family: Titillium Web, sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: -0.16px;
-  padding: 0 4px;
-  color: #000000;
-  box-shadow: 0px -5px 0px 0px white inset;
-  -webkit-box-shadow: 0px -5px 0px 0px white inset;
-}
-.spz-1012 #new-form-wrapper .hs-form-field.hasValue > label {
-  top: -13px !important;
-  left: 16px !important;
-  z-index: 4;
-}
-.spz-1012 #new-form-wrapper .hs-form-field.hasValue > label span {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue > label span {
   -webkit-font-smoothing: antialiased;
   font-family: Titillium Web, sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: -0.16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
   padding: 0 4px;
   color: #7e7e7e;
-  box-shadow: 0px -5px 0px 0px #f8f7f7 inset;
-  -webkit-box-shadow: 0px -5px 0px 0px #f8f7f7 inset;
+  box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+  -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.focus.hs_how_did_you_hear_about_us_ > label {
-  display: none;
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus > label {
+  top: -13px !important;
+  left: 16px !important;
+  z-index: 4;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.hasValue.hs_how_did_you_hear_about_us_ > label {
-  display: none;
-}
-.spz-1012 #new-form-wrapper .hs-form-field.focus.hs_message > label {
-  display: none;
-}
-.spz-1012 #new-form-wrapper .hs-form-field.hasValue.hs_message > label {
-  display: none;
-}
-.spz-1012 #new-form-wrapper .hs-form-field.hasError.focus > label span {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus > label span {
   font-family: Titillium Web, sans-serif;
-  font-size: 10px;
-  font-weight: 500;
-  line-height: 12px;
-  letter-spacing: -0.16px;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
   padding: 0 4px;
-  color: #dc0000;
-  box-shadow: 0px -5px 0px 0px white inset;
-  -webkit-box-shadow: 0px -5px 0px 0px white inset;
+  color: #000;
+  box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+  -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
 }
-.spz-1012 #new-form-wrapper .hs-form-field.hasError > label span {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus.hs_how_did_you_hear_about_us_ > label {
+  display: none;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue.hs_how_did_you_hear_about_us_ > label {
+  display: none;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus.hs_message > label {
+  display: none;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue.hs_message > label {
+  display: none;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasError.focus > label span {
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 4px;
+  color: #000;
+  box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+  -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasError > label span {
   color: #dc0000;
 }
-.spz-1012 #new-form-wrapper .hs_message {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_message {
   display: none;
   margin-bottom: 12px;
 }
-.spz-1012 #new-form-wrapper .hs_message textarea {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_message textarea {
   resize: none;
   overflow: hidden;
   display: block;
 }
-.spz-1012 #new-form-wrapper .hs-richtext p {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p {
   color: #7e7e7e;
   font-family: Titillium Web, sans-serif;
   font-size: 12px !important;
@@ -342,20 +396,23 @@
   letter-spacing: 0;
   margin-bottom: 17px;
 }
-.spz-1012 #new-form-wrapper .hs-richtext p a {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p a {
   text-decoration: underline;
   color: #68cce8 !important;
   -webkit-text-decoration-skip-ink: none;
           text-decoration-skip-ink: none;
   text-underline-offset: 1px;
 }
-.spz-1012 #new-form-wrapper .hs-richtext p a:hover {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p a:hover {
   text-decoration: none;
 }
-.spz-1012 #new-form-wrapper .hs-richtext p a:active {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p a:active {
   text-decoration: none;
 }
-.spz-1012 #new-form-wrapper .hs_submit input {
+.spz-1012 #popup_contact_us #contact-form-1012 .submit-parent {
+  width: 100%;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_submit input {
   width: 100%;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -381,31 +438,31 @@
   margin-bottom: 0px !important;
   border: none;
 }
-.spz-1012 #new-form-wrapper .hs_submit input:hover {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_submit input:hover {
   background-color: #000000 !important;
   color: white !important;
 }
-.spz-1012 #new-form-wrapper .hs_submit input:active {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_submit input:active {
   background-color: #4a4a4a !important;
   color: white !important;
 }
-.spz-1012 #new-form-wrapper .hs_submit .actions {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_submit .actions {
   margin: 0;
   padding: 0;
 }
-.spz-1012 #new-form-wrapper .hs_consent_countries {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_countries {
   display: none;
 }
-.spz-1012 #new-form-wrapper .hs_consent_countries select {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_countries select {
   -webkit-appearance: none;
   -moz-appearance: none;
        appearance: none;
   padding-right: 40px !important;
 }
-.spz-1012 #new-form-wrapper .hs_consent_countries select option {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_countries select option {
   font-family: Titillium Web, sans-serif;
 }
-.spz-1012 #new-form-wrapper .hs_consent_countries .arrow-select {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_countries .arrow-select {
   width: 16px;
   height: 16px;
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/arrow-down.svg") no-repeat;
@@ -415,7 +472,7 @@
   top: 16px;
   z-index: 4;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper {
   display: none;
   -webkit-box-align: center;
       -ms-flex-align: center;
@@ -423,7 +480,7 @@
   margin-top: -4px;
   margin-bottom: 12px;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper > div {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper > div {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -432,22 +489,22 @@
           align-items: center;
   cursor: pointer;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .minus {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .minus {
   display: none;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .how-did.active .minus {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .how-did.active .minus {
   display: block;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .how-did.active .plus {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .how-did.active .plus {
   display: none;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .how-can.active .minus {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .how-can.active .minus {
   display: block;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .how-can.active .plus {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .how-can.active .plus {
   display: none;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .text {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .text {
   color: #000;
   margin-left: 8px;
   font-family: Titillium Web, sans-serif;
@@ -456,23 +513,23 @@
   line-height: 20px;
   margin-top: -1px;
 }
-.spz-1012 #new-form-wrapper .new-option-wrapper .how-can {
+.spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper .how-can {
   margin-left: 24.5px;
 }
-.spz-1012 #new-form-wrapper .hs_how_did_you_hear_about_us_ {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_how_did_you_hear_about_us_ {
   display: none;
   margin-bottom: 12px;
 }
-.spz-1012 #new-form-wrapper .hs_jobtitle {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_jobtitle {
   display: none;
 }
-.spz-1012 #new-form-wrapper .hs_phone {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_phone {
   display: none;
 }
-.spz-1012 #new-form-wrapper .mobile {
+.spz-1012 #popup_contact_us #contact-form-1012 .mobile {
   display: none;
 }
-.spz-1012 #new-form-wrapper .hs_error_rollup .hs-main-font-element {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_error_rollup .hs-main-font-element {
   color: #dc0000;
   text-align: center;
   padding: 8px 0;
@@ -487,22 +544,22 @@
   font-size: 14px !important;
   font-weight: 400;
 }
-.spz-1012 #new-form-wrapper .pp-parent {
+.spz-1012 #popup_contact_us #contact-form-1012 .pp-parent {
   margin-top: 3px;
   float: left;
   margin-left: 0px;
   margin-right: 0px;
 }
-.spz-1012 #new-form-wrapper .submitted-message {
+.spz-1012 #popup_contact_us #contact-form-1012 .submitted-message {
   text-align: center;
 }
-.spz-1012 #new-form-wrapper .lds-dual-ring {
+.spz-1012 #popup_contact_us #contact-form-1012 .lds-dual-ring {
   display: block;
   width: 80px;
   height: 80px;
   margin: 80px auto;
 }
-.spz-1012 #new-form-wrapper .lds-dual-ring:after {
+.spz-1012 #popup_contact_us #contact-form-1012 .lds-dual-ring:after {
   content: " ";
   display: block;
   width: 64px;
@@ -514,43 +571,39 @@
   -webkit-animation: lds-dual-ring 1.2s linear infinite;
           animation: lds-dual-ring 1.2s linear infinite;
 }
-.spz-1012 .blocker {
-  background: rgba(0, 0, 0, 0.5);
-}
-.spz-1012 #new-form-wrapper.how-did .hs_how_did_you_hear_about_us_ {
+.spz-1012 #contact-form-1012.how-did .hs_how_did_you_hear_about_us_ {
   display: block;
 }
-.spz-1012 #new-form-wrapper.how-did .new-option-wrapper {
+.spz-1012 #contact-form-1012.how-did .new-option-wrapper {
   margin-bottom: 16px;
 }
-.spz-1012 #new-form-wrapper.how-can .hs_message {
+.spz-1012 #contact-form-1012.how-can .hs_message {
   display: block;
 }
-.spz-1012 #new-form-wrapper.how-can .new-option-wrapper {
+.spz-1012 #contact-form-1012.how-can .new-option-wrapper {
   margin-bottom: 16px;
 }
-
-.spz-1012.step2 #new-form-wrapper .new-option-wrapper {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .new-option-wrapper {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-.spz-1012.step2 #new-form-wrapper .hs_jobtitle {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_jobtitle {
   display: block;
 }
-.spz-1012.step2 #new-form-wrapper .hs_phone {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_phone {
   display: block;
 }
-.spz-1012.step2 #new-form-wrapper .hs_consent_countries {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_consent_countries {
   display: block;
 }
-.spz-1012.step2 #new-form-wrapper .hs_consent_to_communicate {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate {
   display: block;
 }
-.spz-1012.step2 #new-form-wrapper .hs_consent_to_communicate_non_us {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us {
   display: block;
 }
-.spz-1012.step2 #new-form-wrapper .pp-parent {
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .pp-parent {
   margin-bottom: 15px;
   margin-top: 4px;
 }
@@ -560,109 +613,110 @@
     background-color: rgba(0, 0, 0, 0.5);
     padding: 0px;
   }
-  .spz-1012 #new-form-wrapper .hs-form-field.width50 {
-    width: 100%;
-    float: none;
-  }
-  .spz-1012 #new-form-wrapper .with-margin {
-    margin-left: 0px;
-  }
-  .spz-1012 #new-form-wrapper .hs-form-field {
-    margin-bottom: 16px;
-  }
-  .spz-1012 #new-form-wrapper .pp-parent {
-    margin-top: 0px;
-  }
-  .spz-1012 #new-form-wrapper .hs-form__richtext p {
-    margin-bottom: 13px;
-  }
-  .spz-1012 #new-form-wrapper .new-option-wrapper.desktop {
-    display: none;
-  }
-  .spz-1012 #new-form-wrapper .how-did-wrapper {
-    margin-top: -1px;
-  }
-  .spz-1012 #new-form-wrapper .how-did-wrapper .minus {
-    display: none;
-  }
-  .spz-1012 #new-form-wrapper .how-did-wrapper .text {
-    color: #000;
-    margin-left: 3.5px;
-    font-family: Titillium Web, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 20px;
-  }
-  .spz-1012 #new-form-wrapper .how-did-wrapper svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-  .spz-1012 #new-form-wrapper .how-can-wrapper {
-    margin-top: 8px;
-    margin-bottom: 5px;
-  }
-  .spz-1012 #new-form-wrapper .how-can-wrapper .minus {
-    display: none;
-  }
-  .spz-1012 #new-form-wrapper .how-can-wrapper .text {
-    color: #000;
-    margin-left: 3.5px;
-    font-family: Titillium Web, sans-serif;
-    font-size: 12px;
-    font-weight: 400;
-    line-height: 20px;
-  }
-  .spz-1012 #new-form-wrapper .how-can-wrapper svg {
-    width: 16px !important;
-    height: 16px !important;
-  }
-  .spz-1012 #new-form-wrapper .hs_how_did_you_hear_about_us_ {
-    margin-bottom: 0px;
-  }
-  .spz-1012 #new-form-wrapper .hs_message {
-    margin-bottom: 5px;
-  }
-  .spz-1012 #new-form-wrapper .how-did-wrapper.active .minus {
-    display: block;
-  }
-  .spz-1012 #new-form-wrapper .how-did-wrapper.active .plus {
-    display: none;
-  }
-  .spz-1012 #new-form-wrapper .how-can-wrapper.active .minus {
-    display: block;
-  }
-  .spz-1012 #new-form-wrapper .how-can-wrapper.active .plus {
-    display: none;
-  }
-  .spz-1012 #new-form-wrapper .hs-error-msgs {
-    margin: 4px 0px 23px;
-  }
-  .spz-1012 #new-form-wrapper .hs-error-msgs label a {
-    padding-top: 0px;
-    margin-top: -24px;
-  }
-  .spz-1012 #new-form-wrapper .hs-richtext p {
-    margin-bottom: 16px;
-  }
-  .spz-1012 #new-form-wrapper .hs_consent_to_communicate .hs-error-msgs label {
-    margin-bottom: -8px;
-  }
-  .spz-1012 #new-form-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
-    margin-bottom: -8px;
-  }
   .spz-1012 #popup_contact_us {
     padding: 24px 24px 42px !important;
     -webkit-box-shadow: none;
             box-shadow: none;
   }
-  .spz-1012 #new-form-wrapper.how-did .how-can-wrapper {
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.width50 {
+    width: 100%;
+    float: none;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .with-margin {
+    margin-left: 0px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field {
+    margin-bottom: 16px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .pp-parent {
+    margin-top: 0px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs-form__richtext p {
+    margin-bottom: 13px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .new-option-wrapper.desktop {
+    display: none;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper {
+    margin-top: -1px;
+    display: block;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper .minus {
+    display: none;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper .text {
+    color: #000;
+    margin-left: 3.5px;
+    font-family: Titillium Web, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper {
+    margin-top: 8px;
+    margin-bottom: 5px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper .minus {
+    display: none;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper .text {
+    color: #000;
+    margin-left: 3.5px;
+    font-family: Titillium Web, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper svg {
+    width: 16px !important;
+    height: 16px !important;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs_how_did_you_hear_about_us_ {
+    margin-bottom: 0px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs_message {
+    margin-bottom: 5px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper.active .minus {
+    display: block;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper.active .plus {
+    display: none;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper.active .minus {
+    display: block;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper.active .plus {
+    display: none;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs-error-msgs {
+    margin: 4px 0px 23px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs-error-msgs label a {
+    padding-top: 0px;
+    margin-top: -24px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p {
+    margin-bottom: 16px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate .hs-error-msgs label {
+    margin-bottom: -8px;
+  }
+  .spz-1012 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate_non_us .hs-error-msgs label {
+    margin-bottom: -8px;
+  }
+  .spz-1012 #contact-form-1012.how-did .how-can-wrapper {
     margin-top: 7px;
     margin-bottom: 5px;
   }
-  .spz-1012 #new-form-wrapper.how-did .how-did-wrapper {
+  .spz-1012 #contact-form-1012.how-did .how-did-wrapper {
     margin-bottom: 9px;
   }
-  .spz-1012.step2 #new-form-wrapper .how-did-wrapper {
+  .spz-1012.step2 #contact-form-1012 .how-did-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -671,7 +725,7 @@
             align-items: center;
     cursor: pointer;
   }
-  .spz-1012.step2 #new-form-wrapper .how-can-wrapper {
+  .spz-1012.step2 #contact-form-1012 .how-can-wrapper {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -680,14 +734,14 @@
             align-items: center;
     cursor: pointer;
   }
-  .spz-1012.step2 #new-form-wrapper .pp-parent {
+  .spz-1012.step2 #contact-form-1012 .pp-parent {
     margin-bottom: 1px;
     margin-top: -8px;
   }
   .spz-1012.step2 #popup_contact_us {
     padding: 24px 24px 32px !important;
   }
-  .spz-1012.step2 #new-form-wrapper.how-can .how-can-wrapper {
+  .spz-1012.step2 #contact-form-1012.how-can .how-can-wrapper {
     margin-bottom: 8px;
   }
 }
