@@ -75,6 +75,10 @@
                     checkActiveNav();
                     globalCTA();
 
+                    if (document.querySelector('.md-video-wr video#gify-video')) {
+                        document.querySelector('.md-video-wr video#gify-video').play();
+                    }
+
                 });
             }, 10);
 
@@ -537,7 +541,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-video-wr">
-                                    <video autoplay loop muted playsinline poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
+                                    <video id="gify-video" autoplay loop muted playsinline poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
                                     <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
                                     Your browser does not support the video tag.
                                     </video>
