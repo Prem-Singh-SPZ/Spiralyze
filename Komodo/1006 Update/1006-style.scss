@@ -1,0 +1,698 @@
+html {
+  overflow: hidden;
+}
+
+.spz-1006 #contact-us-form-wrapper .lds-dual-ring {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 80px auto;
+}
+
+.spz-1006 #contact-us-form-wrapper .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+@keyframes lds-dual-ring {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.spz-1006 #popup_contact_us .wcs-col-12 {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  max-width: 548px;
+  min-width: 548px;
+  width: 100%;
+
+  @media screen and (max-width: 1024.98px) {
+    max-width: 600px;
+    min-width: 600px;
+    border-radius: 0px;
+    background: #fff;
+    box-shadow: 4px 4px 8px 0px rgba(1, 26, 33, 0.1);
+    margin: 24px 0;
+    height: 100%;
+    justify-content: flex-start;
+    z-index: 1;
+  }
+
+  @media screen and (max-width: 767.98px) {
+    max-width: 100%;
+    min-width: 100%;
+  }
+
+  .home-logo {
+    width: 177px;
+    height: 40px;
+    margin: 0 auto 8px;
+
+    a {
+      display: block;
+      outline: none;
+      text-decoration: none;
+    }
+  }
+
+  .social-proof {
+    margin: 4px 50px 0;
+
+    @media screen and (max-width: 1024.98px) {
+      margin: -6px 0px -10px;
+    }
+  }
+}
+
+.spz-1006 #popup_contact_us .wcs-bg-img {
+  width: calc(100% - 548px);
+  position: relative;
+
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1006/background_ui_1443.webp)
+    no-repeat top left / cover;
+
+  @media (max-width: 1024.98px) {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/1006/background_ui_771.webp)
+      no-repeat top left / cover;
+    top: 0;
+    left: 0;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+  }
+
+  @media (max-width: 767.98px) {
+    display: none !important;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    top: calc(50% - 28px);
+    left: 0;
+    width: 24px;
+    height: 56px;
+    background: url(https://res.cloudinary.com/spiralyze/image/upload/v1721285891/KomodoHealth/1006/Pointer.svg);
+    // pointer-events: none;
+
+    @media (max-width: 1024.98px) {
+      display: none !important;
+    }
+  }
+}
+
+// .spz-1006 #popup_contact_us .hbspt-form {
+//   display: none;
+// }
+
+.spz-1006 #contact-us-form-wrapper .hs-form-required {
+  display: none;
+}
+
+.spz-1006 #contact-us-form-wrapper {
+  margin-top: 24px;
+
+  + .spz-back {
+    .close-modal {
+      display: block;
+      background: none;
+      position: relative;
+      height: auto;
+      width: fit-content;
+      text-indent: initial;
+      color: #7e7e7e;
+      font-family: "Titillium Web";
+      font-size: 12px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      margin: 8px auto;
+      outline: none;
+    }
+  }
+}
+
+.spz-1006 .blocker {
+  background: #fff;
+  padding: 0;
+}
+
+.spz-1006 .jquery-modal #popup_contact_us {
+  max-width: 100% !important;
+  min-width: 100%;
+  display: inline-flex !important;
+  padding: 0px !important;
+  box-shadow: none;
+  vertical-align: top;
+  min-height: 100vh;
+
+  @media screen and (max-width: 1024.98px) {
+    justify-content: center;
+    align-items: center;
+  }
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
+  width: calc((100% - 20px) / 2);
+  float: left;
+  clear: none;
+}
+
+.spz-1006 #contact-us-form-wrapper .with-margin {
+  margin-left: 20px;
+}
+
+.spz-1006 #contact-us-form-wrapper .clear,
+.spz-1006 #contact-us-form-wrapper .hs-form-field.width50.clear {
+  clear: both;
+}
+
+.spz-1006 #popup_contact_us > .close-modal {
+  display: none;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field {
+  position: relative;
+  margin-bottom: 20px;
+
+  &.hs-consent_to_communicate {
+    margin-bottom: 6px;
+  }
+}
+
+.spz-1006
+  #contact-us-form-wrapper
+  .hs-form-field
+  > label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
+  position: absolute;
+  top: 12px;
+  left: 20px;
+  pointer-events: none;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field > label span {
+  color: #4a4a4a;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  letter-spacing: 0px;
+  position: relative;
+}
+
+.spz-1006 #popup_contact_us .wcs-popup-heading h2 {
+  font-family: Titillium Web, sans-serif;
+  text-align: center;
+  font-size: 32px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 40px;
+  color: #000;
+  letter-spacing: 0px !important;
+  margin-bottom: 12px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-input {
+  margin: 0px !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-error-msgs label {
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 16px !important;
+  font-family: Titillium Web, sans-serif;
+  letter-spacing: 0px;
+  color: #dc0000;
+  margin-top: 4px;
+  margin-bottom: -12px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-error-msgs.inputs-list {
+  padding-left: 0px;
+}
+
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate
+  .hs-error-msgs
+  label,
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate_non_us
+  .hs-error-msgs
+  label {
+  margin-bottom: -3px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-error-msgs label a {
+  display: block;
+  padding-top: 6px;
+  color: #dc0000;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-input {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: #f8f7f7 !important;
+  height: 48px;
+  text-overflow: ellipsis;
+  padding: 11px 19px 12px !important;
+  color: #000;
+  font-family: Titillium Web;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  outline: none;
+  letter-spacing: 0;
+  background-clip: padding-box;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_buying_timeline {
+  display: none;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-input:-webkit-autofill,
+.spz-1006 #contact-us-form-wrapper .hs-input:-webkit-autofill:hover,
+.spz-1006 #contact-us-form-wrapper .hs-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  -webkit-text-fill-color: #000 !important;
+  z-index: 2;
+  position: relative;
+}
+
+.spz-1006 #contact-us-form-wrapper .focus .hs-input:-webkit-autofill,
+.spz-1006 #contact-us-form-wrapper .focus .hs-input:-webkit-autofill:hover,
+.spz-1006 #contact-us-form-wrapper .focus .hs-input:-webkit-autofill:focus {
+  -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+  transition: background-color 5000s ease-in-out 0s !important;
+  -webkit-text-fill-color: #000 !important;
+  z-index: 2;
+  position: relative;
+}
+
+.spz-1006 #contact-us-form-wrapper .hasValue .hs-input {
+  border: 1px solid rgba(0, 0, 0, 0.1) !important;
+  background-color: #f8f7f7 !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .focus .hs-input {
+  border: 1px solid rgba(0, 0, 0, 0.4) !important;
+  background-color: #fff !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .hasError .hs-input {
+  border: 1px solid #dc0000 !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field.focus > label,
+.spz-1006 #contact-us-form-wrapper .hs-form-field.hasValue > label {
+  top: -12px !important;
+  left: 16px !important;
+  z-index: 4;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field.hasValue > label span {
+  -webkit-font-smoothing: antialiased;
+  font-family: "Titillium Web";
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.16px;
+  padding: 0 4px;
+  color: #7e7e7e;
+  box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+  -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field.focus > label span {
+  font-family: "Titillium Web";
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.16px;
+  padding: 0 4px;
+  color: #000000;
+  box-shadow: 0px -9px 0px 0px white inset;
+  -webkit-box-shadow: 0px -9px 0px 0px white inset;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field.hasError.focus > label span {
+  font-family: "Titillium Web";
+  font-size: 10px;
+  font-weight: 500;
+  line-height: 12px;
+  letter-spacing: -0.16px;
+  padding: 0 4px;
+  color: #dc0000;
+  box-shadow: 0px -9px 0px 0px white inset;
+  -webkit-box-shadow: 0px -9px 0px 0px white inset;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-form-field.hasError > label span {
+  color: #dc0000;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_message textarea {
+  resize: none;
+  overflow: hidden;
+  display: block;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-richtext p {
+  color: #7e7e7e;
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  letter-spacing: 0;
+  margin-bottom: 32px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-richtext p a {
+  text-decoration: underline;
+  color: #68cce8 !important;
+  text-decoration-skip-ink: none;
+  text-underline-offset: 1px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs-richtext p a:hover,
+.spz-1006 #contact-us-form-wrapper .hs-richtext p a:active {
+  text-decoration: none;
+}
+
+body #contact-us-form-wrapper .hs-richtext p.support-link {
+  color: #000;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-bottom: 11px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_submit input {
+  width: 100%;
+  display: flex;
+  height: 48px;
+  border-radius: 100px !important;
+  background-color: #68cce8 !important;
+  justify-content: center;
+  align-items: center;
+  color: #000 !important;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 700 !important;
+  line-height: 24px !important;
+  outline: none;
+  letter-spacing: 0.8px !important;
+  margin-top: 0px !important;
+  margin-bottom: 0px !important;
+  border: none;
+
+  @media screen and (max-width: 1024.98px) {
+    // width: calc(100% - 16px);
+    margin-right: auto;
+    margin-left: auto;
+  }
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_submit input:hover {
+  background-color: #000000 !important;
+  color: white !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_submit input:active {
+  background-color: #4a4a4a !important;
+  color: white !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_consent_countries select {
+  -webkit-appearance: none;
+  appearance: none;
+  padding-right: 40px !important;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_consent_countries select option {
+  font-family: Titillium Web, sans-serif;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_consent_countries .arrow-select {
+  width: 16px;
+  height: 16px;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/arrow-down.svg")
+    no-repeat;
+  pointer-events: none;
+  position: absolute;
+  right: 20px;
+  top: 16px;
+  z-index: 4;
+}
+
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate
+  input[type="checkbox"],
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate_non_us
+  input[type="checkbox"] {
+  min-width: 20px;
+  height: 20px;
+  -webkit-appearance: none;
+  appearance: none;
+  background-color: white !important;
+  border: 1px solid rgba(0, 0, 0, 0.4) !important;
+  padding: 0px !important;
+  cursor: pointer;
+  border-radius: 0;
+  outline: 0;
+}
+
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate
+  input[type="checkbox"]:checked,
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate_non_us
+  input[type="checkbox"]:checked {
+  background-color: #68cce8 !important;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
+  background-repeat: no-repeat;
+  background-position: center center;
+  border: 1px solid #68cce8 !important;
+  background-clip: border-box;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_consent_to_communicate label,
+.spz-1006 #contact-us-form-wrapper .hs_consent_to_communicate_non_us label {
+  display: flex;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_consent_to_communicate label span,
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate_non_us
+  label
+  span {
+  color: #000;
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  padding-left: 8px;
+  margin-top: -3px;
+  letter-spacing: 0px;
+  margin-left: 0px;
+  margin-right: 0px;
+}
+
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate
+  .hs-form-booleancheckbox,
+.spz-1006
+  #contact-us-form-wrapper
+  .hs_consent_to_communicate_non_us
+  .hs-form-booleancheckbox {
+  margin: 0px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_error_rollup .hs-main-font-element {
+  color: #dc0000;
+  text-align: center;
+  padding: 8px 0;
+  display: block;
+  margin: 0px;
+  line-height: 16px !important;
+  margin: -16px 0px 0px;
+  float: left;
+  width: 100%;
+  clear: both;
+  font-family: Titillium Web, sans-serif;
+  font-size: 14px !important;
+  font-weight: 400;
+}
+
+.spz-1006 #contact-us-form-wrapper .pp-parent {
+  float: left;
+  margin: 3px 0px 0px;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_submit .actions {
+  margin: 0;
+  padding: 0;
+}
+
+.spz-1006 #contact-us-form-wrapper .submitted-message {
+  text-align: center;
+}
+
+.spz-1006 #contact-us-form-wrapper .lds-dual-ring {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin: 80px auto;
+}
+
+.spz-1006 #contact-us-form-wrapper .lds-dual-ring:after {
+  content: " ";
+  display: block;
+  width: 64px;
+  height: 64px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #000;
+  border-color: #000 transparent #000 transparent;
+  animation: lds-dual-ring 1.2s linear infinite;
+}
+
+.spz-1006 #contact-us-form-wrapper .hs_consent_countries {
+  margin-bottom: 12px;
+}
+
+.spz-1006 #popup_contact_us .mobile-break {
+  display: none;
+}
+
+.spz-1006 #popup_contact_us .wcs-pform {
+  padding: 10px 32px 0 !important;
+
+  @media screen and (max-width: 1024.98px) {
+    padding: 8px 32px 0 !important;
+  }
+}
+
+@media (max-width: 767.98px) {
+  .spz-1006 #popup_contact_us .wcs-pform {
+    padding: 10px 24px 0 !important;
+    max-width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
+    width: 100%;
+    float: none;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .with-margin {
+    margin-left: 0px;
+  }
+
+  .spz-1006 #popup_contact_us .wcs-popup-heading h2 {
+    font-size: 32px !important;
+    line-height: 40px;
+    // letter-spacing: -0.576px !important;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs-form-field {
+    margin-bottom: 15.5px;
+  }
+  .spz-1006 #contact-us-form-wrapper .hs-form-field.hs-consent_to_communicate {
+    margin-bottom: 20px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .pp-parent {
+    margin-top: 0px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs-form__richtext p {
+    margin-bottom: 13px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs-error-msgs {
+    margin: 4px 0px 23px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs-richtext p {
+    margin-bottom: 23.5px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs-error-msgs label a {
+    padding-top: 0px;
+    margin-top: -24px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .pp-parent {
+    margin-bottom: 1px;
+    margin-top: -12px;
+  }
+
+  .spz-1006
+    #contact-us-form-wrapper
+    .hs_consent_to_communicate
+    .hs-error-msgs
+    label,
+  .spz-1006
+    #contact-us-form-wrapper
+    .hs_consent_to_communicate_non_us
+    .hs-error-msgs
+    label {
+    margin-bottom: -8px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs_consent_countries {
+    margin-bottom: 12px;
+  }
+
+  .spz-1006 #contact-us-form-wrapper .hs_submit input {
+    width: 280px !important;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .spz-1006 #popup_contact_us .mobile-break {
+    display: block;
+  }
+
+  .spz-1006 #popup_contact_us .wcs-col-12 {
+    margin: 0;
+  }
+
+  .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
+    margin: -6px auto 0;
+    max-width: 344px;
+  }
+}

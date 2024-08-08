@@ -483,7 +483,11 @@
                     </div>
                     <div class="c-right">
                         <div class="c-img">
-                            <img src="${astUrl}/f_auto/drata/28001/frame_1000003381.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_desktop_2.webp" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_tablet_1.webp" type="image/webp">
+                                <img src="${astUrl}/f_auto/drata/28001/section_image_-_mobile_1.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
+                            </picture>
                         </div>
                     </div>
                 </div>
