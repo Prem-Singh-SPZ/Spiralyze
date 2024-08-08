@@ -33,7 +33,7 @@
         }
     ];
 
-    //append swiper js script in head and onload of that call function initSlider
+    //append swiper js script in head and onload of that call function initSlider_28001
     function appendScript(url, callback) {
         var script = document.createElement("script");
         script.type = "text/javascript";
@@ -52,7 +52,7 @@
     }
 
     appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
-        initSlider();
+        initSlider_28001();
     });
 
     //append to preload images
@@ -590,7 +590,7 @@
                 <div class="cr-section-container">
                     <div class="slider-section">
                         <div class="container slider-column">
-                            <div class="swiper swiper-slider">
+                            <div class="swiper swiper-slider_28001">
                                 <div class="swiper-wrapper">
                                     ${createCustomerReviews()}
                                 </div>
@@ -604,9 +604,9 @@
             </section>`);
 
 
-        // If swiper is initialized, run initSlider function
+        // If swiper is initialized, run initSlider_28001 function
         if (typeof Swiper !== 'undefined') {
-            initSlider();
+            initSlider_28001();
         }
 
         customerStories();
@@ -857,9 +857,9 @@
     };
 
     // Initialize slider
-    function initSlider() {
-        let cardName = document.querySelectorAll('.swiper-slider .swiper-slide .card-name');
-        const swiper = new Swiper(".swiper-slider", {
+    function initSlider_28001() {
+        let cardName = document.querySelectorAll('.swiper-slider_28001 .swiper-slide .card-name');
+        const swiper = new Swiper(".swiper-slider_28001", {
             // Optional parameters
             centeredSlides: true,
             spaceBetween: 32,
