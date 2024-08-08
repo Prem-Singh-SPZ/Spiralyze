@@ -355,7 +355,7 @@
 
     function simpleSteps() {
         document.querySelector('.benefits-sec').insertAdjacentHTML('afterend', `
-            <section class="simple-steps-sec spz-sec">
+            <section class="simple-steps-sec-28001 spz-sec">
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
                         <div class="ss-left">
@@ -451,7 +451,7 @@
     }
 
     function complianceChanges() {
-        document.querySelector('.simple-steps-sec').insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec">
+        document.querySelector('.simple-steps-sec-28001').insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec">
             <div class="compliance-container">
                 <div class="c-title-container">
                     <div class="c-eyebrow">Beyond the Audit: Compliance Automation</div>
@@ -580,7 +580,7 @@
 
     function customerReviews() {
         document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
-            <section class="cr-section spz-sec" id="frameworks">
+            <section class="cr-section-28001 spz-sec" id="frameworks">
                 <div class="cr-title-container">
                     <div class="title-wrapper">
                         <p class="small-eyebrow">Pre-Built Templates</p>
@@ -613,7 +613,7 @@
     }
 
     function customerStories() {
-        document.querySelector('.cr-section').insertAdjacentHTML('afterend', `<section class="cs-section spz-sec">
+        document.querySelector('.cr-section-28001').insertAdjacentHTML('afterend', `<section class="cs-section spz-sec">
             <div class="cs-container dis-flex">
                 <div class="cs-left-copy">
                     <p class="cs-eyebrow">Customer Stories</p>
@@ -681,7 +681,7 @@
 
     function resourceSection() {
         document.querySelector('.demo-cta-section').insertAdjacentHTML('afterend', `
-        <section class="resources-section spz-sec" id="nav-resource">
+        <section class="resources-section-28001  spz-sec" id="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
                     <h6 class="title">Compliance 101 Resources for Startups</h6>
@@ -777,7 +777,7 @@
     }
 
     function complianceFAQ() {
-        document.querySelector('.resources-section').insertAdjacentHTML('afterend', `
+        document.querySelector('.resources-section-28001 ').insertAdjacentHTML('afterend', `
             <section class="compliance-faq-section spz-sec">
                 <div class="compliance-faq-title">
                     <p class="small-eyebrow">Compliance FAQ</p>
@@ -911,9 +911,9 @@
             },
         });
 
-        waitForElm('body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination').then(function () {
-            if (document.querySelector('body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination .spz-anchor')) return;
-            document.querySelector('body.spz-28001 .cr-section .cr-section-container .slider-section .container .swiper-pagination').insertAdjacentHTML('beforeend', `<a class="spz-anchor" href="https://drata.com/product">All</a>`);
+        waitForElm('body.spz-28001 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination').then(function () {
+            if (document.querySelector('body.spz-28001 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination .spz-anchor')) return;
+            document.querySelector('body.spz-28001 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination').insertAdjacentHTML('beforeend', `<a class="spz-anchor" href="https://drata.com/product">All</a>`);
         });
     }
 
