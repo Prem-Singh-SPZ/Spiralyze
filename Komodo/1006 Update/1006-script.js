@@ -1,26 +1,18 @@
-//use interval to check is body tag is loaded
-let checkBody = setInterval(() => {
-  if (document.querySelector('body')) {
-    clearInterval(checkBody);
-    loadTest();
+function ready(fn) {
+  if (document.readyState !== 'loading') {
+    fn();
+  } else {
+    document.addEventListener('DOMContentLoaded', fn);
   }
-});
+}
+ready(function () {
+  if (!document.querySelector('.spz-1006')) {
+    document.querySelector('body').classList.add('spz-1006')
 
-function loadTest() {
-  document.querySelector('body').classList.add('spz-1006')
-
-  // let showTest = setInterval(() => {
-  // if (document.querySelector('a[href="#popup_contact_us"]')) {
-  // clearInterval(showTest);
-
-  waitForElm('a[href="#popup_contact_us"]').then(() => {
-    document.querySelector('a[href="#popup_contact_us"]').click();
-  });
-  // document.querySelector('.spz-1006 #new-form-wrapper').remove();
-
-  waitForElm('#popup_contact_us .wcs-col-12').then(() => {
-    document.querySelector('#popup_connect.wcs.wcs-modal').remove();
-    document.querySelector('#popup_contact_us .wcs-col-12').innerHTML = `
+    waitForElm('#popup_contact_us .wcs-col-12').then(() => {
+      if (document.querySelector('#popup_connect.wcs.wcs-modal') && document.querySelectorAll('.spz-left-contact').length == 0) {
+        document.querySelector('#popup_connect.wcs.wcs-modal').remove();
+        document.querySelector('#popup_contact_us .wcs-col-12').innerHTML = `
         <div class="home-logo"><a href="https://www.komodohealth.com/"> <img src="//res.cloudinary.com/spiralyze/image/upload/v1707409447/komodohealth/1006/logo.webp" alt="Komodo Logo"></a></div>
         <div class="wcs-pform">
           <div class="wcs-popup-heading">
@@ -36,13 +28,16 @@ function loadTest() {
         </picture></div>
         `
 
-    document.querySelector('#popup_contact_us .wcs-col-12').insertAdjacentHTML("afterend", `<div class="wcs-bg-img"></div>`);
-    document.querySelector('#contact-us-form-wrapper').insertAdjacentElement("beforeend", document.querySelector('#new-form-wrapper'));
-    document.querySelector('body #new-form-wrapper').classList.add("step2");
-  });
-}
-// }, 100);
-// }
+        document.querySelector('#popup_contact_us .wcs-col-12').insertAdjacentHTML("afterend", `<div class="wcs-bg-img"></div>`);
+        document.querySelector('#contact-us-form-wrapper').insertAdjacentElement("beforeend", document.querySelector('#new-form-wrapper'));
+        document.querySelector('body #new-form-wrapper').classList.add("step2");
+        document.body.insertAdjacentHTML("beforeend", `<div class="jquery-modal blocker current spz-left-contact"></div>`);
+        document.querySelector('.spz-1006 #popup_contact_us').classList.add('modal');
+        document.querySelector('.spz-left-contact').insertAdjacentElement("beforeend", document.querySelector('#popup_contact_us'));
+      }
+    });
+  }
+})
 
 function waitForElm(selector) {
   return new Promise(function (resolve) {
