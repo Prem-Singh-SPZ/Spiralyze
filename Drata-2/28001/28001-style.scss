@@ -6,9 +6,15 @@ html {
   overflow-x: hidden;
 }
 
-body.spz-28001 {
-  // overflow-x: hidden;
+ul[class*="MuiList-root-Header-headerMenuCtas"] {
+  a.MuiTypography-darkL {
+    .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit {
+      fill: #fff;
+    }
+  }
+}
 
+body.spz-28001 {
   * {
     box-sizing: border-box;
   }
@@ -2623,7 +2629,7 @@ body.spz-28001 {
   //global cta section ends
 
   // Resources Section Starts
-  .resources-section-28001  {
+  .resources-section-28001 {
     padding: 96px 24px;
 
     @media (max-width: 1280px) {
