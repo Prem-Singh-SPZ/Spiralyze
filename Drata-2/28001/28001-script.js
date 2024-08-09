@@ -247,6 +247,11 @@
                 document.querySelector('' + pSelector + ' .hero-cta-wrapper').insertAdjacentElement('afterbegin', document.querySelector(`div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"] a[class*="MuiLink-root-Link-root-HeroSubpage-link"]`));
             }
         });
+
+        //header arrow change
+        if (document.querySelector('body.spz-28001 ul[class*=MuiList-root-Header-headerMenuCtas] a.MuiTypography-darkL .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit')) {
+            document.querySelector('body.spz-28001 ul[class*=MuiList-root-Header-headerMenuCtas] a.MuiTypography-darkL .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit').outerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/right_chevron.png" alt="Arrow" style="width: 10px;margin-left: 19px;margin-right: 3px;">`;
+        }
     }
 
     function spzNavBar() {
@@ -468,7 +473,7 @@
                             <div class="accordion accordion_1">
                                 <div class="accordion-item open">
                                     <div class="accordion-title">Kickstart Compliance</div>
-                                    <div class="accordion-content">Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s <a href="https://drata.com/product/trust-center">Trust Center</a>, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales— even before an audit.</div>
+                                    <div class="accordion-content">Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s <a href="https://drata.com/product/trust-center">Trust Center</a>, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales—even before an audit.</div>
                                 </div>
                                 <div class="accordion-item">
                                     <div class="accordion-title">Reduce Compliance Time by 80%</div>
@@ -651,7 +656,7 @@
         <h2 class="ing-sec-title">We Deliver Results for Customers</h2>
         <div class="ing-stats-section dis-flex">
         <div class="ing-stats">
-        <h3>4x</h3>
+        <h3>98%</h3>
         <span class="ing-spn">Customer Satisfaction Rate</span></div>
         <div class="line">&nbsp;</div>
         <div class="ing-stats">
