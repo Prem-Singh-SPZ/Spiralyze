@@ -91,7 +91,7 @@ function setTabsContent() {
                 <div class="content-wrapper">
                   <div class="copy-wrapper">
                     <div class="title">Manager Experience Tour</div>
-                    <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquires. </div>
+                    <div class="desc">View sales team performance. Identify quota gaps and sellers that need coaching. Automatically get alerts when sellers submit compensation inquiries. </div>
                     <div class="cta-wrapper cta-demo-1"><a href="#" class="btn btn-primary abc cd-1" data-bs-toggle="modal" data-bs-target="#modal-popup-widget_1669056290914">Instant Access</a></div>
                   </div>
                   <div class="content with-overlay">

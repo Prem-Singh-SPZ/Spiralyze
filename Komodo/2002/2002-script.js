@@ -9,10 +9,10 @@ ready(function () {
 
   const heroImages = {
     page1: {
-      four_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_3841.webp',
-      two_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1921.webp',
-      desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1441.webp',
-      tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_770.webp',
+      four_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_3842.webp',
+      two_k: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1922.webp',
+      desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_1442.webp',
+      tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2002/background_771.webp',
     },
   };
 
