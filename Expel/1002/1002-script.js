@@ -48,8 +48,8 @@ function heroSection() {
       <div class="spz-hero-wrapper">
         <div class="hero-info">
           <h6 class="section-label">EXPEL managed detection and response</h6>
-          <h2 class="section-heading">Top-tier innovator in MDR services</h2>
-          <p class="section-subhead" style="display:none">Protect your environment with unparalleled speed and accuracy — a 23-minute MTTR</p>
+          <h2 class="section-heading">Stop threats. <br>Expel your adversaries.</h2>
+          <p class="section-subhead">With Expel MDR you gain 24x7 security monitoring and AI-powered automation—to resolve threats in minutes, not hours.</p>
 
           <div class="hero-tiles-container">
             ${createHeroTiles()}
