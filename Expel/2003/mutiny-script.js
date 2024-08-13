@@ -647,7 +647,7 @@ let bodyLoaded = setInterval(function () {
           <p class="info-text"><strong>With Expel you get:</strong></p>
           <ul class="section-highlight-point">
             <li class="list-item"><span class="highlight-text">24x7 SOC services</span> with threat detection, alert triage, remediation recommendations, automated responses & a 23-minute MTTR.</li>
-            <li class="list-item"><span class="highlight-text">Extensive protection</span> across cloud workloads, control plans, identity management, SaaS, endpoints, and networks.</li>
+            <li class="list-item"><span class="highlight-text">Extensive protection</span> across cloud workloads, control planes, identity management, SaaS, endpoints, and networks.</li>
             <li class="list-item"><span class="highlight-text">120+ integrations</span> including AWS, CrowdStrike, Google, Microsoft, Okta, Palo Alto, SentinelOne, Splunk, Salesforce, Wiz, and more.</li>
           </ul>
           <p class="info-text">See Expel in action!</p>
