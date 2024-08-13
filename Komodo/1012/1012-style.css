@@ -2,7 +2,7 @@
   max-width: 600px !important;
   -webkit-box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
           box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
-  padding: 24px 32px 32px !important;
+  padding: 24px 32px !important;
 }
 @media (min-width: 767.98px) {
   .spz-1012 #popup_contact_us {
@@ -52,7 +52,7 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  margin-top: 24px;
+  margin: 30px 8px 0;
 }
 @media (max-width: 767.98px) {
   .spz-1012 #popup_contact_us .spz-social-proof {
@@ -87,6 +87,9 @@
   .spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-1.width-50 {
     width: 100%;
   }
+}
+.spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-1.width-100 {
+  width: 100%;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-required {
   display: none;
@@ -358,12 +361,6 @@
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue.hs_how_did_you_hear_about_us_ > label {
   display: none;
 }
-.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus.hs_message > label {
-  display: none;
-}
-.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue.hs_message > label {
-  display: none;
-}
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasError.focus > label span {
   font-family: Titillium Web, sans-serif;
   font-size: 12px;
@@ -378,8 +375,8 @@
   color: #dc0000;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .hs_message {
-  display: none;
   margin-bottom: 12px;
+  display: none;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .hs_message textarea {
   resize: none;
@@ -546,6 +543,7 @@
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .pp-parent {
   margin-top: 3px;
+  padding: 0;
   float: left;
   margin-left: 0px;
   margin-right: 0px;
@@ -595,6 +593,9 @@
   display: block;
 }
 .spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_consent_countries {
+  display: block;
+}
+.spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_message {
   display: block;
 }
 .spz-1012.step2 #popup_contact_us #contact-form-1012 .hs_consent_to_communicate {
@@ -680,18 +681,6 @@
   }
   .spz-1012 #popup_contact_us #contact-form-1012 .hs_message {
     margin-bottom: 5px;
-  }
-  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper.active .minus {
-    display: block;
-  }
-  .spz-1012 #popup_contact_us #contact-form-1012 .how-did-wrapper.active .plus {
-    display: none;
-  }
-  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper.active .minus {
-    display: block;
-  }
-  .spz-1012 #popup_contact_us #contact-form-1012 .how-can-wrapper.active .plus {
-    display: none;
   }
   .spz-1012 #popup_contact_us #contact-form-1012 .hs-error-msgs {
     margin: 4px 0px 23px;

@@ -126,6 +126,7 @@ ready(function(){
                 document.querySelector('.spz-1012 #contact-form-1012 .hs_jobtitle').closest('fieldset').classList.add("width-50", "clear");
                 document.querySelector('.spz-1012 #contact-form-1012 .hs_email').closest('fieldset').classList.add("width-50","clear");
                 document.querySelector('.spz-1012 #contact-form-1012 .hs_phone').closest('fieldset').classList.add("width-50", "with-margin");
+                document.querySelector('.spz-1012 #contact-form-1012 .hs_message').closest('fieldset').classList.add("width-100");
                 // document.querySelector('.spz-1012 #contact-form-1012 .hs_how_did_you_hear_about_us_').classList.add("clear");
                 document.querySelector('.spz-1012 #contact-form-1012 .hs_message').classList.add("clear");
                 document.querySelector('.spz-1012 #contact-form-1012 .hs_consent_countries').classList.add("clear");
@@ -145,97 +146,8 @@ ready(function(){
                 document.querySelector('.spz-1012 #contact-form-1012 .hs_consent_countries select').insertAdjacentHTML("afterend","<div class='arrow-select'></div>")
                 // insertAfter(document.querySelector('.spz-1012 #contact-form-1012 .hs_how_did_you_hear_about_us_'),document.querySelector('.spz-1012 #contact-form-1012 .hs_consent_countries'))
                 // insertAfter(document.querySelector('.spz-1012 #contact-form-1012 .hs_message'),document.querySelector('.spz-1012 #contact-form-1012 .hs_how_did_you_hear_about_us_'))
-                document.querySelector('.spz-1012 #contact-form-1012 .hs_consent_countries').insertAdjacentHTML("afterend",`
-                  <div class="new-option-wrapper desktop">
-                    <div class="how-did">
-                      <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 4.1665V15.8332" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                        <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                      </svg>
-                      <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                      </svg>
-                      <span class="text">How did you hear about us? </span>
-                    </div>
-                    <div class="how-can">
-                      <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M10 4.1665V15.8332" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                        <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                      </svg>
-                      <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                        <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                      </svg>
-                      <span class="text">How can we help you? </span>
-                    </div>
-                  </div>
-                `)
-                document.querySelector('.spz-1012 #contact-form-1012 .hs_consent_countries').insertAdjacentHTML("afterend",`
-                  <div class="how-did-wrapper mobile">
-                    <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M10 4.1665V15.8332" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                      <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                    </svg>
-                    <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                      <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                    </svg>
-                    <span class="text">How did you hear about us? </span>
-                  </div>
-                `)
-                // document.querySelector('.spz-1012 #contact-form-1012 .hs_how_did_you_hear_about_us_').insertAdjacentHTML("afterend",`
-                //   <div class="how-can-wrapper mobile">
-                //     <svg class="plus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                //       <path d="M10 4.1665V15.8332" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                //       <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                //     </svg>
-                //     <svg class="minus" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
-                //       <path d="M4.16602 10H15.8327" stroke="#68CCE8" stroke-width="1.5" stroke-linecap="square" stroke-linejoin="round"></path>
-                //     </svg>
-                //     <span class="text">How can we help you? </span>
-                //   </div>
-                // `)
-                function howDidClick(){
-                  document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-did').classList.toggle("active")
-                  document.querySelector('.spz-1012 #contact-form-1012 .how-did-wrapper').classList.toggle("active")
-                  if(document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-can.active')){
-                    document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-can').classList.toggle("active")
-                    document.querySelector('.spz-1012 #contact-form-1012 .how-can-wrapper').classList.toggle("active")
-                  }
-                  if(document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-did.active')){
-                    document.querySelector('.spz-1012 #contact-form-1012').classList.add("how-did")
-                    document.querySelector('.spz-1012 #contact-form-1012').classList.remove("how-can")
-                  } else {
-                    document.querySelector('.spz-1012 #contact-form-1012').classList.remove("how-did")
-                  }
-                }
-                function howCanClick(){
-                  document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-can').classList.toggle("active")
-                  document.querySelector('.spz-1012 #contact-form-1012 .how-can-wrapper').classList.toggle("active")
-                  if(document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-did.active')){
-                    document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-did').classList.toggle("active")
-                    document.querySelector('.spz-1012 #contact-form-1012 .how-did-wrapper').classList.toggle("active")
-                  }
-                  if(document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper .how-can.active')){
-                    document.querySelector('.spz-1012 #contact-form-1012').classList.add("how-can")
-                    document.querySelector('.spz-1012 #contact-form-1012').classList.remove("how-did")
-                  } else {
-                    document.querySelector('.spz-1012 #contact-form-1012').classList.remove("how-can")
-                  }
-                }
-                document.querySelector('.spz-1012 #contact-form-1012 .new-option-wrapper').addEventListener("click",function(event){
-                  if(event.target.closest('.spz-1012 #contact-form-1012 .new-option-wrapper .how-can')){
-                    howCanClick()
-                  }
-                  if(event.target.closest('.spz-1012 #contact-form-1012 .new-option-wrapper .how-did')){
-                    howDidClick()
-                  }
-                })
-                
-                // document.querySelector('.spz-1012 #contact-form-1012 .how-can-wrapper').addEventListener("click",function(){
-                //   howCanClick()
-                // })
-                document.querySelector('.spz-1012 #contact-form-1012 .how-did-wrapper').addEventListener("click",function(){
-                  howDidClick()
-                })
+              
+ 
                 const step1Checking = setInterval(function(){
                   if(document.querySelector('.spz-1012 #contact-form-1012 .hs_firstname input').value!="" &&
                   document.querySelector('.spz-1012 #contact-form-1012 .hs_lastname input').value!="" &&

@@ -21,7 +21,7 @@ $font-family_2: Titillium Web;
     }
     max-width: 600px !important;
     box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
-    padding: 24px 32px 32px !important;
+    padding: 24px 32px !important;
     .close-modal {
       width: 20px;
       height: 20px;
@@ -55,7 +55,7 @@ $font-family_2: Titillium Web;
       display: flex;
       justify-content: space-between;
       align-items: center;
-      margin-top: 24px;
+      margin: 30px 8px 0;
 
       @media (max-width: 767.98px) {
         max-width: 312px;
@@ -89,6 +89,10 @@ $font-family_2: Titillium Web;
             @media (max-width: 767.98px) {
               width: 100%;
             }
+          }
+
+          &.width-100 {
+            width: 100%;
           }
         }
       }
@@ -376,16 +380,16 @@ $font-family_2: Titillium Web;
           display: none;
         }
       }
-      .hs-form-field.focus.hs_message {
-        > label {
-          display: none;
-        }
-      }
-      .hs-form-field.hasValue.hs_message {
-        > label {
-          display: none;
-        }
-      }
+      // .hs-form-field.focus.hs_message {
+      //   > label {
+      //     display: none;
+      //   }
+      // }
+      // .hs-form-field.hasValue.hs_message {
+      //   > label {
+      //     display: none;
+      //   }
+      // }
       .hs-form-field.hasError.focus {
         > label {
           span {
@@ -413,8 +417,8 @@ $font-family_2: Titillium Web;
           overflow: hidden;
           display: block;
         }
-        display: none;
         margin-bottom: 12px;
+        display: none;
       }
       .hs-richtext {
         p {
@@ -573,6 +577,7 @@ $font-family_2: Titillium Web;
       }
       .pp-parent {
         margin-top: 3px;
+        padding: 0;
         float: left;
         margin-left: 0px;
         margin-right: 0px;
@@ -630,6 +635,9 @@ $font-family_2: Titillium Web;
           display: block;
         }
         .hs_consent_countries {
+          display: block;
+        }
+        .hs_message {
           display: block;
         }
         .hs_consent_to_communicate {
@@ -723,22 +731,7 @@ $font-family_2: Titillium Web;
         .hs_message {
           margin-bottom: 5px;
         }
-        .how-did-wrapper.active {
-          .minus {
-            display: block;
-          }
-          .plus {
-            display: none;
-          }
-        }
-        .how-can-wrapper.active {
-          .minus {
-            display: block;
-          }
-          .plus {
-            display: none;
-          }
-        }
+        
         .hs-error-msgs {
           margin: 4px 0px 23px;
           label {
