@@ -241,8 +241,8 @@
     });
 
     waitForElm(`.spz-company`).then(function (elm) {
-      // document.querySelector('body.spz-2002 .mktoFormCol.spz-ispartner').insertAdjacentElement('beforebegin', document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoHtmlText'));
-      document.querySelector('body.spz-2002 .mktoFormCol .mktoHtmlText.mktoHasWidth').closest('.mktoFormRow').setAttribute('data-wrapper-for', 'spz-privacy-policy');
+      document.querySelector('body.spz-2002 .form-fields-row').insertAdjacentElement('beforeend', document.querySelector('body.spz-2002 .mktoFormCol .mktoHtmlText.mktoHasWidth').closest('.mktoFormCol'));
+      // document.querySelector('body.spz-2002 .mktoFormCol .mktoHtmlText.mktoHasWidth').closest('.mktoFormCol').setAttribute('data-wrapper-for', 'spz-privacy-policy');
       document.querySelector('body.spz-2002 .mktoFormCol.spz-lastname').insertAdjacentElement('afterend', document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-phone'));
       document.querySelector('body.spz-2002 form.mktoForm .mktoButtonRow').insertAdjacentElement('afterend', document.querySelector('body.spz-2002 form.mktoForm .mktoCaptchaDisclaimer'));
 
@@ -250,9 +250,9 @@
       document.querySelector('body.spz-2002 form.mktoForm .mktoButton').textContent = 'Submit';
       // document.querySelector('body.spz-2002 form.mktoForm #Person_Country__c').setAttribute('autocomplete', 'dont');
 
-      // document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').removeAttribute('style');
+      document.querySelector('body.spz-2002 .mktoFormCol .mktoHtmlText.mktoHasWidth').closest('.mktoFormCol').removeAttribute('style');
       // document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').classList.add('spz-hidden');
-      // document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.add('spz-hidden');
+      document.querySelector('body.spz-2002 .mktoFormCol .mktoHtmlText.mktoHasWidth').closest('.mktoFormCol').classList.add('spz-hidden');
 
       //update tab index of all the .mktoField
       document.querySelector('body.spz-2002 form.mktoForm #Email').setAttribute('tabindex', 1);
@@ -266,10 +266,9 @@
       // document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol .mktoCheckboxList input').setAttribute('tabindex', 9);
     });
 
-    // waitForElm(`.spz-firstname[data-zi-field-enriched]`).then(function (elm) {
-    //   document.querySelector('body.spz-2002 form.mktoForm .mktoHtmlText').classList.remove('spz-hidden');
-    //   // document.querySelector('body.spz-2002 form.mktoForm .mktoFormCol.spz-ispartner.checkbox-group').classList.remove('spz-hidden');
-    // });
+    waitForElm(`.spz-firstname[data-zi-field-enriched]`).then(function (elm) {
+      document.querySelector('body.spz-2002 .mktoFormCol .mktoHtmlText.mktoHasWidth').closest('.mktoFormCol').classList.remove('spz-hidden');
+    });
 
     waitForElm(`${formSelector} .mktoFormCol[data-wrapper-for="Person_Country__c"]`).then(function (elm) {
       document.querySelector(`${formSelector} .mktoFormCol[data-wrapper-for="Person_Country__c"]`).style.display = 'none';

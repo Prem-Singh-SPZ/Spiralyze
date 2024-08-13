@@ -131,10 +131,10 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm {
   width: 100% !important;
   padding: 0;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoClear:not([data-wrapper-for=spz-privacy-policy]),
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow:not([data-wrapper-for=spz-privacy-policy]),
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoOffset:not([data-wrapper-for=spz-privacy-policy]),
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoGutter:not([data-wrapper-for=spz-privacy-policy]) {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoClear:not([data-wrapper-for*=Privacy_Compliance_Explicit_Opt_In__c]),
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow:not([data-wrapper-for*=Privacy_Compliance_Explicit_Opt_In__c]),
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoOffset:not([data-wrapper-for*=Privacy_Compliance_Explicit_Opt_In__c]),
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoGutter:not([data-wrapper-for*=Privacy_Compliance_Explicit_Opt_In__c]) {
   display: none !important;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol {
@@ -149,7 +149,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
     width: 100% !important;
   }
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-email, body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-ispartner {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-email, body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol[data-wrapper-for=""] {
   width: 100% !important;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-email {
@@ -187,18 +187,14 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
       -ms-flex-order: 6;
           order: 6;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-ispartner {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol[data-wrapper-for=""] {
   -webkit-box-ordinal-group: 9;
       -ms-flex-order: 8;
           order: 8;
+  margin-top: 6px;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.full-width {
   width: 100% !important;
-}
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoHtmlText.mktoHasWidth {
-  -webkit-box-ordinal-group: 8;
-      -ms-flex-order: 7;
-          order: 7;
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap {
   float: none;
@@ -225,7 +221,7 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoLabel .mktoAsterix {
   display: none !important;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
   width: 100% !important;
   height: 52px;
   border: 1px solid #b4b3b9;
@@ -244,19 +240,19 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   cursor: pointer;
   -webkit-appearance: none;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
   -webkit-box-shadow: 0 0 0 52px #fff inset !important;
   -webkit-text-fill-color: #000000 !important;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:hover {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 52px #fff inset !important;
   -webkit-text-fill-color: #000000 !important;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:focus {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 52px #fff inset !important;
   -webkit-text-fill-color: #000000 !important;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:active {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 52px #fff inset !important;
   -webkit-text-fill-color: #000000 !important;
 }
@@ -356,15 +352,15 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   width: 100% !important;
   padding: 0;
   position: relative;
-  margin-top: 19px;
+  margin-top: 8px;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList input[name=isPartner] {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList input {
   position: absolute;
   opacity: 0;
   height: auto !important;
   width: auto !important;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList input[name=isPartner]:checked + label::before {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol .mktoCheckboxList input:checked + label::before {
   background: #1762e6;
   border-color: #1762e6;
 }
@@ -405,8 +401,13 @@ body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mk
   top: 5px;
   left: 3px;
 }
-body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow[data-wrapper-for=spz-privacy-policy] .mktoFormCol {
+body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow[data-wrapper-for=spz-privacy-policy] .mktoFormCol, body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow[data-wrapper-for*=Privacy_Compliance_Explicit_Opt_In__c] .mktoFormCol {
   width: 100% !important;
+}
+@media (min-width: 767.98px) and (max-width: 1024.98px) {
+  body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow[data-wrapper-for=spz-privacy-policy] .mktoFormCol, body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormRow[data-wrapper-for*=Privacy_Compliance_Explicit_Opt_In__c] .mktoFormCol {
+    margin-bottom: 8px !important;
+  }
 }
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-person_country__c .mktoFieldWrap::after,
 body.spz-2002 .spz-form-container #spz-form-wrap.spz-form-wrap form.mktoForm .mktoFormCol.spz-company_size__c .mktoFieldWrap::after {

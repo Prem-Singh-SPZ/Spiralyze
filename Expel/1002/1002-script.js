@@ -16,7 +16,7 @@ const heroTiles = [
   },
   {
     title: 'Microsoft 365 & Azure Security',
-    logo: baseImgUrl + 'icon_custom_scripts_9.svg',
+    logo: baseImgUrl + 'icon_custom_scripts_10.svg',
   },
   {
     title: 'Endpoint & Network Security',
