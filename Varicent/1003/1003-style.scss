@@ -1,0 +1,564 @@
+$color_1: #fff;
+$color_2: rgba(255, 255, 255, 0.8);
+$color_3: #e00000;
+$color_4: inherit;
+$color_5: #212529;
+$color_6: transparent;
+$color_7: #2b4ff4;
+$font-family_1: Inter;
+
+.spz-1003 {
+  font-size: 0;
+  .header-wrapper {
+    display: none;
+  }
+  .body-container-wrapper {
+    .row-number-1 {
+      > .row-fluid {
+        > .widget-span {
+          &:first-child {
+            display: none;
+          }
+          width: 100%;
+          padding: 0 !important;
+          .row-fluid-wrapper {
+            padding: 0;
+            margin: 0;
+            position: relative;
+            top: initial;
+            min-height: unset;
+          }
+        }
+        width: 100%;
+        max-width: 620px !important;
+        margin: auto;
+        box-shadow: 0px 28px 56px 0px #1b234882;
+        background: #2b4ff4;
+        border-radius: 12px;
+        padding: 40px;
+      }
+      padding: 28px 24px !important;
+      margin: 0 !important;
+      min-height: 100vh;
+      display: flex;
+      flex-wrap: wrap;
+    //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_4k.webp");
+    //   background-size: cover;
+    //   background-position: top left;
+    }
+    .row-number-9 {
+      display: none;
+    }
+    .row-number-10 {
+      display: none;
+    }
+    .row-number-15 {
+      display: none;
+    }
+    .row-number-21 {
+      display: none;
+    }
+    footer {
+      display: none;
+    }
+    .row-number-8 {
+      .row-fluid {
+        margin: 0;
+        padding: 0;
+        [class*="span"] {
+          margin: 0;
+          padding: 0;
+        }
+      }
+    }
+    .container-fluid.body-container {
+      padding: 0 !important;
+    }
+    .widget-type-form {
+      background: transparent;
+      border-radius: 0;
+      box-shadow: none;
+    }
+    .form-title {
+      color: $color_1;
+      text-align: center;
+      font-family: $font-family_1;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      margin-bottom: 20px;
+    }
+    div[data-hs-forms-root="true"] {
+      position: relative;
+      top: initial;
+    }
+    form.hs-form.hs-custom-form {
+      background: transparent;
+      padding: 0;
+      border: 0;
+      border-radius: 0;
+      box-shadow: none;
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      .hs-form-field {
+        &:not(.hidden-field) {
+          display: inline-flex;
+          flex-wrap: wrap;
+          align-content: flex-start;
+          width: calc(50% - 8px);
+          margin: 0 0 16.5px;
+          position: relative;
+        }
+        .input {
+          width: 100%;
+        }
+        .hs-form-booleancheckbox {
+          label {
+            margin: 3px 0 3px;
+          }
+          input {
+            position: absolute;
+            visibility: hidden;
+            margin: 0;
+            &:checked {
+              + {
+                span {
+                  &::after {
+                    position: absolute;
+                    content: "";
+                    width: 8px;
+                    height: 8px;
+                    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718272039/varicent/1002/Checkmark.svg");
+                    background-size: contain;
+                    background-repeat: no-repeat;
+                    top: 8px;
+                    left: 4px;
+                  }
+                }
+              }
+            }
+          }
+          span {
+            position: relative;
+            color: $color_1;
+            font-family: $font-family_1;
+            font-size: 14.4px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 23.62px;
+            padding-left: 24px;
+            margin: 0;
+            &:not(.hs-form-required) {
+              &:before {
+                position: absolute;
+                content: "";
+                width: 16px;
+                height: 16px;
+                border-radius: 3px;
+                background: #fff;
+                top: 4px;
+                left: 0;
+              }
+            }
+            p {
+              position: relative;
+              color: $color_6;
+              display: flex;
+              cursor: pointer;
+              &::-moz-selection {
+                color: $color_6 !important;
+              }
+              &::selection {
+                color: $color_6 !important;
+              }
+              &::before {
+                position: absolute;
+                content: "By clicking “Submit” below, you consent to allow Varicent to store and process the personal information submitted above per Varicent’s Privacy Policy to provide you a product demo. *";
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                color: $color_1;
+                font-family: $font-family_1;
+                font-size: 14.4px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 23.62px;
+                margin: 0;
+              }
+            }
+            span.hs-form-required {
+              display: none;
+            }
+          }
+        }
+        label {
+          color: $color_2;
+          font-family: $font-family_1;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.64;
+          margin-bottom: 4px;
+          width: 100%;
+          text-align: left;
+          span.hs-form-required {
+            color: $color_4;
+            padding: 0;
+          }
+        }
+        .hs-input {
+          &:not([type="checkbox"]) {
+            width: 100% !important;
+            height: 48px;
+            padding: 11px 15px;
+            background-color: rgba(255, 255, 255, 0.8);
+            background-image: none;
+            border: 1px solid #ced4da;
+            border-radius: 8px;
+            color: $color_5;
+            font-family: $font-family_1;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 400;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            line-height: 1.5;
+            transition: all 0.3s ease-in-out;
+            &:hover {
+              background-color: #fff;
+            }
+          }
+          &:-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 48px #fff inset !important;
+            -webkit-text-fill-color: #212529 !important;
+            &:hover {
+              -webkit-box-shadow: 0 0 0 48px #fff inset !important;
+              -webkit-text-fill-color: #212529 !important;
+            }
+            &:focus {
+              -webkit-box-shadow: 0 0 0 48px #fff inset !important;
+              -webkit-text-fill-color: #212529 !important;
+            }
+            &:active {
+              -webkit-box-shadow: 0 0 0 48px #fff inset !important;
+              -webkit-text-fill-color: #212529 !important;
+            }
+          }
+          option {
+            background-color: rgba(255, 255, 255, 0.8);
+            background-image: none;
+            border: 1px solid #ced4da;
+            color: $color_5;
+          }
+        }
+        select.hs-input {
+          &:not([type="checkbox"]) {
+            padding-right: 35px;
+          }
+        }
+        input.hs-input {
+          background-image: none;
+        }
+        [class*="hs-error-msgs"] {
+          position: relative;
+          margin: 0 0 0 5px;
+          a {
+            color: $color_3;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+            cursor: pointer;
+            color: $color_1;
+          }
+          label {
+            margin: 0;
+          }
+        }
+        ul.hs-error-msgs {
+          .hs-error-msg {
+            color: $color_3;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: normal;
+            margin: 0;
+          }
+        }
+      }
+      .hs-form-field.hidden-field {
+        display: none !important;
+      }
+      .hs-form-field.hs_state {
+        display: none !important;
+        display: none !important;
+      }
+      .hs-form-field.hs_product_interest_varicent {
+        display: none !important;
+      }
+      .hs-form-field.hs_jobtitle {
+        display: none !important;
+      }
+      .hs-form-field.hs_annualrevenue {
+        display: none !important;
+      }
+      .hs-form-field.hs_contact_type {
+        display: none !important;
+      }
+      .hs-form-field.hs_leadsource {
+        display: none !important;
+      }
+      .hs-form-field.hs_marketing_lead_source {
+        display: none !important;
+      }
+      .hs-form-field.hs_marketing_source {
+        display: none !important;
+      }
+      .hs-form-field.hs_utm_campaign {
+        display: none !important;
+      }
+      .hs-form-field.hs_utm_medium {
+        display: none !important;
+      }
+      .hs-form-field.hs_utm_source {
+        display: none !important;
+      }
+      .hs-form-field.hs_utm_term {
+        display: none !important;
+      }
+      .hs-form-field.hs_utm_content {
+        display: none !important;
+      }
+      .hs-form-field.hs_form_type {
+        display: none !important;
+      }
+      .hs-form-field.hs_spam_prevention {
+        display: none !important;
+      }
+      .hs-form-field.hs_country.full-width {
+        width: 100%;
+      }
+      .hs-form-field.hs-fieldtype-select {
+        .input {
+          position: relative;
+          &::after {
+            position: absolute;
+            content: "";
+            width: 12px;
+            height: 12px;
+            top: 18px;
+            right: 16px;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718599394/varicent/1002/dropdown-arrow.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+          }
+        }
+      }
+      .hs-form-field.hs_how_did_you_hear_about_varicent_ {
+        width: 100%;
+      }
+      .legal-consent-container {
+        width: 100%;
+        .hs-form-field {
+          width: 100%;
+        }
+      }
+      .hs-form-field.hs_company {
+        label {
+          text-transform: capitalize;
+        }
+      }
+      .hs-form-field.filled {
+        label {
+          color: $color_1;
+        }
+        .hs-input {
+          background-color: #fff;
+        }
+      }
+      .hs-form-field.active.typing {
+        label {
+          color: $color_1;
+        }
+        .hs-input {
+          background-color: #fff;
+        }
+      }
+      .hs-form-field.error {
+        label {
+          color: $color_3 !important;
+        }
+        .hs-input {
+          background: #ffe5e5 !important;
+          border-color: #e00000 !important;
+          color: $color_3;
+        }
+      }
+      .hs_error_rollup {
+        width: 100%;
+        text-align: center;
+        .hs-error-msgs {
+          margin: 0 0 16px;
+        }
+        label.hs-main-font-element {
+          margin: 0;
+          color: $color_3;
+          font-family: $font-family_1;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 1.64;
+        }
+      }
+      .hs-submit {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        margin: 0;
+        width: 100%;
+        .actions {
+          display: flex;
+          flex-wrap: wrap;
+          justify-content: center;
+          margin: 0;
+          width: 100%;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "Submit";
+            width: auto;
+            height: auto;
+            color: $color_7;
+            font-family: $font-family_1;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 1.5;
+            letter-spacing: 2px;
+            text-transform: uppercase;
+            z-index: 9;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            pointer-events: none;
+          }
+        }
+        .hs-button {
+          width: 100%;
+          max-width: 201px;
+          height: 58px;
+          background: #fadb14;
+          border: 1px solid #2b4ff4;
+          border-radius: 55px;
+          padding: 0;
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+          justify-content: center;
+          color: $color_6;
+          font-family: $font-family_1;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 1.5;
+          letter-spacing: 2px;
+          text-transform: uppercase;
+          &:hover {
+            border-color: #0327cc;
+          }
+        }
+      }
+    }
+  }
+  #scrollToTopBtn {
+    display: none;
+  }
+  #main-content {
+    > .container-fluid {
+      > .row-fluid-wrapper {
+        margin: 0;
+        padding: 0;
+        > .row-fluid {
+          margin: 0;
+          padding: 0;
+          > .span12 {
+            margin: 0;
+            padding: 0;
+          }
+        }
+      }
+    }
+  }
+}
+input {
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 48px white inset !important;
+    &:hover {
+      -webkit-box-shadow: 0 0 0 48px white inset !important;
+    }
+    &:focus {
+      -webkit-box-shadow: 0 0 0 48px white inset !important;
+    }
+    &:active {
+      -webkit-box-shadow: 0 0 0 48px white inset !important;
+    }
+  }
+}
+@media (max-width: 1600px) {
+  .spz-1003 {
+    .body-container-wrapper {
+      .row-number-1 {
+        background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_1440.webp");
+      }
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1003 {
+    .body-container-wrapper {
+      .row-number-1 {
+        > .row-fluid {
+          padding: 40px 24px 5px;
+        }
+      }
+      form.hs-form.hs-custom-form {
+        .hs-form-field {
+          &:not(.hidden-field) {
+            width: 100%;
+          }
+          label {
+            font-size: 15px;
+          }
+        }
+      }
+    }
+  }
+}
+
+.spz-1003 .spz-video-bg {
+  position: fixed;
+  left: 0;
+  top: 0;
+  min-width: 100%;
+  min-height: 100%;
+  z-index: 99;
+}
+.spz-1003 .spz-video-bg::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+}
+.spz-1003 .spz-video-bg video {
+  width: 100%;
+}
