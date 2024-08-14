@@ -1,4 +1,3 @@
-console.log("test running")
 function ready(fn) {
   if (document.readyState !== 'loading') {
     fn();
@@ -7,7 +6,6 @@ function ready(fn) {
   }
 }
 ready(function(){
-  console.log("after dom load")
   if(!document.querySelector('.spz-1012')){
     document.querySelector('body').classList.add('spz-1012')
     const loadJS = (url, implementationCode, location)=>{
@@ -113,6 +111,7 @@ ready(function(){
             formId: "89116499-15d1-4cd0-b724-7a46e68cf8f0",
             target: '.spz-1012 #contact-form-1012',
             isInsideFrame: true,
+            submitText: "SUBMIT",
             inlineMessage: "Thanks for submitting the form.",
               onFormSubmitted: function($form) {
                 console.log('Report conversion...');
