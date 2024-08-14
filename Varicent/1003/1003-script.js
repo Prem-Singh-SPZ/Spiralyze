@@ -5,13 +5,16 @@ let bodyLoaded = setInterval(function () {
 		clearInterval(bodyLoaded);
 		if (!body.classList.contains('spz-1003')) {
 			body.classList.add('spz-1003');
+			if (document.querySelectorAll('.spz-1003 .spz-video-bg').length == 0) {
+				document.querySelector('.spz-1003').insertAdjacentHTML('afterbegin', `<div class="spz-video-bg"><video autoplay muted loop playsinline>
+					<source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/varicent/1003/Vector_Dashboard.mp4" type="video/mp4">
+				  </video></div>`);
+			}
+
 			waitForElm('.spz-1003 .widget-type-form form.hs-form.hs-custom-form .hs-form-field input').then(function () {
-				document.querySelector('.spz-1003').insertAdjacentHTML('afterbegin',`<div class="spz-video-bg"><video autoplay muted loop playsinline>
-                	<source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/varicent/1003/Vector_Dashboard.mp4" type="video/mp4">
-              	</video></div>`);
-
-
-				document.querySelector('.spz-1003 .body-container-wrapper .widget-type-form').insertAdjacentHTML('beforebegin', `<h2 class="form-title">Get a Demo</h2>`);
+				if (document.querySelectorAll('.spz-1003 .body-container-wrapper .form-title').length == 0) {
+					document.querySelector('.spz-1003 .body-container-wrapper .widget-type-form').insertAdjacentHTML('beforebegin', `<h2 class="form-title">Get a Demo</h2>`);
+				}
 
 				// Add class in each elements of type hidden
 				waitForElm('.spz-1003 .body-container-wrapper form.hs-form.hs-custom-form input[type="hidden"]').then(function () {

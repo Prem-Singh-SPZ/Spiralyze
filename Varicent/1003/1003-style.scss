@@ -456,7 +456,8 @@ $font-family_1: Inter;
           height: 58px;
           background: #fadb14;
           border: 1px solid #2b4ff4;
-          border-radius: 55px;
+          box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+          border-radius: 56px;
           padding: 0;
           display: flex;
           flex-wrap: wrap;
@@ -470,8 +471,9 @@ $font-family_1: Inter;
           line-height: 1.5;
           letter-spacing: 2px;
           text-transform: uppercase;
+          transition: all 0.3s ease-in-out;
           &:hover {
-            border-color: #0327cc;
+            background: #fff;
           }
         }
       }
@@ -562,4 +564,5 @@ input {
 }
 .spz-1003 .spz-video-bg video {
   width: 100%;
+  min-width: 1440px;
 }

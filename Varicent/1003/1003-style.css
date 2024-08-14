@@ -446,7 +446,9 @@
   height: 58px;
   background: #fadb14;
   border: 1px solid #2b4ff4;
-  border-radius: 55px;
+  -webkit-box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+          box-shadow: 0px 1px 2px 0px rgba(16, 24, 40, 0.05);
+  border-radius: 56px;
   padding: 0;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -467,9 +469,11 @@
   line-height: 1.5;
   letter-spacing: 2px;
   text-transform: uppercase;
+  -webkit-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-submit .hs-button:hover {
-  border-color: #0327cc;
+  background: #fff;
 }
 .spz-1003 #scrollToTopBtn {
   display: none;
@@ -539,4 +543,5 @@ input:-webkit-autofill:active {
 
 .spz-1003 .spz-video-bg video {
   width: 100%;
+  min-width: 1440px;
 }
