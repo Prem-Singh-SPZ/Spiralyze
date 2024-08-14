@@ -36,15 +36,16 @@ $font-family_1: Inter;
         background: #2b4ff4;
         border-radius: 12px;
         padding: 40px;
+        z-index: 2;
       }
       padding: 28px 24px !important;
       margin: 0 !important;
       min-height: 100vh;
       display: flex;
       flex-wrap: wrap;
-    //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_4k.webp");
-    //   background-size: cover;
-    //   background-position: top left;
+      //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_4k.webp");
+      //   background-size: cover;
+      //   background-position: top left;
     }
     .row-number-9 {
       display: none;
@@ -547,7 +548,7 @@ input {
   top: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: 99;
+  z-index: 0;
 }
 .spz-1003 .spz-video-bg::before {
   position: absolute;
@@ -556,8 +557,8 @@ input {
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(228, 228, 228, 0.65);
+  backdrop-filter: blur(3px);
 }
 .spz-1003 .spz-video-bg video {
   width: 100%;

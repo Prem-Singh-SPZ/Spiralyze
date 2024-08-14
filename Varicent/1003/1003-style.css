@@ -24,6 +24,7 @@
   background: #2b4ff4;
   border-radius: 12px;
   padding: 40px;
+  z-index: 2;
 }
 .spz-1003 .body-container-wrapper .row-number-1 > .row-fluid > .widget-span {
   width: 100%;
@@ -521,7 +522,7 @@ input:-webkit-autofill:active {
   top: 0;
   min-width: 100%;
   min-height: 100%;
-  z-index: 99;
+  z-index: 0;
 }
 
 .spz-1003 .spz-video-bg::before {
@@ -531,8 +532,9 @@ input:-webkit-autofill:active {
   height: 100%;
   top: 0;
   left: 0;
-  backdrop-filter: blur(6px);
-  -webkit-backdrop-filter: blur(6px);
+  background: rgba(228, 228, 228, 0.65);
+  -webkit-backdrop-filter: blur(3px);
+          backdrop-filter: blur(3px);
 }
 
 .spz-1003 .spz-video-bg video {

@@ -7,7 +7,7 @@ let bodyLoaded = setInterval(function () {
 			body.classList.add('spz-1003');
 			waitForElm('.spz-1003 .widget-type-form form.hs-form.hs-custom-form .hs-form-field input').then(function () {
 				document.querySelector('.spz-1003').insertAdjacentHTML('afterbegin',`<div class="spz-video-bg"><video autoplay muted loop playsinline>
-                	<source src="//res.cloudinary.com/spiralyze/video/upload/v1706178007/drata/1010/Video.mp4" type="video/mp4">
+                	<source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/varicent/1003/Vector_Dashboard.mp4" type="video/mp4">
               	</video></div>`);
 
 
