@@ -8,12 +8,12 @@ $color_7: white;
 $font-family_1: Titillium Web, sans-serif;
 
 .spz-1012 {
+  .blocker {
+    background: rgba(0, 0, 0, 0.5);
+  }
   #popup_contact_us {
     @media (min-width: 767.98px) {
       margin: 24px 0;
-    }
-    .blocker {
-      background: rgba(0, 0, 0, 0.5);
     }
     .hbspt-form {
       display: none;
@@ -65,7 +65,9 @@ $font-family_1: Titillium Web, sans-serif;
       }
 
       .sp-logo {
-        margin-bottom: 8px;
+        @media (max-width: 767.98px) {
+          margin-bottom: 8px;
+        }
         img {
           height: 28px;
           width: auto;
@@ -83,6 +85,7 @@ $font-family_1: Titillium Web, sans-serif;
         }
 
         .form-columns-1 {
+          width: 100%;
           &.width-50 {
             width: calc((100% - 20px) / 2);
 
@@ -429,7 +432,7 @@ $font-family_1: Titillium Web, sans-serif;
           font-weight: 400;
           line-height: 20px;
           letter-spacing: 0;
-          margin-bottom: 17px;
+          margin-bottom: 0;
           a {
             text-decoration: underline;
             color: $color_6 !important;
@@ -444,7 +447,7 @@ $font-family_1: Titillium Web, sans-serif;
           }
         }
       }
-      .submit-parent {
+      .hs_submit {
         width: 100%;
       }
       .hs_submit {
@@ -576,7 +579,7 @@ $font-family_1: Titillium Web, sans-serif;
         }
       }
       .pp-parent {
-        margin-top: 3px;
+        margin-bottom: 20px;
         padding: 0;
         float: left;
         margin-left: 0px;
@@ -647,8 +650,8 @@ $font-family_1: Titillium Web, sans-serif;
           display: block;
         }
         .pp-parent {
-          margin-bottom: 15px;
-          margin-top: 4px;
+          margin-bottom: 20px;
+          // margin-top: 4px;
         }
       }
     }
@@ -731,7 +734,7 @@ $font-family_1: Titillium Web, sans-serif;
         .hs_message {
           margin-bottom: 5px;
         }
-        
+
         .hs-error-msgs {
           margin: 4px 0px 23px;
           label {

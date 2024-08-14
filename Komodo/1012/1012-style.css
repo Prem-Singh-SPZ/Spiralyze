@@ -1,3 +1,6 @@
+.spz-1012 .blocker {
+  background: rgba(0, 0, 0, 0.5);
+}
 .spz-1012 #popup_contact_us {
   max-width: 600px !important;
   -webkit-box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
@@ -8,9 +11,6 @@
   .spz-1012 #popup_contact_us {
     margin: 24px 0;
   }
-}
-.spz-1012 #popup_contact_us .blocker {
-  background: rgba(0, 0, 0, 0.5);
 }
 .spz-1012 #popup_contact_us .hbspt-form {
   display: none;
@@ -66,8 +66,10 @@
     gap: 0 16px;
   }
 }
-.spz-1012 #popup_contact_us .spz-social-proof .sp-logo {
-  margin-bottom: 8px;
+@media (max-width: 767.98px) {
+  .spz-1012 #popup_contact_us .spz-social-proof .sp-logo {
+    margin-bottom: 8px;
+  }
 }
 .spz-1012 #popup_contact_us .spz-social-proof .sp-logo img {
   height: 28px;
@@ -81,6 +83,9 @@
       flex-wrap: wrap;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-2 {
+  width: 100%;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-1 {
   width: 100%;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 form .form-columns-1.width-50 {
@@ -394,7 +399,7 @@
   font-weight: 400;
   line-height: 20px;
   letter-spacing: 0;
-  margin-bottom: 17px;
+  margin-bottom: 0;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p a {
   text-decoration: underline;
@@ -409,7 +414,7 @@
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-richtext p a:active {
   text-decoration: none;
 }
-.spz-1012 #popup_contact_us #contact-form-1012 .submit-parent {
+.spz-1012 #popup_contact_us #contact-form-1012 .hs_submit {
   width: 100%;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .hs_submit input {
@@ -545,7 +550,7 @@
   font-weight: 400;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .pp-parent {
-  margin-top: 3px;
+  margin-bottom: 20px;
   padding: 0;
   float: left;
   margin-left: 0px;
@@ -608,8 +613,7 @@
   display: block;
 }
 .spz-1012.step2 #popup_contact_us #contact-form-1012 .pp-parent {
-  margin-bottom: 15px;
-  margin-top: 4px;
+  margin-bottom: 20px;
 }
 
 @media (max-width: 767.98px) {
