@@ -759,7 +759,7 @@
                         </a>
                     </div>
                     <div class="resource-card">
-                        <a class="rc-link" href="https://drata.com/blog/soc-2-audits">
+                        <a class="rc-link" href="https://drata.com/grc-central/soc-2/audit">
                             <div class="card-img">
                                  <picture>
                                     <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-4.png" type="image/png">
