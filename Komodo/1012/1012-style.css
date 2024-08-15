@@ -125,6 +125,8 @@
   top: 12px;
   left: 20px;
   pointer-events: none;
+  -webkit-transition: all 0.2s ease;
+  transition: all 0.2s ease;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field > label span {
   color: #4a4a4a;
@@ -332,6 +334,21 @@
 .spz-1012 #popup_contact_us #contact-form-1012 .hasError .hs-input {
   border: 1px solid #dc0000 !important;
 }
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus > label {
+  top: -13px !important;
+  left: 16px !important;
+  z-index: 4;
+}
+.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus > label span {
+  font-family: Titillium Web, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 20px;
+  padding: 0 4px;
+  color: #000;
+  box-shadow: 0px -9px 0px 0px #fff inset;
+  -webkit-box-shadow: 0px -9px 0px 0px #fff inset;
+}
 .spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.hasValue > label {
   top: -13px !important;
   left: 16px !important;
@@ -345,21 +362,6 @@
   line-height: 20px;
   padding: 0 4px;
   color: #7e7e7e;
-  box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
-  -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
-}
-.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus > label {
-  top: -13px !important;
-  left: 16px !important;
-  z-index: 4;
-}
-.spz-1012 #popup_contact_us #contact-form-1012 .hs-form-field.focus > label span {
-  font-family: Titillium Web, sans-serif;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 20px;
-  padding: 0 4px;
-  color: #000;
   box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
   -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
 }
@@ -550,7 +552,8 @@
   font-weight: 400;
 }
 .spz-1012 #popup_contact_us #contact-form-1012 .pp-parent {
-  margin-bottom: 20px;
+  margin-bottom: 16px;
+  margin-top: 4px;
   padding: 0;
   float: left;
   margin-left: 0px;
@@ -622,7 +625,7 @@
     padding: 0px;
   }
   .spz-1012 #popup_contact_us {
-    padding: 24px 24px 42px !important;
+    padding: 24px 24px 8px !important;
     -webkit-box-shadow: none;
             box-shadow: none;
   }

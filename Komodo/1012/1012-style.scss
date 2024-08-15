@@ -126,6 +126,7 @@ $font-family_1: Titillium Web, sans-serif;
               top: 12px;
               left: 20px;
               pointer-events: none;
+              transition: all 0.2s ease;
             }
           }
           span {
@@ -338,6 +339,24 @@ $font-family_1: Titillium Web, sans-serif;
         }
       }
 
+      .hs-form-field.focus {
+        > label {
+          top: -13px !important;
+          left: 16px !important;
+          z-index: 4;
+          span {
+            font-family: $font-family_1;
+            font-size: 12px;
+            font-weight: 400;
+            line-height: 20px;
+            padding: 0 4px;
+            color: #000;
+            box-shadow: 0px -9px 0px 0px #fff inset;
+            -webkit-box-shadow: 0px -9px 0px 0px #fff inset;
+          }
+        }
+      }
+      
       .hs-form-field.hasValue {
         > label {
           top: -13px !important;
@@ -356,23 +375,7 @@ $font-family_1: Titillium Web, sans-serif;
           }
         }
       }
-      .hs-form-field.focus {
-        > label {
-          top: -13px !important;
-          left: 16px !important;
-          z-index: 4;
-          span {
-            font-family: $font-family_1;
-            font-size: 12px;
-            font-weight: 400;
-            line-height: 20px;
-            padding: 0 4px;
-            color: #000;
-            box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
-            -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
-          }
-        }
-      }
+   
       .hs-form-field.focus.hs_how_did_you_hear_about_us_ {
         > label {
           display: none;
@@ -579,7 +582,8 @@ $font-family_1: Titillium Web, sans-serif;
         }
       }
       .pp-parent {
-        margin-bottom: 20px;
+        margin-bottom: 16px;
+        margin-top: 4px;
         padding: 0;
         float: left;
         margin-left: 0px;
@@ -666,7 +670,7 @@ $font-family_1: Titillium Web, sans-serif;
     }
 
     #popup_contact_us {
-      padding: 24px 24px 42px !important;
+      padding: 24px 24px 8px !important;
       box-shadow: none;
       #contact-form-1012 {
         .hs-form-field.width50 {
