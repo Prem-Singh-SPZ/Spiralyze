@@ -2,10 +2,90 @@ let bodyLoaded = setInterval(function () {
 	const body = document.querySelector('body');
 	if (body) {
 		clearInterval(bodyLoaded);
+
+		//add swiper js and css in head
+		const swiperStyle = document.createElement('link');
+		swiperStyle.rel = 'stylesheet';
+		swiperStyle.href = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
+		document.head.appendChild(swiperStyle);
+
+		const swiperScript = document.createElement('script');
+		swiperScript.src = 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js';
+		swiperScript.async = false;
+		document.head.appendChild(swiperScript);
+
 		if (!body.classList.contains('spz-1005')) {
 			body.classList.add('spz-1005');
+
+			if (document.querySelectorAll('.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial').length == 0)
+				document.querySelector('.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid').insertAdjacentHTML('beforeend', `<div class="spz-testimonial"><div class="swiper spz-slider">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide">
+							<div class="tm-card">
+								<div class="tm-body">
+									<p>Varicent Incentives is the best in the market. We can quickly build accurate reports. Dramatically reduces our work.</p>
+								</div>
+								<div class="tm-footer">
+									<div class="tm-logo">
+										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/manpower_logo_1441.webp" alt="Manpower">
+									</div>
+									<div class="tm-write">
+										<p class="name">Craig Dimbat</p>
+										<p class="designation">Varicent Administrator</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tm-card">
+								<div class="tm-body">
+									<p>We can make a better, more accurate business plan. It engages our sales associates. And we&#8217;ve reduced costs.
+</p>
+								</div>
+								<div class="tm-footer">
+									<div class="tm-logo">
+										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/shaw_logo_1440.webp" alt="Shaw">
+									</div>
+									<div class="tm-write">
+										<p class="name">Melissa Crawley</p>
+										<p class="designation">Director Sales Compensation</p>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="swiper-slide">
+							<div class="tm-card">
+								<div class="tm-body">
+									<p>Sellers can see the expected payment on a daily level. It&#8217;s a great way to help motivate them to do more and more.
+</p>
+								</div>
+								<div class="tm-footer">
+									<div class="tm-logo">
+										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/magyar_telekom_logo_1440.webp" alt="Magyar Telekom">
+									</div>
+									<div class="tm-write">
+										<p class="name">Sebestyén Melega</p>
+										<p class="designation">Incentive Development and Operations CoE Lead</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					</div><div class="swiper-pagination"></div>
+				</div>`);
+
+			//check if swiper is loaded and then call initSlider
+			var swiperLoaded = setInterval(function () {
+				if (typeof Swiper !== 'undefined') {
+					clearInterval(swiperLoaded);
+					initSlider();
+				}
+			}, 100);
+
 			waitForElm('.spz-1005 .widget-type-form form.hs-form.hs-custom-form .hs-form-field input').then(function () {
-				document.querySelector('.spz-1005 .body-container-wrapper .widget-type-form').insertAdjacentHTML('beforebegin', `<h2 class="form-title">Get a Demo</h2>`);
+
+				if (document.querySelectorAll('.spz-1005 .body-container-wrapper .form-title').length == 0)
+					document.querySelector('.spz-1005 .body-container-wrapper .widget-type-form').insertAdjacentHTML('beforebegin', `<h2 class="form-title">Get a Demo</h2>`);
 
 				// Add class in each elements of type hidden
 				waitForElm('.spz-1005 .body-container-wrapper form.hs-form.hs-custom-form input[type="hidden"]').then(function () {
@@ -16,14 +96,15 @@ let bodyLoaded = setInterval(function () {
 							parentDiv.classList.add('hidden-field');
 						}
 					});
+
+					document.querySelector('form.hs-form.hs-custom-form select[name="employee_size"] option[value=""]').innerText = '';
+					document.querySelector('form.hs-form.hs-custom-form select[name="country"] option[value=""]').innerText = '';
 				});
 
 				setTimeout(() => {
 					if (document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-company').style.display != 'none') {
-						console.log('11111111111');
 						document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.remove('full-width');
 					} else {
-						console.log('2222222222');
 						document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.add('full-width');
 					}
 				}, 1000);
@@ -32,7 +113,6 @@ let bodyLoaded = setInterval(function () {
 				var doneTypingInterval = 1000;
 				var selector = '.spz-1005 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field .hs-input';
 
-				// document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.add('full-width');
 
 				// Function to handle custom error class
 				function handleCustomErrorClass(target) {
@@ -149,6 +229,23 @@ let bodyLoaded = setInterval(function () {
 	}
 });
 
+function initSlider() {
+	// Initialize Swiper
+	var swiper = new Swiper('.spz-1005 .spz-slider', {
+		slidesPerView: 1,
+		// spaceBetween: 30,
+		loop: true,
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
+		pagination: {
+			el: '.spz-1005 .spz-testimonial .swiper-pagination',
+			clickable: true,
+		},
+	});
+}
 
 // Generic Code
 function waitForElm(selector) {
