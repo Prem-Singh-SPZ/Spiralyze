@@ -22,6 +22,13 @@ let bodyLoaded = setInterval(function () {
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="tm-card">
+								<div class="tm-quote">
+									<picture>
+										<source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp" type="image/webp">
+										<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp.webp" type="image/webp">
+										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
+									</picture>
+								</div>
 								<div class="tm-body">
 									<p>Varicent Incentives is the best in the market. We can quickly build accurate reports. Dramatically reduces our work.</p>
 								</div>
@@ -38,6 +45,13 @@ let bodyLoaded = setInterval(function () {
 						</div>
 						<div class="swiper-slide">
 							<div class="tm-card">
+								<div class="tm-quote">
+									<picture>
+										<source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp" type="image/webp">
+										<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp.webp" type="image/webp">
+										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
+									</picture>
+								</div>
 								<div class="tm-body">
 									<p>We can make a better, more accurate business plan. It engages our sales associates. And we&#8217;ve reduced costs.
 </p>
@@ -55,6 +69,13 @@ let bodyLoaded = setInterval(function () {
 						</div>
 						<div class="swiper-slide">
 							<div class="tm-card">
+								<div class="tm-quote">
+									<picture>
+										<source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp" type="image/webp">
+										<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp.webp" type="image/webp">
+										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
+									</picture>
+								</div>
 								<div class="tm-body">
 									<p>Sellers can see the expected payment on a daily level. It&#8217;s a great way to help motivate them to do more and more.
 </p>
@@ -99,6 +120,8 @@ let bodyLoaded = setInterval(function () {
 
 					document.querySelector('form.hs-form.hs-custom-form select[name="employee_size"] option[value=""]').innerText = '';
 					document.querySelector('form.hs-form.hs-custom-form select[name="country"] option[value=""]').innerText = '';
+					document.querySelector('form.hs-form.hs-custom-form .hs-form-field .hs-form-booleancheckbox span > p').innerHTML = 'By clicking “Submit” below, you consent to allow Varicent to store and process the personal information submitted above per Varicent&#8217;s Privacy Policy to provide you a product demo.';
+					document.querySelector('form.hs-form.hs-custom-form .hs-submit .hs-button').classList.add('spz-1005-cta');
 				});
 
 				setTimeout(() => {
@@ -235,11 +258,11 @@ function initSlider() {
 		slidesPerView: 1,
 		// spaceBetween: 30,
 		loop: true,
-		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
-		},
+		// autoplay: {
+		// 	delay: 5000,
+		// 	disableOnInteraction: false,
+		// 	pauseOnMouseEnter: true,
+		// },
 		pagination: {
 			el: '.spz-1005 .spz-testimonial .swiper-pagination',
 			clickable: true,
