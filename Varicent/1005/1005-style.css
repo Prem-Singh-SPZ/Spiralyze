@@ -80,6 +80,15 @@
     max-width: 100%;
   }
 }
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial::before {
+  content: "";
+  position: absolute;
+  top: 100px;
+  left: 40px;
+  width: 100px;
+  height: 63px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp) no-repeat center/cover;
+}
 .spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider {
   width: 100%;
 }
@@ -150,6 +159,16 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+@media (max-width: 1024.98px) {
+  .spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .swiper-pagination {
+    left: auto;
+    right: 40px;
+    bottom: 40px;
+    -webkit-box-pack: end;
+        -ms-flex-pack: end;
+            justify-content: flex-end;
+  }
 }
 .spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
