@@ -12,7 +12,7 @@
   display: -ms-flexbox;
   display: flex;
   -ms-flex-wrap: wrap;
-  flex-wrap: wrap;
+      flex-wrap: wrap;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_4k.webp");
   background-size: cover;
   background-position: top left;
@@ -26,6 +26,15 @@
           box-shadow: 0px 28px 56px 0px rgba(27, 35, 72, 0.51);
   z-index: 2;
   overflow: hidden;
+}
+@media (max-width: 1024.98px) {
+  .spz-1005 .body-container-wrapper .row-number-1 > .row-fluid {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    max-width: 620px;
+  }
 }
 .spz-1005 .body-container-wrapper .row-number-1 > .row-fluid > .widget-span {
   width: 100%;
@@ -46,7 +55,7 @@
   top: initial;
   min-height: unset;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial {
   background: #fff;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -66,10 +75,15 @@
           align-items: flex-start;
   position: relative;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider {
+@media (max-width: 1024.98px) {
+  .spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial {
+    max-width: 100%;
+  }
+}
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider {
   width: 100%;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -78,10 +92,10 @@
       -ms-flex-direction: column;
           flex-direction: column;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-body {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-body {
   min-height: 160px;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-body p {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-body p {
   color: #282828;
   font-family: Inter, sans-serif;
   font-size: 19px;
@@ -90,7 +104,7 @@
   line-height: 32px;
   margin: 0;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-footer {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -98,18 +112,18 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-footer .tm-logo {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-footer .tm-logo {
   margin-right: 20px;
   max-width: 99px;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-footer .tm-logo img {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-footer .tm-logo img {
   width: 100%;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-footer .tm-write {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-footer .tm-write {
   padding-left: 20px;
   border-left: 1px solid #9a9a9a;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-footer .tm-write .name {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-footer .tm-write .name {
   color: #212529;
   font-family: Inter, sans-serif;
   font-size: 16px;
@@ -118,7 +132,7 @@
   line-height: 24px;
   margin: 0 0 2px;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .spz-slider .tm-card .tm-footer .tm-write .designation {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .spz-slider .tm-card .tm-footer .tm-write .designation {
   color: #212529;
   font-family: Inter, sans-serif;
   font-size: 14px;
@@ -127,7 +141,7 @@
   line-height: 20px;
   margin: 0;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .swiper-pagination {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .swiper-pagination {
   left: 40px;
   bottom: 32px;
   display: -webkit-box;
@@ -137,13 +151,13 @@
       -ms-flex-align: center;
           align-items: center;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .swiper-pagination .swiper-pagination-bullet {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .swiper-pagination .swiper-pagination-bullet {
   width: 10px;
   height: 10px;
   background: #ced4da;
   opacity: 1;
 }
-.spz-1005 .body-container-wrapper .row-number-1 .spz-testimonial .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
+.spz-1005 .body-container-wrapper .row-number-1 > .row-fluid .spz-testimonial .swiper-pagination .swiper-pagination-bullet.swiper-pagination-bullet-active {
   background: #555555;
   width: 16px;
   height: 16px;
