@@ -258,11 +258,11 @@ function initSlider() {
 		slidesPerView: 1,
 		// spaceBetween: 30,
 		loop: true,
-		// autoplay: {
-		// 	delay: 5000,
-		// 	disableOnInteraction: false,
-		// 	pauseOnMouseEnter: true,
-		// },
+		autoplay: {
+			delay: 5000,
+			disableOnInteraction: false,
+			pauseOnMouseEnter: true,
+		},
 		pagination: {
 			el: '.spz-1005 .spz-testimonial .swiper-pagination',
 			clickable: true,
