@@ -118,10 +118,16 @@ let bodyLoaded = setInterval(function () {
 						}
 					});
 
-					document.querySelector('form.hs-form.hs-custom-form select[name="employee_size"] option[value=""]').innerText = '';
-					document.querySelector('form.hs-form.hs-custom-form select[name="country"] option[value=""]').innerText = '';
-					document.querySelector('form.hs-form.hs-custom-form .hs-form-field .hs-form-booleancheckbox span > p').innerHTML = 'By clicking “Submit” below, you consent to allow Varicent to store and process the personal information submitted above per Varicent&#8217;s Privacy Policy to provide you a product demo.';
-					document.querySelector('form.hs-form.hs-custom-form .hs-submit .hs-button').classList.add('spz-1005-cta');
+					let textUpdated = setInterval(() => {
+						if (document.querySelector('form.hs-form.hs-custom-form select[name="employee_size"] option[value=""]').innerText !== '') {
+							clearInterval(textUpdated);
+							document.querySelector('form.hs-form.hs-custom-form select[name="employee_size"] option[value=""]').innerText = '';
+							document.querySelector('form.hs-form.hs-custom-form select[name="country"] option[value=""]').innerText = '';
+							document.querySelector('form.hs-form.hs-custom-form .hs-form-field .hs-form-booleancheckbox span > p').innerHTML = 'By clicking “Submit” below, you consent to allow Varicent to store and process the personal information submitted above per Varicent&#8217;s Privacy Policy to provide you a product demo.';
+							document.querySelector('form.hs-form.hs-custom-form .hs-submit .hs-button').classList.add('spz-1005-cta');
+							document.querySelector('form.hs-form.hs-custom-form .hs_how_did_you_hear_about_varicent_ > label > span:first-child').textContent = `How did you hear about us?`;
+						}
+					}, 100);
 				});
 
 				setTimeout(() => {
@@ -259,13 +265,22 @@ function initSlider() {
 		// spaceBetween: 30,
 		loop: true,
 		autoplay: {
-			delay: 5000,
-			disableOnInteraction: false,
-			pauseOnMouseEnter: true,
+			delay: 99999999999999,
+			disableOnInteraction: true,
+			pauseOnMouseEnter: false,
 		},
 		pagination: {
 			el: '.spz-1005 .spz-testimonial .swiper-pagination',
 			clickable: true,
+		},
+		breakpoints: {
+			768: {
+				autoplay: {
+					delay: 5000,
+					disableOnInteraction: false,
+					pauseOnMouseEnter: true,
+				},
+			}
 		},
 	});
 }
