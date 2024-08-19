@@ -31,6 +31,7 @@ body.spz-5002 .spz-5002-ctas .button {
           justify-content: center;
   -webkit-transition: all 0.3s ease;
   transition: all 0.3s ease;
+  outline: none;
 }
 @media (max-width: 767.98px) {
   body.spz-5002 .spz-5002-ctas .button {
@@ -73,4 +74,19 @@ body.spz-5002 .spz-5002-ctas .button.button-trans:hover {
 body.spz-5002 .spz-5002-ctas .button.button-trans:active {
   color: #ffffff;
   background: #4a4a4a;
+}
+@media (max-width: 1024.98px) {
+  body.spz-5002 .spz-5002-ctas.variant_1 {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px 0;
+  }
+}
+@media (max-width: 1024.98px) and (max-width: 1024.98px) {
+  body.spz-5002 .spz-5002-ctas.variant_1 .button {
+    margin: 0;
+    width: 100%;
+  }
 }

@@ -23,6 +23,7 @@ body.spz-5002 {
       cursor: pointer;
       justify-content: center;
       transition: all 0.3s ease;
+      outline: none;
 
       @media (max-width: 767.98px) {
         margin: 0;
@@ -66,6 +67,20 @@ body.spz-5002 {
         &:active {
           color: #ffffff;
           background: #4a4a4a;
+        }
+      }
+    }
+
+    &.variant_1 {
+      @media (max-width: 1024.98px) {
+        flex-direction: column;
+        gap: 16px 0;
+
+        .button {
+          @media (max-width: 1024.98px) {
+            margin: 0;
+            width: 100%;
+          }
         }
       }
     }
