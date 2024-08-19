@@ -18,9 +18,33 @@ $inter: Inter, sans-serif;
       min-height: 100vh;
       display: flex;
       flex-wrap: wrap;
-      background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_4k.webp");
-      background-size: cover;
-      background-position: top left;
+      background: #fff
+        url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/background_362.webp)
+        no-repeat top left/cover;
+
+      @media (min-width: 767.98px) {
+        background: #fff
+          url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/background_768.webp)
+          no-repeat top left/cover;
+      }
+
+      @media (min-width: 1024.98px) {
+        background: #fff
+          url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/background_1440.webp)
+          no-repeat top left/cover;
+      }
+
+      @media (min-width: 1600.98px) {
+        background: #fff
+          url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/background_1920.webp)
+          no-repeat top left/cover;
+      }
+
+      @media (min-width: 2400.98px) {
+        background: #fff
+          url(//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/background_4k.webp)
+          no-repeat top left/cover;
+      }
 
       > .row-fluid {
         width: 100%;
@@ -71,6 +95,10 @@ $inter: Inter, sans-serif;
             padding: 32px 40px;
           }
 
+          @media (max-width: 767.98px) {
+            padding: 32px 24px 79px;
+          }
+
           .spz-slider {
             width: 100%;
             // margin-top: 72px;
@@ -108,6 +136,10 @@ $inter: Inter, sans-serif;
                   min-height: 52px;
                 }
 
+                @media (max-width: 767.98px) {
+                  min-height: 130px;
+                }
+
                 p {
                   color: #282828;
                   font-family: $inter;
@@ -127,6 +159,12 @@ $inter: Inter, sans-serif;
               .tm-footer {
                 display: flex;
                 align-items: center;
+
+                @media (max-width: 767.98px) {
+                  flex-direction: column-reverse;
+                  align-items: flex-start;
+                }
+
                 .tm-logo {
                   margin-right: 20px;
                   max-width: 99px;
@@ -143,6 +181,15 @@ $inter: Inter, sans-serif;
                   display: flex;
                   justify-content: center;
                   flex-direction: column;
+
+                  @media (max-width: 767.98px) {
+                    border: 0;
+                    padding-left: 0;
+                    height: 66px;
+                    margin-bottom: 8px;
+                    align-items: flex-start;
+                    justify-content: flex-start;
+                  }
 
                   .name {
                     color: #212529;
@@ -174,11 +221,16 @@ $inter: Inter, sans-serif;
             display: flex;
             align-items: center;
 
-            @media (max-width: 1024.98px) {
+            @media (min-width: 767.98px) and (max-width: 1024.98px) {
               left: auto;
               right: 36px;
               bottom: 39px;
               justify-content: flex-end;
+            }
+
+            @media (max-width: 767.98px) {
+              left: 20px;
+              bottom: 40px;
             }
 
             .swiper-pagination-bullet {
@@ -487,6 +539,11 @@ $inter: Inter, sans-serif;
         position: absolute;
         bottom: -1px;
         right: 0;
+
+        @media (max-width: 767.98px) {
+          bottom: -79px;
+          right: -4px;
+        }
         .grecaptcha-badge {
           -webkit-box-shadow: none !important;
           box-shadow: none !important;
@@ -497,7 +554,7 @@ $inter: Inter, sans-serif;
         flex-wrap: wrap;
         justify-content: left;
         margin: 0;
-        width: auto;
+        width: 100%;
 
         .actions {
           justify-content: left;
@@ -505,6 +562,11 @@ $inter: Inter, sans-serif;
           width: 201px;
           margin: 0;
           position: relative;
+
+          @media (max-width: 767.98px) {
+            width: 100%;
+          }
+
           &::before {
             position: absolute;
             content: "Submit";
@@ -525,6 +587,10 @@ $inter: Inter, sans-serif;
             transform: translate(-50%, -50%);
             pointer-events: none;
             transition: all 0.3s ease-in-out;
+
+            @media (max-width: 767.98px) {
+              left: 50%;
+            }
           }
 
           &:hover {
@@ -631,8 +697,11 @@ input {
   .spz-1005 {
     .body-container-wrapper {
       .row-number-1 {
+        padding: 32.5px 24px !important;
         > .row-fluid {
-          padding: 40px 24px 5px;
+          > .widget-span {
+            padding: 40px 24px 84px !important;
+          }
         }
       }
       form.hs-form.hs-custom-form {
@@ -640,9 +709,9 @@ input {
           &:not(.hidden-field) {
             width: 100%;
           }
-          label {
-            font-size: 15px;
-          }
+          // label {
+          //   font-size: 15px;
+          // }
         }
       }
     }
