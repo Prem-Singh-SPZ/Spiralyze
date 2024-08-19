@@ -1,0 +1,73 @@
+body.spz-5002 .spz-5002-ctas {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 0 16px;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 .spz-5002-ctas {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    gap: 16px 0;
+  }
+}
+body.spz-5002 .spz-5002-ctas .button {
+  height: 40px;
+  padding: 12px 24px;
+  white-space: nowrap;
+  font-family: Titillium Web, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  border-radius: 100px;
+  cursor: pointer;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 .spz-5002-ctas .button {
+    margin: 0;
+  }
+}
+body.spz-5002 .spz-5002-ctas .button.button-blue {
+  background: #68cce8;
+  color: #000;
+  width: 151px;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 .spz-5002-ctas .button.button-blue {
+    width: 100%;
+  }
+}
+body.spz-5002 .spz-5002-ctas .button.button-blue:hover {
+  background: #fff;
+}
+body.spz-5002 .spz-5002-ctas .button.button-blue:active {
+  color: #ffffff;
+  background: #4a4a4a;
+}
+body.spz-5002 .spz-5002-ctas .button.button-trans {
+  border: 1px solid #68cce8;
+  background: transparent;
+  color: #68cce8;
+  width: 208px;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 .spz-5002-ctas .button.button-trans {
+    width: 100%;
+    margin-bottom: 16px;
+  }
+}
+body.spz-5002 .spz-5002-ctas .button.button-trans:hover {
+  background: #fff;
+}
+body.spz-5002 .spz-5002-ctas .button.button-trans:active {
+  color: #ffffff;
+  background: #4a4a4a;
+}

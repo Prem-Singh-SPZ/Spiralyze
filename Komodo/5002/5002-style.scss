@@ -1,0 +1,71 @@
+body.spz-5002 {
+  .spz-5002-ctas {
+    display: flex;
+    gap: 0 16px;
+
+    @media (max-width: 767.98px) {
+      flex-direction: column;
+      gap: 16px 0;
+    }
+
+    .button {
+      height: 40px;
+      padding: 12px 24px;
+      white-space: nowrap;
+      font-family: Titillium Web, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 24px;
+      letter-spacing: 0.8px;
+      text-transform: uppercase;
+      border-radius: 100px;
+      cursor: pointer;
+      justify-content: center;
+
+      @media (max-width: 767.98px) {
+        margin: 0;
+      }
+
+      &.button-blue {
+        background: #68cce8;
+        color: #000;
+        width: 151px;
+
+        @media (max-width: 767.98px) {
+          width: 100%;
+        }
+
+        &:hover {
+          background: #fff;
+        }
+
+        &:active {
+          color: #ffffff;
+          background: #4a4a4a;
+        }
+      }
+
+      &.button-trans {
+        border: 1px solid #68cce8;
+        background: transparent;
+        color: #68cce8;
+        width: 208px;
+
+        @media (max-width: 767.98px) {
+          width: 100%;
+          margin-bottom: 16px;
+        }
+
+        &:hover {
+          background: #fff;
+        }
+
+        &:active {
+          color: #ffffff;
+          background: #4a4a4a;
+        }
+      }
+    }
+  }
+}
