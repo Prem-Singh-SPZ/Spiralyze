@@ -257,6 +257,7 @@ var css = `.spz_2003 header.site-header,
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717757061/expel/2003/dropdown_icon.svg");
   background-size: contain;
   background-repeat: no-repeat;
+  pointer-events: none;
 }
 .spz_2003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap select.mktoField {
   padding-right: 37px !important;
