@@ -97,7 +97,7 @@ let bodyLoaded = setInterval(function () {
 
 			//check if swiper is loaded and then call initSlider
 			var swiperLoaded = setInterval(function () {
-				if (typeof Swiper !== 'undefined') {
+				if (typeof Swiper !== 'undefined'  && document.querySelector('.spz-1005 .spz-slider')) {
 					clearInterval(swiperLoaded);
 					initSlider();
 				}
