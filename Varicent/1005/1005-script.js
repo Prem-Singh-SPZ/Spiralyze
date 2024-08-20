@@ -265,7 +265,7 @@ function initSlider() {
 		// spaceBetween: 30,
 		loop: true,
 		autoplay: {
-			delay: 99999999999999,
+			delay: 9999999999999999999,
 			disableOnInteraction: true,
 			pauseOnMouseEnter: false,
 		},
