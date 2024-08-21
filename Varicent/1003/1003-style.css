@@ -431,7 +431,7 @@
   font-style: normal;
   font-weight: 700;
   line-height: 1.5;
-  letter-spacing: 2px;
+  letter-spacing: 0.32px;
   text-transform: uppercase;
   z-index: 9;
   top: 50%;
@@ -442,7 +442,7 @@
 }
 .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-submit .hs-button {
   width: 100%;
-  max-width: 201px;
+  max-width: 200px;
   height: 58px;
   background: #fadb14;
   border: 1px solid #2b4ff4;
@@ -471,6 +471,11 @@
   text-transform: uppercase;
   -webkit-transition: all 0.3s ease-in-out;
   transition: all 0.3s ease-in-out;
+}
+@media (max-width: 767.98px) {
+  .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-submit .hs-button {
+    max-width: 100%;
+  }
 }
 .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-submit .hs-button:hover {
   background: #fff;

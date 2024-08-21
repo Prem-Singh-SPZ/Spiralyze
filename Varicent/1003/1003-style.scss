@@ -441,7 +441,7 @@ $font-family_1: Inter;
             font-style: normal;
             font-weight: 700;
             line-height: 1.5;
-            letter-spacing: 2px;
+            letter-spacing: 0.32px;
             text-transform: uppercase;
             z-index: 9;
             top: 50%;
@@ -452,7 +452,7 @@ $font-family_1: Inter;
         }
         .hs-button {
           width: 100%;
-          max-width: 201px;
+          max-width: 200px;
           height: 58px;
           background: #fadb14;
           border: 1px solid #2b4ff4;
@@ -472,6 +472,11 @@ $font-family_1: Inter;
           letter-spacing: 2px;
           text-transform: uppercase;
           transition: all 0.3s ease-in-out;
+
+          @media (max-width: 767.98px) {
+            max-width: 100%;
+          }
+
           &:hover {
             background: #fff;
           }
