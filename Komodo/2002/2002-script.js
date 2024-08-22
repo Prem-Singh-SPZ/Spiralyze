@@ -102,6 +102,13 @@ ready(function () {
         document.querySelector('.spz-2002 .overlay-spz').remove();
         document.querySelector('html').classList.remove("spz-modal-open");
       }
+
+      // On click of escape key, close the modal
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape') {
+          document.querySelector('html').classList.remove("spz-modal-open");
+        }
+      });
     });
 
     //for form
@@ -225,6 +232,11 @@ ready(function () {
               labelChange(e);
               errorState(e);
             })
+
+            if (document.querySelector('.spz-2002 #new-formDemo-wrapper .hs-richtext')) {
+              document.querySelector('.spz-2002 #new-formDemo-wrapper .hs-richtext').classList.add("clear", "pp-parent");
+            }
+
             document.querySelector('.spz-2002 #new-formDemo-wrapper .hs_submit input').addEventListener("click", function () {
               allInput.forEach(function (e) {
                 errorState(e);
