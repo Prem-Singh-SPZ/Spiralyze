@@ -65,9 +65,14 @@ ready(function () {
         }
       }
     }
+
+    document.querySelectorAll('a[href="https://www.komodohealth.com/get-demo"]').forEach(function (e) {
+      e.setAttribute("href", "#popup_request_a_demo");
+      e.setAttribute("rel", "modal:open");
+    })
+
     document.addEventListener('click', function (e) {
       if (e.target.closest("a") && e.target.closest("a").getAttribute('href') === '#popup_request_a_demo') {
-
         //THank you message
         if (document.querySelector('.spz-2002 #new-formDemo-wrapper .submitted-message')) {
           document.querySelector('.spz-2002 #new-formDemo-wrapper').innerHTML = "<div class='lds-dual-ring'></div>"
