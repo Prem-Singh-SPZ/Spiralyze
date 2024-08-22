@@ -60,7 +60,7 @@ ready(function () {
     }
     if (document.querySelector('a#request-demo')) {
       for (let i = 0; i < document.querySelectorAll('a#request-demo').length; i++) {
-        if (document.querySelectorAll('a#request-demo')[i].getAttribute("href") == "#popup_contact_us" && document.querySelectorAll('a#request-demo')[i].innerHTML.trim() == 'Request Demo') {
+        if (document.querySelectorAll('a#request-demo')[i].getAttribute("href") == "#popup_contact_us" && document.querySelectorAll('a#request-demo')[i].innerHTML.trim() == 'Request Demo' && !location.href.includes('/technology/software')) {
           document.querySelectorAll('a#request-demo')[i].setAttribute("href", "#popup_request_a_demo")
         }
       }
