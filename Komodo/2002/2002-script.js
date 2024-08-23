@@ -58,13 +58,13 @@ ready(function () {
     if (document.querySelector('#tmpwidget_1665168603900')) {
       document.querySelector('a[href="#tmpwidget_1665168603900"]').setAttribute("href", "#popup_request_a_demo")
     }
-    if (document.querySelector('a#request-demo')) {
-      for (let i = 0; i < document.querySelectorAll('a#request-demo').length; i++) {
-        if (document.querySelectorAll('a#request-demo')[i].getAttribute("href") == "#popup_contact_us" && document.querySelectorAll('a#request-demo')[i].innerHTML.trim() == 'Request Demo' && !location.href.includes('/technology/software')) {
-          document.querySelectorAll('a#request-demo')[i].setAttribute("href", "#popup_request_a_demo")
-        }
-      }
-    }
+    // if (document.querySelector('a#request-demo')) {
+    //   for (let i = 0; i < document.querySelectorAll('a#request-demo').length; i++) {
+    //     if (document.querySelectorAll('a#request-demo')[i].getAttribute("href") == "#popup_contact_us" && document.querySelectorAll('a#request-demo')[i].innerHTML.trim() == 'Request Demo' && !location.href.includes('/technology/software')) {
+    //       document.querySelectorAll('a#request-demo')[i].setAttribute("href", "#popup_request_a_demo")
+    //     }
+    //   }
+    // }
 
     document.querySelectorAll('a[href="https://www.komodohealth.com/get-demo"]').forEach(function (e) {
       e.setAttribute("href", "#popup_request_a_demo");
