@@ -28,6 +28,10 @@ body.spz-5003 {
   .body-wrapper.spz-overflow {
     overflow-x: hidden;
   }
+
+  #scrollToTopBtn{
+    display: none;
+  }
 }
 
 .spz-sticky-footer {
@@ -67,6 +71,10 @@ body.spz-5003 {
 
   #drift-frame-controller {
     bottom: 110px !important;
+
+    @media (max-width: 767.98px) {
+      bottom: 270px !important;
+    }
   }
 }
 

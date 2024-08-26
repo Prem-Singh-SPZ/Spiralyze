@@ -23,6 +23,9 @@
 body.spz-5003 .body-wrapper.spz-overflow {
   overflow-x: hidden;
 }
+body.spz-5003 #scrollToTopBtn {
+  display: none;
+}
 
 .spz-sticky-footer {
   position: fixed;
@@ -70,6 +73,11 @@ body.spz-5003 .body-wrapper.spz-overflow {
 }
 .goUp #drift-frame-controller {
   bottom: 110px !important;
+}
+@media (max-width: 767.98px) {
+  .goUp #drift-frame-controller {
+    bottom: 270px !important;
+  }
 }
 
 .header-wrapper.is-stuck.spz-hide {
