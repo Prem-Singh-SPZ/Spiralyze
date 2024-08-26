@@ -37,16 +37,16 @@ body.spz-5003 {
   bottom: 0;
   z-index: 99999999;
   background: #10239e;
-  padding: 20px 0;
+  padding: 21px 0;
   display: none;
   max-width: 100%;
 
   @media (max-width: 1024.98px) {
-    padding: 19px 0;
+    padding: 19.5px 0;
   }
 
   @media (max-width: 767.98px) {
-    padding: 22px 0;
+    padding: 23px 0 20px;
   }
 }
 
@@ -220,6 +220,11 @@ body.spz-5003 {
   color: var(--cta-primary-font-color);
   border: 1px solid var(--cta-primary-border-color);
 
+  svg {
+    margin-left: 8px;
+    margin-right: 2px;
+  }
+
   @media (max-width: 767.98px) {
     margin-bottom: 20px;
   }
@@ -235,6 +240,10 @@ body.spz-5003 {
   background: var(--cta-primary-hover-bg-color);
   color: var(--cta-primary-hover-font-color);
   border: 1px solid var(--cta-primary-hover-border-color);
+
+  svg path {
+    fill: var(--cta-primary-hover-font-color);
+  }
 }
 
 .spz-ctas-wrap .spz-secondary:hover {
@@ -249,7 +258,7 @@ body.spz-5003 {
   position: absolute;
   width: 24px;
   height: 24px;
-  margin-right: 30px;
+  margin-right: 29px;
   @media (max-width: 1200px) {
     margin-right: 16px;
   }
