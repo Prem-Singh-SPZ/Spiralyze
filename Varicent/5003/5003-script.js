@@ -16,12 +16,12 @@ const stickyFooterContent = {
   <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#10239E"/>
 </svg>`,
       ctaURL: "https://www.varicent.com/book-a-demo",
-      className: 'spz-primary spz-5003-track'
+      className: 'spz-primary'
     },
     {
       ctaText: "Product Tours",
       ctaURL: "https://www.varicent.com/interactive-product-tours",
-      className: 'spz-secondary spz-5003-track'
+      className: 'spz-secondary'
     }
   ]
 };
@@ -107,7 +107,7 @@ function addStickyFooter(footerData) {
         </picture>
     	</div>
     	<div class="spz-ctas-wrap">
-    		${stickyFooterContent.CTAs.map((item) => `<a href=${item.ctaURL} class=${item.className}>${item.ctaText}</a>`).join("")}
+    		${stickyFooterContent.CTAs.map((item) => `<a href=${item.ctaURL} class='${item.className} spz-5003-track'>${item.ctaText}</a>`).join("")}
     	</div>
     </div>
     <div class="close_wrapper">
