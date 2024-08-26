@@ -40,31 +40,39 @@ BEYOND THIS LINE
 ******************************
 ************************/
 // This is the code to generate the sticky footer section do not edit it
-var scrollPosition = document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-fluid-wrapper.row-number-1').offsetHeight;
+//check the scroll position after every window resize
+var scrollPosition = document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-fluid-wrapper.row-number-1').offsetHeight + document.querySelector(".header-wrapper").offsetHeight;
+window.addEventListener("resize", function () {
+  scrollPosition = document.querySelector('#main-content>.container-fluid>.row-fluid-wrapper>.row-fluid>.span12>.row-fluid-wrapper.row-number-1').offsetHeight + document.querySelector(".header-wrapper").offsetHeight;
+});
 function hideShowStickyBar() {
   waitForElm('.spz-sticky-footer').then(function (elm) {
     if (document.querySelector('#hs-banner-parent')) {
       waitForElm('#hs-banner-parent #hs-eu-cookie-confirmation.hs-hidden').then(function (elm) {
         if (window.scrollY > scrollPosition) {
           document.querySelector("body").classList.add("goUp");
-          document.querySelector(".header-wrapper").classList.add("spz-hide");
+          document.querySelector(".header-wrapper.is-stuck").classList.add("spz-hide");
+          document.querySelector(".body-wrapper.hs-site-page.page").classList.add("spz-overflow");
           if (document.querySelector('.goUp .spz-sticky-footer'))
             document.querySelector("#main__footer").style.paddingBottom = document.querySelector('.goUp .spz-sticky-footer').offsetHeight + 'px';
         } else {
           document.querySelector("body").classList.remove("goUp");
           document.querySelector(".header-wrapper").classList.remove("spz-hide");
+          document.querySelector(".body-wrapper.hs-site-page.page").classList.remove("spz-overflow");
         }
       });
     }
     else {
       if (window.scrollY > scrollPosition) {
         document.querySelector("body").classList.add("goUp");
-        document.querySelector(".header-wrapper").classList.add("spz-hide");
+        document.querySelector(".header-wrapper.is-stuck").classList.add("spz-hide");
+        document.querySelector(".body-wrapper.hs-site-page.page").classList.add("spz-overflow");
         if (document.querySelector('.goUp .spz-sticky-footer'))
           document.querySelector("#main__footer").style.paddingBottom = document.querySelector('.goUp .spz-sticky-footer').offsetHeight + 'px';
       } else {
         document.querySelector("body").classList.remove("goUp");
         document.querySelector(".header-wrapper").classList.remove("spz-hide");
+        document.querySelector(".body-wrapper.hs-site-page.page").classList.remove("spz-overflow");
       }
     }
   });
