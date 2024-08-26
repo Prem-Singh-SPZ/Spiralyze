@@ -39,38 +39,39 @@
                     {
                         text: "Trust Center",
                         info: "Your fast pass to vendor security reviews.",
-                        link: "",
+                        link: "/product/trust-center",
                         icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
                     },
                     {
                         text: "Vendor Risk Management",
                         info: "Identify and monitor vendor risk.",
-                        link: "",
+                        link: "/product/third-party-risk-management",
                         icon: astUrl + "fl_sanitize/drata/22002/component_117.svg"
                     },
                     {
                         text: "Risk Management",
                         info: "Put risk management on autopilot.",
-                        link: "",
-                        icon: ""
+                        link: "/product/risk-management",
+                        icon: astUrl + "fl_sanitize//drata/22002/component_135.svg"
                     },
                     {
                         text: "Compliance as Code",
                         info: "Address compliance across the software development lifecycle. ",
-                        link: "",
-                        icon: ""
+                        link: "/product/compliance-as-code",
+                        icon: astUrl + "fl_sanitize//drata/22002/component_129.svg",
+                        newTag: true
                     },
                     {
                         text: "User Access Reviews",
                         info: "Conduct user access reviews directly to increase security.",
-                        link: "",
-                        icon: ""
+                        link: "/product/user-access-reviews",
+                        icon: astUrl + "fl_sanitize//drata/22002/component_133.svg"
                     },
                     {
                         text: "Audit Hub",
                         info: "Streamline the audit process with advanced tools and workflows.",
-                        link: "",
-                        icon: ""
+                        link: "/product/audit-hub",
+                        icon: astUrl + "fl_sanitize//drata/22002/component_138.svg"
                     },
                 ]
             },
@@ -79,26 +80,26 @@
                 class: "frameworks-spz",
                 link: "",
                 subMenu: [
-                    { text: 'SOC 2', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_94.svg" },
-                    { text: 'ISO 27001', link: "", icon: "" },
-                    { text: 'HIPAA', link: "", icon: "" },
-                    { text: 'GDPR', link: "", icon: "" },
-                    { text: 'PCI DSS', link: "", icon: "" },
-                    { text: 'Cyber Essentials', link: "", icon: "" },
-                    { text: 'NIST AI RMF', link: "", icon: "" },
-                    { text: 'CCPA', link: "", icon: "" },
-                    { text: 'CMMC', link: "", icon: "" },
-                    { text: 'Microsoft SSPA', link: "", icon: "" },
-                    { text: 'NIST CSF', link: "", icon: "" },
-                    { text: 'NIST SP 800-53', link: "", icon: "" },
-                    { text: 'NIST SP 800-171', link: "", icon: "" },
-                    { text: 'ISO 27701', link: "", icon: "" },
-                    { text: 'FFIEC', link: "", icon: "" },
-                    { text: 'CCM', link: "", icon: "" },
-                    { text: 'FedRAMP', link: "", icon: "" },
-                    { text: 'ISO 27017', link: "", icon: "" },
-                    { text: 'ISO 27018', link: "", icon: "" },
-                    { text: 'Custom Frameworks', link: "", icon: "" },
+                    { text: 'SOC 2', link: "/product/soc-2", icon: astUrl + "fl_sanitize/drata/22002/component_94.svg" },
+                    { text: 'ISO 27001', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_126.svg" },
+                    { text: 'HIPAA', link: "/product/hipaa", icon: astUrl + "fl_sanitize/drata/22002/component_123.svg" },
+                    { text: 'GDPR', link: "/product/gdpr", icon: astUrl + "fl_sanitize/drata/22002/component_132.svg" },
+                    { text: 'PCI DSS', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
+                    { text: 'Cyber Essentials', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_130.svg" },
+                    { text: 'NIST AI RMF', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_136.svg" },
+                    { text: 'CCPA', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_134.svg" },
+                    { text: 'CMMC', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_163.svg" },
+                    { text: 'Microsoft SSPA', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_165.svg" },
+                    { text: 'NIST CSF', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_146.svg" },
+                    { text: 'NIST SP 800-53', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_151.svg" },
+                    { text: 'NIST SP 800-171', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_166.svg" },
+                    { text: 'ISO 27701', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_143.svg" },
+                    { text: 'FFIEC', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_149.svg" },
+                    { text: 'CCM', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_161.svg" },
+                    { text: 'FedRAMP', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_139.svg" },
+                    { text: 'ISO 27017', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_158.svg" },
+                    { text: 'ISO 27018', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_164.svg" },
+                    { text: 'Custom Frameworks', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_162.svg" },
                 ]
             },
             {
@@ -106,10 +107,10 @@
                 class: "take-drata-spz",
                 link: "",
                 subMenu: [
-                    { text: 'Customer Success', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_91.svg" },
-                    { text: 'Partners', link: "", icon: "" },
-                    { text: 'API', link: "", icon: "" },
-                    { text: 'Integrations', link: "", icon: "" },
+                    { text: 'Customer Success', link: "/success", icon: astUrl + "fl_sanitize/drata/22002/component_91.svg" },
+                    { text: 'Partners', link: "/partner", icon: astUrl + "fl_sanitize/drata/22002/component_145.svg" },
+                    { text: 'API', link: "/product/api", icon: astUrl + "fl_sanitize/drata/22002/component_144.svg" },
+                    { text: 'Integrations', link: "/platform/integrations", icon: astUrl + "fl_sanitize/drata/22002/component_156.svg" },
                 ]
             },
         ]
@@ -277,7 +278,6 @@
             menuNav.innerHTML = "";
 
             navContent.solutions.forEach((subItem1, subIndex) => {
-
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
@@ -290,7 +290,7 @@
                                                         <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
                                                             ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
                                                             <div class="menu-texts">
-                                                                ${subItem2.text}
+                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
                                                                 ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
                                                              </div>
                                                         </a>
@@ -298,11 +298,11 @@
                                                 </li>`;
                 }).join("")}
                                 </ul>
+                                
                             </div>
                         </div>
                     </li>`);
             });
-
         }
     }
 
@@ -316,7 +316,6 @@
         // Get the header height
         const headerHeight = document.querySelector('header').offsetHeight;
         setInterval(() => {
-            console.log(headerHeight, isTopBarVisible);
             if (document.querySelector(`${navSelector}[open]`)) {
                 // Stop page from scrolling when navSelector has 'open' attribute
                 document.body.classList.add('nav-open-spz');

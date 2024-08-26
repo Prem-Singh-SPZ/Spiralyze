@@ -221,6 +221,35 @@ $ff-inter: "Inter", sans-serif;
                 display: flex;
                 justify-content: center;
                 flex-direction: column;
+
+                .menu-title {
+                  overflow: hidden;
+                  color: #0c131a;
+                  text-overflow: ellipsis;
+                  font-size: 14px;
+                  font-weight: 600;
+                  line-height: 20px;
+                  position: relative;
+                  display: flex;
+                  margin-bottom: 5px;
+
+                  .new-tag {
+                    display: flex;
+                    padding: 2px 8px;
+                    justify-content: center;
+                    align-items: center;
+                    font-family: $ff-inter;
+                    margin-left: 12px;
+                    color: #0068c9;
+                    text-align: center;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 500;
+                    line-height: 18px;
+                    border-radius: 4px;
+                    background: #eff8ff;
+                  }
+                }
               }
 
               .menu-info {
