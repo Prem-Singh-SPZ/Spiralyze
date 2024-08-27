@@ -491,6 +491,127 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     .customers-spz {
+      [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        max-width: 1440px;
+        padding: 0;
+
+        ul[class*="HeaderNavLink-navItemSubMenu"] {
+          // grid-template-columns: repeat(4, auto);
+          display: flex;
+          flex-direction: row;
+          max-width: 1440px;
+
+          > [class*="HeaderNavLink-navItemSubMenu"] {
+            // padding-right: 8px;
+
+            &.customers-sub-spz {
+              width: 100%;
+              flex: 0 0 25.8%;
+              border-right: none;
+            }
+
+            &.customers-stories-spz {
+              width: 100%;
+              flex: 0 0 20%;
+              border-right: none;
+              background: #eef2f6;
+              padding-top: 32px;
+              padding-bottom: 32px;
+              padding-left: 80px;
+              padding-right: 8px;
+            }
+
+            &.company-card-spz {
+              width: 100%;
+              flex: 0 0 54.2%;
+              display: flex;
+              padding: 0px 80px 40px 20px;
+              background: #eef2f6;
+            }
+
+            &:first-child {
+              padding-left: 80px;
+              padding-top: 32px;
+              padding-bottom: 32px;
+            }
+
+            &:last-child {
+              // padding-right: 18px;
+            }
+          }
+        }
+      }
+      .css-spz-review-card {
+        .spz-review-card {
+          width: 100%;
+          display: flex;
+          padding: 24px 32px;
+          align-items: center;
+          border-radius: 16px;
+          background: #fff;
+          position: relative;
+
+          .review-img {
+            max-width: 192px;
+            flex: 0 0 40%;
+            margin-right: 24px;
+            margin-bottom: -8px;
+            img {
+              width: 100%;
+              height: auto;
+            }
+          }
+
+          .card-title {
+            margin-bottom: 16px;
+            .name {
+              font-family: $control-font;
+              color: #0c131a;
+              font-size: 20px;
+              font-weight: 700;
+              line-height: 28px;
+              margin: 0 0 4px;
+            }
+
+            .desg {
+              color: #0c131a;
+              font-family: $control-font;
+              font-size: 16px;
+              font-weight: 500;
+              line-height: 24px;
+              margin: 0;
+            }
+          }
+
+          .card-desc {
+            color: #293642;
+            font-family: $control-font;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-bottom: 12px;
+          }
+
+          .card-link {
+            color: #0c131a;
+            font-family: $control-font;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            margin-top: 16px;
+            text-decoration: none;
+
+            svg {
+              margin-left: 6px;
+              margin-top: 4px;
+            }
+
+            &:hover {
+              color: #0580e8;
+            }
+          }
+        }
+      }
     }
     .company-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {

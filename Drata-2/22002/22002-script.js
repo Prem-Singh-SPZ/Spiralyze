@@ -279,6 +279,63 @@
             },
         ],
 
+        customers: [
+            {
+                text: "CUSTOMERS",
+                class: "customers-sub-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "Customer Success",
+                        link: "/success",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_159.svg"
+                    },
+                ]
+            },
+            {
+                text: "FEATURED Customer STORIES",
+                class: "customers-stories-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "SOC 2",
+                        link: "/customers",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_160.svg"
+                    },
+                    {
+                        text: "ISO 27001",
+                        link: "/customers",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_157.svg"
+                    },
+                    {
+                        text: "HIPAA",
+                        link: "/customers",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_167.svg"
+                    },
+                    {
+                        text: "GDPR",
+                        link: "/customers",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_155.svg"
+                    },
+                ]
+            },
+            {
+                text: "",
+                class: "company-card-spz",
+                link: "",
+                subMenu: [
+                    {
+                        cName: "Jonathan Jaffe",
+                        cDesg: "CISO, Lemonade",
+                        cImg: astUrl + "f_auto/drata/22002/jonathan.png",
+                        cDesc: `“We saved 80% of time using Drata’s continuous compliance automation. I’ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I’m able to make my own control framework.”`,
+                        cLink: "/",
+                        cClass: "cs-jonathen-card"
+                    },
+                ]
+            },
+        ],
+
         company: [
             {
                 text: "Company",
@@ -594,6 +651,55 @@
                                                         </a>
                                                     </div>
                                                 </li>`;
+                }).join("")}
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </li>`);
+            });
+        }
+
+        if (!document.querySelector('.customers-sub-spz')) {
+
+            const menuNav = document.querySelector('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
+
+            // Remove all LI in menuNav
+            menuNav.innerHTML = "";
+
+            navContent.customers.forEach((subItem1, subIndex) => {
+                menuNav.insertAdjacentHTML('beforeend', `
+                    <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
+                        <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
+                                <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
+                                    ${subItem1.subMenu.map((subItem2, subIndex) => {
+                    return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
+                                                    <div class="spz-review-card ${subItem2.cClass}">
+                                                        <div class="review-img">
+                                                            <img src="${subItem2.cImg}" alt="${subItem2.cName}">
+                                                        </div>
+                                                        <div class="review-content">
+                                                            <div class="card-title"><p class="name">${subItem2.cName}</p><p class="desg">${subItem2.cDesg}</p></div>
+                                                            <div class="card-desc">${subItem2.cDesc}</div>
+                                                            ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"/>
+                                                                </svg></a>` : ""}
+                                                        </div>
+                                                    </div>
+                                                </li>` : `
+                                                <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                                                    <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
+                                                            ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
+                                                            <div class="menu-texts">
+                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
+                                                                ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
+                                                             </div>
+                                                        </a>
+                                                    </div>
+                                                </li>`}`;
                 }).join("")}
                                 </ul>
                                 
