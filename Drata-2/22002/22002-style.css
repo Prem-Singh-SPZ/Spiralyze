@@ -44,6 +44,11 @@
 .spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > nav > ul li[class*=headerMenuNavItem] div[data-testid=HeaderNavLink][open] a {
   font-weight: 700;
 }
+@media (max-width: 1199.98px) {
+  .spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > nav > ul[class*=Header-headerMenuMobileCtas] {
+    display: none !important;
+  }
+}
 .spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > ul {
   padding: 24px 0;
   -ms-grid-column: 13;
@@ -69,6 +74,11 @@
 .spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > ul a[class*=MuiTypography-darkL] svg {
   width: 7px;
   margin-left: 25px;
+}
+@media (max-width: 1199.98px) {
+  .spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > ul a[class*=MuiTypography-darkL] {
+    display: none !important;
+  }
 }
 .spz-22002 header [class*=Header-headerMenuNavItems] > li [class*=HeaderNavLink-root]:is(:hover, :focus-within):not(:focus-visible) {
   border-bottom: 2px solid #0580e8;

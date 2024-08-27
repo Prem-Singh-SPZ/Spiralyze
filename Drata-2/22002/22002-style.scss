@@ -65,6 +65,12 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 }
               }
             }
+
+            &[class*="Header-headerMenuMobileCtas"] {
+              @media (max-width: 1199.98px) {
+                display: none !important;
+              }
+            }
           }
         }
 
@@ -93,6 +99,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             svg {
               width: 7px;
               margin-left: 25px;
+            }
+
+            @media (max-width: 1199.98px) {
+              display: none !important;
             }
           }
         }
