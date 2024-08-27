@@ -436,7 +436,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 margin-top: 16px;
                 text-decoration: none;
 
-                svg{
+                svg {
                   margin-left: 6px;
                   margin-top: 4px;
                 }
@@ -446,7 +446,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 }
               }
 
-              &.ws-tech-card{
+              &.ws-tech-card {
                 .card-desc {
                   max-height: initial;
                   overflow: visible;
@@ -464,6 +464,76 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     .customers-spz {
     }
     .company-spz {
+      .css-spz-menu-card {
+        .spz-menu-card {
+          display: flex;
+          width: 100%;
+          padding: 20px;
+          flex-direction: column;
+          align-items: flex-start;
+          border-radius: 16px;
+          background: #f6f8fa;
+          position: relative;
+
+          img {
+            width: 100%;
+            height: 118px;
+            object-fit: cover;
+          }
+
+          .card-title {
+            color: #1d252e;
+            font-family: $control-font;
+            font-size: 14px;
+            font-weight: 700;
+            line-height: 20px;
+            margin-top: 16px;
+          }
+
+          .card-desc {
+            color: #485665;
+            font-family: $control-font;
+            font-size: 14px;
+            font-weight: 500;
+            line-height: 20px;
+            margin-top: 8px;
+            max-height: 40px;
+            overflow: hidden;
+            text-overflow: ellipsis;
+            display: -webkit-box;
+            -webkit-line-clamp: 2;
+            -webkit-box-orient: vertical;
+          }
+
+          .card-link {
+            color: #0c131a;
+            font-family: $control-font;
+            font-size: 14px;
+            font-weight: 600;
+            line-height: 20px;
+            margin-top: 16px;
+            text-decoration: none;
+
+            svg {
+              margin-left: 6px;
+              margin-top: 4px;
+            }
+
+            &:hover {
+              color: #0580e8;
+            }
+          }
+
+          &.ws-tech-card {
+            .card-desc {
+              max-height: initial;
+              overflow: visible;
+              text-overflow: unset;
+              display: block;
+            }
+          }
+        }
+      }
     }
     // Menu Specific Ends
   }

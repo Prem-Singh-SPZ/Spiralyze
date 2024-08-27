@@ -81,7 +81,7 @@
                 link: "",
                 subMenu: [
                     { text: 'SOC 2', link: "/product/soc-2", icon: astUrl + "fl_sanitize/drata/22002/component_94.svg" },
-                    { text: 'ISO 27001', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_126.svg" },
+                    { text: 'ISO 27001', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_168.svg" },
                     { text: 'HIPAA', link: "/product/hipaa", icon: astUrl + "fl_sanitize/drata/22002/component_123.svg" },
                     { text: 'GDPR', link: "/product/gdpr", icon: astUrl + "fl_sanitize/drata/22002/component_132.svg" },
                     { text: 'PCI DSS', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
@@ -226,6 +226,102 @@
                     { text: 'Product Updates ', link: "", icon: "" },
                     { text: 'API Docs', link: "", icon: "" },
                     { text: 'Help & Documentation', link: "", icon: "" },
+                    {
+                        cTitle: "Drata Named One of the Best Workplaces in Technology",
+                        cImg: astUrl + "f_auto/drata/22002/image_3.webp",
+                        cDesc: "Drata is featured in Fortune’s lists of Best Workplaces in Technology and Best Medium Workplaces.",
+                        cLink: "/",
+                        cClass: "ws-tech-card"
+                    },
+                ]
+            },
+        ],
+
+        alliances: [
+            {
+                text: "Partners",
+                class: "partners-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "Overview",
+                        link: "",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
+                    },
+                    {
+                        text: "Find a Partner",
+                        link: "/partner/find",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_153.svg"
+                    },
+                    {
+                        text: "Become a Partner",
+                        link: "/partner/become",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_150.svg"
+                    }
+                ]
+            },
+            {
+                text: "AUDITORS",
+                class: "auditors-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "Overview",
+                        link: "",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
+                    },
+                    {
+                        text: "Join the Audit Alliance",
+                        link: "/partner/application/audit-alliance",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_142.svg"
+                    },
+                ]
+            },
+        ],
+
+        company: [
+            {
+                text: "Company",
+                class: "company-sub-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "About",
+                        link: "/about",
+                        icon: ""
+                    },
+                    {
+                        text: "Life at Drata",
+                        link: "/about/life-at-drata",
+                        icon: ""
+                    },
+                    {
+                        text: "Careers",
+                        link: "/about/careers",
+                        icon: ""
+                    },
+                    {
+                        text: "Press",
+                        link: "/press",
+                        icon: ""
+                    },
+                    {
+                        text: "Security & Compliance at Drata",
+                        link: "/security",
+                        icon: ""
+                    },
+                    {
+                        text: "Contact Us",
+                        link: "/contact",
+                        icon: ""
+                    },
+                ]
+            },
+            {
+                text: "",
+                class: "company-card-spz",
+                link: "",
+                subMenu: [
                     {
                         cTitle: "Drata Named One of the Best Workplaces in Technology",
                         cImg: astUrl + "f_auto/drata/22002/image_3.webp",
@@ -435,6 +531,86 @@
             menuNav.innerHTML = "";
 
             navContent.resources.forEach((subItem1, subIndex) => {
+                menuNav.insertAdjacentHTML('beforeend', `
+                    <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
+                        <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
+                                <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
+                                    ${subItem1.subMenu.map((subItem2, subIndex) => {
+                    return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                                                    <div class="spz-menu-card ${subItem2.cClass}">
+                                                        <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
+                                                        <div class="card-title">${subItem2.cTitle}</div>
+                                                        <div class="card-desc">${subItem2.cDesc}</div>
+                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"/>
+                                                            </svg></a>` : ""}
+                                                    </div>
+                                                </li>` : `
+                                                <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                                                    <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
+                                                            ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
+                                                            <div class="menu-texts">
+                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
+                                                                ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
+                                                             </div>
+                                                        </a>
+                                                    </div>
+                                                </li>`}`;
+                }).join("")}
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </li>`);
+            });
+        }
+
+        if (!document.querySelector('.partners-spz')) {
+
+            const menuNav = document.querySelector('header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
+
+            // Remove all LI in menuNav
+            menuNav.innerHTML = "";
+
+            navContent.alliances.forEach((subItem1, subIndex) => {
+                menuNav.insertAdjacentHTML('beforeend', `
+                    <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
+                        <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
+                                <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
+                                    ${subItem1.subMenu.map((subItem2, subIndex) => {
+                    return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                                                    <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
+                                                            ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
+                                                            <div class="menu-texts">
+                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
+                                                                ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
+                                                             </div>
+                                                        </a>
+                                                    </div>
+                                                </li>`;
+                }).join("")}
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </li>`);
+            });
+        }
+
+        if (!document.querySelector('.company-sub-spz')) {
+
+            const menuNav = document.querySelector('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
+
+            // Remove all LI in menuNav
+            menuNav.innerHTML = "";
+
+            navContent.company.forEach((subItem1, subIndex) => {
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
