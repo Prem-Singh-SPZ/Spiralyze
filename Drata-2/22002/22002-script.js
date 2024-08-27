@@ -113,6 +113,115 @@
                     { text: 'Integrations', link: "/platform/integrations", icon: astUrl + "fl_sanitize/drata/22002/component_156.svg" },
                 ]
             },
+        ],
+
+        resources: [
+            {
+                text: "Quick Links",
+                class: "quick-link-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "Blog",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "Customer Stories",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "Events",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "Webinars",
+                        link: "",
+                        icon: ""
+                    }
+                ]
+            },
+            {
+                text: "Discover & Learn",
+                class: "discover-learn-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "Resource Center",
+                        info: "Latest blogs, webinars, customer stories, product enhancements, and more.",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "GRC Central",
+                        info: "One-stop-shop for all things GRC. Explore the educational hubs below.",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "Risk Hub",
+                        info: "",
+                        link: "",
+                        icon: astUrl + "fl_sanitize/drata/22002/component_152.svg"
+                    },
+                    {
+                        text: "SOC 2 Hub",
+                        info: "",
+                        link: "",
+                        icon: astUrl + "fl_sanitize//drata/22002/component_141.svg"
+                    },
+                    {
+                        text: "ISO 27001 Hub",
+                        info: "",
+                        link: "",
+                        icon: astUrl + "fl_sanitize//drata/22002/component_154.svg",
+                    },
+                    {
+                        text: "Compliance Glossary",
+                        info: "",
+                        link: "",
+                        icon: ""
+                    },
+                ]
+            },
+            {
+                text: "Compliance Support",
+                class: "compliance-support-spz",
+                link: "",
+                subMenu: [
+                    {
+                        text: "Partners",
+                        info: "",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "Service & Tech Partner Directories",
+                        info: "Search for a Service & Tech Partner",
+                        link: "",
+                        icon: ""
+                    },
+                    {
+                        text: "Auditor Network",
+                        info: "Pre-Vetted Auditor Network. ",
+                        link: "",
+                        icon: ""
+                    }
+                ]
+            },
+            {
+                text: "Customer Support",
+                class: "customer-support-spz",
+                link: "",
+                subMenu: [
+                    { text: 'Product Updates ', link: "", icon: "" },
+                    { text: 'API Docs', link: "", icon: "" },
+                    { text: 'Help & Documentation', link: "", icon: "" },
+                    { text: 'Integrations', link: "/platform/integrations", icon: astUrl + "fl_sanitize/drata/22002/component_156.svg" },
+                ]
+            },
         ]
     };
 
@@ -278,6 +387,41 @@
             menuNav.innerHTML = "";
 
             navContent.solutions.forEach((subItem1, subIndex) => {
+                menuNav.insertAdjacentHTML('beforeend', `
+                    <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
+                        <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
+                                <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
+                                    ${subItem1.subMenu.map((subItem2, subIndex) => {
+                    return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                                                    <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
+                                                            ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
+                                                            <div class="menu-texts">
+                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
+                                                                ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
+                                                             </div>
+                                                        </a>
+                                                    </div>
+                                                </li>`;
+                }).join("")}
+                                </ul>
+                                
+                            </div>
+                        </div>
+                    </li>`);
+            });
+        }
+
+        if (!document.querySelector('.quick-link-spz')) {
+
+            const menuNav = document.querySelector('header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
+
+            // Remove all LI in menuNav
+            menuNav.innerHTML = "";
+
+            navContent.resources.forEach((subItem1, subIndex) => {
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">

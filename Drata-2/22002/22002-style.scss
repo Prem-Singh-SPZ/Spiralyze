@@ -1,4 +1,5 @@
 $ff-inter: "Inter", sans-serif;
+$control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
 .spz-22002 {
   &.nav-open-spz {
@@ -114,7 +115,7 @@ $ff-inter: "Inter", sans-serif;
       background: #fff;
       box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
         0px 4px 6px -2px rgba(16, 24, 40, 0.03);
-      padding: 62px 0 40px;
+      padding: 32px 0 40px;
       overflow-y: auto;
       scrollbar-width: none; /* Firefox */
       -ms-overflow-style: none; /* IE and Edge */
@@ -231,7 +232,7 @@ $ff-inter: "Inter", sans-serif;
                   line-height: 20px;
                   position: relative;
                   display: flex;
-                  margin-bottom: 5px;
+                  margin-bottom: 3px;
 
                   .new-tag {
                     display: flex;
@@ -254,7 +255,7 @@ $ff-inter: "Inter", sans-serif;
 
               .menu-info {
                 color: #697586;
-                font-family: $ff-inter;
+                font-family: $control-font;
                 font-size: 12px;
                 font-style: normal;
                 font-weight: 500;
@@ -276,35 +277,48 @@ $ff-inter: "Inter", sans-serif;
     .solutions-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
         ul[class*="HeaderNavLink-navItemSubMenu"] {
-          grid-template-columns: repeat(4, auto);
+          // grid-template-columns: repeat(4, auto);
+          display: flex;
+          flex-direction: row;
 
-          // > [class*="HeaderNavLink-navItemSubMenu"] {
-          //   padding: 0 44.67px;
+          > [class*="HeaderNavLink-navItemSubMenu"] {
+            padding-right: 8px;
 
-          //   &.by-company-size-spz {
-          //     max-width: 237px;
-          //   }
+            &.by-company-size-spz {
+              // max-width: 237px;
+              width: 100%;
+              flex: 0 0 18.5%;
+            }
 
-          //   &.platform-capabilities-spz {
-          //     max-width: 430px;
-          //   }
+            &.platform-capabilities-spz {
+              // max-width: 430px;
+              width: 100%;
+              padding-left: 50px;
+              flex: 0 0 34.4%;
+            }
 
-          //   &.frameworks-spz {
-          //     max-width: 235px;
-          //   }
+            &.frameworks-spz {
+              // max-width: 235px;
+              width: 100%;
+              padding-left: 50px;
+              flex: 0 0 26.1%;
+            }
 
-          //   &.take-drata-spz {
-          //     max-width: 219px;
-          //   }
+            &.take-drata-spz {
+              // max-width: 219px;
+              width: 100%;
+              flex: 0 0 21%;
+              padding-left: 50px;
+            }
 
-          //   &:first-child {
-          //     padding-left: 0;
-          //   }
+            &:first-child {
+              padding-left: 0;
+            }
 
-          //   &:last-child {
-          //     padding-right: 0;
-          //   }
-          // }
+            &:last-child {
+              padding-right: 0;
+            }
+          }
         }
       }
     }

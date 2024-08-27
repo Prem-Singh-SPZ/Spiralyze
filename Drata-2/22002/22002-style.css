@@ -80,7 +80,7 @@
   background: #fff;
   -webkit-box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
           box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08), 0px 4px 6px -2px rgba(16, 24, 40, 0.03);
-  padding: 62px 0 40px;
+  padding: 32px 0 40px;
   overflow-y: auto;
   scrollbar-width: none; /* Firefox */
   -ms-overflow-style: none; /* IE and Edge */
@@ -196,7 +196,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 5px;
+  margin-bottom: 3px;
 }
 .spz-22002 header [class*=HeaderNavLink-navItemSubMenuWrapper] > [class*=HeaderNavLink-navItemSubMenu] [class*=HeaderNavGroup-navItemSubMenuWrapper] > ul a[class*=navItemLink-HeaderNavGroup-navItemGroup] .menu-texts .menu-title .new-tag {
   display: -webkit-box;
@@ -222,7 +222,7 @@
 }
 .spz-22002 header [class*=HeaderNavLink-navItemSubMenuWrapper] > [class*=HeaderNavLink-navItemSubMenu] [class*=HeaderNavGroup-navItemSubMenuWrapper] > ul a[class*=navItemLink-HeaderNavGroup-navItemGroup] .menu-info {
   color: #697586;
-  font-family: "Inter", sans-serif;
+  font-family: "__Inter_36bd41", "__Inter_Fallback_36bd41";
   font-size: 12px;
   font-style: normal;
   font-weight: 500;
@@ -233,6 +233,47 @@
   background: #eff8ff;
 }
 .spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] {
-  -ms-grid-columns: (auto)[4];
-  grid-template-columns: repeat(4, auto);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu] {
+  padding-right: 8px;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].by-company-size-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 18.5%;
+          flex: 0 0 18.5%;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].platform-capabilities-spz {
+  width: 100%;
+  padding-left: 50px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 34.4%;
+          flex: 0 0 34.4%;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].frameworks-spz {
+  width: 100%;
+  padding-left: 50px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 26.1%;
+          flex: 0 0 26.1%;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].take-drata-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 21%;
+          flex: 0 0 21%;
+  padding-left: 50px;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:first-child {
+  padding-left: 0;
+}
+.spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
+  padding-right: 0;
 }
