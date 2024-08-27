@@ -197,7 +197,6 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  margin-bottom: 3px;
 }
 .spz-22002 header [class*=HeaderNavLink-navItemSubMenuWrapper] > [class*=HeaderNavLink-navItemSubMenu] [class*=HeaderNavGroup-navItemSubMenuWrapper] > ul a[class*=navItemLink-HeaderNavGroup-navItemGroup] .menu-texts .menu-title .new-tag {
   display: -webkit-box;
@@ -228,6 +227,7 @@
   font-style: normal;
   font-weight: 500;
   line-height: 18px;
+  margin-top: 3px;
 }
 .spz-22002 header [class*=HeaderNavLink-navItemSubMenuWrapper] > [class*=HeaderNavLink-navItemSubMenu] [class*=HeaderNavGroup-navItemSubMenuWrapper] > ul a[class*=navItemLink-HeaderNavGroup-navItemGroup]:hover {
   border-radius: 8px;
@@ -410,6 +410,61 @@
   overflow: visible;
   text-overflow: unset;
   display: block;
+}
+.spz-22002 header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.spz-22002 header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].partners-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 22.8%;
+          flex: 0 0 22.8%;
+}
+.spz-22002 header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].auditors-spz {
+  width: 100%;
+  padding-left: 82px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28.4%;
+          flex: 0 0 28.4%;
+}
+.spz-22002 header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:first-child {
+  padding-left: 0;
+}
+.spz-22002 header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
+  padding-right: 18px;
+}
+.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].company-sub-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 72.8%;
+          flex: 0 0 72.8%;
+}
+.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].company-card-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28.4%;
+          flex: 0 0 28.4%;
+}
+.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:first-child {
+  padding-left: 0;
+}
+.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
+  padding-right: 18px;
 }
 .spz-22002 header .company-spz .css-spz-menu-card .spz-menu-card {
   display: -webkit-box;

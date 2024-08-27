@@ -233,8 +233,6 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                   line-height: 20px;
                   position: relative;
                   display: flex;
-                  margin-bottom: 3px;
-
                   .new-tag {
                     display: flex;
                     padding: 2px 8px;
@@ -261,6 +259,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 font-style: normal;
                 font-weight: 500;
                 line-height: 18px;
+                margin-top: 3px;
               }
 
               &:hover {
@@ -460,10 +459,70 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     .alliances-spz {
+      [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        ul[class*="HeaderNavLink-navItemSubMenu"] {
+          // grid-template-columns: repeat(4, auto);
+          display: flex;
+          flex-direction: row;
+
+          > [class*="HeaderNavLink-navItemSubMenu"] {
+            // padding-right: 8px;
+
+            &.partners-spz {
+              width: 100%;
+              flex: 0 0 22.8%;
+            }
+
+            &.auditors-spz {
+              width: 100%;
+              padding-left: 82px;
+              flex: 0 0 28.4%;
+            }
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:last-child {
+              padding-right: 18px;
+            }
+          }
+        }
+      }
     }
     .customers-spz {
     }
     .company-spz {
+      [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        ul[class*="HeaderNavLink-navItemSubMenu"] {
+          // grid-template-columns: repeat(4, auto);
+          display: flex;
+          flex-direction: row;
+
+          > [class*="HeaderNavLink-navItemSubMenu"] {
+            // padding-right: 8px;
+
+            &.company-sub-spz {
+              width: 100%;
+              flex: 0 0 72.8%;
+            }
+
+            &.company-card-spz {
+              width: 100%;
+              // padding-left: 82px;
+              flex: 0 0 28.4%;
+            }
+
+            &:first-child {
+              padding-left: 0;
+            }
+
+            &:last-child {
+              padding-right: 18px;
+            }
+          }
+        }
+      }
       .css-spz-menu-card {
         .spz-menu-card {
           display: flex;
