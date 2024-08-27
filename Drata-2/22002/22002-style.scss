@@ -494,31 +494,42 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     }
     .company-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        max-width: 1440px;
+        padding: 0;
+
         ul[class*="HeaderNavLink-navItemSubMenu"] {
           // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
+          max-width: 1440px;
 
           > [class*="HeaderNavLink-navItemSubMenu"] {
             // padding-right: 8px;
 
             &.company-sub-spz {
               width: 100%;
-              flex: 0 0 72.8%;
+              flex: 0 0 68.8%;
+              border-right: none;
             }
 
             &.company-card-spz {
               width: 100%;
               // padding-left: 82px;
-              flex: 0 0 28.4%;
+              flex: 0 0 31.2%;
+              display: flex;
+              padding: 0 80px 40px;
+              align-items: flex-start;
+              background: #eef2f6;
             }
 
             &:first-child {
-              padding-left: 0;
+              padding-left: 80px;
+              padding-top: 32px;
+              padding-bottom: 32px;
             }
 
             &:last-child {
-              padding-right: 18px;
+              // padding-right: 18px;
             }
           }
         }
@@ -538,6 +549,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             width: 100%;
             height: 118px;
             object-fit: cover;
+            margin-top: -2px;
           }
 
           .card-title {
@@ -570,7 +582,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             font-size: 14px;
             font-weight: 600;
             line-height: 20px;
-            margin-top: 16px;
+            margin-top: 10px;
             text-decoration: none;
 
             svg {

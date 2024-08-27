@@ -439,6 +439,10 @@
 .spz-22002 header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
   padding-right: 18px;
 }
+.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] {
+  max-width: 1440px;
+  padding: 0;
+}
 .spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -447,24 +451,33 @@
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  max-width: 1440px;
 }
 .spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].company-sub-spz {
   width: 100%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 72.8%;
-          flex: 0 0 72.8%;
+      -ms-flex: 0 0 68.8%;
+          flex: 0 0 68.8%;
+  border-right: none;
 }
 .spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].company-card-spz {
   width: 100%;
   -webkit-box-flex: 0;
-      -ms-flex: 0 0 28.4%;
-          flex: 0 0 28.4%;
+      -ms-flex: 0 0 31.2%;
+          flex: 0 0 31.2%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 0 80px 40px;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  background: #eef2f6;
 }
 .spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:first-child {
-  padding-left: 0;
-}
-.spz-22002 header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
-  padding-right: 18px;
+  padding-left: 80px;
+  padding-top: 32px;
+  padding-bottom: 32px;
 }
 .spz-22002 header .company-spz .css-spz-menu-card .spz-menu-card {
   display: -webkit-box;
@@ -488,6 +501,7 @@
   height: 118px;
   -o-object-fit: cover;
      object-fit: cover;
+  margin-top: -2px;
 }
 .spz-22002 header .company-spz .css-spz-menu-card .spz-menu-card .card-title {
   color: #1d252e;
@@ -517,7 +531,7 @@
   font-size: 14px;
   font-weight: 600;
   line-height: 20px;
-  margin-top: 16px;
+  margin-top: 10px;
   text-decoration: none;
 }
 .spz-22002 header .company-spz .css-spz-menu-card .spz-menu-card .card-link svg {

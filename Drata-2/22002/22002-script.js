@@ -245,7 +245,7 @@
                 subMenu: [
                     {
                         text: "Overview",
-                        link: "",
+                        link: "/partner",
                         icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
                     },
                     {
@@ -267,7 +267,7 @@
                 subMenu: [
                     {
                         text: "Overview",
-                        link: "",
+                        link: "/auditors",
                         icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
                     },
                     {
