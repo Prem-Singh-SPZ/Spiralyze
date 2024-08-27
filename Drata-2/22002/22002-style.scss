@@ -8,14 +8,17 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
   header {
     border-bottom: 1px solid #dde3eb;
+    position: sticky;
+    top: 0;
+    transform: none !important;
 
     [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-      top: 141px;
+      top: 140.5px;
       max-height: calc(100vh - 141px);
     }
     &.MuiPaper-elevation2 {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-        top: 97px;
+        top: 96.5px;
         max-height: calc(100vh - 97px);
       }
     }
@@ -132,6 +135,16 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         background: none;
         box-shadow: none;
         padding: 0 40px;
+
+        &::before {
+          content: "";
+          position: absolute;
+          width: 100%;
+          height: 141px;
+          top: 0;
+          left: 0;
+          background: #fff;
+        }
 
         > li {
           opacity: 0.9;
@@ -276,6 +289,43 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     // Menu Specific styles
     .solutions-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        padding-bottom: 0;
+
+        .spz-disabled-anchor-wrapper {
+          margin-top: 40px;
+          display: flex;
+          height: 60px;
+          padding: 0px 80px;
+          background: #f6f8fa;
+
+          .disabled-anchor-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+            justify-content: flex-start;
+            max-width: 1280px;
+
+            .spz-d-link {
+              color: #0c131a;
+              font-family: $control-font;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 20px;
+              text-decoration: none;
+
+              svg {
+                margin-left: 6px;
+                margin-top: 4px;
+              }
+
+              &:hover {
+                color: #0580e8;
+              }
+            }
+          }
+        }
+
         ul[class*="HeaderNavLink-navItemSubMenu"] {
           // grid-template-columns: repeat(4, auto);
           display: flex;
@@ -324,6 +374,42 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     }
     .resources-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        padding-bottom: 0;
+
+        .spz-disabled-anchor-wrapper {
+          margin-top: 40px;
+          display: flex;
+          height: 60px;
+          padding: 0px 80px;
+          background: #f6f8fa;
+
+          .disabled-anchor-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+            justify-content: flex-start;
+            max-width: 1280px;
+
+            .spz-d-link {
+              color: #0c131a;
+              font-family: $control-font;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 20px;
+              text-decoration: none;
+
+              svg {
+                margin-left: 6px;
+                margin-top: 4px;
+              }
+
+              &:hover {
+                color: #0580e8;
+              }
+            }
+          }
+        }
         ul[class*="HeaderNavLink-navItemSubMenu"] {
           // grid-template-columns: repeat(4, auto);
           display: flex;
@@ -460,6 +546,42 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     }
     .alliances-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
+        padding-bottom: 0;
+
+        .spz-disabled-anchor-wrapper {
+          margin-top: 40px;
+          display: flex;
+          height: 60px;
+          padding: 0px 80px;
+          background: #f6f8fa;
+
+          .disabled-anchor-wrapper {
+            display: flex;
+            align-items: center;
+            width: 100%;
+            margin: auto;
+            justify-content: flex-start;
+            max-width: 1280px;
+
+            .spz-d-link {
+              color: #0c131a;
+              font-family: $control-font;
+              font-size: 14px;
+              font-weight: 600;
+              line-height: 20px;
+              text-decoration: none;
+
+              svg {
+                margin-left: 6px;
+                margin-top: 4px;
+              }
+
+              &:hover {
+                color: #0580e8;
+              }
+            }
+          }
+        }
         ul[class*="HeaderNavLink-navItemSubMenu"] {
           // grid-template-columns: repeat(4, auto);
           display: flex;
@@ -492,7 +614,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     }
     .customers-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-        max-width: 1440px;
+        // max-width: 1440px;
         padding: 0;
 
         ul[class*="HeaderNavLink-navItemSubMenu"] {
@@ -615,7 +737,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     }
     .company-spz {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-        max-width: 1440px;
+        // max-width: 1440px;
         padding: 0;
 
         ul[class*="HeaderNavLink-navItemSubMenu"] {

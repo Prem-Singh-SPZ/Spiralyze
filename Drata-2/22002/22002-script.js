@@ -578,6 +578,10 @@
                         </div>
                     </li>`);
             });
+
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
+                                                            </svg></a></div></div>`);
         }
 
         if (!document.querySelector('.quick-link-spz')) {
@@ -623,6 +627,10 @@
                         </div>
                     </li>`);
             });
+
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
+                </svg></a></div></div>`);
         }
 
         if (!document.querySelector('.partners-spz')) {
@@ -658,6 +666,10 @@
                         </div>
                     </li>`);
             });
+
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
+                </svg></a></div></div>`);
         }
 
         if (!document.querySelector('.customers-sub-spz')) {
