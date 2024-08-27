@@ -130,9 +130,12 @@ ready(function () {
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_jobtitle').classList.add("width50", "with-margin");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_email').classList.add("width50", "clear");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs-dependent-field').classList.add("clear");
-              document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_message').classList.add("clear");
+              if (document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_message')) {
+                document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_message').classList.add("clear");
+              }
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_phone').classList.add("width50", "with-margin");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_consent_countries').classList.add("clear");
+              document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_how_can_we_help_you_').classList.add("clear");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs-richtext').classList.add("clear", "pp-parent");
               document.querySelector('.spz-1006 #contact-us-form-wrapper .hs_submit').classList.add("clear", "submit-parent");
               if (document.querySelectorAll('.spz-1006 #contact-us-form-wrapper .hs-richtext p.support-link').length == 0) {

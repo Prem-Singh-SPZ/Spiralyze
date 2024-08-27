@@ -34,6 +34,18 @@ ready(function () {
         document.body.insertAdjacentHTML("beforeend", `<div class="jquery-modal blocker current spz-left-contact"></div>`);
         document.querySelector('.spz-1006 #popup_contact_us').classList.add('modal');
         document.querySelector('.spz-left-contact').insertAdjacentElement("beforeend", document.querySelector('#popup_contact_us'));
+
+        let i = 0;
+        const CROInterval = setInterval(() => {
+          if (document.querySelector('.spz-1006 #popup_contact_us input[name="cro1"]')) {
+            clearInterval(CROInterval)
+            document.querySelector('.spz-1006 #popup_contact_us input[name="cro1"]').value = "#1006_variant"
+          }
+          i++;
+          if (i > 6) {
+            clearInterval(CROInterval)
+          }
+        }, 500);
       }
     });
   }
