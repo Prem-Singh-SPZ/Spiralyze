@@ -52,6 +52,7 @@
   font-size: 16px;
   font-weight: 500;
   line-height: 24px;
+  white-space: nowrap;
 }
 .spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > ul a[class*=MuiTypography-darkL] {
   width: 174px;
@@ -276,4 +277,137 @@
 }
 .spz-22002 header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
   padding-right: 0;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].quick-link-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 23.5%;
+          flex: 0 0 23.5%;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].discover-learn-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 28.4%;
+          flex: 0 0 28.4%;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].compliance-support-spz {
+  width: 100%;
+  padding-right: 24px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 24.5%;
+          flex: 0 0 24.5%;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu].customer-support-spz {
+  width: 100%;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 25%;
+          flex: 0 0 25%;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:first-child {
+  padding-left: 0;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] > [class*=HeaderNavLink-navItemSubMenu]:last-child {
+  padding-right: 18px;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  padding: 20px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  border-radius: 16px;
+  background: #f6f8fa;
+  position: relative;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card::after {
+  content: "Featured";
+  overflow: hidden;
+  color: #fff;
+  font-family: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 8px 16px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  top: 34px;
+  left: 0;
+  width: 93px;
+  height: 36px;
+  background: #293642;
+  border-radius: 0px 2px 2px 0px;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card img {
+  width: 100%;
+  height: 118px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card .card-title {
+  color: #1d252e;
+  font-family: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+  font-size: 14px;
+  font-weight: 700;
+  line-height: 20px;
+  margin-top: 16px;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card .card-desc {
+  color: #485665;
+  font-family: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+  font-size: 14px;
+  font-weight: 500;
+  line-height: 20px;
+  margin-top: 8px;
+  max-height: 40px;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card .card-link {
+  color: #0c131a;
+  font-family: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+  font-size: 14px;
+  font-weight: 600;
+  line-height: 20px;
+  margin-top: 16px;
+  text-decoration: none;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card .card-link svg {
+  margin-left: 6px;
+  margin-top: 4px;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card .card-link:hover {
+  color: #0580e8;
+}
+.spz-22002 header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] ul[class*=HeaderNavLink-navItemSubMenu] .css-spz-menu-card .spz-menu-card.ws-tech-card .card-desc {
+  max-height: initial;
+  overflow: visible;
+  text-overflow: unset;
+  display: block;
 }

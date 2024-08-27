@@ -127,6 +127,13 @@
                         icon: ""
                     },
                     {
+                        cTitle: "What Is Shift-Left Security?",
+                        cImg: astUrl + "f_auto/drata/22002/rectangle_4535.webp",
+                        cDesc: "See how SaaS organization are implementing new security and compliance practices.",
+                        cLink: "",
+                        cClass: "sl-security-card"
+                    },
+                    {
                         text: "Customer Stories",
                         link: "",
                         icon: ""
@@ -219,7 +226,13 @@
                     { text: 'Product Updates ', link: "", icon: "" },
                     { text: 'API Docs', link: "", icon: "" },
                     { text: 'Help & Documentation', link: "", icon: "" },
-                    { text: 'Integrations', link: "/platform/integrations", icon: astUrl + "fl_sanitize/drata/22002/component_156.svg" },
+                    {
+                        cTitle: "Drata Named One of the Best Workplaces in Technology",
+                        cImg: astUrl + "f_auto/drata/22002/image_3.webp",
+                        cDesc: "Drata is featured in Fortune’s lists of Best Workplaces in Technology and Best Medium Workplaces.",
+                        cLink: "/",
+                        cClass: "ws-tech-card"
+                    },
                 ]
             },
         ]
@@ -429,7 +442,17 @@
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                    return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                    return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                                                    <div class="spz-menu-card ${subItem2.cClass}">
+                                                        <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
+                                                        <div class="card-title">${subItem2.cTitle}</div>
+                                                        <div class="card-desc">${subItem2.cDesc}</div>
+                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                                                            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"/>
+                                                            </svg></a>` : ""}
+                                                    </div>
+                                                </li>` : `
+                                                <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
                                                     <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
                                                         <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
                                                             ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
@@ -439,7 +462,7 @@
                                                              </div>
                                                         </a>
                                                     </div>
-                                                </li>`;
+                                                </li>`}`;
                 }).join("")}
                                 </ul>
                                 
