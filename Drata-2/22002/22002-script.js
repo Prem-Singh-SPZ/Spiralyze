@@ -123,7 +123,7 @@
                 subMenu: [
                     {
                         text: "Blog",
-                        link: "",
+                        link: "/blog",
                         icon: ""
                     },
                     {
@@ -135,17 +135,17 @@
                     },
                     {
                         text: "Customer Stories",
-                        link: "",
+                        link: "/customers",
                         icon: ""
                     },
                     {
                         text: "Events",
-                        link: "",
+                        link: "/events",
                         icon: ""
                     },
                     {
                         text: "Webinars",
-                        link: "",
+                        link: "/resources/webinars",
                         icon: ""
                     }
                 ]
@@ -158,13 +158,13 @@
                     {
                         text: "Resource Center",
                         info: "Latest blogs, webinars, customer stories, product enhancements, and more.",
-                        link: "",
+                        link: "/resources",
                         icon: ""
                     },
                     {
                         text: "GRC Central",
                         info: "One-stop-shop for all things GRC. Explore the educational hubs below.",
-                        link: "",
+                        link: "/grc-central",
                         icon: ""
                     },
                     {
@@ -176,19 +176,19 @@
                     {
                         text: "SOC 2 Hub",
                         info: "",
-                        link: "",
+                        link: "/grc-central/soc-2",
                         icon: astUrl + "fl_sanitize//drata/22002/component_141.svg"
                     },
                     {
                         text: "ISO 27001 Hub",
                         info: "",
-                        link: "",
+                        link: "/grc-central/iso-27001",
                         icon: astUrl + "fl_sanitize//drata/22002/component_154.svg",
                     },
                     {
                         text: "Compliance Glossary",
                         info: "",
-                        link: "",
+                        link: "/glossary",
                         icon: ""
                     },
                 ]
@@ -201,7 +201,7 @@
                     {
                         text: "Partners",
                         info: "",
-                        link: "",
+                        link: "/partner",
                         icon: ""
                     },
                     {
@@ -213,7 +213,7 @@
                     {
                         text: "Auditor Network",
                         info: "Pre-Vetted Auditor Network. ",
-                        link: "",
+                        link: "/auditors",
                         icon: ""
                     }
                 ]
@@ -223,8 +223,8 @@
                 class: "customer-support-spz",
                 link: "",
                 subMenu: [
-                    { text: 'Product Updates ', link: "", icon: "" },
-                    { text: 'API Docs', link: "", icon: "" },
+                    { text: 'Product Updates ', link: "https://updates.drata.com/", icon: "" },
+                    { text: 'API Docs', link: "https://developers.drata.com/docs/", icon: "" },
                     { text: 'Help & Documentation', link: "", icon: "" },
                     {
                         cTitle: "Drata Named One of the Best Workplaces in Technology",
@@ -667,7 +667,7 @@
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="https://drata.allbound.com/" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                 <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
                 </svg></a></div></div>`);
         }
