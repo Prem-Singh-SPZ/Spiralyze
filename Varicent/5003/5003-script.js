@@ -107,7 +107,7 @@ function addStickyFooter(footerData) {
         </picture>
     	</div>
     	<div class="spz-ctas-wrap">
-    		${stickyFooterContent.CTAs.map((item) => `<a href=${item.ctaURL} class='${item.className} spz-5003-track'>${item.ctaText}</a>`).join("")}
+    		${stickyFooterContent.CTAs.map((item) => `<a href=${item.ctaURL} class='${item.className} spz_5003_sticky_footer'>${item.ctaText}</a>`).join("")}
     	</div>
     </div>
     <div class="close_wrapper">
