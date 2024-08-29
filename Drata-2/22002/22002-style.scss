@@ -1,5 +1,23 @@
 $ff-inter: "Inter", sans-serif;
 $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+@mixin tablet() {
+  @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+.desk-only {
+  @include tablet {
+    display: none !important;
+  }
+}
+
+.tab-only {
+  display: none !important;
+  @include tablet {
+    display: block;
+  }
+}
 
 .spz-22002 {
   &.nav-open-spz {
@@ -12,14 +30,16 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     top: 0;
     transform: none !important;
 
-    @media screen and (max-width: 1199.98px) {
-      padding: 0 16px;
+    @include tablet {
+      padding: 0;
+      background-color: #fff;
     }
 
     [class*="HeaderNavLink-navItemSubMenuWrapper"] {
       top: 140.5px;
       max-height: calc(100vh - 141px);
     }
+
     &.MuiPaper-elevation2 {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
         top: 96.5px;
@@ -28,8 +48,9 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     }
 
     div[class*="-Header-superNav"] {
-      @media screen and (max-width: 1199.98px) {
-        margin: 0 -16px;
+      @include tablet {
+        margin: 0;
+        padding: 4px 24px;
       }
     }
 
@@ -37,7 +58,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     > .MuiContainer-root {
       padding: 0 56px;
 
-      @media screen and (max-width: 1199.98px) {
+      @include tablet {
         padding: 0;
       }
 
@@ -49,16 +70,21 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           img[class*="Media-root-Header-logo"] {
             height: 22px;
           }
+
+          @include tablet {
+            padding: 0 16px;
+          }
         }
 
         // Main links
         > nav {
           grid-column: 3 / span 8;
+
           > ul {
             li[class*="headerMenuNavItem"] {
               margin-right: 33.5px;
 
-              @media screen and (max-width: 1199.98px) {
+              @include tablet {
                 margin: 0;
               }
 
@@ -68,6 +94,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
                 svg {
                   margin-left: 16px;
+
+                  @include tablet {
+                    height: 8px;
+                  }
                 }
 
                 &:is(:hover, :focus-within):not(:focus-visible)
@@ -79,6 +109,15 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               div[data-testid="HeaderNavLink"][open] {
                 a {
                   font-weight: 700;
+                  color: #1793ff;
+
+                  @include tablet {
+                    color: #0068c9;
+
+                    svg {
+                      fill: #0068c9;
+                    }
+                  }
                 }
               }
             }
@@ -90,30 +129,33 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             }
           }
 
-          @media screen and (max-width: 1199.98px) {
+          @include tablet {
             grid-column: 1 / span 16;
             margin: 0;
-            background: #f6f8fa;
-            border-top: 1px solid #DDE3EB;
+            padding: 40px 16px;
+            background-color: #f6f8fa;
+            border-top: 1px solid #dde3eb;
 
             > ul[class*="Header-headerMenuNavItems"] {
               // overflow: hidden;
               border: none;
+              gap: 12px;
 
               li {
                 div[data-testid="HeaderNavLink"] {
                   border-radius: 4px;
                   background: #fff;
-                  padding: 24px;
                   border: none;
 
-                  a {
-                    display: block;
+                  > a {
+                    display: flex;
+                    padding: 24px 28px 24px 24px;
                     border: none;
                   }
 
                   [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-                    max-height: calc(100vh - 397px);
+                    max-height: calc(100vh - 0px);
+                    padding-top: 0;
                   }
                 }
               }
@@ -126,6 +168,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           padding: 24px 0;
           grid-column: 13 / span 4;
           gap: 0 28px;
+
+          @include tablet {
+            padding: 0 16px;
+          }
 
           a[class*="MuiTypography-link"] {
             color: #293642;
@@ -184,9 +230,9 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         display: none; /* Chrome, Safari, Opera */
       }
 
-      @media screen and (max-width: 1199.98px) {
+      @include tablet {
         position: relative;
-        top: 0;
+        top: 0 !important;
       }
 
       > [class*="HeaderNavLink-navItemSubMenu"] {
@@ -198,7 +244,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         box-shadow: none;
         padding: 0 40px;
 
-        @media screen and (max-width: 1199.98px) {
+        @include tablet {
           flex-wrap: wrap;
         }
 
@@ -256,12 +302,21 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         [class*="HeaderNavGroup-navItemSubMenuWrapper"] {
           margin-top: 40px;
 
+          @include tablet {
+            margin-top: 0;
+          }
+
           > ul {
             display: flex;
             flex-direction: column;
             gap: 12px;
             padding-left: 0;
             list-style: none;
+
+            @include tablet {
+              gap: 20px;
+              margin: 20px 0 0;
+            }
 
             // li[class*="HeaderNavGroup-navItemSubMenuItem"] {
             //   margin-bottom: 12px;
@@ -281,6 +336,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               overflow: hidden;
               text-decoration: none;
               gap: 4px 12px;
+
+              @include tablet {
+                padding: 0;
+              }
 
               svg {
                 display: none;
@@ -397,6 +456,17 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           display: flex;
           flex-direction: row;
 
+          @include tablet {
+            // display: grid;
+            // grid-template-columns: repeat(8, 1fr);
+            // grid-template-rows: repeat(20, 1fr);
+            // grid-column-gap: 0px;
+            // grid-row-gap: 0px;
+            flex-direction: column;
+            max-height: 1600px;
+            padding: 0 24px;
+          }
+
           > [class*="HeaderNavLink-navItemSubMenu"] {
             padding-right: 8px;
 
@@ -404,6 +474,17 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               // max-width: 237px;
               width: 100%;
               flex: 0 0 18.5%;
+
+              @include tablet {
+                width: 42%;
+                flex: 0 0 42%;
+                order: 1;
+                // grid-area: 1 / 1 / 3 / 4;
+                border-bottom: 1px solid #dde3ebe6;
+                border-right: 1px solid #dde3ebe6;
+                padding-bottom: 30px;
+                margin-bottom: 0;
+              }
             }
 
             &.platform-capabilities-spz {
@@ -411,6 +492,19 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               width: 100%;
               padding-left: 50px;
               flex: 0 0 34.4%;
+
+              @include tablet {
+                width: 58%;
+                flex: 0 0 58%;
+                order: 3;
+                padding-left: 32px;
+                padding-right: 0;
+                // grid-area: 1 / 4 / 5 / 9;
+                border-bottom: 1px solid #dde3ebe6;
+                border-right: none;
+                padding-bottom: 32px;
+                margin-bottom: 0;
+              }
             }
 
             &.frameworks-spz {
@@ -418,6 +512,16 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               width: 100%;
               padding-left: 50px;
               flex: 0 0 26.1%;
+
+              @include tablet {
+                width: 42%;
+                flex: 0 0 42%;
+                order: 2;
+                padding-top: 25px;
+                padding-left: 0;
+                // grid-area: 3 / 1 / 21 / 4;
+                border-right: 1px solid #dde3ebe6;
+              }
             }
 
             &.take-drata-spz {
@@ -425,6 +529,15 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               width: 100%;
               flex: 0 0 21%;
               padding-left: 50px;
+
+              @include tablet {
+                width: 58%;
+                flex: 0 0 58%;
+                order: 4;
+                padding-top: 25px;
+                padding-left: 32px;
+                // grid-area: 5 / 4 / 21 / 9;
+              }
             }
 
             &:first-child {
@@ -480,6 +593,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
+
+          @include tablet {
+            flex-direction: column;
+            max-height: 942px;
+          }
 
           > [class*="HeaderNavLink-navItemSubMenu"] {
             // padding-right: 8px;
@@ -916,5 +1034,66 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     // Menu Specific Ends
+  }
+
+  //For Tablet and Mobile
+  .pricing-disabled,
+  .alliance-disabled {
+    display: none;
+
+    @include tablet {
+      width: 100%;
+      background: #fff;
+      border-radius: 4px;
+
+      .disabled-anchor-wrapper {
+        display: flex;
+        align-items: center;
+        width: 100%;
+        margin: auto;
+        justify-content: center;
+        max-width: 1280px;
+        padding: 24px 28px 24px 24px;
+
+        .spz-d-link {
+          color: #0c131a;
+          font-family: $control-font;
+          font-size: 14px;
+          font-weight: 600;
+          line-height: 20px;
+          text-decoration: none;
+
+          svg {
+            margin-left: 6px;
+            margin-top: 4px;
+          }
+
+          &:hover {
+            color: #0580e8;
+          }
+        }
+      }
+    }
+  }
+
+  @include tablet {
+    header
+      > .MuiContainer-root
+      [class*="Header-contentContainer"]
+      > nav
+      > ul
+      li[class*="headerMenuNavItem"] {
+      &.solutions-spz:has([open]) ~ .pricing-disabled {
+        display: block;
+      }
+
+      &.resources-spz:has([open]) ~ .pricing-disabled {
+        display: block;
+      }
+
+      &.alliances-spz:has([open]) ~ .alliance-disabled {
+        display: block;
+      }
+    }
   }
 }

@@ -33,7 +33,7 @@
                     {
                         text: "Platform Overview",
                         info: "One platform for complete control over your compliance program.",
-                        link: "/platform",
+                        link: "",
                         icon: astUrl + "fl_sanitize/drata/22002/component_95.svg"
                     },
                     {
@@ -84,22 +84,22 @@
                     { text: 'ISO 27001', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_168.svg" },
                     { text: 'HIPAA', link: "/product/hipaa", icon: astUrl + "fl_sanitize/drata/22002/component_123.svg" },
                     { text: 'GDPR', link: "/product/gdpr", icon: astUrl + "fl_sanitize/drata/22002/component_132.svg" },
-                    { text: 'PCI DSS', link: "/product/pci-dss", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
-                    { text: 'Cyber Essentials', link: "/product/cyber-essentials", icon: astUrl + "fl_sanitize/drata/22002/component_130.svg" },
-                    { text: 'NIST AI RMF', link: "/product/nist-ai-risk-management", icon: astUrl + "fl_sanitize/drata/22002/component_136.svg" },
-                    { text: 'CCPA', link: "/product/ccpa", icon: astUrl + "fl_sanitize/drata/22002/component_134.svg" },
-                    { text: 'CMMC', link: "/product/cmmc", icon: astUrl + "fl_sanitize/drata/22002/component_163.svg" },
-                    { text: 'Microsoft SSPA', link: "/product/msft-sspa", icon: astUrl + "fl_sanitize/drata/22002/component_165.svg" },
-                    { text: 'NIST CSF', link: "/product/nist-csf", icon: astUrl + "fl_sanitize/drata/22002/component_146.svg" },
-                    { text: 'NIST SP 800-53', link: "/product/nist-800-53", icon: astUrl + "fl_sanitize/drata/22002/component_151.svg" },
-                    { text: 'NIST SP 800-171', link: "/product/nist-800-171", icon: astUrl + "fl_sanitize/drata/22002/component_166.svg" },
-                    { text: 'ISO 27701', link: "/product/iso-27701", icon: astUrl + "fl_sanitize/drata/22002/component_143.svg" },
-                    { text: 'FFIEC', link: "/product/ffiec", icon: astUrl + "fl_sanitize/drata/22002/component_149.svg" },
-                    { text: 'CCM', link: "/product/ccm", icon: astUrl + "fl_sanitize/drata/22002/component_161.svg" },
-                    { text: 'FedRAMP', link: "/product/fedramp", icon: astUrl + "fl_sanitize/drata/22002/component_139.svg" },
-                    { text: 'ISO 27017', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_158.svg" },
-                    { text: 'ISO 27018', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_164.svg" },
-                    { text: 'Custom Frameworks', link: "/product/custom-frameworks", icon: astUrl + "fl_sanitize/drata/22002/component_162.svg" },
+                    { text: 'PCI DSS', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
+                    { text: 'Cyber Essentials', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_130.svg" },
+                    { text: 'NIST AI RMF', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_136.svg" },
+                    { text: 'CCPA', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_134.svg" },
+                    { text: 'CMMC', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_163.svg" },
+                    { text: 'Microsoft SSPA', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_165.svg" },
+                    { text: 'NIST CSF', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_146.svg" },
+                    { text: 'NIST SP 800-53', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_151.svg" },
+                    { text: 'NIST SP 800-171', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_166.svg" },
+                    { text: 'ISO 27701', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_143.svg" },
+                    { text: 'FFIEC', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_149.svg" },
+                    { text: 'CCM', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_161.svg" },
+                    { text: 'FedRAMP', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_139.svg" },
+                    { text: 'ISO 27017', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_158.svg" },
+                    { text: 'ISO 27018', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_164.svg" },
+                    { text: 'Custom Frameworks', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_162.svg" },
                 ]
             },
             {
@@ -123,7 +123,7 @@
                 subMenu: [
                     {
                         text: "Blog",
-                        link: "/blog",
+                        link: "",
                         icon: ""
                     },
                     {
@@ -135,17 +135,17 @@
                     },
                     {
                         text: "Customer Stories",
-                        link: "/customers",
+                        link: "",
                         icon: ""
                     },
                     {
                         text: "Events",
-                        link: "/events",
+                        link: "",
                         icon: ""
                     },
                     {
                         text: "Webinars",
-                        link: "/resources/webinars",
+                        link: "",
                         icon: ""
                     }
                 ]
@@ -158,13 +158,13 @@
                     {
                         text: "Resource Center",
                         info: "Latest blogs, webinars, customer stories, product enhancements, and more.",
-                        link: "/resources",
+                        link: "",
                         icon: ""
                     },
                     {
                         text: "GRC Central",
                         info: "One-stop-shop for all things GRC. Explore the educational hubs below.",
-                        link: "/grc-central",
+                        link: "",
                         icon: ""
                     },
                     {
@@ -176,19 +176,19 @@
                     {
                         text: "SOC 2 Hub",
                         info: "",
-                        link: "/grc-central/soc-2",
+                        link: "",
                         icon: astUrl + "fl_sanitize//drata/22002/component_141.svg"
                     },
                     {
                         text: "ISO 27001 Hub",
                         info: "",
-                        link: "/grc-central/iso-27001",
+                        link: "",
                         icon: astUrl + "fl_sanitize//drata/22002/component_154.svg",
                     },
                     {
                         text: "Compliance Glossary",
                         info: "",
-                        link: "/glossary",
+                        link: "",
                         icon: ""
                     },
                 ]
@@ -201,7 +201,7 @@
                     {
                         text: "Partners",
                         info: "",
-                        link: "/partner",
+                        link: "",
                         icon: ""
                     },
                     {
@@ -213,7 +213,7 @@
                     {
                         text: "Auditor Network",
                         info: "Pre-Vetted Auditor Network. ",
-                        link: "/auditors",
+                        link: "",
                         icon: ""
                     }
                 ]
@@ -223,8 +223,8 @@
                 class: "customer-support-spz",
                 link: "",
                 subMenu: [
-                    { text: 'Product Updates ', link: "https://updates.drata.com/", icon: "" },
-                    { text: 'API Docs', link: "https://developers.drata.com/docs/", icon: "" },
+                    { text: 'Product Updates ', link: "", icon: "" },
+                    { text: 'API Docs', link: "", icon: "" },
                     { text: 'Help & Documentation', link: "", icon: "" },
                     {
                         cTitle: "Drata Named One of the Best Workplaces in Technology",
@@ -579,7 +579,7 @@
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper desk-only"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                                                             <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
                                                             </svg></a></div></div>`);
         }
@@ -628,7 +628,7 @@
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper desk-only"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                 <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
                 </svg></a></div></div>`);
         }
@@ -667,7 +667,7 @@
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper"><div class="disabled-anchor-wrapper"><a href="https://drata.allbound.com/" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper desk-only"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
                 <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
                 </svg></a></div></div>`);
         }
@@ -765,6 +765,14 @@
                     </li>`);
             });
         }
+
+        //For Tablet and Mobile
+        document.querySelector('.spz-22002 header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"]').insertAdjacentHTML('beforeend', `<li class="spz-disabled-anchor-wrapper pricing-disabled"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
+            </svg></a></div></li>
+            <li class="spz-disabled-anchor-wrapper alliance-disabled "><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
+                </svg></a></div></li>`);
     }
 
     function mainMenuUpdates() {
