@@ -40,6 +40,11 @@
   top: initial;
   min-height: unset;
 }
+@media (max-width: 767.98px) {
+  .spz-1003 .body-container-wrapper .row-number-1 {
+    padding-bottom: 94px !important;
+  }
+}
 .spz-1003 .body-container-wrapper .row-number-9 {
   display: none;
 }
@@ -189,7 +194,7 @@
 .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field .hs-form-booleancheckbox span span.hs-form-required {
   display: none;
 }
-.spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field label {
+.spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field > label {
   color: rgba(255, 255, 255, 0.8);
   font-family: Inter;
   font-size: 16px;
@@ -199,8 +204,9 @@
   margin-bottom: 4px;
   width: 100%;
   text-align: left;
+  pointer-events: none;
 }
-.spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field label span.hs-form-required {
+.spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field > label span.hs-form-required {
   color: inherit;
   padding: 0;
 }
@@ -257,7 +263,7 @@
 }
 .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field [class*=hs-error-msgs] {
   position: relative;
-  margin: 0 0 0 5px;
+  margin: 5px 0 0 5px;
 }
 .spz-1003 .body-container-wrapper form.hs-form.hs-custom-form .hs-form-field [class*=hs-error-msgs] a {
   color: #e00000;

@@ -43,6 +43,10 @@ $font-family_1: Inter;
       min-height: 100vh;
       display: flex;
       flex-wrap: wrap;
+
+      @media (max-width: 767.98px) {
+        padding-bottom: 94px !important;
+      }
       //   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1002/background_4k.webp");
       //   background-size: cover;
       //   background-position: top left;
@@ -195,7 +199,7 @@ $font-family_1: Inter;
             }
           }
         }
-        label {
+        > label {
           color: $color_2;
           font-family: $font-family_1;
           font-size: 16px;
@@ -205,6 +209,7 @@ $font-family_1: Inter;
           margin-bottom: 4px;
           width: 100%;
           text-align: left;
+          pointer-events: none;
           span.hs-form-required {
             color: $color_4;
             padding: 0;
@@ -266,7 +271,7 @@ $font-family_1: Inter;
         }
         [class*="hs-error-msgs"] {
           position: relative;
-          margin: 0 0 0 5px;
+          margin: 5px 0 0 5px;
           a {
             color: $color_3;
             font-size: 12px;
