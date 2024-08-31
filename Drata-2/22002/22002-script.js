@@ -133,7 +133,7 @@
                         cTitle: "What Is Shift-Left Security?",
                         cImg: astUrl + "f_auto/drata/22002/rectangle_4535.webp",
                         cDesc: "See how SaaS organization are implementing new security and compliance practices.",
-                        cLink: "/blog/what-is-shift-left-security",
+                        cLink: "",
                         cClass: "sl-security-card"
                     },
                     {

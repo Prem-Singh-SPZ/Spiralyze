@@ -1,5 +1,5 @@
 $ff-inter: "Inter", sans-serif;
-$control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+$control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41", $ff-inter;
 
 @mixin aboveTab() {
   @media (min-width: 1200px) {
@@ -47,7 +47,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
 
       @include mobile {
-        padding: 24px 0 0;
+        padding: 22px 0 0;
       }
     }
   }
@@ -72,7 +72,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     &.MuiPaper-elevation2 {
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
         top: 96.5px;
-        max-height: calc(100vh - 97px);
+        max-height: calc(100vh - 170px);
       }
     }
 
@@ -126,46 +126,63 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           > ul {
             li[class*="headerMenuNavItem"] {
               margin-right: 30px;
+              transition: none;
 
               @include tablet {
                 margin: 0;
               }
 
-              a {
+              [data-testid="HeaderNavLink"] > a {
+                color: #293642;
                 padding: 0;
                 font-weight: 500;
+                transition: none;
+
+                &:hover {
+                  color: #1793ff;
+
+                  svg {
+                    fill: #1793ff;
+                  }
+                }
 
                 svg {
                   margin-left: 16px;
 
                   @include tablet {
-                    height: 12px;
+                    height: 9px;
                   }
                 }
 
                 &:is(:hover, :focus-within):not(:focus-visible)
                   [class*="HeaderNavLink-navItemLink"] {
+                  color: #0068c9;
                   font-weight: 700;
+
+                  svg {
+                    fill: #0068c9;
+                  }
                 }
               }
 
               [class*="HeaderNavLink-root"] {
                 border-top: 3px solid transparent;
-                padding-left: 2px;
-                padding-right: 2px;
+                border-bottom: 2px solid transparent;
+                transition: none;
+
+                @include aboveTab {
+                  padding-left: 2px;
+                  padding-right: 2px;
+                }
               }
 
               div[data-testid="HeaderNavLink"][open] {
                 > a {
                   font-weight: 700;
-                  color: #1793ff;
+                  color: #0068c9;
 
-                  @include tablet {
-                    color: #0068c9;
-
-                    svg {
-                      fill: #0068c9;
-                    }
+                  svg {
+                    fill: #0068c9;
                   }
                 }
               }
@@ -205,6 +222,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                     display: flex;
                     padding: 24px 28px 24px 24px;
                     border: none;
+
+                    @include tablet {
+                      padding-right: 27px;
+                    }
                   }
 
                   [class*="HeaderNavLink-navItemSubMenuWrapper"] {
@@ -226,7 +247,13 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           gap: 0 28px;
 
           @include tablet {
-            padding: 0 24px;
+            padding: 0 20px;
+
+            button {
+              svg {
+                font-size: 48px;
+              }
+            }
           }
 
           a[class*="MuiTypography-link"] {
@@ -235,6 +262,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             font-weight: 500;
             line-height: 24px;
             white-space: nowrap;
+
+            &:hover {
+              color: #0068c9;
+            }
           }
 
           a[class*="MuiTypography-darkL"] {
@@ -261,7 +292,9 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     [class*="Header-headerMenuNavItems"] {
       > li [class*="HeaderNavLink-root"] {
         &:is(:hover, :focus-within):not(:focus-visible) {
-          border-bottom: 2px solid #0580e8;
+          @include aboveTab {
+            border-bottom: 2px solid #0580e8 !important;
+          }
         }
       }
     }
@@ -308,20 +341,23 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           flex-wrap: wrap;
         }
 
-        &::before {
-          content: "";
-          position: absolute;
-          width: 100%;
-          height: 141px;
-          top: 0;
-          left: 0;
-          background: #fff;
-        }
+        // &::before {
+        //   content: "";
+        //   position: absolute;
+        //   width: 100%;
+        //   height: 141px;
+        //   top: 0;
+        //   left: 0;
+        //   background: #fff;
+        // }
 
         > li {
-          opacity: 0.9;
-          border-right: 1px solid #dde3eb;
-          padding: 0 32px;
+          border-right: 1px solid #dde3ebe6;
+          padding: 0 30px;
+
+          @include mobile {
+            padding-right: 0;
+          }
 
           &:first-child {
             padding-left: 0;
@@ -344,7 +380,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         // Main blue title in each sub menu
         [class*="HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup"] {
           color: #0580e8;
-          font-family: $ff-inter;
+          font-family: $control-font;
           font-size: 12px;
           font-style: normal;
           font-weight: 700 !important;
@@ -520,10 +556,12 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               font-weight: 600;
               line-height: 20px;
               text-decoration: none;
+              display: flex;
+              align-items: center;
 
               svg {
-                margin-left: 6px;
-                margin-top: 4px;
+                margin-left: 10px;
+                height: 12px;
               }
 
               &:hover {
@@ -582,6 +620,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               width: 100%;
               padding-left: 50px;
               flex: 0 0 35.4%;
+
               @include aboveTab {
                 max-width: 440px;
               }
@@ -603,7 +642,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 flex: 0 0 100%;
                 order: 2;
                 padding-left: 0;
-                padding-top: 32px;
+                padding-top: 26px;
               }
             }
 
@@ -697,10 +736,12 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               font-weight: 600;
               line-height: 20px;
               text-decoration: none;
+              display: flex;
+              align-items: center;
 
               svg {
-                margin-left: 6px;
-                margin-top: 4px;
+                margin-left: 10px;
+                height: 12px;
               }
 
               &:hover {
@@ -737,7 +778,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
             &.quick-link-spz {
               width: 100%;
-              flex: 0 0 23.5%;
+              flex: 0 0 24.5%;
+
+              @include aboveTab {
+                max-width: 301px;
+              }
 
               @include tablet {
                 order: 1;
@@ -753,7 +798,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
             &.discover-learn-spz {
               width: 100%;
-              flex: 0 0 28.4%;
+              flex: 0 0 29.4%;
+
+              @include aboveTab {
+                max-width: 363px;
+              }
 
               @include tablet {
                 order: 3;
@@ -773,8 +822,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
             &.compliance-support-spz {
               width: 100%;
-              flex: 0 0 24.5%;
-              padding-right: 24px;
+              flex: 0 0 25.5%;
+
+              @include aboveTab {
+                max-width: 315px;
+              }
 
               @include tablet {
                 padding-left: 0;
@@ -805,7 +857,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               @include mobile {
                 border-left: none;
                 padding-left: 0;
-                padding-top: 25px;
+                padding-top: 24px;
               }
             }
 
@@ -814,7 +866,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             }
 
             &:last-child {
-              padding-right: 18px;
+              padding-right: 9px;
 
               @include tablet {
                 padding-right: 0;
@@ -907,10 +959,15 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 line-height: 20px;
                 margin-top: 16px;
                 text-decoration: none;
+                display: flex;
+                align-items: center;
+
+                @include tablet {
+                  margin-top: 18px;
+                }
 
                 svg {
-                  margin-left: 6px;
-                  margin-top: 4px;
+                  margin-left: 10px;
                 }
 
                 &:hover {
@@ -961,10 +1018,12 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               font-weight: 600;
               line-height: 20px;
               text-decoration: none;
+              display: flex;
+              align-items: center;
 
               svg {
-                margin-left: 6px;
-                margin-top: 4px;
+                margin-left: 10px;
+                height: 12px;
               }
 
               &:hover {
@@ -999,7 +1058,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
             &.partners-spz {
               width: 100%;
-              flex: 0 0 22.8%;
+              flex: 0 0 24.5%;
+
+              @include aboveTab {
+                max-width: 292px;
+              }
 
               @include mobile {
                 border-bottom: 1px solid #dde3ebe6;
@@ -1086,6 +1149,12 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               padding-left: 80px;
               padding-right: 8px;
 
+              @include aboveTab {
+                [class*="HeaderNavGroup-navItemSubMenuWrapper"] > ul {
+                  gap: 8px;
+                }
+              }
+
               @media (min-width: 1301px) and (max-width: 1400px) {
                 padding-left: 60px;
               }
@@ -1155,6 +1224,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
           @include tablet {
             background: #f6f8fa;
+            max-width: 680px;
           }
 
           @include mobile {
@@ -1265,7 +1335,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
 
       @include mobile {
-        margin-bottom: 24px !important;
+        margin-bottom: 10px !important;
       }
 
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
@@ -1307,6 +1377,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               }
 
               [class*="HeaderNavGroup-navItemSubMenuWrapper"] > ul {
+                @include aboveTab {
+                  gap: 8px;
+                }
+
                 @media (min-width: 1200px) {
                   max-width: 245px;
                 }
@@ -1355,7 +1429,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
               @include mobile {
                 border-bottom: 1px solid #dde3ebe6;
-                padding-bottom: 32px;
+                padding-bottom: 30px;
               }
             }
 
@@ -1426,6 +1500,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             margin-top: 10px;
             text-decoration: none;
 
+            @include tablet {
+              margin-top: 18px;
+            }
+
             @include mobile {
               margin-top: 18px;
             }
@@ -1485,10 +1563,12 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           font-weight: 600;
           line-height: 20px;
           text-decoration: none;
+          display: flex;
+          align-items: center;
 
           svg {
-            margin-left: 6px;
-            margin-top: 4px;
+            margin-left: 10px;
+            height: 12px;
           }
 
           &:hover {
