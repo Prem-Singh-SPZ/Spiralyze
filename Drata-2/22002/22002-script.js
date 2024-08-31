@@ -396,12 +396,17 @@
 
 
     function createTest() {
-
         waitForElm(navSelector).then(function () {
             document.querySelector("body").classList.add("spz-22002");
 
             navigationContent();
             submitTestDetails('variant_22002');
+
+            // Get all 'HeaderNavLink-navItemLink' text and apply it as a class to the closest li
+            document.querySelectorAll('header [class*="HeaderNavLink-navItemLink"]').forEach(navItem => {
+                const navItemText = navItem.innerText.replace(/\s+/g, '-').toLowerCase();
+                navItem.closest('li').classList.add(`${navItemText}-spz`);
+            });
         });
 
         createCookie('spz-22002-loaded', 'true', 1);
@@ -417,14 +422,14 @@
 
     //Passing test details to hidden fields
     function submitTestDetails(cro_test) {
-        if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
-            document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
+        if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', cro_test);
         }
     }
 
     function demoChecked() {
         const sInt = setInterval(() => {
-            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
+            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input');
 
             // Check if spz-22002-loaded cookie is present and cro_field is present
             if ((cro_field && cro_field.val != "") && isCookieExist('spz-22002-loaded')) {
@@ -553,18 +558,22 @@
 
             const menuNav = document.querySelector('header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
-            // Remove all LI in menuNav
-            menuNav.innerHTML = "";
+            debugger;
 
-            navContent.solutions.forEach((subItem1, subIndex) => {
-                menuNav.insertAdjacentHTML('beforeend', `
+            waitForElm('header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+                debugger;
+                // Remove all LI in menuNav
+                menuNav.innerHTML = "";
+
+                navContent.solutions.forEach((subItem1, subIndex) => {
+                    menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
                             <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                    return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                        return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
                                                     <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
                                                         <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
                                                             ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
@@ -575,40 +584,45 @@
                                                         </a>
                                                     </div>
                                                 </li>`;
-                }).join("")}
+                    }).join("")}
                                 </ul>
                                 
                             </div>
                         </div>
                     </li>`);
+                });
+
+                if (!document.querySelector('.solutions-spz .spz-disabled-anchor-wrapper')) {
+                    menuNav.insertAdjacentHTML('afterend', `
+                        <div class="spz-disabled-anchor-wrapper desk-only">
+                            <div class="disabled-anchor-wrapper">
+                                <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
+                            </div>
+                        </div>`);
+                }
             });
 
-            if (!document.querySelector('.product-spz .spz-disabled-anchor-wrapper')) {
-                menuNav.insertAdjacentHTML('afterend', `
-                    <div class="spz-disabled-anchor-wrapper desk-only">
-                        <div class="disabled-anchor-wrapper">
-                            <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
-                        </div>
-                    </div>`);
-            }
+
         }
 
         if (!document.querySelector('.quick-link-spz')) {
 
             const menuNav = document.querySelector('header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
-            // Remove all LI in menuNav
-            menuNav.innerHTML = "";
+            waitForElm('header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
 
-            navContent.resources.forEach((subItem1, subIndex) => {
-                menuNav.insertAdjacentHTML('beforeend', `
+                // Remove all LI in menuNav
+                menuNav.innerHTML = "";
+
+                navContent.resources.forEach((subItem1, subIndex) => {
+                    menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
                             <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                    return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
                                                     <div class="spz-menu-card ${subItem2.cClass}">
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
                                                         <div class="card-title">${subItem2.cTitle}</div>
@@ -627,40 +641,43 @@
                                                         </a>
                                                     </div>
                                                 </li>`}`;
-                }).join("")}
+                    }).join("")}
                                 </ul>
                                 
                             </div>
                         </div>
                     </li>`);
+                });
+
+                if (!document.querySelector('.resources-spz .spz-disabled-anchor-wrapper')) {
+                    menuNav.insertAdjacentHTML('afterend', `
+                        <div class="spz-disabled-anchor-wrapper desk-only">
+                            <div class="disabled-anchor-wrapper">
+                                <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
+                            </div>
+                        </div>`);
+                }
             });
 
-            if (!document.querySelector('.resources-spz .spz-disabled-anchor-wrapper')) {
-                menuNav.insertAdjacentHTML('afterend', `
-                    <div class="spz-disabled-anchor-wrapper desk-only">
-                        <div class="disabled-anchor-wrapper">
-                            <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
-                        </div>
-                    </div>`);
-            }
         }
 
         if (!document.querySelector('.partners-spz')) {
 
             const menuNav = document.querySelector('header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
-            // Remove all LI in menuNav
-            menuNav.innerHTML = "";
+            waitForElm('header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+                // Remove all LI in menuNav
+                menuNav.innerHTML = "";
 
-            navContent.alliances.forEach((subItem1, subIndex) => {
-                menuNav.insertAdjacentHTML('beforeend', `
+                navContent.alliances.forEach((subItem1, subIndex) => {
+                    menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
                             <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                    return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                        return `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
                                                     <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
                                                         <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
                                                             ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
@@ -671,39 +688,42 @@
                                                         </a>
                                                     </div>
                                                 </li>`;
-                }).join("")}
+                    }).join("")}
                                 </ul>
                             </div>
                         </div>
                     </li>`);
+                });
+                
+                if (!document.querySelector('.alliances-spz .spz-disabled-anchor-wrapper')) {
+                    menuNav.insertAdjacentHTML('afterend', `
+                        <div class="spz-disabled-anchor-wrapper desk-only">
+                            <div class="disabled-anchor-wrapper">
+                                <a href="https://drata.allbound.com/" class="spz-d-link">Log In To Alliance Gateway ${arrowSvg}</a>
+                            </div>
+                        </div>`);
+                }
             });
 
-            if (!document.querySelector('.alliances-spz .spz-disabled-anchor-wrapper')) {
-                menuNav.insertAdjacentHTML('afterend', `
-                    <div class="spz-disabled-anchor-wrapper desk-only">
-                        <div class="disabled-anchor-wrapper">
-                            <a href="https://drata.allbound.com/" class="spz-d-link">Log In To Alliance Gateway ${arrowSvg}</a>
-                        </div>
-                    </div>`);
-            }
         }
 
         if (!document.querySelector('.customers-sub-spz')) {
 
             const menuNav = document.querySelector('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
-            // Remove all LI in menuNav
-            if (menuNav) {
-                menuNav.innerHTML = "";
-                navContent.customers.forEach((subItem1, subIndex) => {
-                    menuNav.insertAdjacentHTML('beforeend', `
+            waitForElm('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+                // Remove all LI in menuNav
+                if (menuNav) {
+                    menuNav.innerHTML = "";
+                    navContent.customers.forEach((subItem1, subIndex) => {
+                        menuNav.insertAdjacentHTML('beforeend', `
                         <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                             <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
                                 <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                                 <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                     <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                         ${subItem1.subMenu.map((subItem2, subIndex) => {
-                        return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
+                            return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
                                                         <div class="spz-review-card ${subItem2.cClass}">
                                                             <div class="review-img">
                                                                 <img src="${subItem2.cImg}" alt="${subItem2.cName}">
@@ -726,33 +746,34 @@
                                                             </a>
                                                         </div>
                                                     </li>`}`;
-                    }).join("")}
+                        }).join("")}
                                     </ul>
                                     
                                 </div>
                             </div>
                         </li>`);
-                });
-            }
-
+                    });
+                }
+            });
         }
 
         if (!document.querySelector('.company-sub-spz')) {
 
             const menuNav = document.querySelector('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
-            // Remove all LI in menuNav
-            menuNav.innerHTML = "";
+            waitForElm('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+                // Remove all LI in menuNav
+                menuNav.innerHTML = "";
 
-            navContent.company.forEach((subItem1, subIndex) => {
-                menuNav.insertAdjacentHTML('beforeend', `
+                navContent.company.forEach((subItem1, subIndex) => {
+                    menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
                             <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                    return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
                                                     <div class="spz-menu-card ${subItem2.cClass}">
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
                                                         <div class="card-title">${subItem2.cTitle}</div>
@@ -771,12 +792,13 @@
                                                         </a>
                                                     </div>
                                                 </li>`}`;
-                }).join("")}
+                    }).join("")}
                                 </ul>
                                 
                             </div>
                         </div>
                     </li>`);
+                });
             });
         }
 
@@ -842,11 +864,5 @@
         // document.querySelectorAll(navSelector).forEach(nav => {
         //     nav.style.top = `${headerHeight}px`;
         // });
-
-        // Get all 'HeaderNavLink-navItemLink' text and apply it as a class to the closest li
-        document.querySelectorAll('header [class*="HeaderNavLink-navItemLink"]').forEach(navItem => {
-            const navItemText = navItem.innerText.replace(/\s+/g, '-').toLowerCase();
-            navItem.closest('li').classList.add(`${navItemText}-spz`);
-        });
     }
 })();
