@@ -1,6 +1,9 @@
 (function () {
     const astUrl = '//res.cloudinary.com/spiralyze/image/upload/';
     const navSelector = 'header [class*="HeaderNavLink-navItemSubMenuWrapper"]';
+    const arrowSvg = `<svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
+                        <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
+                    </svg>`;
     const navContent = {
         solutions: [
             {
@@ -33,7 +36,7 @@
                     {
                         text: "Platform Overview",
                         info: "One platform for complete control over your compliance program.",
-                        link: "",
+                        link: "/platform",
                         icon: astUrl + "fl_sanitize/drata/22002/component_95.svg"
                     },
                     {
@@ -84,22 +87,22 @@
                     { text: 'ISO 27001', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_168.svg" },
                     { text: 'HIPAA', link: "/product/hipaa", icon: astUrl + "fl_sanitize/drata/22002/component_123.svg" },
                     { text: 'GDPR', link: "/product/gdpr", icon: astUrl + "fl_sanitize/drata/22002/component_132.svg" },
-                    { text: 'PCI DSS', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
-                    { text: 'Cyber Essentials', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_130.svg" },
-                    { text: 'NIST AI RMF', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_136.svg" },
-                    { text: 'CCPA', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_134.svg" },
-                    { text: 'CMMC', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_163.svg" },
-                    { text: 'Microsoft SSPA', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_165.svg" },
-                    { text: 'NIST CSF', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_146.svg" },
-                    { text: 'NIST SP 800-53', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_151.svg" },
-                    { text: 'NIST SP 800-171', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_166.svg" },
-                    { text: 'ISO 27701', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_143.svg" },
-                    { text: 'FFIEC', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_149.svg" },
-                    { text: 'CCM', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_161.svg" },
-                    { text: 'FedRAMP', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_139.svg" },
-                    { text: 'ISO 27017', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_158.svg" },
-                    { text: 'ISO 27018', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_164.svg" },
-                    { text: 'Custom Frameworks', link: "", icon: astUrl + "fl_sanitize/drata/22002/component_162.svg" },
+                    { text: 'PCI DSS', link: "/product/pci-dss", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
+                    { text: 'Cyber Essentials', link: "/product/cyber-essentials", icon: astUrl + "fl_sanitize/drata/22002/component_130.svg" },
+                    { text: 'NIST AI RMF', link: "/product/nist-ai-risk-management", icon: astUrl + "fl_sanitize/drata/22002/component_136.svg" },
+                    { text: 'CCPA', link: "/product/ccpa", icon: astUrl + "fl_sanitize/drata/22002/component_134.svg" },
+                    { text: 'CMMC', link: "/product/cmmc", icon: astUrl + "fl_sanitize/drata/22002/component_163.svg" },
+                    { text: 'Microsoft SSPA', link: "/product/msft-sspa", icon: astUrl + "fl_sanitize/drata/22002/component_165.svg" },
+                    { text: 'NIST CSF', link: "/product/nist-csf", icon: astUrl + "fl_sanitize/drata/22002/component_146.svg" },
+                    { text: 'NIST SP 800-53', link: "/product/nist-800-53", icon: astUrl + "fl_sanitize/drata/22002/component_151.svg" },
+                    { text: 'NIST SP 800-171', link: "/product/nist-800-171", icon: astUrl + "fl_sanitize/drata/22002/component_166.svg" },
+                    { text: 'ISO 27701', link: "/product/iso-27701", icon: astUrl + "fl_sanitize/drata/22002/component_143.svg" },
+                    { text: 'FFIEC', link: "/product/ffiec", icon: astUrl + "fl_sanitize/drata/22002/component_149.svg" },
+                    { text: 'CCM', link: "/product/ccm", icon: astUrl + "fl_sanitize/drata/22002/component_161.svg" },
+                    { text: 'FedRAMP', link: "/product/fedramp", icon: astUrl + "fl_sanitize/drata/22002/component_139.svg" },
+                    { text: 'ISO 27017', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_158.svg" },
+                    { text: 'ISO 27018', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_164.svg" },
+                    { text: 'Custom Frameworks', link: "/product/custom-frameworks", icon: astUrl + "fl_sanitize/drata/22002/component_162.svg" },
                 ]
             },
             {
@@ -123,29 +126,29 @@
                 subMenu: [
                     {
                         text: "Blog",
-                        link: "",
+                        link: "/blog",
                         icon: ""
                     },
                     {
                         cTitle: "What Is Shift-Left Security?",
                         cImg: astUrl + "f_auto/drata/22002/rectangle_4535.webp",
                         cDesc: "See how SaaS organization are implementing new security and compliance practices.",
-                        cLink: "",
+                        cLink: "/blog/what-is-shift-left-security",
                         cClass: "sl-security-card"
                     },
                     {
                         text: "Customer Stories",
-                        link: "",
+                        link: "/customers",
                         icon: ""
                     },
                     {
                         text: "Events",
-                        link: "",
+                        link: "/events",
                         icon: ""
                     },
                     {
                         text: "Webinars",
-                        link: "",
+                        link: "/resources/webinars",
                         icon: ""
                     }
                 ]
@@ -158,37 +161,37 @@
                     {
                         text: "Resource Center",
                         info: "Latest blogs, webinars, customer stories, product enhancements, and more.",
-                        link: "",
+                        link: "/resources",
                         icon: ""
                     },
                     {
                         text: "GRC Central",
                         info: "One-stop-shop for all things GRC. Explore the educational hubs below.",
-                        link: "",
+                        link: "/grc-central",
                         icon: ""
                     },
                     {
                         text: "Risk Hub",
                         info: "",
-                        link: "",
+                        link: "/grc-central/risk",
                         icon: astUrl + "fl_sanitize/drata/22002/component_152.svg"
                     },
                     {
                         text: "SOC 2 Hub",
                         info: "",
-                        link: "",
+                        link: "/grc-central/soc-2",
                         icon: astUrl + "fl_sanitize//drata/22002/component_141.svg"
                     },
                     {
                         text: "ISO 27001 Hub",
                         info: "",
-                        link: "",
+                        link: "/grc-central/iso-27001",
                         icon: astUrl + "fl_sanitize//drata/22002/component_154.svg",
                     },
                     {
                         text: "Compliance Glossary",
                         info: "",
-                        link: "",
+                        link: "/glossary",
                         icon: ""
                     },
                 ]
@@ -201,19 +204,19 @@
                     {
                         text: "Partners",
                         info: "",
-                        link: "",
+                        link: "/partner",
                         icon: ""
                     },
                     {
                         text: "Service & Tech Partner Directories",
                         info: "Search for a Service & Tech Partner",
-                        link: "",
+                        link: "/partner/find",
                         icon: ""
                     },
                     {
                         text: "Auditor Network",
                         info: "Pre-Vetted Auditor Network. ",
-                        link: "",
+                        link: "/auditors",
                         icon: ""
                     }
                 ]
@@ -223,14 +226,14 @@
                 class: "customer-support-spz",
                 link: "",
                 subMenu: [
-                    { text: 'Product Updates ', link: "", icon: "" },
-                    { text: 'API Docs', link: "", icon: "" },
-                    { text: 'Help & Documentation', link: "", icon: "" },
+                    { text: 'Product Updates ', link: "https://updates.drata.com/", icon: "" },
+                    { text: 'API Docs', link: "https://developers.drata.com/docs/", icon: "" },
+                    { text: 'Help & Documentation', link: "https://help.drata.com/", icon: "" },
                     {
                         cTitle: "Drata Named One of the Best Workplaces in Technology",
                         cImg: astUrl + "f_auto/drata/22002/image_3.webp",
                         cDesc: "Drata is featured in Fortune’s lists of Best Workplaces in Technology and Best Medium Workplaces.",
-                        cLink: "/",
+                        cLink: "/drataverse",
                         cClass: "ws-tech-card"
                     },
                 ]
@@ -299,22 +302,22 @@
                 subMenu: [
                     {
                         text: "SOC 2",
-                        link: "/customers",
+                        link: "/customers/lemonade",
                         icon: astUrl + "fl_sanitize/drata/22002/component_160.svg"
                     },
                     {
                         text: "ISO 27001",
-                        link: "/customers",
+                        link: "/customers/calendly",
                         icon: astUrl + "fl_sanitize/drata/22002/component_157.svg"
                     },
                     {
                         text: "HIPAA",
-                        link: "/customers",
+                        link: "/customers/pear-health",
                         icon: astUrl + "fl_sanitize/drata/22002/component_167.svg"
                     },
                     {
                         text: "GDPR",
-                        link: "/customers",
+                        link: "/customers/deeper-signals",
                         icon: astUrl + "fl_sanitize/drata/22002/component_155.svg"
                     },
                 ]
@@ -327,10 +330,10 @@
                     {
                         cName: "Jonathan Jaffe",
                         cDesg: "CISO, Lemonade",
-                        cImg: astUrl + "f_auto/drata/22002/jonathan.png",
+                        cImg: astUrl + "f_auto/drata/22002/image.webp",
                         cDesc: `“We saved 80% of time using Drata’s continuous compliance automation. I’ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I’m able to make my own control framework.”`,
-                        cLink: "/",
-                        cClass: "cs-jonathen-card"
+                        cLink: "/customers/lemonade",
+                        cClass: "cs-jonathan-card"
                     },
                 ]
             },
@@ -383,13 +386,14 @@
                         cTitle: "Drata Named One of the Best Workplaces in Technology",
                         cImg: astUrl + "f_auto/drata/22002/image_3.webp",
                         cDesc: "Drata is featured in Fortune’s lists of Best Workplaces in Technology and Best Medium Workplaces.",
-                        cLink: "/",
+                        cLink: "/blog/drata-receives-first-pair-workplace-accolades",
                         cClass: "ws-tech-card"
                     },
                 ]
             },
         ]
     };
+    
 
     function createTest() {
 
@@ -397,7 +401,7 @@
             document.querySelector("body").classList.add("spz-22002");
 
             navigationContent();
-            submitTestDetails('Variant_22002');
+            submitTestDetails('variant_22002');
         });
 
         createCookie('spz-22002-loaded', 'true', 1);
@@ -425,7 +429,7 @@
             // Check if spz-22002-loaded cookie is present and cro_field is present
             if ((cro_field && cro_field.val != "") && isCookieExist('spz-22002-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Variant_22002');
+                submitTestDetails('variant_22002');
 
                 // deleteCookie('spz-22002-loaded');
             }
@@ -473,7 +477,7 @@
             removeTest();
         }
         if (window.location.pathname.indexOf("/demo") > -1) {
-            // ADDED ONLY FOR DEMO PAGE TO ADD Variant_22002 IN HIDDEN FIELD
+            // ADDED ONLY FOR DEMO PAGE TO ADD variant_22002 IN HIDDEN FIELD
             demoChecked();
         }
     }
@@ -556,7 +560,7 @@
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
-                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
@@ -579,9 +583,14 @@
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper desk-only"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                                            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
-                                                            </svg></a></div></div>`);
+            if (!document.querySelector('.product-spz .spz-disabled-anchor-wrapper')) {
+                menuNav.insertAdjacentHTML('afterend', `
+                    <div class="spz-disabled-anchor-wrapper desk-only">
+                        <div class="disabled-anchor-wrapper">
+                            <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
+                        </div>
+                    </div>`);                
+            }
         }
 
         if (!document.querySelector('.quick-link-spz')) {
@@ -595,7 +604,7 @@
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
-                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
@@ -604,9 +613,7 @@
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
                                                         <div class="card-title">${subItem2.cTitle}</div>
                                                         <div class="card-desc">${subItem2.cDesc}</div>
-                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                                            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"/>
-                                                            </svg></a>` : ""}
+                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""}
                                                     </div>
                                                 </li>` : `
                                                 <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
@@ -628,9 +635,14 @@
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper desk-only"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
-                </svg></a></div></div>`);
+            if (!document.querySelector('.resources-spz .spz-disabled-anchor-wrapper')) {
+                menuNav.insertAdjacentHTML('afterend', `
+                    <div class="spz-disabled-anchor-wrapper desk-only">
+                        <div class="disabled-anchor-wrapper">
+                            <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
+                        </div>
+                    </div>`);
+            }
         }
 
         if (!document.querySelector('.partners-spz')) {
@@ -644,7 +656,7 @@
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
-                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
@@ -661,15 +673,19 @@
                                                 </li>`;
                 }).join("")}
                                 </ul>
-                                
                             </div>
                         </div>
                     </li>`);
             });
 
-            menuNav.insertAdjacentHTML('afterend', `<div class="spz-disabled-anchor-wrapper desk-only"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
-                </svg></a></div></div>`);
+            if (!document.querySelector('.alliances-spz .spz-disabled-anchor-wrapper')) {
+                menuNav.insertAdjacentHTML('afterend', `
+                    <div class="spz-disabled-anchor-wrapper desk-only">
+                        <div class="disabled-anchor-wrapper">
+                            <a href="https://drata.allbound.com/" class="spz-d-link">Log In To Alliance Gateway ${arrowSvg}</a>
+                        </div>
+                    </div>`);
+            }
         }
 
         if (!document.querySelector('.customers-sub-spz')) {
@@ -677,48 +693,48 @@
             const menuNav = document.querySelector('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
             // Remove all LI in menuNav
-            menuNav.innerHTML = "";
-
-            navContent.customers.forEach((subItem1, subIndex) => {
-                menuNav.insertAdjacentHTML('beforeend', `
-                    <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
-                        <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
-                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
-                            <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
-                                <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
-                                    ${subItem1.subMenu.map((subItem2, subIndex) => {
-                    return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
-                                                    <div class="spz-review-card ${subItem2.cClass}">
-                                                        <div class="review-img">
-                                                            <img src="${subItem2.cImg}" alt="${subItem2.cName}">
+            if (menuNav) {
+                menuNav.innerHTML = "";
+                navContent.customers.forEach((subItem1, subIndex) => {
+                    menuNav.insertAdjacentHTML('beforeend', `
+                        <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
+                            <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
+                                <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
+                                <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
+                                    <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
+                                        ${subItem1.subMenu.map((subItem2, subIndex) => {
+                        return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
+                                                        <div class="spz-review-card ${subItem2.cClass}">
+                                                            <div class="review-img">
+                                                                <img src="${subItem2.cImg}" alt="${subItem2.cName}">
+                                                            </div>
+                                                            <div class="review-content">
+                                                                <div class="card-title"><p class="name">${subItem2.cName}</p><p class="desg">${subItem2.cDesg}</p></div>
+                                                                <div class="card-desc">${subItem2.cDesc}</div>
+                                                                ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""}
+                                                            </div>
                                                         </div>
-                                                        <div class="review-content">
-                                                            <div class="card-title"><p class="name">${subItem2.cName}</p><p class="desg">${subItem2.cDesg}</p></div>
-                                                            <div class="card-desc">${subItem2.cDesc}</div>
-                                                            ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                                                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"/>
-                                                                </svg></a>` : ""}
+                                                    </li>` : `
+                                                    <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
+                                                        <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                            <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
+                                                                ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
+                                                                <div class="menu-texts">
+                                                                    <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
+                                                                    ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
+                                                                 </div>
+                                                            </a>
                                                         </div>
-                                                    </div>
-                                                </li>` : `
-                                                <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
-                                                    <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
-                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
-                                                            ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
-                                                            <div class="menu-texts">
-                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
-                                                                ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
-                                                             </div>
-                                                        </a>
-                                                    </div>
-                                                </li>`}`;
-                }).join("")}
-                                </ul>
-                                
+                                                    </li>`}`;
+                    }).join("")}
+                                    </ul>
+                                    
+                                </div>
                             </div>
-                        </div>
-                    </li>`);
-            });
+                        </li>`);
+                });
+            }
+
         }
 
         if (!document.querySelector('.company-sub-spz')) {
@@ -732,7 +748,7 @@
                 menuNav.insertAdjacentHTML('beforeend', `
                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem1.class}">
                         <div class="MuiBox-root css-spz-HeaderNavGroup-root" data-testid="HeaderNavGroup">
-                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" href="">${subItem1.text}</a>
+                            <a class="css-spz-Link-root-HeaderNavGroup-navItemLink-HeaderNavLink-navItemGroup" ${subItem1.link != '' ? `href='${subItem1.link}'` : ""}>${subItem1.text}</a>
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
@@ -741,9 +757,7 @@
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
                                                         <div class="card-title">${subItem2.cTitle}</div>
                                                         <div class="card-desc">${subItem2.cDesc}</div>
-                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                                                            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"/>
-                                                            </svg></a>` : ""}
+                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""}
                                                     </div>
                                                 </li>` : `
                                                 <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
@@ -767,23 +781,38 @@
         }
 
         //For Tablet and Mobile
-        document.querySelector('.spz-22002 header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"]').insertAdjacentHTML('beforeend', `<li class="spz-disabled-anchor-wrapper pricing-disabled"><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Pricing <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-            <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
-            </svg></a></div></li>
-            <li class="spz-disabled-anchor-wrapper alliance-disabled "><div class="disabled-anchor-wrapper"><a href="javascript:;" class="spz-d-link">Log In To Alliance Gateway <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
-                <path d="M6.11932 11.7273L4.80114 10.4204L8.26137 6.96021H0.153412V5.03975H8.26137L4.80114 1.58521L6.11932 0.272705L11.8466 5.99998L6.11932 11.7273Z" fill="#0580E8"></path>
-                </svg></a></div></li>`);
+        if (!document.querySelector('header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"] > .spz-disabled-anchor-wrapper')) {
+            document.querySelector('.spz-22002 header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"]').insertAdjacentHTML('beforeend', `
+                <li class="spz-disabled-anchor-wrapper pricing-disabled">
+                    <div class="disabled-anchor-wrapper">
+                        <a href="javascript:void(0);" class="spz-d-link">
+                            Pricing 
+                            ${arrowSvg}
+                        </a>
+                    </div>
+                </li>
+                <li class="spz-disabled-anchor-wrapper alliance-disabled">
+                    <div class="disabled-anchor-wrapper">
+                        <a href="javascript:void(0);" class="spz-d-link">
+                            Log In To Alliance Gateway 
+                            ${arrowSvg}
+                        </a>
+                    </div>
+                </li>`);
+        }
     }
 
     function mainMenuUpdates() {
         //replace "solutions" text to "key" in above html rest keep as is
-        document.querySelector('.spz-22002 .MuiLink-selected[class$=HeaderNavLink-navItemLink]').innerHTML = document.querySelector('.spz-22002 .MuiLink-selected[class$=HeaderNavLink-navItemLink]').innerHTML.replace('Solutions', 'Product');
+        if (document.querySelector('.solutions-spz [class$=HeaderNavLink-navItemLink]')) {
+            document.querySelector('.solutions-spz [class$=HeaderNavLink-navItemLink]').innerHTML = document.querySelector('.solutions-spz [class$=HeaderNavLink-navItemLink]').innerHTML.replace('Solutions', 'Product');
+        }
 
     }
 
     function navStyleBase() {
         // Get the header height
-        const headerHeight = document.querySelector('header').offsetHeight;
+        // const headerHeight = document.querySelector('header').offsetHeight;
         setInterval(() => {
             if (document.querySelector(`${navSelector}[open]`)) {
                 // Stop page from scrolling when navSelector has 'open' attribute
@@ -795,7 +824,15 @@
             } else {
                 document.body.classList.remove('nav-open-spz');
             }
-        }, 500);
+
+            if (window.innerWidth <= 1200) {
+                if (window.getComputedStyle(document.querySelector('[data-testid="MenuIcon"]'), null).display == 'none') {
+                    document.body.classList.add('nav-tab-open-spz');
+                } else if (window.getComputedStyle(document.querySelector('[data-testid="CloseIcon"]'), null).display == 'none') {
+                    document.body.classList.remove('nav-tab-open-spz');
+                }
+            }
+        }, 150);
 
 
         // Set the navigation position according to the header height

@@ -1,7 +1,20 @@
 $ff-inter: "Inter", sans-serif;
 $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
+
+@mixin aboveTab() {
+  @media (min-width: 1200px) {
+    @content;
+  }
+}
+
 @mixin tablet() {
   @media (max-width: 1199.98px) {
+    @content;
+  }
+}
+
+@mixin mobile() {
+  @media (max-width: 767.98px) {
     @content;
   }
 }
@@ -20,8 +33,23 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 }
 
 .spz-22002 {
-  &.nav-open-spz {
-    // overflow: hidden;
+  // &.nav-open-spz {
+  // overflow: hidden;
+  // }
+
+  &.nav-tab-open-spz {
+    header > .MuiContainer-root [class*="Header-contentContainer"] > nav {
+      @include tablet {
+        max-height: calc(100vh - 96px);
+        padding: 40px 0 0;
+        box-shadow: 0px 12px 16px -4px rgba(16, 24, 40, 0.08),
+          0px 4px 6px -2px rgba(16, 24, 40, 0.03);
+      }
+
+      @include mobile {
+        padding: 24px 0 0;
+      }
+    }
   }
 
   header {
@@ -33,6 +61,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     @include tablet {
       padding: 0;
       background-color: #fff;
+      border-bottom: none;
     }
 
     [class*="HeaderNavLink-navItemSubMenuWrapper"] {
@@ -65,6 +94,16 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       [class*="Header-contentContainer"] {
         grid-template-columns: repeat(16, minmax(0, 1fr));
 
+        @include tablet {
+          min-height: 96px;
+          grid-template-rows: minmax(96px, 1fr);
+        }
+
+        @include mobile {
+          min-height: 80px;
+          grid-template-rows: minmax(80px, 1fr);
+        }
+
         // Logo
         > a {
           img[class*="Media-root-Header-logo"] {
@@ -74,6 +113,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           @include tablet {
             padding: 0 16px;
           }
+
+          @include mobile {
+            grid-column: 1 / 9;
+          }
         }
 
         // Main links
@@ -82,7 +125,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
           > ul {
             li[class*="headerMenuNavItem"] {
-              margin-right: 33.5px;
+              margin-right: 30px;
 
               @include tablet {
                 margin: 0;
@@ -96,7 +139,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                   margin-left: 16px;
 
                   @include tablet {
-                    height: 8px;
+                    height: 12px;
                   }
                 }
 
@@ -106,8 +149,14 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 }
               }
 
+              [class*="HeaderNavLink-root"] {
+                border-top: 3px solid transparent;
+                padding-left: 2px;
+                padding-right: 2px;
+              }
+
               div[data-testid="HeaderNavLink"][open] {
-                a {
+                > a {
                   font-weight: 700;
                   color: #1793ff;
 
@@ -123,7 +172,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             }
 
             &[class*="Header-headerMenuMobileCtas"] {
-              @media (max-width: 1199.98px) {
+              @include tablet {
                 display: none !important;
               }
             }
@@ -132,14 +181,19 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           @include tablet {
             grid-column: 1 / span 16;
             margin: 0;
-            padding: 40px 16px;
             background-color: #f6f8fa;
             border-top: 1px solid #dde3eb;
+            transition-duration: 100ms;
+            display: flex;
+            justify-content: center;
 
             > ul[class*="Header-headerMenuNavItems"] {
-              // overflow: hidden;
               border: none;
               gap: 12px;
+
+              @include tablet {
+                padding: 0 16px;
+              }
 
               li {
                 div[data-testid="HeaderNavLink"] {
@@ -156,6 +210,8 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                   [class*="HeaderNavLink-navItemSubMenuWrapper"] {
                     max-height: calc(100vh - 0px);
                     padding-top: 0;
+                    border-radius: 4px;
+                    box-shadow: none;
                   }
                 }
               }
@@ -170,7 +226,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           gap: 0 28px;
 
           @include tablet {
-            padding: 0 16px;
+            padding: 0 24px;
           }
 
           a[class*="MuiTypography-link"] {
@@ -194,7 +250,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               margin-left: 25px;
             }
 
-            @media (max-width: 1199.98px) {
+            @include tablet {
               display: none !important;
             }
           }
@@ -244,6 +300,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         box-shadow: none;
         padding: 0 40px;
 
+        @media (min-width: 1200px) and (max-width: 1400px) {
+          max-width: 88%;
+        }
+
         @include tablet {
           flex-wrap: wrap;
         }
@@ -287,7 +347,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           font-family: $ff-inter;
           font-size: 12px;
           font-style: normal;
-          font-weight: 700;
+          font-weight: 700 !important;
           line-height: 150%;
           text-transform: uppercase;
           text-decoration: none;
@@ -363,21 +423,23 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 flex-direction: column;
 
                 .menu-title {
-                  overflow: hidden;
+                  display: flex;
+                  align-items: center;
+                  position: relative;
                   color: #0c131a;
                   text-overflow: ellipsis;
                   font-size: 14px;
                   font-weight: 600;
                   line-height: 20px;
-                  position: relative;
-                  display: flex;
+                  overflow: hidden;
+
                   .new-tag {
                     display: flex;
                     padding: 2px 8px;
                     justify-content: center;
                     align-items: center;
-                    font-family: $ff-inter;
-                    margin-left: 12px;
+                    font-family: $control-font;
+                    margin-left: 14px;
                     color: #0068c9;
                     text-align: center;
                     font-size: 12px;
@@ -403,6 +465,22 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               &:hover {
                 border-radius: 8px;
                 background: #eff8ff;
+
+                .menu-icon {
+                  background: rgba(0, 104, 201, 0.08);
+                }
+
+                .menu-texts .menu-title {
+                  color: #0068c9;
+                }
+
+                @include tablet {
+                  background: #fff;
+                }
+              }
+
+              &:active {
+                background: #d6edff;
               }
             }
           }
@@ -413,6 +491,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
     // Menu Specific styles
     .solutions-spz {
+      @include tablet {
+        // max-width: 768px;
+      }
+
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
         padding-bottom: 0;
 
@@ -452,46 +534,57 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
         }
 
         ul[class*="HeaderNavLink-navItemSubMenu"] {
-          // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
 
           @include tablet {
-            // display: grid;
-            // grid-template-columns: repeat(8, 1fr);
-            // grid-template-rows: repeat(20, 1fr);
-            // grid-column-gap: 0px;
-            // grid-row-gap: 0px;
             flex-direction: column;
             max-height: 1600px;
-            padding: 0 24px;
+            padding: 0 24px 24px;
+            max-width: 800px;
+            margin-left: 0;
+            gap: 0;
+          }
+
+          @include mobile {
+            max-height: initial;
           }
 
           > [class*="HeaderNavLink-navItemSubMenu"] {
-            padding-right: 8px;
+            padding-right: 49px;
 
             &.by-company-size-spz {
-              // max-width: 237px;
               width: 100%;
-              flex: 0 0 18.5%;
+              flex: 0 0 19.5%;
+
+              @include aboveTab {
+                max-width: 237px;
+              }
 
               @include tablet {
                 width: 42%;
                 flex: 0 0 42%;
                 order: 1;
-                // grid-area: 1 / 1 / 3 / 4;
                 border-bottom: 1px solid #dde3ebe6;
                 border-right: 1px solid #dde3ebe6;
                 padding-bottom: 30px;
                 margin-bottom: 0;
               }
+
+              @include mobile {
+                width: 100%;
+                flex: 0 0 100%;
+                border-right: none;
+              }
             }
 
             &.platform-capabilities-spz {
-              // max-width: 430px;
               width: 100%;
               padding-left: 50px;
-              flex: 0 0 34.4%;
+              flex: 0 0 35.4%;
+              @include aboveTab {
+                max-width: 440px;
+              }
 
               @include tablet {
                 width: 58%;
@@ -499,19 +592,29 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 order: 3;
                 padding-left: 32px;
                 padding-right: 0;
-                // grid-area: 1 / 4 / 5 / 9;
                 border-bottom: 1px solid #dde3ebe6;
                 border-right: none;
                 padding-bottom: 32px;
                 margin-bottom: 0;
               }
+
+              @include mobile {
+                width: 100%;
+                flex: 0 0 100%;
+                order: 2;
+                padding-left: 0;
+                padding-top: 32px;
+              }
             }
 
             &.frameworks-spz {
-              // max-width: 235px;
               width: 100%;
               padding-left: 50px;
-              flex: 0 0 26.1%;
+              flex: 0 0 27%;
+
+              @include aboveTab {
+                max-width: 337px;
+              }
 
               @include tablet {
                 width: 42%;
@@ -519,13 +622,20 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 order: 2;
                 padding-top: 25px;
                 padding-left: 0;
-                // grid-area: 3 / 1 / 21 / 4;
                 border-right: 1px solid #dde3ebe6;
+              }
+
+              @include mobile {
+                width: 100%;
+                flex: 0 0 100%;
+                order: 3;
+                border-bottom: 1px solid #dde3ebe6;
+                padding-bottom: 32px;
+                border-right: none;
               }
             }
 
             &.take-drata-spz {
-              // max-width: 219px;
               width: 100%;
               flex: 0 0 21%;
               padding-left: 50px;
@@ -536,7 +646,13 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 order: 4;
                 padding-top: 25px;
                 padding-left: 32px;
-                // grid-area: 5 / 4 / 21 / 9;
+              }
+
+              @include mobile {
+                width: 100%;
+                flex: 0 0 100%;
+                padding-left: 0;
+                border-right: none;
               }
             }
 
@@ -552,6 +668,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     .resources-spz {
+      @include tablet {
+        // max-width: 768px;
+      }
+
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
         padding-bottom: 0;
 
@@ -590,39 +710,103 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           }
         }
         ul[class*="HeaderNavLink-navItemSubMenu"] {
-          // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
 
           @include tablet {
             flex-direction: column;
-            max-height: 942px;
+            max-height: 1000px;
+            padding: 0 24px 24px;
+            gap: 0;
+          }
+
+          @include mobile {
+            max-height: initial;
           }
 
           > [class*="HeaderNavLink-navItemSubMenu"] {
-            // padding-right: 8px;
+            @include tablet {
+              width: 50% !important;
+              flex: 0 0 50% !important;
+            }
+
+            @include mobile {
+              width: 100% !important;
+              flex: 0 0 100% !important;
+            }
 
             &.quick-link-spz {
               width: 100%;
               flex: 0 0 23.5%;
+
+              @include tablet {
+                order: 1;
+                padding-bottom: 31px;
+                border-bottom: 1px solid #dde3ebe6;
+                border-right: none;
+              }
+
+              @include mobile {
+                padding-right: 0;
+              }
             }
 
             &.discover-learn-spz {
               width: 100%;
-              // padding-left: 32px;
               flex: 0 0 28.4%;
+
+              @include tablet {
+                order: 3;
+                padding-bottom: 32px;
+                border-bottom: 1px solid #dde3ebe6;
+                border-left: 1px solid #dde3ebe6;
+                border-right: none;
+              }
+
+              @include mobile {
+                border-left: none;
+                // order: 2;
+                padding-left: 0;
+                padding-top: 32px;
+              }
             }
 
             &.compliance-support-spz {
               width: 100%;
-              padding-right: 24px;
               flex: 0 0 24.5%;
+              padding-right: 24px;
+
+              @include tablet {
+                padding-left: 0;
+                padding-top: 25px;
+                order: 2;
+                border-right: none;
+              }
+
+              @include mobile {
+                border-left: none;
+                // order: 3;
+                border-bottom: 1px solid #dde3ebe6;
+                padding-bottom: 32px;
+              }
             }
 
             &.customer-support-spz {
               width: 100%;
               flex: 0 0 25%;
-              // padding-left: 50px;
+
+              @include tablet {
+                padding-top: 25px;
+                order: 4;
+                border-right: none;
+                border-left: 1px solid #dde3ebe6;
+              }
+
+              @include mobile {
+                border-left: none;
+                padding-left: 0;
+                padding-top: 25px;
+              }
             }
 
             &:first-child {
@@ -631,6 +815,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
 
             &:last-child {
               padding-right: 18px;
+
+              @include tablet {
+                padding-right: 0;
+              }
             }
           }
 
@@ -644,6 +832,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               border-radius: 16px;
               background: #f6f8fa;
               position: relative;
+
+              @include tablet {
+                max-width: 400px;
+              }
 
               &::after {
                 content: "Featured";
@@ -670,6 +862,7 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 width: 100%;
                 height: 118px;
                 object-fit: cover;
+                border-radius: 6px;
               }
 
               .card-title {
@@ -694,6 +887,16 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
                 display: -webkit-box;
                 -webkit-line-clamp: 2;
                 -webkit-box-orient: vertical;
+
+                @include tablet {
+                  max-height: 60px;
+                  -webkit-line-clamp: 3;
+                }
+
+                @include mobile {
+                  max-height: 40px;
+                  -webkit-line-clamp: 2;
+                }
               }
 
               .card-link {
@@ -729,6 +932,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     .alliances-spz {
+      @include tablet {
+        // max-width: 768px;
+      }
+
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
         padding-bottom: 0;
 
@@ -767,22 +974,53 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           }
         }
         ul[class*="HeaderNavLink-navItemSubMenu"] {
-          // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
 
+          @include tablet {
+            padding: 0 24px 24px;
+            gap: 0;
+          }
+
+          @include mobile {
+            flex-direction: column;
+          }
+
           > [class*="HeaderNavLink-navItemSubMenu"] {
-            // padding-right: 8px;
+            @include tablet {
+              width: 50% !important;
+              flex: 0 0 50% !important;
+            }
+
+            @include mobile {
+              width: 100% !important;
+              flex: 0 0 100% !important;
+            }
 
             &.partners-spz {
               width: 100%;
               flex: 0 0 22.8%;
+
+              @include mobile {
+                border-bottom: 1px solid #dde3ebe6;
+                padding-bottom: 32px;
+                border-right: none;
+              }
             }
 
             &.auditors-spz {
               width: 100%;
               padding-left: 82px;
               flex: 0 0 28.4%;
+
+              @include tablet {
+                padding-left: 64px;
+              }
+
+              @include mobile {
+                padding-top: 24px;
+                padding-left: 0;
+              }
             }
 
             &:first-child {
@@ -797,23 +1035,45 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     .customers-spz {
+      @include tablet {
+        // max-width: 768px;
+      }
+
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-        // max-width: 1440px;
         padding: 0;
 
         ul[class*="HeaderNavLink-navItemSubMenu"] {
-          // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
           max-width: 1440px;
 
-          > [class*="HeaderNavLink-navItemSubMenu"] {
-            // padding-right: 8px;
+          @include tablet {
+            padding: 0 24px 24px;
+            gap: 0;
+          }
 
+          @include mobile {
+            flex-direction: column;
+          }
+
+          > [class*="HeaderNavLink-navItemSubMenu"] {
             &.customers-sub-spz {
               width: 100%;
               flex: 0 0 25.8%;
               border-right: none;
+
+              @include tablet {
+                width: 41%;
+                flex: 0 0 41%;
+                border-right: 1px solid #dde3ebe6;
+              }
+
+              @include mobile {
+                width: 100%;
+                flex: 0 0 100%;
+                border-right: none;
+                border-bottom: 1px solid #dde3ebe6;
+              }
             }
 
             &.customers-stories-spz {
@@ -825,6 +1085,28 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               padding-bottom: 32px;
               padding-left: 80px;
               padding-right: 8px;
+
+              @media (min-width: 1301px) and (max-width: 1400px) {
+                padding-left: 60px;
+              }
+
+              @media (min-width: 1200px) and (max-width: 1300px) {
+                padding-left: 30px;
+              }
+
+              @include tablet {
+                width: 59%;
+                flex: 0 0 59%;
+                padding: 0 0 0 64px;
+                background-color: #fff;
+              }
+
+              @include mobile {
+                width: 100%;
+                flex: 0 0 100%;
+                padding-top: 25px;
+                padding-left: 0;
+              }
             }
 
             &.company-card-spz {
@@ -833,17 +1115,31 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               display: flex;
               padding: 0px 80px 40px 20px;
               background: #eef2f6;
+
+              @include tablet {
+                width: 100%;
+                flex: 0 0 100%;
+                padding: 0;
+                margin-top: 12px;
+                background: #fff;
+              }
             }
 
             &:first-child {
               padding-left: 80px;
               padding-top: 32px;
               padding-bottom: 32px;
+              @include tablet {
+                padding: 0 0 24px;
+              }
+              @include mobile {
+                padding-bottom: 30px;
+              }
             }
 
-            &:last-child {
-              // padding-right: 18px;
-            }
+            // &:last-child {
+            // padding-right: 18px;
+            // }
           }
         }
       }
@@ -857,14 +1153,40 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           background: #fff;
           position: relative;
 
+          @include tablet {
+            background: #f6f8fa;
+          }
+
+          @include mobile {
+            flex-direction: column;
+            padding: 24px;
+          }
+
           .review-img {
-            max-width: 192px;
-            flex: 0 0 40%;
+            flex: 0 0 30%;
             margin-right: 24px;
             margin-bottom: -8px;
+
             img {
-              width: 100%;
-              height: auto;
+              width: 192px;
+              height: 232px;
+              object-position: -172px 0;
+              border-radius: 10px;
+              object-fit: cover;
+            }
+
+            @include mobile {
+              max-width: initial;
+              margin-right: 0;
+              margin-bottom: 18px;
+
+              img {
+                width: 232px;
+                height: 232px;
+                object-position: -149px 0;
+                border-radius: 10px;
+                object-fit: cover;
+              }
             }
           }
 
@@ -877,6 +1199,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               font-weight: 700;
               line-height: 28px;
               margin: 0 0 4px;
+
+              @include mobile {
+                font-size: 18px;
+                line-height: 26px;
+              }
             }
 
             .desg {
@@ -886,6 +1213,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
               font-weight: 500;
               line-height: 24px;
               margin: 0;
+
+              @include mobile {
+                font-size: 14px;
+                line-height: 20px;
+              }
             }
           }
 
@@ -896,6 +1228,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             font-weight: 500;
             line-height: 20px;
             margin-bottom: 12px;
+
+            @include mobile {
+              font-size: 12px;
+              line-height: 18px;
+            }
           }
 
           .card-link {
@@ -904,12 +1241,14 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             font-size: 14px;
             font-weight: 600;
             line-height: 20px;
-            margin-top: 16px;
+            margin-top: 18px;
             text-decoration: none;
+            display: flex;
+            align-items: center;
 
             svg {
-              margin-left: 6px;
-              margin-top: 4px;
+              margin-left: 10px;
+              margin-top: 0;
             }
 
             &:hover {
@@ -920,44 +1259,109 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
       }
     }
     .company-spz {
+      @include tablet {
+        margin-bottom: 40px !important;
+        // max-width: 768px;
+      }
+
+      @include mobile {
+        margin-bottom: 24px !important;
+      }
+
       [class*="HeaderNavLink-navItemSubMenuWrapper"] {
-        // max-width: 1440px;
         padding: 0;
 
         ul[class*="HeaderNavLink-navItemSubMenu"] {
-          // grid-template-columns: repeat(4, auto);
           display: flex;
           flex-direction: row;
           max-width: 1440px;
 
+          @include tablet {
+            padding: 0 24px 24px;
+            gap: 0;
+          }
+
+          @include mobile {
+            flex-direction: column;
+          }
+
           > [class*="HeaderNavLink-navItemSubMenu"] {
-            // padding-right: 8px;
+            @include tablet {
+              width: 50% !important;
+              flex: 0 0 50% !important;
+            }
+
+            @include mobile {
+              width: 100% !important;
+              flex: 0 0 100% !important;
+            }
 
             &.company-sub-spz {
               width: 100%;
               flex: 0 0 68.8%;
               border-right: none;
+
+              @media (min-width: 1200px) and (max-width: 1400px) {
+                width: 100%;
+                flex: 0 0 62%;
+              }
+
+              [class*="HeaderNavGroup-navItemSubMenuWrapper"] > ul {
+                @media (min-width: 1200px) {
+                  max-width: 245px;
+                }
+              }
             }
 
             &.company-card-spz {
               width: 100%;
-              // padding-left: 82px;
               flex: 0 0 31.2%;
               display: flex;
               padding: 0 80px 40px;
               align-items: flex-start;
               background: #eef2f6;
+
+              @media (min-width: 1200px) and (max-width: 1300px) {
+                width: 100%;
+                flex: 0 0 38%;
+              }
+
+              @include tablet {
+                width: 100%;
+                flex: 0 0 100%;
+                padding: 0;
+                background: #fff;
+                justify-content: flex-end;
+
+                [class*="HeaderNavGroup-navItemSubMenuWrapper"] > ul {
+                  margin-top: 10px;
+                }
+              }
+
+              @include mobile {
+                padding-top: 25px;
+                justify-content: center;
+              }
             }
 
             &:first-child {
               padding-left: 80px;
               padding-top: 32px;
               padding-bottom: 32px;
+
+              @include tablet {
+                padding: 0;
+              }
+
+              @include mobile {
+                border-bottom: 1px solid #dde3ebe6;
+                padding-bottom: 32px;
+              }
             }
 
-            &:last-child {
-              // padding-right: 18px;
-            }
+            // &:last-child {
+            // padding-right: 18px;
+            // }
           }
         }
       }
@@ -972,11 +1376,16 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
           background: #f6f8fa;
           position: relative;
 
+          @include tablet {
+            max-width: 312px;
+          }
+
           img {
             width: 100%;
             height: 118px;
             object-fit: cover;
             margin-top: -2px;
+            border-radius: 6px;
           }
 
           .card-title {
@@ -1001,6 +1410,11 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             display: -webkit-box;
             -webkit-line-clamp: 2;
             -webkit-box-orient: vertical;
+
+            @include tablet {
+              max-height: 60px;
+              -webkit-line-clamp: 3;
+            }
           }
 
           .card-link {
@@ -1012,9 +1426,17 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
             margin-top: 10px;
             text-decoration: none;
 
+            @include mobile {
+              margin-top: 18px;
+            }
+
             svg {
               margin-left: 6px;
               margin-top: 4px;
+
+              @include mobile {
+                height: 12px;
+              }
             }
 
             &:hover {
@@ -1042,9 +1464,10 @@ $control-font: "__Inter_36bd41", "__Inter_Fallback_36bd41";
     display: none;
 
     @include tablet {
-      width: 100%;
       background: #fff;
       border-radius: 4px;
+      width: calc(100% + 32px);
+      border-radius: 0;
 
       .disabled-anchor-wrapper {
         display: flex;
