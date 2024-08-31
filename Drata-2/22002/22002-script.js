@@ -402,11 +402,6 @@
             navigationContent();
             submitTestDetails('variant_22002');
 
-            // Get all 'HeaderNavLink-navItemLink' text and apply it as a class to the closest li
-            document.querySelectorAll('header [class*="HeaderNavLink-navItemLink"]').forEach(navItem => {
-                const navItemText = navItem.innerText.replace(/\s+/g, '-').toLowerCase();
-                navItem.closest('li').classList.add(`${navItemText}-spz`);
-            });
         });
 
         createCookie('spz-22002-loaded', 'true', 1);
@@ -790,7 +785,7 @@
                         </div>
                     </li>`);
                 });
-                
+
                 mainMenuUpdates();
             });
 
@@ -830,8 +825,19 @@
     }
 
     function navStyleBase() {
-        // Get the header height
-        // const headerHeight = document.querySelector('header').offsetHeight;
+        
+        const menuLbl = setInterval(() => {
+            // Get all 'HeaderNavLink-navItemLink' text and apply it as a class to the closest li
+            document.querySelectorAll('header [class*="HeaderNavLink-navItemLink"]').forEach(navItem => {
+                const navItemText = navItem.innerText.replace(/\s+/g, '-').toLowerCase();
+                navItem.closest('li').classList.add(`${navItemText}-spz`);
+
+                if (navItemText == 'company') {
+                    clearInterval(menuLbl);
+                }
+            });
+        }, 50);
+        
         setInterval(() => {
             if (document.querySelector(`${navSelector}[open]`)) {
                 // Stop page from scrolling when navSelector has 'open' attribute
