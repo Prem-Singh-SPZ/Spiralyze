@@ -751,7 +751,7 @@
 
         if (!document.querySelector('.company-sub-spz')) {
             waitForElm('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
-                
+
                 const menuNav = document.querySelector('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
                 // Remove all LI in menuNav
                 menuNav.innerHTML = "";
@@ -790,7 +790,10 @@
                         </div>
                     </li>`);
                 });
+                
+                mainMenuUpdates();
             });
+
         }
 
         //For Tablet and Mobile
