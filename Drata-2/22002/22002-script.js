@@ -555,13 +555,8 @@
         mainMenuUpdates();
 
         if (!document.querySelector('.by-company-size-spz')) {
-
-            const menuNav = document.querySelector('header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
-
-            debugger;
-
             waitForElm('header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
-                debugger;
+                const menuNav = document.querySelector('header .solutions-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
                 // Remove all LI in menuNav
                 menuNav.innerHTML = "";
 
@@ -606,10 +601,9 @@
         }
 
         if (!document.querySelector('.quick-link-spz')) {
-
-            const menuNav = document.querySelector('header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
-
             waitForElm('header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+
+                const menuNav = document.querySelector('header .resources-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
 
                 // Remove all LI in menuNav
                 menuNav.innerHTML = "";
@@ -662,10 +656,9 @@
         }
 
         if (!document.querySelector('.partners-spz')) {
-
-            const menuNav = document.querySelector('header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
-
             waitForElm('header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+
+                const menuNav = document.querySelector('header .alliances-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
                 // Remove all LI in menuNav
                 menuNav.innerHTML = "";
 
@@ -694,7 +687,7 @@
                         </div>
                     </li>`);
                 });
-                
+
                 if (!document.querySelector('.alliances-spz .spz-disabled-anchor-wrapper')) {
                     menuNav.insertAdjacentHTML('afterend', `
                         <div class="spz-disabled-anchor-wrapper desk-only">
@@ -708,10 +701,9 @@
         }
 
         if (!document.querySelector('.customers-sub-spz')) {
-
-            const menuNav = document.querySelector('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
-
             waitForElm('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+
+                const menuNav = document.querySelector('header .customers-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
                 // Remove all LI in menuNav
                 if (menuNav) {
                     menuNav.innerHTML = "";
@@ -758,10 +750,9 @@
         }
 
         if (!document.querySelector('.company-sub-spz')) {
-
-            const menuNav = document.querySelector('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
-
             waitForElm('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]').then(function () {
+                
+                const menuNav = document.querySelector('header .company-spz [class*=HeaderNavLink-navItemSubMenuWrapper] [class*=HeaderNavLink-navItemSubMenu]');
                 // Remove all LI in menuNav
                 menuNav.innerHTML = "";
 
