@@ -808,6 +808,9 @@
             document.querySelector('.solutions-spz [class$=HeaderNavLink-navItemLink]').innerHTML = document.querySelector('.solutions-spz [class$=HeaderNavLink-navItemLink]').innerHTML.replace('Solutions', 'Product');
         }
 
+        if (document.querySelector('.spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > ul a[class*=MuiTypography-darkL]')) {
+            document.querySelector('.spz-22002 header > .MuiContainer-root [class*=Header-contentContainer] > ul a[class*=MuiTypography-darkL]').classList.add('spz-22002-tracking');
+        }
     }
 
     function navStyleBase() {
