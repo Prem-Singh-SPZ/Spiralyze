@@ -393,7 +393,7 @@
             },
         ]
     };
-    
+
 
     function createTest() {
 
@@ -589,7 +589,7 @@
                         <div class="disabled-anchor-wrapper">
                             <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
                         </div>
-                    </div>`);                
+                    </div>`);
             }
         }
 
