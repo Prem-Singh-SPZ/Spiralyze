@@ -1,3 +1,52 @@
-body.spz-2004{
-    
+body.spz-2004 {
+  .desk-pnly {
+    @media screen and (max-width: 1024.98px) {
+      display: none;
+    }
+  }
+  .tablet-only {
+    @media screen and (min-width: 1024.98px) {
+      display: none;
+    }
+  }
+
+  .spz-social-count {
+    .social-count-inner {
+      display: flex;
+      border-radius: 4px;
+      overflow: hidden;
+      width: fit-content;
+
+      .social-dark {
+        display: flex;
+        padding: 6px 8px 6px 7px;
+        justify-content: center;
+        align-items: center;
+        align-self: stretch;
+        color: #fadb14;
+        leading-trim: both;
+        text-edge: cap;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 700;
+        line-height: 100%;
+        white-space: nowrap;
+        background: #10239e;
+
+        img {
+          margin-right: 7px;
+        }
+      }
+
+      .social-light {
+        color: #fff;
+        font-family: Inter, sans-serif;
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 100%;
+        padding: 9px;
+        background: rgba($color: #fff, $alpha: 0.08);
+      }
+    }
+  }
 }
