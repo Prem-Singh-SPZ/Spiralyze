@@ -1,16 +1,21 @@
 body.spz-2004 {
-  .desk-pnly {
+  .desk-only {
     @media screen and (max-width: 1024.98px) {
-      display: none;
+      display: none !important;
     }
   }
   .tablet-only {
     @media screen and (min-width: 1024.98px) {
-      display: none;
+      display: none !important;
     }
   }
 
   .spz-social-count {
+    margin-top: 24px;
+
+    @media screen and (max-width: 1024.98px) {
+      margin-top: 16px;
+    }
     .social-count-inner {
       display: flex;
       border-radius: 4px;
@@ -33,8 +38,17 @@ body.spz-2004 {
         white-space: nowrap;
         background: #10239e;
 
+        @media (max-width: 767.98px) {
+          font-size: 13px;
+        }
+
         img {
           margin-right: 7px;
+
+          @media (max-width: 767.98px) {
+            width: 12.645px;
+            height: 14px;
+          }
         }
       }
 
@@ -46,6 +60,219 @@ body.spz-2004 {
         line-height: 100%;
         padding: 9px;
         background: rgba($color: #fff, $alpha: 0.08);
+        white-space: nowrap;
+
+        @media (max-width: 767.98px) {
+          font-size: 13px;
+        }
+      }
+    }
+  }
+
+  #main-content {
+    .row-number-1 {
+      overflow: hidden;
+      padding-top: 32px !important;
+
+      @media (max-width: 1024.98px) {
+        padding: 32px 20px 58px !important;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 24px 8px 58px !important;
+      }
+
+      > .row-fluid {
+        max-width: 1204px;
+
+        @media (max-width: 1024.98px) {
+          flex-direction: column;
+
+          .widget-span {
+            width: 100% !important;
+          }
+        }
+
+        > .widget-type-cell:first-child {
+          .widget-type-rich_text {
+            .hs_cos_wrapper_type_rich_text {
+              > img {
+                max-width: 182px !important;
+              }
+
+              > .fw-bold {
+                margin-top: 105.5px !important;
+                font-size: 48px;
+                font-weight: 600;
+                line-height: 64px;
+                letter-spacing: -1.152px;
+                margin-bottom: 25px !important;
+
+                @media (max-width: 1024.98px) {
+                  margin-top: 31.5px !important;
+                  max-width: 600px;
+                  margin-bottom: 16.5px !important;
+                }
+
+                @media (max-width: 767.98px) {
+                  font-size: 36px;
+                  font-weight: 600;
+                  line-height: 48px;
+                  letter-spacing: -0.864px;
+                }
+              }
+
+              > p {
+                font-size: 16px !important;
+                font-weight: 400;
+                line-height: 26px;
+                max-width: 500px;
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
+
+        > .widget-type-cell:last-child {
+          .row-number-4 {
+            margin-top: 54px;
+
+            @media screen and (max-width: 1024.98px) {
+              margin-top: -6px;
+            }
+
+            div[data-hs-forms-root="true"] {
+              border-radius: 12px;
+              border: 1px solid rgba(255, 255, 255, 0.08);
+              background: rgba(127, 150, 255, 0.48);
+              box-shadow: 0px 20px 80px 0px rgba(0, 0, 0, 0.12);
+              backdrop-filter: blur(24px);
+              padding: 28px 31px 40px;
+              max-width: 570px;
+              margin-left: auto;
+
+              @media (max-width: 1024.98px) {
+                margin-left: 0;
+                max-width: 100%;
+              }
+
+              &::before,
+              &::after {
+                display: none;
+              }
+              .spz-form-title {
+                color: #fff;
+                text-align: center;
+                font-family: Inter, sans-serif;
+                font-size: 32px;
+                font-style: normal;
+                font-weight: 600;
+                line-height: 44px;
+                margin-bottom: 10px;
+              }
+
+              .hs-form-private {
+                padding: 0;
+                border-radius: 0;
+                border: none;
+                background: transparent;
+
+                .hs-form-field {
+                  margin-bottom: 11px;
+                  > label {
+                    font-size: 14px;
+                    font-weight: 400;
+                    line-height: 24px;
+                    margin-bottom: 3px;
+                  }
+
+                  .hs-input {
+                    max-height: 36px;
+                  }
+
+                  select.hs-input {
+                    height: 38px;
+                    max-height: 38px;
+                    background-position: right 1.5rem center;
+                  }
+
+                  .hs-form-booleancheckbox {
+                    margin-top: 10px;
+                    input {
+                      position: absolute;
+                      visibility: hidden;
+                      margin: 0;
+                    }
+
+                    span {
+                      position: relative;
+                      margin: 0;
+                      padding-left: 24px;
+                      cursor: pointer;
+                    }
+
+                    span * {
+                      color: #fff;
+                      font-family: Inter, sans-serif;
+                      font-size: 13px;
+                      font-weight: 400;
+                      line-height: 24px;
+                      margin: 0;
+                      padding: 0;
+                    }
+
+                    span:not(.hs-form-required):before {
+                      position: absolute;
+                      content: "";
+                      width: 16px;
+                      height: 16px;
+                      border-radius: 3px;
+                      background: #fff;
+                      top: 4px;
+                      left: 0;
+                    }
+
+                    input:checked + span::after {
+                      position: absolute;
+                      content: "";
+                      width: 10px;
+                      height: 10px;
+                      background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1718272039/varicent/1002/Checkmark.svg");
+                      background-size: contain;
+                      background-repeat: no-repeat;
+                      top: 7px;
+                      left: 3px;
+                    }
+                  }
+                }
+
+                .form-columns-2 {
+                  justify-content: space-between;
+
+                  .hs-form-field {
+                    max-width: 49.4%;
+
+                    @media (max-width: 767.98px) {
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    .spz-tab-copy {
+      .copy-inner {
+        p {
+          font-size: 16px !important;
+          font-weight: 400;
+          line-height: 26px;
+          margin-bottom: 16px;
+        }
       }
     }
   }
