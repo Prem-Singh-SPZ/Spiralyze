@@ -6,7 +6,7 @@ let bodyLoaded = setInterval(function () {
 		if (!body.classList.contains('spz-1003')) {
 			body.classList.add('spz-1003');
 			if (document.querySelectorAll('.spz-1003 .spz-video-bg').length == 0) {
-				document.querySelector('.spz-1003').insertAdjacentHTML('afterbegin', `<div class="spz-video-bg"><video autoplay muted loop playsinline>
+				document.querySelector('.spz-1003').insertAdjacentHTML('afterbegin', `<div class="spz-video-bg"><video autoplay muted playsinline>
 					<source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/varicent/1003/Vector_Dashboard.mp4" type="video/mp4">
 				  </video></div>`);
 			}
