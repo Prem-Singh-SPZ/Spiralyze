@@ -9,7 +9,7 @@ const stickyFooterContent = {
       url: "//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/varicent/5003/Rating-mob.svg",
     },
   ],
-  alt: "Trust logos",
+  alt: "G2 Logo",
   CTAs: [
     {
       ctaText: `book a DEMO <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" viewBox="0 0 12 12" fill="none">
