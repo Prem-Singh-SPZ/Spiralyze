@@ -22,6 +22,9 @@ body.spz-2004 {
       overflow: hidden;
       width: fit-content;
 
+      @media (max-width: 767.98px) {
+        height: 30px;
+      }
       .social-dark {
         display: flex;
         padding: 6px 8px 6px 7px;
@@ -46,8 +49,8 @@ body.spz-2004 {
           margin-right: 7px;
 
           @media (max-width: 767.98px) {
-            width: 12.645px;
-            height: 14px;
+            width: 14.645px;
+            height: 16px;
           }
         }
       }
@@ -79,7 +82,7 @@ body.spz-2004 {
       }
 
       @media (max-width: 767.98px) {
-        padding: 24px 8px 58px !important;
+        padding: 24px 4px 58px !important;
       }
 
       > .row-fluid {
@@ -98,6 +101,10 @@ body.spz-2004 {
             .hs_cos_wrapper_type_rich_text {
               > img {
                 max-width: 182px !important;
+
+                @media (max-width: 767.98px) {
+                  max-width: 141px !important;
+                }
               }
 
               > .fw-bold {
@@ -110,13 +117,13 @@ body.spz-2004 {
 
                 @media (max-width: 1024.98px) {
                   margin-top: 31.5px !important;
-                  max-width: 600px;
                   margin-bottom: 16.5px !important;
                 }
 
                 @media (max-width: 767.98px) {
+                  margin-top: 32px !important;
+                  margin-bottom: 16px !important;
                   font-size: 36px;
-                  font-weight: 600;
                   line-height: 48px;
                   letter-spacing: -0.864px;
                 }
@@ -156,6 +163,10 @@ body.spz-2004 {
                 max-width: 100%;
               }
 
+              @media (max-width: 767.98px) {
+                padding: 24px 19px 40px;
+              }
+
               &::before,
               &::after {
                 display: none;
@@ -171,8 +182,8 @@ body.spz-2004 {
                 margin-bottom: 10px;
 
                 @media (max-width: 767.98px) {
-                    font-size: 22px;
-                    line-height: 30px;
+                  font-size: 22px;
+                  line-height: 30px;
                 }
               }
 
@@ -193,6 +204,10 @@ body.spz-2004 {
 
                   .hs-input {
                     max-height: 36px;
+
+                    &:not(.invalid):not(.error) {
+                      border-color: transparent !important;
+                    }
                   }
 
                   select.hs-input {
@@ -209,14 +224,14 @@ body.spz-2004 {
                       margin: 0;
                     }
 
-                    span {
+                    span:not(.hs-form-required) {
                       position: relative;
                       margin: 0;
-                      padding-left: 24px;
+                      padding-left: 26px;
                       cursor: pointer;
                     }
 
-                    span * {
+                    span *:not(.hs-form-required) {
                       color: #fff;
                       font-family: Inter, sans-serif;
                       font-size: 13px;
