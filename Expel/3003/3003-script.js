@@ -240,6 +240,7 @@ let bodyLoaded = setInterval(function () {
                 document.querySelectorAll('.spz-3003 .spz-form-baseline .Questions-block .step-button').forEach(button => {
                     button.addEventListener('click', function () {
                         const formBaseline = document.querySelector('.spz-3003 .spz-form-baseline');
+                        const logoSection = document.querySelector('.spz-3003 .hero-client-logos');
                         const currentStep = this.closest('.form-step');
                         const stepContent = this.closest('.form-step').querySelector('.step-content');
                         const checkboxes = stepContent.querySelectorAll('input');
@@ -261,7 +262,9 @@ let bodyLoaded = setInterval(function () {
                                     // Update the class of the current step number on spz-form-baseline
                                     const currentStepNumber = nextStep.className.match(/step_(\d+)/)[1];
                                     formBaseline.className = formBaseline.className.replace(/current_step_\d+/, '');
+                                    logoSection.className = logoSection.className.replace(/current_step_\d+/, '');
                                     formBaseline.classList.add(`current_step_${currentStepNumber}`);
+                                    logoSection.classList.add(`current_step_${currentStepNumber}`);
                                 }
 
                             }
