@@ -16,7 +16,6 @@
 
   @media (min-width: 1600px) {
     background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3003/1920_bg.webp");
-    
   }
 }
 
@@ -62,16 +61,13 @@
   margin-bottom: 30px;
 }
 
-.spz-3003 #hero-section .hero .spz-content .info-text {
-  color: #fff;
+.spz-3003 #hero-section .hero .spz-content .s-copy {
+  color: #f4f4f4;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
   line-height: 24px;
-}
-
-.spz-3003 #hero-section .hero .spz-content .info-text strong {
-  font-weight: 700;
+  margin-bottom: 12px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .section-highlight-point {
@@ -81,17 +77,16 @@
   position: relative;
 }
 
-/* .spz-3003 #hero-section .hero .spz-content .section-highlight-point::after,
-.spz-3003 #hero-section .hero .ex-form::after {
-  position: absolute;
-  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame.svg);
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 168px;
-  height: 150px;
-  bottom: -125px;
-  right: 59px;
-} */
+.spz-3003 #hero-section .hero .spz-content .eye-brow-text {
+  color: #00a85d;
+  font-size: 16px;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin-bottom: 12px;
+}
+
 .spz-3003.form-expand
   #hero-section
   .hero
@@ -100,65 +95,10 @@
   content: "";
 }
 
-.spz-3003 #hero-section .hero .spz-content .section-highlight-point .list-item {
-  color: #fff;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  padding-left: 32px;
-  margin: 16px 0 0;
-  position: relative;
-}
-
-.spz-3003
-  #hero-section
-  .hero
-  .spz-content
-  .section-highlight-point
-  .list-item
-  .highlight-text {
-  font-weight: 700;
-  color: #fff;
-}
-
-.spz-3003
-  #hero-section
-  .hero
-  .spz-content
-  .section-highlight-point
-  .list-item::before {
-  position: absolute;
-  content: "";
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/checkcircle.svg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  width: 24px;
-  height: 28px;
-  top: 0;
-  left: 0;
-}
-
 .spz-3003 #hero-section .hero .spz-content + .col {
-  width: 49%;
-  max-width: 550px;
+  display: none !important;
 }
 
-.spz-3003 #hero-section .hero .ex-form {
-  width: 100%;
-  background: #fff;
-  border-radius: 16px;
-  padding: 39px 32px 41.5px;
-  position: relative;
-}
-
-/* .spz-3003:not(.form-expand) #hero-section .hero .ex-form::after {
-  content: "";
-  transform: rotate(-35deg);
-  right: auto;
-  left: -7px;
-  bottom: -158px;
-} */
 .spz-3003 .form-gartner-reviews {
   display: flex;
   padding: 8px 20px;
@@ -206,7 +146,7 @@
   margin-left: 8px;
 }
 
-.spz-3003 #hero-section .hero .ex-form .form-title {
+.spz-3003 #hero-section .hero  .form-title {
   color: #131416;
   text-align: center;
   font-size: 32px;
@@ -216,11 +156,11 @@
   margin-bottom: 13px;
 }
 
-.spz-3003 #hero-section .hero .ex-form .form-description {
+.spz-3003 #hero-section .hero  .form-description {
   display: none;
 }
 
-.spz-3003 #hero-section .hero .ex-form form.mktoForm {
+.spz-3003 #hero-section .hero  form.mktoForm {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -919,14 +859,14 @@ body.spz-3003
     margin-bottom: 14px;
   }
 
-  /* .spz-3003 #hero-section .hero .spz-content .section-highlight-point::after, .spz-3003 #hero-section .hero .ex-form::after {
+  /* .spz-3003 #hero-section .hero .spz-content .section-highlight-point::after, .spz-3003 #hero-section .hero ::after {
     content: none !important;
   } */
   .spz-3003 #hero-section .hero .spz-content .section-highlight-point {
     margin: 4px 0 20px;
   }
 
-  .spz-3003 #hero-section .hero .ex-form {
+  .spz-3003 #hero-section .hero  {
     margin-top: 48px;
     padding: 39px 40px 41.5px;
   }
@@ -1011,12 +951,12 @@ body.spz-3003
     margin: 0 auto;
   }
 
-  .spz-3003 #hero-section .hero .ex-form {
+  .spz-3003 #hero-section .hero  {
     padding: 27.5px 20px 29px;
     margin-top: 40px;
   }
 
-  .spz-3003 #hero-section .hero .ex-form .form-title {
+  .spz-3003 #hero-section .hero  .form-title {
     font-size: 24px;
     line-height: 32px;
   }
@@ -1100,5 +1040,1008 @@ body.spz-3003
   .spz-3003 #hero-section .hero-client-logos .container {
     max-width: 360px !important;
     margin: 0 auto;
+  }
+}
+
+
+//form changes
+.spz-3003  .spz-form-baseline {
+  width: 48.77%;
+  max-width: 594px;
+}
+.spz-3003 .spz-form-baseline .form-block {
+ 
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 40px 41px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center;
+}
+.spz-3003 .spz-form-baseline.current_step_3 .form-block,
+.spz-3003 .spz-form-baseline.current_step_4 .form-block {
+  padding: 40px 36px;
+}
+.spz-3003 .spz-form-baseline .progress-bar {
+  width: 172px;
+  height: 4px;
+  display: inline-flex;
+  position: relative;
+  margin: 0 auto;
+  background: #ebebeb;
+  border-radius: 44px;
+}
+.spz-3003 .spz-form-baseline .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: 33.33%;
+  height: 100%;
+  background: #00a85d;
+  border-radius: 44px 0 0 44px;
+  transition: all 0.6s ease-in-out;
+}
+.spz-3003 .spz-form-baseline.current_step_2 .progress-bar::before {
+  width: 66.66%;
+}
+.spz-3003 .spz-form-baseline.current_step_3 .progress-bar::before {
+  width: 100%;
+  border-radius: 44px;
+}
+.spz-3003 .spz-form-baseline.current_step_4 .progress-bar::before {
+  width: 100%;
+  border-radius: 44px;
+}
+.spz-3003 .spz-form-baseline .Questions-block {
+  width: 100%;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-header {
+  margin: 12px auto;
+  text-align: center;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step_2 .step-header {
+  margin-bottom: 8px;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step_3 .step-header {
+  margin-bottom: 18px;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-header .step-number {
+  color: #00a85d;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-header .step-heading {
+  color: #131416;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  margin: 4px 0 0;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-header .step-question {
+  color: #333;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 4px 0 0;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-content {
+  position: relative;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-error {
+  display: flex;
+  align-items: center;
+  padding: 12px;
+  border-radius: 8px;
+  border: 1px solid rgba(229, 27, 0, 0.36);
+  background: rgba(229, 27, 0, 0.06);
+  color: #e51b00;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin-top: 20px;
+  height: 46px;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .step-content:not(.show-error)
+  .step-error {
+  pointer-events: none;
+  display: none;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-error img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 4px;
+}
+
+.spz-3003 .spz-form-baseline .Questions-block .option-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-box .option-item {
+  width: calc(50% - 4px);
+  margin: 8px 0 0;
+  position: relative;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-box input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-box .radio-option-item {
+  width: calc(33.33% - 8px);
+  height: 100px;
+  margin: 12px 0 0;
+  position: relative;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-box .option-content {
+  background: rgba(23, 98, 230, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(23, 98, 230, 0.36);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  div[class*="option-item"]:hover
+  .option-content {
+  background: rgba(23, 98, 230, 0.12);
+  border-color: rgba(23, 98, 230, 0.41);
+}
+// .spz-3003
+//   .spz-form-baseline
+//   .Questions-block
+//   .step-content.error
+//   .option-box
+//   .option-content {
+//   background: rgba(229, 27, 0, 0.04);
+//   border-color: rgba(229, 27, 0, 1);
+// }
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  div[class*="option-item"]
+  input:checked
+  + .option-content {
+  background: rgba(3, 18, 99, 1);
+  border: 1px solid rgba(23, 98, 230, 0.36);
+}
+.spz-3003 .spz-form-baseline .Questions-block .checkbox,
+.spz-3003 .spz-form-baseline .Questions-block .radio {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 20px;
+  height: 20px;
+  border: 1px solid rgba(23, 98, 230, 0.36);
+  border-radius: 4px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.spz-3003 .spz-form-baseline .Questions-block .radio {
+  border-radius: 32px;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  input:checked
+  + .option-content
+  .checkbox {
+  border-color: #fff;
+  background: #ffffff;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  input:checked
+  + .option-content
+  .radio {
+  border-color: #fff;
+}
+// .spz-3003 .spz-form-baseline .Questions-block .step-content.error .checkbox,
+// .spz-3003 .spz-form-baseline .Questions-block .step-content.error .radio {
+//   border-color: rgba(229, 27, 0, 1);
+//   background: #fff;
+// }
+.spz-3003 .spz-form-baseline .Questions-block .checkbox svg {
+  opacity: 0;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  .option-item
+  input:checked
+  + .option-content
+  .checkbox
+  svg {
+  opacity: 1;
+}
+.spz-3003 .spz-form-baseline .Questions-block .radio .radio-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-flex;
+  background: #fff;
+  border-radius: 15px;
+  opacity: 0;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  .radio-option-item
+  input:checked
+  + .option-content
+  .radio
+  .radio-dot {
+  opacity: 1;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: #031263;
+  border-radius: 50px;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  div[class*="option-item"]
+  input:checked
+  + .option-content
+  .option-icon {
+  background: #fff;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  div[class*="option-item"]
+  input:checked
+  + .option-content
+  .option-icon
+  svg
+  path {
+  stroke: #031263;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  div[class*="option-item"]:last-child
+  input:checked
+  + .option-content
+  .option-icon
+  svg
+  path {
+  stroke-width: 1;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.spz-3003 .spz-form-baseline .Questions-block .option-icon .white-icon,
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  .option-item
+  input:checked
+  + .option-content
+  .blue-icon {
+  display: none;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  .option-item
+  input:checked
+  + .option-content
+  .white-icon {
+  display: block;
+}
+.spz-3003 .spz-form-baseline .Questions-block .Option-text {
+  color: #031263;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-align: center;
+  margin: 12px 0 0;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step_2 .Option-text {
+  margin: 0;
+}
+.spz-3003
+  .spz-form-baseline
+  .Questions-block
+  .option-box
+  div[class*="option-item"]
+  input:checked
+  + .option-content
+  .Option-text {
+  color: #fff;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-button {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #1762e6;
+  border-radius: 72px;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 20px auto 16px;
+  transition: all 0.3s ease-in-out;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-button:hover {
+  background: #0e4c8a;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step-button img {
+  margin-left: 8px;
+}
+.spz-3003 .spz-form-baseline .form-footer {
+  color: #747474;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.spz-3003 .spz-form-baseline .form-footer a {
+  color: #131416;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.spz-3003 .spz-form-baseline .form-footer a:hover {
+  color: #0e4c8a;
+}
+
+/* Form CSS Start Here */
+.spz-3003 .spz-form-baseline form.mktoForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0 !important;
+  width: 100% !important;
+}
+/* .spz-3003 .spz-form-baseline form.mktoForm .field-5 ~ .mktoFormCol, */
+.spz-3003 .spz-form-baseline form.mktoForm .mktoClear,
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoOffset,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoLabel
+  .mktoAsterix {
+  display: none !important;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol {
+  width: calc(50% - 6px) !important;
+  margin-bottom: 12px !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol.field-3:has(+ .mktoFormCol[style*="display: none;"])
+  ~ .mktoFormCol.field-7,
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.field-6,
+.spz-3003 .spz-form-baseline.current_step_3 form.mktoForm .mktoFormCol.field-8,
+.spz-3003 .spz-form-baseline.current_step_3 form.mktoForm .mktoFormCol.field-9,
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.field-10 {
+  display: none;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.field-9 {
+  margin-bottom: 18px !important;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.width_full,
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.field-1,
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.field-8,
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol.field-9 {
+  width: 100% !important;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap {
+  position: relative;
+  width: 100% !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoHtmlText {
+  width: auto !important;
+  color: #747474 !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoHtmlText
+  a {
+  color: #131416;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoHtmlText
+  a:hover {
+  color: #0e4c8a;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoLabel {
+  width: auto !important;
+  padding: 1px 6px;
+  color: #747474 !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  pointer-events: none;
+  background: #fff;
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.filled
+  .mktoLabel,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.active.typing
+  .mktoLabel {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 22px !important;
+  top: -11.5px;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.filled
+  .mktoLabel {
+  color: #000000 !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.active.typing
+  .mktoLabel {
+  color: #1762e6 !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.error.filled
+  .mktoLabel,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.error.active.typing
+  .mktoLabel {
+  color: #e51b00 !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoField {
+  width: 100% !important;
+  height: 52px;
+  border: 1px solid #b4b3b9 !important;
+  border-radius: 12px !important;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none !important;
+  padding: 13px 15px !important;
+  margin: 0 !important;
+  color: #000 !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  cursor: pointer;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoField[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoField:-webkit-autofill,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoField:-webkit-autofill:hover,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoField:-webkit-autofill:focus,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoField:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 52px #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol.field-6
+  .mktoFieldWrap::after,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol.field-7
+  .mktoFieldWrap::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717757061/expel/2003/dropdown_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  select.mktoField {
+  padding-right: 37px !important;
+  appearance: none !important;
+  background-image: none;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  textarea.mktoField {
+  height: 91px;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.filled
+  .mktoField {
+  border-color: #747474 !important;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.active.typing
+  .mktoField {
+  border-color: #1762e6 !important;
+  caret-color: #1762e6;
+}
+body.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.error
+  .mktoField,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap.error.active.typing
+  .mktoField {
+  border-color: #e51b00 !important;
+  caret-color: #e51b00;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoError {
+  position: relative;
+  right: initial !important;
+  bottom: initial !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoError
+  .mktoErrorArrowWrap {
+  display: none;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoError
+  .mktoErrorMsg {
+  max-width: unset;
+  background: transparent;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717661831/expel/2003/frame_1.svg");
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+  box-shadow: none;
+  text-shadow: none;
+  margin: 0;
+  padding: 7px 0 7px 12px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  color: #e51b00;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding-left: 26px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoFieldWrap
+  .mktoError
+  #ValidMsgEmail.mktoErrorMsg
+  span.mktoErrorDetail {
+  padding-left: 3px;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol[data-wrapper-for="mktoCheckbox_27626_0 Privacy_Compliance_Explicit_Opt_In__c"]
+  .mktoLabel {
+  display: none;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList {
+  width: max-content !important;
+  padding: 0;
+  position: relative;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoCheckboxList
+  input {
+  position: absolute;
+  opacity: 0;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoCheckboxList
+  label {
+  margin: 0;
+  padding-left: 28px;
+  color: #747474 !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  position: relative;
+  cursor: pointer;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoCheckboxList
+  label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #747474;
+  border-radius: 5px;
+  top: 2px;
+  left: 0;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoCheckboxList
+  input:checked
+  + label::before {
+  background: #1762e6;
+  border-color: #1762e6;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol
+  .mktoCheckboxList
+  label::after {
+  position: absolute;
+  content: "";
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717664127/expel/2003/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  left: 3px;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .comment-toggler {
+  display: inline-block;
+  color: #1762e6;
+  font-family: proxima-nova, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .comment-toggler:hover {
+  color: #0e4c8a;
+}
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol.field-9
+  .comment-toggler.show-field,
+.spz-3003
+  .spz-form-baseline
+  form.mktoForm
+  .mktoFormCol.field-9
+  .comment-toggler:not(.show-field)
+  + .mktoFieldWrap {
+  display: none;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoButtonRow {
+  width: 100%;
+  margin: 6px auto 18px;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButtonWrap {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 !important;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 72px;
+  background: #1762e6;
+  background-image: none !important;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton:hover {
+  background: #0e4c8a;
+}
+.spz-3003 .spz-form-baseline form.mktoForm .mktoCaptchaDisclaimer {
+  display: none;
+}
+.spz-3003 .mktoForm .field-9 .mktoHtmlText {
+  width: 70% !important;
+  margin: 0 auto !important;
+  color: #747474 !important;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px;
+}
+.spz-3003 .mktoForm .field-9 .mktoHtmlText {
+  width: 100% !important;
+  text-align: left;
+}
+.spz-3003 .mktoForm .field-9 .mktoHtmlText a {
+  color: #131416;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+}
+.spz-3003 .mktoForm .field-9 .mktoHtmlText a:hover {
+  color: #0e4c8a;
+}
+/* Form CSS End Here */
+
+
+@media (max-width: 1023.98px) {
+  .spz-3003  .spz-form-baseline {
+    flex-flow: column-reverse;
+  }
+  .spz-3003 .spz-form-baseline .content-block,
+  .spz-3003 .spz-form-baseline .form-block {
+    width: 100%;
+    max-width: unset;
+  }
+  .spz-3003 .spz-form-baseline .content-block .hero-heading {
+    margin: 25px 0 8px 0;
+  }
+  .spz-3003 .spz-form-baseline .form-block {
+    margin-top: 48px;
+  }
+  .spz-3003 .spz-form-baseline .form-footer {
+    max-width: 58%;
+  }
+}
+@media (max-width: 767.98px) {
+
+  .spz-3003 .spz-form-baseline .form-block {
+    margin-top: 40px;
+  }
+  .spz-3003 .spz-form-baseline .form-block {
+    margin-top: 40px;
+    padding: 28px 20px !important;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step-header {
+    margin: 12px auto 10px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step_2 .step-header {
+    margin-bottom: 10px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step_3 .step-header {
+    margin-bottom: 19px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step-header .step-heading {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 3px 0 0;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step-header .step-question {
+    font-size: 16px;
+    line-height: 1.5;
+    margin: 5px 0 0;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .option-box .option-content {
+    padding: 15px 10px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .Option-text {
+    font-size: 14px;
+    line-height: 22px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step_2 .Option-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .Option-text br {
+    display: block;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .checkbox {
+    width: 16px;
+    height: 16px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .option-icon {
+    width: 40px;
+    height: 40px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .option-box .radio-option-item {
+    width: calc(50% - 4px);
+    height: 100px;
+    margin: 8px 0 0;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step-error img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step-error {
+    font-size: 11px;
+  }
+  .spz-3003 .spz-form-baseline .Questions-block .step-button {
+    margin: 18px auto 16px;
+  }
+  .spz-3003 .spz-form-baseline .form-footer {
+    max-width: 100%;
+  }
+  .spz-3003 .spz-form-baseline.current_step_3 .form-footer,
+  .spz-3003 .spz-form-baseline.current_step_4 .form-footer {
+    padding: 0 5px;
   }
 }
