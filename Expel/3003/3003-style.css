@@ -1,6 +1,6 @@
 .spz-3003 header.site-header,
 .spz-3003 #startchange,
-.spz-3003 main.site-main > *:not(#hero-section),
+.spz-3003 main.site-main > *:not(#hero-section):not(#stats-2-col),
 .spz-3003 #hero-section .row.hero .col.content,
 .spz-3003 footer#expel-footer .container-custom > *:not(.links-container) {
   display: none !important;
@@ -48,7 +48,7 @@
   display: inline-block;
   width: auto;
   height: auto;
-  margin-bottom: 17.5px;
+  margin-bottom: 32px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .site-logo-img {
@@ -65,7 +65,7 @@
   font-weight: 800;
   line-height: 64px !important;
   margin-top: -10px;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .s-copy {
@@ -75,6 +75,7 @@
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 12px;
+  max-width: 512px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .section-highlight-point {
@@ -91,7 +92,7 @@
   line-height: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 21px;
 }
 
 .spz-3003.form-expand #hero-section .hero .spz-content .section-highlight-point::after {
@@ -580,7 +581,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 
 /* Hero Client Logo CSS Start Here */
 .spz-3003 #hero-section .hero-client-logos {
-  margin-top: 80px;
+  margin-top: 80.5px;
 }
 
 .spz-3003 #hero-section .hero-client-logos .container {
@@ -869,7 +870,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
   }
 }
 .spz-3003 .spz-form-baseline {
-  width: 48.77%;
+  width: 50.9%;
   max-width: 594px;
 }
 
@@ -891,11 +892,6 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
           align-items: center;
 }
 
-.spz-3003 .spz-form-baseline.current_step_3 .form-block,
-.spz-3003 .spz-form-baseline.current_step_4 .form-block {
-  padding: 40px 36px;
-}
-
 .spz-3003 .spz-form-baseline .progress-bar {
   width: 172px;
   height: 4px;
@@ -911,7 +907,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 .spz-3003 .spz-form-baseline .progress-bar::before {
   position: absolute;
   content: "";
-  width: 33.33%;
+  width: 62px;
   height: 100%;
   background: #00a85d;
   border-radius: 44px 0 0 44px;
@@ -920,7 +916,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 }
 
 .spz-3003 .spz-form-baseline.current_step_2 .progress-bar::before {
-  width: 66.66%;
+  width: 100px;
 }
 
 .spz-3003 .spz-form-baseline.current_step_3 .progress-bar::before {
@@ -938,7 +934,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 }
 
 .spz-3003 .spz-form-baseline .Questions-block .step-header {
-  margin: 12px auto;
+  margin: 12px auto 0;
   text-align: center;
 }
 
@@ -947,7 +943,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 }
 
 .spz-3003 .spz-form-baseline .Questions-block .step_3 .step-header {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 
 .spz-3003 .spz-form-baseline .Questions-block .step-header .step-number {
@@ -1028,8 +1024,8 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 }
 
 .spz-3003 .spz-form-baseline .Questions-block .option-box .option-item {
-  width: calc(50% - 4px);
-  margin: 8px 0 0;
+  width: calc(50% - 10px);
+  margin: 20px 0 0;
   position: relative;
 }
 
@@ -1055,7 +1051,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
   background: rgba(23, 98, 230, 0.04);
   border-radius: 12px;
   border: 1px solid rgba(23, 98, 230, 0.36);
-  padding: 15px;
+  padding: 19.3px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1158,8 +1154,8 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   background: #031263;
   border-radius: 50px;
 }
@@ -1194,7 +1190,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 
 .spz-3003 .spz-form-baseline .Questions-block .Option-text {
   color: #031263;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
@@ -1279,6 +1275,9 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
           justify-content: space-between;
   padding: 0 !important;
   width: 100% !important;
+}
+.spz-3003 .spz-form-baseline form.mktoForm * {
+  font-family: proxima-nova, Arial, sans-serif;
 }
 
 /* .spz-3003 .spz-form-baseline form.mktoForm .field-5 ~ .mktoFormCol, */
@@ -1750,4 +1749,40 @@ body.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error
   .spz-3003 .spz-form-baseline.current_step_4 .form-footer {
     padding: 0 5px;
   }
+}
+.spz-3003 #stats-2-col {
+  padding: 64px 0;
+  background: #fff;
+}
+.spz-3003 #stats-2-col .container-custom .col.content {
+  max-width: 434px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 35%;
+          flex: 0 0 35%;
+}
+.spz-3003 #stats-2-col .container-custom .col.content h2 {
+  color: #031263;
+  font-size: 48px;
+  font-weight: 800;
+  line-height: 56px;
+  margin: 0;
+}
+.spz-3003 #stats-2-col .container-custom .col.content .section-subhead,
+.spz-3003 #stats-2-col .container-custom .col.content .section-button {
+  display: none !important;
+}
+.spz-3003 #stats-2-col .container-custom .col.stats > .row {
+  gap: 40px;
+}
+.spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat {
+  border: none;
+  outline: none;
+  width: 200px;
+  height: 154px;
+}
+.spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat:nth-child(1) img, .spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat:nth-child(2) img {
+  width: calc(100% + 74px);
+  height: auto;
+  margin: 0 -38px -24px;
+  max-width: inherit;
 }

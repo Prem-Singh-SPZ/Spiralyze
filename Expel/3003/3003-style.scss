@@ -1,6 +1,6 @@
 .spz-3003 header.site-header,
 .spz-3003 #startchange,
-.spz-3003 main.site-main > *:not(#hero-section),
+.spz-3003 main.site-main > *:not(#hero-section):not(#stats-2-col),
 .spz-3003 #hero-section .row.hero .col.content,
 .spz-3003 footer#expel-footer .container-custom > *:not(.links-container) {
   display: none !important;
@@ -42,7 +42,7 @@
   display: inline-block;
   width: auto;
   height: auto;
-  margin-bottom: 17.5px;
+  margin-bottom: 32px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .site-logo-img {
@@ -58,7 +58,7 @@
   font-weight: 800;
   line-height: 64px !important;
   margin-top: -10px;
-  margin-bottom: 30px;
+  margin-bottom: 22px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .s-copy {
@@ -68,6 +68,7 @@
   font-weight: 400;
   line-height: 24px;
   margin-bottom: 12px;
+  max-width: 512px;
 }
 
 .spz-3003 #hero-section .hero .spz-content .section-highlight-point {
@@ -84,7 +85,7 @@
   line-height: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin-bottom: 12px;
+  margin-bottom: 21px;
 }
 
 .spz-3003.form-expand
@@ -146,7 +147,7 @@
   margin-left: 8px;
 }
 
-.spz-3003 #hero-section .hero  .form-title {
+.spz-3003 #hero-section .hero .form-title {
   color: #131416;
   text-align: center;
   font-size: 32px;
@@ -156,11 +157,11 @@
   margin-bottom: 13px;
 }
 
-.spz-3003 #hero-section .hero  .form-description {
+.spz-3003 #hero-section .hero .form-description {
   display: none;
 }
 
-.spz-3003 #hero-section .hero  form.mktoForm {
+.spz-3003 #hero-section .hero form.mktoForm {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -721,7 +722,7 @@ body.spz-3003
 
 /* Hero Client Logo CSS Start Here */
 .spz-3003 #hero-section .hero-client-logos {
-  margin-top: 80px;
+  margin-top: 80.5px;
 }
 
 .spz-3003 #hero-section .hero-client-logos .container {
@@ -866,7 +867,7 @@ body.spz-3003
     margin: 4px 0 20px;
   }
 
-  .spz-3003 #hero-section .hero  {
+  .spz-3003 #hero-section .hero {
     margin-top: 48px;
     padding: 39px 40px 41.5px;
   }
@@ -951,12 +952,12 @@ body.spz-3003
     margin: 0 auto;
   }
 
-  .spz-3003 #hero-section .hero  {
+  .spz-3003 #hero-section .hero {
     padding: 27.5px 20px 29px;
     margin-top: 40px;
   }
 
-  .spz-3003 #hero-section .hero  .form-title {
+  .spz-3003 #hero-section .hero .form-title {
     font-size: 24px;
     line-height: 32px;
   }
@@ -1043,14 +1044,12 @@ body.spz-3003
   }
 }
 
-
 //form changes
-.spz-3003  .spz-form-baseline {
-  width: 48.77%;
+.spz-3003 .spz-form-baseline {
+  width: 50.9%;
   max-width: 594px;
 }
 .spz-3003 .spz-form-baseline .form-block {
- 
   background: #ffffff;
   border-radius: 16px;
   padding: 40px 41px;
@@ -1059,10 +1058,10 @@ body.spz-3003
   flex-flow: column;
   align-items: center;
 }
-.spz-3003 .spz-form-baseline.current_step_3 .form-block,
-.spz-3003 .spz-form-baseline.current_step_4 .form-block {
-  padding: 40px 36px;
-}
+// .spz-3003 .spz-form-baseline.current_step_3 .form-block,
+// .spz-3003 .spz-form-baseline.current_step_4 .form-block {
+//   padding: 40px 36px;
+// }
 .spz-3003 .spz-form-baseline .progress-bar {
   width: 172px;
   height: 4px;
@@ -1075,14 +1074,14 @@ body.spz-3003
 .spz-3003 .spz-form-baseline .progress-bar::before {
   position: absolute;
   content: "";
-  width: 33.33%;
+  width: 62px;
   height: 100%;
   background: #00a85d;
   border-radius: 44px 0 0 44px;
   transition: all 0.6s ease-in-out;
 }
 .spz-3003 .spz-form-baseline.current_step_2 .progress-bar::before {
-  width: 66.66%;
+  width: 100px;
 }
 .spz-3003 .spz-form-baseline.current_step_3 .progress-bar::before {
   width: 100%;
@@ -1096,14 +1095,14 @@ body.spz-3003
   width: 100%;
 }
 .spz-3003 .spz-form-baseline .Questions-block .step-header {
-  margin: 12px auto;
+  margin: 12px auto 0;
   text-align: center;
 }
 .spz-3003 .spz-form-baseline .Questions-block .step_2 .step-header {
   margin-bottom: 8px;
 }
 .spz-3003 .spz-form-baseline .Questions-block .step_3 .step-header {
-  margin-bottom: 18px;
+  margin-bottom: 20px;
 }
 .spz-3003 .spz-form-baseline .Questions-block .step-header .step-number {
   color: #00a85d;
@@ -1170,8 +1169,8 @@ body.spz-3003
   justify-content: space-between;
 }
 .spz-3003 .spz-form-baseline .Questions-block .option-box .option-item {
-  width: calc(50% - 4px);
-  margin: 8px 0 0;
+  width: calc(50% - 10px);
+  margin: 20px 0 0;
   position: relative;
 }
 .spz-3003 .spz-form-baseline .Questions-block .option-box input {
@@ -1194,7 +1193,7 @@ body.spz-3003
   background: rgba(23, 98, 230, 0.04);
   border-radius: 12px;
   border: 1px solid rgba(23, 98, 230, 0.36);
-  padding: 15px;
+  padding: 19.3px;
   display: flex;
   flex-wrap: wrap;
   flex-flow: column;
@@ -1312,8 +1311,8 @@ body.spz-3003
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-  width: 48px;
-  height: 48px;
+  width: 60px;
+  height: 60px;
   background: #031263;
   border-radius: 50px;
 }
@@ -1379,7 +1378,7 @@ body.spz-3003
 }
 .spz-3003 .spz-form-baseline .Questions-block .Option-text {
   color: #031263;
-  font-size: 16px;
+  font-size: 18px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
@@ -1449,6 +1448,10 @@ body.spz-3003
   justify-content: space-between;
   padding: 0 !important;
   width: 100% !important;
+
+  * {
+    font-family: proxima-nova, Arial, sans-serif;
+  }
 }
 /* .spz-3003 .spz-form-baseline form.mktoForm .field-5 ~ .mktoFormCol, */
 .spz-3003 .spz-form-baseline form.mktoForm .mktoClear,
@@ -1951,9 +1954,8 @@ body.spz-3003
 }
 /* Form CSS End Here */
 
-
 @media (max-width: 1023.98px) {
-  .spz-3003  .spz-form-baseline {
+  .spz-3003 .spz-form-baseline {
     flex-flow: column-reverse;
   }
   .spz-3003 .spz-form-baseline .content-block,
@@ -1972,7 +1974,6 @@ body.spz-3003
   }
 }
 @media (max-width: 767.98px) {
-
   .spz-3003 .spz-form-baseline .form-block {
     margin-top: 40px;
   }
@@ -2043,5 +2044,54 @@ body.spz-3003
   .spz-3003 .spz-form-baseline.current_step_3 .form-footer,
   .spz-3003 .spz-form-baseline.current_step_4 .form-footer {
     padding: 0 5px;
+  }
+}
+
+//second section starts here
+.spz-3003 #stats-2-col {
+  padding: 64px 0;
+  background: #fff;
+
+  .container-custom {
+    .col.content {
+      max-width: 434px;
+      flex: 0 0 35%;
+
+      h2 {
+        color: #031263;
+        font-size: 48px;
+        font-weight: 800;
+        line-height: 56px;
+        margin: 0;
+      }
+
+      .section-subhead,
+      .section-button {
+        display: none !important;
+      }
+    }
+
+    .col.stats {
+      > .row {
+        gap: 40px;
+
+        .single-stat {
+          border: none;
+          outline: none;
+          width: 200px;
+          height: 154px;
+
+          &:nth-child(1),
+          &:nth-child(2) {
+            img {
+              width: calc(100% + 74px);
+              height: auto;
+              margin: 0 -38px -24px;
+              max-width: inherit;
+            }
+          }
+        }
+      }
+    }
   }
 }
