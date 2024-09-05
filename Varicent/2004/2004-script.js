@@ -30,6 +30,7 @@ let bodyLoaded = setInterval(function () {
 
                 // let txtChange = setInterval(function () {
                 document.querySelector(formParent + ' .hs-form.hs-custom-form .hs-button').setAttribute('value', 'INSTANT ACCESS');
+                document.querySelector(formParent + ' .hs-form.hs-custom-form .hs-button').classList.add('spz-2004-tracking');
                 // }, 100);
             });
         }
