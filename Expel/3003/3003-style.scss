@@ -1207,6 +1207,11 @@ body.spz-3003
   width: calc(50% - 10px);
   margin: 20px 0 0;
   position: relative;
+
+  @media screen and (max-width: 767.98px) {
+    width: calc(50% - 6px);
+    margin: 12px 0 0;
+  }
 }
 .spz-3003 .spz-form-baseline .Questions-block .option-box input {
   position: absolute;
@@ -1424,6 +1429,10 @@ body.spz-3003
   line-height: 24px;
   text-align: center;
   margin: 12px 0 0;
+
+  @media screen and (max-width: 767.98px) {
+    margin: 8px 0 0;
+  }
 }
 .spz-3003 .spz-form-baseline .Questions-block .step_2 .Option-text {
   margin: 0;
@@ -2019,7 +2028,7 @@ body.spz-3003
     padding: 28px 20px !important;
   }
   .spz-3003 .spz-form-baseline .Questions-block .step-header {
-    margin: 12px auto 10px;
+    margin: 12px auto 5.5px;
   }
   .spz-3003 .spz-form-baseline .Questions-block .step_2 .step-header {
     margin-bottom: 10px;
@@ -2038,7 +2047,7 @@ body.spz-3003
     margin: 5px 0 0;
   }
   .spz-3003 .spz-form-baseline .Questions-block .option-box .option-content {
-    padding: 15px 10px;
+    padding: 15px 10px 16px;
   }
   .spz-3003 .spz-form-baseline .Questions-block .Option-text {
     font-size: 14px;
@@ -2054,24 +2063,26 @@ body.spz-3003
   .spz-3003 .spz-form-baseline .Questions-block .checkbox {
     width: 16px;
     height: 16px;
+    top: 11px;
+    left: 11px;
   }
   .spz-3003 .spz-form-baseline .Questions-block .option-icon {
-    width: 40px;
-    height: 40px;
+    width: 32px;
+    height: 32px;
   }
   .spz-3003 .spz-form-baseline .Questions-block .option-box .radio-option-item {
     width: calc(50% - 4px);
     height: 100px;
     margin: 8px 0 0;
   }
-//   .spz-3003 .spz-form-baseline .Questions-block .step-error img {
-//     width: 16px;
-//     height: 16px;
-//     margin-right: 4px;
-//   }
-//   .spz-3003 .spz-form-baseline .Questions-block .step-error {
-//     font-size: 11px;
-//   }
+  //   .spz-3003 .spz-form-baseline .Questions-block .step-error img {
+  //     width: 16px;
+  //     height: 16px;
+  //     margin-right: 4px;
+  //   }
+  //   .spz-3003 .spz-form-baseline .Questions-block .step-error {
+  //     font-size: 11px;
+  //   }
   .spz-3003 .spz-form-baseline .Questions-block .step-button {
     margin: 18px auto 16px;
   }
