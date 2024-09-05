@@ -76,18 +76,21 @@ body.spz-2004 {
     .row-number-1 {
       overflow: hidden;
       padding-top: 32px !important;
-      background:  #2B4FF4 !important;
+      background: #2b4ff4 !important;
+      padding-bottom: 118.5px !important;
 
       @media (max-width: 1024.98px) {
         padding: 32px 20px 58px !important;
       }
 
       @media (max-width: 767.98px) {
-        padding: 24px 4px 58px !important;
+        padding: 24px 4px 52.5px !important;
       }
 
       > .row-fluid {
         max-width: 1204px;
+        align-items: center;
+        margin-top: 54px;
 
         @media (max-width: 1024.98px) {
           flex-direction: column;
@@ -99,17 +102,24 @@ body.spz-2004 {
 
         > .widget-type-cell:first-child {
           .widget-type-rich_text {
+            @media (min-width: 1024.98px) {
+              margin-bottom: 34px;
+            }
+
             .hs_cos_wrapper_type_rich_text {
               > img {
                 max-width: 182px !important;
+                position: absolute;
+                top: 32px;
 
                 @media (max-width: 767.98px) {
                   max-width: 141px !important;
+                  top: 24px;
                 }
               }
 
               > .fw-bold {
-                margin-top: 105.5px !important;
+                // margin-top: 147px !important;
                 font-size: 48px;
                 font-weight: 600;
                 line-height: 64px;
@@ -117,13 +127,13 @@ body.spz-2004 {
                 margin-bottom: 25px !important;
 
                 @media (max-width: 1024.98px) {
-                  margin-top: 31.5px !important;
+                  margin-top: 13.5px !important;
                   margin-bottom: 16.5px !important;
                   max-width: 600px;
                 }
 
                 @media (max-width: 767.98px) {
-                  margin-top: 32px !important;
+                  margin-top: 6px !important;
                   margin-bottom: 16px !important;
                   font-size: 36px;
                   line-height: 48px;
@@ -144,7 +154,6 @@ body.spz-2004 {
 
         > .widget-type-cell:last-child {
           .row-number-4 {
-            margin-top: 54px;
 
             @media screen and (max-width: 1024.98px) {
               margin-top: -6px;
@@ -163,10 +172,11 @@ body.spz-2004 {
               @media (max-width: 1024.98px) {
                 margin-left: 0;
                 max-width: 100%;
+                padding-bottom: 36px;
               }
 
               @media (max-width: 767.98px) {
-                padding: 24px 19px 40px;
+                padding: 24px 19px 36px;
               }
 
               &::before,
@@ -208,14 +218,14 @@ body.spz-2004 {
                     max-height: 36px;
 
                     &:not(.invalid):not(.error) {
-                      border-color: transparent !important;
+                      border: none !important;
                     }
                   }
 
                   select.hs-input {
                     height: 38px;
                     max-height: 38px;
-                    background-position: right 1.5rem center;
+                    // background-position: right 1.5rem center;
                   }
 
                   .hs-form-booleancheckbox {
@@ -250,7 +260,7 @@ body.spz-2004 {
                       height: 16px;
                       border-radius: 3px;
                       background: #fff;
-                      top: 4px;
+                      top: 3px;
                       left: 0;
                     }
 
@@ -280,6 +290,62 @@ body.spz-2004 {
                     }
                   }
                 }
+
+                .hs-recaptcha {
+                  width: 100%;
+                  float: none;
+
+                  .input {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                  }
+                }
+
+                .hs-submit {
+                  width: 100%;
+                  float: none;
+                  margin-top: 24px;
+
+                  @media (min-width: 767.98px) and (max-width: 1024.98px) {
+                    margin-top: 26.5px;
+                  }
+
+                  .actions {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+
+                    .hs-button {
+                      border-radius: 39px;
+                      box-shadow: 0px 4px 8px 0px rgba(0, 0, 0, 0.12);
+                      color: #2b4ff4;
+                      text-align: center;
+                      leading-trim: both;
+                      text-edge: cap;
+                      font-family: Inter, sans-serif;
+                      font-size: 13px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: 21.32px;
+                      letter-spacing: 2px;
+                      text-transform: uppercase;
+                      height: 50px;
+                      width: 205px;
+                      white-space: nowrap;
+                      border-color: transparent;
+
+                      &:hover {
+                        border-color: #0327cc;
+                      }
+
+                      @media screen and (max-width: 767.98px) {
+                        width: 100%;
+                        
+                      }
+                    }
+                  }
+                }
               }
             }
           }
@@ -289,6 +355,10 @@ body.spz-2004 {
 
     .spz-tab-copy {
       .copy-inner {
+        @media screen and (max-width: 1024.98px) {
+          margin-top: 32px;
+        }
+
         p {
           font-size: 16px !important;
           font-weight: 400;
