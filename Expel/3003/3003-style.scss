@@ -740,10 +740,18 @@ body.spz-3003
 
   &.current_step_2 {
     margin-top: 73.5px;
+
+    @media (max-width: 1024.98px) {
+      margin-top: 64.5px;
+    }
   }
 
   &.current_step_3 {
     margin-top: 68.5px;
+
+    @media (max-width: 1024.98px) {
+      margin-top: 65.5px;
+    }
   }
 }
 
@@ -841,7 +849,7 @@ body.spz-3003
   }
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3003
     #hero-section
     form.mktoForm
@@ -854,7 +862,7 @@ body.spz-3003
   }
 }
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3003 #hero-section {
     // min-height: calc(100vh - 104px);
     // background-size: 1440px 1157px;
@@ -872,7 +880,7 @@ body.spz-3003
 
   .spz-3003 #hero-section .row.hero > .col {
     width: 100%;
-    max-width: unset;
+    max-width: 700px;
     margin: 16px 0 32px;
   }
 
@@ -930,9 +938,9 @@ body.spz-3003
 
 @media (max-width: 767.98px) {
   .spz-3003 #hero-section {
-    min-height: calc(100vh - 240px);
+    // min-height: calc(100vh - 240px);
     padding: 64px 0 65px !important;
-    background-position: 0 1px;
+    // background-position: 0 1px;
   }
 
   .spz-3003 #hero-section .hero .spz-content .section-heading {
@@ -1267,11 +1275,16 @@ body.spz-3003
   width: 20px;
   height: 20px;
   border: 1px solid rgba(23, 98, 230, 0.36);
-  border-radius: 4px;
+  border-radius: 2px;
   display: inline-flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
+
+  //   @media (max-width: 1024.98px) {
+  //     top: 13px;
+  //     left: 13px;
+  //   }
 }
 .spz-3003 .spz-form-baseline .Questions-block .radio {
   border-radius: 32px;
@@ -1981,7 +1994,7 @@ body.spz-3003
 }
 /* Form CSS End Here */
 
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3003 .spz-form-baseline {
     flex-flow: column-reverse;
   }
@@ -2088,13 +2101,16 @@ body.spz-3003
       @media (max-width: 1199.98px) {
         gap: 16px;
       }
+      @media (max-width: 1024.98px) {
+        flex-direction: column;
+      }
     }
     .col.content {
       max-width: 434px;
       flex: 0 0 35%;
 
       @media (max-width: 1024.98px) {
-        max-width: 100%;
+        max-width: 692px;
         flex: 0 0 100%;
       }
 
@@ -2130,11 +2146,20 @@ body.spz-3003
           justify-content: space-between;
         }
 
+        @media (max-width: 767.98px) {
+          justify-content: center;
+          flex-direction: column;
+        }
+
         .single-stat {
           border: none;
           outline: none;
           width: 200px;
           height: 154px;
+
+          @media (max-width: 767.98px) {
+            width: 284px;
+          }
 
           &:nth-child(1),
           &:nth-child(2) {

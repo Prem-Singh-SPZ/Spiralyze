@@ -288,9 +288,18 @@ let bodyLoaded = setInterval(function () {
                 });
 
                 //second section updates
-                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = '<img src="//res.cloudinary.com/spiralyze/image/upload/v1725524579/expel/3003/gartner.svg" alt="Gartner Insights">';
-                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[1].innerHTML = '<img src="//res.cloudinary.com/spiralyze/image/upload/v1725524579/expel/3003/g2_logo.svg" alt="G2 Logo">';
-                document.querySelectorAll('#stats-2-col .col.stats .single-stat')[2].innerHTML = '<img src="//res.cloudinary.com/spiralyze/image/upload/v1725524579/expel/3003/nps_75.svg" alt="Customer NPS 75">';
+                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = `<picture>
+                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/gartner.svg">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/gartner_mobile.svg" alt="Gartner Insights">
+                    </picture>`;
+                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[1].innerHTML = `<picture>
+                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_logo.svg">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2-mobile.svg" alt="G2 Logo">
+                    </picture>`;
+                document.querySelectorAll('#stats-2-col .col.stats .single-stat')[2].innerHTML = `<picture>
+                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/nps_75.svg">
+                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/nps-mobile.svg" alt="Customer NPS 75">
+                    </picture>`;
             });
         }
     }

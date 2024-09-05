@@ -607,8 +607,18 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 .spz-3003 #hero-section .hero-client-logos.current_step_2 {
   margin-top: 73.5px;
 }
+@media (max-width: 1024.98px) {
+  .spz-3003 #hero-section .hero-client-logos.current_step_2 {
+    margin-top: 64.5px;
+  }
+}
 .spz-3003 #hero-section .hero-client-logos.current_step_3 {
   margin-top: 68.5px;
+}
+@media (max-width: 1024.98px) {
+  .spz-3003 #hero-section .hero-client-logos.current_step_3 {
+    margin-top: 65.5px;
+  }
 }
 
 .spz-3003 #hero-section .hero-client-logos .container {
@@ -703,12 +713,12 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
     padding-left: 3px;
   }
 }
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg span.mktoErrorDetail {
     padding-left: 3px;
   }
 }
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3003 #hero-section {
     padding: 48px 20px 80px !important;
   }
@@ -717,7 +727,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
     } */
   .spz-3003 #hero-section .row.hero > .col {
     width: 100%;
-    max-width: unset;
+    max-width: 700px;
     margin: 16px 0 32px;
   }
   /* .spz-3003 #hero-section .hero .spz-content .section-highlight-point::after, .spz-3003 #hero-section .hero ::after {
@@ -761,9 +771,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
 }
 @media (max-width: 767.98px) {
   .spz-3003 #hero-section {
-    min-height: calc(100vh - 240px);
     padding: 64px 0 65px !important;
-    background-position: 0 1px;
   }
   .spz-3003 #hero-section .hero .spz-content .section-heading {
     max-width: 100%;
@@ -1113,7 +1121,7 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
   width: 20px;
   height: 20px;
   border: 1px solid rgba(23, 98, 230, 0.36);
-  border-radius: 4px;
+  border-radius: 2px;
   display: -webkit-inline-box;
   display: -ms-inline-flexbox;
   display: inline-flex;
@@ -1676,7 +1684,7 @@ body.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error
 }
 
 /* Form CSS End Here */
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-3003 .spz-form-baseline {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -1782,6 +1790,14 @@ body.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error
     gap: 16px;
   }
 }
+@media (max-width: 1024.98px) {
+  .spz-3003 #stats-2-col .container-custom > .row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .spz-3003 #stats-2-col .container-custom .col.content {
   max-width: 434px;
   -webkit-box-flex: 0;
@@ -1790,7 +1806,7 @@ body.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error
 }
 @media (max-width: 1024.98px) {
   .spz-3003 #stats-2-col .container-custom .col.content {
-    max-width: 100%;
+    max-width: 692px;
     -webkit-box-flex: 0;
         -ms-flex: 0 0 100%;
             flex: 0 0 100%;
@@ -1829,11 +1845,27 @@ body.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error
             justify-content: space-between;
   }
 }
+@media (max-width: 767.98px) {
+  .spz-3003 #stats-2-col .container-custom .col.stats > .row {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 .spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat {
   border: none;
   outline: none;
   width: 200px;
   height: 154px;
+}
+@media (max-width: 767.98px) {
+  .spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat {
+    width: 284px;
+  }
 }
 .spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat:nth-child(1) img, .spz-3003 #stats-2-col .container-custom .col.stats > .row .single-stat:nth-child(2) img {
   width: calc(100% + 74px);
