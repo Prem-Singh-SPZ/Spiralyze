@@ -508,7 +508,10 @@ $inter: Inter, sans-serif;
         .hs-input {
           background: #ffe5e5 !important;
           border-color: #e00000 !important;
-          color: $red;
+
+          &:not(select) {
+            color: $red;
+          }
         }
       }
       .legal-consent-container {
