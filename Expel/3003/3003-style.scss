@@ -744,6 +744,10 @@ body.spz-3003
     @media (max-width: 1024.98px) {
       margin-top: 64.5px;
     }
+
+    @media (max-width: 767.98px) {
+      margin-top: 49px;
+    }
   }
 
   &.current_step_3 {
@@ -751,6 +755,10 @@ body.spz-3003
 
     @media (max-width: 1024.98px) {
       margin-top: 65.5px;
+    }
+
+    @media (max-width: 767.98px) {
+      margin-top: 48px;
     }
   }
 }
@@ -1014,7 +1022,7 @@ body.spz-3003
   }
 
   .spz-3003 #hero-section form.mktoForm .mktoButtonRow {
-    margin: 8px auto 15px;
+    margin: 6px auto 15px;
   }
 
   .spz-3003.form-expand #hero-section form.mktoForm .mktoButtonRow {
@@ -1022,7 +1030,7 @@ body.spz-3003
   }
 
   .spz-3003 #hero-section .hero-client-logos {
-    margin-top: 45px;
+    margin-top: 49px;
   }
 
   .spz-3003 #hero-section .hero-client-logos .client-logo {
@@ -1360,6 +1368,11 @@ body.spz-3003
   height: 60px;
   background: #031263;
   border-radius: 50px;
+
+  svg {
+    width: 32px;
+    height: 32px;
+  }
 }
 .spz-3003
   .spz-form-baseline
@@ -2025,7 +2038,7 @@ body.spz-3003
 @media (max-width: 767.98px) {
   .spz-3003 .spz-form-baseline .form-block {
     margin-top: 24px;
-    padding: 28px 20px !important;
+    padding: 28px 20px 30px !important;
   }
   .spz-3003 .spz-form-baseline .Questions-block .step-header {
     margin: 12px auto 5.5px;
@@ -2053,10 +2066,10 @@ body.spz-3003
     font-size: 14px;
     line-height: 22px;
   }
-  .spz-3003 .spz-form-baseline .Questions-block .step_2 .Option-text {
-    font-size: 16px;
-    line-height: 1.5;
-  }
+  //   .spz-3003 .spz-form-baseline .Questions-block .step_2 .Option-text {
+  //     font-size: 16px;
+  //     line-height: 1.5;
+  //   }
   .spz-3003 .spz-form-baseline .Questions-block .Option-text br {
     display: block;
   }
@@ -2066,13 +2079,21 @@ body.spz-3003
     top: 11px;
     left: 11px;
   }
+  .spz-3003 .spz-form-baseline .Questions-block .radio {
+    top: 11px;
+    left: 11px;
+  }
   .spz-3003 .spz-form-baseline .Questions-block .option-icon {
     width: 32px;
     height: 32px;
+    svg {
+      width: 16px;
+      height: 16px;
+    }
   }
   .spz-3003 .spz-form-baseline .Questions-block .option-box .radio-option-item {
     width: calc(50% - 4px);
-    height: 100px;
+    height: 98px;
     margin: 8px 0 0;
   }
   //   .spz-3003 .spz-form-baseline .Questions-block .step-error img {
@@ -2091,7 +2112,7 @@ body.spz-3003
   }
   .spz-3003 .spz-form-baseline.current_step_3 .form-footer,
   .spz-3003 .spz-form-baseline.current_step_4 .form-footer {
-    padding: 0 5px;
+    padding: 0;
   }
 }
 
@@ -2102,6 +2123,10 @@ body.spz-3003
 
   @media (max-width: 1024.98px) {
     padding: 62.5px 0;
+  }
+
+  @media (max-width: 767.98px) {
+    padding: 23.5px 0 2px;
   }
 
   .container-custom {
@@ -2128,6 +2153,13 @@ body.spz-3003
         font-weight: 800;
         line-height: 56px;
         margin: 0;
+
+        @media screen and (max-width: 767.98px) {
+          font-size: 32px;
+          line-height: 40px;
+          max-width: 90%;
+          margin: auto;
+        }
       }
 
       .section-subhead,
@@ -2140,6 +2172,10 @@ body.spz-3003
       @media (max-width: 1024.98px) {
         margin: 26px 0 0;
         max-width: 692px;
+      }
+
+      @media (max-width: 767.98px) {
+        margin: 16px 0 0;
       }
 
       > .row {
@@ -2164,9 +2200,12 @@ body.spz-3003
           outline: none;
           width: 200px;
           height: 154px;
+          overflow: hidden;
 
           @media (max-width: 767.98px) {
             width: 284px;
+            max-width: 284px;
+            margin-bottom: 20.5px;
           }
 
           &:nth-child(1),
