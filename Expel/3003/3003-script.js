@@ -8,7 +8,7 @@ let bodyLoaded = setInterval(function () {
                 document.querySelector('#hero-section .row.hero .col.content').insertAdjacentHTML('afterend', `
                     <div class="col spz-content">
                         <a href="https://expel.com/" class="site-logo-link" rel="home">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1718963562/expel/3003/expel_logosvg.svg" class="site-logo-img" alt="Expel">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/expel_logosvg.svg" class="site-logo-img" alt="Expel">
                         </a>
                         <p class="eye-brow-text">Our Pricing</p>
                         <h1 class="section-heading">Expel pricing: flexibility, transparency, & ROI</h1>
@@ -288,14 +288,10 @@ let bodyLoaded = setInterval(function () {
                 });
 
                 //second section updates
-                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = `<picture>
-                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/gartner.svg">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/gartner_mobile.svg" alt="Gartner Insights">
-                    </picture>`;
-                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[1].innerHTML = `<picture>
-                    <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_logo.svg">
-                    <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2-mobile.svg" alt="G2 Logo">
-                    </picture>`;
+                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = `<div class="gartner-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3003/g2_crowd_1.webp" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3003/stars.webp" alt="Rating"></div>`;
+
+                document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[1].innerHTML = `<div class="g2-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3003/g2_crowd_2.webp" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3003/stars.webp" alt="Rating"></div>
+                <picture>`;
                 document.querySelectorAll('#stats-2-col .col.stats .single-stat')[2].innerHTML = `<picture>
                     <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/nps_75.svg">
                     <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/nps-mobile.svg" alt="Customer NPS 75">
@@ -338,19 +334,7 @@ function formModify() {
     document.querySelector('#Company_Size__c').options[0].textContent = 'Select';
     document.querySelector('#LblPerson_Country__c').textContent = "Country";
     document.querySelector('#LblpersonNotestoAppend').textContent = "What would you like to see?";
-    // if (document.querySelector('.mktoForm .spz-privacy-policy .mktoHtmlText')) {
-    //     document.querySelector('.mktoForm .spz-privacy-policy .mktoHtmlText').innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`;
-    // }
 
-    // form CTA Update
-    //   let form_CTA = setInterval(() => {
-    //     let textChng = document.querySelector('#hero-section .hero  form.mktoForm .mktoButtonRow .mktoButton');
-    //     if (textChng && !textChng.classList.contains('updated')) {
-    //       textChng.innerHTML = '<svg width="19" height="18" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M14.745 8.188L4.958 2.362a.738.738 0 00-.383-.112.701.701 0 00-.696.703h-.004v12.094h.004c0 .387.312.703.696.703.144 0 .263-.05.393-.12l9.777-5.818a1.06 1.06 0 000-1.624z" fill="#fff"/></svg> Instant access ';
-    //       textChng.classList.add('updated');
-    //       clearInterval(form_CTA);
-    //     }
-    //   }, 100);
 
     // Change Field Position
     var phone_field = document.querySelector('.mktoForm .phone');
