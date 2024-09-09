@@ -222,11 +222,11 @@ let bodyLoaded = setInterval(function () {
 									}
 								}, 250);
 
-								// if (document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-company').style.display != 'none') {
-								// 	document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.remove('full-width');
-								// } else {
-								// 	document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.add('full-width');
-								// }
+								if (document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-company').style.display != 'none') {
+									document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.remove('full-width');
+								} else {
+									document.querySelector('.spz-1005 form.hs-form.hs-custom-form .hs-form-field.hs-country').classList.add('full-width');
+								}
 							}
 						}
 					});
