@@ -288,7 +288,7 @@ let bodyLoaded = setInterval(function () {
         });
 
         //second section updates
-        document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = `<div class="gartner-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_5.svg" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>`;
+        document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = `<div class="gartner-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_7.svg" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>`;
 
         document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[1].innerHTML = `<div class="g2-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_4.svg" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>
                 <picture>`;
