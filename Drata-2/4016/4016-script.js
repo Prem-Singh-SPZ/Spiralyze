@@ -1,5 +1,5 @@
 const lottieLib = document.createElement('script');
-lottieLib.src = 'https://unpkg.com/@lottiefiles/lottie-player@1.5.7/dist/lottie-player.js';
+lottieLib.src = 'https://cdnjs.cloudflare.com/ajax/libs/lottie-player/2.0.4/lottie-player.js';
 document.head.appendChild(lottieLib);
 let player = document.querySelector("lottie-player");
 
