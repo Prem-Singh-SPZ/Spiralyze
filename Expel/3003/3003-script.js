@@ -127,9 +127,9 @@ let bodyLoaded = setInterval(function () {
                                   </div>
                                 </div>
                               </div>
-                              <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/v1719411165/expel/3003/frame_6.svg" alt="Error Icon">Please select at least one option.</div>
+                              <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/frame_6.svg" alt="Error Icon">Please select at least one option.</div>
                             </div>
-                            <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/v1721713185/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
+                            <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
                           </div>
                           <div class="form-step step_2">
                             <div class="step-header">
@@ -194,9 +194,9 @@ let bodyLoaded = setInterval(function () {
                                   </div>
                                 </div>
                               </div>
-                              <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/v1719411165/expel/3003/frame_6.svg" alt="Error Icon">Please select at least one option.</div>
+                              <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/frame_6.svg" alt="Error Icon">Please select at least one option.</div>
                             </div>
-                            <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/v1721713185/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
+                            <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
                           </div>
                           <div class="form-step step_3">
                             <div class="step-header">

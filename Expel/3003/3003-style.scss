@@ -7,7 +7,7 @@
 }
 
 .spz-3003 #hero-section {
-  min-height: calc(100vh - 70px);
+  // min-height: calc(100vh - 70px);
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3003/bg_1440.webp");
   background-size: cover;
   background-position: top right;
@@ -826,14 +826,6 @@ body.spz-3003
 }
 
 /* Hero Client Logo CSS End Here */
-
-@media (min-width: 1920px) {
-  .spz-3003 #hero-section {
-    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/3002/1920.webp");
-    background-size: 100%;
-  }
-}
-
 @media (max-width: 1199.98px) {
   .spz-3003.form-expand
     #hero-section
@@ -2237,11 +2229,11 @@ body.spz-3003
                 justify-content: center;
                 align-items: center;
                 border-radius: 47px;
-                border: 1px solid #f4f4f4;
                 background: #fff;
                 box-shadow: 0px 0px 36.2px 0px rgba(0, 0, 0, 0.08);
-
+                
                 img {
+                  border: 1px solid #f4f4f4;
                   border-radius: 47px;
 
                   @media (max-width: 767.98px) {
