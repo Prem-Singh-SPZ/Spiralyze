@@ -358,7 +358,7 @@ function formModify() {
   var comment_toggler = document.querySelector(".mktoForm .personnotestoappend .comment-toggler");
   comment_toggler.addEventListener("click", (event) => {
     comment_toggler.classList.add("show-field");
-    document.querySelector('.mktoForm .personnotestoappend textarea.mktoField').focus();
+    document.querySelector('.mktoForm .personnotestoappend .mktoField').focus();
   });
 
 
