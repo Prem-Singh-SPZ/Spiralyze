@@ -88,6 +88,10 @@
   margin-bottom: 12px;
   max-width: 512px;
 
+  &:last-child {
+    margin-bottom: 0;
+  }
+
   @media (max-width: 1199.98px) {
     max-width: 100%;
   }
@@ -314,6 +318,7 @@
   width: 100% !important;
   font-style: normal;
   font-weight: inherit !important;
+  padding: 0;
 }
 
 .spz-3003
@@ -658,6 +663,7 @@ body.spz-3003
   font-style: normal;
   font-weight: 700;
   line-height: 26px;
+  padding: 0;
 }
 
 .spz-3003 #hero-section form.mktoForm .comment-toggler:hover {
@@ -746,29 +752,29 @@ body.spz-3003
 .spz-3003 #hero-section .hero-client-logos {
   margin-top: 80.5px;
 
-  &.current_step_2 {
-    margin-top: 73.5px;
+  // &.current_step_2 {
+  //   margin-top: 73.5px;
 
-    @media (max-width: 1024.98px) {
-      margin-top: 64.5px;
-    }
+  //   @media (max-width: 1024.98px) {
+  //     margin-top: 64.5px;
+  //   }
 
-    @media (max-width: 767.98px) {
-      margin-top: 49px;
-    }
-  }
+  //   @media (max-width: 767.98px) {
+  //     margin-top: 49px;
+  //   }
+  // }
 
-  &.current_step_3 {
-    margin-top: 68.5px;
+  // &.current_step_3 {
+  //   margin-top: 68.5px;
 
-    @media (max-width: 1024.98px) {
-      margin-top: 65.5px;
-    }
+  //   @media (max-width: 1024.98px) {
+  //     margin-top: 65.5px;
+  //   }
 
-    @media (max-width: 767.98px) {
-      margin-top: 48px;
-    }
-  }
+  //   @media (max-width: 767.98px) {
+  //     margin-top: 48px;
+  //   }
+  // }
 }
 
 .spz-3003 #hero-section .hero-client-logos .container {
@@ -1284,8 +1290,8 @@ body.spz-3003
 .spz-3003 .spz-form-baseline .Questions-block .checkbox,
 .spz-3003 .spz-form-baseline .Questions-block .radio {
   position: absolute;
-  top: 7px;
-  left: 7px;
+  top: 11px;
+  left: 11px;
   width: 20px;
   height: 20px;
   border: 1px solid rgba(23, 98, 230, 0.36);
@@ -2186,7 +2192,7 @@ body.spz-3003
         gap: 40px;
 
         @media (max-width: 1199.98px) {
-          gap: 8px;
+          gap: 12px;
         }
 
         @media (max-width: 1024.98px) {
@@ -2240,13 +2246,14 @@ body.spz-3003
                 border-radius: 47px;
                 background: #fff;
                 box-shadow: 0px 0px 36.2px 0px rgba(0, 0, 0, 0.08);
+                border: 1px solid #f4f4f4;
+                overflow: hidden;
 
                 img {
-                  border: 1px solid #f4f4f4;
                   border-radius: 47px;
+                  height: 36px;
 
                   @media (max-width: 767.98px) {
-                    height: 100%;
                     width: 200px;
                     margin-left: 0;
                   }
