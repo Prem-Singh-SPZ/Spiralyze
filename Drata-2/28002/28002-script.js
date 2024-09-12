@@ -61,7 +61,7 @@
 
     function createTest() {
         waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
-            document.querySelector("body").classList.add("spz-28001");
+            document.querySelector("body").classList.add("spz-28002");
 
             let updatePage = setInterval(() => {
                 waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
@@ -88,11 +88,11 @@
             submitTestDetails('Variant_28001');
         });
 
-        createCookie('spz-28001-loaded', 'true', 1);
+        createCookie('spz-28002-loaded', 'true', 1);
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-28001");
+        document.body.classList.remove("spz-28002");
         let removePage = setInterval(() => {
             if (document.querySelector('.spz-sec')) {
                 document.querySelectorAll('.spz-sec').forEach(function (sec) {
@@ -117,12 +117,12 @@
         const sInt = setInterval(() => {
             var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
 
-            // Check if spz-28001-loaded cookie is present and cro_field is present
-            if ((cro_field && cro_field.val != '') && isCookieExist('spz-28001-loaded')) {
+            // Check if spz-28002-loaded cookie is present and cro_field is present
+            if ((cro_field && cro_field.val != '') && isCookieExist('spz-28002-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Variant_28001');
+                submitTestDetails('Variant_28002');
 
-                deleteCookie('spz-28001-loaded');
+                deleteCookie('spz-28002-loaded');
             }
         }, 1000);
 
@@ -249,8 +249,8 @@
         });
 
         //header arrow change
-        if (document.querySelector('body.spz-28001 ul[class*=MuiList-root-Header-headerMenuCtas] a.MuiTypography-darkL .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit')) {
-            document.querySelector('body.spz-28001 ul[class*=MuiList-root-Header-headerMenuCtas] a.MuiTypography-darkL .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit').outerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/right_chevron.png" alt="Arrow" style="width: 10px;margin-left: 19px;margin-right: 3px;">`;
+        if (document.querySelector('body.spz-28002 ul[class*=MuiList-root-Header-headerMenuCtas] a.MuiTypography-darkL .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit')) {
+            document.querySelector('body.spz-28002 ul[class*=MuiList-root-Header-headerMenuCtas] a.MuiTypography-darkL .MuiSvgIcon-root.MuiSvgIcon-fontSizeInherit').outerHTML = `<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/right_chevron.png" alt="Arrow" style="width: 10px;margin-left: 19px;margin-right: 3px;">`;
         }
     }
 
@@ -389,7 +389,7 @@
                                     <div class="ss-step step-1">1</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <video allow="autoplay" muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_2.webp">
+                                            <video loop muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_2.webp">
                                                 <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_1.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -402,7 +402,7 @@
                                     <div class="ss-step step-2">2</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <video allow="autoplay" muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_3.webp">
+                                            <video loop muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_3.webp">
                                                 <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_2.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -415,7 +415,7 @@
                                     <div class="ss-step step-3">3</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                           <video allow="autoplay" muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_5.webp">
+                                           <video loop muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_5.webp">
                                                 <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_3.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -436,38 +436,48 @@
 
         complianceChanges();
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
-        // document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
-        //     item.addEventListener('mouseover', function () {
-        //         document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-        //         document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
-        //     });
+        if (window.innerWidth >= 1024) {
+            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+                item.addEventListener('mouseover', function () {
+                    document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+                    document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
+                    item.querySelector('video').play();
+                });
 
-        //     // On mouseout, remove all step classes
-        //     item.addEventListener('mouseout', function () {
-        //         document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-        //     });
-        // });
+                // On mouseout, remove all step classes
+                item.addEventListener('mouseout', function () {
+                    document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+                    item.querySelector('video').pause();
+                    item.querySelector('video').load();
+                });
+            });
+        }
+        else {
+            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+                item.querySelector('video').setAttribute('autoplay', '1');
+            });
+        }
 
         // On scroll, add class to .simple-steps-container according to the step in view
-        window.addEventListener('scroll', function () {
+        // window.addEventListener('scroll', function () {
 
-            // Above 1024px, don't add class on scroll
-            // if (window.innerWidth >= 1024) return;
+        //     // Above 1024px, don't add class on scroll
+        //     // if (window.innerWidth >= 1024) return;
 
-            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
-                if (isInViewport(item)) {
-                    // document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-                    // document.querySelector('.simple-steps-container').classList.add('step-' + item.querySelector('.ss-step').textContent);
+        //     document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+        //         if (isInViewport(item)) {
+        //             // document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+        //             // document.querySelector('.simple-steps-container').classList.add('step-' + item.querySelector('.ss-step').textContent);
 
-                    if (!item.querySelector('video').classList.contains('spz-ended')) {
-                        item.querySelector('video').play();
-                        item.querySelector('video').classList.add('spz-ended');
-                    }
-                    // item.querySelector('video').play();
-                    // item.querySelector('video').classList.add('spz-ended');
-                }
-            });
-        });
+        //             // if (!item.querySelector('video').classList.contains('spz-ended')) {
+        //             //     item.querySelector('video').play();
+        //             //     item.querySelector('video').classList.add('spz-ended');
+        //             // }
+        //             // item.querySelector('video').play();
+        //             // item.querySelector('video').classList.add('spz-ended');
+        //         }
+        //     });
+        // });
     }
 
     function complianceChanges() {
@@ -931,9 +941,9 @@
             },
         });
 
-        waitForElm('body.spz-28001 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination').then(function () {
-            if (document.querySelector('body.spz-28001 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination .spz-anchor')) return;
-            document.querySelector('body.spz-28001 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination').insertAdjacentHTML('beforeend', `<a class="spz-anchor" href="https://drata.com/product">All</a>`);
+        waitForElm('body.spz-28002 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination').then(function () {
+            if (document.querySelector('body.spz-28002 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination .spz-anchor')) return;
+            document.querySelector('body.spz-28002 .cr-section-28001 .cr-section-container .slider-section .container .swiper-pagination').insertAdjacentHTML('beforeend', `<a class="spz-anchor" href="https://drata.com/product">All</a>`);
         });
     }
 

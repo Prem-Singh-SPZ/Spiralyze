@@ -6,7 +6,7 @@ html {
   overflow-x: hidden;
 }
 
-body.spz-28001 {
+body.spz-28002 {
   * {
     box-sizing: border-box;
   }
@@ -523,30 +523,33 @@ body.spz-28001 {
       &.step-1 {
         .ss-step.step-1 {
           color: #fff;
-          background-color: #1793ff;
+          background-color: #0580e8;
         }
         .simple-steps-wrapper .ss-item.step-1 {
-          border: 1.5px solid #1793ff;
+          border: 2px solid #0580e8;
+          box-shadow: 0px 14px 35px 0px rgba(12, 19, 26, 0.15);
         }
       }
 
       &.step-2 {
         .ss-step.step-2 {
           color: #fff;
-          background-color: #1793ff;
+          background-color: #0580e8;
         }
         .simple-steps-wrapper .ss-item.step-2 {
-          border: 1.5px solid #1793ff;
+          border: 2px solid #0580e8;
+          box-shadow: 0px 14px 35px 0px rgba(12, 19, 26, 0.15);
         }
       }
 
       &.step-3 {
         .ss-step.step-3 {
           color: #fff;
-          background-color: #1793ff;
+          background-color: #0580e8;
         }
         .simple-steps-wrapper .ss-item.step-3 {
-          border: 1.5px solid #1793ff;
+          border: 2px solid #0580e8;
+          box-shadow: 0px 14px 35px 0px rgba(12, 19, 26, 0.15);
         }
       }
 
@@ -828,7 +831,7 @@ body.spz-28001 {
             position: relative;
             border-radius: 16px;
             background-color: #f6f8fa;
-            // border: 1.5px solid #f6f8fa;
+            border: 2px solid #f6f8fa;
             width: calc(33% - 18px);
             padding: 0 24px 24px;
             overflow: hidden;
@@ -930,6 +933,7 @@ body.spz-28001 {
                   // width: 234px;
                   width: 190px;
                   height: 122px;
+                  overflow: hidden;
 
                   .ss-img {
                     border-radius: 26px;
@@ -950,17 +954,19 @@ body.spz-28001 {
                 font-style: normal;
                 font-weight: 800;
                 line-height: 24px;
-                margin: 2px 0 9px;
+                margin: -2px 0 9px;
 
                 @media (max-width: 1024.98px) {
-                  font-size: 20px;
-                  line-height: 28px;
+                  font-size: 16px;
+                  line-height: 24px;
+                  margin: -2px 0 7px;
                 }
 
                 @media (max-width: 767.98px) {
                   font-size: 16px;
                   line-height: 24px;
-                  margin: 13px 10px 8px;
+                  margin: -1px 14px 8px;
+                  text-align: left;
                 }
               }
 
@@ -972,12 +978,18 @@ body.spz-28001 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 24px;
-                margin: 0 2px 5px;
+                margin: 0 2px 3px;
+
+                @media (max-width: 1024.98px) {
+                  margin: 0 2px 0.5px;
+                }
 
                 @media (max-width: 767.98px) {
                   font-size: 14px;
                   line-height: 20px;
                   padding: 0 12px;
+                  text-align: left;
+                  margin: 0 2px -0.5px;
                 }
               }
             }
@@ -1007,14 +1019,14 @@ body.spz-28001 {
             display: flex !important;
             align-items: center;
             justify-content: center;
-            top: 0px;
-            left: -96px;
+            top: -3px;
+            left: -98px;
             width: 48px;
           }
 
           @media (max-width: 767.98px) {
-            top: 1px;
-            left: -80px;
+            top: -2px;
+            left: -82px;
           }
         }
       }
