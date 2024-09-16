@@ -389,7 +389,7 @@
                                     <div class="ss-step step-1">1</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <video loop muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_2.webp">
+                                            <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_2.webp">
                                                 <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_1.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -402,7 +402,7 @@
                                     <div class="ss-step step-2">2</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <video loop muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_3.webp">
+                                            <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_3.webp">
                                                 <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_2.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -415,7 +415,7 @@
                                     <div class="ss-step step-3">3</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                           <video loop muted="1" width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_5.webp">
+                                           <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_5.webp">
                                                 <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_3.mp4" type="video/mp4">
                                                 Your browser does not support the video tag.
                                             </video>
@@ -436,7 +436,7 @@
 
         complianceChanges();
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
-        if (window.innerWidth >= 1024) {
+        if (window.innerWidth > 1024) {
             document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
                 item.addEventListener('mouseover', function () {
                     document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
@@ -455,6 +455,7 @@
         else {
             document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
                 item.querySelector('video').setAttribute('autoplay', '1');
+                item.querySelector('video').play();
             });
         }
 
