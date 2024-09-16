@@ -936,15 +936,26 @@ body.spz-28002 .simple-steps-sec-28001 .simple-steps-container .simple-steps-wra
   width: calc(100% + 48px);
   height: 43px;
 }
+@media (max-width: 767.98px) {
+  body.spz-28002 .simple-steps-sec-28001 .simple-steps-container .simple-steps-wrapper .simple-steps .ss-item .ss-content .ss-img-wr::before {
+    height: 30px;
+  }
+}
 body.spz-28002 .simple-steps-sec-28001 .simple-steps-container .simple-steps-wrapper .simple-steps .ss-item .ss-content .ss-img-wr::after {
   content: "";
   position: absolute;
   bottom: 0;
   left: -24px;
-  background: linear-gradient(356deg, #f6f8fa 41.89%, rgba(246, 248, 250, 0) 95.32%);
+  background: -webkit-gradient(linear, left bottom, left top, color-stop(41.89%, #f6f8fa), color-stop(95.32%, rgba(246, 248, 250, 0)));
+  background: linear-gradient(360deg, #f6f8fa 41.89%, rgba(246, 248, 250, 0) 95.32%);
   z-index: 1;
   width: calc(100% + 48px);
   height: 43px;
+}
+@media (max-width: 767.98px) {
+  body.spz-28002 .simple-steps-sec-28001 .simple-steps-container .simple-steps-wrapper .simple-steps .ss-item .ss-content .ss-img-wr::after {
+    height: 30px;
+  }
 }
 body.spz-28002 .simple-steps-sec-28001 .simple-steps-container .simple-steps-wrapper .simple-steps .ss-item .ss-content .ss-img-wr .ss-img {
   width: calc(100% + 48px);

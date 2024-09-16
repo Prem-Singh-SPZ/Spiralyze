@@ -85,7 +85,7 @@
             setTimeout(() => {
                 clearInterval(updatePage);
             }, 1000);
-            submitTestDetails('Variant_28001');
+            submitTestDetails('Control_28002');
         });
 
         createCookie('spz-28001-loaded', 'true', 1);
@@ -120,7 +120,7 @@
             // Check if spz-28001-loaded cookie is present and cro_field is present
             if ((cro_field && cro_field.val != '') && isCookieExist('spz-28001-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Variant_28001');
+                submitTestDetails('Control_28002');
 
                 deleteCookie('spz-28001-loaded');
             }
