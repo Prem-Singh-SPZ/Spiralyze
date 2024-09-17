@@ -233,6 +233,11 @@ body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-
 body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-child .row-number-4 div[data-hs-forms-root=true] .hs-form-private .hs-form-field select.hs-input {
   height: 38px;
   max-height: 38px;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  padding-right: 35px;
+  background-image: none;
 }
 body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-child .row-number-4 div[data-hs-forms-root=true] .hs-form-private .hs-form-field .hs-form-booleancheckbox {
   margin-top: 10px;
@@ -277,6 +282,21 @@ body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-
   background-repeat: no-repeat;
   top: 4.5px;
   left: 2px;
+}
+body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-child .row-number-4 div[data-hs-forms-root=true] .hs-form-private .hs-form-field.hs-fieldtype-select .input {
+  position: relative;
+}
+body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-child .row-number-4 div[data-hs-forms-root=true] .hs-form-private .hs-form-field.hs-fieldtype-select .input::after {
+  position: absolute;
+  content: "";
+  width: 13px;
+  height: 16px;
+  top: 13px;
+  right: 12px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1723794052/varicent/1005/Arrow_down.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
 }
 body.spz-2004 #main-content .row-number-1 > .row-fluid > .widget-type-cell:last-child .row-number-4 div[data-hs-forms-root=true] .hs-form-private .form-columns-2 {
   -webkit-box-pack: justify;

@@ -154,7 +154,6 @@ body.spz-2004 {
 
         > .widget-type-cell:last-child {
           .row-number-4 {
-
             @media screen and (max-width: 1024.98px) {
               margin-top: -6px;
             }
@@ -226,6 +225,11 @@ body.spz-2004 {
                     height: 38px;
                     max-height: 38px;
                     // background-position: right 1.5rem center;
+                    -webkit-appearance: none;
+                    -moz-appearance: none;
+                    appearance: none;
+                    padding-right: 35px;
+                    background-image: none;
                   }
 
                   .hs-form-booleancheckbox {
@@ -274,6 +278,24 @@ body.spz-2004 {
                       background-repeat: no-repeat;
                       top: 4.5px;
                       left: 2px;
+                    }
+                  }
+
+                  &.hs-fieldtype-select {
+                    .input {
+                      position: relative;
+                      &::after {
+                        position: absolute;
+                        content: "";
+                        width: 13px;
+                        height: 16px;
+                        top: 13px;
+                        right: 12px;
+                        background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1723794052/varicent/1005/Arrow_down.svg");
+                        background-size: contain;
+                        background-repeat: no-repeat;
+                        pointer-events: none;
+                      }
                     }
                   }
                 }
@@ -341,7 +363,6 @@ body.spz-2004 {
 
                       @media screen and (max-width: 767.98px) {
                         width: 100%;
-                        
                       }
                     }
                   }
