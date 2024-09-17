@@ -457,6 +457,16 @@ function checkError(elem) {
     } else {
       elem.closest('.mktoFieldWrap').classList.remove('filled');
     }
+
+    if (document.querySelectorAll('.mktoFormCol[data-zi-field-enriched="false"] .mktoField:not([type="hidden"])').length % 2 != 0) {
+      let lastField = document.querySelectorAll('.mktoFormCol[data-zi-field-enriched="false"] .mktoField:not([type="hidden"]').length - 1;
+      document.querySelectorAll('.mktoFormCol[data-zi-field-enriched="false"]')[lastField].closest('.mktoFormCol').classList.add('full-width');
+    }
+    else {
+      document.querySelectorAll('.mktoFormCol.mktoFormCol.full-width').forEach(function (el) {
+        el.classList.remove('full-width');
+      });
+    }
   }, 100);
 
   setTimeout(() => {
@@ -470,16 +480,6 @@ function checkError(elem) {
   if (elem.name == 'Person_Country__c') {
     waitForElm('#hero-section form.mktoForm .mktoFormCol[data-wrapper-for="mktoCheckbox_27626_0 Privacy_Compliance_Explicit_Opt_In__c"]').then(function (elm) {
       document.querySelector('#hero-section form.mktoForm .mktoFormCol.spz-privacy-policy').after(elm);
-    });
-  }
-
-  if (document.querySelectorAll('.mktoFormCol[data-zi-field-enriched="false"] .mktoField:not([type="hidden"])').length % 2 != 0) {
-    let lastField = document.querySelectorAll('.mktoFormCol[data-zi-field-enriched="false"] .mktoField:not([type="hidden"]').length - 1;
-    document.querySelectorAll('.mktoFormCol[data-zi-field-enriched="false"]')[lastField].closest('.mktoFormCol').classList.add('full-width');
-  }
-  else {
-    document.querySelectorAll('.mktoFormCol.mktoFormCol.full-width').forEach(function (el) {
-      el.classList.remove('full-width');
     });
   }
 }
