@@ -2,14 +2,14 @@ html {
   overflow: hidden;
 }
 
-.spz-1006 #contact-us-form-wrapper .lds-dual-ring {
+.spz-1006 .lds-dual-ring {
   display: block;
   width: 80px;
   height: 80px;
   margin: 80px auto;
 }
 
-.spz-1006 #contact-us-form-wrapper .lds-dual-ring:after {
+.spz-1006 .lds-dual-ring:after {
   content: " ";
   display: block;
   width: 64px;
@@ -119,7 +119,7 @@ html {
 //   display: none;
 // }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-required {
+.spz-1006 .hs-form-required {
   display: none;
 }
 
@@ -166,18 +166,18 @@ html {
   }
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
+.spz-1006 .hs-form-field.width50 {
   width: calc((100% - 20px) / 2);
   float: left;
   clear: none;
 }
 
-.spz-1006 #contact-us-form-wrapper .with-margin {
+.spz-1006 .with-margin {
   margin-left: 20px;
 }
 
-.spz-1006 #contact-us-form-wrapper .clear,
-.spz-1006 #contact-us-form-wrapper .hs-form-field.width50.clear {
+.spz-1006 .clear,
+.spz-1006 .hs-form-field.width50.clear {
   clear: both;
 }
 
@@ -185,7 +185,7 @@ html {
   display: none;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field {
+.spz-1006 .hs-form-field {
   position: relative;
   margin-bottom: 20px;
 
@@ -195,7 +195,6 @@ html {
 }
 
 .spz-1006
-  #contact-us-form-wrapper
   .hs-form-field
   > label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
   position: absolute;
@@ -204,7 +203,7 @@ html {
   pointer-events: none;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field > label span {
+.spz-1006 .hs-form-field > label span {
   color: #4a4a4a;
   font-family: Titillium Web, sans-serif;
   font-size: 16px;
@@ -227,11 +226,11 @@ html {
   margin-bottom: 12px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-input {
+.spz-1006 .hs-input {
   margin: 0px !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-error-msgs label {
+.spz-1006 .hs-error-msgs label {
   font-size: 14px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -243,30 +242,22 @@ html {
   margin-bottom: -12px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-error-msgs.inputs-list {
+.spz-1006 .hs-error-msgs.inputs-list {
   padding-left: 0px;
 }
 
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate
-  .hs-error-msgs
-  label,
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate_non_us
-  .hs-error-msgs
-  label {
+.spz-1006 .hs_consent_to_communicate .hs-error-msgs label,
+.spz-1006 .hs_consent_to_communicate_non_us .hs-error-msgs label {
   margin-bottom: -3px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-error-msgs label a {
+.spz-1006 .hs-error-msgs label a {
   display: block;
   padding-top: 6px;
   color: #dc0000;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-input {
+.spz-1006 .hs-input {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   background-color: #f8f7f7 !important;
   height: 48px;
@@ -283,13 +274,13 @@ html {
   background-clip: padding-box;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_buying_timeline {
+.spz-1006 .hs_buying_timeline {
   display: none;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-input:-webkit-autofill,
-.spz-1006 #contact-us-form-wrapper .hs-input:-webkit-autofill:hover,
-.spz-1006 #contact-us-form-wrapper .hs-input:-webkit-autofill:focus {
+.spz-1006 .hs-input:-webkit-autofill,
+.spz-1006 .hs-input:-webkit-autofill:hover,
+.spz-1006 .hs-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
   transition: background-color 5000s ease-in-out 0s !important;
   -webkit-text-fill-color: #000 !important;
@@ -297,9 +288,9 @@ html {
   position: relative;
 }
 
-.spz-1006 #contact-us-form-wrapper .focus .hs-input:-webkit-autofill,
-.spz-1006 #contact-us-form-wrapper .focus .hs-input:-webkit-autofill:hover,
-.spz-1006 #contact-us-form-wrapper .focus .hs-input:-webkit-autofill:focus {
+.spz-1006 .focus .hs-input:-webkit-autofill,
+.spz-1006 .focus .hs-input:-webkit-autofill:hover,
+.spz-1006 .focus .hs-input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
   transition: background-color 5000s ease-in-out 0s !important;
   -webkit-text-fill-color: #000 !important;
@@ -307,28 +298,28 @@ html {
   position: relative;
 }
 
-.spz-1006 #contact-us-form-wrapper .hasValue .hs-input {
+.spz-1006 .hasValue .hs-input {
   border: 1px solid rgba(0, 0, 0, 0.1) !important;
   background-color: #f8f7f7 !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .focus .hs-input {
+.spz-1006 .focus .hs-input {
   border: 1px solid rgba(0, 0, 0, 0.4) !important;
   background-color: #fff !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .hasError .hs-input {
+.spz-1006 .hasError .hs-input {
   border: 1px solid #dc0000 !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field.focus > label,
-.spz-1006 #contact-us-form-wrapper .hs-form-field.hasValue > label {
+.spz-1006 .hs-form-field.focus > label,
+.spz-1006 .hs-form-field.hasValue > label {
   top: -12px !important;
   left: 16px !important;
   z-index: 4;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field.hasValue > label span {
+.spz-1006 .hs-form-field.hasValue > label span {
   -webkit-font-smoothing: antialiased;
   font-family: "Titillium Web";
   font-size: 10px;
@@ -341,7 +332,7 @@ html {
   -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field.focus > label span {
+.spz-1006 .hs-form-field.focus > label span {
   font-family: "Titillium Web";
   font-size: 10px;
   font-weight: 500;
@@ -353,7 +344,7 @@ html {
   -webkit-box-shadow: 0px -9px 0px 0px white inset;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field.hasError.focus > label span {
+.spz-1006 .hs-form-field.hasError.focus > label span {
   font-family: "Titillium Web";
   font-size: 10px;
   font-weight: 500;
@@ -365,17 +356,17 @@ html {
   -webkit-box-shadow: 0px -9px 0px 0px white inset;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-form-field.hasError > label span {
+.spz-1006 .hs-form-field.hasError > label span {
   color: #dc0000;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_message textarea {
+.spz-1006 .hs_message textarea {
   resize: none;
   overflow: hidden;
   display: block;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-richtext p {
+.spz-1006 .hs-richtext p {
   color: #7e7e7e;
   font-family: Titillium Web, sans-serif;
   font-size: 12px !important;
@@ -386,19 +377,19 @@ html {
   margin-bottom: 32px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-richtext p a {
+.spz-1006 .hs-richtext p a {
   text-decoration: underline;
   color: #68cce8 !important;
   text-decoration-skip-ink: none;
   text-underline-offset: 1px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs-richtext p a:hover,
-.spz-1006 #contact-us-form-wrapper .hs-richtext p a:active {
+.spz-1006 .hs-richtext p a:hover,
+.spz-1006 .hs-richtext p a:active {
   text-decoration: none;
 }
 
-body #contact-us-form-wrapper .hs-richtext p.support-link {
+body .hs-richtext p.support-link {
   color: #000;
   font-family: Titillium Web, sans-serif;
   font-size: 16px !important;
@@ -408,7 +399,7 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   margin-bottom: 11px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_submit input {
+.spz-1006 .hs_submit input {
   width: 100%;
   display: flex;
   height: 48px;
@@ -435,27 +426,32 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   }
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_submit input:hover {
+.spz-1006 .hs_submit input:hover {
   background-color: #000000 !important;
   color: white !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_submit input:active {
+.spz-1006 .hs_submit input:active {
   background-color: #4a4a4a !important;
   color: white !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_consent_countries select {
+.spz-1006 .hs_consent_countries select {
   -webkit-appearance: none;
   appearance: none;
   padding-right: 40px !important;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_consent_countries select option {
+.spz-1006 .hs_consent_countries select option {
   font-family: Titillium Web, sans-serif;
+
+  &[value=""] {
+    display: none;
+    color: transparent !important;
+  }
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_consent_countries .arrow-select {
+.spz-1006 .hs_consent_countries .arrow-select {
   width: 16px;
   height: 16px;
   background: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/arrow-down.svg")
@@ -467,14 +463,8 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   z-index: 4;
 }
 
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate
-  input[type="checkbox"],
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate_non_us
-  input[type="checkbox"] {
+.spz-1006 .hs_consent_to_communicate input[type="checkbox"],
+.spz-1006 .hs_consent_to_communicate_non_us input[type="checkbox"] {
   min-width: 20px;
   height: 20px;
   -webkit-appearance: none;
@@ -487,14 +477,8 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   outline: 0;
 }
 
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate
-  input[type="checkbox"]:checked,
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate_non_us
-  input[type="checkbox"]:checked {
+.spz-1006 .hs_consent_to_communicate input[type="checkbox"]:checked,
+.spz-1006 .hs_consent_to_communicate_non_us input[type="checkbox"]:checked {
   background-color: #68cce8 !important;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
   background-repeat: no-repeat;
@@ -503,17 +487,13 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   background-clip: border-box;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_consent_to_communicate label,
-.spz-1006 #contact-us-form-wrapper .hs_consent_to_communicate_non_us label {
+.spz-1006 .hs_consent_to_communicate label,
+.spz-1006 .hs_consent_to_communicate_non_us label {
   display: flex;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_consent_to_communicate label span,
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate_non_us
-  label
-  span {
+.spz-1006 .hs_consent_to_communicate label span,
+.spz-1006 .hs_consent_to_communicate_non_us label span {
   color: #000;
   font-family: Titillium Web, sans-serif;
   font-size: 12px;
@@ -527,18 +507,12 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   margin-right: 0px;
 }
 
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate
-  .hs-form-booleancheckbox,
-.spz-1006
-  #contact-us-form-wrapper
-  .hs_consent_to_communicate_non_us
-  .hs-form-booleancheckbox {
+.spz-1006 .hs_consent_to_communicate .hs-form-booleancheckbox,
+.spz-1006 .hs_consent_to_communicate_non_us .hs-form-booleancheckbox {
   margin: 0px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_error_rollup .hs-main-font-element {
+.spz-1006 .hs_error_rollup .hs-main-font-element {
   color: #dc0000;
   text-align: center;
   padding: 8px 0;
@@ -554,28 +528,28 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   font-weight: 400;
 }
 
-.spz-1006 #contact-us-form-wrapper .pp-parent {
+.spz-1006 .pp-parent {
   float: left;
   margin: 3px 0px 0px;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_submit .actions {
+.spz-1006 .hs_submit .actions {
   margin: 0;
   padding: 0;
 }
 
-.spz-1006 #contact-us-form-wrapper .submitted-message {
+.spz-1006 .submitted-message {
   text-align: center;
 }
 
-.spz-1006 #contact-us-form-wrapper .lds-dual-ring {
+.spz-1006 .lds-dual-ring {
   display: block;
   width: 80px;
   height: 80px;
   margin: 80px auto;
 }
 
-.spz-1006 #contact-us-form-wrapper .lds-dual-ring:after {
+.spz-1006 .lds-dual-ring:after {
   content: " ";
   display: block;
   width: 64px;
@@ -587,7 +561,7 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
   animation: lds-dual-ring 1.2s linear infinite;
 }
 
-.spz-1006 #contact-us-form-wrapper .hs_consent_countries {
+.spz-1006 .hs_consent_countries {
   margin-bottom: 12px;
 }
 
@@ -611,12 +585,12 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
     margin-right: auto;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs-form-field.width50 {
+  .spz-1006 .hs-form-field.width50 {
     width: 100%;
     float: none;
   }
 
-  .spz-1006 #contact-us-form-wrapper .with-margin {
+  .spz-1006 .with-margin {
     margin-left: 0px;
   }
 
@@ -626,57 +600,49 @@ body #contact-us-form-wrapper .hs-richtext p.support-link {
     // letter-spacing: -0.576px !important;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs-form-field {
+  .spz-1006 .hs-form-field {
     margin-bottom: 15.5px !important;
   }
-  .spz-1006 #contact-us-form-wrapper .hs-form-field.hs-consent_to_communicate {
+  .spz-1006 .hs-form-field.hs-consent_to_communicate {
     margin-bottom: 20px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .pp-parent {
+  .spz-1006 .pp-parent {
     margin-top: 0px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs-form__richtext p {
+  .spz-1006 .hs-form__richtext p {
     margin-bottom: 13px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs-error-msgs {
+  .spz-1006 .hs-error-msgs {
     margin: 4px 0px 23px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs-richtext p {
+  .spz-1006 .hs-richtext p {
     margin-bottom: 23.5px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs-error-msgs label a {
+  .spz-1006 .hs-error-msgs label a {
     padding-top: 0px;
     margin-top: -24px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .pp-parent {
+  .spz-1006 .pp-parent {
     margin-bottom: 1px;
     margin-top: -12px;
   }
 
-  .spz-1006
-    #contact-us-form-wrapper
-    .hs_consent_to_communicate
-    .hs-error-msgs
-    label,
-  .spz-1006
-    #contact-us-form-wrapper
-    .hs_consent_to_communicate_non_us
-    .hs-error-msgs
-    label {
+  .spz-1006 .hs_consent_to_communicate .hs-error-msgs label,
+  .spz-1006 .hs_consent_to_communicate_non_us .hs-error-msgs label {
     margin-bottom: -8px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs_consent_countries {
+  .spz-1006 .hs_consent_countries {
     margin-bottom: 12px;
   }
 
-  .spz-1006 #contact-us-form-wrapper .hs_submit input {
+  .spz-1006 .hs_submit input {
     width: 280px !important;
     max-width: 100%;
     margin-left: auto;
