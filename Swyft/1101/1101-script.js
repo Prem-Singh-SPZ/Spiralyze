@@ -14,17 +14,6 @@ let bodyLoaded = setInterval(function () {
         swiperScript.async = false;
         document.head.appendChild(swiperScript);
 
-
-        //check if swiper is loaded and then call initSlider
-        // var swiperLoaded = setInterval(function () {
-        //     if (typeof Swiper !== 'undefined' && document.querySelector('.spz-1101 .spz-slider')) {
-        //         clearInterval(swiperLoaded);
-        //         console.log('Swiper loaded');
-        //         initSlider();
-        //     }
-        // }, 100);
-
-
         history.pushState = (function (f) {
             return function pushState() {
                 var ret = f.apply(this, arguments);
