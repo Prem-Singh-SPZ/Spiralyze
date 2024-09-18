@@ -364,48 +364,6 @@ function formModify() {
 
   focusFields();
 
-  document.querySelector('#hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
-    waitForElm('#hero-section .hero  form.mktoForm .mktoError').then(function (elm) {
-      if (elm.parentNode.querySelector('#ValidMsgEmail')) {
-        const targetNode = elm.parentNode;
-        const config = { attributes: true, childList: true, subtree: true };
-        const callback = (mutationList, observer) => {
-          for (const mutation of mutationList) {
-            if (mutation.type === "childList") {
-              if (elm.parentNode === null && elm.style.display != 'none') {
-                targetNode.classList.add('error');
-              } else {
-                elm.parentNode.classList.add('error');
-              }
-              observer.disconnect();
-            } else if (mutation.type === "attributes") {
-              if (elm.parentNode === null) {
-                targetNode.classList.add('error');
-              } else {
-                elm.parentNode.classList.add('error');
-              }
-              observer.disconnect();
-            }
-          }
-        };
-        const observer = new MutationObserver(callback);
-        observer.observe(targetNode, config);
-      } else {
-        let counterA = 0;
-        const intervalIdA = setInterval(() => {
-          if (document.querySelector('#hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail') !== null) {
-            document.querySelector('#hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-          }
-          counterA++;
-          if (counterA >= 10) {
-            clearInterval(intervalIdA);
-          }
-        }, 500);
-      }
-    });
-  });
-
-
   // Disable auto-fill for all input, select and textarea
   var inputFields = document.querySelectorAll('input, select, textarea');
   inputFields.forEach(function (field) {
@@ -447,7 +405,7 @@ function focusFields() {
 // Function to add .field-error class on closest parent .field class if .error is exist on input
 function checkError(elem) {
   let timeBuffer = setInterval(() => {
-    if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
+    if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none' && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
       elem.closest('.mktoFieldWrap').classList.add('error');
     } else {
       elem.closest('.mktoFieldWrap').classList.remove('error');
@@ -483,6 +441,47 @@ function checkError(elem) {
     });
   }
 }
+
+// document.querySelector('.spz-3003 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
+//   waitForElm('.spz-3003 #hero-section .hero  form.mktoForm .mktoError').then(function (elm) {
+//     if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+//       const targetNode = elm.parentNode;
+//       const config = { attributes: true, childList: true, subtree: true };
+//       const callback = (mutationList, observer) => {
+//         for (const mutation of mutationList) {
+//           if (mutation.type === "childList") {
+//             if (elm.parentNode === null && elm.style.display != 'none') {
+//               targetNode.classList.add('error');
+//             } else {
+//               elm.parentNode.classList.add('error');
+//             }
+//             observer.disconnect();
+//           } else if (mutation.type === "attributes") {
+//             if (elm.parentNode === null) {
+//               targetNode.classList.add('error');
+//             } else {
+//               elm.parentNode.classList.add('error');
+//             }
+//             observer.disconnect();
+//           }
+//         }
+//       };
+//       const observer = new MutationObserver(callback);
+//       observer.observe(targetNode, config);
+//     } else {
+//       let counterA = 0;
+//       const intervalIdA = setInterval(() => {
+//         if (document.querySelector('.spz-3003 #hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail') !== null) {
+//           document.querySelector('.spz-3003 #hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+//         }
+//         counterA++;
+//         if (counterA >= 10) {
+//           clearInterval(intervalIdA);
+//         }
+//       }, 500);
+//     }
+//   });
+// });
 
 // Do not touch below hidden field code for any Experiment (Set Hidden Filed Value)
 function hiddenValue(currentExperimentName, currentExperimentValue) {
