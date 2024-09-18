@@ -234,6 +234,15 @@ let bodyLoaded = setInterval(function () {
             if (stepContent && stepContent.classList.contains('error')) {
               stepContent.classList.remove('error', 'show-error');
             }
+
+            if (checkbox.type === 'radio') {
+              console.log('radio');
+              if (checkbox.value === 'Less than 100' || checkbox.value === '100-999' || checkbox.value === '1000-2999') {
+                document.querySelector('.spz-3003 .spz-form-baseline #Company_Size__c').value = 'less than 3001 employees';
+              } else {
+                document.querySelector('.spz-3003 .spz-form-baseline #Company_Size__c').value = '3001+ employees';
+              }
+            }
           });
         });
 
@@ -288,9 +297,9 @@ let bodyLoaded = setInterval(function () {
         });
 
         //second section updates
-        document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[0].innerHTML = `<div class="gartner-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_7.svg" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>`;
+        document.querySelectorAll('#stats-2-col .col.stats .single-stat')[0].innerHTML = `<div class="gartner-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_7.svg" alt="Gartner Insights"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>`;
 
-        document.querySelectorAll('#stats-2-col .col.stats .single-stat a')[1].innerHTML = `<div class="g2-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_4.svg" alt="G2 Reviews"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>
+        document.querySelectorAll('#stats-2-col .col.stats .single-stat')[1].innerHTML = `<div class="g2-wrapper ss-card"><div class="logo-img"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/g2_crowd_4.svg" alt="G2 Reviews"></div><div class="google-rating"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/stars_2.svg" alt="Rating"></div>
                 <picture>`;
         document.querySelectorAll('#stats-2-col .col.stats .single-stat')[2].innerHTML = `<picture>
                     <source media="(min-width:768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/nps_75.svg">
