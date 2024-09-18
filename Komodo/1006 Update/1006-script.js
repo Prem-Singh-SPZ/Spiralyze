@@ -29,7 +29,7 @@ ready(function () {
         `
 
         document.querySelector('#popup_contact_us .wcs-col-12').insertAdjacentHTML("afterend", `<div class="wcs-bg-img"></div>`);
-        document.querySelector('#contact-us-form-wrapper').insertAdjacentElement("beforeend", document.querySelector('.widget-type-cell.cell_17256415850984-padding'));
+        document.querySelector('#contact-us-form-wrapper').insertAdjacentElement("beforeend", document.querySelector('.widget-type-form div[data-hs-forms-root="true"]'));
         // document.querySelector('body #new-form-wrapper').classList.add("step2");
         document.body.insertAdjacentHTML("beforeend", `<div class="jquery-modal blocker current spz-left-contact"></div>`);
         document.querySelector('.spz-1006 #popup_contact_us').classList.add('modal');

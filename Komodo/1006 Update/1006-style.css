@@ -135,10 +135,6 @@ html {
   }
 }
 
-.spz-1006 .hs-form-required {
-  display: none;
-}
-
 .spz-1006 #contact-us-form-wrapper {
   margin-top: 24px;
 }
@@ -216,22 +212,19 @@ html {
   margin-bottom: 6px;
 }
 
-.spz-1006 .hs-form-field > label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
-  position: absolute;
-  top: 12px;
-  left: 20px;
-  pointer-events: none;
-}
-
-.spz-1006 .hs-form-field > label span {
-  color: #4a4a4a;
+div[data-hs-forms-root=true] form.hs-form .field:has(.hs-input:not([type=checkbox]):not([type=radio]).error:not([value=""])) > label {
+  background: -webkit-gradient(linear, left bottom, left top, from(transparent), color-stop(50%, #fff));
+  background: linear-gradient(0deg, transparent, #fff 50%);
+  color: #000;
   font-family: Titillium Web, sans-serif;
-  font-size: 16px;
+  font-size: 10px;
   font-style: normal;
   font-weight: 400;
-  line-height: 24px;
-  letter-spacing: 0px;
-  position: relative;
+  left: 16px;
+  line-height: 16px;
+  padding: 0 4px;
+  top: -8px;
+  z-index: 3;
 }
 
 .spz-1006 #popup_contact_us .wcs-popup-heading h2 {
