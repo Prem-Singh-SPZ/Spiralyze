@@ -80,22 +80,16 @@ function createTest() {
 						<div class="swiper-slide">
 							<div class="tm-card">
 								<div class="tm-quote">
-									<picture>
-										<source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp" type="image/webp">
-										<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp.webp" type="image/webp">
-										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
-									</picture>
+									<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
 								</div>
 								<div class="tm-body">
-									<p>Varicent Incentives is the best in the market. We can quickly build accurate reports. Dramatically reduces our work.</p>
+									<p class="t-title">Swyft saves me time, time is money!</p>
+									<p class="t-desc">They make things simple and take care of the things that I don’t have time for.</p>
 								</div>
 								<div class="tm-footer">
-									<div class="tm-logo">
-										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/manpower_logo_1441.webp" alt="Manpower">
-									</div>
 									<div class="tm-write">
-										<p class="name">Craig Dimbat</p>
-										<p class="designation">Varicent Administrator</p>
+										<p class="t-date"><b>C.S.</b> , March 26, 2024</p>
+										<p class="t-verify">Verified</p>
 									</div>
 								</div>
 							</div>
@@ -149,7 +143,9 @@ function createTest() {
 							</div>
 						</div>
 					</div>
-					</div><div class="swiper-pagination"></div>
+					</div> 
+                    <div class="swiper-button-next"></div>
+                    <div class="swiper-button-prev"></div>
 				</div>
 
                     </div>
@@ -170,23 +166,9 @@ function initSlider() {
         slidesPerView: 1,
         // spaceBetween: 30,
         loop: true,
-        autoplay: {
-            delay: 9999999999999,
-            disableOnInteraction: true,
-            pauseOnMouseEnter: false,
-        },
-        pagination: {
-            el: '.spz-1101 .spz-testimonial .swiper-pagination',
-            clickable: true,
-        },
-        breakpoints: {
-            768: {
-                autoplay: {
-                    delay: 5000,
-                    disableOnInteraction: false,
-                    pauseOnMouseEnter: true,
-                },
-            }
+        navigation: {
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
         },
     });
 }
