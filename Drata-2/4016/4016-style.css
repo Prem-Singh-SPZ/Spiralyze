@@ -18,5 +18,16 @@ body.spz-4016 .loader-wrapper-spz {
   }
 }
 body.spz-4016.iso-27001-spz .loader-wrapper-spz {
-  min-height: auto;
+  overflow: hidden;
+  min-height: 108px;
+}
+@media (min-width: 1299.98px) {
+  body.spz-4016.iso-27001-spz .loader-wrapper-spz .loader-lot-spz {
+    width: 632px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-4016.iso-27001-spz .loader-wrapper-spz {
+    min-height: initial;
+  }
 }

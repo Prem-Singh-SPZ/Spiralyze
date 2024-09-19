@@ -14,14 +14,25 @@ body.spz-4016 {
     .form-wrapper-spz {
       margin-top: 5.5px;
     }
-    .hero-section .hero-content{
-        padding-top: 81px;
+    .hero-section .hero-content {
+      padding-top: 81px;
     }
   }
 
-  &.iso-27001-spz{
+  &.iso-27001-spz {
     .loader-wrapper-spz {
-      min-height: auto;
+      overflow: hidden;
+      min-height: 108px;
+
+      .loader-lot-spz {
+        @media (min-width: 1299.98px) {
+          width: 632px;
+        }
+      }
+
+      @media (max-width: 767.98px) {
+        min-height: initial;
+      }
     }
   }
 }
