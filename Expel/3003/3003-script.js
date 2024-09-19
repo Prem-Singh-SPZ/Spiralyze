@@ -377,6 +377,48 @@ function formModify() {
   inputFields.forEach(function (field) {
     field.setAttribute('autocomplete', 'nofill');
   });
+
+
+  document.querySelector('.spz-3003 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
+    waitForElm('.spz-3003 #hero-section .hero  form.mktoForm .mktoError').then(function (elm) {
+      if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+        const targetNode = elm.parentNode;
+        const config = { attributes: true, childList: true, subtree: true };
+        const callback = (mutationList, observer) => {
+          for (const mutation of mutationList) {
+            if (mutation.type === "childList") {
+              if (elm.parentNode === null && elm.style.display != 'none') {
+                targetNode.classList.add('error');
+              } else {
+                elm.parentNode.classList.add('error');
+              }
+              observer.disconnect();
+            } else if (mutation.type === "attributes") {
+              if (elm.parentNode === null) {
+                targetNode.classList.add('error');
+              } else {
+                elm.parentNode.classList.add('error');
+              }
+              observer.disconnect();
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
+      } else {
+        let counterA = 0;
+        const intervalIdA = setInterval(() => {
+          if (document.querySelector('.spz-3003 #hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail') !== null) {
+            document.querySelector('.spz-3003 #hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+          }
+          counterA++;
+          if (counterA >= 10) {
+            clearInterval(intervalIdA);
+          }
+        }, 500);
+      }
+    });
+  });
 }
 
 // On input focus add class on closest parent field class
@@ -449,47 +491,6 @@ function checkError(elem) {
     });
   }
 }
-
-// document.querySelector('.spz-3003 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
-//   waitForElm('.spz-3003 #hero-section .hero  form.mktoForm .mktoError').then(function (elm) {
-//     if (elm.parentNode.querySelector('#ValidMsgEmail')) {
-//       const targetNode = elm.parentNode;
-//       const config = { attributes: true, childList: true, subtree: true };
-//       const callback = (mutationList, observer) => {
-//         for (const mutation of mutationList) {
-//           if (mutation.type === "childList") {
-//             if (elm.parentNode === null && elm.style.display != 'none') {
-//               targetNode.classList.add('error');
-//             } else {
-//               elm.parentNode.classList.add('error');
-//             }
-//             observer.disconnect();
-//           } else if (mutation.type === "attributes") {
-//             if (elm.parentNode === null) {
-//               targetNode.classList.add('error');
-//             } else {
-//               elm.parentNode.classList.add('error');
-//             }
-//             observer.disconnect();
-//           }
-//         }
-//       };
-//       const observer = new MutationObserver(callback);
-//       observer.observe(targetNode, config);
-//     } else {
-//       let counterA = 0;
-//       const intervalIdA = setInterval(() => {
-//         if (document.querySelector('.spz-3003 #hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail') !== null) {
-//           document.querySelector('.spz-3003 #hero-section .hero  form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-//         }
-//         counterA++;
-//         if (counterA >= 10) {
-//           clearInterval(intervalIdA);
-//         }
-//       }, 500);
-//     }
-//   });
-// });
 
 // Do not touch below hidden field code for any Experiment (Set Hidden Filed Value)
 function hiddenValue(currentExperimentName, currentExperimentValue) {
