@@ -44,6 +44,18 @@ function loadTest() {
         loaderAnimJSON = '//res.cloudinary.com/spiralyze/raw/upload/f_auto/drata/4016/Typewriter_Animation.json';
     }
 
+    else if (window.location.href.includes('//try.drata.com/product/iso-27001')) {
+        loaderAnimJSON = '//res.cloudinary.com/spiralyze/raw/upload/f_auto/drata/4016/Get_ISO_27001_Compliant.json';
+        document.body.classList.add("iso-27001-spz");
+    }
+
+    else if (window.location.href.includes('//try.drata.com/product/gdpr')) {
+        loaderAnimJSON = '//res.cloudinary.com/spiralyze/raw/upload/f_auto/drata/4016/Get_GDPR_Compliant.json';
+    }
+
+    else if (window.location.href.includes('//try.drata.com/product/hipaa')) {
+        loaderAnimJSON = '//res.cloudinary.com/spiralyze/raw/upload/f_auto/drata/4016/Get_HIPAA_Compliant.json';
+    }
 
     if (document.querySelectorAll('lottie-player').length == 0) {
         document.querySelector('body .hero-section .hc-title').outerHTML = `<div class="loader-wrapper-spz"><lottie-player class="loader-lot-spz" autoplay
