@@ -194,7 +194,7 @@ let bodyLoaded = setInterval(function () {
                                   </div>
                                 </div>
                               </div>
-                              <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/frame_6.svg" alt="Error Icon">Please select at least one option.</div>
+                              <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/3003/frame_6.svg" alt="Error Icon">Please select an option.</div>
                             </div>
                             <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
                           </div>
@@ -236,7 +236,6 @@ let bodyLoaded = setInterval(function () {
             }
 
             if (checkbox.type === 'radio') {
-              console.log('radio');
               if (checkbox.value === 'Less than 100' || checkbox.value === '100-999' || checkbox.value === '1000-2999') {
                 document.querySelector('.spz-3003 .spz-form-baseline #Company_Size__c').value = 'less than 3001 employees';
               } else {
