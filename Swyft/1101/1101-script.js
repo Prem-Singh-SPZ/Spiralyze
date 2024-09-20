@@ -64,9 +64,9 @@ function createTest() {
             if (!document.querySelector('body.spz-1101 ' + heroSelector + ' .spz-wrap')) {
                 document.querySelector('body.spz-1101 ' + heroSelector + '').insertAdjacentHTML('beforeend', `<div class="spz-wrap"><div class="spz-row"><div class="spz-col left-copy">
                     <div class="tp-reviews">
-                        <img src="https://storage.googleapis.com/optimizely-images/clients/swyftfilings/1101/trustpilot-logo.png" alt="Trustpilot Logo">
-                        <img src="https://storage.googleapis.com/optimizely-images/clients/swyftfilings/1101/trustpilot-stars.png" alt="Trustpilot Stars">
-                        <b>4.5</b>
+                        <img class="tp-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/logo-Trustpilot.svg" alt="Trustpilot Logo">
+                        <img class="sr-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/stars-47.svg" alt="4.7 Stars">
+                        <b>4.7</b>
                         <p>Based on 6,726 Reviews</p>
                     </div>
                     <h1 class="c-headline">Take action to launch your entity in minutes</h1>
@@ -79,73 +79,74 @@ function createTest() {
 					<div class="swiper-wrapper">
 						<div class="swiper-slide">
 							<div class="tm-card">
-								<div class="tm-quote">
-									<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
-								</div>
 								<div class="tm-body">
 									<p class="t-title">Swyft saves me time, time is money!</p>
 									<p class="t-desc">They make things simple and take care of the things that I don’t have time for.</p>
+                                     <div class="tm-quote desk-only">
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                                    </div>
 								</div>
 								<div class="tm-footer">
 									<div class="tm-write">
-										<p class="t-date"><b>C.S.</b> , March 26, 2024</p>
-										<p class="t-verify">Verified</p>
+                                        <div class="tm-avatar">
+                                            <p class="t-date"><b>C.S.</b> , March 26, 2024</p>
+                                            <p class="t-verify"><img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/icons.svg" alt="Verified"> Verified</p>
+                                        </div>
+                                        <div class="tm-quote tab-mob">
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                                        </div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="tm-card">
-								<div class="tm-quote">
-									<picture>
-										<source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp" type="image/webp">
-										<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp.webp" type="image/webp">
-										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
-									</picture>
-								</div>
 								<div class="tm-body">
-									<p>We can make a better, more accurate business plan. It engages our sales associates. And we&#8217;ve reduced costs.
-</p>
+									<p class="t-title">Swyft saves me time, time is money!</p>
+									<p class="t-desc">They make things simple and take care of the things that I don’t have time for.</p>
+                                     <div class="tm-quote desk-only">
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                                    </div>
 								</div>
 								<div class="tm-footer">
-									<div class="tm-logo">
-										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/shaw_logo_1440.webp" alt="Shaw">
-									</div>
 									<div class="tm-write">
-										<p class="name">Melissa Crawley</p>
-										<p class="designation">Director Sales Compensation</p>
+                                        <div class="tm-avatar">
+                                            <p class="t-date"><b>C.S.</b> , March 26, 2024</p>
+                                            <p class="t-verify">Verified <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/icons.svg" alt="Verified"></p>
+                                        </div>
+                                        <div class="tm-quote tab-mob">
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                                        </div>
 									</div>
 								</div>
 							</div>
 						</div>
 						<div class="swiper-slide">
 							<div class="tm-card">
-								<div class="tm-quote">
-									<picture>
-										<source media="(min-width: 1025px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_1441.webp" type="image/webp">
-										<source media="(min-width: 768px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp.webp" type="image/webp">
-										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/quotemark_768_webp_2.webp" alt="Quote">
-									</picture>
-								</div>
 								<div class="tm-body">
-									<p>Sellers can see the expected payment on a daily level. It&#8217;s a great way to help motivate them to do more and more.
-</p>
+									<p class="t-title">Swyft saves me time, time is money!</p>
+									<p class="t-desc">They make things simple and take care of the things that I don’t have time for.</p>
+                                     <div class="tm-quote desk-only">
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                                    </div>
 								</div>
 								<div class="tm-footer">
-									<div class="tm-logo">
-										<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/varicent/1005/magyar_telekom_logo_1440.webp" alt="Magyar Telekom">
-									</div>
 									<div class="tm-write">
-										<p class="name">Sebestyén Melega</p>
-										<p class="designation">Incentive Development and Operations CoE Lead</p>
+                                        <div class="tm-avatar">
+                                            <p class="t-date"><b>C.S.</b> , March 26, 2024</p>
+                                            <p class="t-verify">Verified <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/icons.svg" alt="Verified"></p>
+                                        </div>
+                                        <div class="tm-quote tab-mob">
+                                            <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                                        </div>
 									</div>
 								</div>
 							</div>
 						</div>
 					</div>
 					</div> 
-                    <div class="swiper-button-next"></div>
-                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-btn-next"><img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/arrow_left.svg" alt="Previous"></div>
+                    <div class="swiper-btn-prev"><img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/arrow_right.svg" alt="Next"></div>
 				</div>
 
                     </div>
@@ -167,8 +168,8 @@ function initSlider() {
         // spaceBetween: 30,
         loop: true,
         navigation: {
-            nextEl: ".swiper-button-next",
-            prevEl: ".swiper-button-prev",
+            nextEl: ".swiper-btn-next",
+            prevEl: ".swiper-btn-prev",
         },
     });
 }

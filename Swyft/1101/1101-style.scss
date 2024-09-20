@@ -1,5 +1,17 @@
 $CircularXX: CircularXX, "Arial Nova", sans-serif;
 
+.desk-only {
+  @media screen and (max-width: 991.98px) {
+    display: none;
+  }
+}
+
+.tab-mob {
+  @media screen and (min-width: 991.98px) {
+    display: none;
+  }
+}
+
 body.spz-1101 {
   #trustpilot-testimonial {
     display: none;
@@ -8,20 +20,31 @@ body.spz-1101 {
   #exclusives-hero-section,
   #marketing-llc-hero-section {
     background: #3f6cd4;
+    position: relative;
+    padding-top: 4rem;
+    padding-bottom: 4.15rem;
+
+    &::before {
+      content: "";
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/bg_overlay.webp")
+        no-repeat;
+      background-size: contain;
+      transform: scaleY(-1);
+      width: 918px;
+      height: 662px;
+      z-index: -1;
+    }
+
     .hero-bg,
     .hero-wrap {
       display: none;
-      //   div[data-gatsby-image-wrapper] {
-      //     background: #3f6cd4;
-
-      //     * {
-      //       display: none;
-      //     }
-      //   }
     }
 
     .spz-wrap {
-      max-width: 1170px;
+      max-width: 1168px;
       margin: auto;
       width: 100%;
 
@@ -30,11 +53,12 @@ body.spz-1101 {
         justify-content: space-between;
 
         .spz-col {
-          max-width: 543px;
           width: 100%;
-          flex: 0 0 50%;
+          flex: 0 0 48%;
 
           &.left-copy {
+            max-width: 543px;
+
             .tp-reviews {
               border-radius: 8px;
               border: 1px solid #dadde5;
@@ -43,7 +67,33 @@ body.spz-1101 {
               padding: 8px 16px;
               justify-content: center;
               align-items: center;
-              margin-bottom: 24px;
+              margin-bottom: 28px;
+              max-width: 419px;
+              height: 41px;
+
+              .tp-logo {
+                margin-right: 12px;
+              }
+
+              b {
+                font-size: 14px;
+                font-weight: 900;
+                line-height: 24px;
+                margin-left: 8px;
+                margin-right: 12px;
+              }
+
+              p {
+                color: #fff;
+                font-family: $CircularXX;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 12px;
+                padding-left: 12px;
+                white-space: nowrap;
+
+                border-left: 1px solid rgba(255, 255, 255, 0.37);
+              }
             }
 
             .c-headline {
@@ -54,7 +104,7 @@ body.spz-1101 {
               font-weight: 700;
               line-height: 60px;
               letter-spacing: -0.96px;
-              margin: 0 0 16px;
+              margin: 0 0 14px;
             }
 
             .c-subhead {
@@ -67,7 +117,7 @@ body.spz-1101 {
             }
 
             .c-btn-wrap {
-              margin: 40px 0;
+              margin: 37.5px 0 40px;
 
               .spz-btn {
                 border-radius: 6px;
@@ -88,8 +138,138 @@ body.spz-1101 {
               }
             }
 
-            .spz-testimonial{
-                position: relative;
+            .spz-testimonial {
+              position: relative;
+              padding-left: 23px;
+              border-left: 1px solid #e3f1ff;
+
+              .swiper-btn-next {
+                position: absolute;
+                right: 39px;
+                bottom: -4px;
+              }
+
+              .swiper-btn-prev {
+                position: absolute;
+                right: 0px;
+                bottom: -4px;
+              }
+
+              .spz-slider {
+                .tm-card {
+                  padding: 9px 0;
+                  .tm-body {
+                    position: relative;
+                    margin-bottom: 16px;
+
+                    .t-title {
+                      color: #fafcff;
+                      font-family: $CircularXX;
+                      font-size: 16px;
+                      font-weight: 700;
+                      line-height: 24px;
+                      margin-bottom: 9px;
+                    }
+
+                    .t-desc {
+                      color: #e3f1ff;
+                      font-family: $CircularXX;
+                      font-size: 14px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 24px;
+                      height: 42px;
+                    }
+
+                    .tm-quote {
+                      position: absolute;
+                      top: 2.5px;
+                      right: -1.5px;
+                    }
+                  }
+
+                  .tm-footer {
+                    .tm-write {
+                      display: flex;
+                      align-items: center;
+
+                      .tm-avatar {
+                        display: flex;
+                        align-items: center;
+
+                        .t-date {
+                          color: #fff;
+                          font-family: $CircularXX;
+                          font-size: 14px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
+                          position: relative;
+                          padding-right: 18px;
+
+                          b {
+                            font-weight: 700;
+                          }
+
+                          &::before {
+                            content: "";
+                            position: absolute;
+                            top: 0;
+                            right: 0;
+                            width: 1px;
+                            height: 24px;
+                            background: #90c6ff;
+                          }
+                        }
+
+                        .t-verify {
+                          padding-left: 15px;
+                          display: flex;
+                          align-items: center;
+
+                          img {
+                            margin-right: 4px;
+                            margin-bottom: 2px;
+                          }
+
+                          color: #fafcff;
+                          font-family: $CircularXX;
+                          font-size: 14px;
+                          font-style: normal;
+                          font-weight: 400;
+                          line-height: 24px;
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+
+          &.right-img {
+            position: relative;
+
+            &::before {
+              content: "";
+              position: absolute;
+              top: 0;
+              left: -1px;
+              width: 699.04px;
+              height: 592px;
+              background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_desktop.webp")
+                no-repeat center center;
+              background-size: contain;
+
+              @media (max-width: 991.98px) {
+                background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_tablet.webp")
+                  no-repeat center center;
+              }
+
+              @media (max-width: 767.98px) {
+                background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_mobile.webp")
+                  no-repeat center center;
+              }
             }
           }
         }
