@@ -21,8 +21,11 @@ body.spz-1101 {
   #marketing-llc-hero-section {
     background: #3f6cd4;
     position: relative;
-    padding-top: 4rem;
-    padding-bottom: 4.15rem;
+    padding: 4rem 24px 4.15rem;
+
+    @media (max-width: 991.98px) {
+      padding: 4rem 24px 0;
+    }
 
     &::before {
       content: "";
@@ -36,6 +39,12 @@ body.spz-1101 {
       width: 918px;
       height: 662px;
       z-index: -1;
+
+      @media (max-width: 991.98px) {
+        transform: none;
+        bottom: auto;
+        top: 0;
+      }
     }
 
     .hero-bg,
@@ -48,16 +57,35 @@ body.spz-1101 {
       margin: auto;
       width: 100%;
 
+      @media screen and (min-width: 1600.98px) {
+        max-width: 1304px;
+      }
+
       .spz-row {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 991.98px) {
+          flex-direction: column;
+        }
 
         .spz-col {
           width: 100%;
           flex: 0 0 48%;
 
+          @media (max-width: 991.98px) {
+            flex: 0 0 100%;
+          }
+
           &.left-copy {
             max-width: 543px;
+            margin-right: 24px;
+
+            @media (max-width: 991.98px) {
+              max-width: 544px;
+              margin: 0 auto 40px;
+              text-align: center;
+            }
 
             .tp-reviews {
               border-radius: 8px;
@@ -70,6 +98,10 @@ body.spz-1101 {
               margin-bottom: 28px;
               max-width: 419px;
               height: 41px;
+
+              @media (max-width: 991.98px) {
+                margin: 0 auto 28px;
+              }
 
               .tp-logo {
                 margin-right: 12px;
@@ -105,6 +137,10 @@ body.spz-1101 {
               line-height: 60px;
               letter-spacing: -0.96px;
               margin: 0 0 14px;
+
+              @media (max-width: 991.98px) {
+                margin: 0 auto 14px;
+              }
             }
 
             .c-subhead {
@@ -114,10 +150,18 @@ body.spz-1101 {
               font-weight: 400;
               line-height: 28px;
               margin: 0;
+
+              @media (max-width: 991.98px) {
+                margin: 0 auto;
+              }
             }
 
             .c-btn-wrap {
               margin: 37.5px 0 40px;
+
+              @media (max-width: 991.98px) {
+                margin: 38.5px 0 40px;
+              }
 
               .spz-btn {
                 border-radius: 6px;
@@ -135,6 +179,19 @@ body.spz-1101 {
                 width: 116px;
                 height: 56px;
                 text-decoration: none;
+                transition: all 0.3s ease;
+
+                @media (max-width: 991.98px) {
+                  margin: 0px auto;
+                }
+
+                &:hover {
+                  background: #fda335;
+                }
+
+                &:active {
+                  background: #f1791e;
+                }
               }
             }
 
@@ -143,24 +200,88 @@ body.spz-1101 {
               padding-left: 23px;
               border-left: 1px solid #e3f1ff;
 
+              @media (max-width: 991.98px) {
+                border-top: 1px solid #e3f1ff;
+                border-left: none;
+                padding-left: 0;
+                padding-top: 16px;
+              }
+
               .swiper-btn-next {
                 position: absolute;
                 right: 39px;
-                bottom: -4px;
+                bottom: 6px;
+                z-index: 1;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                svg {
+                  transition: all 0.3s ease;
+                }
+
+                @media (max-width: 991.98px) {
+                  bottom: calc(50% - 23px);
+                  left: 0;
+                  right: auto;
+                }
+
+                @media (max-width: 767.98px) {
+                  display: none;
+                }
+
+                &:hover svg {
+                  fill: rgba(255, 255, 255, 0.1);
+                }
+
+                &:active svg {
+                  fill: rgba(255, 255, 255, 0.2);
+                }
               }
 
               .swiper-btn-prev {
                 position: absolute;
                 right: 0px;
-                bottom: -4px;
+                bottom: 6px;
+                z-index: 1;
+                cursor: pointer;
+                width: 32px;
+                height: 32px;
+                svg {
+                  transition: all 0.3s ease;
+                }
+
+                @media (max-width: 991.98px) {
+                  bottom: calc(50% - 23px);
+                }
+
+                @media (max-width: 767.98px) {
+                  display: none;
+                }
+
+                &:hover svg {
+                  fill: rgba(255, 255, 255, 0.1);
+                }
+
+                &:active svg {
+                  fill: rgba(255, 255, 255, 0.2);
+                }
               }
 
               .spz-slider {
                 .tm-card {
                   padding: 9px 0;
+
+                  @media (max-width: 991.98px) {
+                    padding: 8px 66px;
+                  }
+
                   .tm-body {
                     position: relative;
                     margin-bottom: 16px;
+
+                    @media (max-width: 991.98px) {
+                      margin-bottom: 24px;
+                    }
 
                     .t-title {
                       color: #fafcff;
@@ -192,6 +313,10 @@ body.spz-1101 {
                     .tm-write {
                       display: flex;
                       align-items: center;
+
+                      @media (max-width: 991.98px) {
+                        justify-content: center;
+                      }
 
                       .tm-avatar {
                         display: flex;
@@ -238,7 +363,26 @@ body.spz-1101 {
                           font-style: normal;
                           font-weight: 400;
                           line-height: 24px;
+
+                          @media (max-width: 991.98px) {
+                            padding-right: 18px;
+                            position: relative;
+                            &::before {
+                              content: "";
+                              position: absolute;
+                              top: 0;
+                              right: 0;
+                              width: 1px;
+                              height: 24px;
+                              background: #90c6ff;
+                            }
+                          }
                         }
+                      }
+
+                      .tm-quote {
+                        padding-left: 16px;
+                        height: 20px;
                       }
                     }
                   }
@@ -250,20 +394,40 @@ body.spz-1101 {
           &.right-img {
             position: relative;
 
+            @media screen and (min-width: 1600.98px) {
+              flex: 0 0 71.3%;
+              margin-left: 8.6%;
+            }
+
+            @media (max-width: 991.98px) {
+              min-height: 514px;
+            }
+
             &::before {
               content: "";
               position: absolute;
               top: 0;
-              left: -1px;
-              width: 699.04px;
+              left: 0;
+              min-width: 699.04px;
+              width: 100%;
               height: 592px;
               background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_desktop.webp")
-                no-repeat center center;
+                no-repeat left top;
               background-size: contain;
+
+              @media screen and (min-width: 1600.98px) {
+                background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_desktop.webp")
+                no-repeat left top;
+              background-size: cover;
+              }
 
               @media (max-width: 991.98px) {
                 background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_tablet.webp")
-                  no-repeat center center;
+                  no-repeat left top;
+                background-size: cover;
+                min-width: 744px;
+                width: 100%;
+                height: 100%;
               }
 
               @media (max-width: 767.98px) {
