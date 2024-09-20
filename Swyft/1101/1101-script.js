@@ -115,7 +115,7 @@ function createTest() {
             if (!document.querySelector('body.spz-1101 ' + heroSelector + ' .spz-wrap')) {
                 document.querySelector('body.spz-1101 ' + heroSelector + '').insertAdjacentHTML('beforeend', `<div class="spz-wrap"><div class="spz-row"><div class="spz-col left-copy">
                     <div class="tp-reviews">
-                        <img class="tp-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/logo-Trustpilot.svg" alt="Trustpilot Logo">
+                        <div class="tp-logo-parent"><img class="tp-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/logo-Trustpilot.svg" alt="Trustpilot Logo"></div>
                         <img class="sr-logo" src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/stars-47.svg" alt="4.7 Stars">
                         <b>4.7</b>
                         <p>Based on 6,726 Reviews</p>
@@ -123,7 +123,7 @@ function createTest() {
                     <h1 class="c-headline">Take action to launch your entity in minutes</h1>
                     <p class="c-subhead">We'll handle the paperwork and set your [entity type] up for success with the most tools for growth, protection, and compliance*.</p>
                     <div class="c-btn-wrap">
-                        <a href="https://www.swyftfilings.com/choose-a-business-structure/" class="spz-btn">Start Now</a>
+                        <a href="https://www.swyftfilings.com/choose-a-business-structure/" class="spz-btn spz-1101-tracking">Start Now</a>
                     </div>
 
                     <div class="spz-testimonial"><div class="swiper spz-slider">

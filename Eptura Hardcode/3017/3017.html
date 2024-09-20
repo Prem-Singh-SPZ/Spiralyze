@@ -1,0 +1,2158 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Google Tag Manager -->
+    <script>(function (w, d, s, l, i) {
+            w[l] = w[l] || []; w[l].push({
+                'gtm.start':
+                    new Date().getTime(), event: 'gtm.js'
+            }); var f = d.getElementsByTagName(s)[0],
+                j = d.createElement(s), dl = l != 'dataLayer' ? '&l=' + l : ''; j.async = true; j.src =
+                    'https://www.googletagmanager.com/gtm.js?id=' + i + dl; f.parentNode.insertBefore(j, f);
+        })(window, document, 'script', 'dataLayer', 'GTM-MM7S3LZ');
+    </script>
+    <!-- End Google Tag Manager -->
+    <link rel="stylesheet" href="https://lp.eptura.com/rs/267-JUP-120/images/eptura__form.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/css/bootstrap.min.css"
+        integrity="sha384-xOolHFLEh07PJGoPkLv1IbcEPTNtaed2xpHsD9ESMhqIYd0nLMwNLD69Npy4HI+N" crossorigin="anonymous">
+    <script src="https://fast.wistia.net/assets/external/E-v1.js" async></script>
+
+    <!-- Marketo Variables -->
+    <meta class="mktoString" id="Favicon" mktoname="Favicon URL:"
+        default="https://lp.eptura.com/rs/267-JUP-120/images/Eptura-Favicon-Logo-16px.webp">
+    <meta class="mktoString" id="SEOTitle" mktoname="SEO Page Title:" default="Eptura">
+    <meta class="mktoString" id="domainblock" mktoname="Email Domain Blocking:"
+        default="https://lp.eptura.com/rs/267-JUP-120/images/domain-block-script.js">
+
+    <meta class="mktoColor" id="BGColor" mktoname="Background Color" default="#1B203B">
+
+    <meta class="mktoBoolean" id="mainTitleDisplay" mktoname="Heading Display" default="true" false_value="none"
+        true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="FormTitleDisplay" mktoname="Form: Title Display" default="true" false_value="none"
+        true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="troubleSubmitDisplay" mktoname="Trouble submitting?: Display" default="true"
+        false_value="none" true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="testimonialDisplay" mktoname="Testimonial Section" default="true" false_value="none"
+        true_value="block" false_value_name="Hide" true_value_name="Show">
+    <meta class="mktoBoolean" id="rightSectionDisplay" mktoname="Right Section" default="true" false_value="none"
+        true_value="block" false_value_name="Hide" true_value_name="Show">
+
+
+    <meta class="mktoString" id="emailInTrouble" mktoname="Form: Trouble Email:" default="info@eptura-marketing.com">
+
+    <meta class="mktoString" id="PageSpecificLogoTitle" mktoname="Logo Image Title:" default="">
+
+    <title>${SEOTitle}</title>
+    <link rel="icon" type="image/x-icon" href="${Favicon}">
+
+    <link rel="preload" href="https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-errored-3016.svg?version=0"
+        as="image">
+    <link rel="preload" href="https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-hover-3016.svg?version=0"
+        as="image">
+    <link rel="preload" href="https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-checked-3016.svg?version=0"
+        as="image">
+
+    <style>
+        /* Global */
+        :root {
+            --Obsidian: #0D122E;
+            --PaleBlue: #7AA0FF;
+            --LightBlue: #456ED6;
+            --MedBlue: #1B4BC5;
+            --Turquoise: #26A199;
+            --Purple: #904AB0;
+            --Lilac: #D6D7F5;
+            --OffWhite: #F6FAFA;
+            --Grey: #888B8D;
+            --White: #fff;
+        }
+
+        @font-face {
+            font-family: 'Eptura Flexible';
+            src: url('https://lp.eptura.com/rs/267-JUP-120/images/EpturaFlexible-Regular.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Eptura Flexible Light';
+            src: url('https://lp.eptura.com/rs/267-JUP-120/images/EpturaFlexible-Light.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Eptura Flexible Bold';
+            src: url('https://lp.eptura.com/rs/267-JUP-120/images/EpturaFlexible-Bold.woff2') format('woff2');
+        }
+
+        * {
+            scroll-behavior: smooth;
+            font-family: 'Eptura Flexible Light', Arial, sans-serif;
+        }
+
+        object {
+            position: absolute;
+            top: -1000px;
+            left: -1000px
+        }
+
+        body {
+            height: 100%;
+            overflow-x: hidden;
+        }
+
+        /* [COOKIE BANNER] */
+        #cookie-law {
+            position: fixed;
+            z-index: 99999;
+            background: rgba(0, 0, 0, 0.8);
+            box-shadow: 0 3px 6px rgba(0, 0, 0, 0.16), 0 3px 6px rgba(0, 0, 0, 0.23);
+            text-align: center;
+            padding: 30px;
+            right: 0;
+            bottom: 0;
+            left: 0;
+        }
+
+        #cookie-law p {
+            margin: 0;
+            color: #fff;
+            font-size: 16px;
+        }
+
+        #cookie-law p a {
+            color: var(--MedBlue);
+        }
+
+        .close-cookie-banner span {
+            display: block;
+            position: absolute;
+            top: -25px;
+            right: 25px;
+            color: #fff;
+            font-size: 15px;
+            padding: 12px 18px;
+            background-color: var(--MedBlue);
+            ;
+            border-radius: 50%;
+            text-decoration: none;
+            cursor: pointer;
+            border: var(--MedBlue) 2px solid;
+            opacity: 1;
+            transition-duration: .334s;
+            transition-property: background-color, border-color, color;
+            transition-timing-function: cubic-bezier(.33, 0, .67, 1);
+        }
+
+        .close-cookie-banner:hover span {
+            background-color: #fff;
+            color: var(--MedBlue);
+            text-decoration: none;
+            transition-duration: .334s;
+            transition-property: background-color, border-color, color;
+            transition-timing-function: cubic-bezier(.33, 0, .67, 1);
+        }
+
+        /* [/COOKIE BANNER] */
+    </style>
+
+    <!-- Form Over UI Starts -->
+    <style>
+        body #hero {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+
+            background-color: $ {
+                BGColor
+            }
+
+            ;
+            /* background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3016/proxyclick_bg_1440.webp');
+            background-size: cover;
+            background-position: top right; */
+        }
+
+        body .overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            z-index: 0;
+
+            background: $ {
+                BGColor
+            }
+
+            ;
+        }
+
+        body .overlay .mktoGen.mktoImg {
+            width: 100%;
+            height: 100%;
+            position: relative;
+        }
+
+        body .overlay .mktoGen.mktoImg::before {
+            position: absolute;
+            content: "";
+            width: 100%;
+            height: 100%;
+            top: 0;
+            left: 0;
+            backdrop-filter: blur(1px);
+        }
+
+        body .overlay .mktoGen.mktoImg img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            object-position: top right;
+        }
+
+        body #HeaderScripts.mktoText {
+            display: none !important;
+        }
+
+        body .body-wrapper .transparent-toggle.spacer.spacer-bottom {
+            padding: 0;
+        }
+
+        body .body-wrapper::before {
+            display: none;
+        }
+
+        body .body-wrapper>footer .page_padding .top.pt-5,
+        body .body-wrapper>footer .page_padding .divider.py-3 {
+            display: none !important;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 {
+            padding-top: 40px;
+            padding-bottom: 40px !important;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .left #FooterLogo img {
+            min-width: 85.12px;
+            height: 64px;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .left .links {
+            max-width: 756px;
+            padding-left: 64px !important;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .left .links #FooterBottom li a {
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            text-transform: capitalize;
+            line-height: 20px;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .right a img {
+            width: auto;
+            height: 20px;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .right a:first-child {
+            -webkit-box-ordinal-group: 1;
+            -ms-flex-order: 0;
+            order: 0;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .right a:nth-child(2) {
+            -webkit-box-ordinal-group: 3;
+            -ms-flex-order: 2;
+            order: 2;
+            padding-left: 20px;
+        }
+
+        body .body-wrapper>footer .page_padding .bottom.pb-5 .right a:last-child {
+            -webkit-box-ordinal-group: 2;
+            -ms-flex-order: 1;
+            order: 1;
+            padding-left: 21px;
+        }
+
+        body .body-wrapper #nav.sticky-top {
+            position: relative !important;
+        }
+
+        body .body-wrapper #nav.sticky-top.nav-scrolled {
+            background: transparent !important;
+            -webkit-filter: none;
+            filter: none;
+        }
+
+        body .body-wrapper #nav nav {
+            margin-top: 16px;
+        }
+
+        body .body-wrapper #nav nav #NavLogo .logo-img {
+            max-width: 104px;
+        }
+
+        body .body-wrapper #nav nav #NavLogo #logo-img {
+            display: none !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText>h6,
+        body .body-wrapper #hero .hero_container>.row #HeroText>h6 div {
+            color: #26a199;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 13px;
+            letter-spacing: 2.7px;
+            margin-bottom: 12px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText>h1 {
+            color: var(--primary-neutrals-n-3, #f6fafa);
+            font-size: 46px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 54px;
+            /* 117.391% */
+            letter-spacing: 0;
+            max-width: 572px;
+            margin-bottom: 32px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy {
+            list-style: none;
+            padding-left: 40px;
+            margin-bottom: 16px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy .list-item {
+            color: var(--primary-neutrals-n-3, #f6fafa);
+            font-size: 20px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 28px;
+            margin-bottom: 24px;
+            position: relative;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy .list-item span {
+            font-weight: 500;
+            letter-spacing: 0.2px;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy .list-item::before {
+            content: "";
+            background: url(https://lp.eptura.com/rs/267-JUP-120/images/checkmark-icon-3016.svg?version=0);
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            display: block;
+            position: absolute;
+            left: -40px;
+            top: 0;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText .hero-img {
+            max-width: 508.175px;
+            padding: 0px 0.32px 0px 0.48px;
+            height: auto;
+            margin-top: 40px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroText .hero-img img {
+            width: 100%;
+            height: auto;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 span {
+            color: var(--accents-a-5, #904ab0);
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
+            min-height: auto;
+            margin: 0 !important;
+            padding: 0 10px !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
+            position: absolute;
+            overflow: hidden;
+            color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8)) !important;
+            text-overflow: ellipsis;
+            white-space: nowrap;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 300 !important;
+            line-height: 24px;
+            /* 150% */
+            top: 11px;
+            left: 16px;
+            padding: 0 !important;
+            -webkit-transition: all 0.3s ease-in-out;
+            transition: all 0.3s ease-in-out;
+            pointer-events: none;
+            max-width: calc(100% - 58px);
+            background: #fff;
+            right: 0;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]) {
+            border-radius: 4px;
+            border: 1px solid var(--interactive-colors-a-4, #d6d7f5) !important;
+            width: 280px;
+            padding: 11px 16px 10px 16px !important;
+            color: var(--primary-neutrals-n-1, #0d122e) !important;
+            text-overflow: ellipsis;
+            font-family: "Eptura Flexible", Arial, sans-serif !important;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 300 !important;
+            line-height: 24px !important;
+            /* 150% */
+            margin-bottom: 20px !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+            overflow: hidden;
+            height: 48px !important;
+            white-space: nowrap;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#I_am__c,
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Country,
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Solution_Type__c {
+            outline: transparent;
+            -webkit-appearance: none !important;
+            -moz-appearance: none !important;
+            appearance: none !important;
+            background-image: url("https://lp.eptura.com/rs/267-JUP-120/images/chevron-down-3016.svg?version=0") !important;
+            background-repeat: no-repeat !important;
+            background-position: right 14px center !important;
+            background-size: 24px !important;
+            padding-right: 32px !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c~.mktoError {
+            margin-top: 0 !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c~.mktoError .mktoErrorArrowWrap {
+            top: -27px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox])#Lead_Notes__c~.mktoError .mktoErrorMsg {
+            margin-top: -20px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):-webkit-autofill {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):autofill {
+            -webkit-box-shadow: 0 0 0 30px white inset !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+            margin: 0 !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span {
+            color: #848995;
+            font-size: 10px !important;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 16px;
+            /* 160% */
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a {
+            padding: 0;
+            color: #1b4bc5;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoHtmlText.mktoHasWidth span a:hover {
+            color: #0d122e;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList {
+            margin-top: 3px;
+            cursor: pointer;
+            display: inline-block;
+            position: relative;
+            padding-left: 25px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+            border: 1px solid #d6d7f5;
+            height: 16px !important;
+            width: 16px !important;
+            cursor: pointer;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:before {
+            content: "";
+            width: 16px;
+            height: 16px;
+            position: absolute;
+            left: 0;
+            background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-3016.svg?version=0") left center no-repeat;
+            margin-top: 2px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label:hover::before {
+            background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-hover-3016.svg?version=0") left center no-repeat;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox] {
+            display: none !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList input[type=checkbox]:checked+label:before {
+            background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-checked-3016.svg?version=0") left center no-repeat;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError {
+            margin-top: 48px !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+            color: #f3f3f3;
+            font-size: 13px;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 16px;
+            /* 123.077% */
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label {
+            color: #e51b00 !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.spz-cstm-error .mktoCheckboxList label::before {
+            background: url("https://lp.eptura.com/rs/267-JUP-120/images/form-checkmark-errored-3016.svg?version=0") left center no-repeat;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoFieldWrap .mktoLabel {
+            top: -8px;
+            left: 11px;
+            right: auto;
+            padding: 0 5px !important;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            color: var(--accents-a-5, #904ab0) !important;
+            font-size: 13px !important;
+            line-height: 18px !important;
+            /* 138.462% */
+            background: #fff;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-focus .mktoField:not([type=checkbox]) {
+            border-color: #904ab0 !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.input-filled .mktoFieldWrap .mktoLabel {
+            top: -8px;
+            left: 11px;
+            right: auto;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            padding: 0 5px !important;
+            font-size: 13px !important;
+            line-height: 18px !important;
+            /* 138.462% */
+            background: #fff;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error.field-focus .mktoFieldWrap .mktoLabel {
+            color: var(--accents-a-5, #f83a59) !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol.field-error .mktoField:not([type=checkbox]) {
+            border-color: #f83a59 !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow[data-zi-field-enriched=true] {
+            display: inline !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100%;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden)+.mktoFieldDescriptor.mktoFormCol {
+            display: none !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+            overflow: hidden;
+            color: var(--primary-neutrals-n-2, rgba(13, 18, 46, 0.8));
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            text-overflow: ellipsis;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 24px;
+            margin-bottom: 18px;
+            display: inline-block;
+            margin-top: 2px;
+            -webkit-transition: all 0.3s ease;
+            transition: all 0.3s ease;
+            margin-left: 10px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic span {
+            padding-right: 5px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic:hover {
+            color: #904ab0;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-hidden {
+            display: none;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover,
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+            background: var(--interactive-colors-a-3, #456ed6) !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:focus {
+            -webkit-transform: translate(0, 1px);
+            transform: translate(0, 1px);
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email {
+            display: $ {
+                troubleSubmitDisplay
+            }
+
+            ;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+            text-align: center;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+            color: var(--primary-neutrals-n-1, #0d122e);
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300;
+            line-height: 20px;
+            display: block;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a {
+            color: var(--interactive-colors-a-1, #1b4bc5);
+            font-weight: 500;
+            padding: 0;
+            font-family: "Eptura Flexible", Arial, sans-serif;
+            padding-left: 2px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em a:hover {
+            color: #0d122e;
+        }
+
+        /* Additional Css */
+        body {
+            background: linear-gradient(180deg, #20253F 0%, #0D122E 151.2%);
+        }
+
+        body .body-wrapper #hero .hero_container {
+            padding: 0 !important;
+            max-width: 100%;
+            overflow: hidden;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol::-webkit-scrollbar {
+            width: 2px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol::-webkit-scrollbar-track {
+            /* box-shadow: inset 0 0 1px rgba(0, 0, 0, 0.01); */
+            box-shadow: none;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol::-webkit-scrollbar-thumb {
+            background-color: #fff;
+            outline: 1px solid transparent;
+        }
+
+        body .body-wrapper #hero .hero_container>.row {
+            height: 100vh;
+            margin: 0;
+            position: relative;
+            flex-direction: row;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
+            max-width: 600px;
+            padding: 0 62px 53px 64px;
+            margin: auto;
+        }
+
+        body #hero .spz-form-title,
+        body #hero .spz-form-title *:not(span) {
+            padding: 0 0 0 0;
+            margin: 0;
+            font-family: 'Eptura Flexible Light', Arial, sans-serif;
+            font-size: 32px;
+            font-weight: 300;
+            line-height: 40px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #0D122E;
+            display: block;
+            margin-bottom: 39px;
+        }
+
+        body #hero .spz-form-title span {
+            font-weight: 500;
+            color: #904AB0;
+            font-family: 'Eptura Flexible', Arial, sans-serif;
+            line-height: 1;
+            display: initial;
+            padding-right: 2px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6,
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 div {
+            font-family: 'Eptura Flexible', Arial, sans-serif;
+            font-size: 16px;
+            font-weight: 500;
+            line-height: 20px;
+            letter-spacing: 2.6px;
+            text-align: left;
+            color: #904AB0;
+            margin: 0;
+            margin-bottom: 40px;
+            position: relative;
+            text-transform: uppercase;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6:after {
+            content: '';
+            position: absolute;
+            top: 50%;
+            right: 0;
+            width: calc(100% - 140px);
+            border-bottom: 1px solid #D9DCE2;
+            transform: translateY(-50%);
+            opacity: 0.7;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel form.mktoForm {
+            width: initial !important;
+            max-width: initial !important;
+            margin: 0 -10px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap {
+            margin: 0 !important;
+            display: block;
+            width: 100%;
+            padding: 0 10px !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            width: 100% !important;
+            max-width: 100% !important;
+            height: 50px !important;
+            padding: 0px 8px !important;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border-radius: 3px !important;
+            background: var(--interactive-colors-a-1, #1b4bc5) !important;
+            color: var(--primary-neutrals-w, #fff) !important;
+            text-align: center;
+            font-family: "Eptura Flexible", Arial, sans-serif !important;
+            font-size: 16px !important;
+            font-style: normal;
+            font-weight: 500 !important;
+            line-height: 24px !important;
+            margin-top: 21px !important;
+            white-space: nowrap;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
+            font-family: "Eptura Flexible Light", Arial, sans-serif !important;
+            color: var(--primary-neutrals-n-1, #0d122e);
+            font-size: 14px !important;
+            font-style: normal !important;
+            font-weight: 300 !important;
+            line-height: 20px !important;
+            margin-left: 19px;
+            cursor: pointer;
+            padding: 0 !important;
+            min-height: initial !important;
+            margin-top: -2px !important;
+            margin-left: 24px !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a {
+            color: #1B4BC5;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a:hover {
+            color: #0D122E;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText {
+            display: block !important;
+            padding: 0 !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
+            position: relative;
+            float: none !important;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+            margin-top: 12px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol {
+            position: relative;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol .spz-site-logo {
+            padding: 0 64px;
+            display: flex;
+            height: fit-content;
+            width: 100%;
+            max-width: 600px;
+            margin: auto;
+            margin-bottom: 49px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol .spz-site-logo .lpimg {
+            height: 36px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row::before {
+            content: '';
+            position: absolute;
+            top: calc(50% + 24px);
+            left: 759px;
+            transform: translateY(-50%);
+            display: block;
+            width: 21px;
+            height: 48px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjEiIGhlaWdodD0iNDgiIHZpZXdCb3g9IjAgMCAyMSA0OCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTIxIDI0TDAgMFY0OEwyMSAyNFoiIGZpbGw9IndoaXRlIi8+Cjwvc3ZnPgo=");
+            background-size: auto;
+            background-repeat: no-repeat;
+            background-position: center;
+        }
+
+        body .spz-hero-contents {
+            width: calc(100% - 760px);
+            padding-top: 120px;
+            margin: 0 auto;
+            max-height: 100%;
+            overflow-y: auto;
+            background-color: ${BGColor}
+        }
+
+        body .spz-hero-bg {
+            width: calc(100% - 760px);
+            padding-top: 120px;
+            margin: 0 auto;
+        }
+
+        body .spz-hero-contents[style*="display: block;"]+.spz-hero-bg {
+            display: none !important;
+        }
+
+        body .spz-hero-contents .spz-hero-content-wrap {
+            display: flex;
+            /* flex-wrap: wrap; */
+            max-width: 840px;
+            padding: 0 20px;
+            width: 100%;
+            margin: auto;
+            height: 100%;
+            flex-direction: column;
+        }
+
+        body .spz-hero-contents picture,
+        body .spz-hero-contents picture img {
+            display: block;
+            width: 100%;
+        }
+
+        body .spz-hero-contents picture img {
+            display: block;
+            max-width: 700px;
+            width: 100%;
+            margin: auto;
+        }
+
+        body .spz-hero-contents .spz-hero-list {
+            margin: 0;
+            margin-top: 72px;
+            padding: 0;
+            list-style: none;
+        }
+
+        body .spz-hero-contents .spz-hero-list li {
+            font-family: "Eptura Flexible Light", Arial, sans-serif;
+            font-size: 20px;
+            font-weight: 300;
+            line-height: 28px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #F6FAFA;
+            margin-bottom: 32px;
+            padding-left: 40px;
+            background-image: url("data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMjQiIGhlaWdodD0iMjQiIHZpZXdCb3g9IjAgMCAyNCAyNCIgZmlsbD0ibm9uZSIgeG1sbnM9Imh0dHA6Ly93d3cudzMub3JnLzIwMDAvc3ZnIj4KPHBhdGggZD0iTTEyLjQ0MjkgMi4xNTUzOEMxNC43OTY1IDIuMTU1MzggMTcuNjc4MSAwLjA4NzY5NTEgMjAuODM0NiAxLjQ4NDQ4QzI0LjAwMjEgMi44ODEyNiAyNC45Njk5IDYuNTQzNjkgMjIuOTI0MyAxMC4wNDEyQzIwLjg3ODYgMTMuNTM4NiAyMi42MjczIDIxLjQwMjQgMTYuOTk2MiAyMi40MjUyQzExLjU1MiAyMy40MTUxIDguNzgwNDUgMjEuODIwMyA0LjU5MDA5IDE4LjYzMDhDLTAuNDQ3MTI2IDE0LjgxNDQgLTIuMjE3ODUgMy4yMDAyMSAzLjgzMTIxIDEuMzE5NUM3LjE1MjY5IDAuMjk2NjYzIDguMzQwNTEgMi4xNTUzOCAxMi40NDI5IDIuMTU1MzhaIiBmaWxsPSIjOTA0QUIwIi8+CjxwYXRoIGQ9Ik04IDExTDExIDE0TDE3IDgiIHN0cm9rZT0iI0Y2RkFGQSIgc3Ryb2tlLXdpZHRoPSIyIiBzdHJva2UtbGluZWNhcD0icm91bmQiLz4KPC9zdmc+Cg==");
+            background-repeat: no-repeat;
+            background-position: top left;
+            background-size: auto;
+        }
+
+        body .spz-hero-contents .spz-hero-list li strong {
+            font-family: 'Eptura Flexible', Arial, sans-serif;
+            font-weight: 500;
+            letter-spacing: 0.2px;
+        }
+
+        body .spz-hero-contents .spz-hero-list li:last-child {
+            margin-bottom: 0;
+        }
+
+        body .spz-footer {
+            display: flex;
+            flex-wrap: wrap;
+            width: 100%;
+            padding-top: 64px;
+            padding-bottom: 56px;
+            margin-top: auto;
+        }
+
+        body .spz-footer .spz-footer-wrap {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            width: 100%;
+        }
+
+        body .spz-footer .spz-footer-links {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            list-style: none;
+            margin: 0;
+            padding: 0;
+        }
+
+        body .spz-footer .spz-footer-links li {
+            padding-right: 20px;
+        }
+
+        body .spz-footer .spz-footer-links li:last-child {
+            padding-right: 0;
+        }
+
+        body .spz-footer .spz-footer-links li a {
+            font-family: 'Eptura Flexible Light', Arial, sans-serif;
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #F6FAFA;
+            display: block;
+            -webkit-transition: all .2s ease-in-out;
+            -moz-transition: all .2s ease-in-out;
+            -o-transition: all .2s ease-in-out;
+            -ms-transition: all .2s ease-in-out;
+            transition: all .2s ease-in-out;
+        }
+
+        body .spz-footer .spz-footer-links li a:hover {
+            color: #D6D7F5;
+        }
+
+        body .spz-footer .spz-footer-copyright {
+            display: block;
+            margin: 0;
+            font-family: 'Eptura Flexible Light';
+            font-size: 12px;
+            font-weight: 300;
+            line-height: 18px;
+            letter-spacing: 0em;
+            text-align: left;
+            color: #F6FAFA;
+        }
+
+        body .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+            padding-bottom: 0 !important;
+            max-width: 685px;
+        }
+
+        body .body-wrapper #hero .hero_container>.row #HeroFormCol {
+            padding: 0px !important;
+            padding-top: 24px !important;
+            max-width: 760px;
+            width: 100%;
+            display: flex !important;
+            flex-wrap: wrap;
+            align-content: space-between;
+            min-height: 100vh;
+            background: #fff;
+            max-height: 100%;
+            overflow-y: auto;
+            box-shadow: none;
+        }
+
+        .mobile-only-br {
+            display: none;
+        }
+
+        @media (min-width: 767.98px) {
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:not([type=checkbox]):not(#Lead_Notes__c) {
+                max-width: 100%;
+            }
+        }
+
+        @media (min-width: 1199.98px) {
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
+                display: none;
+            }
+        }
+
+        @media (min-width: 1599.98px) {
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+                margin-top: 15px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel,
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol .spz-site-logo {
+                padding: 0 20px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
+                padding-bottom: 48px;
+            }
+        }
+
+        @media (min-width: 2100.98px) {
+            body #hero {
+                background-size: contain;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
+                flex-grow: 1;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+                position: relative;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol {
+                display: flex !important;
+                flex-wrap: wrap;
+                max-width: 1000px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row::before {
+                left: 1000px;
+            }
+
+            body .spz-hero-contents,
+            body .spz-hero-bg {
+                width: calc(100% - 1000px);
+            }
+
+            body .spz-hero-contents .spz-hero-content-wrap .spz-hero-image-list {
+                flex-grow: 1;
+                display: flex;
+                flex-wrap: wrap;
+                flex-direction: column;
+                justify-content: center;
+            }
+        }
+
+        @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            body .body-wrapper>footer .page_padding {
+                padding: 0 40px;
+                max-width: 768px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .d-md-flex.justify-content-md-between {
+                -webkit-box-align: end;
+                -ms-flex-align: end;
+                align-items: end;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .left {
+                -webkit-box-orient: vertical;
+                -webkit-box-direction: normal;
+                -ms-flex-direction: column;
+                flex-direction: column;
+                width: 548px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .left #FooterLogo {
+                margin-bottom: 20px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .left #FooterLogo img {
+                min-width: 53.2px;
+                height: 40px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .right a img {
+                width: 16px;
+                height: 16px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .right a:nth-child(2) {
+                padding-left: 16px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .right a:last-child {
+                padding-left: 17px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+                padding: 0 0 52px !important;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText>h1 {
+                max-width: 574px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy {
+                padding-right: 4px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText {
+                max-width: 688px;
+                margin: auto;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em .mobile-only {
+                display: inline;
+            }
+        }
+
+        @media (max-width: 1600.98px) {
+
+            body .spz-hero-contents,
+            body .spz-hero-bg {
+                width: calc(100% - 600px);
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol {
+                max-width: 600px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row::before {
+                left: 599px;
+            }
+
+            body .spz-hero-contents .spz-hero-content-wrap {
+                max-width: 740px;
+            }
+        }
+
+        @media (max-width: 1440.98px) {
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+                margin-top: 16px;
+            }
+        }
+
+        @media (max-width: 1366.98px) {
+            body .body-wrapper #hero .hero_container>.row::before {
+                right: -15px;
+            }
+        }
+
+        @media (max-width: 1199.98px) {
+            .desktop-only {
+                display: none;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol .spz-site-logo {
+                padding: 0 24px;
+                margin-bottom: 40px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .left .links {
+                padding-left: 0px !important;
+            }
+
+            body .body-wrapper #nav nav {
+                margin-top: 0;
+                padding: 0 40px;
+            }
+
+            body .body-wrapper #nav nav #NavLogo .logo-img {
+                max-width: 81px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol,
+            body .spz-hero-contents,
+            body .spz-hero-bg {
+                width: 50%;
+                max-width: initial;
+            }
+
+            body .body-wrapper #hero .hero_container>.row::before {
+                left: 50%;
+            }
+
+            body #hero {
+                background-position: top left;
+            }
+
+            body #hero .spz-form-title,
+            body #hero .spz-form-title *:not(span) {
+                font-size: 26px;
+                line-height: 34px;
+                margin-bottom: 28px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
+                padding-left: 24px;
+                padding-right: 22px;
+                padding-bottom: 40px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol {
+                width: 100% !important;
+                padding: 0 !important;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel form.mktoForm {
+                margin: 0;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap {
+                padding: 0 !important;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label {
+                font-size: 12px !important;
+                line-height: 18px !important;
+            }
+
+            body .spz-hero-contents .spz-hero-content-wrap {
+                padding: 0 24px;
+            }
+
+            body .spz-footer .spz-footer-links {
+                width: 100%;
+                justify-content: space-between;
+                padding-bottom: 8px;
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+
+            body .spz-footer .spz-footer-copyright {
+                display: block;
+                width: 100%;
+                text-align: center;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6,
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroFormTitleText h6 div {
+                margin-bottom: 32px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+                margin-left: 0;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton {
+                margin-top: 13px !important;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+                margin-top: 16px;
+            }
+
+            body .spz-hero-contents,
+            body .spz-hero-bg {
+                padding-top: 88px;
+            }
+
+            body .spz-hero-contents .spz-hero-list {
+                margin-top: 40px;
+            }
+
+            body .spz-hero-contents .spz-hero-list li {
+                margin-bottom: 24px;
+            }
+
+            body .spz-footer {
+                padding-bottom: 32px;
+            }
+        }
+
+        @media (max-width: 767.98px) {
+            body {
+                background: linear-gradient(90deg, rgba(13, 18, 46, 0.80) 20.66%, rgba(66, 73, 112, 0.80) 100%);
+                overflow: hidden;
+            }
+
+            body #hero {
+                background-repeat: no-repeat;
+                background-size: contain;
+                background-color: #fff;
+                background-attachment: fixed;
+            }
+
+            body #hero::before {
+                content: ' ';
+                position: absolute;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                height: 100%;
+                width: 100%;
+                background: linear-gradient(90deg, rgba(13, 18, 46, 0.80) 20.66%, rgba(66, 73, 112, 0.80) 100%);
+                background-attachment: fixed;
+                backdrop-filter: blur(1px);
+            }
+
+            body .body-wrapper #hero .hero_container {
+                height: 100vh;
+                overflow-y: auto;
+            }
+
+            body .body-wrapper #hero .hero_container>.row {
+                height: initial;
+                overflow-y: auto;
+            }
+
+            body .body-wrapper #hero .hero_container>.row::before {
+                display: none;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol .spz-site-logo {
+                padding: 0 30px;
+                max-width: 100%;
+                margin-bottom: 32px;
+            }
+
+            body #hero .spz-form-title,
+            body #hero .spz-form-title *:not(span) {
+                font-size: 24px;
+                line-height: 32px;
+            }
+
+            body .body-wrapper>footer .page_padding {
+                max-width: 360px;
+                padding: 0 31px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 {
+                padding-top: 38px !important;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .d-md-flex.justify-content-md-between .desktopHide {
+                font-family: "Eptura Flexible", Arial, sans-serif;
+                font-size: 12px;
+                line-height: 18px;
+                padding-top: 14px !important;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .left #FooterLogo img {
+                min-width: 74.48px;
+                height: 56px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .left .links #FooterBottom li a {
+                font-size: 12px;
+                line-height: 18px;
+            }
+
+            body .body-wrapper>footer .page_padding .bottom.pb-5 .right {
+                gap: 0;
+                padding-top: 11px !important;
+            }
+
+            body .body-wrapper #nav nav {
+                padding: 0 30px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row>.col-md.pb-5 {
+                padding: 0 44px 37px !important;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText>h6 {
+                font-size: 12px;
+                line-height: 16px;
+                /* 116.667% */
+                letter-spacing: 1.1px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText>h1 {
+                font-size: 26px;
+                line-height: 34px;
+                /* 130.769% */
+                margin-bottom: 16px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy {
+                padding-left: 41px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy .list-item {
+                font-size: 16px;
+                line-height: 24px;
+                /* 130.769% */
+                margin-bottom: 16px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText .hero-list-copy .list-item::before {
+                left: -40px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroText .hero-img {
+                margin-top: 34px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList .mktoField {
+                margin-top: 7px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .spz-anchor:not(.spz-hidden) .show-comment-dynamic {
+                padding: 0;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth {
+                line-height: 0;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap .mktoHtmlText.mktoHasWidth em {
+                padding: 0;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol,
+            body .spz-hero-contents,
+            body .spz-hero-bg {
+                width: 100%;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol {
+                margin: 80px auto;
+                max-width: calc(100% - 32px);
+                border-radius: 8px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel {
+                max-width: initial;
+                padding-left: 30px;
+                padding-right: 30px;
+                padding-bottom: 32px;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoCheckboxList label a {
+                padding: 0;
+            }
+
+            body .body-wrapper #hero .hero_container>.row #HeroFormCol #HeroFormPanel #HeroForm form.mktoForm .spz-email .mktoFieldWrap {
+                margin-top: 16px;
+            }
+
+            body .spz-hero-contents {
+                padding-top: 50px;
+                max-height: initial;
+                overflow: hidden;
+            }
+
+            body .spz-hero-bg {
+                padding-top: 0px;
+            }
+
+            body .spz-hero-contents .spz-hero-content-wrap {
+                padding: 0 12px;
+            }
+
+            body .spz-hero-contents .spz-hero-list {
+                padding: 0 18px;
+            }
+
+            body .spz-hero-contents .spz-hero-list li {
+                font-size: 16px;
+                line-height: 24px;
+                padding-left: 36px;
+                margin-bottom: 20px;
+            }
+
+            body .spz-footer {
+                padding-top: 56px;
+            }
+
+            body .spz-footer .spz-footer-links {
+                padding-left: 18px;
+                padding-right: 18px;
+                padding-bottom: 12px;
+            }
+
+            body .spz-footer .spz-footer-links li {
+                padding-right: 17px;
+            }
+        }
+
+        @media(max-width: 359.98px) {
+            body .spz-footer .spz-footer-links {
+                padding-left: 0;
+                padding-right: 0;
+            }
+
+            body .spz-footer .spz-footer-links li {
+                padding-right: 15px;
+            }
+        }
+
+        /* Testimonial CSS Start Here */
+        body .spz-testimonials {
+            position: relative;
+            overflow: hidden;
+        }
+
+        body .spz-testimonials::before {
+            position: absolute;
+            content: "";
+            bottom: -170px;
+            left: -39px;
+            width: 316px;
+            height: 492px;
+            background-image: url("https://lp.eptura.com/rs/267-JUP-120/images/graphics-quotes-2_desktop-3016.svg?version=0");
+            background-size: contain;
+            background-repeat: no-repeat;
+            pointer-events: none;
+        }
+
+        body .spz-testimonials::after {
+            position: absolute;
+            content: "";
+            top: -87px;
+            right: -22px;
+            width: 316px;
+            height: 492px;
+            background-image: url("https://lp.eptura.com/rs/267-JUP-120/images/graphics-quotes-1_desktop-3016.svg?version=0");
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+
+        body .spz-testimonials-wrap {
+            margin: 0 64px;
+            padding: 48px 0 47px;
+            border-top: 1px solid rgba(217, 220, 226, 1);
+            position: relative;
+            z-index: 99;
+        }
+
+        /* body .spz-testimonials-slider .spz-testimonial {
+            cursor: pointer;
+        } */
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-content {
+            color: #0D122E !important;
+            font-family: 'Eptura Flexible Light', Arial, sans-serif;
+            font-size: 18px !important;
+            font-style: normal;
+            font-weight: 300 !important;
+            line-height: 26px;
+            padding: 0 1px 0 0 !important;
+            margin: 0 0 24px;
+            display: -webkit-box;
+            -webkit-line-clamp: 3;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-content strong {
+            font-weight: 500;
+            font-family: 'Eptura Flexible', Arial, sans-serif;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author,
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info {
+            padding-right: 12px;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info img {
+            width: 48px;
+            height: 48px;
+            border-radius: 48px;
+            margin-right: 12px;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h4 {
+            color: #0D122E;
+            font-family: 'Eptura Flexible', Arial, sans-serif;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 24px;
+            margin: 0;
+            opacity: 0.7;
+        }
+
+        /* body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 {
+            display: flex !important;
+        } */
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6,
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 div {
+            color: #0D122E !important;
+            font-family: 'Eptura Flexible Light', Arial, sans-serif;
+            font-size: 14px;
+            font-style: normal;
+            font-weight: 300 !important;
+            line-height: 20px;
+            letter-spacing: unset !important;
+            margin: 0;
+            opacity: 0.7;
+            display: -webkit-box;
+            -webkit-line-clamp: 1;
+            -webkit-box-orient: vertical;
+            overflow: hidden;
+            word-break: break-all;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .company-info {
+            border-left: 1px solid rgba(217, 220, 226, 1);
+            padding-left: 11px;
+        }
+
+        body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .company-info img {
+            width: auto;
+            height: 48px;
+            object-fit: contain;
+        }
+
+        @media(max-width: 1199.98px) {
+            body .spz-testimonials-wrap {
+                margin: 0 24px;
+            }
+        }
+
+        @media(max-width: 1023.98px) {
+            body .spz-testimonials::before {
+                bottom: -105px;
+                left: -12px;
+                width: 206px;
+                height: 321px;
+            }
+
+            body .spz-testimonials::after {
+                top: -12px;
+                right: -38px;
+                width: 206px;
+                height: 322px;
+            }
+
+            body .spz-testimonials-wrap {
+                margin: 0 24px;
+                padding: 23px 0 24px;
+            }
+
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-content {
+                font-size: 16px !important;
+                line-height: 24px;
+            }
+
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h4 {
+                font-size: 14px;
+                line-height: 20px;
+            }
+
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6,
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 div {
+                font-size: 12px;
+                line-height: 18px;
+            }
+        }
+
+        @media(max-width: 767.98px) {
+            .mobile-only-br {
+                display: block;
+            }
+
+            body .spz-testimonials::before {
+                bottom: -58px;
+                left: -12px;
+                width: 175px;
+                height: 273px;
+            }
+
+            body .spz-testimonials::after {
+                top: 8px;
+                right: -32px;
+                width: 175px;
+                height: 273px;
+            }
+
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info {
+                padding-right: 4px;
+            }
+
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info img {
+                width: 40px;
+                height: 40px;
+                border-radius: 40px;
+            }
+
+            body:has(.spz-hero-contents[style*="display: block;"]) .body-wrapper #hero .hero_container>.row {
+                overflow-y: auto;
+                height: 100%;
+            }
+
+            body:has(.spz-hero-contents[style*="display: block;"]) .body-wrapper #hero .hero_container>.row #HeroFormCol {
+                margin: 0;
+                max-width: 100%;
+                border-radius: 0;
+                overflow-y: hidden;
+                min-height: auto;
+                max-height: initial;
+            }
+        }
+
+        /* @media(max-width: 357px) {
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6,
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 span {
+                font-size: 11px;
+            }
+        }
+
+        @media(max-width: 345px) {
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6,
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info h6 span {
+                font-size: 10px;
+            }
+        }
+
+        @media(max-width: 332px) {
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info img {
+                margin-right: 6px;
+            }
+
+            body .spz-testimonials-slider .spz-testimonial .spz-testimonial-author .author-info {
+                padding-right: 5px;
+            }
+        } */
+
+        @media only screen and (max-width: 480px),
+        only screen and (max-device-width: 480px),
+        only screen and (max-device-height: 480px) {
+            body#bodyId #HeroFormCol a {
+                padding: 0;
+            }
+        }
+
+        /* Testimonial CSS End Here */
+    </style>
+    <!-- Form Over UI Ends -->
+
+    <script type="text/javascript" src="//script.crazyegg.com/pages/scripts/0062/1175.js" async></script>
+    <script type="text/javascript" src="https://cdn.bizible.com/scripts/bizible.js" async=""></script>
+
+</head>
+
+<body>
+
+    <div class="mktoText" id="HeaderScripts" mktoname="Header Scripts"></div>
+
+    <!-- Google Tag Manager (noscript) -->
+    <noscript>
+        <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MM7S3LZ" height="0" width="0"
+            style="display:none;visibility:hidden"></iframe>
+    </noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
+    <div class="body-wrapper">
+        <section class="transparent-toggle" id="hero" style="display: block;" data-jeto="HeroDisplay">
+
+            <!-- Background Image -->
+            <div class="overlay">
+                <!-- Desktop -->
+                <img src="https://lp.eptura.com/rs/267-JUP-120/images/bg-archibus-1_4k-3016.jpg?version=0"
+                    class="mktoImg over-desktop" id="backgroundImg" mktoName="Background Image">
+            </div>
+
+            <div class="hero_container page_padding py-4">
+                <div class="row">
+                    <div class="col-md pb-4" id="HeroFormCol">
+
+                        <div class="spz-site-logo">
+                            <img class="mktoImg lpimg"
+                                src="https://lp.eptura.com/rs/267-JUP-120/images/archibus-eptura-logo-color_2.svg?version=0"
+                                alt="${PageSpecificLogoTitle}" title="${PageSpecificLogoTitle}" id="form_logo"
+                                mktoName="Form Logo">
+                        </div>
+
+                        <div class="panel" id="HeroFormPanel"
+                            style="display: block; background-color: rgb(255, 255, 255);" data-jeto="HeroFormDisplay">
+
+                            <div class="pb-2" id="HeroFormTitleText" style="display: block"
+                                data-jeto="HeroFormTitleTextDisplay">
+                                <div class="mktoText spz-form-title" id="left_sec_title" mktoname="Left Section Title"
+                                    style="display: ${mainTitleDisplay};">Streamline workplace and asset management
+                                    operations. <br> All-in-one platform.</div>
+                                <h6 class="mktoText" id="form_title" mktoname="Form Title"
+                                    style="display: ${FormTitleDisplay};">Get a demo</h6>
+                            </div>
+
+                            <div class="mktoForm" id="HeroForm" mktoname="Form">
+                                <!-- MARKETO FORM -->
+                            </div>
+
+                        </div>
+
+                        <div class="spz-testimonials" style="display: ${testimonialDisplay};">
+                            <div class="spz-testimonials-wrap">
+                                <div class="spz-testimonials-slider">
+                                    <div class="spz-testimonial">
+                                        <div class="mktoText spz-testimonial-content" id="testimonial_content"
+                                            mktoname="Testimonial Copy">Archibus is <strong>saving money</strong> for us
+                                            <strong>in many ways</strong>, by more accurately <strong>tracking our
+                                                assets</strong> as well as their condition and costs,
+                                            <strong>identifying surplus space</strong>, improving <strong>management of
+                                                our fleet of vehicles</strong>, and aiding safety and business
+                                            continuity.
+                                        </div>
+                                        <div class="spz-testimonial-author">
+                                            <div class="author-info">
+                                                <img class="mktoImg" id="testimonial_person_img"
+                                                    mktoname="Testimonial Person Image"
+                                                    src="https://lp.eptura.com/rs/267-JUP-120/images/photo_-_ralph_linne.jpg?version=0"
+                                                    alt="" title="">
+                                                <div class="name">
+                                                    <h4 class="mktoText" id="testimonial_person_name"
+                                                        mktoname="Testimonial Person Name">Ralph Linne</h4>
+                                                    <h6 class="mktoText" id="testimonial_person_position"
+                                                        mktoname="Testimonial Person Position">
+                                                        Director of Country Facilities
+                                                    </h6>
+                                                </div>
+                                            </div>
+                                            <div class="company-info">
+                                                <img class="mktoImg" id="testimonial_company_logo"
+                                                    mktoname="Testimonial Company Logo"
+                                                    src="https://lp.eptura.com/rs/267-JUP-120/images/logo_-_hamilton_county.webp?version=0"
+                                                    alt="" title="">
+                                                <span style="display: none;" class="mktoText"
+                                                    id="testimonial_company_name"
+                                                    mktoname="Testimonial Company Name">Company Name</span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                    <div class="spz-hero-contents" style="display: ${rightSectionDisplay};">
+                        <div class="spz-hero-content-wrap">
+                            <div class="spz-hero-image-list">
+                                <picture>
+                                    <source media="(min-width:1199.98px)"
+                                        srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3017/img-eptura-1440.webp">
+                                    <source media="(min-width:767.98px)"
+                                        srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3017/img-1_21.webp">
+                                    <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/eptura/3017/img-1_21.webp"
+                                        alt="Hero Image">
+                                </picture>
+                                <ul class="spz-hero-list">
+                                    <li><strong>Workplace solutions.</strong> Desk and meeting room bookings, visitor
+                                        management, and space planning.</li>
+                                    <li><strong>Asset visibility.</strong> See asset inventory, lifecycles, and
+                                        compliance details. Get a complete view of facilities and spaces.</li>
+                                    <li><strong>Maintenance.</strong> Automate preventive maintenance, view cost
+                                        history, and schedule repairs for all your assets.</li>
+                                </ul>
+                            </div>
+                            <div class="spz-footer">
+                                <div class="spz-footer-wrap">
+                                    <ul class="spz-footer-links">
+                                        <li><a href="https://eptura.com/terms/saas-privacy-policy">SaaS Privacy
+                                                Policy</a></li>
+                                        <li><a href="https://eptura.com/terms/privacy-policy/">Privacy Policy</a></li>
+                                        <li><a href="https://eptura.com/terms/modern-slavery/">Modern Slavery</a></li>
+                                    </ul>
+                                    <label class="spz-footer-copyright">All Rights Reserved © Eptura™</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="spz-hero-bg"></div>
+
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+        integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.2/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-Fy6S3B9q64WdZWQUiU+q4/2Lc9npb8tCaSX9FK7E8HnRr0Jz8D6OP9dO5Vg3Q9ct"
+        crossorigin="anonymous"></script>
+    <script src="https://lp.eptura.com/rs/267-JUP-120/images/eptura_cookie_banner.js"></script>
+    <script src="${domainblock}"></script>
+
+    <div class="mktoText" id="FooterScripts" mktoname="Footer Scripts"></div>
+
+    <script>
+        waitForElm('#bodyId .body-wrapper #HeroForm .mktoForm .mktoFormRow .mktoField').then(function () {
+            loadTest();
+            updateAltTag();
+        });
+
+        let showTestimonial = '${testimonialDisplay}';
+
+        function loadTest() {
+            formUpdate();
+            focusFields();
+
+            // Add class 'safari' (used for cart scrollbar)
+            if (navigator.userAgent.toLowerCase().indexOf('chrome/') == -1 && navigator.userAgent.toLowerCase().indexOf('safari/') > -1) {
+                document.querySelector('body').classList.add('safari');
+            }
+            window.addEventListener("click", function (e) {
+                if (e.target.classList.contains("show-comment-dynamic")) {
+                    e.target.parentElement.classList.add('spz-hidden');
+                    this.document.querySelector('#Lead_Notes__c').focus();
+                }
+
+                if (e.target.classList.contains("mktoField")) {
+                    showGlobalError();
+                }
+
+                if (e.target.classList.contains("mktoButton")) {
+                    document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+                        checkError(el);
+                        showGlobalError();
+                    });
+                }
+            });
+
+
+            if (showTestimonial == 'none') {
+                document.querySelector('#HeroFormCol').setAttribute('style', `align-content: flex-start; min-height: initial`);
+            }
+        }
+
+        //custom error for checkbox field
+        function showGlobalError() {
+            let checkErrorforCheckBox = setInterval(() => {
+                if (document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid') && document.querySelector('.mktoLogicalField.mktoCheckboxList.mktoInvalid + .mktoError')) {
+                    document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.add('spz-cstm-error');
+                }
+                else {
+                    document.querySelector('#LblSingle_Opt_In__c').closest('.mktoFieldWrap').classList.remove('spz-cstm-error');
+                }
+            }, 50);
+
+            setTimeout(() => {
+                clearInterval(checkErrorforCheckBox);
+            }, 1000);
+        }
+
+        //Marketo form update
+        function formUpdate() {
+            if (document.querySelector('#HeroFormCol .mktoForm em')) {
+                document.querySelector('#HeroFormCol .mktoForm em').innerHTML = `Trouble submitting? <br class="mobile-only"> Email us at <a href="mailto:${emailInTrouble}" target="_blank" id="emailInTrouble">${emailInTrouble}</a>`;
+                document.querySelector('#HeroFormCol .mktoForm em').closest('.mktoFormRow').classList.add('spz-email');
+                document.querySelector('#HeroFormCol .mktoForm .spz-email').before(document.querySelector('#HeroFormCol .mktoForm .mktoButtonRow'));
+            }
+
+            document.querySelector('#Lead_Notes__c').closest('.mktoFormCol').insertAdjacentHTML(`beforebegin`, `<div class="spz-anchor"><a href="javascript:void(0);" class="show-comment-dynamic">+ Comment</a></div>`);
+
+            document.querySelector('#I_am__c').addEventListener('change', function () {
+                dropdownFunctionality(this.value);
+            });
+
+            document.querySelector('#LblI_am__c').textContent = 'I am...*';
+
+            // Add hero content section
+            if (document.querySelector('#HeroFormCol').parentNode.querySelectorAll('.spz-hero-bg').length == 0) {
+                document.querySelector('#HeroFormCol').insertAdjacentHTML('afterend', hero_content);
+            }
+
+            // document.querySelector('body .mktoForm .mktoButtonRow button[type="submit"].mktoButton').addEventListener('click', function () {
+            //     setTimeout(() => {
+            //         // if (!document.querySelector('.get-form .mktoForm').classList.contains('fully-load')) {
+            //         var eventclick = new Event('focus');
+            //         var inpEmail = document.querySelector('.mktoEmailField');
+            //         var inpIam = document.querySelector('#I_am__c');
+
+            //         if (inpEmail.value == '' || !validateEmail(inpEmail.value)) {
+            //             var eml = MktoForms2.allForms()[0].getFormElem().find("#Email")
+            //             MktoForms2.allForms()[0].showErrorMessage('Must be valid email. example@yourdomain.com', eml)
+            //             inpEmail.dispatchEvent(eventclick);
+            //             inpEmail.closest('.mktoFormCol').classList.add('field-error');
+            //             inpEmail.focus();
+            //         } else {
+            //             if (inpIam.value == '') {
+            //                 var emlIam = MktoForms2.allForms()[0].getFormElem().find("#I_am__c")
+            //                 MktoForms2.allForms()[0].showErrorMessage('This field is required.', emlIam)
+            //                 inpIam.dispatchEvent(eventclick);
+            //                 inpIam.closest('.mktoFormCol').classList.add('field-error')
+            //             }
+            //         }
+            //         // }
+            //     }, 200)
+            // })
+        }
+
+        //On value change of "I am.." field switch label od comment button
+        function dropdownFunctionality(val) {
+            let setBuffer = setInterval(() => {
+                if (document.querySelector('#Lead_Notes__c')) {
+                    if (document.querySelector('.spz-anchor').classList.contains('spz-hidden')) {
+                        document.querySelector('.spz-anchor').classList.remove('spz-hidden');
+                    }
+                }
+                else {
+                    document.querySelector('.spz-anchor').classList.add('spz-hidden');
+                }
+
+                if (val == 'Other' || val == 'A current client' || val == 'A current Partner') {
+                    document.querySelector('.show-comment-dynamic').textContent = '+ Please let us know how we may assist you';
+                }
+                else {
+                    document.querySelector('.show-comment-dynamic').textContent = '+ Comment';
+                }
+                focusFields();
+            }, 5);
+
+            setTimeout(() => {
+                clearInterval(setBuffer);
+            }, 50);
+        }
+
+        // On input focus add class on closest parent field class
+        function focusFields() {
+            document.querySelectorAll('#HeroForm .mktoForm .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
+
+                blockChar();
+
+                el.addEventListener('focus', function () {
+                    el.closest('.mktoFormCol').classList.add('field-focus');
+                });
+                el.addEventListener('blur', function () {
+                    el.closest('.mktoFormCol').classList.remove('field-focus');
+                    checkError(el);
+                });
+
+                // add event listeners to the input element
+                el.addEventListener('keypress', () => {
+                    checkError(el);
+                });
+
+                el.addEventListener('change', () => {
+                    checkError(el);
+                });
+
+                el.addEventListener('keydown', () => {
+                    checkError(el);
+                });
+
+                el.addEventListener('keyup', () => {
+                    checkError(el);
+                });
+            });
+        }
+
+
+        // Update alt and title tag from testimonial person name and position
+        function updateAltTag() {
+            document.querySelector('#testimonial_person_img').alt = document.querySelector('#testimonial_person_name').textContent;
+            document.querySelector('#testimonial_person_img').title = document.querySelector('#testimonial_person_name').textContent;
+
+            document.querySelector('#testimonial_company_logo').alt = document.querySelector('#testimonial_company_name').textContent + ' logo';
+            document.querySelector('#testimonial_company_logo').title = document.querySelector('#testimonial_company_name').textContent;
+        }
+
+
+        // Function to add .field-error class on closest parent .field class if .error is exist on input
+        function checkError(elem) {
+            let timeBuffer = setInterval(() => {
+                if (elem.closest('.mktoFormCol ').querySelector('.mktoError') && elem.closest('.mktoFormCol').querySelector('.mktoInvalid')) {
+                    elem.closest('.mktoFormCol').classList.add('field-error');
+                } else {
+                    elem.closest('.mktoFormCol').classList.remove('field-error');
+                }
+                if (elem && elem.value && (elem.value != '')) {
+                    elem.closest('.mktoFormCol').classList.add('input-filled');
+                } else {
+                    elem.closest('.mktoFormCol').classList.remove('input-filled');
+                }
+            }, 100);
+
+            setTimeout(() => {
+                clearInterval(timeBuffer);
+            }, 1000);
+        }
+
+        //Block "e" from number of employees field
+        function blockChar() {
+            document.querySelector('#NumberOfEmployees').addEventListener("keydown", function (e) {
+                if (e.key == 'e') {
+                    e.preventDefault();
+                }
+            });
+        }
+
+        // Email validation
+        function validateEmail(email) {
+            var regex = /^(([^<>()[\]\.,;:\s@\"]+(\.[^<>()[\]\.,;:\s@\"]+)*)|(\".+\"))@(([^<>()[\]\.,;:\s@\"]+\.)+[^<>()[\]\.,;:\s@\"]{2,})$/i;
+            return regex.test(String(email).toLowerCase());
+        }
+
+        // Generic Code
+        function waitForElm(selector) {
+            return new Promise(function (resolve) {
+                if (document.querySelector(selector)) {
+                    return resolve(document.querySelector(selector));
+                }
+                const observer = new MutationObserver(function (mutations) {
+                    if (document.querySelector(selector)) {
+                        resolve(document.querySelector(selector));
+                        observer.disconnect();
+                    }
+                });
+                observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+            });
+        }
+    </script>
+</body>
+
+</html>

@@ -27,6 +27,10 @@ body.spz-1101 {
       padding: 4rem 24px 0;
     }
 
+    @media (max-width: 767.98px) {
+      padding: 3rem 24px 0;
+    }
+
     &::before {
       content: "";
       position: absolute;
@@ -61,6 +65,10 @@ body.spz-1101 {
         max-width: 1304px;
       }
 
+      @media (max-width: 767.98px) {
+        max-width: 360px;
+      }
+
       .spz-row {
         display: flex;
         justify-content: space-between;
@@ -87,6 +95,10 @@ body.spz-1101 {
               text-align: center;
             }
 
+            @media (max-width: 767.98px) {
+              margin: 0 auto 42px;
+            }
+
             .tp-reviews {
               border-radius: 8px;
               border: 1px solid #dadde5;
@@ -103,8 +115,44 @@ body.spz-1101 {
                 margin: 0 auto 28px;
               }
 
+              @media (max-width: 767.98px) {
+                flex-wrap: wrap;
+                height: 75px;
+                max-width: 256px;
+                padding: 5px 10px;
+                margin: 0 auto 26px;
+              }
+
               .tp-logo {
                 margin-right: 12px;
+
+                @media (max-width: 767.98px) {
+                  padding-right: 12px;
+                  margin-right: 0;
+                }
+              }
+
+              .tp-logo-parent {
+                height: 25px;
+                @media (max-width: 767.98px) {
+                  position: relative;
+
+                  &::after {
+                    content: "";
+                    position: absolute;
+                    top: 6px;
+                    right: 0;
+                    width: 1px;
+                    height: 12px;
+                    background: rgba(255, 255, 255, 0.37);
+                  }
+                }
+              }
+
+              .sr-logo {
+                @media (max-width: 767.98px) {
+                  margin-left: 12px;
+                }
               }
 
               b {
@@ -113,6 +161,11 @@ body.spz-1101 {
                 line-height: 24px;
                 margin-left: 8px;
                 margin-right: 12px;
+                color: #fff;
+
+                @media (max-width: 767.98px) {
+                  margin-right: 0;
+                }
               }
 
               p {
@@ -125,6 +178,10 @@ body.spz-1101 {
                 white-space: nowrap;
 
                 border-left: 1px solid rgba(255, 255, 255, 0.37);
+                @media (max-width: 767.98px) {
+                  border: none;
+                  padding: 0;
+                }
               }
             }
 
@@ -141,6 +198,12 @@ body.spz-1101 {
               @media (max-width: 991.98px) {
                 margin: 0 auto 14px;
               }
+
+              @media (max-width: 767.98px) {
+                font-size: 30px;
+                line-height: 38px;
+                letter-spacing: 0;
+              }
             }
 
             .c-subhead {
@@ -154,6 +217,11 @@ body.spz-1101 {
               @media (max-width: 991.98px) {
                 margin: 0 auto;
               }
+
+              @media (max-width: 767.98px) {
+                font-size: 16px;
+                line-height: 24px;
+              }
             }
 
             .c-btn-wrap {
@@ -161,6 +229,10 @@ body.spz-1101 {
 
               @media (max-width: 991.98px) {
                 margin: 38.5px 0 40px;
+              }
+
+              @media (max-width: 767.98px) {
+                margin: 24.5px 0 32px;
               }
 
               .spz-btn {
@@ -183,6 +255,10 @@ body.spz-1101 {
 
                 @media (max-width: 991.98px) {
                   margin: 0px auto;
+                }
+
+                @media (max-width: 767.98px) {
+                  width: 100%;
                 }
 
                 &:hover {
@@ -275,6 +351,10 @@ body.spz-1101 {
                     padding: 8px 66px;
                   }
 
+                  @media (max-width: 767.98px) {
+                    padding: 4px 0px;
+                  }
+
                   .tm-body {
                     position: relative;
                     margin-bottom: 16px;
@@ -318,6 +398,10 @@ body.spz-1101 {
                         justify-content: center;
                       }
 
+                      @media (max-width: 767.98px) {
+                        flex-wrap: wrap;
+                      }
+
                       .tm-avatar {
                         display: flex;
                         align-items: center;
@@ -344,6 +428,11 @@ body.spz-1101 {
                             width: 1px;
                             height: 24px;
                             background: #90c6ff;
+
+                            @media (max-width: 767.98px) {
+                              height: 14px;
+                              top: 5px;
+                            }
                           }
                         }
 
@@ -376,6 +465,15 @@ body.spz-1101 {
                               height: 24px;
                               background: #90c6ff;
                             }
+
+                            @media (max-width: 767.98px) {
+                              white-space: nowrap;
+                              padding-right: 0;
+
+                              &::before {
+                                display: none;
+                              }
+                            }
                           }
                         }
                       }
@@ -383,6 +481,13 @@ body.spz-1101 {
                       .tm-quote {
                         padding-left: 16px;
                         height: 20px;
+
+                        @media (max-width: 767.98px) {
+                          padding-left: 0;
+                          margin-top: 7px;
+                          margin-left: 24px;
+                          margin-right: 24px;
+                        }
                       }
                     }
                   }
@@ -403,6 +508,10 @@ body.spz-1101 {
               min-height: 514px;
             }
 
+            @media (max-width: 767.98px) {
+              min-height: 259.763px;
+            }
+
             &::before {
               content: "";
               position: absolute;
@@ -417,8 +526,8 @@ body.spz-1101 {
 
               @media screen and (min-width: 1600.98px) {
                 background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_desktop.webp")
-                no-repeat left top;
-              background-size: cover;
+                  no-repeat left top;
+                background-size: cover;
               }
 
               @media (max-width: 991.98px) {
@@ -432,7 +541,15 @@ body.spz-1101 {
 
               @media (max-width: 767.98px) {
                 background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_mobile.webp")
-                  no-repeat center center;
+                  no-repeat left top;
+                background-size: contain;
+                min-width: 376px;
+                width: 100%;
+                height: 100%;
+
+                @media (min-width: 362px) {
+                  background-size: cover;
+                }
               }
             }
           }
