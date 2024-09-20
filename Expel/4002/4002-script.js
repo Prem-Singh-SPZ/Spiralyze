@@ -1,11 +1,1078 @@
+var css = `.spz_4002 header#masthead,
+.spz_4002 #startchange,
+.spz_4002 section#hero-section,
+.spz_4002 footer#expel-footer .container-custom > *:not(.links-container) {
+  display: none !important;
+}
+/* Hero Form Baseline CSS Start Here */
+.spz_4002 .spz-hero-section {
+  background-color: #031263;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/4002/desktop.webp");
+  background-position: top left;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 64px 0 73px;
+}
+.spz_4002 .spz-hero-section .spz-container {
+  width: 100%;
+  max-width: 1206px;
+  padding: 0 18px;
+  margin: 0 auto;
+}
+.spz_4002 .spz-hero-section .spz-form-baseline {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-start;
+  width: 100%;
+}
+.spz_4002 .spz-form-baseline .form-block {
+  width: 50.77%;
+  max-width: 594px;
+  background: #FFFFFF;
+  border-radius: 16px;
+  padding: 40px 41px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  align-items: center;
+}
+.spz_4002 .spz-form-baseline.current_step_3 .form-block,
+.spz_4002 .spz-form-baseline.current_step_4 .form-block {
+  padding: 40px 36px;
+}
+.spz_4002 .spz-form-baseline .progress-bar {
+  width: 172px;
+  height: 4px;
+  display: inline-flex;
+  position: relative;
+  margin: 0 auto;
+  background: #EBEBEB;
+  border-radius: 44px;
+}
+.spz_4002 .spz-form-baseline .progress-bar::before {
+  position: absolute;
+  content: "";
+  width: 43px;
+  height: 100%;
+  background: #00A85D;
+  border-radius: 44px 0 0 44px;
+  transition: all 0.6s ease-in-out;
+}
+.spz_4002 .spz-form-baseline.current_step_2 .progress-bar::before {
+  width: 86px;
+}
+.spz_4002 .spz-form-baseline.current_step_3 .progress-bar::before {
+  width: 129px;
+}
+.spz_4002 .spz-form-baseline.current_step_4 .progress-bar::before {
+  width: 100%;
+  border-radius: 44px;
+}
+.spz_4002 .spz-form-baseline .Questions-block {
+  width: 100%;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-header {
+  margin: 12px auto;
+  text-align: center;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step_2 .step-header {
+  margin-bottom: 8px;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step_3 .step-header {
+  margin-bottom: 18px;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-header .step-number {
+  color: #00A85D;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 24px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+  margin: 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-header .step-heading {
+  color: #131416;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 40px;
+  margin: 4px 0 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-header .step-question {
+  color: #333;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 4px 0 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-content {
+  position: relative;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-error {
+  position: absolute;
+  left: 0;
+  bottom: -48px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  padding: 8px 16px 8px 8px;
+  border-radius: 50px;
+  background: linear-gradient(0deg, #FCE8E6 0%, #FCE8E6 100%), var(--Colors-Base-White, #FFF);
+  box-shadow: 0px 2px 0px 0px #E51B00, 0px 9px 7px 0px rgba(0, 0, 0, 0.25);
+  color: #E51B00;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  transition: all 0.4s ease-in-out;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-content:not(.show-error) .step-error {
+  pointer-events: none;
+  opacity: 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-error img {
+  width: 24px;
+  height: 24px;
+  object-fit: contain;
+  margin-right: 8px;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-error::before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 12px;
+  top: -12px;
+  left: 64px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1721728940/expel/4002/chevron.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box .option-item {
+  width: calc(50% - 4px);
+  min-height: 145px;
+  margin: 8px 0 0;
+  position: relative;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box input {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  opacity: 0;
+  cursor: pointer;
+  z-index: 1;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box .radio-option-item {
+  width: calc(33.33% - 8px);
+  height: 100px;
+  margin: 12px 0 0;
+  position: relative;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box .option-content {
+  background: rgba(23, 98, 230, 0.04);
+  border-radius: 12px;
+  border: 1px solid rgba(23, 98, 230, 0.36);
+  padding: 15px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+  cursor: pointer;
+  position: relative;
+  transition: all 0.3s ease-in-out;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box div[class*="option-item"]:hover .option-content {
+  background: rgba(23, 98, 230, 0.12);
+  border-color: rgba(23, 98, 230, 0.41)
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-content.error .option-box .option-content {
+  background: rgba(229, 27, 0, 0.04);
+  border-color: rgba(229, 27, 0, 1);
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box div[class*="option-item"] input:checked + .option-content {
+  background: rgba(3, 18, 99, 1);
+  border: 1px solid rgba(23, 98, 230, 0.36);
+}
+.spz_4002 .spz-form-baseline .Questions-block .checkbox,
+.spz_4002 .spz-form-baseline .Questions-block .radio {
+  position: absolute;
+  top: 7px;
+  left: 7px;
+  width: 20px;
+  height: 20px;
+  background: #FFFFFF;
+  border: 1px solid #1762E6;
+  border-radius: 4px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+.spz_4002 .spz-form-baseline .Questions-block .radio {
+  border-radius: 32px;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box input:checked + .option-content .checkbox {
+  border-color: #FFF;
+  background: #FFFFFF;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box input:checked + .option-content .radio {
+  border-color: #FFF;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-content.error .checkbox,
+.spz_4002 .spz-form-baseline .Questions-block .step-content.error .radio {
+  border-color: rgba(229, 27, 0, 1);
+  background: #FFF;
+}
+.spz_4002 .spz-form-baseline .Questions-block .checkbox svg {
+  opacity: 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box .option-item input:checked + .option-content .checkbox svg {
+  opacity: 1 ;
+}
+.spz_4002 .spz-form-baseline .Questions-block .radio .radio-dot {
+  width: 8px;
+  height: 8px;
+  display: inline-flex;
+  background: #031263;
+  border-radius: 15px;
+  opacity: 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box .radio-option-item input:checked + .option-content .radio .radio-dot {
+  opacity: 1;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-icon {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  width: 65px;
+  height: 65px;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box div[class*="option-item"] input:checked + .option-content .option-icon svg path {
+  stroke: #031263;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box div[class*="option-item"]:last-child input:checked + .option-content .option-icon svg path {
+  stroke-width: 1;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-icon .white-icon,
+.spz_4002 .spz-form-baseline .Questions-block .option-box .option-item input:checked + .option-content .blue-icon {
+  display: none;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box .option-item input:checked + .option-content .white-icon {
+  display: block;
+}
+.spz_4002 .spz-form-baseline .Questions-block .Option-text {
+  color: #031263;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-align: center;
+  min-height: 48px;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step_2 .Option-text {
+  margin: 0;
+}
+.spz_4002 .spz-form-baseline .Questions-block .option-box div[class*="option-item"] input:checked + .option-content .Option-text {
+  color: #FFF;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-button {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  background: #1762E6;
+  border-radius: 72px;
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  margin: 20px auto 16px;
+  transition: all 0.3s ease-in-out;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-button:hover {
+  background: #0E4C8A;
+}
+.spz_4002 .spz-form-baseline .Questions-block .step-button img {
+  margin-left: 8px;
+}
+.spz_4002 .spz-form-baseline .form-footer {
+  color: #747474;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  max-width: 70%;
+  margin: 0 auto;
+}
+.spz_4002 .spz-form-baseline .form-footer a {
+  color: #131416;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  transition: all 0.3s ease-in-out;
+}
+.spz_4002 .spz-form-baseline .form-footer a:hover {
+  color: #0E4C8A;
+}
+
+/* Form CSS Start Here */
+.spz_4002 .spz-form-baseline form.mktoForm {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  padding: 0;
+  width: 100% !important;
+}
+/* .spz_4002 .spz-form-baseline form.mktoForm .field-5 ~ .mktoFormCol, */
+.spz_4002 .spz-form-baseline form.mktoForm .mktoClear,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoOffset,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoLabel .mktoAsterix {
+  display: none !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol {
+  width: calc(50% - 6px) !important;
+  margin-bottom: 12px !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-3:has(+ .mktoFormCol[style*="display: none;"]) ~ .mktoFormCol.field-7,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-6,
+.spz_4002 .spz-form-baseline.current_step_3 form.mktoForm .mktoFormCol.field-8,
+.spz_4002 .spz-form-baseline.current_step_3 form.mktoForm .mktoFormCol.field-9,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-10 {
+  display: none;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-9 {
+  margin-bottom: 18px !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.width_full,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-1,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-8,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-9 {
+  width: 100% !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap {
+  position: relative;
+  width: 100% !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoHtmlText {
+  width: auto !important;
+  color: #747474 !important;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoHtmlText a {
+  color: #131416;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  text-decoration-line: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoHtmlText a:hover {
+  color: #0E4C8A;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoLabel {
+  width: auto !important;
+  padding: 1px 6px;
+  color: #747474 !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  pointer-events: none;
+  background: #fff;
+  position: absolute;
+  top: 14px;
+  left: 10px;
+  transition: all 0.3s ease-in-out;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.filled .mktoLabel,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.active.typing .mktoLabel {
+  font-size: 14px !important;
+  font-weight: 600 !important;
+  line-height: 22px !important;
+  top: -11.5px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.filled .mktoLabel {
+  color: #000000 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.active.typing .mktoLabel {
+  color: #1762e6 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error.filled .mktoLabel,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error.active.typing .mktoLabel {
+  color: #e51b00 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField {
+  width: 100% !important;
+  height: 52px;
+  border: 1px solid #b4b3b9 !important;
+  border-radius: 12px !important;
+  outline: none;
+  background-color: transparent;
+  box-shadow: none !important;
+  padding: 13px 15px !important;
+  margin: 0 !important;
+  color: #000 !important;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 24px !important;
+  cursor: pointer;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField[type="checkbox"] {
+  width: 100%;
+  height: 100%;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:hover,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:focus,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 52px #fff inset !important;
+  -webkit-text-fill-color: #000 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-6 .mktoFieldWrap::after,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-7 .mktoFieldWrap::after {
+  position: absolute;
+  content: "";
+  top: 20px;
+  right: 20px;
+  width: 12px;
+  height: 12px;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717757061/expel/2003/dropdown_icon.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap select.mktoField {
+  padding-right: 37px !important;
+  appearance: none !important;
+  background-image: none;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap textarea.mktoField {
+  height: 91px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.filled .mktoField {
+  border-color: #747474 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.active.typing .mktoField {
+  border-color: #1762e6 !important;
+  caret-color: #1762e6;
+}
+body.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error .mktoField,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error.active.typing .mktoField {
+  border-color: #e51b00 !important;
+  caret-color: #e51b00;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError {
+  position: relative;
+  right: initial !important;
+  bottom: initial !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+  display: none;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError .mktoErrorMsg {
+  max-width: unset;
+  background: transparent;
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717661831/expel/2003/frame_1.svg");
+  background-size: 22px;
+  background-repeat: no-repeat;
+  background-position: 0 7px;
+  box-shadow: none;
+  text-shadow: none;
+  margin: 0;
+  padding: 7px 0 7px 12px;
+  height: auto;
+  border: none;
+  border-radius: 0;
+  color: #e51b00;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding-left: 26px;
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoError #ValidMsgEmail.mktoErrorMsg span.mktoErrorDetail {
+  padding-left: 3px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol[data-wrapper-for="mktoCheckbox_27626_0 Privacy_Compliance_Explicit_Opt_In__c"] .mktoLabel {
+  display: none;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList {
+  width: max-content !important;
+  padding: 0;
+  position: relative;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList input {
+  position: absolute;
+  opacity: 0;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList label {
+  margin: 0;
+  padding-left: 28px;
+  color: #747474 !important;
+  font-size: 14px !important;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px !important;
+  position: relative;
+  cursor: pointer;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList label::before {
+  position: absolute;
+  content: "";
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  border: 1px solid #747474;
+  border-radius: 5px;
+  top: 2px;
+  left: 0;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList input:checked + label::before {
+  background: #1762e6;
+  border-color: #1762e6;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoCheckboxList label::after {
+  position: absolute;
+  content: "";
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717664127/expel/2003/check.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 14px;
+  height: 14px;
+  top: 5px;
+  left: 3px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .comment-toggler {
+  display: inline-block;
+  color: #1762e6;
+  font-family: proxima-nova, Arial, sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 26px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .comment-toggler:hover {
+  color: #0e4c8a;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-9 .comment-toggler.show-field,
+.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-9 .comment-toggler:not(.show-field) + .mktoFieldWrap {
+  display: none;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow {
+  width: 100%;
+  margin: 6px auto 18px;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButtonWrap {
+  display: block;
+  width: auto;
+  height: auto;
+  margin: 0 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton {
+  width: 100%;
+  height: 48px;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  border: none;
+  border-radius: 72px;
+  background: #1762e6;
+  background-image: none !important;
+  color: #fff;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 24px;
+  padding: 0 !important;
+  margin: 0 !important;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton:hover {
+  background: #0e4c8a;
+}
+.spz_4002 .spz-form-baseline form.mktoForm .mktoCaptchaDisclaimer {
+  display: none;
+}
+.spz_4002 .mktoForm .field-9 .mktoHtmlText {
+  width: 70% !important;
+  margin: 0 auto !important;
+  color: #747474 !important;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400 !important;
+  line-height: 22px;
+}
+.spz_4002 .mktoForm .field-9 .mktoHtmlText {
+  width: 100% !important;
+  text-align: left;
+}
+.spz_4002 .mktoForm .field-9 .mktoHtmlText a {
+  color: #131416;
+  text-decoration: underline;
+  text-underline-offset: 3px;
+  padding: 0;
+}
+.spz_4002 .mktoForm .field-9 .mktoHtmlText a:hover {
+  color: #0e4c8a;
+}
+/* Form CSS End Here */
+
+.spz_4002 .spz-form-baseline .content-block {
+  width: 43.76%;
+  max-width: 512px;
+}
+.spz_4002 .spz-form-baseline .content-block .site-logo {
+  display: inline-flex;
+}
+.spz_4002 .spz-form-baseline .content-block .hero-heading {
+  color: #FFF;
+  font-size: 52px !important;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 1.1 !important;
+  margin: 25px 0 32px 0;
+}
+.spz_4002 .spz-form-baseline .content-block .highlight-point {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+.spz_4002 .spz-form-baseline .highlight-point .list-item,
+.spz_4002 .spz-form-baseline .highlight-point .list-item span {
+  color: #FFF;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 24px 0 0 0;
+  padding-left: 32px;
+  position: relative;
+}
+.spz_4002 .spz-form-baseline .content-block .highlight-point .list-item::before {
+  position: absolute;
+  content: "";
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1720171777/expel/4002/checkcircle.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  top: 0;
+  left: 0;
+}
+.spz_4002 .spz-form-baseline .highlight-point .list-item span {
+  margin: 0;
+  padding: 0;
+  font-weight: 700;
+}
+/* Hero Form Baseline CSS End Here */
+
+/* Hero Client Logo CSS Start Here */
+.spz_4002 .spz-hero-section .hero-client-logos {
+  margin-top: 64px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 100%;
+}
+.spz_4002 .spz-hero-section .hero-client-logos .client-logo {
+  width: auto;
+  height: 35px;
+  object-fit: contain;
+}
+/* Hero Client Logo CSS End Here */
+
+/* Icon Box Section CSS Start Here */
+.spz_4002 .icon-boxes {
+  padding: 79px 0 78px 0;
+  background: #F6F6F6;
+}
+.spz_4002 .icon-boxes .heading-content {
+  margin-bottom: 47px;
+}
+.spz_4002 .icon-boxes .heading-content h2 {
+  color: #031263;
+  text-align: center;
+  font-size: 48px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 56px;
+  margin-bottom: 17px !important;
+}
+.spz_4002 .icon-boxes .heading-content .section-subhead {
+  color: #031263;
+  text-align: center;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  max-width: 75%;
+  margin: 0 auto !important;
+}
+.spz_4002 .icon-boxes .boxes{display: none;}
+.spz_4002 .icon-boxes .spz-boxes {
+  gap: 0;
+  justify-content: space-between;
+  display: flex;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box {
+  flex: unset;
+  display: flex;
+  flex-flow: column;
+  width: calc(33.33% - 16px);
+  background: #FFF;
+  border: 1px solid #FFF !important;
+  border-radius: 16px;
+  padding: 23px 24px !important;
+  align-items: center;
+  transition: all 0.3s ease-in-out;
+	cursor: pointer;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box:hover {
+  border: 1px solid #1762E6 !important;
+  background: rgba(23, 98, 230, 0.1);
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box .spz-icon {
+  width: 60px;
+  height: 60px;
+  background: #031263;
+  border-radius: 100px;
+  display: inline-flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 16px;
+  transition: all 0.3s ease-in-out;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box:hover .spz-icon {
+  background: #1762E6;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box .spz-icon .icons {display: none;}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box .spz-icon .spz-icon {
+  height: auto;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box a {
+  color: #031263;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 800;
+  line-height: 32px;
+  text-decoration: none;
+  transition: all 0.3s ease-in-out;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box:hover a {
+  color: #1762E6;
+}
+.spz_4002 .icon-boxes .spz-boxes .spz-icon-box a span {
+  font-weight: 800 !important;
+}
+/* Icon Box Section CSS End Here */
+
+/* Footer CSS Start Here */
+.spz_4002 footer#expel-footer {
+  border: none;
+  padding: 22px 0 24px;
+  background: #fff;
+}
+.spz_4002 footer#expel-footer .links-container {
+  flex-flow: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0;
+  max-width: 1170px;
+  margin: 0 auto;
+}
+.spz_4002 footer#expel-footer .links-container .col {
+  width: auto;
+  max-width: unset;
+}
+.spz_4002 footer#expel-footer .links-container .rights p {
+  color: #031263;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  padding-top: 1px;
+}
+.spz_4002 footer#expel-footer .links-container .links span {
+  display: none;
+}
+.spz_4002 footer#expel-footer .links-container .links p {
+  margin: 0 -16px;
+}
+.spz_4002 footer#expel-footer .links-container .links a {
+  color: #031263;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 22px;
+  margin: 0 14px;
+  text-decoration: none;
+}
+.spz_4002 footer#expel-footer .links-container .links a:hover {
+  color: #0e4c8a;
+}
+/* Footer CSS End Here */
+
+@media(min-width: 1601px) {
+  .spz_4002 .spz-hero-section {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/4002/4k.webp");
+  }
+}
+@media(max-width: 1023.98px) {
+  .spz_4002 .spz-hero-section {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/4002/tablet.webp");
+  }
+  .spz_4002 .spz-hero-section .spz-container {
+    padding: 0 38px;
+  }
+  .spz_4002 .spz-hero-section .spz-form-baseline {
+    flex-flow: column-reverse;
+  }
+  .spz_4002 .spz-form-baseline .content-block,
+  .spz_4002 .spz-form-baseline .form-block {
+    width: 100%;
+    max-width: unset;
+  }
+  .spz_4002 .spz-form-baseline .content-block .hero-heading {
+    margin: 25px 0 8px 0;
+  }
+  .spz_4002 .spz-form-baseline .form-block {
+    margin-top: 48px;
+  }
+  .spz_4002 .spz-form-baseline .form-footer {
+    max-width: 58%;
+  }
+  .spz_4002 .icon-boxes .heading-content h2 {
+    font-size: 32px;
+    line-height: 1.25;
+  }
+  .spz_4002 .icon-boxes .heading-content .section-subhead {
+    font-size: 16px;
+    line-height: 1.5;
+    max-width: 65%;
+  }
+  .spz_4002 .icon-boxes {
+    padding: 79px 0 81px 0;
+  }
+  .spz_4002 .icon-boxes .spz-boxes {
+    justify-content: space-between;
+    flex-flow: column;
+  }
+  .spz_4002 .icon-boxes .heading-content {
+    margin-bottom: 8px;
+  }
+  .spz_4002 .icon-boxes .spz-boxes .spz-icon-box {
+    width: 100%;
+    max-width: 440px;
+    margin: 24px auto 0;
+    padding: 23px 24px 22px !important;
+  }
+  .spz_4002 footer#expel-footer .links-container {
+    flex-flow: column-reverse;
+  }
+  .spz_4002 footer#expel-footer .links-container .rights p {
+    margin-bottom: 10px;
+  }
+  .spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow {
+    margin: 6px auto 19px;
+  }
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:last-child {
+    display: none;
+  }
+}
+@media(max-width: 767.98px) {
+  .spz_4002 .spz-hero-section {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/4002/mobile.webp");
+    padding: 40px 0 73px;
+  }
+  .spz_4002 .spz-hero-section .spz-container {
+    padding: 0 18px;
+  }
+  .spz_4002 .spz-form-baseline .form-block {
+    margin-top: 40px;
+  }
+  .spz_4002 .spz-form-baseline .form-block {
+    margin-top: 40px;
+    padding: 28px 20px !important;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step-header {
+    margin: 12px auto 10px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step_2 .step-header {
+    margin-bottom: 10px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step_3 .step-header {
+    margin-bottom: 19px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step-header .step-heading {
+    font-size: 24px;
+    line-height: 32px;
+    margin: 3px 0 0;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step-header .step-question {
+    font-size: 14px;
+    line-height: 22px;
+    margin: 5px 0 0;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .option-box .option-content {
+    padding: 15px 18px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .option-box .option-item {
+    min-height: 128px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .Option-text {
+    font-size: 14px;
+    line-height: 18px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step_2 .Option-text {
+    font-size: 16px;
+    line-height: 1.5;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .checkbox {
+    width: 18px;
+    height: 18px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .option-icon {
+    width: 48px;
+    height: 48px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .option-box .radio-option-item {
+    width: calc(50% - 4px);
+    height: 100px;
+    margin: 8px 0 0;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step-error img {
+    width: 16px;
+    height: 16px;
+    margin-right: 4px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step-error {
+    font-size: 11px;
+  }
+  .spz_4002 .spz-form-baseline .Questions-block .step-button {
+    margin: 18px auto 16px;
+  }
+  .spz_4002 .spz-form-baseline .form-footer {
+    max-width: 100%;
+  }
+  .spz_4002 .spz-form-baseline.current_step_3 .form-footer,
+  .spz_4002 .spz-form-baseline.current_step_4 .form-footer {
+    padding: 0 5px;
+  }
+  .spz_4002 .spz-hero-section .hero-client-logos {
+    margin-top: 41px;
+  }
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:nth-child(1) {order: 1;}
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:nth-child(2) {order: 3;}
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:nth-child(3) {order: 2;}
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:nth-child(4) {order: 4;}
+  .spz_4002 .spz-hero-section .hero-client-logos .client-logo {
+    margin-top: 23px;
+  }
+  .spz_4002 .icon-boxes .container-custom {
+    padding: 0 18px;
+  }
+  .spz_4002 .icon-boxes .heading-content {
+    margin-bottom: 0;
+  }
+  .spz_4002 .icon-boxes .heading-content h2 {
+    font-size: 24px;
+    line-height: 32px;
+    margin-bottom: 13px !important;
+  }
+  .spz_4002 .icon-boxes .heading-content .section-subhead {
+    font-size: 14px;
+    line-height: 22px;
+    max-width: 100%;
+  }
+  .spz_4002 .icon-boxes .spz-boxes .spz-icon-box {
+    padding: 23px 24px 21px !important;
+  }
+  .spz_4002 .icon-boxes .spz-boxes .spz-icon-box a {
+    font-size: 20px;
+    line-height: 1.4;
+  }
+  .spz_4002 footer#expel-footer {
+    padding: 22px 0 13px;
+  }
+  .spz_4002 footer#expel-footer .links-container {
+    flex-flow: column;
+  }
+  .spz_4002 footer#expel-footer .links-container .links p {
+    display: flex;
+    flex-wrap: wrap;
+    flex-flow: column;
+    align-items: center;
+  }
+  .spz_4002 footer#expel-footer .links-container .links a {
+    margin: 0 14px 12.3px;
+  }
+  .spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol {
+    width: 100% !important;
+  }
+}
+@media(max-width: 563.98px) {
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:nth-child(1) {
+    width: 50%;
+  }
+}
+@media(max-width: 365.98px) {
+  .spz_4002 .spz-hero-section .hero-client-logos .img-wrapper:nth-child(1) {
+    width: 48%;
+  }
+}
+`;
+head = document.head || document.getElementsByTagName('head')[0], style = document.createElement('style');
+head.appendChild(style);
+style.type = 'text/css';
+style.appendChild(document.createTextNode(css));
+
 let bodyLoaded = setInterval(function () {
-    const body = document.querySelector('body');
-    if (body) {
-        clearInterval(bodyLoaded);
-        if (!body.classList.contains('spz_4002')) {
-            body.classList.add('spz_4002');
-            waitForElm('.spz_4002 #hero-section').then(function () {
-                document.querySelector('.spz_4002 #hero-section').insertAdjacentHTML('afterend', `<section class="spz-hero-section">
+  const body = document.querySelector('body');
+  if (body) {
+    clearInterval(bodyLoaded);
+    if (!body.classList.contains('spz_4002')) {
+      body.classList.add('spz_4002');
+      waitForElm('.spz_4002 #hero-section').then(function () {
+        document.querySelector('.spz_4002 #hero-section').insertAdjacentHTML('afterend', `<section class="spz-hero-section">
           <div class="spz-container">
             <div class="spz-form-baseline current_step_1">
               <div class="form-block">
@@ -14,13 +1081,13 @@ let bodyLoaded = setInterval(function () {
                   <div class="form-step step_1">
                     <div class="step-header">
                       <h5 class="step-number">Step 1</h5>
-                      <h2 class="step-heading">Contact Sales</h2>
-                      <p class="step-question">Which solutions are you interested in?</p>
+                      <h2 class="step-heading">Contact sales</h2>
+                      <p class="step-question">Which pain points are you trying to solve?</p>
                     </div>
                     <div class="step-content">
                       <div class="option-box">
                         <div class="option-item">
-                          <input type="checkbox" name="Cloud security" value="Cloud security">
+                          <input type="checkbox" name="Too many alerts" value="Too many alerts">
                           <div class="option-content">
                             <div class="checkbox">
                               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,24 +1095,14 @@ let bodyLoaded = setInterval(function () {
                               </svg>
                             </div>
                             <div class="option-icon">
-                              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_12853_375)">
-                                <path d="M20.4157 17.1205C22.8893 17.1205 24.8945 15.1153 24.8945 12.6417C24.8945 10.1681 22.8893 8.16285 20.4157 8.16285C20.1529 8.16285 19.8957 8.1868 19.6453 8.23025C19.1632 4.8837 16.2844 2.31195 12.8044 2.31195C9.33714 2.31195 6.46639 4.86485 5.96864 8.19345C5.79899 8.17395 5.62679 8.16285 5.45194 8.16285C2.97839 8.16285 0.973145 10.1681 0.973145 12.6417C0.973145 15.1153 2.97834 17.1205 5.45194 17.1205" stroke="white" stroke-width="0.96" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M14.967 22.6042L12.9337 23.8706L10.9005 22.6042C9.05856 21.4142 7.95996 19.4593 7.95996 17.3719V12.4345L8.94716 12.8687C9.93326 13.2553 11.0464 13.2486 12.027 12.8501L12.9337 12.4344L13.9265 12.8699C14.913 13.2557 16.0262 13.2481 17.0065 12.8487L17.9075 12.4344V17.3718C17.9075 19.4593 16.8089 21.4142 14.967 22.6042Z" stroke="white" stroke-width="0.96" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M10.8193 17.9635L11.9535 19.0977L15.2615 15.7897" stroke="white" stroke-width="0.96" stroke-miterlimit="10" stroke-linecap="round" stroke-linejoin="round"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_12853_375">
-                                <rect width="25.6" height="25.6" fill="white" transform="translate(0.200195 0.200012)"/>
-                                </clipPath>
-                                </defs>
-                              </svg>
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon02.svg" class="blue-icon" alt="Too many alerts">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon06.svg" class="white-icon" alt="Too many alerts">
                             </div>
-                            <h4 class="Option-text">Cloud <br>security</h4>
+                            <h4 class="Option-text">Too many alerts</h4>
                           </div>
                         </div>
                         <div class="option-item">
-                          <input type="checkbox" name="SIEM detections optimization" value="SIEM detections optimization">
+                          <input type="checkbox" name="Not enough staff" value="Not enough staff">
                           <div class="option-content">
                             <div class="checkbox">
                               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -53,22 +1110,14 @@ let bodyLoaded = setInterval(function () {
                               </svg>
                             </div>
                             <div class="option-icon">
-                              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <g clip-path="url(#clip0_12853_382)">
-                                <path d="M11.88 4.06283C12.687 4.06283 13.482 4.15776 14.2531 4.34386C14.5107 4.40606 14.6692 4.66538 14.607 4.92308C14.5448 5.18078 14.2855 5.33926 14.0278 5.27707C13.3304 5.10874 12.611 5.02283 11.88 5.02283C6.84321 5.02283 2.76005 9.106 2.76005 14.1428C2.76005 19.1797 6.84321 23.2628 11.88 23.2628C16.9169 23.2628 21 19.1797 21 14.1428C21 13.5452 20.9426 12.9551 20.8296 12.3783C20.7786 12.1181 20.9481 11.8659 21.2083 11.8149C21.4684 11.7639 21.7207 11.9335 21.7716 12.1936C21.8966 12.8313 21.96 13.4831 21.96 14.1428C21.96 19.7099 17.4471 24.2228 11.88 24.2228C6.31302 24.2228 1.80005 19.7099 1.80005 14.1428C1.80005 8.5758 6.31302 4.06283 11.88 4.06283ZM11.88 7.26283C12.8579 7.26283 13.8079 7.46725 14.6822 7.85757C14.9242 7.96564 15.0328 8.24949 14.9248 8.49156C14.8167 8.73362 14.5329 8.84225 14.2908 8.73418C13.5391 8.39857 12.7224 8.22283 11.88 8.22283C8.61052 8.22283 5.96005 10.8733 5.96005 14.1428C5.96005 17.4124 8.61052 20.0628 11.88 20.0628C15.1496 20.0628 17.8 17.4124 17.8 14.1428C17.8 13.3621 17.6491 12.6032 17.3594 11.8971C17.2587 11.6519 17.376 11.3715 17.6212 11.2708C17.8665 11.1702 18.1469 11.2874 18.2475 11.5327C18.5845 12.3539 18.76 13.2366 18.76 14.1428C18.76 17.9426 15.6798 21.0228 11.88 21.0228C8.08033 21.0228 5.00005 17.9426 5.00005 14.1428C5.00005 10.3431 8.08033 7.26283 11.88 7.26283ZM11.88 10.4628C12.1451 10.4628 12.36 10.6777 12.36 10.9428C12.36 11.2079 12.1451 11.4228 11.88 11.4228C10.3778 11.4228 9.16005 12.6406 9.16005 14.1428C9.16005 15.645 10.3778 16.8628 11.88 16.8628C13.3823 16.8628 14.6 15.645 14.6 14.1428C14.6 13.8777 14.815 13.6628 15.08 13.6628C15.3451 13.6628 15.56 13.8777 15.56 14.1428C15.56 16.1752 13.9125 17.8228 11.88 17.8228C9.84764 17.8228 8.20005 16.1752 8.20005 14.1428C8.20005 12.1104 9.84764 10.4628 11.88 10.4628ZM20.5681 10.8707C20.4659 10.9729 20.3242 11.0227 20.1827 11.0091L20.1123 10.997L16.5853 10.1156L12.5395 14.1622C12.352 14.3497 12.0481 14.3497 11.8606 14.1622C11.6902 13.9918 11.6747 13.7252 11.8142 13.5373L11.8606 13.4834L16.0343 9.30915L15.2375 6.12225C15.2025 5.98205 15.2327 5.83489 15.3171 5.72063L15.3638 5.66643L19.8893 1.14094C20.1366 0.893608 20.5482 0.987886 20.6733 1.29888L20.6943 1.36394L21.3508 3.99267L22.7406 2.60342C22.9281 2.41597 23.232 2.41597 23.4195 2.60342C23.5899 2.77383 23.6054 3.0405 23.4659 3.22841L23.4195 3.28225L21.9031 4.79779L24.8706 5.54017C25.1885 5.61966 25.3235 5.97715 25.1728 6.24172L25.1361 6.29686L25.0936 6.34525L20.5681 10.8707ZM18.8484 7.85251L17.377 9.32387L20.0806 9.99965L21.5519 8.52841L18.8484 7.85251ZM17.7057 4.6813L16.2344 6.15254L16.8253 8.51811L18.2967 7.04675L17.7057 4.6813ZM21.1114 5.58947L19.64 7.06083L22.3438 7.73694L23.8146 6.26616L21.1114 5.58947ZM19.968 2.41949L18.4972 3.89028L19.0884 6.25507L20.5597 4.78371L19.968 2.41949Z" fill="white"/>
-                                </g>
-                                <defs>
-                                <clipPath id="clip0_12853_382">
-                                <rect width="25.6" height="25.6" fill="white" transform="translate(0.200195 0.200012)"/>
-                                </clipPath>
-                                </defs>
-                              </svg>
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon03.svg" class="blue-icon" alt="Not enough staff">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon07.svg" class="white-icon" alt="Not enough staff">
                             </div>
-                            <h4 class="Option-text">SIEM detections <br>optimization</h4>
+                            <h4 class="Option-text">Not enough staff</h4>
                           </div>
                         </div>
                         <div class="option-item">
-                          <input type="checkbox" name="SecOps metrics improvement" value="SecOps metrics improvement">
+                          <input type="checkbox" name="Need a way to mitigate risk" value="Need a way to mitigate risk">
                           <div class="option-content">
                             <div class="checkbox">
                               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -76,22 +1125,14 @@ let bodyLoaded = setInterval(function () {
                               </svg>
                             </div>
                             <div class="option-icon">
-                              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M18.9999 14.6C16.1319 14.6 13.7999 16.932 13.7999 19.8C13.7999 22.668 16.1319 25 18.9999 25C21.8679 25 24.1999 22.668 24.1999 19.8C24.1999 16.932 21.8679 14.6 18.9999 14.6ZM18.9999 24.2C16.5719 24.2 14.5999 22.228 14.5999 19.8C14.5999 17.372 16.5719 15.4 18.9999 15.4C21.4279 15.4 23.3999 17.372 23.3999 19.8C23.3999 22.228 21.4279 24.2 18.9999 24.2Z" fill="white"/>
-                                <path d="M20.3167 19.1989H20.2605V18.5805C20.2605 17.9284 19.7321 17.4 19.08 17.4C18.4279 17.4 17.8995 17.9284 17.8995 18.5805V19.1989H17.8432C17.3795 19.1989 17 19.5784 17 20.0421V21.1664C17 21.6302 17.3795 22.0097 17.8432 22.0097H20.3167C20.7805 22.0097 21.16 21.6302 21.16 21.1664V20.0421C21.16 19.5784 20.7805 19.1989 20.3167 19.1989ZM18.4616 18.5805C18.4616 18.2404 18.7399 17.9622 19.08 17.9622C19.4201 17.9622 19.6984 18.2404 19.6984 18.5805V19.1989H18.4616V18.5805ZM20.5978 21.1664C20.5978 21.321 20.4713 21.4475 20.3167 21.4475H17.8432C17.6886 21.4475 17.5622 21.321 17.5622 21.1664V20.0421C17.5622 19.8875 17.6886 19.7611 17.8432 19.7611H20.3167C20.4713 19.7611 20.5978 19.8875 20.5978 20.0421V21.1664Z" fill="white"/>
-                                <path d="M19.5299 20.3232H18.6304C18.4759 20.3232 18.3494 20.4497 18.3494 20.6043C18.3494 20.7589 18.4759 20.8854 18.6304 20.8854H19.5299C19.6845 20.8854 19.811 20.7589 19.811 20.6043C19.811 20.4497 19.6845 20.3232 19.5299 20.3232Z" fill="white"/>
-                                <path d="M13.0039 23.4H2.59993V1.8H19.3999V12.452C19.3999 12.672 19.5799 12.852 19.7999 12.852C20.0199 12.852 20.1999 12.672 20.1999 12.452V1.4C20.1999 1.18 20.0199 1 19.7999 1H2.19993C1.97993 1 1.79993 1.18 1.79993 1.4V23.8C1.79993 24.02 1.97993 24.2 2.19993 24.2H13.0039C13.2239 24.2 13.4039 24.02 13.4039 23.8C13.4039 23.58 13.2239 23.4 13.0039 23.4Z" fill="white"/>
-                                <path fill-rule="evenodd" clip-rule="evenodd" d="M16.484 13H12.6506L12.6621 12.9961H4.99528C4.78444 12.9961 4.61194 12.8236 4.61194 12.6128V4.17933C4.61194 3.96849 4.78444 3.79599 4.99528 3.79599C5.20611 3.79599 5.37862 3.96849 5.37862 4.17933V8.3654L8.591 5.79702C8.60623 5.78484 8.62145 5.7775 8.6386 5.76923L8.65234 5.76252C8.65809 5.7606 8.66384 5.75677 8.66959 5.75294C8.67534 5.7491 8.68109 5.74527 8.68684 5.74335C8.729 5.72802 8.775 5.71652 8.82101 5.71652H8.82484C8.82867 5.71652 8.83251 5.71748 8.83634 5.71844C8.84017 5.7194 8.84401 5.72035 8.84784 5.72035C8.88617 5.72419 8.92067 5.73185 8.95517 5.74335L9.00117 5.76635C9.01267 5.77402 9.04334 5.78552 9.04334 5.78552L12.5892 8.26573L16.1965 3.93783C16.1984 3.93591 16.2012 3.93399 16.2041 3.93208C16.207 3.93016 16.2099 3.92824 16.2118 3.92633C16.2271 3.90716 16.2501 3.89182 16.2731 3.87649C16.2923 3.86116 16.3115 3.84966 16.3306 3.83816C16.3424 3.83108 16.3557 3.82836 16.3695 3.82552C16.3781 3.82375 16.387 3.82194 16.3958 3.81899C16.4226 3.81132 16.4495 3.80366 16.4763 3.80366H16.4916C16.4989 3.80366 16.5061 3.80622 16.5137 3.80893C16.5223 3.81195 16.5313 3.81516 16.5415 3.81516C16.5683 3.81899 16.5913 3.82282 16.6181 3.83049C16.6411 3.84199 16.6641 3.85349 16.6871 3.86882C16.6922 3.87138 16.6974 3.87351 16.7025 3.87564C16.7127 3.8799 16.7229 3.88416 16.7331 3.89182L16.7446 3.90333C16.7638 3.91866 16.7791 3.94166 16.7945 3.96466C16.8002 3.97424 16.8069 3.98383 16.8136 3.99341C16.8203 4.00299 16.827 4.01258 16.8328 4.02216C16.8399 4.03396 16.8426 4.04722 16.8454 4.06103C16.8472 4.06965 16.849 4.07849 16.852 4.08733C16.8596 4.11416 16.8673 4.141 16.8673 4.16783V4.18316V12.6166C16.8673 12.8275 16.6948 13 16.484 13ZM12.2672 8.98257L11.1172 8.17756L10.3505 7.64089L9.20051 6.83587V12.2333H10.3505H11.1172H12.2672V8.98257ZM14.1839 7.54122L13.0339 8.92124V12.2333H14.1839H14.9506H16.1006V5.24118L14.9506 6.6212L14.1839 7.54122ZM5.36712 9.35058V12.2333H6.51714H6.59301H7.28381H8.43383V6.89721L5.36712 9.35058Z" fill="white"/>
-                                <path d="M11.8 15.4854H4.99998C4.77998 15.4854 4.59998 15.6654 4.59998 15.8854C4.59998 16.1054 4.77998 16.2854 4.99998 16.2854H11.8C12.02 16.2854 12.2 16.1054 12.2 15.8854C12.2 15.6654 12.02 15.4854 11.8 15.4854Z" fill="white"/>
-                                <path d="M10.8 17.7854H4.99998C4.77998 17.7854 4.59998 17.9654 4.59998 18.1854C4.59998 18.4054 4.77998 18.5854 4.99998 18.5854H10.8C11.02 18.5854 11.2 18.4054 11.2 18.1854C11.2 17.9654 11.02 17.7854 10.8 17.7854Z" fill="white"/>
-                                <path d="M9.79998 20.0854H4.99998C4.77998 20.0854 4.59998 20.2654 4.59998 20.4854C4.59998 20.7054 4.77998 20.8854 4.99998 20.8854H9.79998C10.02 20.8854 10.2 20.7054 10.2 20.4854C10.2 20.2654 10.02 20.0854 9.79998 20.0854Z" fill="white"/>
-                              </svg>
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon04.svg" class="blue-icon" alt="Need a way to mitigate risk">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon08.svg" class="white-icon" alt="Need a way to mitigate risk">
                             </div>
-                            <h4 class="Option-text">SecOps metrics <br>improvement</h4>
+                            <h4 class="Option-text">Need a way to <br>mitigate risk</h4>
                           </div>
                         </div>
                         <div class="option-item">
-                          <input type="checkbox" name="MITRE coverage uplevel" value="MITRE coverage uplevel">
+                          <input type="checkbox" name="Something else" value="Something else">
                           <div class="option-content">
                             <div class="checkbox">
                               <svg width="12" height="8" viewBox="0 0 12 8" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -99,31 +1140,21 @@ let bodyLoaded = setInterval(function () {
                               </svg>
                             </div>
                             <div class="option-icon">
-                              <svg width="26" height="26" viewBox="0 0 26 26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M23.9249 5.34995H2.17493C1.96793 5.34995 1.79993 5.18195 1.79993 4.97495V2.72495C1.79993 2.1047 2.30468 1.59995 2.92493 1.59995H23.1749C23.7952 1.59995 24.2999 2.1047 24.2999 2.72495V4.97495C24.2999 5.18195 24.1319 5.34995 23.9249 5.34995ZM2.54993 4.59995H23.5499V2.72495C23.5499 2.5187 23.3812 2.34995 23.1749 2.34995H2.92493C2.71868 2.34995 2.54993 2.5187 2.54993 2.72495V4.59995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M6.67493 3.84995C6.88203 3.84995 7.04993 3.68205 7.04993 3.47495C7.04993 3.26784 6.88203 3.09995 6.67493 3.09995C6.46782 3.09995 6.29993 3.26784 6.29993 3.47495C6.29993 3.68205 6.46782 3.84995 6.67493 3.84995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M5.17493 3.84995C5.38203 3.84995 5.54993 3.68205 5.54993 3.47495C5.54993 3.26784 5.38203 3.09995 5.17493 3.09995C4.96782 3.09995 4.79993 3.26784 4.79993 3.47495C4.79993 3.68205 4.96782 3.84995 5.17493 3.84995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M3.67493 3.84995C3.88203 3.84995 4.04993 3.68205 4.04993 3.47495C4.04993 3.26784 3.88203 3.09995 3.67493 3.09995C3.46782 3.09995 3.29993 3.26784 3.29993 3.47495C3.29993 3.68205 3.46782 3.84995 3.67493 3.84995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M5.92493 9.09995H3.67493C3.46793 9.09995 3.29993 8.93195 3.29993 8.72495C3.29993 8.51795 3.46793 8.34995 3.67493 8.34995H5.92493C6.13193 8.34995 6.29993 8.51795 6.29993 8.72495C6.29993 8.93195 6.13193 9.09995 5.92493 9.09995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M8.17493 7.59995H3.67493C3.46793 7.59995 3.29993 7.43195 3.29993 7.22495C3.29993 7.01795 3.46793 6.84995 3.67493 6.84995H8.17493C8.38193 6.84995 8.54993 7.01795 8.54993 7.22495C8.54993 7.43195 8.38193 7.59995 8.17493 7.59995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M14.9249 21.0999H2.92493C2.30468 21.0999 1.79993 20.5952 1.79993 19.9749V2.72495C1.79993 2.1047 2.30468 1.59995 2.92493 1.59995H23.1749C23.7952 1.59995 24.2999 2.1047 24.2999 2.72495V18.0999C24.2999 18.3069 24.1319 18.4749 23.9249 18.4749C23.7179 18.4749 23.5499 18.3069 23.5499 18.0999V2.72495C23.5499 2.51795 23.3812 2.34995 23.1749 2.34995H2.92493C2.71868 2.34995 2.54993 2.51795 2.54993 2.72495V19.9749C2.54993 20.1819 2.71868 20.3499 2.92493 20.3499H14.9249C15.1319 20.3499 15.2999 20.5179 15.2999 20.7249C15.2999 20.9319 15.1319 21.0999 14.9249 21.0999Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M13.7999 18.8499C10.4917 18.8499 7.79993 16.1582 7.79993 12.8499C7.79993 9.5417 10.4917 6.84995 13.7999 6.84995C17.1082 6.84995 19.7999 9.5417 19.7999 12.8499C19.7999 16.1582 17.1082 18.8499 13.7999 18.8499ZM13.7999 7.59995C10.9057 7.59995 8.54993 9.9557 8.54993 12.8499C8.54993 15.7442 10.9057 18.0999 13.7999 18.0999C16.6942 18.0999 19.0499 15.7442 19.0499 12.8499C19.0499 9.9557 16.6942 7.59995 13.7999 7.59995Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M19.0041 18.0541C19.0768 17.9814 19.1601 17.9244 19.2471 17.8749C19.2343 17.7991 19.2058 17.7264 19.1481 17.6679L18.0876 16.6066C17.9413 16.4604 17.7036 16.4604 17.5573 16.6066C17.4111 16.7536 17.4111 16.9906 17.5573 17.1376L18.6178 18.1981C18.6756 18.2566 18.7491 18.2844 18.8241 18.2964C18.8751 18.2101 18.9321 18.1269 19.0041 18.0541Z" fill="white" stroke="white" stroke-width="0.16"/>
-                                <path d="M19.7999 18.0999C19.9919 18.0999 20.1839 18.1734 20.3302 18.3197L23.3302 21.3197C23.6234 21.6129 23.6234 22.0869 23.3302 22.3802C23.1839 22.5264 22.9919 22.5999 22.7999 22.5999C22.6079 22.5999 22.4159 22.5264 22.2697 22.3802L19.2697 19.3802C18.9764 19.0869 18.9764 18.6129 19.2697 18.3197C19.4159 18.1734 19.6079 18.0999 19.7999 18.0999ZM19.7999 17.3499C19.3994 17.3499 19.0229 17.5059 18.7394 17.7894C18.4559 18.0729 18.2999 18.4494 18.2999 18.8499C18.2999 19.2504 18.4559 19.6269 18.7394 19.9104L21.7394 22.9104C22.0229 23.1939 22.3994 23.3499 22.7999 23.3499C23.2004 23.3499 23.5769 23.1939 23.8604 22.9104C24.1439 22.6269 24.2999 22.2504 24.2999 21.8499C24.2999 21.4494 24.1439 21.0729 23.8604 20.7894L20.8604 17.7894C20.5769 17.5059 20.2004 17.3499 19.7999 17.3499Z" fill="white" stroke="white" stroke-width="0.16"/>
-                              </svg>
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon01.svg" class="blue-icon" alt="Something else">
+                              <img src="//res.cloudinary.com/spiralyze/image/upload/v1726066503/expel/4002/icon05.svg" class="white-icon" alt="Something else">
                             </div>
-                            <h4 class="Option-text">MITRE <br>coverage uplevel</h4>
+                            <h4 class="Option-text">Something else</h4>
                           </div>
                         </div>
                       </div>
-                      <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721728510/expel/4002/caution.svg" alt="Error Icon">One of the options has to be selected to proceed</div>
+                      <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721728510/expel/4002/caution.svg" alt="Error Icon">One of the options has to be selected to proceed.</div>
                     </div>
                     <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/v1721713185/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
                   </div>
                   <div class="form-step step_2">
                     <div class="step-header">
                       <h5 class="step-number">Step 2</h5>
-                      <h2 class="step-heading">Contact Sales</h2>
+                      <h2 class="step-heading">Contact sales</h2>
                       <p class="step-question">How many employees do you have?</p>
                     </div>
                     <div class="step-content">
@@ -183,14 +1214,14 @@ let bodyLoaded = setInterval(function () {
                           </div>
                         </div>
                       </div>
-                      <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721728510/expel/4002/caution.svg" alt="Error Icon">One of the options has to be selected to proceed</div>
+                      <div class="step-error"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721728510/expel/4002/caution.svg" alt="Error Icon">One of the options has to be selected to proceed.</div>
                     </div>
                     <button class="step-button">Next<img src="//res.cloudinary.com/spiralyze/image/upload/v1721713185/expel/4002/Icon-Right.svg" alt="Right Arrow"></button>
                   </div>
                   <div class="form-step step_3">
                     <div class="step-header">
                       <h5 class="step-number">Step 3</h5>
-                      <h2 class="step-heading">Contact Sales</h2>
+                      <h2 class="step-heading">Contact sales</h2>
                     </div>
                     <div class="step-content"></div>
                   </div>
@@ -199,11 +1230,11 @@ let bodyLoaded = setInterval(function () {
               </div>
               <div class="content-block">
                 <a href="https://expel.com" class="site-logo"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721649463/expel/4002/expel-logo.svg" alt="Expel"></a>
-                <h2 class="hero-heading">Connect with the right expert for a demo, media inquiry, or about working for Expel</h2>
+                <h1 class="hero-heading">Connect with an expert for a demo</h1>
                 <ul class="highlight-point">
-                  <li class="list-item"><span class="highlight-text">24x7 SOC services</span> with threat detection, alert triage, remediation recommendations, automated responses & a 23-minute MTTR.</li>
+                  <li class="list-item"><span class="highlight-text">24x7 SOC services</span> with threat detection, alert triage, remediation recommendations, automated responses & a 20-minute MTTR.</li>
                   <li class="list-item"><span class="highlight-text">Extensive protection</span> across cloud workloads, control plans, identity management, SaaS, endpoints, and networks.</li>
-                  <li class="list-item"><span class="highlight-text">120+ integrations</span> including AWS, CrowdStrike, Google, Microsoft, Okta, Palo Alto, SentinelOne, Splunk, Salesforce, and more.</li>
+                  <li class="list-item"><span class="highlight-text">125+ integrations</span> including AWS, CrowdStrike, Google, Microsoft, Okta, Palo Alto, SentinelOne, Splunk, Salesforce, Wiz, and more.</li>
                 </ul>
               </div>
             </div>
@@ -227,327 +1258,355 @@ let bodyLoaded = setInterval(function () {
           </div>  
         </section>`);
 
-                Array.from(document.querySelectorAll('.spz_4002 .icon-boxes .boxes .icon-box'))[0].querySelector('img').src = '//res.cloudinary.com/spiralyze/image/upload/v1721709039/expel/4002/Chat_Icon.svg';
-                Array.from(document.querySelectorAll('.spz_4002 .icon-boxes .boxes .icon-box'))[0].querySelector('img').alt = 'Media inquiries';
-                Array.from(document.querySelectorAll('.spz_4002 .icon-boxes .boxes .icon-box'))[1].querySelector('img').src = '//res.cloudinary.com/spiralyze/image/upload/v1721709037/expel/4002/handshake_icon.svg';
-                Array.from(document.querySelectorAll('.spz_4002 .icon-boxes .boxes .icon-box'))[1].querySelector('img').alt = 'Partner with Expel';
-                Array.from(document.querySelectorAll('.spz_4002 .icon-boxes .boxes .icon-box'))[2].querySelector('img').src = '//res.cloudinary.com/spiralyze/image/upload/v1721709039/expel/4002/work_icon.svg';
-                Array.from(document.querySelectorAll('.spz_4002 .icon-boxes .boxes .icon-box'))[2].querySelector('img').alt = 'Work at Expel';
+        waitForElm('.spz_4002 .icon-boxes .boxes').then(function () {
+          document.querySelector('.spz_4002 .icon-boxes .boxes').insertAdjacentHTML('afterend', `<div class="spz-boxes">
+            <a href="mailto:expelcomms@expel.com" class="spz-icon-box">
+              <div class="spz-icon">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1721709039/expel/4002/Chat_Icon.svg" alt="Media inquiries">
+              </div>
+              <p><span style="font-weight: 400;">Media inquiries</span></p>
+            </a>
+            <a href="https://expel.com/partner-program/" class="spz-icon-box">
+              <div class="spz-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721709037/expel/4002/handshake_icon.svg" alt="Partner with Expel"></div>
+              <p>Partner with Expel</p>
+            </a>
+            <a href="https://expel.com/about/careers/" class="spz-icon-box">
+              <div class="spz-icon"><img src="//res.cloudinary.com/spiralyze/image/upload/v1721709039/expel/4002/work_icon.svg" alt="Work at Expel"></div>
+              <p>Work at Expel</p>
+            </a>
+          </div>`);
+        });
 
-                var mainDivs = document.querySelectorAll('.expel-flexible-contact .icon-boxes.has-border .boxes .col');
-                var mainLinks = document.querySelectorAll('.expel-flexible-contact .icon-boxes .boxes .icon-box a');
-                mainDivs.forEach(function (mainDiv, index) {
-                    mainDiv.addEventListener('click', function () {
-                        mainLinks[index].click();
-                    });
-                });
+        // var mainDivs = document.querySelectorAll('.expel-flexible-contact .icon-boxes.has-border .boxes .col');
+        // var mainLinks = document.querySelectorAll('.expel-flexible-contact .icon-boxes .boxes .icon-box a');
+        // mainDivs.forEach(function (mainDiv, index) {
+        //   mainDiv.addEventListener('click', function () {
+        //     mainLinks[index].click();
+        //   });
+        // });
 
-                //Form internal code
-                waitForElm('.spz_4002 #hero-section .ex-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
-                    document.querySelector('.spz_4002 .spz-form-baseline .Questions-block .form-step.step_3 .step-content').appendChild(document.querySelector('.spz_4002 #hero-section .ex-form form.mktoForm'));
-                    formModify();
-                });
+        //Form internal code
+        waitForElm('.spz_4002 #hero-section .ex-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
+          document.querySelector('.spz_4002 .spz-form-baseline .Questions-block .form-step.step_3 .step-content').appendChild(document.querySelector('.spz_4002 #hero-section .ex-form form.mktoForm'));
+          formModify();
+        });
 
-                const checkboxes = document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .step-content input');
-                checkboxes.forEach(function (checkbox) {
-                    checkbox.addEventListener('click', function () {
-                        const stepContent = checkbox.closest('.step-content');
-                        if (stepContent && stepContent.classList.contains('error')) {
-                            stepContent.classList.remove('error', 'show-error');
-                        }
-                    });
-                });
+        const checkboxes = document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .step-content input');
+        checkboxes.forEach(function (checkbox) {
+          checkbox.addEventListener('click', function () {
+            const stepContent = checkbox.closest('.step-content');
+            if (stepContent && stepContent.classList.contains('error')) {
+              stepContent.classList.remove('error', 'show-error');
+            }
+          });
+        });
 
-                document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .step-button').forEach(button => {
-                    button.addEventListener('click', function () {
-                        const formBaseline = document.querySelector('.spz_4002 .spz-form-baseline');
-                        const currentStep = this.closest('.form-step');
-                        const stepContent = this.closest('.form-step').querySelector('.step-content');
-                        const checkboxes = stepContent.querySelectorAll('input');
-                        const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
+        document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .step-button').forEach(button => {
+          button.addEventListener('click', function () {
+            const formBaseline = document.querySelector('.spz_4002 .spz-form-baseline');
+            const currentStep = this.closest('.form-step');
+            const stepContent = this.closest('.form-step').querySelector('.step-content');
+            const checkboxes = stepContent.querySelectorAll('input');
+            const isChecked = Array.from(checkboxes).some(checkbox => checkbox.checked);
 
-                        if (isChecked) {
-                            var step = false;
-                            if (document.querySelector('.step_1 input[type="checkbox"]:checked') !== null) {
-                                step = true;
-                            } else if (document.querySelector('.step_1 input[name="Cloud security"]:checked') !== null) {
-                                step = true;
-                            }
-                            if (step) {
-                                const nextStep = currentStep.nextElementSibling;
-                                if (nextStep && nextStep.classList.contains('form-step')) {
-                                    currentStep.style.display = 'none';
-                                    nextStep.style.display = 'block';
+            if (isChecked) {
+              var step = false;
+              if (document.querySelector('.step_1 input[type="checkbox"]:checked') !== null) {
+                step = true;
+              } else if (document.querySelector('.step_1 input[name="Cloud security"]:checked') !== null) {
+                step = true;
+              }
+              if (step) {
+                const nextStep = currentStep.nextElementSibling;
+                if (nextStep && nextStep.classList.contains('form-step')) {
+                  currentStep.style.display = 'none';
+                  nextStep.style.display = 'block';
 
-                                    // Update the class of the current step number on spz-form-baseline
-                                    const currentStepNumber = nextStep.className.match(/step_(\d+)/)[1];
-                                    formBaseline.className = formBaseline.className.replace(/current_step_\d+/, '');
-                                    formBaseline.classList.add(`current_step_${currentStepNumber}`);
-                                }
+                  // Update the class of the current step number on spz-form-baseline
+                  const currentStepNumber = nextStep.className.match(/step_(\d+)/)[1];
+                  formBaseline.className = formBaseline.className.replace(/current_step_\d+/, '');
+                  formBaseline.classList.add(`current_step_${currentStepNumber}`);
+                }
 
-                            }
-                        } else {
-                            stepContent.classList.add('error', 'show-error');
-                            setTimeout(() => {
-                                stepContent.classList.remove('show-error');
-                            }, 3000);
-                        }
-                    });
-                });
+              }
+            } else {
+              stepContent.classList.add('error', 'show-error');
+              setTimeout(() => {
+                stepContent.classList.remove('show-error');
+              }, 3000);
+            }
+          });
+        });
 
-                // Initial step visibility and setting initial class
-                document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .form-step').forEach((step, index) => {
-                    const formBaseline = document.querySelector('.spz_4002 .spz-form-baseline');
-                    if (index === 0) {
-                        step.style.display = 'block';
-                    } else {
-                        step.style.display = 'none';
-                    }
-                });
-            });
-        }
+        // Initial step visibility and setting initial class
+        document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .form-step').forEach((step, index) => {
+          const formBaseline = document.querySelector('.spz_4002 .spz-form-baseline');
+          if (index === 0) {
+            step.style.display = 'block';
+          } else {
+            step.style.display = 'none';
+          }
+        });
+      });
     }
+  }
 });
 
 function formModify() {
-    // Unwrap all child elemnts of mktoFormRow
-    var mktoForm = document.querySelector('.mktoForm');
-    var mktoFormRows = document.querySelectorAll('.mktoFormRow');
-    mktoFormRows.forEach(function (row) {
-        var mktoFormCols = row.querySelectorAll('.mktoFormCol');
-        while (row.firstChild) {
-            mktoForm.insertBefore(row.firstChild, row);
-        }
-        row.remove();
-    });
-    // Add class in mktoFormRow using count
-    var form_fields = document.querySelectorAll('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol');
-    for (var i = 0; i < form_fields.length; i++) {
-        var dynamicClass = 'field-' + (i + 1);
-        form_fields[i].classList.add(dynamicClass);
+  // Unwrap all child elemnts of mktoFormRow
+  var mktoForm = document.querySelector('.mktoForm');
+  var mktoFormRows = document.querySelectorAll('.mktoFormRow');
+  mktoFormRows.forEach(function (row) {
+    var mktoFormCols = row.querySelectorAll('.mktoFormCol');
+    while (row.firstChild) {
+      mktoForm.insertBefore(row.firstChild, row);
     }
-    // Updating Form Labels
-    document.querySelector('#LblCompany_Size__c').textContent = "Company Size";
-    document.querySelector('#Company_Size__c').options[0].textContent = 'Select';
-    document.querySelector('#LblPerson_Country__c').textContent = "Country";
-    document.querySelector('.spz_4002 .mktoForm .field-9 .mktoHtmlText').innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`;
-    // form CTA Update
-    let form_CTA = setInterval(() => {
-        let textChng = document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton');
-        if (textChng && !textChng.classList.contains('text_change')) {
-            textChng.textContent = 'Submit';
-            textChng.classList.add('text_change');
-            clearInterval(form_CTA);
-        }
+    row.remove();
+  });
+  // Add class in mktoFormRow using count
+  var form_fields = document.querySelectorAll('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol');
+  for (var i = 0; i < form_fields.length; i++) {
+    var dynamicClass = 'field-' + (i + 1);
+    form_fields[i].classList.add(dynamicClass);
+  }
+  // Updating Form Labels
+  document.querySelector('#LblCompany_Size__c').textContent = "Company Size";
+  document.querySelector('#Company_Size__c').options[0].textContent = 'Select';
+  document.querySelector('#LblPerson_Country__c').textContent = "Country";
+  document.querySelector('.spz_4002 .mktoForm .field-9 .mktoHtmlText').innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`;
+  // form CTA Update
+  let form_CTA = setInterval(() => {
+    let textChng = document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton');
+    if (textChng && !textChng.classList.contains('text_change')) {
+      textChng.textContent = 'Submit';
+      textChng.classList.add('text_change');
+      clearInterval(form_CTA);
+    }
+  }, 100);
+
+  // On input focus add class on closest parent field class
+  function focusFields() {
+    document.querySelectorAll(`.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+      el.addEventListener('focus', function () {
+        el.closest('.mktoFieldWrap').classList.add('active', 'typing');
+        checkError(el);
+      });
+      el.addEventListener('blur', function () {
+        el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
+        checkError(el);
+      });
+
+      // add event listeners to the input element
+      el.addEventListener('keypress', () => {
+        checkError(el);
+      });
+
+      el.addEventListener('change', () => {
+        checkError(el);
+      });
+
+      el.addEventListener('keydown', () => {
+        checkError(el);
+      });
+
+      el.addEventListener('keyup', () => {
+        checkError(el);
+      });
+    });
+  }
+
+  focusFields();
+
+  // Function to add .field-error class on closest parent .field class if .error is exist on input
+  function checkError(elem) {
+    let timeBuffer = setInterval(() => {
+      if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none' && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
+        elem.closest('.mktoFieldWrap').classList.add('error');
+      } else {
+        elem.closest('.mktoFieldWrap').classList.remove('error');
+      }
+      if (elem && elem.value && (elem.value != '')) {
+        elem.closest('.mktoFieldWrap').classList.add('filled');
+      } else {
+        elem.closest('.mktoFieldWrap').classList.remove('filled');
+      }
     }, 100);
 
-    // On input focus add class on closest parent field class
-    function focusFields() {
-        document.querySelectorAll(`.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
-            el.addEventListener('focus', function () {
-                el.closest('.mktoFieldWrap').classList.add('active', 'typing');
-                checkError(el);
-            });
-            el.addEventListener('blur', function () {
-                el.closest('.mktoFieldWrap').classList.remove('active', 'typing');
-                checkError(el);
-            });
+    setTimeout(() => {
+      clearInterval(timeBuffer);
+    }, 1000);
 
-            // add event listeners to the input element
-            el.addEventListener('keypress', () => {
-                checkError(el);
-            });
+    if (elem.name == 'Email') {
+      let counterA = 0;
+      const intervalIdA = setInterval(() => {
+        if (document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-2').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-3').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-4').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-5').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-6').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-7').style.display !== "none") {
+          var selected_val = document.querySelector('.step_2 input[name="employees"]:checked').value;
+          if (selected_val == 'Less than 100' || selected_val == '100-999' || selected_val == '1000-2999') {
+            document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol select[name="Company_Size__c"]').value = 'less than 3001 employees';
+          } else {
+            document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol select[name="Company_Size__c"]').value = '3001+ employees';
+          }
 
-            el.addEventListener('change', () => {
-                checkError(el);
-            });
+          document.querySelector('.spz-form-baseline').classList.add('current_step_4');
+          document.querySelector('.spz-form-baseline').classList.remove('current_step_3');
+          document.querySelector('.form-step.step_3 .step-number').textContent = "Step 4";
 
-            el.addEventListener('keydown', () => {
-                checkError(el);
-            });
+          // Function to check if an element is displayed as block
+          function isVisible(element) {
+            if (!element) {
+              return false;
+            }
+            const style = window.getComputedStyle(element);
+            if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
+              return false;
+            }
+            return element.offsetParent !== null;
+          }
+          const textInputs = document.querySelectorAll('.spz_4002 .spz-form-baseline form.mktoForm .mktoField:not([type="checkbox"]):not([type="hidden"])');
+          const visibleFields = Array.from(textInputs).filter(isVisible);
+          const blockFieldNames = visibleFields.filter(field => {
+            const closestMktoFormCol = field.closest('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol');
+            return closestMktoFormCol && closestMktoFormCol.style.display !== 'none';
+          }).map(field => field.name);
+          var last_field_name = blockFieldNames[blockFieldNames.length - 1];
+          if (blockFieldNames.length % 2 === 0) {
+            document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoField[name="' + last_field_name + '"]').closest('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol').classList.add('width_full');
+          } else {
+            document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoField[name="' + last_field_name + '"]').closest('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol').classList.remove('width_full');
+          }
+        }
+        counterA++;
+        if (counterA >= 20) {
+          clearInterval(intervalIdA);
+        }
+      }, 500);
+    }
+  }
 
-            el.addEventListener('keyup', () => {
-                checkError(el);
-            });
-        });
+  document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
+    waitForElm('.spz_4002 .spz-form-baseline form.mktoForm .mktoError').then(function (elm) {
+      if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+        const targetNode = elm.parentNode;
+        const config = { attributes: true, childList: true, subtree: true };
+        const callback = (mutationList, observer) => {
+          for (const mutation of mutationList) {
+            if (mutation.type === "childList") {
+              if (elm.parentNode === null && elm.style.display != 'none') {
+                targetNode.classList.add('error');
+              } else {
+                elm.parentNode.classList.add('error');
+              }
+              observer.disconnect();
+            } else if (mutation.type === "attributes") {
+              if (elm.parentNode === null) {
+                targetNode.classList.add('error');
+              } else {
+                elm.parentNode.classList.add('error');
+              }
+              observer.disconnect();
+            }
+          }
+        };
+        const observer = new MutationObserver(callback);
+        observer.observe(targetNode, config);
+      } else {
+        let counterA = 0;
+        const intervalIdA = setInterval(() => {
+          if (document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoError #ValidMsgEmail') !== null) {
+            document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+          }
+          counterA++;
+          if (counterA >= 10) {
+            clearInterval(intervalIdA);
+          }
+        }, 500);
+      }
+    });
+  })
+
+  // Do not touch below hidden field code for any Experiment (Set Hidden Filed Value)
+  function hiddenValue(currentExperimentName, currentExperimentValue) {
+    function setCookie(name, value, days) {
+      var expires = "";
+      if (days) {
+        var date = new Date();
+        date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
+        expires = "; expires=" + date.toUTCString();
+      }
+      document.cookie = name + "=" + (value || "") + expires + "; path=/";
     }
 
-    focusFields();
-
-    // Function to add .field-error class on closest parent .field class if .error is exist on input
-    function checkError(elem) {
-        let timeBuffer = setInterval(() => {
-            if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none' && elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
-                elem.closest('.mktoFieldWrap').classList.add('error');
-            } else {
-                elem.closest('.mktoFieldWrap').classList.remove('error');
-            }
-            if (elem && elem.value && (elem.value != '')) {
-                elem.closest('.mktoFieldWrap').classList.add('filled');
-            } else {
-                elem.closest('.mktoFieldWrap').classList.remove('filled');
-            }
-        }, 100);
-
-        setTimeout(() => {
-            clearInterval(timeBuffer);
-        }, 1000);
-
-        if (elem.name == 'Email') {
-            let counterA = 0;
-            const intervalIdA = setInterval(() => {
-                if (document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-2').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-3').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-4').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-5').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-6').style.display !== "none" || document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol.field-7').style.display !== "none") {
-                    var selected_val = document.querySelector('.step_2 input[name="employees"]:checked').value;
-                    if (selected_val == 'Less than 100' || selected_val == '100-999' || selected_val == '1000-2999') {
-                        document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol select[name="Company_Size__c"]').value = 'less than 3001 employees';
-                    } else {
-                        document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol select[name="Company_Size__c"]').value = '3001+ employees';
-                    }
-
-                    document.querySelector('.spz-form-baseline').classList.add('current_step_4');
-                    document.querySelector('.spz-form-baseline').classList.remove('current_step_3');
-                    document.querySelector('.form-step.step_3 .step-number').textContent = "Step 4";
-
-                    // Function to check if an element is displayed as block
-                    function isVisible(element) {
-                        if (!element) {
-                            return false;
-                        }
-                        const style = window.getComputedStyle(element);
-                        if (style.display === 'none' || style.visibility === 'hidden' || style.opacity === '0') {
-                            return false;
-                        }
-                        return element.offsetParent !== null;
-                    }
-                    const textInputs = document.querySelectorAll('.spz_4002 .spz-form-baseline form.mktoForm .mktoField:not([type="checkbox"]):not([type="hidden"])');
-                    const visibleFields = Array.from(textInputs).filter(isVisible);
-                    const blockFieldNames = visibleFields.filter(field => {
-                        const closestMktoFormCol = field.closest('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol');
-                        return closestMktoFormCol && closestMktoFormCol.style.display !== 'none';
-                    }).map(field => field.name);
-                    var last_field_name = blockFieldNames[blockFieldNames.length - 1];
-                    if (blockFieldNames.length % 2 === 0) {
-                        document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoField[name="' + last_field_name + '"]').closest('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol').classList.add('width_full');
-                    } else {
-                        document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol .mktoField[name="' + last_field_name + '"]').closest('.spz_4002 .spz-form-baseline form.mktoForm .mktoFormCol').classList.remove('width_full');
-                    }
-                }
-                counterA++;
-                if (counterA >= 20) {
-                    clearInterval(intervalIdA);
-                }
-            }, 500);
-        }
+    function getCookie(name) {
+      var nameEQ = name + "=";
+      var ca = document.cookie.split(';');
+      for (var i = 0; i < ca.length; i++) {
+        var c = ca[i];
+        while (c.charAt(0) == ' ') c = c.substring(1, c.length);
+        if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
+      }
+      return null;
     }
 
-    document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
-        waitForElm('.spz_4002 .spz-form-baseline form.mktoForm .mktoError').then(function (elm) {
-            if (elm.parentNode.querySelector('#ValidMsgEmail')) {
-                const targetNode = elm.parentNode;
-                const config = { attributes: true, childList: true, subtree: true };
-                const callback = (mutationList, observer) => {
-                    for (const mutation of mutationList) {
-                        if (mutation.type === "childList") {
-                            if (elm.parentNode === null && elm.style.display != 'none') {
-                                targetNode.classList.add('error');
-                            } else {
-                                elm.parentNode.classList.add('error');
-                            }
-                            observer.disconnect();
-                        } else if (mutation.type === "attributes") {
-                            if (elm.parentNode === null) {
-                                targetNode.classList.add('error');
-                            } else {
-                                elm.parentNode.classList.add('error');
-                            }
-                            observer.disconnect();
-                        }
-                    }
-                };
-                const observer = new MutationObserver(callback);
-                observer.observe(targetNode, config);
-            } else {
-                let counterA = 0;
-                const intervalIdA = setInterval(() => {
-                    if (document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoError #ValidMsgEmail') !== null) {
-                        document.querySelector('.spz_4002 .spz-form-baseline form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
-                    }
-                    counterA++;
-                    if (counterA >= 10) {
-                        clearInterval(intervalIdA);
-                    }
-                }, 500);
-            }
-        });
-    })
+    var ExistingExperimentName = getCookie('ExperimentName');
+    var ExistingExperimentValue = getCookie('ExperimentValue');
 
-    // Do not touch below hidden field code for any Experiment (Set Hidden Filed Value)
-    function hiddenValue(currentExperimentName, currentExperimentValue) {
-        function setCookie(name, value, days) {
-            var expires = "";
-            if (days) {
-                var date = new Date();
-                date.setTime(date.getTime() + (days * 24 * 60 * 60 * 1000));
-                expires = "; expires=" + date.toUTCString();
-            }
-            document.cookie = name + "=" + (value || "") + expires + "; path=/";
-        }
+    if (!ExistingExperimentName) {
 
-        function getCookie(name) {
-            var nameEQ = name + "=";
-            var ca = document.cookie.split(';');
-            for (var i = 0; i < ca.length; i++) {
-                var c = ca[i];
-                while (c.charAt(0) == ' ') c = c.substring(1, c.length);
-                if (c.indexOf(nameEQ) == 0) return c.substring(nameEQ.length, c.length);
-            }
-            return null;
-        }
+      setCookie('ExperimentName', currentExperimentName, 1);
+      setCookie('ExperimentValue', currentExperimentValue, 1);
 
-        var ExistingExperimentName = getCookie('ExperimentName');
-        var ExistingExperimentValue = getCookie('ExperimentValue');
+    } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
 
-        if (!ExistingExperimentName) {
+      setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
+      setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
 
-            setCookie('ExperimentName', currentExperimentName, 1);
-            setCookie('ExperimentValue', currentExperimentValue, 1);
+    } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
 
-        } else if (ExistingExperimentName && !ExistingExperimentName.includes(currentExperimentName)) {
+      var existingNames = ExistingExperimentName.split(',');
+      var existingValues = ExistingExperimentValue.split(',');
 
-            setCookie('ExperimentName', ExistingExperimentName + ',' + currentExperimentName, 1);
-            setCookie('ExperimentValue', ExistingExperimentValue + ',' + currentExperimentValue, 1);
+      var index = existingNames.indexOf(currentExperimentName);
+      existingValues[index] = currentExperimentValue;
 
-        } else if (ExistingExperimentName && ExistingExperimentName.includes(currentExperimentName)) {
-
-            var existingNames = ExistingExperimentName.split(',');
-            var existingValues = ExistingExperimentValue.split(',');
-
-            var index = existingNames.indexOf(currentExperimentName);
-            existingValues[index] = currentExperimentValue;
-
-            setCookie('ExperimentName', existingNames.join(','), 1);
-            setCookie('ExperimentValue', existingValues.join(','), 1);
-        }
+      setCookie('ExperimentName', existingNames.join(','), 1);
+      setCookie('ExperimentValue', existingValues.join(','), 1);
     }
-    // Do not touch below hidden field code for any Experiment over (Set Hidden Filed Value)
+  }
+  // Do not touch below hidden field code for any Experiment over (Set Hidden Filed Value)
 
-    // Use this and change value according to the experiment
-    hiddenValue('#4002 | Expel | Contact Us | Qualifying Questions', 'variant_#4002');
+  // Use this and change value according to the experiment
+  hiddenValue('#4002 | Expel | Contact Us | Qualifying Questions', 'variant_#4002');
 }
 
 
 // Generic Code
 function waitForElm(selector) {
-    return new Promise(function (resolve) {
-        if (document.querySelector(selector)) {
-            return resolve(document.querySelector(selector));
-        }
-        const observer = new MutationObserver(function (mutations) {
-            if (document.querySelector(selector)) {
-                resolve(document.querySelector(selector));
-                observer.disconnect();
-            }
-        });
-        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  return new Promise(function (resolve) {
+    if (document.querySelector(selector)) {
+      return resolve(document.querySelector(selector));
+    }
+    const observer = new MutationObserver(function (mutations) {
+      if (document.querySelector(selector)) {
+        resolve(document.querySelector(selector));
+        observer.disconnect();
+      }
     });
+    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+  });
 }
+
+
+window.addEventListener('pageshow', function (event) {
+  if (event.persisted) {
+    const formElement = document.querySelector('.spz-form-baseline');
+    formElement.className = formElement.className.replace(/\bcurrent_step_\d+\b/g, '');
+    formElement.classList.add('current_step_1');
+    document.querySelectorAll('.spz_4002 .spz-form-baseline .Questions-block .form-step').forEach((step, index) => {
+      if (index === 0) {
+        step.style.display = 'block';
+      } else {
+        step.style.display = 'none';
+      }
+    });
+  }
+});

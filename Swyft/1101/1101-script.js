@@ -145,8 +145,12 @@ function createTest() {
                 <div class="spz-col right-img"></div></div></div>`);
 
                 if (typeof Swiper !== 'undefined' && document.querySelector('.spz-1101 .spz-slider')) {
-                    console.log('Swiper loaded');
                     initSlider();
+                }
+
+                //for landing page only
+                if (window.location.pathname.indexOf("/marketing/llc/") > -1) {
+                    document.querySelector('.spz-1101 #marketing-llc-hero-section').insertAdjacentHTML('afterend', `<div class="spz-price-section"><div class="price-title">Pricing</div><div class="price-card-row"></div></div>`);
                 }
             }
         }, 100);
