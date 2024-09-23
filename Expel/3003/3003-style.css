@@ -1191,9 +1191,28 @@ body.spz-3003 #hero-section form.mktoForm .mktoFormCol .mktoFieldWrap.error .mkt
   width: 32px;
   height: 32px;
 }
+.spz-3003 .spz-form-baseline .Questions-block .option-icon .hovered {
+  display: none;
+}
+
+.spz-3003 .spz-form-baseline .Questions-block .step_1 .option-item:first-child .option-icon {
+  padding: 14px;
+}
+@media screen and (max-width: 767.98px) {
+  .spz-3003 .spz-form-baseline .Questions-block .step_1 .option-item:first-child .option-icon {
+    padding: 8px;
+  }
+}
 
 .spz-3003 .spz-form-baseline .Questions-block .option-box div[class*=option-item] input:checked + .option-content .option-icon {
   background: #fff;
+}
+
+.spz-3003 .spz-form-baseline .Questions-block .step_1 .option-box div[class*=option-item] input:checked + .option-content .option-icon .default {
+  display: none;
+}
+.spz-3003 .spz-form-baseline .Questions-block .step_1 .option-box div[class*=option-item] input:checked + .option-content .option-icon .hovered {
+  display: block;
 }
 
 .spz-3003 .spz-form-baseline .Questions-block .option-box div[class*=option-item] input:checked + .option-content .option-icon svg path {
@@ -1717,7 +1736,7 @@ body.spz-3003 .spz-form-baseline form.mktoForm .mktoFormCol .mktoFieldWrap.error
 }
 @media (max-width: 767.98px) {
   .spz-3003 .spz-form-baseline .form-block {
-    margin-top: 24px;
+    margin-top: 36px;
     padding: 28px 20px 30px !important;
   }
   .spz-3003 .spz-form-baseline .Questions-block .step-header {
