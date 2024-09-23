@@ -76,6 +76,85 @@ const pageContent = {
             date: "May 31, 2024",
         },
     ],
+    priceCards: [
+        {
+            planName: "Basic",
+            price: "$0",
+            desc: "I only want to get started with the basics to form my business",
+            ctaCopy: "File my Basic LLC for Free",
+            ctaLink: "",
+            listTitle: "Includes:",
+            listItems: [
+                {
+                    copy: "State filing service",
+                },
+                {
+                    copy: "Articles of organization to make your business official",
+                },
+                {
+                    copy: "A check to confirm that your business name is available before we file",
+                },
+                {
+                    copy: "Lifetime support from real humans via phone, chat, and email",
+                },
+            ],
+        },
+        {
+            planName: "Standard",
+            price: "$199",
+            desc: "I want the essentials to help launch my business in compliance",
+            ctaCopy: "File my Standard LLC",
+            ctaLink: "",
+            isPopular: true,
+            listTitle: "Everything in <span>Basic</span>, plus:",
+            listItems: [
+                {
+                    copy: "Mandatory federal BOI compliance filing ",
+                    isSwift: true,
+                },
+                {
+                    copy: "250+ attorney-crafted legal forms for business",
+                    isSwift: true,
+                },
+                {
+                    copy: "Privacy protection with a professional business address",
+                    isSwift: true,
+                },
+                {
+                    copy: "An operating agreement to protect you from liability",
+                },
+                {
+                    copy: "An EIN to file taxes, open a bank account, and hire",
+                },
+            ],
+        },
+        {
+            planName: "Premium",
+            price: "$299",
+            desc: "I want everything my business needs at the best value",
+            ctaCopy: "File my Premium LLC",
+            ctaLink: "",
+            isPopular: true,
+            listTitle: "Everything in <span>Standard</span>, plus:",
+            listItems: [
+                {
+                    copy: "Personalized guidance from a business attorney in your state",
+                    isSwift: true,
+                },
+                {
+                    copy: "Legal review of your contracts and documents ",
+                    isSwift: true,
+                },
+                {
+                    copy: "Same-day processing to push your application to the front of the line",
+                },
+                {
+                    copy: "1-year web.com domain subscription and resources to build your website",
+                    isSwift: true,
+                },
+            ],
+        },
+    ],
 };
 
 let testimonialHTML = '';
@@ -93,12 +172,45 @@ pageContent.testimonials.forEach((testimonial) => {
                 <div class="tm-write">
                     <div class="tm-avatar">
                         <p class="t-date"><b>${testimonial.init}</b> , ${testimonial.date}</p>
-                        <p class="t-verify"><img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/icons.svg" alt="Verified"> Verified</p>
+                        <p class="t-verify"><img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/icons.svg" alt="Verified"> Verified</p>
                     </div>
                     <div class="tm-quote tab-mob">
-                        <img src="//res.cloudinary.com/spiralyze/image/upload/v1726755049/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
+                        <img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/stars-5_1.svg" alt="Star Rating">
                     </div>
                 </div>
+            </div>
+        </div>
+    </div>`;
+});
+
+let priceCardHTML = '';
+pageContent.priceCards.forEach((priceCard) => {
+    priceCardHTML += `<div class="price-card">
+        ${priceCard.isPopular ? `<div class="pc-popular">Most Popular</div>` : ''}
+        <div class="price-card-head">
+            <div class="price-card-title">
+                <p class="pc-title">${priceCard.planName}</p>
+                <p class="pc-desc">${priceCard.desc}</p>
+            </div>
+            <div class="pc-price-wrapper">
+                <p class="pc-price">${priceCard.price}</p>
+                <p class="pc-price">+government fees</p>
+            </div>
+        </div>
+        <div class="pc-cta-wrapper">
+            <a href="${priceCard.ctaLink}" class="spz-btn spz-1101-tracking">${priceCard.ctaCopy}</a>
+        </div>
+        <div class="price-card-body">
+            <div class="pc-list">
+                <p class="pc-list-title">${priceCard.listTitle}</p>
+                <ul class="pc-list-items">`;
+    priceCard.listItems.forEach((listItem) => {
+        priceCardHTML += `<li class="pc-list-item">
+                    <p>${listItem.copy}</p>
+                    ${listItem.isSwift ? `<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/v2.svg" alt="Swift Exclusive">` : ''}
+                </li>`;
+    });
+    priceCardHTML += `</ul>
             </div>
         </div>
     </div>`;
@@ -150,7 +262,7 @@ function createTest() {
 
                 //for landing page only
                 if (window.location.pathname.indexOf("/marketing/llc/") > -1) {
-                    document.querySelector('.spz-1101 #marketing-llc-hero-section').insertAdjacentHTML('afterend', `<div class="spz-price-section"><div class="price-title">Pricing</div><div class="price-card-row"></div></div>`);
+                    document.querySelector('.spz-1101 #marketing-llc-hero-section').insertAdjacentHTML('afterend', `<div class="spz-price-section"><div class="price-card-row">${priceCardHTML}</div></div>`);
                 }
             }
         }, 100);
