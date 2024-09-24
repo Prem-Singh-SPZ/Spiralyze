@@ -10,7 +10,8 @@
   }
 }
 
-body.spz-1101 #trustpilot-testimonial {
+body.spz-1101 #trustpilot-testimonial,
+body.spz-1101 #llc-pricing-card-deck-main {
   display: none;
 }
 body.spz-1101 #exclusives-hero-section,
@@ -686,6 +687,11 @@ body.spz-1101 .spz-price-section {
   background: #fff;
   padding: 80px 24px 40px;
 }
+@media screen and (max-width: 991.98px) {
+  body.spz-1101 .spz-price-section {
+    padding: 64px 24px 40px;
+  }
+}
 body.spz-1101 .spz-price-section .price-card-row {
   max-width: 1168px;
   margin: auto;
@@ -700,6 +706,14 @@ body.spz-1101 .spz-price-section .price-card-row {
       -ms-flex-pack: justify;
           justify-content: space-between;
 }
+@media screen and (max-width: 991.98px) {
+  body.spz-1101 .spz-price-section .price-card-row {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+}
 body.spz-1101 .spz-price-section .price-card-row .price-card {
   border-radius: 10px;
   background: -webkit-gradient(linear, left top, left bottom, from(#f7f9ff), to(rgba(247, 249, 255, 0)));
@@ -707,7 +721,7 @@ body.spz-1101 .spz-price-section .price-card-row .price-card {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 32px 20px;
+  padding: 34px 20px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -718,4 +732,199 @@ body.spz-1101 .spz-price-section .price-card-row .price-card {
   -webkit-box-flex: 0;
       -ms-flex: 0 0 32.021%;
           flex: 0 0 32.021%;
+}
+@media screen and (max-width: 991.98px) {
+  body.spz-1101 .spz-price-section .price-card-row .price-card {
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 100%;
+            flex: 0 0 100%;
+    width: 100%;
+    margin-bottom: 24px;
+  }
+  body.spz-1101 .spz-price-section .price-card-row .price-card.active {
+    -webkit-box-ordinal-group: 0;
+        -ms-flex-order: -1;
+            order: -1;
+  }
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-head {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  width: 100%;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-head .price-card-title .pc-title {
+  color: #24262e;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0 0 8px;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-head .price-card-title .pc-desc {
+  color: #5b5d65;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0 16px 0 0;
+  max-width: 212px;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-head .pc-price-wrapper .pc-price {
+  color: #24262e;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  text-align: right;
+  font-size: 28px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 36px;
+  margin: 0 0 8px;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-head .pc-price-wrapper .pc-tag {
+  color: #b7b9c1;
+  text-align: right;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 18px;
+  margin: 11px 0 0;
+  white-space: nowrap;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .pc-cta-wrapper {
+  margin: 22px 0 25px;
+  width: 100%;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .pc-cta-wrapper .spz-btn {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 16px 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  border-radius: 6px;
+  background: #2e6ddb;
+  color: #fff;
+  text-align: center;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  text-decoration: none;
+  width: 100%;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .pc-cta-wrapper .spz-btn:hover {
+  background: #305abb;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .pc-cta-wrapper .spz-btn:active {
+  background: #2a3992;
+}
+@media screen and (max-width: 991.98px) {
+  body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body {
+    width: 100%;
+  }
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-title {
+  color: #24262e;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  margin: 0 0 14px;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-title span {
+  color: #2e6ddb;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-items {
+  padding-left: 0;
+  list-style: none;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-items .pc-list-item {
+  padding: 16px 0 16px 28px;
+  border-top: 1px solid #dadde5;
+  position: relative;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-items .pc-list-item::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 20px;
+  height: 22px;
+  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1727155836/swyftfilings/1101/right_arrow.svg) no-repeat;
+  background-size: contain;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-items .pc-list-item:last-child {
+  border-bottom: 1px solid #dadde5;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-items .pc-list-item p {
+  color: #24262e;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin: 0;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card .price-card-body .pc-list .pc-list-items .pc-list-item p img {
+  width: 136px;
+  height: 26px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin-bottom: -9px;
+  margin-left: -8px;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card.active {
+  border-radius: 10px;
+  border: 1px solid #439eff;
+  border-bottom: 0;
+  background: -webkit-gradient(linear, left top, left bottom, from(rgba(67, 158, 255, 0.2)), to(rgba(67, 158, 255, 0)));
+  background: linear-gradient(180deg, rgba(67, 158, 255, 0.2) 0%, rgba(67, 158, 255, 0) 100%);
+  position: relative;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card.active .pc-popular {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 185px;
+  padding: 6px 0px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: absolute;
+  left: calc(50% - 94.5px);
+  top: -15px;
+  border-radius: 40px;
+  border: 1px solid #439eff;
+  background: #e3f1ff;
+  color: #2e6ddb;
+  text-align: center;
+  font-family: CircularXX, "Arial Nova", sans-serif;
+  font-size: 12px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 18px;
+  text-transform: uppercase;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card.active .price-card-head .pc-price-wrapper .pc-tag {
+  color: #439eff;
+}
+body.spz-1101 .spz-price-section .price-card-row .price-card.active .price-card-body .pc-list .pc-list-items .pc-list-item {
+  border-color: rgba(67, 158, 255, 0.4);
 }

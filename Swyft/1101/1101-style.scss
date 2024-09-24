@@ -13,7 +13,8 @@ $CircularXX: CircularXX, "Arial Nova", sans-serif;
 }
 
 body.spz-1101 {
-  #trustpilot-testimonial {
+  #trustpilot-testimonial,
+  #llc-pricing-card-deck-main {
     display: none;
   }
 
@@ -563,6 +564,10 @@ body.spz-1101 {
     background: #fff;
     padding: 80px 24px 40px;
 
+    @media screen and (max-width: 991.98px) {
+      padding: 64px 24px 40px;
+    }
+
     .price-card-row {
       max-width: 1168px;
       margin: auto;
@@ -570,6 +575,10 @@ body.spz-1101 {
       display: flex;
       align-items: flex-start;
       justify-content: space-between;
+
+      @media screen and (max-width: 991.98px) {
+        flex-direction: column;
+      }
 
       .price-card {
         border-radius: 10px;
@@ -579,10 +588,218 @@ body.spz-1101 {
           rgba(247, 249, 255, 0) 100%
         );
         display: flex;
-        padding: 32px 20px;
+        padding: 34px 20px;
         flex-direction: column;
         align-items: flex-start;
-        flex: 0  0 32.021%;
+        flex: 0 0 32.021%;
+
+        @media screen and (max-width: 991.98px) {
+          flex: 0 0 100%;
+          width: 100%;
+          margin-bottom: 24px;
+
+          &.active {
+            order: -1;
+          }
+        }
+
+        .price-card-head {
+          display: flex;
+          align-items: flex-start;
+          justify-content: space-between;
+          width: 100%;
+
+          .price-card-title {
+            .pc-title {
+              color: #24262e;
+              font-family: $CircularXX;
+              font-size: 28px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 36px;
+              margin: 0 0 8px;
+            }
+
+            .pc-desc {
+              color: #5b5d65;
+              font-family: $CircularXX;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
+              margin: 0 16px 0 0;
+              max-width: 212px;
+            }
+          }
+
+          .pc-price-wrapper {
+            .pc-price {
+              color: #24262e;
+              font-family: $CircularXX;
+              text-align: right;
+              font-size: 28px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 36px;
+              margin: 0 0 8px;
+            }
+
+            .pc-tag {
+              color: #b7b9c1;
+              text-align: right;
+              font-family: $CircularXX;
+              font-size: 12px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 18px;
+              margin: 11px 0 0;
+              white-space: nowrap;
+            }
+          }
+        }
+
+        .pc-cta-wrapper {
+          margin: 22px 0 25px;
+          width: 100%;
+
+          .spz-btn {
+            display: flex;
+            padding: 16px 20px;
+            justify-content: center;
+            align-items: center;
+            border-radius: 6px;
+            background: #2e6ddb;
+            color: #fff;
+            text-align: center;
+            font-family: $CircularXX;
+            font-size: 16px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 24px;
+            text-decoration: none;
+            width: 100%;
+
+            &:hover {
+              background: #305abb;
+            }
+
+            &:active {
+              background: #2a3992;
+            }
+          }
+        }
+
+        .price-card-body {
+          @media screen and (max-width: 991.98px) {
+            width: 100%;
+          }
+          .pc-list {
+            .pc-list-title {
+              color: #24262e;
+              font-family: $CircularXX;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px;
+              margin: 0 0 14px;
+
+              span {
+                color: #2e6ddb;
+              }
+            }
+
+            .pc-list-items {
+              padding-left: 0;
+              list-style: none;
+
+              .pc-list-item {
+                padding: 16px 0 16px 28px;
+                border-top: 1px solid #dadde5;
+                position: relative;
+
+                &::before {
+                  content: "";
+                  position: absolute;
+                  // top: 50%;
+                  left: 0;
+                  width: 20px;
+                  height: 22px;
+                  background: url(https://res.cloudinary.com/spiralyze/image/upload/v1727155836/swyftfilings/1101/right_arrow.svg)
+                    no-repeat;
+                  background-size: contain;
+                }
+
+                &:last-child {
+                  border-bottom: 1px solid #dadde5;
+                }
+
+                p {
+                  color: #24262e;
+                  font-family: $CircularXX;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 24px;
+                  margin: 0;
+
+                  img {
+                    width: 136px;
+                    height: 26px;
+                    object-fit: cover;
+                    margin-bottom: -9px;
+                    margin-left: -8px;
+                  }
+                }
+              }
+            }
+          }
+        }
+
+        &.active {
+          border-radius: 10px;
+          border: 1px solid #439eff;
+          border-bottom: 0;
+          background: linear-gradient(
+            180deg,
+            rgba(67, 158, 255, 0.2) 0%,
+            rgba(67, 158, 255, 0) 100%
+          );
+          position: relative;
+
+          .pc-popular {
+            display: flex;
+            width: 185px;
+            padding: 6px 0px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            left: calc(50% - 94.5px);
+            top: -15px;
+            border-radius: 40px;
+            border: 1px solid #439eff;
+            background: #e3f1ff;
+            color: #2e6ddb;
+            text-align: center;
+            font-family: $CircularXX;
+            font-size: 12px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 18px;
+            text-transform: uppercase;
+          }
+
+          .price-card-head .pc-price-wrapper .pc-tag {
+            color: #439eff;
+          }
+
+          .price-card-body .pc-list .pc-list-items .pc-list-item {
+            border-color: rgba(67, 158, 255, 0.4);
+
+            // &:last-child {
+            //   border-bottom: 1px solid rgba(67, 158, 255, 0.4);
+            // }
+          }
+        }
       }
     }
   }

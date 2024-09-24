@@ -82,7 +82,7 @@ const pageContent = {
             price: "$0",
             desc: "I only want to get started with the basics to form my business",
             ctaCopy: "File my Basic LLC for Free",
-            ctaLink: "",
+            ctaLink: "https://cart.swyftfilings.com/?cn=sonic&entity=LLC",
             listTitle: "Includes:",
             listItems: [
                 {
@@ -104,7 +104,7 @@ const pageContent = {
             price: "$199",
             desc: "I want the essentials to help launch my business in compliance",
             ctaCopy: "File my Standard LLC",
-            ctaLink: "",
+            ctaLink: "https://cart.swyftfilings.com/?cn=sonic",
             isPopular: true,
             listTitle: "Everything in <span>Basic</span>, plus:",
             listItems: [
@@ -133,8 +133,7 @@ const pageContent = {
             price: "$299",
             desc: "I want everything my business needs at the best value",
             ctaCopy: "File my Premium LLC",
-            ctaLink: "",
-            isPopular: true,
+            ctaLink: "https://cart.swyftfilings.com/?cn=sonic&entity=LLC",
             listTitle: "Everything in <span>Standard</span>, plus:",
             listItems: [
                 {
@@ -185,8 +184,8 @@ pageContent.testimonials.forEach((testimonial) => {
 
 let priceCardHTML = '';
 pageContent.priceCards.forEach((priceCard) => {
-    priceCardHTML += `<div class="price-card">
-        ${priceCard.isPopular ? `<div class="pc-popular">Most Popular</div>` : ''}
+    priceCardHTML += `
+        ${priceCard.isPopular ? `<div class="price-card active"><div class="pc-popular">Most Popular</div>` : '<div class="price-card">'}
         <div class="price-card-head">
             <div class="price-card-title">
                 <p class="pc-title">${priceCard.planName}</p>
@@ -194,7 +193,7 @@ pageContent.priceCards.forEach((priceCard) => {
             </div>
             <div class="pc-price-wrapper">
                 <p class="pc-price">${priceCard.price}</p>
-                <p class="pc-price">+government fees</p>
+                <p class="pc-tag">+government fees</p>
             </div>
         </div>
         <div class="pc-cta-wrapper">
@@ -206,9 +205,9 @@ pageContent.priceCards.forEach((priceCard) => {
                 <ul class="pc-list-items">`;
     priceCard.listItems.forEach((listItem) => {
         priceCardHTML += `<li class="pc-list-item">
-                    <p>${listItem.copy}</p>
+                    <p>${listItem.copy}
                     ${listItem.isSwift ? `<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/v2.svg" alt="Swift Exclusive">` : ''}
-                </li>`;
+                </p></li>`;
     });
     priceCardHTML += `</ul>
             </div>
