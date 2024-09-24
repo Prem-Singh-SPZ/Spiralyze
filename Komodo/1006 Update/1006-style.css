@@ -37,6 +37,9 @@ html {
   .spz-1006 #popup_contact_us .wcs-col-12 {
     max-width: 100%;
     min-width: 100%;
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    margin: 0;
   }
 }
 .spz-1006 #popup_contact_us .wcs-col-12 .home-logo {
@@ -55,6 +58,12 @@ html {
 @media screen and (max-width: 1024.98px) {
   .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
     margin: -6px 0px -10px;
+  }
+}
+@media screen and (max-width: 767.98px) {
+  .spz-1006 #popup_contact_us .wcs-col-12 .social-proof {
+    max-width: 360px;
+    margin: auto;
   }
 }
 
@@ -210,6 +219,7 @@ div[data-hs-forms-root=true] form.hs-form .field:has(.hs-input:not([type=checkbo
     max-width: 400px;
     margin-left: auto;
     margin-right: auto;
+    width: 100%;
   }
   .spz-1006 #popup_contact_us .wcs-popup-heading h2 {
     font-size: 32px !important;
