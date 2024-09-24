@@ -568,6 +568,10 @@ body.spz-1101 {
       padding: 64px 24px 40px;
     }
 
+    @media screen and (max-width: 767.98px) {
+      padding: 80px 24px 40px;
+    }
+
     .price-card-row {
       max-width: 1168px;
       margin: auto;
@@ -597,10 +601,16 @@ body.spz-1101 {
           flex: 0 0 100%;
           width: 100%;
           margin-bottom: 24px;
+          padding: 32px;
 
           &.active {
             order: -1;
           }
+        }
+
+        @media screen and (max-width: 767.98px) {
+          margin-bottom: 24px;
+          padding: 32px 20px;
         }
 
         .price-card-head {
@@ -629,6 +639,17 @@ body.spz-1101 {
               line-height: 24px;
               margin: 0 16px 0 0;
               max-width: 212px;
+
+              @media screen and (max-width: 991.98px) {
+                max-width: 100%;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                font-size: 12px;
+                line-height: 18px;
+                margin-right: 8px;
+                max-width: 136px;
+              }
             }
           }
 
@@ -662,11 +683,17 @@ body.spz-1101 {
           margin: 22px 0 25px;
           width: 100%;
 
+          @media screen and (max-width: 991.98px) {
+            margin: 23.5px 0 31px;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            margin: 23.5px 0 33px;
+          }
+
           .spz-btn {
-            display: flex;
+            display: block;
             padding: 16px 20px;
-            justify-content: center;
-            align-items: center;
             border-radius: 6px;
             background: #2e6ddb;
             color: #fff;
@@ -685,6 +712,12 @@ body.spz-1101 {
 
             &:active {
               background: #2a3992;
+            }
+
+            span {
+              @media screen and (max-width: 991.98px) {
+                display: none;
+              }
             }
           }
         }
@@ -717,6 +750,10 @@ body.spz-1101 {
                 border-top: 1px solid #dadde5;
                 position: relative;
 
+                @media screen and (max-width: 991.98px) {
+                  padding: 16px 0 15px 28px;
+                }
+
                 &::before {
                   content: "";
                   position: absolute;
@@ -727,10 +764,6 @@ body.spz-1101 {
                   background: url(https://res.cloudinary.com/spiralyze/image/upload/v1727155836/swyftfilings/1101/right_arrow.svg)
                     no-repeat;
                   background-size: contain;
-                }
-
-                &:last-child {
-                  border-bottom: 1px solid #dadde5;
                 }
 
                 p {
@@ -747,7 +780,13 @@ body.spz-1101 {
                     height: 26px;
                     object-fit: cover;
                     margin-bottom: -9px;
-                    margin-left: -8px;
+                    // margin-left: -8px;
+
+                    @media screen and (max-width: 767.98px) {
+                      display: block;
+                      margin-bottom: 1px;
+                      margin-left: 7px;
+                    }
                   }
                 }
               }
@@ -757,7 +796,7 @@ body.spz-1101 {
 
         &.active {
           border-radius: 10px;
-          border: 1px solid #439eff;
+          // border: 1px solid #439eff;
           border-bottom: 0;
           background: linear-gradient(
             180deg,
@@ -765,6 +804,8 @@ body.spz-1101 {
             rgba(67, 158, 255, 0) 100%
           );
           position: relative;
+          z-index: 1;
+
 
           .pc-popular {
             display: flex;
@@ -786,6 +827,10 @@ body.spz-1101 {
             font-weight: 700;
             line-height: 18px;
             text-transform: uppercase;
+
+            @media (min-width: 767.98px) and (max-width: 991.98px) {
+              left: 19px;
+            }
           }
 
           .price-card-head .pc-price-wrapper .pc-tag {

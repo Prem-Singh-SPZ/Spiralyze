@@ -81,7 +81,7 @@ const pageContent = {
             planName: "Basic",
             price: "$0",
             desc: "I only want to get started with the basics to form my business",
-            ctaCopy: "File my Basic LLC for Free",
+            ctaCopy: "File my <span> Basic </span> LLC for Free",
             ctaLink: "https://cart.swyftfilings.com/?cn=sonic&entity=LLC",
             listTitle: "Includes:",
             listItems: [
@@ -103,7 +103,7 @@ const pageContent = {
             planName: "Standard",
             price: "$199",
             desc: "I want the essentials to help launch my business in compliance",
-            ctaCopy: "File my Standard LLC",
+            ctaCopy: "File my <span> Standard </span> LLC",
             ctaLink: "https://cart.swyftfilings.com/?cn=sonic",
             isPopular: true,
             listTitle: "Everything in <span>Basic</span>, plus:",
@@ -132,7 +132,7 @@ const pageContent = {
             planName: "Premium",
             price: "$299",
             desc: "I want everything my business needs at the best value",
-            ctaCopy: "File my Premium LLC",
+            ctaCopy: "File my <span> Premium </span> LLC",
             ctaLink: "https://cart.swyftfilings.com/?cn=sonic&entity=LLC",
             listTitle: "Everything in <span>Standard</span>, plus:",
             listItems: [
@@ -206,7 +206,7 @@ pageContent.priceCards.forEach((priceCard) => {
     priceCard.listItems.forEach((listItem) => {
         priceCardHTML += `<li class="pc-list-item">
                     <p>${listItem.copy}
-                    ${listItem.isSwift ? `<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/v2.svg" alt="Swift Exclusive">` : ''}
+                    ${listItem.isSwift ? `<img src="//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/swyftfilings/1101/v2_1.svg" alt="Swift Exclusive">` : ''}
                 </p></li>`;
     });
     priceCardHTML += `</ul>
