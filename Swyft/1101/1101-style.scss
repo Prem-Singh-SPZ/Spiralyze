@@ -600,8 +600,8 @@ body.spz-1101 {
         @media screen and (max-width: 991.98px) {
           flex: 0 0 100%;
           width: 100%;
-          margin-bottom: 24px;
-          padding: 32px;
+          margin-bottom: 20px;
+          padding: 34px 32px;
 
           &.active {
             order: -1;
@@ -684,7 +684,7 @@ body.spz-1101 {
           width: 100%;
 
           @media screen and (max-width: 991.98px) {
-            margin: 23.5px 0 31px;
+            margin: 22px 0 32px;
           }
 
           @media screen and (max-width: 767.98px) {
@@ -806,7 +806,6 @@ body.spz-1101 {
           position: relative;
           z-index: 1;
 
-
           .pc-popular {
             display: flex;
             width: 185px;
@@ -816,6 +815,7 @@ body.spz-1101 {
             position: absolute;
             left: calc(50% - 94.5px);
             top: -15px;
+            height: 30px;
             border-radius: 40px;
             border: 1px solid #439eff;
             background: #e3f1ff;
@@ -833,10 +833,16 @@ body.spz-1101 {
             }
           }
 
-          .price-card-head .pc-price-wrapper .pc-tag {
-            color: #439eff;
-          }
+          .price-card-head {
+            .pc-price-wrapper .pc-tag {
+              color: #439eff;
+            }
 
+            .price-card-title .pc-title,
+            .pc-price-wrapper .pc-price {
+              color: #2a3992;
+            }
+          }
           .price-card-body .pc-list .pc-list-items .pc-list-item {
             border-color: rgba(67, 158, 255, 0.4);
 
