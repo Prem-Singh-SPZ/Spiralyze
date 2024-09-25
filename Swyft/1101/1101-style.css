@@ -73,12 +73,6 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap {
     max-width: 1304px;
   }
 }
-@media (max-width: 767.98px) {
-  body.spz-1101 #exclusives-hero-section .spz-wrap,
-  body.spz-1101 #marketing-llc-hero-section .spz-wrap {
-    max-width: 360px;
-  }
-}
 body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row,
 body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row {
   display: -webkit-box;
@@ -129,6 +123,7 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.left-copy 
   body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.left-copy,
   body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.left-copy {
     margin: 0 auto 42px;
+    max-width: 360px;
   }
 }
 body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.left-copy .tp-reviews,
@@ -212,6 +207,7 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.left-copy 
   margin-left: 8px;
   margin-right: 12px;
   color: #fff;
+  margin-top: 3px;
 }
 @media (max-width: 767.98px) {
   body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.left-copy .tp-reviews b,
@@ -228,6 +224,7 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.left-copy 
   line-height: 12px;
   padding-left: 12px;
   white-space: nowrap;
+  margin-top: 3px;
   border-left: 1px solid rgba(255, 255, 255, 0.37);
 }
 @media (max-width: 767.98px) {
@@ -235,6 +232,7 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.left-copy 
   body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.left-copy .tp-reviews p {
     border: none;
     padding: 0;
+    margin: 0;
   }
 }
 body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.left-copy .c-headline,
@@ -638,6 +636,12 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.right-img 
     min-height: 259.763px;
   }
 }
+@media (min-width: 400px) and (max-width: 767.98px) {
+  body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.right-img,
+  body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.right-img {
+    min-height: 50vh;
+  }
+}
 body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.right-img::before,
 body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.right-img::before {
   content: "";
@@ -681,6 +685,15 @@ body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.right-img:
   body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.right-img::before,
   body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.right-img::before {
     background-size: cover;
+  }
+}
+@media (min-width: 400px) and (max-width: 767.98px) {
+  body.spz-1101 #exclusives-hero-section .spz-wrap .spz-row .spz-col.right-img::before,
+  body.spz-1101 #marketing-llc-hero-section .spz-wrap .spz-row .spz-col.right-img::before {
+    background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_tablet.webp") no-repeat left top;
+    background-size: cover;
+    min-width: calc(100% + 24px);
+    width: 100%;
   }
 }
 body.spz-1101 .spz-price-section {

@@ -67,7 +67,7 @@ body.spz-1101 {
       }
 
       @media (max-width: 767.98px) {
-        max-width: 360px;
+        // max-width: 360px;
       }
 
       .spz-row {
@@ -98,6 +98,7 @@ body.spz-1101 {
 
             @media (max-width: 767.98px) {
               margin: 0 auto 42px;
+              max-width: 360px;
             }
 
             .tp-reviews {
@@ -163,6 +164,7 @@ body.spz-1101 {
                 margin-left: 8px;
                 margin-right: 12px;
                 color: #fff;
+                margin-top: 3px;
 
                 @media (max-width: 767.98px) {
                   margin-right: 0;
@@ -177,11 +179,13 @@ body.spz-1101 {
                 line-height: 12px;
                 padding-left: 12px;
                 white-space: nowrap;
+                margin-top: 3px;
 
                 border-left: 1px solid rgba(255, 255, 255, 0.37);
                 @media (max-width: 767.98px) {
                   border: none;
                   padding: 0;
+                  margin: 0;
                 }
               }
             }
@@ -513,6 +517,10 @@ body.spz-1101 {
               min-height: 259.763px;
             }
 
+            @media (min-width: 400px) and (max-width: 767.98px) {
+              min-height: 50vh;
+            }
+
             &::before {
               content: "";
               position: absolute;
@@ -551,6 +559,14 @@ body.spz-1101 {
                 @media (min-width: 362px) {
                   background-size: cover;
                 }
+              }
+
+              @media (min-width: 400px) and (max-width: 767.98px) {
+                background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/swyftfilings/1101/hero_image_-_tablet.webp")
+                  no-repeat left top;
+                background-size: cover;
+                min-width: calc(100% + 24px);
+                width: 100%;
               }
             }
           }
