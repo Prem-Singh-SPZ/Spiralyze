@@ -1,0 +1,341 @@
+$Noto: "Noto Sans", sans-serif;
+$adelle: adelle, sans-serif;
+$grotesk: grotesk, "RecentGroteskBlack", sans-serif;
+
+body.spz-7001 {
+  #HERO {
+    background: #f5f5ff;
+    border: none;
+
+    .container {
+      max-width: 1240px;
+
+      .block-wrapper {
+        //left copy
+        .block-2 {
+          padding: 0;
+          max-width: 560px;
+          margin-right: 24px;
+
+          > .mktoText {
+            > div {
+              > p {
+                margin: 0 0 16px;
+                strong {
+                  color: #381360;
+                  font-family: $Noto;
+                  font-size: 16px;
+                  font-weight: 700;
+                  line-height: 24px;
+                }
+              }
+
+              > h1 {
+                color: #381360;
+                font-family: $adelle;
+                font-size: 48px;
+                font-weight: 300;
+                line-height: 56px;
+                margin: 0 0 16px;
+              }
+
+              .lead {
+                color: #381360;
+                font-family: $Noto;
+                font-size: 16px;
+                font-weight: 400;
+                line-height: 24px;
+              }
+            }
+          }
+        }
+
+        //right form
+        .block-3 {
+          padding: 0;
+          > .mktoText {
+            display: none !important;
+          }
+
+          > .mktoForm {
+            background: linear-gradient(
+              180deg,
+              #fff 68.91%,
+              rgba(255, 255, 255, 0.96) 100%
+            );
+            box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
+            max-width: 600px;
+            width: 100%;
+            padding: 40px 30px;
+
+            .spz-form-title {
+              color: #381360;
+              text-align: center;
+              font-family: $grotesk;
+              font-size: 40px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 40px;
+              text-transform: uppercase;
+            }
+
+            // .mktoForm {
+            // }
+          }
+        }
+      }
+    }
+
+    form.mktoForm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100% !important;
+      padding: 0;
+      gap: 0;
+      background: transparent !important;
+
+      .mktoFormRow {
+        padding: 0 10px !important;
+
+        .mktoFormCol {
+          width: 100% !important;
+          display: inline-flex;
+          flex-wrap: wrap;
+          flex: unset;
+          margin: 0 !important;
+
+          .mktoFieldWrap {
+            position: relative;
+            width: 100% !important;
+            margin-bottom: 20px;
+            padding: 0 !important;
+
+            .mktoLabel {
+              background: #f5f5ff;
+              color: #646464 !important;
+              font-family: $Noto !important;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 400 !important;
+              line-height: 1.4;
+              padding: 1px 6px !important;
+              margin: 0;
+              position: absolute;
+              width: max-content !important;
+              max-width: calc(100% - 40px);
+              top: 16px;
+              left: 10px;
+              pointer-events: none;
+              transition: all 0.35s ease !important;
+            }
+            .mktoField {
+              width: 100% !important;
+              height: 56px !important;
+              padding: 16px 16px !important;
+              background-color: #f5f5ff !important;
+              border: 1px solid #f5f5ff !important;
+              border-radius: 0;
+              outline: none;
+              box-shadow: none;
+              color: #381360 !important;
+              font-family: $Noto;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.4;
+              appearance: none;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              transition: all 0.3s ease;
+
+              &:hover {
+                background-color: #ffffff !important;
+                border-color:  #381360 !important;
+              }
+            }
+            select.mktoField {
+              padding-right: 40px;
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
+              background-size: 24px;
+              background-repeat: no-repeat;
+              background-position: calc(100% - 13px) 15px;
+            }
+
+            &:hover {
+              .mktoLabel {
+                background: #ffffff;
+              }
+            }
+
+            &.error {
+              .mktoLabel {
+                background: #f5f5ff;
+              }
+              .mktoField {
+                border: 1px solid #f2342f !important;
+                background-color: #ffffff;
+                outline: none;
+              }
+
+              &:hover {
+                .mktoLabel {
+                  background: #ffffff;
+                }
+              }
+            }
+
+            &.active.typing {
+              .mktoLabel {
+                font-size: 12px !important;
+                line-height: 16px;
+                top: -8px;
+                color: #381360 !important;
+                background: #ffffff;
+              }
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #381360 !important;
+                outline: 2px solid rgba(153, 167, 255, 0.5) !important;
+              }
+            }
+
+            &.filled {
+              .mktoLabel {
+                font-size: 12px !important;
+                line-height: 16px;
+                top: -8px;
+                color: #381360 !important;
+                background: #ffffff;
+              }
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #c4bbcf !important;
+              }
+            }
+
+            &.error.active.typing {
+              .mktoLabel {
+                background: #ffffff;
+              }
+              .mktoField {
+                border: 1px solid #f2342f !important;
+                background-color: #ffffff;
+                outline: none !important;
+              }
+
+           
+            }
+          }
+        }
+      }
+
+      .mktoError {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset !important;
+        bottom: unset !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .mktoErrorArrowWrap {
+          display: none;
+        }
+
+        .mktoErrorMsg {
+          margin: 4px 0 0 0 !important;
+          background: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
+          padding: 0 0 0 16px;
+          color: #f2342f !important;
+          font-family: $Noto !important;
+          font-size: 12px !important;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          text-shadow: none !important;
+          max-width: unset !important;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 16px;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .mktoButtonRow {
+        width: 100%;
+
+        .mktoButtonWrap {
+          width: 100%;
+          margin: 0 !important;
+
+          button.mktoButton {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            width: 100%;
+            max-width: 250px;
+            height: 56px;
+            background: #99a7ff !important;
+            border: 1px solid #99a7ff;
+            font-size: 0;
+            margin: 12px auto 0 !important;
+            cursor: pointer;
+            -webkit-transition: all 0.35s;
+            -o-transition: all 0.35s;
+            transition: all 0.35s;
+            position: relative;
+
+            &:hover {
+              outline: 1px solid #447f19;
+            }
+            &:focus {
+              outline: 1px solid #447f19;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+input {
+  &:-webkit-autofill {
+    -webkit-box-shadow: 0 0 0 56px white inset !important;
+    -webkit-text-fill-color: #000 !important;
+    &:hover {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #000 !important;
+    }
+    &:focus {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #000 !important;
+    }
+    &:active {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #000 !important;
+    }
+  }
+}
