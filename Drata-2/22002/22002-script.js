@@ -35,14 +35,20 @@
                 subMenu: [
                     {
                         text: "Platform Overview",
-                        info: "One platform for complete control over your compliance program.",
+                        info: "Complete control over your GRC program.",
                         link: "/platform",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_95.svg"
                     },
                     {
                         text: "Trust Center",
-                        info: "Your fast pass to vendor security reviews.",
+                        info: "Manage & publish your security posture.",
                         link: "/product/trust-center",
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
+                    },
+                    {
+                        text: "Security Questionnaire Automation",
+                        info: "Automate security reviews with Drata AI.",
+                        link: "/product/security-questionnaire-automation",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
                     },
                     {
@@ -59,20 +65,20 @@
                     },
                     {
                         text: "Compliance as Code",
-                        info: "Address compliance across the software development lifecycle. ",
+                        info: "Maintain compliance across the SDLC.",
                         link: "/product/compliance-as-code",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_129.svg",
                         newTag: true
                     },
                     {
                         text: "User Access Reviews",
-                        info: "Conduct user access reviews directly to increase security.",
+                        info: "Automate access reviews.",
                         link: "/product/user-access-reviews",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_133.svg"
                     },
                     {
                         text: "Audit Hub",
-                        info: "Streamline the audit process with advanced tools and workflows.",
+                        info: "Create centralized audit communication.",
                         link: "/product/audit-hub",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_138.svg"
                     },
@@ -88,8 +94,8 @@
                     { text: 'HIPAA', link: "/product/hipaa" },
                     { text: 'GDPR', link: "/product/gdpr" },
                     { text: 'Cyber Essentials', link: "/product/cyber-essentials" },
-                    { text: 'NIST AI Risk Management', link: "/product/nist-ai-risk-management" },
-                    { text: 'FedRamp', link: "/product/fedramp" },
+                    { text: 'NIST AI RMF', link: "/product/nist-ai-risk-management" },
+                    { text: 'FedRAMP', link: "/product/fedramp" },
                     { text: 'PCI DSS', link: "/product/pci-dss" },
                     { text: 'Custom Frameworks', link: "/product/custom-frameworks" },
                     { text: 'All Frameworks', link: "/product" }
@@ -150,19 +156,19 @@
                 subMenu: [
                     {
                         text: "Resource Center",
-                        info: "Latest blogs, webinars, customer stories, product enhancements, and more.",
+                        info: "Access the latest GRC resources.",
                         link: "/resources",
                         icon: ""
                     },
                     {
                         text: "Compliance Glossary",
-                        info: "Add short descriptor for consistency",
+                        info: "Get the compliance definitions you need.",
                         link: "/glossary",
                         icon: ""
                     },
                     {
                         text: "GRC Central",
-                        info: "One-stop-shop for all things GRC. Explore the educational hubs below.",
+                        info: "Dive into GRC fundamental topics.",
                         link: "/grc-central",
                         icon: ""
                     },
@@ -319,7 +325,7 @@
                         cImg: astUrl + "f_auto/drata/22002/01_-_desktop.webp",
                         cImgTab: astUrl + "f_auto/drata/22002/01_-_tablet.webp",
                         cImgMob: astUrl + "f_auto/drata/22002/01_-_mobile.jpg",
-                        cDesc: `How Lemonade Saved 80% of Time Using Drata`,
+                        cDesc: `Lemonade Saves 80% of Time Using Drata.`,
                         cLink: "/customers/lemonade",
                         cClass: "cs-jonathan-card"
                     },
@@ -330,7 +336,7 @@
                         cImg: astUrl + "f_auto/drata/22002/02_-_desktop.webp",
                         cImgTab: astUrl + "f_auto/drata/22002/02_-_tablet.webp",
                         cImgMob: astUrl + "f_auto/drata/22002/02_-_mobile.jpg",
-                        cDesc: `How Calendly Reduced Hours Spent on Audit Prep by 90%`,
+                        cDesc: `Calendly Reduces Hours Spent on Audit Prep by 90%.`,
                         cLink: "/customers/calendly",
                         cClass: "cs-calendly-card"
                     },
@@ -620,20 +626,20 @@
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                                        let grpMenu = '';
-                                        if (subItem2.groupMenu) {
-                                            subItem2.groupMenu.forEach((gmi) => {
-                                            grpMenu += `<div class="MuiBox-root css-spz-HeaderNavLinkNested-root grp-sub-item" data-testid="HeaderNavLinkNested">
+                        let grpMenu = '';
+                        if (subItem2.groupMenu) {
+                            subItem2.groupMenu.forEach((gmi) => {
+                                grpMenu += `<div class="MuiBox-root css-spz-HeaderNavLinkNested-root grp-sub-item" data-testid="HeaderNavLinkNested">
                                                         <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${gmi.link}">
                                                             <div class="menu-texts">
                                                                 <div class="menu-title">${gmi.text}</div>
                                                             </div>
                                                         </a>
                                                     </div>`;
-                                            });
-                                        }
-                                        
-                                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                            });
+                        }
+
+                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
                                                     <a href="${subItem2.cLink}" class="spz-menu-card ${subItem2.cClass}">
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
                                                         <span class="card-tag">${subItem2.cTag}</span>
@@ -641,12 +647,12 @@
                                                         <div class="card-desc">${subItem2.cDesc}</div>
                                                         <!-- ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""} -->
                                                     </a>
-                                                </li>` : 
-                                                `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem2.groupMenu ? 'grp-item-wrapper' : ''} ${subItem2.class != null ? subItem2.class : ''}">
-                                                    ${(subItem2.groupMenu && subItem2.groupMenu.length > 0) ? 
-                                                        grpMenu
-                                                     :  
-                                                        `<div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                </li>` :
+                            `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem2.groupMenu ? 'grp-item-wrapper' : ''} ${subItem2.class != null ? subItem2.class : ''}">
+                                                    ${(subItem2.groupMenu && subItem2.groupMenu.length > 0) ?
+                                grpMenu
+                                :
+                                `<div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
                                                             <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
                                                                 ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
                                                                 <div class="menu-texts">
@@ -655,9 +661,9 @@
                                                                 </div>
                                                             </a>
                                                         </div>`
-                                                    }
+                            }
                                                 </li>`}`;
-                                    }).join("")}
+                    }).join("")}
                                 </ul>
                                 
                             </div>
@@ -735,7 +741,7 @@
                                 <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                     <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                         ${subItem1.subMenu.map((subItem2, subIndex) => {
-                                                return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
+                            return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
                                                         <a href="${subItem2.cLink}" class="spz-review-card ${subItem2.cClass}">
                                                             <div class="review-img">
                                                                 <picture>
@@ -791,7 +797,7 @@
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                                                return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
                                                     <a href="${subItem2.cLink}" class="spz-menu-card ${subItem2.cClass}">
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
                                                         <span class="card-tag">${subItem2.cTag}</span>
