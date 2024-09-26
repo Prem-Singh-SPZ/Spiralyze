@@ -14,17 +14,17 @@
                     {
                         text: "Startup",
                         link: "/platform/startup",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_86.svg"
+                        icon: astUrl + "fl_sanitize/drata/22002/component_174.svg"
                     },
                     {
                         text: "Growth",
                         link: "/platform/growth",
-                        icon: astUrl + "/drata/22002/component_99.svg"
+                        icon: astUrl + "fl_sanitize/drata/22002/component_172.svg"
                     },
                     {
                         text: "Enterprise",
                         link: "/platform/enterprise",
-                        icon: astUrl + "/drata/22002/component_107.svg"
+                        icon: astUrl + "fl_sanitize/drata/22002/component_173.svg"
                     }
                 ]
             },
@@ -37,44 +37,44 @@
                         text: "Platform Overview",
                         info: "One platform for complete control over your compliance program.",
                         link: "/platform",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_95.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_95.svg"
                     },
                     {
                         text: "Trust Center",
                         info: "Your fast pass to vendor security reviews.",
                         link: "/product/trust-center",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
                     },
                     {
                         text: "Vendor Risk Management",
                         info: "Identify and monitor vendor risk.",
                         link: "/product/third-party-risk-management",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_117.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_117.svg"
                     },
                     {
                         text: "Risk Management",
                         info: "Put risk management on autopilot.",
                         link: "/product/risk-management",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_135.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_135.svg"
                     },
                     {
                         text: "Compliance as Code",
                         info: "Address compliance across the software development lifecycle. ",
                         link: "/product/compliance-as-code",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_129.svg",
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_129.svg",
                         newTag: true
                     },
                     {
                         text: "User Access Reviews",
                         info: "Conduct user access reviews directly to increase security.",
                         link: "/product/user-access-reviews",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_133.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_133.svg"
                     },
                     {
                         text: "Audit Hub",
                         info: "Streamline the audit process with advanced tools and workflows.",
                         link: "/product/audit-hub",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_138.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_138.svg"
                     },
                 ]
             },
@@ -83,26 +83,16 @@
                 class: "frameworks-spz",
                 link: "",
                 subMenu: [
-                    { text: 'SOC 2', link: "/product/soc-2", icon: astUrl + "fl_sanitize/drata/22002/component_94.svg" },
-                    { text: 'ISO 27001', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_168.svg" },
-                    { text: 'HIPAA', link: "/product/hipaa", icon: astUrl + "fl_sanitize/drata/22002/component_123.svg" },
-                    { text: 'GDPR', link: "/product/gdpr", icon: astUrl + "fl_sanitize/drata/22002/component_132.svg" },
-                    { text: 'PCI DSS', link: "/product/pci-dss", icon: astUrl + "fl_sanitize/drata/22002/component_147.svg" },
-                    { text: 'Cyber Essentials', link: "/product/cyber-essentials", icon: astUrl + "fl_sanitize/drata/22002/component_130.svg" },
-                    { text: 'NIST AI RMF', link: "/product/nist-ai-risk-management", icon: astUrl + "fl_sanitize/drata/22002/component_136.svg" },
-                    { text: 'CCPA', link: "/product/ccpa", icon: astUrl + "fl_sanitize/drata/22002/component_134.svg" },
-                    { text: 'CMMC', link: "/product/cmmc", icon: astUrl + "fl_sanitize/drata/22002/component_163.svg" },
-                    { text: 'Microsoft SSPA', link: "/product/msft-sspa", icon: astUrl + "fl_sanitize/drata/22002/component_165.svg" },
-                    { text: 'NIST CSF', link: "/product/nist-csf", icon: astUrl + "fl_sanitize/drata/22002/component_146.svg" },
-                    { text: 'NIST SP 800-53', link: "/product/nist-800-53", icon: astUrl + "fl_sanitize/drata/22002/component_151.svg" },
-                    { text: 'NIST SP 800-171', link: "/product/nist-800-171", icon: astUrl + "fl_sanitize/drata/22002/component_166.svg" },
-                    { text: 'ISO 27701', link: "/product/iso-27701", icon: astUrl + "fl_sanitize/drata/22002/component_143.svg" },
-                    { text: 'FFIEC', link: "/product/ffiec", icon: astUrl + "fl_sanitize/drata/22002/component_149.svg" },
-                    { text: 'CCM', link: "/product/ccm", icon: astUrl + "fl_sanitize/drata/22002/component_161.svg" },
-                    { text: 'FedRAMP', link: "/product/fedramp", icon: astUrl + "fl_sanitize/drata/22002/component_139.svg" },
-                    { text: 'ISO 27017', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_158.svg" },
-                    { text: 'ISO 27018', link: "/product/iso-27001", icon: astUrl + "fl_sanitize/drata/22002/component_164.svg" },
-                    { text: 'Custom Frameworks', link: "/product/custom-frameworks", icon: astUrl + "fl_sanitize/drata/22002/component_162.svg" },
+                    { text: 'SOC 2', link: "/product/soc-2" },
+                    { text: 'ISO 27001', link: "/product/iso-27001" },
+                    { text: 'HIPAA', link: "/product/hipaa" },
+                    { text: 'GDPR', link: "/product/gdpr" },
+                    { text: 'Cyber Essentials', link: "/product/cyber-essentials" },
+                    { text: 'NIST AI Risk Management', link: "/product/nist-ai-risk-management" },
+                    { text: 'FedRamp', link: "/product/fedramp" },
+                    { text: 'PCI DSS', link: "/product/pci-dss" },
+                    { text: 'Custom Frameworks', link: "/product/custom-frameworks" },
+                    { text: 'All Frameworks', link: "/product" }
                 ]
             },
             {
@@ -110,10 +100,10 @@
                 class: "take-drata-spz",
                 link: "",
                 subMenu: [
-                    { text: 'Customer Success', link: "/success", icon: astUrl + "fl_sanitize/drata/22002/component_91.svg" },
-                    { text: 'Partners', link: "/partner", icon: astUrl + "fl_sanitize/drata/22002/component_145.svg" },
-                    { text: 'API', link: "/product/api", icon: astUrl + "fl_sanitize/drata/22002/component_144.svg" },
-                    { text: 'Integrations', link: "/platform/integrations", icon: astUrl + "fl_sanitize/drata/22002/component_156.svg" },
+                    { text: 'Customer Success', link: "/success" },
+                    { text: 'Partners', link: "/partner" },
+                    { text: 'API', link: "/product/api" },
+                    { text: 'Integrations', link: "/platform/integrations" },
                 ]
             },
         ],
@@ -129,13 +119,13 @@
                         link: "/blog",
                         icon: ""
                     },
-                    {
-                        cTitle: "What Is Shift-Left Security?",
-                        cImg: astUrl + "f_auto/drata/22002/rectangle_4535.webp",
-                        cDesc: "See how SaaS organization are implementing new security and compliance practices.",
-                        cLink: "",
-                        cClass: "sl-security-card"
-                    },
+                    // {
+                    //     cTitle: "What Is Shift-Left Security?",
+                    //     cImg: astUrl + "f_auto/drata/22002/rectangle_4535.webp",
+                    //     cDesc: "See how SaaS organization are implementing new security and compliance practices.",
+                    //     cLink: "",
+                    //     cClass: "sl-security-card"
+                    // },
                     {
                         text: "Customer Stories",
                         link: "/customers",
@@ -165,35 +155,39 @@
                         icon: ""
                     },
                     {
+                        text: "Compliance Glossary",
+                        info: "Add short descriptor for consistency",
+                        link: "/glossary",
+                        icon: ""
+                    },
+                    {
                         text: "GRC Central",
                         info: "One-stop-shop for all things GRC. Explore the educational hubs below.",
                         link: "/grc-central",
                         icon: ""
                     },
                     {
-                        text: "Risk Hub",
-                        info: "",
-                        link: "/grc-central/risk",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_152.svg"
-                    },
-                    {
-                        text: "SOC 2 Hub",
-                        info: "",
-                        link: "/grc-central/soc-2",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_141.svg"
-                    },
-                    {
-                        text: "ISO 27001 Hub",
-                        info: "",
-                        link: "/grc-central/iso-27001",
-                        icon: astUrl + "fl_sanitize//drata/22002/component_154.svg",
-                    },
-                    {
-                        text: "Compliance Glossary",
-                        info: "",
-                        link: "/glossary",
-                        icon: ""
-                    },
+                        groupMenu: [
+                            {
+                                text: "Risk Hub",
+                                info: "",
+                                link: "/grc-central/risk",
+                                // icon: astUrl + "fl_sanitize/drata/22002/component_152.svg"
+                            },
+                            {
+                                text: "SOC 2 Hub",
+                                info: "",
+                                link: "/grc-central/soc-2",
+                                // icon: astUrl + "fl_sanitize/drata/22002/component_141.svg"
+                            },
+                            {
+                                text: "ISO 27001 Hub",
+                                info: "",
+                                link: "/grc-central/iso-27001",
+                                // icon: astUrl + "fl_sanitize/drata/22002/component_154.svg",
+                            }
+                        ]
+                    }
                 ]
             },
             {
@@ -209,35 +203,43 @@
                     },
                     {
                         text: "Service & Tech Partner Directories",
-                        info: "Search for a Service & Tech Partner",
+                        info: "",
                         link: "/partner/find",
                         icon: ""
                     },
                     {
                         text: "Auditor Network",
-                        info: "Pre-Vetted Auditor Network. ",
+                        info: "",
                         link: "/auditors",
                         icon: ""
-                    }
-                ]
-            },
-            {
-                text: "Customer Support",
-                class: "customer-support-spz",
-                link: "",
-                subMenu: [
+                    },
+                    {
+                        text: "Customer Support",
+                        class: "customer-support-spz",
+                        link: "",
+                        class: "force-heading"
+                    },
                     { text: 'Product Updates ', link: "https://updates.drata.com/", icon: "" },
                     { text: 'API Docs', link: "https://developers.drata.com/docs/", icon: "" },
                     { text: 'Help & Documentation', link: "https://help.drata.com/", icon: "" },
-                    {
-                        cTitle: "Drata Named One of the Best Workplaces in Technology",
-                        cImg: astUrl + "f_auto/drata/22002/image_3.webp",
-                        cDesc: "Drata is featured in Fortune’s lists of Best Workplaces in Technology and Best Medium Workplaces.",
-                        cLink: "/drataverse",
-                        cClass: "ws-tech-card"
-                    },
+                    { text: 'Integrations', link: "/platform/integrations", icon: "" },
                 ]
             },
+            {
+                text: "Featured",
+                class: "featured-support-spz",
+                link: "",
+                subMenu: [
+                    {
+                        cTitle: "What Is Shift-Left Security and Why Should Businesses Incorporate It?",
+                        cTag: 'BLOG',
+                        cImg: astUrl + "f_auto/drata/22002/shift_security.jpg",
+                        cDesc: "",
+                        cLink: "/blog/what-is-shift-left-security",
+                        cClass: "sl-security-card"
+                    },
+                ]
+            }
         ],
 
         alliances: [
@@ -249,17 +251,17 @@
                     {
                         text: "Overview",
                         link: "/partner",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
                     },
                     {
                         text: "Find a Partner",
                         link: "/partner/find",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_153.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_153.svg"
                     },
                     {
                         text: "Become a Partner",
                         link: "/partner/become",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_150.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_150.svg"
                     }
                 ]
             },
@@ -271,12 +273,17 @@
                     {
                         text: "Overview",
                         link: "/auditors",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_137.svg"
                     },
                     {
                         text: "Join the Audit Alliance",
                         link: "/partner/application/audit-alliance",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_142.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_142.svg"
+                    },
+                    {
+                        text: "Auditor Code of Ethics",
+                        link: "/auditors/code-of-ethics",
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_142.svg"
                     },
                 ]
             },
@@ -289,51 +296,54 @@
                 link: "",
                 subMenu: [
                     {
+                        text: "Customer Stories",
+                        link: "/customers",
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_159.svg"
+                    },
+                    {
                         text: "Customer Success",
                         link: "/success",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_159.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_159.svg"
                     },
                 ]
             },
             {
-                text: "FEATURED Customer STORIES",
-                class: "customers-stories-spz",
-                link: "",
-                subMenu: [
-                    {
-                        text: "SOC 2",
-                        link: "/customers/lemonade",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_160.svg"
-                    },
-                    {
-                        text: "ISO 27001",
-                        link: "/customers/calendly",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_157.svg"
-                    },
-                    {
-                        text: "HIPAA",
-                        link: "/customers/pear-health",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_167.svg"
-                    },
-                    {
-                        text: "GDPR",
-                        link: "/customers/deeper-signals",
-                        icon: astUrl + "fl_sanitize/drata/22002/component_155.svg"
-                    },
-                ]
-            },
-            {
-                text: "",
+                text: "Featured",
                 class: "company-card-spz",
                 link: "",
                 subMenu: [
                     {
-                        cName: "Jonathan Jaffe",
-                        cDesg: "CISO, Lemonade",
-                        cImg: astUrl + "f_auto/drata/22002/image.webp",
-                        cDesc: `“We saved 80% of time using Drata’s continuous compliance automation. I’ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. Drata has been great for automating evidence collection. I find it really flexible, and I’m able to make my own control framework.”`,
+                        cName: "Lemonade",
+                        clogo: astUrl + 'fl_sanitize/drata/22002/lemonade-logo.svg',
+                        cDesg: "SOC 2",
+                        cImg: astUrl + "f_auto/drata/22002/01_-_desktop.webp",
+                        cImgTab: astUrl + "f_auto/drata/22002/01_-_tablet.webp",
+                        cImgMob: astUrl + "f_auto/drata/22002/01_-_mobile.jpg",
+                        cDesc: `How Lemonade Saved 80% of Time Using Drata`,
                         cLink: "/customers/lemonade",
                         cClass: "cs-jonathan-card"
+                    },
+                    {
+                        cName: "Calendly",
+                        clogo: astUrl + 'fl_sanitize/drata/22002/calendly-logo.svg',
+                        cDesg: "ISO 27001",
+                        cImg: astUrl + "f_auto/drata/22002/02_-_desktop.webp",
+                        cImgTab: astUrl + "f_auto/drata/22002/02_-_tablet.webp",
+                        cImgMob: astUrl + "f_auto/drata/22002/02_-_mobile.jpg",
+                        cDesc: `How Calendly Reduced Hours Spent on Audit Prep by 90%`,
+                        cLink: "/customers/calendly",
+                        cClass: "cs-calendly-card"
+                    },
+                    {
+                        cName: "Pear Health",
+                        clogo: astUrl + 'fl_sanitize/drata/22002/pear-health-logo.svg',
+                        cDesg: "HIPAA",
+                        cImg: astUrl + "f_auto/drata/22002/03_-_desktop.webp",
+                        cImgTab: astUrl + "f_auto/drata/22002/03_-_tablet.webp",
+                        cImgMob: astUrl + "f_auto/drata/22002/03_-_mobile.jpg",
+                        cDesc: `Pear Health Saves Nearly 9 Months Implementing HIPAA Compliance With Drata`,
+                        cLink: "/customers/pear-health",
+                        cClass: "cs-pear-card"
                     },
                 ]
             },
@@ -350,11 +360,11 @@
                         link: "/about",
                         icon: ""
                     },
-                    {
-                        text: "Life at Drata",
-                        link: "/about/life-at-drata",
-                        icon: ""
-                    },
+                    // {
+                    //     text: "Life at Drata",
+                    //     link: "/about/life-at-drata",
+                    //     icon: ""
+                    // },
                     {
                         text: "Careers",
                         link: "/about/careers",
@@ -378,16 +388,17 @@
                 ]
             },
             {
-                text: "",
+                text: "Featured",
                 class: "company-card-spz",
                 link: "",
                 subMenu: [
                     {
-                        cTitle: "Drata Named One of the Best Workplaces in Technology",
-                        cImg: astUrl + "f_auto/drata/22002/image_3.webp",
-                        cDesc: "Drata is featured in Fortune’s lists of Best Workplaces in Technology and Best Medium Workplaces.",
-                        cLink: "/blog/drata-receives-first-pair-workplace-accolades",
-                        cClass: "ws-tech-card"
+                        cTitle: "Drata Recognized in G2’s 2024 Best Software Awards",
+                        cTag: 'WEBINAR',
+                        cImg: astUrl + "f_auto/drata/22002/drata_recognized.jpg",
+                        cDesc: "",
+                        cLink: "/blog/drata-recognized-in-g2s-2024-best-software-awards",
+                        cClass: "sl-security-card"
                     },
                 ]
             },
@@ -584,15 +595,13 @@
 
                 if (!document.querySelector('.solutions-spz .spz-disabled-anchor-wrapper')) {
                     menuNav.insertAdjacentHTML('afterend', `
-                        <div class="spz-disabled-anchor-wrapper desk-only">
+                        <div class="spz-disabled-anchor-wrapper">
                             <div class="disabled-anchor-wrapper">
-                                <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
+                                <a href="/plans" class="spz-d-link">Plans ${arrowSvg}</a>
                             </div>
                         </div>`);
                 }
             });
-
-
         }
 
         if (!document.querySelector('.quick-link-spz')) {
@@ -611,26 +620,44 @@
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
-                                                    <div class="spz-menu-card ${subItem2.cClass}">
+                                        let grpMenu = '';
+                                        if (subItem2.groupMenu) {
+                                            subItem2.groupMenu.forEach((gmi) => {
+                                            grpMenu += `<div class="MuiBox-root css-spz-HeaderNavLinkNested-root grp-sub-item" data-testid="HeaderNavLinkNested">
+                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${gmi.link}">
+                                                            <div class="menu-texts">
+                                                                <div class="menu-title">${gmi.text}</div>
+                                                            </div>
+                                                        </a>
+                                                    </div>`;
+                                            });
+                                        }
+                                        
+                                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                                                    <a href="${subItem2.cLink}" class="spz-menu-card ${subItem2.cClass}">
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
+                                                        <span class="card-tag">${subItem2.cTag}</span>
                                                         <div class="card-title">${subItem2.cTitle}</div>
                                                         <div class="card-desc">${subItem2.cDesc}</div>
-                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""}
-                                                    </div>
-                                                </li>` : `
-                                                <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
-                                                    <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
-                                                        <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
-                                                            ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
-                                                            <div class="menu-texts">
-                                                                <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
-                                                                ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
-                                                             </div>
-                                                        </a>
-                                                    </div>
+                                                        <!-- ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""} -->
+                                                    </a>
+                                                </li>` : 
+                                                `<li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem ${subItem2.groupMenu ? 'grp-item-wrapper' : ''} ${subItem2.class != null ? subItem2.class : ''}">
+                                                    ${(subItem2.groupMenu && subItem2.groupMenu.length > 0) ? 
+                                                        grpMenu
+                                                     :  
+                                                        `<div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
+                                                            <a class="css-spz-Link-root-HeaderNavLinkNested-navItemLink-HeaderNavGroup-navItemGroup" href="${subItem2.link}">
+                                                                ${(subItem2.icon && subItem2.icon != null) ? `<div class="menu-icon"><img src="${subItem2.icon}" alt="${subItem2.text}" /></div>` : ""}
+                                                                <div class="menu-texts">
+                                                                    <div class="menu-title">${subItem2.text} ${(subItem2.newTag && subItem2.newTag != null) ? `<span class="new-tag">New</span>` : ""}</div>
+                                                                    ${(subItem2.info && subItem2.info != null) ? `<div class="menu-info">${subItem2.info}</div>` : ""}
+                                                                </div>
+                                                            </a>
+                                                        </div>`
+                                                    }
                                                 </li>`}`;
-                    }).join("")}
+                                    }).join("")}
                                 </ul>
                                 
                             </div>
@@ -638,16 +665,15 @@
                     </li>`);
                 });
 
-                if (!document.querySelector('.resources-spz .spz-disabled-anchor-wrapper')) {
-                    menuNav.insertAdjacentHTML('afterend', `
-                        <div class="spz-disabled-anchor-wrapper desk-only">
-                            <div class="disabled-anchor-wrapper">
-                                <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
-                            </div>
-                        </div>`);
-                }
+                // if (!document.querySelector('.resources-spz .spz-disabled-anchor-wrapper')) {
+                //     menuNav.insertAdjacentHTML('afterend', `
+                //         <div class="spz-disabled-anchor-wrapper desk-only">
+                //             <div class="disabled-anchor-wrapper">
+                //                 <a href="javascript:void(0);" class="spz-d-link">Pricing ${arrowSvg}</a>
+                //             </div>
+                //         </div>`);
+                // }
             });
-
         }
 
         if (!document.querySelector('.partners-spz')) {
@@ -685,14 +711,13 @@
 
                 if (!document.querySelector('.alliances-spz .spz-disabled-anchor-wrapper')) {
                     menuNav.insertAdjacentHTML('afterend', `
-                        <div class="spz-disabled-anchor-wrapper desk-only">
+                        <div class="spz-disabled-anchor-wrapper">
                             <div class="disabled-anchor-wrapper">
-                                <a href="https://drata.allbound.com/" class="spz-d-link">Log In To Alliance Gateway ${arrowSvg}</a>
+                                <a href="https://drata.allbound.com/" class="spz-d-link" target="_blank">Log In To Alliance Gateway ${arrowSvg}</a>
                             </div>
                         </div>`);
                 }
             });
-
         }
 
         if (!document.querySelector('.customers-sub-spz')) {
@@ -710,17 +735,24 @@
                                 <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                     <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                         ${subItem1.subMenu.map((subItem2, subIndex) => {
-                            return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
-                                                        <div class="spz-review-card ${subItem2.cClass}">
+                                                return `${(subItem2.cName && subItem2.cName != null) ? `<li class="css-spz-review-card">
+                                                        <a href="${subItem2.cLink}" class="spz-review-card ${subItem2.cClass}">
                                                             <div class="review-img">
-                                                                <img src="${subItem2.cImg}" alt="${subItem2.cName}">
+                                                                <picture>
+                                                                    <source media="(min-width:1200px)" srcset="${subItem2.cImg}">
+                                                                    <source media="(min-width:768px)" srcset="${subItem2.cImgTab}">
+                                                                    <source media="(min-width:0px)" srcset="${subItem2.cImgMob}">
+                                                                    <img src="${subItem2.cImg}" alt="${subItem2.cName}">
+                                                                </picture>
                                                             </div>
                                                             <div class="review-content">
-                                                                <div class="card-title"><p class="name">${subItem2.cName}</p><p class="desg">${subItem2.cDesg}</p></div>
+                                                                <div class="card-title">
+                                                                    <img src="${subItem2.clogo}" alt="${subItem2.cName}" />
+                                                                </div>
                                                                 <div class="card-desc">${subItem2.cDesc}</div>
-                                                                ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""}
+                                                                <span class="card-tag">${subItem2.cDesg}</span>
                                                             </div>
-                                                        </div>
+                                                        </a>
                                                     </li>` : `
                                                     <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
                                                         <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
@@ -759,13 +791,14 @@
                             <div class="MuiBox-root css-spz-HeaderNavGroup-navItemSubMenuWrapper">
                                 <ul class="MuiList-root MuiList-padding css-spz-MuiList-root-HeaderNavGroup-navItemSubMenu">
                                     ${subItem1.subMenu.map((subItem2, subIndex) => {
-                        return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
-                                                    <div class="spz-menu-card ${subItem2.cClass}">
+                                                return `${(subItem2.cTitle && subItem2.cTitle != null) ? `<li class="css-spz-menu-card">
+                                                    <a href="${subItem2.cLink}" class="spz-menu-card ${subItem2.cClass}">
                                                         <img src="${subItem2.cImg}" alt="${subItem2.cTitle}">
+                                                        <span class="card-tag">${subItem2.cTag}</span>
                                                         <div class="card-title">${subItem2.cTitle}</div>
                                                         <div class="card-desc">${subItem2.cDesc}</div>
-                                                        ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""}
-                                                    </div>
+                                                        <!-- ${(subItem2.cLink && subItem2.cLink != null) ? `<a href="${subItem2.cLink}" class="card-link">Learn More ${arrowSvg}</a>` : ""} -->
+                                                    </a>
                                                 </li>` : `
                                                 <li class="css-spz-MuiListItem-root-HeaderNavLink-navItemSubMenuItem">
                                                     <div class="MuiBox-root css-spz-HeaderNavLinkNested-root" data-testid="HeaderNavLinkNested">
@@ -788,29 +821,28 @@
 
                 mainMenuUpdates();
             });
-
         }
 
         //For Tablet and Mobile
-        if (!document.querySelector('header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"] > .spz-disabled-anchor-wrapper')) {
-            document.querySelector('.spz-22002 header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"]').insertAdjacentHTML('beforeend', `
-                <li class="spz-disabled-anchor-wrapper pricing-disabled">
-                    <div class="disabled-anchor-wrapper">
-                        <a href="javascript:void(0);" class="spz-d-link">
-                            Pricing 
-                            ${arrowSvg}
-                        </a>
-                    </div>
-                </li>
-                <li class="spz-disabled-anchor-wrapper alliance-disabled">
-                    <div class="disabled-anchor-wrapper">
-                        <a href="javascript:void(0);" class="spz-d-link">
-                            Log In To Alliance Gateway 
-                            ${arrowSvg}
-                        </a>
-                    </div>
-                </li>`);
-        }
+        // if (!document.querySelector('header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"] > .spz-disabled-anchor-wrapper')) {
+        //     document.querySelector('.spz-22002 header > .MuiContainer-root [class*="Header-contentContainer"] > nav > ul[class*="Header-headerMenuNavItems"]').insertAdjacentHTML('beforeend', `
+        //         <li class="spz-disabled-anchor-wrapper pricing-disabled">
+        //             <div class="disabled-anchor-wrapper">
+        //                 <a href="javascript:void(0);" class="spz-d-link">
+        //                     Pricing 
+        //                     ${arrowSvg}
+        //                 </a>
+        //             </div>
+        //         </li>
+        //         <li class="spz-disabled-anchor-wrapper alliance-disabled">
+        //             <div class="disabled-anchor-wrapper">
+        //                 <a href="https://drata.allbound.com/" class="spz-d-link" target="_blank">
+        //                     Log In To Alliance Gateway 
+        //                     ${arrowSvg}
+        //                 </a>
+        //             </div>
+        //         </li>`);
+        // }
     }
 
     function mainMenuUpdates() {
@@ -825,7 +857,7 @@
     }
 
     function navStyleBase() {
-        
+
         const menuLbl = setInterval(() => {
             // Get all 'HeaderNavLink-navItemLink' text and apply it as a class to the closest li
             document.querySelectorAll('header [class*="HeaderNavLink-navItemLink"]').forEach(navItem => {
@@ -837,7 +869,7 @@
                 }
             });
         }, 50);
-        
+
         setInterval(() => {
             if (document.querySelector(`${navSelector}[open]`)) {
                 // Stop page from scrolling when navSelector has 'open' attribute
@@ -851,7 +883,7 @@
             }
 
             if (window.innerWidth <= 1200) {
-                if (window.getComputedStyle(document.querySelector('[data-testid="MenuIcon"]'), null).display == 'none') {
+                if (document.querySelector('[data-testid="MenuIcon"]') && window.getComputedStyle(document.querySelector('[data-testid="MenuIcon"]'), null).display == 'none') {
                     document.body.classList.add('nav-tab-open-spz');
                 } else if (window.getComputedStyle(document.querySelector('[data-testid="CloseIcon"]'), null).display == 'none') {
                     document.body.classList.remove('nav-tab-open-spz');
