@@ -6,6 +6,26 @@ function ready(fn) {
     }
 }
 
+const loadJS = (url, implementationCode, location) => {
+    var scriptTag = document.createElement('script');
+    scriptTag.src = url;
+
+    scriptTag.onload = implementationCode;
+    scriptTag.onreadystatechange = implementationCode;
+
+    location.appendChild(scriptTag);
+};
+
+const gb_load_css = (path) => {
+    let css = document.createElement('link');
+    css.rel = 'stylesheet';
+    css.media = 'all';
+    css.href = path;
+
+    document.getElementsByTagName('head')[0].appendChild(css);
+}
+gb_load_css("https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css");
+
 //create a json for slider with two attributes
 let sliderData = {
     "slider": [
@@ -73,7 +93,7 @@ ready(function () {
         document.querySelector('body').classList.add('spz-1004')
         //targeted page
         if (window.location.href.indexOf('https://www.komodohealth.com/contact-us') > -1) {
-            document.querySelector('body .body-container .row-depth-1.row-number-5.dnd_area-row-2-padding').insertAdjacentHTML('afterbegin', `
+            document.querySelector('body .body-container .row-depth-1.row-number-8.dnd_area-row-2-padding').insertAdjacentHTML('afterbegin', `
       <div class="new-slider-wrapper">
       <div class="stats-slider">
           <div class="wrapper">
@@ -107,9 +127,7 @@ ready(function () {
   </div>
     `);
 
-
-            let i = 0;
-            const CROInterval = setInterval(() => {
+            loadJS('https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js', function () {
                 if (typeof (Splide)) {
                     var splide = new Splide('.spz-1004 .new-slider-wrapper .stats-slider .slider-wrapper .splide1', {
                         type: 'loop',
@@ -137,6 +155,11 @@ ready(function () {
                         splide.go('>');
                     })
                 }
+            }, document.body)
+
+
+            let i = 0;
+            const CROInterval = setInterval(() => {
 
                 if (document.querySelector('.spz-1004 #new-form-wrapper input[name="cro1"]')) {
                     clearInterval(CROInterval)
@@ -149,16 +172,16 @@ ready(function () {
             }, 500);
         }
         //non targeted page
-        else {
-            let elementArray = [];
-            for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
-                elementArray[i] = document.querySelectorAll('a[href="#popup_contact_us"]')[i];
-            }
-            for (let i = 0; i < elementArray.length; i++) {
-                elementArray[i].setAttribute("href", "https://www.komodohealth.com/contact-us?hs_preview=CdkDwRWl-165496376225");
-                elementArray[i].removeAttribute("rel");
-            }
-        }
+        // else {
+        //     let elementArray = [];
+        //     for (let i = 0; i < document.querySelectorAll('a[href="#popup_contact_us"]').length; i++) {
+        //         elementArray[i] = document.querySelectorAll('a[href="#popup_contact_us"]')[i];
+        //     }
+        //     for (let i = 0; i < elementArray.length; i++) {
+        //         elementArray[i].setAttribute("href", "https://www.komodohealth.com/contact-us?hs_preview=CdkDwRWl-165496376225");
+        //         elementArray[i].removeAttribute("rel");
+        //     }
+        // }
     }
 })
 
