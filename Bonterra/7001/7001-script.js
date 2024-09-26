@@ -79,6 +79,11 @@ function addUniqueClass() {
             element.querySelector('.mktoField').setAttribute('placeholder', '');
         }
     });
+
+    document.querySelector('.mktoFormRow.Phone-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.Industry-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.List_Size__c-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.Product_Interest__c-row').classList.add('spz-hidden');
 }
 
 // On input focus add class on closest parent field class
@@ -95,18 +100,22 @@ function focusFields() {
         // add event listeners to the input element
         el.addEventListener('keypress', () => {
             checkError(el);
+            checkValidFields();
         });
 
         el.addEventListener('change', () => {
             checkError(el);
+            checkValidFields();
         });
 
         el.addEventListener('keydown', () => {
             checkError(el);
+            checkValidFields();
         });
 
         el.addEventListener('keyup', () => {
             checkError(el);
+            checkValidFields();
         });
     });
 }
@@ -129,4 +138,15 @@ function checkError(elem) {
     setTimeout(() => {
         clearInterval(timeBuffer);
     }, 1000);
+}
+
+function checkValidFields() {
+    let validFields = document.querySelectorAll('.spz-7001 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
+    if (validFields >= 4) {
+        document.querySelectorAll('.spz-hidden').forEach(function (elem) {
+            elem.classList.remove('spz-hidden');
+        })
+
+        document.querySelector('.spz-7001 #HERO form.mktoForm ').classList.add('spz-full-form');
+    }
 }
