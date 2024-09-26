@@ -1,6 +1,11 @@
 body.spz-7001 #HEAD > .container {
   max-width: 1270px;
 }
+@media (max-width: 1199.98px) {
+  body.spz-7001 #HEAD > .container {
+    max-width: 750px;
+  }
+}
 body.spz-7001 #HEAD > .container .block {
   height: 60px;
 }
@@ -18,6 +23,12 @@ body.spz-7001 #HERO {
 body.spz-7001 #HERO .container {
   max-width: 1270px;
   padding-top: 62px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-7001 #HERO .container {
+    max-width: 734px;
+    padding-top: 48px;
+  }
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-7001 #HERO .container .block-wrapper {
@@ -46,6 +57,11 @@ body.spz-7001 #HERO .container .block-wrapper .block-2 {
 body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div {
   padding: 0 !important;
   margin-bottom: 62px !important;
+}
+@media screen and (max-width: 1199.98px) {
+  body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div {
+    margin-bottom: 19px !important;
+  }
 }
 body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div > p {
   margin: 0 0 12px;
@@ -78,6 +94,11 @@ body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats 
      -moz-column-gap: 43px;
           column-gap: 43px;
 }
+@media screen and (max-width: 1199.98px) {
+  body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats {
+    display: none !important;
+  }
+}
 body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats .stats__item {
   padding: 17px 6px 0px 14px;
   width: 153px;
@@ -101,6 +122,7 @@ body.spz-7001 #HERO .container .block-wrapper .block-3 > .mktoForm {
   body.spz-7001 #HERO .container .block-wrapper .block-3 > .mktoForm {
     margin-left: auto;
     margin-right: auto;
+    max-width: 704px;
   }
 }
 body.spz-7001 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-title {
@@ -114,6 +136,24 @@ body.spz-7001 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-tit
   text-transform: uppercase;
   padding: 0;
   margin-bottom: 38px;
+}
+body.spz-7001 #HERO .container .block-wrapper .block-3 > .stats {
+  margin-top: 34px;
+  -webkit-column-gap: 43px;
+     -moz-column-gap: 43px;
+          column-gap: 43px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+@media screen and (min-width: 1199.98px) {
+  body.spz-7001 #HERO .container .block-wrapper .block-3 > .stats {
+    display: none !important;
+  }
 }
 body.spz-7001 #HERO form.mktoForm {
   display: -webkit-box;

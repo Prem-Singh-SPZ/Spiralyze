@@ -17,6 +17,11 @@ let bodyLoaded = setInterval(function () {
             document.querySelector('body.spz-7001 #HEAD > .container .block .my-3 a img').setAttribute('src', '//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/bonterra/7001/Bonterra-logo.svg');
 
             document.querySelector('body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats .stats__item:last-child .stats__item-footer img').setAttribute('src', 'https://488-ILM-190.mktoweb.com/rs/488-ILM-190/images/handshake-icon-periwinkle.webp');
+
+            //clone existing section to new place
+            let cloneSection = document.querySelector('body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats').cloneNode(true);
+            document.querySelector('body.spz-7001 #HERO .container .block-wrapper .block-3 > .mktoForm').insertAdjacentElement('afterend', cloneSection);
+
         }
     }
 });
