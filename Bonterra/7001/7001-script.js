@@ -5,8 +5,9 @@ let bodyLoaded = setInterval(function () {
         if (!body.classList.contains('spz-7001')) {
             body.classList.add('spz-7001');
 
-            waitForElm('.spz-7001 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').then(function () {
+            waitForElm('#HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').then(function () {
                 formModify();
+                setHiddenFields();
             });
 
             //add url pathname to body class
@@ -156,6 +157,7 @@ function checkValidFields() {
     // let validFields = document.querySelectorAll('.spz-7001 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
 
     if ((document.querySelector('.spz-7001 #HERO form.mktoForm #FirstName').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #FirstName').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #LastName').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #LastName').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #Email').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #Email').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #Company').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #Company').value != '')) {
+        
         document.querySelectorAll('.spz-hidden').forEach(function (elem) {
             elem.classList.remove('spz-hidden');
         })
@@ -163,6 +165,26 @@ function checkValidFields() {
         document.querySelector('.spz-7001 #HERO form.mktoForm ').classList.add('spz-full-form');
     }
 }
+
+function setHiddenFields() {
+    waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
+      const field_int = setInterval(function () {
+        if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+          if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "SPZ_#7001_variant") {
+            clearInterval(field_int);
+          }
+          if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
+            document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', 'SPZ_#7001_variant');
+          }
+          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', 'SPZ_#7001_variant');
+        }
+      }, 100);
+
+      setTimeout(() => {
+        clearInterval(field_int);
+      }, 2000);
+    });
+  }
 
 // Generic Code
 function waitForElm(selector) {
