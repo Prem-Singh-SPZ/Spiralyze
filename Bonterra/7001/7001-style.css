@@ -23,16 +23,19 @@ body.spz-7001 #HERO {
 body.spz-7001 #HERO .container {
   max-width: 1270px;
   padding-top: 62px;
+  padding-bottom: 96px !important;
 }
 @media (max-width: 1199.98px) {
   body.spz-7001 #HERO .container {
     max-width: 734px;
     padding-top: 48px;
+    padding-bottom: 68px !important;
   }
 }
 @media (max-width: 767.98px) {
   body.spz-7001 #HERO .container {
     padding-top: 28px;
+    padding-bottom: 40px !important;
   }
 }
 @media screen and (max-width: 1199.98px) {
@@ -61,7 +64,7 @@ body.spz-7001 #HERO .container .block-wrapper .block-2 {
 }
 body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div {
   padding: 0 !important;
-  margin-bottom: 62px !important;
+  margin-bottom: 0 !important;
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div {
@@ -121,6 +124,7 @@ body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats 
   -webkit-column-gap: 43px;
      -moz-column-gap: 43px;
           column-gap: 43px;
+  margin-bottom: 0;
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats {
@@ -197,7 +201,7 @@ body.spz-7001 #HERO .container .block-wrapper .block-3 > .stats {
   -webkit-column-gap: 58px;
      -moz-column-gap: 58px;
           column-gap: 58px;
-  margin-bottom: 68px;
+  margin-bottom: 0;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
@@ -294,6 +298,9 @@ body.spz-7001 #HERO form.mktoForm {
   gap: 0;
   background: transparent !important;
 }
+body.spz-7001 #HERO form.mktoForm .spz-hidden {
+  display: none !important;
+}
 body.spz-7001 #HERO form.mktoForm .mktoFormRow {
   padding: 0 10px !important;
 }
@@ -356,10 +363,10 @@ body.spz-7001 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mkto
           box-shadow: none;
   color: #381360 !important;
   font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
+  font-size: 16px !important;
   font-style: normal;
-  font-weight: 400;
-  line-height: 1.4;
+  font-weight: 400 !important;
+  line-height: 1.4 !important;
   -webkit-appearance: none;
      -moz-appearance: none;
           appearance: none;
@@ -523,20 +530,25 @@ body.spz-7001 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
 body.spz-7001 #SEC2 {
   margin-top: 40px;
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-7001 #SEC2 {
+    margin-top: 0;
+  }
+}
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
+  -webkit-text-fill-color: #381360 !important;
 }
 input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
+  -webkit-text-fill-color: #381360 !important;
 }
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
+  -webkit-text-fill-color: #381360 !important;
 }
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #000 !important;
+  -webkit-text-fill-color: #381360 !important;
 }

@@ -5,7 +5,9 @@ let bodyLoaded = setInterval(function () {
         if (!body.classList.contains('spz-7001')) {
             body.classList.add('spz-7001');
 
-            formModify();
+            waitForElm('.spz-7001 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').then(function () {
+                formModify();
+            });
 
             //add url pathname to body class
             let url = window.location.pathname;
@@ -29,6 +31,8 @@ let bodyLoaded = setInterval(function () {
 function formModify() {
     if (document.querySelectorAll('.spz-7001 #HERO .mktoForm .lpeCElement.Bonterra__Demo_Request__FE h2.spz-form-title').length == 0)
         document.querySelector('#HERO .mktoForm .lpeCElement.Bonterra__Demo_Request__FE').insertAdjacentHTML('afterbegin', `<h2 class="spz-form-title">Get a Demo</h2>`);
+
+
     document.querySelector('#HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').textContent = "Submit";
 
     addUniqueClass();
@@ -110,22 +114,18 @@ function focusFields() {
         // add event listeners to the input element
         el.addEventListener('keypress', () => {
             checkError(el);
-            checkValidFields();
         });
 
         el.addEventListener('change', () => {
             checkError(el);
-            checkValidFields();
         });
 
         el.addEventListener('keydown', () => {
             checkError(el);
-            checkValidFields();
         });
 
         el.addEventListener('keyup', () => {
             checkError(el);
-            checkValidFields();
         });
     });
 }
@@ -148,15 +148,34 @@ function checkError(elem) {
     setTimeout(() => {
         clearInterval(timeBuffer);
     }, 1000);
+
+    checkValidFields();
 }
 
 function checkValidFields() {
-    let validFields = document.querySelectorAll('.spz-7001 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
-    if (validFields >= 4) {
+    // let validFields = document.querySelectorAll('.spz-7001 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
+
+    if ((document.querySelector('.spz-7001 #HERO form.mktoForm #FirstName').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #FirstName').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #LastName').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #LastName').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #Email').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #Email').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #Company').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #Company').value != '')) {
         document.querySelectorAll('.spz-hidden').forEach(function (elem) {
             elem.classList.remove('spz-hidden');
         })
 
         document.querySelector('.spz-7001 #HERO form.mktoForm ').classList.add('spz-full-form');
     }
+}
+
+// Generic Code
+function waitForElm(selector) {
+    return new Promise(function (resolve) {
+        if (document.querySelector(selector)) {
+            return resolve(document.querySelector(selector));
+        }
+        const observer = new MutationObserver(function (mutations) {
+            if (document.querySelector(selector)) {
+                resolve(document.querySelector(selector));
+                observer.disconnect();
+            }
+        });
+        observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
+    });
 }

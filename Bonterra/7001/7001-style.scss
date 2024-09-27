@@ -35,14 +35,17 @@ body.spz-7001 {
     .container {
       max-width: 1270px;
       padding-top: 62px;
+      padding-bottom: 96px !important;
 
       @media (max-width: 1199.98px) {
         max-width: 734px;
         padding-top: 48px;
+        padding-bottom: 68px !important;
       }
 
       @media (max-width: 767.98px) {
         padding-top: 28px;
+        padding-bottom: 40px !important;
       }
 
       .block-wrapper {
@@ -71,7 +74,7 @@ body.spz-7001 {
           > .mktoText {
             > div {
               padding: 0 !important;
-              margin-bottom: 62px !important;
+              margin-bottom: 0 !important;
 
               @media screen and (max-width: 1199.98px) {
                 margin-bottom: 19px !important;
@@ -128,7 +131,7 @@ body.spz-7001 {
               .stats {
                 margin-top: 34px;
                 column-gap: 43px;
-
+                margin-bottom: 0;
                 @media screen and (max-width: 1199.98px) {
                   display: none !important;
                 }
@@ -219,7 +222,7 @@ body.spz-7001 {
             margin-left: -16px;
             margin-top: 38px;
             column-gap: 58px;
-            margin-bottom: 68px;
+            margin-bottom: 0;
             flex-direction: row;
             justify-content: center;
 
@@ -301,6 +304,10 @@ body.spz-7001 {
       gap: 0;
       background: transparent !important;
 
+      .spz-hidden {
+        display: none !important;
+      }
+
       .mktoFormRow {
         padding: 0 10px !important;
 
@@ -354,10 +361,10 @@ body.spz-7001 {
               box-shadow: none;
               color: #381360 !important;
               font-family: $Noto;
-              font-size: 16px;
+              font-size: 16px !important;
               font-style: normal;
-              font-weight: 400;
-              line-height: 1.4;
+              font-weight: 400 !important;
+              line-height: 1.4 !important;
               appearance: none;
               text-overflow: ellipsis;
               overflow: hidden;
@@ -536,23 +543,27 @@ body.spz-7001 {
 
   #SEC2 {
     margin-top: 40px;
+
+    @media screen and (max-width: 767.98px) {
+      margin-top: 0;
+    }
   }
 }
 input {
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 56px white inset !important;
-    -webkit-text-fill-color: #000 !important;
+    -webkit-text-fill-color: #381360 !important;
     &:hover {
       -webkit-box-shadow: 0 0 0 56px white inset !important;
-      -webkit-text-fill-color: #000 !important;
+      -webkit-text-fill-color: #381360 !important;
     }
     &:focus {
       -webkit-box-shadow: 0 0 0 56px white inset !important;
-      -webkit-text-fill-color: #000 !important;
+      -webkit-text-fill-color: #381360 !important;
     }
     &:active {
       -webkit-box-shadow: 0 0 0 56px white inset !important;
-      -webkit-text-fill-color: #000 !important;
+      -webkit-text-fill-color: #381360 !important;
     }
   }
 }
