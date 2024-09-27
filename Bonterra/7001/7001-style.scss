@@ -512,7 +512,8 @@ body.spz-7001 {
             max-width: 250px;
             height: 56px;
             background: #99a7ff !important;
-            border: 1px solid #99a7ff !important;
+            border: none !important;
+            outline: none !important;
             margin: 12px auto 0 !important;
             cursor: pointer;
             transition: all 0.3s !important;
@@ -530,11 +531,12 @@ body.spz-7001 {
             }
 
             &:hover {
-              outline: 1px solid #447f19;
+              background: #381360 !important;
+              color: #ffffff !important;
             }
-            &:focus {
-              outline: 1px solid #447f19;
-            }
+            // &:focus {
+            //   outline: 1px solid #447f19;
+            // }
           }
         }
       }
