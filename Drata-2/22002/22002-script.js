@@ -50,6 +50,7 @@
                         info: "Automate security reviews with Drata AI.",
                         link: "/product/security-questionnaire-automation",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
+                        newTag: true
                     },
                     {
                         text: "Vendor Risk Management",
@@ -68,7 +69,6 @@
                         info: "Maintain compliance across the SDLC.",
                         link: "/product/compliance-as-code",
                         // icon: astUrl + "fl_sanitize/drata/22002/component_129.svg",
-                        newTag: true
                     },
                     {
                         text: "User Access Reviews",
