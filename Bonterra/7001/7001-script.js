@@ -21,6 +21,11 @@ let bodyLoaded = setInterval(function () {
 
             document.querySelector('body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats .stats__item:last-child .stats__item-footer img').setAttribute('src', 'https://488-ILM-190.mktoweb.com/rs/488-ILM-190/images/handshake-icon-periwinkle.webp');
 
+            //preload images
+            const imagesToPreload = [
+                '//res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg'
+            ];
+
             //clone existing section to new place
             let cloneSection = document.querySelector('body.spz-7001 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats').cloneNode(true);
             document.querySelector('body.spz-7001 #HERO .container .block-wrapper .block-3 > .mktoForm').insertAdjacentElement('afterend', cloneSection);
