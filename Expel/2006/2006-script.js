@@ -205,6 +205,9 @@ function restructureForm() {
     // Insert new 'div.form-fields-row' inside formSelector
     document.querySelector(formSelector).insertAdjacentHTML('afterbegin', '<div class="form-fields-row"></div>');
 
+    document.querySelector('.spz-2006 .mktoForm .mktoHtmlText.mktoHasWidth').innerHTML = `Information submitted on this form may be associated with other information we have collected and used pursuant to the <a href="https://expel.com/notices/" target="_blank">Expel Online Privacy Policy</a>.`;
+
+
     // Move all '.mktoFormCol' to '.form-fields-row'
     document.querySelectorAll(`${formSelector} .mktoFormCol:not(.mktoButtonRow)`).forEach(function (col) {
         if (col.querySelector('.mktoField:not(#honeypot)')) {

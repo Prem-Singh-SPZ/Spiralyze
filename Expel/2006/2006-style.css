@@ -1,4 +1,5 @@
-.spz-2006 header.site-header, .spz-2006 .skip-link.screen-reader-text {
+.spz-2006 header.site-header,
+.spz-2006 .skip-link.screen-reader-text {
   display: none !important;
 }
 .spz-2006 #startchange {
@@ -9,15 +10,23 @@
 }
 .spz-2006 #page.site {
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/expel/2006/bg.webp");
-  background-size: cover;
+  background-size: 100% 100%;
   background-position: top right;
+  margin-top: -1px;
+}
+@media (max-width: 1023.98px) {
+  .spz-2006 #page.site {
+    background-size: auto 100%;
+    background-position: top left;
+  }
 }
 .spz-2006 #hero-section {
   min-height: calc(100vh - 70px);
-  padding: 64px 0 80px !important;
+  padding: 32px 0 72px !important;
   background: transparent;
 }
 .spz-2006 #hero-section .row.hero {
+  min-height: 657px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -37,7 +46,7 @@
   display: none !important;
 }
 .spz-2006 #hero-section .hero-client-logos {
-  margin-top: 80px;
+  margin-top: 22px;
 }
 .spz-2006 #hero-section .hero-client-logos .container {
   max-width: 1206px !important;
@@ -81,7 +90,12 @@
   line-height: 24px;
   letter-spacing: 1px;
   text-transform: uppercase;
-  margin: 33px 0 10px;
+  margin: 49px 0 10px;
+}
+@media screen and (max-width: 1023.98px) {
+  .spz-2006 #hero-section .hero .spz-content .section-label {
+    margin-bottom: 11.5px;
+  }
 }
 .spz-2006 #hero-section .hero .spz-content .section-heading {
   color: #fff;
@@ -90,6 +104,14 @@
   font-weight: 800;
   line-height: 64px;
   margin-bottom: 30px;
+}
+@media screen and (max-width: 1023.98px) {
+  .spz-2006 #hero-section .hero .spz-content .section-heading {
+    font-size: 48px;
+    line-height: 56px;
+    max-width: 70%;
+    margin-bottom: 5px;
+  }
 }
 .spz-2006 #hero-section .hero .spz-content .info-text {
   color: #fff;
@@ -109,13 +131,15 @@
 }
 .spz-2006 #hero-section .hero .spz-content .section-highlight-point::after {
   position: absolute;
-  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame.svg);
+  background-image: url(//res.cloudinary.com/spiralyze/image/upload/v1726735842/expel/2006/arrow.svg);
   background-size: contain;
   background-repeat: no-repeat;
-  width: 168px;
-  height: 150px;
-  bottom: -125px;
-  right: 59px;
+  width: 138px;
+  height: 141px;
+  bottom: -146px;
+  right: 76px;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }
 .spz-2006 #hero-section .hero .spz-content .section-highlight-point .list-item {
   color: #fff;
@@ -124,7 +148,7 @@
   font-weight: 400;
   line-height: 24px;
   padding-left: 32px;
-  margin: 16px 0 0;
+  margin: 24px 0 0;
   position: relative;
 }
 .spz-2006 #hero-section .hero .spz-content .section-highlight-point .list-item .highlight-text {
@@ -150,8 +174,9 @@
   width: 100%;
   background: #ffffff;
   border-radius: 16px;
-  padding: 40px 36px;
+  padding: 40px 30px;
   position: relative;
+  margin-top: 87px;
 }
 .spz-2006 #hero-section .hero .ex-form::after {
   position: absolute;
@@ -159,7 +184,7 @@
   background-size: contain;
   background-repeat: no-repeat;
   width: 168px;
-  height: 150px;
+  height: 144px;
   bottom: -125px;
   right: 59px;
 }
@@ -170,7 +195,7 @@
   font-style: normal;
   font-weight: 800;
   line-height: 40px;
-  margin-bottom: 18px;
+  margin-bottom: 2px;
 }
 .spz-2006 #hero-section .hero .ex-form .form-fields-row {
   display: -webkit-box;
@@ -426,7 +451,7 @@
   width: 100% !important;
   padding: 0 12px 0 0;
   position: relative;
-  margin-top: 8px;
+  margin-top: 6px;
   min-width: initial !important;
 }
 .spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoFormCol .mktoCheckboxList input {
@@ -489,7 +514,7 @@
   position: absolute;
   content: "";
   top: 20px;
-  right: 20px;
+  right: 16px;
   width: 12px;
   height: 12px;
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1717757061/expel/2003/dropdown_icon.svg");
@@ -499,7 +524,7 @@
 }
 .spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoButtonRow {
   width: 100%;
-  margin: 8px 6px 18px;
+  margin: 8px 6px 12px;
 }
 @media screen and (max-width: 767.98px) {
   .spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoButtonRow {
@@ -616,14 +641,14 @@
           align-items: center;
   gap: 0;
   border-top: 1px solid rgba(255, 255, 255, 0.18);
-  padding: 22px 18px 24px;
+  padding: 30px 2px 33px 0;
 }
 .spz-2006 footer#expel-footer .links-container .col {
   width: auto;
   max-width: unset;
 }
 .spz-2006 footer#expel-footer .links-container .rights p {
-  color: #EBEBEB;
+  color: #ebebeb;
   font-size: 14px;
   font-style: normal;
   font-weight: 400;
@@ -637,6 +662,11 @@
 .spz-2006 footer#expel-footer .links-container .links p {
   margin: 0 -16px;
 }
+@media screen and (max-width: 1023.98px) {
+  .spz-2006 footer#expel-footer .links-container .links p {
+    margin: 0 -10px;
+  }
+}
 .spz-2006 footer#expel-footer .links-container .links a {
   color: #fff;
   font-size: 14px;
@@ -647,7 +677,12 @@
   text-decoration: none;
 }
 .spz-2006 footer#expel-footer .links-container .links a:hover {
-  color: rgba(23, 98, 230, 0.95);
+  color: rgb(51, 255, 102);
+}
+@media screen and (max-width: 1023.98px) {
+  .spz-2006 footer#expel-footer .links-container .links a {
+    margin: 0 10px;
+  }
 }
 .spz-2006 .container-custom {
   max-width: 1206px !important;
@@ -655,11 +690,11 @@
 }
 .spz-2006:not(.form-expand) #hero-section .hero .ex-form::after {
   content: "";
-  -webkit-transform: rotate(-35deg);
-          transform: rotate(-35deg);
+  -webkit-transform: rotate(-22deg);
+          transform: rotate(-22deg);
   right: auto;
-  left: -8px;
-  bottom: -188px;
+  left: 52px;
+  bottom: -166px;
 }
 
 .spz-2006.form-expand #hero-section .hero .spz-content .section-highlight-point::after {
@@ -675,7 +710,7 @@
   .spz-2006 #hero-section {
     min-height: calc(100vh - 104px);
     background-size: 1920px;
-    padding: 64px 20px 80px !important;
+    padding: 32px 20px 34px !important;
   }
   .spz-2006 #hero-section .row.hero > .col {
     width: 100%;
@@ -688,7 +723,7 @@
     content: none !important;
   }
   .spz-2006 #hero-section .hero .ex-form {
-    margin-top: 48px;
+    margin-top: 28px;
   }
   .spz-2006 #hero-section .hero .ex-form::after {
     content: none !important;
@@ -700,7 +735,10 @@
     display: none;
   }
   .spz-2006 footer#expel-footer {
-    padding: 23px 0 24px;
+    padding: 23px 0 0px;
+  }
+  .spz-2006 footer#expel-footer .container-custom {
+    padding: 0 38px;
   }
   .spz-2006 footer#expel-footer .links-container {
     -webkit-box-orient: vertical;
@@ -709,7 +747,7 @@
             flex-flow: column-reverse;
   }
   .spz-2006 footer#expel-footer .links-container .col.rights {
-    margin-bottom: 10px;
+    margin-bottom: 22px;
   }
   .spz-2006.form-expand #hero-section {
     background-size: 2160px;
