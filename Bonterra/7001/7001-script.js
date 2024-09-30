@@ -133,6 +133,14 @@ function focusFields() {
         el.addEventListener('keyup', () => {
             checkError(el);
         });
+
+        //on mouse over add class on closest parent field class and remove on mouse out
+        el.addEventListener('mouseover', function () {
+            el.closest('.mktoFieldWrap').classList.add('hover');
+        });
+        el.addEventListener('mouseout', function () {
+            el.closest('.mktoFieldWrap').classList.remove('hover');
+        });
     });
 }
 

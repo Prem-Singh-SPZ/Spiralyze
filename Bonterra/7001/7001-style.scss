@@ -334,8 +334,8 @@ body.spz-7001 {
             }
 
             .mktoLabel {
-              // background: #f5f5ff;
-              background: transparent;
+              background: #f5f5ff;
+              // background: transparent;
               color: #646464 !important;
               font-family: $Noto !important;
               font-size: 16px !important;
@@ -390,29 +390,24 @@ body.spz-7001 {
               background-position: calc(100% - 13px) 15px;
             }
 
-            &:hover {
-              .mktoLabel {
-                // background: #ffffff;
-                background: transparent;
-              }
-            }
+        
 
             &.error {
               .mktoLabel {
-                // background: #f5f5ff;
-                background: transparent;
+                background: #f5f5ff;
+                // background: transparent;
               }
               .mktoField {
                 border: 1px solid #f2342f !important;
                 background-color: #ffffff;
                 outline: none;
               }
+            }
 
-              &:hover {
-                .mktoLabel {
-                  // background: #ffffff;
-                  background: transparent;
-                }
+
+            &.hover {
+              .mktoLabel {
+                background: #ffffff;
               }
             }
 
