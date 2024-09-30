@@ -49,7 +49,7 @@
                         text: "Security Questionnaire Automation",
                         info: "Automate security reviews with Drata AI.",
                         link: "/product/security-questionnaire-automation",
-                        // icon: astUrl + "fl_sanitize/drata/22002/component_118.svg"
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_118.svg",
                         newTag: true
                     },
                     {
@@ -68,7 +68,7 @@
                         text: "Compliance as Code",
                         info: "Maintain compliance across the SDLC.",
                         link: "/product/compliance-as-code",
-                        // icon: astUrl + "fl_sanitize/drata/22002/component_129.svg",
+                        // icon: astUrl + "fl_sanitize/drata/22002/component_129.svg"
                     },
                     {
                         text: "User Access Reviews",
