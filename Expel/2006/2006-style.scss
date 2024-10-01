@@ -283,7 +283,7 @@ $color_4: #031263;
 
             &[data-wrapper-for=""] {
               order: 8;
-              margin-top: 6px;
+              margin-top: 4px;
             }
 
             &.full-width {
@@ -544,7 +544,7 @@ $color_4: #031263;
             margin: 8px 6px 12px;
 
             @media screen and (max-width: 767.98px) {
-              margin: 6px 6px 18px;
+              margin: 8px 6px 12px;
             }
             .mktoButtonWrap {
               display: block;
@@ -784,13 +784,20 @@ $color_4: #031263;
       padding: 23px 0 0px;
 
       .container-custom {
-        padding: 0 38px;
+        @media (min-width: 767.98px) {
+          padding: 0 38px;
+        }
       }
 
       .links-container {
         flex-flow: column-reverse;
         .col.rights {
           margin-bottom: 22px;
+
+          @media (max-width: 767.98px) {
+            margin-bottom: 0;
+            margin-top: 16px;
+          }
         }
       }
     }
@@ -805,33 +812,35 @@ $color_4: #031263;
   .spz-2006 {
     #hero-section {
       min-height: calc(100vh - 240px);
-      padding: 40px 0 65px !important;
-      background-size: 2867px !important;
+      padding: 32px 0 36px !important;
       .hero {
         .spz-content {
           .section-heading {
             max-width: 100%;
-            font-size: 48px;
-            line-height: 56px;
-            margin-bottom: 33px;
+            font-size: 32px;
+            line-height: 40px;
+            margin-bottom: 5px;
           }
           .section-label {
-            margin: 33px 0px 11px;
+            margin: 48px 0px 12px;
+            font-size: 14px;
+            line-height: 22px;
           }
         }
         .ex-form {
-          padding: 28px 20px;
-          margin-top: 40px;
+          padding: 28px 14px;
+          margin-top: 28px;
           .form-title {
             font-size: 24px;
             line-height: 32px;
+            margin-bottom: 12px;
           }
         }
       }
       .hero-client-logos {
-        margin-top: 49px;
+        margin-top: 68px;
         .img-wrapper {
-          margin: 15px 0;
+          margin: 12px 0;
           &:nth-child(1) {
             order: 1;
           }
@@ -852,12 +861,13 @@ $color_4: #031263;
       .links-container {
         flex-flow: column;
         justify-content: center;
+        padding: 31px 1px 19px 0;
         .links {
           a {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            margin: 0 0 12px;
+            margin: 0 0 8px;
           }
         }
       }

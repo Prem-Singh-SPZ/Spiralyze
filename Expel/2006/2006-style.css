@@ -285,7 +285,7 @@
   -webkit-box-ordinal-group: 9;
       -ms-flex-order: 8;
           order: 8;
-  margin-top: 6px;
+  margin-top: 4px;
 }
 .spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoFormCol.full-width {
   width: 100% !important;
@@ -529,7 +529,7 @@
 }
 @media screen and (max-width: 767.98px) {
   .spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoButtonRow {
-    margin: 6px 6px 18px;
+    margin: 8px 6px 12px;
   }
 }
 .spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoButtonRow .mktoButtonWrap {
@@ -739,9 +739,13 @@
   .spz-2006 footer#expel-footer {
     padding: 23px 0 0px;
   }
+}
+@media (max-width: 1023.98px) and (min-width: 767.98px) {
   .spz-2006 footer#expel-footer .container-custom {
     padding: 0 38px;
   }
+}
+@media (max-width: 1023.98px) {
   .spz-2006 footer#expel-footer .links-container {
     -webkit-box-orient: vertical;
     -webkit-box-direction: reverse;
@@ -751,6 +755,14 @@
   .spz-2006 footer#expel-footer .links-container .col.rights {
     margin-bottom: 22px;
   }
+}
+@media (max-width: 1023.98px) and (max-width: 767.98px) {
+  .spz-2006 footer#expel-footer .links-container .col.rights {
+    margin-bottom: 0;
+    margin-top: 16px;
+  }
+}
+@media (max-width: 1023.98px) {
   .spz-2006.form-expand #hero-section {
     background-size: 2160px;
   }
@@ -758,31 +770,33 @@
 @media (max-width: 767.98px) {
   .spz-2006 #hero-section {
     min-height: calc(100vh - 240px);
-    padding: 40px 0 65px !important;
-    background-size: 2867px !important;
+    padding: 32px 0 36px !important;
   }
   .spz-2006 #hero-section .hero .spz-content .section-heading {
     max-width: 100%;
-    font-size: 48px;
-    line-height: 56px;
-    margin-bottom: 33px;
+    font-size: 32px;
+    line-height: 40px;
+    margin-bottom: 5px;
   }
   .spz-2006 #hero-section .hero .spz-content .section-label {
-    margin: 33px 0px 11px;
+    margin: 48px 0px 12px;
+    font-size: 14px;
+    line-height: 22px;
   }
   .spz-2006 #hero-section .hero .ex-form {
-    padding: 28px 20px;
-    margin-top: 40px;
+    padding: 28px 14px;
+    margin-top: 28px;
   }
   .spz-2006 #hero-section .hero .ex-form .form-title {
     font-size: 24px;
     line-height: 32px;
+    margin-bottom: 12px;
   }
   .spz-2006 #hero-section .hero-client-logos {
-    margin-top: 49px;
+    margin-top: 68px;
   }
   .spz-2006 #hero-section .hero-client-logos .img-wrapper {
-    margin: 15px 0;
+    margin: 12px 0;
   }
   .spz-2006 #hero-section .hero-client-logos .img-wrapper:nth-child(1) {
     -webkit-box-ordinal-group: 2;
@@ -815,6 +829,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
+    padding: 31px 1px 19px 0;
   }
   .spz-2006 footer#expel-footer .links-container .links a {
     display: -webkit-box;
@@ -825,7 +840,7 @@
     -webkit-box-pack: center;
         -ms-flex-pack: center;
             justify-content: center;
-    margin: 0 0 12px;
+    margin: 0 0 8px;
   }
 }
 @media (max-width: 619.98px) {
