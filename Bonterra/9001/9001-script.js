@@ -18,7 +18,7 @@ let bodyLoaded = setInterval(function () {
                                 </a>
                             </div></div><div class="hero-right"><div class="hero-img-container"></div></div></div></div>`;
 
-            emailEvents();
+                emailEvents();
             })
 
             waitForElm('#HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').then(function () {
@@ -36,9 +36,17 @@ let bodyLoaded = setInterval(function () {
 
 window.addEventListener('click', function (e) {
     if (e.target.classList.contains('hero-trigger-form')) {
+        const email = this.document.querySelector('body.spz-9001 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email');
+
         document.body.classList.add('spz-show-modal');
-        this.document.querySelector('body.spz-9001 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email').value = this.document.querySelector('body.spz-9001 .spz-hero-wrap .email-hero-spz').value;
-        this.document.querySelector('body.spz-9001 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email').dispatchEvent(new Event('focus'));
+        email.value = this.document.querySelector('body.spz-9001 .spz-hero-wrap .email-hero-spz').value;
+        // this.document.querySelector('body.spz-9001 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email').dispatchEvent(new Event('focus'));
+
+        if (email.value === '') {
+            email.closest('.mktoFieldWrap').classList.remove('filled');
+        } else {
+            email.closest('.mktoFieldWrap').classList.add('filled');
+        }
     }
     if (e.target.classList.contains('hero-close-form')) {
         document.body.classList.remove('spz-show-modal');

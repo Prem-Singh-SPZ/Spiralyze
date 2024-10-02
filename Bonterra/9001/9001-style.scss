@@ -7,13 +7,29 @@ body.spz-9001 {
     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-360_1.webp)
       no-repeat bottom right;
     background-size: cover;
-    border: none;
     overflow: hidden;
 
-    @media (min-width: 767.98px) {
+    @media (min-width: 1199.98px) {
+      border: none;
+    }
+
+    @media (min-width: 767.98px) and (max-width: 1199.98px) {
       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-768.webp)
         no-repeat bottom right;
       background-size: cover;
+      border-left: none;
+      border-top: 9px solid;
+      border-image: linear-gradient(
+          to right,
+          #f2342f 25%,
+          #ffb6b3 25%,
+          #ffb6b3 50%,
+          #99a7ff 50%,
+          #99a7ff 75%,
+          #fff8de 75%,
+          #fff8de 100%
+        )
+        1;
     }
 
     @media (min-width: 1199.98px) {
@@ -41,13 +57,13 @@ body.spz-9001 {
 
       @media (max-width: 1199.98px) {
         max-width: 734px;
-        padding-top: 48px;
-        padding-bottom: 68px !important;
+        padding-top: 52px;
+        padding-bottom: 2px !important;
       }
 
       @media (max-width: 767.98px) {
-        padding-top: 28px;
-        padding-bottom: 40px !important;
+        padding-top: 36px;
+        padding-bottom: 9px !important;
         max-width: 510px;
       }
 
@@ -66,6 +82,11 @@ body.spz-9001 {
         }
 
         .block-2 {
+          display: block !important;
+          @media (min-width: 767.98px) and (max-width: 1199.98px) {
+            padding: 0;
+          }
+
           .spz-hero-wrap {
             .spz-hero-container {
               display: flex;
@@ -73,9 +94,27 @@ body.spz-9001 {
               justify-content: space-between;
               margin-top: -3px;
 
+              @media (max-width: 1199.98px) {
+                flex-direction: column;
+              }
+
+              @media (max-width: 767.98px) {
+                padding: 0 1px;
+              }
+
               .hero-left {
                 max-width: 530px;
                 margin-right: 24px;
+
+                @media (max-width: 1199.98px) {
+                  max-width: 100%;
+                  margin-right: 0;
+                  text-align: center;
+                }
+
+                @media (max-width: 767.98px) {
+                  text-align: left;
+                }
 
                 .eyebrow-title {
                   color: #381360;
@@ -85,6 +124,14 @@ body.spz-9001 {
                   font-weight: 700;
                   line-height: 24px;
                   margin: 0 0 11px;
+
+                  @media (max-width: 767.98px) {
+                    font-size: 12px;
+                    font-weight: 600;
+                    line-height: 16px;
+                    letter-spacing: -0.15px;
+                    margin: 0 0 12px;
+                  }
                 }
 
                 .h-headline {
@@ -95,6 +142,17 @@ body.spz-9001 {
                   font-weight: 300;
                   line-height: 64px;
                   margin: 0 0 20px;
+
+                  @media (max-width: 1199.98px) {
+                    font-size: 40px;
+                    line-height: 48px;
+                  }
+
+                  @media (max-width: 767.98px) {
+                    font-size: 32px;
+                    line-height: 40px;
+                    margin: 0 0 15px;
+                  }
                 }
 
                 .h-subline {
@@ -105,6 +163,11 @@ body.spz-9001 {
                   font-weight: 400;
                   line-height: 24px;
                   max-width: 444px;
+
+                  @media (max-width: 1199.98px) {
+                    margin: auto;
+                    max-width: 460px;
+                  }
                 }
 
                 .form-group-wrapper {
@@ -114,9 +177,26 @@ body.spz-9001 {
                   width: 424px;
                   transition: all 0.2s ease;
 
+                  @media (max-width: 1199.98px) {
+                    margin-left: auto;
+                    margin-right: auto;
+                  }
+
+                  @media screen and (max-width: 767.98px) {
+                    flex-direction: column;
+                    border: none !important;
+                    align-items: center;
+                    width: 100%;
+                    margin-top: 24.5px;
+                  }
+
                   .form-group-spz {
                     position: relative;
                     width: calc(100% - 161px);
+
+                    @media screen and (max-width: 767.98px) {
+                      width: 100%;
+                    }
 
                     .form-label-spz {
                       position: absolute;
@@ -150,6 +230,11 @@ body.spz-9001 {
                       font-weight: 400;
                       line-height: 24px;
 
+                      @media screen and (max-width: 767.98px) {
+                        border: 1px solid #7583ff;
+                        height: 48px;
+                      }
+
                       &:focus ~ .form-label-spz {
                         padding: 2px 4px;
                         position: absolute;
@@ -182,18 +267,47 @@ body.spz-9001 {
                       background: rgba(56, 19, 96, 1);
                       color: #fff;
                     }
+
+                    @media screen and (max-width: 767.98px) {
+                      margin-top: 13px;
+                      width: 100%;
+                    }
                   }
 
                   &:hover {
                     border-color: rgba(56, 19, 96, 1);
+
+                    @media (max-width: 767.98px) {
+                      border-color: none;
+
+                      .form-group-spz input {
+                        border-color: rgba(56, 19, 96, 1);
+                      }
+                    }
                   }
 
                   &.focused {
                     border-color: rgba(56, 19, 96, 1);
+
+                    @media (max-width: 767.98px) {
+                      border-color: none;
+
+                      .form-group-spz input {
+                        border-color: rgba(56, 19, 96, 1);
+                      }
+                    }
                   }
 
                   &.filled {
                     border-color: #c4bbcf;
+
+                    @media (max-width: 767.98px) {
+                      border-color: none;
+
+                      .form-group-spz input {
+                        border-color: #c4bbcf;
+                      }
+                    }
 
                     .form-label-spz {
                       padding: 2px 4px;
@@ -211,6 +325,23 @@ body.spz-9001 {
                 flex: 0 0 50%;
                 height: 640px;
                 width: calc(100% - 530px);
+
+                @media (max-width: 1199.98px) {
+                  max-width: 100%;
+                  flex: 0 0 100%;
+                  width: 100%;
+                  min-height: 536px;
+                  margin-top: 32px;
+                }
+
+                @media (max-width: 767.98px) {
+                  min-height: 243px;
+                  margin-top: 25px;
+                  max-width: 380px;
+                  margin-left: auto;
+                  margin-right: auto;
+                }
+
                 .hero-img-container {
                   width: 100%;
                   position: relative;
@@ -232,12 +363,17 @@ body.spz-9001 {
                       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-768.webp)
                         no-repeat center center;
                       background-size: cover;
+                      width: 102%;
+                      left: -8px;
+                      height: 536px;
                     }
 
                     @media screen and (max-width: 767.98px) {
                       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-360.webp)
                         no-repeat center center;
                       background-size: cover;
+                      height: 243px;
+                      width: 105%;
                     }
                   }
                 }
@@ -277,15 +413,10 @@ body.spz-9001 {
       }
 
       .lpeCElement.Bonterra__Pricing_Request__IM {
-        background: linear-gradient(
-          180deg,
-          #fff 68.91%,
-          rgba(255, 255, 255, 0.96) 100%
-        );
-        box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
+        background: #fff;
         max-width: 600px;
         width: 100%;
-        padding: 42px 30px 40px;
+        padding: 34px 40px 40px;
         margin: 24px auto;
         position: relative;
 
@@ -304,10 +435,11 @@ body.spz-9001 {
           color: #381360;
           text-align: center;
           font-family: $grotesk;
-          font-size: 40px;
+          font-size: 48px;
           font-style: normal;
-          font-weight: 500;
-          line-height: 40px;
+          font-weight: 800;
+          line-height: 50px; /* 104.167% */
+          letter-spacing: 1.44px;
           text-transform: uppercase;
           padding: 0;
           margin-bottom: 38px;
@@ -325,8 +457,10 @@ body.spz-9001 {
           padding: 0;
           position: absolute;
           cursor: pointer;
-          top: 20px;
-          right: 20px;
+          top: 21px;
+          right: 24px;
+          width: 24px;
+          height: 24px;
 
           img {
             pointer-events: none;
@@ -353,11 +487,19 @@ body.spz-9001 {
         flex-wrap: wrap;
 
         .mktoFormCol {
-          width: calc(50% - 8px) !important;
+          width: calc(50% - 10px) !important;
           display: inline-flex;
           flex-wrap: wrap;
           flex: unset;
           margin: 0 !important;
+
+          &.spz-industry {
+            width: 100% !important;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            width: 100% !important;
+          }
 
           .mktoFieldWrap {
             position: relative;
@@ -421,9 +563,9 @@ body.spz-9001 {
             select.mktoField {
               padding-right: 40px !important;
               background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
-              background-size: 24px;
+              background-size: 22px;
               background-repeat: no-repeat;
-              background-position: calc(100% - 13px) 15px;
+              background-position: calc(100% - 9px) 16px;
             }
 
             &.hover {
@@ -552,9 +694,9 @@ body.spz-9001 {
             align-items: center;
             justify-content: center;
             width: 100% !important;
-            max-width: 250px;
-            height: 56px;
-            background: #99a7ff !important;
+            max-width: 100%;
+            height: 48px;
+            background: #C7D0FF !important;
             border: none !important;
             outline: none !important;
             margin: 12px auto 0 !important;
@@ -564,7 +706,7 @@ body.spz-9001 {
             color: #381360 !important;
             text-align: center;
             font-family: $Noto;
-            font-size: 18px !important;
+            font-size: 16px !important;
             font-weight: 700 !important;
             line-height: 24px !important;
 
