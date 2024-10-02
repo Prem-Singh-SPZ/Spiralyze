@@ -1,0 +1,614 @@
+$Noto: "Noto Sans", sans-serif;
+$adelle: adelle, sans-serif;
+$grotesk: grotesk, "RecentGroteskBlack", sans-serif;
+
+body.spz-9001 {
+  #HERO {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-360_1.webp)
+      no-repeat bottom right;
+    background-size: cover;
+    border: none;
+    overflow: hidden;
+
+    @media (min-width: 767.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-768.webp)
+        no-repeat bottom right;
+      background-size: cover;
+    }
+
+    @media (min-width: 1199.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-1440.webp)
+        no-repeat top right;
+      background-size: cover;
+    }
+
+    @media (min-width: 1900.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-1920.webp)
+        no-repeat top right;
+      background-size: cover;
+    }
+
+    @media (min-width: 3200.98px) {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/bg-3840.webp)
+        no-repeat top right;
+      background-size: cover;
+    }
+
+    .container {
+      max-width: 1270px;
+      padding-top: 0;
+      padding-bottom: 0 !important;
+
+      @media (max-width: 1199.98px) {
+        max-width: 734px;
+        padding-top: 48px;
+        padding-bottom: 68px !important;
+      }
+
+      @media (max-width: 767.98px) {
+        padding-top: 28px;
+        padding-bottom: 40px !important;
+        max-width: 510px;
+      }
+
+      .block-wrapper {
+        @media screen and (max-width: 1199.98px) {
+          flex-direction: column;
+        }
+
+        .block-1,
+        .break-1,
+        .break-2,
+        .break-3,
+        .block-4,
+        .block-3 {
+          display: none !important;
+        }
+
+        .block-2 {
+          .spz-hero-wrap {
+            .spz-hero-container {
+              display: flex;
+              align-items: center;
+              justify-content: space-between;
+              margin-top: -3px;
+
+              .hero-left {
+                max-width: 530px;
+                margin-right: 24px;
+
+                .eyebrow-title {
+                  color: #381360;
+                  font-family: $Noto;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 24px;
+                  margin: 0 0 11px;
+                }
+
+                .h-headline {
+                  color: #381360;
+                  font-family: $adelle;
+                  font-size: 53px;
+                  font-style: normal;
+                  font-weight: 300;
+                  line-height: 64px;
+                  margin: 0 0 20px;
+                }
+
+                .h-subline {
+                  color: #381360;
+                  font-family: $Noto;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 24px;
+                  max-width: 444px;
+                }
+
+                .form-group-wrapper {
+                  margin-top: 32px;
+                  display: flex;
+                  border: 1px solid #7583ff;
+                  width: 424px;
+                  transition: all 0.2s ease;
+
+                  .form-group-spz {
+                    position: relative;
+                    width: calc(100% - 161px);
+
+                    .form-label-spz {
+                      position: absolute;
+                      color: #381360;
+                      font-family: $Noto;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 24px;
+                      margin: 0;
+                      left: 16px;
+                      top: 12px;
+                      pointer-events: none;
+                      background: #fff;
+                      transition: all 0.2s ease;
+                      white-space: nowrap;
+                    }
+
+                    input {
+                      padding: 12px 16px;
+                      background: #fff;
+                      height: 47px;
+                      border: none;
+                      outline: none;
+                      -webkit-appearance: none;
+                      width: 100%;
+                      color: #381360;
+                      font-family: $Noto;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 24px;
+
+                      &:focus ~ .form-label-spz {
+                        padding: 2px 4px;
+                        position: absolute;
+                        left: 12px;
+                        top: -10px;
+                        font-size: 12px;
+                        line-height: 16px;
+                      }
+                    }
+                  }
+                  .hero-btn {
+                    background: #c7d0ff;
+                    display: flex;
+                    padding: 11px 32px;
+                    justify-content: center;
+                    align-items: center;
+                    text-decoration: none;
+                    text-align: center;
+                    color: #381360;
+                    font-family: $Noto;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 24px;
+                    transition: all 0.2s ease;
+                    white-space: nowrap;
+                    width: 161px;
+
+                    &:hover {
+                      background: rgba(56, 19, 96, 1);
+                      color: #fff;
+                    }
+                  }
+
+                  &:hover {
+                    border-color: rgba(56, 19, 96, 1);
+                  }
+
+                  &.focused {
+                    border-color: rgba(56, 19, 96, 1);
+                  }
+
+                  &.filled {
+                    border-color: #c4bbcf;
+
+                    .form-label-spz {
+                      padding: 2px 4px;
+                      position: absolute;
+                      left: 12px;
+                      top: -10px;
+                      font-size: 12px;
+                      line-height: 16px;
+                    }
+                  }
+                }
+              }
+
+              .hero-right {
+                flex: 0 0 50%;
+                height: 640px;
+                width: calc(100% - 530px);
+                .hero-img-container {
+                  width: 100%;
+                  position: relative;
+
+                  &::before {
+                    content: "";
+                    position: absolute;
+                    top: 0;
+                    left: -90px;
+                    right: 0;
+                    bottom: 0;
+                    width: 810px;
+                    height: 640px;
+                    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-1440.webp)
+                      no-repeat top left;
+                    background-size: cover;
+
+                    @media screen and (max-width: 1199.98px) {
+                      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-768.webp)
+                        no-repeat center center;
+                      background-size: cover;
+                    }
+
+                    @media screen and (max-width: 767.98px) {
+                      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-360.webp)
+                        no-repeat center center;
+                      background-size: cover;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .spz-modal-form {
+    display: none;
+
+    .modal-form-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      width: 100%;
+      background: var(
+        --Linear-bg,
+        linear-gradient(
+          180deg,
+          rgba(153, 167, 255, 0.08) 29.99%,
+          rgba(153, 167, 255, 0.32) 67.43%
+        ),
+        rgba(20, 38, 65, 0.12)
+      );
+      overflow: auto;
+
+      .mktoForm#HERO-Block3-Form {
+        min-height: 100vh;
+        justify-content: center;
+      }
+
+      .lpeCElement.Bonterra__Pricing_Request__IM {
+        background: linear-gradient(
+          180deg,
+          #fff 68.91%,
+          rgba(255, 255, 255, 0.96) 100%
+        );
+        box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
+        max-width: 600px;
+        width: 100%;
+        padding: 42px 30px 40px;
+        margin: 24px auto;
+        position: relative;
+
+        @media screen and (max-width: 1199.98px) {
+          margin-left: auto;
+          margin-right: auto;
+          max-width: 704px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+          padding: 26px 7px 32px;
+          box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
+        }
+
+        .spz-form-title {
+          color: #381360;
+          text-align: center;
+          font-family: $grotesk;
+          font-size: 40px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 40px;
+          text-transform: uppercase;
+          padding: 0;
+          margin-bottom: 38px;
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 32px;
+            line-height: 48px;
+            letter-spacing: 0.64px;
+            text-transform: uppercase;
+            margin-bottom: 22px;
+          }
+        }
+
+        .close-btn {
+          padding: 0;
+          position: absolute;
+          cursor: pointer;
+          top: 20px;
+          right: 20px;
+
+          img {
+            pointer-events: none;
+          }
+        }
+      }
+    }
+
+    form.mktoForm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100% !important;
+      padding: 0;
+      gap: 0;
+      background: transparent !important;
+
+      .form-fields-row {
+        // padding: 0 10px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .mktoFormCol {
+          width: calc(50% - 8px) !important;
+          display: inline-flex;
+          flex-wrap: wrap;
+          flex: unset;
+          margin: 0 !important;
+
+          .mktoFieldWrap {
+            position: relative;
+            width: 100% !important;
+            margin-bottom: 20px;
+            padding: 0 !important;
+
+            @media screen and (max-width: 767.98px) {
+              margin-bottom: 16px;
+            }
+
+            .mktoLabel {
+              background: #f5f5ff;
+              // background: transparent;
+              color: #646464 !important;
+              font-family: $Noto !important;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 400 !important;
+              line-height: 1.4;
+              padding: 1px 6px !important;
+              margin: 0;
+              position: absolute;
+              width: max-content !important;
+              max-width: calc(100% - 40px);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              top: 16px;
+              left: 10px;
+              pointer-events: none;
+              transition: all 0.2s ease !important;
+            }
+            .mktoField {
+              width: 100% !important;
+              height: 56px !important;
+              padding: 16px 16px !important;
+              background-color: #f5f5ff !important;
+              border: 1px solid #f5f5ff !important;
+              border-radius: 0;
+              outline: none;
+              box-shadow: none;
+              color: #381360 !important;
+              font-family: $Noto;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 400 !important;
+              line-height: 1.4 !important;
+              appearance: none;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              transition: all 0.2s ease;
+
+              &:hover {
+                background-color: #ffffff !important;
+                border-color: #381360 !important;
+              }
+            }
+            select.mktoField {
+              padding-right: 40px !important;
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
+              background-size: 24px;
+              background-repeat: no-repeat;
+              background-position: calc(100% - 13px) 15px;
+            }
+
+            &.hover {
+              .mktoLabel {
+                background: #ffffff !important;
+              }
+            }
+
+            &.active.typing {
+              .mktoLabel {
+                font-size: 12px !important;
+                line-height: 16px;
+                top: -8px;
+                color: #381360 !important;
+                background: #ffffff;
+              }
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #381360 !important;
+                outline: 2px solid rgba(153, 167, 255, 0.5) !important;
+              }
+            }
+
+            &.filled {
+              .mktoLabel {
+                font-size: 12px !important;
+                line-height: 16px;
+                top: -8px;
+                color: #381360 !important;
+                background: #ffffff;
+              }
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #c4bbcf !important;
+              }
+            }
+
+            &.error {
+              .mktoLabel {
+                background: #f5f5ff;
+                // background: transparent;
+              }
+              .mktoField {
+                border: 1px solid #f2342f !important;
+                background-color: #ffffff;
+                outline: none;
+              }
+
+              &.filled {
+                .mktoLabel {
+                  background: #ffffff;
+                }
+              }
+            }
+
+            &.error.active.typing {
+              .mktoLabel {
+                background: #ffffff;
+              }
+              .mktoField {
+                border: 1px solid #f2342f !important;
+                background-color: #ffffff;
+                outline: none !important;
+              }
+            }
+          }
+        }
+      }
+
+      .mktoError {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset !important;
+        bottom: unset !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .mktoErrorArrowWrap {
+          display: none;
+        }
+
+        .mktoErrorMsg {
+          margin: 4px 0 0 0 !important;
+          background: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
+          padding: 0 0 0 16px;
+          color: #f2342f !important;
+          font-family: $Noto !important;
+          font-size: 12px !important;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          text-shadow: none !important;
+          max-width: unset !important;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 16px;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .mktoButtonRow {
+        width: 100% !important;
+        justify-content: center;
+
+        .mktoButtonWrap {
+          width: 100% !important;
+          margin: 0 !important;
+
+          button.mktoButton {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100% !important;
+            max-width: 250px;
+            height: 56px;
+            background: #99a7ff !important;
+            border: none !important;
+            outline: none !important;
+            margin: 12px auto 0 !important;
+            cursor: pointer;
+            transition: all 0.2s ease !important;
+            position: relative;
+            color: #381360 !important;
+            text-align: center;
+            font-family: $Noto;
+            font-size: 18px !important;
+            font-weight: 700 !important;
+            line-height: 24px !important;
+
+            @media screen and (max-width: 767.98px) {
+              max-width: calc(100% - 20px);
+              margin: 8.5px auto 0 !important;
+            }
+
+            &:hover {
+              background: #381360 !important;
+              color: #ffffff !important;
+            }
+            // &:focus {
+            //   outline: 1px solid #447f19;
+            // }
+          }
+        }
+      }
+    }
+  }
+
+  &.spz-show-modal {
+    overflow: hidden;
+    .spz-modal-form {
+      display: block;
+    }
+  }
+}
+input {
+  &:-webkit-autofill,
+  &:-internal-autofill-selected {
+    -webkit-box-shadow: 0 0 0 56px white inset !important;
+    -webkit-text-fill-color: #381360 !important;
+    &:hover {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #381360 !important;
+    }
+    &:focus {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #381360 !important;
+    }
+    &:active {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #381360 !important;
+    }
+  }
+}
