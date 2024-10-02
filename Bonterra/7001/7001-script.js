@@ -34,6 +34,16 @@ let bodyLoaded = setInterval(function () {
     }
 });
 
+document.addEventListener('click', function (event) {
+    if (event.target.getAttribute('href') == '#form') {
+        event.preventDefault();
+        document.querySelector('.spz-7001 #HERO #HERO-Block3-Form').scrollIntoView({
+            behavior: 'smooth'
+        });
+
+    }
+});
+
 function formModify() {
     if (document.querySelectorAll('.spz-7001 #HERO .mktoForm .lpeCElement.Bonterra__Demo_Request__FE h2.spz-form-title').length == 0)
         document.querySelector('#HERO .mktoForm .lpeCElement.Bonterra__Demo_Request__FE').insertAdjacentHTML('afterbegin', `<h2 class="spz-form-title">Get a Demo</h2>`);
@@ -170,7 +180,7 @@ function checkValidFields() {
     // let validFields = document.querySelectorAll('.spz-7001 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
 
     if ((document.querySelector('.spz-7001 #HERO form.mktoForm #FirstName').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #FirstName').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #LastName').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #LastName').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #Email').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #Email').value != '') && (document.querySelector('.spz-7001 #HERO form.mktoForm #Company').value != null && document.querySelector('.spz-7001 #HERO form.mktoForm #Company').value != '')) {
-        
+
         document.querySelectorAll('.spz-hidden').forEach(function (elem) {
             elem.classList.remove('spz-hidden');
         })
@@ -181,23 +191,23 @@ function checkValidFields() {
 
 function setHiddenFields() {
     waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
-      const field_int = setInterval(function () {
-        if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
-          if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "SPZ_#7001_variant") {
-            clearInterval(field_int);
-          }
-          if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
-            document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', 'SPZ_#7001_variant');
-          }
-          document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', 'SPZ_#7001_variant');
-        }
-      }, 100);
+        const field_int = setInterval(function () {
+            if (document.querySelector('.mktoFormRow [name="utm_location__c"]')) {
+                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') == "SPZ_#7001_variant") {
+                    clearInterval(field_int);
+                }
+                if (document.querySelector('.mktoFormRow [name="utm_location__c"]').getAttribute('value') != '') {
+                    document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', 'SPZ_#7001_variant');
+                }
+                document.querySelector('.mktoFormRow [name="utm_location__c"]').setAttribute('value', 'SPZ_#7001_variant');
+            }
+        }, 100);
 
-      setTimeout(() => {
-        clearInterval(field_int);
-      }, 2000);
+        setTimeout(() => {
+            clearInterval(field_int);
+        }, 2000);
     });
-  }
+}
 
 // Generic Code
 function waitForElm(selector) {

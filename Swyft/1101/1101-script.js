@@ -169,7 +169,7 @@ function createTest() {
                 <p>Based on 6,726 Reviews</p>
             </div>
             <h1 class="c-headline">Take action to launch your entity in minutes</h1>
-            <p class="c-subhead">We'll handle the paperwork and set your [entity type] up for success with the most tools for growth, protection, and compliance*.</p>
+            <p class="c-subhead">We'll handle the paperwork and set your LLC up for success with the most tools for growth, protection, and compliance*.</p>
             <div class="c-btn-wrap">
                 <a href="https://www.swyftfilings.com/choose-a-business-structure/" class="spz-btn spz-1101-tracking">Start Now</a>
             </div>
