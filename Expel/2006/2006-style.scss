@@ -7,7 +7,6 @@ $l_blue: #0e4c8a;
 $white: #fff;
 $proxima-nova: proxima-nova, Arial, sans-serif;
 
-$color_1: #00a85d;
 $color_4: #031263;
 
 .spz-2006 {
@@ -32,7 +31,7 @@ $color_4: #031263;
     background-position: top right;
     margin-top: -1px;
 
-    @media (max-width: 1023.98px) {
+    @media (max-width: 1024.98px) {
       background-size: auto 100%;
       background-position: top left;
     }
@@ -86,7 +85,7 @@ $color_4: #031263;
           object-fit: contain;
         }
         .section-label {
-          color: $color_1;
+          color: #3F6;
           font-size: 16px;
           font-style: normal;
           font-weight: 800;
@@ -95,7 +94,7 @@ $color_4: #031263;
           text-transform: uppercase;
           margin: 49px 0 10px;
 
-          @media screen and (max-width: 1023.98px) {
+          @media screen and (max-width: 1024.98px) {
             margin-bottom: 11.5px;
           }
         }
@@ -107,7 +106,7 @@ $color_4: #031263;
           line-height: 64px;
           margin-bottom: 30px;
 
-          @media screen and (max-width: 1023.98px) {
+          @media screen and (max-width: 1024.98px) {
             font-size: 48px;
             line-height: 56px;
             max-width: 70%;
@@ -328,7 +327,7 @@ $color_4: #031263;
                 box-shadow: none;
                 padding: 13px 15px;
                 margin: 0;
-                color: $black;
+                color: $black !important;
                 font-size: 16px;
                 font-family: $proxima-nova;
                 font-style: normal;
@@ -411,42 +410,42 @@ $color_4: #031263;
                 font-weight: 600 !important;
                 line-height: 22px !important;
                 top: -11.5px;
-                color: $black;
+                color: $black !important;
               }
               .mktoField {
-                border-color: $grey;
+                border-color: $grey !important;
               }
             }
             .mktoFieldWrap.focused {
               .mktoLabel {
-                font-size: 14px;
-                font-weight: 600;
-                line-height: 22px;
+                font-size: 14px !important;
+                font-weight: 600 !important;
+                line-height: 22px !important;
                 top: -11.5px;
-                color: $blue;
+                color: $blue !important;
               }
               .mktoField {
-                border-color: $blue;
-                caret-color: $blue;
+                border-color: $blue !important;
+                caret-color: $blue !important;
               }
             }
             .mktoFieldWrap.error.filled {
               .mktoLabel {
-                color: $red;
+                color: $red !important;
               }
             }
             .mktoFieldWrap.error.focused {
               .mktoLabel {
-                color: $red;
+                color: $red !important;
               }
               .mktoField {
-                border-color: $red;
-                caret-color: $red;
+                border-color: $red !important;
+                caret-color: $red !important;
               }
             }
             .mktoFieldWrap.error {
               .mktoField {
-                border-color: $red;
+                border-color: $red !important;
                 // caret-color: $red;
               }
             }
@@ -562,7 +561,7 @@ $color_4: #031263;
               justify-content: center;
               border: none;
               border-radius: 72px;
-              background: $blue;
+              background: #1762E6 !important;
               background-image: none !important;
               color: $white;
               font-family: $proxima-nova;
@@ -573,7 +572,7 @@ $color_4: #031263;
               padding: 0 !important;
               margin: 0 !important;
               &:hover {
-                background: $l_blue;
+                background: $l_blue !important;
               }
             }
           }
@@ -596,7 +595,7 @@ $color_4: #031263;
               text-decoration-thickness: 0.5px;
               padding: 0;
               &:hover {
-                color: $l_blue;
+                color: #1762E6;
               }
             }
           }
@@ -623,7 +622,7 @@ $color_4: #031263;
               text-decoration-thickness: 0.5px;
               padding: 0;
               &:hover {
-                color: $l_blue;
+                color: #1762E6;
               }
             }
           }
@@ -672,7 +671,7 @@ $color_4: #031263;
         p {
           margin: 0 -16px;
 
-          @media screen and (max-width: 1023.98px) {
+          @media screen and (max-width: 1024.98px) {
             margin: 0 -10px;
           }
         }
@@ -688,7 +687,7 @@ $color_4: #031263;
             color: rgba(51, 255, 102, 1);
           }
 
-          @media screen and (max-width: 1023.98px) {
+          @media screen and (max-width: 1024.98px) {
             margin: 0 10px;
           }
         }
@@ -743,7 +742,7 @@ $color_4: #031263;
     }
   }
 }
-@media (max-width: 1023.98px) {
+@media (max-width: 1024.98px) {
   .spz-2006 {
     #hero-section {
       min-height: calc(100vh - 104px);
