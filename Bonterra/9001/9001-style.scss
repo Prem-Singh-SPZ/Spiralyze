@@ -423,12 +423,13 @@ body.spz-9001 {
         @media screen and (max-width: 1199.98px) {
           margin-left: auto;
           margin-right: auto;
-          max-width: 704px;
+          // max-width: 704px;
         }
 
         @media screen and (max-width: 767.98px) {
-          padding: 26px 7px 32px;
-          box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
+          padding: 32.5px 16px 32px;
+          max-width: 336px;
+          margin-top: 6px;
         }
 
         .spz-form-title {
@@ -438,17 +439,16 @@ body.spz-9001 {
           font-size: 48px;
           font-style: normal;
           font-weight: 800;
-          line-height: 50px; /* 104.167% */
+          line-height: 50px;
           letter-spacing: 1.44px;
           text-transform: uppercase;
           padding: 0;
           margin-bottom: 38px;
 
           @media screen and (max-width: 767.98px) {
-            font-size: 32px;
-            line-height: 48px;
-            letter-spacing: 0.64px;
-            text-transform: uppercase;
+            font-size: 28px;
+            line-height: 30px;
+            letter-spacing: 1.12px;
             margin-bottom: 22px;
           }
         }
@@ -464,6 +464,18 @@ body.spz-9001 {
 
           img {
             pointer-events: none;
+            padding: 0;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            top: 15px;
+            right: 16px;
+          }
+
+          &:hover {
+            img {
+              filter: invert(0.3);
+            }
           }
         }
       }
@@ -508,7 +520,7 @@ body.spz-9001 {
             padding: 0 !important;
 
             @media screen and (max-width: 767.98px) {
-              margin-bottom: 16px;
+              margin-bottom: 20.2px;
             }
 
             .mktoLabel {
@@ -696,7 +708,7 @@ body.spz-9001 {
             width: 100% !important;
             max-width: 100%;
             height: 48px;
-            background: #C7D0FF !important;
+            background: #c7d0ff !important;
             border: none !important;
             outline: none !important;
             margin: 12px auto 0 !important;
@@ -711,8 +723,8 @@ body.spz-9001 {
             line-height: 24px !important;
 
             @media screen and (max-width: 767.98px) {
-              max-width: calc(100% - 20px);
-              margin: 8.5px auto 0 !important;
+              max-width: 100%;
+              margin: 4px auto 0 !important;
             }
 
             &:hover {

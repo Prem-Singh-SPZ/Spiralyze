@@ -40,7 +40,6 @@ document.addEventListener('click', function (event) {
         document.querySelector('.spz-7001 #HERO #HERO-Block3-Form').scrollIntoView({
             behavior: 'smooth'
         });
-
     }
 });
 

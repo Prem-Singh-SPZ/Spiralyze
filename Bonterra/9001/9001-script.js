@@ -6,7 +6,7 @@ let bodyLoaded = setInterval(function () {
             body.classList.add('spz-9001');
 
             waitForElm('body.spz-9001 #HERO .container .block-wrapper .block-2').then(function () {
-                document.querySelector('body.spz-9001 #HERO .container .block-wrapper .block-2').innerHTML = `<div class="spz-hero-wrap"><div class="spz-hero-container"><div class="hero-left"><p class="eyebrow-title">Maximize the impact of your programs</p><div class="h-headline">Impact Management Pricing</div><p class="h-subline">Elevate your case management with our portfolio of
+                document.querySelector('body.spz-9001 #HERO .container .block-wrapper .block-2').innerHTML = `<div class="spz-hero-wrap"><div class="spz-hero-container"><div class="hero-left" id="spz-email-cta"><p class="eyebrow-title">Maximize the impact of your programs</p><div class="h-headline">Impact Management Pricing</div><p class="h-subline">Elevate your case management with our portfolio of
                 unified impact management solutions</p>
                 <div class="form-group-wrapper">
                                 <div class="form-group-spz">
@@ -50,6 +50,13 @@ window.addEventListener('click', function (e) {
     }
     if (e.target.classList.contains('hero-close-form')) {
         document.body.classList.remove('spz-show-modal');
+    }
+
+    if (event.target.getAttribute('href') == '#form') {
+        event.preventDefault();
+        document.querySelector('.spz-9001 #HERO #spz-email-cta').scrollIntoView({
+            behavior: 'smooth'
+        });
     }
 });
 
