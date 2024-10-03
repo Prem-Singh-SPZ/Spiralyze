@@ -81,11 +81,11 @@ function emailEvents() {
     });
 
     // on 'Enter' key press, click on the 'Get Started' button
-    email.addEventListener('keypress', function (e) {
-        if (e.key === 'Enter') {
-            document.querySelector('#hero-copy-url').click();
-        }
-    });
+    // email.addEventListener('keypress', function (e) {
+    //     if (e.key === 'Enter') {
+    //         document.querySelector('.hero-trigger-form').click();
+    //     }
+    // });
 }
 
 function formModify() {
