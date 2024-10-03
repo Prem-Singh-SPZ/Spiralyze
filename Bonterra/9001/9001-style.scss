@@ -242,6 +242,11 @@ body.spz-9001 {
                         top: -10px;
                         font-size: 12px;
                         line-height: 16px;
+                        background: linear-gradient(
+                          0deg,
+                          rgba(255, 255, 255, 1) 50%,
+                          rgba(245, 246, 255, 1) 50%
+                        );
                       }
                     }
                   }
@@ -316,6 +321,11 @@ body.spz-9001 {
                       top: -10px;
                       font-size: 12px;
                       line-height: 16px;
+                      background: linear-gradient(
+                        0deg,
+                        rgba(255, 255, 255, 1) 50%,
+                        rgba(245, 246, 255, 1) 50%
+                      );
                     }
                   }
                 }
@@ -429,7 +439,7 @@ body.spz-9001 {
         @media screen and (max-width: 767.98px) {
           padding: 32.5px 16px 32px;
           max-width: 336px;
-          margin-top: 6px;
+          margin: 6px auto;
         }
 
         .spz-form-title {
@@ -612,6 +622,12 @@ body.spz-9001 {
               .mktoField {
                 background-color: #ffffff !important;
                 border: 1px solid #c4bbcf !important;
+              }
+            }
+
+            &.hover.filled {
+              .mktoField {
+                border-color: #381360 !important;
               }
             }
 
