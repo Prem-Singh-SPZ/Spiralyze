@@ -94,6 +94,11 @@ body.spz-9001 {
               justify-content: space-between;
               margin-top: -3px;
 
+              @media (min-width: 1199.98px) and (max-width: 1280.98px) {
+                max-width: 1110px;
+                margin: auto;
+              }
+
               @media (max-width: 1199.98px) {
                 flex-direction: column;
               }
@@ -337,6 +342,10 @@ body.spz-9001 {
                 height: 640px;
                 width: calc(100% - 530px);
 
+                @media (min-width: 1199.98px) and (max-width: 1280.98px) {
+                  height: 560px;
+                }
+
                 @media (max-width: 1199.98px) {
                   max-width: 100%;
                   flex: 0 0 100%;
@@ -369,6 +378,12 @@ body.spz-9001 {
                     background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-1440.webp)
                       no-repeat top left;
                     background-size: cover;
+
+                    @media (min-width: 1199.98px) and (max-width: 1280.98px) {
+                      left: 0;
+                      width: 580px;
+                      height: 511px;
+                    }
 
                     @media screen and (max-width: 1199.98px) {
                       background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9001/ui-768.webp)
@@ -416,6 +431,7 @@ body.spz-9001 {
         ),
         rgba(20, 38, 65, 0.12)
       );
+      backdrop-filter: blur(4px);
       overflow: auto;
 
       .mktoForm#HERO-Block3-Form {
@@ -547,7 +563,7 @@ body.spz-9001 {
               padding: 1px 6px !important;
               margin: 0;
               position: absolute;
-              width: max-content !important;
+              width: auto !important;
               max-width: calc(100% - 40px);
               white-space: nowrap;
               overflow: hidden;
@@ -579,10 +595,10 @@ body.spz-9001 {
               white-space: nowrap;
               transition: all 0.2s ease;
 
-              &:hover {
-                background-color: #ffffff !important;
-                border-color: #381360 !important;
-              }
+              // &:hover {
+              //   background-color: #ffffff !important;
+              //   border-color: #381360 !important;
+              // }
             }
             select.mktoField {
               padding-right: 40px !important;
@@ -593,6 +609,10 @@ body.spz-9001 {
             }
 
             &.hover {
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #381360 !important;
+              }
               .mktoLabel {
                 background: #ffffff !important;
               }
