@@ -70,12 +70,55 @@ body {
 
             .mktoFormRow {
               gap: 20px;
-              label.mktoLabel {
-                font-size: 14px;
-                font-style: normal;
-                font-weight: 300 !important;
-                // line-height: 26px;
-                letter-spacing: -0.28px;
+
+              .mktoFormCol {
+                label.mktoLabel {
+                  font-size: 14px;
+                  font-style: normal;
+                  font-weight: 300 !important;
+                  // line-height: 26px;
+                  letter-spacing: -0.28px;
+                }
+
+                .mktoField {
+                  color: #000;
+                  font-size: 16px;
+                  font-weight: 500;
+                  line-height: 26px;
+                  letter-spacing: -0.32px;
+
+                  &:hover,
+                  &:focus {
+                    border-color: #000;
+                  }
+                }
+
+                .mktoError {
+                  bottom: -4px !important;
+                  position: relative;
+                  .mktoErrorMsg {
+                    color: #ff001f;
+                    font-family: Poppins;
+                    font-size: 13px;
+                    font-weight: 400;
+                    line-height: 16px;
+                  }
+                }
+
+                &.input-filled {
+                  .mktoField {
+                    border-color: #0057D6;
+                  }
+                }
+
+                &.field-error {
+                  .mktoField {
+                    border-color: #ff001f;
+                  }
+                  label.mktoLabel {
+                    color: #ff001f;
+                  }
+                }
               }
             }
 
@@ -92,6 +135,9 @@ body {
                   line-height: 120%;
                   letter-spacing: -0.32px;
 
+                  &:hover {
+                    background: #00419d;
+                  }
                   @media (max-width: 767.98px) {
                     max-width: 100%;
                   }
@@ -99,6 +145,7 @@ body {
               }
             }
 
+            
             .marketo-form__notice {
               font-size: 13px;
               font-style: normal;
@@ -110,6 +157,14 @@ body {
 
               @media (max-width: 767.98px) {
                 padding: 0 2px;
+              }
+
+              a{
+                text-decoration: none;
+
+                &:hover{
+                  text-decoration: underline !important;
+                }
               }
             }
           }

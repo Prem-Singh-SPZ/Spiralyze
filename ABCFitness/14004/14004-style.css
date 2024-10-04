@@ -77,11 +77,41 @@ body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo
 body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow {
   gap: 20px;
 }
-body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow label.mktoLabel {
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol label.mktoLabel {
   font-size: 14px;
   font-style: normal;
   font-weight: 300 !important;
   letter-spacing: -0.28px;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol .mktoField {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.32px;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol .mktoField:hover, body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol .mktoField:focus {
+  border-color: #000;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol .mktoError {
+  bottom: -4px !important;
+  position: relative;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol .mktoError .mktoErrorMsg {
+  color: #ff001f;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol.input-filled .mktoField {
+  border-color: #0057D6;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol.field-error .mktoField {
+  border-color: #ff001f;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoFormRow .mktoFormCol.field-error label.mktoLabel {
+  color: #ff001f;
 }
 body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoButtonRow {
   margin-top: 4px;
@@ -95,6 +125,9 @@ body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.32px;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton:hover {
+  background: #00419d;
 }
 @media (max-width: 767.98px) {
   body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton {
@@ -114,6 +147,12 @@ body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo
   body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .marketo-form__notice {
     padding: 0 2px;
   }
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .marketo-form__notice a {
+  text-decoration: none;
+}
+body #main.spz-14004-testimonial .pricing-new__inner .pricing-new__form .marketo-form .marketo-form__notice a:hover {
+  text-decoration: underline !important;
 }
 body #main.spz-14004-testimonial .pricing-new__inner .spz-testimonial-wrapper {
   display: -webkit-box;
