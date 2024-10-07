@@ -15,7 +15,13 @@ body.spz-5002 {
     .modal__overlay {
       background: var(--bg-image) no-repeat top center !important;
       background-size: cover !important;
-      overflow-x: auto;
+      overflow-y: auto;
+      padding: 63px 0;
+      align-items: flex-start;
+
+      @media (min-height: 700px) {
+        align-items: center;
+      }
 
       // @media (min-width: 1800px) {
       //   background-image: var(--bg-image-2x) !important;
@@ -27,6 +33,44 @@ body.spz-5002 {
 
       @media (max-width: 767.98px) {
         background-image: var(--bg-image-mob) !important;
+
+        @media (min-width: 479.98px) {
+          padding-left: 24px;
+          padding-right: 24px;
+        }
+      }
+
+      @media (max-height: 900px) and (max-width: 479.98px) {
+        align-items: flex-start;
+      }
+
+      .modal__close {
+        right: 22px;
+        top: 22px;
+        width: 18px;
+        height: 18px;
+
+        @media screen {
+          top: 21px;
+          right: 20px;
+        }
+
+        svg {
+          fill: #fff;
+          width: 18px;
+          height: 18px;
+        }
+
+        &::after {
+          width: 18px;
+          height: 18px;
+        }
+
+        &:hover {
+          svg {
+            fill: rgba(41, 169, 225, 1);
+          }
+        }
       }
     }
 
@@ -36,16 +80,15 @@ body.spz-5002 {
       padding: 0;
       overflow-y: initial;
       width: auto;
-      animation: modal-slide-top-animation 0.5s ease;
-
-      .modal__close {
-        display: none;
-        z-index: 9;
-      }
+      animation: modal-slide-top-animation 0.6s ease;
+      animation-delay: 0.3s;
+      animation-fill-mode: forwards;
+      opacity: 0;
+      max-height: initial;
 
       .logo-spz-bg {
         text-align: center;
-        margin-top: -4px;
+        // margin-top: -4px;
       }
 
       .demo-modal__row {
@@ -63,11 +106,11 @@ body.spz-5002 {
         padding: 0;
 
         @media (max-width: 767.98px) {
-          max-width: 480px;
+          width: 100%;
         }
 
         @media (max-width: 479.98px) {
-          max-width: 335px;
+          max-width: 320px;
         }
 
         @media (max-width: 340.98px) {
@@ -76,38 +119,42 @@ body.spz-5002 {
 
         .demo-modal__form {
           padding: 0;
-          overflow-y: initial;
+          // overflow-y: initial;
           width: auto;
           border-radius: 12px;
           background: #fff;
           box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
 
           .marketo-form {
-            padding: 36px;
+            padding: 36px 40px 40px;
             gap: 20px;
             width: 100% !important;
 
             @media (max-width: 767.98px) {
-              padding: 35px 16px;
+              padding: 35px 30px 30px;
             }
 
             .flydown-form__title {
               color: #231f20;
               text-align: center;
+              font-family: Poppins;
               font-size: 32px;
-              font-style: normal;
-              font-weight: 700;
-              line-height: 36px;
-              letter-spacing: 0;
-              margin-bottom: 32px;
+              font-weight: 500;
+              line-height: 130%;
+              letter-spacing: -0.64px;
+              margin-bottom: 12px;
 
               @media (max-width: 479.98px) {
-                margin-bottom: 33px;
+                margin-bottom: 13px;
               }
             }
 
             .mktoFormRow {
               gap: 20px;
+
+              @media (max-width: 767.98px) {
+                flex-wrap: wrap;
+              }
 
               .mktoFormCol {
                 label.mktoLabel {
@@ -116,6 +163,8 @@ body.spz-5002 {
                   font-weight: 300 !important;
                   // line-height: 26px;
                   letter-spacing: -0.28px;
+                  margin-bottom: 2.4px;
+                  text-transform: capitalize;
                 }
 
                 .mktoField {
@@ -124,6 +173,8 @@ body.spz-5002 {
                   font-weight: 500;
                   line-height: 26px;
                   letter-spacing: -0.32px;
+                  border-bottom: 2px solid #a7a7a7;
+                  width: 100% !important;
 
                   &:hover,
                   &:focus {
@@ -145,7 +196,7 @@ body.spz-5002 {
 
                 &.input-filled {
                   .mktoField {
-                    border-color: #0057d6;
+                    border-color: rgba(41, 169, 225, 1);
                   }
                 }
 
@@ -178,6 +229,11 @@ body.spz-5002 {
                   font-weight: 500;
                   line-height: 120%;
                   letter-spacing: -0.32px;
+                  background: #29a9e1;
+
+                  &::after {
+                    content: none;
+                  }
 
                   &:hover {
                     background: #00419d;
@@ -240,5 +296,6 @@ body.spz-5002 {
   }
   to {
     top: 0;
+    opacity: 1;
   }
 }

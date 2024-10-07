@@ -11,12 +11,24 @@ let bodyLoad = setInterval(function () {
 
         function loadTest() {
             document.querySelector('#demo-modal').classList.add('modal-container-spz');
-            document.querySelector('#demo-modal .modal__container .demo-modal__col2 .demo-modal__form').insertAdjacentHTML('afterbegin', `<div class="logo-spz-bg">
-                <img src="//res.cloudinary.com/spiralyze/image/upload/v1728282479/ABCFitnessIgnite/5002/ABC_Logo.svg" class="ls-img">
-            </div>`);
 
-            // Add class 'spz-email-label' to parent .mktoFormCol of email label
-            document.querySelector('#demo-modal #LblEmail').closest('.mktoFormCol').classList.add('spz-email-label');
+            document.querySelectorAll('header .cta-item a').forEach(function (el) {
+                if (el.href.includes('ignite.abcfitness.com/pricing/')) {
+                    el.href = 'javascript:void(0)';
+                    el.addEventListener('click', function () {  
+                        document.querySelector('button[data-micromodal-open="demo-modal"]').click();
+                    });
+                }
+            });
+
+            if (document.querySelectorAll('.logo-spz-bg').length == 0) {
+                document.querySelector('#demo-modal .modal__container .demo-modal__col2 .demo-modal__form').insertAdjacentHTML('afterbegin', `<div class="logo-spz-bg">
+                <img src="//res.cloudinary.com/spiralyze/image/upload/v1728282479/ABCFitnessIgnite/5002/ABC_Logo.svg" class="ls-img">
+                </div>`);
+
+                document.querySelector('body #demo-modal .modal__container').insertAdjacentElement('beforebegin', document.querySelector('body #demo-modal .modal__container .modal__close'));
+                document.querySelector('body #demo-modal .modal__overlay').removeAttribute('data-micromodal-close');
+            }
 
             focusFields();
         }

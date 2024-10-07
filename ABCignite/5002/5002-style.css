@@ -10,7 +10,18 @@ body.spz-5002.is-modal-open {
 body.spz-5002 #demo-modal .modal__overlay {
   background: var(--bg-image) no-repeat top center !important;
   background-size: cover !important;
-  overflow-x: auto;
+  overflow-y: auto;
+  padding: 63px 0;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+@media (min-height: 700px) {
+  body.spz-5002 #demo-modal .modal__overlay {
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
 }
 @media (max-width: 1200px) {
   body.spz-5002 #demo-modal .modal__overlay {
@@ -22,22 +33,60 @@ body.spz-5002 #demo-modal .modal__overlay {
     background-image: var(--bg-image-mob) !important;
   }
 }
+@media (max-width: 767.98px) and (min-width: 479.98px) {
+  body.spz-5002 #demo-modal .modal__overlay {
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
+@media (max-height: 900px) and (max-width: 479.98px) {
+  body.spz-5002 #demo-modal .modal__overlay {
+    -webkit-box-align: start;
+        -ms-flex-align: start;
+            align-items: flex-start;
+  }
+}
+body.spz-5002 #demo-modal .modal__overlay .modal__close {
+  right: 22px;
+  top: 22px;
+  width: 18px;
+  height: 18px;
+}
+@media screen {
+  body.spz-5002 #demo-modal .modal__overlay .modal__close {
+    top: 21px;
+    right: 20px;
+  }
+}
+body.spz-5002 #demo-modal .modal__overlay .modal__close svg {
+  fill: #fff;
+  width: 18px;
+  height: 18px;
+}
+body.spz-5002 #demo-modal .modal__overlay .modal__close::after {
+  width: 18px;
+  height: 18px;
+}
+body.spz-5002 #demo-modal .modal__overlay .modal__close:hover svg {
+  fill: rgb(41, 169, 225);
+}
 body.spz-5002 #demo-modal .modal__container {
   border-radius: 12px;
   background: #fff;
   padding: 0;
   overflow-y: initial;
   width: auto;
-  -webkit-animation: modal-slide-top-animation 0.5s ease;
-          animation: modal-slide-top-animation 0.5s ease;
-}
-body.spz-5002 #demo-modal .modal__container .modal__close {
-  display: none;
-  z-index: 9;
+  -webkit-animation: modal-slide-top-animation 0.6s ease;
+          animation: modal-slide-top-animation 0.6s ease;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  opacity: 0;
+  max-height: initial;
 }
 body.spz-5002 #demo-modal .modal__container .logo-spz-bg {
   text-align: center;
-  margin-top: -4px;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__row {
   padding-top: 0;
@@ -55,12 +104,12 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col {
 }
 @media (max-width: 767.98px) {
   body.spz-5002 #demo-modal .modal__container .demo-modal__col {
-    max-width: 480px;
+    width: 100%;
   }
 }
 @media (max-width: 479.98px) {
   body.spz-5002 #demo-modal .modal__container .demo-modal__col {
-    max-width: 335px;
+    max-width: 320px;
   }
 }
 @media (max-width: 340.98px) {
@@ -70,7 +119,6 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col {
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form {
   padding: 0;
-  overflow-y: initial;
   width: auto;
   border-radius: 12px;
   background: #fff;
@@ -78,38 +126,46 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form {
           box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form {
-  padding: 36px;
+  padding: 36px 40px 40px;
   gap: 20px;
   width: 100% !important;
 }
 @media (max-width: 767.98px) {
   body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form {
-    padding: 35px 16px;
+    padding: 35px 30px 30px;
   }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .flydown-form__title {
   color: #231f20;
   text-align: center;
+  font-family: Poppins;
   font-size: 32px;
-  font-style: normal;
-  font-weight: 700;
-  line-height: 36px;
-  letter-spacing: 0;
-  margin-bottom: 32px;
+  font-weight: 500;
+  line-height: 130%;
+  letter-spacing: -0.64px;
+  margin-bottom: 12px;
 }
 @media (max-width: 479.98px) {
   body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .flydown-form__title {
-    margin-bottom: 33px;
+    margin-bottom: 13px;
   }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow {
   gap: 20px;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow {
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+  }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol label.mktoLabel {
   font-size: 14px;
   font-style: normal;
   font-weight: 300 !important;
   letter-spacing: -0.28px;
+  margin-bottom: 2.4px;
+  text-transform: capitalize;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField {
   color: #000;
@@ -117,6 +173,8 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   font-weight: 500;
   line-height: 26px;
   letter-spacing: -0.32px;
+  border-bottom: 2px solid #a7a7a7;
+  width: 100% !important;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField:hover, body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField:focus {
   border-color: #000;
@@ -133,7 +191,7 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   line-height: 16px;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.input-filled .mktoField {
-  border-color: #0057d6;
+  border-color: rgb(41, 169, 225);
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.field-focus .mktoField {
   border-color: #000;
@@ -156,6 +214,10 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   font-weight: 500;
   line-height: 120%;
   letter-spacing: -0.32px;
+  background: #29a9e1;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton::after {
+  content: none;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton:hover {
   background: #00419d;
@@ -214,6 +276,7 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   }
   to {
     top: 0;
+    opacity: 1;
   }
 }
 
@@ -223,5 +286,6 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   }
   to {
     top: 0;
+    opacity: 1;
   }
 }
