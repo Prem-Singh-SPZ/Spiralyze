@@ -2,18 +2,11 @@
     const TEST_ENV = {
         name: 'spz-pricing-testimonials-14004',
         class: 'spz-14004',
-        date: '03-10-2024',
         test_url: 'https://abcfitness.com/pricing/',
         main_class: 'main#main',
     }
 
     function loadTest() {
-        var cookieName = TEST_ENV.name + "-" + TEST_ENV.date;
-        var cookieValue = "1";
-        var myDate = new Date();
-        myDate.setDate(myDate.getDate() + 30);
-        document.cookie = cookieName + "=" + cookieValue + ";expires=" + myDate;
-
         // Set test class
         document.body.classList.add(TEST_ENV.class);
         waitForElm(TEST_ENV.main_class).then(function () {
@@ -23,7 +16,6 @@
             appendTestimonial();
             focusFields();
         });
-        document.body.classList.add("loaded");
     }
 
     function appendTestimonial() {
@@ -105,6 +97,7 @@
         document.querySelectorAll('.marketo-form.pricing-form .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
             el.addEventListener('focus', function () {
                 el.closest('.mktoFormCol').classList.add('field-focus');
+                checkError(el);
             });
             el.addEventListener('blur', function () {
                 el.closest('.mktoFormCol').classList.remove('field-focus');
@@ -161,8 +154,6 @@
     window.addEventListener("click", function (e) {
         if (e.target.classList.contains("mktoButton")) {
             checkError();
-            // document.querySelectorAll('.marketo-form.pricing-form .mktoFormRow .mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
-            // });
         }
     });
 })();
