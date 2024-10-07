@@ -1,8 +1,7 @@
 :root {
-  --bg-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5002/1440_bg.webp");
-  --bg-image-2x: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5002/1920_bg.webp");
-  --bg-image-tab: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5002/768_bg.webp");
-  --bg-image-mob: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcfitnessignite/5002/375_bg.webp");
+  --bg-image: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/5002/1440.webp");
+  --bg-image-tab: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/5002/768.webp");
+  --bg-image-mob: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/abcignite/5002/rectangle_348.webp");
 }
 
 body.spz-5002.is-modal-open {
@@ -12,11 +11,6 @@ body.spz-5002 #demo-modal .modal__overlay {
   background: var(--bg-image) no-repeat top center !important;
   background-size: cover !important;
   overflow-x: auto;
-}
-@media (min-width: 1800px) {
-  body.spz-5002 #demo-modal .modal__overlay {
-    background-image: var(--bg-image-2x) !important;
-  }
 }
 @media (max-width: 1200px) {
   body.spz-5002 #demo-modal .modal__overlay {
@@ -34,6 +28,8 @@ body.spz-5002 #demo-modal .modal__container {
   padding: 0;
   overflow-y: initial;
   width: auto;
+  -webkit-animation: modal-slide-top-animation 0.5s ease;
+          animation: modal-slide-top-animation 0.5s ease;
 }
 body.spz-5002 #demo-modal .modal__container .modal__close {
   display: none;
@@ -51,7 +47,9 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col1 {
   display: none;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col {
-  flex: 1;
+  -webkit-box-flex: 1;
+      -ms-flex: 1;
+          flex: 1;
   max-width: 540px;
   padding: 0;
 }
@@ -71,15 +69,17 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col {
   }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form {
-  box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
   padding: 0;
   overflow-y: initial;
   width: auto;
-  border: 4px solid var(--Inite-Core-Blue, #29a9e1);
+  border-radius: 12px;
+  background: #fff;
+  -webkit-box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
+          box-shadow: 0px 10px 50px 0px rgba(0, 0, 0, 0.15);
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form {
   padding: 36px;
-  gap: 0;
+  gap: 20px;
   width: 100% !important;
 }
 @media (max-width: 767.98px) {
@@ -103,70 +103,87 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow {
-  gap: 18px;
-  margin-bottom: 22px;
+  gap: 20px;
 }
-@media (min-width: 768px) {
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow {
-    gap: 0;
-  }
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol {
-    margin-right: 18px;
-  }
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol:nth-of-type(2), body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.spz-email-label {
-    margin-right: 0;
-  }
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol label.mktoLabel {
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 300 !important;
+  letter-spacing: -0.28px;
 }
-@media (max-width: 479.98px) {
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow {
-    gap: 0;
-    margin-bottom: 22px;
-  }
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol {
-    margin-bottom: 22px;
-  }
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol:nth-of-type(2), body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.spz-email-label {
-    margin-bottom: 0;
-  }
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField {
+  color: #000;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 26px;
+  letter-spacing: -0.32px;
 }
-body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoError #ValidMsgPhone.mktoErrorMsg {
-  font-size: 10px;
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField:hover, body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField:focus {
+  border-color: #000;
 }
-body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form label.mktoLabel {
-  text-transform: capitalize;
-  margin-bottom: 1px;
-  white-space: nowrap;
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoError {
+  bottom: -4px !important;
+  position: relative;
 }
-body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoField {
-  width: 100% !important;
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoError .mktoErrorMsg {
+  color: #ff001f;
+  font-family: Poppins;
+  font-size: 13px;
+  font-weight: 400;
+  line-height: 16px;
 }
-body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButton {
-  width: 184px;
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.input-filled .mktoField {
+  border-color: #0057d6;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.field-focus .mktoField {
+  border-color: #000;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.field-error .mktoField {
+  border-color: #ff001f;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol.field-error label.mktoLabel {
+  color: #ff001f;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButtonRow {
+  margin-top: 4px;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton {
   height: 52px;
-  margin-top: 2px;
-  margin-bottom: 26px;
-  text-transform: uppercase;
+  max-width: 153px;
+  border-radius: 4px;
+  font-size: 16px !important;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 120%;
+  letter-spacing: -0.32px;
 }
-@media (max-width: 479.98px) {
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButton {
-    margin-bottom: 25px;
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton:hover {
+  background: #00419d;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoButtonRow .mktoButtonWrap.mktoButtonWrap button[type=submit].mktoButton {
+    max-width: 100%;
   }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .marketo-form__notice {
-  color: #adacb5;
-  text-align: center;
   font-size: 13px;
   font-style: normal;
   font-weight: 400;
   line-height: 20px;
+  letter-spacing: -0.26px;
+  margin-bottom: 0;
+  margin-top: 4px;
+}
+@media (max-width: 767.98px) {
+  body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .marketo-form__notice {
+    padding: 0 2px;
+  }
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .marketo-form__notice a {
-  color: #29a9e1;
-  font-size: 13px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 20px;
-  text-decoration-line: underline;
+  text-decoration: none;
+}
+body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .marketo-form__notice a:hover {
+  text-decoration: underline !important;
 }
 
 .modal-container-spz input[type=email],
@@ -189,4 +206,22 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
 .modal-container-spz input[type=text]:-webkit-autofill:focus,
 .modal-container-spz input[type=text]:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 56px var(--primary-warm-ivary-bg, #fff) inset !important;
+}
+
+@-webkit-keyframes modal-slide-top-animation {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
+}
+
+@keyframes modal-slide-top-animation {
+  from {
+    top: -100%;
+  }
+  to {
+    top: 0;
+  }
 }
