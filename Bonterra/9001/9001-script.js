@@ -84,7 +84,6 @@ function emailEvents() {
     email.addEventListener('keypress', function (e) {
         if (e.key === 'Enter') {
             document.querySelector('.hero-trigger-form').click();
-            //rmove focus from email input
             email.blur();
         }
     });
@@ -123,7 +122,7 @@ function formModify() {
     document.querySelector('.spz-9001 #HERO form.mktoForm .mktoButtonRow button.mktoButton').addEventListener('click', function (event) {
         document.querySelectorAll(`.spz-9001 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (elem) {
             let Buffertime = setInterval(() => {
-                if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') || elem.closest('.mktoFieldWrap').querySelector('.mktoInvalid')) {
+                if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
                     elem.closest('.mktoFieldWrap').classList.add('error');
                 } else {
                     elem.closest('.mktoFieldWrap').classList.remove('error');

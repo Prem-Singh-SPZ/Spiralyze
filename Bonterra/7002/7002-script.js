@@ -257,7 +257,9 @@ function checkError(elem) {
 }
 
 function addTriage(triageData, step2Data) {
-    const triageTemplate = `<div class="spz-triage-wrap">
+    //Append triage section
+    waitForElm(sectionSelector).then(function () {
+        document.querySelector(sectionSelector).insertAdjacentHTML(position, `<div class="spz-triage-wrap">
           <div class="questions-progress">
               ${triageData.length !== 0 && triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
               <div class="progress-item"></div>
@@ -265,12 +267,12 @@ function addTriage(triageData, step2Data) {
           <h2 class="form-heading">Get a Demo</h2>
           <div class="questions-wrap">
               ${triageData.length !== 0 && triageData.map((item, index) => {
-        return `${index == 0 ? `<div class="question-item question-${index + 1} ">
+            return `${index == 0 ? `<div class="question-item question-${index + 1} ">
                           <div class="question-heading">${item.questionHeading}</div>
                           <div class="answers-wrap">
                                   ${item.answers && item.answers.map((itemm, indexx) => {
-            const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
-            return `<div class="answer-item">
+                const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
+                return `<div class="answer-item">
                                                   <input type="radio" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
                                                   <div class="answer-content">
                                                           <div class="answer-checkbox"><span></span></div>
@@ -279,21 +281,39 @@ function addTriage(triageData, step2Data) {
                                                           ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
                                                   </div>
                                           </div>`;
-        }).join('')}
+            }).join('')}
                                   <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
                           </div>
                           <div class="next-question">Next</div>
                   </div>` : ``}`;
-    }).join('')}
-    ${step1Html(triageData)}
+        }).join('')}
+
+         ${step2Data.answers.length !== 0 && step2Data.answers.map((item, index) => {
+            console.log(item);
+            return `${index !== -1 ? `<div class="question-item question-${index + 2} ${item.title}">
+                          <div class="question-heading">${item.questionHeading}</div>
+                          <div class="answers-wrap">
+                                  ${item.subAnswers && item.subAnswers.map((itemm, indexx) => {
+                const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
+                return `<div class="answer-item">
+                                                  <input type="checkbox" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
+                                                  <div class="answer-content">
+                                                          <div class="answer-checkbox"><span></span></div>
+                                                          ${itemm.answerImage && itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" class="answer-image" alt="${itemm.answerText}"/>` : ``}
+                                                          <div class="answer-text">${itemm.answerText}</div>
+                                                          ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
+                                                  </div>
+                                          </div>`;
+            }).join('')}
+                          </div>
+                          <div class="next-question">Next</div>
+                  </div>` : ``}`;
+        }).join('')}
               <div class="question-form spz-hidden spz-form-wrap"></div>
           </div>
-      </div>`;
-
-    //Append triage section
-    waitForElm(sectionSelector).then(function () {
-        document.querySelector(sectionSelector).insertAdjacentHTML(position, triageTemplate);
+      </div>`);
     });
+
 
     // Pre-check options for step 1 and step 2
     ['Which-best-describes-you', 'How-we-can-help'].forEach(name => {
@@ -317,14 +337,13 @@ function addTriage(triageData, step2Data) {
 }
 
 //create and return HTML template for triage section
-function step1Html(json) {
-    `${json.length !== 0 && json.map((item, index) => {
-        return `${index == 0 ? `<div class="question-item question-${index + 1} ">
+function step1Html(triageData) {
+    let htmlis = `${triageData.length !== 0 && triageData.forEach(element, index => {
+        `<div class="question-item question-${index + 1} ">
                           <div class="question-heading">${item.questionHeading}</div>
                           <div class="answers-wrap">
-                                  ${item.answers && item.answers.map((itemm, indexx) => {
-            const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
-            return `<div class="answer-item">
+                          `+ element.array.forEach(element => {
+            `<div class="answer-item">
                                                   <input type="radio" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
                                                   <div class="answer-content">
                                                           <div class="answer-checkbox"><span></span></div>
@@ -332,14 +351,14 @@ function step1Html(json) {
                                                           <div class="answer-text">${itemm.answerText}</div>
                                                           ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
                                                   </div>
-                                          </div>`;
-        }).join('')}
-                                  <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
+                                          </div>`
+        }); +`
+                          <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
                           </div>
                           <div class="next-question">Next</div>
-                  </div>` : ``}`;
-    }).join('')}`
-    console.log(step1Html(triageData));
+                  </div>`
+    })}`;
+    return htmlis;
 }
 
 
@@ -390,11 +409,11 @@ function waitForElm(selector) {
 
 function preloadImages() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
-    < link rel = "preload" href = "${imgUrl}radio-check.svg" as="image" >
-        <link rel="preload" href="${imgUrl}checkbox-un.svg" as="image">
-            <link rel="preload" href="${imgUrl}checkbox-check.svg" as="image">
-                <link rel="preload" href="${imgUrl}radio-hover.svg" as="image">
-                    <link rel="preload" href="${imgUrl}checkbox-hover.svg" as="image">
-                        `
+        < link rel = "preload" href = "${imgUrl}radio-check.svg" as="image" >
+            <link rel="preload" href="${imgUrl}checkbox-un.svg" as="image">
+                <link rel="preload" href="${imgUrl}checkbox-check.svg" as="image">
+                    <link rel="preload" href="${imgUrl}radio-hover.svg" as="image">
+                        <link rel="preload" href="${imgUrl}checkbox-hover.svg" as="image">
+                            `
     );
 }
