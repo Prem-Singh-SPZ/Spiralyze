@@ -1,0 +1,590 @@
+$color_1: #0f2d52;
+$color_2: #a9a9a9;
+$color_3: #e30004;
+$bree: "bree", sans-serif;
+$segoe: "Segoe UI", "Open Sans", sans-serif;
+
+.spz-1010 {
+  // Form Step 1 and Step 2 Starts
+  .zy-marketo-form-container {
+    // for loop in scss
+    @for $i from 1 through 3 {
+      .step#{$i}-content {
+        display: none;
+      }
+
+      &.step#{$i}-active .step#{$i}-content {
+        display: block;
+      }
+    }
+
+    .form_steps {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-bottom: 42px;
+
+      .fs-step {
+        width: 32px;
+        height: 4px;
+        border-radius: 2px;
+        background: var(--Neutral-background-colors-Primary, #e6e6e6);
+
+        &.step2 {
+          margin: 0 8px;
+        }
+
+        &.active {
+          background: var(--Primary-colors-Green, #5fb53b);
+        }
+      }
+    }
+
+    .step-que {
+      color: var(--Primary-colors-Dark-Navy, #051c2c);
+      text-align: center;
+      font-family: $segoe;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 140%;
+      margin-bottom: 23px;
+    }
+
+    .step-list {
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+
+      .sl-item {
+        display: flex;
+        width: 132px;
+        position: relative;
+        padding: 24px 16px 20px 16px;
+        flex-direction: column;
+        align-items: center;
+        margin: 0 8px 16px;
+        border-radius: 8px;
+        border: 1px solid var(--Neutral-background-colors-Primary, #e6e6e6);
+        background: var(--Neutrals-White, #fff);
+        cursor: pointer;
+
+        > img {
+          width: 48px;
+          margin-bottom: 12px;
+        }
+
+        > span {
+          color: var(--Primary-colors-Dark-Navy, #051c2c);
+          text-align: center;
+          font-family: $segoe;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 140%;
+          word-break: break-word;
+        }
+      }
+
+      // Steps with radio button
+      &.step-radio {
+        .sl-item {
+          &::before {
+            content: " ";
+            display: inline-block;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/radio-un.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 7px;
+            top: 7px;
+          }
+
+          &.checked {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px #5fb53b;
+
+            &::before {
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/radio-check.svg");
+            }
+          }
+        }
+      }
+
+      // Steps with checkbox
+      &.step-checkbox {
+        .sl-item {
+          &::before {
+            content: " ";
+            display: inline-block;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/checkbox-un.svg");
+            background-size: contain;
+            background-position: center;
+            background-repeat: no-repeat;
+            width: 24px;
+            height: 24px;
+            position: absolute;
+            left: 7px;
+            top: 7px;
+          }
+
+          &.checked {
+            border-color: transparent;
+            box-shadow: 0 0 0 2px #5fb53b;
+
+            &::before {
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/checkbox-check.svg");
+            }
+          }
+        }
+      }
+    }
+
+    .step1-cta, .step2-cta {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      margin-top: 18px;
+    }
+
+    .next-cta {
+      display: flex;
+      height: 50px;
+      padding: 18px 40px;
+      margin: 0 5px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 99px;
+      background: var(--Primary-colors-Green, #5fb53b);
+      color: var(--Neutrals-White, #fff);
+      font-family: $segoe;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      text-decoration: none;
+    }
+
+    .back-cta {
+      display: flex;
+      height: 50px;
+      padding: 18px 40px;
+      margin: 0 5px;
+      justify-content: center;
+      align-items: center;
+      border-radius: 99px;
+      border: 1px solid var(--Primary-colors-Green, #5fb53b);
+      background: var(--Neutrals-White, #fff);
+      font-family: $segoe;
+      color: var(--Primary-colors-Brand, #0f2d52);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 130%;
+      text-decoration: none;
+    }
+
+    .sl-error-msg {
+      color: $color_3;
+      font-family: $segoe;
+      font-size: 13px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 20px;
+      text-align: center;
+    }
+  }
+  // Form Step 1 and Step 2 Ends
+}
+
+// Form Styles - Step 3 Starts
+.spz-1010 {
+  #zy-demo-form-section {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    position: fixed;
+    overflow: auto;
+    padding: 17.5px;
+    background: transparent;
+    z-index: 999 !important;
+    inset: 0;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+    visibility: hidden;
+    -webkit-transition: all 0.8s ease-in-out;
+    -o-transition: all 0.8s ease-in-out;
+    transition: all 0.8s ease-in-out;
+    .zy-container {
+      width: 100%;
+      max-width: 536px;
+      max-height: calc(100% - 35px) !important;
+      background: #fff;
+      border-radius: 32px;
+      -webkit-box-shadow: 0 56px 80px 0 rgba(15, 45, 82, 0.16);
+      box-shadow: 0 56px 80px 0 rgba(15, 45, 82, 0.16);
+      padding: 28px 40px 48px;
+      margin: auto;
+      overflow-x: hidden;
+      overflow-y: auto;
+      max-height: unset;
+      position: absolute;
+      left: initial;
+      -webkit-transform: unset;
+      -ms-transform: unset;
+      transform: unset;
+      bottom: 100%;
+      -webkit-transition: all 0.8s ease-in-out;
+      -o-transition: all 0.8s ease-in-out;
+      transition: all 0.8s ease-in-out;
+    }
+    .close-icon {
+      position: absolute;
+      top: 20px;
+      right: 20px;
+      z-index: 99;
+      display: -webkit-inline-box;
+      display: -ms-inline-flexbox;
+      display: inline-flex;
+      cursor: pointer;
+
+      svg path {
+        -webkit-transition: all 0.3s ease-in-out;
+        -o-transition: all 0.3s ease-in-out;
+        transition: all 0.3s ease-in-out;
+      }
+
+      &:hover {
+        svg {
+          path {
+            stroke-opacity: 1;
+          }
+        }
+      }
+    }
+    .row {
+      margin: 0;
+    }
+    .zy-col-text {
+      display: none;
+    }
+    .zy-col-form {
+      width: 100%;
+      max-width: unset;
+      -webkit-box-flex: unset;
+      -ms-flex: unset;
+      flex: unset;
+      .form_title {
+        color: #051c2c;
+        text-align: center;
+        font-family: $bree;
+        font-feature-settings: "salt" on;
+        font-size: 32px;
+        font-style: normal;
+        font-weight: 700;
+        line-height: 110%;
+        margin-bottom: 31px;
+      }
+      form.mktoForm .mktoFormRow fieldset.mktoFormCol {
+        width: 100%;
+        padding: 0 !important;
+        margin: 0 !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+      }
+    }
+    form.mktoForm {
+      fieldset.mktoFormCol {
+        .mktoFormRow {
+          width: calc(50% - 8px);
+          -webkit-box-flex: unset;
+          -ms-flex: unset;
+          flex: unset;
+          max-width: unset;
+          .mktoFormCol {
+            margin-bottom: 16px !important;
+          }
+          .mktoFieldWrap {
+            position: relative;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            padding: 0;
+            label.mktoLabel {
+              position: absolute;
+              display: inline-block;
+              top: 13px;
+              left: 10px;
+              margin: 0;
+              padding: 0 6px;
+              background: #fff;
+              color: $color_2;
+              font-family: $segoe;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.5;
+              pointer-events: none;
+              -webkit-transition: all 0.3s ease-in-out;
+              -o-transition: all 0.3s ease-in-out;
+              transition: all 0.3s ease-in-out;
+              &::after {
+                display: none;
+              }
+            }
+            .mktoGutter {
+              display: none;
+            }
+            .mktoField {
+              width: 100% !important;
+              height: 50px !important;
+              padding: 12px 15px !important;
+              border-radius: 8px;
+              border: 1px solid #bfbfbf;
+              outline: 0;
+              -webkit-box-shadow: none;
+              box-shadow: none;
+              background: #fff;
+              color: $color_1;
+              font-family: $segoe;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 1.5;
+              -webkit-appearance: none;
+              -moz-appearance: none;
+              appearance: none;
+              white-space: nowrap;
+              overflow: hidden;
+              -o-text-overflow: ellipsis;
+              text-overflow: ellipsis;
+              &:-webkit-autofill {
+                -webkit-box-shadow: 0 0 0 50px white inset !important;
+                -webkit-text-fill-color: #0f2d52 !important;
+                &:hover {
+                  -webkit-box-shadow: 0 0 0 50px white inset !important;
+                  -webkit-text-fill-color: #0f2d52 !important;
+                }
+                &:focus {
+                  -webkit-box-shadow: 0 0 0 50px white inset !important;
+                  -webkit-text-fill-color: #0f2d52 !important;
+                }
+                &:active {
+                  -webkit-box-shadow: 0 0 0 50px white inset !important;
+                  -webkit-text-fill-color: #0f2d52 !important;
+                }
+              }
+            }
+            select.mktoField {
+              padding-right: 32px !important;
+            }
+            .mktoField#ringdna100__ProductInterest__c {
+              max-width: 100%;
+            }
+            .mktoError {
+              position: relative;
+              right: unset !important;
+              bottom: unset !important;
+              left: unset;
+              top: unset;
+              .mktoErrorArrowWrap {
+                display: none;
+              }
+              .mktoErrorMsg {
+                margin-top: 6px;
+                padding: 0;
+                background: transparent;
+                border: none;
+                -webkit-box-shadow: none;
+                box-shadow: none;
+                color: $color_3;
+                text-shadow: none;
+                font-family: $segoe;
+                font-size: 13px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 20px;
+              }
+            }
+            &.active.typing {
+              label.mktoLabel {
+                font-size: 13px;
+                line-height: 20px;
+                top: -10px;
+                color: $color_1;
+              }
+              .mktoField {
+                border-color: #0f2d52;
+              }
+            }
+            &.filled {
+              label.mktoLabel {
+                font-size: 13px;
+                line-height: 20px;
+                top: -10px;
+              }
+            }
+            &.error.active.typing {
+              label.mktoLabel {
+                color: $color_3 !important;
+              }
+            }
+            &.error.filled {
+              label.mktoLabel {
+                color: $color_3 !important;
+              }
+            }
+            &.error {
+              .mktoField {
+                border-color: #e30004 !important;
+              }
+            }
+            &.select-field {
+              &::after {
+                position: absolute;
+                content: "";
+                background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1713853220/zywave/1004/Dropdown.svg");
+                background-size: contain;
+                background-repeat: no-repeat;
+                width: 24px;
+                height: 24px;
+                top: 13px;
+                right: 13px;
+                pointer-events: none;
+              }
+            }
+          }
+          .mktoOffset {
+            display: none;
+          }
+          &.no-label {
+            display: none;
+          }
+        }
+        .mktoFormRow.ringdna100__productinterest__c {
+          width: 100%;
+        }
+      }
+
+      .mktoButtonRow {
+        margin-top: 16px;
+        text-align: center;
+        button.mktoButton {
+          display: -webkit-box;
+          display: -ms-flexbox;
+          display: flex;
+          -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+          -webkit-box-pack: center;
+          -ms-flex-pack: center;
+          justify-content: center;
+          -webkit-box-align: center;
+          -ms-flex-align: center;
+          align-items: center;
+          min-width: 132px;
+          height: 50px;
+          margin: auto;
+          border-radius: 99px;
+          background-color: #fff;
+          border: 2px solid var(--Accents, #5fb53b);
+          outline: none;
+          -webkit-box-shadow: none;
+          box-shadow: none;
+          color: $color_1;
+          font-family: $segoe;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 700;
+          line-height: 24px;
+          &:hover {
+            background: var(--Accents, #5fb53b);
+          }
+          &:focus {
+            background: var(--Accents, #5fb53b);
+          }
+          &:active {
+            background: var(--Accents, #5fb53b);
+          }
+        }
+      }
+    }
+  }
+  // Hide form fields (Progressive fields)
+  // &:not(.form-expand)
+  //   #zy-demo-form-section
+  //   form.mktoForm
+  //   fieldset.mktoFormCol
+  //   .mktoFormRow.websiteformjobdescription
+  //   ~ .mktoFormRow {
+  //   display: none;
+  // }
+
+  // &.show-popup {
+  //   overflow: hidden !important;
+  //   touch-action: none;
+  //   -ms-touch-action: none;
+
+  //   #zy-demo-form-section {
+  //     background: rgba(0, 0, 0, 0.6);
+  //     visibility: visible;
+
+  //     .zy-container {
+  //       bottom: 50%;
+  //       -webkit-transform: translateY(50%);
+  //       -ms-transform: translateY(50%);
+  //       transform: translateY(50%);
+  //     }
+  //   }
+  // }
+}
+
+@media (max-width: 767.98px) {
+  .spz-1010 {
+    #zy-demo-form-section {
+      .zy-container {
+        max-width: calc(100% - 35px);
+        padding: 44px 20px 48px;
+      }
+      .zy-col-form {
+        .form_title {
+          margin-bottom: 4px;
+        }
+      }
+      form.mktoForm {
+        fieldset.mktoFormCol {
+          .mktoFormRow {
+            width: 100%;
+          }
+        }
+        .mktoButtonRow {
+          button.mktoButton {
+            width: 100%;
+            min-width: unset;
+          }
+        }
+      }
+    }
+    .zy-demo-form-section-container {
+      .zy-marketo-form-container {
+        form {
+          padding: 0;
+        }
+      }
+    }
+  }
+}
+// Form Styles - Step 3 Ends

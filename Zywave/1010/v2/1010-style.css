@@ -1,0 +1,668 @@
+.spz-1010-v2.show-popup {
+  overflow: hidden !important;
+  touch-action: none;
+  -ms-touch-action: none;
+  /* position: fixed;
+  width: 100%; */
+}
+
+.spz-1010-v2.show-popup #zy-demo-form-section {
+  background: rgba(0, 0, 0, 0.6);
+  /* pointer-events: initial; */
+  visibility: visible;
+}
+
+.spz-1010-v2.show-popup #zy-demo-form-section .zy-container {
+  bottom: 50%;
+  transform: translateY(50%);
+}
+
+.spz-1010-v2 .zy-marketo-form-container .step1-content {
+  display: none;
+}
+.spz-1010-v2 .zy-marketo-form-container.step1-active .step1-content {
+  display: block;
+}
+.spz-1010-v2 .zy-marketo-form-container .step2-content {
+  display: none;
+}
+.spz-1010-v2 .zy-marketo-form-container.step2-active .step2-content {
+  display: block;
+}
+.spz-1010-v2 .zy-marketo-form-container .step3-content {
+  display: none;
+}
+.spz-1010-v2 .zy-marketo-form-container.step3-active .step3-content {
+  display: block;
+}
+.spz-1010-v2 .zy-marketo-form-container .form_steps {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 42px;
+}
+.spz-1010-v2 .zy-marketo-form-container .form_steps .fs-step {
+  width: 32px;
+  height: 4px;
+  border-radius: 2px;
+  background: #e6e6e6;
+}
+.spz-1010-v2 .zy-marketo-form-container .form_steps .fs-step.step2 {
+  margin: 0 8px;
+}
+.spz-1010-v2 .zy-marketo-form-container .form_steps .fs-step.active {
+  background: #5fb53b;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-que {
+  color: #051c2c;
+  text-align: center;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 140%;
+  margin-bottom: 23px;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list .sl-item {
+  display: flex;
+  width: 132px;
+  position: relative;
+  padding: 24px 14px 19.5px;
+  flex-direction: column;
+  align-items: center;
+  margin: 0 8px 16px;
+  border-radius: 8px;
+  box-shadow: 0 0 0 1px #e6e6e6;
+  background: var(--Neutrals-White, #fff);
+  cursor: pointer;
+  transition-duration: 0.15s;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list .sl-item > img {
+  width: 48px;
+  height: 48px;
+  margin-bottom: 13px;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list .sl-item .sl-title {
+  display: flex;
+  align-items: center;
+  height: 100%;
+  color: #051c2c;
+  text-align: center;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  word-break: break-word;
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 .zy-marketo-form-container .step-list .sl-item {
+    flex-direction: row;
+    padding: 10px 20px 10px 50px;
+    width: 100%;
+    margin: 0 0 10px;
+    box-shadow: inset 0 0 0 1px #e6e6e6;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .step-list .sl-item .sl-title {
+    text-align: left;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .step-list .sl-item:last-child {
+    margin-bottom: 0;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .step-list .sl-item > img {
+    width: 40px;
+    height: 40px;
+    margin-right: 20px;
+    margin-bottom: 0;
+  }
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item::before, .spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item::before {
+  content: " ";
+  display: inline-block;
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  position: absolute;
+  left: 8px;
+  top: 8px;
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item::before, .spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item::before {
+    left: 12px;
+    top: calc(50% - 12px);
+  }
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item:hover, .spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item:hover {
+  box-shadow: inset 0 0 0 2px #051c2c;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item.checked, .spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item.checked {
+  box-shadow: inset 0 0 0 2px #5fb53b;
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item::before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/radio-un.svg");
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item.checked::before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/radio-check.svg");
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-radio .sl-item:hover:not(.checked)::before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/radio-hover.svg");
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item::before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/checkbox-un.svg");
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item.checked::before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/checkbox-check.svg");
+}
+.spz-1010-v2 .zy-marketo-form-container .step-list.step-checkbox .sl-item:hover:not(.checked)::before {
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1010/checkbox-hover.svg");
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 .zy-marketo-form-container .step2-content .step-list .sl-item {
+    padding-left: 56px;
+  }
+}
+.spz-1010-v2 .zy-marketo-form-container .step1-cta,
+.spz-1010-v2 .zy-marketo-form-container .step2-cta {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: 20px;
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 .zy-marketo-form-container .step1-cta,
+  .spz-1010-v2 .zy-marketo-form-container .step2-cta {
+    margin-top: 24px;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .step1-cta.step2-cta,
+  .spz-1010-v2 .zy-marketo-form-container .step2-cta.step2-cta {
+    flex-direction: column-reverse;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .step1-cta.step2-cta .back-cta,
+  .spz-1010-v2 .zy-marketo-form-container .step1-cta.step2-cta .next-cta,
+  .spz-1010-v2 .zy-marketo-form-container .step2-cta.step2-cta .back-cta,
+  .spz-1010-v2 .zy-marketo-form-container .step2-cta.step2-cta .next-cta {
+    width: 100%;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .step1-cta.step2-cta .next-cta,
+  .spz-1010-v2 .zy-marketo-form-container .step2-cta.step2-cta .next-cta {
+    margin-bottom: 10px;
+  }
+}
+.spz-1010-v2 .zy-marketo-form-container .next-cta {
+  display: flex;
+  height: 50px;
+  padding: 18px 40px;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  background: #5fb53b;
+  color: var(--Neutrals-White, #fff);
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-decoration: none;
+  transition-duration: 0.15s;
+}
+.spz-1010-v2 .zy-marketo-form-container .next-cta:hover, .spz-1010-v2 .zy-marketo-form-container .next-cta:focus {
+  background: #7edb58;
+}
+.spz-1010-v2 .zy-marketo-form-container .next-cta:active {
+  background: #a6ff82;
+}
+.spz-1010-v2 .zy-marketo-form-container .back-cta {
+  display: flex;
+  height: 50px;
+  padding: 18px 40px;
+  margin: 0 5px;
+  justify-content: center;
+  align-items: center;
+  border-radius: 99px;
+  border: 1px solid #5fb53b;
+  background: var(--Neutrals-White, #fff);
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  color: var(--Primary-colors-Brand, #0f2d52);
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 130%;
+  text-decoration: none;
+  transition-duration: 0.15s;
+}
+.spz-1010-v2 .zy-marketo-form-container .back-cta:hover, .spz-1010-v2 .zy-marketo-form-container .back-cta:focus {
+  background: #5fb53b;
+}
+.spz-1010-v2 .zy-marketo-form-container .back-cta:active {
+  border-color: transparent;
+  background: #7edb58;
+}
+.spz-1010-v2 .zy-marketo-form-container .sl-error-msg {
+  color: #e30004;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+  text-align: center;
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 .zy-marketo-form-container .sl-error-msg {
+    margin-top: 10px;
+  }
+}
+
+.spz-1010-v2 #zy-demo-form-section {
+  display: flex;
+  position: fixed;
+  overflow: auto;
+  padding: 17.5px;
+  background: transparent;
+  z-index: 999 !important;
+  inset: 0;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  /* pointer-events: none; */
+  visibility: hidden;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-container {
+  width: 100%;
+  max-width: 536px;
+  max-height: calc(100% - 35px) !important;
+  border-radius: 32px;
+  background: #fff;
+  box-shadow: 0px 20px 40px 0px rgba(0, 0, 0, 0.08);
+  padding: 0;
+  margin: auto;
+  overflow-x: hidden;
+  overflow-y: auto;
+  max-height: unset;
+  position: absolute;
+  left: initial;
+  transform: unset;
+  bottom: 100%;
+  transition: all 0.25s ease-in-out;
+}
+
+.spz-1010-v2 #zy-demo-form-section .close-icon {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  z-index: 99;
+  display: inline-flex;
+  cursor: pointer;
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 #zy-demo-form-section .close-icon {
+    right: 15px;
+  }
+}
+
+.spz-1010-v2 #zy-demo-form-section .close-icon svg path {
+  transition: all 0.3s ease-in-out;
+}
+
+.spz-1010-v2 #zy-demo-form-section .close-icon:hover svg path {
+  stroke-opacity: 1;
+}
+
+.spz-1010-v2 #zy-demo-form-section .row {
+  margin: 0;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-col-text {
+  display: none;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-col-text h3 {
+  color: #fff;
+  font-family: "bree", sans-serif;
+  font-feature-settings: unset;
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 20px;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-col-text .zy-content {
+  color: #fff;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 140%;
+  margin: 0;
+  padding-right: 33px;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-col-form {
+  width: 100%;
+  max-width: unset;
+  flex: unset;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-col-form .zy-marketo-form-container {
+  padding: 28px 40px 48px;
+}
+
+.spz-1010-v2 #zy-demo-form-section .zy-col-form .form_title {
+  color: #051c2c;
+  text-align: center;
+  font-family: "bree", sans-serif;
+  font-feature-settings: "salt" on;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 110%;
+  margin-bottom: 31.5px;
+}
+
+@media (min-width: 768px) {
+  .spz-1010-v2 #zy-demo-form-section .zy-col-form .step3-active .form_title {
+    margin-bottom: 19px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .step3-active form.mktoForm .mktoButtonRow {
+    margin-top: 19px;
+  }
+}
+.spz-1010-v2 #zy-demo-form-section .zy-col-form form.mktoForm .mktoFormRow fieldset.mktoFormCol {
+  width: 100%;
+  padding: 0 !important;
+  margin: 0 !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow {
+  width: calc(50% - 8px);
+  flex: unset;
+  max-width: unset;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow.no-label {
+  display: none;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow.ringdna100__productinterest__c {
+  width: 100%;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFormCol {
+  margin-bottom: 16px !important;
+}
+
+@media (max-height: 480px) {
+  .spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol legend {
+    padding: 0;
+  }
+}
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap {
+  position: relative;
+  flex-wrap: wrap;
+  padding: 0;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap label.mktoLabel {
+  position: absolute;
+  display: inline-block;
+  top: 13px;
+  left: 10px;
+  margin: 0;
+  padding: 0 6px;
+  background: #fff;
+  color: #a9a9a9;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  pointer-events: none;
+  transition: all 0.3s ease-in-out;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.active.typing label.mktoLabel,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.filled label.mktoLabel {
+  font-size: 13px;
+  line-height: 20px;
+  top: -10px;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.active.typing label.mktoLabel {
+  color: #0f2d52;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.error.active.typing label.mktoLabel,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.error.filled label.mktoLabel {
+  color: #e30004 !important;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoCaptchaDisclaimer a {
+  padding: 0;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap label.mktoLabel::after {
+  display: none;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoOffset,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoGutter {
+  display: none;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField {
+  width: 100% !important;
+  height: 50px !important;
+  padding: 12px 15px !important;
+  border-radius: 8px;
+  border: 1px solid #bfbfbf;
+  outline: 0;
+  box-shadow: none;
+  background: #fff;
+  color: #0f2d52;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 1.5;
+  appearance: none;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:hover,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:focus,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField:-webkit-autofill:active {
+  -webkit-box-shadow: 0 0 0 50px white inset !important;
+  -webkit-text-fill-color: #0f2d52 !important;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.active.typing .mktoField {
+  border-color: #0f2d52;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap.error .mktoField {
+  border-color: #e30004 !important;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap select.mktoField {
+  padding-right: 32px !important;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoField#ringdna100__ProductInterest__c {
+  max-width: 100%;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow.websiteformjobdescription .mktoFieldWrap::after,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow.ringdna100__productinterest__c .mktoFieldWrap::after {
+  position: absolute;
+  content: "";
+  background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1004/Dropdown.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 24px;
+  height: 24px;
+  top: 13px;
+  right: 13px;
+  pointer-events: none;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoError {
+  position: relative;
+  right: unset !important;
+  bottom: unset !important;
+  left: unset;
+  top: unset;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorArrowWrap {
+  display: none;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow .mktoFieldWrap .mktoError .mktoErrorMsg {
+  margin-top: 6px;
+  padding: 0;
+  background: transparent;
+  border: none;
+  box-shadow: none;
+  color: #e30004;
+  text-shadow: none;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 13px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 20px;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow {
+  margin-top: 16px;
+  text-align: center;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow button.mktoButton {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  min-width: 132px;
+  height: 50px;
+  margin: auto;
+  border-radius: 99px;
+  background: #5fb53b;
+  border: none;
+  outline: none;
+  box-shadow: none;
+  color: #fff;
+  font-family: "Segoe UI", "Open Sans", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow button.mktoButton:hover,
+.spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow button.mktoButton:focus {
+  background: #7edb58;
+}
+
+.spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow button.mktoButton:active {
+  background: #a6ff82;
+}
+
+@media (min-width: 1601px) {
+  .spz-1010-v2 #zy-demo-form-section {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1004/1920.svg");
+  }
+}
+@media (max-width: 1249.98px) {
+  .spz-1010-v2 #zy-demo-form-section {
+    padding-top: 100px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-container {
+    max-width: 536px;
+  }
+}
+@media (max-width: 1199.98px) {
+  .spz-1010-v2 #zy-demo-form-section {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1004/768.svg");
+    padding-top: 79.5px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .row {
+    padding: 0;
+    justify-content: center;
+    text-align: center;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-container {
+    max-width: 536px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-text,
+  .spz-1010-v2 #zy-demo-form-section .zy-col-form {
+    width: 100%;
+    max-width: unset;
+    margin-top: 0;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-text .zy-content {
+    padding-right: 0;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-text h3 {
+    margin-bottom: 20.5px;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-1010-v2 #zy-demo-form-section {
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/zywave/1004/375-BG.svg");
+    padding: 59.5px 0 58px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-container {
+    padding: 0;
+    width: calc(100% - 40px);
+  }
+  .spz-1010-v2 #zy-demo-form-section .row {
+    padding: 0;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-text h3 {
+    font-size: 32px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-form .zy-marketo-form-container {
+    margin: 0;
+    padding: 28px 20px 32px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-form .form_title {
+    margin-bottom: 27px;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-form .step3-active fieldset > legend {
+    display: none;
+  }
+  .spz-1010-v2 #zy-demo-form-section .zy-col-text .zy-content {
+    padding: 0 10px;
+  }
+  .spz-1010-v2 .zy-marketo-form-container .form_steps {
+    margin-bottom: 26px;
+  }
+  .zy-demo-form-section-container .zy-marketo-form-container form {
+    padding: 0;
+  }
+  .spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow {
+    margin-top: 8px;
+  }
+  .spz-1010-v2 #zy-demo-form-section form.mktoForm fieldset.mktoFormCol .mktoFormRow {
+    width: 100%;
+  }
+  .spz-1010-v2 #zy-demo-form-section form.mktoForm .mktoButtonRow button.mktoButton {
+    width: 100%;
+    min-width: unset;
+  }
+}
