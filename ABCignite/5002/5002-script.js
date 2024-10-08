@@ -59,6 +59,7 @@ let bodyLoad = setInterval(function () {
             document.querySelectorAll('#demo-modal .modal__container .mktoHasWidth.mktoField:not([type="checkbox"]):not([type="hidden"])').forEach(function (el) {
                 el.addEventListener('focus', function () {
                     el.closest('.mktoFormCol').classList.add('field-focus');
+                    checkError(el);
                 });
                 el.addEventListener('blur', function () {
                     el.closest('.mktoFormCol').classList.remove('field-focus');
