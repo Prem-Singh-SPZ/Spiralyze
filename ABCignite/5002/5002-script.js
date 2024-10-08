@@ -14,10 +14,18 @@ let bodyLoad = setInterval(function () {
 
             document.querySelectorAll('header .cta-item a').forEach(function (el) {
                 if (el.href.includes('ignite.abcfitness.com/pricing/')) {
-                    el.href = 'javascript:void(0)';
-                    el.addEventListener('click', function () {  
-                        document.querySelector('button[data-micromodal-open="demo-modal"]').click();
-                    });
+                    if (document.querySelector('.demo-modal.modal')) {
+                        el.href = 'javascript:void(0)';
+                        el.addEventListener('click', function () {
+                            if (document.querySelector('button[data-micromodal-open="demo-modal"]')) {
+                                document.querySelector('button[data-micromodal-open="demo-modal"]').click();
+                            }
+                            else {
+                                document.querySelector('.demo-modal.modal').classList.add('is-open');
+                                document.body.classList.add('is-modal-open');
+                            }
+                        });
+                    }
                 }
             });
 
@@ -116,6 +124,13 @@ let bodyLoad = setInterval(function () {
         window.addEventListener("click", function (e) {
             if (e.target.classList.contains("mktoButton")) {
                 checkError();
+            }
+
+            if (e.target.classList.contains("modal__close")) {
+                if (document.querySelector('.demo-modal.modal.is-open')) {
+                    document.querySelector('.demo-modal.modal').classList.remove('is-open');
+                    document.body.classList.remove('is-modal-open');
+                }
             }
         });
     }
