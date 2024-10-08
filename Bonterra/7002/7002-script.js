@@ -4,86 +4,108 @@ const imgUrl = '//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7002
 const triageData = [
     //Question 1 start
     {
-        questionHeading: "What is your organization type?",
+        titleQues: "What is your organization type?",
         answers: [
             {
-                answerFormValue: 'Nonprofit',
-                answerText: 'Nonprofit',
-                answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-leaf.svg'
+                formVal: 'Nonprofit',
+                copy: 'Nonprofit',
+                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-leaf.svg'
             },
             {
-                answerFormValue: 'Corporation',
-                answerText: 'Corporation',
-                answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-briefcase.svg'
+                formVal: 'Public Sector',
+                copy: 'Public Sector',
+                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-buildings.svg'
             },
             {
-                answerFormValue: 'Foundations',
-                answerText: 'Foundation/Grant maker',
-                answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-grant.svg'
+                formVal: 'Grantmaker',
+                copy: 'Grantmaker',
+                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-grant.svg'
             },
             {
-                answerFormValue: 'Government',
-                answerText: 'Public Agency',
-                answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-buildings.svg'
-            }
+                formVal: 'Corporation',
+                copy: 'Corporation',
+                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-briefcase.svg'
+            },
         ]
     },
+    {
+        answers: [
+            {
+                titleQues: "What product(s) are you interested in?",
+                title: 'Nonprofit',
+                childAns: [
+                    {
+                        formVal: 'Fundraising and Engagement',
+                        copy: 'Fundraising and Engagement',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-hand.svg'
+                    },
+                    {
+                        formVal: 'Volunteer Management',
+                        copy: 'Volunteer Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                    },
+                    {
+                        formVal: 'Giving Days',
+                        copy: 'Giving Days',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                    },
+                    {
+                        formVal: 'Customer Relationship Management',
+                        copy: 'Customer Relationship Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Payment Solutions',
+                        copy: 'Payment Solutions',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/dollar-minimalistic-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Other',
+                        copy: 'Other',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                    }
+                ]
+            },
+            {
+                titleQues: "What product(s) are you interested in?",
+                title: 'Grantmaker',
+                childAns: [
+                    {
+                        formVal: 'Grant Programs',
+                        copy: 'Grant Programs',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-hand.svg'
+                    },
+                    {
+                        formVal: 'Payment Solutions',
+                        copy: 'Payment Solutions',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                    },
+                    {
+                        formVal: 'Volunteer Management',
+                        copy: 'Volunteer Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                    },
+                    {
+                        formVal: 'Giving Days',
+                        copy: 'Giving Days',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                    },
+                    {
+                        formVal: 'Customer Relationship Management',
+                        copy: 'Customer Relationship Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Other',
+                        copy: 'Other',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                    }
+                ]
+            },
+        ]
+    }
     //Question 1 end
 ]
-
-const step2Data = {
-    answers: [
-        {
-            questionHeading: "What product(s) are you interested in?",
-            title: 'Nonprofit',
-            subAnswers: [
-                {
-                    answerFormValue: 'Fundraising and Engagement',
-                    answerText: 'Fundraising and Engagement',
-                    answerDesc: 'Automate donor and supporter outreach',
-                    answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-hand.svg'
-                },
-                {
-                    answerFormValue: 'Impact Management',
-                    answerText: 'Case Management',
-                    answerDesc: 'Optimize case management & demonstrate impact',
-                    answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
-                },
-                {
-                    answerFormValue: 'Strategic Philanthropy',
-                    answerText: 'Corporate Philanthropy',
-                    answerDesc: 'Manage grants, budgets, and employee giving',
-                    answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
-                }
-            ]
-        },
-        {
-            questionHeading: "What product(s) are you interested in?",
-            title: 'Nonprofit',
-            subAnswers: [
-                {
-                    answerFormValue: 'Fundraising and Engagement',
-                    answerText: 'Fundraising and Engagement',
-                    answerDesc: 'Automate donor and supporter outreach',
-                    answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-hand.svg'
-                },
-                {
-                    answerFormValue: 'Impact Management',
-                    answerText: 'Case Management',
-                    answerDesc: 'Optimize case management & demonstrate impact',
-                    answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
-                },
-                {
-                    answerFormValue: 'Strategic Philanthropy',
-                    answerText: 'Corporate Philanthropy',
-                    answerDesc: 'Manage grants, budgets, and employee giving',
-                    answerImage: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
-                }
-            ]
-        },
-    ]
-}
-
 
 const sectionSelector = `#HERO .container .block-wrapper .block-3 > .mktoForm .lpeCElement.Bonterra__Demo_Request__FE`;
 const position = "beforeend";
@@ -120,7 +142,7 @@ function createTest() {
     let urlPath = urlArr[urlArr.length - 1].split('.')[0];
     document.body.classList.add(urlPath);
 
-    addTriage(triageData, step2Data);
+    addTriage(triageData, formUniqueSelector);
 
     // Check if the user has already submitted the form in this session
     if (localStorage.getItem('formSubmitted')) {
@@ -268,46 +290,46 @@ function addTriage(triageData, step2Data) {
           <div class="questions-wrap">
               ${triageData.length !== 0 && triageData.map((item, index) => {
             return `${index == 0 ? `<div class="question-item question-${index + 1} ">
-                          <div class="question-heading">${item.questionHeading}</div>
+                          <div class="question-heading">${item.titleQues}</div>
                           <div class="answers-wrap">
                                   ${item.answers && item.answers.map((itemm, indexx) => {
-                const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
+                const sanitizedtitleQues = item.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
                 return `<div class="answer-item">
-                                                  <input type="radio" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
+                                                  <input type="radio" name="${sanitizedtitleQues}" value="${itemm.formVal}">
                                                   <div class="answer-content">
                                                           <div class="answer-checkbox"><span></span></div>
-                                                          ${itemm.answerImage && itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" class="answer-image" alt="${itemm.answerText}"/>` : ``}
-                                                          <div class="answer-text">${itemm.answerText}</div>
+                                                          ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
+                                                          <div class="answer-text">${itemm.copy}</div>
                                                           ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
                                                   </div>
                                           </div>`;
             }).join('')}
                                   <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
                           </div>
-                          <div class="next-question">Next</div>
-                  </div>` : ``}`;
-        }).join('')}
-
-         ${step2Data.answers.length !== 0 && step2Data.answers.map((item, index) => {
-            console.log(item);
-            return `${index !== -1 ? `<div class="question-item question-${index + 2} ${item.title}">
-                          <div class="question-heading">${item.questionHeading}</div>
-                          <div class="answers-wrap">
-                                  ${item.subAnswers && item.subAnswers.map((itemm, indexx) => {
-                const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
-                return `<div class="answer-item">
-                                                  <input type="checkbox" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
-                                                  <div class="answer-content">
-                                                          <div class="answer-checkbox"><span></span></div>
-                                                          ${itemm.answerImage && itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" class="answer-image" alt="${itemm.answerText}"/>` : ``}
-                                                          <div class="answer-text">${itemm.answerText}</div>
-                                                          ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
-                                                  </div>
-                                          </div>`;
+                          <div class="next-question step-1-go">Next</div>
+                  </div>` : `${item.answers && item.answers.map((ans, ind) => {
+                return `
+                  <div class="question-item question-${ind + 2} ${ans.title} spz-hidden">
+                                                            <div class="question-heading">${ans.titleQues}</div>
+                                                            <div class="answers-wrap">
+                                                                    ${ans.childAns && ans.childAns.map((itemm, indexx) => {
+                    const sanitizedtitleQues = ans.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
+                    return `<div class="answer-item">
+                                <input type="checkbox" name="${sanitizedtitleQues}" value="${itemm.formVal}">
+                                <div class="answer-content">
+                                        <div class="answer-checkbox"><span></span></div>
+                                        ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
+                                        <div class="answer-text">${itemm.copy}</div>
+                                        ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
+                                </div>
+                        </div>`;
+                }).join('')}
+                                                            </div>
+                                                            <div class="next-question">Next</div>
+                                                    </div> `;
             }).join('')}
-                          </div>
-                          <div class="next-question">Next</div>
-                  </div>` : ``}`;
+                                                    
+                                                    `}`;
         }).join('')}
               <div class="question-form spz-hidden spz-form-wrap"></div>
           </div>
@@ -336,32 +358,6 @@ function addTriage(triageData, step2Data) {
     });
 }
 
-//create and return HTML template for triage section
-function step1Html(triageData) {
-    let htmlis = `${triageData.length !== 0 && triageData.forEach(element, index => {
-        `<div class="question-item question-${index + 1} ">
-                          <div class="question-heading">${item.questionHeading}</div>
-                          <div class="answers-wrap">
-                          `+ element.array.forEach(element => {
-            `<div class="answer-item">
-                                                  <input type="radio" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
-                                                  <div class="answer-content">
-                                                          <div class="answer-checkbox"><span></span></div>
-                                                          ${itemm.answerImage && itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" class="answer-image" alt="${itemm.answerText}"/>` : ``}
-                                                          <div class="answer-text">${itemm.answerText}</div>
-                                                          ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
-                                                  </div>
-                                          </div>`
-        }); +`
-                          <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
-                          </div>
-                          <div class="next-question">Next</div>
-                  </div>`
-    })}`;
-    return htmlis;
-}
-
-
 // Function to pre-fill form select fields based on stored values
 const prefillSelectFields = () => {
     ['Industry', 'capability'].forEach(field => {
@@ -375,14 +371,18 @@ const prefillSelectFields = () => {
 
 //Handle next question navigation and validation
 window.addEventListener("click", function (e) {
-    if (e.target.classList.contains("next-question")) {
+    if (e.target.classList.contains("step-1-go")) {
         const stepContent = e.target.closest('.question-item').querySelector('.answers-wrap');
         if (Array.from(stepContent.querySelectorAll('input')).some(checkbox => checkbox.checked)) {
             e.target.parentElement.classList.add('spz-hidden');
-            e.target.parentElement.nextElementSibling.classList.remove('spz-hidden');
             const active = document.querySelector('.progress-item.active');
             active.classList.replace('active', 'completed');
             active.nextElementSibling.classList.add('active');
+
+            //get the selected radio value
+            const next = e.target.parentElement.querySelector('input[type="radio"]:checked').value;
+            this.document.querySelector(`.questions-wrap  .` + next + ``).classList.remove('spz-hidden');
+
             // Call prefill function to ensure form fields are filled when step is visible
             prefillSelectFields();
         } else {
@@ -409,11 +409,6 @@ function waitForElm(selector) {
 
 function preloadImages() {
     document.querySelector('head').insertAdjacentHTML("afterbegin", `
-        < link rel = "preload" href = "${imgUrl}radio-check.svg" as="image" >
-            <link rel="preload" href="${imgUrl}checkbox-un.svg" as="image">
-                <link rel="preload" href="${imgUrl}checkbox-check.svg" as="image">
-                    <link rel="preload" href="${imgUrl}radio-hover.svg" as="image">
-                        <link rel="preload" href="${imgUrl}checkbox-hover.svg" as="image">
-                            `
+        < link rel = "preload" href = "${imgUrl}radio-check.svg" as="image" > `
     );
 }

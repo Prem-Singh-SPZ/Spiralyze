@@ -51,6 +51,10 @@ window.addEventListener('click', function (e) {
     if (e.target.classList.contains('hero-close-form')) {
         document.body.classList.remove('spz-show-modal');
     }
+    
+    if (e.target.classList.contains('mktoForm') && e.target.getAttribute('id') == 'HERO-Block3-Form') {
+        document.body.classList.remove('spz-show-modal');
+    }
 
     if (event.target.getAttribute('href') == '#form') {
         event.preventDefault();
