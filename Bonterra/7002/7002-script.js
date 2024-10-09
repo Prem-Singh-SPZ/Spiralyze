@@ -455,8 +455,6 @@ function addTriage() {
                                 //store the updated triageData in session storage
                             }
 
-
-
                             if (ans.childAns) {
                                 ans.childAns.forEach((subans, ind) => {
                                     if (subans.formVal == e.target.value) {
