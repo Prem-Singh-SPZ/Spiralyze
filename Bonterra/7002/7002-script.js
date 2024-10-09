@@ -9,7 +9,8 @@ const triageData = [
             {
                 formVal: 'Nonprofit',
                 copy: 'Nonprofit',
-                image: imgUrl + '/v1724679709/bonterra/1002/icon-leaf.svg'
+                image: imgUrl + '/v1724679709/bonterra/1002/icon-leaf.svg',
+                isSelected: false
             },
             {
                 formVal: 'Government',
@@ -371,7 +372,7 @@ function addTriage(triageData) {
                                   ${item.answers && item.answers.map((itemm, indexx) => {
                 const sanitizedtitleQues = item.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
                 return `<div class="answer-item">
-                                                  <input type="radio" name="${sanitizedtitleQues}" value="${itemm.formVal}">
+                                                  <input type="radio" name="${sanitizedtitleQues}" value="${itemm.formVal}" ${itemm.isSelected && itemm.isSelected == true ? `checked` : ``}>
                                                   <div class="answer-content">
                                                           <div class="answer-radio"><span></span></div>
                                                           ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
@@ -429,14 +430,29 @@ function addTriage(triageData) {
         // Store selected values in local storage and handle error state removal
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
+                // item.addEventListener('click', e => {
+                //     //create a new array and push the selected values
+                //     const selectedValues = Array.from(document.querySelectorAll(`.answer-item input[name="${name}"]:checked`)).map(input => input.value);
+                //     if (selectedValues.length) {
+                //         //remove the duplicate values from the array and store the unique values
+                //         const uniqueValues = [...new Set(selectedValues)];
+                //         localStorage.setItem(name, uniqueValues.join(','));
+                //     }
+
+                //     const stepContent = e.target.closest('.answers-wrap');
+                //     if (stepContent?.classList.contains('error')) stepContent.classList.remove('error');
+                // });
+
                 item.addEventListener('change', e => {
-                    // localStorage.setItem(name, e.target.value);
                     //create a new array and push the selected values
                     const selectedValues = Array.from(document.querySelectorAll(`.answer-item input[name="${name}"]:checked`)).map(input => input.value);
                     if (selectedValues.length) {
-                        // localStorage.setItem(name, selectedValues.join(','));
-                        //store the selected values as string in local storage and don't store same string twice
-                        localStorage.setItem(name, selectedValues.join(','));
+                        //remove the unchecked value from the local storage
+                        // const uncheckedValue = e.target.checked ? '' : e.target.value;
+                        // const savedValue = localStorage.getItem(name);
+                        // const savedValues = savedValue ? savedValue.split(',') : [];
+                        // const updatedValues = savedValues.filter(value => value !== uncheckedValue);
+                        // localStorage.setItem(name, updatedValues.join(','));
                     }
 
                     const stepContent = e.target.closest('.answers-wrap');
@@ -453,7 +469,6 @@ const prefillSelectFields = () => {
         const value = localStorage.getItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in');
         if (value) {
             const select = document.querySelector(`select[name = "${field}"]`);
-            console.log(select, value);
             if (select) select.value = value;
         }
     });
