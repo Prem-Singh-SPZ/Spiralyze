@@ -1,3 +1,7 @@
+body.spz-7002 .mktoMobileShow .mktoForm,
+body.spz-7002 .mktoForm * {
+  padding: 0;
+}
 body.spz-7002 #HERO {
   background: #f6f5fb;
   border: none;
@@ -8,6 +12,7 @@ body.spz-7002 #HERO .container {
 @media (max-width: 1199.98px) {
   body.spz-7002 #HERO .container {
     max-width: 734px;
+    padding-bottom: 24px !important;
   }
 }
 @media (max-width: 767.98px) {
@@ -48,6 +53,13 @@ body.spz-7002 #HERO .container .block-wrapper .block-3 {
   max-width: 630px;
   margin-left: auto;
 }
+@media screen and (max-width: 1199.98px) {
+  body.spz-7002 #HERO .container .block-wrapper .block-3 {
+    margin-left: auto;
+    margin-right: auto;
+    max-width: 100%;
+  }
+}
 body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoText {
   display: none !important;
 }
@@ -59,13 +71,6 @@ body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm {
     margin-left: auto;
     margin-right: auto;
     max-width: 704px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm {
-    padding: 26px 7px 32px;
-    -webkit-box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
-            box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
   }
 }
 body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-title {
@@ -686,12 +691,6 @@ input:-webkit-autofill:active {
 }
 
 @media (max-width: 1199.98px) and (min-width: 1024px) {
-  .spz-7002 .spz-triage-wrap {
-    margin-top: -210px;
-  }
-  .spz-7002 .spz-triage-wrap .questions-wrap {
-    padding: 0 24px 40px;
-  }
   .spz-7002 .spz-triage-wrap .answers-wrap .answer-item .answer-content {
     padding: 15px 8px;
   }
@@ -701,7 +700,7 @@ input:-webkit-autofill:active {
 }
 @media (max-width: 1023.98px) {
   .spz-7002 .spz-triage-wrap {
-    max-width: 540px;
+    max-width: 688px;
     margin: 47px auto 0;
     -webkit-box-shadow: 0px 4px 32px 0px rgba(40, 14, 67, 0.12);
             box-shadow: 0px 4px 32px 0px rgba(40, 14, 67, 0.12);
