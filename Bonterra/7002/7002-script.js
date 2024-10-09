@@ -423,10 +423,7 @@ function addTriage() {
     waitForElm('.answer-item input[name="What-is-your-organization-type"]').then(function () {
         // Pre-check options for step 1 and step 2
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
-
-
             //get the selected values from the triageData stored in session storage
-            // const triageData = JSON.parse(sessionStorage.getItem('triageData'));
             triageData.forEach((item, index) => {
                 item.answers.forEach((ans, ind) => {
                     if (ans.isSelected) {
@@ -440,7 +437,6 @@ function addTriage() {
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
                 item.addEventListener('click', e => {
-                    console.log('e.target.value ' + e.target.value);
                     //set the selected values isSelected to true in the triageData stored in session storage
                     triageData.forEach((item, index) => {
                         item.answers.forEach((ans, ind) => {
