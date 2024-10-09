@@ -437,19 +437,30 @@ function addTriage() {
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
                 item.addEventListener('click', e => {
+                    console.log('e.target.value ' + e.target.value);
                     //set the selected values isSelected to true in the triageData stored in session storage
                     triageData.forEach((item, index) => {
                         item.answers.forEach((ans, ind) => {
                             if (ans.formVal == e.target.value) {
                                 ans.isSelected = e.target.checked;
+                                //set false to all other options
+                                if (ans.isSelected) {
+                                    item.answers.forEach((anss, indd) => {
+                                        if (anss.formVal != e.target.value) {
+                                            anss.isSelected = false;
+                                            sessionStorage.setItem('triageData', JSON.stringify(triageData));
+                                        }
+                                    });
+                                }
                                 //store the updated triageData in session storage
-                                sessionStorage.setItem('triageData', JSON.stringify(triageData));
                             }
 
-                            if (ans.childAns){
-                                ans.childAns.forEach((ans, ind) => {
-                                    if (ans.formVal == e.target.value) {
-                                        ans.isSelected = e.target.checked;
+
+
+                            if (ans.childAns) {
+                                ans.childAns.forEach((subans, ind) => {
+                                    if (subans.formVal == e.target.value) {
+                                        subans.isSelected = e.target.checked;
                                         //store the updated triageData in session storage
                                         sessionStorage.setItem('triageData', JSON.stringify(triageData));
                                     }
