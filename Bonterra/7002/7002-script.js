@@ -211,7 +211,7 @@ function createTest() {
         });
     });
 
-    addTriage(triageData, formUniqueSelector);
+    addTriage(triageData);
 
     // Check if the user has already submitted the form in this session
     if (localStorage.getItem('formSubmitted')) {
@@ -352,7 +352,7 @@ function checkError(elem) {
     }, 1000);
 }
 
-function addTriage(triageData, step2Data) {
+function addTriage(triageData) {
     //Append triage section
     waitForElm(sectionSelector).then(function () {
         document.querySelector(sectionSelector).insertAdjacentHTML('beforeend', `<div class="spz-triage-wrap">
@@ -371,7 +371,7 @@ function addTriage(triageData, step2Data) {
                 return `<div class="answer-item">
                                                   <input type="radio" name="${sanitizedtitleQues}" value="${itemm.formVal}">
                                                   <div class="answer-content">
-                                                          <div class="answer-checkbox"><span></span></div>
+                                                          <div class="answer-radio"><span></span></div>
                                                           ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
                                                           <div class="answer-text">${itemm.copy}</div>
                                                           ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
@@ -391,7 +391,9 @@ function addTriage(triageData, step2Data) {
                     return `<div class="answer-item">
                                 <input type="checkbox" name="${sanitizedtitleQues}" value="${itemm.formVal}">
                                 <div class="answer-content">
-                                        <div class="answer-checkbox"><span></span></div>
+                                        <div class="answer-checkbox"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="white"/>
+</svg></span></div>
                                         ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
                                         <div class="answer-text">${itemm.copy}</div>
                                         ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
@@ -472,11 +474,6 @@ window.addEventListener("click", function (e) {
         active.classList.replace('active', 'completed');
         active.nextElementSibling.classList.add('active');
         this.document.querySelector('.question-form').classList.remove('spz-hidden');
-        // const stepContent = e.target.closest('.question-item').querySelector('.answers-wrap');
-        // if (Array.from(stepContent.querySelectorAll('input')).some(checkbox => checkbox.checked)) {
-        // } else {
-        //     // stepContent.classList.add('error');
-        // }
     }
 });
 
