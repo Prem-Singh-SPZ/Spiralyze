@@ -1,7 +1,7 @@
 const imgUrl = '//res.cloudinary.com/spiralyze/image/upload';
 
 // Form Container (Parent Element)
-const triageData = [
+let triageData = [
     //Question 1 start
     {
         titleQues: "What is your organization type?",
@@ -183,6 +183,11 @@ const triageData = [
 
 const sectionSelector = `#HERO .container .block-wrapper .block-3 > .mktoForm .lpeCElement.Bonterra__Demo_Request__FE`;
 const formUniqueSelector = `body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm .formSpan`;
+//store triageData json in session storage
+let sesData = sessionStorage.getItem('triageData');
+if (sesData) {
+    triageData = JSON.parse(sesData);
+}
 
 let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
@@ -214,7 +219,7 @@ function createTest() {
         document.querySelector('#HERO .container .block-wrapper .block-2 > .mktoText > div .stats .stats__item:last-child .stats__item-footer img').setAttribute('src', 'https://488-ILM-190.mktoweb.com/rs/488-ILM-190/images/handshake-icon-periwinkle.webp');
     });
 
-    addTriage(triageData);
+    addTriage();
 
     // Check if the user has already submitted the form in this session
     if (localStorage.getItem('formSubmitted')) {
@@ -355,7 +360,7 @@ function checkError(elem) {
     }, 1000);
 }
 
-function addTriage(triageData) {
+function addTriage() {
     //Append triage section
     waitForElm(sectionSelector).then(function () {
         document.querySelector(sectionSelector).insertAdjacentHTML('beforeend', `<div class="spz-triage-wrap">
@@ -392,7 +397,7 @@ function addTriage(triageData) {
                                                                     ${ans.childAns && ans.childAns.map((itemm, indexx) => {
                     const sanitizedtitleQues = ans.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
                     return `<div class="answer-item">
-                                <input type="checkbox" name="${sanitizedtitleQues}" value="${itemm.formVal}">
+                                <input type="checkbox" name="${sanitizedtitleQues}" value="${itemm.formVal}" ${itemm.isSelected && itemm.isSelected == true ? `checked` : ``}>
                                 <div class="answer-content">
                                         <div class="answer-checkbox"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="white"/>
@@ -418,42 +423,44 @@ function addTriage(triageData) {
     waitForElm('.answer-item input[name="What-is-your-organization-type"]').then(function () {
         // Pre-check options for step 1 and step 2
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
-            const savedValue = localStorage.getItem(name);
-            //fetch the selected values as array FROM local storage
-            const selectedValues = savedValue ? savedValue.split(',') : [];
-            selectedValues.forEach(value => {
-                document.querySelectorAll(`.answer-item input[name="${name}"][value="${value}"]`).forEach(input => input.checked = true);
-                // if (inputToCheck) inputToCheck.checked = true;
+
+
+            //get the selected values from the triageData stored in session storage
+            // const triageData = JSON.parse(sessionStorage.getItem('triageData'));
+            triageData.forEach((item, index) => {
+                item.answers.forEach((ans, ind) => {
+                    if (ans.isSelected) {
+                        document.querySelectorAll(`.answer-item input[name="${name}"][value="${ans.formVal}"]`).forEach(input => input.checked = true);
+                    }
+                });
             });
         });
 
         // Store selected values in local storage and handle error state removal
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
-                // item.addEventListener('click', e => {
-                //     //create a new array and push the selected values
-                //     const selectedValues = Array.from(document.querySelectorAll(`.answer-item input[name="${name}"]:checked`)).map(input => input.value);
-                //     if (selectedValues.length) {
-                //         //remove the duplicate values from the array and store the unique values
-                //         const uniqueValues = [...new Set(selectedValues)];
-                //         localStorage.setItem(name, uniqueValues.join(','));
-                //     }
+                item.addEventListener('click', e => {
+                    console.log('e.target.value ' + e.target.value);
+                    //set the selected values isSelected to true in the triageData stored in session storage
+                    triageData.forEach((item, index) => {
+                        item.answers.forEach((ans, ind) => {
+                            if (ans.formVal == e.target.value) {
+                                ans.isSelected = e.target.checked;
+                                //store the updated triageData in session storage
+                                sessionStorage.setItem('triageData', JSON.stringify(triageData));
+                            }
 
-                //     const stepContent = e.target.closest('.answers-wrap');
-                //     if (stepContent?.classList.contains('error')) stepContent.classList.remove('error');
-                // });
-
-                item.addEventListener('change', e => {
-                    //create a new array and push the selected values
-                    const selectedValues = Array.from(document.querySelectorAll(`.answer-item input[name="${name}"]:checked`)).map(input => input.value);
-                    if (selectedValues.length) {
-                        //remove the unchecked value from the local storage
-                        // const uncheckedValue = e.target.checked ? '' : e.target.value;
-                        // const savedValue = localStorage.getItem(name);
-                        // const savedValues = savedValue ? savedValue.split(',') : [];
-                        // const updatedValues = savedValues.filter(value => value !== uncheckedValue);
-                        // localStorage.setItem(name, updatedValues.join(','));
-                    }
+                            if (ans.childAns){
+                                ans.childAns.forEach((ans, ind) => {
+                                    if (ans.formVal == e.target.value) {
+                                        ans.isSelected = e.target.checked;
+                                        //store the updated triageData in session storage
+                                        sessionStorage.setItem('triageData', JSON.stringify(triageData));
+                                    }
+                                });
+                            }
+                        });
+                    });
 
                     const stepContent = e.target.closest('.answers-wrap');
                     if (stepContent?.classList.contains('error')) stepContent.classList.remove('error');
