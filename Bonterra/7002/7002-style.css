@@ -3,21 +3,15 @@ body.spz-7002 #HERO {
   border: none;
 }
 body.spz-7002 #HERO .container {
-  max-width: 1270px;
-  padding-top: 62px;
-  padding-bottom: 96px !important;
+  max-width: 1310px;
 }
 @media (max-width: 1199.98px) {
   body.spz-7002 #HERO .container {
     max-width: 734px;
-    padding-top: 48px;
-    padding-bottom: 68px !important;
   }
 }
 @media (max-width: 767.98px) {
   body.spz-7002 #HERO .container {
-    padding-top: 28px;
-    padding-bottom: 40px !important;
     max-width: 510px;
   }
 }
@@ -37,8 +31,10 @@ body.spz-7002 #HERO .container .block-wrapper .block-4 {
   display: none !important;
 }
 body.spz-7002 #HERO .container .block-wrapper .block-2 {
-  max-width: 588px;
-  margin-right: 24px;
+  max-width: 696px;
+  margin-right: 15px;
+  padding-left: 0;
+  padding-right: 0;
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-7002 #HERO .container .block-wrapper .block-2 {
@@ -48,8 +44,15 @@ body.spz-7002 #HERO .container .block-wrapper .block-2 {
 body.spz-7002 #HERO .container .block-wrapper .block-2 > .mktoForm {
   display: none !important;
 }
+body.spz-7002 #HERO .container .block-wrapper .block-3 {
+  max-width: 630px;
+  margin-left: auto;
+}
 body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoText {
   display: none !important;
+}
+body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm {
+  margin-left: auto;
 }
 @media screen and (max-width: 1199.98px) {
   body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm {
@@ -187,7 +190,7 @@ body.spz-7002 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap selec
   background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
   background-size: 24px;
   background-repeat: no-repeat;
-  background-position: calc(100% - 13px) 15px;
+  background-position: calc(100% - 8px) 16px;
 }
 body.spz-7002 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.hover .mktoLabel {
   background: #ffffff !important;
@@ -320,7 +323,7 @@ body.spz-7002 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   color: #381360 !important;
   text-align: center;
   font-family: "Noto Sans", sans-serif;
-  font-size: 18px !important;
+  font-size: 16px !important;
   font-weight: 700 !important;
   line-height: 24px !important;
 }
@@ -354,7 +357,8 @@ input:-webkit-autofill:active {
 
 .spz-7002 .spz-triage-wrap {
   width: 100%;
-  max-width: 600px;
+  max-width: 584px;
+  margin-top: 24px;
   background: #fff;
   -webkit-box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.1490196078);
           box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.1490196078);
@@ -407,6 +411,7 @@ input:-webkit-autofill:active {
   letter-spacing: 0.8px;
   text-transform: uppercase;
   margin: 34px auto 15px;
+  padding: 0;
 }
 .spz-7002 .spz-triage-wrap .questions-wrap {
   display: -webkit-box;
@@ -418,9 +423,9 @@ input:-webkit-autofill:active {
       -ms-flex-pack: center;
           justify-content: center;
   width: 100%;
-  padding: 0 32px 40px;
 }
 .spz-7002 .spz-triage-wrap .questions-wrap .question-item {
+  padding: 0 24px 40px;
   width: 100%;
 }
 .spz-7002 .spz-triage-wrap .questions-wrap .question-heading {
@@ -479,7 +484,7 @@ input:-webkit-autofill:active {
   color: #381360;
   text-align: center;
   font-family: "Noto Sans", sans-serif;
-  font-size: 18px;
+  font-size: 16px;
   font-style: normal;
   font-weight: 700;
   line-height: 24px;
@@ -543,7 +548,8 @@ input:-webkit-autofill:active {
   background: #f5f5ff;
   border: 1px solid #381360;
 }
-.spz-7002 .spz-triage-wrap .answers-wrap .answer-item input:checked + .answer-content .answer-radio span, .spz-7002 .spz-triage-wrap .answers-wrap .answer-item input:checked + .answer-content .answer-checkbox span {
+.spz-7002 .spz-triage-wrap .answers-wrap .answer-item input:checked + .answer-content .answer-radio span,
+.spz-7002 .spz-triage-wrap .answers-wrap .answer-item input:checked + .answer-content .answer-checkbox span {
   opacity: 1;
 }
 .spz-7002 .spz-triage-wrap .answers-wrap .answer-item .answer-content {
@@ -562,7 +568,7 @@ input:-webkit-autofill:active {
   -webkit-box-pack: start;
       -ms-flex-pack: start;
           justify-content: flex-start;
-  padding: 15px 16px;
+  padding: 15px 4px;
   width: 100%;
   height: 100%;
   background: #fff;
@@ -579,6 +585,7 @@ input:-webkit-autofill:active {
   -o-object-fit: contain;
      object-fit: contain;
   margin-bottom: 16px;
+  padding: 0;
 }
 .spz-7002 .spz-triage-wrap .answers-wrap .answer-item .answer-text {
   color: #381360;
@@ -588,7 +595,7 @@ input:-webkit-autofill:active {
   font-style: normal;
   font-weight: 600;
   line-height: 20px;
-  padding: 0 5px;
+  padding: 0;
 }
 .spz-7002 .spz-triage-wrap .answers-wrap .answer-item .answer-desc {
   color: #685c75;
@@ -666,6 +673,9 @@ input:-webkit-autofill:active {
       -ms-flex-pack: center;
           justify-content: center;
   opacity: 0;
+}
+.spz-7002 .spz-triage-wrap .question-form {
+  padding: 14px 14px 40px;
 }
 
 .spz-7002.repeat-user .spz-triage-wrap .question-item {

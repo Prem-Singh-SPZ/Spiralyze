@@ -209,6 +209,8 @@ function createTest() {
             document.querySelector('.question-form').appendChild(document.querySelector(formUniqueSelector));
             prefillSelectFields();
         });
+
+        document.querySelector('#HERO .container .block-wrapper .block-2 > .mktoText > div .stats .stats__item:last-child .stats__item-footer img').setAttribute('src', 'https://488-ILM-190.mktoweb.com/rs/488-ILM-190/images/handshake-icon-periwinkle.webp');
     });
 
     addTriage(triageData);
