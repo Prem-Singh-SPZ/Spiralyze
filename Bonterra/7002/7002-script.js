@@ -418,17 +418,27 @@ function addTriage(triageData) {
         // Pre-check options for step 1 and step 2
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             const savedValue = localStorage.getItem(name);
-            if (savedValue) {
-                const inputToCheck = document.querySelector(`.answer-item input[name="${name}"][value="${savedValue}"]`);
-                if (inputToCheck) inputToCheck.checked = true;
-            }
+            //fetch the selected values as array FROM local storage
+            const selectedValues = savedValue ? savedValue.split(',') : [];
+            selectedValues.forEach(value => {
+                document.querySelectorAll(`.answer-item input[name="${name}"][value="${value}"]`).forEach(input => input.checked = true);
+                // if (inputToCheck) inputToCheck.checked = true;
+            });
         });
 
         // Store selected values in local storage and handle error state removal
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
                 item.addEventListener('change', e => {
-                    localStorage.setItem(name, e.target.value);
+                    // localStorage.setItem(name, e.target.value);
+                    //create a new array and push the selected values
+                    const selectedValues = Array.from(document.querySelectorAll(`.answer-item input[name="${name}"]:checked`)).map(input => input.value);
+                    if (selectedValues.length) {
+                        // localStorage.setItem(name, selectedValues.join(','));
+                        //store the selected values as string in local storage and don't store same string twice
+                        localStorage.setItem(name, selectedValues.join(','));
+                    }
+
                     const stepContent = e.target.closest('.answers-wrap');
                     if (stepContent?.classList.contains('error')) stepContent.classList.remove('error');
                 });
