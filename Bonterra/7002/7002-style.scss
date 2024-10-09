@@ -6,7 +6,7 @@ $red: #f2342f;
 
 body.spz-7002 {
   #HERO {
-    background: #f5f5ff;
+    background: #f6f5fb;
     border: none;
 
     .container {
@@ -63,18 +63,6 @@ body.spz-7002 {
           }
 
           > .mktoForm {
-            background: linear-gradient(
-              180deg,
-              #fff 68.91%,
-              rgba(255, 255, 255, 0.96) 100%
-            );
-            box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
-            max-width: 600px;
-            width: 100%;
-            padding: 42px 30px 40px;
-            margin-left: auto;
-            margin-top: 1px;
-
             @media screen and (max-width: 1199.98px) {
               margin-left: auto;
               margin-right: auto;
@@ -123,10 +111,6 @@ body.spz-7002 {
       padding: 0;
       gap: 0;
       background: transparent !important;
-
-      .spz-hidden {
-        display: none !important;
-      }
 
       .mktoFormRow {
         padding: 0 10px !important;
@@ -349,7 +333,7 @@ body.spz-7002 {
             align-items: center;
             justify-content: center;
             width: 100% !important;
-            max-width: 250px;
+            max-width: calc(100% - 20px);
             height: 56px;
             background: #99a7ff !important;
             border: none !important;
@@ -407,26 +391,15 @@ input {
     width: 100%;
     max-width: 600px;
     background: #fff;
-    -webkit-box-shadow: 0px 20px 80px 0px #280e4326;
     box-shadow: 0px 20px 80px 0px #280e4326;
-    display: -webkit-box;
-    display: -ms-flexbox;
     display: flex;
-    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
     justify-content: center;
     .questions-progress {
       width: 100%;
       background: #f0f2ff;
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
       padding: 24px;
       .progress-item {
@@ -435,8 +408,6 @@ input {
         border: 1px solid #99a7ff;
         border-radius: 100px;
         margin: 0 6px;
-        -webkit-transition: all 0.5s ease-in-out;
-        -o-transition: all 0.5s ease-in-out;
         transition: all 0.5s ease-in-out;
       }
       .progress-item.active {
@@ -460,13 +431,8 @@ input {
       margin: 34px auto 15px;
     }
     .questions-wrap {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: center;
-      -ms-flex-pack: center;
       justify-content: center;
       width: 100%;
       padding: 0 32px 40px;
@@ -484,13 +450,8 @@ input {
         margin: 0 auto;
       }
       .step-error {
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-align: start;
-        -ms-flex-align: start;
         align-items: flex-start;
         width: 100%;
         color: $red;
@@ -501,7 +462,6 @@ input {
         line-height: 16px;
         img {
           width: 12px;
-          -o-object-fit: contain;
           object-fit: contain;
           height: auto;
           margin-right: 4px;
@@ -517,16 +477,9 @@ input {
       .next-question {
         width: 100%;
         height: 56px;
-        display: -webkit-box;
-        display: -ms-flexbox;
         display: flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         background: #99a7ff;
         border: 1px solid #99a7ff;
@@ -538,8 +491,6 @@ input {
         font-weight: 700;
         line-height: 24px;
         cursor: pointer;
-        -webkit-transition: all 0.5s;
-        -o-transition: all 0.5s;
         transition: all 0.5s;
         &:hover {
           outline: 1px solid #447f19;
@@ -553,33 +504,20 @@ input {
       display: none;
     }
     .answers-wrap {
-      display: -webkit-box;
-      display: -ms-flexbox;
       display: flex;
-      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
       justify-content: space-between;
       width: 100%;
       margin: 31px auto 20px;
       .answer-item {
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
         display: inline-flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         width: calc(50% - 6px);
         margin-bottom: 12px;
         position: relative;
         cursor: pointer;
-        -webkit-box-sizing: border-box;
         box-sizing: border-box;
         input {
           position: absolute;
@@ -607,28 +545,16 @@ input {
           }
         }
         .answer-content {
-          display: -webkit-inline-box;
-          display: -ms-inline-flexbox;
           display: inline-flex;
-          -ms-flex-wrap: wrap;
           flex-wrap: wrap;
-          -webkit-box-orient: vertical;
-          -webkit-box-direction: normal;
-          -ms-flex-flow: column;
           flex-flow: column;
-          -webkit-box-align: center;
-          -ms-flex-align: center;
           align-items: center;
-          -webkit-box-pack: start;
-          -ms-flex-pack: start;
           justify-content: flex-start;
           padding: 15px 16px;
           width: 100%;
           height: 100%;
           background: #fff;
           border: 1px solid #dadada;
-          -webkit-transition: all 0.5s;
-          -o-transition: all 0.5s;
           transition: all 0.5s;
         }
         &:hover {
@@ -639,7 +565,6 @@ input {
         .answer-image {
           width: 40px;
           height: 40px;
-          -o-object-fit: contain;
           object-fit: contain;
           margin-bottom: 16px;
         }
@@ -665,7 +590,10 @@ input {
         }
       }
     }
-    .question-2 {
+    .question-2,
+    .question-3,
+    .question-4,
+    .question-5 {
       .answers-wrap {
         .answer-item {
           width: calc(100% / 3 - 8px);
@@ -681,16 +609,9 @@ input {
         height: 20px;
         border: 1px solid $purple;
         border-radius: 999px;
-        display: -webkit-inline-box;
-        display: -ms-inline-flexbox;
         display: inline-flex;
-        -ms-flex-wrap: wrap;
         flex-wrap: wrap;
-        -webkit-box-align: center;
-        -ms-flex-align: center;
         align-items: center;
-        -webkit-box-pack: center;
-        -ms-flex-pack: center;
         justify-content: center;
         span {
           width: 10px;
@@ -699,43 +620,6 @@ input {
           border-radius: 999px;
           opacity: 0;
         }
-      }
-    }
-  }
-  .spz-Leading-Logos {
-    margin-top: -17px;
-    .spz-heading {
-      color: $purple;
-      text-align: center;
-      font-family: $grotesk;
-      font-size: 20px;
-      font-style: normal;
-      font-weight: 800;
-      line-height: 1.6;
-      letter-spacing: normal;
-      text-transform: uppercase;
-      margin-bottom: 19px;
-    }
-    .spz-logos {
-      display: -webkit-box;
-      display: -ms-flexbox;
-      display: flex;
-      -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-      -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-      -webkit-box-align: center;
-      -ms-flex-align: center;
-      align-items: center;
-      width: 100%;
-      max-width: 1200px;
-      margin: 0 auto;
-      .answer-image {
-        width: auto;
-        height: 80px;
-        -o-object-fit: contain;
-        object-fit: contain;
       }
     }
   }
@@ -752,17 +636,6 @@ input {
 }
 @media (max-width: 1199.98px) and (min-width: 1024px) {
   .spz-7002 {
-    .main-content {
-      .layout {
-        .layout__region {
-          .block[class*="widgets1page"] {
-            [data-columns][data-columns="2"] {
-              grid-gap: 20px;
-            }
-          }
-        }
-      }
-    }
     .spz-triage-wrap {
       margin-top: -210px;
       .questions-wrap {
@@ -785,70 +658,10 @@ input {
         }
       }
     }
-    .hero--basic-hero {
-      .section-title {
-        width: 45%;
-      }
-    }
   }
 }
 @media (max-width: 1023.98px) {
   .spz-7002 {
-    .main-content {
-      .layout {
-        .layout__region {
-          .block[class*="widgets1page"] {
-            [data-columns][data-columns="2"] {
-              -ms-grid-columns: auto;
-              grid-template-columns: auto;
-              grid-gap: 0;
-            }
-            .spz-Leading-Logos {
-              display: block;
-              margin-top: -6px;
-              .spz-Leading-Logos-wrapper.container {
-                width: 100%;
-                max-width: 100%;
-              }
-            }
-            + {
-              .spz-Leading-Logos {
-                display: none;
-              }
-            }
-          }
-        }
-      }
-    }
-    .spz-Leading-Logos {
-      .spz-logos {
-        max-width: 611px;
-        .answer-image {
-          &:nth-child(01) {
-            width: 128px;
-          }
-          &:nth-child(02) {
-            width: 161px;
-          }
-          &:nth-child(03) {
-            width: 109px;
-          }
-          &:nth-child(04) {
-            width: 102px;
-          }
-          &:nth-child(05) {
-            width: 121px;
-          }
-          &:nth-child(06) {
-            width: 150px;
-          }
-          margin: 0 35.5px;
-        }
-      }
-      .spz-heading {
-        margin-bottom: 20px;
-      }
-    }
     .spz-triage-wrap {
       max-width: 540px;
       margin: 47px auto 0;
@@ -868,57 +681,6 @@ input {
 }
 @media (max-width: 767.98px) {
   .spz-7002 {
-    .main-content {
-      .layout {
-        .layout__region {
-          .block[class*="widgets1page"] {
-            .spz-Leading-Logos {
-              .spz-Leading-Logos-wrapper.container {
-                display: -webkit-box;
-                display: -ms-flexbox;
-                display: flex;
-                -ms-flex-wrap: wrap;
-                flex-wrap: wrap;
-                -webkit-box-pack: center;
-                -ms-flex-pack: center;
-                justify-content: center;
-              }
-              margin: -2px -19.25px 0;
-            }
-          }
-        }
-      }
-    }
-    .spz-Leading-Logos {
-      .spz-logos {
-        max-width: 315px;
-        .answer-image {
-          margin: 0 19.25px;
-          height: 48px;
-          &:nth-child(01) {
-            width: 74px;
-          }
-          &:nth-child(02) {
-            width: 68px;
-          }
-          &:nth-child(03) {
-            width: 57px;
-          }
-          &:nth-child(04) {
-            width: 56px;
-          }
-          &:nth-child(05) {
-            width: 61px;
-          }
-          &:nth-child(06) {
-            width: 66px;
-          }
-        }
-      }
-      .spz-heading {
-        margin-bottom: 19px;
-      }
-    }
     .spz-triage-wrap {
       box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.15);
       margin: 42px auto 0;

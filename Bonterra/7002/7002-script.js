@@ -68,17 +68,53 @@ const triageData = [
             },
             {
                 titleQues: "What product(s) are you interested in?",
+                title: 'Public-Sector',
+                childAns: [
+                    {
+                        formVal: 'Fundraising & Engagement',
+                        copy: 'Fundraising & Engagement',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Grant Programs',
+                        copy: 'Grant Programs',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Case Management',
+                        copy: 'Case Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/icon-briefcase.svg'
+                    },
+                    {
+                        formVal: 'Giving Days',
+                        copy: 'Giving Days',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                    },
+                    {
+                        formVal: 'Payment Solutions',
+                        copy: 'Payment Solutions',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Other',
+                        copy: 'Other',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                    }
+                ]
+            },
+            {
+                titleQues: "What product(s) are you interested in?",
                 title: 'Grantmaker',
                 childAns: [
                     {
                         formVal: 'Grant Programs',
                         copy: 'Grant Programs',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-hand.svg'
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Payment Solutions',
                         copy: 'Payment Solutions',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Volunteer Management',
@@ -91,9 +127,46 @@ const triageData = [
                         image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
                     },
                     {
-                        formVal: 'Customer Relationship Management',
-                        copy: 'Customer Relationship Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
+                        formVal: 'Fundraising & Engagement',
+                        copy: 'Fundraising & Engagement',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Other',
+                        copy: 'Other',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                    }
+                ]
+            },
+            {
+                titleQues: "What product(s) are you interested in?",
+                title: 'Corporation',
+                childAns: [
+                    {
+                        formVal: 'Volunteer Management',
+                        copy: 'Volunteer Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                    },
+                    {
+                        formVal: 'Grant Programs',
+                        copy: 'Grant Programs',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
+                    },
+                    {
+                        formVal: 'Giving Management',
+                        copy: 'Giving Management',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                    },
+                    {
+                        formVal: 'Fundraising & Engagement',
+                        copy: 'Fundraising & Engagement',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
+                    },
+
+                    {
+                        formVal: 'Payment Solutions',
+                        copy: 'Payment Solutions',
+                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Other',
@@ -200,6 +273,13 @@ function formModify() {
             setTimeout(() => {
                 clearInterval(Buffertime);
             }, 1000);
+        });
+    });
+
+    MktoForms2.whenReady(function (form) {
+        form.onSuccess(function (values, followUpUrl) {
+            // This code runs after a successful form submission
+            localStorage.setItem('formSubmitted', 'true');
         });
     });
 }
@@ -325,7 +405,7 @@ function addTriage(triageData, step2Data) {
                         </div>`;
                 }).join('')}
                                                             </div>
-                                                            <div class="next-question">Next</div>
+                                                            <div class="next-question step-2-go">Next</div>
                                                     </div> `;
             }).join('')}
                                                     
@@ -336,23 +416,24 @@ function addTriage(triageData, step2Data) {
       </div>`);
     });
 
+    waitForElm('.answer-item input[name="What-is-your-organization-type"]').then(function () {
+        // Pre-check options for step 1 and step 2
+        ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
+            const savedValue = localStorage.getItem(name);
+            if (savedValue) {
+                const inputToCheck = document.querySelector(`.answer-item input[name="${name}"][value="${savedValue}"]`);
+                if (inputToCheck) inputToCheck.checked = true;
+            }
+        });
 
-    // Pre-check options for step 1 and step 2
-    ['Which-best-describes-you', 'How-we-can-help'].forEach(name => {
-        const savedValue = localStorage.getItem(name);
-        if (savedValue) {
-            const inputToCheck = document.querySelector(`.answer-item input[name="${name}"][value="${savedValue}"]`);
-            if (inputToCheck) inputToCheck.checked = true;
-        }
-    });
-
-    // Store selected values in local storage and handle error state removal
-    ['Which-best-describes-you', 'How-we-can-help'].forEach(name => {
-        document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
-            item.addEventListener('change', e => {
-                localStorage.setItem(name, e.target.value);
-                const stepContent = e.target.closest('.answers-wrap');
-                if (stepContent?.classList.contains('error')) stepContent.classList.remove('error');
+        // Store selected values in local storage and handle error state removal
+        ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
+            document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
+                item.addEventListener('change', e => {
+                    localStorage.setItem(name, e.target.value);
+                    const stepContent = e.target.closest('.answers-wrap');
+                    if (stepContent?.classList.contains('error')) stepContent.classList.remove('error');
+                });
             });
         });
     });
@@ -361,7 +442,7 @@ function addTriage(triageData, step2Data) {
 // Function to pre-fill form select fields based on stored values
 const prefillSelectFields = () => {
     ['Industry', 'capability'].forEach(field => {
-        const value = localStorage.getItem(field === 'Industry' ? 'Which-best-describes-you' : 'How-we-can-help');
+        const value = localStorage.getItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in');
         if (value) {
             const select = document.querySelector(`select[name = "${field}"]`);
             if (select) select.value = value;
@@ -381,13 +462,29 @@ window.addEventListener("click", function (e) {
 
             //get the selected radio value
             const next = e.target.parentElement.querySelector('input[type="radio"]:checked').value;
-            this.document.querySelector(`.questions-wrap  .` + next + ``).classList.remove('spz-hidden');
+
+            //trim spaces and replace with hyphen
+            const nextClass = next.replace(/\s+/g, '-');
+            this.document.querySelector(`.questions-wrap  .` + nextClass + ``).classList.remove('spz-hidden');
 
             // Call prefill function to ensure form fields are filled when step is visible
             prefillSelectFields();
         } else {
             stepContent.classList.add('error');
         }
+    }
+
+    if (e.target.classList.contains("step-2-go")) {
+        e.target.parentElement.classList.add('spz-hidden');
+        const active = document.querySelector('.progress-item.active');
+        active.classList.replace('active', 'completed');
+        active.nextElementSibling.classList.add('active');
+        this.document.querySelector('.question-form').classList.remove('spz-hidden');
+        // const stepContent = e.target.closest('.question-item').querySelector('.answers-wrap');
+        // if (Array.from(stepContent.querySelectorAll('input')).some(checkbox => checkbox.checked)) {
+        // } else {
+        //     // stepContent.classList.add('error');
+        // }
     }
 });
 
