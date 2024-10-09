@@ -1,4 +1,4 @@
-const imgUrl = '//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/7002/';
+const imgUrl = '//res.cloudinary.com/spiralyze/image/upload';
 
 // Form Container (Parent Element)
 const triageData = [
@@ -9,22 +9,22 @@ const triageData = [
             {
                 formVal: 'Nonprofit',
                 copy: 'Nonprofit',
-                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-leaf.svg'
+                image: imgUrl + '/v1724679709/bonterra/1002/icon-leaf.svg'
             },
             {
-                formVal: 'Public Sector',
+                formVal: 'Government',
                 copy: 'Public Sector',
-                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-buildings.svg'
+                image: imgUrl + '/v1724679709/bonterra/1002/icon-buildings.svg'
             },
             {
-                formVal: 'Grantmaker',
+                formVal: 'Foundations',
                 copy: 'Grantmaker',
-                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-grant.svg'
+                image: imgUrl + '/v1724679709/bonterra/1002/icon-grant.svg'
             },
             {
                 formVal: 'Corporation',
                 copy: 'Corporation',
-                image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-briefcase.svg'
+                image: imgUrl + '/v1724679709/bonterra/1002/icon-briefcase.svg'
             },
         ]
     },
@@ -37,104 +37,104 @@ const triageData = [
                     {
                         formVal: 'Fundraising and Engagement',
                         copy: 'Fundraising and Engagement',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-hand.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-hand.svg'
                     },
                     {
                         formVal: 'Volunteer Management',
                         copy: 'Volunteer Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-people.svg'
                     },
                     {
                         formVal: 'Giving Days',
                         copy: 'Giving Days',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
                     },
                     {
                         formVal: 'Customer Relationship Management',
                         copy: 'Customer Relationship Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Payment Solutions',
                         copy: 'Payment Solutions',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/dollar-minimalistic-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/dollar-minimalistic-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Other',
                         copy: 'Other',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
                     }
                 ]
             },
             {
                 titleQues: "What product(s) are you interested in?",
-                title: 'Public-Sector',
+                title: 'Government',
                 childAns: [
                     {
                         formVal: 'Fundraising & Engagement',
                         copy: 'Fundraising & Engagement',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Grant Programs',
                         copy: 'Grant Programs',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Case Management',
                         copy: 'Case Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/icon-briefcase.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/icon-briefcase.svg'
                     },
                     {
                         formVal: 'Giving Days',
                         copy: 'Giving Days',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
                     },
                     {
                         formVal: 'Payment Solutions',
                         copy: 'Payment Solutions',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Other',
                         copy: 'Other',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
                     }
                 ]
             },
             {
                 titleQues: "What product(s) are you interested in?",
-                title: 'Grantmaker',
+                title: 'Foundations',
                 childAns: [
                     {
                         formVal: 'Grant Programs',
                         copy: 'Grant Programs',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Payment Solutions',
                         copy: 'Payment Solutions',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Volunteer Management',
                         copy: 'Volunteer Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-people.svg'
                     },
                     {
                         formVal: 'Giving Days',
                         copy: 'Giving Days',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
                     },
                     {
                         formVal: 'Fundraising & Engagement',
                         copy: 'Fundraising & Engagement',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Other',
                         copy: 'Other',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
                     }
                 ]
             },
@@ -145,56 +145,58 @@ const triageData = [
                     {
                         formVal: 'Volunteer Management',
                         copy: 'Volunteer Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-people.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-people.svg'
                     },
                     {
                         formVal: 'Grant Programs',
                         copy: 'Grant Programs',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Giving Management',
                         copy: 'Giving Management',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1724679709/bonterra/1002/icon-money.svg'
+                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
                     },
                     {
                         formVal: 'Fundraising & Engagement',
                         copy: 'Fundraising & Engagement',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
                     },
 
                     {
                         formVal: 'Payment Solutions',
                         copy: 'Payment Solutions',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
                     },
                     {
                         formVal: 'Other',
                         copy: 'Other',
-                        image: '//res.cloudinary.com/spiralyze/image/upload/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
+                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
                     }
                 ]
             },
         ]
     }
     //Question 1 end
-]
+];
 
 const sectionSelector = `#HERO .container .block-wrapper .block-3 > .mktoForm .lpeCElement.Bonterra__Demo_Request__FE`;
-const position = "beforeend";
 const formUniqueSelector = `body.spz-7002 #HERO .container .block-wrapper .block-3 > .mktoForm .formSpan`;
-const leadingLogoposition = "afterend";
 
 let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
     if (body) {
         clearInterval(bodyLoaded);
 
-        preloadImages();
-
         if (!body.classList.contains('spz-7002')) {
             body.classList.add('spz-7002');
             createTest();
+
+            //add url pathname to body class
+            let url = window.location.pathname;
+            let urlArr = url.split('/');
+            let urlPath = urlArr[urlArr.length - 1].split('.')[0];
+            document.body.classList.add(urlPath);
         }
     }
 });
@@ -205,15 +207,9 @@ function createTest() {
 
         waitForElm('.question-form').then(function () {
             document.querySelector('.question-form').appendChild(document.querySelector(formUniqueSelector));
+            prefillSelectFields();
         });
-        prefillSelectFields();
     });
-
-    //add url pathname to body class
-    let url = window.location.pathname;
-    let urlArr = url.split('/');
-    let urlPath = urlArr[urlArr.length - 1].split('.')[0];
-    document.body.classList.add(urlPath);
 
     addTriage(triageData, formUniqueSelector);
 
@@ -354,14 +350,12 @@ function checkError(elem) {
     setTimeout(() => {
         clearInterval(timeBuffer);
     }, 1000);
-
-    checkValidFields();
 }
 
 function addTriage(triageData, step2Data) {
     //Append triage section
     waitForElm(sectionSelector).then(function () {
-        document.querySelector(sectionSelector).insertAdjacentHTML(position, `<div class="spz-triage-wrap">
+        document.querySelector(sectionSelector).insertAdjacentHTML('beforeend', `<div class="spz-triage-wrap">
           <div class="questions-progress">
               ${triageData.length !== 0 && triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
               <div class="progress-item"></div>
@@ -445,6 +439,7 @@ const prefillSelectFields = () => {
         const value = localStorage.getItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in');
         if (value) {
             const select = document.querySelector(`select[name = "${field}"]`);
+            console.log(select, value);
             if (select) select.value = value;
         }
     });
@@ -462,10 +457,7 @@ window.addEventListener("click", function (e) {
 
             //get the selected radio value
             const next = e.target.parentElement.querySelector('input[type="radio"]:checked').value;
-
-            //trim spaces and replace with hyphen
-            const nextClass = next.replace(/\s+/g, '-');
-            this.document.querySelector(`.questions-wrap  .` + nextClass + ``).classList.remove('spz-hidden');
+            this.document.querySelector(`.questions-wrap  .` + next + ``).classList.remove('spz-hidden');
 
             // Call prefill function to ensure form fields are filled when step is visible
             prefillSelectFields();
@@ -502,10 +494,4 @@ function waitForElm(selector) {
         });
         observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
     });
-}
-
-function preloadImages() {
-    document.querySelector('head').insertAdjacentHTML("afterbegin", `
-        < link rel = "preload" href = "${imgUrl}radio-check.svg" as="image" > `
-    );
 }
