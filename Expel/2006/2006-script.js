@@ -86,6 +86,47 @@ let bodyLoaded = setInterval(function () {
                 waitForElm('.spz-2006 #hero-section .ex-form form.mktoForm .mktoFormCol .mktoFieldWrap input').then(function () {
                     restructureForm();
                     animateLabels(testDetails);
+
+                    document.querySelector('.spz-2006 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
+                        waitForElm('.spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoError').then(function (elm) {
+                            if (elm.parentNode.querySelector('#ValidMsgEmail')) {
+                                const targetNode = elm.parentNode;
+                                const config = { attributes: true, childList: true, subtree: true };
+                                const callback = (mutationList, observer) => {
+                                    for (const mutation of mutationList) {
+                                        if (mutation.type === "childList") {
+                                            if (elm.parentNode === null && elm.style.display != 'none') {
+                                                targetNode.classList.add('error');
+                                            } else {
+                                                elm.parentNode.classList.add('error');
+                                            }
+                                            observer.disconnect();
+                                        } else if (mutation.type === "attributes") {
+                                            if (elm.parentNode === null) {
+                                                targetNode.classList.add('error');
+                                            } else {
+                                                elm.parentNode.classList.add('error');
+                                            }
+                                            observer.disconnect();
+                                        }
+                                    }
+                                };
+                                const observer = new MutationObserver(callback);
+                                observer.observe(targetNode, config);
+                            } else {
+                                let counterA = 0;
+                                const intervalIdA = setInterval(() => {
+                                    if (document.querySelector('.spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoError #ValidMsgEmail') !== null) {
+                                        document.querySelector('.spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoError #ValidMsgEmail').parentNode.parentNode.classList.add('error');
+                                    }
+                                    counterA++;
+                                    if (counterA >= 40) {
+                                        clearInterval(intervalIdA);
+                                    }
+                                }, 200);
+                            }
+                        });
+                    })
                 });
             });
         }
