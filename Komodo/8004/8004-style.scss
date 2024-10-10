@@ -1,0 +1,163 @@
+$titillium: Titillium Web, sans-serif;
+
+body.spz-8004 {
+  .desk-only {
+    @media screen and (max-width: 1024.98px) {
+      display: none;
+    }
+  }
+
+  .tab-mob {
+    @media screen and (min-width: 1024.98px) {
+      display: none;
+    }
+  }
+
+  #main-content {
+    .dnd_area-row-0-hidden {
+      > .row-fluid {
+        max-width: 1140px !important;
+
+        > .span12 {
+          .row-number-2,
+          .row-number-3 {
+            display: none !important;
+          }
+
+          .row-number-4 {
+            .widget-span {
+              display: flex;
+
+              @media screen and (max-width: 1024.98px) {
+                flex-direction: column;
+                max-width: 704px;
+                margin: auto;
+              }
+
+              .spz-hero-copy-wrapper {
+                max-width: 511px;
+                margin-right: 64px;
+
+                @media screen and (max-width: 1024.98px) {
+                  max-width: 100%;
+                  margin-right: 0;
+                }
+
+                .eyebrow-title {
+                  color: #68cce8;
+                  font-family: $titillium;
+                  font-size: 16px;
+                  font-style: normal;
+                  font-weight: 700;
+                  line-height: 150%;
+                  letter-spacing: 0.8px;
+                  text-transform: uppercase;
+                  margin: 0 0 8px;
+                }
+
+                .h-title {
+                  color: #fff;
+                  font-family: $titillium;
+                  font-size: 40px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 120%;
+                  letter-spacing: 0px;
+                  margin: 0 0 32px;
+                }
+
+                .bullet-container {
+                  .bullet-wrapper {
+                    list-style: none;
+                    padding-left: 0;
+
+                    .bullet-item {
+                      color: #fff;
+                      font-family: $titillium;
+                      font-size: 20px;
+                      font-style: normal;
+                      font-weight: 400;
+                      line-height: 140%;
+                      margin-bottom: 12px;
+                      padding-left: 44px;
+                      position: relative;
+
+                      span {
+                        font-weight: 700;
+                      }
+
+                      &:before {
+                        content: "";
+                        width: 32px;
+                        height: 32px;
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/v1728543881/komodohealth/8004/bullet-icon.svg)
+                          no-repeat;
+                        background-size: 100%;
+                        position: absolute;
+                        left: 0;
+                        top: 1px;
+                      }
+                    }
+                  }
+                }
+
+                .spz-btn-wrapper {
+                  .spz-btn {
+                    border-radius: 100px;
+                    background: #68cce8;
+                    display: flex;
+                    padding: 16px 40px;
+                    justify-content: center;
+                    align-items: center;
+                    color: #000;
+                    font-family: $titillium;
+                    font-size: 16px;
+                    font-style: normal;
+                    font-weight: 700;
+                    line-height: 150%;
+                    letter-spacing: 0.8px;
+                    text-transform: uppercase;
+                    width: 294px;
+                    height: 56px;
+                    text-decoration: none;
+                    transition: all 0.3s ease;
+                    outline: none;
+
+                    &:hover {
+                      background: #fff;
+                    }
+
+                    &:active {
+                      background: #4a4a4a;
+                      color: #fff;
+                    }
+
+                    @media screen and (max-width: 573.98px) {
+                      max-width: 100%;
+                      width: 100%;
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    //only demo cta section
+    .dnd_area-row-1-hidden {
+      .widget-span {
+        .row-number-6,
+        .row-number-7 {
+          display: none !important;
+        }
+
+        .row-number-12,
+        .row-number-13 {
+          overflow: hidden;
+        }
+      }
+    }
+  }
+}
