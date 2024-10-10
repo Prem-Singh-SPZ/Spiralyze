@@ -13,30 +13,95 @@ body.spz-8004 {
     }
   }
 
+  .mob-only {
+    @media (min-width: 767.98px) {
+      display: none;
+    }
+  }
+
+  header.header {
+    display: none;
+  }
+
+  .lp_gated_video_thumbnail {
+    @media screen and (max-width: 767.98px) {
+      margin-bottom: 0;
+    }
+  }
+
   #main-content {
     .dnd_area-row-0-hidden {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8004/bg-1440_1.webp)
+        no-repeat center center;
+      background-size: 100% 100%;
+      padding-top: 16px !important;
+
+      @media screen and (max-width: 1024.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8004/bg-768_2.webp)
+          no-repeat center center;
+        background-size: 100% 100%;
+      }
+
+      @media screen and (max-width: 767.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8004/bg-360_2.webp)
+          no-repeat center center;
+        background-size: 100% 100%;
+        padding: 16px 16px 32px !important;
+      }
+
       > .row-fluid {
-        max-width: 1140px !important;
+        max-width: 1324px !important;
 
         > .span12 {
+          padding: 0;
+
+          @media (max-width: 1024.98px) {
+            padding: 8px 0 0;
+          }
+
           .row-number-2,
           .row-number-3 {
             display: none !important;
           }
 
+          .spz-logo-container {
+            max-width: 1140px;
+            margin: auto;
+            width: 100%;
+
+            @media screen and (max-width: 1024.98px) {
+              max-width: 704px;
+
+              img {
+                height: 32px;
+              }
+            }
+
+            @media screen and (max-width: 767.98px) {
+              padding: 0 4px;
+            }
+          }
+
           .row-number-4 {
             .widget-span {
               display: flex;
+              margin-top: 86.5px;
+              margin-bottom: 81px;
 
               @media screen and (max-width: 1024.98px) {
                 flex-direction: column;
                 max-width: 704px;
-                margin: auto;
+                margin: 0 auto 22px;
               }
 
               .spz-hero-copy-wrapper {
                 max-width: 511px;
                 margin-right: 64px;
+                margin-left: 92px;
+
+                @media screen and (max-width: 1199.98px) {
+                  margin-left: 0;
+                }
 
                 @media screen and (max-width: 1024.98px) {
                   max-width: 100%;
@@ -52,7 +117,19 @@ body.spz-8004 {
                   line-height: 150%;
                   letter-spacing: 0.8px;
                   text-transform: uppercase;
-                  margin: 0 0 8px;
+                  margin: 0 0 14px;
+
+                  @media screen and (max-width: 1024.98px) {
+                    margin-top: 39px;
+                  }
+
+                  @media screen and (max-width: 767.98px) {
+                    margin-top: 40px;
+                    font-size: 12px;
+                    line-height: 20px;
+                    letter-spacing: 0.6px;
+                    margin-bottom: 17px;
+                  }
                 }
 
                 .h-title {
@@ -64,12 +141,22 @@ body.spz-8004 {
                   line-height: 120%;
                   letter-spacing: 0px;
                   margin: 0 0 32px;
+                  max-width: 511px;
+
+                  @media screen and (max-width: 767.98px) {
+                    font-size: 32px;
+                    line-height: 40px;
+                  }
                 }
 
                 .bullet-container {
+                  @media screen and (max-width: 1024.98px) {
+                    margin-top: 24px;
+                  }
                   .bullet-wrapper {
                     list-style: none;
                     padding-left: 0;
+                    margin-bottom: 24px;
 
                     .bullet-item {
                       color: #fff;
@@ -82,26 +169,52 @@ body.spz-8004 {
                       padding-left: 44px;
                       position: relative;
 
+                      @media screen and (max-width: 1024.98px) {
+                        padding-left: 36px;
+                        font-size: 18px;
+                        line-height: 26px;
+                      }
+
                       span {
                         font-weight: 700;
+
+                        @media screen and (max-width: 1024.98px) {
+                          font-size: 16px;
+                          line-height: 24px;
+                        }
                       }
 
                       &:before {
                         content: "";
                         width: 32px;
                         height: 32px;
-                        background: url(//res.cloudinary.com/spiralyze/image/upload/v1728543881/komodohealth/8004/bullet-icon.svg)
+                        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8004/icon.webp)
                           no-repeat;
                         background-size: 100%;
                         position: absolute;
                         left: 0;
-                        top: 1px;
+                        top: 0;
+
+                        @media screen and (max-width: 1024.98px) {
+                          width: 24px;
+                          height: 24px;
+                        }
+
+                        @media screen and (max-width: 767.98px) {
+                          top: 3px;
+                        }
                       }
                     }
                   }
                 }
 
                 .spz-btn-wrapper {
+                  margin-top: 32px;
+
+                  @media screen and (max-width: 1024.98px) {
+                    margin-top: 24px;
+                  }
+
                   .spz-btn {
                     border-radius: 100px;
                     background: #68cce8;
@@ -156,6 +269,35 @@ body.spz-8004 {
         .row-number-12,
         .row-number-13 {
           overflow: hidden;
+        }
+      }
+    }
+
+    .dnd_area-row-2-hidden {
+      background: transparent !important;
+
+      > .row-fluid {
+        .span12 {
+          padding: 0 5px 3.5px;
+
+          @media screen and (max-width: 1024.98px) {
+            padding: 0 8px;
+          }
+
+          .partner-logos-list {
+            @media (min-width: 767.98px) and (max-width: 1024.98px) {
+              flex-wrap: nowrap;
+            }
+
+            .logo_no_link {
+              height: 40px;
+
+              img {
+                height: 100%;
+                width: auto;
+              }
+            }
+          }
         }
       }
     }
