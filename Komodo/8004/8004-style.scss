@@ -24,6 +24,19 @@ body.spz-8004 {
   }
 
   .lp_gated_video_thumbnail {
+    img {
+      @media screen and (min-width: 1400px) {
+        height: 446px !important;
+      }
+
+      @media (min-width: 767.98px) and (max-width: 1024.98px) {
+        height: 476px !important;
+      }
+
+      @media screen and (max-width: 573.98px) {
+        min-height: 220px !important;
+      }
+    }
     @media screen and (max-width: 767.98px) {
       margin-bottom: 0;
     }
@@ -46,7 +59,7 @@ body.spz-8004 {
         background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/8004/bg-360_2.webp)
           no-repeat center center;
         background-size: 100% 100%;
-        padding: 16px 16px 32px !important;
+        padding: 16px 16px 35px !important;
       }
 
       > .row-fluid {
@@ -86,7 +99,7 @@ body.spz-8004 {
             .widget-span {
               display: flex;
               margin-top: 86.5px;
-              margin-bottom: 81px;
+              margin-bottom: 71.5px;
 
               @media screen and (max-width: 1024.98px) {
                 flex-direction: column;
@@ -101,6 +114,7 @@ body.spz-8004 {
 
                 @media screen and (max-width: 1199.98px) {
                   margin-left: 0;
+                  margin-right: 24px;
                 }
 
                 @media screen and (max-width: 1024.98px) {
@@ -276,17 +290,31 @@ body.spz-8004 {
     .dnd_area-row-2-hidden {
       background: transparent !important;
 
+      @media screen and (max-width: 573.98px) {
+        padding: 0 10px !important;
+        margin-bottom: 76px;
+      }
+
       > .row-fluid {
         .span12 {
-          padding: 0 5px 3.5px;
+          padding: 0px 2px 4.5px 5px;
 
           @media screen and (max-width: 1024.98px) {
             padding: 0 8px;
           }
 
+          @media screen and (max-width: 573.98px) {
+            padding: 0;
+          }
+
           .partner-logos-list {
             @media (min-width: 767.98px) and (max-width: 1024.98px) {
               flex-wrap: nowrap;
+            }
+
+            @media (max-width: 573.98px) {
+              gap: 24px;
+              row-gap: 17px;
             }
 
             .logo_no_link {
@@ -295,6 +323,30 @@ body.spz-8004 {
               img {
                 height: 100%;
                 width: auto;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                height: 31px;
+
+                img {
+                  height: 100% !important;
+                  width: auto;
+                }
+                &:nth-child(1) {
+                  order: 1;
+                }
+                &:nth-child(2) {
+                  order: 2;
+                }
+                &:nth-child(3) {
+                  order: 0;
+                }
+                &:nth-child(4) {
+                  order: 5;
+                }
+                &:nth-child(5) {
+                  order: 3;
+                }
               }
             }
           }
