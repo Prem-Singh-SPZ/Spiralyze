@@ -1,0 +1,775 @@
+.spz-2008 #new-formDemo-wrapper .lds-dual-ring {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 80px auto;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    border-color: #000 transparent #000 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .sub {
+    color: #4a4a4a;
+    text-align: center;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
+    margin-top: 16px;
+    margin-bottom: 24px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper.hide {
+    display: none;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1px 1px;
+    margin-bottom: 20px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper.no-margin-bottom {
+    margin-bottom: 0px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option {
+    padding: 15px 16px;
+    text-align: center;
+    cursor: pointer;
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.1);
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option:hover {
+    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.4);
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option.selected {
+    box-shadow: inset 0px 0px 0px 1px rgb(104, 204, 232), 0px 0px 0px 1px rgb(104, 204, 232);
+    -webkit-box-shadow: inset 0px 0px 0px 1px rgb(104, 204, 232), 0px 0px 0px 1px rgb(104, 204, 232);
+    cursor: default;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper.column3 .option {
+    width: 163.33px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper.column2 .option {
+    width: 256px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option .image-wrapper img {
+    display: block;
+    margin: 0 auto;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option .image-wrapper .hover {
+    display: none;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option.selected .image-wrapper .default {
+    display: none;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option.selected .image-wrapper .hover {
+    display: block;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option .text {
+    color: #4a4a4a;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-top: 12px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option.selected .text {
+    color: #000;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper.step2-wrapper .option-wrapper .option .text {
+    height: 48px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .error-message {
+    color: #dc0000;
+    padding: 8px 0;
+    line-height: 16px;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px;
+    font-weight: 400;
+    text-align: center;
+    display: none;
+    margin-bottom: -24px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .error-message.show {
+    display: block;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .next {
+    color: #000;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.8px;
+    display: flex;
+    width: 100%;
+    height: 48px;
+    border-radius: 100px;
+    align-items: center;
+    justify-content: center;
+    background: #68cce8;
+    transition: all 0.15s linear;
+    cursor: pointer;
+    margin-top: 24px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .next:hover {
+    background-color: #000;
+    color: white;
+  }
+  
+  .spz-2008 #popup_request_a_demo .step-wrapper .next:active {
+    background-color: #4a4a4a;
+    color: white;
+  }
+  
+  @keyframes lds-dual-ring {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+  .spz-2008 #popup_request_a_demo .hbspt-form {
+    display: none;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-required {
+    display: none;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper {
+    margin-top: 24px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper.show {
+    display: block;
+  }
+  
+  .spz-2008 .blocker.current.demo-active-spz {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2008/background_1440.webp) no-repeat;
+    background-size: cover;
+    background-color: rgba(88, 88, 88, 0.7) !important;
+  }
+  @media screen and (max-width: 1023.98px) {
+    .spz-2008 .blocker.current.demo-active-spz {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2008/background_768.webp) no-repeat;
+      background-size: cover;
+    }
+  }
+  @media screen and (max-width: 440px) {
+    .spz-2008 .blocker.current.demo-active-spz {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2008/background_768.webp) no-repeat;
+      background-size: cover;
+      padding: 0;
+    }
+  }
+  @media screen and (min-width: 1600.98px) {
+    .spz-2008 .blocker.current.demo-active-spz {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2008/background_1920.webp) no-repeat;
+      background-size: cover;
+    }
+  }
+  @media screen and (min-width: 3500.98px) {
+    .spz-2008 .blocker.current.demo-active-spz {
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/2008/background_3840.webp) no-repeat;
+      background-size: cover;
+    }
+  }
+  .spz-2008 .blocker.current.demo-active-spz .overlay-spz {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 2;
+  }
+  
+  .spz-2008 #popup_request_a_demo {
+    max-width: 600px !important;
+    box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
+    padding: 24px 32px 32px !important;
+  }
+  @media (min-width: 767.98px) and (max-width: 1024.98px) {
+    .spz-2008 #popup_request_a_demo {
+      max-width: 600px !important;
+    }
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.width50 {
+    width: calc((100% - 20px) / 2);
+    float: left;
+    clear: none;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .with-margin {
+    margin-left: 20px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .clear,
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.width50.clear {
+    clear: both;
+  }
+  
+  .spz-2008 #popup_request_a_demo .close-modal {
+    width: 20px;
+    height: 20px;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/komodohealth/2002/icon_x.svg") !important;
+    top: 16px;
+    right: 16px;
+    outline: 0;
+    background-size: auto;
+  }
+  
+  .spz-2008 #popup_request_a_demo .close-modal:hover,
+  .spz-2008 #popup_request_a_demo .close-modal:active {
+    filter: brightness(50%);
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field {
+    position: relative;
+    margin-bottom: 20px;
+    color: #000;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-dependent-field .hs-form-field.hs-consent_to_communicate, .spz-2008 #new-formDemo-wrapper .hs-dependent-field .hs-form-field.hs-consent_to_communicate_non_us {
+    margin-bottom: 16px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field:hover > label span {
+    color: #000;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field > label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
+    color: #4a4a4a;
+    position: absolute;
+    top: 12px;
+    left: 20px;
+    pointer-events: none;
+    transition-duration: 0.15s;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field > label span {
+    color: #4a4a4a;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0px;
+    position: relative;
+  }
+  
+  .spz-2008 #popup_request_a_demo .wcs-popup-heading h2 {
+    color: #000;
+    font-family: "Titillium Web", sans-serif;
+    text-align: center;
+    font-size: 32px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 40px;
+    letter-spacing: 0px !important;
+    margin-bottom: 12px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .wcs-popup-heading .review-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .spz-2008 #popup_request_a_demo .wcs-popup-heading .review-wrapper .text {
+    color: #7e7e7e;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    margin-left: 12px;
+  }
+  
+  .spz-2008 #popup_request_a_demo .wcs-popup-heading .review-wrapper .text .black {
+    color: #000;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-input {
+    margin: 0px !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-error-msgs label {
+    font-size: 14px !important;
+    font-style: normal;
+    font-weight: 400 !important;
+    line-height: 16px !important;
+    font-family: "Titillium Web", sans-serif;
+    letter-spacing: 0px;
+    color: #dc0000;
+    margin-top: 4px;
+    margin-bottom: -12px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-error-msgs.inputs-list {
+    padding-left: 0px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate .hs-error-msgs label,
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
+    margin-bottom: -3px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-error-msgs label a {
+    display: block;
+    padding-top: 6px;
+    color: #dc0000;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-input {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background-color: #f8f7f7 !important;
+    height: 48px;
+    text-overflow: ellipsis;
+    padding: 11px 19px 12px !important;
+    color: #000;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 24px;
+    outline: none;
+    letter-spacing: 0;
+    background-clip: padding-box;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_buying_timeline {
+    display: none;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-input:-webkit-autofill,
+  .spz-2008 #new-formDemo-wrapper .hs-input:-webkit-autofill:hover,
+  .spz-2008 #new-formDemo-wrapper .hs-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+    -webkit-text-fill-color: #000 !important;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .focus .hs-input:-webkit-autofill,
+  .spz-2008 #new-formDemo-wrapper .focus .hs-input:-webkit-autofill:hover,
+  .spz-2008 #new-formDemo-wrapper .focus .hs-input:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+    -webkit-transition: background-color 5000s ease-in-out 0s !important;
+    transition: background-color 5000s ease-in-out 0s !important;
+    -webkit-text-fill-color: #000 !important;
+    z-index: 2;
+    position: relative;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hasValue .hs-input {
+    border: 1px solid rgba(0, 0, 0, 0.1) !important;
+    background-color: #f8f7f7 !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .focus .hs-input {
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    background-color: #fff !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hasError .hs-input {
+    border: 1px solid #dc0000 !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.focus > label,
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.hasValue > label {
+    top: -11px !important;
+    left: 16px !important;
+    z-index: 4;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.focus.hs_how_did_you_hear_about_us_ > label,
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.hasValue.hs_how_did_you_hear_about_us_ > label,
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.focus.hs_message > label,
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.hasValue.hs_message > label {
+    display: none;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.hasValue > label span {
+    -webkit-font-smoothing: antialiased;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 20px;
+    padding: 0 4px;
+    color: #7e7e7e;
+    box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+    -webkit-box-shadow: 0px -9px 0px 0px #f8f7f7 inset;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.focus > label span {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 16px;
+    padding: 0 4px;
+    color: #000;
+    box-shadow: 0px -9px 0px 0px white inset;
+    -webkit-box-shadow: 0px -9px 0px 0px white inset;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.hasError.focus > label span {
+    font-family: "Titillium Web", sans-serif;
+    font-size: 10px;
+    font-weight: 500;
+    line-height: 12px;
+    letter-spacing: -0.16px;
+    padding: 0 4px;
+    color: #dc0000;
+    box-shadow: 0px -9px 0px 0px white inset;
+    -webkit-box-shadow: 0px -9px 0px 0px white inset;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-form-field.hasError > label span {
+    color: #dc0000;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_message textarea {
+    resize: none;
+    overflow: hidden;
+    display: block;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-richtext p {
+    color: #7e7e7e;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px !important;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    letter-spacing: 0;
+    margin-bottom: 0;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-richtext p a {
+    text-decoration: underline;
+    color: #68cce8 !important;
+    -webkit-text-decoration-skip-ink: none;
+            text-decoration-skip-ink: none;
+    text-underline-offset: 1px;
+    white-space: nowrap;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs-richtext p a:hover,
+  .spz-2008 #new-formDemo-wrapper .hs-richtext p a:active {
+    text-decoration: none;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_submit input {
+    width: 100%;
+    display: flex;
+    height: 48px;
+    border-radius: 100px !important;
+    background-color: #68cce8 !important;
+    justify-content: center;
+    align-items: center;
+    color: #000 !important;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 16px !important;
+    font-style: normal;
+    font-weight: 700 !important;
+    line-height: 24px !important;
+    outline: none;
+    letter-spacing: 0.8px !important;
+    margin-top: 0px !important;
+    margin-bottom: 0px !important;
+    border: 2px solid #68cce8 !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_submit input:hover {
+    background-color: #fff !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_submit input:active {
+    background-color: #4a4a4a !important;
+    color: #fff !important;
+    border: none !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_countries select {
+    appearance: none;
+    padding-right: 40px !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_countries select option {
+    font-family: "Titillium Web", sans-serif;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_countries .arrow-select {
+    width: 16px;
+    height: 16px;
+    background: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/arrow-down.svg") no-repeat;
+    pointer-events: none;
+    position: absolute;
+    right: 20px;
+    top: 16px;
+    z-index: 4;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate input[type=checkbox],
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us input[type=checkbox] {
+    min-width: 20px;
+    height: 20px;
+    appearance: none;
+    background-color: white !important;
+    border: 1px solid rgba(0, 0, 0, 0.4) !important;
+    padding: 0px !important;
+    cursor: pointer;
+    border-radius: 0;
+    outline: 0;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate input[type=checkbox]:checked,
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us input[type=checkbox]:checked {
+    background-color: #68cce8 !important;
+    background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
+    background-repeat: no-repeat;
+    background-position: center center;
+    border: 1px solid #68cce8 !important;
+    background-clip: border-box;
+    margin-top: -1px !important;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate label,
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us label {
+    display: flex;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate label span,
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us label span {
+    color: #000;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: 20px;
+    padding-left: 8px;
+    margin-top: -3px;
+    letter-spacing: 0px;
+    margin-left: 0px;
+    margin-right: 0px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate .hs-form-booleancheckbox,
+  .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-form-booleancheckbox {
+    margin: 0px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_error_rollup .hs-main-font-element {
+    color: #dc0000;
+    text-align: center;
+    padding: 8px 0;
+    display: block;
+    margin: 0px;
+    line-height: 16px !important;
+    margin: -16px 0px 0px;
+    float: left;
+    width: 100%;
+    clear: both;
+    font-family: "Titillium Web", sans-serif;
+    font-size: 14px !important;
+    font-weight: 400;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .pp-parent {
+    float: left;
+    margin: 3px 0px 16px;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .pp-parent {
+    margin: 0px -4px 16px 0;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_submit .actions {
+    margin: 0;
+    padding: 0;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .submitted-message {
+    text-align: center;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .lds-dual-ring {
+    display: block;
+    width: 80px;
+    height: 80px;
+    margin: 80px auto;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .lds-dual-ring:after {
+    content: " ";
+    display: block;
+    width: 64px;
+    height: 64px;
+    margin: 8px;
+    border-radius: 50%;
+    border: 6px solid #000;
+    border-color: #000 transparent #000 transparent;
+    animation: lds-dual-ring 1.2s linear infinite;
+  }
+  
+  .spz-2008 #new-formDemo-wrapper .hs_consent_countries {
+    margin-bottom: 13px;
+  }
+  
+  @media (max-width: 767.98px) {
+    .spz-2008 .blocker:before {
+      vertical-align: top;
+    }
+    .spz-2008 #new-formDemo-wrapper {
+      max-width: 328px;
+      margin-top: 22.5px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs-form-field.width50 {
+      width: 100%;
+      float: none;
+    }
+    .spz-2008 #new-formDemo-wrapper .with-margin {
+      margin-left: 0px;
+    }
+    .spz-2008 #popup_request_a_demo {
+      padding: 27.5px 0 16px !important;
+      box-shadow: none;
+      width: 100% !important;
+      max-width: 400px !important;
+      margin: 0;
+    }
+    .spz-2008 #popup_request_a_demo .close-modal {
+      top: 18px;
+      right: 16px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs-form-field {
+      margin-bottom: 16px;
+    }
+    .spz-2008 #new-formDemo-wrapper .pp-parent {
+      margin-top: 0px;
+      margin-bottom: 0px;
+    }
+    .spz-2008 #new-formDemo-wrapper .pp-parent {
+      margin: 0 0 2px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs-form__richtext p {
+      margin-bottom: 13px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs-error-msgs {
+      margin: 4px 0px 23px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs-richtext p {
+      margin-bottom: 14px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs-error-msgs label a {
+      padding-top: 0px;
+      margin-top: -24px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate .hs-error-msgs label,
+    .spz-2008 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
+      margin-bottom: -8px;
+    }
+    .spz-2008 #new-formDemo-wrapper .hs_consent_countries {
+      margin-bottom: 12px !important;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper {
+      flex-direction: column;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      padding: 11px 14px 10.5px;
+      margin-bottom: 10.5px;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option:last-child {
+      margin-bottom: 0px;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper .option .text {
+      margin-top: 0px;
+      margin-left: 8px;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper.column3 .option,
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper.column2 .option {
+      width: 100%;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .option-wrapper {
+      margin-bottom: 8.5px;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .next {
+      margin-top: 24.5px;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper .next.next-2 {
+      margin-top: 25.5px;
+    }
+    .spz-2008 #popup_request_a_demo .step-wrapper.step2-wrapper .option-wrapper .option .text {
+      height: auto;
+    }
+    .spz-2008 #popup_request_a_demo .wcs-popup-heading .review-wrapper .text {
+      transform: translateX(-1px);
+    }
+  }
+  html.spz-modal-open {
+    overflow: hidden;
+  }
+  
+  .spz-social-proof {
+    margin-top: 24px;
+  }
+  .spz-social-proof .spz-social-proof__content .spz-social {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  .spz-social-proof .spz-social-proof__content .spz-social .spz-social__icon {
+    height: 40px;
+    margin: 0 16px 16px;
+  }
+  @media (max-width: 767.98px) {
+    .spz-social-proof .spz-social-proof__content .spz-social .spz-social__icon {
+      height: 32px;
+      margin: 0 8px 12px;
+    }
+  }
+  .spz-social-proof .spz-social-proof__content .spz-social .spz-social__icon:nth-child(1n+4) {
+    margin-bottom: 0;
+  }
+  .spz-social-proof .spz-social-proof__content .spz-social .spz-social__icon img {
+    width: auto;
+    height: 100%;
+  }
