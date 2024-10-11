@@ -29,156 +29,41 @@ let triageData = [
             },
         ]
     },
+    //Question 1 end
+
+    //Question 2 start
     {
+        titleQues: "What product(s) are you interested in?",
         answers: [
             {
-                titleQues: "What product(s) are you interested in?",
-                title: 'Nonprofit',
-                childAns: [
-                    {
-                        formVal: 'Fundraising and Engagement',
-                        copy: 'Fundraising and Engagement',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-hand.svg'
-                    },
-                    {
-                        formVal: 'Volunteer Management',
-                        copy: 'Volunteer Management',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-people.svg'
-                    },
-                    {
-                        formVal: 'Giving Days',
-                        copy: 'Giving Days',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
-                    },
-                    {
-                        formVal: 'Customer Relationship Management',
-                        copy: 'Customer Relationship Management',
-                        image: imgUrl + '/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Payment Solutions',
-                        copy: 'Payment Solutions',
-                        image: imgUrl + '/v1727688286/bonterra/7002/dollar-minimalistic-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Other',
-                        copy: 'Other',
-                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
-                    }
-                ]
+                formVal: 'Digital',
+                copy: 'Fundraising and Engagement',
+                image: imgUrl + '/v1727688286/bonterra/7002/icon-hand.svg',
+                isSelected: false
             },
             {
-                titleQues: "What product(s) are you interested in?",
-                title: 'Government',
-                childAns: [
-                    {
-                        formVal: 'Fundraising & Engagement',
-                        copy: 'Fundraising & Engagement',
-                        image: imgUrl + '/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Grant Programs',
-                        copy: 'Grant Programs',
-                        image: imgUrl + '/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Case Management',
-                        copy: 'Case Management',
-                        image: imgUrl + '/v1727688286/bonterra/7002/icon-briefcase.svg'
-                    },
-                    {
-                        formVal: 'Giving Days',
-                        copy: 'Giving Days',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
-                    },
-                    {
-                        formVal: 'Payment Solutions',
-                        copy: 'Payment Solutions',
-                        image: imgUrl + '/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Other',
-                        copy: 'Other',
-                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
-                    }
-                ]
+                formVal: 'Volunteer Coordination',
+                copy: 'Volunteer Management',
+                image: imgUrl + '/v1727688286/bonterra/7002/icon-people.svg'
             },
             {
-                titleQues: "What product(s) are you interested in?",
-                title: 'Foundations',
-                childAns: [
-                    {
-                        formVal: 'Grant Programs',
-                        copy: 'Grant Programs',
-                        image: imgUrl + '/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Payment Solutions',
-                        copy: 'Payment Solutions',
-                        image: imgUrl + '/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Volunteer Management',
-                        copy: 'Volunteer Management',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-people.svg'
-                    },
-                    {
-                        formVal: 'Giving Days',
-                        copy: 'Giving Days',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
-                    },
-                    {
-                        formVal: 'Fundraising & Engagement',
-                        copy: 'Fundraising & Engagement',
-                        image: imgUrl + '/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Other',
-                        copy: 'Other',
-                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
-                    }
-                ]
+                formVal: 'Giving Days',
+                copy: 'Giving Days',
+                image: imgUrl + '/v1727688286/bonterra/7002/icon-money.svg'
             },
             {
-                titleQues: "What product(s) are you interested in?",
-                title: 'Corporation',
-                childAns: [
-                    {
-                        formVal: 'Volunteer Management',
-                        copy: 'Volunteer Management',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-people.svg'
-                    },
-                    {
-                        formVal: 'Grant Programs',
-                        copy: 'Grant Programs',
-                        image: imgUrl + '/v1727688286/bonterra/7002/notes-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Giving Management',
-                        copy: 'Giving Management',
-                        image: imgUrl + '/v1724679709/bonterra/1002/icon-money.svg'
-                    },
-                    {
-                        formVal: 'Fundraising & Engagement',
-                        copy: 'Fundraising & Engagement',
-                        image: imgUrl + '/v1727688286/bonterra/7002/money-bag-svgrepo-com_1.svg'
-                    },
-
-                    {
-                        formVal: 'Payment Solutions',
-                        copy: 'Payment Solutions',
-                        image: imgUrl + '/v1727688286/bonterra/7002/hand-money-svgrepo-com_1.svg'
-                    },
-                    {
-                        formVal: 'Other',
-                        copy: 'Other',
-                        image: imgUrl + '/v1727688287/bonterra/7002/menu-dots-circle-svgrepo-com_1.svg'
-                    }
-                ]
+                formVal: 'Development Standard',
+                copy: 'Customer Relationship Management',
+                image: imgUrl + '/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
+            },
+            {
+                formVal: 'Payments Solution',
+                copy: 'Payments Solution',
+                image: imgUrl + '/v1727688286/bonterra/7002/dollar-minimalistic-svgrepo-com_1.svg'
             },
         ]
-    }
-    //Question 1 end
+    },
+    //Question 2 end
 ];
 
 const sectionSelector = `#HERO .container .block-wrapper .block-3 > .mktoForm .lpeCElement.Bonterra__Demo_Request__FE`;
@@ -364,60 +249,36 @@ function addTriage() {
     //Append triage section
     waitForElm(sectionSelector).then(function () {
         document.querySelector(sectionSelector).insertAdjacentHTML('beforeend', `<div class="spz-triage-wrap">
-          <div class="questions-progress">
-              ${triageData.length !== 0 && triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
-              <div class="progress-item"></div>
-          </div>
-          <h2 class="form-heading">Get a Demo</h2>
-          <div class="questions-wrap">
-              ${triageData.length !== 0 && triageData.map((item, index) => {
-            return `${index == 0 ? `<div class="question-item question-${index + 1} ">
-                          <div class="question-heading">${item.titleQues}</div>
-                          <div class="answers-wrap">
-                                  ${item.answers && item.answers.map((itemm, indexx) => {
-                const sanitizedtitleQues = item.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
+                      <div class="questions-progress">
+                          ${triageData.length !== 0 && triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
+                          <div class="progress-item"></div>
+                      </div>
+                      <h2 class="form-heading">Get a Demo</h2>
+                      <div class="questions-wrap">
+                          ${triageData.length !== 0 && triageData.map((item, index) => {
+            return `<div class="question-item question-${index + 1} ${index !== 0 ? 'spz-hidden' : ''}">
+                                      <div class="question-heading">${item.titleQues}</div>
+                                      <div class="answers-wrap">
+                                              ${item.answers && item.answers.map((ans, ind) => {
+                const sanitizedQuestionHeading = item.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
                 return `<div class="answer-item">
-                                                  <input type="radio" name="${sanitizedtitleQues}" value="${itemm.formVal}" ${itemm.isSelected && itemm.isSelected == true ? `checked` : ``}>
-                                                  <div class="answer-content">
-                                                          <div class="answer-radio"><span></span></div>
-                                                          ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
-                                                          <div class="answer-text">${itemm.copy}</div>
-                                                          ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
-                                                  </div>
-                                          </div>`;
+                                                              <input type="radio" name="${sanitizedQuestionHeading}" value="${ans.formVal}">
+                                                              <div class="answer-content">
+                                                                      <div class="answer-radio"><span></span></div>
+                                                                      ${ans.image && ans.image.length !== 0 ? `<img src="${ans.image}" class="answer-image" alt="${ans.copy}"/>` : ``}
+                                                                      <div class="answer-text">${ans.copy}</div>
+                                                                      ${ans.answerDesc && ans.answerDesc.length !== 0 ? `<div class="answer-desc">${ans.answerDesc}</div>` : ``}
+                                                              </div>
+                                                      </div>`;
             }).join('')}
-                                  <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
-                          </div>
-                          <div class="next-question step-1-go">Next</div>
-                  </div>` : `${item.answers && item.answers.map((ans, ind) => {
-                return `
-                  <div class="question-item question-${ind + 2} ${ans.title} spz-hidden">
-                                                            <div class="question-heading">${ans.titleQues}</div>
-                                                            <div class="answers-wrap">
-                                                                    ${ans.childAns && ans.childAns.map((itemm, indexx) => {
-                    const sanitizedtitleQues = ans.titleQues.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
-                    return `<div class="answer-item">
-                                <input type="checkbox" name="${sanitizedtitleQues}" value="${itemm.formVal}" ${itemm.isSelected && itemm.isSelected == true ? `checked` : ``}>
-                                <div class="answer-content">
-                                        <div class="answer-checkbox"><span><svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
-<path fill-rule="evenodd" clip-rule="evenodd" d="M13.8047 3.52876C14.0651 3.78911 14.0651 4.21122 13.8047 4.47157L6.4714 11.8049C6.21106 12.0653 5.78894 12.0653 5.5286 11.8049L2.19526 8.47157C1.93491 8.21122 1.93491 7.78911 2.19526 7.52876C2.45561 7.26841 2.87772 7.26841 3.13807 7.52876L6 10.3907L12.8619 3.52876C13.1223 3.26841 13.5444 3.26841 13.8047 3.52876Z" fill="white"/>
-</svg></span></div>
-                                        ${itemm.image && itemm.image.length !== 0 ? `<img src="${itemm.image}" class="answer-image" alt="${itemm.copy}"/>` : ``}
-                                        <div class="answer-text">${itemm.copy}</div>
-                                        ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
-                                </div>
-                        </div>`;
-                }).join('')}
-                                                            </div>
-                                                            <div class="next-question step-2-go">Next</div>
-                                                    </div> `;
-            }).join('')}
-                                                    
-                                                    `}`;
+                                              <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
+                                      </div>
+                                      <div class="next-question">Next</div>
+                              </div>`;
         }).join('')}
-              <div class="question-form spz-hidden spz-form-wrap"></div>
-          </div>
-      </div>`);
+                          <div class="question-form spz-hidden spz-form-wrap"></div>
+                      </div>
+                  </div>`);
     });
 
     waitForElm('.answer-item input[name="What-is-your-organization-type"]').then(function () {
@@ -452,17 +313,6 @@ function addTriage() {
                                         }
                                     });
                                 }
-                                //store the updated triageData in session storage
-                            }
-
-                            if (ans.childAns) {
-                                ans.childAns.forEach((subans, ind) => {
-                                    if (subans.formVal == e.target.value) {
-                                        subans.isSelected = e.target.checked;
-                                        //store the updated triageData in session storage
-                                        sessionStorage.setItem('triageData', JSON.stringify(triageData));
-                                    }
-                                });
                             }
                         });
                     });
@@ -477,42 +327,41 @@ function addTriage() {
 
 // Function to pre-fill form select fields based on stored values
 const prefillSelectFields = () => {
-    ['Industry', 'capability'].forEach(field => {
-        const value = localStorage.getItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in');
-        if (value) {
-            const select = document.querySelector(`select[name = "${field}"]`);
-            if (select) select.value = value;
-        }
+    ['Industry', 'Product_Interest__c'].forEach(field => {
+        //get the selected values from the triageData stored in session storage
+        triageData.forEach((item, index) => {
+            item.answers.forEach((ans, ind) => {
+                if (ans.isSelected) {
+                    // localStorage.setItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in', ans.formVal);
+                    const select = document.querySelector(`select[name = "${field}"]`);
+                    if (select) select.value = ans.formVal;
+                    console.log('ans.formVal ' + select.value);
+                }
+            });
+        });
+        // const value = localStorage.getItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in');
+        // if (value) {
+        //     const select = document.querySelector(`select[name = "${field}"]`);
+        //     if (select) select.value = value;
+        // }
     });
 };
 
 //Handle next question navigation and validation
 window.addEventListener("click", function (e) {
-    if (e.target.classList.contains("step-1-go")) {
+    if (e.target.classList.contains("next-question")) {
         const stepContent = e.target.closest('.question-item').querySelector('.answers-wrap');
         if (Array.from(stepContent.querySelectorAll('input')).some(checkbox => checkbox.checked)) {
             e.target.parentElement.classList.add('spz-hidden');
+            e.target.parentElement.nextElementSibling.classList.remove('spz-hidden');
             const active = document.querySelector('.progress-item.active');
             active.classList.replace('active', 'completed');
             active.nextElementSibling.classList.add('active');
-
-            //get the selected radio value
-            const next = e.target.parentElement.querySelector('input[type="radio"]:checked').value;
-            this.document.querySelector(`.questions-wrap  .` + next + ``).classList.remove('spz-hidden');
-
             // Call prefill function to ensure form fields are filled when step is visible
             prefillSelectFields();
         } else {
             stepContent.classList.add('error');
         }
-    }
-
-    if (e.target.classList.contains("step-2-go")) {
-        e.target.parentElement.classList.add('spz-hidden');
-        const active = document.querySelector('.progress-item.active');
-        active.classList.replace('active', 'completed');
-        active.nextElementSibling.classList.add('active');
-        this.document.querySelector('.question-form').classList.remove('spz-hidden');
     }
 });
 
