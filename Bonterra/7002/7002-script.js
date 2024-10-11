@@ -298,7 +298,6 @@ function addTriage() {
         ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
                 item.addEventListener('click', e => {
-                    console.log('e.target.value ' + e.target.value);
                     //set the selected values isSelected to true in the triageData stored in session storage
                     triageData.forEach((item, index) => {
                         item.answers.forEach((ans, ind) => {
@@ -332,18 +331,15 @@ const prefillSelectFields = () => {
         triageData.forEach((item, index) => {
             item.answers.forEach((ans, ind) => {
                 if (ans.isSelected) {
-                    // localStorage.setItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in', ans.formVal);
-                    const select = document.querySelector(`select[name = "${field}"]`);
-                    if (select) select.value = ans.formVal;
-                    console.log('ans.formVal ' + select.value);
+                    //check here from which question the value is coming and set the value to the respective field
+                    if (field === 'Industry' && item.titleQues === 'What is your organization type?' && document.querySelector(`select[name = "Industry"]`)) {
+                        document.querySelector(`select[name = "Industry"]`).value = ans.formVal;
+                    } else if (field === 'Product_Interest__c' && item.titleQues === 'What product(s) are you interested in?' && document.querySelector(`select[name = "Product_Interest__c"]`)) {
+                        document.querySelector(`select[name = "Product_Interest__c"]`).value = ans.formVal;
+                    }
                 }
             });
         });
-        // const value = localStorage.getItem(field === 'Industry' ? 'What-is-your-organization-type' : 'What-products-are-you-interested-in');
-        // if (value) {
-        //     const select = document.querySelector(`select[name = "${field}"]`);
-        //     if (select) select.value = value;
-        // }
     });
 };
 
