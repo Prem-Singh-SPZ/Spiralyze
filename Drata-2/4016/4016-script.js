@@ -11,12 +11,12 @@ waitForElm('.hero-section .hc-title').then(function () {
 });
 
 function setHiddenFields() {
-    waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function () {
+    waitForElm('form.hs-form-private .hs_cro_test_3 .input .hs-input').then(function () {
         let setValue = setInterval(() => {
-            if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_4016') {
+            if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').getAttribute('value') == 'Variant_4016') {
                 clearInterval(setValue);
             }
-            document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_4016');
+            document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', 'Variant_4016');
         }, 100);
     });
 }
