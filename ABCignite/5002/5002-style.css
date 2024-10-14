@@ -39,7 +39,7 @@ body.spz-5002 #demo-modal .modal__overlay {
     padding-right: 24px;
   }
 }
-@media (max-height: 900px) and (max-width: 479.98px) {
+@media (max-height: 900px) {
   body.spz-5002 #demo-modal .modal__overlay {
     -webkit-box-align: start;
         -ms-flex-align: start;
@@ -105,10 +105,6 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col {
 @media (max-width: 767.98px) {
   body.spz-5002 #demo-modal .modal__container .demo-modal__col {
     width: 100%;
-  }
-}
-@media (max-width: 479.98px) {
-  body.spz-5002 #demo-modal .modal__container .demo-modal__col {
     max-width: 320px;
   }
 }
@@ -166,6 +162,7 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   letter-spacing: -0.28px;
   margin-bottom: 2.4px;
   text-transform: capitalize;
+  white-space: nowrap;
 }
 body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .marketo-form .mktoFormRow .mktoFormCol .mktoField {
   color: #000;

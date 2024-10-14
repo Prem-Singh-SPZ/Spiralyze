@@ -21,8 +21,15 @@ let bodyLoad = setInterval(function () {
                                 document.querySelector('button[data-micromodal-open="demo-modal"]').click();
                             }
                             else {
-                                document.querySelector('.demo-modal.modal').classList.add('is-open');
+                                document.querySelector('.demo-modal.modal').setAttribute("aria-hidden", "false");
                                 document.body.classList.add('is-modal-open');
+                                //convert above code to pure js
+                                document.querySelector('.demo-modal.modal').classList.add('is-open');
+                                document.querySelector('.demo-modal.modal').addEventListener("animationend", function () {
+                                    document.querySelector('.demo-modal.modal').removeEventListener("animationend", function () {
+                                        document.querySelector('.demo-modal.modal').setFocusToFirstNode();
+                                    }, false);
+                                }, false);
                             }
                         });
                     }
