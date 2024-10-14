@@ -24,6 +24,7 @@ body.spz-7002 {
 
       @media (max-width: 767.98px) {
         max-width: 510px;
+        padding-bottom: 32px !important;
       }
 
       .block-wrapper {
@@ -49,7 +50,7 @@ body.spz-7002 {
 
           @media screen and (max-width: 1199.98px) {
             max-width: 100%;
-			margin-right: 0;
+            margin-right: 0;
           }
 
           > .mktoForm {
@@ -69,6 +70,11 @@ body.spz-7002 {
             max-width: 100%;
           }
 
+          @media screen and (max-width: 767.98px) {
+            padding-left: 12px;
+            padding-right: 12px;
+          }
+
           > .mktoText {
             display: none !important;
           }
@@ -80,6 +86,10 @@ body.spz-7002 {
               margin-left: auto;
               margin-right: auto;
               max-width: 704px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              padding: 0;
             }
 
             .spz-form-title {
@@ -281,7 +291,8 @@ body.spz-7002 {
           }
         }
 
-        &.Industry-row, &.Product_Interest__c-row {
+        &.Industry-row,
+        &.Product_Interest__c-row {
           display: none !important;
         }
       }
@@ -462,6 +473,7 @@ input {
         font-weight: 500;
         line-height: 1.4;
         margin: 0 auto;
+        letter-spacing: 0.2px;
       }
       .step-error {
         display: flex;
@@ -520,9 +532,10 @@ input {
     .answers-wrap {
       display: flex;
       flex-wrap: wrap;
-      justify-content: space-between;
+      justify-content: center;
       width: 100%;
-      margin: 31px auto 20px;
+      gap: 0 12px;
+      margin: 31px auto 21px;
       .answer-item {
         display: inline-flex;
         flex-wrap: wrap;
@@ -593,6 +606,7 @@ input {
           font-weight: 600;
           line-height: 20px;
           padding: 0;
+          letter-spacing: -0.15px;
         }
         .answer-desc {
           color: #685c75;
@@ -662,7 +676,10 @@ input {
     }
 
     .question-form {
-      padding: 14px 14px 40px;
+      padding: 15px 14px 40px;
+      @media screen and (max-width: 767.98px) {
+        padding: 20px 0 0;
+      }
     }
   }
 }
@@ -680,7 +697,7 @@ input {
   .spz-7002 {
     .spz-triage-wrap {
       max-width: 688px;
-      margin: 10px auto 0;
+      margin: 0 auto;
       box-shadow: 0px 4px 32px 0px rgba(40, 14, 67, 0.12);
       .form-heading {
         margin: 34px auto 15px;
@@ -699,39 +716,43 @@ input {
   .spz-7002 {
     .spz-triage-wrap {
       box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.15);
-      margin: 42px auto 0;
+      margin: 20px auto 0;
       -webkit-box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.149);
       box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.149);
       .form-heading {
         font-size: 32px;
         line-height: 1.5;
         letter-spacing: 0.64px;
-        margin: 27px auto 1px;
+        margin: 26px auto 1px;
       }
       .questions-wrap {
         .question-heading {
           font-size: 16px;
           line-height: 1.5;
         }
-        padding: 0 16px 32px;
+        padding: 0 6px 32px;
+
+        .question-item{
+          padding: 0 10px;
+        }
       }
       .answers-wrap {
         .answer-item {
-          .answer-image {
-            width: 32px;
-            height: 32px;
-            margin-bottom: 9px;
-          }
+          // .answer-image {
+          //   width: 32px;
+          //   height: 32px;
+          //   margin-bottom: 9px;
+          // }
           .answer-desc {
             font-size: 12px;
             line-height: 18px;
             margin-top: 5px;
           }
           .answer-content {
-            padding: 24px 12px 23px;
+            padding: 16px 12px 12px;
           }
         }
-        margin: 24px auto 12px;
+        margin: 24px auto 14px;
       }
       .question-2 {
         .answers-wrap {
@@ -740,9 +761,14 @@ input {
               margin-bottom: 16px;
             }
             .answer-content {
-              padding: 15px 12px 14px;
+              padding: 16px 2px 14px;
+
+              .answer-text {
+                font-size: 12px;
+                line-height: 16px;
+              }
             }
-            width: 100%;
+            width: calc(100% / 2 - 6px);
           }
         }
       }

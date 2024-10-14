@@ -43,22 +43,22 @@ let triageData = [
             },
             {
                 formVal: 'Volunteer Coordination',
-                copy: 'Volunteer Management',
+                copy: 'Volunteer <br>Management',
                 image: imgUrl + '/v1727688286/bonterra/7002/icon-people.svg'
             },
             {
                 formVal: 'Giving Days',
-                copy: 'Giving Days',
+                copy: 'Giving <br>Days',
                 image: imgUrl + '/v1727688286/bonterra/7002/icon-money.svg'
             },
             {
                 formVal: 'Development Standard',
-                copy: 'Customer Relationship Management',
+                copy: 'Customer Relationship <br>Management',
                 image: imgUrl + '/v1727688286/bonterra/7002/clipboard-list-svgrepo-com_1.svg'
             },
             {
                 formVal: 'Payments Solution',
-                copy: 'Payments Solution',
+                copy: 'Payments <br>Solution',
                 image: imgUrl + '/v1727688286/bonterra/7002/dollar-minimalistic-svgrepo-com_1.svg'
             },
         ]
