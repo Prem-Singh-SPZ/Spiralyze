@@ -360,8 +360,25 @@ body.spz-14018 {
 
   //Case Study Start
   .case-studies-section {
-    max-width: 1248px;
-    margin: 22px auto 0;
+    background-color: #f6f8fa;
+    padding: 96px 24px;
+
+    @media (max-width: 1199.98px) {
+      padding: 96px 24px;
+    }
+
+    @media (max-width: 1024.98px) {
+      padding: 81px 16px 79px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 79px 16px;
+    }
+
+    .cs-overflow {
+      max-width: 1248px;
+      margin: 0 auto;
+    }
 
     .cs-title {
       color: #000;
@@ -500,11 +517,33 @@ body.spz-14018 {
       }
     }
   }
-
   //Case Study Ends
 
+  //made easy section starts
+  .made-easy-sec {
+    padding: 96px 24px;
+
+    @media (max-width: 1199.98px) {
+      padding: 96px 24px;
+    }
+
+    @media (max-width: 1024.98px) {
+      padding: 81px 16px 79px;
+    }
+
+    @media (max-width: 767.98px) {
+      padding: 79px 16px;
+    }
+
+    .made-easy-container {
+      max-width: 1280px;
+      margin: 0 auto;
+    }
+  }
+  //made easy section ends
+
   //spz nav bar starts
-  .spz-navbar {
+  .navbar-section {
     height: 80px;
     border-bottom: 1px solid #dde3eb;
     background: #fff;
@@ -923,43 +962,6 @@ body.spz-14018 {
               padding: 0 0 0 28px;
               font-size: 14px;
               line-height: 20px;
-            }
-
-            .red-txt {
-              color: #ff0000;
-              font-weight: 700;
-            }
-
-            .grn-txt {
-              color: #08bc30;
-              font-weight: 700;
-            }
-
-            &::before {
-              content: "";
-              display: inline-block;
-              width: 24px;
-              height: 24px;
-              position: absolute;
-              top: -1px;
-              left: 0;
-
-              @media (max-width: 767.98px) {
-                top: 0;
-                width: 20px;
-                height: 20px;
-              }
-            }
-
-            &:first-child::before {
-              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_no.svg");
-              background-size: contain;
-              background-repeat: no-repeat;
-            }
-            &:last-child::before {
-              background-image: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_yes.svg");
-              background-size: contain;
-              background-repeat: no-repeat;
             }
           }
 
