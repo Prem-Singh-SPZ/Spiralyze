@@ -62,15 +62,7 @@
 
             let updatePage = setInterval(() => {
                 waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
-
-                    document.querySelectorAll('main[data-csk-entry-field="contents"] > section:not(.spz-sec):not(.con-sec)').forEach(function (section, index) {
-                        section.classList.add('con-sec', 'control-section-' + index);
-                    });
-
                     heroContent_V1();
-                    spzNavBar_V1();
-                    checkActiveNav_V1();
-                    globalCTA_V1();
 
                     if (document.querySelector('.md-video-wr video#gify-video')) {
                         document.querySelector('.md-video-wr video#gify-video').play();
@@ -132,7 +124,7 @@
     function spzNavBar_V1() {
         if (document.querySelector('.spz-navbar')) return;
 
-        document.querySelector('main[data-csk-entry-field="contents"]').insertAdjacentHTML('afterbegin', ` <nav class="spz-navbar spz-sec">
+        document.querySelector('.hero-section-14018').insertAdjacentHTML('afterend', ` <nav class="spz-navbar spz-sec">
             <div class="nav-container dis-flex justify-content-between align-items-center">
                 <div class="nav-logo no-mob">
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
@@ -575,65 +567,11 @@
             initSlider_14018_V1();
         }
 
-        customerStories_V1();
-    }
-
-    function customerStories_V1() {
-        document.querySelector('.cr-section-14018').insertAdjacentHTML('afterend', `<section class="cs-section spz-sec">
-            <div class="cs-container dis-flex">
-                <div class="cs-left-copy">
-                    <p class="cs-eyebrow">Customer Stories</p>
-                    <h2 class="cs-title">PolicyDock Saves 6 Months in the SOC 2 Audit</h2>
-                    <p class="cs-desc">See how automated evidence collection and continuous monitoring reduce manual work for startups that need to move fast.</p>
-                    <a href="javascript:void()" class="demo-btn cs-cta blue-btn">Get Demo</a>
-                </div>
-                <div class="cs-right-video">
-                    <div class="cs-video-mask"></div>
-                    <video controls controlsList="nodownload" id="cs-video" poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/video_image.webp">
-                        <source src="https://try.drata.com/hubfs/Spiralyze/28001/Drata_PolicyDock%20%5Bv8%5D%20(1).mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
-                </div>
-            </div>
-        </section>`);
-
-        // waitForElm('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe').then(function () {
-        //     document.querySelector('.cs-section .cs-right-video').insertAdjacentElement('afterbegin', document.querySelector('.control-section-2 [class*="BlockVideo-vimeoContainer"] iframe'));
-        // });
-
-        whyDrata_V1();
-    }
-
-    function whyDrata_V1() {
-        if (document.querySelector('.spz-title-container')) return;
-
-        waitForElm('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').then(function () {
-            document.querySelector('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').innerHTML = `<div class="spz-title-container">
-        <h6 class="ing-sub-title">Why Drata?</h6>
-        <h2 class="ing-sec-title">We Deliver Results for Customers</h2>
-        <div class="ing-stats-section dis-flex">
-        <div class="ing-stats">
-        <h3>98%</h3>
-        <span class="ing-spn">Customer Satisfaction Rate</span></div>
-        <div class="line">&nbsp;</div>
-        <div class="ing-stats">
-        <h3>5x</h3>
-        <span class="ing-spn">Faster Compliance Management</span></div>
-        <div class="line">&nbsp;</div>
-        <div class="ing-stats">
-        <h3>9.4</h3>
-        <span class="ing-spn">G2 Ease-of-Use Rating</span></div>
-        </div>
-        </div>`;
-        });
-
         globalCTA_V1();
     }
 
     function globalCTA_V1() {
-        if (document.querySelector('.demo-cta-section')) return;
-
-        document.querySelector('.control-section-8').insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
+        document.querySelector('.cr-section-14018').insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
             <div class="demo-cta-container">
                 <div class="cta-desc">Start Your Compliance Journey Today</div>
                 <div class="cta-wrapper">
