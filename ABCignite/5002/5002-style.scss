@@ -49,6 +49,8 @@ body.spz-5002 {
         top: 22px;
         width: 18px;
         height: 18px;
+        opacity: 1;
+        animation: opacity-animation 1s ease;
 
         @media screen {
           top: 21px;
@@ -110,8 +112,9 @@ body.spz-5002 {
           max-width: 320px;
         }
 
-        // @media (max-width: 479.98px) {
-        // }
+        @media (min-width: 479.98px) and (max-width: 767.98px) {
+          max-width: 440px;
+        }
 
         @media (max-width: 340.98px) {
           max-width: 300px;
@@ -299,5 +302,15 @@ body.spz-5002 {
   to {
     top: 0;
     opacity: 1;
+  }
+}
+
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+    // top: -100%;
+  }
+  to {
+    opacity: 0;
   }
 }

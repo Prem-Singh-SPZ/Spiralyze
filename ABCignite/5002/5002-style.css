@@ -51,6 +51,9 @@ body.spz-5002 #demo-modal .modal__overlay .modal__close {
   top: 22px;
   width: 18px;
   height: 18px;
+  opacity: 1;
+  -webkit-animation: opacity-animation 1s ease;
+          animation: opacity-animation 1s ease;
 }
 @media screen {
   body.spz-5002 #demo-modal .modal__overlay .modal__close {
@@ -106,6 +109,11 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col {
   body.spz-5002 #demo-modal .modal__container .demo-modal__col {
     width: 100%;
     max-width: 320px;
+  }
+}
+@media (min-width: 479.98px) and (max-width: 767.98px) {
+  body.spz-5002 #demo-modal .modal__container .demo-modal__col {
+    max-width: 440px;
   }
 }
 @media (max-width: 340.98px) {
@@ -285,5 +293,21 @@ body.spz-5002 #demo-modal .modal__container .demo-modal__col .demo-modal__form .
   to {
     top: 0;
     opacity: 1;
+  }
+}
+@-webkit-keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes opacity-animation {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 0;
   }
 }
