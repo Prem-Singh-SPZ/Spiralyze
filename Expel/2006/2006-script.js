@@ -73,7 +73,7 @@ let bodyLoaded = setInterval(function () {
               <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame_1171275523.svg" alt="Markel" class="client-logo" />
             </div>
             <div class="img-wrapper">
-              <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661498/expel/2003/frame_1171275524.svg" alt="Carter's" class="client-logo" />
+              <img src="//res.cloudinary.com/spiralyze/image/upload/v1729089991/expel/2006/frame_1171275524.svg" alt="Carter's" class="client-logo" />
             </div>
             <div class="img-wrapper">
               <img src="//res.cloudinary.com/spiralyze/image/upload/v1717661499/expel/2003/frame_1171275525.svg" alt="Doordash" class="client-logo" />
