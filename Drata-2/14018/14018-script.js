@@ -126,7 +126,6 @@
         globalCTA_V1('.cr-section-14018');
         resourceSection_V1('.demo-cta-section');
         complianceFAQ_V1('.resources-section-14018');
-
     }
 
     function heroSection_V1(selector) {
