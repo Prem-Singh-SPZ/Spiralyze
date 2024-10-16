@@ -3,37 +3,202 @@
     const ctaArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                     </svg>`;
+    const anchorArrow = `<svg xmlns="http://www.w3.org/2000/svg" width="16" height="17" viewBox="0 0 16 17" fill="none">
+                    <path d="M7.96591 14.0795L6.64773 12.7727L10.108 9.3125H2V7.39205H10.108L6.64773 3.9375L7.96591 2.625L13.6932 8.35227L7.96591 14.0795Z" fill="#0068C9"/>
+                    </svg>`;
 
     // Convert customer reviews section to dynamic JSON data
     const custReviews = [
         {
-            name: "SOC 2",
-            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_soc_2.svg",
-            title: "Achieve SOC 2 5x Faster",
-            review: "Drata simplifies the management of the necessary controls across all five SOC 2 trust principles with automated evidence collection, policy templates, and more — ensuring your customers&#8217; private data stays private.",
+            name: "David Caughill,",
+            companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003436.webp",
+            title: "DevOps Engineer",
+            review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
             link: "https://drata.com/product/soc-2"
         },
         {
-            name: "ISO 27001",
-            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_iso_27002.svg",
-            title: "ISO 27001, So Easy",
-            review: "Go global with this internationally respected framework. Accelerate your journey with a platform that satisfies ISO 27001 requirements for systematic information security management.",
+            name: "Jonathan Jaffe,",
+            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003434.svg",
+            title: "CISO",
+            review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
             link: "https://drata.com/product/iso-27001"
         },
         {
-            name: "PCI DSS",
-            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_pci_1.svg",
-            title: "Make PCI a Piece of Cake",
-            review: "Get paid, not played. Drata automates the processes required to prove secure credit card payment systems, significantly reducing the chance of human error.",
+            name: "Chris Bake,",
+            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003435.svg",
+            title: "CTO",
+            review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we’re pursuing SOC 2 compliance!”",
             link: "https://drata.com/product/pci-dss"
         },
         {
-            name: "HIPAA",
-            companyLogo: astUrl + "/fl_sanitize/drata/28001/icon_hipaa.svg",
-            title: "Avoid HIPAA Hiccups",
-            review: "By automating compliance tasks, Drata helps ensure continuous protection of patient data as required by HIPAA, while expert support helps navigate complex regulations.",
+            name: "Joshua Peskay,",
+            companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003437.webp",
+            title: "vCIO",
+            review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
+            link: "https://drata.com/product/hipaa"
+        },
+        {
+            name: "Lola Kureno,",
+            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003433.svg",
+            title: "Cyber Security Engineer",
+            review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
             link: "https://drata.com/product/hipaa"
         }
+    ];
+
+    const featureCap = [
+        {
+            title: "Risk Assessments",
+            review: "Identify, assess, and monitor risks specific to your organization, systems, and frameworks.",
+        },
+        {
+            title: "Quick Start Onboarding ",
+            review: "Access 24/5 technical support and an ecosystem of partners that can expedite your onboarding.",
+        },
+        {
+            title: "User Access Review",
+            review: "Conduct user access reviews directly in Drata to increase security and save time.",
+        },
+        {
+            title: "Pre-Mapped Controls",
+            review: "Our pre-built SOC 2 framework comes with all the controls required for compliance. ",
+        },
+        {
+            title: "Security Training",
+            review: "Drata’s built-in security training allows you to automate tasks like sending reminders and documenting completion.",
+        },
+        {
+            title: "Audit Support",
+            review: "Get real-time assistance from a team of experts or dive into extensive help articles.",
+        },
+        {
+            title: "Policy Center",
+            review: "Streamline policy management for SOC 2 with 20+ customizable, auditor-approved policies.",
+        },
+        {
+            title: "Continuous Monitoring",
+            review: "Get non-stop peace of mind with daily tests that show your audit readiness. ",
+        }
+    ];
+
+    //json for resource section where one tab has 4 cards under it and each card has different attqributes
+    const resourceData = [
+        {
+            title: "SOC 2 Education",
+            cards: [
+                {
+                    title: "SOC 2 Beginners Guide",
+                    desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
+                    img: astUrl + "/f_auto/drata/14018/8.webp",
+                    link: "https://drata.com/grc-central/soc-2"
+                },
+                {
+                    title: "8 Easy Steps to Get Started with ISO 27001",
+                    desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
+                    img: astUrl + "/f_auto/drata/14018/5.webp",
+                    link: "https://drata.com/grc-central/soc-2/readiness-assessment"
+                },
+                {
+                    title: "Learn About the Cost of Non-Compliance",
+                    desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
+                    img: astUrl + "/f_auto/drata/14018/6.webp",
+                    link: "https://drata.com/product/soc-2"
+                },
+                {
+                    title: "SOC 2 Audits: What You Can Expect from Start to Finish",
+                    desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
+                    img: astUrl + "/f_auto/drata/14018/7.webp",
+                    link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
+                }
+            ]
+        },
+        {
+            title: "Startup Topics",
+            cards: [
+                {
+                    title: "SANS Audit Hub First Look with Howard Carter",
+                    desc: "See How Drata’s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
+                    img: astUrl + "/f_auto/drata/14018/9.webp",
+                    link: "https://drata.com/platform/startup"
+                },
+                {
+                    title: "3 Reasons Why Startups Need SOC 2",
+                    desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup’s long-term trajectory.",
+                    img: astUrl + "/f_auto/drata/14018/10.webp",
+                    link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
+                },
+                {
+                    title: "14 Free Cybersecurity Tools for Startups",
+                    desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
+                    img: astUrl + "/f_auto/drata/14018/11.webp",
+                    link: "https://drata.com/blog/free-cybersecurity-tools"
+                },
+                {
+                    title: "Debunking 5 Common SOC 2 Misconceptions",
+                    desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
+                    img: astUrl + "/f_auto/drata/14018/12.webp",
+                    link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
+                }
+            ]
+        },
+        {
+            title: "Automation ROI",
+            cards: [
+                {
+                    title: "Gather Voices",
+                    desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
+                    img: astUrl + "/f_auto/drata/14018/13.webp",
+                    link: "https://drata.com/customers/gather-voices"
+                },
+                {
+                    title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
+                    desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
+                    img: astUrl + "/f_auto/drata/14018/14.webp",
+                    link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
+                },
+                {
+                    title: "Vareto",
+                    desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
+                    img: astUrl + "/f_auto/drata/14018/15.webp",
+                    link: "https://drata.com/customers/vareto"
+                },
+                {
+                    title: "Calculating and Communicating Cybersecurity ROI",
+                    desc: "Security improvements get approved faster when CISOs speak the board’s language. Here’s everything you need to know about cybersecurity ROI.",
+                    img: astUrl + "/f_auto/drata/14018/16.webp",
+                    link: "https://drata.com/blog/cybersecurity-roi"
+                }
+            ]
+        },
+        {
+            title: "Customer Testimonials",
+            cards: [
+                {
+                    title: "Unlocking ROI: Kosli's 90-Day Journey to SOC 2 Type 2",
+                    desc: "How leveraging Drata and Kosli streamlines compliance audit readiness.",
+                    img: astUrl + "/f_auto/drata/14018/17.webp",
+                    link: "https://drata.com/customers/kosli"
+                },
+                {
+                    title: "Starting With SOC 2: How Drata Proves Invaluable for Young Startups",
+                    desc: "A case on how Drata empowers Scanner to navigate challenges with confidence and efficiency—on their own.",
+                    img: astUrl + "/f_auto/drata/14018/18.webp",
+                    link: "https://drata.com/customers/scanner"
+                },
+                {
+                    title: "3rdRisk Achieves SOC 2 Type 1 in 2 Weeks With The Help of Drata and AssuranceLab",
+                    desc: "3rdRisk is a European tech company providing a third-party risk management (TPRM) and internal control solution.",
+                    img: astUrl + "/f_auto/drata/14018/19.webp",
+                    link: "https://drata.com/customers/third-risk"
+                },
+                {
+                    title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata’s Compliance Automation",
+                    desc: "Calendly’s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
+                    img: astUrl + "/f_auto/drata/14018/20.webp",
+                    link: "https://drata.com/customers/calendly"
+                }
+            ]
+        },
     ];
 
     //append swiper js script in head and onload of that call function initSlider_14018
@@ -105,8 +270,8 @@
                         <h4 class="modal-title">How do you want <br>to use Drata?</h4>
                     </div>
                     <div class="modal-variants">
-                        <button class="variant-btn variant_1">Get SOC2 Compliant ${ctaArrow}</button>
-                        <button class="variant-btn variant_2">Maintain SOC2 Compliance ${ctaArrow}</button>
+                        <button class="variant-btn secondary-blue-btn variant_1">Get SOC2 Compliant ${ctaArrow}</button>
+                        <button class="variant-btn secondary-blue-btn variant_2">Maintain SOC2 Compliance ${ctaArrow}</button>
                     </div>
                 </div>
             </div>
@@ -121,9 +286,11 @@
         simpleSteps_V1('.made-easy-sec');
         complianceBenefits_V1('.simple-steps-sec-14018');
         complianceChanges_V1('.benefits-sec');
-        meetDrata_V1('.compliance-sec');
-        customerReviews_V1('.meet-drata');
-        globalCTA_V1('.cr-section-14018');
+        customerReviews_V1('.compliance-sec');
+        meetDrata_V1('.cr-section-14018');
+        feature_cap_slider_V1('.meet-drata');
+        ourIntigrations_V1('.feature-cap-section-14018');
+        globalCTA_V1('.our-integrations-sec');
         resourceSection_V1('.demo-cta-section');
         complianceFAQ_V1('.resources-section-14018');
     }
@@ -131,7 +298,7 @@
     function heroSection_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('body .hero-section-14018').length == 0) {
-                document.querySelector(selector).insertAdjacentHTML("afterend", `<section class="hero-section-14018">
+                document.querySelector(selector).insertAdjacentHTML("beforebegin", `<section class="hero-section-14018">
                     <div class="hero-content dis-flex flex-wrap justify-content-between">
                     <div class="hero-left-section">
                     <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br>We Got You.</h1>
@@ -176,9 +343,9 @@
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
-                    <a class="nav-anchor" href="#nav-compliance">Overview & Process</a>
-                    <a class="nav-anchor" href="#why-drata">Business Impact</a>
-                    <a class="nav-anchor" href="#frameworks">Why Drata</a>
+                    <a class="nav-anchor" href="#overview-process">Overview & Process</a>
+                    <a class="nav-anchor" href="#business-impact">Business Impact</a>
+                    <a class="nav-anchor" href="#why-drata">Why Drata</a>
                     <a class="nav-anchor" href="#nav-resource">Resources</a>
                 </div>
             </div>
@@ -208,6 +375,8 @@
     function checkActiveNav_V1() {
         document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
             const target = document.querySelector(anchor.getAttribute('href'));
+            const hero = document.querySelector('header ~ .hero-section-14018');
+            const footer = document.querySelector('div[data-csk-entry-type="globalFooter"]');
             if (isInViewport(target)) {
                 document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
                     anchor.classList.remove('active');
@@ -218,7 +387,10 @@
                 // console.log(anchor);
             }
             else {
-                anchor.classList.remove('active');
+                // anchor.classList.remove('active');
+                if (isInViewport(hero) || isInViewport(footer)) {
+                    anchor.classList.remove('active');
+                }
             }
 
             //left scroll the nav links to bring the active link in focus
@@ -276,7 +448,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.case-studies-section').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="case-studies-section spz-sec">
+            <section class="case-studies-section spz-sec" id="overview-process">
               <div class="cs-overflow">
                 <div class="case-study-wrapper" id="mini-cs-wrapper">
                 </div>
@@ -332,7 +504,7 @@
                             <div class="me-subtitle">So, you need to get SOC 2 compliant—but how? Compliance Automation.</div>
                         </div>
                         <div class="me-right">
-                            <a href="#" class="me-cta blue-btn">Download the Guide ${ctaArrow}</a>
+                            <a href="https://drata.com/grc-central/soc-2/type-2" class="me-cta primary-blue-btn">Download the Guide ${ctaArrow}</a>
                         </div>
                     </div>
                     <div class="me-contents">
@@ -441,6 +613,9 @@
                             </div>
                         </div>
                     </div>
+                    <div class="ss-bottom-cta-wrapper">
+                        <a href="https://drata.com/grc-central/soc-2/compliance-checklist" class="ss-bottom-cta primary-blue-btn">Get the SOC 2 Checklist ${ctaArrow}</a>
+                    </div>
                 </div>
             </section>`);
             }
@@ -475,7 +650,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.benefits-sec').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="benefits-sec spz-sec" id="nav-compliance">
+            <section class="benefits-sec spz-sec">
                 <div class="benefits-container">
                     <div class="bs-title-container">
                             <div class="bs-eyebrow">Compliance Benefits</div>
@@ -508,7 +683,7 @@
     function complianceChanges_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.compliance-sec').length === 0) {
-                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec">
+                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact">
             <div class="compliance-container">
                 <div class="c-title-container">
                     <div class="c-eyebrow">Beyond the Audit: Compliance Automation</div>
@@ -640,11 +815,16 @@
         waitForElm(selector).then(function () {
             if (document.querySelector('.cr-section-14018')) return;
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="cr-section-14018 spz-sec" id="frameworks">
+            <section class="cr-section-14018 spz-sec">
                 <div class="cr-title-container">
-                    <div class="title-wrapper">
-                        <p class="small-eyebrow">Pre-Built Templates</p>
-                        <h3 class="large-title">20+ Frameworks. <br class="tab-mob">None of the Grunt Work.</h3>
+                    <div class="title-wrapper dis-flex">
+                        <div class="cr-title">
+                            <p class="small-eyebrow">See all stories</p>
+                            <h3 class="large-title">Hear From Our Customers</h3>
+                        </div>
+                        <div class="cr-global-cta">
+                            <a href="https://drata.com/product" class="cr-cta primary-blue-btn">See all stories ${ctaArrow}</a>
+                        </div>
                     </div>
                 </div>
                 <div class="cr-section-container">
@@ -656,6 +836,37 @@
                                 </div>
                             </div>
                             <span class="swiper-pagination"></span>
+                        </div>
+                    </div>
+                </div>
+            </section>`);
+        }
+        );
+
+        // If swiper is initialized, run initSlider_14018 function
+        if (typeof Swiper !== 'undefined') {
+            initSlider_14018_V1();
+        }
+    }
+
+    function feature_cap_slider_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.feature-cap-section-14018')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `
+            <section class="feature-cap-section-14018 spz-sec">
+                <div class="fc-title-container">
+                    <div class="title-wrapper dis-flex">
+                        <h3 class="large-title">Features & Capabilities For Fast and Reliable Audits</h3>
+                    </div>
+                </div>
+                <div class="fc-section-container">
+                    <div class="slider-section">
+                        <div class="container slider-column">
+                            <div class="swiper feature-slider_14018">
+                                <div class="swiper-wrapper">
+                                    ${createFeatureCards()}
+                                </div>
+                            </div>
                             <span class="swiper-btn-prev"></span>
                             <span class="swiper-btn-next"></span>
                         </div>
@@ -671,14 +882,79 @@
         }
     }
 
+    function ourIntigrations_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.our-integrations-sec')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="our-integrations-sec spz-sec">
+        <div class="oi-title-container dis-flex">
+            <div class="title-wrapper">
+                <div class="oi-title">Our Integrations Power Automation</div>
+                <p class="oi-desc">SOC 2 requires evidence from your systems to prove their data security. We integrate with those systems to automatically collect and store that evidence to ensure compliance and audit readiness.</p>
+            </div>
+            <div class="oi-cta">
+                <a href="https://drata.com/platform/integrations" class="oi-cta-btn primary-blue-btn">Explore Integrations ${ctaArrow}</a>
+            </div>
+        </div>
+        <div class="oi-content-wrapper">
+            <div class="oi-cards">
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo01.svg" alt="AWS">
+                </div>
+                 <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo02.svg" alt="Azure">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo03.svg" alt="GitHub">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo04.svg" alt="Google Cloud">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo05.svg" alt="Jira">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo06.svg" alt="Slack">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo07.svg" alt="Checkr">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo08.svg" alt="Bitbucket">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo09.svg" alt="Gustog">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/f_auto/drata/14018/logo10.webp" alt="Datadog">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo11.svg" alt="ADP">
+                </div>
+                <div class="oi-img">
+                    <img src="${astUrl}/fl_sanitize/drata/14018/logo12.svg" alt="Docusign">
+                </div>
+            </div>
+        </div>
+    </section>`);
+        });
+    }
+
     function globalCTA_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.demo-cta-section')) return;
             document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
             <div class="demo-cta-container">
-                <div class="cta-desc">Start Your Compliance Journey Today</div>
+                <div class="sticker-wrapper">
+                    <div class="logos">
+                        <img src="${astUrl}/fl_sanitize/drata/14018/frame_40347.svg" alt="G2 Logo">
+                        <img src="${astUrl}/fl_sanitize/drata/14018/frame_5597.svg" alt="Star Rating">
+                    </div>
+                    <div class="sticker-desc"><span>Excellent</span> based on <span>700+</span> reviews</div>
+                </div>
+                <div class="cta-desc">Start Your SOC 2 Journey Today</div>
                 <div class="cta-wrapper">
-                    <a href="javascript:void()" class="demo-btn cta-btn blue-btn">Get Demo</a>
+                    <a href="javascript:void()" class="demo-btn cta-btn primary-blue-btn">Get Demo</a>
+                    <a href="javascript:void()" class="price-btn">How We Price</a>
                 </div>
             </div>
         </section>`);
@@ -692,94 +968,58 @@
         <section class="resources-section-14018  spz-sec" id="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
-                    <h6 class="title">Compliance 101 Resources for Startups</h6>
-                    <p class="sub-title">Learn the lingo, understand key benefits, and dive into the basics of compliance with these guides and articles.</p>
+                    <h6 class="title">Looking for more?</h6>
+                    <p class="sub-title">Learn the lingo, understand the benefits, see the ROI of SOC 2 automation, and more.</p>
+                </div>
+
+                <div class="resource-card-tabs">
+                    <div class="tab-wrapper">
+                        ${resourceData.map((tab, index) => {
+                return `<div class="tab ${index == 0 ? "active" : ""}" data-tab="${index}">${tab.title}</div>`;
+            }).join('')}
+                    </div>
+                    <div class="all-resc-anchor">
+                        <a href="https://drata.com/resources/resource-directory" class="all-resc-cta">Explore All Resources ${anchorArrow}</a>
+                    </div>
                 </div>
 
                 <div class="resource-cards">
-                    <div class="resource-card">
-                        <a class="rc-link" href="https://drata.com/grc-central/soc-2/type-2">
-                            <div class="card-img">
-                                <picture>
-                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-1.png" type="image/png">
-                                    <img src="${astUrl}/f_auto/drata/28001/image_02.webp"
-                                    alt="SOC 2 Beginners Guide">
-                                </picture>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">SOC 2 Beginners Guide</div>
-                                <div class="card-desc">Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.</div>
-                                <div class="learn-more">
-                                    Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                                <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                            </svg></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="resource-card">
-                        <a class="rc-link" href="https://drata.com/grc-central/iso-27001/checklist">
-                            <div class="card-img">
-                                <picture>
-                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-2.png" type="image/png">
-                                    <img src="${astUrl}/f_auto/drata/28001/image_04.webp"
-                                    alt="8 Easy Steps to Get Started with ISO 27001">
-                                </picture>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">8 Easy Steps to Get Started with ISO 27001</div>
-                                <div class="card-desc">Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.</div>
-                                <div class="learn-more">
-                                    Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                                <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                            </svg></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="resource-card">
-                        <a class="rc-link" href="https://drata.com/blog/cost-of-non-compliance">
-                            <div class="card-img">
-                                <picture>
-                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-3.png" type="image/png">
-                                    <img src="${astUrl}/f_auto/drata/28001/image_03.webp"
-                                    alt="Learn About the Cost of Non-Compliance">
-                                </picture>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">Learn About the Cost of Non-Compliance</div>
-                                <div class="card-desc">Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.</div>
-                                <div class="learn-more">
-                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
-                    <div class="resource-card">
-                        <a class="rc-link" href="https://drata.com/grc-central/soc-2/audit">
-                            <div class="card-img">
-                                 <picture>
-                                    <source media="(min-width:768px) and (max-width:1025px)" srcset="${astUrl}/f_auto/drata/28001/src/assets/tab-card-4.png" type="image/png">
-                                    <img src="${astUrl}/f_auto/drata/28001/image_01.webp"
-                                    alt="SOC 2 Audits: What You Can Expect from Start to Finish">
-                                </picture>
-                            </div>
-                            <div class="card-content">
-                                <div class="card-title">SOC 2 Audits: What You Can Expect from Start to Finish</div>
-                                <div class="card-desc">Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.</div>
-                                <div class="learn-more">
-                                   Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg></span>
-                                </div>
-                            </div>
-                        </a>
-                    </div>
+                    ${resourceData.map((tab, index) => {
+                return `<div class="resource-card-container ${index == 0 ? "active" : ""}" data-tab="${index}">
+                            ${tab.cards.map((resource, index) => {
+                    return `<div class="resource-card">
+                                    <a class="rc-link" href="${resource.link}">
+                                        <div class="card-img">
+                                            <img src="${resource.img}" alt="${resource.title}">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-title">${resource.title}</div>
+                                            <div class="card-desc">${resource.desc}</div>
+                                            <div class="learn-more">
+                                                Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
+                                                    <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
+                                                </svg></span>
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>`;
+                }).join('')}
+                        </div>`;
+            }).join('')}
                 </div>
             </div>
         </section>`);
+
+            // Add click event to tabs
+            document.querySelectorAll('.resource-card-tabs .tab').forEach(tab => {
+                tab.addEventListener('click', function () {
+                    const tabId = this.getAttribute('data-tab');
+                    document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
+                    document.querySelectorAll('.resource-card-container').forEach(card => card.classList.remove('active'));
+                    this.classList.add('active');
+                    document.querySelector(`.resource-card-container[data-tab="${tabId}"]`).classList.add('active');
+                });
+            });
         });
     }
 
@@ -872,7 +1112,6 @@
 
     // Initialize slider
     function initSlider_14018_V1() {
-        let cardName = document.querySelectorAll('.swiper-slider_14018 .swiper-slide .card-name');
         const swiper = new Swiper(".swiper-slider_14018", {
             // Optional parameters
             centeredSlides: true,
@@ -912,10 +1151,6 @@
             pagination: {
                 el: ".swiper-pagination",
                 clickable: true,
-                renderBullet: function (index, className) {
-                    return '<span class="' + className + ' ' + cardName[index].textContent.replace(/\s/g, "") + '">' + (cardName[index].textContent) + "</span>";
-                },
-
             },
 
             // If we need navigation
@@ -925,20 +1160,41 @@
             },
         });
 
-        waitForElm('body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container .swiper-pagination').then(function () {
-            if (document.querySelector('body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container .swiper-pagination .spz-anchor')) return;
-            document.querySelector('body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container .swiper-pagination').insertAdjacentHTML('beforeend', `<a class="spz-anchor" href="https://drata.com/product">All</a>`);
-        });
-    }
+        const swiper2 = new Swiper(".feature-slider_14018", {
+            // Optional parameters
+            centeredSlides: true,
+            spaceBetween: 32,
+            slidesPerView: 2.5,
+            freeMode: false,
+            loop: true,
+            autoHeight: true,
+            mousewheel: false,
+            keyboard: {
+                enabled: true
+            },
 
-    // When middle part of the section is middle of the viewport return true
-    function isInViewport(el) {
-        if (!el) return false;
-        const rect = el.getBoundingClientRect();
-        return (
-            rect.top <= (window.innerHeight / 2) &&
-            rect.bottom >= (window.innerHeight / 2)
-        );
+            // Responsive breakpoints
+            breakpoints: {
+                320: {
+                    slidesPerView: 1.095,
+                    spaceBetween: 8
+                },
+                768: {
+                    slidesPerView: 1,
+                    spaceBetween: 30
+                },
+                1025: {
+                    spaceBetween: 32,
+                    slidesPerView: 1.338
+                }
+            },
+
+            // If we need navigation
+            navigation: {
+                nextEl: ".swiper-btn-next",
+                prevEl: ".swiper-btn-prev"
+            },
+        });
     }
 
     // Create customer reviews section from JSON data
@@ -962,7 +1218,7 @@
                             <div class="card-footer">
                                 <div class="learn-more-cta">
                                     ` + ((!review.link) ? '' : `
-                                    <a href="${review.link}" class="learn-more blue-btn" data-review="${review.review}">Learn More</a>
+                                    <a href="${review.link}" class="learn-more secondary-blue-btn" data-review="${review.review}">Read Customer Story</a>
                                     `) + `
                                 </div>
                             </div>
@@ -974,6 +1230,37 @@
                 </div>`;
         });
         return reviewsHTML;
+    }
+
+    // Create feature section from JSON data
+    function createFeatureCards() {
+        let featuresHTML = '';
+        featureCap.forEach(feature => {
+            featuresHTML += `
+                <div class="swiper-slide">
+                    <div class="slider-card">
+                        <div class="slider-content">
+                            <div class="text-copy">
+                                <div class="title-copy">
+                                    <h3 class="card-title">${feature.title}</h3>
+                                    <p class="card-desc">${feature.review}</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>`;
+        });
+        return featuresHTML;
+    }
+
+    // When middle part of the section is middle of the viewport return true
+    function isInViewport(el) {
+        if (!el) return false;
+        const rect = el.getBoundingClientRect();
+        return (
+            rect.top <= (window.innerHeight / 2) &&
+            rect.bottom >= (window.innerHeight / 2)
+        );
     }
 
     //when scroll, check which section is in view and add active class to respective nav-anchor
