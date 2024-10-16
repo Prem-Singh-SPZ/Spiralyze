@@ -57,8 +57,8 @@ let bodyLoaded = setInterval(function () {
           <h2 class="section-heading">Schedule your Expel MDR demo</h2>
           <ul class="section-highlight-point">
             <li class="list-item"><span class="highlight-text">24x7 monitoring:</span> Threat detection. Phishing, vulnerabilities, unusual behaviors, and more. Real-time alert triage using AI.</li>
-            <li class="list-item"><span class="highlight-text">Remediation:</span> Get recommended remediation steps and automated responses. 23-minute MTTR. </li>
-            <li class="list-item"><span class="highlight-text">120+ integrations:</span> Including AWS, CrowdStrike, Google, Okta, Salesforce, Microsoft, Palo Alto, SentinelOne, Splunk, and more.</li>
+            <li class="list-item"><span class="highlight-text">Remediation:</span> Get recommended remediation steps and automated responses. 20-minute MTTR. </li>
+            <li class="list-item"><span class="highlight-text">125+ integrations:</span> Including AWS, CrowdStrike, Google, Okta, Salesforce, Microsoft, Palo Alto, SentinelOne, Splunk, and more.</li>
           </ul>
         </div>`);
                 document.querySelector('.spz-2006 #hero-section .row.hero').insertAdjacentHTML('afterend', `<div class="hero-client-logos">
@@ -88,7 +88,7 @@ let bodyLoaded = setInterval(function () {
                     animateLabels(testDetails);
 
                     document.querySelector('.spz-2006 #hero-section form.mktoForm .mktoButtonRow .mktoButton').addEventListener('click', function () {
-                        waitForElm('.spz-2006 #hero-section .hero .ex-form form.mktoForm .mktoError').then(function (elm) {
+                        waitForElm('.spz-2006 #hero-section .hero .ex-form form.mktoForm .spz-email .mktoError').then(function (elm) {
                             if (elm.parentNode.querySelector('#ValidMsgEmail')) {
                                 const targetNode = elm.parentNode;
                                 const config = { attributes: true, childList: true, subtree: true };
