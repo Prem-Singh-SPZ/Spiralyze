@@ -209,7 +209,7 @@ function focusFields() {
 // Function to add .field-error class on closest parent .field class if .error is exist on input
 function checkError(elem) {
     let timeBuffer = setInterval(() => {
-        if (elem.closest('.spz-input-wrap').querySelector('.mktoError') && elem.closest('.spz-input-wrap').querySelector('.mktoInvalid')) {
+        if (elem.closest('.spz-input-wrap').querySelector('.mktoError') && elem.closest('.spz-input-wrap').querySelector('.mktoInvalid') && elem.closest('.spz-input-wrap').querySelector('.mktoError').style.display != 'none') {
             elem.closest('.spz-input-wrap').classList.add('error');
         } else {
             elem.closest('.spz-input-wrap').classList.remove('error');
@@ -323,7 +323,7 @@ function restructureForm() {
     // });
 
     // Use this and change value according to the experiment
-    hiddenValue('#2002 | Expel | Demo | Form over UI', 'variant_#2002');
+    hiddenValue('#2006 | Expel | Demo | RAD | SPZ Baseline', 'variant_#2006');
 }
 
 // Generic Code
