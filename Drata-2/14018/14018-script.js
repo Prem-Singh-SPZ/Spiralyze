@@ -65,10 +65,21 @@
 
             let updatePage = setInterval(() => {
                 waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
-                    heroSection_V1();
-
-                    if (document.querySelector('.md-video-wr video#gify-video')) {
-                        document.querySelector('.md-video-wr video#gify-video').play();
+                    //check which variant is stored in session storage 
+                    if (sessionStorage.getItem('variant') === 'variant_1') {
+                        variant_1();
+                        waitForElm('.choose-variant-modal').then(function () {
+                            document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
+                        });
+                    } else if (sessionStorage.getItem('variant') === 'variant_2') {
+                        variant_2();
+                        waitForElm('.choose-variant-modal').then(function () {
+                            document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
+                        });
+                    }
+                    else {
+                        variant_1();
+                        landingModal();
                     }
 
                 });
@@ -83,10 +94,45 @@
         createCookie('spz-14018-loaded', 'true', 1);
     }
 
-    function heroSection_V1() {
-        if (document.querySelector('body main')) {
+    function landingModal() {
+        if (document.querySelector('.choose-variant-modal')) return;
+        document.querySelector('body').insertAdjacentHTML('beforeend', `<div class="choose-variant-modal">
+            <div class="modal-container">
+                <div class="modal-content">
+                    <div class="close-modal variant_1"></div>
+                    <div class="modal-header">
+                        <p class="modal-subtitle">Help Us Personalize Your Experience</p>
+                        <h4 class="modal-title">How do you want <br>to use Drata?</h4>
+                    </div>
+                    <div class="modal-variants">
+                        <button class="variant-btn variant_1">Get SOC2 Compliant ${ctaArrow}</button>
+                        <button class="variant-btn variant_2">Maintain SOC2 Compliance ${ctaArrow}</button>
+                    </div>
+                </div>
+            </div>
+        </div>`);
+    }
+
+    function variant_1() {
+        heroSection_V1('body main');
+        navBar_V1('.hero-section-14018');
+        caseStudies_V1('.navbar-section');
+        madeEasy_V1('.case-studies-section');
+        simpleSteps_V1('.made-easy-sec');
+        complianceBenefits_V1('.simple-steps-sec-14018');
+        complianceChanges_V1('.benefits-sec');
+        meetDrata_V1('.compliance-sec');
+        customerReviews_V1('.meet-drata');
+        globalCTA_V1('.cr-section-14018');
+        resourceSection_V1('.demo-cta-section');
+        complianceFAQ_V1('.resources-section-14018');
+
+    }
+
+    function heroSection_V1(selector) {
+        waitForElm(selector).then(function () {
             if (document.querySelectorAll('body .hero-section-14018').length == 0) {
-                document.querySelector('body main').insertAdjacentHTML("beforebegin", `<section class="hero-section-14018">
+                document.querySelector(selector).insertAdjacentHTML("afterend", `<section class="hero-section-14018">
                     <div class="hero-content dis-flex flex-wrap justify-content-between">
                     <div class="hero-left-section">
                     <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br>We Got You.</h1>
@@ -112,22 +158,20 @@
                     </div>
                     </div>
                     </section>`);
-
-                setTimeout(() => {
-                    if (document.querySelector('#hero-video')) {
-                        document.querySelector('#hero-video').play();
-                    }
-                }, 1000);
             }
+        });
 
-            navBar_V1();
-        }
+        setTimeout(() => {
+            if (document.querySelector('#hero-video')) {
+                document.querySelector('#hero-video').play();
+            }
+        }, 1000);
     }
 
-    function navBar_V1() {
-        if (document.querySelector('.navbar-section')) return;
-
-        document.querySelector('.hero-section-14018').insertAdjacentHTML('afterend', ` <nav class="navbar-section spz-sec">
+    function navBar_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.navbar-section')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', ` <nav class="navbar-section spz-sec">
             <div class="nav-container dis-flex justify-content-between align-items-center">
                 <div class="nav-logo no-mob">
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
@@ -140,7 +184,7 @@
                 </div>
             </div>
         </nav>`);
-
+        });
 
         document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
             anchor.addEventListener('click', function (e) {
@@ -160,9 +204,6 @@
                 }
             });
         });
-
-
-        caseStudies_V1();
     }
 
     function checkActiveNav_V1() {
@@ -200,7 +241,7 @@
 
     }
 
-    function caseStudies_V1() {
+    function caseStudies_V1(selector) {
         const aUrl = astUrl + '/fl_sanitize/drata/14018/';
         const caseStudies = [
             {
@@ -233,8 +274,9 @@
             }
         ];
 
-        if (document.querySelectorAll('.case-studies-section').length === 0) {
-            document.querySelector('.navbar-section').insertAdjacentHTML('afterend', `
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.case-studies-section').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="case-studies-section spz-sec">
               <div class="cs-overflow">
                 <div class="case-study-wrapper" id="mini-cs-wrapper">
@@ -242,8 +284,8 @@
               </div>
             </section>`);
 
-            caseStudies.forEach((cs, index) => {
-                document.querySelector('#mini-cs-wrapper').insertAdjacentHTML('beforeend', `
+                caseStudies.forEach((cs, index) => {
+                    document.querySelector('#mini-cs-wrapper').insertAdjacentHTML('beforeend', `
               <div class="case-study ${cs.arrow}">
                 <img class="cs-logo" src="${cs.logo}" alt="${cs.title}">
                 <span class="cs-divider"></span>
@@ -256,33 +298,34 @@
                   </div>
                 </div>
               </div>`);
-            });
+                });
 
-            // For Mobile Starts
-            setTimeout(() => {
-                if (window.innerWidth < 767) {
-                    // Auto scroll to right slowly
-                    const stopInt = setInterval(() => {
-                        if (!document.querySelector('.cs-overflow').classList.contains('stop-scroll')) {
-                            document.querySelector('.cs-overflow').scrollLeft += 1.2;
-                        }
-                    }, 50);
+                // For Mobile Starts
+                setTimeout(() => {
+                    if (window.innerWidth < 767) {
+                        // Auto scroll to right slowly
+                        const stopInt = setInterval(() => {
+                            if (!document.querySelector('.cs-overflow').classList.contains('stop-scroll')) {
+                                document.querySelector('.cs-overflow').scrollLeft += 1.2;
+                            }
+                        }, 50);
 
-                    // Stop auto scroll as soon as user interacts with the .case-study-wrapper
-                    document.querySelector('.cs-overflow').addEventListener('touchstart', function () {
-                        document.querySelector('.cs-overflow').classList.add('stop-scroll');
-                        clearInterval(stopInt);
-                    });
-                }
-            }, 1500);
-            // For Mobile Ends
-        }
-
-        madeEasy_V1();
+                        // Stop auto scroll as soon as user interacts with the .case-study-wrapper
+                        document.querySelector('.cs-overflow').addEventListener('touchstart', function () {
+                            document.querySelector('.cs-overflow').classList.add('stop-scroll');
+                            clearInterval(stopInt);
+                        });
+                    }
+                }, 1500);
+                // For Mobile Ends
+            }
+        });
     }
 
-    function madeEasy_V1() {
-        document.querySelector('.case-studies-section').insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec">
+    function madeEasy_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.made-easy-sec').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec">
             <div class="made-easy-container">
                   <div class="me-top-bar dis-flex">
                         <div class="me-left">
@@ -312,12 +355,14 @@
                     </div>
                 </div>
             </section>`);
-
-        simpleSteps_V1();
+            }
+        });
     }
 
-    function simpleSteps_V1() {
-        document.querySelector('.made-easy-sec').insertAdjacentHTML('afterend', `
+    function simpleSteps_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.simple-steps-sec-14018').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="simple-steps-sec-14018 spz-sec">
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
@@ -399,8 +444,9 @@
                     </div>
                 </div>
             </section>`);
+            }
+        });
 
-        complianceBenefits_V1();
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
         if (window.innerWidth > 1024) {
             document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
@@ -426,8 +472,10 @@
         }
     }
 
-    function complianceBenefits_V1() {
-        document.querySelector('.simple-steps-sec-14018').insertAdjacentHTML('afterend', `
+    function complianceBenefits_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.benefits-sec').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="benefits-sec spz-sec" id="nav-compliance">
                 <div class="benefits-container">
                     <div class="bs-title-container">
@@ -454,12 +502,14 @@
                     </div>
                 </div>
             </section>`);
-
-        complianceChanges_V1();
+            }
+        });
     }
 
-    function complianceChanges_V1() {
-        document.querySelector('.benefits-sec').insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec">
+    function complianceChanges_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.compliance-sec').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec">
             <div class="compliance-container">
                 <div class="c-title-container">
                     <div class="c-eyebrow">Beyond the Audit: Compliance Automation</div>
@@ -501,26 +551,28 @@
                 </div>
             </div>
         </section>`);
-
-        //write code for accordion functionality
-        const accordion = document.querySelector('.accordion_1');
-        const items = accordion.querySelectorAll('.accordion-item');
-        items.forEach(item => {
-            item.addEventListener('click', () => {
-                const isOpen = item.classList.contains('open');
-                items.forEach(item => item.classList.remove('open'));
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
-                // else {
-                //     item.classList.add('open');
-                // }
-
-                // updateImgHeight_V1();
-            });
+            }
         });
 
-        meetDrata_V1();
+        //write code for accordion functionality
+        waitForElm('.accordion_1').then(function () {
+            const accordion = document.querySelector('.accordion_1');
+            const items = accordion.querySelectorAll('.accordion-item');
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    items.forEach(item => item.classList.remove('open'));
+                    if (!isOpen) {
+                        item.classList.add('open');
+                    }
+                    // else {
+                    //     item.classList.add('open');
+                    // }
+
+                    // updateImgHeight_V1();
+                });
+            });
+        });
     }
 
     function updateImgHeight_V1() {
@@ -531,10 +583,10 @@
         accordionImg.style.height = accordionHeight + 'px';
     }
 
-    function meetDrata_V1() {
-        if (document.querySelector('.meet-drata')) return;
-
-        document.querySelector('.compliance-sec').insertAdjacentHTML('afterend', `
+    function meetDrata_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.meet-drata')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="meet-drata spz-sec" id="why-drata">
                 <div class="md-container">
                 <div class="md-title-container">
@@ -582,12 +634,13 @@
                     </div>
                 </div>
             </section>`);
-
-        customerReviews_V1();
+        });
     }
 
-    function customerReviews_V1() {
-        document.querySelector('.meet-drata').insertAdjacentHTML('afterend', `
+    function customerReviews_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.cr-section-14018')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="cr-section-14018 spz-sec" id="frameworks">
                 <div class="cr-title-container">
                     <div class="title-wrapper">
@@ -610,18 +663,19 @@
                     </div>
                 </div>
             </section>`);
-
+        }
+        );
 
         // If swiper is initialized, run initSlider_14018 function
         if (typeof Swiper !== 'undefined') {
             initSlider_14018_V1();
         }
-
-        globalCTA_V1();
     }
 
-    function globalCTA_V1() {
-        document.querySelector('.cr-section-14018').insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
+    function globalCTA_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.demo-cta-section')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
             <div class="demo-cta-container">
                 <div class="cta-desc">Start Your Compliance Journey Today</div>
                 <div class="cta-wrapper">
@@ -629,12 +683,13 @@
                 </div>
             </div>
         </section>`);
-
-        resourceSection_V1();
+        });
     }
 
-    function resourceSection_V1() {
-        document.querySelector('.demo-cta-section').insertAdjacentHTML('afterend', `
+    function resourceSection_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.resources-section-14018')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `
         <section class="resources-section-14018  spz-sec" id="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
@@ -726,12 +781,13 @@
                 </div>
             </div>
         </section>`);
-
-        complianceFAQ_V1();
+        });
     }
 
-    function complianceFAQ_V1() {
-        document.querySelector('.resources-section-14018 ').insertAdjacentHTML('afterend', `
+    function complianceFAQ_V1(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelector('.compliance-faq-section')) return;
+            document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="compliance-faq-section spz-sec">
                 <div class="compliance-faq-title">
                     <p class="small-eyebrow">Compliance FAQ</p>
@@ -777,35 +833,40 @@
                     </div>
                 </div>
             </section>`);
+        });
 
         //write code for accordion functionality
-        const accordion_2 = document.querySelector('.accordion_2');
-        const items_2 = accordion_2.querySelectorAll('.accordion-item');
-        items_2.forEach(item => {
-            item.addEventListener('click', () => {
-                const isOpen = item.classList.contains('open');
-                items_2.forEach(item => item.classList.remove('open'));
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
-                // else {
-                //     item.classList.add('open');
-                // }
+        waitForElm('.accordion_2').then(function () {
+            const accordion_2 = document.querySelector('.accordion_2');
+            const items_2 = accordion_2.querySelectorAll('.accordion-item');
+            items_2.forEach(item => {
+                item.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    items_2.forEach(item => item.classList.remove('open'));
+                    if (!isOpen) {
+                        item.classList.add('open');
+                    }
+                    // else {
+                    //     item.classList.add('open');
+                    // }
+                });
             });
         });
 
-        const accordion_3 = document.querySelector('.accordion_3');
-        const items_3 = accordion_3.querySelectorAll('.accordion-item');
-        items_3.forEach(item => {
-            item.addEventListener('click', () => {
-                const isOpen = item.classList.contains('open');
-                items_3.forEach(item => item.classList.remove('open'));
-                if (!isOpen) {
-                    item.classList.add('open');
-                }
-                // else {
-                //     item.classList.add('open');
-                // }
+        waitForElm('.accordion_3').then(function () {
+            const accordion_3 = document.querySelector('.accordion_3');
+            const items_3 = accordion_3.querySelectorAll('.accordion-item');
+            items_3.forEach(item => {
+                item.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    items_3.forEach(item => item.classList.remove('open'));
+                    if (!isOpen) {
+                        item.classList.add('open');
+                    }
+                    // else {
+                    //     item.classList.add('open');
+                    // }
+                });
             });
         });
     };
@@ -916,11 +977,6 @@
         return reviewsHTML;
     }
 
-    //check if window is resized
-    // window.addEventListener('resize', function () {
-    //     updateImgHeight();
-    // });
-
     //when scroll, check which section is in view and add active class to respective nav-anchor
     window.addEventListener('scroll', function () {
         checkActiveNav_V1();
@@ -931,10 +987,24 @@
             this.document.querySelector('a[href="/demo"]').click();
         }
 
-        if (e.target.classList.contains('cs-video-mask')) {
-            //hide the mask and play the video
-            e.target.remove();
-            this.document.querySelector('#cs-video').play();
+        if (e.target.classList.contains('variant_1')) {
+            this.document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
+
+            //store this selection for the whole session
+            sessionStorage.setItem('variant', 'variant_1');
+            if (document.querySelector('.md-video-wr video#gify-video')) {
+                document.querySelector('.md-video-wr video#gify-video').play();
+            }
+        }
+
+        if (e.target.classList.contains('variant_2')) {
+            this.document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
+
+            //store this selection for the whole session
+            sessionStorage.setItem('variant', 'variant_2');
+            if (document.querySelector('.md-video-wr video#gify-video')) {
+                document.querySelector('.md-video-wr video#gify-video').play();
+            }
         }
     });
 
@@ -1082,4 +1152,7 @@
             clearInterval(sInt);
         }, 10000);
     }
+
+    //append the images in head tag
+    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" as="image" href="${astUrl}v1729060487/drata/14018/close-hover.svg">`);
 })();
