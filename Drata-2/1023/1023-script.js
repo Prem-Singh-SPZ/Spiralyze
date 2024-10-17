@@ -7,14 +7,14 @@
     document.head.appendChild(cssElement);
     function createTest() {
         waitForElm('body').then(function () {
-            document.querySelector("body").classList.add("spz-1023");
+            document.querySelector("body").classList.add("spz-1023-V1");
 
             waitForElm('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').then(function () {
                 let setValue = setInterval(() => {
-                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '1023_Variant_V1') {
+                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '1023_Variant1') {
                         clearInterval(setValue);
                     }
-                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '1023_Variant_V1');
+                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '1023_Variant1');
                 }, 100);
             });
 
@@ -27,7 +27,7 @@
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-1023");
+        document.body.classList.remove("spz-1023-V1");
     }
 
     history.pushState = (function (f) {
