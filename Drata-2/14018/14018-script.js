@@ -968,7 +968,7 @@
             }).join('')}
                     </div>
                     <div class="all-resc-anchor">
-                        <a href="https://drata.com/resources/resource-directory" class="all-resc-cta">Explore All Resources ${anchorArrow}</a>
+                        <a href="https://drata.com/resources/resource-directory" class="all-resc-cta learn-more">Explore All Resources ${anchorArrow}</a>
                     </div>
                 </div>
 
@@ -985,9 +985,7 @@
                                             <div class="card-title">${resource.title}</div>
                                             <div class="card-desc">${resource.desc}</div>
                                             <div class="learn-more">
-                                                Learn More <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                                    <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                                </svg></span>
+                                                Learn More ${anchorArrow}
                                             </div>
                                         </div>
                                     </a>
