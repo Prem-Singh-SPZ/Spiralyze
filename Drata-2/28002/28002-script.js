@@ -64,7 +64,7 @@
             document.querySelector("body").classList.add("spz-28002");
 
             let updatePage = setInterval(() => {
-                waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
+                waitForElm('[variant="collectionThreePerRowSectionWrapper"]').then(function () {
 
                     document.querySelectorAll('main[data-csk-entry-field="contents"] > section:not(.spz-sec):not(.con-sec)').forEach(function (section, index) {
                         section.classList.add('con-sec', 'control-section-' + index);
@@ -672,8 +672,8 @@
     function whyDrata() {
         if (document.querySelector('.spz-title-container')) return;
 
-        waitForElm('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').then(function () {
-            document.querySelector('.control-section-8 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').innerHTML = `<div class="spz-title-container">
+        waitForElm('.control-section-7 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').then(function () {
+            document.querySelector('.control-section-7 [class*="Collection-root"] [class*="MuiContainer-root-Collection-contentContainer"]').innerHTML = `<div class="spz-title-container">
         <h6 class="ing-sub-title">Why Drata?</h6>
         <h2 class="ing-sec-title">We Deliver Results for Customers</h2>
         <div class="ing-stats-section dis-flex">

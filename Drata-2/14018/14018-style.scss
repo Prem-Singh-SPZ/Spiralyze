@@ -49,6 +49,7 @@ body.spz-14018 {
   .primary-blue-btn {
     display: inline-flex;
     align-items: center;
+    justify-content: center;
     background: #0580e8;
     border-radius: 12px;
     font-family: $ff-inter;
@@ -300,12 +301,12 @@ body.spz-14018 {
       position: relative;
       list-style: none;
       margin-top: 24px;
-      padding: 0 26px 0 0;
+      padding: 0 0 0 0;
 
       .list-item {
         position: relative;
         padding-left: 31px;
-        margin: 0 0 16px 0;
+        margin: 0 0 24px 0;
         font-family: $ff-inter;
         font-style: normal;
         font-weight: 500;
@@ -316,6 +317,7 @@ body.spz-14018 {
         strong {
           color: #0c131a;
           font-weight: 800;
+          line-height: 24px;
         }
 
         &:before {
@@ -333,8 +335,8 @@ body.spz-14018 {
     }
 
     .hero-content {
-      padding-top: 90px;
-      padding-bottom: 70px;
+      padding-top: 55px;
+      padding-bottom: 56px;
       position: relative;
       width: 100%;
 
@@ -362,14 +364,14 @@ body.spz-14018 {
         line-height: 72px;
         letter-spacing: -1.28px;
         color: #0c131a;
-        margin: 0 0 24px;
+        margin: 0 0 25px;
 
         .hc-blue {
           color: #0580e8;
         }
       }
       .hero-left-section {
-        width: 45%;
+        width: 48%;
         // If Image
         max-width: 588px;
 
@@ -378,9 +380,10 @@ body.spz-14018 {
       }
       .hero-right-section {
         // If Image
-        width: 60%;
-        max-width: 742px;
-        margin-right: -89px;
+        width: 58%;
+        max-width: 700px;
+        margin-right: -79px;
+        margin-top: -39px;
         // display: none;
 
         img {
@@ -544,7 +547,7 @@ body.spz-14018 {
   //Case Study Start
   .case-studies-section {
     background-color: #f6f8fa;
-    padding: 96px 24px;
+    padding: 58px 24px 56px;
 
     @media (max-width: 1199.98px) {
       padding: 96px 24px;
@@ -704,7 +707,7 @@ body.spz-14018 {
 
   //made easy section starts
   .made-easy-sec {
-    padding: 96px 24px;
+    padding: 96px 24px 30px;
 
     @media (max-width: 1199.98px) {
       padding: 96px 24px;
@@ -719,7 +722,7 @@ body.spz-14018 {
     }
 
     .made-easy-container {
-      max-width: 1280px;
+      max-width: 1248px;
       margin: 0 auto;
 
       .me-top-bar {
@@ -748,6 +751,17 @@ body.spz-14018 {
             line-height: 26px;
           }
         }
+
+        .me-right {
+          .me-cta {
+            width: 241px;
+
+            svg {
+              margin-left: 28px;
+              margin-right: -6px;
+            }
+          }
+        }
       }
 
       .me-contents {
@@ -756,7 +770,7 @@ body.spz-14018 {
         align-items: flex-start;
         .me-card {
           display: flex;
-          padding: 32px;
+          padding: 32px 32px 31px;
           flex-direction: column;
           align-items: flex-start;
           border-radius: 16px;
@@ -771,7 +785,7 @@ body.spz-14018 {
             font-style: normal;
             font-weight: 700;
             line-height: 28px;
-            margin-bottom: 12px;
+            margin-bottom: 20px;
           }
 
           .me-desc {
@@ -819,7 +833,10 @@ body.spz-14018 {
       .me-bottom-svg {
         display: flex;
         justify-content: center;
-        margin-top: 48px;
+
+        img {
+          margin-left: -54px;
+        }
       }
     }
   }
@@ -844,12 +861,17 @@ body.spz-14018 {
     }
 
     .nav-container {
-      max-width: 1280px;
+      max-width: 1248px;
       margin: 0 auto;
       height: 100%;
 
       .nav-logo {
         padding-top: 6px;
+
+        img {
+          width: 24px;
+          height: 24px;
+        }
       }
 
       .nav-links {
@@ -925,7 +947,7 @@ body.spz-14018 {
       margin: 0 auto;
 
       .bs-title-container {
-        margin-bottom: 64px;
+        margin-bottom: 48px;
         @media (max-width: 1024.98px) {
           margin-bottom: 47px;
         }
@@ -1010,6 +1032,8 @@ body.spz-14018 {
       }
 
       .bs-cards-container {
+        max-width: 1248px;
+        margin: auto;
         @media (max-width: 1024.98px) {
           flex-wrap: wrap;
 
@@ -1021,7 +1045,7 @@ body.spz-14018 {
 
         .bs-card {
           display: flex;
-          max-width: calc(25% - 16px);
+          max-width: calc(25% - 24px);
           width: 100%;
           padding: 32px 31px 31px;
           flex-direction: column;
@@ -1105,7 +1129,7 @@ body.spz-14018 {
     }
 
     .simple-steps-container {
-      max-width: 1062px;
+      max-width: 1248px;
       margin: 0 auto;
 
       &.step-1 {
@@ -1151,7 +1175,7 @@ body.spz-14018 {
         }
 
         .ss-left {
-          max-width: 360px;
+          max-width: 376px;
 
           @media (max-width: 1024.98px) {
             max-width: 100%;
@@ -1333,7 +1357,7 @@ body.spz-14018 {
         border-radius: 24px;
         border: 1px solid rgba(255, 255, 255, 0.25);
         background: #dde3eb;
-        padding: 15px 0 34.5px;
+        padding: 24px 8px 23.5px;
 
         @media (max-width: 1024.98px) {
           position: relative;
@@ -1349,7 +1373,7 @@ body.spz-14018 {
         .simple-steps {
           display: flex;
           justify-content: center;
-          margin-bottom: 35px;
+          margin-bottom: 18px;
 
           @media (max-width: 1024.98px) {
             flex-direction: column;
@@ -1383,8 +1407,8 @@ body.spz-14018 {
             border-radius: 16px;
             background-color: #f6f8fa;
             border: 2px solid #f6f8fa;
-            width: calc(33% - 18px);
-            padding: 0 24px 24px;
+            width: calc(25% - 8px);
+            padding: 0 14px 20px;
             overflow: hidden;
             margin: 0 8px;
             // cursor: pointer;
@@ -1418,13 +1442,14 @@ body.spz-14018 {
 
               .ss-img-wr {
                 width: 100%;
-                height: 154px;
+                height: 174px;
                 display: flex;
                 align-items: center;
                 // margin-top: -26px;
                 // margin-left: -29px;
                 overflow: hidden;
                 position: relative;
+                padding: 0 8px;
 
                 .ss-img {
                   // Added because in mock the image is bigger than the container
@@ -1473,10 +1498,10 @@ body.spz-14018 {
                 color: #0c131a;
                 text-align: center;
                 font-family: $ff-inter;
-                font-size: 16px;
+                font-size: 18px;
                 font-style: normal;
                 font-weight: 800;
-                line-height: 24px;
+                line-height: 26px;
                 margin: -2px 0 9px;
 
                 @media (max-width: 1024.98px) {
@@ -1501,7 +1526,7 @@ body.spz-14018 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 24px;
-                margin: 0 2px 3px;
+                margin: 0 2px;
 
                 @media (max-width: 1024.98px) {
                   margin: 0 2px 0.5px;
@@ -1616,6 +1641,36 @@ body.spz-14018 {
           }
         }
       }
+
+      .ss-bottom-cta-wrapper{
+        display: flex;
+        justify-content: center;
+        margin-top: 48px;
+
+        @media (max-width: 1024.98px) {
+          margin-top: 32px;
+        }
+
+        @media (max-width: 767.98px) {
+          margin-top: 24px;
+        }
+
+        .ss-bottom-cta {
+          width: 271px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @media (max-width: 767.98px) {
+            width: 100%;
+          }
+
+          svg {
+            margin-left: 28px;
+            margin-right: -6px;
+          }
+        }
+      }
     }
   }
   // Simple Steps Section Ends
@@ -1635,18 +1690,18 @@ body.spz-14018 {
     }
 
     .compliance-container {
-      max-width: 1280px;
+      max-width: 1248px;
       margin: 0 auto;
       .c-title-container {
+        margin-bottom: 54px;
         .c-eyebrow {
           color: #0580e8;
-          text-align: center;
           font-family: $ff-inter;
           font-size: 16px;
           font-style: normal;
           font-weight: 700;
           line-height: 24px;
-          margin: 0 0 16px;
+          margin: 0 0 12px;
 
           @media (max-width: 1024.98px) {
             font-size: 14px;
@@ -1662,7 +1717,6 @@ body.spz-14018 {
 
         .c-title {
           color: #000;
-          text-align: center;
           font-family: $ff-inter;
           font-size: 42px;
           font-style: normal;
@@ -1670,7 +1724,7 @@ body.spz-14018 {
           line-height: 48px;
           letter-spacing: -0.84px;
           max-width: 676px;
-          margin: 0 auto 21px;
+          margin: 0 0 24px;
 
           @media (max-width: 1024.98px) {
             font-size: 32px;
@@ -1692,13 +1746,11 @@ body.spz-14018 {
         .c-desc {
           max-width: 676px;
           color: #485665;
-          text-align: center;
           font-family: $ff-inter;
           font-size: 18px;
           font-style: normal;
           font-weight: 500;
           line-height: 26px;
-          margin: 0 auto 64px;
 
           @media (max-width: 1024.98px) {
             font-size: 16px;
@@ -1722,9 +1774,9 @@ body.spz-14018 {
         }
 
         .c-left {
-          max-width: 526px;
+          max-width: 650px;
           width: 100%;
-          flex: 0 0 50%;
+          flex: 0 0 52.5%;
 
           @media (max-width: 1024.98px) {
             max-width: 100%;

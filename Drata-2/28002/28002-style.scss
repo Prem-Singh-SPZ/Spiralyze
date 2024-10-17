@@ -91,8 +91,8 @@ body.spz-28002 {
   }
 
   main {
-    > section[class*="control-section"]:not(.control-section-8):not(
-        .control-section-12
+    > section[class*="control-section"]:not(.control-section-7):not(
+        .control-section-10
       ) {
       display: none;
     }
@@ -2489,7 +2489,7 @@ body.spz-28002 {
   //customer stories section ends
 
   //control carousel starts
-  .control-section-8 {
+  .control-section-7 {
     padding: 96px 24px 63.5px;
 
     @media (max-width: 1024.98px) {
@@ -2614,6 +2614,10 @@ body.spz-28002 {
               }
             }
           }
+        }
+
+        &[data-testid="Collection-contentGrid"]{
+          display: none;
         }
       }
     }
