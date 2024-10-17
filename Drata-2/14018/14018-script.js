@@ -10,18 +10,18 @@
     // Convert customer reviews section to dynamic JSON data
     const custReviews = [
         {
-            name: "David Caughill,",
-            companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003436.webp",
-            title: "DevOps Engineer",
-            review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
-            link: "https://drata.com/product/soc-2"
-        },
-        {
             name: "Jonathan Jaffe,",
             companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003434.svg",
             title: "CISO",
             review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
             link: "https://drata.com/product/iso-27001"
+        },
+        {
+            name: "David Caughill,",
+            companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003436.webp",
+            title: "DevOps Engineer",
+            review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
+            link: "https://drata.com/product/soc-2"
         },
         {
             name: "Chris Bake,",
@@ -194,7 +194,7 @@
                 {
                     title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata’s Compliance Automation",
                     desc: "Calendly’s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
-                    img: astUrl + "/f_auto/drata/14018/20.webp",
+                    img: astUrl + "/f_auto/drata/14018/1_1.webp",
                     link: "https://drata.com/customers/calendly"
                 }
             ]
@@ -683,7 +683,7 @@
                                 <div class="accordion-item open">
                                     <div class="accordion-title">Cut Compliance Work by 80%</div>
                                     <div class="accordion-content">Integrations and automation reduce duplicate tasks and streamline compliance work, saving time and resources. Without manual workflows like collecting evidence with screenshots, you’ll be free to focus on more critical aspects of your business.
-                                    <p><a href="" class="learn-more">Explore Integrations ${anchorArrow}</a></p>
+                                    <div class="learn-more-cta"><a href="" class="learn-more">Explore Integrations ${anchorArrow}</a></div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -693,13 +693,13 @@
                                 <div class="accordion-item">
                                     <div class="accordion-title">Scale Your GRC Program</div>
                                     <div class="accordion-content">Compliance gets harder as you grow. Achieving SOC 2 now builds a strong foundation, helping you avoid future costs and headaches. And with Drata's controls that satisfy multiple frameworks, you can seamlessly add ISO 27001, HIPAA, and other frameworks without duplicating work.
-                                    <p><a href="https://drata.com/product" class="learn-more">See All Frameworks ${anchorArrow}</a></p>
+                                    <div class="learn-more-cta"><a href="https://drata.com/product" class="learn-more">See All Frameworks ${anchorArrow}</a></div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
                                     <div class="accordion-title">Expedite Sales Cycles and Funding</div>
                                     <div class="accordion-content">No one wants to work with a security risk. SOC 2 compliance builds trust, differentiates you in the market, and proves you take security seriously—expediting the sales process, opening enterprise channels, giving investors peace of mind, and becoming the clear choice for partners.
-                                    <p><a href="drata.com/customers/merge" class="learn-more">Learn More ${anchorArrow}</a></p>
+                                    <div class="learn-more-cta"><a href="drata.com/customers/merge" class="learn-more">Learn More ${anchorArrow}</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -774,12 +774,12 @@
                                 <div class="md-card">
                                     <div class="md-card-title">Ease of Use</div>
                                     <div class="md-card-desc">Not a compliance expert? Not a problem. Make the entire SOC 2 compliance process a breeze with step-by-step guides and Drata’s intuitive platform that ranks highest for ease of use on G2.</div>
-                                    <a href="https://drata.com/platform" class="md-anchor">Explore the Platform <span class="a-arrow">${anchorArrow}</span></a>
+                                    <a href="https://drata.com/platform" class="learn-more">Explore the Platform ${anchorArrow}</a>
                                 </div>
                                  <div class="md-card">
                                     <div class="md-card-title">Built to Scale Securely</div>
                                     <div class="md-card-desc">Threats don&#8217;t stop, so neither do we. By constantly adding new frameworks and features, we stay ahead of regulatory changes and emerging threats, ensuring your compliance strategy remains proactive.</div>
-                                    <a href="https://drata.com/product" class="md-anchor">Explore Frameworks <span class="a-arrow">${anchorArrow}</span></a>
+                                    <a href="https://drata.com/product" class="learn-more">See All Frameworks ${anchorArrow}</a>
                                 </div>
                             </div>
                         </div>
@@ -808,7 +808,7 @@
                 <div class="cr-title-container">
                     <div class="title-wrapper dis-flex">
                         <div class="cr-title">
-                            <p class="small-eyebrow">See all stories</p>
+                            <p class="small-eyebrow">SOC 2 Success Stories</p>
                             <h3 class="large-title">Hear From Our Customers</h3>
                         </div>
                         <div class="cr-global-cta">
@@ -1105,10 +1105,10 @@
             // Optional parameters
             centeredSlides: true,
             spaceBetween: 32,
-            slidesPerView: 1.338,
+            slidesPerView: 1.35,
             freeMode: false,
             loop: true,
-            autoHeight: true,
+            // autoHeight: true,
             mousewheel: false,
             keyboard: {
                 enabled: true
@@ -1126,7 +1126,7 @@
                 },
                 1025: {
                     spaceBetween: 32,
-                    slidesPerView: 1.338
+                    slidesPerView: 1.355
                 }
             },
 
@@ -1174,7 +1174,7 @@
                 },
                 1025: {
                     spaceBetween: 32,
-                    slidesPerView: 2.5
+                    slidesPerView: 2.68
                 }
             },
 
@@ -1196,23 +1196,19 @@
                         <div class="slider-content">
                             <div class="text-copy">
                                 <div class="title-copy">
-                                    <p class="card-name">${review.name}</p>
-                                    <h3 class="card-title">${review.title}</h3>
                                     <p class="card-desc">${review.review}</p>
-                                </div>
-                                <div class="c-logo ht-25 no-desk">
-                                        <img src="${review.companyLogo}" alt="${review.name}">
+                                    <p class="card-name">${review.name} <span class="card-title">${review.title}</span></p>
                                 </div>
                             </div>
                             <div class="card-footer">
                                 <div class="learn-more-cta">
                                     ` + ((!review.link) ? '' : `
-                                    <a href="${review.link}" class="learn-more secondary-blue-btn" data-review="${review.review}">Read Customer Story</a>
+                                    <a href="${review.link}" class="sc-cta secondary-blue-btn">Read Customer Story</a>
                                     `) + `
                                 </div>
                             </div>
                         </div>
-                         <div class="slider-img no-mob">
+                         <div class="slider-img">
                             <img src="${review.companyLogo}" alt="${review.name}">
                         </div>
                     </div>
