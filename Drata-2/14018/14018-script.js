@@ -279,7 +279,7 @@
     }
 
     function variant_1() {
-        heroSection_V1('body main');
+        heroSection_V1('body header');
         navBar_V1('.hero-section-14018');
         caseStudies_V1('.navbar-section');
         madeEasy_V1('.case-studies-section');
@@ -298,7 +298,7 @@
     function heroSection_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('body .hero-section-14018').length == 0) {
-                document.querySelector(selector).insertAdjacentHTML("beforebegin", `<section class="hero-section-14018">
+                document.querySelector(selector).insertAdjacentHTML("afterend", `<section class="hero-section-14018 spz-sec">
                     <div class="hero-content dis-flex flex-wrap justify-content-between">
                     <div class="hero-left-section">
                     <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br>We Got You.</h1>
@@ -313,14 +313,11 @@
                     </div>
                     </div>
                     <div class="hero-right-section">
-                        <picture style="display: none">
+                        <picture>
                             <source media="(min-width:768px)" srcset="${astUrl}/f_auto/drata/14007/frame_48096469.webp">
                             <source media="(min-width:300px)" srcset="${astUrl}/f_auto/drata/14007/frame_48096469.webp">
                             <img src="${astUrl}/f_auto/drata/14007/frame_48096469.webp" class="hero-img" alt="Accelerate SOC 2 Compliance. Reduce Time and Cost by 50%." title="Accelerate SOC 2 Compliance. Reduce Time and Cost by 50%.">
                         </picture>
-                        <video src="//res.cloudinary.com/spiralyze/video/upload/v1714104552/drata/14007/14007_hero.mp4" 
-                            poster="${astUrl}/f_auto/drata/14007/hero-video-thumb.jpg"
-                            class="hero-video" id="hero-video" muted playsinline></video>
                     </div>
                     </div>
                     </section>`);
@@ -508,17 +505,13 @@
                         </div>
                     </div>
                     <div class="me-contents">
-                        <div class="me-left-card">
-                            <div class="me-card">
-                                <div class="me-title">What is Compliance Automation?</div>
-                                <div class="me-desc">Compliance automation simplifies the process of preparing for audits. It uses software to handle repetitive tasks, gather necessary documents, track your progress, and organize and share information with auditors.</div>
-                            </div>
+                        <div class="me-card">
+                            <div class="me-title">What is Compliance Automation?</div>
+                            <div class="me-desc">Compliance automation simplifies the process of preparing for audits. It uses software to handle repetitive tasks, gather necessary documents, track your progress, and organize and share information with auditors.</div>
                         </div>
-                        <div class="me-right-card">
-                            <div class="me-card">
-                                <div class="me-title">Why Compliance Automation?</div>
-                                <div class="me-desc">Traditional compliance methods are slow and error-prone, often requiring hundreds of hours to map controls and compile evidence using screenshots and spreadsheets. Drata eliminates these manual tasks, saving time and reducing errors.</div>
-                            </div>
+                        <div class="me-card active">
+                            <div class="me-title">Why Compliance Automation?</div>
+                            <div class="me-desc">Traditional compliance methods are slow and error-prone, often requiring hundreds of hours to map controls and compile evidence using screenshots and spreadsheets. Drata eliminates these manual tasks, saving time and reducing errors.</div>
                         </div>
                     </div>
                     <div class="me-bottom-svg">
@@ -558,58 +551,46 @@
                                     <div class="ss-step step-1">1</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_2.webp">
-                                                <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_1.mp4" type="video/mp4">
-                                                Your browser does not support the video tag.
-                                            </video>
+                                           <img src="${astUrl}/f_auto/drata/14018/1.webp" alt="Setup SOC 2" class="ss-img">
                                         </div>
-                                        <div class="ss-title">Identify Needs</div>
-                                        <div class="ss-desc">Assess regulatory needs, the markets you serve, and your business goals. Then, select an appropriate framework.</div>
+                                        <div class="ss-title">Setup SOC 2</div>
+                                        <div class="ss-desc">Use our auditor-approved framework template, complete with all the controls and requirements needed for compliance.</div>
                                     </div>
                                 </div>
                                 <div class="ss-item step-2">
                                     <div class="ss-step step-2">2</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_3.webp">
-                                                <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_2.mp4" type="video/mp4">
-                                                Your browser does not support the video tag.
-                                            </video>
+                                            <img src="${astUrl}/f_auto/drata/14018/2.webp" alt="Meet Requirements" class="ss-img">
                                         </div>
-                                        <div class="ss-title">Implement Controls</div>
-                                        <div class="ss-desc">Map the controls (policies, procedures, training) for your chosen framework, then collect evidence of their effectiveness.</div>
+                                        <div class="ss-title">Meet Requirements</div>
+                                        <div class="ss-desc">Send and sign policies, complete security training, and connect your tools via integrations to collect audit evidence—all automated in Drata.</div>
                                     </div>
                                 </div>
                                 <div class="ss-item step-3">
                                     <div class="ss-step step-3">3</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                           <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_5.webp">
-                                                <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_3.mp4" type="video/mp4">
-                                                Your browser does not support the video tag.
-                                            </video>
+                                           <img src="${astUrl}/f_auto/drata/14018/3.webp" alt="Track Progress" class="ss-img">
                                         </div>
-                                        <div class="ss-title">Ace the Audit</div>
-                                        <div class="ss-desc">Engage with a third-party auditor to formally review if your controls are effective and meet requirements, receiving a report if successful.</div>
+                                        <div class="ss-title">Track Progress</div>
+                                        <div class="ss-desc">See your compliance status, missing requirements, and upcoming tasks in the Drata dashboard for full visibility and reporting.</div>
                                     </div>
                                 </div>
                                 <div class="ss-item step-4">
                                     <div class="ss-step step-4">4</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                           <video loop muted playsinline width="100%" poster="${astUrl}/f_auto/drata/28002/thumbnail_5.webp">
-                                                <source src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/28002/Drata_3.mp4" type="video/mp4">
-                                                Your browser does not support the video tag.
-                                            </video>
+                                            <img src="${astUrl}/f_auto/drata/14018/4.webp" alt="Ace the Audit" class="ss-img">
                                         </div>
                                         <div class="ss-title">Ace the Audit</div>
-                                        <div class="ss-desc">Engage with a third-party auditor to formally review if your controls are effective and meet requirements, receiving a report if successful.</div>
+                                        <div class="ss-desc">Find vetted firms through Drata’s Auditor network and streamline the process with a central repository for all compliance documents.</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="ss-bottom-bar">
                                 <div class="ssb-title">Compliance Upkeep</div>
-                                <div class="ssb-subtitle">Compliance shouldn&#8217;t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
+                                <div class="ssb-subtitle">Compliance shouldn’t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
                             </div>
                         </div>
                     </div>
@@ -622,28 +603,28 @@
         });
 
         // On hover of any .ss-item, add specific step class name to .simple-steps-container
-        if (window.innerWidth > 1024) {
-            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
-                item.addEventListener('mouseover', function () {
-                    document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-                    document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
-                    item.querySelector('video').play();
-                });
+        // if (window.innerWidth > 1024) {
+        //     document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+        //         item.addEventListener('mouseover', function () {
+        //             document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+        //             document.querySelector('.simple-steps-container').classList.add('step-' + this.querySelector('.ss-step').textContent);
+        //             item.querySelector('video').play();
+        //         });
 
-                // On mouseout, remove all step classes
-                item.addEventListener('mouseout', function () {
-                    document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
-                    item.querySelector('video').pause();
-                    item.querySelector('video').load();
-                });
-            });
-        }
-        else {
-            document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
-                item.querySelector('video').setAttribute('autoplay', '1');
-                item.querySelector('video').play();
-            });
-        }
+        //         // On mouseout, remove all step classes
+        //         item.addEventListener('mouseout', function () {
+        //             document.querySelector('.simple-steps-container').classList.remove('step-1', 'step-2', 'step-3');
+        //             item.querySelector('video').pause();
+        //             item.querySelector('video').load();
+        //         });
+        //     });
+        // }
+        // else {
+        //     document.querySelectorAll('.simple-steps .ss-item').forEach(function (item) {
+        //         item.querySelector('video').setAttribute('autoplay', '1');
+        //         item.querySelector('video').play();
+        //     });
+        // }
     }
 
     function complianceBenefits_V1(selector) {
@@ -662,6 +643,11 @@
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
                             <div class="bs-card-title">Unblock Sales</div>
                             <div class="bs-card-desc">No one wants to work with a security risk. Get compliant to earn trust and expedite the sales process.</div>
+                        </div>
+                        <div class="bs-card">
+                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/14018/icon_2.svg" alt="Secure Funding"></div>
+                            <div class="bs-card-title">Secure Funding</div>
+                            <div class="bs-card-desc">Investors don’t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
                         </div>
                          <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
@@ -686,29 +672,35 @@
                 document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact">
             <div class="compliance-container">
                 <div class="c-title-container">
-                    <div class="c-eyebrow">Beyond the Audit: Compliance Automation</div>
-                    <h2 class="c-title">Invest in a Compliance Solution That Grows With You</h2>
-                    <div class="c-desc">This might be your first audit, but it won&#8217;t be your last. See why Drata is the ideal platform to begin and maintain your compliance journey.</div>
+                    <div class="c-eyebrow">Business Impact</div>
+                    <h2 class="c-title">Automating SOC 2 Helps You [Save Time]</h2>
+                    <div class="c-desc">This might be your first audit, but it won’t be your last. See why Drata is the ideal tool to begin and maintain your compliance journey.</div>
                 </div>
                 <div class="c-content dis-flex">
                     <div class="c-left">
                         <div class="accordion-wrapper">
                             <div class="accordion accordion_1">
                                 <div class="accordion-item open">
-                                    <div class="accordion-title">Kickstart Compliance</div>
-                                    <div class="accordion-content">Cut the compliance guesswork. Drata provides you with auditor-approved framework templates, complete with all the necessary policies, procedures, and controls to start and simplify your compliance journey. And with Drata&#8217;s <a href="https://drata.com/product/trust-center">Trust Center</a>, you can immediately demonstrate your compliance progress to customers, accelerating trust and boosting sales—even before an audit.</div>
+                                    <div class="accordion-title">Cut Compliance Work by 80%</div>
+                                    <div class="accordion-content">Integrations and automation reduce duplicate tasks and streamline compliance work, saving time and resources. Without manual workflows like collecting evidence with screenshots, you’ll be free to focus on more critical aspects of your business.
+                                    <p><a href="" class="learn-more">Explore Integrations ${anchorArrow}</a></p>
+                                    </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">Reduce Compliance Time by 80%</div>
-                                    <div class="accordion-content">With hundreds of integrations, Drata automatically collects compliance evidence for you. That means less digging through tools, taking screenshots, and updating spreadsheets.</div>
+                                    <div class="accordion-title">Protect Your Business</div>
+                                    <div class="accordion-content">Achieving SOC 2 compliance reduces the risk of breaches and security incidents by implementing controls and guidelines for protecting critical business information, incident response, risk management, and more.</div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">Track Your Progress</div>
-                                    <div class="accordion-content">Get complete visibility into your compliance program. Track everything in one place, get alerts for risks, see upcoming tasks, and always be ready to report your status to investors or customers.</div>
+                                    <div class="accordion-title">Scale Your GRC Program</div>
+                                    <div class="accordion-content">Compliance gets harder as you grow. Achieving SOC 2 now builds a strong foundation, helping you avoid future costs and headaches. And with Drata's controls that satisfy multiple frameworks, you can seamlessly add ISO 27001, HIPAA, and other frameworks without duplicating work.
+                                    <p><a href="https://drata.com/product" class="learn-more">See All Frameworks ${anchorArrow}</a></p>
+                                    </div>
                                 </div>
                                 <div class="accordion-item">
-                                    <div class="accordion-title">Rinse & Repeat</div>
-                                    <div class="accordion-content">Make your next audit even easier by maintaining compliance year-round. With daily tests that validate controls and keep you compliant, you&#8217;ll have non-stop peace of mind while eliminating “audit season” scrambles.</div>
+                                    <div class="accordion-title">Expedite Sales Cycles and Funding</div>
+                                    <div class="accordion-content">No one wants to work with a security risk. SOC 2 compliance builds trust, differentiates you in the market, and proves you take security seriously—expediting the sales process, opening enterprise channels, giving investors peace of mind, and becoming the clear choice for partners.
+                                    <p><a href="drata.com/customers/merge" class="learn-more">Learn More ${anchorArrow}</a></p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
@@ -764,33 +756,30 @@
             <section class="meet-drata spz-sec" id="why-drata">
                 <div class="md-container">
                 <div class="md-title-container">
-                    <div class="md-title">Meet Drata, Your One-Stop-Shop For Compliance</div>
-                    <div class="md-desc">Because it takes more than software to get compliant.</div>
+                    <div class="md-eyebrow">Service & Support</div>
+                    <div class="md-title">Why Drata?</div>
+                    <div class="md-desc">Because it takes more than software to get SOC 2 compliant.</div>
+                    <div class="md-cta">
+                        <a href="javascript:;" class="md-cta-btn demo-btn primary-blue-btn">Get a Demo ${ctaArrow}</a>
+                    </div>
                 </div>
                 <div class="md-content">
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
-                                <div class="md-video-wr">
-                                    <video id="gify-video" autoplay loop muted playsinline poster="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/28001/src/assets/Video-poster.png">
-                                    <source src="https://try.drata.com/hubfs/Spiralyze/28001/4.mp4" type="video/mp4">
-                                    Your browser does not support the video tag.
-                                    </video>
+                                <div class="md-img-wr">
+                                   <img src="${astUrl}/f_auto/drata/14018/image_3.webp">
                                 </div>
                             </div>
                             <div class="md-right">
                                 <div class="md-card">
                                     <div class="md-card-title">Ease of Use</div>
-                                    <div class="md-card-desc">Not a compliance expert? Not a problem. Drata&#8217;s intuitive platform and step-by-step walkthroughs make the entire process a breeze.</div>
-                                    <a href="https://drata.com/platform" class="md-anchor">Explore the Platform <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg></span></a>
+                                    <div class="md-card-desc">Not a compliance expert? Not a problem. Make the entire SOC 2 compliance process a breeze with step-by-step guides and Drata’s intuitive platform that ranks highest for ease of use on G2.</div>
+                                    <a href="https://drata.com/platform" class="md-anchor">Explore the Platform <span class="a-arrow">${anchorArrow}</span></a>
                                 </div>
                                  <div class="md-card">
                                     <div class="md-card-title">Built to Scale Securely</div>
                                     <div class="md-card-desc">Threats don&#8217;t stop, so neither do we. By constantly adding new frameworks and features, we stay ahead of regulatory changes and emerging threats, ensuring your compliance strategy remains proactive.</div>
-                                    <a href="https://drata.com/product" class="md-anchor">Explore Frameworks <span class="a-arrow"><svg xmlns="http://www.w3.org/2000/svg" class="button_arrow" width="12" height="13" viewBox="0 0 12 13" fill="none">
-                                            <path d="M5.96591 12.1364L4.64773 10.8295L8.10795 7.36932H0V5.44886H8.10795L4.64773 1.99432L5.96591 0.681818L11.6932 6.40909L5.96591 12.1364Z" fill="#0580E8" />
-                                        </svg></span></a>
+                                    <a href="https://drata.com/product" class="md-anchor">Explore Frameworks <span class="a-arrow">${anchorArrow}</span></a>
                                 </div>
                             </div>
                         </div>
@@ -798,7 +787,7 @@
                           <div class="md-card">
                                 <div class="md-card-title-wrapper">
                                     <div class="md-card-title">Expert Support at Every Step</div>
-                                    <div class="md-card-desc">Whether you need help choosing a framework or hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
+                                    <div class="md-card-desc">Whether you’re deciding between SOC 2 Type 1 or Type 2, or need hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
                                 </div>
                                 <div class="md-cta-wrapper">
                                     <a href="https://drata.com/success" class="md-cta black-cta">Learn More</a>
@@ -1162,7 +1151,7 @@
 
         const swiper2 = new Swiper(".feature-slider_14018", {
             // Optional parameters
-            centeredSlides: true,
+            // centeredSlides: true,
             spaceBetween: 32,
             slidesPerView: 2.5,
             freeMode: false,
@@ -1185,7 +1174,7 @@
                 },
                 1025: {
                     spaceBetween: 32,
-                    slidesPerView: 1.338
+                    slidesPerView: 2.5
                 }
             },
 
