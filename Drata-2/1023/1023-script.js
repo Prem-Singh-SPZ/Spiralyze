@@ -7,19 +7,19 @@
     document.head.appendChild(cssElement);
     function createTest() {
         waitForElm('body').then(function () {
-            document.querySelector("body").classList.add("spz-1023-V1");
+            document.querySelector("body").classList.add("spz-1023-V2");
 
             waitForElm('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').then(function () {
                 let setValue = setInterval(() => {
-                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '1023_Variant1') {
+                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '1023_Variants') {
                         clearInterval(setValue);
                     }
-                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '1023_Variant1');
+                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '1023_Variants');
                 }, 100);
             });
 
             waitForElm('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').then(function () {
-                document.querySelector('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').innerHTML = `<span>Get Started</span><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+                document.querySelector('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').innerHTML = `<span>Submit</span><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>`;
             });
@@ -27,7 +27,7 @@
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-1023-V1");
+        document.body.classList.remove("spz-1023-V2");
     }
 
     history.pushState = (function (f) {
