@@ -2775,7 +2775,6 @@ body.spz-14018 .cr-section-14018 .cr-section-container .slider-section {
   }
 }
 body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container {
-  max-width: 1440px;
   margin: auto;
   position: relative;
   padding-bottom: 72px;
@@ -2790,16 +2789,16 @@ body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .containe
     min-height: 420px;
   }
 }
-@media screen and (min-width: 1440.98px) {
+@media screen and (min-width: 1500.98px) {
   body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container::after {
     content: "";
     position: absolute;
     top: 0;
     right: -0.5px;
-    width: 100px;
+    width: 446px;
     height: 100%;
-    background: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), to(#fff));
-    background: linear-gradient(to right, rgba(255, 255, 255, 0), #fff);
+    background: -webkit-gradient(linear, right top, left top, color-stop(-1.69%, #FFF), color-stop(92.44%, rgba(255, 255, 255, 0)));
+    background: linear-gradient(270deg, #FFF -1.69%, rgba(255, 255, 255, 0) 92.44%);
     z-index: 2;
     pointer-events: none;
   }
@@ -2808,10 +2807,9 @@ body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .containe
     position: absolute;
     top: 0;
     left: -0.5px;
-    width: 100px;
+    width: 446px;
     height: 100%;
-    background: -webkit-gradient(linear, right top, left top, from(rgba(255, 255, 255, 0)), to(#fff));
-    background: linear-gradient(to left, rgba(255, 255, 255, 0), #fff);
+    background: linear-gradient(94deg, #FFF -1.69%, rgba(255, 255, 255, 0) 92.44%);
     z-index: 2;
     pointer-events: none;
   }
@@ -2821,8 +2819,12 @@ body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .containe
     max-width: 100%;
   }
 }
+body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container .swiper-slide {
+  max-width: 1054px;
+}
 body.spz-14018 .cr-section-14018 .cr-section-container .slider-section .container .slider-card {
   min-height: 400px;
+  max-width: 1054px;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;

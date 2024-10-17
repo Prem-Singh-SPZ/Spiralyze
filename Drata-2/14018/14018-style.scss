@@ -2730,7 +2730,7 @@ body.spz-14018 {
         }
 
         .container {
-          max-width: 1440px;
+          // max-width: 1440px;
           margin: auto;
           position: relative;
           padding-bottom: 72px;
@@ -2747,20 +2747,16 @@ body.spz-14018 {
             }
           }
 
-          @media screen and (min-width: 1440.98px) {
+          @media screen and (min-width: 1500.98px) {
             //add white gradient to the right of the slider
             &::after {
               content: "";
               position: absolute;
               top: 0;
               right: -0.5px;
-              width: 100px;
+              width: 446px;
               height: 100%;
-              background: linear-gradient(
-                to right,
-                rgba(255, 255, 255, 0),
-                #fff
-              );
+              background: linear-gradient(270deg, #FFF -1.69%, rgba(255, 255, 255, 0.00) 92.44%);
               z-index: 2;
               pointer-events: none;
             }
@@ -2770,13 +2766,9 @@ body.spz-14018 {
               position: absolute;
               top: 0;
               left: -0.5px;
-              width: 100px;
+              width: 446px;
               height: 100%;
-              background: linear-gradient(
-                to left,
-                rgba(255, 255, 255, 0),
-                #fff
-              );
+              background: linear-gradient(94deg, #FFF -1.69%, rgba(255, 255, 255, 0.00) 92.44%);
               z-index: 2;
               pointer-events: none;
             }
@@ -2786,8 +2778,13 @@ body.spz-14018 {
             max-width: 100%;
           }
 
+          .swiper-slide{
+            max-width: 1054px;
+          }
+
           .slider-card {
             min-height: 400px;
+            max-width: 1054px;
             display: flex;
             align-items: center;
             border-radius: 16px;

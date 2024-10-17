@@ -1125,6 +1125,10 @@
                 1025: {
                     spaceBetween: 32,
                     slidesPerView: 1.355
+                },   
+                1500: {
+                    spaceBetween: 32,
+                    slidesPerView: "auto"
                 }
             },
 
