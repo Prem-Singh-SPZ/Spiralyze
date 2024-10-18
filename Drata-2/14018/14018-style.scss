@@ -826,7 +826,7 @@ body.spz-14018 {
 
           @media screen and (max-width: 1024.98px) {
             padding: 32px 23px 31px;
-            max-width: 352px;
+            max-width: calc(50% - 16px);
           }
 
           .me-title {
@@ -909,7 +909,7 @@ body.spz-14018 {
     padding: 16px 24px;
     position: sticky;
     top: 0;
-    z-index: 99;
+    z-index: 9;
 
     @media (max-width: 1024.98px) {
       padding: 32px;
@@ -2007,7 +2007,7 @@ body.spz-14018 {
     padding: 96px 24px;
 
     @media (max-width: 1024.98px) {
-      padding: 80px 16px;
+      padding: 64px 16px;
     }
 
     .md-container {
@@ -2055,9 +2055,6 @@ body.spz-14018 {
           margin: 0 auto 12px;
 
           @media (max-width: 1024.98px) {
-            font-size: 32px;
-            line-height: 40px;
-            letter-spacing: -0.64px;
           }
 
           @media (max-width: 767.98px) {
@@ -2110,7 +2107,7 @@ body.spz-14018 {
             @media screen and (max-width: 1024.98px) {
               max-width: 100%;
               flex: 0 0 100%;
-              margin-bottom: 30px;
+              margin-bottom: 34px;
             }
 
             @media screen and (max-width: 767.98px) {
@@ -2157,6 +2154,10 @@ body.spz-14018 {
               padding: 32px;
               margin-bottom: 24px;
 
+              @media screen and (max-width: 1024.98px) {
+                margin-bottom: 32px;
+              }
+
               @media (max-width: 767.98px) {
                 padding: 24px;
                 margin-bottom: 16px;
@@ -2199,7 +2200,7 @@ body.spz-14018 {
         .md-bottom-section {
           margin-top: 8px;
 
-          @media (max-width: 767.98px) {
+          @media (max-width: 1024.98px) {
             margin-top: 0;
           }
 
@@ -2253,6 +2254,10 @@ body.spz-14018 {
                 line-height: 24px;
                 margin: 0 0 -2px;
 
+                @media (max-width: 1199.98px) {
+                  margin: 0 0 -10px;
+                }
+
                 @media (max-width: 767.98px) {
                   font-size: 14px;
                   line-height: 20px;
@@ -2302,7 +2307,7 @@ body.spz-14018 {
     padding: 96px 0 63px;
 
     @media (max-width: 1024.98px) {
-      padding: 80px 0 40px;
+      padding: 64px 0 62px;
     }
 
     @media (max-width: 767.98px) {
@@ -2364,7 +2369,7 @@ body.spz-14018 {
         // padding-left: 64px;
 
         @media (max-width: 1024.98px) {
-          margin: 63px auto 0;
+          margin: 32px auto 0;
         }
 
         @media (max-width: 767.98px) {
@@ -2372,7 +2377,7 @@ body.spz-14018 {
         }
 
         .container {
-          max-width: 1440px;
+          // max-width: 1440px;
           margin: auto;
           position: relative;
 
@@ -2401,8 +2406,8 @@ body.spz-14018 {
             padding: 32px;
 
             @media (max-width: 1199.98px) {
-              height: auto;
-              min-height: 323px;
+              // height: auto;
+              // min-height: 323px;
             }
 
             @media (max-width: 767.98px) {
@@ -2466,7 +2471,7 @@ body.spz-14018 {
 
             @media (max-width: 1024.98px) {
               right: 72px;
-              top: -31px;
+              top: -108px;
             }
 
             @media (max-width: 767.98px) {
@@ -2507,7 +2512,7 @@ body.spz-14018 {
 
             @media (max-width: 1024.98px) {
               right: 16px;
-              top: -31px;
+              top: -108px;
             }
 
             @media (max-width: 767.98px) {
@@ -2541,7 +2546,7 @@ body.spz-14018 {
     padding: 96px 24px;
 
     @media (max-width: 1024.98px) {
-      padding: 80px 16px;
+      padding: 65px 16px 64px;
     }
 
     .oi-title-container {
@@ -2549,6 +2554,10 @@ body.spz-14018 {
       align-items: center;
       max-width: 1248px;
       margin: 0 auto;
+
+      @media (max-width: 1024.98px) {
+        align-items: flex-start;
+      }
 
       .title-wrapper {
         max-width: 870px;
@@ -2616,6 +2625,10 @@ body.spz-14018 {
         gap: 0 8px;
         margin-top: 16px;
 
+        @media (max-width: 1024.98px) {
+          margin-top: 27px;
+        }
+
         .oi-img {
           border-radius: 14px;
           border: 1px solid #dde3eb;
@@ -2628,6 +2641,13 @@ body.spz-14018 {
           align-items: center;
           margin-top: 32px;
           overflow: hidden;
+
+          @media (max-width: 1024.98px) {
+            height: 141px;
+            width: 226.66px;
+            margin-top: 20px;
+            padding: 0 4px;
+          }
 
           img {
             width: 100%;
@@ -2862,13 +2882,12 @@ body.spz-14018 {
               width: 100%;
               height: 76px;
 
-              
-            @media (max-width: 1199.98px) {
-              max-width: 200px;
-              padding-left: 0;
-              padding-top: 32px;
-              margin-bottom: 32px;
-            }
+              @media (max-width: 1199.98px) {
+                max-width: 200px;
+                padding-left: 0;
+                padding-top: 32px;
+                margin-bottom: 32px;
+              }
 
               img {
                 width: 100%;
@@ -2890,7 +2909,7 @@ body.spz-14018 {
               align-items: flex-start;
               height: calc(100% - 80px);
               width: 100%;
-              max-width: 646px;
+              // max-width: 646px;
               border-right: 1px solid rgba(255, 255, 255, 0.3);
 
               @media (max-width: 1199.98px) {
@@ -2898,12 +2917,12 @@ body.spz-14018 {
                 width: 100%;
                 border-bottom: 1px solid rgba(255, 255, 255, 0.3);
                 border-right: 0;
+                padding-right: 0;
                 padding-bottom: 32px;
               }
 
               @media (max-width: 1024.98px) {
                 height: 288px;
-                padding-right: 0;
               }
 
               @media (max-width: 767.98px) {
@@ -2924,7 +2943,7 @@ body.spz-14018 {
                   margin: 0 0 32px;
 
                   @media (max-width: 1199.98px) {
-                   margin-bottom: 16px; 
+                    margin-bottom: 16px;
                   }
 
                   @media (max-width: 767.98px) {
@@ -3016,7 +3035,7 @@ body.spz-14018 {
     padding: 80px 24px;
 
     @media screen and (max-width: 1024.98px) {
-      padding: 76px 16px;
+      padding: 64px 16px;
     }
 
     @media screen and (max-width: 767.98px) {
@@ -3073,7 +3092,7 @@ body.spz-14018 {
           font-size: 32px;
           line-height: 40px;
           letter-spacing: -0.64px;
-          max-width: 400px;
+          max-width: 508px;
           margin: 0 auto 24px;
         }
 
@@ -3137,7 +3156,7 @@ body.spz-14018 {
     }
 
     @media (max-width: 1024.98px) {
-      padding: 80px 0 64px;
+      padding: 64px 0 32px;
     }
 
     @media (max-width: 767.98px) {
@@ -3162,7 +3181,7 @@ body.spz-14018 {
         margin-bottom: 32px;
 
         @media screen and (max-width: 1024.98px) {
-          margin-bottom: 47px;
+          margin-bottom: 31px;
         }
 
         .title {
@@ -3205,8 +3224,8 @@ body.spz-14018 {
           margin: 0 auto;
 
           @media screen and (max-width: 1024.98px) {
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 18px;
+            line-height: 26px;
           }
         }
       }
@@ -3224,6 +3243,10 @@ body.spz-14018 {
         align-items: center;
         justify-content: space-between;
         margin-bottom: 48px;
+
+        @media (max-width: 1199.98px) {
+          flex-direction: column;
+        }
 
         .tab-wrapper {
           display: flex;
@@ -3245,6 +3268,7 @@ body.spz-14018 {
             line-height: 24px;
             outline: none;
             cursor: pointer;
+            white-space: nowrap;
 
             &.active {
               background: #0580e8;
@@ -3252,6 +3276,12 @@ body.spz-14018 {
               border: 1px solid #0580e8;
               box-shadow: 0px 1.489px 2.979px 0px rgba(5, 128, 232, 0.2);
             }
+          }
+        }
+
+        .all-resc-anchor {
+          @media screen and (max-width: 1199.98px) {
+            margin-top: 20px;
           }
         }
       }
@@ -3279,9 +3309,9 @@ body.spz-14018 {
           min-height: 376px;
 
           @media (max-width: 1280.98px) {
-            width: 360px;
+            width: 352px;
             min-height: 376px;
-            margin-bottom: 16px;
+            margin-bottom: 32px;
           }
 
           // @media (max-width: 1024.98px) {
@@ -3383,7 +3413,7 @@ body.spz-14018 {
     background: #f6f8fa;
 
     @media (max-width: 1024.98px) {
-      padding: 97px 16px 80.5px;
+      padding: 64px 16px 49px;
     }
 
     @media (max-width: 767.98px) {
@@ -3411,6 +3441,12 @@ body.spz-14018 {
         line-height: 24px;
         margin: 0 0 16px;
 
+        @media (max-width: 1199.98px) {
+          text-align: center;
+          font-size: 14px;
+          line-height: 20px;
+        }
+
         @media (max-width: 767.98px) {
           font-size: 12px;
           line-height: 18px;
@@ -3426,6 +3462,13 @@ body.spz-14018 {
         line-height: 48px;
         letter-spacing: -0.84px;
         margin: 0 0 17px;
+
+        @media (max-width: 1199.98px) {
+          text-align: center;
+          font-size: 32px;
+          line-height: 40px;
+          letter-spacing: -0.64px;
+        }
 
         @media (max-width: 767.98px) {
           font-size: 24px;
@@ -3443,6 +3486,14 @@ body.spz-14018 {
         line-height: 26px;
         margin: 0 0 16px;
         max-width: 626px;
+
+        
+        @media (max-width: 1199.98px) {
+          text-align: center;
+          // font-size: 14px;
+          // line-height: 20px;
+          max-width: 100%;
+        }
 
         @media (max-width: 767.98px) {
           font-size: 14px;

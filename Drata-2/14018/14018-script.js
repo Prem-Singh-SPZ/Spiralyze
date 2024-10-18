@@ -108,7 +108,7 @@
                     title: "SOC 2 Audits: What You Can Expect from Start to Finish",
                     desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
                     img: astUrl + "/f_auto/drata/14018/7.webp",
-                    link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
+                    link: "https://drata.com/grc-central/soc-2"
                 }
             ]
         },
@@ -679,7 +679,7 @@
                                 <div class="accordion-item open">
                                     <div class="accordion-title">Cut Compliance Work by 80%</div>
                                     <div class="accordion-content">Integrations and automation reduce duplicate tasks and streamline compliance work, saving time and resources. Without manual workflows like collecting evidence with screenshots, you’ll be free to focus on more critical aspects of your business.
-                                    <div class="learn-more-cta"><a href="" class="learn-more">Explore Integrations ${anchorArrow}</a></div>
+                                    <div class="learn-more-cta"><a href="https://drata.com/platform/integrations" class="learn-more">Explore Integrations ${anchorArrow}</a></div>
                                     </div>
                                 </div>
                                 <div class="accordion-item">
@@ -808,7 +808,7 @@
                             <h3 class="large-title">Hear From Our Customers</h3>
                         </div>
                         <div class="cr-global-cta">
-                            <a href="https://drata.com/product" class="cr-cta primary-blue-btn">See all stories ${ctaArrow}</a>
+                            <a href="https://drata.com/customers" class="cr-cta primary-blue-btn">See all stories ${ctaArrow}</a>
                         </div>
                     </div>
                 </div>
@@ -939,7 +939,7 @@
                 <div class="cta-desc">Start Your SOC 2 Journey Today</div>
                 <div class="cta-wrapper">
                     <a href="javascript:void()" class="demo-btn cta-btn primary-blue-btn">Get Demo</a>
-                    <a href="javascript:void()" class="price-btn">How We Price</a>
+                    <a href="https://drata.com/plans" class="price-btn">How We Price</a>
                 </div>
             </div>
         </section>`);
@@ -1121,7 +1121,7 @@
                 1025: {
                     spaceBetween: 32,
                     slidesPerView: 1.355
-                },   
+                },
                 1500: {
                     spaceBetween: 32,
                     slidesPerView: "auto"
@@ -1167,7 +1167,7 @@
                     spaceBetween: 8
                 },
                 768: {
-                    slidesPerView: 1,
+                    slidesPerView: 1.6,
                     spaceBetween: 30
                 },
                 1025: {
@@ -1181,6 +1181,18 @@
                 nextEl: ".swiper-btn-next",
                 prevEl: ".swiper-btn-prev"
             },
+        });
+
+        //assign this as margin left to .slider-section
+        leftAlignedSlider();
+    }
+
+    function leftAlignedSlider() {
+        waitForElm('.feature-cap-section-14018').then(function () {
+            const title = document.querySelector('.feature-cap-section-14018 .large-title');
+            const titleRect = title.getBoundingClientRect();
+            const space = titleRect.left;
+            document.querySelector('.feature-cap-section-14018 .slider-section').style.marginLeft = space + 'px';
         });
     }
 
@@ -1249,6 +1261,10 @@
     //when scroll, check which section is in view and add active class to respective nav-anchor
     window.addEventListener('scroll', function () {
         checkActiveNav_V1();
+    });
+
+    window.addEventListener('resize', function () {
+        leftAlignedSlider();
     });
 
     window.addEventListener('click', function (e) {
