@@ -301,7 +301,7 @@
                 document.querySelector(selector).insertAdjacentHTML("afterend", `<section class="hero-section-14018 spz-sec">
                     <div class="hero-content dis-flex flex-wrap justify-content-between">
                     <div class="hero-left-section">
-                    <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br>We Got You.</h1>
+                    <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br class="desk-only">We Got You.</h1>
                     <div class="star-rating dis-flex align-items-center"><img src="${astUrl}/fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
                     <img src="${astUrl}/fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
                     <div class="list-grp-wrapper">
@@ -313,11 +313,7 @@
                     </div>
                     </div>
                     <div class="hero-right-section">
-                        <picture>
-                            <source media="(min-width:768px)" srcset="${astUrl}/f_auto/drata/14007/frame_48096469.webp">
-                            <source media="(min-width:300px)" srcset="${astUrl}/f_auto/drata/14007/frame_48096469.webp">
-                            <img src="${astUrl}/f_auto/drata/14007/frame_48096469.webp" class="hero-img" alt="Accelerate SOC 2 Compliance. Reduce Time and Cost by 50%." title="Accelerate SOC 2 Compliance. Reduce Time and Cost by 50%.">
-                        </picture>
+                        <img src="${astUrl}/f_auto/drata/14018/image_7.webp" class="hero-img" alt="New to SOC 2? We Got You.">
                     </div>
                     </div>
                     </section>`);
@@ -1119,8 +1115,8 @@
                     spaceBetween: 8
                 },
                 768: {
-                    slidesPerView: 1,
-                    spaceBetween: 30
+                    slidesPerView: 1.218,
+                    spaceBetween: 32
                 },
                 1025: {
                     spaceBetween: 32,

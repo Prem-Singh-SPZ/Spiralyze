@@ -41,6 +41,11 @@ body.spz-14018 {
       display: none;
     }
   }
+  .desk-only {
+    @media (max-width: 1199.98px) {
+      display: none;
+    }
+  }
 
   .spz-hidden {
     display: none !important;
@@ -448,8 +453,8 @@ body.spz-14018 {
       padding: 0 36px;
 
       .hero-content {
-        padding-top: 37px;
-        padding-bottom: 24px;
+        padding-top: 49px;
+        padding-bottom: 61px;
 
         &:before {
           display: none;
@@ -458,17 +463,18 @@ body.spz-14018 {
           display: none;
         }
         .hc-title {
-          font-size: 48px;
-          line-height: 56px;
-          letter-spacing: -0.96px;
-          max-width: 736px;
+          font-size: 54px;
+          font-weight: 900;
+          line-height: 64px;
+          letter-spacing: -1.08px;
+          margin: 0 0 23.5px;
         }
         .sr-number {
-          font-size: 18px;
-          line-height: 26px;
+          font-size: 16px;
+          line-height: 24px;
           strong {
             font-size: 16px;
-            font-weight: 800;
+            font-weight: 700;
           }
         }
         .hero-left-section {
@@ -482,14 +488,14 @@ body.spz-14018 {
           max-width: unset;
           position: relative;
           display: block;
-          text-align: center;
           margin-right: 0;
+          margin-top: 16px;
         }
         .hero-right-section .hero-img {
           width: 100%;
-          max-width: 736px;
-          -o-object-fit: contain;
+          max-width: 716px;
           object-fit: contain;
+          margin-left: 16px;
         }
       }
       .hero-btn {
@@ -498,7 +504,7 @@ body.spz-14018 {
       }
 
       .list-grp-wrapper .list-group {
-        margin-top: 32px;
+        margin-top: 24px;
       }
     }
 
@@ -577,7 +583,7 @@ body.spz-14018 {
     }
 
     @media (max-width: 1024.98px) {
-      padding: 81px 16px 79px;
+      padding: 30px 16px;
     }
 
     @media (max-width: 767.98px) {
@@ -679,18 +685,23 @@ body.spz-14018 {
     }
 
     @media screen and (max-width: 1280px) {
-      max-width: 736px;
-      margin: 50px auto 0;
-
       .cs-title {
         margin-bottom: 15px;
       }
 
       .case-study-wrapper .case-study {
         width: 360px;
+        height: 100px;
+        justify-content: start;
+        margin: 9.5px 0;
 
         .cs-details .cs-right {
           width: 150px;
+
+          .cs-text {
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
       }
     }
@@ -737,7 +748,7 @@ body.spz-14018 {
     }
 
     @media (max-width: 1024.98px) {
-      padding: 81px 16px 79px;
+      padding: 65px 16px 15px;
     }
 
     @media (max-width: 767.98px) {
@@ -753,6 +764,10 @@ body.spz-14018 {
         align-items: center;
         margin-bottom: 48px;
 
+        @media (max-width: 1024.98px) {
+          align-items: flex-start;
+        }
+
         .me-left {
           .me-title {
             color: #0c131a;
@@ -763,6 +778,12 @@ body.spz-14018 {
             line-height: 48px;
             letter-spacing: -0.84px;
             margin: 0 0 12px;
+
+            @media screen and (max-width: 1024.98px) {
+              font-size: 32px;
+              line-height: 40px;
+              letter-spacing: -0.64px;
+            }
           }
 
           .me-subtitle {
@@ -791,6 +812,7 @@ body.spz-14018 {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
+        gap: 24px;
         .me-card {
           display: flex;
           padding: 32px 32px 31px;
@@ -800,6 +822,12 @@ body.spz-14018 {
           border: 1px solid #dde3eb;
           background: #f6f8fa;
           max-width: 608px;
+          width: 100%;
+
+          @media screen and (max-width: 1024.98px) {
+            padding: 32px 23px 31px;
+            max-width: 352px;
+          }
 
           .me-title {
             color: #0c131a;
@@ -857,8 +885,16 @@ body.spz-14018 {
         display: flex;
         justify-content: center;
 
+        @media screen and (max-width: 1024.98px) {
+          margin-top: 14px;
+        }
+
         img {
           margin-left: -54px;
+
+          @media screen and (max-width: 1024.98px) {
+            margin-left: 0;
+          }
         }
       }
     }
@@ -867,7 +903,7 @@ body.spz-14018 {
 
   //spz nav bar starts
   .navbar-section {
-    height: 80px;
+    height: 84px;
     border-bottom: 1px solid #dde3eb;
     background: #fff;
     padding: 16px 24px;
@@ -876,7 +912,8 @@ body.spz-14018 {
     z-index: 99;
 
     @media (max-width: 1024.98px) {
-      padding: 16px;
+      padding: 32px;
+      height: 94px;
     }
 
     @media (max-width: 767.98px) {
@@ -958,7 +995,7 @@ body.spz-14018 {
     padding: 96px 24px;
 
     @media (max-width: 1024.98px) {
-      padding: 80px 16px 62px;
+      padding: 64px 16px 40px;
     }
 
     @media (max-width: 767.98px) {
@@ -1019,7 +1056,7 @@ body.spz-14018 {
             font-weight: 900;
             line-height: 40px;
             letter-spacing: -0.64px;
-            max-width: 554px;
+            max-width: 100%;
           }
 
           @media (max-width: 767.98px) {
@@ -1042,9 +1079,9 @@ body.spz-14018 {
           margin: 0 auto;
 
           @media (max-width: 1024.98px) {
-            font-size: 16px;
-            line-height: 24px;
-            max-width: 554px;
+            font-size: 18px;
+            line-height: 26px;
+            max-width: 94%;
           }
 
           @media (max-width: 767.98px) {
@@ -1062,7 +1099,7 @@ body.spz-14018 {
 
           @media screen and (min-width: 767.98px) {
             justify-content: center;
-            gap: 0 16px;
+            gap: 0 24px;
           }
         }
 
@@ -1078,9 +1115,9 @@ body.spz-14018 {
           background: #fff;
 
           @media (max-width: 1024.98px) {
-            max-width: calc(50% - 8px);
-            margin-bottom: 16px;
-            padding: 32px 30px 32px 31px;
+            max-width: calc(50% - 12px);
+            margin-bottom: 24px;
+            padding: 28px 30px 27px 23px;
           }
 
           @media (max-width: 767.98px) {
@@ -1144,7 +1181,7 @@ body.spz-14018 {
     }
 
     @media (max-width: 1024.98px) {
-      padding: 81px 16px 79px;
+      padding: 65px 16px 64px;
     }
 
     @media (max-width: 767.98px) {
@@ -1260,7 +1297,7 @@ body.spz-14018 {
             display: flex;
             flex-direction: row;
             max-width: 100%;
-            margin-top: 48px;
+            margin-top: 15px;
           }
 
           @media (max-width: 767.98px) {
@@ -1283,8 +1320,10 @@ body.spz-14018 {
             text-align: right;
 
             @media (max-width: 1024.98px) {
-              max-width: 348px;
-              padding: 0 0 0 36px;
+              text-align: center;
+              font-size: 18px;
+              line-height: 26px;
+              letter-spacing: -0.18px;
             }
 
             @media (max-width: 767.98px) {
@@ -1386,6 +1425,7 @@ body.spz-14018 {
           position: relative;
           max-width: 656px;
           margin-left: auto;
+          padding: 16px 0px 34.5px;
         }
 
         @media (max-width: 767.98px) {
@@ -1406,7 +1446,7 @@ body.spz-14018 {
               content: " ";
               position: absolute;
               top: -2px;
-              left: -57.5px;
+              left: -54.5px;
               height: calc(100% + 2px);
               width: 1px;
               background-color: #dde3eb;
@@ -1442,7 +1482,7 @@ body.spz-14018 {
 
             @media (max-width: 1024.98px) {
               width: auto;
-              padding: 0 24px 27px 24px;
+              padding: 0 24px 29.5px 24px;
               margin: 0px 15.5px 12px 15px;
               overflow: initial;
 
@@ -1495,8 +1535,8 @@ body.spz-14018 {
 
                 @media (max-width: 1024.98px) {
                   margin: 0 auto;
-                  width: 332px;
-                  height: 176.53px;
+                  width: 350px;
+                  height: 168px;
                 }
 
                 @media (max-width: 767.98px) {
@@ -1528,9 +1568,9 @@ body.spz-14018 {
                 margin: -2px 0 9px;
 
                 @media (max-width: 1024.98px) {
-                  font-size: 16px;
-                  line-height: 24px;
-                  margin: -2px 0 7px;
+                  font-size: 20px;
+                  line-height: 28px;
+                  margin: 13px 0 9px;
                 }
 
                 @media (max-width: 767.98px) {
@@ -1590,7 +1630,7 @@ body.spz-14018 {
             display: flex !important;
             align-items: center;
             justify-content: center;
-            top: -3px;
+            top: 0;
             left: -98px;
             width: 48px;
           }
@@ -1670,9 +1710,9 @@ body.spz-14018 {
         justify-content: center;
         margin-top: 48px;
 
-        @media (max-width: 1024.98px) {
-          margin-top: 32px;
-        }
+        // @media (max-width: 1024.98px) {
+        //   margin-top: 32px;
+        // }
 
         @media (max-width: 767.98px) {
           margin-top: 24px;
@@ -1705,7 +1745,7 @@ body.spz-14018 {
     background: #f6f8fa;
 
     @media (max-width: 1024.98px) {
-      padding: 96px 16px 90px;
+      padding: 64px 16px 57px;
     }
 
     @media (max-width: 767.98px) {
@@ -1729,7 +1769,8 @@ body.spz-14018 {
           @media (max-width: 1024.98px) {
             font-size: 14px;
             line-height: 20px;
-            margin: 0 0 18px;
+            margin: 0 0 17px;
+            text-align: center;
           }
 
           @media (max-width: 767.98px) {
@@ -1754,6 +1795,7 @@ body.spz-14018 {
             line-height: 40px;
             letter-spacing: -0.64px;
             margin: 0 auto 19px;
+            text-align: center;
           }
 
           @media (max-width: 767.98px) {
@@ -1776,10 +1818,11 @@ body.spz-14018 {
           line-height: 26px;
 
           @media (max-width: 1024.98px) {
-            font-size: 16px;
-            line-height: 24px;
+            font-size: 18px;
+            line-height: 26px;
             max-width: 100%;
             margin: 0 auto 48px;
+            text-align: center;
           }
 
           @media (max-width: 767.98px) {
@@ -1826,7 +1869,7 @@ body.spz-14018 {
                 position: relative;
 
                 @media (max-width: 1024.98px) {
-                  padding: 16px 15px;
+                  padding: 16px 19px;
                   margin-bottom: 10.5px;
                 }
 
@@ -1843,7 +1886,7 @@ body.spz-14018 {
                   padding-right: 42px;
 
                   @media (max-width: 1024.98px) {
-                    font-weight: 700;
+                    font-weight: 800;
                     max-width: 80%;
                   }
 
@@ -1890,7 +1933,7 @@ body.spz-14018 {
 
                   @media (max-width: 1024.98px) {
                     top: 16px;
-                    right: 16px;
+                    right: 19.5px;
                   }
 
                   @media (max-width: 767.98px) {
@@ -2357,10 +2400,6 @@ body.spz-14018 {
             background: #f6f8fa;
             padding: 32px;
 
-            @media (min-width: 1199.98px) and (max-width: 1330.98px) {
-              min-height: 365px;
-            }
-
             @media (max-width: 1199.98px) {
               height: auto;
               min-height: 323px;
@@ -2608,7 +2647,7 @@ body.spz-14018 {
     padding: 96px 0 48px;
 
     @media (max-width: 1024.98px) {
-      padding: 80px 0 40px;
+      padding: 64px 0 48px;
     }
 
     @media (max-width: 767.98px) {
@@ -2722,7 +2761,7 @@ body.spz-14018 {
         // padding-left: 64px;
 
         @media (max-width: 1024.98px) {
-          margin: 63px auto 0;
+          margin: 47px auto 0;
         }
 
         @media (max-width: 767.98px) {
@@ -2756,7 +2795,11 @@ body.spz-14018 {
               right: -0.5px;
               width: 446px;
               height: 100%;
-              background: linear-gradient(270deg, #FFF -1.69%, rgba(255, 255, 255, 0.00) 92.44%);
+              background: linear-gradient(
+                270deg,
+                #fff -1.69%,
+                rgba(255, 255, 255, 0) 92.44%
+              );
               z-index: 2;
               pointer-events: none;
             }
@@ -2768,7 +2811,11 @@ body.spz-14018 {
               left: -0.5px;
               width: 446px;
               height: 100%;
-              background: linear-gradient(94deg, #FFF -1.69%, rgba(255, 255, 255, 0.00) 92.44%);
+              background: linear-gradient(
+                94deg,
+                #fff -1.69%,
+                rgba(255, 255, 255, 0) 92.44%
+              );
               z-index: 2;
               pointer-events: none;
             }
@@ -2778,7 +2825,7 @@ body.spz-14018 {
             max-width: 100%;
           }
 
-          .swiper-slide{
+          .swiper-slide {
             max-width: 1054px;
           }
 
@@ -2799,11 +2846,13 @@ body.spz-14018 {
             @media (max-width: 1199.98px) {
               height: auto;
               min-height: 323px;
+              flex-direction: column;
+              padding: 48px 40px;
+              align-items: flex-start;
             }
 
             @media (max-width: 767.98px) {
               padding: 0;
-              flex-direction: column;
               border-radius: 24px 80px 24px 24px;
             }
 
@@ -2812,6 +2861,14 @@ body.spz-14018 {
               padding-left: 64px;
               width: 100%;
               height: 76px;
+
+              
+            @media (max-width: 1199.98px) {
+              max-width: 200px;
+              padding-left: 0;
+              padding-top: 32px;
+              margin-bottom: 32px;
+            }
 
               img {
                 width: 100%;
@@ -2839,10 +2896,14 @@ body.spz-14018 {
               @media (max-width: 1199.98px) {
                 height: auto;
                 width: 100%;
+                border-bottom: 1px solid rgba(255, 255, 255, 0.3);
+                border-right: 0;
+                padding-bottom: 32px;
               }
 
               @media (max-width: 1024.98px) {
-                height: 324px;
+                height: 288px;
+                padding-right: 0;
               }
 
               @media (max-width: 767.98px) {
@@ -2861,6 +2922,10 @@ body.spz-14018 {
                   font-weight: 700;
                   line-height: 28px;
                   margin: 0 0 32px;
+
+                  @media (max-width: 1199.98px) {
+                   margin-bottom: 16px; 
+                  }
 
                   @media (max-width: 767.98px) {
                     font-size: 14px;
@@ -2891,9 +2956,11 @@ body.spz-14018 {
                   -webkit-box-orient: vertical;
 
                   @media (max-width: 1199.98px) {
-                    // font-size: 16px;
-                    // line-height: 24px;
-                    margin-bottom: 12px;
+                    font-size: 24px;
+                    line-height: 28px;
+                    margin-bottom: 28px;
+                    min-height: 112px;
+                    letter-spacing: 0;
                   }
 
                   @media (max-width: 767.98px) {
@@ -2922,20 +2989,20 @@ body.spz-14018 {
             // width: auto;
 
             @media (max-width: 1300px) {
-              left: 24px;
+              // left: 24px;
             }
 
-            @media (max-width: 1024.98px) {
-              left: 16px;
-              top: -31px;
-            }
+            // @media (max-width: 1024.98px) {
+            //   left: 16px;
+            //   top: -31px;
+            // }
 
-            @media (max-width: 767.98px) {
-              bottom: -22px;
-              top: auto;
-              left: 0;
-              right: 0;
-            }
+            // @media (max-width: 767.98px) {
+            //   bottom: -22px;
+            //   top: auto;
+            //   left: 0;
+            //   right: 0;
+            // }
           }
         }
       }
@@ -3050,7 +3117,7 @@ body.spz-14018 {
             border-color: rgba(255, 255, 255, 0.1);
             background: rgba(255, 255, 255, 0.1);
           }
-      
+
           &:active {
             border-width: 2px;
             background: rgba(255, 255, 255, 0.1);
