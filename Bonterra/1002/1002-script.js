@@ -59,6 +59,37 @@ let bodyLoaded = setInterval(function () {
                 },
                 //Question 2 end
             ]
+
+            const heroSelector = `.spz_1002 .main-content .layout .layout__region`;
+            const footerSelector = `.spz_1002 footer.site-footer`;
+            const position = "beforebegin";
+            const formUniqueSelector = `#mktoForm_1024`;
+            const heroContent = {
+                customHTMLBefore: `<div class="form-heading">Get a Demo</div>`,
+                contentSuperHeading: "Nonprofit & strategic philanthropy management",
+                contentHeading: "Boost donations, engagement, and impact",
+                ArrowImage: [
+                    {
+                        breakPoint: 1024,
+                        url: "//res.cloudinary.com/spiralyze/image/upload/v1724752326/bonterra/1001/arrow.svg",
+                    },
+                ],
+                ArrowAlt: "arrow",
+                features: [
+                    {
+                        checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1725355228/bonterra/1001/feature-checkmark.svg",
+                        featureItemContent: "<b>Fundraising.</b> Send email to donors with one-click donations. Website donation forms. Manage Giving Days & volunteers. ",
+                    },
+                    {
+                        checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1725355228/bonterra/1001/feature-checkmark.svg",
+                        featureItemContent: "<b>Impact Management.</b> Manage cases, records, enrollments, exits, caseloads, and more. Create program performance reports.",
+                    },
+                    {
+                        checkmarkImage: "//res.cloudinary.com/spiralyze/image/upload/v1725355228/bonterra/1001/feature-checkmark.svg",
+                        featureItemContent: "<b>Strategic Philanthropy.</b> Award and report on grants. Track budgets. Let employees find and donate to vetted nonprofits.",
+                    },
+                ],
+            };
             const LeadingLogoData = [
                 {
                     leadinglogosheading: "Trusted by Leading Organizations",
@@ -90,62 +121,133 @@ let bodyLoaded = setInterval(function () {
                     ]
                 }
             ]
-            const sectionSelector = `.spz_1002 .main-content .layout .layout__region .block[class*="widgets1page"] .form-include`;
-            const position = "beforebegin";
-            const formUniqueSelector = `#mktoForm_1024`;
-            const heroSelector = `.spz_1002 .main-content .layout .layout__region .block[class*="widgets1page"]`;
-            const controlLogoSelector = `.spz_1002 .main-content .layout .layout__region .block[class*="widgets1page"] .featured-single-quote--headlines`;
-            const leadingLogoposition = "afterend";
-
-            addTriage(triageData, formUniqueSelector);
-            addLeadingLogo(LeadingLogoData);
-
-            // Check if the user has already submitted the form in this session
-            if (localStorage.getItem('formSubmitted')) {
-                document.body.classList.add('repeat-user');
-                const items = document.querySelectorAll('.progress-item');
-                items.forEach((item, i) => {
-                    item.classList.remove('active'); // Remove default active class
-                    item.classList.add(i < items.length - 1 ? 'completed' : 'active');
-                });
-            }
-
-            function addTriage(triageData, formSelector) {
-                const triageTemplate = `<div class="spz-triage-wrap">
-                      <div class="questions-progress">
-                          ${triageData.length !== 0 && triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
-                          <div class="progress-item"></div>
-                      </div>
-                      <h2 class="form-heading">Get a Demo</h2>
-                      <div class="questions-wrap">
-                          ${triageData.length !== 0 && triageData.map((item, index) => {
-                    return `<div class="question-item question-${index + 1} ${index !== 0 ? 'spz-hidden' : ''}">
-                                      <div class="question-heading">${item.questionHeading}</div>
-                                      <div class="answers-wrap">
-                                              ${item.answers && item.answers.map((itemm, indexx) => {
-                        const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
-                        return `<div class="answer-item">
-                                                              <input type="radio" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
-                                                              <div class="answer-content">
-                                                                      <div class="answer-checkbox"><span></span></div>
-                                                                      ${itemm.answerImage && itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" class="answer-image" alt="${itemm.answerText}"/>` : ``}
-                                                                      <div class="answer-text">${itemm.answerText}</div>
-                                                                      ${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
-                                                              </div>
-                                                      </div>`;
+            const FooterData = [
+                {
+                    copyrightcontent: "©Bonterra 2024",
+                    footerlinks: [
+                        {
+                            url: '/legal/privacy-policy',
+                            text: 'Privacy policy'
+                        },
+                        {
+                            url: '/legal/bonterra-website-terms-and-conditions',
+                            text: 'Terms of Use'
+                        }
+                    ]
+                }
+            ]
+            function addBaseline(formData, whereToPut, triageData, formUniqueSelector, heroSelector, leadinglogoSection, footerSelector, footer) {
+                const formTemplate = `<div class="spz-shortform-baseline">
+					<div class="spz-form-wrap">
+						<div class="content-section">
+							${formData.contentSuperHeading.replace(/\s/g, "").length !== 0
+                        ? `<div class="content-superheading">${formData.contentSuperHeading}</div>`
+                        : ""
+                    }
+							${formData.contentHeading.replace(/\s/g, "").length !== 0
+                        ? `<h1 class="content-heading">${formData.contentHeading}</h1>`
+                        : ""
+                    }
+							<div class="spz-features-wrap">
+	              ${formData.features.length > 0
+                        ? formData.features
+                            .map((item) => {
+                                return `<div class="feature-item">
+												<img src="${item.checkmarkImage}" alt="checkmark" />
+												<span>${item.featureItemContent}</span>
+											</div>`;
+                            }).join("")
+                        : ""
+                    }
+	            </div>
+							<div class="middle-arrow-image">
+								${formData.ArrowImage.length !== 0
+                        ? `<img src="${formData.ArrowImage[0].url}" alt="${formData.ArrowAlt}" />`
+                        : ""
+                    }
+							</div>
+						</div>
+						<div class="spz-triage-wrap">
+							<div class="questions-progress">
+								${triageData.length !== 0 && triageData.map((item, index) => `<div class="progress-item ${index === 0 ? 'active' : ''}"></div>`).join('')}
+								<div class="progress-item"></div>
+							</div>
+							<h2 class="form-heading">Get a Demo</h2>
+							<div class="questions-wrap">
+								${triageData.length !== 0 && triageData.map((item, index) => {
+                        return `<div class="question-item question-${index + 1} ${index !== 0 ? 'spz-hidden' : ''}">
+											<div class="question-heading">${item.questionHeading}</div>
+											<div class="answers-wrap">
+													${item.answers && item.answers.map((itemm, indexx) => {
+                            const sanitizedQuestionHeading = item.questionHeading.replace(/[^a-zA-Z0-9 ]/g, '').replace(/\s+/g, '-');
+                            return `<div class="answer-item">
+																	<input type="radio" name="${sanitizedQuestionHeading}" value="${itemm.answerFormValue}">
+																	<div class="answer-content">
+																			<div class="answer-checkbox"><span></span></div>
+																			${itemm.answerImage && itemm.answerImage.length !== 0 ? `<img src="${itemm.answerImage}" class="answer-image" alt="${itemm.answerText}"/>` : ``}
+																			<div class="answer-text">${itemm.answerText}</div>
+																			${itemm.answerDesc && itemm.answerDesc.length !== 0 ? `<div class="answer-desc">${itemm.answerDesc}</div>` : ``}
+																	</div>
+															</div>`;
+                        }).join('')}
+													<div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
+											</div>
+											<div class="next-question">Next</div>
+									</div>`;
                     }).join('')}
-                                              <div class="step-error"><img src="https://res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg" alt="Error Icon">Please select an option.</div>
-                                      </div>
-                                      <div class="next-question">Next</div>
-                              </div>`;
-                }).join('')}
-                          <div class="question-form spz-hidden spz-form-wrap"></div>
-                      </div>
-                  </div>`;
-                //Append triage section
-                waitForElm(sectionSelector).then(function () {
-                    document.querySelector(sectionSelector).insertAdjacentHTML(position, triageTemplate);
-                });
+								<div class="question-form spz-hidden spz-form-wrap"></div>
+							</div>
+						</div>
+				</div>
+				${typeof leadinglogoSection !== 'undefined' ?
+                        `<div class="spz-Leading-Logos">
+						<div class="spz-Leading-Logos-wrapper">
+							${LeadingLogoData.map(item => `
+								${item.leadinglogosheading ? `<h5 class="spz-heading">${item.leadinglogosheading}</h5>` : ''}
+								<div class="spz-logos">
+									${item.leadinglogos.map(logo => logo.logo ? `<img src="${logo.logo}" class="answer-image" alt="${logo.logoalt}"/>` : '').join('')}
+								</div>
+							`).join('')}
+						</div>
+					</div>`
+                        : ``}
+				</div>`;
+                if (document.querySelectorAll('.spz-shortform-baseline').length == 0) {
+                    document.querySelector(heroSelector).insertAdjacentHTML(whereToPut, formTemplate);
+                }
+                document.querySelector('.spz_1002 #header .site-branding__logo img').src = "//res.cloudinary.com/spiralyze/image/upload/v1725601232/bonterra/1001/bonterra-logo_1.svg";
+
+                const footerTemplate = `${typeof footer !== 'undefined' ?
+                    `<div class="spz-footer">
+						<div class="spz-footer-wrapper">
+							${FooterData.map(item => `
+								${item.copyrightcontent ? `<h6 class="spz-copyright">${item.copyrightcontent}</h6>` : ''}
+								<div class="footer-menu">
+									${item.footerlinks.map(link => `<div class="menu-item"><a href="${link.url}">${link.text}</a></div>`).join('')}
+								</div>
+							`).join('')}
+						</div>
+					</div>`
+                    : ``}
+				`;
+
+                var check_footer = setInterval(function () {
+                    if (document.querySelector(footerSelector) !== null) {
+                        clearInterval(check_footer);
+                        document.querySelector(footerSelector).insertAdjacentHTML(whereToPut, footerTemplate);
+                    }
+                }, 100);
+
+                // Check if the user has already submitted the form in this session
+                if (localStorage.getItem('formSubmitted')) {
+                    document.body.classList.add('repeat-user');
+                    const items = document.querySelectorAll('.progress-item');
+                    items.forEach((item, i) => {
+                        item.classList.remove('active'); // Remove default active class
+                        item.classList.add(i < items.length - 1 ? 'completed' : 'active');
+                    });
+                }
+
                 // Pre-check options for step 1 and step 2
                 ['Which-best-describes-you', 'How-we-can-help'].forEach(name => {
                     const savedValue = localStorage.getItem(name);
@@ -174,13 +276,14 @@ let bodyLoaded = setInterval(function () {
                         }
                     });
                 };
+
                 //Handle next question navigation and validation
-                window.addEventListener("click", function (e) {
-                    if (e.target.classList.contains("next-question")) {
+                document.querySelectorAll('.next-question').forEach((item, index) => {
+                    item.addEventListener('click', (e) => {
                         const stepContent = e.target.closest('.question-item').querySelector('.answers-wrap');
                         if (Array.from(stepContent.querySelectorAll('input')).some(checkbox => checkbox.checked)) {
-                            e.target.parentElement.classList.add('spz-hidden');
-                            e.target.parentElement.nextElementSibling.classList.remove('spz-hidden');
+                            item.parentElement.classList.add('spz-hidden');
+                            item.parentElement.nextElementSibling.classList.remove('spz-hidden');
                             const active = document.querySelector('.progress-item.active');
                             active.classList.replace('active', 'completed');
                             active.nextElementSibling.classList.add('active');
@@ -189,14 +292,15 @@ let bodyLoaded = setInterval(function () {
                         } else {
                             stepContent.classList.add('error');
                         }
-                    }
-                });
+                    })
+                })
 
                 // if (document.querySelector(formUniqueSelector)) {
                 const formLoaded = setInterval(() => {
                     if (document.querySelector(formUniqueSelector) && document.querySelectorAll(`${formUniqueSelector} input`).length > 0) {
                         clearInterval(formLoaded);
                         document.querySelector('.question-form').appendChild(document.querySelector(formUniqueSelector));
+                        console.log('form loaded');
                         formModify();
                         prefillSelectFields(); // Call prefill function initially in case fields are visible on load
                     }
@@ -204,23 +308,7 @@ let bodyLoaded = setInterval(function () {
                 // }
             }
 
-            function addLeadingLogo(LeadingLogoData) {
-                const LeadingLogoTemplate = `<div class="spz-Leading-Logos">
-                      <div class="spz-Leading-Logos-wrapper container">
-                          ${LeadingLogoData.map(item => `
-                              ${item.leadinglogosheading ? `<h5 class="spz-heading">${item.leadinglogosheading}</h5>` : ''}
-                              <div class="spz-logos">
-                                  ${item.leadinglogos.map(logo => logo.logo ? `<img src="${logo.logo}" class="answer-image" alt="${logo.logoalt}"/>` : '').join('')}
-                              </div>
-                          `).join('')}
-                      </div>
-                  </div>`;
-                //Append Leading Organizations Logo section
-                document.querySelector(heroSelector).insertAdjacentHTML(leadingLogoposition, LeadingLogoTemplate);
-                waitForElm(controlLogoSelector).then(function () {
-                    document.querySelector(controlLogoSelector).insertAdjacentHTML(leadingLogoposition, LeadingLogoTemplate);
-                });
-            }
+            addBaseline(heroContent, position, triageData, formUniqueSelector, heroSelector, LeadingLogoData, footerSelector, FooterData);
 
             function formModify() {
                 // Unwrap all child elemnts of mktoFormRow
@@ -332,21 +420,7 @@ let bodyLoaded = setInterval(function () {
                         localStorage.setItem('formSubmitted', 'true');
                     });
                 });
-            }
 
-            function waitForElm(selector) {
-                return new Promise(function (resolve) {
-                    if (document.querySelector(selector)) {
-                        return resolve(document.querySelector(selector));
-                    }
-                    const observer = new MutationObserver(function (mutations) {
-                        if (document.querySelector(selector)) {
-                            resolve(document.querySelector(selector));
-                            observer.disconnect();
-                        }
-                    });
-                    observer.observe(document, { attributes: true, childList: true, subtree: true, characterData: true });
-                });
             }
         }
     }
