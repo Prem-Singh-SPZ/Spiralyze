@@ -1113,8 +1113,8 @@
             // Responsive breakpoints
             breakpoints: {
                 320: {
-                    slidesPerView: 1.095,
-                    spaceBetween: 8
+                    slidesPerView: 1,
+                    spaceBetween: 32
                 },
                 768: {
                     slidesPerView: 1.218,
@@ -1159,7 +1159,7 @@
             // Responsive breakpoints
             breakpoints: {
                 320: {
-                    slidesPerView: 1.095,
+                    slidesPerView: 1,
                     spaceBetween: 8
                 },
                 768: {
