@@ -842,6 +842,8 @@
                 <div class="fc-title-container">
                     <div class="title-wrapper dis-flex">
                         <h3 class="large-title">Features & Capabilities For Fast and Reliable Audits</h3>
+                        <span class="swiper-btn-prev"></span>
+                        <span class="swiper-btn-next"></span>
                     </div>
                 </div>
                 <div class="fc-section-container">
@@ -1139,12 +1141,6 @@
                 el: ".swiper-pagination",
                 clickable: true,
             },
-
-            // If we need navigation
-            navigation: {
-                nextEl: ".swiper-btn-next",
-                prevEl: ".swiper-btn-prev"
-            },
         });
 
         const swiper2 = new Swiper(".feature-slider_14018", {
@@ -1167,12 +1163,16 @@
                     spaceBetween: 8
                 },
                 768: {
-                    slidesPerView: 1.6,
+                    slidesPerView: 1.532,
                     spaceBetween: 30
                 },
                 1025: {
                     spaceBetween: 32,
                     slidesPerView: 2.68
+                },
+                1600: {
+                    spaceBetween: 32,
+                    slidesPerView: 3.15
                 }
             },
 
