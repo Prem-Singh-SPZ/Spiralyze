@@ -47,38 +47,74 @@
     ];
 
     const featureCap = [
-        {
-            title: "Risk Assessments",
-            review: "Identify, assess, and monitor risks specific to your organization, systems, and frameworks.",
-        },
-        {
-            title: "Quick Start Onboarding ",
-            review: "Access 24/5 technical support and an ecosystem of partners that can expedite your onboarding.",
-        },
-        {
-            title: "User Access Review",
-            review: "Conduct user access reviews directly in Drata to increase security and save time.",
-        },
-        {
-            title: "Pre-Mapped Controls",
-            review: "Our pre-built SOC 2 framework comes with all the controls required for compliance. ",
-        },
-        {
-            title: "Security Training",
-            review: "Drata’s built-in security training allows you to automate tasks like sending reminders and documenting completion.",
-        },
-        {
-            title: "Audit Support",
-            review: "Get real-time assistance from a team of experts or dive into extensive help articles.",
-        },
-        {
-            title: "Policy Center",
-            review: "Streamline policy management for SOC 2 with 20+ customizable, auditor-approved policies.",
-        },
-        {
-            title: "Continuous Monitoring",
-            review: "Get non-stop peace of mind with daily tests that show your audit readiness. ",
-        }
+        one = [
+            {
+                title: "Risk Assessments",
+                review: "Identify, assess, and monitor risks specific to your organization, systems, and frameworks.",
+            },
+            {
+                title: "Quick Start Onboarding ",
+                review: "Access 24/5 technical support and an ecosystem of partners that can expedite your onboarding.",
+            },
+            {
+                title: "User Access Review",
+                review: "Conduct user access reviews directly in Drata to increase security and save time.",
+            },
+            {
+                title: "Pre-Mapped Controls",
+                review: "Our pre-built SOC 2 framework comes with all the controls required for compliance. ",
+            },
+            {
+                title: "Security Training",
+                review: "Drata’s built-in security training allows you to automate tasks like sending reminders and documenting completion.",
+            },
+            {
+                title: "Audit Support",
+                review: "Get real-time assistance from a team of experts or dive into extensive help articles.",
+            },
+            {
+                title: "Policy Center",
+                review: "Streamline policy management for SOC 2 with 20+ customizable, auditor-approved policies.",
+            },
+            {
+                title: "Continuous Monitoring",
+                review: "Get non-stop peace of mind with daily tests that show your audit readiness. ",
+            }
+        ],
+        two = [
+            {
+                title: "Policy Center",
+                review: "Streamline the creation, signing, and management of the policies needed for SOC 2 with customizable and auditor-approved templates.",
+            },
+            {
+                title: "Audit Hub",
+                review: "Streamline audits with one place for auditor comms, docs, and evidence requests.",
+            },
+            {
+                title: "Risk Management",
+                review: "With features like flagging and risk scoring, you can efficiently accept, mitigate, or avoid risks.",
+            },
+            {
+                title: "Continuous Monitoring",
+                review: "Drata's 24/7 continuous control monitoring ensures you stay SOC 2 compliant and gives you full visibility into your status.",
+            },
+            {
+                title: "Compliance Support",
+                review: "Get real-time assistance from a team of experts or dive into extensive help articles.",
+            },
+            {
+                title: "Role Based Access",
+                review: "Get complete control over access, visibility, and permissions in Drata.",
+            },
+            {
+                title: "Compliance as Code",
+                review: "Automatically identify and fix compliance and policy gaps as your developers build, for continuous compliance.",
+            },
+            {
+                title: "End-Point Monitoring",
+                review: "Automate evidence collection for endpoint detection and response compliance.",
+            }
+        ],
     ];
 
     //json for resource section where one tab has 4 cards under it and each card has different attqributes
@@ -228,31 +264,34 @@
         waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
             document.querySelector("body").classList.add("spz-14018");
 
-            let updatePage = setInterval(() => {
-                waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
-                    //check which variant is stored in session storage 
-                    if (sessionStorage.getItem('variant') === 'variant_1') {
-                        variant_1();
-                        waitForElm('.choose-variant-modal').then(function () {
-                            document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
-                        });
-                    } else if (sessionStorage.getItem('variant') === 'variant_2') {
-                        variant_2();
-                        waitForElm('.choose-variant-modal').then(function () {
-                            document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
-                        });
-                    }
-                    else {
-                        variant_1();
-                        landingModal();
-                    }
+            // let updatePage = setInterval(() => {
+            waitForElm('[variant="collectionContentGridSectionWrapper"]').then(function () {
+                //check which variant is stored in session storage 
+                if (sessionStorage.getItem('variant') === 'variant_1') {
+                    variant_1();
+                    waitForElm('.choose-variant-modal').then(function () {
+                        document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
+                    });
+                    document.body.classList.add('variant_1');
+                } else if (sessionStorage.getItem('variant') === 'variant_2') {
+                    variant_2();
+                    waitForElm('.choose-variant-modal').then(function () {
+                        document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
+                    });
+                    document.body.classList.add('variant_2');
+                }
+                else {
+                    variant_1();
+                    landingModal();
+                    document.body.classList.add('variant_1');
+                }
 
-                });
-            }, 10);
+            });
+            // }, 10);
 
-            setTimeout(() => {
-                clearInterval(updatePage);
-            }, 1000);
+            // setTimeout(() => {
+            //     clearInterval(updatePage);
+            // }, 1000);
             submitTestDetails('Variant_14018');
         });
 
@@ -295,6 +334,21 @@
         complianceFAQ_V1('.resources-section-14018');
     }
 
+    function variant_2() {
+        heroSection_V2('body header');
+        navBar_V1('.hero-section-14018');
+        caseStudies_V1('.navbar-section');
+        madeEasy_V2('.case-studies-section');
+        complianceChanges_V2('.made-easy-sec');
+        meetDrata_V1('.compliance-sec');
+        feature_cap_slider_V1('.meet-drata');
+        ourIntigrations_V1('.feature-cap-section-14018');
+        customerReviews_V1('.our-integrations-sec');
+        globalCTA_V1('.cr-section-14018');
+        resourceSection_V1('.demo-cta-section');
+        complianceFAQ_V1('.resources-section-14018');
+    }
+
     function heroSection_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('body .hero-section-14018').length == 0) {
@@ -319,12 +373,33 @@
                     </section>`);
             }
         });
+    }
 
-        setTimeout(() => {
-            if (document.querySelector('#hero-video')) {
-                document.querySelector('#hero-video').play();
+    function heroSection_V2(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('body .hero-section-14018').length == 0) {
+                document.querySelector(selector).insertAdjacentHTML("afterend", `<section class="hero-section-14018 spz-sec">
+                    <div class="hero-content dis-flex flex-wrap justify-content-between">
+                    <div class="hero-left-section">
+                    <h1 class="hc-title">Manage SOC 2 with <span class="hc-blue">80%</span> Less Time, Cost, and Hassle</h1>
+                    <div class="star-rating dis-flex align-items-center"><img src="${astUrl}/fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
+                    <img src="${astUrl}/fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
+                    <div class="list-grp-wrapper">
+                    <ul class="list-group">
+                    <li class="list-item"><strong>Automated Compliance</strong> - Hundreds of integrations collect, test, and store evidence for access reviews, personnel, devices, and more. </li>
+                    <li class="list-item"><strong>Fast, Frictionless Audit</strong> - Get compliant in weeks with clear visibility into your audit-readiness, ensuring no surprises.</li>
+                    <li class="list-item"><strong>All-In-One</strong> - Get started fast with our SOC 2 toolkit, complete with a pre-built framework, pre-mapped controls, and policy templates.</li>
+                    <li class="list-item"><strong>Enhanced Security</strong> - Automation ensures accurate compliance status updates and provides real-time alerts for failing controls or emerging risks.</li>
+                    </ul>
+                    </div>
+                    </div>
+                    <div class="hero-right-section">
+                        <img src="${astUrl}/f_auto/drata/14018/image_7.webp" class="hero-img" alt="New to SOC 2? We Got You.">
+                    </div>
+                    </div>
+                    </section>`);
             }
-        }, 1000);
+        });
     }
 
     function navBar_V1(selector) {
@@ -508,6 +583,45 @@
                         <div class="me-card active">
                             <div class="me-title">Why Compliance Automation?</div>
                             <div class="me-desc">Traditional compliance methods are slow and error-prone, often requiring hundreds of hours to map controls and compile evidence using screenshots and spreadsheets. Drata eliminates these manual tasks, saving time and reducing errors.</div>
+                        </div>
+                    </div>
+                    <div class="me-bottom-svg">
+                        <img src="${astUrl}fl_sanitize/drata/14018/arrow_2.svg" alt="Arrow">
+                    </div>
+                </div>
+            </section>`);
+            }
+        });
+    }
+
+    function madeEasy_V2(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.made-easy-sec').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec">
+            <div class="made-easy-container">
+                  <div class="me-top-bar dis-flex">
+                        <div class="me-left">
+                            <h2 class="me-title">Why Switch to Drata?</h2>
+                            <div class="me-subtitle">Hard work is overrated. See the difference between manual and automated compliance.</div>
+                        </div>
+                    </div>
+                    <div class="me-contents">
+                        <div class="me-card">
+                            <div class="me-title">Out With the Old</div>
+                            <div class="me-desc">Requires multiple tools to manage tasks</div>
+                            <div class="me-desc">Progress tracked manually in spreadsheets</div>
+                            <div class="me-desc">Lacks automated risk alerts</div>
+                            <div class="me-desc">Can’t keep up with growth or changing regulations</div>
+                            <div class="me-desc">Inefficiency adds labor and costs</div>
+                        </div>
+                        <div class="me-card active">
+                            <div class="me-title">In With the New</div>
+                            <div class="me-desc">Manage controls, evidence, policies, personnel, and more in one place</div>
+                            <div class="me-desc">Automated evidence collection via integrations</div>
+                            <div class="me-desc">Full visibility into compliance status with 24/7 monitoring</div>
+                            <div class="me-desc">Instant alerts for risks and gaps</div>
+                            <div class="me-desc">Adapts to business growth and industry changes</div>
+                            <div class="me-desc">Reduces costs by minimizing labor, rework, and penalties</div>
                         </div>
                     </div>
                     <div class="me-bottom-svg">
@@ -737,6 +851,96 @@
         });
     }
 
+    function complianceChanges_V2(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.compliance-sec').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact">
+            <div class="compliance-container">
+                <div class="c-title-container">
+                    <div class="c-title-container">
+                        <div class="c-eyebrow">How Drata Works</div>
+                        <h2 class="c-title">Create SOC 2 Programs, Not Projects</h2>
+                        <div class="c-desc">See how Drata simplifies the compliance process before, during, and after the audit.</div>
+                    </div>
+                    <div class="c-cta-wrapper">
+                            <a href="javascript:;" class="c-cta-btn demo-btn primary-blue-btn">Get a Demo ${ctaArrow}</a>
+                    </div>
+                </div>
+                <div class="c-content dis-flex">
+                    <div class="c-left">
+                        <div class="accordion-wrapper">
+                            <div class="accordion accordion_1">
+                                <div class="accordion-item open">
+                                    <div class="accordion-title">Accelerate Audit-Readiness</div>
+                                    <div class="accordion-content">Get everything you need to quickly prepare for an audit.
+                                    <ul class="accordion-list">
+                                        <li><span>Fast Implementation:</span> Use our auditor-approved SOC 2 template, complete with all necessary controls and requirements</li>
+                                        <li><span>Policy Management:</span> Use our policy library to distribute and track the completion of SOC 2-required policies</li>
+                                        <li><span>Automated Evidence Collection:</span> Connect your systems for automatic collection, testing, and storage of audit evidence, including personnel, devices, access reviews, and more</li>
+                                    </ul>
+                                    <div class="learn-more-cta"><a href="https://drata.com/platform/integrations" class="learn-more">Explore Integrations ${anchorArrow}</a></div>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Ace the Audit</div>
+                                    <div class="accordion-content">Ensure audit readiness and streamline the audit process with Drata.
+                                     <ul class="accordion-list">
+                                        <li><span>Progress Tracker:</span> Monitor your compliance status, missing requirements, and ensure audit-readiness in the Drata dashboard before your audit</li>
+                                        <li><span>Auditor Network:</span> Find a pre-vetted firm in Drata’s Auditor Alliance</li>
+                                        <li><span>Streamlined Audit:</span> Use Drata’s Audit Hub to simplify auditor communication and deliver compliance documents in auditor-preferred JSON format, saving time and ensuring no critical information is missed.</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                                <div class="accordion-item">
+                                    <div class="accordion-title">Build Beyond the Audit</div>
+                                    <div class="accordion-content">Maintain trust and security year-round and reap the benefits of continuous compliance with Drata.
+                                     <ul class="accordion-list">
+                                        <li><span>Continuous Compliance:</span> Drata’s 24/7 control monitoring keeps your compliance up-to-date and alerts you to any failing controls or emerging risks.</li>
+                                        <li><span>Compliance Reporting & Sharing:</span> Publish your compliance status and documents on Trust Center to reduce security reviews and speed up sales.</li>
+                                        <li><span>Scalable Platform:</span> With continuous compliance and controls that satisfy multiple frameworks, Drata keeps you ready for next year's audit and makes it easy to add new frameworks like ISO 27001, GDPR, and more.</li>
+                                    </ul>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="c-right">
+                        <div class="c-img">
+                            <picture>
+                                <source media="(min-width: 1024px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_desktop_2.webp" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_tablet_1.webp" type="image/webp">
+                                <img src="${astUrl}/f_auto/drata/28001/section_image_-_mobile_1.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
+                            </picture>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>`);
+            }
+        });
+
+        //write code for accordion functionality
+        waitForElm('.accordion_1').then(function () {
+            const accordion = document.querySelector('.accordion_1');
+            const items = accordion.querySelectorAll('.accordion-item');
+
+            items.forEach(item => {
+                item.addEventListener('click', () => {
+                    const isOpen = item.classList.contains('open');
+                    items.forEach(item => item.classList.remove('open'));
+                    if (!isOpen) {
+                        item.classList.add('open');
+                    }
+                    // else {
+                    //     item.classList.add('open');
+                    // }
+
+                    // updateImgHeight_V1();
+                });
+            });
+        });
+    }
+
     function updateImgHeight_V1() {
         //calculate height of .accordion-wrapper and set it to .accordion
         const accordionWrapper = document.querySelector('.accordion-wrapper');
@@ -751,12 +955,16 @@
             document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="meet-drata spz-sec" id="why-drata">
                 <div class="md-container">
-                <div class="md-title-container">
-                    <div class="md-eyebrow">Service & Support</div>
-                    <div class="md-title">Why Drata?</div>
-                    <div class="md-desc">Because it takes more than software to get SOC 2 compliant.</div>
-                    <div class="md-cta">
-                        <a href="javascript:;" class="md-cta-btn demo-btn primary-blue-btn">Get a Demo ${ctaArrow}</a>
+                    <div class="md-title-container">
+                        <div class="title-wrapper">
+                        <div class="md-eyebrow">Service & Support</div>
+                        <div class="md-title">Why Drata?</div>
+                        <div class="md-desc">Because it takes more than software to get SOC 2 compliant.</div>
+                    </div>
+                    <div class="md-cta-wrapper">
+                        <div class="md-cta">
+                            <a href="javascript:;" class="md-cta-btn demo-btn primary-blue-btn">Get a Demo ${ctaArrow}</a>
+                        </div>
                     </div>
                 </div>
                 <div class="md-content">
@@ -827,16 +1035,27 @@
             </section>`);
         }
         );
-
-        // If swiper is initialized, run initSlider_14018 function
-        if (typeof Swiper !== 'undefined') {
-            initSlider_14018_V1();
-        }
     }
 
     function feature_cap_slider_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.feature-cap-section-14018')) return;
+            //check the "variant" value in session storage and store it in a variable
+            let variant = sessionStorage.getItem('variant');
+            let getVariant;
+            if (!variant) {
+                getVariant = 0;
+            }
+            else {
+                if (variant == "variant_1") {
+                    getVariant = 0;
+                }
+                else {
+                    getVariant = 1;
+                }
+            }
+
+
             document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="feature-cap-section-14018 spz-sec">
                 <div class="fc-title-container">
@@ -851,7 +1070,7 @@
                         <div class="container slider-column">
                             <div class="swiper feature-slider_14018">
                                 <div class="swiper-wrapper">
-                                    ${createFeatureCards()}
+                                    ${createFeatureCards(getVariant)}
                                 </div>
                             </div>
                             <span class="swiper-btn-prev"></span>
@@ -862,21 +1081,31 @@
             </section>`);
         }
         );
-
-        // If swiper is initialized, run initSlider_14018 function
-        if (typeof Swiper !== 'undefined') {
-            initSlider_14018_V1();
-        }
     }
 
     function ourIntigrations_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.our-integrations-sec')) return;
+
+            let variant = sessionStorage.getItem('variant');
+            let title = 'Our Integrations Power Automation';
+            let subTitle = 'SOC 2 requires evidence from your systems to prove their data security. We integrate with those systems to automatically collect and store that evidence to ensure compliance and audit readiness.';
+            if (!variant) {
+            }
+            else {
+                if (variant == "variant_1") {
+                }
+                else {
+                    title = 'More Integrations. More Evidence. <br>A Lot Less Work. ';
+                    subTitle = 'Ditch the spreadsheets and screenshots. With hundreds of native integrations, Drata collects compliance evidence for you.';
+                }
+            }
+
             document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="our-integrations-sec spz-sec">
         <div class="oi-title-container dis-flex">
             <div class="title-wrapper">
-                <div class="oi-title">Our Integrations Power Automation</div>
-                <p class="oi-desc">SOC 2 requires evidence from your systems to prove their data security. We integrate with those systems to automatically collect and store that evidence to ensure compliance and audit readiness.</p>
+                <div class="oi-title">${title}</div>
+                <p class="oi-desc">${subTitle}</p>
             </div>
             <div class="oi-cta">
                 <a href="https://drata.com/platform/integrations" class="oi-cta-btn primary-blue-btn">Explore Integrations ${ctaArrow}</a>
@@ -929,6 +1158,19 @@
     function globalCTA_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.demo-cta-section')) return;
+
+            let variant = sessionStorage.getItem('variant');
+            let title = 'Start Your SOC 2 Journey Today';
+            if (!variant) {
+            }
+            else {
+                if (variant == "variant_1") {
+                }
+                else {
+                    title = 'Upgrade Your SOC 2 Process Today';
+                }
+            }
+
             document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
             <div class="demo-cta-container">
                 <div class="sticker-wrapper">
@@ -938,7 +1180,7 @@
                     </div>
                     <div class="sticker-desc"><span>Excellent</span> based on <span>700+</span> reviews</div>
                 </div>
-                <div class="cta-desc">Start Your SOC 2 Journey Today</div>
+                <div class="cta-desc">${title}</div>
                 <div class="cta-wrapper">
                     <a href="javascript:void()" class="demo-btn cta-btn primary-blue-btn">Get Demo</a>
                     <a href="https://drata.com/plans" class="price-btn">How We Price</a>
@@ -1097,94 +1339,103 @@
 
     // Initialize slider
     function initSlider_14018_V1() {
-        const swiper = new Swiper(".swiper-slider_14018", {
-            // Optional parameters
-            centeredSlides: true,
-            spaceBetween: 32,
-            slidesPerView: 1.35,
-            freeMode: false,
-            loop: true,
-            // autoHeight: true,
-            mousewheel: false,
-            keyboard: {
-                enabled: true
-            },
-
-            // Responsive breakpoints
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.088,
-                    spaceBetween: 32
+        waitForElm('.swiper-slider_14018').then(function () {
+            const swiper = new Swiper(".swiper-slider_14018", {
+                // Optional parameters
+                centeredSlides: true,
+                spaceBetween: 32,
+                slidesPerView: 1.35,
+                freeMode: false,
+                loop: true,
+                autoHeight: true,
+                mousewheel: false,
+                keyboard: {
+                    enabled: true
                 },
-                768: {
-                    slidesPerView: 1.218,
-                    spaceBetween: 32
-                },
-                1025: {
-                    spaceBetween: 32,
-                    slidesPerView: 1.355
-                },
-                1500: {
-                    spaceBetween: 32,
-                    slidesPerView: "auto"
-                }
-            },
 
-            // Enabled autoplay mode
-            // autoplay: {
-            //     delay: 3000,
-            //     disableOnInteraction: false
-            // },
+                // Responsive breakpoints
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.088,
+                        spaceBetween: 32
+                    },
+                    768: {
+                        slidesPerView: 1.218,
+                        spaceBetween: 32
+                    },
+                    1025: {
+                        spaceBetween: 32,
+                        slidesPerView: 1.355
+                    },
+                    1500: {
+                        spaceBetween: 32,
+                        slidesPerView: "auto"
+                    }
+                },
 
-            // If we need pagination
-            pagination: {
-                el: ".swiper-pagination",
-                clickable: true,
-            },
+                // Enabled autoplay mode
+                // autoplay: {
+                //     delay: 3000,
+                //     disableOnInteraction: false
+                // },
+
+                // If we need pagination
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
         });
 
-        const swiper2 = new Swiper(".feature-slider_14018", {
-            // Optional parameters
-            // centeredSlides: true,
-            spaceBetween: 32,
-            slidesPerView: 2.5,
-            freeMode: false,
-            loop: true,
-            autoHeight: true,
-            mousewheel: false,
-            keyboard: {
-                enabled: true
-            },
+        waitForElm('.feature-slider_14018').then(function () {
+            const swiper2 = new Swiper(".feature-slider_14018", {
+                // Optional parameters
+                // centeredSlides: true,
+                spaceBetween: 32,
+                slidesPerView: 2.5,
+                freeMode: false,
+                loop: true,
+                // autoHeight: true,
+                mousewheel: false,
+                keyboard: {
+                    enabled: true
+                },
 
-            // Responsive breakpoints
-            breakpoints: {
-                320: {
-                    slidesPerView: 1.05,
-                    spaceBetween: 16
+                // Responsive breakpoints
+                breakpoints: {
+                    320: {
+                        slidesPerView: 1.05,
+                        spaceBetween: 16
+                    },
+                    768: {
+                        slidesPerView: 1.532,
+                        spaceBetween: 30
+                    },
+                    1025: {
+                        spaceBetween: 32,
+                        slidesPerView: 2.68
+                    },
+                    1600: {
+                        spaceBetween: 32,
+                        slidesPerView: 3.15
+                    }
                 },
-                768: {
-                    slidesPerView: 1.532,
-                    spaceBetween: 30
-                },
-                1025: {
-                    spaceBetween: 32,
-                    slidesPerView: 2.68
-                },
-                1600: {
-                    spaceBetween: 32,
-                    slidesPerView: 3.15
-                }
-            },
 
-            // If we need navigation
-            navigation: {
-                nextEl: ".swiper-btn-next",
-                prevEl: ".swiper-btn-prev"
-            },
+                // If we need navigation
+                navigation: {
+                    nextEl: ".swiper-btn-next",
+                    prevEl: ".swiper-btn-prev"
+                },
+            });
+
+            //assign this as margin left to .slider-section
+            let callForLeftAlign = setInterval(() => {
+                leftAlignedSlider();
+            }, 100);
+            setTimeout(() => {
+                clearInterval(callForLeftAlign);
+            }, 2000);
         });
-
-        //assign this as margin left to .slider-section
-        leftAlignedSlider();
     }
 
     function leftAlignedSlider() {
@@ -1228,9 +1479,9 @@
     }
 
     // Create feature section from JSON data
-    function createFeatureCards() {
+    function createFeatureCards(param) {
         let featuresHTML = '';
-        featureCap.forEach(feature => {
+        featureCap[param].forEach(feature => {
             featuresHTML += `
                 <div class="swiper-slide">
                     <div class="slider-card">
@@ -1274,22 +1525,16 @@
 
         if (e.target.classList.contains('variant_1')) {
             this.document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
-
             //store this selection for the whole session
             sessionStorage.setItem('variant', 'variant_1');
-            if (document.querySelector('.md-video-wr video#gify-video')) {
-                document.querySelector('.md-video-wr video#gify-video').play();
-            }
         }
 
         if (e.target.classList.contains('variant_2')) {
             this.document.querySelector('.choose-variant-modal').classList.add('spz-hidden');
-
             //store this selection for the whole session
             sessionStorage.setItem('variant', 'variant_2');
-            if (document.querySelector('.md-video-wr video#gify-video')) {
-                document.querySelector('.md-video-wr video#gify-video').play();
-            }
+            //reload the page
+            location.reload();
         }
     });
 
