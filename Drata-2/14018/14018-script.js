@@ -988,6 +988,18 @@
     function meetDrata_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.meet-drata')) return;
+            let variant = sessionStorage.getItem('variant');
+            let subTitle = 'Because it takes more than software to get SOC 2 compliant.';
+            if (!variant) {
+            }
+            else {
+                if (variant == "variant_1") {
+                }
+                else {
+                    subTitle = 'Because it takes more than software to maintain SOC 2 compliance.';
+                }
+            }
+            
             document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="meet-drata spz-sec" id="why-drata">
                 <div class="md-container">
@@ -995,7 +1007,7 @@
                         <div class="title-wrapper">
                         <div class="md-eyebrow">Service & Support</div>
                         <div class="md-title">Why Drata?</div>
-                        <div class="md-desc">Because it takes more than software to get SOC 2 compliant.</div>
+                        <div class="md-desc">${subTitle}</div>
                     </div>
                     <div class="md-cta-wrapper">
                         <div class="md-cta">

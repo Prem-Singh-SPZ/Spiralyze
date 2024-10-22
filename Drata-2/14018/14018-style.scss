@@ -4067,6 +4067,11 @@ body.spz-14018 {
       .hero-content {
         padding-top: 16px;
         padding-bottom: 62px;
+
+        @media screen and (min-width: 1600.98px) {
+          padding-top: 42px;
+        }
+
         .hero-left-section {
           max-width: 586px;
           .hc-title {
@@ -4202,7 +4207,7 @@ body.spz-14018 {
                         position: relative;
                         margin-bottom: 12px;
 
-                        span{
+                        span {
                           font-weight: 700;
                         }
 
@@ -4226,6 +4231,38 @@ body.spz-14018 {
           }
         }
       }
+    }
+
+    .meet-drata {
+      padding: 97px 24px 96px;
+
+      .md-container {
+        .md-title-container {
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          .md-eyebrow {
+            text-align: left;
+          }
+
+          .md-title {
+            text-align: left;
+          }
+          .md-desc {
+            text-align: left;
+          }
+        }
+
+        .md-cta-wrapper{
+          .md-cta{
+            margin: 0;
+          }
+        }
+      }
+    }
+
+    .cr-section-14018{
+      padding: 95.5px 0 47.5px;
     }
   }
 }
