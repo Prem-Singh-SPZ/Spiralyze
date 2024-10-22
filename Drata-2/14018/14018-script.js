@@ -1456,10 +1456,10 @@
                         spaceBetween: 16
                     },
                     768: {
-                        slidesPerView: 1.532,
+                        slidesPerView: 1.4728,
                         spaceBetween: 30
                     },
-                    1025: {
+                    1200: {
                         spaceBetween: 32,
                         slidesPerView: 2.58
                     },

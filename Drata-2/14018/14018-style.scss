@@ -2674,6 +2674,11 @@ body.spz-14018 {
                   font-weight: 500;
                   line-height: 26px;
                   margin: 0;
+                  display: -webkit-box;
+                  -webkit-line-clamp: 3;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
 
                   @media (max-width: 767.98px) {
                     font-size: 16px;
@@ -2811,16 +2816,18 @@ body.spz-14018 {
       .oi-cards {
         display: flex;
         flex-wrap: wrap;
-        justify-content: space-between;
-        gap: 0 8px;
+        justify-content: center;
+        gap: 0 32px;
         margin-top: 16px;
 
         @media (max-width: 1024.98px) {
           margin-top: 27px;
+          gap: 0 28px;
         }
 
         @media (max-width: 767.98px) {
           margin-top: 32px;
+          gap: 0 16px;
         }
 
         .oi-img {
@@ -3318,7 +3325,7 @@ body.spz-14018 {
           font-size: 32px;
           line-height: 40px;
           letter-spacing: -0.64px;
-          max-width: 508px;
+          // max-width: 508px;
           margin: 0 auto 24px;
         }
 
@@ -3902,7 +3909,7 @@ body.spz-14018 {
     background: #0c131a;
 
     @media (max-width: 1024.98px) {
-      padding: 64px 16px 49px;
+      padding: 64px 16px;
     }
 
     @media (max-width: 767.98px) {
@@ -3916,9 +3923,21 @@ body.spz-14018 {
       .st-content {
         justify-content: space-between;
 
+        @media (max-width: 1024.98px) {
+          flex-direction: column;
+          align-items: center;
+        }
+
         .st-left-copy {
           max-width: 557px;
-          flex: 0 0 50%;
+          width: 100%;
+          margin-right: 24px;
+
+          @media (max-width: 1024.98px) {
+            max-width: 100%;
+            margin-right: 0;
+            text-align: center;
+          }
 
           .st-eyebrow {
             color: #0580e8;
@@ -3930,9 +3949,9 @@ body.spz-14018 {
             margin: 0 0 15px;
 
             @media (max-width: 1199.98px) {
-              text-align: center;
               font-size: 14px;
               line-height: 20px;
+              margin: 0 0 13px;
             }
           }
 
@@ -3947,10 +3966,11 @@ body.spz-14018 {
             margin: 0 0 29px;
 
             @media (max-width: 1199.98px) {
-              text-align: center;
               font-size: 32px;
               line-height: 40px;
               letter-spacing: -0.64px;
+              max-width: 557px;
+              margin: 0 auto 32px;
             }
 
             @media (max-width: 767.98px) {
@@ -3961,6 +3981,10 @@ body.spz-14018 {
           }
 
           .st-cta-wrapper {
+            @media (max-width: 1024.98px) {
+              max-width: 100%;
+              text-align: center;
+            }
             .cus-story-btn {
               display: flex;
               width: 223.4px;
@@ -3988,6 +4012,10 @@ body.spz-14018 {
                 background: rgba(255, 255, 255, 0.1);
               }
 
+              @media (max-width: 1024.98px) {
+                margin: auto;
+              }
+
               @media (max-width: 767.98px) {
                 width: 100%;
               }
@@ -3997,12 +4025,17 @@ body.spz-14018 {
 
         .st-right-testimonial-card {
           max-width: 590px;
-          flex: 0 0 50%;
+          width: 100%;
           display: flex;
           flex-direction: column;
 
+          @media (max-width: 1024.98px) {
+            max-width: 100%;
+            margin-top: 23px;
+          }
+
           .st-testimonial-card {
-            width: 590px;
+            width: 100%;
             padding: 31.5px 32px;
             border-radius: 16px;
             border: 1px solid rgba(255, 255, 255, 0.16);
@@ -4065,15 +4098,19 @@ body.spz-14018 {
   &.variant_2 {
     .hero-section-14018 {
       .hero-content {
-        padding-top: 16px;
-        padding-bottom: 62px;
+        @media screen and (min-width: 1199.98px) {
+          padding-top: 16px;
+          padding-bottom: 62px;
+        }
 
         @media screen and (min-width: 1600.98px) {
           padding-top: 42px;
         }
 
         .hero-left-section {
-          max-width: 586px;
+          @media screen and (min-width: 1199.98px) {
+            max-width: 586px;
+          }
           .hc-title {
             font-size: 54px;
             font-weight: 900;
@@ -4095,11 +4132,17 @@ body.spz-14018 {
 
         .hero-right-section {
           margin-top: 49px;
+          @media screen and (max-width: 1199.98px) {
+            margin-top: 20px;
+          }
         }
       }
     }
 
     .made-easy-sec {
+      @media (max-width: 1024.98px) {
+        padding: 65px 16px 0;
+      }
       .made-easy-container {
         .me-top-bar {
           justify-content: center;
@@ -4107,10 +4150,17 @@ body.spz-14018 {
             .me-title {
               text-align: center;
             }
+
+            .me-subtitle {
+              text-align: center;
+            }
           }
         }
 
         .me-contents {
+          @media (min-width: 767.98px) {
+            flex-direction: row;
+          }
           .me-card {
             .me-desc {
               font-size: 18px;
@@ -4134,8 +4184,13 @@ body.spz-14018 {
         }
 
         .me-bottom-svg {
+          @media (max-width: 1024.98px) {
+            margin-top: 29px;
+          }
           img {
-            margin-left: -34px;
+            @media (min-width: 1199.98px) {
+              margin-left: -34px;
+            }
           }
         }
       }
@@ -4149,16 +4204,32 @@ body.spz-14018 {
           align-items: center;
           margin-bottom: 47px;
 
+          @media (max-width: 1024.98px) {
+            flex-direction: column;
+          }
+
           .c-title-container {
             margin-right: 24px;
             margin-bottom: 0;
 
+            @media (max-width: 1024.98px) {
+              margin-right: 0;
+            }
+
             .c-eyebrow {
               margin: 0 0 11px;
+
+              @media (max-width: 1024.98px) {
+                margin: 0 0 17px;
+              }
             }
             .c-title {
               max-width: 100%;
               margin: 0 0 21px;
+
+              @media (max-width: 1024.98px) {
+                margin: 0 0 19px;
+              }
             }
             .c-desc {
               max-width: 100%;
@@ -4180,6 +4251,9 @@ body.spz-14018 {
 
         .c-content {
           .c-left {
+            @media (max-width: 1024.98px) {
+              margin: 0 0 35px;
+            }
             .accordion-wrapper {
               .accordion {
                 .accordion-item {
@@ -4236,33 +4310,63 @@ body.spz-14018 {
     .meet-drata {
       padding: 97px 24px 96px;
 
+      @media screen and (max-width: 1024.98px) {
+        padding: 64px 16px 64px;
+      }
+
       .md-container {
         .md-title-container {
           display: flex;
           justify-content: space-between;
           align-items: center;
+
+          @media screen and (max-width: 1024.98px) {
+            flex-direction: column;
+          }
+
           .md-eyebrow {
             text-align: left;
+
+            @media screen and (max-width: 1024.98px) {
+              text-align: center;
+            }
           }
 
           .md-title {
             text-align: left;
+
+            @media screen and (max-width: 1024.98px) {
+              text-align: center;
+            }
           }
           .md-desc {
             text-align: left;
+
+            @media screen and (max-width: 1024.98px) {
+              text-align: center;
+            }
+          }
+
+          .md-cta-wrapper {
+            @media screen and (max-width: 1024.98px) {
+              margin-top: 48px;
+            }
           }
         }
 
-        .md-cta-wrapper{
-          .md-cta{
+        .md-cta-wrapper {
+          .md-cta {
             margin: 0;
           }
         }
       }
     }
 
-    .cr-section-14018{
-      padding: 95.5px 0 47.5px;
+    .cr-section-14018 {
+      @media screen and (min-width: 1024.98px) {
+        
+        padding: 95.5px 0 47.5px;
+      }
     }
   }
 }
