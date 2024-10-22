@@ -2749,11 +2749,6 @@ body.spz-14018 {
 
       .title-wrapper {
         max-width: 870px;
-        margin-right: 24px;
-
-        @media screen and (max-width: 767.98px) {
-        margin-right: 0;
-        }
 
         .oi-title {
           color: #0c131a;
@@ -4251,6 +4246,9 @@ body.spz-14018 {
     }
 
     .compliance-sec {
+      @media (min-width: 1024.98px) {
+        padding: 96px 24px 84px;
+      }
       .compliance-container {
         .c-title-wrapper {
           display: flex;
