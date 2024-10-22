@@ -340,7 +340,8 @@
         caseStudies_V1('.navbar-section');
         madeEasy_V2('.case-studies-section');
         complianceChanges_V2('.made-easy-sec');
-        meetDrata_V1('.compliance-sec');
+        singleTestimonial_V2('.compliance-sec');
+        meetDrata_V1('.single-testimonial-sec');
         feature_cap_slider_V1('.meet-drata');
         ourIntigrations_V1('.feature-cap-section-14018');
         customerReviews_V1('.our-integrations-sec');
@@ -856,14 +857,14 @@
             if (document.querySelectorAll('.compliance-sec').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact">
             <div class="compliance-container">
-                <div class="c-title-container">
+                <div class="c-title-wrapper">
                     <div class="c-title-container">
                         <div class="c-eyebrow">How Drata Works</div>
                         <h2 class="c-title">Create SOC 2 Programs, Not Projects</h2>
                         <div class="c-desc">See how Drata simplifies the compliance process before, during, and after the audit.</div>
                     </div>
                     <div class="c-cta-wrapper">
-                            <a href="javascript:;" class="c-cta-btn demo-btn primary-blue-btn">Get a Demo ${ctaArrow}</a>
+                            <a href="javascript:;" class="c-cta-btn demo-btn primary-blue-btn">Get Demo ${ctaArrow}</a>
                     </div>
                 </div>
                 <div class="c-content dis-flex">
@@ -947,6 +948,41 @@
         const accordionImg = document.querySelector('.c-right .c-img img');
         const accordionHeight = accordionWrapper.offsetHeight + 2;
         accordionImg.style.height = accordionHeight + 'px';
+    }
+
+    function singleTestimonial_V2(selector) {
+        waitForElm(selector).then(function () {
+            if (document.querySelectorAll('.single-testimonial-sec').length === 0) {
+                document.querySelector(selector).insertAdjacentHTML('afterend', `
+                    <section class="single-testimonial-sec spz-sec">
+                        <div class="st-container">
+                            <div class="st-content dis-flex">
+                                <div class="st-left-copy">
+                                    <div class="st-eyebrow">Drata Wins</div>
+                                    <div class="st-title">How Drata Saved 6 Months of Work with Automation</div>
+                                    <div class="st-cta-wrapper">
+                                        <a href="https://drata.com/customers/policydock" class="st-cta cus-story-btn">Read Customer Story</a>
+                                    </div>
+                                </div>
+                                <div class="st-right-testimonial-card">
+                                    <div class="st-testimonial-card">
+                                        <div class="st-t-copy">"Using Drata has effectively saved us six months in the SOC 2 audit process, which is huge for a team that’s trying to ship new features all the time."</div>
+                                        <div class="st-t-footer">
+                                            <div class="st-t-img">
+                                                <img src="${astUrl}/f_auto/drata/14018/image_156.webp" alt="Patrick De La Garza">
+                                            </div>
+                                            <div class="st-t-details">
+                                                <p class="st-t-name">Patrick De La Garza</p>
+                                                <p class="st-t-role">VP Engineering, PolicyDock</p>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section>`);
+            }
+        });
     }
 
     function meetDrata_V1(selector) {
@@ -1413,11 +1449,11 @@
                     },
                     1025: {
                         spaceBetween: 32,
-                        slidesPerView: 2.68
+                        slidesPerView: 2.58
                     },
-                    1600: {
+                    1900: {
                         spaceBetween: 32,
-                        slidesPerView: 3.15
+                        slidesPerView: 3.03
                     }
                 },
 
