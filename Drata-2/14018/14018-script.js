@@ -138,13 +138,13 @@
                     title: "Learn About the Cost of Non-Compliance",
                     desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
                     img: astUrl + "/f_auto/drata/14018/6.webp",
-                    link: "https://drata.com/product/soc-2"
+                    link: "https://drata.com/grc-central/soc-2"
                 },
                 {
                     title: "SOC 2 Audits: What You Can Expect from Start to Finish",
                     desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
                     img: astUrl + "/f_auto/drata/14018/7.webp",
-                    link: "https://drata.com/grc-central/soc-2"
+                    link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
                 }
             ]
         },
@@ -1396,7 +1396,6 @@
     // Initialize slider
     function initSlider_14018_V1() {
         waitForElm('.swiper-slider_14018').then(function () {
-            console.log('slider init');
             const swiper = new Swiper(".swiper-slider_14018", {
                 // Optional parameters
                 centeredSlides: true,
