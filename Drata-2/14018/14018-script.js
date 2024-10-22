@@ -10,18 +10,18 @@
     // Convert customer reviews section to dynamic JSON data
     const custReviews = [
         {
-            name: "Jonathan Jaffe,",
-            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003434.svg",
-            title: "CISO",
-            review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
-            link: "https://drata.com/product/iso-27001"
-        },
-        {
             name: "David Caughill,",
             companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003436.webp",
             title: "DevOps Engineer",
             review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
             link: "https://drata.com/product/soc-2"
+        },
+        {
+            name: "Jonathan Jaffe,",
+            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003434.svg",
+            title: "CISO",
+            review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
+            link: "https://drata.com/product/iso-27001"
         },
         {
             name: "Chris Bake,",
@@ -256,7 +256,7 @@
     }
 
     appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
-        initSlider_14018_V1();
+        // initSlider_14018_V1();
     });
 
 
@@ -545,7 +545,7 @@
                     if (window.innerWidth < 767) {
                         // Auto scroll to right slowly
                         const stopInt = setInterval(() => {
-                            if (!document.querySelector('.cs-overflow').classList.contains('stop-scroll')) {
+                            if (document.querySelector('.cs-overflow') && !document.querySelector('.cs-overflow').classList.contains('stop-scroll')) {
                                 document.querySelector('.cs-overflow').scrollLeft += 1.2;
                             }
                         }, 50);
@@ -999,7 +999,7 @@
                     subTitle = 'Because it takes more than software to maintain SOC 2 compliance.';
                 }
             }
-            
+
             document.querySelector(selector).insertAdjacentHTML('afterend', `
             <section class="meet-drata spz-sec" id="why-drata">
                 <div class="md-container">
@@ -1127,6 +1127,14 @@
                     </div>
                 </div>
             </section>`);
+
+            //interval to check if Swiper is loaded
+            let interval = setInterval(() => {
+                if (Swiper !== undefined && !document.querySelector('.feature-slider_14018').classList.contains('swiper-initialized')) {
+                    initSlider_14018_V1();
+                    clearInterval(interval);
+                }
+            }, 100);
         }
         );
     }
@@ -1388,6 +1396,7 @@
     // Initialize slider
     function initSlider_14018_V1() {
         waitForElm('.swiper-slider_14018').then(function () {
+            console.log('slider init');
             const swiper = new Swiper(".swiper-slider_14018", {
                 // Optional parameters
                 centeredSlides: true,

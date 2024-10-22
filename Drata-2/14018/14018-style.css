@@ -967,7 +967,7 @@ body.spz-14018 .navbar-section {
   padding: 16px 24px;
   position: sticky;
   top: 0;
-  z-index: 9;
+  z-index: 99;
 }
 @media (max-width: 1024.98px) {
   body.spz-14018 .navbar-section {
@@ -2701,6 +2701,12 @@ body.spz-14018 .our-integrations-sec .oi-title-container {
 }
 body.spz-14018 .our-integrations-sec .oi-title-container .title-wrapper {
   max-width: 870px;
+  margin-right: 24px;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-14018 .our-integrations-sec .oi-title-container .title-wrapper {
+    margin-right: 0;
+  }
 }
 body.spz-14018 .our-integrations-sec .oi-title-container .title-wrapper .oi-title {
   color: #0c131a;
@@ -4200,6 +4206,12 @@ body.spz-14018.variant_2 .made-easy-sec .made-easy-container .me-top-bar {
     text-align: center;
   }
 }
+@media (min-width: 767.98px) {
+  body.spz-14018.variant_2 .made-easy-sec .made-easy-container .me-top-bar .me-left .me-title .me-title,
+  body.spz-14018.variant_2 .made-easy-sec .made-easy-container .me-top-bar .me-left .me-subtitle .me-title {
+    margin: 0 0 11px;
+  }
+}
 @media (max-width: 767.98px) {
   body.spz-14018.variant_2 .made-easy-sec .made-easy-container .me-contents {
     gap: 31px;
@@ -4436,8 +4448,18 @@ body.spz-14018.variant_2 .meet-drata .md-container .md-cta-wrapper .md-cta {
     padding: 95.5px 0 47.5px;
   }
 }
+@media screen and (max-width: 767.98px) {
+  body.spz-14018.variant_2 .cr-section-14018 {
+    padding: 64px 0 48.5px;
+  }
+}
 @media (max-width: 767.98px) {
   body.spz-14018.variant_2 .feature-cap-section-14018 {
-    padding: 63px 0 93px;
+    padding: 63px 0 95px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-14018.variant_2 .resources-section-14018 {
+    padding: 64px 0 32px;
   }
 }

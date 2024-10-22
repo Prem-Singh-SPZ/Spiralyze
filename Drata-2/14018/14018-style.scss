@@ -984,7 +984,7 @@ body.spz-14018 {
     padding: 16px 24px;
     position: sticky;
     top: 0;
-    z-index: 9;
+    z-index: 99;
 
     @media (max-width: 1024.98px) {
       padding: 32px;
@@ -2749,6 +2749,12 @@ body.spz-14018 {
 
       .title-wrapper {
         max-width: 870px;
+        margin-right: 24px;
+
+        @media screen and (max-width: 767.98px) {
+        margin-right: 0;
+        }
+
         .oi-title {
           color: #0c131a;
           font-family: $ff-inter;
@@ -4188,6 +4194,12 @@ body.spz-14018 {
               @media (min-width: 767.98px) {
                 text-align: center;
               }
+
+              .me-title{
+                @media (min-width: 767.98px) {
+                  margin: 0 0 11px;
+                }
+              }
             }
           }
         }
@@ -4428,11 +4440,21 @@ body.spz-14018 {
       @media screen and (min-width: 1024.98px) {
         padding: 95.5px 0 47.5px;
       }
+
+      @media screen and (max-width: 767.98px) {
+        padding: 64px 0 48.5px;
+      }
     }
 
     .feature-cap-section-14018{
       @media (max-width: 767.98px) {
-        padding: 63px 0 93px;
+        padding: 63px 0 95px;
+      }
+    }
+
+    .resources-section-14018{
+      @media (max-width: 767.98px) {
+        padding: 64px 0 32px;
       }
     }
   }
