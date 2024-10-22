@@ -1144,7 +1144,7 @@
                 if (variant == "variant_1") {
                 }
                 else {
-                    title = 'More Integrations. More Evidence. <br>A Lot Less Work. ';
+                    title = 'More Integrations. More Evidence. <br class="desk-only">A Lot Less Work. ';
                     subTitle = 'Ditch the spreadsheets and screenshots. With hundreds of native integrations, Drata collects compliance evidence for you.';
                 }
             }
@@ -1443,7 +1443,7 @@
                 slidesPerView: 2.5,
                 freeMode: false,
                 loop: true,
-                // autoHeight: true,
+                autoHeight: true,
                 mousewheel: false,
                 keyboard: {
                     enabled: true
