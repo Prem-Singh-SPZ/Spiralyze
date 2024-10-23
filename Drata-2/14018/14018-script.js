@@ -1771,5 +1771,5 @@
     }
 
     //append the images in head tag
-    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" as="image" href="${astUrl}v1729060487/drata/14018/close-hover.svg">`);
+    document.head.insertAdjacentHTML('beforeend', `<link rel="preload" as="image" href="${astUrl}v1729060487/drata/14018/close-hover.svg"><link rel="preload" as="image" href="${astUrl}fl_sanitize/drata/14018/arrow_hovered.svg"><link rel="preload" as="image" href="${astUrl}fl_sanitize/drata/28001/icon_navigation_10.svg"><link rel="preload" as="image" href="${astUrl}f_auto/drata/28001/icon_navigation_04_webp.webp"><link rel="preload" as="image" href="${astUrl}f_auto/drata/28001/icon_navigation_03_webp.webp">`);
 })();
