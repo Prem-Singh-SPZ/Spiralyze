@@ -14,35 +14,35 @@
             companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003436.webp",
             title: "DevOps Engineer",
             review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
-            link: "https://drata.com/product/soc-2"
+            link: "https://drata.com/customers"
         },
         {
             name: "Jonathan Jaffe,",
             companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003434.svg",
             title: "CISO",
             review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
-            link: "https://drata.com/product/iso-27001"
+            link: "https://drata.com/customers/lemonade"
         },
         {
             name: "Chris Bake,",
             companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003435.svg",
             title: "CTO",
-            review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we’re pursuing SOC 2 compliance!”",
-            link: "https://drata.com/product/pci-dss"
+            review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we&#8217;re pursuing SOC 2 compliance!”",
+            link: "https://drata.com/customers/apl-nexted"
         },
         {
             name: "Joshua Peskay,",
             companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003437.webp",
             title: "vCIO",
             review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
-            link: "https://drata.com/product/hipaa"
+            link: "https://drata.com/customers"
         },
         {
             name: "Lola Kureno,",
             companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003433.svg",
             title: "Cyber Security Engineer",
             review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
-            link: "https://drata.com/product/hipaa"
+            link: "https://drata.com/customers"
         }
     ];
 
@@ -66,7 +66,7 @@
             },
             {
                 title: "Security Training",
-                review: "Drata’s built-in security training allows you to automate tasks like sending reminders and documenting completion.",
+                review: "Drata&#8217;s built-in security training allows you to automate tasks like sending reminders and documenting completion.",
             },
             {
                 title: "Audit Support",
@@ -153,13 +153,13 @@
             cards: [
                 {
                     title: "SANS Audit Hub First Look with Howard Carter",
-                    desc: "See How Drata’s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
+                    desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
                     img: astUrl + "/f_auto/drata/14018/9.webp",
                     link: "https://drata.com/platform/startup"
                 },
                 {
                     title: "3 Reasons Why Startups Need SOC 2",
-                    desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup’s long-term trajectory.",
+                    desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
                     img: astUrl + "/f_auto/drata/14018/10.webp",
                     link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
                 },
@@ -200,7 +200,7 @@
                 },
                 {
                     title: "Calculating and Communicating Cybersecurity ROI",
-                    desc: "Security improvements get approved faster when CISOs speak the board’s language. Here’s everything you need to know about cybersecurity ROI.",
+                    desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
                     img: astUrl + "/f_auto/drata/14018/16.webp",
                     link: "https://drata.com/blog/cybersecurity-roi"
                 }
@@ -228,8 +228,8 @@
                     link: "https://drata.com/customers/third-risk"
                 },
                 {
-                    title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata’s Compliance Automation",
-                    desc: "Calendly’s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
+                    title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata&#8217;s Compliance Automation",
+                    desc: "Calendly&#8217;s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
                     img: astUrl + "/f_auto/drata/14018/1_1.webp",
                     link: "https://drata.com/customers/calendly"
                 }
@@ -255,9 +255,9 @@
         };
     }
 
-    appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
-        // initSlider_14018_V1();
-    });
+    // appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
+
+    // });
 
 
     function createTest() {
@@ -395,7 +395,7 @@
                     </div>
                     </div>
                     <div class="hero-right-section">
-                        <img src="${astUrl}/f_auto/drata/14018/image_7.webp" class="hero-img" alt="New to SOC 2? We Got You.">
+                        <img src="${astUrl}/f_auto/drata/14018/image_7.webp" class="hero-img" alt="Manage SOC">
                     </div>
                     </div>
                     </section>`);
@@ -573,7 +573,7 @@
                             <div class="me-subtitle">So, you need to get SOC 2 compliant—but how? Compliance Automation.</div>
                         </div>
                         <div class="me-right">
-                            <a href="https://drata.com/grc-central/soc-2/type-2" class="me-cta primary-blue-btn">Download the Guide ${ctaArrow}</a>
+                            <a href="https://drata.com/grc-central/soc-2/type-2" class="me-cta primary-blue-btn spz-14018-tracking">Download the Guide ${ctaArrow}</a>
                         </div>
                     </div>
                     <div class="me-contents">
@@ -612,7 +612,7 @@
                             <div class="me-desc">Requires multiple tools to manage tasks</div>
                             <div class="me-desc">Progress tracked manually in spreadsheets</div>
                             <div class="me-desc">Lacks automated risk alerts</div>
-                            <div class="me-desc">Can’t keep up with growth or changing regulations</div>
+                            <div class="me-desc">Can&#8217;t keep up with growth or changing regulations</div>
                             <div class="me-desc">Inefficiency adds labor and costs</div>
                         </div>
                         <div class="me-card active">
@@ -646,7 +646,7 @@
                             <h2 class="ss-title">Get Compliant in 4 Simple Steps</h2>
                         </div>
                         <div class="ss-right">
-                            <div class="ss-text">Drata is the leading Compliance Automation Platform that’s helped 5,000+ businesses do the following:</div>
+                            <div class="ss-text">Drata is the leading Compliance Automation Platform that&#8217;s helped 5,000+ businesses do the following:</div>
                         </div>
                     </div>
                     <div class="ssc-contents">
@@ -695,18 +695,18 @@
                                             <img src="${astUrl}/f_auto/drata/14018/4.webp" alt="Ace the Audit" class="ss-img">
                                         </div>
                                         <div class="ss-title">Ace the Audit</div>
-                                        <div class="ss-desc">Find vetted firms through Drata’s Auditor network and streamline the process with a central repository for all compliance documents.</div>
+                                        <div class="ss-desc">Find vetted firms through Drata&#8217;s Auditor network and streamline the process with a central repository for all compliance documents.</div>
                                     </div>
                                 </div>
                             </div>
                             <div class="ss-bottom-bar">
                                 <div class="ssb-title">Compliance Upkeep</div>
-                                <div class="ssb-subtitle">Compliance shouldn’t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
+                                <div class="ssb-subtitle">Compliance shouldn&#8217;t stop after the audit. Continuous monitoring reassures customers about current data security, reduces risks, and gives you a head start for future audits.</div>
                             </div>
                         </div>
                     </div>
                     <div class="ss-bottom-cta-wrapper">
-                        <a href="https://drata.com/grc-central/soc-2/compliance-checklist" class="ss-bottom-cta primary-blue-btn">Get the SOC 2 Checklist ${ctaArrow}</a>
+                        <a href="https://drata.com/grc-central/soc-2/compliance-checklist" class="ss-bottom-cta primary-blue-btn spz-14018-tracking">Get the SOC 2 Checklist ${ctaArrow}</a>
                     </div>
                 </div>
             </section>`);
@@ -758,7 +758,7 @@
                         <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/14018/icon_2.svg" alt="Secure Funding"></div>
                             <div class="bs-card-title">Secure Funding</div>
-                            <div class="bs-card-desc">Investors don’t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
+                            <div class="bs-card-desc">Investors don&#8217;t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
                         </div>
                          <div class="bs-card">
                             <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
@@ -785,7 +785,7 @@
                 <div class="c-title-container">
                     <div class="c-eyebrow">Business Impact</div>
                     <h2 class="c-title">Automating SOC 2 Helps You [Save Time]</h2>
-                    <div class="c-desc">This might be your first audit, but it won’t be your last. See why Drata is the ideal tool to begin and maintain your compliance journey.</div>
+                    <div class="c-desc">This might be your first audit, but it won&#8217;t be your last. See why Drata is the ideal tool to begin and maintain your compliance journey.</div>
                 </div>
                 <div class="c-content dis-flex">
                     <div class="c-left">
@@ -793,7 +793,7 @@
                             <div class="accordion accordion_1">
                                 <div class="accordion-item open">
                                     <div class="accordion-title">Cut Compliance Work by 80%</div>
-                                    <div class="accordion-content">Integrations and automation reduce duplicate tasks and streamline compliance work, saving time and resources. Without manual workflows like collecting evidence with screenshots, you’ll be free to focus on more critical aspects of your business.
+                                    <div class="accordion-content">Integrations and automation reduce duplicate tasks and streamline compliance work, saving time and resources. Without manual workflows like collecting evidence with screenshots, you&#8217;ll be free to focus on more critical aspects of your business.
                                     <div class="learn-more-cta"><a href="https://drata.com/platform/integrations" class="learn-more">Explore Integrations ${anchorArrow}</a></div>
                                     </div>
                                 </div>
@@ -887,8 +887,8 @@
                                     <div class="accordion-content">Ensure audit readiness and streamline the audit process with Drata.
                                      <ul class="accordion-list">
                                         <li><span>Progress Tracker:</span> Monitor your compliance status, missing requirements, and ensure audit-readiness in the Drata dashboard before your audit</li>
-                                        <li><span>Auditor Network:</span> Find a pre-vetted firm in Drata’s Auditor Alliance</li>
-                                        <li><span>Streamlined Audit:</span> Use Drata’s Audit Hub to simplify auditor communication and deliver compliance documents in auditor-preferred JSON format, saving time and ensuring no critical information is missed.</li>
+                                        <li><span>Auditor Network:</span> Find a pre-vetted firm in Drata&#8217;s Auditor Alliance</li>
+                                        <li><span>Streamlined Audit:</span> Use Drata&#8217;s Audit Hub to simplify auditor communication and deliver compliance documents in auditor-preferred JSON format, saving time and ensuring no critical information is missed.</li>
                                     </ul>
                                     </div>
                                 </div>
@@ -896,7 +896,7 @@
                                     <div class="accordion-title">Build Beyond the Audit</div>
                                     <div class="accordion-content">Maintain trust and security year-round and reap the benefits of continuous compliance with Drata.
                                      <ul class="accordion-list">
-                                        <li><span>Continuous Compliance:</span> Drata’s 24/7 control monitoring keeps your compliance up-to-date and alerts you to any failing controls or emerging risks.</li>
+                                        <li><span>Continuous Compliance:</span> Drata&#8217;s 24/7 control monitoring keeps your compliance up-to-date and alerts you to any failing controls or emerging risks.</li>
                                         <li><span>Compliance Reporting & Sharing:</span> Publish your compliance status and documents on Trust Center to reduce security reviews and speed up sales.</li>
                                         <li><span>Scalable Platform:</span> With continuous compliance and controls that satisfy multiple frameworks, Drata keeps you ready for next year's audit and makes it easy to add new frameworks like ISO 27001, GDPR, and more.</li>
                                     </ul>
@@ -961,12 +961,12 @@
                                     <div class="st-eyebrow">Drata Wins</div>
                                     <div class="st-title">How Drata Saved 6 Months of Work with Automation</div>
                                     <div class="st-cta-wrapper">
-                                        <a href="https://drata.com/customers/policydock" class="st-cta cus-story-btn">Read Customer Story</a>
+                                        <a href="https://drata.com/customers/policydock" class="st-cta cus-story-btn spz-14018-tracking">Read Customer Story</a>
                                     </div>
                                 </div>
                                 <div class="st-right-testimonial-card">
                                     <div class="st-testimonial-card">
-                                        <div class="st-t-copy">"Using Drata has effectively saved us six months in the SOC 2 audit process, which is huge for a team that’s trying to ship new features all the time."</div>
+                                        <div class="st-t-copy">"Using Drata has effectively saved us six months in the SOC 2 audit process, which is huge for a team that&#8217;s trying to ship new features all the time."</div>
                                         <div class="st-t-footer">
                                             <div class="st-t-img">
                                                 <img src="${astUrl}/f_auto/drata/14018/image_156.webp" alt="Patrick De La Garza">
@@ -1025,7 +1025,7 @@
                             <div class="md-right">
                                 <div class="md-card">
                                     <div class="md-card-title">Ease of Use</div>
-                                    <div class="md-card-desc">Not a compliance expert? Not a problem. Make the entire SOC 2 compliance process a breeze with step-by-step guides and Drata’s intuitive platform that ranks highest for ease of use on G2.</div>
+                                    <div class="md-card-desc">Not a compliance expert? Not a problem. Make the entire SOC 2 compliance process a breeze with step-by-step guides and Drata&#8217;s intuitive platform that ranks highest for ease of use on G2.</div>
                                     <a href="https://drata.com/platform" class="learn-more">Explore the Platform ${anchorArrow}</a>
                                 </div>
                                  <div class="md-card">
@@ -1039,7 +1039,7 @@
                           <div class="md-card">
                                 <div class="md-card-title-wrapper">
                                     <div class="md-card-title">Expert Support at Every Step</div>
-                                    <div class="md-card-desc">Whether you’re deciding between SOC 2 Type 1 or Type 2, or need hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
+                                    <div class="md-card-desc">Whether you&#8217;re deciding between SOC 2 Type 1 or Type 2, or need hands-on audit prep, our team of compliance experts ensure you never have to face the complexities of compliance alone. </div>
                                 </div>
                                 <div class="md-cta-wrapper">
                                     <a href="https://drata.com/success" class="md-cta black-cta">Learn More</a>
@@ -1064,7 +1064,7 @@
                             <h3 class="large-title">Hear From Our Customers</h3>
                         </div>
                         <div class="cr-global-cta">
-                            <a href="https://drata.com/customers" class="cr-cta primary-blue-btn">See all stories ${ctaArrow}</a>
+                            <a href="https://drata.com/customers" class="cr-cta primary-blue-btn spz-14018-tracking">See all stories ${ctaArrow}</a>
                         </div>
                     </div>
                 </div>
@@ -1129,12 +1129,14 @@
             </section>`);
 
             //interval to check if Swiper is loaded
-            let interval = setInterval(() => {
-                if (Swiper !== undefined && !document.querySelector('.feature-slider_14018').classList.contains('swiper-initialized')) {
-                    initSlider_14018_V1();
-                    clearInterval(interval);
-                }
-            }, 100);
+            appendScript("https://res.cloudinary.com/spiralyze/raw/upload/v1722331975/drata/28001/src/assets/swiper-bundle.min.js", function () {
+                let interval = setInterval(() => {
+                    if (Swiper !== undefined && document.querySelector('.feature-slider_14018') && !document.querySelector('.feature-slider_14018').classList.contains('swiper-initialized')) {
+                        initSlider_14018_V1();
+                        clearInterval(interval);
+                    }
+                }, 100);
+            });
         }
         );
     }
@@ -1164,7 +1166,7 @@
                 <p class="oi-desc">${subTitle}</p>
             </div>
             <div class="oi-cta">
-                <a href="https://drata.com/platform/integrations" class="oi-cta-btn primary-blue-btn">Explore Integrations ${ctaArrow}</a>
+                <a href="https://drata.com/platform/integrations" class="oi-cta-btn primary-blue-btn spz-14018-tracking">Explore Integrations ${ctaArrow}</a>
             </div>
         </div>
         <div class="oi-content-wrapper">
@@ -1227,7 +1229,7 @@
                 }
             }
 
-            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec">
+            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec" id="nav-resource">
             <div class="demo-cta-container">
                 <div class="sticker-wrapper">
                     <div class="logos">
@@ -1239,7 +1241,7 @@
                 <div class="cta-desc">${title}</div>
                 <div class="cta-wrapper">
                     <a href="javascript:void()" class="demo-btn cta-btn primary-blue-btn">Get Demo</a>
-                    <a href="https://drata.com/plans" class="price-btn">How We Price</a>
+                    <a href="https://drata.com/plans" class="price-btn spz-14018-tracking">How We Price</a>
                 </div>
             </div>
         </section>`);
@@ -1250,7 +1252,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelector('.resources-section-14018')) return;
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-        <section class="resources-section-14018  spz-sec" id="nav-resource">
+        <section class="resources-section-14018 spz-sec">
             <div class="resources-wrapper">
                 <div class="resource-title">
                     <h6 class="title">Looking for more?</h6>
@@ -1520,7 +1522,7 @@
                             <div class="card-footer">
                                 <div class="learn-more-cta">
                                     ` + ((!review.link) ? '' : `
-                                    <a href="${review.link}" class="sc-cta secondary-blue-btn">Read Customer Story</a>
+                                    <a href="${review.link}" class="sc-cta secondary-blue-btn spz-14018-tracking">Read Customer Story</a>
                                     `) + `
                                 </div>
                             </div>

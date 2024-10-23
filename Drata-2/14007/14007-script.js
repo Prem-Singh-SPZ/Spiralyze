@@ -110,7 +110,7 @@
                     faqSection();
                 }, 1000);
             });
-            submitTestDetails('Variant_14007');
+            submitTestDetails('Control_14018');
         });
 
         createCookie('spz-14007-loaded', 'true', 1);
@@ -162,7 +162,7 @@
             // Check if spz-14007-loaded cookie is present and cro_field is present
             if ((cro_field && cro_field.val != '') && isCookieExist('spz-14007-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Variant_14007');
+                submitTestDetails('Control_14018');
 
                 // deleteCookie('spz-14007-loaded');
             }
@@ -210,7 +210,7 @@
             removeTest();
         }
         if (window.location.pathname.indexOf("/demo") > -1) {
-            // ADDED ONLY FOR DEMO PAGE TO ADD Variant_14007 IN HIDDEN FIELD
+            // ADDED ONLY FOR DEMO PAGE TO ADD Control_14018 IN HIDDEN FIELD
             demoChecked();
         }
     }
