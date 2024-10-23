@@ -412,10 +412,10 @@
                     <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
-                    <a class="nav-anchor" href="#overview-process">Overview & Process</a>
-                    <a class="nav-anchor" href="#business-impact">Business Impact</a>
-                    <a class="nav-anchor" href="#why-drata">Why Drata</a>
-                    <a class="nav-anchor" href="#nav-resource">Resources</a>
+                    <a class="nav-anchor" href="#overview-process" data-scroll-section="overview-process">Overview & Process</a>
+                    <a class="nav-anchor" href="#business-impact" data-scroll-section="business-impact">Business Impact</a>
+                    <a class="nav-anchor" href="#why-drata" data-scroll-section="why-drata">Why Drata</a>
+                    <a class="nav-anchor" href="#nav-resource" data-scroll-section="nav-resource">Resources</a>
                 </div>
             </div>
         </nav>`);
@@ -442,32 +442,48 @@
     }
 
     function checkActiveNav_V1() {
-        document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
-            const target = document.querySelector(anchor.getAttribute('href'));
-            const hero = document.querySelector('header ~ .hero-section-14018');
-            const footer = document.querySelector('div[data-csk-entry-type="globalFooter"]');
-            if (isInViewport(target)) {
-                document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
-                    anchor.classList.remove('active');
-                });
-                // setTimeout(() => {
-                anchor.classList.add('active');
-                // }, 10);
-                // console.log(anchor);
-            }
-            else {
-                // anchor.classList.remove('active');
-                if (isInViewport(hero) || isInViewport(footer)) {
-                    anchor.classList.remove('active');
-                }
-            }
+        // document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+        let targetDiv = document.querySelectorAll('.spz-sec[data-scroll-anchor]');
+        const hero = document.querySelector('header ~ .hero-section-14018');
+        const footer = document.querySelector('div[data-csk-entry-type="globalFooter"]');
 
-            //left scroll the nav links to bring the active link in focus
-            if (window.innerWidth < 760 && anchor.classList.contains('active')) {
-                document.querySelector('.nav-links').style.scrollBehavior = 'smooth';
-                document.querySelector('.nav-links').scrollLeft = anchor.offsetLeft - 100;
-            }
+        //check which target is in view and add active class to the respective nav link
+        targetDiv.forEach(function (target) {
+            let elemToCheck = document.querySelectorAll(`.spz-sec[data-scroll-anchor="` + target.getAttribute('data-scroll-anchor') + `"]`);
+            let anchorToAdd = document.querySelector(`.nav-anchor[data-scroll-section="` + target.getAttribute('data-scroll-anchor') + `"]`);
+
+
+            //convert elemToCheck to array and check for all elements in the array
+            elemToCheck.forEach(function (elem) {
+                if (isInViewport(elem)) {
+                    document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+                        anchor.classList.remove('active');
+                    });
+                    // setTimeout(() => {
+                    anchorToAdd.classList.add('active');
+                    // }, 10);
+                    // console.log(anchor);
+                }
+                else {
+                    // anchor.classList.remove('active');
+                    if (isInViewport(hero) || isInViewport(footer)) {
+                        document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+                            anchor.classList.remove('active');
+                        });
+                    }
+                }
+
+            });
+
+
         });
+
+        //left scroll the nav links to bring the active link in focus
+        if (window.innerWidth < 760 && anchor.classList.contains('active')) {
+            document.querySelector('.nav-links').style.scrollBehavior = 'smooth';
+            document.querySelector('.nav-links').scrollLeft = anchor.offsetLeft - 100;
+        }
+        // });
 
         if (document.querySelector('header ~ .hero-section-14018')) {
             const hero = document.querySelector('header ~ .hero-section-14018');
@@ -517,7 +533,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.case-studies-section').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="case-studies-section spz-sec" id="overview-process">
+            <section class="case-studies-section spz-sec" id="overview-process" data-scroll-anchor="overview-process">
               <div class="cs-overflow">
                 <div class="case-study-wrapper" id="mini-cs-wrapper">
                 </div>
@@ -565,7 +581,7 @@
     function madeEasy_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.made-easy-sec').length === 0) {
-                document.querySelector(selector).insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec">
+                document.querySelector(selector).insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec" data-scroll-anchor="overview-process">
             <div class="made-easy-container">
                   <div class="me-top-bar dis-flex">
                         <div class="me-left">
@@ -598,7 +614,7 @@
     function madeEasy_V2(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.made-easy-sec').length === 0) {
-                document.querySelector(selector).insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec">
+                document.querySelector(selector).insertAdjacentHTML('afterend', ` <section class="made-easy-sec spz-sec" data-scroll-anchor="overview-process">
             <div class="made-easy-container">
                   <div class="me-top-bar dis-flex">
                         <div class="me-left">
@@ -638,7 +654,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.simple-steps-sec-14018').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="simple-steps-sec-14018 spz-sec">
+            <section class="simple-steps-sec-14018 spz-sec" data-scroll-anchor="overview-process">
                 <div class="simple-steps-container">
                     <div class="ss-top-bar dis-flex">
                         <div class="ss-left">
@@ -742,7 +758,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.benefits-sec').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="benefits-sec spz-sec">
+            <section class="benefits-sec spz-sec" data-scroll-anchor="overview-process">
                 <div class="benefits-container">
                     <div class="bs-title-container">
                             <div class="bs-eyebrow">Compliance Benefits</div>
@@ -780,7 +796,7 @@
     function complianceChanges_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.compliance-sec').length === 0) {
-                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact">
+                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact" data-scroll-anchor="business-impact">
             <div class="compliance-container">
                 <div class="c-title-container">
                     <div class="c-eyebrow">Business Impact</div>
@@ -855,7 +871,7 @@
     function complianceChanges_V2(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.compliance-sec').length === 0) {
-                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact">
+                document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="compliance-sec spz-sec" id="business-impact" data-scroll-anchor="business-impact">
             <div class="compliance-container">
                 <div class="c-title-wrapper">
                     <div class="c-title-container">
@@ -954,7 +970,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelectorAll('.single-testimonial-sec').length === 0) {
                 document.querySelector(selector).insertAdjacentHTML('afterend', `
-                    <section class="single-testimonial-sec spz-sec">
+                    <section class="single-testimonial-sec spz-sec" data-scroll-anchor="business-impact">
                         <div class="st-container">
                             <div class="st-content dis-flex">
                                 <div class="st-left-copy">
@@ -1001,7 +1017,7 @@
             }
 
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="meet-drata spz-sec" id="why-drata">
+            <section class="meet-drata spz-sec" id="why-drata" data-scroll-anchor="why-drata">
                 <div class="md-container">
                     <div class="md-title-container">
                         <div class="title-wrapper">
@@ -1055,8 +1071,21 @@
     function customerReviews_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.cr-section-14018')) return;
+            
+            let variant = sessionStorage.getItem('variant');
+            let dataAttr = 'business-impact';
+            if (!variant) {
+            }
+            else {
+                if (variant == "variant_1") {
+                }
+                else {
+                    dataAttr = 'why-drata';
+                }
+            }
+
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="cr-section-14018 spz-sec">
+            <section class="cr-section-14018 spz-sec" data-scroll-anchor="${dataAttr}">
                 <div class="cr-title-container">
                     <div class="title-wrapper dis-flex">
                         <div class="cr-title">
@@ -1105,7 +1134,7 @@
 
 
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="feature-cap-section-14018 spz-sec">
+            <section class="feature-cap-section-14018 spz-sec" data-scroll-anchor="why-drata">
                 <div class="fc-title-container">
                     <div class="title-wrapper dis-flex">
                         <h3 class="large-title">Features & Capabilities For Fast and Reliable Audits</h3>
@@ -1159,7 +1188,7 @@
                 }
             }
 
-            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="our-integrations-sec spz-sec">
+            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="our-integrations-sec spz-sec" data-scroll-anchor="why-drata">
         <div class="oi-title-container dis-flex">
             <div class="title-wrapper">
                 <div class="oi-title">${title}</div>
@@ -1229,7 +1258,7 @@
                 }
             }
 
-            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec" id="nav-resource">
+            document.querySelector(selector).insertAdjacentHTML('afterend', `<section class="demo-cta-section spz-sec" data-scroll-anchor="nav-resource" id="nav-resource">
             <div class="demo-cta-container">
                 <div class="sticker-wrapper">
                     <div class="logos">
@@ -1252,7 +1281,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelector('.resources-section-14018')) return;
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-        <section class="resources-section-14018 spz-sec">
+        <section class="resources-section-14018 spz-sec" data-scroll-anchor="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
                     <h6 class="title">Looking for more?</h6>
@@ -1312,7 +1341,7 @@
         waitForElm(selector).then(function () {
             if (document.querySelector('.compliance-faq-section')) return;
             document.querySelector(selector).insertAdjacentHTML('afterend', `
-            <section class="compliance-faq-section spz-sec">
+            <section class="compliance-faq-section spz-sec" data-scroll-anchor="nav-resource">
                 <div class="compliance-faq-title">
                     <p class="small-eyebrow">Compliance FAQ</p>
                     <h6 class="title">Your Questions, Answered</h6>
