@@ -11,35 +11,35 @@
     const custReviews = [
         {
             name: "David Caughill,",
-            companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003436.webp",
+            companyLogo: astUrl + "f_auto/drata/14018/frame_1000003436.webp",
             title: "DevOps Engineer",
             review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
             link: "https://drata.com/customers"
         },
         {
             name: "Jonathan Jaffe,",
-            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003434.svg",
+            companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003434.svg",
             title: "CISO",
             review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
             link: "https://drata.com/customers/lemonade"
         },
         {
             name: "Chris Bake,",
-            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003435.svg",
+            companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003435.svg",
             title: "CTO",
             review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we&#8217;re pursuing SOC 2 compliance!”",
             link: "https://drata.com/customers/apl-nexted"
         },
         {
             name: "Joshua Peskay,",
-            companyLogo: astUrl + "/f_auto/drata/14018/frame_1000003437.webp",
+            companyLogo: astUrl + "f_auto/drata/14018/frame_1000003437.webp",
             title: "vCIO",
             review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
             link: "https://drata.com/customers"
         },
         {
             name: "Lola Kureno,",
-            companyLogo: astUrl + "/fl_sanitize/drata/14018/frame_1000003433.svg",
+            companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003433.svg",
             title: "Cyber Security Engineer",
             review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
             link: "https://drata.com/customers"
@@ -125,25 +125,25 @@
                 {
                     title: "SOC 2 Beginners Guide",
                     desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
-                    img: astUrl + "/f_auto/drata/14018/8.webp",
+                    img: astUrl + "f_auto/drata/14018/8.webp",
                     link: "https://drata.com/grc-central/soc-2"
                 },
                 {
                     title: "8 Easy Steps to Get Started with ISO 27001",
                     desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
-                    img: astUrl + "/f_auto/drata/14018/5.webp",
+                    img: astUrl + "f_auto/drata/14018/5.webp",
                     link: "https://drata.com/grc-central/soc-2/readiness-assessment"
                 },
                 {
                     title: "Learn About the Cost of Non-Compliance",
                     desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
-                    img: astUrl + "/f_auto/drata/14018/6.webp",
+                    img: astUrl + "f_auto/drata/14018/6.webp",
                     link: "https://drata.com/grc-central/soc-2"
                 },
                 {
                     title: "SOC 2 Audits: What You Can Expect from Start to Finish",
                     desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
-                    img: astUrl + "/f_auto/drata/14018/7.webp",
+                    img: astUrl + "f_auto/drata/14018/7.webp",
                     link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
                 }
             ]
@@ -154,25 +154,25 @@
                 {
                     title: "SANS Audit Hub First Look with Howard Carter",
                     desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
-                    img: astUrl + "/f_auto/drata/14018/9.webp",
+                    img: astUrl + "f_auto/drata/14018/9.webp",
                     link: "https://drata.com/platform/startup"
                 },
                 {
                     title: "3 Reasons Why Startups Need SOC 2",
                     desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
-                    img: astUrl + "/f_auto/drata/14018/10.webp",
+                    img: astUrl + "f_auto/drata/14018/10.webp",
                     link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
                 },
                 {
                     title: "14 Free Cybersecurity Tools for Startups",
                     desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
-                    img: astUrl + "/f_auto/drata/14018/11.webp",
+                    img: astUrl + "f_auto/drata/14018/11.webp",
                     link: "https://drata.com/blog/free-cybersecurity-tools"
                 },
                 {
                     title: "Debunking 5 Common SOC 2 Misconceptions",
                     desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
-                    img: astUrl + "/f_auto/drata/14018/12.webp",
+                    img: astUrl + "f_auto/drata/14018/12.webp",
                     link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
                 }
             ]
@@ -183,25 +183,25 @@
                 {
                     title: "Gather Voices",
                     desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
-                    img: astUrl + "/f_auto/drata/14018/13.webp",
+                    img: astUrl + "f_auto/drata/14018/13.webp",
                     link: "https://drata.com/customers/gather-voices"
                 },
                 {
                     title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
                     desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
-                    img: astUrl + "/f_auto/drata/14018/14.webp",
+                    img: astUrl + "f_auto/drata/14018/14.webp",
                     link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
                 },
                 {
                     title: "Vareto",
                     desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
-                    img: astUrl + "/f_auto/drata/14018/15.webp",
+                    img: astUrl + "f_auto/drata/14018/15.webp",
                     link: "https://drata.com/customers/vareto"
                 },
                 {
                     title: "Calculating and Communicating Cybersecurity ROI",
                     desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
-                    img: astUrl + "/f_auto/drata/14018/16.webp",
+                    img: astUrl + "f_auto/drata/14018/16.webp",
                     link: "https://drata.com/blog/cybersecurity-roi"
                 }
             ]
@@ -212,25 +212,25 @@
                 {
                     title: "Unlocking ROI: Kosli's 90-Day Journey to SOC 2 Type 2",
                     desc: "How leveraging Drata and Kosli streamlines compliance audit readiness.",
-                    img: astUrl + "/f_auto/drata/14018/17.webp",
+                    img: astUrl + "f_auto/drata/14018/17.webp",
                     link: "https://drata.com/customers/kosli"
                 },
                 {
                     title: "Starting With SOC 2: How Drata Proves Invaluable for Young Startups",
                     desc: "A case on how Drata empowers Scanner to navigate challenges with confidence and efficiency—on their own.",
-                    img: astUrl + "/f_auto/drata/14018/18.webp",
+                    img: astUrl + "f_auto/drata/14018/18.webp",
                     link: "https://drata.com/customers/scanner"
                 },
                 {
                     title: "3rdRisk Achieves SOC 2 Type 1 in 2 Weeks With The Help of Drata and AssuranceLab",
                     desc: "3rdRisk is a European tech company providing a third-party risk management (TPRM) and internal control solution.",
-                    img: astUrl + "/f_auto/drata/14018/19.webp",
+                    img: astUrl + "f_auto/drata/14018/19.webp",
                     link: "https://drata.com/customers/third-risk"
                 },
                 {
                     title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata&#8217;s Compliance Automation",
                     desc: "Calendly&#8217;s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
-                    img: astUrl + "/f_auto/drata/14018/1_1.webp",
+                    img: astUrl + "f_auto/drata/14018/1_1.webp",
                     link: "https://drata.com/customers/calendly"
                 }
             ]
@@ -357,8 +357,8 @@
                     <div class="hero-content dis-flex flex-wrap justify-content-between">
                     <div class="hero-left-section">
                     <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br class="desk-only">We Got You.</h1>
-                    <div class="star-rating dis-flex align-items-center"><img src="${astUrl}/fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
-                    <img src="${astUrl}/fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
+                    <div class="star-rating dis-flex align-items-center"><img src="${astUrl}fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
+                    <img src="${astUrl}fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
                     <div class="list-grp-wrapper">
                     <ul class="list-group">
                     <li class="list-item"><strong>Automate (Most of) the Work.</strong> Reduce audit prep by 80% with software that creates SOC 2 documentation in minutes.</li>
@@ -368,7 +368,7 @@
                     </div>
                     </div>
                     <div class="hero-right-section">
-                        <img src="${astUrl}/f_auto/drata/14018/image_7.webp" class="hero-img" alt="New to SOC 2? We Got You.">
+                        <img src="${astUrl}f_auto/drata/14018/image_7.webp" class="hero-img" alt="New to SOC 2? We Got You.">
                     </div>
                     </div>
                     </section>`);
@@ -383,8 +383,8 @@
                     <div class="hero-content dis-flex flex-wrap justify-content-between">
                     <div class="hero-left-section">
                     <h1 class="hc-title">Manage SOC 2 with <span class="hc-blue">80%</span> Less Time, Cost, and Hassle</h1>
-                    <div class="star-rating dis-flex align-items-center"><img src="${astUrl}/fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
-                    <img src="${astUrl}/fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
+                    <div class="star-rating dis-flex align-items-center"><img src="${astUrl}fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
+                    <img src="${astUrl}fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
                     <div class="list-grp-wrapper">
                     <ul class="list-group">
                     <li class="list-item"><strong>Automated Compliance</strong> - Hundreds of integrations collect, test, and store evidence for access reviews, personnel, devices, and more. </li>
@@ -395,7 +395,7 @@
                     </div>
                     </div>
                     <div class="hero-right-section">
-                        <img src="${astUrl}/f_auto/drata/14018/image_7.webp" class="hero-img" alt="Manage SOC">
+                        <img src="${astUrl}f_auto/drata/14018/image_7.webp" class="hero-img" alt="Manage SOC">
                     </div>
                     </div>
                     </section>`);
@@ -409,7 +409,7 @@
             document.querySelector(selector).insertAdjacentHTML('afterend', ` <nav class="navbar-section spz-sec">
             <div class="nav-container dis-flex justify-content-between align-items-center">
                 <div class="nav-logo no-mob">
-                    <img src="${astUrl}/fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
+                    <img src="${astUrl}fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
                     <a class="nav-anchor" href="#overview-process" data-scroll-section="overview-process">Overview & Process</a>
@@ -498,7 +498,7 @@
     }
 
     function caseStudies_V1(selector) {
-        const aUrl = astUrl + '/fl_sanitize/drata/14018/';
+        const aUrl = astUrl + 'fl_sanitize/drata/14018/';
         const caseStudies = [
             {
                 title: 'Lemonade',
@@ -678,7 +678,7 @@
                                     <div class="ss-step step-1">1</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                           <img src="${astUrl}/f_auto/drata/14018/1.webp" alt="Setup SOC 2" class="ss-img">
+                                           <img src="${astUrl}f_auto/drata/14018/1.webp" alt="Setup SOC 2" class="ss-img">
                                         </div>
                                         <div class="ss-title">Setup SOC 2</div>
                                         <div class="ss-desc">Use our auditor-approved framework template, complete with all the controls and requirements needed for compliance.</div>
@@ -688,7 +688,7 @@
                                     <div class="ss-step step-2">2</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/14018/2.webp" alt="Meet Requirements" class="ss-img">
+                                            <img src="${astUrl}f_auto/drata/14018/2.webp" alt="Meet Requirements" class="ss-img">
                                         </div>
                                         <div class="ss-title">Meet Requirements</div>
                                         <div class="ss-desc">Send and sign policies, complete security training, and connect your tools via integrations to collect audit evidence—all automated in Drata.</div>
@@ -698,7 +698,7 @@
                                     <div class="ss-step step-3">3</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                           <img src="${astUrl}/f_auto/drata/14018/3.webp" alt="Track Progress" class="ss-img">
+                                           <img src="${astUrl}f_auto/drata/14018/3.webp" alt="Track Progress" class="ss-img">
                                         </div>
                                         <div class="ss-title">Track Progress</div>
                                         <div class="ss-desc">See your compliance status, missing requirements, and upcoming tasks in the Drata dashboard for full visibility and reporting.</div>
@@ -708,7 +708,7 @@
                                     <div class="ss-step step-4">4</div>
                                     <div class="ss-content">
                                         <div class="ss-img-wr">
-                                            <img src="${astUrl}/f_auto/drata/14018/4.webp" alt="Ace the Audit" class="ss-img">
+                                            <img src="${astUrl}f_auto/drata/14018/4.webp" alt="Ace the Audit" class="ss-img">
                                         </div>
                                         <div class="ss-title">Ace the Audit</div>
                                         <div class="ss-desc">Find vetted firms through Drata&#8217;s Auditor network and streamline the process with a central repository for all compliance documents.</div>
@@ -767,22 +767,22 @@
                     </div>
                     <div class="bs-cards-container justify-content-between dis-flex">
                         <div class="bs-card">
-                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
+                            <div class="bs-card-img"><img src="${astUrl}fl_sanitize/drata/28001/icon_1.svg" alt="Unblock Sales"></div>
                             <div class="bs-card-title">Unblock Sales</div>
                             <div class="bs-card-desc">No one wants to work with a security risk. Get compliant to earn trust and expedite the sales process.</div>
                         </div>
                         <div class="bs-card">
-                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/14018/icon_2.svg" alt="Secure Funding"></div>
+                            <div class="bs-card-img"><img src="${astUrl}fl_sanitize/drata/14018/icon_2.svg" alt="Secure Funding"></div>
                             <div class="bs-card-title">Secure Funding</div>
                             <div class="bs-card-desc">Investors don&#8217;t like risk. Prove you take security seriously to improve your chances of raising funds.</div>
                         </div>
                          <div class="bs-card">
-                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
+                            <div class="bs-card-img"><img src="${astUrl}fl_sanitize/drata/28001/icon_3.svg" alt="Unlock Expansion"></div>
                             <div class="bs-card-title">Unlock Expansion</div>
                             <div class="bs-card-desc">Meet enterprise and regulatory requirements to expand into larger deals and new markets.</div>
                         </div>
                          <div class="bs-card">
-                            <div class="bs-card-img"><img src="${astUrl}/fl_sanitize/drata/28001/icon_4.svg" alt="Reduce Risk"></div>
+                            <div class="bs-card-img"><img src="${astUrl}fl_sanitize/drata/28001/icon_4.svg" alt="Reduce Risk"></div>
                             <div class="bs-card-title">Reduce Risk</div>
                             <div class="bs-card-desc">Startups can't afford risks. Achieve compliance to avoid costly penalties and fines.</div>
                         </div>
@@ -835,9 +835,9 @@
                     <div class="c-right">
                         <div class="c-img">
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_desktop_2.webp" type="image/webp">
-                                <source media="(min-width: 768px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_tablet_1.webp" type="image/webp">
-                                <img src="${astUrl}/f_auto/drata/28001/section_image_-_mobile_1.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
+                                <source media="(min-width: 1024px)" srcset="${astUrl}f_auto/drata/28001/section_image_-_desktop_2.webp" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="${astUrl}f_auto/drata/28001/section_image_-_tablet_1.webp" type="image/webp">
+                                <img src="${astUrl}f_auto/drata/28001/section_image_-_mobile_1.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
                             </picture>
                         </div>
                     </div>
@@ -924,9 +924,9 @@
                     <div class="c-right">
                         <div class="c-img">
                             <picture>
-                                <source media="(min-width: 1024px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_desktop_2.webp" type="image/webp">
-                                <source media="(min-width: 768px)" srcset="${astUrl}/f_auto/drata/28001/section_image_-_tablet_1.webp" type="image/webp">
-                                <img src="${astUrl}/f_auto/drata/28001/section_image_-_mobile_1.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
+                                <source media="(min-width: 1024px)" srcset="${astUrl}f_auto/drata/28001/section_image_-_desktop_2.webp" type="image/webp">
+                                <source media="(min-width: 768px)" srcset="${astUrl}f_auto/drata/28001/section_image_-_tablet_1.webp" type="image/webp">
+                                <img src="${astUrl}f_auto/drata/28001/section_image_-_mobile_1.webp" alt="Drata Compliance Automation" title="Drata Compliance Automation">
                             </picture>
                         </div>
                     </div>
@@ -985,7 +985,7 @@
                                         <div class="st-t-copy">"Using Drata has effectively saved us six months in the SOC 2 audit process, which is huge for a team that&#8217;s trying to ship new features all the time."</div>
                                         <div class="st-t-footer">
                                             <div class="st-t-img">
-                                                <img src="${astUrl}/f_auto/drata/14018/image_156.webp" alt="Patrick De La Garza">
+                                                <img src="${astUrl}f_auto/drata/14018/image_156.webp" alt="Patrick De La Garza">
                                             </div>
                                             <div class="st-t-details">
                                                 <p class="st-t-name">Patrick De La Garza</p>
@@ -1035,7 +1035,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-img-wr">
-                                   <img src="${astUrl}/f_auto/drata/14018/image_3.webp">
+                                   <img src="${astUrl}f_auto/drata/14018/image_3.webp">
                                 </div>
                             </div>
                             <div class="md-right">
@@ -1201,40 +1201,40 @@
         <div class="oi-content-wrapper">
             <div class="oi-cards">
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo01.svg" alt="AWS">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo01.svg" alt="AWS">
                 </div>
                  <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo02.svg" alt="Azure">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo02.svg" alt="Azure">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo03.svg" alt="GitHub">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo03.svg" alt="GitHub">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo04.svg" alt="Google Cloud">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo04.svg" alt="Google Cloud">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo05.svg" alt="Jira">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo05.svg" alt="Jira">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo06.svg" alt="Slack">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo06.svg" alt="Slack">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo07.svg" alt="Checkr">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo07.svg" alt="Checkr">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo08.svg" alt="Bitbucket">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo08.svg" alt="Bitbucket">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo09.svg" alt="Gustog">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo09.svg" alt="Gustog">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/f_auto/drata/14018/logo10.webp" alt="Datadog">
+                    <img src="${astUrl}f_auto/drata/14018/logo10.webp" alt="Datadog">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo11.svg" alt="ADP">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo11.svg" alt="ADP">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}/fl_sanitize/drata/14018/logo12.svg" alt="Docusign">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo12.svg" alt="Docusign">
                 </div>
             </div>
         </div>
@@ -1262,8 +1262,8 @@
             <div class="demo-cta-container">
                 <div class="sticker-wrapper">
                     <div class="logos">
-                        <img src="${astUrl}/fl_sanitize/drata/14018/frame_40347.svg" alt="G2 Logo">
-                        <img src="${astUrl}/fl_sanitize/drata/14018/frame_5597.svg" alt="Star Rating">
+                        <img src="${astUrl}fl_sanitize/drata/14018/frame_40347.svg" alt="G2 Logo">
+                        <img src="${astUrl}fl_sanitize/drata/14018/frame_5597.svg" alt="Star Rating">
                     </div>
                     <div class="sticker-desc"><span>Excellent</span> based on <span>700+</span> reviews</div>
                 </div>
