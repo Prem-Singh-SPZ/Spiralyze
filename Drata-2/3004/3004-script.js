@@ -1,4 +1,7 @@
 (function () {
+	//DEV 1/6. Put your asana task URL here
+	const asana_URL = `https://app.asana.com/0/1202434538289854/1208390841183380/f`
+
 	//DEV 2/6. Modal content
 	const modalData = {
 		leftImage: '',
