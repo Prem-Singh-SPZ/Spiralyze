@@ -8,7 +8,7 @@
 		modalContent: 'CISO, Lemonade ',
 		ctaHref: 'https://drata.com/demo',
 		ctaText: 'Get a Demo <img src="//res.cloudinary.com/spiralyze/image/upload/v1727873538/drata/3004/arrow_icon.svg" alt="Arrow">',
-		closeModalText: '<img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/3004/frame_1000003340_webp.webp">', //you can pass <img /> tag if you have specific close button
+		closeModalText: '', //you can pass <img /> tag if you have specific close button
 		contentAfterCTA: ''
 	};
 
@@ -42,6 +42,7 @@
 		})
 
 		document.body.classList.add("spz-3004");
+		document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1729754791/drata/3004/frame_1000003342.svg" as="image">`);
 	}
 
 	function addModal(modalData, modalDelay, leavePage, timesToAppear) {

@@ -31,7 +31,7 @@
     border-radius: 24px;
     background: #fff url(//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/3004/image.webp) no-repeat;
     background-position: top right;
-    background-size: auto 100%;
+    background-size: auto 380px;
     -webkit-box-shadow: 0px 29.787px 35.745px -5.957px rgba(16, 24, 40, 0.08), 0px 11.915px 11.915px -5.957px rgba(16, 24, 40, 0.03);
             box-shadow: 0px 29.787px 35.745px -5.957px rgba(16, 24, 40, 0.08), 0px 11.915px 11.915px -5.957px rgba(16, 24, 40, 0.03);
     max-width: 1074px;
@@ -47,21 +47,24 @@
         -ms-flex-direction: row-reverse;
             flex-direction: row-reverse;
     position: relative;
-    min-height: 380px;
+    min-height: 376px;
     margin: 40px 0;
   }
   body.spz-3004 .spz-modal-wrap .modal-wrap .close-modal {
     cursor: pointer;
     position: absolute;
-    top: -18px;
-    right: -12px;
-    -webkit-transform: rotate(45deg);
-            transform: rotate(45deg);
-    font-size: 2em;
-    line-height: 0;
+    top: -40px;
+    right: -34px;
+    width: 40px;
+    height: 40px;
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1729754789/drata/3004/frame_1000003341.svg) no-repeat;
+    background-size: 100%;
+    background-position: center;
   }
-  body.spz-3004 .spz-modal-wrap .modal-wrap .close-modal img {
-    pointer-events: none;
+  body.spz-3004 .spz-modal-wrap .modal-wrap .close-modal:hover {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/v1729754791/drata/3004/frame_1000003342.svg) no-repeat;
+    background-size: 100%;
+    background-position: center;
   }
   body.spz-3004 .spz-modal-wrap .modal-left,
   body.spz-3004 .spz-modal-wrap .modal-right {
@@ -89,11 +92,10 @@
   }
   body.spz-3004 .spz-modal-wrap .modal-right .modal-content {
     color: #000;
-    font-family: "Darker Grotesque";
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: -0.24px;
+    font-size: 14px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: 20px;
     margin: 0 0 24px;
   }
   body.spz-3004 .spz-modal-wrap .modal-right .modal-ctas a {
