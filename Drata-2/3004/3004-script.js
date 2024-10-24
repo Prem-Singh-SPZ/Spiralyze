@@ -42,7 +42,7 @@
 		})
 
 		document.body.classList.add("spz-3004");
-		document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1729754791/drata/3004/frame_1000003342.svg" as="image">`);
+		document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1729754791/drata/3004/frame_1000003342.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/3004/image.webp" as="image">`);
 	}
 
 	function addModal(modalData, modalDelay, leavePage, timesToAppear) {
@@ -179,14 +179,13 @@
 			testURL = window.location.href;
 		}
 
-		else if (window.location.href.indexOf("/demo") > -1) {
-			console.log("demo page");
+		else if (window.location.href.indexOf("/demo") > -1  && window.innerWidth > 1199) {
 			waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function (elm) {
 				submitTestDetails();
 			});
 		}
 
-		if (isSameUrl(url, testURL, true)) {
+		if (isSameUrl(url, testURL, true) && window.innerWidth > 1199) {
 			createTest();
 		} else {
 			removeTest();
