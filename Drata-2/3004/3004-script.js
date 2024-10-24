@@ -3,7 +3,7 @@
 	const modalData = {
 		leftImage: '',
 		leftImageAlt: 'Jonathan Jaffe',
-		modalHeading: '“We saved 80% of time using Drata’s continuous compliance automation. I’ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. ',
+		modalHeading: '“We saved 80% of time using Drata&#8217;s continuous compliance automation. I&#8217;ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. ',
 		modalSubHeading: 'Jonathan Jaffe',
 		modalContent: 'CISO, Lemonade ',
 		ctaHref: 'https://drata.com/demo',
@@ -19,7 +19,7 @@
 	const pageLeaveEvent = true;
 
 	//DEV 5/6. Set how many times modal should appear. 'once' - will show modal only once per lifetime. 'session' - will show modal only once per session. 'dev' - for development purposes will show every time page refresh
-	const timesToAppear = 'dev';
+	const timesToAppear = 'session';
 
 	/***********************************
 	************************************
@@ -138,7 +138,7 @@
 	//Passing test details to hidden fields
 	function submitTestDetails() {
 		if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
-			document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant');
+			document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', 'Variant_3004');
 		}
 	}
 
@@ -174,15 +174,12 @@
 	function urlCheck(url) {
 
 		let testURL = '';
-		if (window.location.href.indexOf("/product") > -1 ||
-			window.location.href.indexOf("/platform") > -1 ||
-			window.location.href.indexOf("/blog") > -1 ||
-			window.location.href.indexOf("/resources/reports") > -1 ||
-			window.location.href == "https://drata.com/") {
+		if (window.location.href.indexOf("/company") == -1 && window.origin == "https://drata.com" && window.location.href.indexOf("/demo") == -1) {
 			testURL = window.location.href;
 		}
 
 		else if (window.location.href.indexOf("/demo") > -1) {
+			console.log("demo page");
 			waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function (elm) {
 				submitTestDetails();
 			});
