@@ -984,7 +984,7 @@ body.spz-14018 {
     padding: 16px 24px;
     position: sticky;
     top: 0;
-    z-index: 19;
+    z-index: 91;
 
     @media (max-width: 1199.98px) {
       padding: 32px;
@@ -1868,7 +1868,7 @@ body.spz-14018 {
         }
 
         .c-title {
-          color: #000;
+          color: #0c131a;
           font-family: $ff-inter;
           font-size: 42px;
           font-style: normal;
@@ -2628,9 +2628,8 @@ body.spz-14018 {
             padding: 32px;
             margin-bottom: 2px;
 
-            @media (max-width: 1199.98px) {
-              // height: auto;
-              // min-height: 323px;
+            @media (min-width: 1199.98px) {
+              max-height: 190px;
             }
 
             @media (max-width: 767.98px) {
@@ -3242,8 +3241,8 @@ body.spz-14018 {
               background: #96a1b2;
               opacity: 1;
 
-              &.swiper-pagination-bullet-active{
-                background: #1D252E;
+              &.swiper-pagination-bullet-active {
+                background: #1d252e;
               }
             }
           }
@@ -3644,6 +3643,13 @@ body.spz-14018 {
                 font-weight: 700;
                 line-height: 24px;
                 margin: 0 0 12px;
+                @media (max-width: 1199.98px) {
+                  display: -webkit-box;
+                  -webkit-line-clamp: 2;
+                  -webkit-box-orient: vertical;
+                  overflow: hidden;
+                  text-overflow: ellipsis;
+                }
               }
 
               .card-desc {
@@ -3653,6 +3659,11 @@ body.spz-14018 {
                 font-style: normal;
                 font-weight: 500;
                 line-height: 20px;
+                display: -webkit-box;
+                -webkit-line-clamp: 4;
+                -webkit-box-orient: vertical;
+                overflow: hidden;
+                text-overflow: ellipsis;
               }
 
               .learn-more {

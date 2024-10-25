@@ -17,6 +17,20 @@
             link: "https://drata.com/customers"
         },
         {
+            name: "Joshua Peskay,",
+            companyLogo: astUrl + "f_auto/drata/14018/frame_1000003437.webp",
+            title: "vCIO",
+            review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
+            link: "https://drata.com/customers"
+        },
+        {
+            name: "Lola Kureno,",
+            companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003433.svg",
+            title: "Cyber Security Engineer",
+            review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
+            link: "https://drata.com/customers"
+        },
+        {
             name: "Jonathan Jaffe,",
             companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003434.svg",
             title: "CISO",
@@ -30,20 +44,6 @@
             review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we&#8217;re pursuing SOC 2 compliance!”",
             link: "https://drata.com/customers/apl-nexted"
         },
-        {
-            name: "Joshua Peskay,",
-            companyLogo: astUrl + "f_auto/drata/14018/frame_1000003437.webp",
-            title: "vCIO",
-            review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
-            link: "https://drata.com/customers"
-        },
-        {
-            name: "Lola Kureno,",
-            companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003433.svg",
-            title: "Cyber Security Engineer",
-            review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
-            link: "https://drata.com/customers"
-        }
     ];
 
     const featureCap = [
@@ -412,33 +412,88 @@
                     <img src="${astUrl}fl_sanitize/drata/28001/logo.svg" alt="Drata Logo" title="Drata Logo">
                 </div>
                 <div class="nav-links">
-                    <a class="nav-anchor" href="#overview-process" data-scroll-section="overview-process">Overview & Process</a>
-                    <a class="nav-anchor" href="#business-impact" data-scroll-section="business-impact">Business Impact</a>
-                    <a class="nav-anchor" href="#why-drata" data-scroll-section="why-drata">Why Drata</a>
-                    <a class="nav-anchor" href="#nav-resource" data-scroll-section="nav-resource">Resources</a>
+                    <a class="nav-anchor" href="javascript:;" data-scroll-section="overview-process">Overview & Process</a>
+                    <a class="nav-anchor" href="javascript:;" data-scroll-section="business-impact">Business Impact</a>
+                    <a class="nav-anchor" href="javascript:;" data-scroll-section="why-drata">Why Drata</a>
+                    <a class="nav-anchor" href="javascript:;" data-scroll-section="nav-resource">Resources</a>
                 </div>
             </div>
         </nav>`);
         });
 
-        document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
-            anchor.addEventListener('click', function (e) {
-                const target = document.querySelector(this.getAttribute('href'));
-
+        window.addEventListener('click', function (e) {
+            if (e.target.classList.contains('nav-anchor')) {
                 document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
                     anchor.classList.remove('active');
                 });
+                e.target.classList.add('active');
 
-                e.preventDefault();
-                // this.classList.add('active');
+                const target = document.querySelector(`.spz-sec[data-scroll-anchor="` + e.target.getAttribute('data-scroll-section') + `"]`);
+
                 if (target) {
                     window.scrollTo({
-                        top: target.offsetTop - 100,
-                        behavior: 'smooth'
+                        top: target.offsetTop - 50,
+                        // behavior: 'smooth'
                     });
+
+                    let checkActiveNav = setInterval(() => {
+                        if (document.querySelector('header ~ .hero-section-14018')) {
+                            const hero = document.querySelector('header ~ .hero-section-14018');
+                            const rect = hero.getBoundingClientRect();
+                            if (hero && rect.top <= -100) {
+                                document.querySelector('header').classList.add('hide-header');
+                            } else {
+                                document.querySelector('header').classList.remove('hide-header');
+                            }
+                        }
+                    }, 10);
+
+                    setTimeout(() => {
+                        clearInterval(checkActiveNav);
+                    }, 1000);
                 }
-            });
+            }
         });
+
+        // document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+        //     anchor.addEventListener('click', function (e) {
+        //         // e.preventDefault();
+        //         console.log(this.getAttribute('href'));
+        //         const target = document.querySelector(this.getAttribute('data-scroll-section'));
+
+        //         document.querySelectorAll('.nav-anchor').forEach(function (anchor) {
+        //             anchor.classList.remove('active');
+        //         });
+
+        //         console.log(target);
+        //         // this.classList.add('active');
+        //         if (target) {
+        //             console.log(target.offsetTop);
+        //             window.scrollTo({
+        //                 top: target.offsetTop - 100,
+        //                 behavior: 'smooth'
+        //             });
+
+        //             let checkActiveNav = setInterval(() => {
+        //                 if (document.querySelector('header ~ .hero-section-14018')) {
+        //                     const hero = document.querySelector('header ~ .hero-section-14018');
+        //                     const rect = hero.getBoundingClientRect();
+        //                     console.log(rect.top);
+        //                     console.log(hero && rect.top <= -200);
+        //                     if (hero && rect.top <= -100) {
+        //                         document.querySelector('header').classList.add('hide-header');
+        //                     } else {
+        //                         document.querySelector('header').classList.remove('hide-header');
+        //                     }
+        //                 }
+        //             }, 10);
+
+        //             setTimeout(() => {
+        //                 clearInterval(checkActiveNav);
+        //             }, 1000);
+        //         }
+        //     });
+        // });
     }
 
     function checkActiveNav_V1() {
@@ -488,7 +543,7 @@
         if (document.querySelector('header ~ .hero-section-14018')) {
             const hero = document.querySelector('header ~ .hero-section-14018');
             const rect = hero.getBoundingClientRect();
-            if (hero && rect.top <= -200) {
+            if (hero && rect.top <= -100) {
                 document.querySelector('header').classList.add('hide-header');
             } else {
                 document.querySelector('header').classList.remove('hide-header');
@@ -515,7 +570,7 @@
                 arrow: 'up'
             },
             {
-                title: 'Lucid Works',
+                title: 'Policy Dock',
                 logo: aUrl + 'policy_dock.svg',
                 number: '24',
                 text: 'weeks saved',
@@ -1071,7 +1126,7 @@
     function customerReviews_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.cr-section-14018')) return;
-            
+
             let variant = sessionStorage.getItem('variant');
             let dataAttr = 'business-impact';
             if (!variant) {
