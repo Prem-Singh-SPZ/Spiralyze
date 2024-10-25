@@ -1576,7 +1576,7 @@
         waitForElm('.feature-cap-section-14018').then(function () {
             const title = document.querySelector('.feature-cap-section-14018 .large-title');
             const titleRect = title.getBoundingClientRect();
-            const space = titleRect.left;
+            const space = titleRect.left - 1;
             document.querySelector('.feature-cap-section-14018 .slider-section').style.marginLeft = space + 'px';
         });
     }
