@@ -1,16 +1,16 @@
 (function () {
     function createTest() {
         waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
-            document.querySelector("body").classList.add("spz-28002");
+            document.querySelector("body").classList.add("spz-28002-TC");
 
-            submitTestDetails('Variant_28001');
+            submitTestDetails('Control_28002a');
         });
 
-        createCookie('spz-28002-loaded', 'true', 1);
+        createCookie('spz-28002-TC-loaded', 'true', 1);
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-28002");
+        document.body.classList.remove("spz-28002-TC");
     }
 
     // Passing test details to hidden fields
@@ -24,12 +24,12 @@
         const sInt = setInterval(() => {
             var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
 
-            // Check if spz-28002-loaded cookie is present and cro_field is present
-            if ((cro_field && cro_field.val != '') && isCookieExist('spz-28002-loaded')) {
+            // Check if spz-28002-TC-loaded cookie is present and cro_field is present
+            if ((cro_field && cro_field.val != '') && isCookieExist('spz-28002-TC-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Variant_28002');
+                submitTestDetails('Control_28002a');
 
-                deleteCookie('spz-28002-loaded');
+                deleteCookie('spz-28002-TC-loaded');
             }
         }, 1000);
 

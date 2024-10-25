@@ -85,7 +85,7 @@
             setTimeout(() => {
                 clearInterval(updatePage);
             }, 1000);
-            submitTestDetails('Variant_28001');
+            submitTestDetails('Variant_28002a');
         });
 
         createCookie('spz-28002-loaded', 'true', 1);
@@ -108,19 +108,19 @@
 
     // Passing test details to hidden fields
     function submitTestDetails(cro_test) {
-        if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
-            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', cro_test);
+        if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
         }
     }
 
     function demoChecked() {
         const sInt = setInterval(() => {
-            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
+            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
 
             // Check if spz-28002-loaded cookie is present and cro_field is present
             if ((cro_field && cro_field.val != '') && isCookieExist('spz-28002-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Variant_28002');
+                submitTestDetails('Variant_28002a');
 
                 deleteCookie('spz-28002-loaded');
             }

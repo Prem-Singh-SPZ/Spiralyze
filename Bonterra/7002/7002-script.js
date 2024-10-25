@@ -359,6 +359,13 @@ window.addEventListener("click", function (e) {
             stepContent.classList.add('error');
         }
     }
+
+    if (e.target.getAttribute('href') == '#form') {
+        e.preventDefault();
+        document.querySelector('.spz-7002 #HERO #HERO-Block3-Form').scrollIntoView({
+            behavior: 'smooth'
+        });
+    }
 });
 
 // Generic Code

@@ -33,7 +33,7 @@
 
 	function createTest() {
 		let modalPresent = setInterval(function () {
-			if (!document.querySelector('.spz-modal-wrap')) {
+			if (!document.querySelector('.spz-modal-wrap') && window.location.href.indexOf("/about") == -1 && window.location.href.indexOf("/press") == -1 && window.location.href.indexOf("/security") == -1 && window.location.href.indexOf("/blog/drata-receives-first-pair-workplace-accolades") == -1 && window.location.href.indexOf("/demo") == -1) {
 				clearInterval(modalPresent)
 				addModal(
 					modalData,
@@ -73,7 +73,7 @@
 			}
         		<div class="modal-ctas">
         		${modalData.ctaHref.trim().length !== 0
-				? `<a href="${modalData.ctaHref}">${modalData.ctaText}</a>`
+				? `<a href="${modalData.ctaHref}" class="spz_4003_tracking">${modalData.ctaText}</a>`
 				: ''
 			}        			
         		</div>        		
@@ -88,7 +88,7 @@
 		let scrollPos;
 
 		function appendModal() {
-			if (!document.querySelector(modalWrapSelector)) {
+			if (!document.querySelector(modalWrapSelector) && window.location.href.indexOf("/about") == -1 && window.location.href.indexOf("/press") == -1 && window.location.href.indexOf("/security") == -1 && window.location.href.indexOf("/blog/drata-receives-first-pair-workplace-accolades") == -1 && window.location.href.indexOf("/demo") == -1) {
 				document.body.insertAdjacentHTML('beforeend', modalTemplate);
 				scrollPos = window.scrollY;
 				document.querySelector(modalWrapSelector).addEventListener('click', handleModalClick);
@@ -166,23 +166,20 @@
 		window.dispatchEvent(new Event('locationchange'));
 	});
 	window.addEventListener('locationchange', function () {
-		removeTest();
 		url = location.href;
 		urlCheck(url);
-		exitIntentPopup(false);
 	});
 
 	var url = location.href;
 	urlCheck(url);
 
 	function urlCheck(url) {
-
 		let testURL = '';
-		if (window.location.href.indexOf("/company") == -1 && window.origin == "https://drata.com" && window.location.href.indexOf("/demo") == -1) {
+		if (window.location.href.indexOf("/about") == -1 && window.location.href.indexOf("/press") == -1 && window.location.href.indexOf("/security") == -1 && window.location.href.indexOf("/blog/drata-receives-first-pair-workplace-accolades") == -1 && window.location.href.indexOf("/demo") == -1 && window.origin == "https://drata.com") {
 			testURL = window.location.href;
 		}
 
-		else if (window.location.href.indexOf("/demo") > -1  && window.innerWidth > 1199) {
+		else if (window.location.href.indexOf("/demo") > -1 && window.innerWidth > 1199) {
 			waitForElm('form.hs-form-private .hs_cro_test_1 .input .hs-input').then(function (elm) {
 				submitTestDetails();
 			});
@@ -199,6 +196,7 @@
 		if (document.querySelector('.spz-modal-wrap')) {
 			document.querySelector('.spz-modal-wrap').remove();
 		}
+
 		document.body.classList.remove("spz-3004");
 	}
 
