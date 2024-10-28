@@ -33,7 +33,7 @@ let triageData = [
 
     //Question 2 start
     {
-        titleQues: "What product(s) are you interested in?",
+        titleQues: "What product are you interested in?",
         answers: [
             {
                 formVal: 'Digital',
@@ -107,14 +107,16 @@ function createTest() {
     addTriage();
 
     // Check if the user has already submitted the form in this session
-    if (localStorage.getItem('formSubmitted')) {
-        document.body.classList.add('repeat-user');
-        const items = document.querySelectorAll('.progress-item');
-        items.forEach((item, i) => {
-            item.classList.remove('active'); // Remove default active class
-            item.classList.add(i < items.length - 1 ? 'completed' : 'active');
-        });
-    }
+    waitForElm('#HERO .progress-item').then(function () {
+        if (localStorage.getItem('formSubmitted')) {
+            document.body.classList.add('repeat-user');
+            const items = document.querySelectorAll('.progress-item');
+            items.forEach((item, i) => {
+                item.classList.remove('active'); // Remove default active class
+                item.classList.add(i < items.length - 1 ? 'completed' : 'active');
+            });
+        }
+    });
 }
 
 function formModify() {
@@ -283,7 +285,7 @@ function addTriage() {
 
     waitForElm('.answer-item input[name="What-is-your-organization-type"]').then(function () {
         // Pre-check options for step 1 and step 2
-        ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
+        ['What-is-your-organization-type', 'What-product-are-you-interested-in'].forEach(name => {
             //get the selected values from the triageData stored in session storage
             triageData.forEach((item, index) => {
                 item.answers.forEach((ans, ind) => {
@@ -295,7 +297,7 @@ function addTriage() {
         });
 
         // Store selected values in local storage and handle error state removal
-        ['What-is-your-organization-type', 'What-products-are-you-interested-in'].forEach(name => {
+        ['What-is-your-organization-type', 'What-product-are-you-interested-in'].forEach(name => {
             document.querySelectorAll(`.answer-item input[name="${name}"]`).forEach(item => {
                 item.addEventListener('click', e => {
                     //set the selected values isSelected to true in the triageData stored in session storage
@@ -334,7 +336,7 @@ const prefillSelectFields = () => {
                     //check here from which question the value is coming and set the value to the respective field
                     if (field === 'Industry' && item.titleQues === 'What is your organization type?' && document.querySelector(`select[name = "Industry"]`)) {
                         document.querySelector(`select[name = "Industry"]`).value = ans.formVal;
-                    } else if (field === 'Product_Interest__c' && item.titleQues === 'What product(s) are you interested in?' && document.querySelector(`select[name = "Product_Interest__c"]`)) {
+                    } else if (field === 'Product_Interest__c' && item.titleQues === 'What product are you interested in?' && document.querySelector(`select[name = "Product_Interest__c"]`)) {
                         document.querySelector(`select[name = "Product_Interest__c"]`).value = ans.formVal;
                     }
                 }

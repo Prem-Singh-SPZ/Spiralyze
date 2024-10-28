@@ -25,7 +25,6 @@ body.spz-7003 #HERO .container {
   max-width: 1230px;
   padding-top: 0;
   padding-bottom: 0 !important;
-  min-height: 100vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,6 +33,9 @@ body.spz-7003 #HERO .container {
       -ms-flex-direction: column;
           flex-direction: column;
   position: relative;
+}
+body.spz-7003 #HERO .container:has(.lm-cta-wrapper:not(.spz-hidden)) {
+  min-height: 100vh;
 }
 @media (max-width: 1199.98px) {
   body.spz-7003 #HERO .container {

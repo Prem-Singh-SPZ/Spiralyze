@@ -60,7 +60,7 @@ document.addEventListener('click', function (event) {
         document.querySelectorAll('body.spz-7003 > .on.spz-hidden').forEach(function (el) {
             el.classList.remove('spz-hidden');
         });
-        event.target.classList.add('spz-hidden');
+        event.target.parentElement.classList.add('spz-hidden');
         document.querySelector('.spz-7003 #SEC2').scrollIntoView({
             behavior: 'smooth',
             block: 'start'

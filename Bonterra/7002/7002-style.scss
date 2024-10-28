@@ -10,6 +10,22 @@ body.spz-7002 {
     padding: 0;
   }
 
+  #HEAD {
+    .container {
+      max-width: 1310px;
+
+      @media (max-width: 1199.98px) {
+        max-width: 734px;
+        padding-bottom: 40px !important;
+      }
+
+      @media (max-width: 767.98px) {
+        max-width: 510px;
+        padding-bottom: 32px !important;
+      }
+    }
+  }
+
   #HERO {
     background: #f6f5fb;
     border: none;
@@ -358,7 +374,7 @@ body.spz-7002 {
             width: 100% !important;
             max-width: calc(100% - 20px);
             height: 56px;
-            background: #C7D0FF !important;
+            background: #c7d0ff !important;
             border: none !important;
             outline: none !important;
             margin: 12px auto 0 !important;
@@ -414,7 +430,11 @@ input {
     width: 100%;
     max-width: 584px;
     margin-top: 24px;
-    background: linear-gradient(180deg, #FFF 68.91%, rgba(255, 255, 255, 0.96) 100%);
+    background: linear-gradient(
+      180deg,
+      #fff 68.91%,
+      rgba(255, 255, 255, 0.96) 100%
+    );
     box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
     display: flex;
     flex-wrap: wrap;
@@ -507,7 +527,7 @@ input {
         flex-wrap: wrap;
         align-items: center;
         justify-content: center;
-        background: #C7D0FF;
+        background: #c7d0ff;
         color: $purple;
         text-align: center;
         font-family: $Noto;
@@ -726,7 +746,7 @@ input {
         }
         padding: 0 6px 32px;
 
-        .question-item{
+        .question-item {
           padding: 0 10px;
         }
       }

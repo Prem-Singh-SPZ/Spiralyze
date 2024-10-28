@@ -2,6 +2,21 @@ body.spz-7002 .mktoMobileShow .mktoForm,
 body.spz-7002 .mktoForm * {
   padding: 0;
 }
+body.spz-7002 #HEAD .container {
+  max-width: 1310px;
+}
+@media (max-width: 1199.98px) {
+  body.spz-7002 #HEAD .container {
+    max-width: 734px;
+    padding-bottom: 40px !important;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-7002 #HEAD .container {
+    max-width: 510px;
+    padding-bottom: 32px !important;
+  }
+}
 body.spz-7002 #HERO {
   background: #f6f5fb;
   border: none;
@@ -330,7 +345,7 @@ body.spz-7002 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   width: 100% !important;
   max-width: calc(100% - 20px);
   height: 56px;
-  background: #C7D0FF !important;
+  background: #c7d0ff !important;
   border: none !important;
   outline: none !important;
   margin: 12px auto 0 !important;
@@ -377,8 +392,8 @@ input:-webkit-autofill:active {
   width: 100%;
   max-width: 584px;
   margin-top: 24px;
-  background: -webkit-gradient(linear, left top, left bottom, color-stop(68.91%, #FFF), to(rgba(255, 255, 255, 0.96)));
-  background: linear-gradient(180deg, #FFF 68.91%, rgba(255, 255, 255, 0.96) 100%);
+  background: -webkit-gradient(linear, left top, left bottom, color-stop(68.91%, #fff), to(rgba(255, 255, 255, 0.96)));
+  background: linear-gradient(180deg, #fff 68.91%, rgba(255, 255, 255, 0.96) 100%);
   -webkit-box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
           box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
   display: -webkit-box;
@@ -499,7 +514,7 @@ input:-webkit-autofill:active {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  background: #C7D0FF;
+  background: #c7d0ff;
   color: #381360;
   text-align: center;
   font-family: "Noto Sans", sans-serif;
@@ -627,10 +642,7 @@ input:-webkit-autofill:active {
   line-height: 20px;
   margin-top: 8px;
 }
-.spz-7002 .spz-triage-wrap .question-2 .answers-wrap .answer-item,
-.spz-7002 .spz-triage-wrap .question-3 .answers-wrap .answer-item,
-.spz-7002 .spz-triage-wrap .question-4 .answers-wrap .answer-item,
-.spz-7002 .spz-triage-wrap .question-5 .answers-wrap .answer-item {
+.spz-7002 .spz-triage-wrap .question-2 .answers-wrap .answer-item {
   width: calc(33.3333333333% - 8px);
 }
 .spz-7002 .spz-triage-wrap .answer-item .answer-radio {
