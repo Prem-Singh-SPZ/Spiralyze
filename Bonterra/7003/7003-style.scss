@@ -34,7 +34,7 @@ body.spz-7003 {
 
     .container {
       max-width: 1230px;
-      padding-top: 23px;
+      padding-top: 0;
       padding-bottom: 0 !important;
       min-height: 100vh;
       display: flex;
@@ -43,7 +43,7 @@ body.spz-7003 {
 
       @media (max-width: 1199.98px) {
         max-width: 734px;
-        padding-top: 16px;
+        // padding-top: 16px;
       }
 
       @media (max-width: 767.98px) {
@@ -64,15 +64,17 @@ body.spz-7003 {
         pointer-events: none;
 
         @media (max-width: 1199.98px) {
-        display: none;
+          display: none;
         }
       }
 
       .spz-logo-wrapper {
         margin-bottom: 24px;
+        margin-top: 23px;
 
         @media (max-width: 1199.98px) {
           margin-bottom: 64px;
+          margin-top: 16px;
         }
 
         @media (max-width: 767.98px) {
@@ -250,7 +252,7 @@ body.spz-7003 {
       .spz-social-proof {
         margin: 16.5px 0 36px;
 
-        @media screen and (max-width: 767.98px){
+        @media screen and (max-width: 767.98px) {
           margin: 0.5px 2px 20px 0;
         }
 
@@ -309,12 +311,11 @@ body.spz-7003 {
             pointer-events: none;
           }
 
-          
           &:hover {
             background: #381360;
             color: #ffffff;
 
-            svg path{
+            svg path {
               stroke: #ffffff;
             }
           }
