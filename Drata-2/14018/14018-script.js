@@ -363,7 +363,7 @@
                     <div class="hero-left-section">
                     <h1 class="hc-title">New to <span class="hc-blue">SOC 2?</span> <br class="desk-only">We Got You.</h1>
                     <div class="star-rating dis-flex align-items-center"><img src="${astUrl}fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
-                    <img src="${astUrl}fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
+                    <img src="${astUrl}fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (800+ reviews)</span></div>
                     <div class="list-grp-wrapper">
                     <ul class="list-group">
                     <li class="list-item"><strong>Automate (Most of) the Work.</strong> Reduce audit prep by 80% with software that creates SOC 2 documentation in minutes.</li>
@@ -389,7 +389,7 @@
                     <div class="hero-left-section">
                     <h1 class="hc-title">Manage SOC 2 with <span class="hc-blue">80%</span> Less Time, Cost, and Hassle</h1>
                     <div class="star-rating dis-flex align-items-center"><img src="${astUrl}fl_sanitize/drata/14001/hero_logo-g2.svg" class="g2-img" alt="G2 Logo" title="G2 Logo" draggable="false">
-                    <img src="${astUrl}fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (600+ reviews)</span></div>
+                    <img src="${astUrl}fl_sanitize/drata/14007/rating-4_9.svg" class="sr-img" alt="Ratings" title="Ratings" draggable="false"><span class="sr-number"><strong>4.9</strong> (800+ reviews)</span></div>
                     <div class="list-grp-wrapper">
                     <ul class="list-group">
                     <li class="list-item"><strong>Automated Compliance</strong> - Hundreds of integrations collect, test, and store evidence for access reviews, personnel, devices, and more. </li>
@@ -1317,7 +1317,7 @@
                         <img src="${astUrl}fl_sanitize/drata/14018/frame_40347.svg" alt="G2 Logo">
                         <img src="${astUrl}fl_sanitize/drata/14018/frame_5597.svg" alt="Star Rating">
                     </div>
-                    <div class="sticker-desc"><span>Excellent</span> based on <span>700+</span> reviews</div>
+                    <div class="sticker-desc"><span>Excellent</span> based on <span>800+</span> reviews</div>
                 </div>
                 <div class="cta-desc">${title}</div>
                 <div class="cta-wrapper">
