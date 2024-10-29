@@ -2,16 +2,16 @@ let bodyLoaded = setInterval(function () {
     const body = document.querySelector('body');
     if (body) {
         clearInterval(bodyLoaded);
-        if (!body.classList.contains('spz-9001')) {
-            body.classList.add('spz-9001');
+        if (!body.classList.contains('spz-9003')) {
+            body.classList.add('spz-9003');
 
             waitForElm('#HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton').then(function () {
                 formModify();
                 setHiddenFields();
 
                 if (!document.querySelector('spz-modal-form')) {
-                    document.querySelector('.spz-9001 #HERO').insertAdjacentHTML('afterend', '<div class="spz-modal-form"><div class="modal-form-container"> </div> </div>');
-                    document.querySelector('.spz-9001 .spz-modal-form .modal-form-container').insertAdjacentElement('afterbegin', document.querySelector('body.spz-9001 #HERO .container .block-wrapper .block-3 > .mktoForm'));
+                    document.querySelector('.spz-9003 #HERO').insertAdjacentHTML('afterend', '<div class="spz-modal-form"><div class="modal-form-container"> </div> </div>');
+                    document.querySelector('.spz-9003 .spz-modal-form .modal-form-container').insertAdjacentElement('afterbegin', document.querySelector('body.spz-9003 #HERO .container .block-wrapper .block-3 > .mktoForm'));
                 }
             });
         }
@@ -20,11 +20,11 @@ let bodyLoaded = setInterval(function () {
 
 window.addEventListener('click', function (e) {
     if (e.target.classList.contains('hero-trigger-form')) {
-        const email = this.document.querySelector('body.spz-9001 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email');
+        const email = this.document.querySelector('body.spz-9003 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email');
 
         document.body.classList.add('spz-show-modal');
-        email.value = this.document.querySelector('body.spz-9001 .spz-hero-wrap .email-hero-spz').value;
-        // this.document.querySelector('body.spz-9001 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email').dispatchEvent(new Event('focus'));
+        email.value = this.document.querySelector('body.spz-9003 .spz-hero-wrap .email-hero-spz').value;
+        // this.document.querySelector('body.spz-9003 .spz-modal-form form.mktoForm .form-fields-row .mktoFormCol .mktoFieldWrap #Email').dispatchEvent(new Event('focus'));
 
         if (email.value === '') {
             email.closest('.mktoFieldWrap').classList.remove('filled');
@@ -42,7 +42,7 @@ window.addEventListener('click', function (e) {
 
     if (event.target.getAttribute('href') == '#form') {
         event.preventDefault();
-        document.querySelector('.spz-9001 #HERO #spz-email-cta').scrollIntoView({
+        document.querySelector('.spz-9003 #HERO #spz-email-cta').scrollIntoView({
             behavior: 'smooth'
         });
     }
@@ -78,7 +78,7 @@ function emailEvents() {
 }
 
 function formModify() {
-    if (document.querySelectorAll('.spz-9001 #HERO .mktoForm .lpeCElement.Bonterra__Pricing_Request__IM h2.spz-form-title').length == 0)
+    if (document.querySelectorAll('.spz-9003 #HERO .mktoForm .lpeCElement.Bonterra__Pricing_Request__IM h2.spz-form-title').length == 0)
         document.querySelector('#HERO .mktoForm .lpeCElement.Bonterra__Pricing_Request__IM').insertAdjacentHTML('afterbegin', `<h2 class="spz-form-title">Request Pricing</h2>`);
 
 
@@ -96,19 +96,19 @@ function formModify() {
     // document.querySelector('label#LblProduct_Interest__c').textContent = "Product Interest";
 
     // Change Field Positions
-    // const email_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-email');
-    // const orgname_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-company');
+    // const email_field = document.querySelector('.spz-9003 #HERO form.mktoForm .spz-email');
+    // const orgname_field = document.querySelector('.spz-9003 #HERO form.mktoForm .spz-company');
     // email_field.before(orgname_field);
 
-    // const donor_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-number_of_employees_range__c');
-    // const orgtype_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-company');
+    // const donor_field = document.querySelector('.spz-9003 #HERO form.mktoForm .spz-number_of_employees_range__c');
+    // const orgtype_field = document.querySelector('.spz-9003 #HERO form.mktoForm .spz-company');
     // orgtype_field.after(donor_field);
 
 
     focusFields();
 
-    document.querySelector('.spz-9001 #HERO form.mktoForm .mktoButtonRow button.mktoButton').addEventListener('click', function (event) {
-        document.querySelectorAll(`.spz-9001 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (elem) {
+    document.querySelector('.spz-9003 #HERO form.mktoForm .mktoButtonRow button.mktoButton').addEventListener('click', function (event) {
+        document.querySelectorAll(`.spz-9003 form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (elem) {
             let Buffertime = setInterval(() => {
                 if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
                     elem.closest('.mktoFieldWrap').classList.add('error');
@@ -130,11 +130,11 @@ function formModify() {
 }
 
 function addUniqueClass() {
-    if (!document.querySelector('.spz-9001 #HERO form.mktoForm .form-fields-row'))
-        document.querySelector('.spz-9001 #HERO form.mktoForm').insertAdjacentHTML('afterbegin', '<div class="form-fields-row"></div>');
+    if (!document.querySelector('.spz-9003 #HERO form.mktoForm .form-fields-row'))
+        document.querySelector('.spz-9003 #HERO form.mktoForm').insertAdjacentHTML('afterbegin', '<div class="form-fields-row"></div>');
 
     // Move all '.mktoFormCol' to '.form-fields-row'
-    document.querySelectorAll(`.spz-9001 #HERO form.mktoForm .mktoFormCol:not(.mktoButtonRow)`).forEach(function (col) {
+    document.querySelectorAll(`.spz-9003 #HERO form.mktoForm .mktoFormCol:not(.mktoButtonRow)`).forEach(function (col) {
         if (col.querySelector('.mktoField:not([type="hidden"])')) {
             // Append each '.mktoFormCol' to '.form-fields-row'
             document.querySelector('.form-fields-row').appendChild(col);
@@ -154,7 +154,7 @@ function addUniqueClass() {
 
 // On input focus add class on closest parent field class
 function focusFields() {
-    document.querySelectorAll(`.spz-9001 #HERO form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
+    document.querySelectorAll(`.spz-9003 #HERO form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (el) {
         el.addEventListener('focus', function () {
             el.closest('.mktoFieldWrap').classList.add('active', 'typing');
             checkError(el);
