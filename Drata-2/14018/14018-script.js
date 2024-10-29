@@ -12,6 +12,7 @@
         {
             name: "David Caughill,",
             companyLogo: astUrl + "f_auto/drata/14018/frame_1000003436.webp",
+            logoAlt: "Red Rover",
             title: "DevOps Engineer",
             review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
             link: "https://drata.com/customers"
@@ -19,6 +20,7 @@
         {
             name: "Joshua Peskay,",
             companyLogo: astUrl + "f_auto/drata/14018/frame_1000003437.webp",
+            logoAlt: "Round Table Technology",
             title: "vCIO",
             review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
             link: "https://drata.com/customers"
@@ -26,6 +28,7 @@
         {
             name: "Lola Kureno,",
             companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003433.svg",
+            logoAlt: "Xine",
             title: "Cyber Security Engineer",
             review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
             link: "https://drata.com/customers"
@@ -33,6 +36,7 @@
         {
             name: "Jonathan Jaffe,",
             companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003434.svg",
+            logoAlt: "Lemonade",
             title: "CISO",
             review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
             link: "https://drata.com/customers/lemonade"
@@ -40,6 +44,7 @@
         {
             name: "Chris Bake,",
             companyLogo: astUrl + "fl_sanitize/drata/14018/frame_1000003435.svg",
+            logoAlt: "Next Ed",
             title: "CTO",
             review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we&#8217;re pursuing SOC 2 compliance!”",
             link: "https://drata.com/customers/apl-nexted"
@@ -881,7 +886,7 @@
                                 <div class="accordion-item">
                                     <div class="accordion-title">Expedite Sales Cycles and Funding</div>
                                     <div class="accordion-content">No one wants to work with a security risk. SOC 2 compliance builds trust, differentiates you in the market, and proves you take security seriously—expediting the sales process, opening enterprise channels, giving investors peace of mind, and becoming the clear choice for partners.
-                                    <div class="learn-more-cta"><a href="drata.com/customers/merge" class="learn-more">Learn More ${anchorArrow}</a></div>
+                                    <div class="learn-more-cta"><a href="https://drata.com/customers/merge" class="learn-more">Learn More ${anchorArrow}</a></div>
                                     </div>
                                 </div>
                             </div>
@@ -942,9 +947,9 @@
                                     <div class="accordion-title">Accelerate Audit-Readiness</div>
                                     <div class="accordion-content">Get everything you need to quickly prepare for an audit.
                                     <ul class="accordion-list">
-                                        <li><span>Fast Implementation:</span> Use our auditor-approved SOC 2 template, complete with all necessary controls and requirements</li>
-                                        <li><span>Policy Management:</span> Use our policy library to distribute and track the completion of SOC 2-required policies</li>
-                                        <li><span>Automated Evidence Collection:</span> Connect your systems for automatic collection, testing, and storage of audit evidence, including personnel, devices, access reviews, and more</li>
+                                        <li><span>Fast Implementation:</span> Use our auditor-approved SOC 2 template, complete with all necessary controls and requirements.</li>
+                                        <li><span>Policy Management:</span> Use our policy library to distribute and track the completion of SOC 2-required policies.</li>
+                                        <li><span>Automated Evidence Collection:</span> Connect your systems for automatic collection, testing, and storage of audit evidence, including personnel, devices, access reviews, and more.</li>
                                     </ul>
                                     <div class="learn-more-cta"><a href="https://drata.com/platform/integrations" class="learn-more">Explore Integrations ${anchorArrow}</a></div>
                                     </div>
@@ -953,8 +958,8 @@
                                     <div class="accordion-title">Ace the Audit</div>
                                     <div class="accordion-content">Ensure audit readiness and streamline the audit process with Drata.
                                      <ul class="accordion-list">
-                                        <li><span>Progress Tracker:</span> Monitor your compliance status, missing requirements, and ensure audit-readiness in the Drata dashboard before your audit</li>
-                                        <li><span>Auditor Network:</span> Find a pre-vetted firm in Drata&#8217;s Auditor Alliance</li>
+                                        <li><span>Progress Tracker:</span> Monitor your compliance status, missing requirements, and ensure audit-readiness in the Drata dashboard before your audit.</li>
+                                        <li><span>Auditor Network:</span> Find a pre-vetted firm in Drata&#8217;s Auditor Alliance.</li>
                                         <li><span>Streamlined Audit:</span> Use Drata&#8217;s Audit Hub to simplify auditor communication and deliver compliance documents in auditor-preferred JSON format, saving time and ensuring no critical information is missed.</li>
                                     </ul>
                                     </div>
@@ -1082,7 +1087,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-img-wr">
-                                   <img src="${astUrl}f_auto/drata/14018/image_3.webp">
+                                   <img src="${astUrl}f_auto/drata/14018/image_3.webp" class="My Vendors">
                                 </div>
                             </div>
                             <div class="md-right">
@@ -1272,7 +1277,7 @@
                     <img src="${astUrl}fl_sanitize/drata/14018/logo08.svg" alt="Bitbucket">
                 </div>
                 <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo09.svg" alt="Gustog">
+                    <img src="${astUrl}fl_sanitize/drata/14018/logo09.svg" alt="Gusto">
                 </div>
                 <div class="oi-img">
                     <img src="${astUrl}f_auto/drata/14018/logo10.webp" alt="Datadog">
@@ -1531,6 +1536,8 @@
                 loop: true,
                 autoHeight: true,
                 mousewheel: false,
+                draggable: false,
+                allowTouchMove: false,
                 keyboard: {
                     enabled: true
                 },
@@ -1604,7 +1611,7 @@
                             </div>
                         </div>
                          <div class="slider-img">
-                            <img src="${review.companyLogo}" alt="${review.name}">
+                            <img src="${review.companyLogo}" alt="${review.logoAlt}">
                         </div>
                     </div>
                 </div>`;
