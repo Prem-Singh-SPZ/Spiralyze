@@ -1,0 +1,394 @@
+$Noto: "Noto Sans", sans-serif;
+$adelle: adelle, sans-serif;
+$grotesk: grotesk, "RecentGroteskBlack", sans-serif;
+
+body.spz-9001 {
+  overflow: hidden;
+
+  .spz-modal-form {
+    .modal-form-container {
+      position: fixed;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      z-index: 999;
+      width: 100%;
+      background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9003/bg-360_1.webp) no-repeat top left/cover;
+      overflow: auto;
+
+      @media screen and (min-width: 767.98px) {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9003/bg-768_1.webp) no-repeat top left/cover;
+      }
+
+      @media (min-width: 1199.98px)  {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9003/bg-1440_1.webp) no-repeat top left/cover;
+      }
+
+      @media (min-width: 2500.98px)  {
+        background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/bonterra/9003/bg-4k_1.webp) no-repeat top left/cover;
+      }
+
+      .mktoForm#HERO-Block3-Form {
+        min-height: 100vh;
+        justify-content: center;
+        padding: 0;
+      }
+
+      .lpeCElement.Bonterra__Pricing_Request__IM {
+        background: #fff;
+        max-width: 600px;
+        width: 100%;
+        padding: 34px 40px 40px;
+        margin: 24px auto;
+        position: relative;
+
+        @media screen and (max-width: 1199.98px) {
+          margin-left: auto;
+          margin-right: auto;
+          // max-width: 704px;
+        }
+
+        @media screen and (max-width: 767.98px) {
+          padding: 32.5px 16px 32px;
+          max-width: 336px;
+          // margin: 6px auto;
+        }
+
+        .spz-form-title {
+          color: #381360;
+          text-align: center;
+          font-family: $grotesk;
+          font-size: 48px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 50px;
+          letter-spacing: 1.44px;
+          text-transform: uppercase;
+          padding: 0;
+          margin-bottom: 38px;
+
+          @media screen and (max-width: 767.98px) {
+            font-size: 28px;
+            line-height: 30px;
+            letter-spacing: 1.12px;
+            margin-bottom: 22px;
+          }
+        }
+
+        .close-btn {
+          padding: 0;
+          position: absolute;
+          cursor: pointer;
+          top: 21px;
+          right: 24px;
+          width: 24px;
+          height: 24px;
+
+          img {
+            pointer-events: none;
+            padding: 0;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            top: 15px;
+            right: 16px;
+          }
+
+          &:hover {
+            img {
+              filter: invert(0.3);
+            }
+          }
+        }
+      }
+    }
+
+    form.mktoForm {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: flex-start;
+      width: 100% !important;
+      padding: 0;
+      gap: 0;
+      background: transparent !important;
+
+      .form-fields-row {
+        // padding: 0 10px !important;
+        display: flex;
+        justify-content: space-between;
+        align-items: flex-start;
+        flex-wrap: wrap;
+
+        .mktoFormCol {
+          width: calc(50% - 10px) !important;
+          display: inline-flex;
+          flex-wrap: wrap;
+          flex: unset;
+          margin: 0 !important;
+
+          &.spz-industry {
+            width: 100% !important;
+          }
+
+          @media screen and (max-width: 767.98px) {
+            width: 100% !important;
+          }
+
+          .mktoFieldWrap {
+            position: relative;
+            width: 100% !important;
+            margin-bottom: 20px;
+            padding: 0 !important;
+
+            @media screen and (max-width: 767.98px) {
+              margin-bottom: 20.2px;
+            }
+
+            .mktoLabel {
+              background: #f5f5ff;
+              // background: transparent;
+              color: #646464 !important;
+              font-family: $Noto !important;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 400 !important;
+              line-height: 1.4;
+              padding: 1px 6px !important;
+              margin: 0;
+              position: absolute;
+              width: auto !important;
+              max-width: calc(100% - 40px);
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+
+              top: 16px;
+              left: 10px;
+              pointer-events: none;
+              transition: all 0.2s ease !important;
+            }
+            .mktoField {
+              width: 100% !important;
+              height: 56px !important;
+              padding: 16px 16px !important;
+              background-color: #f5f5ff !important;
+              border: 1px solid #f5f5ff !important;
+              border-radius: 0;
+              outline: none;
+              box-shadow: none;
+              color: #381360 !important;
+              font-family: $Noto;
+              font-size: 16px !important;
+              font-style: normal;
+              font-weight: 400 !important;
+              line-height: 1.4 !important;
+              appearance: none;
+              text-overflow: ellipsis;
+              overflow: hidden;
+              white-space: nowrap;
+              transition: all 0.2s ease;
+
+              // &:hover {
+              //   background-color: #ffffff !important;
+              //   border-color: #381360 !important;
+              // }
+            }
+            select.mktoField {
+              padding-right: 40px !important;
+              background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
+              background-size: 22px;
+              background-repeat: no-repeat;
+              background-position: calc(100% - 9px) 16px;
+            }
+
+            &.hover {
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #381360 !important;
+              }
+              .mktoLabel {
+                background: #ffffff !important;
+              }
+            }
+
+            &.active.typing {
+              .mktoLabel {
+                font-size: 12px !important;
+                line-height: 16px;
+                top: -8px;
+                color: #381360 !important;
+                background: #ffffff;
+              }
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #381360 !important;
+                outline: 2px solid rgba(153, 167, 255, 0.5) !important;
+              }
+            }
+
+            &.filled {
+              .mktoLabel {
+                font-size: 12px !important;
+                line-height: 16px;
+                top: -8px;
+                color: #381360 !important;
+                background: #ffffff;
+              }
+              .mktoField {
+                background-color: #ffffff !important;
+                border: 1px solid #c4bbcf !important;
+              }
+            }
+
+            &.hover.filled {
+              .mktoField {
+                border-color: #381360 !important;
+              }
+            }
+
+            &.error {
+              .mktoLabel {
+                background: #f5f5ff;
+                // background: transparent;
+              }
+              .mktoField {
+                border: 1px solid #f2342f !important;
+                background-color: #ffffff;
+                outline: none;
+              }
+
+              &.filled {
+                .mktoLabel {
+                  background: #ffffff;
+                }
+              }
+            }
+
+            &.error.active.typing {
+              .mktoLabel {
+                background: #ffffff;
+              }
+              .mktoField {
+                border: 1px solid #f2342f !important;
+                background-color: #ffffff;
+                outline: none !important;
+              }
+            }
+          }
+        }
+      }
+
+      .mktoError {
+        position: relative;
+        top: unset;
+        left: unset;
+        right: unset !important;
+        bottom: unset !important;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        width: 100%;
+
+        .mktoErrorArrowWrap {
+          display: none;
+        }
+
+        .mktoErrorMsg {
+          margin: 4px 0 0 0 !important;
+          background: transparent !important;
+          box-shadow: none !important;
+          border: none !important;
+          padding: 0 0 0 16px;
+          color: #f2342f !important;
+          font-family: $Noto !important;
+          font-size: 12px !important;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 16px;
+          text-shadow: none !important;
+          max-width: unset !important;
+          position: relative;
+          &::before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 12px;
+            height: 16px;
+            background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1724831150/bonterra/1002/Helper_container.svg");
+            background-size: contain;
+            background-repeat: no-repeat;
+          }
+        }
+      }
+      .mktoButtonRow {
+        width: 100% !important;
+        justify-content: center;
+
+        .mktoButtonWrap {
+          width: 100% !important;
+          margin: 0 !important;
+
+          button.mktoButton {
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: center;
+            width: 100% !important;
+            max-width: 100%;
+            height: 48px;
+            background: #c7d0ff !important;
+            border: none !important;
+            outline: none !important;
+            margin: 12px auto 0 !important;
+            cursor: pointer;
+            transition: all 0.2s ease !important;
+            position: relative;
+            color: #381360 !important;
+            text-align: center;
+            font-family: $Noto;
+            font-size: 16px !important;
+            font-weight: 700 !important;
+            line-height: 24px !important;
+
+            @media screen and (max-width: 767.98px) {
+              max-width: 100%;
+              margin: 4px auto 0 !important;
+            }
+
+            &:hover {
+              background: #381360 !important;
+              color: #ffffff !important;
+            }
+            // &:focus {
+            //   outline: 1px solid #447f19;
+            // }
+          }
+        }
+      }
+    }
+  }
+}
+input {
+  &:-webkit-autofill,
+  &:-internal-autofill-selected {
+    -webkit-box-shadow: 0 0 0 56px white inset !important;
+    -webkit-text-fill-color: #381360 !important;
+    &:hover {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #381360 !important;
+    }
+    &:focus {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #381360 !important;
+    }
+    &:active {
+      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-text-fill-color: #381360 !important;
+    }
+  }
+}
