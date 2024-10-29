@@ -914,9 +914,9 @@
                     if (!isOpen) {
                         item.classList.add('open');
                     }
-                    // else {
-                    //     item.classList.add('open');
-                    // }
+                    else {
+                        item.classList.add('open');
+                    }
 
                     // updateImgHeight_V1();
                 });
