@@ -96,9 +96,9 @@ function formModify() {
     // document.querySelector('label#LblProduct_Interest__c').textContent = "Product Interest";
 
     // Change Field Positions
-    const email_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-email');
-    const orgname_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-company');
-    email_field.before(orgname_field);
+    // const email_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-email');
+    // const orgname_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-company');
+    // email_field.before(orgname_field);
 
     // const donor_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-number_of_employees_range__c');
     // const orgtype_field = document.querySelector('.spz-9001 #HERO form.mktoForm .spz-company');
