@@ -1087,7 +1087,7 @@
                         <div class="md-top-section dis-flex">
                             <div class="md-left">
                                 <div class="md-img-wr">
-                                   <img src="${astUrl}f_auto/drata/14018/image_3.webp" class="My Vendors">
+                                   <img src="${astUrl}f_auto/drata/14018/image_3.webp" alt="My Vendors">
                                 </div>
                             </div>
                             <div class="md-right">
