@@ -1,0 +1,217 @@
+$ff-inter: inherit;
+
+body.spz-2020 {
+  section[variant="contentAccordionDefaultSectionWrapper"] {
+    div[class*="ContentAccordion-root"] {
+      div[class*="ContentAccordion-styledBlockText"] {
+        div[class*="BlockText-content"] {
+          a[class*="BlockText-link"] {
+            display: none;
+          }
+        }
+      }
+
+      div[class*="ContentAccordion-contentOuterWrapper"] {
+        div[class*="ContentAccordion-contentContainer"] {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+// GRC Tabs Section Starts
+.grc-tabs-section {
+  .gts-wrapper {
+    .gts-tabs {
+      display: flex;
+      padding: 12px 20px;
+      align-items: center;
+      gap: 16px;
+      border-radius: 41px;
+      background: #f6f8fa;
+      max-width: 1248px;
+      margin: 0 auto 48px;
+
+      @media (max-width: 1199.98px) {
+        max-width: 624px;
+        gap: 8px;
+      }
+
+      @media (max-width: 767.98px) {
+        padding: 8px;
+        max-width: calc(100% - 32px);
+        overflow-x: auto;
+        gap: 0;
+        margin-bottom: 40px;
+      }
+
+      .gts-tab {
+        display: flex;
+        padding: 12px 20px 12px 12px;
+        align-items: center;
+        gap: 12px;
+        border-radius: 999px;
+        cursor: pointer;
+
+        @media (max-width: 1199.98px) {
+          gap: 8px;
+          padding: 12px 16px 12px 8px;
+          width: 192px;
+        }
+
+        @media (max-width: 767.98px) {
+          padding: 8px 12px;
+          width: auto;
+          min-width: 246px;
+        }
+
+        .gts-icon {
+          display: flex;
+          width: 40px;
+          min-width: 40px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          gap: 8px;
+          border-radius: 50%;
+          background: #fff;
+        }
+        .gts-text {
+          color: #293642;
+          font-family: $ff-inter;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 500;
+          line-height: 24px;
+          white-space: nowrap;
+
+          @media (max-width: 1199.98px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+
+        // &:hover {
+        //   .gts-text {
+        //     color: #0580e8;
+        //   }
+        // }
+
+        // media query for touch devices
+        @media (hover: hover) {
+          &:hover {
+            background: rgba(255, 255, 255, 0.47);
+            .gts-icon {
+              background: #eff8ff;
+            }
+          }
+        }
+
+        &.active {
+          background: #fff;
+          .gts-icon {
+            background: #eff8ff;
+          }
+
+          .gts-text {
+            font-weight: 600;
+            color: #0c131a;
+
+            @media (max-width: 1199.98px) {
+              font-weight: 700;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .gtc-cards-content {
+    display: none;
+    padding: 0px 80px 96px 80px;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+    gap: 32px;
+    align-self: stretch;
+    flex-wrap: wrap;
+
+    &.active {
+      display: flex;
+    }
+
+    @media (max-width: 1199.98px) {
+      padding: 0px 32px 96px;
+    }
+
+    @media (max-width: 767.98px) {
+      gap: 16px;
+    }
+
+    .gtc-card-tab {
+      .gtct-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 80px;
+
+        .gtct-copy {
+          max-width: 575px;
+          width: 100%;
+          flex: 0 0 50%;
+
+          .gtct-title {
+            color: #0c131a;
+            font-family: $ff-inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 700;
+            line-height: 26px;
+            margin-bottom: 16px;
+            min-height: 78px;
+
+            @media (max-width: 1199.98px) {
+              min-height: 52px;
+              margin-bottom: 12px;
+            }
+
+            @media (max-width: 767.98px) {
+              font-size: 16px;
+              line-height: 24px;
+              min-height: initial;
+            }
+          }
+
+          .gtct-desc {
+            color: #485665;
+            font-family: $ff-inter;
+            font-size: 18px;
+            font-style: normal;
+            font-weight: 500;
+            line-height: 26px;
+
+            @media (max-width: 1199.98px) {
+            }
+
+            @media (max-width: 767.98px) {
+              font-size: 16px;
+              line-height: 24px;
+            }
+          }
+        }
+
+        .gtct-image {
+          max-width: 593px;
+          width: 100%;
+          flex: 0 0 50%;
+
+          img {
+            width: 100%;
+            height: auto;
+          }
+        }
+      }
+    }
+  }
+}
+// GRC Tabs Section Ends
