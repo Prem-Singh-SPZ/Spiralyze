@@ -4,9 +4,6 @@
                                     <path d="M1 1.5L5 5.5L1 9.5" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                                     </svg>`;
 
-    //append to preload images
-    document.querySelector('head').insertAdjacentHTML('beforeend', `<link rel="preload" href="${astUrl}/fl_sanitize/drata/14007/slider-left-hover.svg" as="image"><link rel="preload" href="${astUrl}/fl_sanitize/drata/14007/slider-right-hover.svg" as="image">`);
-
     function createTest() {
         document.body.classList.add("spz-2020");
 
@@ -22,8 +19,8 @@
     function removeTest() {
         document.body.classList.remove("spz-2020");
 
-        if (document.querySelector('.hero-section-14007')) {
-            document.querySelector('.hero-section-14007').remove();
+        if (document.querySelector('.grc-tabs-section')) {
+            document.querySelector('.grc-tabs-section').remove();
         }
     }
 
