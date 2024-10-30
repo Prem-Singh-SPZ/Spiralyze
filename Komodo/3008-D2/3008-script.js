@@ -1,24 +1,24 @@
 const timer = 7000;
 const heroImages = {
     tab1: {
-        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1463.webp',
-        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_784.webp',
-        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_383.webp'
+        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1467.webp',
+        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_789.webp',
+        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_390.webp'
     },
     tab2: {
-        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1445.webp',
-        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_771.webp',
-        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_369.webp'
+        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1469.webp',
+        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_792.webp',
+        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_389.webp'
     },
     tab3: {
-        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1451.webp',
-        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_777.webp',
-        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_374.webp'
+        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1470.webp',
+        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_788.webp',
+        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_387.webp'
     },
     tab4: {
-        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1455.webp',
-        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_781.webp',
-        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_380.webp'
+        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1464.webp',
+        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_787.webp',
+        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_386.webp'
     },
 };
 // Keep images in cache to avoid loading delay (according to the device resolution)
