@@ -289,6 +289,13 @@
                 tab.classList.add('active');
             });
         });
+
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('gtct-demo')) {
+                document.querySelector('a[href="/demo"]').click();
+            }
+        });
+
     }
 
 })();
