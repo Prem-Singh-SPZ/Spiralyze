@@ -139,6 +139,10 @@ body.spz-14018 {
 
     &:hover {
       color: #0580e8;
+
+      svg path{
+        fill: #0580e8;
+      }
     }
   }
 
@@ -3807,7 +3811,6 @@ body.spz-14018 {
               background: #fff;
               margin-bottom: 16px;
               cursor: pointer;
-              position: relative;
 
               @media (max-width: 1199.98px) {
                 margin-bottom: 16.5px;
@@ -3829,16 +3832,45 @@ body.spz-14018 {
                 display: flex;
                 align-items: center;
                 padding-right: 42px;
+                position: relative;
+                width: 100%;
 
-                @media (max-width: 1199.98px) {
-                  max-width: 80%;
-                }
+                // @media (max-width: 1199.98px) {
+                //   max-width: 80%;
+                // }
 
                 @media (max-width: 767.98px) {
                   font-size: 14px;
                   line-height: 20px;
                   min-height: 32px;
-                  max-width: 92%;
+                  // max-width: 92%;
+                }
+
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: calc(50% - 20px);
+                  right: 0;
+                  width: 40px;
+                  height: 40px;
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  pointer-events: none;
+  
+                  @media (max-width: 767.98px) {
+                    top: calc(50% - 16px);
+                    width: 32px;
+                    height: 32px;
+                  }
+                }
+  
+                &:hover::after {
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14018/arrow_hovered.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
                 }
               }
 
@@ -3861,51 +3893,28 @@ body.spz-14018 {
                 }
               }
 
-              &::after {
-                content: "";
-                position: absolute;
-                top: 32px;
-                right: 32px;
-                width: 40px;
-                height: 40px;
-                background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")
-                  no-repeat;
-                background-size: cover;
-                background-repeat: no-repeat;
-                pointer-events: none;
-
-                @media (max-width: 767.98px) {
-                  top: 16px;
-                  right: 15px;
-                  width: 32px;
-                  height: 32px;
-                }
-              }
-
-              &:hover::after {
-                background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14018/arrow_hovered.svg")
-                  no-repeat;
-                background-size: cover;
-                background-repeat: no-repeat;
-              }
+             
 
               &.open {
-                &::after {
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg")
-                    no-repeat;
-                  background-size: cover;
-                  background-repeat: no-repeat;
+                .accordion-title{
+                  &::after {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg")
+                      no-repeat;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
+                  
+                  &:hover::after {
+                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                      no-repeat;
+                    background-size: cover;
+                    background-repeat: no-repeat;
+                  }
                 }
                 .accordion-content {
                   display: block;
                 }
 
-                &:hover::after {
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
-                    no-repeat;
-                  background-size: cover;
-                  background-repeat: no-repeat;
-                }
               }
             }
           }
@@ -4152,7 +4161,7 @@ body.spz-14018 {
             .list-group {
               .list-item {
                 // color: #0c131a;
-                font-weight: 400;
+                // font-weight: 400;
                 line-height: 24px;
                 margin: 0 0 24px;
 
