@@ -16,9 +16,9 @@ const heroImages = {
         mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_387.webp'
     },
     tab4: {
-        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1464.webp',
-        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_787.webp',
-        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_386.webp'
+        desk: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_1471.webp',
+        tab: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_795.webp',
+        mob: '//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/3008/hero_background_392.webp'
     },
 };
 // Keep images in cache to avoid loading delay (according to the device resolution)
