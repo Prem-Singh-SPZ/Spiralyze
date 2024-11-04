@@ -14,11 +14,16 @@ body.spz-7003 #HERO {
     height: 304px;
     width: 100%;
     left: 0;
-    bottom: 370px;
+    bottom: 322px;
     right: auto;
     background: -webkit-gradient(linear, left top, right top, color-stop(-12.5%, rgba(153, 167, 255, 0)), color-stop(52.02%, #99a7ff), color-stop(109.7%, rgba(153, 167, 255, 0)));
     background: linear-gradient(90deg, rgba(153, 167, 255, 0) -12.5%, #99a7ff 52.02%, rgba(153, 167, 255, 0) 109.7%);
     pointer-events: none;
+  }
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  body.spz-7003 #HERO::before {
+    display: none;
   }
 }
 body.spz-7003 #HERO .container {
@@ -243,11 +248,11 @@ body.spz-7003 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-tit
   }
 }
 body.spz-7003 #HERO .container .spz-social-proof {
-  margin: 16.5px 0 36px;
+  margin: 16.5px 0 63.5px;
 }
 @media screen and (max-width: 767.98px) {
   body.spz-7003 #HERO .container .spz-social-proof {
-    margin: 0.5px 2px 20px 0;
+    margin: 0.5px 2px 48px 0;
   }
 }
 body.spz-7003 #HERO .container .spz-social-proof .sp-container .sp-title {
@@ -396,7 +401,7 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mkto
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
-  color: #381360 !important;
+  color: #000 !important;
   font-family: "Noto Sans", sans-serif;
   font-size: 16px !important;
   font-style: normal;
@@ -567,17 +572,17 @@ body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
 
 input:-webkit-autofill {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #381360 !important;
+  -webkit-text-fill-color: #000 !important;
 }
 input:-webkit-autofill:hover {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #381360 !important;
+  -webkit-text-fill-color: #000 !important;
 }
 input:-webkit-autofill:focus {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #381360 !important;
+  -webkit-text-fill-color: #000 !important;
 }
 input:-webkit-autofill:active {
   -webkit-box-shadow: 0 0 0 56px white inset !important;
-  -webkit-text-fill-color: #381360 !important;
+  -webkit-text-fill-color: #000 !important;
 }

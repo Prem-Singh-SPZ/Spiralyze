@@ -20,7 +20,7 @@ body.spz-7003 {
         height: 304px;
         width: 100%;
         left: 0;
-        bottom: 370px;
+        bottom: 322px;
         right: auto;
         background: linear-gradient(
           90deg,
@@ -29,6 +29,10 @@ body.spz-7003 {
           rgba(153, 167, 255, 0) 109.7%
         );
         pointer-events: none;
+
+        @media (max-width: 767.98px) {
+          display: none;
+        }
       }
     }
 
@@ -257,10 +261,10 @@ body.spz-7003 {
       }
 
       .spz-social-proof {
-        margin: 16.5px 0 36px;
+        margin: 16.5px 0 63.5px;
 
         @media screen and (max-width: 767.98px) {
-          margin: 0.5px 2px 20px 0;
+          margin: 0.5px 2px 48px 0;
         }
 
         .sp-container {
@@ -392,7 +396,7 @@ body.spz-7003 {
               border-radius: 0;
               outline: none;
               box-shadow: none;
-              color: #381360 !important;
+              color: #000 !important;
               font-family: $Noto;
               font-size: 16px !important;
               font-style: normal;
@@ -598,18 +602,18 @@ body.spz-7003 {
 input {
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 56px white inset !important;
-    -webkit-text-fill-color: #381360 !important;
+    -webkit-text-fill-color: #000 !important;
     &:hover {
       -webkit-box-shadow: 0 0 0 56px white inset !important;
-      -webkit-text-fill-color: #381360 !important;
+      -webkit-text-fill-color: #000 !important;
     }
     &:focus {
       -webkit-box-shadow: 0 0 0 56px white inset !important;
-      -webkit-text-fill-color: #381360 !important;
+      -webkit-text-fill-color: #000 !important;
     }
     &:active {
       -webkit-box-shadow: 0 0 0 56px white inset !important;
-      -webkit-text-fill-color: #381360 !important;
+      -webkit-text-fill-color: #000 !important;
     }
   }
 }
