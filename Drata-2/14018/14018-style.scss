@@ -1962,7 +1962,6 @@ body.spz-14018 {
                 background: #fff;
                 margin-bottom: 12px;
                 cursor: pointer;
-                position: relative;
 
                 @media (max-width: 1199.98px) {
                   padding: 16px 19px;
@@ -1985,19 +1984,53 @@ body.spz-14018 {
                   display: flex;
                   align-items: center;
                   padding-right: 42px;
+                position: relative;
+                width: 100%;
+
 
                   @media (max-width: 1199.98px) {
                     font-weight: 800;
-                    max-width: 80%;
+                    // max-width: 80%;
                   }
 
                   @media (max-width: 767.98px) {
                     font-size: 18px;
                     line-height: 26px;
-                    max-width: 90%;
+                    // max-width: 90%;
                     height: auto;
                     min-height: 40px;
                   }
+
+                  
+                &::after {
+                  content: "";
+                  position: absolute;
+                  top: 0;
+                  right: 0;
+                  width: 40px;
+                  height: 40px;
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                  pointer-events: none;
+
+                  @media (max-width: 1199.98px) {
+                    top: calc(50% - 20px);
+                  }
+
+                  // @media (max-width: 767.98px) {
+                  //   width: 32px;
+                  //   height: 32px;
+                  // }
+                }
+
+                &:hover::after {
+                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14018/arrow_hovered.svg")
+                    no-repeat;
+                  background-size: cover;
+                  background-repeat: no-repeat;
+                }
                 }
 
                 .accordion-content {
@@ -2020,36 +2053,6 @@ body.spz-14018 {
                   margin-top: 13px;
                 }
 
-                &::after {
-                  content: "";
-                  position: absolute;
-                  top: 32px;
-                  right: 32px;
-                  width: 40px;
-                  height: 40px;
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg")
-                    no-repeat;
-                  background-size: cover;
-                  background-repeat: no-repeat;
-                  pointer-events: none;
-
-                  @media (max-width: 1199.98px) {
-                    top: 16px;
-                    right: 19.5px;
-                  }
-
-                  // @media (max-width: 767.98px) {
-                  //   width: 32px;
-                  //   height: 32px;
-                  // }
-                }
-
-                &:hover::after {
-                  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14018/arrow_hovered.svg")
-                    no-repeat;
-                  background-size: cover;
-                  background-repeat: no-repeat;
-                }
 
                 &.open {
                   &::after {

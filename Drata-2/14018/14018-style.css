@@ -1957,7 +1957,6 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordi
   background: #fff;
   margin-bottom: 12px;
   cursor: pointer;
-  position: relative;
 }
 @media (max-width: 1199.98px) {
   body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item {
@@ -1986,21 +1985,43 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordi
       -ms-flex-align: center;
           align-items: center;
   padding-right: 42px;
+  position: relative;
+  width: 100%;
 }
 @media (max-width: 1199.98px) {
   body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-title {
     font-weight: 800;
-    max-width: 80%;
   }
 }
 @media (max-width: 767.98px) {
   body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-title {
     font-size: 18px;
     line-height: 26px;
-    max-width: 90%;
     height: auto;
     min-height: 40px;
   }
+}
+body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-title::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40px;
+  height: 40px;
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
+  pointer-events: none;
+}
+@media (max-width: 1199.98px) {
+  body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-title::after {
+    top: calc(50% - 20px);
+  }
+}
+body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-title:hover::after {
+  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14018/arrow_hovered.svg") no-repeat;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-content {
   color: #697586;
@@ -2014,29 +2035,6 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordi
 }
 body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .learn-more-cta {
   margin-top: 13px;
-}
-body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item::after {
-  content: "";
-  position: absolute;
-  top: 32px;
-  right: 32px;
-  width: 40px;
-  height: 40px;
-  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_07.svg") no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
-  pointer-events: none;
-}
-@media (max-width: 1199.98px) {
-  body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item::after {
-    top: 16px;
-    right: 19.5px;
-  }
-}
-body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item:hover::after {
-  background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/14018/arrow_hovered.svg") no-repeat;
-  background-size: cover;
-  background-repeat: no-repeat;
 }
 body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item.open::after {
   background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg") no-repeat;
