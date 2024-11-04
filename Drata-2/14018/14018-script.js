@@ -145,122 +145,242 @@
 
     //json for resource section where one tab has 4 cards under it and each card has different attqributes
     const resourceData = [
-        {
-            title: "SOC 2 Education",
-            cards: [
-                {
-                    title: "SOC 2 Beginners Guide",
-                    desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
-                    img: astUrl + "f_auto/drata/14018/8.webp",
-                    link: "https://drata.com/grc-central/soc-2"
-                },
-                {
-                    title: "8 Easy Steps to Get Started with ISO 27001",
-                    desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
-                    img: astUrl + "f_auto/drata/14018/5.webp",
-                    link: "https://drata.com/grc-central/soc-2/readiness-assessment"
-                },
-                {
-                    title: "Learn About the Cost of Non-Compliance",
-                    desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
-                    img: astUrl + "f_auto/drata/14018/6.webp",
-                    link: "https://drata.com/grc-central/soc-2"
-                },
-                {
-                    title: "SOC 2 Audits: What You Can Expect from Start to Finish",
-                    desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
-                    img: astUrl + "f_auto/drata/14018/7.webp",
-                    link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
-                }
-            ]
-        },
-        {
-            title: "Startup Topics",
-            cards: [
-                {
-                    title: "SANS Audit Hub First Look with Howard Carter",
-                    desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
-                    img: astUrl + "f_auto/drata/14018/9.webp",
-                    link: "https://drata.com/platform/startup"
-                },
-                {
-                    title: "3 Reasons Why Startups Need SOC 2",
-                    desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
-                    img: astUrl + "f_auto/drata/14018/10.webp",
-                    link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
-                },
-                {
-                    title: "14 Free Cybersecurity Tools for Startups",
-                    desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
-                    img: astUrl + "f_auto/drata/14018/11.webp",
-                    link: "https://drata.com/blog/free-cybersecurity-tools"
-                },
-                {
-                    title: "Debunking 5 Common SOC 2 Misconceptions",
-                    desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
-                    img: astUrl + "f_auto/drata/14018/12.webp",
-                    link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
-                }
-            ]
-        },
-        {
-            title: "Automation ROI",
-            cards: [
-                {
-                    title: "Gather Voices",
-                    desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
-                    img: astUrl + "f_auto/drata/14018/13.webp",
-                    link: "https://drata.com/customers/gather-voices"
-                },
-                {
-                    title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
-                    desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
-                    img: astUrl + "f_auto/drata/14018/14.webp",
-                    link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
-                },
-                {
-                    title: "Vareto",
-                    desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
-                    img: astUrl + "f_auto/drata/14018/15.webp",
-                    link: "https://drata.com/customers/vareto"
-                },
-                {
-                    title: "Calculating and Communicating Cybersecurity ROI",
-                    desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
-                    img: astUrl + "f_auto/drata/14018/16.webp",
-                    link: "https://drata.com/blog/cybersecurity-roi"
-                }
-            ]
-        },
-        {
-            title: "Customer Testimonials",
-            cards: [
-                {
-                    title: "Unlocking ROI: Kosli's 90-Day Journey to SOC 2 Type 2",
-                    desc: "How leveraging Drata and Kosli streamlines compliance audit readiness.",
-                    img: astUrl + "f_auto/drata/14018/17.webp",
-                    link: "https://drata.com/customers/kosli"
-                },
-                {
-                    title: "Starting With SOC 2: How Drata Proves Invaluable for Young Startups",
-                    desc: "A case on how Drata empowers Scanner to navigate challenges with confidence and efficiency—on their own.",
-                    img: astUrl + "f_auto/drata/14018/18.webp",
-                    link: "https://drata.com/customers/scanner"
-                },
-                {
-                    title: "3rdRisk Achieves SOC 2 Type 1 in 2 Weeks With The Help of Drata and AssuranceLab",
-                    desc: "3rdRisk is a European tech company providing a third-party risk management (TPRM) and internal control solution.",
-                    img: astUrl + "f_auto/drata/14018/19.webp",
-                    link: "https://drata.com/customers/third-risk"
-                },
-                {
-                    title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata&#8217;s Compliance Automation",
-                    desc: "Calendly&#8217;s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
-                    img: astUrl + "f_auto/drata/14018/1_1.webp",
-                    link: "https://drata.com/customers/calendly"
-                }
-            ]
-        },
+        one = [
+            {
+                title: "SOC 2 Education",
+                cards: [
+                    {
+                        title: "SOC 2 Beginners Guide",
+                        desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
+                        img: astUrl + "f_auto/drata/14018/8.webp",
+                        link: "https://drata.com/grc-central/soc-2"
+                    },
+                    {
+                        title: "8 Easy Steps to Get Started with ISO 27001",
+                        desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
+                        img: astUrl + "f_auto/drata/14018/5.webp",
+                        link: "https://drata.com/grc-central/soc-2/readiness-assessment"
+                    },
+                    {
+                        title: "Learn About the Cost of Non-Compliance",
+                        desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
+                        img: astUrl + "f_auto/drata/14018/6.webp",
+                        link: "https://drata.com/grc-central/soc-2"
+                    },
+                    {
+                        title: "SOC 2 Audits: What You Can Expect from Start to Finish",
+                        desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
+                        img: astUrl + "f_auto/drata/14018/7.webp",
+                        link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
+                    }
+                ]
+            },
+            {
+                title: "Startup Topics",
+                cards: [
+                    {
+                        title: "SANS Audit Hub First Look with Howard Carter",
+                        desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
+                        img: astUrl + "f_auto/drata/14018/9.webp",
+                        link: "https://drata.com/platform/startup"
+                    },
+                    {
+                        title: "3 Reasons Why Startups Need SOC 2",
+                        desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
+                        img: astUrl + "f_auto/drata/14018/10.webp",
+                        link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
+                    },
+                    {
+                        title: "14 Free Cybersecurity Tools for Startups",
+                        desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
+                        img: astUrl + "f_auto/drata/14018/11.webp",
+                        link: "https://drata.com/blog/free-cybersecurity-tools"
+                    },
+                    {
+                        title: "Debunking 5 Common SOC 2 Misconceptions",
+                        desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
+                        img: astUrl + "f_auto/drata/14018/12.webp",
+                        link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
+                    }
+                ]
+            },
+            {
+                title: "Automation ROI",
+                cards: [
+                    {
+                        title: "Gather Voices",
+                        desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
+                        img: astUrl + "f_auto/drata/14018/13.webp",
+                        link: "https://drata.com/customers/gather-voices"
+                    },
+                    {
+                        title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
+                        desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
+                        img: astUrl + "f_auto/drata/14018/14.webp",
+                        link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
+                    },
+                    {
+                        title: "Vareto",
+                        desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
+                        img: astUrl + "f_auto/drata/14018/15.webp",
+                        link: "https://drata.com/customers/vareto"
+                    },
+                    {
+                        title: "Calculating and Communicating Cybersecurity ROI",
+                        desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
+                        img: astUrl + "f_auto/drata/14018/16.webp",
+                        link: "https://drata.com/blog/cybersecurity-roi"
+                    }
+                ]
+            },
+            {
+                title: "Customer Testimonials",
+                cards: [
+                    {
+                        title: "Unlocking ROI: Kosli's 90-Day Journey to SOC 2 Type 2",
+                        desc: "How leveraging Drata and Kosli streamlines compliance audit readiness.",
+                        img: astUrl + "f_auto/drata/14018/17.webp",
+                        link: "https://drata.com/customers/kosli"
+                    },
+                    {
+                        title: "Starting With SOC 2: How Drata Proves Invaluable for Young Startups",
+                        desc: "A case on how Drata empowers Scanner to navigate challenges with confidence and efficiency—on their own.",
+                        img: astUrl + "f_auto/drata/14018/18.webp",
+                        link: "https://drata.com/customers/scanner"
+                    },
+                    {
+                        title: "3rdRisk Achieves SOC 2 Type 1 in 2 Weeks With The Help of Drata and AssuranceLab",
+                        desc: "3rdRisk is a European tech company providing a third-party risk management (TPRM) and internal control solution.",
+                        img: astUrl + "f_auto/drata/14018/19.webp",
+                        link: "https://drata.com/customers/third-risk"
+                    },
+                    {
+                        title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata&#8217;s Compliance Automation",
+                        desc: "Calendly&#8217;s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
+                        img: astUrl + "f_auto/drata/14018/1_1.webp",
+                        link: "https://drata.com/customers/calendly"
+                    }
+                ]
+            },
+        ],
+        two = [
+            {
+                title: "SOC 2 Education",
+                cards: [
+                    {
+                        title: "SOC 2 Beginners Guide",
+                        desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
+                        img: astUrl + "f_auto/drata/14018/8.webp",
+                        link: "https://drata.com/grc-central/soc-2"
+                    },
+                    {
+                        title: "8 Easy Steps to Get Started with ISO 27001",
+                        desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
+                        img: astUrl + "f_auto/drata/14018/5.webp",
+                        link: "https://drata.com/grc-central/soc-2/readiness-assessment"
+                    },
+                    {
+                        title: "Learn About the Cost of Non-Compliance",
+                        desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
+                        img: astUrl + "f_auto/drata/14018/6.webp",
+                        link: "https://drata.com/grc-central/soc-2"
+                    },
+                    {
+                        title: "SOC 2 Audits: What You Can Expect from Start to Finish",
+                        desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
+                        img: astUrl + "f_auto/drata/14018/7.webp",
+                        link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
+                    }
+                ]
+            },
+            {
+                title: "Startup Topics",
+                cards: [
+                    {
+                        title: "SANS Audit Hub First Look with Howard Carter",
+                        desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
+                        img: astUrl + "f_auto/drata/14018/9.webp",
+                        link: "https://drata.com/platform/startup"
+                    },
+                    {
+                        title: "3 Reasons Why Startups Need SOC 2",
+                        desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
+                        img: astUrl + "f_auto/drata/14018/10.webp",
+                        link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
+                    },
+                    {
+                        title: "14 Free Cybersecurity Tools for Startups",
+                        desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
+                        img: astUrl + "f_auto/drata/14018/11.webp",
+                        link: "https://drata.com/blog/free-cybersecurity-tools"
+                    },
+                    {
+                        title: "Debunking 5 Common SOC 2 Misconceptions",
+                        desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
+                        img: astUrl + "f_auto/drata/14018/12.webp",
+                        link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
+                    }
+                ]
+            },
+            {
+                title: "Automation ROI",
+                cards: [
+                    {
+                        title: "Gather Voices",
+                        desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
+                        img: astUrl + "f_auto/drata/14018/13.webp",
+                        link: "https://drata.com/customers/gather-voices"
+                    },
+                    {
+                        title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
+                        desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
+                        img: astUrl + "f_auto/drata/14018/14.webp",
+                        link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
+                    },
+                    {
+                        title: "Vareto",
+                        desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
+                        img: astUrl + "f_auto/drata/14018/15.webp",
+                        link: "https://drata.com/customers/vareto"
+                    },
+                    {
+                        title: "Calculating and Communicating Cybersecurity ROI",
+                        desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
+                        img: astUrl + "f_auto/drata/14018/16.webp",
+                        link: "https://drata.com/blog/cybersecurity-roi"
+                    }
+                ]
+            },
+            {
+                title: "Customer Testimonials",
+                cards: [
+                    {
+                        title: "Unlocking ROI: Kosli's 90-Day Journey to SOC 2 Type 2",
+                        desc: "How leveraging Drata and Kosli streamlines compliance audit readiness.",
+                        img: astUrl + "f_auto/drata/14018/17.webp",
+                        link: "https://drata.com/customers/kosli"
+                    },
+                    {
+                        title: "Starting With SOC 2: How Drata Proves Invaluable for Young Startups",
+                        desc: "A case on how Drata empowers Scanner to navigate challenges with confidence and efficiency—on their own.",
+                        img: astUrl + "f_auto/drata/14018/18.webp",
+                        link: "https://drata.com/customers/scanner"
+                    },
+                    {
+                        title: "3rdRisk Achieves SOC 2 Type 1 in 2 Weeks With The Help of Drata and AssuranceLab",
+                        desc: "3rdRisk is a European tech company providing a third-party risk management (TPRM) and internal control solution.",
+                        img: astUrl + "f_auto/drata/14018/19.webp",
+                        link: "https://drata.com/customers/third-risk"
+                    },
+                    {
+                        title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata&#8217;s Compliance Automation",
+                        desc: "Calendly&#8217;s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
+                        img: astUrl + "f_auto/drata/14018/1_1.webp",
+                        link: "https://drata.com/customers/calendly"
+                    }
+                ]
+            },
+        ]
     ];
 
     //append swiper js script in head and onload of that call function initSlider_14018
@@ -1353,6 +1473,22 @@
     function resourceSection_V1(selector) {
         waitForElm(selector).then(function () {
             if (document.querySelector('.resources-section-14018')) return;
+
+            //check the "variant" value in session storage and store it in a variable
+            let variant = sessionStorage.getItem('variant');
+            let getVariant;
+            if (!variant) {
+                getVariant = 0;
+            }
+            else {
+                if (variant == "variant_1") {
+                    getVariant = 0;
+                }
+                else {
+                    getVariant = 1;
+                }
+            }
+
             document.querySelector(selector).insertAdjacentHTML('afterend', `
         <section class="resources-section-14018 spz-sec" data-scroll-anchor="nav-resource">
             <div class="resources-wrapper">
@@ -1360,40 +1496,7 @@
                     <h6 class="title">Looking For More?</h6>
                     <p class="sub-title">Learn the lingo, understand the benefits, see the ROI of SOC 2 automation, and more.</p>
                 </div>
-
-                <div class="resource-card-tabs">
-                    <div class="tab-wrapper">
-                        ${resourceData.map((tab, index) => {
-                return `<div class="tab ${index == 0 ? "active" : ""}" data-tab="${index}">${tab.title}</div>`;
-            }).join('')}
-                    </div>
-                    <div class="all-resc-anchor">
-                        <a href="https://drata.com/resources" class="all-resc-cta learn-more">Explore All Resources ${anchorArrow}</a>
-                    </div>
-                </div>
-
-                <div class="resource-cards">
-                    ${resourceData.map((tab, index) => {
-                return `<div class="resource-card-container ${index == 0 ? "active" : ""}" data-tab="${index}">
-                            ${tab.cards.map((resource, index) => {
-                    return `<div class="resource-card">
-                                    <a class="rc-link" href="${resource.link}">
-                                        <div class="card-img">
-                                            <img src="${resource.img}" alt="${resource.title}">
-                                        </div>
-                                        <div class="card-content">
-                                            <div class="card-title">${resource.title}</div>
-                                            <div class="card-desc">${resource.desc}</div>
-                                            <div class="learn-more">
-                                                Learn More ${anchorArrow}
-                                            </div>
-                                        </div>
-                                    </a>
-                                </div>`;
-                }).join('')}
-                        </div>`;
-            }).join('')}
-                </div>
+                ${createResourceCards(getVariant)}
             </div>
         </section>`);
 
@@ -1661,6 +1764,49 @@
                 </div>`;
         });
         return featuresHTML;
+    }
+
+    // Create resource section from JSON data
+    function createResourceCards(param) {
+        let resourceHTML = '';
+        // resourceData[param].forEach(resource => {
+            // console.log(resource);
+            resourceHTML += `
+                <div class="resource-card-tabs">
+                    <div class="tab-wrapper">
+                        ${resourceData[param].map((tab, index) => {
+                return `<div class="tab ${index == 0 ? "active" : ""}" data-tab="${index}">${tab.title}</div>`;
+            }).join('')}
+                    </div>
+                    <div class="all-resc-anchor">
+                        <a href="https://drata.com/resources" class="all-resc-cta learn-more">Explore All Resources ${anchorArrow}</a>
+                    </div>
+                </div>
+
+                <div class="resource-cards">
+                    ${resourceData[param].map((tab, index) => {
+                return `<div class="resource-card-container ${index == 0 ? "active" : ""}" data-tab="${index}">
+                            ${tab.cards.map((resource, index) => {
+                    return `<div class="resource-card">
+                                    <a class="rc-link" href="${resource.link}">
+                                        <div class="card-img">
+                                            <img src="${resource.img}" alt="${resource.title}">
+                                        </div>
+                                        <div class="card-content">
+                                            <div class="card-title">${resource.title}</div>
+                                            <div class="card-desc">${resource.desc}</div>
+                                            <div class="learn-more">
+                                                Learn More ${anchorArrow}
+                                            </div>
+                                        </div>
+                                    </a>
+                                </div>`;
+                }).join('')}
+                        </div>`;
+            }).join('')}
+                </div>`;
+        // });
+        return resourceHTML;
     }
 
     // When middle part of the section is middle of the viewport return true
