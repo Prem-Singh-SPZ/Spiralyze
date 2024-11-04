@@ -15,7 +15,8 @@
             logoAlt: "Red Rover",
             title: "DevOps Engineer",
             review: "“The quality and philosophy of support at Drata are unparalleled. Drata is superb in usability, design and integrations.”",
-            link: "https://drata.com/customers"
+            link: "https://drata.com/customers",
+            ctaCopy: "See All Stories"
         },
         {
             name: "Joshua Peskay,",
@@ -23,7 +24,8 @@
             logoAlt: "Round Table Technology",
             title: "vCIO",
             review: "“Drata also worked to understand our audit needs and matched us with an auditor who has been terrific. Drata is a luxury limousine for your compliance journey.”",
-            link: "https://drata.com/customers"
+            link: "https://drata.com/customers",
+            ctaCopy: "See All Stories"
         },
         {
             name: "Lola Kureno,",
@@ -31,7 +33,8 @@
             logoAlt: "Xine",
             title: "Cyber Security Engineer",
             review: "“Having centralized and detailed visibility of all our personnel, assets, and being able to see what compliance requirements need our attention has streamlined the entire process.”",
-            link: "https://drata.com/customers"
+            link: "https://drata.com/customers",
+            ctaCopy: "See All Stories"
         },
         {
             name: "Jonathan Jaffe,",
@@ -39,7 +42,8 @@
             logoAlt: "Lemonade",
             title: "CISO",
             review: "“The promise of automation has long been discussed in the compliance world, but never truly realized. Drata has turned that into reality.”",
-            link: "https://drata.com/customers/lemonade"
+            link: "https://drata.com/customers/lemonade",
+            ctaCopy: "Read Customer Story"
         },
         {
             name: "Chris Bake,",
@@ -47,7 +51,8 @@
             logoAlt: "Next Ed",
             title: "CTO",
             review: "“The time savings and impact on sales are immediate, especially as we inform our customers that we&#8217;re pursuing SOC 2 compliance!”",
-            link: "https://drata.com/customers/apl-nexted"
+            link: "https://drata.com/customers/apl-nexted",
+            ctaCopy: "Read Customer Story"
         },
     ];
 
@@ -56,68 +61,84 @@
             {
                 title: "Risk Assessments",
                 review: "Identify, assess, and monitor risks specific to your organization, systems, and frameworks.",
+                link: "https://drata.com/product/risk-management"
             },
             {
-                title: "Quick Start Onboarding ",
+                title: "Quick Start Onboarding",
                 review: "Access 24/5 technical support and an ecosystem of partners that can expedite your onboarding.",
+                link: "https://drata.com/success"
             },
             {
                 title: "User Access Review",
                 review: "Conduct user access reviews directly in Drata to increase security and save time.",
+                link: ""
             },
             {
                 title: "Pre-Mapped Controls",
-                review: "Our pre-built SOC 2 framework comes with all the controls required for compliance. ",
+                review: "Our pre-built SOC 2 framework comes with all the controls required for compliance.",
+                link: "https://drata.com/grc-central/compliance-automation"
             },
             {
                 title: "Security Training",
                 review: "Drata&#8217;s built-in security training allows you to automate tasks like sending reminders and documenting completion.",
+                link: "https://drata.com/blog/soc-2-security-awareness-training-curricula "
             },
             {
                 title: "Audit Support",
                 review: "Get real-time assistance from a team of experts or dive into extensive help articles.",
+                link: "https://drata.com/product/audit-hub"
             },
             {
                 title: "Policy Center",
                 review: "Streamline policy management for SOC 2 with 20+ customizable, auditor-approved policies.",
+                link: "https://drata.com/blog/may-product-releases"
             },
             {
                 title: "Continuous Monitoring",
                 review: "Get non-stop peace of mind with daily tests that show your audit readiness. ",
+                link: "https://drata.com/platform"
             }
         ],
         two = [
             {
                 title: "Policy Center",
                 review: "Streamline the creation, signing, and management of the policies needed for SOC 2 with customizable and auditor-approved templates.",
+                link: "https://drata.com/blog/may-product-releases"
             },
             {
                 title: "Audit Hub",
                 review: "Streamline audits with one place for auditor comms, docs, and evidence requests.",
+                link: "https://drata.com/product/audit-hub"
             },
             {
                 title: "Risk Management",
                 review: "With features like flagging and risk scoring, you can efficiently accept, mitigate, or avoid risks.",
+                link: "https://drata.com/product/risk-management"
             },
             {
                 title: "Continuous Monitoring",
                 review: "Drata's 24/7 continuous control monitoring ensures you stay SOC 2 compliant and gives you full visibility into your status.",
+                link: "https://drata.com/platform"
             },
             {
                 title: "Compliance Support",
                 review: "Get real-time assistance from a team of experts or dive into extensive help articles.",
+                link: "https://drata.com/success"
             },
             {
                 title: "Role Based Access",
                 review: "Get complete control over access, visibility, and permissions in Drata.",
+                link: "https://drata.com/blog/new-role-based-access-control"
             },
             {
                 title: "Compliance as Code",
                 review: "Automatically identify and fix compliance and policy gaps as your developers build, for continuous compliance.",
+                link: "https://drata.com/product/compliance-as-code"
             },
             {
                 title: "End-Point Monitoring",
                 review: "Automate evidence collection for endpoint detection and response compliance.",
+                link: "https://drata.com/platform"
             }
         ],
     ];
@@ -649,7 +670,7 @@
                             <div class="me-subtitle">So, you need to get SOC 2 compliant—but how? Compliance Automation.</div>
                         </div>
                         <div class="me-right">
-                            <a href="https://drata.com/grc-central/soc-2/type-2" class="me-cta primary-blue-btn spz-14018-tracking">Download the Guide ${ctaArrow}</a>
+                            <a href="https://drata.com/resources/soc-2-guide" class="me-cta primary-blue-btn spz-14018-tracking">Download the Guide ${ctaArrow}</a>
                         </div>
                     </div>
                     <div class="me-contents">
@@ -722,7 +743,7 @@
                             <h2 class="ss-title">Get Compliant in 4 Simple Steps</h2>
                         </div>
                         <div class="ss-right">
-                            <div class="ss-text">Drata is the leading Compliance Automation Platform that&#8217;s helped 5,000+ businesses do the following:</div>
+                            <div class="ss-text">Drata is the leading compliance automation platform that&#8217;s helped 5,000+ businesses do the following:</div>
                         </div>
                     </div>
                     <div class="ssc-contents">
@@ -1336,7 +1357,7 @@
         <section class="resources-section-14018 spz-sec" data-scroll-anchor="nav-resource">
             <div class="resources-wrapper">
                 <div class="resource-title">
-                    <h6 class="title">Looking for more?</h6>
+                    <h6 class="title">Looking For More?</h6>
                     <p class="sub-title">Learn the lingo, understand the benefits, see the ROI of SOC 2 automation, and more.</p>
                 </div>
 
@@ -1347,7 +1368,7 @@
             }).join('')}
                     </div>
                     <div class="all-resc-anchor">
-                        <a href="https://drata.com/resources/resource-directory" class="all-resc-cta learn-more">Explore All Resources ${anchorArrow}</a>
+                        <a href="https://drata.com/resources" class="all-resc-cta learn-more">Explore All Resources ${anchorArrow}</a>
                     </div>
                 </div>
 
@@ -1605,7 +1626,7 @@
                             <div class="card-footer">
                                 <div class="learn-more-cta">
                                     ` + ((!review.link) ? '' : `
-                                    <a href="${review.link}" class="sc-cta secondary-blue-btn spz-14018-tracking">Read Customer Story</a>
+                                    <a href="${review.link}" class="sc-cta secondary-blue-btn spz-14018-tracking">${review.ctaCopy}</a>
                                     `) + `
                                 </div>
                             </div>
@@ -1625,16 +1646,18 @@
         featureCap[param].forEach(feature => {
             featuresHTML += `
                 <div class="swiper-slide">
-                    <div class="slider-card">
-                        <div class="slider-content">
-                            <div class="text-copy">
-                                <div class="title-copy">
-                                    <h3 class="card-title">${feature.title}</h3>
-                                    <p class="card-desc">${feature.review}</p>
+                    <a href="${feature.link}" class="feature-card-link">
+                        <div class="slider-card">
+                            <div class="slider-content">
+                                <div class="text-copy">
+                                    <div class="title-copy">
+                                        <h3 class="card-title">${feature.title}</h3>
+                                        <p class="card-desc">${feature.review}</p>
+                                    </div>
                                 </div>
                             </div>
                         </div>
-                    </div>
+                    </a>
                 </div>`;
         });
         return featuresHTML;

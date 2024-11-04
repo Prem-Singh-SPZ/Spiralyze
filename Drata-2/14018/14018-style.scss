@@ -2088,11 +2088,16 @@ body.spz-14018 {
           }
 
           .c-img img {
-            width: auto;
-            height: 611px;
+            width: 100%;
+            height: auto;
             object-fit: contain;
             image-rendering: -webkit-optimize-contrast;
             margin-bottom: 7px;
+
+            @media (min-width: 1560.98px) {
+              width: auto;
+              height: 611px;
+            }
 
             @media (max-width: 1199.98px) {
               width: 100%;
@@ -2626,6 +2631,10 @@ body.spz-14018 {
             max-width: 100%;
           }
 
+          .feature-card-link{
+            text-decoration: none;
+          }
+          
           .slider-card {
             min-height: 190px;
             display: flex;
