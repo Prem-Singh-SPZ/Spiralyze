@@ -1823,11 +1823,21 @@ body.spz-14018 .compliance-sec {
   }
 }
 body.spz-14018 .compliance-sec .compliance-container {
-  max-width: 1248px;
+  max-width: 1280px;
   margin: 0 auto;
 }
+@media (min-width: 1600px) {
+  body.spz-14018 .compliance-sec .compliance-container {
+    max-width: 1248px;
+  }
+}
 body.spz-14018 .compliance-sec .compliance-container .c-title-container {
-  margin-bottom: 47px;
+  margin-bottom: 64px;
+}
+@media (min-width: 1600px) {
+  body.spz-14018 .compliance-sec .compliance-container .c-title-container {
+    margin-bottom: 48px;
+  }
 }
 @media (max-width: 767.98px) {
   body.spz-14018 .compliance-sec .compliance-container .c-title-container {
@@ -1920,11 +1930,15 @@ body.spz-14018 .compliance-sec .compliance-container .c-content {
   }
 }
 body.spz-14018 .compliance-sec .compliance-container .c-content .c-left {
-  max-width: 650px;
   width: 100%;
-  -webkit-box-flex: 0;
-      -ms-flex: 0 0 52.5%;
-          flex: 0 0 52.5%;
+}
+@media (min-width: 1600px) {
+  body.spz-14018 .compliance-sec .compliance-container .c-content .c-left {
+    max-width: 650px;
+    -webkit-box-flex: 0;
+        -ms-flex: 0 0 52.5%;
+            flex: 0 0 52.5%;
+  }
 }
 @media (max-width: 1199.98px) {
   body.spz-14018 .compliance-sec .compliance-container .c-content .c-left {
@@ -1955,7 +1969,7 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordi
   border-radius: 12px;
   border: 1px solid #dde3eb;
   background: #fff;
-  margin-bottom: 12px;
+  margin-bottom: 11px;
   cursor: pointer;
 }
 @media (max-width: 1199.98px) {
@@ -2051,6 +2065,10 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordi
 }
 body.spz-14018 .compliance-sec .compliance-container .c-content .c-right {
   width: 100%;
+  max-width: 722px;
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 57%;
+          flex: 0 0 57%;
   position: relative;
   margin-left: 32px;
 }
@@ -2068,7 +2086,7 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-right .c-img 
   image-rendering: -webkit-optimize-contrast;
   margin-bottom: 7px;
 }
-@media (min-width: 1560.98px) {
+@media (min-width: 1600.98px) {
   body.spz-14018 .compliance-sec .compliance-container .c-content .c-right .c-img img {
     width: auto;
     height: 611px;
@@ -2788,70 +2806,12 @@ body.spz-14018 .our-integrations-sec .oi-content-wrapper {
   max-width: 1248px;
   margin: 0 auto;
 }
-body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  gap: 0 32px;
-  margin-top: 16px;
+body.spz-14018 .our-integrations-sec .oi-content-wrapper .vi-video-wrap {
+  max-width: 1280px;
+  margin: 0 auto;
 }
-@media (max-width: 1199.98px) {
-  body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards {
-    margin-top: 27px;
-    gap: 0 28px;
-  }
-}
-@media (max-width: 767.98px) {
-  body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards {
-    margin-top: 32px;
-    gap: 0 16px;
-  }
-}
-body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards .oi-img {
-  border-radius: 14px;
-  border: 1px solid #dde3eb;
-  background: #fff;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  height: 188px;
-  max-width: 288px;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  margin-top: 32px;
-  overflow: hidden;
-}
-@media (max-width: 1199.98px) {
-  body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards .oi-img {
-    height: 141px;
-    width: 226.66px;
-    margin-top: 20px;
-    padding: 0 4px;
-  }
-}
-@media screen and (max-width: 767.98px) {
-  body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards .oi-img {
-    height: 105px;
-    width: 156px;
-    margin-top: 16px;
-    padding: 0;
-  }
-}
-body.spz-14018 .our-integrations-sec .oi-content-wrapper .oi-cards .oi-img img {
+body.spz-14018 .our-integrations-sec .oi-content-wrapper .vi-video-wrap video {
   width: 100%;
-  height: auto;
-  -o-object-fit: contain;
-     object-fit: contain;
-  image-rendering: -webkit-optimize-contrast;
 }
 body.spz-14018 .cr-section-14018 {
   background: #fff;

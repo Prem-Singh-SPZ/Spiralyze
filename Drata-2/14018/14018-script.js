@@ -71,7 +71,7 @@
             {
                 title: "User Access Review",
                 review: "Conduct user access reviews directly in Drata to increase security and save time.",
-                link: ""
+                link: "https://drata.com/product/user-access-reviews"
             },
             {
                 title: "Pre-Mapped Controls",
@@ -150,22 +150,22 @@
                 title: "SOC 2 Education",
                 cards: [
                     {
-                        title: "SOC 2 Beginners Guide",
-                        desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
+                        title: "Get Started with SOC 2",
+                        desc: "Access the latest resources to help you achieve SOC 2 compliance.",
                         img: astUrl + "f_auto/drata/14018/8.webp",
                         link: "https://drata.com/grc-central/soc-2"
                     },
                     {
-                        title: "8 Easy Steps to Get Started with ISO 27001",
-                        desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
+                        title: "Prepare For Your SOC 2 Audit",
+                        desc: "Learn how to perform a SOC 2 readiness assessment and fix any issues before the audit.",
                         img: astUrl + "f_auto/drata/14018/5.webp",
                         link: "https://drata.com/grc-central/soc-2/readiness-assessment"
                     },
                     {
-                        title: "Learn About the Cost of Non-Compliance",
-                        desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
+                        title: "How To Avoid SOC 2 Audit Exceptions",
+                        desc: "Discover what you need to know about audit exceptions on a SOC 2 report.",
                         img: astUrl + "f_auto/drata/14018/6.webp",
-                        link: "https://drata.com/grc-central/soc-2"
+                        link: " https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
                     },
                     {
                         title: "SOC 2 Audits: What You Can Expect from Start to Finish",
@@ -1392,46 +1392,32 @@
             </div>
         </div>
         <div class="oi-content-wrapper">
-            <div class="oi-cards">
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo01.svg" alt="AWS">
-                </div>
-                 <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo02.svg" alt="Azure">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo03.svg" alt="GitHub">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo04.svg" alt="Google Cloud">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo05.svg" alt="Jira">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo06.svg" alt="Slack">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo07.svg" alt="Checkr">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo08.svg" alt="Bitbucket">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo09.svg" alt="Gusto">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}f_auto/drata/14018/logo10.webp" alt="Datadog">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo11.svg" alt="ADP">
-                </div>
-                <div class="oi-img">
-                    <img src="${astUrl}fl_sanitize/drata/14018/logo12.svg" alt="Docusign">
-                </div>
-            </div>
+            <div class="vi-video-wrap"></div>
         </div>
     </section>`);
+        });
+
+           // On scroll, play video when in view
+           window.addEventListener('scroll', function () {
+            const vEl = document.querySelector('.our-integrations-sec .vi-video-wrap video');
+
+            if (!document.querySelector('.spz-14018')) {
+                window.removeEventListener('scroll', function () { });
+                return;
+            }
+
+            // Append video if not present
+            if (vEl == null && document.querySelector('.our-integrations-sec .vi-video-wrap')) {
+                document.querySelector('.our-integrations-sec .vi-video-wrap').insertAdjacentHTML('afterbegin', `<video src="//res.cloudinary.com/spiralyze/video/upload/v1713778093/drata/14007/14007_Product_Internal__Big_Swing_-_Wireframe_Copy_1.mp4" class="vi-video" autoplay loop muted playsinline></video>`);
+            }
+
+            // Play video when in view
+            if (isInViewport(document.querySelector('.our-integrations-sec'))) {
+                document.querySelector('.vi-video').play();
+            } else if (document.querySelector('.vi-video')) {
+                // Pause video when out of view
+                document.querySelector('.vi-video').pause();
+            }
         });
     }
 
