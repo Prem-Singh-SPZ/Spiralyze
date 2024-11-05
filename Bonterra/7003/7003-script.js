@@ -36,7 +36,7 @@ function updateContent() {
 
         // check if session storage has value then show all the sections
         if (!sessionStorage.getItem('spz-learn-more')) {
-            document.querySelector('body.spz-7003 #HERO .container').insertAdjacentHTML('beforeend', `<div class="lm-cta-wrapper"><a href="javascript:;" class="spz-learn-more">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
+            document.querySelector('body.spz-7003 #HERO .container').insertAdjacentHTML('beforeend', `<div class="lm-cta-wrapper"><a href="javascript:;" class="spz_learn_more">Learn More <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 16 16" fill="none">
                 <path d="M4 6L8 10L12 6" stroke="#381360" stroke-width="1.5" stroke-linecap="square"/>
             </svg></a></div>`);
 
@@ -56,7 +56,7 @@ document.addEventListener('click', function (event) {
         });
     }
 
-    if (event.target.classList.contains('spz-learn-more')) {
+    if (event.target.classList.contains('spz_learn_more')) {
         document.querySelectorAll('body.spz-7003 > .on.spz-hidden').forEach(function (el) {
             el.classList.remove('spz-hidden');
         });
