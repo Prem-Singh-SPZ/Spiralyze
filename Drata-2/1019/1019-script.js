@@ -72,52 +72,52 @@ document.head.appendChild(cssElement);
 
 (function () {
   function createTest() {
-		let bodyLoaded = setInterval(function () {
-			const body = document.querySelector('body');
-			if (body) {
-				clearInterval(bodyLoaded);
-				if (!body.classList.contains('spz-1019')) {
-					body.classList.add('spz-1019');
-					waitForElm('.spz-1019 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary').then(function () {
-						setHiddenFields();
-						document.querySelector(`.spz-1019 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary`).innerHTML = `Get Started<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3.99707L10 7.99707L6 11.9971" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>`;
-						const wiggle = document.querySelector('.spz-1019 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary');
-						let animation_interval;
+    let bodyLoaded = setInterval(function () {
+      const body = document.querySelector('body');
+      if (body) {
+        clearInterval(bodyLoaded);
+        if (!body.classList.contains('spz-1019')) {
+          body.classList.add('spz-1019');
+          waitForElm('.spz-1019 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary').then(function () {
+            setHiddenFields();
+            document.querySelector(`.spz-1019 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary`).innerHTML = `Get Started<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M6 3.99707L10 7.99707L6 11.9971" stroke="white" stroke-width="1.5" stroke-linecap="round"/></svg>`;
+            const wiggle = document.querySelector('.spz-1019 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary');
+            let animation_interval;
 
-						const stopAnimation = function () {
-							clearInterval(animation_interval);
-							wiggle.classList.remove('animate');
-						};
-						
-						const startAnimation = function () {
-							wiggle.classList.add('animate');
-							animation_interval = setInterval(button_animation, 5000);
-							setTimeout(() => {
-								wiggle.classList.remove('animate');
-							}, 2000);
-						};
+            const stopAnimation = function () {
+              clearInterval(animation_interval);
+              wiggle.classList.remove('animate');
+            };
 
-						setTimeout(() => {
-							startAnimation();
-						}, 3000);
-					
-						const button_animation =  function(){
-							wiggle.classList.add('animate');
-							setTimeout(() => {
-								wiggle.classList.remove('animate');
-							}, 2000);
-						}
+            const startAnimation = function () {
+              wiggle.classList.add('animate');
+              animation_interval = setInterval(button_animation, 5000);
+              setTimeout(() => {
+                wiggle.classList.remove('animate');
+              }, 2000);
+            };
 
-						wiggle.addEventListener('mouseover', stopAnimation);
-						wiggle.addEventListener('mouseout', startAnimation);
+            setTimeout(() => {
+              startAnimation();
+            }, 3000);
 
-						// Adding touch events for mobile devices
-						wiggle.addEventListener('touchstart', stopAnimation);
-						wiggle.addEventListener('touchend', startAnimation);
-					});
-				}
-			}
-		});
+            const button_animation = function () {
+              wiggle.classList.add('animate');
+              setTimeout(() => {
+                wiggle.classList.remove('animate');
+              }, 2000);
+            }
+
+            wiggle.addEventListener('mouseover', stopAnimation);
+            wiggle.addEventListener('mouseout', startAnimation);
+
+            // Adding touch events for mobile devices
+            wiggle.addEventListener('touchstart', stopAnimation);
+            wiggle.addEventListener('touchend', startAnimation);
+          });
+        }
+      }
+    });
   }
 
   function removeTest() {
@@ -130,12 +130,7 @@ document.head.appendChild(cssElement);
 
   function setHiddenFields() {
     waitForElm('form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').then(function () {
-      let setValue = setInterval(() => {
-        if (document.querySelector('form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').getAttribute('value') == 'Variant_1016') {
-          clearInterval(setValue);
-        }
-        document.querySelector('form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_1016');
-      }, 100);
+      document.querySelector('form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').setAttribute('value', 'Variant_#1019a');
     });
   }
 
