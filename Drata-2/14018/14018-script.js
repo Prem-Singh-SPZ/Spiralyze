@@ -179,26 +179,26 @@
                 title: "Startup Topics",
                 cards: [
                     {
-                        title: "SANS Audit Hub First Look with Howard Carter",
-                        desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
+                        title: "Drata for Startups",
+                        desc: "Learn how to get compliant at startup speed.",
                         img: astUrl + "f_auto/drata/14018/9.webp",
                         link: "https://drata.com/platform/startup"
                     },
                     {
                         title: "3 Reasons Why Startups Need SOC 2",
-                        desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
+                        desc: "See how SOC 2 compliance can shape a startup's long-term trajectory.",
                         img: astUrl + "f_auto/drata/14018/10.webp",
                         link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
                     },
                     {
                         title: "14 Free Cybersecurity Tools for Startups",
-                        desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
+                        desc: "Jumpstart your security program with these free cybersecurity tools.",
                         img: astUrl + "f_auto/drata/14018/11.webp",
                         link: "https://drata.com/blog/free-cybersecurity-tools"
                     },
                     {
                         title: "Debunking 5 Common SOC 2 Misconceptions",
-                        desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
+                        desc: "Discover how high-growth startups have navigated their compliance journeys. ",
                         img: astUrl + "f_auto/drata/14018/12.webp",
                         link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
                     }
@@ -208,26 +208,26 @@
                 title: "Automation ROI",
                 cards: [
                     {
-                        title: "Gather Voices",
-                        desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
+                        title: "Gather Voices Achieves Higher ROI with Drata",
+                        desc: "See how Gather Voices achieved a higher ROI compared to other compliance competitors.",
                         img: astUrl + "f_auto/drata/14018/13.webp",
                         link: "https://drata.com/customers/gather-voices"
                     },
                     {
-                        title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
-                        desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
+                        title: "Accelerate Your Revenue Trajectory with SOC 2 Compliance",
+                        desc: "Discover why integrating compliance into your growth strategy is not just beneficial—it's imperative.",
                         img: astUrl + "f_auto/drata/14018/14.webp",
                         link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
                     },
                     {
-                        title: "Vareto",
-                        desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
+                        title: "Vareto Slashes Compliance Time and Streamlines Operations",
+                        desc: "Learn how the team reduced manual overhead, and let their teams focus on innovation and growth with Drata.",
                         img: astUrl + "f_auto/drata/14018/15.webp",
                         link: "https://drata.com/customers/vareto"
                     },
                     {
-                        title: "Calculating and Communicating Cybersecurity ROI",
-                        desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
+                        title: "Calculating Cybersecurity ROI",
+                        desc: "Find out how to calculate ROI for cybersecurity.",
                         img: astUrl + "f_auto/drata/14018/16.webp",
                         link: "https://drata.com/blog/cybersecurity-roi"
                     }
@@ -265,89 +265,89 @@
         ],
         two = [
             {
-                title: "SOC 2 Education",
-                cards: [
-                    {
-                        title: "SOC 2 Beginners Guide",
-                        desc: "Download a complete guide to achieving SOC 2 compliance, ensuring comprehensive security standards for your organization.",
-                        img: astUrl + "f_auto/drata/14018/8.webp",
-                        link: "https://drata.com/grc-central/soc-2"
-                    },
-                    {
-                        title: "8 Easy Steps to Get Started with ISO 27001",
-                        desc: "Explore a comprehensive checklist to achieve ISO 27001 compliance and ensure robust security standards for your business.",
-                        img: astUrl + "f_auto/drata/14018/5.webp",
-                        link: "https://drata.com/grc-central/soc-2/readiness-assessment"
-                    },
-                    {
-                        title: "Learn About the Cost of Non-Compliance",
-                        desc: "Explore the hidden costs of non-compliance with data regulations and its impact on business efficiency.",
-                        img: astUrl + "f_auto/drata/14018/6.webp",
-                        link: "https://drata.com/grc-central/soc-2"
-                    },
-                    {
-                        title: "SOC 2 Audits: What You Can Expect from Start to Finish",
-                        desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
-                        img: astUrl + "f_auto/drata/14018/7.webp",
-                        link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
-                    }
-                ]
-            },
-            {
-                title: "Startup Topics",
-                cards: [
-                    {
-                        title: "SANS Audit Hub First Look with Howard Carter",
-                        desc: "See How Drata&#8217;s Audit Hub Consolidates Communication for Faster, Cleaner Audits",
-                        img: astUrl + "f_auto/drata/14018/9.webp",
-                        link: "https://drata.com/platform/startup"
-                    },
-                    {
-                        title: "3 Reasons Why Startups Need SOC 2",
-                        desc: "SOC 2 compliance acts as a critical building block to a strong security posture and can positively shape a startup&#8217;s long-term trajectory.",
-                        img: astUrl + "f_auto/drata/14018/10.webp",
-                        link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
-                    },
-                    {
-                        title: "14 Free Cybersecurity Tools for Startups",
-                        desc: "Our team put together a roundup of free cybersecurity tools that are great for startups as they jumpstart their security programs.",
-                        img: astUrl + "f_auto/drata/14018/11.webp",
-                        link: "https://drata.com/blog/free-cybersecurity-tools"
-                    },
-                    {
-                        title: "Debunking 5 Common SOC 2 Misconceptions",
-                        desc: "Discover how Taylor Herson, CEO of Eden Data, tackles SOC 2 misconceptions to help high-growth organizations better navigate their compliance journeys.",
-                        img: astUrl + "f_auto/drata/14018/12.webp",
-                        link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
-                    }
-                ]
-            },
-            {
                 title: "Automation ROI",
                 cards: [
                     {
-                        title: "Gather Voices",
-                        desc: "Gather Voices helps our customers to collect video content from their community and automatically share that out to social media.",
-                        img: astUrl + "f_auto/drata/14018/13.webp",
+                        title: "Gather Voices Achieves Higher ROI with Drata",
+                        desc: "See how Gather Voices achieved a higher ROI compared to other compliance competitors.",
+                        img: astUrl + "f_auto/drata/14018/8.webp",
                         link: "https://drata.com/customers/gather-voices"
                     },
                     {
-                        title: "SOC 2 Compliance Automation Software: Everything You Need to Know",
-                        desc: "breakdown of SOC 2 compliance software, its benefits, top features to look for, and what your journey to compliance can look like with automation.",
-                        img: astUrl + "f_auto/drata/14018/14.webp",
-                        link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
+                        title: "Lumiio Chooses Drata to Earn and Maintain Stakeholder Trust",
+                        desc: "See how automation can save on resources and compliance costs while enhancing security programs.",
+                        img: astUrl + "f_auto/drata/14018/5.webp",
+                        link: "https://drata.com/customers/lumiio"
                     },
                     {
-                        title: "Vareto",
-                        desc: "Maximizing ROI With Compliance: How Vareto Slashes Time and Streamlines Operations With Trust Center",
-                        img: astUrl + "f_auto/drata/14018/15.webp",
-                        link: "https://drata.com/customers/vareto"
-                    },
-                    {
-                        title: "Calculating and Communicating Cybersecurity ROI",
-                        desc: "Security improvements get approved faster when CISOs speak the board&#8217;s language. Here&#8217;s everything you need to know about cybersecurity ROI.",
-                        img: astUrl + "f_auto/drata/14018/16.webp",
+                        title: "Calculating Cybersecurity ROI",
+                        desc: "Find out how to calculate ROI for cybersecurity.",
+                        img: astUrl + "f_auto/drata/14018/6.webp",
                         link: "https://drata.com/blog/cybersecurity-roi"
+                    },
+                    {
+                        title: "Transforming Traditional GRC: Why Cyber GRC is The Future",
+                        desc: "Download the report and get access to the strategies needed to modernize your GRC practice.",
+                        img: astUrl + "f_auto/drata/14018/7.webp",
+                        link: "https://drata.com/resources/reports/cyber-grc"
+                    }
+                ]
+            },
+            {
+                title: "SOC 2 Education",
+                cards: [
+                    {
+                        title: "Maintain SOC 2 Compliance",
+                        desc: "Access the latest resources to help you maintain SOC 2 compliance.",
+                        img: astUrl + "f_auto/drata/14018/9.webp",
+                        link: "https://drata.com/grc-central/soc-2"
+                    },
+                    {
+                        title: "Everything You Need to Know About SOC 2 Compliance Automation Software",
+                        desc: "Get a breakdown of soc 2 software and the top features to look out for.",
+                        img: astUrl + "f_auto/drata/14018/10.webp",
+                        link: "https://drata.com/grc-central/soc-2/compliance-automation-software"
+                    },
+                    {
+                        title: "Vidyard Elevates Compliance & Security Through Automation",
+                        desc: "See how Vidyard transformed their compliance processes.",
+                        img: astUrl + "f_auto/drata/14018/11.webp",
+                        link: "https://drata.com/customers/vidyard"
+                    },
+                    {
+                        title: "What Is Compliance Automation?",
+                        desc: "Find out why you should automate your compliance program.",
+                        img: astUrl + "f_auto/drata/14018/12.webp",
+                        link: "https://drata.com/grc-central/compliance-automation"
+                    }
+                ]
+            },
+            {
+                title: "Risk & Security Education",
+                cards: [
+                    {
+                        title: "Risk Management Hub",
+                        desc: "Explore the lates risk management resources.",
+                        img: astUrl + "f_auto/drata/14018/13.webp",
+                        link: "https://drata.com/grc-central/risk"
+                    },
+                    {
+                        title: "Build Your Own Risk Program",
+                        desc: "See how to identify and assess risk in your organization. ",
+                        img: astUrl + "f_auto/drata/14018/14.webp",
+                        link: "https://drata.com/grc-central/building-a-risk-program"
+                    },
+                    {
+                        title: "Why Manual Risk Management Programs Fall Behind",
+                        desc: "Learn the importance of GRC maturity.",
+                        img: astUrl + "f_auto/drata/14018/15.webp",
+                        link: "https://drata.com/blog/grc-maturity"
+                    },
+                    {
+                        title: "What is a RMF?",
+                        desc: "See why using a risk management framework can enhance your security posture.",
+                        img: astUrl + "f_auto/drata/14018/16.webp",
+                        link: "https://drata.com/grc-central/risk/risk-management-framework"
                     }
                 ]
             },
@@ -355,28 +355,57 @@
                 title: "Customer Testimonials",
                 cards: [
                     {
-                        title: "Unlocking ROI: Kosli's 90-Day Journey to SOC 2 Type 2",
-                        desc: "How leveraging Drata and Kosli streamlines compliance audit readiness.",
+                        title: "Telium Cuts Audit Prep Time by 40%",
+                        desc: "See how Telium leveraged automated evidence gathering and continuous monitoring.",
                         img: astUrl + "f_auto/drata/14018/17.webp",
-                        link: "https://drata.com/customers/kosli"
+                        link: "https://drata.com/customers/tealium"
                     },
                     {
-                        title: "Starting With SOC 2: How Drata Proves Invaluable for Young Startups",
-                        desc: "A case on how Drata empowers Scanner to navigate challenges with confidence and efficiency—on their own.",
+                        title: "Magic Sees 10x More Audit Efficiency",
+                        desc: "Drata helps Magic overcome compliance challenged to drive strategic growth.",
                         img: astUrl + "f_auto/drata/14018/18.webp",
-                        link: "https://drata.com/customers/scanner"
+                        link: "https://drata.com/customers/magic"
                     },
                     {
-                        title: "3rdRisk Achieves SOC 2 Type 1 in 2 Weeks With The Help of Drata and AssuranceLab",
-                        desc: "3rdRisk is a European tech company providing a third-party risk management (TPRM) and internal control solution.",
+                        title: "Calendly Reduced Hours Spent on Audit Prep by 90%",
+                        desc: "Get insights on how to navigate the challenges of manual compliance.",
                         img: astUrl + "f_auto/drata/14018/19.webp",
-                        link: "https://drata.com/customers/third-risk"
+                        link: "https://drata.com/customers/calendly"
                     },
                     {
-                        title: "How Calendly Reduced Hours Spent on Audit Prep by 90% with Drata&#8217;s Compliance Automation",
-                        desc: "Calendly&#8217;s scheduling automation platform helps individuals, teams, and organizations globally automate the meeting lifecycle.",
+                        title: "A Journey from Manual Processes to Streamlined Efficiency",
+                        desc: "See how Curnzero revolutionized their compliance practice.",
                         img: astUrl + "f_auto/drata/14018/1_1.webp",
-                        link: "https://drata.com/customers/calendly"
+                        link: "https://drata.com/customers/churnzero"
+                    }
+                ]
+            },
+            {
+                title: "Product Updates",
+                cards: [
+                    {
+                        title: "Walkthrough Drata's Compliance Automation",
+                        desc: "Join us as we walk you through Drata’s powerful Compliance Automation platform.",
+                        img: astUrl + "f_auto/drata/14018/17.webp",
+                        link: "https://drata.com/resources/webinars/drata-demo-days"
+                    },
+                    {
+                        title: "Drata's Latest Product Roadmap",
+                        desc: "Enter the Drataverse to see the future of GRC.",
+                        img: astUrl + "f_auto/drata/14018/18.webp",
+                        link: "https://drata.com/resources/webinars/roadmap-reveal-drataverse-2024"
+                    },
+                    {
+                        title: "Turn Trust Center into a Competitive Advantage",
+                        desc: "See how Drata customers are leveraging Trust Center to reduce sales cycle times.",
+                        img: astUrl + "f_auto/drata/14018/19.webp",
+                        link: "https://drata.com/resources/webinars/turn-trust-center-into-a-competitive-advantage"
+                    },
+                    {
+                        title: "Managing Compliance and Risk in One Location With Drata",
+                        desc: "Drata's Risk Management Solution manages compliance and risk in one location.",
+                        img: astUrl + "f_auto/drata/14018/1_1.webp",
+                        link: "https://drata.com/grc-central/risk/introducing-risk-management"
                     }
                 ]
             },
