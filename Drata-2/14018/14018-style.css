@@ -2011,6 +2011,7 @@ body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordi
   body.spz-14018 .compliance-sec .compliance-container .c-content .c-left .accordion-wrapper .accordion .accordion-item .accordion-title {
     font-size: 18px;
     line-height: 26px;
+    padding-right: 74px;
     height: auto;
     min-height: 40px;
   }
@@ -2699,11 +2700,11 @@ body.spz-14018 .feature-cap-section-14018 .fc-section-container .slider-section 
 }
 body.spz-14018 .our-integrations-sec {
   background: #eef2f6;
-  padding: 96px 24px;
+  padding: 96px 24px 6px;
 }
 @media (max-width: 1199.98px) {
   body.spz-14018 .our-integrations-sec {
-    padding: 64px 16px;
+    padding: 64px 16px 6px;
   }
 }
 body.spz-14018 .our-integrations-sec .oi-title-container {
@@ -2803,15 +2804,19 @@ body.spz-14018 .our-integrations-sec .oi-title-container .oi-cta .oi-cta-btn svg
   margin-right: -4px;
 }
 body.spz-14018 .our-integrations-sec .oi-content-wrapper {
-  max-width: 1248px;
+  max-width: 1326px;
   margin: 0 auto;
 }
 body.spz-14018 .our-integrations-sec .oi-content-wrapper .vi-video-wrap {
-  max-width: 1280px;
+  max-width: 1326px;
   margin: 0 auto;
 }
 body.spz-14018 .our-integrations-sec .oi-content-wrapper .vi-video-wrap video {
   width: 100%;
+  clip-path: inset(1px 1px);
+}
+body.spz-14018 .our-integrations-sec .oi-content-wrapper .vi-video-wrap video:focus {
+  outline: none;
 }
 body.spz-14018 .cr-section-14018 {
   background: #fff;

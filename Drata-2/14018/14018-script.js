@@ -705,14 +705,13 @@
 
             });
 
-
+            //left scroll the nav links to bring the active link in focus
+            if (window.innerWidth < 760 && anchorToAdd.classList.contains('active')) {
+                document.querySelector('.nav-links').style.scrollBehavior = 'smooth';
+                document.querySelector('.nav-links').scrollLeft = anchorToAdd.offsetLeft - 100;
+            }
         });
-
-        //left scroll the nav links to bring the active link in focus
-        if (window.innerWidth < 760 && anchor.classList.contains('active')) {
-            document.querySelector('.nav-links').style.scrollBehavior = 'smooth';
-            document.querySelector('.nav-links').scrollLeft = anchor.offsetLeft - 100;
-        }
+        
         // });
 
         if (document.querySelector('header ~ .hero-section-14018')) {
@@ -1426,8 +1425,8 @@
     </section>`);
         });
 
-           // On scroll, play video when in view
-           window.addEventListener('scroll', function () {
+        // On scroll, play video when in view
+        window.addEventListener('scroll', function () {
             const vEl = document.querySelector('.our-integrations-sec .vi-video-wrap video');
 
             if (!document.querySelector('.spz-14018')) {
@@ -1437,7 +1436,7 @@
 
             // Append video if not present
             if (vEl == null && document.querySelector('.our-integrations-sec .vi-video-wrap')) {
-                document.querySelector('.our-integrations-sec .vi-video-wrap').insertAdjacentHTML('afterbegin', `<video src="//res.cloudinary.com/spiralyze/video/upload/v1713778093/drata/14007/14007_Product_Internal__Big_Swing_-_Wireframe_Copy_1.mp4" class="vi-video" autoplay loop muted playsinline></video>`);
+                document.querySelector('.our-integrations-sec .vi-video-wrap').insertAdjacentHTML('afterbegin', `<video src="//res.cloudinary.com/spiralyze/video/upload/f_auto/drata/14018/14018.mp4" class="vi-video" autoplay loop muted playsinline></video>`);
             }
 
             // Play video when in view
@@ -1785,13 +1784,13 @@
     function createResourceCards(param) {
         let resourceHTML = '';
         // resourceData[param].forEach(resource => {
-            // console.log(resource);
-            resourceHTML += `
+        // console.log(resource);
+        resourceHTML += `
                 <div class="resource-card-tabs">
                     <div class="tab-wrapper">
                         ${resourceData[param].map((tab, index) => {
-                return `<div class="tab ${index == 0 ? "active" : ""}" data-tab="${index}">${tab.title}</div>`;
-            }).join('')}
+            return `<div class="tab ${index == 0 ? "active" : ""}" data-tab="${index}">${tab.title}</div>`;
+        }).join('')}
                     </div>
                     <div class="all-resc-anchor">
                         <a href="https://drata.com/resources" class="all-resc-cta learn-more">Explore All Resources ${anchorArrow}</a>
@@ -1800,9 +1799,9 @@
 
                 <div class="resource-cards">
                     ${resourceData[param].map((tab, index) => {
-                return `<div class="resource-card-container ${index == 0 ? "active" : ""}" data-tab="${index}">
+            return `<div class="resource-card-container ${index == 0 ? "active" : ""}" data-tab="${index}">
                             ${tab.cards.map((resource, index) => {
-                    return `<div class="resource-card">
+                return `<div class="resource-card">
                                     <a class="rc-link" href="${resource.link}">
                                         <div class="card-img">
                                             <img src="${resource.img}" alt="${resource.title}">
@@ -1816,9 +1815,9 @@
                                         </div>
                                     </a>
                                 </div>`;
-                }).join('')}
-                        </div>`;
             }).join('')}
+                        </div>`;
+        }).join('')}
                 </div>`;
         // });
         return resourceHTML;

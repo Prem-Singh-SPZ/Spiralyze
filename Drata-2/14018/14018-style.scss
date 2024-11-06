@@ -1850,7 +1850,6 @@ body.spz-14018 {
           margin-bottom: 48px;
         }
 
-
         @media (max-width: 767.98px) {
           margin-bottom: 48px;
         }
@@ -1943,7 +1942,7 @@ body.spz-14018 {
 
         .c-left {
           width: 100%;
-          
+
           @media (min-width: 1600px) {
             max-width: 650px;
             flex: 0 0 52.5%;
@@ -2004,7 +2003,7 @@ body.spz-14018 {
                   @media (max-width: 767.98px) {
                     font-size: 18px;
                     line-height: 26px;
-                    // max-width: 90%;
+                    padding-right: 74px;
                     height: auto;
                     min-height: 40px;
                   }
@@ -2749,10 +2748,10 @@ body.spz-14018 {
   //our integrations section starts
   .our-integrations-sec {
     background: #eef2f6;
-    padding: 96px 24px;
+    padding: 96px 24px 6px;
 
     @media (max-width: 1199.98px) {
-      padding: 64px 16px;
+      padding: 64px 16px 6px;
     }
 
     .oi-title-container {
@@ -2841,15 +2840,20 @@ body.spz-14018 {
     }
 
     .oi-content-wrapper {
-      max-width: 1248px;
+      max-width: 1326px;
       margin: 0 auto;
 
       .vi-video-wrap {
-        max-width: 1280px;
+        max-width: 1326px;
         margin: 0 auto;
 
         video {
           width: 100%;
+          clip-path: inset(1px 1px);
+
+          &:focus {
+            outline: none;
+          }
         }
       }
     }
