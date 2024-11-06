@@ -199,10 +199,7 @@ let bodyLoaded = setInterval(function () {
 
                 //null check for mktoFormButton and field should not be already exist
                 if (mktoFormButton && !document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us')) {
-                    mktoFormButton.insertAdjacentHTML('beforebegin', `<div class="mktoFieldDescriptor mktoFormCol field-did-you-hear-about-us" style="margin-bottom: 10px;"><div class="mktoFieldWrap mktoRequiredField"><label id="Lblhear-about-us" for="hear-about-us" class="mktoLabel mktoHasWidth">How did you hear about us?</label><input id="hear-about-us" name="hear-about-us" type="text" class="mktoField mktoTextField mktoHasWidth mktoRequired" aria-required="true"><div class="mktoError"><div class="mktoErrorArrowWrap"><div class="mktoErrorArrow"></div></div><div id="" role="alert" class="mktoErrorMsg">This field is required.</div></div></div></div>`);
-
-                    //make this new field required and validation same as other fields
-
+                    mktoFormButton.insertAdjacentHTML('beforebegin', `<div class="mktoFormCol field-did-you-hear-about-us" style="margin-bottom: 10px;"><div class="mktoFieldWrap"><label id="Lblhear-about-us" for="hear-about-us" class="mktoLabel">How did you hear about us?</label><input id="hear-about-us" name="hear-about-us" type="text" class="mktoField mktoTextField"><div class="mktoError"><div class="mktoErrorArrowWrap"><div class="mktoErrorArrow"></div></div><div id="" role="alert" class="mktoErrorMsg">This field is required.</div></div></div></div>`);
                 }
 
                 // On input focus add class on closest parent field class
@@ -260,20 +257,19 @@ let bodyLoaded = setInterval(function () {
                     });
 
                     //add validation for new field
-                    // if (newField.value == '') {
-                    //     newField.closest('.mktoFieldWrap').classList.add('error');
-                    //     console.log("2");
+                    if (newField.value == '') {
+                        newField.closest('.mktoFieldWrap').classList.add('error');
+                        console.log("2");
 
-                    // } else {
-                    //     newField.closest('.mktoFieldWrap').classList.remove('error');
-                    // }
+                        //don't submit the form if any field has error
+                        if (!document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoInvalid') && document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .field-did-you-hear-about-us .error')) {
+                            event.preventDefault();
+                            console.log("3");
+                        }
+                    } else {
+                        newField.closest('.mktoFieldWrap').classList.remove('error');
+                    }
 
-                    //don't submit the form if any field has error
-                    // if (document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .field-did-you-hear-about-us .error')) {
-                    //     event.preventDefault();
-                    //     console.log("3");
-
-                    // }
                 });
 
                 // Function to add .field-error class on closest parent .field class if .error is exist on input
