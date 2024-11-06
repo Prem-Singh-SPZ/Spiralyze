@@ -199,7 +199,7 @@ let bodyLoaded = setInterval(function () {
 
                 //null check for mktoFormButton and field should not be already exist
                 if (mktoFormButton && !document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us')) {
-                    mktoFormButton.insertAdjacentHTML('beforebegin', `<div class="mktoFormCol field-did-you-hear-about-us" style="margin-bottom: 10px;"><div class="mktoFieldWrap"><label id="Lblhear-about-us" for="hear-about-us" class="mktoLabel">How did you hear about us?</label><input id="hear-about-us" name="hear-about-us" type="text" class="mktoField mktoTextField"><div class="mktoError"><div class="mktoErrorArrowWrap"><div class="mktoErrorArrow"></div></div><div id="" role="alert" class="mktoErrorMsg">This field is required.</div></div></div></div>`);
+                    mktoFormButton.insertAdjacentHTML('beforebegin', `<div class="mktoFormCol field-did-you-hear-about-us" style="margin-bottom: 10px;"><div class="mktoFieldWrap"><label id="Lblhear-about-us" for="hear-about-us" class="mktoLabel">How did you hear about us?</label><input id="hear-about-us" name="hear-about-us" type="text" class="mktoField mktoTextField"><div class="spzError"><div id="" role="alert" class="mktoErrorMsg">This field is required.</div></div>`);
                 }
 
                 // On input focus add class on closest parent field class
@@ -237,39 +237,41 @@ let bodyLoaded = setInterval(function () {
                     let newField = document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us .mktoField');
 
                     document.querySelectorAll(`.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol .mktoFieldWrap .mktoField`).forEach(function (elem) {
-                        console.log("1");
-                        let Buffertime = setInterval(() => {
-                            if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
-                                elem.closest('.mktoFieldWrap').classList.add('error');
+                        if (elem == newField && counter > 0) {
+                            //add validation for new field
+                            if (newField.value == '') {
+                                //don't submit the form if any field has error
+                                if (document.querySelectorAll('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoValid:not(#Email)').length >= 7) {
+                                    newField.closest('.mktoFieldWrap').classList.add('error');
+                                    if (document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .field-did-you-hear-about-us .error')) {
+                                        event.preventDefault();
+                                    }
+                                }
                             } else {
-                                elem.closest('.mktoFieldWrap').classList.remove('error');
+                                newField.closest('.mktoFieldWrap').classList.remove('error');
                             }
-                            if (elem && elem.value && (elem.value != '')) {
-                                elem.closest('.mktoFieldWrap').classList.add('filled');
-                            } else {
-                                elem.closest('.mktoFieldWrap').classList.remove('filled');
-                            }
-                        }, 100);
+                        }
+                        else {
+                            let Buffertime = setInterval(() => {
+                                if (elem.closest('.mktoFieldWrap').querySelector('.mktoError') && elem.closest('.mktoFieldWrap').querySelector('.mktoError').style.display != 'none') {
+                                    elem.closest('.mktoFieldWrap').classList.add('error');
+                                } else {
+                                    elem.closest('.mktoFieldWrap').classList.remove('error');
+                                }
+                                if (elem && elem.value && (elem.value != '')) {
+                                    elem.closest('.mktoFieldWrap').classList.add('filled');
+                                } else {
+                                    elem.closest('.mktoFieldWrap').classList.remove('filled');
+                                }
+                            }, 100);
 
-                        setTimeout(() => {
-                            clearInterval(Buffertime);
-                        }, 1000);
+                            setTimeout(() => {
+                                clearInterval(Buffertime);
+                            }, 1000);
+                        }
                     });
 
-                    //add validation for new field
-                    if (newField.value == '') {
-                        newField.closest('.mktoFieldWrap').classList.add('error');
-                        console.log("2");
-
-                        //don't submit the form if any field has error
-                        if (!document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoInvalid') && document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .field-did-you-hear-about-us .error')) {
-                            event.preventDefault();
-                            console.log("3");
-                        }
-                    } else {
-                        newField.closest('.mktoFieldWrap').classList.remove('error');
-                    }
-
+                    counter++;
                 });
 
                 // Function to add .field-error class on closest parent .field class if .error is exist on input
@@ -277,7 +279,6 @@ let bodyLoaded = setInterval(function () {
                     let newField = document.querySelector('.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us .mktoField');
 
                     if (elem == newField && counter > 0) {
-                        console.log(newField.value == '');
                         if (newField.value == '') {
                             newField.closest('.mktoFieldWrap').classList.add('error');
                         } else {

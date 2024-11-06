@@ -534,10 +534,10 @@ body {
 .spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us {
   width: 100%;
 }
-.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us .mktoError {
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us .spzError {
   display: none;
 }
-.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us .mktoFieldWrap.error .mktoError {
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoFormCol.field-did-you-hear-about-us .mktoFieldWrap.error .spzError {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -653,7 +653,7 @@ input:-webkit-autofill:active {
   outline: none;
 }
 
-.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoError {
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoError, .spz_1004 .main-content .spz-shortform-baseline form.mktoForm .spzError {
   position: relative;
   top: unset;
   left: unset;
@@ -671,7 +671,8 @@ input:-webkit-autofill:active {
   display: none;
 }
 
-.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoError .mktoErrorMsg {
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoError .mktoErrorMsg,
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .spzError .mktoErrorMsg {
   margin: 4px 0 0 0;
   background: transparent;
   -webkit-box-shadow: none;
@@ -689,7 +690,8 @@ input:-webkit-autofill:active {
   position: relative;
 }
 
-.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoError .mktoErrorMsg::before {
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .mktoError .mktoErrorMsg::before,
+.spz_1004 .main-content .spz-shortform-baseline form.mktoForm .spzError .mktoErrorMsg::before {
   position: absolute;
   content: "";
   top: 0;
