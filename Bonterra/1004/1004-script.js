@@ -250,6 +250,12 @@ let bodyLoaded = setInterval(function () {
                             } else {
                                 newField.closest('.mktoFieldWrap').classList.remove('error');
                             }
+
+                            if (newField && newField.value && (newField.value != '')) {
+                                newField.closest('.mktoFieldWrap').classList.add('filled');
+                            } else {
+                                newField.closest('.mktoFieldWrap').classList.remove('filled');
+                            }
                         }
                         else {
                             let Buffertime = setInterval(() => {
@@ -283,6 +289,11 @@ let bodyLoaded = setInterval(function () {
                             newField.closest('.mktoFieldWrap').classList.add('error');
                         } else {
                             newField.closest('.mktoFieldWrap').classList.remove('error');
+                        }
+                        if (newField && newField.value && (newField.value != '')) {
+                            newField.closest('.mktoFieldWrap').classList.add('filled');
+                        } else {
+                            newField.closest('.mktoFieldWrap').classList.remove('filled');
                         }
                     }
 
