@@ -264,25 +264,25 @@
                     {
                         title: "Gather Voices Achieves Higher ROI with Drata",
                         desc: "See how Gather Voices achieved a higher ROI compared to other compliance competitors.",
-                        img: astUrl + "f_auto/drata/14018/8.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_01.webp",
                         link: "https://drata.com/customers/gather-voices"
                     },
                     {
                         title: "Lumiio Chooses Drata to Earn and Maintain Stakeholder Trust",
                         desc: "See how automation can save on resources and compliance costs while enhancing security programs.",
-                        img: astUrl + "f_auto/drata/14018/5.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_02.webp",
                         link: "https://drata.com/customers/lumiio"
                     },
                     {
                         title: "Calculating Cybersecurity ROI",
                         desc: "Find out how to calculate ROI for cybersecurity.",
-                        img: astUrl + "f_auto/drata/14018/6.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_03.webp",
                         link: "https://drata.com/blog/cybersecurity-roi"
                     },
                     {
                         title: "Transforming Traditional GRC: Why Cyber GRC is The Future",
                         desc: "Download the report and get access to the strategies needed to modernize your GRC practice.",
-                        img: astUrl + "f_auto/drata/14018/7.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_04.webp",
                         link: "https://drata.com/resources/reports/cyber-grc"
                     }
                 ]
@@ -293,25 +293,25 @@
                     {
                         title: "Maintain SOC 2 Compliance",
                         desc: "Access the latest resources to help you maintain SOC 2 compliance.",
-                        img: astUrl + "f_auto/drata/14018/9.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_05.webp",
                         link: "https://drata.com/grc-central/soc-2"
                     },
                     {
                         title: "Everything You Need to Know About SOC 2 Compliance Automation Software",
                         desc: "Get a breakdown of soc 2 software and the top features to look out for.",
-                        img: astUrl + "f_auto/drata/14018/10.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_06.webp",
                         link: "https://drata.com/grc-central/soc-2/compliance-automation-software"
                     },
                     {
                         title: "Vidyard Elevates Compliance & Security Through Automation",
                         desc: "See how Vidyard transformed their compliance processes.",
-                        img: astUrl + "f_auto/drata/14018/11.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_07.webp",
                         link: "https://drata.com/customers/vidyard"
                     },
                     {
                         title: "What Is Compliance Automation?",
                         desc: "Find out why you should automate your compliance program.",
-                        img: astUrl + "f_auto/drata/14018/12.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_08.webp",
                         link: "https://drata.com/grc-central/compliance-automation"
                     }
                 ]
@@ -322,25 +322,25 @@
                     {
                         title: "Risk Management Hub",
                         desc: "Explore the lates risk management resources.",
-                        img: astUrl + "f_auto/drata/14018/13.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_09.webp",
                         link: "https://drata.com/grc-central/risk"
                     },
                     {
                         title: "Build Your Own Risk Program",
                         desc: "See how to identify and assess risk in your organization. ",
-                        img: astUrl + "f_auto/drata/14018/14.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_10.webp",
                         link: "https://drata.com/grc-central/building-a-risk-program"
                     },
                     {
                         title: "Why Manual Risk Management Programs Fall Behind",
                         desc: "Learn the importance of GRC maturity.",
-                        img: astUrl + "f_auto/drata/14018/15.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_11.webp",
                         link: "https://drata.com/blog/grc-maturity"
                     },
                     {
                         title: "What is a RMF?",
                         desc: "See why using a risk management framework can enhance your security posture.",
-                        img: astUrl + "f_auto/drata/14018/16.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_12.webp",
                         link: "https://drata.com/grc-central/risk/risk-management-framework"
                     }
                 ]
@@ -351,25 +351,25 @@
                     {
                         title: "Telium Cuts Audit Prep Time by 40%",
                         desc: "See how Telium leveraged automated evidence gathering and continuous monitoring.",
-                        img: astUrl + "f_auto/drata/14018/17.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_13.webp",
                         link: "https://drata.com/customers/tealium"
                     },
                     {
                         title: "Magic Sees 10x More Audit Efficiency",
                         desc: "Drata helps Magic overcome compliance challenged to drive strategic growth.",
-                        img: astUrl + "f_auto/drata/14018/18.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_14.webp",
                         link: "https://drata.com/customers/magic"
                     },
                     {
                         title: "Calendly Reduced Hours Spent on Audit Prep by 90%",
                         desc: "Get insights on how to navigate the challenges of manual compliance.",
-                        img: astUrl + "f_auto/drata/14018/19.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_15.webp",
                         link: "https://drata.com/customers/calendly"
                     },
                     {
                         title: "A Journey from Manual Processes to Streamlined Efficiency",
                         desc: "See how Curnzero revolutionized their compliance practice.",
-                        img: astUrl + "f_auto/drata/14018/1_1.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_16.webp",
                         link: "https://drata.com/customers/churnzero"
                     }
                 ]
@@ -379,26 +379,26 @@
                 cards: [
                     {
                         title: "Walkthrough Drata's Compliance Automation",
-                        desc: "Join us as we walk you through Drata’s powerful Compliance Automation platform.",
-                        img: astUrl + "f_auto/drata/14018/17.webp",
+                        desc: "Join us as we walk you through Drata&#8217;s powerful Compliance Automation platform.",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_17.webp",
                         link: "https://drata.com/resources/webinars/drata-demo-days"
                     },
                     {
                         title: "Drata's Latest Product Roadmap",
                         desc: "Enter the Drataverse to see the future of GRC.",
-                        img: astUrl + "f_auto/drata/14018/18.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_18.webp",
                         link: "https://drata.com/resources/webinars/roadmap-reveal-drataverse-2024"
                     },
                     {
                         title: "Turn Trust Center into a Competitive Advantage",
                         desc: "See how Drata customers are leveraging Trust Center to reduce sales cycle times.",
-                        img: astUrl + "f_auto/drata/14018/19.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_19.webp",
                         link: "https://drata.com/resources/webinars/turn-trust-center-into-a-competitive-advantage"
                     },
                     {
                         title: "Managing Compliance and Risk in One Location With Drata",
                         desc: "Drata's Risk Management Solution manages compliance and risk in one location.",
-                        img: astUrl + "f_auto/drata/14018/1_1.webp",
+                        img: astUrl + "f_auto/drata/14018/v2_cards_20.webp",
                         link: "https://drata.com/grc-central/risk/introducing-risk-management"
                     }
                 ]
