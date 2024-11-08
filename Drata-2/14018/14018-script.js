@@ -152,27 +152,21 @@
                     {
                         title: "Get Started with SOC 2",
                         desc: "Access the latest resources to help you achieve SOC 2 compliance.",
-                        img: astUrl + "f_auto/drata/14018/8.webp",
+                        img: astUrl + "f_auto/drata/14018/13_1.webp",
                         link: "https://drata.com/grc-central/soc-2"
                     },
                     {
                         title: "Prepare For Your SOC 2 Audit",
                         desc: "Learn how to perform a SOC 2 readiness assessment and fix any issues before the audit.",
-                        img: astUrl + "f_auto/drata/14018/5.webp",
+                        img: astUrl + "f_auto/drata/14018/14_1.webp",
                         link: "https://drata.com/grc-central/soc-2/readiness-assessment"
                     },
                     {
                         title: "How To Avoid SOC 2 Audit Exceptions",
                         desc: "Discover what you need to know about audit exceptions on a SOC 2 report.",
-                        img: astUrl + "f_auto/drata/14018/6.webp",
+                        img: astUrl + "f_auto/drata/14018/15_1.webp",
                         link: " https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
                     },
-                    {
-                        title: "SOC 2 Audits: What You Can Expect from Start to Finish",
-                        desc: "Learn the essentials of SOC 2 audits and their significance in ensuring trust and security for your business.",
-                        img: astUrl + "f_auto/drata/14018/7.webp",
-                        link: "https://drata.com/grc-central/soc-2/how-to-avoid-audit-exceptions"
-                    }
                 ]
             },
             {
@@ -181,25 +175,25 @@
                     {
                         title: "Drata for Startups",
                         desc: "Learn how to get compliant at startup speed.",
-                        img: astUrl + "f_auto/drata/14018/9.webp",
+                        img: astUrl + "f_auto/drata/14018/01.webp",
                         link: "https://drata.com/platform/startup"
                     },
                     {
                         title: "3 Reasons Why Startups Need SOC 2",
                         desc: "See how SOC 2 compliance can shape a startup's long-term trajectory.",
-                        img: astUrl + "f_auto/drata/14018/10.webp",
+                        img: astUrl + "f_auto/drata/14018/02.webp",
                         link: "https://drata.com/grc-central/soc-2/reasons-startups-need-soc-2"
                     },
                     {
                         title: "14 Free Cybersecurity Tools for Startups",
                         desc: "Jumpstart your security program with these free cybersecurity tools.",
-                        img: astUrl + "f_auto/drata/14018/11.webp",
+                        img: astUrl + "f_auto/drata/14018/03.webp",
                         link: "https://drata.com/blog/free-cybersecurity-tools"
                     },
                     {
                         title: "Debunking 5 Common SOC 2 Misconceptions",
                         desc: "Discover how high-growth startups have navigated their compliance journeys. ",
-                        img: astUrl + "f_auto/drata/14018/12.webp",
+                        img: astUrl + "f_auto/drata/14018/04.webp",
                         link: "https://drata.com/blog/debunking-5-common-soc-2-misconceptions"
                     }
                 ]
@@ -216,7 +210,7 @@
                     {
                         title: "Accelerate Your Revenue Trajectory with SOC 2 Compliance",
                         desc: "Discover why integrating compliance into your growth strategy is not just beneficial—it's imperative.",
-                        img: astUrl + "f_auto/drata/14018/14.webp",
+                        img: astUrl + "f_auto/drata/14018/06.webp",
                         link: "https://drata.com/resources/webinars/accelerate-revenue-with-soc-2"
                     },
                     {

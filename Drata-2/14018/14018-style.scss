@@ -3481,6 +3481,8 @@ body.spz-14018 {
         .tab-wrapper {
           display: flex;
           gap: 8px;
+          flex-wrap: wrap;
+          justify-content: center;
 
           @media screen and (max-width: 767.98px) {
             flex-direction: column;
@@ -3535,17 +3537,20 @@ body.spz-14018 {
 
       .resource-card-container {
         display: none;
-        justify-content: space-between;
+        justify-content: flex-start;
         flex-wrap: wrap;
+        gap: 32px;
 
         @media (max-width: 1280px) {
           max-width: 736px;
           margin: 0 auto;
+          gap: 0 32px;
         }
 
-        @media (max-width: 760px) {
+        @media (max-width: 767.98px) {
           justify-content: center;
           max-width: 400px;
+          gap: 0;
         }
 
         .resource-card {
