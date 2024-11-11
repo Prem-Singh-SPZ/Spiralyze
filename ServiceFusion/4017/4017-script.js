@@ -7,14 +7,8 @@ var checkBody = setInterval(function () {
         detect_browser();
         var OStype = detectOS();
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-sf-4009')) {
-            bodyEle.classList.add('spz-sf-4009');
-        }
-        if (!bodyEle.classList.contains('spz-sf-4002')) {
-            bodyEle.classList.add('spz-sf-4002');
-        }
-        if (!bodyEle.classList.contains('spz-sf-4004')) {
-            bodyEle.classList.add('spz-sf-4004');
+        if (!bodyEle.classList.contains('spz-sf-4017')) {
+            bodyEle.classList.add('spz-sf-4017');
         }
         if (OStype == 'MacOS' || OStype == 'iOS') {
             bodyEle.classList.add('spz-ios-device');
@@ -639,7 +633,7 @@ function load4006() {
                             if (window.innerWidth < 641) {
                                 lt = document.querySelector('.spz-sf-features-toggle-item.spz-sf-active').offsetLeft - 15;
                             }
-                            document.querySelector('.spz-sf-4004 .spz-sf-features .spz-sf-features-toggle ul').scrollTo({
+                            document.querySelector('.spz-sf-4017 .spz-sf-features .spz-sf-features-toggle ul').scrollTo({
                                 top: 0,
                                 left: lt,
                                 behavior: "smooth",
