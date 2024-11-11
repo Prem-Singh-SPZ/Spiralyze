@@ -41,7 +41,7 @@ function load4001() {
         document.querySelector('body').insertAdjacentHTML('afterbegin', '<div class="spz-sf-main"></div>');
         header_fn(document.querySelector('.spz-sf-main'));
         hero_fn(document.querySelector('.spz-sf-main'));
-        // feature_fn(document.querySelector('.spz-sf-main'));
+        aboutUs_fn(document.querySelector('.spz-sf-main'));
         testimonial_fn(document.querySelector('.spz-sf-main'));
         productivity_fn(document.querySelector('.spz-sf-main'));
         faq_fn(document.querySelector('.spz-sf-main'));
@@ -76,7 +76,7 @@ function hero_fn(injector) {
                             <img src="//res.cloudinary.com/spiralyze/image/upload/v1706873953/servicefusion/4001/rating-stars.svg" alt="Ratings">
                             <label><strong>4.5</strong> (2,369 reviews)</label>
                         </div>
-                        <h2 class="spz-af-hero-title">Boost Productivity 40% with an All&#8209;in&#8209;One Field Service Software</h2>
+                        <h2 class="spz-af-hero-title">Boost Productivity 40% with an All&#8209;in&#8209;One Field Service Management Software</h2>
                     </div>
                     <div class="spz-sf-hero-form">
                         <div class="spz-sf-hero-form-wrap">
@@ -205,6 +205,66 @@ function formModified() {
             });
         }
     });
+}
+
+function aboutUs_fn(injector) {
+    //add html for 8 cards, 4 with image only and 4 with number and test alternating
+    let aboutUs_html = `
+        <section class="spz-sf-about-us">
+            <div class="spz-sf-about-us-wrap spz-default-wrap">
+                <div class="spz-sf-about-us-cards">
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>6,500+</h3>
+                            <p>Customers</p>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_1.webp" alt="Customers">
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>40%</h3>
+                            <p>Increase in productivity</p>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_1.webp" alt="Productivity">
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_1.webp" alt="Customers">
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>5M+</h3>
+                            <p>Jobs managed annually</p>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_1.webp" alt="Productivity">
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>95.7%</h3>
+                            <p>CSAT score</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+    if (injector.querySelectorAll('.spz-sf-about-us').length == 0) {
+        injector.insertAdjacentHTML('beforeend', aboutUs_html);
+    }
+
 }
 function testimonial_fn(injector) {
     let testimonial_data = [
@@ -543,10 +603,10 @@ function load4006() {
         </section>
     `;
     let checkappender = setInterval(function () {
-        if (document.querySelectorAll('.spz-sf-hero').length > 0) {
+        if (document.querySelectorAll('.spz-sf-about-us').length > 0) {
             clearInterval(checkappender);
             if (document.querySelectorAll('.spz-sf-features').length == 0) {
-                document.querySelector('.spz-sf-hero').insertAdjacentHTML('afterend', featureHtml);
+                document.querySelector('.spz-sf-about-us').insertAdjacentHTML('afterend', featureHtml);
                 document.querySelectorAll('.spz-toggle-item-cta').forEach(function (btn) {
                     btn.addEventListener('click', function (e) {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
