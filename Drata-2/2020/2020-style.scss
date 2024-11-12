@@ -5,6 +5,14 @@ body.spz-2020 {
     div[class*="ContentAccordion-root"] {
       div[class*="ContentAccordion-styledBlockText"] {
         padding-bottom: 3px;
+
+        @media (max-width: 1199.98px) {
+          padding-bottom: 8px;
+        }
+        @media (max-width: 767.98px) {
+          padding-bottom: 18px;
+
+        }
         div[class*="BlockText-content"] {
           a[class*="BlockText-link"] {
             display: none;
@@ -14,6 +22,12 @@ body.spz-2020 {
 
       div[class*="ContentAccordion-contentOuterWrapper"] {
         padding: 16px 72px;
+        @media (max-width: 1199.98px) {
+          padding: 16px;
+        }
+        @media (max-width: 767.98px) {
+          padding: 0;
+        }
         div[class*="ContentAccordion-contentContainer"] {
           display: none;
         }
@@ -44,15 +58,13 @@ body.spz-2020 {
         display: none;
       }
 
-      //   @media (max-width: 1199.98px) {
-      //     max-width: 624px;
-      //   }
+      @media (max-width: 1199.98px) {
+        padding: 8px;
+      }
 
       @media (max-width: 767.98px) {
         padding: 8px;
-        max-width: calc(100% - 32px);
-        overflow-x: auto;
-        margin-bottom: 40px;
+        margin-bottom: 32px;
       }
 
       .gts-tab {
@@ -63,16 +75,21 @@ body.spz-2020 {
         border-radius: 999px;
         cursor: pointer;
 
-        // @media (max-width: 1199.98px) {
-        //   gap: 8px;
-        //   padding: 12px 16px 12px 8px;
-        //   width: 192px;
-        // }
+        @media (max-width: 1199.98px) {
+          gap: 10px;
+          padding: 8px 14px 8px 22px;
+
+          &:last-child {
+            margin-right: 185px;
+          }
+        }
 
         @media (max-width: 767.98px) {
-          padding: 8px 12px;
-          width: auto;
-          min-width: 246px;
+          // padding: 8px 12px;
+
+          &:last-child {
+            margin-right: 102px;
+          }
         }
 
         .gts-icon {
@@ -95,10 +112,10 @@ body.spz-2020 {
           line-height: 24px;
           white-space: nowrap;
 
-          //   @media (max-width: 1199.98px) {
-          //     font-size: 14px;
-          //     line-height: 20px;
-          //   }
+          @media (max-width: 1199.98px) {
+            font-size: 14px;
+            line-height: 20px;
+          }
         }
 
         // &:hover {
@@ -120,6 +137,11 @@ body.spz-2020 {
         &.active {
           background: #fff;
           padding-left: 20px;
+
+          @media (max-width: 1199.98px) {
+            padding-left: 12px;
+          }
+
           .gts-icon {
             background: #eff8ff;
           }
@@ -152,7 +174,7 @@ body.spz-2020 {
     }
 
     @media (max-width: 1199.98px) {
-      padding: 0px 32px 96px;
+      padding: 0px 0 24px;
     }
 
     @media (max-width: 767.98px) {
@@ -170,7 +192,11 @@ body.spz-2020 {
         }
 
         @media (max-width: 1399.98px) {
-          gap: 32px;
+          gap: 27px;
+        }
+
+        @media (max-width: 767.98px) {
+          gap: 22px;
         }
 
         .gtct-copy {
@@ -193,12 +219,12 @@ body.spz-2020 {
             margin-bottom: 32px;
 
             @media (max-width: 1199.98px) {
-              margin-bottom: 12px;
+              margin-bottom: 25px;
             }
 
             @media (max-width: 767.98px) {
-              font-size: 16px;
-              line-height: 24px;
+              font-size: 20px;
+              line-height: 28px;
             }
           }
 
@@ -223,6 +249,12 @@ body.spz-2020 {
           .gtct-cta {
             margin-top: 32px;
             margin-bottom: 7px;
+
+            @media screen and (max-width: 1199.98px) {
+              margin-top: 23px;
+              margin-bottom: 0;
+            }
+
             .gtct-demo {
               display: inline-flex;
               align-items: center;
@@ -266,10 +298,9 @@ body.spz-2020 {
           flex: 0 0 48%;
 
           @media (max-width: 1199.98px) {
-            max-width: 100%;
+            max-width: 704px;
             flex: 0 0 100%;
           }
-
 
           img {
             width: 100%;
