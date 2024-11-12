@@ -25,18 +25,20 @@ window.addEventListener("locationchange", function() {
     urlCheck(url);
 });
 
+url = location.href;
+urlCheck(url);
+
 function urlCheck(url) {
-    var allblogsurlstring = "https://airsculpt.com/";
-    if (window.location.pathname.indexOf("before-and-after/") > -1) { // Add " / " to run on all urls
+    var allblogsurlstring = "";
+    if (window.location.pathname.indexOf("/vc-started") > -1) { // Add " / " to run on all urls
         allblogsurlstring = window.location.href;
     }
     if(isSameUrl(url, allblogsurlstring, true)) {
-    	load_variant_3001(); 
+    	load_4001(); 
     }else {
 		/*------remove test ---------*/
-		if(document.body.classList.contains('spz_as_3001')){
-			document.querySelector("body").classList.remove("spz_as_3001");
-			document.body.classList.add('spz_as_3001_other');			
+		if(document.body.classList.contains('spz_4001')){
+			document.querySelector("body").classList.remove("spz_4001");
 		}
     }
 }
@@ -57,57 +59,29 @@ function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
     return false;
 }
 
-function load_variant_3001(){
-	if (!document.body.classList.contains('spz_as_3001')) {
-		document.body.classList.add('spz_as_3001');
+function load_4001(){
+	if (!document.body.classList.contains('spz_4001')) {
+		document.body.classList.add('spz_4001');
 	}
 	
-	waitForElm('main section[id="1"]').then(function () {
-		if(document.querySelectorAll(".spz_main_wrap").length ==0){
-			var el1 = document.createElement("div");
-			el1.innerHTML = `
-			<div class="spz_inner">
-				<div class="left_main_wrap">
-					<div class="content_main_wrap">
-						<div class="short_title_wrap">BEFORE & AFTERs</div>
-						<div class="title_wrap">AirSculpt® <br >Results Gallery</div>
-					</div>
-				</div>
-				<div class="right_main_wrap"></div>
-			</div>
-			`;
-			el1.classList.add('spz_main_wrap');
-			
-			wrapper = document.querySelector('main');
-			wrapper.insertBefore(el1, wrapper.children[0]);
-			
-			waitForElm('[class*=form-module--formComponent]').then(function () {
-				document.querySelector(".right_main_wrap").appendChild(document.querySelector('[class*=form-module--formComponent]'));
-				
-				document.querySelector(".spz_as_3001 .spz_main_wrap .right_main_wrap .form-module--title--33ba1, .spz_as_3001 .spz_main_wrap .right_main_wrap [class^=form-module--formComponent] [class^=form-module--wrapper] h2").innerHTML = "Get a free consult, PRICING, & PrOMOS";
-				/*-------disclaimer customize-----*/
-				var disc = document.querySelector('[class*=styles-module--optInWrapper] [class*=styles-module--optInText]').innerText.replace(/\n/g, '').replace('Privacy & Opt-In:','<b>Privacy & Opt-In:</b>');
-				disc = disc.replace('Terms & Conditions and Privacy Policy','<a href="https://airsculpt.com/privacy-policy/" target="_blank" rel="noopener">Terms & Conditions and Privacy Policy</a>');
-				
-				document.querySelector('[class*=styles-module--optInText]').innerHTML = disc;
-				document.querySelector('[class*=styles-module--optInText]').insertAdjacentHTML('beforeend', '<div class="read_more">... View More</div>');
-				//document.querySelector('.styles-module--optInBody--39e94 a').getAttribute('href');
-				
-				document.querySelector('.spz_as_3001 .spz_main_wrap .right_main_wrap form .read_more').addEventListener("click", function (ele) {
-					document.querySelector('.spz_as_3001 .spz_main_wrap .right_main_wrap form [class*=styles-module--optInText]').classList.add('disc_exp');
-				});
-			});
-			checkHidden3001();
-			
+	waitForElm('.jotform-form .form-all .cont').then(function () {
+		if(document.querySelectorAll(".spz_title_wrap").length == 0){			
+			document.querySelector('.jotform-form .form-all .cont').insertAdjacentHTML('beforebegin', '<div class="spz_header_wrap"></div>');
+			document.querySelector('.spz_header_wrap').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .cont'));
+			document.querySelector('.spz_header_wrap .cont').insertAdjacentHTML('afterbegin', '<div class="spz_title_wrap"><img src="//res.cloudinary.com/spiralyze/image/upload/v1730814779/airsculpt/4001/airsculpt_logosvg.svg" alt="Logo" class="spz-logo"></div>');
+
+			document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div><div class="spz-form-wrap"><div class="spz-form-field first-name"></div><div class="spz-form-field last-name"></div><div class="spz-form-field phone-number"></div><div class="spz-form-field email"></div><div class="spz-form-field clinic-location"></div><div class="spz-form-field zip-code"></div></div>');
+
+			document.querySelector('.spz-form-wrap .first-name').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .form-section.page-section .form-line span[data-input-type="first"]'));
+			document.querySelector('.spz-form-wrap .last-name').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .form-section.page-section .form-line span[data-input-type="last"]'));
+			document.querySelector('.spz-form-wrap .phone-number').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .form-section.page-section .form-line[data-type="control_dropdown"]'));
+			document.querySelector('.spz-form-wrap .phone-number').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .form-section.page-section .form-line[data-type="control_phone"] '));
 		}
+		
+		checkHidden4001();
 	});	
 }
 
-document.addEventListener('DOMContentLoaded', function() {
-	load_variant_3001();
-}, false);
-
-load_variant_3001();
 function waitForElm(selector) {
 	return new Promise(resolve => {
 		if (document.querySelector(selector)) {
@@ -124,7 +98,7 @@ function waitForElm(selector) {
 function insertAfter(referenceNode, newNode) {
     referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
 }
-function checkHidden3001() {
+function checkHidden4001() {
     let checkHiddenInput = setInterval(function(){
         if(document.querySelectorAll("#SPZ_test").length > 0) {
             clearInterval(checkHiddenInput);
