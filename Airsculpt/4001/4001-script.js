@@ -70,6 +70,14 @@ function load_4001(){
 			document.querySelector('.spz_header_wrap').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .cont'));
 			document.querySelector('.spz_header_wrap .cont').insertAdjacentHTML('afterbegin', '<div class="spz_title_wrap"><img src="//res.cloudinary.com/spiralyze/image/upload/v1730814779/airsculpt/4001/airsculpt_logosvg.svg" alt="Logo" class="spz-logo"></div>');
 
+
+			//check if current url has some query params
+			if (window.location.search) {
+				const urlParams = new URLSearchParams(window.location.search);
+				const myParam = urlParams.get('email');
+				if (myParam) {
+				}
+			}
 			document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div><div class="spz-form-wrap"><div class="spz-form-field first-name"></div><div class="spz-form-field last-name"></div><div class="spz-form-field phone-number"></div><div class="spz-form-field email"></div><div class="spz-form-field clinic-location"></div><div class="spz-form-field zip-code"></div></div>');
 
 			document.querySelector('.spz-form-wrap .first-name').insertAdjacentElement('beforeend', document.querySelector('.jotform-form .form-all .form-section.page-section .form-line span[data-input-type="first"]'));
