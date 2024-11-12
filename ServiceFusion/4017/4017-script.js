@@ -215,7 +215,10 @@ function aboutUs_fn(injector) {
                     </div>
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_1.webp" alt="Customers">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-1_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_1.webp" alt="Customers">
+                            </picture>
                         </div>
                     </div>
                     <div class="spz-sf-about-us-card">
@@ -226,12 +229,18 @@ function aboutUs_fn(injector) {
                     </div>
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_1.webp" alt="Productivity">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-2_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_1.webp" alt="Productivity">
+                            </picture>
                         </div>
                     </div>
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_1.webp" alt="Customers">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-3_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_1.webp" alt="Customers">
+                            </picture>
                         </div>
                     </div>
                     <div class="spz-sf-about-us-card">
@@ -242,7 +251,10 @@ function aboutUs_fn(injector) {
                     </div>
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
-                            <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_1.webp" alt="Productivity">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-4_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_1.webp" alt="Productivity">
+                            </picture>
                         </div>
                     </div>
                     <div class="spz-sf-about-us-card">
