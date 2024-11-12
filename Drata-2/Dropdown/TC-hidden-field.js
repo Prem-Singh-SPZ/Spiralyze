@@ -1,16 +1,16 @@
 (function () {
     function createTest() {
         waitForElm('header + div[data-csk-entry-type="hero"] > .MuiContainer-root > div[class*="HeroSubpage-content"]').then(function () {
-            document.querySelector("body").classList.add("spz-28002-TC");
+            document.querySelector("body").classList.add("spz-2020-TC");
 
-            submitTestDetails('Control_28002a');
+            submitTestDetails('2020_Control');
         });
 
-        createCookie('spz-28002-TC-loaded', 'true', 1);
+        createCookie('spz-2020-TC-loaded', 'true', 1);
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-28002-TC");
+        document.body.classList.remove("spz-2020-TC");
     }
 
     // Passing test details to hidden fields
@@ -24,12 +24,12 @@
         const sInt = setInterval(() => {
             var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
 
-            // Check if spz-28002-TC-loaded cookie is present and cro_field is present
-            if ((cro_field && cro_field.val != '') && isCookieExist('spz-28002-TC-loaded')) {
+            // Check if spz-2020-TC-loaded cookie is present and cro_field is present
+            if ((cro_field && cro_field.val != '') && isCookieExist('spz-2020-TC-loaded')) {
                 clearInterval(sInt);
-                submitTestDetails('Control_28002a');
+                submitTestDetails('2020_Control');
 
-                deleteCookie('spz-28002-TC-loaded');
+                deleteCookie('spz-2020-TC-loaded');
             }
         }, 1000);
 

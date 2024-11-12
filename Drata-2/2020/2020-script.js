@@ -199,7 +199,7 @@
                                 <div class="gtct-desc">With hundreds of native integrations, you can connect your HRIS, SSO, cloud provider, DevOps toolchain, and countless other systems to Drata—opening endless possibilities for control enforcement, monitoring, evidence collection, and remediation.</div>
                                 <div class="gtct-desc">Want to validate a specific control or connect to a different tool? Use our Open API to build deep, custom integrations with any system.</div>
                                 <div class="gtct-cta">
-                                    <a href="javascrip:;" class="gtct-demo">Get Started ${ctaArrow}</a>
+                                    <a href="javascript:;" class="gtct-demo spz_2020_tracking">Get Started ${ctaArrow}</a>
                                 </div>
                             </div>
                             <div class="gtct-image">
@@ -217,7 +217,7 @@
                                 <div class="gtct-desc">Compliance looks different for every company. That&#8217;s why Adaptive Automation offers complete configurability.</div>
                                 <div class="gtct-desc">With deeper integrations and more testing sources, Adaptive Automation lets you build no-code tests with custom logic to automate and customize your control monitoring.</div>
                                 <div class="gtct-cta">
-                                    <a href="javascrip:;" class="gtct-demo">Get Started ${ctaArrow}</a>
+                                    <a href="javascript:;" class="gtct-demo spz_2020_tracking">Get Started ${ctaArrow}</a>
                                 </div>
                             </div>
                             <div class="gtct-image">
@@ -234,7 +234,7 @@
                                 <div class="gtct-title">Automate Evidence Collection</div>
                                 <div class="gtct-desc">Collect all of the evidence you need, without the manual work. Between custom tests, integration coverage and our API, you can automatically gather more evidence without taking screenshots or managing evidence in spreadsheets.</div>
                                 <div class="gtct-cta">
-                                    <a href="javascrip:;" class="gtct-demo">Get Started ${ctaArrow}</a>
+                                    <a href="javascript:;" class="gtct-demo spz_2020_tracking">Get Started ${ctaArrow}</a>
                                 </div>
                             </div>
                             <div class="gtct-image">
@@ -252,7 +252,7 @@
                                 <div class="gtct-desc">With all your evidence, controls, and documents in one place, you can manage every step of the process. Continuous control monitoring provides full visibility into your compliance status so you can stay on top of risks and action items.</div>
                                 <div class="gtct-desc">Quickly create tasks and manage tickets to ensure key compliance work doesn&#8217;t fall through the cracks. And with role-based access, you can protect sensitive data and streamline work.</div>
                                 <div class="gtct-cta">
-                                    <a href="javascrip:;" class="gtct-demo">Get Started ${ctaArrow}</a>
+                                    <a href="javascript:;" class="gtct-demo spz_2020_tracking">Get Started ${ctaArrow}</a>
                                 </div>
                             </div>
                             <div class="gtct-image">
