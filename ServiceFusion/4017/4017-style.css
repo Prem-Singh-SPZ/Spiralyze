@@ -3179,11 +3179,16 @@ body.spz-sf-sticky-form-show {
 }
 /* Sticky Footer #4009 End */
 .spz-sf-4017 .spz-sf-about-us {
-  padding: 80px 0;
+  padding: 80px 0 40px;
+}
+@media (max-width: 1024.98px) {
+  .spz-sf-4017 .spz-sf-about-us {
+    padding-bottom: 48px;
+  }
 }
 @media (max-width: 767.98px) {
   .spz-sf-4017 .spz-sf-about-us {
-    padding: 64px 0;
+    padding: 64px 0 48px;
   }
 }
 .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards {
@@ -3195,16 +3200,9 @@ body.spz-sf-sticky-form-show {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  gap: 40px;
-}
-@media (max-width: 1024.98px) {
-  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards {
-    gap: 32px;
-  }
 }
 @media (max-width: 767.98px) {
   .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards {
-    gap: 15px;
     max-width: 380px;
     margin: auto;
   }
@@ -3217,6 +3215,36 @@ body.spz-sf-sticky-form-show {
   background: #f4f4f4;
   overflow: hidden;
   position: relative;
+  margin-right: 40px;
+  margin-bottom: 40px;
+}
+@media (min-width: 1319.98px) {
+  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(4), .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:last-child {
+    margin-right: 0;
+  }
+}
+@media (min-width: 1024.98px) and (max-width: 1319.98px) {
+  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(4) {
+    margin-right: 40px;
+  }
+  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(3), .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(5) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 1024.98px) {
+  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card {
+    margin-right: 32px;
+    margin-bottom: 32px;
+  }
+  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(2), .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(3), .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(5), .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card:nth-child(8) {
+    margin-right: 0;
+  }
+}
+@media (max-width: 767.98px) {
+  .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card {
+    margin-right: 15px;
+    margin-bottom: 15px;
+  }
 }
 .spz-sf-4017 .spz-sf-about-us .spz-sf-about-us-wrap .spz-sf-about-us-cards .spz-sf-about-us-card::after {
   content: "";
