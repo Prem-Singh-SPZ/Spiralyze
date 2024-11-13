@@ -83,14 +83,11 @@ body.spz_4001 {
             display: block;
             margin-bottom: 12px;
 
-            .form-sub-label-container {
-              margin-bottom: 0;
-            }
-
             .form-sub-label {
               position: absolute;
-              top: 13px;
-              left: 20px;
+              top: 10px;
+              left: 16px;
+              padding: 2px 4px;
               color: #b3b3b3;
               // font-family: var(--Font-Family-Body, Gotham);
               font-size: 16px;
@@ -104,7 +101,6 @@ body.spz_4001 {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-              display: -webkit-box;
               right: 20px;
             }
 
@@ -119,61 +115,31 @@ body.spz_4001 {
                 }
               }
 
-              &:not(.is-placeholder) {
-                &:not(:placeholder-shown) {
-                  ~ {
-                    label {
-                      color: #707070;
-                      top: -9px;
-                      font-size: 12px;
-                      line-height: 16px;
-                    }
-                  }
-                }
-                &:not(:-moz-placeholder-shown) {
-                  ~ {
-                    label {
-                      color: #707070;
-                      top: -9px;
-                      font-size: 12px;
-                      line-height: 16px;
-                    }
-                  }
-                }
-                &:not(:-ms-input-placeholder) {
-                  ~ {
-                    label {
-                      top: -9px;
-                      color: #707070;
-                      font-size: 12px;
-                      line-height: 16px;
-                    }
-                  }
-                }
-              }
-
-              &:not([value=""]) ~ .form-sub-label {
-                color: #727272;
-                top: calc(50% - 12px);
-                left: 20px;
-                font-size: 17px;
-                line-height: 24px;
-              }
-
               &:focus {
                 border-color: #e5ca7a;
 
                 ~ .form-sub-label {
                   color: #707070;
-                  top: -9px;
+                  top: -10px;
+                  width: fit-content;
                   font-size: 12px;
                   line-height: 16px;
                 }
               }
 
-              &:not(:placeholder-shown) ~ .form-sub-label {
-                color: #707070;
+              &.i-filled {
+               ~ .form-sub-label {
+                  color: #707070;
+                  top: -10px;
+                  font-size: 12px;
+                  line-height: 16px;
+                  width: fit-content;
+                }
               }
+            }
+
+            .form-sub-label-container {
+              margin-bottom: 0;
             }
           }
 
@@ -211,22 +177,22 @@ body.spz_4001 {
           }
 
           &[data-type="control_radio"] {
-            .form-input-wide {
+            .form-input-wide .form-single-column {
               display: none;
             }
           }
         }
 
-        .form-line-error{
+        .form-line-error {
           background-color: white;
 
           .form-textbox,
           .form-dropdown {
-            border-color: #DC503D;
+            border-color: #dc503d;
           }
 
-          .form-error-message{
-            color: #DC503D;
+          .form-error-message {
+            color: #dc503d;
             font-size: 12px;
             font-weight: 400;
             line-height: 16px;
@@ -241,6 +207,15 @@ body.spz_4001 {
             border: none;
             margin: 20px 0 0;
             padding: 0;
+            flex-direction: column;
+
+            .form-button-error {
+              color: #dc503d;
+              font-size: 12px;
+              font-weight: 400;
+              line-height: 16px;
+              margin-bottom: 8px;
+            }
 
             .form-pagebreak-back-container {
               &[style] {
@@ -265,7 +240,7 @@ body.spz_4001 {
                 line-height: 20px;
                 letter-spacing: 0.56px;
                 text-transform: uppercase;
-                background: #E5CA7A;
+                background: #e5ca7a;
               }
             }
           }

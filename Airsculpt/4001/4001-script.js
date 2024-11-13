@@ -90,9 +90,10 @@ function load_4001() {
             document.querySelector('.jotform-form .form-all .form-section.page-section #input_184').insertAdjacentHTML('afterend', '<label class="form-sub-label">ZIP code</label>');
 
             //convert above code to html select dropdown
-            document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentHTML('beforeend', '<div class="form-sub-label-container"><select class="spz-dropdown form-dropdown validate[required]"><option value="Virtual">Virtual</option><option value="In Person">In Person</option></select><label class="form-sub-label">Preferred consultation type</label></div>');
+            document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentHTML('afterbegin', '<div class="form-sub-label-container"><select class="spz-dropdown form-dropdown validate[required]"><option value="">Please Select</option><option value="Virtual">Virtual</option><option value="In Person">In Person</option></select><label class="form-sub-label">Preferred consultation type</label></div>');
 
             waitForElm('.spz-dropdown').then(function () {
+                document.querySelector('.spz-dropdown option[value=""]').setAttribute('disabled', 'true');
                 //check if the value is already selected in the form and update the dropdown selected value
                 if (document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked')) {
                     document.querySelector('.spz-dropdown').value = document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked').value;
@@ -103,9 +104,84 @@ function load_4001() {
                     document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input[value="' + this.value + '"]').click();
                 });
             });
+
+            focusFields();
         }
 
         checkHidden4001();
+    });
+}
+
+function focusFields() {
+    //check on change for all once the value is selected in html select add i-filled class to the closest form-sub-label-container
+    document.querySelectorAll('.jotform-form .form-all .form-section.page-section .form-dropdown').forEach(function (el) {
+        el.addEventListener('change', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
+        el.addEventListener('blur', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
+        el.addEventListener('keypress', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
+        el.addEventListener('keyup', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
+    });
+
+    //check validation for input fields as well for blur keypress and keyup
+    document.querySelectorAll('.jotform-form .form-all .form-section.page-section .form-textbox').forEach(function (el) {
+        el.addEventListener('blur', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
+        el.addEventListener('keypress', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
+        el.addEventListener('keyup', function () {
+            if (this.value) {
+                this.classList.add('i-filled');
+            } else {
+                if (this.classList.contains('i-filled')) {
+                    this.classList.remove('i-filled');
+                }
+            }
+        });
     });
 }
 
