@@ -321,7 +321,7 @@
                 cards: [
                     {
                         title: "Risk Management Hub",
-                        desc: "Explore the lates risk management resources.",
+                        desc: "Explore the latest risk management resources.",
                         img: astUrl + "f_auto/drata/14018/v2_cards_09.webp",
                         link: "https://drata.com/grc-central/risk"
                     },
