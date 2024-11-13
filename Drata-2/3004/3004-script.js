@@ -6,7 +6,7 @@
 	const modalData = {
 		leftImage: '',
 		leftImageAlt: 'Jonathan Jaffe',
-		modalHeading: '“We saved 80% of time using Drata&#8217;s continuous compliance automation. I&#8217;ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit. ',
+		modalHeading: '“We saved 80% of time using Drata&#8217;s continuous compliance automation. I&#8217;ve spent well over 200 hours before using Drata just in preparing for and dealing with our SOC 2 audit.”',
 		modalSubHeading: 'Jonathan Jaffe',
 		modalContent: 'CISO, Lemonade ',
 		ctaHref: 'https://drata.com/demo',
@@ -45,7 +45,7 @@
 		})
 
 		document.body.classList.add("spz-3004");
-		document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1729754791/drata/3004/frame_1000003342.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/f_auto/drata/3004/image.webp" as="image">`);
+		document.head.insertAdjacentHTML('beforeend', `<link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1729754791/drata/3004/frame_1000003342.svg" as="image"><link rel="preload" href="//res.cloudinary.com/spiralyze/image/upload/v1731502495/drata/3004/image_1.svg" as="image">`);
 	}
 
 	function addModal(modalData, modalDelay, leavePage, timesToAppear) {
