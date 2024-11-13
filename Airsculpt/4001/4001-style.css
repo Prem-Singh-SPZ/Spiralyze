@@ -5,17 +5,17 @@ body.spz_4001 .jotform-form #formCoverLogo,
 body.spz_4001 .jotform-form .badge-wrapper {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all {
+body.spz_4001 .jotform-form .form-all#spz-form {
   max-width: 100%;
 }
-body.spz_4001 .jotform-form .form-all .spz_header_wrap {
+body.spz_4001 .jotform-form .form-all#spz-form .spz_header_wrap {
   border-bottom: 1px solid #e5e5e5;
   padding: 16px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body.spz_4001 .jotform-form .form-all .spz_header_wrap .cont {
+body.spz_4001 .jotform-form .form-all#spz-form .spz_header_wrap .cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -28,20 +28,22 @@ body.spz_4001 .jotform-form .form-all .spz_header_wrap .cont {
   max-width: 590px;
   margin: auto;
 }
-body.spz_4001 .jotform-form .form-all .form-section.page-section {
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section {
   max-width: 590px;
   margin: 32px auto;
   padding: 0;
 }
-body.spz_4001 .jotform-form .form-all .form-section.page-section [data-css-selector=id_1],
-body.spz_4001 .jotform-form .form-all .form-section.page-section [data-css-selector=id_280],
-body.spz_4001 .jotform-form .form-all .form-section.page-section [data-css-selector=id_182] {
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section [data-css-selector=id_1],
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section [data-css-selector=id_280],
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section [data-css-selector=id_182],
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section [data-css-selector=id_283] {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all .form-section.page-section .spz_form_title_wrap {
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .spz_form_title_wrap {
   width: 100%;
+  margin-bottom: 32px;
 }
-body.spz_4001 .jotform-form .form-all .form-section.page-section .spz_form_title_wrap .spz_form_title {
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .spz_form_title_wrap .spz_form_title {
   color: #000;
   text-align: center;
   font-size: 32px;
@@ -49,7 +51,7 @@ body.spz_4001 .jotform-form .form-all .form-section.page-section .spz_form_title
   line-height: 40px;
   margin: 0 0 12px;
 }
-body.spz_4001 .jotform-form .form-all .form-section.page-section .spz_form_title_wrap .spz_form_desc {
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .spz_form_title_wrap .spz_form_desc {
   color: #000;
   text-align: center;
   font-size: 14px;
@@ -58,14 +60,213 @@ body.spz_4001 .jotform-form .form-all .form-section.page-section .spz_form_title
   max-width: 350px;
   margin: auto;
 }
-body.spz_4001 .jotform-form .form-all .form-section.page-section .spz-form-wrap {
-  width: 100%;
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line {
+  margin: 0;
+  padding: 0;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line label.form-label {
+  display: none;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-textbox,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-dropdown {
+  border-radius: 100px !important;
+  border: 1px solid #e5e5e5;
+  background: #fff;
+  padding: 12px 16px 12px 20px;
+  height: 48px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide {
+  position: relative;
+  display: block;
+  margin-bottom: 12px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-sub-label-container,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-sub-label-container {
+  margin-bottom: 0;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-sub-label {
+  position: absolute;
+  top: 13px;
+  left: 20px;
+  color: #b3b3b3;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  pointer-events: none;
+  -webkit-transition-duration: 150ms;
+          transition-duration: 150ms;
+  margin: 0;
+  background: #fff;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
   display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
+  right: 20px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown {
+  -webkit-box-shadow: none;
+          box-shadow: none;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:hover,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:hover,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:hover,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:hover {
+  border-color: #e5ca7a;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:hover ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:hover ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:hover ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:hover ~ .form-sub-label {
+  color: #707070;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  color: #707070;
+  top: -9px;
+  font-size: 12px;
+  line-height: 16px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(.is-placeholder):not(:-ms-input-placeholder) ~ label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(.is-placeholder):not(:-ms-input-placeholder) ~ label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(.is-placeholder):not(:-ms-input-placeholder) ~ label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  color: #707070;
+  top: -9px;
+  font-size: 12px;
+  line-height: 16px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(.is-placeholder):not(:placeholder-shown) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(.is-placeholder):not(:placeholder-shown) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(.is-placeholder):not(:placeholder-shown) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(.is-placeholder):not(:placeholder-shown) ~ label {
+  color: #707070;
+  top: -9px;
+  font-size: 12px;
+  line-height: 16px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(.is-placeholder):not(:-moz-placeholder-shown) ~ label {
+  color: #707070;
+  top: -9px;
+  font-size: 12px;
+  line-height: 16px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(.is-placeholder):not(:-ms-input-placeholder) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(.is-placeholder):not(:-ms-input-placeholder) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(.is-placeholder):not(:-ms-input-placeholder) ~ label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(.is-placeholder):not(:-ms-input-placeholder) ~ label {
+  top: -9px;
+  color: #707070;
+  font-size: 12px;
+  line-height: 16px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not([value=""]) ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not([value=""]) ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not([value=""]) ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not([value=""]) ~ .form-sub-label {
+  color: #727272;
+  top: calc(50% - 12px);
+  left: 20px;
+  font-size: 17px;
+  line-height: 24px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:focus,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:focus,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:focus,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:focus {
+  border-color: #e5ca7a;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:focus ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:focus ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:focus ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:focus ~ .form-sub-label {
+  color: #707070;
+  top: -9px;
+  font-size: 12px;
+  line-height: 16px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(:-moz-placeholder-shown) ~ .form-sub-label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(:-moz-placeholder-shown) ~ .form-sub-label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(:-moz-placeholder-shown) ~ .form-sub-label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(:-moz-placeholder-shown) ~ .form-sub-label {
+  color: #707070;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(:-ms-input-placeholder) ~ .form-sub-label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(:-ms-input-placeholder) ~ .form-sub-label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(:-ms-input-placeholder) ~ .form-sub-label, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(:-ms-input-placeholder) ~ .form-sub-label {
+  color: #707070;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-textbox:not(:placeholder-shown) ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-sub-label-container .form-dropdown:not(:placeholder-shown) ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-textbox:not(:placeholder-shown) ~ .form-sub-label,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide .form-dropdown:not(:placeholder-shown) ~ .form-sub-label {
+  color: #707070;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line .form-input-wide span[data-input-type=last] {
+  margin-left: 12px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line.form-col-2, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line.form-col-3, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line.form-col-4 {
+  max-width: 193px !important;
+  width: 100%;
+  -webkit-transform: none;
+          transform: none;
+  padding: 0;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_email], body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_textbox] {
+  max-width: 289px;
+  margin-left: 12px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_email] .form-input-wide, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_textbox] .form-input-wide {
+  width: 100%;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_dropdown] {
+  max-width: 289px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_dropdown] .form-input-wide {
+  width: 100%;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line[data-type=control_radio] .form-input-wide {
+  display: none;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line-error {
+  background-color: white;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line-error .form-textbox,
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line-error .form-dropdown {
+  border-color: #DC503D;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section .form-line-error .form-error-message {
+  color: #DC503D;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 16px;
+  padding: 0;
+  background: #fff;
+  margin: 0 0 4px 20px;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section li[data-type=control_pagebreak] .form-pagebreak {
+  border: none;
+  margin: 20px 0 0;
+  padding: 0;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-back-container[style] {
+  display: none;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container {
+  width: 100%;
+}
+body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container .form-pagebreak-next {
+  margin: 0;
+  width: 100%;
+  padding: 12px 20px;
+  height: 44px;
+  border-radius: 100px;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  background: #E5CA7A;
 }
