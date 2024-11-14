@@ -75,11 +75,18 @@ function load_4001() {
             //check if current url has some query params
             if (window.location.search) {
                 const urlParams = new URLSearchParams(window.location.search);
-                const myParam = urlParams.get('email');
+                const myParam = urlParams.get('email') || urlParams.get('postalCode') || urlParams.get('nationalPhoneNumber') || urlParams.get('name[first]') || urlParams.get('phoneCountrySelect');
                 if (myParam) {
+                    document.body.classList.add('spz-with-query-param');
+
+                    //create a new div after .badge-wrapper to show all the fields with values inside it
+                    document.querySelector('.jotform-form .form-all .badge-wrapper').insertAdjacentHTML('afterend', '<div class="spz-form-prefilled-section"><div class="form-pf-wrapper"><div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div></div></div><div class="form-pf-values-wrapper"></div><div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" rel="nofollow">Click here</a></div>');
                 }
             }
+
             document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div>');
+
+            document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('beforeend', '<div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" rel="nofollow">Click here</a></div>');
 
             document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentElement('beforebegin', document.querySelector('.jotform-form .form-all .form-section.page-section #id_10'));
             document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentElement('beforebegin', document.querySelector('.jotform-form .form-all .form-section.page-section #id_184'));
@@ -105,7 +112,9 @@ function load_4001() {
                 });
             });
 
-            focusFields();
+            waitForElm('.jotform-form .form-all .form-section.page-section .form-textbox').then(function () {
+                focusFields();
+            });
         }
 
         checkHidden4001();
@@ -116,73 +125,43 @@ function focusFields() {
     //check on change for all once the value is selected in html select add i-filled class to the closest form-sub-label-container
     document.querySelectorAll('.jotform-form .form-all .form-section.page-section .form-dropdown').forEach(function (el) {
         el.addEventListener('change', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
         el.addEventListener('blur', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
         el.addEventListener('keypress', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
         el.addEventListener('keyup', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
+        checkError(el);
     });
 
     //check validation for input fields as well for blur keypress and keyup
     document.querySelectorAll('.jotform-form .form-all .form-section.page-section .form-textbox').forEach(function (el) {
         el.addEventListener('blur', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
         el.addEventListener('keypress', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
         el.addEventListener('keyup', function () {
-            if (this.value) {
-                this.classList.add('i-filled');
-            } else {
-                if (this.classList.contains('i-filled')) {
-                    this.classList.remove('i-filled');
-                }
-            }
+            checkError(el);
         });
+        checkError(el);
     });
+}
+
+function checkError(params) {
+    if (params.value) {
+        params.classList.add('i-filled');
+    } else {
+        if (params.classList.contains('i-filled')) {
+            params.classList.remove('i-filled');
+        }
+    }
 }
 
 function waitForElm(selector) {
