@@ -1,27 +1,116 @@
 body.spz_4001 {
   margin: 0;
 }
-body.spz_4001 .vc-help-bubble {
+body.spz_4001.spz-step-1 .vc-help-bubble,
+body.spz_4001.spz-step-1 .spz-hidden {
   display: none;
 }
-body.spz_4001 .jotform-form #formCoverLogo,
-body.spz_4001 .jotform-form .badge-wrapper {
+body.spz_4001.spz-step-1 .jotform-form #formCoverLogo,
+body.spz_4001.spz-step-1 .jotform-form .badge-wrapper {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form {
+body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap {
+  width: 100%;
+  margin-bottom: 32px;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap .spz_form_title {
+  color: #000;
+  text-align: center;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0 0 12px;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap .spz_form_desc {
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 20px;
+  max-width: 350px;
+  margin: auto;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz-help-bubble {
+  color: #000;
+  text-align: center;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+  margin-top: 16px;
+  width: 100%;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz-help-bubble a {
+  color: #caa124;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz-button-wrapper {
+  width: 100%;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz-btn {
+  margin: 0;
+  width: 100%;
+  padding: 12px 20px;
+  height: 44px;
+  border-radius: 100px;
+  color: #000;
+  text-align: center;
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 20px;
+  letter-spacing: 0.56px;
+  text-transform: uppercase;
+  background: #e5ca7a;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+}
+body.spz_4001.spz-step-1 .jotform-form .spz-btn:hover {
+  background: #000;
+  color: #e5ca7a;
+}
+body.spz_4001.spz-step-1 .jotform-form .v_title_wrap {
+  width: 100%;
+  margin-bottom: 32px;
+}
+body.spz_4001.spz-step-1 .jotform-form .v_title_wrap .spz_back_arrow {
+  margin-bottom: 32px;
+}
+body.spz_4001.spz-step-1 .jotform-form .v_title_wrap .spz_back_arrow a img {
+  pointer-events: none;
+}
+body.spz_4001.spz-step-1 .jotform-form .v_title_wrap .v_form_title {
+  color: #000;
+  font-size: 32px;
+  font-weight: 500;
+  line-height: 40px;
+  margin: 0 0 12px;
+}
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form {
   max-width: 100%;
   border: none;
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .spz_header_wrap {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .spz_header_wrap {
   border-bottom: 1px solid #e5e5e5;
   padding: 16px 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .spz_header_wrap .cont {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .spz_header_wrap .cont {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -34,61 +123,40 @@ body.spz_4001 .jotform-form .form-all#spz-form .spz_header_wrap .cont {
   max-width: 590px;
   margin: auto;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 {
   max-width: 590px;
   margin: 32px auto;
   padding: 0;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) [data-css-selector=id_1],
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) [data-css-selector=id_280],
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) [data-css-selector=id_182],
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) [data-css-selector=id_283] {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 [data-css-selector=id_1],
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 [data-css-selector=id_280],
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 [data-css-selector=id_182],
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 [data-css-selector=id_283] {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .spz_form_title_wrap {
-  width: 100%;
-  margin-bottom: 32px;
-}
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .spz_form_title_wrap .spz_form_title {
-  color: #000;
-  text-align: center;
-  font-size: 32px;
-  font-weight: 500;
-  line-height: 40px;
-  margin: 0 0 12px;
-}
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .spz_form_title_wrap .spz_form_desc {
-  color: #000;
-  text-align: center;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 20px;
-  max-width: 350px;
-  margin: auto;
-}
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line {
   margin: 0;
   padding: 0;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line label.form-label {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line label.form-label {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-textbox,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-dropdown {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-textbox,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-dropdown {
   border-radius: 100px !important;
   border: 1px solid #e5e5e5;
   background: #fff;
   padding: 12px 16px 12px 20px;
   height: 48px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide {
   position: relative;
   display: block;
   margin-bottom: 12px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-sub-label {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-sub-label {
   position: absolute;
   top: 10px;
   left: 16px;
@@ -108,35 +176,35 @@ body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-ch
   text-overflow: ellipsis;
   right: 20px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-textbox,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-dropdown,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-textbox,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-dropdown {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown {
   -webkit-box-shadow: none;
           box-shadow: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-textbox:hover,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-dropdown:hover,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-textbox:hover,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-dropdown:hover {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox:hover,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown:hover,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox:hover,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown:hover {
   border-color: #e5ca7a;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-textbox:hover ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-dropdown:hover ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-textbox:hover ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-dropdown:hover ~ .form-sub-label {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox:hover ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown:hover ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox:hover ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown:hover ~ .form-sub-label {
   color: #707070;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-textbox:focus,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-dropdown:focus,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-textbox:focus,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-dropdown:focus {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox:focus,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown:focus,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox:focus,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown:focus {
   border-color: #e5ca7a;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-textbox:focus ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-dropdown:focus ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-textbox:focus ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-dropdown:focus ~ .form-sub-label {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox:focus ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown:focus ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox:focus ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown:focus ~ .form-sub-label {
   color: #707070;
   top: -10px;
   width: -webkit-fit-content;
@@ -145,10 +213,10 @@ body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-ch
   font-size: 12px;
   line-height: 16px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-textbox.i-filled ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-dropdown.i-filled ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-textbox.i-filled ~ .form-sub-label,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-dropdown.i-filled ~ .form-sub-label {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox.i-filled ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown.i-filled ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox.i-filled ~ .form-sub-label,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown.i-filled ~ .form-sub-label {
   color: #707070;
   top: -10px;
   font-size: 12px;
@@ -157,44 +225,44 @@ body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-ch
   width: -moz-fit-content;
   width: fit-content;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-sub-label-container .form-sub-label-container,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide .form-sub-label-container {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-sub-label-container,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-sub-label-container {
   margin-bottom: 0;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line .form-input-wide span[data-input-type=last] {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide span[data-input-type=last] {
   margin-left: 12px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line.form-col-2, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line.form-col-3, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line.form-col-4 {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line.form-col-2, body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line.form-col-3, body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line.form-col-4 {
   max-width: 193px !important;
   width: 100%;
   -webkit-transform: none;
           transform: none;
   padding: 0;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_email], body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_textbox] {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_email], body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_textbox] {
   max-width: 289px;
   margin-left: 12px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_email] .form-input-wide, body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_textbox] .form-input-wide {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_email] .form-input-wide, body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_textbox] .form-input-wide {
   width: 100%;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_dropdown] {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_dropdown] {
   max-width: 289px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_dropdown] .form-input-wide {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_dropdown] .form-input-wide {
   width: 100%;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line[data-type=control_radio] .form-input-wide .form-single-column {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line[data-type=control_radio] .form-input-wide .form-single-column {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line-error {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line-error {
   background-color: white;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line-error .form-textbox,
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line-error .form-dropdown {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line-error .form-textbox,
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line-error .form-dropdown {
   border-color: #dc503d;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .form-line-error .form-error-message {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line-error .form-error-message {
   color: #dc503d;
   font-size: 12px;
   font-weight: 400;
@@ -203,7 +271,7 @@ body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-ch
   background: #fff;
   margin: 0 0 4px 20px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) li[data-type=control_pagebreak] .form-pagebreak {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak {
   border: none;
   margin: 20px 0 0;
   padding: 0;
@@ -212,20 +280,20 @@ body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-ch
       -ms-flex-direction: column;
           flex-direction: column;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) li[data-type=control_pagebreak] .form-pagebreak .form-button-error {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-button-error {
   color: #dc503d;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
   margin-bottom: 8px;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-back-container[style] {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-back-container[style] {
   display: none;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container {
   width: 100%;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container .form-pagebreak-next {
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container .form-pagebreak-next {
   margin: 0;
   width: 100%;
   padding: 12px 20px;
@@ -240,24 +308,19 @@ body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-ch
   letter-spacing: 0.56px;
   text-transform: uppercase;
   background: #e5ca7a;
+  outline: none;
+  -webkit-box-shadow: none;
+          box-shadow: none;
+  border: none;
+  cursor: pointer;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .spz-help-bubble {
-  color: #000;
-  text-align: center;
-  font-size: 16px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: 24px;
-  margin-top: 16px;
-  width: 100%;
+body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container .form-pagebreak-next:hover {
+  background: #000;
+  color: #e5ca7a;
 }
-body.spz_4001 .jotform-form .form-all#spz-form .form-section.page-section:nth-child(1) .spz-help-bubble a {
-  color: #caa124;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
+body.spz_4001:not(.spz-step-1) .spz-form-prefilled-section,
+body.spz_4001:not(.spz-step-1) .spz_header_wrap {
+  display: none;
 }

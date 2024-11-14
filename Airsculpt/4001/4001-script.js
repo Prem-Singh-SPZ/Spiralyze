@@ -64,6 +64,8 @@ function load_4001() {
         document.body.classList.add('spz_4001');
     }
 
+    detectVisibleStep();
+
     waitForElm('.jotform-form .form-all .cont').then(function () {
         if (document.querySelectorAll(".spz_title_wrap").length == 0) {
             document.querySelector('.jotform-form .form-all .cont').insertAdjacentHTML('beforebegin', '<div class="spz_header_wrap"></div>');
@@ -79,14 +81,34 @@ function load_4001() {
                 if (myParam) {
                     document.body.classList.add('spz-with-query-param');
 
+                    let fname = urlParams.get('name[first]') || '';
+                    let lname = urlParams.get('name[last]') || '';
+                    let email = urlParams.get('email') || '';
+                    let phone = urlParams.get('nationalPhoneNumber') || '';
+                    let zip = urlParams.get('postalCode') || '';
+                    let country = urlParams.get('tlprefill') || '';
+                    let consultationType = document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked').value || '';
+
                     //create a new div after .badge-wrapper to show all the fields with values inside it
-                    document.querySelector('.jotform-form .form-all .badge-wrapper').insertAdjacentHTML('afterend', '<div class="spz-form-prefilled-section"><div class="form-pf-wrapper"><div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div></div></div><div class="form-pf-values-wrapper"></div><div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" rel="nofollow">Click here</a></div>');
+                    document.querySelector('.jotform-form .form-all .badge-wrapper').insertAdjacentHTML('afterend', `<div class="spz-form-prefilled-section"><div class="form-pf-wrapper"><div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div><div class="form-pf-values-wrapper"><div class="values-container"><div class="values-title-bar"><p class="v-title">Personal Info </p><a href="javascript:;" class="edit-values-spz">Edit</a></div><div class="values-item-line"><p class="v-item-title">Name</p><p class="v-item-value">${fname},${lname}</p></div><div class="values-item-line"><p class="v-item-title">Phone number</p><p class="v-item-value">${phone}</p></div><div class="values-item-line"><p class="v-item-title">Email</p><p class="v-item-value">${email}</p></div><div class="values-item-line"><p class="v-item-title">Clinic location</p><p class="v-item-value">${country}</p></div><div class="values-item-line"><p class="v-item-title">ZIP code</p><p class="v-item-value">${zip}</p></div><div class="values-item-line"><p class="v-item-title">Preferred consultation type</p><p class="v-item-value">${consultationType}</p></div><div class="spz-button-wrapper"><button type="button" class="spz-next-btn spz-btn">Next</button></div></div></div><div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" rel="nofollow">Click here</a></div></div></div>`);
+
+                    waitForElm('.spz-help-bubble').then(function () {
+                        document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.add('spz-hidden');
+                        document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 [data-type="control_pagebreak"]').classList.add('spz-hidden');
+                        //add null check
+                        if (document.querySelectorAll('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .spz-button-wrapper').length == 0) {
+                            document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').insertAdjacentHTML('beforeend', '<div class="spz-button-wrapper"><button type="button" class="spz-save-btn spz-btn">Save</button></div>');
+                            document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="v_title_wrap"><div class="spz_back_arrow"><a href="javascript:;" class="spz-save-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/v1730814779/airsculpt/4001/arrow-back.svg"></a></div><div class="v_form_title">Edit Personal Info</div></div>');
+                        }
+                    });
                 }
             }
+            else {
+                document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div>');
 
-            document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div>');
+                document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('beforeend', '<div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" rel="nofollow">Click here</a></div>');
+            }
 
-            document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('beforeend', '<div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" rel="nofollow">Click here</a></div>');
 
             document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentElement('beforebegin', document.querySelector('.jotform-form .form-all .form-section.page-section #id_10'));
             document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentElement('beforebegin', document.querySelector('.jotform-form .form-all .form-section.page-section #id_184'));
@@ -118,6 +140,74 @@ function load_4001() {
         }
 
         checkHidden4001();
+    });
+}
+
+//detect all click events on the document
+document.addEventListener('click', function (e) {
+    //check if the clicked element is edit button
+    if (e.target && e.target.classList.contains('edit-values-spz')) {
+        document.querySelector('.spz-form-prefilled-section').classList.add('spz-hidden');
+        document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.remove('spz-hidden');
+    }
+
+    //check if the clicked element is next button
+    if (e.target && e.target.classList.contains('spz-next-btn')) {
+        document.querySelector('#form-pagebreak-next_36').click();
+    }
+
+    //check if the clicked element is save button
+    if (e.target && e.target.classList.contains('spz-save-btn')) {
+        document.querySelector('.spz-form-prefilled-section').classList.remove('spz-hidden');
+        document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.add('spz-hidden');
+    }
+});
+
+function detectVisibleStep(selector = '.jotform-form .form-all .form-section.page-section') {
+    // Add observer for all four 'selector' if the display is none then remove the class from body and add to the current visible step
+    const targetNodes = document.querySelectorAll(selector);
+    const config = { attributes: true, childList: true, subtree: true };
+    const callback = function (mutationsList, observer) {
+        for (var mutation of mutationsList) {
+            if (mutation.type == 'attributes') {
+                updateStepClass();
+            }
+        }
+    };
+    var observer = new MutationObserver(callback);
+    targetNodes.forEach(function (el) {
+        observer.observe(el, config);
+    });
+
+    // Add unique class to each step
+    function addStepClass() {
+        var currentStep = 1;
+        var steps = document.querySelectorAll(selector);
+        steps.forEach(function (step, index) {
+            document.querySelector(`${selector}:nth-of-type(${index + 1})`).classList.add(`spz-step-${index + 1}`);
+            if (step.style.display != 'none') {
+                currentStep = index + 1;
+                document.body.classList.add('spz-step-' + currentStep);
+            }
+        });
+        return currentStep;
+    }
+
+    // Update class
+    function updateStepClass() {
+        var steps = document.querySelectorAll(selector);
+        steps.forEach(function (step, index) {
+            if (step.style.display != 'none') {
+                document.body.classList.add('spz-step-' + (index + 1));
+            } else {
+                document.body.classList.remove('spz-step-' + (index + 1));
+            }
+        });
+    }
+
+    // Initialize 
+    waitForElm('.jotform-form .form-all .cont').then(function () {
+        addStepClass();
     });
 }
 
@@ -177,9 +267,7 @@ function waitForElm(selector) {
         observer.observe(document.body, { childList: true, subtree: true });
     });
 }
-function insertAfter(referenceNode, newNode) {
-    referenceNode.parentNode.insertBefore(newNode, referenceNode.nextSibling);
-}
+
 function checkHidden4001() {
     let checkHiddenInput = setInterval(function () {
         if (document.querySelectorAll("#SPZ_test").length > 0) {
