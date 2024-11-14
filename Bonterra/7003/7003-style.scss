@@ -11,30 +11,7 @@ body.spz-7003 {
   #HERO {
     background: #f5f5ff;
     border: none;
-    position: relative;
-
-    @media (max-width: 1199.98px) {
-      &::before {
-        content: "";
-        position: absolute;
-        height: 304px;
-        width: 100%;
-        left: 0;
-        bottom: 322px;
-        right: auto;
-        background: linear-gradient(
-          90deg,
-          rgba(153, 167, 255, 0) -12.5%,
-          #99a7ff 52.02%,
-          rgba(153, 167, 255, 0) 109.7%
-        );
-        pointer-events: none;
-
-        @media (max-width: 767.98px) {
-          display: none;
-        }
-      }
-    }
+    overflow: hidden;
 
     .container {
       max-width: 1230px;
@@ -101,6 +78,35 @@ body.spz-7003 {
           flex-direction: column;
           align-items: flex-start;
           margin-bottom: 16px;
+        }
+
+        @media (max-width: 1199.98px) {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            height: 304px;
+            width: 1200px;
+            left: -134px;
+            bottom: 124.5px;
+            right: auto;
+            background: linear-gradient(
+              90deg,
+              rgba(153, 167, 255, 0) -12.5%,
+              #99a7ff 52.02%,
+              rgba(153, 167, 255, 0) 109.7%
+            );
+            pointer-events: none;
+
+            @media (max-width: 991.98px) {
+              width: 992px;
+              left: -129px;
+            }
+
+            @media (max-width: 767.98px) {
+              display: none;
+            }
+          }
         }
 
         .block-1,
@@ -269,7 +275,7 @@ body.spz-7003 {
         }
 
         .sp-container {
-        background: #f5f5ff;
+          background: #f5f5ff;
 
           .sp-title {
             color: #381360;
@@ -380,7 +386,7 @@ body.spz-7003 {
               margin: 0;
               position: absolute;
               width: max-content !important;
-              max-width: calc(100% - 40px);
+              max-width: calc(100% - 42px);
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;

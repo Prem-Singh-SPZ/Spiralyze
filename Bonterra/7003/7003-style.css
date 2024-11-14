@@ -5,26 +5,7 @@ body.spz-7003 .spz-hidden {
 body.spz-7003 #HERO {
   background: #f5f5ff;
   border: none;
-  position: relative;
-}
-@media (max-width: 1199.98px) {
-  body.spz-7003 #HERO::before {
-    content: "";
-    position: absolute;
-    height: 304px;
-    width: 100%;
-    left: 0;
-    bottom: 322px;
-    right: auto;
-    background: -webkit-gradient(linear, left top, right top, color-stop(-12.5%, rgba(153, 167, 255, 0)), color-stop(52.02%, #99a7ff), color-stop(109.7%, rgba(153, 167, 255, 0)));
-    background: linear-gradient(90deg, rgba(153, 167, 255, 0) -12.5%, #99a7ff 52.02%, rgba(153, 167, 255, 0) 109.7%);
-    pointer-events: none;
-  }
-}
-@media (max-width: 1199.98px) and (max-width: 767.98px) {
-  body.spz-7003 #HERO::before {
-    display: none;
-  }
+  overflow: hidden;
 }
 body.spz-7003 #HERO .container {
   max-width: 1230px;
@@ -103,6 +84,34 @@ body.spz-7003 #HERO .container .block-wrapper {
         -ms-flex-align: start;
             align-items: flex-start;
     margin-bottom: 16px;
+  }
+}
+@media (max-width: 1199.98px) {
+  body.spz-7003 #HERO .container .block-wrapper {
+    position: relative;
+  }
+  body.spz-7003 #HERO .container .block-wrapper::before {
+    content: "";
+    position: absolute;
+    height: 304px;
+    width: 1200px;
+    left: -134px;
+    bottom: 124.5px;
+    right: auto;
+    background: -webkit-gradient(linear, left top, right top, color-stop(-12.5%, rgba(153, 167, 255, 0)), color-stop(52.02%, #99a7ff), color-stop(109.7%, rgba(153, 167, 255, 0)));
+    background: linear-gradient(90deg, rgba(153, 167, 255, 0) -12.5%, #99a7ff 52.02%, rgba(153, 167, 255, 0) 109.7%);
+    pointer-events: none;
+  }
+}
+@media (max-width: 1199.98px) and (max-width: 991.98px) {
+  body.spz-7003 #HERO .container .block-wrapper::before {
+    width: 992px;
+    left: -129px;
+  }
+}
+@media (max-width: 1199.98px) and (max-width: 767.98px) {
+  body.spz-7003 #HERO .container .block-wrapper::before {
+    display: none;
   }
 }
 body.spz-7003 #HERO .container .block-wrapper .block-1,
@@ -385,7 +394,7 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mkto
   width: -webkit-max-content !important;
   width: -moz-max-content !important;
   width: max-content !important;
-  max-width: calc(100% - 40px);
+  max-width: calc(100% - 42px);
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
