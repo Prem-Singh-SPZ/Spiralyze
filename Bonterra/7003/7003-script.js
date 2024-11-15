@@ -208,7 +208,7 @@ function checkValidFields() {
 
     if ((document.querySelector('.spz-7003 #HERO form.mktoForm #FirstName').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #FirstName').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #LastName').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #LastName').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #Email').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #Email').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #Phone').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #Phone').value != '')) {
 
-        document.querySelectorAll('.spz-hidden').forEach(function (elem) {
+        document.querySelectorAll('.mktoFormRow.spz-hidden').forEach(function (elem) {
             elem.classList.remove('spz-hidden');
         })
 

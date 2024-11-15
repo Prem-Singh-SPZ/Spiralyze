@@ -42,7 +42,7 @@ body.spz-7003 {
         content: "";
         position: absolute;
         width: 304px;
-        height: 568px;
+        height: 268px;
         right: 172px;
         background: linear-gradient(
           180deg,
@@ -78,35 +78,6 @@ body.spz-7003 {
           flex-direction: column;
           align-items: flex-start;
           margin-bottom: 16px;
-        }
-
-        @media (max-width: 1199.98px) {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            height: 304px;
-            width: 1200px;
-            left: -134px;
-            bottom: 124.5px;
-            right: auto;
-            background: linear-gradient(
-              90deg,
-              rgba(153, 167, 255, 0) -12.5%,
-              #99a7ff 52.02%,
-              rgba(153, 167, 255, 0) 109.7%
-            );
-            pointer-events: none;
-
-            @media (max-width: 991.98px) {
-              width: 992px;
-              left: -129px;
-            }
-
-            @media (max-width: 767.98px) {
-              display: none;
-            }
-          }
         }
 
         .block-1,
@@ -212,6 +183,35 @@ body.spz-7003 {
         .block-3 {
           // padding: 0;
 
+          @media (max-width: 1199.98px) {
+            position: relative;
+            &::before {
+              content: "";
+              position: absolute;
+              height: 304px;
+              width: 1200px;
+              left: -134px;
+              bottom: calc(50% - 144px);
+              right: auto;
+              background: linear-gradient(
+                90deg,
+                rgba(153, 167, 255, 0) -12.5%,
+                #99a7ff 52.02%,
+                rgba(153, 167, 255, 0) 109.7%
+              );
+              pointer-events: none;
+
+              @media (max-width: 991.98px) {
+                width: 992px;
+                left: -129px;
+              }
+
+              @media (max-width: 767.98px) {
+                display: none;
+              }
+            }
+          }
+
           > .mktoText {
             display: none !important;
           }
@@ -222,6 +222,7 @@ body.spz-7003 {
               #fff 68.91%,
               rgba(255, 255, 255, 0.96) 100%
             );
+            z-index: 1;
             box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
             max-width: 616px;
             width: 100%;
@@ -245,7 +246,7 @@ body.spz-7003 {
             .spz-hidden {
               display: none !important;
             }
-            
+
             .spz-form-title {
               color: #381360;
               text-align: center;

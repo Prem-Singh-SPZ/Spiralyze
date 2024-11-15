@@ -2061,21 +2061,23 @@ body.spz-14018 {
                 }
 
                 &.open {
-                  &::after {
-                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg")
-                      no-repeat;
-                    background-size: cover;
-                    background-repeat: no-repeat;
+                  .accordion-title {
+                    &::after {
+                      background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_12.svg")
+                        no-repeat;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                    }
+  
+                    &:hover::after {
+                      background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
+                        no-repeat;
+                      background-size: cover;
+                      background-repeat: no-repeat;
+                    }
                   }
                   .accordion-content {
                     display: block;
-                  }
-
-                  &:hover::after {
-                    background: url("//res.cloudinary.com/spiralyze/image/upload/fl_sanitize/drata/28001/icon_navigation_10.svg")
-                      no-repeat;
-                    background-size: cover;
-                    background-repeat: no-repeat;
                   }
                 }
               }
