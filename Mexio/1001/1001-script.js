@@ -5,13 +5,6 @@ if (currentURL === "https://www2.maxio.com/l/699023/2022-08-16/nh4lk") {
 	iframebodyEle.classList.add('spz-1001-iframe');
 	waitForElm('.spz-1001-iframe form#pardot-form .submit input').then(function () {
 		hiddenValue();
-
-		//check cookie for email value and prefilled the email field
-		var emailValue = getCookie('email');
-		if (emailValue) {
-			document.querySelector('.spz-1001-iframe form#pardot-form .form-field.email input').value = emailValue;
-			delete_cookie('email');
-		}
 	});
 }
 
@@ -61,8 +54,21 @@ function load_1001() {
 				//on click of .redirect-to-demo store whatever value is in the input field in cookie 
 				document.querySelector('.redirect-to-demo').addEventListener('click', function () {
 					var emailValue = document.querySelector('.email-hero-spz').value;
-					setCookie('email', emailValue, 1);
+					// store this value in session storage
+					sessionStorage.setItem('emailValue', emailValue);
 				});
+			});
+		}
+
+		//demo page
+		if (window.location.pathname === "/demo") {
+			bodyEle.classList.add('spz-1001-demo');
+
+			waitForElm('.spz-1001-demo iframe[src="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').then(function () {
+				//set the value of email input field from session storage as the query param value for src of iframe
+				var emailValue = sessionStorage.getItem('emailValue');
+				var iframeSrc = document.querySelector('.spz-1001-demo iframe[src="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;
+				document.querySelector('.spz-1001-demo iframe[src="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue;
 			});
 		}
 	}
