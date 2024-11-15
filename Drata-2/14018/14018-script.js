@@ -1978,14 +1978,14 @@
 
     // Passing test details to hidden fields
     function submitTestDetails(cro_test) {
-        if (document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input')) {
-            document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input').setAttribute('value', cro_test);
+        if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
         }
     }
 
     function demoChecked() {
         const sInt = setInterval(() => {
-            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_2 .input .hs-input');
+            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
 
             // Check if spz-14018-loaded cookie is present and cro_field is present
             if ((cro_field && cro_field.val != '') && isCookieExist('spz-14018-loaded')) {

@@ -110,10 +110,10 @@
                     faqSection();
                 }, 1000);
             });
-            // submitTestDetails('Variant_14007');
+            submitTestDetails('Control_14018');
         });
 
-        // createCookie('spz-14007-loaded', 'true', 1);
+        createCookie('spz-14007-loaded', 'true', 1);
     }
 
     function removeTest() {
@@ -149,29 +149,29 @@
     }
 
     //Passing test details to hidden fields
-    // function submitTestDetails(cro_test) {
-    //     if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
-    //         document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
-    //     }
-    // }
+    function submitTestDetails(cro_test) {
+        if (document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input')) {
+            document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input').setAttribute('value', cro_test);
+        }
+    }
 
-    // function demoChecked() {
-    //     const sInt = setInterval(() => {
-    //         var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
+    function demoChecked() {
+        const sInt = setInterval(() => {
+            var cro_field = document.querySelector('form.hs-form-private .hs_cro_test_3 .input .hs-input');
 
-    //         // Check if spz-14007-loaded cookie is present and cro_field is present
-    //         if ((cro_field && cro_field.val != '') && isCookieExist('spz-14007-loaded')) {
-    //             clearInterval(sInt);
-    //             submitTestDetails('Variant_14007');
+            // Check if spz-14007-loaded cookie is present and cro_field is present
+            if ((cro_field && cro_field.val != '') && isCookieExist('spz-14007-loaded')) {
+                clearInterval(sInt);
+                submitTestDetails('Control_14018');
 
-    //             // deleteCookie('spz-14007-loaded');
-    //         }
-    //     }, 1000);
+                deleteCookie('spz-14007-loaded');
+            }
+        }, 1000);
 
-    //     setTimeout(() => {
-    //         clearInterval(sInt);
-    //     }, 10000);
-    // }
+        setTimeout(() => {
+            clearInterval(sInt);
+        }, 10000);
+    }
 
     history.pushState = (function (f) {
         return function pushState() {
@@ -209,10 +209,10 @@
         } else {
             removeTest();
         }
-        // if (window.location.pathname.indexOf("/demo") > -1) {
-        //     // ADDED ONLY FOR DEMO PAGE TO ADD Variant_14007 IN HIDDEN FIELD
-        //     demoChecked();
-        // }
+        if (window.location.pathname.indexOf("/demo") > -1) {
+            // ADDED ONLY FOR DEMO PAGE TO ADD Control_14018 IN HIDDEN FIELD
+            demoChecked();
+        }
     }
 
     function isSameUrl(currentUrl, specifiedUrl, includeQueryParams) {
