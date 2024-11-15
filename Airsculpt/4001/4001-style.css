@@ -1,3 +1,24 @@
+/* Gotham Light */
+@font-face {
+  font-family: "Gotham";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731668574/airsculpt/gotham/Gotham-Light.otf") format("opentype");
+  font-weight: 300;
+  font-style: normal;
+}
+/* Gotham Medium */
+@font-face {
+  font-family: "Gotham";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731668574/airsculpt/gotham/Gotham-Medium.otf") format("opentype");
+  font-weight: 500;
+  font-style: normal;
+}
+/* Gotham Bold */
+@font-face {
+  font-family: "Gotham";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731668574/airsculpt/gotham/Gotham-Bold.otf") format("opentype");
+  font-weight: 700;
+  font-style: normal;
+}
 body.spz_4001 {
   margin: 0;
 }
@@ -16,6 +37,7 @@ body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap {
 body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap .spz_form_title {
   color: #000;
   text-align: center;
+  font-family: "Gotham", sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 40px;
@@ -24,6 +46,7 @@ body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap .spz_form_title {
 body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap .spz_form_desc {
   color: #000;
   text-align: center;
+  font-family: "Gotham", sans-serif;
   font-size: 14px;
   font-weight: 400;
   line-height: 20px;
@@ -33,22 +56,12 @@ body.spz_4001.spz-step-1 .jotform-form .spz_form_title_wrap .spz_form_desc {
 body.spz_4001.spz-step-1 .jotform-form .spz-help-bubble {
   color: #000;
   text-align: center;
+  font-family: "Gotham", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   margin-top: 16px;
   width: 100%;
-}
-body.spz_4001.spz-step-1 .jotform-form .spz-help-bubble a {
-  color: #caa124;
-  text-decoration-line: underline;
-  text-decoration-style: solid;
-  -webkit-text-decoration-skip-ink: none;
-          text-decoration-skip-ink: none;
-  text-decoration-thickness: auto;
-  text-underline-offset: auto;
-  text-underline-position: from-font;
 }
 body.spz_4001.spz-step-1 .jotform-form .spz-button-wrapper {
   width: 100%;
@@ -61,8 +74,8 @@ body.spz_4001.spz-step-1 .jotform-form .spz-btn {
   border-radius: 100px;
   color: #000;
   text-align: center;
+  font-family: "Gotham", sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.56px;
@@ -92,10 +105,27 @@ body.spz_4001.spz-step-1 .jotform-form .v_title_wrap .spz_back_arrow a img {
 }
 body.spz_4001.spz-step-1 .jotform-form .v_title_wrap .v_form_title {
   color: #000;
+  font-family: "Gotham", sans-serif;
   font-size: 32px;
   font-weight: 500;
   line-height: 40px;
   margin: 0 0 12px;
+}
+body.spz_4001.spz-step-1 .jotform-form .as-link {
+  color: #caa124;
+  text-decoration-line: underline;
+  text-decoration-style: solid;
+  -webkit-text-decoration-skip-ink: none;
+          text-decoration-skip-ink: none;
+  text-decoration-thickness: auto;
+  text-underline-offset: auto;
+  text-underline-position: from-font;
+}
+body.spz_4001.spz-step-1 .jotform-form .as-link:hover {
+  color: #E5CA7A;
+}
+body.spz_4001.spz-step-1 .jotform-form .as-link:active {
+  color: #CAA124;
 }
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form {
   max-width: 100%;
@@ -162,8 +192,8 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
   left: 16px;
   padding: 2px 4px;
   color: #b3b3b3;
+  font-family: "Gotham", sans-serif;
   font-size: 16px;
-  font-style: normal;
   font-weight: 400;
   line-height: 24px;
   pointer-events: none;
@@ -264,6 +294,7 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
 }
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line-error .form-error-message {
   color: #dc503d;
+  font-family: "Gotham", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -282,6 +313,7 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
 }
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-button-error {
   color: #dc503d;
+  font-family: "Gotham", sans-serif;
   font-size: 12px;
   font-weight: 400;
   line-height: 16px;
@@ -301,8 +333,8 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
   border-radius: 100px;
   color: #000;
   text-align: center;
+  font-family: "Gotham", sans-serif;
   font-size: 14px;
-  font-style: normal;
   font-weight: 700;
   line-height: 20px;
   letter-spacing: 0.56px;
@@ -319,6 +351,43 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-pagebreak-next-container .form-pagebreak-next:hover {
   background: #000;
   color: #e5ca7a;
+}
+body.spz_4001.spz-step-1 .spz-form-prefilled-section .form-pf-wrapper {
+  max-width: 590px;
+  margin: 32px auto;
+}
+body.spz_4001.spz-step-1 .spz-form-prefilled-section .form-pf-wrapper .form-pf-values-wrapper .values-container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+}
+body.spz_4001.spz-step-1 .spz-form-prefilled-section .form-pf-wrapper .form-pf-values-wrapper .values-container .values-title-bar {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+body.spz_4001.spz-step-1 .spz-form-prefilled-section .form-pf-wrapper .form-pf-values-wrapper .values-container .values-item-line {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 100%;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
 }
 body.spz_4001:not(.spz-step-1) .spz-form-prefilled-section,
 body.spz_4001:not(.spz-step-1) .spz_header_wrap {
