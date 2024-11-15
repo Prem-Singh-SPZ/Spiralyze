@@ -137,10 +137,10 @@ function addUniqueClass() {
         }
     });
 
-    // document.querySelector('.mktoFormRow.Phone-row').classList.add('spz-hidden');
-    // document.querySelector('.mktoFormRow.Industry-row').classList.add('spz-hidden');
-    // document.querySelector('.mktoFormRow.List_Size__c-row').classList.add('spz-hidden');
-    // document.querySelector('.mktoFormRow.Product_Interest__c-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.Company-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.Industry-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.List_Size__c-row').classList.add('spz-hidden');
+    document.querySelector('.mktoFormRow.Product_Interest__c-row').classList.add('spz-hidden');
 }
 
 // On input focus add class on closest parent field class
@@ -200,21 +200,21 @@ function checkError(elem) {
         clearInterval(timeBuffer);
     }, 1000);
 
-    // checkValidFields();
+    checkValidFields();
 }
 
-// function checkValidFields() {
-//     // let validFields = document.querySelectorAll('.spz-7003 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
+function checkValidFields() {
+    // let validFields = document.querySelectorAll('.spz-7003 #HERO form.mktoForm  .mktoFormCol:not(.spz-hidden) .mktoRequiredField.filled').length;
 
-//     if ((document.querySelector('.spz-7003 #HERO form.mktoForm #FirstName').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #FirstName').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #LastName').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #LastName').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #Email').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #Email').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #Company').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #Company').value != '')) {
+    if ((document.querySelector('.spz-7003 #HERO form.mktoForm #FirstName').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #FirstName').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #LastName').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #LastName').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #Email').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #Email').value != '') && (document.querySelector('.spz-7003 #HERO form.mktoForm #Phone').value != null && document.querySelector('.spz-7003 #HERO form.mktoForm #Phone').value != '')) {
 
-//         document.querySelectorAll('.spz-hidden').forEach(function (elem) {
-//             elem.classList.remove('spz-hidden');
-//         })
+        document.querySelectorAll('.spz-hidden').forEach(function (elem) {
+            elem.classList.remove('spz-hidden');
+        })
 
-//         document.querySelector('.spz-7003 #HERO form.mktoForm ').classList.add('spz-full-form');
-//     }
-// }
+        document.querySelector('.spz-7003 #HERO form.mktoForm ').classList.add('spz-full-form');
+    }
+}
 
 function setHiddenFields() {
     waitForElm('.mktoFormRow [name="utm_location__c"]').then(function () {
