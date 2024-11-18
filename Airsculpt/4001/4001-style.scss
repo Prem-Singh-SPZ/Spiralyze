@@ -7,6 +7,15 @@
   font-style: normal;
 }
 
+/* Gotham Normal */
+@font-face {
+  font-family: "Gotham";
+  src: url("https://res.cloudinary.com/spiralyze/raw/upload/v1731904630/airsculpt/gotham/Gotham-Book.otf")
+    format("opentype");
+  font-weight: 400;
+  font-style: normal;
+}
+
 /* Gotham Medium */
 @font-face {
   font-family: "Gotham";
@@ -52,6 +61,11 @@ body.spz_4001 {
           font-weight: 500;
           line-height: 40px;
           margin: 0 0 12px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 28px;
+            line-height: 36px;
+          }
         }
 
         .spz_form_desc {
@@ -61,8 +75,12 @@ body.spz_4001 {
           font-size: 14px;
           font-weight: 400;
           line-height: 20px;
-          max-width: 350px;
+          max-width: 400px;
           margin: auto;
+
+          @media (max-width: 1024.98px) {
+            max-width: 100%;
+          }
         }
       }
 
@@ -80,6 +98,7 @@ body.spz_4001 {
       .spz-button-wrapper {
         width: 100%;
       }
+
       .spz-btn {
         margin: 0;
         width: 100%;
@@ -109,10 +128,10 @@ body.spz_4001 {
 
       .v_title_wrap {
         width: 100%;
-        margin-bottom: 32px;
+        margin-bottom: 20px;
 
         .spz_back_arrow {
-          margin-bottom: 32px;
+          margin-bottom: 28.5px;
           a img {
             pointer-events: none;
           }
@@ -125,6 +144,11 @@ body.spz_4001 {
           font-weight: 500;
           line-height: 40px;
           margin: 0 0 12px;
+
+          @media (max-width: 1024.98px) {
+            font-size: 28px;
+            line-height: 36px;
+          }
         }
       }
 
@@ -138,11 +162,11 @@ body.spz_4001 {
         text-underline-position: from-font;
 
         &:hover {
-          color: #E5CA7A;
+          color: #e5ca7a;
         }
 
         &:active {
-          color: #CAA124;
+          color: #caa124;
         }
       }
       //commonly used section ends
@@ -155,14 +179,43 @@ body.spz_4001 {
         //header starts
         .spz_header_wrap {
           border-bottom: 1px solid #e5e5e5;
-          padding: 16px 0;
+          padding: 20.5px 0;
           display: flex;
+          height: 78px;
+
+          @media (max-width: 1024.98px) {
+            height: 64px;
+            padding: 14px 0;
+          }
+
           .cont {
             display: flex;
             justify-content: space-between;
             align-items: center;
             max-width: 590px;
             margin: auto;
+
+            @media (max-width: 1024.98px) {
+              max-width: 704px;
+            }
+
+            .spz_title_wrap {
+              .spz-logo {
+                width: 156px;
+
+                @media (max-width: 1024.98px) {
+                  width: 140px;
+                }
+              }
+            }
+
+            .language-dd {
+              margin-right: 0;
+
+              .dd-placeholder {
+                padding-right: 0;
+              }
+            }
           }
         }
         //header ends
@@ -172,6 +225,10 @@ body.spz_4001 {
           max-width: 590px;
           margin: 32px auto;
           padding: 0;
+
+          @media (max-width: 1024.98px) {
+            max-width: 704px;
+          }
 
           [data-css-selector="id_1"],
           [data-css-selector="id_280"],
@@ -192,7 +249,7 @@ body.spz_4001 {
             .form-dropdown {
               border-radius: 100px !important;
               border: 1px solid #e5e5e5;
-              background: #fff;
+              background-color: #fff;
               padding: 12px 16px 12px 20px;
               height: 48px;
             }
@@ -221,6 +278,7 @@ body.spz_4001 {
                 overflow: hidden;
                 text-overflow: ellipsis;
                 right: 20px;
+                width: fit-content;
               }
 
               .form-textbox,
@@ -271,16 +329,24 @@ body.spz_4001 {
             &.form-col-2,
             &.form-col-3,
             &.form-col-4 {
-              max-width: 193px !important;
+              max-width: 227px !important;
               width: 100%;
               transform: none;
               padding: 0;
+
+              @media screen and (max-width: 1024.98px) {
+                max-width: 284px !important;
+              }
             }
 
             &[data-type="control_email"],
             &[data-type="control_textbox"] {
               max-width: 289px;
               margin-left: 12px;
+
+              @media screen and (max-width: 1024.98px) {
+                max-width: 346px;
+              }
 
               .form-input-wide {
                 width: 100%;
@@ -290,6 +356,10 @@ body.spz_4001 {
             &[data-type="control_dropdown"] {
               max-width: 289px;
 
+              @media screen and (max-width: 1024.98px) {
+                max-width: 346px;
+              }
+
               .form-input-wide {
                 width: 100%;
               }
@@ -298,6 +368,75 @@ body.spz_4001 {
             &[data-type="control_radio"] {
               .form-input-wide .form-single-column {
                 display: none;
+              }
+            }
+
+            &#id_255 {
+              width: 62px !important;
+            }
+
+            &#id_6 {
+              .extended {
+                .form-sub-label-container {
+                  margin: 0;
+
+                  .form-sub-label {
+                    color: #000;
+                    font-size: 12px;
+                    font-weight: 400;
+                    line-height: 16px;
+                    position: relative;
+                    padding: 0;
+                    white-space: normal;
+                    top: 2px;
+                    left: 0;
+                    margin-right: 4px;
+                  }
+                }
+              }
+            }
+
+            &[data-type="control_phone"] {
+              .form-error-message {
+                margin-left: 0;
+              }
+            }
+
+            .form-textbox {
+              &#input_202_full,
+              &#input_256_full,
+              &#input_6_phone {
+                border-top-left-radius: 0 !important;
+                border-bottom-left-radius: 0 !important;
+                padding: 12px 8px;
+              }
+
+              &#input_6_country,
+              &#input_6_area {
+                border-radius: 0 !important;
+                padding: 12px 8px;
+                border-right: 0;
+              }
+            }
+
+            .form-dropdown {
+              position: relative;
+              background: url(//res.cloudinary.com/spiralyze/image/upload/v1730814779/airsculpt/4001/arrow-down.svg)
+                no-repeat;
+              background-position: right 16px bottom 50%;
+              background-size: 12px;
+
+              &[name="q255_phoneCountrySelect"] {
+                width: 62px !important;
+                border-top-right-radius: 0 !important;
+                border-bottom-right-radius: 0 !important;
+                padding-left: 15px;
+                background-position: right 5px bottom 50%;
+                border-right: 0;
+
+                ~ #sublabel_input_255 {
+                  display: none;
+                }
               }
             }
           }
@@ -325,7 +464,7 @@ body.spz_4001 {
           li[data-type="control_pagebreak"] {
             .form-pagebreak {
               border: none;
-              margin: 20px 0 0;
+              margin: 8px 0 0;
               padding: 0;
               flex-direction: column;
 
@@ -378,6 +517,10 @@ body.spz_4001 {
               }
             }
           }
+
+          .spz-button-wrapper {
+            margin-top: 7.5px;
+          }
         }
         //form ends
       }
@@ -387,6 +530,10 @@ body.spz_4001 {
       .form-pf-wrapper {
         max-width: 590px;
         margin: 32px auto;
+
+        @media (max-width: 1024.98px) {
+          max-width: 704px;
+        }
 
         .form-pf-values-wrapper {
           .values-container {
@@ -398,6 +545,27 @@ body.spz_4001 {
               width: 100%;
               justify-content: space-between;
               align-items: center;
+              margin-bottom: 12px;
+
+              p {
+                margin: 0;
+              }
+
+              .v-title {
+                color: #000;
+                font-family: "Gotham", sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 26px;
+              }
+
+              .as-link {
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+              }
             }
 
             .values-item-line {
@@ -405,7 +573,34 @@ body.spz_4001 {
               width: 100%;
               justify-content: space-between;
               align-items: center;
+              margin-bottom: 6px;
+
+              p {
+                margin: 0;
+              }
+
+              .v-item-title {
+                color: #000;
+                font-family: "Gotham", sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 24px;
+              }
+
+              .v-item-value {
+                color: #707070;
+                font-family: "Gotham", sans-serif;
+                font-size: 16px;
+                font-style: normal;
+                font-weight: 300;
+                line-height: 24px;
+              }
             }
+          }
+
+          .spz-button-wrapper {
+            margin-top: 26px;
           }
         }
       }
