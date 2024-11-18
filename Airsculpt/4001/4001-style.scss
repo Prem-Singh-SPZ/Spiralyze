@@ -290,6 +290,12 @@ body.spz_4001 {
               background-color: #fff;
               padding: 12px 16px 12px 20px;
               height: 48px;
+              color: #000;
+              font-family: "Gotham", sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 400;
+              line-height: 24px;
             }
 
             .form-sub-label-container,
@@ -355,6 +361,10 @@ body.spz_4001 {
               .form-sub-label-container {
                 margin-bottom: 0;
               }
+            }
+
+            #cid_264 {
+              margin-top: -12px;
             }
 
             .form-input-wide {
@@ -455,13 +465,15 @@ body.spz_4001 {
                 border-top-left-radius: 0 !important;
                 border-bottom-left-radius: 0 !important;
                 padding: 12px 8px;
+                border-left-width: 0.5px;
               }
 
               &#input_6_country,
               &#input_6_area {
                 border-radius: 0 !important;
                 padding: 12px 8px;
-                border-right: 0;
+                border-right-width: 0.5px;
+                border-left-width: 0.5px;
               }
             }
 
@@ -478,7 +490,7 @@ body.spz_4001 {
                 border-bottom-right-radius: 0 !important;
                 padding-left: 15px;
                 background-position: right 5px bottom 50%;
-                border-right: 0;
+                border-right-width: 0.5px;
 
                 ~ #sublabel_input_255 {
                   display: none;
@@ -489,12 +501,12 @@ body.spz_4001 {
             @media (max-width: 767.98px) {
               &[data-type="control_fullname"] [data-wrapper-react="true"] {
                 flex-direction: column;
-  
+
                 span[data-input-type="first"] {
                   margin-bottom: 12px;
                   width: 100%;
                 }
-  
+
                 span[data-input-type="last"] {
                   margin-left: 0;
                   width: 100%;
