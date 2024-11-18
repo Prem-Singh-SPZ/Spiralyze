@@ -43,6 +43,11 @@ body.spz-1001 {
         background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1001/main_section_6.webp")
           no-repeat top right / cover;
 
+        @media (max-width: 1279.98px) {
+          background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1001/1024.webp")
+            no-repeat bottom center / cover;
+        }
+
         @media (max-width: 1023.98px) {
           background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1001/main_section_5.webp")
             no-repeat bottom center / cover;
@@ -53,10 +58,15 @@ body.spz-1001 {
             no-repeat top center / cover;
         }
 
+        @media (min-width: 1900.98px) {
+          background: url("//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1001/2560.webp")
+            no-repeat top center / cover;
+        }
+
         .container {
           padding: 0 30px;
 
-          @media (max-width: 1023.98px) {
+          @media (max-width: 1279.98px) {
             padding: 0 64px;
           }
 
@@ -71,6 +81,11 @@ body.spz-1001 {
               padding-top: 4.6rem;
               padding-bottom: 5.9rem;
               place-self: flex-start;
+
+              @media (max-width: 1279.98px) {
+                padding-top: 4.8rem;
+                padding-bottom: 3.9rem;
+              }
 
               @media (max-width: 1023.98px) {
                 padding-top: 2.6rem;
@@ -132,6 +147,11 @@ body.spz-1001 {
                   margin: 35px 0 52px;
                   padding: 0 2px 0 0;
 
+                  @media (min-width: 1023.98px) and (max-width: 1279.98px) {
+                    padding: 0 32px 0 0;
+                    margin: 35px 0 49px;
+                  }
+
                   @media (max-width: 1023.98px) {
                     margin: 28px 0 44px;
                   }
@@ -152,6 +172,10 @@ body.spz-1001 {
                     font-style: normal;
                     font-weight: 400;
                     line-height: 150%;
+
+                    @media (min-width: 1023.98px) and (max-width: 1279.98px) {
+                      margin-bottom: 20px;
+                    }
 
                     span {
                       color: #fff;
@@ -420,6 +444,10 @@ body.spz-1001 {
 
           @media (min-width: 1536.98px) {
             max-width: 1584px;
+          }
+
+          @media (max-width: 1279.98px) {
+            margin: 0 auto 65px;
           }
 
           @media (max-width: 1023.98px) {
