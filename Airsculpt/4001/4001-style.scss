@@ -145,6 +145,7 @@ body.spz_4001 {
         margin-bottom: 20px;
 
         @media (max-width: 767.98px) {
+          margin-top: -8px;
           margin-bottom: 12px;
         }
 
@@ -264,7 +265,7 @@ body.spz_4001 {
 
           @media (max-width: 767.98px) {
             max-width: 328px;
-            margin: 24px auto;
+            // margin: 24px auto;
           }
 
           [data-css-selector="id_1"],
@@ -323,10 +324,9 @@ body.spz_4001 {
                 box-shadow: none;
                 &:hover {
                   border-color: #e5ca7a;
-
-                  ~ .form-sub-label {
-                    color: #707070;
-                  }
+                  // ~ .form-sub-label {
+                  //   color: #707070;
+                  // }
                 }
 
                 &:focus {
@@ -529,6 +529,10 @@ body.spz_4001 {
               margin: 8px 0 0;
               padding: 0;
               flex-direction: column;
+
+              @media screen and (max-width: 767.98px) {
+                margin: 1px 0 0;
+              }
 
               .form-button-error {
                 color: #dc503d;

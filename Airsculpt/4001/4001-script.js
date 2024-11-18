@@ -87,7 +87,15 @@ function load_4001() {
                     let phone = urlParams.get('nationalPhoneNumber') || '';
                     let zip = urlParams.get('postalCode') || '';
                     let country = urlParams.get('tlprefill') || '';
-                    let consultationType = document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked').value || '';
+                    let consultationType;
+                    //add  null check for consultationType query selectoe
+                    if (document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked')) {
+                        consultationType = document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked').value;
+                    }
+                    else {
+                        consultationType = '';
+                    }
+
 
                     //create a new div after .badge-wrapper to show all the fields with values inside it
                     document.querySelector('.jotform-form .form-all .badge-wrapper').insertAdjacentHTML('afterend', `<div class="spz-form-prefilled-section"><div class="form-pf-wrapper"><div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div><div class="form-pf-values-wrapper"><div class="values-container"><div class="values-title-bar"><p class="v-title">Personal Info </p><a href="javascript:;" class="edit-values-spz as-link">Edit</a></div><div class="values-item-line"><p class="v-item-title">Name</p><p class="v-item-value">${fname}, ${lname}</p></div><div class="values-item-line"><p class="v-item-title">Phone number</p><p class="v-item-value">${phone}</p></div><div class="values-item-line"><p class="v-item-title">Email</p><p class="v-item-value">${email}</p></div><div class="values-item-line"><p class="v-item-title">Clinic location</p><p class="v-item-value">${country}</p></div><div class="values-item-line"><p class="v-item-title">ZIP code</p><p class="v-item-value">${zip}</p></div><div class="values-item-line"><p class="v-item-title">Preferred consultation type</p><p class="v-item-value">${consultationType}</p></div><div class="spz-button-wrapper"><button type="button" class="spz-next-btn spz-btn">Next</button></div></div></div><div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" class="as-link" rel="nofollow">Click here</a></div></div></div>`);

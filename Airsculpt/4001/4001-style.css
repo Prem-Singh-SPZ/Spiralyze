@@ -133,6 +133,7 @@ body.spz_4001.spz-step-1 .jotform-form .v_title_wrap {
 }
 @media (max-width: 767.98px) {
   body.spz_4001.spz-step-1 .jotform-form .v_title_wrap {
+    margin-top: -8px;
     margin-bottom: 12px;
   }
 }
@@ -253,7 +254,6 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
 @media (max-width: 767.98px) {
   body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 {
     max-width: 328px;
-    margin: 24px auto;
   }
 }
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 [data-css-selector=id_1],
@@ -319,12 +319,6 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox:hover,
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown:hover {
   border-color: #e5ca7a;
-}
-body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox:hover ~ .form-sub-label,
-body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown:hover ~ .form-sub-label,
-body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-textbox:hover ~ .form-sub-label,
-body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-input-wide .form-dropdown:hover ~ .form-sub-label {
-  color: #707070;
 }
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-textbox:focus,
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .form-line .form-sub-label-container .form-dropdown:focus,
@@ -501,6 +495,11 @@ body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-sec
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
           flex-direction: column;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak {
+    margin: 1px 0 0;
+  }
 }
 body.spz_4001.spz-step-1 .jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 li[data-type=control_pagebreak] .form-pagebreak .form-button-error {
   color: #dc503d;
