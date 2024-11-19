@@ -168,6 +168,19 @@ document.addEventListener('click', function (e) {
     if (e.target && e.target.classList.contains('spz-save-btn')) {
         document.querySelector('.spz-form-prefilled-section').classList.remove('spz-hidden');
         document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.add('spz-hidden');
+
+        //update the values of .spz-form-prefilled-section with the new values of the form
+        let phoneState = document.querySelector('select[name="q255_phoneCountrySelect"]').value || '';
+        let fname = document.querySelector('input[name="q9_name[first]"]').value || '';
+        let lname = document.querySelector('input[name="q9_name[last]"]').value || '';
+        let email = document.querySelector('input[name="q5_email"]').value || '';
+        let phone = phoneState == "US" ? document.querySelector('input[name="q202_nationalPhoneNumber[full]"]').value : phoneState == "UK" ? document.querySelector('input[name="q256_ukNationalPhone[full]"]').value : phoneState == "Other" ? document.querySelector('input[name="q6_phoneNumber[country]"]').value + document.querySelector('input[name="q6_phoneNumber[area]"]').value + document.querySelector('input[name="q6_phoneNumber[phone]"]').value : '';
+        let zip = document.querySelector('input[name="q184_postalCode"]').value || '';
+        let country = document.querySelector('#input_10').value || '';
+        let consultationType = document.querySelector('.spz-dropdown.form-dropdown').value || '';
+
+
+        document.querySelector('.jotform-form .form-all .spz-form-prefilled-section').innerHTML = `<div class="form-pf-wrapper"><div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div><div class="form-pf-values-wrapper"><div class="values-container"><div class="values-title-bar"><p class="v-title">Personal Info </p><a href="javascript:;" class="edit-values-spz as-link">Edit</a></div><div class="values-item-line"><p class="v-item-title">Name</p><p class="v-item-value">${fname}, ${lname}</p></div><div class="values-item-line"><p class="v-item-title">Phone number</p><p class="v-item-value">${phone}</p></div><div class="values-item-line"><p class="v-item-title">Email</p><p class="v-item-value">${email}</p></div><div class="values-item-line"><p class="v-item-title">Clinic location</p><p class="v-item-value">${country}</p></div><div class="values-item-line"><p class="v-item-title">ZIP code</p><p class="v-item-value">${zip}</p></div><div class="values-item-line"><p class="v-item-title">Preferred consultation type</p><p class="v-item-value">${consultationType}</p></div><div class="spz-button-wrapper"><button type="button" class="spz-next-btn spz-btn">Next</button></div></div></div><div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" class="as-link" rel="nofollow">Click here</a></div></div>`;
     }
 });
 
@@ -278,9 +291,9 @@ function waitForElm(selector) {
 
 function checkHidden4001() {
     let checkHiddenInput = setInterval(function () {
-        if (document.querySelectorAll("#SPZ_test").length > 0) {
+        if (document.querySelectorAll(`input[name="q288_spz_test_1"]`).length > 0) {
             clearInterval(checkHiddenInput);
-            document.querySelector("#SPZ_test").value = 'variant1_3001';
+            document.querySelector(`input[name="q288_spz_test_1"]`).value = 'variant_4001';
         }
     });
 }
