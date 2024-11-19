@@ -195,6 +195,10 @@ document.addEventListener('click', function (e) {
             document.querySelector('.spz-form-prefilled-section').classList.add('spz-hidden');
         }
     }
+
+    if (document.querySelector('#input_language').value == 'English (US)' || document.querySelector('#input_language').value == 'English (UK)') {
+        document.querySelector('.jotform-form .form-all .form-section.page-section #sublabel_input_5').textContent = 'Email';
+    }
 });
 
 function detectVisibleStep(selector = '.jotform-form .form-all .form-section.page-section') {
