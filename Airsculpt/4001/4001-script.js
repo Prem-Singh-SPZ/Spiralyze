@@ -106,7 +106,7 @@ function load_4001() {
                         //add null check
                         if (document.querySelectorAll('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1 .spz-button-wrapper').length == 0) {
                             document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').insertAdjacentHTML('beforeend', '<div class="spz-button-wrapper"><button type="button" class="spz-save-btn spz-btn">Save</button></div>');
-                            document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="v_title_wrap"><div class="spz_back_arrow"><a href="javascript:;" class="spz-save-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/v1730814779/airsculpt/4001/arrow-back.svg"></a></div><div class="v_form_title">Edit Personal Info</div></div>');
+                            document.querySelector('.jotform-form .form-all .form-section.page-section').insertAdjacentHTML('afterbegin', '<div class="v_title_wrap"><div class="spz_back_arrow"><a href="javascript:;" class="spz-back-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/v1730814779/airsculpt/4001/arrow-back.svg"></a></div><div class="v_form_title">Edit Personal Info</div></div>');
                         }
                     });
                 }
@@ -164,6 +164,12 @@ document.addEventListener('click', function (e) {
         document.querySelector('#form-pagebreak-next_36').click();
     }
 
+    //check if the clicked element is back button
+    if (e.target && e.target.classList.contains('spz-back-btn')) {
+        document.querySelector('.spz-form-prefilled-section').classList.remove('spz-hidden');
+        document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.add('spz-hidden');
+    }
+
     //check if the clicked element is save button
     if (e.target && e.target.classList.contains('spz-save-btn')) {
         document.querySelector('.spz-form-prefilled-section').classList.remove('spz-hidden');
@@ -181,6 +187,13 @@ document.addEventListener('click', function (e) {
 
 
         document.querySelector('.jotform-form .form-all .spz-form-prefilled-section').innerHTML = `<div class="form-pf-wrapper"><div class="spz_form_title_wrap"><div class="spz_form_title">Get Started</div><div class="spz_form_desc">Get your virtual consultation and pricing in 24-48 hours by providing us a few details.</div></div><div class="form-pf-values-wrapper"><div class="values-container"><div class="values-title-bar"><p class="v-title">Personal Info </p><a href="javascript:;" class="edit-values-spz as-link">Edit</a></div><div class="values-item-line"><p class="v-item-title">Name</p><p class="v-item-value">${fname}, ${lname}</p></div><div class="values-item-line"><p class="v-item-title">Phone number</p><p class="v-item-value">${phone}</p></div><div class="values-item-line"><p class="v-item-title">Email</p><p class="v-item-value">${email}</p></div><div class="values-item-line"><p class="v-item-title">Clinic location</p><p class="v-item-value">${country}</p></div><div class="values-item-line"><p class="v-item-title">ZIP code</p><p class="v-item-value">${zip}</p></div><div class="values-item-line"><p class="v-item-title">Preferred consultation type</p><p class="v-item-value">${consultationType}</p></div><div class="spz-button-wrapper"><button type="button" class="spz-next-btn spz-btn">Next</button></div></div></div><div class="spz-help-bubble">Issues submitting? <a href="https://airsculpt.com/vc-backup?redi-s=wf" target="_blank" class="as-link" rel="nofollow">Click here</a></div></div>`;
+    }
+
+    if (e.target && e.target.classList.contains('error-navigation-next-button')) {
+        if (document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.contains('spz-hidden')) {
+            document.querySelector('.jotform-form .form-all#spz-form .form-section.page-section.spz-step-1').classList.remove('spz-hidden');
+            document.querySelector('.spz-form-prefilled-section').classList.add('spz-hidden');
+        }
     }
 });
 
