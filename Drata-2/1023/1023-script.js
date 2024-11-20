@@ -7,23 +7,23 @@
     document.head.appendChild(cssElement);
     function createTest() {
         waitForElm('body').then(function () {
-            document.querySelector("body").classList.add("spz-1023-V2");
+            document.querySelector("body").classList.add("spz-1023-V1");
 
             waitForElm('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .hs_cro_test_1 .input .hs-input').then(function () {
                 let setValue = setInterval(() => {
-                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '1023_Variant2') {
+                    if (document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').getAttribute('value') == '1023_Variant1') {
                         clearInterval(setValue);
                     }
-                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '1023_Variant2');
+                    document.querySelector('form.hs-form-private .hs_cro_test_1 .input .hs-input').setAttribute('value', '1023_Variant1');
                 }, 100);
             });
 
             waitForElm('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').then(function () {
-                document.querySelector('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').innerHTML = `<span>Schedule Now</span><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
+                document.querySelector('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').innerHTML = `<span>Get Started</span><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>`;
 
-                const wiggle = document.querySelector('.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary');
+                const wiggle = document.querySelector('.spz-1023-V1 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary');
                 let animation_interval;
     
                 const stopAnimation = function () {
@@ -61,7 +61,7 @@
     }
 
     function removeTest() {
-        document.body.classList.remove("spz-1023-V2");
+        document.body.classList.remove("spz-1023-V1");
     }
 
     history.pushState = (function (f) {
