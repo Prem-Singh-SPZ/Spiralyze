@@ -22,6 +22,40 @@
                 document.querySelector('form.hs-form-private[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] .MuiButton-ctaModulePrimary').innerHTML = `<span>Schedule Now</span><svg xmlns="http://www.w3.org/2000/svg" width="7" height="10" viewBox="0 0 7 10" fill="none">
                         <path d="M1 1L5 5L1 9" stroke="white" stroke-width="1.5" stroke-linecap="round"/>
                 </svg>`;
+
+                const wiggle = document.querySelector('.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary');
+                let animation_interval;
+    
+                const stopAnimation = function () {
+                  clearInterval(animation_interval);
+                  wiggle.classList.remove('animate');
+                };
+    
+                const startAnimation = function () {
+                  wiggle.classList.add('animate');
+                  animation_interval = setInterval(button_animation, 5000);
+                  setTimeout(() => {
+                    wiggle.classList.remove('animate');
+                  }, 2000);
+                };
+    
+                setTimeout(() => {
+                  startAnimation();
+                }, 3000);
+    
+                const button_animation = function () {
+                  wiggle.classList.add('animate');
+                  setTimeout(() => {
+                    wiggle.classList.remove('animate');
+                  }, 2000);
+                }
+    
+                wiggle.addEventListener('mouseover', stopAnimation);
+                wiggle.addEventListener('mouseout', startAnimation);
+    
+                // Adding touch events for mobile devices
+                wiggle.addEventListener('touchstart', stopAnimation);
+                wiggle.addEventListener('touchend', startAnimation);
             });
         });
     }

@@ -20,3 +20,72 @@ body.spz-1023-V2 {
     }
   }
 }
+
+//1019 css starts here
+.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary {
+  font-family: Inter, sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 24px;
+  text-align: center;
+  color: #fff;
+  width: 100%;
+  max-width: 178px;
+  height: 60px;
+  padding: 18px 20px;
+  background: transparent;
+  border: none;
+  position: relative;
+  cursor: pointer;
+  border-radius: 12px;
+  position: relative;
+  isolation: isolate;
+  transition:all 0.5s ease;
+}
+.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary::before {
+  position: absolute;
+  content: "";
+  width: 100%;
+  height: 100%;
+  background: black;
+  z-index: -1;
+  border-radius: 12px;
+  transition: all 0.4s ease-in-out;
+}
+.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary:hover::before {
+  background: #293642;
+}
+.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary svg {
+  margin-left: 12px;
+}
+.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary.animate{
+	animation: wiggle 500ms 1; 
+  animation-delay:1s; 
+}
+.spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary.animate::before {
+	transform: scale(1.1334);
+}
+.css-w1vsk7-MuiTypography-root-Form-styledTypography a{
+  text-decoration: none;
+}
+@keyframes wiggle{
+  10%{ transform:rotate(-2deg); }
+  20%{ transform:rotate(2deg); }
+  40%{ transform:rotate(-2deg); }
+  60%{ transform:rotate(2deg); }
+  80%{ transform:rotate(0deg); }
+}
+@media(max-width: 767.98px) {
+  .spz-1023-V2 form[data-form-id="3d064146-843f-404a-97b0-6515b61c518b"] button.MuiButton-ctaModulePrimary {
+    max-width: 265px;
+    height: 56px;
+  }
+  .spz-1023-V2 .css-jvfx0u-MuiTypography-root-Form-disclaimerMessage{
+    text-align: center;
+  }
+  .spz-1023-V2 .css-1vc680q-Modal-modalContentContainer{
+   max-height: 90vh;
+   width: 100%;
+  }
+}
