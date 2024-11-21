@@ -3,10 +3,10 @@ function formPage() {
     var iframebodyInterval = setInterval(function () {
         var iframebodyEle = document.querySelector('body');
         if (iframebodyEle) {
-            if (!iframebodyEle.classList.contains('SPZ-2001-iframe-test')) {
+            if (!iframebodyEle.classList.contains('SPZ-2001-iframe-qa')) {
                 clearInterval(iframebodyInterval);
 
-                iframebodyEle.classList.add('SPZ-2001-iframe-test');
+                iframebodyEle.classList.add('SPZ-2001-iframe-qa');
 
 
                 function check_spzdevicewidth_fun() {
@@ -36,23 +36,23 @@ function formPage() {
                     }
                 });
 
-                waitForElm('.SPZ-2001-iframe-test form#pardot-form .submit input').then(function () {
-                    document.querySelector(".SPZ-2001-iframe-test form#pardot-form").insertAdjacentHTML("beforebegin", `<div class="form-heading" style="display: none;">Get a Demo</div>`);
+                waitForElm('.SPZ-2001-iframe-qa form#pardot-form .submit input').then(function () {
+                    document.querySelector(".SPZ-2001-iframe-qa form#pardot-form").insertAdjacentHTML("beforebegin", `<div class="form-heading" style="display: none;">Get a Demo</div>`);
                     hiddenValue();
-                    var all_inputs = document.querySelectorAll('.SPZ-2001-iframe-test form#pardot-form input, .SPZ-2001-iframe-test form#pardot-form select');
+                    var all_inputs = document.querySelectorAll('.SPZ-2001-iframe-qa form#pardot-form input, .SPZ-2001-iframe-qa form#pardot-form select');
                     all_inputs.forEach(function (element) {
                         element.removeAttribute('placeholder');
                         if (element.tagName == 'SELECT' && element.selectedIndex !== 0 && element.closest('.form-field') !== null) {
-                            element.closest('.SPZ-2001-iframe-test form#pardot-form .form-field').classList.add('filled');
+                            element.closest('.SPZ-2001-iframe-qa form#pardot-form .form-field').classList.add('filled');
                         }
                         if (element.tagName !== 'SELECT' && element.value != '' && element.closest('.form-field') !== null) {
-                            element.closest('.SPZ-2001-iframe-test form#pardot-form .form-field').classList.add('filled');
+                            element.closest('.SPZ-2001-iframe-qa form#pardot-form .form-field').classList.add('filled');
                         }
                     });
-                    var selector = '.SPZ-2001-iframe-test form#pardot-form .form-field input, .SPZ-2001-iframe-test form#pardot-form .form-field select';
+                    var selector = '.SPZ-2001-iframe-qa form#pardot-form .form-field input, .SPZ-2001-iframe-qa form#pardot-form .form-field select';
                     document.addEventListener('focus', function (event) {
                         if (event.target.matches && event.target.matches(selector)) {
-                            event.target.closest('.SPZ-2001-iframe-test form#pardot-form .form-field').classList.add('active', 'typing');
+                            event.target.closest('.SPZ-2001-iframe-qa form#pardot-form .form-field').classList.add('active', 'typing');
                         }
                     }, true);
                     var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
@@ -60,20 +60,20 @@ function formPage() {
                         document.addEventListener(s_event, function (event) {
                             if (event.target.matches && event.target.matches(selector)) {
                                 if (event.target.value == null || event.target.value == '') {
-                                    event.target.closest('.SPZ-2001-iframe-test form#pardot-form .form-field').classList.remove('filled');
+                                    event.target.closest('.SPZ-2001-iframe-qa form#pardot-form .form-field').classList.remove('filled');
                                 } else {
                                     if (event.target.tagName == 'SELECT' && event.target.selectedIndex !== 0) {
-                                        event.target.closest('.SPZ-2001-iframe-test form#pardot-form .form-field').classList.add('filled');
+                                        event.target.closest('.SPZ-2001-iframe-qa form#pardot-form .form-field').classList.add('filled');
                                     }
                                     if (event.target.tagName !== 'SELECT') {
-                                        event.target.closest('.SPZ-2001-iframe-test form#pardot-form .form-field').classList.add('filled');
+                                        event.target.closest('.SPZ-2001-iframe-qa form#pardot-form .form-field').classList.add('filled');
                                     }
                                 }
                             }
                         });
                     }
                     document.addEventListener('focusout', function (event) {
-                        document.querySelectorAll('.SPZ-2001-iframe-test form#pardot-form .form-field.typing').forEach(function (elem) {
+                        document.querySelectorAll('.SPZ-2001-iframe-qa form#pardot-form .form-field.typing').forEach(function (elem) {
                             elem.classList.remove('active', 'typing');
                         })
                     }, true);
@@ -103,12 +103,12 @@ function formPage() {
                 function checkFormSubmit() {
                     var countNew = 1;
                     var chekFormSubmit = setInterval(function () {
-                        if (document.querySelector('.SPZ-2001-iframe-test form#pardot-form .submit input') == null) {
+                        if (document.querySelector('.SPZ-2001-iframe-qa form#pardot-form .submit input') == null) {
                             clearInterval(chekFormSubmit);
-                            document.querySelectorAll('.SPZ-2001-iframe-test form#pardot-form > p').forEach((PEle) => {
+                            document.querySelectorAll('.SPZ-2001-iframe-qa form#pardot-form > p').forEach((PEle) => {
                                 if (PEle.textContent == 'We look forward to speaking with you soon!') {
-                                    if (document.querySelector('.SPZ-2001-iframe-test .form-heading')) {
-                                        document.querySelector('.SPZ-2001-iframe-test .form-heading').style.display = "none";
+                                    if (document.querySelector('.SPZ-2001-iframe-qa .form-heading')) {
+                                        document.querySelector('.SPZ-2001-iframe-qa .form-heading').style.display = "none";
                                     }
                                 }
                             });
@@ -128,10 +128,10 @@ function formPage() {
 function demoPage() {
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-1023-test')) {
+        if (!bodyEle.classList.contains('spz-2001-qa')) {
             clearInterval(bodyInterval);
             document.cookie = "spzdevicewidth=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.maxio.com";
-            bodyEle.classList.add('spz-1023-test');
+            bodyEle.classList.add('spz-2001-qa');
 
             let mainPageBodyWidth = document.body.clientWidth;
             setIframeBodyClass(mainPageBodyWidth);
@@ -141,10 +141,7 @@ function demoPage() {
                 setIframeBodyClass(mainPageBodyWidth);
             });
 
-            //set a cookie for the page visited
-            // setCookie('pageVisited', 'demo');
-
-            cookieValue('#1023', '#1023_variant2');
+            cookieValue('#2001_qa', '#2001_qa_variant');
             const template_heroSelector = `.hero-form`;
             const template_position = "beforebegin";
             const template_formSelector = `.hero-form iframe[id*="form"]`;
@@ -322,7 +319,7 @@ function demoPage() {
                     if (formHeight) {
                         if (formHeight.includes('height: 40.3958px') || formHeight.includes('height: 62.7917px') || formHeight.includes('height: 22.3958px') || formHeight.includes('height: 44.7917px')) {
                             clearInterval(spz_2001_Interval);
-                            document.querySelector('.spz-1023-test .spz-form-wrap .form-heading').style.display = "none";
+                            document.querySelector('.spz-2001-qa .spz-form-wrap .form-heading').style.display = "none";
                         }
                     }
                 }
