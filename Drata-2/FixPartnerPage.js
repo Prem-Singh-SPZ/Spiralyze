@@ -45,6 +45,12 @@ body .hero-section-15001 .hero-right-section .msg-wrapper-spz .msg-cta{
     border: 2px solid #293642;
     color: #fff;
 }
+      body .hero-section-15001 .hero-right-section .msg-wrapper-spz .msg-cta:active{
+       background: var(--neutral-700,#293642);
+    border: 2px solid var(--neutral-500,#697586);
+    color: #fff;
+}
+    
     @media screen and (max-width: 1280px) {
     body .hero-section-15001 .hero-right-section .msg-wrapper-spz{
         align-items: flex-start;
