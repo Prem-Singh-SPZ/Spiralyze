@@ -1,1574 +1,661 @@
-@font-face {
-    font-family: 'Graphik';
-    src: url('https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.eot');
-    src: url('https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.eot?#iefix') format('embedded-opentype'),
-        url('https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.woff2') format('woff2'),
-        url('https://res.cloudinary.com/spiralyze/raw/upload/v1697448599/KomodoHealth/1003/Graphik-Semibold.woff') format('woff'),
-        url('https://res.cloudinary.com/spiralyze/raw/upload/v1697448600/KomodoHealth/1003/Graphik-Semibold.ttf') format('truetype');
-    font-weight: normal;
-    font-style: normal;
-    font-display: swap;
-}
-
-.spz-15001.run-var {
-    background: none;
-}
-
-.spz-15001.run-var .body-wrapper {
-    display: none;
-}
-
-.spz-15001.run-var .hide {
-    display: none;
-}
-
-.spz-15001.run-var .new-wrapper .wrapper {
-    width: 100%;
-    max-width: 1180px;
-    margin: 0 auto;
-    padding: 0 20px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 {
-    background: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_2.webp') no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding-bottom: 80px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .header {
-    padding: 32px 0px 7px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper {
-    display: flex;
-    align-items: center;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section {
-    width: 568px;
-    margin-right: 40px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .small {
-    color: #68CCE8;
-    font-size: 12px;
-    font-weight: 700;
-    line-height: 20px;
-    letter-spacing: 0.6px;
-    text-transform: uppercase;
-    margin-bottom: 16px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .big {
-    color: #FFF;
-    font-size: 40px;
-    font-weight: 400;
-    line-height: 48px;
-    -webkit-font-smoothing: antialiased;
-    margin-bottom: 24px;
-    max-width: 90%;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list .child {
-    display: flex;
-    align-items: flex-start;
-    margin-top: 12px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list .child:first-child {
-    margin-top: 0px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list .l-desc {
-    color: #FFF;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin-left: 12px;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list .l-desc strong {
-    font-weight: 700;
-    -webkit-font-smoothing: antialiased;
-}
-
-.spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list .l-desc strong sup{
-    font-size: 8px;
-    font-weight: 400;
-}
-
-.spz-15001 .form-section {
-    max-width: 532px !important;
-    min-width: 532px;
-    background: white;
-    padding: 24px 32px 32px !important;
-    margin-left: auto;
-}
-
-.spz-15001 .form-section>.title {
-    font-family: Titillium Web, sans-serif;
-    text-align: center;
-    font-size: 24px !important;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 32px;
-    color: #000;
-    letter-spacing: 0px !important;
-    margin-bottom: 24px;
-}
-
-.spz-15001 .new-wrapper .section2 {
-    padding: 24px 0;
-    background: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_5.webp') no-repeat;
-    background-size: cover;
-    background-position: center center;
-}
-
-.spz-15001 .new-wrapper .section2 img {
-    max-width: 100%;
-    display: block;
-    height: auto;
-    width: 1120px;
-    margin-left: 5px;
-    margin-top: 2px;
-    margin-bottom: 2px;
-}
-
-.spz-15001 .new-wrapper .section3 {
-    padding: 72px 0 84.5px 0;
-}
-
-.spz-15001 .new-wrapper .section3 .title {
-    color: #000;
-    text-align: center;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper {
-    position: relative;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child {
-    display: flex;
-    align-items: center;
-    box-shadow: 0px 5px 40px 0px rgba(0, 9, 43, 0.13);
-    width: 944px;
-    position: relative;
-    margin: 0 auto;
-    max-width: 90%;
-    padding: 32px 0;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 {
-    width: 994px;
-    max-width: 94%;
-    align-items: flex-start;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left {
-    width: 348px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    border-right: 1px solid rgba(0, 0, 0, 0.10);
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .mobile-quote {
-    display: none;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text {
-    margin-top: 13px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .name {
-    color: #000;
-    font-family: Titillium Web;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 26px;
-    text-align: center;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .text .name {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    margin-top: -1px;
-    text-indent: 2px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .text .name {
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    margin-top: -1px;
-    text-indent: 0px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title {
-    color: #7E7E7E;
-    font-family: Titillium Web;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    text-align: center;
-    margin-top: 3px;
-    text-indent: -4px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title .mobile {
-    display: none;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .text .job-title {
-    margin-top: 4px;
-    text-indent: 2px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .text .job-title {
-
-    text-indent: 0px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .logo {
-    margin-top: 22px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .logo {
-    margin-top: 24px
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .logo {
-    margin-top: 14px
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .right {
-    width: calc(100% - 348px);
-    padding: 0 40px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .child .right .desktop-quote {
-    color: #000;
-    font-family: Titillium Web;
-    font-size: 24px;
-    font-weight: 400;
-    line-height: 32px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__slide {
-    margin-right: 80px;
-    padding: 0 40px;
-
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__list {
-    align-items: flex-start;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__track {
-    padding: 40px 0;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-left {
-    position: absolute;
-    top: 51.5%;
-    left: 0px;
-    transform: translateY(-50%);
-    transition: 0.2s left;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-right {
-    position: absolute;
-    top: 51.5%;
-    right: 0px;
-    transform: translateY(-50%);
-    transition: 0.2s right;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper.active3 .arrow-left {
-    left: -25px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper.active3 .arrow-right {
-    right: -25px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-left img,
-.spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-right img {
-    cursor: pointer;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-left img:hover,
-.spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-right img:hover {
-    filter: brightness(30%);
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__pagination {
-    bottom: -15px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__pagination__page {
-    background: rgba(104, 204, 232, 0.40);
-    position: relative;
-    outline: none;
-    opacity: 1;
-    margin: 3px 4px;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__pagination__page:hover {
-    background: #68CCE8;
-    border: none;
-    opacity: 1;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__pagination__page:focus {
-    border: none;
-    color: transparent;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__pagination__page.is-active {
-    background: #68CCE8;
-    transform: none;
-    box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.10);
-    -webkit-box-shadow: 0px 0px 0px 3px rgba(0, 0, 0, 0.10);
-    opacity: 1;
-}
-
-.spz-15001 .new-wrapper .section3 .slider-wrapper .splide__track {
-    transition: height .2s;
-}
-
-.spz-15001 .new-wrapper .section4.new-footer {
-    background: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_8.webp') no-repeat;
-    background-size: cover;
-    background-position: center center;
-    padding: 15.5px 0 16.5px 0;
-}
-
-.spz-15001 .new-wrapper .section4.new-footer .text {
-    color: #FFF;
-    text-align: center;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    -webkit-font-smoothing: antialiased;
-}
-
-.spz-15001 .new-wrapper .section3 .splide__pagination li {
-    line-height: 1 !important;
-}
-
-@media (max-width: 1280.98px) {
-    .spz-15001 .new-wrapper .section3 .slider-wrapper.active3 .arrow-left {
-        left: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper.active3 .arrow-right {
-        right: 0px;
-    }
-}
-
-@media (max-width: 1024.98px) {
-    .spz-15001.run-var .new-wrapper .wrapper {
-        padding: 0 32px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 {
-        background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_1.webp');
-        padding-bottom: 40px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .header {
-        text-align: center;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper {
-        flex-direction: column;
-        margin-top: 24px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section {
-        width: auto;
-        margin-right: 0px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .small {
-        text-align: center;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .big {
-        text-align: center;
-        width: 68%;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list {
-        width: 704px;
-        margin-left: auto;
-        margin-right: auto;
-    }
-
-    .spz-15001 .form-section {
-        max-width: 532px !important;
-        min-width: auto;
-        width: 100%;
-        margin-right: auto;
-        margin-top: 40px;
-    }
-
-    .spz-15001 .new-wrapper .section2 img {
-        width: 98.5%;
-        margin-left: auto;
-        margin-right: auto;
-        transform: translateX(-2px);
-    }
-
-    .spz-15001 .new-wrapper .section2 {
-        padding-bottom: 23px;
-        background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_4.webp');
-    }
-
-    .spz-15001 .new-wrapper .section3 {
-        padding: 40px 0 52px 0;
-    }
-
-    .spz-15001.run-var .new-wrapper .section3 .wrapper {
-        padding: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child,
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 {
-        flex-direction: column;
-        max-width: 100%;
-        padding: 24px 0;
-        width: 100%;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-right,
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-left {
-        top: 51.3%;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left {
-        width: 100%;
-        flex-direction: row;
-        align-items: center;
-        border-right: none;
-        border-bottom: 1px solid rgba(0, 0, 0, 0.10)
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .splide__slide {
-        padding: 0 32px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left {
-        padding: 0 32px 24px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text {
-        margin-top: 0px;
-        margin-left: 24px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .name {
-        text-align: left;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title {
-        text-align: left;
-        text-indent: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .logo {
-        margin-top: 0px;
-        margin-left: auto;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .right {
-        width: 100%;
-        padding: 23px 32px 0px 32px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .right .desktop-quote {
-        font-size: 20px;
-        line-height: 28px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .logo {
-        margin-top: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-right,
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .arrow-left {
-        display: none;
-    }
-
-    .spz-15001 .new-wrapper .section4.new-footer {
-        background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/footer-background-tablet.jpg');
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .text .name {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 26px;
-        margin-top: 0px;
-        text-indent: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .text .job-title {
-        text-indent: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .logo {
-        margin-top: -10px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .text .name {
-        font-size: 18px;
-        font-weight: 600;
-        line-height: 26px;
-        margin-top: 0px;
-        text-indent: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .right {
-        padding-right: 32px;
-    }
-}
-
-@media (max-width: 767.98px) {
-    .spz-15001.run-var .new-wrapper .section1 {
-        background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background.webp');
-        padding-bottom: 32px;
-    }
-
-    .spz-15001.run-var .new-wrapper .wrapper {
-        padding: 0 16px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper {
-        margin-top: 16px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .big {
-        font-size: 32px;
-        line-height: 40px;
-        width: 92%;
-    }
-
-    .spz-15001.run-var .new-wrapper .section1 .form-wrapper .text-section .list {
-        width: 100%;
-    }
-
-    .spz-15001 .form-section {
-        margin-top: 32px;
-        padding: 24px 16px 32px !important;
-        max-width: 400px !important;
-        width: 100%;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs-form-field.width50 {
-        width: 100%;
-        float: none;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .with-margin {
-        margin-left: 0px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .pp-parent {
-        margin-top: -12px;
-        margin-bottom: 2px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs-form__richtext p {
-        margin-bottom: 13px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .new-option-wrapper.desktop {
-        display: none;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper,
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper {
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-    }
-
-    .spz-15001.step2 #popup_contact_us {
-        padding: 24px 24px 32px !important;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper {
-        margin-top: -4px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper {
-        margin-top: 8px;
-        margin-bottom: 5px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper.how-did .how-can-wrapper {
-        margin-top: 7px;
-        margin-bottom: 5px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper.how-did .how-did-wrapper {
-        margin-bottom: 9px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs_how_did_you_hear_about_us_ {
-        margin-bottom: 0px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs_message {
-        margin-bottom: 8px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper .minus,
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper .minus {
-        display: none;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper.active .minus,
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper.active .minus {
-        display: block;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper.active .plus,
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper.active .plus {
-        display: none;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper .text,
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper .text {
-        color: #000;
-        margin-left: 8px;
-        font-family: Titillium Web, sans-serif;
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 20px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .how-did-wrapper svg,
-    .spz-15001 #new-formDemo-wrapper .how-can-wrapper svg {
-        width: 20px !important;
-        height: 20px !important;
-    }
-
-    .spz-15001.step2 #popup_contact_us {
-        padding: 24px 24px 32px !important;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs-error-msgs {
-        margin: 4px 0px 23px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs-richtext p {
-        margin-bottom: 14px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs-error-msgs label a {
-        padding-top: 0px;
-        margin-top: -24px;
-    }
-
-    .spz-15001.step2 #new-formDemo-wrapper.how-can .how-can-wrapper {
-        margin-bottom: 8px;
-    }
-
-    .spz-15001.step2 #new-formDemo-wrapper .pp-parent {
-        margin-bottom: 1px;
-        margin-top: -8px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate .hs-error-msgs label,
-    .spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
-        margin-bottom: -8px;
-    }
-
-    .spz-15001 #new-formDemo-wrapper .hs_submit input {
-        width: 264px;
-        max-width: 100%;
-        margin-left: auto !important;
-        margin-right: auto !important;
-    }
-
-    .spz-15001 .new-wrapper .section2 {
-        background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/background_9.webp');
-        padding-bottom: 26px;
-    }
-
-    .spz-15001 .new-wrapper .section2 img {
-        max-width: 400px;
-        width: 100%;
-        transform: none;
-    }
-
-    .spz-15001 .new-wrapper .section3 .title {
-        font-size: 24px;
-        line-height: 32px;
-    }
-
-    .spz-15001 .new-wrapper .section3 {
-        padding: 33px 0 11px 0;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child,
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 {
-        width: 100%;
-        max-width: 500px;
-        flex-direction: column;
-        padding: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .splide__slide {
-        margin-right: 80px;
-        padding: 0 16px;
-    }
-
-    .spz-15001.run-var .new-wrapper .section3 .wrapper {
-        padding: 0px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .splide__track {
-        padding: 23px 0 40px 0;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .splide__pagination {
-        bottom: 18px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .right {
-        display: none;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .mobile-quote {
-        display: block;
-        color: #000;
-        font-family: Titillium Web;
-        font-size: 16px;
-        font-weight: 700;
-        line-height: 24px;
-        padding: 16px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 0px 0 20px 0;
-        border-bottom: none;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left picture img {
-        width: 100%;
-        height: auto;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text {
-        margin-left: 16px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .name {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .text .name,
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .text .name {
-        font-size: 16px;
-        font-weight: 400;
-        line-height: 24px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title {
-        padding-right: 16px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title br {
-        display: none;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title,
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .text .job-title {
-        margin-top: 8px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .text .job-title .mobile {
-        display: inline;
-
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child .left .logo {
-        margin-top: 16px;
-        margin-left: 16px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child2 .left .logo {
-        margin-top: 16px;
-    }
-
-    .spz-15001 .new-wrapper .section3 .slider-wrapper .child.child3 .left .logo {
-        margin-top: 14px;
-    }
-
-    .spz-15001 .new-wrapper .section4.new-footer {
-        background-image: url('//res.cloudinary.com/spiralyze/image/upload/f_auto/KomodoHealth/1001/footer-background-mobile.jpg');
-    }
-
-    .spz-15001 .new-wrapper .section4.new-footer .text {
-        font-size: 12px;
-        font-weight: 400;
-        line-height: 20px;
-    }
-}
-
-/* 2004 form changes */
-body.spz-15001 #new-formDemo-wrapper .lds-dual-ring {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 80px auto;
-}
-
-body.spz-15001 #new-formDemo-wrapper .lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #000;
-    border-color: #000 transparent #000 transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .sub {
-    color: #4A4A4A;
-    text-align: center;
-    font-family: Titillium Web;
-    font-size: 18px;
-    font-weight: 600;
-    line-height: 26px;
-    margin-top: 16px;
-    margin-bottom: 24px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper.hide {
-    display: none;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 1px 1px;
-    margin-bottom: 20px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper.no-margin-bottom {
-    margin-bottom: 0px
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option {
-    padding: 15px 16px;
-    text-align: center;
-    cursor: pointer;
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.10);
-    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.10);
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option:hover {
-    box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.40);
-    -webkit-box-shadow: 0px 0px 0px 1px rgba(0, 0, 0, 0.40);
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option.selected {
-    box-shadow: inset 0px 0px 0px 1px rgba(104, 204, 232, 1), 0px 0px 0px 1px rgba(104, 204, 232, 1);
-    -webkit-box-shadow: inset 0px 0px 0px 1px rgba(104, 204, 232, 1), 0px 0px 0px 1px rgba(104, 204, 232, 1);
-    cursor: default;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper.column3 .option {
-    width: 146.33px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper.column2 .option {
-    width: 226px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option .image-wrapper img {
-    display: block;
-    margin: 0 auto;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option .image-wrapper .hover {
-    display: none;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option.selected .image-wrapper .default {
-    display: none;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option.selected .image-wrapper .hover {
-    display: block;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option .text {
-    color: #4A4A4A;
-    font-family: Titillium Web;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin-top: 12px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option.selected .text {
-    color: #000000;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper.step2-wrapper .option-wrapper .option .text {
-    height: 48px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .error-message {
-    color: #DC0000;
-    padding: 8px 0;
-    line-height: 16px;
-    font-family: Titillium Web, sans-serif;
-    font-size: 14px;
-    font-weight: 400;
-    text-align: center;
-    display: none;
-    margin-bottom: -24px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .error-message.show {
-    display: block;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .next {
-    color: #000;
-    font-family: Titillium Web;
-    font-size: 16px;
-    font-weight: 700;
-    line-height: 24px;
-    letter-spacing: 0.8px;
-    display: flex;
-    width: 100%;
-    height: 48px;
-    border-radius: 100px;
-    align-items: center;
-    justify-content: center;
-    background: #68CCE8;
-    transition: all .15s linear;
-    cursor: pointer;
-    margin-top: 24px;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .next:hover {
-    background-color: #000000;
-    color: white;
-}
-
-body.spz-15001 .form-wrapper .form-section .step-wrapper .next:active {
-    background-color: #4A4A4A;
-    color: white;
-}
-
+body.spz-15001 {
+  #main-content {
+    .dnd_area-row-0-padding {
+      .hs_cos_wrapper_type_module {
+        .demos-listing-hero {
+          display: none !important;
+        }
+
+        .spz-hero-section {
+          background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/hero_background_1440.webp)
+            no-repeat center center;
+          padding: 56px 15px 80px;
+
+          .hero-section-container {
+            max-width: 1140px;
+            margin: auto;
+            display: flex;
+            justify-content: space-between;
+
+            .hero-left-copy {
+              max-width: 562px;
+
+              .eyebrow-title {
+                color: #68cce8;
+                font-family: "Titillium Web";
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: 20px;
+                letter-spacing: 0.6px;
+                text-transform: uppercase;
+                margin: 0 0 16px;
+              }
+
+              .hero-headline {
+                color: #fff;
+                font-family: "Titillium Web";
+                font-size: 40px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 48px;
+                margin: 0 0 24px;
+                max-width: 415px;
+              }
+
+              .hero-desc {
+                color: #fff;
+                font-family: "Titillium Web";
+                font-size: 20px;
+                font-style: normal;
+                font-weight: 400;
+                line-height: 28px;
+                margin: 0 0 8px;
+              }
+            }
+
+            .hero-form-wrapper {
+              max-width: 520px;
+              margin-left: 20px;
+              width: 100%;
+
+              .hero-form {
+                background: #fff;
+                box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
+                padding: 24px 32px;
+
+                .spz-form-title {
+                  color: #000;
+                  text-align: center;
+                  font-family: "Titillium Web";
+                  font-size: 32px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 40px;
+                  padding: 0 0 24px;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+/* 15001 form changes */
 @keyframes lds-dual-ring {
-    0% {
-        transform: rotate(0deg);
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+body.spz-15001 {
+  #demo_Form_15001_wrapper {
+    .lds-dual-ring {
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 80px auto;
+      display: block;
+      width: 80px;
+      height: 80px;
+      margin: 80px auto;
+      &:after {
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #000;
+        border-color: #000 transparent #000 transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+        content: " ";
+        display: block;
+        width: 64px;
+        height: 64px;
+        margin: 8px;
+        border-radius: 50%;
+        border: 6px solid #000;
+        border-color: #000 transparent #000 transparent;
+        animation: lds-dual-ring 1.2s linear infinite;
+      }
     }
-
-    100% {
-        transform: rotate(360deg);
+    .hs-form-required {
+      display: none;
     }
-}
-
-body.spz-15001 .form-wrapper .form-section .hbspt-form {
-    display: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-required {
-    display: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper {
-    display: none;
-    margin-top: 24px;
-}
-
-body.spz-15001 #new-formDemo-wrapper.show {
-    display: block;
-}
-
-body.spz-15001 .blocker {
-    background: rgba(0, 0, 0, 0.50);
-}
-
-body.spz-15001 .form-wrapper .form-section {
-    max-width: 532px !important;
-    box-shadow: 0px 12.33333px 49.33334px 0px rgba(0, 0, 0, 0.20);
-    padding: 24px 32px 32px !important;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.width50 {
-    width: calc((100% - 20px) / 2);
-    float: left;
-    clear: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper .with-margin {
-    margin-left: 20px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .clear,
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.width50.clear {
-    clear: both;
-}
-
-body.spz-15001 .form-wrapper .form-section .close-modal {
-    width: 20px;
-    height: 20px;
-    background-image: url('//res.cloudinary.com/spiralyze/image/upload/v1697439750/KomodoHealth/1003/close.svg') !important;
-    top: 12px;
-    right: 12px;
-    outline: 0;
-    background-size: auto;
-}
-
-body.spz-15001 .form-wrapper .form-section .close-modal:hover,
-body.spz-15001 .form-wrapper .form-section .close-modal:active {
-    filter: brightness(50%)
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field {
-    position: relative;
-    margin-bottom: 20px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field>label:not(.hs-form-booleancheckbox-display):not(.hs-error-msg) {
-    position: absolute;
-    top: 12px;
-    left: 20px;
-    pointer-events: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field>label span {
-    color: #4A4A4A;
-    font-family: Titillium Web, sans-serif;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    letter-spacing: 0px;
-    position: relative;
-}
-
-/* body.spz-15001 .form-wrapper .form-section .title {
-    font-family: Titillium Web, sans-serif;
-    text-align: center;
-    font-size: 32px !important;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 40px;
-    color: #000;
-    letter-spacing: 0px !important;
-    margin-bottom: 12px;
-} */
-
-body.spz-15001 .form-wrapper .form-section .review-wrapper {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-body.spz-15001 .form-wrapper .form-section .review-wrapper .text {
-    color: #7E7E7E;
-    font-family: Titillium Web;
-    font-size: 16px;
-    font-weight: 400;
-    line-height: 24px;
-    margin-left: 12px;
-}
-
-body.spz-15001 .form-wrapper .form-section .review-wrapper .text .black {
-    color: #000;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-input {
-    margin: 0px !important
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-error-msgs label {
-    font-size: 14px !important;
-    font-style: normal;
-    font-weight: 400 !important;
-    line-height: 16px !important;
-    font-family: Titillium Web, sans-serif;
-    letter-spacing: 0px;
-    color: #DC0000;
-    margin-top: 4px;
-    margin-bottom: -12px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-error-msgs.inputs-list {
-    padding-left: 0px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate .hs-error-msgs label,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
-    margin-bottom: -3px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-error-msgs label a {
-    display: block;
-    padding-top: 6px;
-    color: #DC0000;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-input {
-    border: 1px solid rgba(0, 0, 0, 0.10) !important;
-    background-color: #F8F7F7 !important;
-    height: 48px;
-    text-overflow: ellipsis;
-    padding: 11px 19px 12px !important;
-    color: #000;
-    font-family: Titillium Web;
-    font-size: 16px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 24px;
-    outline: none;
-    letter-spacing: 0;
-    background-clip: padding-box;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_buying_timeline {
-    display: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-input:-webkit-autofill,
-body.spz-15001 #new-formDemo-wrapper .hs-input:-webkit-autofill:hover,
-body.spz-15001 #new-formDemo-wrapper .hs-input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #F8F7F7 inset !important;
-    transition: background-color 5000s ease-in-out 0s !important;
-    -webkit-text-fill-color: #000 !important;
-    z-index: 2;
-    position: relative;
-}
-
-body.spz-15001 #new-formDemo-wrapper .focus .hs-input:-webkit-autofill,
-body.spz-15001 #new-formDemo-wrapper .focus .hs-input:-webkit-autofill:hover,
-body.spz-15001 #new-formDemo-wrapper .focus .hs-input:-webkit-autofill:focus {
-    -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
-    transition: background-color 5000s ease-in-out 0s !important;
-    -webkit-text-fill-color: #000 !important;
-    z-index: 2;
-    position: relative;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hasValue .hs-input {
-    border: 1px solid rgba(0, 0, 0, 0.10) !important;
-    background-color: #F8F7F7 !important;
-}
-
-body.spz-15001 #new-formDemo-wrapper .focus .hs-input {
-    border: 1px solid rgba(0, 0, 0, 0.40) !important;
-    background-color: #FFF !important;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hasError .hs-input {
-    border: 1px solid #DC0000 !important;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.focus>label,
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.hasValue>label {
-    top: -11px !important;
-    left: 16px !important;
-    z-index: 4;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.focus.hs_how_did_you_hear_about_us_>label,
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.hasValue.hs_how_did_you_hear_about_us_>label,
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.focus.hs_message>label,
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.hasValue.hs_message>label {
-    display: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.hasValue>label span {
-    -webkit-font-smoothing: antialiased;
-    font-family: 'Graphik';
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: -0.16px;
-    padding: 0 4px;
-    color: #7E7E7E;
-    box-shadow: 0px -6px 0px 0px #F8F7F7 inset;
-    -webkit-box-shadow: 0px -6px 0px 0px #F8F7F7 inset;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.focus>label span {
-    font-family: 'Graphik';
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: -0.16px;
-    padding: 0 4px;
-    color: #000000;
-    box-shadow: 0px -6px 0px 0px white inset;
-    -webkit-box-shadow: 0px -6px 0px 0px white inset;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.hasError.focus>label span {
-    font-family: 'Graphik';
-    font-size: 10px;
-    font-weight: 500;
-    line-height: 12px;
-    letter-spacing: -0.16px;
-    padding: 0 4px;
-    color: #DC0000;
-    box-shadow: 0px -6px 0px 0px white inset;
-    -webkit-box-shadow: 0px -6px 0px 0px white inset;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-form-field.hasError>label span {
-    color: #DC0000;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_message textarea {
-    resize: none;
-    overflow: hidden;
-    display: block;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-richtext p {
-    color: #7E7E7E;
-    font-family: Titillium Web, sans-serif;
-    font-size: 12px !important;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    letter-spacing: 0;
-    margin-bottom: 17px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-richtext p a {
-    text-decoration: underline;
-    color: #68cce8 !important;
-    text-decoration-skip-ink: none;
-    text-underline-offset: 1px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs-richtext p a:hover,
-body.spz-15001 #new-formDemo-wrapper .hs-richtext p a:active {
-    text-decoration: none;
-
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_submit input {
-    width: 100%;
-    display: flex;
-    height: 48px;
-    border-radius: 100px !important;
-    background-color: #68CCE8 !important;
-    justify-content: center;
-    align-items: center;
-    color: #000 !important;
-    font-family: Titillium Web, sans-serif;
-    font-size: 16px !important;
-    font-style: normal;
-    font-weight: 700 !important;
-    line-height: 24px !important;
-    outline: none;
-    letter-spacing: 0.8px !important;
-    margin-top: 0px !important;
-    margin-bottom: 0px !important;
-    border: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_submit input:hover {
-    background-color: #000000 !important;
-    color: white !important
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_submit input:active {
-    background-color: #4A4A4A !important;
-    color: white !important
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_countries select {
-    -webkit-appearance: none;
-    appearance: none;
-    padding-right: 40px !important;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_countries select option {
-    font-family: Titillium Web, sans-serif;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_countries .arrow-select {
-    width: 16px;
-    height: 16px;
-    background: url('//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/arrow-down.svg') no-repeat;
-    pointer-events: none;
-    position: absolute;
-    right: 20px;
-    top: 16px;
-    z-index: 4;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate input[type="checkbox"],
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us input[type="checkbox"] {
-    min-width: 20px;
-    height: 20px;
-    -webkit-appearance: none;
-    appearance: none;
-    background-color: white !important;
-    border: 1px solid rgba(0, 0, 0, 0.40) !important;
-    padding: 0px !important;
-    cursor: pointer;
-    border-radius: 0;
-    outline: 0;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate input[type="checkbox"]:checked,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us input[type="checkbox"]:checked {
-    background-color: #68CCE8 !important;
-    background-image: url('//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg');
-    background-repeat: no-repeat;
-    background-position: center center;
-    border: 1px solid #68CCE8 !important;
-    background-clip: border-box;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate label,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us label {
-    display: flex;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate label span,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us label span {
-    color: #000;
-    font-family: Titillium Web, sans-serif;
-    font-size: 12px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 20px;
-    padding-left: 8px;
-    margin-top: -3px;
-    letter-spacing: 0px;
-    margin-left: 0px;
-    margin-right: 0px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate .hs-form-booleancheckbox,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-form-booleancheckbox {
-    margin: 0px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_jobtitle,
-body.spz-15001 #new-formDemo-wrapper .hs_phone,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_countries,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate,
-body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us {
-    display: none;
-}
-
-body.spz-15001 #new-formDemo-wrapper.step2 .hs_jobtitle,
-body.spz-15001 #new-formDemo-wrapper.step2 .hs_phone,
-body.spz-15001 #new-formDemo-wrapper.step2 .hs_consent_countries,
-body.spz-15001 #new-formDemo-wrapper.step2 .hs_consent_to_communicate,
-body.spz-15001 #new-formDemo-wrapper.step2 .hs_consent_to_communicate_non_us {
-    display: block;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_error_rollup .hs-main-font-element {
-    color: #DC0000;
-    text-align: center;
-    padding: 8px 0;
-    display: block;
-    margin: 0px;
-    line-height: 16px !important;
-    margin: -16px 0px 0px;
-    float: left;
-    width: 100%;
-    clear: both;
-    font-family: Titillium Web, sans-serif;
-    font-size: 14px !important;
-    font-weight: 400;
-}
-
-body.spz-15001 #new-formDemo-wrapper .pp-parent {
-
-    float: left;
-    margin: 3px 0px 0px;
-}
-
-body.spz-15001 #new-formDemo-wrapper.step2 .pp-parent {
-    margin: -12px 0px 15.5px;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_submit .actions {
-    margin: 0;
-    padding: 0;
-}
-
-body.spz-15001 #new-formDemo-wrapper .submitted-message {
-    text-align: center;
-}
-
-body.spz-15001 #new-formDemo-wrapper .lds-dual-ring {
-    display: block;
-    width: 80px;
-    height: 80px;
-    margin: 80px auto;
-}
-
-body.spz-15001 #new-formDemo-wrapper .lds-dual-ring:after {
-    content: " ";
-    display: block;
-    width: 64px;
-    height: 64px;
-    margin: 8px;
-    border-radius: 50%;
-    border: 6px solid #000;
-    border-color: #000 transparent #000 transparent;
-    animation: lds-dual-ring 1.2s linear infinite;
-}
-
-body.spz-15001 #new-formDemo-wrapper .hs_consent_countries {
-    margin-bottom: 12.5px;
-}
-
-@media (max-width: 1024.98px) {
-    body.spz-15001 .blocker {
-        background: rgba(0, 0, 0, 0.60);
+    .hs-form-field.width50 {
+      width: calc((100% - 20px) / 2);
+      float: left;
+      clear: none;
     }
-}
-
-@media (max-width: 767.98px) {
-
-    body.spz-15001 .jquery-modal.blocker.current {
-        background-color: rgba(0, 0, 0, 0.60);
-        padding: 0px 0px 0px;
+    .with-margin {
+      margin-left: 20px;
     }
-
-    body.spz-15001 .blocker:before {
-        vertical-align: top;
+    .clear {
+      clear: both;
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs-form-field.width50 {
-        width: 100%;
-        float: none;
+    .hs-form-field.width50.clear {
+      clear: both;
     }
-
-    body.spz-15001 #new-formDemo-wrapper .with-margin {
-        margin-left: 0px;
+    .hs-form-field {
+      position: relative;
+      margin-bottom: 20px;
+      > label {
+        &:not(.hs-form-booleancheckbox-display) {
+          &:not(.hs-error-msg) {
+            position: absolute;
+            top: 12px;
+            left: 20px;
+            pointer-events: none;
+          }
+        }
+        span {
+          color: #4a4a4a;
+          font-family: Titillium Web, sans-serif;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 24px;
+          letter-spacing: 0px;
+          position: relative;
+        }
+      }
     }
-
-    body.spz-15001 .form-wrapper .form-section {
-        padding: 24px 16px 32px !important;
-        box-shadow: none;
-        width: 100% !important;
-        max-width: 400px !important;
-        margin: 32px 0 0;
+    .hs-input {
+      margin: 0px !important;
+      border: 1px solid rgba(0, 0, 0, 0.1) !important;
+      background-color: #f8f7f7 !important;
+      height: 48px;
+      text-overflow: ellipsis;
+      padding: 11px 19px 12px !important;
+      color: #000;
+      font-family: Titillium Web, sans-serif;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      outline: none;
+      letter-spacing: 0;
+      background-clip: padding-box;
+      &:-webkit-autofill {
+        -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
+        transition: background-color 5000s ease-in-out 0s !important;
+        -webkit-text-fill-color: #000 !important;
+        z-index: 2;
+        position: relative;
+        &:hover {
+          -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
+          transition: background-color 5000s ease-in-out 0s !important;
+          -webkit-text-fill-color: #000 !important;
+          z-index: 2;
+          position: relative;
+        }
+        &:focus {
+          -webkit-box-shadow: 0 0 0px 1000px #f8f7f7 inset !important;
+          transition: background-color 5000s ease-in-out 0s !important;
+          -webkit-text-fill-color: #000 !important;
+          z-index: 2;
+          position: relative;
+        }
+      }
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs-form-field {
-        margin-bottom: 16px;
+    .hs-error-msgs {
+      label {
+        font-size: 14px !important;
+        font-style: normal;
+        font-weight: 400 !important;
+        line-height: 16px !important;
+        font-family: Titillium Web, sans-serif;
+        letter-spacing: 0px;
+        color: #dc0000;
+        margin-top: 4px;
+        margin-bottom: -12px;
+        a {
+          display: block;
+          padding-top: 6px;
+          color: #dc0000;
+        }
+      }
     }
-
-    body.spz-15001 #new-formDemo-wrapper .pp-parent {
-        margin-top: 0px;
-        margin-bottom: 0px;
+    .hs-error-msgs.inputs-list {
+      padding-left: 0px;
     }
-
-    body.spz-15001 #new-formDemo-wrapper.step2 .pp-parent {
-        margin-top: -8px;
-        margin-bottom: 1px;
+    .hs_consent_to_communicate {
+      .hs-error-msgs {
+        label {
+          margin-bottom: -3px;
+        }
+      }
+      input[type="checkbox"] {
+        //   display: none;
+        min-width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: white !important;
+        border: 1px solid rgba(0, 0, 0, 0.4) !important;
+        padding: 0px !important;
+        cursor: pointer;
+        border-radius: 0;
+        outline: 0;
+        &:checked {
+          background-color: #68cce8 !important;
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          border: 1px solid #68cce8 !important;
+          background-clip: border-box;
+        }
+      }
+      label {
+        display: flex;
+        span {
+          color: #000;
+          font-family: Titillium Web, sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          padding-left: 8px;
+          margin-top: -3px;
+          letter-spacing: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+      .hs-form-booleancheckbox {
+        margin: 0px;
+      }
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs-form__richtext p {
-        margin-bottom: 13px;
+    .hs_consent_to_communicate_non_us {
+      .hs-error-msgs {
+        label {
+          margin-bottom: -3px;
+        }
+      }
+      input[type="checkbox"] {
+        min-width: 20px;
+        height: 20px;
+        -webkit-appearance: none;
+        appearance: none;
+        background-color: white !important;
+        border: 1px solid rgba(0, 0, 0, 0.4) !important;
+        padding: 0px !important;
+        cursor: pointer;
+        border-radius: 0;
+        outline: 0;
+        &:checked {
+          background-color: #68cce8 !important;
+          background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/check.svg");
+          background-repeat: no-repeat;
+          background-position: center center;
+          border: 1px solid #68cce8 !important;
+          background-clip: border-box;
+        }
+      }
+      label {
+        display: flex;
+        span {
+          color: #000;
+          font-family: Titillium Web, sans-serif;
+          font-size: 12px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 20px;
+          padding-left: 8px;
+          margin-top: -3px;
+          letter-spacing: 0px;
+          margin-left: 0px;
+          margin-right: 0px;
+        }
+      }
+      .hs-form-booleancheckbox {
+        margin: 0px;
+      }
+      display: none;
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs-error-msgs {
-        margin: 4px 0px 23px;
+    .hs_buying_timeline {
+      display: none;
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs-richtext p {
-        margin-bottom: 16px;
+    .focus {
+      .hs-input {
+        &:-webkit-autofill {
+          -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+          transition: background-color 5000s ease-in-out 0s !important;
+          -webkit-text-fill-color: #000 !important;
+          z-index: 2;
+          position: relative;
+          &:hover {
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+            transition: background-color 5000s ease-in-out 0s !important;
+            -webkit-text-fill-color: #000 !important;
+            z-index: 2;
+            position: relative;
+          }
+          &:focus {
+            -webkit-box-shadow: 0 0 0px 1000px #fff inset !important;
+            transition: background-color 5000s ease-in-out 0s !important;
+            -webkit-text-fill-color: #000 !important;
+            z-index: 2;
+            position: relative;
+          }
+        }
+        border: 1px solid rgba(0, 0, 0, 0.4) !important;
+        background-color: #fff !important;
+      }
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs-error-msgs label a {
-        padding-top: 0px;
-        margin-top: -24px;
+    .hasValue {
+      .hs-input {
+        border: 1px solid rgba(0, 0, 0, 0.1) !important;
+        background-color: #f8f7f7 !important;
+      }
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate .hs-error-msgs label,
-    body.spz-15001 #new-formDemo-wrapper .hs_consent_to_communicate_non_us .hs-error-msgs label {
-        margin-bottom: -8px;
+    .hasError {
+      .hs-input {
+        border: 1px solid #dc0000 !important;
+      }
     }
-
-    body.spz-15001 #new-formDemo-wrapper .hs_consent_countries {
-        margin-bottom: 12px !important;
+    .hs-form-field.focus {
+      > label {
+        top: -11px !important;
+        left: 16px !important;
+        z-index: 4;
+        span {
+          font-family: Titillium Web, sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 12px;
+          letter-spacing: -0.16px;
+          padding: 0 4px;
+          color: #000;
+          box-shadow: 0px -6px 0px 0px white inset;
+          -webkit-box-shadow: 0px -6px 0px 0px white inset;
+        }
+      }
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper {
-        flex-direction: column;
+    .hs-form-field.hasValue {
+      > label {
+        top: -11px !important;
+        left: 16px !important;
+        z-index: 4;
+        span {
+          -webkit-font-smoothing: antialiased;
+          font-family: Titillium Web, sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 12px;
+          letter-spacing: -0.16px;
+          padding: 0 4px;
+          color: #7e7e7e;
+          box-shadow: 0px -6px 0px 0px #f8f7f7 inset;
+          -webkit-box-shadow: 0px -6px 0px 0px #f8f7f7 inset;
+        }
+      }
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option {
+    .hs-form-field.focus.hs_how_did_you_hear_about_us_ {
+      > label {
+        display: none;
+      }
+    }
+    .hs-form-field.hasValue.hs_how_did_you_hear_about_us_ {
+      > label {
+        display: none;
+      }
+    }
+    .hs-form-field.focus.hs_message {
+      > label {
+        display: none;
+      }
+    }
+    .hs-form-field.hasValue.hs_message {
+      > label {
+        display: none;
+      }
+    }
+    .hs-form-field.hasError.focus {
+      > label {
+        span {
+          font-family: Titillium Web, sans-serif;
+          font-size: 10px;
+          font-weight: 500;
+          line-height: 12px;
+          letter-spacing: -0.16px;
+          padding: 0 4px;
+          color: #dc0000;
+          box-shadow: 0px -6px 0px 0px white inset;
+          -webkit-box-shadow: 0px -6px 0px 0px white inset;
+        }
+      }
+    }
+    .hs-form-field.hasError {
+      > label {
+        span {
+          color: #dc0000;
+        }
+      }
+    }
+    .hs_message {
+      textarea {
+        resize: none;
+        overflow: hidden;
+        display: block;
+      }
+    }
+    .hs-richtext {
+      p {
+        color: #7e7e7e;
+        font-family: Titillium Web, sans-serif;
+        font-size: 12px !important;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 20px;
+        letter-spacing: 0;
+        margin-bottom: 17px;
+        a {
+          text-decoration: underline;
+          color: #68cce8 !important;
+          text-decoration-skip-ink: none;
+          text-underline-offset: 1px;
+          &:hover {
+            text-decoration: none;
+          }
+          &:active {
+            text-decoration: none;
+          }
+        }
+      }
+    }
+    .hs_submit {
+      input {
         width: 100%;
         display: flex;
+        height: 48px;
+        border-radius: 100px !important;
+        background-color: #68cce8 !important;
+        justify-content: center;
         align-items: center;
-        padding: 11px 14px 10.5px;
-        margin-bottom: 10.5px;
+        color: #000 !important;
+        font-family: Titillium Web, sans-serif;
+        font-size: 16px !important;
+        font-style: normal;
+        font-weight: 700 !important;
+        line-height: 24px !important;
+        outline: none;
+        letter-spacing: 0.8px !important;
+        margin-top: 0px !important;
+        margin-bottom: 0px !important;
+        border: none;
+        &:hover {
+          background-color: #000000 !important;
+          color: #fff !important;
+        }
+        &:active {
+          background-color: #4a4a4a !important;
+          color: #fff !important;
+        }
+      }
+      .actions {
+        margin: 0;
+        padding: 0;
+      }
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option:last-child {
-        margin-bottom: 0px;
+    .hs_consent_countries {
+      // display: none;
+      margin-bottom: 12.5px;
+      select {
+        -webkit-appearance: none;
+        appearance: none;
+        padding-right: 40px !important;
+        option {
+          font-family: Titillium Web, sans-serif;
+        }
+      }
+      .arrow-select {
+        width: 16px;
+        height: 16px;
+        background: url("//res.cloudinary.com/spiralyze/image/upload/v1697453402/KomodoHealth/1003/arrow-down.svg")
+          no-repeat;
+        pointer-events: none;
+        position: absolute;
+        right: 20px;
+        top: 16px;
+        z-index: 4;
+      }
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper .option .text {
-        margin-top: 0px;
-        margin-left: 8px;
-    }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper.column3 .option,
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper.column2 .option {
+    // .hs_jobtitle {
+    //   display: none;
+    // }
+    // .hs_phone {
+    //   display: none;
+    // }
+    .hs_error_rollup {
+      .hs-main-font-element {
+        color: #dc0000;
+        text-align: center;
+        padding: 8px 0;
+        display: block;
+        margin: 0px;
+        line-height: 16px !important;
+        margin: -16px 0px 0px;
+        float: left;
         width: 100%;
+        clear: both;
+        font-family: Titillium Web, sans-serif;
+        font-size: 14px !important;
+        font-weight: 400;
+      }
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .option-wrapper {
-        margin-bottom: 8.5px;
+    .pp-parent {
+      float: left;
+      margin: 3px 0px 0px;
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .next {
-        margin-top: 24.5px;
+    .submitted-message {
+      text-align: center;
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper .next.next-2 {
-        margin-top: 25.5px;
+  }
+  .blocker {
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #demo_Form_15001_wrapper.step2 {
+    .hs_jobtitle {
+      display: block;
     }
-
-    body.spz-15001 .form-wrapper .form-section .step-wrapper.step2-wrapper .option-wrapper .option .text {
-        height: auto;
+    .hs_phone {
+      display: block;
     }
-
-    body.spz-15001 .form-wrapper .form-section .review-wrapper .text {
-        transform: translateX(-1px);
+    .hs_consent_countries {
+      display: block;
     }
+    .hs_consent_to_communicate {
+      display: block;
+    }
+    .hs_consent_to_communicate_non_us {
+      display: block;
+    }
+    .pp-parent {
+      margin: -12px 0px 15.5px;
+    }
+  }
+}
+@media (max-width: 1024.98px) {
+  body.spz-15001 {
+    .blocker {
+      background: rgba(0, 0, 0, 0.6);
+    }
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-15001 {
+    .jquery-modal.blocker.current {
+      background-color: rgba(0, 0, 0, 0.6);
+      padding: 0px 0px 0px;
+    }
+    .blocker {
+      &:before {
+        vertical-align: top;
+      }
+    }
+    #demo_Form_15001_wrapper {
+      .hs-form-field.width50 {
+        width: 100%;
+        float: none;
+      }
+      .with-margin {
+        margin-left: 0px;
+      }
+      .hs-form-field {
+        margin-bottom: 16px;
+      }
+      .pp-parent {
+        margin-top: 0px;
+        margin-bottom: 0px;
+      }
+      .hs-form__richtext {
+        p {
+          margin-bottom: 13px;
+        }
+      }
+      .hs-error-msgs {
+        margin: 4px 0px 23px;
+        label {
+          a {
+            padding-top: 0px;
+            margin-top: -24px;
+          }
+        }
+      }
+      .hs-richtext {
+        p {
+          margin-bottom: 16px;
+        }
+      }
+      .hs_consent_to_communicate {
+        .hs-error-msgs {
+          label {
+            margin-bottom: -8px;
+          }
+        }
+      }
+      .hs_consent_to_communicate_non_us {
+        .hs-error-msgs {
+          label {
+            margin-bottom: -8px;
+          }
+        }
+      }
+      .hs_consent_countries {
+        margin-bottom: 12px !important;
+      }
+    }
+    #demo_Form_15001_wrapper.step2 {
+      .pp-parent {
+        margin-top: -8px;
+        margin-bottom: 1px;
+      }
+    }
+  }
 }
