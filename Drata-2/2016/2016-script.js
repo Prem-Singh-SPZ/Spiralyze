@@ -1,6 +1,7 @@
-var cssElement = document.createElement('style');
-cssElement.type = 'text/css';
-var cssCode = `.spz-2016 main div[class*="CollectionCheckboxes-accordionContainer"] {
+(function () {
+    var cssElement = document.createElement('style');
+    cssElement.type = 'text/css';
+    var cssCode = `.spz-2016 main div[class*="CollectionCheckboxes-accordionContainer"] {
 	display: none;
 }
 .spz-2016 .spz-tiles {
@@ -129,10 +130,9 @@ var cssCode = `.spz-2016 main div[class*="CollectionCheckboxes-accordionContaine
     padding: 0 !important;
 	}
 }`;
-cssElement.appendChild(document.createTextNode(cssCode));
-document.head.appendChild(cssElement);
+    cssElement.appendChild(document.createTextNode(cssCode));
+    document.head.appendChild(cssElement);
 
-(function () {
     const heroSelector = `div[class*="CollectionCheckboxes-accordionContainer"]`;
     const position = "beforebegin";
     const heroContent = {
@@ -215,15 +215,15 @@ document.head.appendChild(cssElement);
             const body = document.querySelector('body');
             if (body) {
                 clearInterval(bodyLoaded);
-                if (!body.classList.contains('spz-2016') && !document.querySelector('.spz-tiles')) {
+                if (!document.querySelector('.spz-tiles')) {
                     body.classList.add('spz-2016');
                     waitForElm(`.spz-2016 main section[variant="collectionCheckboxesSectionWrapper"] div[class*="CollectionCheckboxes-accordionContainer"]`).then(function () {
-                        if (!document.querySelector('.spz-tiles')) {
-                            console.log('spz tiles section added');
-                            addHeroTiles(heroContent, position, heroSelector);
-                        }
+                        // if (!document.querySelector('.spz-tiles')) {
+                        // console.log('spz tiles section added');
+                        addHeroTiles(heroContent, position, heroSelector);
+                        // }
                     });
-                } 
+                }
                 // else {
                 //     if (!document.querySelector('.spz-2016 .spz-tiles')) {
                 //         waitForElm(`.spz-2016 main section[variant="collectionCheckboxesSectionWrapper"] div[class*="CollectionCheckboxes-accordionContainer"]`).then(function () {
@@ -252,17 +252,15 @@ document.head.appendChild(cssElement);
     }
 
     function removeTest() {
-        setTimeout(() => {
-            if (document.querySelector('.spz-2016')) {
-                document.body.classList.remove("spz-2016");
-            }
-            if (document.querySelector('.spz-tiles')) {
-                document.body.classList.remove("spz-tiles");
-            }
-            if (document.querySelector('.spz-drata-prefill-2016')) {
-                document.body.classList.remove("spz-drata-prefill-2016");
-            }
-        }, 2000);
+        if (document.querySelector('.spz-2016')) {
+            document.body.classList.remove("spz-2016");
+        }
+        if (document.querySelector('.spz-tiles')) {
+            document.body.classList.remove("spz-tiles");
+        }
+        if (document.querySelector('.spz-drata-prefill-2016')) {
+            document.body.classList.remove("spz-drata-prefill-2016");
+        }
     }
 
     history.pushState = (function (f) {
@@ -294,8 +292,11 @@ document.head.appendChild(cssElement);
     function urlCheck(url) {
         var targetTestURL = 'https://drata.com/';
         if (window.location.pathname === "/") {
+            // console.log('homepage');
             createTest();
         } else if (window.location.pathname.indexOf("/demo") > -1) {
+            // console.log('demo page');
+
             loadfilled2016();
         } else {
             removeTest();

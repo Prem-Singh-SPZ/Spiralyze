@@ -87,7 +87,7 @@ let bodyInterval = setInterval(() => {
         waitForElm('body .hero-section-15001 .hero-right-section').then(() => {
             //add null check for the element
             if (document.querySelectorAll('body .hero-section-15001 .hero-right-section .msg-wrapper-spz').length == 0) {
-                document.querySelector('body .hero-section-15001 .hero-right-section').insertAdjacentHTML('beforeend', `<div class="msg-wrapper-spz"><p class="msg-copy">log in and make the connection</p><a href="https://app.drata.com/" class="hs-button msg-cta">Login</a></div>`);
+                document.querySelector('body .hero-section-15001 .hero-right-section').insertAdjacentHTML('beforeend', `<div class="msg-wrapper-spz"><p class="msg-copy">log in and make the connection</p><a href="https://app.drata.com/" class="hs-button msg-cta" target="_blank">Login</a></div>`);
             }
         });
     }
