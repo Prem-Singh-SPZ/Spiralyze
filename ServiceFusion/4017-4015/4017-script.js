@@ -7,21 +7,9 @@ var checkBody = setInterval(function(){
         detect_browser();
         var OStype = detectOS();
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-sf-4009'))
+        if (!bodyEle.classList.contains('spz-sf-4017'))
         {
-            bodyEle.classList.add('spz-sf-4009');
-        }
-        if (!bodyEle.classList.contains('spz-sf-4002'))
-        {
-            bodyEle.classList.add('spz-sf-4002');
-        }
-        if (!bodyEle.classList.contains('spz-sf-4004'))
-        {
-            bodyEle.classList.add('spz-sf-4004');
-        }
-        if (!bodyEle.classList.contains('spz-sf-4015'))
-        {
-            bodyEle.classList.add('spz-sf-4015');
+            bodyEle.classList.add('spz-sf-4017');
         }
         if(OStype == 'MacOS' || OStype == 'iOS'){
             bodyEle.classList.add('spz-ios-device');
@@ -49,7 +37,7 @@ function load4001() {
         document.querySelector('body').insertAdjacentHTML('afterbegin', '<div class="spz-sf-main"></div>');
 		header_fn(document.querySelector('.spz-sf-main'));
         hero_fn(document.querySelector('.spz-sf-main'));
-        // feature_fn(document.querySelector('.spz-sf-main'));
+        aboutUs_fn(document.querySelector('.spz-sf-main'));
         testimonial_fn(document.querySelector('.spz-sf-main'));
         productivity_fn(document.querySelector('.spz-sf-main'));
         faq_fn(document.querySelector('.spz-sf-main'));
@@ -213,6 +201,77 @@ function formModified() {
             });
         }
     });
+}
+function aboutUs_fn(injector) {
+    //add html for 8 cards, 4 with image only and 4 with number and test alternating
+    let aboutUs_html = `
+        <section class="spz-sf-about-us">
+            <div class="spz-sf-about-us-wrap spz-default-wrap">
+                <div class="spz-sf-about-us-cards">
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>6,500+</h3>
+                            <p>Customers</p>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-1_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_1.webp" alt="Customers">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>40%</h3>
+                            <p>Increase in productivity</p>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-2_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_1.webp" alt="Productivity">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-3_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_1.webp" alt="Customers">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>5M+</h3>
+                            <p>Jobs managed annually</p>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-img-card">
+                            <picture>
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-4_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_1.webp" alt="Productivity">
+                            </picture>
+                        </div>
+                    </div>
+                    <div class="spz-sf-about-us-card">
+                        <div class="spz-sf-about-us-card-wrap sf-num-card">
+                            <h3>95.7%</h3>
+                            <p>CSAT score</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+    `;
+    if (injector.querySelectorAll('.spz-sf-about-us').length == 0) {
+        injector.insertAdjacentHTML('beforeend', aboutUs_html);
+    }
+
 }
 function testimonial_fn(injector) {
     let testimonial_data = [
@@ -551,10 +610,10 @@ function load4006() {
         </section>
     `;
     let checkappender = setInterval(function(){
-        if(document.querySelectorAll('.spz-sf-hero').length > 0) {
+        if(document.querySelectorAll('.spz-sf-about-us').length > 0) {
             clearInterval(checkappender);
             if(document.querySelectorAll('.spz-sf-features').length == 0) {
-                document.querySelector('.spz-sf-hero').insertAdjacentHTML('afterend', featureHtml);
+                document.querySelector('.spz-sf-about-us').insertAdjacentHTML('afterend', featureHtml);
                 document.querySelectorAll('.spz-toggle-item-cta').forEach(function(btn){
                      btn.addEventListener('click', function(e){                    
                         window.scrollTo({ top: 0, behavior: 'smooth' });
@@ -587,7 +646,7 @@ function load4006() {
                             if(window.innerWidth < 641) {
                                 lt = document.querySelector('.spz-sf-features-toggle-item.spz-sf-active').offsetLeft - 15;
                             }
-                            document.querySelector('.spz-sf-4004 .spz-sf-features .spz-sf-features-toggle ul').scrollTo({
+                            document.querySelector('.spz-sf-4017 .spz-sf-features .spz-sf-features-toggle ul').scrollTo({
                                 top: 0,
                                 left: lt,
                                 behavior: "smooth",
