@@ -1,17 +1,17 @@
+/* CUSTOM CODE */
 // var accorInterval;
 var interStatus = true;
 let is_swiper_loaded = 0;
-var checkBody = setInterval(function(){
-    if(document.querySelectorAll('body').length > 0) {
+var checkBody = setInterval(function () {
+    if (document.querySelectorAll('body').length > 0) {
         clearInterval(checkBody);
         detect_browser();
         var OStype = detectOS();
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('spz-sf-4017'))
-        {
+        if (!bodyEle.classList.contains('spz-sf-4017')) {
             bodyEle.classList.add('spz-sf-4017');
         }
-        if(OStype == 'MacOS' || OStype == 'iOS'){
+        if (OStype == 'MacOS' || OStype == 'iOS') {
             bodyEle.classList.add('spz-ios-device');
         }
         var swiper_script = document.createElement('script');
@@ -23,7 +23,7 @@ var checkBody = setInterval(function(){
         swiper_link.type = 'text/css';
         swiper_link.href = '//cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css';
         document.getElementsByTagName('head')[0].appendChild(swiper_link);
-        swiper_script.onload = function() {
+        swiper_script.onload = function () {
             is_swiper_loaded = 1;
         };
         load4001();
@@ -33,9 +33,9 @@ var checkBody = setInterval(function(){
     }
 });
 function load4001() {
-    if(document.querySelectorAll('body .spz-sf-main').length == 0) {
+    if (document.querySelectorAll('body .spz-sf-main').length == 0) {
         document.querySelector('body').insertAdjacentHTML('afterbegin', '<div class="spz-sf-main"></div>');
-		header_fn(document.querySelector('.spz-sf-main'));
+        header_fn(document.querySelector('.spz-sf-main'));
         hero_fn(document.querySelector('.spz-sf-main'));
         aboutUs_fn(document.querySelector('.spz-sf-main'));
         testimonial_fn(document.querySelector('.spz-sf-main'));
@@ -51,15 +51,15 @@ function header_fn(injector) {
 	<section class="spz-header">
 		<div class="spz_main_header"></div>
 	</section>`;
-    if(injector.querySelectorAll('.spz-header').length == 0) {
-		injector.insertAdjacentHTML('beforeend', header_html);
-		var jQueryInterval = setInterval(function() {
-			if (typeof jQuery != 'undefined') {
-				clearInterval(jQueryInterval);
-				jQuery("#wrapper #header").insertAfter(".spz_main_header");
-				jQuery("#wrapper #header-top").insertAfter(".spz_main_header");
-			}
-		},500);
+    if (injector.querySelectorAll('.spz-header').length == 0) {
+        injector.insertAdjacentHTML('beforeend', header_html);
+        var jQueryInterval = setInterval(function () {
+            if (typeof jQuery != 'undefined') {
+                clearInterval(jQueryInterval);
+                jQuery("#wrapper #header").insertAfter(".spz_main_header");
+                jQuery("#wrapper #header-top").insertAfter(".spz_main_header");
+            }
+        }, 500);
     }
 }
 function hero_fn(injector) {
@@ -102,10 +102,10 @@ function hero_fn(injector) {
             </div>
         </section>
     `;
-    if(injector.querySelectorAll('.spz-sf-hero').length == 0) {
+    if (injector.querySelectorAll('.spz-sf-hero').length == 0) {
         injector.insertAdjacentHTML('beforeend', hero_html);
-        let checkFormLoad = setInterval(function(){
-            if(document.querySelectorAll('#mktoForm_1408').length > 0 && document.querySelectorAll('.spz-sf-hero .spz-sf-hero-form-wrap').length > 0) {
+        let checkFormLoad = setInterval(function () {
+            if (document.querySelectorAll('#mktoForm_1408').length > 0 && document.querySelectorAll('.spz-sf-hero .spz-sf-hero-form-wrap').length > 0) {
                 clearInterval(checkFormLoad);
                 document.querySelector('.spz-sf-hero .spz-sf-hero-form-wrap').insertAdjacentElement('beforeend', document.querySelector('#mktoForm_1408'));
                 formModified();
@@ -114,8 +114,8 @@ function hero_fn(injector) {
     }
 }
 function formModified() {
-    let checkMForm = setInterval(function(){
-        if(document.querySelectorAll('.spz-sf-hero .spz-sf-hero-form-wrap #mktoForm_1408').length > 0 && document.querySelectorAll('.spz-sf-hero .spz-sf-hero-form-wrap #mktoForm_1408 input').length > 0) {
+    let checkMForm = setInterval(function () {
+        if (document.querySelectorAll('.spz-sf-hero .spz-sf-hero-form-wrap #mktoForm_1408').length > 0 && document.querySelectorAll('.spz-sf-hero .spz-sf-hero-form-wrap #mktoForm_1408 input').length > 0) {
             clearInterval(checkMForm);
             let spz_form = document.querySelector('.spz-sf-hero .spz-sf-hero-form-wrap #mktoForm_1408');
             // Update Label
@@ -129,35 +129,35 @@ function formModified() {
             // Re-order
             spz_form.querySelector('.mktoButtonRow').insertAdjacentElement('afterend', spz_form.querySelector('.mktoButtonRow').previousSibling);
             // Submit Validation
-            spz_form.querySelector('.mktoButtonRow button[type="submit"]').addEventListener('click', function() {
-                spz_form.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"])').forEach(function(input_elm, input_index, input_arr){
-                    if(input_elm.value.trim() == '') {
+            spz_form.querySelector('.mktoButtonRow button[type="submit"]').addEventListener('click', function () {
+                spz_form.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"])').forEach(function (input_elm, input_index, input_arr) {
+                    if (input_elm.value.trim() == '') {
                         input_elm.closest('.mktoFieldWrap').classList.add('error');
                     }
                 });
             });
             // Add parent Field
-            spz_form.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"])').forEach(function(input_elm, input_index, input_arr){
-                let parent_attr = 'parent_'+input_elm.getAttribute('name');
+            spz_form.querySelectorAll('input:not([type="checkbox"]):not([type="radio"]):not([type="submit"]):not([type="hidden"])').forEach(function (input_elm, input_index, input_arr) {
+                let parent_attr = 'parent_' + input_elm.getAttribute('name');
                 input_elm.closest('.mktoFormRow').setAttribute('data-parent', parent_attr);
                 // Change company field position
-                let updateFieldPos = setInterval(function(){
-                    if(document.querySelectorAll('.mktoFormRow[data-parent="parent_Company"]').length > 0) {
+                let updateFieldPos = setInterval(function () {
+                    if (document.querySelectorAll('.mktoFormRow[data-parent="parent_Company"]').length > 0) {
                         clearInterval(updateFieldPos);
-                        if(document.querySelectorAll('.mktoFormRow[data-parent="parent_Company"] + .mktoFormRow[data-parent="parent_Phone"]').length == 0) {
+                        if (document.querySelectorAll('.mktoFormRow[data-parent="parent_Company"] + .mktoFormRow[data-parent="parent_Phone"]').length == 0) {
                             document.querySelector('.mktoFormRow[data-parent="parent_Phone"]').insertAdjacentElement('beforebegin', document.querySelector('.mktoFormRow[data-parent="parent_Company"]'));
                         }
                     }
                 });
                 // Focus
-                input_elm.addEventListener('focus', function(){
+                input_elm.addEventListener('focus', function () {
                     let $this = this;
                     $this.closest('.mktoFieldWrap').classList.add('active');
                 });
                 // Blur
-                input_elm.addEventListener('blur', function(){
+                input_elm.addEventListener('blur', function () {
                     let $this = this;
-                    if($this.value.trim() != '') {
+                    if ($this.value.trim() != '') {
                         $this.closest('.mktoFieldWrap').classList.add('filled');
                         $this.closest('.mktoFieldWrap').classList.remove('error');
                     } else {
@@ -167,34 +167,34 @@ function formModified() {
                     $this.closest('.mktoFieldWrap').classList.remove('active');
                     $this.closest('.mktoFieldWrap').classList.remove('typing');
                     // Email Validation
-                    if($this.getAttribute('name') == 'Email' && $this.parentNode.querySelectorAll('.mktoError').length > 0 && $this.parentNode.querySelector('.mktoError').clientHeight > 0) {
+                    if ($this.getAttribute('name') == 'Email' && $this.parentNode.querySelectorAll('.mktoError').length > 0 && $this.parentNode.querySelector('.mktoError').clientHeight > 0) {
                         $this.closest('.mktoFieldWrap').classList.add('error');
                     }
-                    if($this.getAttribute('name') == 'Email' && !validateEmail2($this.value)) {
+                    if ($this.getAttribute('name') == 'Email' && !validateEmail2($this.value)) {
                         $this.closest('.mktoFieldWrap').classList.add('error');
                     }
                     // Phone Validation
-                    if($this.getAttribute('name') == 'Phone' && !validatePhone($this.value)) {
+                    if ($this.getAttribute('name') == 'Phone' && !validatePhone($this.value)) {
                         $this.closest('.mktoFieldWrap').classList.add('error');
                     }
                 });
                 // Keypress
-                input_elm.addEventListener('keyup', function(){
+                input_elm.addEventListener('keyup', function () {
                     let $this = this;
-                    if($this.value.trim() != '') {
+                    if ($this.value.trim() != '') {
                         $this.closest('.mktoFieldWrap').classList.add('filled');
                         $this.closest('.mktoFieldWrap').classList.remove('error');
                     }
                     $this.closest('.mktoFieldWrap').classList.add('typing');
                     // Email Validation
-                    if($this.getAttribute('name') == 'Email' && $this.parentNode.querySelectorAll('.mktoError').length > 0 && $this.parentNode.querySelector('.mktoError').clientHeight > 0) {
+                    if ($this.getAttribute('name') == 'Email' && $this.parentNode.querySelectorAll('.mktoError').length > 0 && $this.parentNode.querySelector('.mktoError').clientHeight > 0) {
                         $this.closest('.mktoFieldWrap').classList.add('error');
                     }
                     // Phone Validation
-                    if($this.getAttribute('name') == 'Phone' && !validatePhone($this.value)) {
+                    if ($this.getAttribute('name') == 'Phone' && !validatePhone($this.value)) {
                         $this.closest('.mktoFieldWrap').classList.add('error');
                     }
-                    if(spz_form.querySelector('input[name="FirstName"]').value.trim() != '' && spz_form.querySelector('input[name="LastName"]').value.trim() != '' && spz_form.querySelector('input[name="Email"]').value.trim() != '') {
+                    if (spz_form.querySelector('input[name="FirstName"]').value.trim() != '' && spz_form.querySelector('input[name="LastName"]').value.trim() != '' && spz_form.querySelector('input[name="Email"]').value.trim() != '') {
                         document.querySelector('body').classList.add('spz-sf-form-expand');
                     }
                 });
@@ -217,8 +217,8 @@ function aboutUs_fn(injector) {
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
                             <picture>
-                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-1_tablet.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_1.webp" alt="Customers">
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-1_2.webp" alt="Customers">
                             </picture>
                         </div>
                     </div>
@@ -231,16 +231,16 @@ function aboutUs_fn(injector) {
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
                             <picture>
-                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-2_tablet.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_1.webp" alt="Productivity">
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-2_2.webp" alt="Increase in productivity">
                             </picture>
                         </div>
                     </div>
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
                             <picture>
-                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-3_tablet.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_1.webp" alt="Customers">
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-3_2.webp" alt="Jobs managed annually">
                             </picture>
                         </div>
                     </div>
@@ -253,8 +253,8 @@ function aboutUs_fn(injector) {
                     <div class="spz-sf-about-us-card">
                         <div class="spz-sf-about-us-card-wrap sf-img-card">
                             <picture>
-                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/talentlms/4017/image-4_tablet.webp">
-                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_1.webp" alt="Productivity">
+                                <source media="(min-width:768px) and (max-width:1024px)" srcset="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_tablet.webp">
+                                <img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4017/image-4_2.webp" alt="CSAT score">
                             </picture>
                         </div>
                     </div>
@@ -275,15 +275,15 @@ function aboutUs_fn(injector) {
 }
 function testimonial_fn(injector) {
     let testimonial_data = [
-        { 'user_image' : '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-scott-airtam.webp', 'description' : '“We can quote the customer, get them exactly what they need, get the sale done, do the job and then take payment right there from them.”', 'user_name' : 'Scott Airitam', 'user_position' : 'Liberty Air & Heating' },
-        { 'user_image' : '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-darell-elliott.webp', 'description' : '“I’m able to have a work-life balance that I didn’t have before. Now I know the work is scheduled, Now I know the work is going to get done.”', 'user_name' : 'Darell Elliott', 'user_position' : 'Elliott AC Heating & Handyman Services' },
-        { 'user_image' : '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-ryan-amerson.webp', 'description' : '“Service Fusion coming into the middle of growth helped simplify and develop organization and procedures and automated processes that helped.”', 'user_name' : 'Ryan Amerson', 'user_position' : 'Energy Attic' },
-        { 'user_image' : '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-scott-airtam.webp', 'description' : '“We can quote the customer, get them exactly what they need, get the sale done, do the job and then take payment right there from them.”', 'user_name' : 'Scott Airitam', 'user_position' : 'Liberty Air & Heating' },
-        { 'user_image' : '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-darell-elliott.webp', 'description' : '“I’m able to have a work-life balance that I didn’t have before. Now I know the work is scheduled, Now I know the work is going to get done.”', 'user_name' : 'Darell Elliott', 'user_position' : 'Elliott AC Heating & Handyman Services' },
-        { 'user_image' : '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-ryan-amerson.webp', 'description' : '“Service Fusion coming into the middle of growth helped simplify and develop organization and procedures and automated processes that helped.”', 'user_name' : 'Ryan Amerson', 'user_position' : 'Energy Attic' }
+        { 'user_image': '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-scott-airtam.webp', 'description': '“We can quote the customer, get them exactly what they need, get the sale done, do the job and then take payment right there from them.”', 'user_name': 'Scott Airitam', 'user_position': 'Liberty Air & Heating' },
+        { 'user_image': '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-darell-elliott.webp', 'description': '“I’m able to have a work-life balance that I didn’t have before. Now I know the work is scheduled, Now I know the work is going to get done.”', 'user_name': 'Darell Elliott', 'user_position': 'Elliott AC Heating & Handyman Services' },
+        { 'user_image': '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-ryan-amerson.webp', 'description': '“Service Fusion coming into the middle of growth helped simplify and develop organization and procedures and automated processes that helped.”', 'user_name': 'Ryan Amerson', 'user_position': 'Energy Attic' },
+        { 'user_image': '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-scott-airtam.webp', 'description': '“We can quote the customer, get them exactly what they need, get the sale done, do the job and then take payment right there from them.”', 'user_name': 'Scott Airitam', 'user_position': 'Liberty Air & Heating' },
+        { 'user_image': '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-darell-elliott.webp', 'description': '“I’m able to have a work-life balance that I didn’t have before. Now I know the work is scheduled, Now I know the work is going to get done.”', 'user_name': 'Darell Elliott', 'user_position': 'Elliott AC Heating & Handyman Services' },
+        { 'user_image': '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4001/author-ryan-amerson.webp', 'description': '“Service Fusion coming into the middle of growth helped simplify and develop organization and procedures and automated processes that helped.”', 'user_name': 'Ryan Amerson', 'user_position': 'Energy Attic' }
     ];
     let testimonial_loop = ``;
-    for(var t_data in testimonial_data) {
+    for (var t_data in testimonial_data) {
         testimonial_loop += `
             <div class="swiper-slide">
                 <div class="spz-sf-tetimonial-slider-item">
@@ -323,11 +323,11 @@ function testimonial_fn(injector) {
             </div>
         </section>
     `;
-    
-    if(injector.querySelectorAll('.spz-sf-tetimonial').length == 0) {
+
+    if (injector.querySelectorAll('.spz-sf-tetimonial').length == 0) {
         injector.insertAdjacentHTML('beforeend', testimonial_html);
-        let checkSliderLoad = setInterval(function(){
-            if(is_swiper_loaded == 1) {
+        let checkSliderLoad = setInterval(function () {
+            if (is_swiper_loaded == 1) {
                 clearInterval(checkSliderLoad);
                 const swiperInit = new Swiper('.spz-sf-tetimonial-slider', {
                     effect: "coverflow",
@@ -366,9 +366,9 @@ function productivity_fn(injector) {
             </div>
         </section>
     `;
-    if(injector.querySelectorAll('.spz-sf-productivity').length == 0) {
+    if (injector.querySelectorAll('.spz-sf-productivity').length == 0) {
         injector.insertAdjacentHTML('beforeend', productivity_html);
-        document.querySelector('.spz-sf-productivity-cta').addEventListener('click', function(e){
+        document.querySelector('.spz-sf-productivity-cta').addEventListener('click', function (e) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
             // document.querySelector('.spz-sf-hero-form').scrollIntoView({
@@ -467,14 +467,14 @@ function faq_fn(injector) {
             </div>
         </section>
     `;
-    if(injector.querySelectorAll('.spz-sf-faq').length == 0) {
+    if (injector.querySelectorAll('.spz-sf-faq').length == 0) {
         injector.insertAdjacentHTML('beforeend', faq_html);
-        let checkjq = setInterval(function(){
-            if(typeof jQuery != 'undefined' && jQuery.fn) {
+        let checkjq = setInterval(function () {
+            if (typeof jQuery != 'undefined' && jQuery.fn) {
                 clearInterval(checkjq);
-                jQuery(document).on('click', '.spz-sf-faq-item .spz-sf-faq-item-title', function(){
+                jQuery(document).on('click', '.spz-sf-faq-item .spz-sf-faq-item-title', function () {
                     let $this = jQuery(this).parent();
-                    if($this.hasClass('spz-faq-active')) {
+                    if ($this.hasClass('spz-faq-active')) {
                         $this.find('.spz-sf-faq-item-content').slideUp();
                         $this.removeClass('spz-faq-active');
                     } else {
@@ -525,7 +525,7 @@ function howitwork_fn(injector) {
             </div>
         </section>
     `;
-    if(injector.querySelectorAll('.spz-sf-how-it-work').length == 0) {
+    if (injector.querySelectorAll('.spz-sf-how-it-work').length == 0) {
         injector.insertAdjacentHTML('beforeend', howitwork_html);
     }
 }
@@ -567,9 +567,9 @@ function management_fn(injector) {
             </div>
         </section>
     `;
-    if(injector.querySelectorAll('.spz-sf-management').length == 0) {
+    if (injector.querySelectorAll('.spz-sf-management').length == 0) {
         injector.insertAdjacentHTML('beforeend', management_html);
-        document.querySelector('.spz-sf-management-cta').addEventListener('click', function(e){
+        document.querySelector('.spz-sf-management-cta').addEventListener('click', function (e) {
             e.preventDefault();
             window.scrollTo({ top: 0, behavior: 'smooth' });
             // document.querySelector('.spz-sf-hero-form').scrollIntoView({
@@ -578,16 +578,16 @@ function management_fn(injector) {
         });
     }
 }
-function changeCTAText(){
+function changeCTAText() {
     var cta = document.querySelector('.spz-sf-hero .spz-sf-hero-form-wrap #mktoForm_1408 .mktoButtonRow button[type="submit"]')
-        
-    const observer = new MutationObserver(function (mutations) {        
-        if(cta.textContent.indexOf('Get Free Demo') > -1){
+
+    const observer = new MutationObserver(function (mutations) {
+        if (cta.textContent.indexOf('Get Free Demo') > -1) {
             cta.textContent = 'Submit';
         }
     });
     observer.observe(cta, { attributes: true, childList: true, subtree: true, characterData: true });
-      
+
 }
 // Variant 4006 Changes Start
 function load4006() {
@@ -609,41 +609,41 @@ function load4006() {
             </div>
         </section>
     `;
-    let checkappender = setInterval(function(){
-        if(document.querySelectorAll('.spz-sf-about-us').length > 0) {
+    let checkappender = setInterval(function () {
+        if (document.querySelectorAll('.spz-sf-about-us').length > 0) {
             clearInterval(checkappender);
-            if(document.querySelectorAll('.spz-sf-features').length == 0) {
+            if (document.querySelectorAll('.spz-sf-features').length == 0) {
                 document.querySelector('.spz-sf-about-us').insertAdjacentHTML('afterend', featureHtml);
-                document.querySelectorAll('.spz-toggle-item-cta').forEach(function(btn){
-                     btn.addEventListener('click', function(e){                    
+                document.querySelectorAll('.spz-toggle-item-cta').forEach(function (btn) {
+                    btn.addEventListener('click', function (e) {
                         window.scrollTo({ top: 0, behavior: 'smooth' });
-                    }); 
+                    });
                 });
-                
+
                 // document.querySelector('#stats-container #stats-inner').insertAdjacentHTML('beforebegin', '<h2 class="stats-title">How We Serve Field Service Management Businesses Like Yours</h2>')
-                let checkJq = setInterval(function(){
-                    if(typeof jQuery != 'undefined' && jQuery.fn) {
+                let checkJq = setInterval(function () {
+                    if (typeof jQuery != 'undefined' && jQuery.fn) {
                         clearInterval(checkJq);
-                        
-                        jQuery(document).on('click', '.spz-sf-features-toggle-item:not(.spz-sf-active) label', function(e){
+
+                        jQuery(document).on('click', '.spz-sf-features-toggle-item:not(.spz-sf-active) label', function (e) {
                             // clearInterval(accorInterval);
                             // accordianTimerFn();
                             let $this = jQuery(this);
                             let targetPic = $this.parent().attr('data-sf-hunter');
                             jQuery('.spz-sf-active .spz-sf-progressbar').css('width', '0px');
                             jQuery('.spz-sf-features-toggle-item.spz-sf-active').removeClass('spz-sf-active');
-                            $this.parent().addClass('spz-sf-active');                            
+                            $this.parent().addClass('spz-sf-active');
                             jQuery('.spz-sf-features-row .spz-sf-features-item.spz-sf-active').removeClass('spz-sf-active');
-                            
-                            jQuery('.spz-sf-features-row .spz-sf-features-item[data-sf-target="'+targetPic+'"]').addClass('spz-sf-active');    
-                            if(jQuery('.spz-sf-features-row .spz-sf-features-item:last-child').hasClass('spz-sf-active')){
+
+                            jQuery('.spz-sf-features-row .spz-sf-features-item[data-sf-target="' + targetPic + '"]').addClass('spz-sf-active');
+                            if (jQuery('.spz-sf-features-row .spz-sf-features-item:last-child').hasClass('spz-sf-active')) {
                                 jQuery('.spz-sf-features-toggle').addClass('last-active');
                             } else {
                                 jQuery('.spz-sf-features-toggle.last-active').removeClass('last-active');
                             }
                             var lt = 0;
                             lt = document.querySelector('.spz-sf-features-toggle-item.spz-sf-active').offsetLeft - 32;
-                            if(window.innerWidth < 641) {
+                            if (window.innerWidth < 641) {
                                 lt = document.querySelector('.spz-sf-features-toggle-item.spz-sf-active').offsetLeft - 15;
                             }
                             document.querySelector('.spz-sf-4017 .spz-sf-features .spz-sf-features-toggle ul').scrollTo({
@@ -651,78 +651,78 @@ function load4006() {
                                 left: lt,
                                 behavior: "smooth",
                             });
-                            
+
                             setTimeout(() => {
                                 var elementH = document.querySelector('.spz-sf-active');
-                                if(window.innerWidth > 1099) {
-                                    if (elementH.matches(':hover')) {                                
-                                        if(interStatus){
+                                if (window.innerWidth > 1099) {
+                                    if (elementH.matches(':hover')) {
+                                        if (interStatus) {
                                             interStatus = false;
                                             stopAccordionTimer()
-                                        }                                
+                                        }
                                     }
                                 }
                             })
                         });
-                        
-                        jQuery(document).on('mouseenter', '.spz-sf-features-toggle-item', function(e){                            
-                            if(e.target.closest('.spz-sf-active')){                                
-                                interStatus = false;                                
+
+                        jQuery(document).on('mouseenter', '.spz-sf-features-toggle-item', function (e) {
+                            if (e.target.closest('.spz-sf-active')) {
+                                interStatus = false;
                                 stopAccordionTimer()
-                                
+
                             }
                         })
-                        jQuery(document).on('mousemove', '.spz-sf-features-toggle-item', function(e){                            
-                            if(e.target.closest('.spz-sf-active')){                                
-                                if(interStatus){
-                                    interStatus = false;
-                                    stopAccordionTimer()
-                                }                                
-                            }
-                        })
-                        jQuery(document).on('hover', '.spz-sf-features-toggle-item', function(e){                            
-                            if(e.target.closest('.spz-sf-active')){                                
-                                if(interStatus){
+                        jQuery(document).on('mousemove', '.spz-sf-features-toggle-item', function (e) {
+                            if (e.target.closest('.spz-sf-active')) {
+                                if (interStatus) {
                                     interStatus = false;
                                     stopAccordionTimer()
                                 }
-                                
                             }
                         })
-                        jQuery(document).on('mouseleave', '.spz-sf-features-toggle-item', function(e){
-                            if(e.target.closest('.spz-sf-active')){
+                        jQuery(document).on('hover', '.spz-sf-features-toggle-item', function (e) {
+                            if (e.target.closest('.spz-sf-active')) {
+                                if (interStatus) {
+                                    interStatus = false;
+                                    stopAccordionTimer()
+                                }
+
+                            }
+                        })
+                        jQuery(document).on('mouseleave', '.spz-sf-features-toggle-item', function (e) {
+                            if (e.target.closest('.spz-sf-active')) {
                                 interStatus = true;
                                 accordianTimerFn();
                             }
                         })
-                        jQuery(document).ready(function(){
+                        jQuery(document).ready(function () {
                             jQuery('body').addClass('spz-loaded-timer');
                             accordianTimerFn();
                         });
                     }
                 });
             }
-            
+
         }
     });
 }
 function accordianTimerFn() {
     let accordianTimer = 1;
-    accorInterval = setInterval(function(){
+    accorInterval = setInterval(function () {
         var liWidth = jQuery('.spz-sf-active').width();
         var liSteps = liWidth / 80
         var progWidth = jQuery('.spz-sf-active .spz-sf-progressbar').width();
-        
+
         var progSetWidth;
-        if(interStatus){
+        if (interStatus) {
             progSetWidth = progWidth + liSteps;
         } else {
             progSetWidth = progWidth;
         }
-          
+
         jQuery('.spz-sf-active .spz-sf-progressbar').css('width', `${progSetWidth}px`)
-        if(progSetWidth > (liWidth + liSteps)) {
-            if(jQuery('.spz-sf-features-toggle-item.spz-sf-active').next().length > 0) {
+        if (progSetWidth > (liWidth + liSteps)) {
+            if (jQuery('.spz-sf-features-toggle-item.spz-sf-active').next().length > 0) {
                 jQuery('.spz-sf-features-toggle-item.spz-sf-active').next().find('label').trigger('click');
                 return;
             } else {
@@ -741,7 +741,7 @@ function accordianTimerFn() {
         // accordianTimer++;
     }, 100);
 }
-function stopAccordionTimer(){
+function stopAccordionTimer() {
     clearInterval(accorInterval)
 }
 function loopData() {
@@ -751,58 +751,58 @@ function loopData() {
     let features_data = [
         {
             'label': 'Schedule & Dispatch',
-            'title' : 'Scheduling & Dispatching',
-            'description' : '<p>Automatically plan routes. Optimize for speed, fuel costs, vehicle capacity, driver schedules, traffic conditions, weather, customer preferences, and more.</p><p>Adjust routes in real time while drivers are<br class="visible-mobile"> in the field.</p>',
-            'url' : '//www.servicefusion.com/free-service-fusion-demo',
-            'pictures' : ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-scheduling_dispatching-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-scheduling_dispatching-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-scheduling_dispatching-mobile_1.webp']
+            'title': 'Scheduling & Dispatching',
+            'description': '<p>Automatically plan routes. Optimize for speed, fuel costs, vehicle capacity, driver schedules, traffic conditions, weather, customer preferences, and more.</p><p>Adjust routes in real time while drivers are<br class="visible-mobile"> in the field.</p>',
+            'url': '//www.servicefusion.com/free-service-fusion-demo',
+            'pictures': ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-scheduling_dispatching-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-scheduling_dispatching-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-scheduling_dispatching-mobile_1.webp']
         },
         {
             'label': 'Estimate Creation',
-            'title' : 'Estimate Creation',
-            'description' : '<p>Generate estimates that automatically populate with service rates, tax calculations, customer info, and more. Pre-built and custom templates.</p><p>Let technicians create estimates in the field via mobile app and instantly convert into active work orders.</p>',
-            'url' : '//www.servicefusion.com/free-service-fusion-demo',
-            'pictures' : ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-estimate_creation-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-estimate_creation-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-estimate_creation-mobile_1.webp']
+            'title': 'Estimate Creation',
+            'description': '<p>Generate estimates that automatically populate with service rates, tax calculations, customer info, and more. Pre-built and custom templates.</p><p>Let technicians create estimates in the field via mobile app and instantly convert into active work orders.</p>',
+            'url': '//www.servicefusion.com/free-service-fusion-demo',
+            'pictures': ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-estimate_creation-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-estimate_creation-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-estimate_creation-mobile_1.webp']
         },
         {
             'label': 'Customer Management',
-            'title' : 'Customer Management',
-            'description' : '<p>Single source of truth for contact details, service history, estimates, contracts, communication, and customer notes. Access anywhere via mobile app.</p><p>Get reminders for appointments, emails & SMS, follow-ups, and more.</p>',
-            'url' : '//www.servicefusion.com/free-service-fusion-demo',
-            'pictures' : ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-customer_management-desktop_2.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-customer_management-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-customer_management-mobile_2.webp']
+            'title': 'Customer Management',
+            'description': '<p>Single source of truth for contact details, service history, estimates, contracts, communication, and customer notes. Access anywhere via mobile app.</p><p>Get reminders for appointments, emails & SMS, follow-ups, and more.</p>',
+            'url': '//www.servicefusion.com/free-service-fusion-demo',
+            'pictures': ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-customer_management-desktop_2.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-customer_management-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-customer_management-mobile_2.webp']
         },
         {
             'label': 'GPS Tracking',
-            'title' : 'GPS Tracking',
-            'description' : '<p>Track service vehicles in real time. Monitor location, distance driven, idle time, engine status, and fuel level.</p><p>Track driver behaviors, including sudden braking and rapid acceleration.</p>',
-            'url' : '//www.servicefusion.com/free-service-fusion-demo',
-            'pictures' : ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-gps_tracking-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-gps_tracking-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-gps_tracking-mobile_1.webp']
-        },        
+            'title': 'GPS Tracking',
+            'description': '<p>Track service vehicles in real time. Monitor location, distance driven, idle time, engine status, and fuel level.</p><p>Track driver behaviors, including sudden braking and rapid acceleration.</p>',
+            'url': '//www.servicefusion.com/free-service-fusion-demo',
+            'pictures': ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-gps_tracking-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-gps_tracking-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-gps_tracking-mobile_1.webp']
+        },
         {
             'label': 'Invoicing & Payments',
-            'title' : 'Invoicing & Payments',
-            'description' : '<p>Auto-generate invoices from completed jobs. Automatically include materials used, labor costs, taxes, and discounts. Capture payments online or on site.</p><p>Track payments, due dates, unpaid invoices, and more from one dashboard. QuickBooks integration.</p>',
-            'url' : '//www.servicefusion.com/free-service-fusion-demo',
-            'pictures' : ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-invoicing_payments-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-invoicing_payments-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-invoicing_payments-mobile_1.webp']
+            'title': 'Invoicing & Payments',
+            'description': '<p>Auto-generate invoices from completed jobs. Automatically include materials used, labor costs, taxes, and discounts. Capture payments online or on site.</p><p>Track payments, due dates, unpaid invoices, and more from one dashboard. QuickBooks integration.</p>',
+            'url': '//www.servicefusion.com/free-service-fusion-demo',
+            'pictures': ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-invoicing_payments-desktop.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-invoicing_payments-tablet.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-invoicing_payments-mobile_1.webp']
         },
         {
             'label': 'Technician Mobile App',
-            'title' : 'Technician Mobile App',
-            'description' : '<p>Let drivers view schedules, access service requests, accept or reject jobs, view customer information, create & close work orders, generate invoices, accept payments, and more via mobile app.</p><p>Send updates via push notifications.</p>',
-            'url' : '//www.servicefusion.com/free-service-fusion-demo',
-            'pictures' : ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-technician_app-desktop_3.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-technician_app-tablet_2.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-technician_app-mobile_2.webp']
+            'title': 'Technician Mobile App',
+            'description': '<p>Let drivers view schedules, access service requests, accept or reject jobs, view customer information, create & close work orders, generate invoices, accept payments, and more via mobile app.</p><p>Send updates via push notifications.</p>',
+            'url': '//www.servicefusion.com/free-service-fusion-demo',
+            'pictures': ['//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-technician_app-desktop_3.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-technician_app-tablet_2.webp', '//res.cloudinary.com/spiralyze/image/upload/f_auto/servicefusion/4004/features-technician_app-mobile_2.webp']
         },
     ];
-    features_data.forEach(function(elm, index, arr){
+    features_data.forEach(function (elm, index, arr) {
         var activeclass = (index == 0) ? 'spz-sf-active' : '';
         var imageStyle = (elm.title == 'Real-time Notifications' || elm.title == 'Technician Mobile App') ? 'style="border-color: transparent;"' : '';
         toggleContent += `
-            <li class="spz-sf-features-toggle-item ${activeclass}" data-sf-hunter="${index+1}">
+            <li class="spz-sf-features-toggle-item ${activeclass}" data-sf-hunter="${index + 1}">
                 <div class="spz-sf-progressbar"></div>
                 <label>${elm.label}</label>
             </li>
         `;
         htmlContent += `
-            <div class="spz-sf-features-item ${activeclass}" data-sf-target="${index+1}">                
+            <div class="spz-sf-features-item ${activeclass}" data-sf-target="${index + 1}">                
                 <div class="spz-sf-features-item-content">
                     <div class="spz-sf-features-item-content-wrap">
                         <h4>${elm.title}</h4>                        
@@ -867,31 +867,31 @@ function load4009() {
             </div>
         </div>
     `;
-    if(document.querySelectorAll('.spz-sticky-fform').length == 0) {
+    if (document.querySelectorAll('.spz-sticky-fform').length == 0) {
         document.querySelector('body').insertAdjacentHTML('beforeend', stickyHtml);
-        let checkStickyEmail = setInterval(function(){
-            if(document.querySelectorAll('.spz-sticky-email-field').length > 0) {
+        let checkStickyEmail = setInterval(function () {
+            if (document.querySelectorAll('.spz-sticky-email-field').length > 0) {
                 clearInterval(checkStickyEmail);
                 // Close Event
-                document.querySelector('.spz-close-cta').addEventListener('click', function(){
+                document.querySelector('.spz-close-cta').addEventListener('click', function () {
                     document.querySelector('body').classList.remove('spz-sf-sticky-form-show');
                     document.querySelector('html').classList.remove('spz-sf-sticky-form-show');
                 });
-                document.querySelector('.spz-sticky-fform-close').addEventListener('click', function(){
+                document.querySelector('.spz-sticky-fform-close').addEventListener('click', function () {
                     document.querySelector('body').classList.remove('spz-sf-sticky-show');
                     document.querySelector('body').classList.add('spz-sf-sticky-closed');
                 });
                 var emailField = document.querySelector('.spz-sticky-email-field');
                 // On form submit event
-                document.querySelector('.spz-sticky-fform-submit').addEventListener('click', function(e){
+                document.querySelector('.spz-sticky-fform-submit').addEventListener('click', function (e) {
                     e.preventDefault();
-                    if(emailField.value.trim() != '') {
-                        if(document.querySelectorAll('.spz-sf-hero form.mktoForm').length > 0) {
+                    if (emailField.value.trim() != '') {
+                        if (document.querySelectorAll('.spz-sf-hero form.mktoForm').length > 0) {
                             document.querySelector('body').classList.add('spz-sf-sticky-form-show');
                             document.querySelector('html').classList.add('spz-sf-sticky-form-show');
                             document.querySelector('.spz-sf-hero form.mktoForm #Email').value = emailField.value;
                             document.querySelector('.spz-sf-hero form.mktoForm #Email').parentNode.classList.add('filled');
-                            if(!validateEmail2(emailField.value)) {
+                            if (!validateEmail2(emailField.value)) {
                                 document.querySelector('.spz-sf-hero form.mktoForm #Email').closest('.mktoFieldWrap').classList.add('error');
                             } else {
                                 document.querySelector('.spz-sf-hero form.mktoForm #Email').parentNode.classList.remove('error');
@@ -903,14 +903,14 @@ function load4009() {
                     }
                 });
                 // Focus
-                emailField.addEventListener('focus', function(){
+                emailField.addEventListener('focus', function () {
                     let $this = this;
                     $this.parentNode.classList.add('active');
                 });
                 // Blur
-                emailField.addEventListener('blur', function(){
+                emailField.addEventListener('blur', function () {
                     let $this = this;
-                    if($this.value.trim() != '') {
+                    if ($this.value.trim() != '') {
                         $this.parentNode.classList.add('filled');
                         // $this.parentNode.classList.remove('error');
                         $this.closest('.spz-sticky-email').classList.remove('error');
@@ -922,15 +922,15 @@ function load4009() {
                     $this.parentNode.classList.remove('active');
                     $this.parentNode.classList.remove('typing');
                     // Email Validation
-                    if(!validateEmail2($this.value)) {
+                    if (!validateEmail2($this.value)) {
                         // $this.parentNode.classList.add('error');
                         // $this.closest('.spz-sticky-email').classList.add('error');
                     }
                 });
                 // Keyup
-                emailField.addEventListener('keyup', function(){
+                emailField.addEventListener('keyup', function () {
                     let $this = this;
-                    if($this.value.trim() != '') {
+                    if ($this.value.trim() != '') {
                         $this.parentNode.classList.add('filled');
                         // $this.parentNode.classList.remove('error');
                         $this.closest('.spz-sticky-email').classList.remove('error');
@@ -938,9 +938,9 @@ function load4009() {
                     $this.parentNode.classList.add('typing');
                 });
                 // Keypress
-                emailField.addEventListener('keypress', function(event){
+                emailField.addEventListener('keypress', function (event) {
                     let $this = this;
-                    if(event.keyCode == 13) {
+                    if (event.keyCode == 13) {
                         $this.parentNode.querySelector('.spz-sticky-fform-submit').click();
                     }
                 });
@@ -952,9 +952,8 @@ document.addEventListener("touchmove", winScroll, false);
 document.addEventListener("scroll", winScroll, false);
 document.body.addEventListener("scroll", winScroll, false);
 window.addEventListener("resize", winScroll, false);
-function winScroll()
-{
-    if(document.querySelectorAll('.spz-sf-hero').length > 0 && document.querySelectorAll('.spz-sticky-fform').length > 0) {
+function winScroll() {
+    if (document.querySelectorAll('.spz-sf-hero').length > 0 && document.querySelectorAll('.spz-sticky-fform').length > 0) {
         var mainElementPosition = document.querySelector('.spz-sf-hero');
         var mainElementHeight = document.querySelector('.spz-sf-hero').clientHeight;
         var elementPosition = mainElementPosition.offsetTop;
@@ -962,14 +961,12 @@ function winScroll()
         var windowScroll = window.scrollY;
         var bodyScroll = document.body.scrollTop;
         var checkScroll = (windowScroll > bodyScroll) ? windowScroll : bodyScroll;
-        if(checkScroll > elementPosition)
-        {
-            if(document.querySelectorAll('.spz-sf-sticky-closed').length == 0) {
+        if (checkScroll > elementPosition) {
+            if (document.querySelectorAll('.spz-sf-sticky-closed').length == 0) {
                 document.body.classList.add('spz-sf-sticky-show');
             }
         }
-        else
-        {
+        else {
             document.body.classList.remove('spz-sf-sticky-show');
         }
     }
@@ -1106,55 +1103,55 @@ function load4015() {
             </div>
         </section>
     `;
-     if(document.querySelectorAll('.spz-sf-pricing').length == 0) {
+    if (document.querySelectorAll('.spz-sf-pricing').length == 0) {
         document.querySelector('.spz-sf-tetimonial').insertAdjacentHTML('beforebegin', hero_html);
-        document.querySelectorAll('.spz-sf-hero-toggle-label').forEach(function($this){
-            $this.querySelector('label').addEventListener('click', function(){
+        document.querySelectorAll('.spz-sf-hero-toggle-label').forEach(function ($this) {
+            $this.querySelector('label').addEventListener('click', function () {
                 let $this = this.parentElement;
                 let active = $this.getAttribute('data-price');
-                let $parent = $this.closest('.spz-sf-pricing');            
-                
+                let $parent = $this.closest('.spz-sf-pricing');
+
                 $parent.querySelector('.spz-sf-hero-toggle-label.active').classList.remove('active');
                 $this.classList.add('active');
-                document.querySelector('.spz-pricing-toggle').setAttribute('data-active', active);                
+                document.querySelector('.spz-pricing-toggle').setAttribute('data-active', active);
                 $this.setAttribute('data-active', active);
-                $parent.setAttribute('data-active', active);                           
+                $parent.setAttribute('data-active', active);
             });
         });
-        document.querySelectorAll('.spz-pricing-cta').forEach(function(btn){
-            btn.addEventListener('click', function(e){                    
-               window.scrollTo({ top: 0, behavior: 'smooth' });
-           }); 
-       });
-        window.addEventListener('scroll', function() {
+        document.querySelectorAll('.spz-pricing-cta').forEach(function (btn) {
+            btn.addEventListener('click', function (e) {
+                window.scrollTo({ top: 0, behavior: 'smooth' });
+            });
+        });
+        window.addEventListener('scroll', function () {
             var sttop = document.querySelector('.spz-sf-hero-pricing-box:first-child').getBoundingClientRect().top;
             var stbtm = document.querySelector('.spz-sf-hero-pricing-box:last-child .spz-pricing-box-info').getBoundingClientRect().top;
-            if(sttop < 80 && stbtm > 112){
+            if (sttop < 80 && stbtm > 112) {
                 document.querySelector('body').classList.add('pricing-sticky');
             } else {
-                if(document.querySelector('body').classList.contains('pricing-sticky')){
+                if (document.querySelector('body').classList.contains('pricing-sticky')) {
                     document.querySelector('body').classList.remove('pricing-sticky');
-                }                
+                }
             }
         });
-        let checkSliderLoad = setInterval(function(){
-            if(is_swiper_loaded == 1) {
+        let checkSliderLoad = setInterval(function () {
+            if (is_swiper_loaded == 1) {
                 clearInterval(checkSliderLoad);
-                
+
                 var mySwiper = undefined;
                 function initSwiper() {
                     var screenWidth = window.innerWidth;
-                    if(screenWidth < 1200 && screenWidth > 767 && mySwiper == undefined) {            
-                        mySwiper = new Swiper('.spz-sf-hero-pricing-row', {                    
+                    if (screenWidth < 1200 && screenWidth > 767 && mySwiper == undefined) {
+                        mySwiper = new Swiper('.spz-sf-hero-pricing-row', {
                             grabCursor: true,
                             centeredSlides: true,
                             centeredSlidesBounds: true,
-                            slidesPerView: "auto",                    
-                            loop: false,     
+                            slidesPerView: "auto",
+                            loop: false,
                             pagination: {
                                 el: '.swiper-pagination',
                                 clickable: true,
-                            },               
+                            },
                         });
                     } else if ((screenWidth > 1199 || screenWidth < 768) && mySwiper != undefined) {
                         mySwiper.destroy();
@@ -1162,45 +1159,43 @@ function load4015() {
                         document.querySelector('.swiper-wrapper').removeAttribute('style');
                         document.querySelector('.swiper-slide').removeAttribute('style');
                         document.querySelector('.swiper-pagination').innerHTML = '';
-                    }        
+                    }
                 }
                 //Swiper plugin initialization
                 initSwiper();
                 //Swiper plugin initialization on window resize
-                window.addEventListener('resize', function(){                
-                    initSwiper();        
+                window.addEventListener('resize', function () {
+                    initSwiper();
                 });
-                
+
             }
         });
-        document.querySelector('.spz-pricing-toggle').addEventListener('click', function(){
+        document.querySelector('.spz-pricing-toggle').addEventListener('click', function () {
             let $this = this;
             let active = $this.getAttribute('data-active');
-            let $parent = $this.closest('.spz-sf-pricing');            
+            let $parent = $this.closest('.spz-sf-pricing');
             let $pricing_toggle = $parent.querySelectorAll('.spz-sf-hero-toggle-label');
-            for(var i=0; i<$pricing_toggle.length; i++) {
+            for (var i = 0; i < $pricing_toggle.length; i++) {
                 $pricing_toggle[i].classList.toggle('active');
             }
-            if(active == 'annual'){
+            if (active == 'annual') {
                 $this.setAttribute('data-active', 'monthly');
                 $parent.setAttribute('data-active', 'monthly');
             } else {
                 $this.setAttribute('data-active', 'annual');
                 $parent.setAttribute('data-active', 'annual');
             }
-            
-            
         })
     }
 }
 // #4015 Variant Changes End
 function validateEmail2(e) {
-	var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
-    return String(e).search (filter) != -1;
+    var filter = /^\s*[\w\-\+_]+(\.[\w\-\+_]+)*\@[\w\-\+_]+(\.[\w\-\+_]+)*\s*$/;
+    return String(e).search(filter) != -1;
 }
-function validatePhone($ph){
-	var phoneReg = new RegExp(/^[0-9\b ()]+$/);
-	return phoneReg.test( $ph );
+function validatePhone($ph) {
+    var phoneReg = new RegExp(/^[0-9\b ()]+$/);
+    return phoneReg.test($ph);
 }
 function detect_browser() {
     let browser_class = '';
@@ -1224,11 +1219,11 @@ function detect_browser() {
 }
 function detectOS() {
     var userAgent = window.navigator.userAgent,
-    platform = window.navigator.platform,
-    macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
-    windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
-    iosPlatforms = ['iPhone', 'iPad', 'iPod'],
-    os = null;
+        platform = window.navigator.platform,
+        macosPlatforms = ['Macintosh', 'MacIntel', 'MacPPC', 'Mac68K'],
+        windowsPlatforms = ['Win32', 'Win64', 'Windows', 'WinCE'],
+        iosPlatforms = ['iPhone', 'iPad', 'iPod'],
+        os = null;
     if (macosPlatforms.indexOf(platform) !== -1) {
         os = 'MacOS';
     } else if (iosPlatforms.indexOf(platform) !== -1) {
