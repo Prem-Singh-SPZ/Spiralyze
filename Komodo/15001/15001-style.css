@@ -116,6 +116,9 @@ body.spz-15001 #main-content .spz-demos-listing .spz-container {
   max-width: 1140px;
   margin: auto;
 }
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row {
+  margin-bottom: 40px;
+}
 body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-title {
   color: #000;
   font-family: Titillium Web, sans-serif;
@@ -131,12 +134,24 @@ body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-ro
   display: flex;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+  width: 100%;
 }
 body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card {
   max-width: 369px;
+  margin-right: 16px;
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card:last-child {
+  margin-right: 0;
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a {
+  text-decoration: none;
+  display: block;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
 }
 body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a .dl-card-img {
   position: relative;
+  height: 180px;
 }
 body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a .dl-card-img img {
   width: 100%;
@@ -158,13 +173,77 @@ body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-ro
           align-items: center;
   border-radius: 99px;
   background: #fff;
-  top: calc(50% - 24px);
-  left: calc(50% - 24px);
+  width: 145px;
+  height: 40px;
+  top: calc(50% - 20px);
+  left: calc(50% - 72.5px);
 }
 body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a .dl-card-img .tt-btn img {
   width: 18px;
   height: 18px;
-  margin-left: 12px;
+  margin-right: 12px;
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a .dl-card-img .tt-btn span {
+  color: #000;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a .dl-card-desc {
+  padding: 12px 20px;
+  border-bottom: 1px solid #a43680;
+  background: #fff;
+  color: #000;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 18px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 26px;
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .demos-listing-card-container .demos-listing-card a:hover {
+  -webkit-box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+          box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .dl-cta-wrapper a {
+  width: 364px;
+  padding: 12px 16px;
+  border-radius: 100px;
+  background: #68cce8;
+  color: #000;
+  font-family: "Titillium Web", sans-serif;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0.8px;
+  text-transform: uppercase;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  margin: auto;
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  text-decoration: none;
+  border: 1px solid #68cce8;
+}
+body.spz-15001 #main-content .spz-demos-listing .spz-container .demos-listing-row .dl-cta-wrapper a:hover {
+  background: rgb(255, 255, 255);
+  color: #000000;
+  border: 1px solid #000000;
+}
+body.spz-15001 #main-content .dnd_area-row-1-background-layers {
+  display: none !important;
 }
 
 /* 15001 form changes */

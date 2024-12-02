@@ -134,6 +134,7 @@ body.spz-15001 {
         margin: auto;
 
         .demos-listing-row {
+          margin-bottom: 40px;
           .demos-listing-title {
             color: #000;
             font-family: Titillium Web, sans-serif;
@@ -147,13 +148,24 @@ body.spz-15001 {
           .demos-listing-card-container {
             display: flex;
             flex-wrap: wrap;
+            width: 100%;
 
             .demos-listing-card {
               max-width: 369px;
+              margin-right: 16px;
+
+              &:last-child {
+                margin-right: 0;
+              }
 
               a {
+                text-decoration: none;
+                display: block;
+                transition: all 0.3s ease;
+
                 .dl-card-img {
                   position: relative;
+                  height: 180px;
 
                   img {
                     width: 100%;
@@ -169,21 +181,85 @@ body.spz-15001 {
                     align-items: center;
                     border-radius: 99px;
                     background: #fff;
-                    top: calc(50% - 24px);
-                    left: calc(50% - 24px);
+                    width: 145px;
+                    height: 40px;
+                    top: calc(50% - 20px);
+                    left: calc(50% - 72.5px);
 
                     img {
                       width: 18px;
                       height: 18px;
-                      margin-left: 12px;
+                      margin-right: 12px;
+                    }
+
+                    span {
+                      color: #000;
+                      font-family: "Titillium Web", sans-serif;
+                      font-size: 16px;
+                      font-style: normal;
+                      font-weight: 700;
+                      line-height: 24px;
+                      letter-spacing: 0.8px;
+                      text-transform: uppercase;
                     }
                   }
                 }
+
+                .dl-card-desc {
+                  padding: 12px 20px;
+                  border-bottom: 1px solid #a43680;
+                  background: #fff;
+                  color: #000;
+                  font-family: "Titillium Web", sans-serif;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 600;
+                  line-height: 26px;
+                }
+
+                &:hover {
+                  box-shadow: 0px 0px 24px 0px rgba(0, 0, 0, 0.2);
+                }
+              }
+            }
+          }
+
+          .dl-cta-wrapper {
+            a {
+              width: 364px;
+              padding: 12px 16px;
+              border-radius: 100px;
+              background: #68cce8;
+              color: #000;
+              font-family: "Titillium Web", sans-serif;
+              font-size: 16px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 24px;
+              letter-spacing: 0.8px;
+              text-transform: uppercase;
+              display: flex;
+              align-items: center;
+              justify-content: center;
+              margin: auto;
+              transition: all 0.3s ease;
+              cursor: pointer;
+              text-decoration: none;
+              border: 1px solid #68cce8;
+
+              &:hover {
+                background: rgba(255, 255, 255, 1);
+                color: #000000;
+                border: 1px solid #000000;
               }
             }
           }
         }
       }
+    }
+
+    .dnd_area-row-1-background-layers {
+      display: none !important;
     }
   }
 }
