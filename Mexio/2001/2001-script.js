@@ -333,6 +333,14 @@ function demoPage() {
                 } else {
                     document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2001';
                 }
+
+                var iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
+                //check if url has query params
+                if (iframeLazrSrc.includes('?')) {
+                    document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '&spz=2001');
+                } else {
+                    document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2001');
+                }
             });
         }
     });
