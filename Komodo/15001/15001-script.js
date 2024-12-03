@@ -1,3 +1,55 @@
+const imgPath = "//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/";
+
+//create a json object to store cards data and use it to create cards dynamically
+const cardsRow1 = [
+  {
+    title: "HCP Opportunities in Multiple Sclerosis",
+    imgDesk: imgPath + "1440_hcp_opportunities_in_multiple_sclerosis.webp",
+    imgTab: imgPath + "768_hcp_opportunities_in_multiple_sclerosis.webp",
+    imgMob: imgPath + "360_hcp_opportunities_in_multiple_sclerosis.webp",
+    link: "https://www.komodohealth.com/demos/hcp-opportunities-in-multiple-sclerosis"
+  },
+  {
+    title: "HCP Opportunities in Psoriasis",
+    imgDesk: imgPath + "1440_hcp_opportunities_in_psoriasis.webp",
+    imgTab: imgPath + "768_hcp_opportunities_in_psoriasis.webp",
+    imgMob: imgPath + "360_hcp_opportunities_in_psoriasis.webp",
+    link: "https://www.komodohealth.com/demos/hcp-opportunities-in-psoriasis"
+  },
+  {
+    title: "HCP Opportunities in Breast Cancer",
+    imgDesk: imgPath + "1440_hcp_opportunities_in_breast_cancer.webp",
+    imgTab: imgPath + "768_hcp_opportunities_in_breast_cancer.webp",
+    imgMob: imgPath + "360_hcp_opportunities_in_breast_cancer.webp",
+    link: "https://www.komodohealth.com/demos/hcp-opportunities-in-breast-cancer"
+  },
+];
+
+const cardsRow2 = [
+  {
+    title: "Breast Cancer Patient Insights",
+    imgDesk: imgPath + "1440_breast_cancer_patient_insights.webp",
+    imgTab: imgPath + "768_breast_cancer_patient_insights.webp",
+    imgMob: imgPath + "360_breast_cancer_patient_insights.webp",
+    link: "https://www.komodohealth.com/demos/breast-cancer-patient-insights"
+  },
+  {
+    title: "Multiple Myeloma Patient Insights",
+    imgDesk: imgPath + "1440_multiple_myeloma_patient_insights.webp",
+    imgTab: imgPath + "768_multiple_myeloma_patient_insights.webp",
+    imgMob: imgPath + "360_multiple_myeloma_patient_insights.webp",
+    link: "https://www.komodohealth.com/demos/multiple-myeloma-patient-insights"
+  },
+  {
+    title: "Obesity Patient Insights",
+    imgDesk: imgPath + "1440_obesity_patient_insights.webp",
+    imgTab: imgPath + "768_obesity_patient_insights.webp",
+    imgMob: imgPath + "360_obesity_patient_insights.webp",
+    link: "https://www.komodohealth.com/demos/obesity-patient-insights"
+  }
+];
+
+
 function ready(fn) {
   if (document.readyState !== 'loading') {
     fn();
@@ -33,11 +85,11 @@ ready(function () {
           el.dispatchEvent(event);
         }
       }
-   
+
       document.querySelector('body #main-content .demos-listing-hero').insertAdjacentHTML('afterend', `<div class="spz-hero-section"><div class="hero-section-container"><div class="hero-left-copy"><p class="eyebrow-title">MapView Market Landscape</p><h6 class="hero-headline">Get actionable insights in minutes</h6><p class="hero-desc">With an AI assistant and pre-built template dashboards, MapView empowers everyone to generate data analytics — even those with no technical or analytics expertise.</p><p class="hero-desc">Submit the form on the right for a custom demo.</p></div><div class="hero-form-wrapper"><div class="hero-form"><div class="spz-form-title">Get a Demo</div><div id="demo_Form_15001_wrapper"><div class='lds-dual-ring'></div></div></div></div></div></div><div class="spz-interactive-section"><div class="interactive-container"><h6 class="ia-title">Interactive Demo Videos</h6><p class="ia-desc">Take a self-guided tour below to see how easy it is to compare cohorts, uncover HCP opportunities, gain deeper patient insights, and more!</p></div></div>`);
 
-      document.querySelector('body #main-content .dnd_area-row-1-background-layers').insertAdjacentHTML('beforebegin', `<div class="spz-demos-listing"><div class="spz-container"><div class="demos-listing-row"><div class="demos-listing-title">Unlock HCP Potential</div><div class="demos-listing-card-container"><div class="demos-listing-card"><a href="https://www.komodohealth.com/demos/hcp-opportunities-in-multiple-sclerosis"><div class="dl-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/hcp_opportunities_in_multiple_sclerosis.webp" alt="HCP Opportunities in Multiple Sclerosis"><div class="tt-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/tour_icon.webp" alt="Take Tour Icon"><span>Take Tour</span></div></div><div class="dl-card-desc">HCP Opportunities in Multiple Sclerosis</div></a></div><div class="demos-listing-card"><a href="https://www.komodohealth.com/demos/hcp-opportunities-in-psoriasis"><div class="dl-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/hcp_opportunities_in_psoriasis.webp" alt="HCP Opportunities in Psoriasis"><div class="tt-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/tour_icon.webp" alt="Take Tour Icon"><span>Take Tour</span></div></div><div class="dl-card-desc">HCP Opportunities in Psoriasis</div></a></div><div class="demos-listing-card"><a href="https://www.komodohealth.com/demos/hcp-opportunities-in-breast-cancer"><div class="dl-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/hcp_opportunities_in_breast_cancer.webp" alt="HCP Opportunities in Breast Cancer"><div class="tt-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/tour_icon.webp" alt="Take Tour Icon"><span>Take Tour</span></div></div><div class="dl-card-desc">HCP Opportunities in Breast Cancer</div></a></div></div></div><div class="demos-listing-row"><div class="demos-listing-title">Define Granular Patient Populations </div><div class="demos-listing-card-container"><div class="demos-listing-card"><a href="https://www.komodohealth.com/demos/breast-cancer-patient-insights"><div class="dl-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/breast_cancer_patient_insights.webp" alt="Breast Cancer Patient Insights"><div class="tt-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/tour_icon.webp" alt="Take Tour Icon"><span>Take Tour</span></div></div><div class="dl-card-desc">Breast Cancer Patient Insights</div></a></div><div class="demos-listing-card"><a href="https://www.komodohealth.com/demos/multiple-myeloma-patient-insights"><div class="dl-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/multiple_myeloma_patient_insights.webp" alt="Multiple Myeloma Patient Insights"><div class="tt-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/tour_icon.webp" alt="Take Tour Icon"><span>Take Tour</span></div></div><div class="dl-card-desc">Multiple Myeloma Patient Insights</div></a></div><div class="demos-listing-card"><a href="https://www.komodohealth.com/demos/obesity-patient-insights"><div class="dl-card-img"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/obesity_patient_insights.webp" alt="Obesity Patient Insights"><div class="tt-btn"><img src="//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/tour_icon.webp" alt="Take Tour Icon"><span>Take Tour</span></div></div><div class="dl-card-desc">Obesity Patient Insights</div></a></div></div></div><div class="demos-listing-row"><div class="dl-cta-wrapper"><a href="https://www.komodohealth.com/get-demo" target="_blank" rel="noopener">BOOK A CUSTOMIZED DEMO</a></div></div></div></div>`);
-     
+      document.querySelector('body #main-content .dnd_area-row-1-background-layers').insertAdjacentHTML('beforebegin', `<div class="spz-demos-listing"><div class="spz-container"><div class="demos-listing-row"><div class="demos-listing-title">Unlock HCP Potential</div><div class="demos-listing-card-container"> ${createCard(cardsRow1)}</div></div><div class="demos-listing-row"><div class="demos-listing-title">Define Granular Patient Populations </div><div class="demos-listing-card-container">${createCard(cardsRow2)}</div></div><div class="demos-listing-row"><div class="dl-cta-wrapper"><a href="https://www.komodohealth.com/get-demo" target="_blank" rel="noopener">BOOK A CUSTOMIZED DEMO</a></div></div></div></div>`);
+
 
       let i = 0;
       const CROInterval = setInterval(() => {
@@ -197,3 +249,27 @@ ready(function () {
     }
   }
 })
+
+function createCard(card) {
+  let cardHTML = ``;
+  card.forEach((item, index) => {
+    cardHTML += `<div class="demos-listing-card">
+    <a href="${item.link}">
+      <div class="dl-card-img">
+        <picture>
+          <source media="(max-width: 767px)" srcset="${item.imgMob}">
+          <source media="(max-width: 1024px)" srcset="${item.imgTab}">
+          <img src="${item.imgDesk}" alt="${item.title}">
+        </picture>
+        <div class="tt-btn">
+          <img src="${imgPath}tour_icon.webp" alt="Take Tour Icon">
+          <span>Take Tour</span>
+        </div>
+      </div>
+      <div class="dl-card-desc">${item.title}</div>
+    </a>
+  </div>`;
+  });
+
+  return cardHTML;
+}
