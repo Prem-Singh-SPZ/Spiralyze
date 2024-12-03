@@ -326,21 +326,25 @@ function demoPage() {
             }, 200);
 
             waitForElm('.spz-form-wrap iframe').then(function () {
-                var iframeSrc = document.querySelector('.spz-form-wrap iframe').src;
-                //check if url has query params
-                if (iframeSrc.includes('?')) {
-                    document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '&spz=2001';
-                } else {
-                    document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2001';
-                }
+                setTimeout(() => {
+                    var iframeSrc = document.querySelector('.spz-form-wrap iframe').src;
+                    //check if url has query params
+                    if (iframeSrc.includes('?')) {
+                        //replace question mark string with "?spz=2001&" in the url
+                        document.querySelector('.spz-form-wrap iframe').src = iframeSrc.replace('?', '?spz=2001&');
+                    } else {
+                        document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2001';
+                    }
 
-                var iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
-                //check if url has query params
-                if (iframeLazrSrc.includes('?')) {
-                    document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '&spz=2001');
-                } else {
-                    document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2001');
-                }
+                    var iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
+                    //check if url has query params
+                    if (iframeLazrSrc.includes('?')) {
+                        //replace question mark string with "?spz=2001&" in the url
+                        document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc.replace('?', '?spz=2001&'));
+                    } else {
+                        document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2001');
+                    }
+                }, 2000);
             });
         }
     });
