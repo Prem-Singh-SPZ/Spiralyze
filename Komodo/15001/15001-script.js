@@ -1,4 +1,3 @@
-console.log("Test Running...")
 function ready(fn) {
   if (document.readyState !== 'loading') {
     fn();
@@ -7,7 +6,6 @@ function ready(fn) {
   }
 }
 ready(function () {
-  console.log("DOM ready")
   if (!document.querySelector('.spz-15001')) {
     document.querySelector('body').classList.add('spz-15001')
     //targeted page
