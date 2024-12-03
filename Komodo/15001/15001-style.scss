@@ -14,7 +14,11 @@ body.spz-15001 {
           @media (max-width: 1024.98px) {
             background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/komodohealth/15001/hero_background_768.webp)
               no-repeat center bottom/cover;
-              padding: 30px 32px 64px;
+            padding: 30px 32px 64px;
+          }
+
+          @media (max-width: 767.98px) {
+            padding: 32px 20px 48px;
           }
 
           .hero-section-container {
@@ -39,6 +43,10 @@ body.spz-15001 {
                 max-width: 100%;
               }
 
+              @media (max-width: 767.98px) {
+                margin-bottom: 24px;
+              }
+
               .eyebrow-title {
                 color: #68cce8;
                 font-family: "Titillium Web";
@@ -52,6 +60,10 @@ body.spz-15001 {
 
                 @media (max-width: 1024.98px) {
                   text-align: center;
+                }
+
+                @media (max-width: 767.98px) {
+                  text-align: left;
                 }
               }
 
@@ -69,6 +81,10 @@ body.spz-15001 {
                   text-align: center;
                   max-width: 100%;
                 }
+
+                @media (max-width: 767.98px) {
+                  text-align: left;
+                }
               }
 
               .hero-desc {
@@ -84,6 +100,11 @@ body.spz-15001 {
                   text-align: center;
                   padding: 0 28px;
                 }
+
+                @media (max-width: 767.98px) {
+                  text-align: left;
+                  padding: 0;
+                }
               }
             }
 
@@ -97,10 +118,18 @@ body.spz-15001 {
                 margin-left: 0;
               }
 
+              @media (max-width: 767.98px) {
+                min-width: auto;
+              }
+
               .hero-form {
                 background: #fff;
                 box-shadow: 0px 12.333px 49.333px 0px rgba(0, 0, 0, 0.2);
                 padding: 24px 32px;
+
+                @media (max-width: 767.98px) {
+                  padding: 24px 16px;
+                }
 
                 .spz-form-title {
                   color: #000;
@@ -127,6 +156,10 @@ body.spz-15001 {
               no-repeat center top/cover;
           }
 
+          @media (max-width: 767.98px) {
+            padding: 40px 20px;
+          }
+
           .interactive-container {
             max-width: 600px;
             margin: auto;
@@ -140,6 +173,10 @@ body.spz-15001 {
               font-weight: 400;
               line-height: 48px;
               margin: 0 0 24px;
+
+              @media (max-width: 767.98px) {
+                text-align: left;
+              }
             }
 
             .ia-desc {
@@ -151,6 +188,10 @@ body.spz-15001 {
               font-weight: 400;
               line-height: 28px;
               margin: 0;
+
+              @media (max-width: 767.98px) {
+                text-align: left;
+              }
             }
           }
         }
@@ -165,9 +206,17 @@ body.spz-15001 {
         padding: 56px 32px;
       }
 
+      @media (max-width: 767.98px) {
+        padding: 48px 20px 20px;
+      }
+
       .spz-container {
         max-width: 1140px;
         margin: auto;
+
+        @media screen and (max-width: 767.98px) {
+          max-width: 400px;
+        }
 
         .demos-listing-row {
           margin-bottom: 40px;
@@ -207,6 +256,13 @@ body.spz-15001 {
                 &:nth-child(2) {
                   margin-right: 0;
                 }
+              }
+
+              @media screen and (max-width: 767.98px) {
+                max-width: 100%;
+                margin-right: 0;
+                margin-bottom: 16px;
+                max-height: none;
               }
 
               a {
@@ -858,18 +914,18 @@ body.spz-15001 {
       .with-margin {
         margin-left: 0px;
       }
-      .hs-form-field {
-        margin-bottom: 16px;
-      }
-      .pp-parent {
-        margin-top: 0px;
-        margin-bottom: 0px;
-      }
-      .hs-form__richtext {
-        p {
-          margin-bottom: 13px;
-        }
-      }
+      // .hs-form-field {
+      //   margin-bottom: 16px;
+      // }
+      // .pp-parent {
+      //   margin-top: 0px;
+      //   margin-bottom: 0px;
+      // }
+      // .hs-form__richtext {
+      //   p {
+      //     margin-bottom: 13px;
+      //   }
+      // }
       .hs-error-msgs {
         margin: 4px 0px 23px;
         label {
@@ -879,11 +935,11 @@ body.spz-15001 {
           }
         }
       }
-      .hs-richtext {
-        p {
-          margin-bottom: 16px;
-        }
-      }
+      // .hs-richtext {
+      //   p {
+      //     margin-bottom: 16px;
+      //   }
+      // }
       .hs_consent_to_communicate {
         .hs-error-msgs {
           label {
