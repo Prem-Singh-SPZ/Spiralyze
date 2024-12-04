@@ -146,6 +146,11 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap {
     margin-bottom: 25.5px;
   }
 }
+@media (max-width: 767.98px) {
+  body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap {
+    margin-bottom: 18.5px;
+  }
+}
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-heading {
   color: #fff;
   text-align: center;
@@ -183,7 +188,12 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items {
 }
 @media (max-width: 1024.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items {
-    gap: 8px;
+    gap: 16px;
+  }
+}
+@media (max-width: 767.98px) {
+  body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items {
+    gap: 8.5px;
   }
 }
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item {
@@ -394,8 +404,9 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wra
 }
 @media (max-width: 767.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wrapper .form-group-spz .form-field-spz {
-    border-radius: 3px;
+    border-radius: 3px 0 0 3px;
     padding: 20px 12px;
+    height: 48px;
   }
 }
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wrapper .form-group-spz .form-field-spz:not(.is-placeholder):not(:focus):not(:-moz-placeholder-shown) ~ label {
@@ -495,6 +506,13 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wra
   font-weight: 400;
   line-height: 100%;
 }
+@media (max-width: 767.98px) {
+  body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wrapper .form-group-spz .form-field-spz:not([value=""]) ~ .form-label-spz {
+    left: 12px;
+    font-size: 18px;
+    line-height: 26px;
+  }
+}
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wrapper .form-group-spz .form-field-spz:focus ~ .form-label-spz {
   left: 10px;
   top: -12px;
@@ -566,7 +584,11 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wra
 @media (max-width: 767.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wrapper .hero-btn {
     width: 121px;
-    border-radius: 3px;
+    border-radius: 0 3px 3px 0;
+    height: 48px;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 26px;
   }
 }
 

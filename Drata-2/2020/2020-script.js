@@ -163,9 +163,9 @@
                 <div class="gts-tab active" data-target="tab-one">
                     <div class="gts-icon">
                         <img src="${astUrl}vendor_management_icon.svg"
-                            alt="Integrate With More Systems">
+                            alt="Integrate with More Systems">
                     </div>
-                    <div class="gts-text">Integrate With More Systems</div>
+                    <div class="gts-text">Integrate with More Systems</div>
                 </div>
                 <div class="gts-tab" data-target="tab-two">
                     <div class="gts-icon">
@@ -195,7 +195,7 @@
                     <div class="gtc-card-tab">
                         <div class="gtct-wrapper">
                             <div class="gtct-copy">
-                                <div class="gtct-title">Integrate With More Systems</div>
+                                <div class="gtct-title">Integrate with More Systems</div>
                                 <div class="gtct-desc">With hundreds of native integrations, you can connect your HRIS, SSO, cloud provider, DevOps toolchain, and countless other systems to Drata—opening endless possibilities for control enforcement, monitoring, evidence collection, and remediation.</div>
                                 <div class="gtct-desc">Want to validate a specific control or connect to a different tool? Use our Open API to build deep, custom integrations with any system.</div>
                                 <div class="gtct-cta">
