@@ -141,7 +141,7 @@ function demoPage() {
                 setIframeBodyClass(mainPageBodyWidth);
             });
 
-            cookieValue('#2002_qa', '#2002_qa_variant');
+            cookieValue('#2002', '#2002_variant1');
 
             if (!document.querySelector('body.spz-2002 #page .site-content .blocks-page .hero-form .container .spz-form-wrap')) {
                 document.querySelector('body.spz-2002 #page .site-content .blocks-page .hero-form .container').insertAdjacentHTML('beforeend', `<div class="spz-form-wrap"><div class="form-heading">Get a Demo</div></div>`);
