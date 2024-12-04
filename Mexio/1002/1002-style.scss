@@ -33,18 +33,18 @@ $grotesk: Founders Grotesk, ui-sans-serif, system-ui, sans-serif,
   Apple Color Emoji, Segoe UI Emoji, Segoe UI Symbol, Noto Color Emoji;
 
 :root {
-  --container-width: 1200px;
+  --container-width: 1220px;
   --section-bg-color: #f1efff;
   --content-section-width: 1024px;
   --superheading-color: #3620ff;
-  --content-text-color: #000;
+  --content-text-color: #000
   --cta-color: #fff;
   --cta-background-color: #3620ff;
   --cta-color-hover: #fff;
   --cta-background-color-hover: #1300c1;
 }
 
-body.spz-1002 {
+body.spz-1002-home {
   #content {
     #blocks-page {
       .logo-banner,
@@ -56,6 +56,14 @@ body.spz-1002 {
         background: linear-gradient(180deg, #200036 0%, #000 100%);
         padding-top: 72px;
 
+        @media (max-width: 1024.98px) {
+          padding-top: 56px;
+        }
+
+        @media (max-width: 767.98px) {
+          padding-top: 48px;
+        }
+
         .content-section {
           max-width: var(--content-section-width);
           width: 100%;
@@ -65,13 +73,25 @@ body.spz-1002 {
 
           .content-superheading {
             display: flex;
-            padding: 12px 20px;
+            padding: 6.4px 19px;
             justify-content: center;
             align-items: center;
             border-radius: 3px;
             background: rgba(255, 255, 255, 0.18);
             max-width: 464px;
-            margin: auto;
+            margin: 0 auto 17px;
+
+            @media (max-width: 1024.98px) {
+              max-width: 377px;
+              padding: 3.5px 10px;
+              margin: 0 auto 7px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              max-width: 259px;
+              padding: 2.7px 5px;
+              margin: 0 auto 4px;
+            }
 
             p {
               text-align: center;
@@ -79,13 +99,22 @@ body.spz-1002 {
               font-size: 24px;
               font-style: normal;
               font-weight: 400;
-              line-height: 1;
+              line-height: 1.1;
               letter-spacing: 1.2px;
               background: linear-gradient(91deg, #fff 0%, #97b2ff 101.09%);
               background-clip: text;
               -webkit-background-clip: text;
               -webkit-text-fill-color: transparent;
-              white-space: nowrap;
+
+              @media (max-width: 1024.98px) {
+                font-size: 20px;
+                letter-spacing: 1px;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                font-size: 14px;
+                letter-spacing: 0.7px;
+              }
             }
           }
 
@@ -95,11 +124,27 @@ body.spz-1002 {
             font-size: 64px;
             font-style: normal;
             font-weight: 500;
-            line-height: 100%;
+            line-height: 108%;
             background: linear-gradient(91deg, #fff 19.07%, #97b2ff 79.84%);
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
+            margin-bottom: 54px;
+
+            @media (max-width: 1024.98px) {
+              font-size: 48px;
+              margin-bottom: 42px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              font-size: 28px;
+              line-height: 106%;
+              margin-bottom: 37px;
+
+              br{
+                display: none;
+              }
+            }
           }
         }
 
@@ -108,6 +153,11 @@ body.spz-1002 {
           max-width: var(--container-width);
           margin-left: auto;
           margin-right: auto;
+          margin-bottom: 39.5px;
+
+          @media (max-width: 1024.98px) {
+            margin-bottom: 25.5px;
+          }
 
           .tiles-heading {
             color: #fff;
@@ -116,15 +166,31 @@ body.spz-1002 {
             font-size: 26px;
             font-style: normal;
             font-weight: 400;
-            line-height: 72px;
+            line-height: 1;
             letter-spacing: 1.3px;
+            margin-bottom: 36px;
+
+            @media (max-width: 1024.98px) {
+              font-size: 24px;
+              margin-bottom: 20px;
+            }
+
+            @media screen and (max-width: 767.98px) {
+              font-size: 18px;
+              letter-spacing: 0.9px;
+              margin-bottom: 16px;
+            }
           }
 
           .tiles-items {
             display: flex;
             flex-wrap: wrap;
             justify-content: center;
-            gap: 20px;
+            gap: 16px;
+
+            @media (max-width: 1024.98px) {
+              gap: 8px;
+            }
 
             .tile-item {
               max-width: 190px;
@@ -145,6 +211,19 @@ body.spz-1002 {
               cursor: pointer;
               position: relative;
 
+              @media (max-width: 1024.98px) {
+               max-width: 229.33px;
+               padding: 24px 8px 0px 8px;
+              }
+
+              @media screen and (max-width: 767.98px) {
+                max-width: 312px;
+                padding: 8px 16px 8px 8px;
+                gap: 12px;
+                flex-direction: row;
+                height: 60px;
+              }
+
               &::before {
                 content: "";
                 position: absolute;
@@ -157,6 +236,12 @@ body.spz-1002 {
                 background: rgba(255, 255, 255, 0.3);
                 box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.25) inset;
                 pointer-events: none;
+
+                @media screen and (max-width: 767.98px) {
+                  left: auto;
+                  top: calc(50% - 9px);
+                  right: 16px;
+                }
               }
 
               .tile-image {
@@ -167,6 +252,11 @@ body.spz-1002 {
                 border-radius: 8px;
                 background: rgba(255, 255, 255, 0.1);
                 pointer-events: none;
+
+                @media screen and (max-width: 767.98px) {
+                  margin-bottom: 0;
+                  border-radius: 1px;
+                }
               }
 
               .tile-heading {
@@ -178,6 +268,19 @@ body.spz-1002 {
                 font-weight: 400;
                 line-height: 24px;
                 opacity: 0.8;
+                margin-bottom: 12px;
+
+                @media (max-width: 1024.98px) {
+                  font-size: 18px;
+                  line-height: 22px;
+                }
+
+                @media screen and (max-width: 767.98px) {
+                  margin-bottom: 0;
+                  br{
+                    display: none;
+                  }
+                }
               }
 
               &:hover {
@@ -231,24 +334,29 @@ body.spz-1002 {
           max-width: var(--container-width);
           margin-left: auto;
           margin-right: auto;
+
+          @media screen and (max-width: 767.98px) {
+            max-width: 312px;
+          }
+
           .form-group-wrapper {
             display: flex;
             align-items: center;
             justify-content: space-between;
             position: relative;
-            max-width: 500px;
+            max-width: 516px;
             margin: auto;
             box-shadow: 0px 2px 4px 0px rgba(0, 0, 0, 0.12);
 
-            @media (max-width: 1023.98px) {
-              max-width: 100%;
-            }
+            // @media (max-width: 1023.98px) {
+            //   max-width: 100%;
+            // }
 
             @media (max-width: 767.98px) {
-              flex-direction: column;
+              // flex-direction: column;
               max-width: 100%;
-              height: initial;
-              overflow: initial;
+              // height: initial;
+              // overflow: initial;
             }
 
             .form-group-spz {
@@ -256,7 +364,7 @@ body.spz-1002 {
               width: calc(100% - 147px);
 
               @media (max-width: 767.98px) {
-                width: 100%;
+                width: calc(100% - 121px);
               }
 
               .form-label-spz {
@@ -438,9 +546,8 @@ body.spz-1002 {
               }
 
               @media (max-width: 767.98px) {
-                width: 100%;
+                width: 121px;
                 border-radius: 3px;
-                margin-top: 16px;
               }
             }
           }
@@ -462,14 +569,14 @@ body.spz-1002 {
 .interface-image-wrap {
   max-width: var(--container-width);
   width: 100%;
-  margin: 72px auto;
-}
+  margin: 72px auto 0;
 
-@media (max-width: 991px) {
-  .interface-image-wrap {
-    max-width: 648px;
+  @media (max-width: 1024.98px) {
+    margin-top: 79px;
+    max-width: 728px;
   }
 }
+
 
 /*Social Proof Logos*/
 

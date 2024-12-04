@@ -94,11 +94,11 @@ const template_additionalSection = {
 		},
 		{
 			breakPoint: 768,
-			url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/baseline_ui-tablet.png",
+			url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1002/image_ui.webp",
 		},
 		{
 			breakPoint: 320,
-			url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/Code_Templates_assets/SPZ_Baseline/baseline_ui-mobile.png",
+			url: "https://res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1002/image_ui.webp",
 		},
 	],
 	//[8] Social proof logos with heading after interface image https://share.cleanshot.com/7VMjQr0J
@@ -252,7 +252,7 @@ function addHero(formData, whereToPut, template_heroSelector, template_additiona
 
 //demo page
 const currentURL = window.location.href.split('?')[0]; // Get the base URL without parameters
-if (currentURL === "https://www2.maxio.com/l/699023/2022-08-16/nh4lk") {
+if (currentURL === "https://www2.maxio.com/l/699023/2022-08-16/nh4lk?spz=1002") {
 	var iframebodyEle = document.querySelector('body');
 	iframebodyEle.classList.add('spz-1002-iframe');
 	waitForElm('.spz-1002-iframe form#pardot-form .submit input').then(function () {
@@ -263,16 +263,15 @@ if (currentURL === "https://www2.maxio.com/l/699023/2022-08-16/nh4lk") {
 let checkBody = setInterval(function () {
 	if (document.querySelectorAll('body').length > 0) {
 		clearInterval(checkBody);
-		load_1001();
+		load_1002();
 	}
 });
-function load_1001() {
+function load_1002() {
 	var bodyEle = document.querySelector('body');
-	if (!bodyEle.classList.contains('spz-1002')) {
-		bodyEle.classList.add('spz-1002');
-
+	if (bodyEle) {
 		//home page
 		if (window.location.pathname === "/") {
+			bodyEle.classList.add('spz-1002-home');
 			bodyEle.classList.add('spz-home');
 			//hidden value
 			cookieValue('#1002', '#1002_variant1');
