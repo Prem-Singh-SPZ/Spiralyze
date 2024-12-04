@@ -17,7 +17,7 @@
   --section-bg-color: #f1efff;
   --content-section-width: 1024px;
   --superheading-color: #3620ff;
-  --content-text-color: #000
+  --content-text-color: #000;
   --cta-color: #fff;
   --cta-background-color: #3620ff;
   --cta-color-hover: #fff;
@@ -265,6 +265,9 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .
   border-radius: 8px;
   background: rgba(255, 255, 255, 0.1);
   pointer-events: none;
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
 }
 @media screen and (max-width: 767.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item .tile-image {
@@ -321,7 +324,7 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .
   background: linear-gradient(180deg, rgba(52, 104, 252, 0) 0%, rgba(86, 64, 216, 0.2) 100%);
 }
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item.active .tile-image svg path {
-  stroke: #22084D;
+  stroke: #22084d;
 }
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email {
   max-width: var(--container-width);
@@ -587,7 +590,6 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wra
     border-radius: 0 3px 3px 0;
     height: 48px;
     font-size: 18px;
-    font-weight: 600;
     line-height: 26px;
   }
 }

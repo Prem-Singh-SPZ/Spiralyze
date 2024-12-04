@@ -284,6 +284,13 @@
                     tab.classList.remove('active');
                 });
                 tab.classList.add('active');
+
+                //active tab button should scroll into view keeping 10px space from left
+                tab.scrollIntoView({
+                    behavior: 'smooth',
+                    block: 'nearest',
+                    inline: 'start'
+                });
             });
         });
 
