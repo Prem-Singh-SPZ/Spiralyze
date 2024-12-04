@@ -143,6 +143,17 @@ function demoPage() {
 
             cookieValue('#2002_qa', '#2002_qa_variant');
 
+            if (!document.querySelector('body.spz-2002 #page .site-content .blocks-page .hero-form .container .spz-form-wrap')) {
+                document.querySelector('body.spz-2002 #page .site-content .blocks-page .hero-form .container').insertAdjacentHTML('beforeend', `<div class="spz-form-wrap"><div class="form-heading">Get a Demo</div></div>`);
+            }
+
+            let formLoaded = setInterval(() => {
+                if (document.querySelector(`.hero-form iframe[id*="form"]`)) {
+                    clearInterval(formLoaded);
+                    document.querySelector(".spz-form-wrap").appendChild(document.querySelector(`.hero-form iframe[id*="form"]`));
+                }
+            })
+
             //check if form is submitted using iframe height and setinterval
             var spz_2002_Interval = setInterval(function () {
                 var spz_2002_iframe = document.querySelector('.spz-form-wrap iframe');

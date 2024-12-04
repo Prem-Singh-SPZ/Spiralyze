@@ -348,3 +348,68 @@ body.spz-2002-iframe.device-mobile form#pardot-form .submit {
 }
 
 /* Iframe CSS End Here */
+body.spz-2002 {
+  background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/background.webp) no-repeat top left/cover;
+}
+@media (max-width: 767.98px) {
+  body.spz-2002 {
+    background: url(//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2002/bg_mobile.webp) no-repeat top left/cover;
+  }
+}
+body.spz-2002 #page header,
+body.spz-2002 #page footer {
+  display: none !important;
+}
+body.spz-2002 #page .site-content .blocks-page > *:not(.hero-form) {
+  display: none !important;
+}
+body.spz-2002 #page .site-content .blocks-page .hero-form {
+  background: -webkit-gradient(linear, left bottom, left top, from(rgba(0, 0, 0, 0.8)), to(rgba(22, 22, 22, 0.8)));
+  background: linear-gradient(0deg, rgba(0, 0, 0, 0.8) 0%, rgba(22, 22, 22, 0.8) 100%);
+  -webkit-backdrop-filter: blur(2.5px);
+          backdrop-filter: blur(2.5px);
+  min-height: 100vh;
+}
+body.spz-2002 #page .site-content .blocks-page .hero-form .container {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+body.spz-2002 #page .site-content .blocks-page .hero-form .container > div:first-child {
+  display: none !important;
+}
+body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap {
+  background: #fff;
+  -webkit-box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+          box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
+  margin: 24px auto;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 40px 40px;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 100%;
+  max-width: 560px;
+}
+body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
+  color: #000;
+  text-align: center;
+  font-family: "Test Founders Grotesk";
+  font-size: 40px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: 32px;
+  margin-bottom: 40px;
+}
