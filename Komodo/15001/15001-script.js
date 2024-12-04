@@ -110,6 +110,7 @@ ready(function () {
             portalId: "6374024",
             formId: "bd5fd709-5849-4d8c-95a3-b52f5a1453c0",
             target: '.spz-15001 #demo_Form_15001_wrapper',
+            submitText: "SUBMIT",
             inlineMessage: "Thanks for submitting the form.",
             onFormSubmitted: function ($form) {
               console.log('Report conversion...');
@@ -153,7 +154,7 @@ ready(function () {
                 trigger(document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_consent_countries select'), 'blur');
                 document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_consent_countries select option:first-child').remove();
                 document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_consent_countries').classList.add("hasValue");
-                document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value = "SUBMIT";
+                // document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value = "SUBMIT";
                 document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_buying_timeline select').value = "Immediately";
                 trigger(document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_buying_timeline select'), 'change');
                 document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_consent_countries select').insertAdjacentHTML("afterend", "<div class='arrow-select'></div>")
@@ -177,7 +178,7 @@ ready(function () {
                   document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_buying_timeline select').value = "Immediately";
                   trigger(document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_buying_timeline select'), 'change');
                 }
-                document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value = "SUBMIT";
+                // document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value = "SUBMIT";
               }
               var allInput = document.querySelectorAll('.spz-15001 #demo_Form_15001_wrapper .hs-input');
               function errorState(item) {
@@ -229,17 +230,17 @@ ready(function () {
                 if (document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_consent_countries select')) {
                   trigger(document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_consent_countries select'), 'change');
                 }
-                let i = 0;
-                const submitInterval = setInterval(() => {
-                  if (document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value != "SUBMIT") {
-                    clearInterval(submitInterval)
-                    document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value = "SUBMIT";
-                  }
-                  i++;
-                  if (i > 80) {
-                    clearInterval(submitInterval)
-                  }
-                }, 5);
+                // let i = 0;
+                // const submitInterval = setInterval(() => {
+                //   if (document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value != "SUBMIT") {
+                //     clearInterval(submitInterval)
+                //     document.querySelector('.spz-15001 #demo_Form_15001_wrapper .hs_submit input').value = "SUBMIT";
+                //   }
+                //   i++;
+                //   if (i > 80) {
+                //     clearInterval(submitInterval)
+                //   }
+                // }, 5);
               })
             }
           })
