@@ -130,7 +130,7 @@ function load_4001() {
             document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"]').insertAdjacentHTML('afterbegin', '<div class="form-sub-label-container"><select class="spz-dropdown form-dropdown validate[required]"><option value="">Please Select</option><option value="Virtual">Virtual</option><option value="In Person">In Person</option></select><label class="form-sub-label">Preferred consultation type</label></div>');
 
             waitForElm('.spz-dropdown').then(function () {
-                document.querySelector('.spz-dropdown option[value=""]').setAttribute('disabled', 'true');
+                // document.querySelector('.spz-dropdown option[value=""]').setAttribute('disabled', 'true');
                 //check if the value is already selected in the form and update the dropdown selected value
                 if (document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked')) {
                     document.querySelector('.spz-dropdown').value = document.querySelector('.jotform-form .form-all .form-section.page-section #id_264[data-type="control_radio"] input:checked').value;
