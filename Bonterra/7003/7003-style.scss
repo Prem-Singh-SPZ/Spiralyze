@@ -1,6 +1,32 @@
-$Noto: "Noto Sans", sans-serif;
-$adelle: adelle, sans-serif;
-$grotesk: grotesk, "RecentGroteskBlack", sans-serif;
+@font-face {
+  font-family: "Elza";
+  src: url(https://res.cloudinary.com/spiralyze/raw/upload/v1733410272/bonterra/fonts/Elza/Elza-Semibold.otf);
+  font-style: normal;
+  font-weight: 600;
+}
+// @font-face {
+//   font-family: "Elza";
+//   src: url(//res.cloudinary.com/spiralyze/raw/upload/v1733408679/bonterra/fonts/Elza/Elza-Black.otf);
+//   font-style: normal;
+//   font-weight: 400;
+// }
+
+@font-face {
+  font-family: "Elza";
+  src: url(https://res.cloudinary.com/spiralyze/raw/upload/v1733408679/bonterra/fonts/Elza/Elza-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+}
+
+
+// @font-face {
+//   font-family: "Elza";
+//   src: url(//res.cloudinary.com/spiralyze/raw/upload/v1733408679/bonterra/fonts/Elza/Elza-Medium.otf);
+//   font-style: normal;
+//   font-weight: 500;
+// }
+
+$elza: "Elza", "RecentelzaBlack", sans-serif;
 
 body.spz-7003 {
   #HEAD,
@@ -125,7 +151,7 @@ body.spz-7003 {
 
                 strong {
                   color: #7583ff;
-                  font-family: $Noto;
+                  font-family: $elza;
                   font-size: 16px;
                   font-weight: 700;
                   line-height: 24px;
@@ -141,10 +167,11 @@ body.spz-7003 {
 
               > h1 {
                 color: #381360;
-                font-family: $adelle;
-                font-size: 56px;
-                font-weight: 300;
-                line-height: 64px;
+                font-family: $elza;
+                font-size: 58px;
+                font-weight: 600;
+                line-height: 110%;
+                letter-spacing: -1.16px;
                 margin: 0 0 24.5px;
 
                 @media (max-width: 1199.98px) {
@@ -161,11 +188,12 @@ body.spz-7003 {
               }
 
               .lead {
-                color: #14022d;
-                font-family: $Noto;
-                font-size: 16px;
+                font-family: $elza;
+                color: #8A61B6;
+                font-size: 18px;
+                font-style: normal;
                 font-weight: 400;
-                line-height: 24px;
+                line-height: 140%;
               }
 
               .stats {
@@ -250,12 +278,13 @@ body.spz-7003 {
             .spz-form-title {
               color: #381360;
               text-align: center;
-              font-family: $grotesk;
-              font-size: 40px;
+              font-family: $elza;
+              font-size: 42px;
               font-style: normal;
-              font-weight: 500;
-              line-height: 40px;
-              text-transform: uppercase;
+              font-weight: 600;
+              line-height: 110%;
+              text-transform: none;
+              letter-spacing: -0.42px;
               padding: 0;
               margin-bottom: 38px;
 
@@ -284,11 +313,10 @@ body.spz-7003 {
 
           .sp-title {
             color: #381360;
-            font-family: $adelle;
-            font-size: 24px;
-            font-style: normal;
-            font-weight: 300;
-            line-height: 32px;
+            font-family: $elza;
+            font-size: 22px;
+            font-weight: 600;
+            line-height: 110%;
             margin: 0 0 35px;
 
             span {
@@ -320,13 +348,14 @@ body.spz-7003 {
           align-items: center;
           color: #381360;
           text-align: center;
-          font-family: $Noto;
+          font-family: $elza;
           font-size: 16px;
-          font-weight: 700;
+          font-weight: 600;
           line-height: 24px;
-          background: #c7d0ff;
+          border-radius: 16px 16px 0px 0px;
+          background: #85EAA0;
           text-decoration: none;
-          width: 164px;
+          width: 172px;
           height: 48px;
           transition: all 0.2s ease;
 
@@ -337,12 +366,11 @@ body.spz-7003 {
           }
 
           &:hover {
-            background: #381360;
-            color: #ffffff;
+            background: #B5EAB9;
 
-            svg path {
-              stroke: #ffffff;
-            }
+            // svg path {
+            //   stroke: #ffffff;
+            // }
           }
         }
       }
@@ -382,7 +410,7 @@ body.spz-7003 {
               background: #f5f5ff;
               // background: transparent;
               color: #646464 !important;
-              font-family: $Noto !important;
+              font-family: $elza !important;
               font-size: 16px !important;
               font-style: normal;
               font-weight: 400 !important;
@@ -411,7 +439,7 @@ body.spz-7003 {
               outline: none;
               box-shadow: none;
               color: #000 !important;
-              font-family: $Noto;
+              font-family: $elza;
               font-size: 16px !important;
               font-style: normal;
               font-weight: 400 !important;
@@ -544,7 +572,7 @@ body.spz-7003 {
           border: none !important;
           padding: 0 0 0 16px;
           color: #f2342f !important;
-          font-family: $Noto !important;
+          font-family: $elza !important;
           font-size: 12px !important;
           font-style: normal;
           font-weight: 400;
@@ -581,18 +609,19 @@ body.spz-7003 {
             width: 100% !important;
             max-width: calc(100% - 20px);
             height: 48px;
-            background: #7583ff !important;
+            border-radius: 100px !important;
+            background: #85EAA0 !important;
             border: none !important;
             outline: none !important;
             margin: 12px auto 0 !important;
             cursor: pointer;
             transition: all 0.2s ease !important;
             position: relative;
-            color: #fff !important;
+            color: #381360 !important;
             text-align: center;
-            font-family: $Noto;
+            font-family: $elza;
             font-size: 16px !important;
-            font-weight: 700 !important;
+            font-weight: 600 !important;
             line-height: 24px !important;
 
             @media screen and (max-width: 767.98px) {
@@ -601,8 +630,7 @@ body.spz-7003 {
             }
 
             &:hover {
-              background: #381360 !important;
-              color: #ffffff !important;
+              background: #B5EAB9 !important;
             }
             // &:focus {
             //   outline: 1px solid #447f19;

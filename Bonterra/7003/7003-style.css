@@ -1,3 +1,15 @@
+@font-face {
+  font-family: "Elza";
+  src: url(https://res.cloudinary.com/spiralyze/raw/upload/v1733410272/bonterra/fonts/Elza/Elza-Semibold.otf);
+  font-style: normal;
+  font-weight: 600;
+}
+@font-face {
+  font-family: "Elza";
+  src: url(https://res.cloudinary.com/spiralyze/raw/upload/v1733408679/bonterra/fonts/Elza/Elza-Regular.otf);
+  font-style: normal;
+  font-weight: 400;
+}
 body.spz-7003 #HEAD,
 body.spz-7003 .spz-hidden {
   display: none !important;
@@ -132,7 +144,7 @@ body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div > p {
 }
 body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div > p strong {
   color: #7583ff;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
   font-size: 16px;
   font-weight: 700;
   line-height: 24px;
@@ -147,10 +159,11 @@ body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div > p str
 }
 body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div > h1 {
   color: #381360;
-  font-family: adelle, sans-serif;
-  font-size: 56px;
-  font-weight: 300;
-  line-height: 64px;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
+  font-size: 58px;
+  font-weight: 600;
+  line-height: 110%;
+  letter-spacing: -1.16px;
   margin: 0 0 24.5px;
 }
 @media (max-width: 1199.98px) {
@@ -168,11 +181,12 @@ body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div > h1 {
   }
 }
 body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div .lead {
-  color: #14022d;
-  font-family: "Noto Sans", sans-serif;
-  font-size: 16px;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
+  color: #8A61B6;
+  font-size: 18px;
+  font-style: normal;
   font-weight: 400;
-  line-height: 24px;
+  line-height: 140%;
 }
 body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div .stats {
   display: none !important;
@@ -243,12 +257,13 @@ body.spz-7003 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-hidden {
 body.spz-7003 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-title {
   color: #381360;
   text-align: center;
-  font-family: grotesk, "RecentGroteskBlack", sans-serif;
-  font-size: 40px;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
+  font-size: 42px;
   font-style: normal;
-  font-weight: 500;
-  line-height: 40px;
-  text-transform: uppercase;
+  font-weight: 600;
+  line-height: 110%;
+  text-transform: none;
+  letter-spacing: -0.42px;
   padding: 0;
   margin-bottom: 38px;
 }
@@ -274,11 +289,10 @@ body.spz-7003 #HERO .container .spz-social-proof .sp-container {
 }
 body.spz-7003 #HERO .container .spz-social-proof .sp-container .sp-title {
   color: #381360;
-  font-family: adelle, sans-serif;
-  font-size: 24px;
-  font-style: normal;
-  font-weight: 300;
-  line-height: 32px;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
+  font-size: 22px;
+  font-weight: 600;
+  line-height: 110%;
   margin: 0 0 35px;
 }
 body.spz-7003 #HERO .container .spz-social-proof .sp-container .sp-title span {
@@ -318,13 +332,14 @@ body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more {
           align-items: center;
   color: #381360;
   text-align: center;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
   font-size: 16px;
-  font-weight: 700;
+  font-weight: 600;
   line-height: 24px;
-  background: #c7d0ff;
+  border-radius: 16px 16px 0px 0px;
+  background: #85EAA0;
   text-decoration: none;
-  width: 164px;
+  width: 172px;
   height: 48px;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
@@ -335,11 +350,7 @@ body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more svg {
   pointer-events: none;
 }
 body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more:hover {
-  background: #381360;
-  color: #ffffff;
-}
-body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more:hover svg path {
-  stroke: #ffffff;
+  background: #B5EAB9;
 }
 body.spz-7003 #HERO form.mktoForm {
   display: -webkit-box;
@@ -387,7 +398,7 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
   background: #f5f5ff;
   color: #646464 !important;
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Elza", "RecentelzaBlack", sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -419,7 +430,7 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mkto
   -webkit-box-shadow: none;
           box-shadow: none;
   color: #000 !important;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 400 !important;
@@ -516,7 +527,7 @@ body.spz-7003 #HERO form.mktoForm .mktoError .mktoErrorMsg {
   border: none !important;
   padding: 0 0 0 16px;
   color: #f2342f !important;
-  font-family: "Noto Sans", sans-serif !important;
+  font-family: "Elza", "RecentelzaBlack", sans-serif !important;
   font-size: 12px !important;
   font-style: normal;
   font-weight: 400;
@@ -561,7 +572,8 @@ body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   width: 100% !important;
   max-width: calc(100% - 20px);
   height: 48px;
-  background: #7583ff !important;
+  border-radius: 100px !important;
+  background: #85EAA0 !important;
   border: none !important;
   outline: none !important;
   margin: 12px auto 0 !important;
@@ -569,11 +581,11 @@ body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   -webkit-transition: all 0.2s ease !important;
   transition: all 0.2s ease !important;
   position: relative;
-  color: #fff !important;
+  color: #381360 !important;
   text-align: center;
-  font-family: "Noto Sans", sans-serif;
+  font-family: "Elza", "RecentelzaBlack", sans-serif;
   font-size: 16px !important;
-  font-weight: 700 !important;
+  font-weight: 600 !important;
   line-height: 24px !important;
 }
 @media screen and (max-width: 767.98px) {
@@ -583,8 +595,7 @@ body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   }
 }
 body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover {
-  background: #381360 !important;
-  color: #ffffff !important;
+  background: #B5EAB9 !important;
 }
 
 input:-webkit-autofill {
