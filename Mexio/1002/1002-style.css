@@ -31,7 +31,7 @@ body.spz-1002-home #content #blocks-page .hero-generic {
 body.spz-1002-home #content #blocks-page .spz-bg-wrap {
   background: -webkit-gradient(linear, left top, left bottom, from(#200036), to(#000));
   background: linear-gradient(180deg, #200036 0%, #000 100%);
-  padding-top: 72px;
+  padding-top: 68px;
   /*Tiles section*/
 }
 @media (max-width: 1024.98px) {
@@ -326,6 +326,10 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item.active .tile-image svg path {
   stroke: #22084d;
 }
+body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item.active:nth-child(1) .tile-image svg path, body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item.active:nth-child(4) .tile-image svg path {
+  stroke: #22084d;
+  fill: #22084d;
+}
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email {
   max-width: var(--container-width);
   margin-left: auto;
@@ -594,35 +598,40 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wra
   }
 }
 
-.social-proof-image {
-  margin-top: 48px;
-  max-width: var(--container-width);
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /*UI Image Section*/
 .interface-image-wrap {
   max-width: var(--container-width);
   width: 100%;
   margin: 72px auto 0;
 }
-@media (max-width: 1024.98px) {
+@media (min-width: 767.98px) and (max-width: 1024.98px) {
   .interface-image-wrap {
-    margin-top: 79px;
-    max-width: 728px;
+    margin-top: 80px;
+    max-width: 100%;
   }
 }
 
 /*Social Proof Logos*/
 .social-proof-logos {
+  background: #0d0314;
+  padding: 32px;
+}
+@media (max-width: 1024.98px) {
+  .social-proof-logos {
+    padding: 22px 32px;
+  }
+}
+@media (max-width: 767.98px) {
+  .social-proof-logos {
+    padding: 32px 28px;
+  }
+}
+.social-proof-logos .sp-container {
   max-width: var(--container-width);
   width: 100%;
   margin: 0 auto;
 }
-
-@media (max-width: 991px) {
-  .social-proof-logos {
-    max-width: 648px;
-  }
+.social-proof-logos .sp-container img {
+  opacity: 0.5;
+  margin: auto;
 }
