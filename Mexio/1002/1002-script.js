@@ -249,21 +249,22 @@ function addHero(formData, whereToPut, template_heroSelector, template_additiona
 	});
 }
 
-
-
-//demo page
-if (location.href.indexOf("https://www2.maxio.com/l/699023/2022-08-16/nh4lk") > -1) {
-	var iframebodyEle = document.querySelector('body');
-	iframebodyEle.classList.add('spz-1002-iframe');
-	waitForElm('.spz-1002-iframe form#pardot-form .submit input').then(function () {
-		hiddenValue();
-	});
+//iframe page
+function load_iframe() {
+	if (location.href.indexOf("https://www2.maxio.com/l/699023/2022-08-16/nh4lk") > -1) {
+		var iframebodyEle = document.querySelector('body');
+		iframebodyEle.classList.add('spz-1002-iframe');
+		waitForElm('.spz-1002-iframe form#pardot-form .submit input').then(function () {
+			hiddenValue();
+		});
+	}
 }
 
 let checkBody = setInterval(function () {
 	if (document.querySelectorAll('body').length > 0) {
 		clearInterval(checkBody);
 		load_1002();
+		load_iframe();
 	}
 });
 function load_1002() {

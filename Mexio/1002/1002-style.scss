@@ -54,7 +54,7 @@ body.spz-1002-home {
 
       .spz-bg-wrap {
         background: linear-gradient(180deg, #200036 0%, #000 100%);
-        padding-top: 68px;
+        padding: 68px 0 0;
 
         @media (max-width: 1024.98px) {
           padding-top: 56px;
@@ -129,7 +129,7 @@ body.spz-1002-home {
             background-clip: text;
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
-            margin-bottom: 54px;
+            margin-bottom: 55px;
 
             @media (max-width: 1024.98px) {
               font-size: 48px;
@@ -150,10 +150,11 @@ body.spz-1002-home {
 
         /*Tiles section*/
         .tiles-wrap {
-          max-width: var(--container-width);
+          max-width: 1260px;
           margin-left: auto;
           margin-right: auto;
-          margin-bottom: 39.5px;
+          padding: 0 20px;
+          margin-bottom: 40.5px;
 
           @media (max-width: 1024.98px) {
             margin-bottom: 25.5px;
@@ -218,10 +219,12 @@ body.spz-1002-home {
               align-items: center;
               cursor: pointer;
               position: relative;
+              max-height: 144px;
 
               @media (max-width: 1024.98px) {
                 max-width: 229.33px;
                 padding: 24px 8px 0px 8px;
+                max-height: 136px;
               }
 
               @media screen and (max-width: 767.98px) {
@@ -605,7 +608,7 @@ body.spz-1002-home {
 /*Social Proof Logos*/
 
 .social-proof-logos {
-  background: #0d0314;
+  background: #0D0314;
   padding: 32px;
 
   @media (max-width: 1024.98px) {

@@ -31,7 +31,7 @@ body.spz-1002-home #content #blocks-page .hero-generic {
 body.spz-1002-home #content #blocks-page .spz-bg-wrap {
   background: -webkit-gradient(linear, left top, left bottom, from(#200036), to(#000));
   background: linear-gradient(180deg, #200036 0%, #000 100%);
-  padding-top: 68px;
+  padding: 68px 0 0;
   /*Tiles section*/
 }
 @media (max-width: 1024.98px) {
@@ -117,7 +117,7 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .content-section .content-
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
-  margin-bottom: 54px;
+  margin-bottom: 55px;
 }
 @media (max-width: 1024.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .content-section .content-heading {
@@ -136,10 +136,11 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .content-section .content-
   }
 }
 body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap {
-  max-width: var(--container-width);
+  max-width: 1260px;
   margin-left: auto;
   margin-right: auto;
-  margin-bottom: 39.5px;
+  padding: 0 20px;
+  margin-bottom: 40.5px;
 }
 @media (max-width: 1024.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap {
@@ -217,11 +218,13 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .
           align-items: center;
   cursor: pointer;
   position: relative;
+  max-height: 144px;
 }
 @media (max-width: 1024.98px) {
   body.spz-1002-home #content #blocks-page .spz-bg-wrap .tiles-wrap .tiles-items .tile-item {
     max-width: 229.33px;
     padding: 24px 8px 0px 8px;
+    max-height: 136px;
   }
 }
 @media screen and (max-width: 767.98px) {
@@ -613,7 +616,7 @@ body.spz-1002-home #content #blocks-page .spz-bg-wrap .spz-email .form-group-wra
 
 /*Social Proof Logos*/
 .social-proof-logos {
-  background: #0d0314;
+  background: #0D0314;
   padding: 32px;
 }
 @media (max-width: 1024.98px) {
