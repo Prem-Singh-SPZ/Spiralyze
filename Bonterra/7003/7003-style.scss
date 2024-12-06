@@ -61,6 +61,8 @@ body.spz-7003 {
 
       @media (max-width: 767.98px) {
         max-width: 510px;
+        padding-left: 16px;
+        padding-right: 16px;
       }
 
       &::before {
@@ -76,13 +78,13 @@ body.spz-7003 {
         );
         pointer-events: none;
 
+        display: none;
         @media (max-width: 1199.98px) {
-          display: none;
         }
       }
 
       .spz-logo-wrapper {
-        margin-bottom: 58px;
+        margin-bottom: 50px;
         margin-top: 23px;
 
         @media (max-width: 1199.98px) {
@@ -91,7 +93,7 @@ body.spz-7003 {
         }
 
         @media (max-width: 767.98px) {
-          margin-bottom: 36px;
+          margin-bottom: 40px;
         }
       }
 
@@ -171,18 +173,19 @@ body.spz-7003 {
                 font-weight: 600;
                 line-height: 110%;
                 letter-spacing: -1.16px;
-                margin: 0 0 24.5px;
+                margin: 0 0 20.5px;
 
                 @media (max-width: 1199.98px) {
-                  font-size: 48px;
-                  line-height: 56px;
-                  margin: 0 0 20.5px;
+                  // font-size: 48px;
+                  // line-height: 56px;
+                  margin: 0 0 16.5px;
                 }
 
                 @media (max-width: 767.98px) {
                   font-size: 32px;
-                  line-height: 40px;
-                  margin: 0 0 19.5px;
+                  line-height: 110%; /* 35.2px */
+                  letter-spacing: -0.32px;
+                  margin: 0 0 15.5px;
                 }
               }
 
@@ -193,6 +196,11 @@ body.spz-7003 {
                 font-style: normal;
                 font-weight: 400;
                 line-height: 140%;
+
+                @media (max-width: 767.98px) {
+                  font-size: 16px;
+                  line-height: 22px;
+                }
               }
 
               .stats {
@@ -233,8 +241,8 @@ body.spz-7003 {
                 left: -129px;
               }
 
+              display: none;
               @media (max-width: 767.98px) {
-                display: none;
               }
             }
           }
@@ -251,11 +259,18 @@ body.spz-7003 {
             );
             z-index: 1;
             border-radius: 12px;
-            background: var(--Linear, linear-gradient(180deg, #FFF 68.91%, rgba(255, 255, 255, 0.96) 100%));
-            box-shadow: 15.392px 15.392px 76.958px 0px rgba(0, 0, 0, 0.10);
+            background: var(
+              --Linear,
+              linear-gradient(
+                180deg,
+                #fff 68.91%,
+                rgba(255, 255, 255, 0.96) 100%
+              )
+            );
+            box-shadow: 15.392px 15.392px 76.958px 0px rgba(0, 0, 0, 0.1);
             max-width: 616px;
             width: 100%;
-            padding: 22px 24px 40px;
+            padding: 32px 24px 40px;
             margin-left: auto;
             margin-bottom: 13px;
 
@@ -267,7 +282,7 @@ body.spz-7003 {
             }
 
             @media screen and (max-width: 767.98px) {
-              padding: 22px 6px 32px;
+              padding: 17px 6px 32px;
               // box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
               max-width: calc(100% - 2px);
             }
@@ -287,14 +302,14 @@ body.spz-7003 {
               text-transform: none;
               letter-spacing: -0.42px;
               padding: 0;
-              margin-bottom: 37px;
+              margin-bottom: 39px;
 
               @media screen and (max-width: 767.98px) {
                 font-size: 32px;
                 line-height: 48px;
                 // letter-spacing: 0.64px;
-                text-transform: uppercase;
-                margin-bottom: 18px;
+                // text-transform: uppercase;
+                margin-bottom: 33px;
               }
             }
           }
@@ -302,7 +317,7 @@ body.spz-7003 {
       }
 
       .spz-social-proof {
-        margin: 16.5px 0 63.5px;
+        margin: 18.5px 0 36.5px;
         background: #f5f5ff;
 
         @media screen and (max-width: 767.98px) {
@@ -318,16 +333,16 @@ body.spz-7003 {
             font-size: 22px;
             font-weight: 600;
             line-height: 110%;
-            margin: 0 0 35px;
+            margin: 0 0 31px;
 
             span {
               color: #7583ff;
             }
 
             @media (max-width: 1199.98px) {
-              font-size: 20px;
-              line-height: 28px;
-              margin: 0 0 25.5px;
+              // font-size: 20px;
+              // line-height: 28px;
+              margin: 0 0 23.5px;
             }
           }
         }
@@ -461,7 +476,7 @@ body.spz-7003 {
               background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23381360' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
               background-size: 16px;
               background-repeat: no-repeat;
-              background-position: calc(100% - 13px) 21px;
+              background-position: calc(100% - 14px) 18px;
             }
 
             // &.error {
@@ -486,7 +501,7 @@ body.spz-7003 {
               .mktoLabel {
                 letter-spacing: -0.12px;
                 font-size: 12px !important;
-                line-height: 120%; 
+                line-height: 120%;
                 top: -8px;
                 color: #381360 !important;
                 background: #ffffff;
@@ -502,7 +517,7 @@ body.spz-7003 {
               .mktoLabel {
                 font-size: 12px !important;
                 top: -8px;
-                line-height: 120%; 
+                line-height: 120%;
                 letter-spacing: -0.12px;
                 background: #ffffff;
               }
