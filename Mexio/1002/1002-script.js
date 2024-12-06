@@ -90,7 +90,7 @@ const template_additionalSection = {
 	interfaceImage: [
 		{
 			breakPoint: 1024,
-			url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1002/image_ui.webp",
+			url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/1002/image_ui.png",
 		},
 		{
 			breakPoint: 768,
