@@ -18,7 +18,6 @@
   font-weight: 400;
 }
 
-
 // @font-face {
 //   font-family: "Elza";
 //   src: url(//res.cloudinary.com/spiralyze/raw/upload/v1733408679/bonterra/fonts/Elza/Elza-Medium.otf);
@@ -83,7 +82,7 @@ body.spz-7003 {
       }
 
       .spz-logo-wrapper {
-        margin-bottom: 24px;
+        margin-bottom: 58px;
         margin-top: 23px;
 
         @media (max-width: 1199.98px) {
@@ -189,7 +188,7 @@ body.spz-7003 {
 
               .lead {
                 font-family: $elza;
-                color: #8A61B6;
+                color: #8a61b6;
                 font-size: 18px;
                 font-style: normal;
                 font-weight: 400;
@@ -251,10 +250,12 @@ body.spz-7003 {
               rgba(255, 255, 255, 0.96) 100%
             );
             z-index: 1;
-            box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
+            border-radius: 12px;
+            background: var(--Linear, linear-gradient(180deg, #FFF 68.91%, rgba(255, 255, 255, 0.96) 100%));
+            box-shadow: 15.392px 15.392px 76.958px 0px rgba(0, 0, 0, 0.10);
             max-width: 616px;
             width: 100%;
-            padding: 42px 30px 40px;
+            padding: 22px 24px 40px;
             margin-left: auto;
             margin-bottom: 13px;
 
@@ -286,7 +287,7 @@ body.spz-7003 {
               text-transform: none;
               letter-spacing: -0.42px;
               padding: 0;
-              margin-bottom: 38px;
+              margin-bottom: 37px;
 
               @media screen and (max-width: 767.98px) {
                 font-size: 32px;
@@ -353,7 +354,7 @@ body.spz-7003 {
           font-weight: 600;
           line-height: 24px;
           border-radius: 16px 16px 0px 0px;
-          background: #85EAA0;
+          background: #85eaa0;
           text-decoration: none;
           width: 172px;
           height: 48px;
@@ -366,7 +367,7 @@ body.spz-7003 {
           }
 
           &:hover {
-            background: #B5EAB9;
+            background: #b5eab9;
 
             // svg path {
             //   stroke: #ffffff;
@@ -387,7 +388,7 @@ body.spz-7003 {
       background: transparent !important;
 
       .mktoFormRow {
-        padding: 0 10px !important;
+        padding: 0 8px !important;
 
         .mktoFormCol {
           width: 100% !important;
@@ -407,15 +408,15 @@ body.spz-7003 {
             }
 
             .mktoLabel {
-              background: #f5f5ff;
+              background: #fff;
               // background: transparent;
-              color: #646464 !important;
+              color: #381360 !important;
               font-family: $elza !important;
               font-size: 16px !important;
               font-style: normal;
               font-weight: 400 !important;
               line-height: 1.4;
-              padding: 1px 6px !important;
+              padding: 2px 4px !important;
               margin: 0;
               position: absolute;
               width: max-content !important;
@@ -423,19 +424,18 @@ body.spz-7003 {
               white-space: nowrap;
               overflow: hidden;
               text-overflow: ellipsis;
-
-              top: 16px;
-              left: 10px;
+              top: 15px;
+              left: 16px;
               pointer-events: none;
               transition: all 0.2s ease !important;
             }
             .mktoField {
               width: 100% !important;
-              height: 56px !important;
+              height: 54px !important;
               padding: 16px 16px !important;
-              background-color: #f5f5ff !important;
-              border: 1px solid #f5f5ff !important;
-              border-radius: 0;
+              // background-color: #f5f5ff !important;
+              border: 1px solid #c7d0ff !important;
+              border-radius: 100px;
               outline: none;
               box-shadow: none;
               color: #000 !important;
@@ -449,18 +449,19 @@ body.spz-7003 {
               overflow: hidden;
               white-space: nowrap;
               transition: all 0.2s ease;
+              outline: none;
 
               &:hover {
-                background-color: #ffffff !important;
+                // background-color: #ffffff !important;
                 border-color: #381360 !important;
               }
             }
             select.mktoField {
               padding-right: 40px !important;
-              background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
-              background-size: 24px;
+              background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23381360' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+              background-size: 16px;
               background-repeat: no-repeat;
-              background-position: calc(100% - 13px) 15px;
+              background-position: calc(100% - 13px) 21px;
             }
 
             // &.error {
@@ -475,39 +476,40 @@ body.spz-7003 {
             //   }
             // }
 
-            &.hover {
-              .mktoLabel {
-                background: #ffffff !important;
-              }
-            }
+            // &.hover {
+            //   .mktoLabel {
+            //     background: #ffffff !important;
+            //   }
+            // }
 
             &.active.typing {
               .mktoLabel {
+                letter-spacing: -0.12px;
                 font-size: 12px !important;
-                line-height: 16px;
+                line-height: 120%; 
                 top: -8px;
                 color: #381360 !important;
                 background: #ffffff;
               }
               .mktoField {
-                background-color: #ffffff !important;
+                // background-color: #ffffff !important;
                 border: 1px solid #381360 !important;
-                outline: 2px solid rgba(153, 167, 255, 0.5) !important;
+                // outline: 2px solid rgba(153, 167, 255, 0.5) !important;
               }
             }
 
             &.filled {
               .mktoLabel {
                 font-size: 12px !important;
-                line-height: 16px;
                 top: -8px;
-                color: #646464 !important;
+                line-height: 120%; 
+                letter-spacing: -0.12px;
                 background: #ffffff;
               }
-              .mktoField {
-                background-color: #ffffff !important;
-                border: 1px solid #c4bbcf !important;
-              }
+              // .mktoField {
+              //   // background-color: #ffffff !important;
+              //   // border: 1px solid #c4bbcf !important;
+              // }
             }
 
             &.hover.filled {
@@ -517,14 +519,13 @@ body.spz-7003 {
             }
 
             &.error {
-              .mktoLabel {
-                background: #f5f5ff;
-                // background: transparent;
-              }
+              // .mktoLabel {
+              //   background: #f5f5ff;
+              //   // background: transparent;
+              // }
               .mktoField {
                 border: 1px solid #f2342f !important;
-                background-color: #ffffff;
-                outline: none;
+                // background-color: #ffffff;
               }
 
               &.filled {
@@ -540,8 +541,8 @@ body.spz-7003 {
               }
               .mktoField {
                 border: 1px solid #f2342f !important;
-                background-color: #ffffff;
-                outline: none !important;
+                // background-color: #ffffff;
+                // outline: none !important;
               }
             }
           }
@@ -577,6 +578,7 @@ body.spz-7003 {
           font-style: normal;
           font-weight: 400;
           line-height: 16px;
+          letter-spacing: -0.12px;
           text-shadow: none !important;
           max-width: unset !important;
           position: relative;
@@ -610,7 +612,7 @@ body.spz-7003 {
             max-width: calc(100% - 20px);
             height: 48px;
             border-radius: 100px !important;
-            background: #85EAA0 !important;
+            background: #85eaa0 !important;
             border: none !important;
             outline: none !important;
             margin: 12px auto 0 !important;
@@ -630,7 +632,7 @@ body.spz-7003 {
             }
 
             &:hover {
-              background: #B5EAB9 !important;
+              background: #b5eab9 !important;
             }
             // &:focus {
             //   outline: 1px solid #447f19;
@@ -643,18 +645,18 @@ body.spz-7003 {
 }
 input {
   &:-webkit-autofill {
-    -webkit-box-shadow: 0 0 0 56px white inset !important;
+    -webkit-box-shadow: 0 0 0 54px white inset !important;
     -webkit-text-fill-color: #000 !important;
     &:hover {
-      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-box-shadow: 0 0 0 54px white inset !important;
       -webkit-text-fill-color: #000 !important;
     }
     &:focus {
-      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-box-shadow: 0 0 0 54px white inset !important;
       -webkit-text-fill-color: #000 !important;
     }
     &:active {
-      -webkit-box-shadow: 0 0 0 56px white inset !important;
+      -webkit-box-shadow: 0 0 0 54px white inset !important;
       -webkit-text-fill-color: #000 !important;
     }
   }

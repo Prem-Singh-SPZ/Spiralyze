@@ -66,7 +66,7 @@ body.spz-7003 #HERO .container::before {
   }
 }
 body.spz-7003 #HERO .container .spz-logo-wrapper {
-  margin-bottom: 24px;
+  margin-bottom: 58px;
   margin-top: 23px;
 }
 @media (max-width: 1199.98px) {
@@ -182,7 +182,7 @@ body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div > h1 {
 }
 body.spz-7003 #HERO .container .block-wrapper .block-2 > .mktoText > div .lead {
   font-family: "Elza", "RecentelzaBlack", sans-serif;
-  color: #8A61B6;
+  color: #8a61b6;
   font-size: 18px;
   font-style: normal;
   font-weight: 400;
@@ -229,11 +229,13 @@ body.spz-7003 #HERO .container .block-wrapper .block-3 > .mktoForm {
   background: -webkit-gradient(linear, left top, left bottom, color-stop(68.91%, #fff), to(rgba(255, 255, 255, 0.96)));
   background: linear-gradient(180deg, #fff 68.91%, rgba(255, 255, 255, 0.96) 100%);
   z-index: 1;
-  -webkit-box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
-          box-shadow: 0px 20px 80px 0px rgba(40, 14, 67, 0.15);
+  border-radius: 12px;
+  background: var(--Linear, linear-gradient(180deg, #FFF 68.91%, rgba(255, 255, 255, 0.96) 100%));
+  -webkit-box-shadow: 15.392px 15.392px 76.958px 0px rgba(0, 0, 0, 0.1);
+          box-shadow: 15.392px 15.392px 76.958px 0px rgba(0, 0, 0, 0.1);
   max-width: 616px;
   width: 100%;
-  padding: 42px 30px 40px;
+  padding: 22px 24px 40px;
   margin-left: auto;
   margin-bottom: 13px;
 }
@@ -265,7 +267,7 @@ body.spz-7003 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-tit
   text-transform: none;
   letter-spacing: -0.42px;
   padding: 0;
-  margin-bottom: 38px;
+  margin-bottom: 37px;
 }
 @media screen and (max-width: 767.98px) {
   body.spz-7003 #HERO .container .block-wrapper .block-3 > .mktoForm .spz-form-title {
@@ -337,7 +339,7 @@ body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more {
   font-weight: 600;
   line-height: 24px;
   border-radius: 16px 16px 0px 0px;
-  background: #85EAA0;
+  background: #85eaa0;
   text-decoration: none;
   width: 172px;
   height: 48px;
@@ -350,7 +352,7 @@ body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more svg {
   pointer-events: none;
 }
 body.spz-7003 #HERO .container .lm-cta-wrapper .spz_learn_more:hover {
-  background: #B5EAB9;
+  background: #b5eab9;
 }
 body.spz-7003 #HERO form.mktoForm {
   display: -webkit-box;
@@ -370,7 +372,7 @@ body.spz-7003 #HERO form.mktoForm {
   background: transparent !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow {
-  padding: 0 10px !important;
+  padding: 0 8px !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol {
   width: 100% !important;
@@ -396,14 +398,14 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap {
   }
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoLabel {
-  background: #f5f5ff;
-  color: #646464 !important;
+  background: #fff;
+  color: #381360 !important;
   font-family: "Elza", "RecentelzaBlack", sans-serif !important;
   font-size: 16px !important;
   font-style: normal;
   font-weight: 400 !important;
   line-height: 1.4;
-  padding: 1px 6px !important;
+  padding: 2px 4px !important;
   margin: 0;
   position: absolute;
   width: -webkit-max-content !important;
@@ -413,19 +415,18 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mkto
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-  top: 16px;
-  left: 10px;
+  top: 15px;
+  left: 16px;
   pointer-events: none;
   -webkit-transition: all 0.2s ease !important;
   transition: all 0.2s ease !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField {
   width: 100% !important;
-  height: 56px !important;
+  height: 54px !important;
   padding: 16px 16px !important;
-  background-color: #f5f5ff !important;
-  border: 1px solid #f5f5ff !important;
-  border-radius: 0;
+  border: 1px solid #c7d0ff !important;
+  border-radius: 100px;
   outline: none;
   -webkit-box-shadow: none;
           box-shadow: none;
@@ -443,54 +444,41 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mkto
   white-space: nowrap;
   -webkit-transition: all 0.2s ease;
   transition: all 0.2s ease;
+  outline: none;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap .mktoField:hover {
-  background-color: #ffffff !important;
   border-color: #381360 !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap select.mktoField {
   padding-right: 40px !important;
-  background-image: url("//res.cloudinary.com/spiralyze/image/upload/v1725596964/bonterra/1001/Dropdown.svg");
-  background-size: 24px;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 16 16' fill='none'%3E%3Cpath d='M4 6L8 10L12 6' stroke='%23381360' stroke-width='1.5' stroke-linecap='square'/%3E%3C/svg%3E");
+  background-size: 16px;
   background-repeat: no-repeat;
-  background-position: calc(100% - 13px) 15px;
-}
-body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.hover .mktoLabel {
-  background: #ffffff !important;
+  background-position: calc(100% - 13px) 21px;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.active.typing .mktoLabel {
+  letter-spacing: -0.12px;
   font-size: 12px !important;
-  line-height: 16px;
+  line-height: 120%;
   top: -8px;
   color: #381360 !important;
   background: #ffffff;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.active.typing .mktoField {
-  background-color: #ffffff !important;
   border: 1px solid #381360 !important;
-  outline: 2px solid rgba(153, 167, 255, 0.5) !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.filled .mktoLabel {
   font-size: 12px !important;
-  line-height: 16px;
   top: -8px;
-  color: #646464 !important;
+  line-height: 120%;
+  letter-spacing: -0.12px;
   background: #ffffff;
-}
-body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.filled .mktoField {
-  background-color: #ffffff !important;
-  border: 1px solid #c4bbcf !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.hover.filled .mktoField {
   border-color: #381360 !important;
 }
-body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.error .mktoLabel {
-  background: #f5f5ff;
-}
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.error .mktoField {
   border: 1px solid #f2342f !important;
-  background-color: #ffffff;
-  outline: none;
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.error.filled .mktoLabel {
   background: #ffffff;
@@ -500,8 +488,6 @@ body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.error
 }
 body.spz-7003 #HERO form.mktoForm .mktoFormRow .mktoFormCol .mktoFieldWrap.error.active.typing .mktoField {
   border: 1px solid #f2342f !important;
-  background-color: #ffffff;
-  outline: none !important;
 }
 body.spz-7003 #HERO form.mktoForm .mktoError {
   position: relative;
@@ -532,6 +518,7 @@ body.spz-7003 #HERO form.mktoForm .mktoError .mktoErrorMsg {
   font-style: normal;
   font-weight: 400;
   line-height: 16px;
+  letter-spacing: -0.12px;
   text-shadow: none !important;
   max-width: unset !important;
   position: relative;
@@ -573,7 +560,7 @@ body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   max-width: calc(100% - 20px);
   height: 48px;
   border-radius: 100px !important;
-  background: #85EAA0 !important;
+  background: #85eaa0 !important;
   border: none !important;
   outline: none !important;
   margin: 12px auto 0 !important;
@@ -595,22 +582,22 @@ body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButt
   }
 }
 body.spz-7003 #HERO form.mktoForm .mktoButtonRow .mktoButtonWrap button.mktoButton:hover {
-  background: #B5EAB9 !important;
+  background: #b5eab9 !important;
 }
 
 input:-webkit-autofill {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-box-shadow: 0 0 0 54px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
 input:-webkit-autofill:hover {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-box-shadow: 0 0 0 54px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
 input:-webkit-autofill:focus {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-box-shadow: 0 0 0 54px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
 input:-webkit-autofill:active {
-  -webkit-box-shadow: 0 0 0 56px white inset !important;
+  -webkit-box-shadow: 0 0 0 54px white inset !important;
   -webkit-text-fill-color: #000 !important;
 }
