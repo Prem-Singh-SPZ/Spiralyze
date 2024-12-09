@@ -1,3 +1,13 @@
+//check if current url has _vis_test_id query parameter in the url then get the value of the query parameter
+var urlParams = new URLSearchParams(window.location.search);
+var vis_test_id = urlParams.get('_vis_test_id');
+if (vis_test_id) {
+  var vis_opt_random = urlParams.get('_vis_opt_random');
+  var vis_hash = urlParams.get('_vis_hash');
+  var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
+  var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
+}
+
 // iFrame Code
 function formPage() {
   var iframebodyInterval = setInterval(function () {
@@ -27,9 +37,9 @@ function formPage() {
           var formAction = document.querySelector('body #pardot-form').action;
           //check if url has query params
           if (formAction.includes('?')) {
-            document.querySelector('body #pardot-form').action = formAction + '&spz=2006';
+            document.querySelector('body #pardot-form').action = formAction + '&spz=2006' + '&' + urlQuery;
           } else {
-            document.querySelector('body #pardot-form').action = formAction + '?spz=2006';
+            document.querySelector('body #pardot-form').action = formAction + '?spz=2006' + '&' + urlQuery;
           }
         });
 
@@ -57,6 +67,8 @@ function formPage() {
               event.target.closest('.spz-2006-v2-iframe form#pardot-form .form-field').classList.add('active', 'typing');
             }
           }, true);
+          checkFilledVisibility();
+
           var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
           for (let s_event of eventList) {
             document.addEventListener(s_event, function (event) {
@@ -137,16 +149,6 @@ function formPage() {
       }
     }
   });
-}
-
-//check if current url has _vis_test_id query parameter in the url then get the value of the query parameter
-var urlParams = new URLSearchParams(window.location.search);
-var vis_test_id = urlParams.get('_vis_test_id');
-if (vis_test_id) {
-  var vis_opt_random = urlParams.get('_vis_opt_random');
-  var vis_hash = urlParams.get('_vis_hash');
-  var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
-  var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
 }
 
 // Main Page Code
@@ -355,6 +357,10 @@ function demoPage() {
             }
           }
         }, 500);
+      });
+
+      waitForElm('.theme-white style').then(function () {
+        document.querySelector('.theme-white style').remove();
       });
     }
   });
