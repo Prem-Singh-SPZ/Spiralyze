@@ -3,9 +3,9 @@ function formPage() {
     var iframebodyInterval = setInterval(function () {
         var iframebodyEle = document.querySelector('body');
         if (iframebodyEle) {
-            if (!iframebodyEle.classList.contains('SPZ-2001-TC-iframe')) {
+            if (!iframebodyEle.classList.contains('SPZ-2006-TC-iframe')) {
                 clearInterval(iframebodyInterval);
-                iframebodyEle.classList.add('SPZ-2001-TC-iframe');
+                iframebodyEle.classList.add('SPZ-2006-TC-iframe');
                 hiddenValue();
             }
         }
@@ -16,20 +16,20 @@ function formPage() {
 function demoPage() {
     var bodyInterval = setInterval(function () {
         var bodyEle = document.querySelector('body');
-        if (!bodyEle.classList.contains('SPZ-2001-TC')) {
+        if (!bodyEle.classList.contains('SPZ-2006-TC')) {
             clearInterval(bodyInterval);
-            bodyEle.classList.add('SPZ-2001-TC');
-            cookieValue('#2001', '#2001_true_control');
+            bodyEle.classList.add('SPZ-2006-TC');
+            cookieValue('#2006', '#2006_true_control');
 
             waitForElm('.theme-white iframe').then(function () {
                 setTimeout(() => {
                     var iframeSrc = document.querySelector('.theme-white iframe').src;
                     //check if url has query params
                     if (iframeSrc.includes('?')) {
-                        //replace question mark string with "?spz=2001&" in the url
-                        document.querySelector('.theme-white iframe').src = iframeSrc.replace('?', '?spz=2001&');
+                        //replace question mark string with "?spz=2006&" in the url
+                        document.querySelector('.theme-white iframe').src = iframeSrc.replace('?', '?spz=2006&');
                     } else {
-                        document.querySelector('.theme-white iframe').src = iframeSrc + '?spz=2001';
+                        document.querySelector('.theme-white iframe').src = iframeSrc + '?spz=2006';
                     }
                 }, 500);
             });
@@ -40,7 +40,7 @@ function demoPage() {
 if (location.href.indexOf('/demo') > -1) {
     demoPage();
 }
-if (location.href.indexOf('spz=2001') > -1) {
+if (location.href.indexOf('spz=2006') > -1) {
     formPage();
 }
 

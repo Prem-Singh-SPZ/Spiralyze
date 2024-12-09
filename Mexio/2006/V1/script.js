@@ -3,9 +3,9 @@ function formPage() {
   var iframebodyInterval = setInterval(function () {
     var iframebodyEle = document.querySelector('body');
     if (iframebodyEle) {
-      if (!iframebodyEle.classList.contains('spz-2001-v1-iframe-v1')) {
+      if (!iframebodyEle.classList.contains('spz-2006-v1-iframe')) {
         clearInterval(iframebodyInterval);
-        iframebodyEle.classList.add('spz-2001-v1-iframe-v1');
+        iframebodyEle.classList.add('spz-2006-v1-iframe');
         function check_spzdevicewidth_fun() {
           var check_spzdevicewidth = setInterval(() => {
             const storedData = getCookie('spzdevicewidth');
@@ -27,51 +27,58 @@ function formPage() {
           var formAction = document.querySelector('body #pardot-form').action;
           //check if url has query params
           if (formAction.includes('?')) {
-            document.querySelector('body #pardot-form').action = formAction + '&spz=2001';
+            document.querySelector('body #pardot-form').action = formAction + '&spz=2006';
           } else {
-            document.querySelector('body #pardot-form').action = formAction + '?spz=2001';
+            document.querySelector('body #pardot-form').action = formAction + '?spz=2006';
           }
         });
 
-        waitForElm('.spz-2001-v1-iframe-v1 form#pardot-form .submit input').then(function () {
-          document.querySelector(".spz-2001-v1-iframe-v1 form#pardot-form").insertAdjacentHTML("beforebegin", `<div class="form-heading" style="display: none;">Get a Demo</div>`);
+        waitForElm('.spz-2006-v1-iframe form#pardot-form .submit input').then(function () {
+          document.querySelector(".spz-2006-v1-iframe form#pardot-form").insertAdjacentHTML("beforebegin", `<div class="form-heading" style="display: none;">Get a Demo</div>`);
           hiddenValue();
-          var all_inputs = document.querySelectorAll('.spz-2001-v1-iframe-v1 form#pardot-form input, .spz-2001-v1-iframe-v1 form#pardot-form select');
+
+          document.querySelector('.spz-2006-v1-iframe form#pardot-form .country').classList.add('spz-hidden');
+          document.querySelector('.spz-2006-v1-iframe form#pardot-form .Employee_Count').classList.add('spz-hidden');
+          document.querySelector('.spz-2006-v1-iframe form#pardot-form .pd-checkbox').classList.add('spz-hidden');
+
+          var all_inputs = document.querySelectorAll('.spz-2006-v1-iframe form#pardot-form input, .spz-2006-v1-iframe form#pardot-form select');
           all_inputs.forEach(function (element) {
             element.removeAttribute('placeholder');
             if (element.tagName == 'SELECT' && element.selectedIndex !== 0 && element.closest('.form-field') !== null) {
-              element.closest('.spz-2001-v1-iframe-v1 form#pardot-form .form-field').classList.add('filled');
+              element.closest('.spz-2006-v1-iframe form#pardot-form .form-field').classList.add('filled');
             }
             if (element.tagName !== 'SELECT' && element.value != '' && element.closest('.form-field') !== null) {
-              element.closest('.spz-2001-v1-iframe-v1 form#pardot-form .form-field').classList.add('filled');
+              element.closest('.spz-2006-v1-iframe form#pardot-form .form-field').classList.add('filled');
             }
           });
-          var selector = '.spz-2001-v1-iframe-v1 form#pardot-form .form-field input, .spz-2001-v1-iframe-v1 form#pardot-form .form-field select';
+          var selector = '.spz-2006-v1-iframe form#pardot-form .form-field input, .spz-2006-v1-iframe form#pardot-form .form-field select';
           document.addEventListener('focus', function (event) {
             if (event.target.matches && event.target.matches(selector)) {
-              event.target.closest('.spz-2001-v1-iframe-v1 form#pardot-form .form-field').classList.add('active', 'typing');
+              event.target.closest('.spz-2006-v1-iframe form#pardot-form .form-field').classList.add('active', 'typing');
             }
           }, true);
           var eventList = ["focusin", "blur", "focusout", "keyup", "change"];
           for (let s_event of eventList) {
             document.addEventListener(s_event, function (event) {
+              checkFilledVisibility();
               if (event.target.matches && event.target.matches(selector)) {
                 if (event.target.value == null || event.target.value == '') {
-                  event.target.closest('.spz-2001-v1-iframe-v1 form#pardot-form .form-field').classList.remove('filled');
+                  event.target.closest('.spz-2006-v1-iframe form#pardot-form .form-field').classList.remove('filled');
                 } else {
                   if (event.target.tagName == 'SELECT' && event.target.selectedIndex !== 0) {
-                    event.target.closest('.spz-2001-v1-iframe-v1 form#pardot-form .form-field').classList.add('filled');
+                    event.target.closest('.spz-2006-v1-iframe form#pardot-form .form-field').classList.add('filled');
                   }
                   if (event.target.tagName !== 'SELECT') {
-                    event.target.closest('.spz-2001-v1-iframe-v1 form#pardot-form .form-field').classList.add('filled');
+                    event.target.closest('.spz-2006-v1-iframe form#pardot-form .form-field').classList.add('filled');
                   }
                 }
               }
             });
           }
           document.addEventListener('focusout', function (event) {
-            document.querySelectorAll('.spz-2001-v1-iframe-v1 form#pardot-form .form-field.typing').forEach(function (elem) {
+            document.querySelectorAll('.spz-2006-v1-iframe form#pardot-form .form-field.typing').forEach(function (elem) {
               elem.classList.remove('active', 'typing');
+              checkFilledVisibility();
             })
           }, true);
 
@@ -100,12 +107,12 @@ function formPage() {
         function checkFormSubmit() {
           var countNew = 1;
           var chekFormSubmit = setInterval(function () {
-            if (document.querySelector('.spz-2001-v1-iframe-v1 form#pardot-form .submit input') == null) {
+            if (document.querySelector('.spz-2006-v1-iframe form#pardot-form .submit input') == null) {
               clearInterval(chekFormSubmit);
-              document.querySelectorAll('.spz-2001-v1-iframe-v1 form#pardot-form > p').forEach((PEle) => {
+              document.querySelectorAll('.spz-2006-v1-iframe form#pardot-form > p').forEach((PEle) => {
                 if (PEle.textContent == 'We look forward to speaking with you soon!') {
-                  if (document.querySelector('.spz-2001-v1-iframe-v1 .form-heading')) {
-                    document.querySelector('.spz-2001-v1-iframe-v1 .form-heading').style.display = "none";
+                  if (document.querySelector('.spz-2006-v1-iframe .form-heading')) {
+                    document.querySelector('.spz-2006-v1-iframe .form-heading').style.display = "none";
                   }
                 }
               });
@@ -116,6 +123,17 @@ function formPage() {
             countNew++;
           }, 100);
         }
+
+        function checkFilledVisibility() {
+          if (document.querySelector('.spz-2006-v1-iframe form#pardot-form .form-field.first_name').classList.contains('filled') && document.querySelector('.spz-2006-v1-iframe form#pardot-form .form-field.last_name').classList.contains('filled') && document.querySelector('.spz-2006-v1-iframe form#pardot-form .form-field.email').classList.contains('filled') && document.querySelector('.spz-2006-v1-iframe form#pardot-form .form-field.company').classList.contains('filled')) {
+
+            document.querySelectorAll('.form-field.spz-hidden').forEach(function (elem) {
+              elem.classList.remove('spz-hidden');
+            })
+
+            document.querySelector('.spz-2006-v1-iframe form#pardot-form ').classList.add('spz-full-form');
+          }
+        }
       }
     }
   });
@@ -125,10 +143,10 @@ function formPage() {
 function demoPage() {
   var bodyInterval = setInterval(function () {
     var bodyEle = document.querySelector('body');
-    if (!bodyEle.classList.contains('spz-2001-v1')) {
+    if (!bodyEle.classList.contains('spz-2006-v1')) {
       clearInterval(bodyInterval);
       document.cookie = "spzdevicewidth=; expires=Thu, 01 Jan 1970 00:00:00 GMT; path=/; domain=.maxio.com";
-      bodyEle.classList.add('spz-2001-v1');
+      bodyEle.classList.add('spz-2006-v1');
 
       let mainPageBodyWidth = document.body.clientWidth;
       setIframeBodyClass(mainPageBodyWidth);
@@ -138,7 +156,7 @@ function demoPage() {
         setIframeBodyClass(mainPageBodyWidth);
       });
 
-      cookieValue('#2001', '#2001_variant1');
+      cookieValue('#2006', '#2006_variant1');
       const template_heroSelector = `.hero-form`;
       const template_position = "beforebegin";
       const template_formSelector = `.hero-form iframe[id*="form"]`;
@@ -149,21 +167,21 @@ function demoPage() {
             trustBadgeLogoBreakpoints: [
               {
                 breakPoint: 768,
-                url: "//res.cloudinary.com/spiralyze/image/upload/v1731506534/maxio/2001/capterra_logo.svg",
+                url: "//res.cloudinary.com/spiralyze/image/upload/v1733717430/maxio/2006/stars_desktop.svg",
               },
               {
                 breakPoint: 320,
-                url: "//res.cloudinary.com/spiralyze/image/upload/v1731653645/maxio/2001/Capterra-icon.svg",
+                url: "//res.cloudinary.com/spiralyze/image/upload/v1733717430/maxio/2006/star_mobile.svg",
               },
             ],
-            trustBadgeLogoAlt: "Capterra",
-            trustBadgeReview: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2001/review-stars.png",
-            trustBadgeReviewAlt: "Rating Stars",
+            trustBadgeLogoAlt: "Rating Stars",
+            trustBadgeReview: "//res.cloudinary.com/spiralyze/image/upload/v1733717430/maxio/2006/capterra_logo.svg",
+            trustBadgeReviewAlt: "Capterra",
             trustBadgeReviewRating: `<span>4.4</span> (248 reviews)`,
           },
         ],
         contentHeading: "Boost revenue 14% by automating subscription management",
-        middleArrowImage: `//res.cloudinary.com/spiralyze/image/upload/v1731506534/maxio/2001/arrow.svg`,
+        middleArrowImage: `//res.cloudinary.com/spiralyze/image/upload/v1733278207/maxio/2006/vector_633.svg`,
         middleArrowImageTablet: `//res.cloudinary.com/spiralyze/image/upload/v1731647134/maxio/2001/Arrow-Tablet.svg`,
         middleArrowAlt: "arrow",
         features: [
@@ -226,20 +244,20 @@ function demoPage() {
         socialProofLogos: {
           socialProofImages: [
             {
-              url: "//res.cloudinary.com/spiralyze/image/upload/v1731670295/maxio/2001/frame_1171275881.svg",
+              url: "//res.cloudinary.com/spiralyze/image/upload/v1733278796/maxio/2006/chili_piper_1.svg",
               alt: "Chili Piper",
             },
             {
-              url: "//res.cloudinary.com/spiralyze/image/upload/v1731670296/maxio/2001/frame_1171275882.svg",
+              url: "//res.cloudinary.com/spiralyze/image/upload/v1733278796/maxio/2006/mailgun_1.svg",
               alt: "Mailgun",
             },
             {
-              url: "//res.cloudinary.com/spiralyze/image/upload/v1731670296/maxio/2001/frame_1171275883.svg",
-              alt: "Stack Overflow",
+              url: "//res.cloudinary.com/spiralyze/image/upload/v1733278796/maxio/2006/jasper_logo_1.svg",
+              alt: "Jasper",
             },
             {
-              url: "//res.cloudinary.com/spiralyze/image/upload/v1731670296/maxio/2001/frame_1171275884.svg",
-              alt: "Jasper",
+              url: "//res.cloudinary.com/spiralyze/image/upload/v1733278796/maxio/2006/stackoverflow_1.svg",
+              alt: "Stack Overflow",
             },
           ]
         }
@@ -250,19 +268,7 @@ function demoPage() {
                   <div class="spz-bg-wrap">
                       <div class="spz-form-wrap">
                           <div class="content-section">
-                              ${formData.trustBadge.length ? `<div class="trust-badge">
-                                  <picture>
-                                      ${formData.trustBadge[0].trustBadgeLogoBreakpoints.map(
-          (item) =>
-            `<source media="(min-width:${item.breakPoint}px)" srcset="${item.url}">`
-        ).join("")}
-                                      <img src="${formData.trustBadge[0].trustBadgeLogoBreakpoints[0].url}" alt="${formData.trustBadge[0].trustBadgeLogoAlt}" class="badge-logo" />
-                                  </picture>
-                                  ${formData.trustBadge[0].trustBadgeReview.trim() ? `
-                                      <img src="${formData.trustBadge[0].trustBadgeReview}" alt="${formData.trustBadge[0].trustBadgeReviewAlt}" class="star-rating" />` : ""}
-                                  ${formData.trustBadge[0].trustBadgeReviewRating.trim() ? `
-                                      <span class="trust-badge-rating">${formData.trustBadge[0].trustBadgeReviewRating}</span>` : ""}
-                              </div>` : ""}
+                             
                               ${formData.contentHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-heading">${formData.contentHeading}</div>` : ""}
                               <div class="spz-features-wrap">
                                   ${formData.features.length > 0 ? formData.features.map((item) => {
@@ -281,27 +287,27 @@ function demoPage() {
                           </div>
                           <div class="spz-form-section">
                               ${formData.heroHeading.replace(/\s/g, "").length !== 0 ? `<div class="form-heading">${formData.heroHeading}</div>` : ""}
-                              <div class="the-form"></div>
-                              ${formData.middleArrowImageTablet ? `<img src="${formData.middleArrowImageTablet}" alt="${formData.middleArrowAlt || 'Arrow'}" class="middle-arrow-image-tab" />` : ""}
-                          </div>
-                          <div class="hero-heading">
-                              ${formData.trustBadge.length ? `<div class="trust-badge">
+                               ${formData.trustBadge.length ? `<div class="trust-badge">
+                                ${formData.trustBadge[0].trustBadgeReview.trim() ? `
+                                      <img src="${formData.trustBadge[0].trustBadgeReview}" alt="${formData.trustBadge[0].trustBadgeReviewAlt}" class="badge-logo" />` : ""}
                                   <picture>
                                       ${formData.trustBadge[0].trustBadgeLogoBreakpoints.map(
           (item) =>
             `<source media="(min-width:${item.breakPoint}px)" srcset="${item.url}">`
         ).join("")}
-                                      <img src="${formData.trustBadge[0].trustBadgeLogoBreakpoints[0].url}" alt="${formData.trustBadge[0].trustBadgeLogoAlt}" class="badge-logo" />
+                                      <img src="${formData.trustBadge[0].trustBadgeLogoBreakpoints[0].url}" alt="${formData.trustBadge[0].trustBadgeLogoAlt}" class="star-rating" />
                                   </picture>
-                                  ${formData.trustBadge[0].trustBadgeReview.trim() ? `
-                                      <img src="${formData.trustBadge[0].trustBadgeReview}" alt="${formData.trustBadge[0].trustBadgeReviewAlt}" class="star-rating" />` : ""}
+                                 
                                   ${formData.trustBadge[0].trustBadgeReviewRating.trim() ? `
                                       <span class="trust-badge-rating">${formData.trustBadge[0].trustBadgeReviewRating}</span>` : ""}
                               </div>` : ""}
-                              ${formData.contentHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-heading">${formData.contentHeading}</div>` : ""}
-                          </div>
-                          <div class="middle-arrow-image-desk">
+                              <div class="the-form"></div>
+                           <div class="middle-arrow-image-desk">
                               ${formData.middleArrowImage ? `<img src="${formData.middleArrowImage}" alt="${formData.middleArrowAlt || 'Arrow'}" class="middle-arrow-image" />` : ""}
+                          </div>
+                          </div>
+                          <div class="hero-heading">
+                              ${formData.contentHeading.replace(/\s/g, "").length !== 0 ? `<div class="content-heading">${formData.contentHeading}</div>` : ""}
                           </div>
                       </div>
                   </div>
@@ -335,29 +341,32 @@ function demoPage() {
           let height = iframe.style.height?.match(/([\d.]+)px/);
           if (height && parseFloat(height[1]) < 100) {
             clearInterval(spz_2001_Interval);
-            document.querySelector('.spz-2001-v1 .spz-form-wrap .form-heading').style.display = "none";
+            document.querySelector('.spz-2006-v1 .spz-form-wrap .form-heading').style.display = "none";
+            document.querySelector('.spz-2006-v1 .spz-form-wrap .trust-badge').style.display = "none";
           }
         }
       }, 200);
 
       waitForElm('.spz-form-wrap iframe[src]').then(function () {
+        //remove this query parameter before making test live
+        const urlQuery = `_vis_test_id=25&_vis_opt_random=0.5072283180661832&_vis_hash=8aba6434dced5b68baaec3bbfd5f0206&_vis_opt_preview_combination=3`;
         setTimeout(() => {
           const iframeSrc = document.querySelector('.spz-form-wrap iframe').src;
           //check if url has query params
           if (iframeSrc.includes('?')) {
-            //replace question mark string with "?spz=2001&" in the url
-            document.querySelector('.spz-form-wrap iframe').src = iframeSrc.replace('?', '?spz=2001&');
+            //replace question mark string with "?spz=2006&" in the url
+            document.querySelector('.spz-form-wrap iframe').src = iframeSrc.replace('?', '?spz=2006&' + urlQuery);
           } else {
-            document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2001';
+            document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2006' + '&' + urlQuery;
           }
 
           if (document.querySelector('.spz-form-wrap iframe[data-lazy-src]')) {
             const iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
             //check if url has query params
             if (iframeLazrSrc.includes('?')) {
-              document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc.replace('?', '?spz=2001&'));
+              document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc.replace('?', '?spz=2006&'));
             } else {
-              document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2001');
+              document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2006');
             }
           }
         }, 500);
@@ -382,7 +391,7 @@ function setIframeBodyClass(screenwidth) {
 if (location.href.indexOf('/demo') > -1) {
   demoPage();
 }
-if (location.href.indexOf('spz=2001') > -1) {
+if (location.href.indexOf('spz=2006') > -1) {
   formPage();
 }
 
