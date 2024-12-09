@@ -34,7 +34,7 @@ body.spz-7003 {
   }
 
   #HERO {
-    background: #f5f5ff;
+    background: #fff;
     border: none;
     overflow: hidden;
 
@@ -122,7 +122,7 @@ body.spz-7003 {
         //left copy
         .block-2 {
           // padding: 0;
-          max-width: 566px;
+          max-width: 567px;
           margin-right: 16px;
 
           @media screen and (max-width: 1199.98px) {
@@ -144,14 +144,15 @@ body.spz-7003 {
               }
 
               > p {
-                margin: 0 0 14.5px;
+                margin: 0 0 18.5px;
+                line-height: 12px;
 
                 @media (max-width: 1199.98px) {
                   margin: 0 0 11.5px;
                 }
 
                 @media (max-width: 767.98px) {
-                  margin: 0 0 10px;
+                  margin: 0 0 12px;
                 }
 
                 strong {
@@ -159,7 +160,7 @@ body.spz-7003 {
                   font-family: $elza;
                   font-size: 12px;
                   font-weight: 600;
-                  line-height: 100%;
+                  line-height: 140%;
                   letter-spacing: 3px;
                   text-transform: uppercase;
 
@@ -288,7 +289,7 @@ body.spz-7003 {
             @media screen and (max-width: 767.98px) {
               padding: 17px 6px 32px;
               // box-shadow: 0px 4px 16px 0px rgba(40, 14, 67, 0.12);
-              max-width: calc(100% - 2px);
+              // max-width: calc(100% - 2px);
             }
 
             .spz-hidden {
@@ -322,14 +323,14 @@ body.spz-7003 {
 
       .spz-social-proof {
         margin: 18.5px 0 36.5px;
-        background: #f5f5ff;
+        background: #fff;
 
         @media screen and (max-width: 767.98px) {
           margin: 0.5px 2px 20px 0;
         }
 
         .sp-container {
-          background: #f5f5ff;
+          background: #fff;
 
           .sp-title {
             color: #381360;
@@ -464,7 +465,7 @@ body.spz-7003 {
               border-radius: 100px;
               outline: none;
               box-shadow: none;
-              color: #000 !important;
+              color: #381360 !important;
               font-family: $elza;
               font-size: 16px !important;
               font-style: normal;
@@ -672,18 +673,18 @@ body.spz-7003 {
 input {
   &:-webkit-autofill {
     -webkit-box-shadow: 0 0 0 54px white inset !important;
-    -webkit-text-fill-color: #000 !important;
+    -webkit-text-fill-color: #381360 !important;
     &:hover {
       -webkit-box-shadow: 0 0 0 54px white inset !important;
-      -webkit-text-fill-color: #000 !important;
+      -webkit-text-fill-color: #381360 !important;
     }
     &:focus {
       -webkit-box-shadow: 0 0 0 54px white inset !important;
-      -webkit-text-fill-color: #000 !important;
+      -webkit-text-fill-color: #381360 !important;
     }
     &:active {
       -webkit-box-shadow: 0 0 0 54px white inset !important;
-      -webkit-text-fill-color: #000 !important;
+      -webkit-text-fill-color: #381360 !important;
     }
   }
 }
