@@ -167,11 +167,11 @@ function demoPage() {
             trustBadgeLogoBreakpoints: [
               {
                 breakPoint: 768,
-                url: "//res.cloudinary.com/spiralyze/image/upload/v1733717430/maxio/2006/stars_desktop.svg",
+                url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2006/Frame_1171275610.png",
               },
               {
                 breakPoint: 320,
-                url: "//res.cloudinary.com/spiralyze/image/upload/v1733717430/maxio/2006/star_mobile.svg",
+                url: "//res.cloudinary.com/spiralyze/image/upload/f_auto/maxio/2006/bi_star-fill.png",
               },
             ],
             trustBadgeLogoAlt: "Rating Stars",
@@ -312,10 +312,7 @@ function demoPage() {
                       </div>
                   </div>
                   ${template_additionalSection.socialProofLogos ? `<div class="social-proof-logos">
-                      ${template_additionalSection.socialProofLogos.socialProofImages.concat(
-          template_additionalSection.socialProofLogos.socialProofImages,
-          template_additionalSection.socialProofLogos.socialProofImages
-        ).map((item, index) => {
+                      ${template_additionalSection.socialProofLogos.socialProofImages.map((item, index) => {
           const className = index >= template_additionalSection.socialProofLogos.socialProofImages.length ? 'social-proof-logo repeat-image' : 'social-proof-logo';
           return `<img src="${item.url}" alt="${item.alt || 'Social Proof Logo'}" title="${item.alt || 'Social Proof Logo'}" class="${className}" />`;
         }).join("")}

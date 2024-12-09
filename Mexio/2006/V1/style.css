@@ -107,7 +107,7 @@
 	align-items: center;
 	justify-content: center;
 	padding: 0 8px;
-	margin-bottom: 16px;
+	margin-bottom: 20px;
 }
 
 .spz-2006-v1 .spz-form-wrap .trust-badge .star-rating {
@@ -251,7 +251,8 @@
 .spz-2006-v1 .spz-form-wrap .middle-arrow-image-desk {
 	position: absolute;
 	left: -108px;
-	top: calc(50% + 56px);
+	/* top: calc(50% + 56px); */
+	bottom: 85px;
 	z-index: 9;
 }
 
@@ -408,7 +409,7 @@
 	}
 
 	.spz-2006-v1 .spz-form-wrap .spz-form-section {
-		padding: 18px 16px 40px;
+		padding: 18px 16px 24px;
 	}
 
 	.spz-2006-v1 .spz-form-wrap .form-heading {
@@ -427,7 +428,11 @@
 	}
 
 	.spz-2006-v1 .spz-form-wrap .content-section {
-		margin: 32px auto;
+		margin: 40px auto 27px;
+	}
+
+	.spz-2006-v1 .spz-form-wrap .feature-item img{
+		margin-top: 0;
 	}
 
 	.spz-2006-v1 .spz-form-wrap .spz-features-wrap .feature-item {
@@ -436,18 +441,16 @@
 	}
 
 	.spz-2006-v1 .spz-form-wrap .integrates-logos {
-		margin-top: 21px;
+		margin-top: 41px;
 	}
 
 	.spz-2006-v1 .spz-hero .social-proof-logos {
-		width: 1320px;
-		max-width: unset;
-		flex-wrap: nowrap;
+		max-width: 286px;
+		flex-wrap: wrap;
 		flex-direction: row;
 		padding: 0;
-		margin-top: 20px;
-		gap: 20px;
-		animation: scroll 25s linear infinite;
+		margin-top: 13px;
+		gap: 24px;
 	}
 
 	@keyframes scroll {
@@ -465,7 +468,7 @@
 	}
 
 	.spz-2006-v1 .spz-hero .social-proof-logos .social-proof-logo {
-		height: 24px;
+		height: 34px;
 		display: block !important;
 	}
 
@@ -477,14 +480,18 @@
 	.spz-2006-v1 .spz-form-wrap .trust-badge .trust-badge-rating span {
 		font-size: 16px;
 	}
+
+	.spz-2006-v1 .spz-form-wrap .trust-badge{
+		margin-bottom: 10px;
+	}
 }
 
-@media only screen and (max-width: 544px) {
+/* @media only screen and (max-width: 544px) {
 	.spz-2006-v1 #blocks-page .spz-form-wrap iframe[id*="form"] {
 		height: auto!important;
 		min-height: 374px;
 	}
-}
+} */
 
 /* Iframe CSS Start Here */
 input:-webkit-autofill,
@@ -761,7 +768,7 @@ body.spz-2006-v1-iframe form#pardot-form .submit {
 
 .spz-2006-v1-iframe.device-mobile form#pardot-form .form-field {
 	width: 100%;
-	margin: 0 0 14px;
+	/* margin: 0 0 14px; */
 }
 
 .spz-2006-v1-iframe.device-mobile form#pardot-form .form-field.control-checkbox {
@@ -777,12 +784,19 @@ body.spz-2006-v1-iframe form#pardot-form .submit {
 }
 
 body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit {
-	margin-top: 3px;
+	margin-top: 4.5px;
 	width: 100%;
 }
 
+body.spz-2006-v1-iframe.device-mobile form#pardot-form .submit input{
+	width: 100%;
+	max-width: 100%;
+}
+
 .spz-2006-v1-iframe.device-mobile form#pardot-form .submit+p {
-	max-width: unset;
+	max-width: 94%;
+	font-size: 14px !important;
+    margin: 16px auto 0 !important;
 }
 
 /* Iframe CSS End Here */
