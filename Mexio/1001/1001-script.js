@@ -67,6 +67,10 @@ function load_1001() {
 			waitForElm('.spz-1001-demo iframe[src="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').then(function () {
 				//set the value of email input field from session storage as the query param value for src of iframe
 				var emailValue = sessionStorage.getItem('emailValue');
+				//if there is + sign in the email value, replace it with %2B
+				if (emailValue && emailValue.includes('+')) {
+					emailValue = emailValue.replace('+', '%2B');
+				}
 				//check if email value is not null
 				if (emailValue) {
 					var iframeSrc = document.querySelector('.spz-1001-demo iframe[src="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;

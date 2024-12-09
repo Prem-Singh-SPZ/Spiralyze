@@ -267,6 +267,17 @@ let checkBody = setInterval(function () {
 		load_iframe();
 	}
 });
+
+//check if current url has _vis_test_id query parameter in the url then get the value of the query parameter
+var urlParams = new URLSearchParams(window.location.search);
+var vis_test_id = urlParams.get('_vis_test_id');
+if (vis_test_id) {
+	var vis_opt_random = urlParams.get('_vis_opt_random');
+	var vis_hash = urlParams.get('_vis_hash');
+	var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
+	var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
+}
+
 function load_1002() {
 	var bodyEle = document.querySelector('body');
 	if (bodyEle) {
@@ -306,15 +317,18 @@ function load_1002() {
 		if (window.location.pathname === "/demo") {
 			bodyEle.classList.add('spz-1002-demo');
 
-			const previewParam = '&_vis_test_id=21&_vis_opt_random=0.5022273652440998&_vis_hash=f679ac138f4c4f1ab8f66143c78c5736&_vis_opt_preview_combination=3';
-
 			waitForElm('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').then(function () {
 				//set the value of email input field from session storage as the query param value for src of iframe
 				var emailValue = sessionStorage.getItem('emailValue');
+
+				//if there is + sign in the email value, replace it with %2B
+				if (emailValue && emailValue.includes('+')) {
+					emailValue = emailValue.replace('+', '%2B');
+				}
 				//check if email value is not null
 				if (emailValue) {
 					var iframeSrc = document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;
-					document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue + previewParam;
+					document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src = iframeSrc + '?email=' + emailValue + "&" + urlQuery;
 				}
 			});
 		}
