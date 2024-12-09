@@ -139,6 +139,16 @@ function formPage() {
   });
 }
 
+//check if current url has _vis_test_id query parameter in the url then get the value of the query parameter
+var urlParams = new URLSearchParams(window.location.search);
+var vis_test_id = urlParams.get('_vis_test_id');
+if (vis_test_id) {
+  var vis_opt_random = urlParams.get('_vis_opt_random');
+  var vis_hash = urlParams.get('_vis_hash');
+  var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
+  var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
+}
+
 // Main Page Code
 function demoPage() {
   var bodyInterval = setInterval(function () {
@@ -345,8 +355,6 @@ function demoPage() {
       }, 200);
 
       waitForElm('.spz-form-wrap iframe[src]').then(function () {
-        //remove this query parameter before making test live
-        const urlQuery = `_vis_test_id=25&_vis_opt_random=0.5072283180661832&_vis_hash=8aba6434dced5b68baaec3bbfd5f0206&_vis_opt_preview_combination=3`;
         setTimeout(() => {
           const iframeSrc = document.querySelector('.spz-form-wrap iframe').src;
           //check if url has query params
