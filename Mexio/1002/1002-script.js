@@ -185,7 +185,7 @@ function addHero(formData, whereToPut, template_heroSelector, template_additiona
 						 <div class="form-group-wrapper">
                                 <div class="form-group-spz">
                                     <input type="email" name="email" class="form-field-spz email-hero-spz" placeholder=" " />
-                                    <label class="form-label-spz">Email</label>
+                                    <label class="form-label-spz">Business Email</label>
                                 </div>
                                 <a href="${formData.heroCTA.CTAHref}" id="hero-copy-url" class="hero-btn redirect-to-demo spz_tracking_1002">
                                     <span>${formData.heroCTA.CTAText}</span> 
@@ -321,10 +321,9 @@ function load_1002() {
 				//set the value of email input field from session storage as the query param value for src of iframe
 				var emailValue = sessionStorage.getItem('emailValue');
 
-				//if there is + sign in the email value, replace it with %2B
-				if (emailValue && emailValue.includes('+')) {
-					emailValue = emailValue.replace('+', '%2B');
-				}
+				//if there is + sign in the email value, replace it all with %2B
+				emailValue = emailValue.replace(/\+/g, '%2B');
+				
 				//check if email value is not null
 				if (emailValue) {
 					var iframeSrc = document.querySelector('.spz-1002-demo iframe[src*="https://www2.maxio.com/l/699023/2022-08-16/nh4lk"]').src;
