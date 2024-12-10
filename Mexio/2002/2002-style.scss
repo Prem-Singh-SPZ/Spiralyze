@@ -29,15 +29,6 @@
   font-style: normal;
 }
 
-@keyframes scroll {
-  0% {
-    transform: translateX(0);
-  }
-  100% {
-    transform: translateX(-660px);
-  }
-}
-
 /* Iframe CSS Start Here */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -237,14 +228,14 @@ body.spz-2002-iframe form#pardot-form .submit {
   margin-top: 8px;
 }
 .spz-2002-iframe form#pardot-form .submit input {
-  width: 160px;
+  width: 147px;
   height: 50px;
   border-radius: 3px;
   background: #0042ff;
   font-family: Test Founders Grotesk;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: center;
@@ -287,7 +278,7 @@ body.spz-2002-iframe form#pardot-form .submit {
   width: 100%;
 }
 .spz-2002-iframe.device-mobile form#pardot-form .form-field.control-checkbox {
-  margin-top: -3px;
+  margin: -7px 0 10.5px;
 }
 .spz-2002-iframe.device-mobile
   form#pardot-form
@@ -300,6 +291,10 @@ body.spz-2002-iframe form#pardot-form .submit {
   .form-field.control-checkbox
   label::after {
   top: 9px;
+}
+.spz-2002-iframe.device-mobile form#pardot-form .submit input {
+  width: 137px;
+  font-size: 18px;
 }
 body.spz-2002-iframe.device-mobile form#pardot-form .submit {
   margin-top: 3px;
@@ -338,10 +333,15 @@ body.spz-2002 {
           );
           backdrop-filter: blur(2.5px);
           min-height: 100vh;
-		  display: grid;
-		  place-items: center;
+          display: grid;
+          place-items: center;
 
           .container {
+
+            @media (max-width: 767.98px) {
+              padding: 0 20px;
+            }
+
             > div:first-child {
               display: none !important;
             }
@@ -351,21 +351,32 @@ body.spz-2002 {
               box-shadow: 0px 56px 96px 0px rgba(0, 0, 0, 0.16);
               margin: 24px auto;
               display: flex;
-              padding: 40px 40px;
+              padding: 34px 48px 43px;
               flex-direction: column;
               align-items: center;
               width: 100%;
               max-width: 560px;
 
+              @media (max-width: 767.98px) {
+                padding: 24px 24px 34px;
+              }
+
               .form-heading {
-                color:  #000;
+                color: #000;
                 text-align: center;
                 font-family: "Test Founders Grotesk";
                 font-size: 40px;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 32px;
-				margin-bottom: 40px;
+                margin-bottom: 20px;
+
+                @media screen and (max-width: 767.98px) {
+                  font-size: 32px;
+                  line-height: 1;
+                  margin-bottom: 10px;
+                  
+                }
               }
             }
           }

@@ -1,3 +1,13 @@
+//check if current url has _vis_test_id query parameter in the url then get the value of the query parameter
+var urlParams = new URLSearchParams(window.location.search);
+var vis_test_id = urlParams.get('_vis_test_id');
+if (vis_test_id) {
+    var vis_opt_random = urlParams.get('_vis_opt_random');
+    var vis_hash = urlParams.get('_vis_hash');
+    var vis_opt_preview_combination = urlParams.get('_vis_opt_preview_combination');
+    var urlQuery = `_vis_test_id=${vis_test_id}&_vis_opt_random=${vis_opt_random}&_vis_hash=${vis_hash}&_vis_opt_preview_combination=${vis_opt_preview_combination}`;
+}
+
 // iFrame Code
 function formPage() {
     var iframebodyInterval = setInterval(function () {
@@ -7,7 +17,6 @@ function formPage() {
                 clearInterval(iframebodyInterval);
 
                 iframebodyEle.classList.add('spz-2002-iframe');
-
 
                 function check_spzdevicewidth_fun() {
                     var check_spzdevicewidth = setInterval(() => {
@@ -30,9 +39,9 @@ function formPage() {
                     var formAction = document.querySelector('body #pardot-form').action;
                     //check if url has query params
                     if (formAction.includes('?')) {
-                        document.querySelector('body #pardot-form').action = formAction + '&spz=2002';
+                        document.querySelector('body #pardot-form').action = formAction + '&spz=2002' + '&' + urlQuery;
                     } else {
-                        document.querySelector('body #pardot-form').action = formAction + '?spz=2002';
+                        document.querySelector('body #pardot-form').action = formAction + '?spz=2002' + '&' + urlQuery;
                     }
                 });
 
@@ -178,7 +187,7 @@ function demoPage() {
                         //replace question mark string with "?spz=2002&" in the url
                         document.querySelector('.spz-form-wrap iframe').src = iframeSrc.replace('?', '?spz=2002&');
                     } else {
-                        document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2002';
+                        document.querySelector('.spz-form-wrap iframe').src = iframeSrc + '?spz=2002' + '&' + urlQuery;
                     }
 
                     var iframeLazrSrc = document.querySelector('.spz-form-wrap iframe').getAttribute('data-lazy-src');
@@ -190,6 +199,10 @@ function demoPage() {
                         document.querySelector('.spz-form-wrap iframe').setAttribute('data-lazy-src', iframeLazrSrc + '?spz=2002');
                     }
                 }, 2000);
+            });
+
+            waitForElm('.theme-white style').then(function () {
+                document.querySelector('.theme-white style').remove();
             });
         }
     });

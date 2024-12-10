@@ -13,26 +13,6 @@
   font-weight: 500;
   font-style: normal;
 }
-@-webkit-keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-660px);
-            transform: translateX(-660px);
-  }
-}
-@keyframes scroll {
-  0% {
-    -webkit-transform: translateX(0);
-            transform: translateX(0);
-  }
-  100% {
-    -webkit-transform: translateX(-660px);
-            transform: translateX(-660px);
-  }
-}
 /* Iframe CSS Start Here */
 input:-webkit-autofill,
 input:-webkit-autofill:hover,
@@ -262,14 +242,14 @@ body.spz-2002-iframe form#pardot-form .submit {
 }
 
 .spz-2002-iframe form#pardot-form .submit input {
-  width: 160px;
+  width: 147px;
   height: 50px;
   border-radius: 3px;
   background: #0042ff;
   font-family: Test Founders Grotesk;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 16px;
+  font-size: 20px;
+  font-weight: 600;
+  line-height: 1;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,7 +308,7 @@ body.spz-2002-iframe form#pardot-form .submit {
 }
 
 .spz-2002-iframe.device-mobile form#pardot-form .form-field.control-checkbox {
-  margin-top: -3px;
+  margin: -7px 0 10.5px;
 }
 
 .spz-2002-iframe.device-mobile form#pardot-form .form-field.control-checkbox label::before {
@@ -337,6 +317,11 @@ body.spz-2002-iframe form#pardot-form .submit {
 
 .spz-2002-iframe.device-mobile form#pardot-form .form-field.control-checkbox label::after {
   top: 9px;
+}
+
+.spz-2002-iframe.device-mobile form#pardot-form .submit input {
+  width: 137px;
+  font-size: 18px;
 }
 
 body.spz-2002-iframe.device-mobile form#pardot-form .submit {
@@ -373,6 +358,11 @@ body.spz-2002 #page .site-content .blocks-page .hero-form {
   display: grid;
   place-items: center;
 }
+@media (max-width: 767.98px) {
+  body.spz-2002 #page .site-content .blocks-page .hero-form .container {
+    padding: 0 20px;
+  }
+}
 body.spz-2002 #page .site-content .blocks-page .hero-form .container > div:first-child {
   display: none !important;
 }
@@ -384,7 +374,7 @@ body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 40px 40px;
+  padding: 34px 48px 43px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -395,6 +385,11 @@ body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form
   width: 100%;
   max-width: 560px;
 }
+@media (max-width: 767.98px) {
+  body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap {
+    padding: 24px 24px 34px;
+  }
+}
 body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
   color: #000;
   text-align: center;
@@ -403,5 +398,12 @@ body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form
   font-style: normal;
   font-weight: 500;
   line-height: 32px;
-  margin-bottom: 40px;
+  margin-bottom: 20px;
+}
+@media screen and (max-width: 767.98px) {
+  body.spz-2002 #page .site-content .blocks-page .hero-form .container > .spz-form-wrap .form-heading {
+    font-size: 32px;
+    line-height: 1;
+    margin-bottom: 10px;
+  }
 }
