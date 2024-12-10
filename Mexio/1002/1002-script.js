@@ -296,6 +296,13 @@ function load_1002() {
 					template_additionalSection
 				);
 
+				//if user is focused on .form-field-spz and press enter, then click on .redirect-to-demo
+				document.querySelector('.form-field-spz').addEventListener('keypress', function (e) {
+					if (e.key === 'Enter') {
+						document.querySelector('.redirect-to-demo').click();
+					}
+				});
+
 				//on click of .redirect-to-demo store whatever value is in the input field in cookie 
 				document.querySelector('.redirect-to-demo').addEventListener('click', function () {
 					var emailValue = document.querySelector('.email-hero-spz').value;
