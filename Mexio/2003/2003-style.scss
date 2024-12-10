@@ -394,6 +394,10 @@ body.spz-2003 {
             > .spz-2003-right-section {
               max-width: 550px;
               padding: 40px 48px;
+              display: flex;
+              flex-direction: column;
+              justify-content: center;
+              position: relative;
 
               .rs-inner {
                 display: flex;
@@ -461,6 +465,12 @@ body.spz-2003 {
                       line-height: 32px;
                     }
                   }
+                }
+
+                .rs-footer-icon {
+                  position: absolute;
+                  right: 48px;
+                  bottom: 48px;
                 }
               }
             }
